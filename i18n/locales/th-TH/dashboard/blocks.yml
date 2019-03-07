@@ -144,7 +144,7 @@ th:
             measures: ห้องดนตรี
             seconds: ขั้นคู่สอง
       Dancelab_everyVerseChorus:
-        text: 'ทุก {UNIT} '
+        text: 'ทุก [หน่วย] [0] '
         options:
           UNIT:
             '"verse"': ท่อนร้อง
@@ -167,7 +167,7 @@ th:
             '"y"': อยู่ที่แกน Y
             '"tint"': ระดับอ่อนสี
       Dancelab_getTime:
-        text: "{UNIT} ล่วงผ่าน"
+        text: "[หน่วย] [0] ล่วงผ่าน"
         options:
           UNIT:
             '"measures"': ห้องดนตรี
@@ -603,6 +603,11 @@ th:
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
             '"direction"': ทิศทางการเคลื่อนไหว
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
       gamelab_debugSprite:
         options:
           VAL:
@@ -619,6 +624,18 @@ th:
             '"tint"': ระดับอ่อนสี
       gamelab_jumpTo:
         text: "{SPRITE} ข้ามไปที่ {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
+          KEY:
+            '"up"': ขึ้นข้างบน
+            '"down"': เป็นตำแหน่ง
+            '"left"': ซ้าย
+            '"right"': ขวา
+            '"space"': อวกาศ
+            '"x"': x
       gamelab_locationDelta:
         options:
           DIR:
@@ -636,6 +653,10 @@ th:
         text: สุ่มสี
       gamelab_setBackground:
         text: กำหนดสีแบ็กกราวนด์ {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
       gamelab_setPosition:
         text: ย้าย {THIS} ไป {POSITION} ตำแหน่ง
         options:
@@ -668,6 +689,11 @@ th:
             '"height"': ความสูง
       gamelab_setup:
         text: การตั้งค่า
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -887,7 +913,8 @@ th:
         text: หันขวา
       Vector_positionCenter:
         text: ตรงกลาง
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
+        text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
         options:
           PROPERTY:
             '"scale"': ขนาด
@@ -895,16 +922,56 @@ th:
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': เมื่อ (สัมผัสกัน)
             '"while"': ในขณะที่
-      aalab_whenTouching:
+      aalab_jumpTo:
+        text: "{SPRITE} ข้ามไปที่ {LOCATION}"
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': เมื่อ (สัมผัสกัน)
             '"while"': ในขณะที่
+          KEY:
+            '"up"': ขึ้นข้างบน
+            '"down"': เป็นตำแหน่ง
+            '"left"': ซ้าย
+            '"right"': ขวา
+            '"space"': อวกาศ
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': จริง
+            '"false"': เท็จ
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"rotation"': การหมุน
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+            '"direction"': ทิศทางการเคลื่อนไหว
+            '"tint"': ระดับอ่อนสี
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': ตลอดกาล
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': แสดง
+            '"hide"': ซ่อน
       binary_move:
         options:
           DIR:
@@ -954,7 +1021,7 @@ th:
       craft_moveForward:
         text: ไปข้างหน้า
       craft_placeBlock:
-        text: วาง {blockType}
+        text: วาง [blockType] [0]
         options:
           blockType:
             '"strippedOak"': ชิ้นไม้โอ็ค

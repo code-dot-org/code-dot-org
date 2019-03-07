@@ -359,7 +359,6 @@ id:
         K5PD:
           title: Pengembangan profesional K5
           description: Pengembangan profesional untuk kursus K5
-          description_short: Pengembangan profesional untuk kursus K5
           stages:
             Computer Science Pedagogy:
               name: ilmu mendidik/pedagogi ilmu pengetahuan Komputer
@@ -4345,6 +4344,8 @@ id:
               name: Sumber kerumunan
             Relay Programming:
               name: Pemrograman bergiliran
+            Graph Paper Programming:
+              name: Pemrograman grafis diatas kertas
         courseb-2018:
           assignment_family_title: Kursus B
           stages:
@@ -4849,6 +4850,10 @@ id:
                 anda akan menyajikan proyek mengagumkan untuk teman-teman anda.
             The Artist:
               name: Artis
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Sumber kerumunan
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5003,3 +5008,388 @@ id:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
+        csd2-2019:
+          stages:
+            Exploring Websites:
+              description_student: Pelajaran kali ini mencakup tentang bagaimana sebuah
+                situs web daat berfungsi, baik untuk pengguna maupun pembuatnya. kelas
+                ini mengeksplorasi beberapa situs web yang paling sering dikunjungi
+                di Amerika Serikat dan bagaimana situs-situs tersebut bisa berguna
+                bagi pengguna dan untuk pembuatnya juga.
+            'Websites for Expression ':
+              name: 'Situs-situs untuk Ekspresi '
+            Headings:
+              name: Tajuk
+            Digital Footprint:
+              name: Jejak Digital
+              description_student: Pelajaran kali ini mengulang  kembali ke pembuatan
+                situs pribadi untuk membahas tentang informasi pribadi yang orang
+                pilih untuk dibagikan secara digital. kelas dimulai dengan membahas
+                jenis informasi apa yang bagus intuk dibagikan kepada orang lain.
+                kemudian melihat beberapa contoh halaman media sosial untuk melihat
+                jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau
+                tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk
+                diikuti saat memasukkan informasi secara online.
+            Lists:
+              name: List
+            Clean Code and Debugging:
+              name: Kode yang bersih dan Debugging
+            Sources and Search Engines:
+              name: Sumber dan mesin pencari
+              description_teacher: Pelajaran ini mendorong siswa agar dapat berpikir
+                lebih kritis tentang bagaimana situs pencari bekerja dan bagaimana
+                menemukan informasi yang relevan dan dapat dipercaya. setelah melihat
+                video dan mendiskusikan tentang mesin pencari bekerja, para murid
+                akan mencari informasi tentang beberapa hewan yang langka. mereka
+                perlu menganalisis situs yang mereka temukan apakah bisa diandalkan
+                untuk mengenali hewan mana yang bohongan.
+            Project - Personal Portfolio Website:
+              name: Proyek - Situs web Portfolio Pribadi
+        csd3-2019:
+          description_short: Pemrograman
+          stages:
+            Programming for Entertainment:
+              name: Pemrograman untuk Hiburan
+            Drawing in Game Lab:
+              name: Menggambar dalam lab permaianan
+              description_teacher: Siswa diperkenalkan dengan permainan lab, lingkungan
+                pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi
+                bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging,
+                serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan
+                mampu untuk gambar program seperti yang mereka buat dengan alat gambar
+                pada pelajaran sebelumnya.
+            Variables:
+              name: variabel
+              description_student: Pelajaran ini memperkenalkan variabel sebagai cara
+                untuk label nomor pada sebuah program atau menyimpan nilai secara
+                acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
+                dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan
+                variabel untuk menyimpan nomor acak, yang memungkinkan program untuk
+                menggunakan nomor acak beberapa kali.
+              description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan
+                variabel untuk label nomor dalam program mereka atau menyimpan nilai
+                secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan
+                dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan
+                yang memperkuat model variabel sebagai cara untuk label atau nama
+                nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk
+                melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan
+                nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan
+                nomor acak beberapa kali dalam program-program mereka.
+            Sprites:
+              description_student: Dalam rangka untuk membuat lebih menarik dan lengkap
+                gambar, kelas diperkenalkan ke objek sprite. Setiap sprite dapat ditugaskan
+                gambar untuk menunjukkan, dan sprite juga melacak beberapa nilai-nilai
+                tentang diri mereka sendiri, yang akan berguna di jalan, ketika membuat
+                animasi. Di akhir pelajaran, semua orang membuat adegan menggunakan
+                sprite.
+            Booleans Unplugged:
+              name: Booleans dicabut
+              description_student: Pelajaran ini memperkenalkan nilai-nilai boolean
+                dan logika, serta pernyataan bersyarat. Kelas dimulai dengan bermain
+                game sederhana dari Berdiri, Duduk di mana boolean (benar/palsu) pernyataan
+                yang menggambarkan sifat-sifat pribadi (rambut atau warna mata, jenis
+                pakaian, usia, dll). Kelas, kemudian kelompok benda berdasarkan semakin
+                kompleks pernyataan boolean, kemudian melihat bagaimana dapat bersyarat
+                mempengaruhi aliran program.
+            Conditionals:
+              name: Kondisi
+            Project - Interactive Card:
+              name: Proyek - kartu interaktif
+              description_student: Dalam hal ini kumulatif proyek untuk bab 1, rencana
+                kelas untuk mengembangkan dan interaktif kartu ucapan menggunakan
+                semua teknik pemrograman yang telah mereka pelajari saat ini.
+            Velocity:
+              name: Percepatan
+              description_student: Setelah pengarahan singkat tentang bagaimana menggunakan
+                pola Pencacah untuk memindahkan spirit, kelas diperkenalkan pada properti
+                yang mengatur kecepatan dan kecepatan rotasi secara langsung. mereka
+                menggunakan properti baru ini dengan cara mereka sendiri, mereka membangun
+                keterampilan yang mereka butuhkan untuk membuat sisi dasar permainan
+                scroller.
+              description_teacher: Setelah melihat singkat tentang bagaimana mereka
+                melawan menggunakan pola untuk memindahkan sprite dalam pelajaran
+                sebelumnya, siswa diperkenalkan dengan sifat yang membedakan kecepatan
+                dan kecepatan rotasi ini diatas. Karena mereka menggunakan sifat-sifat
+                baru dengan cara yang berbeda, mereka membangun keterampilan yang
+                mereka butuhkan untuk membuat dasar sisi permainan scroller.
+            Collision Detection:
+              name: Deteksi tumbukan
+              description_student: Kelas belajar tentang deteksi tabrakan di komputer.
+                Pasang bagaimana bisa mengeksplorasi komputer menggunakan lokasi sprite
+                dan ukuran sifat dan matematika untuk mendeteksi apakah dua sprite
+                yang menyentuh. Kelas kemudian menyentuh menggunakan blok() untuk
+                menciptakan efek yang berbeda ketika sprite bertabrakan, termasuk
+                bermain suara. Terakhir, mereka menggunakan keterampilan baru untuk
+                meningkatkan sisi scroller permainan yang mereka mulai di pelajaran
+                yang lalu.
+            Complex Sprite Movement:
+              description_student: 'Kelas belajar untuk menggabungkan kecepatan sifat
+                sprite dengan melawan pola untuk membuat gerakan sprite yang lebih
+                kompleks, seperti simulasi gravitasi, membuat sprite melompat, dan
+                memungkinkan mengabung sprite kiri atau kanan. Di tingkat akhir kelas
+                menggabungkan gerakan-gerakan ini untuk menghidupkan dan mengontrol
+                satu sprite dan membangun sebuah permainan sederhana di mana karakter
+                terbang di sekitar dan mengumpulkan koin. '
+            Collisions:
+              name: Tumbukan
+            Functions:
+              name: fungsi
+            The Game Design Process:
+              name: Proses perancangan permainan
+              description_student: Pelajaran ini memperkenalkan proses kelas yang
+                akan digunakan untuk sisa unit desain permainan. Kelas berjalan melalui
+                melalui proses ini dalam serangkaian tingkat. Sebagai bagian dari
+                pelajaran ini kelas juga sempat belajar untuk menggunakan aneka-bingkai
+                animasi dalam permainan lab. Di akhir pelajaran mereka memiliki kesempatan
+                untuk membuat perbaikan permainan sendiri.
+              description_teacher: Pelajaran ini memperkenalkan siswa untuk proses
+                yang akan mereka gunakan untuk desain permainan untuk sisa unit. Proses
+                ini berpusat di sekitar proyek panduan yang meminta siswa untuk menentukan
+                sprite mereka, variabel, dan fungsi sebelum mereka memulai pemrograman
+                permainan mereka. Dalam pelajaran ini siswa mulai dengan bermain permainan
+                di permainan lab mana kode tersembunyi. Mereka mendiskusikan apa yang
+                mereka pikirkan sprite, variabel, dan fungsi akan perlu untuk membuat
+                permainan. Mereka kemudian diberi proyek selesai panduan yang menunjukkan
+                salah satu cara untuk menerapkan permainan. Siswa kemudian berjalan
+                melalui proses ini melalui serangkaian tingkat. Sebagai bagian dari
+                pelajaran ini mahasiswa juga sempat belajar untuk menggunakan aneka-bingkai
+                animasi dalam permainan lab. Di akhir pelajaran, siswa memiliki kesempatan
+                untuk membuat perbaikan untuk permainan buatan mereka sendiri.
+            Using the Game Design Process:
+              name: Proses menggunakan desain permainan
+            Project - Design a Game:
+              name: Proyek - merancang sebuah permainan
+              description_student: Kelas rencana dan membangun permainan asli menggunakan
+                panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual
+                atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan
+                balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan
+                kelas saham selesai.
+        csd4-2019:
+          stages:
+            Analysis of Design:
+              name: Analisis desain
+            Understanding Your User:
+              name: Memahami pengguna anda
+            Feedback and Testing:
+              name: Umpan balik dan Pengujian
+            Designing Apps for Good:
+              name: Merancang aplikasi untuk kebaikan
+            Market Research:
+              name: Meneliti pasar
+            Prototype Testing:
+              name: Pengujian Prototipe
+            Improving and Iterating:
+              name: Meningkatkan dan menguraikan
+        csd5-2019:
+          stages:
+            Problem Solving and Data:
+              name: Pemecahan masalah dan Data
+            Problem Solving with Big Data:
+              name: Pemecahan masalah dengan Data Besar
+            Structuring Data:
+              name: Penataan Data
+            Automating Data Decisions:
+              name: Mengotomatisasi Data Keputusan
+        csd6-2019:
+          description_short: Belajar program dengan perangkat fisik.
+          stages:
+            Innovations in Computing:
+              name: Inovasi dalam Komputasi
+            Designing Screens with Code:
+              name: Perancangan Layar dengan Kode
+            The Circuit Playground:
+              name: Sirkuit Bermain Anak
+            The Program Design Process:
+              name: Proses Desain Program
+            Making Music:
+              name: Membuat musik
+            Functions with Parameters:
+              name: Fungsi dengan parameter
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Survei
+        csp1-2019:
+          stages:
+            Personal Innovations:
+              name: Inovasi Pribadi
+            Sending Binary Messages:
+              name: Mengirim pesan biner
+            Sending Binary Messages with the Internet Simulator:
+              name: Mengirim Pesan Biner dengan Internet Simulator
+            Number Systems:
+              name: Sistem nomor
+            Binary Numbers:
+              name: Bilangan Biner
+            Sending Numbers:
+              name: Mengirim Nomor
+            Unit 1 Chapter 1 Assessment:
+              name: Unit 1 penilaian bab 1
+            The Internet:
+              name: Internet
+            The Need for Addressing:
+              name: Dibutuhkan untuk Pengalamatan
+            Routers and Redundancy:
+              name: Router dan Kualitas
+            Packets and Making a Reliable Internet:
+              name: Paket dan membuat internet yang dapat diandalkan
+            The Need for DNS:
+              name: Dibutuhkan untuk DNS
+            HTTP and Abstraction:
+              name: HTTP dan pemisahan
+            Practice PT - The Internet and Society:
+              name: Praktek PT - Internet dan Masyarakat
+            Unit 1 Chapter 2 Assessment:
+              name: Unit 1 penilaian bab 2
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: Byte dan ukuran file
+            Text Compression:
+              name: kompresi Teks
+            Encoding B&W Images:
+              name: Pengkodean gambar B&W
+            Encoding Color Images:
+              name: Pengkodean Gambar Berwarna
+        csp3-2019:
+          description: "Unit ini memerkenalkan konsep dasar dari pemograman komputer,
+            agar kemampuan mereka menjadi berkembang dan membuat aplikasi yang interaktif.
+            kursus ini menggunakan javaScript sebagai bahasa pemograman, dan aplikasi
+            lab sebagai tempat pemograpan untuk membuat aplikasi, namun konsep yang
+            dipelajari dalam pelajaran ini mencakup semua bahasa dan semua perangkat
+            pemograman. \r\n\r\nunit ini terakhir dierbarui tanggal 30 oktober 2017.
+            baca selengkanya tentang pembaruan kurikulum di forum.code.org/c/csp/updates."
+          description_short: Pemrograman
+          stages:
+            The Need For Programming Languages:
+              name: Kebutuhan untuk bahasa pemograman
+            The Need for Algorithms:
+              name: Dibutuhkan untuk algoritma
+            Creativity in Algorithms:
+              name: Kreativitas dalam algoritma
+            Using Simple Commands:
+              name: Menggunakan perintah sederhana
+            Creating Functions:
+              name: Fungsi membuat
+            Functions and Top-Down Design:
+              name: Fungsi dan desain atas-bawah
+            APIs and Function Parameters:
+              name: API dan fungsi parameter
+            Creating functions with Parameters:
+              name: Membuat fungsi dengan parameter
+            Looping and Random Numbers:
+              name: Perulangan dan acak angka
+            Practice PT - Design a Digital Scene:
+              name: Latihan PT - desain sebuah adegan digital
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Penilaian bab 3
+        csp4-2019:
+          stages:
+            What is Big Data?:
+              name: Apa itu data besar?
+            Finding Trends with Visualizations:
+              name: Menemukan tren dengan visualisasi
+            Check Your Assumptions:
+              name: Periksa asumsi anda
+            Rapid Research - Data Innovations:
+              name: Penelitian cepat - Data inovasi
+            Identifying People with Data:
+              name: Mengenali orang dengan data
+            The Cost of Free:
+              name: Biayanya gratis
+            Encryption with Keys and Passwords:
+              name: Enkripsi dengan kunci dan kata sandi
+            Public Key Crypto:
+              name: Kunci umum Kripto
+            Rapid Research - Cybercrime:
+              name: Penelitian cepat - Keamanan cyber
+        csp5-2019:
+          stages:
+            Buttons and Events:
+              name: Tombol dan peristiwa
+            Multi-screen Apps:
+              name: Multi-layar Aplikasi
+            'Building an App: Multi-Screen App':
+              name: 'Membangun aplikasi: Multi-layar aplikasi'
+            Controlling Memory with Variables:
+              name: Mengontrol Memori dengan Variabel
+            'Building an App: Clicker Game':
+              name: 'Membangun aplikasi: Permainan Clicker'
+            Unit 5 Assessment 1:
+              name: Unit 5 penilaian 1
+            '"If" Statements Unplugged':
+              name: Pernyataan "jika" dicabut
+            Boolean Expressions and "If" Statements:
+              name: Ungkapan Boolean dan pernyataan "jika"
+            'Building an App: Color Sleuth':
+              name: 'Membangun aplikasi: Warna detektif'
+            Unit 5 Assessment 2:
+              name: Unit 5 penilaian 2
+            While Loops:
+              name: Perulangan Selagi
+            Loops and Simulations:
+              name: Loop dan Simulasi
+            Introduction to Arrays:
+              name: Pengenalan untuk array
+            'Building an App: Image Scroller':
+              name: 'Membangun aplikasi: Gambar Scroller'
+            Unit 5 Assessment 3:
+              name: Unit 5 penilaian 3
+            Processing Arrays:
+              name: Pengolahan Array
+            Functions with Return Values:
+              name: Fungsi dengan nilai kembali
+            'Building an App: Canvas Painter':
+              name: 'Membangun aplikasi: Kanvas pelukis'
+            Unit 5 Assessment 4:
+              name: Unit 5 penilaian 4
+        csp-explore-2019:
+          description_short: Pelajaran dan sumber daya untuk membantu siswa mempersiapkan
+            dan menyelesaikan AP Tepat Kinerja Tugas.
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              name: Jelajahi persiapan PT - Meninjau tugas
+            Explore PT - Making a Plan:
+              name: Jelajahi PT - Membuat rencana
+            Explore PT - Complete the Task:
+              name: Jelajahi PT - Menyelesaikan tugas
+        csp-create-2019:
+          stages:
+            Create PT Prep - Reviewing the Task:
+              name: Membuat persiapan PT - Meninjau tugas
+            Create PT Prep - Making a Plan:
+              name: Membuat persiapan PT - Membuat rencana
+            Create PT - Complete the Task:
+              name: Membuat PT - Menyelesaikan tugas
+        csppostap-2019:
+          stages:
+            Intro to Data:
+              name: Introduksi untuk data
+            Good and Bad Data Visualizations:
+              name: Baik dan buruk visualisasi data
+            Making Data Visualizations:
+              name: Membuat visualisasi data
+            Discover a Data Story:
+              name: Temukan Cerita Data
+            Cleaning Data:
+              name: Membersihkan Data
+            Creating Summary Tables:
+              name: Membuat Tabel Ringkasan
+            Creating Javascript Objects:
+              name: Menciptakan Objek Javascript
+            Permanent Data Storage:
+              name: Menyimpan data permanen
+            Reading Records:
+              name: Membaca catatan
+            Deleting Records:
+              name: Penghapusan catatan
+            Updating Records:
+              name: Memperbarui catatan
+            Importing and Exporting Data:
+              name: Mengimpor dan mengekspor data
+            Visualizing Data:
+              name: Membayangkan data
+            Sample Apps:
+              name: Contoh aplikasi
+            Final Project:
+              name: Tugas Akhir

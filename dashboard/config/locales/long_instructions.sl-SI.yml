@@ -298,6 +298,22 @@ sl:
         Kako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke "points" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo "ko igralec 2 se dotakne česarkoli" tudi za večanje vrednosti spremenljivke "points".
         Vrednost spremenljivke lahko večaš tako, da nastaviš "points = points + 1."
         Zberi 10 točk (vsako posebej...) da končaš to nalogo.
+      CourseE_HOC 2018 Level_10: 'Nekje v tem morskem svetu se skriva  **velika hobotnica**
+        ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png).
+        Ali jo lahko najdeš? '
+      CourseE_HOC 2018 Level_11: Zgradi zid iz **prizmarina** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        okoli črnega betona. Tako boš odprl  **strugo** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        in končal svojo nalogo!
+      CourseE_HOC 2018 Level_7a: Našel si podvodne ruševine. Preišči ruševine in najdi
+        **zaboj** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        ki vsebuje **dragulj** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        .
+      CourseE_HOC 2018 Level_8: Najprej ledene gore, zdaj pa še lava? Prebij se okoli
+        vulkanskega otoka in najdi **tropsko ribico** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        na koralnem grebenu..
+      CourseE_HOC 2018 Level_9b: Uspelo ti je priveslati do koralnega grebena. Zdaj
+        pa poišči  **središče morja** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Uporabi moder in rdeč koral, da prideš do zaklada v  **zaboju** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       CourseF_PlayLab_vars2: Igra v prejšnji nalogi ni bila najbolj poštena. Spremeni
         vrednost spremenljivke hitrost psa 'dog speed' tako, da boš lahko pobral več
         zastavic, kot maček. Prvi, ki prvi zbere 10 točk, zmaga!
@@ -392,9 +408,6 @@ sl:
         ovco.
       Overworld Move to Sheep_2019: Dodajte še en ukaz 'premakni naprej', da dosežete
         ovco.
-      Standalone_Artist_1: Dobrodošel pri Umetniku! Najprej poskusi narediti enostaven
-        kvadrat z uporabo zavi desno in premakni se naprej blokov. Vsaka stran naj
-        bo 100 pikslov dolga.
       Standalone_Artist_2: Nariši diamant s 120 in 60 stopinjskimi koti ter 150 pikslov
         dolgimi stranicami.
       Standalone_Artist_7: 'Funkcija je še eno programsko orodje, ki pomaga pri izogibanju

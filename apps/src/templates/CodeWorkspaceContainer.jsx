@@ -2,12 +2,12 @@
  * A non-protected div that wraps our ProtectedStatefulDiv codeWorkspace, allowing
  * us to position it vertically. Causes resize events to fire when receiving new props
  */
-
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import * as utils from '../utils';
 import commonStyles from '../commonStyles';
 
@@ -20,7 +20,7 @@ class CodeWorkspaceContainer extends React.Component {
 
     // not in redux
     topMargin: PropTypes.number.isRequired,
-    children: PropTypes.node,
+    children: PropTypes.node
   };
 
   /**
@@ -45,7 +45,7 @@ class CodeWorkspaceContainer extends React.Component {
       ...(noVisualization && styles.noVisualization),
       ...(isRtl && styles.mainRtl),
       ...(noVisualization && isRtl && styles.noVisualizationRtl),
-      ...(hidden && commonStyles.hidden),
+      ...(hidden && commonStyles.hidden)
     };
 
     return (
@@ -59,11 +59,17 @@ class CodeWorkspaceContainer extends React.Component {
 }
 
 export const TestableCodeWorkspaceContainer = Radium(CodeWorkspaceContainer);
-export default connect(state => ({
-  hidden: state.pageConstants.hideSource && !state.pageConstants.visualizationInWorkspace,
-  isRtl: state.isRtl,
-  noVisualization: state.pageConstants.noVisualization,
-}), undefined, null, { withRef: true }
+export default connect(
+  state => ({
+    hidden:
+      state.pageConstants.hideSource &&
+      !state.pageConstants.visualizationInWorkspace,
+    isRtl: state.isRtl,
+    noVisualization: state.pageConstants.noVisualization
+  }),
+  undefined,
+  null,
+  {withRef: true}
 )(CodeWorkspaceContainer);
 
 const styles = {
@@ -73,7 +79,7 @@ const styles = {
     // top is set in render
     right: 0,
     bottom: 0,
-    marginLeft: 15, // margin gives space for vertical resizer
+    marginLeft: 15 // margin gives space for vertical resizer
   },
   mainRtl: {
     right: undefined,
@@ -93,7 +99,7 @@ const styles = {
     borderTopWidth: 1,
     borderTopStyle: 'solid',
     borderTopColor: '#ddd',
-    overflow: 'hidden',
+    overflow: 'hidden'
   },
   noVisualization: {
     // Overrides left set in css

@@ -723,7 +723,7 @@ ko:
             Hour of Code 2015:
               name: Hour of Code 2015
         mc:
-          title: Minecraft Hour of Code
+          title: 마인크래프트 Hour of Code
           description: 코드 블록을 사용해 스티브나 알렉스가 Minecraft 월드에서 모험을 펼치게 하세요
           description_short: 코드를 통해 Minecraft 월드를 탐험하세요
           stages:
@@ -1457,6 +1457,8 @@ ko:
               name: 클라우드소싱
             Relay Programming:
               name: 릴레이 프로그래밍
+            Graph Paper Programming:
+              name: 모눈 종이 프로그래밍
         courseb-2018:
           assignment_family_title: 과정 B
           stages:
@@ -1592,6 +1594,8 @@ ko:
           stages:
             Artist:
               name: 화가
+        aquatic:
+          description_short: 창의성, 문제해결 능력, 코드를 사용해 언더워터 월드를 탐험하고 만들어 보세요!
         dance--draft:
           stages:
             Dance Party:
@@ -1615,6 +1619,10 @@ ko:
               name: 재미있는 반복
             The Artist:
               name: 화가
+            Internet:
+              name: 인터넷
+            Crowdsourcing:
+              name: 클라우드소싱
         dance-low:
           stages:
             Dance Party:
@@ -1631,6 +1639,8 @@ ko:
               name: '언플러그드: 2진'
             Artist Binary:
               name: 화가 2진
+            Dance Party:
+              name: 댄스 파티
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1706,3 +1716,43 @@ ko:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: '실시간 알고리즘: 씨앗 심기'
+        csd2-2019:
+          stages:
+            Lists:
+              name: 리스트
+        csd3-2019:
+          description_short: "프로그래밍"
+          stages:
+            Variables:
+              name: 변수
+            Conditionals:
+              name: 조건
+            Velocity:
+              name: 속도
+            Functions:
+              name: 함수
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: 함수(값 전달)
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: 설문
+        csp1-2019:
+          stages:
+            The Internet:
+              name: 인터넷
+        csp3-2019:
+          description_short: 프로그래밍
+          stages:
+            Creating Functions:
+              name: 함수 만들기
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: 간단한 암호화
+        csp5-2019:
+          stages:
+            While Loops:
+              name: '~인 동안 반복'

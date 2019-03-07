@@ -285,6 +285,109 @@ vi:
           **Lời giải**
           ![Hình ảnh của Lời Giải]
           (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          * Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
+
+          *Cấp độ này kết thúc sau 4 nhịp.*
+        challenges: |-
+          **Thử thách tùy chọn**
+          * Chọn một bài hát khác để phát.
+          * Chọn một đối tượng khác trông giống nai sừng tấm!
+          * Đổi tên vũ công.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          * Vũ công cần chuyển sang động tác mới sau 4 nhịp.
+
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
+
+          *Cấp độ này kết thúc sau 12 nhịp.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
+
+          *Cấp độ này kết thúc sau 10 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+
+          Thay đổi hiệu ứng nền ở những thời điểm khác nhau trong bài hát bằng cách liên kết những khối mới theo sự kiện <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"nhịp"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Bạn cần có ít nhất hai vũ công.
+
+          *Cấp độ này kết thúc sau 6 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+
+          * Thêm vũ công thứ ba (hoặc một số lượng vũ công tùy ý!)
+          * Làm cho tất cả các vũ công của bạn thực hiện các động tác khác nhau tại các thời điểm khác nhau trong bài hát.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Hai vũ công cần phải có một kích cỡ khác ngoài 100.
+
+          *Cấp độ này kết thúc sau 6 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+
+          * Thử nghiệm bằng cách thay đổi các thuộc tính khác (chiều rộng, chiều cao, xoay, v.v.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Thay đổi sắc thái của ít nhất một vũ công.
+
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Thuộc tính cho hai vũ công trở lên phải thay đổi.
+
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Thoải mái sáng tạo!
+
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Thoải mái sáng tạo!
+
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Sử dụng khối `when left arrow pressed` để làm Robot thực hiện một động tác nhảy khi bạn nhấn mũi tên trái.
+
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Xem các ** ngọn đèn biển **![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Làm thế nào bạn có thể sử dụng một điều kiện với chúng để vượt qua một Tòa
+          nhà đại dương?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Bạn có thể sử dụng khối lệnh nếu để giúp bạn thực hiện những ngã
+          rẽ đúng.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Hãy xem các khối lệnh san hô màu đỏ và màu xanh? Sử dụng
+          chúng như điểm chỉ dẫn để rẽ phải hoặc trái qua các rạn san hô.
       Dance short test 2_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**

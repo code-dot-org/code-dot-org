@@ -1,9 +1,9 @@
-import { TestResults } from '@cdo/apps/constants';
+import {TestResults} from '@cdo/apps/constants';
 import tickWrapper from '../../util/tickWrapper';
 
 const levelDef = {
   helperLibraries: ['HelloWorld'],
-  editCode: true,
+  editCode: true
 };
 
 export default {
@@ -13,17 +13,17 @@ export default {
   tests: [
     {
       libraries: {
-        HelloWorld: 'console.log("hello world"); var myVar = 123;',
+        HelloWorld: 'console.log("hello world"); var myVar = 123;'
       },
       description: 'Helper Libraries in App Lab',
       editCode: true,
       xml: 'console.log(myVar);',
-      runBeforeClick: function () {
-        tickWrapper.runOnAppTick(Applab, 2, function () {
+      runBeforeClick: function() {
+        tickWrapper.runOnAppTick(Applab, 2, function() {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function (assert) {
+      customValidator: function(assert) {
         const debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, 'hello world\n123');
         return true;
@@ -32,6 +32,6 @@ export default {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
-    },
-  ],
+    }
+  ]
 };

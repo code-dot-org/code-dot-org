@@ -23,17 +23,18 @@ pl:
       Comment: Komentarz
       'Variables ': 'Zmienne '
       everythingelse: pozostałe
+      World: Świat
+      Location: Miejsce
+      Behaviors: Zachowanie
       numbers: liczby
       Numbers: Liczby
       Default: Domyślne
-      World: Świat
-      Behaviors: Zachowanie
+      Dancers: Tancerze
+      Groups: Grupy
       Advanced: Zaawansowane
       Start: Start
       Locations: Położenie
       Dancing: Taniec
-      Dancers: Tancerze
-      Groups: Grupy
       Sprite: Obiekt
       Brush: Pędzel
       Make Sprite: Utwórz obiekt

@@ -1,11 +1,11 @@
 var appCache = {};
 
-module.exports = function (app) {
+module.exports = function(app) {
   if (appCache[app]) {
     return appCache[app];
   }
   if (app === 'maze') {
-    appCache[app] = function () {
+    appCache[app] = function() {
       return {
         skins: require('@cdo/apps/maze/skins'),
         levels: {
@@ -17,7 +17,7 @@ module.exports = function (app) {
       };
     };
   } else if (app === 'calc') {
-    appCache[app] = function () {
+    appCache[app] = function() {
       return {
         levels: {
           levels: require('@cdo/apps/calc/levels')
@@ -26,7 +26,7 @@ module.exports = function (app) {
       };
     };
   } else if (app === 'flappy') {
-    appCache[app] = function () {
+    appCache[app] = function() {
       return {
         skins: require('@cdo/apps/flappy/skins'),
         levels: {
@@ -36,7 +36,7 @@ module.exports = function (app) {
       };
     };
   } else if (app === 'turtle') {
-    appCache[app] = function () {
+    appCache[app] = function() {
       return {
         skins: require('@cdo/apps/turtle/skins'),
         levels: {
@@ -46,7 +46,7 @@ module.exports = function (app) {
       };
     };
   } else if (app === 'eval') {
-    appCache[app] = function () {
+    appCache[app] = function() {
       return {
         levels: {
           levels: require('@cdo/apps/eval/levels')
@@ -55,7 +55,7 @@ module.exports = function (app) {
       };
     };
   } else if (app === 'bounce') {
-    appCache[app] = function () {
+    appCache[app] = function() {
       return {
         skins: require('@cdo/apps/bounce/skins'),
         levels: {
@@ -65,7 +65,7 @@ module.exports = function (app) {
       };
     };
   } else if (app === 'studio') {
-    appCache[app] = function () {
+    appCache[app] = function() {
       return {
         skins: require('@cdo/apps/studio/skins'),
         levels: {
@@ -75,7 +75,7 @@ module.exports = function (app) {
       };
     };
   } else if (app === 'craft') {
-    appCache[app] = function () {
+    appCache[app] = function() {
       return {
         skins: require('@cdo/apps/craft/simple/skins'),
         levels: {
@@ -85,7 +85,7 @@ module.exports = function (app) {
       };
     };
   } else if (app === 'applab') {
-    appCache[app] = function () {
+    appCache[app] = function() {
       return {
         skins: require('@cdo/apps/applab/skins'),
         levels: {
@@ -94,7 +94,7 @@ module.exports = function (app) {
       };
     };
   } else if (app === 'gamelab') {
-    appCache[app] = function () {
+    appCache[app] = function() {
       return {
         skins: require('@cdo/apps/gamelab/skins'),
         levels: {
@@ -103,7 +103,7 @@ module.exports = function (app) {
       };
     };
   } else if (app === 'scratch') {
-    appCache[app] = function () {
+    appCache[app] = function() {
       return {};
     };
   }

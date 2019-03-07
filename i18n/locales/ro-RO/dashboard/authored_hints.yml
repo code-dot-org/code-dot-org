@@ -161,7 +161,20 @@ ro:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Aveți dificultăți în a afla cum să puneți blocurile în partea de jos? Încercați să tratați floarea roșie exact la fel ca pe o floare mov!
         2-3_Bee_Conditionals_14_b: Dacă floarea roşie ar fi fost violetă, vă puteți da seama cum se utilizează o buclă `repetă` suplimentară pentru a reduce pe codul?
-        2-3_Bee_Conditionals_14_c: "Încercați să rupeți codul în două bucăți separate:\n\n\n! [] (Https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Adună nectar de 3 ori\n  - Mută înainte de 5 ori\n  - Verifică să vezi dacă este nectar, dacă da: obțineți-l\n  - Întoarce la stânga\n  \n2) Fă miere \n  - Mută înainte o dată\n  - Fă două (bucați de) miere"
+        2-3_Bee_Conditionals_14_c: |-
+          Încercați să rupeți codul în două bucăți separate:
+
+
+          ! [] (Https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Adună nectar de 3 ori
+            - Mută înainte de 5 ori
+            - Verifică să vezi dacă este nectar, dacă da: obțineți-l
+            - Întoarce la stânga
+            
+          2) Fă miere 
+            - Mută înainte o dată
+            - Fă două (bucați de) miere
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Amintiți-vă: florile mov au doar 0 sau 1 nectar și se pot modifica de fiecare dată când executați programul.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -331,7 +344,9 @@ ro:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Fiecare formă repetată este o combinație de **jumătate de hexagon**, urmată de **2/3 din triunghi**. '
         Course_4_Artist_12_b: 'Forma unității este aproape identică cu cea din ultimul puzzle, cu excepția faptului că jumătatea de hexagon este puțin mai mare. '
-        Course_4_Artist_12_c: "1) Primele trei linii au lungimea de 60 de pixeli și trebuie să întoarceți 60 de grade.  \n 2) Următoarele două linii au lungimea de 80 de pixeli și trebuie să întoarceți 120 de grade "
+        Course_4_Artist_12_c: |-
+          1) Primele trei linii au lungimea de 60 de pixeli și trebuie să întoarceți 60 de grade.  
+           2) Următoarele două linii au lungimea de 80 de pixeli și trebuie să întoarceți 120 de grade 
         Course_4_Artist_12_d: |-
           **Soluție:**
 

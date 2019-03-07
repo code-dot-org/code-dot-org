@@ -601,6 +601,11 @@ zh-TW:
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': 當
+            '"while"': 當
       gamelab_debugSprite:
         options:
           VAL:
@@ -617,6 +622,18 @@ zh-TW:
             '"tint"': 色調
       gamelab_jumpTo:
         text: "{SPRITE} 跳至 {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': 當
+            '"while"': 當
+          KEY:
+            '"up"': 到上方
+            '"down"': 到下方
+            '"left"': 到左方
+            '"right"': 到右方
+            '"space"': 太空
+            '"x"': x
       gamelab_locationDelta:
         options:
           DIR:
@@ -634,6 +651,10 @@ zh-TW:
         text: 隨機顏色
       gamelab_setBackground:
         text: 設定背景顏色 {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
       gamelab_setPosition:
         text: 將 {THIS} 移動到 {POSITION} 位置
         options:
@@ -666,6 +687,11 @@ zh-TW:
             '"height"': 高度
       gamelab_setup:
         text: 設定
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': 當
+            '"while"': 當
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -889,7 +915,8 @@ zh-TW:
         text: 轉向-右方
       Vector_positionCenter:
         text: 中心
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
+        text: 依 {VAL} 變更 {SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -897,16 +924,56 @@ zh-TW:
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': 當
+            '"while"': 當
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': 當
             '"while"': 當
-      aalab_whenTouching:
+      aalab_jumpTo:
+        text: "{SPRITE} 跳至 {LOCATION}"
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': 當
             '"while"': 當
+          KEY:
+            '"up"': 到上方
+            '"down"': 到下方
+            '"left"': 到左方
+            '"right"': 到右方
+            '"space"': 太空
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': 'true'
+            '"false"': 'false'
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"rotation"': 旋轉
+            '"x"': x 座標
+            '"y"': y 座標
+            '"direction"': 移動方向
+            '"tint"': 色調
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': 重複無限次
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': 顯示
+            '"hide"': 不可見
       binary_move:
         options:
           DIR:

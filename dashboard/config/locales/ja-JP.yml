@@ -13,6 +13,7 @@ ja:
       messages:
         blank: が必要です
         blank_plural: は必須です
+        invalid: 無効です
         invalid_plural: が無効です
     attributes:
       user:
@@ -29,6 +30,7 @@ ja:
         age: 年齢
         gender: 性別
         edit_header: アカウント詳細を編集する
+        finish_sign_up_header: アカウントの作成を完了します
         error:
           future: 現在までの日付にする
   hello: Hello world
@@ -77,6 +79,7 @@ ja:
   prize: 受賞
   more_info: もっと見る
   auth:
+    continue_with: "%{provider} で続きます"
     sign_in_with: "%{provider} を使用してサインインする"
     signed_in: サインイン！
     signed_out: <a href="%{url}"> Code.org</a> からサインアウトしました
@@ -96,6 +99,7 @@ ja:
     not_linked: 申し訳ありませんが、あなたのCode.org アカウントは %{provider} にリンクしていません。以下のパスワードを入力してサインインして下さい。
     use_clever: 申し訳ありませんが、あなたのCode.orgアカウントは%{provider}にリンクしていません。代わりにCleverポータルからサインインしてください。
   signup_form:
+    email_signup: Eメールで登録します
     student_count: "%{count} 人の生徒がサインアップ済みです。"
     teacher_count: "%{count} 人の教師がサインアップ済みです。"
     overview: あなたの進捗状況を追跡したり、あなたの教室を管理するには、アカウントにサインアップします。アカウント無しでも<a href="/">様々なステージとパズルを参照できます</a>が、あなたの進捗状況とプロジェクトを保存するにはサインアップが必要です。
@@ -646,7 +650,7 @@ ja:
       body_short: コース 2 から 4 の高速コースでは、コンピュータ サイエンスの基礎を学びます。
     hoc2014:
       try_new_tutorial: ベータ版の新しいHour of Codeのチュートリアルを試す
-      try_frozen: "「アナと雪の女王」から、アナとエルザと一緒のアーティスト"
+      try_frozen: "「アナと雪の女王」から、アナとエルサと一緒のアーティスト"
     gallery:
       title: ギャラリー
       body: ユーザーが作成したアプリやアーティストの画像のギャラリーを見る
@@ -940,6 +944,7 @@ ja:
     csd6_2: 第 2 章：ハードウェア入力
     csd_survey: コース終了後アンケート
     csp3_1: '章 1: プログラミング言語とアルゴリズム'
+    cspSurvey: アンケート
     csp2_1_2018: '第 2 章: デジタル情報'
   external_links:
     disclaimer: 免責事項

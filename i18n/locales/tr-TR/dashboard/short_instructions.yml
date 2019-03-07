@@ -59,6 +59,7 @@ tr:
       2-3 Artist Functions 12 a: "Fonksiyonlar karmaşık şeyleri birçok kez çizmek için mükemmeldir. \\r\n\\r\n\"Çiçek çiz\" fonksiyonunu kullanarak saksının geri kalanını doldurabilir misin?\\r\n\\r (İpucu: Tüm bitkiler birbirinden 100 piksel uzaktadır)  "
       2-3 Artist Functions 12: "Fonksiyonlar karmaşık şeyleri birçok kez çizmek için mükemmeldir. \\r\n\\r\n\"Çiçek çiz\" fonksiyonunu kullanarak saksının geri kalanını doldurabilir misin?\\r\n\\r (İpucu: Tüm bitkiler birbirinden 100 piksel uzaktadır)  "
       2-3 Artist Functions 13: "Sana dört fonksiyon sunuyoruz. \nBunları bir veya daha fazla döngü içinde kullanarak resimler yap ve arkadaşlarınla paylaş. Örnek için çalıştıra bas."
+      2-3 Artist Functions 2 a: 'Gozluk olusturmak ve yeni fonksiyonu cagirmak icin kucuk yesil ''draw a square'' blogunu kullan '
       2-3 Artist Functions 2: "Fonksiyonlar yeni bloklar tanımlamanı sağlar! \\r\n\\r\nKare çizmek için gerekli blokları \"Kare çiz\" fonksiyonuna taşıdık. \"Kare çiz\" fonksiyonunu kullanarak gözlükleri çizebilir misin? \\r\n\\r\nKareler birbirlerinden 75 piksel uzaklıktadır."
       2-3 Artist Functions 3: "Fonksiyonu 115 piksel kenar uzunluğunda\nbir kare çizmek için düzenle ve daha büyük bir gözlük çiz. \\r\n\\r\nKareler birbirlerinden 45 piksel\nuzaklığındalar."
       2-3 Artist Functions 4: Şimdi bu üç kareyi çizmek için fonksiyonu döngü içine koy.
@@ -242,6 +243,7 @@ tr:
       2-3: Mor çiçekler 1 yada 0 nektara sahip olabilir. Dikkatli ol! Eğer mor çiçek hiç nektara sahip değilse, toplamaya çalışma.
       2-3level1: İleri giderek kuşa yaramaz domuzu yakalamak için yardım et
       20hr_farmer_stage9_1: Merhaba, ben bir çiftçiyim. Çiftlikteki alanı ekime hazırlamak için düzleştirmemde yardımına ihtiyacım var. Beni bir toprak yığınına doğru hareket ettir ve "Kaldır" bloğunu yığını kaldırmam için kullan.
+      20hr_farmer_stage9_10: Gec saate kadar calisiyorum, disarisi karanlik, ve onumde nasil buyuk engeller oldugunu tarif edemem. Simdi while blogundaki gibi seceneklere sahip degilim. Beni bu alanda hareket ettir ve eger onumde engel varsa kaldir
       20hr_farmer_stage9_11: 'Dışarısı hala karanlık. Beni alan boyunca ilerlet. Önümde bir yığın varsa kaldır. Eğer bir çukur var ise içini doldur. İpucu: eğer bloğunun üzerinde, seçeneklerin aşağı doğru açılan menüsünü kullan.'
       20hr_farmer_stage9_2: Daha sonra beni çukura götür ve "doldur" bloğunu kullanarak, iki kürek dolusu toprak ile doldur.
       20hr_farmer_stage9_3: Beni toprak yığınına doğru hareket ettir ve olabildiğince az blok kullanarak kaç kürek dolusu boşaltmam gerektiğini söyle.
@@ -335,13 +337,16 @@ tr:
       4-5 Artist Patterns 9: "Şimdi kodu 3 kez tekrarla ve bütün satırı çiz.\\r\n\\r\nHer bir altıgen en sol noktadan en sağ noktaya 80 piksel genişliğindedir."
       4-5 Artist Patterns Free Play: Eğlence zamanı - kendi kendine desen yapmayı dene!
       4-5 Bee Conditionals - FC Test: Arı sadece nektar istiyor. Bütün nesneler çiçek değil bu sebeple her bulutun altını çiçek mi diye kontrol ediniz. Eğer çiçekse nektar alın.
+      4-5 Bee Conditionals 1 (copy 1): Ari bunun bir cicek yada kovan oldugunu soyleyemez. Sadece ciceklerden nektar topla, ama once o bir cicek mi yoksa kovan mi kontrol et.
       4-5 Bee Conditionals 1: Bu bulutun altında ne var? Sadece çiçeklerden nektar topla, fakat önce bulutun altında çiçek var mı kontrol et.
       4-5 Bee Conditionals 2 (copy 1): Arı sadece nektar istiyor. Unutmayın ki bütün nesneler çiçek değildir. Sadece çiçeklerden nektar toplamak için kontrol edin.
       4-5 Bee Conditionals 2: "Yine bulutlar. Bütün bulutlar çiçek içermez. Nektar almadan önce çiçekmi diye kontrol et. "
       4-5 Bee Conditionals 3: "Şuan arı sadece bal yapmak istiyor.\nBalı yalnızca petekte yapıp yapmadığını kontrol et."
+      4-5 Bee Conditionals 4 (copy 1): Bilinmeyen nesne cicek veya kovan olabilir. Eger o cicekse, nektar toplamak icin if/else bloklarini kullan, degilse bal yapmak icin bloklari kullan (cunku o kovan oldugu icin).
       4-5 Bee Conditionals 4: Bazen bulut çiçeği saklar bazende peteği. Eğer/değilse bloğu kullanarak çiçek ise nektar al değilse bal yap( bu durumda petektir).
       4-5 Bee Conditionals 5: |-
         Bulutların altında çiçek yada petek olabilir. Eğer/değilse bloğu kullan. Eğer çiçek ise polen topla değilse bal yap (çünkü çiçek değilse petektir).
+      4-5 Bee Conditionals 6 (copy 1): Bu mor cicek belki 3, 2, veya bir nektara sahip. Burada if, else-if, else bloklarini olusturmak icin bir biri ile iliskili iki if else bloklari var.
       4-5 Bee Conditionals 6: "Bu çiçekte ne kadar nektar var emin değilim ama 1, 2 veya 3 nektar olduğunu biliyorum. \\r \\r koşullu blok ('eğer' ve/veya ' Eğer/değilse') kullanarak olduğu kadar nektar al. \\r \\r, Nektar miktarı bulmacayı her çalıştırdığınızda değiştirebilir!"
       4-5 Bee Conditionals 7: "Mor çiçeklerde, 2, 3 veya 1 nektar olabilir. \"mor çiçeği kontrol et\" fonksiyonunu kullanarak nektarları toparla."
       4-5 Bee Conditionals 8: "`check flower make honey` için fonksiyonu yaz. \\r\n\\r\nFonksiyonun, mor çiçeğin 3,2 ve 1 nektara sahip olup olmadığını kontrol etmeli ve bütün nektarları toplamalı.\\r\nSonra ilerle ve bal yap."
@@ -425,21 +430,34 @@ tr:
       4-5 While Loops 7: Vay canına, işte büyük bir toprak yığını! Hepsini kaldıran bir program yazabilir miyim?
       4-5 While Loops 8: " Gerçekten derin bir çukur ve  büyük bir yığın  toprak var.  Zemini düzleştirmek için kaç kürek dolusu toprak taşımalısın?"
       4-5 While Loops Assessment 1: Birçok çukur ve toprak var. Yardım ederek çukurları doldurmamı ve toprağı temizlememi sağla.
+      AB_Debug_PlayLab2: |-
+        Neden bu oyunda hic birsey olmuyor?
+
+        gizlenmis hatalari bulabilir misin? bazilarini bulmak bazilarindan kolay.
+      AB_Debug_PlayLab3: Bicagi iki bayraga da hareket ettir. Eger birseyler ters giderse, hata bul!
+      AlgPD DR Free Play: Kendi problemine gore bir fonksiyon olustur.
       Alien Defender: 'Proje fikri: Bir savunma oyunu yap!'
       Alien Defender_2018: 'Proje fikri: Bir savunma oyunu yap!'
+      AllTheThings Applab - Turtle move with button: Tiklandiginda kaplumbagayi hareket ettirecek bir buton ekle. (Tum talimatlari gormke icin tikla)
       'AllTheThings: Pixelation - Lesson 14 - Make the Letter A': '3x5 bir ''A2 harfi yapın. Widget yanlış boyutlarla ayarlandı. İlk göreviniz 5: 0000 0101 için ikinci byte''ı 8-bit ikilik kod olarak ayarlamak. Sonra piksel verilerini girmeye başlayın.'
       'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4': 'Sizi bu videoda oluşturulmuş 4x4''lük Maddie resmiyle başlattık. İlk görevin 4x4''lük ızgarayı her piksel için 12-bit kullanarak renklerle doldurmak. İşte bunlar gereksinimler: Sıra 1 - kırmızı tonları. Sıra 2 - yeşil tonları. Sıra 3 - mavi tonları. Sıra 4 - gri tonları.'
       'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color': "* Seni oluşturulmuş 4x2 Maddie resmi ile başlatıyoruz ancak son iki kareyi bıraktık.\n* Resmi, hangi iki rengin eksik olduğunu bularak ve onları kodlayarak bitirmelisin."
       App Lab test: dene
+      AppLab_test02: Aktivitenin bir cümle Özeti. Tüm talimatları görüntülemek için tıklayin.
       Applab AllTheThings ResourcesTab AllResources: Yukarıda ve kaplumbağanın başlangıç noktasının solunda bir 1x1 kare çizin. Tam talimatları görmek için tıklayın.
       Applab AllTheThings ResourcesTab MapReference: Yukarıda ve kaplumbağanın başlangıç noktasının solunda bir 1x1 kare çizin. Tam talimatları görmek için tıklayın.
       Applab AllTheThings ResourcesTab ReferenceLinks: Yukarıda ve kaplumbağanın başlangıç noktasının solunda bir 1x1 kare çizin. Tam talimatları görmek için tıklayın.
+      Applab test: Bu seviye gonderilebilir. Sadece test etmek icin!
       Artist - Nested Loops 1: 'Bu üçgenleri çizmek için kodu tamamlayın. İlki sizin için yapıldı. İpucu: 3 üçgeni toplam 360 derece dönerek yapılır.'
       Artist - Nested Loops 10: Bayrak üzerindeki en son yıldız satırını çizin. Yıldızlar 50 piksel aralıklı. Yıldızların kendisi 30 piksel genişlikte.
       Artist - Nested Loops 11: İç içe döngü kullanarak 10 kareyi tamamlayın. Her bir kare 30 pikseldir.
       Artist - Nested Loops 12: İç içe döngü kullanarak 36 tane üçgen çizebilir misin?
+      Artist - Nested Loops 2: 'Simdi 10 tane ucgen cizmek icin bu donguyu digerinin icine koy. Buna ic ice dongu denir. Ipucu: Tum ucgenler 360 dereceli donmeyi tamalar.  '
+      Artist - Nested Loops 3: 'Baslangic kodlarini baska bir dongunun icine koyarak bir gunes olustur. Bu ic ice dongu olarak adlandirilir.  '
       Artist - Nested Loops 5: Bir yel değirmeni oluşturmak için verilen kodu döngü içinde kullan.
       Artist - Nested Loops 6: Üçgen kodunu döngüde kullanarak altıgen çizebilir misin?
+      Artist - Nested Loops 7: 'Bu dizayni 10 kere donguleyin. Her dongulediginde ne kadar aciyla donersin?(Ipucu: 360 in 10 a bolumu ne?)'
+      Artist - Nested Loops 8: 'Bu dizayni 6 kere dongule. Her dongude ne kadar aciyla donersin?(ipucu: 360''in altiya bolumu ne?)'
       Artist - Nested Loops 9: Timsahın ağzına dişleri çiz!
       Artist - Nested Loops Assessment 1: Tasarımı tamamlamak için iç içe geçmiş bir döngü kullanmayı deneyin.
       Artist Autorun Test: Şimdi bu üç kareyi çizmek için fonksiyonu döngü içine koy.
@@ -447,6 +465,7 @@ tr:
       Auto Open Function Editor: 'Fonksiyonları başka fonksiyonlar içinden çağırabilirsiniz! Şekil "Shape" fonksiyonunu temel olarak kullanarak 3 ev çizin. İlk ev 50 piksel ve her seferinde 20 piksel daha büyük. Şununla tekrarla döngüsü yardımcı olabilir. '
       Bee Recommended Blocks test: Mor çiçekler 1 veya 0 nektara sahip olabilir, ama hangisi olduğunu bilmiyorsun! Mor çiçekte nektar yoksa toplamamaya dikkat et. "Eğer" bloğunu kullanarak nektarın 1'e eşit olup olmadığını kontrol et.
       Bergeron Robot Maze1: 'Yaramaz domuzu yakalamak için bana yardım edebilir misin? Birkaç ''ilerle'' bloğunu ''çalıştığı zaman'' bloğunun altına sıralayın ve ''çalıştır'' a basın. '
+      Big Game Animation 1 (copy 1): Basit dogrusal fonksiyonlar yazmayi ogrendin, onlari kullanarak oyunumuza bazi hareketleri eklemeye calisalim. Play a tiklayarak oyunun guncel halini gorebilirsin(hepsi degil!), istedigin degiskenleri degistirebilirsin, sonra devam etmek icin finish e tikla.
       Brad Spooky House Copy: 'Serbest Zaman: Yazdığınız fonksiyonlar ve ektra birkaç tanesi burada. Harika bir şeyler çiz! Kalem ucu ile oyna be çizimin ne kadar farklı olabildiğini gör!'
       Brad Spooky House: 'Serbest Zaman: Yazdığınız fonksiyonlar ve ektra birkaç tanesi burada. Harika bir şeyler çiz! Kalem ucu ile oyna be çizimin ne kadar farklı olabildiğini gör!'
       Building a Foundation Assessment: Üç seviye piramit oluşturun. Çizimi yapana kadar denemeye devam edin!
@@ -462,32 +481,42 @@ tr:
       CSD Hackathon Week 2: "(Tüm talimatları için tıklayınız)"
       CSD U3 L5 Freeplay: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 L5 Freeplay_2018: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
+      CSD U3 L5 Freeplay_2019: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 Simple Drawing - Personal Animation: Bunu yap
       CSD U3 Sprites intro sprites: Bunu yap
       CSD U3 Sprites intro sprites_2018 - Validation Test: Bunu yap
       CSD U3 Sprites intro sprites_2018: Bunu yap
+      CSD U3 Sprites intro sprites_2019: Bunu yap
       CSD U3 Variables TEMPLATE square: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 Variables change circle size: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 Variables change circle size_2018: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
+      CSD U3 Variables change circle size_2019: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 Variables multiple assignments: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 Variables naming rules v2-2018: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 Variables naming rules v2: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 Variables naming rules v2_2018: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
+      CSD U3 Variables naming rules v2_2018_2019: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 Variables naming rules: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 Variables random assignment: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 Variables random with assignment: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 Variables random with assignment_2018: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
+      CSD U3 Variables random with assignment_2019: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U4 - Events Template: Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)
       CSD U5 black white images pixelation 2: Bir gülen yüz (resmi görmek için buraya tıklayın) çiz
       CSD U5 black white images pixelation 2_2018: Bir gülen yüz (resmi görmek için buraya tıklayın) çiz
+      CSD U5 black white images pixelation 2_2019: Bir gülen yüz (resmi görmek için buraya tıklayın) çiz
       CSD U5 black white images pixelation 3: Görüntüyü (daha fazla görmek için buraya tıklayın) Görmek için Genişlik ve yükseklik kaydırıcıyılarını değiştir
       CSD U5 black white images pixelation 3_2018: Görüntüyü (daha fazla görmek için buraya tıklayın) Görmek için Genişlik ve yükseklik kaydırıcıyılarını değiştir
+      CSD U5 black white images pixelation 3_2019: Görüntüyü (daha fazla görmek için buraya tıklayın) Görmek için Genişlik ve yükseklik kaydırıcıyılarını değiştir
       CSD U5 black white images pixelation 4: Gülen yüze (görüntüyü görmek için buraya tıklayın) kaşları Ekle
       CSD U5 black white images pixelation 4_2018: Gülen yüze (görüntüyü görmek için buraya tıklayın) kaşları Ekle
+      CSD U5 black white images pixelation 4_2019: Gülen yüze (görüntüyü görmek için buraya tıklayın) kaşları Ekle
       CSD U5 black white images pixelation 5: İstediğini çiz
       CSD U5 black white images pixelation 5_2018: İstediğini çiz
+      CSD U5 black white images pixelation 5_2019: İstediğini çiz
       CSD U5 black white images pixelation: 0 ve 1 yazarak X şeklini tamamla
       CSD U5 black white images pixelation_2018: 0 ve 1 yazarak X şeklini tamamla
+      CSD U5 black white images pixelation_2019: 0 ve 1 yazarak X şeklini tamamla
       CSD U6 params modify clouds: |-
         #Bulutlar\r
         \r
@@ -502,6 +531,19 @@ tr:
         Olay karesinin içindeki yeni 'bulutuHareketEttir(isim)' fonksiyonunuzu her bir bulut ismi için birer kez çağırın.\r
          *(İpucu: bu birçok kere çağırdığınız 'bulutDögüsü(isim) fonksiyonuyla benzer.
       CSD U6 params modify clouds_2018: |-
+        #Bulutlar\r
+        \r
+        Ses sensörüne vurduğunuzda bu program bulutları hareket ettiriyor, ama henüz bitmedi.\r
+        \r
+        #
+        Bunu yap\r
+        *Herhangi bir bulutu hareket ettirecek yeni bir fonksiyon oluşturun 'bulutu HareketEttir(isim)'.\r
+         *
+        (İpucu: 'bulutuHareketEttir0' fonksiyonuyla neredeyse aynı kodu kullanacaksınız)\r
+        *
+        Olay karesinin içindeki yeni 'bulutuHareketEttir(isim)' fonksiyonunuzu her bir bulut ismi için birer kez çağırın.\r
+         *(İpucu: bu birçok kere çağırdığınız 'bulutDögüsü(isim) fonksiyonuyla benzer.
+      CSD U6 params modify clouds_2019: |-
         #Bulutlar\r
         \r
         Ses sensörüne vurduğunuzda bu program bulutları hareket ettiriyor, ama henüz bitmedi.\r
@@ -530,7 +572,16 @@ tr:
         # Bunu Yap\r
         * Her uçağı hareket ettirebilen yeni bir 'uçağıHareketEttir(isim) fonksiyonu oluşturun.\r
         * Olay karesi içinden 'uçağıHareketEttir(isim)' fonksiyonunu çağırın, öyle ki sadece kutucuğu işaretli olan uçak hareket eder.
+      CSD U6 params modify planes_2019: |-
+        # Çoklu-uçak Kumandası\r
+        \r
+        Bu program tahta izme ölçer ve ekrandaki kutucuklarla üç uçağı hareket ettirir. Şu anda, sadece kırmızı uçak çalışıyor.\r
+        \r
+        # Bunu Yap\r
+        * Her uçağı hareket ettirebilen yeni bir 'uçağıHareketEttir(isim) fonksiyonu oluşturun.\r
+        * Olay karesi içinden 'uçağıHareketEttir(isim)' fonksiyonunu çağırın, öyle ki sadece kutucuğu işaretli olan uçak hareket eder.
       CSDU4 - AppLab - 1: Mavi dörtgeni çizmek için kullanmadan önce kalemRengi() ve kalemKalınlığı() için hazırlanmış belgeyi okuyun.
+      CSDU4 - Design Mode - 1: Tiklandiginda kaplumbagayi hareket ettirecek bir buton ekle. (Tum talimatlari gormke icin tikla)
       CSDU6 - Arrays - expressionsAsIndexes: Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)
       CSDU6 - Arrays - indexPractice: Dizinin içeriğini sayısal düzende ekrana yazın. (Tam talimatları görmek için tıklayın)
       CSDU6 - for loop - color buttons with for: Dizinin içeriğini sayısal düzende ekrana yazın. (Tam talimatları görmek için tıklayın)
@@ -541,25 +592,35 @@ tr:
       CSDU6 arrays select icons: Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)
       CSDU6 arrays select rainbow: Dizinin içeriğini sayısal düzende ekrana yazın. (Tam talimatları görmek için tıklayın)
       CSDU6 arrays select rainbow_2018: Dizinin içeriğini sayısal düzende ekrana yazın. (Tam talimatları görmek için tıklayın)
+      CSDU6 arrays select rainbow_2019: Dizinin içeriğini sayısal düzende ekrana yazın. (Tam talimatları görmek için tıklayın)
       CSDU6 arrays select random: Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)
       CSDU6 arrays select random_2018: Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)
+      CSDU6 arrays select random_2019: Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)
       CSDU6 arrays select variable: Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)
       CSDU6 arrays select variable_2018: Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)
+      CSDU6 arrays select variable_2019: Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)
       CSDU6 arrays variable: Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)
       CSP student contact info: Lütfen bir e-posta adresi giriniz.
       CSPU5_U3 - Arrays - expressionsAsIndexes: Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)
       CSPU5_U3 - Arrays - expressionsAsIndexes_2018: Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)
+      CSPU5_U3 - Arrays - expressionsAsIndexes_2019: Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)
       CSPU5_U3 - Arrays - indexPractice: Dizinin içeriğini sayısal düzende ekrana yazın. (Tam talimatları görmek için tıklayın)
       CSPU5_U3 - Arrays - indexPractice_2018: Dizinin içeriğini sayısal düzende ekrana yazın. (Tam talimatları görmek için tıklayın)
+      CSPU5_U3 - Arrays - indexPractice_2019: Dizinin içeriğini sayısal düzende ekrana yazın. (Tam talimatları görmek için tıklayın)
       CSPU5_U3 - Canvas - freePlay: Etkilerden birinin fonksiyonelliğini arttırın, veya kendiniz tamamen yeni bir tane yapın. (Tam talimatları görmek için tıklayın)
       CSPU5_U3 - Canvas - freePlay_2018: Etkilerden birinin fonksiyonelliğini arttırın, veya kendiniz tamamen yeni bir tane yapın. (Tam talimatları görmek için tıklayın)
+      CSPU5_U3 - Canvas - freePlay_2019: Etkilerden birinin fonksiyonelliğini arttırın, veya kendiniz tamamen yeni bir tane yapın. (Tam talimatları görmek için tıklayın)
       CSPU5_U3 - Design Mode 1: Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)
       CSPU5_U3 - Design Mode 1_2018: Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)
+      CSPU5_U3 - Design Mode 1_2019: Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)
       CSPU5_U3 - Keys - Final Image Scroller: Butonlara ve tuşlara yanıt vermesi için resim kaydırıcısını güncelleyin. (Tam talimatları görmek için tıklayın)
       CSPU5_U3 - Loops - 4: Hata ayıklama komutları kullanın ve 6 dan önceki değerleri listeleyin. (Tüm talimatlar için tıklayınız)
       CSPU5_U3 - Loops - 4_2018: Hata ayıklama komutları kullanın ve 6 dan önceki değerleri listeleyin. (Tüm talimatlar için tıklayınız)
+      CSPU5_U3 - Loops - 4_2019: Hata ayıklama komutları kullanın ve 6 dan önceki değerleri listeleyin. (Tüm talimatlar için tıklayınız)
+      CSPU5_U3L13 - Turtle move with button: Tiklandiginda kaplumbagayi hareket ettirecek bir buton ekle. (Tum talimatlari gormke icin tikla)
       CSPU5_U3L15 full clicker app: Tıkırtı oyununu tamamla! (Tüm talimatlar için tıklayınız)
       CSPU5_U3L15 full clicker app_2018: Tıkırtı oyununu tamamla! (Tüm talimatlar için tıklayınız)
+      CSPU5_U3L15 full clicker app_2019: Tıkırtı oyununu tamamla! (Tüm talimatlar için tıklayınız)
       Course 2 Bee Loops 1: 'Merhaba , ben bir arıyım. Çiçeklerdeki nektarları toplamama yardım eder misin? '
       Course 2 Maze Loops 1: 5 blok kullanarak domuzcuğa ulaştırabilir misin?
       Course 4 2: Arı sadece nektar istiyor. Unutmayın ki bütün nesneler çiçek değildir. Sadece çiçeklerden nektar toplamak için kontrol edin.
@@ -827,6 +888,23 @@ tr:
       Course 4 Variables Assessment: Be şekli kenarlar için değişken kullanarak yapabilir misin? Her bir kenar 50 piksel uzunluğunda olmalıdır.
       Course E MC Conditionals1: En değerli kaynakları yer altında bulabilirsiniz ama içerisi karanlık olabilir. En az 2 meşale yerleştirin ve 2 kömür çıkarın.
       Course1BeePuzzle12: Üç nektar topla ve iki bal yap
+      CourseD_Dance_Party_01: '`Yeni yap` bloğunu çalışma alanına sürükleyin ve `kurulum` bloğunun içine bağlayın.'
+      CourseD_Dance_Party_02: Geyiği 4 ölçü sonra yeni bir harekete başlatın!
+      CourseD_Dance_Party_03: Şimdi dansçıyı 6 ölçü sonra yeni bir harekete başlatın!
+      CourseD_Dance_Party_04: Programınıza arka plan efekti ekleyin.
+      CourseD_Dance_Party_05: Dansçının her 2 ölçüde bir hareket değiştirmesi için başka bir yeni blok kullanın.
+      CourseD_Dance_Party_06: Kediyle birlikte dans edecek `arkaplan_dansçısı1` isimli bir arka plan dansçı yaratın.
+      CourseD_Dance_Party_08: İki arka plan dansçısını da aynı boyuta getirebilir misini?
+      CourseD_Dance_Party_09: Dansçının rengini değiştirmek için `renk tonu ayarla` bloğunu kullanın.
+      CourseD_Dance_Party_10: '`Takibe başlar` bloğunu kullanarak diğer dansçının da müziğe tepki vermesini sağlayın.'
+      CourseD_Dance_Party_11: '`Yukarıya basıldığında` bloğu yukarı oka basıldığında kodu çalıştırmanızı sağlar. Yukarı oka basarak dansçıya hızlı bir hareket yaptırmaya çalışın.'
+      CourseD_Dance_Party_11_5: Ördekleri birlikte dans ettirmek için "tüm ördekler" bloğunu kullanın.
+      CourseD_Dance_Party_11b: Robota sağ ok tuşuna basarak bir kere "drop" ve yukarı ok tuşuna basarak bir kere "floss" hareketi yaptırın. Elinizden geldiğince hızlı drop-floss yapın!
+      CourseD_Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
+      CourseE_HOC 2018 Level_10: Bu Okyanus Anıtının girişine git.
+      CourseE_HOC 2018 Level_11: 'Okyanus Anıtının içinde Prizmarin ile su yolu inşa et.'
+      CourseE_HOC 2018 Level_7a: Sandık bulmak için bu su altı harabelerini araştır.
+      CourseE_HOC 2018 Level_9b: 'Hazineye ulaşmak için mercanı yol işaretleri olarak kullan.'
       CourseF_PlayLab_vars1: 'Bu oyunu oynamak için, hiç kod yazmana gerek yok, sadece ''çalıştır''a bas! '
       CourseF_PlayLab_vars10: "Serbest Oyun Zamanı! İşte burada bu bölümde oynadığımız bütün değişkenlerle birlikte birkaç fazlalık var ihtiyacın olursa diye.\\r\n\\r\nŞu anda alet çantamızda düzenlenmesi gereken çok kare var olduğunun farkına varın! İşte, biz her parçayı uygun kategoriye koyduk. Mevcut olan her şeyi keşfetmeye biraz zaman ayırın. Göz atmayı bitirdiğinde, tekrarları, değişkenleri, ve olayları kullanarak bir oyun veya hikaye yapın.\\r\n\\r\nÇalışma alanındaki bütün komutları görmek için aşağı kaydırın."
       CourseF_PlayLab_vars2: Son bulmacadaki yarış pek adil değildi. Kediden daha fazla bayrak topladığından emin olmak için 'köpel_hızı' değişkenini değiştirin. 10 bayrağı ilk toplayan kazanır!
@@ -842,8 +920,10 @@ tr:
       CourseF_PlayLab_vars9: Güzel, şimdi bu oyunun oynanmasının çok kolay olmadığından emin olun. Ne zaman Köpek (oyuncu 1) Kediden (oyuncu 2) sandviçle darbe alırsa, bir puan kaybetmelisin. 10 puanla başlayın bu sayede çok zor olmaz. Bölümü geçmek için puanınızın 10'dan 0'a düşmesine izin verin.
       Crack Random Substitution: Talimatlar
       Crack Random Substitution_2018: Talimatlar
+      Crack Random Substitution_2019: Talimatlar
       Crack a Caesar Cipher: Talimatlar
       Crack a Caesar Cipher_2018: Talimatlar
+      Crack a Caesar Cipher_2019: Talimatlar
       D_Frozen_nested3: Hadi şekiller satırını etrafta döndürün!
       D_Frozen_nested4: Bu şekilleri katmanlama vakti!
       D_Frozen_nested5: Kar taneleri ile oynayın!
@@ -1220,14 +1300,18 @@ tr:
       Pixelation - AllTheThings 5: Bu pikselleşme seviyesi 'Kaydırıcıyı sakla' seçeneğinin kullanımını gösteriyor. Kaydırıcıların genişlik ve uzunluğunun mevcut olmadığının, ve genişlik ve uzunluk alanlarının düzenlenemez olduğunun farkına varın.
       Pixelation - Lesson 14 - Make the Letter A: '3x5 bir ''A2 harfi yapın. Widget yanlış boyutlarla ayarlandı. İlk göreviniz 5: 0000 0101 için ikinci byte''ı 8-bit ikilik kod olarak ayarlamak. Sonra piksel verilerini girmeye başlayın.'
       Pixelation - Lesson 14 - Make the Letter A_2018: '3x5 bir ''A2 harfi yapın. Widget yanlış boyutlarla ayarlandı. İlk göreviniz 5: 0000 0101 için ikinci byte''ı 8-bit ikilik kod olarak ayarlamak. Sonra piksel verilerini girmeye başlayın.'
+      Pixelation - Lesson 14 - Make the Letter A_2019: '3x5 bir ''A2 harfi yapın. Widget yanlış boyutlarla ayarlandı. İlk göreviniz 5: 0000 0101 için ikinci byte''ı 8-bit ikilik kod olarak ayarlamak. Sonra piksel verilerini girmeye başlayın.'
       Pixelation - Lesson 15 - Color Shades 4x4: 'Sizi bu videoda oluşturulmuş 4x4''lük Maddie resmiyle başlattık. İlk görevin 4x4''lük ızgarayı her piksel için 12-bit kullanarak renklerle doldurmak. İşte bunlar gereksinimler: Sıra 1 - kırmızı tonları. Sıra 2 - yeşil tonları. Sıra 3 - mavi tonları. Sıra 4 - gri tonları.'
       Pixelation - Lesson 15 - Color Shades 4x4_2018: 'Sizi bu videoda oluşturulmuş 4x4''lük Maddie resmiyle başlattık. İlk görevin 4x4''lük ızgarayı her piksel için 12-bit kullanarak renklerle doldurmak. İşte bunlar gereksinimler: Sıra 1 - kırmızı tonları. Sıra 2 - yeşil tonları. Sıra 3 - mavi tonları. Sıra 4 - gri tonları.'
+      Pixelation - Lesson 15 - Color Shades 4x4_2019: 'Sizi bu videoda oluşturulmuş 4x4''lük Maddie resmiyle başlattık. İlk görevin 4x4''lük ızgarayı her piksel için 12-bit kullanarak renklerle doldurmak. İşte bunlar gereksinimler: Sıra 1 - kırmızı tonları. Sıra 2 - yeşil tonları. Sıra 3 - mavi tonları. Sıra 4 - gri tonları.'
       Pixelation - Lesson 15 - Complete 3-bit color: "* Seni oluşturulmuş 4x2 Maddie resmi ile başlatıyoruz ancak son iki kareyi bıraktık.\n* Resmi, hangi iki rengin eksik olduğunu bularak ve onları kodlayarak bitirmelisin."
       Pixelation - Lesson 15 - Complete 3-bit color_2018: "* Seni oluşturulmuş 4x2 Maddie resmi ile başlatıyoruz ancak son iki kareyi bıraktık.\n* Resmi, hangi iki rengin eksik olduğunu bularak ve onları kodlayarak bitirmelisin."
+      Pixelation - Lesson 15 - Complete 3-bit color_2019: "* Seni oluşturulmuş 4x2 Maddie resmi ile başlatıyoruz ancak son iki kareyi bıraktık.\n* Resmi, hangi iki rengin eksik olduğunu bularak ve onları kodlayarak bitirmelisin."
       Pizza on a Plate: 'Proje fikri: gerçek dünyadan bir şey tanıdık bir resim oluşturun. Bu sebat ve planlama gerektirir!'
       Poorva copy U3L2 Using Simple Commands: Yukarıda ve kaplumbağanın başlangıç noktasının solunda bir 1x1 kare çizin. Tam talimatları görmek için tıklayın.
       Project - Final Image Scroller: Butonlara ve tuşlara yanıt vermesi için resim kaydırıcısını güncelleyin. (Tam talimatları görmek için tıklayın)
       Project - Final Image Scroller_2018: Butonlara ve tuşlara yanıt vermesi için resim kaydırıcısını güncelleyin. (Tam talimatları görmek için tıklayın)
+      Project - Final Image Scroller_2019: Butonlara ve tuşlara yanıt vermesi için resim kaydırıcısını güncelleyin. (Tam talimatları görmek için tıklayın)
       Project - Finish your canvas app: Etkilerden birinin fonksiyonelliğini arttırın, veya kendiniz tamamen yeni bir tane yapın. (Tam talimatları görmek için tıklayın)
       Project - Make Your Own Clicker Game: Tıkırtı oyununu tamamla! (Tüm talimatlar için tıklayınız)
       Prompt Test: Ne istersen geliştir. Bu sayı tahmin oyununa bir örnektir!
@@ -1291,6 +1375,7 @@ tr:
       Testing Quantum Farmer: "Hey şuna bak! Kaç kürek dolusu toprağa ihtiyacı olur bilmiyorum. Dolana kadar onu dolduracak bir program yazabilir misin?  "
       The Vigenere Cipher Widget: Talimatlar
       The Vigenere Cipher Widget_2018: Talimatlar
+      The Vigenere Cipher Widget_2019: Talimatlar
       The Vigenere Cipher: Talimatlar
       Total Artist Clone Me: 'Serbest Zaman: Yazdığınız fonksiyonlar ve ektra birkaç tanesi burada. Harika bir şeyler çiz! Kalem ucu ile oyna be çizimin ne kadar farklı olabildiğini gör!'
       U2 frequency caesar: Talimatlar
@@ -1323,70 +1408,101 @@ tr:
       U3 Variables randomize your square: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       U3L03 Draw a T using turnAround: etrafındaDön()'ün verilen versiyonunu kullanarak bir artı işareti çizin. (Tam talimatları görmek için tıklayın)
       U3L03 Draw a T using turnAround_2018: etrafındaDön()'ün verilen versiyonunu kullanarak bir artı işareti çizin. (Tam talimatları görmek için tıklayın)
+      U3L03 Draw a T using turnAround_2019: etrafındaDön()'ün verilen versiyonunu kullanarak bir artı işareti çizin. (Tam talimatları görmek için tıklayın)
       U3L03 Three Steps: Kaplumbağanın sonraki kenarı hazırlaması için üç adım ve hareketleri çizen kenarÇiz() adında bir fonksiyon tanımlayın (Tam talimatları görmek için tıklayın)
       U3L03 Three Steps_2018: Kaplumbağanın sonraki kenarı hazırlaması için üç adım ve hareketleri çizen kenarÇiz() adında bir fonksiyon tanımlayın (Tam talimatları görmek için tıklayın)
+      U3L03 Three Steps_2019: Kaplumbağanın sonraki kenarı hazırlaması için üç adım ve hareketleri çizen kenarÇiz() adında bir fonksiyon tanımlayın (Tam talimatları görmek için tıklayın)
       U3L03 draw diamond: Elması tamamlamak için önceki işinden yaralanan elmasÇiz() adında bir fonksiyon oluşturun. (Tam talimatları görmek için tıklayın)
       U3L03 draw diamond_2018: Elması tamamlamak için önceki işinden yaralanan elmasÇiz() adında bir fonksiyon oluşturun. (Tam talimatları görmek için tıklayın)
+      U3L03 draw diamond_2019: Elması tamamlamak için önceki işinden yaralanan elmasÇiz() adında bir fonksiyon oluşturun. (Tam talimatları görmek için tıklayın)
       U3L06 - moveForwardwithParams: Kaplumbağayı ekranın kenarına hareket ettirmek için tek bir komut kullan. (Tam talimatları görmek için tıklayın)
       U3L06 - moveForwardwithParams_2018: Kaplumbağayı ekranın kenarına hareket ettirmek için tek bir komut kullan. (Tam talimatları görmek için tıklayın)
+      U3L06 - moveForwardwithParams_2019: Kaplumbağayı ekranın kenarına hareket ettirmek için tek bir komut kullan. (Tam talimatları görmek için tıklayın)
       U3L06 Challenge 1 triangle: 100 piksel uzunluğunda kenarları olan bir üçgen oluşturmak için kaplumbağa komutlarının parametrelerle ifade edilmiş versiyonlarını kullanın. (Tam talimatları görmek için tıklayın)
       U3L06 Challenge 1 triangle_2018: 100 piksel uzunluğunda kenarları olan bir üçgen oluşturmak için kaplumbağa komutlarının parametrelerle ifade edilmiş versiyonlarını kullanın. (Tam talimatları görmek için tıklayın)
+      U3L06 Challenge 1 triangle_2019: 100 piksel uzunluğunda kenarları olan bir üçgen oluşturmak için kaplumbağa komutlarının parametrelerle ifade edilmiş versiyonlarını kullanın. (Tam talimatları görmek için tıklayın)
       U3L06 Challenge 2 purple square: Mavi dörtgeni çizmek için kullanmadan önce kalemRengi() ve kalemKalınlığı() için hazırlanmış belgeyi okuyun.
       U3L06 Challenge 2 purple square_2018: Mavi dörtgeni çizmek için kullanmadan önce kalemRengi() ve kalemKalınlığı() için hazırlanmış belgeyi okuyun.
+      U3L06 Challenge 2 purple square_2019: Mavi dörtgeni çizmek için kullanmadan önce kalemRengi() ve kalemKalınlığı() için hazırlanmış belgeyi okuyun.
       U3L06 Challenge 3 fill pink: En sevdiğiniz renk ile ekranın arka planını doldurun. (Tüm talimatları için tıklayınız)
       U3L06 Challenge 3 fill pink_2018: En sevdiğiniz renk ile ekranın arka planını doldurun. (Tüm talimatları için tıklayınız)
+      U3L06 Challenge 3 fill pink_2019: En sevdiğiniz renk ile ekranın arka planını doldurun. (Tüm talimatları için tıklayınız)
       U3L06 Challenge 5 overlapping circles: 'Bu resim sadece nokta() ve kalemRengi() kullanılarak oluşturuldu ama, o daireleri nasıl saydam hale getireceğiz? İpucuna ulaşamadıysan: belgeyi kontrol et!'
       U3L06 Challenge 5 overlapping circles_2018: 'Bu resim sadece nokta() ve kalemRengi() kullanılarak oluşturuldu ama, o daireleri nasıl saydam hale getireceğiz? İpucuna ulaşamadıysan: belgeyi kontrol et!'
+      U3L06 Challenge 5 overlapping circles_2019: 'Bu resim sadece nokta() ve kalemRengi() kullanılarak oluşturuldu ama, o daireleri nasıl saydam hale getireceğiz? İpucuna ulaşamadıysan: belgeyi kontrol et!'
       U3L06 Challenge 6 squiggles: "\"solaYayÇiz\" ve \"sağaYayÇiz\" komutları için hazırlanan belgeyi okuyun ve sonra gösterildiği gibi kısa ve eğri çizgi çizin.\n"
       U3L06 Challenge 6 squiggles_2018: "\"solaYayÇiz\" ve \"sağaYayÇiz\" komutları için hazırlanan belgeyi okuyun ve sonra gösterildiği gibi kısa ve eğri çizgi çizin.\n"
+      U3L06 Challenge 6 squiggles_2019: "\"solaYayÇiz\" ve \"sağaYayÇiz\" komutları için hazırlanan belgeyi okuyun ve sonra gösterildiği gibi kısa ve eğri çizgi çizin.\n"
       U3L06 Challenge 7 smiley face: TurnTo() ve moveTo() bir gülen yüz çizmek için kullanın. (Tüm talimatları için tıklayınız)
       U3L06 Challenge 7 smiley face_2018: TurnTo() ve moveTo() bir gülen yüz çizmek için kullanın. (Tüm talimatları için tıklayınız)
+      U3L06 Challenge 7 smiley face_2019: TurnTo() ve moveTo() bir gülen yüz çizmek için kullanın. (Tüm talimatları için tıklayınız)
       U3L07 - Free Play Loops and Random: Serbest Oynama! Döngülerden öğrendiklerinizi kullanın ve kendi küçük sahnenizi yapın. İyi eğlenceler.
       U3L07 - Free Play Loops and Random_2018: Serbest Oynama! Döngülerden öğrendiklerinizi kullanın ve kendi küçük sahnenizi yapın. İyi eğlenceler.
+      U3L07 - Free Play Loops and Random_2019: Serbest Oynama! Döngülerden öğrendiklerinizi kullanın ve kendi küçük sahnenizi yapın. İyi eğlenceler.
       U3L07 - allSeaGrass: Bir döngüyle birlikte tümYosunlarıÇiz yazarak resme 50 parça yosun ekleyin. (Tamtalimatları görmek için tıklayın)
       U3L07 - allSeaGrass_2018: Bir döngüyle birlikte tümYosunlarıÇiz yazarak resme 50 parça yosun ekleyin. (Tamtalimatları görmek için tıklayın)
+      U3L07 - allSeaGrass_2019: Bir döngüyle birlikte tümYosunlarıÇiz yazarak resme 50 parça yosun ekleyin. (Tamtalimatları görmek için tıklayın)
       U3L07 - createTriangleParam: Fonksiyon çağırılarını eşleştirerek resmi tamamlamak için bir parametre kabul eden bir fonksiyon tanımlayın. (Tam talimatları görmek için tıklayın)
       U3L07 - createTriangleParam_2018: Fonksiyon çağırılarını eşleştirerek resmi tamamlamak için bir parametre kabul eden bir fonksiyon tanımlayın. (Tam talimatları görmek için tıklayın)
+      U3L07 - createTriangleParam_2019: Fonksiyon çağırılarını eşleştirerek resmi tamamlamak için bir parametre kabul eden bir fonksiyon tanımlayın. (Tam talimatları görmek için tıklayın)
       U3L07 - introSquare: Bir dörtgen çizmek için bir döngü kullanın. Sonra her biri belli bir miktarda döndürülmüş bir çok kare çizmek için başka döngü ekleyin. (Tam talimatları görmek için tıklayın)
       U3L07 - introSquare_2018: Bir dörtgen çizmek için bir döngü kullanın. Sonra her biri belli bir miktarda döndürülmüş bir çok kare çizmek için başka döngü ekleyin. (Tam talimatları görmek için tıklayın)
+      U3L07 - introSquare_2019: Bir dörtgen çizmek için bir döngü kullanın. Sonra her biri belli bir miktarda döndürülmüş bir çok kare çizmek için başka döngü ekleyin. (Tam talimatları görmek için tıklayın)
       U3L07 - loopsWithRandom: Ekranı beyazla doldurmak için yinelemeleri arttırın. (Tam talimatları görmek için tıklayın)
       U3L07 - loopsWithRandom_2018: Ekranı beyazla doldurmak için yinelemeleri arttırın. (Tam talimatları görmek için tıklayın)
+      U3L07 - loopsWithRandom_2019: Ekranı beyazla doldurmak için yinelemeleri arttırın. (Tam talimatları görmek için tıklayın)
       U3L07 - randomSquare: Bir döngü kullanarak şekli çizin. (Tam talimatları görmek için tıklayın)
       U3L07 - randomSquare_2018: Bir döngü kullanarak şekli çizin. (Tam talimatları görmek için tıklayın)
+      U3L07 - randomSquare_2019: Bir döngü kullanarak şekli çizin. (Tam talimatları görmek için tıklayın)
       U3L07 - sunBeams: Bir döngüyle tümGüneşIşıklarınıÇiz yazarak resme 100 güneş ışını ekleyin. (Tam talimatları görmek için tıklayın)
       U3L07 - sunBeams_2018: Bir döngüyle tümGüneşIşıklarınıÇiz yazarak resme 100 güneş ışını ekleyin. (Tam talimatları görmek için tıklayın)
+      U3L07 - sunBeams_2019: Bir döngüyle tümGüneşIşıklarınıÇiz yazarak resme 100 güneş ışını ekleyin. (Tam talimatları görmek için tıklayın)
       U3L07 - topDownDesign: Bu programın yapısıyla rahat edin, sonra sıradaki alıştırmaya geçin. (Tam talimatları görmek için tıklayın)
       U3L07 - topDownDesign_2018: Bu programın yapısıyla rahat edin, sonra sıradaki alıştırmaya geçin. (Tam talimatları görmek için tıklayın)
+      U3L07 - topDownDesign_2019: Bu programın yapısıyla rahat edin, sonra sıradaki alıştırmaya geçin. (Tam talimatları görmek için tıklayın)
       U3L08 - fish: Çizilmiş balığın boyutunu değiştiren balıkÇiz için bir parametre ekleyin. (Tam talimatları görmek için tıklayın)
       U3L08 - fish_2018: Çizilmiş balığın boyutunu değiştiren balıkÇiz için bir parametre ekleyin. (Tam talimatları görmek için tıklayın)
+      U3L08 - fish_2019: Çizilmiş balığın boyutunu değiştiren balıkÇiz için bir parametre ekleyin. (Tam talimatları görmek için tıklayın)
       U3L08 - freePlay: Parametreli fonksiyonlarınıza daha fazla çağrı yaparak resminize eklemeye devam edin. (Tam talimatları görmek için tıklayın)
       U3L08 - freePlay_2018: Parametreli fonksiyonlarınıza daha fazla çağrı yaparak resminize eklemeye devam edin. (Tam talimatları görmek için tıklayın)
+      U3L08 - freePlay_2019: Parametreli fonksiyonlarınıza daha fazla çağrı yaparak resminize eklemeye devam edin. (Tam talimatları görmek için tıklayın)
       U3L08 - introUnderTheSea with comments: Ekstra bir balık, deniz yıldızı, ve yosun parçası ekleyin. Onları oluşturan fonksiyonlara bakın, ama değiştirmeyin. (Tam talimatları görmek için tıklayın)
       U3L08 - introUnderTheSea: Ekstra bir balık, deniz yıldızı, ve yosun parçası ekleyin. Onları oluşturan fonksiyonlara bakın, ama değiştirmeyin. (Tam talimatları görmek için tıklayın)
       U3L08 - introUnderTheSea_2018: Ekstra bir balık, deniz yıldızı, ve yosun parçası ekleyin. Onları oluşturan fonksiyonlara bakın, ama değiştirmeyin. (Tam talimatları görmek için tıklayın)
+      U3L08 - introUnderTheSea_2019: Ekstra bir balık, deniz yıldızı, ve yosun parçası ekleyin. Onları oluşturan fonksiyonlara bakın, ama değiştirmeyin. (Tam talimatları görmek için tıklayın)
       U3L08 - randomInput: RandomNumber() bloğunu tasarladığınız fonksiyonları rastgele girdilerle test etmek için kullanın. (Tüm talimatları için tıklayınız)
       U3L08 - randomInput_2018: RandomNumber() bloğunu tasarladığınız fonksiyonları rastgele girdilerle test etmek için kullanın. (Tüm talimatları için tıklayınız)
+      U3L08 - randomInput_2019: RandomNumber() bloğunu tasarladığınız fonksiyonları rastgele girdilerle test etmek için kullanın. (Tüm talimatları için tıklayınız)
       U3L08 - squareTwoParams: İki kare çizimini tamamlamak için drawSquare() fonksiyonunu çağırın. (Tüm talimatlar için tıklayınız)
       U3L08 - squareTwoParams_2018: İki kare çizimini tamamlamak için drawSquare() fonksiyonunu çağırın. (Tüm talimatlar için tıklayınız)
+      U3L08 - squareTwoParams_2019: İki kare çizimini tamamlamak için drawSquare() fonksiyonunu çağırın. (Tüm talimatlar için tıklayınız)
       U3L08 - starFish: Ekstra bir balık, deniz yıldızı, ve yosun parçası ekleyin. Onları oluşturan fonksiyonlara bakın, ama değiştirmeyin. (Tam talimatları görmek için tıklayın)
       U3L08 - triangleTwoParams: İki kare çizimini tamamlamak için drawSquare() fonksiyonunu çağırın. (Tüm talimatlar için tıklayınız)
       U3L08 how to add comments: RandomNumber() bloğunu tasarladığınız fonksiyonları rastgele girdilerle test etmek için kullanın. (Tüm talimatları için tıklayınız)
       U3L08 how to add comments_2018: RandomNumber() bloğunu tasarladığınız fonksiyonları rastgele girdilerle test etmek için kullanın. (Tüm talimatları için tıklayınız)
+      U3L08 how to add comments_2019: RandomNumber() bloğunu tasarladığınız fonksiyonları rastgele girdilerle test etmek için kullanın. (Tüm talimatları için tıklayınız)
+      U3L13 - Turtle move with button: Tiklandiginda kaplumbagayi hareket ettirecek bir buton ekle. (Tum talimatlari gormke icin tikla)
       U3L15 full clicker app: Tıkırtı oyununu tamamla! (Tüm talimatlar için tıklayınız)
       U3L2 Using Simple Commands (no tooltips): Yukarıda ve kaplumbağanın başlangıç noktasının solunda bir 1x1 kare çizin. Tam talimatları görmek için tıklayın.
       U3L2 Using Simple Commands: Yukarıda ve kaplumbağanın başlangıç noktasının solunda bir 1x1 kare çizin. Tam talimatları görmek için tıklayın.
       U3L2 Using Simple Commands_2018: Yukarıda ve kaplumbağanın başlangıç noktasının solunda bir 1x1 kare çizin. Tam talimatları görmek için tıklayın.
+      U3L2 Using Simple Commands_2019: Yukarıda ve kaplumbağanın başlangıç noktasının solunda bir 1x1 kare çizin. Tam talimatları görmek için tıklayın.
       U3L2_Turtle3by3Grid: Kaplumbağanın önüne ve sağına olabildiğince etkili şekilde 3x3'lük bir ızgara çizin. Kaplumbağa başlangıç noktasında, başlangıç yönüne yüzü dönük şekilde bitirmeli. (Tam talimatları görmek için tıklayın)
       U3L2_Turtle3by3Grid_2018: Kaplumbağanın önüne ve sağına olabildiğince etkili şekilde 3x3'lük bir ızgara çizin. Kaplumbağa başlangıç noktasında, başlangıç yönüne yüzü dönük şekilde bitirmeli. (Tam talimatları görmek için tıklayın)
+      U3L2_Turtle3by3Grid_2019: Kaplumbağanın önüne ve sağına olabildiğince etkili şekilde 3x3'lük bir ızgara çizin. Kaplumbağa başlangıç noktasında, başlangıç yönüne yüzü dönük şekilde bitirmeli. (Tam talimatları görmek için tıklayın)
       U3L2_TurtleSquare_right: Başlangıç noktasının önüne ve sağına bir dörtgen çizin. (Tam talimatları görmek için tıklayın)
       U3L2_TurtleSquare_right_2018: Başlangıç noktasının önüne ve sağına bir dörtgen çizin. (Tam talimatları görmek için tıklayın)
+      U3L2_TurtleSquare_right_2019: Başlangıç noktasının önüne ve sağına bir dörtgen çizin. (Tam talimatları görmek için tıklayın)
       U4 Model App: Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)
       U4 Model App_2018: Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)
+      U4 Model App_2019: Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)
       U4 Model Design 1: Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)
       U4 Model Design 1_2018: Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)
+      U4 Model Design 1_2019: Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)
       U4 vigenere cipher 2: Talimatlar
       U4L02 - Objects - Template1: Şablon
       U4L02 - Objects - Template1_2018: Şablon
+      U4L02 - Objects - Template1_2019: Şablon
       Underground Avoiding Lava: Bu blokların bazılarının altında gizli lav bulunur ve ileri gitmeden önce bunların üstünü örtmeniz gerekir. Burada "eğer" komutu çok işimize yarayacak. Bu blokları çıkarmak için doğru yere bir "ileri git" komutu ekleyin.
       Underground Avoiding Lava_2018: Bu blokların bazılarının altında gizli lav bulunur ve ileri gitmeden önce bunların üstünü örtmeniz gerekir. Burada "eğer" komutu çok işimize yarayacak. Bu blokları çıkarmak için doğru yere bir "ileri git" komutu ekleyin.
       Underground Avoiding Lava_2019: Bu blokların bazılarının altında gizli lav bulunur ve ileri gitmeden önce bunların üstünü örtmeniz gerekir. Burada "eğer" komutu çok işimize yarayacak. Bu blokları çıkarmak için doğru yere bir "ileri git" komutu ekleyin.
@@ -2835,11 +2951,13 @@ tr:
       grade3_maze_nestedLoops2: 'Bu beş bloğu sadece iki blokla yer değiştirebilir misin? (İpucu: "kez tekrarla" bloğunu kullanarak döngü oluştur.)'
       grade3_maze_nestedLoops3: Sadece iki blok kullanarak beni domuzun yanına götür.
       grade3_maze_nestedLoops4: Domuza ulaşmak için daha az blok kullanarak iki döngü kullanın.
+      grade3_robotFarmer_ConditionalsIntro_10: Gec saate kadar calisiyorum, disarisi karanlik, ve onumde nasil buyuk engeller oldugunu tarif edemem. Simdi while blogundaki gibi seceneklere sahip degilim. Beni bu alanda hareket ettir ve eger onumde engel varsa kaldir
       grade3_robotFarmer_ConditionalsIntro_11: 'Dışarısı hala karanlık. Beni alan boyunca ilerlet. Önümde bir yığın varsa kaldır. Eğer bir çukur var ise içini doldur. İpucu: eğer bloğunun üzerinde, seçeneklerin aşağı doğru açılan menüsünü kullan.'
       grade3_robotFarmer_ConditionalsIntro_4: |-
         * "Ne kadar toprak olduğunu bilmiyorum!" * \r \r 'sürece' döngüsü kullanarak tüm yığını kaldırmak için çiftçiye yardım et.
       grade3_robotFarmer_ConditionalsIntro_6: Tüm toprak yığınlarını kullanabildiğin kadar az blok kullanarak kaldır. Liste menüsündeki yeni seçenekler bana bir yığının mı yoksa bir çukurun mu üstünde olduğumu söyler.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Delikleri 5 kürek dolusu toprakla doldurmam için bana yardım et. İpucu: "süresince" bloğunun içine "tekrar" bloğunu yerleştirebilirsin.'
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo2: Gec saate kadar calisiyorum, disarisi karanlik, ve onumde nasil buyuk engeller oldugunu tarif edemem. Simdi while blogundaki gibi seceneklere sahip degilim. Beni bu alanda hareket ettir ve eger onumde engel varsa kaldir
       grade4_arist_nested_loop_circles1: 'Değerlendirme: Tasarımı tamamlamak için iç içe döngüler kullan.'
       grade4_arist_nested_loop_flags1: Bir yel değirmeni oluşturmak için verilen kodu döngü içinde kullan.
       grade4_arist_nested_loop_polygons1: "Bu kodu 10 defa döngüye koyun. Her seferinde ne kadar dönmen gerektiğini buldun mu?"

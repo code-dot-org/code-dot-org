@@ -1,5 +1,8 @@
-import React, {PropTypes} from 'react';
-import WorkshopAssignmentLoader, {SUBJECT_TYPES} from "./workshop_assignment_loader";
+import PropTypes from 'prop-types';
+import React from 'react';
+import WorkshopAssignmentLoader, {
+  SUBJECT_TYPES
+} from './workshop_assignment_loader';
 
 export default class DetailViewWorkshopAssignmentResponse extends React.Component {
   static propTypes = {
@@ -19,7 +22,6 @@ export default class DetailViewWorkshopAssignmentResponse extends React.Componen
   render() {
     let answer;
     if (this.props.editing) {
-
       answer = (
         <WorkshopAssignmentLoader
           courseName={this.props.courseName}
@@ -35,17 +37,14 @@ export default class DetailViewWorkshopAssignmentResponse extends React.Componen
           {this.props.assignedWorkshop.name} (
           <a href={this.props.assignedWorkshop.url} target="_blank">
             see workshop
-          </a>)
+          </a>
+          )
         </span>
       );
     } else {
-      answer = "Unassigned";
+      answer = 'Unassigned';
     }
 
-    return (
-      <div>
-        {answer}
-      </div>
-    );
+    return <div>{answer}</div>;
   }
 }

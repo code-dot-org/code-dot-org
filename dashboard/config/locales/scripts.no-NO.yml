@@ -318,6 +318,10 @@
               name: Design-oppskriften
         K5PD:
           stages:
+            Next Steps:
+              name: De Neste Trinnene
+            Reflection:
+              name: Refleksjon
             Teacher Dashboard:
               name: Lærersider
         netsim:
@@ -435,6 +439,10 @@
           stages:
             Puzzles:
               name: Oppgave
+        cspunit1:
+          stages:
+            Binary Numbers:
+              name: Binære Tall
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -459,6 +467,8 @@
           stages:
             Evaluation Blocks:
               name: Evalueringsblokker
+            Next Steps:
+              name: De Neste Trinnene
             Strings and Images:
               name: Strenger og bilder
             Teacher Dashboard:
@@ -550,6 +560,8 @@
               name: 'Evaluering: Betingelser'
             Evaluation Blocks:
               name: Evalueringsblokker
+            Next Steps:
+              name: De Neste Trinnene
             Strings and Images:
               name: Strenger og bilder
             Teacher Dashboard:
@@ -566,6 +578,8 @@
           stages:
             Computer Science Fundamentals:
               name: Grunnleggende informatikk
+            Next Steps:
+              name: De Neste Trinnene
         ECSPD2:
           description: Lär ut funktionell programmering genom algebra
           description_short: Lär ut funktionell programmering genom algebra
@@ -606,6 +620,10 @@
               name: Velkommen!
             Wrap-Up:
               name: Oppsummering
+        Equity-OnlinePD:
+          stages:
+            Next Steps:
+              name: De Neste Trinnene
         sciencePD2b-iZone:
           description: Lär ut funktionell programmering genom algebra
           description_short: Lär ut funktionell programmering genom algebra
@@ -768,6 +786,8 @@
               name: Lærersider
         csp1-2017:
           stages:
+            Binary Numbers:
+              name: Binære Tall
             The Internet:
               name: Internett
         csp3-2017:
@@ -1455,6 +1475,8 @@
               name: Crowdsourcing
             Relay Programming:
               name: Relé programmering
+            Graph Paper Programming:
+              name: Millimeterpapirprogrammering
         courseb-2018:
           assignment_family_title: Kurs B
           stages:
@@ -1544,6 +1566,8 @@
               name: Betingelser med kort
         csp1-2018:
           stages:
+            Binary Numbers:
+              name: Binære Tall
             The Internet:
               name: Internett
         csp3-2018:
@@ -1619,6 +1643,10 @@
               name: Morro med for løkker
             The Artist:
               name: Kunstneren
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:
@@ -1635,6 +1663,8 @@
               name: 'Frakoblet: Binær'
             Artist Binary:
               name: Kunstner Binær
+            Dance Party:
+              name: Dansefest
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1712,3 +1742,43 @@
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Virkelige algoritmer: Plante et frø'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Lister
+        csd3-2019:
+          stages:
+            Variables:
+              name: Variabler
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funksjoner med parametre
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Undersøkelser
+        csp1-2019:
+          stages:
+            Binary Numbers:
+              name: Binære Tall
+            The Internet:
+              name: Internett
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Lage Funksjoner
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: Enkel kryptering
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Gjenta-løkker

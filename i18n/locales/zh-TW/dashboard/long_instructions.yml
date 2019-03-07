@@ -102,7 +102,12 @@ zh-TW:
         這裡也太多活要做了吧！\r
         \r
         使用你所學到的來收集所有花蜜及蜂蜜。
-      2-3 Bee Conditionals 14: "我們把所有東西都放在一起吧！\\r\n\\r\n利用你學過的技能來幫我收集花蜜，用的積木愈少愈好。\\r\n\\r\n不要忘了在最後幫它們釀成蜂蜜。"
+      2-3 Bee Conditionals 14: |-
+        我們把所有東西都放在一起吧！\r
+        \r
+        利用你學過的技能來幫我收集花蜜，用的積木愈少愈好。\r
+        \r
+        不要忘了在最後幫它們釀成蜂蜜。
       2-3 Bee Conditionals 15: "不陌生吧，這種樓梯模式的關卡。\\r\n\\r\n你可以只在有花蜜的花朵上採集嗎？用的積木愈少愈好。"
       2-3 Bee Conditionals 2: "我是一隻蜜蜂！\\r\n\\r\n\\r\n使用最少的積木幫我採集到花朵中的所有花蜜。"
       2-3 Bee Conditionals 3: "仔細收集花蜜！\\r\n\\r\n幫我收集花蜜及蜂蜜，用的積木愈少愈好。  "
@@ -277,8 +282,10 @@ zh-TW:
         在這個框框中下面解釋這迴圈的三種不同的部分。為什麼每個都很重要？\r
       CSD U3 - Simple Counter Predict: "# \n計數器模型（Counter Pattern）\\r\n\\r\n這個模型（Pattern）在程式設計中相當的重要。\\r\n\\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\\r\n    \\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\r\n\\r\n# 做做這個\\r\n\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\r\n\\r\n*\n**解讀程式** 然後預測輸出會是怎樣。\\r\n*\n**運行程式** 來檢查是否和你的預測一致。\\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\\r\n\\r\n"
       CSD U3 - Simple Counter Predict_2018: "# \n計數器模型（Counter Pattern）\\r\n\\r\n這個模型（Pattern）在程式設計中相當的重要。\\r\n\\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\\r\n    \\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\r\n\\r\n# 做做這個\\r\n\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\r\n\\r\n*\n**解讀程式** 然後預測輸出會是怎樣。\\r\n*\n**運行程式** 來檢查是否和你的預測一致。\\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\\r\n\\r\n"
+      CSD U3 - Simple Counter Predict_2019: "# \n計數器模型（Counter Pattern）\\r\n\\r\n這個模型（Pattern）在程式設計中相當的重要。\\r\n\\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\\r\n    \\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\r\n\\r\n# 做做這個\\r\n\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\r\n\\r\n*\n**解讀程式** 然後預測輸出會是怎樣。\\r\n*\n**運行程式** 來檢查是否和你的預測一致。\\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\\r\n\\r\n"
       CSD U3 Counters explaining counters contained 2: "# \n計數器模型（Counter Pattern）\\r\n\\r\n這個模型（Pattern）在程式設計中相當的重要。\\r\n\\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\\r\n    \\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\r\n\\r\n# 做做這個\\r\n\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\r\n\\r\n*\n**解讀程式** 然後預測輸出會是怎樣。\\r\n*\n**運行程式** 來檢查是否和你的預測一致。\\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\\r\n\\r\n"
       CSD U3 Counters explaining counters contained 2_2018: "# \n計數器模型（Counter Pattern）\\r\n\\r\n這個模型（Pattern）在程式設計中相當的重要。\\r\n\\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\\r\n    \\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\r\n\\r\n# 做做這個\\r\n\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\r\n\\r\n*\n**解讀程式** 然後預測輸出會是怎樣。\\r\n*\n**運行程式** 來檢查是否和你的預測一致。\\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\\r\n\\r\n"
+      CSD U3 Counters explaining counters contained 2_2019: "# \n計數器模型（Counter Pattern）\\r\n\\r\n這個模型（Pattern）在程式設計中相當的重要。\\r\n\\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\\r\n    \\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\r\n\\r\n# 做做這個\\r\n\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\r\n\\r\n*\n**解讀程式** 然後預測輸出會是怎樣。\\r\n*\n**運行程式** 來檢查是否和你的預測一致。\\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\\r\n\\r\n"
       CSD U3 Counters explaining counters: "# \n計數器模型（Counter Pattern）\\r\n\\r\n這個模型（Pattern）在程式設計中相當的重要。\\r\n\\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\\r\n    \\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\r\n\\r\n# 做做這個\\r\n\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\r\n\\r\n*\n**解讀程式** 然後預測輸出會是怎樣。\\r\n*\n**運行程式** 來檢查是否和你的預測一致。\\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\\r\n\\r\n"
       CSD U5 black white images pixelation 2: |-
         # 做做看\r
@@ -294,11 +301,22 @@ zh-TW:
         \r
         ![](https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
         PM.png)
+      CSD U5 black white images pixelation 2_2019: |-
+        # 做做看\r
+        \r
+        使用像素化工具來畫出笑臉\r
+        \r
+        ![](https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
+        PM.png)
       CSD U5 black white images pixelation 3: |-
         # 做做看\r
         \r
         使用像素化工具來畫出笑臉
       CSD U5 black white images pixelation 3_2018: |-
+        # 做做看\r
+        \r
+        使用像素化工具來畫出笑臉
+      CSD U5 black white images pixelation 3_2019: |-
         # 做做看\r
         \r
         使用像素化工具來畫出笑臉
@@ -310,11 +328,19 @@ zh-TW:
         # 做做看\r
         \r
         使用像素化工具來畫出笑臉
+      CSD U5 black white images pixelation 4_2019: |-
+        # 做做看\r
+        \r
+        使用像素化工具來畫出笑臉
       CSD U5 black white images pixelation: |-
         # 做做看\r
         \r
         輸入 0 或是 1 來完成這個 X 形的圖案，如果你想要清除重來，可以點擊「可讀格式」。
       CSD U5 black white images pixelation_2018: |-
+        # 做做看\r
+        \r
+        輸入 0 或是 1 來完成這個 X 形的圖案，如果你想要清除重來，可以點擊「可讀格式」。
+      CSD U5 black white images pixelation_2019: |-
         # 做做看\r
         \r
         輸入 0 或是 1 來完成這個 X 形的圖案，如果你想要清除重來，可以點擊「可讀格式」。
@@ -380,6 +406,11 @@ zh-TW:
         燈光模型\r
         \r
         用眨眼、切換、顏色來創作你自己的燈光模型。
+      CSD U6 colorLeds light pattern_2019: |-
+        #
+        燈光模型\r
+        \r
+        用眨眼、切換、顏色來創作你自己的燈光模型。
       CSD U6 light pattern challenge: |-
         # 燈光模型\r
         \r
@@ -387,6 +418,12 @@ zh-TW:
         \r
         設置這個 app，讓使用者可以使用他們想要看到的燈光模型。你應該將你的每一種燈光樣式放到函式裡，讓程式變得比較簡易。
       CSD U6 light pattern challenge_2018: |-
+        # 燈光模型\r
+        \r
+        找個伙伴，把你們的燈光模型放在一起。\r
+        \r
+        設置這個 app，讓使用者可以使用他們想要看到的燈光模型。你應該將你的每一種燈光樣式放到函式裡，讓程式變得比較簡易。
+      CSD U6 light pattern challenge_2019: |-
         # 燈光模型\r
         \r
         找個伙伴，把你們的燈光模型放在一起。\r
@@ -491,7 +528,14 @@ zh-TW:
       Course 4 Artist 1: "幫我畫個盒子。   \\r\n（每個線段長度為 200 像素）\\r\n\\r\n<br/><br/>\\r\n\\r\n"
       Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"\nwidth=\"150px;\" style=\"mix-blend-mode: multiply;\" />\\r\n\\r\n**遊戲時間：**這兒有個程式能畫出有趣的圖形。 \\r\n\\r\n如果把它重複個幾次，然後在每次的循環都轉向，會發生什麼事呢？\\r\n\\r\n注意當這個圖形的轉向到達了 **420 度**時，就表示小畫家畫完了，它面對的方向會和一開始畫圖的方向不同，這個新的方向會是初始繪圖方向的*向右 60 度*。\\r\n\\r\n<hr/>\\r\n\\r\n<h4>\\r\n<details>\\r\n<summary><b>重複 4 次</b></summary>\\r\n<br/>\\r\n如果你想要在 4 次重複內畫完一個圓形，小畫家需要每次轉 **360 度/4 = 90 度**。你可以在迴圈外層額外添加「轉向-右方 30 度」積木來做到（因為 **60+30 = 90**）。\n<br/>\\r\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\\r\n<br/><br/>\\r\n</details>\\r\n</h4>\\r\n\\r\n<h4>\\r\n<details>\\r\n<summary><b>重複 6 次</b></summary>\\r\n<br/>\\r\n當你重複這個圖形 6 次，你轉了 **6x60 度**， 也就是剛好一圈 **360 度**。\\r\n<img\nsrc=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"  width=\"500px;\"  style=\"mix-blend-mode:\nmultiply;\" />\\r\n</details>\\r\n</h4>\\r\n\\r\n<h4>\\r\n<details>\\r\n<summary><b>重複 12 次</b></summary>\\r\n<br/>\\r\n如果你想要重複這個圖形 12 次，小畫家每次循環需要轉 **360 度/12 = 30 度** 。那表示你需要在重複畫出圖形之前先稍微調整小畫家的方向，讓它向左轉 30 度。<br/><br/>\\r\n<img src=\"https://images.code.org/ad254952522674496918561096817c66-image-1440132424792.44.01.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\\r\n</details>\\r\n</h4>\\r\n\\r\n現在換你了！你能利用重複初始圖形的方式來創建出每個圖案嗎？  "
       Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\n挑戰時間到了！  \\r\n\\r\n這裡有個圖案，只用了你見到的積木做出來的。想一想，要怎麼重建它？你可以邊做邊試，錯了也沒關係。我們不要求你一次就做對。\\r\n\\r\n這些重複的圖形和上個關卡的圖案幾乎相同，除了第一個迴圈裡用的長度比較小以外。 "
-      Course 4 Artist 12: "<img src=\"https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png\"\nwidth=\"250px\"/>\\r\n\n自由發揮靈感：你已經學會了製作這樣的圖案所需的知識了！如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n\\r\n<br/>\\r\n"
+      Course 4 Artist 12: |-
+        <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png"
+        width="250px"/>\r
+
+        自由發揮靈感：你已經學會了製作這樣的圖案所需的知識了！如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \r
+        \r
+        <br/>\r
+
       Course 4 Artist 13: 還在玩啊？給你一張空白畫布，你可以在上面設計任何東西，隨你高興！
       Course 4 Artist 2: "你可以用迴圈來繪製最外圍的灰色正方形嗎？\\r\n（每邊邊長為 300 像素）"
       Course 4 Artist 20: "還在玩啊？\\r\n\\r\n給你一張空白畫布，你可以在上面設計任何東西，隨你高興！"
@@ -551,7 +595,16 @@ zh-TW:
       Course 4 Artist Vars 1: "我們來畫個正三角形。\n\\r\n\\r\n它的每邊都是 100 像素長。\\r\n\\r\n<br/>\\r\n"
       Course 4 Artist Vars 10: "這是畫出大三角形包小三角形的演算法，你可以修改它，讓它使用 `sides`（邊數）變數來畫出每個三角形嗎？\\r\n\\r\n</br>\\r\n仔細看一遍程式，把看到的數字 3 換成 `sides` 變數，記住要使用 `set sides`（設置邊數）積木。"
       Course 4 Artist Vars 11: "這裡有個複雜的程式，它的概念與上一關相同，你要設定的是 `sides`（邊數）變數，以畫出由正方形組合而成的圖案。\\r\n\\r\n<p\nstyle=\"font-size:small; padding: 15px 15px 15px 40px; background-color:#dcf3f3;\nborder-radius:10px;\">\\r\n\\t玩一玩：試著使用一些其他的數字，看看圖案會有什麼變化！\\r\n</p>"
-      Course 4 Artist Vars 12: "我們將 `sides`（邊數）參數設為 5。添加到算式中的邊數越多，圖形就會變得愈大！\\r\n\\r\n<br/>\\r\n注意這裡有另外一個參數叫做 `length`（長度）。\n\\r\n我們可以在「移動-向前」的地方用到它。\n\\r\n\\r\n將 length 設成 75 讓每個形狀的邊長變成 75。"
+      Course 4 Artist Vars 12: |-
+        我們將 `sides`（邊數）參數設為 5。添加到算式中的邊數越多，圖形就會變得愈大！\r
+        \r
+        <br/>\r
+        注意這裡有另外一個參數叫做 `length`（長度）。
+        \r
+        我們可以在「移動-向前」的地方用到它。
+        \r
+        \r
+        將 length 設成 75 讓每個形狀的邊長變成 75。
       Course 4 Artist Vars 13: "當一個圖形的邊愈多，每個邊的長度就要愈小，這樣你才能讓整個圖案顯示在畫面。\\r\n\\r\n我們來重建這個演算式來畫出神奇的圖案，取代原來需手動設置的 `length`（長度）變數，我們改用運算類型的積木和一個 `sides`（邊數）變數。這可以確保每個圖形都能完整顯示在畫面。\\r\n\\r\n每個多邊形的周長都是 300 像素。"
       Course 4 Artist Vars 14: |-
         **自由發揮**：讓我們一探究竟！現在你的演算法嵌入了又一個循環中。試著改變這兩個變數的值來畫出很酷的圖形。 \r
@@ -729,6 +782,59 @@ zh-TW:
       Course 4 SCV 6: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\r\n\\r\n**變數超級挑戰：**你現在學會了所有東西，能做出這樣圖案了！這個關卡相當困難，在想出解決方法前，你能堅持得了嗎？  "
       Course 4 SCVP 1: 建立一個帶參數的函式，讓小藝術家能往前、往後跳躍 x 像素，還有往上、往下 y 像素（使用正數和負數）。
       Course 4 Variables Assessment: 你可以用 `sides`（邊數）變數來創建這個圖像嗎？每一邊的長度應該是 50 像素。
+      CourseD_Dance_Party_01: |-
+        *來舉行一場舞會！*
+
+        將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接，以建立第一個舞者。
+
+        * *如果您想要更多資訊或其他挑戰，也可以按一下左側的燈泡。*
+      CourseD_Dance_Party_02: |-
+        讓這隻麋鹿跳舞！
+
+        拖出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區上。在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木之下進行連接。您的舞者應該在第四個小節之後開始新的動作。
+
+
+        **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
+      CourseD_Dance_Party_03: "*現在我們要跟著音樂律動了！*\n\n將 <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> 程式積木新增至您的工作區。讓舞者在 6 個小節後開始新的動作。"
+      CourseD_Dance_Party_04: |-
+        *這支舞需要一些閃光！*
+
+        在工具箱中尋找新的程式積木，在舞者的背後新增背景效果。觀看隨著時間和音樂來變化的效果！
+      CourseD_Dance_Party_05: |-
+        使用另一個新的程式積木，讓舞者**每 2 個小節**改變動作！
+
+        * 選擇「（下一步）」、「（上一步）」或「（隨機）」告訴舞者每次執行程式碼時執行不同的動作。
+      CourseD_Dance_Party_06: |-
+        *我們需要更多舞者！*
+
+        建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
+      CourseD_Dance_Party_08: |-
+        每個舞者都有一套 _屬性_ 來控制外觀。
+
+        您可以縮小 _尺寸_，讓這看起來像一個舞者在背景中。您是否能讓兩個備用舞者的大小相同？
+      CourseD_Dance_Party_09: |-
+        舞者具有可以新增一層顏色的「色調」屬性。試著變更其中一個舞者的色調。
+        * 色調將混合您選擇的顏色與舞者的顏色。
+      CourseD_Dance_Party_10: |-
+        現在我們已經知道如何改變舞者的屬性。我們也可以使用此程式積木，讓相同的屬性自動回應音樂：
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        此程式使用音樂的「低音」音量（低音）來控制一個舞者的高度。您是否能讓另一個舞者也回應音樂？
+      CourseD_Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。\n\n您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！"
+      CourseD_Dance_Party_11_5: "查看此程式積木：\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在您可以一次建立一群舞者了！\n\n嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。"
+      CourseD_Dance_Party_11b: |-
+        是時候跳舞了！按下向左鍵時，貓會輕拍。按下向右鍵時，可讓機器人「掉落」。
+      CourseD_Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
+      CourseE_HOC 2018 Level_10: "有一隻**烏賊** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) 躲在這片海洋遺址中，您找得到牠嗎？\n\n"
+      CourseE_HOC 2018 Level_11: 使用**海磷石** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) 在黑色混凝土周圍建造一面牆。這將啟用**導管** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) 並完成您的挑戰！
+      CourseE_HOC 2018 Level_7a: "您找到了水底廢墟。在沙岩中搜尋一個裡面有**海磷石** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) 寶藏的**箱子** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)。\n\n"
+      CourseE_HOC 2018 Level_8: "一開始是冰山，現在又是熔岩？穿越這座火山島，並在珊瑚礁中尋找**熱帶魚** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)。\n\n"
+      CourseE_HOC 2018 Level_9b: "您終於抵達珊瑚礁，現在尋找**海洋之心** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)！使用藍色和紅色的珊瑚抵達藏有寶藏的**箱子** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)。\n\n"
       CourseF_PlayLab_vars10: "自由遊戲時間！這裡我們目前為止玩過的所有變數，還有一些是你可能想要的。\\r\n\\r\n注意現在在工具箱裡有好多好多可以被組合的積木！在這裡，我們已經將它們分類放好。花點時間去嘗試每一個東西，當你一切就緖，就可以用重複、變數、事件類的各種指令製作一個遊戲或是故事。\\r\n\\r\n*提示：可以捲動頁面以查看工作區裡的所有指令。*"
       CourseF_PlayLab_vars2: 上一關的比賽一點都不公平！修改 `dog_speed`（小狗的速度）變數，確保你可以收集到比貓還要多的旗子，誰先拿到 10 個旗子就勝利！
       CourseF_PlayLab_vars3: "這裡有個新型態的遊戲！\n\\r\n\\r\n這一關你不需要改變任何東西。\\r\n\\r\n**指引：**\n使用向左鍵和向右鍵移動，向上鍵是跳，看看你能不能收集到所有旗子。"
@@ -1075,6 +1181,10 @@ zh-TW:
         #預測\r
         \r
         什麼輸出會作為這個迴圈的結果呢？
+      Predict Loop I_2019: |-
+        #預測\r
+        \r
+        什麼輸出會作為這個迴圈的結果呢？
       Repeat Predict Contained: |-
         ＃預測\r
         \r
@@ -1087,7 +1197,6 @@ zh-TW:
 
 
         **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
-      Standalone_Artist_1: "歡迎使用小藝術家！首先，讓我們試試建立一個簡單的正方形，用的是「轉向-右方」積木和「移動-向前」積木。\n每邊長度應該是 100 像素。\\r\n\\r\n"
       Standalone_Artist_2: "畫出這個菱形，它的角度分別是 120 和 60 度，邊長則是 150 像素。\\r\n\\r\n"
       Standalone_Artist_3: "你能畫出這個六邊形嗎？它的每個邊長 100 像素，每個角度 60 度。\\r\n\\r\n"
       Standalone_Artist_4: "現在你有了一個新的積木可以玩囉，這個積木是迴圈（loop），它能將一連串的指令重複執行。如果你循環這些指令 6 次，會發生什麼事呢？\n"
@@ -1101,6 +1210,7 @@ zh-TW:
       U1L9 Free Response Assessment: "選擇一個你今天最愛的學習主題。說說你學到了什麼，還有它和我們今天創建和使用的數字系統有什麼關係。\n"
       U2L14 Free Response Getting Started: "破解程式和解密訊息有什麼不同？\\r\n"
       U2L14 Free Response Getting Started_2018: "破解程式和解密訊息有什麼不同？\\r\n"
+      U2L14 Free Response Getting Started_2019: "破解程式和解密訊息有什麼不同？\\r\n"
       Unit 2 RGB Mapping: |
         # RGB 色彩\r
         \r

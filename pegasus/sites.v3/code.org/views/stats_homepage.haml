@@ -1,7 +1,8 @@
 :ruby
   student_accounts_percent = "30%"
   female_students = "15M"
-  project_count = "35M"
+  project_count = fetch_project_count['rounded_down_millions']
+  project_count = project_count.to_s + "M"
   teacher_users = "1M"
   states_policy_change = "48"
 

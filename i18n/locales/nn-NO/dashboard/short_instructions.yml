@@ -460,28 +460,37 @@ nn:
       C3-Farmer While Loops Assessment 1: Det er mange hol og haugar. Hjelp meg å fylle og fjerne dei slik at bakken blir heilt jamn.
       CSD U3 L5 Freeplay: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       CSD U3 L5 Freeplay_2018: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 L5 Freeplay_2019: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       CSD U3 Variables TEMPLATE square: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       CSD U3 Variables change circle size: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       CSD U3 Variables change circle size_2018: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables change circle size_2019: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       CSD U3 Variables multiple assignments: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       CSD U3 Variables naming rules v2-2018: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       CSD U3 Variables naming rules v2: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       CSD U3 Variables naming rules v2_2018: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables naming rules v2_2018_2019: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       CSD U3 Variables naming rules: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       CSD U3 Variables random assignment: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       CSD U3 Variables random with assignment: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       CSD U3 Variables random with assignment_2018: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables random with assignment_2019: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       CSD U4 - Events Template: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
       CSD U5 black white images pixelation 2: Teikn eit smilefjes (Klikk her for å sjå bilete)
       CSD U5 black white images pixelation 2_2018: Teikn eit smilefjes (Klikk her for å sjå bilete)
+      CSD U5 black white images pixelation 2_2019: Teikn eit smilefjes (Klikk her for å sjå bilete)
       CSD U5 black white images pixelation 3: Endre bredde- og høgde-sliderane for å finne bildet (klikk her for å sjå meir)
       CSD U5 black white images pixelation 3_2018: Endre bredde- og høgde-sliderane for å finne bildet (klikk her for å sjå meir)
+      CSD U5 black white images pixelation 3_2019: Endre bredde- og høgde-sliderane for å finne bildet (klikk her for å sjå meir)
       CSD U5 black white images pixelation 4: Legg augebryn til smilefjeset (klikk her for å sjå biletet)
       CSD U5 black white images pixelation 4_2018: Legg augebryn til smilefjeset (klikk her for å sjå biletet)
+      CSD U5 black white images pixelation 4_2019: Legg augebryn til smilefjeset (klikk her for å sjå biletet)
       CSD U5 black white images pixelation 5: Teikn det du vil
       CSD U5 black white images pixelation 5_2018: Teikn det du vil
+      CSD U5 black white images pixelation 5_2019: Teikn det du vil
       CSD U5 black white images pixelation: Gjer ferdig X-forma ved å skrive nullar og eittal
       CSD U5 black white images pixelation_2018: Gjer ferdig X-forma ved å skrive nullar og eittal
+      CSD U5 black white images pixelation_2019: Gjer ferdig X-forma ved å skrive nullar og eittal
       CSDU4 - AppLab - 1: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne det blå kvadratet.
       CSDU6 - Arrays - expressionsAsIndexes: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 - Arrays - indexPractice: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
@@ -493,27 +502,37 @@ nn:
       CSDU6 arrays select icons: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 arrays select rainbow: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 arrays select rainbow_2018: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 arrays select rainbow_2019: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 arrays select random: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 arrays select random_2018: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 arrays select random_2019: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 arrays select variable: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 arrays select variable_2018: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 arrays select variable_2019: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 arrays variable: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
       CSP student contact info: Skriv inn epostadressa di.
       CSPU5_U3 - Arrays - expressionsAsIndexes: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Arrays - expressionsAsIndexes_2018: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Arrays - expressionsAsIndexes_2019: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Arrays - indexPractice: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Arrays - indexPractice_2018: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Arrays - indexPractice_2019: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Canvas - freePlay: Utvid funksjonaliteten til ein av effektane eller opprett ein heilt ny effekt på eigahand. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Canvas - freePlay_2018: Utvid funksjonaliteten til ein av effektane eller opprett ein heilt ny effekt på eigahand. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Canvas - freePlay_2019: Utvid funksjonaliteten til ein av effektane eller opprett ein heilt ny effekt på eigahand. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Design Mode 1: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Design Mode 1_2018: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Design Mode 1_2019: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Keys - Final Image Scroller: Oppdatér biletskrollaren til å respondere på knappar og tastetrykk. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Loops - 4: Bruk debug-kommandoen til å lage ei liste over alle verdiane rulla før ein seksar. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Loops - 4_2018: Bruk debug-kommandoen til å lage ei liste over alle verdiane rulla før ein seksar. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Loops - 4_2019: Bruk debug-kommandoen til å lage ei liste over alle verdiane rulla før ein seksar. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Loops - 7: Utan å leggje til noko linje med kode, ordne koden slik at den skriv ut alle verdiande av num. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Loops - 7_2018: Utan å leggje til noko linje med kode, ordne koden slik at den skriv ut alle verdiande av num. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Loops - 7_2019: Utan å leggje til noko linje med kode, ordne koden slik at den skriv ut alle verdiande av num. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3L15 full clicker app: Gjer ferdig klikkar-spelet ditt! (Trykk for å sjå fullstendige instruksjonar)
       CSPU5_U3L15 full clicker app_2018: Gjer ferdig klikkar-spelet ditt! (Trykk for å sjå fullstendige instruksjonar)
+      CSPU5_U3L15 full clicker app_2019: Gjer ferdig klikkar-spelet ditt! (Trykk for å sjå fullstendige instruksjonar)
       Code Studio Puzzle Challenge 13 - Artist: 'Dette er akkurat som ei "for"-løkke. Fullfør koden for å teikne seks linjer som veks frå 50, 60, 70, 80, 90 til å bli 100 pikslar lange. '
       Code Studio Puzzle Challenge 2 - Artist: No kan du legge til ein sving og ei anna linje. Linjene er 200 pikslar lange.
       Course 2 Bee Loops 1: 'Hei, eg er ei bie. Kan du hjelpe meg med å samle all nektaren frå desse blomane? '
@@ -804,6 +823,23 @@ nn:
       Course 4 Variables Assessment: Kan du lage dette bildet ved å bruke en variabel for sidene? Hver linje skal være 50 piksler lange.
       Course E MC Conditionals1: Du vil finne dei mest verdfulle ressursane under jorda, men det kan bli mørkt. Sett ut minst 2 faklar og grav ut minst 2 kol.
       Course1BeePuzzle12: Hent tre nektar og lag to honning
+      CourseD_Dance_Party_01: Dra “lag ei ny blokk”-blokka inn i arbeidsområdet, og koble den til inni oppsettblokka.
+      CourseD_Dance_Party_02: Få elgen til å gjere eit nytt dansetrinn etter 4 taktar!
+      CourseD_Dance_Party_03: Få dansaren til å gjere eit nytt dansetrinn etter 6 taktar!
+      CourseD_Dance_Party_04: Legg til ein bakgrunnseffekt i programmet.
+      CourseD_Dance_Party_05: Bruk ei ny blokk for å få dansaren til å bytte dansetrinn kvar 2. takt.
+      CourseD_Dance_Party_06: Lag ein ny dansar som heiter ‘backup_dancer1’, som kan danse med katten.
+      CourseD_Dance_Party_08: Kan du gjere begge bakgrunnsdansarane like store?
+      CourseD_Dance_Party_09: Bruk ei fargevalblokk til å skifte farge på dansaren.
+      CourseD_Dance_Party_10: Få den andre dansaren til å reagere på musikken ved å bruke ‘startar å følge’-blokka.
+      CourseD_Dance_Party_11: Med ‘når du trykker opp’-blokka kan du køyre kode når du trykker på oppoverpila. Prøv å få dansaren til å gjere ein kjapp dans når du trykker opp.
+      CourseD_Dance_Party_11_5: Bruk ‘alle endene’-blokker til å få endene til å danse saman.
+      CourseD_Dance_Party_11b: Få roboten til å “droppe” når du trykker på høgrepila, og gjere ein “floss” når du trykker på oppoverpilen. Gjer en droppfloss så fort du kan!
+      CourseD_Dance_Party_12: Groove i veg! Lag ein dans du kan dele med venene dine.
+      CourseE_HOC 2018 Level_10: Kom deg til inngangen av havmonumentet.
+      CourseE_HOC 2018 Level_11: 'Bygg ein kanal med prismarin inne i havmonumentet.  '
+      CourseE_HOC 2018 Level_7a: Let i undervassruinane for å finne ei kiste.
+      CourseE_HOC 2018 Level_9b: 'Bruk korallar som guide for å finne skatten.  '
       CourseF_PlayLab_vars10: "Tid for fritt spel! Her er alle variablane vi har brukt så langt, i tillegg til nokre ekstra om du vil bruke dei.\n\nLegg merke til at det er så mange brikker i verktøykassa vår at dei treng å bli organisert! Her har vi lagt kvar brikke inn i ein kategori. Bruk litt tid på å utforske alt som er tilgjengeleg. Lag eit spel eller ei historie og bruk gjenta-, variablar- og hendingar-brikker. \n\nHint: Bla ned for å sjå alle kommandoane i arbeidsområdet."
       CourseF_PlayLab_vars2: Løpet i førre oppgåve var ikkje veldig rettferdig. Endre variabelen "hund_fart" for å sikra at du kan samla fleire flagg enn Katt. Den fyrste til å samle 10 flagg vinn! 
       CourseF_PlayLab_vars3: Her er eit nytt type spel! Bruk venstre- og høgrepilene til å bevega deg, og opp-pila til å hoppa. Sjå om du kan sanke alle flagga. 
@@ -824,8 +860,10 @@ nn:
       CourseF_PlayLab_vars9: Bra! La oss gjere spelet litt vanskelegare å spele. Kvar gong Hund (figur 1) blir truffe av gule hjarter frå Katt (spelar 2) skal du miste eitt poeng. Start med 10 poeng slik at det ikke er for vanskeleg. For å fullføre nivået må poeng-scoren falle frå 10 til 0.
       Crack Random Substitution: Instruksjonar
       Crack Random Substitution_2018: Instruksjonar
+      Crack Random Substitution_2019: Instruksjonar
       Crack a Caesar Cipher: Instruksjonar
       Crack a Caesar Cipher_2018: Instruksjonar
+      Crack a Caesar Cipher_2019: Instruksjonar
       D_Frozen_nested5: Leik med snøflak!
       D_Frozen_nested6: Teikn eit trappetrinnsmønster som brukar svingar mellom 75 og 105 gradar.
       D_Frozen_nested7: Snu 180 gradar og teikn trappetrinnsmønsteret igjen!
@@ -1194,14 +1232,18 @@ nn:
       Pixelation - AllTheThings 5: Dette pikselasjonsnivået synerer bruken av alternativet "Skjul glidebrytarar". Merk at glidebrytarane for breidde og høgde ikkje er tilgjengelege, og at felta breidde og høgde ikkje kan redigerast.
       Pixelation - Lesson 14 - Make the Letter A: 'Lag ein 3x5 bokstav "A". Widgeten er satt opp med feil dimensjonar. Den fyrste oppgåva di er å sette den andre byten til 8-bit kode for 5: 0000 0101. Så kan du begynne å sette inn pikseldata.'
       Pixelation - Lesson 14 - Make the Letter A_2018: 'Lag ein 3x5 bokstav "A". Widgeten er satt opp med feil dimensjonar. Den fyrste oppgåva di er å sette den andre byten til 8-bit kode for 5: 0000 0101. Så kan du begynne å sette inn pikseldata.'
+      Pixelation - Lesson 14 - Make the Letter A_2019: 'Lag ein 3x5 bokstav "A". Widgeten er satt opp med feil dimensjonar. Den fyrste oppgåva di er å sette den andre byten til 8-bit kode for 5: 0000 0101. Så kan du begynne å sette inn pikseldata.'
       Pixelation - Lesson 15 - Color Shades 4x4: 'Vi startar med 4x4-bildet Maddie laga i videoen. Oppgåva di er å fylle eit 4x4-grid med fargar med 12 bits per piksel. Her er forutsetningane: Rad 1 - fyll med rødfargar. Rad 2 - grønfargar. Rad 3 - blåfargar. Rad 4 - gråfargar.'
       Pixelation - Lesson 15 - Color Shades 4x4_2018: 'Vi startar med 4x4-bildet Maddie laga i videoen. Oppgåva di er å fylle eit 4x4-grid med fargar med 12 bits per piksel. Her er forutsetningane: Rad 1 - fyll med rødfargar. Rad 2 - grønfargar. Rad 3 - blåfargar. Rad 4 - gråfargar.'
+      Pixelation - Lesson 15 - Color Shades 4x4_2019: 'Vi startar med 4x4-bildet Maddie laga i videoen. Oppgåva di er å fylle eit 4x4-grid med fargar med 12 bits per piksel. Her er forutsetningane: Rad 1 - fyll med rødfargar. Rad 2 - grønfargar. Rad 3 - blåfargar. Rad 4 - gråfargar.'
       Pixelation - Lesson 15 - Complete 3-bit color: Vi startar med eit 4x2-bilde som Maddie laga, men vi har tatt ut dei to siste rutene. Gjer ferdig bildet ved å finne ut kva to fargar som manglar og kode dei.
       Pixelation - Lesson 15 - Complete 3-bit color_2018: Vi startar med eit 4x2-bilde som Maddie laga, men vi har tatt ut dei to siste rutene. Gjer ferdig bildet ved å finne ut kva to fargar som manglar og kode dei.
+      Pixelation - Lesson 15 - Complete 3-bit color_2019: Vi startar med eit 4x2-bilde som Maddie laga, men vi har tatt ut dei to siste rutene. Gjer ferdig bildet ved å finne ut kva to fargar som manglar og kode dei.
       Pizza on a Plate: 'Prosjektidé: Lag eit bilete av noko kjent frå den verkelege verda. Dette krev uthaldenheit og planlegging!'
       Poorva copy U3L2 Using Simple Commands: Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
       Project - Final Image Scroller: Oppdatér biletskrollaren til å respondere på knappar og tastetrykk. (Klikk for å sjå fullstendige instruksjonar)
       Project - Final Image Scroller_2018: Oppdatér biletskrollaren til å respondere på knappar og tastetrykk. (Klikk for å sjå fullstendige instruksjonar)
+      Project - Final Image Scroller_2019: Oppdatér biletskrollaren til å respondere på knappar og tastetrykk. (Klikk for å sjå fullstendige instruksjonar)
       Project - Finish your canvas app: Utvid funksjonaliteten til ein av effektane eller opprett ein heilt ny effekt på eigahand. (Klikk for å sjå fullstendige instruksjonar)
       Project - Make Your Own Clicker Game: Gjer ferdig klikkar-spelet ditt! (Trykk for å sjå fullstendige instruksjonar)
       Prompt Test: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
@@ -1265,6 +1307,7 @@ nn:
       Testing Quantum Farmer: "Wow! Sjå på det! \n\nEg veit ikkje kor mange spadetak med jord det tar å fylle det.\nKan du skrive eit program som nyttar fyll-blokka ti å fylle holet til det er heilt jamnt?  "
       The Vigenere Cipher Widget: Instruksjonar
       The Vigenere Cipher Widget_2018: Instruksjonar
+      The Vigenere Cipher Widget_2019: Instruksjonar
       The Vigenere Cipher: Instruksjonar
       Total Artist Clone Me: 'Frileik: Her er funksjonane du har skrive og litt meir å leike med. Teikn eitkvart ageleg! Leik med tjukkleiken til pennen og sjå kva det gjer med teikningane!'
       U2 frequency caesar: Instruksjonar
@@ -1281,70 +1324,100 @@ nn:
       U3 Variables randomize your square: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
       U3L03 Draw a T using turnAround: Teikn eit plussteikn som brukar den oppgjevne versjonen av turnAround().  (Trykk for å sjå fullstendige instruksjonar)
       U3L03 Draw a T using turnAround_2018: Teikn eit plussteikn som brukar den oppgjevne versjonen av turnAround().  (Trykk for å sjå fullstendige instruksjonar)
+      U3L03 Draw a T using turnAround_2019: Teikn eit plussteikn som brukar den oppgjevne versjonen av turnAround().  (Trykk for å sjå fullstendige instruksjonar)
       U3L03 Three Steps: Definer ein funksjon kalla drawSide() som teiknar tre steg og flyttar skilpadda for å førebu seg på den neste sida (Trykk for å sjå fullstendige instruksjonar)
       U3L03 Three Steps_2018: Definer ein funksjon kalla drawSide() som teiknar tre steg og flyttar skilpadda for å førebu seg på den neste sida (Trykk for å sjå fullstendige instruksjonar)
+      U3L03 Three Steps_2019: Definer ein funksjon kalla drawSide() som teiknar tre steg og flyttar skilpadda for å førebu seg på den neste sida (Trykk for å sjå fullstendige instruksjonar)
       U3L03 draw diamond: Opprett ein funksjon kalla drawDiamond() som brukar det tidlegare arbeidet ditt for å teikne ein fullstendig diamant. (Trykk for å sjå fullstendige instruksjonar)
       U3L03 draw diamond_2018: Opprett ein funksjon kalla drawDiamond() som brukar det tidlegare arbeidet ditt for å teikne ein fullstendig diamant. (Trykk for å sjå fullstendige instruksjonar)
+      U3L03 draw diamond_2019: Opprett ein funksjon kalla drawDiamond() som brukar det tidlegare arbeidet ditt for å teikne ein fullstendig diamant. (Trykk for å sjå fullstendige instruksjonar)
       U3L06 - moveForwardwithParams: Bruk berre ein kommando for å flytte skilpadda til kanten av skjermen. (Trykk for å sjå fullstendige instruksjonar)
       U3L06 - moveForwardwithParams_2018: Bruk berre ein kommando for å flytte skilpadda til kanten av skjermen. (Trykk for å sjå fullstendige instruksjonar)
+      U3L06 - moveForwardwithParams_2019: Bruk berre ein kommando for å flytte skilpadda til kanten av skjermen. (Trykk for å sjå fullstendige instruksjonar)
       U3L06 Challenge 1 triangle: Bruk dei versjonane av skilpaddekommandoane med parameter for å lage eit triangel med sider på 100 pikslar. (Trykk for å sjå fullstendige instruksjonar)
       U3L06 Challenge 1 triangle_2018: Bruk dei versjonane av skilpaddekommandoane med parameter for å lage eit triangel med sider på 100 pikslar. (Trykk for å sjå fullstendige instruksjonar)
+      U3L06 Challenge 1 triangle_2019: Bruk dei versjonane av skilpaddekommandoane med parameter for å lage eit triangel med sider på 100 pikslar. (Trykk for å sjå fullstendige instruksjonar)
       U3L06 Challenge 2 purple square: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne det blå kvadratet.
       U3L06 Challenge 2 purple square_2018: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne det blå kvadratet.
+      U3L06 Challenge 2 purple square_2019: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne det blå kvadratet.
       U3L06 Challenge 3 fill pink: Fyll inn skjermbakgrunnen med favorittfargen din. (Trykk for å sjå fullstendige instruksjonar)
       U3L06 Challenge 3 fill pink_2018: Fyll inn skjermbakgrunnen med favorittfargen din. (Trykk for å sjå fullstendige instruksjonar)
+      U3L06 Challenge 3 fill pink_2019: Fyll inn skjermbakgrunnen med favorittfargen din. (Trykk for å sjå fullstendige instruksjonar)
       U3L06 Challenge 5 overlapping circles: 'Dette biletet er laga berre ved å bruke dot() og penColor(), men korleis skal vi få sirklane til å vere gjennomsiktige?  Om du ikkje har tatt hintet enno: sjekk ut dokumentasjonen!'
       U3L06 Challenge 5 overlapping circles_2018: 'Dette biletet er laga berre ved å bruke dot() og penColor(), men korleis skal vi få sirklane til å vere gjennomsiktige?  Om du ikkje har tatt hintet enno: sjekk ut dokumentasjonen!'
+      U3L06 Challenge 5 overlapping circles_2019: 'Dette biletet er laga berre ved å bruke dot() og penColor(), men korleis skal vi få sirklane til å vere gjennomsiktige?  Om du ikkje har tatt hintet enno: sjekk ut dokumentasjonen!'
       U3L06 Challenge 6 squiggles: "Les dokumentasjonen for \"arcLeft\" og \"arcRight\"-kommandoane og teikn så kråketær som vist.\n"
       U3L06 Challenge 6 squiggles_2018: "Les dokumentasjonen for \"arcLeft\" og \"arcRight\"-kommandoane og teikn så kråketær som vist.\n"
+      U3L06 Challenge 6 squiggles_2019: "Les dokumentasjonen for \"arcLeft\" og \"arcRight\"-kommandoane og teikn så kråketær som vist.\n"
       U3L06 Challenge 7 smiley face: Bruk turnTo() og moveTo() for å teikne eit smilefjes. (Trykk for å sjå fullstendige instruksjonar)
       U3L06 Challenge 7 smiley face_2018: Bruk turnTo() og moveTo() for å teikne eit smilefjes. (Trykk for å sjå fullstendige instruksjonar)
+      U3L06 Challenge 7 smiley face_2019: Bruk turnTo() og moveTo() for å teikne eit smilefjes. (Trykk for å sjå fullstendige instruksjonar)
       U3L07 - Free Play Loops and Random: Frileik! Bruk det du lærte om løkker og tilfeller for å lage din eiga scene. Ha det gøy.
       U3L07 - Free Play Loops and Random_2018: Frileik! Bruk det du lærte om løkker og tilfeller for å lage din eiga scene. Ha det gøy.
+      U3L07 - Free Play Loops and Random_2019: Frileik! Bruk det du lærte om løkker og tilfeller for å lage din eiga scene. Ha det gøy.
       U3L07 - allSeaGrass: Legg til 50 stykk sjøgras på biletet ved å skrive drawAllSeagrass med ei løkke. (Klikk for å sjå fullstendige instruksjonar)
       U3L07 - allSeaGrass_2018: Legg til 50 stykk sjøgras på biletet ved å skrive drawAllSeagrass med ei løkke. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - allSeaGrass_2019: Legg til 50 stykk sjøgras på biletet ved å skrive drawAllSeagrass med ei løkke. (Klikk for å sjå fullstendige instruksjonar)
       U3L07 - createTriangleParam: Definer ein funksjon som tar ein parameter for å matche funksjonskalla og gjer ferdig biletet. (Klikk for å sjå fullstendige instruksjonar)
       U3L07 - createTriangleParam_2018: Definer ein funksjon som tar ein parameter for å matche funksjonskalla og gjer ferdig biletet. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - createTriangleParam_2019: Definer ein funksjon som tar ein parameter for å matche funksjonskalla og gjer ferdig biletet. (Klikk for å sjå fullstendige instruksjonar)
       U3L07 - introSquare: Bruk ei løkke til å tegne eit kvadrat. Legg til ei løkke til for å teikne mange kvadrat som all er rotert litt. (Klikk for å sjå fullstendige instruksjonar)
       U3L07 - introSquare_2018: Bruk ei løkke til å tegne eit kvadrat. Legg til ei løkke til for å teikne mange kvadrat som all er rotert litt. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - introSquare_2019: Bruk ei løkke til å tegne eit kvadrat. Legg til ei løkke til for å teikne mange kvadrat som all er rotert litt. (Klikk for å sjå fullstendige instruksjonar)
       U3L07 - loopsWithRandom: Auk antallet repetisjonar slik at skjermen blir fylt med kvitt. (Klikk for å sjå fullstendige instruksjonar)
       U3L07 - loopsWithRandom_2018: Auk antallet repetisjonar slik at skjermen blir fylt med kvitt. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - loopsWithRandom_2019: Auk antallet repetisjonar slik at skjermen blir fylt med kvitt. (Klikk for å sjå fullstendige instruksjonar)
       U3L07 - randomSquare: Teikn figuren ved å bruke ei løkke. (Klikk for å sjå fullstendige instruksjonar)
       U3L07 - randomSquare_2018: Teikn figuren ved å bruke ei løkke. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - randomSquare_2019: Teikn figuren ved å bruke ei løkke. (Klikk for å sjå fullstendige instruksjonar)
       U3L07 - sunBeams: Legg til 100 solstråler til bildet ved å skrive drawAllSunbeams med ei løkke. (Klikk for å sjå fullstendige instruksjonar)
       U3L07 - sunBeams_2018: Legg til 100 solstråler til bildet ved å skrive drawAllSunbeams med ei løkke. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - sunBeams_2019: Legg til 100 solstråler til bildet ved å skrive drawAllSunbeams med ei løkke. (Klikk for å sjå fullstendige instruksjonar)
       U3L07 - topDownDesign: Bli komfortabel med strukturen i dette programmet før du går vidare til neste oppgave. (Klikk for å sjå fullstendige instruksjonar)
       U3L07 - topDownDesign_2018: Bli komfortabel med strukturen i dette programmet før du går vidare til neste oppgave. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - topDownDesign_2019: Bli komfortabel med strukturen i dette programmet før du går vidare til neste oppgave. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - fish: Legg til ein parameter til drawFish som endrer størrelsen på fisken som blir teikna. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - fish_2018: Legg til ein parameter til drawFish som endrer størrelsen på fisken som blir teikna. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - fish_2019: Legg til ein parameter til drawFish som endrer størrelsen på fisken som blir teikna. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - freePlay: Fortset å bygge på bildet ditt ved å lage fleire kall til dine nye funksjonar med parametre. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - freePlay_2018: Fortset å bygge på bildet ditt ved å lage fleire kall til dine nye funksjonar med parametre. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - freePlay_2019: Fortset å bygge på bildet ditt ved å lage fleire kall til dine nye funksjonar med parametre. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - introUnderTheSea with comments: Legg til ein ekstrra fisk, sjøstjerne og sjøgras til bildet. Sjå på, men ikkje endre, funksjonane som lagar dei. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - introUnderTheSea: Legg til ein ekstrra fisk, sjøstjerne og sjøgras til bildet. Sjå på, men ikkje endre, funksjonane som lagar dei. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - introUnderTheSea_2018: Legg til ein ekstrra fisk, sjøstjerne og sjøgras til bildet. Sjå på, men ikkje endre, funksjonane som lagar dei. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - introUnderTheSea_2019: Legg til ein ekstrra fisk, sjøstjerne og sjøgras til bildet. Sjå på, men ikkje endre, funksjonane som lagar dei. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - randomInput: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - randomInput_2018: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - randomInput_2019: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - squareTwoParams: Kall drawSquare() for å gjere ferdig tegninga av dei to kvadrata. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - squareTwoParams_2018: Kall drawSquare() for å gjere ferdig tegninga av dei to kvadrata. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - squareTwoParams_2019: Kall drawSquare() for å gjere ferdig tegninga av dei to kvadrata. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - starFish: Legg til ein ekstrra fisk, sjøstjerne og sjøgras til bildet. Sjå på, men ikkje endre, funksjonane som lagar dei. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - triangleTwoParams: Kall drawSquare() for å gjere ferdig tegninga av dei to kvadrata. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 how to add comments: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 how to add comments_2018: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 how to add comments_2019: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
       U3L15 full clicker app: Gjer ferdig klikkar-spelet ditt! (Trykk for å sjå fullstendige instruksjonar)
       U3L2 Using Simple Commands (no tooltips): Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
       U3L2 Using Simple Commands: Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
       U3L2 Using Simple Commands_2018: Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      U3L2 Using Simple Commands_2019: Tegn eit 1x1 kvadrat over og til venstre for skilpadda sin startposisjon. Klikk for å sjå fullstendige instruksjonar.
       U3L2_Turtle3by3Grid: Tegn eit 3x3 rutenett foran og til høgre for turtle så effektivt som mogleg. Skilpadda skal stoppe der ho starta og ha samme retning som den starta i. (Klikk for å sjå fullstendige instruksjonar)
       U3L2_Turtle3by3Grid_2018: Tegn eit 3x3 rutenett foran og til høgre for turtle så effektivt som mogleg. Skilpadda skal stoppe der ho starta og ha samme retning som den starta i. (Klikk for å sjå fullstendige instruksjonar)
+      U3L2_Turtle3by3Grid_2019: Tegn eit 3x3 rutenett foran og til høgre for turtle så effektivt som mogleg. Skilpadda skal stoppe der ho starta og ha samme retning som den starta i. (Klikk for å sjå fullstendige instruksjonar)
       U3L2_TurtleSquare_right: Teikn eit kvadrat foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
       U3L2_TurtleSquare_right_2018: Teikn eit kvadrat foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
+      U3L2_TurtleSquare_right_2019: Teikn eit kvadrat foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
       U4 Model App: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
       U4 Model App_2018: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
+      U4 Model App_2019: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
       U4 Model Design 1: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
       U4 Model Design 1_2018: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
+      U4 Model Design 1_2019: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
       U4 vigenere cipher 2: Instruksjonar
       U4L02 - Objects - Template1: Mal
       U4L02 - Objects - Template1_2018: Mal
+      U4L02 - Objects - Template1_2019: Mal
       Underground Avoiding Lava: Lava er gøymt under nokre av desse blokkene. Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave ut desse blokkene.
       Underground Avoiding Lava_2018: Lava er gøymt under nokre av desse blokkene. Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave ut desse blokkene.
       Underground Avoiding Lava_2019: Lava er gøymt under nokre av desse blokkene. Dei er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando vil vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave ut desse blokkene.

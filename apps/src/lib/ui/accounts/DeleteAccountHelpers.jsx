@@ -1,7 +1,10 @@
 import React from 'react';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
-import {ADD_A_PERSONAL_LOGIN_HELP_URL, RELEASE_OR_DELETE_RECORDS_EXPLANATION} from '@cdo/apps/lib/util/urlHelpers';
+import {
+  ADD_A_PERSONAL_LOGIN_HELP_URL,
+  RELEASE_OR_DELETE_RECORDS_EXPLANATION
+} from '@cdo/apps/lib/util/urlHelpers';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 export const TeacherWarning = () => {
@@ -14,10 +17,7 @@ export const TeacherWarning = () => {
       </p>
       <p>
         {i18n.deleteAccount_teacherWarning4()}
-        <a
-          href={ADD_A_PERSONAL_LOGIN_HELP_URL}
-          target="_blank"
-        >
+        <a href={ADD_A_PERSONAL_LOGIN_HELP_URL} target="_blank">
           {i18n.deleteAccount_teacherWarning5()}
         </a>
         {i18n.deleteAccount_teacherWarning6()}
@@ -27,9 +27,7 @@ export const TeacherWarning = () => {
 };
 
 export const StudentWarning = () => {
-  return (
-    <div>{i18n.deleteAccount_studentWarning()}</div>
-  );
+  return <div>{i18n.deleteAccount_studentWarning()}</div>;
 };
 
 export const getCheckboxes = (dependedUponForLogin, hasStudents) => {
@@ -44,7 +42,7 @@ export const getCheckboxes = (dependedUponForLogin, hasStudents) => {
 };
 
 // Teacher that has students who depend on them to log in is required to see/check all 5 checkboxes to delete their account.
-const TEACHER_DEPENDED_UPON_FOR_LOGIN_CHECKBOXES = [1,2,3,4,5];
+const TEACHER_DEPENDED_UPON_FOR_LOGIN_CHECKBOXES = [1, 2, 3, 4, 5];
 // Teacher with students is only required to see/check the first checkbox to delete their account.
 const TEACHER_WITH_STUDENTS_CHECKBOXES = [1];
 
@@ -77,7 +75,9 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-         <UnsafeRenderedMarkdown markdown={i18n.deleteAccountDialog_checkbox3()} />
+        <UnsafeRenderedMarkdown
+          markdown={i18n.deleteAccountDialog_checkbox3()}
+        />
       </span>
     )
   },
@@ -85,7 +85,9 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-         <UnsafeRenderedMarkdown markdown={i18n.deleteAccountDialog_checkbox4()} />
+        <UnsafeRenderedMarkdown
+          markdown={i18n.deleteAccountDialog_checkbox4()}
+        />
       </span>
     )
   },
@@ -93,7 +95,9 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-         <UnsafeRenderedMarkdown markdown={i18n.deleteAccountDialog_checkbox5()} />
+        <UnsafeRenderedMarkdown
+          markdown={i18n.deleteAccountDialog_checkbox5()}
+        />
       </span>
     )
   }

@@ -116,15 +116,29 @@ my:
         options:
           KEY:
             '"x"': "×"
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': အချိန်
       gamelab_debugSprite:
         options:
           VAL:
             'true': 'true'
             'false': 'false'
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': အချိန်
+          KEY:
+            '"x"': "×"
       gamelab_randColor:
         text: ကျဘန်းအရောင်
       gamelab_randomColor:
         text: ကျဘန်းအရောင်
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': အချိန်
       Mikelab_groupChangeAnim:
         options:
           SELECT:
@@ -163,14 +177,27 @@ my:
             MOVES.Rest: ဘာမှမရှိ
       Mikelab_randomColor:
         text: ကျဘန်းအရောင်
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': အချိန်
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': အချိန်
-      aalab_whenTouching:
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': အချိန်
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': 'true'
+            '"false"': 'false'
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': အမြဲတမ်​း
       craft_ifPath:
         options:
           DIR:

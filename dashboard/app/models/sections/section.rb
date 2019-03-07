@@ -248,6 +248,7 @@ class Section < ActiveRecord::Base
         script.course&.family_name
       end
 
+    unique_students = students.uniq(&:id)
     {
       id: id,
       name: name,
@@ -257,7 +258,7 @@ class Section < ActiveRecord::Base
       linkToAssigned: link_to_assigned,
       currentUnitTitle: title_of_current_unit,
       linkToCurrentUnit: link_to_current_unit,
-      numberOfStudents: students.length,
+      numberOfStudents: unique_students.length,
       linkToStudents: "#{base_url}#{id}/manage",
       code: code,
       stage_extras: stage_extras,
@@ -270,11 +271,11 @@ class Section < ActiveRecord::Base
         name: script.try(:name),
         course_family_name: course_family_name
       },
-      studentCount: students.size,
+      studentCount: unique_students.size,
       grade: grade,
       providerManaged: provider_managed?,
       hidden: hidden,
-      students: students.map(&:summarize),
+      students: unique_students.map(&:summarize),
     }
   end
 

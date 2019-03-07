@@ -370,6 +370,8 @@ ka:
               name: მასწავლებლის მართვის პანელი
             Writing computer programs:
               name: კომპიუტერული პროგრამების წერა
+            new stage:
+              name: ახალი დონე
         netsim:
           title: ინტერნეტ-სიმულატორი
         20-hour:
@@ -4546,6 +4548,8 @@ ka:
               name: ქრაუდსორსინგი
             Relay Programming:
               name: პროგრამირება ცვლაში
+            Graph Paper Programming:
+              name: გრაფიკული პროგრამირება ქაღალდზე
         courseb-2018:
           assignment_family_title: კურსი B
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
@@ -5167,6 +5171,14 @@ ka:
               name: ახალი დონე
             The Artist:
               name: მხატვარი
+            Copyright and Creativity:
+              name: საავტორო უფლებები და შემოქმედებითობა
+            Internet:
+              name: ინტერნეტი
+            Crowdsourcing:
+              name: ქრაუდსორსინგი
+            Digital Sharing:
+              name: ციფრული გაზიარება
         coursed-2019:
           stages:
             Introduction to Online Puzzles:
@@ -5279,6 +5291,8 @@ ka:
               name: ჩადგმული ციკლები მხატვარში
             Conditionals in Minecraft:
               name: პირობითი წინადადებები Minecraft-ში
+            Digital Sharing:
+              name: ციფრული გაზიარება
         express-2019:
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
@@ -5412,6 +5426,10 @@ ka:
               name: მოვლენები სათამაშო ლაბორატორიაში
             Binary Bracelets:
               name: ორობითი სამაჯურები
+            'Programming: My Robotic Friends':
+              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+            'Loops: My Loopy Robotic Friends':
+              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
         gamelab:
           title: თამაშების ლაბი
         coursea-2019:
@@ -5515,3 +5533,297 @@ ka:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
+        dani-test-script:
+          stages:
+            new stage:
+              name: ახალი დონე
+        csd2-2019:
+          description_short: "  ისწავლეთ თქვენი საკუთარი საიტის აწყობა ვებ ლაბორატორიაში."
+          stages:
+            Exploring Websites:
+              name: ვებ-საიტების გამოკვლევა
+              description_teacher: ყოველ ვებ-საიტს აქვს დანიშნულება, მიზანი რომლისთვისაც
+                ის ვიღაცამ შექმნა და ვიღაცა იყენებს. ამ გაკვეთილში მოსწავლეები დაიწყებენ
+                საიტის შესაძლო დანიშნულებების გათვალისწინებას, როგორც მომხმარებლების,
+                ასევე შემქნელების მხრიდან. მოსწავლეები გამოიკვლევენ ამერიკის შეერთებულ
+                შტატებში რამდენიმე ყველაზე მეტად გამოყენებად ვებ-საიტს და ეცდებიან,
+                გაიგონ თუ რა მხრივ არიან ისინი გამოყენებადი მომხარებლებისთვის და როგორ
+                შეიძლება ემსახურონ თავიანთ შექმნელებს.
+            'Websites for Expression ':
+              name: 'ვებ-საიტები გამოხატვისათვის '
+            Intro to HTML:
+              name: შესავალი HTML-ში
+            Headings:
+              name: სათაურები
+            Digital Footprint:
+              name: ციფრული ნაკვალევი
+            Lists:
+              name: სიები
+              description_student: ეს დონე წარმოგვიდგენს დალაგებულ და დაულაგებელ სიებს
+                და შესაბამის  &lt;ul&gt;, &lt;ol&gt;, და &lt;li&gt; HTML ტეგებს. კლასი
+                ვარჯიშობს ტეგების გამოყენებაზე, შემდეგ კი უბრუნდება პირადი ვებ-გვერდის
+                პროექტს, რათა დაამატოთ ახალი HTML გვერდი, რომლებიც შეიცავს ახალ ტეგებს.
+            Intellectual Property and Images:
+              name: ინტელექტუალური საკუთრება და სურათები
+              description_student: ეს გაკვეთილი მოიცავს სხვების მიერ შექმნილი მედიის
+                ( სურათების, ვიდეოს ან მუსიკის) შემქნელების უფლებების პატივიცემით
+                გამოყენებას. Creative Commons ლიცენზირების შესწავლის შემდეგ, კლასი
+                ისწავლის ვებ-გვერდზებზე სურათების დამატებას და ამავე დროს საავტორო
+                უფლებების სწორად მითითებას.
+            Clean Code and Debugging:
+              description_student: ეს დონე მოიცავს პრობლემებს, რომლებიც ხშირად იჩენენ
+                თავს HTML ვებ-გვერდების დიზაინის დროს. კლასი შეასწორებს შეცდომებს
+                მიმდევრობითად გართულებად ვებ-გვერდებში, რომლებიც Code Studio-ზე არიან
+                განთავსებულნი. კლასი ასევე შეისწავლის კომენტარების, თეთრი სივრცის
+                (შორისის) და დაშორების მნიშვნელობასა და პრაქტიკულობას ვებ-გვერდების
+                წაკითხვადობის გასაუმჯობესებლად.
+            Project - Multi-Page Websites:
+              name: პროექტი - მრავალგვერდიანი ვებ-საიტები
+              description_student: 'ეს დონე მოიცავს ჰიპერბმულებს, რომლებიც  ვებ დეველოპერებს
+                აძლევენ საშუალებას, დაუკავშირონ ერთმანეთს გვერდები ერთიანი ვებ-საიტის
+                შესაქმნელად. მთლიანი საიტის ვებში გამოქვეყნებამდე კლასი ააწყობს ერთ
+                პროექტს ყველა წინა გვერდის ერთმანეთთან დაკავშირებით და შექმნის ნავიგაციის
+                ზოლს ყოველი გვერდისთვის.  '
+            Styling Text with CSS:
+              name: ტექსტის სტილის მორგება CSS-ით
+              description_student: ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების
+                სტილის განსაზღვრის გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს
+                და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტურ ელემენტებზე.
+                საბოლოოდ, ყველა გამოიყენებს ტექსტურ სტილებს საკუთარ პირად ვებ-საიტზე.
+              description_teacher: "ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების
+                სტილის მორგების გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს
+                და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტური ელემენტებზე.
+                ისინი იმუშავებენ HTML გვერდზე, რომელიც გვიამბობს გინესის რეკორდების
+                მფლობელებზე, კერძოდ კი დაამატებენ მოწოდებულ გვერდს თავის სტილებს.
+                ბოლო დონეზე მოსწავლეები გამოიყენებენ ახალ ინფორმაციას საკუთარ პირად
+                ვებ-გვერდზე ტექსტური ელემენტების სტილების განსასაზღვრად.\r\n\r\n"
+            Styling Elements with CSS:
+              name: ელემენტების სტილის მორგება CSS-ით
+            RGB Colors and Classes:
+              name: RGB ფერები და კლასები
+            Project - Personal Portfolio Website:
+              name: პროექტი - პირადი პორტფოლიოს ვებ-საიტი
+        csd3-2019:
+          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა
+            და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
+          stages:
+            Programming for Entertainment:
+              name: პროგრამირება გართობისათვის
+            Drawing in Game Lab:
+              name: ხატვა თამაშების ლაბორატორიაში
+              description_student: კლასი ეცნობა თამაშების ლაბორატორიას, ამ თავისთვის
+                საჭირო პროგრამირების გარემოს და იწყებს მის გამოყენებას, რათა განალაგოს
+                ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობებისა და გამართვის
+                საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის ბოლო კლასი
+                შექმნის წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ ვერსიას.
+              description_teacher: მოსწავლეები ეცნობიან თამაშების ლაბორატორიას, ამ
+                თავისთვის საჭირო პროგრამირების გარემოს და იწყებენ მის გამოყენებას,
+                რათა განალაგონ ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობების
+                და გამართვის საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის
+                ბოლოს მოსწავლეები შექმნიან წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ
+                ვერსიას.
+            Variables:
+              name: ცვლადები
+            Sprites:
+              name: სპრაიტები
+            The Draw Loop:
+              name: ხატვის ციკლი
+            Sprite Movement:
+              name: სპრაიტების მოძრაობა
+            Conditionals:
+              name: პირობითი ბრძანებები
+            Keyboard Input:
+              name: კლავიატურიდან შეყვანილი ინფორმაცია
+            Project - Interactive Card:
+              name: პროექტი - ინტერაქტიული ბარათი
+            Velocity:
+              name: სიჩქარე
+              description_student: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის
+                შემდეგ კლასი გაეცნობა იმ თვისებებს, რომლებიც გამოიყენება სიჩქარისა
+                და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ ამ
+                თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო
+                side scroller ტიპის თამაშის შექმნას.
+              description_teacher: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის
+                შემდეგ, მოსწავლეების გაეცნობიან იმ თვისებებს, რომლებიც გამოიყენება
+                სიჩქარის და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ
+                ამ თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო
+                side scroller ტიპის თამაშის შექმნას.
+            Collision Detection:
+              name: შეჯახების აღმოჩენა
+            Complex Sprite Movement:
+              name: სპრაიტების რთული მოძრაობა
+            Collisions:
+              name: შეჯახებები
+            Functions:
+              name: ფუნქციები
+            The Game Design Process:
+              name: თამაშის დიზაინის პროცესი
+            Using the Game Design Process:
+              name: თამაშის დიზაინის პროცესის გამოყენება
+            Project - Design a Game:
+              name: პროექტი - შექმენით თამაშის დიზაინი
+        csd4-2019:
+          stages:
+            Analysis of Design:
+              name: დიზაინის ანალიზი
+            User-Centered Design Micro Activity:
+              name: მომხმარებელზე გათვლილი დიზაინის მიკრო აქტიურობა
+            Identifying User Needs:
+              name: მომხმარებლის მოთხოვნილებების განსაზღვრა
+            Paper Prototypes:
+              name: ქაღალდის პროტოტიპები
+            Prototype Testing:
+              name: პროტოტიპების ტესტირება
+            Digital Design:
+              name: ციფრული დიზაინი
+            Linking Screens:
+              name: ეკრანების დაკავშირება
+            Testing the App:
+              name: აპლიკაციების ტესტირება
+        csd5-2019:
+          title: 'CSD თავი 5: მონაცემები და საზოგადოება'
+          description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
+            დაკავშირებული პრობლემების გადასაჭრელად.
+          stages:
+            Representing Numbers:
+              name: რიცხვების წარმოდგენა
+            Project - Create a Representation:
+              name: პროექტი - შექმენით წარმოდგენა
+            Problem Solving and Data:
+              name: პრობლემათა გადაჭრა და მონაცემები
+            Making Decisions with Data:
+              name: გადაწყვეტილების მიღება მონაცემებთან ერთად
+            Interpreting Data:
+              name: მონაცემთა ინტერპრეტაცია
+            Automating Data Decisions:
+              name: მონაცემთა გადაწყვეტილებების ავტომატიზირება
+            Project - Solve a Data Problem:
+              name: პროექტი - გადაწყვიტეთ მონაცემთა პრობლემა
+        csd6-2019:
+          description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
+          stages:
+            Making Music:
+              name: მუსიკის შექმნა
+            Functions with Parameters:
+              name: ფუნქციები პარამეტრებით
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: გამოკითხვები
+        csp1-2019:
+          stages:
+            CS Principles Pre-survey:
+              name: კომპიუტერული მეცნიერების საფუძვლების წინარეგამოკითხვა
+            Personal Innovations:
+              name: პირადი ინოვაციები
+            Sending Binary Messages:
+              name: ორობითი წერილების გაგზავნა
+            Binary Numbers:
+              name: ორობითი რიცხვები
+            Sending Numbers:
+              name: რიცხვების გაგზავნა
+            The Internet:
+              name: ინტერნეტი
+            HTTP and Abstraction:
+              name: HTTP და აბსტრაქცია
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: ბაიტები და ფაილის ზომები
+            Encoding B&W Images:
+              name: შავთეთრი სურათების კოდირება
+            Encoding Color Images:
+              name: ფერადი სურათების კოდირება
+        csp3-2019:
+          description_short: პროგრამირება
+          stages:
+            The Need For Programming Languages:
+              name: პროგრამირების ენების საჭიროება
+            The Need for Algorithms:
+              name: ალგორითმების საჭიროება
+            Creativity in Algorithms:
+              name: შემოქმედებითობა ალგორითმებში
+            Using Simple Commands:
+              name: მარტივი ბრძანებების გამოყენება
+            Creating Functions:
+              name: ფუნქციების შექმნა
+            Looping and Random Numbers:
+              name: ციკლები და შემთხვევითი რიცხვები
+        csp4-2019:
+          stages:
+            What is Big Data?:
+              name: რა არის დიდი მონაცემები?
+            Check Your Assumptions:
+              name: შეამოწმეთ თქვენი ვარაუდები
+            The Cost of Free:
+              name: უფასოს ფასი
+            Simple Encryption:
+              name: მარტივი შიფრირება
+        csp5-2019:
+          stages:
+            Buttons and Events:
+              name: ღილაკები და მოვლენები
+            Multi-screen Apps:
+              name: მრავალეკრანიანი აპლიკაციები
+            'Building an App: Multi-Screen App':
+              name: 'აპლიკაციის შექმნა: მრავალეკრანიანი აპლიკაცია'
+            Controlling Memory with Variables:
+              name: მეხსიერების გაკონტროლება ცვლადებით
+            'Building an App: Clicker Game':
+              name: 'აპლიკაციის შექმნა: წკაპა თამაში'
+            Unit 5 Assessment 1:
+              name: სექცია 5 დავალება 1
+            User Input and Strings:
+              name: მომხმარებლის მიერ შეყვანილი ინფორმაცია და სტრინგები
+            '"if-else-if" and Conditional Logic':
+              name: '"თუ-სხვაგვარად-თუ" და პირობითი ლოგიკა'
+            Unit 5 Assessment 2:
+              name: სექცია 5 დავალება 2
+            While Loops:
+              name: '"სანამ" ციკლები'
+            Loops and Simulations:
+              name: ციკლები და სიმულაციები
+            Introduction to Arrays:
+              name: შესავალი მასივებში
+            'Building an App: Image Scroller':
+              name: 'აპლიკაციის შექმნა: სურათების ცოცია ("სქროლერი")'
+            Unit 5 Assessment 3:
+              name: სექცია 5 დავალება 3
+            Processing Arrays:
+              name: მასივების დამუშავება
+            Unit 5 Assessment 4:
+              name: სექცია 5 დავალება 4
+        csppostap-2019:
+          description_short: ისწავლეთ მონაცემთა შეგროვება და მათი გამოყენება აპლიკაციების
+            ლაბორატორიაში.
+          stages:
+            Intro to Data:
+              name: მონაცემები – შესავალი
+            Good and Bad Data Visualizations:
+              name: მონაცემთა კარგი და ცუდი ვიზუალიზაცია
+            Discover a Data Story:
+              name: აღმოაჩინეთ მონაცემთა ისტორია
+            Cleaning Data:
+              name: მონაცემთა გასუფთავება
+            Creating Summary Tables:
+              name: შეჯამების ცხრილების შექმნა
+            Creating Javascript Objects:
+              name: ჯავასკრიპტ ობიექტების შექმნა
+            Reading Records:
+              name: ჩანაწერთა წაკითხვა
+            Deleting Records:
+              name: ჩანაწერთა წაშლა
+            Updating Records:
+              name: ჩანაწერთა განახლება
+            Importing and Exporting Data:
+              name: მონაცემთა შემოტანა და გატანა
+            Visualizing Data:
+              name: მონაცემთა ვიზუალიზაცია
+            Sample Apps:
+              name: აპლიკაციების ნიმუშები
+            Final Project:
+              name: ფინალური პროექტი
+        csp1-pilot:
+          stages:
+            new stage:
+              name: ახალი დონე

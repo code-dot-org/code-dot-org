@@ -2,7 +2,7 @@
   "category": "Sprites",
   "config": {
     "func": "addBehaviorUntilBoolean",
-    "blockText": "aalab sprite {SPRITE} begins {BEHAVIOR} until {CONDITION}",
+    "blockText": "sprite {SPRITE} begins {BEHAVIOR} until {CONDITION}",
     "inline": false,
     "args": [
       {

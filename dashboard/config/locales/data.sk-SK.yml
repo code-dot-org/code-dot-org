@@ -12,15 +12,15 @@ sk:
         Unplug4: Algoritmy
         Artist2: Umelec 2
         Unplug5: Funkcie
-        Farmer: Farmár
+        Farmer: Farmárka
         Unplug6: Podmienky
         Artist3: Umelec 3
         Unplug7: Napísanie piesne
-        Farmer2: Farmár 2
+        Farmer2: Farmárka 2
         Unplug8: Abstrakcia
         Artist4: Umelec 4
         Unplug9: Štafetové programovanie
-        Farmer3: Farmár 3
+        Farmer3: Farmárka 3
         Unplug10: Internet
         Artist5: Umelec 5
         Unplug11: Zhrnutie
@@ -50,7 +50,7 @@ sk:
         if: Blok - Ak
         if_else: Blok Ak- tak
         loop_times: Blok Opakuj niekoľko krát
-        loop_until: Blok Opakuj kým
+        loop_until: Blok "Opakuj dovtedy kým"
         loop_while: Blok Kým
         loop_for: Blok Počítadlo
         function: Funkcie
@@ -71,8 +71,8 @@ sk:
         maze_2_8: 'Šedý blok nemôžeš zmazať. Vyrieš túto hádanku použitím bloku "opakuj",
           ktorý akciu zopakuje 3 krát. Vlož do neho 3 bloky: "posuň sa dopredu", "posuň
           sa dopredu", a "otoč sa" a nastav blok "opakuj", aby to zopakoval trikrát.'
-        maze_2_9: V poriadku, skús nový blok "opakuj dokiaľ" - tento blok bude akciu
-          opakovať až kým neprídem k tomu otravnému prasaťu.
+        maze_2_9: V poriadku, skús nový blok "opakuj dovtedy (kým)" - tento blok bude
+          akciu opakovať až dovtedy, kým neprídem k tomu otravnému prasaťu.
         maze_2_10: Ok, posledný krát - vyriešiš toto použitím iba 4 blokov?
         maze_2_11: Drahá osoba. Ja zombie. Ja hladný. Musieť... dostať... k slnečnica...
           Dostaneš ma tam pomocou 5 blokov?
@@ -140,9 +140,9 @@ sk:
           opakovať aby si dokončil kresbu?
         turtle_4_11: Skús zmeniť čísla v "otoč" a "zopakuj" blokoch aby si spravil
           iné vzory, alebo experimentuj zmenením zvyšku kódu aby si nakreslil čo chceš.
-        maze_karel_1_1: Ahoj, ja som farmár. Potrebujem vašu pomoc zploštit pole na
-          mojej farme, tak aby bolo pripravené pre výsadbu. Presuňte ma na hromadu
-          hliny a použite blok "odstrániť" na jeho odstránenie.
+        maze_karel_1_1: Ahoj, ja som farmárka. Potrebujem tvoju pomoc s vyrovnaním
+          poľa na mojej farme tak, aby bolo pripravené pre výsadbu. Presuň ma na hromadu
+          hliny a použi blok "odstráň", aby si ju odstránil.
         maze_karel_1_2: Ďalej ma posuň do diery a vyplň ju dvoma plnými lopatami hliny,
           použitím bloku "vyplň".
         maze_karel_1_3: Posuň ma na hromadu hliny a povedz mi koľko plných lopát treba
@@ -163,9 +163,9 @@ sk:
         maze_karel_1_10: Keďže už pracujem neskoro, je tma a nedokážem povedať aké
           sú veľké hromady. Teraz nemám všetky možnosti, ktoré som mával v bloku pokiaľ.
           Posúvaj ma po poli a ak sú tam hromady, tak ich odstráň.
-        maze_karel_1_11: 'Ešte stále je vonku tma. Posúvaj ma po poli. Ak tu je hromada,
+        maze_karel_1_11: 'Ešte stále je vonku tma. Posúvaj ma po poli. Ak tam je hromada,
           odstráň ju a ak tam je diera, vyplň ju. Poznámka: použi možnosti z rozbaľovacieho
-          menu v bloku "if".'
+          menu v bloku "ak".'
         turtle_2_1: 'Ahoj. Ja zombie umelec. Ja milovať kresliť! Pomôž mi nakresliť
           štvorec v špeciálnej farbe. Dôležitá poznámka: zostali ti rovnaké bloky
           ako predtým, len sme ich usporiadali do kategórií.'
@@ -320,9 +320,8 @@ sk:
         studio_c2_7: Blok "opakuj donekonečna" umožňuje nekonečný beh kódu. Vieš pridať
           správne bloky, ktoré umožnia, aby sa dinosaurus opakovane pohyboval hore
           a dole?
-        studio_c2_8: Dokážeš to spraviť tak, aby Waddles povedal "Au!" a prehral zvuk
-          "úderu" ak narazí do dinosaura? Umožni mu pohybovať sa pomocou šípok aby
-          si to zvládol.
+        studio_c2_8: Nastav tučniaka tak, aby povedal "Au!" a prehral zvuk "úderu"
+          keď narazí do dinosaura. Posúvaj ho šípkami a vyskúšaj to.
         studio_c2_9: Viete pridať blok pre získanie bodu, keď Waddles narazí do chobotnice
           a potom ho presunúť šípkami až kým neskóruje?
         studio_c2_10: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla a potom
@@ -345,9 +344,8 @@ sk:
         studio_c3_game_3: Blok "opakuj donekonečna" umožňuje nekonečný beh kódu. Vieš
           pridať správne bloky, ktoré umožnia, aby sa dinosaurus opakovane pohyboval
           hore a dole?
-        studio_c3_game_4: Dokážeš to spraviť tak, aby Waddles povedal "Au!" a prehral
-          zvuk "úderu" ak narazí do dinosaura? Umožni mu pohybovať sa pomocou šípok
-          aby si to zvládol.
+        studio_c3_game_4: Nastav tučniaka tak, aby povedal "Au!" a prehral zvuk "úderu"
+          keď narazí do dinosaura. Posúvaj ho šípkami a vyskúšaj to.
         studio_c3_game_5: Viete pridať blok pre získanie bodu, keď Waddles narazí
           do chobotnice a potom ho presunúť šípkami až kým neskóruje?
         studio_c3_game_6: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla
@@ -488,10 +486,10 @@ sk:
       name:
         maze_intro: Úvod do bludiska
         artist_intro: Umelec - Úvod
-        farmer_intro: Úvod k Farmárovi
+        farmer_intro: Úvod k Farmárke
         flappy_intro: Úvod do Flappy
         loop_times: Blok Opakuj
-        loop_until: Blok "Opakuj dokiaľ"
+        loop_until: Blok "opakuj dovtedy kým"
         if: Blok "Ak"
         if_else: Blok "Ak/inak"
         if_else_scrat: Blok "Ak/inak"
@@ -512,9 +510,9 @@ sk:
         Unplug10: Internet
         Unplug11: Zhrnutie
         C1_happy_maps_unplugged: Veselé mapy
-        C1_moveitmoveit_unplugged: Posuň, Posuň
+        C1_moveitmoveit_unplugged: Pohni sa, pohni sa
         C1_bigevent_unplugged: Veľká udalosť
-        C1_getting_loopy: Neustále opakovanie
+        C1_getting_loopy: Cykly sa zacykľujú
         C1_pair_programming: Programovanie v páre
         C1_maze_intro_sequencing: Úvod do bludiska
         C1_maze_debugging: 'Bludisko: Hľadanie a odstraňovanie chýb'
@@ -525,14 +523,14 @@ sk:
         C1_bee_loops: 'Včela: Cykly'
         C1_maze_loops: Cykly v Bludisku
         C1_playlab_storytelling: Play Lab - Vytvor príbeh
-        C1_planting_seed: Sadenie semiačka
-        C1_building_foundation: Stavanie základov
+        C1_planting_seed: Zasaď semienko
+        C1_building_foundation: Budovanie základov
         C1_going_places_safely: Bezpečné premiestňovanie
         C2_maze_intro: Úvod do bludiska
         C2_artist_intro: Umelec - Úvod
         C2_zuck_repeat_loop: Cykly v Bludisku
         C2_artist_loops: Umelec - Cykly
-        C2_artist_debugging: Umelec - Hľadanie a odstraňovanie chýb
+        C2_artist_debugging: 'Umelec: Hľadanie a odstraňovanie chýb'
         C2_bee_loops: 'Včela: Cykly'
         C2_bee_debugging: 'Včela: Hľadanie a odstraňovanie chýb'
         C2_bee_conditionals: Podmienky s včelou
@@ -541,7 +539,7 @@ sk:
         C2_conditionals_with_cards: Podmienky
         C2_binary_bracelets: Binárne náramky
         C2_relay_programming: Štafetové programovanie
-        C2_paper_airplanes: Papierové lietadlá
+        C2_paper_airplanes: Papierové lietadielká
         C2_digital_footprint: Tvoja digitálna stopa
         C2_digital_footprint_v2: Tvoja digitálna stopa
         C3_maze_level_4: Cykly v Bludisku
@@ -551,7 +549,7 @@ sk:
         C3_bee_conditionals: Podmienky s včelou
         C3_maze_conditionals: Podmienky v bludisku
         C3_artist_nested_loops: Vnorené cykly
-        C3_farmer_while: Podmieňovacie cykly "Kým"
+        C3_farmer_while: Cykly "pokiaľ"
         C3_bee_nested_loops: Vnorené cykly
         C3_bee_debugging: 'Včela: Hľadanie a odstraňovanie chýb'
         C3_bounce: Bounce
@@ -582,20 +580,20 @@ sk:
         C4_unplugged_parameters: Písanie pesničiek s parametrami
         C4_unplugged_binary: Binárny
         CSF_artist_angles: Uhly v Umelcovi
-        CSF_collector_k1_blocks: 'Základy informatiky: Kolektor'
+        CSF_collector_k1_blocks: 'Základy informatiky: Zberateľka'
         CSF_collector_repeat_loops: Použitie bloku "Opakuj"
-        CSF_collector_text_blocks: 'Základy informatiky: Kolektor'
+        CSF_collector_text_blocks: 'Základy informatiky: Zberateľka'
         CSF_create_functions: Vytváranie funkcií
         CSF_debugging_k1_blocks: Hľadanie a odstraňovanie chýb
         CSF_debugging_text_blocks: Hľadanie a odstraňovanie chýb
         CSF_EF_cs_matters: Na informatike záleží
         CSF_maze_intro_k1_blocks: Úvod do Code štúdia
         CSF_maze_intro_text_blocks: Úvod do Code štúdia
-        CSF_my_robotic_friends: Moji robotickí priatelia
+        CSF_my_robotic_friends: Moji robotickí kamaráti
         CSF_Power_of_Words: Sila slov
         CSF_Super_Digital_Citizen: Super digitálny občan
-        CSF_stevie_big_project: Stevie a Veľký projekt
-        CSF_unspotted_bugs: Nenájdené chyby
+        CSF_stevie_big_project: Stevie a jej veľký projekt
+        CSF_unspotted_bugs: Príbeh o hľadaní chrobákov a chýb
         CSF_zuck_loops_short: Cykly (príkaz "Opakuj")
         frozen_intro: Úvod do Hodiny Kódu
         frozen_loops: Úvod do cyklov
@@ -620,7 +618,6 @@ sk:
         csd_external_netflix_data: Ako fungujú odporúčania seriálov a filmov v Netflixe?
         csd_external_waze_data: Prečo je tak veľa ľudí posadnutých Waze-om?
         csd_gamelab_animation_tab: Záložka s animáciami
-        csd_gamelab_velocity: Rýchlosť
         csd_weblab_intro_1: Úvod do Web Labu - časť 1
         csd_weblab_intro_2: Úvod do Web Labu - časť 2
         csd_weblab_css_1: Úvod do CSS - časť 1
@@ -629,6 +626,7 @@ sk:
         csp_applab_functions: Úvod do funkcií
         csp_applab_functions_parameters: Funkcie s parametrami
         csp_applab_loops: Cykly
+        csp_cs_is_changing_everything: Informatika mení svet okolo nás
         starwars_intro: 'Star Wars: Budovanie Galaxie pomocou kódu - Úvod'
         starwars_typing: 'Star Wars: Budovanie Galaxie pomocou kódu - JavaScript'
         starwars_events: 'Star Wars: Budovanie Galaxie pomocou kódu - Udalosti'
@@ -684,12 +682,12 @@ sk:
         applab_intro_sounds: App Lab - Obrázky a zvuky
         applab_intro_designmode: App Lab - Dizajnovací mód
         applab_intro_share: App Lab - Zdieľanie Appky
-        CSF_skinOverview_Harvester: Kombajn
+        CSF_skinOverview_Harvester: Pestovateľka
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Cykly s BB-8
-        CSF_harvester_skinOverview_K-1: Kombajn
-        CSF_harvester_loops_K1: Cykly so zberateľom
+        CSF_harvester_skinOverview_K-1: Pestovateľka
+        CSF_harvester_loops_K1: Cykly so Zberateľkou
         CSF_scrat_loops_K1: Cykly v Dobe ľadovej
         CSF_scrat_loops_CF: Cykly v Dobe ľadovej
         CSF_if_allskins: Blok "Ak"
@@ -705,15 +703,21 @@ sk:
         CSF_SpriteLab_SpritesInAction_CDEF: Postavy v akcii
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
         mc_2018_intro: 'Minecraft: Vodné Dobrodružstvo - Úvod'
-        MC_2018_loops: 'Minecraft: Vodné Dobrodružstvo - Cyklus "Opakuj kým"'
+        MC_2018_loops: 'Minecraft: Vodné Dobrodružstvo - Cyklus "Opakuj dovtedy (kým)"'
         mc_2018_conditionals: 'Minecraft: Vodné Dobrodružstvo - Podmienky'
         mc_2018_closing: 'Minecraft: Vodné Dobrodružstvo - Gratulujeme'
         hoc_dance_warmup: Tanečná párty - Zahrej sa
         hoc_dance_events: Tanečná Párty - Udalosti
         hoc_dance_properties: Tanečná Párty - Vlastnosti
         hoc_dance_congrats: Tanečná párty - Párty pokračuje!
-        c_and_c_great_to_create: Je super tvoriť a hrať férovo
+        c_and_c_great_to_create: Je skvelé tvoriť a hrať férovo
         c_and_c_digital_sharing: Digitálne zdieľanie
+        'Teaching CS Fundamentals: How the Course Works': 'Vyučujeme Základy informatiky:
+          Ako funguje tento kurz'
+        what_is_cs: Čo je informatika?
+        conditionals_with_cards: Bez počítača - Podmienky s kartami
+        teaching_cs_pair_programming: 'Vyučujeme Základy informatiky: Párové programovanie'
+        teaching_problem_solving: 'Vyučujeme Základy informatiky: Riešenie problémov'
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok
@@ -795,7 +799,7 @@ sk:
           nakreslia trojuholník
         edit_add_parameter: Klikni na položku upraviť, aby si mohol do svojej funkcie
           pridať parameter
-        add_and_drag_parameter: Napíšte sem meno Vášho parametr, kliknite na Pridať
+        add_and_drag_parameter: Napíšte sem meno vášho parametr, kliknite na Pridať
           a potom ho presuňte do definície Vašej funkcie
         fill_in_actor: Vyplň ??? číslami, ktoré zodpovedajú každej postave (1, 2,
           a 3)

@@ -15,9 +15,9 @@ const downloadCsv = ({data, filename, headers}) => {
     for (const key in headers) {
       let value = row[key];
       if (Array.isArray(value)) {
-        value = `[${value.join(", ")}]`;
+        value = `[${value.join(', ')}]`;
       } else if (!value) {
-        value = ""; // replace null with empty string
+        value = ''; // replace null with empty string
       }
 
       exportRow[headers[key]] = value;

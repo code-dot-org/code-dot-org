@@ -161,7 +161,20 @@ zh-CN:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: 很难琢磨出怎么将方块置下吗？试着在红色花朵上重复紫色花朵的动作！
         2-3_Bee_Conditionals_14_b: 如果红色的花是紫色，你能想出如何用一个额外的“循环”来减少代码吗？
-        2-3_Bee_Conditionals_14_c: "试着把它分成两个独立的块：\n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) 收集花蜜三次\n  - 向前移动五次\n  - 检查是否有花蜜。如果有，就收集。\n  - 向左转\n  \n2) 酿蜂蜜 \n  - 向前移动一次\n  - 酿两个蜂蜜"
+        2-3_Bee_Conditionals_14_c: |-
+          试着把它分成两个独立的块：
+
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) 收集花蜜三次
+            - 向前移动五次
+            - 检查是否有花蜜。如果有，就收集。
+            - 向左转
+            
+          2) 酿蜂蜜 
+            - 向前移动一次
+            - 酿两个蜂蜜
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: '记住：紫色的花只有0个或1个花蜜，而且每次运行程序时都会发生变化。'
       2-3 Bee Conditionals 3_authored_hint:
@@ -329,7 +342,9 @@ zh-CN:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: '每个重复的形状都是**半个六边形**的组合，跟着**2/3个三角形**。 '
         Course_4_Artist_12_b: '这个单元的形状几乎和上一关是一样的，只是半个六边形有点大。 '
-        Course_4_Artist_12_c: "1) 最开始的三条线是60像素长，并且你需要转60度。\n2) 接下来的两条线是80像素长，你需要转120度。 "
+        Course_4_Artist_12_c: |-
+          1) 最开始的三条线是60像素长，并且你需要转60度。
+          2) 接下来的两条线是80像素长，你需要转120度。 
         Course_4_Artist_12_d: |-
           **解决方案：**
 
@@ -3285,6 +3300,105 @@ zh-CN:
         mc_9_a: 你正朝向正确的方向吗？用`摧毁方块`挖你前面的方块。
         mc_9_b: 墙上的黑色斑点是煤！使用`摧毁方块`来挖煤。
         mc_9_c: 用`放火把` 把火把放在你所站的地方。
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **如何通过此关？**
+          * 确保有一个舞者出现在屏幕上。
+
+          *此关会在 4 个节拍后结束。*
+        challenges: |-
+          **可选挑战**
+          *选择播放一首不同的歌曲。
+          *选择一个像驼鹿的不同项目！
+          *重命名您的舞者。
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **我如何通过此关？**
+          *舞者需要在 4 个小节后变换到新动作。
+
+          *此关在 8 个小节后结束。*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *6 个小节后，舞者需要跳与 4 个小节后不同的舞蹈。
+
+          *此关在 12 个小节后结束。*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *需要在歌曲的第七个小节变换背景效果。
+
+          *此关在 10 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+
+          通过连接<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小节"</title></block></xml>事件下的新模块，在歌曲的不同时间点变换背景效果。
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *需要至少两个舞者。
+
+          *此关在 6 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+
+          *添加第三个舞者（或者更多数量！）
+          *让所有舞者在歌曲的不同时间点做不同的动作。
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *两个舞者的大小不能为 100。
+
+          *此关在 6 个小节后结束。*
+        challenges: |-
+          **可选挑战**
+
+          *通过更改其他属性（宽度、高度、旋转等）来尝试
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *更改至少一个舞者的色彩。
+
+          *此关在 8 个小节后结束。*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *必须更改两个或更多的舞者属性。
+
+          *此关在 8 个小节后结束。*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *只需发挥想象力！
+
+          *此关在 8 个小节后结束。*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *只需发挥想象力！
+
+          *此关在 8 个小节后结束。*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **如何通过此关？**
+
+          *使用`当按左方向键时`模块让机器人在按下时做一个舞蹈动作。
+
+          * 此关在 8 个小节后结束。*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "看到**海晶灯** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) 了吗？怎样可以用条件来使用它们，穿过海底遗迹？\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: 你可以用“如果路径”模块来帮助你做正确的转弯。
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: 看见红色和蓝色的珊瑚块了吗？将它们用作向右向左转的路标来通过礁石。
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: 请确保将“小狗的速度”的数值设置为大于“小猫的速度”的数值。
       D_Frozen_nested3_authored_hint:
@@ -3956,6 +4070,8 @@ zh-CN:
           *舞者需要在 4 个小节后变换到新动作。
 
           *此关在 8 个小节后结束。*
+      Tortoise and Hare_authored_hint:
+        behavior hint: "尝试编辑行为！\n*哪个值控制每个精灵的速度？"
       Underground Avoiding Lava_authored_hint:
         mc_11_a: 所有的来检查和处理熔岩代码都有了。您需要做的就是添加一个模块来移动。
         mc_11_b: 你的`向前移动`命令要在`如果`语句的里面还是后面？
@@ -4109,6 +4225,21 @@ zh-CN:
         artistLoopsKA_a: 使用向前跳模块来向前移动，并且不会画线。
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: 您的循环中应该有3个模块来解决这个关卡。
+      behaviors 1_authored_hint:
+        behavior hint: "尝试编辑行为！\n鸟需要朝哪个方向飞？"
+      behaviors 2_authored_hint:
+        behavior hint: "尝试编辑行为！\n鸟需要朝哪个方向飞？"
+      behaviors 3_authored_hint:
+        behavior hint: "尝试编辑行为！\n*哪个值控制每个精灵的速度？"
+      behaviors 4_authored_hint:
+        behavior hint: "尝试编辑行为！\n鸟需要朝哪个方向飞？"
+      behaviors 5_authored_hint:
+        target hint: 你可以选择这四个玩具中的任何一个。宠物想要哪一个?
+        behavior hint: 编辑行为来解决这个难题。宠物小精灵需要在两个不同的方向移动，以结束对角线移动。
+      behaviors 5a_authored_hint:
+        behavior hint: "尝试编辑行为！\n*哪个值控制每个精灵的速度？"
+      behaviors 6_authored_hint:
+        behavior hint: "尝试编辑行为！\n*哪个值控制每个精灵的速度？"
       comment_intro_maze_2018_authored_hint:
         courseC_maze_programming4_a: 当其他人试图读取您的代码时，注释也很有用。
         courseC_maze_programming4_b: 当你更改方向时，增加一条注释 - 如果转向另一条路，会发生什么情况？
@@ -5379,10 +5510,7 @@ zh-CN:
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: 想不出在哪里放此循环吗？请试着逐步写下代码并寻找规律模式。
         courseA_artist_loops7_b: 先写一个波浪的代码, 然后再重复来画另外两个。
-        courseA_artist_loops7_c: |-
-          请记住, 可以在<xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
-          </block></xml>循环中放置多个块。
+        courseA_artist_loops7_c: "请记住, 可以在<xml><block type=\"controls_repeat\">\n<title name=\"TIMES\">???</title>\n</block></xml>循环中放置多个块。"
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: 想不出在哪里放此循环吗？请试着逐步写下代码并寻找规律模式。
         courseA_artist_loops7_b: 先写一个波浪的代码, 然后再重复来画另外两个。
@@ -5422,7 +5550,9 @@ zh-CN:
         courseA_artist_loops9_c: 如果您无法确定将循环放在何处, 请尝试逐步编写代码并查找规律。
       courseA_artist_loops9_2018_authored_hint:
         courseA_artist_loops9_a: 将另一个模块添加到已经给您的代码中来绘制其余的楼梯。
-        courseA_artist_loops9_b: "您添加的模块应该在<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>循环的内部。"
+        courseA_artist_loops9_b: |-
+          您添加的模块应该在<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml>循环的内部。
         courseA_artist_loops9_c: 如果您无法确定将循环放在何处, 请尝试逐步编写代码并查找规律。
       courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_a: 将另一个模块添加到已经给您的代码中来绘制其余的楼梯。
@@ -5636,6 +5766,14 @@ zh-CN:
         courseA_collector_loops2_b: |-
           在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。
           <xml> <block type="collector_collect"/></xml>
+      courseA_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          使用此块来控制当演员碰撞时会发生什么。 
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseA_harvester_forVideo_authored_hint:
         courseA_harvester_loops3_a: |-
           用一个这样的`重复`模块来帮忙！
@@ -5654,7 +5792,12 @@ zh-CN:
 
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: "代码会有 **四个**`向西移动`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n模块和**四个**<xml>`采摘玉米`<block type=\"harvester_corn\"/></xml>模块。 "
+        courseA_harvester_loops2_a: |-
+          代码会有 **四个**`向西移动`
+
+          <xml><block type="maze_moveWest"/></xml>
+
+          模块和**四个**<xml>`采摘玉米`<block type="harvester_corn"/></xml>模块。 
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: "代码会有 **四个**`向西移动`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n模块和**四个**<xml>`采摘玉米`<block type=\"harvester_corn\"/></xml>模块。 "
       courseA_harvester_loops3_authored_hint:
@@ -5827,6 +5970,10 @@ zh-CN:
       courseA_harvester_seq7_2019_authored_hint:
         courseA_harvester_seq7_a: 试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。
         courseA_harvester_seq7_b: 有困难了？这是收割者应该走的路。
+      courseA_harvester_seq8_authored_hint:
+        courseA_harvester_seq8_a: 你的最终代码应该有**4**移动块和**2**选择块。
+      courseA_harvester_seq8_2019_authored_hint:
+        courseA_harvester_seq8_a: 你的最终代码应该有**4**移动块和**2**选择块。
       courseA_harvester_seq9_authored_hint:
         courseA_harvester_seq9_a: 运行代码几次来看看发生了什么。收割者在哪里停下来了？
         courseA_harvester_seq9_b: 别忘了采摘所有的玉米！你需要**3**个采摘玉米模块。
@@ -6043,15 +6190,11 @@ zh-CN:
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: 如果对路径不明白，请使用手指来追踪鸟到猪的线路。
         courseA_maze_seq13_b: 不要害怕犯错误！尝试添加块并运行代码, 看看会发生什么。
-        courseA_maze_seq13_c: |-
-          这些 <xml><block type="maze_moveNorth"/></xml>
-          <xml><block type="maze_moveEast"/></xml>块会帮你靠近猪。
+        courseA_maze_seq13_c: "这些 <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>块会帮你靠近猪。"
       courseA_maze_seq13_2018_authored_hint:
         courseA_maze_seq13_a: 如果对路径不明白，请使用手指来追踪鸟到猪的线路。
         courseA_maze_seq13_b: 不要害怕犯错误！尝试添加块并运行代码, 看看会发生什么。
-        courseA_maze_seq13_c: |-
-          这些 <xml><block type="maze_moveNorth"/></xml>
-          <xml><block type="maze_moveEast"/></xml>块会帮你靠近猪。
+        courseA_maze_seq13_c: "这些 <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>块会帮你靠近猪。"
       courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_a: 如果对路径不明白，请使用手指来追踪鸟到猪的线路。
         courseA_maze_seq13_b: 不要害怕犯错误！尝试添加块并运行代码, 看看会发生什么。
@@ -8328,6 +8471,9 @@ zh-CN:
       courseC_PlayLab_eventsA_2019_authored_hint:
         courseC_PlayLab_eventsA_a: 使用`设置背景`模块和`设置演员为____ 速`模块来通过这个关卡。
         courseC_PlayLab_eventsA_b: 您需要将`当运行时`事件模块具体拖到工作区中以解决此关卡。
+      courseC_PlayLab_eventsA_embed_2019_authored_hint:
+        courseC_PlayLab_eventsA_a: 使用`设置背景`模块和`设置演员为____ 速`模块来通过这个关卡。
+        courseC_PlayLab_eventsA_b: 您需要将`当运行时`事件模块具体拖到工作区中以解决此关卡。
       courseC_PlayLab_eventsFP_authored_hint:
         idea1: |-
           * 需要一个主意？*
@@ -8971,6 +9117,22 @@ zh-CN:
       courseC_collector_prog_challenge2_2019_authored_hint:
         courseC_collector_prog_challenge1_a: 你可以使用多个`收集`命令来收集额外的宝藏。
         courseC_collector_prog_challenge1_b: 迷路了？ 请尝试此路径来通过这个关卡!
+      courseC_data widget_authored_hint:
+        courseA_playLab_events7_a: |-
+          使用此块来控制当演员碰撞时会发生什么。 
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
+      courseC_data wizard_authored_hint:
+        courseA_playLab_events7_a: |-
+          使用此块来控制当演员碰撞时会发生什么。 
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
@@ -11833,9 +11995,11 @@ zh-CN:
         courseD_iceage_loops9_b: 最后的代码会有**4**个循环。
         courseD_iceage_loops9_c: 斯奎特应该沿着这条路去找橡子。
       courseD_maze_intro4_2019_authored_hint:
+        courseC_maze_programming4_a: 你可以从红色的角度向右或向左拐。如果你面向右，向右转会使你朝下。
         courseC_maze_programming4_b: 要沿着这条路前进, 向前移动，然后转向一条路, 然后再移动, 转向相反的方向。再往前走一次就能到达橡子。
       courseD_maze_intro5a_2019_authored_hint:
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
+        courseC_maze_programming5_b: 记住，转弯是从鸟的角度看的。
         courseC_maze_programming5_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: 不要忘记, 你可以`重复`一个单一的命令或较长的模式。你甚至可以`重复`一个`重复`模块!
@@ -14218,8 +14382,8 @@ zh-CN:
         courseF_artist_for_challenge2_c: '`计数循环` 从5增加到250，每次增加2。 '
         courseF_artist_for_challenge2_a: 使用`用红色，绿色和蓝色设置颜色`的模块。红色设为常量255，绿色一直是`counter`（计数器）的值，蓝色一直是`255-counter`。
         courseF_artist_for_challenge2_b: 这个代码比你想象的要简单。 只需在计数循环中设置颜色, 向前移动, 然后转向。
-        courseF_artist_for_challenge2_d: |-
-          **解决方案:**
+        courseF_artist_for_challenge2_d: |
+          ** 解决方案: **
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -14259,12 +14423,12 @@ zh-CN:
           </value>
           <value name="GREEN">
           <block type="variables_get">
-          <title name="VAR">计数器</title>
+          <title name="VAR">counter</title>
           </block>
           </value>
           <value name="BLUE">
           <block type="math_arithmetic" inline="true">
-          <title name="OP">减去</title>
+          <title name="OP">MINUS</title>
           <value name="A">
           <block type="math_number">
           <title name="NUM">255</title>
@@ -14272,7 +14436,7 @@ zh-CN:
           </value>
           <value name="B">
           <block type="variables_get">
-          <title name="VAR">计数器</title>
+          <title name="VAR">counter</title>
           </block>
           </value>
           </block>
@@ -14281,15 +14445,15 @@ zh-CN:
           </value>
           <next>
           <block type="draw_move" inline="true">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <value name="VALUE">
           <block type="variables_get">
-          <title name="VAR">计数器</title>
+          <title name="VAR">counter</title>
           </block>
           </value>
           <next>
           <block type="draw_turn" inline="true">
-          <title name="DIR">向右转</title>
+          <title name="DIR">turnRight</title>
           <value name="VALUE">
           <block type="math_number">
           <title name="NUM">80</title>

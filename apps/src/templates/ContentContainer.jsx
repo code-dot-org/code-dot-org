@@ -1,8 +1,9 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import styleConstants from '../styleConstants';
 import FontAwesome from './FontAwesome';
-import color from "../util/color";
+import color from '../util/color';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 // ContentContainer provides a full-width container which will render whatever
@@ -15,13 +16,13 @@ const contentWidth = styleConstants['content-width'];
 
 const styles = {
   box: {
-    width: contentWidth,
+    width: contentWidth
   },
   boxResponsive: {
-    width: '100%',
+    width: '100%'
   },
   bottomMargin: {
-    marginBottom: 60,
+    marginBottom: 60
   },
   headingBox: {
     paddingRight: 10,
@@ -97,14 +98,14 @@ const styles = {
     color: color.teal,
     fontSize: 10,
     fontWeight: 'bold',
-    marginLeft: 15,
+    marginLeft: 15
   },
   chevronRtl: {
     display: 'inline',
     color: color.teal,
     fontSize: 10,
     fontWeight: 'bold',
-    marginRight: 15,
+    marginRight: 15
   },
   children: {
     justifyContent: 'space-between',
@@ -112,7 +113,7 @@ const styles = {
   },
   clear: {
     clear: 'both'
-  },
+  }
 };
 
 class ContentContainer extends Component {
@@ -127,7 +128,7 @@ class ContentContainer extends Component {
     isRtl: PropTypes.bool.isRequired,
     description: PropTypes.string,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    hideBottomMargin: PropTypes.bool,
+    hideBottomMargin: PropTypes.bool
   };
 
   render() {
@@ -141,8 +142,8 @@ class ContentContainer extends Component {
       hideBottomMargin
     } = this.props;
 
-    const showLinkTop = (responsiveSize === 'lg') && link && linkText;
-    const showLinkBottom = (responsiveSize !== 'lg') && link && linkText;
+    const showLinkTop = responsiveSize === 'lg' && link && linkText;
+    const showLinkBottom = responsiveSize !== 'lg' && link && linkText;
     const boxStyles = styles.boxResponsive;
     const bottomMargin = hideBottomMargin ? '' : styles.bottomMargin;
 
@@ -154,39 +155,22 @@ class ContentContainer extends Component {
               {heading}
             </div>
             {showLinkTop && (
-              <Link
-                link={link}
-                linkText={linkText}
-                isRtl={isRtl}
-              />
+              <Link link={link} linkText={linkText} isRtl={isRtl} />
             )}
           </div>
         )}
-        {description && (
-          <div style={styles.description}>
-            {description}
-          </div>
-        )}
+        {description && <div style={styles.description}>{description}</div>}
         <div style={styles.children}>
           {React.Children.map(this.props.children, (child, index) => {
-            return (
-              <div key={index}>
-                {child}
-              </div>
-            );
+            return <div key={index}>{child}</div>;
           })}
         </div>
         {showLinkBottom && (
           <div style={styles.standaloneLinkBox}>
-            <Link
-              link={link}
-              linkText={linkText}
-              isRtl={isRtl}
-              bottom={true}
-            />
+            <Link link={link} linkText={linkText} isRtl={isRtl} bottom={true} />
           </div>
         )}
-        <div style={styles.clear}/>
+        <div style={styles.clear} />
       </div>
     );
   }
@@ -201,25 +185,23 @@ class Link extends Component {
   };
 
   render() {
-    const { link, linkText, isRtl, bottom }= this.props;
+    const {link, linkText, isRtl, bottom} = this.props;
     let linkBoxStyle;
     if (isRtl) {
       linkBoxStyle = bottom ? styles.linkBoxRtlBottom : styles.linkBoxRtl;
     } else {
       linkBoxStyle = bottom ? styles.linkBoxBottom : styles.linkBox;
     }
-    const icon = isRtl ? "chevron-left" : "chevron-right";
+    const icon = isRtl ? 'chevron-left' : 'chevron-right';
 
     return (
       <div style={linkBoxStyle}>
         <a href={link}>
-          {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl}/>}
-          <div style={styles.linkToViewAll}>
-            {linkText}
-          </div>
+          {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl} />}
+          <div style={styles.linkToViewAll}>{linkText}</div>
         </a>
-        <a href={link} style={{textDecoration:'none'}}>
-          {!isRtl && <FontAwesome icon={icon} style={styles.chevron}/>}
+        <a href={link} style={{textDecoration: 'none'}}>
+          {!isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
         </a>
       </div>
     );
@@ -228,5 +210,5 @@ class Link extends Component {
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
-  isRtl: state.isRtl,
+  isRtl: state.isRtl
 }))(Radium(ContentContainer));

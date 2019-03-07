@@ -654,6 +654,8 @@ es:
         text: gráfico {SPRITE} inicia {BEHAVIOR}
       gamelab_addBehaviorUntil:
         text: gráfico {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
+      gamelab_allSpritesWithAnimation:
+        text: aalab todos {ANIMATION}
       gamelab_beginBehavior:
         text: iniciar {BEHAVIOR}
       gamelab_bounceOff:
@@ -683,6 +685,12 @@ es:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección del movimiento
+      gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
+        options:
+          CONDITION:
+            '"when"': cuando
+            '"while"': mientras
       gamelab_clickedOn:
         text: cuando se hace clic en {SPRITE}
       gamelab_comment:
@@ -735,6 +743,11 @@ es:
             '"y"': posición y
             '"direction"': dirección del movimiento
             '"tint"': tonalidad
+      gamelab_getThisSprite:
+        text: "{CHOICE} gráfico"
+        options:
+          CHOICE:
+            '"this"': este
       gamelab_groupLength:
         text: número de personajes en {THIS}
       gamelab_hasBehavior:
@@ -755,6 +768,38 @@ es:
         text: "{SPRITE} saltar a {LOCATION}"
       gamelab_keyDown:
         text: tecla está presionada {KEY}
+      gamelab_keyPressed:
+        text: "{CONDITION} {KEY} pulsada"
+        options:
+          CONDITION:
+            '"when"': cuando
+            '"while"': mientras
+          KEY:
+            '"up"': arriba
+            '"down"': abajo
+            '"left"': izquierda
+            '"right"': derecha
+            '"space"': espacio
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:
@@ -800,6 +845,8 @@ es:
         text: definir posición de {VAR} para {VAL}
       gamelab_makeNewGroup:
         text: crear un nuevo grupo
+      gamelab_makeNewSpriteAnon:
+        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} encara {DIRECTION}"
         options:
@@ -834,6 +881,8 @@ es:
         text: mover {SPRITE} distancia {DISTANCE} hacia {TARGET}
       gamelab_moveUp:
         text: "{THIS} se mueve hacia arriba"
+      gamelab_playSound:
+        text: reproducirSonido {SOUND}
       gamelab_pointInDirection:
         text: apuntar {SPRITE} {DIRECTION}
         options:
@@ -862,6 +911,10 @@ es:
         text: cambiar {THIS} traje a {ANIMATION}
       gamelab_setBackground:
         text: establecer color de fondo {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
       gamelab_setDirection:
         text: definir {SPRITE} dirección de movimiento {DIRECTION}
       gamelab_setFrameDelay:
@@ -903,6 +956,12 @@ es:
         text: establecer
       gamelab_showTitleScreen:
         text: mostrar pantalla de título {BREAK} título {TITLE} texto {SUBTITLE}
+      gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} pulsado"
+        options:
+          CONDITION:
+            '"when"': cuando
+            '"while"': mientras
       gamelab_spriteCostume:
         text: "{COSTUME}"
       gamelab_spriteDirection:
@@ -913,8 +972,6 @@ es:
             '"East"': Este
             '"South"': Sur
             '"West"': Oeste
-      gamelab_spriteSay:
-        text: gráfico {SPRITE} decir {TEXT}
       gamelab_spritesWhere:
         text: gráficos donde {PROPERTY} es {VALUE}
         options:
@@ -1260,6 +1317,8 @@ es:
         text: girar a la izquierda
       RyanLab_turnRight:
         text: girar a la derecha
+      SpriteLab2Beta_spriteSay:
+        text: gráfico {SPRITE} decir {TEXT} durante {SECONDS} segundos
       Vector_createSpriteWith:
         text: |-
           crear gráfico
@@ -1287,12 +1346,16 @@ es:
             "'shapeColor'": color
       aalab_addBehaviorForDuration:
         text: gráfico aalab {SPRITE} inicia {BEHAVIOR} durante {SECONDS} segundos
+      aalab_addBehaviorSimpleFlexible:
+        text: gráfico aalab {SPRITE} comienza {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
         text: gráfico aalab {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
       aalab_addToSpriteGroup:
         text: añadir gráfico {SPRITE} a grupo {GROUP}
-      aalab_changeGroupPropBy:
-        text: cambiar grupo {GROUP} {PROPERTY} por {VAL}
+      aalab_allSpritesWithAnimation:
+        text: aalab todos {ANIMATION}
+      aalab_changePropByFlexible:
+        text: cambia aalab {SPRITE} {PROPERTY} por {VAL}
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -1300,30 +1363,125 @@ es:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección del movimiento
-      aalab_clickedOn:
+      aalab_checkTouching:
+        text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
         options:
           CONDITION:
             '"when"': cuando
             '"while"': mientras
+      aalab_clickedOn:
+        text: "{CONDITION} {SPRITE} pulsado"
+        options:
+          CONDITION:
+            '"when"': cuando
+            '"while"': mientras
+      aalab_createNewSprite:
+        text: "aalab haz un gráfico nuevo \n llamado {NAME} \n con traje {COSTUME}
+          \n en {LOCATION}"
+      aalab_createNewSpriteAdvanced:
+        text: "hacer un nuevo gráfico llamado {NAME} \n con traje {COSTUME} \n en
+          {LOCATION}"
+      aalab_createNewSpriteAnon:
+        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
+      aalab_createNewSpriteAnonReturn:
+        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           hacer un nuevo grupo de gráficos llamado {VAR}
           de todos los gráficos {COSTUME}
       aalab_createSpriteGroup:
         text: hacer un nuevo grupo de gráficos llamado {VAR}
+      aalab_getSpritesByName:
+        text: cualquier gráfico llamado {NAME}
       aalab_getThisSprite:
+        text: "{CHOICE} gráfico"
         options:
           CHOICE:
             '"this"': este
-      aalab_prompt:
-        text: preguntar {MESSAGE}
-      aalab_spriteSay:
-        text: gráfico {SPRITE} decir {TEXT} durante {SECONDS} segundos
-      aalab_whenTouching:
+      aalab_jumpTo:
+        text: "{SPRITE} saltar a {LOCATION}"
+      aalab_keyPressed:
+        text: "{CONDITION} {KEY} pulsada"
         options:
           CONDITION:
             '"when"': cuando
             '"while"': mientras
+          KEY:
+            '"up"': arriba
+            '"down"': abajo
+            '"left"': izquierda
+            '"right"': derecha
+            '"space"': espacio
+      aalab_locationOf:
+        text: aalab posición de {SPRITE}
+      aalab_location_picker:
+        text: "{LOCATION}"
+      aalab_moveForward:
+        text: aalab mover {SPRITE} {DISTANCE} píxeles hacia adelante
+      aalab_moveInDirection:
+        text: aalab mover {SPRITE} {DISTANCE} píxeles {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Norte
+            '"East"': Este
+            '"South"': Sur
+            '"West"': Oeste
+      aalab_moveToward:
+        text: aalab mover {SPRITE} distancia {DISTANCE} hacia {TARGET}
+      aalab_nameStringSay:
+        text: "{NAMESTRING} dice {MESSAGE}"
+      aalab_prompt:
+        text: preguntar {MESSAGE}
+      aalab_randomLocation:
+        text: aalab posición aleatoria
+      aalab_removeOneAndAll:
+        text: aalab eliminar {THIS}
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
+      aalab_setCollidable:
+        text: aalab establecer {SPRITE} colisionado con {VAL}
+        options:
+          VAL:
+            '"true"': verdadero
+            '"false"': falso
+      aalab_setDirection:
+        text: aalab establecer {SPRITE} dirección de movimiento {DIRECTION}
+      aalab_setProp:
+        text: aalab establecer {SPRITE} {PROPERTY} a {VAL}
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"rotation"': rotación
+            '"x"': posición x
+            '"y"': posición y
+            '"direction"': dirección del movimiento
+            '"tint"': tonalidad
+      aalab_setSpriteVariable:
+        text: aalab establecer {VARIABLE} a {SPRITE}
+      aalab_showCustomText:
+        text: mostrar texto{TEXT}ubicación{LOCATION}tamaño{SIZE}color{COLOR}duración{DURATION}
+        options:
+          DURATION:
+            '"1"': 1 segundo
+            '"2"': 2 segundos
+            '"3"': 3 segundos
+            '"4"': 4 segundos
+            '"5"': 5 segundos
+            '"0"': para siempre
+      aalab_showSpriteLabel:
+        text: mostrar etiqueta{TEXT} {LOCATION} gráfico{SPRITE}
+      aalab_speakerSaysConsole:
+        text: "{SPRITE} dice {MESSAGE}"
+      aalab_spriteSay:
+        text: gráfico {SPRITE} decir {TEXT} durante {SECONDS} segundos
+      aalab_toggleHideCustomText:
+        text: "{OPTION} texto personalizado"
+        options:
+          OPTION:
+            '"show"': mostrar
+            '"hide"': ocultar
       binary_drawBin:
         text: dibujar binario {BIN}
       binary_drawBinScreen:
@@ -1439,7 +1597,7 @@ es:
             '"kelp"': alga marina
             '"polishedGranite"': granito pulido
       craft_placePrismarine:
-        text: vendos prismarinë
+        text: colocar prismarina
       craft_placeTorch:
         text: colocar antorcha
       craft_repeatUntilConduit:
@@ -1454,12 +1612,12 @@ es:
         text: generar {ENTITY}
         options:
           ENTITY:
-            '"cod"': merluc
-            '"dolphin"': delfin
-            '"salmon"': salmon
-            '"seaTurtle"': breshkë deti
-            '"squid"': kallamar
-            '"tropicalFish"': peshk tropikal
+            '"cod"': bacalao
+            '"dolphin"': delfín
+            '"salmon"': salmón
+            '"seaTurtle"': tortuga de mar
+            '"squid"': calamar
+            '"tropicalFish"': pescado tropical
       craft_turn:
         text: girar {DIR}
         options:

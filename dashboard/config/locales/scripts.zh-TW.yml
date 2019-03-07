@@ -326,7 +326,6 @@ zh-TW:
               name: 設計程序
         K5PD:
           description: K5 課程的專業發展
-          description_short: K5 課程的專業發展
           stages:
             Computer Science Pedagogy:
               name: 計算機科學教育學
@@ -350,6 +349,8 @@ zh-TW:
               name: 不插電的教學活動
             Writing computer programs:
               name: 編寫電腦程式
+            new stage:
+              name: 新的階段
         netsim:
           title: 網路模擬器
           description: 學習有關網際網路的工作原理。
@@ -3332,6 +3333,8 @@ zh-TW:
               name: 群眾外包（Crowdsourcing）
             Relay Programming:
               name: 接力編程
+            Graph Paper Programming:
+              name: 圖畫紙程式設計
         courseb-2018:
           assignment_family_title: 課程 B
           stages:
@@ -3715,6 +3718,10 @@ zh-TW:
               name: 新的階段
             The Artist:
               name: 藝術家
+            Internet:
+              name: 網際網路 Internet
+            Crowdsourcing:
+              name: 群眾外包（Crowdsourcing）
         dance-low:
           stages:
             Dance Party:
@@ -3737,6 +3744,8 @@ zh-TW:
               name: 不插電活動 - 二進制
             Artist Binary:
               name: 小藝術家 - 二進制（Binary）
+            Dance Party:
+              name: 舞蹈派對
         coursee-2019:
           stages:
             Building a Foundation:
@@ -3835,6 +3844,8 @@ zh-TW:
               name: 安全的到達地點
             'Loops: Happy Loops':
               name: 迴圈：快樂迴圈
+            Learn to Drag and Drop:
+              name: 學習滑鼠的拖放
         courseb-2019:
           stages:
             Move It, Move It:
@@ -3843,6 +3854,8 @@ zh-TW:
               name: 你的數位足跡
             Loops in Ice Age:
               name: 冰河歷險紀中的迴圈
+            'Loops: Getting Loopy':
+              name: 迴圈：學習迴圈
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -3857,3 +3870,206 @@ zh-TW:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 生活中的演算法 - 植物種植
+        dani-test-script:
+          stages:
+            new stage:
+              name: 新的階段
+        csd2-2019:
+          stages:
+            Digital Footprint:
+              name: 數位足跡
+            Lists:
+              name: 清單
+            Clean Code and Debugging:
+              name: 乾淨代碼和偵錯調試
+            Styling Text with CSS:
+              name: 透過 CSS 修改文字樣式
+            Styling Elements with CSS:
+              name: 透過 CSS 修改元素樣式
+            Sources and Search Engines:
+              name: 來源和搜尋引擎
+        csd3-2019:
+          title: CSD 單元 3 -互動式遊戲和動畫
+          description_short: Game Lab 編程環境介紹
+          stages:
+            Programming for Entertainment:
+              name: 娛樂用途的程式設計
+            Plotting Shapes:
+              name: 幾何繪圖
+            Variables:
+              name: 變數
+            Sprites:
+              name: 角色
+            Conditionals:
+              name: 條件判斷（Conditionals）
+            Project - Interactive Card:
+              name: 專案 - 互動式卡片
+            Velocity:
+              name: 速度
+            Complex Sprite Movement:
+              name: 複合角色動作
+            Collisions:
+              name: 碰撞
+            Functions:
+              name: 函式
+            Using the Game Design Process:
+              name: 使用遊戲設計流程
+            Project - Design a Game:
+              name: 專案 - 設計一個遊戲
+        csd4-2019:
+          stages:
+            Analysis of Design:
+              name: 設計分析
+            Understanding Your User:
+              name: 瞭解您的使用者
+            Identifying User Needs:
+              name: 確定使用者需求
+            Project - Paper Prototype:
+              name: 專案 - 紙上原型
+            Designing Apps for Good:
+              name: 設計良好的應用程式
+            Market Research:
+              name: 市場研究
+            Paper Prototypes:
+              name: 紙上原型
+            Prototype Testing:
+              name: 原型測試
+            Digital Design:
+              name: 數位設計
+            Testing the App:
+              name: 測試應用程式
+        csd5-2019:
+          title: CSD 單元 5 - 數據和社會
+          stages:
+            Representation Matters:
+              name: 表示事項
+            Patterns and Representation:
+              name: 模式和標記法
+            ASCII and Binary Representation:
+              name: ASCII 和 二進位表示法
+            Representing Images:
+              name: 表示圖像
+            Representing Numbers:
+              name: 數字表示法
+            Combining Representations:
+              name: 組合表示
+            Project - Create a Representation:
+              name: 專案 - 創建標記法
+            Problem Solving and Data:
+              name: 問題解決與數據
+            Problem Solving with Big Data:
+              name: 用大數據解決問題
+            Making Decisions with Data:
+              name: 依數據來做決定
+            Interpreting Data:
+              name: 解譯數據
+            Automating Data Decisions:
+              name: 自動化數據決策
+            Project - Solve a Data Problem:
+              name: 專案 - 解決數據問題
+        csd6-2019:
+          title: CSD 單元 6 - 物理運算
+          description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
+          description_short: 在實體裝置上開發程式
+          stages:
+            The Circuit Playground:
+              name: 電路（Circuit ）遊樂場
+            Input Unplugged:
+              name: 不插電介紹輸入（Input）
+            Analog Input:
+              name: 模擬輸入
+            Functions with Parameters:
+              name: 函式帶參數
+            'Project: Prototype an Innovation':
+              name: 專案：原型創新
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: 問卷調查
+        csp1-2019:
+          stages:
+            CS Principles Pre-survey:
+              name: 計算機科學原理課前問卷調查
+            Sending Binary Messages:
+              name: 二進位訊息的發送
+            Sending Binary Messages with the Internet Simulator:
+              name: 用網路模擬器發送二進位訊息
+            Number Systems:
+              name: 數字系統
+            Binary Numbers:
+              name: 二進位數
+            Sending Numbers:
+              name: 數字的發送
+            Unit 1 Chapter 1 Assessment:
+              name: 單元 1 第 1 節 評量
+            The Internet:
+              name: 網際網路
+            The Need for DNS:
+              name: DNS 的需求
+            Unit 1 Chapter 2 Assessment:
+              name: 單元 1 第 2 節 評量
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: 位元組（Bytes）與檔案大小
+            Encoding B&W Images:
+              name: 黑白圖片的編碼
+            Encoding Color Images:
+              name: 彩色圖片的編碼
+        csp3-2019:
+          stages:
+            Using Simple Commands:
+              name: 簡單指令的使用
+            Creating Functions:
+              name: 建立函式
+            APIs and Function Parameters:
+              name: API 和函式參數
+        csp4-2019:
+          stages:
+            What is Big Data?:
+              name: 大數據是什麼？
+            Simple Encryption:
+              name: 簡單加密
+        csp5-2019:
+          description_short: 透過使用 JavaScript 製作豐富、互動的應用程式，繼續學習更多計算機編程的基礎概念 。
+          stages:
+            Multi-screen Apps:
+              name: 多螢幕應用程式
+            Unit 5 Assessment 1:
+              name: 單元 5 評量 1
+            User Input and Strings:
+              name: 使用者輸入與字串
+            '"If" Statements Unplugged':
+              name: "「如果」陳述式不插電教程"
+            '"if-else-if" and Conditional Logic':
+              name: "「如果…否則」和條件判斷式"
+            Unit 5 Assessment 2:
+              name: 單元 5 評量 2
+            While Loops:
+              name: 當…迴圈
+            Unit 5 Assessment 3:
+              name: 單元 5 評量 3
+            Processing Arrays:
+              name: 處理陣列
+            Functions with Return Values:
+              name: 帶返回值的函式
+            'Building an App: Canvas Painter':
+              name: 創建一個 App - 帆布畫家
+            Unit 5 Assessment 4:
+              name: 單元 5 評量 4
+        csppostap-2019:
+          stages:
+            Intro to Data:
+              name: 數據的介紹
+            Cleaning Data:
+              name: 數據的清理
+            Creating Javascript Objects:
+              name: Javascript 物件的創建
+            Reading Records:
+              name: 紀錄的讀取
+            Visualizing Data:
+              name: 資料視覺化
+        csp1-pilot:
+          stages:
+            new stage:
+              name: 新的階段

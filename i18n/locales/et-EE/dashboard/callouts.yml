@@ -34,16 +34,25 @@ et:
         grid: Klikka siin võrgustiku näitamiseks.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Klikka siin võrgustiku näitamiseks.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: Klikka siin võrgustiku näitamiseks.
       CSD U3 Variables Predict Where XY_callout:
         grid: Klikka siin võrgustiku näitamiseks.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Klikka siin võrgustiku näitamiseks.
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: Klikka siin võrgustiku näitamiseks.
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Muuda numbrit siin
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Muuda numbrit siin
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U3 ellipse_callout:
@@ -52,10 +61,16 @@ et:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U3 my-rect_callout:
@@ -66,23 +81,34 @@ et:
         CSD_U3_rect_c2: Siin on nupp "Käivita".
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Siin on kood
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Siin on kood
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Siin on kood
         CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
+      CSD U3 sequence_2019_callout:
+        CSD_U3_rect_c1: Siin on kood
+        CSD_U3_rect_c2: Lohistage see plokk koodi piirkonda.
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Määratle startGame siin
       CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: Määratle startGame siin
+      CSD U6 tugowar variables 1_2019_callout:
         CSD_U6_startGame: Määratle startGame siin
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Määratle movePlayer() siin
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Määratle movePlayer() siin
+      CSD U6 tugowar variables 2_2019_callout:
+        CSD_U6_movePlayer: Määratle movePlayer() siin
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Kontrollige, kas mängija on võitnud
       CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Kontrollige, kas mängija on võitnud
+      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Kontrollige, kas mängija on võitnud
       Course 4 Artist 4_callout:
         repeat_full_circle: Sisesta, mitu korda peab zombi liikuma, et teha üks täisring
@@ -130,6 +156,17 @@ et:
         edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Kasuta tegelaskuju liigutamiseks nooleklahve
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Lisa see plokk oma programmi!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Lisa see plokk oma programmi!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Lisa see plokk oma programmi!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Lisa oma uus tantsija siia
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Uus plokk!
+        dance_callout_11_b: Uus plokk!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Kasuta tegelaskuju liigutamiseks nooleklahve
       Dance_Party_01_callout:

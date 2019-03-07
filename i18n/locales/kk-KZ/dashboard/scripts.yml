@@ -1293,6 +1293,8 @@ kk:
               name: Кроудсорсинг
             Relay Programming:
               name: Релелік Бағдарламалау
+            Graph Paper Programming:
+              name: Миллиметрлік Бағдарламалау
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1418,6 +1420,10 @@ kk:
               name: Көңілді For циклі
             The Artist:
               name: Кейіпкер
+            Internet:
+              name: Ғаламтор
+            Crowdsourcing:
+              name: Кроудсорсинг
         coursed-2019:
           stages:
             Relay Programming:
@@ -1500,3 +1506,33 @@ kk:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Тізімдер
+        csd3-2019:
+          description_short: "Бағдарламалау"
+          stages:
+            Variables:
+              name: Айнымалылар
+            Conditionals:
+              name: Шарттар
+            Functions:
+              name: Функциялар
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Параметрлі Функциялар
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Ғаламтор
+        csp3-2019:
+          description_short: Бағдарламалау
+          stages:
+            Creating Functions:
+              name: Функцияларды Құру
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Шарт орындалғанша Циклдері

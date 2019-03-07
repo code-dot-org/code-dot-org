@@ -109,11 +109,24 @@ en-GB:
           KEY:
             '"space"': space
             '"x"': x
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       gamelab_debugSprite:
         options:
           VAL:
             'true': 'true'
             'false': 'false'
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+          KEY:
+            '"space"': space
+            '"x"': x
       gamelab_locationDelta:
         options:
           DIR:
@@ -122,6 +135,10 @@ en-GB:
         text: random colour
       gamelab_randomColor:
         text: random colour
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
       gamelab_setPosition:
         options:
           POSITION:
@@ -130,6 +147,11 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       gamelab_whenKey:
         options:
           KEY:
@@ -160,16 +182,32 @@ en-GB:
         text: turn left
       RyanLab_turnRight:
         text: turn right
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': when
             '"while"': while
-      aalab_whenTouching:
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': when
             '"while"': while
+          KEY:
+            '"space"': space
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': 'true'
+            '"false"': 'false'
       binary_whenKey:
         options:
           KEY:

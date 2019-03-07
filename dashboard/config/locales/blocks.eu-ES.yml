@@ -229,9 +229,6 @@ eu:
             '"random"': ausazkoa
       Dancelab_randomColor:
         text: ausazko kolorea
-      Dancelab_setBackgroundEffect:
-        options:
-          EFFECT: {}
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -263,9 +260,6 @@ eu:
             '4': very fast
             '0.5': slow
             '0.25': very slow
-      Dancelab_setForegroundEffect:
-        options:
-          EFFECT: {}
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -419,6 +413,11 @@ eu:
             '"x"': x posizioa
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': "\\-enean"
+            '"while"': bitartean
       gamelab_clickedOn:
         text: "{SPRITE} klik egitean"
       gamelab_comment:
@@ -442,6 +441,22 @@ eu:
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
             '"tint"': tinta
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': "\\-enean"
+            '"while"': bitartean
+          KEY:
+            '"up"': gora
+            '"down"': behera
+            '"left"': ezkerrera
+            '"right"': eskuinera
+            '"space"': espazioa
+            '"a"': a
+            '"d"': d
+            '"s"': s
+            '"w"': w
+            '"x"': x
       gamelab_locationDelta:
         options:
           DIR:
@@ -455,6 +470,10 @@ eu:
         text: ausazko kolorea
       gamelab_randomColor:
         text: ausazko kolorea
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': hiria
       gamelab_setPosition:
         options:
           POSITION:
@@ -473,6 +492,11 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': "\\-enean"
+            '"while"': bitartean
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -660,7 +684,8 @@ eu:
         text: ezkerrera biratu
       RyanLab_turnRight:
         text: eskuinera biratu
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
+        text: aldatu {SPRITE} {PROPERTY} honekin {VAL}
         options:
           PROPERTY:
             '"scale"': tamaina
@@ -668,16 +693,56 @@ eu:
             '"x"': x posizioa
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': "\\-enean"
+            '"while"': bitartean
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': "\\-enean"
             '"while"': bitartean
-      aalab_whenTouching:
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': "\\-enean"
             '"while"': bitartean
+          KEY:
+            '"up"': gora
+            '"down"': behera
+            '"left"': ezkerrera
+            '"right"': eskuinera
+            '"space"': espazioa
+      aalab_removeOneAndAll:
+        text: ezabatu {THIS}
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': hiria
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': egia
+            '"false"': gezurra
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"rotation"': itzulikapena
+            '"x"': x posizioa
+            '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
+            '"tint"': tinta
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': betiko
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': erakutsi
+            '"hide"': ezkutatu
       binary_move:
         options:
           DIR:

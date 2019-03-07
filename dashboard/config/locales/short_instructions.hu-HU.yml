@@ -505,7 +505,7 @@ hu:
         Ötször lesz szükséged a "négyzet rajzolása" függvényre.
       4-5 Artist For Loops 7: 'Rajzold meg ugyanazt a négyzetet, de használd a "számolj
         eddig" blokkot, hogy megváltoztasd a méretet. Tedd a "számláló" blokkot a
-        "rajzolj egy négyzetet" funkcióhoz. Tipp: a Változók kategória alatt találod.'
+        "rajzolj egy négyzetet" függvényhez. Tipp: a Változók kategória alatt találod.'
       4-5 Artist For Loops 8: "Be tudod fejezni a programot úgy, hogy blokkokat teszel
         a \"számold\" blokkba, \nhogy 10-től 200-ig számolj? A \"számold\" blokkot
         megtalálod a Ciklusok kategória alatt."
@@ -514,9 +514,9 @@ hu:
       4-5 Artist Free Draw 1: Szabadon rajzolhatsz! Rajzolj bármit, amihez kedved
         van.
       4-5 Artist Functions 1: Használj ciklust a háromszög megrajzolásához.
-      4-5 Artist Functions 10a: Rakd be ezt a blokkot a "Rajzolj egy hópelyhet" funkcióba
-        és cseréld le a húszat a "méret" paraméterre. Ez a funkció elő lett hívva
-        hogy egy 100 pixeles hópelyhet rajzoljon.
+      4-5 Artist Functions 10a: Rakd be ezt a blokkot a "Rajzolj egy hópelyhet" függvénybe
+        és cseréld le az 50-et a "méret" paraméterre. A függvény máris 100 képpontos
+        hópelyhet rajzol.
       4-5 Artist Functions 10b: 'Használd a "hópehely rajzolása" függvényt különböző
         méretű hópelyhek készítésére. Tipp: az első hópehely 25 hosszú és minden hópehely
         kétszer nagyobb az előzőnél.'
@@ -529,12 +529,12 @@ hu:
       4-5 Artist Functions 13 Free play: Van itt néhány függvény bolygók, csillagok,
         rakéták és robotok rajzolásához. Használd őket bárhogy, ahogy szeretnéd képek
         készítésére, amiket megoszthatsz a barátaiddal.
-      4-5 Artist Functions 14 Free play: Tessék, felkínáltunk neked több funkciót.
+      4-5 Artist Functions 14 Free play: Tessék, felkínáltunk neked több függvényt.
         Rakd be őket kedved szerint egy vagy több ciklusba, hogy képeket készíts,
         melyeket megoszthatsz barátaiddal. Kattints a "Futtatás"-ra, hogy láss egy
         példát.
       4-5 Artist Functions 15 Assessment: 'Értékelés: Használd a "Rajzolj egy négyzetet"
-        funkciót hogy létrehozd a négyzeteket. A négyzetek 50, 100 és 150 pixel (képpont)
+        függvényt hogy létrehozd a négyzeteket. A négyzetek 50, 100 és 150 pixel (képpont)
         méretűek.'
       4-5 Artist Functions 2a: Most tedd ezeket a blokkokat egy új, "kis háromszög
         rajzolása" függvénybe és hívd meg.
@@ -553,8 +553,8 @@ hu:
         háromszöget" függvényeket egy ház megrajzolásához. (Tipp: a négyzet oldalai
         200 pixel hosszúak)'
       4-5 Artist Functions 6b: Használd a "Rajzolj egy négyzetet" és a "Rajzolj egy
-        háromszöget" funkciót egy pár blokkal együtt, hogy egy házat készíts azzal,
-        hogy beteszed őket a "Rajzolj egy házat" funkcióba, és előhívod a funkciót.
+        háromszöget" függvényeket egy pár blokkal együtt, hogy egy házat készíts azzal,
+        hogy beteszed őket a "Rajzolj egy házat" függvénybe, és meghívod a függvényt.
       4-5 Artist Functions 7: Rajzolj 100 pixeles és 50 pixeles házat a "rajzolj egy
         házat" függvény segítségével! A két házat 50 pixel válassza el.
       4-5 Artist Functions 8: A "virág rajzolása" függvényben van egy paraméter, amivel
@@ -860,23 +860,36 @@ hu:
       CSD U3 Draw Loop Discuss: Itt egy program, ami nagyon hasonló egy korábbihoz,
         de valójában egészen másként viselkedik. Egy kicsit állj meg, és beszéld meg
         a csoporttal, mielőtt lefuttatod.
+      CSD U3 Sprites intro sprites: Csináld ezt
+      CSD U3 Sprites intro sprites_2018 - Validation Test: Csináld ezt
+      CSD U3 Sprites intro sprites_2018: Csináld ezt
+      CSD U3 Sprites intro sprites_2019: Csináld ezt
       CSD U5 black white images pixelation 2: Rajzolj egy mosolygós arcot (kattints
         ide a kép megtekintéséhez)
       CSD U5 black white images pixelation 2_2018: Rajzolj egy mosolygós arcot (kattints
+        ide a kép megtekintéséhez)
+      CSD U5 black white images pixelation 2_2019: Rajzolj egy mosolygós arcot (kattints
         ide a kép megtekintéséhez)
       CSD U5 black white images pixelation 3: Módosítsd a szélesség és magasság csúszkákat
         a kép megtalálásához (kattints ide, és tudj meg többet)
       CSD U5 black white images pixelation 3_2018: Módosítsd a szélesség és magasság
         csúszkákat a kép megtalálásához (kattints ide, és tudj meg többet)
+      CSD U5 black white images pixelation 3_2019: Módosítsd a szélesség és magasság
+        csúszkákat a kép megtalálásához (kattints ide, és tudj meg többet)
       CSD U5 black white images pixelation 4: Adj szemöldököt a mosolygós archoz (kattints
         ide a kép megtekintéséhez)
       CSD U5 black white images pixelation 4_2018: Adj szemöldököt a mosolygós archoz
         (kattints ide a kép megtekintéséhez)
+      CSD U5 black white images pixelation 4_2019: Adj szemöldököt a mosolygós archoz
+        (kattints ide a kép megtekintéséhez)
       CSD U5 black white images pixelation 5: Rajzold bármit, amit szeretnél
       CSD U5 black white images pixelation 5_2018: Rajzold bármit, amit szeretnél
+      CSD U5 black white images pixelation 5_2019: Rajzold bármit, amit szeretnél
       CSD U5 black white images pixelation: Egészítsd ki az X alakot nullák és egyesek
         begépelésével
       CSD U5 black white images pixelation_2018: Egészítsd ki az X alakot nullák és
+        egyesek begépelésével
+      CSD U5 black white images pixelation_2019: Egészítsd ki az X alakot nullák és
         egyesek begépelésével
       CSDU6 - Arrays - indexPractice: Írd ki a képernyőre a tömb tartalmát növekvő
         számsorrendben (kattints ide a bővebb információkhoz)
@@ -892,14 +905,21 @@ hu:
         (kattints ide a bővebb információkhoz)
       CSDU6 arrays select rainbow_2018: Írd ki a képernyőre a tömb tartalmát növekvő
         számsorrendben (kattints ide a bővebb információkhoz)
+      CSDU6 arrays select rainbow_2019: Írd ki a képernyőre a tömb tartalmát növekvő
+        számsorrendben (kattints ide a bővebb információkhoz)
       CSP student contact info: Kérlek, add meg az e-mail címedet.
       CSPU5_U3 - Arrays - indexPractice: Írd ki a képernyőre a tömb tartalmát növekvő
         számsorrendben (kattints ide a bővebb információkhoz)
       CSPU5_U3 - Arrays - indexPractice_2018: Írd ki a képernyőre a tömb tartalmát
         növekvő számsorrendben (kattints ide a bővebb információkhoz)
+      CSPU5_U3 - Arrays - indexPractice_2019: Írd ki a képernyőre a tömb tartalmát
+        növekvő számsorrendben (kattints ide a bővebb információkhoz)
       CSPU5_U3 - Loops - 4: Használd a Hibakereső parancsokat egy olyan lista készítéséhez,
         ami a 6-os előtt dobott értékeket tartalmazza. (Kattints ide az összes utasításhoz)
       CSPU5_U3 - Loops - 4_2018: Használd a Hibakereső parancsokat egy olyan lista
+        készítéséhez, ami a 6-os előtt dobott értékeket tartalmazza. (Kattints ide
+        az összes utasításhoz)
+      CSPU5_U3 - Loops - 4_2019: Használd a Hibakereső parancsokat egy olyan lista
         készítéséhez, ami a 6-os előtt dobott értékeket tartalmazza. (Kattints ide
         az összes utasításhoz)
       Course 2 Bee Loops 1: 'Szia, én egy méh vagyok. Segítesz nekem összegyűjteni
@@ -1006,9 +1026,9 @@ hu:
       Course 4 Artist For Loops 2: 'Egy háromszöget kirajzoló kódot raktam egy "for"
         ciklusba, ami elszámol 50-től 100-ig, 10-esével. Megjegyzés: Mindenképp nézd
         meg a kódot, mielőtt a "Futtatás" gombra kattintasz.'
-      Course 4 Artist For Loops 3: "Ez a fejtörő hasonló az előzőhöz. A legkisebb
-        háromszög oldalai 20 pixel nagyok, a legnagyobbé 200 pixel nagyok. Minden
-        háromszög oldala 20 pixellel nagyobb, mint az előző háromszögé. képpont. \n"
+      Course 4 Artist For Loops 3: 'Ez a fejtörő hasonló az előzőhöz. A legkisebb
+        háromszög oldala 20 képpont, a legnagyobb 200 képpont hosszúságú. Minden háromszög
+        oldala 20 képponttal nagyobb, mint az előző háromszögé. '
       Course 4 Artist For Loops 4: 'Mit módosítanál a tanultakon, hogy megrajzold
         ezeket a négyzeteket? 15 képpont oldalhosszú a legkisebb, 300 képpont a legnagyobb
         négyzet oldalhossza, és minden négyzet 15 képponttal hosszabb oldalakkal rendelkezik,
@@ -1250,16 +1270,16 @@ hu:
         hogy több szereplő esetén is használni tudjuk. Minden szereplőt egy számmal
         jelölünk eggyel kezdődően. Szerkeszd a "jump" (ugrás) függvényt, hogy használja
         az "actor" (szereplő) paramétert is, hogy a megfelelő szereplő ugorjon fel. '
-      Course 4 Play Lab Params 4: "Itt van egy `patrol` nevű függvény.\n\r\n\r\nSzerkeszd
-        a `patrol`függvényt úgy, hogy a macska 400 pixelt fel, majd 400 pixelt lefele
-        menjen."
-      Course 4 Play Lab Params 5: Szerkeszd a "patrol" (járőröz) függvényt úgy, hogy
-        minden képernyőn megjelenő szereplőre alkalmazni tudjuk. Ne felejts, hogy
-        a szereplőket az 1, 2 és 3 számok jelölik.
-      Course 4 Play Lab Params 6: Adj hozzá még egy változót a "patrol" (Járőrözés)
-        függvényhez. A neve legyen "speed" (sebesség). Használd a sebesség beállítása
-        blokkot az új "speed" (sebesség) paraméterrel, és segíts a Pingvinnek elérni
-        mindkét zászlót, mielőtt a többi szereplő akárcsak egyet is elérne.
+      Course 4 Play Lab Params 4: "Itt van egy járőr nevű függvény. \n\nSzerkeszd
+        a \"járőr\" függvényt úgy, hogy a macska 400 képpontot fel, majd 400 képpontot
+        lefelé menjen."
+      Course 4 Play Lab Params 5: Szerkeszd a "járőr" függvényt, és adj hozzá egy
+        "szereplő" paramétert, hogy minden képernyőn megjelenő szereplőre meg tudjuk
+        hívni. Ne felejtsd, hogy a szereplőket az 1, 2 és 3 számok jelölik.
+      Course 4 Play Lab Params 6: Add hozzá még a "sebesség" paramétert a "járőr"
+        függvényhez. Használd a "sebesség beállítása" blokkot az új "sebesség" paraméterrel,
+        és segíts a Pingvinnek elérni mindkét zászlót, mielőtt a többi szereplő akárcsak
+        egyet is elérne.
       Course 4 Play Lab Params 7: "Szórakozzunk kicsit! Nézd meg az általunk megírt
         kódot, és próbáld meg kitalálni, hogy mit csinálnak a blokkok. \r\nAmikor
         végeztél, használd a nyílbillentyűket a Kutya irányítására, és gyűjtsd be
@@ -1371,6 +1391,39 @@ hu:
       Course E MC Conditionals1: A legértékesebb nyersanyagok a föld alatt vannak,
         de sötét lehet. Legalább két fáklyát helyezz el és bányássz ki legalább két
         szenet.
+      CourseD_Dance_Party_01: Húzd az „új készítése“ blokkot a munkaterületre, és
+        csatlakoztasd az „összeállítás“ blokkba.
+      CourseD_Dance_Party_02: Állítsd be, hogy a jávorszarvas 4 ütem után új mozdulatot
+        kezdjen!
+      CourseD_Dance_Party_03: Most állítsd be, hogy a táncos 6 ütem után kezdjen új
+        mozdulatot!
+      CourseD_Dance_Party_04: Adj háttéreffektet a programodhoz.
+      CourseD_Dance_Party_05: Egy másik új blokkal érd el, hogy a táncos 2 ütemenként
+        változtasson a mozgásán.
+      CourseD_Dance_Party_06: Hozz létre egy „backup_dancer1“ nevű háttértáncost,
+        hogy együtt táncoljon a macskával.
+      CourseD_Dance_Party_08: Be tudod állítani mindkét háttértáncost ugyanolyan méretűre?
+      CourseD_Dance_Party_09: Az „árnyalat beállítása“ blokkal módosítsd a táncos
+        színét.
+      CourseD_Dance_Party_10: A „követés megkezdése“ blokkal érd el, hogy a másik
+        táncos is reagáljon a zenére.
+      CourseD_Dance_Party_11: A „felfelé nyíl megnyomásakor“ blokkal a felfelé nyíl
+        megnyomására tudsz kódot futtatni. Próbáld meg elérni, hogy a táncos egy gyors
+        mozdulatot végezzen, amikor megnyomod a felfelé nyilat.
+      CourseD_Dance_Party_11_5: Az „összes kacsa“ blokkokkal érd el, hogy a kacsák
+        együtt táncoljanak.
+      CourseD_Dance_Party_11b: Állítsd be, hogy a Robot egyszer „spárga“ mozdulatot
+        tegyen, amikor megnyomod a jobbra nyilat, és egyszer „taps“ mozdulatot tegyen,
+        amikor megnyomod a felfelé nyilat. Csináld a spárga-taps mozdulatokat olyan
+        gyorsan, ahogyan csak tudod!
+      CourseD_Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat,
+        és oszd meg az ismerőseiddel.
+      CourseE_HOC 2018 Level_10: Menj a Víz alatti templom bejáratához.
+      CourseE_HOC 2018 Level_11: Prizmarinnal építs csatornát a Víz alatti templom
+        belsejében.
+      CourseE_HOC 2018 Level_7a: Kutasd át ezeket a víz alatti romokat, és keresd
+        meg a ládát.
+      CourseE_HOC 2018 Level_9b: Kincskeresés közben használd a korallokat útjelzőként.
       CourseF_PlayLab_vars10: "Szabad játék! Itt van minden olyan változó, amellyel
         a pályákon eddig találkoztál, és még egy pár, ha esetleg szeretnéd használni
         őket.\r\n\r\nFigyeld meg, hogy most már olyan sok blokk van az eszköztárunkban,
@@ -1415,8 +1468,10 @@ hu:
         10-ről 0-ra csökkenjen.
       Crack Random Substitution: Utasítások
       Crack Random Substitution_2018: Utasítások
+      Crack Random Substitution_2019: Utasítások
       Crack a Caesar Cipher: Utasítások
       Crack a Caesar Cipher_2018: Utasítások
+      Crack a Caesar Cipher_2019: Utasítások
       Dance_Party_01: Húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd
         az „összeállítás“ blokkba.
       Dance_Party_01_low: Húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd
@@ -1439,9 +1494,9 @@ hu:
         végezzen, amikor megnyomod a felfelé nyilat.
       Dance_Party_11_5: Az „összes kacsa“ blokkokkal érd el, hogy a kacsák együtt
         táncoljanak.
-      Dance_Party_11b: Állítsd be, hogy a Robot egyszer „drop“ mozdulatot tegyen,
-        amikor megnyomod a jobbra nyilat, és egyszer „floss“ mozdulatot tegyen, amikor
-        megnyomod a felfelé nyilat. Csináld a drop-floss mozdulatokat olyan gyorsan,
+      Dance_Party_11b: Állítsd be, hogy a Robot egyszer „spárga“ mozdulatot tegyen,
+        amikor megnyomod a jobbra nyilat, és egyszer „taps“ mozdulatot tegyen, amikor
+        megnyomod a felfelé nyilat. Csináld a spárga-taps mozdulatokat olyan gyorsan,
         ahogyan csak tudod!
       Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd
         meg az ismerőseiddel.
@@ -1463,10 +1518,10 @@ hu:
         a következő feladványra ugráshoz. "
       FoodFight: Ez egy példa játék, amit elkészíthetsz a játéklaborban.
       FoodFight_2018: Ez egy példa játék, amit elkészíthetsz a játéklaborban.
-      Function intro Ryan: Az út szabaddá tételéhez a fáklyához használd a "híd építése"
-        funkciót.
-      Function intro Ryan_2019: Az út szabaddá tételéhez a fáklyához használd a "híd
-        építése" funkciót.
+      Function intro Ryan: Hogy szabaddá váljon az út a fáklyához, használd kétszer
+        az "építs hidat" függvényt.
+      Function intro Ryan_2019: Hogy szabaddá váljon az út a fáklyához, használd kétszer
+        az "építs hidat" függvényt.
       Get To The Goal: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra
         példa!
       Guess The Number 2: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra
@@ -1745,7 +1800,7 @@ hu:
       MC_HOC_2017_04_Cole: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_04_Cole_2019: Vidd az Agentet a nyomólapra.
       MC_HOC_2017_04_Kiki: Vidd az Agentet a nyomólapra.
-      MC_HOC_2017_05: Egy funkció segítségével vidd az Agentet a nyomólapra.
+      MC_HOC_2017_05: Egy függvény segítségével vidd az Agentet a nyomólapra.
       MC_HOC_2017_05_Cole: Juttasd a játékost az ásóhoz.
       MC_HOC_2017_05_Cole_2019: Juttasd a játékost az ásóhoz.
       MC_HOC_2017_05_Josh: Juttasd a játékost az ásóhoz.
@@ -1761,30 +1816,32 @@ hu:
         a csilléhez.
       MC_HOC_2017_07_Cole_2019: Törd fel a jeget, és juttasd {currentPlayerName} játékost
         a csilléhez.
-      MC_HOC_2017_07_Kiki: Egy funkciót használva tedd szabaddá az utat a narancssárga
+      MC_HOC_2017_07_Kiki: Egy függvényt használva tedd szabaddá az utat a narancssárga
         négyzethez.
       MC_HOC_2017_07a_Kiki: Tedd szabaddá az utat a narancssárga négyzethez.
-      MC_HOC_2017_08_Cole: Módosítsd a kapott funkciót, hogy működjön ezzel a biommal.
-      MC_HOC_2017_08_Kiki: Módosítsd a funkciót, hogy működjön ezzel a kirakóssal.
-      MC_HOC_2017_08_RY: Használd a funkciókat a láván átvezető út megtalálásához.
-      MC_HOC_2017_08_Will: Használd a funkciókat a láván átvezető út megtalálásához.
+      MC_HOC_2017_08_Cole: Módosítsd a kapott függvényt, hogy működjön ezzel a biommal.
+      MC_HOC_2017_08_Kiki: Módosítsd a függvényt, hogy működjön ezzel a kirakóssal.
+      MC_HOC_2017_08_RY: Használd a függvényeket a láván átvezető út megtalálásához.
+      MC_HOC_2017_08_Will: Használd a függvényeket a láván átvezető út megtalálásához.
       MC_HOC_2017_09_Cole: Programozd az Agentet, hogy szabaddá tegye az utat a játékos
         előtt.
       MC_HOC_2017_09_Kiki: Programozd az Agentet, hogy szabaddá tegye az utat a játékos
         előtt a nyomólapig.
-      MC_HOC_2017_10_Cole: Hozz létre egy funkciót, amellyel befejezheted ezt a csillét.
-      MC_HOC_2017_10_Cole_old: Hozz létre egy funkciót, amellyel befejezheted ezt
+      MC_HOC_2017_10_Cole: Hozz létre egy függvényt, amellyel befejezheted ezt a csillét.
+      MC_HOC_2017_10_Cole_old: Hozz létre egy függvényt, amellyel befejezheted ezt
         a csillét.
-      MC_HOC_2017_10_Kiki: Hozz létre egy funkciót, amellyel befejezheted ezt a csillét.
-      MC_HOC_2017_10_RETRY: Hozz létre egy funkciót, amellyel befejezheted ezt a csillét.
-      MC_HOC_2017_10_RETRY_2019: Hozz létre egy funkciót, amellyel befejezheted ezt
+      MC_HOC_2017_10_Kiki: Hozz létre egy függvényt, amellyel befejezheted ezt a csillét.
+      MC_HOC_2017_10_RETRY: Hozz létre egy függvényt, amellyel befejezheted ezt a
+        csillét.
+      MC_HOC_2017_10_RETRY_2019: Hozz létre egy függvényt, amellyel befejezheted ezt
         a csillét.
-      MC_HOC_2017_10_RYAN: Hozz létre egy funkciót, amellyel befejezheted ezt a csillét.
-      MC_HOC_2017_10_RYAN2: Hozz létre egy funkciót, amellyel befejezheted ezt a csillét.
+      MC_HOC_2017_10_RYAN: Hozz létre egy függvényt, amellyel befejezheted ezt a csillét.
+      MC_HOC_2017_10_RYAN2: Hozz létre egy függvényt, amellyel befejezheted ezt a
+        csillét.
       MC_HOC_2017_13_Cole: "**Szabad játék:**  Most szabadon barangolhatsz!"
       MC_HOC_2017_4.5v2: Vidd az Agentet a nyomólapra.
-      MC_HOC_2017_Ali: Használd a funkciókat a láván átvezető út megtalálásához.
-      MC_HOC_2017_Ali_2019: Használd a funkciókat a láván átvezető út megtalálásához.
+      MC_HOC_2017_Ali: Használd a függvényeket a láván átvezető út megtalálásához.
+      MC_HOC_2017_Ali_2019: Használd a függvényeket a láván átvezető út megtalálásához.
       MC_HOC_2017_FP10x10: "**Szabad játék:** Össze tudod-e szedni az ezen a szinten
         található összes gyémántot? "
       MC_HOC_2017_FP10x10_RE: "**Szabad játék:** Össze tudod-e szedni az ezen a szinten
@@ -1913,10 +1970,12 @@ hu:
       NEW Course 4 Bee For Loops 6: A for ciklusban lévő utolsó számot lépésköznek
         hívják. A ciklus számlálójának értéke minden ismétléskor a lépésköz értékével
         módosul. Próbáld meg összegyűjteni ezeket a virágokat 2 lépésközt használva.
-      NEW Course 4 Bee For Loops 7: Kezdesz belejönni a for ciklusok használatába?
-        Ez a feladvány hasonlít az előzőhöz, de 2,4,6,8,10 nektárt kell gyűjteni.
-        Készen van a kód, csak a számláló ciklusok számait kell módosítani. Gyűjtsük
-        össze a nektárt!
+      NEW Course 4 Bee For Loops 7: "Nos, most kombináljuk a \"counter\" változót
+        egy matematikai blokkal! Hogyan tudnád használni a \"counter\" változót, hogy
+        a lehető legkevesebb blokk felhasználásával végigmenj ezen a kerten? Hogyan
+        tudnál ez alkalommal 3,6,9,12,15 nektárt gyűjteni? A titok a \"counter\" változóban
+        van! \n\nEmlékezz: ha a ciklusod fölfelé számol, a lépésköz mindig hozzáadódik
+        a \"counter\" változóhoz."
       NEW Course 4 Bee For Loops 8: "Ha a ciklus felfelé számol, akkor minden ciklusban
         hozzáadódik a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt
         gyűjtsünk?\r\n"
@@ -1925,12 +1984,17 @@ hu:
         6, és 3 nektárt kell összegyűjteni?
       NEW Course 4 Play Lab Params 11: 'Szabad játék! Csinálj bármit a rendelkezésre
         álló blokkokkal! '
+      NEW Course 4 Play Lab Params 5 5: Most próbáld újra, kevesebb segítséggel. Mit
+        kell változtatnod, hogy a szereplők járőrként viselkedjenek?
       NEW Course 4 Play Lab Vars 4 5: '"Mit gondol ez a kód fog tenni? Kattints a
         "Futtatás" gombra, hogy megtudd.'
       NEW Course 4 Play Labs For Loops 8 Free Play: 'Szabad játék! Csinálj bármit
         a rendelkezésre álló blokkokkal. '
       New Artist Project: Rajzolj valami nagyszerűt! A kódod projektként kerül elmentésre,
         és bármikor visszatérhetsz hozzá.
+      New Basketball Project: Készítsd el a saját kosárlabda játékod! Változtathatsz
+        a szabályokon. Ha elkészültél, nyomj a Kész-re, hogy a barátaid is kipróbálhassák
+        a telefonjaikon.
       New Bounce Project: Hozd létre saját Visszapattanós játékodat. Módosíthatod
         a kinézetet és a szabályokat. Ha elkészültél, kattints a Kész gombra, hogy
         a barátaid is kipróbálhassák a játékodat a telefonjukon.
@@ -2034,6 +2098,8 @@ hu:
       Ryan - Bee Conditionals: A méhecske csak nektárt szeretne most. Nem minden tárgy
         virág, tehát vizsgálj meg minden felhőt, hogy van-e alatta virág. Ha igen,
         tudsz belőle nektárt gyűjteni.
+      Ryan Test Locked Blocks: Itt van egy járőr nevű függvény. Szerkeszd úgy, hogy
+        a macska 400 képpontot fel, majd 400 képpontot lefelé menjen.
       Ryan_Demo: Állítsd be, hogy a jávorszarvas 4 ütem után új mozdulatot kezdjen!
       SpecialFrozenLevel: |-
         Hivatalosan is egy mester művész lettél!
@@ -2069,6 +2135,7 @@ hu:
         feltölti a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust használd.'
       The Vigenere Cipher Widget: Utasítások
       The Vigenere Cipher Widget_2018: Utasítások
+      The Vigenere Cipher Widget_2019: Utasítások
       The Vigenere Cipher: Utasítások
       Total Artist Clone Me: |-
         Szabad játék: Itt vannak az általad írt függvények, és még néhány másik, amikkel játszhatsz. Rajzolj valami nagyszerűt!
@@ -2078,9 +2145,26 @@ hu:
       U2 vigenere cipher: Utasítások
       U3 - Arrays - indexPractice: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben
         (kattints ide a bővebb információkhoz)
+      U3 - Simple Drawing - Fill: Csináld ezt
+      U3 - Simple Drawing - Oval: Csináld ezt
+      U3 - Simple Drawing - Rectangle Width and Height: Csináld ezt
+      U3 - Simple Drawing - Rectangle: Csináld ezt
+      U3 - Simple Drawing - Road Ellipse: Csináld ezt
+      U3 - Simple Drawing - Road Rects and Color: Csináld ezt
+      U3 - Simple Drawing - Simple Shape Drawing: Csináld ezt
+      U3 - Simple Drawing - X and Y values: Csináld ezt
+      U3 - Simple Drawing - text: Csináld ezt
+      U3 - Sprites - Intro Sprites: Csináld ezt
+      U3 - Sprites and Mod - Create  and Draw Sprite: Csináld ezt
+      U3 - Sprites and Mod - Rand Shape Color: Csináld ezt
+      U3 - Sprites and Mod - Shape Color: Csináld ezt
+      U3 - Sprites and Mod - Wrap Many Squares: Csináld ezt
+      U3 - Sprites and Mod - X and Y Prop: Csináld ezt
+      U3 - Sprites and Mod - two sprites: Csináld ezt
       U4 vigenere cipher 2: Utasítások
       U4L02 - Objects - Template1: Sablon
       U4L02 - Objects - Template1_2018: Sablon
+      U4L02 - Objects - Template1_2019: Sablon
       Underground Avoiding Lava: Láva rejlik bizonyos blokkok alatt, amelyet le kell
         takarnod, mielőtt tovább mozogsz. A "ha" utasítás jól fog jönni. Használd
         az "előremenni" blokkot a megfelelő módon, hogy kibányászd ezeket a blokkokat.
@@ -2121,6 +2205,7 @@ hu:
         a sarkokra - nem fordulhatsz csak úgy 90 fokot! Ha egy 3 fokos fordulatot
         60-szor ismételve egy félkört kapunk, melyik blokkal kapunk a sarkokhoz egy
         negyed kört?
+      allthethings_U3 - Simple Drawing - Rectangle Width and Height: Csináld ezt
       beeDebugVideo1: Fel tudsz használni egy ciklust a nektár összegyűjtéséhez?
       birdsDebugVideo1: Tervezd meg az utat és juttass el a buta malachoz. Kerüljük
         el a dinamitot, különben repülünk!
@@ -2134,6 +2219,14 @@ hu:
         szerez az ellenfél" blokkokat a "ha a labda célba ér" és a "ha a labda nem
         találja el az ütőt" blokkal, hogy elkészüljön a játék. Próbáld ki, hány pontot
         gyűjtesz, mielőtt az ellenfél két pontot szerez.
+      bounce_10_basketball: Most fenn van a cél! Húzd a "pontszám" és "pontot szerez
+        az ellenfél" blokkokat a "ha a labda célba ér" és az "amikor a labda nem éri
+        a kezet" blokkokhoz, hogy összeálljon a játék. Nézzük, hány pontot tudsz szeretni,
+        mielőtt az ellenfél szerez két pontot.
+      bounce_10_sports: Most fenn van a cél! Húzd a "pontszám" és "pontot szerez az
+        ellenfél" blokkokat a "ha a labda célba ér" és az "amikor a labda nem éri
+        a kezet" blokkokhoz, hogy összeálljon a játék. Nézzük, hány pontot tudsz szeretni,
+        mielőtt az ellenfél szerez két pontot!
       bounce_11: Most csatolni tudsz blokkokat a "futtatáskor" blokkhoz. Csatolj "indíts
         új labdát" blokkot több helyen is. Próbáld meg módosítani a hátteret, vagy
         az ütő és a labda sebességét, és lássuk, hány pontod lesz, mielőtt az ellenfél
@@ -2142,18 +2235,33 @@ hu:
         "indíts új labdát" blokkot több helyen is. Próbáld meg módosítani a hátteret,
         vagy az ütő és a labda sebességét, és lássuk, hány pontod lesz, mielőtt az
         ellenfél két pontot szerez.
+      bounce_11_basketball: Most csatolni tudsz blokkokat a "futtatáskor" blokkhoz.
+        Csatolj "indíts új labdát" blokkot több helyen is. Próbáld meg módosítani
+        a hátteret, vagy a kéz és a labda sebességét, és lássuk, hány pontod lesz,
+        mielőtt az ellenfél két pontot szerez!
+      bounce_11_sports: Most csatolni tudsz blokkokat a "futtatáskor" blokkhoz. Csatolj
+        "indíts új labdát" blokkot több helyen is. Próbáld meg módosítani a hátteret,
+        vagy a kéz és a labda sebességét, és lássuk, hány pontod lesz, mielőtt az
+        ellenfél két pontot szerez!
       bounce_12: Hozd létre saját Visszapattanós játékodat. Módosíthatod a kinézetet
         és a szabályokat. Ha elkészültél, kattints a Kész gombra, hogy a barátaid
         is kipróbálhassák a játékodat a telefonjukon.
       bounce_12_2018: Hozd létre saját Visszapattanós játékodat. Módosíthatod a kinézetet
         és a szabályokat. Ha elkészültél, kattints a Kész gombra, hogy a barátaid
         is kipróbálhassák a játékodat a telefonjukon.
+      bounce_12_basketball: Készítsd el a saját kosárlabda játékod! Változtathatsz
+        a szabályokon. Ha elkészültél, nyomj a Kész-re, hogy a barátaid is kipróbálhassák
+        a telefonjaikon.
       bounce_1_2018: Csatolj egy blokkot a "balra nyíl esetén" blokkhoz, majd nyomd
         meg a "Futtatás" gombot. Mozgasd az ütőt a bal nyíllal, hogy elérd a célt.
+      bounce_1_basketball: Adj egy blokkon a "ha van balra nyíl" blokkhoz, és kattints
+        a "futtatás"-ra. Mozgasd a kezet a bal nyíllal, hogy elérd a célt.
       bounce_2: Csatolj egy blokkot  a "jobbra nyíl esetén" és a "balra nyíl esetén"
         blokkokhoz. Mozgasd az ütőt, hogy mindkét célt elérd.
       bounce_2_2018: Csatolj egy blokkot  a "jobbra nyíl esetén" és a "balra nyíl
         esetén" blokkokhoz. Mozgasd az ütőt, hogy mindkét célt elérd.
+      bounce_2_basketball: Húzz egy-egy blokkot a "ha van balra nyíl" és a "ha van
+        jobbra nyíl" blokkokhoz. Mozgasd a kezet, hogy mind a két célt elérd.
       bounce_3: Most próbálj meg valami hasonlót  a "felfelé nyílnál" blokkal.  Mozgasd
         az ütőt, hogy elérd a fenti célt.
       bounce_3_2018: Most próbálj meg valami hasonlót  a "felfelé nyílnál" blokkal.  Mozgasd
@@ -2167,14 +2275,24 @@ hu:
       bounce_5_2018: El fogjuk dobni a labdát az ütő felé. Csatoljunk egy blokkot
         az "ha a labda eltalálja az ütőt" blokkhoz, hogy a labda biztosan elérje a
         célját.
+      bounce_5_basketball: A labda most repülni fog a kéz felé. Adj egy blokkot az
+        "amikor a labda a kézhez ér" blokkhoz, hogy a labda végül elérje a zászlót.
       bounce_6: A cél most fönt van. Csatolj egy-egy blokkot mindkét "ha a labda..."
         blokkhoz, hogy megoldd a rejtvényt.
       bounce_6_2018: A cél most fönt van. Csatolj egy-egy blokkot mindkét "ha a labda..."
         blokkhoz, hogy megoldd a rejtvényt.
+      bounce_6_basketball: Most a zászló fönt van. Mind a két "amikor a labda..."
+        blokkhoz kell blokkot hozzáadnod, hogy megoldd a feladványt.
+      bounce_6_sports: Most a zászló fönt van. Mind a két "amikor a labda..." blokkhoz
+        kell blokkot hozzáadnod, hogy megoldd a feladványt.
       bounce_7: Csatolj blokkot minden "ha..." blokkhoz. Pattogtasd a labdát addig,
         amíg el nem éri a célját.
       bounce_7_2018: Csatolj blokkot minden "ha..." blokkhoz. Pattogtasd a labdát
         addig, amíg el nem éri a célját.
+      bounce_7_basketball: Minden blokkhoz húzz további blokkokat. Pattogtasd a labdát,
+        amíg eléri a zászlót.
+      bounce_7_sports: Minden blokkhoz húzz további blokkokat. Pattogtasd a labdát,
+        amíg eléri a zászlót.
       course2_maze_seq_challenge1: Tervezd meg az utat a malacig. A TNT-t viszont
         kerüld el mindenképp, vagy repülsz!
       course2_playlab_stage17_11: Hozz létre egy saját történetet! Ha elkészült, kattints
@@ -2811,6 +2929,10 @@ hu:
         készíts mézet.
       grade4_review_bee3: Használd ugyanazt a ciklust, mint az előző feladványban,
         de építs bele egy fordulatot.
+      grade4_scaffolded_project3: |-
+        Most hogy a játéknak van hőse, itt az ideje további szereplőket létrehozni és viselkedéseket hozzájuk rendelni.
+
+        Hozz létre a játékban két további szereplőt és gondoskodj róla, hogy mozogjanak. Szeretnél egy föl-le mozgó járőr szereplőt? Próbáld használni ezeket az új blokkokat, hogy kihasználd a játékod új lehetőségeit!
       grade5_artist_binary1: "A bináris az információ ábrázolása mindössze 2 állapot
         használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\" (ezt az
         1 számjegy jelöli) állapotokat használjuk.\r\n\r\nEgy \"képpontokból\" álló
@@ -2957,13 +3079,13 @@ hu:
         a "Futtatás" gombra, és játssz a játékkal! Ebben a játékban te vagy a kutya,
         aki több zászlót próbál gyűjteni, mint a macska. Használd a le nyílbillentyűt
         a kutya irányítására. Kattints a "Kész" gombra, amikor végeztél a játékkal.
-      grade5_playlab_variables10: Szerkeszd a "patrol" (járőröz) függvényt úgy, hogy
-        minden képernyőn megjelenő szereplőre alkalmazni tudjuk. Ne felejts, hogy
-        a szereplőket az 1, 2 és 3 számok jelölik.
-      grade5_playlab_variables11: Adj hozzá még egy változót a "patrol" (Járőrözés)
-        függvényhez. A neve legyen "speed" (sebesség). Használd a sebesség beállítása
-        blokkot az új "speed" (sebesség) paraméterrel, és segíts a Pingvinnek elérni
-        mindkét zászlót, mielőtt a többi szereplő akárcsak egyet is elérne.
+      grade5_playlab_variables10: Szerkeszd a "járőr" függvényt, és adj hozzá egy
+        "szereplő" paramétert, hogy minden képernyőn megjelenő szereplőre meg tudjuk
+        hívni. Ne felejtsd, hogy a szereplőket az 1, 2 és 3 számok jelölik.
+      grade5_playlab_variables11: Add hozzá még a "sebesség" paramétert a "járőr"
+        függvényhez. Használd a "sebesség beállítása" blokkot az új "sebesség" paraméterrel,
+        és segíts a Pingvinnek elérni mindkét zászlót, mielőtt a többi szereplő akárcsak
+        egyet is elérne.
       grade5_playlab_variables12: "Szórakozzunk kicsit! Nézd meg az általunk megírt
         kódot, és próbáld meg kitalálni, hogy mit csinálnak a blokkok. \r\nAmikor
         végeztél, használd a nyílbillentyűket a Kutya irányítására, és gyűjtsd be
@@ -3006,9 +3128,9 @@ hu:
         a játékos pontszáma (player_score) nagyobb lesz egy adott számnál.\r\n\r\nPéldául:
         \"player_score\" > 6\r\n\r\nIndítsd el a játékot, és juss el a harmadik szintre
         a következő feladványra ugráshoz. "
-      grade5_playlab_variables9: "Itt van egy `patrol` nevű függvény.\n\r\n\r\nSzerkeszd
-        a `patrol`függvényt úgy, hogy a macska 400 pixelt fel, majd 400 pixelt lefele
-        menjen."
+      grade5_playlab_variables9: "Itt van egy járőr nevű függvény. \n\nSzerkeszd a
+        \"járőr\" függvényt úgy, hogy a macska 400 képpontot fel, majd 400 képpontot
+        lefelé menjen."
       grade5_playlab_variables_freeplay: "Szabad játék! Itt van minden olyan változó,
         amellyel a pályákon eddig találkoztál, és még egy pár, ha esetleg szeretnéd
         használni őket.\r\n\r\nFigyeld meg, hogy most már olyan sok blokk van az eszköztárunkban,

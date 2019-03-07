@@ -24,17 +24,21 @@ is:
       Comment: Athugasemd
       'Variables ': 'Breytur '
       everythingelse: alltannað
+      World: Heimur
+      Sprites: Kvikar
+      Location: Staður
+      Behaviors: Hegðun
       numbers: tölur
       Numbers: Tölur
+      Input: Inntak
       Default: Sjálfgefið
-      World: Heimur
-      Behaviors: Hegðun
+      Dancers: Dansarar
+      Groups: Hópar
       Advanced: Ítarlegt
       Start: Byrja
       Locations: Staðir
+      Music: Tónlist
       Dancing: Dans
-      Dancers: Dansarar
-      Groups: Hópar
       Sprite: Kviki
       Brush: Pensill
       Make Sprite: Búa til kvika
@@ -48,6 +52,7 @@ is:
       test2: próf2
       Use These Blocks: Notaðu þessa kubba
       Do Not Use: Ekki nota
+      Foo: Fú
       Name: Nafn
       NEW BLOCKS: NÝIR KUBBAR
       'Functions ': 'Föll '

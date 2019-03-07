@@ -1,0 +1,22 @@
+{
+  "category": "Text",
+  "config": {
+    "func": "toggleHideCustomText",
+    "blockText": "{OPTION} custom text",
+    "args": [
+      {
+        "name": "OPTION",
+        "options": [
+          [
+            "show",
+            "\"show\""
+          ],
+          [
+            "hide",
+            "\"hide\""
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -191,6 +191,11 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': nə zaman
+            '"while"': hələ ki,
       gamelab_debugSprite:
         options:
           VAL:
@@ -200,6 +205,19 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': nə zaman
+            '"while"': hələ ki,
+          KEY:
+            '"up"': yuxarı
+            '"down"': aşağı
+            '"left"': sola
+            '"right"': sağa
+            '"space"': kosmos
+            '"x"': x
+            '"y"': 'y'
       gamelab_locationDelta:
         options:
           DIR:
@@ -213,6 +231,10 @@ az:
         text: ixtiyari rəng
       gamelab_randomColor:
         text: ixtiyari rəng
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şəhər
       gamelab_setPosition:
         options:
           POSITION:
@@ -226,6 +248,11 @@ az:
           PROPERTY:
             '"scale"': ölçü
             '"height"': hündürlük
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': nə zaman
+            '"while"': hələ ki,
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -379,20 +406,49 @@ az:
         text: sola dön
       RyanLab_turnRight:
         text: sağa dön
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': ölçü
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': nə zaman
+            '"while"': hələ ki,
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': nə zaman
             '"while"': hələ ki,
-      aalab_whenTouching:
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': nə zaman
             '"while"': hələ ki,
+          KEY:
+            '"up"': yuxarı
+            '"down"': aşağı
+            '"left"': sola
+            '"right"': sağa
+            '"space"': kosmos
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şəhər
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': doğru
+            '"false"': yalan
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': şov
+            '"hide"': gizlə
       binary_move:
         options:
           DIR:

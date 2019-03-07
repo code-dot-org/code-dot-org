@@ -23,7 +23,9 @@ module Pd::Application
           options: TEACHER_APPLICATION_CLASS.options.camelize_keys,
           requiredFields: TEACHER_APPLICATION_CLASS.camelize_required_fields,
           accountEmail: current_user.email,
-          apiEndpoint: '/api/v1/pd/application/teacher'
+          apiEndpoint: '/api/v1/pd/application/teacher',
+          userId: current_user.id,
+          schoolId: current_user.school_info&.school&.id
         }.to_json
       }
     end

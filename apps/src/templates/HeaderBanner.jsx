@@ -3,8 +3,9 @@
  * can put a text header and subheader over that banner image.
  */
 
-import React, {PropTypes} from 'react';
-import color from "../util/color";
+import PropTypes from 'prop-types';
+import React from 'react';
+import color from '../util/color';
 import {connect} from 'react-redux';
 
 const styles = {
@@ -79,34 +80,44 @@ const styles = {
     color: color.white,
     fontSize: 16,
     lineHeight: '21px',
-    marginBottom: 20,
+    marginBottom: 20
   },
   bannerDescriptionResponsive: {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.dark_charcoal,
     fontSize: 16,
     lineHeight: '21px',
-    marginBottom: 20,
+    marginBottom: 20
   }
 };
 
 class HeaderBanner extends React.Component {
-  static propTypes =  {
+  static propTypes = {
     headingText: PropTypes.string,
     subHeadingText: PropTypes.string,
     description: PropTypes.string,
     children: PropTypes.node,
     short: PropTypes.bool,
-    responsiveSize: React.PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired
   };
 
   render() {
-    const {short, headingText, subHeadingText, description, responsiveSize} = this.props;
+    const {
+      short,
+      headingText,
+      subHeadingText,
+      description,
+      responsiveSize
+    } = this.props;
 
     let headerStyle, headingStyle, subHeadingStyle, descriptionStyle;
     if (responsiveSize === 'xs') {
-      headerStyle = short ? styles.headerBannerShortResponsive : styles.headerBannerResponsive;
-      headingStyle = short ? styles.bannerHeadingShortResponsive : styles.bannerHeadingResponsive;
+      headerStyle = short
+        ? styles.headerBannerShortResponsive
+        : styles.headerBannerResponsive;
+      headingStyle = short
+        ? styles.bannerHeadingShortResponsive
+        : styles.bannerHeadingResponsive;
       subHeadingStyle = styles.bannerSubHeadingResponsive;
       descriptionStyle = styles.bannerDescriptionResponsive;
     } else {
@@ -118,17 +129,11 @@ class HeaderBanner extends React.Component {
 
     return (
       <div style={headerStyle}>
-        <div style={headingStyle}>
-          {headingText || <span>&nbsp;</span>}
-        </div>
+        <div style={headingStyle}>{headingText || <span>&nbsp;</span>}</div>
         <div style={subHeadingStyle}>
           {subHeadingText || <span>&nbsp;</span>}
         </div>
-        {description && (
-          <div style={descriptionStyle}>
-            {description}
-          </div>
-        )}
+        {description && <div style={descriptionStyle}>{description}</div>}
         {this.props.children}
       </div>
     );
@@ -136,5 +141,5 @@ class HeaderBanner extends React.Component {
 }
 
 export default connect(state => ({
-  responsiveSize: state.responsive.responsiveSize,
+  responsiveSize: state.responsive.responsiveSize
 }))(HeaderBanner);

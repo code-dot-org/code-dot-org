@@ -74,7 +74,7 @@ ja:
         text: "{SPRITE} {PROPERTY} を {VAL} 変更"
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -159,7 +159,7 @@ ja:
       Dancelab_getProp:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -447,7 +447,7 @@ ja:
         text: "{SPRITE} {PROPERTY} を {VAL} にセット "
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -471,7 +471,7 @@ ja:
             '"SHARK"': すべてのサメ
             '"UNICORN"': ユニコーンだらけ
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -482,7 +482,7 @@ ja:
         text: ランダムにする {SPRITE} {PROPERTY}
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -536,7 +536,7 @@ ja:
         text: "{SPRITE} が {PROPERTY} をはじめる、{RANGE} のあとに"
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -551,7 +551,7 @@ ja:
         text: "{SPRITE} が {PROPERTY} をやめる、{RANGE} のあとに"
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
             '"rotation"': 回転
@@ -573,6 +573,7 @@ ja:
             '"right"': 右 に
             '"space"': うちゅう
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         text: "{RANGE} がいちばん大きいとき"
         options:
@@ -598,11 +599,16 @@ ja:
         text: "{SPRITE} {PROPERTY} を {VAL} 変更"
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': もし
+            '"while"': 以下の間
       gamelab_debugSprite:
         options:
           VAL:
@@ -611,7 +617,7 @@ ja:
       gamelab_getProp:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -619,6 +625,19 @@ ja:
             '"tint"': 色合い
       gamelab_jumpTo:
         text: "{SPRITE}　{LOCATION}にとぶ"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': もし
+            '"while"': 以下の間
+          KEY:
+            '"up"': 上 に
+            '"down"': 下 に
+            '"left"': 左 に
+            '"right"': 右 に
+            '"space"': うちゅう
+            '"x"': x
+            '"y"': y
       gamelab_locationDelta:
         options:
           DIR:
@@ -636,6 +655,10 @@ ja:
         text: てきとうな色
       gamelab_setBackground:
         text: 背景色を {COLOR} にセット
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
       gamelab_setPosition:
         text: "{THIS} を {POSITION} の位置に移動"
         options:
@@ -653,7 +676,7 @@ ja:
       gamelab_setProp:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -663,15 +686,20 @@ ja:
         text: "{SPRITE} {PROPERTY} を {N}%に設定"
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
       gamelab_setup:
         text: セットアップ
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': もし
+            '"while"': 以下の間
       gamelab_spritesWhere:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
@@ -679,7 +707,7 @@ ja:
       gamelab_spritesWhereGenerator:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
@@ -716,7 +744,7 @@ ja:
       Mikelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -736,7 +764,7 @@ ja:
       Mikelab_getProp:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -750,7 +778,7 @@ ja:
           SELECT:
             '"all"': すべて
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -774,7 +802,7 @@ ja:
       Mikelab_groupGetProp:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -796,7 +824,7 @@ ja:
           SELECT:
             '"all"': すべて
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -831,7 +859,7 @@ ja:
       Mikelab_setProp:
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
@@ -891,24 +919,65 @@ ja:
         text: 右に回転
       Vector_positionCenter:
         text: 中央
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
+        text: "{SPRITE} {PROPERTY} を {VAL} 変更"
         options:
           PROPERTY:
-            '"scale"': おおきさ
+            '"scale"': 大きさ
             '"rotation"': 回転
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': もし
+            '"while"': 以下の間
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': もし
             '"while"': 以下の間
-      aalab_whenTouching:
+      aalab_jumpTo:
+        text: "{SPRITE}　{LOCATION}にとぶ"
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': もし
             '"while"': 以下の間
+          KEY:
+            '"up"': 上 に
+            '"down"': 下 に
+            '"left"': 左 に
+            '"right"': 右 に
+            '"space"': うちゅう
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': 'true'
+            '"false"': 'false'
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 大きさ
+            '"rotation"': 回転
+            '"x"': x 位置
+            '"y"': y 位置
+            '"direction"': 動きの方向
+            '"tint"': 色合い
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': ずっとくりかえす
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': 表示(ひょうじ)する
+            '"hide"': かくす
       binary_move:
         options:
           DIR:

@@ -17,11 +17,9 @@ theme: responsive
 
 Code.org counts on engaging, committed, and knowledgeable facilitators to develop and support the next generation of computer science educators. 
 
-Ready to take your leadership to the next level?
+Applications for the Code.org Facilitator Development Program will open January 2020. **If you are interested in joining the program in 2020-2021, please sign up below to receive a reminder when applications open.**
 
-[<button>Apply now!</button></a>](https://studio.code.org/pd/application/facilitator)
-
-Our online applications take 25-30 minutes to complete, and are not optimized for mobile devices. The deadline to apply for the 2019-20 Facilitator Development Program is **January 31, 2019.**
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfNgNC4As3Bf8lFaJCjIiClxVquTpLVvpxzJMW1YkC1gdV2Qw/viewform", target=_"blank"><button>Tell me when applications open!</button></a>
 
 [/col-50]
 
@@ -180,6 +178,33 @@ Have questions? We have answers!
 
 Check out our <a href="https://docs.google.com/document/d/e/2PACX-1vQzx_dR5g68Zzg7atSIZ_y8_tlSXln8dqBrW0oh1dQkTb6M56cdk3N9ozxgci4vJCdm6h3uwZ4douK4/pub", target=_"blank">FAQs</a> or write to us at facilitators@code.org 
 
+## Interested in applying?
+
+Applications for the Code.org Facilitator Development Program will open January 2020. **If you are interested in joining the program in 2020-2021, please sign up below to receive a reminder when applications open.**
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfNgNC4As3Bf8lFaJCjIiClxVquTpLVvpxzJMW1YkC1gdV2Qw/viewform", target=_"blank"><button>Tell me when applications open!</button></a>
+
+In the meantime, be sure to visit our curriculum pages for additional information about our three courses.
+
+- [CS Fundamentals - Grades K-5](/educate/curriculum/elementary-school)
+- [CS Discoveries - Grades 6-10](/educate/csd)
+- [CS Principles - Grades 9-12](/educate/csp)
+
+
+<!--
+
+Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below to receive a reminder when applications open.**
+
+<a href="https://goo.gl/forms/IPyERiuLCRG6jF0G3", target=_"blank"><button>Tell me when applications open!</button></a>
+
+
+
+Ready to take your leadership to the next level?
+
+[<button>Apply now!</button></a>](https://studio.code.org/pd/application/facilitator)
+
+Our online applications take 25-30 minutes to complete, and are not optimized for mobile devices. The deadline to apply for the 2019-20 Facilitator Development Program is **January 31, 2019.**
+
 ## Apply now!
 
 Ready to apply? Follow these steps:
@@ -196,27 +221,6 @@ Ready to apply? Follow these steps:
 The deadline to apply for the 2019-20 Facilitator Development Program is **January 31, 2019.** Any appliaction submitted after January 31 will be considered if space is available.
 
 In addition, we recommend that you make sure you're able to receive emails from facilitators@code.org at the email address you will use for your application. If this address is blocked by your district's firewall, please contact the appropriate IT representative at your school district to whitelist the address.
-
-
-<!--
-
-Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below to receive a reminder when applications open.**
-
-<a href="https://goo.gl/forms/IPyERiuLCRG6jF0G3", target=_"blank"><button>Tell me when applications open!</button></a>
-
-## Interested in applying?
-
-Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below to receive a reminder when applications open.**
-
-<a href="https://goo.gl/forms/IPyERiuLCRG6jF0G3", target=_"blank"><button>Tell me when applications open!</button></a>
-
-
-In the meantime, be sure to visit our curriculum pages for additional information about our three courses.
-
-- [CS Fundamentals - Grades K-5](/educate/curriculum/elementary-school)
-- [CS Discoveries - Grades 6-10](/educate/csd)
-- [CS Principles - Grades 9-12](/educate/csp)
-
 
 
 -->

@@ -2,6 +2,106 @@
 ca:
   data:
     authored_hints:
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+          * Assegura-te'n que el ballarí aparegui a la pantalla.
+
+          *Aquest nivell acaba després de quatre mesures.*
+        challenges: |-
+          **Reptes opcionals**
+          * Escull una cançó diferent per reproduir.
+          * Escull-ne un de diferent que sembli un ant!
+          * Torna a posar-li nom al dansaire.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+          * El ballarí ha de canviar a un nou moviment després de 4 mesures.
+
+          *Aquest nivell acaba després de 8 mesures.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
+
+          *Aquest nivell acaba després de 12 mesures.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
+
+          *Aquest nivell acaba després de 10 mesures.*
+        challenges: |-
+          **Repte opcional**
+
+          Canvia l'efecte de fons en diferents punts mentre dura la cançó tot connectant el nou bloc sota els esdeveniments de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Has de tenir com a mínim dos dansaires.
+
+          *Aquest nivell acaba després de 6 mesures.*
+        challenges: |-
+          **Repte opcional**
+
+          * Afegeix un tercer dansaire (o tants com vulguis!)
+          * Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Els dos ballarins necessiten tenir una mida diferent de 100.
+
+          *Aquest nivell acaba després de 6 mesures.*
+        challenges: |-
+          **Repte opcional**
+
+          * Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Canvia la tinta de, com a mínim, un dansaire.
+
+          *Aquest nivell acaba després de 8 mesures.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Les propietats de dos o més ballarins han de canviar.
+
+          *Aquest nivell acaba després de 8 mesures.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Sigues creatiu!
+
+          *Aquest nivell acaba després de 8 mesures.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Sigues creatiu!
+
+          *Aquest nivell acaba després de 8 mesures.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          * Emprar el bloc `quan prems la fletxa esquerra` per fer que el robot faci un moviment de dansa quan el prems.
+
+          *Aquest nivell acaba després de 8 mesures.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: Mira les **Llanternes de la mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Com es pot fer servir un condicional amb ells per passar a través del Monument
+          de l'Oceà?
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Quin escull de corall més preciós! El corall blau està
+          bé si és a la **dreta**, i assegura-te'n que el corall vermell queda a l'**esquerra**!
       Dance short test 2_authored_hint:
         validation: |-
           **Com passo aquest nivell?**

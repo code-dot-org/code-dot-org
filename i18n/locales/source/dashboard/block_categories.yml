@@ -25,20 +25,21 @@ en:
       Comment: Comment
       'Variables ': 'Variables '
       everythingelse: everythingelse
+      World: World
+      Sprites: Sprites
+      Location: Location
+      Behaviors: Behaviors
       numbers: numbers
       Numbers: Numbers
       Input: Input
       Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
+      Dancers: Dancers
+      Groups: Groups
       Advanced: Advanced
       Start: Start
       Locations: Locations
       Music: Music
       Dancing: Dancing
-      Dancers: Dancers
-      Groups: Groups
       Sprite: Sprite
       Brush: Brush
       Make Sprite: Make Sprite

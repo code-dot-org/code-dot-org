@@ -11,7 +11,7 @@ var dom = require('../dom');
  * @param {DropletTooltipManager} dropletTooltipManager
  * @constructor
  */
-var DropletAutocompletePopupTooltipManager = function (dropletTooltipManager) {
+var DropletAutocompletePopupTooltipManager = function(dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
   this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
   this.tooltipsEnabled = true;
@@ -34,11 +34,16 @@ var DEFAULT_TOOLTIP_CONFIG = {
 /**
  * @param {Editor} dropletEditor
  */
-DropletAutocompletePopupTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
+DropletAutocompletePopupTooltipManager.prototype.installTooltipsForEditor_ = function(
+  dropletEditor
+) {
   var aceEditor = dropletEditor.aceEditor;
 
-  this.editorChangedEventHandler_ = this.setupOnPopupShown_.bind(this, aceEditor);
-  aceEditor.commands.on("afterExec", this.editorChangedEventHandler_);
+  this.editorChangedEventHandler_ = this.setupOnPopupShown_.bind(
+    this,
+    aceEditor
+  );
+  aceEditor.commands.on('afterExec', this.editorChangedEventHandler_);
 };
 
 /**
@@ -48,7 +53,10 @@ DropletAutocompletePopupTooltipManager.prototype.installTooltipsForEditor_ = fun
  * @param changeEvent - event from aceEditor.commands.on("afterExec")
  * @private
  */
-DropletAutocompletePopupTooltipManager.prototype.setupOnPopupShown_ = function (aceEditor, changeEvent) {
+DropletAutocompletePopupTooltipManager.prototype.setupOnPopupShown_ = function(
+  aceEditor,
+  changeEvent
+) {
   if (changeEvent.command.name !== 'insertstring') {
     return;
   }
@@ -60,23 +68,36 @@ DropletAutocompletePopupTooltipManager.prototype.setupOnPopupShown_ = function (
 
   this.setupForEditorPopup_(aceEditor);
 
-  aceEditor.commands.removeListener("afterExec", this.editorChangedEventHandler_);
+  aceEditor.commands.removeListener(
+    'afterExec',
+    this.editorChangedEventHandler_
+  );
   this.editorChangedEventHandler_ = null;
 };
 
-DropletAutocompletePopupTooltipManager.prototype.setupForEditorPopup_ = function (aceEditor) {
+DropletAutocompletePopupTooltipManager.prototype.setupForEditorPopup_ = function(
+  aceEditor
+) {
   aceEditor.completer.popup.setSelectOnHover(true);
 
-  aceEditor.completer.popup.renderer.on("afterRender", function () {
-    this.updateAutocompletePopupTooltip(aceEditor);
-  }.bind(this));
+  aceEditor.completer.popup.renderer.on(
+    'afterRender',
+    function() {
+      this.updateAutocompletePopupTooltip(aceEditor);
+    }.bind(this)
+  );
 
-  aceEditor.completer.popup.on("hide", function () {
-    this.destroyAutocompleteTooltips_();
-  }.bind(this));
+  aceEditor.completer.popup.on(
+    'hide',
+    function() {
+      this.destroyAutocompleteTooltips_();
+    }.bind(this)
+  );
 };
 
-DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip = function (aceEditor) {
+DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip = function(
+  aceEditor
+) {
   if (!this.tooltipsEnabled || !aceEditor.completer.completions) {
     return;
   }
@@ -88,7 +109,9 @@ DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip 
   }
 
   var filteredCompletions = aceEditor.completer.completions.filtered;
-  var funcName = filteredCompletions[keyboardRow].docFunc || filteredCompletions[keyboardRow].value;
+  var funcName =
+    filteredCompletions[keyboardRow].docFunc ||
+    filteredCompletions[keyboardRow].value;
 
   this.destroyAutocompleteTooltips_();
 
@@ -99,11 +122,13 @@ DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip 
   this.attachTooltipForFunction(funcName);
 };
 
-DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction = function (funcName) {
+DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction = function(
+  funcName
+) {
   var tooltipDOM = this.getTooltipHTML(funcName);
   var configuration = Object.assign({}, DEFAULT_TOOLTIP_CONFIG, {
     content: tooltipDOM,
-    functionReady: function (_, contents) {
+    functionReady: function(_, contents) {
       if (!this.showExamplesLink) {
         return;
       }
@@ -111,10 +136,13 @@ DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction = func
       // Important this binds to mouseDown/touchDown rather than click, needs to
       // happen before `blur` which triggers the ace editor completer popup
       // hide which in turn would hide the link and not show the docs.
-      dom.addMouseDownTouchEvent(seeExamplesLink, function (event) {
-        this.dropletTooltipManager.showDocFor(funcName);
-        event.stopPropagation();
-      }.bind(this));
+      dom.addMouseDownTouchEvent(
+        seeExamplesLink,
+        function(event) {
+          this.dropletTooltipManager.showDocFor(funcName);
+          event.stopPropagation();
+        }.bind(this)
+      );
     }.bind(this)
   });
 
@@ -123,14 +151,16 @@ DropletAutocompletePopupTooltipManager.prototype.attachTooltipForFunction = func
   rowOverlayDiv.tooltipster('show');
 };
 
-DropletAutocompletePopupTooltipManager.prototype.destroyAutocompleteTooltips_ = function () {
+DropletAutocompletePopupTooltipManager.prototype.destroyAutocompleteTooltips_ = function() {
   $('.ace_autocomplete .tooltipstered').tooltipster('destroy');
 };
 
 /**
  * @returns {String} HTML for tooltip
  */
-DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (functionName) {
+DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function(
+  functionName
+) {
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
   var dropletFunctionTooltipMarkup = DropletFunctionTooltipMarkup({
     functionName: tooltipInfo.functionName,
@@ -148,7 +178,9 @@ DropletAutocompletePopupTooltipManager.prototype.getTooltipHTML = function (func
  * @param {boolean} enabled if tooltips are enabled
  */
 
-DropletAutocompletePopupTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
+DropletAutocompletePopupTooltipManager.prototype.setTooltipsEnabled = function(
+  enabled
+) {
   this.tooltipsEnabled = !!enabled;
 };
 

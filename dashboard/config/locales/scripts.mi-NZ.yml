@@ -1188,6 +1188,8 @@ mi:
               name: Te Mahi ā-Ohu
             Relay Programming:
               name: Papatonotanga ā-Tānga
+            Graph Paper Programming:
+              name: Papatono Pepa Kauwhata
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1302,6 +1304,10 @@ mi:
               name: Kia Ngahau te Mahi Koromeke
             The Artist:
               name: Te Rehetoi
+            Internet:
+              name: Te Ipurangi
+            Crowdsourcing:
+              name: Te Mahi ā-Ohu
         coursed-2019:
           stages:
             Relay Programming:
@@ -1378,3 +1384,31 @@ mi:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Hātepe Motuhenga: Whakatōkia he Kano'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Ngā Rārangi
+        csd3-2019:
+          stages:
+            Variables:
+              name: Ngā Taurangi
+            Conditionals:
+              name: Ngā Here
+            Functions:
+              name: Ngā Taumahi
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Ngā Taumahi Whai Tawhā
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Te Ipurangi
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Te Waihanga Taumahi
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Ngā Koromeke I Te

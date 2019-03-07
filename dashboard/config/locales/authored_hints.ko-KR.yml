@@ -3492,6 +3492,111 @@ ko:
           </next>
           </block>
           </xml>
+      Course E MC Conditionals1_authored_hint:
+        mc_9_a: 올바른 방향을 향하고 있나요? 'Destroy Block' 명렁어는 바로 앞에 있는 블록을 부숩니다.
+        mc_9_b: 벽에 있는 어두운 얼룩이 모두 석탄입니다! 'Destroy Block' 명령어를 사용하여 석탄을 캐세요.
+        mc_9_c: "'Place Torch' 명령어를 사용하여 지금 서 있는 공간에 횃불을 배치하세요."
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+          * 댄서가 화면에 나타나도록 하세요.
+
+          *이 단계는 4번째 마디 이후에 끝납니다.
+        challenges: |-
+          ** 선택 과제**
+          * 다른 노래를 선택하여 재생하세요.
+          * 사슴처럼 보이는 다른 모습을 선택하세요!
+          * 댄서 이름을 바꾸세요.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+          * 댄서는 4번째 마디 후에 새로운 동작으로 바꿔야 합니다.
+
+          *이 단계는 8번째 마디 후에 끝납니다.
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 6번째 마디 후 댄서는 4번째 마디 후와는 다른 춤을 추고 있어야 합니다.
+
+          *이 단계는 12번째 마디 후에 끝납니다.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 노래의 7번째 마디 중간에 배경 효과를 변경해야 합니다.
+
+          *이 단계는 10번째 마디 후 끝납니다.*
+        challenges: |-
+          **선택 과제**
+
+          <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 이벤트 아래 있는 새로운 블록에 연결하여 노래 중간 여러 시점에 배경 효과를 변경하세요.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 적어도 두 명 이상의 댄서가 있어야 합니다.
+
+          *이 단계는 6번째 마디 이후에 끝납니다.
+        challenges: |-
+          **선택 과제**
+
+          *세 번째 댄서(또는 원하는 만큼!)를 추가하세요
+          *모든 댄서가 노래의 여러 시점에서 서로 다른 동작을 수행하도록 하세요.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 두 명의 댄서는 크기가 100보다 커야 합니다.
+
+          *이 단계는 6번째 마디 이후에 끝납니다.
+        challenges: |-
+          **선택 과제**
+
+          * 다른 속성(너비, 높이, 회전 등)을 변경하여 실험해보세요.
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 댄서 한 명 이상의 색조를 변경하세요.
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 댄서 두 명 이상의 속성을 변경해야 합니다.
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 창의력을 발휘하세요!
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * 창의력을 발휘하세요!
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **이 단계를 어떻게 통과하나요?**
+
+          * ‘왼쪽 화살표 누를 때’ 블록을 사용하여 블록을 누를 때 로봇이 춤을 추도록 하세요.
+
+          *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "**바다 랜턴**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)을
+          볼까요? 어떻게 조건부를 사용해서 바다 유적을 통과할 수 있나요?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: If 블록을 사용하면 올바른 턴을 만들 수 있습니다.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: 정말 아름다운 산호초네요! 파란색 산호가 **올바른** 길이며, 빨간색 산호가 **왼쪽**이 아님을
+          확인하세요!
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: "`강아지_속도`의 번호를`고양이_속도`보다 큰 값으로 설정하십시오."
       Dance short test 2_authored_hint:
@@ -3722,6 +3827,8 @@ ko:
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "**바다 랜턴**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)을
           볼까요? 어떻게 조건부를 사용해서 바다 유적을 통과할 수 있나요?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: If 블록을 사용하면 올바른 턴을 만들 수 있습니다.
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: 정말 아름다운 산호초네요! 파란색 산호가 **올바른** 길이며, 빨간색 산호가 **왼쪽**이 아님을
           확인하세요!
@@ -4198,12 +4305,96 @@ ko:
           * 댄서는 4번째 마디 후에 새로운 동작으로 바꿔야 합니다.
 
           *이 단계는 8번째 마디 후에 끝납니다.
+      Tortoise and Hare_authored_hint:
+        behavior hint: |-
+          잘 생각해 보세요!
+          *어떤 값이 각 개체의 속도를 조절하나요?
+      Underground Avoiding Lava_authored_hint:
+        mc_11_a: 이미 모든 코드는 용암에 대해 확인하고 조절하도록 설정되어 있습니다. 당신이 할 것은 그저 하나의 블록을 더하여 움직이도록
+          하는 것입니다.
+        mc_11_b: "'앞으로 가기' 명령어가 If문 안에 가야할까요, 아니면 그 후에 가야할까요?"
+      Underground Avoiding Lava_2018_authored_hint:
+        mc_11_a: 이미 모든 코드는 용암에 대해 확인하고 조절하도록 설정되어 있습니다. 당신이 할 것은 그저 하나의 블록을 더하여 움직이도록
+          하는 것입니다.
+        mc_11_b: "'앞으로 가기' 명령어가 If문 안에 가야할까요, 아니면 그 후에 가야할까요?"
+      Underground Avoiding Lava_2019_authored_hint:
+        mc_11_a: 이미 모든 코드는 용암에 대해 확인하고 조절하도록 설정되어 있습니다. 당신이 할 것은 그저 하나의 블록을 더하여 움직이도록
+          하는 것입니다.
+        mc_11_b: "'앞으로 가기' 명령어가 If문 안에 가야할까요, 아니면 그 후에 가야할까요?"
       Underground If Statements_authored_hint:
+        mc_12_a: 붉은 얼룩이 있는 곳이 바로 Redstone 이 있는 자리입니다.
         mc_12_b: "'반복' 루프를 사용해서 코드를 더 짧게 만들 수 있을까요?"
+        mc_12_c: 'If문을 사용하여 용암이 자리할 자리를 체크하고, 그 후 조약돌을 배치하세요. '
       Underground If Statements_2018_authored_hint:
+        mc_12_a: 붉은 얼룩이 있는 곳이 바로 Redstone 이 있는 자리입니다.
         mc_12_b: "'반복' 루프를 사용해서 코드를 더 짧게 만들 수 있을까요?"
+        mc_12_c: 'If문을 사용하여 용암이 자리할 자리를 체크하고, 그 후 조약돌을 배치하세요. '
       Underground If Statements_2019_authored_hint:
+        mc_12_a: 붉은 얼룩이 있는 곳이 바로 Redstone 이 있는 자리입니다.
         mc_12_b: "'반복' 루프를 사용해서 코드를 더 짧게 만들 수 있을까요?"
+        mc_12_c: 'If문을 사용하여 용암이 자리할 자리를 체크하고, 그 후 조약돌을 배치하세요. '
+      Underground Iron_authored_hint:
+        mc_10_a: 횃불 뒤에 얼룩진 공간이 바로 철 블록입니다! 어떻게 저 곳으로 갈 건가요?
+        mc_10_b: 용암의 가장자리에 서 있을때, 'place cobblestone ahead' 명령어를 사용해 안전한 길을 만드세요.
+          그러면 그 위를 걸어갈 수 있습니다!
+      Underground Iron_2018_authored_hint:
+        mc_10_a: 횃불 뒤에 얼룩진 공간이 바로 철 블록입니다! 어떻게 저 곳으로 갈 건가요?
+        mc_10_b: 용암의 가장자리에 서 있을때, 'place cobblestone ahead' 명령어를 사용해 안전한 길을 만드세요.
+          그러면 그 위를 걸어갈 수 있습니다!
+      Underground Iron_2019_authored_hint:
+        mc_10_a: 횃불 뒤에 얼룩진 공간이 바로 철 블록입니다! 어떻게 저 곳으로 갈 건가요?
+        mc_10_b: 용암의 가장자리에 서 있을때, 'place cobblestone ahead' 명령어를 사용해 안전한 길을 만드세요.
+          그러면 그 위를 걸어갈 수 있습니다!
+      Underground Mining Coal_authored_hint:
+        mc_9_a: 올바른 방향을 향하고 있나요? 'Destroy Block' 명렁어는 바로 앞에 있는 블록을 부숩니다.
+        mc_9_b: 벽에 있는 어두운 얼룩이 모두 석탄입니다! 'Destroy Block' 명령어를 사용하여 석탄을 캐세요.
+        mc_9_c: "'Place Torch' 명령어를 사용하여 지금 서 있는 공간에 횃불을 배치하세요."
+      Underground Mining Coal_2018_authored_hint:
+        mc_9_a: 올바른 방향을 향하고 있나요? 'Destroy Block' 명렁어는 바로 앞에 있는 블록을 부숩니다.
+        mc_9_b: 벽에 있는 어두운 얼룩이 모두 석탄입니다! 'Destroy Block' 명령어를 사용하여 석탄을 캐세요.
+        mc_9_c: "'Place Torch' 명령어를 사용하여 지금 서 있는 공간에 횃불을 배치하세요."
+      Underground Mining Coal_2019_authored_hint:
+        mc_9_a: 올바른 방향을 향하고 있나요? 'Destroy Block' 명렁어는 바로 앞에 있는 블록을 부숩니다.
+        mc_9_b: 벽에 있는 어두운 얼룩이 모두 석탄입니다! 'Destroy Block' 명령어를 사용하여 석탄을 캐세요.
+        mc_9_c: "'Place Torch' 명령어를 사용하여 지금 서 있는 공간에 횃불을 배치하세요."
+      Valentine_artist2_01_authored_hint:
+        Valentine_artist2_01_a: 잔디의 각 면은 30픽셀 정도 깁니다. 계단 모양의 패턴을 만들어 보십시오.
+        Valentine_artist2_01_b: '어떤 반복되는 패턴이 보이나요? 한 루프 안에 두개의 ''move forward'' 블록과
+          두 다른 ''turn'' 블록을 사용해야 합니다. '
+        Valentine_artist2_01_c: |-
+          이 예제를 참고하세요:
+
+          <xml><block type="controls_repeat">
+          <title name="TIMES">8</title>
+          <statement name="DO">
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">30</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">90</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">30</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
+      Valentine_artist_01_authored_hint:
+        Valentine_artist_01_a: 아티스트가 움직이려면 어떠한 방향을 향해야 하나요? 어떤 방향을 향해야 새로운 라마 스티커를
+          붙일 수 있죠?
+        Valentine_artist_01_b: 아티스트는 한번 돌 때마다 10개의 라마 스티커를 붙이고, 90도를 돌아야 합니다.
       aE3_authored_hint:
         aE3_d: 코드가 너무 복잡해지면 언제든지 "다시 시작하기"을 클릭하고 다시 시도하십시오!
       aE3alternate_authored_hint:
@@ -4212,6 +4403,18 @@ ko:
         aE4alternateB_d: 코드가 너무 복잡해지면 언제든지 "다시 시작하기"을 클릭하고 다시 시도하십시오!
       aE4_authored_hint:
         aE4_d: 코드가 너무 복잡해지면 언제든지 "다시 시작하기"을 클릭하고 다시 시도하십시오!
+      behaviors 3_authored_hint:
+        behavior hint: |-
+          잘 생각해 보세요!
+          *어떤 값이 각 개체의 속도를 조절하나요?
+      behaviors 5a_authored_hint:
+        behavior hint: |-
+          잘 생각해 보세요!
+          *어떤 값이 각 개체의 속도를 조절하나요?
+      behaviors 6_authored_hint:
+        behavior hint: |-
+          잘 생각해 보세요!
+          *어떤 값이 각 개체의 속도를 조절하나요?
       course3_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: '반 육각형은 ** 길이가 30 **이며 **는 ** 60도 오른쪽으로
           회전합니다 **.  '
@@ -5661,7 +5864,7 @@ ko:
         courseF_artist_for_challenge2_c: "`카운터 반복'문은 5에서 250로 2씩 증가됩니다. "
         courseF_artist_for_challenge2_a: 색상 변경은 '빨강, 초록, 파랑으로 색 설정'블록을 사용할 수 있습니다.
           빨간색은 '255'로 일정하게 설정되고 녹색은 항상 'counter'의 값으로, 파란색은 항상 '255 - counter' 설정됩니다.
-        courseF_artist_for_challenge2_d: |-
+        courseF_artist_for_challenge2_d: |
           **예제 답안:**
 
           <xml>
@@ -5750,8 +5953,6 @@ ko:
           </next>
           </block>
           </xml>
-
-          ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: "`카운터 반복'문은 5에서 250로 2씩 증가됩니다. "
         courseF_artist_for_challenge2_a: 색상 변경은 '빨강, 초록, 파랑으로 색 설정'블록을 사용할 수 있습니다.

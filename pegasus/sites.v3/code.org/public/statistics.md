@@ -24,7 +24,7 @@ Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twi
 
 <br>
 
-And, many of these test-takers were female or minority students. 
+And, many of these test-takers were female or minority students.
 
 </div>
 
@@ -44,7 +44,7 @@ Two-thirds of computing jobs are outside the tech sector, which is why we need t
 
 <br>
 
-Don't be intimidated; almost half the teachers in our Professional Learning program have zero prior experience teaching computer science. 
+Don't be intimidated; almost half the teachers in our Professional Learning program have zero prior experience teaching computer science.
 
 </div>
 
@@ -193,6 +193,27 @@ It's never too late to start teaching CS!
 
 <div style="clear: both;"></div>
 
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/codeorg/status/1093197136974544896" target="_blank"><img src="/images/statistics/fit-250/perception-vs-reality.png"></a>
+
+<br>
+
+Young women are 11% more likely to say the CS Principles programming units are too difficult for them, but they score just as high as male students!
+</div>
+
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/codeorg/status/1100072807709343744" target="_blank"><img src="/images/statistics/fit-250/family-income.png"></a>
+
+<br>
+
+We have scholarships for <a href="https://code.org/educate/professional-learning">teacher professional learning</a> available to help us reach high needs schools so we can change this picture.
+</div>
+
+
+<div style="clear: both;"></div>
+
 <br>
 
 ## Statistics at a glance
@@ -200,14 +221,14 @@ Code.org partners with researchers on a variety of studies. Want more? <a href="
 
 ### Teachers are taking on computer science
 Over 800,000 teachers have taken steps to bring computer science to their schools.
-<%= view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=A2:B61&headers=1", width: 1000, height: 500 %>
+<%= view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=A2:B64&headers=1", width: 1000, height: 500 %>
 Does your local school teach computer science? [Encourage them to start today](/yourschool)!  
 
 <br>
 
 ### The Hour of Code goes global
 With over [200 partners](https://hourofcode.com/partners), since 2013, the [Hour of Code](https://hourofcode.com) has reached 10% of students around the world.
-<%= view :display_chart, id: "chart2", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=D2:E61&headers=1", width: 1000, height: 500 %>
+<%= view :display_chart, id: "chart2", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=D2:E64&headers=1", width: 1000, height: 500 %>
 
 ## What we're doing
 Tracking the work of thousands of teachers and millions of students.

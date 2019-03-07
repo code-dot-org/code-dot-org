@@ -1421,6 +1421,8 @@ lt:
               name: Komandinis programavimas
             Relay Programming:
               name: Programavimas komandoje
+            Graph Paper Programming:
+              name: Programavimas ant languoto popieriaus
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1535,6 +1537,8 @@ lt:
           stages:
             Artist:
               name: Menininkas
+        aquatic:
+          title: 'Minecraft: Kelionės vandeniu'
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1543,6 +1547,10 @@ lt:
               name: Sąlyginiai sakiniai su kortomis
             The Artist:
               name: Menininkas
+            Internet:
+              name: Internetas
+            Crowdsourcing:
+              name: Komandinis programavimas
         coursed-2019:
           stages:
             Relay Programming:
@@ -1623,3 +1631,39 @@ lt:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Sąrašai
+        csd3-2019:
+          stages:
+            Variables:
+              name: Kintamieji
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Velocity:
+              name: Greitis
+            Functions:
+              name: Komandų kūrimas
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Komandos su parametrais
+        csp1-2019:
+          stages:
+            Sending Binary Messages:
+              name: Dvejetainių žinučių siuntimas
+            Number Systems:
+              name: Skaičių sistemos
+            Binary Numbers:
+              name: Dvejetainiai skaičiai
+            The Internet:
+              name: Internetas
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Komandų kūrimas
+        csp5-2019:
+          stages:
+            While Loops:
+              name: "„Kol“ kartojimas"

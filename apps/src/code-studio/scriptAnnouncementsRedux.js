@@ -1,5 +1,5 @@
-import { PropTypes } from 'react';
-import { NotificationType } from '@cdo/apps/templates/Notification';
+import PropTypes from 'prop-types';
+import {NotificationType} from '@cdo/apps/templates/Notification';
 
 const ADD_ANNOUNCEMENT = 'scriptAnnouncements/ADD_ANNOUNCEMENT';
 
@@ -9,13 +9,13 @@ export const addAnnouncement = (notice, details, link, type, visibility) => ({
   details,
   link,
   announcementType: type,
-  visibilityType: visibility,
+  visibilityType: visibility
 });
 
 export const VisibilityType = {
   teacher: 'Teacher-only',
   student: 'Student-only',
-  teacherAndStudent: 'Teacher and student',
+  teacherAndStudent: 'Teacher and student'
 };
 
 export const announcementShape = PropTypes.shape({
@@ -23,17 +23,17 @@ export const announcementShape = PropTypes.shape({
   details: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   type: PropTypes.oneOf(Object.values(NotificationType)).isRequired,
-  visibility: PropTypes.oneOf(Object.values(VisibilityType)),
+  visibility: PropTypes.oneOf(Object.values(VisibilityType))
 });
 
-export default function scriptAnnouncements(state=[], action) {
+export default function scriptAnnouncements(state = [], action) {
   if (action.type === ADD_ANNOUNCEMENT) {
     return state.concat({
       notice: action.notice,
       details: action.details,
       link: action.link,
       type: action.announcementType,
-      visibility: action.visibilityType,
+      visibility: action.visibilityType
     });
   }
 

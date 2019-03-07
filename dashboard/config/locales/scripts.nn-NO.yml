@@ -2006,6 +2006,8 @@ nn:
               name: Crowdsourcing
             Relay Programming:
               name: Programmeringsstafett
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
         courseb-2018:
           assignment_family_title: Kurs B
           stages:
@@ -2213,6 +2215,10 @@ nn:
               name: Morro med for-løkker
             The Artist:
               name: Kunstnaren
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:
@@ -2231,6 +2237,8 @@ nn:
               name: 'Trådlaust: Binær'
             Artist Binary:
               name: 'Kunstnar: binær'
+            Dance Party:
+              name: Dansefest
         coursee-2019:
           stages:
             Building a Foundation:
@@ -2318,3 +2326,61 @@ nn:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verkelege algoritmar: Plante eit frø'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Lister
+        csd3-2019:
+          stages:
+            Variables:
+              name: Variablar
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funksjonar med parameter
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Undersøkingar
+        csp1-2019:
+          stages:
+            Personal Innovations:
+              name: Personlege innovasjonar
+            Sending Binary Messages:
+              name: Sende binære meldingar
+            Sending Binary Messages with the Internet Simulator:
+              name: Sende binære meldingar med Internett Simulator
+            Number Systems:
+              name: Talsystem
+            Binary Numbers:
+              name: Binære tal
+            Sending Numbers:
+              name: Sende tal
+            The Internet:
+              name: Internett
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: Byte- og arkivstorleikar
+            Encoding B&W Images:
+              name: Kode svart/kvit-bilete
+            Encoding Color Images:
+              name: Kode fargebilete
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Lag Funksjonar
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: Enkel kryptering
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Medan-løkker

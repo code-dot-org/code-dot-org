@@ -38,6 +38,8 @@ nn:
         edit_header: Rediger kontodetaljar
         finish_sign_up_header: Fullfør oppretting av kontoen
         finish_sign_up_subheader: Fyll ut for å gjøre ferdig Code.org-konto for <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider: Fyll ut følgende informasjon for å fullføre
+          opprettelsen av en Code.org konto med <strong>%{provider}</strong> for <strong>%{email}</strong>.
         error:
           future: kan ikkje vere i framtida
   hello: Hallo, verda
@@ -87,6 +89,7 @@ nn:
   prize: premie
   more_info: Meir info
   auth:
+    continue_with: Fortsett med %{provider}
     sign_in_with: Logg inn med %{provider}
     signed_in: Logga inn!
     signed_out: Du har logga deg av <a href="%{url}">Code.org</a>.
@@ -108,6 +111,7 @@ nn:
     use_clever: Beklager, Code.org-kontoen din er ikkje kobla til %{provider}. Vær
       venleg og logg inn gjennom din Clever Portal.
   signup_form:
+    email_signup: Registrer deg med din e-postadresse
     student_count: "%{count} studentar har allereie registrert seg."
     teacher_count: "%{count} lærarar har allereie registrert seg."
     overview: Registrer deg for å følgje fremdrifta din eller administrere klasserommet.
@@ -135,6 +139,7 @@ nn:
     age: Alder
     user_type: Er du elev eller lærar?
     submit: Meld deg på
+    go_to_account: Gå til kontoen min
     teacher: Er du ein lærar?
     valid_username: Tilgjengeleg!
     invalid_username: Brukernamnet må vere minst fem teikn
@@ -144,6 +149,8 @@ nn:
     mismatch_password: Dei to passorda du skreiv inn er ikkje like
     under_13_consent: Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine
       foreldre eller verge til å bruke tjenestene til Code.org.
+    student_consent: Jeg bekrefter at jeg har mine foreldre eller foresattes tillatelse
+      til å bruke tjenestene fra Code.org.
     agree_us_website: Jeg aksepterer å bruke et nettsted som er basert i USA.
     my_data_to_us: Mine data fra bruken av dette nettstedet kan sendes til, lagres
       eller behandles i USA.
@@ -155,6 +162,7 @@ nn:
       for personvern</a> for meir informasjon om personvern.
     additional_information: Vi treng nokre tilleggsopplysingar for å fortsette registreringa
       di.
+    user_type_button: Oppdater kontotype
     user_type_label: Kontotype
     user_type_teacher: Lærar
     user_type_student: Elev
@@ -166,6 +174,7 @@ nn:
     email_preference_privacy: "(Sjå våre retningslinjer for personvern)"
     email_preference_yes: Ja
     email_preference_no: Nei
+    email_preference_required: Du må angi en e-postpreferanse.
   school_info:
     title: Informasjon til skulen (valfritt)
     school_country: Landet til skulen
@@ -238,6 +247,7 @@ nn:
     student_associated_subject: Påloggingsinformasjon for Code.org
   teacher_mailer:
     new_teacher_subject: Velkommen til Code.org!
+    delete_teacher_subject: 'Code.org melding: Din konto er slettet'
   section:
     your_section:
       one: 'Din seksjon:'
@@ -245,6 +255,7 @@ nn:
     code_with_teacher: "%{section_code} med %{teacher_name}"
     confirm:
       remove: Er du sikker på at du vil forlate denne seksjonen?
+    default_name: Inndeling uten tittel
     remove: "(fjern seksjonen)"
     type:
       picture: Bildepassord
@@ -353,6 +364,7 @@ nn:
       signin: Logg inn
       signup: Opprett ein konto
       already_registered: Alt registrert?
+      pair_programming: Parprogrammering
       team: Team
       driver: Sjåfør
       navigator: Kartlesar
@@ -397,6 +409,7 @@ nn:
       example: Løysingsframlegg
       example_with_number: Løysingsframlegg %{solution_number}
       submitted_on: 'Sendt inn:'
+      last_updated: 'Sist oppdatert:'
       unsubmit: Trekk tilbake
       worked_with: Jobba med
       update_lock_settings: Oppdater låsestatus her.
@@ -437,9 +450,12 @@ nn:
     enter_new_login_info: Skriv inn den nye påloggingsinformasjonen
     confirm_secret_words: Stadfest at det er deg ved å skrive gjeldande hemmelege
       ord
+    parent_email_label: Foreldre/foresatte e-post (valgfritt)
+    parent_email_hint: "(dette kan brukes for passordgjenoppretting)"
     enter_parent_email: Skriv inn epostadressa til ein av dine føresette (for å gjenopprette
       passord)
     update: Oppdater konto
+    account_successfully_updated: Kontoen er oppdatert.
   user_level:
     completed: Fullført
     tried: Forsøkt
@@ -566,10 +582,6 @@ nn:
       eller Facebook hvor de sier "I''m taking the #APCSP exam because..." De beste
       videoene vil benyttes i vår video og vinneren vil motta Code.org produkter i
       premie!'
-    announcement_csp_deadline: Final call for high school teachers! Take the lead
-      on computer science in your school and apply for our high-quality professional
-      learning programs <strong>at absolutely no cost to you or your school</strong>.
-      Applications close on April 14th.
     announcement_applab_export: App-lab, vårt web-baserte programmeringsmiljø, støtter
       nå eksport av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av
       JavaScript-blokker, eksporter så koden for å fortsette kodingen i ditt foretrukne
@@ -598,6 +610,7 @@ nn:
   gender:
     male: Mann
     female: Kvinne
+    non_binary: Ikke-binær
     none: Foretrekker å ikkje svare
   user_type:
     student: Elev
@@ -1201,7 +1214,12 @@ nn:
   view_teacher_guide: Sjekk lærerveiledning
   pd:
     form_labels:
+      first_name: Fornavn
+      first_name_preferred: Foretrukket fornavn
+      last_name: Etternavn
       email: E-post
+      email_alternate: Alternativ e-post
+      gender: Kjønnsidentitet
       school_name: Namn på skule
       school_city: Skulen sin poststad
       school_country: Landet til skulen
@@ -1209,16 +1227,43 @@ nn:
       gender:
         male: Mann
         female: Kvinne
+        non_binary: Ikke-binær
         none: Foretrekker å ikkje svare
+      school_country:
+        canada: Canada
+        chile: Chile
+        israel: Israel
+        malaysia: Malaysia
+        mexico: Mexico
+        thailand: Thailand
+      ages:
+        ages_under_6: "< 6 år gammel"
+        ages_7_8: 7-8 år gammel
+        ages_9_10: 9-10 år gammel
+        ages_11_12: 11-12 år gammel
+        ages_13_14: 13-14 år gammel
+        ages_15_16: 15-16 år gammel
+        ages_17_18: 17-18 år gammel
+        ages_19_over: 19+ år gammel
       subjects:
         cs: Informatikk
+        ict: IKT
         math: Matematikk
         science: Vitskap
+        history: Historie / Samfunnsfag
         la: Språkfag
+        music: Musikk
+        art: Kunst
+        other: 'Annet:'
       resources:
         kodable: Kodable
+        scratch: Scratch
+        other: 'Annet:'
       robotics:
         kodable: Kodable
+        microbit: Microbit
+        raspberry: Raspberry Pi
+        other: 'Annet:'
       workshop_course:
         csd: Oppdagingar i informatikk
         csp: Prinsipp i datavitskap
@@ -1231,4 +1276,5 @@ nn:
   gdpr_dialog:
     message: Dine data fra bruken av dette nettstedet kan sendes til, lagres eller
       behandles i USA.
+    logout: Logg ut
     true: Ja

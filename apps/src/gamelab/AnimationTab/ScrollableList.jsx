@@ -1,5 +1,6 @@
 /** @file Vertical scrolling list */
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 const staticStyles = {
@@ -20,15 +21,16 @@ class ScrollableList extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
-    children: PropTypes.node,
+    children: PropTypes.node
   };
 
   render() {
     return (
-      <div className={this.props.className} style={[staticStyles.root, this.props.style]}>
-        <div style={staticStyles.margins}>
-          {this.props.children}
-        </div>
+      <div
+        className={this.props.className}
+        style={[staticStyles.root, this.props.style]}
+      >
+        <div style={staticStyles.margins}>{this.props.children}</div>
       </div>
     );
   }

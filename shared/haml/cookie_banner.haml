@@ -1,28 +1,34 @@
-%link{rel:'stylesheet', type:'text/css', href:'/shared/css/cookie-banner.css'}
-%script{src: minifiable_asset_path("js/cookieBanner.js")}
+-#
+  Only show cookie banner when in a GDPR country, or when we are in the test
+  environment and the show_cookie_banner_on_test URL parameter is specified,
+  presumably by a UI test.
 
--# dashboard is passed as a parameter when the dashboard is rendering this banner.
-- dashboard ||= false
-- if dashboard
-  - message = I18n.t('cookie_banner.message')
-  - more_information = I18n.t('cookie_banner.more_information')
-  - accept = I18n.t('cookie_banner.accept')
-- else
-  - message = hoc_s(:cookie_banner_message)
-  - more_information = hoc_s(:cookie_banner_more_information)
-  - accept = hoc_s(:cookie_banner_accept)
+- if request.gdpr? || (rack_env == :test && request.params['show_cookie_banner_on_test'].present?)
+  %link{rel:'stylesheet', type:'text/css', href:'/shared/css/cookie-banner.css'}
+  %script{src: minifiable_asset_path("js/cookieBanner.js")}
 
-#cookie-banner{style: "display: none"}
-  .text
-    = message
-    %a{href: CDO.code_org_url('/privacy'), target: '_blank'}= more_information
+  -# dashboard is passed as a parameter when the dashboard is rendering this banner.
+  - dashboard ||= false
+  - if dashboard
+    - message = I18n.t('cookie_banner.message')
+    - more_information = I18n.t('cookie_banner.more_information')
+    - accept = I18n.t('cookie_banner.accept')
+  - else
+    - message = hoc_s(:cookie_banner_message)
+    - more_information = hoc_s(:cookie_banner_more_information)
+    - accept = hoc_s(:cookie_banner_accept)
 
-  .buttons
-    %button#accept-cookies= accept
+  #cookie-banner{style: "display: none"}
+    .text
+      = message
+      %a{href: CDO.code_org_url('/privacy'), target: '_blank'}= more_information
 
-:javascript
-  // When loaded on the code.org homepage, jQuery is not yet available (since its
-  // load is deferred), but a shim implementing .ready() is available.
-  $(document).ready(function() {
-    window.setupCookieBanner("#{rack_env}");
-  });
+    .buttons
+      %button#accept-cookies= accept
+
+  :javascript
+    // When loaded on the code.org homepage, jQuery is not yet available (since its
+    // load is deferred), but a shim implementing .ready() is available.
+    $(document).ready(function() {
+      window.setupCookieBanner("#{rack_env}");
+    });

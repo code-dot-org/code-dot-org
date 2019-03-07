@@ -156,6 +156,11 @@ mi:
         options:
           PROPERTY:
             '"scale"': rahinga
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
       gamelab_debugSprite:
         options:
           VAL:
@@ -165,6 +170,18 @@ mi:
         options:
           PROPERTY:
             '"scale"': rahinga
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
+          KEY:
+            '"up"': runga
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
+            '"space"': tuarangi
+            '"x"': x
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -174,6 +191,11 @@ mi:
         text: tae matapōkere
       gamelab_randomColor:
         text: tae matapōkere
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': tāone
+              nui
       gamelab_setProp:
         options:
           PROPERTY:
@@ -183,6 +205,11 @@ mi:
           PROPERTY:
             '"scale"': rahinga
             '"height"': teitei
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -329,20 +356,54 @@ mi:
         text: huri whakatemauī
       RyanLab_turnRight:
         text: huri whakatematau
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': rahinga
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': ina
             '"while"': i te
-      aalab_whenTouching:
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': ina
             '"while"': i te
+          KEY:
+            '"up"': runga
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
+            '"space"': tuarangi
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': tāone
+              nui
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': pono
+            '"false"': hē
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': āke, āke
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': whakaaturia
+            '"hide"': hunaia
       binary_move:
         options:
           DIR:

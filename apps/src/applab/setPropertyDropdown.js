@@ -6,6 +6,7 @@ import _ from 'lodash';
 import {getFirstParam, getSecondParam, setParamAtIndex} from '../dropletUtils';
 import library from './designElements/library';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
+import {fontFamilyOptions} from './constants';
 var ElementType = library.ElementType;
 
 /**
@@ -24,48 +25,221 @@ var ElementType = library.ElementType;
  *     in the drop down list of properties
  */
 var PROP_INFO = {
-  width: { friendlyName: 'width', internalName: 'style-width', type: 'number', defaultValue: '100' },
-  height: { friendlyName: 'height', internalName: 'style-height', type: 'number', defaultValue: '100' },
-  canvasWidth: { friendlyName: 'width', internalName: 'width', type: 'number', defaultValue: '100' },
-  canvasHeight: { friendlyName: 'height', internalName: 'height', type: 'number', defaultValue: '100' },
-  x: { friendlyName: 'x', internalName: 'left', type: 'number', defaultValue: '100' },
-  y: { friendlyName: 'y', internalName: 'top', type: 'number', defaultValue: '100' },
-  textColor: { friendlyName: 'text-color', internalName: 'textColor', type: 'string', defaultValue: '"red"' },
-  backgroundColor: { friendlyName: 'background-color', internalName: 'backgroundColor', type: 'string', defaultValue: '"red"' },
-  fontSize: { friendlyName: 'font-size', internalName: 'fontSize', type: 'number', defaultValue: '100' },
-  textAlign: { friendlyName: 'text-align', internalName: 'textAlign', type: 'string', defaultValue: '"left"' },
-  hidden: { friendlyName: 'hidden', internalName: 'hidden', type: 'boolean', defaultValue: 'true' },
-  text: { friendlyName: 'text', internalName: 'text', type: 'uistring', defaultValue: '"text"' },
-  placeholder: { friendlyName: 'placeholder', internalName: 'placeholder', type: 'uistring', defaultValue: '"text"' },
-  image: { friendlyName: 'image', internalName: 'image', type: 'string', defaultValue: '"https://code.org/images/logo.png"' },
-  screenImage: { friendlyName: 'image', internalName: 'screen-image', type: 'string', defaultValue: '"https://code.org/images/logo.png"' },
+  width: {
+    friendlyName: 'width',
+    internalName: 'style-width',
+    type: 'number',
+    defaultValue: '100'
+  },
+  height: {
+    friendlyName: 'height',
+    internalName: 'style-height',
+    type: 'number',
+    defaultValue: '100'
+  },
+  canvasWidth: {
+    friendlyName: 'width',
+    internalName: 'width',
+    type: 'number',
+    defaultValue: '100'
+  },
+  canvasHeight: {
+    friendlyName: 'height',
+    internalName: 'height',
+    type: 'number',
+    defaultValue: '100'
+  },
+  x: {
+    friendlyName: 'x',
+    internalName: 'left',
+    type: 'number',
+    defaultValue: '100'
+  },
+  y: {
+    friendlyName: 'y',
+    internalName: 'top',
+    type: 'number',
+    defaultValue: '100'
+  },
+  textColor: {
+    friendlyName: 'text-color',
+    internalName: 'textColor',
+    type: 'string',
+    defaultValue: '"red"'
+  },
+  backgroundColor: {
+    friendlyName: 'background-color',
+    internalName: 'backgroundColor',
+    type: 'string',
+    defaultValue: '"red"'
+  },
+  borderWidth: {
+    friendlyName: 'border-width',
+    internalName: 'borderWidth',
+    type: 'number',
+    defaultValue: '0'
+  },
+  borderColor: {
+    friendlyName: 'border-color',
+    internalName: 'borderColor',
+    type: 'string',
+    defaultValue: '"black"'
+  },
+  borderRadius: {
+    friendlyName: 'border-radius',
+    internalName: 'borderRadius',
+    type: 'number',
+    defaultValue: '0'
+  },
+  fontFamily: {
+    friendlyName: 'font-family',
+    internalName: 'fontFamily',
+    type: 'string',
+    defaultValue: `"${fontFamilyOptions[0]}"`
+  },
+  fontSize: {
+    friendlyName: 'font-size',
+    internalName: 'fontSize',
+    type: 'number',
+    defaultValue: '14'
+  },
+  textAlign: {
+    friendlyName: 'text-align',
+    internalName: 'textAlign',
+    type: 'string',
+    defaultValue: '"left"'
+  },
+  hidden: {
+    friendlyName: 'hidden',
+    internalName: 'hidden',
+    type: 'boolean',
+    defaultValue: 'true'
+  },
+  text: {
+    friendlyName: 'text',
+    internalName: 'text',
+    type: 'uistring',
+    defaultValue: '"text"'
+  },
+  placeholder: {
+    friendlyName: 'placeholder',
+    internalName: 'placeholder',
+    type: 'uistring',
+    defaultValue: '"text"'
+  },
+  image: {
+    friendlyName: 'image',
+    internalName: 'image',
+    type: 'string',
+    defaultValue: '"https://code.org/images/logo.png"'
+  },
+  screenImage: {
+    friendlyName: 'image',
+    internalName: 'screen-image',
+    type: 'string',
+    defaultValue: '"https://code.org/images/logo.png"'
+  },
   // pictureImage and picture both map to 'picture' internally, but allow us to accept
   // either 'image' or 'picture' as the property name. picture is marked as an alias so
   // it won't show up in the dropdown.
-  pictureImage: { friendlyName: 'image', internalName: 'picture', type: 'string', defaultValue: '"https://code.org/images/logo.png"' },
-  picture: { friendlyName: 'picture', internalName: 'picture', type: 'string', alias: true, defaultValue: '"https://code.org/images/logo.png"' },
-  iconColor: { friendlyName: 'icon-color', internalName: 'icon-color', type: 'string', defaultValue: '"red"' },
-  groupId: { friendlyName: 'group-id', internalName: 'groupId', type: 'string', defaultValue: '"text"' },
-  checked: { friendlyName: 'checked', internalName: 'checked', type: 'boolean', defaultValue: 'true' },
-  readonly: { friendlyName: 'readonly', internalName: 'readonly', type: 'boolean', defaultValue: 'true' },
-  options: { friendlyName: 'options', internalName: 'options', type: 'array', defaultValue: '["option1", "etc"]' },
-  sliderValue: { friendlyName: 'value', internalName: 'sliderValue', type: 'number', defaultValue: '100' },
-  min: { friendlyName: 'min', internalName: 'min', type: 'number', defaultValue: '100' },
-  max: { friendlyName: 'max', internalName: 'max', type: 'number', defaultValue: '100' },
-  step: { friendlyName: 'step', internalName: 'step', type: 'number', defaultValue: '100' },
-  value: { friendlyName: 'value', internalName: 'value', type: 'uistring', defaultValue: '"text"' },
-  fit: { friendlyName: 'fit', internalName: 'objectFit', type: 'string', defaultValue: '"fill"' },
-  index: { friendlyName: 'index', internalName: 'index', type: 'number', defaultValue: '0' },
+  pictureImage: {
+    friendlyName: 'image',
+    internalName: 'picture',
+    type: 'string',
+    defaultValue: '"https://code.org/images/logo.png"'
+  },
+  picture: {
+    friendlyName: 'picture',
+    internalName: 'picture',
+    type: 'string',
+    alias: true,
+    defaultValue: '"https://code.org/images/logo.png"'
+  },
+  iconColor: {
+    friendlyName: 'icon-color',
+    internalName: 'icon-color',
+    type: 'string',
+    defaultValue: '"red"'
+  },
+  groupId: {
+    friendlyName: 'group-id',
+    internalName: 'groupId',
+    type: 'string',
+    defaultValue: '"text"'
+  },
+  checked: {
+    friendlyName: 'checked',
+    internalName: 'checked',
+    type: 'boolean',
+    defaultValue: 'true'
+  },
+  readonly: {
+    friendlyName: 'readonly',
+    internalName: 'readonly',
+    type: 'boolean',
+    defaultValue: 'true'
+  },
+  options: {
+    friendlyName: 'options',
+    internalName: 'options',
+    type: 'array',
+    defaultValue: '["option1", "etc"]'
+  },
+  sliderValue: {
+    friendlyName: 'value',
+    internalName: 'sliderValue',
+    type: 'number',
+    defaultValue: '100'
+  },
+  min: {
+    friendlyName: 'min',
+    internalName: 'min',
+    type: 'number',
+    defaultValue: '100'
+  },
+  max: {
+    friendlyName: 'max',
+    internalName: 'max',
+    type: 'number',
+    defaultValue: '100'
+  },
+  step: {
+    friendlyName: 'step',
+    internalName: 'step',
+    type: 'number',
+    defaultValue: '100'
+  },
+  value: {
+    friendlyName: 'value',
+    internalName: 'value',
+    type: 'uistring',
+    defaultValue: '"text"'
+  },
+  fit: {
+    friendlyName: 'fit',
+    internalName: 'objectFit',
+    type: 'string',
+    defaultValue: '"fill"'
+  },
+  index: {
+    friendlyName: 'index',
+    internalName: 'index',
+    type: 'number',
+    defaultValue: '0'
+  }
 };
 
 // When we don't know the element type, we display all possible friendly names
-var fullDropdownOptions = _.uniqBy(Object.keys(PROP_INFO)
+var fullDropdownOptions = _.uniqBy(
+  Object.keys(PROP_INFO)
     .map(key => {
       return constructDropdownOption(key);
-    }).filter(object => object),
+    })
+    .filter(object => object),
   object => {
     return object.text;
-  });
+  }
+);
 
 /**
  * Information about properties pertaining to each element type. Values have the following
@@ -85,11 +259,15 @@ PROPERTIES[ElementType.BUTTON] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
     'image',
     'iconColor',
-    'hidden'
+    'hidden',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.TEXT_INPUT] = {
@@ -102,10 +280,14 @@ PROPERTIES[ElementType.TEXT_INPUT] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
     'hidden',
-    'value'
+    'value',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.LABEL] = {
@@ -117,9 +299,13 @@ PROPERTIES[ElementType.LABEL] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
-    'hidden'
+    'hidden',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.DROPDOWN] = {
@@ -133,10 +319,14 @@ PROPERTIES[ElementType.DROPDOWN] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
     'hidden',
-    'value'
+    'value',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.RADIO_BUTTON] = {
@@ -152,15 +342,7 @@ PROPERTIES[ElementType.RADIO_BUTTON] = {
   ]
 };
 PROPERTIES[ElementType.CHECKBOX] = {
-  propertyNames: [
-    'text',
-    'width',
-    'height',
-    'x',
-    'y',
-    'hidden',
-    'checked'
-  ]
+  propertyNames: ['text', 'width', 'height', 'x', 'y', 'hidden', 'checked']
 };
 PROPERTIES[ElementType.IMAGE] = {
   propertyNames: [
@@ -173,25 +355,17 @@ PROPERTIES[ElementType.IMAGE] = {
     'picture', // Since this is an alias, it is not shown in the dropdown but is allowed as a value
     'iconColor',
     'hidden',
-    'fit'
+    'fit',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.CANVAS] = {
-  propertyNames: [
-    'text',
-    'canvasWidth',
-    'canvasHeight',
-    'x',
-    'y',
-    'hidden',
-  ]
+  propertyNames: ['text', 'canvasWidth', 'canvasHeight', 'x', 'y', 'hidden']
 };
 PROPERTIES[ElementType.SCREEN] = {
-  propertyNames: [
-    'backgroundColor',
-    'screenImage',
-    'iconColor'
-  ]
+  propertyNames: ['backgroundColor', 'screenImage', 'iconColor']
 };
 PROPERTIES[ElementType.TEXT_AREA] = {
   propertyNames: [
@@ -202,22 +376,19 @@ PROPERTIES[ElementType.TEXT_AREA] = {
     'y',
     'textColor',
     'backgroundColor',
+    'fontFamily',
     'fontSize',
     'textAlign',
     'readonly',
     'hidden',
-    'value'
+    'value',
+    'borderWidth',
+    'borderColor',
+    'borderRadius'
   ]
 };
 PROPERTIES[ElementType.CHART] = {
-  propertyNames: [
-    'text',
-    'width',
-    'height',
-    'x',
-    'y',
-    'hidden'
-  ]
+  propertyNames: ['text', 'width', 'height', 'x', 'y', 'hidden']
 };
 PROPERTIES[ElementType.SLIDER] = {
   propertyNames: [
@@ -239,11 +410,15 @@ for (var elementType in PROPERTIES) {
   var elementProperties = PROPERTIES[elementType];
   elementProperties.dropdownOptions = [];
   elementProperties.infoForFriendlyName = {};
-  elementProperties.propertyNames.forEach(function (propName) {
+  elementProperties.propertyNames.forEach(function(propName) {
     var friendlyName = PROP_INFO[propName].friendlyName;
     if (elementProperties.infoForFriendlyName[friendlyName]) {
-      throw new Error('Multiple props for friendlyName: ' + friendlyName +
-        ' in elementType: ' + elementType);
+      throw new Error(
+        'Multiple props for friendlyName: ' +
+          friendlyName +
+          ' in elementType: ' +
+          elementType
+      );
     }
     elementProperties.infoForFriendlyName[friendlyName] = PROP_INFO[propName];
     let dropdownOption = constructDropdownOption(propName);
@@ -270,7 +445,7 @@ function constructDropdownOption(propName) {
   return {
     text: '"' + friendlyName + '"',
     display: '"' + friendlyName + '"',
-    setValueParam: defaultValue,
+    setValueParam: defaultValue
   };
 }
 
@@ -325,7 +500,7 @@ function getDropdownProperties(setMode, elementType, block) {
       // update the 3rd parameter with that value whenever the dropdown is
       // selected
       var newOpt = Object.assign({}, opt);
-      newOpt.click = (callback) => {
+      newOpt.click = callback => {
         callback(opt.text);
         setParamAtIndex(2, opt.setValueParam, block);
       };
@@ -359,7 +534,15 @@ export function getInternalPropertyInfo(element, friendlyPropName) {
  * @returns {!Array<string> | function} droplet dropdown array or function
  */
 function getPropertyValueDropdown(param2) {
-  const dropletConfigDefaultValue = ["0", "25", "50", "75", "100", "150", "200"];
+  const dropletConfigDefaultValue = [
+    '0',
+    '25',
+    '50',
+    '75',
+    '100',
+    '150',
+    '200'
+  ];
 
   if (!param2) {
     return dropletConfigDefaultValue;
@@ -367,26 +550,43 @@ function getPropertyValueDropdown(param2) {
   const formattedParam = stripQuotes(param2);
 
   switch (formattedParam) {
-    case "image":
-    case "picture":
+    case 'image':
+    case 'picture':
       return getAssetDropdown('image');
-    case "text-color":
-    case "background-color":
-    case "icon-color":
-      return ['"white"', '"red"', '"green"', '"blue"', '"yellow"', 'rgb(255,0,0)', 'rgb(255,0,0,0.5)', '"#FF0000"'];
-    case "text-align":
+    case 'text-color':
+    case 'background-color':
+    case 'border-color':
+    case 'icon-color':
+      return [
+        '"white"',
+        '"red"',
+        '"green"',
+        '"blue"',
+        '"yellow"',
+        'rgb(255,0,0)',
+        'rgb(255,0,0,0.5)',
+        '"#FF0000"'
+      ];
+    case 'border-radius':
+    case 'border-width':
+      return ['0', '1', '2', '5', '10'];
+    case 'font-family':
+      return fontFamilyOptions.map(op => `"${op}"`);
+    case 'text-align':
       return ['"left"', '"right"', '"center"', '"justify"'];
-    case "fit":
+    case 'fit':
       return ['"fill"', '"cover"', '"contain"', '"none"'];
-    case "hidden":
-    case "checked":
-    case "readonly":
+    case 'hidden':
+    case 'checked':
+    case 'font-size':
+      return ['8', '10', '12', '14', '18', '24', '36', '72'];
+    case 'readonly':
       return ['true', 'false'];
-    case "text":
-    case "placeholder":
-    case "group-id":
+    case 'text':
+    case 'placeholder':
+    case 'group-id':
       return ['"text"'];
-    case "options":
+    case 'options':
       return ['["option1", "etc"]'];
     default:
       return dropletConfigDefaultValue;
@@ -398,7 +598,7 @@ function getPropertyValueDropdown(param2) {
  *  then returns the appropriate dropdown based on the value.
  */
 export function setPropertyValueSelector() {
-  return function (editor) {
+  return function(editor) {
     const param2 = getSecondSetPropertyParam(this.parent, editor);
     return getPropertyValueDropdown(param2);
   };
@@ -412,7 +612,7 @@ export function setPropertyValueSelector() {
  *   types, provides full list of properties across all types.
  */
 export function setPropertyDropdown(setMode) {
-  return function (aceEditor) {
+  return function(aceEditor) {
     var elementType;
     // Note: We depend on "this" being the droplet socket when in block mode,
     // such that parent ends up being the block. In text mode, this.parent
@@ -420,7 +620,7 @@ export function setPropertyDropdown(setMode) {
     var param1 = getFirstSetPropertyParam(this.parent, aceEditor);
     if (param1) {
       let elementId = stripQuotes(param1);
-      let element = document.querySelector("#divApplab #" + elementId);
+      let element = document.querySelector('#divApplab #' + elementId);
       if (element) {
         elementType = library.getElementType(element, true);
       }

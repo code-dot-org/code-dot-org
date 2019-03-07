@@ -3591,6 +3591,106 @@ nl:
           </next>
           </block>
           </xml>
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Hoe haal ik dit level?**
+          * Zorg ervoor dat er een danser op het scherm verschijnt.
+
+          * Dit level eindigt na 4 maten.*
+        challenges: |-
+          **Extra uitdagingen**
+          * Kies een ander lied om te spelen.
+          * Kies een ander die eruitziet als een eland!
+          * Verander de naam van je danser.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Hoe haal ik dit level?**
+          * De danser moet na 4 maten een nieuwe move doen.
+
+          *Dit level eindigt na 8 maten.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          * Na 6 maten moet je danser een andere move doen dan na 4 maten.
+
+          *Dit level eindigt na 12 maten.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          * Je moet het achtergrondeffect ergens tijdens de zevende maat van het lied veranderen.
+
+          *Dit level eindigt na 10 maten.*
+        challenges: |-
+          **Extra uitdaging**
+
+          Verander het achtergrondeffect op verschillende momenten door het nieuwe blok te verbinden onder de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> gebeurtenissen.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          * Je moet minstens twee dansers hebben.
+
+          *Dit level eindigt na 6 maten.*
+        challenges: |-
+          **Extra uitdaging**
+
+          * Voeg een derde danser toe (of zoveel als je wilt!)
+          * Zorg ervoor dat al je dansers verschillende moves doen op verschillende momenten tijdens het liedje.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          * Twee dansers moeten een andere grootte hebben dan 100.
+
+          *Dit level eindigt na 6 maten.*
+        challenges: |-
+          **Extra uitdaging**
+
+          * Experimenteer door andere eigenschappen te veranderen (breedte, hoogte, rotatie, enz.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          * Verander de tint van minstens een danser.
+
+          *Dit level eindigt na 8 maten.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          * De eigenschappen van twee of meer dansers moeten wijzigen.
+
+          *Dit level eindigt na 8 maten.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          * Wees creatief!
+
+          *Dit level eindigt na 8 maten.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          * Wees creatief!
+
+          *Dit level eindigt na 8 maten.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          * Gebruik het blok 'wanneer linkerpijltoets ingedrukt' om de Robot een dansmove te laten doen wanneer je de linkerpijltoets indrukt.
+
+          *Dit level eindigt na 8 maten.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: Zie je de **zeelantaarns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Hoe kun je een voorwaardelijk opdrachtblok met ze combineren om door het
+          Oceaanmonument te komen?
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Wat een prachtig koraalrif! Blauw koraal geeft de ** rechte
+          ** manier aan, en zorg ervoor dat je rood koraal niet ** links ** laat liggen!
       Dance short test 2_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
@@ -6753,7 +6853,7 @@ nl:
       courseF_artist_for_challenge2_2018_authored_hint:
         courseF_artist_for_challenge2_c: 'De `for lus` gaat van 5 tot 250 in stappen
           van 2. '
-        courseF_artist_for_challenge2_d: |-
+        courseF_artist_for_challenge2_d: |
           **Oplossing:**
 
           <xml>
@@ -6842,8 +6942,6 @@ nl:
           </next>
           </block>
           </xml>
-
-          ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: 'De `for lus` gaat van 5 tot 250 in stappen
           van 2. '

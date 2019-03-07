@@ -120,7 +120,20 @@ es:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: '¿Teniendo un tiempo difícil averiguar cómo bajar los bloques?  ¡Intentar tratar la flor roja exactamente igual que una flor morada!'
         2-3_Bee_Conditionals_14_b: '¿Si la flor roja fuera púrpura, podría usted averiguar cómo utilizar un bucle extra ''repetición'' para reducir el código?'
-        2-3_Bee_Conditionals_14_c: "Intenta separar esto en dos partes :  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Tomar néctar 3 veces\n  - Mueve adelante 5 veces\n  - Verifica si hay néctar, si hay: cógelo\n  - Gira a la izquierda\n  \n2) Fabricar miel \n  - Mueve adelante una vez\n  - Fabrica dos de miel"
+        2-3_Bee_Conditionals_14_c: |-
+          Intenta separar esto en dos partes :  
+
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Tomar néctar 3 veces
+            - Mueve adelante 5 veces
+            - Verifica si hay néctar, si hay: cógelo
+            - Gira a la izquierda
+            
+          2) Fabricar miel 
+            - Mueve adelante una vez
+            - Fabrica dos de miel
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Recuerde: Flores de color púrpura sólo néctar ya sea 0 o 1 y puede cambiar cada vez que se ejecuta el programa.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -286,7 +299,9 @@ es:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Cada forma repetida es la combinación de ** la mitad de un hexágono **, seguida de ** 2/3 de un triángulo **. '
         Course_4_Artist_12_b: 'La forma de la unidad es casi la misma que en el último puzzle, excepto que el medio hexágono es un poco más grande. '
-        Course_4_Artist_12_c: "1) Las primeras tres líneas tienen 60 píxeles de largo y necesitas girar 60 grados.\n 2) Las siguientes dos líneas tienen 80 píxeles de largo y necesitas girar 120 grados "
+        Course_4_Artist_12_c: |-
+          1) Las primeras tres líneas tienen 60 píxeles de largo y necesitas girar 60 grados.
+           2) Las siguientes dos líneas tienen 80 píxeles de largo y necesitas girar 120 grados 
         Course_4_Artist_12_d: |-
           **Solución:**
 
@@ -3263,6 +3278,105 @@ es:
         mc_9_a: '¿Está frente al camino correcto? El ''bloque destruir'' explota el bloque en frente de usted.'
         mc_9_b: '¡Las machas negras en el muro son carbón! Utilice ''destruir bloque'' en estas para minar el carbón.'
         mc_9_c: Utilice 'poner antorcha' para poner una antorcha en el espacio donde está parado.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+          * Asegúrate de que el bailarín aparezca en la pantalla.
+
+          *Este nivel termina después de 4 compases.*
+        challenges: |-
+          **Desafíos opcionales**
+          * Elige una canción diferente para reproducir.
+          * ¡Elige uno diferente que se parezca a un alce!
+          * Renombra a tu bailarín.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+          * El bailarín tiene que cambiar a un movimiento nuevo después de 4 compases.
+
+          *El nivel termina después de 8 compases.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Después de 6 compases, tu bailarín tiene que hacer un baile diferente del que hacía después de 4 compases.
+
+          *El nivel termina después de 12 compases.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Tienes que hacer que el efecto de fondo cambie en algún momento del séptimo compás de la canción.
+
+          *Este nivel termina después de 10 compases.*
+        challenges: |-
+          **Desafío opcional**
+
+          Cambia el efecto de fondo en diferentes momentos durante la canción conectando el bloque nuevo con los de los compases <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Necesitarás tener al menos dos bailarines.
+
+          *Este nivel termina después de 6 compases.*
+        challenges: |-
+          **Desafío opcional**
+
+          * Añade un tercer bailarín (¡o tantos como quieras!)
+          * Haz que todos tus bailarines realicen diferentes movimientos en diferentes momentos de la canción.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Dos bailarines deben tener un tamaño diferente de 100.
+
+          *Este nivel termina después de 6 compases.*
+        challenges: |-
+          **Desafío opcional**
+
+          * Experimenta cambiando otras propiedades (anchura, altura, rotación, etc.).
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Cambia la tonalidad de por lo menos un bailarín.
+
+          *Este nivel termina después de 8 compases.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Se deben cambiar las propiedades de dos o más bailarines.
+
+          *Este nivel termina después de 8 compases.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * ¡Usa tu creatividad!
+
+          *Este nivel termina después de 8 compases.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * ¡Usa tu creatividad!
+
+          *Este nivel termina después de 8 compases.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Utiliza el bloque «cuando flecha izquierda pulsada» para indicar al Robot que haga un movimiento de baile cuando la pulses.
+
+          *Este nivel termina después de 8 compases.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Mira las **linternas del mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? ¿Cómo podrías usar un condicional con ellas para atravesar el monumento oceánico?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Puedes utilizar el bloque "si en ruta" para ayudarte a hacer los giros de forma correcta.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: '¡Qué arrecife de coral más bonito! ¡Estás en tu **derecho** de usar coral azul, pero asegúrate de que el coral rojo quede a la **izquierda**!'
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Asegúrese de establecer el número de `velocidad_perro`a algo más grande que` velocidad_gato`.
       Dance short test 2_authored_hint:
@@ -3490,7 +3604,7 @@ es:
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "Mira las **linternas del mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? ¿Cómo podrías usar un condicional con ellas para atravesar el monumento oceánico?\n\n"
       HOC 2018 Level_7a_authored_hint:
-        aquatic7: Mund ta përdorësh bllokun e shtegut Nëse, për të ndihmuar veten që të marrësh kthesat e duhura.
+        aquatic7: Puedes utilizar el bloque "si en ruta" para ayudarte a hacer los giros de forma correcta.
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: '¡Qué arrecife de coral más bonito! ¡Estás en tu **derecho** de usar coral azul, pero asegúrate de que el coral rojo quede a la **izquierda**!'
       HOC Dance 0_draft_authored_hint:
@@ -4106,8 +4220,17 @@ es:
         artistLoopsKA_a: Usa el bloque de salto para avanzar sin dibujar una línea.
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Deberían haber 3 bloques dentro del bucle para resolver este rompecabezas.
+      behaviors 1_authored_hint:
+        behavior hint: "Trata de editar los comportamientos! \n\n* A que direccion necesita el pjaro moverse?"
+      behaviors 2_authored_hint:
+        behavior hint: "Trata de editar los comportamientos! \n\n* A que direccion necesita el pjaro moverse?"
       behaviors 3_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando la velocidad de cada sprite?"
+      behaviors 4_authored_hint:
+        behavior hint: "Trata de editar los comportamientos! \n\n* A que direccion necesita el pjaro moverse?"
+      behaviors 5_authored_hint:
+        target hint: Puedes elegir cualquiera de los cuatro juguetes. ¿Cuál quiere la mascota?
+        behavior hint: Edita el comportamiento para resolver el puzzle. El personaje debe moverse en dos direcciones diferentes para moverse en diagonal.
       behaviors 5a_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando la velocidad de cada sprite?"
       behaviors 6_authored_hint:
@@ -4214,6 +4337,8 @@ es:
           Si repites las acciones anteriores dos veces, estarás listo para retroceder por la ruta principal.
 
           ** ¡Solo haz clic para obtener otra sugerencia si deseas ver la solución completa! **
+      course3_collector_debugging_challenge2_authored_hint:
+        courseD_collector_debugging_challenge2_a: "Comienza enfocándote en recolectar DOS gemas de cada una de las primeras dos pilas.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUsa estos bloques.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n<title name=\"TIMES\">2</title>\n</block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n<title name=\"DIR\">avanzar</title>\n</block>\n\n<block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n<title name=\"TIMES\">2</title>\n</block>\n\n\n\n</xml>"
       course3_farmer_condLoops_challenge1_authored_hint:
         courseD_farmer_condLoops_challenge1_a: El botón de `PASO` puede ser muy útil en este desafío.
       course3_farmer_condLoops_challenge2_authored_hint:
@@ -4315,50 +4440,141 @@ es:
         courseA_artist_loops7_b: Escribe el código ara una ola primero, luego repite eso para dibujar los otros dos.
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_b: Escribe el código ara una ola primero, luego repite eso para dibujar los otros dos.
+      courseA_artist_loops8_authored_hint:
+        courseA_artist_loops8_a: Intenta ejecutar el código para ver lo que ha sido escrito para ti.
+        courseA_artist_loops8_b: '¿Cómo repetirías el código que te han dado?'
+        courseA_artist_loops8_c: "¿Qué hace el código?  \n¿Qué se supone que debe hacer?  \n¿Qué te dice eso?"
+      courseA_artist_loops8_2018_authored_hint:
+        courseA_artist_loops8_a: Intenta ejecutar el código para ver lo que ha sido escrito para ti.
+        courseA_artist_loops8_b: '¿Cómo repetirías el código que te han dado?'
+        courseA_artist_loops8_c: "¿Qué hace el código?  \n¿Qué se supone que debe hacer?  \n¿Qué te dice eso?"
+      courseA_artist_loops8_2019_authored_hint:
+        courseA_artist_loops8_a: Intenta ejecutar el código para ver lo que ha sido escrito para ti.
+        courseA_artist_loops8_b: '¿Cómo repetirías el código que te han dado?'
+        courseA_artist_loops8_c: "¿Qué hace el código?  \n¿Qué se supone que debe hacer?  \n¿Qué te dice eso?"
       courseA_artist_loops9_authored_hint:
+        courseA_artist_loops9_a: Añade otro bloque al código que se te da, para poder dibujar el resto de las escaleras.
+        courseA_artist_loops9_b: "El bloque que agregas debe ir dentro del \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> bucle."
         courseA_artist_loops9_c: Si no puedes averiguar en dónde poner el bucle, intenta escribiendo tu código paso por paso y mira los patrones.
       courseA_artist_loops9_2018_authored_hint:
+        courseA_artist_loops9_a: Añade otro bloque al código que se te da, para poder dibujar el resto de las escaleras.
+        courseA_artist_loops9_b: |-
+          El bloque que agregas debe ir dentro del 
+
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml> bucle.
         courseA_artist_loops9_c: Si no puedes averiguar en dónde poner el bucle, intenta escribiendo tu código paso por paso y mira los patrones.
       courseA_artist_loops9_2019_authored_hint:
+        courseA_artist_loops9_a: Añade otro bloque al código que se te da, para poder dibujar el resto de las escaleras.
+        courseA_artist_loops9_b: "El bloque que agregas debe ir dentro del \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> bucle."
         courseA_artist_loops9_c: Si no puedes averiguar en dónde poner el bucle, intenta escribiendo tu código paso por paso y mira los patrones.
       courseA_artist_loops_challenge2_authored_hint:
+        courseA_artist_loops_challenge2_a: 'Bloques como este: <xml> <block type="simple_move_up_left"/></xml> ¡permitirán que tu artista se mueva de forma inclinada!'
         courseA_artist_loops_challenge2_b: '¡Cuando terminas una casa de ave, `salta` a la siguiente!'
         courseA_artist_loops_challenge2_c: Necesitarás MUCHOS bloques dentro del bucle para este desafío.
       courseA_artist_loops_challenge2a_authored_hint:
+        courseA_artist_loops_challenge2_a: 'Bloques como este: <xml> <block type="simple_move_up_left"/></xml> ¡permitirán que tu artista se mueva de forma inclinada!'
         courseA_artist_loops_challenge2_b: '¡Cuando termines una tienda, `salta` dos veces hacia arriba para ir a la siguiente!'
         courseA_artist_loops_challenge2_c: Todos tus bloques deberán estar dentro de un bucle para finalizar este acertijo.
       courseA_artist_loops_challenge2a_2018_authored_hint:
+        courseA_artist_loops_challenge2_a: 'Bloques como este: <xml> <block type="simple_move_up_left"/></xml> ¡permitirán que tu artista se mueva de forma inclinada!'
         courseA_artist_loops_challenge2_b: '¡Cuando termines una tienda, `salta` dos veces hacia arriba para ir a la siguiente!'
         courseA_artist_loops_challenge2_c: Todos tus bloques deberán estar dentro de un bucle para finalizar este acertijo.
       courseA_artist_loops_challenge2a_2019_authored_hint:
+        courseA_artist_loops_challenge2_a: 'Bloques como este: <xml> <block type="simple_move_up_left"/></xml> ¡permitirán que tu artista se mueva de forma inclinada!'
         courseA_artist_loops_challenge2_b: '¡Cuando termines una tienda, `salta` dos veces hacia arriba para ir a la siguiente!'
         courseA_artist_loops_challenge2_c: Todos tus bloques deberán estar dentro de un bucle para finalizar este acertijo.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: Puedes usar bloques `saltar` para moverte a otros espacios.
+      courseA_bee_seq1_authored_hint:
+        courseA_bee_seq1_a: |-
+          Usa este bloque para obtener néctar una vez que la abeja encuentre una flor.
+
+          <xml>
+          <block type="maze_nectar"/>
+          </xml>
+      courseA_bee_seq12_authored_hint:
+        courseA_bee_seq1_a: |-
+          Usa este bloque para obtener néctar una vez que la abeja encuentre una flor.
+
+          <xml>
+          <block type="maze_nectar"/>
+          </xml>
       courseA_collector_loops1_authored_hint:
+        courseA_collector_loops1_a: |-
+          Después de haber pasado a un cuadrado con tesoro, usa este bloque para recoger el tesoro.
+
+          <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Una solución simple sería moverte al Este 2 veces, luego obtendrás el tesoro.
       courseA_collector_loops1_2018_authored_hint:
+        courseA_collector_loops1_a: |-
+          Después de haber pasado a un cuadrado con tesoro, usa este bloque para recoger el tesoro.
+
+          <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Una solución simple sería moverte al Este 2 veces, luego obtendrás el tesoro.
       courseA_collector_loops1_2019_authored_hint:
+        courseA_collector_loops1_a: |-
+          Después de haber pasado a un cuadrado con tesoro, usa este bloque para recoger el tesoro.
+
+          <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Una solución simple sería moverte al Este 2 veces, luego obtendrás el tesoro.
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: Tendrás que moverte antes de coleccionar algún tesoro.
+        courseA_collector_loops2_b: |-
+          Después de haber pasado a un cuadrado con tesoro, usa este bloque para recoger el tesoro.
+
+          <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2018_authored_hint:
         courseA_collector_loops2_a: Tendrás que moverte antes de coleccionar algún tesoro.
+        courseA_collector_loops2_b: |-
+          Después de haber pasado a un cuadrado con tesoro, usa este bloque para recoger el tesoro.
+
+          <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2019_authored_hint:
         courseA_collector_loops2_a: Tendrás que moverte antes de coleccionar algún tesoro.
+        courseA_collector_loops2_b: |-
+          Después de haber pasado a un cuadrado con tesoro, usa este bloque para recoger el tesoro.
+
+          <xml>  <block type="collector_collect"/></xml>
+      courseA_collector_loops3_authored_hint:
+        courseA_collector_loops3_a: "Intenta usar lo siguiente:\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> bucle!"
+        courseA_collector_loops3_b: "Recuerda, puedes insertar más de 1 bloque:\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> bucle."
+      courseA_collector_loops3_2018_authored_hint:
+        courseA_collector_loops3_a: "Intenta usar lo siguiente:\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> bucle!"
+        courseA_collector_loops3_b: "Recuerda, puedes insertar más de 1 bloque:\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> bucle."
+      courseA_collector_loops3_2019_authored_hint:
+        courseA_collector_loops3_a: "Intenta usar lo siguiente:\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> bucle!"
+        courseA_collector_loops3_b: "Recuerda, puedes insertar más de 1 bloque:\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> bucle."
+      courseA_collector_loops4_authored_hint:
+        courseA_collector_loops4_a: Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.
+        courseA_collector_loops4_b: "¡No olvides que Laurel necesita andar y recoger el tesoro después de terminar el siguiente bucle!\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+      courseA_collector_loops4_2018_authored_hint:
+        courseA_collector_loops4_a: Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.
+        courseA_collector_loops4_b: "¡No olvides que Laurel necesita andar y recoger el tesoro después de terminar el siguiente bucle!\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+      courseA_collector_loops4_2019_authored_hint:
+        courseA_collector_loops4_a: Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.
+        courseA_collector_loops4_b: "¡No olvides que Laurel necesita andar y recoger el tesoro después de terminar el siguiente bucle!\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_collector_loops5_authored_hint:
+        courseA_collector_loops5_a: Si no puedes averiguar la respuesta de inmediato, intenta usar un trozo de papel para averiguar qué flechas necesitarás y buscar un patrón.
         courseA_collector_loops5_b: Intenta dividir el problema en dos partes, moviéndote hacia los lados y hacia abajo.
+        courseA_collector_loops5_c: "Para que Laurel se mueva hacia el oeste y pueda recoger el tesoro, seguramente querrás empezar con un bucle como este:\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_collector_loops5_2018_authored_hint:
+        courseA_collector_loops5_a: Si no puedes averiguar la respuesta de inmediato, intenta usar un trozo de papel para averiguar qué flechas necesitarás y buscar un patrón.
         courseA_collector_loops5_b: Intenta dividir el problema en dos partes, moviéndote hacia los lados y hacia abajo.
+        courseA_collector_loops5_c: "Para que Laurel se mueva hacia el oeste y pueda recoger el tesoro, seguramente querrás empezar con un bucle como este:\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_collector_loops5_2019_authored_hint:
+        courseA_collector_loops5_a: Si no puedes averiguar la respuesta de inmediato, intenta usar un trozo de papel para averiguar qué flechas necesitarás y buscar un patrón.
         courseA_collector_loops5_b: Intenta dividir el problema en dos partes, moviéndote hacia los lados y hacia abajo.
+        courseA_collector_loops5_c: "Para que Laurel se mueva hacia el oeste y pueda recoger el tesoro, seguramente querrás empezar con un bucle como este:\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: '¿No puedes averiguar lo que está mal? Intenta ejecutar el código un par de veces para ver lo que sucede.'
+        courseA_collector_loops6_b: "La solución más corta consiste en usar  2 bucles seguidos como este:\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> "
       courseA_collector_loops6_2018_authored_hint:
         courseA_collector_loops6_a: '¿No puedes averiguar lo que está mal? Intenta ejecutar el código un par de veces para ver lo que sucede.'
+        courseA_collector_loops6_b: "La solución más corta consiste en usar  2 bucles seguidos como este:\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> "
       courseA_collector_loops6_2019_authored_hint:
         courseA_collector_loops6_a: '¿No puedes averiguar lo que está mal? Intenta ejecutar el código un par de veces para ver lo que sucede.'
+        courseA_collector_loops6_b: "La solución más corta consiste en usar  2 bucles seguidos como este:\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> "
       courseA_collector_loops7_authored_hint:
         courseA_collector_loops7_a: Si no puedes averiguar lo que viene luego, intenta ejecutar el código para ver en donde finaliza Laurel.
       courseA_collector_loops7_2018_authored_hint:
@@ -4377,18 +4593,75 @@ es:
         courseA_collector_loops8_a: Si estás teniendo problemas para resolver el acertijo, intenta escribir movimientos en una hoja de papel y ver el patrón.
         courseA_collector_loops8_b: Intenta separar el acertijo en 3 problemas separados y escribir los bucles para cada uno.
         courseA_collector_loops8_c: Recuerda que puedes escribir con un pedazo de el código a la vez, luego presiona "Ejecutar" para saber a dónde necesitas ir a partir de aquí.
+      courseA_collector_loops9_authored_hint:
+        courseA_collector_loops9_a: 'Si no puedes localizar los mejores lugares para usar bucles, intenta codificarlo paso a paso y buscar un patrón. '
+        courseA_collector_loops9_b: 'Para simplificar tu código, intenta poner dentro de un bucle otros dos bucles como este: <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>'
+      courseA_collector_loops9_2018_authored_hint:
+        courseA_collector_loops9_a: 'Si no puedes localizar los mejores lugares para usar bucles, intenta codificarlo paso a paso y buscar un patrón. '
+        courseA_collector_loops9_b: 'Para simplificar tu código, intenta poner dentro de un bucle otros dos bucles como este: <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>'
+      courseA_collector_loops9_2019_authored_hint:
+        courseA_collector_loops9_a: 'Si no puedes localizar los mejores lugares para usar bucles, intenta codificarlo paso a paso y buscar un patrón. '
+        courseA_collector_loops9_b: 'Para simplificar tu código, intenta poner dentro de un bucle otros dos bucles como este: <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>'
       courseA_collector_loops_challenge1_authored_hint:
         courseA_collector_loops_challenge1_a: Intenta cambiar los números en cada bucle si algo parece ir mal.
         courseA_collector_loops_challenge1_b: No necesitas usar un bucle si solo estás haciendo algo una vez.
         courseA_collector_loops_challenge1_c: Hay 6 gemas en el lado derecho de la cueva cuando comienzas, pero solo necesitas moverte 5 veces al sur para obtener el tesoro. ¿Sabes por qué?
+        courseA_collector_loops_challenge1_d: |-
+          El programa inicial no recoge las 2 últimas gemas. Intenta conseguirlo añadiendo este código al final:
+
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect_simplified">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       courseA_collector_loops_challenge1_2018_authored_hint:
         courseA_collector_loops_challenge1_a: Intenta cambiar los números en cada bucle si algo parece ir mal.
         courseA_collector_loops_challenge1_b: No necesitas usar un bucle si solo estás haciendo algo una vez.
         courseA_collector_loops_challenge1_c: Hay 6 gemas en el lado derecho de la cueva cuando comienzas, pero solo necesitas moverte 5 veces al sur para obtener el tesoro. ¿Sabes por qué?
+        courseA_collector_loops_challenge1_d: |-
+          El programa inicial no recoge las 2 últimas gemas. Intenta conseguirlo añadiendo este código al final:
+
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect_simplified">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       courseA_collector_loops_challenge1_2019_authored_hint:
         courseA_collector_loops_challenge1_a: Intenta cambiar los números en cada bucle si algo parece ir mal.
         courseA_collector_loops_challenge1_b: No necesitas usar un bucle si solo estás haciendo algo una vez.
         courseA_collector_loops_challenge1_c: Hay 6 gemas en el lado derecho de la cueva cuando comienzas, pero solo necesitas moverte 5 veces al sur para obtener el tesoro. ¿Sabes por qué?
+        courseA_collector_loops_challenge1_d: |-
+          El programa inicial no recoge las 2 últimas gemas. Intenta conseguirlo añadiendo este código al final:
+
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect_simplified">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: Solo necesitas usar 1 bloque para resolver esto.
         courseA_collector_loops_challenge2_a: Puedes moverte hacia atrás el camino por una segunda vez antes de moverte al sur.
@@ -4401,8 +4674,55 @@ es:
       courseA_collector_loops_challenge2kp_2019_authored_hint:
         courseA_collector_loops_challenge2kp_b: Intenta este camino para buscar una solución.
         courseA_collector_loops_challenge2kp_a: '¿Puedes usar bucles para solucionar el problema?'
+      courseA_collector_preLoops4_authored_hint:
+        courseA_collector_preLoops4_a: "Para recoger el tesoro, intenta colocar, al final del programa, dos bloques (https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)\ny luego un bloque (https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png). ¡Finalmente, ejecuta el programa presionando en \"Run\"!\n\n"
       courseA_collector_preLoops5_authored_hint:
         courseA_collector_preLoops5_a: '¡Necesitarás ir a dos direcciones distintas para obtener una sola gema!'
+      courseA_collector_preLoops6_authored_hint:
+        courseA_collector_preLoops6_a: "Para resolver este rompecabezas, necesitarás utilizar dos  bloques como este:\n ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)"
+      courseA_collector_preLoops7_authored_hint:
+        courseA_collector_loops2_b: |-
+          Después de haber pasado a un cuadrado con tesoro, usa este bloque para recoger el tesoro.
+
+          <xml>  <block type="collector_collect"/></xml>
+      courseA_harvester_forVideo_authored_hint:
+        courseA_harvester_loops3_a: |-
+          Para ayudarte, usa un bloque de repetición como este:
+
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">3</title>
+          </block></xml>
+      courseA_harvester_loops1_authored_hint:
+        courseA_harvester_loops1_a: |-
+          ¡Cuando hayas llegado hasta el maíz, usa este bloque para recogerlo!
+
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_loops1_2019_authored_hint:
+        courseA_harvester_loops1_a: |-
+          ¡Cuando hayas llegado hasta el maíz, usa este bloque para recogerlo!
+
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_loops2_authored_hint:
+        courseA_harvester_loops2_a: |-
+          Tu código tendrá **cuatro** bloques `avanza hacia el oeste` como este:
+          <xml><block type="maze_moveWest"/></xml>
+
+          y luego **cuatro** bloques `recoge maíz` como este:
+          <block type="harvester_corn"/></xml>
+      courseA_harvester_loops2_2019_authored_hint:
+        courseA_harvester_loops2_a: "Tu código tendrá **cuatro** bloques `avanza hacia el oeste` como este:\n<xml><block type=\"maze_moveWest\"/></xml>\n\ny luego **cuatro** bloques `recoge maíz` como este:\n<block type=\"harvester_corn\"/></xml>"
+      courseA_harvester_loops3_authored_hint:
+        courseA_harvester_loops3_a: |-
+          Para ayudarte, usa un bloque de repetición como este:
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">4</title>
+          </block></xml>
+      courseA_harvester_loops3_2019_authored_hint:
+        courseA_harvester_loops3_a: |-
+          Para ayudarte, usa un bloque de repetición como este:
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">4</title>
+          </block></xml>
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -4829,6 +5149,12 @@ es:
         courseB_collector_loops2_a: Tendrás que moverte antes de coleccionar algún tesoro.
       courseB_collector_loops2_2019_authored_hint:
         courseB_collector_loops2_a: Tendrás que moverte antes de coleccionar algún tesoro.
+      courseB_collector_loops4_authored_hint:
+        courseB_collector_loops4_b: Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.
+      courseB_collector_loops4_2018_authored_hint:
+        courseB_collector_loops4_b: Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.
+      courseB_collector_loops4_2019_authored_hint:
+        courseB_collector_loops4_b: Para cambiar la distancia que recorre Laurel, cambia el número de veces que se ejecutará el bucle.
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: '¡Aquí tienes dos caminos para resolver el puzzle!'
       courseB_maze_seq8_2018_authored_hint:
@@ -5381,6 +5707,95 @@ es:
       courseF_artist_for_challenge2_2018_authored_hint:
         courseF_artist_for_challenge2_c: 'El `control de flujo` va de 5 a 250 por 2. '
         courseF_artist_for_challenge2_a: El cambio de color ocurre utilizando el bloque 'definir color con rojo, verde, azul'. Rojo es la constante definida como 255, verde  es siempre el valor de 'contador', y azul es siempre '255-contador'.
+        courseF_artist_for_challenge2_d: |
+          **Solución:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">250</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_rgb" inline="false">
+          <value name="RED">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="GREEN">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="BLUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MINUS</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">80</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: 'El `control de flujo` va de 5 a 250 por 2. '
         courseF_artist_for_challenge2_a: El cambio de color ocurre utilizando el bloque 'definir color con rojo, verde, azul'. Rojo es la constante definida como 255, verde  es siempre el valor de 'contador', y azul es siempre '255-contador'.
@@ -6398,6 +6813,8 @@ es:
       gradek_adventurer_loops3_authored_hint:
         gradek_adventurer_loops3_a: Para cambiar la distancia que recorre el aventurero, cambia la cantidad de veces que se ejecuta el bucle.
         gradek_adventurer_loops3_b: '¡No olvides que el aventurero necesita caminar hacia abajo y recoger oro después de que termine el bucle `repetir`!'
+      gradek_adventurer_loops4_authored_hint:
+        gradek_adventurer_loops4_a: Si no puedes averiguar la respuesta de inmediato, intenta usar un trozo de papel para averiguar qué flechas necesitarás y buscar un patrón.
       gradek_adventurer_loops5_authored_hint:
         gradek_adventurer_loops5_a: Si no puedes averiguar lo que viene luego, intenta ejecutar el código para ver en donde finaliza Laurel.
       gradek_adventurer_loops7_challenge_authored_hint:
@@ -6406,6 +6823,10 @@ es:
         artistLoopsK2_a: Si quiere que el lazo se repita más de 4 veces, usted puede cambiar el número en la parte superior del bloque.
       gradek_artist_loops4_authored_hint:
         artistLoopsK3_a: '¡Intente utilizando lo que ha aprendido acerca de los bloques repetir para completar este rompecabezas!'
+      gradek_artist_loops7_authored_hint:
+        gradek_artist_loops7_a: Intenta ejecutar el código para ver lo que ha sido escrito para ti.
+        gradek_artist_loops7_b: '¿Cómo repetirías el código que te han dado?'
+        gradek_artist_loops7_c: "¿Qué hace el código?  \n¿Qué se supone que debe hacer?  \n¿Qué te dice eso?"
       gradek_artist_loops9_authored_hint:
         artistLoopsKA_a: Usa el bloque de salto para avanzar sin dibujar una línea.
       harvey_tictactoe_authored_hint:

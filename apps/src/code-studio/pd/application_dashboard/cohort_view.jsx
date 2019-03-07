@@ -1,14 +1,17 @@
 /**
  * Application Cohort View
  */
-import React, {PropTypes} from 'react';
-import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
 import CohortViewTable from './cohort_view_table';
 import CohortCalculator from './cohort_calculator';
-import RegionalPartnerDropdown, {RegionalPartnerPropType} from '../components/regional_partner_dropdown';
-import { Button, Col, Row } from 'react-bootstrap';
+import RegionalPartnerDropdown, {
+  RegionalPartnerPropType
+} from '../components/regional_partner_dropdown';
+import {Button, Col, Row} from 'react-bootstrap';
 
 const styles = {
   button: {
@@ -34,7 +37,7 @@ class CohortView extends React.Component {
 
   state = {
     loading: true,
-    applications: null,
+    applications: null
   };
 
   componentWillMount() {
@@ -57,21 +60,28 @@ class CohortView extends React.Component {
       method: 'GET',
       url: url,
       dataType: 'json'
-    })
-      .done(data => {
-        this.setState({
-          loading: false,
-          applications: data,
-        });
+    }).done(data => {
+      this.setState({
+        loading: false,
+        applications: data
       });
+    });
   }
 
-  getApiUrl = (format = '') => `/api/v1/pd/applications/cohort_view${format}?role=${this.props.route.role}`;
+  getApiUrl = (format = '') =>
+    `/api/v1/pd/applications/cohort_view${format}?role=${
+      this.props.route.role
+    }`;
   getJsonUrl = () => this.getApiUrl();
   getCsvUrl = () => {
     let url = this.getApiUrl('.csv');
-    if (this.props.showRegionalPartnerDropdown && this.props.regionalPartnerFilter) {
-      url += `&regional_partner_value=${this.props.regionalPartnerFilter.value}`;
+    if (
+      this.props.showRegionalPartnerDropdown &&
+      this.props.regionalPartnerFilter
+    ) {
+      url += `&regional_partner_value=${
+        this.props.regionalPartnerFilter.value
+      }`;
     }
 
     return url;
@@ -87,33 +97,33 @@ class CohortView extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return (
-        <Spinner />
-      );
+      return <Spinner />;
     } else {
       let accepted = 0;
       let registered = 0;
       if (this.state.applications !== null) {
-        accepted = this.state.applications
-        .filter(app => app.status === 'accepted')
-        .length;
-        registered = this.state.applications
-          .filter(app => app.registered_workshop === 'Yes')
-          .length;
+        accepted = this.state.applications.filter(
+          app => app.status === 'accepted'
+        ).length;
+        registered = this.state.applications.filter(
+          app => app.registered_workshop === 'Yes'
+        ).length;
       }
       return (
         <div>
-          {this.state.applications &&
+          {this.state.applications && (
             <CohortCalculator
               role={this.props.route.role}
-              regionalPartnerFilterValue={this.props.regionalPartnerFilter.value}
+              regionalPartnerFilterValue={
+                this.props.regionalPartnerFilter.value
+              }
               accepted={accepted}
               registered={registered}
             />
-          }
-          {this.props.showRegionalPartnerDropdown &&
-            <RegionalPartnerDropdown/>
-          }
+          )}
+          {this.props.showRegionalPartnerDropdown && (
+            <RegionalPartnerDropdown />
+          )}
           <h1>{this.props.regionalPartnerFilter.label}</h1>
           <h2>{this.props.route.applicationType}</h2>
           <Row>
@@ -124,10 +134,7 @@ class CohortView extends React.Component {
               >
                 Download CSV
               </Button>
-              <Button
-                style={styles.button}
-                onClick={this.handleViewAllClick}
-              >
+              <Button style={styles.button} onClick={this.handleViewAllClick}>
                 View all applications
               </Button>
             </Col>
@@ -145,5 +152,6 @@ class CohortView extends React.Component {
 
 export default connect(state => ({
   regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
-  showRegionalPartnerDropdown: state.regionalPartners.regionalPartners.length > 1
+  showRegionalPartnerDropdown:
+    state.regionalPartners.regionalPartners.length > 1
 }))(CohortView);

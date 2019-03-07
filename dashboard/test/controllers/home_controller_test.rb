@@ -121,6 +121,27 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to script_path(script)
   end
 
+  test "student without pilot access will go to index" do
+    pilot_script = create :script, pilot_experiment: 'pilot-experiment'
+    section = create :section, script: pilot_script
+    student = create(:follower, section: section).student_user
+    sign_in student
+    get :index
+
+    assert_redirected_to '/home'
+  end
+
+  test "student with pilot access will go to pilot script" do
+    pilot_script = create :script, pilot_experiment: 'pilot-experiment'
+    pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
+    section = create :section, script: pilot_script, user: pilot_teacher
+    student = create(:follower, section: section).student_user
+    sign_in student
+    get :index
+
+    assert_redirected_to script_path(pilot_script)
+  end
+
   test "student with assigned course or script during account takeover will go to index" do
     student = create :student
     script = create :script
@@ -333,7 +354,7 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers see dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    assert_queries 12 do
+    assert_queries 11 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -341,7 +362,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    assert_queries 14 do
+    assert_queries 13 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -349,7 +370,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop admins see dashboard links' do
     sign_in create(:workshop_admin, :with_terms_of_service)
-    assert_queries 10 do
+    assert_queries 9 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -358,7 +379,7 @@ class HomeControllerTest < ActionController::TestCase
   test 'facilitators see dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
-    assert_queries 11 do
+    assert_queries 10 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -366,7 +387,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'teachers cannot see dashboard links' do
     sign_in create(:terms_of_service_teacher)
-    assert_queries 10 do
+    assert_queries 9 do
       get :home
     end
     assert_select 'h1', count: 0, text: 'Workshop Dashboard'
@@ -374,7 +395,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop admins see application dashboard links' do
     sign_in create(:workshop_admin, :with_terms_of_service)
-    assert_queries 10 do
+    assert_queries 9 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'
@@ -384,7 +405,7 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are regional partner program managers see application dashboard links' do
     sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service)
-    assert_queries 14 do
+    assert_queries 13 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'
@@ -393,7 +414,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see application dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    assert_queries 14 do
+    assert_queries 13 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'
@@ -403,7 +424,7 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    assert_queries 12 do
+    assert_queries 11 do
       get :home
     end
     assert_select 'h1', count: 0, text: 'Application Dashboard'

@@ -170,7 +170,7 @@ pt-BR:
         jigsaw_9: Organize os blocos para formar a imagem
         jigsaw_10: Organize os blocos para formar a imagem
         jigsaw_11: Organize os blocos para formar a imagem
-        jigsaw_12: Organize os blocos para formar a imagem
+        jigsaw_12: Coloque estes blocos em ordem numérica
         jigsaw_13: Resolva o desafio!
         mazestep_1: Descrição do labirinto aqui
         mazestep_2: Descrição do labirinto aqui
@@ -390,14 +390,15 @@ pt-BR:
         csd_gamelab_animation_tab: A Guia de Animação
         csd_gamelab_velocity: Velocidade
         csd_weblab_intro_1: Introdução para o Laboratório Web - Parte 1
-        csd_weblab_intro_2: Introdução ao Web Lab - Parte 2
+        csd_weblab_intro_2: Introdução para o Laboratório Web - Parte 2
         csd_weblab_css_1: Introdução para CSS - Parte 1
         csd_weblab_css_2: Introdução para CSS - Parte 2
-        csd_weblab_intro_3: Introdução ao Web Lab - Parte 3
+        csd_weblab_intro_3: Introdução para o Laboratório Web - Parte 3
         csp_applab_functions: Introdução às Funções
         csp_applab_functions_parameters: Funções com Parâmetros
         csp_applab_loops: laços
         csp_concept_rgb: Um pouco sobre pixels
+        csp_cs_is_changing_everything: Ciência da computação está mudando tudo
         csp_pixelation_color_1: Widget de pixelização de cores - Parte 1
         csp_pixelation_color_2: Widget de pixelização de cores - Parte 2
         csp_pixelation_color_3: Widget de pixelização de cores - Parte 3
@@ -490,7 +491,7 @@ pt-BR:
         CSF_loops_AB: laços
         csd_gamelab_booleans: Expressões Booleanas
         csd_gamelab_conditional_statements: Instruções Condicionais
-        csd_gamelab_if_else: Instrução Se/Senão
+        csd_gamelab_if_else: Declarações Se/Senão
         CSF_SpriteLabIntro_CDEF: Este é o Laboratório de Sprite
         CSF_Spritelab_MakeSprite_CDEF: Como fazer um no Laboratório de Sprite
         CDEF_Video_SpritesInAction: Sprites em Ação
@@ -501,11 +502,24 @@ pt-BR:
         mc_2018_conditionals: 'Minecraft: Viagem Aquática Condicionais'
         mc_2018_closing: 'Minecraft: Viagem Aquática Parabéns'
         hoc_dance_warmup: Festa Dançante - Aquecimento
-        hoc_dance_events: Festa de dança - Eventos
-        hoc_dance_properties: Festa de dança - Propriedades
+        hoc_dance_events: Festa Dançante - Eventos
+        hoc_dance_properties: Festa Dançante - Propriedades
         hoc_dance_congrats: Festa Dançante - Festejar!
         c_and_c_great_to_create: É Ótimo Criar e Jogar Limpo
         c_and_c_digital_sharing: Compartilhamento Digital
+        'Teaching CS Fundamentals: How the Course Works': 'Ensinando Fundamentos da CC: Como o Curso funciona'
+        elem_pd_2: Ciência da computação no Ensino Fundamental - Vídeo PD 2/2
+        what_is_cs: O que é ciência da computação?
+        repeat_block: Usando o bloco repita
+        lesson_planning: Planejamento de aula
+        opd_closing: 'Ensinando Fundamentos da CC: Fechamento e Próximos passos'
+        why_unplugged_lessons: Ficando "offline"
+        writing_first_program: Escrevendo seu primeiro programa de computador
+        conditionals_with_cards: Lição offline em Ação - Condicionais com Cartões
+        songwriting_with_functions: Lição offline em Ação - Composição de músicas com funções
+        what_is_an_event: O que é um evento?
+        teaching_cs_pair_programming: 'Ensinando Fundamentos da CC: Programação em Pares'
+        teaching_problem_solving: 'Ensinando Fundamentos da CC: Ensinando Resolução de Problemas'
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

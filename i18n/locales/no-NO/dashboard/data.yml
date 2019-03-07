@@ -396,6 +396,7 @@
         csp_applab_functions_parameters: Funksjoner med parametre
         csp_applab_loops: Løkker
         csp_concept_rgb: Litt om pixler
+        csp_cs_is_changing_everything: Informatikk Endrer Alt
         starwars_intro: 'Star Wars: Skap en galakse med kode - introduksjon'
         starwars_typing: 'Star Wars: Skap en galakse med kode - JavaScript'
         starwars_events: 'Star Wars: Skap en galakse med kode - Hendelser'
@@ -451,9 +452,14 @@
         applab_intro_sounds: App-lab – Bilder og lyder
         applab_intro_designmode: App-lab – Design modus
         applab_intro_share: App-lab – del appen din
+        CSF_skinOverview_Harvester: Samler
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_harvester_skinOverview_K-1: Samler
+        CSF_if_allskins: Hvis Blokken
         CSF_loops_AB: Løkker
+        hoc_dance_congrats: Danse Fest - Fortsett å feste!
+        what_is_an_event: Hva er en hendelse?
     callout:
       text:
         drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken

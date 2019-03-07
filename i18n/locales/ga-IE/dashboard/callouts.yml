@@ -42,19 +42,29 @@ ga:
         grid: Cliceáil anseo chun an greille a thaispeáint.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Cliceáil anseo chun an greille a thaispeáint.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: Cliceáil anseo chun an greille a thaispeáint.
       CSD U3 Variables Predict Where XY_callout:
         grid: Cliceáil anseo chun an greille a thaispeáint.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Cliceáil anseo chun an greille a thaispeáint.
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: Cliceáil anseo chun an greille a thaispeáint.
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Athraigh an uimhir anseo
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Athraigh an uimhir anseo
       CSD U3 abstraction accelerateX_callout:
         CSD_U3_L11_S6_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction accelerateX_2018_callout:
         CSD_U3_L11_S6_C1: Cuir do chuid cóid anseo.
+      CSD U3 abstraction accelerateX_2019_callout:
+        CSD_U3_L11_S6_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction accelerateY_callout:
         CSD_U3_L11_S7_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction accelerateY_2018_callout:
+        CSD_U3_L11_S7_C1: Cuir do chuid cóid anseo.
+      CSD U3 abstraction accelerateY_2019_callout:
         CSD_U3_L11_S7_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction change velocityX_callout:
         CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
@@ -74,24 +84,35 @@ ga:
         CSD_U3_L11_S4_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityX_2018_callout:
         CSD_U3_L11_S4_C1: Cuir do bhloc anseo.
+      CSD U3 abstraction velocityX_2019_callout:
+        CSD_U3_L11_S4_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityY 2_callout:
         CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityY_callout:
         CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityY_2018_callout:
         CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
+      CSD U3 abstraction velocityY_2019_callout:
+        CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 collisions isTouching intro_callout:
         CSD_U3_L12_S2_C1: Cuir do bhloc anseo.
       CSD U3 collisions isTouching intro_2018_callout:
+        CSD_U3_L12_S2_C1: Cuir do bhloc anseo.
+      CSD U3 collisions isTouching intro_2019_callout:
         CSD_U3_L12_S2_C1: Cuir do bhloc anseo.
       CSD U3 collisions types_callout:
         CSD_U3_L13_S6_C1: Cuir do chuid cóid anseo.
       CSD U3 collisions types_2018_callout:
         CSD_U3_L13_S6_C1: Cuir do chuid cóid anseo.
+      CSD U3 collisions types_2019_callout:
+        CSD_U3_L13_S6_C1: Cuir do chuid cóid anseo.
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Seo é an cód
         CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Seo é an cód
         CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U3 ellipse_callout:
@@ -100,10 +121,16 @@ ga:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Seo é an cód
         CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Seo é an cód
         CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Seo é an cód
         CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U3 my-rect_callout:
@@ -114,39 +141,58 @@ ga:
         CSD_U3_rect_c2: Seo é an cnaipe "Rith".
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Seo é an cód
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Seo é an cód
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Seo é an cód
         CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Seo é an cód
         CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
+      CSD U3 sequence_2019_callout:
+        CSD_U3_rect_c1: Seo é an cód
+        CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Cuir do chuid cóid anseo
       CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Cuir do chuid cóid anseo
+      CSD U6 colorLeds intensity_2019_callout:
         CSDU6L10_rainbow: Cuir do chuid cóid anseo
       CSD U6 getProperty input_callout:
         CSD_U6L06P03: Cuir do bhloc anseo.
       CSD U6 getProperty input_2018_callout:
         CSD_U6L06P03: Cuir do bhloc anseo.
+      CSD U6 getProperty input_2019_callout:
+        CSD_U6L06P03: Cuir do bhloc anseo.
       CSD U6 light show predict_callout:
         CSDUDL03P09: Cad a dhéanann an líne seo?
       CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: Cad a dhéanann an líne seo?
+      CSD U6 light show predict_2019_callout:
         CSDUDL03P09: Cad a dhéanann an líne seo?
       CSD U6 light show_callout:
         CSDUDL03P09: Cad a dhéanann an líne seo?
       CSD U6 light show_2018_callout:
         CSDUDL03P09: Cad a dhéanann an líne seo?
+      CSD U6 light show_2019_callout:
+        CSDUDL03P09: Cad a dhéanann an líne seo?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Sainmhínigh startGame anseo
       CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: Sainmhínigh startGame anseo
+      CSD U6 tugowar variables 1_2019_callout:
         CSD_U6_startGame: Sainmhínigh startGame anseo
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Sainmhínigh movePlayer() anseo
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Sainmhínigh movePlayer() anseo
+      CSD U6 tugowar variables 2_2019_callout:
+        CSD_U6_movePlayer: Sainmhínigh movePlayer() anseo
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Féach ar bhuaigh an t-imreoir
       CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Féach ar bhuaigh an t-imreoir
+      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Féach ar bhuaigh an t-imreoir
       Counting_callout:
         New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur leis an gclár
@@ -220,10 +266,40 @@ ga:
         Course_4_Playlab_For_Loops_4b_2: Sa dúshlán seo, níl cead agat ach an "incrimint" sna lúba "do gach" a athrú.
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Leis an mbloc seo, is féidir leat beagnach aon dath a thaitníonn leat a roghnú! Bain triail as uimhreacha éagsúla le féachaint cad a tharlóidh!
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Cuir an bloc seo le do chlár!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Cuir an bloc seo le do chlár!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Cuir an bloc seo le do chlár!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Cuir do dhamhsóir anseo
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Bloc nua!
+        dance_callout_11_b: Bloc nua!
+      CourseD_Dance_Party_11_5_callout:
+        dance_party_11_5_groups: Gheobhaidh tú na blocanna "gach lacha" anseo
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Úsáid na saighde chun an t-aisteoir a aistriú
       CourseF_PlayLab_vars10_callout:
         Course_4_Play_Lab_Vars_9_1: Tá do chuid blocanna leagtha amach ina gcatagóirí anois! Cliceáil lipéad chun na píosaí laistigh de a fheiceáil.
+      Dance_Party_01_callout:
+        dance_callout_01: Cuir an bloc seo le do chlár!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Cuir an bloc seo le do chlár!
+      Dance_Party_02_callout:
+        dance_callout_02: Cuir an bloc seo le do chlár!
+      Dance_Party_04_callout:
+        dance_callout_04: Cuir an bloc seo le do chlár!
+      Dance_Party_06_callout:
+        dance_callout_06: Cuir do dhamhsóir anseo
+      Dance_Party_11.5_test_callout:
+        dance_party_11.5_groups: Gheobhaidh tú na blocanna "gach lacha" anseo
+      Dance_Party_11_callout:
+        dance_callout_11_a: Bloc nua!
+        dance_callout_11_b: Bloc nua!
+      Dance_Party_11_5_callout:
+        dance_party_11_5_groups: Gheobhaidh tú na blocanna "gach lacha" anseo
       Eval Design Recipe .1_callout:
         edit_function: Cliceáil anseo le d'fheidhm a chur in eagar.
       Frozen Project Test Toolbox_callout:
@@ -387,6 +463,8 @@ ga:
         4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
+      Ryan_Demo_callout:
+        dance_callout_02: Cuir an bloc seo le do chlár!
       SG U3L08 how to add comments_callout:
         comment_highlight: Tarraing bloc nóta tráchta as seo go dtí an cód
       SG U3L2_Turtle3by3Grid_callout:
@@ -404,6 +482,8 @@ ga:
       U3L08 how to add comments_callout:
         comment_highlight: Tarraing bloc nóta tráchta as seo go dtí an cód
       U3L08 how to add comments_2018_callout:
+        comment_highlight: Tarraing bloc nóta tráchta as seo go dtí an cód
+      U3L08 how to add comments_2019_callout:
         comment_highlight: Tarraing bloc nóta tráchta as seo go dtí an cód
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Lorgóidh an cód seo laibhe. An féidir leat ordú a chur leis chun bogadh ar aghaidh?
@@ -441,6 +521,12 @@ ga:
         artistLoopsK2_1: Is éard atá san uimhir seo ná an líon blocanna den chineál seo is féidir leat a úsáid sa dúshlán seo.
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: Is éard atá san uimhir seo ná an líon blocanna den chineál seo is féidir leat a úsáid sa dúshlán seo.
+      behaviors 1_callout:
+        behaviors_edit: Cliceáil anseo le féachaint conas a oibríonn sé seo.
+      behaviors 4_callout:
+        behaviors_edit: Cliceáil anseo le féachaint conas a oibríonn sé seo.
+      behaviors 5_callout:
+        behaviors_edit: Cuir cód leis an iompar seo.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Úsáid an lúb seo chun an neachtar (nó mil) go léir a bhailiú ó bhláth (nó cíor mheala) amháin.
       course3_artist_functions_challenge1_callout:
@@ -630,6 +716,8 @@ ga:
         courseC_maze_debugging5_1: Tá na blocanna seo faoi ghlas agus ní féidir iad a scriosadh!
       courseC_maze_debugging5_2019_callout:
         courseC_maze_debugging5_1: Tá na blocanna seo faoi ghlas agus ní féidir iad a scriosadh!
+      courseC_maze_debugging9_2019_callout:
+        courseC_maze_debugging9_2019_1: Tarraing blocanna ón mbosca uirlisí go dtí an spás oibre.
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: Níl ach bloc amháin den chineál seo ar fáil sa dúshlán seo.
       courseC_maze_programming1_callout:
@@ -715,6 +803,10 @@ ga:
         courseD_bee_debugging_challenge1_callout1: Úsáid an t-ordú seo chun an beach a aistriú ar gcúl.
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Úsáid an bloc seo chun píosa maoine amháin a bhailiú.  '
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: Ní mór duit an bloc `chomh fada is atá cosán os do chomhair` a úsáid chun an dúshlán seo a réiteach.
+      courseD_farmer_while7_2019_callout:
+        courseD_farmer_while7_2018_PathAhead: Ní mór duit an bloc `chomh fada is atá cosán os do chomhair` a úsáid chun an dúshlán seo a réiteach.
       courseD_maze_intro4_2019_callout:
         courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseD_maze_ramp1_callout:
@@ -786,6 +878,8 @@ ga:
         courseD_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
       courseD_scrat_ramp8_2018_callout:
         courseD_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
+      courseE_aboutme_5_callout:
+        courseE_aboutme_4_callout_1: Cliceáil anseo!
       courseE_artist_functions1_callout:
         courseD_artist_functions1_1: I dtús báire, úsáid an bloc seo chun cabhrú leat an chéad chearnóg a chruthú.
       courseE_artist_functions1_2018_callout:
@@ -1078,8 +1172,14 @@ ga:
         courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
       coursef_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
+      express_maze_debugging9_2019_callout:
+        express_maze_debugging9_2019_1: Tarraing blocanna ón mbosca uirlisí go dtí an spás oibre.
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Úsáid an bloc "cruthaigh ciorcal" agus athraigh an mhéid.
+      frozen circle function with parameter_b_callout:
+        frozen_circle_function_with_parameter_circle: Úsáid an bloc `cruthaigh ciorcal` agus athraigh an mhéid.
+      frozen circle function with parameter_test_callout:
+        frozen_circle_function_with_parameter_circle: Úsáid an bloc `cruthaigh ciorcal` agus athraigh an mhéid.
       frozen cross rotate_callout:
         replace_questions_degree: Úsáid an roghchlár anuas chun uimhir a chur in áit "???"
       frozen cross rotate_b_callout:
@@ -1110,8 +1210,14 @@ ga:
         move_elsa_forward: Tarraing bloc "téigh ar aghaidh" agus ceangail leis an mbloc "nuair a ritear é" é chun Elsa a chur ar aghaidh
       frozen perpendicular_callout:
         turn_elsa: Bain úsáid as an mbloc "cas..." chun Elsa a chasadh. Is féidir an uillinn a shocrú leis an uimhir sa roghchlár anuas
+      frozen perpendicular_b_callout:
+        turn_elsa: 'Úsáid an bloc `cas` chun Elsa a chur ar casadh. '
+      frozen perpendicular_test_callout:
+        turn_elsa: 'Úsáid an bloc `cas` chun Elsa a chur ar casadh. '
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Úsáid an bloc "cruthaigh craobh de chalóg shneachta"
+      frozen snowflake branch_b_callout:
+        frozen_snowflake_branch: Úsáid an fheidhm "cruthaigh craobh de chalóg shneachta"
       frozen snowflake branch_test_callout:
         frozen_snowflake_branch: Úsáid an bloc "cruthaigh craobh de chalóg shneachta"
       frozen square iterative_callout:

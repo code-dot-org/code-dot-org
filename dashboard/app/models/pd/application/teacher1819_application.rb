@@ -40,6 +40,14 @@ module Pd::Application
 
     validates_uniqueness_of :user_id
 
+    has_one :pd_teachercon1819_registration,
+      class_name: 'Pd::Teachercon1819Registration',
+      foreign_key: 'pd_application_id'
+
+    serialized_attrs %w(
+      auto_assigned_enrollment_id
+    )
+
     # @override
     def year
       YEAR_18_19

@@ -422,6 +422,7 @@ de:
       C3-Farmer While Loops Assessment 1: Hier sind viele Löcher und Erdhaufen.  Hilf mir, die Löcher zu füllen und die Haufen zu entfernen und den Boden wieder zu ebnen.
       CSD U5 black white images pixelation 5: Zeichne was du willst
       CSD U5 black white images pixelation 5_2018: Zeichne was du willst
+      CSD U5 black white images pixelation 5_2019: Zeichne was du willst
       CSDU6 - Arrays - indexPractice: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSDU6 - for loop - color buttons with for: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSDU6 - for loop - color buttons: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
@@ -429,11 +430,14 @@ de:
       CSDU6 arrays rainbow: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSDU6 arrays select rainbow: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSDU6 arrays select rainbow_2018: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      CSDU6 arrays select rainbow_2019: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSP student contact info: Bitte gibt deine E-Mail-Adresse ein.
       CSPU5_U3 - Arrays - indexPractice: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSPU5_U3 - Arrays - indexPractice_2018: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      CSPU5_U3 - Arrays - indexPractice_2019: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSPU5_U3L15 full clicker app: Beende dein Klick-Spiel! (Klicke um die komplette Anweisung anzuzeigen)
       CSPU5_U3L15 full clicker app_2018: Beende dein Klick-Spiel! (Klicke um die komplette Anweisung anzuzeigen)
+      CSPU5_U3L15 full clicker app_2019: Beende dein Klick-Spiel! (Klicke um die komplette Anweisung anzuzeigen)
       Course 2 Bee Loops 1: 'Hallo, ich bin eine Biene. Kannst du mir helfen, den Nektar von diesen Blüten zu sammeln? '
       Course 2 Maze Loops 1: Kannst du mich zu dem Schwein bringen, indem du 5 Bausteine benutzt?
       Course 4 2: 'Die Biene will jetzt nur Nektar. Erinnere dich: Nicht alle Objekte sind Blüten, also prüfe, damit nur aus Blüten Nektar gesammelt wird.'
@@ -716,6 +720,23 @@ de:
       Course 4 SCVP 1: Schaffe eine Funktion mit Parametern, die es der Figur erlaubt, bei x Pixeln vor und zurück zu springen und bei y Pixeln auch hoch und runter (und dabei positive und negative Zahlen nutzt).
       Course 4 Variables Assessment: Kannst du dieses Bild mit einer Variablen für die Seiten erstellen? Jede Seite sollte 50 Pixel lang sein.
       Course E MC Conditionals1: Du wirst die wertvollsten Rohstoffe unter der Erde finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln und baue mindestens 2 Kohleblöcke ab.
+      CourseD_Dance_Party_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich, und verbinden Sie ihn innerhalb des "Setup" -Blocks.
+      CourseD_Dance_Party_02: Lassen Sie den Elch nach 4 Takten einen neuen Tanzschritt beginnen.
+      CourseD_Dance_Party_03: Lassen Sie jetzt den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen.
+      CourseD_Dance_Party_04: Fügen Sie Ihrem Programm einen Hintergrundeffekt hinzu.
+      CourseD_Dance_Party_05: Verwenden Sie einen weiteren neuen Block, damit der Tänzer alle 2 Takte den Tanzschritt wechselt.
+      CourseD_Dance_Party_06: Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
+      CourseD_Dance_Party_08: Können Sie beide Backup-Tänzer gleich groß machen?
+      CourseD_Dance_Party_09: Verwenden Sie den Block "Farbton einstellen", um den Farbton eines Tänzers zu verändern.
+      CourseD_Dance_Party_10: Lassen Sie die anderen Tänzer auch auf die Musik reagieren, indem Sie den Block "beginnt danach" verwenden.
+      CourseD_Dance_Party_11: Mit dem Block "Wenn nach oben gedrückt" können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird. Versuchen Sie, den Tänzer eine schnelle Bewegung ausführen zu lassen, wenn Sie die Pfeiltaste nach oben drücken.
+      CourseD_Dance_Party_11_5: Verwenden Sie die Blöcke "alle Enten", um die Enten gemeinsam tanzen zu lassen.
+      CourseD_Dance_Party_11b: Lassen Sie den Roboter einmal "droppen", wenn Sie die rechte Pfeiltaste drücken, und einmal "flossen", wenn Sie die Pfeiltaste nach oben drücken. Machen Sie den Drop-Floss, so schnell es geht!
+      CourseD_Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen Sie ihn mit Ihren Freunden.
+      CourseE_HOC 2018 Level_10: Erreiche den Eingang dieses Ozeanmonuments.
+      CourseE_HOC 2018 Level_11: 'Baue mit dem Prismarin im Ozeanmonument einen Aquisator.'
+      CourseE_HOC 2018 Level_7a: Suche in diesen Unterwasserruine nach einer Truhe.
+      CourseE_HOC 2018 Level_9b: 'Verwende die Korallen als Wegpunkte, um den Schatz zu erreichen.'
       CourseF_PlayLab_vars10: "Zeit für freies Spiel! Hier sind alle Variablen, mit denen wir bis jetzt in dieser Phase gespielt haben, sowie ein paar mehr, falls du sie möchtest.\n\nBeachte, dass deine Toolbox jetzt über eine große Zahl von Bausteinen verfügt, die wir daher erneut nach Kategorien geordnet haben.  Hier haben wir jedes Teil in eine passende Kategorie eingeordnet.  Nimm dir Zeit und schau dir alles genau an. Wenn du mit Browsen fertig bist, gestalte ein Spiel oder eine Geschichte mit Wiederholungen, Variablen und Ereignissen.\n\nHinweis: Du musst vielleicht runterscrollen, um alle Befehle im Arbeitsraum zu finden."
       CourseF_PlayLab_vars2: Das Rennen im letzten Rätsel war nicht sehr fair! Ändere die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
       CourseF_PlayLab_vars3: Jetzt was anderes! Verwende die Pfeiltasten nach links und rechts sowie nach oben zum Springen. Schau mal, ob du alle Fahnen einsammeln kannst.
@@ -736,8 +757,10 @@ de:
       CourseF_PlayLab_vars9: Sehr schön, und jetzt sorgen wir dafür, dass das Spiel nicht zu einfach wird. Jedes Mal wenn der Hund (Figur 1) von der Katze (Figur 2) mit gelben Herzen getroffen wird, soll dir ein Punkt abgezogen werden. Beginne mit 10 Punkten, damit es nicht zu schwierig wird. Das Level ist erreicht, wenn deine Punktzahl von 10 auf 0 gesunken ist.
       Crack Random Substitution: Anweisungen
       Crack Random Substitution_2018: Anweisungen
+      Crack Random Substitution_2019: Anweisungen
       Crack a Caesar Cipher: Anweisungen
       Crack a Caesar Cipher_2018: Anweisungen
+      Crack a Caesar Cipher_2019: Anweisungen
       Dance_Party_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich, und verbinden Sie ihn innerhalb des "Setup" -Blocks.
       Dance_Party_01_low: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich, und verbinden Sie ihn innerhalb des "Setup" -Blocks.
       Dance_Party_02: Lassen Sie den Elch nach 4 Takten einen neuen Tanzschritt beginnen.
@@ -1108,6 +1131,7 @@ de:
       Testing Quantum Farmer: "Wow, ich habe ein richtig tiefes Loch gefunden! Ich weiß nicht, wie viele Schaufeln Erde ich brauche.  Kannst du ein Programm schreiben, mit dem das Loch gefüllt wird, bis der Boden eben ist?  Hinweis:  Versuche es diesmal mit der Solange-Schleife."
       The Vigenere Cipher Widget: Anweisungen
       The Vigenere Cipher Widget_2018: Anweisungen
+      The Vigenere Cipher Widget_2019: Anweisungen
       The Vigenere Cipher: Anweisungen
       Total Artist Clone Me: 'Freies Spiel: Hier sind die Funktionen, die du geschrieben hast, und ein paar mehr für dich zum Spielen. Zeichne etwas Tolles! Spiele mit der Stiftbreite um zu sehen, wie unterschiedlich deine Zeichnungen aussehen!'
       U2 frequency caesar: Anweisungen
@@ -1118,6 +1142,7 @@ de:
       U4 vigenere cipher 2: Anweisungen
       U4L02 - Objects - Template1: Vorlage
       U4L02 - Objects - Template1_2018: Vorlage
+      U4L02 - Objects - Template1_2019: Vorlage
       Underground Avoiding Lava: Lava versteckt sich unter manchen dieser Bausteine, die du abdecken musst, bevor du dich vorwärts bewegst. Ein „Wenn“-Befehl ist hier praktisch. Füge einen „Bewege vorwärts“-Befehl an der richtigen Stelle ein, um diese Bausteine zu meiden.
       Underground Avoiding Lava_2018: Lava versteckt sich unter manchen dieser Bausteine, die du abdecken musst, bevor du dich vorwärts bewegst. Ein „Wenn“-Befehl ist hier praktisch. Füge einen „Bewege vorwärts“-Befehl an der richtigen Stelle ein, um diese Bausteine zu meiden.
       Underground Avoiding Lava_2019: Lava versteckt sich unter manchen dieser Bausteine, die du abdecken musst, bevor du dich vorwärts bewegst. Ein „Wenn“-Befehl ist hier praktisch. Füge einen „Bewege vorwärts“-Befehl an der richtigen Stelle ein, um diese Bausteine zu meiden.

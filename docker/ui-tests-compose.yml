@@ -6,7 +6,6 @@
 # CLOUDFRONT_PRIVATE_KEY
 # AWS_ACCESS_KEY_ID
 # AWS_SECRET_ACCESS_KEY
-# APPLITOOLS_KEY
 # FIREBASE_NAME
 # FIREBASE_SECRET
 # SAUCE_USERNAME
@@ -29,9 +28,10 @@ services:
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/circleci/code-dot-org:delegated
-      - nodemodules:/home/circleci/code-dot-org/apps/node_modules
       - rbenv:/home/circleci/.rbenv
       - mysqldata:/var/lib/mysql
+      - yarncache:/home/circleci/.cache
+      - gcloud_config:/home/circleci/.config/gcloud
     env_file:
       - env.list
     command: /bin/sh -c "docker/ui_tests.sh"
@@ -40,6 +40,7 @@ services:
     image: redis
 
 volumes:
-  nodemodules:
   mysqldata:
   rbenv:
+  yarncache:
+  gcloud_config:

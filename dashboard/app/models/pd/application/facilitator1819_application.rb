@@ -46,6 +46,10 @@ module Pd::Application
       class_name: 'Pd::FitWeekend1819Registration',
       foreign_key: 'pd_application_id'
 
+    serialized_attrs %w(
+      auto_assigned_enrollment_id
+    )
+
     def year
       YEAR_18_19
     end

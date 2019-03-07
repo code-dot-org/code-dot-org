@@ -164,6 +164,11 @@ sl:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': ko
+            '"while"': dokler
       gamelab_debugSprite:
         options:
           VAL:
@@ -175,6 +180,18 @@ sl:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': ko
+            '"while"': dokler
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+            '"x"': x
       gamelab_locationDelta:
         options:
           DIR:
@@ -188,6 +205,10 @@ sl:
         text: naključna barva
       gamelab_randomColor:
         text: naključna barva
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
       gamelab_setPosition:
         options:
           POSITION:
@@ -203,6 +224,11 @@ sl:
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': ko
+            '"while"': dokler
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -368,22 +394,57 @@ sl:
         text: obrni se levo
       RyanLab_turnRight:
         text: obrni se desno
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': ko
+            '"while"': dokler
       aalab_clickedOn:
         options:
           CONDITION:
             '"when"': ko
             '"while"': dokler
-      aalab_whenTouching:
+      aalab_keyPressed:
         options:
           CONDITION:
             '"when"': ko
             '"while"': dokler
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': velja
+            '"false"': ne velja
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': neskončno
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': prikaži
+            '"hide"': skrij
       binary_move:
         options:
           DIR:

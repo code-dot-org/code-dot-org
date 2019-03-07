@@ -478,10 +478,44 @@ vi:
       Course E MC Conditionals1: Bạn sẽ tìm thấy các nguồn tài nguyên giá trị nhất
         dưới mặt đất, nhưng có thể rất tối. Hãy đặt ít nhất 2 cây đuốc đào ít nhất
         2 khối than.
+      CourseD_Dance_Party_01: Kéo khối `make a new` vào trong không gian làm việc
+        và kết nối nó với bên trong khối `setup`.
+      CourseD_Dance_Party_02: Làm nai sừng tấm bắt đầu động tác mới sau 4 nhịp!
+      CourseD_Dance_Party_03: Bây giờ, hãy làm vũ công bắt đầu động tác mới sau 6
+        nhịp!
+      CourseD_Dance_Party_04: Thêm một hiệu ứng nền vào chương trình của bạn.
+      CourseD_Dance_Party_05: Sử dụng một khối mới khác để làm cho các vũ công thay
+        đổi động tác sau mỗi 2 nhịp.
+      CourseD_Dance_Party_06: Tạo ra một vũ công dự phòng, gọi là `backup_dancer1`
+        để nhảy cùng con mèo.
+      CourseD_Dance_Party_08: Bạn có thể làm cho cả hai vũ công dự phòng có cùng kích
+        cỡ không?
+      CourseD_Dance_Party_09: Sử dụng khối `set tint` để thay đổi màu sắc của một
+        vũ công.
+      CourseD_Dance_Party_10: Làm cho các vũ công khác phản hồi theo nhạc bằng cách
+        sử dụng khối `begins following`.
+      CourseD_Dance_Party_11: Khối `when up pressed` cho phép bạn chạy mã nguồn khi
+        nhấn vào mũi tên lên. Cố gắng làm cho các vũ công thực hiện một động tác nhanh
+        khi bạn bấm mũi tên lên.
+      CourseD_Dance_Party_11_5: Sử dụng các khối "all ducks" để làm cho những con
+        vịt nhảy cùng nhau.
+      CourseD_Dance_Party_11b: Làm cho Robot làm động tác "drop" một lần khi bạn nhấn
+        phím mũi tên phải và làm động tác "floss" một lần khi bạn nhấn phím mũi tên
+        lên. Làm động tác drop-floss nhanh nhất có thể!
+      CourseD_Dance_Party_12: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để
+        chia sẻ với bạn bè.
+      CourseE_HOC 2018 Level_10: Đến lối vào của Tòa nhà Đại dương này.
+      CourseE_HOC 2018 Level_11: 'Xây một ống dẫn với prismarine bên trong Tòa nhà
+        Đại dương.  '
+      CourseE_HOC 2018 Level_7a: Tìm kiếm những tàn tích dưới nước để thấy một chiếc
+        rương.
+      CourseE_HOC 2018 Level_9b: 'Sử dụng san hô như điểm chỉ đường để tới kho báu.  '
       Crack Random Substitution: lời chỉ đẫn
       Crack Random Substitution_2018: lời chỉ đẫn
+      Crack Random Substitution_2019: lời chỉ đẫn
       Crack a Caesar Cipher: lời chỉ đẫn
       Crack a Caesar Cipher_2018: lời chỉ đẫn
+      Crack a Caesar Cipher_2019: lời chỉ đẫn
       Dance_Party_01: Kéo khối `make a new` vào trong không gian làm việc và kết nối
         nó với bên trong khối `setup`.
       Dance_Party_01_low: Kéo khối `make a new` vào trong không gian làm việc và kết
@@ -887,6 +921,7 @@ vi:
         thậm chí có khả năng tạo ra bất cứ sản phẩm mình muốn!
       The Vigenere Cipher Widget: lời chỉ đẫn
       The Vigenere Cipher Widget_2018: lời chỉ đẫn
+      The Vigenere Cipher Widget_2019: lời chỉ đẫn
       The Vigenere Cipher: lời chỉ đẫn
       U2 frequency caesar: lời chỉ đẫn
       U2 frequency random sub: lời chỉ đẫn

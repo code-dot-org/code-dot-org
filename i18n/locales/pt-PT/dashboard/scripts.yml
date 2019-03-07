@@ -1311,6 +1311,8 @@ pt:
               name: Aberto ao público
             Relay Programming:
               name: Programação por revezamento
+            Graph Paper Programming:
+              name: Programação de papel milimetrico
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1438,6 +1440,10 @@ pt:
               name: Diversão com laços for
             The Artist:
               name: O Artista
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Aberto ao público
         coursed-2019:
           stages:
             Relay Programming:
@@ -1520,3 +1526,35 @@ pt:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Listas
+        csd3-2019:
+          description_short: "Programação"
+          stages:
+            Variables:
+              name: variáveis
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funções
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funções com parâmetros
+        csp1-2019:
+          stages:
+            Sending Numbers:
+              name: Enviando números
+            The Internet:
+              name: A Internet
+        csp3-2019:
+          description_short: Programação
+          stages:
+            Creating Functions:
+              name: Criando funções
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Laços enquanto

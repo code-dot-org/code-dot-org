@@ -117,7 +117,7 @@ class Blockly < Level
     super(level_hash.tap {|hash| hash['properties'].except!(*xml_blocks)})
   end
 
-  before_save :update_contained_levels
+  before_validation :update_contained_levels
 
   def update_contained_levels
     contained_level_names = properties["contained_level_names"]
@@ -460,7 +460,7 @@ class Blockly < Level
     else
       hints = JSON.parse(authored_hints).map do |hint|
         if hint['hint_video'].present?
-          hint['hint_video'] = Video.find_by_key(hint['hint_video']).summarize
+          hint['hint_video'] = Video.current_locale.find_by_key(hint['hint_video']).summarize
         end
         hint
       end

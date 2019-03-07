@@ -1,15 +1,13 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/configuredChai';
-import {
-  UnconnectedScriptTeacherPanel as ScriptTeacherPanel
-} from '@cdo/apps/code-studio/components/progress/ScriptTeacherPanel';
-import {ViewType} from "@cdo/apps/code-studio/viewAsRedux";
-import TeacherPanel from "@cdo/apps/code-studio/components/TeacherPanel";
+import {UnconnectedScriptTeacherPanel as ScriptTeacherPanel} from '@cdo/apps/code-studio/components/progress/ScriptTeacherPanel';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import TeacherPanel from '@cdo/apps/code-studio/components/TeacherPanel';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import commonMsg from '@cdo/locale';
-import FontAwesome from "../../../../../src/templates/FontAwesome";
+import FontAwesome from '../../../../../src/templates/FontAwesome';
 
 const MINIMUM_PROPS = {
   viewAs: ViewType.Student,
@@ -23,16 +21,13 @@ const MINIMUM_PROPS = {
 describe('ScriptTeacherPanel', () => {
   it('initial view as student', () => {
     const wrapper = shallow(
-      <ScriptTeacherPanel
-        {...MINIMUM_PROPS}
-        viewAs={ViewType.Student}
-      />
+      <ScriptTeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Student} />
     );
     expect(wrapper).to.containMatchingElement(
       <TeacherPanel>
-        <h3>{commonMsg.teacherPanel()}</h3>
-        <div className="content">
-          <ViewAsToggle/>
+        <div id="teacher-panel-nonscrollable">
+          <h3>{commonMsg.teacherPanel()}</h3>
+          <ViewAsToggle />
           <div>{commonMsg.loading()}</div>
         </div>
       </TeacherPanel>
@@ -41,16 +36,13 @@ describe('ScriptTeacherPanel', () => {
 
   it('initial view as teacher', () => {
     const wrapper = shallow(
-      <ScriptTeacherPanel
-        {...MINIMUM_PROPS}
-        viewAs={ViewType.Teacher}
-      />
+      <ScriptTeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Teacher} />
     );
     expect(wrapper).to.containMatchingElement(
       <TeacherPanel>
-        <h3>{commonMsg.teacherPanel()}</h3>
-        <div className="content">
-          <ViewAsToggle/>
+        <div id="teacher-panel-nonscrollable">
+          <h3>{commonMsg.teacherPanel()}</h3>
+          <ViewAsToggle />
           <div>{commonMsg.loading()}</div>
         </div>
       </TeacherPanel>
@@ -59,22 +51,14 @@ describe('ScriptTeacherPanel', () => {
 
   it('shows loading message when sections are not loaded', () => {
     const wrapper = shallow(
-      <ScriptTeacherPanel
-        {...MINIMUM_PROPS}
-        sectionsAreLoaded={false}
-      />
+      <ScriptTeacherPanel {...MINIMUM_PROPS} sectionsAreLoaded={false} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>{commonMsg.loading()}</div>
-    );
+    expect(wrapper).to.containMatchingElement(<div>{commonMsg.loading()}</div>);
   });
 
   it('hides loading message when sections are loaded', () => {
     const wrapper = shallow(
-      <ScriptTeacherPanel
-        {...MINIMUM_PROPS}
-        sectionsAreLoaded={true}
-      />
+      <ScriptTeacherPanel {...MINIMUM_PROPS} sectionsAreLoaded={true} />
     );
     expect(wrapper).not.to.containMatchingElement(
       <div>{commonMsg.loading()}</div>
@@ -83,26 +67,16 @@ describe('ScriptTeacherPanel', () => {
 
   it('shows SectionSelector if scriptHasLockableStages', () => {
     const wrapper = shallow(
-      <ScriptTeacherPanel
-        {...MINIMUM_PROPS}
-        scriptHasLockableStages={true}
-      />
+      <ScriptTeacherPanel {...MINIMUM_PROPS} scriptHasLockableStages={true} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <SectionSelector/>
-    );
+    expect(wrapper).to.containMatchingElement(<SectionSelector />);
   });
 
   it('shows SectionSelector if scriptAllowsHiddenStages', () => {
     const wrapper = shallow(
-      <ScriptTeacherPanel
-        {...MINIMUM_PROPS}
-        scriptAllowsHiddenStages={true}
-      />
+      <ScriptTeacherPanel {...MINIMUM_PROPS} scriptAllowsHiddenStages={true} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <SectionSelector/>
-    );
+    expect(wrapper).to.containMatchingElement(<SectionSelector />);
   });
 
   it('hides SectionSelector if neither scriptAllowsHiddenStages nor scriptHasLockableStages', () => {
@@ -113,9 +87,7 @@ describe('ScriptTeacherPanel', () => {
         scriptAllowsHiddenStages={false}
       />
     );
-    expect(wrapper).not.to.containMatchingElement(
-      <SectionSelector/>
-    );
+    expect(wrapper).not.to.containMatchingElement(<SectionSelector />);
   });
 
   it('shows section selection instructions if viewing as a teacher, and has sections and lockable stages', () => {
@@ -129,9 +101,7 @@ describe('ScriptTeacherPanel', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <div>
-          {commonMsg.selectSectionInstructions()}
-        </div>
+        <div>{commonMsg.selectSectionInstructions()}</div>
       </div>
     );
   });
@@ -148,12 +118,10 @@ describe('ScriptTeacherPanel', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <div>
-          {commonMsg.selectSectionInstructions()}
-        </div>
+        <div>{commonMsg.selectSectionInstructions()}</div>
         <div>
           <div>
-            <FontAwesome icon="exclamation-triangle"/>
+            <FontAwesome icon="exclamation-triangle" />
             <div>{commonMsg.dontForget()}</div>
           </div>
           <div>
@@ -166,5 +134,44 @@ describe('ScriptTeacherPanel', () => {
         </div>
       </div>
     );
+  });
+
+  describe('StudentTable', () => {
+    const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
+
+    it('displays StudentTable for teacher with students', () => {
+      const wrapper = shallow(
+        <ScriptTeacherPanel
+          {...MINIMUM_PROPS}
+          viewAs={ViewType.Teacher}
+          students={students}
+          onSelectUser={() => {}}
+          getSelectedUserId={() => {}}
+        />
+      );
+      expect(wrapper.find('StudentTable')).to.exist;
+    });
+
+    it('does not display StudentTable for teacher with no students', () => {
+      const wrapper = shallow(
+        <ScriptTeacherPanel
+          {...MINIMUM_PROPS}
+          viewAs={ViewType.Teacher}
+          students={[]}
+        />
+      );
+      expect(wrapper.find('StudentTable')).to.not.exist;
+    });
+
+    it('does not display StudentTable for student', () => {
+      const wrapper = shallow(
+        <ScriptTeacherPanel
+          {...MINIMUM_PROPS}
+          viewAs={ViewType.Student}
+          students={students}
+        />
+      );
+      expect(wrapper.find('StudentTable')).to.not.exist;
+    });
   });
 });

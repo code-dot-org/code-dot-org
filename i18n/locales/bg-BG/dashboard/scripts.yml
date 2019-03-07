@@ -326,8 +326,7 @@ bg:
               name: Рецепта за дизайн
         K5PD:
           title: K5 Професионално развитие
-          description: K5 курсове за професионално развитие
-          description_short: K5 курсове за професионално развитие
+          description: 'K5 курсове за професионално развитие'
           stages:
             Computer Science Pedagogy:
               name: Педагогика на Компютърните науки
@@ -2000,6 +1999,8 @@ bg:
               name: Crowdsourcing кампания
             Relay Programming:
               name: Повтори програмирането
+            Graph Paper Programming:
+              name: Програмиране на милиметрова хартия
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2165,6 +2166,10 @@ bg:
               name: Повторения за забавление
             The Artist:
               name: Художникът
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing кампания
         coursed-2019:
           stages:
             Relay Programming:
@@ -2251,3 +2256,65 @@ bg:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Списъци
+        csd3-2019:
+          description_short: "Програмиране"
+          stages:
+            Variables:
+              name: Променливи
+            Conditionals:
+              name: Условия
+            Velocity:
+              name: Скорост
+            Functions:
+              name: Функции
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Функции с параметри
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Проучвания
+        csp1-2019:
+          stages:
+            Sending Binary Messages:
+              name: Изпращане на бинарни съобщения
+            Number Systems:
+              name: Бройни системи
+            Binary Numbers:
+              name: Бинарни числа
+            Sending Numbers:
+              name: Изпращане на числа
+            The Internet:
+              name: Интернет
+        csp2-2019:
+          stages:
+            Text Compression:
+              name: Компресия на текста
+            Encoding B&W Images:
+              name: Кодиране черно-бели изображения
+            Encoding Color Images:
+              name: Кодиране на цветни изображения
+        csp3-2019:
+          title: CSP блок 3 - програмиране
+          description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
+          description_short: Програмиране
+          stages:
+            The Need For Programming Languages:
+              name: Нуждата от програмни езици
+            Using Simple Commands:
+              name: Използване на прости команди
+            Creating Functions:
+              name: Създаване на функции
+            APIs and Function Parameters:
+              name: API и параметри на функцията
+            Looping and Random Numbers:
+              name: Цикли и случайни числа
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Докато цикли

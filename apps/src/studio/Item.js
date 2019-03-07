@@ -1,11 +1,11 @@
 import Collidable from './collidable';
 import * as constants from './constants';
 import _ from 'lodash';
-import { ShakeActor } from './spriteActions';
+import {ShakeActor} from './spriteActions';
 import Studio from './studio';
 import StudioAnimation from './StudioAnimation';
 import StudioSpriteSheet from './StudioSpriteSheet';
-import { valueOr } from '../utils';
+import {valueOr} from '../utils';
 
 const Direction = constants.Direction;
 const NextTurn = constants.NextTurn;
@@ -35,37 +35,40 @@ export default class Item extends Collidable {
      * late as possible.
      * @type {{x: number, y: number}}
      */
-    this.renderOffset = options.renderOffset || { x: 0, y: 0 };
+    this.renderOffset = options.renderOffset || {x: 0, y: 0};
 
     this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
     this.normalSpeed = options.normalSpeed || constants.DEFAULT_ITEM_SPEED;
-    this.normalFrameDuration = options.animationFrameDuration ||
-        constants.DEFAULT_ITEM_ANIMATION_FRAME_DURATION;
+    this.normalFrameDuration =
+      options.animationFrameDuration ||
+      constants.DEFAULT_ITEM_ANIMATION_FRAME_DURATION;
     this.displayDir = Direction.SOUTH;
     this.startFadeTime = null;
     this.fadeTime = constants.ITEM_FADE_TIME;
     this.targetSpriteIndex = 0;
 
     /** @private {StudioAnimation} */
-    this.animation_ = new StudioAnimation(Object.assign({}, options, {
-      spriteSheet: new StudioSpriteSheet({
-        assetPath: options.image,
-        defaultFramesPerAnimation: options.frames,
-        frameWidth: this.width,
-        frameHeight: this.height,
-        animations: [
-          {
-            type: 'direction',
-            count: 8
-          },
-          {
-            type: 'idle',
-            count: 1
-          }
-        ]
-      }),
-      animationFrameDuration: this.getAnimationFrameDuration()
-    }));
+    this.animation_ = new StudioAnimation(
+      Object.assign({}, options, {
+        spriteSheet: new StudioSpriteSheet({
+          assetPath: options.image,
+          defaultFramesPerAnimation: options.frames,
+          frameWidth: this.width,
+          frameHeight: this.height,
+          animations: [
+            {
+              type: 'direction',
+              count: 8
+            },
+            {
+              type: 'idle',
+              count: 1
+            }
+          ]
+        }),
+        animationFrameDuration: this.getAnimationFrameDuration()
+      })
+    );
   }
 
   /** @returns {SVGImageElement} */
@@ -81,14 +84,14 @@ export default class Item extends Collidable {
     // assign a new displayDir from state table; only one turn at a time.
 
     if (this.dir !== this.displayDir && this.displayDir !== undefined) {
-      if (Studio.tickCount && (0 === Studio.tickCount % 2)) {
+      if (Studio.tickCount && 0 === Studio.tickCount % 2) {
         this.displayDir = NextTurn[this.displayDir][this.dir];
       }
     }
 
-    var frameDirTable = this.spritesCounterclockwise ?
-      constants.frameDirTableWalkingWithIdleCounterclockwise :
-      constants.frameDirTableWalkingWithIdleClockwise;
+    var frameDirTable = this.spritesCounterclockwise
+      ? constants.frameDirTableWalkingWithIdleCounterclockwise
+      : constants.frameDirTableWalkingWithIdleClockwise;
 
     return frameDirTable[this.displayDir];
   }
@@ -100,7 +103,6 @@ export default class Item extends Collidable {
     this.animation_.createElement(parentElement);
   }
 
-
   /**
    * This function should be called every frame, and moves the item around.
    * It moves the item smoothly, but between fixed points on the grid.
@@ -111,7 +113,6 @@ export default class Item extends Collidable {
    * options.
    */
   update() {
-
     // Do we have an active location in grid coords?  If not, determine it.
     if (this.gridX === undefined) {
       this.gridX = Math.floor(this.x / Studio.SQUARE_SIZE);
@@ -123,7 +124,7 @@ export default class Item extends Collidable {
     var reachedDestinationGridPosition = false;
 
     // Draw the item's current location.
-    Studio.drawDebugRect("itemCenter", this.x, this.y, 3, 3);
+    Studio.drawDebugRect('itemCenter', this.x, this.y, 3, 3);
 
     if (
       this.activity === constants.BEHAVIOR_WATCH_ACTOR ||
@@ -149,11 +150,12 @@ export default class Item extends Collidable {
     if (this.destGridX !== undefined) {
       // Draw the item's destination grid square.
       Studio.drawDebugRect(
-        "roamGridDest",
+        'roamGridDest',
         this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE,
         this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE,
         Studio.SQUARE_SIZE,
-        Studio.SQUARE_SIZE);
+        Studio.SQUARE_SIZE
+      );
     }
     var center = this.getCenterPos();
 
@@ -164,8 +166,8 @@ export default class Item extends Collidable {
       var speed = valueOr(this.speed, 0);
       var dirUnit = Direction.getUnitVector(this.dir);
       var destVector = {
-        x: (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.x,
-        y: (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE) - center.y
+        x: this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE - center.x,
+        y: this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE - center.y
       };
       // Take the dot product of dirUnit and destVector to see if continuing to
       // move in that direction will bring the item any closer to its
@@ -181,11 +183,10 @@ export default class Item extends Collidable {
     // Or have we already reached our prior destination location in grid coords?
     // If not, determine it.
     if (this.destGridX === undefined || reachedDestinationGridPosition) {
-
       var sprite = Studio.sprite[this.targetSpriteIndex];
 
-      var spriteX = sprite.x + sprite.width/2;
-      var spriteY = sprite.y + sprite.height/2;
+      var spriteX = sprite.x + sprite.width / 2;
+      var spriteY = sprite.y + sprite.height / 2;
 
       // let's try scoring each square
       var candidates = [];
@@ -197,61 +198,97 @@ export default class Item extends Collidable {
         {row: -1, col: 0},
         {row: +1, col: 0},
         {row: 0, col: -1},
-        {row: 0, col: +1}];
+        {row: 0, col: +1}
+      ];
 
-      for (var candidateIndex = 0; candidateIndex < candidateGridLocations.length; candidateIndex++) {
-        var candidateX = this.gridX + candidateGridLocations[candidateIndex].col;
-        var candidateY = this.gridY + candidateGridLocations[candidateIndex].row;
+      for (
+        var candidateIndex = 0;
+        candidateIndex < candidateGridLocations.length;
+        candidateIndex++
+      ) {
+        var candidateX =
+          this.gridX + candidateGridLocations[candidateIndex].col;
+        var candidateY =
+          this.gridY + candidateGridLocations[candidateIndex].row;
 
         candidate = {gridX: candidateX, gridY: candidateY};
         candidate.score = 0;
 
         if (this.activity === constants.BEHAVIOR_WANDER) {
-          candidate.score ++;
+          candidate.score++;
         } else if (this.activity === constants.BEHAVIOR_CHASE) {
-          if (candidateY === this.gridY - 1 && spriteY < center.y - bufferDistance) {
+          if (
+            candidateY === this.gridY - 1 &&
+            spriteY < center.y - bufferDistance
+          ) {
             candidate.score += 2;
-          } else if (candidateY === this.gridY + 1 && spriteY > center.y + bufferDistance) {
+          } else if (
+            candidateY === this.gridY + 1 &&
+            spriteY > center.y + bufferDistance
+          ) {
             candidate.score += 2;
           } else {
             candidate.score += 1;
           }
 
-          if (candidateX === this.gridX - 1 && spriteX < center.x - bufferDistance) {
-            candidate.score ++;
-          } else if (candidateX === this.gridX + 1 && spriteX > center.x + bufferDistance) {
-            candidate.score ++;
+          if (
+            candidateX === this.gridX - 1 &&
+            spriteX < center.x - bufferDistance
+          ) {
+            candidate.score++;
+          } else if (
+            candidateX === this.gridX + 1 &&
+            spriteX > center.x + bufferDistance
+          ) {
+            candidate.score++;
           }
         } else if (this.activity === constants.BEHAVIOR_FLEE) {
           candidate.score = 1;
-          if (candidateY === this.gridY - 1 && spriteY > center.y - bufferDistance) {
-            candidate.score ++;
-          } else if (candidateY === this.gridY + 1 && spriteY < center.y + bufferDistance) {
-            candidate.score ++;
+          if (
+            candidateY === this.gridY - 1 &&
+            spriteY > center.y - bufferDistance
+          ) {
+            candidate.score++;
+          } else if (
+            candidateY === this.gridY + 1 &&
+            spriteY < center.y + bufferDistance
+          ) {
+            candidate.score++;
           }
 
-          if (candidateX === this.gridX - 1 && spriteX > center.x - bufferDistance) {
-            candidate.score ++;
-          } else if (candidateX === this.gridX + 1 && spriteX < center.x + bufferDistance) {
-            candidate.score ++;
+          if (
+            candidateX === this.gridX - 1 &&
+            spriteX > center.x - bufferDistance
+          ) {
+            candidate.score++;
+          } else if (
+            candidateX === this.gridX + 1 &&
+            spriteX < center.x + bufferDistance
+          ) {
+            candidate.score++;
           }
         }
 
         if (candidate.score > 0) {
           Studio.drawDebugRect(
-            "roamGridPossibleDest",
+            'roamGridPossibleDest',
             candidateX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE,
             candidateY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE,
             Studio.SQUARE_SIZE,
-            Studio.SQUARE_SIZE);
+            Studio.SQUARE_SIZE
+          );
         }
         candidates.push(candidate);
       }
 
       // cull candidates that won't be possible
-      for (var i = candidates.length-1; i >= 0; i--) {
+      for (var i = candidates.length - 1; i >= 0; i--) {
         var candidate = candidates[i];
-        if (candidate.score === 0 || this.atEdge(candidate) || this.hasWall(candidate)) {
+        if (
+          candidate.score === 0 ||
+          this.atEdge(candidate) ||
+          this.hasWall(candidate)
+        ) {
           candidates.splice(i, 1);
         }
       }
@@ -262,7 +299,7 @@ export default class Item extends Collidable {
         candidates = _.shuffle(candidates);
 
         // then sort everything based on score.
-        candidates.sort(function (a, b) {
+        candidates.sort(function(a, b) {
           return b.score - a.score;
         });
 
@@ -293,8 +330,12 @@ export default class Item extends Collidable {
   }
 
   atEdge(candidate) {
-    return candidate.gridX < 0 || candidate.gridX >= Studio.COLS ||
-        candidate.gridY < 0 || candidate.gridY >= Studio.ROWS;
+    return (
+      candidate.gridX < 0 ||
+      candidate.gridX >= Studio.COLS ||
+      candidate.gridY < 0 ||
+      candidate.gridY >= Studio.ROWS
+    );
   }
 
   hasWall(candidate) {
@@ -325,7 +366,14 @@ export default class Item extends Collidable {
     // Basically, avoid thrashing when moving into their space.
     var SQUARED_MINIMUM_DISTANCE = 25;
     if (deltaX * deltaX + deltaY * deltaY > SQUARED_MINIMUM_DISTANCE) {
-      Studio.drawDebugLine("watchActor", this.x, this.y, actorGroundCenterX, actorGroundCenterY, '#ffff00');
+      Studio.drawDebugLine(
+        'watchActor',
+        this.x,
+        this.y,
+        actorGroundCenterX,
+        actorGroundCenterY,
+        '#ffff00'
+      );
       this.setDirection(constants.getClosestDirection(deltaX, deltaY));
     }
   }
@@ -371,7 +419,7 @@ export default class Item extends Collidable {
     if (this.dir === Direction.NONE) {
       return this.normalFrameDuration;
     } else {
-      return this.normalFrameDuration * this.normalSpeed / this.speed;
+      return (this.normalFrameDuration * this.normalSpeed) / this.speed;
     }
   }
 
@@ -382,7 +430,6 @@ export default class Item extends Collidable {
     return !!this.startFadeTime;
   }
 
-
   /**
    * Returns true if the item has finished fading away.  The caller will usually
    * then call removeElement to destroy this item's assets.
@@ -390,7 +437,9 @@ export default class Item extends Collidable {
   hasCompletedFade() {
     var currentTime = new Date().getTime();
 
-    return this.startFadeTime && currentTime > this.startFadeTime + this.fadeTime;
+    return (
+      this.startFadeTime && currentTime > this.startFadeTime + this.fadeTime
+    );
   }
 
   /**
@@ -422,17 +471,19 @@ export default class Item extends Collidable {
     }
 
     this.animation_.setCurrentAnimation('direction', this.getDirectionFrame());
-    this.animation_.redrawCenteredAt({
-          x: this.x + this.renderOffset.x,
-          y: this.y + this.renderOffset.y
-        },
-        Studio.tickCount);
+    this.animation_.redrawCenteredAt(
+      {
+        x: this.x + this.renderOffset.x,
+        y: this.y + this.renderOffset.y
+      },
+      Studio.tickCount
+    );
   }
 
   getCenterPos() {
     return {
       x: this.x,
-      y: this.y,
+      y: this.y
     };
   }
 

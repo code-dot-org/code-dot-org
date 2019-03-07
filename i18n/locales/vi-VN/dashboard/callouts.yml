@@ -17,17 +17,25 @@ vi:
         CSD_U3_variables: Thay đổi số ở đây
       CSD U3 Variables Predict Where X_2018_callout:
         CSD_U3_variables: Thay đổi số ở đây
+      CSD U3 Variables Predict Where X_2019_callout:
+        CSD_U3_variables: Thay đổi số ở đây
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Đây là mã nguồn
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Đây là mã nguồn
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Đây là mã nguồn
       CSD U3 ellipse_callout:
         CSD_U3_rect_c1: Đây là mã nguồn
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Đây là mã nguồn
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Đây là mã nguồn
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Đây là mã nguồn
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Đây là mã nguồn
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Đây là mã nguồn
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: Đây là mã nguồn
@@ -35,21 +43,31 @@ vi:
         CSD_U3_rect_c1: Đây là mã nguồn
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Đây là mã nguồn
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Đây là mã nguồn
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Đây là mã nguồn
       CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: Đây là mã nguồn
+      CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: Đây là mã nguồn
       CSD U6 light show predict_callout:
         CSDUDL03P09: Dòng này làm gì?
       CSD U6 light show predict_2018_callout:
         CSDUDL03P09: Dòng này làm gì?
+      CSD U6 light show predict_2019_callout:
+        CSDUDL03P09: Dòng này làm gì?
       CSD U6 light show_callout:
         CSDUDL03P09: Dòng này làm gì?
       CSD U6 light show_2018_callout:
         CSDUDL03P09: Dòng này làm gì?
+      CSD U6 light show_2019_callout:
+        CSDUDL03P09: Dòng này làm gì?
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Kiểm tra xem người chơi thắng chưa
       CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Kiểm tra xem người chơi thắng chưa
+      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Kiểm tra xem người chơi thắng chưa
       Counting_callout:
         New Play Lab Project_callout2: Nhấn "Run" để lưu và thử chương trình của bạn
@@ -104,6 +122,17 @@ vi:
         edit_add_parameter: Nhấp vào chỉnh sửa để thêm một tham số trong hàm của bạn
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Sử dụng các mũi tên để di chuyển các diễn viên
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Thêm khối này vào chương trình của bạn!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Thêm khối này vào chương trình của bạn!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Thêm khối này vào chương trình của bạn!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Thêm vũ công mới của bạn ở đây
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Khối mới!
+        dance_callout_11_b: Khối mới!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Sử dụng các mũi tên để di chuyển các diễn viên
       Dance_Party_01_callout:

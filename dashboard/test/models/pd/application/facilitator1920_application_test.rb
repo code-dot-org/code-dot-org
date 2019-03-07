@@ -207,35 +207,6 @@ module Pd::Application
       end
     end
 
-    test 'assign_default_workshop! saves the default workshop' do
-      @application.expects(:find_default_workshop).returns(@fit_workshop)
-
-      @application.assign_default_workshop!
-      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
-    end
-
-    test 'assign_default_workshop! does nothing when a workshop is already assigned' do
-      @application.update! pd_workshop_id: @fit_workshop.id
-      @application.expects(:find_default_workshop).never
-
-      @application.assign_default_workshop!
-      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
-    end
-
-    test 'assign_default_fit_workshop! saves the default fit workshop' do
-      @application.expects(:find_default_fit_workshop).returns(@fit_workshop)
-
-      @application.assign_default_fit_workshop!
-      assert_equal @fit_workshop.id, @application.reload.fit_workshop_id
-    end
-
-    test 'assign_default_fit_workshop! does nothing when a fit workshop is already assigned' do
-      @application_with_fit_workshop.expects(:find_default_fit_workshop).never
-
-      @application_with_fit_workshop.assign_default_fit_workshop!
-      assert_equal @fit_workshop.id, @application_with_fit_workshop.reload.fit_workshop_id
-    end
-
     test 'fit_workshop returns the workshop associated with the assigned fit workshop id' do
       assert_equal @fit_workshop, @application_with_fit_workshop.fit_workshop
     end
@@ -362,7 +333,6 @@ module Pd::Application
               currently_involved_in_cs_education: 5,
               grades_taught: 5,
               experience_teaching_this_course: 5,
-              completed_pd: 5,
               why_should_all_have_access: 5,
               skills_areas_to_improve: 5,
               inquiry_based_learning: 5,
@@ -379,15 +349,15 @@ module Pd::Application
 
       assert_equal(
         {
-          total_score: "65 / 65",
-          application_score: "40 / 40",
+          total_score: "60 / 60",
+          application_score: "35 / 35",
           interview_score: "25 / 25",
           teaching_experience_score: "10 / 10",
           leadership_score: "5 / 5",
           champion_for_cs_score: "5 / 5",
           equity_score: "15 / 15",
           growth_minded_score: "15 / 15",
-          content_knowledge_score: "10 / 10",
+          content_knowledge_score: "5 / 5",
           program_commitment_score: "5 / 5"
         }, @application.all_scores
       )
@@ -427,6 +397,52 @@ module Pd::Application
       assert Pd::Facilitator1920ApplicationConstants::CSF_SPECIFIC_KEYS.none? {|x| application_hash.key? x}
       assert Pd::Facilitator1920ApplicationConstants::CSD_SPECIFIC_KEYS.any? {|x| application_hash.key? x}
       assert application_hash.key? :csp_training_requirement
+    end
+
+    test 'associated models cache prefetch' do
+      workshop = create :pd_workshop
+      fit_workshop = create :pd_workshop, :fit
+      application = create :pd_facilitator1920_application, pd_workshop_id: workshop.id, fit_workshop_id: fit_workshop.id
+      # Workshops, Sessions, Enrollments
+      assert_queries 3 do
+        Facilitator1920Application.prefetch_associated_models([application])
+      end
+
+      assert_queries 0 do
+        assert_equal workshop, application.workshop
+      end
+    end
+
+    test 'enroll_user creates enrollment' do
+      fit_workshop = create :pd_workshop, :fit
+      application = create :pd_facilitator1920_application, fit_workshop_id: fit_workshop.id
+
+      assert_nil application.auto_assigned_fit_enrollment_id
+      assert_creates(Pd::Enrollment) do
+        application.enroll_user
+      end
+
+      assert application.auto_assigned_fit_enrollment_id
+    end
+
+    test 'enroll_user for a different workshop deletes previous enrollment' do
+      original_fit_workshop = create :pd_workshop, :fit
+      new_fit_workshop = create :pd_workshop, :fit
+      application = create :pd_facilitator1920_application, fit_workshop_id: original_fit_workshop.id
+
+      application.enroll_user
+      original_enrollment = Pd::Enrollment.find(application.auto_assigned_fit_enrollment_id)
+      assert_equal original_fit_workshop.id, original_enrollment.pd_workshop_id
+
+      application.fit_workshop_id = new_fit_workshop.id
+
+      # actually creates a new enrollment and destroys the old one,
+      # and this method checks that the total enrollment count does not change
+      refute_creates_or_destroys(Pd::Enrollment) do
+        application.enroll_user
+      end
+      new_enrollment = Pd::Enrollment.find(application.auto_assigned_fit_enrollment_id)
+      assert_equal new_fit_workshop.id, new_enrollment.pd_workshop_id
     end
   end
 end

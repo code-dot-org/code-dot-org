@@ -24,7 +24,7 @@ ________________
 <a id="announce"></a>
 ## Announcements
 - [New Process to secure substitute CS Discoveries and CS Principles Facilitators](#subfac)
-- [Updated CS Discoveries/Principles Facilitator Travel Policy](#docs)
+- [Updated CS Discoveries/Principles Facilitator Travel Policy](#6-12docs)
 - [Preparing for Facilitator Interviews](#interviews)
 
 ________________

@@ -17,7 +17,7 @@ it:
         course1:
           title: Corso 1
           description: Il Corso 1 è rivolto a studenti che stanno iniziando a leggere. Gli studenti creano programmi che sviluppano la capacità di risolvere problemi e di perseverare su problemi difficili, e permettono loro di collaborare con altri. Alla fine del corso gli studenti creano i loro giochi o le loro storie, che possono condividere. Il corso è raccomandato per la prima e la seconda elementare.
-          description_short: Il corso 1 è rivolto a chi sta iniziando a leggere.
+          description_short: Introduzione all'informatica per bambini che stanno iniziando a leggere.
           description_audience: Da 4 anni in su (pre-scolare)
           stages:
             'Artist: Loops':
@@ -59,7 +59,7 @@ it:
         course2:
           title: Corso 2
           description: Il Corso 2 è rivolto a studenti delle scuole elementari che hanno già imparato a leggere e non hanno precedenti esperienze di programmazione. Nel corso gli studenti creano programmi per risolvere problemi e sviluppare giochi interattivi o storie da condividere. Il corso è raccomandato dalla terza elementare.
-          description_short: Il corso 2 è rivolto a studenti che sanno leggere.
+          description_short: Introduzione all'informatica per studenti che sanno già leggere.
           description_audience: Dai 6 anni in su (è necessario saper leggere)
           stages:
             'Artist: Debugging':
@@ -103,7 +103,7 @@ it:
         course3:
           title: Corso 3
           description: Il Corso 3 è rivolto a studenti che hanno già svolto il Corso 2. Gli studenti approfondiscono i concetti della programmazione introdotti nei corsi precedenti e imparano a definire soluzioni flessibili per problemi complessi. Alla fine del corso gli studenti creano giochi interattivi e storie da condividere con tutti. Il corso è raccomandato a partire dalla quarta elementare.
-          description_short: Il Corso 3 è la continuazione del Corso 2.
+          description_short: Entra ancora più a fondo nella programmazione creando giochi e storie interattive e imparando concetti nuovi come le funzioni. È la continuazione del Corso 2.
           description_audience: Da 8 anni in su (dopo il Corso 2)
           stages:
             Artist:
@@ -179,7 +179,7 @@ it:
         course4:
           title: Corso 4
           description: Il corso 4 è rivolto agli studenti che hanno già seguito i corsi 2 e 3. Gli studenti imparano come affrontare problemi di maggiore complessità e a combinare diversi concetti per risolvere i diversi problemi proposti. Una volta completato questo corso, gli studenti saranno in grado di creare programmi abbastanza complessi, anche con l'utilizzo di cicli con contatore e funzioni con parametri.
-          description_short: Gli studenti che seguono il Corso 4 dovrebbero aver già svolto i Corsi 2 e 3.
+          description_short: Costruisci programmi più complessi imparando concetti come variabili, cicli con contatore e funzioni con parametri. È la continuazione del corso 3.
           description_audience: Da 10 anni in su (dopo il Corso 3)
           stages:
             Artist:
@@ -1261,7 +1261,7 @@ it:
             Your Digital Footprint:
               name: La tua Impronta Digitale
         coursec-draft:
-          description_short: Impara le basi dell'informatica e dai vita a creazioni artistiche, storie animate o giochi interattivi.
+          description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
           stages:
             Programming in Maze:
               name: Programmazione nel Labirinto
@@ -1292,7 +1292,7 @@ it:
             Loops in Harvester:
               name: Cicli con la Contadina
         coursed-draft:
-          description_short: Impara le basi dell'informatica e dai vita a creazioni artistiche, storie animate o giochi interattivi.
+          description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
           stages:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmi: Programmazione su carta a quadretti'
@@ -1329,7 +1329,7 @@ it:
             Debugging in Collector:
               name: Debugging con la Collezionista
         coursee-draft:
-          description_short: Impara le basi dell'informatica e dai vita a creazioni artistiche, storie animate o giochi interattivi.
+          description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
           stages:
             Digital Citizenship:
               name: Cittadinanza Digitale
@@ -1366,7 +1366,7 @@ it:
             'Algorithms: Dice Race':
               name: 'Algoritmi: Gara con i Dadi'
         coursef-draft:
-          description_short: Impara le basi dell'informatica e dai vita a creazioni artistiche, storie animate o giochi interattivi.
+          description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
           stages:
             Digital Citizenship:
               name: Cittadinanza Digitale
@@ -1611,7 +1611,7 @@ it:
           title: Corso A
           assignment_family_title: Corso A
           description_audience: 'Età: da 4 a 7 anni'
-          description_short: Un'introduzione all'informatica per bambini che non leggono ancora.
+          description_short: Introduzione all'informatica per bambini che non leggono ancora.
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
         courseb-2017:
           stages:
@@ -1646,7 +1646,7 @@ it:
           title: Corso B
           assignment_family_title: Corso B
           description_audience: 'Da 5 a 8 anni'
-          description_short: Introduzione all'informatica per alunni che devono imparare a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente più grandi.)
+          description_short: Introduzione all'informatica per bambini che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente più grandi.)
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
         coursec-2017:
           stages:
@@ -1683,7 +1683,7 @@ it:
           title: Corso C
           assignment_family_title: Corso C
           description_audience: 'Da 6 a 10 anni'
-          description_short: Impara le basi dell'informatica e dai vita a creazioni artistiche, storie animate o giochi interattivi.
+          description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
           description: Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata!
         coursed-2017:
           stages:
@@ -1759,7 +1759,7 @@ it:
           title: Corso D
           assignment_family_title: Corso D
           description_audience: 'Da 7 a 11 anni'
-          description_short: Vengono spiegati brevemente i concetti del corso C e poi vengono aggiunti algoritmi, cicli annidati, condizioni e altro ancora.
+          description_short: Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
           description: In questo corso vengono insegnati nuovi concetti di informatica tra cui algoritmi, cicli annidati, cicli "mentre", istruzioni condizionali ed eventi. Vengono introdotti alcuni concetti di cittadinanza digitale ed è possibile creare il proprio gioco o la propria storia che è poi possibile condividere con gli amici.
         coursee-2017:
           stages:
@@ -1854,7 +1854,7 @@ it:
           title: Corso E
           assignment_family_title: Corso E
           description_audience: 'Da 8 a 12 anni'
-          description_short: Vengono spiegati brevemente i concetti dei corsi C e D e poi viene aggiunto il concetto di funzione.
+          description_short: Vengono ripresi brevemente i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
           description: Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari.
         coursef-2017:
           stages:
@@ -1928,7 +1928,7 @@ it:
           title: Corso F
           assignment_family_title: Corso F
           description_audience: 'Da 9 a 13 anni'
-          description_short: Impara tutti i concetti dei corsi di Fondamenti di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
+          description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
           description: Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull'impatto sociale dell'informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari.
         express-2017:
           stages:
@@ -2008,8 +2008,9 @@ it:
               name: Istruzioni Condizionali & Cicli con la Contadina
             Until Loops in Maze:
               name: Cicli "Fino a Che" con il Labirinto 
-          title: Corso Rapido
+          title: Corso rapido
           assignment_family_title: Corso Rapido
+          description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
         pre-express-2017:
           stages:
@@ -2039,6 +2040,8 @@ it:
               name: 'Laboratorio: Eventi'
             Spelling Bee:
               name: Ape Sapiente
+          title: Corso rapido pre-scolare
+          description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
         subgoal-labels-opt-in:
           stages:
@@ -2490,7 +2493,7 @@ it:
           title: Corso A (2018)
           assignment_family_title: Corso A
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
-          description_short: Un'introduzione all'informatica per bambini che non leggono ancora.
+          description_short: Introduzione all'informatica per bambini che non leggono ancora.
           description_audience: 'Età: da 4 a 7 anni'
           stages:
             'Debugging: Unspotted Bugs':
@@ -2645,6 +2648,8 @@ it:
               name: Divertiti usando i Cicli con Contatore
             Learning Sprites with Sprite Lab:
               name: Introduzione al Laboratorio dei Personaggi
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni
             Pet Giraffe with Sprite Lab:
               name: Giraffa Domestica
             Binary Bracelets:
@@ -2659,6 +2664,8 @@ it:
               name: Intelligenza Collettiva
             Relay Programming:
               name: Programmazione a Staffetta
+            Graph Paper Programming:
+              name: Programmazione su carta a quadretti
         courseb-2018:
           title: Corso B (2018)
           assignment_family_title: Corso B
@@ -2757,11 +2764,15 @@ it:
               name: Introduzione agli Esercizi Online
             Nested Loops in Maze:
               name: Cicli Annidati nel Labirinto
+        jr-test:
+          stages:
+            Alien Dance Party - Input:
+              name: La festa degli alieni - Ingressi
         coursec-2018:
           title: Corso C (2018)
           assignment_family_title: Corso C
           description: Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata!
-          description_short: Impara le basi dell'informatica e dai vita a creazioni artistiche, storie animate o giochi interattivi.
+          description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
           description_audience: 'Da 6 a 10 anni'
           stages:
             Building a Foundation:
@@ -2880,6 +2891,8 @@ it:
               name: Funzioni con Minecraft
             Learning Sprites with Sprite Lab:
               name: Introduzione al Laboratorio dei Personaggi
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni
             Pet Giraffe with Sprite Lab:
               name: Giraffa Domestica
             Copyright and Creativity:
@@ -2888,7 +2901,7 @@ it:
           title: Corso F (2018)
           assignment_family_title: Corso F
           description: Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull'impatto sociale dell'informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari.
-          description_short: Impara tutti i concetti dei corsi di Fondamenti di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
+          description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
           description_audience: 'Da 9 a 13 anni'
           stages:
             'Programming: My Robotic Friends':
@@ -2973,6 +2986,8 @@ it:
               name: Modifica delle Variabili con l'Artista
             Learning Sprites with Sprite Lab:
               name: Introduzione al Laboratorio dei Personaggi
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni
             Pet Giraffe with Sprite Lab:
               name: Giraffa Domestica
             Functions in Minecraft:
@@ -2996,16 +3011,30 @@ it:
           stages:
             Creating Functions:
               name: Creazione di funzioni
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
+        csp-explore-2018:
+          stages:
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
         csp4-2018:
           stages:
             Simple Encryption:
               name: Crittografia semplice
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
         csp5-2018:
           stages:
             While Loops:
               name: Cicli "Mentre"
             Introduction to Arrays:
               name: Introduzione agli array
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
+        spritelab:
+          stages:
+            Alien Dance Party - Input:
+              name: La festa degli alieni - Ingressi
         pre-express-2018:
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
           stages:
@@ -3047,10 +3076,22 @@ it:
               name: Cicli con Scrat
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie e il Grande Progetto
+        spritelab-validated:
+          stages:
+            Alien Dance Party - Input:
+              name: La festa degli alieni - Ingressi
         2018hoc-ab:
           stages:
             Labyrinth:
               name: Labirinto
+        spritelab-simple:
+          stages:
+            Alien Dance Party - Input:
+              name: La festa degli alieni - Ingressi
+        spritelab-ee:
+          stages:
+            Alien Dance Party - Input:
+              name: La festa degli alieni - Ingressi
         frozen-2018:
           stages:
             Artist:
@@ -3090,7 +3131,7 @@ it:
           description: Vai oltre alla prima ora di programmazione creando progetti più complessi.
         coursef-2019:
           description: Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull'impatto sociale dell'informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari.
-          description_short: Impara tutti i concetti dei corsi di Fondamenti di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
+          description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
           description_audience: 'Da 9 a 13 anni'
           stages:
             'Programming: My Robotic Friends':
@@ -3135,6 +3176,8 @@ it:
             For Loops in Artist:
               description_student: Preparati a creare il tuo prossimo capolavoro. Qui userai i cicli con contatore per creare immagini sbalorditive.
               description_teacher: In questa lezione, gli studenti continuano ad esercitarsi con i cicli, questa volta con l'Artista. Gli studenti completeranno gli esercizi combinando i concetti di variabili, cicli e cicli con contatore per creare progetti complessi. Alla fine avranno la possibilità di creare il proprio progetto in un esercizio libero.
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni con il Laboratorio dei personaggi
             Explore Project Ideas:
               name: Idee di Progetto
               description_student: È tempo di trovare l'ispirazione! Questi esercizi ti mostreranno una serie di illustrazioni e giochi già pronti per aiutarti a sviluppare un piano per il tuo GRANDE progetto.
@@ -3157,6 +3200,22 @@ it:
               description_teacher: Nel corso delle cinque lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Infine, gli studenti saranno messi nella condizione di presentare i lavori completati ai loro compagni o di condividerli con amici e parenti con un apposito link. La guida alle lezioni che descrive tutte e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
             The Artist:
               name: L'artista
+            Events with Sprite Lab:
+              name: Eventi con il Laboratorio dei personaggi
+            Loops with the Artist:
+              name: Cicli con l'Artista
+            Sprite Lab Behaviors:
+              name: Comportamenti del Laboratorio dei personaggi
+            End of Course Project:
+              name: Progetto di Fine Corso
+            Copyright and Creativity:
+              name: Diritti d'Autore e Creatività
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Intelligenza Collettiva
+            Digital Sharing:
+              name: Condivisione Digitale
         dance-low:
           stages:
             Dance Party:
@@ -3208,6 +3267,8 @@ it:
               name: 'Artista: Binario'
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
+            Dance Party:
+              name: Ballando col codice
         coursee-2019:
           description: Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari.
           description_audience: 'Da 8 a 12 anni'
@@ -3259,6 +3320,8 @@ it:
             Determine the Concept:
               name: Fissare i Concetti
               description_teacher: Questa lezione riunisce i concetti delle lezioni precedenti e offre agli studenti la possibilità di riflettere in modo critico su come risolvere ciascun problema, ma senza suggerire quale concetto applicare. Gli studenti ripasseranno algoritmi di base, debugging, cicli `ripeti ... volte`, istruzioni condizionali, cicli `mentre` e funzioni.
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni con il Laboratorio dei personaggi
             Explore Project Ideas:
               name: Idee di Progetto
               description_teacher: "Le prossime quattro lezioni forniscono agli studenti l'opportunità di utilizzare le proprie capacità di programmazione in un progetto di fine corso. Questo progetto li aiuterà ad acquisire esperienza con la programmazione, producendo una realizzazione da condividere con compagni, amici e parenti. È un percorso pensato per essere distribuito su più lezioni, gli studenti trascorreranno del tempo ragionando insieme, imparando a conoscere il processo di progettazione, costruendo e presentando il loro lavoro finale.\n\nNella lezione di esplorazione, gli studenti potranno osservare degli esempi già pronti ai quali ispirarsi sia per l'Artista che per il Laboratorio. Successivamente, gli studenti impareranno il processo di progettazione e come implementarlo nei propri progetti. A loro verrà quindi dato uno spazio per creare il proprio progetto nell'Artista o nel Laboratorio (questa è probabilmente la parte più lunga del progetto). Infine, gli studenti potranno presentare il lavoro finito ai compagni."
@@ -3286,6 +3349,8 @@ it:
               name: Cicli Annidati con Frozen
             End of Course Project:
               name: Progetto di Fine Corso
+            Digital Sharing:
+              name: Condivisione Digitale
         express-2019:
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
           stages:
@@ -3345,6 +3410,8 @@ it:
               name: Variabili e Buste
             For Loop Fun:
               name: Divertiti usando i Cicli con Contatore
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni con il Laboratorio dei personaggi
             Explore Project Ideas:
               name: Idee di Progetto
             The Design Process:
@@ -3377,7 +3444,7 @@ it:
           description: Vai oltre alla prima ora di programmazione creando progetti più complessi.
         coursec-2019:
           description: Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata!
-          description_short: Impara le basi dell'informatica e dai vita a creazioni artistiche, storie animate o giochi interattivi.
+          description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
           description_audience: 'Da 6 a 10 anni'
           stages:
             Building a Foundation:
@@ -3414,11 +3481,15 @@ it:
               name: Braccialetti Binari
             'End of Course Project: Play Lab':
               name: 'Progetto di fine corso: Laboratorio'
+            'Programming: My Robotic Friends':
+              name: 'Programmazione: I Miei Amici Robotici'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
         gamelab:
           title: Sviluppo Giochi
         coursea-2019:
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
-          description_short: Un'introduzione all'informatica per bambini che non leggono ancora.
+          description_short: Introduzione all'informatica per bambini che non leggono ancora.
           description_audience: 'Età: da 4 a 7 anni'
           stages:
             'Debugging: Unspotted Bugs':
@@ -3455,6 +3526,8 @@ it:
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di imparare a utilizzare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!
             Ocean Scene with Loops:
               name: Al mare con i Cicli
+            Learn to Drag and Drop:
+              name: Impara come Trascinare i Blocchi
         courseb-2019:
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
           description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
@@ -3484,6 +3557,8 @@ it:
               name: 'Eventi'
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
+            'Loops: Getting Loopy':
+              name: 'Cicli: Diventare Ripetitivi'
         pre-express-2019:
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
           stages:
@@ -3521,3 +3596,68 @@ it:
               name: 'Correzione Errori (Debugging)'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
+        csd2-2019:
+          description_short: "  Imparare a costruire il tuo sito web con Sviluppo Web."
+          stages:
+            Lists:
+              name: Liste
+        csd3-2019:
+          description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
+          stages:
+            Drawing in Game Lab:
+              name: Disegnare in Sviluppo Giochi
+            Variables:
+              name: Variabili
+            Sprites:
+              name: Personaggi
+            Conditionals:
+              name: Istruzioni condizionali
+            Velocity:
+              name: Velocità
+            Functions:
+              name: Funzioni
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funzioni con parametri
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Sondaggi
+        csp1-2019:
+          stages:
+            Personal Innovations:
+              name: Innovazione personale
+            Number Systems:
+              name: Sistema di numerazione
+            The Internet:
+              name: Internet
+        csp2-2019:
+          stages:
+            Text Compression:
+              name: Compressione del Testo
+        csp3-2019:
+          description_short: Programmazione
+          stages:
+            Creating Functions:
+              name: Creazione di funzioni
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: Crittografia semplice
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Cicli "Mentre"
+            Introduction to Arrays:
+              name: Introduzione agli array
+            Mid-Year Survey:
+              name: Sondaggio di metà anno
+        csp-explore-2019:
+          stages:
+            Mid-Year Survey:
+              name: Sondaggio di metà anno

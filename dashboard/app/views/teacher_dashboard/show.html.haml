@@ -1,0 +1,20 @@
+:ruby
+  studio_url = CDO.studio_url('', CDO.default_scheme)
+  code_org_url = CDO.code_org_url('', CDO.default_scheme)
+
+  split_test_data = {}
+  split_test_data[:percentage] = DCDO.get('teacher_dashboard_split_test', 0)
+  split_test_data[:studioUrlPrefix] = studio_url
+  split_test_data[:pegasusUrlPrefix] = code_org_url
+
+  teacher_dashboard_data = {}
+  teacher_dashboard_data[:studioUrlPrefix] = studio_url
+  teacher_dashboard_data[:pegasusUrlPrefix] = code_org_url
+  teacher_dashboard_data[:visibleSections] = @visible_sections
+  teacher_dashboard_data[:section] = @section
+
+%script{src: '/shared/js/teacherDashboardSplitTest.js', data: {splittest: split_test_data.to_json}}
+
+%script{src: minifiable_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
+
+#teacher-dashboard
