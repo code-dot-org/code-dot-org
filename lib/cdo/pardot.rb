@@ -451,9 +451,15 @@ class Pardot
   # @return [Nokogiri::XML] XML response from Pardot
   def self.post_request_with_auth(url)
     request_pardot_api_key if $pardot_api_key.nil?
-    # add the API key and user key parameters to the URL
-    auth_url = append_auth_params_to_url(url)
-    post_request(auth_url, {})
+
+    # add the API key and user key parameters to body of the POST request
+    post_request(
+      url,
+      {
+        api_key: $pardot_api_key,
+        user_key: CDO.pardot_user_key
+      }
+    )
   end
 
   # Make an API request. This method may raise exceptions.
@@ -485,14 +491,6 @@ class Pardot
     raise "Pardot response did not include status" if status.nil?
 
     doc
-  end
-
-  # Append standard Pardot auth parameters (per-session API key and fixed user
-  # key) to a Pardot API request
-  # @param url [String] URL to post to
-  # @return [String] URL with auth parameters appended
-  def self.append_auth_params_to_url(url)
-    "#{url}&api_key=#{$pardot_api_key}&user_key=#{CDO.pardot_user_key}"
   end
 
   # Parse a Pardot XML response and raise an exception on the first error
