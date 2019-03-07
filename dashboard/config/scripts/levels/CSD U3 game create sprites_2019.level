@@ -42,11 +42,31 @@
     "name_suffix": "_2019",
     "expand_debugger": "false",
     "long_instructions": "# Create your Sprites\r\n\r\nNext you will create your sprites and give them starting properties in the \"Create Sprites\" area of your code.  For each sprite your should:\r\n\r\n* Create the sprite in the correct place on the screen\r\n* Set its animation (or color and size)\r\n* Set its velocity and rotation speed, if needed\r\n* Set its collider and bounciness, if needed\r\n\r\nAfter you create each sprite, test it before making the next one.  If your sprite starts off screen, first place it on the screen to test it, them move it back off screen once you know that it looks right.\r\n\r\nIf your sprite's position will need to be reset later in your game, it's a good idea to make a function that sets the position of this sprite that you can use again later.\r\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "reference_links": [
+      "/docs/concepts/game-lab/drawing-shapes/",
+      "/docs/concepts/game-lab/shapes-and-parameters/",
+      "/docs/concepts/game-lab/sprites/",
+      "/docs/concepts/game-lab/sprites/sprite-properties/",
+      "/docs/concepts/game-lab/animation-tab/",
+      "/docs/concepts/game-lab/animation-tab/editing-images/",
+      "/docs/concepts/game-lab/sprites/velocity/",
+      "/docs/concepts/game-lab/the-counter-pattern/",
+      "/docs/concepts/game-lab/velocity-and-the-counter-pattern/",
+      "/docs/concepts/javascript/variables/",
+      "/docs/concepts/javascript/naming-variables/",
+      "/docs/concepts/javascript/booleans-and-comparison-operators/",
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/javascript/if-else-statements/",
+      "/docs/concepts/javascript/functions/"
+    ],
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-11-21 22:01:25 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-11-21 22:01:25 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-06 00:10:52 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

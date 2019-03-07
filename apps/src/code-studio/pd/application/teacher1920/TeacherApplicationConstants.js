@@ -1,3 +1,5 @@
+import color from '@cdo/apps/util/color';
+
 const PROGRAM_CSD =
   'Computer Science Discoveries (appropriate for 6th - 10th grade)';
 const PROGRAM_CSP =
@@ -20,6 +22,11 @@ const styles = {
   },
   bold: {
     fontFamily: '"Gotham 7r", sans-serif'
+  },
+  linkLike: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    cursor: 'pointer',
+    color: color.purple
   }
 };
 

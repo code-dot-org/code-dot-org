@@ -44,7 +44,7 @@ describe('The JSDebugger redux duck', () => {
 
   function runToBreakpoint() {
     const code = '0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;';
-    interpreter.calculateCodeInfo(code);
+    interpreter.calculateCodeInfo({code});
     interpreter.parse({code});
     interpreter.paused = true;
     interpreter.nextStep = JSInterpreter.StepType.IN;
