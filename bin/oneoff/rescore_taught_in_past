@@ -18,7 +18,7 @@ ActiveRecord::Base.transaction do
     response_scores["bonus_points_scores"]["taught_in_past"] = new_taught_in_past_score
 
     if old_taught_in_past_score.to_i != new_taught_in_past_score.to_i
-      if application.response_scores = response_scores
+      if application.response_scores = response_scores.to_json
         application.save!
 
         partner_name = application.regional_partner&.name
