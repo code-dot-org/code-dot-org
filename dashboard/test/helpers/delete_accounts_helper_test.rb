@@ -156,17 +156,19 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil user.secret_words
   end
 
-  test 'clears provider uid but not provider type' do
+  test 'clears primary_contact_info but not provider type' do
     user = create :student,
       provider: 'clever',
       uid: 'fake-clever-uid'
-    assert_equal 'clever', user.provider
-    refute_nil user.uid
+    assert_equal 'migrated', user.provider
+    refute_nil user.primary_contact_info
+    assert_equal 'fake-clever-uid', user.primary_contact_info.authentication_id
 
     purge_user user
 
-    assert_equal 'clever', user.provider
+    assert_equal 'migrated', user.provider
     assert_nil user.uid
+    assert_nil user.primary_contact_info
   end
 
   test 'clears school information' do
@@ -508,10 +510,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     user.primary_contact_info = other_user.primary_contact_info
     user.save!(validate: false)
 
-    assert_empty user.authentication_options,
-      'Expected user to have no authentication options'
+    assert_equal 1, user.authentication_options.length,
+      'Expected user to have exactly one authentication option'
     refute_nil user.primary_contact_info,
       'Expected user to have primary_contact_info'
+    refute_equal user.primary_contact_info, user.authentication_options.first,
+      "Expected user's primary contact info to not be an authentication option"
 
     purge_user user
 
