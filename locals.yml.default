@@ -15,12 +15,12 @@ dashboard_enable_pegasus: true
 
 
 # Whether rake:build should rebuild the apps package
-#build_apps: true
+build_apps: true
 
 
 # Whether dashboard should use your local build of the apps package.
 # If false, dashboard will try to use a prepackaged version from S3.
-#use_my_apps: true
+use_my_apps: true
 
 # Allows your local server to render non-English locales, defaults to false.
 # If false, choosing a locale other than English will have no effect.
