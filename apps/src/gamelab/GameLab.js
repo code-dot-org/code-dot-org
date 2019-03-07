@@ -945,13 +945,15 @@ GameLab.prototype.initInterpreter = function(attachDebugger = true) {
   if (this.level.customHelperLibrary) {
     code += this.level.customHelperLibrary + '\n';
   }
+  const userCodeStartOffset = code.length;
   code += this.studioApp_.getCode();
   this.JSInterpreter.parse({
     code,
     blocks: dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
     enableEvents: true,
-    initGlobals: injectGamelabGlobals
+    initGlobals: injectGamelabGlobals,
+    userCodeStartOffset
   });
   if (!this.JSInterpreter.initialized()) {
     return;

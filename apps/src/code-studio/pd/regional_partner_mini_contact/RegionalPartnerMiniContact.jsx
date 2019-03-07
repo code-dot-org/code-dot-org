@@ -20,11 +20,16 @@ const styles = {
     borderBottom: 'none'
   },
   modalBody: {
-    padding: '0 15px 15px 15px'
+    padding: '0 15px 15px 15px',
+    fontSize: 14,
+    lineHeight: '22px'
+  },
+  intro: {
+    paddingBottom: 10
   }
 };
 
-export default class RegionalPartnerMiniContact extends React.Component {
+export class RegionalPartnerMiniContact extends React.Component {
   static propTypes = {
     options: PropTypes.shape({
       user_name: PropTypes.string,
@@ -111,12 +116,12 @@ export default class RegionalPartnerMiniContact extends React.Component {
           id={`regional-partner-mini-contact-form-${this.props.sourcePageId}`}
           className="regional-partner-mini-contact-form"
         >
-          <p>
+          <div style={styles.intro}>
             Your local Code.org Regional Partner provides high quality Code.org
             professional learning to teachers, and can help guide your school or
             district on implementation, certification, funding, and more. They
             are happy to answer any questions you may have about the program!
-          </p>
+          </div>
           <FieldGroup
             id="name"
             label="Name"

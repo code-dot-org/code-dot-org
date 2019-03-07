@@ -60,9 +60,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.0.tgz#3354090ecb81c60386b33931c7c64c4c9948e8b3"
+"@code-dot-org/craft@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.1.tgz#007cfc859a14c3fbe686cae49d2114a3e03a223f"
 
 "@code-dot-org/dance-party@0.0.42":
   version "0.0.42"

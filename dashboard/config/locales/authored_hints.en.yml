@@ -3583,6 +3583,12 @@ en:
           * Use the `when left arrow pressed` block to make the Robot do a dance move when you press it.
 
           *This level ends after 7 measures.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "See the **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? How can you use a conditional with them to get through the Ocean Monument?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: You can use the if path block to help you make the right turns.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: See the red and blue coral blocks? Use them as guideposts to turn right and left through the reef.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Make sure to set the number for `dog_speed` to something larger than `cat_speed`.
       D_Frozen_nested3_authored_hint:
@@ -6223,6 +6229,7 @@ en:
           Your code will have **four** `move west` <xml><block type="maze_moveWest"/></xml> blocks
 
           and **four** `pick corn` <xml><block type="harvester_corn"/></xml> blocks.
+        courseA_harvester_loops2_b: 'If you''re still having trouble, try saying the steps out loud. '
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: "Your code will have **four** `move west`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nblocks and **four** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blocks. "
       courseA_harvester_loops3_authored_hint:
