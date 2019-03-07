@@ -100,6 +100,7 @@ level 'courseE_aboutme_2'
 level 'courseE_aboutme_3_multi'
 level 'courseE_aboutme_4'
 level 'courseE_aboutme_5'
+level 'courseE_aboutme_6'
 level 'courseE_aboutme_freeplay', progression: 'Free Play'
 
 stage 'Access Ability', flex_category: 'csf_e_2'

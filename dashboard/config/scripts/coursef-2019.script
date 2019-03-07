@@ -97,11 +97,14 @@ level 'Virtual Pet 5_2019'
 level 'Virtual Pet 6_2019'
 level 'Virtual Pet Freeplay_2019', progression: 'Free Play'
 
-stage 'Data from Sprite Lab', flex_category: 'csf_f_2'
+stage 'Running Simulations', flex_category: 'csf_f_2'
 level 'CSTAdata1b'
 
 stage 'Envelope Variables', flex_category: 'csf_f_2'
 level 'EnvelopeVariables_2019'
+
+stage 'Internet', flex_category: 'csf_f_2'
+level 'Internet_2019'
 
 stage 'Variables as Constant in Artist', flex_category: 'csf_f_2'
 level 'grade5_artist_variables_triangles1_2019'
@@ -173,6 +176,9 @@ level 'courseF_artist_for10_2019', progression: 'Free Play'
 bonus 'courseF_artist_for_challenge1_2019'
 bonus 'courseF_artist_for_challenge2_2019'
 
+stage 'Crowdsourcing', flex_category: 'csf_f_2'
+level 'Crowdsourcing_2019'
+
 stage 'Digital Sharing', flex_category: 'end_of_course_project'
 level 'courseE_unplugged_CnC_2019'
 
@@ -184,9 +190,3 @@ level 'Begin planning your project_2018_2019', progression: 'Being planning your
 level 'Course F: Artist Project_2019', progression: 'Artist Project'
 level 'CourseF_Project_SpriteLab_2019', progression: 'Sprite Lab Project'
 level 'Prepare for your presentation_2018_2019', progression: 'Prepare for your presentation'
-
-stage 'Internet', flex_category: 'extra_course_content'
-level 'Internet_2019'
-
-stage 'Crowdsourcing', flex_category: 'extra_course_content'
-level 'Crowdsourcing_2019'
