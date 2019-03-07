@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 const styles = {
   textInput: {
@@ -43,7 +44,7 @@ export class CommentArea extends Component {
       : styles.textInput;
     return (
       <div>
-        <h1 style={styles.h1}>Teacher Feedback</h1>
+        <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
         <textarea
           id="ui-test-feedback-input"
           style={textInputStyle}
