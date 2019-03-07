@@ -59,6 +59,18 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         sign_in_url: CDO.studio_url("/users/sign_in?user_return_to=#{request.url}")
       }
 
+      # We only want to ask each signed-in teacher about demographics once a year.
+      # In this enrollment, we'll only ask if they haven't already submitted a
+      # teacher application for the current year (since it asks the same), and if
+      # this enrollment is for a local summer workshop (since this means it's for
+      # CSD/CSP, and they will only apply for one local summer workshop a year).
+      collect_demographics = !!current_user &&
+        Pd::Application::ApplicationBase.where(
+          user: current_user,
+          application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR
+        ).empty? &&
+        @workshop.local_summer?
+
       @script_data = {
         props: {
           workshop: @workshop.attributes.merge(
@@ -72,7 +84,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           enrollment: @enrollment,
           facilitators: facilitators,
           sign_in_prompt_data: sign_in_prompt_data,
-          workshop_enrollment_status: "unsubmitted"
+          workshop_enrollment_status: "unsubmitted",
+          previous_courses: Pd::TeacherCommonApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
+          collect_demographics: collect_demographics
         }.to_json
       }
     end
