@@ -174,7 +174,7 @@ nn:
     email_preference_privacy: "(Sjå våre retningslinjer for personvern)"
     email_preference_yes: Ja
     email_preference_no: Nei
-    email_preference_required: Du må angi en e-post preferanse.
+    email_preference_required: Du må angi en e-postpreferanse.
   school_info:
     title: Informasjon til skulen (valfritt)
     school_country: Landet til skulen
@@ -582,10 +582,6 @@ nn:
       eller Facebook hvor de sier "I''m taking the #APCSP exam because..." De beste
       videoene vil benyttes i vår video og vinneren vil motta Code.org produkter i
       premie!'
-    announcement_csp_deadline: Final call for high school teachers! Take the lead
-      on computer science in your school and apply for our high-quality professional
-      learning programs <strong>at absolutely no cost to you or your school</strong>.
-      Applications close on April 14th.
     announcement_applab_export: App-lab, vårt web-baserte programmeringsmiljø, støtter
       nå eksport av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av
       JavaScript-blokker, eksporter så koden for å fortsette kodingen i ditt foretrukne
@@ -1223,7 +1219,7 @@ nn:
       last_name: Etternavn
       email: E-post
       email_alternate: Alternativ e-post
-      gender: Kjønns-identitet
+      gender: Kjønnsidentitet
       school_name: Namn på skule
       school_city: Skulen sin poststad
       school_country: Landet til skulen
@@ -1234,7 +1230,7 @@ nn:
         non_binary: Ikke-binær
         none: Foretrekker å ikkje svare
       school_country:
-        canada: Kanada
+        canada: Canada
         chile: Chile
         israel: Israel
         malaysia: Malaysia
@@ -1251,16 +1247,23 @@ nn:
         ages_19_over: 19+ år gammel
       subjects:
         cs: Informatikk
+        ict: IKT
         math: Matematikk
         science: Vitskap
+        history: Historie / Samfunnsfag
         la: Språkfag
         music: Musikk
+        art: Kunst
+        other: 'Annet:'
       resources:
         kodable: Kodable
         scratch: Scratch
+        other: 'Annet:'
       robotics:
         kodable: Kodable
         microbit: Microbit
+        raspberry: Raspberry Pi
+        other: 'Annet:'
       workshop_course:
         csd: Oppdagingar i informatikk
         csp: Prinsipp i datavitskap

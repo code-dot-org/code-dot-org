@@ -333,8 +333,7 @@ es:
               name: La receta de diseño
         K5PD:
           title: K5 Desarrollo profesional
-          description: Desarrollo profesional para los cursos de K5
-          description_short: Desarrollo profesional para los cursos de K5
+          description: 'Desarrollo profesional para los cursos de K5'
           stages:
             Computer Science Pedagogy:
               name: Pedagogía de la ciencia informática
@@ -3081,6 +3080,12 @@ es:
               name: Diversión con bucles Para
             The Artist:
               name: El artista
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Colaboración Abierta
+            Digital Sharing:
+              name: Compartir digital
         dance-low:
           stages:
             Dance Party:
@@ -3102,6 +3107,8 @@ es:
               name: Artista binario
             Build a Star Wars Game:
               name: Construye un juego de la Guerra de las Galaxias
+            Dance Party:
+              name: Fiesta para bailar
         coursee-2019:
           description_audience: 'Edades de 8 a 12 años'
           stages:
@@ -3121,6 +3128,8 @@ es:
               name: Internet
             Crowdsourcing:
               name: Colaboración Abierta
+            Digital Sharing:
+              name: Compartir digital
         express-2019:
           stages:
             Relay Programming:
@@ -3174,6 +3183,8 @@ es:
               name: Observando hacia el futuro
             Binary Bracelets:
               name: Pulseras Binarias
+            Graphing Data:
+              name: Datos de gráfico
         gamelab:
           title: Laboratorio de juego
         coursea-2019:

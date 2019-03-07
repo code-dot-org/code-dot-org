@@ -25,20 +25,21 @@ is:
       Comment: Athugasemd
       'Variables ': 'Breytur '
       everythingelse: alltannað
+      World: Heimur
+      Sprites: Kvikar
+      Location: Staður
+      Behaviors: Hegðun
       numbers: tölur
       Numbers: Tölur
       Input: Inntak
       Default: Sjálfgefið
-      World: Heimur
-      Sprites: Kvikar
-      Behaviors: Hegðun
+      Dancers: Dansarar
+      Groups: Hópar
       Advanced: Ítarlegt
       Start: Byrja
       Locations: Staðir
       Music: Tónlist
       Dancing: Dans
-      Dancers: Dansarar
-      Groups: Hópar
       Sprite: Kviki
       Brush: Pensill
       Make Sprite: Búa til kvika

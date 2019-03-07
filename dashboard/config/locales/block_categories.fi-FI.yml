@@ -12,9 +12,10 @@ fi:
       Conditionals: Ehtolausekkeet
       Events: Tapahtumat
       Text: teksti
-      Start: Aloita
+      Location: Sijainti
       Dancers: Tanssijat
       Groups: Ryhmät
+      Start: Aloita
       Booleans: Totuusarvot
       test: ehto
       Name: Nimi

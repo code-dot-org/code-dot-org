@@ -24,19 +24,20 @@ bg:
       Comment: Коментар
       'Variables ': 'Променливи '
       everythingelse: всичко останало
+      Sprites: Спрайт
+      Location: Адрес
+      Behaviors: Поведения
       numbers: числа
       Numbers: Числа
       Input: Поле за въвеждане
       Default: По подразбиране
-      Sprites: Спрайт
-      Behaviors: Поведения
+      Dancers: Танцьори
+      Groups: Групи
       Advanced: Разширено
       Start: Старт
       Locations: Места
       Music: Музика
       Dancing: Танци
-      Dancers: Танцьори
-      Groups: Групи
       Sprite: Спрайт
       Brush: Четка
       Make Sprite: Направи Спрайт

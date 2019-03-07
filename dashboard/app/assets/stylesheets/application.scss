@@ -343,6 +343,10 @@ img.video_thumbnail {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+
+      html[dir=rtl] & {
+        float: right;
+      }
     }
 
     .pairing_icon {
@@ -1611,7 +1615,12 @@ a.download-video {
   justify-content: space-between;
 }
 
-#signin {
+#change-password {
+  max-width: 600px;
+}
+
+#signin,
+#change-password {
   $field-width: 310px;
   $button-width: 324px;
 
@@ -2027,9 +2036,17 @@ a.download-video {
   transform: translateY($offset);
 }
 
+/* overrides .unplugged for match levels in level groups */
+.level-group-content .unplugged.match {
+  width: auto;
+}
+
 .match {
   .mainblock {
     margin-left: 0;
+    .level-group-content & {
+      margin-left: 50px;
+    }
   }
   .column {
     width: 260px;
@@ -2093,6 +2110,12 @@ a.download-video {
     }
     .active.emptyslot {
       background-color: $lighter_yellow;
+    }
+  }
+  .question {
+    p {
+      font-size: 16px;
+      line-height: 24px;
     }
   }
   .answer {
@@ -2242,6 +2265,9 @@ a.download-video {
     background-color: $lightest_cyan;
     border-radius: 5px;
     margin: 10px auto;
+    .level-group-content & {
+      margin-left: 50px;
+    }
     .content {
       padding: 10px;
     }

@@ -429,6 +429,7 @@ es:
       Applab AllTheThings ResourcesTab AllResources: Dibuja un cuadrado de 1x1 arriba y a la izquierda de la posición inicial de la tortuga. Haz clic para ver las instrucciones completas.
       Applab AllTheThings ResourcesTab MapReference: Dibuja un cuadrado de 1x1 arriba y a la izquierda de la posición inicial de la tortuga. Haz clic para ver las instrucciones completas.
       Applab AllTheThings ResourcesTab ReferenceLinks: Dibuja un cuadrado de 1x1 arriba y a la izquierda de la posición inicial de la tortuga. Haz clic para ver las instrucciones completas.
+      Applab test: Este nivel esta disponible. Es solo para pruebas!
       Artist - Nested Loops 1: 'Completa el código para dibujar estos triángulos. El primero es hecho por ti. Sugerencia: 3 triángulos en una rotación de 360 grados.'
       Artist - Nested Loops 10: Dibuja la última fila de estrellas de esta bandera, por medio de un bucle de bloques proporcionados. Las estrellas son de 50 píxeles, pero recuerda que las estrellas por si mismas son 30 píxeles de ancho.
       Artist - Nested Loops 11: '¿Puedes dibujar estas 10 plazas de esta acera, usando un bucle anidado? Cada cuadrado tiene 30 píxeles.'
@@ -442,6 +443,7 @@ es:
       Auto Open Function Editor: '¡Puedes llamar una función dentro de otra función! Utilizando tu función "shape" como base, crea 3 formas de casa cada una de 20 píxeles mas larga que la anterior, empezando con 50 píxeles de longitud. Usar un circuito de contar puede ser útil.'
       Bee Recommended Blocks test: '¡ Las flores moradas pueden tener un tipo de néctar de 1 ó 0, pero tu no sabes cuál !. Ten cuidado de no recolectar el néctar de una flor morada sin  néctar. Revisa si el valor del néctar es igual a 1 usando el bloque “if”. '
       Bergeron Robot Maze1: "¿Me puedes ayudar a atrapar al cerdo malo? Apila un\npar de bloques \"avanzar\" juntos y presiona \"Ejecutar\". "
+      Big Game Collision 3: Usa la formula de distancia, para que la funcion de distancia regrese la distancia entre las coordenadas del centro del jugardor (px, py) y del centro de otro sprinte (cx, cy).
       Brad Spooky House Copy: 'Juego Libre: Aquí están las funciones que has escrito y algunas más para que juegues con ellas. ¡Dibuja algo impresionante!'
       Brad Spooky House: 'Juego Libre: Aquí están las funciones que has escrito y algunas más para que juegues con ellas. ¡Dibuja algo impresionante!'
       Building a Foundation Assessment: "Construye una piramide de tres niveles,\n¡No hay mas instrucciones, simplemente juega con las piezas hasta lograrlo!"
@@ -722,6 +724,23 @@ es:
       Course 4 SCVP 1: Crea una función con parámetros que permita al artista saltar hacia adelante y atrás una cantidad x de pixeles, y además arriba y abajo una cantidad y de pixeles (utilizando números positivos y negativos).
       Course 4 Variables Assessment: '¿Puedes crear esta imagen utilizando una variable para los lados? Cada línea debe tener 50 píxeles de largo.'
       Course E MC Conditionals1: Encontrarás los recursos más valiosos bajo tierra, pero puede estar oscuro. Coloca al menos dos antorchas y extrae al menos dos de carbón.
+      CourseD_Dance_Party_01: Arrastra el bloque «hacer uno nuevo» al espacio de trabajo y conéctalo dentro del bloque «establecer».
+      CourseD_Dance_Party_02: '¡Haz que el alce inicie un movimiento nuevo después de 4 compases!'
+      CourseD_Dance_Party_03: '¡Ahora haz que el bailarín inicie un movimiento nuevo después de 6 compases!'
+      CourseD_Dance_Party_04: Añade un efecto de fondo a tu programa.
+      CourseD_Dance_Party_05: Utiliza otro bloque nuevo para que el bailarín cambie de movimiento cada 2 compases.
+      CourseD_Dance_Party_06: Crea un bailarín de fondo llamado «bailarín_fondo1» para bailar con el gato.
+      CourseD_Dance_Party_08: '¿Puedes hacer que ambos bailarines de fondo tengan el mismo tamaño?'
+      CourseD_Dance_Party_09: Utiliza el bloque «establecer tonalidad» para cambiar el color de un bailarín.
+      CourseD_Dance_Party_10: Haz que el otro bailarín también responda a la música usando el bloque «comienza siguiente».
+      CourseD_Dance_Party_11: El bloque «cuando arriba pulsada» te permite ejecutar código cuando la flecha hacia arriba se pulsa. Intenta que el bailarín haga un movimiento rápido cuando pulsas arriba.
+      CourseD_Dance_Party_11_5: Utiliza los bloques «todos los patos» para que los patos bailen juntos.
+      CourseD_Dance_Party_11b: Haz que el Robot haga «drop» una vez cuando pulsas la tecla de flecha derecha y haga el baile «floss» una vez cuando pulsas la tecla de flecha hacia arriba. ¡Haz los movimientos drop-floss tan rápido como puedas!
+      CourseD_Dance_Party_12: "¡Mueve el esqueleto! Crea un baile propio para compartirlo\ncon tus amigos."
+      CourseE_HOC 2018 Level_10: Llega a la entrada de este monumento oceánico.
+      CourseE_HOC 2018 Level_11: 'Construye un conducto con prismarina dentro del monumento oceánico.'
+      CourseE_HOC 2018 Level_7a: Explora las ruinas subacuáticas en busca de un cofre.
+      CourseE_HOC 2018 Level_9b: 'Utiliza el coral como punto de ruta para llegar hasta el tesoro.'
       CourseF_PlayLab_vars10: "¡Momento de un juego gratis! Aquí están todas las variables con las que hemos jugado hasta ahora en esta etapa, así como algunas más en caso de que las desees. \\r\n\\r\n¡Observa que ahora hay tantos bloques en nuestra caja de herramientas que necesitan organizarse! Aquí, hemos puesto cada pieza en una categoría apropiada. Tómate tu tiempo para explorar todo lo que está disponible. Cuando hayas terminado de navegar, crea un juego o una historia con repeticiones, variables y eventos. \\r\n\\r\nSugerencia: desplázate hacia abajo para ver todos los comandos en el espacio de trabajo."
       CourseF_PlayLab_vars2: "¡Esa carrera en ese ultimo problema no\nfue justa! Cambia la variable de \"velocidad_perro\" para asegurarse que puede recoger más banderas que el Gato. ¡El primero en recoger 10 banderas gana!"
       CourseF_PlayLab_vars3: '¡Aquí tiene una nueva clase de juego! Use las flechas hacia la izquierda y hacia la derecha para moverse y las flechas hacia arriba y hacia para saltar.  Vea si puede recoger todas las banderas.'

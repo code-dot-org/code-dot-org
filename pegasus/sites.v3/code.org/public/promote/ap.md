@@ -88,7 +88,7 @@ In order to download the raw data, click the download icon (a square with an arr
 #### _<strong>Nationally schools that offered CS increased</strong> as compared to 2017:_
 * CS A: +5% (3,413 schools to 3,578 schools). The growth in CS A has been slowing over the last 4 years: +5% growth (2017 to 2018), +6.5% growth (2016 to 2017), +10% growth (2015 to 2016).
 * CS P: +52% (2,414 schools to 3,660 schools)
-* Overall: +22% (4,440 schools to 5,400 schools).
+* CS A and/or CS P: +22% (4,440 schools to 5,400 schools).
 
 
 ### Female student participation
@@ -292,7 +292,7 @@ For 2018 College Board data, we consider the following ethnic group categories t
 
 ### Deep Historical Analysis of State Data by Barb Ericson
 
-* Barb Ericson at Georgia Tech has been doing much deeper analyses of these AP Computer Science A Exam data for many years. If you're interested in the *really* deep dive, check out her [AP Data Page](http://home.cc.gatech.edu/ice-gt/595).
+* Barb Ericson at Georgia Tech has been doing much deeper analyses of these AP Computer Science A Exam data for many years. If you're interested in the *really* deep dive, check out her [AP Data Page](http://cs4all.home.blog).
 
 ## Downloads
 

@@ -511,6 +511,11 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
             '"direction"': напрямок руху
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': коли
+            '"while"': поки
       gamelab_clickedOn:
         text: коли клацнули {SPRITE}
       gamelab_debugSprite:
@@ -529,6 +534,18 @@ uk:
             '"tint"': відтінок
       gamelab_jumpTo:
         text: "{SPRITE} стрибає до {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': коли
+            '"while"': поки
+          KEY:
+            '"up"': вгору
+            '"down"': вниз
+            '"left"': ліворуч
+            '"right"': праворуч
+            '"space"': космос
+            '"x"': x
       gamelab_locationDelta:
         options:
           DIR:
@@ -546,6 +563,10 @@ uk:
         text: випадковий колір
       gamelab_setBackground:
         text: встановити колір тла {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': місто
       gamelab_setPosition:
         text: перемістити {THIS} у позицію {POSITION}
         options:
@@ -577,6 +598,11 @@ uk:
             '"height"': висота
       gamelab_setup:
         text: налаштування
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': коли
+            '"while"': поки
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -792,6 +818,7 @@ uk:
       Vector_setSize:
         text: встановити ширину {WIDTH} висоту {HEIGHT}
       aalab_changePropByFlexible:
+        text: змінити {SPRITE} {PROPERTY} на {VAL}
         options:
           PROPERTY:
             '"scale"': розмір
@@ -844,6 +871,11 @@ uk:
         options:
           DURATION:
             '"0"': постійно
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': показати
+            '"hide"': приховати
       binary_move:
         options:
           DIR:

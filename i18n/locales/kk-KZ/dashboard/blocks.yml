@@ -144,6 +144,11 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': кезде
+            '"while"': болған кезде
       gamelab_debugSprite:
         options:
           VAL:
@@ -153,6 +158,18 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': кезде
+            '"while"': болған кезде
+          KEY:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+            '"space"': кеңестік
+            '"x"': x
       gamelab_locationDelta:
         options:
           DIR:
@@ -166,6 +183,10 @@ kk:
         text: кездейсоқ түс
       gamelab_randomColor:
         text: кездейсоқ түс
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': қала
       gamelab_setPosition:
         options:
           POSITION:
@@ -179,6 +200,11 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': кезде
+            '"while"': болған кезде
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -338,6 +364,11 @@ kk:
         options:
           DURATION:
             '"0"': мәңгі
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': көрсет
+            '"hide"': жасырылған бейнесі
       binary_move:
         options:
           DIR:

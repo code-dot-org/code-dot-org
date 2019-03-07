@@ -152,7 +152,16 @@ tr:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Blokları koymakta zorlanıyor musun?  Kırmızı çiçeklerle mor çiçeklere aynı şekilde davranmaya çalış!
         2-3_Bee_Conditionals_14_b: Kırmızı çiçek mor olsaydı ekstra 'tekrarla' bloğuyla kodu ne kadar azaltabilirdin?
-        2-3_Bee_Conditionals_14_c: "İki ayrı parça halinde çözmeyi deneyin:\n! [] (https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png) \n1) 3 nektar topla\n - 5 kere ilerle \n-Nektar varmı diye kontrol et, eğer öyleyse al.\n-sola dön\n 2) Bal Yap\n-İlerle\n-iki bal yap"
+        2-3_Bee_Conditionals_14_c: |-
+          İki ayrı parça halinde çözmeyi deneyin:
+          ! [] (https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png) 
+          1) 3 nektar topla
+           - 5 kere ilerle 
+          -Nektar varmı diye kontrol et, eğer öyleyse al.
+          -sola dön
+           2) Bal Yap
+          -İlerle
+          -iki bal yap
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Unutmayın: Mor çiçekler sadece ya 0 ya da 1 nektar bulunduruyor ve programı her çalıştırdığında bu değer değişebilir.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -304,7 +313,9 @@ tr:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Bu resimde tekrarlanan her şekil önce ** yarım bir Altıgen **, daha sonra ** bir üçgenin iki kenarının**birleşiminden oluşur. '
         Course_4_Artist_12_b: 'Yarım altıgenin biraz daha büyük olması dışında, bu şekil neredeyse en son bulmaca ile aynıdır. '
-        Course_4_Artist_12_c: "1) İlk üç satır 60 piksel uzunlukta ve 60 derece dönmeniz gerekir.   \n 2) Sonraki iki satır 80 piksel uzunlukta ve 120 derece dönmeniz gerekir "
+        Course_4_Artist_12_c: |-
+          1) İlk üç satır 60 piksel uzunlukta ve 60 derece dönmeniz gerekir.   
+           2) Sonraki iki satır 80 piksel uzunlukta ve 120 derece dönmeniz gerekir 
         Course_4_Artist_12_d: |-
           **Çözüm:**
 
@@ -562,6 +573,105 @@ tr:
         mc_9_a: Doğru yöne mi bakıyorsun? 'Bloğu yok et' bloğu önündeki bloğu yok eder.
         mc_9_b: Duvardaki kara lekeler kömür madeni! 'Bloğu yok et' bloğu ile bu madenleri toplayın.
         mc_9_c: Durduğunuz alana meşale yerleştirmek için 'meşale yerleştir'i kullanın.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+          * Ekranda bir dansçının göründüğünden emin olun.
+
+          *Bu seviye 4 ölçüden sonra biter.*
+        challenges: |-
+          **İsteğe Bağlı Görevler**
+          * Çalmak için başka şarkı seçin.
+          * Geyik gibi görünen başka bir şey seçin!
+          * Dansçınızı yeniden adlandırın.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+          * Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.
+
+          *Seviye 8 ölçüden sonra biter.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.
+
+          *Seviye 12 ölçüden sonra biter.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * Şarkının yedinci ölçüsünden sonra arka plan efektini değiştirmeniz gerekiyor.
+
+          *Bu seviye 10 ölçüden sonra biter.*
+        challenges: |-
+          **İsteğe Bağlı Görev**
+
+          Şarkının farklı yerlerinde <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> etkinliklerinin altına yeni blok ekleyerek arka plan efektini değiştirin.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * En az iki dansçınız olması gerekli.
+
+          *Bu seviye 6 ölçüden sonra biter.*
+        challenges: |-
+          **İsteğe Bağlı Görev**
+
+          * Üçüncü bir dansçı ekleyin (daha fazla da ekleyebilirsiniz!)
+          * Tüm dansçılarınıza şarkının farklı yerlerinde farklı hareketler yaptırın.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * İki dansçının 100 dışında bir boyuta sahip olması gerekiyor.
+
+          *Bu seviye 6 ölçüden sonra biter.*
+        challenges: |-
+          **İsteğe Bağlı Görev**
+
+          * Diğer özellikleri değiştirerek denemeler yapın (genişlik, yükseklik, yön vb.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * En az bir dansçının renk tonunu değiştirin.
+
+          *Bu seviye 8 ölçüden sonra biter.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * İki veya daha fazla dansçının özellikleri değişmelidir.
+
+          *Bu seviye 8 ölçüden sonra biter.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * Yaratıcı olmanız yeterli!
+
+          *Bu seviye 8 ölçüden sonra biter.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * Yaratıcı olmanız yeterli!
+
+          *Bu seviye 8 ölçüden sonra biter.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          * Sol oka bastığınızda Robota bir dans hareketi yaptırmak için `sol oka basıldığında` bloğunu kullanın.
+
+          *Bu seviye 8 ölçüden sonra biter.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "**Deniz Işıklarını** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) görüyor musun? Okyanus Anıtını geçmek için bunları bir koşulla birlikte nasıl kullanabilirsin?"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Sağa dönüşler için "Eğer" bloğunu kullanabilirsiniz.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Ne kadar güzel bir mercan resifi! Mavi mercan gidilecek **sağ** yoldur, kırmızı mercanın **solda** olmadığına emin ol!
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Köpeğin hızını 'Dog_speed' değerini kedinin hızından 'cat_speed' değerinden büyük yaptığınızdan emin olun.
       D_Frozen_nested3_authored_hint:
@@ -817,6 +927,8 @@ tr:
         Function_intro_Ryan_a: Bir fonksiyonu programının içinde birçok kez çağırabilirsin!  Bu bulmacayı çözmek için iki kez çağırmayı dene.
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "**Deniz Işıklarını** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) görüyor musun? Okyanus Anıtını geçmek için bunları bir koşulla birlikte nasıl kullanabilirsin?"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Sağa dönüşler için "Eğer" bloğunu kullanabilirsiniz.
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: Ne kadar güzel bir mercan resifi! Mavi mercan gidilecek **sağ** yoldur, kırmızı mercanın **solda** olmadığına emin ol!
       HOC Dance 0_draft_authored_hint:
@@ -1178,6 +1290,8 @@ tr:
           * Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.
 
           *Seviye 8 ölçüden sonra biter.*
+      Tortoise and Hare_authored_hint:
+        behavior hint: "Davranışları düzenlemeyi deneyin!\n* Hangi değer hareket hızını kontrol ediyor?"
       Underground Avoiding Lava_authored_hint:
         mc_11_a: Lav olup olmadığını kontrol edip ona göre hareket etmen için bütün kod sana hazır verildi. Tek yapman gereken ilerletmek için gerekli bloğu koyman.
         mc_11_b: '"ilerle" komutu "eğer" bloğunun içinde mi yoksa "eğer" bloğundan sonra mı kullanılmalı?'
@@ -1224,7 +1338,38 @@ tr:
         mc_9_b: Duvardaki kara lekeler kömür madeni! 'Bloğu yok et' bloğu ile bu madenleri toplayın.
         mc_9_c: Durduğunuz alana meşale yerleştirmek için 'meşale yerleştir'i kullanın.
       Valentine_artist2_01_authored_hint:
+        Valentine_artist2_01_a: Çimlerin her kenarı 30 piksel uzunluğunda. Bir basamak deseni kullanmayı deneyin.
         Valentine_artist2_01_b: 'Tekrar eden bir örüntü gördünüz mü? Döngüde İki kere ''ilerle'' bloğu ve iki farklı ''dönüş'' bloğunu kullanabilirsiniz. '
+        Valentine_artist2_01_c: |-
+          Bu döngüyü dene
+
+          <xml><block type="controls_repeat">
+          <title name="TIMES">8</title>
+          <statement name="DO">
+          <block type="draw_move_by_constant">
+          <title name="DIR">ilerle</title>
+          <title name="VALUE">30</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">sağaDön</title>
+          <title name="VALUE">90</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">ilerle</title>
+          <title name="VALUE">30</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">solaDön</title>
+          <title name="VALUE">90</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
       aE2_authored_hint:
         aE2_a: Peçeteler 20 piksel uzun olduğundan, sonraki döngüye başlamadan önce 20 piksel atlamak gerekecektir.
       aE3_authored_hint:
@@ -1288,6 +1433,12 @@ tr:
         artistLoopsKA_a: Çizgi çizmeden ileri hareket etmek için 'İleri atla' bloğu kullan.
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Bu bulmacayı çözmek için döngü içinde 3 blok olmalıdır.
+      behaviors 3_authored_hint:
+        behavior hint: "Davranışları düzenlemeyi deneyin!\n* Hangi değer hareket hızını kontrol ediyor?"
+      behaviors 5a_authored_hint:
+        behavior hint: "Davranışları düzenlemeyi deneyin!\n* Hangi değer hareket hızını kontrol ediyor?"
+      behaviors 6_authored_hint:
+        behavior hint: "Davranışları düzenlemeyi deneyin!\n* Hangi değer hareket hızını kontrol ediyor?"
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |+
           Bu tarz döngüleri duvarlar ve çatı oluşturmak için kullanabilirsiniz. Farklı blokları tekrar deneyin. !
@@ -2500,10 +2651,7 @@ tr:
         courseA_artist_loops6_b: Bu bulmacayı çözmek için iki farklı yönde iki blok gerekecek.
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_b: Önce bir dalga için gereken kodu yaz, sonra bunu tekrarlayarak diğer ikisini çizebilirsin.
-        courseA_artist_loops7_c: |-
-          <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
-          </block></xml>döngüsü içine birden fazla blok yerleştirebileceğinizi unutmayın.
+        courseA_artist_loops7_c: "<xml><block type=\"controls_repeat\">\n<title name=\"TIMES\">???</title>\n</block></xml>döngüsü içine birden fazla blok yerleştirebileceğinizi unutmayın."
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_b: Önce bir dalga için gereken kodu yaz, sonra bunu tekrarlayarak diğer ikisini çizebilirsin.
         courseA_artist_loops7_c: |-
@@ -2526,7 +2674,9 @@ tr:
         courseA_artist_loops9_b: "Eklediğin bloğu <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> döngüsü içine yerleştirmelisin."
         courseA_artist_loops9_c: Döngüyü nereye koyacağınızı bulamıyorsanız, kodunuzu adım adım yazmayı deneyin ve oluşan örneğe bakın.
       courseA_artist_loops9_2018_authored_hint:
-        courseA_artist_loops9_b: "Eklediğin bloğu <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> döngüsü içine yerleştirmelisin."
+        courseA_artist_loops9_b: |-
+          Eklediğin bloğu <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml> döngüsü içine yerleştirmelisin.
         courseA_artist_loops9_c: Döngüyü nereye koyacağınızı bulamıyorsanız, kodunuzu adım adım yazmayı deneyin ve oluşan örneğe bakın.
       courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_b: "Eklediğin bloğu <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> döngüsü içine yerleştirmelisin."
@@ -2574,10 +2724,10 @@ tr:
         courseA_collector_loops2_b: |-
           Bir Hazineye ulaşıldığında, onu almak için 'Hazineyi Al' bloğunu kullanmayı unutmayın.
       courseA_collector_loops3_authored_hint:
-        courseA_collector_loops3_a: "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> döngüsünü kullanmayı dene!"
+        courseA_collector_loops3_a: <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> döngüsünü kullanmayı dene!
         courseA_collector_loops3_b: ' <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> gibi bir döngüye birden fazla blok yerleştirebileceğinizi unutmayın.'
       courseA_collector_loops3_2018_authored_hint:
-        courseA_collector_loops3_a: "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> döngüsünü kullanmayı dene!"
+        courseA_collector_loops3_a: <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> döngüsünü kullanmayı dene!
         courseA_collector_loops3_b: ' <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> gibi bir döngüye birden fazla blok yerleştirebileceğinizi unutmayın.'
       courseA_collector_loops3_2019_authored_hint:
         courseA_collector_loops3_a: "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> döngüsünü kullanmayı dene!"
@@ -2916,14 +3066,10 @@ tr:
           </xml>
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_b: Bir hata yapmaktan korkmayın! Bloklar ekleyin ve ne olacağını görmek için kodu çalıştırmayı deneyin.
-        courseA_maze_seq13_c: |-
-          <xml><block type="maze_moveNorth"/></xml>
-          <xml><block type="maze_moveEast"/></xml> blokları domuza yaklaşmanıza yardımcı olur.
+        courseA_maze_seq13_c: "<xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> blokları domuza yaklaşmanıza yardımcı olur."
       courseA_maze_seq13_2018_authored_hint:
         courseA_maze_seq13_b: Bir hata yapmaktan korkmayın! Bloklar ekleyin ve ne olacağını görmek için kodu çalıştırmayı deneyin.
-        courseA_maze_seq13_c: |-
-          <xml><block type="maze_moveNorth"/></xml>
-          <xml><block type="maze_moveEast"/></xml> blokları domuza yaklaşmanıza yardımcı olur.
+        courseA_maze_seq13_c: "<xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> blokları domuza yaklaşmanıza yardımcı olur."
       courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_b: Bir hata yapmaktan korkmayın! Bloklar ekleyin ve ne olacağını görmek için kodu çalıştırmayı deneyin.
         courseA_maze_seq13_c: |-
@@ -4386,6 +4532,8 @@ tr:
       courseC_PlayLab_eventsA_2018_authored_hint:
         courseC_PlayLab_eventsA_b: Bulmacayı çözmek için`çalıştığı zaman` olay bloğunu çalışma alanına sürüklemeye ihtiyacın olacak.
       courseC_PlayLab_eventsA_2019_authored_hint:
+        courseC_PlayLab_eventsA_b: Bulmacayı çözmek için`çalıştığı zaman` olay bloğunu çalışma alanına sürüklemeye ihtiyacın olacak.
+      courseC_PlayLab_eventsA_embed_2019_authored_hint:
         courseC_PlayLab_eventsA_b: Bulmacayı çözmek için`çalıştığı zaman` olay bloğunu çalışma alanına sürüklemeye ihtiyacın olacak.
       courseC_PlayLab_events_challenge1_authored_hint:
         courseC_PlayLab_events_challenge_a: |

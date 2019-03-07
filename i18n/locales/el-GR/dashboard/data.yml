@@ -29,11 +29,11 @@ el:
         Jigsaw: Παζλ
         MazeStep: Κατάσταση Βήμα Λαβυρίνθου
         Wordsearch: Αναζήτηση Λέξεων
-        Webapp: Εργαστήριο εφαρμογών
+        Webapp: App Lab
         ArtistEC: Ο Καλλιτέχνης
         TextMatch: Ταίριασμα Κειμένου
         StudioEC: Εργαστήριο Παιχνιδιού
-        Applab: Εργαστήριο εφαρμογών
+        Applab: App Lab
         NetSim: Προσομοιωτής Διαδικτύου
         Custom: Καλλιτέχνης
         CustomStudio: Εργαστήριο Παιχνιδιού
@@ -396,6 +396,7 @@ el:
         csp_applab_functions_parameters: Συναρτήσεις με παραμέτρους
         csp_applab_loops: Βρόχοι
         csp_concept_rgb: Λίγα για τα Εικονοστοιχεία
+        csp_cs_is_changing_everything: H Επιστήμη των Υπολογιστών αλλάζει τα Πάντα
         csp_pixelation_color_1: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 1
         csp_pixelation_color_2: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 2
         csp_pixelation_color_3: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 3

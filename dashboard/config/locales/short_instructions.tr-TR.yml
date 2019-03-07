@@ -105,6 +105,8 @@ tr:
       2-3 Artist Functions 13: "Sana dört fonksiyon sunuyoruz. \nBunları bir veya
         daha fazla döngü içinde kullanarak resimler yap ve arkadaşlarınla paylaş.
         Örnek için çalıştıra bas."
+      2-3 Artist Functions 2 a: 'Gozluk olusturmak ve yeni fonksiyonu cagirmak icin
+        kucuk yesil ''draw a square'' blogunu kullan '
       2-3 Artist Functions 2: "Fonksiyonlar yeni bloklar tanımlamanı sağlar! \r\n\r\nKare
         çizmek için gerekli blokları \"Kare çiz\" fonksiyonuna taşıdık. \"Kare çiz\"
         fonksiyonunu kullanarak gözlükleri çizebilir misin? \r\n\r\nKareler birbirlerinden
@@ -386,6 +388,9 @@ tr:
       20hr_farmer_stage9_1: Merhaba, ben bir çiftçiyim. Çiftlikteki alanı ekime hazırlamak
         için düzleştirmemde yardımına ihtiyacım var. Beni bir toprak yığınına doğru
         hareket ettir ve "Kaldır" bloğunu yığını kaldırmam için kullan.
+      20hr_farmer_stage9_10: Gec saate kadar calisiyorum, disarisi karanlik, ve onumde
+        nasil buyuk engeller oldugunu tarif edemem. Simdi while blogundaki gibi seceneklere
+        sahip degilim. Beni bu alanda hareket ettir ve eger onumde engel varsa kaldir
       20hr_farmer_stage9_11: 'Dışarısı hala karanlık. Beni alan boyunca ilerlet. Önümde
         bir yığın varsa kaldır. Eğer bir çukur var ise içini doldur. İpucu: eğer bloğunun
         üzerinde, seçeneklerin aşağı doğru açılan menüsünü kullan.'
@@ -599,6 +604,9 @@ tr:
       4-5 Bee Conditionals - FC Test: Arı sadece nektar istiyor. Bütün nesneler çiçek
         değil bu sebeple her bulutun altını çiçek mi diye kontrol ediniz. Eğer çiçekse
         nektar alın.
+      4-5 Bee Conditionals 1 (copy 1): Ari bunun bir cicek yada kovan oldugunu soyleyemez.
+        Sadece ciceklerden nektar topla, ama once o bir cicek mi yoksa kovan mi kontrol
+        et.
       4-5 Bee Conditionals 1: Bu bulutun altında ne var? Sadece çiçeklerden nektar
         topla, fakat önce bulutun altında çiçek var mı kontrol et.
       4-5 Bee Conditionals 2 (copy 1): Arı sadece nektar istiyor. Unutmayın ki bütün
@@ -608,11 +616,17 @@ tr:
       4-5 Bee Conditionals 3: |-
         Şuan arı sadece bal yapmak istiyor.
         Balı yalnızca petekte yapıp yapmadığını kontrol et.
+      4-5 Bee Conditionals 4 (copy 1): Bilinmeyen nesne cicek veya kovan olabilir.
+        Eger o cicekse, nektar toplamak icin if/else bloklarini kullan, degilse bal
+        yapmak icin bloklari kullan (cunku o kovan oldugu icin).
       4-5 Bee Conditionals 4: Bazen bulut çiçeği saklar bazende peteği. Eğer/değilse
         bloğu kullanarak çiçek ise nektar al değilse bal yap( bu durumda petektir).
       4-5 Bee Conditionals 5: Bulutların altında çiçek yada petek olabilir. Eğer/değilse
         bloğu kullan. Eğer çiçek ise polen topla değilse bal yap (çünkü çiçek değilse
         petektir).
+      4-5 Bee Conditionals 6 (copy 1): Bu mor cicek belki 3, 2, veya bir nektara sahip.
+        Burada if, else-if, else bloklarini olusturmak icin bir biri ile iliskili
+        iki if else bloklari var.
       4-5 Bee Conditionals 6: "Bu çiçekte ne kadar nektar var emin değilim ama 1,
         2 veya 3 nektar olduğunu biliyorum. \r \r koşullu blok ('eğer' ve/veya ' Eğer/değilse')
         kullanarak olduğu kadar nektar al. \r \r, Nektar miktarı bulmacayı her çalıştırdığınızda
@@ -741,8 +755,17 @@ tr:
         \ Zemini düzleştirmek için kaç kürek dolusu toprak taşımalısın?"
       4-5 While Loops Assessment 1: Birçok çukur ve toprak var. Yardım ederek çukurları
         doldurmamı ve toprağı temizlememi sağla.
+      AB_Debug_PlayLab2: |-
+        Neden bu oyunda hic birsey olmuyor?
+
+        gizlenmis hatalari bulabilir misin? bazilarini bulmak bazilarindan kolay.
+      AB_Debug_PlayLab3: Bicagi iki bayraga da hareket ettir. Eger birseyler ters
+        giderse, hata bul!
+      AlgPD DR Free Play: Kendi problemine gore bir fonksiyon olustur.
       Alien Defender: 'Proje fikri: Bir savunma oyunu yap!'
       Alien Defender_2018: 'Proje fikri: Bir savunma oyunu yap!'
+      AllTheThings Applab - Turtle move with button: Tiklandiginda kaplumbagayi hareket
+        ettirecek bir buton ekle. (Tum talimatlari gormke icin tikla)
       'AllTheThings: Pixelation - Lesson 14 - Make the Letter A': '3x5 bir ''A2 harfi
         yapın. Widget yanlış boyutlarla ayarlandı. İlk göreviniz 5: 0000 0101 için
         ikinci byte''ı 8-bit ikilik kod olarak ayarlamak. Sonra piksel verilerini
@@ -756,12 +779,15 @@ tr:
         * Seni oluşturulmuş 4x2 Maddie resmi ile başlatıyoruz ancak son iki kareyi bıraktık.
         * Resmi, hangi iki rengin eksik olduğunu bularak ve onları kodlayarak bitirmelisin.
       App Lab test: dene
+      AppLab_test02: Aktivitenin bir cümle Özeti. Tüm talimatları görüntülemek için
+        tıklayin.
       Applab AllTheThings ResourcesTab AllResources: Yukarıda ve kaplumbağanın başlangıç
         noktasının solunda bir 1x1 kare çizin. Tam talimatları görmek için tıklayın.
       Applab AllTheThings ResourcesTab MapReference: Yukarıda ve kaplumbağanın başlangıç
         noktasının solunda bir 1x1 kare çizin. Tam talimatları görmek için tıklayın.
       Applab AllTheThings ResourcesTab ReferenceLinks: Yukarıda ve kaplumbağanın başlangıç
         noktasının solunda bir 1x1 kare çizin. Tam talimatları görmek için tıklayın.
+      Applab test: Bu seviye gonderilebilir. Sadece test etmek icin!
       Artist - Nested Loops 1: 'Bu üçgenleri çizmek için kodu tamamlayın. İlki sizin
         için yapıldı. İpucu: 3 üçgeni toplam 360 derece dönerek yapılır.'
       Artist - Nested Loops 10: Bayrak üzerindeki en son yıldız satırını çizin. Yıldızlar
@@ -769,9 +795,18 @@ tr:
       Artist - Nested Loops 11: İç içe döngü kullanarak 10 kareyi tamamlayın. Her
         bir kare 30 pikseldir.
       Artist - Nested Loops 12: İç içe döngü kullanarak 36 tane üçgen çizebilir misin?
+      Artist - Nested Loops 2: 'Simdi 10 tane ucgen cizmek icin bu donguyu digerinin
+        icine koy. Buna ic ice dongu denir. Ipucu: Tum ucgenler 360 dereceli donmeyi
+        tamalar.  '
+      Artist - Nested Loops 3: 'Baslangic kodlarini baska bir dongunun icine koyarak
+        bir gunes olustur. Bu ic ice dongu olarak adlandirilir.  '
       Artist - Nested Loops 5: Bir yel değirmeni oluşturmak için verilen kodu döngü
         içinde kullan.
       Artist - Nested Loops 6: Üçgen kodunu döngüde kullanarak altıgen çizebilir misin?
+      Artist - Nested Loops 7: 'Bu dizayni 10 kere donguleyin. Her dongulediginde
+        ne kadar aciyla donersin?(Ipucu: 360 in 10 a bolumu ne?)'
+      Artist - Nested Loops 8: 'Bu dizayni 6 kere dongule. Her dongude ne kadar aciyla
+        donersin?(ipucu: 360''in altiya bolumu ne?)'
       Artist - Nested Loops 9: Timsahın ağzına dişleri çiz!
       Artist - Nested Loops Assessment 1: Tasarımı tamamlamak için iç içe geçmiş bir
         döngü kullanmayı deneyin.
@@ -789,6 +824,10 @@ tr:
       Bergeron Robot Maze1: 'Yaramaz domuzu yakalamak için bana yardım edebilir misin?
         Birkaç ''ilerle'' bloğunu ''çalıştığı zaman'' bloğunun altına sıralayın ve
         ''çalıştır'' a basın. '
+      Big Game Animation 1 (copy 1): Basit dogrusal fonksiyonlar yazmayi ogrendin,
+        onlari kullanarak oyunumuza bazi hareketleri eklemeye calisalim. Play a tiklayarak
+        oyunun guncel halini gorebilirsin(hepsi degil!), istedigin degiskenleri degistirebilirsin,
+        sonra devam etmek icin finish e tikla.
       Brad Spooky House Copy: 'Serbest Zaman: Yazdığınız fonksiyonlar ve ektra birkaç
         tanesi burada. Harika bir şeyler çiz! Kalem ucu ile oyna be çizimin ne kadar
         farklı olabildiğini gör!'
@@ -919,6 +958,8 @@ tr:
         olan uçak hareket eder."
       CSDU4 - AppLab - 1: Mavi dörtgeni çizmek için kullanmadan önce kalemRengi()
         ve kalemKalınlığı() için hazırlanmış belgeyi okuyun.
+      CSDU4 - Design Mode - 1: Tiklandiginda kaplumbagayi hareket ettirecek bir buton
+        ekle. (Tum talimatlari gormke icin tikla)
       CSDU6 - Arrays - expressionsAsIndexes: Diziden rastgele seçilen bir rengi gösteren
         bir program yazın. (Tam talimatları görmek için tıklayın)
       CSDU6 - Arrays - indexPractice: Dizinin içeriğini sayısal düzende ekrana yazın.
@@ -988,6 +1029,8 @@ tr:
         değerleri listeleyin. (Tüm talimatlar için tıklayınız)
       CSPU5_U3 - Loops - 4_2019: Hata ayıklama komutları kullanın ve 6 dan önceki
         değerleri listeleyin. (Tüm talimatlar için tıklayınız)
+      CSPU5_U3L13 - Turtle move with button: Tiklandiginda kaplumbagayi hareket ettirecek
+        bir buton ekle. (Tum talimatlari gormke icin tikla)
       CSPU5_U3L15 full clicker app: Tıkırtı oyununu tamamla! (Tüm talimatlar için
         tıklayınız)
       CSPU5_U3L15 full clicker app_2018: Tıkırtı oyununu tamamla! (Tüm talimatlar
@@ -1544,6 +1587,37 @@ tr:
       Course E MC Conditionals1: En değerli kaynakları yer altında bulabilirsiniz
         ama içerisi karanlık olabilir. En az 2 meşale yerleştirin ve 2 kömür çıkarın.
       Course1BeePuzzle12: Üç nektar topla ve iki bal yap
+      CourseD_Dance_Party_01: "`Yeni yap` bloğunu çalışma alanına sürükleyin ve `kurulum`
+        bloğunun içine bağlayın."
+      CourseD_Dance_Party_02: Geyiği 4 ölçü sonra yeni bir harekete başlatın!
+      CourseD_Dance_Party_03: Şimdi dansçıyı 6 ölçü sonra yeni bir harekete başlatın!
+      CourseD_Dance_Party_04: Programınıza arka plan efekti ekleyin.
+      CourseD_Dance_Party_05: Dansçının her 2 ölçüde bir hareket değiştirmesi için
+        başka bir yeni blok kullanın.
+      CourseD_Dance_Party_06: Kediyle birlikte dans edecek `arkaplan_dansçısı1` isimli
+        bir arka plan dansçı yaratın.
+      CourseD_Dance_Party_08: İki arka plan dansçısını da aynı boyuta getirebilir
+        misini?
+      CourseD_Dance_Party_09: Dansçının rengini değiştirmek için `renk tonu ayarla`
+        bloğunu kullanın.
+      CourseD_Dance_Party_10: "`Takibe başlar` bloğunu kullanarak diğer dansçının
+        da müziğe tepki vermesini sağlayın."
+      CourseD_Dance_Party_11: "`Yukarıya basıldığında` bloğu yukarı oka basıldığında
+        kodu çalıştırmanızı sağlar. Yukarı oka basarak dansçıya hızlı bir hareket
+        yaptırmaya çalışın."
+      CourseD_Dance_Party_11_5: Ördekleri birlikte dans ettirmek için "tüm ördekler"
+        bloğunu kullanın.
+      CourseD_Dance_Party_11b: Robota sağ ok tuşuna basarak bir kere "drop" ve yukarı
+        ok tuşuna basarak bir kere "floss" hareketi yaptırın. Elinizden geldiğince
+        hızlı drop-floss yapın!
+      CourseD_Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla
+        paylaşın.
+      CourseE_HOC 2018 Level_10: Bu Okyanus Anıtının girişine git.
+      CourseE_HOC 2018 Level_11: Okyanus Anıtının içinde Prizmarin ile su yolu inşa
+        et.
+      CourseE_HOC 2018 Level_7a: Sandık bulmak için bu su altı harabelerini araştır.
+      CourseE_HOC 2018 Level_9b: Hazineye ulaşmak için mercanı yol işaretleri olarak
+        kullan.
       CourseF_PlayLab_vars1: 'Bu oyunu oynamak için, hiç kod yazmana gerek yok, sadece
         ''çalıştır''a bas! '
       CourseF_PlayLab_vars10: "Serbest Oyun Zamanı! İşte burada bu bölümde oynadığımız
@@ -2616,6 +2690,8 @@ tr:
         rastgele girdilerle test etmek için kullanın. (Tüm talimatları için tıklayınız)
       U3L08 how to add comments_2019: RandomNumber() bloğunu tasarladığınız fonksiyonları
         rastgele girdilerle test etmek için kullanın. (Tüm talimatları için tıklayınız)
+      U3L13 - Turtle move with button: Tiklandiginda kaplumbagayi hareket ettirecek
+        bir buton ekle. (Tum talimatlari gormke icin tikla)
       U3L15 full clicker app: Tıkırtı oyununu tamamla! (Tüm talimatlar için tıklayınız)
       U3L2 Using Simple Commands (no tooltips): Yukarıda ve kaplumbağanın başlangıç
         noktasının solunda bir 1x1 kare çizin. Tam talimatları görmek için tıklayın.
@@ -5212,6 +5288,10 @@ tr:
       grade3_maze_nestedLoops3: Sadece iki blok kullanarak beni domuzun yanına götür.
       grade3_maze_nestedLoops4: Domuza ulaşmak için daha az blok kullanarak iki döngü
         kullanın.
+      grade3_robotFarmer_ConditionalsIntro_10: Gec saate kadar calisiyorum, disarisi
+        karanlik, ve onumde nasil buyuk engeller oldugunu tarif edemem. Simdi while
+        blogundaki gibi seceneklere sahip degilim. Beni bu alanda hareket ettir ve
+        eger onumde engel varsa kaldir
       grade3_robotFarmer_ConditionalsIntro_11: 'Dışarısı hala karanlık. Beni alan
         boyunca ilerlet. Önümde bir yığın varsa kaldır. Eğer bir çukur var ise içini
         doldur. İpucu: eğer bloğunun üzerinde, seçeneklerin aşağı doğru açılan menüsünü
@@ -5225,6 +5305,10 @@ tr:
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Delikleri 5 kürek dolusu
         toprakla doldurmam için bana yardım et. İpucu: "süresince" bloğunun içine
         "tekrar" bloğunu yerleştirebilirsin.'
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo2: Gec saate kadar calisiyorum,
+        disarisi karanlik, ve onumde nasil buyuk engeller oldugunu tarif edemem. Simdi
+        while blogundaki gibi seceneklere sahip degilim. Beni bu alanda hareket ettir
+        ve eger onumde engel varsa kaldir
       grade4_arist_nested_loop_circles1: 'Değerlendirme: Tasarımı tamamlamak için
         iç içe döngüler kullan.'
       grade4_arist_nested_loop_flags1: Bir yel değirmeni oluşturmak için verilen kodu

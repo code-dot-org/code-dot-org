@@ -108,11 +108,23 @@ hi:
         options:
           KEY:
             '"space"': अंतरिक्ष
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
       gamelab_debugSprite:
         options:
           VAL:
             'true': 'सही '
             'false': 'गलत '
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
+          KEY:
+            '"space"': अंतरिक्ष
       gamelab_locationDelta:
         options:
           DIR:
@@ -121,6 +133,10 @@ hi:
         text: यादृच्छिक रंग
       gamelab_randomColor:
         text: यादृच्छिक रंग
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
       gamelab_setPosition:
         options:
           POSITION:
@@ -129,6 +145,11 @@ hi:
         options:
           PROPERTY:
             '"height"': ऊँचाई
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
       gamelab_whenKey:
         options:
           KEY:
@@ -210,6 +231,10 @@ hi:
         options:
           DURATION:
             '"0"': हमेशा के लिए
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"hide"': छुपाएँ
       binary_whenKey:
         options:
           KEY:

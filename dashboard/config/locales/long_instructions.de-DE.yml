@@ -381,6 +381,89 @@ de:
       Course 4 SCVP 1: Schaffe eine Funktion mit Parametern, die es der Figur erlaubt,
         bei x Pixeln vor und zurück zu springen und bei y Pixeln auch hoch und runter
         (und dabei positive und negative Zahlen nutzt).
+      CourseD_Dance_Party_01: |-
+        *Los geht‘s mit der Tanzparty!*
+
+        Ziehen Sie den Block "einen Neuen erstellen" in den Arbeitsbereich, und verbinden Sie ihn mit dem "Setup" -Block, um Ihren ersten Tänzer zu erstellen.
+
+        * *Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten.*
+      CourseD_Dance_Party_02: |-
+        Lassen Sie den Elch tanzen!
+
+        Ziehen Sie den Block <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinden Sie ihn unterhalb des Blocks <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takte"</title></block></xml>. Ihr Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
+
+
+        **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
+      CourseD_Dance_Party_03: |-
+        *Jetzt grooven wir!*
+
+        Fügen Sie einen Block <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"Takte"</title></block></xml> zu Ihrem Arbeitsbereich hinzu. Lassen Sie den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen.
+      CourseD_Dance_Party_04: |-
+        *Dieser Tanz braucht etwas Pep!*
+
+        Suchen Sie in Ihrer Toolbox nach einem neuen Block, der Ihrem Tänzer einen Hintergrundeffekt hinzufügt. Beobachten Sie, wie sich die Effekte passend zur Musik verändern.
+      CourseD_Dance_Party_05: |-
+        Verwenden Sie einen weiteren neuen Block, damit der Tänzer **alle 2 Takte** den Tanzschritt wechselt!
+
+        * Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
+      CourseD_Dance_Party_06: |-
+        *Wir brauchen noch mehr Tänzer!*
+
+        Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
+      CourseD_Dance_Party_08: |-
+        Jeder Tänzer hat eine Reihe von _Eigenschaften_, die steuern, wie er aussieht.
+
+        Sie können es aussehen lassen, als befinde sich der Tänzer im Hintergrund, indem Sie seine _Größe_ kleiner machen. Können Sie beide Backup-Tänzer gleich groß machen?
+      CourseD_Dance_Party_09: |-
+        Tänzer haben eine "Farbton" -Eigenschaft, mit der man eine Farbschicht hinzufügen kann. Versuchen Sie, den Farbton eines Ihrer Tänzer zu verändern.
+        * Farbtöne mischen die gewählte Farbe mit den Farben des Tänzers.
+      CourseD_Dance_Party_10: |-
+        Jetzt wissen wir, wie wir die Eigenschaften eines Tänzers ändern. Mit diesem Block können wir dafür sorgen, dass immer die gleichen Eigenschaften automatisch auf die Musik reagieren:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Dieses Programm verwendet den "Bass" (die tiefen Töne) der Musik, um die Höhe eines Tänzers zu kontrollieren. Können Sie die anderen Tänzer auch auf die Musik reagieren lassen?
+      CourseD_Dance_Party_11: |-
+        Mit dem Block <xml><block type="Dancelab_whenKey"></block></xml> können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird.
+
+        Sie können den Tanzschritt verändern, die Eigenschaften eines Tänzers verändern oder einen schnellen einmaligen Tanzschritt tun. Seien Sie kreativ und halten Sie Ausschau nach neuen Blöcken!
+      CourseD_Dance_Party_11_5: |-
+        Schauen Sie sich diesen Block an:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"ENTE"</title>
+        <title name="LAYOUT">"Kreis"</title>
+        </block></xml>
+
+        Jetzt können Sie eine ganze Reihe von Tänzern auf einmal erstellen!
+
+        Verwenden Sie einige der "alle Enten“-Blöcke, um Code zu schreiben, der alle Enten gemeinsam tanzen lässt.
+      CourseD_Dance_Party_11b: Es ist Zeit für einen Tanz-Wettbewerb! Die Katze dabt,
+        wenn Sie die linke Pfeiltaste drücken. Lassen Sie den Roboter "droppen", indem
+        Sie die rechte Pfeiltaste drücken.
+      CourseD_Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und
+        teilen Sie ihn mit Ihren Freunden.
+      CourseE_HOC 2018 Level_10: "Irgendwo in diesem Ozeanmonument versteckt sich
+        ein **Tintenfisch** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png).
+        Findest du ihn?\n\n"
+      CourseE_HOC 2018 Level_11: Baue eine Mauer aus **Prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        um den schwarzen Beton. Dies aktiviert den **Aquisator** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        und schließt die Herausforderung ab!
+      CourseE_HOC 2018 Level_7a: "Du hast die Unterwasserruine gefunden. Suche im
+        Sandstein nach eine **Truhe** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        mit **Prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      CourseE_HOC 2018 Level_8: "Erst Eisberge, nun Lava? Durchquere diese Vulkaninsel,
+        und finde die **Tropenfische** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        im Korallenriff.\n\n"
+      CourseE_HOC 2018 Level_9b: "Du hast das Riff erreicht. Suche jetzt nach dem
+        **Herz des Meeres** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
+        Verwende blaue und rote Korallen, um die Schatz**truhe** zu erreichen![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       CourseF_PlayLab_vars2: Das Rennen im letzten Rätsel war nicht sehr fair! Ändere
         die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst
         als die Katze. Der erste, der 10 Fahnen hat, gewinnt!

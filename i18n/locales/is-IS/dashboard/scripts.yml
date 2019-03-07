@@ -2,10 +2,13 @@ is:
   data:
     script:
       category:
+        csd_2018_category_name: Uppgötvanir tölvunarfræði ('18-'19)
         csf_category_name: TF Grunnur
+        csf_2018_category_name: Grunnatriði tölvunarfræði (2018)
         csf_international_category_name: Grunnatriði TF - alþjóðlegt
         csf2_draft_category_name: 'Í þróun: Námskeið A-F'
         csp_category_name: "'15-'16 TF Grundvöllur"
+        csp_2018_category_name: Grunnhugtök tölvunarfræði ('18-'19)
         cspexams_category_name: Æfingapróf fyrir Undirstöðuatriði TF
         csp17_category_name: Grunnhugtök tölvunarfræði
         full_course_category_name: Heil námskeið
@@ -147,21 +150,21 @@ is:
             'Studio: Create a Story':
               name: 'Leikjasmiðja: Búa til sögu'
         playlab:
-          title: Leikjasmiðja
-          description: Búðu til sögu eða leik með Leikjasmiðju!
+          title: Leikjasmiðjan
+          description: Búðu til sögu eða leik með Leikjasmiðjunni!
           description_short: Búðu til sögu eða leik með Leikjasmiðju!
           stages:
             Play Lab:
-              name: Leikjasmiðja
+              name: Leikjasmiðjan
         artist:
           title: Listamaður
-          description: Teiknaðu flottar myndir og mynstur með listamanninum!
+          description: Teiknaðu flottar myndir og mynstur með Listamanninum!
           description_short: Teiknaðu flottar myndir og mynstur með listamanninum!
           stages:
             Artist:
               name: Listamaður
         hourofcode:
-          title: Hefðbundið völundarhús
+          title: Völundarhús
           description: Prófaðu undirstöðuatriði í tölvunarfræði með persónum úr Angry Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
           description_short: Prófaðu grunnatriði í tölvufræði með mörgum skemmtilegum fígúrum!
           stages:
@@ -177,7 +180,7 @@ is:
         course4:
           title: Námskeið 4
           description: Námskeið 4 er ætlað nemendum sem hafa lokið námskeiðum 2 og 3. Nemendur læra að fást við þrautir sem verða æ flóknari en læra um leið að samnýta ýmiss hugtök við lausn þrautanna. Í lok námskeiðsins munu nemendur hafa búið til forrit sem sýna margvíslega færni þeirra svo sem notkun "frá" lykkja og falla með stikum. Hentar 4 - 8 bekk.
-          description_short: Búðu til flóknari forrit og lærðu að nota hugtök eins og lykkjur og föll með stikum. Þetta er framhald á Námskeiði 3.
+          description_short: Búðu til flóknari forrit og lærðu að nota hugtök eins og lykkjur og föll með stikum (færibreytum). Þetta er framhald á Námskeiði 3.
           description_audience: Fyrir 10-18 ára
           stages:
             Artist:
@@ -330,8 +333,7 @@ is:
               name: Hönnunaruppskriftin
         K5PD:
           title: Fagmenntun kennara 5 - 11 ára (K-5)
-          description: Fagmenntun kennara fyrir 5 - 11 ára námskeið
-          description_short: Fagmenntun kennara fyrir 5 - 11 ára námskeið
+          description: 'Fagmenntun kennara fyrir 5 - 11 ára námskeið'
           stages:
             Computer Science Pedagogy:
               name: Kennsluhættir í tölvunarfræði
@@ -355,6 +357,8 @@ is:
               name: Verkefni án tölvu
             Writing computer programs:
               name: Skrifa tölvuforrit
+            new stage:
+              name: nýr áfangi
         netsim:
           title: Internet hermir
           stages:
@@ -449,7 +453,7 @@ is:
             Hoc2015 Blockly:
               name: Hoc2015 Blockly
             Play Lab:
-              name: Leikjasmiðja
+              name: Leikjasmiðjan
             The Artist:
               name: Listamaðurinn
             The Maze:
@@ -647,6 +651,8 @@ is:
           stages:
             Introduction to PD:
               name: Kynning á PD
+            Introduction to StarLogo Nova:
+              name: Kynning á StarLogo Nova
             Post-Survey:
               name: Eftirkönnun
             The Tutorial:
@@ -670,6 +676,8 @@ is:
           stages:
             APIs and Function Parameters:
               name: API og stikar falla
+            Beyond Buttons Toward Apps:
+              name: Frá hnöppum til appa
             Canvas and Arrays in Apps:
               name: Myndflötur og fylki í öppum
             Compound Conditional Logic:
@@ -812,6 +820,8 @@ is:
           stages:
             Introduction to PD:
               name: Kynning á PD
+            Introduction to StarLogo Nova:
+              name: Kynning á StarLogo Nova
             Post-Survey:
               name: Eftirkönnun
             The Tutorial:
@@ -828,6 +838,8 @@ is:
           stages:
             Introduction to PD:
               name: Kynning á PD
+            Introduction to StarLogo Nova:
+              name: Kynning á StarLogo Nova
             Post-Survey:
               name: Eftirkönnun
             The Tutorial:
@@ -875,8 +887,14 @@ is:
               name: DNS í raunheimi
             Encryption Algorithms:
               name: Lyklar og aðgangsorð
+            Invent an Addressing Protocol:
+              name: Finna upp vistafangastaðal
+            One Way Functions - Ice Cream Vans:
+              name: Einstefnuföll - Vandamál heitra reita
             Packets and Making a Reliable Internet:
               name: Pakkar og gerð áreiðanlegs internets
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
             Tell Me a Secret - Encrypting Text:
               name: Þörfin fyrir dulkóðun
             The Internet:
@@ -957,6 +975,8 @@ is:
               name: Minecraft
             Multi:
               name: Val
+            Multi2:
+              name: Val2
             Odometer:
               name: Vegmælir
             Online PD:
@@ -981,6 +1001,10 @@ is:
               name: Stakt myndband
             Curriculum Reference:
               name: Tilvísun í námskrá
+            Sprite Lab:
+              name: Kvikasmiðjan
+            Dance Lab:
+              name: Danssmiðja
         algebraPD2b:
           title: Tölvunarfræði í algebru - fagmenntun
           description: '2. áfangi á neti: Blandað sumarnám'
@@ -1013,7 +1037,7 @@ is:
         cspfacilitator:
           stages:
             App Lab:
-              name: Appsmiðja
+              name: Appsmiðjan
             Broadcast Lesson:
               name: Útvörpuð kennslustund
             Internet Simulator:
@@ -1224,6 +1248,10 @@ is:
           stages:
             Getting Started:
               name: Fyrstu skrefin
+            Welcome to the Course!:
+              name: Velkomin á námskeiðið!
+            Wrap Up and Next Steps:
+              name: Samantekt og næstu skref
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -1244,11 +1272,23 @@ is:
               name: Lagasmíð
             The Big Event:
               name: Stórviðburður
+        vigenere:
+          description: Nota Vigenere Cipher græjuna til að kanna dulkóðun og afkóðun skilaboða með Vigenere Cipher dulmáli.
+          description_short: Nota Vigenere Cipher græjuna til að kanna dulkóðun og afkóðun skilaboða með Vigenere Cipher dulmáli.
+          stages:
+            Vigenere:
+              name: Vigenere
         algebraPD3a:
           title: Tölvunarfræði í algebru - fagmenntun
           stages:
             Lesson Prep:
               name: Kennslustund undirbúin
+            Updates - The Big Game and Projects:
+              name: Uppfærslur - Stórleikur og verkefni
+            Updates - The Design Recipe:
+              name: Uppfærslur - Hönnunaruppskriftin
+            Updates - Tweaks and Polish:
+              name: Uppfærslur - Fínstillingar og fágun
         sciencePD3_pre1:
           stages:
             Welcome Back!:
@@ -1360,6 +1400,8 @@ is:
               name: Lestur færslna
             Search Terms:
               name: Leitarorð
+            Using Data in the Real World:
+              name: Notkun gagna í raunheimi
             What Data Can Tell Us:
               name: Það sem gögn geta sagt okkur
             Why Make Apps?:
@@ -1372,6 +1414,8 @@ is:
               name: Áskoranir í lífvísindum
             Physical Science Challenges:
               name: Áskoranir í raunvísindum
+            Thinking About Implementation:
+              name: Hugsað til framkvæmdar
             Welcome!:
               name: Velkomin!
             Wrap-Up:
@@ -1618,6 +1662,8 @@ is:
               name: 'Leikjasmiðjan: Skilgreining á föllum'
             'Unplugged: Contracts':
               name: 'Verkefni án tölvu: Samningar'
+            'Unplugged: Fast Functions':
+              name: 'Án tölvu: Fljót föll'
             'Unplugged: The Design Recipe':
               name: 'Verkefni án tölvu: Hönnunaruppskriftin'
         AlgebraB:
@@ -1679,6 +1725,8 @@ is:
               name: Pakkar og gerð áreiðanlegs internets
             Personal Innovations:
               name: Persónuleg nýsköpun
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
             Sending Binary Messages:
               name: Sending stafrænna skilaboða
             Sending Binary Messages with the Internet Simulator:
@@ -1691,6 +1739,8 @@ is:
               name: Þörfin fyrir vistföng
             The Need for DNS:
               name: Þörfin fyrir DNS
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1715,6 +1765,8 @@ is:
               name: Gögn gerð sjónræn
             Text Compression:
               name: Þjöppun texta
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         csp3-2017:
           description_short: Lærðu undirstöðu í JavaScript forritun með nálgun sem beitir ofan-frá hönnun og notar klassíska "turtle" teiknun.
           stages:
@@ -1734,14 +1786,22 @@ is:
               name: Notkun einfaldra skipana
             Creating Functions with Parameters:
               name: Gerð falla með stikum
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         csp4-2017:
           stages:
             Identifying People with Data:
               name: Að bera kennsl á fólk með gögnum
             Simple Encryption:
               name: Einföld dulkóðun
+            Post-Course Survey:
+              name: Könnun eftir námskeið
+            Student Post-Course Survey:
+              name: Nemendakönnun að loknu námskeiði
         csp5-2017:
           stages:
+            Beyond Buttons Toward Apps:
+              name: Frá hnöppum til appa
             Canvas and Arrays in Apps:
               name: Myndflötur og fylki í öppum
             Compound Conditional Logic:
@@ -1784,14 +1844,36 @@ is:
               name: 5. eining - Mat 1
             Unit 5 Assessment 2:
               name: 5. eining - Mat 2
+            "'If' Statements Unplugged":
+              name: "'Ef' yrðingar án tölvu"
             '"If" Statements Unplugged':
               name: '''Ef'' yrðingar án tölvu'
+            Getting started with If Statements:
+              name: Byrjað á Ef yrðingum
+            Unit 3 Chapter 1 Assessment 3:
+              name: 3. eining 1. kafli - Mat 3
+            If statements:
+              name: Ef yrðingar
+            Unit 3 Assessment 3:
+              name: 3. eining - Mat 3
+            Unit 3 Assessment 4:
+              name: 3. eining - Mat 4
+            If-else-if and Conditional Logic:
+              name: Ef-annars-ef og rökvísi skilyrðinga
             Unit 5 Assessment 3:
               name: 5. eining - Mat 3
             Unit 5 Assessment 4:
               name: 5. eining - Mat 4
             '"if-else-if" and Conditional Logic':
               name: '"ef-annars-ef" og rökvísi skilyrðinga'
+            Multi-Screen Apps:
+              name: Öpp með fleiri en eina skjámynd
+            '"if" Statements Unplugged':
+              name: '"ef" yrðingar án tölvu'
+            Boolean Expressions and "if" Statements:
+              name: Boole setningar og "ef" yrðingar
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         CSDU3-Draft:
           description_short: Forritun
           stages:
@@ -1837,6 +1919,8 @@ is:
           stages:
             Introduction to PD:
               name: Kynning á PD
+            Introduction to StarLogo Nova:
+              name: Kynning á StarLogo Nova
             Post-Survey:
               name: Eftirkönnun
             The Tutorial:
@@ -1873,6 +1957,8 @@ is:
           stages:
             Introduction to PD:
               name: Kynning á PD
+            Introduction to StarLogo Nova:
+              name: Kynning á StarLogo Nova
             Post-Survey:
               name: Eftirkönnun
             The Tutorial:
@@ -2396,7 +2482,7 @@ is:
             RGB Color:
               name: RGB litir
             Play Lab:
-              name: Leikjasmiðja
+              name: Leikjasmiðjan
         csd2-2017:
           description_short: "  Lærðu að búa til þinn eigin vef í Vefsmiðjunni."
           stages:
@@ -2456,6 +2542,7 @@ is:
             Flappy Code:
               name: Flappy kóði
         coursea-draft:
+          description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algrím úr raunheimi: Sá fræi'
@@ -2464,6 +2551,7 @@ is:
             'Debugging: Unspotted Bugs':
               name: 'Kembing: Ófundnir böggar'
         courseb-draft:
+          description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Kembing: Ófundnir böggar'
@@ -2516,6 +2604,8 @@ is:
               name: Kynning
             Conditionals:
               name: Skilyrði
+            'Algorithms: Dice Race':
+              name: 'Algrím: Teningakapp'
         coursef-draft:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           stages:
@@ -2523,10 +2613,28 @@ is:
               name: Stafrænn borgari
             Envelope Variables:
               name: Umslagabreytur
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
+            Variables in Artist:
+              name: Breytur með Listamanni
             For Loop Fun:
               name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            'Functions with Parameters: Songwriting with Parameters':
+              name: 'Föll með færibreytum: Textagerð með færibreytum'
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
             Try programming with Khan Academy:
               name: Prófa forritun með Khan Academy
+            The Power of Words:
+              name: Afl orða
             Songwriting with Parameters:
               name: Lagasmíð með stikum
             Introduction:
@@ -2600,6 +2708,8 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+            Introduction to Styling with CSS (2.7):
+              name: Kynning á útlitsmótun með CSS (2.7)
             External Style Sheets:
               name: Ytri stílsíður
         csp4-support:
@@ -2616,6 +2726,8 @@ is:
           stages:
             Welcome!:
               name: Velkomin!
+            Thinking About Implementation:
+              name: Hugsað til framkvæmdar
             Wrap-Up:
               name: Samantekt
         science-pd-ol-pt-5:
@@ -2632,8 +2744,12 @@ is:
               name: Samantekt
         csf2harvey:
           stages:
+            Prepare your snowflake for 3D printing:
+              name: Undirbúðu snjókornið fyrir 3D prentun
             Binary:
               name: Tvíundir
+            Snowflakes:
+              name: Snjókorn
         sciencepd5:
           stages:
             Welcome!:
@@ -2674,10 +2790,16 @@ is:
               name: App dæmi
             Final Project:
               name: Lokaverkefni
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         csd6-draft:
           stages:
             Lists:
               name: Listar
+            Timed Loop:
+              name: Tímasett lykkja
+            Timed Loops:
+              name: Tímasettar lykkjur
             For Loops:
               name: Frá lykkjur
             Making Music:
@@ -2718,6 +2840,8 @@ is:
               name: Listar
             For Loops:
               name: Frá lykkjur
+            Timed Loops:
+              name: Tímasettar lykkjur
             Making Music:
               name: Lagasmíð
             Functions with Parameters:
@@ -2912,8 +3036,13 @@ is:
               name: 'Kembing: Ófundnir böggar'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algrím úr raunheimi: Sá fræi'
+            'Loops: Happy Loops':
+              description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni.
           title: Námskeið A
           assignment_family_title: Námskeið A
+          description_audience: 'Aldur: 4-7'
+          description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -2922,12 +3051,15 @@ is:
               name: 'Algrím úr raunheimi: Sá fræi'
           title: Námskeið B
           assignment_family_title: Námskeið B
+          description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri. (Svipað og Námskeið A en með meiri fjölbreytni fyrir eldri nemendur.)
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algrím úr raunheimi: Pappírsskutlur'
           title: Námskeið C
           assignment_family_title: Námskeið C
+          description_audience: 'Aldur: 6-10'
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
         coursed-2017:
           stages:
@@ -2935,35 +3067,70 @@ is:
               name: Innri lykkjur
           title: Námskeið D
           assignment_family_title: Námskeið D
-          description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          description_audience: 'Aldur: 7-11'
+          description_short: Hér er farið fljótt yfir hugtök frá Námskeiði C og svo haldið lengra með algrímum, földuðum lykkjum, skilyrðingum og fleiru.
         coursee-2017:
           stages:
+            The Power of Words:
+              name: Afl orða
             Ice Age Play Lab:
               name: Ice Age Leikjasmiðja
             Envelope Variables:
               name: Umslagabreytur
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
             For Loop Fun:
               name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
             Songwriting with Parameters:
               name: Lagasmíð með stikum
             Conditionals and Functions in Bee:
               name: Býflugan - Skilyrðingar og Föll
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
+            'Algorithms: Dice Race':
+              name: 'Algrím: Teningakapp'
             Building a Foundation:
               name: Að byggja grunn
             Nested Loops:
               name: Innri lykkjur
           title: Námskeið E
           assignment_family_title: Námskeið E
-          description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          description_audience: 'Aldur: 8 - 12'
+          description_short: Hér er farið fljótt yfir hugtök frá Námskeiðum C og D og síðan haldið lengra með föllum.
         coursef-2017:
           stages:
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
             Conditionals and Functions in Bee:
               name: Býflugan - Skilyrðingar og Föll
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
             Building a Foundation:
               name: Að byggja grunn
           title: Námskeið F
           assignment_family_title: Námskeið F
-          description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          description_audience: 'Aldur: 9-13'
+          description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
         express-2017:
           stages:
             Introduction:
@@ -2976,14 +3143,32 @@ is:
               name: Skilyrði með kortum
             Envelope Variables:
               name: Umslagabreytur
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
             For Loop Fun:
               name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
             Songwriting with Parameters:
               name: Lagasmíð með stikum
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
             Building a Foundation:
               name: Að byggja grunn
             Nested Loops:
               name: Innri lykkjur
+          title: Hraðnámskeið
+          assignment_family_title: Hraðnámskeið
+          description_short: 'Kynning á tölvunarfræði: sameinar það besta úr námsefni okkar fyrir eldri nemendur í grunnskóla.'
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -2992,6 +3177,9 @@ is:
               name: 'Algrím úr raunheimi: Sá fræi'
             Spelling Bee:
               name: Stafsetning
+          title: Hraðnámskeið ólæsra
+          description_short: 'Kynning á tölvunarfræði fyrir þá sem ekki eru byrjaðir að lesa: sameinar það besta úr námskeiðum okkar fyrir leikskóla og fyrsta bekk.'
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         subgoal-labels-opt-in:
           stages:
             Thanks:
@@ -3029,6 +3217,8 @@ is:
               name: Að byggja grunn
             Nested Loops:
               name: Innri lykkjur
+            'Algorithms: Dice Race':
+              name: 'Algrím: Teningakapp'
             Conditionals:
               name: Skilyrði
             Internet:
@@ -3061,6 +3251,20 @@ is:
           stages:
             Introduction:
               name: Kynning
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
             Building a Foundation:
               name: Að byggja grunn
             Nested Loops:
@@ -3069,6 +3273,8 @@ is:
           stages:
             Building a Foundation:
               name: Að byggja grunn
+            'Algorithms: Dice Race':
+              name: 'Algrím: Teningakapp'
             Conditionals:
               name: Skilyrði
             Internet:
@@ -3079,14 +3285,30 @@ is:
           stages:
             Building a Foundation:
               name: Að byggja grunn
+            The Power of Words:
+              name: Afl orða
             Ice Age Play Lab:
               name: Ice Age Leikjasmiðja
             Envelope Variables:
               name: Umslagabreytur
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
             For Loop Fun:
               name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
             Songwriting with Parameters:
               name: Lagasmíð með stikum
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
         csd5-old:
           stages:
             8-bit Numbers:
@@ -3129,10 +3351,17 @@ is:
           stages:
             Minecraft Hour of Code:
               name: Klukkustund kóðunar með Minecraft
+          description: "Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!\nFerðist um Minecraft með kóða."
         csp-explore-2017:
           stages:
             new stage:
               name: nýr áfangi
+            Post-Course Survey:
+              name: Könnun eftir námskeið
+        csp-create-2017:
+          stages:
+            Post-Course Survey:
+              name: Könnun eftir námskeið
         aws-demo:
           stages:
             new stage:
@@ -3147,6 +3376,8 @@ is:
               name: Að byggja grunn
             Nested Loops:
               name: Innri lykkjur
+            'Algorithms: Dice Race':
+              name: 'Algrím: Teningakapp'
             Introduction:
               name: Kynning
             Conditionals:
@@ -3161,20 +3392,38 @@ is:
               name: Að byggja grunn
             Introduction:
               name: Kynning
+            The Power of Words:
+              name: Afl orða
             Ice Age Play Lab:
               name: Ice Age Leikjasmiðja
             Envelope Variables:
               name: Umslagabreytur
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
             For Loop Fun:
               name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
             Songwriting with Parameters:
               name: Lagasmíð með stikum
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
         csd6-old:
           stages:
             Lists:
               name: Listar
             For Loops:
               name: Frá lykkjur
+            Timed Loops:
+              name: Tímasettar lykkjur
         csd3-1819draft:
           stages:
             Drawing in Game Lab:
@@ -3268,7 +3517,11 @@ is:
             RGB Colors and Classes:
               name: RGB Litir og Klasar
         coursea-2018:
+          title: Námskeið A (2018)
           assignment_family_title: Námskeið A
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
+          description_audience: 'Aldur: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
               name: Ófundnar villur
@@ -3278,9 +3531,24 @@ is:
               name: Krúttleg kort
             Going Places Safely:
               name: Ferðast í öryggi
+            'Loops: Happy Loops':
+              name: Lukkulegar lykkjur
+              description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni.
+            Loops in Collector:
+              name: Lykkjur með Láru
+            Programming in Bee:
+              name: Forritun með Býflugu
+            Programming in Harvester:
+              name: Forritun með Hirðinum
+            Loops in Harvester:
+              name: Lykkjur með Hirðinum
+            Sequencing in Maze:
+              name: Röð aðgerða með Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og Stóra verkefnið
         express-2018:
+          assignment_family_title: Hraðnámskeið
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
             'Algorithms: Graph Paper Programming':
               name: Forritun rúðublaða
@@ -3292,6 +3560,16 @@ is:
               name: Innri lykkjur
             'Events: The Big Event':
               name: Stórviðburður
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
             'Loops: Getting Loopy':
               name: Lykkjulæti
             'Concept Practice with Minecraft ':
@@ -3300,6 +3578,8 @@ is:
               name: Skilyrði með kortum
             'Functions: Songwriting':
               name: Lagasmíð
+            The Power of Words:
+              name: Afl orða
             Envelope Variables:
               name: Umslagabreytur
             For Loop Fun:
@@ -3320,6 +3600,7 @@ is:
               name: Forritun rúðublaða
         courseb-2018:
           assignment_family_title: Námskeið B
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Kembing: Ófundnir böggar'
@@ -3327,10 +3608,13 @@ is:
               name: 'Algrím úr raunheimi: Sá fræi'
             Your Digital Footprint:
               name: Stafræna fótsporið þitt
+            Loops in Collector:
+              name: Lykkjur með Láru
             Move It, Move It:
               name: Hreyfa sig, hreyfa sig
         coursed-2018:
           assignment_family_title: Námskeið D
+          description_audience: 'Aldur: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Forritun rúðublaða
@@ -3355,6 +3639,7 @@ is:
         coursec-2018:
           assignment_family_title: Námskeið C
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          description_audience: 'Aldur: 6-10'
           stages:
             Building a Foundation:
               name: Að byggja grunn
@@ -3374,11 +3659,14 @@ is:
               name: Föll með stikum
         coursee-2018:
           assignment_family_title: Námskeið E
+          description_audience: 'Aldur: 8 - 12'
           stages:
             'Programming: My Robotic Friends':
               name: Vinir mínir vélmennin
             Building a Foundation:
               name: Að byggja grunn
+            'Algorithms: Dice Race':
+              name: 'Algrím: Teningakapp'
             Introduction:
               name: Kynning
             'Functions: Songwriting':
@@ -3393,7 +3681,8 @@ is:
               name: Klukkustund kóðunar með Minecraft
         coursef-2018:
           assignment_family_title: Námskeið F
-          description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          description_audience: 'Aldur: 9-13'
           stages:
             'Programming: My Robotic Friends':
               name: Vinir mínir vélmennin
@@ -3401,14 +3690,26 @@ is:
               name: Að byggja grunn
             Introduction:
               name: Kynning
+            The Power of Words:
+              name: Afl orða
             Ice Age Play Lab:
               name: Ice Age Leikjasmiðja
             Envelope Variables:
               name: Umslagabreytur
+            Variables in Artist:
+              name: Breytur með Listamanni
+            Variables in Play Lab:
+              name: Breytur í Leikjasmiðju
             For Loop Fun:
               name: Fyndnar frá lykkjur
             Songwriting with Parameters:
               name: Lagasmíð með stikum
+            Functions with Parameters in Artist:
+              name: Föll og færibreytur með Listamanni
+            Functions with Parameters in Bee:
+              name: Föll og færibreytur með Býflugu
+            Revise Your Project:
+              name: Fara yfir verkefnið
             Conditionals with Cards:
               name: Skilyrði með kortum
         csp1-2018:
@@ -3429,6 +3730,8 @@ is:
               name: Internetið
             The Need for Addressing:
               name: Þörfin fyrir vistföng
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
             Packets and Making a Reliable Internet:
               name: Pakkar og gerð áreiðanlegs internets
             The Need for DNS:
@@ -3586,6 +3889,7 @@ is:
             Creating Summary Tables:
               name: Gerð samantektartaflna
         pre-express-2018:
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
             'Debugging: Unspotted Bugs':
               name: Ófundnar villur
@@ -3593,6 +3897,8 @@ is:
               name: Stevie og Stóra verkefnið
             'Real-life Algorithms: Plant a Seed':
               name: 'Algrím úr raunheimi: Sá fræi'
+            Loops in Collector:
+              name: Lykkjur með Láru
             Spelling Bee:
               name: Stafsetning
             Move It, Move It:
@@ -3613,26 +3919,61 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+            Dance Party:
+              name: Danspartý
+          title: Danspartý
+          description_short: Með Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara og 25 öðrum!
         frozen-2018-test-b:
           stages:
             Artist:
               name: Listamaður
+        aquatic:
+          description_short: Notaðu sköpunargáfuna og hæfileika til að leysa þrautir til að kanna og byggja neðansjávarheima með kóða!
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Danspartý
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Danspartý
+        dance-extras:
+          title: Halda áfram að dansa
+          description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
         coursef-2019:
-          description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          description_audience: 'Aldur: 9-13'
           stages:
             Building a Foundation:
               name: Að byggja grunn
             Conditionals with Cards:
               name: Skilyrði með kortum
+            The Power of Words:
+              name: Afl orða
             Envelope Variables:
               name: Umslagabreytur
             For Loop Fun:
               name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            Revise Your Project:
+              name: Fara yfir verkefnið
             new stage:
               name: nýr áfangi
             The Artist:
               name: Listamaðurinn
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Hópvistun
+        dance-low:
+          stages:
+            Dance Party:
+              name: Danspartý
         coursed-2019:
+          description_audience: 'Aldur: 7-11'
           stages:
             Relay Programming:
               name: Boðhlaupsforritun
@@ -3646,7 +3987,10 @@ is:
               name: 'Verkefni án tölvu: Tvíundir'
             Artist Binary:
               name: 'Listamaður: Tvíundir'
+            Dance Party:
+              name: Danspartý
         coursee-2019:
+          description_audience: 'Aldur: 8 - 12'
           stages:
             Building a Foundation:
               name: Að byggja grunn
@@ -3661,15 +4005,24 @@ is:
             Crowdsourcing:
               name: Hópvistun
         express-2019:
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
             Relay Programming:
               name: Boðhlaupsforritun
             Conditionals with Cards:
               name: Skilyrði með kortum
+            The Power of Words:
+              name: Afl orða
             Envelope Variables:
               name: Umslagabreytur
             For Loop Fun:
               name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            Revise Your Project:
+              name: Fara yfir verkefnið
             Binary Bracelets:
               name: Stafræn armbönd
             'Unplugged: Binary':
@@ -3697,8 +4050,12 @@ is:
               name: nýr áfangi
             'null':
               name: 'tómagildi'
+        dance-extras-gallery:
+          title: Halda áfram að dansa
+          description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
         coursec-2019:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+          description_audience: 'Aldur: 6-10'
           stages:
             Building a Foundation:
               name: Að byggja grunn
@@ -3711,14 +4068,25 @@ is:
         gamelab:
           title: Leikjasmiðjan
         coursea-2019:
+          title: Námskeið A (2019)
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
+          description_audience: 'Aldur: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Kembing: Ófundnir böggar'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algrím úr raunheimi: Sá fræi'
+            Sequencing in Maze:
+              name: Röð aðgerða í Völundarhúsi
+            Programming in Harvester:
+              name: Forritun með Hirðinum
             Going Places Safely:
               name: Ferðast í öryggi
+            'Loops: Happy Loops':
+              description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni.
         courseb-2019:
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
             Move It, Move It:
               name: Hreyfa sig, hreyfa sig
@@ -3727,6 +4095,7 @@ is:
             Loops in Ice Age:
               name: Lykkjur í Ísöld
         pre-express-2019:
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Kembing: Ófundnir böggar'
@@ -3859,6 +4228,8 @@ is:
               name: Internetið
             The Need for Addressing:
               name: Þörfin fyrir vistföng
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
             Packets and Making a Reliable Internet:
               name: Pakkar og gerð áreiðanlegs internets
             The Need for DNS:
@@ -3958,3 +4329,7 @@ is:
               name: App dæmi
             Final Project:
               name: Lokaverkefni
+        csp1-pilot:
+          stages:
+            new stage:
+              name: nýr áfangi

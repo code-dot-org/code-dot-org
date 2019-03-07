@@ -773,6 +773,23 @@ nl:
         Dit is een test!\r Beweeg me eerst één kant op, daarna een andere kant, om me bij het varken te krijgen
       Course1MazeAssessment2: |-
         Dit is een test!\r Beweeg me eerst één kant op, daarna een andere kant, om me bij het varken te krijgen.
+      CourseD_Dance_Party_01: Sleep het blok 'nieuwe maken' naar de werkruimte, en verbind deze in het 'setup' blok.
+      CourseD_Dance_Party_02: Zorg dat de eland een nieuwe move start na 4 maten!
+      CourseD_Dance_Party_03: Laat de danser nu een nieuwe move starten na 6 maten!
+      CourseD_Dance_Party_04: Voeg een achtergrondeffect toe aan je programma.
+      CourseD_Dance_Party_05: Gebruik nog een nieuw blok om de danser elke 2 maten een nieuwe move te laten doen.
+      CourseD_Dance_Party_06: Maak een achtergronddanser genaamd 'backup_dancer1' om met de kat te dansen.
+      CourseD_Dance_Party_08: Kun je beide achtergronddansers dezelfde grootte geven?
+      CourseD_Dance_Party_09: Gebruik het blok 'tint instellen' om de kleur van een danser te veranderen.
+      CourseD_Dance_Party_10: Zorg dat de andere danser ook op de muziek reageert, met behulp van het blok 'begint te volgen'.
+      CourseD_Dance_Party_11: Met het blok 'wanneer pijlomhoogtoets ingedrukt' kun je code uitvoeren door op de pijlomhoogtoets te drukken. Proberen de danser een een snelle move te laten doen wanneer je op de pijlomhoogtoets drukt.
+      CourseD_Dance_Party_11_5: Gebruik de "alle eenden" blokken om de eenden samen te laten dansen.
+      CourseD_Dance_Party_11b: Zorg dat de Robot "naar de grond gaat" door op de rechterpijltoets te drukken, en laat hem een keer de "floss" doen door op de pijlomhoogtoets te drukken. Doe zo snel als je kan de drop-floss!
+      CourseD_Dance_Party_12: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
+      CourseE_HOC 2018 Level_10: Ga naar de ingang van dit Oceaanmonument.
+      CourseE_HOC 2018 Level_11: 'Bouw de kracht van de zee met Prismarien in het Oceaanmonument.'
+      CourseE_HOC 2018 Level_7a: Doorzoek deze onderwaterruïnes om een kist te vinden.
+      CourseE_HOC 2018 Level_9b: 'Gebruik het koraal als referentiepunten om de schat te vinden.'
       CourseF_PlayLab_vars10: "Gratis speeltijd! Hier zijn alle variabelen waarmee wij hebben gespeeld tot nu toe in dit niveau, evenals een paar meer in het geval u ze wilt. \\r \\r Merk op dat er nu zoveel zijn blokken in onze toolbox zitten dat ze nodig moeten worden georganiseerd!  Hier, hebben we elk stuk in een geschikte categorie gezet.  Neem de tijd om alles wat beschikbaar is te verkennen. Wanneer je klaar bent met surfen, maak dan een spel of verhaal met behulp van herhalingen, variabelen en gebeurtenissen.  \\r \\r Hint: Scroll naar beneden om alle commando's in de werkruimte te zien."
       CourseF_PlayLab_vars2: Die wedstrijd was niet eerlijk! Verander de "hond_snelheid" variabele om er zeker te zijn dat je meer vlaggen kunt verzamelen dan de kat. Wie als eerst 10 vlaggen heeft wint.
       CourseF_PlayLab_vars3: Dit is een nieuw soort spel! Gebruik de pijltjes naar links en rechts om te beweeg en het pijltje omhoog om te springen. Kijk of je alle vlaggen kunt verzamelen.

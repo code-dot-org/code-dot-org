@@ -721,6 +721,88 @@ nn:
       Course 4 SCVP 1: Opprett en funksjon med parametere som tillater kunstneren
         å hoppe framover og bakover med x antall piksler, og opp og ned med y antall
         piksler. Bruk positive og negative tall.
+      CourseD_Dance_Party_01: |-
+        *La oss ha ein dansefest!*
+
+        Dra ‘lag en ny’-blokka inn i arbeidsområdet, og koble den til inni ‘oppsett’-blokka for å lage den første dansaren.
+
+        * *Du kan også klikke på lyspæra til venstre, om du vil ha meir informasjon eller fleire utfordringar.*
+      CourseD_Dance_Party_02: |-
+        Nå må vi få elgen til å danse!
+
+        Trekk <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">ny&#95;dansar</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">1</title></block></xml>-blokka til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"taktar"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.
+
+
+        **Taktar** vert brukt til å telje tida i musikk. I denne opplæringa er ei takt fire slag lang.
+      CourseD_Dance_Party_03: |-
+        *Groovy greier!*
+
+        Legg til ei <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"takter"</title></block></xml>-blokk i arbeidsområdet. Få dansaren til å begynne på ein ny dans etter 6 taktar.
+      CourseD_Dance_Party_04: |-
+        *Denne dansen treng litt hjelp!*
+
+        Under finn du ei ny blokk som legg til en bakgrunnseffekt bak dansaren din. Sjå endringane som skjer i takt med musikken!
+      CourseD_Dance_Party_05: |-
+        Bruk nok ei ny blokk for å få danseren til å skifte rørsler **kvar andre takt**!
+
+        * Om du vel ‘(Neste)’, ‘(Førre)’ eller ‘(Tilfeldig)’, byttar dansaren til ein annan dans kvar gong du køyrer koden.
+      CourseD_Dance_Party_06: |-
+        *Vi treng fleire dansarar!*
+
+        Lag ein ny dansar som heiter “backup_dancer1”, som kan danse med katten.
+      CourseD_Dance_Party_08: |-
+        Alle dansarar har eit sett med _eigenskapar_ som kontrollerer korleis dei ser ut.
+
+        Du kan få det til å se ut som om dansaren er i bakgrunnen ved å redusere _storleiken_. Kan du gjere begge bakgrunnsdansarane like store?
+      CourseD_Dance_Party_09: |-
+        Dansarar har ein fargeeigenskap som kan brukast til å leggje til eit fargelag. Prøv å skifte farge på ein av dansarane dine.
+        * Du blander fargen du vel med fargane på dansaren.
+      CourseD_Dance_Party_10: |-
+        No veit vi korleis vi endrar eigenskapane til dansarane. Vi kan óg få dei same eigenskapane til å reagere på musikken med denne blokka:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">høgre_ananas</title>
+        <title name="PROPERTY">"storleik"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Dette programmet brukar bassvolumet til musikkens (dei djupe lydane) til å kontrollere høgden på ein dansar. Greier du å få de andre dansarane til å reagere på musikken også?
+      CourseD_Dance_Party_11: |-
+        <xml><block type="Dancelab_whenKey"></block></xml>-blokka gjer det mogleg å køyre kode når du trykker på oppoverpila.
+
+        Du kan skifte dans, endra på eigenskapane til ein dansar eller gjere eit dansetrinn berre ein gong. Vær kreativ, og sjå etter nye blokker!
+      CourseD_Dance_Party_11_5: |-
+        Sjekk ut denne blokka:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"AND"</title>
+        <title name="LAYOUT">"sirkel"</title>
+        </block></xml>
+
+        No kan du lage mange dansarar samtidig!
+
+        Prøv å bruke nokre av andeblokkene til å skrive kode som får alle endene til å danse saman.
+      CourseD_Dance_Party_11b: "På tide med dansekonkurranse. Katten dabber når du
+        trykker på venstre piltast. Du får roboten til å \"droppe\" når du trykker
+        på høgrepila. \n\n**Bruk tastane til å få roboten til å gjere dropp-klapp-dropp-klapp
+        så fort som du kan!**"
+      CourseD_Dance_Party_12: Groove i veg! Lag ein dans du kan dele med venene dine.
+      CourseE_HOC 2018 Level_10: "Det er ein **blekksprut** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        gøymd ein stad i dette havmonumentet. Greier du å finne den?\n\n"
+      CourseE_HOC 2018 Level_11: Bygg ein vegg av **prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        rundt den svarte betongen. Dette aktiverer **kanalen** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        og fullfører utfordringa!
+      CourseE_HOC 2018 Level_7a: "Du fant undervassruinane. Leit i sandsteinen etter
+        ei **kiste** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        som inneheld **prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      CourseE_HOC 2018 Level_8: "Først isfjell og no lava? Kom deg gjennom denne vulkanøya
+        og finn den **tropiske fisken** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        i korallrevet.\n\n"
+      CourseE_HOC 2018 Level_9b: "Du kom deg til revet. No må du leite etter **hjarta
+        til havet** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
+        Bruk den blå og den røde korallen for å kome fram til **skattkista** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       CourseF_PlayLab_vars2: Løpet i førre oppgåve var ikkje veldig rettferdig. Endre
         variabelen "hund_fart" for å sikra at du kan samla fleire flagg enn Katt.
         Den fyrste til å samle 10 flagg vinn!

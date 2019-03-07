@@ -1490,6 +1490,10 @@ ja:
               name: カードと条件
             The Artist:
               name: アーティスト
+            Internet:
+              name: インターネット
+            Crowdsourcing:
+              name: クラウドソーシング
         dance-low:
           stages:
             Dance Party:
@@ -1506,6 +1510,8 @@ ja:
               name: 'アンプラグド: バイナリ'
             Artist Binary:
               name: アーティスト：バイナリ
+            Dance Party:
+              name: ダンスパーティー
         coursee-2019:
           stages:
             Building a Foundation:

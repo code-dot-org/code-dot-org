@@ -107,7 +107,12 @@ zh-CN:
         这里有好多！\r
         \r
         用你学到的知识来收集所有的花蜜，并制作蜂蜜。
-      2-3 Bee Conditionals 14: "让我们把东西都放到一起！\\r\n\\r\n用你学到的知识只从有花蜜的花里收集，用的模块越少越好。\\r\n\\r\n别忘了最后制作蜂蜜。"
+      2-3 Bee Conditionals 14: |-
+        让我们把东西都放到一起！\r
+        \r
+        用你学到的知识只从有花蜜的花里收集，用的模块越少越好。\r
+        \r
+        别忘了最后制作蜂蜜。
       2-3 Bee Conditionals 15: "这个像阶梯一样的图形看起来很熟悉。\\r\n\\r\n你能用尽量少的模块从花里收集一些花蜜吗？"
       2-3 Bee Conditionals 2: "我是一只饥饿的蜜蜂！\\r\n\\r\n\\r\n帮我用最少的模块从花朵中采集花蜜。"
       2-3 Bee Conditionals 3: "查看所有的花蜜！\\r\n\\r\n帮我用尽可能少的模块来收集花蜜并酿成蜂蜜。  "
@@ -798,6 +803,7 @@ zh-CN:
       Applab AllTheThings ResourcesTab AllResources: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
       Applab AllTheThings ResourcesTab MapReference: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
       Applab AllTheThings ResourcesTab ReferenceLinks: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      Applab allthethings onRecordEvent: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
       Artist Autorun Test: 现在，将函数放到循环里来画这三个正方形。
       Artist Inspiration: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n自由发挥灵感：你已经学会了所有需要创建这个模式的知识了！\\r\n\\r\n如果这个图形引起了你的联想，试试画出一些类似的图像。要不然，就画画你想画的一些东西。 \n\\r\n\\r\n注意：我们已经用`set alpha`（设置透明度）模块来让花瓣慢慢淡出。"
       Bergeron Robot Maze1: "可以帮我抓住这只顽皮的猪吗？\\r\n\\r\n在“当运行时”模块下放几个“向前移动”的模块，然后点击“运行”。 "
@@ -1157,7 +1163,35 @@ zh-CN:
       CSD U2 Debugging 1: "# 调试\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n** 什么是bug（缺陷）？ **\n\n</summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary>\n\n** 什么是debugging（调试缺陷）？ **\n\n</summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>**有没有缺陷的例子？**</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n</div>\n\n计算机代码是由人写的，所有人都会犯错误。作为一个好的计算机科学家，其中一部分是发现你代码里的错误，并修复它们。在计算机科学中，我们将错误称为**bugs（缺陷）**。查找和修复这些缺陷的过程称为 ** debugging（调试） **。 在接下来的两个级别中，您将要锻炼你的调试技能。\n\n# 这样做\n\n<img src=\"https://images.code.org/9c4d90a5a8293c5aee56e6cb81dae689-image-1500915264278.52.56\nAM.png\" style=\"float:right;border:black solid 5px;\">\n\n* 看看网页代码，并与您的伙伴讨论导致以下两个bug的原因：\n\\t * 标题不够大。\n\\t * 列表中的第二项没有编号。\n\\t * 修复代码中的所有缺陷，以便最终结果与图像匹配在右边。\n"
       CSD U2 Debugging 1_2018: "# 调试\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n** 什么是bug（缺陷）？ **\n\n</summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary>\n\n** 什么是debugging（调试缺陷）？ **\n\n</summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>**有没有缺陷的例子？**</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n</div>\n\n计算机代码是由人写的，所有人都会犯错误。作为一个好的计算机科学家，其中一部分是发现你代码里的错误，并修复它们。在计算机科学中，我们将错误称为**bugs（缺陷）**。查找和修复这些缺陷的过程称为 ** debugging（调试） **。 在接下来的两个级别中，您将要锻炼你的调试技能。\n\n# 这样做\n\n<img src=\"https://images.code.org/9c4d90a5a8293c5aee56e6cb81dae689-image-1500915264278.52.56\nAM.png\" style=\"float:right;border:black solid 5px;\">\n\n* 看看网页代码，并与您的伙伴讨论导致以下两个bug的原因：\n\\t * 标题不够大。\n\\t * 列表中的第二项没有编号。\n\\t * 修复代码中的所有缺陷，以便最终结果与图像匹配在右边。\n"
       CSD U2 Debugging 1_2019: "# 调试\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n** 什么是bug（缺陷）？ **\n\n</summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary>\n\n** 什么是debugging（调试缺陷）？ **\n\n</summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>**有没有缺陷的例子？**</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n</div>\n\n计算机代码是由人写的，所有人都会犯错误。作为一个好的计算机科学家，其中一部分是发现你代码里的错误，并修复它们。在计算机科学中，我们将错误称为**bugs（缺陷）**。查找和修复这些缺陷的过程称为 ** debugging（调试） **。 在接下来的两个级别中，您将要锻炼你的调试技能。\n\n# 这样做\n\n<img src=\"https://images.code.org/9c4d90a5a8293c5aee56e6cb81dae689-image-1500915264278.52.56\nAM.png\" style=\"float:right;border:black solid 5px;\">\n\n* 看看网页代码，并与您的伙伴讨论导致以下两个bug的原因：\n\\t * 标题不够大。\n\\t * 列表中的第二项没有编号。\n\\t * 修复代码中的所有缺陷，以便最终结果与图像匹配在右边。\n"
-      CSD U2 Debugging 2: "# 调试\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary> ** 什么是bug（缺陷）？ ** </summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary> ** 什么是debugging（调试缺陷）？ ** </summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>**有没有缺陷的例子？**</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n</div>\n\n继续练习调试技能！这个页面比上一个有更多的调试挑战。\n\n# 这样做\n\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38\nAM.png\" style=\"float:right;border:5px black solid;width:250px\">\n\n* 与你的伙伴讨论这个页面有些什么缺陷。\n* 找到并修复这些缺陷，使得这个页面和右边的一样。"
+      CSD U2 Debugging 2: |-
+        # 调试
+
+        <div style="float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
+        markdown="1">
+        <details>
+        <summary> ** 什么是bug（缺陷）？ ** </summary>
+        缺陷是代码中的错误，导致代码不按照计划起作用。
+        </details>
+        <details>
+        <summary> ** 什么是debugging（调试缺陷）？ ** </summary>
+        调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。
+        </details>
+        <details>
+        <summary>**有没有缺陷的例子？**</summary>
+        缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。
+        </details>
+        </div>
+
+        继续练习调试技能！这个页面比上一个有更多的调试挑战。
+
+        # 这样做
+
+        <img src="https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38
+        AM.png" style="float:right;border:5px black solid;width:250px">
+
+        * 与你的伙伴讨论这个页面有些什么缺陷。
+        * 找到并修复这些缺陷，使得这个页面和右边的一样。
       CSD U2 Debugging 2_2018: "# 调试\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary> ** 什么是bug（缺陷）？ ** </summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary> ** 什么是debugging（调试缺陷）？ ** </summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>**有没有缺陷的例子？**</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n</div>\n\n继续练习调试技能！这个页面比上一个有更多的调试挑战。\n\n# 这样做\n\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38\nAM.png\" style=\"float:right;border:5px black solid;width:250px\">\n\n* 与你的伙伴讨论这个页面有些什么缺陷。\n* 找到并修复这些缺陷，使得这个页面和右边的一样。"
       CSD U2 Debugging 2_2019: "# 调试\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary> ** 什么是bug（缺陷）？ ** </summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary> ** 什么是debugging（调试缺陷）？ ** </summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>**有没有缺陷的例子？**</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n</div>\n\n继续练习调试技能！这个页面比上一个有更多的调试挑战。\n\n# 这样做\n\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38\nAM.png\" style=\"float:right;border:5px black solid;width:250px\">\n\n* 与你的伙伴讨论这个页面有些什么缺陷。\n* 找到并修复这些缺陷，使得这个页面和右边的一样。"
       CSD U2 Debugging 3: "# 调试\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n\n<summary>\n\n** 什么是bug（缺陷）？ **\n\n</summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary>\n\n** 什么是debugging（调试缺陷）？ **\n\n</summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>\n\n**有没有缺陷的例子？**\n\n</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n<details>\n<summary>\n\n**为什么有时检查器停止工作了？**\n\n</summary>\n有时候，即使HTML中有部分代码是正确的，但也有太多的缺陷了，以至于检查器不能正确的读取代码，而完全无法工作。一旦这些缺陷被修复了，检查器就能继续工作了。\n</details>\n</div>\n\n这个页面有些图片。图片上有些难对付的缺陷。你能调试这个页面吗？\n\n# 这样做\n\n* 和你的伙伴讨论一下，是什么造成了这个页面的一些缺陷。\n* 修复这些缺陷，使得这个页面和下面的目标页面一致。\n\n![](https://images.code.org/4a9ac71bcf6c04775df791516562cd47-image-1508779270522.56.24 AM.png)"
@@ -1651,8 +1685,76 @@ zh-CN:
       CSD U2 Heading Test_2018: "# 标头和段落\n\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**什么是段落元素？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。在网页中的所有文本都应该被HTML元素所包含（标头或者段落元素）段落能将句子分组，在不同组之间加上一些空间。\n</details>\n<details>\n<summary>**我该如何创建多个段落呢？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。你需要用多组开始、关闭的<p>标签来创建多个段落。例如\n<pre>\n\\t&lt;p&gt;\n\\t这是一个段落。\n&lt;/p&gt;\n\\t&lt;p&gt;\n\\t这是另一个段落。\n&lt;/p&gt;\n</pre>\n</details>\n<details>\n<summary>**什么是headings（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n\n</div>\n\n这个页面的作者加入了许多的东西，但没有想过结构。所有的文本都混在一起。\n\n这样做：\n* 和你的伙伴一起看一下这些内容，然后想一下最好的结构应该是什么样的。\n* 用你的标头和段落标签来给这个页面的内容加上结构。\n"
       CSD U2 Heading Test_2019: "# 标头和段落\n\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**什么是段落元素？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。在网页中的所有文本都应该被HTML元素所包含（标头或者段落元素）段落能将句子分组，在不同组之间加上一些空间。\n</details>\n<details>\n<summary>**我该如何创建多个段落呢？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。你需要用多组开始、关闭的<p>标签来创建多个段落。例如\n<pre>\n\\t&lt;p&gt;\n\\t这是一个段落。\n&lt;/p&gt;\n\\t&lt;p&gt;\n\\t这是另一个段落。\n&lt;/p&gt;\n</pre>\n</details>\n<details>\n<summary>**什么是headings（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n\n</div>\n\n这个页面的作者加入了许多的东西，但没有想过结构。所有的文本都混在一起。\n\n这样做：\n* 和你的伙伴一起看一下这些内容，然后想一下最好的结构应该是什么样的。\n* 用你的标头和段落标签来给这个页面的内容加上结构。\n"
       CSD U2 Image Tag 1: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 图片\n\n狗和猫的网页已经开始制作了。下面的网页里已经加上了狗的图片。用一个图片标签将`cat.jpeg`加到页面里猫标头的下面。"
-      CSD U2 Image Tag 1_2018: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 图片\n\n狗和猫的网页已经开始制作了。下面的网页里已经加上了狗的图片。用一个图片标签将`cat.jpeg`加到页面里猫标头的下面。"
-      CSD U2 Image Tag 1_2019: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 图片\n\n狗和猫的网页已经开始制作了。下面的网页里已经加上了狗的图片。用一个图片标签将`cat.jpeg`加到页面里猫标头的下面。"
+      CSD U2 Image Tag 1_2018: |-
+        <div style="float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
+        markdown="1">
+        <details>
+        <summary>**如何添加图片？**</summary>
+        `<img>`让你在网页中能够加入图片。<br><br>
+
+        例如：
+        <pre>&lt;img
+        src="dog.png" alt="跳跃的狗"/&gt;</pre><br><br>
+
+        为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>
+
+        除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>
+
+        因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。
+
+        </details>
+        <details>
+        <summary>**为什么图片标签没有关闭标签呢？**</summary>
+        图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。
+        </details>
+        <details>
+        <summary>**什么是attribute（属性）？**</summary>
+        属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。
+
+        例如&lt;img&gt;标签有两个属性，src和alt。
+        src表明了图片文件的名字，而alt表明了图片所表达的文字含义。
+        </details>
+        </div>
+
+        # 图片
+
+        狗和猫的网页已经开始制作了。下面的网页里已经加上了狗的图片。用一个图片标签将`cat.jpeg`加到页面里猫标头的下面。
+      CSD U2 Image Tag 1_2019: |-
+        <div style="float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
+        markdown="1">
+        <details>
+        <summary>**如何添加图片？**</summary>
+        `<img>`让你在网页中能够加入图片。<br><br>
+
+        例如：
+        <pre>&lt;img
+        src="dog.png" alt="跳跃的狗"/&gt;</pre><br><br>
+
+        为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>
+
+        除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>
+
+        因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。
+
+        </details>
+        <details>
+        <summary>**为什么图片标签没有关闭标签呢？**</summary>
+        图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。
+        </details>
+        <details>
+        <summary>**什么是attribute（属性）？**</summary>
+        属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。
+
+        例如&lt;img&gt;标签有两个属性，src和alt。
+        src表明了图片文件的名字，而alt表明了图片所表达的文字含义。
+        </details>
+        </div>
+
+        # 图片
+
+        狗和猫的网页已经开始制作了。下面的网页里已经加上了狗的图片。用一个图片标签将`cat.jpeg`加到页面里猫标头的下面。
       CSD U2 Image Tag 2: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 上传图片\n\n你可能已经发现有些地方可以通过**添加图片**按钮来上传图片。区照一张你喜欢的，不同类型的宠物铺前，并将它下载到你的电脑里（通过右键的“另存为”）。\n\n一旦图片准备好后，点击 ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) 并且将你的图片从计算机上传到你的项目中，需要用到它的位置。\n\n# 这样做\n\n* 上传至少一张图片到这个网页中。\n* 用`<img>`标签在你的网页中显示图片。\n* 确保图片有`alt`属性。"
       CSD U2 Image Tag 2_2018: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 上传图片\n\n你可能已经发现有些地方可以通过**添加图片**按钮来上传图片。区照一张你喜欢的，不同类型的宠物铺前，并将它下载到你的电脑里（通过右键的“另存为”）。\n\n一旦图片准备好后，点击 ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) 并且将你的图片从计算机上传到你的项目中，需要用到它的位置。\n\n# 这样做\n\n* 上传至少一张图片到这个网页中。\n* 用`<img>`标签在你的网页中显示图片。\n* 确保图片有`alt`属性。"
       CSD U2 Image Tag 2_2019: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 上传图片\n\n你可能已经发现有些地方可以通过**添加图片**按钮来上传图片。区照一张你喜欢的，不同类型的宠物铺前，并将它下载到你的电脑里（通过右键的“另存为”）。\n\n一旦图片准备好后，点击 ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) 并且将你的图片从计算机上传到你的项目中，需要用到它的位置。\n\n# 这样做\n\n* 上传至少一张图片到这个网页中。\n* 用`<img>`标签在你的网页中显示图片。\n* 确保图片有`alt`属性。"
@@ -3112,142 +3214,8 @@ zh-CN:
         * 确保每个页面的底部都有一个页脚，解释了你页面的版权信息。
         (浏览<a href="https://creativecommons.org/choose/" target="_new">知识共享</a> 获得创建这个HTMl的帮助。)
       CSD U2 images intro: "# 图片\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本）属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**什么是空元素？**</summary>\n`<img>` 标签是一个**空元素**的例子，因为它的开始、关闭都在同一个标签里。为了标记它，我们将通常放在结束标签里的`/`放到了图片标签的结尾处。空元素不需要关闭标签，因为它不需要再标签之间插入文本内容。影响内容显示的都在属性中进行了设置。\n</details>\n<details>\n<summary>**为什么图片标签没有结束元素？**</summary>\n图片标签是一个空标签，而空标签不需要结束标签。因为它里面不需要有文本内容。影响显示的数据都设置到了标签的属性里。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n如果这个配方页面有一张图片，那会看起来更好。图片能让这个页面看起来更好。\n\n# 这样做\n* 看看你左边的工作区，并找出名为\"scotcheroos.jpeg\"的文件\n* 用检查器工具来找到让这张图片显示出来的代码。\n* 确保你的你的伙伴对图片的标签是如何起作用的达成共识。\n* 试着将图片挪到页面的顶上。"
-      CSD U2 layout style bgcolor_2018: |-
-        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
-        <details>
-
-        <summary>
-        <strong>**代码如何起作用？**</strong>
-        </summary>
-        这是让页面背景变成蓝色的代码：
-
-        <pre>body
-        {
-          background-color: lightblue;
-        }</pre>
-
-        * `body`是一个_选择器_。它指定了哪些元素应该遵循花括号里的规则。在这里，body（正文）元素是整个页面。
-        * `background-color: lightblue;`是让整个页面变成淡蓝色的规则。
-         * `background-color`（背景-颜色）是_属性_。它解释了这条是什么规则。在这里，表示背景的颜色。
-         * `lightblue`是_值_。它解释了这条规则会被怎么应用，在这里，表示背景的淡蓝色。
-        </details>
-        <details>
-        <summary>
-        <strong>**我能在CSS中使用什么颜色？**</strong>
-        </summary>
-        CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
-        - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
-        - CSS正确的颜色值</a>查看更多信息。
-        </details>
-        <details>
-        <summary>
-        <strong>**`background-color`属性做了什么？**</strong></summary>
-        `background-color`属性决定了一个元素的背景颜色。可以在<a href="http://www.w3schools.com/cssref/pr_background-color.asp">W3Schools
-        - CSS background-color 属性</a>查看关于这个属性的更多信息。
-        </details>
-        <details>
-        <summary>
-        <strong>**如果页面里的元素有着与body不同的背景颜色会怎样？**</strong></summary>
-        你可以通过为`p`标签增加一个`background-color`规则来寻找答案。这个段落会有`p`标签上的颜色，而页面的剩余部分会遵循`body`标签的规则。
-        </details>
-        <details>
-        <summary>
-        <strong>**什么是样式表？**</strong>
-        </summary>
-        样式表是一个控制网页如何显示的文档。外部样式表会作为单独的文件，并被链接到HTML页面上。
-        </details>
-        <details>
-        <summary>
-        <strong>**CSS是什么？**</strong>
-        </summary>
-        CSS是一个控制网站上的内容如何显示的语言。它通过规则集（rule-set）来改变页面的外观。每个规则集都有一个选择器（selector），它会指定页面上的哪些元素会被影响，以及包含用来解释如何显示元素的规则。 每条规则由一个属性和属性值组成。
-
-        这是一个规则集的例子，它让`h2`标签里的文本成为蓝色，并采用了草书：
-
-        <pre>h2
-        {
-           color: blue;
-           font-family: cursive;
-        </pre>
-
-        在这个例子中，`h2`是选择器，`color`和`font-family`是属性，而`blue`和`cursive`是对应属性的值。
-
-        </details>
-        </div>
-
-        # 背景颜色
-
-        * 在岩石表中找到让整个页面背景是蓝色的代码。
-        * 改动代码，让页面成为不同的颜色。
-        * 试着只改动这些段落的背景颜色。
-      CSD U2 layout style bgcolor_2019: |-
-        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
-        <details>
-
-        <summary>
-        <strong>**代码如何起作用？**</strong>
-        </summary>
-        这是让页面背景变成蓝色的代码：
-
-        <pre>body
-        {
-          background-color: lightblue;
-        }</pre>
-
-        * `body`是一个_选择器_。它指定了哪些元素应该遵循花括号里的规则。在这里，body（正文）元素是整个页面。
-        * `background-color: lightblue;`是让整个页面变成淡蓝色的规则。
-         * `background-color`（背景-颜色）是_属性_。它解释了这条是什么规则。在这里，表示背景的颜色。
-         * `lightblue`是_值_。它解释了这条规则会被怎么应用，在这里，表示背景的淡蓝色。
-        </details>
-        <details>
-        <summary>
-        <strong>**我能在CSS中使用什么颜色？**</strong>
-        </summary>
-        CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
-        - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
-        - CSS正确的颜色值</a>查看更多信息。
-        </details>
-        <details>
-        <summary>
-        <strong>**`background-color`属性做了什么？**</strong></summary>
-        `background-color`属性决定了一个元素的背景颜色。可以在<a href="http://www.w3schools.com/cssref/pr_background-color.asp">W3Schools
-        - CSS background-color 属性</a>查看关于这个属性的更多信息。
-        </details>
-        <details>
-        <summary>
-        <strong>**如果页面里的元素有着与body不同的背景颜色会怎样？**</strong></summary>
-        你可以通过为`p`标签增加一个`background-color`规则来寻找答案。这个段落会有`p`标签上的颜色，而页面的剩余部分会遵循`body`标签的规则。
-        </details>
-        <details>
-        <summary>
-        <strong>**什么是样式表？**</strong>
-        </summary>
-        样式表是一个控制网页如何显示的文档。外部样式表会作为单独的文件，并被链接到HTML页面上。
-        </details>
-        <details>
-        <summary>
-        <strong>**CSS是什么？**</strong>
-        </summary>
-        CSS是一个控制网站上的内容如何显示的语言。它通过规则集（rule-set）来改变页面的外观。每个规则集都有一个选择器（selector），它会指定页面上的哪些元素会被影响，以及包含用来解释如何显示元素的规则。 每条规则由一个属性和属性值组成。
-
-        这是一个规则集的例子，它让`h2`标签里的文本成为蓝色，并采用了草书：
-
-        <pre>h2
-        {
-           color: blue;
-           font-family: cursive;
-        </pre>
-
-        在这个例子中，`h2`是选择器，`color`和`font-family`是属性，而`blue`和`cursive`是对应属性的值。
-
-        </details>
-        </div>
-
-        # 背景颜色
-
-        * 在岩石表中找到让整个页面背景是蓝色的代码。
-        * 改动代码，让页面成为不同的颜色。
-        * 试着只改动这些段落的背景颜色。
+      CSD U2 layout style bgcolor_2018: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>**代码如何起作用？**</strong>\n</summary>\n这是让页面背景变成蓝色的代码：\n\n<pre>body\n{\n  background-color: lightblue;\n}</pre>\n\n* `body`是一个_选择器_。它指定了哪些元素应该遵循花括号里的规则。在这里，body（正文）元素是整个页面。\n* `background-color: lightblue;`是让整个页面变成淡蓝色的规则。\n * `background-color`（背景-颜色）是_属性_。它解释了这条是什么规则。在这里，表示背景的颜色。\n * `lightblue`是_值_。它解释了这条规则会被怎么应用，在这里，表示背景的淡蓝色。\n</details>\n<details>\n<summary>\n<strong>**我能在CSS中使用什么颜色？**</strong>\n</summary>\nCSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools\n- HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools\n- CSS正确的颜色值</a>查看更多信息。\n</details>\n<details>\n<summary>\n<strong>**`background-color`属性做了什么？**</strong></summary>\n`background-color`属性决定了一个元素的背景颜色。可以在<a href=\"http://www.w3schools.com/cssref/pr_background-color.asp\">W3Schools\n- CSS background-color 属性</a>查看关于这个属性的更多信息。\n</details>\n<details>\n<summary>\n<strong>**如果页面里的元素有着与body不同的背景颜色会怎样？**</strong></summary>\n你可以通过为`p`标签增加一个`background-color`规则来寻找答案。这个段落会有`p`标签上的颜色，而页面的剩余部分会遵循`body`标签的规则。\n</details>\n<details>\n<summary>\n<strong>**什么是样式表？**</strong>\n</summary>\n样式表是一个控制网页如何显示的文档。外部样式表会作为单独的文件，并被链接到HTML页面上。\n</details>\n<details>\n<summary>\n<strong>**CSS是什么？**</strong>\n</summary>\nCSS是一个控制网站上的内容如何显示的语言。它通过规则集（rule-set）来改变页面的外观。每个规则集都有一个选择器（selector），它会指定页面上的哪些元素会被影响，以及包含用来解释如何显示元素的规则。 每条规则由一个属性和属性值组成。\n\n这是一个规则集的例子，它让`h2`标签里的文本成为蓝色，并采用了草书：\n\n<pre>h2\n{\n   color: blue;\n   font-family: cursive;\n</pre>\n\n在这个例子中，`h2`是选择器，`color`和`font-family`是属性，而`blue`和`cursive`是对应属性的值。\n\n</details>\n</div>\n\n# 背景颜色\n\n* 在岩石表中找到让整个页面背景是蓝色的代码。\n* 改动代码，让页面成为不同的颜色。\n* 试着只改动这些段落的背景颜色。"
+      CSD U2 layout style bgcolor_2019: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>**代码如何起作用？**</strong>\n</summary>\n这是让页面背景变成蓝色的代码：\n\n<pre>body\n{\n  background-color: lightblue;\n}</pre>\n\n* `body`是一个_选择器_。它指定了哪些元素应该遵循花括号里的规则。在这里，body（正文）元素是整个页面。\n* `background-color: lightblue;`是让整个页面变成淡蓝色的规则。\n * `background-color`（背景-颜色）是_属性_。它解释了这条是什么规则。在这里，表示背景的颜色。\n * `lightblue`是_值_。它解释了这条规则会被怎么应用，在这里，表示背景的淡蓝色。\n</details>\n<details>\n<summary>\n<strong>**我能在CSS中使用什么颜色？**</strong>\n</summary>\nCSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools\n- HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools\n- CSS正确的颜色值</a>查看更多信息。\n</details>\n<details>\n<summary>\n<strong>**`background-color`属性做了什么？**</strong></summary>\n`background-color`属性决定了一个元素的背景颜色。可以在<a href=\"http://www.w3schools.com/cssref/pr_background-color.asp\">W3Schools\n- CSS background-color 属性</a>查看关于这个属性的更多信息。\n</details>\n<details>\n<summary>\n<strong>**如果页面里的元素有着与body不同的背景颜色会怎样？**</strong></summary>\n你可以通过为`p`标签增加一个`background-color`规则来寻找答案。这个段落会有`p`标签上的颜色，而页面的剩余部分会遵循`body`标签的规则。\n</details>\n<details>\n<summary>\n<strong>**什么是样式表？**</strong>\n</summary>\n样式表是一个控制网页如何显示的文档。外部样式表会作为单独的文件，并被链接到HTML页面上。\n</details>\n<details>\n<summary>\n<strong>**CSS是什么？**</strong>\n</summary>\nCSS是一个控制网站上的内容如何显示的语言。它通过规则集（rule-set）来改变页面的外观。每个规则集都有一个选择器（selector），它会指定页面上的哪些元素会被影响，以及包含用来解释如何显示元素的规则。 每条规则由一个属性和属性值组成。\n\n这是一个规则集的例子，它让`h2`标签里的文本成为蓝色，并采用了草书：\n\n<pre>h2\n{\n   color: blue;\n   font-family: cursive;\n</pre>\n\n在这个例子中，`h2`是选择器，`color`和`font-family`是属性，而`blue`和`cursive`是对应属性的值。\n\n</details>\n</div>\n\n# 背景颜色\n\n* 在岩石表中找到让整个页面背景是蓝色的代码。\n* 改动代码，让页面成为不同的颜色。\n* 试着只改动这些段落的背景颜色。"
       CSD U2 layout style body_2018: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -8104,7 +8072,7 @@ zh-CN:
         <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png"
         style="width:150px; border: 1px solid grey; margin:20px;">\r
 
-      CSD U3 Variables Challenge_2018: |
+      CSD U3 Variables Challenge_2018: |-
         # 挑战：更新变量\r
         \r
         _开始这个挑战前，先问问你的老师。_\r
@@ -8120,7 +8088,7 @@ zh-CN:
         <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png"
         style="width:150px; border: 1px solid grey; margin:20px;">\r
 
-      CSD U3 Variables Challenge_2019: |
+      CSD U3 Variables Challenge_2019: |-
         # 挑战：更新变量\r
         \r
         _开始这个挑战前，先问问你的老师。_\r
@@ -15254,7 +15222,13 @@ zh-CN:
       Course 4 Artist 1: "帮我画个盒子  \\r\n (每行200像素长) \\r\n\\r\n<br/><br/>\\r\n\\r\n"
       Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"\nwidth=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**游戏时间：** 这是一个有趣的形状的代码。\n\n当你重复它多次，在每个迭代间转向时，会发生什么？ \n\n注意形状中的这些转向最多增加*420度*。这意味着，当小艺术家完成绘画时，他朝向的方向和开始时不同。新方向和开始的方向相比，会恰好往*右* *60度*。\n\n<hr/>\n\n<h4>\n<details>\n<summary><b>重复4次</b></summary>\n<br/>\n如果你想只重复4次来画一个整圆，你需要让小艺术家每次转**360度/4 = 90度**。通过加入一个` 向右转30度`模块到外层循环来实现（因为**60+30=90**。）\n<br/>\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br/><br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>重复6次</b></summary>\n<br/>\n当你重复这个形状6次，能一共转**6x60度**，正好是一整个圆的**360 度**。\n<img\nsrc=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\" width=\"500px;\" style=\"mix-blend-mode:\nmultiply;\" />\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>重复12次</b></summary>\n<br/>\n如果你重复这个图12次，每次需要转**360度/12=30度**。这意味着你要在重复形状前，用`向左转30度`来调整一下小艺术家。<br/><br/>\n<img src=\"https://images.code.org/ad254952522674496918561096817c66-image-1440132424792.44.01.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n</details>\n</h4>\n\n现在，到你了！你能通过重复开始的形状来重新创建每个图片吗？  "
       Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\n挑战的时候到了！\\r\n\\r\n这个设计只使用了你见过的模块。你能想出如何再次创建出它吗？随便试错。没有人期待第一次就能做好。\\r\n\\r\n重复的形状基本和上一关的一样，只有第一个的循环的长度要小一点。 "
-      Course 4 Artist 12: "<img src=\"https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png\"\nwidth=\"250px\"/>\\r\n\\r\n自由发挥灵感：你已经学会了所有需要创建这个模式的知识了！如果这个图形引起了你的联想，试试画出一些类似的图像。要不然，就画画你想画的一些东西。 \\r\n\\r\n<br/>"
+      Course 4 Artist 12: |-
+        <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png"
+        width="250px"/>\r
+        \r
+        自由发挥灵感：你已经学会了所有需要创建这个模式的知识了！如果这个图形引起了你的联想，试试画出一些类似的图像。要不然，就画画你想画的一些东西。 \r
+        \r
+        <br/>
       Course 4 Artist 13: 还想玩？这里是一块空的画布，想画什么就画什么吧！
       Course 4 Artist 2: "你能循环这段代码来画出灰色的正方形吗？\\r\n（边长是300像素）"
       Course 4 Artist 20: "还想玩？\\r\n\\r\n这是空白的画布。想画什么就画什么吧！"
@@ -15316,7 +15290,13 @@ zh-CN:
       Course 4 Artist Vars 1: "让我们画一个等边三角形。\n\\r\n\\r\n它的每条边都正好一样是100像素。\\r\n\\r\n<br/>\\r\n"
       Course 4 Artist Vars 10: "这里有个算法能在一个小一点的三角形外面再画一个三角形。你能将它改成用“边数”变量来画出每个三角形吗？\\r\n\\r\n</br>\\r\n浏览一下代码，每次看到数字3，就将它换成“边数”变量。记得使用“设置边数”模块。"
       Course 4 Artist Vars 11: "这里用了和上一关一样的概念，但更复杂一些。你应该将`边`的变量设置成什么，来用正方形画出这张图？\\r\n\\r\n<p\nstyle=\"font-size:small; padding: 15px 15px 15px 40px; background-color:#dcf3f3;\nborder-radius:10px;\">\\r\n\\t只是好玩：试试在这个图案中，使用不同的数字！\\r\n</p>"
-      Course 4 Artist Vars 12: "让我们将`边数`变量设置为5. 我们会加更多的边到这个算法中，边数越大，就越能明白整个模式！\n\n\n注意，这里有另一个叫做`长度`的变量。我们能在任何`向前移动`模块中使用它。\n\n将`长度`变量设置为75。"
+      Course 4 Artist Vars 12: |-
+        让我们将`边数`变量设置为5. 我们会加更多的边到这个算法中，边数越大，就越能明白整个模式！
+
+
+        注意，这里有另一个叫做`长度`的变量。我们能在任何`向前移动`模块中使用它。
+
+        将`长度`变量设置为75。
       Course 4 Artist Vars 13: "当一个图形有很多条边时，为了让它能显示在屏幕中，要让每条边都短一些。\n\\r\n\\r\n让我们重新创建这个算法来得到这个神奇的图形。为了不手动输入“长度”变量，让我们将“边数”变量放到一个“数学”模块中，来确保每个图形都能显示完整。\\r\n\\r\n每个多边形的周长都是300像素。"
       Course 4 Artist Vars 14: |-
         自由发挥：试试看！
@@ -15482,6 +15462,62 @@ zh-CN:
       Course 4 SCV 6: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\r\n\\r\n** 变量超级挑战: ** 你已经学会了制作像这样的图案的所有知识了！这关有点困难。你能坚持下去，直到找到解决方案吗？  "
       Course 4 SCVP 1: 创建一个函数，能够让小艺术家往前或者往后跳x像素，而且也能让他往上或者往下跳y个像素。（使用正数和负数）
       Course 4 Variables Assessment: 你能用一个“边数”变量来画出这幅图吗？每条边应该是50像素长。
+      CourseD_Dance_Party_01: |-
+        *让我们开个舞会吧！*
+
+        将“新建”模块拖到工作区，并关联到“设置”模块，创建第一个舞者。
+
+        * *如果需要了解更多信息或其他挑战，可以点击左侧的灯泡。*
+      CourseD_Dance_Party_02: |-
+        让这只驼鹿舞动起来吧！
+
+        将<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">新舞者</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">线条</title><title name="DIR">-1</title></block></xml>模块拖放到工作区。将其连接到下面的 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小节"</title></block></xml>模块。舞者应在第四个小节后开始新的动作。
+
+
+        **小节**用于音乐计时。本教程中，一个小节长度为四个节拍。
+      CourseD_Dance_Party_03: "*现在跟着节奏动起来！*\n\n在工作区域添加一个 <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"小节\"</title></block></xml>模块。让舞者在 6 个小节后开始新的动作！"
+      CourseD_Dance_Party_04: |-
+        *给舞蹈加点炫酷效果！*
+
+        在工具箱中找到一个能添加背景效果的模块。然后跟随音乐节拍，来看看新的效果吧！
+      CourseD_Dance_Party_05: |-
+        使用其他新模块让舞者**每 2 个小节**变换动作！
+
+        **选择“(下一步)”、“(上一步)”或“(随机)”，让舞者在代码每次运行时做不同的动作。
+      CourseD_Dance_Party_06: |-
+        *我们需要更多舞者！*
+
+        创建名为“backup_dancer1”的伴舞，与猫一起跳舞。
+      CourseD_Dance_Party_08: |-
+        每个舞者都有一系列控制其外观的 _属性设置_。
+
+        可以通过缩小舞者的 _大小_ 使它看上去像是在后排。你能让两个伴舞大小一样吗？
+      CourseD_Dance_Party_09: |-
+        舞者有可以添加颜色层的"tint"（色调）属性。尝试更改其中一个舞者的色调。
+        * 色调将会将选择的颜色与舞者的颜色混合。
+      CourseD_Dance_Party_10: |-
+        现在知道了如何更改舞者的属性，还可以使用此模块让相同的属性自动对音乐做出响应：
+
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">右边的独角兽</title>
+        <title name="PROPERTY">"比例"</title>
+        <title name="RANGE">"base"（低音）</title>
+        </block></xml>
+
+        此程序使用音乐的"bass"（最低频率的声音）音量来控制舞者的高度。可以让其他舞者也对音乐有响应吗？
+      CourseD_Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 模块可以在上方向键按下时运行代码。\n\n可以更改跳舞动作，更改舞者的属性，或者快速做一次动作。激发创造力，寻找新模块！"
+      CourseD_Dance_Party_11_5: "查看此模块：\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"鸭子\"</title>\n<title name=\"LAYOUT\">\"圆圈\"</title>\n</block></xml>\n\n现在可以一次创建多个舞者了！\n\n尝试使用“所有鸭子”模块写入让所有鸭子一起跳舞的代码。"
+      CourseD_Dance_Party_11b: |-
+        跳舞时间到了！按下左方向键时，猫会轻拍。让机器人在按下右方向键时"蹲下"，并在按下上方向键时"拍手"。
+
+        ** 使用这些键来做出 蹲下-拍手-蹲下-拍手 的动作，看你能做多快！ **
+      CourseD_Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
+      CourseE_HOC 2018 Level_10: "这个海底遗迹的某个地方藏着一条**鱿鱼** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) ，你能找到它吗？\n\n"
+      CourseE_HOC 2018 Level_11: 在黑色混凝土附近建造一堵**海晶石**墙![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) 。此操作可激活**导管** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) ，完成挑战！
+      CourseE_HOC 2018 Level_7a: "找到了水下废墟。在沙石红搜寻包含**海晶石** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)宝藏的**箱子** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)。\n\n"
+      CourseE_HOC 2018 Level_8: "先是冰山，现在又是岩浆？穿过火山岛，在珊瑚礁上寻找**热带鱼** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) in the coral reef。\n\n"
+      CourseE_HOC 2018 Level_9b: "成功抵达珊瑚礁，赶快搜寻**海洋之心**吧\n![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ！使用蓝色和红色珊瑚找到**宝箱** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)。\n\n"
       CourseF_PlayLab_vars1: "玩这个游戏, 你不需要写任何代码, 只要点击 \"运行\"!\\r\n<hr/>\\r\n在这里, 你是那只试图比猫收集更多的旗子的狗。 \\r\n_ (使用向下箭头来移动。）_"
       CourseF_PlayLab_vars10: "自由游戏时间！这是除了使用过的所有变量，还有一些别的变量。\\r\n\\r\n注意：现在工具箱里有很多模块需要组织在一起！我们将这些模块放到了合适的分类中。花一些时间来看看每种类型都有哪些模块吧。当你看完后，可以用重复、变量和事件做出一个故事或者游戏。\\r\n\\r\n*提示：往下滚动鼠标来查看工作区的所有命令。*"
       CourseF_PlayLab_vars2: 最后关卡中的比赛不是很公平! 更改`dog_speed`（狗_速度）变量以确保你可以收集比猫更多的旗子。第一个收集到10面旗子的赢！
@@ -18069,6 +18105,50 @@ zh-CN:
       aE7: "<div style=\"color: #7665a0; font-size: 1.6em; line-height:\n1.4em;\" >\\r\n画一些丝带如何？\\r\n<br/><br/>\\r\n如果你像这样创建一个循环，但向左转而不是向右转，会发生什么？\\r\n\\r\n你能重复所有这些，来画出这个波浪吗？\\r\n</div>"
       aE8: "<div style=\"color: #7665a0; font-size: 1.6em; line-height:\n1.4em;\" >\\r\n艺术家要给图片边框一些派对的感觉！\\r\n<br/><br/>\\r\n让我们从条幅中循环代码4次来创建此边框。\\r\n<br/><br/>我们已经添加了一个叫做‘弯曲边角’ 的特殊模块可以让你得到很花俏的圆角！\\r\n</div>"
       aEfreeplay: "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\n<b>自由发挥:</b>\n做最后的修饰，我们需要一些装饰品挂在房子周围。\n<br/><br/>\n你能设计一个装饰来让派对更有味道吗？ \n</div>\n<br/>\n<h4>\n<details>\n\n<summary>需要一些主意？</summary>\n\n<br/>\n<br/>\n试着做一桌布满了钻石的餐巾! \n<img src=\"https://images.code.org/2c092ea5edbb33405c019110df3f5710-image-1466095499984.43.56.png\" width=\"200px\"/>\n<hr/>\n<br/>\n制作装饰品!  \n<img src=\"https://images.code.org/361d2ad667853418a040ec9383505169-image-1466096394561.56.12.png\" width=\"200px\"/>\n<hr/>\n\n<br/>\n做一些全新的东西! \n<img src=\"https://images.code.org/6809a1bd2a364ae7e0ff42745ec1fe1b-image-1466097871045.23.44.png\" width=\"200px\"/>\n<hr/>\n\n</details>\n</h4>\n\n"
+      allthethings data blocks test: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
+      allthethings design mode elements: |-
+        #测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        。
+
+        相当长的说明的结尾。
+      allthethings level dataTables: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
+      allthethings_template_backed1: '备份模板#1. 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。 '
+      allthethings_template_backed2: '备份模板#2. 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。'
       allthethings_ttscsd: |-
         <img src="https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10
         PM.png" style="float:right;height:150px">\r
@@ -19161,6 +19241,7 @@ zh-CN:
         用`当演员碰到`这样的事件模块来改变分数。得到10分来通关。
       courseC19_playLab_EOC5: 做的好！你有了一个游戏所有基本的部分了。现在花点时间来确保游戏会像你像的那样工作。加入一个胜利或失败的方法，然后玩到触发这些条件。
       courseC19_playLab_EOC6: 完成了！现在你可以玩自己的游戏，或者分享给你的朋友或同学了！
+      courseC_PlayLab_events6_2019: 现在，写一个程序让企鹅四处移动，使用上/下/左/右键命中所有目标！
       courseC_PlayLab_events7: |-
         `一直重复`模块能让你一遍又一遍的一直运行代码。用这个代码来将恐龙迪诺（演员2）不停的上下移动400像素。\r
         \r
@@ -19842,7 +19923,17 @@ zh-CN:
         - 每条边都是15像素长\r
         - 需要转90度\r
         - 总共重复4次
-      courseD_artist_5_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"试着改变形状或线条长度来画出自己的！\"_\\r\n\\r\n<br/>  \\r\n\\r\n**灵感：**\n你可以用任何方法来画自己的形状，这里是一个主意:\\r\n\\r\n-\n试着改变雪花顶端的图案！"
+      courseD_artist_5_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"试着改变形状或线条长度来画出自己的！"_\r
+        \r
+        <br/>  \r
+        \r
+        **灵感：**
+        你可以用任何方法来画自己的形状，这里是一个主意:\r
+        \r
+        -
+        试着改变雪花顶端的图案！
       courseD_artist_5_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"试着改变形状或线条长度来画出自己的！\"_\\r\n\\r\n<br/>  \\r\n\\r\n**灵感：**\n你可以用任何方法来画自己的形状，这里是一个主意:\\r\n\\r\n-\n试着改变雪花顶端的图案！"
       courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"让我们试试一些新东西。这次沿着之字形滑冰。\"_\\r\n\\r\n\\r\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\\r\n用75到105度间的转向来画出楼梯图案 -- 但要确保左右转都有同样的角度。 \\r\n（过会儿你会明白为什么。）"
       courseD_artist_6_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"让我们试试一些新东西。这次沿着之字形滑冰。\"_\\r\n\\r\n\\r\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\\r\n用75到105度间的转向来画出楼梯图案 -- 但要确保左右转都有同样的角度。 \\r\n（过会儿你会明白为什么。）"
@@ -21640,7 +21731,15 @@ zh-CN:
       courseF_artist_fwp9_2018: "**自由发挥：**下面是你写的函数，还有更多的让你摆弄的函数。用笔的宽度来看看你的画看起来会如何的不同！建议都在提示里！"
       courseF_artist_fwp_challenge1: "尝试运行此程序。\n进行一些更改，看看会发生什么。你能弄清楚它是如何工作的吗？你可以把这段程序删掉并且重写成其他任何你想要的程序。"
       courseF_artist_fwp_challenge1_2018: "尝试运行此程序。\n进行一些更改，看看会发生什么。你能弄清楚它是如何工作的吗？你可以把这段程序删掉并且重写成其他任何你想要的程序。"
-      courseF_artist_fwp_challenge2: "哇！用你在前一关学到的来画这样的图形。\\r\n\\r\n*提示：用在数来让代码更简单。*\\r\n\\r\n<br/>\\r\n<img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>  "
+      courseF_artist_fwp_challenge2: |-
+        哇！用你在前一关学到的来画这样的图形。\r
+        \r
+        *提示：用在数来让代码更简单。*\r
+        \r
+        <br/>\r
+        <img src="https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png"
+        width="300px"/>\r
+        <br/>  
       courseF_artist_fwp_challenge2_2018: "哇！用你在前一关学到的来画这样的图形。\\r\n\\r\n*提示：用在数来让代码更简单。*\\r\n\\r\n<br/>\\r\n<img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>  "
       courseF_artist_ramp10: |-
         你知道能把一个循环放到另一个里，让它更强大吗？这叫做"嵌套循环"。\r

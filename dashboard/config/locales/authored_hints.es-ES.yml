@@ -3684,6 +3684,109 @@ es:
           en estas para minar el carbón."
         mc_9_c: Utilice 'poner antorcha' para poner una antorcha en el espacio donde
           está parado.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+          * Asegúrate de que el bailarín aparezca en la pantalla.
+
+          *Este nivel termina después de 4 compases.*
+        challenges: |-
+          **Desafíos opcionales**
+          * Elige una canción diferente para reproducir.
+          * ¡Elige uno diferente que se parezca a un alce!
+          * Renombra a tu bailarín.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+          * El bailarín tiene que cambiar a un movimiento nuevo después de 4 compases.
+
+          *El nivel termina después de 8 compases.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Después de 6 compases, tu bailarín tiene que hacer un baile diferente del que hacía después de 4 compases.
+
+          *El nivel termina después de 12 compases.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Tienes que hacer que el efecto de fondo cambie en algún momento del séptimo compás de la canción.
+
+          *Este nivel termina después de 10 compases.*
+        challenges: |-
+          **Desafío opcional**
+
+          Cambia el efecto de fondo en diferentes momentos durante la canción conectando el bloque nuevo con los de los compases <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Necesitarás tener al menos dos bailarines.
+
+          *Este nivel termina después de 6 compases.*
+        challenges: |-
+          **Desafío opcional**
+
+          * Añade un tercer bailarín (¡o tantos como quieras!)
+          * Haz que todos tus bailarines realicen diferentes movimientos en diferentes momentos de la canción.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Dos bailarines deben tener un tamaño diferente de 100.
+
+          *Este nivel termina después de 6 compases.*
+        challenges: |-
+          **Desafío opcional**
+
+          * Experimenta cambiando otras propiedades (anchura, altura, rotación, etc.).
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Cambia la tonalidad de por lo menos un bailarín.
+
+          *Este nivel termina después de 8 compases.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Se deben cambiar las propiedades de dos o más bailarines.
+
+          *Este nivel termina después de 8 compases.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * ¡Usa tu creatividad!
+
+          *Este nivel termina después de 8 compases.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * ¡Usa tu creatividad!
+
+          *Este nivel termina después de 8 compases.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          * Utiliza el bloque «cuando flecha izquierda pulsada» para indicar al Robot que haga un movimiento de baile cuando la pulses.
+
+          *Este nivel termina después de 8 compases.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Mira las **linternas del mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          ¿Cómo podrías usar un condicional con ellas para atravesar el monumento
+          oceánico?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Puedes utilizar el bloque "si en ruta" para ayudarte a hacer los
+          giros de forma correcta.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: "¡Qué arrecife de coral más bonito! ¡Estás en tu **derecho**
+          de usar coral azul, pero asegúrate de que el coral rojo quede a la **izquierda**!"
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Asegúrese de establecer el número de `velocidad_perro`a
           algo más grande que` velocidad_gato`.
@@ -3920,6 +4023,9 @@ es:
         voyage_aquatic_10a: "Mira las **linternas del mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           ¿Cómo podrías usar un condicional con ellas para atravesar el monumento
           oceánico?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Puedes utilizar el bloque "si en ruta" para ayudarte a hacer los
+          giros de forma correcta.
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: "¡Qué arrecife de coral más bonito! ¡Estás en tu **derecho**
           de usar coral azul, pero asegúrate de que el coral rojo quede a la **izquierda**!"
@@ -4741,12 +4847,23 @@ es:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Deberían haber 3 bloques dentro del bucle para resolver este
           rompecabezas.
+      behaviors 1_authored_hint:
+        behavior hint: "Trata de editar los comportamientos! \n\n* A que direccion
+          necesita el pjaro moverse?"
+      behaviors 2_authored_hint:
+        behavior hint: "Trata de editar los comportamientos! \n\n* A que direccion
+          necesita el pjaro moverse?"
       behaviors 3_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando
           la velocidad de cada sprite?"
+      behaviors 4_authored_hint:
+        behavior hint: "Trata de editar los comportamientos! \n\n* A que direccion
+          necesita el pjaro moverse?"
       behaviors 5_authored_hint:
         target hint: Puedes elegir cualquiera de los cuatro juguetes. ¿Cuál quiere
           la mascota?
+        behavior hint: Edita el comportamiento para resolver el puzzle. El personaje
+          debe moverse en dos direcciones diferentes para moverse en diagonal.
       behaviors 5a_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! *¿Qué valor está controlando
           la velocidad de cada sprite?"
@@ -4893,6 +5010,29 @@ es:
           Si repites las acciones anteriores dos veces, estarás listo para retroceder por la ruta principal.
 
           ** ¡Solo haz clic para obtener otra sugerencia si deseas ver la solución completa! **
+      course3_collector_debugging_challenge2_authored_hint:
+        courseD_collector_debugging_challenge2_a: |-
+          Comienza enfocándote en recolectar DOS gemas de cada una de las primeras dos pilas.
+
+          ![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)
+          Usa estos bloques.
+
+          <xml>
+          <block type="collector_collect"></block>
+          <block type="controls_repeat" limit="2">
+          <title name="TIMES">2</title>
+          </block>
+          <block type="maze_move" x="175px" y="17px">
+          <title name="DIR">avanzar</title>
+          </block>
+
+          <block type="controls_repeat" limit="2" x="175px" y="56px">
+          <title name="TIMES">2</title>
+          </block>
+
+
+
+          </xml>
       course3_farmer_condLoops_challenge1_authored_hint:
         courseD_farmer_condLoops_challenge1_a: El botón de `PASO` puede ser muy útil
           en este desafío.

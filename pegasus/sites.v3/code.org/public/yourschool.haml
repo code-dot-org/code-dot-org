@@ -26,6 +26,8 @@ social:
 - census_announcement['table-id'] = CDO.census_map_table_id
 - census_announcement['school_year'] = current_census_year
 
+= inline_css 'trophy_announcement_sparkle.css'
+
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: minifiable_asset_path('js/code.org/public/yourschool.js')}

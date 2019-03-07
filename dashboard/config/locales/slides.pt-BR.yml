@@ -2740,16 +2740,16 @@ pt-BR:
           e fazer os outros desaparecerem. Você decide!
     iceage_events:
       1:
-        text: 'Agora, vamos aprender um pouco sobre algo que todos os programadores
-          de jogos usam todos os dias: os eventos. Um evento diz ao seu programa que
-          ele deve ouvir quando algo acontece e, quando essa coisa acontece, ele realiza
-          uma ação.'
+        text: Agora vamos aprender sobre algo que todos os programadores de jogo usam
+          todos os dias. Eles são chamados eventos. Um evento diz ao seu programa
+          para ouvir quando algo acontece e quando isso acontece, o jogo executa uma
+          ação.
       2:
         text: 'Alguns exemplos de eventos são: detectar um clique do mouse, o toque
           de uma tecla de direção ou um toque na tela.'
       3:
         text: Aqui, vamos fazer seu personagem dizer alguma coisa quando o jogador
-          clicar nele. Vamos usar o bloco "quando clicado" e o bloco "diga" anexado
+          clicar nele. Vamos usar o bloco "quando clicado" e o bloco "diga" ligado
           a ele. Quando o jogador clicar, todos os blocos anexados a esse bloco serão
           executados.
       4:
@@ -2877,22 +2877,21 @@ pt-BR:
         image: notes/applab_intro_welcome_1.png
         text: Meu nome é Mei'lani. Eu faço estágio no code.org e também sou estudante
           de ciência da computação. Eu gosto de ciência da computação porque é muito
-          criativo. Eu posso ser a solucionadora de problemas. Eu posso fazer tudo
-          funcionar da maneira como eu quero. Mas eu também posso ser a designer.
-          Eu posso ser a artista e escolher tudo no âmbito criativo da ciência da
-          computação.
+          criativo. Eu sou a solucionadora de problemas. Eu posso fazer tudo funcionar
+          da maneira como eu quero. Mas eu também posso ser a designer. Eu posso ser
+          a artista e escolher tudo no âmbito criativo da ciência da computação.
       2:
-        text: Fazer seus próprios aplicativos é fácil com o Laboratório de Apps! Tanto
-          se você for novo em programação ou se você já tiver alguma experiência.
-          O Laboratório de Apps é uma ótima ferramenta para construir novos apps e
-          compartilhá-los com seus amigos.
+        text: Fazer seus próprios aplicativos é fácil com o Laboratório de Aplicativo!
+          Tanto se você for novo em programação ou se você já tiver alguma experiência.
+          O Laboratório de Aplicativo é uma ótima ferramenta para construir novos
+          apps e compartilhá-los com seus amigos.
       3:
-        text: Este é o Laboratório de Apps. No lado esquerdo está o seu app. No lado
-          direito está o código que irá fazê-lo rodar. Você pode construir o seu programa
-          arrastando blocos da caixa de ferramentas. Para começar você terá apenas
-          um bloco chamado 'definirPropriedade'.
+        text: Este é o Laboratório de Aplicativo. No lado esquerdo está o seu app.
+          No lado direito está o código que irá fazê-lo rodar. Você pode construir
+          o seu programa arrastando blocos da caixa de ferramentas. Para começar você
+          terá apenas um bloco chamado 'definirPropriedade'.
       4:
-        text: O bloco de definir prioridade muda a aparência dos elementos na sua
+        text: O bloco de definir propriedade muda a aparência dos elementos na sua
           tela. Como os botões, rótulos, ou mesmo a própria tela. Primeiro você precisa
           decidir qual elemento você deseja alterar. Se você passar o mouse por cima
           de um elemento no seu app você pode ver o nome ou ID aqui. Então selecione
@@ -2902,9 +2901,9 @@ pt-BR:
           seu texto, cor de fundo ou tamanho da fonte. Você pode ver a lista completa
           e escolher qual propriedade você deseja alterar na segunda lista de seleção.
       6:
-        text: A última lista é onde você irá escrever o valor que você deseja usar.
-          O bloco irá fazer sugestões para você. Mas você mesmo sempre pode digitar
-          cores ou números diferentes.
+        text: A última lista de seleção é onde você irá escrever o valor que você
+          deseja usar. O bloco irá fazer sugestões para você. Mas você mesmo sempre
+          pode digitar cores ou números diferentes.
       7:
         text: 'Assim que você terminar, o bloco se lê como uma sentença: ''Defina
           a cor de fundo do botão 1 para verde''. Clique em executar para ver as mudanças
@@ -2912,7 +2911,7 @@ pt-BR:
           mais blocos para alterar outras coisas sobre o seu app. Como o texto!'
       8:
         text: Para este tutorial vamos trabalhar no modo de blocos mas o Laboratório
-          de Apps também suporte trabalhar com texto.
+          de Aplicativo também suporta trabalhar com texto.
       9:
         text: De qualquer maneira você vai estar programando em JavaScript, a linguagem
           da web. Cada nível tem um objetivo, instruções e uma imagem do que você
@@ -2924,7 +2923,7 @@ pt-BR:
         text: Assim que você tiver completado o objetivo para este nível clique em
           Terminar para seguir em frente. Isto é tudo! Aperte o botão laranja "continue"
           para ir para o próximo nível e comece sua aventura com um Laboratório de
-          Apps!
+          Aplicativo!
     applab_intro_events:
       1:
         text: Apps são muito legais porque é como começar o seu próprio negócio. Quero
@@ -2935,8 +2934,8 @@ pt-BR:
           respondendo a eventos! Eventos são ações de usuário como clicar em um botão,
           rolar por um menu, ou passar o mouse sobre uma imagem. Apps interativos
           precisam de maneiras para responder a eventos, como tocar um som quando
-          eu clico neste botão. Para fazer isto no Laboratório de Apps você vai precisar
-          usar um novo bloco chamado 'noEvento'.
+          eu clico neste botão. Para fazer isto no Laboratório de Aplicativo você
+          vai precisar usar um novo bloco chamado 'noEvento'.
       3:
         text: Este programa define a tela para azul. Eu quero que a tela fique verde
           quando eu clicar neste botão. Primeiro eu vou precisar arrastar um bloco
@@ -2950,8 +2949,8 @@ pt-BR:
           fundo da tela. Você pode ler este bloco como uma frase: "No evento em que
           o botão é clicado execute todo este código."'
       6:
-        text: Vamos testá-lo. Blocos fora de um noEvento ainda executam imediatamente
-          para que a tela inicie azul.
+        text: Vamos testar. Blocos fora de um noEvento ainda executam imediatamente,
+          então a tela inicia azul.
       7:
         text: E quando eu clico no botão grande o código dentro do meu noEvento é
           executado e a minha tela fica verde.
@@ -2977,7 +2976,7 @@ pt-BR:
           ou animais.
       4:
         text: Assim que você tiver o som que você quiser, clique em "Escolher". Quando
-          este bloco é executado, ele irá tocar o som que você escolher.
+          este bloco é executado, ele irá tocar o som que você escolheu.
       5:
         text: Para adicionar imagens aos seus elementos você pode simplesmente usar
           o bloco definirPropriedade. Selecione a propriedade imagem na segunda lista
@@ -3018,8 +3017,8 @@ pt-BR:
         text: Se você adicionar um elemento para seu app por engano, apenas arraste-o
           para fora ou aperte delete.
       7:
-        text: Você pode adicionar telas inteiras para o seu app arrastando um elemento
-          de tela
+        text: Você pode adicionar telas completamente novas ao seu aplicativo arrastando
+          em um elemento de tela
       8:
         text: A partir da lista de seleção no topo você pode rapidamente alternar
           entre as telas que você criar.
@@ -3034,7 +3033,7 @@ pt-BR:
           você vai escrever código para que o botão alterne para a nova tela.
     applab_intro_share:
       1:
-        text: Agora que você aprendeu algumas noções básicas do Laboratório de Apps
+        text: Agora que você aprendeu algumas noções básicas do Laboratório de Aplicativo
           como adicionar botões, sons, imagens, texto e novas telas, você pode criar
           todos os tipos de aplicativos.
       2:
@@ -3056,15 +3055,15 @@ pt-BR:
           ou postar o link na galeria pública do code.org para que outras pessoas
           possam jogar e compartilhar.
       6:
-        text: Você apenas arranhou a superfície do que o Laboratório de Apps pode
-          fazer. O Laboratório de Apps Completo tem interações de usuário ainda mais
-          avançadas, novos elementos de telas e até mesmo um banco de dados interno
-          para que você possa rapidamente construir aplicativos completos. Em "code.org/applab"
-          você irá encontrar a ferramenta completa e um monte de ideias caso você
-          deseje continuar.
+        text: Você apenas arranhou a superfície do que o Laboratório de Aplicativo
+          pode fazer. O Laboratório de Aplicativo Completo tem interações de usuário
+          ainda mais avançadas, novos elementos de telas e até mesmo um banco de dados
+          interno para que você possa rapidamente construir aplicativos completos.
+          Em "code.org/applab" você irá encontrar a ferramenta completa e um monte
+          de ideias caso você deseje continuar.
       7:
         text: Obrigado por ter vindo ao longo do passeio. Agora vá construir e compartilhar
-          o seu primeiro app, e continue construindo apps com o Laboratório de Apps!
+          o seu primeiro app, e continue construindo apps com o Laboratório de Aplicativo!
     mc_2017_agent_intro:
       1:
         text: 'Stacy: Stampy, Lizzy, Preston - obrigado por ter vindo comigo. O que
@@ -3093,7 +3092,7 @@ pt-BR:
           os escritórios do Minecraft.
       6:
         text: Mas, eu vou precisar de sua ajuda. Comece fazendo o tutorial, comece
-          aprendendo como codificar, e eu vou alcançar vocês após alguns níveis, ok?
+          aprendendo como programar, e eu vou alcançar vocês após alguns níveis, ok?
           Desejem-me sorte! Eu acho que é por este caminho. Ai! Cactus! Eu estou bem!
       7:
         text: Para completar o desafio da Hora do Código, você precisará escrever
@@ -3130,7 +3129,7 @@ pt-BR:
         text: Sinto que estou de volta ao Minecraft! Olá. Como vai você? Olá?
       4:
         text: |-
-          Oh, há um creeper. Você não faz nada, faz? Katie: Stacy? Stacy: Oi, Katie?
+          Oh, olha ali, têm um creeper. Você não faz nada, faz? Katie: Stacy? Stacy: Oi, Katie?
           Katie: Sim, bem-vindo(a) ao Minecraft!
       5:
         text: 'Stacy: Isto é incrível. Então você trabalha aqui todos os dias como
@@ -3144,24 +3143,23 @@ pt-BR:
           eles querem aprender a programar, então qual é uma das primeiras coisas
           que você precisa saber quando você está aprendendo?'
       6:
-        text: 'Katie: Bem, você precisa aprender a usar as repetições. Repetições
-          são coisas que os desenvolvedores escrevem para dar comandos para um computador
-          que podem ser executados várias vezes. Stacy: Entendi, então acho que, na
-          verdade, um pouco sobre isto está chegando nos próximos níveis, então vá
-          em frente e experimente as repetições.'
+        text: 'Katie: Bem, você precisa aprender a usar laços. Laços são coisas que
+          os desenvolvedores escrevem para dar comandos para um computador que podem
+          ser executados várias vezes. Stacy: Entendi, então acho que, na verdade,
+          um pouco sobre isto está chegando nos próximos níveis, então vá em frente
+          e experimente os laços.'
       7:
-        text: No próximo nível, você pode usar uma repetição para mover o Agente ao
-          longo do caminho. Arraste o bloco de repetição para a área de trabalho e
-          coloque o bloco de movimento para a frente dentro do bloco de repetição.
-          Isto diz ao computador para fazer a mesma coisa várias vezes seguidas sem
-          que seja necessário arrastar um monte de blocos para a área de trabalho.
-          Você pode escolher quantas vezes repetir colocando um número no bloco de
-          repetição.
+        text: No próximo nível, você pode usar um laço para mover o Agente ao longo
+          do caminho. Arraste o bloco repita para a área de trabalho e coloque o bloco
+          avance dentro do bloco repita. Isto diz ao computador para fazer a mesma
+          coisa várias vezes seguidas sem que seja necessário arrastar um monte de
+          blocos para a área de trabalho. Você pode escolher quantas vezes repetir
+          colocando um número no bloco repita.
       8:
-        text: Você pode colocar voltas e múltiplos comandos no bloco de repetição
-          também, mas por agora tente usar uma repetição para mover o Agente para
-          a frente quatro passos. Lembre-se, se você ficar preso em um quebra-cabeça
-          você sempre pode apertar o botão azul de redefinir e tentar novamente.
+        text: Você pode colocar vire e múltiplos outros comandos no bloco repita também,
+          mas por agora tente usar um laço repita para mover o Agente para a frente
+          quatro passos. Lembre-se, se você ficar preso em um quebra-cabeça você sempre
+          pode apertar o botão azul de redefinir e tentar novamente.
       9:
         text: 'Se você está pensando sobre ter um emprego legal como o de Katie, vá
           em frente e clique no botão mostrar código assim que terminar cada nível.
@@ -3177,7 +3175,7 @@ pt-BR:
           que eu sei como resolver o problema que estou tendo em meu jogo. Eu acho
           que posso usar uma função. Deixe-me apenas abrir isto.'
       3:
-        text: Então uma função é um conjunto específico de instruções para realizar
+        text: Então, uma função é um conjunto específico de instruções para realizar
           uma determinada tarefa, como se fosse uma receita. Nos próximos níveis,
           você terá acesso às funções que você pode usar para resolver os quebra-cabeças.
       4:
@@ -3200,7 +3198,7 @@ pt-BR:
       4:
         text: 'Stacy: Parabéns pessoal, vocês arrasaram! E agora que vocês completaram
           a Hora do Código, vocês podem começar a programar em Minecraft. Vocês aprenderam
-          sobre repetições, funções, e o que um Agente de software faz.'
+          sobre laços, funções, e o que um Agente de software faz.'
       5:
         text: Agora, é hora do nível de jogo livre, onde você é o desenvolvedor. Use
           qualquer tempo restante para escrever suas próprias funções para explorar,
@@ -3216,7 +3214,7 @@ pt-BR:
           construir uma escada fora destes blocos de terra queimada, agora nós podemos
           simplesmente usar esta escada para sair daqui. E, pessoal, não são apenas
           escadas. Eu posso dizer ao Agente para fazer qualquer coisa que eu quiser,
-          e ele irá fazê-lo por mim.'
+          e ele irá fazer por mim.'
       8:
         text: 'Stampy: Como você fez isto? Stacy: foi fácil, na verdade. Eu apenas
           usei código!'
@@ -3251,7 +3249,7 @@ pt-BR:
           estejam em sua mochila bem agora. Mas o que faz um computador ser um computador?
           O que realmente faz de um computador, um computador? E ainda como ele funciona?
       3:
-        text: Oi eu sou o Nat! Eu fui um dos desenhistas originais do Xbox. Tenho
+        text: Oi, eu sou o Nat! Eu fui um dos desenhistas originais do Xbox. Tenho
           trabalhado com computadores desde que eu tinha talvez sete anos de idade
           e agora eu trabalho em uma realidade virtual. Como humanos, nós sempre construímos
           ferramentas para nos ajudar a resolver problemas. Ferramentas como um carrinho
@@ -3291,9 +3289,9 @@ pt-BR:
           para ser retornada para a saída.
       9:
         text: Como um computador retorna a informação para a saída depende do que
-          o computador foi desenhado para fazer. Um monitor pode exibir texto, fotos,
-          vídeos, ou jogos interativos - até mesmo realidade virtual! A saída de um
-          computador pode até mesmo incluir sinais para controlar um robô.
+          o computador foi projetado para fazer. Um monitor pode exibir texto, fotos,
+          vídeos, ou jogos interativos -- até mesmo realidade virtual! A saída de
+          um computador pode até mesmo incluir sinais para controlar um robô.
       10:
         text: E quem sabe como os computadores de amanhã serão? Minha esperança é
           que você ajude a decidir como você quer que os computadores de amanhã sejam.
@@ -3304,7 +3302,7 @@ pt-BR:
     csd_concept_binary_data:
       1:
         text: Oi! Meu nome é Limor Fried, e eu sou uma engenheira aqui nas Industrias
-          Adafruit. E aqui é onde eu faço a engenharia e desenho, e eu desenho circuitos
+          Adafruit. E aqui é onde eu faço a engenharia e projetos, e eu projeto circuitos
           para moda e música e tecnologia.
       2:
         text: Meu nome é Frederico Gomez Suarez, e eu sou um desenvolvedor de software
@@ -3616,13 +3614,13 @@ pt-BR:
           quer resolver, e escrever o software que torna estas ideias realidade.
     hoc_dance_warmup:
       1:
-        text: 'Hora do Código | Festa da Dança: Aquecimento'
+        text: 'Hora do Código | Festa Dançante: Aquecimento'
     hoc_dance_events:
       1:
-        text: 'Hora do Código | Festa da Dança: Eventos'
+        text: 'Hora do Código | Festa Dançante: Eventos'
     hoc_dance_properties:
       1:
-        text: 'Hora do Código | Festa da Dança: Propriedades'
+        text: 'Hora do Código | Festa Dançante: Propriedades'
     mc_2018_intro:
       3:
         text: No lado esquerdo, você verá o mundo de Minecraft.

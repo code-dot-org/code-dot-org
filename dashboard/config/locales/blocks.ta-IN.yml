@@ -109,11 +109,24 @@ ta:
           KEY:
             '"space"': வெளி
             '"x"': x
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': எப்போது
+            '"while"': எப்பொழுது
       gamelab_debugSprite:
         options:
           VAL:
             'true': மெய்
             'false': தவறு
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': எப்போது
+            '"while"': எப்பொழுது
+          KEY:
+            '"space"': வெளி
+            '"x"': x
       gamelab_locationDelta:
         options:
           DIR:
@@ -122,6 +135,10 @@ ta:
         text: ஏதாவது ஒரு நிறம்
       gamelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': மாநகர்
       gamelab_setPosition:
         options:
           POSITION:
@@ -130,6 +147,11 @@ ta:
         options:
           PROPERTY:
             '"height"': உயரம்
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': எப்போது
+            '"while"': எப்பொழுது
       gamelab_whenKey:
         options:
           KEY:

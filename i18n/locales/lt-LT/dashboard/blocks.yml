@@ -146,6 +146,11 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
       gamelab_debugSprite:
         options:
           VAL:
@@ -157,6 +162,18 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
+          KEY:
+            '"up"': aukštyn
+            '"down"': žemyn
+            '"left"': kairėn
+            '"right"': dešinėn
+            '"space"': kosmosas
+            '"x"': x
       gamelab_locationDelta:
         options:
           DIR:
@@ -170,6 +187,10 @@ lt:
         text: Atsitiktinė spalva
       gamelab_randomColor:
         text: Atsitiktinė spalva
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miestas
       gamelab_setPosition:
         options:
           POSITION:
@@ -185,6 +206,11 @@ lt:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -364,6 +390,11 @@ lt:
         options:
           DURATION:
             '"0"': amžinai
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': parodyk
+            '"hide"': pa(si)slėpk
       binary_move:
         options:
           DIR:

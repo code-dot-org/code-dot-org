@@ -838,6 +838,7 @@ es:
       Applab AllTheThings ResourcesTab ReferenceLinks: Dibuja un cuadrado de 1x1 arriba
         y a la izquierda de la posición inicial de la tortuga. Haz clic para ver las
         instrucciones completas.
+      Applab test: Este nivel esta disponible. Es solo para pruebas!
       Artist - Nested Loops 1: 'Completa el código para dibujar estos triángulos.
         El primero es hecho por ti. Sugerencia: 3 triángulos en una rotación de 360
         grados.'
@@ -872,6 +873,9 @@ es:
         usando el bloque “if”. "
       Bergeron Robot Maze1: "¿Me puedes ayudar a atrapar al cerdo malo? Apila un\npar
         de bloques \"avanzar\" juntos y presiona \"Ejecutar\". "
+      Big Game Collision 3: Usa la formula de distancia, para que la funcion de distancia
+        regrese la distancia entre las coordenadas del centro del jugardor (px, py)
+        y del centro de otro sprinte (cx, cy).
       Brad Spooky House Copy: 'Juego Libre: Aquí están las funciones que has escrito
         y algunas más para que juegues con ellas. ¡Dibuja algo impresionante!'
       Brad Spooky House: 'Juego Libre: Aquí están las funciones que has escrito y
@@ -1562,6 +1566,41 @@ es:
       Course E MC Conditionals1: Encontrarás los recursos más valiosos bajo tierra,
         pero puede estar oscuro. Coloca al menos dos antorchas y extrae al menos dos
         de carbón.
+      CourseD_Dance_Party_01: Arrastra el bloque «hacer uno nuevo» al espacio de trabajo
+        y conéctalo dentro del bloque «establecer».
+      CourseD_Dance_Party_02: "¡Haz que el alce inicie un movimiento nuevo después
+        de 4 compases!"
+      CourseD_Dance_Party_03: "¡Ahora haz que el bailarín inicie un movimiento nuevo
+        después de 6 compases!"
+      CourseD_Dance_Party_04: Añade un efecto de fondo a tu programa.
+      CourseD_Dance_Party_05: Utiliza otro bloque nuevo para que el bailarín cambie
+        de movimiento cada 2 compases.
+      CourseD_Dance_Party_06: Crea un bailarín de fondo llamado «bailarín_fondo1»
+        para bailar con el gato.
+      CourseD_Dance_Party_08: "¿Puedes hacer que ambos bailarines de fondo tengan
+        el mismo tamaño?"
+      CourseD_Dance_Party_09: Utiliza el bloque «establecer tonalidad» para cambiar
+        el color de un bailarín.
+      CourseD_Dance_Party_10: Haz que el otro bailarín también responda a la música
+        usando el bloque «comienza siguiente».
+      CourseD_Dance_Party_11: El bloque «cuando arriba pulsada» te permite ejecutar
+        código cuando la flecha hacia arriba se pulsa. Intenta que el bailarín haga
+        un movimiento rápido cuando pulsas arriba.
+      CourseD_Dance_Party_11_5: Utiliza los bloques «todos los patos» para que los
+        patos bailen juntos.
+      CourseD_Dance_Party_11b: Haz que el Robot haga «drop» una vez cuando pulsas
+        la tecla de flecha derecha y haga el baile «floss» una vez cuando pulsas la
+        tecla de flecha hacia arriba. ¡Haz los movimientos drop-floss tan rápido como
+        puedas!
+      CourseD_Dance_Party_12: |-
+        ¡Mueve el esqueleto! Crea un baile propio para compartirlo
+        con tus amigos.
+      CourseE_HOC 2018 Level_10: Llega a la entrada de este monumento oceánico.
+      CourseE_HOC 2018 Level_11: Construye un conducto con prismarina dentro del monumento
+        oceánico.
+      CourseE_HOC 2018 Level_7a: Explora las ruinas subacuáticas en busca de un cofre.
+      CourseE_HOC 2018 Level_9b: Utiliza el coral como punto de ruta para llegar hasta
+        el tesoro.
       CourseF_PlayLab_vars10: "¡Momento de un juego gratis! Aquí están todas las variables
         con las que hemos jugado hasta ahora en esta etapa, así como algunas más en
         caso de que las desees. \r\n\r\n¡Observa que ahora hay tantos bloques en nuestra

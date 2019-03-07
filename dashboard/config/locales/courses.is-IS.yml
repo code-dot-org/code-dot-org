@@ -3,6 +3,11 @@ is:
   data:
     course:
       name:
+        csp-2017:
+          title: Undirstöðuatriði tölvunarfræði ('17-'18)
+          version_title: "'17-'18"
+        csd-2017:
+          version_title: "'17-'18"
         allthethingscourse:
           title: allthethings námskeið
           description_short: Þetta er námskeið fyrir allthethings
@@ -10,3 +15,7 @@ is:
             lýsingu fyrir nemendur
           description_teacher: Þetta er námskeið fyrir allthethings og er með lengri
             lýsingu fyrir kennara
+        csd-2018:
+          version_title: "'18-'19"
+        csp-2018:
+          version_title: "'18-'19"

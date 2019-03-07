@@ -24,17 +24,18 @@ ja:
       Comment: コメント
       'Variables ': '変数(へんすう) '
       everythingelse: ほかのすべて
+      World: 世界
+      Location: ロケーション
+      Behaviors: 行動
       numbers: 数（かず）
       Numbers: 数（かず）
       Default: デフォルト
-      World: 世界
-      Behaviors: 行動
+      Dancers: ダンサー
+      Groups: グループ
       Advanced: 詳細設定
       Start: 始める
       Locations: 場所
       Dancing: ダンスする
-      Dancers: ダンサー
-      Groups: グループ
       Sprite: スプライト
       Brush: ブラシ
       Make Sprite: スプライトを つくる
