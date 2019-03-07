@@ -159,7 +159,7 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
     end
 
     user = User.last
-    assert_equal "lti_#{TEST_CONSUMER_KEY}", user.provider
+    assert_equal "lti_#{TEST_CONSUMER_KEY}", user.primary_contact_info.credential_type
     assert_equal "12345", user.uid
     assert_nil user.password
   end
