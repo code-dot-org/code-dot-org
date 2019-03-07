@@ -107,6 +107,13 @@ class TeacherFeedback extends Component {
     const {user, serverLevelId, teacher} = this.props;
     const {studentId} = this.state;
 
+    window.addEventListener('beforeunload', event => {
+      if (!this.feedbackIsUnchanged()) {
+        event.preventDefault();
+        event.returnValue = i18n.feedbackNotSavedWarning();
+      }
+    });
+
     if (this.props.viewAs === ViewType.Student) {
       $.ajax({
         url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${user}&level_id=${serverLevelId}`,
@@ -185,17 +192,30 @@ class TeacherFeedback extends Component {
       });
   };
 
-  render() {
+  latestFeedback = () => {
     const latestFeedback =
       this.state.latestFeedback.length > 0
         ? this.state.latestFeedback[0]
         : null;
+
+    return latestFeedback;
+  };
+
+  feedbackIsUnchanged = () => {
+    const latestFeedback = this.latestFeedback();
     const feedbackUnchanged =
       (latestFeedback &&
         (this.state.comment === latestFeedback.comment &&
           this.state.performance === latestFeedback.performance)) ||
       (!latestFeedback &&
         (this.state.comment.length === 0 && this.state.performance === null));
+
+    return feedbackUnchanged;
+  };
+
+  render() {
+    const latestFeedback = this.latestFeedback();
+    const feedbackUnchanged = this.feedbackIsUnchanged();
 
     const buttonDisabled =
       feedbackUnchanged ||
@@ -237,11 +257,11 @@ class TeacherFeedback extends Component {
         {this.props.rubric && !dontShowStudentRubric && (
           <div style={styles.performanceArea}>
             <div style={styles.keyConceptArea}>
-              <h1 style={styles.h1}>Key Concepts</h1>
+              <h1 style={styles.h1}> {i18n.rubricKeyConceptHeader()} </h1>
               <p style={styles.keyConcepts}>{this.props.rubric.keyConcept}</p>
             </div>
             <div style={styles.rubricArea}>
-              <h1 style={styles.h1}>Evaluation Rubric</h1>
+              <h1 style={styles.h1}> {i18n.rubricHeader()} </h1>
               <form>
                 {rubricLevels.map(level => (
                   <RubricField
