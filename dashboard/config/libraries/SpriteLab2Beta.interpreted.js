@@ -439,8 +439,8 @@ function layoutSprites(animation, format) {
     }
   } else if (format === "random") {
     group.forEach(function (sprite) {
-      sprite.x = randomInt(minX, maxX);
-      sprite.y = randomInt(minY, maxY);
+      sprite.x = randomNumber(minX, maxX);
+      sprite.y = randomNumber(minY, maxY);
       sprite.rotation = 0;
     });
   } else {
