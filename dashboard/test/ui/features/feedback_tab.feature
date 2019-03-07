@@ -42,7 +42,7 @@ feedback can be submitted and displayed. Otherwise don't show feedback tab
   And element ".editor-column" contains text "This is the key concept for this mini rubric."
   And element "#ui-test-submit-feedback" contains text "Save and share"
   And element "#ui-test-feedback-time" does not exist
-  And I press the first "#rubric-input-exceeds" element
+  And I press "#rubric-input-exceeds" using jQuery
   And I press keys "Nice!" for element "#ui-test-feedback-input"
   And I press "#ui-test-submit-feedback" using jQuery
   And element ".editor-column" contains text "Nice!"

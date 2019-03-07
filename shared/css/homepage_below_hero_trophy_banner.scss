@@ -1,0 +1,146 @@
+.homepage-professional-learning-banner {
+  background-color: #0094ca;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+
+  a {
+    font-family: 'Gotham 4r', sans-serif;
+    text-decoration: none;
+  }
+
+  .nonphone {
+    padding: 5px;
+    background-color: #0094ca;
+    height: 97px;
+    margin: 0 auto;
+    float: none;
+
+    .left {
+      float: left;
+      height: 87px;
+      position: relative;
+
+      .banner {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+        height: 87px;
+
+        .trophyimage {
+          left: 0px;
+          top: -41px;
+          position: absolute;
+          height: 138px;
+          width: 195px;
+        }
+
+        .sparkle {
+          position: absolute;
+          animation: loop 5s infinite linear;
+        }
+        .sparkle1 {
+          left: 79px;
+          top: 4px;
+          width: 20px;
+        }
+        .sparkle2 {
+          left: 100px;
+          top: -22px;
+          width: 30px;
+          animation-delay: 500ms;
+        }
+        .sparkle3 {
+          left: 93px;
+          top: 26px;
+          width: 25px;
+          animation-delay: 1000ms;
+        }
+
+        @keyframes loop {
+          0% {
+            transform: rotate(0deg);
+            opacity: 0;
+          }
+          10% {
+            opacity: 1;
+          }
+          20% {
+            transform: rotate(200deg);
+            opacity: 0;
+          }
+          100% {
+            transform: rotate(360deg);
+            opacity: 0;
+          }
+        }
+
+        .text {
+          color: white;
+          font-size: 18px;
+          text-align: center;
+          line-height: 1.5;
+          animation: fadein 5s;
+          width: 100%;
+          padding-left: 210px;
+          padding-right: 30px;
+        }
+      }
+    }
+
+    .right {
+      float: left;
+      height: 87px;
+      text-align: center;
+
+      .buttoncontainer {
+        height: 87px;
+        display: table-cell;
+        vertical-align: middle;
+        width: 100vw;
+
+        button {
+          font-size: 18px;
+          min-width: 140px;
+          margin-top: 0px;
+          color: #0094ca;
+          background-color: white;
+          border-color: white;
+          border-width: 2px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  .phone {
+    text-align: center;
+
+    .text {
+      color: white;
+      font-size: 18px;
+      padding: 15px;
+      text-align: center;
+      line-height: 1.5;
+      top: 0px;
+      left: 30px;
+      animation: fadein 5s;
+    }
+
+    button {
+      font-size: 18px;
+      min-width: 140px;
+      margin-top: 0px;
+      margin-bottom: 15px;
+      color: #0094ca;
+      background-color: white;
+      border-color: white;
+      border-width: 2px;
+    }
+  }
+
+  .clear {
+    clear: both;
+  }
+}

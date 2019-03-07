@@ -7,7 +7,6 @@ import i18n from '@cdo/locale';
 import shapes from './shapes';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {tableLayoutStyles} from '../tables/tableConstants';
 
 // When this table gets converted to reacttabular, it should also
@@ -126,13 +125,6 @@ class SectionsAsStudentTable extends React.Component {
         sectionCode
       );
     });
-  }
-
-  sectionHref(section) {
-    if (section.numberOfStudents === 0) {
-      return pegasus(`/teacher-dashboard#/sections/${section.id}/manage`);
-    }
-    return section.linkToProgress;
   }
 
   render() {

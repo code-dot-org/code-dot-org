@@ -4,6 +4,7 @@ import {
   WorkshopApplicationStates,
   WorkshopSearchErrors
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 import * as color from '../util/color';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
@@ -41,7 +42,12 @@ const styles = {
     marginTop: 20
   },
   bold: {
-    fontFamily: "'Gotham 5r', sans-serif"
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+  linkLike: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    cursor: 'pointer',
+    color: color.purple
   },
   workshopCollection: {
     backgroundColor: color.lightest_purple,
@@ -232,21 +238,6 @@ class RegionalPartnerSearch extends Component {
           </form>
         )}
 
-        {/* Special message for NYC DOE teachers. */}
-        {partnerInfo && partnerInfo.name === 'Mouse' && (
-          <div>
-            <h3 style={styles.bold}>NYC Department of Education teachers:</h3>
-            We will share a more specific option for NYC DOE teachers in
-            February. The details are still being finalized. If you're a NYC DOE
-            teacher, please complete{' '}
-            <a href="https://goo.gl/forms/MEz3KmikwgPvIk332" target="_blank">
-              this very short form
-            </a>{' '}
-            and we'll alert you when details are available.
-            <h3 style={styles.bold}>For all other teachers:</h3>
-          </div>
-        )}
-
         {(this.state.error === WorkshopSearchErrors.no_state ||
           this.state.error === WorkshopSearchErrors.unknown) && (
           <div>
@@ -400,11 +391,15 @@ class RegionalPartnerSearch extends Component {
               )}
 
               {appState !== WorkshopApplicationStates.currently_open && (
-                <a href={studio('/pd/regional_partner_contact/new')}>
+                <RegionalPartnerMiniContactPopupLink
+                  zip={this.state.zipValue}
+                  notes={'Please notify me when I can apply!'}
+                  sourcePageId="regional-partner-search-notify"
+                >
                   <button style={styles.bigButton}>
                     Notify me when I can apply
                   </button>
-                </a>
+                </RegionalPartnerMiniContactPopupLink>
               )}
             </div>
 
@@ -443,15 +438,20 @@ class RegionalPartnerSearch extends Component {
               {partnerInfo.contact_email && (
                 <div>{partnerInfo.contact_email}</div>
               )}
-              {!partnerInfo.contact_email && (
-                <div>
-                  Direct any questions to your Regional Partner by{' '}
-                  <a href={studio('/pd/regional_partner_contact/new')}>
-                    completing this form
-                  </a>
-                  .
-                </div>
-              )}
+              <div>
+                <br />
+                Direct any questions to your Regional Partner by{' '}
+                <RegionalPartnerMiniContactPopupLink
+                  zip={this.state.zipValue}
+                  notes={
+                    'Please tell me more about the professional learning program!'
+                  }
+                  sourcePageId="regional-partner-search-question"
+                >
+                  <span style={styles.linkLike}>completing this form</span>
+                </RegionalPartnerMiniContactPopupLink>
+                .
+              </div>
             </div>
 
             {/* These two links duplicate the buttons that appear above. */}
