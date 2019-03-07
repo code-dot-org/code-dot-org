@@ -879,6 +879,12 @@ pl:
           * Użyj bloku „kiedy strzałka w lewo”, aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
 
           * Ten poziom kończy się po 7 taktach.
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Widzisz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Możesz użyć bloku "jeśli jest ścieżka", aby wykonać właściwy skręt.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Cóż za przepiękna rafa koralowa! Niebieski koral jest ** właściwą drogą, i uważaj, aby czerwony koral nie był po **lewej** stronie!
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Upewnij się, aby ustawić wartość `prędkość_psa` większą od `prędkość_kota`.
       Dance short test 2_authored_hint:

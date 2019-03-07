@@ -565,6 +565,10 @@ ru:
           * Используйте блок «когда нажата стрелка влево» (when left arrow pressed), чтобы робот делал танцевальное движение по нажатию этой клавиши.
 
           *Этот уровень заканчивается после 8 тактов.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Видите **морские фонари** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Окажется ли блок условия в связке с ними полезным для того, чтобы пробраться через океанский памятник?\n\n"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Какой чудесный коралловый риф! Здесь вам на помощь придут **синие** кораллы, однако не забывайте и о **красных**!
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Убедись, что задаешь значение `dog_speed` больше чем `cat_speed`.
       Dance short test 2_authored_hint:

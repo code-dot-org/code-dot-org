@@ -577,6 +577,11 @@ tr:
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': Ne zaman
+            '"while"': sürece
       gamelab_debugSprite:
         options:
           VAL:
@@ -591,8 +596,25 @@ tr:
             '"y"': y konumu
             '"direction"': hareket yönü
             '"tint"': renk tonu
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': diğer
       gamelab_jumpTo:
         text: "{SPRITE} {LOCATION}’a atla"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': Ne zaman
+            '"while"': sürece
+          KEY:
+            '"up"': yukarı
+            '"down"': aşağı
+            '"left"': sol
+            '"right"': sağ
+            '"space"': uzay
+            '"x"': x
+            '"y"': 'y'
       gamelab_locationDelta:
         options:
           DIR:
@@ -626,6 +648,10 @@ tr:
         text: rastgele konum
       gamelab_setBackground:
         text: arka plan rengini {COLOR} olarak ayarla
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şehir
       gamelab_setPosition:
         text: "{THIS}’i {POSITION} konuma getir"
         options:
@@ -658,6 +684,11 @@ tr:
             '"height"': Yükseklik
       gamelab_setup:
         text: kurulum
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': Ne zaman
+            '"while"': sürece
       gamelab_spriteDirection:
         options:
           DIRECTION:
@@ -895,6 +926,7 @@ tr:
       Vector_randomLocation:
         text: rastgele konum
       aalab_changePropByFlexible:
+        text: "{SPRITE} {PROPERTY}’i {VAL} kadar değiştir"
         options:
           PROPERTY:
             '"scale"': boyut
@@ -936,6 +968,8 @@ tr:
             '"East"': Doğu
             '"South"': Güney
             '"West"': Batı
+      aalab_randomLocation:
+        text: rastgele konum
       aalab_setBG:
         options:
           BG:

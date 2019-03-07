@@ -1647,6 +1647,10 @@ pt-BR:
       CourseD_Dance_Party_11_5: Use os blocos "todos os patos" para fazer os patos dançarem juntos.
       CourseD_Dance_Party_11b: Faça o robô dançar drop uma vez pressionando a tecla de seta para a direita e fazer a dança do fio dental uma vez pressionando a seta para cima. Faça o movimento dança drop-dança do fio dental o mais rápido que puder!
       CourseD_Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
+      CourseE_HOC 2018 Level_10: Vá até a entrada do Monumento Oceânico.
+      CourseE_HOC 2018 Level_11: 'Construa um canal usando Prismarinho dentro do Monumento Oceânico.'
+      CourseE_HOC 2018 Level_7a: Procure um baú nas ruínas subaquáticas.
+      CourseE_HOC 2018 Level_9b: 'Use os corais como pontos passagem para alcançar o tesouro.'
       CourseF_PlayLab_vars1: 'Para jogar este jogo, você não precisa escrever nenhum código, apenas clicar "Executar"! '
       CourseF_PlayLab_vars10: "Hora da atividade livre! Temos aqui todas as\nvariáveis que usamos até agora essa etapa, bem como algumas a mais caso\nvocê queira usá-las. \\r\n\\r\nObserve que agora há muitos blocos em nossa\ncaixa de ferramentas e eles precisam ser organizados! Aqui, colocamos cada peça em\numa categoria apropriada. Reserve um tempo para explorar tudo o que está disponível.\nQuando terminar de explorar, crie um jogo ou uma história usando repetições, variáveis\ne eventos.  \\r\n\\r\nDica: deslize a tela para baixo para ver todos os comandos na área de trabalho."
       CourseF_PlayLab_vars2: "A corrida do último desafio não foi\nmuito justa! Altere a variável \"velocidade_cão\" para garantir que você possa coletar mais\nbandeiras do que o gato. O primeiro a coletar 10 bandeiras vence!"
@@ -1851,10 +1855,40 @@ pt-BR:
       InspirationalArtwork: Se esta imagem te inspira, tente fazer algo parecido. Senão, crie algo você mesmo.
       InspirationalArtwork_2018: Se esta imagem te inspira, tente fazer algo parecido. Senão, crie algo você mesmo.
       InspirationalArtwork_2019: Se esta imagem te inspira, tente fazer algo parecido. Senão, crie algo você mesmo.
+      'Internet Simulator: Packets': |-
+        Desenvolver um Protocolo para Enviar uma Mensagem com Segurança.
+
+        Restrições:
+        - Pacotes podem conter apenas 8 caracteres
+        - Pacotes podem cair com pequena probabilidade
+        - Pacotes podem não chegar em ordem
+      'Internet Simulator: Packets_2018': |-
+        Desenvolver um Protocolo para Enviar uma Mensagem com Segurança.
+
+        Restrições:
+        - Pacotes podem conter apenas 8 caracteres
+        - Pacotes podem cair com pequena probabilidade
+        - Pacotes podem não chegar em ordem
+      'Internet Simulator: Packets_2019': |-
+        Desenvolver um Protocolo para Enviar uma Mensagem com Segurança.
+
+        Restrições:
+        - Pacotes podem conter apenas 8 caracteres
+        - Pacotes podem cair com pequena probabilidade
+        - Pacotes podem não chegar em ordem
+      'Internet Simulator: Routers': Envie mensagens com seus colegas de classe (Clique para ver as instruções completas)
+      'Internet Simulator: Routers_2018': Envie mensagens com seus colegas de classe (Clique para ver as instruções completas)
+      'Internet Simulator: Routers_2019': Envie mensagens com seus colegas de classe (Clique para ver as instruções completas)
       'Internet Simulator: Sending Binary Messages 1': "Envie uma mensagem configurando o estado do\nfio como A ou B."
       'Internet Simulator: Sending Binary Messages': "Envie uma mensagem configurando o estado do\nfio como A ou B."
       'Internet Simulator: Sending Binary Messages_2018': "Envie uma mensagem configurando o estado do\nfio como A ou B."
       'Internet Simulator: Sending Binary Messages_2019': "Envie uma mensagem configurando o estado do\nfio como A ou B."
+      'Internet Simulator: Sending Numbers': Com seu parceiro, desenvolva um protocolo ou um conjunto de regras para comunicar um desenho usando apenas bits. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
+      'Internet Simulator: Sending Numbers_2018': Com seu parceiro, desenvolva um protocolo ou um conjunto de regras para comunicar um desenho usando apenas bits. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
+      'Internet Simulator: Sending Numbers_2019': Com seu parceiro, desenvolva um protocolo ou um conjunto de regras para comunicar um desenho usando apenas bits. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
+      'Internet Simulator: Sending Text': Trabalhe com um parceiro ou em uma pequena equipe para desenvolver um protocolo que permita o envio de texto formatado. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
+      'Internet Simulator: Sending Text_2018': Trabalhe com um parceiro ou em uma pequena equipe para desenvolver um protocolo que permita o envio de texto formatado. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
+      'Internet Simulator: Sending Text_2019': Trabalhe com um parceiro ou em uma pequena equipe para desenvolver um protocolo que permita o envio de texto formatado. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
       Just for Testing: Testar instruções
       K-1 Artist 1 Assessment 1: "Desenhe uma pequena reta para cima e uma\ngrande para a direita!"
       K-1 Artist Loops 1: Desenhe esta reta usando o movimento para o leste 4 vezes.
@@ -1988,6 +2022,7 @@ pt-BR:
       K2.0 sequence 8: Analise este nível adicionando blocos para me levar até o porco!
       K2.0 sequence 9: 'Desvie do TNT para me levar até o porco! '
       K2.0 sequence FP: Agora descubra como pegar o porco da maneira que puder!
+      K2.0 sequence pre: Brinque com esses blocos para ver se você pode me levar ao porco!
       KIKI GLJ Test Response: 'Olhe cuidadosamente para o código abaixo. O que você acha que acontecerá com o avião quando você clicar "Executar"?  '
       KTest1: Você pode me mover para o Sul mais uma vez para chegar até o porco?
       KTest2: Desenhe o caminho e leve-me até aquele porco bobalhão. Não passe pelas dinamites, senão penas vão voar!
@@ -2016,7 +2051,11 @@ pt-BR:
       MC HOC 2016 New Walk: "Vamos explorar nosso mundo! Mova-se com as\nsetas, e pressione a barra de espaço ou toque no painel do jogo para usar os itens. Use a\nporta para entrar na casa."
       MC HOC 2016 SCORE LEVEL: "Alguns jogos têm placar. Brinque de pega-pega\ncom esses Golems de Ferro e use o bloco \"adicionar 1 ao placar\" para receber um ponto\nao tocá-los. Faça 5 pontos para vencer!"
       MC HOC 2016 Village Test: "Ah não! Os zumbis trancaram você do lado de dentro!\nPrograme o Golem de Ferro para acabar com eles!"
+      MC_2017_Ryan_02: Ajude o jogador a sair usando laços para colocar o Agente na placa de pressão.
+      MC_HOC_2017 Agent Test: Clique em "Executar" para mover o jogador para o quadrado laranja dentro da casa.
+      MC_HOC_2017_01: Clique em "Executar" para mover o jogador para o quadrado laranja dentro da casa.
       MC_HOC_2017_01_Cole: Você precisa coletar todas as ferramentas nesta jornada. Movimente-se usando as **teclas de seta** e chegue até o baú no caminho para vencer
+      MC_HOC_2017_01_Kiki: Clique em "Executar" para mover o jogador para o quadrado laranja dentro da casa.
       MC_HOC_2017_01_RETRY: 'Leve o Agent para a placa de pressão, em seguida pressione "Executar" e use as teclas de seta para mover o jogador para fora da casa para coletar o baú. '
       MC_HOC_2017_01_RETRY_2019: 'Leve o Agent para a placa de pressão, em seguida pressione "Executar" e use as teclas de seta para mover o jogador para fora da casa para coletar o baú. '
       MC_HOC_2017_02: Leve o Agent para a placa de pressão.
@@ -2090,6 +2129,7 @@ pt-BR:
       Middle School Hackathon Pt 2: "(Clique para ver todas as instruções)"
       Mike Pair Programming: Veja aqui as instruções
       Mike Test Bee Conditionals 1: "Esta nuvem está tapando minha visão! Veja\nse há uma flor atrás da nuvem, e só colete néctar se houver\numa flor. Cuidado, isso pode mudar!"
+      Mike Test Bee Conditionals 2: Colete todo o néctar. Você só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor.
       MikeAssessment1: Agora faça isto certo!
       MikeStar: Desenhe isto.
       MikeStarHard: Desenhe isto.
@@ -2166,13 +2206,25 @@ pt-BR:
       NEW Course 4 Play Labs For Loops 7a: "Usando o que você aprendeu até\nagora, você consegue fazer o dinossauro dar um passo à frente toda vez que o pinguim contar?"
       NEW Course 4 Play Labs For Loops 8 Free Play: "É hora da atividade livre,\ndivirta-se com todos os blocos da sua caixa de ferramentas. "
       NEW Course 4 Play Labs For Loops 8a: "Desafio: como você\nusaria o \"laço para\" para fazer cada ator andar e dizer seu número de ator,\ne então sumir da tela? "
+      NetSim Standalone Broadcast: 'Nesta versão do Simulador de Internet, você pode se conectar a até cinco outras pessoas em uma sala. Quando você envia mensagens na sala, todos recebem-nas. Quais são alguns dos desafios deste sistema e como você pode resolvê-los?  '
+      NetSim Standalone Classroom Routers: Nesta versão do Simulador de Internet, todos se conectam a um roteador e possuem um endereço específico. Para enviar mensagens, você precisa endereçar sua mensagem para o endereço específico do destinatário e o roteador cuidará de entregá-la ao computador certo. Se houver outros roteadores criados na sua turma, peça o endereço de um de seus colegas e envie-lhes uma mensagem! Veja o Log de Roteador para ver o caminho que as mensagens percorreram pela rede.
+      NetSim Standalone Freeplay: Nesta configuração, a maioria das opções está ativada e você pode brincar com elas. Divirta-se!
       NetSim Standalone Manual DNS: "Nessa versão do simulador você não pode\nver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um\nserviço de nome, para ajudar a compartilhar os endereços entre si."
+      NetSim Standalone Packets TCP: 'As mensagens na Internet podem levar muitos caminhos para chegar ao seu destino e, às vezes, ao longo do caminho, a mensagem é descartada. Nesta versão do Simulador de Internet, há 10% de chance de um pacote ser descartado, vários pacotes podem ter caminhos diferentes para o destino e o tamanho máximo padrão do pacote é definido para 6 caracteres adicionais. '
+      NetSim Standalone Routers Addresses: |-
+        Para esta atividade, conecte-se a um roteador com os outros membros do seu grupo. Nota importante: O roteador só roteará corretamente as mensagens onde os 4 primeiros bits forem o endereço Para: e os 4 segundos bits forem o endereço De:.
+
+        [TODO: O NetSim precisa suportar endereços hierárquicos. Por enquanto, o nível está configurado para 4 bits de endereços de e para]
+      NetSim Standalone SendAB: Você e seu parceiro compartilham um único fio que só pode estar no estado A ou B. Você pode definir o fio para qualquer estado a qualquer momento e pode ler o estado do fio a qualquer momento. Você consegue descobrir uma maneira de se comunicar efetivamente apenas com esse sistema?
+      NetSim Standalone Sending Numbers Ascii: 'Agora que você transmitiu as informações representadas como números decimais, é possível mapear esses números para caracteres de texto para enviar informações com base em texto para frente e para trás. Com um protocolo baseado em texto, você pode facilmente representar e comunicar todos os tipos de informações. '
+      NetSim Standalone Sending Numbers: 'Você e seu parceiro agora podem enviar mensagens de forma confiável sem coordenação extra! Enquanto você está sempre enviando bits para frente e para trás, você também pode representar esses bits como números decimais. Que tipos de informação você pode representar com este sistema? '
       NetSim_AddressingMessages: "Nessa versão do simulador, você vai\nse conectar a um roteador ao invés de se conectar diretamente a outro aluno. Insira um\nendereço no campo \"para\" para enviar uma mensagem a outro aluno."
       NetSim_AutomaticDNS: "Nessa versão do simulador um serviço DNS\né fornecido para você. Envie uma mensagem no formulário GET [hostname] para o serviço\nDNS no endereço 15 para obter o endereço de um aluno."
       NetSim_ManualDNS: "Nessa versão do simulador você não pode\nver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um\nserviço de nome, para ajudar a compartilhar os endereços entre si."
       NetSim_SendAB: "Conecte-se a outro aluno. Cada um pode definir\no valor do fio entre si mesmo e \"A\" ou \"B\".  Veja se você consegue enviar\numa mensagem completa!"
       NetSim_SendAscii: "Nessa versão do simulador, vocês podem enviar\nnúmeros ou caracteres ASCII uns para os outros, um bit por vez."
       NetSim_SendBits: "Conecte-se a outro aluno. Agora você pode definir\nseu fio como \"0\" ou \"1\".  Envie uma mensagem ao seu parceiro!"
+      NetSim_SendNumbers: Nesta versão do simulador, você pode ver as representações decimais do binário que está enviando.
       NetSim_SendingABTest: "Esse é o teste de Sarah para fazer um nível\nnetsim"
       NetSim_Superuser: Você carregou o NetSim no modo superusuário.
       NetSim_Variant1: "NetSim: Variante 1 permite que os alunos elaborem\nmanualmente o tempo de envio de bits para trás e para a frente."
@@ -2190,7 +2242,11 @@ pt-BR:
       Ninjacat Demo B (copy 1): "\\r\nVamos começar explorando um video game\nsimples e então descobrir como ele funciona. Você pode usar as setas do teclado\npara mover o ninja para a esquerda, para a direita e para pular - tente pegar o unicórnio e\ndesvie do dragão!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B: "Vamos começar explorando um jogo simples\ne então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o\nninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você\nachar que já descobriu como o jogo funciona, clique em \"Concluir\""
       Ninjacat Demo No Animate: "Vamos começar explorando um jogo simples\ne então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o\nninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você\nachar que já descobriu como o jogo funciona, clique em \"Concluir\""
+      October15 JoL 1: Programe o artista para desenhar um rosto para o sua lanterna de halloween!
+      October15 bat: 'Jogo Livre: Aqui estão algumas funções para jogar. Você consegue desenhar um morcego?  '
       October15 ghost 1: Dê olhos ao fantasma, usando a função "desenhar um círculo".
+      October15 pumpkin 1: Termine esta lanterna de halloween desenhando os olhos e nariz em qualquer estilo que você gostaria.
+      October15 stars 1: Use laços e o bloco "inteiro aleatório" para preencher o céu noturno com estrelas de diferentes formas e tamanhos.
       Overworld Avoid Monsters: Não é uma boa ideia topar com um Creeper. Passe com cuidado pelos Creepers e chegue na sua casa em segurança.
       Overworld Avoid Monsters_2018: Não é uma boa ideia topar com um Creeper. Passe com cuidado pelos Creepers e chegue na sua casa em segurança.
       Overworld Avoid Monsters_2019: Não é uma boa ideia topar com um Creeper. Passe com cuidado pelos Creepers e chegue na sua casa em segurança.
@@ -2222,6 +2278,9 @@ pt-BR:
       Overworld Shear Sheep: Hora de tosquiar ovelhas! Use o comando "tosquiar" para obter lã das duas ovelhas.
       Overworld Shear Sheep_2018: Hora de tosquiar ovelhas! Use o comando "tosquiar" para obter lã das duas ovelhas.
       Overworld Shear Sheep_2019: Hora de tosquiar ovelhas! Use o comando "tosquiar" para obter lã das duas ovelhas.
+      PDAlg 13-16 Sam Extension Puzzle: Adicione um segundo parâmetro para "onscreen?" para a coordenada y de Sam e atualize a função de modo a mantê-lo seguro em todos os quatro lados.
+      PDAlg 17-20 Luigi Extension Puzzle: Sem modificar sua função "custo" existente, crie uma nova função "cupom" que leva um sabor de pizza e um código de cupom e e retorna o custo de uma pizza com esse sabor. Se o código do cupom estiver correto (você decide o que é), aplique um desconto de 30% na pizza.
+      PDAlg 8-12 Rocket Height Puzzle: Vamos escrever uma função "altura-do-foguete" com aceleração simples. Escreva uma função que garanta que o foguete esteja a 15 metros em 1 segundo, 45 metros em 2 segundos, 95 em 3 segundos e 165 em 4 segundos.
       PDK5 Conditionals 1: "As flores roxas podem ter 1 ou 0 néctar,\nmas você não sabe quanto ela tem! Tome cuidado para não coletar néctar de uma flor roxa\nque não tenha néctar algum. Verifique se o néctar é igual a 1 usando\no bloco se."
       PDK5 Conditionals 2: "Experimente esse desafio que usa condicionais e\nlaços em conjunto. Use o bloco \"se\" para decidir quando virar. Dica: você só\nprecisa de mais um bloco para completar este desafio. "
       PDK5 Events 1: "Até agora, todos os programas que escrevemos são executados\nem ordem, de cima para baixo. Nesse desafio, vamos usar \"Eventos\" para responder\na uma ação em demanda. Faça o polvo dizer \"Olá\" somente quando você\nclicar nele. "
@@ -2317,13 +2376,20 @@ pt-BR:
       The Vigenere Cipher Widget_2019: Instruções
       The Vigenere Cipher: Instruções
       Total Artist Clone Me: "Atividade livre: aqui estão as funções\nque você escreveu e mais algumas para você usar. Desenhe algo incrível!\nBrinque com a largura da caneta para ver como seus desenhos ficam diferentes!"
+      U1L11 NetSim numbers with Ascii: Trabalhe com um parceiro ou em uma pequena equipe para desenvolver um protocolo que permita o envio de texto formatado. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
       U1L4 NetSim SendAB: "Envie uma mensagem configurando o estado do\nfio como A ou B."
+      U1L8 NetSim numbers with decimal: Com seu parceiro, desenvolva um protocolo ou um conjunto de regras para comunicar um desenho usando apenas bits. Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
       U2 Vigenere: Teste
       U2 frequency caesar: Instruções
       U2 frequency random sub: Instruções
       U2 vigenere cipher: Instruções
+      U2L04 - NetSim Routers with Addresses: Envie mensagens com seus colegas de classe (Clique para ver as instruções completas)
       U2L10 NetSim Manual DNS: "Nessa versão do simulador você não pode\nver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um\nserviço de nome, para ajudar a compartilhar os endereços entre si."
       U2L14 frequency random: Teste
+      U2L4 NetSim Routers Addresses: |-
+        Para esta atividade, conecte-se a um roteador com os outros membros do seu grupo. Nota importante: O roteador só roteará corretamente as mensagens onde os 4 primeiros bits forem o endereço Para: e os 4 segundos bits forem o endereço De:.
+
+        [TODO: O NetSim precisa suportar endereços hierárquicos. Por enquanto, o nível está configurado para 4 bits de endereços de e para]
       U3 - Arrays - Demo App: Uso o app "Minhas coisas favoritas". Como pode este app estar fazendo uso de um vetor? (Clique para ver as instruções completas)
       U3 - Arrays - appendItem: Crie um vetor de números ímpares 1-11 usando appendItem. (Clique para ver as instruções completas)
       U3 - Arrays - assignment: Use índices para alterar os valores nesse vetor de 1 para 0. (Clique para ver as instruções completas)
@@ -3521,6 +3587,45 @@ pt-BR:
       courseD_artist_embed_frozen2: Pressione Executar para ver o desenho de um floco de neve.
       courseD_artist_functions4: Agora que você consegue desenhar uma estrela, tente desenhar quatro estrelas!
       courseD_artist_functions5: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
+      courseD_artist_functions8: 'Desafio: Crie quantas funções você achar necessárias para fazer este desenho de 50 quadrados de pixels.'
+      courseD_artist_functions9: Crie esta imagem usando apenas os blocos fornecidos.
+      courseD_artist_nestedLoops1: "Desenhe um triângulo para iniciar este estágio. \n(Cada lado tem 100 pixels de comprimento e você precisa girar 120 graus para cada ângulo externo.)"
+      courseD_artist_nestedLoops10: Pegue os quadrados de antes, mas desta vez faça apenas 7 deles e coloque-os em uma linha.
+      courseD_artist_nestedLoops10_2018: Pegue os quadrados de antes, mas desta vez faça apenas 7 deles e coloque-os em uma linha.
+      courseD_artist_nestedLoops10_2019: Pegue os quadrados de antes, mas desta vez faça apenas 7 deles e coloque-os em uma linha.
+      courseD_artist_nestedLoops1_2018: "Desenhe um triângulo para iniciar este estágio. \n(Cada lado tem 100 pixels de comprimento e você precisa girar 120 graus para cada ângulo externo.)"
+      courseD_artist_nestedLoops1_2019: "Desenhe um triângulo para iniciar este estágio. \n(Cada lado tem 100 pixels de comprimento e você precisa girar 120 graus para cada ângulo externo.)"
+      courseD_artist_nestedLoops1a: 'Agora execute um laço do triângulo 6 vezes. '
+      courseD_artist_nestedLoops1a_2018: 'Agora execute um laço do triângulo 6 vezes. '
+      courseD_artist_nestedLoops1a_2019: 'Agora execute um laço do triângulo 6 vezes. '
+      courseD_artist_nestedLoops2: Desta vez, complete o quebra-cabeças com o menor número possível de blocos.
+      courseD_artist_nestedLoops2_2018: Desta vez, complete o quebra-cabeças com o menor número possível de blocos.
+      courseD_artist_nestedLoops2_2019: Desta vez, complete o quebra-cabeças com o menor número possível de blocos.
+      courseD_artist_nestedLoops3: |-
+        Use suas novas habilidades para desenhar rapidamente a última linha de janelas para este edifício.
+
+        As janelas são 20 quadrados de pixels, cada um com 20 pixels de intervalo.
+      courseD_artist_nestedLoops3_2018: |-
+        Use suas novas habilidades para desenhar rapidamente a última linha de janelas para este edifício.
+
+        As janelas são 20 quadrados de pixels, cada um com 20 pixels de intervalo.
+      courseD_artist_nestedLoops3_2019: |-
+        Use suas novas habilidades para desenhar rapidamente a última linha de janelas para este edifício.
+
+        As janelas são 20 quadrados de pixels, cada um com 20 pixels de intervalo.
+      courseD_artist_nestedLoops4: Ótimo! Faça o mesmo com esses círculos.
+      courseD_artist_nestedLoops4_2018: Ótimo! Faça o mesmo com esses círculos.
+      courseD_artist_nestedLoops4_2019: Ótimo! Faça o mesmo com esses círculos.
+      courseD_artist_nestedLoops5: O que acontece se você também girar 90 graus entre os círculos?
+      courseD_artist_nestedLoops5_2018: O que acontece se você também girar 90 graus entre os círculos?
+      courseD_artist_nestedLoops5_2019: O que acontece se você também girar 90 graus entre os círculos?
+      courseD_artist_nestedLoops6: Edite blocos dentro do seu código existente para criar essa imagem.
+      courseD_artist_nestedLoops7: Use o que você aprendeu para fazer este desenho.
+      courseD_artist_nestedLoops7_2018: Use o que você aprendeu para fazer este desenho.
+      courseD_artist_nestedLoops7_2019: Use o que você aprendeu para fazer este desenho.
+      courseD_artist_nestedLoops8: Usando o que você aprendeu no último par de quebra-cabeças, construa essa imagem desde o começo.
+      courseD_artist_nestedLoops8_2018: Usando o que você aprendeu no último par de quebra-cabeças, construa essa imagem desde o começo.
+      courseD_artist_nestedLoops8_2019: Usando o que você aprendeu no último par de quebra-cabeças, construa essa imagem desde o começo.
       courseD_artist_nestedLoopsPre1: Crie um triângulo para começar esta etapa.
       courseD_artist_nestedLoops_challenge1: Você consegue descobrir como fazer uma imagem como esta?
       courseD_artist_nestedLoops_challenge1_2018: Você consegue descobrir como fazer uma imagem como esta?
@@ -3873,8 +3978,10 @@ pt-BR:
       courseE_artist_functions5: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
       courseE_artist_functions5_2018: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
       courseE_artist_functions5_2019: Desenhe apenas estas três estrelas para terminar este quebra-cabeça.
+      courseE_artist_functions8: 'Desafio: Crie quantas funções você achar necessárias para fazer este desenho de 50 quadrados de pixels.'
       courseE_artist_functions8a_2018: Crie uma função para um único quadrado.
       courseE_artist_functions8a_2019: Crie uma função para um único quadrado.
+      courseE_artist_functions9: Crie esta imagem usando apenas os blocos fornecidos.
       courseE_artist_functions_challenge2: Tente esse código para ver como funciona, então faça um programa do seu jeito!
       courseE_artist_functions_challenge2_2018: Tente esse código para ver como funciona, então faça um programa do seu jeito!
       courseE_artist_functions_challenge2_2019: Tente esse código para ver como funciona, então faça um programa do seu jeito!
@@ -4263,6 +4370,7 @@ pt-BR:
       grade3_bee_conditionals_new1a: "Ajude a abelha a recolher todo o néctar. \n\nVocê só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor."
       grade3_bee_conditionals_new2: Colete todo o néctar usando o menor número de blocos possível
       grade3_bee_conditionals_new2a: Pegue todo o néctar usando o menor número de blocos possível.
+      grade3_bee_conditionals_new2b: Colete todo o néctar. Você só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor.
       grade3_bee_conditionals_new3b: Colete todo o néctar e faça todo o mel.
       grade3_bee_conditionals_quantum1: Verifique se há uma flor embaixo da nuvem. Se houver uma flor, pegue o néctar.
       grade3_bee_conditionals_quantum2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
@@ -4305,6 +4413,8 @@ pt-BR:
       grade4_arist_nested_loop_triangles6: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
       grade4_artist_functions1: "\"Olá! Eu sou um artista zumbi. Eu amo desenhar!\"  \\r\n\\r\nAjude\no zumbi a desenhar óculos usando quadrados com lados de 100 pixels de comprimento.  \\r\n\\r\nA\nhaste entre as lentes tem 75 pixels de comprimento."
       grade4_artist_functions2: "As funções permitem que você defina novos blocos! \\r\n\\r\nMovemos\nos blocos necessários para desenhar um quadrado para dentro de uma função chamada \"desenhe\num quadrado\". Desta vez, use a função \"desenhe um quadrado\" para criar os óculos.\n\\r\n\\r\nOs quadrados estão separados por uma distância de 75 pixels."
+      grade4_artist_functions2a: Crie esta imagem usando apenas os blocos fornecidos.
+      grade4_artist_functions3a: Crie esta imagem usando apenas os blocos fornecidos.
       grade4_artist_functions_challenge: "Use as funções sugeridas para desenhar quatro\nlinhas de hexágonos. Você percebeu como nossas linhas numeradas são deslocadas para a direita?"
       grade4_artist_functions_challenge2: "Use as funções sugeridas para desenhar quatro\nlinhas de hexágonos. Você percebeu como nossas linhas numeradas são deslocadas para a direita?"
       grade4_artist_functions_stars1: Agora que você consegue desenhar uma estrela, tente desenhar quatro estrelas!
@@ -4337,6 +4447,8 @@ pt-BR:
       grade4_artist_parameters_triangles3: "Você consegue completar este desenho? Os\nlados de cada triângulo têm 25 pixels a mais que o anterior. O primeiro triângulo\ntem lados de 25 pixels de comprimento."
       grade4_artist_parameters_triangles4: "O código da função deste triângulo\nestá corrompido. Você consegue editar a função para corrigi-lo e criar triângulos\nde 25, 50 e 75 pixels de comprimento?"
       grade4_artist_parameters_trianglesx: "Você consegue completar este desenho? Os\nlados de cada triângulo têm 25 pixels a mais que o anterior. O primeiro triângulo\ntem lados de 25 pixels de comprimento."
+      grade4_bee_conditionals_nested_loops: Colete todo o néctar. Você só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor.
+      grade4_bee_conditionals_new1: Colete todo o néctar. Você só pode coletar néctar de flores, mas você pode verificar qualquer espaço para ver se há uma flor.
       grade4_bee_conditionals_quantum1: "Esta nuvem está tapando minha visão! Veja\nse há uma flor atrás da nuvem, e só colete néctar se houver\numa flor. Cuidado, isso pode mudar!"
       grade4_bee_conditionals_quantum2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
       grade4_bee_conditionals_quantum4: "Às vezes esta nuvem esconde uma flor\ne outras vezes uma colmeia! Use o bloco \"se/senão\" para coletar néctar\nse for uma flor, senão para produzir mel (porque é uma colmeia)."

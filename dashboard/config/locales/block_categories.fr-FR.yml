@@ -25,14 +25,15 @@ fr:
       Comment: Commentaire
       'Variables ': 'Variables '
       everythingelse: toutlereste
+      World: Monde
+      Location: Localisation
+      Behaviors: Comportements
       numbers: nombres
       Numbers: Nombres
       Input: Entrée
       Default: Par défaut
-      World: Monde
       Dancers: Danseurs
       Groups: Groupes
-      Behaviors: Comportements
       Advanced: Avancé
       Start: Commencer
       Locations: Emplacements

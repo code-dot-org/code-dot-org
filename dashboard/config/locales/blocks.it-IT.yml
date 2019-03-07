@@ -689,6 +689,11 @@ it:
             '"x"': posizione x
             '"y"': posizione y
             '"direction"': direzione del movimento
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
       gamelab_clickedOn:
         text: quando si clicca su {SPRITE}
       gamelab_comment:
@@ -739,6 +744,11 @@ it:
             '"y"': posizione y
             '"direction"': direzione del movimento
             '"tint"': tonalità
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"this"': questo
+            '"other"': altro
       gamelab_groupLength:
         text: numero di personaggi in {THIS}
       gamelab_hasBehavior:
@@ -759,6 +769,37 @@ it:
         text: "{SPRITE} salta {LOCATION}"
       gamelab_keyDown:
         text: tasto {KEY} premuto
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
+          KEY:
+            '"up"': in alto
+            '"down"': in basso
+            '"left"': a sinistra
+            '"right"': a destra
+            '"space"': spaziale
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:
@@ -866,6 +907,10 @@ it:
         text: "{THIS} usa il costume {ANIMATION}"
       gamelab_setBackground:
         text: imposta il colore dello sfondo {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': città
       gamelab_setDirection:
         text: imposta la direzione di movimento di {SPRITE} verso {DIRECTION}
       gamelab_setPosition:
@@ -905,6 +950,11 @@ it:
         text: quando si clicca su "Esegui"
       gamelab_showTitleScreen:
         text: mostra schermata introduttiva {BREAK} titolo {TITLE} testo {SUBTITLE}
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
       gamelab_spriteCostume:
         text: "{COSTUME}"
       gamelab_spriteDirection:
@@ -915,8 +965,6 @@ it:
             '"East"': Est
             '"South"': Sud
             '"West"': Ovest
-      gamelab_spriteSay:
-        text: il personaggio {SPRITE} dice {TEXT}
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -1291,7 +1339,10 @@ it:
         options:
           PROPERTY:
             "'shapeColor'": colore
+      aalab_addBehaviorUntilBoolean:
+        text: il personaggio {SPRITE} inizia {BEHAVIOR} fino a che {CONDITION}
       aalab_changePropByFlexible:
+        text: modifica la {PROPERTY} di {SPRITE} di {VAL}
         options:
           PROPERTY:
             '"scale"': dimensione
@@ -1344,6 +1395,10 @@ it:
             '"East"': Est
             '"South"': Sud
             '"West"': Ovest
+      aalab_randomLocation:
+        text: posizione casuale
+      aalab_removeOneAndAll:
+        text: elimina {THIS}
       aalab_setBG:
         options:
           BG:

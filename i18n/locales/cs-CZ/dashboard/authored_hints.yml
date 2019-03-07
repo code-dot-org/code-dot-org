@@ -280,6 +280,12 @@ cs:
           * Použij blok `když je stisknuta šipka vlevo`, abys přiměl(a) Robota k tanečnímu pohybu, když stiskneš tuto klávesu.
 
           *Tato úroveň končí po 8 taktech.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Vidíš **Mořské lucerny** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak je můžeš využít, aby ses dostal skrz oceánský monument?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Můžeš použít bloky "pokud je cesta", aby ti pomohly otočit se doprava.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Vidíš červené a modré korálové bloky? Použij je jako orientační body pro otočení doprava nebo doleva.
       Dance short test 2_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**

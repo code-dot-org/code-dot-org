@@ -336,6 +336,8 @@ ka:
               name: მასწავლებლის მართვის პანელი
             Writing computer programs:
               name: კომპიუტერული პროგრამების წერა
+            new stage:
+              name: ახალი დონე
         netsim:
           title: ინტერნეტ-სიმულატორი
         20-hour:
@@ -4866,6 +4868,14 @@ ka:
               name: ახალი დონე
             The Artist:
               name: მხატვარი
+            Copyright and Creativity:
+              name: საავტორო უფლებები და შემოქმედებითობა
+            Internet:
+              name: ინტერნეტი
+            Crowdsourcing:
+              name: ქრაუდსორსინგი
+            Digital Sharing:
+              name: ციფრული გაზიარება
         coursed-2019:
           stages:
             Introduction to Online Puzzles:
@@ -4959,6 +4969,8 @@ ka:
               name: ჩადგმული ციკლები მხატვარში
             Conditionals in Minecraft:
               name: პირობითი წინადადებები Minecraft-ში
+            Digital Sharing:
+              name: ციფრული გაზიარება
         express-2019:
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
           description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'

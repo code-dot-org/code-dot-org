@@ -572,6 +572,11 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': wanneer
+            '"while"': terwijl
       gamelab_debugSprite:
         options:
           VAL:
@@ -587,6 +592,28 @@ nl:
             '"direction"': bewegingsrichting
       gamelab_jumpTo:
         text: "{SPRITE} ga naar {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': wanneer
+            '"while"': terwijl
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': y
       gamelab_locationDelta:
         options:
           DIR:
@@ -604,6 +631,10 @@ nl:
         text: willekeurige kleur
       gamelab_setBackground:
         text: stel {COLOR} in als achtergrondkleur
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
       gamelab_setPosition:
         text: verplaats {THIS} naar de positie {POSITION}
         options:
@@ -633,6 +664,11 @@ nl:
             '"scale"': grootte
             '"width"': breedte
             '"height"': hoogte
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': wanneer
+            '"while"': terwijl
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -863,6 +899,7 @@ nl:
       Vector_positionCenter:
         text: midden
       aalab_changePropByFlexible:
+        text: wijzig {SPRITE} {PROPERTY} met {VAL}
         options:
           PROPERTY:
             '"scale"': grootte

@@ -62,10 +62,22 @@ ps:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"while"': کله چي
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"while"': کله چي
       gamelab_randColor:
         text: نا ټاکلۍ رنګ
       gamelab_randomColor:
         text: نا ټاکلۍ رنګ
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"while"': کله چي
       Mikelab_randomColor:
         text: نا ټاکلۍ رنګ
       aalab_checkTouching:

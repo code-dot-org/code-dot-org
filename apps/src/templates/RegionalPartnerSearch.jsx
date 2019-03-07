@@ -42,10 +42,10 @@ const styles = {
     marginTop: 20
   },
   bold: {
-    fontFamily: "'Gotham 5r', sans-serif"
+    fontFamily: '"Gotham 7r", sans-serif'
   },
   linkLike: {
-    fontFamily: "'Gotham 5r', sans-serif",
+    fontFamily: '"Gotham 7r", sans-serif',
     cursor: 'pointer',
     color: color.purple
   },
@@ -236,21 +236,6 @@ class RegionalPartnerSearch extends Component {
               <input type="submit" value="Submit" />
             </div>
           </form>
-        )}
-
-        {/* Special message for NYC DOE teachers. */}
-        {partnerInfo && partnerInfo.name === 'Mouse' && (
-          <div>
-            <h3 style={styles.bold}>NYC Department of Education teachers:</h3>
-            We will share a more specific option for NYC DOE teachers in
-            February. The details are still being finalized. If you're a NYC DOE
-            teacher, please complete{' '}
-            <a href="https://goo.gl/forms/MEz3KmikwgPvIk332" target="_blank">
-              this very short form
-            </a>{' '}
-            and we'll alert you when details are available.
-            <h3 style={styles.bold}>For all other teachers:</h3>
-          </div>
         )}
 
         {(this.state.error === WorkshopSearchErrors.no_state ||

@@ -328,6 +328,8 @@ pl:
               name: Lekcje nie wymagające komputera
             Writing computer programs:
               name: Pisanie programów komputerowych
+            new stage:
+              name: nowy etap
         netsim:
           title: Symulator internetowy
           stages:
@@ -4188,6 +4190,10 @@ pl:
               name: nowy etap
             The Artist:
               name: Artysta/Postać
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Praca w grupie (Crowdsourcing)
         dance-low:
           stages:
             Dance Party:

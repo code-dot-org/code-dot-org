@@ -354,6 +354,8 @@ tr:
               name: Bağlantısız Dersler
             Writing computer programs:
               name: Bilgisayar programları yazma
+            new stage:
+              name: yeni kademe
         netsim:
           title: İnternet Simülatörü
           stages:
@@ -7201,6 +7203,12 @@ tr:
               name: yeni kademe
             The Artist:
               name: Sanatçı
+            Internet:
+              name: İnternet
+            Crowdsourcing:
+              name: Kalabalık Kaynaklandırma 'Crowdsourcing'
+            Digital Sharing:
+              name: Dijital Paylaşım
         dance-low:
           stages:
             Dance Party:
@@ -7320,6 +7328,8 @@ tr:
               name: Frozen'da İç İçe Döngüler
             Conditionals in Minecraft:
               name: Minecraft' da Koşullar
+            Digital Sharing:
+              name: Dijital Paylaşım
         express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın en iyilerini daha eski öğrenciler için birleştirir.'

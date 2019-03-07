@@ -87,6 +87,7 @@ en:
       do something: do something
       filter_pixel: filter_pixel
       draw_image: draw_image
+      checkSimulationEnd: checkSimulationEnd
       witch ending: witch ending
       story: story
       starting path: starting path
