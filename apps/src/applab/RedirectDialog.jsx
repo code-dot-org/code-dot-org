@@ -62,7 +62,11 @@ class RedirectDialog extends React.Component {
     }
 
     return (
-      <Dialog title={title} isOpen={this.props.isOpen}>
+      <Dialog
+        title={title}
+        isOpen={this.props.isOpen}
+        handleClose={this.props.handleClose}
+      >
         <Body>
           {body}
           {footer}
