@@ -642,7 +642,7 @@
   dashboard_navigation_section_student_progress: "Contas e progresso do aluno"
   dashboard_navigation_section_teacher_progress: "Seu progresso no curso"
   dashboard_navigation_section_lesson_plans: "Planos e recursos de aula"
-  dashboard_navigation_section_community: "Ajuda e Comunidade"
+  dashboard_navigation_section_community: "Suporte"
   dashboard_navigation_section_pd: "Desenvolvimento profissional"
   dashboard_navigation_section_speakers: "Ciência da computação <br/> Palestrantes convidados"
   dashboard_navigation_all_sections: "Contas e progresso do aluno"
@@ -984,7 +984,7 @@
   cspunit3_gradelevel: "Alunos do 9° ano ao Ensino Médio"
   cspunit3_shortdescription_congrats: "Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação."
   20-hour_name: Curso acelerado
-  algebra_name: "CC na Álgebra"
+  algebra_name: "CC na Álgebra Curso Completo"
   AlgebraA_name: "CC no Curso A de Álgebra"
   AlgebraB_name: "CC no Curso B de Álgebra"
   gumball_name: "Gumball"
@@ -1516,8 +1516,8 @@
   syncing_students_instructions: 'Se sua seção Code.org está desatualizada com sua lista de alunos no Google Classroom, clique no botão "Sincronizar alunos do Google Classroom" na guia "Gerenciar alunos:'
   google_sign_in_instruct: 'De lá, eles devem escolher a opção "Fazer login com a Conta do Google":'
   hero_name: 'Minecraft: Jornada do Herói'
-  applab-intro_name: Introdução ao Laboratório de App
-  applab_tile_title: "Introdução ao laboratório de App (idade 13 +)"
+  applab-intro_name: Introdução ao Laboratório de Aplicativo
+  applab_tile_title: "Introdução ao Laboratório de Aplicativo (idade 13 +)"
   applab_tile_subtitle: "Crie seu próprio aplicativo em JavaScript usando programação baseada em blocos. Ou leve suas habilidades para o próximo nível com programação baseada em texto. (Apenas inglês)"
   applab_tile_start_tutorial: "Começar"
   applab_tile_teacher_guide: "Exibir Guia do Professor"
@@ -1603,6 +1603,7 @@
   hoc2018_mc_short_description_shorter: "Use sua criatividade e habilidades para resolver problemas e construir mundos aquáticos com código."
   hoc2018_mc_journey: "Viagem através de Minecraft com código."
   hoc2018_dance_party_main_heading: "Festa dançante"
+  hoc2018_dance_party_landing_title: "Dançar"
   hoc2018_dance_party_subheading: "Ajude a traduzir Festa Dançante"
   hoc2018_dance_create_your_own_dance_title: "Crie sua própria Festa Dançante"
   hoc2018_dance_party_box_title: "Festa dançante"
@@ -1639,7 +1640,7 @@
   hoc2018_dance_amazon_internships_description: "As inscrições estão abertas para os estágios de verão de 2019 do Amazon Future Engineer. Os estagiários farão parceria com um gerente, mentor técnico e outros estagiários para inovar e criar novos recursos e serviços em nome dos clientes da Amazon. Os estágios estão disponíveis nos EUA e no Canadá."
   hoc2018_dance_amazon_internships_button: "Encontrar um estágio"
   hoc2018_dance_amazon_k8_programs_title: "Programas K-8"
-  hoc2018_dance_amazon_funding_title: "Obter financiamento para sua graduação de computação"
+  hoc2018_dance_amazon_funding_title: "Obter financiamento para sua graduação em Ciência da Computação"
   hoc2018_dance_amazon_future_engineer_footer: "* Os artistas cuja música é usada neste tutorial não estão patrocinando ou opoiando a Amazon como parte do licenciamento de uso de sua música para Code.org.\n\n"
   hoc2018_dance_measure: "Compasso"
   hoc2018_dance_measure_colon: 'Compasso:'

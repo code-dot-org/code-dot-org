@@ -6,6 +6,7 @@ import Button from '../templates/Button';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 import {actions} from './redux/applab';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
 class RedirectDialog extends React.Component {
   static propTypes = {
@@ -29,7 +30,7 @@ class RedirectDialog extends React.Component {
           <p>
             {i18n.redirectExplanation()}
             <span>
-              <a target="_blank" href={'https://studio.code.org/report_abuse'}>
+              <a target="_blank" href={studio('/report_abuse')}>
                 {i18n.reportAbuse()}
               </a>
             </span>

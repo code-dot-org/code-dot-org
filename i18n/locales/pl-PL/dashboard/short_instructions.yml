@@ -790,6 +790,10 @@ pl:
       CourseD_Dance_Party_11_5: Użyj bloków "wszystkie kaczki", aby kaczki tańczyły razem.
       CourseD_Dance_Party_11b: Spraw, aby Robot raz "tupnął" (Drop), gdy naciśniesz klawisz strzałki w prawo, i raz "klasnął" (Clap), gdy naciśniesz klawisz strzałki w górę. Wykonuj tupnij-klaśnij tak szybko, jak potrafisz!
       CourseD_Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
+      CourseE_HOC 2018 Level_10: Dostań się do wejścia do tego Oceanicznego Monumentu.
+      CourseE_HOC 2018 Level_11: 'Zbuduj kanał z pryzmarynu wewnątrz Oceanicznego Monumentu.  '
+      CourseE_HOC 2018 Level_7a: Przeszukaj te podwodne ruiny, aby znaleźć kufer.
+      CourseE_HOC 2018 Level_9b: 'Użyj korala, jako punktu orientacyjnego na drodze do skarbu.'
       CourseF_PlayLab_vars1: 'Aby zagrać w tą grę, nie musisz pisać żadnego kodu, po prostu naciśnij "Graj"! '
       CourseF_PlayLab_vars10: "Czas na zabawę! Mamy tutaj wszystkie zmienne, których używaliśmy na tym etapie, jak również kilka dodatkowych, gdyby były potrzebne. \\r\n\\r\nMamy teraz w przyborniku tak wiele bloków, że powinny być uporządkowane. Każdy z nich przydzieliliśmy więc do odpowiedniej kategorii. Poświęć trochę czasu, by poznać, jakie bloki są dostępne. Kiedy już przejrzysz wszystko, utwórz grę lub historyjkę, która korzysta z powtórzeń, zmiennych i zdarzeń. \\r\n\\r\nWskazówka: przewiń ekran do dołu, aby zobaczyć wszystkie polecenia w polu roboczym."
       CourseF_PlayLab_vars2: Wyścig w poprzedniej łamigłówce nie był zbyt uczciwy! Zmień wartość zmiennej "dog_speed" (prędkość psa), aby być pewnym, że możesz zebrać więcej flag niż Kot. Wygrywa ten, kto pierwszy zbierze 10 flag!

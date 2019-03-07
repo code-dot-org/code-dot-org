@@ -1021,6 +1021,10 @@ is:
       CourseD_Dance_Party_11_5: Notaðu kubbinn "allar endur" til að láta endurnar dansa saman.
       CourseD_Dance_Party_11b: Láttu Vélmennið "droppa" einu sinni þegar þú ýtir á hægri örina og "klappa" einu sinni þegar þú ýtir á upp örina. Gerðu svo droppa-klappa eins hratt og þú getur!
       CourseD_Dance_Party_12: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum þínum.
+      CourseE_HOC 2018 Level_10: Farðu að inngangi Neðansjávarhallarinnar.
+      CourseE_HOC 2018 Level_11: 'Búðu til leiðslu úr prismarín inni í neðansjávarhöllinni.  '
+      CourseE_HOC 2018 Level_7a: Leitaðu að kistu í þessum neðansjávarrústum.
+      CourseE_HOC 2018 Level_9b: 'Notaðu kórallinn sem vegvísi til að finna fjársjóðinn.  '
       CourseF_PlayLab_vars1: 'Til að spila þennan leik þarftu ekki að skrifa neinn kóða, bara ýta á "Keyra"! '
       CourseF_PlayLab_vars10: "Frjáls æfing: Hér eru allar breyturnar sem við höfum notað hingað til og nokkrar í viðbót ef þú skyldir vilja nota þær.\\r\n\\r\nTaktu eftir að nú eru svo margir kubbar í verkfærakassanum að við höfum þurft að raða þeim í viðeigandi flokka. Taktu þér tíma til að skoða hvað þú hefur. Búðu svo til leik eða sögu með endurtekningum, breytum og atvikum.\\r\n\\r\nVísbending: Flettu niður til að sjá allar skipanirnar á vinnusvæðinu."
       CourseF_PlayLab_vars2: Keppnin í síðustu þraut var ekki sanngjörn! Breyttu breytunni `hraði_hunds` til að tryggja að þú náir að safna fleiri flöggum en kötturinn. Sá sem fyrst safnar 10 vinnur leikinn!
@@ -1106,12 +1110,12 @@ is:
       Dance_Party_11_5: Notaðu kubbinn "allar endur" til að láta endurnar dansa saman.
       Dance_Party_11b: Láttu Vélmennið "droppa" einu sinni þegar þú ýtir á hægri örina og "klappa" einu sinni þegar þú ýtir á upp örina. Gerðu svo droppa-klappa eins hratt og þú getur!
       Dance_Party_12: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum þínum.
-      Dance_Party_extras_battle: Danshópar (Meira um þá undir "Nánar")
-      Dance_Party_extras_every_beat: Fjórðapartsnótur (Meira um þær undir "Nánar")
-      Dance_Party_extras_layout: Stillum okkur upp! (Meira um það undir "Nánar")
-      Dance_Party_extras_on_beat: Bassa-, mið- og háhljóð (Meira um þau undir "Nánar")
-      Dance_Party_extras_speed: Hraðar, Hægar (Meira um það undir "Nánar")
-      Dance_Party_extras_visible: Hvert fóru þau? (Meira undir "Nánar")
+      Dance_Party_extras_battle: Danshópar (Meira um þá undir "Meira")
+      Dance_Party_extras_every_beat: Fjórðapartsnótur (Meira um þær undir "Meira")
+      Dance_Party_extras_layout: Stillum okkur upp! (Meira um það undir "Meira")
+      Dance_Party_extras_on_beat: Bassa-, mið- og háhljóð (Meira um þau undir "Meira")
+      Dance_Party_extras_speed: Hraðar, Hægar (Meira um það undir "Meira")
+      Dance_Party_extras_visible: Hvert fóru þau? (Meira um það undir "Meira")
       Eval Booleans 1: Með Boole virkjum (t.d. > < = ) getum við borið saman gildi og fengið útkomuna "true" (satt) eða "false" (ósatt). Smelltu á "Keyra" til að sjá hvernig þessi formúla er metin.
       Eval Booleans 2: Getur þú sett gildi svo að formúlan sé metin sem "true" (satt)?
       Eval Booleans 3: Fallið "lengd-strengs" skilar fjölda stafa í streng (bil eru talin með!). Láttu þennan kóða gefa "true" (satt) þegar hann er metinn.

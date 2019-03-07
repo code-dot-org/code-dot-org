@@ -786,6 +786,12 @@ he:
           * השתמשו בבלוק ה-"כאשר החץ השמאלי לחוץ" כדי לגרום לרובוט לעשות צעד ריקוד כשאתם לוחצים עליו.
 
           *השלב הזה מסתיים אחרי 8 תיבות.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "רואים את **המנורות הימיות** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? איך תוכלו להשתמש בפקודת תנאי איתן כדי לעבור את האנדרטה הימית?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: אתם יכולים להשתמש בבלוק "אִם יש נתיב" כדי לעזור לכם לבצע את הפניות הנכונות / ימינה.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: רואים את הבלוקים של השוניות האדומות והכחולות? היעזרו בהם כציוני דרך עבור הפניות ימינה ושמאלה בתוך השונית.
       Dance short test 2_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**

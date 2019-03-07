@@ -318,6 +318,12 @@ vi:
           * Sử dụng khối `when left arrow pressed` để làm Robot thực hiện một động tác nhảy khi bạn nhấn mũi tên trái.
 
           *Cấp độ này kết thúc sau 8 nhịp.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Xem các ** ngọn đèn biển **![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Làm thế nào bạn có thể sử dụng một điều kiện với chúng để vượt qua một Tòa nhà đại dương?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Bạn có thể sử dụng khối lệnh nếu để giúp bạn thực hiện những ngã rẽ đúng.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Hãy xem các khối lệnh san hô màu đỏ và màu xanh? Sử dụng chúng như điểm chỉ dẫn để rẽ phải hoặc trái qua các rạn san hô.
       Dance short test 2_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**

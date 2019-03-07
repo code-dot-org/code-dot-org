@@ -2379,7 +2379,13 @@ en:
       Pilot Student Survey:
         Pilot Student Survey: Pilot Student Survey
         Survey for student participating in the CSP Pilot.: Survey for student participating in the CSP Pilot.
+      Pilot Student Survey Conditionals:
+        Pilot Student Survey: Pilot Student Survey
+        Survey for student participating in the CSP Pilot.: Survey for student participating in the CSP Pilot.
       Pilot Teacher Surveys CSP2021:
+        Pilot Teacher Surveys: Pilot Teacher Surveys
+        Survey for teachers participating in the CSP Pilot.: Survey for teachers participating in the CSP Pilot.
+      Pilot Teacher Surveys Conditionals CSP2021:
         Pilot Teacher Surveys: Pilot Teacher Surveys
         Survey for teachers participating in the CSP Pilot.: Survey for teachers participating in the CSP Pilot.
       Pixelation - Lesson 14 - Instructions Make Your Own:
@@ -13088,15 +13094,16 @@ en:
         Scrat will move forward, then turn and crash.: Scrat will move forward, then turn and crash.
         This code uses a new block. What do you think will happen when you press "Run"?: This code uses a new block. What do you think will happen when you press "Run"?
       courseE_aboutme_3_multi:
-        Great idea! Rikki can't be identified through cartoon drawings.: Great idea! Rikki can't be identified through cartoon drawings.
-        'Help! Rikki doesn''t know what other information is safe for her to share. Which ONE of the following would you recommend? ': 'Help! Rikki doesn''t know what other information is safe for her to share. Which ONE of the following would you recommend? '
+        A photograph of her family.: A photograph of her family.
+        Cartoon drawings of herself.: Cartoon drawings of herself.
+        ? 'Help! Rikki doesn''t know what other information is safe for her to share. Which ONE of the following would you recommend her to share? '
+        : 'Help! Rikki doesn''t know what other information is safe for her to share. Which ONE of the following would you recommend her to share? '
+        Her email address.: Her email address.
+        Her student ID number.: Her student ID number.
         No! Rikki's email address should only be shared directly with people or websites she can trust.: No! Rikki's email address should only be shared directly with people or websites she can trust.
         No! Someone could steal Rikki's identity with her student ID number!: No! Someone could steal Rikki's identity with her student ID number!
         No! Someone could steal the photograph and say its a picture of THEIR family. Yikes!: No! Someone could steal the photograph and say its a picture of THEIR family. Yikes!
-        Rikki could share a photograph of her family.: Rikki could share a photograph of her family.
-        Rikki could share cartoon drawings of herself.: Rikki could share cartoon drawings of herself.
-        Rikki could share her email address: Rikki could share her email address
-        Rikki could share her student ID number.: Rikki could share her student ID number.
+        Yes! Rikki can't be identified through cartoon drawings.: Yes! Rikki can't be identified through cartoon drawings.
       courseE_multi_artist_predict1:
         Based on the code below, what do you think will happen if you press 'Run'?: Based on the code below, what do you think will happen if you press 'Run'?
         Correct!: Correct!

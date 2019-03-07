@@ -656,6 +656,10 @@ zh-TW:
           * 使用「按下左箭頭時」程式積木，讓機器人在您按下時進行舞蹈動作。
 
           *此層級在 8 個小節後結束。*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "看到**海燈籠** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) 了嗎？如何有條件地使用它們以穿越海洋遺址？\n\n"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: 真是美麗的珊瑚礁！藍色珊瑚應該要在**右**，還有紅色珊瑚應該要在**左**！
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: 確定在 `dog_speed`（小狗的速度）上設定的數值要大於 `cat_speed`（小貓的速度）。
       Dance short test 2_authored_hint:

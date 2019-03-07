@@ -60,8 +60,38 @@ nn:
       make 3 honey: lag 3 honning
       get 5 nectar: få 5 nektar
       draw a star: teikn ei stjerne
+      drawTree: tegnTre
+      drawHouse: tegnHus
+      drawBranch: tegnGren
+      drawSky: tegnHimmel
+      fillScreen: fyllSkjerm
+      drawHouseLayer: tegnHusLag
+      swap: bytt
       do something: gjer noko
+      witch ending: heksavslutning
+      story: historie
       jump: hopp
+      draw lines: tegn linjer
+      Draw a Square Line: Tegn en firkantet linje
+      Draw a triangle: Tegn en trekant
+      Draw a Cube: Tegn en kube
+      draw a cube: tegn en kube
+      draw an octagon 20: tegn en åttekant 20
+      Draw a square: Tegn en firkant
+      cube: kube
+      do something2: gjør noe2
+      jump upper right: hopp topp høyre
+      draw a line of  squares: tegn en linje av firkanter
+      draw a line of squares: tegn en linje av firkanter
+      Draw Square Line: Tegn firkantet linje
+      jump upper left: hopp topp venstre
+      draw a line of octagons: tegn en linje av åttekanter
+      draw a square line: tegn en firkantet linje
+      Draw a Square: Tegn en firkant
+      draw a square 20: tegn en firkant 20
+      draw a square 40: tegn en firkant 40
+      draw a triangle with length: tegn en trekant med lengde
+      Draw a Triangle with length: Tegn en trekant med lengde
       draw a triangle wioth length: teikn trekant med lengde
       draw a sqaure: teikn eit kvadrat
       triangle: trekant
@@ -117,6 +147,7 @@ nn:
       create trail: opprette spor
       move and fill: flytt og fyll
       fix right corner: fastsett høgre hjørne
+      25 pixel square: 25 piksler stor firkant
       move right: flytt høgre
       move up: flytt opp
       move down: flytt ned

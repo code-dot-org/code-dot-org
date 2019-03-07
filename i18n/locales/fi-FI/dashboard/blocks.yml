@@ -599,6 +599,11 @@ fi:
             '"x"': x:än paikka
             '"y"': y:n paikka
             '"direction"': liikkeen suunta
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kun
+            '"while"': niin kauan kuin
       gamelab_clickedOn:
         text: kun {SPRITE} klikataan
       gamelab_comment:
@@ -625,6 +630,36 @@ fi:
             '"tint"': sävy
       gamelab_jumpTo:
         text: "{SPRITE} siirry paikkaan {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kun
+            '"while"': niin kauan kuin
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       gamelab_locationConstant:
         options:
           DIR:
@@ -677,6 +712,10 @@ fi:
         text: satunnainen paikka
       gamelab_setBackground:
         text: aseta taustaväri {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': kaupunki
       gamelab_setPosition:
         text: siirrä {THIS} tähän {POSITION} asentoon
         options:
@@ -709,6 +748,11 @@ fi:
             '"height"': korkeus
       gamelab_setup:
         text: asetukset
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kun
+            '"while"': niin kauan kuin
       gamelab_spriteDirection:
         options:
           DIRECTION:
@@ -962,6 +1006,7 @@ fi:
           PROPERTY:
             "'shapeColor'": väri
       aalab_changePropByFlexible:
+        text: muuta {SPRITE} {PROPERTY} {VAL}
         options:
           PROPERTY:
             '"scale"': koko
@@ -999,6 +1044,10 @@ fi:
             '"East"': Itä
             '"South"': Etelä
             '"West"': Länsi
+      aalab_randomLocation:
+        text: satunnainen paikka
+      aalab_removeOneAndAll:
+        text: poista {THIS}
       aalab_setBG:
         options:
           BG:

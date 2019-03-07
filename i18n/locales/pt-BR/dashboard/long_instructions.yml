@@ -1715,6 +1715,130 @@ pt-BR:
         * Escreva três frases distintas, sobre qualquer tópico que você goste, entre os elementos `<body>` e `</body>` da sua página
         * Clique "Atualizar e Salvar" se você não perceber qualquer mudança na área de visualização
         * Compare seu trabalho com o do seu vizinho. Tenha certeza que você está inserindo código na mesma posição.
+      CSD U2 HTML Debug Paragraphs: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>O que é um elemento parágrafo?</strong>
+        </summary>
+        Parágrafos são marcados com as tags de abertura ( `<p>` ) e fechamento( `</p>` ). Parágrafos em HTML pode ser qualquer largura de texto de uma palavra até um monte de sentenças. Os parágrafos agrupam conuntos de sentenças e colocam algum espaço entre aquele grupo de texto e o próximo grupo de texto.
+        </details>
+        <details>
+        <summary>
+        <strong>Por quê HTML parece funcionar mesmo quando está quebrado?</strong>
+        </summary>
+        HTML é lido pelo web browser para gerar as páginas web. Como as pessoas frequentemente cometem pequenos erros quando estão escrevendo suas páginas web, os browsers são programados para tentar adivinhar o que você queria fazer. Algumas vezes diferentes browsers são até mesmo programados para fazer diferentes previsões! O único jeito de ter certeza que seu código se parece como deveria é ter certeza de sempre usar as tags corretamente.
+        </details>
+        <details>
+        <summary>
+        <strong>Why does the code sometimes turn pink?</strong>
+        </summary>
+
+        O Web Lab é programado para detectar automaticamente alguns erros no HTML. Quando ele percebe um erro, aquele código fica rosa. O erro pode estar em rosa, ou pode ser antes do código rosa. Você vai precisar depurar cuidadosamente para encontrar seu erro.
+
+
+        </details>
+        </div>
+
+        # Depurar: Corrija as Tags Quebradas
+
+        Esta simples página web tem alguns problemas que estão prevenindo o conteúdo de ser exibido corretamente. Identifique e corrija os problemas.
+        Esta prática também é chamada de "depurando" seu código.
+
+        # Faça Isto
+
+        * Corrija o código quebrado para que a página web seja exibida corretamente
+        * Compare os problemas que você corrigiu com o vizinho
+      CSD U2 HTML Debug Paragraphs_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+
+        <strong>O que é um elemento de parágrafo?</strong>
+
+        </summary>
+
+        Parágrafos são definidos por tags de abertura( `<p>` ) e fechamento( `</p>` ). Parágrafos em HTML podem ter qualquer tamanho de texto, desde uma única palavra, até várias sentenças. Parágrafos agrupam conjuntos de frases, e inserem algum espaço entre este grupo e o próximo grupo. 
+
+        </details>
+        <details>
+        <summary>
+
+        <strong>Por que o HTML parece funcionar, mesmo quando existem erros?</strong>
+
+        </summary>
+
+        O HTML é interpretado pelo browser para que as páginas sejam geradas. Tendo em vista que pessoas normalmente cometem pequenos erros ao redigir suas páginas web, os browsers são programados para imaginar, da melhor maneira possível, o que você queria fazer. Às vezes, browsers diferentes são até programados para imaginar coisas diferentes! A única forma de garantir que seu código seja apresentado na maneira como você pretende é ter certeza que os tags foram usados corretamente
+
+        </details>
+        <details>
+        <summary>
+
+        <strong>Por que o código às vezes se torna cor de rosa?</strong>
+
+        </summary>
+
+        O Web Lab é programado para automaticamente detectar alguns erros de HTML. Quando um erro é encontrado, o código é mostrado na cor rosa. O erro pode estar em rosa, ou pode estar em algum lugar antes do código em rosa. Você vai ter que depurar com cuidado, para localizar o erro.
+
+        </details>
+        </div>
+
+        # Depuração: Corrija as Tags com Problemas
+
+        Esta página web simples tem alguns problemas que a estão impedindo de ser exibida corretamente. Identifique e corrija os problemas. Este procedimento é também chamado de "depurar" o código.
+
+        # Faça Isto
+
+        * Corrija os problemas com o código, para que a página web seja exibida corretamente
+        * Compare os erros que você corrigiu com um colega
+      CSD U2 HTML Debug Paragraphs_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+
+        <strong>O que é um elemento de parágrafo?</strong>
+
+        </summary>
+
+        Parágrafos são definidos por tags de abertura( `<p>` ) e fechamento( `</p>` ). Parágrafos em HTML podem ter qualquer tamanho de texto, desde uma única palavra, até várias sentenças. Parágrafos agrupam conjuntos de frases, e inserem algum espaço entre este grupo e o próximo grupo. 
+
+        </details>
+        <details>
+        <summary>
+
+        <strong>Por que o HTML parece funcionar, mesmo quando existem erros?</strong>
+
+        </summary>
+
+        O HTML é interpretado pelo browser para que as páginas sejam geradas. Tendo em vista que pessoas normalmente cometem pequenos erros ao redigir suas páginas web, os browsers são programados para imaginar, da melhor maneira possível, o que você queria fazer. Às vezes, browsers diferentes são até programados para imaginar coisas diferentes! A única forma de garantir que seu código seja apresentado na maneira como você pretende é ter certeza que os tags foram usados corretamente
+
+        </details>
+        <details>
+        <summary>
+
+        <strong>Por que o código às vezes se torna cor de rosa?</strong>
+
+        </summary>
+
+        O Web Lab é programado para automaticamente detectar alguns erros de HTML. Quando um erro é encontrado, o código é mostrado na cor rosa. O erro pode estar em rosa, ou pode estar em algum lugar antes do código em rosa. Você vai ter que depurar com cuidado, para localizar o erro.
+
+        </details>
+        </div>
+
+        # Depuração: Corrija as Tags com Problemas
+
+        Esta página web simples tem alguns problemas que a estão impedindo de ser exibida corretamente. Identifique e corrija os problemas. Este procedimento é também chamado de "depurar" o código.
+
+        # Faça Isto
+
+        * Corrija os problemas com o código, para que a página web seja exibida corretamente
+        * Compare os erros que você corrigiu com um colega
+      CSD U2 Header Demo: "# Cabeçalhos\n\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n**O que são cabeçalhos?**\n\n</summary>\nCabeçalhos são os títulos das seções que formam uma página web. Cabeçalhos são mostrados em tamanho diferente, e acrescentam estrutura à página para que sua leitura fique mais fácil.\n</details>\n<details>\n<summary>\n\n**Como eu crio cabeçalhos com tamanhos diferentes?**\n\n</summary>\nCabeçalhos podem ter até 6 tamanhos diferentes. Até agora, você usou principalmente o maior deles &lt;h1&gt;. O algarismo 1 no tag HTML indica que este é o cabeçalho com tamanho maior. O menor é  &lt;h6&gt;. Você pode também experimentar os tags &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt; e  &lt;h5&gt;, que ficam menores à medida que o número aumenta.\n</h1>\n</details>\n<details>\n<summary>\n\n**O que é HTML?**\n\n</summary>\nHTML é o acrônimo de Hypertext Markup Language. O HTML é utilizado para dar estrutura ao conteúdo de uma página web. O HTML usa tags para especificar onde determinadas estruturas começam e acabam. Estes tags são grupos de caracteres não encontrados na língua portuguesa, para que o conteúdo e estrutura possam ser diferenciados.\n</details>\n<details>\n<summary>\n\n**O que é um elemento HTML?**\n\n</summary>\nUm elemento HTML é um pedaço de um website que é assinalado por uma tag inicial, e é às vezes fechado por uma tag final. O elemento também inclui o conteúdo no interior das tags. Por exemplo:\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\" style=\"width:500px\">\n</details>\n<details>\n<summary>\n\n**O que é uma tag HTML?**\n\n</summary>\n\nUma tag HTML é um grupo de caracteres, que dizem ao computador onde um elemento HTML é iniciado ou encerrado, e qual tipo de elemento ele é.\n\n\n</details>\n</div>\n\nAté agora, você organizou seu conteúdo em parágrafos. Uma outra forma que o HTML permite a você organizar seu código é utilizando **cabeçalhos**. Um cabeçalho é um pequeno texto que é colocado acima de uma seção de texto, como um título.\n\nFaça Isto:\n* Localize os cabeçalhos na página web abaixo, e use a ferramenta de inspeção para ver o código os compõe.\n* Assegure-se que você e seu colega estejam de acordo sobre o que as tags fazem.\n* Altere o código para que \"Desenho\" e \"2 anos\" sejam equivalentes aos outros cabeçalhos do restante da página."
+      CSD U2 Header Sizes: "# Tamanho dos Cabeçalhos\n\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n**O que são cabeçalhos?**\n\n</summary>\nCabeçalhos são os títulos de seções de tamanhos diferentes em uma página web. Os cabeçalhos adicionam estrutura à sua página através da divisão da mesma facilitando a leitura do usuário.\n</details>\n<details>\n<summary>\n\n**Como eu faço um cabeçalho de tamanho diferenciado?**\n\n</summary>\nCabeçalhos podem ter 6 tamanhos diferentes. O mais comum é o &lt;h1&gt; O número 1 na tag HTML informa que este é o maior cabeçalho. O menor cabeçalho é &lt;h6&gt;. VOcê também pode tentar as tags &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, e &lt;h5&gt; que diminuem conforme aumenta o número.\n</details>\n<details>\n<summary>\n\n**O que é HTML?**\n\n</summary>\nHTML significa Hypertext Markup Language (Linguagem de Marcação de Hipertexto, em tradução livre). o HTML é usado para adicionar estratura ao conteúdo de uma página web. O HTML usa tags para especificar onde certas estruturas começam e terminam. Estas tags são conjuntos de caracteres não encontrados no idioma Inglês para que o conteúdo e a estrutura possam ser diferenciados.\n</details>\n<details>\n<summary>\n\n**O que é um elemento HTML?**\n\n</summary>\nUm elemento HTML é uma peça do website que é marcado por uma tag inicial e algumas vezes encerrado por uma tag final. O elemento também inclui o conteúdo entre as tags. Por exemplo:\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\" style=\"width:500px\">\n</details>\n<details>\n<summary>\n\n**O que é uma tag HTML?**\n\n</summary>\n\nUma tag HTML é um conjunto especial de caracteres que instrui a máquina onde está o começo e fim de um elemento HTML e de que tipo ele é.\n\n\n</details>\n</div>\n\nOs cabeçalhos podem vir em diferentes tamanhos. Nesta página, há seis tamanhos diferentes de cabeçalho, mas eles estão misturados. Você e seu parceiro podem descobrir como arrumá-los?\n\n\n\nFaça Isto:\n* Use a ferramenta de inspeção para descobrir o que define os diferentes tamanhos de cabeçalho.\n* Assegurem-se que vocês estão de acordo no que as diferentes tags de cabeçalho fazem.\n* Troque as tags de forma que os cabeçalhos estão em ordem do maior para o menor, e o texto mostre o tamanho correto, como visto na imagem abaixo. \n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15 PM.png\" style=\"width:100px\" style=\"float:left\">\n"
+      CSD U2 Header Test: "# Cabeçalhos e Parágrafos\n\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n**O que é um elemento de parágrafo?**\n\n</summary>\nParágrafos são marcados por tags de início (`<p>`) e fim (`</p>`) também. Parágrafos em HTML podem ter qualquer tamanho de texto desde uma palavra até várias sentenças. Todo o seu texto na página web deve estar dentro de um elemento HTML (cabeçalhos ou parágrafos). Parágrafos agrupam juntos conjuntos de sentenças e colocam algum espaço entre aquele grupo de texto e o próximo grupo de texto.\n</details>\n<details>\n<summary>\n\n**Como eu crio múltiplos parágrafos?**\n\n</summary>\nParágrafos são marcados por tags de início (`<p>`) e fim (`</p>`) também. Para criar mais de um parágrafo você vai precisar de vários conjuntos de tags `<p>` início e fim. Por exemplo\n<pre>\n\\t&lt;p&gt;\n    \\tEste é um parágrafo.\n    &lt;/p&gt;\n\\t&lt;p&gt;\n    \\tEste é outro parágrafo.\n    &lt;/p&gt;\n</pre>\n</details>\n<details>\n<summary>\n\n**O que são cabeçalhos?**\n\n</summary>\nCabeçalhos são \nCabeçalhos são os títulos de seções de tamanhos diferentes em uma página web. Os cabeçalhos adicionam estrutura à sua página através da divisão da mesma facilitando a leitura do usuário.\n</details>\n<details>\n<summary>\n\n**Como eu faço um cabeçalho de tamanho diferenciado?**\n\n</summary>\nCabeçalhos podem ter 6 tamanhos diferentes. O mais comum é o &lt;h1&gt; O número 1 na tag HTML informa que este é o maior cabeçalho. O menor cabeçalho é &lt;h6&gt;. VOcê também pode tentar as tags &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, e &lt;h5&gt; que diminuem conforme aumenta o número.\n</h1>\n</details>\n<details>\n<summary>\n\n**O que é HTML?**\n\n</summary>\nHTML significa Hypertext Markup Language (Linguagem de Marcação de Hipertexto, em tradução livre). o HTML é usado para adicionar estratura ao conteúdo de uma página web. O HTML usa tags para especificar onde certas estruturas começam e terminam. Estas tags são conjuntos de caracteres não encontrados no idioma Inglês para que o conteúdo e a estrutura possam ser diferenciados.\n</details>\n<details>\n<summary>\n\n**O que é um elemento HTML?**\n\n</summary>\nUm elemento HTML é uma peça do website que é marcado por uma tag inicial e algumas vezes encerrado por uma tag final. O elemento também inclui o conteúdo entre as tags. Por exemplo:\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\" style=\"width:500px\">\n</details>\n<details>\n<summary>\n\n**O que é uma tag HTML?**\n\n</summary>\n\nUma tag HTML é um conjunto especial de caracteres que instrui a máquina onde está o começo e fim de um elemento HTML e de que tipo ele é.\n\n\n</details>\n</div>\n\nO autor desta página adicionou um monte de conteúdo, mas não pensou sobre a estrutura. Todo o texto está misturado.\n\nFaça Isto:\n* Veja o conteúdo com seu parceiro e decida qual seria a melhor estrutura.\n* Use suas tags de cabeçalho e parágrafo para codificar a estrutura na página.\n"
       CSD U2 Info Page Content: |
         # Adicionando seu conteúdo
 
@@ -2168,6 +2292,11 @@ pt-BR:
       CourseD_Dance_Party_11b: |-
         É hora do concurso de dança! O gato dança dab quando você pressiona a tecla de seta para a esquerda. Faça o robô dançar drop pressionando a tecla da seta para a direita.
       CourseD_Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
+      CourseE_HOC 2018 Level_10: "Há uma **lula** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) escondida em algum lugar deste Monumento Oceânico. Você consegue encontrá-la?\n\n"
+      CourseE_HOC 2018 Level_11: Construa uma parede de **prismarinho** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) em volta do concreto preto. Isso ativará o **canal** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) e concluirá seu desafio.
+      CourseE_HOC 2018 Level_7a: "Você encontrou as ruínas subaquáticas. No arenito, procure um **baú** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) que contém tesouro de **prismarinho** (https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      CourseE_HOC 2018 Level_8: "Primeiro icebergs, e agora lava? Sobreviva nesta ilha vulcânica e encontre o **salmão** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) no recife de coral.\n\n"
+      CourseE_HOC 2018 Level_9b: "Você conseguiu chegar ao recife de corais. Agora, procure o **Coração do Mar** [](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png). Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png) do tesouro.\n\n"
       CourseF_PlayLab_vars2: "A corrida do último desafio não foi\nmuito justa! Altere a variável \"velocidade_cão\" para garantir que você possa coletar mais\nbandeiras do que o gato. O primeiro a coletar 10 bandeiras vence!"
       Craft Aquatic - allthethings: Chegue ao Farol do Mar.
       Dance_Party_01: |-

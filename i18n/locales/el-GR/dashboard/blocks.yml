@@ -653,6 +653,8 @@ el:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
       gamelab_addBehaviorUntil:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR} μέχρι {CONDITION}
+      gamelab_allSpritesWithAnimation:
+        text: aalab όλοι {ANIMATION}
       gamelab_beginBehavior:
         text: ξεκίνα {BEHAVIOR}
       gamelab_bounceOff:
@@ -682,6 +684,11 @@ el:
             '"x"': θέση x
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
       gamelab_clickedOn:
         text: όταν {SPRITE} πατηθεί
       gamelab_comment:
@@ -733,6 +740,11 @@ el:
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
             '"tint"': απόχρωση
+      gamelab_getThisSprite:
+        text: "{CHOICE} χαρακτήρας"
+        options:
+          CHOICE:
+            '"this"': αυτό
       gamelab_groupLength:
         text: αριθμός χαρακτήρων μέσα σε {THIS}
       gamelab_hasBehavior:
@@ -753,6 +765,36 @@ el:
         text: "{SPRITE} πήγαινε στο {LOCATION}"
       gamelab_keyDown:
         text: κουμπί είναι κάτω {KEY}
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
+          KEY:
+            '"up"': επάνω
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+            '"space"': διάστημα
+            '"a"': α
+            '"d"': β
+            '"h"': η
+            '"i"': ι
+            '"j"': ξ
+            '"k"': κ
+            '"l"': λ
+            '"m"': μ
+            '"n"': ν
+            '"o"': ο
+            '"p"': π
+            '"r"': ρ
+            '"s"': σ
+            '"t"': τ
+            '"u"': θ
+            '"v"': ω
+            '"w"': ς
+            '"x"': x
+            '"z"': ζ
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:
@@ -862,6 +904,10 @@ el:
         text: άλλαξε {THIS} κοστούμι σε {ANIMATION}
       gamelab_setBackground:
         text: όρισε χρώμα παρασκηνίου σε {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': πόλη
       gamelab_setDirection:
         text: όρισε {SPRITE} κατεύθυνση κίνησης {DIRECTION}
       gamelab_setFrameDelay:
@@ -903,6 +949,12 @@ el:
         text: αρχικοποίηση
       gamelab_showTitleScreen:
         text: δείξε οθόνη τίτλων {BREAK} τίτλος {TITLE} κείμενο {SUBTITLE}
+      gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} πατιέται"
+        options:
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
       gamelab_spriteCostume:
         text: "{COSTUME}"
       gamelab_spriteDirection:
@@ -913,8 +965,6 @@ el:
             '"East"': Ανατολή
             '"South"': Νότος
             '"West"': Δυτικά
-      gamelab_spriteSay:
-        text: χαρακτήρας {SPRITE} λέει {TEXT}
       gamelab_spritesWhere:
         text: χαρακτήρες όπου {PROPERTY} είναι {VALUE}
         options:
@@ -1296,6 +1346,7 @@ el:
       aalab_allSpritesWithAnimation:
         text: aalab όλοι {ANIMATION}
       aalab_changePropByFlexible:
+        text: αλλαγή {SPRITE} {PROPERTY} με {VAL}
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -1355,6 +1406,10 @@ el:
         text: "{NAMESTRING} λέει {MESSAGE}"
       aalab_prompt:
         text: κάνε ερώτηση {MESSAGE}
+      aalab_randomLocation:
+        text: τυχαία θέση
+      aalab_removeOneAndAll:
+        text: αφαίρεσε {THIS}
       aalab_setBG:
         options:
           BG:

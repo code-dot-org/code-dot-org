@@ -3371,6 +3371,12 @@ es:
           * Utiliza el bloque «cuando flecha izquierda pulsada» para indicar al Robot que haga un movimiento de baile cuando la pulses.
 
           *Este nivel termina después de 8 compases.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Mira las **linternas del mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? ¿Cómo podrías usar un condicional con ellas para atravesar el monumento oceánico?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Puedes utilizar el bloque "si en ruta" para ayudarte a hacer los giros de forma correcta.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: '¡Qué arrecife de coral más bonito! ¡Estás en tu **derecho** de usar coral azul, pero asegúrate de que el coral rojo quede a la **izquierda**!'
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Asegúrese de establecer el número de `velocidad_perro`a algo más grande que` velocidad_gato`.
       Dance short test 2_authored_hint:
