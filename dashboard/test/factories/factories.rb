@@ -256,9 +256,9 @@ FactoryGirl.define do
       end
 
       trait :migrated_imported_from_google_classroom do
-        with_migrated_google_authentication_option
+        unmigrated_google_sso
+        without_email
         after(:create) do |user|
-          user.primary_contact_info.update!(email: '', hashed_email: '')
           section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
           create :follower, student_user: user, section: section
           user.reload
@@ -352,7 +352,7 @@ FactoryGirl.define do
     end
 
     trait :with_migrated_google_authentication_option do
-      after(:create) do |user|
+      after(:create_commit) do |user|
         ao = create(:authentication_option,
           user: user,
           email: user.email,
