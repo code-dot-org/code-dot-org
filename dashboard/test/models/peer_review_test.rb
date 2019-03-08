@@ -481,23 +481,11 @@ class PeerReviewTest < ActiveSupport::TestCase
     original_peer_reviews = PeerReview.where(level_source_id: @level_source.id)
     PeerReview.stubs(:create!).raises(Exception, "Some error")
 
-    Honeybadger.stubs(:notify)
-
     assert_raises(Exception) do
       track_progress @level_source.id
     end
 
     assert original_peer_reviews == PeerReview.where(level_source_id: @level_source.id)
-  end
-
-  test 'notify honeybadger if new entries are not created' do
-    PeerReview.stubs(:create_for_submission)
-    Honeybadger.stubs(:notify)
-    Honeybadger.expects(:notify).once
-
-    track_progress @level_source.id
-
-    assert_nil PeerReview.find_by(level_source_id: @level_source.id)
   end
 
   private
