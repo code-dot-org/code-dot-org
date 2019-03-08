@@ -32,7 +32,8 @@ class UserLevel < ActiveRecord::Base
   belongs_to :script
   belongs_to :level_source
 
-  before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed?(from: true, to: false)}
+  after_save :after_submit, if: ->(ul) {ul.submitted_changed? to: true}
+  before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
 
   validate :readonly_requires_submitted
 
@@ -92,6 +93,17 @@ class UserLevel < ActiveRecord::Base
 
   def paired?
     driver? || navigator?
+  end
+
+  def after_submit
+    # Create peer reviews after submitting a peer_reviewable solution
+    if self.submitted && Level.cache_find(level_id).try(:peer_reviewable?)
+      learning_module = Level.cache_find(level_id).script_levels.find_by(script_id: script_id).try(:stage).try(:plc_learning_module)
+
+      if learning_module && Plc::EnrollmentModuleAssignment.exists?(user_id: user_id, plc_learning_module: learning_module)
+        PeerReview.create_for_submission(self, level_source_id)
+      end
+    end
   end
 
   def before_unsubmit
