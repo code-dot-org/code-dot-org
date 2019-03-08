@@ -16,7 +16,7 @@ class RedirectDialog extends React.Component {
 
   render() {
     let title, body, footer;
-    if (this.props.redirects.length === 0) {
+    if (!(this.props.redirects && this.props.redirects.length > 0)) {
       return null;
     }
 
@@ -68,7 +68,7 @@ class RedirectDialog extends React.Component {
 
     return (
       <Dialog title={title} isOpen handleClose={this.props.handleClose}>
-        <Body>
+        <Body className={'ui-test-redirect-notice'}>
           {body}
           {footer}
         </Body>
@@ -77,6 +77,7 @@ class RedirectDialog extends React.Component {
   }
 }
 
+export const UnconnectedRedirectDialog = RedirectDialog;
 export default connect(
   state => ({
     redirects: state.redirectDisplay
@@ -86,4 +87,4 @@ export default connect(
       dispatch(actions.dismissRedirectNotice());
     }
   })
-)(RedirectDialog);
+)(UnconnectedRedirectDialog);
