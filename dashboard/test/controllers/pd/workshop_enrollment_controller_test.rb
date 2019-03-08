@@ -30,6 +30,13 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     )
   end
 
+  test 'non-logged-in users can not enroll in local summer' do
+    workshop = create :pd_workshop, :local_summer_workshop
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :logged_out
+  end
+
   test 'non-logged-in users can enroll' do
     get :new, params: {workshop_id: @workshop.id}
     assert_response :success
