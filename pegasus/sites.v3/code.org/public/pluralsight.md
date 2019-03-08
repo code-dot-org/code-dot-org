@@ -8,7 +8,7 @@ theme: responsive
 ## Keep growing their skills long after the AP Exam
 Once the AP Computer Science Principles Exam is over, continue growing learning and engagement in your classroom with [Pluralsight One's special partnership with Code.org](https://www.pluralsightone.org/product/education).  
 
-Students who participate in Code.org’s AP Computer Science Principles curriculum can continue to build on the skills they've spent the year building with free and unlimited access to the Pluralsight course library. Designed specifically for your students, these courses allow students to dive deeper into intermediate and advanced topics. <br>
+Students who participate in Code.org’s AP Computer Science Principles curriculum can continue to develop the skills they've spent the year building with free and unlimited access to the Pluralsight course library. Designed specifically for your students, these courses allow your classroom to dive deeper into intermediate and advanced topics. <br>
 
 ### **Code.org AP Computer Science student access**<br>
 Advance your students’ futures by enabling them to build in-demand skills and learn from expert technologists.
