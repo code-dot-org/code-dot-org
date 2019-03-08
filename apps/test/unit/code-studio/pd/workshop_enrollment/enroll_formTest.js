@@ -13,6 +13,7 @@ describe('Enroll Form', () => {
     workshop_id: 1,
     first_name: 'Rubeus',
     email: 'rhagrid@hogwarts.edu',
+    previous_courses: ['Transfiguration', 'Potions', 'Herbology'],
     onSubmissionComplete: () => {}
   };
 
@@ -25,6 +26,7 @@ describe('Enroll Form', () => {
           workshop_course="CS Fundamentals"
           first_name={props.first_name}
           email={props.email}
+          previous_courses={props.previous_courses}
           onSubmissionComplete={props.onSubmissionComplete}
         />
       );
@@ -55,13 +57,48 @@ describe('Enroll Form', () => {
           workshop_course="CS Principles"
           first_name={props.first_name}
           email={props.email}
+          previous_courses={props.previous_courses}
           onSubmissionComplete={props.onSubmissionComplete}
+          collect_demographics={false}
         />
       );
     });
 
     it('does not display role question', () => {
       expect(enrollForm.find('#role')).to.have.length(0);
+    });
+
+    it('does not display previous courses question', () => {
+      expect(enrollForm.find('#previous_courses')).to.have.length(0);
+    });
+
+    it('does not display replace existing question', () => {
+      expect(enrollForm.find('#replace_existing')).to.have.length(0);
+    });
+  });
+
+  describe('CSP Enroll Form', () => {
+    let enrollForm;
+    before(() => {
+      enrollForm = shallow(
+        <EnrollForm
+          workshop_id={props.workshop_id}
+          workshop_course="CS Principles"
+          first_name={props.first_name}
+          email={props.email}
+          previous_courses={props.previous_courses}
+          onSubmissionComplete={props.onSubmissionComplete}
+          collect_demographics={true}
+        />
+      );
+    });
+
+    it('does display previous courses question', () => {
+      expect(enrollForm.find('#previous_courses')).to.have.length(1);
+    });
+
+    it('does display replace existing question', () => {
+      expect(enrollForm.find('#replace_existing')).to.have.length(1);
     });
   });
 
@@ -76,6 +113,7 @@ describe('Enroll Form', () => {
           workshop_course="CS Fundamentals"
           first_name={props.first_name}
           email={props.email}
+          previous_courses={props.previous_courses}
           onSubmissionComplete={props.onSubmissionComplete}
         />
       );
