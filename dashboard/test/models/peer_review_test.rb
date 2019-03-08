@@ -75,8 +75,17 @@ class PeerReviewTest < ActiveSupport::TestCase
     # Assign one review
     PeerReview.last.update! reviewer: create(:user)
 
+    # Unsubmit the level
+    user_level = UserLevel.find_by(user: @user, level: @level, script: @script)
+    user_level.update(submitted: false)
+
+    # The unassigned review was destroyed
+    assert_equal 1, PeerReview.count - original_count
+
+    # Submit a new answer
     updated_level_source = create :level_source, data: 'UPDATED: My submitted answer'
 
+    # Two new reviews were created
     track_progress updated_level_source.id
     assert_equal 3, PeerReview.count - original_count
   end
@@ -478,9 +487,18 @@ class PeerReviewTest < ActiveSupport::TestCase
   test 'create_for_submission rolls back if there is an error' do
     track_progress @level_source.id
 
-    original_peer_reviews = PeerReview.where(level_source_id: @level_source.id)
-    PeerReview.stubs(:create!).raises(Exception, "Some error")
+    # Fake that reviews have been submitted
+    PeerReview.find_by(submitter: @user, level: @level, status: nil).update data: 'fake-peer-review', reviewer: (create :teacher)
+    PeerReview.find_by(submitter: @user, level: @level, status: 'escalated').update status: 'rejected', reviewer: @instructor, from_instructor: true
 
+    # Unsubmit the level so we can check behavior on resubmit
+    user_level = UserLevel.find_by(user: @user, level: @level, script: @script)
+    user_level.update(submitted: false)
+
+    original_peer_reviews = PeerReview.where(level_source_id: @level_source.id)
+    assert_equal 2, original_peer_reviews.count
+
+    PeerReview.stubs(:create!).raises(Exception, "Some error")
     assert_raises(Exception) do
       track_progress @level_source.id
     end
