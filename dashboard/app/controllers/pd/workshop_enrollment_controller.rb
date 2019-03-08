@@ -30,6 +30,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           workshop_enrollment_status: "full"
         }.to_json
       }
+    elsif @workshop.local_summer? && !current_user
+      render :logged_out
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       if current_user
