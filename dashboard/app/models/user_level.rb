@@ -99,7 +99,7 @@ class UserLevel < ActiveRecord::Base
     submitted_level = Level.cache_find(level_id)
 
     # Create peer reviews after submitting a peer_reviewable solution
-    if level.peer_reviewable?
+    if submitted_level.try(:peer_reviewable?)
       submitted_script_level = submitted_level.script_levels.find_by(script_id: script_id)
       learning_module = submitted_script_level&.stage&.plc_learning_module
       assignment_exists = learning_module && Plc::EnrollmentModuleAssignment.exists?(
