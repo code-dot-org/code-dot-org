@@ -473,7 +473,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # When I hit the clever oauth callback
     auth = generate_auth_user_hash \
       provider: AuthenticationOption::CLEVER,
-      uid: user.uid
+      uid: user.primary_contact_info.authentication_id
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
     assert_does_not_create(User) do
@@ -620,7 +620,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # When I hit the google oauth callback
     auth = generate_auth_user_hash \
       provider: AuthenticationOption::GOOGLE,
-      uid: user.uid
+      uid: user.primary_contact_info.authentication_id
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
     assert_does_not_create(User) do
