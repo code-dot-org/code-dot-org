@@ -271,11 +271,8 @@ class Pardot
     end
 
     # The custom Pardot db_Opt_In field has type "Dropdown" with permitted values "Yes" or "No".
-    # Explicitly check for the source opt_in field to be true or false, because nil is 'falsey'
-    # and it's a little misleading to set a value for db_Opt_In in Pardot when there's no information either
-    # way from the user in our database.
-    dest[:db_Opt_In] = 'Yes' if src[:opt_in] == true
-    dest[:db_Opt_In] = 'No' if src[:opt_in] == false
+    # Set db_Opt_in to 'No' when there is no source entry, matching the process used by Marketing team.
+    dest[:db_Opt_In] = src[:opt_in] == true ? 'Yes' : 'No'
 
     # If this contact has a dashboard user ID (which means it is a teacher
     # account), mark that in a Pardot field so we can segment on that.
