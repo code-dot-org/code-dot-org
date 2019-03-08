@@ -32,7 +32,7 @@ class UserLevel < ActiveRecord::Base
   belongs_to :script
   belongs_to :level_source
 
-  before_save :handle_unsubmit, if: ->(ul) {ul.submitted_changed?(from: true, to: false)}
+  before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed?(from: true, to: false)}
 
   validate :readonly_requires_submitted
 
@@ -94,7 +94,7 @@ class UserLevel < ActiveRecord::Base
     driver? || navigator?
   end
 
-  def handle_unsubmit
+  def before_unsubmit
     self.best_result = ActivityConstants::UNSUBMITTED_RESULT
 
     # Destroy any existing, unassigned peer reviews
