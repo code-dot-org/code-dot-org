@@ -211,6 +211,8 @@ class LevelsController < ApplicationController
         @game = Game.eval
       elsif @type_class <= Applab
         @game = Game.applab
+      elsif @type_class <= GamelabJr
+        @game = Game.spritelab
       elsif @type_class <= Gamelab
         @game = Game.gamelab
       elsif @type_class <= Maze
