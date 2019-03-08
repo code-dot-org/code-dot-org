@@ -8,7 +8,6 @@ import $ from 'jquery';
 
 class PeerReviewSubmissions extends React.Component {
   static propTypes = {
-    filterType: PropTypes.string.isRequired,
     courseList: PropTypes.arrayOf(PropTypes.array).isRequired,
     courseUnitMap: PropTypes.object.isRequired
   };
@@ -71,9 +70,8 @@ class PeerReviewSubmissions extends React.Component {
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/peer_review_submissions/index?filter=${
-        this.props.filterType
-      }&email=${emailFilter || ''}&plc_course_id=${plcCourseId ||
+      url: `/api/v1/peer_review_submissions/index?email=${emailFilter ||
+        ''}&plc_course_id=${plcCourseId ||
         ''}&plc_course_unit_id=${plcCourseUnitId || ''}`,
       dataType: 'json'
     }).done(data => {
@@ -165,10 +163,7 @@ class PeerReviewSubmissions extends React.Component {
         {this.state.loading ? (
           <Spinner />
         ) : (
-          <PeerReviewSubmissionData
-            filterType={this.props.filterType}
-            submissions={this.state.submissions}
-          />
+          <PeerReviewSubmissionData submissions={this.state.submissions} />
         )}
       </div>
     );
