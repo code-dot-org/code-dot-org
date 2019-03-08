@@ -217,6 +217,41 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_redirected_to controller: 'pd/session_attendance', action: 'upgrade_account'
   end
 
+  test 'demographic questions added (for teachers, without application, for local summer workshop)' do
+    sign_in @teacher
+    workshop = create :pd_workshop, :local_summer_workshop
+
+    get :new, params: {workshop_id: workshop.id}
+    assert_template :new
+    assert prop('collect_demographics')
+  end
+
+  test 'demographic questions not added (for teachers, with application, for local summer workshop)' do
+    sign_in @teacher
+    workshop = create :pd_workshop
+    create :pd_teacher_application, user: @teacher
+
+    get :new, params: {workshop_id: workshop.id}
+    assert_template :new
+    refute prop('collect_demographics')
+  end
+
+  test 'demographic questions not added (for teachers, without application, for non-local summer workshop)' do
+    workshop = create :pd_workshop
+
+    get :new, params: {workshop_id: workshop.id}
+    assert_template :new
+    refute prop('collect_demographics')
+  end
+
+  test 'demographic questions not added (for signed-out users, without application, for local summer workshop)' do
+    workshop = create :pd_workshop, :local_summer_workshop
+
+    get :new, params: {workshop_id: workshop.id}
+    assert_template :new
+    refute prop('collect_demographics')
+  end
+
   private
 
   def enrollment_test_params(teacher = nil)
@@ -244,5 +279,9 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       school_district_id: @school_district.id,
       school_id: @school.id
     }
+  end
+
+  def prop(name)
+    JSON.parse(assigns(:script_data).try(:[], :props)).try(:[], name)
   end
 end
