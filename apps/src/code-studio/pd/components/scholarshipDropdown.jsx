@@ -7,7 +7,8 @@ import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfo
 export class ScholarshipDropdown extends React.Component {
   static propTypes = {
     scholarshipStatus: PropTypes.string,
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
+    disabled: PropTypes.bool
   };
 
   render() {
@@ -18,6 +19,7 @@ export class ScholarshipDropdown extends React.Component {
           value={this.props.scholarshipStatus}
           onChange={this.props.onChange}
           options={ScholarshipDropdownOptions}
+          disabled={this.props.disabled}
         />
       </FormGroup>
     );
