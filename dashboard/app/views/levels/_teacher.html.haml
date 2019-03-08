@@ -1,4 +1,4 @@
-- if current_user.try(:teacher?) && @script_level
+- if current_user.try(:teacher?)
   - show_panel = (params[:user_id] || params[:section_id] || params[:solution]) && params[:viewAs] != 'Student'
   .teacher-panel{class: show_panel ? '' : 'hidden'}
     .hide-handle
@@ -63,25 +63,26 @@
             .level
               %button.btn.btn-info#clear-response{"data-user-level-url" => url_for(contained_user_level)}
                 = t('teacher.panel.clear_response')
-        .level
-          - if @level && @level.ideal_level_source_id && @script # 'solutions' for blockly-type levels
-            - if @ideal_level_source
-              %h4= t('teacher.panel.viewing_solution')
-            - else
-              = link_to build_script_level_path(@script_level, {solution: true}.merge(@section ? {section_id: @section.id} : {})) do
-                %button.btn.btn-info= t('reference_area.teacher')
-          - if @level.try(:examples).present? && current_user.try(:authorized_teacher?) # 'solutions' for applab-type levels
-            - @level.examples.each_with_index do |example, index|
-              - example_link = send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
-              = link_to example_link, target: "_blank" do
-                %button.btn.btn-info
-                  - if @level.examples.many?
-                    = t('teacher.panel.example_with_number', solution_number: index + 1)
-                  - else
-                    = t('teacher.panel.example')
-          -# Get rid of this once we turn on viewAsToggle experiment
-          = link_to build_script_level_path(@script_level, @section? {section_id: @section.id} : {}) do
-            %button.btn.btn-info{id: "try-it-yourself"}= t('teacher.panel.try_it_yourself')
+        - if @level
+          .level
+            - if @level && @level.ideal_level_source_id && @script # 'solutions' for blockly-type levels
+              - if @ideal_level_source
+                %h4= t('teacher.panel.viewing_solution')
+              - else
+                = link_to build_script_level_path(@script_level, {solution: true}.merge(@section ? {section_id: @section.id} : {})) do
+                  %button.btn.btn-info= t('reference_area.teacher')
+            - if @level.try(:examples).present? && current_user.try(:authorized_teacher?) # 'solutions' for applab-type levels
+              - @level.examples.each_with_index do |example, index|
+                - example_link = send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+                = link_to example_link, target: "_blank" do
+                  %button.btn.btn-info
+                    - if @level.examples.many?
+                      = t('teacher.panel.example_with_number', solution_number: index + 1)
+                    - else
+                      = t('teacher.panel.example')
+            -# Get rid of this once we turn on viewAsToggle experiment
+            = link_to build_script_level_path(@script_level, @section? {section_id: @section.id} : {}) do
+              %button.btn.btn-info{id: "try-it-yourself"}= t('teacher.panel.try_it_yourself')
         - if @section
           .section
             %h4
@@ -90,7 +91,7 @@
         - if current_user.sections.many?
           -# This is rendered into by react.
           #teacher-panel-sections
-          - if @section && @script_level.stage.lockable?
+          - if @section && @script_level&.stage&.lockable?
             %div{:style => "margin: 10px"}
               #stage-locked-text
               %div
@@ -101,27 +102,35 @@
             - @section.students.order(:name).each do |student|
               - active = 'active' if @user && student.id == @user.id
               %tr.section-student{class: active}
-                - contained_levels = @script_level.levels.map {|level| level.contained_levels}.flatten
-                - if contained_levels.any?
-                  - user_level = student.last_attempt_for_any(contained_levels)
-                - else
-                  - user_level = student.last_attempt_for_any(@script_level.levels)
-                - status = activity_css_class(user_level)
-                %td
-                  .level_link{class: status}
-                    - if (user_level.try(:level) || @script_level.oldest_active_level).unplugged?
-                      %span.puzzle-named
-                        Unplugged
-                    - elsif status == SharedConstants::LEVEL_STATUS.passed || status == SharedConstants::LEVEL_STATUS.perfect
-                      = check_mark_html
-                    - else
-                      %span.puzzle-number
-                        = @script_level.position
-                %td.name{class: user_level && user_level.navigator? && !user_level.driver? ? 'navigator' : ''}
-                  = link_to build_script_level_path(@script_level, user_id: student.id, section_id: @section.id) do
-                    = student.name
-                    - if user_level && (user_level.navigator_user_levels.present? || user_level.driver_user_levels.present?) # I am a driver
-                      %i.fa.fa-users.pair-programming-icon
+                - if @stage_extras
+                  %td{style: 'padding: 5px;'}
+                    = image_tag 'flag_inactive.png'
+                  %td.name
+                    = link_to script_stage_extras_path(@script.name, @stage.relative_position, section_id: @section.id, user_id: student.id) do
+                      = student.name
+                - elsif @script_level
+                  - contained_levels = @script_level.levels.map {|level| level.contained_levels}.flatten
+                  - if contained_levels.any?
+                    - user_level = student.last_attempt_for_any(contained_levels)
+                  - else
+                    - user_level = student.last_attempt_for_any(@script_level.levels)
+                  - status = activity_css_class(user_level)
+                  %td
+                    .level_link{class: status}
+                      - if (user_level.try(:level) || @script_level.oldest_active_level).unplugged?
+                        %span.puzzle-named
+                          Unplugged
+                      - elsif status == SharedConstants::LEVEL_STATUS.passed || status == SharedConstants::LEVEL_STATUS.perfect
+                        = check_mark_html
+                      - else
+                        %span.puzzle-number
+                          = @script_level.position
+                  %td.name{class: user_level && user_level.navigator? && !user_level.driver? ? 'navigator' : ''}
+                    = link_to build_script_level_path(@script_level, user_id: student.id, section_id: @section.id) do
+                      = student.name
+                      - if user_level && (user_level.navigator_user_levels.present? || user_level.driver_user_levels.present?) # I am a driver
+                        %i.fa.fa-users.pair-programming-icon
+
 - content_for(:head) do
   :javascript
     $(document).ready(function () {
