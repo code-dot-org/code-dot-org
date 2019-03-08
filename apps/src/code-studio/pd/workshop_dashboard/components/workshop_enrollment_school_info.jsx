@@ -59,12 +59,13 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
   }
 
   handleScholarshipStatusChange(enrollment, selection) {
-    this.setState({
-      pendingScholarshipUpdates: [
-        ...this.state.pendingScholarshipUpdates,
+    this.setState(state => {
+      const pendingScholarshipUpdates = state.pendingScholarshipUpdates.concat(
         enrollment.id
-      ]
+      );
+      return {pendingScholarshipUpdates};
     });
+
     $.ajax({
       method: 'POST',
       url: `/api/v1/pd/enrollment/${enrollment.id}/scholarship_info`,
@@ -72,6 +73,7 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
       data: JSON.stringify({scholarship_status: selection.value})
     }).done(data => {
       this.setState(state => {
+        // replace the old version of the enrollment in state with the newly updated version we just got back
         const enrollments = state.enrollments.map(enrollment => {
           if (enrollment.id === data.id) {
             return data;
@@ -79,15 +81,13 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
             return enrollment;
           }
         });
-        return {enrollments};
-      });
-      this.setState(state => {
+        // remove the updated enrollment from the list of enrollments pending and update
         const pendingScholarshipUpdates = state.pendingScholarshipUpdates.filter(
           e => {
             return e !== data.id;
           }
         );
-        return {pendingScholarshipUpdates};
+        return {enrollments, pendingScholarshipUpdates};
       });
     });
   }
@@ -180,6 +180,9 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
                 <Spinner size="small" />
               </td>
             )}
+          {/* Show the dropdown if this is a local summer workshop, this enrollment is not waiting
+          for updated scholarship info from the server, and you are either a program manager or a
+          workshop admin */}
           {this.props.workshopSubject === LOCAL_SUMMER &&
             !this.state.pendingScholarshipUpdates.includes(enrollment.id) &&
             (this.props.permissionList.has(ProgramManager) ||
@@ -194,6 +197,9 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
                 />
               </td>
             )}
+          {/* Show the scholarship status as a string if this is a local summer workshop, this
+          enrollment is not waiting for updated scholarship info from the server, and you are
+          neither a program manager nor a workshop admin (this applies to facilitators) */}
           {this.props.workshopSubject === LOCAL_SUMMER &&
             !this.state.pendingScholarshipUpdates.includes(enrollment.id) &&
             !this.props.permissionList.has(ProgramManager) &&
