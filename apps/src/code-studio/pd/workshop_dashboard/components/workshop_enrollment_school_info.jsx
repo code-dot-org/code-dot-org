@@ -102,6 +102,27 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
     return strs.join(', ');
   }
 
+  scholarshipInfo(enrollment) {
+    if (
+      this.props.permissionList.has(ProgramManager) ||
+      this.props.permissionList.has(WorkshopAdmin)
+    ) {
+      return (
+        <td>
+          <ScholarshipDropdown
+            scholarshipStatus={enrollment.scholarship_status}
+            onChange={this.handleScholarshipStatusChange.bind(this, enrollment)}
+          />
+        </td>
+      );
+    } else {
+      let scholarshipInfo = ScholarshipDropdownOptions.find(o => {
+        return o.value === enrollment.scholarship_status;
+      });
+      return <td>{scholarshipInfo ? scholarshipInfo.label : '--'}</td>;
+    }
+  }
+
   render() {
     const enrollmentRows = this.state.enrollments.map((enrollment, i) => {
       let deleteCell;
@@ -180,38 +201,9 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
                 <Spinner size="small" />
               </td>
             )}
-          {/* Show the dropdown if this is a local summer workshop, this enrollment is not waiting
-          for updated scholarship info from the server, and you are either a program manager or a
-          workshop admin */}
           {this.props.workshopSubject === LOCAL_SUMMER &&
             !this.state.pendingScholarshipUpdates.includes(enrollment.id) &&
-            (this.props.permissionList.has(ProgramManager) ||
-              this.props.permissionList.has(WorkshopAdmin)) && (
-              <td>
-                <ScholarshipDropdown
-                  scholarshipStatus={enrollment.scholarship_status}
-                  onChange={this.handleScholarshipStatusChange.bind(
-                    this,
-                    enrollment
-                  )}
-                />
-              </td>
-            )}
-          {/* Show the scholarship status as a string if this is a local summer workshop, this
-          enrollment is not waiting for updated scholarship info from the server, and you are
-          neither a program manager nor a workshop admin (this applies to facilitators) */}
-          {this.props.workshopSubject === LOCAL_SUMMER &&
-            !this.state.pendingScholarshipUpdates.includes(enrollment.id) &&
-            !this.props.permissionList.has(ProgramManager) &&
-            !this.props.permissionList.has(WorkshopAdmin) && (
-              <td>
-                {
-                  ScholarshipDropdownOptions.find(o => {
-                    return o.value === enrollment.scholarship_status;
-                  }).label
-                }
-              </td>
-            )}
+            this.scholarshipInfo(enrollment)}
         </tr>
       );
     });
