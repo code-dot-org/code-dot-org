@@ -53,7 +53,10 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal [
-      [[submissions.first.id, nil], [submissions.second.id, 'escalated']]
+      [
+        [submissions.first.id, nil, submissions.first.updated_at],
+        [submissions.second.id, 'escalated', submissions.second.updated_at]
+      ]
     ], response.map {|submission| submission['review_ids']}
   end
 
@@ -62,9 +65,18 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal [
-      [[@level_1_reviews.first.id, nil], [@level_1_reviews.second.id, 'escalated']],
-      [[@level_2_reviews.first.id, nil], [@level_2_reviews.second.id, 'accepted']],
-      [[@level_3_reviews.first.id, nil], [@level_3_reviews.second.id, 'escalated']],
+      [
+        [@level_1_reviews.first.id, nil, @level_1_reviews.first.updated_at],
+        [@level_1_reviews.second.id, 'escalated', @level_1_reviews.second.updated_at]
+      ],
+      [
+        [@level_2_reviews.first.id, nil, @level_2_reviews.first.updated_at],
+        [@level_2_reviews.second.id, 'accepted', @level_2_reviews.second.updated_at]
+      ],
+      [
+        [@level_3_reviews.first.id, nil, @level_3_reviews.first.updated_at],
+        [@level_3_reviews.second.id, 'escalated', @level_3_reviews.second.updated_at]
+      ],
     ], response.map {|submission| submission['review_ids']}
   end
 
