@@ -29,11 +29,11 @@ Instructions for requesting reimbursement towards the [Teacher Recruitment Fund]
 
 **March 1 -** 
 
-All invoices should be submitted by completing the form and attaching the required documentation at [bit.ly/codeinvoices](bit.ly/codeinvoices). 
+All invoices should be submitted by completing the form and attaching the required documentation at [bit.ly/codeinvoices](http://bit.ly/codeinvoices). 
 
 Please note that invoices submitted to invoices@code.org on or after March 1 will be redirected to the new submission form. Invoices submitted more than 30 days after the event or workshop date will not be paid per our existing policy. 
 
-Before visiting [bit.ly/codeinvoices](bit.ly/codeinvoices) to submit for your reimbursement, be prepared with the following information and documents based on the reimbursement type:
+Before visiting [bit.ly/codeinvoices](http://bit.ly/codeinvoices) to submit for your reimbursement, be prepared with the following information and documents based on the reimbursement type:
 
 - [K-5 Facilitator Travel](#csf)
 - [Administrator and Counselor Workshops](#ac)
@@ -94,7 +94,7 @@ Code.org will provide Partners with limited travel support for CS Fundamentals f
 
 Travel support will be provided by the following reimbursement process:
 
-- Regional Partner should submit an invoice and receipts within 30 days of the workshop by completing the form at [bit.ly/codeinvoices](bit.ly/codeinvoices)
+- Regional Partner should submit an invoice and receipts within 30 days of the workshop by completing the form at [bit.ly/codeinvoices](http://bit.ly/codeinvoices)
 - Invoice total can be up to 250 dollars.
 - Reimbursable expenses include items like mileage, rental car, hotel, meals, etc.
 - For mileage reimbursement, no receipts are needed, but Regional Partner should specify the number of miles traveled.
@@ -162,7 +162,7 @@ ________________
 <a id="community"></a>
 
 ## Community Events
-Code.org reimburses up to $500 per event that serves a minimum of 10 teacher attendees. To receive reimbursement for venue or catering costs associated with a community event, submit an official invoice, receipts, and an attendance list at [bit.ly/codeinvoices](bit.ly/codeinvoices) within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
+Code.org reimburses up to $500 per event that serves a minimum of 10 teacher attendees. To receive reimbursement for venue or catering costs associated with a community event, submit an official invoice, receipts, and an attendance list at [bit.ly/codeinvoices](http://bit.ly/codeinvoices) within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
 
 Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).  
 See more info in the [Community Building tile](http://code.org/educate/regional-partner/playbook/community).
@@ -174,7 +174,7 @@ ________________
 
 ## CS Fairs
 
-To receive reimbursement for a CS Fair, provide an official invoice and receipts for [reimbursable expenses](https://docs.google.com/document/d/1YXIUGohlNNZKiGjHcywuyBV9e_c3UDE6CcgAfShOWuI/edit) by completing the form at [bit.ly/codeinvoices](bit.ly/codeinvoices) within 30 days of the event. Code.org will reimburse each partner up to $5,000 for one CS Fair. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
+To receive reimbursement for a CS Fair, provide an official invoice and receipts for [reimbursable expenses](https://docs.google.com/document/d/1YXIUGohlNNZKiGjHcywuyBV9e_c3UDE6CcgAfShOWuI/edit) by completing the form at [bit.ly/codeinvoices](http://bit.ly/codeinvoices) within 30 days of the event. Code.org will reimburse each partner up to $5,000 for one CS Fair. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
 
 See more information about the CS Fair and reimbursable expenses on the [Community Building tile](http://code.org/educate/regional-partner/playbook/community).
 
@@ -185,7 +185,7 @@ ________________
 
 ## Teacher Recruitment Fund
 
-To receive reimbursement for expenses incurred towards your Recruitment Fund, complete the form and attach recripts for [allowable expenses](https://staging.code.org/educate/regional-partner/playbook/teacher-recruitment#recruitment) at [bit.ly/codeinvoices](bit.ly/codeinvoices). 
+To receive reimbursement for expenses incurred towards your Recruitment Fund, complete the form and attach recripts for [allowable expenses](https://staging.code.org/educate/regional-partner/playbook/teacher-recruitment#recruitment) at [bit.ly/codeinvoices](http://bit.ly/codeinvoices). 
 
 Required information for reimbursement will include date, amount, invoice, receipts, a brief explanation of how the expenses supported recruitment in your region, and your best estimate of the number of teachers reached.
 
