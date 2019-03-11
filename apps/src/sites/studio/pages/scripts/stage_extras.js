@@ -8,6 +8,8 @@ const script = document.querySelector('script[data-extras]');
 const config = JSON.parse(script.dataset.extras);
 const showProjectWidget = JSON.parse(script.dataset.widgetVisible);
 const projectTypes = JSON.parse(script.dataset.widgetTypes);
+const sectionId = JSON.parse(script.dataset.sectionId);
+const userId = JSON.parse(script.dataset.userId);
 const store = getStore();
 
 ReactDOM.render(
@@ -18,6 +20,8 @@ ReactDOM.render(
       bonusLevels={config.bonusLevels}
       showProjectWidget={showProjectWidget}
       projectTypes={projectTypes}
+      sectionId={sectionId}
+      userId={userId}
     />
   </Provider>,
   document.querySelector('#stage-extras')
