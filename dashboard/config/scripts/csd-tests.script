@@ -1,0 +1,6 @@
+login_required true
+hideable_stages true
+student_detail_progress_view true
+
+stage 'Computers and Problem Solving'
+level 'CSD U1 Test define a computer'

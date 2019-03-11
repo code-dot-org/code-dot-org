@@ -14,12 +14,18 @@ describe('PeerReviewSubmissions', () => {
     {
       submitter: 'User 1',
       course_name: 'Course 1',
-      review_ids: [[1, 'accepted'], [2, 'accepted']]
+      review_ids: [
+        [1, 'accepted', '2019-03-05T01:11:50Z'],
+        [2, 'accepted', '2019-03-05T01:11:50Z']
+      ]
     },
     {
       submitter: 'User 2',
       course_name: 'Course 2',
-      review_ids: [[3, 'accepted'], [4, 'accepted']]
+      review_ids: [
+        [3, 'accepted', '2019-03-05T01:11:50Z'],
+        [4, 'accepted', '2019-03-05T01:11:50Z']
+      ]
     }
   ];
 
