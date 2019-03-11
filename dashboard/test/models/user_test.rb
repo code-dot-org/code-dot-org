@@ -362,12 +362,12 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "Creating Teacher with email causes email collision check" do
-    User.expects(:find_by_email_or_hashed_email).times(4)
+    User.expects(:find_by_email_or_hashed_email).times(3)
     create :teacher
   end
 
   test "Creating Student with email causes email collision check" do
-    User.expects(:find_by_hashed_email).times(4)
+    User.expects(:find_by_hashed_email).times(3)
     create :student
   end
 
@@ -1791,7 +1791,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'update_primary_contact_info adds new email option for teacher if no matches exist' do
-    teacher = create :teacher, :with_migrated_google_authentication_option
+    teacher = create :teacher, :with_google_authentication_option
 
     assert_equal 2, teacher.authentication_options.count
     refute_nil teacher.primary_contact_info
@@ -1817,7 +1817,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'update_primary_contact_info oauth option replaces any existing email options for teacher' do
-    teacher = create :teacher, :with_migrated_google_authentication_option
+    teacher = create :teacher, :with_google_authentication_option
     existing_email = teacher.primary_contact_info.email
 
     assert_equal 2, teacher.authentication_options.count
@@ -1850,7 +1850,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'update_primary_contact_info adds new email option for student if no matches exist' do
-    student = create :student, :with_migrated_google_authentication_option
+    student = create :student, :with_google_authentication_option
 
     assert_equal 2, student.authentication_options.count
     refute_nil student.primary_contact_info
@@ -1878,7 +1878,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'update_primary_contact_info oauth option replaces any existing email options for student' do
-    student = create :student, :with_migrated_google_authentication_option, email: 'student@email.com'
+    student = create :student, :with_google_authentication_option, email: 'student@email.com'
     existing_hashed_email = student.primary_contact_info.hashed_email
 
     assert_equal 2, student.authentication_options.count
@@ -2010,7 +2010,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'upgrade_to_personal_login is true for successfully updated migrated student' do
-    student = create :student, :with_migrated_google_authentication_option
+    student = create :student, :with_google_authentication_option
     params = upgrade_to_personal_login_params
     new_email = params[:email]
 
@@ -2072,7 +2072,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'upgrade_to_teacher is true if new authentication option is created' do
-    user = create :student, :with_migrated_google_authentication_option
+    user = create :student, :with_google_authentication_option
 
     assert_equal 2, user.authentication_options.count
 
@@ -2089,7 +2089,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'upgrade_to_teacher is true if matching authentication option is found' do
-    user = create :student, :with_migrated_google_authentication_option
+    user = create :student, :with_google_authentication_option
     auth_option = create :authentication_option, user: user, email: 'example@email.com'
 
     assert_empty auth_option.email
@@ -3909,15 +3909,13 @@ class UserTest < ActiveSupport::TestCase
 
     assert_nil User.find_by_credential(
       type: AuthenticationOption::CLEVER,
-      id: 'mismatched_id_' + user.uid
+      id: 'mismatched_id_' + user.primary_contact_info.authentication_id
     )
   end
 
   test 'find_by_credential locates migrated SSO user' do
-    user = create :student, :unmigrated_clever_sso
-    original_uid = user.uid
-
-    user.migrate_to_multi_auth
+    original_uid = 'test-uid'
+    user = create :student, :unmigrated_clever_sso, uid: original_uid
 
     User.expects(:find_by).never
     assert_equal user,
