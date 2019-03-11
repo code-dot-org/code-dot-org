@@ -11597,6 +11597,8 @@ en:
           stages:
             Computers and Problem Solving:
               name: Computers and Problem Solving
+            Web Development:
+              name: Web Development
           title: Post-Project Tests for CSD
           description_audience: ''
           description_short: ''
