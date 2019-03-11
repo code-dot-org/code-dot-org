@@ -164,17 +164,6 @@ FactoryGirl.define do
           end
         end
       end
-      trait :with_google_authentication_option do
-        after(:create) do |user|
-          create(:authentication_option,
-            user: user,
-            email: user.email,
-            hashed_email: user.hashed_email,
-            credential_type: AuthenticationOption::GOOGLE,
-            authentication_id: 'abcd123'
-          )
-        end
-      end
       transient {pilot_experiment nil}
       after(:create) do |teacher, evaluator|
         if evaluator.pilot_experiment
