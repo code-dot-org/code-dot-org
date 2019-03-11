@@ -389,9 +389,11 @@ class PeerReviewTest < ActiveSupport::TestCase
       unit_name: @learning_module.name,
     }
 
+    level_1_pr_1 = PeerReview.find_by(level: level_1, status: nil)
+    level_1_pr_2 = PeerReview.find_by(level: level_1, status: 'escalated')
     expected_level_1_ids = [
-      [PeerReview.find_by(level: level_1, status: nil).id, nil],
-      [PeerReview.find_by(level: level_1, status: 'escalated').id, 'escalated']
+      [level_1_pr_1.id, nil, level_1_pr_1.updated_at],
+      [level_1_pr_2.id, 'escalated', level_1_pr_2.updated_at]
     ]
 
     assert_equal base_expected.merge(
@@ -399,38 +401,36 @@ class PeerReviewTest < ActiveSupport::TestCase
         level_name: level_1.name,
         review_ids: expected_level_1_ids,
         status: 'escalated',
-        accepted_reviews: 0,
-        rejected_reviews: 0,
         escalated_review_id: PeerReview.find_by(level: level_1, status: 'escalated').id
       }
     ), PeerReview.get_submission_summary_for_user_level(ul1, @script).except(:submission_date)
 
+    level_2_pr_1 = PeerReview.find_by(level: level_2, status: nil)
+    level_2_pr_2 = PeerReview.find_by(level: level_2, status: 'accepted')
     expected_level_2_ids = [
-      [PeerReview.find_by(level: level_2, status: nil).id, nil],
-      [PeerReview.find_by(level: level_2, status: 'accepted').id, 'accepted']
+      [level_2_pr_1.id, nil, level_2_pr_1.updated_at],
+      [level_2_pr_2.id, 'accepted', level_2_pr_2.updated_at]
     ]
     assert_equal base_expected.merge(
       {
         level_name: level_2.name,
         review_ids: expected_level_2_ids,
         status: 'accepted',
-        accepted_reviews: 1,
-        rejected_reviews: 0,
         escalated_review_id: nil
       }
     ), PeerReview.get_submission_summary_for_user_level(ul2, @script).except(:submission_date)
 
+    level_3_pr_1 = PeerReview.find_by(level: level_3, status: nil)
+    level_3_pr_2 = PeerReview.find_by(level: level_3, status: 'rejected')
     expected_level_3_ids = [
-      [PeerReview.find_by(level: level_3, status: nil).id, nil],
-      [PeerReview.find_by(level: level_3, status: 'rejected').id, 'rejected']
+      [level_3_pr_1.id, nil, level_3_pr_1.updated_at],
+      [level_3_pr_2.id, 'rejected', level_3_pr_2.updated_at]
     ]
     assert_equal base_expected.merge(
       {
         level_name: level_3.name,
         review_ids: expected_level_3_ids,
         status: 'rejected',
-        accepted_reviews: 0,
-        rejected_reviews: 1,
         escalated_review_id: nil
       }
     ), PeerReview.get_submission_summary_for_user_level(ul3, @script).except(:submission_date)
@@ -481,23 +481,11 @@ class PeerReviewTest < ActiveSupport::TestCase
     original_peer_reviews = PeerReview.where(level_source_id: @level_source.id)
     PeerReview.stubs(:create!).raises(Exception, "Some error")
 
-    Honeybadger.stubs(:notify)
-
     assert_raises(Exception) do
       track_progress @level_source.id
     end
 
     assert original_peer_reviews == PeerReview.where(level_source_id: @level_source.id)
-  end
-
-  test 'notify honeybadger if new entries are not created' do
-    PeerReview.stubs(:create_for_submission)
-    Honeybadger.stubs(:notify)
-    Honeybadger.expects(:notify).once
-
-    track_progress @level_source.id
-
-    assert_nil PeerReview.find_by(level_source_id: @level_source.id)
   end
 
   private
