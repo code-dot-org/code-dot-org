@@ -32,7 +32,7 @@ class UserLevel < ActiveRecord::Base
   belongs_to :script
   belongs_to :level_source
 
-  after_save :after_submit, if: ->(ul) {ul.submitted_changed? to: true}
+  after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
 
   validate :readonly_requires_submitted
@@ -93,6 +93,10 @@ class UserLevel < ActiveRecord::Base
 
   def paired?
     driver? || navigator?
+  end
+
+  def submitted_or_resubmitted?
+    submitted_changed?(to: true) || (submitted? && level_source_id_changed?)
   end
 
   def after_submit
