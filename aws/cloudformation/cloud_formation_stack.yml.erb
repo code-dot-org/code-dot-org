@@ -529,22 +529,24 @@ Resources:
                   # TODO: Import pd_workshop resources into stack.
                   - !Sub "arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:pd_workshop-<%=environment%>"
                   - !Sub "arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:pd_workshop_dead-<%=environment%>"
-              - Effect: Allow
-                Action:
-                  - 'cloudformation:DescribeStacks'
-                  - 'cloudformation:DescribeStackEvents'
-                  - 'cloudformation:GetStackPolicy'
-                Resource: !Ref AWS::StackId
               # Lookup ACM certificate for ELB and CloudFront SSL.
               - Effect: Allow
                 Action:
                   - 'acm:ListCertificates'
-                  - 'acm:GetCertificate'
+                  - 'acm:DescribeCertificate'
                 Resource: '*'
+              - Effect: Allow
+                Action: 'cloudformation:DescribeStackEvents'
+                Resource: !Ref AWS::StackId
               # Update Stack through `ci:deploy_stack` task.
               - Effect: Allow
-                Action: 'cloudformation:UpdateStack'
-                Resource: !Ref AWS::StackId
+                Action:
+                  - 'cloudformation:UpdateStack'
+                  - 'cloudformation:DescribeStacks'
+                Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${AWS::StackName}/*"
+              - Effect: Allow
+                Action: iam:PassRole
+                Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
       ManagedPolicyArns: [!Ref CDOPolicy]
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   DaemonInstanceProfile:
