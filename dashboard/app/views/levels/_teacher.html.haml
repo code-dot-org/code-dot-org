@@ -104,7 +104,9 @@
               %tr.section-student{class: active}
                 - if @stage_extras
                   %td{style: 'padding: 5px;'}
-                    = image_tag 'flag_inactive.png'
+                    - active = student.user_levels.where(script: @stage.script, level: @bonus_level_ids).length > 0
+                    - flag_image = active ? 'flag_active.png' : 'flag_inactive.png'
+                    = image_tag flag_image
                   %td.name
                     = link_to script_stage_extras_path(@script.name, @stage.relative_position, section_id: @section.id, user_id: student.id) do
                       = student.name

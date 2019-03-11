@@ -202,6 +202,7 @@ class ScriptLevelsController < ApplicationController
       next_level_path: @stage.next_level_path_for_stage_extras(current_user),
       bonus_levels: @script.get_bonus_script_levels(@stage),
     }.camelize_keys
+    @bonus_level_ids = @stage.script_levels.where(bonus: true).map(&:level_ids).flatten
 
     render 'scripts/stage_extras'
   end
