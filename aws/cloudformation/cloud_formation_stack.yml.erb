@@ -535,6 +535,12 @@ Resources:
                   - 'cloudformation:DescribeStackEvents'
                   - 'cloudformation:GetStackPolicy'
                 Resource: !Ref AWS::StackId
+              # Lookup ACM certificate for ELB and CloudFront SSL.
+              - Effect: Allow
+                Action:
+                  - 'acm:ListCertificates'
+                  - 'acm:GetCertificate'
+                Resource: '*'
               # Update Stack through `ci:deploy_stack` task.
               - Effect: Allow
                 Action: 'cloudformation:UpdateStack'
