@@ -77,7 +77,7 @@ describe('Enroll Form', () => {
     });
   });
 
-  describe('CSP Enroll Form', () => {
+  describe('CSP Enroll Form with demographics', () => {
     let enrollForm;
     before(() => {
       enrollForm = shallow(
