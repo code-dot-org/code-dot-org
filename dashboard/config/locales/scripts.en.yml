@@ -11593,3 +11593,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csd-tests:
+          stages:
+            Computers and Problem Solving:
+              name: Computers and Problem Solving
+          title: Post-Project Tests for CSD
+          description_audience: ''
+          description_short: ''
+          description: ''
