@@ -1590,7 +1590,12 @@ function filterUrl(urlToCheck) {
 
 applabCommands.openUrl = function(opts) {
   apiValidateType(opts, 'openUrl', 'url', opts.url, 'string');
-  filterUrl(opts.url);
+  const url = new URL(opts.url);
+  if (url.hostname === 'studio.code.org' || url.hostname === 'code.org') {
+    window.open(opts.url);
+  } else {
+    filterUrl(opts.url);
+  }
 };
 
 applabCommands.onHttpRequestEvent = function(opts) {
