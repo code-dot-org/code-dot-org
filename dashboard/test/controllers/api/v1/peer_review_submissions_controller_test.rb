@@ -43,59 +43,20 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     sign_in(@plc_reviewer)
   end
 
-  test 'Escalated peer reviews gets expected peer_reviews' do
-    get :index, params: {filter: 'escalated'}
-    assert_response :success
-    response = JSON.parse(@response.body)
-
-    expected_response = [
-      {
-        submitter: @submitter.name,
-        course_name: @course_unit.plc_course.name,
-        unit_name: @course_unit.name,
-        status: 'escalated',
-        accepted_reviews: 0,
-        rejected_reviews: 0,
-        level_name: @level_1.name,
-        escalated_review_id: @level_1_reviews.second.id,
-        review_ids: [[@level_1_reviews.first.id, nil], [@level_1_reviews.second.id, 'escalated']]
-      },
-      {
-        submitter: @submitter.name,
-        course_name: @course_unit.plc_course.name,
-        unit_name: @course_unit.name,
-        status: 'escalated',
-        accepted_reviews: 0,
-        rejected_reviews: 0,
-        level_name: @level_3.name,
-        escalated_review_id: @level_3_reviews.second.id,
-        review_ids: [[@level_3_reviews.first.id, nil], [@level_3_reviews.second.id, 'escalated']]
-      },
-    ].map(&:stringify_keys)
-    assert_equal expected_response, response.map {|r| r.except('submission_date', 'escalation_date')}
-  end
-
-  test 'Open peer reviews gets open peer reviews submissions' do
-    get :index, params: {filter: 'open'}
-    assert_response :success
-    response = JSON.parse(@response.body)
-    assert_equal [
-      [[@level_1_reviews.first.id, nil], [@level_1_reviews.second.id, 'escalated']],
-      [[@level_3_reviews.first.id, nil], [@level_3_reviews.second.id, 'escalated']],
-    ], response.map {|submission| submission['review_ids']}
-  end
-
-  test 'Open peer reviews with email filter only gets those peer reviews' do
+  test 'Peer reviews with email filter only gets those peer reviews' do
     # Create some for another submitter
     other_submitter = create :teacher
     create_peer_reviews_for_user_and_level(other_submitter, @level_3)
     submissions = PeerReview.where(level: @level_3, submitter: other_submitter)
 
-    get :index, params: {filter: 'open', email: other_submitter.email}
+    get :index, params: {email: other_submitter.email}
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal [
-      [[submissions.first.id, nil], [submissions.second.id, 'escalated']]
+      [
+        [submissions.first.id, nil, submissions.first.updated_at],
+        [submissions.second.id, 'escalated', submissions.second.updated_at]
+      ]
     ], response.map {|submission| submission['review_ids']}
   end
 
@@ -104,9 +65,18 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal [
-      [[@level_1_reviews.first.id, nil], [@level_1_reviews.second.id, 'escalated']],
-      [[@level_2_reviews.first.id, nil], [@level_2_reviews.second.id, 'accepted']],
-      [[@level_3_reviews.first.id, nil], [@level_3_reviews.second.id, 'escalated']],
+      [
+        [@level_1_reviews.first.id, nil, @level_1_reviews.first.updated_at],
+        [@level_1_reviews.second.id, 'escalated', @level_1_reviews.second.updated_at]
+      ],
+      [
+        [@level_2_reviews.first.id, nil, @level_2_reviews.first.updated_at],
+        [@level_2_reviews.second.id, 'accepted', @level_2_reviews.second.updated_at]
+      ],
+      [
+        [@level_3_reviews.first.id, nil, @level_3_reviews.first.updated_at],
+        [@level_3_reviews.second.id, 'escalated', @level_3_reviews.second.updated_at]
+      ],
     ], response.map {|submission| submission['review_ids']}
   end
 
