@@ -67,7 +67,7 @@ class AuthenticationOption < ApplicationRecord
   end
 
   def remove_student_cleartext_email
-    self.email = '' if user.student?
+    self.email = '' if user&.student?
   end
 
   def fill_authentication_id

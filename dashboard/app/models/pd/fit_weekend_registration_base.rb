@@ -91,7 +91,6 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
       :how_traveling,
       :need_hotel,
       :need_disability_support,
-      :photo_release,
       :liability_waiver,
       :agree_share_contact,
     ].freeze
