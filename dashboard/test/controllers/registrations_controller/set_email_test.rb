@@ -19,8 +19,8 @@ module RegistrationsControllerTests
     end
 
     test "set email with utf8mb4 in email fails" do
-      student = create :student
-      sign_in student
+      user = create :teacher
+      sign_in user
 
       # don't ask the db for existing panda emails
       User.expects(:find_by_email_or_hashed_email).never
@@ -32,8 +32,11 @@ module RegistrationsControllerTests
       end
 
       assert_response :unprocessable_entity
-      assert_equal ['Email is invalid'], assigns(:user).errors.full_messages
-      assert_equal response.body, {email: ['Email is invalid']}.to_json
+      assert_equal ['Authentication options is invalid', 'Email is invalid'], assigns(:user).errors.full_messages
+      assert_equal response.body, {
+        authentication_options: ['Authentication options is invalid'],
+        email: ['Email is invalid']
+      }.to_json
     end
 
     test "update student with client side hashed email" do
@@ -83,14 +86,25 @@ module RegistrationsControllerTests
     # passwords.  Examples of users without passwords are users that authenticate
     # via oauth (a third-party account), or students with a picture password.
 
-    test "editing email of student-without-password is not allowed" do
+    test "editing email of unmigrated student-without-password is not allowed" do
+      unmigrated_student_without_password = create :student
+      unmigrated_student_without_password.demigrate_from_multi_auth
+      unmigrated_student_without_password.update_attribute(:encrypted_password, '')
+      assert unmigrated_student_without_password.encrypted_password.blank?
+
+      refute can_edit_email_without_password unmigrated_student_without_password
+      refute can_edit_email_with_password unmigrated_student_without_password, 'wrongpassword'
+      refute can_edit_email_with_password unmigrated_student_without_password, ''
+    end
+
+    test "editing email of migrated student-without-password is allowed" do
       student_without_password = create :student
       student_without_password.update_attribute(:encrypted_password, '')
       assert student_without_password.encrypted_password.blank?
 
-      refute can_edit_email_without_password student_without_password
-      refute can_edit_email_with_password student_without_password, 'wrongpassword'
-      refute can_edit_email_with_password student_without_password, ''
+      assert can_edit_email_without_password student_without_password
+      assert can_edit_email_with_password student_without_password, 'wrongpassword'
+      assert can_edit_email_with_password student_without_password, ''
     end
 
     test "editing email of student-with-password requires current password" do
@@ -100,14 +114,25 @@ module RegistrationsControllerTests
       assert can_edit_email_with_password student_with_password, 'oldpassword'
     end
 
-    test "editing email of teacher-without-password is not allowed" do
+    test "editing email of demigrated teacher-without-password is not allowed" do
+      unmigrated_teacher_without_password = create :teacher
+      unmigrated_teacher_without_password.demigrate_from_multi_auth
+      unmigrated_teacher_without_password.update_attribute(:encrypted_password, '')
+      assert unmigrated_teacher_without_password.encrypted_password.blank?
+
+      refute can_edit_email_without_password unmigrated_teacher_without_password
+      refute can_edit_email_with_password unmigrated_teacher_without_password, 'wrongpassword'
+      refute can_edit_email_with_password unmigrated_teacher_without_password, ''
+    end
+
+    test "editing email of migrated teacher-without-password is allowed" do
       teacher_without_password = create :teacher
       teacher_without_password.update_attribute(:encrypted_password, '')
       assert teacher_without_password.encrypted_password.blank?
 
-      refute can_edit_email_without_password teacher_without_password
-      refute can_edit_email_with_password teacher_without_password, 'wrongpassword'
-      refute can_edit_email_with_password teacher_without_password, ''
+      assert can_edit_email_without_password teacher_without_password
+      assert can_edit_email_with_password teacher_without_password, 'wrongpassword'
+      assert can_edit_email_with_password teacher_without_password, ''
     end
 
     test "editing email of teacher-with-password requires current password" do
@@ -117,14 +142,25 @@ module RegistrationsControllerTests
       assert can_edit_email_with_password teacher_with_password, 'oldpassword'
     end
 
-    test "editing hashed_email of student-without-password is not allowed" do
+    test "editing hashed_email of unmigrated student-without-password is not allowed" do
+      unmigrated_student_without_password = create :student
+      unmigrated_student_without_password.demigrate_from_multi_auth
+      unmigrated_student_without_password.update_attribute(:encrypted_password, '')
+      assert unmigrated_student_without_password.encrypted_password.blank?
+
+      refute can_edit_hashed_email_without_password unmigrated_student_without_password
+      refute can_edit_hashed_email_with_password unmigrated_student_without_password, 'wrongpassword'
+      refute can_edit_hashed_email_with_password unmigrated_student_without_password, ''
+    end
+
+    test "editing hashed_email of migrated student-without-password is allowed" do
       student_without_password = create :student
       student_without_password.update_attribute(:encrypted_password, '')
       assert student_without_password.encrypted_password.blank?
 
-      refute can_edit_hashed_email_without_password student_without_password
-      refute can_edit_hashed_email_with_password student_without_password, 'wrongpassword'
-      refute can_edit_hashed_email_with_password student_without_password, ''
+      assert can_edit_hashed_email_without_password student_without_password
+      assert can_edit_hashed_email_with_password student_without_password, 'wrongpassword'
+      assert can_edit_hashed_email_with_password student_without_password, ''
     end
 
     test "editing hashed_email of student-with-password requires current password" do
