@@ -4805,9 +4805,6 @@ en:
         Prepare: Prepare
         Reflect: Reflect
         Try: Try
-      CSD U1 Test define a computer:
-        Question 1: Question 1
-        Which TWO of the following are the best ways to define a computer? (Choose TWO): Which TWO of the following are the best ways to define a computer? (Choose TWO)
       CSD U2 RGB match:
         "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> ": "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> "
         ? In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
@@ -7699,14 +7696,6 @@ en:
         A machine with a screen and a keyboard: A machine with a screen and a keyboard
         Question 1: Question 1
         Which two of the following are the best ways to define a computer? (Choose TWO): Which two of the following are the best ways to define a computer? (Choose TWO)
-      'CSD U1 Test ':
-        A machine that can connect to the Internet: A machine that can connect to the Internet
-        A machine that inputs, outputs, stores, and processes information: A machine that inputs, outputs, stores, and processes information
-        A machine that uses electricity (from a cable or battery): A machine that uses electricity (from a cable or battery)
-        A machine that works with information to help people with thinking tasks: A machine that works with information to help people with thinking tasks
-        A machine with a screen and a keyboard: A machine with a screen and a keyboard
-        Question 1: Question 1
-        Which TWO of the following are the best ways to define a computer? (Choose TWO): Which TWO of the following are the best ways to define a computer? (Choose TWO)
       CSD U1 Test define a computer:
         A machine that can connect to the Internet: A machine that can connect to the Internet
         A machine that inputs, outputs, stores, and processes information: A machine that inputs, outputs, stores, and processes information
