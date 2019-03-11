@@ -67,10 +67,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       # this enrollment is for a local summer workshop (since this means it's for
       # CSD/CSP, and they will only apply for one local summer workshop a year).
       collect_demographics = !!current_user &&
-        Pd::Application::ApplicationBase.where(
-          user: current_user,
-          application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR
-        ).empty? &&
+        Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.where(user: current_user).empty? &&
         @workshop.local_summer?
 
       @script_data = {

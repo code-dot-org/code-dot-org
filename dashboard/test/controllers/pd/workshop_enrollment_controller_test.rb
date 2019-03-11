@@ -274,8 +274,8 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     refute prop('collect_demographics')
   end
 
-  test 'demographic questions not added (for signed-out users, without application, for local summer workshop)' do
-    workshop = create :pd_workshop, :local_summer_workshop
+  test 'demographic questions not added (for signed-out users, without application, for non-local summer workshop)' do
+    workshop = create :pd_workshop
 
     get :new, params: {workshop_id: workshop.id}
     assert_template :new
