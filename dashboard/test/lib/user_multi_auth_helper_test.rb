@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserMultiAuthHelperTest < ActiveSupport::TestCase
   test 'oauth_tokens_for_provider returns correct tokens for migrated teacher' do
-    user = create :teacher, :with_migrated_google_authentication_option, :with_migrated_clever_authentication_option
+    user = create :teacher, :with_google_authentication_option, :with_clever_authentication_option
     google_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token]
     google_expiration = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token_expiration]
     google_refresh_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_refresh_token]
@@ -36,14 +36,14 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   # The following two tests check the oauth_tokens_for_provider logic for demigrated teachers, and
   # can be deleted after we migrate all users to multiauth
   test 'oauth_tokens_for_provider returns correct token for demigrated Google teacher' do
-    user = create :teacher, :with_migrated_google_authentication_option
+    user = create :teacher, :unmigrated_google_sso
     user.demigrate_from_multi_auth
     google_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token]
     google_expiration = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token_expiration]
     google_refresh_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_refresh_token]
-    assert_equal 'some-google-token', google_token
-    assert_equal '999999', google_expiration
-    assert_equal 'some-google-refresh-token', google_refresh_token
+    assert_equal 'fake-oauth-token', google_token
+    assert_equal 'fake-oauth-token-expiration', google_expiration
+    assert_equal 'fake-oauth-refresh-token', google_refresh_token
   end
 
   test 'oauth_tokens_for_provider returns correct token for demigrated Clever teacher' do
