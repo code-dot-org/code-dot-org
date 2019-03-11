@@ -13094,16 +13094,13 @@ en:
         Scrat will move forward, then turn and crash.: Scrat will move forward, then turn and crash.
         This code uses a new block. What do you think will happen when you press "Run"?: This code uses a new block. What do you think will happen when you press "Run"?
       courseE_aboutme_3_multi:
-        A photograph of her family.: A photograph of her family.
-        Cartoon drawings of herself.: Cartoon drawings of herself.
-        ? 'Help! Rikki doesn''t know what other information is safe for her to share. Which ONE of the following would you recommend her to share? '
-        : 'Help! Rikki doesn''t know what other information is safe for her to share. Which ONE of the following would you recommend her to share? '
-        Her email address.: Her email address.
-        Her student ID number.: Her student ID number.
-        No! Rikki's email address should only be shared directly with people or websites she can trust.: No! Rikki's email address should only be shared directly with people or websites she can trust.
-        No! Someone could steal Rikki's identity with her student ID number!: No! Someone could steal Rikki's identity with her student ID number!
-        No! Someone could steal the photograph and say its a picture of THEIR family. Yikes!: No! Someone could steal the photograph and say its a picture of THEIR family. Yikes!
-        Yes! Rikki can't be identified through cartoon drawings.: Yes! Rikki can't be identified through cartoon drawings.
+        About Me Multiple Choice: About Me Multiple Choice
+        Look at Rikki's code. She can't decide what to print next! Choose the information that is SAFE for her to share!: Look at Rikki's code. She can't decide what to print next! Choose the information that is SAFE for her to share!
+        My address is...: My address is...
+        My best friend's name is...: My best friend's name is...
+        My last name is...: My last name is...
+        My phone number is...: My phone number is...
+        https://images.code.org/a7ad0ae3e5509311e6a93ac4bd186a75-image-1551979796927.png: https://images.code.org/a7ad0ae3e5509311e6a93ac4bd186a75-image-1551979796927.png
       courseE_multi_artist_predict1:
         Based on the code below, what do you think will happen if you press 'Run'?: Based on the code below, what do you think will happen if you press 'Run'?
         Correct!: Correct!

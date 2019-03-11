@@ -15,7 +15,7 @@ def main
   # Build new daily table of contact rollups
   ContactRollups.build_contact_rollups
 
-  # Validate that daily contact rollups meets sanity exoectations
+  # Validate that daily contact rollups meets sanity expectations
   results = ContactRollupsValidation.validate_contact_rollups
   unless results[:pass]
     message = "Contact rollups process failed. "\
