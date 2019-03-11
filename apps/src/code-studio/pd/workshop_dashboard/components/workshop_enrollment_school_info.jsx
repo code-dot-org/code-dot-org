@@ -81,7 +81,7 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
             return enrollment;
           }
         });
-        // remove the updated enrollment from the list of enrollments pending and update
+        // remove the updated enrollment from the list of enrollments pending an update
         const pendingScholarshipUpdates = state.pendingScholarshipUpdates.filter(
           e => {
             return e !== data.id;
