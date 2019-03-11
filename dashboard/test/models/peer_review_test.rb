@@ -83,6 +83,32 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal 3, PeerReview.count - original_count
   end
 
+  test 'resubmitting a previously-accepted submission should not create new PeerReview objects' do
+    # Original submission
+    track_progress @level_source.id, @user
+    assert_equal 2, PeerReview.where(submitter: @user).count
+
+    # Instructor accepts submission
+    PeerReview.find_by(submitter: @user, status: 'escalated').
+      update status: 'accepted', reviewer: @instructor, from_instructor: true
+    assert PeerReview.find_by(submitter: @user, reviewer: @instructor).accepted?
+
+    # Unsubmit the level
+    user_level = UserLevel.find_by(user: @user, level: @level, script: @script)
+    user_level.update(submitted: false)
+
+    # The unassigned review was destroyed on unsubmit
+    assert_equal 1, PeerReview.where(submitter: @user).count
+
+    # Submit a new answer
+    updated_level_source = create :level_source, data: 'UPDATED: My submitted answer'
+    track_progress updated_level_source.id, @user
+
+    # No new reviews were created
+    assert_equal 1, PeerReview.where(submitter: @user).count
+    assert PeerReview.find_by(submitter: @user, reviewer: @instructor).accepted?
+  end
+
   test 'instructor review should mark as accepted' do
     track_progress @level_source.id
     review1 = PeerReview.offset(1).last
