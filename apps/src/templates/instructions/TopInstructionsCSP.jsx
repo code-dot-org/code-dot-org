@@ -243,6 +243,7 @@ class TopInstructions extends Component {
       RESIZER_HEIGHT;
 
     this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    this.props.setInstructionsRenderedHeight(maxNeededHeight);
     return maxNeededHeight;
   };
 
@@ -271,15 +272,18 @@ class TopInstructions extends Component {
   };
 
   handleHelpTabClick = () => {
-    this.setState({tabSelected: TabType.RESOURCES});
+    this.setState({tabSelected: TabType.RESOURCES}, this.adjustMaxNeededHeight);
   };
 
   handleInstructionTabClick = () => {
-    this.setState({tabSelected: TabType.INSTRUCTIONS});
+    this.setState(
+      {tabSelected: TabType.INSTRUCTIONS},
+      this.adjustMaxNeededHeight
+    );
   };
 
   handleCommentTabClick = () => {
-    this.setState({tabSelected: TabType.COMMENTS});
+    this.setState({tabSelected: TabType.COMMENTS}, this.adjustMaxNeededHeight);
   };
 
   render() {
