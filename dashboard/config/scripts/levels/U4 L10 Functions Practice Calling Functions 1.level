@@ -59,11 +59,8 @@
     "start_blocks": "winter();\r\nsummer();\r\nspring();\r\nautumn();\r\n\r\nfunction spring(){\r\n  console.log(\"First comes spring, when flowers bloom\");\r\n}\r\n\r\nfunction summer(){\r\n  console.log(\"Summer's sun will follow soon\");\r\n}\r\n\r\nfunction autumn(){\r\n  console.log(\"Autumn crackles red and gold\");\r\n}\r\n\r\nfunction winter(){\r\n  console.log(\"Then hibernate for winter's cold\");\r\n}",
     "parent_level_id": 17673,
     "palette_category_at_start": "functions",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "slider_speed": "0.1"
+    "slider_speed": "0.1",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
