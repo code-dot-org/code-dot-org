@@ -91,7 +91,7 @@ describe('search assets from animation library', function() {
       maxResults
     );
 
-    assert.equal(searchedData.pageCount, 403);
+    assert.equal(searchedData.pageCount, 407);
     assert.equal(searchedData.results.length, 1);
     assert.equal(
       searchedData.results[0].name,
@@ -110,7 +110,7 @@ describe('search assets from animation library', function() {
       maxResults
     );
 
-    assert.equal(searchedData.pageCount, 403);
+    assert.equal(searchedData.pageCount, 407);
     assert.equal(searchedData.results.length, 1);
     assert.equal(
       searchedData.results[0].name,
