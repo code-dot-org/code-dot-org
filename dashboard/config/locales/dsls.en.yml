@@ -7970,26 +7970,8 @@ en:
           <ol><li>They forgot to call `drawSprites` in the draw loop.</li>
           <li>The character sprite is drawn behind the background sprite.</li>
           <li>The character sprite is drawn off the screen.</li></ol>
-        ? |-
-          A team is making a platform jumper game.  The background and platforms are working, but the main character won't appear.  What might be the problem?<br\>
-          <ol><li>They forgot to call `drawSprites` in the draw loop.</li>
-          <li>The character sprite is drawn behind the background sprite.</li>
-          <li>The character sprite is drawn off the screen.</li></ol>
-        : |-
-          A team is making a platform jumper game.  The background and platforms are working, but the main character won't appear.  What might be the problem?<br\>
-          <ol><li>They forgot to call `drawSprites` in the draw loop.</li>
-          <li>The character sprite is drawn behind the background sprite.</li>
-          <li>The character sprite is drawn off the screen.</li></ol>
         Question 5: Question 5
       CSD U3 Test functions:
-        Question 2: Question 2
-        They are a good way to store user input to use later in the program.: They are a good way to store user input to use later in the program.
-        They are necessary for any program to run.: They are necessary for any program to run.
-        They keep the code organized and easy to understand.: They keep the code organized and easy to understand.
-        They let you use the same code in different places in the program without having to rewrite it.: They let you use the same code in different places in the program without having to rewrite it.
-        They make the program run faster.: They make the program run faster.
-        Why do programmers like to use functions? (Choose TWO): Why do programmers like to use functions? (Choose TWO)
-      CSD U3 Test functions2:
         Question 2: Question 2
         They are a good way to store user input to use later in the program.: They are a good way to store user input to use later in the program.
         They are necessary for any program to run.: They are necessary for any program to run.
@@ -9281,14 +9263,6 @@ en:
         Buttons IDs assigned to event handlers in such a way that hitting either button just makes the turtle move forward: Buttons IDs assigned to event handlers in such a way that hitting either button just makes the turtle move forward
         Buttons won't work because the button IDs are not descriptive enough: Buttons won't work because the button IDs are not descriptive enough
         Trick Question! There actually are no errors.  The program will work as intended.: Trick Question! There actually are no errors.  The program will work as intended.
-      CSd U3 Test functions:
-        Question 2: Question 2
-        They are a good way to store user input to use later in the program.: They are a good way to store user input to use later in the program.
-        They are necessary for any program to run.: They are necessary for any program to run.
-        They keep the code organized and easy to understand.: They keep the code organized and easy to understand.
-        They let you use the same code in different places in the program without having to rewrite it.: They let you use the same code in different places in the program without having to rewrite it.
-        They make the program run faster.: They make the program run faster.
-        Why do programmers like to use functions? (Choose TWO): Why do programmers like to use functions? (Choose TWO)
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
