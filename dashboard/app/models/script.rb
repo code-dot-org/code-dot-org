@@ -1203,7 +1203,7 @@ class Script < ActiveRecord::Base
     nil
   end
 
-  def summarize(include_stages = true, user = nil)
+  def summarize(include_stages = true, user = nil, include_bonus_levels = false)
     if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
@@ -1264,7 +1264,9 @@ class Script < ActiveRecord::Base
       pilot_experiment: pilot_experiment,
     }
 
-    summary[:stages] = stages.map(&:summarize) if include_stages
+    if include_stages
+      summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)}
+    end
 
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
