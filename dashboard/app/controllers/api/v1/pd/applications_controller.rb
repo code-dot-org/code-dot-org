@@ -81,6 +81,7 @@ module Api::V1::Pd
       accepted_not_notified
       accepted_notified_by_partner
       accepted_no_cost_registration
+      registration_sent
       paid
       withdrawn
     )
