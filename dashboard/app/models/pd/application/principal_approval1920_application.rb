@@ -137,16 +137,6 @@ module Pd::Application
           'No, my school or teacher will not be able to pay the program fee. We would like to be considered for a scholarship.',
           'Not applicable: there is no fee for the program for teachers in my region.',
           'Not applicable: there is no Regional Partner in my region.'
-        ],
-        how_heard: [
-          'From a teacher',
-          'From an administrator',
-          'Code.org website',
-          'Code.org email',
-          'Regional Partner website',
-          'Regional Partner email',
-          'Regional Partner event or workshop',
-          TEXT_FIELDS[:other_with_text]
         ]
       }
     end
