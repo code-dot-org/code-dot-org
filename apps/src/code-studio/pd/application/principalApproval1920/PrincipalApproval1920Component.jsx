@@ -5,6 +5,7 @@ import {
   TextFields
 } from '@cdo/apps/generated/pd/principalApproval1920ApplicationConstants';
 import LabeledFormComponent from '../../form_components/LabeledFormComponent';
+import PrivacyDialog from '../PrivacyDialog';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
 import {styles} from '../teacher1920/TeacherApplicationConstants';
@@ -36,8 +37,7 @@ const REQUIRED_SCHOOL_INFO_FIELDS = [
   'replaceCourse',
   'committedToDiversity',
   'understandFee',
-  'payFee',
-  'howHeard'
+  'payFee'
 ];
 // Since the rails model allows empty principal approvals as placeholders, we require these fields here
 const ALWAYS_REQUIRED_FIELDS = [
@@ -64,12 +64,26 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     'doYouApprove',
     'planToTeach',
     'committedToMasterSchedule',
-    'committedToDiversity',
-    'howHeard'
+    'committedToDiversity'
   ];
 
   handleSchoolChange = selectedSchool => {
     this.handleChange({school: selectedSchool && selectedSchool.value});
+  };
+
+  state = {
+    isPrivacyDialogOpen: false
+  };
+
+  openPrivacyDialog = event => {
+    // preventDefault so clicking this link inside the label doesn't
+    // also check the checkbox.
+    event.preventDefault();
+    this.setState({isPrivacyDialogOpen: true});
+  };
+
+  handleClosePrivacyDialog = () => {
+    this.setState({isPrivacyDialogOpen: false});
   };
 
   renderSchoolSection() {
@@ -227,29 +241,6 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
             <br />
           </div>
         )}
-        <p>
-          Code.org works closely with local Regional Partners to organize and
-          deliver the Professional Learning Program. By submitting their
-          application to the professional learning program, teachers have agreed
-          to allow Code.org to share information on how they use Code.org and
-          the Professional Learning resources with their Regional Partner and
-          school district. In order to organize the workshops and support
-          teachers, our partners need to know who is attending and what content
-          is relevant for them. So, we will share teachers’ contact information,
-          which courses/units they are using in their classrooms and aggregate
-          data about their classes. This includes the number of students in
-          their classes, the demographic breakdown of their classroom, and the
-          name of their school and district. We will not share any information
-          about individual students with our Regional Partners - all information
-          will be de-identified and aggregated. Our Regional Partners are
-          contractually obliged to treat this information with the same level of
-          confidentiality as Code.org. To see Code.org’s complete Privacy
-          Policy, visit{' '}
-          <a href="http://code.org/privacy" target="_blank">
-            http://code.org/privacy
-          </a>
-          .
-        </p>
       </div>
     );
   }
@@ -370,7 +361,21 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         )}
         {this.props.data.doYouApprove !== 'No' &&
           this.renderSchoolInfoSection()}
-        {this.singleCheckboxFor('confirmPrincipal')}
+
+        <label className="control-label">Submit your approval</label>
+        {this.singleCheckboxFor('confirmPrincipal', {
+          label: (
+            <span>
+              {this.labelFor('confirmPrincipal')}{' '}
+              <a onClick={this.openPrivacyDialog}>Learn more.</a>
+            </span>
+          )
+        })}
+        <PrivacyDialog
+          show={this.state.isPrivacyDialogOpen}
+          onHide={this.handleClosePrivacyDialog}
+          principalApproval={true}
+        />
       </FormGroup>
     );
   }
