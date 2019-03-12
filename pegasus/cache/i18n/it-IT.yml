@@ -62,7 +62,7 @@ it-IT:
   csedweek_map_signup: Iscrivi il tuo evento
   csedweek_map_search_placeholder: Cerca eventi per l'Ora del codice
   csedweek_map_search_search: Cerca
-  csedweek_map_search_reset: Ripristina
+  csedweek_map_search_reset: Ricomincia
   csedweek_map_legend_title: Legenda
   csedweek_map_legend_event: Eventi de L'Ora del Codice
   csedweek_map_legend_cs_tech_jam: Eventi speciali
@@ -549,20 +549,20 @@ it-IT:
   minecraft_agent: Minecraft Il viaggio dell'eroe
   minecraft_designer: Programma il tuo Minecraft
   minecraft_adventurer: Un'avventura con Minecraft
-  minecraft_tutorials: I corsi di Minecraft per l'Ora del Codice
+  minecraft_tutorials: Le esercitazioni di Minecraft per l'Ora del Codice
   minecraft_specs: Molte lingue | Browser e tablet moderni | Da 7 anni in su
   minecraft_agent_description: Minecraft è tornato per l'Ora del Codice con una nuovissima
     attività! Viaggia attraverso Minecraft grazie al coding.
   minecraft_agent_button: Inizia
-  minecraft_designer_description: Programma il comportamento degli animali e delle
-    altre creature di Minecraft nella tua versione di questo gioco.
+  minecraft_designer_description: Programma animali e altre creature di Minecraft
+    nella tua versione di questo gioco.
   minecraft_designer_button: Inizia
   minecraft_adventurer_description: Usa il codice per far vivere un'avventura ad Alex
     o Steve.
   minecraft_adventurer_button: Inizia
   minecraft_no_internet: Non hai Internet?
   minecraft_download_adventurer: Scarica la versione da usare <i>in locale</i> di
-    "Un avventura con Minecraft".
+    "Un'avventura con Minecraft".
   minecraft_subtitle: L'Ora del Codice con Minecraft
   minecraft_store_camps: Campi gratuiti per Ora di Codice Minecraft al Microsoft Store
   minecraft_teach_resources: Risorse per l'insegnante e piano di lavoro della lezione.
@@ -617,11 +617,11 @@ it-IT:
   watch_inspirational_videos: Prima di iniziare, guarda uno di questi video stimolanti
   video_title_cs_is_everything: L'informatica sta cambiando ogni cosa
   video_title_inspire_girl: Convinci una ragazza a partecipare
-  video_title_cs_intro: Introduzione all'Informatica
-  video_title_schools_dont_teach: Cosa NON Insegnano nella maggior parte delle Scuole
+  video_title_cs_intro: Introduzione all'informatica
+  video_title_schools_dont_teach: Cosa NON insegnano nella maggior parte delle scuole
   video_title_obama: Il Presidente Obama a proposito dell'informatica
-  video_title_hoc_is_here: L'Ora del Codice è Qui - Chiunque Può Imparare
-  video_title_anybody_can_learn: Chiunque Può Imparare
+  video_title_hoc_is_here: L'Ora del Codice è qui - Chiunque può imparare
+  video_title_anybody_can_learn: Chiunque può imparare
   video_title_steph_curry: L'Ora del Codice con Steph Curry
   video_title_draymond_green: Ora del Codice con Draymond Green
   video_title_russell_okung: Ora del Codice con Russell Okung
@@ -1304,7 +1304,7 @@ it-IT:
   minecraft_name: Minecraft
   starwarsblocks_name: Guerre Stellari (Blocchi)
   hoc-encryption_name: Crittografia semplice
-  text-compression_name: Compressione del Testo
+  text-compression_name: Compressione del testo
   math_category_name: Matematica
   hoc_category_name: L'Ora del Codice
   csf_category_name: Corsi base
@@ -1503,7 +1503,7 @@ it-IT:
     di Guerre Stellari, in una galassia lontana lontana...
   playlab_shortdescription: Crea una storia o inventa un gioco col Laboratorio!
   infinity_shortdescription: Usa il Laboratorio per creare una storia o inventare
-    un gioco con i personaggi di Disney Infinity come protagonisti!
+    un gioco con i personaggi di Disney Infinity.
   artist_shortdescription: Disegna fantastiche immagini e decorazioni con l'artista!
   monsterocding_shortdescription: Una colorata avventura dir programmazione autoguidata  per
     i bambini.
@@ -2217,7 +2217,7 @@ it-IT:
   hoc_overview_partner_activities_body: Nel sito dell'Ora del Codice puoi trovare
     più di 100 esercitazioni per tutte le età e livelli di esperienza, sviluppate
     da Code.org e partner.
-  hoc_overview_partner_activities_link: Visualizza le attività
+  hoc_overview_partner_activities_link: Visualizza tutte le attività
   hoc_overview_start_tutorial: Inizia
   hoc_overview_view_teacher_guide: Visualizza la guida per l'insegnante
   hoc2018_creativity: creatività
@@ -2237,7 +2237,7 @@ it-IT:
     di Code.org</a>
   hoc2018_homepage: Iscrivi la tua classe per provare una delle oltre 150 NUOVE attività
     dell'Ora del Codice (3-9 dicembre)!
-  hoc2018_mc_page_title: I corsi di Minecraft per l'Ora del Codice
+  hoc2018_mc_page_title: Le esercitazioni di Minecraft per l'Ora del Codice
   hoc2018_mc_details: Molte lingue | Browser e tablet moderni | Da 7 anni in su
   hoc2018_mc_aquatic_announcement: 'Iscrivi la tua classe per provare una delle oltre
     150 NUOVE attività dell''Ora del Codice (3-9 dicembre). Prova soprattutto la nostra
@@ -2250,23 +2250,29 @@ it-IT:
   hoc2018_mc_hero_description: Minecraft è tornato per l'Ora del Codice con una nuovissima
     attività! Viaggia attraverso Minecraft grazie al coding.
   hoc2018_mc_designer_title: Programma il tuo Minecraft
-  hoc2018_mc_designer_description: Programma il comportamento degli animali e delle
-    altre creature di Minecraft nella tua versione di questo gioco.
+  hoc2018_mc_designer_description: Programma animali e altre creature di Minecraft
+    nella tua versione di questo gioco.
   hoc2018_mc_adventurer_title: Un'avventura con Minecraft
   hoc2018_mc_adventurer_description: Usa il codice per far vivere un'avventura ad
     Alex o Steve.
   hoc2018_mc_start: Inizia
   hoc2018_mc_no_internet: Non hai Internet?
   hoc2018_mc_download_adventurer: Scarica la versione da usare <i>in locale</i> di
-    "Un avventura con Minecraft".
-  hoc2018_mc_educators: Per Insegnanti
+    "Un'avventura con Minecraft".
+  hoc2018_mc_educators: Per gli insegnanti
   hoc2018_mc_educators_box1_title: Programma con Minicraft
+  hoc2018_mc_educators_box1_desc: Su Minecraft Education Edition si trovano curriculum
+    standard, formazione e programmazione in Minecraft.
   hoc2018_mc_educators_box1_button: Inizia
-  hoc2018_mc_educators_box2_title: Scarica la Guida del Formatore
+  hoc2018_mc_educators_box2_title: Scarica la Guida per l'insegnante
   hoc2018_mc_educators_box2_desc: Questi strumenti ti aiuteranno ad organizzare un'Ora
     del Codice per coinvolgere i tuoi studenti sui temi dell'informatica.
   hoc2018_mc_educators_box2_button: Scarica
+  hoc2018_mc_educators_box3_title: Partecipa ad un seminario gratuito per studenti
+    (solo in USA)
   hoc2018_mc_educators_box4_title: Accedi ad ulteriori risorse di informatica
+  hoc2018_mc_educators_box4_desc: Contribuisci a migliorare la tua comunità diffondendo
+    competenze digitali e risorse di formazione in informatica con Microsoft.
   hoc2018_mc_educators_box4_button: Esplora le risorse disponibili
   hoc2018_mc_watch_videos: Prima di iniziare, guarda uno di questi video stimolanti
   hoc2018_mc_videos_more: Ulteriori<a href='%{inspiring_videos_playlist}'> video stimolanti</a>
@@ -2282,12 +2288,12 @@ it-IT:
   hoc2018_mc_video_title_sports: Forza! Chiunque può imparare...
   hoc2018_mc_video_title_cs_is_everything: L'informatica sta cambiando ogni cosa
   hoc2018_mc_video_title_inspire_girl: Convinci una ragazza a partecipare
-  hoc2018_mc_video_title_cs_intro: Introduzione all'Informatica
-  hoc2018_mc_video_title_schools_dont_teach: Cosa NON Insegnano nella maggior parte
-    delle Scuole
+  hoc2018_mc_video_title_cs_intro: Introduzione all'informatica
+  hoc2018_mc_video_title_schools_dont_teach: Cosa NON insegnano nella maggior parte
+    delle scuole
   hoc2018_mc_video_title_obama: Il Presidente Obama a proposito dell'informatica
-  hoc2018_mc_video_title_hoc_is_here: L'Ora del Codice è Qui - Chiunque Può Imparare
-  hoc2018_mc_video_title_anybody_can_learn: Chiunque Può Imparare
+  hoc2018_mc_video_title_hoc_is_here: L'Ora del Codice è qui - Chiunque può imparare
+  hoc2018_mc_video_title_anybody_can_learn: Chiunque può imparare
   hoc2018_mc_video_title_my_name_is_aracely: Mi chiamo Aracely
   hoc2018_mc_homepage_hoc_coming: L'Ora del Codice è in arrivo...
   hoc2018_mc_homepage_what_create: Tu cosa creerai?
@@ -2306,10 +2312,11 @@ it-IT:
   hoc2018_mc_short_description: Usa la tua creatività e le competenze di problem solving
     per trovare il tesoro ed esplorare i mondi sottomarini grazie alla potenza della
     programmazione.
-  hoc2018_mc_short_description_shorter: Usa la tua creatività e le competenze di problem
-    solving per esplorare e costruire mondi sottomarini con la programmazione.
+  hoc2018_mc_short_description_shorter: Usa la tua creatività e la tua abilità a risolvere
+    i problemi per esplorare e costruire mondi sottomarini con la programmazione.
   hoc2018_mc_journey: Viaggio attraverso Minecraft con la programmazione.
   hoc2018_dance_party_main_heading: Ballando col codice
+  hoc2018_dance_party_subheading: Aiuta a tradurre Ballando col codice
   hoc2018_dance_create_your_own_dance_title: Crea il tuo progetto in "Ballando col
     codice"
   hoc2018_dance_party_box_title: Ballando col codice
@@ -2324,7 +2331,7 @@ it-IT:
   hoc2018_dance_keep_on_dancing_button: Inizia la seconda parte
   hoc2018_dance_teacher_resources_title: Risorse per l'insegnante
   hoc2018_dance_teacher_resources_tile1_description: Programmi di lezione, certificati
-    e filtering della musica.
+    e scelta della musica.
   hoc2018_dance_teacher_resources_tile1_button: Piano di lavoro della lezione
   hoc2018_dance_teacher_resources_tile2_title: Ballando col Codice Unplugged (lezione
     tradizionale)
@@ -2337,10 +2344,18 @@ it-IT:
   hoc2018_dance_view_creativity_video_playlist: Cos'è la creatività? Visualizza la
     serie completa (5 min)
   hoc2018_dance_amazon_sponsor_section_with_logo_title: In collaborazione con
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer* è un programma completo di orientamento al lavoro per ispirare, educare
+    e addestrare bambini e ragazzi di famiglie a basso reddito e di altre categorie
+    svantaggiate affinché intraprendano una carriera in informatica. <a href='%{amazon_future_engineer_link}'
+    target='_blank'>Maggiori informazioni</a>
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Ulteriori informazioni
     su Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_button: Ulteriori informazioni
   hoc2018_dance_amazon_scholarship_programs_button: Applica ora
+  hoc2018_dance_amazon_future_engineer_footer: "* Gli artisti che hanno permesso di
+    usare la loro musica in questo tutorial non stanno sponsorizzando o sostenendo
+    Amazon come parte della licenza d'uso della loro musica su Code.org.\n\n"
   hoc2018_dance_measure: Battuta
   hoc2018_dance_measure_colon: 'Battuta:'
   hoc2018_aquatic_video1: Minecraft Viaggio Acquatico - Introduzione
