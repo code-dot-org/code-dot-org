@@ -1,5 +1,6 @@
 /**
- * @file Modal containing privacy text for the 19-20 teacher application
+ * @file Modal containing privacy text for the 19-20 teacher application and
+ *       principal approval.
  */
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -9,7 +10,8 @@ import color from '@cdo/apps/util/color';
 export default class PrivacyDialog extends React.Component {
   static propTypes = {
     show: PropTypes.bool,
-    onHide: PropTypes.func.isRequired
+    onHide: PropTypes.func.isRequired,
+    principalApproval: PropTypes.bool
   };
 
   render() {
@@ -47,14 +49,16 @@ export default class PrivacyDialog extends React.Component {
             </a>
             .
           </p>
-          <p style={STYLE.bodyText}>
-            Teachers may be required to get principal approval for their
-            application to the Professional Learning Program. As part of this
-            process principals may opt in to let the College Board share
-            de-identified and aggregated Computer Science AP scores with
-            Code.org to help us improve the program and curriculum. AP test
-            scores will not be shared with Regional Partners.
-          </p>
+          {!this.props.principalApproval && (
+            <p style={STYLE.bodyText}>
+              Teachers may be required to get principal approval for their
+              application to the Professional Learning Program. As part of this
+              process principals may opt in to let the College Board share
+              de-identified and aggregated Computer Science AP scores with
+              Code.org to help us improve the program and curriculum. AP test
+              scores will not be shared with Regional Partners.
+            </p>
+          )}
         </Modal.Body>
         <Modal.Footer>
           <Button bsStyle="primary" onClick={this.props.onHide}>
