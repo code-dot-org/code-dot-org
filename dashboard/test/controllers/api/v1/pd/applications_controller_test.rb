@@ -593,8 +593,8 @@ module Api::V1::Pd
       assert_response :success
 
       assert_equal(
-        expected_applications.map {|application| application[:id]}.sort,
-        JSON.parse(@response.body).map {|application| application['id']}.sort
+        expected_applications.map {|application| application[:status]}.sort,
+        JSON.parse(@response.body).map {|application| application['status']}.sort
       )
     end
 
@@ -614,8 +614,8 @@ module Api::V1::Pd
       assert_response :success
 
       assert_equal(
-        expected_applications.map {|application| application[:id]}.sort,
-        JSON.parse(@response.body).map {|application| application['id']}.sort
+        expected_applications.map {|application| application[:status]}.sort,
+        JSON.parse(@response.body).map {|application| application['status']}.sort
       )
     end
 
