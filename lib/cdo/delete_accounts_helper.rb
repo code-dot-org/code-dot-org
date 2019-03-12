@@ -312,11 +312,16 @@ class DeleteAccountsHelper
     # NOTE: Do not gate any deletion logic on `user.user_type`: A student
     # account may be a former teacher account, or vice-versa.
     @log.puts "Soft-deleting user"
+
+    # Cache user email here before destroying user; migrated users have their
+    # emails stored in primary_contact_info, which will be destroyed.
+    user_email = user.email
+
     user.destroy
 
     purge_teacher_feedbacks(user.id)
-    remove_census_submissions(user.email) if user.email&.present?
-    remove_email_preferences(user.email) if user.email&.present?
+    remove_census_submissions(user_email) if user_email&.present?
+    remove_email_preferences(user_email) if user_email&.present?
     anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
@@ -324,7 +329,7 @@ class DeleteAccountsHelper
     clean_and_destroy_pd_content(user.id)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
-    remove_poste_data(user.email) if user.email&.present?
+    remove_poste_data(user_email) if user_email&.present?
     remove_from_pardot_by_user_id(user.id)
     purge_unshared_studio_person(user)
     anonymize_user(user)
@@ -338,13 +343,16 @@ class DeleteAccountsHelper
   # @param [String] raw_email an email address.
   def purge_all_accounts_with_email(raw_email)
     email = raw_email.to_s.strip.downcase
+    hashed_email = User.hash_email(email)
 
-    # Note: Not yet taking into account parent_email or users with multiple
-    # email addresses tied to their account - we'll have to do that later.
-    (
-      User.with_deleted.where(email: email) +
-      User.with_deleted.where(hashed_email: User.hash_email(email))
-    ).each {|u| purge_user u}
+    # Note: Not yet taking into account parent_email; we'll have to do that
+    # later.
+    migrated_user_ids = AuthenticationOption.with_deleted.where(hashed_email: hashed_email).map(&:user_id)
+    migrated_users = User.with_deleted.where(id: migrated_user_ids)
+
+    unmigrated_users = User.with_deleted.where(hashed_email: User.hash_email(email))
+
+    migrated_users.or(unmigrated_users).each {|u| purge_user u}
 
     remove_from_pardot_by_email(email)
     clean_pegasus_forms_for_email(email)

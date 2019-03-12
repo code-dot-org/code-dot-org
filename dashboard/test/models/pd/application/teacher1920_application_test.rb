@@ -581,7 +581,7 @@ module Pd::Application
         previous_yearlong_cdo_pd: ['CS Principles'],
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
-        taught_in_past: [options[:taught_in_past].last],
+        taught_in_past: [options[:taught_in_past].first],
         committed: options[:committed].first,
         willing_to_travel: options[:willing_to_travel].first,
         race: options[:race].first(2),
@@ -643,7 +643,7 @@ module Pd::Application
         csp_how_offer: options[:csp_how_offer].last,
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
-        taught_in_past: [options[:taught_in_past].last],
+        taught_in_past: [options[:taught_in_past].first],
         committed: options[:committed].first,
         willing_to_travel: options[:willing_to_travel].first,
         race: options[:race].first(2),
@@ -748,7 +748,7 @@ module Pd::Application
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
-        taught_in_past: [options[:taught_in_past].first],
+        taught_in_past: [options[:taught_in_past].fourth],
         committed: options[:committed].last,
         willing_to_travel: options[:willing_to_travel].last,
         race: [options[:race].first],
@@ -809,7 +809,7 @@ module Pd::Application
         csp_how_offer: options[:csp_how_offer].first,
         plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
-        taught_in_past: [options[:taught_in_past].first],
+        taught_in_past: [options[:taught_in_past].fourth],
         committed: options[:committed].last,
         willing_to_travel: options[:willing_to_travel].last,
         race: [options[:race].first],
@@ -993,16 +993,13 @@ module Pd::Application
       application = create :pd_teacher1920_application
       assert_nil application.scholarship_status
 
-      assert_creates(Pd::ScholarshipInfo) do
-        application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
-      end
+      application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
       assert_equal Pd::ScholarshipInfoConstants::NO, application.scholarship_status
 
       refute application.update_scholarship_status 'invalid status'
+      assert_equal Pd::ScholarshipInfoConstants::NO, application.scholarship_status
 
-      refute_creates(Pd::ScholarshipInfo) do
-        application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
-      end
+      application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
       assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, application.scholarship_status
     end
 
