@@ -25,6 +25,7 @@ import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
 import {actions} from './redux/applab';
 import {getStore} from '../redux';
+import $ from 'jquery';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
@@ -1589,12 +1590,30 @@ function filterUrl(urlToCheck) {
 }
 
 applabCommands.openUrl = function(opts) {
-  apiValidateType(opts, 'openUrl', 'url', opts.url, 'string');
-  const url = new URL(opts.url);
-  if (url.hostname === 'studio.code.org' || url.hostname === 'code.org') {
-    window.open(opts.url);
-  } else {
-    filterUrl(opts.url);
+  if (apiValidateType(opts, 'openUrl', 'url', opts.url, 'string')) {
+    // Remove protocol from url string if present
+    let hostname = opts.url;
+    let protocols = ['https://', 'http://', 'www.'];
+    protocols.forEach(protocol => {
+      if (hostname.startsWith(protocol)) {
+        hostname = hostname.slice(protocol.length);
+      }
+    });
+
+    // Studio and code.org links are immediately opened, other links are filtered
+    if (
+      hostname.startsWith('studio.code.org') ||
+      hostname.startsWith('code.org')
+    ) {
+      if (opts.url.startsWith('http')) {
+        window.open(opts.url);
+      } else {
+        // If url doesn't have a protocol, add one
+        window.open('http://' + opts.url);
+      }
+    } else {
+      filterUrl(opts.url);
+    }
   }
 };
 
