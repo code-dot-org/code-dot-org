@@ -1098,7 +1098,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test 'clever_classrooms queries clever with user uid for unmigrated user' do
-    teacher = create :teacher, :unmigrated_sso, provider: AuthenticationOption::CLEVER
+    teacher = create :teacher, :unmigrated_sso, :demigrated, provider: AuthenticationOption::CLEVER
     sign_in teacher
 
     expected_uri = "https://api.clever.com/v1.1/teachers/#{teacher.uid}/sections"
