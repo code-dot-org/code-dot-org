@@ -51,7 +51,7 @@ class SmsControllerTest < ActionController::TestCase
 
   test "send to phone fails instead of raising an exception when the phone number is invalid" do
     twilio_messages_mock = stub(:messages)
-    twilio_messages_mock.expects(:create).raises(Twilio::REST::RequestError.new("The 'To' number +12141870331 is not a valid phone number."))
+    twilio_messages_mock.expects(:create).raises(Twilio::REST::RestError.new("The 'To' number +12141870331 is not a valid phone number.", OpenStruct.new(body: {})))
     Twilio::REST::Client.any_instance.stubs(:messages).returns(twilio_messages_mock)
 
     post :send_to_phone, params: {
@@ -64,7 +64,7 @@ class SmsControllerTest < ActionController::TestCase
 
   test "send to phone pretends to succeed instead of raising an exception when the recipient unsubscribed" do
     twilio_messages_mock = stub(:messages)
-    twilio_messages_mock.expects(:create).raises(Twilio::REST::RequestError.new("The message From/To pair violates a blacklist rule."))
+    twilio_messages_mock.expects(:create).raises(Twilio::REST::RestError.new("The message From/To pair violates a blacklist rule.", OpenStruct.new(body: {})))
     Twilio::REST::Client.any_instance.stubs(:messages).returns(twilio_messages_mock)
 
     post :send_to_phone, params: {
@@ -77,10 +77,10 @@ class SmsControllerTest < ActionController::TestCase
 
   test "send to phone raises an exception when twilio returns an error we don't know about" do
     twilio_messages_mock = stub(:messages)
-    twilio_messages_mock.expects(:create).raises(Twilio::REST::RequestError.new("New exception??"))
+    twilio_messages_mock.expects(:create).raises(Twilio::REST::RestError.new("New exception??", OpenStruct.new(body: {})))
     Twilio::REST::Client.any_instance.stubs(:messages).returns(twilio_messages_mock)
 
-    assert_raises(Twilio::REST::RequestError) do
+    assert_raises(Twilio::REST::RestError) do
       post :send_to_phone, params: {
         level_source: create(:level_source).id,
         phone: 'xxxxxx'
