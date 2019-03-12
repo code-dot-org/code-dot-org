@@ -129,6 +129,10 @@ ur:
             '"space"': خلاء
             '"x"': x
             '"y"': وائے
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': بےترتیب
       gamelab_locationDelta:
         options:
           DIR:
