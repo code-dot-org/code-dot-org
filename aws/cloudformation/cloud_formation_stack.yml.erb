@@ -91,7 +91,7 @@ Resources:
           # Instance-bootstrap CloudFormation hook.
           - Effect: Allow
             Action: 'cloudformation:SignalResource'
-            Resource: !Ref AWS::StackId
+            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${AWS::StackName}/*"
           # Forward syslog to CloudWatch Logs via cdo-cloudwatch-logger.
           - Effect: Allow
             Action:
@@ -108,10 +108,10 @@ Resources:
           - Effect: Allow
             Action: 'cloudwatch:PutMetricData'
             Resource: '*'
-          # Frontend-bootstrap lifecycle hooks.
+          # Read EC2 tags to determine Auto Scaling Group in CloudWatch Monitoring Scripts.
           - Effect: Allow
-            Action: 'autoscaling:CompleteLifecycleAction'
-            Resource: !Sub "arn:aws:autoscaling:${AWS::Region}:${AWS::AccountId}:autoScalingGroup:*:autoScalingGroupName/Frontends-${AWS::StackName}"
+            Action: 'ec2:DescribeTags'
+            Resource: '*'
           # Read/Write DCDO and Gatekeeper tables.
           # TODO: Import resources into stack.
           - Effect: Allow
@@ -529,6 +529,14 @@ Resources:
                   # TODO: Import pd_workshop resources into stack.
                   - !Sub "arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:pd_workshop-<%=environment%>"
                   - !Sub "arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:pd_workshop_dead-<%=environment%>"
+              # APIs used by ci:flush_cache task.
+              - Effect: Allow
+                Action:
+                  - 'ec2:DescribeInstances'
+                  - 'cloudfront:ListDistributions'
+                  - 'cloudfront:CreateInvalidation'
+                  - 'cloudfront:GetInvalidation'
+                Resource: '*'
               # Lookup ACM certificate for ELB and CloudFront SSL.
               - Effect: Allow
                 Action:
