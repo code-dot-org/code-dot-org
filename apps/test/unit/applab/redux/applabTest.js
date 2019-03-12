@@ -71,7 +71,7 @@ describe('App Lab redux module', () => {
         expect(store.getState().redirectDisplay).to.be.empty;
       });
 
-      it('does not affect state when no redirects', () => {
+      it('does not affect state when no redirects exist', () => {
         expect(store.getState().redirectDisplay).to.be.empty;
         store.dispatch(actions.dismissRedirectNotice());
         expect(store.getState().redirectDisplay).to.be.empty;

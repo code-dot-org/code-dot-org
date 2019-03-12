@@ -68,7 +68,7 @@ class RedirectDialog extends React.Component {
 
     return (
       <Dialog title={title} isOpen handleClose={this.props.handleClose}>
-        <Body className={'ui-test-redirect-notice'}>
+        <Body>
           {body}
           {footer}
         </Body>
