@@ -4493,9 +4493,11 @@ en:
         Scratch Jr: Scratch Jr
     level_group:
       name:
+        CSD Interactive Animations and Games Post-Project Test: {}
         CSD U1 End of Unit Test: {}
         CSD U1 Test: {}
         CSD Unit 1 Post Project Assessment 2018: {}
+        CSD Web Development Post-Project Test: {}
         CSP Culminating Assessment: {}
         CSP Cumulative Assess A: {}
         CSP Cumulative Assess A_2018: {}
@@ -4830,9 +4832,6 @@ en:
         Question 2: Question 2
         Reflect: Reflect
         Try: Try
-      CSD U1 Test define a computer:
-        Question 1: Question 1
-        Which TWO of the following are the best ways to define a computer? (Choose TWO): Which TWO of the following are the best ways to define a computer? (Choose TWO)
       CSD U2 RGB match:
         "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> ": "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> "
         ? In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
@@ -4957,6 +4956,18 @@ en:
         keyDown(): keyDown()
         keyWentDown(): keyWentDown()
         keyWentUp(): keyWentUp()
+      CSD U3 Test comment:
+        Fall down: Fall down
+        Float up: Float up
+        Give the bubble an outline: Give the bubble an outline
+        Jump up: Jump up
+        Line 11: Line 11
+        Line 14: Line 14
+        Line 17: Line 17
+        Line 19: Line 19
+        Line 5: Line 5
+        Question 6: Question 6
+        Shake back and forth: Shake back and forth
       CSD U3 Variables name match:
         1dimension: 1dimension
         'Debug: Naming Variables': 'Debug: Naming Variables'
@@ -7741,6 +7752,11 @@ en:
         School spirit, because you can always have more school spirit, but the lunch line might already be as short as possible: School spirit, because you can always have more school spirit, but the lunch line might already be as short as possible
         ? Two classes want to improve their school.  One class wants to shorten the amount of time students wait in the lunch line.  Another class wants to increase school spirit.  Which problem is better defined?
         : Two classes want to improve their school.  One class wants to shorten the amount of time students wait in the lunch line.  Another class wants to increase school spirit.  Which problem is better defined?
+      'CSD U2 Test ':
+        Question 5: Question 5
+        What code in the stylesheet could have made the text green?: What code in the stylesheet could have made the text green?
+        right answer: right answer
+        wrong answer: wrong answer
       CSD U2 Test Classes:
         A group of artists is making a website.  When should they use classes?: A group of artists is making a website.  When should they use classes?
         Question 3: Question 3
@@ -7759,43 +7775,26 @@ en:
         It will be confusing and less organized for people to read and write code that mixes everything up together.: It will be confusing and less organized for people to read and write code that mixes everything up together.
         Question 2: Question 2
         Structure is more important than style or content and needs its own language: Structure is more important than style or content and needs its own language
+      CSD U2 Test Copyright:
+        If an image is already on one web page, it's okay to use it on any web page.: If an image is already on one web page, it's okay to use it on any web page.
+        If there is no copyright information for an image, anyone is free to use it on their own sites.: If there is no copyright information for an image, anyone is free to use it on their own sites.
+        If you make a lot of changes to an image, you do not need the permission of the original creator to post it on your site.: If you make a lot of changes to an image, you do not need the permission of the original creator to post it on your site.
+        Image creators can decide both who can use their images and how the images can be used.: Image creators can decide both who can use their images and how the images can be used.
+        Question 7: Question 7
+        Which of the following is true about copyright?: Which of the following is true about copyright?
+        You must always contact the creator for permission to use an image on your site.: You must always contact the creator for permission to use an image on your site.
       CSD U2 Test Debug:
         1 and 2 only: 1 and 2 only
         1 and 3 only: 1 and 3 only
         1 only: 1 only
         1, 2, and 3: 1, 2, and 3
         3 only: 3 only
-        ? A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem? <br\>I.The student forgot to link the stylesheet to the index.html page.\n II. The student did not upload the images used in the index.html page.\n III. The student accidentally misspelled "green" in the stylesheet.
-        : A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem? <br\>I.The student forgot to link the stylesheet to the index.html page.\n II. The student did not upload the images used in the index.html page.\n III. The student accidentally misspelled "green" in the stylesheet.
         ? |-
           A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem? <ol><li>The student forgot to link the stylesheet to the index.html page.</li>
           <li>The student did not upload the images used in the index.html page.</li><li>The student accidentally misspelled "green" in the stylesheet.</li></ol>
         : |-
           A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem? <ol><li>The student forgot to link the stylesheet to the index.html page.</li>
           <li>The student did not upload the images used in the index.html page.</li><li>The student accidentally misspelled "green" in the stylesheet.</li></ol>
-        ? |-
-          A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem? <pre>I. The student forgot to link the stylesheet to the index.html page.
-          II. The student did not upload the images used in the index.html page.
-          III. The student accidentally misspelled "green" in the stylesheet.</pre>
-        : |-
-          A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem? <pre>I. The student forgot to link the stylesheet to the index.html page.
-          II. The student did not upload the images used in the index.html page.
-          III. The student accidentally misspelled "green" in the stylesheet.</pre>
-        ? |-
-          A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem? <quote>I. The student forgot to link the stylesheet to the index.html page.
-          II. The student did not upload the images used in the index.html page.
-          III. The student accidentally misspelled "green" in the stylesheet.</quote>
-        : |-
-          A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem? <quote>I. The student forgot to link the stylesheet to the index.html page.
-          II. The student did not upload the images used in the index.html page.
-          III. The student accidentally misspelled "green" in the stylesheet.</quote>
-        ? A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem? \nI.The student forgot to link the stylesheet to the index.html page.\n II. The student did not upload the images used in the index.html page.\n III. The student accidentally misspelled "green" in the stylesheet.
-        : A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem? \nI.The student forgot to link the stylesheet to the index.html page.\n II. The student did not upload the images used in the index.html page.\n III. The student accidentally misspelled "green" in the stylesheet.
-        I and II only: I and II only
-        I and III only: I and III only
-        I only: I only
-        I, II, and III: I, II, and III
-        III only: III only
         Question 4: Question 4
       CSD U2 Test HTML Usage:
         Adding information about the copyright: Adding information about the copyright
@@ -7806,51 +7805,13 @@ en:
         Separating out headings from paragraphs: Separating out headings from paragraphs
         When making a web page, which two of the following tasks is HTML the most important language for? (Choose TWO): When making a web page, which two of the following tasks is HTML the most important language for? (Choose TWO)
       CSD U2 Test code styles:
-        1 and 3: 1 and 3
-        1, 2, 3, and 4: 1, 2, 3, and 4
-        2 and 3: 2 and 3
-        2 and 4: 2 and 4
-        3 and 4: 3 and 4
         Put the "My Page" text inside the <head> tags.: Put the "My Page" text inside the <head> tags.
         Put the code `style="larger"` inside the h3 tag.: Put the code `style="larger"` inside the h3 tag.
-        Question 5: Question 5
         Question 6: Question 6
         The web developer wants to make the "My Page" text larger.  Which TWO of the following would work? (Choose TWO): The web developer wants to make the "My Page" text larger.  Which TWO of the following would work? (Choose TWO)
         Use &lt;h1&gt; instead of &lt;h3&gt;: Use &lt;h1&gt; instead of &lt;h3&gt;
         Use &lt;h6&gt; instead of &lt;h3&gt;: Use &lt;h6&gt; instead of &lt;h3&gt;
-        Use <h1> instead of <h3>: Use <h1> instead of <h3>
-        Use <h6> instead of <h3>: Use <h6> instead of <h3>
         Use CSS to set the font-size property of the h3 tag: Use CSS to set the font-size property of the h3 tag
-        ? |-
-          What code in the stylesheet could have made the text green?<br><br>
-          1. <pre style="display:inline-block;width:100px">.p {
-            color:green;
-          }</pre>
-          2. <pre style="display:inline-block;width:100px">p {
-            color:green;
-          }</pre>
-          3. <pre style="display:inline-block;width:100px">.special {
-            color:green;
-          }</pre>
-          4. <pre style="display:inline-block;width:100px">special {
-            color:green;
-          }
-          </pre>
-        : |-
-          What code in the stylesheet could have made the text green?<br><br>
-          1. <pre style="display:inline-block;width:100px">.p {
-            color:green;
-          }</pre>
-          2. <pre style="display:inline-block;width:100px">p {
-            color:green;
-          }</pre>
-          3. <pre style="display:inline-block;width:100px">.special {
-            color:green;
-          }</pre>
-          4. <pre style="display:inline-block;width:100px">special {
-            color:green;
-          }
-          </pre>
       CSD U2 Test code stylesheet:
         1 and 3: 1 and 3
         1, 2, 3, and 4: 1, 2, 3, and 4
@@ -7888,68 +7849,6 @@ en:
             color:green;
           }
           </pre>
-        ? |-
-          What code in the stylesheet could have made the text green?<br><br>
-          <pre style="display:inline-block;width:100px">.p {
-            color:green;
-          }</pre>
-          <pre>p {
-            color:green;
-          }</pre>
-          <pre>.special {
-            color:green;
-          }</pre>
-          <pre>special {
-            color:green;
-          }
-          </pre>
-        : |-
-          What code in the stylesheet could have made the text green?<br><br>
-          <pre style="display:inline-block;width:100px">.p {
-            color:green;
-          }</pre>
-          <pre>p {
-            color:green;
-          }</pre>
-          <pre>.special {
-            color:green;
-          }</pre>
-          <pre>special {
-            color:green;
-          }
-          </pre>
-        ? |-
-          What code in the stylesheet could have made the text green?<br><br>
-          <pre>.p {
-            color:green;
-          }</pre>
-          <pre>p {
-            color:green;
-          }</pre>
-          <pre>.special {
-            color:green;
-          }</pre>
-          <pre>special {
-            color:green;
-          }
-          </pre>
-        : |-
-          What code in the stylesheet could have made the text green?<br><br>
-          <pre>.p {
-            color:green;
-          }</pre>
-          <pre>p {
-            color:green;
-          }</pre>
-          <pre>.special {
-            color:green;
-          }</pre>
-          <pre>special {
-            color:green;
-          }
-          </pre>
-        right answer: right answer
-        wrong answer: wrong answer
       CSD U3 - sprites - rect vs sprite diff:
         The x and y value are the center of a rectangle and in the upper left corner of a sprite: The x and y value are the center of a rectangle and in the upper left corner of a sprite
         The x and y value are the center of a sprite and in the upper left corner of a rectangle: The x and y value are the center of a sprite and in the upper left corner of a rectangle
@@ -8046,6 +7945,74 @@ en:
         ? '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'
         : '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'
         When run, where will the sprite <code>mySprite</code> be located?: When run, where will the sprite <code>mySprite</code> be located?
+      CSD U3 Test clean code:
+        ? A team of friends is creating a game together.  They want to make sure that everyone can understand the code that the others write.  Which of the following will make it easier for them to read each other's code? (Choose TWO)
+        : A team of friends is creating a game together.  They want to make sure that everyone can understand the code that the others write.  Which of the following will make it easier for them to read each other's code? (Choose TWO)
+        Declare variables outside of the draw loop, but update them inside the draw loop: Declare variables outside of the draw loop, but update them inside the draw loop
+        Give variables and functions names that make sense: Give variables and functions names that make sense
+        Include descriptive comments in the program: Include descriptive comments in the program
+        Question 1: Question 1
+        Use the counter pattern to increase the score: Use the counter pattern to increase the score
+        Use watchers to keep track of variable and sprite property values: Use watchers to keep track of variable and sprite property values
+      CSD U3 Test debugging:
+        1 and 2: 1 and 2
+        1 and 3: 1 and 3
+        1, 2, and 3: 1, 2, and 3
+        2 and 3: 2 and 3
+        3 only: 3 only
+        ? |-
+          A team is making a platform jumper game.  The background and platforms are working, but the main character won't appear.  What might be the problem?<br />
+          <ol><li>They forgot to call `drawSprites` in the draw loop.</li>
+          <li>The character sprite is drawn behind the background sprite.</li>
+          <li>The character sprite is drawn off the screen.</li></ol>
+        : |-
+          A team is making a platform jumper game.  The background and platforms are working, but the main character won't appear.  What might be the problem?<br />
+          <ol><li>They forgot to call `drawSprites` in the draw loop.</li>
+          <li>The character sprite is drawn behind the background sprite.</li>
+          <li>The character sprite is drawn off the screen.</li></ol>
+        ? |-
+          A team is making a platform jumper game.  The background and platforms are working, but the main character won't appear.  What might be the problem?<br\>
+          <ol><li>They forgot to call `drawSprites` in the draw loop.</li>
+          <li>The character sprite is drawn behind the background sprite.</li>
+          <li>The character sprite is drawn off the screen.</li></ol>
+        : |-
+          A team is making a platform jumper game.  The background and platforms are working, but the main character won't appear.  What might be the problem?<br\>
+          <ol><li>They forgot to call `drawSprites` in the draw loop.</li>
+          <li>The character sprite is drawn behind the background sprite.</li>
+          <li>The character sprite is drawn off the screen.</li></ol>
+        Question 5: Question 5
+      CSD U3 Test functions:
+        Question 2: Question 2
+        They are a good way to store user input to use later in the program.: They are a good way to store user input to use later in the program.
+        They are necessary for any program to run.: They are necessary for any program to run.
+        They keep the code organized and easy to understand.: They keep the code organized and easy to understand.
+        They let you use the same code in different places in the program without having to rewrite it.: They let you use the same code in different places in the program without having to rewrite it.
+        They make the program run faster.: They make the program run faster.
+        Why do programmers like to use functions? (Choose TWO): Why do programmers like to use functions? (Choose TWO)
+      CSD U3 Test functions2:
+        Question 2: Question 2
+        They are a good way to store user input to use later in the program.: They are a good way to store user input to use later in the program.
+        They are necessary for any program to run.: They are necessary for any program to run.
+        They keep the code organized and easy to understand.: They keep the code organized and easy to understand.
+        They let you use the same code in different places in the program without having to rewrite it.: They let you use the same code in different places in the program without having to rewrite it.
+        They make the program run faster.: They make the program run faster.
+        Why do programmers like to use functions? (Choose TWO): Why do programmers like to use functions? (Choose TWO)
+      CSD U3 Test planning:
+        How many lines of code you want to write.: How many lines of code you want to write.
+        How the user will interact with the program.: How the user will interact with the program.
+        Question 4: Question 4
+        The general purpose and design of the program.: The general purpose and design of the program.
+        What kinds of variables and functions you will need to make it work.: What kinds of variables and functions you will need to make it work.
+        What types of media, such as pictures or sounds, you will need.: What types of media, such as pictures or sounds, you will need.
+        Which of the following is NOT best to decide before beginning to write code for a program?: Which of the following is NOT best to decide before beginning to write code for a program?
+      CSD U3 Test variables:
+        '110': '110'
+        '20': '20'
+        '90': '90'
+        None, because the program will have an error.: None, because the program will have an error.
+        Question 3: Question 3
+        There will be two apples in two different positions.: There will be two apples in two different positions.
+        What is the apple's x position at the end of this program?: What is the apple's x position at the end of this program?
       CSD U3 Variables Reassign Predict Multi:
         A 10 will be displayed. Once a variable is full you cannot put another value in it: A 10 will be displayed. Once a variable is full you cannot put another value in it
         A 20 will be displayed. New values replace old values in a variable: A 20 will be displayed. New values replace old values in a variable
@@ -9314,6 +9281,14 @@ en:
         Buttons IDs assigned to event handlers in such a way that hitting either button just makes the turtle move forward: Buttons IDs assigned to event handlers in such a way that hitting either button just makes the turtle move forward
         Buttons won't work because the button IDs are not descriptive enough: Buttons won't work because the button IDs are not descriptive enough
         Trick Question! There actually are no errors.  The program will work as intended.: Trick Question! There actually are no errors.  The program will work as intended.
+      CSd U3 Test functions:
+        Question 2: Question 2
+        They are a good way to store user input to use later in the program.: They are a good way to store user input to use later in the program.
+        They are necessary for any program to run.: They are necessary for any program to run.
+        They keep the code organized and easy to understand.: They keep the code organized and easy to understand.
+        They let you use the same code in different places in the program without having to rewrite it.: They let you use the same code in different places in the program without having to rewrite it.
+        They make the program run faster.: They make the program run faster.
+        Why do programmers like to use functions? (Choose TWO): Why do programmers like to use functions? (Choose TWO)
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
