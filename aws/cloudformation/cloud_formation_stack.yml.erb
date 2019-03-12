@@ -91,7 +91,7 @@ Resources:
           # Instance-bootstrap CloudFormation hook.
           - Effect: Allow
             Action: 'cloudformation:SignalResource'
-            Resource: !Ref AWS::StackId
+            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${AWS::StackName}/*"
           # Forward syslog to CloudWatch Logs via cdo-cloudwatch-logger.
           - Effect: Allow
             Action:
@@ -112,10 +112,6 @@ Resources:
           - Effect: Allow
             Action: 'ec2:DescribeTags'
             Resource: '*'
-          # Frontend-bootstrap lifecycle hooks.
-          - Effect: Allow
-            Action: 'autoscaling:CompleteLifecycleAction'
-            Resource: !Sub "arn:aws:autoscaling:${AWS::Region}:${AWS::AccountId}:autoScalingGroup:*:autoScalingGroupName/Frontends-${AWS::StackName}"
           # Read/Write DCDO and Gatekeeper tables.
           # TODO: Import resources into stack.
           - Effect: Allow
