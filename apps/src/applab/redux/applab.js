@@ -77,14 +77,15 @@ function redirectDisplay(state, action) {
 
   switch (action.type) {
     case ADD_REDIRECT_NOTICE:
+      // Add a redirect notice to our stack of notices
       return [
         {
-          displaying: action.displaying,
           approved: action.approved,
           url: action.url
         }
       ].concat(state);
     case DISMISS_REDIRECT_NOTICE:
+      // Dismiss the top-most redirect on the stack of notices
       if (state.length > 0) {
         return state.slice(1);
       } else {

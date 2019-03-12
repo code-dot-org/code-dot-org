@@ -1591,6 +1591,7 @@ function filterUrl(urlToCheck) {
 
 applabCommands.openUrl = function(opts) {
   if (apiValidateType(opts, 'openUrl', 'url', opts.url, 'string')) {
+    // Studio and code.org links are immediately opened, other links are filtered
     // Remove protocol from url string if present
     let hostname = opts.url;
     let protocols = ['https://', 'http://', 'www.'];
@@ -1599,8 +1600,6 @@ applabCommands.openUrl = function(opts) {
         hostname = hostname.slice(protocol.length);
       }
     });
-
-    // Studio and code.org links are immediately opened, other links are filtered
     if (
       hostname.startsWith('studio.code.org') ||
       hostname.startsWith('code.org')
@@ -1609,7 +1608,7 @@ applabCommands.openUrl = function(opts) {
         window.open(opts.url);
       } else {
         // If url doesn't have a protocol, add one
-        window.open('http://' + opts.url);
+        window.open('https://' + opts.url);
       }
     } else {
       filterUrl(opts.url);
