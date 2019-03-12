@@ -1,4 +1,4 @@
-- if current_user.try(:teacher?)
+- if current_user.try(:teacher?) && (@script_level || @stage_extras)
   - show_panel = (params[:user_id] || params[:section_id] || params[:solution]) && params[:viewAs] != 'Student'
   .teacher-panel{class: show_panel ? '' : 'hidden'}
     .hide-handle
