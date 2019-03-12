@@ -243,7 +243,10 @@ class TopInstructions extends Component {
       RESIZER_HEIGHT;
 
     this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
-    this.props.setInstructionsRenderedHeight(maxNeededHeight);
+    // Force instruction area to resize to show full feedback area
+    if (this.state.tabSelected === TabType.COMMENTS) {
+      this.props.setInstructionsRenderedHeight(maxNeededHeight);
+    }
     return maxNeededHeight;
   };
 
