@@ -128,8 +128,9 @@ Resources:
         innodb_adaptive_flushing_lwm: 40
         # Improve insert/update concurrency for autoincrement tables.
         innodb_autoinc_lock_mode: 2
-        # Reduce durability for better performance.
-        innodb_flush_log_at_trx_commit: 0
+        # Logs are written and flushed to disk at each transaction commit for increased durability.
+        # Enabled on Reporting Database only so that AWS RDS Point In Time Restore can be used.
+        innodb_flush_log_at_trx_commit: 1
         # Neighbor flushing reduces performance without any benefit on SSD.
         innodb_flush_neighbors: 0
         # IO capacity controls background flushing rate (IO/sec).
@@ -163,8 +164,9 @@ Resources:
         slave_compressed_protocol: 1
         # Enable slow query log.
         slow_query_log: 1
-        # Reduce durability for better performance.
-        sync_binlog: 0
+        # Enables synchronization of the binary log to disk before transactions are committed, for increased durability.
+        # Enabled on Reporting Database only so that AWS RDS Point In Time Restore can be used.
+        sync_binlog: 1
         # Fully cache all open tables and table definitions.
         table_definition_cache: 20000
         table_open_cache: 20000
