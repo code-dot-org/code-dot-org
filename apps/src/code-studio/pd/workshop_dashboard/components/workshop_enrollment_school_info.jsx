@@ -153,11 +153,6 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
           <td>{enrollment.email}</td>
           <td>{enrollment.district_name}</td>
           <td>{enrollment.school}</td>
-          {this.props.workshopSubject === LOCAL_SUMMER && (
-            <td>
-              {enrollment.attendances} / {this.props.numSessions}
-            </td>
-          )}
           {this.props.workshopCourse === CSF && (
             <td>{enrollment.role ? enrollment.role : NA}</td>
           )}
@@ -245,9 +240,6 @@ class WorkshopEnrollmentSchoolInfo extends React.Component {
             <th style={styles.th}>Email</th>
             <th style={styles.th}>District</th>
             <th style={styles.th}>School</th>
-            {this.props.workshopSubject === LOCAL_SUMMER && (
-              <th style={styles.th}>Total Attendance</th>
-            )}
             {this.props.workshopCourse === CSF && (
               <th style={styles.th}>Current Role</th>
             )}
