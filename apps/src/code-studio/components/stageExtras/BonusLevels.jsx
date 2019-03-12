@@ -85,7 +85,7 @@ class BonusLevel extends React.Component {
     userId: PropTypes.number
   };
 
-  getSolutionUrl = () => {
+  getQueryString = () => {
     const {id, sectionId, userId} = this.props;
     let url = `?id=${id}`;
     if (sectionId && userId) {
@@ -100,7 +100,7 @@ class BonusLevel extends React.Component {
   renderWithMazeThumbnail() {
     return (
       <div style={styles.bonusLevel}>
-        <a href={this.getSolutionUrl()}>
+        <a href={this.getQueryString()}>
           <CompletableLevelThumbnail
             size={THUMBNAIL_IMAGE_SIZE}
             completed={this.props.perfected}
@@ -116,7 +116,7 @@ class BonusLevel extends React.Component {
   renderSolutionImageThumbnail(src) {
     return (
       <div style={styles.bonusLevel}>
-        <a href={this.getSolutionUrl()}>
+        <a href={this.getQueryString()}>
           <CompletableLevelThumbnail
             size={THUMBNAIL_IMAGE_SIZE}
             completed={this.props.perfected}
@@ -137,7 +137,7 @@ class BonusLevel extends React.Component {
     } else if (this.props.solutionImageUrl) {
       return this.renderSolutionImageThumbnail(this.props.solutionImageUrl);
     } else {
-      return <a href={this.getSolutionUrl()}>{this.props.name}</a>;
+      return <a href={this.getQueryString()}>{this.props.name}</a>;
     }
   }
 }
