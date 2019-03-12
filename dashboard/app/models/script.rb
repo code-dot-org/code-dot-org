@@ -1264,10 +1264,7 @@ class Script < ActiveRecord::Base
       pilot_experiment: pilot_experiment,
     }
 
-    if include_stages
-      summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)}
-    end
-
+    summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
