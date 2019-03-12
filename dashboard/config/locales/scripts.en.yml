@@ -9749,6 +9749,12 @@ en:
               name: Student Survey (Conditionals)
             Teacher Surveys (Conditionals):
               name: Teacher Surveys (Conditionals)
+            Practice PT Part 1:
+              name: Practice PT Part 1
+            Practice PT Part 2:
+              name: Practice PT Part 2
+            Practice PT Part 3:
+              name: Practice PT Part 3
           title: CSP Playground
           description_audience: ''
           description_short: ''
@@ -11599,6 +11605,8 @@ en:
               name: Computers and Problem Solving
             Web Development:
               name: Web Development
+            Interactive Animations and Games:
+              name: Interactive Animations and Games
           title: Post-Project Tests for CSD
           description_audience: ''
           description_short: ''
