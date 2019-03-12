@@ -47,14 +47,15 @@ const styles = {
     margin: '0px 16px 20px 16px'
   },
   keyConceptArea: {
-    marginRight: 28
+    marginRight: 28,
+    flexBasis: '40%'
   },
   keyConcepts: {
     fontSize: 13,
     color: color.charcoal
   },
   rubricArea: {
-    flexBasis: '70%'
+    flexBasis: '60%'
   },
   commentAndFooter: {
     margin: '0px 16px 16px 16px'
