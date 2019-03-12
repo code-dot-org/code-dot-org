@@ -24,7 +24,7 @@
               - passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
               - if @script_level&.bonus
                 - flag_image = passed ? 'flag_active.png' : 'flag_inactive.png'
-                = image_tag flag_image
+                = image_tag flag_image, style: 'width: 60px;'
               - else
                 .level_link{class: status}
                   - if @level.unplugged?
