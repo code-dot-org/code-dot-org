@@ -177,8 +177,7 @@ class Section < ActiveRecord::Base
     return false unless old_follower
 
     old_follower.destroy
-    add_student student
-    true
+    ADD_STUDENT_SUCCESS == add_student student 
   end
 
   # Remove a student from the section.
