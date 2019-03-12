@@ -108,6 +108,10 @@ Resources:
           - Effect: Allow
             Action: 'cloudwatch:PutMetricData'
             Resource: '*'
+          # Read EC2 tags to determine Auto Scaling Group in CloudWatch Monitoring Scripts.
+          - Effect: Allow
+            Action: 'ec2:DescribeTags'
+            Resource: '*'
           # Frontend-bootstrap lifecycle hooks.
           - Effect: Allow
             Action: 'autoscaling:CompleteLifecycleAction'
