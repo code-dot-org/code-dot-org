@@ -7805,6 +7805,151 @@ en:
         Question 1: Question 1
         Separating out headings from paragraphs: Separating out headings from paragraphs
         When making a web page, which two of the following tasks is HTML the most important language for? (Choose TWO): When making a web page, which two of the following tasks is HTML the most important language for? (Choose TWO)
+      CSD U2 Test code styles:
+        1 and 3: 1 and 3
+        1, 2, 3, and 4: 1, 2, 3, and 4
+        2 and 3: 2 and 3
+        2 and 4: 2 and 4
+        3 and 4: 3 and 4
+        Put the "My Page" text inside the <head> tags.: Put the "My Page" text inside the <head> tags.
+        Put the code `style="larger"` inside the h3 tag.: Put the code `style="larger"` inside the h3 tag.
+        Question 5: Question 5
+        Question 6: Question 6
+        The web developer wants to make the "My Page" text larger.  Which TWO of the following would work? (Choose TWO): The web developer wants to make the "My Page" text larger.  Which TWO of the following would work? (Choose TWO)
+        Use &lt;h1&gt; instead of &lt;h3&gt;: Use &lt;h1&gt; instead of &lt;h3&gt;
+        Use &lt;h6&gt; instead of &lt;h3&gt;: Use &lt;h6&gt; instead of &lt;h3&gt;
+        Use <h1> instead of <h3>: Use <h1> instead of <h3>
+        Use <h6> instead of <h3>: Use <h6> instead of <h3>
+        Use CSS to set the font-size property of the h3 tag: Use CSS to set the font-size property of the h3 tag
+        ? |-
+          What code in the stylesheet could have made the text green?<br><br>
+          1. <pre style="display:inline-block;width:100px">.p {
+            color:green;
+          }</pre>
+          2. <pre style="display:inline-block;width:100px">p {
+            color:green;
+          }</pre>
+          3. <pre style="display:inline-block;width:100px">.special {
+            color:green;
+          }</pre>
+          4. <pre style="display:inline-block;width:100px">special {
+            color:green;
+          }
+          </pre>
+        : |-
+          What code in the stylesheet could have made the text green?<br><br>
+          1. <pre style="display:inline-block;width:100px">.p {
+            color:green;
+          }</pre>
+          2. <pre style="display:inline-block;width:100px">p {
+            color:green;
+          }</pre>
+          3. <pre style="display:inline-block;width:100px">.special {
+            color:green;
+          }</pre>
+          4. <pre style="display:inline-block;width:100px">special {
+            color:green;
+          }
+          </pre>
+      CSD U2 Test code stylesheet:
+        1 and 3: 1 and 3
+        1, 2, 3, and 4: 1, 2, 3, and 4
+        2 and 3: 2 and 3
+        2 and 4: 2 and 4
+        3 and 4: 3 and 4
+        Question 5: Question 5
+        ? |-
+          What code in the stylesheet could have made the text green?<br><br>
+          1. <pre style="display:inline-block;width:100px">.p {
+            color:green;
+          }</pre>
+          2. <pre style="display:inline-block;width:100px">p {
+            color:green;
+          }</pre>
+          3. <pre style="display:inline-block;width:100px">.special {
+            color:green;
+          }</pre>
+          4. <pre style="display:inline-block;width:100px">special {
+            color:green;
+          }
+          </pre>
+        : |-
+          What code in the stylesheet could have made the text green?<br><br>
+          1. <pre style="display:inline-block;width:100px">.p {
+            color:green;
+          }</pre>
+          2. <pre style="display:inline-block;width:100px">p {
+            color:green;
+          }</pre>
+          3. <pre style="display:inline-block;width:100px">.special {
+            color:green;
+          }</pre>
+          4. <pre style="display:inline-block;width:100px">special {
+            color:green;
+          }
+          </pre>
+        ? |-
+          What code in the stylesheet could have made the text green?<br><br>
+          <pre style="display:inline-block;width:100px">.p {
+            color:green;
+          }</pre>
+          <pre>p {
+            color:green;
+          }</pre>
+          <pre>.special {
+            color:green;
+          }</pre>
+          <pre>special {
+            color:green;
+          }
+          </pre>
+        : |-
+          What code in the stylesheet could have made the text green?<br><br>
+          <pre style="display:inline-block;width:100px">.p {
+            color:green;
+          }</pre>
+          <pre>p {
+            color:green;
+          }</pre>
+          <pre>.special {
+            color:green;
+          }</pre>
+          <pre>special {
+            color:green;
+          }
+          </pre>
+        ? |-
+          What code in the stylesheet could have made the text green?<br><br>
+          <pre>.p {
+            color:green;
+          }</pre>
+          <pre>p {
+            color:green;
+          }</pre>
+          <pre>.special {
+            color:green;
+          }</pre>
+          <pre>special {
+            color:green;
+          }
+          </pre>
+        : |-
+          What code in the stylesheet could have made the text green?<br><br>
+          <pre>.p {
+            color:green;
+          }</pre>
+          <pre>p {
+            color:green;
+          }</pre>
+          <pre>.special {
+            color:green;
+          }</pre>
+          <pre>special {
+            color:green;
+          }
+          </pre>
+        right answer: right answer
+        wrong answer: wrong answer
       CSD U3 - sprites - rect vs sprite diff:
         The x and y value are the center of a rectangle and in the upper left corner of a sprite: The x and y value are the center of a rectangle and in the upper left corner of a sprite
         The x and y value are the center of a sprite and in the upper left corner of a rectangle: The x and y value are the center of a sprite and in the upper left corner of a rectangle
