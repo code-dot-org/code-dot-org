@@ -47,7 +47,6 @@ const styles = {
     margin: '0px 16px 20px 16px'
   },
   keyConceptArea: {
-    flexGrow: 1,
     marginRight: 28
   },
   keyConcepts: {
@@ -55,7 +54,7 @@ const styles = {
     color: color.charcoal
   },
   rubricArea: {
-    flexGrow: 2
+    flexBasis: '70%'
   },
   commentAndFooter: {
     margin: '0px 16px 16px 16px'
