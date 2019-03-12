@@ -24,6 +24,7 @@ Regional partners who are interested in advocacy can use the following resources
 - [Digging Deeper into AP Computer Science](http://code.org/promote/ap): Graphs and descriptions of AP CS A exam participation over the past decade, broken down by state, gender, and race/ethnicity
 - [State-by-state 9 policies](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml): Data on each state for each of the 9 policy ideas in spreadsheet format
 - [State Policy Landscape](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing): Provides a summary of state accomplishments in computer science policy in narrative format
+- <a href="https://public.tableau.com/profile/liz.gauthier#!/vizhome/9Policies-Public/PublicTracker"target=_blank>9 Policies Tracker:</a> Track the number of policies adopted per state.
 
 ## Policy Development Resources
 - [State Planning Toolkit](https://docs.google.com/document/d/13N843-BjK9JHXNWKFzJlxhpw7f6Y2pJF6tpV2aHM1HU/edit?usp=sharing): A guide for state teams creating strategic plans for implementing K-12 computer science 

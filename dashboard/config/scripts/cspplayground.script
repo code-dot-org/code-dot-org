@@ -90,7 +90,7 @@ level 'U4 L09 Thermostat App v7', progression: 'Declaring and Calling Functions'
 level 'updateScreen Pattern', progression: 'Update Screen Pattern'
 
 stage 'Functions Practice'
-level 'U4 L10 Functions Practice Calling Functions 1'
+level 'U4 L10 Functions Practice Calling Functions 1', progression: 'Call Functions'
 level 'U4 L10 Functions Practice 1', progression: 'Call Functions'
 level 'U4 L10 Functions Practice 2', progression: 'Call Functions'
 level 'U4 L10 Functions Practice 3', progression: 'Call Functions'
