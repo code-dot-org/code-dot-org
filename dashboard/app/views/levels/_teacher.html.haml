@@ -31,7 +31,7 @@
                       Unplugged
                   - elsif passed
                     = check_mark_html
-                  - elseif @script_level
+                  - elsif @script_level
                     %span.puzzle-number= @script_level.position
               - if (@user_level.driver_user_levels.present? || @user_level.navigator_user_levels.present?) && @script_level
                 #worked_with
