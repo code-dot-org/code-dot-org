@@ -74,6 +74,8 @@ class Pd::Enrollment < ActiveRecord::Base
     csf_course_experience
     csf_courses_planned
     csf_has_physical_curriculum_guide
+    previous_courses
+    replace_existing
   )
 
   def self.for_user(user)

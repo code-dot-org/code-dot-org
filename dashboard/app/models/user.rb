@@ -1832,27 +1832,6 @@ class User < ActiveRecord::Base
       end
     end
 
-    # Create peer reviews after submitting a peer_reviewable solution
-    if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable?)
-      learning_module = Level.cache_find(level_id).script_levels.find_by(script_id: script_id).try(:stage).try(:plc_learning_module)
-
-      if learning_module && Plc::EnrollmentModuleAssignment.exists?(user_id: user_id, plc_learning_module: learning_module)
-        PeerReview.create_for_submission(user_level, level_source_id)
-
-        # See if there are created peer reviews, if not, raise to honey badger
-        unless PeerReview.where(
-          submitter_id: user_level.user_id,
-          level: user_level.level,
-          level_source_id: level_source_id
-        ).size >= 2
-          Honeybadger.notify(
-            error_class: "Failed to create peer review objects for submission",
-            error_message: "Failed to create peer reviews for user_level #{user_level.id}"
-          )
-        end
-      end
-    end
-
     if new_level_completed && script_id
       User.track_script_progress(user_id, script_id)
     end

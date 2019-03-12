@@ -156,7 +156,7 @@ en:
     student_consent: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
     agree_us_website: "I agree to using a website based in the United States."
     my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
-    student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: "We need some additional information to continue signing you up."
     user_type_button: "Update Account Type"
