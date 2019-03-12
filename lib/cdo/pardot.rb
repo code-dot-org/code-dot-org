@@ -271,11 +271,8 @@ class Pardot
     end
 
     # The custom Pardot db_Opt_In field has type "Dropdown" with permitted values "Yes" or "No".
-    # Explicitly check for the source opt_in field to be true or false, because nil is 'falsey'
-    # and it's a little misleading to set a value for db_Opt_In in Pardot when there's no information either
-    # way from the user in our database.
-    dest[:db_Opt_In] = 'Yes' if src[:opt_in] == true
-    dest[:db_Opt_In] = 'No' if src[:opt_in] == false
+    # Set db_Opt_in to 'No' when there is no source entry, matching the process used by Marketing team.
+    dest[:db_Opt_In] = src[:opt_in] == true ? 'Yes' : 'No'
 
     # If this contact has a dashboard user ID (which means it is a teacher
     # account), mark that in a Pardot field so we can segment on that.
@@ -451,9 +448,15 @@ class Pardot
   # @return [Nokogiri::XML] XML response from Pardot
   def self.post_request_with_auth(url)
     request_pardot_api_key if $pardot_api_key.nil?
-    # add the API key and user key parameters to the URL
-    auth_url = append_auth_params_to_url(url)
-    post_request(auth_url, {})
+
+    # add the API key and user key parameters to body of the POST request
+    post_request(
+      url,
+      {
+        api_key: $pardot_api_key,
+        user_key: CDO.pardot_user_key
+      }
+    )
   end
 
   # Make an API request. This method may raise exceptions.
@@ -485,14 +488,6 @@ class Pardot
     raise "Pardot response did not include status" if status.nil?
 
     doc
-  end
-
-  # Append standard Pardot auth parameters (per-session API key and fixed user
-  # key) to a Pardot API request
-  # @param url [String] URL to post to
-  # @return [String] URL with auth parameters appended
-  def self.append_auth_params_to_url(url)
-    "#{url}&api_key=#{$pardot_api_key}&user_key=#{CDO.pardot_user_key}"
   end
 
   # Parse a Pardot XML response and raise an exception on the first error

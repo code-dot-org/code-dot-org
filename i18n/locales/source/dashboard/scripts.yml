@@ -9741,6 +9741,14 @@ en:
               name: Functions Practice
             Functions Make:
               name: Functions Make
+            Student Survey (Variables):
+              name: Student Survey (Variables)
+            Teacher Surveys (Variables):
+              name: Teacher Surveys (Variables)
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
           title: CSP Playground
           description_audience: ''
           description_short: ''
@@ -9903,6 +9911,8 @@ en:
               name: Crowdsourcing
             Digital Sharing:
               name: Digital Sharing
+            Running Simulations:
+              name: Running Simulations
         dance-low:
           stages:
             Dance Party:
@@ -10737,7 +10747,7 @@ en:
           description_short: ''
           description: ''
         csd2-2019:
-          title: CSD Unit 2 - Web Development ('18-'19)
+          title: CSD Unit 2 - Web Development ('19-'20)
           description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
           description_short: "  Learn to build your own web site in Web Lab."
           description_audience: ''
@@ -10799,7 +10809,7 @@ en:
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
         csd3-2019:
-          title: CSD Unit 3 - Animations and Games ('18-'19)
+          title: CSD Unit 3 - Animations and Games ('19-'20)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description_audience: ''
@@ -10902,7 +10912,7 @@ en:
               description_student: ''
               description_teacher: ''
         csd4-2019:
-          title: CSD Unit 4 - The Design Process ('18-'19)
+          title: CSD Unit 4 - The Design Process ('19-'20)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
           description_short: "  Learn how to design a program that meets the needs of your users."
           description_audience: ''
@@ -10972,7 +10982,7 @@ en:
               description_student: Each team prepares a presentation to "pitch" the app they've developed. This is the time to share struggles, triumphs, and plans for the future.
               description_teacher: At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.
         csd5-2019:
-          title: CSD Unit 5 - Data and Society ('18-'19)
+          title: CSD Unit 5 - Data and Society ('19-'20)
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
           description_short: Learn how people use computers to solve data problems.
           description_audience: ''
@@ -11038,7 +11048,7 @@ en:
               description_student: To conclude this unit the class designs ways to use data to make a recommendations or predictions to help solve a problem.  In the first several steps the class brainstorms problems, performs simple research, and defines a problem of their choosing. They then decide what kind of data they want to collect, how it could be collected, and how it could be used, before exchanging feedback and giving a final presentation.
               description_teacher: To conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm.  Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
         csd6-2019:
-          title: CSD Unit 6 - Physical Computing ('18-'19)
+          title: CSD Unit 6 - Physical Computing ('19-'20)
           description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
           description_short: Learn to program with physical devices.
           description_audience: ''
@@ -11127,6 +11137,18 @@ en:
               name: 'Teacher Surveys: HIDE'
             Teacher Surveys:
               name: Teacher Surveys
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
           title: 'Unit 4: Variables, Conditionals, Functions'
           description_audience: ''
           description_short: ''
