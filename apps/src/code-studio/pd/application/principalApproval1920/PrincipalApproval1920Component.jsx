@@ -201,27 +201,6 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           {this.singleCheckboxFor('understandFee')}
           {this.radioButtonsFor('payFee')}
         </div>
-        {this.checkBoxesWithAdditionalTextFieldsFor(
-          'howHeard',
-          {
-            [TextFields.otherWithText]: 'other'
-          },
-          {
-            label: (
-              <span style={styles.questionText}>
-                How did you hear about Code.org’s Professional Learning program?
-                (To see a list of local Regional Partners,{' '}
-                <a
-                  href="https://code.org/educate/professional-learning/about-partners"
-                  target="_blank"
-                >
-                  visit this page
-                </a>
-                .)
-              </span>
-            )
-          }
-        )}
         {this.props.teacherApplication.course ===
           'Computer Science Principles' && (
           <div>
