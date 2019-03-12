@@ -6,6 +6,9 @@
 require 'chef/user'
 require 'chef/client'
 
+chef_gem "aws-sdk-ec2"
+require 'aws-sdk-ec2'
+
 apt_package 'awscli' # AWS command-line tools
 apt_package 'emacs'
 apt_package 'zsh'
@@ -15,6 +18,7 @@ apt_package 'zsh'
 #
 node['cdo-users'].each_pair do |user_name, user_data|
   home_directory = user_data['home'] || "/home/#{user_name}"
+  aws_config = user_data['cdo-awscli'] || node['cdo-awscli']
 
   # Create the user's account.
   user user_name do
@@ -87,10 +91,38 @@ node['cdo-users'].each_pair do |user_name, user_data|
     end
   end
 
+  # ssh-able hosts should include both those servers managed as Chef nodes and
+  # those servers that exist only as EC2 instances. In case of a naming
+  # conflict, we allow Chef to win.
+  hosts = {}
+  unless aws_config.nil?
+    Aws::EC2::Client.new(
+      region: aws_config['region'] || "us-east-1",
+      credentials: Aws::Credentials.new(
+        aws_config['access_key_id'],
+        aws_config['access_key_secret']
+      )
+    ).describe_instances.reservations.map(&:instances).flatten.each do |instance|
+      next unless instance.private_dns_name
+
+      name = instance.tags.find {|tag| tag.key == "Name"}
+      next unless name && name.value
+
+      # SSH requires that hostnames consist of zero or more non-whitespace
+      # characters, with optional wildcards:
+      # http://man.openbsd.org/OpenBSD-current/man5/ssh_config.5#PATTERNS
+      next unless name.value.match =~ /^\S*$/
+
+      hosts[name.value] = instance.private_dns_name
+    end
+  end
+  search(:node, "*:*").each do |node|
+    hosts[node.name] = node['cloud'] ? node['cloud']['local_hostname'] : node['fqdn'] || 'fqdn_missing'
+  end
   template File.join(ssh_directory, 'config') do
     #action :create_if_missing
     source 'ssh_config.erb'
-    variables(hosts: search(:node, "*:*"))
+    variables(hosts: hosts)
     owner user_name
     group user_name
     mode '0600'
@@ -102,23 +134,21 @@ node['cdo-users'].each_pair do |user_name, user_data|
   #
   #
 
-  aws_config = user_data['cdo-awscli'] || node['cdo-awscli']
+  unless aws_config.nil?
+    aws_directory = File.join(home_directory, '.aws')
+    directory aws_directory do
+      owner user_name
+      group user_name
+      mode '0711'
+    end
 
-  aws_directory = File.join(home_directory, '.aws')
-  directory aws_directory do
-    not_if aws_config.nil?
-    owner user_name
-    group user_name
-    mode '0711'
-  end
-
-  template File.join(aws_directory, 'config') do
-    not_if aws_config.nil?
-    source 'aws_config.erb'
-    variables(config: aws_config)
-    owner user_name
-    group user_name
-    mode '0600'
+    template File.join(aws_directory, 'config') do
+      source 'aws_config.erb'
+      variables(config: aws_config)
+      owner user_name
+      group user_name
+      mode '0600'
+    end
   end
 
   #
