@@ -1,5 +1,9 @@
 class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
-  attributes :id, :first_name, :last_name, :email, :district_name, :school, :role, :grades_teaching, :attended_csf_intro_workshop, :csf_course_experience, :csf_courses_planned, :csf_has_physical_curriculum_guide, :user_id, :attended, :pre_workshop_survey
+  attributes :id, :first_name, :last_name, :email, :district_name, :school, :role,
+    :grades_teaching, :attended_csf_intro_workshop, :csf_course_experience,
+    :csf_courses_planned, :csf_has_physical_curriculum_guide, :user_id, :attended,
+    :pre_workshop_survey, :previous_courses, :replace_existing, :attendances,
+    :scholarship_status
 
   def user_id
     user = object.resolve_user
@@ -24,5 +28,9 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
         {unitLessonShortName: survey.unit_lesson_short_name}
       )
     end
+  end
+
+  def attendances
+    object.attendances.count
   end
 end
