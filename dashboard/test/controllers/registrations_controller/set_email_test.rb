@@ -87,8 +87,7 @@ module RegistrationsControllerTests
     # via oauth (a third-party account), or students with a picture password.
 
     test "editing email of unmigrated student-without-password is not allowed" do
-      unmigrated_student_without_password = create :student
-      unmigrated_student_without_password.demigrate_from_multi_auth
+      unmigrated_student_without_password = create :student, :demigrated
       unmigrated_student_without_password.update_attribute(:encrypted_password, '')
       assert unmigrated_student_without_password.encrypted_password.blank?
 
@@ -115,8 +114,7 @@ module RegistrationsControllerTests
     end
 
     test "editing email of demigrated teacher-without-password is not allowed" do
-      unmigrated_teacher_without_password = create :teacher
-      unmigrated_teacher_without_password.demigrate_from_multi_auth
+      unmigrated_teacher_without_password = create :teacher, :demigrated
       unmigrated_teacher_without_password.update_attribute(:encrypted_password, '')
       assert unmigrated_teacher_without_password.encrypted_password.blank?
 
@@ -143,8 +141,7 @@ module RegistrationsControllerTests
     end
 
     test "editing hashed_email of unmigrated student-without-password is not allowed" do
-      unmigrated_student_without_password = create :student
-      unmigrated_student_without_password.demigrate_from_multi_auth
+      unmigrated_student_without_password = create :student, :demigrated
       unmigrated_student_without_password.update_attribute(:encrypted_password, '')
       assert unmigrated_student_without_password.encrypted_password.blank?
 

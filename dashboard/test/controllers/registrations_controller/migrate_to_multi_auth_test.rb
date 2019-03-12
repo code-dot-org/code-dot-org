@@ -8,8 +8,7 @@ class MigrateToMultiAuthTest < ActionDispatch::IntegrationTest
   end
 
   test "migrate_to_multi_auth migrates an unmigrated user" do
-    teacher = create :teacher
-    teacher.demigrate_from_multi_auth
+    teacher = create :teacher, :demigrated
     refute teacher.migrated?
 
     sign_in teacher
