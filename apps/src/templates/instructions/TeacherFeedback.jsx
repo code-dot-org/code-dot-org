@@ -13,7 +13,6 @@ import {CommentArea} from './CommentArea';
 
 const styles = {
   button: {
-    margin: 10,
     fontWeight: 'bold'
   },
   errorIcon: {
@@ -21,8 +20,8 @@ const styles = {
     margin: 10
   },
   time: {
-    height: 24,
-    paddingTop: 6,
+    height: 18,
+    paddingTop: 3,
     fontStyle: 'italic',
     fontSize: 12,
     color: color.cyan,
@@ -35,8 +34,9 @@ const styles = {
   h1: {
     color: color.charcoal,
     marginTop: 8,
-    marginBottom: 12,
-    fontSize: 24,
+    marginBottom: 8,
+    fontSize: 18,
+    lineHeight: '18px',
     fontFamily: '"Gotham 5r", sans-serif',
     fontWeight: 'normal'
   },
@@ -44,21 +44,24 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    margin: '0px 16px 20px 16px'
+    margin: '0px 16px 16px 16px'
   },
   keyConceptArea: {
     marginRight: 28,
     flexBasis: '40%'
   },
   keyConcepts: {
-    fontSize: 13,
+    fontSize: 12,
     color: color.charcoal
   },
   rubricArea: {
     flexBasis: '60%'
   },
   commentAndFooter: {
-    margin: '0px 16px 16px 16px'
+    margin: '0px 16px 8px 16px'
+  },
+  form: {
+    margin: 0
   }
 };
 
@@ -262,7 +265,7 @@ class TeacherFeedback extends Component {
             </div>
             <div style={styles.rubricArea}>
               <h1 style={styles.h1}> {i18n.rubricHeader()} </h1>
-              <form>
+              <form style={styles.form}>
                 {rubricLevels.map(level => (
                   <RubricField
                     key={level}
