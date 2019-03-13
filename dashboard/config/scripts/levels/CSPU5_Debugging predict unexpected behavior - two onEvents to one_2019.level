@@ -57,7 +57,7 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
