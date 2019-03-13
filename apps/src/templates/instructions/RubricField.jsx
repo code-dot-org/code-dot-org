@@ -25,7 +25,6 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    height: 24,
     margin: '0px 8px',
     padding: 4,
     ':hover': {
@@ -37,10 +36,10 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
+    margin: '0px 8px',
+    padding: 4,
     backgroundColor: color.lightest_cyan,
     borderRadius: 4,
-    padding: 4,
-    margin: '0px 8px',
     ':hover': {
       border: `solid 1px ${color.light_cyan}`,
       borderRadius: 4
@@ -50,6 +49,12 @@ const styles = {
     maxWidth: 200,
     lineHeight: '20px',
     whiteSpace: 'normal'
+  },
+  rubricDetails: {
+    paddingLeft: 23,
+    paddingTop: 5,
+    fontSize: 12,
+    margin: 0
   }
 };
 
@@ -97,7 +102,7 @@ class RubricField extends Component {
             <summary style={styles.rubricHeader}>
               {rubricLevelHeaders[this.props.rubricLevel]}
             </summary>
-            <p>{this.props.rubricValue}</p>
+            <p style={styles.rubricDetails}>{this.props.rubricValue}</p>
           </details>
         </div>
         <ReactTooltip
