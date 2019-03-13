@@ -333,10 +333,12 @@
 
         Dette programmet bruker musikkens bass (de lave lydene) til å kontrollere danserens høyde. Kan du få den andre danseren til å tilsvare musikken også?
       CourseD_Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> blokken lar deg bruke en kode når “pil opp tasten” blir trykket på.\n\nDu kan endre danserens bevegelse, endre en dansers egenskaper, eller gjør en rask bevegelse kun en gang. Vær kreativ og se ut etter nye blokker!"
+      CourseD_Dance_Party_11_5: "Sjekk ut denne blokken:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"AND\"</title>\n<title name=\"LAYOUT\">\"sirkel\"</title>\n</block></xml>\n  \nNå kan du lage mange dansere samtidig!\n\nPrøv å bruke en av “alle ender” blokkene for å skrive en kode som får alle endene til å danse sammen."
       CourseD_Dance_Party_11b: |-
         Det er på tide med en dansekonkurranse! Katten dabber når du trykker på “venstre pil tasten”. Få roboten til å “falle” en gang når du trykker på “pil høyre tasten”, og “klappe høyt” en gang når du trykker på “pil opp tasten”.
 
         **Bruk tastene til å få roboten til å gjøre fall-klapp-fall-klapp så fort som du kan!**
+      CourseD_Dance_Party_12: Ta på deg danseskoene! Lag din egen dans og del den med vennene dine.
       CourseE_HOC 2018 Level_10: "Det er en ** blekksprut **! [] (https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) gjemt et sted i dette havet-monumentet, finner du det?\n\n"
       CourseE_HOC 2018 Level_11: Bygge en vegg av ** prismarine **! [] (https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) rundt den svarte betongen. Dette vil aktivere den ** stolpen **! [] (https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) og fullføre din utfordring!
       CourseE_HOC 2018 Level_7a: "Fant du undervannsruinene. Søk sandsteinen for en ** kiste **! [] (https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) som inneholder ** prismarine **! [] (https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) skatt.\n\n"
@@ -392,11 +394,14 @@
         </block></xml>
 
         Dette programmet bruker musikkens bass (de lave lydene) til å kontrollere danserens høyde. Kan du få den andre danseren til å tilsvare musikken også?
+      Dance_Party_11.5_test: "Sjekk ut denne blokken:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"AND\"</title>\n<title name=\"LAYOUT\">\"sirkel\"</title>\n</block></xml>\n  \nNå kan du lage mange dansere samtidig!\n\nPrøv å bruke en av “alle ender” blokkene for å skrive en kode som får alle endene til å danse sammen."
       Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> blokken lar deg bruke en kode når “pil opp tasten” blir trykket på.\n\nDu kan endre danserens bevegelse, endre en dansers egenskaper, eller gjør en rask bevegelse kun en gang. Vær kreativ og se ut etter nye blokker!"
+      Dance_Party_11_5: "Sjekk ut denne blokken:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"AND\"</title>\n<title name=\"LAYOUT\">\"sirkel\"</title>\n</block></xml>\n  \nNå kan du lage mange dansere samtidig!\n\nPrøv å bruke en av “alle ender” blokkene for å skrive en kode som får alle endene til å danse sammen."
       Dance_Party_11b: |-
         Det er på tide med en dansekonkurranse! Katten dabber når du trykker på “venstre pil tasten”. Få roboten til å “falle” en gang når du trykker på “pil høyre tasten”, og “klappe høyt” en gang når du trykker på “pil opp tasten”.
 
         **Bruk tastene til å få roboten til å gjøre fall-klapp-fall-klapp så fort som du kan!**
+      Dance_Party_12: Ta på deg danseskoene! Lag din egen dans og del den med vennene dine.
       Dance_Party_3: "*Nå svinger det!* \n\nLegg til enda en <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> blokk i arbeidsområdet ditt. Få danseren til å starte en ny bevegelse etter 6 taker."
       Dance_Party_extras_battle: |-
         # Dansegrupper
@@ -463,6 +468,9 @@
 
         Lag en bakgrunnsdanser kalt `backup_dancer1` for å danse sammen med katten.
       HOC Dance 9_draft: "<xml><block type=\"Dancelab_whenKey\"></block></xml> blokken lar deg bruke en kode når “pil opp tasten” blir trykket på.\n\nDu kan endre danserens bevegelse, endre en dansers egenskaper, eller gjør en rask bevegelse kun en gang. Vær kreativ og se ut etter nye blokker!"
+      HOC Dance Freeplay: Ta på deg danseskoene! Lag din egen dans og del den med vennene dine.
+      HOC Dance Freeplay_draft: Ta på deg danseskoene! Lag din egen dans og del den med vennene dine.
+      HOC Dance Predraw: Ta på deg danseskoene! Lag din egen dans og del den med vennene dine.
       K-1 Bee Loops 2: Bruk en løkke til å bevege deg og så hente nektaren og lage honning!
       K-1 Bee Loops 3: Bruk løkker til å hente nektar og lage honning!
       K-1 Bee Loops 4: Bruk løkker til å hente nektar, lage honning og til å bevege deg!

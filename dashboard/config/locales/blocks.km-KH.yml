@@ -222,6 +222,10 @@ km:
             '"space"': លំហ​អាកាស
             '"x"': x
             '"y"': y
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': ព្រាវ
       gamelab_locationDelta:
         options:
           DIR:
