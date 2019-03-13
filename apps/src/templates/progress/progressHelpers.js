@@ -89,6 +89,10 @@ export function getIconForLevel(level) {
     return 'scissors';
   }
 
+  if (level.bonus) {
+    return 'flag-checkered';
+  }
+
   // default to desktop
   return 'desktop';
 }
