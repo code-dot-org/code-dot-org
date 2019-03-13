@@ -330,6 +330,13 @@ ro:
             '"s"': s
             '"w"': w
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': rețea
+            '"row"': rând
+            '"column"': coloană
+            '"random"': aleator
       gamelab_locationConstant:
         options:
           DIR:

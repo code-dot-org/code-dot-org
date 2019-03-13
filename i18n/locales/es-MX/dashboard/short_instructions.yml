@@ -1435,6 +1435,7 @@ es-MX:
       courseA_collector_preLoops5: "Consigue una de estas dos gemas para resolver este\nacertijo."
       courseA_collector_preLoops6: "Consigue las dos piezas del tesoro para resolver\neste acertijo."
       courseA_collector_preLoops7: Obten las tres pilas para pasar este nivel.
+      courseA_data widget: "Presiona Ejecutar.\nEl mago hará que aparezcan animales. \n\nCuéntalos. \n¿Que puedes notar?"
       courseA_forVideoTest_artist: Usa el loop 'repetir' para agregar olas al agua.
       courseA_harvester_forVideo: '¿Puedes recoger todo el maíz utilizando únicamente ** un ** bloque ´mover´?'
       courseA_harvester_loops1: '¡Ayuda a la cosechadora recoger el maíz!'
@@ -1494,6 +1495,8 @@ es-MX:
       courseA_maze_ramp3_2018: Hay un bloque extra que causará que el pájaro se estrelle. Elimínalo arrastrándolo de vuelta a la caja d eherramientas.
       courseA_maze_ramp3a_2018: Agrega un bloque "Norte" en la parte inferior de los otros bloques para terminar este código, luego haz clic en "Ejecutar".
       courseA_maze_ramp3a_2019: Agrega un bloque "Norte" en la parte inferior de los otros bloques para terminar este código, luego haz clic en "Ejecutar".
+      courseA_maze_ramp3b_2018: Agrega un bloque 'Norte' en la parte de abajo de otros bloques para finalizar este código, luego haz clic en "Ejecutar".
+      courseA_maze_ramp3b_2019: Agrega un bloque 'Norte' en la parte de abajo de otros bloques para finalizar este código, luego haz clic en "Ejecutar".
       courseA_maze_ramp4_2018: '¡Evita el TNT o volarán las plumas!'
       courseA_maze_ramp4a_2018: '¿Puedes descubrir qué bloque necesitas agregar al final de los otros bloques para terminar este código?'
       courseA_maze_ramp4a_2019: '¿Puedes descubrir qué bloque necesitas agregar al final de los otros bloques para terminar este código?'
@@ -1562,6 +1565,8 @@ es-MX:
       courseA_playLab_events6_2018: "Haz que esto sea más interesante cambiando \nel fondo y reproduciendo un sonido aleatorio cuando se hace clic en Jorge."
       courseA_playLab_events6_2019: "Haz que esto sea más interesante cambiando \nel fondo y reproduciendo un sonido aleatorio cuando se hace clic en Jorge."
       courseA_playLab_events7: Agrega todo lo que quieras a este juego. ¿Puedes hacer desaparecer al dinosaurio cuando Jorge se encuentra con él?
+      courseA_playLab_events7_2018: "*Juego Libre:* Agrega lo que quieras a este juego."
+      courseA_playLab_events7_2019: "*Juego Libre:* Agrega lo que quieras a este juego."
       courseA_playlab_events_challenge1: '¿Puedes escribir código para mostrar al resto de mis amigos? Los consejos te ayudarán a hacer este proyecto paso a paso.'
       courseA_playlab_events_challenge1_2018: '¿Puedes escribir código para mostrar al resto de mis amigos? Los consejos te ayudarán a hacer este proyecto paso a paso.'
       courseA_playlab_events_challenge1_2019: '¿Puedes escribir código para mostrar al resto de mis amigos? Los consejos te ayudarán a hacer este proyecto paso a paso.'
@@ -1581,8 +1586,8 @@ es-MX:
       courseB_Scrat_ramp3a_2019: Agrega un bloque "Norte" en la parte inferior de los otros bloques para terminar este código, luego haz clic en "Ejecutar".
       courseB_Scrat_ramp4a_2018: '¿Puedes descubrir qué bloque necesitas agregar al final de los otros bloques para terminar este código?'
       courseB_Scrat_ramp4a_2019: '¿Puedes descubrir qué bloque necesitas agregar al final de los otros bloques para terminar este código?'
-      courseB_Scrat_ramp5a_2018: '¡Lleva al pájaro hasta el cerdo!'
-      courseB_Scrat_ramp5a_2019: '¡Lleva al pájaro hasta el cerdo!'
+      courseB_Scrat_ramp5a_2018: '¡Intenta con este tu mismo!'
+      courseB_Scrat_ramp5a_2019: '¡Intenta con este tu mismo!'
       courseB_artist_loops1: Este es un nuevo tipo de desafío llamado "Artista". Juega con el nivel y dibuja algo divertido.
       courseB_artist_loops10: "Usa lo que has aprendido para dibujar \nlo que crees que el artista vio cuando llegó a casa."
       courseB_artist_loops10_2018: "Usa lo que has aprendido para dibujar \nlo que crees que el artista vio cuando llegó a casa."
@@ -1704,8 +1709,10 @@ es-MX:
       courseB_maze_seq2: '*"¡Un bug! Arregla el código para llevarme hasta el cerdo."*'
       courseB_maze_seq2_2018: '¡Un error! Arregla el código para llevar a Scrat a la bellota!'
       courseB_maze_seq3: '"¡Arregla el código para llevarme al cerdo!"'
+      courseB_maze_seq4: Agrega 2 bloques para llevar al pájaro hasta el cerdo.
       courseB_maze_seq4_2018: Usa bloques de movimiento **2** para llevar a Scrat a la bellota.
       courseB_maze_seq4_2019: Usa bloques de movimiento **2** para llevar a Scrat a la bellota.
+      courseB_maze_seq5: '¡Ahora intenta con este desafío desde el comienzo!'
       courseB_maze_seq5_2018: '¡Este rompecabezas es un poco complicado!'
       courseB_maze_seq5_2019: '¡Este rompecabezas es un poco complicado!'
       courseB_maze_seq6: '¡Muéveme en una dirección, luego en otra para llevarme el cerdo!'
@@ -1853,6 +1860,7 @@ es-MX:
         Agrega bloques al evento "cuando se ejecuta" para cambiar el fondo y la velocidad de Waddles el Pingüino.
 
         Juega y mueve a Waddles con las flechas hasta que anotes.
+      courseC_PlayLab_eventsA_embed_2019: Juguemos un juego. ¡Anota 5 puntos moviendo el Pingüino hacia el Pulpo!
       courseC_PlayLab_eventsFP: Crea tu propia historia. Cuando termines, haz clic en "Terminar" para compartir con tus amigos. Mira ideas de historias en las pistas.
       courseC_PlayLab_eventsFP_2018: Crea tu propia historia. Cuando termines, haz clic en "Terminar" para compartir con tus amigos. Mira ideas de historias en las pistas.
       courseC_PlayLab_eventsFP_2019: Crea tu propia historia. Cuando termines, haz clic en "Terminar" para compartir con tus amigos. Mira ideas de historias en las pistas.
@@ -1988,6 +1996,8 @@ es-MX:
       courseC_collector_prog_challenge2: Recolecta por lo menos **10** piezas del tesoro para finalizar este desafío!
       courseC_collector_prog_challenge2_2018: Recolecta por lo menos **10** piezas del tesoro para finalizar este desafío!
       courseC_collector_prog_challenge2_2019: Recolecta por lo menos **10** piezas del tesoro para finalizar este desafío!
+      courseC_data widget: "Presiona Ejecutar.\nEl mago hará que aparezcan animales. \n\nCuéntalos. \n¿Que puedes notar?"
+      courseC_data wizard: "Presiona Ejecutar.\nEl mago hará que aparezcan animales. \n\nCuéntalos. \n¿Que puedes notar?"
       courseC_flappy_embed_events: Este es un ejemplo de un juego que vas a crear tú mismo! Juega a través de él una o dos veces para tener una idea de lo que estás a punto de hacer.
       courseC_flappy_events1: Agrega el bloque "cantidad normal de aleteo" al evento "cuando hagas clic" y, a continuación, pulsa "Ejecutar". Haz clic o toca en el espacio de juego para mover a Flappy al objetivo.
       courseC_flappy_events10: 'Crea tu propio juego de "Flatty! '
@@ -3284,6 +3294,8 @@ es-MX:
       courseF_bee_fwp6_2018: Construye una solución breve y dulce para este rompecabezas.
       courseF_bee_fwp7: "**Desafío:** Modifica tu fnción para que también haga miel."
       courseF_bee_fwp7_2018: "**Desafío:** Modifica tu fnción para que también haga miel."
+      courseF_bee_fwp8: Usa tu nueva función para resolver este espiral.
+      courseF_bee_fwp8_2018: Usa tu nueva función para resolver este espiral.
       courseF_bee_fwp9: Usa tu nueva función para resolver este desafío.
       courseF_bee_fwp9_predict1: Usa tu nueva función para resolver este desafío.
       courseF_bee_fwp9_predict1_2018: Usa tu nueva función para resolver este desafío.
@@ -3422,6 +3434,8 @@ es-MX:
       grade1_artist_loopsFP: "Usa lo que has aprendido para dibujar \nlo que crees que el artista vio cuando llegó a casa."
       grade1_maze_sequence1: '¡Cambie el código para traerme al cerdo!'
       grade1_maze_sequence2: '¡Cambie el código para traerme al cerdo!'
+      grade1_maze_sequence3: Agrega 2 bloques para llevar al pájaro hasta el cerdo.
+      grade1_maze_sequence4: '¡Ahora intenta con este desafío desde el comienzo!'
       grade1_maze_sequence5: '¡Muéveme en una dirección, luego en otra para llevarme el cerdo!'
       grade1_maze_sequence6: '¡Averigua qué falta y entonces agrega bloques para llevarme al cerdo!'
       grade1_maze_sequence7: '¡Tu turno! ¿Qué necesitas hacer para llevar al pájaro hasta el cerdo?'

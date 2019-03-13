@@ -196,56 +196,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   # Tests over full behavior
   #
 
-  test 'can purge migrated students' do
-    student_a = create :student, deleted_at: 1.day.ago
-    student_b = create :student, deleted_at: 3.days.ago
-    student_c = create :student, deleted_at: 3.days.ago
-    student_d = create :student, deleted_at: 5.days.ago
-
-    student_a.migrate_to_multi_auth
-    student_b.migrate_to_multi_auth
-    student_c.migrate_to_multi_auth
-    student_d.migrate_to_multi_auth
-
-    edap = ExpiredDeletedAccountPurger.new \
-      deleted_after: 4.days.ago,
-      deleted_before: 2.days.ago
-
-    Cdo::Metrics.expects(:push).with(
-      'DeletedAccountPurger',
-      includes_metrics(
-        AccountsPurged: 2,
-        AccountsQueued: 0,
-        ManualReviewQueueDepth: is_a(Integer)
-      )
-    )
-
-    edap.purge_expired_deleted_accounts!
-
-    purged = User.with_deleted.where.not(purged_at: nil)
-    refute_includes purged, student_a
-    assert_includes purged, student_b
-    assert_includes purged, student_c
-    refute_includes purged, student_d
-
-    assert_equal <<~LOG, edap.log.string
-      Starting purge_expired_deleted_accounts!
-      deleted_after: #{4.days.ago}
-      deleted_before: #{2.days.ago}
-      max_teachers_to_purge: #{edap.max_teachers_to_purge}
-      max_accounts_to_purge: #{edap.max_accounts_to_purge}
-      Purging user_id #{student_b.id}
-      Done purging user_id #{student_b.id}
-      Purging user_id #{student_c.id}
-      Done purging user_id #{student_c.id}
-      AccountsPurged: 2
-      AccountsQueued: 0
-      ManualReviewQueueDepth: #{QueuedAccountPurge.count}
-      Purged 2 account(s).
-      🕐 00:00:00
-    LOG
-  end
-
   test 'with two eligible and two ineligible accounts' do
     student_a = create :student, deleted_at: 1.day.ago
     student_b = create :student, deleted_at: 3.days.ago

@@ -67,13 +67,23 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged 'User is already purged'
   end
 
+  # It shouldn't be possible under the current system to create multiple
+  # accounts with the same email, but as of March 2019 we do have some users in
+  # our database that share emails.
   test 'purges all accounts associated with email' do
     email = 'fakeuser@example.com'
-    account1 = create :student, email: email
+    account1 = create :student
+    account2 = create :teacher
+    account3 = create :student
+
+    [account1, account2, account3].each do |account|
+      account.primary_contact_info.email = email
+      account.primary_contact_info.hashed_email = User.hash_email(email)
+      account.primary_contact_info.save!(validate: false)
+    end
+
     account1.destroy
-    account2 = create :teacher, email: email
     account2.destroy
-    account3 = create :student, email: email
 
     [account1, account2, account3].each(&:reload)
     refute_nil account1.deleted_at
@@ -156,17 +166,19 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil user.secret_words
   end
 
-  test 'clears provider uid but not provider type' do
+  test 'clears primary_contact_info but not provider type' do
     user = create :student,
       provider: 'clever',
       uid: 'fake-clever-uid'
-    assert_equal 'clever', user.provider
-    refute_nil user.uid
+    assert_equal 'migrated', user.provider
+    refute_nil user.primary_contact_info
+    assert_equal 'fake-clever-uid', user.primary_contact_info.authentication_id
 
     purge_user user
 
-    assert_equal 'clever', user.provider
+    assert_equal 'migrated', user.provider
     assert_nil user.uid
+    assert_nil user.primary_contact_info
   end
 
   test 'clears school information' do
@@ -508,10 +520,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     user.primary_contact_info = other_user.primary_contact_info
     user.save!(validate: false)
 
-    assert_empty user.authentication_options,
-      'Expected user to have no authentication options'
+    assert_equal 1, user.authentication_options.length,
+      'Expected user to have exactly one authentication option'
     refute_nil user.primary_contact_info,
       'Expected user to have primary_contact_info'
+    refute_equal user.primary_contact_info, user.authentication_options.first,
+      "Expected user's primary contact info to not be an authentication option"
 
     purge_user user
 
@@ -530,8 +544,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "removes all of user's authentication option rows" do
     user = create :user,
       :with_clever_authentication_option,
-      :with_google_authentication_option,
-      :with_email_authentication_option
+      :with_google_authentication_option
     ids = user.authentication_options.map(&:id)
 
     assert_equal 3, user.authentication_options.with_deleted.count,
@@ -548,7 +561,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "even removes soft-deleted authentication option rows" do
-    user = create :user, :with_email_authentication_option
+    user = create :user
     ids = user.authentication_options.map(&:id)
     user.authentication_options.first.destroy
 

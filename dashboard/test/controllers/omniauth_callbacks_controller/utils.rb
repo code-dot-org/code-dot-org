@@ -95,13 +95,18 @@ module OmniauthCallbacksControllerTests
     end
 
     def assert_credentials(from_auth_hash, on_created_user)
-      assert_equal from_auth_hash.provider, on_created_user.provider
-      assert_equal from_auth_hash.uid, on_created_user.uid
+      created_auth = on_created_user.primary_contact_info
+      refute_nil created_auth
+
+      assert_equal from_auth_hash.provider, created_auth.credential_type
+      assert_equal from_auth_hash.uid, created_auth.authentication_id
+
       if from_auth_hash.credentials
-        assert_equal from_auth_hash.credentials.token, on_created_user.oauth_token
-        assert_equal from_auth_hash.credentials.expires_at, on_created_user.oauth_token_expiration
+        refute_nil created_auth.data_hash
+        assert_equal from_auth_hash.credentials.token, created_auth.data_hash[:oauth_token]
+        assert_equal from_auth_hash.credentials.expires_at, created_auth.data_hash[:oauth_token_expiration]
         unless from_auth_hash.credentials.refresh_token.nil?
-          assert_equal from_auth_hash.credentials.refresh_token, on_created_user.oauth_refresh_token
+          assert_equal from_auth_hash.credentials.refresh_token, created_auth.data_hash[:oauth_refresh_token]
         end
       end
     end
@@ -112,7 +117,7 @@ module OmniauthCallbacksControllerTests
       # For some providers (e.g. Clever) we expect _not_ to save email at all.
       if expected_email.nil?
         assert_empty user.email
-        assert_nil user.hashed_email
+        assert_empty user.hashed_email
       else
         assert_equal User.hash_email(expected_email), user.hashed_email
       end
