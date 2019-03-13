@@ -119,10 +119,11 @@ class TopInstructions extends Component {
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
-    viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     readOnlyWorkspace: PropTypes.bool,
-    serverLevelId: PropTypes.number,
-    user: PropTypes.number
+    user: PropTypes.number,
+    //Provided by Redux
+    viewAs: PropTypes.oneOf(Object.keys(ViewType)),
+    serverLevelId: PropTypes.number
   };
 
   constructor(props) {
@@ -137,9 +138,11 @@ class TopInstructions extends Component {
       tabSelected: teacherViewingStudentWork
         ? TabType.COMMENTS
         : TabType.INSTRUCTIONS,
-      feedbacks: [],
+      latestFeedback: [],
       rubric: null,
-      displayFeedbackTeacherFacing: teacherViewingStudentWork
+      displayFeedbackTeacherFacing: teacherViewingStudentWork,
+      comment: '',
+      performance: null
     };
   }
 
@@ -155,17 +158,19 @@ class TopInstructions extends Component {
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
 
+    const {user, serverLevelId} = this.props;
+
     if (this.props.viewAs === ViewType.Student) {
       $.ajax({
-        url:
-          '/api/v1/teacher_feedbacks/get_feedbacks?student_id=' +
-          this.props.user +
-          '&level_id=' +
-          this.props.serverLevelId,
+        url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${user}&level_id=${serverLevelId}`,
         method: 'GET',
         contentType: 'application/json;charset=UTF-8'
       }).done(data => {
-        this.setState({feedbacks: data});
+        this.setState({
+          latestFeedback: data,
+          comment: data[0].comment,
+          performance: data[0].performance
+        });
       });
     }
     //While this is behind an experiment flag we will only pull the rubric
@@ -266,6 +271,18 @@ class TopInstructions extends Component {
     }
   };
 
+  handleCommentChange = value => {
+    this.setState({comment: value});
+  };
+
+  handleRubricChange = value => {
+    this.setState({performance: value});
+  };
+
+  handleLatestFeedbackChange = value => {
+    this.setState({latestFeedback: value});
+  };
+
   /**
    * Handle a click on the Documentation PaneButton.
    */
@@ -312,8 +329,8 @@ class TopInstructions extends Component {
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
     const displayFeedbackStudent =
       this.props.viewAs === ViewType.Student &&
-      this.state.feedbacks.length > 0 &&
-      (this.state.feedbacks[0].comment || this.state.feedbacks[0].performance);
+      this.state.latestFeedback.length > 0 &&
+      (this.state.comment || this.state.performance);
     const displayFeedbackTeacher =
       this.props.viewAs === ViewType.Teacher && this.state.rubric;
     const displayFeedback = displayFeedbackStudent || displayFeedbackTeacher;
@@ -413,6 +430,12 @@ class TopInstructions extends Component {
                 }
                 rubric={this.state.rubric}
                 ref="commentTab"
+                comment={this.state.comment}
+                performance={this.state.performance}
+                latestFeedback={this.state.latestFeedback}
+                onCommentChange={this.handleCommentChange}
+                onRubricChange={this.handleRubricChange}
+                onLatestFeedbackChange={this.handleLatestFeedbackChange}
               />
             )}
           </div>

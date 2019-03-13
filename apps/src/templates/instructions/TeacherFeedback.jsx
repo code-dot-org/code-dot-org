@@ -79,6 +79,12 @@ class TeacherFeedback extends Component {
       approaches: PropTypes.string,
       noEvidence: PropTypes.string
     }),
+    comment: PropTypes.string,
+    performance: PropTypes.string,
+    latestFeedback: PropTypes.array,
+    onRubricChange: PropTypes.func,
+    onCommentChange: PropTypes.func,
+    onLatestFeedbackChange: PropTypes.func,
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']),
     serverLevelId: PropTypes.number,
@@ -93,10 +99,7 @@ class TeacherFeedback extends Component {
     this.onRubricChange = this.onRubricChange.bind(this);
 
     this.state = {
-      comment: '',
-      performance: null,
       studentId: studentId,
-      latestFeedback: [],
       submitting: false,
       errorState: ErrorType.NoError,
       token: null
@@ -104,7 +107,7 @@ class TeacherFeedback extends Component {
   }
 
   componentDidMount = () => {
-    const {user, serverLevelId, teacher} = this.props;
+    const {serverLevelId, teacher} = this.props;
     const {studentId} = this.state;
 
     window.addEventListener('beforeunload', event => {
@@ -114,19 +117,16 @@ class TeacherFeedback extends Component {
       }
     });
 
-    if (this.props.viewAs === ViewType.Student) {
-      $.ajax({
-        url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${user}&level_id=${serverLevelId}`,
-        method: 'GET',
-        contentType: 'application/json;charset=UTF-8'
-      }).done(data => {
-        this.setState({
-          latestFeedback: data,
-          comment: data[0].comment,
-          performance: data[0].performance
-        });
-      });
-    } else if (!this.props.disabledMode) {
+    /*
+     * Only feedback from teacher if:
+     * 1) In edit mode for teacher
+     * 2) We are loading the feedback tab for the first time since page load
+     */
+    if (
+      !this.props.disabledMode &&
+      this.props.comment === '' &&
+      this.props.performance === null
+    ) {
       $.ajax({
         url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${studentId}&level_id=${serverLevelId}&teacher_id=${teacher}`,
         method: 'GET',
@@ -134,11 +134,17 @@ class TeacherFeedback extends Component {
       })
         .done((data, textStatus, request) => {
           this.setState({
-            latestFeedback: request.status === 204 ? [] : [data],
-            token: request.getResponseHeader('csrf-token'),
-            comment: request.status === 204 ? '' : data.comment,
-            performance: request.status === 204 ? null : data.performance
+            token: request.getResponseHeader('csrf-token')
           });
+          this.props.onCommentChange(
+            request.status === 204 ? '' : data.comment
+          );
+          this.props.onLatestFeedbackChange(
+            request.status === 204 ? [] : [data]
+          );
+          this.props.onRubricChange(
+            request.status === 204 ? null : data.performance
+          );
         })
         .fail((jqXhr, status) => {
           this.setState({errorState: ErrorType.Load});
@@ -147,27 +153,29 @@ class TeacherFeedback extends Component {
   };
 
   onCommentChange = value => {
-    this.setState({comment: value});
+    this.props.onCommentChange(value);
   };
 
   onRubricChange = value => {
     //If you click on the currently selected performance level clear the performance level
-    if (value === this.state.performance) {
-      this.setState({performance: null});
+    if (value === this.props.performance) {
+      this.props.onRubricChange(null);
     } else {
-      this.setState({performance: value});
+      this.props.onRubricChange(value);
     }
   };
 
   onSubmitFeedback = () => {
     this.setState({submitting: true});
     const payload = {
-      comment: this.state.comment,
+      comment: this.props.comment,
       student_id: this.state.studentId,
       level_id: this.props.serverLevelId,
       teacher_id: this.props.teacher,
-      performance: this.state.performance
+      performance: this.props.performance
     };
+
+    console.log(payload);
 
     $.ajax({
       url: '/api/v1/teacher_feedbacks',
@@ -179,10 +187,10 @@ class TeacherFeedback extends Component {
     })
       .done(data => {
         this.setState({
-          latestFeedback: [data],
           submitting: false,
           errorState: ErrorType.NoError
         });
+        this.props.onLatestFeedbackChange([data]);
       })
       .fail((jqXhr, status) => {
         this.setState({
@@ -194,8 +202,8 @@ class TeacherFeedback extends Component {
 
   latestFeedback = () => {
     const latestFeedback =
-      this.state.latestFeedback.length > 0
-        ? this.state.latestFeedback[0]
+      this.props.latestFeedback.length > 0
+        ? this.props.latestFeedback[0]
         : null;
 
     return latestFeedback;
@@ -205,10 +213,10 @@ class TeacherFeedback extends Component {
     const latestFeedback = this.latestFeedback();
     const feedbackUnchanged =
       (latestFeedback &&
-        (this.state.comment === latestFeedback.comment &&
-          this.state.performance === latestFeedback.performance)) ||
+        (this.props.comment === latestFeedback.comment &&
+          this.props.performance === latestFeedback.performance)) ||
       (!latestFeedback &&
-        (this.state.comment.length === 0 && this.state.performance === null));
+        (this.props.comment.length === 0 && this.props.performance === null));
 
     return feedbackUnchanged;
   };
@@ -230,10 +238,10 @@ class TeacherFeedback extends Component {
       ? latestFeedback.comment
       : i18n.feedbackPlaceholder();
     const dontShowStudentComment =
-      !this.state.comment && this.props.viewAs === ViewType.Student;
+      !this.props.comment && this.props.viewAs === ViewType.Student;
 
     const dontShowStudentRubric =
-      !this.state.performance && this.props.viewAs === ViewType.Student;
+      !this.props.performance && this.props.viewAs === ViewType.Student;
 
     const rubricLevels = ['exceeds', 'meets', 'approaches', 'noEvidence'];
 
@@ -245,7 +253,7 @@ class TeacherFeedback extends Component {
             {i18n.feedbackLoadError()}
           </span>
         )}
-        {this.state.latestFeedback.length > 0 && (
+        {this.props.latestFeedback.length > 0 && (
           <div style={styles.time} id="ui-test-feedback-time">
             {i18n.lastUpdated({
               time: moment
@@ -271,7 +279,7 @@ class TeacherFeedback extends Component {
                     rubricValue={this.props.rubric[level]}
                     disabledMode={this.props.disabledMode}
                     onChange={this.onRubricChange}
-                    currentlyChecked={this.state.performance === level}
+                    currentlyChecked={this.props.performance === level}
                   />
                 ))}
               </form>
@@ -282,11 +290,11 @@ class TeacherFeedback extends Component {
           <div style={styles.commentAndFooter}>
             <CommentArea
               disabledMode={this.props.disabledMode}
-              comment={this.state.comment}
+              comment={this.props.comment}
               placeholderText={placeholderText}
               studentHasFeedback={
                 this.props.viewAs === ViewType.Student &&
-                this.state.latestFeedback.length > 0
+                this.props.latestFeedback.length > 0
               }
               onCommentChange={this.onCommentChange}
             />
