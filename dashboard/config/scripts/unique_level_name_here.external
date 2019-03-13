@@ -1,0 +1,10 @@
+name 'unique level name here'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+## my title
+
+#### my sub heading
+
+my content.
+MARKDOWN
