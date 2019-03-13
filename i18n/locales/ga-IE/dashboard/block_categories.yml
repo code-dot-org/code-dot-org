@@ -23,20 +23,20 @@ ga:
       Picker: Roghnóir
       Comment: Nóta
       'Variables ': 'Athróga '
+      Default: Réamhshocrú
+      Behaviors: Iompar
+      Locations: Áiteanna
       everythingelse: gachrudeile
       World: Domhan
       Sprites: Sprideanna
       Location: Áit
-      Behaviors: Iompar
       numbers: uimhreacha
       Numbers: Uimhreacha
       Input: Ionchur
-      Default: Réamhshocrú
       Dancers: Damhsóirí
       Groups: Grúpaí
       Advanced: Ardroghanna
       Start: Tosaigh
-      Locations: Áiteanna
       Music: Ceol
       Dancing: Damhsa
       Sprite: Sprid

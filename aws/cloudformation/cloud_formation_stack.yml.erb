@@ -91,7 +91,7 @@ Resources:
           # Instance-bootstrap CloudFormation hook.
           - Effect: Allow
             Action: 'cloudformation:SignalResource'
-            Resource: !Ref AWS::StackId
+            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${AWS::StackName}/*"
           # Forward syslog to CloudWatch Logs via cdo-cloudwatch-logger.
           - Effect: Allow
             Action:
@@ -108,10 +108,10 @@ Resources:
           - Effect: Allow
             Action: 'cloudwatch:PutMetricData'
             Resource: '*'
-          # Frontend-bootstrap lifecycle hooks.
+          # Read EC2 tags to determine Auto Scaling Group in CloudWatch Monitoring Scripts.
           - Effect: Allow
-            Action: 'autoscaling:CompleteLifecycleAction'
-            Resource: !Sub "arn:aws:autoscaling:${AWS::Region}:${AWS::AccountId}:autoScalingGroup:*:autoScalingGroupName/Frontends-${AWS::StackName}"
+            Action: 'ec2:DescribeTags'
+            Resource: '*'
           # Read/Write DCDO and Gatekeeper tables.
           # TODO: Import resources into stack.
           - Effect: Allow
@@ -163,7 +163,7 @@ Resources:
     Properties:
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref InstanceType
-      IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile # Migrate to: !Ref FrontendInstanceProfile
+      IamInstanceProfile: !Ref FrontendInstanceProfile
       SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
       SubnetId: !ImportValue VPC-Subnet<%=azs.first%>
       KeyName: <%=SSH_KEY_NAME%>
@@ -272,7 +272,7 @@ Resources:
     Properties:
       ImageId: !GetAtt [AMI<%=ami%>, ImageId]
       InstanceType: !Ref InstanceType
-      IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile # Migrate to: !Ref FrontendInstanceProfile
+      IamInstanceProfile: !Ref FrontendInstanceProfile
       SecurityGroups: [!ImportValue VPC-FrontendSecurityGroup]
       KeyName: <%=SSH_KEY_NAME%>
       BlockDeviceMappings:
@@ -306,7 +306,7 @@ Resources:
       DefaultResult: ABANDON
       HeartbeatTimeout: 1200 # seconds = 20 minutes
       NotificationTargetARN: !Ref WebServerHookTopicNew
-      RoleARN: !ImportValue IAM-LifecycleHookRoleARN # Migrate to: !Ref WebServerHookRole
+      RoleARN: !Ref WebServerHookRole
   WebServerHookEventRule:
     Type: AWS::Events::Rule
     Properties:
