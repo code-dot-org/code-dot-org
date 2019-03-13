@@ -7,18 +7,19 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: 'AWS CloudFormation template for running Drone.io on ECS. Recreates these steps: https://docs.drone.io/installation/github/multi-machine/'
 Parameters:
   VpcId:
-    Type: String
+    Type: AWS::EC2::VPC::Id
     Description: VpcId
   SubnetIds:
-    Type: CommaDelimitedList
+    Type: List<AWS::EC2::Subnet::Id>
     Description: Comma separated list of existing VPC Subnet Ids where ECS instances will run
-  AZs:
-    Type: CommaDelimitedList
-    Description: Comma separated list of availability zones where drone master ECS instances will run
   NumWorkers:
     Type: Number
     Description: Initial number of drone workers (also the number of concurrent builds which can run)
     Default: 2
+  ECSAMI:
+    Description: AMI ID
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ecs/optimized-ami/amazon-linux/recommended/image_id
 Resources:
 # ELB resources:
 # ELB / Target Group / Listener / ELB Security Group
@@ -106,7 +107,7 @@ Resources:
         KeyName: !Sub "winter-dev-${AWS::Region}"
         SecurityGroupIds: 
           - !Ref DroneMasterEcsSecurityGroup
-        ImageId: ami-0c4b05c0409735671
+        ImageId: !Ref ECSAMI
         InstanceType: t3.small
         Monitoring:
           Enabled: true
@@ -119,7 +120,7 @@ Resources:
   DroneMasterEcsInstanceAsg:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
-      AvailabilityZones: !Ref AZs
+      VPCZoneIdentifier: !Ref SubnetIds
       LaunchTemplate:
         LaunchTemplateId: !Ref DroneMasterLaunchTemplate
         Version: !GetAtt DroneMasterLaunchTemplate.LatestVersionNumber
@@ -150,7 +151,7 @@ Resources:
           Name: drone-master
           Essential: true
           Image: drone/drone:1.0.0-rc.5
-          MemoryReservation: 512
+          MemoryReservation: 1024
           LogConfiguration:
             LogDriver: awslogs
             Options:
@@ -183,13 +184,13 @@ Resources:
             # Instead, we must use "dynamic references": https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html
             -
               Name: DRONE_GITHUB_CLIENT_ID
-              Value: '{{resolve:secretsmanager:drone/DRONE_GITHUB_CLIENT_ID}}'
+              Value: '{{resolve:secretsmanager:drone/master:SecretString:GITHUB_CLIENT_ID}}'
             -
               Name: DRONE_GITHUB_CLIENT_SECRET
-              Value: '{{resolve:secretsmanager:drone/DRONE_GITHUB_CLIENT_SECRET}}'
+              Value: '{{resolve:secretsmanager:drone/master:SecretString:GITHUB_CLIENT_SECRET}}'
             -
               Name: DRONE_RPC_SECRET
-              Value: '{{resolve:secretsmanager:drone/DRONE_RPC_SECRET}}'
+              Value: '{{resolve:secretsmanager:drone/shared:SecretString:DRONE_RPC_SECRET}}'
 
   DroneMasterEcsService:
     Type: AWS::ECS::Service
@@ -247,7 +248,7 @@ Resources:
   DroneWorkerEcsInstanceAsg:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
-      AvailabilityZones: !Ref AZs
+      VPCZoneIdentifier: !Ref SubnetIds
       LaunchTemplate:
         LaunchTemplateId: !Ref DroneWorkerLaunchTemplate
         Version: !GetAtt DroneWorkerLaunchTemplate.LatestVersionNumber
@@ -296,6 +297,7 @@ Resources:
                 !Sub 
                   - "http://${ElbDnsName}"
                   - {ElbDnsName: !GetAtt DroneMasterELB.DNSName}
+            # Number of concurrent builds allowed on one Drone agent
             -
               Name: DRONE_RUNNER_CAPACITY
               Value: 1
@@ -303,7 +305,7 @@ Resources:
             # Instead, we must use "dynamic references": https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html
             -
               Name: DRONE_RPC_SECRET
-              Value: '{{resolve:secretsmanager:drone/DRONE_RPC_SECRET}}'
+              Value: '{{resolve:secretsmanager:drone/shared:SecretString:DRONE_RPC_SECRET}}'
 
   DroneWorkerEcsService:
     Type: AWS::ECS::Service
