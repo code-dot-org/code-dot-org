@@ -170,6 +170,10 @@ hy:
             '"right"': ճիշտ
             '"space"': տարածություն
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': կամայական
       gamelab_locationDelta:
         options:
           DIR:

@@ -19,16 +19,16 @@ uk:
       Category: Категорія
       Text: Текст
       Comment: Коментар
+      Default: Типова
+      Locations: Розташування
       World: Світ
       Location: Місце знаходження
       numbers: числа
       Numbers: Числа
-      Default: Типова
       Dancers: Виконавці
       Groups: Групи
       Advanced: Розширені
       Start: Початок
-      Locations: Розташування
       Booleans: Логічні вирази
       Functional: Функції
       test: тест

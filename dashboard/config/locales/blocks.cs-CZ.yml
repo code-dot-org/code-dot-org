@@ -680,6 +680,18 @@ cs:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': hranice
+            '"inner"': vnitřní čtverec
+            '"circle"': kruh
+            '"grid"': mřížka
+            '"row"': řádek
+            '"column"': sloupec
+            '"x"': křížem krážem
+            '"plus"': plus
+            '"random"': náhodně
       gamelab_locationDelta:
         options:
           DIR:

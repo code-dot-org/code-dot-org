@@ -634,6 +634,18 @@ zh-TW:
             '"right"': 到右方
             '"space"': 太空
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': 邊框
+            '"inner"': 正方形內部
+            '"circle"': 圓形
+            '"grid"': 網格
+            '"row"': 列
+            '"column"': 欄
+            '"x"': 十字交叉
+            '"plus"': 添加
+            '"random"': 隨機
       gamelab_locationDelta:
         options:
           DIR:
