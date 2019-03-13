@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:01:31.000Z",
-  "level_num": "custom",
-  "user_id": 13,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -58,15 +54,19 @@
     "name_suffix": "_2018",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "short_instructions": "Add an if statement so that the app changes screens when the count reaches -5. (Click to see full instructions)",
     "long_instructions": "# Add Your Own *if* Statement\r\n\r\nIn most apps you want to make decisions based on the state of some data you're keeping track of in the app.  \r\n\r\nWe've **modified** the *Count Up/Down App* to add another screen.  When the count reaches certain values, we'll switch screens.  In the code you'll see an `if` statement has been added to the event handler for up arrow that states:\r\n\r\n![](https://images.code.org/6e8acfef603fc7bd900d5ffb3a045150-image-1446125072632.png)\r\n\r\n  * **If** the value of `count` is equal to **20, then** set the screen to *\"gameOverScreen\"*.\r\n<img src=\"https://images.code.org/b737f4a8924a114c8f320130e73949a6-image-1446124106409.gif\" style=\"width: 150px; float: right\">\r\n\r\n# Do This:\r\n**Add an `if` statement so that when counting down the app changes screens when the count reaches -5.**\r\n\r\n* **Run the app** and click the up arrow 20 times to see what happens when the `if` statement is triggered.\r\n* **Study the `if` statement** for the up arrow button to see how it works.\r\n* **Add an `if` statement** to the down arrow event handler:\r\n\t* **If** `count` is equal to **-5, then** set the screen to the \"gameOverScreen.\"\r\n* **Goal:** Once you're finished, clicking the down arrow in the app should work like the animation shown to the right.\r\n\r\n<details>\r\n\r\n<summary><strong><big>HINT:</big></strong> [click to expand]</summary>\r\n\r\nThere is a subtle challenge here that you need to set the text of the label on the <i>gameOverScreen</i> when you change screens.\r\n<p>\r\n</p>\r\n<strong>NOTE:</strong> Your code can call <code>setText</code> for any UI element, on any screen, at any time - even if the element isn't on the screen that's currently showing.\r\n\r\n\r\n</details>\r\n\r\n",
-    "preload_asset_list": null,
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:01:31.000Z",
+  "level_num": "custom",
+  "user_id": 13,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-12-11 00:41:26 +0000\",\"changed\":[\"notes\",\"code_functions\",\"instructions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-15 04:26:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
