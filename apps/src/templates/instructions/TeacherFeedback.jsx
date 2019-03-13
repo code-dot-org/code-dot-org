@@ -79,9 +79,11 @@ class TeacherFeedback extends Component {
       approaches: PropTypes.string,
       noEvidence: PropTypes.string
     }),
+    token: PropTypes.string,
     comment: PropTypes.string,
     performance: PropTypes.string,
     latestFeedback: PropTypes.array,
+    onTokenChange: PropTypes.func,
     onRubricChange: PropTypes.func,
     onCommentChange: PropTypes.func,
     onLatestFeedbackChange: PropTypes.func,
@@ -101,8 +103,7 @@ class TeacherFeedback extends Component {
     this.state = {
       studentId: studentId,
       submitting: false,
-      errorState: ErrorType.NoError,
-      token: null
+      errorState: ErrorType.NoError
     };
   }
 
@@ -133,9 +134,7 @@ class TeacherFeedback extends Component {
         contentType: 'application/json;charset=UTF-8'
       })
         .done((data, textStatus, request) => {
-          this.setState({
-            token: request.getResponseHeader('csrf-token')
-          });
+          this.props.onTokenChange(request.getResponseHeader('csrf-token'));
           this.props.onCommentChange(
             request.status === 204 ? '' : data.comment
           );
@@ -175,15 +174,13 @@ class TeacherFeedback extends Component {
       performance: this.props.performance
     };
 
-    console.log(payload);
-
     $.ajax({
       url: '/api/v1/teacher_feedbacks',
       method: 'POST',
       contentType: 'application/json;charset=UTF-8',
       dataType: 'json',
       data: JSON.stringify({teacher_feedback: payload}),
-      headers: {'X-CSRF-Token': this.state.token}
+      headers: {'X-CSRF-Token': this.props.token}
     })
       .done(data => {
         this.setState({

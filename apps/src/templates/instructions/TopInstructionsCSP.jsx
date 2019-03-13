@@ -142,7 +142,8 @@ class TopInstructions extends Component {
       rubric: null,
       displayFeedbackTeacherFacing: teacherViewingStudentWork,
       comment: '',
-      performance: null
+      performance: null,
+      token: null
     };
   }
 
@@ -269,6 +270,10 @@ class TopInstructions extends Component {
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
     }
+  };
+
+  handleTokenChange = value => {
+    this.setState({token: value});
   };
 
   handleCommentChange = value => {
@@ -430,9 +435,11 @@ class TopInstructions extends Component {
                 }
                 rubric={this.state.rubric}
                 ref="commentTab"
+                token={this.state.token}
                 comment={this.state.comment}
                 performance={this.state.performance}
                 latestFeedback={this.state.latestFeedback}
+                onTokenChange={this.handleTokenChange}
                 onCommentChange={this.handleCommentChange}
                 onRubricChange={this.handleRubricChange}
                 onLatestFeedbackChange={this.handleLatestFeedbackChange}
