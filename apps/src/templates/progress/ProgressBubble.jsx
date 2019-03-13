@@ -125,7 +125,7 @@ class ProgressBubble extends React.Component {
     const levelIcon = getIconForLevel(level);
 
     const disabled = this.props.disabled || levelIcon === 'lock';
-    const hideNumber = levelIcon === 'lock' || level.paired;
+    const hideNumber = levelIcon === 'lock' || level.paired || level.bonus;
 
     const style = {
       ...styles.main,
@@ -205,6 +205,7 @@ class ProgressBubble extends React.Component {
               {pairingIconEnabled && level.paired && (
                 <FontAwesome icon="users" />
               )}
+              {level.bonus && <FontAwesome icon="flag-checkered" />}
               {!hideNumber && (
                 <span>
                   {/*Text will not show up for smallBubble, but it's presence
