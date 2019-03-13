@@ -1,4 +1,3 @@
-/* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -165,18 +164,17 @@ export default class ReportAbuseForm extends React.Component {
             id="uitest-abuse-detail"
           />
 
-          {/* we dangerouslySetInnerHTML because our string has html in it*/}
-          <div
-            dangerouslySetInnerHTML={{
-              __html: i18n.t('project.abuse.report_abuse_form.acknowledge', {
+          <div>
+            <UnsafeRenderedMarkdown
+              markdown={i18n.t('project.abuse.report_abuse_form.acknowledge', {
                 link_start_privacy:
                   '<a href="https://code.org/privacy" target="_blank">',
                 link_start_tos:
                   '<a href="https://code.org/tos" target="_blank">',
                 link_end: '</a>'
-              })
-            }}
-          />
+              })}
+            />
+          </div>
           <button onClick={this.handleSubmit} id="uitest-submit-report-abuse">
             {i18n.t('submit')}
           </button>
