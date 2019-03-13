@@ -13,7 +13,8 @@ export default class PrincipalApproval1920Application extends FormController {
       principal_last_name: PropTypes.string.isRequired,
       principal_title: PropTypes.string,
       principal_email: PropTypes.string.isRequired,
-      school_id: PropTypes.string
+      school_id: PropTypes.string,
+      school_zip: PropTypes.string
     }).isRequired,
     teacherApplicationSchoolStats: PropTypes.shape({
       students_total: PropTypes.string,
@@ -39,6 +40,7 @@ export default class PrincipalApproval1920Application extends FormController {
       email: props.teacherApplication.principal_email,
       course: props.teacherApplication.course,
       school: props.teacherApplication.school_id,
+      schoolZipCode: props.teacherApplication.school_zip_code,
       totalStudentEnrollment:
         props.teacherApplicationSchoolStats.students_total,
       freeLunchPercent:
