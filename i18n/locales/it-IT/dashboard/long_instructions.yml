@@ -89,7 +89,7 @@ it:
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
         <b>Suggerimenti</b><br>
         - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
-        - Puoi risolvere questo esercizio usando il <i>ciclo</i>`ripeti ... volte`?
+        - Puoi risolvere questo esercizio usando il <i>ciclo</i> `ripeti ... volte`?
       2-3 Bee Conditionals 14: |-
         Metti insieme tutto ciò che hai imparato!<br>
         Raccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi. Non dimenticarti di fare il miele alla fine.
@@ -595,13 +595,28 @@ it:
       Dance Party 1-validated_2019: "**Fai una previsione:** Ecco un personaggio chiamato `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
       Dance Party 1-validated_simple: "**Fai una previsione:** Ecco un personaggio chiamato `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
       Dance Party 2: "L'alieno era orgoglioso delle sue capacità di ballo su Marte, ma ora può spostarsi solo da un lato all'altro.\n\nPuoi modificare il comportamento all'interno del blocco <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> per fare in modo che inizi gironzolando qua e là?  "
-      Dance Party 2_2019: "L'alieno era orgoglioso delle sue capacità di ballo su Marte, ma ora può spostarsi solo da un lato all'altro.\n\nPuoi modificare il comportamento all'interno del blocco <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> per fare in modo che inizi gironzolando qua e là?  "
+      Dance Party 2_2019: |-
+        L'alieno era orgoglioso delle sue capacità di ballo su Marte, ma ora può spostarsi solo da un lato all'altro.
+
+        Puoi modificare il comportamento all'interno del blocco <xml> <block type="gamelab_addBehaviorSimple" inline="true">
+              <value name="SPRITE">
+                <block type="sprite_variables_get">
+                  <title name="VAR">alien1</title>
+                </block>
+              </value>
+            </block></xml> per fare in modo che inizi gironzolando qua e là?  
       Dance Party 3 - Validated: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli fare un passo di danza diverso ogni volta che ci clicchi sopra."
       Dance Party 3: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli fare un passo di danza diverso ogni volta che ci clicchi sopra."
-      Dance Party 3_2019: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli fare un passo di danza diverso ogni volta che ci clicchi sopra."
+      Dance Party 3_2019: |-
+        Crea un nuovo personaggio chiamato `alien2`.  
+
+        Fagli fare un passo di danza diverso ogni volta che ci clicchi sopra.
       Dance Party 4 Validated: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci ad posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!"
       Dance Party 4: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci ad posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!"
-      Dance Party 4_2019: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci ad posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!"
+      Dance Party 4_2019: |-
+        Crea un terzo personaggio chiamato `alien3`.  
+
+        Riesci ad posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!
       Dance Party 5 - Validated: "Possiamo modificare ogni cosa in questo programma quando si clicca sui personaggi. Cambiamo il loro colore!  \n\n**Aggiungi il codice per modificare il colore di ogni alieno quando si clicca su di esso.**"
       Dance Party 5: "Possiamo modificare ogni cosa in questo programma quando si clicca sui personaggi. Cambiamo il loro colore!  \n\n**Aggiungi il codice per modificare il colore di ogni alieno quando si clicca su di esso.**"
       Dance Party 5_2019: "Possiamo modificare ogni cosa in questo programma quando si clicca sui personaggi. Cambiamo il loro colore!  \n\n**Aggiungi il codice per modificare il colore di ogni alieno quando si clicca su di esso.**"
@@ -610,7 +625,10 @@ it:
       Dance Party 6_2019: "Questi alieni si stanno scatenando!  \n\nUsa il blocco <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value name=\"SPRITE\"/>\n    </block></xml> per fare in modo che ogni alieno si fermi quando si clicca su di esso."
       Dance Party 7 - Validated: "Infine, aggiungi un nuovo personaggio a campanella chiamato `myBell`.  \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa danza!"
       Dance Party 7: "Infine, aggiungi un nuovo personaggio a campanella chiamato `myBell`.  \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa danza!"
-      Dance Party 7_2019: "Infine, aggiungi un nuovo personaggio a campanella chiamato `myBell`.  \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa danza!"
+      Dance Party 7_2019: |-
+        Infine, aggiungi un nuovo personaggio a campanella chiamato `myBell`.  
+
+        Quando viene cliccata, fa fare a tutti gli alieni la sua stessa danza!
       Dance Party 7_simple: "Infine, aggiungi un nuovo personaggio a campanella chiamato `myBell`.  \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa danza!"
       Dance Party Freeplay: |-
         Ora crea la tua discoteca aliena! Cerchi un'ispirazione? Prova queste idee:
@@ -4166,7 +4184,7 @@ it:
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
         <b>Suggerimenti</b><br>
         - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
-        - Puoi risolvere questo esercizio usando il <i>ciclo</i>`ripeti ... volte`?
+        - Puoi risolvere questo esercizio usando il <i>ciclo</i> `ripeti ... volte`?
       grade3_Conditionals_11 BAD: "Questo è un esercizio di riepilogo -- Usa un ciclo `mentre` per raccogliere tutto il nettare da questi fiori."
       grade3_Conditionals_11: "Metti insieme tutto ciò che hai imparato!<br>\nRaccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi. Non dimenticarti di fare il miele alla fine."
       grade3_Conditionals_12: "Questo percorso a gradini ormai dovrebbe essere familiare.<br>\nRaccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi."

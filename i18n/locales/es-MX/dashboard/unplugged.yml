@@ -67,7 +67,7 @@ es-MX:
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra vida cotidiana, usando de ejemplo plantar una semilla. También se centra en el panorama general de la informática y cómo los algoritmos juegan un papel esencial.
       BuildingAFoundation:
         title: Construir una base
-        desc: Los estudiantes construyen una estructura utilizando solamente lo suministrado. Las estructuras deben completar una tarea (alcanzar una cierta altura o soportar un cierto peso), y los estudiantes discuten la idea de ser persistente cuando las cosas se complican.
+        desc: Los estudiantes construyen una estructura utilizando solamente lo provisto. Las estructuras deben completar una tarea (alcanzar una cierta altura o soportar un cierto peso), y los estudiantes discuten la idea de ser persistente cuando las cosas se complican.
       GettingLoopy:
         title: Girar y girar
         desc: Esta lección introduce el concepto de programación de los bucles (instrucciones repetidas) a través de una actividad de baile. Los estudiantes aprenderán una simple coreografía, después se les pedirá que la repitan.
@@ -163,7 +163,7 @@ es-MX:
         desc: '¡Al igual que en "Mis amigos robóticos", "programarás" tus amigos, pero esta vez con ciclos!'
       courseC_Unplugged_ScreenOutTheMean:
         title: Actividad desconectada
-        desc: Hoy aprenderas que significa que alguién esté en linea.
+        desc: Hoy aprenderás qué significa que alguien esté en linea.
       courseD_unplugged_digitalCitizenship:
         title: Actividad desconectada
         desc: Hoy aprenderas lo que significa ser un ciudadano digital.
@@ -172,7 +172,7 @@ es-MX:
         desc: '¡Hoy aprenderás la diferencia entre información privada y personal!'
       courseF_unplugged_powerOfWords:
         title: Actividad desconectada
-        desc: Hoy aprenderas que significa que alguién esté en linea.
+        desc: Hoy aprenderás qué significa que alguien esté en linea.
       deeper learning description:
         desc: 'falta la traducción: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
@@ -192,7 +192,7 @@ es-MX:
         desc: Los profesores le presentan a los alumnos la idea de que poner información sobre ellos en línea crea una huella dactilar o un "rastro" que tiene consecuencias.
       courseC_unplugged_buildingAFoundation:
         title: Construir una base
-        desc: Los estudiantes construyen una estructura utilizando solamente lo suministrado. Las estructuras deben completar una tarea (alcanzar una cierta altura o soportar un cierto peso), y los estudiantes discuten la idea de ser persistente cuando las cosas se complican.
+        desc: Los estudiantes construyen una estructura utilizando solamente lo provisto. Las estructuras deben completar una tarea (alcanzar una cierta altura o soportar un cierto peso), y los estudiantes discuten la idea de ser persistente cuando las cosas se complican.
       courseC_unplugged_paperPlanes:
         title: 'Algoritmos de la vida real : Aviones de papel'
         desc: Esta lección muestra la manera en que usamos algoritmos en nuestra vida diaria, específicamente haciendo aviones de papel. Esta lección también se enfoca en las ciencias de la computación en general y cómo los algoritmos juegan un papel esencial.
@@ -276,7 +276,7 @@ es-MX:
         desc: Hoy aprenderas lo que significa ser un ciudadano digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Actividad desconectada
-        desc: Hoy aprenderas que significa que alguién esté en linea.
+        desc: Hoy aprenderás qué significa que alguien esté en linea.
       Conditionals_2018:
         title: Condicionales
         desc: Para aprender acerca de las instrucciones condicionales, los estudiantes juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo un punto" y "si tomo una carta negra, tú obtienes un punto."
@@ -305,7 +305,7 @@ es-MX:
         desc: Prestada para los fundamentos de la Ciencia de la Computación por el equipo de Copyright y Creatividad, esta lección se ha creado para ayudar a los estudiantes a entender los retos y beneficios de respetar la propiedad y derechos de autos, en particular en entornos digitales. Se debería animar a los estudiantes a respetar los derechos de los artistas como una parte importante para ser un ciudadano digital ético.
       RelayProgramming_2018:
         title: Programación de relevos
-        desc: Esta actividad comenzará con una lección breve sobre depuración y persistencia, luego pasará rápidamente a una carrera contrarreloj mientras los estudiantes se agrupan en equipos y trabajan juntos para escribir una instrucción de un programa a la vez.
+        desc: Esta actividad comenzará con una breve lección sobre debugging y persistencia, luego pasará rápidamente a una carrera contrarreloj a medida que los estudiantes se dividen en equipos y trabajan juntos para escribir un programa a la vez.
       courseB_unplugged_MRF_2019:
         title: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
         desc: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
@@ -332,7 +332,7 @@ es-MX:
         desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.
       RelayProgramming_2018_2019:
         title: Programación de relevos
-        desc: Esta actividad comenzará con una lección breve sobre depuración y persistencia, luego pasará rápidamente a una carrera contrarreloj mientras los estudiantes se agrupan en equipos y trabajan juntos para escribir una instrucción de un programa a la vez.
+        desc: Esta actividad comenzará con una breve lección sobre debugging y persistencia, luego pasará rápidamente a una carrera contrarreloj a medida que los estudiantes se dividen en equipos y trabajan juntos para escribir un programa a la vez.
       courseD_unplugged_digitalCitizenship_2019:
         title: Actividad desconectada
         desc: Hoy aprenderas lo que significa ser un ciudadano digital.
@@ -359,7 +359,7 @@ es-MX:
         desc: Esta lección introduce el concepto de programación de los bucles (instrucciones repetidas) a través de una actividad de baile. Los estudiantes aprenderán una simple coreografía, después se les pedirá que la repitan.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Actividad desconectada
-        desc: Hoy aprenderas que significa que alguién esté en linea.
+        desc: Hoy aprenderás qué significa que alguien esté en linea.
       BigEvent_2019:
         title: El gran evento
         desc: Se presenta a los estudiantes el concepto de "eventos" en programación, que son acciones que una computadora monitoréa constántemente. El profesor presionará botones en un control remoto de papel y los estudiantes reaccionarán dependiendo de qué botón se presiona.

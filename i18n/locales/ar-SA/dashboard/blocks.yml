@@ -649,6 +649,18 @@ ar:
             '"right"': اليمين
             '"space"': الفضاء
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': الحدود
+            '"inner"': مربع داخلي
+            '"circle"': دائرة
+            '"grid"': شبكة
+            '"row"': صف
+            '"column"': عمود
+            '"x"': متقاطع
+            '"plus"': زائد
+            '"random"': عشوائي
       gamelab_locationDelta:
         options:
           DIR:

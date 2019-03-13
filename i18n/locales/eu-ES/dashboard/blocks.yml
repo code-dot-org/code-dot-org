@@ -463,6 +463,10 @@ eu:
             '"s"': s
             '"w"': w
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': ausazkoa
       gamelab_locationDelta:
         options:
           DIR:
