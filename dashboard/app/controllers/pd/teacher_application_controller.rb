@@ -61,7 +61,7 @@ class Pd::TeacherApplicationController < ApplicationController
 
   # POST /pd/teacher_application/manage/:teacher_application_id/upgrade_to_teacher
   def upgrade_to_teacher
-    @teacher_application.user.update(user_type: User::TYPE_TEACHER, email: @teacher_application.primary_email)
+    @teacher_application.user.upgrade_to_teacher(@teacher_application.primary_email)
     redirect_to action: :edit
   end
 
