@@ -42,10 +42,6 @@ steps:
   settings:
     pull: true
     restore: true
-    access_key:
-      from_secret: S3_CACHE_ACCESS_KEY
-    secret_key:
-      from_secret: S3_CACHE_SECRET_KEY
 
 - name: unit-tests
   image: wintercdo/code-dot-org:0.7
@@ -77,10 +73,6 @@ steps:
   settings:
     pull: true
     rebuild: true
-    access_key:
-      from_secret: S3_CACHE_ACCESS_KEY
-    secret_key:
-      from_secret: S3_CACHE_SECRET_KEY
     mount:
       - /home/circleci/.rbenv
 
@@ -146,10 +138,6 @@ steps:
   settings:
     pull: true
     restore: true
-    access_key:
-      from_secret: S3_CACHE_ACCESS_KEY
-    secret_key:
-      from_secret: S3_CACHE_SECRET_KEY
 
 - name: ui-tests
   image: wintercdo/code-dot-org:0.7
@@ -165,10 +153,6 @@ steps:
       from_secret: CLOUDFRONT_PRIVATE_KEY
     PROPERTIES_ENCRYPTION_KEY:
       from_secret: PROPERTIES_ENCRYPTION_KEY
-    AWS_ACCESS_KEY_ID:
-      from_secret: AWS_ACCESS_KEY_ID
-    AWS_SECRET_ACCESS_KEY:
-      from_secret: AWS_SECRET_ACCESS_KEY
     FIREBASE_NAME:
       from_secret: FIREBASE_NAME
     FIREBASE_SECRET:
@@ -194,10 +178,6 @@ steps:
   settings:
     pull: true
     rebuild: true
-    access_key:
-      from_secret: S3_CACHE_ACCESS_KEY
-    secret_key:
-      from_secret: S3_CACHE_SECRET_KEY
     mount:
       - /home/circleci/.rbenv
 
