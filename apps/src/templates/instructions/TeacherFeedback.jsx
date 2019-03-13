@@ -56,7 +56,8 @@ const styles = {
   },
   keyConcepts: {
     fontSize: 12,
-    color: color.charcoal
+    color: color.charcoal,
+    margin: 0
   },
   rubricArea: {
     flexBasis: '60%'
