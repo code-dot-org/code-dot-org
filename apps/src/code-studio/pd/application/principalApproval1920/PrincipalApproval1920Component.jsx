@@ -200,16 +200,21 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           }
         )}
         <p style={styles.questionText}>
-          There may be a fee associated with your teacher’s professional
-          learning program. Please{' '}
+          There may be scholarships available in your region to cover the cost
+          of the program.{' '}
           <a
-            href="https://code.org/educate/professional-learning/program-information"
+            href={
+              'https://code.org/educate/professional-learning/program-information' +
+              (!!this.props.data.schoolZipCode
+                ? '?zip=' + this.props.data.schoolZipCode
+                : '')
+            }
             target="_blank"
           >
-            check here
-          </a>{' '}
-          to see if there are fees for your teacher’s professional learning
-          program and/or if there are scholarships available in your region.
+            Click here to check the fees and discounts for your program
+          </a>
+          . Let us know if your school would be able to pay the fee or if you
+          need to be considered for a scholarship.
         </p>
         <div>
           {this.singleCheckboxFor('understandFee')}
