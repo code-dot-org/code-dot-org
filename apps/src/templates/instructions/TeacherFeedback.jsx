@@ -19,13 +19,17 @@ const styles = {
     color: 'red',
     margin: 10
   },
-  time: {
-    height: 18,
-    paddingTop: 3,
+  timeTeacher: {
+    paddingTop: 8,
+    paddingLeft: 8,
     fontStyle: 'italic',
     fontSize: 12,
-    color: color.cyan,
-    backgroundColor: color.lightest_cyan
+    color: color.cyan
+  },
+  timeStudent: {
+    fontStyle: 'italic',
+    fontSize: 12,
+    color: color.cyan
   },
   footer: {
     display: 'flex',
@@ -240,6 +244,11 @@ class TeacherFeedback extends Component {
 
     const rubricLevels = ['exceeds', 'meets', 'approaches', 'noEvidence'];
 
+    const timeStyle =
+      this.props.viewAs === ViewType.Student
+        ? styles.timeStudent
+        : styles.timeTeacher;
+
     return (
       <div>
         {this.state.errorState === ErrorType.Load && (
@@ -247,15 +256,6 @@ class TeacherFeedback extends Component {
             <i className="fa fa-warning" style={styles.errorIcon} />
             {i18n.feedbackLoadError()}
           </span>
-        )}
-        {this.state.latestFeedback.length > 0 && (
-          <div style={styles.time} id="ui-test-feedback-time">
-            {i18n.lastUpdated({
-              time: moment
-                .min(moment(), moment(latestFeedback.created_at))
-                .fromNow()
-            })}
-          </div>
         )}
         {this.props.rubric && !dontShowStudentRubric && (
           <div style={styles.performanceArea}>
@@ -309,6 +309,15 @@ class TeacherFeedback extends Component {
                       {i18n.feedbackSaveError()}
                     </span>
                   )}
+                </div>
+              )}
+              {this.state.latestFeedback.length > 0 && (
+                <div style={timeStyle} id="ui-test-feedback-time">
+                  {i18n.lastUpdated({
+                    time: moment
+                      .min(moment(), moment(latestFeedback.created_at))
+                      .fromNow()
+                  })}
                 </div>
               )}
             </div>
