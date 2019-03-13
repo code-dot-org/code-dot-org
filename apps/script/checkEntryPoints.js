@@ -89,8 +89,7 @@ const SILENCED = [
   'cookieBanner',
   'dance',
   'regionalPartnerSearch',
-  'regionalPartnerMiniContact',
-  'spritelab'
+  'regionalPartnerMiniContact'
 ];
 const SITES_CONFIG = {
   studio: {
