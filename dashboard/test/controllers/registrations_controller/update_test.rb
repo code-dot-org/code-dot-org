@@ -222,22 +222,6 @@ module RegistrationsControllerTests
       assert_nil student.parent_email
     end
 
-    test "single-auth student can update with a blank parent email without password" do
-      student = create :student, :unmigrated_clever_sso
-      assert_nil student.hashed_email
-      assert_nil student.parent_email
-
-      sign_in student
-      put '/users', params: {
-        format: 'json',
-        user: {parent_email: '', age: '9'}
-      }
-      assert_response :no_content
-
-      student.reload
-      assert_nil student.parent_email
-    end
-
     # The next several tests explore profile changes for users with or without
     # passwords.  Examples of users without passwords are users that authenticate
     # via oauth (a third-party account), or students with a picture password.
