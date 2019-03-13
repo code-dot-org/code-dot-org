@@ -25,7 +25,6 @@
 #
 
 require 'cdo/shared_constants'
-require 'honeybadger/ruby'
 
 class PeerReview < ActiveRecord::Base
   include SharedConstants
