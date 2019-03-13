@@ -306,7 +306,7 @@ Resources:
       DefaultResult: ABANDON
       HeartbeatTimeout: 1200 # seconds = 20 minutes
       NotificationTargetARN: !Ref WebServerHookTopicNew
-      RoleARN: !Ref WebServerHookRole
+      RoleARN: !GetAtt WebServerHookRole.Arn
   WebServerHookEventRule:
     Type: AWS::Events::Rule
     Properties:
