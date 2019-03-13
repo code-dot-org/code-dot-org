@@ -205,7 +205,9 @@ class ProgressBubble extends React.Component {
               {pairingIconEnabled && level.paired && (
                 <FontAwesome icon="users" />
               )}
-              {level.bonus && <FontAwesome icon="flag-checkered" />}
+              {level.bonus && (
+                <FontAwesome icon="flag-checkered" style={{fontSize: 15}} />
+              )}
               {!hideNumber && (
                 <span>
                   {/*Text will not show up for smallBubble, but it's presence
