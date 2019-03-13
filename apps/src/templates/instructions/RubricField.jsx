@@ -12,10 +12,11 @@ const styles = {
     width: '100%'
   },
   detailsArea: {
-    width: '100%'
+    width: '100%',
+    paddingTop: 2
   },
   rubricHeader: {
-    fontSize: 13,
+    fontSize: 12,
     marginLeft: 10,
     color: color.black,
     fontFamily: '"Gotham 5r", sans-serif'
@@ -24,10 +25,12 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    padding: '4px 10px',
+    height: 24,
+    margin: '0px 8px',
+    padding: 4,
     ':hover': {
       border: `solid 1px ${color.light_cyan}`,
-      borderRadius: 10
+      borderRadius: 4
     }
   },
   performanceLevelHeaderSelected: {
@@ -35,11 +38,12 @@ const styles = {
     justifyContent: 'flex-start',
     flexDirection: 'row',
     backgroundColor: color.lightest_cyan,
-    borderRadius: 10,
-    padding: '4px 10px',
+    borderRadius: 4,
+    padding: 4,
+    margin: '0px 8px',
     ':hover': {
       border: `solid 1px ${color.light_cyan}`,
-      borderRadius: 10
+      borderRadius: 4
     }
   },
   tooltip: {
