@@ -139,6 +139,7 @@ class ProgressBubble extends React.Component {
     let href = '';
     if (!disabled && url) {
       const queryParams = queryString.parse(currentLocation.search);
+
       if (selectedSectionId) {
         queryParams.section_id = selectedSectionId;
       }
@@ -148,7 +149,12 @@ class ProgressBubble extends React.Component {
       const paramString = queryString.stringify(queryParams);
       href = url;
       if (paramString.length > 0) {
-        href += '?' + paramString;
+        // If href already has 1 or more query params, our delimiter will be '&'.
+        // If href has no query params, our delimiter is '?'.
+        // TODO: (madelynkasula) Refactor this logic to use queryString.parseUrl(href)
+        // instead. Our current version of query-string (4.1.0) does not yet have this method.
+        const delimiter = /\?/.test(href) ? '&' : '?';
+        href += delimiter + paramString;
       }
     }
 
