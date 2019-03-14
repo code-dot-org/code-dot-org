@@ -555,6 +555,15 @@ Resources:
               - Effect: Allow
                 Action: iam:PassRole
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+        - PolicyName: StopInactiveAdhocInstances
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - cloudformation:DescribeStacks
+                  - cloudwatch:GetMetricStatistics
+                  - ec2:DescribeInstances
+                Resource: '*'
       ManagedPolicyArns: [!Ref CDOPolicy]
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   DaemonInstanceProfile:
