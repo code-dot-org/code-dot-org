@@ -35,9 +35,9 @@ const fakeValidScripts = [
     category: 'CS Fundamentals',
     category_priority: 1,
     id: 182,
-    name: 'Express Course',
+    name: 'Corso Rapido',
     position: 6,
-    script_name: 'express'
+    script_name: 'express-2017'
   }
 ];
 
@@ -142,7 +142,7 @@ describe('scriptSelectionRedux', () => {
       assert.deepEqual(nextState.scriptId, 100);
     });
 
-    it('includes Express Course if nothing assigned and no progress', () => {
+    it('includes express-2017 if nothing assigned and no progress', () => {
       const studentScriptIds = [];
       const validCourses = [];
       const action = setValidScripts(
@@ -153,7 +153,7 @@ describe('scriptSelectionRedux', () => {
       const nextState = scriptSelection(initialState, action);
       assert.deepEqual(
         nextState.validScripts,
-        fakeValidScripts.filter(script => script.name === 'Express Course')
+        fakeValidScripts.filter(script => script.script_name === 'express-2017')
       );
     });
 
