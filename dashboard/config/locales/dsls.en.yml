@@ -2929,6 +2929,9 @@ en:
       'U4 L03 Variable Scope: Local vs. Global':
         U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
         description here: description here
+      'U4 L10 Variable Scope: Local vs. Global':
+        U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
+        description here: description here
       U4 caesar cipher interstitial:
         That was easy, what's next?: That was easy, what's next?
         description here: description here
@@ -4276,6 +4279,9 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
+      unique level name here:
+        description here: description here
+        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -4493,8 +4499,11 @@ en:
         Scratch Jr: Scratch Jr
     level_group:
       name:
+        CSD Interactive Animations and Games Post-Project Test: {}
         CSD U1 End of Unit Test: {}
+        CSD U1 Test: {}
         CSD Unit 1 Post Project Assessment 2018: {}
+        CSD Web Development Post-Project Test: {}
         CSP Culminating Assessment: {}
         CSP Cumulative Assess A: {}
         CSP Cumulative Assess A_2018: {}
@@ -4805,6 +4814,30 @@ en:
         Prepare: Prepare
         Reflect: Reflect
         Try: Try
+      CSD U1 IOSP match:
+        ? 'A team is making an app that will help people decide what outfit to wear in the morning.  Match four things that the app does with input, output, storage, and processing. '
+        : 'A team is making an app that will help people decide what outfit to wear in the morning.  Match four things that the app does with input, output, storage, and processing. '
+        Gets the day's weather forecast from the Internet: Gets the day's weather forecast from the Internet
+        Input: Input
+        Keeps a list of available outfits and what type of weather they are worn in: Keeps a list of available outfits and what type of weather they are worn in
+        Matches the weather condition with the outfits that are good for that condition: Matches the weather condition with the outfits that are good for that condition
+        Output: Output
+        Processing: Processing
+        Question 2: Question 2
+        Shows a picture of a good outfit to the user: Shows a picture of a good outfit to the user
+        Storage: Storage
+      CSD U1 Test PSP match:
+        Asking the teachers what sort of mural they need to make, and how big it needs to be: Asking the teachers what sort of mural they need to make, and how big it needs to be
+        Deciding what exactly they want to paint, what supplies they will need, and who will do each part of it.: Deciding what exactly they want to paint, what supplies they will need, and who will do each part of it.
+        Define: Define
+        Discussing what they like about their mural and how they could improve it.: Discussing what they like about their mural and how they could improve it.
+        ? 'Five students are painting a mural on the side of their school.  Match what they are doing with a step of the Problem Solving Process. '
+        : 'Five students are painting a mural on the side of their school.  Match what they are doing with a step of the Problem Solving Process. '
+        Painting the mural.: Painting the mural.
+        Prepare: Prepare
+        Question 2: Question 2
+        Reflect: Reflect
+        Try: Try
       CSD U2 RGB match:
         "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> ": "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> "
         ? In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
@@ -4929,6 +4962,18 @@ en:
         keyDown(): keyDown()
         keyWentDown(): keyWentDown()
         keyWentUp(): keyWentUp()
+      CSD U3 Test comment:
+        Fall down: Fall down
+        Float up: Float up
+        Give the bubble an outline: Give the bubble an outline
+        Jump up: Jump up
+        Line 11: Line 11
+        Line 14: Line 14
+        Line 17: Line 17
+        Line 19: Line 19
+        Line 5: Line 5
+        Question 6: Question 6
+        Shake back and forth: Shake back and forth
       CSD U3 Variables name match:
         1dimension: 1dimension
         'Debug: Naming Variables': 'Debug: Naming Variables'
@@ -7704,6 +7749,112 @@ en:
         A machine with a screen and a keyboard: A machine with a screen and a keyboard
         Question 1: Question 1
         Which TWO of the following are the best ways to define a computer? (Choose TWO): Which TWO of the following are the best ways to define a computer? (Choose TWO)
+      CSD U1 Test define problem:
+        ? Lunch line, because it is clear how you would know that people are waiting less time, but harder to know what school spirit would look like
+        : Lunch line, because it is clear how you would know that people are waiting less time, but harder to know what school spirit would look like
+        Lunch line, because it is easier to create rules around standing in line, but harder to make rules about school spirit: Lunch line, because it is easier to create rules around standing in line, but harder to make rules about school spirit
+        Question 4: Question 4
+        School spirit, because it is a better thing for students to do, but the adults should be in charge of the lunch line: School spirit, because it is a better thing for students to do, but the adults should be in charge of the lunch line
+        School spirit, because you can always have more school spirit, but the lunch line might already be as short as possible: School spirit, because you can always have more school spirit, but the lunch line might already be as short as possible
+        ? Two classes want to improve their school.  One class wants to shorten the amount of time students wait in the lunch line.  Another class wants to increase school spirit.  Which problem is better defined?
+        : Two classes want to improve their school.  One class wants to shorten the amount of time students wait in the lunch line.  Another class wants to increase school spirit.  Which problem is better defined?
+      'CSD U2 Test ':
+        Question 5: Question 5
+        What code in the stylesheet could have made the text green?: What code in the stylesheet could have made the text green?
+        right answer: right answer
+        wrong answer: wrong answer
+      CSD U2 Test Classes:
+        A group of artists is making a website.  When should they use classes?: A group of artists is making a website.  When should they use classes?
+        Question 3: Question 3
+        They want all the pages on their site to have the same style.: They want all the pages on their site to have the same style.
+        They want headings to be one color, but paragraphs to be a different color.: They want headings to be one color, but paragraphs to be a different color.
+        They want make a special color using RGB codes.: They want make a special color using RGB codes.
+        They want some images to float left, and other images to float right.: They want some images to float left, and other images to float right.
+        They want to make their h3 tags bigger than their h1 tags.: They want to make their h3 tags bigger than their h1 tags.
+      CSD U2 Test ContentStructureStyle:
+        A and C: A and C
+        ? A programmer has an idea to use just one language for the content, structure, and style of web pages.  What might be a problem with this idea?
+        : A programmer has an idea to use just one language for the content, structure, and style of web pages.  What might be a problem with this idea?
+        All of the above: All of the above
+        ? Communicating about structure and style are different problems, and it is helpful to use two languages specific to those problems
+        : Communicating about structure and style are different problems, and it is helpful to use two languages specific to those problems
+        It will be confusing and less organized for people to read and write code that mixes everything up together.: It will be confusing and less organized for people to read and write code that mixes everything up together.
+        Question 2: Question 2
+        Structure is more important than style or content and needs its own language: Structure is more important than style or content and needs its own language
+      CSD U2 Test Copyright:
+        If an image is already on one web page, it's okay to use it on any web page.: If an image is already on one web page, it's okay to use it on any web page.
+        If there is no copyright information for an image, anyone is free to use it on their own sites.: If there is no copyright information for an image, anyone is free to use it on their own sites.
+        If you make a lot of changes to an image, you do not need the permission of the original creator to post it on your site.: If you make a lot of changes to an image, you do not need the permission of the original creator to post it on your site.
+        Image creators can decide both who can use their images and how the images can be used.: Image creators can decide both who can use their images and how the images can be used.
+        Question 7: Question 7
+        Which of the following is true about copyright?: Which of the following is true about copyright?
+        You must always contact the creator for permission to use an image on your site.: You must always contact the creator for permission to use an image on your site.
+      CSD U2 Test Debug:
+        1 and 2 only: 1 and 2 only
+        1 and 3 only: 1 and 3 only
+        1 only: 1 only
+        1, 2, and 3: 1, 2, and 3
+        3 only: 3 only
+        ? |-
+          A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem? <ol><li>The student forgot to link the stylesheet to the index.html page.</li>
+          <li>The student did not upload the images used in the index.html page.</li><li>The student accidentally misspelled "green" in the stylesheet.</li></ol>
+        : |-
+          A student is using a stylesheet to make all the paragraphs on the website green, but it's not working on index.html, even though it works on the other web pages.  What could be causing the problem? <ol><li>The student forgot to link the stylesheet to the index.html page.</li>
+          <li>The student did not upload the images used in the index.html page.</li><li>The student accidentally misspelled "green" in the stylesheet.</li></ol>
+        Question 4: Question 4
+      CSD U2 Test HTML Usage:
+        Adding information about the copyright: Adding information about the copyright
+        Making the text a different color.: Making the text a different color.
+        Organizing text into a list: Organizing text into a list
+        Putting borders on an image: Putting borders on an image
+        Question 1: Question 1
+        Separating out headings from paragraphs: Separating out headings from paragraphs
+        When making a web page, which two of the following tasks is HTML the most important language for? (Choose TWO): When making a web page, which two of the following tasks is HTML the most important language for? (Choose TWO)
+      CSD U2 Test code styles:
+        Put the "My Page" text inside the <head> tags.: Put the "My Page" text inside the <head> tags.
+        Put the code `style="larger"` inside the h3 tag.: Put the code `style="larger"` inside the h3 tag.
+        Question 6: Question 6
+        The web developer wants to make the "My Page" text larger.  Which TWO of the following would work? (Choose TWO): The web developer wants to make the "My Page" text larger.  Which TWO of the following would work? (Choose TWO)
+        Use &lt;h1&gt; instead of &lt;h3&gt;: Use &lt;h1&gt; instead of &lt;h3&gt;
+        Use &lt;h6&gt; instead of &lt;h3&gt;: Use &lt;h6&gt; instead of &lt;h3&gt;
+        Use CSS to set the font-size property of the h3 tag: Use CSS to set the font-size property of the h3 tag
+      CSD U2 Test code stylesheet:
+        1 and 3: 1 and 3
+        1, 2, 3, and 4: 1, 2, 3, and 4
+        2 and 3: 2 and 3
+        2 and 4: 2 and 4
+        3 and 4: 3 and 4
+        Question 5: Question 5
+        ? |-
+          What code in the stylesheet could have made the text green?<br><br>
+          1. <pre style="display:inline-block;width:100px">.p {
+            color:green;
+          }</pre>
+          2. <pre style="display:inline-block;width:100px">p {
+            color:green;
+          }</pre>
+          3. <pre style="display:inline-block;width:100px">.special {
+            color:green;
+          }</pre>
+          4. <pre style="display:inline-block;width:100px">special {
+            color:green;
+          }
+          </pre>
+        : |-
+          What code in the stylesheet could have made the text green?<br><br>
+          1. <pre style="display:inline-block;width:100px">.p {
+            color:green;
+          }</pre>
+          2. <pre style="display:inline-block;width:100px">p {
+            color:green;
+          }</pre>
+          3. <pre style="display:inline-block;width:100px">.special {
+            color:green;
+          }</pre>
+          4. <pre style="display:inline-block;width:100px">special {
+            color:green;
+          }
+          </pre>
       CSD U3 - sprites - rect vs sprite diff:
         The x and y value are the center of a rectangle and in the upper left corner of a sprite: The x and y value are the center of a rectangle and in the upper left corner of a sprite
         The x and y value are the center of a sprite and in the upper left corner of a rectangle: The x and y value are the center of a sprite and in the upper left corner of a rectangle
@@ -7800,6 +7951,56 @@ en:
         ? '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'
         : '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'
         When run, where will the sprite <code>mySprite</code> be located?: When run, where will the sprite <code>mySprite</code> be located?
+      CSD U3 Test clean code:
+        ? A team of friends is creating a game together.  They want to make sure that everyone can understand the code that the others write.  Which of the following will make it easier for them to read each other's code? (Choose TWO)
+        : A team of friends is creating a game together.  They want to make sure that everyone can understand the code that the others write.  Which of the following will make it easier for them to read each other's code? (Choose TWO)
+        Declare variables outside of the draw loop, but update them inside the draw loop: Declare variables outside of the draw loop, but update them inside the draw loop
+        Give variables and functions names that make sense: Give variables and functions names that make sense
+        Include descriptive comments in the program: Include descriptive comments in the program
+        Question 1: Question 1
+        Use the counter pattern to increase the score: Use the counter pattern to increase the score
+        Use watchers to keep track of variable and sprite property values: Use watchers to keep track of variable and sprite property values
+      CSD U3 Test debugging:
+        1 and 2: 1 and 2
+        1 and 3: 1 and 3
+        1, 2, and 3: 1, 2, and 3
+        2 and 3: 2 and 3
+        3 only: 3 only
+        ? |-
+          A team is making a platform jumper game.  The background and platforms are working, but the main character won't appear.  What might be the problem?<br />
+          <ol><li>They forgot to call `drawSprites` in the draw loop.</li>
+          <li>The character sprite is drawn behind the background sprite.</li>
+          <li>The character sprite is drawn off the screen.</li></ol>
+        : |-
+          A team is making a platform jumper game.  The background and platforms are working, but the main character won't appear.  What might be the problem?<br />
+          <ol><li>They forgot to call `drawSprites` in the draw loop.</li>
+          <li>The character sprite is drawn behind the background sprite.</li>
+          <li>The character sprite is drawn off the screen.</li></ol>
+        Question 5: Question 5
+      CSD U3 Test functions:
+        Question 2: Question 2
+        They are a good way to store user input to use later in the program.: They are a good way to store user input to use later in the program.
+        They are necessary for any program to run.: They are necessary for any program to run.
+        They keep the code organized and easy to understand.: They keep the code organized and easy to understand.
+        They let you use the same code in different places in the program without having to rewrite it.: They let you use the same code in different places in the program without having to rewrite it.
+        They make the program run faster.: They make the program run faster.
+        Why do programmers like to use functions? (Choose TWO): Why do programmers like to use functions? (Choose TWO)
+      CSD U3 Test planning:
+        How many lines of code you want to write.: How many lines of code you want to write.
+        How the user will interact with the program.: How the user will interact with the program.
+        Question 4: Question 4
+        The general purpose and design of the program.: The general purpose and design of the program.
+        What kinds of variables and functions you will need to make it work.: What kinds of variables and functions you will need to make it work.
+        What types of media, such as pictures or sounds, you will need.: What types of media, such as pictures or sounds, you will need.
+        Which of the following is NOT best to decide before beginning to write code for a program?: Which of the following is NOT best to decide before beginning to write code for a program?
+      CSD U3 Test variables:
+        '110': '110'
+        '20': '20'
+        '90': '90'
+        None, because the program will have an error.: None, because the program will have an error.
+        Question 3: Question 3
+        There will be two apples in two different positions.: There will be two apples in two different positions.
+        What is the apple's x position at the end of this program?: What is the apple's x position at the end of this program?
       CSD U3 Variables Reassign Predict Multi:
         A 10 will be displayed. Once a variable is full you cannot put another value in it: A 10 will be displayed. Once a variable is full you cannot put another value in it
         A 20 will be displayed. New values replace old values in a variable: A 20 will be displayed. New values replace old values in a variable

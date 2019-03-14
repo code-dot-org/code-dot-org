@@ -243,6 +243,10 @@ class TopInstructions extends Component {
       RESIZER_HEIGHT;
 
     this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    // Force instruction area to resize to show full feedback area
+    if (this.state.tabSelected === TabType.COMMENTS) {
+      this.props.setInstructionsRenderedHeight(maxNeededHeight);
+    }
     return maxNeededHeight;
   };
 
@@ -271,15 +275,18 @@ class TopInstructions extends Component {
   };
 
   handleHelpTabClick = () => {
-    this.setState({tabSelected: TabType.RESOURCES});
+    this.setState({tabSelected: TabType.RESOURCES}, this.adjustMaxNeededHeight);
   };
 
   handleInstructionTabClick = () => {
-    this.setState({tabSelected: TabType.INSTRUCTIONS});
+    this.setState(
+      {tabSelected: TabType.INSTRUCTIONS},
+      this.adjustMaxNeededHeight
+    );
   };
 
   handleCommentTabClick = () => {
-    this.setState({tabSelected: TabType.COMMENTS});
+    this.setState({tabSelected: TabType.COMMENTS}, this.adjustMaxNeededHeight);
   };
 
   render() {
@@ -397,9 +404,10 @@ class TopInstructions extends Component {
                 referenceLinks={this.props.referenceLinks}
               />
             )}
-            {this.state.tabSelected === TabType.COMMENTS && (
+            {displayFeedback && (
               <TeacherFeedback
                 user={this.props.user}
+                visible={this.state.tabSelected === TabType.COMMENTS}
                 disabledMode={
                   this.props.viewAs === ViewType.Student ||
                   !this.state.displayFeedbackTeacherFacing
