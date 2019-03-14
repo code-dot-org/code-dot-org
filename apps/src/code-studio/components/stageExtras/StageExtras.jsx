@@ -20,22 +20,31 @@ export default class StageExtras extends React.Component {
     nextLevelPath: PropTypes.string.isRequired,
     showProjectWidget: PropTypes.bool,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
-    bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels))
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels)),
+    sectionId: PropTypes.number,
+    userId: PropTypes.number
   };
 
   render() {
-    const nextMessage = /stage/.test(this.props.nextLevelPath)
-      ? msg.extrasNextLesson({number: this.props.stageNumber + 1})
+    const {
+      stageNumber,
+      nextLevelPath,
+      bonusLevels,
+      sectionId,
+      userId,
+      showProjectWidget,
+      projectTypes
+    } = this.props;
+    const nextMessage = /stage/.test(nextLevelPath)
+      ? msg.extrasNextLesson({number: stageNumber + 1})
       : msg.extrasNextFinish();
 
     return (
       <div>
-        <h1>
-          {msg.extrasStageNumberCompleted({number: this.props.stageNumber})}
-        </h1>
+        <h1>{msg.extrasStageNumberCompleted({number: stageNumber})}</h1>
 
         <h2 style={styles.h2}>{msg.continue()}</h2>
-        <a href={this.props.nextLevelPath}>
+        <a href={nextLevelPath}>
           <button
             className="btn btn-large btn-primary"
             style={{marginBottom: 20}}
@@ -44,15 +53,18 @@ export default class StageExtras extends React.Component {
           </button>
         </a>
 
-        {this.props.bonusLevels &&
-        Object.keys(this.props.bonusLevels).length > 0 ? (
-          <BonusLevels bonusLevels={this.props.bonusLevels} />
+        {bonusLevels && Object.keys(bonusLevels).length > 0 ? (
+          <BonusLevels
+            bonusLevels={bonusLevels}
+            sectionId={sectionId}
+            userId={userId}
+          />
         ) : (
           <p>{msg.extrasNoBonusLevels()}</p>
         )}
 
-        {this.props.showProjectWidget && (
-          <ProjectWidgetWithData projectTypes={this.props.projectTypes} />
+        {showProjectWidget && (
+          <ProjectWidgetWithData projectTypes={projectTypes} />
         )}
         <div className="clear" />
       </div>
