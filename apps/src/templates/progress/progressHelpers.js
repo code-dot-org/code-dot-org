@@ -105,6 +105,9 @@ export function getIconForLevel(level) {
  * following buckets: total, completed, imperfect, incomplete, attempted.
  */
 export function summarizeProgressInStage(levelsWithStatus) {
+  // Filter any bonus levels as they do not count toward progress.
+  levelsWithStatus = levelsWithStatus.filter(level => !level.bonus);
+
   // Get counts of statuses
   let statusCounts = {
     total: levelsWithStatus.length,
