@@ -347,6 +347,26 @@ EOS
     assert_nil level.embed
   end
 
+  test 'encrypted level properties are preserved after export and import' do
+    level = Level.create(name: 'test encrypted properties', short_instructions: 'test', type: 'Artist', encrypted: true, disable_sharing: true)
+    assert level.disable_sharing
+    assert level.encrypted
+
+    level_xml = level.to_xml
+    n = Nokogiri::XML(level_xml, &:noblanks)
+    level_config = n.xpath('//../config').first.child
+    encrypted_hash = JSON.parse(level_config.text)
+    assert encrypted_hash['encrypted_properties']&.is_a? String
+    refute encrypted_hash['properties']
+
+    level.disable_sharing = false
+    decrypted_hash = level.load_level_xml(n)
+    refute decrypted_hash['encrypted_properties']
+    assert decrypted_hash['properties']
+    assert decrypted_hash['properties']['disable_sharing']
+    assert decrypted_hash['properties']['encrypted']
+  end
+
   test 'project template level' do
     template_level = Blockly.create(name: 'project_template')
     template_level.start_blocks = '<xml/>'
