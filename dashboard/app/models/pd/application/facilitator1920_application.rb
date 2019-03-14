@@ -128,6 +128,10 @@ module Pd::Application
     def log_status
       self.status_log ||= []
       status_log.push({status: status, at: Time.zone.now})
+    end
+
+    def lock!
+      super
 
       # delete any unsent emails, and queue a new status email if appropriate
       emails.unsent.destroy_all
