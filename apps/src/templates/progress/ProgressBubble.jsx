@@ -196,7 +196,7 @@ class ProgressBubble extends React.Component {
           <div style={style} className="uitest-bubble">
             <div
               style={{
-                fontSize: level.paired ? 14 : 16,
+                fontSize: level.paired || level.bonus ? 14 : 16,
                 ...styles.contents,
                 ...(level.isConceptLevel && styles.diamondContents)
               }}
@@ -205,9 +205,7 @@ class ProgressBubble extends React.Component {
               {pairingIconEnabled && level.paired && (
                 <FontAwesome icon="users" />
               )}
-              {level.bonus && (
-                <FontAwesome icon="flag-checkered" style={{fontSize: 15}} />
-              )}
+              {level.bonus && <FontAwesome icon="flag-checkered" />}
               {!hideNumber && (
                 <span>
                   {/*Text will not show up for smallBubble, but its presence
