@@ -4,31 +4,29 @@ import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import DialogFooter from '../templates/teacherDashboard/DialogFooter';
 import Button from '../templates/Button';
 import i18n from '@cdo/locale';
+import {connect} from 'react-redux';
+import {actions} from './redux/applab';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
-export default class RedirectDialog extends React.Component {
+class RedirectDialog extends React.Component {
   static propTypes = {
-    url: PropTypes.string.isRequired,
-    approved: PropTypes.bool,
-    isOpen: PropTypes.bool
-  };
-
-  state = {
-    isOpen: this.props.isOpen
-  };
-
-  closeDialog = () => {
-    this.setState({isOpen: false});
+    handleClose: PropTypes.func,
+    redirects: PropTypes.array
   };
 
   render() {
     let title, body, footer;
+    if (!(this.props.redirects && this.props.redirects.length > 0)) {
+      return null;
+    }
 
-    if (this.props.approved) {
+    let approved = this.props.redirects[0].approved;
+    let url = this.props.redirects[0].url;
+    if (approved) {
       title = i18n.redirectTitle();
       body = (
         <div>
-          <h2>{i18n.redirectConfirm({url: this.props.url})}</h2>
+          <h2>{i18n.redirectConfirm({url: url})}</h2>
           <p>
             {i18n.redirectExplanation()}
             <span>
@@ -42,12 +40,12 @@ export default class RedirectDialog extends React.Component {
       footer = (
         <DialogFooter>
           <Button
-            onClick={this.closeDialog}
+            onClick={this.props.handleClose}
             text={i18n.goBack()}
             color={Button.ButtonColor.gray}
           />
           <Button
-            href={this.props.url}
+            href={url}
             target={'_blank'}
             text={i18n.continue()}
             color={Button.ButtonColor.orange}
@@ -60,7 +58,7 @@ export default class RedirectDialog extends React.Component {
       footer = (
         <DialogFooter rightAlign>
           <Button
-            onClick={this.closeDialog}
+            onClick={this.props.handleClose}
             text={i18n.dialogOK()}
             color={Button.ButtonColor.gray}
           />
@@ -69,7 +67,7 @@ export default class RedirectDialog extends React.Component {
     }
 
     return (
-      <Dialog title={title} isOpen={this.state.isOpen}>
+      <Dialog title={title} isOpen handleClose={this.props.handleClose}>
         <Body>
           {body}
           {footer}
@@ -78,3 +76,15 @@ export default class RedirectDialog extends React.Component {
     );
   }
 }
+
+export const UnconnectedRedirectDialog = RedirectDialog;
+export default connect(
+  state => ({
+    redirects: state.redirectDisplay
+  }),
+  dispatch => ({
+    handleClose() {
+      dispatch(actions.dismissRedirectNotice());
+    }
+  })
+)(UnconnectedRedirectDialog);

@@ -12,6 +12,7 @@ import CodeWorkspace from '../templates/CodeWorkspace';
 import DataWorkspace from '../storage/dataBrowser/DataWorkspace';
 import ProtectedDesignWorkspace from './ProtectedDesignWorkspace';
 import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
+import RedirectDialog from '@cdo/apps/applab/RedirectDialog';
 
 /**
  * Top-level React wrapper for App Lab.
@@ -45,6 +46,7 @@ class AppLabView extends React.Component {
       <StudioAppWrapper>
         <ImportProjectDialog />
         <ImportScreensDialog />
+        <RedirectDialog />
         <ApplabVisualizationColumn
           isEditingProject={this.props.isEditingProject}
           screenIds={this.props.screenIds}
