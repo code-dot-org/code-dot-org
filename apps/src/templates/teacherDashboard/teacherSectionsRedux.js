@@ -880,6 +880,7 @@ export function assignedScriptName(state) {
 }
 
 export function stageExtrasEnabled(state, sectionId) {
+  console.log(getRoot(state));
   const section = getRoot(state).sections[sectionId];
   return section && section.stageExtras;
 }
