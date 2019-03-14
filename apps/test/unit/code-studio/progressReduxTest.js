@@ -1055,6 +1055,36 @@ describe('progressReduxTest', () => {
         }
       ]);
     });
+
+    it('includes bonus levels if includeBonusLevels is true', () => {
+      const bonusLevel = {
+        ids: [2106],
+        title: 1,
+        bonus: true
+      };
+      const state = {
+        stages: [
+          {
+            flex_category: 'Content',
+            levels: [bonusLevel],
+            lessons: []
+          }
+        ],
+        levelProgress: {},
+        focusAreaStageIds: []
+      };
+
+      let categories = categorizedLessons(state, false);
+      assert.equal(categories.length, 1);
+      assert.equal(categories[0].levels.length, 1);
+      assert.equal(categories[0].levels[0].length, 0);
+
+      categories = categorizedLessons(state, true);
+      assert.equal(categories.length, 1);
+      assert.equal(categories[0].levels.length, 1);
+      assert.equal(categories[0].levels[0].length, 1);
+      assert.equal(categories[0].levels[0][0]['bonus'], true);
+    });
   });
 
   describe('processedStages', () => {
