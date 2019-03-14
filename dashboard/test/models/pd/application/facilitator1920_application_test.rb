@@ -307,32 +307,41 @@ module Pd::Application
       assert_equal ['csd', 'csf'], Facilitator1920Application::FILTERED_LABELS.keys
     end
 
-    test 'setting an auto-email status queues up an email' do
+    test 'locking an application with an auto-email status queues up an email' do
       assert_empty @application.emails
-
       Facilitator1920Application::AUTO_EMAIL_STATUSES.each do |status|
-        @application.expects(:queue_email).with(status)
+        @application.unlock!
         @application.update!(status: status)
+        @application.expects(:queue_email).with(status)
+        @application.lock!
       end
     end
 
-    test 'setting a non auto-email status does not queue up a status email' do
+    test 'locking an application with accepted status does not queue up an email' do
+      assert_empty @application.emails
+      @application.expects(:queue_email).never
+      @application.update!(status: 'accepted')
+      @application.lock!
+    end
+
+    test 'setting status does not queue up a status email' do
       assert_empty @application.emails
       @application.expects(:queue_email).never
 
-      non_auto_email_statuses = Facilitator1920Application.statuses - Facilitator1920Application::AUTO_EMAIL_STATUSES
-      non_auto_email_statuses.each do |status|
+      Facilitator1920Application.statuses.each do |status|
         @application.update!(status: status)
       end
     end
 
-    test 'setting an auto-email status deletes unsent emails for the application' do
+    test 'locking an application with an auto-email status deletes unsent emails for the application' do
       Facilitator1920Application::AUTO_EMAIL_STATUSES.each do |status|
+        @application.unlock!
         unrelated_email = create :pd_application_email
         associated_sent_email = create :pd_application_email, application: @application, sent_at: Time.now
         associated_unsent_email = create :pd_application_email, application: @application
 
         @application.update!(status: status)
+        @application.lock!
         assert Email.exists?(unrelated_email.id)
         assert Email.exists?(associated_sent_email.id)
         refute Email.exists?(associated_unsent_email.id)
