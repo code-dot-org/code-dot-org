@@ -477,8 +477,7 @@ const levelWithStatus = (
     status: statusForLevel(level, levelProgress),
     isCurrentLevel: isCurrentLevel(currentLevelId, level),
     paired: levelPairing[level.activeId],
-    readonlyAnswers: level.readonly_answers,
-    bonus: level.bonus
+    readonlyAnswers: level.readonly_answers
   };
 };
 
