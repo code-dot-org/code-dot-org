@@ -123,3 +123,6 @@ level 'U4 L13 Practice PT 4', progression: 'Add onEvents'
 stage 'Practice PT Part 3'
 level 'U4 L14 Practice PT 1', progression: 'Test Your Decision Maker App'
 level 'U4 L14 Practice PT 2', progression: 'Submit Your Decision Maker App'
+
+stage 'Unit 4 Assessment', lockable: true
+assessment 'CSP 20-21 Unit 4 Assessment'
