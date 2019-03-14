@@ -127,6 +127,15 @@ Resources:
           - Effect: Allow
             Action: 'firehose:PutRecord'
             Resource: !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
+          # Send messages to SQS queues for asynchronous processing.
+          - Effect: Allow
+            Action: 'sqs:SendMessage'
+            Resource:
+<% unless daemon -%>
+              - !GetAtt ActivitiesQueue.Arn
+<% end -%>
+              # TODO: Import pd_workshop resources into stack.
+              - !Sub "arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:pd_workshop-<%=environment%>"
           # General s3 access.
           # TODO: Further restrict permissions to grant least privilege.
           - Effect: Allow
@@ -517,7 +526,6 @@ Resources:
               # SQS queues for Asynchronous batch processing by the `process_queues` service.
               - Effect: Allow
                 Action:
-                  - 'sqs:SendMessage'
                   - 'sqs:ReceiveMessage'
                   - 'sqs:DeleteMessageBatch'
                   - 'sqs:DeleteMessage'
