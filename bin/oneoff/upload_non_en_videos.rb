@@ -9,7 +9,6 @@ require 'googleauth'
 require 'googleauth/stores/file_token_store'
 require 'csv'
 require 'fileutils'
-gem 'google-api-client', '>0.7'
 require 'rubygems'
 require 'csv'
 
@@ -25,16 +24,13 @@ MAP_FILE = 'test.csv'
 DRY_RUN = true
 LOCALE = 'es-MX'
 
-APPLICATION_NAME = 'YouTube Data API Ruby Tests'
+APPLICATION_NAME = 'Dubbed Video Batch Upload'
 
 # REPLACE WITH NAME/LOCATION OF YOUR client_secrets.json FILE
 CLIENT_SECRETS_PATH = ''
 
 # This is the URI so that we can authorize from a browser. Don't change this.
 REDIRECT_URI = 'urn:ietf:wg:oauth:2.0:oob'
-
-# REPLACE FINAL ARGUMENT WITH FILE WHERE CREDENTIALS WILL BE STORED
-CREDENTIALS_PATH = File.join(Dir.home, '.credentials', "youtube-ruby-snippet-tests.yaml")
 
 SCOPE = Google::Apis::YoutubeV3::AUTH_YOUTUBE_UPLOAD
 
