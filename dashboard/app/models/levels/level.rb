@@ -68,6 +68,7 @@ class Level < ActiveRecord::Base
     rubric_approaches
     rubric_no_evidence
     mini_rubric
+    encrypted
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
