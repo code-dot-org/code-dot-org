@@ -210,7 +210,7 @@ class ProgressBubble extends React.Component {
               )}
               {!hideNumber && (
                 <span>
-                  {/*Text will not show up for smallBubble, but it's presence
+                  {/*Text will not show up for smallBubble, but its presence
                     causes bubble to be properly aligned vertically
                     */}
                   {smallBubble ? '' : number}
