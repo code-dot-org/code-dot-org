@@ -19,6 +19,15 @@ export default class FieldGroup extends React.Component {
 
   handleChange(event) {
     const value = event.target.value;
+    if (this.props.type === 'number') {
+      // For browsers that don't implement the restriction to a number, treating
+      // the input as a text field, this regular expression restricts input to
+      // digits, a single decimal point, and an optional minus sign at the
+      // beginning.
+      if (!value.match(/^-?[0-9]*(\.?)[0-9]*$/)) {
+        return;
+      }
+    }
     this.props.onChange &&
       this.props.onChange({
         [this.props.id]: value
@@ -78,6 +87,7 @@ FieldGroup.defaultProps = {
 
 FieldGroup.propTypes = {
   id: PropTypes.string.isRequired,
+  type: PropTypes.string,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   required: PropTypes.bool,
   validationState: PropTypes.string,
