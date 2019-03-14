@@ -244,14 +244,14 @@ class TeacherFeedback extends Component {
 
     const rubricLevels = ['exceeds', 'meets', 'approaches', 'noEvidence'];
 
-    // Instead of unmounting the component when switching tabs hide and show it
+    // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs
-    const tabArea = this.props.visible
+    const tabVisible = this.props.visible
       ? styles.tabAreaVisible
       : styles.tabAreaHidden;
 
     return (
-      <div style={tabArea}>
+      <div style={tabVisible}>
         {this.state.errorState === ErrorType.Load && (
           <span>
             <i className="fa fa-warning" style={styles.errorIcon} />
