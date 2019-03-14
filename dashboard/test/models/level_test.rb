@@ -348,7 +348,7 @@ EOS
   end
 
   test 'encrypted level properties are preserved after export and import' do
-    level = Level.create(name: 'test encrypted properties', short_instructions: 'test', type: 'Artist', encrypted: true, disable_sharing: true)
+    level = Level.create(name: 'test encrypted properties', short_instructions: 'test', type: 'Artist', encrypted: true, disable_sharing: true, notes: 'original notes')
     assert level.disable_sharing
     assert level.encrypted
 
@@ -358,13 +358,19 @@ EOS
     encrypted_hash = JSON.parse(level_config.text)
     assert encrypted_hash['encrypted_properties']&.is_a? String
     refute encrypted_hash['properties']
+    assert encrypted_hash['encrypted_notes']&.is_a? String
+    refute encrypted_hash['notes']
+
 
     level.disable_sharing = false
+    level.notes = nil
     decrypted_hash = level.load_level_xml(n)
     refute decrypted_hash['encrypted_properties']
     assert decrypted_hash['properties']
     assert decrypted_hash['properties']['disable_sharing']
     assert decrypted_hash['properties']['encrypted']
+    refute decrypted_hash['encrypted_notes']
+    assert_equal decrypted_hash['notes'], 'original notes'
   end
 
   test 'project template level' do
