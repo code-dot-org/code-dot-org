@@ -795,6 +795,18 @@ el:
             '"w"': ς
             '"x"': x
             '"z"': ζ
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': όριο
+            '"inner"': εσωτερικό τετράγωνο
+            '"circle"': κύκλος
+            '"grid"': πλέγμα
+            '"row"': γραμμή
+            '"column"': στήλη
+            '"x"': χιαστί
+            '"plus"': συν
+            '"random"': τυχαίο
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:

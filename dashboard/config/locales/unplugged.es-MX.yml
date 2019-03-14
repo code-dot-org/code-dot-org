@@ -122,7 +122,7 @@ es-MX:
           papel esencial.
       BuildingAFoundation:
         title: Construir una base
-        desc: Los estudiantes construyen una estructura utilizando solamente lo suministrado.
+        desc: Los estudiantes construyen una estructura utilizando solamente lo provisto.
           Las estructuras deben completar una tarea (alcanzar una cierta altura o
           soportar un cierto peso), y los estudiantes discuten la idea de ser persistente
           cuando las cosas se complican.
@@ -291,7 +291,7 @@ es-MX:
           esta vez con ciclos!
       courseC_Unplugged_ScreenOutTheMean:
         title: Actividad desconectada
-        desc: Hoy aprenderas que significa que alguién esté en linea.
+        desc: Hoy aprenderás qué significa que alguien esté en linea.
       courseD_unplugged_digitalCitizenship:
         title: Actividad desconectada
         desc: Hoy aprenderas lo que significa ser un ciudadano digital.
@@ -300,7 +300,7 @@ es-MX:
         desc: "¡Hoy aprenderás la diferencia entre información privada y personal!"
       courseF_unplugged_powerOfWords:
         title: Actividad desconectada
-        desc: Hoy aprenderas que significa que alguién esté en linea.
+        desc: Hoy aprenderás qué significa que alguien esté en linea.
       deeper learning description:
         desc: 'falta la traducción: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
@@ -329,7 +329,7 @@ es-MX:
           sobre ellos en línea crea una huella dactilar o un "rastro" que tiene consecuencias.
       courseC_unplugged_buildingAFoundation:
         title: Construir una base
-        desc: Los estudiantes construyen una estructura utilizando solamente lo suministrado.
+        desc: Los estudiantes construyen una estructura utilizando solamente lo provisto.
           Las estructuras deben completar una tarea (alcanzar una cierta altura o
           soportar un cierto peso), y los estudiantes discuten la idea de ser persistente
           cuando las cosas se complican.
@@ -500,7 +500,7 @@ es-MX:
         desc: Hoy aprenderas lo que significa ser un ciudadano digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Actividad desconectada
-        desc: Hoy aprenderas que significa que alguién esté en linea.
+        desc: Hoy aprenderás qué significa que alguien esté en linea.
       Conditionals_2018:
         title: Condicionales
         desc: Para aprender acerca de las instrucciones condicionales, los estudiantes
@@ -553,10 +553,9 @@ es-MX:
           importante para ser un ciudadano digital ético.
       RelayProgramming_2018:
         title: Programación de relevos
-        desc: Esta actividad comenzará con una lección breve sobre depuración y persistencia,
-          luego pasará rápidamente a una carrera contrarreloj mientras los estudiantes
-          se agrupan en equipos y trabajan juntos para escribir una instrucción de
-          un programa a la vez.
+        desc: Esta actividad comenzará con una breve lección sobre debugging y persistencia,
+          luego pasará rápidamente a una carrera contrarreloj a medida que los estudiantes
+          se dividen en equipos y trabajan juntos para escribir un programa a la vez.
       courseB_unplugged_MRF_2019:
         title: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
         desc: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
@@ -587,10 +586,9 @@ es-MX:
           en la reproducción de un dibujo.
       RelayProgramming_2018_2019:
         title: Programación de relevos
-        desc: Esta actividad comenzará con una lección breve sobre depuración y persistencia,
-          luego pasará rápidamente a una carrera contrarreloj mientras los estudiantes
-          se agrupan en equipos y trabajan juntos para escribir una instrucción de
-          un programa a la vez.
+        desc: Esta actividad comenzará con una breve lección sobre debugging y persistencia,
+          luego pasará rápidamente a una carrera contrarreloj a medida que los estudiantes
+          se dividen en equipos y trabajan juntos para escribir un programa a la vez.
       courseD_unplugged_digitalCitizenship_2019:
         title: Actividad desconectada
         desc: Hoy aprenderas lo que significa ser un ciudadano digital.
@@ -629,7 +627,7 @@ es-MX:
           una simple coreografía, después se les pedirá que la repitan.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Actividad desconectada
-        desc: Hoy aprenderas que significa que alguién esté en linea.
+        desc: Hoy aprenderás qué significa que alguien esté en linea.
       BigEvent_2019:
         title: El gran evento
         desc: Se presenta a los estudiantes el concepto de "eventos" en programación,

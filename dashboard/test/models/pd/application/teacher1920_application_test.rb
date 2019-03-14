@@ -993,16 +993,13 @@ module Pd::Application
       application = create :pd_teacher1920_application
       assert_nil application.scholarship_status
 
-      assert_creates(Pd::ScholarshipInfo) do
-        application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
-      end
+      application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
       assert_equal Pd::ScholarshipInfoConstants::NO, application.scholarship_status
 
       refute application.update_scholarship_status 'invalid status'
+      assert_equal Pd::ScholarshipInfoConstants::NO, application.scholarship_status
 
-      refute_creates(Pd::ScholarshipInfo) do
-        application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
-      end
+      application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
       assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, application.scholarship_status
     end
 

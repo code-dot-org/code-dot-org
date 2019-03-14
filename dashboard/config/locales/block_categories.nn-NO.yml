@@ -24,20 +24,20 @@ nn:
       Picker: Veljar
       Comment: Kommentar
       'Variables ': 'Variablar '
+      Default: Standard
+      Behaviors: Atferd
+      Locations: Stadar
       everythingelse: resten
       World: Verd
       Sprites: Sprites
       Location: Stad
-      Behaviors: Atferd
       numbers: tal
       Numbers: Tal
       Input: Inngang
-      Default: Standard
       Dancers: Dansarar
       Groups: Grupper
       Advanced: Avansert
       Start: Start
-      Locations: Stadar
       Music: Musikk
       Dancing: Dansing
       Sprite: Sprite
