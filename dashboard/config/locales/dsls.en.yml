@@ -15647,9 +15647,6 @@ en:
         '200': '200'
       csp-20-21-u4-assess-variables trace 2:
         '10': '10'
-        '100': '100'
-        '20': '20'
-        '200': '200'
         '25': '25'
         '30': '30'
         '35': '35'
@@ -15659,24 +15656,12 @@ en:
         '12': '12'
         '13': '13'
         '16': '16'
-        '25': '25'
-        '30': '30'
-        '35': '35'
       csp-20-21-u4-assess-variables trace 4:
-        '10': '10'
-        '11': '11'
-        '12': '12'
-        '13': '13'
-        '16': '16'
         30 or more: 30 or more
         Less than 10: Less than 10
         Less than 20: Less than 20
         Less than 30: Less than 30
       csp-20-21-u4-assess-variables trace 5:
-        30 or more: 30 or more
-        Less than 10: Less than 10
-        Less than 20: Less than 20
-        Less than 30: Less than 30
         Output A: Output A
         Output B: Output B
         Output C: Output C
