@@ -826,14 +826,25 @@ Applab.exportApp = function(expoOpts) {
   var html = document.getElementById('divApplab').outerHTML;
   studioApp().resetButtonClick();
 
-  const {mode, expoSnackId} = expoOpts || {};
+  // TODO: find another way to get this info that doesn't rely on globals.
+  const appName =
+    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app';
+
+  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
   if (mode === 'expoGenerateApk') {
-    return Exporter.generateExpoApk(expoSnackId, studioApp().config);
+    return Exporter.generateExpoApk(
+      {
+        appName,
+        expoSnackId,
+        iconUri,
+        splashImageUri
+      },
+      studioApp().config
+    );
   }
 
   return Exporter.exportApp(
-    // TODO: find another way to get this info that doesn't rely on globals.
-    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app',
+    appName,
     studioApp().editor.getValue(),
     html,
     expoOpts,
