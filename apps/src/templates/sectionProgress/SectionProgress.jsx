@@ -28,6 +28,7 @@ import {
   setScriptId,
   validScriptPropType
 } from '@cdo/apps/redux/scriptSelectionRedux';
+import {stageExtrasEnabled} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   heading: {
@@ -65,7 +66,8 @@ class SectionProgress extends Component {
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
-    isLoadingProgress: PropTypes.bool.isRequired
+    isLoadingProgress: PropTypes.bool.isRequired,
+    stageExtrasEnabled: PropTypes.bool
   };
 
   componentDidMount() {
@@ -112,7 +114,8 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      isLoadingProgress
+      isLoadingProgress,
+      stageExtrasEnabled
     } = this.props;
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
@@ -172,6 +175,7 @@ class SectionProgress extends Component {
             <div id="uitest-detail-view">
               <VirtualizedDetailView
                 section={section}
+                stageExtrasEnabled={stageExtrasEnabled}
                 scriptData={scriptData}
                 onScroll={this.afterScroll}
               />
@@ -197,7 +201,11 @@ export default connect(
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentScriptData(state),
     studentLevelProgress: getCurrentProgress(state),
-    isLoadingProgress: state.sectionProgress.isLoadingProgress
+    isLoadingProgress: state.sectionProgress.isLoadingProgress,
+    stageExtrasEnabled: stageExtrasEnabled(
+      state,
+      state.teacherSections.selectedSectionId
+    )
   }),
   dispatch => ({
     loadScript(scriptId) {

@@ -79,6 +79,10 @@ const styles = {
   diamondContents: {
     // undo the rotation from the parent
     transform: 'rotate(-45deg)'
+  },
+  disabledStageExtras: {
+    backgroundColor: color.lighter_gray,
+    color: color.white
   }
 };
 
@@ -101,7 +105,8 @@ class ProgressBubble extends React.Component {
     currentLocation: PropTypes.object.isRequired,
     stageTrophyEnabled: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool,
-    hideToolTips: PropTypes.bool
+    hideToolTips: PropTypes.bool,
+    stageExtrasEnabled: PropTypes.bool
   };
 
   static defaultProps = {
@@ -133,7 +138,8 @@ class ProgressBubble extends React.Component {
       ...(smallBubble && styles.small),
       ...(level.isConceptLevel &&
         (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
-      ...levelProgressStyle(level, disabled)
+      ...levelProgressStyle(level, disabled),
+      ...(disabled && level.bonus && styles.disabledStageExtras)
     };
 
     let href = '';
