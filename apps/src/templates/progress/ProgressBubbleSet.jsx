@@ -69,17 +69,25 @@ class ProgressBubbleSet extends React.Component {
       PropTypes.number
     ]),
     hideToolTips: PropTypes.bool,
-    pairingIconEnabled: PropTypes.bool
+    pairingIconEnabled: PropTypes.bool,
+    stageExtrasEnabled: PropTypes.bool
+  };
+
+  bubbleDisabled = level => {
+    const {disabled, stageExtrasEnabled} = this.props;
+    if (disabled) {
+      return disabled;
+    }
+    // Bonus level (aka stage extras) bubble is disabled if stage extras are disabled
+    // for the current section.
+    if (!stageExtrasEnabled && level.bonus) {
+      return true;
+    }
+    return false;
   };
 
   render() {
-    const {
-      levels,
-      disabled,
-      style,
-      selectedSectionId,
-      selectedStudentId
-    } = this.props;
+    const {levels, style, selectedSectionId, selectedStudentId} = this.props;
 
     return (
       <div style={{...styles.main, ...style}}>
@@ -103,7 +111,7 @@ class ProgressBubbleSet extends React.Component {
             >
               <ProgressBubble
                 level={level}
-                disabled={disabled}
+                disabled={this.bubbleDisabled(level)}
                 smallBubble={false}
                 selectedSectionId={selectedSectionId}
                 selectedStudentId={selectedStudentId}
