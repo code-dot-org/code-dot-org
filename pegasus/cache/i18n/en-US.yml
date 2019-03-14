@@ -1618,6 +1618,8 @@
   hoc2018_mc_educators_box4_title: "Access more computer science resources"
   hoc2018_mc_educators_box4_desc: "Create change in your community with digital skills and computer science education resources from Microsoft."
   hoc2018_mc_educators_box4_button: "Explore resources"
+  hoc2018_mc_with_microsoft: "In partnership with"
+  hoc2018_mc_thank_microsoft: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
   hoc2018_mc_watch_videos: "Before you get started, watch one of these inspirational videos"
   hoc2018_mc_videos_more: "More <a href='%{inspiring_videos_playlist}'>inspirational videos</a> featuring role models and celebrities"
   hoc2018_mc_careers_more: "More <a href='%{careers_url}' target='_blank'>inspirational videos</a> featuring professionals in technology fields"
