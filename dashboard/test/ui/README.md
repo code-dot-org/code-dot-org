@@ -47,8 +47,8 @@ You can find the values for these settings in your saucelabs account. It says "w
 
 If you want to run tests on saucelabs against localhost you need to set up your tunnel:
 
-1. Download and run the [saucelabs tunnel](https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect+Proxy)
-2. `~/bin/sc/ -u $SAUCELABS_USERNAME -k SAUCELABS_ACCESS_KEY` (the above documentation link has a example command line with your credentials that you can copy)
+1. Login to Saucelabs and download the [tunnel](https://app.saucelabs.com/tunnels)
+2. Start the tunnel via `~/bin/sc/ -u $SAUCELABS_USERNAME -k SAUCELABS_ACCESS_KEY`. Notes: The link above has an example command line with your credentials that you can copy. `~/bin/sc/` should be replaced with the path that points to the tunnel software downloaded in step 1.
 3. `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
 
 You can now watch your tests run at the [saucelabs dashboard](https://saucelabs.com/beta/dashboard/tests)
