@@ -11,11 +11,15 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
 1. `cd` to the directory of this README.
 2. if this is your first time running tests via chromedriver, run `bundle install` and then `rbenv rehash`
 3. `./runner.rb -l`
-  - `-l` makes it use the chromedriver, and specifies local dashboard and pegasus domains
-  - By default, the tests run in "headless" mode, meaning with no visible chrome window.
-  - **If you need to see what's happening,** add the `--headed` flag. A chrome window will pop up in the background in which you can watch the tests happen
+
+- `-l` makes it use the chromedriver, and specifies local dashboard and pegasus domains
+- By default, the tests run in "headless" mode, meaning with no visible chrome window.
+- **If you need to see what's happening,** add the `--headed` flag. A chrome window will pop up in the background in which you can watch the tests happen
+
 4. In a separate window, run `tail -f *.log` from the `log` subdirectory to watch the results of your tests
-  - `-f` streams the log in your shell, so it will be updated as new lines are written
+
+- `-f` streams the log in your shell, so it will be updated as new lines are written
+
 5. To run a single ui test, you can simply run `rake test:ui feature=path/to/test.feature`
 
 If you get the error `unknown error: cannot get automation extension`, follow the [chromedriver-helper instructions](https://github.com/flavorjones/chromedriver-helper#updating-to-latest-chromedriver) to upgrade to latest chromedriver.
@@ -30,20 +34,20 @@ We currently have 120 available browsers, and the automated ui tests attempt to 
 
 Saucelabs requires credentials to be set in locals.yml first.
 
-````
+```
 # code-dot-org/locals.yml
 saucelabs_username: 'yourusername'
 saucelabs_authkey: 'xxxxxx-xxxx-xxxx-xxx-xxxxxxxxx'
 
-````
+```
 
-You can find the values for these settings in your saucelabs account.  It says "welcome, [username]" up top, and the access key is at the bottom of the grey box on the left.
+You can find the values for these settings in your saucelabs account. It says "welcome, [username]" up top, and the access key is at the bottom of the grey box on the left.
 
 #### Saucelabs tunnel
 
 If you want to run tests on saucelabs against localhost you need to set up your tunnel:
 
-1. Download and run the [saucelabs tunnel](https://docs.saucelabs.com/reference/sauce-connect/)
+1. Download and run the [saucelabs tunnel](https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect+Proxy)
 2. `~/bin/sc/ -u $SAUCELABS_USERNAME -k SAUCELABS_ACCESS_KEY` (the above documentation link has a example command line with your credentials that you can copy)
 3. `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
 
@@ -51,7 +55,7 @@ You can now watch your tests run at the [saucelabs dashboard](https://saucelabs.
 
 ## Options
 
-Here are some example command line options.  Run `./runner.rb --help` for a full list.
+Here are some example command line options. Run `./runner.rb --help` for a full list.
 
 Run all UI tests on all browsers against your local host (by default, tests point to staging.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
 
@@ -88,7 +92,7 @@ Run one feature in one saucelabs browser against your local machine with html ou
 
 Run **eyes tests** on one feature in one saucelabs browser against your local machine with html output (requires SauceConnect, described earlier)
 
-`./runner.rb -l -f features/angle_helper.feature -c ChromeLatestWin7 --html --eyes` 
+`./runner.rb -l -f features/angle_helper.feature -c ChromeLatestWin7 --html --eyes`
 
 ## Tips
 
@@ -97,5 +101,5 @@ Run **eyes tests** on one feature in one saucelabs browser against your local ma
 
 ## See Also
 
-* [Adding an Eyes Test](../../../docs/testing-with-applitools-eyes.md)
-* [General Testing Instructions](../../../TESTING.md)
+- [Adding an Eyes Test](../../../docs/testing-with-applitools-eyes.md)
+- [General Testing Instructions](../../../TESTING.md)
