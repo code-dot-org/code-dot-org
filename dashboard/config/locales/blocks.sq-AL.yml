@@ -170,6 +170,10 @@ sq:
             '"right"': djathtas
             '"space"': hapësirë
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': zakonshëm
       gamelab_locationDelta:
         options:
           DIR:

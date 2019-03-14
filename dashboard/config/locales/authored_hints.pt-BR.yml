@@ -4462,6 +4462,14 @@ pt-BR:
           </next>
           </block>
           </xml>
+      NEW Course 4 Bee For Loops 10a_authored_hint:
+        NEW_Course_4_Bee_For_Loops_10a_a: Você consegue encontrar um padrão entre
+          o número de passos que você precisa dar e o número de néctares para coletar?
+      NEW Course 4 Bee For Loops 7_authored_hint:
+        NEW_Course_4_Bee_For_Loops_7_a: |-
+          Tente fazer alguma matemática com a variável contadora.
+
+          O que você tem que fazer com o contador em cada flor para igualar a quantidade de néctar que você precisa coletar?
       NEW Course 4 Bee For Loops 8_authored_hint:
         NEW_Course_4_Bee_For_Loops_8_a: Se seu laço está fazendo contagem progressiva,
           o incremento é adicionado na sua variável contadora a cada repetição. Qual
@@ -4914,6 +4922,9 @@ pt-BR:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
+      course1_artist_loops_challenge2_authored_hint:
+        harvey_tictactoe: Você pode usar blocos `pular` para se mover para outros
+          espaços.
       course1_artist_loops_challenge3_authored_hint:
         courseA_artist_loops_challenge2_a: 'Blocos como este: <xml><block type="simple_move_up_left"/></xml>
           permitirão que o seu artista se mova em uma inclinação!'
@@ -5380,7 +5391,20 @@ pt-BR:
           função!"
         courseE_bee_functions_challenge1_b: Lembre-se de construir seu código dentro
           do bloco de função verde.
+      course3_bee_functions_challenge3_authored_hint:
+        courseF_bee_functions_challenge1_a: Você pode usar as funções na caixa de
+          ferramentas para ajudá-lo. Você pode chamar uma função dentro de outra função!
       course3_bee_functions_challenge4_authored_hint:
+        courseF_bee_functions_challenge2_a: |-
+          Se houver um caminho para a direita, você deve fazer o seguinte:
+          * Obter néctar ou faça qualquer mel.
+          * Vire à direita para o caminho do lado.
+          * Vá para o final do caminho do lado.
+          * Vire à direita.
+
+          Se você repetir as ações acima duas vezes, você estará pronto para voltar para o caminho principal.
+
+          **Apenas clique para outra dica se você quiser ver a solução completa!**
         courseF_bee_functions_challenge2_b: |-
           **Solução:**
 
@@ -6015,6 +6039,27 @@ pt-BR:
         courseD_harvester_nested_loops_challenge1_a: Você provavelmente já usou um
           laço para criar um padrão em zigue-zague. Se você se lembrar desse algoritmo,
           você pode fazer algumas adições aqui.
+      course4_playlab_variables_challenge1_authored_hint:
+        courseF_playlab_variables_challenge1_a: |-
+          Você precisará de blocos adicionais da caixa de ferramentas para fazer com que os atores falem.
+
+          <xml><block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TEXT">
+          <block type="text">
+          <title name="TEXT">Toc Toc.</title>
+          </block>
+          </value>
+          <value name="TIME">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          </block></xml>
       course4_playlab_variables_challenge3_authored_hint:
         courseF_playlab_variables_challenge3_a: |-
           O ator sabe o que dizer pois ele verifica o valor atual da variável `fortuna`.
@@ -6050,6 +6095,18 @@ pt-BR:
           <block type="procedures_callnoreturn">
           <mutation name="Ask a question"/>
           </block></next></block></xml>
+        courseF_playlab_variables_challenge3_c: "Você precisará adicionar mais instruções
+          condicionais para dar aos atores mais coisas a dizer.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\"
+          inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value
+          name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title
+          name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement
+          name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n
+          \               <title name=\"VAR\">fortuna</title>\n                <value
+          name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n
+          \                   <title name=\"TEXT\">???</title>\n                  </block>\n
+          \               </value>\n              </block>\n              </statement></block></xml>\n\n
+          \             \nNão se esqueça de mudar o humor que o ator mostrará dentro
+          do laço `repetir para sempre`. Você também pode definir os humores aleatoriamente!"
         courseF_playlab_variables_challenge3_d: |-
           Uma vez que você entender todo o código relacionado ao ator 1, você pode tentar reescrever o mesmo código, mas dessa vez para o ator 2.
 
@@ -6272,6 +6329,9 @@ pt-BR:
           duas vezes para chegar a próxima!
         courseA_artist_loops_challenge2_c: Todos os seus blocos precisam estar dentro
           de uma repetição para terminar este quebra-cabeça.
+      courseA_artist_loops_challenge3_authored_hint:
+        harvey_tictactoe: Você pode usar blocos `pular` para se mover para outros
+          espaços.
       courseA_bee_seq1_authored_hint:
         courseA_bee_seq1_a: |-
           Use este bloco para obter néctar assim que a abelha encontrar uma flor.
@@ -16659,6 +16719,18 @@ pt-BR:
           <block type="procedures_callnoreturn">
           <mutation name="Ask a question"/>
           </block></next></block></xml>
+        courseF_playlab_variables_challenge3_c: "Você precisará adicionar mais instruções
+          condicionais para dar aos atores mais coisas a dizer.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\"
+          inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value
+          name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title
+          name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement
+          name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n
+          \               <title name=\"VAR\">fortuna</title>\n                <value
+          name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n
+          \                   <title name=\"TEXT\">???</title>\n                  </block>\n
+          \               </value>\n              </block>\n              </statement></block></xml>\n\n
+          \             \nNão se esqueça de mudar o humor que o ator mostrará dentro
+          do laço `repetir para sempre`. Você também pode definir os humores aleatoriamente!"
         courseF_playlab_variables_challenge3_d: |-
           Uma vez que você entender todo o código relacionado ao ator 1, você pode tentar reescrever o mesmo código, mas dessa vez para o ator 2.
 
@@ -18333,16 +18405,55 @@ pt-BR:
           com o bloco `definir comprimento`, e inicie-o em 150 pixels.
         courseF_artist_variables8_c: Certifique-se de usar o laço `repita` para desenhar
           seu triângulo.
+        courseF_artist_variables8_a: "Tente colocar o conjunto de \n\n<xml>\n<block
+          type=\"variables_set\" inline=\"false\">\n                        <title
+          name=\"VAR\">tamanho</title>\n                        <value name=\"VALUE\">\n
+          \                         <block type=\"math_arithmetic\" inline=\"true\">\n
+          \                           <title name=\"OP\">ADD</title>\n                            <value
+          name=\"A\">\n                              <block type=\"variables_get\">\n
+          \                               <title name=\"VAR\">tamanho</title>\n                              </block>\n
+          \                           </value>\n                            <value
+          name=\"B\">\n                              <block type=\"math_number\">\n
+          \                               <title name=\"NUM\">10</title>\n                              </block>\n
+          \                           </value>\n                          </block>\n
+          \                       </value>\n                      </block>\n</xml>\n\nblocos
+          dentro do seu laço no final.\n"
       courseF_artist_variables8_2018_authored_hint:
         courseF_artist_variables8_b: Lembre-se de iniciar seu código para o triângulo
           com o bloco `definir comprimento`, e inicie-o em 150 pixels.
         courseF_artist_variables8_c: Certifique-se de usar o laço `repita` para desenhar
           seu triângulo.
+        courseF_artist_variables8_a: "Tente colocar o conjunto de \n\n<xml>\n<block
+          type=\"variables_set\" inline=\"false\">\n                        <title
+          name=\"VAR\">tamanho</title>\n                        <value name=\"VALUE\">\n
+          \                         <block type=\"math_arithmetic\" inline=\"true\">\n
+          \                           <title name=\"OP\">ADD</title>\n                            <value
+          name=\"A\">\n                              <block type=\"variables_get\">\n
+          \                               <title name=\"VAR\">tamanho</title>\n                              </block>\n
+          \                           </value>\n                            <value
+          name=\"B\">\n                              <block type=\"math_number\">\n
+          \                               <title name=\"NUM\">10</title>\n                              </block>\n
+          \                           </value>\n                          </block>\n
+          \                       </value>\n                      </block>\n</xml>\n\nblocos
+          dentro do seu laço no final.\n"
       courseF_artist_variables8_2019_authored_hint:
         courseF_artist_variables8_b: Lembre-se de iniciar seu código para o triângulo
           com o bloco `definir comprimento`, e inicie-o em 150 pixels.
         courseF_artist_variables8_c: Certifique-se de usar o laço `repita` para desenhar
           seu triângulo.
+        courseF_artist_variables8_a: "Tente colocar o conjunto de \n\n<xml>\n<block
+          type=\"variables_set\" inline=\"false\">\n                        <title
+          name=\"VAR\">tamanho</title>\n                        <value name=\"VALUE\">\n
+          \                         <block type=\"math_arithmetic\" inline=\"true\">\n
+          \                           <title name=\"OP\">ADD</title>\n                            <value
+          name=\"A\">\n                              <block type=\"variables_get\">\n
+          \                               <title name=\"VAR\">tamanho</title>\n                              </block>\n
+          \                           </value>\n                            <value
+          name=\"B\">\n                              <block type=\"math_number\">\n
+          \                               <title name=\"NUM\">10</title>\n                              </block>\n
+          \                           </value>\n                          </block>\n
+          \                       </value>\n                      </block>\n</xml>\n\nblocos
+          dentro do seu laço no final.\n"
       courseF_artist_variables9_authored_hint:
         courseF_artist_variables9_a: Para este desafio, tudo o que você precisa fazer
           é mudar quantas vezes o laço repete.
@@ -18374,6 +18485,9 @@ pt-BR:
           Experimente um destes três desenhos.
           ![](https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 dicas.png)
       courseF_artist_variables_4_authored_hint:
+        courseF_artist_variables_4_a: Seu código não será muito diferente do que estava
+          no último desafio, exceto que você precisará virar o artista para baixo,
+          então coloca-lo de volta para saltar novamente.
         courseF_artist_variables_4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables_6_authored_hint:
         courseF_artist_variables_6_a: Graças as variáveis, você só precisa mudar um
@@ -18956,11 +19070,45 @@ pt-BR:
           uma nuvem sobre ele, mesmo que você possa ver todo o caminho.
         courseF_bee_conditionals4_b: Use uma instrução `se` dentro do seu laço para
           checar cada espaço por néctar.
+        courseF_bee_conditionals4_c: Usando o bloco `enquanto há um caminho para frente`,
+          você deve `avançar` e verificar se tem uma flor. `se há uma flor` o que
+          a abelha deve fazer?
       courseF_bee_conditionals4_2018_authored_hint:
         courseD_bee_conditionals4_a: Você ainda pode tratar cada espaço como se houvesse
           uma nuvem sobre ele, mesmo que você possa ver todo o caminho.
         courseF_bee_conditionals4_b: Use uma instrução `se` dentro do seu laço para
           checar cada espaço por néctar.
+        courseF_bee_conditionals4_c: Usando o bloco `enquanto há um caminho para frente`,
+          você deve `avançar` e verificar se tem uma flor. `se há uma flor` o que
+          a abelha deve fazer?
+      courseF_bee_conditionals5_authored_hint:
+        courseF_bee_conditionals5_a: Pense em cada lado do caminho retangular como
+          um caminho por si. Configure um laço aninhado com um bloco `repita` no exterior
+          e um `enquanto há um caminho para a frente` no interior. Quantos caminhos
+          a abelha precisa se precisar tocar todos os lados com uma flor?
+        courseF_bee_conditionals5_b: Dentro do bloco 'enquanto houver um caminho à
+          frente' você precisará seguir em frente e procurar por uma flor. Como você
+          vê se há uma flor? O que deve fazer se houver uma flor?
+        courseF_bee_conditionals5_c: 'Há 3 lados do retângulo com flores, então o
+          código precisa `repetir 3 vezes`. Em cada repetição, a abelha precisará
+          continuar ao longo do caminho, `enquanto há um caminho à frente`. '
+        courseF_bee_conditionals5_d: Para continuar pelo caminho, a abelha precisará
+          `avançar`. Enquanto estiver no caminho, a abelha precisa verificar se há
+          uma flor. O que a abelha deve fazer se houver uma flor?
+      courseF_bee_conditionals5_2018_authored_hint:
+        courseF_bee_conditionals5_a: Pense em cada lado do caminho retangular como
+          um caminho por si. Configure um laço aninhado com um bloco `repita` no exterior
+          e um `enquanto há um caminho para a frente` no interior. Quantos caminhos
+          a abelha precisa se precisar tocar todos os lados com uma flor?
+        courseF_bee_conditionals5_b: Dentro do bloco 'enquanto houver um caminho à
+          frente' você precisará seguir em frente e procurar por uma flor. Como você
+          vê se há uma flor? O que deve fazer se houver uma flor?
+        courseF_bee_conditionals5_c: 'Há 3 lados do retângulo com flores, então o
+          código precisa `repetir 3 vezes`. Em cada repetição, a abelha precisará
+          continuar ao longo do caminho, `enquanto há um caminho à frente`. '
+        courseF_bee_conditionals5_d: Para continuar pelo caminho, a abelha precisará
+          `avançar`. Enquanto estiver no caminho, a abelha precisa verificar se há
+          uma flor. O que a abelha deve fazer se houver uma flor?
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada
           vez que ele é executado.    Você vai querer usar um bloco condicional (`se`
@@ -18968,6 +19116,8 @@ pt-BR:
         courseF_bee_conditionals8_b: "Esse quebra-cabeça é complicado, porque você
           não pode verificar quadrados em branco, néctar, *e* mel com apenas um único
           condicional. \n\nApenas verifique se há néctar e mel no final do caminho."
+        courseF_bee_conditionals8_c: O que acontece se você pular a primeira flor,
+          e usar o bloco `enquanto caminho à frente`?
       courseF_bee_conditionals8_2018_authored_hint:
         courseF_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada
           vez que ele é executado.    Você vai querer usar um bloco condicional (`se`
@@ -18975,19 +19125,110 @@ pt-BR:
         courseF_bee_conditionals8_b: "Esse quebra-cabeça é complicado, porque você
           não pode verificar quadrados em branco, néctar, *e* mel com apenas um único
           condicional. \n\nApenas verifique se há néctar e mel no final do caminho."
+        courseF_bee_conditionals8_c: O que acontece se você pular a primeira flor,
+          e usar o bloco `enquanto caminho à frente`?
+      courseF_bee_for1_authored_hint:
+        courseF_bee_for1_a: Arraste um bloco de número roxo para o espaço em branco
+          no laço `repita` para dizer quantas vezes deve repetir.
+        courseF_bee_for1_b: Você precisará de dois blocos no seu laço "repita" para
+          coletar todo o néctar.
+      courseF_bee_for10_authored_hint:
+        courseF_bee_for10_a: Você consegue encontrar um padrão entre o número de passos
+          que você precisa dar e o número de néctares para coletar?
+        courseF_bee_for10_b: O primeiro conjunto de flores tem um total de **14 flores**.
+          Para chegar a este primeiro conjunto, a abelha deve cavar **7 quadrados**
+          (ou 14 quadrados divididos por 2.) Quantas flores estão no próximo conjunto
+          e quantos quadrados terão que viajar para chegar lá?
+      courseF_bee_for10_2018_authored_hint:
+        courseF_bee_for10_a: Você consegue encontrar um padrão entre o número de passos
+          que você precisa dar e o número de néctares para coletar?
+        courseF_bee_for10_b: O primeiro conjunto de flores tem um total de **14 flores**.
+          Para chegar a este primeiro conjunto, a abelha deve cavar **7 quadrados**
+          (ou 14 quadrados divididos por 2.) Quantas flores estão no próximo conjunto
+          e quantos quadrados terão que viajar para chegar lá?
+      courseF_bee_for10_2019_authored_hint:
+        courseF_bee_for10_a: Você consegue encontrar um padrão entre o número de passos
+          que você precisa dar e o número de néctares para coletar?
+        courseF_bee_for10_b: O primeiro conjunto de flores tem um total de **14 flores**.
+          Para chegar a este primeiro conjunto, a abelha deve cavar **7 quadrados**
+          (ou 14 quadrados divididos por 2.) Quantas flores estão no próximo conjunto
+          e quantos quadrados terão que viajar para chegar lá?
+      courseF_bee_for11_authored_hint:
+        courseF_bee_for11_a: "Quanto menos 12 é do que 15?  \nQuanto menos 9 é do
+          que 12?\n\nVocê vê um padrão?"
+      courseF_bee_for11_2018_authored_hint:
+        courseF_bee_for11_a: "Quanto menos 12 é do que 15?  \nQuanto menos 9 é do
+          que 12?\n\nVocê vê um padrão?"
+      courseF_bee_for11_2019_authored_hint:
+        courseF_bee_for11_a: "Quanto menos 12 é do que 15?  \nQuanto menos 9 é do
+          que 12?\n\nVocê vê um padrão?"
+      courseF_bee_for1_2018_authored_hint:
+        courseF_bee_for1_a: Arraste um bloco de número roxo para o espaço em branco
+          no laço `repita` para dizer quantas vezes deve repetir.
+        courseF_bee_for1_b: Você precisará de dois blocos no seu laço "repita" para
+          coletar todo o néctar.
+      courseF_bee_for1_2019_authored_hint:
+        courseF_bee_for1_a: Arraste um bloco de número roxo para o espaço em branco
+          no laço `repita` para dizer quantas vezes deve repetir.
+        courseF_bee_for1_b: Você precisará de dois blocos no seu laço "repita" para
+          coletar todo o néctar.
+      courseF_bee_for2_authored_hint:
+        courseF_bee_for2_a: Se você estiver confuso, trabalhe uma flor por vez e fique
+          testando.
+        courseF_bee_for2_b: Lembre-se de avançar entre cada laço, então você alcançará
+          cada flor.
+      courseF_bee_for2_2018_authored_hint:
+        courseF_bee_for2_a: Se você estiver confuso, trabalhe uma flor por vez e fique
+          testando.
+        courseF_bee_for2_b: Lembre-se de avançar entre cada laço, então você alcançará
+          cada flor.
+      courseF_bee_for2_2019_authored_hint:
+        courseF_bee_for2_a: Se você estiver confuso, trabalhe uma flor por vez e fique
+          testando.
+        courseF_bee_for2_b: Lembre-se de avançar entre cada laço, então você alcançará
+          cada flor.
+      courseF_bee_for3_authored_hint:
+        courseF_bee_for3_a: 'Use a variável `contador` dentro do laço `repita` onde
+          o néctar está reunido para resolver este desafio. '
+        courseF_bee_for3_b: Seu laço `for` precisa contar de 1 para 5 com um incremento
+          de 1.
+      courseF_bee_for4_authored_hint:
+        courseF_bee_for4_a: Use um laço `para` que vai de 1 para 7 com um incremento
+          de 1 para resolver este desafio.
+        courseF_bee_for4_b: Dentro do seu laço `para`, você vai querer ter um comando
+          `avançar`, e um laço para coletar néctar.
+      courseF_bee_for4_2018_authored_hint:
+        courseF_bee_for4_a: Use um laço `para` que vai de 1 para 7 com um incremento
+          de 1 para resolver este desafio.
+        courseF_bee_for4_b: Dentro do seu laço `para`, você vai querer ter um comando
+          `avançar`, e um laço para coletar néctar.
+      courseF_bee_for4_2019_authored_hint:
+        courseF_bee_for4_a: Use um laço `para` que vai de 1 para 7 com um incremento
+          de 1 para resolver este desafio.
+        courseF_bee_for4_b: Dentro do seu laço `para`, você vai querer ter um comando
+          `avançar`, e um laço para coletar néctar.
       courseF_bee_for5_authored_hint:
+        courseF_bee_for5_a: Desta vez, seu bloco `avance` e seu bloco `obtenha néctar`
+          precisará estar em laços `repita` separados, ambos dentro do mesmo laço
+          `para`.
         courseF_bee_for5_b: Use a variável `counter` em cada laço, então a abelha
           moverá por distâncias diferentes entre cada flor.
         courseF_bee_for5_c: Não tenha medo de cometer um erro! Tente adicionar blocos
           e executar o código para ver o que vai acontecer, mesmo se você achar que
           ainda não resolveu o quebra-cabeça.
       courseF_bee_for5_2018_authored_hint:
+        courseF_bee_for5_a: Desta vez, seu bloco `avance` e seu bloco `obtenha néctar`
+          precisará estar em laços `repita` separados, ambos dentro do mesmo laço
+          `para`.
         courseF_bee_for5_b: Use a variável `counter` em cada laço, então a abelha
           moverá por distâncias diferentes entre cada flor.
         courseF_bee_for5_c: Não tenha medo de cometer um erro! Tente adicionar blocos
           e executar o código para ver o que vai acontecer, mesmo se você achar que
           ainda não resolveu o quebra-cabeça.
       courseF_bee_for5_2019_authored_hint:
+        courseF_bee_for5_a: Desta vez, seu bloco `avance` e seu bloco `obtenha néctar`
+          precisará estar em laços `repita` separados, ambos dentro do mesmo laço
+          `para`.
         courseF_bee_for5_b: Use a variável `counter` em cada laço, então a abelha
           moverá por distâncias diferentes entre cada flor.
         courseF_bee_for5_c: Não tenha medo de cometer um erro! Tente adicionar blocos
@@ -18996,26 +19237,38 @@ pt-BR:
       courseF_bee_for6_authored_hint:
         courseF_bee_for6_a: Não se esqueça de usar uma variável `counter` dentro do
           seu laço `repita`.
+        courseF_bee_for6_b: Dentro do seu laço `para`, você vai querer ter um comando
+          `avançar`, e um laço para coletar néctar.
         courseF_bee_for6_c: Seu laço deve contar **de 5 a 1**.
       courseF_bee_for6_2018_authored_hint:
         courseF_bee_for6_a: Não se esqueça de usar uma variável `counter` dentro do
           seu laço `repita`.
+        courseF_bee_for6_b: Dentro do seu laço `para`, você vai querer ter um comando
+          `avançar`, e um laço para coletar néctar.
         courseF_bee_for6_c: Seu laço deve contar **de 5 a 1**.
       courseF_bee_for6_2019_authored_hint:
         courseF_bee_for6_a: Não se esqueça de usar uma variável `counter` dentro do
           seu laço `repita`.
+        courseF_bee_for6_b: Dentro do seu laço `para`, você vai querer ter um comando
+          `avançar`, e um laço para coletar néctar.
         courseF_bee_for6_c: Seu laço deve contar **de 5 a 1**.
       courseF_bee_for7_authored_hint:
         courseF_bee_for7_a: Seu laço `for` precisará contar de 1 a 7 com incremento
           de 2.
+        courseF_bee_for7_b: Dentro do seu laço `para`, você vai querer ter um comando
+          `avançar`, e um laço para coletar néctar.
         courseF_bee_for7_c: Lembre-se de usar a variável `counter` no seu laço `repita`.
       courseF_bee_for7_2018_authored_hint:
         courseF_bee_for7_a: Seu laço `for` precisará contar de 1 a 7 com incremento
           de 2.
+        courseF_bee_for7_b: Dentro do seu laço `para`, você vai querer ter um comando
+          `avançar`, e um laço para coletar néctar.
         courseF_bee_for7_c: Lembre-se de usar a variável `counter` no seu laço `repita`.
       courseF_bee_for7_2019_authored_hint:
         courseF_bee_for7_a: Seu laço `for` precisará contar de 1 a 7 com incremento
           de 2.
+        courseF_bee_for7_b: Dentro do seu laço `para`, você vai querer ter um comando
+          `avançar`, e um laço para coletar néctar.
         courseF_bee_for7_c: Lembre-se de usar a variável `counter` no seu laço `repita`.
       courseF_bee_for8_authored_hint:
         courseF_bee_for8_a: "Se seu laço está fazendo contagem progressiva, o incremento
@@ -19039,14 +19292,32 @@ pt-BR:
           uma escada para chegar às flores.
         courseF_bee_for8_c: Seu laço contará *de 3 a 15* com um incremento. Qual será?
       courseF_bee_for9_authored_hint:
+        courseF_bee_for9_a: |-
+          Tente fazer alguma matemática com a variável contadora.
+
+          O que você tem que fazer com o contador em cada flor para igualar a quantidade de néctar que você precisa coletar?
         courseF_bee_for9_c: Parece que você precisará virar a abelha ao início de
           cada repetição do laço se você quiser resolver o desafio.
+        courseF_bee_for9_b: "**Lembre-se:** Se seu laço está contando, o incremento
+          é adicionado à sua variável `contador` cada vez nela mesmo**."
       courseF_bee_for9_2018_authored_hint:
+        courseF_bee_for9_a: |-
+          Tente fazer alguma matemática com a variável contadora.
+
+          O que você tem que fazer com o contador em cada flor para igualar a quantidade de néctar que você precisa coletar?
         courseF_bee_for9_c: Parece que você precisará virar a abelha ao início de
           cada repetição do laço se você quiser resolver o desafio.
+        courseF_bee_for9_b: "**Lembre-se:** Se seu laço está contando, o incremento
+          é adicionado à sua variável `contador` cada vez nela mesmo**."
       courseF_bee_for9_2019_authored_hint:
+        courseF_bee_for9_a: |-
+          Tente fazer alguma matemática com a variável contadora.
+
+          O que você tem que fazer com o contador em cada flor para igualar a quantidade de néctar que você precisa coletar?
         courseF_bee_for9_c: Parece que você precisará virar a abelha ao início de
           cada repetição do laço se você quiser resolver o desafio.
+        courseF_bee_for9_b: "**Lembre-se:** Se seu laço está contando, o incremento
+          é adicionado à sua variável `contador` cada vez nela mesmo**."
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "Dê uma olhada nesta opção de movimento:  \n\n!
           [a] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
@@ -19641,6 +19912,16 @@ pt-BR:
         courseF_bee_functions3_c: Use o bloco verde `apenas fazer mel` parar chamar
           sua função.
         courseF_bee_functions3_d: Verifique este caminho.
+      courseF_bee_functions3a_authored_hint:
+        courseF_bee_functions3a_a: 'Sua função para este desafio só precisa ter néctar
+          ou fabricar mel, ele não deveria ter nenhum bloco `avançar` ou `virar` nele. '
+        courseF_bee_functions3a_b: Use um padrão de escada para verificar as primeiras
+          quatro nuvens.
+      courseF_bee_functions3a_2018_authored_hint:
+        courseF_bee_functions3a_a: 'Sua função para este desafio só precisa ter néctar
+          ou fabricar mel, ele não deveria ter nenhum bloco `avançar` ou `virar` nele. '
+        courseF_bee_functions3a_b: Use um padrão de escada para verificar as primeiras
+          quatro nuvens.
       courseF_bee_functions4_authored_hint:
         courseF_bee_functions4_a: Sua função deverá percorrer os caminhos laterais
           e retornar a abelha de volta à estrada principal. Você não precisa adicionar
@@ -19695,9 +19976,13 @@ pt-BR:
       courseF_bee_functions7_authored_hint:
         courseF_bee_functions7_a: Você pode olhar o desafio anterior para ver sua
           função.
+        courseF_bee_functions7_b: Tente desenhar um caminho através deste labirinto
+          com seu dedo. Onde a abelha terá que tomar uma decisão?
       courseF_bee_functions7_2018_authored_hint:
         courseF_bee_functions7_a: Você pode olhar o desafio anterior para ver sua
           função.
+        courseF_bee_functions7_b: Tente desenhar um caminho através deste labirinto
+          com seu dedo. Onde a abelha terá que tomar uma decisão?
       courseF_bee_functions8a_authored_hint:
         courseF_bee_functions8a_a: "Se o quebra-cabeça parece desafiador, tente construir
           sua função aos poucos.\nAdicione alguns blocos e os experimente. Adicione
@@ -19725,11 +20010,35 @@ pt-BR:
           </statement>
           </block>
           </xml>
+        courseF_bee_functions7_c: De que forma você deve virar se há uma colmeia?
+          E sobre uma flor? E se não houver nada?
       courseF_bee_functionsPre7_2018_authored_hint:
         courseF_bee_functions7_a: "Se o quebra-cabeça parece desafiador, tente construir
           sua função aos poucos.\nAdicione alguns blocos e os experimente. Adicione
           mais alguns e experimente novamente.  \nEm breve, você terá sua função!"
+        courseF_bee_functions7_b: |-
+          Lembre-se de construir o código dentro do bloco de função verde.
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-146996837459.gif)
+        courseF_bee_functions7_c: De que forma você deve virar se há uma colmeia?
+          E sobre uma flor? E se não houver nada?
+      courseF_bee_functions_challenge1_authored_hint:
+        courseF_bee_functions_challenge1_a: Você pode usar as funções na caixa de
+          ferramentas para ajudá-lo. Você pode chamar uma função dentro de outra função!
+      courseF_bee_functions_challenge1_2018_authored_hint:
+        courseF_bee_functions_challenge1_a: Você pode usar as funções na caixa de
+          ferramentas para ajudá-lo. Você pode chamar uma função dentro de outra função!
       courseF_bee_functions_challenge2_authored_hint:
+        courseF_bee_functions_challenge2_a: |-
+          Se houver um caminho para a direita, você deve fazer o seguinte:
+          * Obter néctar ou faça qualquer mel.
+          * Vire à direita para o caminho do lado.
+          * Vá para o final do caminho do lado.
+          * Vire à direita.
+
+          Se você repetir as ações acima duas vezes, você estará pronto para voltar para o caminho principal.
+
+          **Apenas clique para outra dica se você quiser ver a solução completa!**
         courseF_bee_functions_challenge2_b: |-
           **Solução:**
 
@@ -19832,6 +20141,16 @@ pt-BR:
           </block>
           </xml>
       courseF_bee_functions_challenge2_2018_authored_hint:
+        courseF_bee_functions_challenge2_a: |-
+          Se houver um caminho para a direita, você deve fazer o seguinte:
+          * Obter néctar ou faça qualquer mel.
+          * Vire à direita para o caminho do lado.
+          * Vá para o final do caminho do lado.
+          * Vire à direita.
+
+          Se você repetir as ações acima duas vezes, você estará pronto para voltar para o caminho principal.
+
+          **Apenas clique para outra dica se você quiser ver a solução completa!**
         courseF_bee_functions_challenge2_b: |-
           **Solução:**
 
@@ -19939,11 +20258,93 @@ pt-BR:
           mais alguns e experimente novamente.  \nEm breve, você terá sua função!"
         courseF_bee_functions8a_b: "Lembre-se de construir seu código dentro do editor
           de função.\n\n"
+      courseF_bee_fwp1_authored_hint:
+        courseF_bee_fwp1_a: Use as instruções `se` para garantir que você está obtendo
+          néctar de uma flor.
+        courseF_bee_fwp1_b: Continue pelo caminho usando um bloco `repita`. Certifique-se
+          de que você está usando um bloco `avance` e verifique se há uma flor usando
+          uma declaração `se`.
+      courseF_bee_fwp1_2018_authored_hint:
+        courseF_bee_fwp1_a: Use as instruções `se` para garantir que você está obtendo
+          néctar de uma flor.
+        courseF_bee_fwp1_b: Continue pelo caminho usando um bloco `repita`. Certifique-se
+          de que você está usando um bloco `avance` e verifique se há uma flor usando
+          uma declaração `se`.
+      courseF_bee_fwp2_authored_hint:
+        courseF_bee_fwp2_a: "Para transformar isto em uma função, simplesmente arraste
+          o código para o bloco de função existente.  \n\n\n![](https://images.code.org/4d918c7ecb9f16c15565666805b32-image-147621874625.gif)"
+        courseF_bee_fwp2_b: Não se esqueça de conectar o bloco `rowOfNectar` ao `quando
+          executar` para chamar a função que você acabou de construir.
+      courseF_bee_fwp2_2018_authored_hint:
+        courseF_bee_fwp2_a: "Para transformar isto em uma função, simplesmente arraste
+          o código para o bloco de função existente.  \n\n\n![](https://images.code.org/4d918c7ecb9f16c15565666805b32-image-147621874625.gif)"
+        courseF_bee_fwp2_b: Não se esqueça de conectar o bloco `rowOfNectar` ao `quando
+          executar` para chamar a função que você acabou de construir.
+      courseF_bee_fwp3_authored_hint:
+        courseF_bee_fwp3_a: Sua função será executada sem saber qual é a direção que
+          você está indo.
+        courseF_bee_fwp3_b: Há 3 linhas de néctar, que tipo de curvas e movimentos
+          você precisa fazer entre cada linha?
+      courseF_bee_fwp3_2018_authored_hint:
+        courseF_bee_fwp3_a: Sua função será executada sem saber qual é a direção que
+          você está indo.
+        courseF_bee_fwp3_b: Há 3 linhas de néctar, que tipo de curvas e movimentos
+          você precisa fazer entre cada linha?
+      courseF_bee_fwp4_authored_hint:
+        courseF_bee_fwp4_a: Você precisará adicionar um parâmetro e usar a variável
+          resultante em seu loop.
+        courseF_bee_fwp4_b: O parâmetro que você cria para a sua função será usado
+          no ciclo de repetição para determinar quantas vezes a abelha avançará e
+          verificará o néctar.
+      courseF_bee_fwp4_2018_authored_hint:
+        courseF_bee_fwp4_a: Você precisará adicionar um parâmetro e usar a variável
+          resultante em seu loop.
+        courseF_bee_fwp4_b: O parâmetro que você cria para a sua função será usado
+          no ciclo de repetição para determinar quantas vezes a abelha avançará e
+          verificará o néctar.
+      courseF_bee_fwp5_authored_hint:
+        courseF_bee_fwp5_a: Conte o número de espaços que você precisa verificar em
+          cada trecho e use esses números como seus parâmetros para a chamada de função.
+        courseF_bee_fwp5_a_b: Lembre-se de alternar entre cada chamada de função.
+      courseF_bee_fwp5_2018_authored_hint:
+        courseF_bee_fwp5_a: Conte o número de espaços que você precisa verificar em
+          cada trecho e use esses números como seus parâmetros para a chamada de função.
+        courseF_bee_fwp5_a_b: Lembre-se de alternar entre cada chamada de função.
       courseF_bee_fwp6_authored_hint:
+        courseF_bee_fwp6_a: Qual bloco incrementa automaticamente uma variável que
+          você poderia usar como parâmetro?
         courseF_bee_fwp6_b: Tente usar um laço `para` para resolver este desafio.
       courseF_bee_fwp6_2018_authored_hint:
+        courseF_bee_fwp6_a: Qual bloco incrementa automaticamente uma variável que
+          você poderia usar como parâmetro?
         courseF_bee_fwp6_b: Tente usar um laço `para` para resolver este desafio.
+      courseF_bee_fwp7_authored_hint:
+        courseF_bee_fwp7_a: Você não precisa de um segundo parâmetro para esta função,
+          apenas uma segunda instrução `se`.
+        courseF_bee_fwp7_b: Adicione uma declaração `se` na sua função, para que a
+          abelha verifique tanto os favos quanto as flores.
+      courseF_bee_fwp7_2018_authored_hint:
+        courseF_bee_fwp7_a: Você não precisa de um segundo parâmetro para esta função,
+          apenas uma segunda instrução `se`.
+        courseF_bee_fwp7_b: Adicione uma declaração `se` na sua função, para que a
+          abelha verifique tanto os favos quanto as flores.
+      courseF_bee_fwp8_authored_hint:
+        courseF_bee_fwp8_a: Como poderia um laço 'para' pode ajudar neste quebra-cabeça?
+        courseF_bee_fwp8_b: Uma vez que a espiral fica menor à medida que você entra,
+          seu laço `para` deve ser diminuído.
+      courseF_bee_fwp8_2018_authored_hint:
+        courseF_bee_fwp8_a: Como poderia um laço 'para' pode ajudar neste quebra-cabeça?
+        courseF_bee_fwp8_b: Uma vez que a espiral fica menor à medida que você entra,
+          seu laço `para` deve ser diminuído.
       courseF_bee_fwp_challenge1_authored_hint:
+        courseF_bee_fwp_challenge1_b: 'Veja quanto milho está disponível para colher
+          em cada espaço. Você vê o padrão do contador? '
+        courseF_bee_fwp_challenge1_b1: |-
+          O parâmetro `tamanho` deve ser usado para definir o valor máximo no `laço para`.
+
+          Não se esqueça de fazer agricultor voltar para o caminho principal após a colheita!
+        courseF_bee_fwp_challenge1_d2: Após o laço `para` você pode apenas `mover
+          para trás` **tempo de comprimento**.
         courseF_bee_fwp_challenge1_e: |
           **Aqui está a solução:**
 
@@ -20016,6 +20417,14 @@ pt-BR:
           </statement>
           </block></xml>
       courseF_bee_fwp_challenge1_2018_authored_hint:
+        courseF_bee_fwp_challenge1_b: 'Veja quanto milho está disponível para colher
+          em cada espaço. Você vê o padrão do contador? '
+        courseF_bee_fwp_challenge1_b1: |-
+          O parâmetro `tamanho` deve ser usado para definir o valor máximo no `laço para`.
+
+          Não se esqueça de fazer agricultor voltar para o caminho principal após a colheita!
+        courseF_bee_fwp_challenge1_d2: Após o laço `para` você pode apenas `mover
+          para trás` **tempo de comprimento**.
         courseF_bee_fwp_challenge1_e: |
           **Aqui está a solução:**
 
@@ -20087,6 +20496,14 @@ pt-BR:
           </block>
           </statement>
           </block></xml>
+      courseF_bee_fwp_challenge2_authored_hint:
+        courseF_bee_fwp_challenge2_b: |-
+          Você está ficando sem blocos `avançar`?
+          Tente usar um *segundo* `laço para` no seu programa principal.
+      courseF_bee_fwp_challenge2_2018_authored_hint:
+        courseF_bee_fwp_challenge2_b: |-
+          Você está ficando sem blocos `avançar`?
+          Tente usar um *segundo* `laço para` no seu programa principal.
       courseF_farmer_ramp11_authored_hint:
         courseF_farmer_ramp11_a: Se você está tendo dificuldade de ver onde os laços
           devem ir, tente programá-los todos em seguida procurando um padrão.
@@ -20117,16 +20534,22 @@ pt-BR:
       courseF_maze_ramp5_authored_hint:
         courseF_maze_ramp5_a: Tente usar o botão "Passo" para executar o seu código
           linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
+        courseF_maze_ramp5_b: Há mais de uma maneira de chegar ao porco.
       courseF_maze_ramp5_2018_authored_hint:
         courseF_maze_ramp5_a: Tente usar o botão "Passo" para executar o seu código
           linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
+        courseF_maze_ramp5_b: Há mais de uma maneira de chegar ao porco.
       courseF_maze_ramp6_authored_hint:
         courseF_maze_ramp6_a: Existem duas maneiras de resolver este quebra-cabeças!
+        courseF_maze_ramp6_b: O pássaro começa a se deparar com uma parede, então
+          lembre-se de virar antes de se mexer!
         courseF_maze_ramp6_c: Não tenha medo de cometer um erro! Tente adicionar blocos
           e executar o código para ver o que vai acontecer, mesmo se você achar que
           ainda não resolveu o quebra-cabeça.
       courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: Existem duas maneiras de resolver este quebra-cabeças!
+        courseF_maze_ramp6_b: O pássaro começa a se deparar com uma parede, então
+          lembre-se de virar antes de se mexer!
         courseF_maze_ramp6_c: Não tenha medo de cometer um erro! Tente adicionar blocos
           e executar o código para ver o que vai acontecer, mesmo se você achar que
           ainda não resolveu o quebra-cabeça.
@@ -20138,7 +20561,138 @@ pt-BR:
         courseF_maze_ramp7_c: Não tenha medo de cometer um erro! Tente adicionar blocos
           e executar o código para ver o que vai acontecer, mesmo se você achar que
           ainda não resolveu o quebra-cabeça.
+        courseF_maze_ramp7_d: Há mais de uma maneira de chegar ao porco. Qual requer
+          o menor código?
+        courseF_maze_ramp7_aa: |-
+          Veja este caminho...
+
+          ![](https://images.code.org/e1d29901495a9504c194b09efaa88e-image-1503437474226.29.32.png)
+      courseF_playlab_brokenText_authored_hint:
+        courseF_playlab_variables6c_a: Sob a seção "Entrada", use o bloco `perguntar`
+          para obter dados dos usuários.
+      courseF_playlab_variables1a_authored_hint:
+        courseF_playlab_variables1a_a: Você vai querer substituir as palavras “O que
+          devo gritar?” no bloco verde com "Objetivo!”
+      courseF_playlab_variables1a_2018_authored_hint:
+        courseF_playlab_variables1a_a: Você vai querer substituir as palavras “O que
+          devo gritar?” no bloco verde com "Objetivo!”
+      courseF_playlab_variables2b_authored_hint:
+        courseF_playlab_variables2b_a: O que você acha que Kiki dirá quando você clicar
+          em `Rodar`?
+      courseF_playlab_variables2b_2018_authored_hint:
+        courseF_playlab_variables2b_a: O que você acha que Kiki dirá quando você clicar
+          em `Rodar`?
+      courseF_playlab_variables3b_authored_hint:
+        courseF_playlab_variables3b_a: Os blocos de variável já estão no projeto.
+          Tudo o que você precisa fazer é colocá-los onde eles pertencem!
+      courseF_playlab_variables3bEdit_authored_hint:
+        courseF_playlab_variables3b_a: Os blocos de variável já estão no projeto.
+          Tudo o que você precisa fazer é colocá-los onde eles pertencem!
+      courseF_playlab_variables3b_josh_authored_hint:
+        courseF_playlab_variables3b_a: 'Existem dois blocos com espaços vazios: um
+          bloco `personagem diz` e um bloco `juntar`. Adicione os blocos de variável
+          lá!'
+      courseF_playlab_variables3b_josh_2018_authored_hint:
+        courseF_playlab_variables3b_a: 'Existem dois blocos com espaços vazios: um
+          bloco `personagem diz` e um bloco `juntar`. Adicione os blocos de variável
+          lá!'
+      courseF_playlab_variables4b_authored_hint:
+        courseF_playlab_variables4b_a: Você não precisa de mais blocos da caixa de
+          ferramentas aqui.
+        courseF_playlab_variables4b_b: Coloque as duas variáveis `idade` e uma variável
+          `nome` onde eles fazem o maior sentido na conversa.
+      courseF_playlab_variables4b_2018_authored_hint:
+        courseF_playlab_variables4b_a: Você não precisa de mais blocos da caixa de
+          ferramentas aqui.
+        courseF_playlab_variables4b_b: Coloque as duas variáveis `idade` e uma variável
+          `nome` onde eles fazem o maior sentido na conversa.
+      courseF_playlab_variables5c_authored_hint:
+        courseF_playlab_variables5c_a: Encontre um bloco de variável `resposta` na
+          caixa de ferramentas, sob "Variáveis".
+        courseF_playlab_variables5c_b: Teste seu código! Tente digitar "vermelho"
+          e também outras cores, para ver o que acontece.
+      courseF_playlab_variables5c_2018_authored_hint:
+        courseF_playlab_variables5c_a: Encontre um bloco de variável `resposta` na
+          caixa de ferramentas, sob "Variáveis".
+        courseF_playlab_variables5c_b: Teste seu código! Tente digitar "vermelho"
+          e também outras cores, para ver o que acontece.
+      courseF_playlab_variables6c_authored_hint:
+        courseF_playlab_variables6c_a: Sob a seção "Entrada", use o bloco `perguntar`
+          para obter dados dos usuários.
+      courseF_playlab_variables6c_2018_authored_hint:
+        courseF_playlab_variables6c_a: Sob a seção "Entrada", use o bloco `perguntar`
+          para obter dados dos usuários.
+      courseF_playlab_variables7b_authored_hint:
+        courseF_playlab_variables7b_a: Tenha um gato e um cachorro falando sobre seus
+          alimentos favoritos. Use o bloco de perguntar para descobrir a comida favorita,
+          e exiba o texto na tela!
+        courseF_playlab_variables7b_b: Tenha seu personagem favorito para perguntar
+          se você quer ouvir uma piada. Se a resposta for sim, exiba uma piada na
+          tela.
+      courseF_playlab_variables7b_2018_authored_hint:
+        courseF_playlab_variables7b_a: Tenha um gato e um cachorro falando sobre seus
+          alimentos favoritos. Use o bloco de perguntar para descobrir a comida favorita,
+          e exiba o texto na tela!
+        courseF_playlab_variables7b_b: Tenha seu personagem favorito para perguntar
+          se você quer ouvir uma piada. Se a resposta for sim, exiba uma piada na
+          tela.
+      courseF_playlab_variables7c_authored_hint:
+        courseF_playlab_variables7c_a: Coloque o novo bloco `perguntar` antes do seu
+          extrato `se/senão` para que você possa usá-lo lá em outras etapas.
+      courseF_playlab_variables7c_2018_authored_hint:
+        courseF_playlab_variables7c_a: Coloque o novo bloco `perguntar` antes do seu
+          extrato `se/senão` para que você possa usá-lo lá em outras etapas.
+      courseF_playlab_variables8c_authored_hint:
+        courseF_playlab_variables8c_a: O bloco `juntar` vai para um bloco `personagem
+          diz` e permite que você use suas variáveis em frases maiores.
+      courseF_playlab_variables8c_2018_authored_hint:
+        courseF_playlab_variables8c_a: O bloco `juntar` vai para um bloco `personagem
+          diz` e permite que você use suas variáveis em frases maiores.
+      courseF_playlab_variables_challenge1_authored_hint:
+        courseF_playlab_variables_challenge1_a: |-
+          Você precisará de blocos adicionais da caixa de ferramentas para fazer com que os atores falem.
+
+          <xml><block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TEXT">
+          <block type="text">
+          <title name="TEXT">Toc Toc.</title>
+          </block>
+          </value>
+          <value name="TIME">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          </block></xml>
+      courseF_playlab_variables_challenge1_2018_authored_hint:
+        courseF_playlab_variables_challenge1_a: |-
+          Você precisará de blocos adicionais da caixa de ferramentas para fazer com que os atores falem.
+
+          <xml><block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TEXT">
+          <block type="text">
+          <title name="TEXT">Toc Toc.</title>
+          </block>
+          </value>
+          <value name="TIME">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          </block></xml>
       courseF_playlab_variables_challenge2_authored_hint:
+        courseF_playlab_variables_challenge2_a: Adicionar e subtrair pontos à variável
+          `pontos` quando os duendes colidirem.
         courseF_playlab_variables_challenge2_b: Você pode mudar o quão longe você
           move seu desenho toda vez que uma das teclas de seta forem pressionadas.
         courseF_playlab_variables_challenge2_c: |-
@@ -20266,6 +20820,8 @@ pt-BR:
           </block>
           </xml>
       courseF_playlab_variables_challenge2_2018_authored_hint:
+        courseF_playlab_variables_challenge2_a: Adicionar e subtrair pontos à variável
+          `pontos` quando os duendes colidirem.
         courseF_playlab_variables_challenge2_b: Você pode mudar o quão longe você
           move seu desenho toda vez que uma das teclas de seta forem pressionadas.
         courseF_playlab_variables_challenge2_c: |-
@@ -20427,6 +20983,18 @@ pt-BR:
           <block type="procedures_callnoreturn">
           <mutation name="Ask a question"/>
           </block></next></block></xml>
+        courseF_playlab_variables_challenge3_c: "Você precisará adicionar mais instruções
+          condicionais para dar aos atores mais coisas a dizer.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\"
+          inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value
+          name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title
+          name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement
+          name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n
+          \               <title name=\"VAR\">fortuna</title>\n                <value
+          name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n
+          \                   <title name=\"TEXT\">???</title>\n                  </block>\n
+          \               </value>\n              </block>\n              </statement></block></xml>\n\n
+          \             \nNão se esqueça de mudar o humor que o ator mostrará dentro
+          do laço `repetir para sempre`. Você também pode definir os humores aleatoriamente!"
         courseF_playlab_variables_challenge3_d: |-
           Uma vez que você entender todo o código relacionado ao ator 1, você pode tentar reescrever o mesmo código, mas dessa vez para o ator 2.
 
@@ -20453,18 +21021,24 @@ pt-BR:
           abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
           sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
           \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
+        courseF_maze_ramp3_b: Use o botão passo para passar pela linha do programa.
+          Onde algo da errado?
       coursef_maze_ramp3_2018_authored_hint:
         courseF_maze_ramp3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
           \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
           abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
           sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
           \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
+        courseF_maze_ramp3_b: Use o botão passo para passar pela linha do programa.
+          Onde algo da errado?
       drawings!_authored_hint:
         triangle_geometry_hint: 'Lembre-se: um triângulo equilátero tem 3 lados com
           60 graus de de angulo entre eles!'
         repeat_pointer: You tem que desenhar um lado e virar 3 vezes... qual bloco
           você pode usar para executar as mesmas instruções varias vezes?
         repeat_bottom_out: Use um bloco `repetir 3 vezes`!
+      farmer-test-lb_authored_hint:
+        hint_2: Apontando 123
       grade1_adventurer_loops10_authored_hint:
         grade1_adventurer_loops10_a: Você vai precisar de 3 repetições `repetir` para
           resolver esse enigma.
@@ -21188,6 +21762,20 @@ pt-BR:
           o seu código.
         grade5_artist_variables_triangles1_c: Dentro da sua repetição, você vai querer
           avançar 50 pixels, então virar a esquerda 120 graus.
+      grade5_bee_for_loops10_authored_hint:
+        grade5_bee_for_loops10_a: "Quanto menos 12 é do que 15?  \nQuanto menos 9
+          é do que 12?\n\nVocê vê um padrão?"
+      grade5_bee_for_loops11_authored_hint:
+        NEW_Course_4_Bee_For_Loops_10a_a: Você consegue encontrar um padrão entre
+          o número de passos que você precisa dar e o número de néctares para coletar?
+      grade5_bee_for_loops3_authored_hint:
+        grade5_bee_for_loops3_a: 'Use a variável `contador` dentro do laço `repita`
+          onde o néctar está reunido para resolver este desafio. '
+        grade5_bee_for_loops3_b: Seu laço `for` precisa contar de 1 para 5 com um
+          incremento de 1.
+      grade5_bee_for_loops4_authored_hint:
+        grade5_bee_for_loops4_a: Use um laço `para` que vai de 1 para 7 com um incremento
+          de 1 para resolver este desafio.
       grade5_bee_for_loops6_authored_hint:
         grade5_bee_for_loops6_a: Não se esqueça de usar uma variável `counter` dentro
           do seu laço `repita`.
@@ -21198,6 +21786,35 @@ pt-BR:
         NEW_Course_4_Bee_For_Loops_8_a: "Se seu laço está fazendo contagem progressiva,
           o incremento é adicionado na sua variável contadora a cada repetição. \n\nQual
           deve ser seu incremento para obter o próximo néctar?"
+      grade5_bee_for_loops9_authored_hint:
+        NEW_Course_4_Bee_For_Loops_7_a: |-
+          Tente fazer alguma matemática com a variável contadora.
+
+          O que você tem que fazer com o contador em cada flor para igualar a quantidade de néctar que você precisa coletar?
+      grade5_bee_parameters_new1_authored_hint:
+        grade5_bee_parameters_new1_a: Use as instruções `se` para garantir que você
+          está obtendo néctar de uma flor.
+      grade5_bee_parameters_new2_authored_hint:
+        grade5_bee_parameters_new2_a: "Para transformar isto em uma função, simplesmente
+          arraste o código para o bloco de função existente.  \n\n\n![](https://images.code.org/4d918c7ecb9f16c15565666805b32-image-147621874625.gif)"
+        grade5_bee_parameters_new2_b: Não se esqueça de conectar o bloco `rowOfNectar`
+          ao `quando executar` para chamar a função que você acabou de construir.
+      grade5_bee_parameters_new3_authored_hint:
+        grade5_bee_parameters_new3_a: Sua função será executada sem saber qual é a
+          direção que você está indo.
+      grade5_bee_parameters_new4_authored_hint:
+        grade5_bee_parameters_new4_a: Você precisará adicionar um parâmetro e usar
+          a variável resultante em seu loop.
+      grade5_bee_parameters_new5_authored_hint:
+        grade5_bee_parameters_new5_a: Conte o número de espaços que você precisa verificar
+          em cada trecho e use esses números como seus parâmetros para a chamada de
+          função.
+      grade5_bee_parameters_new6_authored_hint:
+        grade5_bee_parameters_new6_a: Qual bloco incrementa automaticamente uma variável
+          que você poderia usar como parâmetro?
+      grade5_bee_parameters_new7_authored_hint:
+        grade5_bee_parameters_new7_a: Você não precisa de um segundo parâmetro para
+          esta função, apenas uma segunda instrução `se`.
       grade5_playlab_variables2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Certifique-se de defininir o número para `velocidade_do_cachorro`
           como sendo maior do que o de `velocidade_do_gato`.
@@ -21220,6 +21837,9 @@ pt-BR:
         gradek_adventurer_loops7_challenge_a: O código parece realmente longo? tente
           colocar duas das suas repetições `repetir` dentro de outra repetição para
           assim encurta-lo bastante!
+      gradek_artist_loops1_authored_hint:
+        gradek_artist_loops1_a: Não é possível descobrir como desenhar uma linha?
+          Comece a anexar blocos ao bloco `quando executar` para ver o que acontece.
       gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: Se você quer que o laço se repita mais de 4 vezes, você pode
           mudar o número no topo do bloco.
@@ -21247,6 +21867,9 @@ pt-BR:
         courseE_farmer_functions1a_a: Pense nas instruções `se/senão` passo a passo.
           O que você deve fazer se estiver em uma planta de milho?
         courseE_farmer_functions1a_b: Use um bloco `repetir até` para chegar à abóbora!
+      harvey_tictactoe_authored_hint:
+        harvey_tictactoe: Você pode usar blocos `pular` para se mover para outros
+          espaços.
       iceage_click_hello_authored_hint:
         iceage_click_hello_a: Adicione um ou mais blocos `personagem 1 say` ao evento
           `quando clicado` para completar este desafio.

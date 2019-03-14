@@ -15594,13 +15594,28 @@ zh-CN:
       Dance Party 1: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
       Dance Party 2 Validated: 这个外星人对自己在火星上的舞技非常自信，但现在她只能左右移动了。你能在 ‘开始’ 模块中改变行为让她可以旋转吗？
       Dance Party 2: "这个外星人对自己在火星上的舞技非常自信，但现在她只能上下移动了。 \n\n你能在<xml><block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n<value name=\"SPRITE\">\n<block type=\"sprite_variables_get\">\n<title name=\"VAR\">alien1</title>\n</block>\n</value>\n</block></xml>中改变行为，让它可以旋转吗？  "
-      Dance Party 2_2019: "这个外星人对自己在火星上的舞技非常自信，但现在她只能上下移动了。 \n\n你能在<xml><block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n<value name=\"SPRITE\">\n<block type=\"sprite_variables_get\">\n<title name=\"VAR\">alien1</title>\n</block>\n</value>\n</block></xml>中改变行为，让它可以旋转吗？  "
+      Dance Party 2_2019: |-
+        这个外星人对自己在火星上的舞技非常自信，但现在她只能上下移动了。 
+
+        你能在<xml><block type="gamelab_addBehaviorSimple" inline="true">
+        <value name="SPRITE">
+        <block type="sprite_variables_get">
+        <title name="VAR">alien1</title>
+        </block>
+        </value>
+        </block></xml>中改变行为，让它可以旋转吗？  
       Dance Party 3 - Validated: "创造一个叫`外星人2`的精灵。 \n\n让她在被点击时完成一个新的舞步。  "
       Dance Party 3: "创造一个叫`外星人2`的精灵。 \n\n让她在被点击时完成一个新的舞步。  "
-      Dance Party 3_2019: "创造一个叫`外星人2`的精灵。 \n\n让她在被点击时完成一个新的舞步。  "
+      Dance Party 3_2019: |-
+        创造一个叫`外星人2`的精灵。 
+
+        让她在被点击时完成一个新的舞步。  
       Dance Party 4 Validated: "创造一个叫`外星人3`的精灵。 \n\n你能让所有外星人排成一条直线吗？现在你有一个外星人舞蹈团了！"
       Dance Party 4: "创造一个叫`外星人3`的精灵。 \n\n你能让所有外星人排成一条直线吗？现在你有一个外星人舞蹈团了！"
-      Dance Party 4_2019: "创造一个叫`外星人3`的精灵。 \n\n你能让所有外星人排成一条直线吗？现在你有一个外星人舞蹈团了！"
+      Dance Party 4_2019: |-
+        创造一个叫`外星人3`的精灵。 
+
+        你能让所有外星人排成一条直线吗？现在你有一个外星人舞蹈团了！
       Dance Party 5 - Validated: "可以在点击精灵时，在程序中做出任何的改变。现在来换个颜色吧！\n\n**在这里添加代码，使每个外星人在被单击时改变自己的颜色。**"
       Dance Party 5: "可以在点击精灵时，在程序中做出任何的改变。现在来换个颜色吧！\n\n**在这里添加代码，使每个外星人在被单击时改变自己的颜色。**"
       Dance Party 5_2019: "可以在点击精灵时，在程序中做出任何的改变。现在来换个颜色吧！\n\n**在这里添加代码，使每个外星人在被单击时改变自己的颜色。**"
@@ -15609,7 +15624,10 @@ zh-CN:
       Dance Party 6_2019: "这些外星人太调皮了！ \n\n用<xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\"><value name=\"SPRITE\"/></block></xml>模块来让每个外星人被单击时停下来。"
       Dance Party 7 - Validated: "最后一步，创建一个新的钟形精灵，命名为`myBell`。\n\n当点击这个钟时，所有的外星人会跳同一支舞！"
       Dance Party 7: "最后一步，创建一个新的钟形精灵，命名为`myBell`。\n\n当点击这个钟时，所有的外星人会跳同一支舞！"
-      Dance Party 7_2019: "最后一步，创建一个新的钟形精灵，命名为`myBell`。\n\n当点击这个钟时，所有的外星人会跳同一支舞！"
+      Dance Party 7_2019: |-
+        最后一步，创建一个新的钟形精灵，命名为`myBell`。
+
+        当点击这个钟时，所有的外星人会跳同一支舞！
       Dance Party 7_simple: "最后一步，创建一个新的钟形精灵，命名为`myBell`。\n\n当点击这个钟时，所有的外星人会跳同一支舞！"
       Dance Party Freeplay: |-
         现在可以创建自己的外星人迪斯科啦！想找点灵感？试试这些：

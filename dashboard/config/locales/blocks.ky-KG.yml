@@ -222,6 +222,10 @@ ky:
             '"space"': космос
             '"x"': x
             '"y"': y
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': туш келди
       gamelab_locationDelta:
         options:
           DIR:

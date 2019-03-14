@@ -194,6 +194,10 @@ pt:
             '"space"': espaço
             '"x"': x
             '"y"': y
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': aleatório
       gamelab_locationDelta:
         options:
           DIR:
