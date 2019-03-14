@@ -263,11 +263,15 @@ class CDOImpl < OpenStruct
   end
 
   # NOTE: When a new language is added to this set, make sure to also update
-  # the redirection rules for the cdo-curriculum S3 bucket. Otherwise, all
-  # links to CB for that language will attempt to point to the
-  # language-specific version of that content, even if we haven't translated
-  # that content yet.
-  CURRICULUM_LANGUAGES = Set['es-mx']
+  # the redirection rules for the cdo-curriculum S3 bucket by running the
+  # aws/s3/cdo-curriculum/redirection_rules.rb script. Otherwise, all links to
+  # CB for that language will attempt to point to the language-specific version
+  # of that content, even if we haven't translated that content yet.
+  #
+  # See the LANGUAGES setting in
+  # https://github.com/mrjoshida/curriculumbuilder/blob/master/curriculumBuilder/settings.py
+  # for the languages currently supported in CurriculumBuilder itself
+  CURRICULUM_LANGUAGES = Set['es-mx', 'it-it', 'th-th', 'sk-sk']
 
   def curriculum_url(locale, path = '')
     locale = locale.downcase.to_s
