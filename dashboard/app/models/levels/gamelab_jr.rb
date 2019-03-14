@@ -40,7 +40,7 @@ class GamelabJr < Gamelab
     create!(
       level_params.merge(
         user: params[:user],
-        game: Game.gamelab,
+        game: Game.spritelab,
         level_num: 'custom',
         properties: {
           show_debug_watch: true,
