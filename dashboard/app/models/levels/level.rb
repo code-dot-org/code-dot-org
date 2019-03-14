@@ -209,6 +209,9 @@ class Level < ActiveRecord::Base
     if hash['encrypted_properties']
       hash['properties'] = Encryption.decrypt_object(hash.delete('encrypted_properties'))
     end
+    if hash['encrypted_notes']
+      hash['notes'] = Encryption.decrypt_object(hash.delete('encrypted_notes'))
+    end
     hash
   end
 
@@ -245,6 +248,7 @@ class Level < ActiveRecord::Base
           hash = filter_level_attributes(hash)
           if encrypted?
             hash['encrypted_properties'] = Encryption.encrypt_object(hash.delete('properties'))
+            hash['encrypted_notes'] = Encryption.encrypt_object(hash.delete('notes'))
           end
           xml.cdata(JSON.pretty_generate(hash.as_json))
         end
