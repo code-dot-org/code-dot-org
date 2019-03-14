@@ -574,18 +574,13 @@ export const categorizedLessons = (state, includeBonusLevels = false) => {
 
   const allLevels = levelsByLesson(state);
 
-  let stages = state.stages;
-  if (!includeBonusLevels) {
-    stages = state.stages.map(stage => {
-      stage.levels = stage.levels.filter(level => !level.bonus);
-      return stage;
-    });
-  }
-
-  stages.forEach((stage, index) => {
+  state.stages.forEach((stage, index) => {
     const category = stage.flex_category;
     const lesson = lessonFromStageAtIndex(state, index);
-    const stageLevels = allLevels[index];
+    let stageLevels = allLevels[index];
+    if (!includeBonusLevels) {
+      stageLevels = stageLevels.filter(level => !level.bonus);
+    }
 
     byCategory[category] = byCategory[category] || {
       category,
