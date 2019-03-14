@@ -420,12 +420,24 @@ GameLab.prototype.init = function(config) {
  * @param {Object} expoOpts
  */
 GameLab.prototype.exportApp = async function(expoOpts) {
-  const {mode, expoSnackId} = expoOpts || {};
+  // TODO: find another way to get this info that doesn't rely on globals.
+  const appName =
+    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app';
+  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
   if (mode === 'expoGenerateApk') {
-    return Exporter.generateExpoApk(expoSnackId, this.studioApp_.config);
+    return Exporter.generateExpoApk(
+      {
+        appName,
+        expoSnackId,
+        iconUri,
+        splashImageUri
+      },
+      this.studioApp_.config
+    );
   }
   await this.whenAnimationsAreReady();
   return this.exportAppWithAnimations(
+    appName,
     getStore().getState().animationList,
     expoOpts
   );
@@ -433,17 +445,21 @@ GameLab.prototype.exportApp = async function(expoOpts) {
 
 /**
  * Export the project for web or use within Expo.
+ * @param {string} appName
  * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
  * @param {Object} expoOpts
  */
-GameLab.prototype.exportAppWithAnimations = function(animationList, expoOpts) {
+GameLab.prototype.exportAppWithAnimations = function(
+  appName,
+  animationList,
+  expoOpts
+) {
   const {pauseAnimationsByDefault} = this.level;
   const allAnimationsSingleFrame = allAnimationsSingleFrameSelector(
     getStore().getState()
   );
   return Exporter.exportApp(
-    // TODO: find another way to get this info that doesn't rely on globals.
-    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app',
+    appName,
     this.studioApp_.editor.getValue(),
     {
       animationList,

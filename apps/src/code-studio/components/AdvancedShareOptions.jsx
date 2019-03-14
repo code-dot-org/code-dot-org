@@ -159,14 +159,21 @@ class AdvancedShareOptions extends React.Component {
   publishExpoExport = async () => {
     this.setState({exportingExpo: 'publish'});
     try {
-      const {expoUri, expoSnackId} = await this.props.exportApp({
+      const {
+        expoUri,
+        expoSnackId,
+        iconUri,
+        splashImageUri
+      } = await this.props.exportApp({
         mode: 'expoPublish'
       });
       this.setState({
         exportingExpo: null,
         exportExpoError: null,
         expoUri,
-        expoSnackId
+        expoSnackId,
+        iconUri,
+        splashImageUri
       });
     } catch (e) {
       this.setState({
@@ -180,12 +187,14 @@ class AdvancedShareOptions extends React.Component {
   };
 
   generateExpoApk = async () => {
-    const {expoSnackId} = this.state;
+    const {expoSnackId, iconUri, splashImageUri} = this.state;
     this.setState({generatingExpoApk: true});
     try {
       const expoApkUri = await this.props.exportApp({
         mode: 'expoGenerateApk',
-        expoSnackId
+        expoSnackId,
+        iconUri,
+        splashImageUri
       });
       this.setState({
         generatingExpoApk: false,
