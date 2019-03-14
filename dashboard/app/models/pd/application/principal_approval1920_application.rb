@@ -204,7 +204,8 @@ module Pd::Application
         [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
         [:do_you_approve],
         [:plan_to_teach],
-        [:how_heard]
+        [:contact_invoicing],
+        [:contact_invoicing_detail]
       ]
     end
 

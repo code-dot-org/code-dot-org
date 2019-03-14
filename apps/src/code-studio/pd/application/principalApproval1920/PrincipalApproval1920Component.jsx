@@ -64,7 +64,9 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     'doYouApprove',
     'planToTeach',
     'committedToMasterSchedule',
-    'committedToDiversity'
+    'committedToDiversity',
+    'contactInvoicing',
+    'contactInvoicingDetail'
   ];
 
   handleSchoolChange = selectedSchool => {
@@ -219,6 +221,8 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         <div>
           {this.singleCheckboxFor('understandFee')}
           {this.radioButtonsFor('payFee')}
+          {this.inputFor('contactInvoicing', {required: false})}
+          {this.inputFor('contactInvoicingDetail', {required: false})}
         </div>
         {this.props.teacherApplication.course ===
           'Computer Science Principles' && (
