@@ -39,7 +39,7 @@ saucelabs_authkey: 'xxxxxx-xxxx-xxxx-xxx-xxxxxxxxx'
 
 ```
 
-You can find the values for these settings in your saucelabs account. It says "welcome, [username]" up top, and the access key is at the bottom of the grey box on the left.
+You can find the values for these settings in your saucelabs account settings (`https://app.saucelabs.com/users/:username`) The key you need, `saucelabs_authkey`, will be under the "Access Key" header.
 
 #### Saucelabs tunnel
 
@@ -47,7 +47,7 @@ If you want to run tests on saucelabs against localhost you need to set up your 
 
 1. Login to Saucelabs and download the [tunnel](https://app.saucelabs.com/tunnels)
 2. Start the tunnel via `~/bin/sc/ -u $SAUCELABS_USERNAME -k SAUCELABS_ACCESS_KEY`. Notes: The link above has an example command line with your credentials that you can copy. `~/bin/sc/` should be replaced with the path that points to the tunnel software downloaded in step 1.
-3. `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
+3. In a separate terminal window, `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
 
 You can now watch your tests run at the [saucelabs dashboard](https://saucelabs.com/beta/dashboard/tests)
 
