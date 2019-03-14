@@ -699,7 +699,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "find_for_authentication finds migrated Google email user" do
     email = 'test@foo.bar'
-    migrated_student = create(:student, :with_migrated_google_authentication_option, email: email)
+    migrated_student = create(:student, :with_google_authentication_option, email: email)
 
     looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))
 
@@ -1931,7 +1931,7 @@ class UserTest < ActiveSupport::TestCase
     taken_email = 'taken@example.org'
     create :student, email: taken_email
     update_primary_contact_info_fails_safely_for \
-      create(:student, :with_migrated_google_authentication_option),
+      create(:student, :with_google_authentication_option),
       new_email: taken_email
   end
 
@@ -1980,7 +1980,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'upgrade_to_personal_login is false for migrated student if update_primary_contact_info fails' do
-    student = create :student, :with_migrated_google_authentication_option
+    student = create :student, :with_google_authentication_option
     student.stubs(:update_primary_contact_info!).raises(RuntimeError)
     params = upgrade_to_personal_login_params
     new_email = params[:email]
@@ -1995,7 +1995,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'upgrade_to_personal_login is false for migrated student if update fails' do
-    student = create :student, :with_migrated_google_authentication_option
+    student = create :student, :with_google_authentication_option
     student.stubs(:update!).raises(ActiveRecord::RecordInvalid)
     params = upgrade_to_personal_login_params
     new_email = params[:email]

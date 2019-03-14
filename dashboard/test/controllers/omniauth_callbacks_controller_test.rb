@@ -512,7 +512,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'clever: updates tokens when migrated user is found by credentials' do
     # Given I have a Clever-Code.org account
-    user = create :teacher, :with_migrated_clever_authentication_option
+    user = create :teacher, :clever_sso_provider
     assert user.migrated?
 
     # When I hit the clever oauth callback

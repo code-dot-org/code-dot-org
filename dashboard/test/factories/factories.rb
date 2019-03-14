@@ -340,29 +340,6 @@ FactoryGirl.define do
       end
     end
 
-    trait :with_migrated_google_authentication_option do
-      after(:create_commit) do |user|
-        ao = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: user.uid,
-          data: {
-            oauth_token: 'some-google-token',
-            oauth_refresh_token: 'some-google-refresh-token',
-            oauth_token_expiration: '999999'
-          }.to_json
-        )
-        user.update!(
-          primary_contact_info: ao,
-          provider: User::PROVIDER_MIGRATED,
-          email: '',
-          hashed_email: nil
-        )
-      end
-    end
-
     trait :with_clever_authentication_option do
       after(:create) do |user|
         create(:authentication_option,
@@ -374,45 +351,6 @@ FactoryGirl.define do
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
-        )
-      end
-    end
-
-    trait :with_migrated_clever_authentication_option do
-      after(:create) do |user|
-        ao = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::CLEVER,
-          authentication_id: '456efgh',
-          data: {
-            oauth_token: 'some-clever-token'
-          }.to_json
-        )
-        user.update!(
-          primary_contact_info: ao,
-          provider: User::PROVIDER_MIGRATED,
-          email: '',
-          hashed_email: nil
-        )
-      end
-    end
-
-    trait :with_migrated_windowslive_authentication_option do
-      after(:create) do |user|
-        ao = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::WINDOWS_LIVE,
-          authentication_id: user.hashed_email
-        )
-        user.update!(
-          primary_contact_info: ao,
-          provider: User::PROVIDER_MIGRATED,
-          email: '',
-          hashed_email: nil
         )
       end
     end
