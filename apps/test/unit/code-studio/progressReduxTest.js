@@ -53,7 +53,8 @@ const stageData = [
         title: 'Unplugged Activity',
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1',
         previous: false,
-        is_concept_level: false
+        is_concept_level: false,
+        bonus: false
       },
       {
         ids: [323],
@@ -63,7 +64,8 @@ const stageData = [
         icon: null,
         title: 1,
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2',
-        is_concept_level: false
+        is_concept_level: false,
+        bonus: false
       },
       {
         ids: [322],
@@ -74,7 +76,8 @@ const stageData = [
         title: 2,
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3',
         next: [2, 1],
-        is_concept_level: false
+        is_concept_level: false,
+        bonus: true
       }
     ],
     lesson_plan_html_url:
@@ -104,7 +107,8 @@ const stageData = [
         title: 1,
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1',
         previous: [1, 3],
-        is_concept_level: false
+        is_concept_level: false,
+        bonus: false
       },
       {
         ids: [339],
@@ -114,7 +118,8 @@ const stageData = [
         icon: null,
         title: 2,
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2',
-        is_concept_level: false
+        is_concept_level: false,
+        bonus: false
       },
       {
         ids: [341],
@@ -124,7 +129,8 @@ const stageData = [
         icon: null,
         title: 3,
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3',
-        is_concept_level: false
+        is_concept_level: false,
+        bonus: false
       }
     ],
     lesson_plan_html_url:
@@ -625,7 +631,8 @@ describe('progressReduxTest', () => {
             levelNumber: undefined,
             isCurrentLevel: false,
             isConceptLevel: false,
-            paired: undefined
+            paired: undefined,
+            bonus: false
           },
           {
             status: 'not_tried',
@@ -640,7 +647,8 @@ describe('progressReduxTest', () => {
             levelNumber: 1,
             isCurrentLevel: false,
             isConceptLevel: false,
-            paired: undefined
+            paired: undefined,
+            bonus: false
           },
           {
             status: 'not_tried',
@@ -655,7 +663,8 @@ describe('progressReduxTest', () => {
             levelNumber: 2,
             isCurrentLevel: false,
             isConceptLevel: false,
-            paired: undefined
+            paired: undefined,
+            bonus: true
           }
         ],
         [
@@ -672,7 +681,8 @@ describe('progressReduxTest', () => {
             levelNumber: 1,
             isCurrentLevel: false,
             isConceptLevel: false,
-            paired: undefined
+            paired: undefined,
+            bonus: false
           },
           {
             status: 'perfect',
@@ -687,7 +697,8 @@ describe('progressReduxTest', () => {
             levelNumber: 2,
             isCurrentLevel: false,
             isConceptLevel: false,
-            paired: undefined
+            paired: undefined,
+            bonus: false
           },
           {
             status: 'attempted',
@@ -702,7 +713,8 @@ describe('progressReduxTest', () => {
             levelNumber: 3,
             isCurrentLevel: false,
             isConceptLevel: false,
-            paired: undefined
+            paired: undefined,
+            bonus: false
           }
         ]
       ];
