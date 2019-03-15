@@ -108,7 +108,7 @@ Resources:
         SecurityGroupIds: 
           - !Ref DroneMasterEcsSecurityGroup
         ImageId: !Ref ECSAMI
-        InstanceType: t3.small
+        InstanceType: t3.medium
         Monitoring:
           Enabled: true
         UserData: 
@@ -191,6 +191,10 @@ Resources:
             -
               Name: DRONE_RPC_SECRET
               Value: '{{resolve:secretsmanager:drone/shared:SecretString:DRONE_RPC_SECRET}}'
+            # Needed to create first admin user: https://docs.drone.io/administration/user/admins/
+            -
+              Name: DRONE_USER_CREATE
+              Value: username:uponthesun,admin:true
 
   DroneMasterEcsService:
     Type: AWS::ECS::Service
