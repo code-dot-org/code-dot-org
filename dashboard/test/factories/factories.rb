@@ -245,7 +245,7 @@ FactoryGirl.define do
       end
 
       trait :migrated_imported_from_google_classroom do
-        unmigrated_google_sso
+        google_sso_provider
         without_email
         after(:create) do |user|
           section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
@@ -260,20 +260,20 @@ FactoryGirl.define do
       end
     end
 
-    trait :unmigrated_sso do
+    trait :sso_provider do
       encrypted_password nil
       provider %w(facebook windowslive clever).sample
       sequence(:uid) {|n| n}
     end
 
-    trait :unmigrated_sso_with_token do
-      unmigrated_sso
+    trait :sso_provider_with_token do
+      sso_provider
       oauth_token 'fake-oauth-token'
       oauth_token_expiration 'fake-oauth-token-expiration'
     end
 
-    trait :unmigrated_untrusted_email_sso do
-      unmigrated_sso_with_token
+    trait :untrusted_email_sso_provider do
+      sso_provider_with_token
       after(:create) do |user|
         if user.student?
           user.hashed_email = nil
@@ -282,44 +282,44 @@ FactoryGirl.define do
       end
     end
 
-    trait :unmigrated_clever_sso do
-      unmigrated_untrusted_email_sso
+    trait :clever_sso_provider do
+      untrusted_email_sso_provider
       provider 'clever'
     end
 
-    trait :unmigrated_facebook_sso do
-      unmigrated_sso_with_token
+    trait :facebook_sso_provider do
+      sso_provider_with_token
       provider 'facebook'
     end
 
-    trait :unmigrated_google_sso do
-      unmigrated_sso_with_token
+    trait :google_sso_provider do
+      sso_provider_with_token
       provider 'google_oauth2'
       oauth_refresh_token 'fake-oauth-refresh-token'
     end
 
-    trait :unmigrated_powerschool_sso do
-      unmigrated_untrusted_email_sso
+    trait :powerschool_sso_provider do
+      untrusted_email_sso_provider
       provider 'powerschool'
     end
 
-    trait :unmigrated_the_school_project_sso do
-      unmigrated_sso
+    trait :the_school_project_sso_provider do
+      sso_provider
       provider 'the_school_project'
     end
 
-    trait :unmigrated_twitter_sso do
-      unmigrated_sso
+    trait :twitter_sso_provider do
+      sso_provider
       provider 'twitter'
     end
 
-    trait :unmigrated_qwiklabs_sso do
-      unmigrated_sso
+    trait :qwiklabs_sso_provider do
+      sso_provider
       provider 'lti_lti_prod_kids.qwikcamps.com'
     end
 
-    trait :unmigrated_windowslive_sso do
-      unmigrated_sso_with_token
+    trait :windowslive_sso_provider do
+      sso_provider_with_token
       provider 'windowslive'
     end
 
