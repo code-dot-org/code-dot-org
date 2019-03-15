@@ -49,7 +49,7 @@ def main
 
   # find all stacks with 'adhoc' name prefix or environment tag
   adhoc_stacks = cloudformation_resource.stacks.select do |stack|
-    stack.name.starts_with?('adhoc-') ||
+    stack.name.start_with?('adhoc-') ||
     stack.tags.detect {|tag| tag.key == 'environment'}&.value == 'adhoc'
   end
 
