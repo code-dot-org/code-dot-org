@@ -34,6 +34,10 @@ Resources:
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
       Tags:
         -
           Key: Name
@@ -69,6 +73,24 @@ Resources:
       LoadBalancerArn: !Ref DroneMasterELB
       Port: 80
       Protocol: HTTP
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref DroneMasterTargetGroup
+
+  ACMCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: '*.cdn-code.org'
+      ValidationMethod: DNS
+
+  HttpsLoadBalancerListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref DroneMasterELB
+      Port: 443
+      Protocol: HTTPS
+      Certificates:
+        - CertificateArn: !Ref ACMCertificate
       DefaultActions:
         - Type: forward
           TargetGroupArn: !Ref DroneMasterTargetGroup
@@ -173,7 +195,7 @@ Resources:
               Value: https://github.com
             -
               Name: DRONE_SERVER_HOST 
-              Value: !GetAtt DroneMasterELB.DNSName
+              Value: drone.cdn-code.org
             -
               Name: DRONE_SERVER_PROTO
               Value: http
@@ -235,7 +257,7 @@ Resources:
               VolumeSize: 50
               VolumeType: gp2
         IamInstanceProfile: 
-          Name: ecsInstanceRole
+          Name: DroneWorker
         KeyName: !Sub "winter-dev-${AWS::Region}"
         SecurityGroupIds: 
           - !Ref DroneWorkerEcsSecurityGroup
@@ -273,7 +295,6 @@ Resources:
       RequiresCompatibilities:
         - EC2
       ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/DroneEcsTaskExecutionRole"
-      TaskRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/DroneWorker"
       Volumes:
         -
           Name: docker-socket
