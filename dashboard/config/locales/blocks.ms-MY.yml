@@ -154,6 +154,10 @@ ms:
             '"right"': kanan
             '"space"': angkasa
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': rawak
       gamelab_locationDelta:
         options:
           DIR:

@@ -23,20 +23,20 @@ zh-CN:
       Picker: 选取器
       Comment: 注释
       'Variables ': '变量 '
+      Default: 默认
+      Behaviors: 行为
+      Locations: 位置
       everythingelse: 其它东西
       World: 世界
       Sprites: 精灵
       Location: 所在地区
-      Behaviors: 行为
       numbers: 数字
       Numbers: 数字
       Input: 输入
-      Default: 默认
       Dancers: 舞者
       Groups: 小组
       Advanced: 高级
       Start: 开始
-      Locations: 位置
       Music: 音乐
       Dancing: 跳舞
       Sprite: 精灵

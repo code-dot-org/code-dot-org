@@ -596,6 +596,17 @@ de:
             '"space"': Weltall
             '"x"': x
             '"y"': 'y'
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': Grenze
+            '"inner"': Quadrat im Inneren
+            '"circle"': Kreis
+            '"grid"': Raster
+            '"row"': Zeile
+            '"column"': Spalte
+            '"x"': kreuz und quer
+            '"random"': zufällig
       gamelab_locationDelta:
         options:
           DIR:

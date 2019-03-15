@@ -640,6 +640,18 @@ et:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': piir
+            '"inner"': ruudu sees
+            '"circle"': ring
+            '"grid"': ruudustikus
+            '"row"': rida
+            '"column"': veerg
+            '"x"': risti-rästi
+            '"plus"': pluss
+            '"random"': juhuslik
       gamelab_locationDelta:
         options:
           DIR:

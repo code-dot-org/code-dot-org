@@ -8,6 +8,9 @@ import _ from 'lodash';
 import i18n from '@cdo/locale';
 
 const styles = {
+  rubricLevelHeaders: {
+    width: '100%'
+  },
   detailsArea: {
     width: '100%'
   },
@@ -70,7 +73,7 @@ class RubricField extends Component {
 
     const tooltipId = _.uniqueId();
     return (
-      <div>
+      <div style={styles.rubricLevelHeaders}>
         <div
           style={performanceHeaderStyle}
           data-tip

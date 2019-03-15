@@ -692,6 +692,18 @@ he:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': גבול
+            '"inner"': בתוך ריבוע
+            '"circle"': עיגול
+            '"grid"': רשת
+            '"row"': שורה
+            '"column"': עמודה
+            '"x"': קְרִיס-קְרוֹס
+            '"plus"': פלוס
+            '"random"': אקראי
       gamelab_locationAdd:
         options:
           OPERATOR:

@@ -2439,7 +2439,7 @@ es-MX:
             Your Digital Footprint:
               name: Tu huella dactilar
         coursec-draft:
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           stages:
             Programming in Maze:
@@ -2451,9 +2451,9 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: Getting Loopy':
-              name: 'Ciclos: Haciendo ciclos'
+              name: 'Loops: Buscando Loopy'
             Loops in Maze:
-              name: Ciclos en Maze
+              name: Loops en Laberinto
             Build a Flappy Game:
               name: Construye un juego Flappy
             Binary Bracelets:
@@ -2470,7 +2470,7 @@ es-MX:
               name: Ciclos en Harvester
         coursed-draft:
           title: 'Fundamentos de Ciencias de la Computación: Curso D'
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2518,7 +2518,7 @@ es-MX:
             Debugging in Collector:
               name: Depuración en Collector
         coursee-draft:
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           stages:
             Digital Citizenship:
@@ -2560,7 +2560,7 @@ es-MX:
             'Algorithms: Dice Race':
               name: 'Algoritmos: Carrera de dados'
         coursef-draft:
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           stages:
             Digital Citizenship:
@@ -2714,6 +2714,16 @@ es-MX:
           stages:
             Introduction:
               name: Introducción
+        applab-1hour:
+          description: Este taller está diseñado para dar a los estudiantes una introducción
+            básica al laboratorio de aplicación en 1 hora. Los estudiantes deberían
+            poder venir con diferentes antecedentes en Ciencias de la computación
+            y se diviertan creando algo.
+        applab-2hour:
+          description: Este taller está diseñado para dar a los estudiantes una introducción
+            básica al laboratorio de aplicaciones en 2 horas. Los estudiantes deben
+            poder venir con diferentes orígenes en Ciencias de la Computación y divertirse
+            creando algo.
         coursed-ramp:
           title: 'Fundamentos de Ciencias de la Computación: Curso D'
           stages:
@@ -2833,6 +2843,8 @@ es-MX:
               name: Revisión por pares
         artist-and-bb8:
           stages:
+            Loops with BB-8:
+              name: Loops con BB-8
             Ice Age Play Lab:
               name: Laboratorio de juegos de la Edad de hielo
             Bounce:
@@ -2884,6 +2896,7 @@ es-MX:
                 de depuración en este nivel para practicar la resolución de problemas
                 y pensamiento crítico.
             Going Places Safely:
+              name: 'Ciudadanía Digital: Ir a Lugares de Forma Segura'
               description_teacher: En colaboración con [r common-sense-media], esta
                 lección ayuda a los estudiantes a aprender que muchos sitios piden
                 información privada y discute como manejar esas solicitudes. Los estudiantes
@@ -2967,19 +2980,23 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: Getting Loopy':
-              name: 'Ciclos: Haciendo ciclos'
+              name: 'Loops: Buscando Loopy'
             Loops in Maze:
-              name: Ciclos en Maze
+              name: Loops en Laberinto
             Loops in Harvester:
               name: Ciclos en Harvester
             Build a Flappy Game:
               name: Construye un juego Flappy
+            Screen Out the Mean:
+              name: 'Ciudadanía Digital: Identificar al/la Malo/a'
+            Binary Bracelets:
+              name: 'Más Allá de la Programación: Pulseras Binarias'
             Loops with Rey and BB-8:
               name: Ciclos con Rey y BB-8
           title: Curso C
           assignment_family_title: Curso C
           description_audience: Edades de 6 a 10 años
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           description: Crea programas con secuencias, ciclos y eventos. Traduce tus
             iniciales a binario, investiga distintas tecnicas de resolución de problemas
@@ -2989,12 +3006,54 @@ es-MX:
           stages:
             Introduction:
               name: Introducción a los acertijos en línea
+              description_student: Esta lección te entrenará en las habilidades que
+                necesitarás para este curso.
+              description_teacher: 'En este grupo de desafíos, los/as estudiantes
+                comenzarán con una introducción (o revisión dependiendo de la experiencia
+                de su clase) al espacio de trabajo online de Code.org. Habrá videos
+                señalando la funcionalidad básica del espacio de trabajo incluyendo
+                los botones Ejecutar, Reiniciar y Paso. También se discute en estos
+                videos: Arrastrar los bloques Blockly, borrar bloques Blockly y conectar
+                bloques Blockly. Luego, los/as estudiantes practicarán sus habilidades
+                de secuenciación y debugging en laberinto. Desde ahí en adelante,
+                los/as estudiantes verán nuevos desafíos como Recolector, Artista
+                y Cosechador una vez comprendan las bases de -loops-.'
+            'Algorithms: Graph Paper Programming':
+              name: 'Programación: Programación en Papel Cuadriculado'
+              description_student: "¡En esta lección, programarás a tu amigo para
+                que haga dibujos!"
+              description_teacher: "“Programándose” mutuamente para hacer dibujos,
+                los/as estudiantes comenzarán a comprender de qué se trata realmente
+                codificar. La clase comenzará haciendo que los/as estudiantes se den
+                instrucciones mutuamente para colorear cuadrados en un papel cuadriculado,
+                en un esfuerzo por reproducir un dibujo ya existente. Si hay tiempo,
+                la lección puede concluir con imágenes que los/as estudiantes creen
+                por si mismos/as."
             Events in Bounce:
               name: Eventos en Bounce
+              description_student: "¿Has pensado que alguna vez puedes jugar videojuegos
+                en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
+              description_teacher: En esta actividad online, los/as estudiantes aprenderán
+                lo que son los eventos, y cómo los computadores los usan en los programas
+                como los videojuegos. Los/as estudiantes trabajarán los desafíos haciendo
+                que el programa reaccione a los eventos (como presionar los botones
+                de flecha). Al final del desafío, los/as estudiantes tendrán la oportunidad
+                de personalizar su juego con diferentes velocidades y sonidos.
             Nested Loops:
               name: Bucles anidados
+              description_student: Loops dentro de loops dentro de loops. ¿Qué significa
+                esto? Esta lección te enseñará qué sucede cuando colocas un loop dentro
+                de otro loop.
+              description_teacher: En esta actividad online, los/as estudiantes tendrán
+                la oportunidad de llevar su comprensión de los loops a un nuevo nivel.
+                Jugando con la Abeja y Plantas versus Zombis, los/as estudiantes aprenderán
+                cómo programar un loop para que esté dentro de otro loop. También
+                se les animará a que descifren cómo cambios pequeños en cualquier
+                loop, afectarán su programa cuando hagan clic en Ejecutar.
             Nested Loops in Artist:
               name: Ciclos anidados en Artist
+              description_student: Aquí usarás loops anidados para hacer dibujos geniales
+                para mostrarle a tu familia y amigos.
             Debugging in Bee:
               name: Depuración en Bee
             While Loops in Farmer:
@@ -3005,8 +3064,14 @@ es-MX:
               name: Condicionales y ciclos en Maze
             Conditionals & Loops in Farmer:
               name: Condicionales y ciclos en Harvester
+            Digital Citizenship:
+              name: 'Ciudadanía Digital: Practicando Ciudadanía Digital'
             Build a Play Lab Game:
               name: Construye un juego de Play Lab
+            'Unplugged: Binary':
+              name: 'Más allá de la Programación: Imágenes Binarias'
+            Artist Binary:
+              name: Binario en Artista
             Nested Loops Project in Artist:
               name: Ciclos anidados con Frozen
             Debugging in Collector:
@@ -3444,6 +3509,8 @@ es-MX:
               name: 'Programando Sin Conexión: Mis Amigos Robóticos'
             Introduction:
               name: Introducción
+            'Algorithms: Graph Paper Programming':
+              name: 'Programación: Programación en Papel Cuadriculado'
             Debugging in Collector:
               name: Introducción a la Depuración
             'Loops: My Loopy Robotic Friends':
@@ -3502,6 +3569,10 @@ es-MX:
               name: Presenta tu proyecto
             Nested Loops Project in Frozen:
               name: Ciclos anidados con Frozen
+            'Common Sense Education: Digital Citizenship':
+              name: 'Ciudadanía Digital: Practicando Ciudadanía Digital'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Ciudadanía Digital: Identificar al/la Malo/a'
             Events in Star Wars:
               name: Eventos en la Guerra de las Galaxias
             Conditional Loops in Maze:
@@ -3585,6 +3656,31 @@ es-MX:
             y herramientas de programación.\r\n\r\nEsta unidad se actualizó por última
             vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones
             de los planes de estudios en forum.code.org/c/csp/updates."
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro a AppLab - Elige tu propia aventura
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro a AppLab - Elige tu propia aventura 2
+            Intro to AppLab - Your First App:
+              name: Intro a AppLab - Tu primera aplicación
+            Intro to AppLab - Your First App 2:
+              name: Intro a AppLab - Tu primera aplicación 2
+            Intro to AppLab - Your First App 3:
+              name: Intro a AppLab - Tu primera aplicación 3
+            Intro to AppLab - Your First App 4:
+              name: Intro a AppLab - Tu primera aplicación 4
+            Intro to AppLab - Getting Started:
+              name: Intro a AppLab - Comenzar
+            Intro to App Lab:
+              name: Intro a App Lab
+          title: Intro a App Lab
+          description_short: Crear tu propia aplicación en JavaScript utilizando programación
+            en bloque o texto. Si ya has hecho alguna programación con bloques, llevar
+            sus habilidades al siguiente nivel.
+          description: Crear tu propia aplicación en JavaScript utilizando programación
+            en bloque o texto. Si ya has hecho alguna programación con bloques, llevar
+            sus habilidades al siguiente nivel.
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
@@ -3873,6 +3969,8 @@ es-MX:
               name: 'Desarrollo de aplicaciones: introducción al laboratorio de aplicaciones'
             Creating Webpages:
               name: Creando páginas web
+            Intro to App Lab:
+              name: Intro a App Lab
             Smart Clothing Design:
               name: Diseño de ropa inteligente
         hero:
@@ -3881,6 +3979,25 @@ es-MX:
               name: Hora de Código de Minecraft
           description: "¡Minecraft está de vuelta para la Hora del Código con una
             actividad nueva! Viaja a través de Minecraft con códigos."
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro a AppLab - Elige tu propia aventura
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro a AppLab - Elige tu propia aventura 2
+            Intro to AppLab - Your First App:
+              name: Intro a AppLab - Tu primera aplicación
+            Intro to AppLab - Your First App 2:
+              name: Intro a AppLab - Tu primera aplicación 2
+            Intro to AppLab - Your First App 3:
+              name: Intro a AppLab - Tu primera aplicación 3
+            Intro to AppLab - Your First App 4:
+              name: Intro a AppLab - Tu primera aplicación 4
+            Intro to AppLab - Getting Started:
+              name: Intro a AppLab - Comenzar
+            Intro to App Lab:
+              name: Intro a App Lab
+          title: Intro a App Lab Staging
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -4193,6 +4310,7 @@ es-MX:
                 analizar los sitios que encuentran confiables para identificar cuál
                 de los animales son realmente un engaño.
         coursea-2018:
+          title: Curso A (2018)
           assignment_family_title: Curso A
           description: Aprende los basicos de las ciencias de la compuación y el internet.
             Al final del curso, crea tu propio juego o historia para compartir.
@@ -4252,15 +4370,18 @@ es-MX:
                 tambien descubren que pueden ir a lugares emocionantes en linea, pero
                 necesitan seguir ciertas reglas para estar seguros.
             'Loops: Happy Loops':
+              name: Loops Felices
               description_teacher: Los ciclos son una herramienta muy util y poderosa
                 en la programación. Para entender cuan útiles pueden ser, los estudiantes
                 deben ser motivador a querer resolver problemas mundanos de manera
                 mas facil.
             Loops in Collector:
+              name: Loops con Laurel
               description_teacher: Trabajando sobre el concepto de repetir instrucciones
                 de "Ciclos felices", en este nivel los estudiantes usaran ciclos para
                 recoger tesoro mas eficientemente en Code.org.
             Loops in Artist:
+              name: Ocean Scene con Loops
               description_teacher: Regresando a los ciclos, los estudiantes aprenden
                 a dibujar imagenes ciclando secuencias simples de instrucciones. En
                 la lección desconectada previa, los ciclos fueron usados para recorrer
@@ -4268,11 +4389,13 @@ es-MX:
                 Al final de esta etapa, los estudiantes tendrán la oportunidad de
                 crear sus propias imagenes usando ciclos.
             'Events: The Big Event':
+              name: El Gran Evento Jr.
               description_teacher: Los eventos son una excelente manera de agregar
                 variedad a un algoritmo preescrito. A veces deseas que el programa
                 responda al usuario exactamente cuando éste lo desea. Para esto son
                 los eventos.
             Events in Play Lab:
+              name: En Movimiento con Eventos
               description_teacher: En esta actividad en linea, los estudiantes tendrán
                 la oportunidad de aprender como usar eventos en Play Lab y de aplicar
                 las habilidades de código que han aprendidod para crear un juego animado.
@@ -4357,7 +4480,7 @@ es-MX:
             Loops with Rey and BB-8:
               name: Ciclos con Rey y BB-8
             'Concept Practice with Minecraft ':
-              name: Observando hacia el futuro
+              name: Mirando hacia el Futuro con Minecraft
             Nested Loops in Bee:
               name: Ciclos anidados en Bee
             Nested Loops in Frozen:
@@ -4422,6 +4545,10 @@ es-MX:
               name: Programación con Rey y BB-8
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: Mis amigos Robóticos Loopy.'
+            Loops in Collector:
+              name: Loops con Laurel
+            'Events: The Big Event':
+              name: El Gran Evento Jr.
             Programming in Ice Age:
               name: Programación en Ice Age
             Loops in Ice Age:
@@ -4433,6 +4560,7 @@ es-MX:
             Copyright and Creativity:
               name: Es estupendo crear y jugar limpio
         coursed-2018:
+          title: Curso D (2018)
           assignment_family_title: Curso D
           description_audience: Edades de 7 a 11 años
           stages:
@@ -4480,15 +4608,18 @@ es-MX:
               name: Programación de relevos
             Introduction to Online Puzzles:
               name: Introducción a los acertijos en línea
+            Nested Loops in Bees:
+              name: Loops Anidados en Abeja
             Nested Loops in Maze:
               name: Ciclos anidados en Maze
         coursec-2018:
+          title: Curso C (2018)
           assignment_family_title: Curso C
           description: Crea programas con secuencias, ciclos y eventos. Traduce tus
             iniciales a binario, investiga distintas tecnicas de resolución de problemas
             y aprende como responder a las amenazas en linea. ¡Al final del curso,
             crea tu propio juego o historia que puedes compartir!
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           description_audience: Edades de 6 a 10 años
           stages:
@@ -4498,6 +4629,8 @@ es-MX:
               name: Programación en Laberinto
             Debugging in Maze:
               name: Depuración en Maze
+            'Real-life Algorithms: Paper Planes':
+              name: Aviones de Papel
             Programming in Collector:
               name: Programación en Collector
             Programming in Artist:
@@ -4512,12 +4645,14 @@ es-MX:
               name: El gran evento
             Build a Flappy Game:
               name: Construye un juego Flappy
+            Events in Play Lab:
+              name: Chase Game con Eventos
             Screen Out the Mean:
               name: Encuentra la media
             Binary Bracelets:
               name: Pulseras binarias
             Looking Ahead:
-              name: Observando hacia el futuro
+              name: Mirando hacia el Futuro con Minecraft
         csd6-2018:
           stages:
             Making Music:
@@ -5147,6 +5282,10 @@ es-MX:
               name: 'Programando: La Guerra de las Galaxias'
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: Mis amigos Robóticos Loopy.'
+            Loops in Collector:
+              name: Loops con Laurel
+            'Events: The Big Event':
+              name: El Gran Evento Jr.
             Spelling Bee:
               name: Concurso de ortografía
             Move It, Move It:
@@ -5335,6 +5474,7 @@ es-MX:
             Dance Party:
               name: Fiesta de baile
         coursed-2019:
+          title: Curso D (2019)
           description_audience: Edades de 7 a 11 años
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5542,7 +5682,7 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: Getting Loopy':
-              name: 'Ciclos: Haciendo ciclos'
+              name: 'Loops: Buscando Loopy'
             Loops with Rey and BB-8:
               name: Ciclos con Rey y BB-8
             Nested Loops in Bee:
@@ -5664,11 +5804,12 @@ es-MX:
           title: Sigue bailando
           description: Ve más allá de la primera hora con ideas extendidas del proyecto.
         coursec-2019:
+          title: Curso C (2019)
           description: Crea programas con secuencias, ciclos y eventos. Traduce tus
             iniciales a binario, investiga distintas tecnicas de resolución de problemas
             y aprende como responder a las amenazas en linea. ¡Al final del curso,
             crea tu propio juego o historia que puedes compartir!
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           description_audience: Edades de 6 a 10 años
           stages:
@@ -5685,7 +5826,7 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: Getting Loopy':
-              name: 'Ciclos: Haciendo ciclos'
+              name: 'Loops: Buscando Loopy'
             Loops with Rey and BB-8:
               name: Ciclos con Rey y BB-8
             Loops in Harvester:
@@ -5698,6 +5839,12 @@ es-MX:
               name: Observando hacia el futuro
             Binary Bracelets:
               name: Pulseras binarias
+            'End of Course Project: Play Lab':
+              name: 'Fin del Proyecto del Curso: Play Lab'
+            Create a Design with Loops:
+              name: Crea un Diseño con Loops
+            'End of Course Project: Create a Play Lab Game':
+              name: 'Fin del Proyecto del Curso: Crea un Juego de Play Lab'
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             'Loops: My Loopy Robotic Friends':
@@ -5775,6 +5922,8 @@ es-MX:
                 la oportunidad de aprender como usar eventos en Play Lab y de aplicar
                 las habilidades de código que han aprendidod para crear un juego animado.
                 ¡Es tiempo de ponerse creativo y hacer una historia en Play Lab!
+            Ocean Scene with Loops:
+              name: Ocean Scene con Loops
             Learn to Drag and Drop:
               name: Aprende a arrastrar y soltar
         courseb-2019:
@@ -5797,7 +5946,7 @@ es-MX:
             Loops in Ice Age:
               name: Ciclos en Ice Age
             'Loops: Getting Loopy':
-              name: 'Ciclos: Haciendo ciclos'
+              name: 'Loops: Buscando Loopy'
         pre-express-2019:
           description: Aprende los basicos de las ciencias de la compuación y el internet.
             Al final del curso, crea tu propio juego o historia para compartir.
