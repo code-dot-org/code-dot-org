@@ -12,10 +12,11 @@ const styles = {
     width: '100%'
   },
   detailsArea: {
-    width: '100%'
+    width: '100%',
+    paddingTop: 2
   },
   rubricHeader: {
-    fontSize: 13,
+    fontSize: 12,
     marginLeft: 10,
     color: color.black,
     fontFamily: '"Gotham 5r", sans-serif'
@@ -24,28 +25,37 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    padding: '4px 10px',
+
+    margin: '0px 8px',
+    padding: 4,
     ':hover': {
       border: `solid 1px ${color.light_cyan}`,
-      borderRadius: 10
+      borderRadius: 4
     }
   },
   performanceLevelHeaderSelected: {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
+    margin: '0px 8px',
+    padding: 4,
     backgroundColor: color.lightest_cyan,
-    borderRadius: 10,
-    padding: '4px 10px',
+    borderRadius: 4,
     ':hover': {
       border: `solid 1px ${color.light_cyan}`,
-      borderRadius: 10
+      borderRadius: 4
     }
   },
   tooltip: {
     maxWidth: 200,
     lineHeight: '20px',
     whiteSpace: 'normal'
+  },
+  rubricDetails: {
+    paddingLeft: 23,
+    paddingTop: 5,
+    fontSize: 12,
+    margin: 0
   }
 };
 
@@ -93,7 +103,7 @@ class RubricField extends Component {
             <summary style={styles.rubricHeader}>
               {rubricLevelHeaders[this.props.rubricLevel]}
             </summary>
-            <p>{this.props.rubricValue}</p>
+            <p style={styles.rubricDetails}>{this.props.rubricValue}</p>
           </details>
         </div>
         <ReactTooltip
