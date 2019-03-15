@@ -315,7 +315,10 @@ class TopInstructions extends Component {
       this.state.feedbacks.length > 0 &&
       (this.state.feedbacks[0].comment || this.state.feedbacks[0].performance);
     const displayFeedbackTeacher =
-      this.props.viewAs === ViewType.Teacher && this.state.rubric;
+      this.state.displayFeedbackTeacherFacing ||
+      (!this.state.displayFeedbackTeacherFacing &&
+        this.props.viewAs === ViewType.Teacher &&
+        this.state.rubric);
     const displayFeedback = displayFeedbackStudent || displayFeedbackTeacher;
     const teacherOnly =
       this.state.tabSelected === TabType.COMMENTS &&
