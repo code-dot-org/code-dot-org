@@ -16,7 +16,6 @@ export default class StageTrophyProgressBubble extends Component {
 
   render() {
     const ratio = this.props.percentPerfect;
-    const percentage = Math.round(ratio * 100);
 
     const theta = Math.PI * 2 * ratio;
     const x = Math.cos(theta) * 18;
@@ -58,17 +57,6 @@ export default class StageTrophyProgressBubble extends Component {
               fill={ratio === 1 ? color.yellow : color.lighter_gray}
             />
           </g>
-        </g>
-        <g transform="translate(25, 70)">
-          <text
-            textAnchor="middle"
-            alignmentBaseline="hanging"
-            fill={shapeColor}
-            fontSize="14"
-            fontFamily='"Gotham 5r", sans-serif'
-          >
-            {percentage}%
-          </text>
         </g>
       </svg>
     );
