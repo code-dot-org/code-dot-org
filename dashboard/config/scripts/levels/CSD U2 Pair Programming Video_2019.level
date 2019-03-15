@@ -11,9 +11,14 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 11483,
-    "name_suffix": "_2019"
+    "name_suffix": "_2019",
+    "long_instructions": "## Questions to consider\r\n* Why do you think professional programmers use pair programming?\r\n* How do you think pair programming will help you to program better?\r\n",
+    "encrypted_teacher_markdown": "VU1SZzhGRX353BjxRjAR5sEPN9k15diczdBRHzqHiwX94hUpA3Zv/Zf6fDOF\nTFEOhGbjAkhZLPnwNT9RP/roE0XDLlxVOwDdZ/1RW5KmSPlBRPrS1o0WGWBa\n8cRwragW2NDgG1RCiifX1IUP7Q4wfWIJXfGZGDZ+1M+k3KQepdIqXUQby4Wz\nf0Jm4A3Huww96NyPuT4xaHANwxfsyTE1oqK4UuZ1R1qI+dQLqS0Sir5RRMNA\nGVgICZDCjkTgWOfiD9vZRTN7hozPkYUU6ye2Dk0klW9W4QWVgCgVjH2qBCVC\ncoE2qNVU3rZFTi0caztEXtPWuLZZu+ozzAnwf0eYUUBMiLyzrfh16Lc6wXOW\nDFYokyb/KupJu1bOph8e97ANPoZFKy3+iIkjDzI+2aHnv/UjGkeh0th9H0rF\nmRB3QBZVqEXqGrUCd53eers+mgf0/FT/AX0gB1TK/vVSOVzNPrclgkypeN2V\n4heaEAt3UkE=\n"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-14 21:44:17 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>
