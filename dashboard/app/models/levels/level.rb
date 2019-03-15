@@ -206,11 +206,18 @@ class Level < ActiveRecord::Base
   # Output: Hash of level properties
   def load_level_xml(xml_node)
     hash = JSON.parse(xml_node.xpath('//../config').first.text)
-    if hash['encrypted_properties']
-      hash['properties'] = Encryption.decrypt_object(hash.delete('encrypted_properties'))
-    end
-    if hash['encrypted_notes']
-      hash['notes'] = Encryption.decrypt_object(hash.delete('encrypted_notes'))
+    begin
+      encrypted_properties = hash.delete('encrypted_properties')
+      encrypted_notes = hash.delete('encrypted_notes')
+      if encrypted_properties
+        hash['properties'] =  Encryption.decrypt_object(encrypted_properties)
+      end
+      if encrypted_notes
+        hash['notes'] = Encryption.decrypt_object(encrypted_notes)
+      end
+    rescue Encryption::KeyMissingError
+      # developers must be able to seed levels without properties_encryption_key
+      raise unless rack_env?(:development)
     end
     hash
   end
