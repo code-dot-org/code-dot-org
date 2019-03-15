@@ -575,7 +575,7 @@ Resources:
                 Resource: '*'
               - Effect: Allow
                 Action: cloudformation:DescribeStackResource
-                Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/adhoc-*"
+                Resource: '*'
         - PolicyName: RDSBackup
           PolicyDocument:
             Statement:

@@ -1,11 +1,12 @@
 #!/usr/bin/env ruby
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../deployment'
 require_relative '../../lib/cdo/only_one'
 require 'aws-sdk-cloudformation'
 require 'aws-sdk-cloudwatch'
 require 'aws-sdk-ec2'
 require 'cdo/chat_client'
+require 'active_support/core_ext/numeric/time'
 
 StackStatus = Struct.new(
   :name,
@@ -56,7 +57,7 @@ def main
     status = StackStatus.new
     status.name = stack.name
     status.cloudformation_status = stack.stack_status
-    status.owner = stack.tags.detect {|tag| tag.key == 'owner'}.try(:value)
+    status.owner = stack.tags.detect {|tag| tag.key == 'owner'}&.value
     status.creation_time = stack.creation_time
 
     # get Unicorn active HTTP request count CloudWatch metric for the current adhoc stack
@@ -108,7 +109,7 @@ def main
       status[:instance_status_change_reason] = 'Instance is already stopped or activity is above threshold'
     end
   rescue StandardError => error
-    status[:current_instance_status] = instance.exists? ? instance&.reload&.state&.name : 'TERMINATED'
+    status[:current_instance_status] = instance&.exists? ? instance&.reload&.state&.name : 'TERMINATED'
     status[:instance_status_change_reason] = error.to_s
   ensure
     job_status.push(status)
