@@ -11,7 +11,7 @@ ActiveRecord::Base.transaction do
 
       if log.select {|entry| ['declined_email', 'waitlisted_email'].include? entry[:title]}.empty?
         application.emails.unsent.destroy_all
-        application.queue_email(application.status, deliver_now: true)
+        application.queue_email(application.status)
         applications_emailed << "id: #{application.id}, status: #{application.status}"
       end
     end
