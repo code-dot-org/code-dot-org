@@ -18,9 +18,8 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
 
   test 'test bulk enrollments' do
     user_from_id = create :teacher
-    @student = create :student
     student_email = 'some_student@code.org'
-    @student.update(email: student_email)
+    @student = create :student, email: student_email
     nonexistent_email = 'wrong-email@wrong.com'
 
     created_enrollments, nonexistent_users, nonteacher_users, other_failure_users =

@@ -49,7 +49,7 @@ Review the <a href="https://docs.google.com/document/d/1Bx-o1kRCKZxM_prrQqxQH7mX
 <a id="recruitment"></a>
 
 ### Teacher Recruitment Fund
-In order to support teacher recruitment efforts and increase the number of submitted teacher applications, Code.org will reimburse each Regional Partner a maximum of $1,000 towards the costs of teacher recruitment. 
+In order to support teacher recruitment efforts and increase the number of submitted teacher applications, Code.org will reimburse each Regional Partner a maximum of $1,000 towards the costs of teacher recruitment that you incur between March 8 and 8-weeks prior to your Local Summer Workshop. 
 
 This additional funding may be used for: 
 

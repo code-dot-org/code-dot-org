@@ -1,5 +1,5 @@
 import React from 'react';
-import RedirectDialog from './RedirectDialog';
+import {UnconnectedRedirectDialog as RedirectDialog} from './RedirectDialog';
 
 export default storybook => {
   storybook.storiesOf('RedirectDialog', module).addStoryTable([

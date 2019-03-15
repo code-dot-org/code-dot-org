@@ -64,7 +64,7 @@
     "lock_zero_param_functions": "false",
     "encrypted_examples": "qy2DDLzhPxsNWmyU2naEiyLTLDch7bSY05THOQRrPOtlejdRJJ+QQb1ZOu/S\n9y73\n",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
