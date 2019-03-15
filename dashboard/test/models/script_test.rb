@@ -1576,6 +1576,10 @@ endvariants
     other_pilot_section.script = nil
     other_pilot_section.save!
 
+    # student of pilot teacher, student never assigned to pilot script
+    non_pilot_section = create :section, user: pilot_teacher
+    student_of_pilot_teacher = create(:follower, section: non_pilot_section).student_user
+
     levelbuilder = create :levelbuilder
 
     refute script.pilot?
@@ -1587,6 +1591,7 @@ endvariants
     refute script.has_pilot_access?(pilot_student)
     refute script.has_pilot_access?(teacher_in_section)
     refute script.has_pilot_access?(previous_student)
+    refute script.has_pilot_access?(student_of_pilot_teacher)
     refute script.has_pilot_access?(levelbuilder)
 
     assert pilot_script.pilot?
@@ -1598,6 +1603,7 @@ endvariants
     assert pilot_script.has_pilot_access?(pilot_student)
     assert pilot_script.has_pilot_access?(teacher_in_section)
     assert pilot_script.has_pilot_access?(previous_student)
+    refute script.has_pilot_access?(student_of_pilot_teacher)
     assert pilot_script.has_pilot_access?(levelbuilder)
   end
 
