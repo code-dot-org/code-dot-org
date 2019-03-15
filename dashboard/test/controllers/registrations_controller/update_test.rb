@@ -143,7 +143,7 @@ module RegistrationsControllerTests
       # so it's possible to add a recovery option to their account.  Once they are
       # on multi-auth they can just add an email or another SSO, so this is no
       # longer needed.
-      student = create :student, :unmigrated_clever_sso
+      student = create :student, :clever_sso_provider
       assert_nil student.parent_email
       assert_nil student.encrypted_password
 
