@@ -469,7 +469,7 @@ sk:
     announcement_all: "Sleduj nové vlastnosti a aktualizácie na našom učiteľskom blogu. <a href='%{teacher_blog_url}' target='_blank'>Pozri posledné oznámenia.</a>"
     announcement_hoc_launch: "Tisíce vyučujúcich vo viac než 180 krajinách odštartujú výučbu informatiky prostredníctvom Hodiny Kódu 5-11 decembra. Počítame aj s vašou pomocou zaangažovať ešte viac študentov než kedykoľvek predtým. <a href='%{signup_url}' target='_blank'>Zaregistruj si svoju vlastnú Hodinu Kódu</a> a daj vedieť svojím kolegom o tom, že ktokoľvek môže začať vyučovať informatiku."
     announcement_mc_launch: "Jeden z našich najpopulárnejších kurzov má teraz pokračovanie! Celkom nová Hodina Kódu Minecraft Dizajnér umožní študentom vytvoriť vlastné pravidlá pre svet Minecraftu. Žiaci vytvoria unikátne Minecraftové zážitky, ktoré následne môžu zdieľať s priateľmi, či zahrať sa s nimi na telefóne. Prejdite si kurz vo vašej triede na Hodine Kódu."
-    announcement_how_code_studio: "Nepotrebujete žiadne skúsenosti na to, aby ste začali vyučovať informatiku vo vašej triede. Code.org ponúka osnovy, učebné plány, vysoko-kvalitné profesionálne vyučovacie programy a tony skvelých nástrojov pre všetky úrovne&mdash;všetko, čo potrebujete, všetko zadarmo. Hľadáte, kde začať? Stiahnite si <a href='%{video_download_url}'>toto video</a>!"
+    announcement_how_code_studio: "Nepotrebujete žiadne skúsenosti nato, aby ste začali vyučovať informatiku vo vašej triede. Code.org ponúka osnovy, učebné plány, vysoko-kvalitné profesionálne vyučovacie programy a tony skvelých nástrojov pre všetky úrovne&mdash;všetko, čo potrebujete, všetko zadarmo. Hľadáte, kde začať? Stiahnite si <a href='%{video_download_url}'>toto video</a>!"
     announcement_go_beyond: "Pokračujte aj nad rámec Hodiny Kódu a objavujte koncepty v informatike každý týždeň. Code.org ponúka osnovy, učebné plány, vysoko kvalitné vzdelávacie programy pre učiteľov a veľa výborných nástrojov pre všetky ročníky&mdash;a to všetko zadarmo. :) Nepotrebujete mať žiadne skúsenosti pre začatie výučby informatiky vo Vašej triede. <b>Zistite, aký ďaľší krok je najvhodnejší pre Vašu triedu.</b>"
     announcement_teacher_recruitment: "Učitelia ako vy sú vedúcimi osobnosťami hnutia za informatiku. Môžete sa zúčastniť profesionálnych výučbových programov pre učiteľov základných a stredných škôl <strong>zadarmo a bez nákladov pre Vás či Vašu školu</strong>. Staňte sa lídrom v informatike na Vašej škole a prihláste sa na profesionálne školenie."
     announcement_teacher_recruitment2: "Učitelia ako vy sú vedúcimi osobnosťami hnutia za informatiku. Môžete sa zúčastniť profesionálnych výučbových programov pre učiteľov základných a stredných škôl <strong>zadarmo a bez nákladov pre Vás i Vašu školu</strong>. Staňte sa lídrom v informatike na Vašej škole a prihláste sa na profesionálne školenie. Učitelia 2. stupňa ZŠ a stredných škôl sa môžu prihlásiť do 17. marca."
@@ -895,7 +895,6 @@ sk:
     csd6_2: 'Kapitola 2: Vytváranie fyzických prototypov'
     csd_survey: 'Hodnotenie kurzu'
     csp1_1: 'Kapitola 1: Predstavenie a prenos informácií'
-    csp1_2: 'Kapitola 2: Vynájdenie Internetu'
     csp2_1: 'Kapitola 1: Zakódovanie a kompresia komplexných informácií'
     csp2_2: 'Kapitola 2: Manipulácia a vizualizácia dát'
     csp3_1: 'Kapitola 1: Programovacie jazyky a algoritmy'

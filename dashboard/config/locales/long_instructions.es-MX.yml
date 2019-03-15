@@ -512,6 +512,12 @@ es-MX:
         un enlace o incluso enviarle un texto. \r\n\r\nPuedes seguir trabajando en
         tu proyecto\naquí. Cada vez que tus amigos vayan al enlace que compartiste,
         recibirán la última\nversión que hiciste ¿Cuán lejos construirás tu aventura?"
+      AppLab Intro 3 - Change Screen Color: "Establezca el `\"background-color\"`
+        de la pantalla a `\"red\"`. Haga clic en la imagen para ver cómo. \n\n![expandable](https://images.code.org/8b1d99aa6bd627e05b18447fabe8b2a-image-1505870100643.gif) "
+      AppLab Intro 3 - Change Text: |-
+        Haz el `"font-size"` de `"label1"` aún mayor. Haz clic en la imagen para ver cómo.
+
+        ![expandable](https://images.code.org/6125888ad133539132b19dfca8cc49-image-1505953367275.gif)
       AppLab Intro 4 - thisOrThat design: "** Objetivo: ** probar\nModo de diseño
         para seguir haciendo cambios a esta o aquella aplicación. También hay\nalgunos
         nuevos bloques en tu caja de herramientas! Aprenderá más sobre esto en lecciones
@@ -1674,6 +1680,21 @@ es-MX:
         5 a 1 de a 1.
       New Minecraft Hero Project: "**Improvisación:** ¡Ahora es cosa tuya! Usa el
         código del Agent para ayudarte a explorar este mundo."
+      OPD-K5 LessonPlanning: "Hasta ahora, han sido introducidos a algunas de nuestras
+        planificaciones de lecciones sin conexión. Sin embargo, hay planificaciones
+        de lecciones para cada lección de Fundamentos de Ciencias de la Computación
+        -ambas conectadas y en línea-. Usted puede encontrar la lista completa de
+        planificaciones de lecciones para cada curso a continuación:\n<br/>\n<br/>
+        \n[el curso A planes de lección] (https://curriculum.code.org/csf-18/coursea/)<br/>
+        \n[planes de lección del curso B] (https://curriculum.code.org/csf-18/courseb/)<br/>\n[planes
+        de lección del curso C] (https://curriculum.code.org/csf-18/coursec/)<br/>
+        \n[planes de lección del curso D] (https://curriculum.code.org/csf-18/coursed/)<br/>
+        \n[planes de lección del curso E] (https://curriculum.code.org/csf-18/coursee/)<br/>
+        \n[planes de lección del curso de F] (https://curriculum.code.org/csf-18/coursef/)<br/>
+        \n\nSin embargo, puede que desee adaptar estas lecciones, ¡o crear una propia!
+        El siguiente video explica la estructura de las lecciones de Fundamentos de
+        Ciencias de la Computación, y además proporciona algunos consejos en caso
+        de que quiera desarrollar su propia lección."
       Overworld Chop Tree: La madera es un recurso muy importante. Muchas cosas están
         hechas de madera. Ve hacia el árbol y usa el comando "destruir bloque" para
         talarlo.
@@ -2112,6 +2133,8 @@ es-MX:
          bloque en la parte inferior del programa y haga clic en "Ejecutar"!
       courseA_collector_preLoops7: "¡Consigue las tres pilas! Mueve a Laurel a cada
         tesoro, luego usa este bloque:\r\n <xml><block type=\"collector_collect\"/></xml>"
+      courseA_data widget: Presiona Ejecutar. El mago hará que aparezcan animales.
+        Cuéntalos. ¡Qué puedes notar?
       courseA_forVideoTest_artist: "¡Los bucles de repetición también funcionan para
         Artist!"
       courseA_harvester_forVideo: "¿Puedes recoger todo el maíz utilizando únicamente
@@ -2220,6 +2243,14 @@ es-MX:
       courseA_maze_ramp3a_2019: ¡Toma un <xml><block type="maze_moveNorth"/></xml>
         de la caja de herramientas y agregalo en la base de los otros bloques para
         finalizar este código, luego haz click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseA_maze_ramp3b_2018: |-
+        ¡Hay un bloque extra al final de este código!
+
+        Arrástralo de vuelta a la caja de herramientas y elimínalo.
+      courseA_maze_ramp3b_2019: |-
+        ¡Hay un bloque extra al final de este código!
+
+        Arrástralo de vuelta a la caja de herramientas y elimínalo.
       courseA_maze_ramp4_2018: "*\"Traza el camino y llévame hasta el cerdo tonto.\"*
         \r\n\r\n¡Evita el TNT o volarán plumas!"
       courseA_maze_ramp4a_2018: "¿Puedes descubrir qué bloque necesitas agregar al
@@ -2379,6 +2410,14 @@ es-MX:
       courseB_Scrat_ramp3a_2019: ¡Toma un <xml><block type="maze_moveNorth"/></xml>
         de la caja de herramientas y agregalo en la base de los otros bloques para
         finalizar este código, luego haz click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseB_Scrat_ramp3b_2018: |-
+        ¡Hay un bloque extra al final de este código!
+
+        Arrástralo de vuelta a la caja de herramientas y elimínalo.
+      courseB_Scrat_ramp3b_2019: |-
+        ¡Hay un bloque extra al final de este código!
+
+        Arrástralo de vuelta a la caja de herramientas y elimínalo.
       courseB_Scrat_ramp4a_2018: "¿Puedes descubrir qué bloque necesitas agregar al
         final de los otros bloques para terminar este código?"
       courseB_Scrat_ramp4a_2019: "¿Puedes descubrir qué bloque necesitas agregar al
@@ -2686,6 +2725,8 @@ es-MX:
       courseC_PlayLab_events8_2019: "¿Puedes hacer que Waddles (actor 1) diga \"¡auch!\"
         y reproduzca un sonido de \"golpe\" si se encuentra con Chomp? \r\n\r\nCuando
         estes listo, juega el juego para hacer que eso suceda.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_eventsA_embed_2019: Juguemos un juego. ¡Anota 5 puntos moviendo
+        el Pingüino hacia el Pulpo!
       courseC_PlayLab_events_challenge1: "Usa un nuevo bloque para hacer que Waddles
         se mueva automáticamente hacia atrás al comienzo cuando corra hacia el Dinosaurio
         y cuando anote un punto. ¡Esto hará tu juego más desafiante y divertido!\r\n\r\nJuega
@@ -3035,6 +3076,10 @@ es-MX:
         ¡Recoge al menos **10** para terminar el desafío!
       courseC_collector_prog_challenge2_2019: Hay 20 piezas del tesoro en esta cueva.
         ¡Recoge al menos **10** para terminar el desafío!
+      courseC_data widget: Presiona Ejecutar. El mago hará que aparezcan animales.
+        Cuéntalos. ¡Qué puedes notar?
+      courseC_data wizard: Presiona Ejecutar. El mago hará que aparezcan animales.
+        Cuéntalos. ¡Qué puedes notar?
       courseC_flappy_events1: "Agrega el bloque `cantidad normal de aleteo` al evento
         `cuando hagas clic`, luego presiona \"Ejecutar\".   \r\n\r\n---\r\n\r\nHaz
         clic o toca en el espacio de juego para mover a Flappy hacia el objetivo."
@@ -5692,18 +5737,18 @@ es-MX:
       courseF_artist_fwp4_2018: "¡Excelente trabajo! Ahora edita esta función para
         agregar un parámetro para el número de lados en tu polígono. \n\nLos lados
         de todas las formas son de 100 pixeles de largo."
-      courseF_artist_fwp5: "Usa la función del último rompecabezas para dibujar esta
+      courseF_artist_fwp5: "Usa la función del último desafío para dibujar esta serie
+        de formas. \r\n\r\n\r\nEl triángulo tiene lados de 21 pixeles y los lados
+        en cada forma de las siguientes son 7 pixeles más largo que  el anterior.
+        \r\nUsa el bloque 'multiplicación' para hacer que todo suceda sólo con una
+        función llamar.\r\n\r\nEl bloque 'multiplicación' luce así <xml><block type=\"math_arithmetic\"
+        inline=\"true\"><title name=\"OP\">MULTIPLICAR</title>\r\n</block></xml>"
+      courseF_artist_fwp5_2018: "Usa la función del último desafío para dibujar esta
         serie de formas. \r\n\r\n\r\nEl triángulo tiene lados de 21 pixeles y los
         lados en cada forma de las siguientes son 7 pixeles más largo que  el anterior.
         \r\nUsa el bloque 'multiplicación' para hacer que todo suceda sólo con una
         función llamar.\r\n\r\nEl bloque 'multiplicación' luce así <xml><block type=\"math_arithmetic\"
         inline=\"true\"><title name=\"OP\">MULTIPLICAR</title>\r\n</block></xml>"
-      courseF_artist_fwp5_2018: "Usa la función del último rompecabezas para dibujar
-        esta serie de formas. \r\n\r\n\r\nEl triángulo tiene lados de 21 pixeles y
-        los lados en cada forma de las siguientes son 7 pixeles más largo que  el
-        anterior. \r\nUsa el bloque 'multiplicación' para hacer que todo suceda sólo
-        con una función llamar.\r\n\r\nEl bloque 'multiplicación' luce así <xml><block
-        type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MULTIPLICAR</title>\r\n</block></xml>"
       courseF_artist_fwp6: "**Desafío:** Edita `dibujar borde en espiral` para usar
         los parámetros `longitud` y `lados`, luego recrea estas formas.\r\n\r\n- El
         cuadrado va de 3 pixeles a 90 pixeles.\r\n- El hexágono va de 3 pixeles a
@@ -5730,11 +5775,11 @@ es-MX:
         pixeles"
       courseF_artist_fwp9: "**Juego libre:** Más abajo están las funciones que has
         escrito, y más para que puedas jugar con ellas. Juega con el ancho del lápiz
-        para ver ¡qué tan diferente lucen tus dibujos! Las sugerencias están en las
+        para ver ¡qué tan diferente lucen tus dibujos! ¡Las sugerencias están en las
         pistas!"
       courseF_artist_fwp9_2018: "**Juego libre:** Más abajo están las funciones que
         has escrito, y más para que puedas jugar con ellas. Juega con el ancho del
-        lápiz para ver ¡qué tan diferente lucen tus dibujos! Las sugerencias están
+        lápiz para ver ¡qué tan diferente lucen tus dibujos! ¡Las sugerencias están
         en las pistas!"
       courseF_artist_fwp_challenge1: |-
         Intenta ejecutar este programa. Haz cambios para ver qué sucede. ¿Puedes descifrar cómo funciona?
@@ -6104,11 +6149,11 @@ es-MX:
         la función 'sólo hacer miel', luego úsala para resolver este desafío.
       courseF_bee_functions3a: "¡Cada nube puede estar escondiendo o una flor o un
         panal! Escribe una función que obtenga néctar si la abeja está en la flor,
-        de lo contrario obtiene miel.\r\n\r\n¡Usa tu función para resolver este rompecabezas!"
+        de lo contrario obtiene miel.\r\n\r\n¡Usa tu función para resolver este desafío!"
       courseF_bee_functions3a_2018: "¡Cada nube puede estar escondiendo o una flor
         o un panal! Escribe una función que obtenga néctar si la abeja está en la
         flor, de lo contrario obtiene miel.\r\n\r\n¡Usa tu función para resolver este
-        rompecabezas!"
+        desafío!"
       courseF_bee_functions4: "¿Sabías que puedes llamar una función desde *dentro*
         de otra función? \r\n\r\nUsa tu función 'revisar néctar o miel' dentro de
         la nueva función 'mover y revisar' ¡para ayudar a la abeja a girar, ir a recoger
@@ -6206,11 +6251,11 @@ es-MX:
         esta función para recoger el néctar."
       courseF_bee_fwp6: "Puedes hacer el código más corto y más eficiente cuando combinas
         funciones con otros elementos de programación.  \r\n___\r\n¿Qué bloques puedes
-        usar con tu función para construir una solución breve y dulce para este rompecabezas?"
+        usar con tu función para construir una solución breve y dulce para este desafío?"
       courseF_bee_fwp6_2018: "Puedes hacer el código más corto y más eficiente cuando
         combinas funciones con otros elementos de programación.  \r\n___\r\n¿Qué bloques
         puedes usar con tu función para construir una solución breve y dulce para
-        este rompecabezas?"
+        este desafío?"
       courseF_bee_fwp7: "**Desafío:** Algo luce un poco diferente. Modifica tu función
         para también hacer miel."
       courseF_bee_fwp7_2018: "**Desafío:** Algo luce un poco diferente. Modifica tu
@@ -6222,16 +6267,16 @@ es-MX:
         todo el maíz. El mismo 'loop para' puede contar a valores máximos diferentes
         usando el parámetro 'longitud'.
       courseF_bee_fwp_challenge2: "*\"**Lechuga** ¡ve si puedes manejar esta prueba
-        final! ¡Dale todo lo que tienes!\"*\r\n\r\nUsa un 'bucle para' en una función
-        para recoger todos los vegetales en la fila. Haz que el 'bucle para' cuente
+        final! ¡Dale todo lo que tienes!\"*\r\n\r\nUsa un 'loop para' en una función
+        para recoger todos los vegetales en la fila. Haz que el 'loop para' cuente
         valores máximos diferentes usando el parámetro 'longitud'. Haz tu programa
-        tan corto como sea posible usando el segundo 'bucle para' fuera de la función.\r\n\r\n¡Mucha
+        tan corto como sea posible usando el segundo 'loop para' fuera de la función.\r\n\r\n¡Mucha
         suerte!"
       courseF_bee_fwp_challenge2_2018: "*\"**Lechuga** ¡ve si puedes manejar esta
-        prueba final! ¡Dale todo lo que tienes!\"*\r\n\r\nUsa un 'bucle para' en una
-        función para recoger todos los vegetales en la fila. Haz que el 'bucle para'
+        prueba final! ¡Dale todo lo que tienes!\"*\r\n\r\nUsa un 'loop para' en una
+        función para recoger todos los vegetales en la fila. Haz que el 'loop para'
         cuente valores máximos diferentes usando el parámetro 'longitud'. Haz tu programa
-        tan corto como sea posible usando el segundo 'bucle para' fuera de la función.\r\n\r\n¡Mucha
+        tan corto como sea posible usando el segundo 'loop para' fuera de la función.\r\n\r\n¡Mucha
         suerte!"
       courseF_bee_variables_3_2018: "*\"¡Que jardín más increíble!\"*\r\n\r\nEn este
         desafío, cada área necesita la variable para ser menos que el área anterior.
@@ -6997,6 +7042,8 @@ es-MX:
         *"¿Cómo va tu función?"*
 
         Necesitamos hacer algunos ajustes aquí. Haz clic en "editar" para agregar un parámetro 'longitud' a la función para que aún funciones cuando la fila tenga una longitud diferente.
+      grade5_bee_parameters_new8a: Usa tu nueva función para resolver este espiral.
+      grade5_bee_parameters_new9a: Usa tu nueva función para resolver este espiral.
       grade5_playlab_variables13: Use un bloque "cuando el actor toque" para enviar
         al Perro de regreso al lado superior izquierdo SOLAMENTE si el Perro toca
         a alguno de los otros actores.

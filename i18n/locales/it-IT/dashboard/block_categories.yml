@@ -22,14 +22,14 @@ it:
       Picker: Selezione
       Comment: Commento
       'Variables ': 'Variabili '
+      Default: Impostazione predefinita
+      Behaviors: Comportamenti
       everythingelse: qualunque altra cosa
       World: Ambiente
       Sprites: Personaggi
       Location: Luogo
-      Behaviors: Comportamenti
       numbers: numeri
       Numbers: Numeri
-      Default: Impostazione predefinita
       Dancers: Ballerini
       Groups: Gruppi
       Start: Inizia

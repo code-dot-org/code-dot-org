@@ -654,6 +654,18 @@ ru:
             '"space"': космос
             '"x"': x
             '"y"': у
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': граница
+            '"inner"': внутренняя площадь
+            '"circle"': круг
+            '"grid"': сетка
+            '"row"': шеренга
+            '"column"': колонна
+            '"x"': крест-накрест
+            '"plus"': плюс
+            '"random"': случайный
       gamelab_locationConstant:
         options:
           DIR:

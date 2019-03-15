@@ -27,6 +27,7 @@
   twentyhours_text: "Végeztél az első tanfolyammal? Tudj meg többet a számítástechnikáról és a programozási koncepciókról a következő tanfolyamon."
   og_title: 'Minden gyermek megérdemli lehetőséget'
   og_title_soon: "Közeleg a Kódolás Órája"
+  og_title_here: "A Kódolás Órája elérkezett!"
   og_description: "Minden diáknak, minden iskolában meg kellene adni a lehetőséget, hogy számítástechnikát tanuljon."
   csedweek_og_title: "A kódolás órája elérkezett"
   csedweek_og_description: "2017. december 4-10. A számítás tudomány minden diák számára fontos tudást ad."
@@ -149,6 +150,12 @@
   learn_back_to_minecraft: "Folytasd a tanulást a Minecrafttal"
   just_did_hoc: 'Épp most csináltam végig a #HourOfCode -t - nézd meg! @codeorg'
   just_did_course4: "Épp most csináltam végig a 4. tanfolyamot - nézd meg! @codeorg"
+  just_did_coursea: "Épp most fejeztem be az A tanfolyamot - nézd meg! @codeorg"
+  just_did_courseb: "Épp most fejeztem be a B tanfolyamot - nézd meg! @codeorg"
+  just_did_coursec: "Épp most fejeztem be a C tanfolyamot - nézd meg! @codeorg"
+  just_did_coursed: "Épp most fejeztem be a D tanfolyamot - nézd meg! @codeorg"
+  just_did_coursee: "Épp most fejeztem be az E tanfolyamot - nézd meg! @codeorg"
+  just_did_coursef: "Épp most fejeztem be az F tanfolyamot - nézd meg! @codeorg"
   twitter_teach_cs: "10-ből 9 ember szerint már az általános iskolában el kellene kezdeni az informatika tanítását. http://youtu.be/nKIu9yen5nc. Visit https://code.org/."
   learn_hoc: "Ismerd meg a Kódolás Óráját"
   beyond_hoc: "Az első órán túl"
