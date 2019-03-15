@@ -1704,3 +1704,5 @@
   page_not_found_header: '404: Page Not Found'
   page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
   page_not_found_button: "Return home"
+  hoc2018_mc_with_microsoft: "In partnership with"
+  hoc2018_mc_thank_microsoft: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
