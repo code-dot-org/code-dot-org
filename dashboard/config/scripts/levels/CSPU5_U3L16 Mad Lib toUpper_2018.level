@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:01:54.000Z",
-  "level_num": "custom",
-  "user_id": 42,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -170,14 +166,18 @@
     "execute_palette_apis_only": "false",
     "parent_level_id": 6805,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:01:54.000Z",
+  "level_num": "custom",
+  "user_id": 42,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-09-19 18:50:53 +0000\",\"changed\":[\"notes\",\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-19 18:51:18 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",

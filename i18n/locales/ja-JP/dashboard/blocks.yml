@@ -638,6 +638,18 @@ ja:
             '"space"': うちゅう
             '"x"': x
             '"y"': 'y'
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': 境界
+            '"inner"': 四角の中
+            '"circle"': 円
+            '"grid"': グリッド
+            '"row"': 行
+            '"column"': 列
+            '"x"': 十字
+            '"plus"': プラス
+            '"random"': ランダム に
       gamelab_locationDelta:
         options:
           DIR:

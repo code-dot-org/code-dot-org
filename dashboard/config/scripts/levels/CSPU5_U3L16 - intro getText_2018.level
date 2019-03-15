@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:01:54.000Z",
-  "level_num": "custom",
-  "user_id": 13,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -42,15 +38,18 @@
     "name_suffix": "_2018",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "short_instructions": "Add an event handler to the Submit button so that when the button is clicked it will display the name entered in the text box to the console.  Use getText to get the value out of the text box. (Click to see full instructions)",
     "long_instructions": "# Getting Text Input\r\n\r\nAs we saw a user can now type inside of a text input whenever they want, **but now we'll need a way to access that text**. In order to do that you'll need to use the `getText` command, which you can now find in the **UI Controls** tab.\r\n\r\n<img src=\"https://images.code.org/0c6774f2b6d33f8107ec2936102b1a10-image-1445533677192.58.24 PM.png\" style=\"width: 150px;\">\r\n\r\nYou can use a `getText` command just like a string within a `console.log` or `write` command. Just like with `setText` you will refer to the UI element by its ID.\r\n\r\n![](https://images.code.org/c17e419301d0cfeebf7f0ccee13e415f-image-1445892504376.47.54 PM.png)\r\n\r\n# Do This:\r\n\r\n* **Read the documentation**  for `getText`.\r\n* **Add an event handler to the Submit button** that fires when your button is clicked.\r\n* **Inside the event handler** place code that will **log the name your user input to the console**.\r\n\r\n",
-    "contained_level_names": null,
     "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:01:54.000Z",
+  "level_num": "custom",
+  "user_id": 13,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-11-09 20:34:08 +0000\",\"changed\":[\"markdown_instructions\",\"instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2018-12-11 00:46:51 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",

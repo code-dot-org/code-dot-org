@@ -618,6 +618,17 @@ vi:
             '"right"': phải
             '"space"': vũ trụ
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': đường biên
+            '"inner"': hình vuông bên trong
+            '"circle"': vòng tròn
+            '"grid"': lưới
+            '"row"': hàng
+            '"column"': cột
+            '"plus"': cộng
+            '"random"': ngẫu nhiên
       gamelab_locationDelta:
         options:
           DIR:

@@ -68,6 +68,7 @@ class Level < ActiveRecord::Base
     rubric_approaches
     rubric_no_evidence
     mini_rubric
+    encrypted
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -204,7 +205,14 @@ class Level < ActiveRecord::Base
   # Input: xml level file definition
   # Output: Hash of level properties
   def load_level_xml(xml_node)
-    JSON.parse(xml_node.xpath('//../config').first.text)
+    hash = JSON.parse(xml_node.xpath('//../config').first.text)
+    if hash['encrypted_properties']
+      hash['properties'] = Encryption.decrypt_object(hash.delete('encrypted_properties'))
+    end
+    if hash['encrypted_notes']
+      hash['notes'] = Encryption.decrypt_object(hash.delete('encrypted_notes'))
+    end
+    hash
   end
 
   def self.write_custom_levels
@@ -237,8 +245,12 @@ class Level < ActiveRecord::Base
       xml.send(type) do
         xml.config do
           hash = serializable_hash(include: :level_concept_difficulty).deep_dup
-          config_attributes = filter_level_attributes(hash)
-          xml.cdata(JSON.pretty_generate(config_attributes.as_json))
+          hash = filter_level_attributes(hash)
+          if encrypted?
+            hash['encrypted_properties'] = Encryption.encrypt_object(hash.delete('properties'))
+            hash['encrypted_notes'] = Encryption.encrypt_object(hash.delete('notes'))
+          end
+          xml.cdata(JSON.pretty_generate(hash.as_json))
         end
       end
     end

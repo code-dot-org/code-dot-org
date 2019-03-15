@@ -38,6 +38,8 @@ cs:
           mít každý čtverec?
       2-3 Artist 9 NEW_authored_hint:
         2-3_Artist_9_a: Tvar diamantu je jen pootočený čtverec
+      2-3 Artist 9 REPLACEMENT_authored_hint:
+        step_size: Každý krok je 100 pixelů široký a 100 pixelů vysoký.
       2-3 Artist 9_authored_hint:
         2-3_Artist_9_a: Tento diamant je jen čtverec pootočený o 45 stupňů.
         2-3_Artist_9_b: Předtím než začneš kreslit svůj čtverec, nezapomeň umělce
@@ -75,13 +77,49 @@ cs:
         2-3_Artist_Debugging_9_b: K úplnému otočení není potřeba přidat další blok.
           Stačí přidat 60 stupňů do bloku `otočit vlevo`, který už tam je!
       2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_a: Každý čtverec má strany o délce 100 pixelů, to znamená,
+          že se budete muset posunout o 175 pixelů vpřed, dřív než začnete kreslit
+          druhý čtverec.
         2-3_Artist_Functions_1_b: Je v pořádku, pokud se čáry překrývají.
       2-3 Artist Functions 1_authored_hint:
+        2-3_Artist_Functions_1_a: Každý čtverec má strany o délce 100 pixelů, to znamená,
+          že se budete muset posunout o 175 pixelů vpřed, dřív než začnete kreslit
+          druhý čtverec.
         2-3_Artist_Functions_1_b: Je v pořádku, pokud se čáry překrývají.
+      2-3 Artist Functions 11 a_authored_hint:
+        2-3_Artist_Functions_11_a: Budete muset změnit nejen počet a délku stran v
+          rámci funkce, ale také úhel, kterým se umělec otočí mezi oběma stranami.
+      2-3 Artist Functions 11_authored_hint:
+        2-3_Artist_Functions_11_a: Budete muset změnit nejen počet a délku stran v
+          rámci funkce, ale také úhel, kterým se umělec otočí mezi oběma stranami.
+      2-3 Artist Functions 12 a_authored_hint:
+        2-3_Artist_Functions_12_a: Zkuste nejprve spustit kód, abyste zjistili, co
+          potřebujete přidat.
+      2-3 Artist Functions 12_authored_hint:
+        2-3_Artist_Functions_12_a: Zkuste nejprve spustit kód, abyste zjistili, co
+          potřebujete přidat.
+      2-3 Artist Functions 2 a_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Váš program by měl:
+          - použít funkci
+          - posunout se vpřed o 100 + 75 pixelů
+          - použít funkci
+      2-3 Artist Functions 2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Váš program by měl:
+          - použít funkci
+          - posunout se vpřed o 100 + 75 pixelů
+          - použít funkci
       2-3 Artist Functions 3 a_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 4 a_authored_hint:
+        2-3_Artist_Functions_4_a: Umělec se potřebuje otočit o 120 stupňů mezi každým
+          čtvercem, aby dokončil obrazec.
+      2-3 Artist Functions 4_authored_hint:
+        2-3_Artist_Functions_4_a: Umělec se potřebuje otočit o 120 stupňů mezi každým
+          čtvercem, aby dokončil obrazec.
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           Vzpomeňte si, že kód z předchozí hádanky byl:
@@ -126,6 +164,8 @@ cs:
           </next>
           </block>
           </xml>
+        2-3_Artist_Loops_New_11_b: Váš nový obrat by měl jít na **konec** kódu uvnitř
+          smyčky.
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_a: Než začne diamant, umělec se potřebuje otočit doleva
           o 60 stupňů, aby byl správně nasměrován.
@@ -151,6 +191,15 @@ cs:
           než začne kreslit.
         2-3_Artist_Loops_New_9_b: Tohle V je ve skutečnosti prostě polovina čtverce.
           Jaký by byl kód k nakreslení půlky čtverce?
+      2-3 Artist Nested Loops 1_authored_hint:
+        2-3_Artist_Nested_Loops_1_a: Nezapomeňte vložit všechny šedé bloky dovnitř
+          vaší smyčky.
+      2-3 Artist Nested Loops 3_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: "Potřebujete pomoc s úhly?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_b: Nezapomeňte dovnitř smyčky vložit celý šedý kód
+          a bloky měnící směr.
+      2-3 Artist Nested Loops 4_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: "Potřebujete pomoc s úhly?  \n**360/12 = 30**"
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Těžko najít způsob, jak vyzrát na bloky? Zkus zacházet
           s červenou květinou úplně stejně jako s fialovou květinou!
@@ -233,6 +282,9 @@ cs:
           nakreslením dalšího čtverce skočit o 20 pixelů.
       4-5 Artist Patterns 3_authored_hint:
         4-5_Artist_Patterns_3_a: Vytáhni celý blok kódu z panelu příkazů.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: Umělec se potřebuje otočit o 120 stupňů mezi každým
+          čtvercem, aby dokončil obrazec.
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: Chcete-li použití blok `posunout vpřed`, přetáhněte ho z panelu
           bloků do pracovního prostoru a připojte ho k bloku `při spuštění`.
@@ -1270,6 +1322,12 @@ cs:
       courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
+      courseD_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          Váš program by měl:
+          - použít funkci
+          - posunout se vpřed o 100 + 75 pixelů
+          - použít funkci
       courseD_bee_conditionals_challenge2_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
           Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
@@ -1330,9 +1388,21 @@ cs:
         courseE_artist_concept_challenge1_b: 'Dvě třetiny trojúhelníku mají délku
           80 pixelů a otočka vpravo je o 120 stupňů. '
       courseE_artist_functions1_authored_hint:
+        courseE_artist_functions1_a: Každý čtverec má strany o délce 100 pixelů, to
+          znamená, že se budete muset posunout o 175 pixelů vpřed, dřív než začnete
+          kreslit druhý čtverec.
         courseE_artist_functions1_b: Je v pořádku, pokud se čáry překrývají.
       courseE_artist_functions1_2018_authored_hint:
+        courseE_artist_functions1_a: Každý čtverec má strany o délce 100 pixelů, to
+          znamená, že se budete muset posunout o 175 pixelů vpřed, dřív než začnete
+          kreslit druhý čtverec.
         courseE_artist_functions1_b: Je v pořádku, pokud se čáry překrývají.
+      courseE_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          Váš program by měl:
+          - použít funkci
+          - posunout se vpřed o 100 + 75 pixelů
+          - použít funkci
       courseE_bee_ramp14_authored_hint:
         courseE_bee_ramp14_a: Včela pracuje jako farmář v předchozí hádance. Jdi po
           cestě a sbírej nektar, dokud tam nějaký je (dokud nektar > 0) a vyrob všechen
@@ -1358,6 +1428,9 @@ cs:
           o 100 pixelů, nakreslím automaticky cestou čáru.
         2-3_Artist_1_new_b: Máš problém s otáčením v rohu? Použij příkaz "otočení
           o 90° doprava".
+      grade2_MakeDogTag_9_authored_hint:
+        2-3_Artist_Loops_New_11_b: Váš nový obrat by měl jít na **konec** kódu uvnitř
+          smyčky.
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
           Kolikrát se můj tvar opakuje?
@@ -1435,7 +1508,16 @@ cs:
         2-3_Maze_Loops_21_a: Pokud se ti nedaří najít schodovitý vzor, zkus si zakrýt
           blokované cesty prstem.
       grade4_artist_functions1_authored_hint:
+        2-3_Artist_Functions_1_a: Každý čtverec má strany o délce 100 pixelů, to znamená,
+          že se budete muset posunout o 175 pixelů vpřed, dřív než začnete kreslit
+          druhý čtverec.
         2-3_Artist_Functions_1_b: Je v pořádku, pokud se čáry překrývají.
+      grade4_artist_functions2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Váš program by měl:
+          - použít funkci
+          - posunout se vpřed o 100 + 75 pixelů
+          - použít funkci
       grade4_artist_nestedLoops_challenge2_authored_hint:
         Course_4_Artist_11_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka
           vpravo je o 120 stupňů. '
