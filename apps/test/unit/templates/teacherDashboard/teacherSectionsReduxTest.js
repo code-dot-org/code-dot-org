@@ -23,7 +23,6 @@ import reducer, {
   editSectionLoginType,
   asyncLoadSectionData,
   assignmentId,
-  stageExtrasEnabled,
   assignmentNames,
   assignmentPaths,
   sectionFromServerSection,
@@ -396,28 +395,6 @@ describe('teacherSectionsRedux', () => {
           af => af.assignment_family_name === scriptInCourse.script_name
         )
       );
-    });
-  });
-
-  describe('stageExtrasEnabled', () => {
-    it('returns false if section has stage extras set to false', () => {
-      const sectionId = 23;
-      const currentState = {
-        teacherSections: {
-          sections: {23: {stageExtras: false}}
-        }
-      };
-      assert.equal(false, stageExtrasEnabled(currentState, sectionId));
-    });
-
-    it('returns true if selected section has stage extras set to true', () => {
-      const sectionId = 23;
-      const currentState = {
-        teacherSections: {
-          sections: {23: {stageExtras: true}}
-        }
-      };
-      assert.equal(true, stageExtrasEnabled(currentState, sectionId));
     });
   });
 
