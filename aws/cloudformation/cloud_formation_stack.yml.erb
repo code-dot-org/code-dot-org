@@ -573,6 +573,9 @@ Resources:
                   - cloudwatch:GetMetricStatistics
                   - ec2:DescribeInstances
                 Resource: '*'
+              - Effect: Allow
+                Action: cloudformation:DescribeStackResource
+                Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/adhoc-*"
         - PolicyName: RDSBackup
           PolicyDocument:
             Statement:
@@ -593,6 +596,14 @@ Resources:
                   - rds:ModifyDBSnapshotAttribute
                   - rds:DeleteDBSnapshot
                 Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:temp-snapshot-*"
+              - Effect: Allow
+                Action:
+                  - kms:CreateGrant
+                  - kms:DescribeKey
+                Resource: '*'
+                Condition:
+                  StringEquals:
+                    kms:ViaService: !Sub "rds.${AWS::Region}.amazonaws.com"
 <% end -%>
       ManagedPolicyArns: [!Ref CDOPolicy]
       PermissionsBoundary: !ImportValue IAM-DevPermissions
