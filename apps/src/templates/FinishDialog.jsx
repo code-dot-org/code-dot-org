@@ -182,10 +182,12 @@ const styles = {
     margin: '0px 5px'
   },
   replayButton: {
-    backgroundColor: color.green
+    color: color.dark_charcoal,
+    backgroundColor: color.lightest_gray
   },
   showCodeButton: {
-    backgroundColor: color.teal
+    color: color.dark_charcoal,
+    backgroundColor: color.lightest_gray
   },
   continueButton: {
     backgroundColor: color.orange
