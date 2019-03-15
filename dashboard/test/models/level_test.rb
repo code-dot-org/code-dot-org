@@ -348,6 +348,8 @@ EOS
   end
 
   test 'encrypted level properties are preserved after export and import' do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
     level = Level.create(name: 'test encrypted properties', short_instructions: 'test', type: 'Artist', encrypted: true, disable_sharing: true, notes: 'original notes')
     assert level.disable_sharing
     assert level.encrypted
