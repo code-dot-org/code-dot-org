@@ -167,8 +167,7 @@ module Pd::Application
               :replace_course,
               :committed_to_diversity,
               :understand_fee,
-              :pay_fee,
-              :how_heard
+              :pay_fee
             ]
 
             if teacher_application&.course == 'csd'
