@@ -19,23 +19,20 @@ const styles = {
     display: 'block'
   },
   button: {
+    margin: 10,
     fontWeight: 'bold'
   },
   errorIcon: {
     color: 'red',
     margin: 10
   },
-  timeTeacher: {
-    paddingTop: 8,
-    paddingLeft: 8,
+  time: {
+    height: 24,
+    paddingTop: 6,
     fontStyle: 'italic',
     fontSize: 12,
-    color: color.cyan
-  },
-  timeStudent: {
-    fontStyle: 'italic',
-    fontSize: 12,
-    color: color.cyan
+    color: color.cyan,
+    backgroundColor: color.lightest_cyan
   },
   footer: {
     display: 'flex',
@@ -44,9 +41,8 @@ const styles = {
   h1: {
     color: color.charcoal,
     marginTop: 8,
-    marginBottom: 8,
-    fontSize: 18,
-    lineHeight: '18px',
+    marginBottom: 12,
+    fontSize: 24,
     fontFamily: '"Gotham 5r", sans-serif',
     fontWeight: 'normal'
   },
@@ -54,25 +50,21 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    margin: '0px 16px 16px 16px'
+    margin: '0px 16px 20px 16px'
   },
   keyConceptArea: {
     marginRight: 28,
     flexBasis: '40%'
   },
   keyConcepts: {
-    fontSize: 12,
-    color: color.charcoal,
-    margin: 0
+    fontSize: 13,
+    color: color.charcoal
   },
   rubricArea: {
     flexBasis: '60%'
   },
   commentAndFooter: {
-    margin: '0px 16px 8px 16px'
-  },
-  form: {
-    margin: 0
+    margin: '0px 16px 16px 16px'
   }
 };
 
@@ -252,10 +244,6 @@ class TeacherFeedback extends Component {
 
     const rubricLevels = ['exceeds', 'meets', 'approaches', 'noEvidence'];
 
-    const timeStyle =
-      this.props.viewAs === ViewType.Student
-        ? styles.timeStudent
-        : styles.timeTeacher;
     // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs
     const tabVisible = this.props.visible
@@ -270,6 +258,15 @@ class TeacherFeedback extends Component {
             {i18n.feedbackLoadError()}
           </span>
         )}
+        {this.state.latestFeedback.length > 0 && (
+          <div style={styles.time} id="ui-test-feedback-time">
+            {i18n.lastUpdated({
+              time: moment
+                .min(moment(), moment(latestFeedback.created_at))
+                .fromNow()
+            })}
+          </div>
+        )}
         {this.props.rubric && !dontShowStudentRubric && (
           <div style={styles.performanceArea}>
             <div style={styles.keyConceptArea}>
@@ -278,7 +275,7 @@ class TeacherFeedback extends Component {
             </div>
             <div style={styles.rubricArea}>
               <h1 style={styles.h1}> {i18n.rubricHeader()} </h1>
-              <form style={styles.form}>
+              <form>
                 {rubricLevels.map(level => (
                   <RubricField
                     key={level}
@@ -322,15 +319,6 @@ class TeacherFeedback extends Component {
                       {i18n.feedbackSaveError()}
                     </span>
                   )}
-                </div>
-              )}
-              {this.state.latestFeedback.length > 0 && (
-                <div style={timeStyle} id="ui-test-feedback-time">
-                  {i18n.lastUpdated({
-                    time: moment
-                      .min(moment(), moment(latestFeedback.created_at))
-                      .fromNow()
-                  })}
                 </div>
               )}
             </div>
