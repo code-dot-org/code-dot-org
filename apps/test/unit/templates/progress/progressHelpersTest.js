@@ -262,5 +262,18 @@ describe('progressHelpers', () => {
       assert.equal(summarizedStage.imperfect, 1);
       assert.equal(summarizedStage.attempted, 1);
     });
+
+    it('does not summarize bonus levels', () => {
+      const levels = fakeLevels(1);
+      levels[0].status = LevelStatus.submitted;
+      levels[0].bonus = true;
+
+      const summarizedStage = summarizeProgressInStage(levels);
+      assert.equal(summarizedStage.total, 0);
+      assert.equal(summarizedStage.incomplete, 0);
+      assert.equal(summarizedStage.completed, 0);
+      assert.equal(summarizedStage.imperfect, 0);
+      assert.equal(summarizedStage.attempted, 0);
+    });
   });
 });
