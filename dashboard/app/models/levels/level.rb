@@ -218,6 +218,7 @@ class Level < ActiveRecord::Base
     rescue Encryption::KeyMissingError
       # developers must be able to seed levels without properties_encryption_key
       raise unless rack_env?(:development)
+      puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
     end
     hash
   end
