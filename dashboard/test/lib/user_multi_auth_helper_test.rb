@@ -36,7 +36,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   # The following two tests check the oauth_tokens_for_provider logic for demigrated teachers, and
   # can be deleted after we migrate all users to multiauth
   test 'oauth_tokens_for_provider returns correct token for demigrated Google teacher' do
-    user = create :teacher, :unmigrated_google_sso, :demigrated
+    user = create :teacher, :google_sso_provider, :demigrated
     google_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token]
     google_expiration = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token_expiration]
     google_refresh_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_refresh_token]
@@ -150,27 +150,27 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   #
 
   test 'create migrated Google OAuth student' do
-    assert_created_google_user create(:student, :unmigrated_google_sso)
+    assert_created_google_user create(:student, :google_sso_provider)
   end
 
   test 'create migrated Google OAuth teacher' do
-    assert_created_google_user create(:teacher, :unmigrated_google_sso)
+    assert_created_google_user create(:teacher, :google_sso_provider)
   end
 
   test 'create migrated Windows Live OAuth student' do
-    assert_created_sso_user_with_oauth_token create(:student, :unmigrated_windowslive_sso)
+    assert_created_sso_user_with_oauth_token create(:student, :windowslive_sso_provider)
   end
 
   test 'create migrated Windows Live OAuth teacher' do
-    assert_created_sso_user_with_oauth_token create(:teacher, :unmigrated_windowslive_sso)
+    assert_created_sso_user_with_oauth_token create(:teacher, :windowslive_sso_provider)
   end
 
   test 'create migrated Facebook OAuth student' do
-    assert_created_sso_user_with_oauth_token create(:student, :unmigrated_facebook_sso)
+    assert_created_sso_user_with_oauth_token create(:student, :facebook_sso_provider)
   end
 
   test 'create migrated Facebook OAuth teacher' do
-    assert_created_sso_user_with_oauth_token create(:teacher, :unmigrated_facebook_sso)
+    assert_created_sso_user_with_oauth_token create(:teacher, :facebook_sso_provider)
   end
 
   def assert_created_google_user(user)
@@ -190,19 +190,19 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   #
 
   test 'create migrated Clever OAuth student' do
-    assert_created_sso_user_with_oauth_token create(:student, :unmigrated_clever_sso)
+    assert_created_sso_user_with_oauth_token create(:student, :clever_sso_provider)
   end
 
   test 'create migrated Clever OAuth teacher' do
-    assert_created_sso_user_with_oauth_token create(:teacher, :unmigrated_clever_sso)
+    assert_created_sso_user_with_oauth_token create(:teacher, :clever_sso_provider)
   end
 
   test 'create migrated Powerschool OAuth student' do
-    assert_created_sso_user_with_oauth_token create(:student, :unmigrated_powerschool_sso)
+    assert_created_sso_user_with_oauth_token create(:student, :powerschool_sso_provider)
   end
 
   test 'create migrated Powerschool OAuth teacher' do
-    assert_created_sso_user_with_oauth_token create(:teacher, :unmigrated_powerschool_sso)
+    assert_created_sso_user_with_oauth_token create(:teacher, :powerschool_sso_provider)
   end
 
   def assert_created_sso_user_with_oauth_token(user)
@@ -222,22 +222,22 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   # supporting them.
 
   test 'create migrated The School Project student' do
-    assert_created_sso_user create(:student, :unmigrated_the_school_project_sso)
+    assert_created_sso_user create(:student, :the_school_project_sso_provider)
   end
 
   test 'create migrated The School Project teacher' do
-    assert_created_sso_user create(:teacher, :unmigrated_the_school_project_sso)
+    assert_created_sso_user create(:teacher, :the_school_project_sso_provider)
   end
 
   # Our Twitter SSO support is very old - we have a few thousand such accounts
   # but less than 10 are still active.
 
   test 'create migrated Twitter student' do
-    assert_created_sso_user create(:student, :unmigrated_twitter_sso)
+    assert_created_sso_user create(:student, :twitter_sso_provider)
   end
 
   test 'create migrated Twitter teacher' do
-    assert_created_sso_user create(:teacher, :unmigrated_twitter_sso)
+    assert_created_sso_user create(:teacher, :twitter_sso_provider)
   end
 
   #
@@ -249,11 +249,11 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   # That doesn't mean we couldn't end up with a teacher account though.
 
   test 'create migrated Qwiklabs LTI student' do
-    assert_created_lti_user create(:student, :unmigrated_qwiklabs_sso)
+    assert_created_lti_user create(:student, :qwiklabs_sso_provider)
   end
 
   test 'create migrated Qwiklabs LTI teacher' do
-    assert_created_lti_user create(:teacher, :unmigrated_qwiklabs_sso)
+    assert_created_lti_user create(:teacher, :qwiklabs_sso_provider)
   end
 
   def assert_created_lti_user(user)
@@ -288,7 +288,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'migration clears single-auth fields' do
-    user = create :teacher, :unmigrated_google_sso
+    user = create :teacher, :google_sso_provider
 
     assert_user user,
       uid: nil,
@@ -375,11 +375,11 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'de- and re-migrate Google OAuth student' do
-    round_trip_google_user create(:student, :unmigrated_google_sso)
+    round_trip_google_user create(:student, :google_sso_provider)
   end
 
   test 'de- and re-migrate Google OAuth teacher' do
-    round_trip_google_user create(:teacher, :unmigrated_google_sso)
+    round_trip_google_user create(:teacher, :google_sso_provider)
   end
 
   def round_trip_google_user(for_user)
@@ -395,35 +395,35 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'de- and re-migrate Windows Live OAuth student' do
-    round_trip_sso_with_token create(:student, :unmigrated_windowslive_sso)
+    round_trip_sso_with_token create(:student, :windowslive_sso_provider)
   end
 
   test 'de- and re-migrate Windows Live OAuth teacher' do
-    round_trip_sso_with_token create(:teacher, :unmigrated_windowslive_sso)
+    round_trip_sso_with_token create(:teacher, :windowslive_sso_provider)
   end
 
   test 'de- and re-migrate Facebook OAuth student' do
-    round_trip_sso_with_token create(:student, :unmigrated_facebook_sso)
+    round_trip_sso_with_token create(:student, :facebook_sso_provider)
   end
 
   test 'de- and re-migrate Facebook OAuth teacher' do
-    round_trip_sso_with_token create(:teacher, :unmigrated_facebook_sso)
+    round_trip_sso_with_token create(:teacher, :facebook_sso_provider)
   end
 
   test 'de- and re-migrate Clever OAuth student' do
-    round_trip_sso_with_token create(:student, :unmigrated_clever_sso)
+    round_trip_sso_with_token create(:student, :clever_sso_provider)
   end
 
   test 'de- and re-migrate Clever OAuth teacher' do
-    round_trip_sso_with_token create(:teacher, :unmigrated_clever_sso)
+    round_trip_sso_with_token create(:teacher, :clever_sso_provider)
   end
 
   test 'de- and re-migrate Powerschool OAuth student' do
-    round_trip_sso_with_token create(:student, :unmigrated_powerschool_sso)
+    round_trip_sso_with_token create(:student, :powerschool_sso_provider)
   end
 
   test 'de- and re-migrate Powerschool OAuth teacher' do
-    round_trip_sso_with_token create(:teacher, :unmigrated_powerschool_sso)
+    round_trip_sso_with_token create(:teacher, :powerschool_sso_provider)
   end
 
   def round_trip_sso_with_token(for_user)
@@ -444,27 +444,27 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'de- and re-migrate The School Project student' do
-    round_trip_sso create(:student, :unmigrated_the_school_project_sso)
+    round_trip_sso create(:student, :the_school_project_sso_provider)
   end
 
   test 'de- and re-migrate The School Project teacher' do
-    round_trip_sso create(:teacher, :unmigrated_the_school_project_sso)
+    round_trip_sso create(:teacher, :the_school_project_sso_provider)
   end
 
   test 'de- and re-migrate Twitter student' do
-    round_trip_sso create(:student, :unmigrated_twitter_sso)
+    round_trip_sso create(:student, :twitter_sso_provider)
   end
 
   test 'de- and re-migrate Twitter teacher' do
-    round_trip_sso create(:teacher, :unmigrated_twitter_sso)
+    round_trip_sso create(:teacher, :twitter_sso_provider)
   end
 
   test 'de- and re-migrate Qwiklabs LTI student' do
-    round_trip_sso create(:student, :unmigrated_qwiklabs_sso)
+    round_trip_sso create(:student, :qwiklabs_sso_provider)
   end
 
   test 'de- and re-migrate Qwiklabs LTI teacher' do
-    round_trip_sso create(:teacher, :unmigrated_qwiklabs_sso)
+    round_trip_sso create(:teacher, :qwiklabs_sso_provider)
   end
 
   def round_trip_sso(for_user)

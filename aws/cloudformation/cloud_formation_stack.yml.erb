@@ -127,6 +127,15 @@ Resources:
           - Effect: Allow
             Action: 'firehose:PutRecord'
             Resource: !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
+          # Send messages to SQS queues for asynchronous processing.
+          - Effect: Allow
+            Action: 'sqs:SendMessage'
+            Resource:
+<% unless daemon -%>
+              - !GetAtt ActivitiesQueue.Arn
+<% end -%>
+              # TODO: Import pd_workshop resources into stack.
+              - !Sub "arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:pd_workshop-<%=environment%>"
           # General s3 access.
           # TODO: Further restrict permissions to grant least privilege.
           - Effect: Allow
@@ -163,7 +172,7 @@ Resources:
     Properties:
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref InstanceType
-      IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile # Migrate to: !Ref FrontendInstanceProfile
+      IamInstanceProfile: !Ref FrontendInstanceProfile
       SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
       SubnetId: !ImportValue VPC-Subnet<%=azs.first%>
       KeyName: <%=SSH_KEY_NAME%>
@@ -272,7 +281,7 @@ Resources:
     Properties:
       ImageId: !GetAtt [AMI<%=ami%>, ImageId]
       InstanceType: !Ref InstanceType
-      IamInstanceProfile: !ImportValue IAM-FrontendInstanceProfile # Migrate to: !Ref FrontendInstanceProfile
+      IamInstanceProfile: !Ref FrontendInstanceProfile
       SecurityGroups: [!ImportValue VPC-FrontendSecurityGroup]
       KeyName: <%=SSH_KEY_NAME%>
       BlockDeviceMappings:
@@ -306,7 +315,7 @@ Resources:
       DefaultResult: ABANDON
       HeartbeatTimeout: 1200 # seconds = 20 minutes
       NotificationTargetARN: !Ref WebServerHookTopicNew
-      RoleARN: !ImportValue IAM-LifecycleHookRoleARN # Migrate to: !Ref WebServerHookRole
+      RoleARN: !GetAtt WebServerHookRole.Arn
   WebServerHookEventRule:
     Type: AWS::Events::Rule
     Properties:
@@ -517,7 +526,6 @@ Resources:
               # SQS queues for Asynchronous batch processing by the `process_queues` service.
               - Effect: Allow
                 Action:
-                  - 'sqs:SendMessage'
                   - 'sqs:ReceiveMessage'
                   - 'sqs:DeleteMessageBatch'
                   - 'sqs:DeleteMessage'
@@ -555,6 +563,48 @@ Resources:
               - Effect: Allow
                 Action: iam:PassRole
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+<% if rack_env?(:production) -%>
+        - PolicyName: StopInactiveAdhocInstances
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - cloudformation:DescribeStacks
+                  - cloudwatch:GetMetricStatistics
+                  - ec2:DescribeInstances
+                Resource: '*'
+              - Effect: Allow
+                Action: cloudformation:DescribeStackResource
+                Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/adhoc-*"
+        - PolicyName: RDSBackup
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: rds:DescribeDBInstances
+                Resource: '*'
+              - Effect: Allow
+                Action: rds:DescribeDBSnapshots
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:production"
+              - Effect: Allow
+                Action: rds:CopyDBSnapshot
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:rds:production-*"
+              - Effect: Allow
+                Action:
+                  - rds:CopyDBSnapshot
+                  - rds:DescribeDBSnapshots
+                  - rds:DescribeDBSnapshotAttributes
+                  - rds:ModifyDBSnapshotAttribute
+                  - rds:DeleteDBSnapshot
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:temp-snapshot-*"
+              - Effect: Allow
+                Action:
+                  - kms:CreateGrant
+                  - kms:DescribeKey
+                Resource: '*'
+                Condition:
+                  StringEquals:
+                    kms:ViaService: !Sub "rds.${AWS::Region}.amazonaws.com"
+<% end -%>
       ManagedPolicyArns: [!Ref CDOPolicy]
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   DaemonInstanceProfile:
