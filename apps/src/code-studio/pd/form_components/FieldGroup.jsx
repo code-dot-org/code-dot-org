@@ -20,8 +20,7 @@ export default class FieldGroup extends React.Component {
   handleChange(event) {
     const value = event.target.value;
     if (this.props.type === 'number') {
-      // For browsers that don't implement the restriction to a number, treating
-      // the input as a text field, this regular expression restricts input to
+      // We only want numbers out of this text field, and so this regular expression restricts input to
       // digits, a single decimal point, and an optional minus sign at the
       // beginning.
       if (!value.match(/^$|^-?[0-9]*(\.?)[0-9]*$/)) {
@@ -35,6 +34,8 @@ export default class FieldGroup extends React.Component {
   }
 
   renderControl(controlWidth, children, props) {
+    // Rather than set an input field's type to number, we leave it as text.
+    // The handleChange function will filter its contents to be numbers only.
     const updatedProps = {
       ...props,
       type: props.type === 'number' ? 'text' : props.type
