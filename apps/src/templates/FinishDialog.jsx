@@ -172,7 +172,9 @@ const styles = {
   funometer: {
     marginTop: 5,
     marginLeft: 20,
+    marginRight: 20,
     display: 'flex',
+    justifyContent: 'flex-end',
     minHeight: 32
   },
   button: {
