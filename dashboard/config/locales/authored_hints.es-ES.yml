@@ -4930,6 +4930,9 @@ es:
       course1_maze_debugging_challenge2_authored_hint:
         courseB_maze_seq_challenge2_b: Reorganiza los bloques y toma el camino del
           medio.
+      course1_maze_seq_challenge1_authored_hint:
+        courseA_maze_seq_challenge2_a: Intenta contar los espacios con los dedos.
+          ¡Recuerda no contar el espacio en el que comienzas!
       course1_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_b: Intenta moverte al oeste para empezar.
       course1_playlab_events_challenge1_authored_hint:
@@ -4980,6 +4983,9 @@ es:
           cuidadoso de que me dirija al camino correcto!*"
         courseC_maze_programming_challenge2_b: "¡La solución más corta usa solo 5
           bloques, pero usa el bloque de `repetir!"
+      course2_maze_seq_challenge1_authored_hint:
+        courseA_maze_seq_challenge2_a: Intenta contar los espacios con los dedos.
+          ¡Recuerda no contar el espacio en el que comienzas!
       course2_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_b: Intenta moverte al oeste para empezar.
       course3_artist_concept_challenge1_authored_hint:
@@ -5603,9 +5609,35 @@ es:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
+      courseA_harvester_seq5_authored_hint:
+        courseA_harvester_seq5_b: Necesitas eliminar un bloque.
+      courseA_harvester_seq5_2019_authored_hint:
+        courseA_harvester_seq5_b: Necesitas eliminar un bloque.
+      courseA_harvester_seq6_authored_hint:
+        courseA_harvester_seq6_a: Si estás atascado, intenta contar los pasos en voz
+          alto. Podría ayudarte a encontrar el camino correcto.
+      courseA_harvester_seq6_2019_authored_hint:
+        courseA_harvester_seq6_a: Si estás atascado, intenta contar los pasos en voz
+          alto. Podría ayudarte a encontrar el camino correcto.
+      courseA_harvester_seq8_authored_hint:
+        courseA_harvester_seq8_a: Tu código final debería tener **4** bloques de movimiento
+          y **2** bloques de recogida.
+      courseA_harvester_seq8_2019_authored_hint:
+        courseA_harvester_seq8_a: Tu código final debería tener **4** bloques de movimiento
+          y **2** bloques de recogida.
+      courseA_harvester_seq9_authored_hint:
+        courseA_harvester_seq9_a: Ejecuta el código un par de veces para ver qué ocurre.
+          ¿Dónde acaba el cosechador?
+        courseA_harvester_seq9_c: Deberías tomar este camino para recoger todo el
+          grano.
+      courseA_harvester_seq9_2019_authored_hint:
+        courseA_harvester_seq9_a: Ejecuta el código un par de veces para ver qué ocurre.
+          ¿Dónde acaba el cosechador?
+        courseA_harvester_seq9_c: Deberías tomar este camino para recoger todo el
+          grano.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5621,7 +5653,7 @@ es:
           </xml>
       courseA_maze_ramp2_2019_authored_hint:
         '1': |-
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5639,7 +5671,7 @@ es:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5658,7 +5690,7 @@ es:
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
         '1': |
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5811,6 +5843,153 @@ es:
         '1': Say the steps out loud and see if it helps you figure out the answer.
       courseA_maze_seq5a_2019_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq_challenge1_authored_hint:
+        courseA_maze_seq_challenge1_a: Hay dos soluciones para este puzzle.
+      courseA_maze_seq_challenge1_2018_authored_hint:
+        courseA_maze_seq_challenge1_a: Hay dos soluciones para este puzzle.
+      courseA_maze_seq_challenge1_2019_authored_hint:
+        courseA_maze_seq_challenge1_a: Hay dos soluciones para este puzzle.
+      courseA_maze_seq_challenge2_authored_hint:
+        courseA_maze_seq_challenge2_a: Intenta contar los espacios con los dedos.
+          ¡Recuerda no contar el espacio en el que comienzas!
+      courseA_maze_seq_challenge2_2018_authored_hint:
+        courseA_maze_seq_challenge2_a: Intenta contar los espacios con los dedos.
+          ¡Recuerda no contar el espacio en el que comienzas!
+      courseA_maze_seq_challenge2_2019_authored_hint:
+        courseA_maze_seq_challenge2_a: Intenta contar los espacios con los dedos.
+          ¡Recuerda no contar el espacio en el que comienzas!
+      courseA_playLab_events2_authored_hint:
+        courseA_playLab_events2_a: Busca un bloque que haga que el perro diga algo.
+        courseA_playLab_events2_b: |-
+          Éste es el código que necesitas para completar el puzzle:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events2_2018_authored_hint:
+        courseA_playLab_events2_a: Busca un bloque que haga que el perro diga algo.
+        courseA_playLab_events2_b: |-
+          Éste es el código que necesitas para completar el puzzle:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events2_2019_authored_hint:
+        courseA_playLab_events2_a: Busca un bloque que haga que el perro diga algo.
+        courseA_playLab_events2_b: |-
+          Éste es el código que necesitas para completar el puzzle:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events3_authored_hint:
+        courseA_playLab_events3_a: |-
+          Arrastra este bloque <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block></xml> hacia afuera y colócalo debajo de <xml><block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block></xml>
+        courseA_playLab_events3_b: Recuerda usar la tecla de dirección izquierda para
+          mover a Jorge hasta la bandera cuando termines de escribir tu programa.
+          Cuando la bandera se vuelva verde, ¡habrás acabado!
+      courseA_playLab_events3_2018_authored_hint:
+        courseA_playLab_events3_a: |-
+          Arrastra este bloque <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block></xml> hacia afuera y colócalo debajo de <xml><block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block></xml>
+        courseA_playLab_events3_b: Recuerda usar la tecla de dirección izquierda para
+          mover a Jorge hasta la bandera cuando termines de escribir tu programa.
+          Cuando la bandera se vuelva verde, ¡habrás acabado!
+      courseA_playLab_events3_2019_authored_hint:
+        courseA_playLab_events3_a: |-
+          Arrastra este bloque <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block></xml> hacia afuera y colócalo debajo de <xml><block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block></xml>
+        courseA_playLab_events3_b: Recuerda usar la tecla de dirección izquierda para
+          mover a Jorge hasta la bandera cuando termines de escribir tu programa.
+          Cuando la bandera se vuelva verde, ¡habrás acabado!
+      courseA_playLab_events4_authored_hint:
+        courseA_playLab_events4_a: |-
+          Aquí está el bloque de evento que necesitarás para que Jorge se mueva a la derecha:
+
+          <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></xml>
+        courseA_playLab_events4_b: |-
+          Éste es el código que necesitarás para completar el puzzle:
+
+          <xml><block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></next></block></xml>
+      courseA_playLab_events4_2018_authored_hint:
+        courseA_playLab_events4_a: |-
+          Aquí está el bloque de evento que necesitarás para que Jorge se mueva a la derecha:
+
+          <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></xml>
+        courseA_playLab_events4_b: |-
+          Éste es el código que necesitarás para completar el puzzle:
+
+          <xml><block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></next></block></xml>
+      courseA_playLab_events4_2019_authored_hint:
+        courseA_playLab_events4_a: |-
+          Aquí está el bloque de evento que necesitarás para que Jorge se mueva a la derecha:
+
+          <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></xml>
+        courseA_playLab_events4_b: |-
+          Éste es el código que necesitarás para completar el puzzle:
+
+          <xml><block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></next></block></xml>
       courseA_playlab_events_challengeClone_authored_hint:
         courseA_playlab_events_challenge1_e: "Finalmente, haz aparecer a Wendel el
           Mago cuando hagas clic en Spiff!\n\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
@@ -5829,7 +6008,7 @@ es:
           try something else!
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5845,7 +6024,7 @@ es:
           </xml>
       courseB_Scrat_ramp2_2019_authored_hint:
         '1': |-
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5861,7 +6040,7 @@ es:
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5880,7 +6059,7 @@ es:
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">

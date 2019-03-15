@@ -2705,6 +2705,277 @@ pt-BR:
         de conteúdo, mas não pensou sobre a estrutura. Todo o texto está misturado.\n\nFaça
         Isto:\n* Veja o conteúdo com seu parceiro e decida qual seria a melhor estrutura.\n*
         Use suas tags de cabeçalho e parágrafo para codificar a estrutura na página.\n"
+      CSD U2 Headers: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+
+        **O que são cabeçalhos?**
+
+        </summary>
+        Cabeçalhos são os títulos de seções de tamanhos diferentes em uma página web. Os cabeçalhos adicionam estrutura à sua página através da divisão da mesma facilitando a leitura do usuário.
+        </details>
+        <details>
+        <summary>
+
+        **Como eu crio um cabeçalho?**
+
+        </summary>
+        Você pode fazer algo se tornar um elemento de cabeçalho ao cercá-lo com tags de cabeçalho. Por exemplo:
+        <pre> &lt;h1&gt; Texto de Cabeçalho &lt;/h1&gt; </pre> <br> <br>
+
+        Note que há uma tag inicial (&lt;h1&gt;) e uma tag fim (&lt;/h1&gt;). A tag fim é a mesma que a início exceto que esta tem `/` depois do sinal de maior. O texto que você quer mostrar como cabeçalho vai entre as tags.
+        </details>
+        <details>
+        <summary>
+
+        **O que é HTML?**
+
+        </summary>
+        HTML significa Hypertext Markup Language (Linguagem de Marcação de Hipertexto, em tradução livre). o HTML é usado para adicionar estratura ao conteúdo de uma página web. O HTML usa tags para especificar onde certas estruturas começam e terminam. Estas tags são conjuntos de caracteres não encontrados no idioma Inglês para que o conteúdo e a estrutura possam ser diferenciados.
+        </details>
+        <details>
+        <summary>
+
+        **O que é um elemento HTML?**
+
+        </summary>
+        Um elemento HTML é uma peça do website que é marcado por uma tag inicial e algumas vezes encerrado por uma tag final. O elemento também inclui o conteúdo entre as tags. Por exemplo:
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+        </details>
+        <details>
+        <summary>
+
+        **O que é uma tag HTML?**
+
+        </summary>
+        Uma tag HTML é um conjunto especial de caracteres que instrui a máquina onde está o começo e fim de um elemento HTML e de que tipo ele é.
+        </details>
+        <details>
+        <summary>
+
+        **Por que você precisa tags início e fim?**
+
+        </summary>
+
+        Você precisa das tags início e fim para muitos elements HTML porque elas marcam onde a estrutura começar e termina. Você não precisa que todo o texto na sua página web seja um título.
+
+
+        </details>
+        </div>
+
+        # Cabeçalhos
+
+        Você deve ter notado no último nível que tudo que você digita no editor é colocado junto. Para diferenciar entre estas diferentes partes nós usamos elementos HTML para marcar as variadas partes de uma página web. Na sua investigação com o inspetor você se deparou com algo que criou cabeçalhos?
+
+        # Faça Isto
+
+        * Faça seu cabeçalho "Animais" se destacar usando o elemento cabeçalho `<h1>`.
+      CSD U2 Heading Demo: |-
+        # Cabeçalhos
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>O que são cabeçalhos?</strong></summary>
+
+        Cabeçalhos são os títulos de seções de tamanhos diferentes em uma página web. Os cabeçalhos adicionam estrutura à sua página através da divisão da mesma facilitando a leitura do usuário.
+        </details>
+        <details>
+        <summary><strong>Como eu faço um cabeçalho de tamanho diferenciado?</strong></summary>
+
+        Cabeçalhos podem ter 6 tamanhos diferentes. O mais comum é o &lt;h1&gt; O número 1 na tag HTML informa que este é o maior cabeçalho. O menor cabeçalho é &lt;h6&gt;. VOcê também pode tentar as tags &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, e &lt;h5&gt; que diminuem conforme aumenta o número.
+        </h1>
+        </details>
+        <details>
+        <summary><strong>O que é HTML?</strong></summary>
+
+        HTML significa Hypertext Markup Language (Linguagem de Marcação de Hipertexto, em tradução livre). o HTML é usado para adicionar estratura ao conteúdo de uma página web. O HTML usa tags para especificar onde certas estruturas começam e terminam. Estas tags são conjuntos de caracteres não encontrados no idioma Inglês para que o conteúdo e a estrutura possam ser diferenciados.
+        </details>
+        <details>
+        <summary><strong>O que é um elemento HTML?</strong></summary>
+
+        Um elemento HTML é um pedaço do website que é marcado por uma tag inicial e algumas vezes encerrado por uma tag final. O elemento também inclui o conteúdo entre as tags. Por exemplo:
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+        </details>
+        <details>
+        <summary><strong>O que é uma tag HTML?</strong></summary>
+
+        Uma tag HTML é um conjunto especial de caracteres que instrui a máquina onde está o começo e fim de um elemento HTML e de que tipo ele é.
+
+
+        </details>
+        </div>
+
+        Até agora você organizou seu conteúdo em parágrafos. Outra forma que o HTML permite de organizar seu código é pelo uso de **cabeçalhos**. Um cabeçalho é um pedaço pequeno de texto que vai no topo de uma seção de conteúdo, como um título.
+
+        Faça Isto:
+        * Encontre os cabeçalhos da página web abaixo e use a Ferramenta de Inspeção para ver o código que cria eles.
+        * Assegure que você e seu parceiro concordem sobre o que a tag faz.
+        * Troque o código de forma que "Desenho" e "2 anos" se assemelhem aos cabeçalhos do resto da página.
+      CSD U2 Heading Demo_2018: "# Títulos de seção\n\n<div style=\"float: right;
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n\n**O que são títulos de seção?**\n\n</summary>\nTítulos
+        de seção são títulos de tamanhos diversos que pertencem a seções dispostas
+        em uma página web. Títulos de seção proveem estrutura à página, subdividindo-a
+        para que sua leitura fique mais fácil para um usuário. \n</details>\n<details>\n<summary>\n\n**Como
+        eu crio títulos de seção com tamanhos diferentes?**\n\n</summary>\nTítulos
+        de seção podem ter 6 tamanhos distintos. Até agora você utilizou principalmente
+        o maior deles:  &lt;h1&gt;. O número '1' no tag HTML indica que este é o maior
+        que existe. Já o menor é o &lt;h6&gt;. Você também pode experimentar os tags
+        &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, e &lt;h5&gt;, que se tornam menores à
+        medida que o número fica maior.\n</h1>\n</details>\n<details>\n<summary>\n\n**O
+        que é HTML?**\n\n</summary>\nHTML é o acrônimo para HyperText Markup Language,
+        em inglês. HTML é usado para acrescentar estrutura ao conteúdo de uma página
+        web. HTML faz uso de tags para indicar onde determinadas estruturas começam
+        e terminam. Estes tags são conjuntos de caracteres que não são encontrados
+        na língua portuguesa, para que o conteúdo e a estrutura possam ser diferenciados.\n</details>\n<details>\n<summary>\n\n**O
+        que é um elemento HTML?**\n\n</summary>\nUm elemento HTML é uma parte do website
+        que marcada por um tag de início, e às vezes é fechada com um tag de finalização.
+        Um elemento também inclui o conteúdo entre os tags. Por exemplo:\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n</details>\n<details>\n<summary>\n\n**O que é uma
+        tag HTML?**\n\n</summary>\n\nUma tag HTML é o conjunto específico de caracteres
+        que indicam ao computador onde o início ou fim do elemento HTML está localizado,
+        e qual seu tipo.\n\n\n</details>\n</div>\n\nAté aqui, você organizou seu conteúdo
+        em parágrafos. Uma outra maneira que o HTML permite a você organizar seu código
+        é utilizando **títulos de seção**. Um título de seção é um pequeno texto que
+        aparece acima de uma seção de conteúdo, como um título. \n\nFaça Isto:\n*
+        Localize os títulos de seção contidos na página web abaixo, e use a Ferramenta
+        de Inspeção para ver seu código.\n* Tenha certeza que você e seu parceiro
+        estejam de acordo sobre o que as tags fazem.\n* Altere o código para que \"Desenho\"
+        e \"2 anos\" coincidam com os títulos de seção do restante da página."
+      CSD U2 Heading Demo_2019: "# Títulos de seção\n\n<div style=\"float: right;
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n\n**O que são títulos de seção?**\n\n</summary>\nTítulos
+        de seção são títulos de tamanhos diversos que pertencem a seções dispostas
+        em uma página web. Títulos de seção proveem estrutura à página, subdividindo-a
+        para que sua leitura fique mais fácil para um usuário. \n</details>\n<details>\n<summary>\n\n**Como
+        eu crio títulos de seção com tamanhos diferentes?**\n\n</summary>\nTítulos
+        de seção podem ter 6 tamanhos distintos. Até agora você utilizou principalmente
+        o maior deles:  &lt;h1&gt;. O número '1' no tag HTML indica que este é o maior
+        que existe. Já o menor é o &lt;h6&gt;. Você também pode experimentar os tags
+        &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, e &lt;h5&gt;, que se tornam menores à
+        medida que o número fica maior.\n</h1>\n</details>\n<details>\n<summary>\n\n**O
+        que é HTML?**\n\n</summary>\nHTML é o acrônimo para HyperText Markup Language,
+        em inglês. HTML é usado para acrescentar estrutura ao conteúdo de uma página
+        web. HTML faz uso de tags para indicar onde determinadas estruturas começam
+        e terminam. Estes tags são conjuntos de caracteres que não são encontrados
+        na língua portuguesa, para que o conteúdo e a estrutura possam ser diferenciados.\n</details>\n<details>\n<summary>\n\n**O
+        que é um elemento HTML?**\n\n</summary>\nUm elemento HTML é uma parte do website
+        que marcada por um tag de início, e às vezes é fechada com um tag de finalização.
+        Um elemento também inclui o conteúdo entre os tags. Por exemplo:\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n</details>\n<details>\n<summary>\n\n**O que é uma
+        tag HTML?**\n\n</summary>\n\nUma tag HTML é o conjunto específico de caracteres
+        que indicam ao computador onde o início ou fim do elemento HTML está localizado,
+        e qual seu tipo.\n\n\n</details>\n</div>\n\nAté aqui, você organizou seu conteúdo
+        em parágrafos. Uma outra maneira que o HTML permite a você organizar seu código
+        é utilizando **títulos de seção**. Um título de seção é um pequeno texto que
+        aparece acima de uma seção de conteúdo, como um título. \n\nFaça Isto:\n*
+        Localize os títulos de seção contidos na página web abaixo, e use a Ferramenta
+        de Inspeção para ver seu código.\n* Tenha certeza que você e seu parceiro
+        estejam de acordo sobre o que as tags fazem.\n* Altere o código para que \"Desenho\"
+        e \"2 anos\" coincidam com os títulos de seção do restante da página."
+      CSD U2 Heading Sizes: "# Tamanhos de Títulos de Seção\n\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n<strong>O que são títulos de seção?</strong>\n\n</summary>\nTítulos
+        de seção são títulos, de diferentes tamanhos, de seções que aparecem ao longo
+        de páginas web. Títulos de seção acrescentam estrutura à página, subdividindo-a
+        para que sua leitura se torne mais fácil.\n</details>\n<details>\n<summary><strong>Como
+        eu crio títulos de seção com tamanhos diferentes?</strong>\n\n</summary>\nTítulos
+        de seção vêm em 6 tamanhos distintos. O tamanho mais comum é &lt;h1&gt;. O
+        número '1' no tag HTML indica que este é o título de seção com maior tamanho.
+        O menor título de seção é &lt;h6&gt;. Você pode também experimentar os tags
+        &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, e &lt;h5&gt;, que se tornam menores à
+        medida que o número se torna maior. \n</details>\n<details>\n<summary><strong>O
+        que é HTML?</strong>\n\n</summary>\nHTML é o acrônimo em inglês para HyperText
+        Markup Language. HTML é usado para acrescentar estrutura ao conteúdo de uma
+        página web. HTML utiliza tags para indicar quando determinadas estruturas
+        iniciam e terminam. Estas tags são conjuntos de caracteres não encontrados
+        na língua portuguesa, para que conteúdo e estrutura possam ser diferenciados.\n</details>\n<details>\n<summary><strong>O
+        que é um elemento HTML?</strong>\n\n</summary>\nUm elemento HTML é uma parte
+        de um website que é marcada por uma tag de início, e às vezes fechada por
+        uma tag de término. O elemento também inclui o conteúdo entre as tags. Por
+        exemplo:\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n</details>\n<details>\n<summary><strong>O que é um
+        tag HTML?</strong>\n\n</summary>\n\nUm tag HTML é um conjunto específico de
+        caracteres que indica ao computador onde o início e o término de um elemento
+        HTML está localizado, e qual o tipo de elemento ele é.\n\n\n</details>\n</div>\n\nTítulos
+        de seção podem vir em tamanhos distintos. Nesta página, temos seis títulos
+        de seção com tamanhos diferentes, mas eles estão misturados. Você e seu parceiro
+        saberiam como fazer para corrigi-los?\n\n\n\nFaça Isto:\n* Use a Ferramenta
+        de Inspeção para descobrir o que faz com que os tamanhos dos fiquem diferentes\n*
+        Tenha certeza que você e seu parceiro estejam de acordo sobre o que cada tag
+        de título de seção faz\n* Altere os tags para que os títulos de seção fiquem
+        ordenados do maior para o menor, e que o texto mostre o tamanho correto, como
+        na figura abaixo:\n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
+        PM.png\" style=\"width:100px\" style=\"float:left\">\n"
+      CSD U2 Heading Sizes_2018: "# Tamanhos de Títulos de Seção\n\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n\n**O que são títulos de seção?**\n\n</summary>\nTítulos
+        de seção são títulos, de diferentes tamanhos, que seções que aparecem ao longo
+        de uma página web. Títulos de seção acrescentam estrutura à sua página web,
+        subdividindo-a para que sua leitura se torne mais fácil.\n</details>\n<details>\n<summary>\n\n**Como
+        eu crio títulos de seção de tamanhos diferentes?**\n\n</summary>\nTítulos
+        de seção vêm em 6 tamanhos distintos. O título de seção mais comum é &lt;h1&gt;.
+        O número '1' no tag HTML indica que este é o maior título. Já o menor título
+        de seção é &lt;h6&gt;. Você pode também experimentar os tags &lt;h2&gt;, &lt;h3&gt;,
+        &lt;h4&gt;, e &lt;h5&gt;, que se tornam menores à medida que o número fica
+        maior. \n</details>\n<details>\n<summary>\n\n**O que é HTML?**\n\n</summary>\nHTML
+        é o acrônimo em inglês de HyperText Markup Language. HTML é usada para acrescentar
+        estrutura ao conteúdo de uma página web. HTML utiliza tags para definir o
+        início e término de determinadas estruturas. Estas tags são conjuntos de caracteres
+        não encontradas na língua portuguesa, para que o conteúdo e a estrutura possam
+        ser diferenciadas.\n</details>\n<details>\n<summary>\n\n**O que é um elemento
+        HTML?**\n\n</summary>\nUm elemento HTML é uma parte de um website que é marcada
+        por uma tag de início, e às vezes fechada por uma tag de término. O elemento
+        também inclui o conteúdo entre as tags. Por exemplo:\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n</details>\n<details>\n<summary>\n\n**O que é uma
+        tag HTML?**\n\n</summary>\n\nUma tag HTML é um conjunto específico de caracteres
+        que indica ao computador onde se inicia e termina um elemento HTML, e qual
+        tipo ele é.\n\n\n</details>\n</div>\n\nTítulos de seção vêm em tamanhos distintos.
+        Nesta página, há seis títulos de seção com tamanhos diferentes, mas estão
+        misturados. Você e seu parceiro conseguem descobrir como consertá-los?\n\n\n\nFaça
+        Isto:\n* Use a Ferramenta de Inspeção para descobrir o que faz com que os
+        títulos apresentem tamanhos diferentes\n* Tenha certeza que você e seu parceiro
+        estejam de acordo sobre como funcionam os diferentes tags de títulos de seção.\n*
+        Altere os tags, para que os títulos de seção fiquem em ordem, do maior para
+        o menor, e os textos indiquem o tamanho correto, como na figura abaixo.\n\n<img
+        src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
+        PM.png\" style=\"width:100px\" style=\"float:left\">\n"
+      CSD U2 Heading Sizes_2019: "# Tamanhos de Títulos de Seção\n\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n\n**O que são títulos de seção?**\n\n</summary>\nTítulos
+        de seção são títulos, de diferentes tamanhos, que seções que aparecem ao longo
+        de uma página web. Títulos de seção acrescentam estrutura à sua página web,
+        subdividindo-a para que sua leitura se torne mais fácil.\n</details>\n<details>\n<summary>\n\n**Como
+        eu crio títulos de seção de tamanhos diferentes?**\n\n</summary>\nTítulos
+        de seção vêm em 6 tamanhos distintos. O título de seção mais comum é &lt;h1&gt;.
+        O número '1' no tag HTML indica que este é o maior título. Já o menor título
+        de seção é &lt;h6&gt;. Você pode também experimentar os tags &lt;h2&gt;, &lt;h3&gt;,
+        &lt;h4&gt;, e &lt;h5&gt;, que se tornam menores à medida que o número fica
+        maior. \n</details>\n<details>\n<summary>\n\n**O que é HTML?**\n\n</summary>\nHTML
+        é o acrônimo em inglês de HyperText Markup Language. HTML é usada para acrescentar
+        estrutura ao conteúdo de uma página web. HTML utiliza tags para definir o
+        início e término de determinadas estruturas. Estas tags são conjuntos de caracteres
+        não encontradas na língua portuguesa, para que o conteúdo e a estrutura possam
+        ser diferenciadas.\n</details>\n<details>\n<summary>\n\n**O que é um elemento
+        HTML?**\n\n</summary>\nUm elemento HTML é uma parte de um website que é marcada
+        por uma tag de início, e às vezes fechada por uma tag de término. O elemento
+        também inclui o conteúdo entre as tags. Por exemplo:\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n</details>\n<details>\n<summary>\n\n**O que é uma
+        tag HTML?**\n\n</summary>\n\nUma tag HTML é um conjunto específico de caracteres
+        que indica ao computador onde se inicia e termina um elemento HTML, e qual
+        tipo ele é.\n\n\n</details>\n</div>\n\nTítulos de seção vêm em tamanhos distintos.
+        Nesta página, há seis títulos de seção com tamanhos diferentes, mas estão
+        misturados. Você e seu parceiro conseguem descobrir como consertá-los?\n\n\n\nFaça
+        Isto:\n* Use a Ferramenta de Inspeção para descobrir o que faz com que os
+        títulos apresentem tamanhos diferentes\n* Tenha certeza que você e seu parceiro
+        estejam de acordo sobre como funcionam os diferentes tags de títulos de seção.\n*
+        Altere os tags, para que os títulos de seção fiquem em ordem, do maior para
+        o menor, e os textos indiquem o tamanho correto, como na figura abaixo.\n\n<img
+        src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
+        PM.png\" style=\"width:100px\" style=\"float:left\">\n"
       CSD U2 Info Page Content: |
         # Adicionando seu conteúdo
 
@@ -3068,6 +3339,73 @@ pt-BR:
         * Acima de ambas as frases, tente adicionar um título que diz "Animais"
         * Não se esqueça de clicar em <img src="https://images.code.org/6a35d13b10ed2029a9323c9cb555e39e-image-1477681291001.01.12 PM.png" style="width:100px">
         * **O que você notou sobre a estrutura do seu conteúdo?**
+      CSDU2 - Headers: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+
+        **O que são cabeçalhos?**
+
+        </summary>
+        Cabeçalhos são os títulos de seções de tamanhos diferentes em uma página web. Os cabeçalhos adicionam estrutura à sua página através da divisão da mesma facilitando a leitura do usuário.
+        </details>
+        <details>
+        <summary>
+
+        **Como eu crio um cabeçalho?**
+
+        </summary>
+        Você pode fazer algo se tornar um elemento de cabeçalho ao cercá-lo com tags de cabeçalho. Por exemplo:
+        <pre> &lt;h1&gt; Texto de Cabeçalho &lt;/h1&gt; </pre> <br> <br>
+
+        Note que há uma tag inicial (&lt;h1&gt;) e uma tag fim (&lt;/h1&gt;). A tag fim é a mesma que a início exceto que esta tem `/` depois do sinal de maior. O texto que você quer mostrar como cabeçalho vai entre as tags.
+        </details>
+        <details>
+        <summary>
+
+        **O que é HTML?**
+
+        </summary>
+        HTML significa Hypertext Markup Language (Linguagem de Marcação de Hipertexto, em tradução livre). o HTML é usado para adicionar estratura ao conteúdo de uma página web. O HTML usa tags para especificar onde certas estruturas começam e terminam. Estas tags são conjuntos de caracteres não encontrados no idioma Inglês para que o conteúdo e a estrutura possam ser diferenciados.
+        </details>
+        <details>
+        <summary>
+
+        **O que é um elemento HTML?**
+
+        </summary>
+        Um elemento HTML é uma peça do website que é marcado por uma tag inicial e algumas vezes encerrado por uma tag final. O elemento também inclui o conteúdo entre as tags. Por exemplo:
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+        </details>
+        <details>
+        <summary>
+
+        **O que é uma tag HTML?**
+
+        </summary>
+        Uma tag HTML é um conjunto especial de caracteres que instrui a máquina onde está o começo e fim de um elemento HTML e de que tipo ele é.
+        </details>
+        <details>
+        <summary>
+
+        **Por que você precisa tags início e fim?**
+
+        </summary>
+
+        Você precisa das tags início e fim para muitos elements HTML porque elas marcam onde a estrutura começar e termina. Você não precisa que todo o texto na sua página web seja um título.
+
+
+        </details>
+        </div>
+
+        # Cabeçalhos
+
+        Você deve ter notado no último nível que tudo que você digita no editor é colocado junto. Para diferenciar entre estas diferentes partes nós usamos elementos HTML para marcar as variadas partes de uma página web. Na sua investigação com o inspetor você se deparou com algo que criou cabeçalhos?
+
+        # Faça Isto
+
+        * Faça seu cabeçalho "Animais" se destacar usando o elemento cabeçalho `<h1>`.
       CSDU2 - Missing Home Link: |-
         # Link Inicial ausente
 

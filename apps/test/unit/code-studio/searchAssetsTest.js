@@ -91,9 +91,12 @@ describe('search assets from animation library', function() {
       maxResults
     );
 
-    assert.equal(searchedData.pageCount, 2);
+    assert.equal(searchedData.pageCount, 407);
     assert.equal(searchedData.results.length, 1);
-    assert.equal(searchedData.results[0].name, 'click');
+    assert.equal(
+      searchedData.results[0].name,
+      'lighthearted_bonus_objective_1'
+    );
   });
 
   it('searchAssets searches the sound library getting page 2 results', function() {
@@ -107,8 +110,11 @@ describe('search assets from animation library', function() {
       maxResults
     );
 
-    assert.equal(searchedData.pageCount, 2);
+    assert.equal(searchedData.pageCount, 407);
     assert.equal(searchedData.results.length, 1);
-    assert.equal(searchedData.results[0].name, 'metal_click');
+    assert.equal(
+      searchedData.results[0].name,
+      'lighthearted_bonus_objective_2'
+    );
   });
 });

@@ -111,6 +111,7 @@ def localize_level_content
 
       # Properties
       config = JSON.parse(level_xml.xpath('//../config').first.text)
+      next unless config["properties"]
 
       ## Display Name
       if display_name = config["properties"]["display_name"]

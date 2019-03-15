@@ -137,7 +137,7 @@ module RegistrationsControllerTests
       OmniAuth.config.mock_auth[:google_oauth2] = generate_auth_user_hash(
         provider: 'google_oauth2'
       )
-      create :teacher, :unmigrated_google_sso, uid: DEFAULT_UID, email: EMAIL
+      create :teacher, :google_sso_provider, uid: DEFAULT_UID, email: EMAIL
       events = %w(load-sign-up-page)
       FirehoseClient.instance.expects(:put_record).once.with do |data|
         data[:study] == STUDY &&

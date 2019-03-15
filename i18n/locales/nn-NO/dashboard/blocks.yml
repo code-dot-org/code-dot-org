@@ -764,6 +764,18 @@ nn:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': kantlinje
+            '"inner"': indre kvadrat
+            '"circle"': sirkel
+            '"grid"': rutenett
+            '"row"': rad
+            '"column"': kolonne
+            '"x"': kryss
+            '"plus"': pluss
+            '"random"': tilfeldig
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:
