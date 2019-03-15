@@ -23,7 +23,7 @@ export default class FieldGroup extends React.Component {
       // We only want numbers out of this text field, and so this regular expression restricts input to
       // digits, a single decimal point, and an optional minus sign at the
       // beginning.
-      if (!value.match(/^$|^-?[0-9]*(\.?)[0-9]*$/)) {
+      if (!value.match(/^$|^-?[0-9]*\.?[0-9]*$/)) {
         return;
       }
     }
