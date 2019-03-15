@@ -758,7 +758,7 @@ EOS
     assert_equal 1, new_level.properties['questions'].length
     assert_equal 3, new_level.properties['answers'].length
     assert_equal 'Blue', new_level.properties['answers'].last['text']
-    assert_equal false, new_level.encrypted
+    refute new_level.encrypted
 
     old_level.encrypted = true
     new_level = old_level.clone_with_name('encrypted level')
