@@ -1,4 +1,5 @@
-import WorkshopEnrollmentSchoolInfo from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_enrollment_school_info';
+import {WorkshopEnrollmentSchoolInfo} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_enrollment_school_info';
+import Permission from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
@@ -21,6 +22,7 @@ describe('Workshop Enrollment School Info', () => {
         workshopCourse="CS Principles"
         workshopSubject="5-day Summer"
         numSessions={5}
+        permissionList={new Permission(['ProgramManager'])}
       />,
       {context}
     );
@@ -41,6 +43,7 @@ describe('Workshop Enrollment School Info', () => {
         workshopCourse="CS Discoveries"
         workshopSubject="1-day Academic Year, Units 1 and 2"
         numSessions={5}
+        permissionList={new Permission(['ProgramManager'])}
       />,
       {context}
     );
