@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:03:15.000Z",
-  "level_num": "custom",
-  "user_id": 13,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -37,7 +33,7 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
@@ -48,12 +44,13 @@
     "parent_level_id": 7600,
     "name_suffix": "_2018",
     "long_instructions": "## Next step - update the UI to show the score.\r\n<img src=\"https://images.code.org/2614d8d57f91d9a29d86a0223ec35d63-image-1481221332835.gif\" style=\"float: right\">\r\n\r\nThis is pretty easy at this point.\r\n\r\nThere are UI text labels for the player's scores called `score1_label` and `score2_label`.\r\n\r\nAdd `setText` statements at the end of the function (either replace the console.log statements, or just add after them).  The label for player 1 would look like this:\r\n\r\n\t\tsetText(\"score1_label\", p1Score);\r\n\r\n**TEST IT OUT**\r\n\r\n* After adding the `setText` statements you should see the score being updated with each click (see animation).\r\n* You can actually play the game a little bit now!\r\n\r\n<details>\r\n\r\n<summary>Why set both text labels each time? [click to expand]</summary>\r\n\r\nYou might be wondering why we set <em>both</em> text labels each time <code>updateScoreBy</code> is called, rather than putting it inside the if-statement to set the text of the appropriate label.  After all, only one score is changing every time.<br>\r\n<li>The reason is basically: laziness.  Even though only one score will change with each click, it really doesn't hurt to set both text labels just to be safe.</li>\r\n<li>In the future, maybe you might change the app so that both player1 and player2's scores might change with a single click. Maybe, maybe not.</li>\r\n<li>But we can be lazy and just set both score text labels every time and not have to worry about it.</li>\r\n\r\n\r\n</details>\r\n\r\n",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:03:15.000Z",
+  "level_num": "custom",
+  "user_id": 13,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-12-11 01:03:57 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-15 04:14:46 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",

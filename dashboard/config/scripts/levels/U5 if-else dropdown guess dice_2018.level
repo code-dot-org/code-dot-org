@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:02:28.000Z",
-  "level_num": "custom",
-  "user_id": 13,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -70,18 +66,22 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><select id=\"guess_dropdown\" style=\"width: 110px; height: 40px; font-size: 24px; margin: 0px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 20px; top: 135px; text-align: center;\"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 23px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 306px; height: 28px; position: absolute; left: 5px; top: 100px;\" id=\"label1\" class=\"\">Make Guess &amp; Click to Roll</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 24px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 105px; height: 65px; position: absolute; left: 20px; top: 185px;\" id=\"label2\" class=\"\">You rolled a: </label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 40px; overflow: hidden; word-wrap: break-word; color: rgb(26, 188, 156); max-width: 320px; width: 45px; height: 45px; position: absolute; left: 130px; top: 190px; background-color: rgb(238, 238, 238);\" id=\"diceRoll_label\"></label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 24px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 134px; height: 29px; position: absolute; left: 30px; top: 330px;\" id=\"label5\">Your Score</label><img data-canonical-image-url=\"icon://fa-trophy\" id=\"trophy_img\" style=\"height: 100px; width: 100px; position: absolute; left: 185px; top: 170px; margin: 0px;\" data-icon-color=\"#ffe000\" class=\"design-mode-hidden\"><img data-canonical-image-url=\"icon://fa-frown-o\" id=\"frowny_img\" style=\"height: 100px; width: 100px; position: absolute; left: 190px; top: 170px; margin: 0px;\" data-icon-color=\"#dd0000\" class=\"design-mode-hidden\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 33px; overflow: hidden; word-wrap: break-word; color: rgb(255, 255, 255); max-width: 320px; width: 320px; height: 50px; position: absolute; left: 2.22045e-16px; top: 4.44089e-16px; background-color: rgb(26, 188, 156); text-align: center;\" id=\"label\" class=\"\">Guessing Game</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 30px; overflow: hidden; word-wrap: break-word; color: rgb(26, 188, 156); max-width: 320px; width: 80px; height: 40px; position: absolute; left: 180px; top: 325px;\" id=\"score_label\">0</label><button id=\"roll_btn\" style=\"padding: 0px; margin: 0px; height: 40px; width: 160px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 150px; top: 135px; font-size: 24px;\">Roll the Die</button></div></div>",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
     "makerlab_enabled": "false",
     "teacher_markdown": "**Design Note**\r\n\r\nIt's important to note the inclusion of the `reset()` function here...\r\n\r\n1. We include it because to make the app function in ways that a user would expect, it turns out that you want to hide the images and clear out the last die roll when *either* the user makes a new selection in the dropdown *or* they roll the dice again.\r\n\r\n2. **However** the insight to add a function was not something that occurred to us, the designers of this example, until we were in the middle of developing it.  It came about organically -- as we were developing this example we realized we needed to repeat code in two different places.\r\n\r\n3. It's therefore a perfect example of when to introduce a function - you want the same code to be able to be called from different parts of your code, at different times.\r\n\r\nWhat that means for students:\r\n\r\n* They should not \"feel bad\" if they are worried that they don't understand where this function came from or about their ability to think of such things\r\n* But they should able to understand the code, trace what's happening with the function, and understand why, in the end, it is there.\r\n* We left it in because it's a good example of when one should write a function.",
     "parent_level_id": 7520,
     "name_suffix": "_2018",
-    "preload_asset_list": null,
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:02:28.000Z",
+  "level_num": "custom",
+  "user_id": 13,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2019-02-15 04:20:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",

@@ -1264,6 +1264,9 @@ es-MX:
   coursed-2017_name: Curso D (2017)
   coursee-2017_name: Curso E (2017)
   coursef-2017_name: Curso F (2017)
+  coursea-2018_name: Curso A (2018)
+  coursec-2018_name: Curso C (2018)
+  coursed-2018_name: Curso D (2018)
   accelerated_name: Curso acelerado
   express_name: Curso Express
   pre-express_name: 'Curso Express pre-lectores:'
@@ -1574,8 +1577,8 @@ es-MX:
   courseb-2017_shortdescription_congrats: Una introducción a las ciencias de la computación
     para pre lectores. (Similar al curso A pero con más variedad para estudiantes
     mas avanzados)
-  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
-    de la computación y crea tu propio arte, historias y juegos.
+  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
+    de la Computación y crea tu propio arte, historias y juegos.
   coursed-2017_shortdescription_congrats: Rápidamente repasada conceptos del Curso
     C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee-2017_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso
@@ -1587,8 +1590,8 @@ es-MX:
   courseb-2018_shortdescription_congrats: Una introducción a las ciencias de la computación
     para pre lectores. (Similar al curso A pero con más variedad para estudiantes
     mas avanzados)
-  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
-    de la computación y crea tu propio arte, historias y juegos.
+  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
+    de la Computación y crea tu propio arte, historias y juegos.
   coursed-2018_shortdescription_congrats: Rápidamente repasada conceptos del Curso
     C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee-2018_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso

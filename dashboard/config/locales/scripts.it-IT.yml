@@ -317,9 +317,9 @@ it:
         infinity:
           title: Disney Infinity
           description: Usa il Laboratorio per creare una storia o inventare un gioco
-            con i personaggi di Disney Infinity come protagonisti!
+            con i personaggi di Disney Infinity.
           description_short: Usa il Laboratorio per creare una storia o inventare
-            un gioco con i personaggi di Disney Infinity come protagonisti!
+            un gioco con i personaggi di Disney Infinity.
           stages:
             Infinity:
               name: Infinito
@@ -505,7 +505,7 @@ it:
             Personal Innovations:
               name: Innovazione personale
             Text Compression:
-              name: Compressione del Testo
+              name: Compressione del testo
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -531,12 +531,12 @@ it:
             Your Game - Player Movement:
               name: Il vostro gioco - movimento del giocatore
         text-compression:
-          title: Compressione del Testo
+          title: Compressione del testo
           description: Compressione del testo identificando modelli ripetuti.
           description_short: Compressione del testo identificando modelli ripetuti.
           stages:
             Text Compression:
-              name: Compressione del Testo
+              name: Compressione del testo
         CSPPD:
           stages:
             Introduction to PD:
@@ -703,7 +703,7 @@ it:
             Studio:
               name: Studio
             Text Compression:
-              name: Compressione del Testo
+              name: Compressione del testo
             Web Lab:
               name: Sviluppo Web
             Sprite Lab:
@@ -1009,7 +1009,7 @@ it:
         csp2-2017:
           stages:
             Text Compression:
-              name: Compressione del Testo
+              name: Compressione del testo
             Post-Course Survey:
               name: Sondaggio Post-corso
         csp3-2017:
@@ -1277,8 +1277,8 @@ it:
               name: Liste
         minecraft:
           title: Programma il tuo Minecraft
-          description_short: Programma il comportamento degli animali e delle altre
-            creature di Minecraft nella tua versione di questo gioco.
+          description_short: Programma animali e altre creature di Minecraft nella
+            tua versione di questo gioco.
           description: Programma il comportamento degli animali e delle altre creature
             di Minecraft nella tua versione di questo gioco.
           stages:
@@ -1500,6 +1500,9 @@ it:
           title: Programma il tuo sport
           description_short: Combina diversi sport
           description: Combina diversi sport
+          stages:
+            Sports:
+              name: Sport
         2016_sciencePD-phase2b:
           stages:
             Welcome!:
@@ -3628,7 +3631,7 @@ it:
         csp2-2018:
           stages:
             Text Compression:
-              name: Compressione del Testo
+              name: Compressione del testo
         csp3-2018:
           description_short: Programmazione
           stages:
@@ -4456,7 +4459,7 @@ it:
         csp2-2019:
           stages:
             Text Compression:
-              name: Compressione del Testo
+              name: Compressione del testo
         csp3-2019:
           description_short: Programmazione
           stages:
