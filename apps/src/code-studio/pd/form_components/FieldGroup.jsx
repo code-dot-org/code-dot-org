@@ -24,7 +24,7 @@ export default class FieldGroup extends React.Component {
       // the input as a text field, this regular expression restricts input to
       // digits, a single decimal point, and an optional minus sign at the
       // beginning.
-      if (!value.match(/^-?[0-9]*(\.?)[0-9]*$/)) {
+      if (!value.match(/^$|^-?[0-9]*(\.?)[0-9]*$/)) {
         return;
       }
     }
@@ -35,9 +35,14 @@ export default class FieldGroup extends React.Component {
   }
 
   renderControl(controlWidth, children, props) {
+    const updatedProps = {
+      ...props,
+      type: props.type === 'number' ? 'text' : props.type
+    };
+
     return (
       <Col {...controlWidth}>
-        <FormControl onChange={this.handleChange} {...props}>
+        <FormControl onChange={this.handleChange} {...updatedProps}>
           {children}
         </FormControl>
       </Col>
