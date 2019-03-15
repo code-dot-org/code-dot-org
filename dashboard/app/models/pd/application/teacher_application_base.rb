@@ -65,8 +65,7 @@ module Pd::Application
     end
 
     def update_scholarship_status(scholarship_status)
-      scholarship_info = Pd::ScholarshipInfo.find_by(user: user, application_year: application_year) || Pd::ScholarshipInfo.new(user: user)
-      scholarship_info.update(scholarship_status: scholarship_status)
+      Pd::ScholarshipInfo.update_or_create(user, application_year, scholarship_status)
     end
 
     def scholarship_status

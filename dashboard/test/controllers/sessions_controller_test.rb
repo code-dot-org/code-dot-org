@@ -189,31 +189,31 @@ class SessionsControllerTest < ActionController::TestCase
     assert_redirected_to '//test.code.org'
   end
 
-  test "facebook users go to oauth sign out page after logging out" do
+  test "facebook users go to generic oauth sign out page after logging out" do
     student = create(:student, provider: :facebook)
     sign_in student
 
     delete :destroy
 
-    assert_redirected_to '/oauth_sign_out/facebook'
+    assert_redirected_to '/oauth_sign_out/migrated'
   end
 
-  test "google account users go to oauth sign out page after logging out" do
+  test "google account users go to generic oauth sign out page after logging out" do
     student = create(:student, provider: :google_oauth2)
     sign_in student
 
     delete :destroy
 
-    assert_redirected_to '/oauth_sign_out/google_oauth2'
+    assert_redirected_to '/oauth_sign_out/migrated'
   end
 
-  test "microsoft account users go to oauth sign out page after logging out" do
+  test "microsoft account users go to generic oauth sign out page after logging out" do
     student = create(:student, provider: :windowslive)
     sign_in student
 
     delete :destroy
 
-    assert_redirected_to '/oauth_sign_out/windowslive'
+    assert_redirected_to '/oauth_sign_out/migrated'
   end
 
   test "oauth sign out page for facebook" do

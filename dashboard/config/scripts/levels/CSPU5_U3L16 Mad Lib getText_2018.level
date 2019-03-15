@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:01:54.000Z",
-  "level_num": "custom",
-  "user_id": 42,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -42,15 +38,19 @@
     "execute_palette_apis_only": "false",
     "parent_level_id": 6804,
     "name_suffix": "_2018",
-    "preload_asset_list": null,
     "instructions_important": "false",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:01:54.000Z",
+  "level_num": "custom",
+  "user_id": 42,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2019-02-15 04:23:04 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
