@@ -130,18 +130,9 @@ const styles = {
     marginLeft: 20,
     marginRight: 20
   },
-  achievementsHeading: {
-    margin: '20px auto 0',
-    color: color.light_gray,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 16
-  },
   achievements: {
     display: 'block',
-    margin: '4px auto 4px',
-    borderColor: color.lighter_gray,
-    borderWidth: '1px 0',
-    borderStyle: 'solid',
+    margin: '20px auto 4px',
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     color: color.dark_charcoal,
@@ -162,7 +153,7 @@ const styles = {
     textAlign: 'left'
   },
   achievementRowNonShare: {
-    width: '50%',
+    width: '100%',
     float: 'left'
   },
   generatedCodeWrapper: {
@@ -539,9 +530,6 @@ export class UnconnectedFinishDialog extends Component {
                         ...(this.props.feedbackImage && {marginLeft: 180})
                       }}
                     >
-                      <div style={styles.achievementsHeading}>
-                        {msg.achievements()}
-                      </div>
                       {this.getAchievements()}
                     </div>
                   )}
