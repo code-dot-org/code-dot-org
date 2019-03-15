@@ -1,4 +1,4 @@
-# Code.org
+# Code.org 
 
 [![Circle CI](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging.svg?style=svg)](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging)
 [![Coverage Status](https://codecov.io/gh/code-dot-org/code-dot-org/branch/staging/graph/badge.svg)](https://codecov.io/gh/code-dot-org/code-dot-org)
