@@ -404,10 +404,9 @@ class TopInstructions extends Component {
                 referenceLinks={this.props.referenceLinks}
               />
             )}
-            {displayFeedback && (
+            {this.state.tabSelected === TabType.COMMENTS && (
               <TeacherFeedback
                 user={this.props.user}
-                visible={this.state.tabSelected === TabType.COMMENTS}
                 disabledMode={
                   this.props.viewAs === ViewType.Student ||
                   !this.state.displayFeedbackTeacherFacing
