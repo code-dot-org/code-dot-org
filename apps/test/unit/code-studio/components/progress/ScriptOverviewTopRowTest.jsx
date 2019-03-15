@@ -36,7 +36,7 @@ describe('ScriptOverviewTopRow', () => {
         scriptProgress={NOT_STARTED}
       />
     );
-    expect(wrapper).to.containMatchingElement(
+    expect(wrapper.containsMatchingElement(
       <div>
         <div>
           <Button
@@ -57,7 +57,7 @@ describe('ScriptOverviewTopRow', () => {
           </span>
         </div>
       </div>
-    );
+    )).to.be.true;
   });
 
   it('renders "Continue" for student', () => {
@@ -68,13 +68,13 @@ describe('ScriptOverviewTopRow', () => {
         scriptProgress={IN_PROGRESS}
       />
     );
-    expect(wrapper).to.containMatchingElement(
+    expect(wrapper.containsMatchingElement(
       <Button
         href="/s/test-script/next"
         text={i18n.continue()}
         size={Button.ButtonSize.large}
       />
-    );
+    )).to.be.true;
   });
 
   it('renders "Print Certificate" for student', () => {
@@ -85,20 +85,20 @@ describe('ScriptOverviewTopRow', () => {
         scriptProgress={COMPLETED}
       />
     );
-    expect(wrapper).to.containMatchingElement(
+    expect(wrapper.containsMatchingElement(
       <Button
         href="/s/test-script/next"
         text={i18n.printCertificate()}
         size={Button.ButtonSize.large}
       />
-    );
+    )).to.be.true;
   });
 
   it('renders "Assign to section" for teacher', () => {
     const wrapper = shallow(
       <ScriptOverviewTopRow {...defaultProps} viewAs={ViewType.Teacher} />
     );
-    expect(wrapper).to.containMatchingElement(
+    expect(wrapper.containsMatchingElement(
       <div>
         <AssignToSection
           sectionsInfo={defaultProps.sectionsInfo}
@@ -112,7 +112,7 @@ describe('ScriptOverviewTopRow', () => {
           </span>
         </div>
       </div>
-    );
+    )).to.be.true;
   });
 
   it('renders resources for teacher', () => {
@@ -132,7 +132,7 @@ describe('ScriptOverviewTopRow', () => {
         ]}
       />
     );
-    expect(wrapper).to.containMatchingElement(
+    expect(wrapper.containsMatchingElement(
       <div>
         <AssignToSection
           sectionsInfo={defaultProps.sectionsInfo}
@@ -159,7 +159,7 @@ describe('ScriptOverviewTopRow', () => {
           </span>
         </div>
       </div>
-    );
+    )).to.be.true;
   });
 
   it('renders RTL without errors', () => {

@@ -20,7 +20,7 @@ describe('DisabledBubblesAlert', () => {
   it('is visible at first, if not seen before', () => {
     sessionStorage.getItem.withArgs('disabledBubblesAlertSeen').returns(false);
     const wrapper = shallow(<DisabledBubblesAlert />);
-    expect(wrapper).to.containMatchingElement(
+    expect(wrapper.containsMatchingElement(
       <Alert type={'error'} onClose={wrapper.instance().onClose}>
         <div>
           <span>{i18n.disabledButtonsWarning() + ' '}</span>
@@ -33,24 +33,25 @@ describe('DisabledBubblesAlert', () => {
           </a>
         </div>
       </Alert>
-    );
+    )).to.equal(true);
   });
 
   it('is hidden at first, if seen before', () => {
     sessionStorage.getItem.withArgs('disabledBubblesAlertSeen').returns(true);
     const wrapper = shallow(<DisabledBubblesAlert />);
-    expect(wrapper).to.be.empty;
+    expect(wrapper.find('Alert').length).to.equal(0);
   });
 
   it('hides and remembers that the alert was seen when closed', () => {
     sessionStorage.getItem.withArgs('disabledBubblesAlertSeen').returns(false);
     const wrapper = shallow(<DisabledBubblesAlert />);
-    expect(wrapper).not.to.be.empty;
+    expect(wrapper.find('Alert').length).to.equal(1);
 
     // Call whatever close handler we passed to the alert
-    wrapper.find(Alert).prop('onClose')();
+    wrapper.find('Alert').prop('onClose')();
+    wrapper.update();
 
-    expect(wrapper).to.be.empty;
+    expect(wrapper.find('Alert').length).to.equal(0);
     expect(sessionStorage.setItem).to.have.been.calledWith(
       'disabledBubblesAlertSeen',
       true
