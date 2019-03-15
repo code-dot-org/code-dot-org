@@ -1041,7 +1041,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'changing oauth user from student to teacher with same email is allowed' do
-    user = create :student, :unmigrated_google_sso, email: 'email@new.xx'
+    user = create :student, :google_sso_provider, email: 'email@new.xx'
     assert user.primary_contact_info.credential_type == 'google_oauth2'
 
     assert user.set_user_type(User::TYPE_TEACHER, 'email@new.xx')
@@ -1051,7 +1051,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'changing oauth user from student to teacher with different email is allowed' do
-    user = create :student, :unmigrated_google_sso
+    user = create :student, :google_sso_provider
     assert user.primary_contact_info.credential_type == 'google_oauth2'
 
     assert user.set_user_type(User::TYPE_TEACHER, 'email@new.xx')
@@ -1570,7 +1570,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can change own user type as an oauth student' do
-    student = create :student, :unmigrated_google_sso
+    student = create :student, :google_sso_provider
     assert student.can_change_own_user_type?
   end
 
@@ -3905,7 +3905,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'find_by_credential returns nil when no matching user is found' do
-    user = create :student, :unmigrated_clever_sso
+    user = create :student, :clever_sso_provider
 
     assert_nil User.find_by_credential(
       type: AuthenticationOption::CLEVER,
@@ -3915,7 +3915,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_by_credential locates migrated SSO user' do
     original_uid = 'test-uid'
-    user = create :student, :unmigrated_clever_sso, uid: original_uid
+    user = create :student, :clever_sso_provider, uid: original_uid
 
     User.expects(:find_by).never
     assert_equal user,
@@ -3956,7 +3956,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'depended_upon_for_login? if teacher has a roster-managed student with no other teachers' do
-    student = create :student, :unmigrated_google_sso
+    student = create :student, :google_sso_provider
     section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
     section.students << student
     another_section = create :section, user: section.teacher, login_type: Section::LOGIN_TYPE_EMAIL
@@ -4004,7 +4004,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'dependent_students for teacher: returns students in rostered sections without passwords that have no other teachers' do
-    student = create :student, :unmigrated_google_sso, encrypted_password: nil
+    student = create :student, :google_sso_provider, encrypted_password: nil
     section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
     section.students << student
 
