@@ -6,25 +6,21 @@ import i18n from '@cdo/locale';
 const styles = {
   textInput: {
     marginTop: 0,
-    marginBottom: 8,
+    marginBottom: 16,
     display: 'block',
-    width: '90%',
-    fontSize: 12
+    width: '90%'
   },
   textInputStudent: {
-    marginTop: 0,
-    marginBottom: 8,
+    margin: 10,
     display: 'block',
     width: '90%',
-    backgroundColor: color.lightest_cyan,
-    fontSize: 12
+    backgroundColor: color.lightest_cyan
   },
   h1: {
     color: color.charcoal,
-    marginTop: 0,
-    marginBottom: 8,
-    fontSize: 18,
-    lineHeight: '18px',
+    marginTop: 8,
+    marginBottom: 12,
+    fontSize: 24,
     fontFamily: '"Gotham 5r", sans-serif',
     fontWeight: 'normal'
   }
