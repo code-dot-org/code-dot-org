@@ -361,7 +361,6 @@ EOS
     assert encrypted_hash['encrypted_notes']&.is_a? String
     refute encrypted_hash['notes']
 
-
     level.disable_sharing = false
     level.notes = nil
     decrypted_hash = level.load_level_xml(n)
