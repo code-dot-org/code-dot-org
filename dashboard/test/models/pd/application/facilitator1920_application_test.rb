@@ -260,14 +260,21 @@ module Pd::Application
     end
 
     test 'fit_cohort' do
-      included = [
-        create(:pd_facilitator1920_application, :locked, fit_workshop_id: @fit_workshop.id, status: :accepted),
-        create(:pd_facilitator1920_application, :locked, fit_workshop_id: @fit_workshop.id, status: :waitlisted)
-      ]
+      included = []
+      facilitator_cohort_view_statuses = Api::V1::Pd::ApplicationsController::COHORT_VIEW_STATUSES & Pd::Application::Facilitator1920Application.statuses
+      facilitator_cohort_view_statuses.each do |status|
+        application = create :pd_facilitator1920_application, fit_workshop_id: @fit_workshop.id
+        application.update_column(:status, status)
+        application.lock!
+        included << application if facilitator_cohort_view_statuses.include? status
+      end
+
+      unlocked_application = create :pd_facilitator1920_application, fit_workshop_id: @fit_workshop.id
+      unlocked_application.update_column(:status, 'accepted')
 
       excluded = [
         # not locked
-        create(:pd_facilitator1920_application, fit_workshop_id: @fit_workshop.id, status: :accepted),
+        unlocked_application,
 
         # not accepted or waitlisted
         @application_with_fit_workshop,
@@ -298,6 +305,47 @@ module Pd::Application
       refute filtered_labels_csf.key? :csd_csp_lead_summer_workshop_requirement
       assert filtered_labels_csf.key? :csf_good_standing_requirement
       assert_equal ['csd', 'csf'], Facilitator1920Application::FILTERED_LABELS.keys
+    end
+
+    test 'locking an application with an auto-email status queues up an email' do
+      assert_empty @application.emails
+      Facilitator1920Application::AUTO_EMAIL_STATUSES.each do |status|
+        @application.unlock!
+        @application.update!(status: status)
+        @application.expects(:queue_email).with(status)
+        @application.lock!
+      end
+    end
+
+    test 'locking an application with accepted status does not queue up an email' do
+      assert_empty @application.emails
+      @application.expects(:queue_email).never
+      @application.update!(status: 'accepted')
+      @application.lock!
+    end
+
+    test 'setting status does not queue up a status email' do
+      assert_empty @application.emails
+      @application.expects(:queue_email).never
+
+      Facilitator1920Application.statuses.each do |status|
+        @application.update!(status: status)
+      end
+    end
+
+    test 'locking an application with an auto-email status deletes unsent emails for the application' do
+      Facilitator1920Application::AUTO_EMAIL_STATUSES.each do |status|
+        @application.unlock!
+        unrelated_email = create :pd_application_email
+        associated_sent_email = create :pd_application_email, application: @application, sent_at: Time.now
+        associated_unsent_email = create :pd_application_email, application: @application
+
+        @application.update!(status: status)
+        @application.lock!
+        assert Email.exists?(unrelated_email.id)
+        assert Email.exists?(associated_sent_email.id)
+        refute Email.exists?(associated_unsent_email.id)
+      end
     end
 
     test 'meets_criteria says yes if everything is set to YES, no if anything is NO, and INCOMPLETE if anything is unset' do
@@ -443,6 +491,12 @@ module Pd::Application
       end
       new_enrollment = Pd::Enrollment.find(application.auto_assigned_fit_enrollment_id)
       assert_equal new_fit_workshop.id, new_enrollment.pd_workshop_id
+    end
+
+    private
+
+    def assert_status_log(expected, application)
+      assert_equal JSON.parse(expected.to_json), application.status_log
     end
   end
 end
