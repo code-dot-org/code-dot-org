@@ -204,6 +204,11 @@ describe('progressHelpers', () => {
       assert.equal(getIconForLevel(level1), 'scissors');
     });
 
+    it('uses flag-checkered icon if bonus level', () => {
+      const level = {bonus: true};
+      assert.equal(getIconForLevel(level), 'flag-checkered');
+    });
+
     it('throws if icon is invalid', () => {
       assert.throws(function() {
         const level = {
