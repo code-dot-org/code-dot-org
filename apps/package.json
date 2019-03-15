@@ -74,7 +74,7 @@
     "canvg": "gabelerner/canvg",
     "chai": "3.5.0",
     "chai-as-promised": "^7.1.1",
-    "chai-enzyme": "~0.8.0",
+    "chai-enzyme": "^1.0.0-beta.1",
     "chai-subset": "1.2.0",
     "chai-xml": "^0.3.2",
     "chalk": "^1.1.3",
