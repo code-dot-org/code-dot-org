@@ -563,6 +563,7 @@ Resources:
               - Effect: Allow
                 Action: iam:PassRole
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+<% if rack_env?(:production) -%>
         - PolicyName: StopInactiveAdhocInstances
           PolicyDocument:
             Statement:
@@ -572,6 +573,27 @@ Resources:
                   - cloudwatch:GetMetricStatistics
                   - ec2:DescribeInstances
                 Resource: '*'
+        - PolicyName: RDSBackup
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: rds:DescribeDBInstances
+                Resource: '*'
+              - Effect: Allow
+                Action: rds:DescribeDBSnapshots
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:production"
+              - Effect: Allow
+                Action: rds:CopyDBSnapshot
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:rds:production-*"
+              - Effect: Allow
+                Action:
+                  - rds:CopyDBSnapshot
+                  - rds:DescribeDBSnapshots
+                  - rds:DescribeDBSnapshotAttributes
+                  - rds:ModifyDBSnapshotAttribute
+                  - rds:DeleteDBSnapshot
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:temp-snapshot-*"
+<% end -%>
       ManagedPolicyArns: [!Ref CDOPolicy]
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   DaemonInstanceProfile:
