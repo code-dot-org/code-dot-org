@@ -383,7 +383,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         <PrivacyDialog
           show={this.state.isPrivacyDialogOpen}
           onHide={this.handleClosePrivacyDialog}
-          principalApproval={true}
+          teacherApproval={false}
         />
       </FormGroup>
     );

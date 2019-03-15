@@ -11,7 +11,7 @@ export default class PrivacyDialog extends React.Component {
   static propTypes = {
     show: PropTypes.bool,
     onHide: PropTypes.func.isRequired,
-    principalApproval: PropTypes.bool
+    teacherApproval: PropTypes.bool
   };
 
   render() {
@@ -49,7 +49,7 @@ export default class PrivacyDialog extends React.Component {
             </a>
             .
           </p>
-          {!this.props.principalApproval && (
+          {this.props.teacherApproval && (
             <p style={STYLE.bodyText}>
               Teachers may be required to get principal approval for their
               application to the Professional Learning Program. As part of this
