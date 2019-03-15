@@ -879,11 +879,6 @@ export function assignedScriptName(state) {
   return assignment ? assignment.name : '';
 }
 
-export function stageExtrasEnabled(state, sectionId) {
-  const section = getRoot(state).sections[sectionId];
-  return section && section.stageExtras;
-}
-
 /**
  * Gets the data needed by Reacttabular to show a sortable table
  * @param {object} state - Full store state
