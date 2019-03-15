@@ -8,7 +8,7 @@ import DisabledBubblesModal from '@cdo/apps/code-studio/DisabledBubblesModal';
 describe('DisabledBubblesModal', () => {
   it('is open to begin with', () => {
     const wrapper = shallow(<DisabledBubblesModal />);
-    expect(wrapper).to.containMatchingElement(
+    expect(wrapper.containsMatchingElement(
       <BaseDialog isOpen={true} uncloseable={true}>
         <div>
           <div>{i18n.disabledProgress1()}</div>
@@ -29,14 +29,14 @@ describe('DisabledBubblesModal', () => {
           </div>
         </div>
       </BaseDialog>
-    );
+    )).to.be.true;
   });
 
   it('closes when the button is clicked', () => {
     const wrapper = shallow(<DisabledBubblesModal />);
-    expect(wrapper.find(BaseDialog)).to.have.prop('isOpen', true);
+    expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.true;
 
     wrapper.find('button').simulate('click');
-    expect(wrapper.find(BaseDialog)).to.have.prop('isOpen', false);
+    expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.false;
   });
 });

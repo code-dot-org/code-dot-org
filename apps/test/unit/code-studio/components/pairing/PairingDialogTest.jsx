@@ -9,11 +9,11 @@ describe('PairingDialog', () => {
   it('renders a dialog containing the Pairing component', () => {
     const wrapper = shallow(<PairingDialog source="Any old test string" />);
 
-    expect(wrapper).to.containMatchingElement(
+    expect(wrapper.containsMatchingElement(
       <BaseDialog isOpen={false}>
         <Pairing source="Any old test string" />
       </BaseDialog>
-    );
+    )).to.be.true;
   });
 
   it('can be opened and closed with public methods', () => {
@@ -23,20 +23,20 @@ describe('PairingDialog', () => {
       wrapper.instance().open();
     }).not.to.throw();
 
-    expect(wrapper).to.containMatchingElement(
+    expect(wrapper.containsMatchingElement(
       <BaseDialog isOpen={true}>
         <Pairing source="Another test string" />
       </BaseDialog>
-    );
+    )).to.be.true;
 
     expect(() => {
       wrapper.instance().close();
     }).not.to.throw();
 
-    expect(wrapper).to.containMatchingElement(
+    expect(wrapper.containsMatchingElement(
       <BaseDialog isOpen={false}>
         <Pairing source="Another test string" />
       </BaseDialog>
-    );
+    )).to.be.true;
   });
 });
