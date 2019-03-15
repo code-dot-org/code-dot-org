@@ -15640,6 +15640,53 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-20-21-u4-assess-conditionals pick 1:
+        <img src="https://images.code.org/0e12f2c50c38461985462f00c9c0d3c4-image-1552671815316.23.42 AM.png">: <img src="https://images.code.org/0e12f2c50c38461985462f00c9c0d3c4-image-1552671815316.23.42 AM.png">
+        <img src="https://images.code.org/1cd58d6994689cc6891507bf49cb8cf6-image-1552671823240.30.59 AM.png">: <img src="https://images.code.org/1cd58d6994689cc6891507bf49cb8cf6-image-1552671823240.30.59 AM.png">
+        <img src="https://images.code.org/3921059f8be92705b034af70120e93df-image-1552671829344.39.50 AM.png">: <img src="https://images.code.org/3921059f8be92705b034af70120e93df-image-1552671829344.39.50 AM.png">
+        <img src="https://images.code.org/d4eb8ac0489f64e2e3d79ec69002e20d-image-1552671807489.22.22 AM.png">: <img src="https://images.code.org/d4eb8ac0489f64e2e3d79ec69002e20d-image-1552671807489.22.22 AM.png">
+        Output A: Output A
+        Output B: Output B
+        Output C: Output C
+        Output D: Output D
+        Output E: Output E
+      csp-20-21-u4-assess-conditionals pick 2:
+        <img src="https://images.code.org/0e12f2c50c38461985462f00c9c0d3c4-image-1552671815316.23.42 AM.png">: <img src="https://images.code.org/0e12f2c50c38461985462f00c9c0d3c4-image-1552671815316.23.42 AM.png">
+        <img src="https://images.code.org/1cd58d6994689cc6891507bf49cb8cf6-image-1552671823240.30.59 AM.png">: <img src="https://images.code.org/1cd58d6994689cc6891507bf49cb8cf6-image-1552671823240.30.59 AM.png">
+        <img src="https://images.code.org/3921059f8be92705b034af70120e93df-image-1552671829344.39.50 AM.png">: <img src="https://images.code.org/3921059f8be92705b034af70120e93df-image-1552671829344.39.50 AM.png">
+        <img src="https://images.code.org/4eb6a7de156e4d1bc38fa3c00eab5cf4-image-1552673101201.59.04 AM.png">: <img src="https://images.code.org/4eb6a7de156e4d1bc38fa3c00eab5cf4-image-1552673101201.59.04 AM.png">
+        <img src="https://images.code.org/508274c56822da6f7dfd2ec600b6380c-image-1552673112428.57.16 AM.png">: <img src="https://images.code.org/508274c56822da6f7dfd2ec600b6380c-image-1552673112428.57.16 AM.png">
+        <img src="https://images.code.org/52035e8a9e31603b152838e12bb2d086-image-1552673105778.58.30 AM.png">: <img src="https://images.code.org/52035e8a9e31603b152838e12bb2d086-image-1552673105778.58.30 AM.png">
+        <img src="https://images.code.org/54f871758b10b1dcda46f8fefd8cb117-image-1552673109465.57.53 AM.png">: <img src="https://images.code.org/54f871758b10b1dcda46f8fefd8cb117-image-1552673109465.57.53 AM.png">
+        <img src="https://images.code.org/d4eb8ac0489f64e2e3d79ec69002e20d-image-1552671807489.22.22 AM.png">: <img src="https://images.code.org/d4eb8ac0489f64e2e3d79ec69002e20d-image-1552671807489.22.22 AM.png">
+      csp-20-21-u4-assess-functions-missing-code:
+        '1': '1'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      csp-20-21-u4-assess-functions-order:
+        '10': '10'
+        '100': '100'
+        '20': '20'
+        '200': '200'
+        a b c: a b c
+        a b c a: a b c a
+        a b c b c: a b c b c
+        a b c b c b c: a b c b c b c
+      csp-20-21-u4-assess-functions-order2:
+        '1': '1'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      csp-20-21-u4-assess-functions-scope:
+        '1': '1'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        a b c: a b c
+        a b c a: a b c a
+        a b c b c: a b c b c
+        a b c b c b c: a b c b c b c
       csp-20-21-u4-assess-variables trace:
         '10': '10'
         '100': '100'
