@@ -153,6 +153,10 @@ class TeacherFeedback extends Component {
     }
   };
 
+  componentWillUnmount() {
+    window.removeEventListener('beforeunload');
+  }
+
   onCommentChange = value => {
     this.setState({comment: value});
   };
