@@ -125,6 +125,10 @@ hi:
             '"while"': जबकि
           KEY:
             '"space"': अंतरिक्ष
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': यादृच्छिक
       gamelab_locationDelta:
         options:
           DIR:

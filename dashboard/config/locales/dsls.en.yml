@@ -2929,6 +2929,9 @@ en:
       'U4 L03 Variable Scope: Local vs. Global':
         U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
         description here: description here
+      'U4 L10 Variable Scope: Local vs. Global':
+        U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
+        description here: description here
       U4 caesar cipher interstitial:
         That was easy, what's next?: That was easy, what's next?
         description here: description here
@@ -4276,6 +4279,9 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
+      unique level name here:
+        description here: description here
+        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -4498,6 +4504,7 @@ en:
         CSD U1 Test: {}
         CSD Unit 1 Post Project Assessment 2018: {}
         CSD Web Development Post-Project Test: {}
+        CSP 20-21 Unit 4 Assessment: {}
         CSP Culminating Assessment: {}
         CSP Cumulative Assess A: {}
         CSP Cumulative Assess A_2018: {}
@@ -15633,6 +15640,58 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-20-21-u4-assess-conditionals pick 1:
+        <img src="https://images.code.org/0e12f2c50c38461985462f00c9c0d3c4-image-1552671815316.23.42 AM.png">: <img src="https://images.code.org/0e12f2c50c38461985462f00c9c0d3c4-image-1552671815316.23.42 AM.png">
+        <img src="https://images.code.org/1cd58d6994689cc6891507bf49cb8cf6-image-1552671823240.30.59 AM.png">: <img src="https://images.code.org/1cd58d6994689cc6891507bf49cb8cf6-image-1552671823240.30.59 AM.png">
+        <img src="https://images.code.org/3921059f8be92705b034af70120e93df-image-1552671829344.39.50 AM.png">: <img src="https://images.code.org/3921059f8be92705b034af70120e93df-image-1552671829344.39.50 AM.png">
+        <img src="https://images.code.org/d4eb8ac0489f64e2e3d79ec69002e20d-image-1552671807489.22.22 AM.png">: <img src="https://images.code.org/d4eb8ac0489f64e2e3d79ec69002e20d-image-1552671807489.22.22 AM.png">
+      csp-20-21-u4-assess-conditionals pick 2:
+        <img src="https://images.code.org/4eb6a7de156e4d1bc38fa3c00eab5cf4-image-1552673101201.59.04 AM.png">: <img src="https://images.code.org/4eb6a7de156e4d1bc38fa3c00eab5cf4-image-1552673101201.59.04 AM.png">
+        <img src="https://images.code.org/508274c56822da6f7dfd2ec600b6380c-image-1552673112428.57.16 AM.png">: <img src="https://images.code.org/508274c56822da6f7dfd2ec600b6380c-image-1552673112428.57.16 AM.png">
+        <img src="https://images.code.org/52035e8a9e31603b152838e12bb2d086-image-1552673105778.58.30 AM.png">: <img src="https://images.code.org/52035e8a9e31603b152838e12bb2d086-image-1552673105778.58.30 AM.png">
+        <img src="https://images.code.org/54f871758b10b1dcda46f8fefd8cb117-image-1552673109465.57.53 AM.png">: <img src="https://images.code.org/54f871758b10b1dcda46f8fefd8cb117-image-1552673109465.57.53 AM.png">
+      csp-20-21-u4-assess-functions-missing-code:
+        '1': '1'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      csp-20-21-u4-assess-functions-order:
+        a b c: a b c
+        a b c a: a b c a
+        a b c b c: a b c b c
+        a b c b c b c: a b c b c b c
+      csp-20-21-u4-assess-functions-scope:
+        '1': '1'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      csp-20-21-u4-assess-variables trace:
+        '10': '10'
+        '100': '100'
+        '20': '20'
+        '200': '200'
+      csp-20-21-u4-assess-variables trace 2:
+        '10': '10'
+        '25': '25'
+        '30': '30'
+        '35': '35'
+      csp-20-21-u4-assess-variables trace 3:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '13': '13'
+        '16': '16'
+      csp-20-21-u4-assess-variables trace 4:
+        30 or more: 30 or more
+        Less than 10: Less than 10
+        Less than 20: Less than 20
+        Less than 30: Less than 30
+      csp-20-21-u4-assess-variables trace 5:
+        Output A: Output A
+        Output B: Output B
+        Output C: Output C
+        Output D: Output D
+        Output E: Output E
       csp-post-survey-2017-q1:
         Agree: Agree
         Disagree: Disagree

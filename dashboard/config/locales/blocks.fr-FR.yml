@@ -748,6 +748,17 @@ fr:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': frontière
+            '"inner"': carré intérieur
+            '"circle"': cercle
+            '"grid"': grille
+            '"row"': ligne
+            '"column"': colonne
+            '"plus"': plus
+            '"random"': aléatoire
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:

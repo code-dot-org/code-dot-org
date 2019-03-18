@@ -1441,10 +1441,10 @@ es-MX:
         Course_4_SCF_3_a: "! [] (https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         Course_4_SCF_3_b: 'Esta es una serie de octógonos con lados que son ''contador''
           píxeles de largo. '
-        Course_4_SCF_3_c: 'Cada octágono se llama desde adentro "for" loop que va
-          desde 200 hacia abajo de 2 en 2. '
+        Course_4_SCF_3_c: 'Cada octágono se llama desde adentro de un loop "para"
+          que va desde 200 hacia abajo de 2 en 2. '
         Course_4_SCF_3_d: 'No olvides dar vuelta por 22.5 grados al final de cada
-          iteración. '
+          repetición. '
         Course_4_SCF_3_e: Tanto el color de cada octágono como el ancho del lápiz
           están controlados por la variable `contador '.
         Course_4_SCF_3_f: |-
@@ -5674,13 +5674,13 @@ es-MX:
           </block>
           </next>
           </block></xml>
-        courseF_bee_fwp_challenge1_b: Mira cuánto maíz hay disponible para cosechar
+        courseF_bee_fwp_challenge1_b: "Mira cuánto maíz hay disponible para cosechar
           en cada espacio. ¿Ves el patrón de contador? El parámetro 'longitud' debe
-          ser utilizado para establecer el valor máximo en el ciclo`for`. ¡No olvides
-          que el agricultor vuelva al camino principal después de la cosecha!
+          ser utilizado para establecer el valor máximo en el loop `para`. \n\n¡No
+          olvides que la granjera vuelve al camino principal después de la cosecha!"
         courseF_bee_fwp_challenge1_c: |-
-          Pon un ciclo 'for' dentro de una función y haz que cuente de '1' a 'longitud' por '1'.
-          Dentro de este ciclo deberías avanzar y recoger todo el maíz.
+          Pon un loop 'para' dentro de una función y haz que cuente de '1' a 'longitud' por '1'.
+          Dentro de este loop deberías avanzar y recoger todo el maíz.
 
           <xml>
           <block type="controls_for" inline="true">
@@ -5708,7 +5708,7 @@ es-MX:
           Luego del "loop" usted puede "retroceder" **longiutd veces**.
           Puede necesitar esta pista varias veces para comprenderla. La parte en **negrita** es una pista de cómo usar los dos loops "repetir" que necesitará.
         courseF_bee_fwp_challenge1_e: |
-          **Solución:**
+          **Aquí está la solución:**
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5791,9 +5791,8 @@ es-MX:
 
           Agrega afirmaciones condicionales a la función para buscar maíz, calabazas y lechuga.
         courseF_bee_fwp_challenge2_b: "¿Te estás quedando sin bloques de 'avanzar'?
-          Trate de usar un *segundo * ` para el ciclo ` en su programa principal.
-          \n\n** Nota: ** Tenga cuidado de no confundir `counter` con` counter2` en
-          su código."
+          Trata de usar un *segundo * `loop para` en tu programa principal. \n\n**
+          Nota: ** Ten cuidado de no confundir `contado` con` contador2` en tu código."
         courseF_bee_fwp_challenge2_c: |-
           ** Así debería verse tu función: **
 
@@ -6588,6 +6587,8 @@ es-MX:
       courseA_harvester_loops2_authored_hint:
         courseA_harvester_loops2_a: Tu código tendrá ** cuatro ** bloques `de mover
           el oeste` y ** cuatro ** bloques de` selección de maíz`.
+        courseA_harvester_loops2_b: 'Si aun tienes problemas, intenta decir lo pasos
+          en voz alta. '
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: 'Tu código tendrá ** cuatro ** bloques `de mover
           el oeste` y ** cuatro ** bloques de` selección de maíz`. '
@@ -17973,27 +17974,27 @@ es-MX:
         courseF_artist_fwp1_b: Solo necesitas repetir tantas veces como el número
           de lados en un cuadrado.
       courseF_artist_fwp2_authored_hint:
-        courseF_artist_fwp2_a: Necesitas hacer clic en el boton 'editar' para entrar
-          a la función. Una vez que estes ahí, ¡añade un parametro llamado 'longitud'
-          y usalo dentro de tu bloque 'avanzar'!
+        courseF_artist_fwp2_a: Necesitas hacer clic en el botón 'editar' para entrar
+          a la función. Una vez que estés ahí, ¡añade un parámetro llamado 'longitud'
+          y úsalo dentro de tu bloque 'avanzar'!
         courseF_artist_fwp2_b: "¡Cuando llamas una función, usa un ciclo 'for' para
           tener el mejor código posible!"
       courseF_artist_fwp2_2018_authored_hint:
-        courseF_artist_fwp2_a: Necesitas hacer clic en el boton 'editar' para entrar
-          a la función. Una vez que estes ahí, ¡añade un parametro llamado 'longitud'
-          y usalo dentro de tu bloque 'avanzar'!
+        courseF_artist_fwp2_a: Necesitas hacer clic en el botón 'editar' para entrar
+          a la función. Una vez que estés ahí, ¡añade un parámetro llamado 'longitud'
+          y úsalo dentro de tu bloque 'avanzar'!
         courseF_artist_fwp2_b: "¡Cuando llamas una función, usa un ciclo 'for' para
           tener el mejor código posible!"
       courseF_artist_fwp3_authored_hint:
         courseF_artist_fwp3_a: Esto se vuelve más sencillo si pones todo dentro de
-          un ciclo 'for'.
+          un loop 'para'.
         courseF_artist_fwp3_b: |-
           Asegurate de girar 90 grados entre cada cuadro.
 
           ![](https://images.code.org/97bd8eded03c5aa39740876c8e9f7ff8-image-1469224745277.gif)
       courseF_artist_fwp3_2018_authored_hint:
         courseF_artist_fwp3_a: Esto se vuelve más sencillo si pones todo dentro de
-          un ciclo 'for'.
+          un loop 'para'.
         courseF_artist_fwp3_b: |-
           Asegurate de girar 90 grados entre cada cuadro.
 
@@ -18009,7 +18010,7 @@ es-MX:
         courseF_artist_fwp4_c: Necesitas llamar una funcion tres veces para dibujar
           las figuras.
       courseF_artist_fwp5_authored_hint:
-        courseF_artist_fwp5_d: "¡Un ciclo 'for' te ayudaria mucho!"
+        courseF_artist_fwp5_d: "¡Un loop 'para' te ayudaría mucho!"
         courseF_artist_fwp5_c: Tendrás que editar la función un poco, debido a que
           tu función previa giró al artista a la derecha luego de cada lado, y esta
           imagen necesita a giro a la izquierda.
@@ -18017,7 +18018,7 @@ es-MX:
           número de lados que tiene.
         courseF_artist_fwp5_b: No te olvides de saltar 100 píxeles entre figuras.
       courseF_artist_fwp5_2018_authored_hint:
-        courseF_artist_fwp5_d: "¡Un ciclo 'for' te ayudaria mucho!"
+        courseF_artist_fwp5_d: "¡Un loop 'para' te ayudaría mucho!"
         courseF_artist_fwp5_c: Tendrás que editar la función un poco, debido a que
           tu función previa giró al artista a la derecha luego de cada lado, y esta
           imagen necesita a giro a la izquierda.
@@ -18038,20 +18039,20 @@ es-MX:
         courseF_artist_fwp7_a: ¿Te sientes perdido después de probar un par de ideas?
           Intenta hacer clic en el botón "Empezar" en la esquina superior derecha.
         courseF_artist_fwp7_b: La nueva variable 'min' debe ir en la primera ranura
-          en tu ciclo 'for', dentro de la función.
+          en tu loop 'para', dentro de la función.
       courseF_artist_fwp7_2018_authored_hint:
         courseF_artist_fwp7_a: ¿Te sientes perdido después de probar un par de ideas?
           Intenta hacer clic en el botón "Empezar" en la esquina superior derecha.
         courseF_artist_fwp7_b: La nueva variable 'min' debe ir en la primera ranura
-          en tu ciclo 'for', dentro de la función.
+          en tu loop 'para', dentro de la función.
       courseF_artist_fwp8_authored_hint:
         courseF_artist_fwp8_a: Si tu función es correcta, no necesitas cambiarla para
-          este acertijo.
+          este desafío.
         courseF_artist_fwp8_b: Lo único que necesitas hacer entre llamadas de función
           es cambiar el color de la línea.
       courseF_artist_fwp8_2018_authored_hint:
         courseF_artist_fwp8_a: Si tu función es correcta, no necesitas cambiarla para
-          este acertijo.
+          este desafío.
         courseF_artist_fwp8_b: Lo único que necesitas hacer entre llamadas de función
           es cambiar el color de la línea.
       courseF_artist_fwp9_authored_hint:
@@ -18066,20 +18067,20 @@ es-MX:
         courseF_artist_fwp_challenge1_b: Esta es una serie de polígonos con lados
           que son de largo de pixeles opuestos.
         courseF_artist_fwp_challenge1_c: Cada polígono se llama desde dentro de un
-          ciclo que va desde 3 hasta 6 por un incremento de 1. ¿Qué formas está haciendo?
+          loop que va desde 3 hasta 6 por un incremento de 1. ¿Qué formas está haciendo?
       courseF_artist_fwp_challenge1_2018_authored_hint:
         courseF_artist_fwp_challenge1_b: Esta es una serie de polígonos con lados
           que son de largo de pixeles opuestos.
         courseF_artist_fwp_challenge1_c: Cada polígono se llama desde dentro de un
-          ciclo que va desde 3 hasta 6 por un incremento de 1. ¿Qué formas está haciendo?
+          loop que va desde 3 hasta 6 por un incremento de 1. ¿Qué formas está haciendo?
       courseF_artist_fwp_challenge2_authored_hint:
         courseF_artist_fwp_challenge1_a: "! [] (https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         courseF_artist_fwp_challenge1_b: 'Esta es una serie de octógonos con lados
           que son ''contador'' píxeles de largo. '
-        courseF_artist_fwp_challenge1_c: 'Cada octágono se llama desde adentro "for"
-          loop que va desde 200 hacia abajo de 2 en 2. '
+        courseF_artist_fwp_challenge1_c: 'Cada octágono se llama desde adentro de
+          un loop "para" que va desde 200 hacia abajo de 2 en 2. '
         courseF_artist_fwp_challenge1_d: 'No olvides dar vuelta por 22.5 grados al
-          final de cada iteración. '
+          final de cada repetición. '
         courseF_artist_fwp_challenge1_e: Tanto el color de cada octágono como el ancho
           del lápiz están controlados por la variable `contador '.
         courseF_artist_fwp_challenge1_f: |-
@@ -18090,10 +18091,10 @@ es-MX:
         courseF_artist_fwp_challenge1_a: "! [] (https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         courseF_artist_fwp_challenge1_b: 'Esta es una serie de octógonos con lados
           que son ''contador'' píxeles de largo. '
-        courseF_artist_fwp_challenge1_c: 'Cada octágono se llama desde adentro "for"
-          loop que va desde 200 hacia abajo de 2 en 2. '
+        courseF_artist_fwp_challenge1_c: 'Cada octágono se llama desde adentro de
+          un loop "para" que va desde 200 hacia abajo de 2 en 2. '
         courseF_artist_fwp_challenge1_d: 'No olvides dar vuelta por 22.5 grados al
-          final de cada iteración. '
+          final de cada repetición. '
         courseF_artist_fwp_challenge1_e: Tanto el color de cada octágono como el ancho
           del lápiz están controlados por la variable `contador '.
         courseF_artist_fwp_challenge1_f: |-
@@ -18655,40 +18656,40 @@ es-MX:
       courseF_bee_conditionals10_authored_hint:
         courseF_bee_conditionals10_a: Imagina que hay una nube en cada sitio. ¿Te
           ayuda esto a simplificar tu código?
-        courseF_bee_conditionals10_b: Usa un bloque 'si/entonces' para buscar néctar
+        courseF_bee_conditionals10_b: Usa un bloque 'si/si no' para buscar néctar
           o miel en cada espacio.
-        courseF_bee_conditionals10_c: "¿Ayudaría un ciclo 'mientras' para llegar al
+        courseF_bee_conditionals10_c: "¿Ayudaría un loop 'mientras' para llegar al
           final de este camino?"
       courseF_bee_conditionals10_2018_authored_hint:
         courseF_bee_conditionals10_a: Imagina que hay una nube en cada sitio. ¿Te
           ayuda esto a simplificar tu código?
-        courseF_bee_conditionals10_b: Usa un bloque 'si/entonces' para buscar néctar
+        courseF_bee_conditionals10_b: Usa un bloque 'si/si no' para buscar néctar
           o miel en cada espacio.
-        courseF_bee_conditionals10_c: "¿Ayudaría un ciclo 'mientras' para llegar al
+        courseF_bee_conditionals10_c: "¿Ayudaría un loop 'mientras' para llegar al
           final de este camino?"
       courseF_bee_conditionals2_authored_hint:
         courseF_bee_conditionals2_a: Algunas veces una flor estará allí, otras no.  Si
           quieres que tu código se ejecute en ambos casos, asegúrate de utilizar una
           afirmación  `si`.
         courseF_bee_conditionals2_b: Intentar escribir la secuencia para llegar a
-          todos los espacios, luego agrega la instrucción 'si'.
+          todos los espacios, luego agrega la afirmación 'si'.
       courseF_bee_conditionals2_2018_authored_hint:
         courseF_bee_conditionals2_a: Algunas veces una flor estará allí, otras no.  Si
           quieres que tu código se ejecute en ambos casos, asegúrate de utilizar una
           afirmación  `si`.
         courseF_bee_conditionals2_b: Intentar escribir la secuencia para llegar a
-          todos los espacios, luego agrega la instrucción 'si'.
+          todos los espacios, luego agrega la afirmación 'si'.
       courseF_bee_conditionals3_authored_hint:
         courseF_bee_conditionals3_a: Asegúrate de usar una afirmación 'si' para verificar
           cada espacio para ver sí tiene una flor o nada.
-        courseF_bee_conditionals3_b: Un ciclo 'repetir' sera útil para que sólo tengas
+        courseF_bee_conditionals3_b: Un loop 'repetir' sera útil para que sólo tengas
           que usar un bloque 'si'.
         courseF_bee_conditionals3_c: Intenta escribir código para revisar la primera
           nube. ¿Puedes hacer loops para revisarlos todos?
       courseF_bee_conditionals3_2018_authored_hint:
         courseF_bee_conditionals3_a: Asegúrate de usar una afirmación 'si' para verificar
           cada espacio para ver sí tiene una flor o nada.
-        courseF_bee_conditionals3_b: Un ciclo 'repetir' sera útil para que sólo tengas
+        courseF_bee_conditionals3_b: Un loop 'repetir' sera útil para que sólo tengas
           que usar un bloque 'si'.
         courseF_bee_conditionals3_c: Intenta escribir código para revisar la primera
           nube. ¿Puedes hacer loops para revisarlos todos?
@@ -18698,16 +18699,16 @@ es-MX:
         courseF_bee_conditionals4_b: 'Usa una afirmación `si'' dentro de tu loop para
           comprobar si hay néctar en cada espacio. '
         courseF_bee_conditionals4_c: Usando el bloque 'mientras haya camino adelante',
-          deberias 'moverte hacia adelante' y buscar una flor. 'Si hay una flor'.
-          ¿que debería hacer la abeja?
+          deberías 'avanzar' y buscar una flor. 'Si hay una flor'. ¿que debería hacer
+          la abeja?
       courseF_bee_conditionals4_2018_authored_hint:
         courseD_bee_conditionals4_a: Todavía puedes tratar cada espacio como si hubiera
           una nube sobre él, aunque puedas ver todo el camino.
         courseF_bee_conditionals4_b: 'Usa una afirmación `si'' dentro de tu loop para
           comprobar si hay néctar en cada espacio. '
         courseF_bee_conditionals4_c: Usando el bloque 'mientras haya camino adelante',
-          deberias 'moverte hacia adelante' y buscar una flor. 'Si hay una flor'.
-          ¿que debería hacer la abeja?
+          deberías 'avanzar' y buscar una flor. 'Si hay una flor'. ¿que debería hacer
+          la abeja?
       courseF_bee_conditionals5_authored_hint:
         courseF_bee_conditionals5_a: Piensa en cada lado de la ruta rectangular como
           un camino en sí mismo. Configura un loop anidado con un bloque `repetir`
@@ -19621,18 +19622,18 @@ es-MX:
           Tu función debería verificar si hay un camino a la derecha, y si lo hay, recorrer los caminos laterales y regresar a la abeja al camino principal.
 
           No necesitas agregar esa parte a tu programa principal.
-        courseF_bee_functions5a_b: Usa un ciclo `mientras` para viajar por todas las
+        courseF_bee_functions5a_b: Usa un loop `mientras` para viajar por todas las
           rutas principales, ya que son de diferentes longitudes.
-        courseF_bee_functions5a_c: Dentro de tu ciclo `mientras`, asegúrate de avanzar,
+        courseF_bee_functions5a_c: Dentro de tu loop `mientras`, asegúrate de avanzar,
           luego usa tu función para buscar una ruta.
       courseF_bee_functions5a_2018_authored_hint:
         courseF_bee_functions5a_a: |-
           Tu función debería verificar si hay un camino a la derecha, y si lo hay, recorrer los caminos laterales y regresar a la abeja al camino principal.
 
           No necesitas agregar esa parte a tu programa principal.
-        courseF_bee_functions5a_b: Usa un ciclo `mientras` para viajar por todas las
+        courseF_bee_functions5a_b: Usa un loop `mientras` para viajar por todas las
           rutas principales, ya que son de diferentes longitudes.
-        courseF_bee_functions5a_c: Dentro de tu ciclo `mientras`, asegúrate de avanzar,
+        courseF_bee_functions5a_c: Dentro de tu loop `mientras`, asegúrate de avanzar,
           luego usa tu función para buscar una ruta.
       courseF_bee_functions6_authored_hint:
         courseF_bee_functions6_a: "Si el desafío parece difícil, intenta construir
@@ -19935,13 +19936,13 @@ es-MX:
         courseF_bee_functions8a_b: "Recuerda construir código dentro del editor de
           funciones.\n\n"
       courseF_bee_fwp1_authored_hint:
-        courseF_bee_fwp1_a: Utiliza declaraciones 'si' para asegurarte de que slo
+        courseF_bee_fwp1_a: Utiliza afirmaciones 'si' para asegurarte de que solo
           obtienes néctar de una flor.
         courseF_bee_fwp1_b: Continúa a lo largo del camino usando un bloque 'repetir'.
           Asegúrate de que usas un bloque 'mover hacia adelante' y revisa si hay una
           flor usando una declaración 'si'.
       courseF_bee_fwp1_2018_authored_hint:
-        courseF_bee_fwp1_a: Utiliza declaraciones 'si' para asegurarte de que slo
+        courseF_bee_fwp1_a: Utiliza afirmaciones 'si' para asegurarte de que solo
           obtienes néctar de una flor.
         courseF_bee_fwp1_b: Continúa a lo largo del camino usando un bloque 'repetir'.
           Asegúrate de que usas un bloque 'mover hacia adelante' y revisa si hay una
@@ -19980,13 +19981,13 @@ es-MX:
           avanzar` 2 veces, luego `girar a la izquierda` de nuevo.
       courseF_bee_fwp4_authored_hint:
         courseF_bee_fwp4_a: Necesitas añadir un parámetro y usar la variable resultante
-          en su ciclo.
+          en tu loop.
         courseF_bee_fwp4_b: El parámetro que crees para tu función se usará en el
           ciclo de repetición para determinar cuántas veces la abeja avanzará y buscará
           néctar.
       courseF_bee_fwp4_2018_authored_hint:
         courseF_bee_fwp4_a: Necesitas añadir un parámetro y usar la variable resultante
-          en su ciclo.
+          en tu loop.
         courseF_bee_fwp4_b: El parámetro que crees para tu función se usará en el
           ciclo de repetición para determinar cuántas veces la abeja avanzará y buscará
           néctar.
@@ -20001,29 +20002,29 @@ es-MX:
       courseF_bee_fwp6_authored_hint:
         courseF_bee_fwp6_a: "¿Qué bloque incrementa una variable automáticamente que
           podrías usar como parámetro?"
-        courseF_bee_fwp6_b: Intenta usar un ciclo 'for' para resolver este desafío.
+        courseF_bee_fwp6_b: Intenta usar un loop 'para' para resolver este desafío.
       courseF_bee_fwp6_2018_authored_hint:
         courseF_bee_fwp6_a: "¿Qué bloque incrementa una variable automáticamente que
           podrías usar como parámetro?"
-        courseF_bee_fwp6_b: Intenta usar un ciclo 'for' para resolver este desafío.
+        courseF_bee_fwp6_b: Intenta usar un loop 'para' para resolver este desafío.
       courseF_bee_fwp7_authored_hint:
         courseF_bee_fwp7_a: No necesitas un segundo parámetro para esta función, sólo
-          una segunda declaración si'.
-        courseF_bee_fwp7_b: Agrega una declaración 'si' en tu función para que la
-          abeja revise tanto panales como flores.
+          una segunda afirmación 'si'.
+        courseF_bee_fwp7_b: Agrega una afirmación 'si' en tu función para que la abeja
+          revise tanto panales como flores.
       courseF_bee_fwp7_2018_authored_hint:
         courseF_bee_fwp7_a: No necesitas un segundo parámetro para esta función, sólo
-          una segunda declaración si'.
-        courseF_bee_fwp7_b: Agrega una declaración 'si' en tu función para que la
-          abeja revise tanto panales como flores.
+          una segunda afirmación 'si'.
+        courseF_bee_fwp7_b: Agrega una afirmación 'si' en tu función para que la abeja
+          revise tanto panales como flores.
       courseF_bee_fwp8_authored_hint:
-        courseF_bee_fwp8_a: "¿Como ayudaría un ciclo 'for' en este desafío?"
+        courseF_bee_fwp8_a: "¿Como ayudaría un loop 'para' en este desafío?"
         courseF_bee_fwp8_b: Dado que la espiral disminuye a medida que avanza, su
-          ciclo 'for' debe contar hacia abajo.
+          loop 'para' debes contar hacia abajo.
       courseF_bee_fwp8_2018_authored_hint:
-        courseF_bee_fwp8_a: "¿Como ayudaría un ciclo 'for' en este desafío?"
+        courseF_bee_fwp8_a: "¿Como ayudaría un loop 'para' en este desafío?"
         courseF_bee_fwp8_b: Dado que la espiral disminuye a medida que avanza, su
-          ciclo 'for' debe contar hacia abajo.
+          loop 'para' debes contar hacia abajo.
       courseF_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           El programa principal sería algo como esto:
@@ -20115,8 +20116,8 @@ es-MX:
 
           ¡No olvides regresar al granjero al camino principal después de cosechar!
         courseF_bee_fwp_challenge1_c: |-
-          Pon un ciclo 'for' dentro de una función y haz que cuente de '1' a 'longitud' por '1'.
-          Dentro de este ciclo deberías avanzar y recoger todo el maíz.
+          Pon un loop 'para' dentro de una función y haz que cuente de '1' a 'longitud' por '1'.
+          Dentro de este loop deberías avanzar y recoger todo el maíz.
 
           <xml>
           <block type="controls_for" inline="true">
@@ -20139,12 +20140,12 @@ es-MX:
           <statement name="DO">
           </statement>
           </block></xml>
-        courseF_bee_fwp_challenge1_d: Dentro del ciclo 'for' querrás 'avanzar hacia
-          adelante', luego 'recoger maíz' **número de veces del contador**.
-        courseF_bee_fwp_challenge1_d2: Después del ciclo 'for' puedes sólo 'mover
-          hacia atrás' **número de veces de la variable longitud**.
+        courseF_bee_fwp_challenge1_d: Dentro del loop 'para' querrás 'avanzar', luego
+          'recoger maíz' **número de veces del contador**.
+        courseF_bee_fwp_challenge1_d2: Después del loop 'para' puedes sólo 'retroceder'
+          **número de veces de la variable longitud**.
         courseF_bee_fwp_challenge1_e: |
-          **Solución:**
+          **Aquí está la solución:**
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -20312,8 +20313,8 @@ es-MX:
 
           ¡No olvides regresar al granjero al camino principal después de cosechar!
         courseF_bee_fwp_challenge1_c: |-
-          Pon un ciclo 'for' dentro de una función y haz que cuente de '1' a 'longitud' por '1'.
-          Dentro de este ciclo deberías avanzar y recoger todo el maíz.
+          Pon un loop 'para' dentro de una función y haz que cuente de '1' a 'longitud' por '1'.
+          Dentro de este loop deberías avanzar y recoger todo el maíz.
 
           <xml>
           <block type="controls_for" inline="true">
@@ -20336,12 +20337,12 @@ es-MX:
           <statement name="DO">
           </statement>
           </block></xml>
-        courseF_bee_fwp_challenge1_d: Dentro del ciclo 'for' querrás 'avanzar hacia
-          adelante', luego 'recoger maíz' **número de veces del contador**.
-        courseF_bee_fwp_challenge1_d2: Después del ciclo 'for' puedes sólo 'mover
-          hacia atrás' **número de veces de la variable longitud**.
+        courseF_bee_fwp_challenge1_d: Dentro del loop 'para' querrás 'avanzar', luego
+          'recoger maíz' **número de veces del contador**.
+        courseF_bee_fwp_challenge1_d2: Después del loop 'para' puedes sólo 'retroceder'
+          **número de veces de la variable longitud**.
         courseF_bee_fwp_challenge1_e: |
-          **Solución:**
+          **Aquí está la solución:**
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -20424,8 +20425,8 @@ es-MX:
 
           Agrega afirmaciones condicionales a la función para buscar maíz, calabazas y lechuga.
         courseF_bee_fwp_challenge2_b: |-
-          ¿Se te están acabando los bloques 'mover hacia adelante'?
-          Intenta usar un *segundo* ciclo 'for' en tu programa principal.
+          ¿Se te están acabando los bloques 'avanzar'?
+          Intenta usar un *segundo* loop 'para' tu programa principal.
         courseF_bee_fwp_challenge2_c: |-
           ** Así debería verse tu función: **
 
@@ -20569,8 +20570,8 @@ es-MX:
 
           Agrega afirmaciones condicionales a la función para buscar maíz, calabazas y lechuga.
         courseF_bee_fwp_challenge2_b: |-
-          ¿Se te están acabando los bloques 'mover hacia adelante'?
-          Intenta usar un *segundo* ciclo 'for' en tu programa principal.
+          ¿Se te están acabando los bloques 'avanzar'?
+          Intenta usar un *segundo* loop 'para' tu programa principal.
         courseF_bee_fwp_challenge2_c: |-
           ** Así debería verse tu función: **
 
@@ -21991,10 +21992,10 @@ es-MX:
           o 'girar' para terminar este código.
       grade5_artist_functionparameters9a_authored_hint:
         grade5_artist_functionparameters9a_b: La nueva variable 'min' debe ir en la
-          primera ranura en tu ciclo 'for', dentro de la función.
+          primera ranura en tu loop 'para', dentro de la función.
       grade5_artist_functionparameters9b_authored_hint:
         grade5_artist_functionparameters9b_a: Si tu función es correcta, no necesitas
-          cambiarla para este acertijo.
+          cambiarla para este desafío.
         grade5_artist_functionparameters9b_b: Lo único que necesitas hacer entre llamadas
           de función es cambiar el color de la línea.
       grade5_artist_functionparameters_6_authored_hint:
@@ -22007,15 +22008,15 @@ es-MX:
           como el número de lados en un cuadrado.
       grade5_artist_parameters_squares2_authored_hint:
         grade5_artist_parameters_squares2_a: Esto se vuelve más sencillo si pones
-          todo dentro de un ciclo 'for'.
+          todo dentro de un loop 'para'.
         grade5_artist_parameters_squares2_b: |-
           Asegurate de girar 90 grados entre cada cuadro.
 
           ![](https://images.code.org/97bd8eded03c5aa39740876c8e9f7ff8-image-1469224745277.gif)
       grade5_artist_parameters_squares2a_authored_hint:
-        grade5_artist_parameters_squares2a_a: Necesitas hacer clic en el boton 'editar'
-          para entrar a la función. Una vez que estes ahí, ¡añade un parametro llamado
-          'longitud' y usalo dentro de tu bloque 'avanzar'!
+        grade5_artist_parameters_squares2a_a: Necesitas hacer clic en el botón 'editar'
+          para entrar a la función. Una vez que estés ahí, ¡añade un parámetro llamado
+          'longitud' y úsalo dentro de tu bloque 'avanzar'!
         grade5_artist_parameters_squares2a_b: "¡Cuando llamas una función, usa un
           ciclo 'for' para tener el mejor código posible!"
       grade5_artist_variables_freeplay10_authored_hint:
@@ -22101,8 +22102,8 @@ es-MX:
 
           ¿Qué tienes que hacerle al contador en cada flor para alcanzar la cantidad de néctar que necesitas recolectar?
       grade5_bee_parameters_new1_authored_hint:
-        grade5_bee_parameters_new1_a: Utiliza declaraciones 'si' para asegurarte de
-          que slo obtienes néctar de una flor.
+        grade5_bee_parameters_new1_a: Utiliza afirmaciones 'si' para asegurarte de
+          que solo obtienes néctar de una flor.
       grade5_bee_parameters_new2_authored_hint:
         grade5_bee_parameters_new2_a: |-
           Para convertir esto en una función, sólo arrastra el código dentro del bloque de función preexistente.
@@ -22115,7 +22116,7 @@ es-MX:
           estés viendo.
       grade5_bee_parameters_new4_authored_hint:
         grade5_bee_parameters_new4_a: Necesitas añadir un parámetro y usar la variable
-          resultante en su ciclo.
+          resultante en tu loop.
       grade5_bee_parameters_new5_authored_hint:
         grade5_bee_parameters_new5_a: Cuenta el número de espacios que necesitarás
           en cada tramo y usa esos números como parámetros en tu llamada a la función.
@@ -22124,7 +22125,7 @@ es-MX:
           que podrías usar como parámetro?"
       grade5_bee_parameters_new7_authored_hint:
         grade5_bee_parameters_new7_a: No necesitas un segundo parámetro para esta
-          función, sólo una segunda declaración si'.
+          función, sólo una segunda afirmación 'si'.
       grade5_playlab_variables2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Asegúrese de establecer el número de `velocidad_perro`a
           algo más grande que` velocidad_gato`.

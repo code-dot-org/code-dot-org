@@ -19,6 +19,14 @@ export default class FieldGroup extends React.Component {
 
   handleChange(event) {
     const value = event.target.value;
+    if (this.props.type === 'number') {
+      // We only want numbers out of this text field, and so this regular expression restricts input to
+      // digits, a single decimal point, and an optional minus sign at the
+      // beginning.
+      if (!value.match(/^$|^-?[0-9]*\.?[0-9]*$/)) {
+        return;
+      }
+    }
     this.props.onChange &&
       this.props.onChange({
         [this.props.id]: value
@@ -26,9 +34,16 @@ export default class FieldGroup extends React.Component {
   }
 
   renderControl(controlWidth, children, props) {
+    // Rather than set an input field's type to number, we leave it as text.
+    // The handleChange function will filter its contents to be numbers only.
+    const updatedProps = {
+      ...props,
+      type: props.type === 'number' ? 'text' : props.type
+    };
+
     return (
       <Col {...controlWidth}>
-        <FormControl onChange={this.handleChange} {...props}>
+        <FormControl onChange={this.handleChange} {...updatedProps}>
           {children}
         </FormControl>
       </Col>
@@ -78,6 +93,7 @@ FieldGroup.defaultProps = {
 
 FieldGroup.propTypes = {
   id: PropTypes.string.isRequired,
+  type: PropTypes.string,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   required: PropTypes.bool,
   validationState: PropTypes.string,
