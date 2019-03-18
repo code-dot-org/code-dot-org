@@ -25,7 +25,6 @@ class Pd::FitWeekendRegistrationBaseTest < ActiveSupport::TestCase
       "Form data howTraveling",
       "Form data needHotel",
       "Form data needDisabilitySupport",
-      "Form data photoRelease",
       "Form data liabilityWaiver",
       "Form data agreeShareContact",
     ], registration.errors.full_messages
@@ -43,15 +42,13 @@ class Pd::FitWeekendRegistrationBaseTest < ActiveSupport::TestCase
     refute registration.sanitize_form_data_hash.key?(:dietary_needs)
   end
 
-  test 'declining the registration updates the application status' do
-    {
-      accepted: 'accepted',
-      declined: 'withdrawn'
-    }.each do |registration_status, expected_application_status|
+  test 'declining the registration does not affect the application status' do
+    [:accepted, :declined].each do |registration_status|
       application = create(:pd_facilitator1920_application, :locked)
+      assert_equal 'accepted', application.status
 
       create(:pd_fit_weekend1920_registration, pd_application: application, status: registration_status)
-      assert_equal expected_application_status, application.reload.status
+      assert_equal 'accepted', application.reload.status
     end
   end
 end

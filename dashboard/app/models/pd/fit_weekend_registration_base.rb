@@ -25,11 +25,6 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
   after_initialize :set_registration_year
   before_validation :set_registration_year
 
-  after_create :update_application_status
-  def update_application_status
-    pd_application.update!(status: 'withdrawn') unless accepted?
-  end
-
   after_create :send_fit_weekend_confirmation_email
   def send_fit_weekend_confirmation_email
     Pd::FitWeekendRegistrationMailer.confirmation(self).deliver_now
@@ -91,7 +86,6 @@ class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
       :how_traveling,
       :need_hotel,
       :need_disability_support,
-      :photo_release,
       :liability_waiver,
       :agree_share_contact,
     ].freeze

@@ -55,6 +55,14 @@ FactoryGirl.define do
     sequence(:name) {|n| "User#{n} Codeberg"}
     user_type User::TYPE_STUDENT
 
+    # Used to test specific interactions for older (unmigrated) users. This
+    # trait and associated tests can be removed when the work to migrate all
+    # users has been completed.
+    # TODO elijah
+    trait :demigrated do
+      after(:create, &:demigrate_from_multi_auth)
+    end
+
     factory :teacher do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 3, 14)
@@ -156,28 +164,6 @@ FactoryGirl.define do
           end
         end
       end
-      trait :with_google_authentication_option do
-        after(:create) do |user|
-          create(:authentication_option,
-            user: user,
-            email: user.email,
-            hashed_email: user.hashed_email,
-            credential_type: AuthenticationOption::GOOGLE,
-            authentication_id: 'abcd123'
-          )
-        end
-      end
-      trait :with_email_authentication_option do
-        after(:create) do |user|
-          create(:authentication_option,
-            user: user,
-            email: user.email,
-            hashed_email: user.hashed_email,
-            credential_type: AuthenticationOption::EMAIL,
-            authentication_id: user.hashed_email
-          )
-        end
-      end
       transient {pilot_experiment nil}
       after(:create) do |teacher, evaluator|
         if evaluator.pilot_experiment
@@ -258,20 +244,10 @@ FactoryGirl.define do
         end
       end
 
-      trait :imported_from_google_classroom do
-        unmigrated_google_sso
-        after(:create) do |user|
-          user.update!(email: '', hashed_email: '')
-          section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
-          create :follower, student_user: user, section: section
-          user.reload
-        end
-      end
-
       trait :migrated_imported_from_google_classroom do
-        with_migrated_google_authentication_option
+        google_sso_provider
+        without_email
         after(:create) do |user|
-          user.primary_contact_info.update!(email: '', hashed_email: '')
           section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
           create :follower, student_user: user, section: section
           user.reload
@@ -284,20 +260,20 @@ FactoryGirl.define do
       end
     end
 
-    trait :unmigrated_sso do
+    trait :sso_provider do
       encrypted_password nil
       provider %w(facebook windowslive clever).sample
       sequence(:uid) {|n| n}
     end
 
-    trait :unmigrated_sso_with_token do
-      unmigrated_sso
+    trait :sso_provider_with_token do
+      sso_provider
       oauth_token 'fake-oauth-token'
       oauth_token_expiration 'fake-oauth-token-expiration'
     end
 
-    trait :unmigrated_untrusted_email_sso do
-      unmigrated_sso_with_token
+    trait :untrusted_email_sso_provider do
+      sso_provider_with_token
       after(:create) do |user|
         if user.student?
           user.hashed_email = nil
@@ -306,44 +282,44 @@ FactoryGirl.define do
       end
     end
 
-    trait :unmigrated_clever_sso do
-      unmigrated_untrusted_email_sso
+    trait :clever_sso_provider do
+      untrusted_email_sso_provider
       provider 'clever'
     end
 
-    trait :unmigrated_facebook_sso do
-      unmigrated_sso_with_token
+    trait :facebook_sso_provider do
+      sso_provider_with_token
       provider 'facebook'
     end
 
-    trait :unmigrated_google_sso do
-      unmigrated_sso_with_token
+    trait :google_sso_provider do
+      sso_provider_with_token
       provider 'google_oauth2'
       oauth_refresh_token 'fake-oauth-refresh-token'
     end
 
-    trait :unmigrated_powerschool_sso do
-      unmigrated_untrusted_email_sso
+    trait :powerschool_sso_provider do
+      untrusted_email_sso_provider
       provider 'powerschool'
     end
 
-    trait :unmigrated_the_school_project_sso do
-      unmigrated_sso
+    trait :the_school_project_sso_provider do
+      sso_provider
       provider 'the_school_project'
     end
 
-    trait :unmigrated_twitter_sso do
-      unmigrated_sso
+    trait :twitter_sso_provider do
+      sso_provider
       provider 'twitter'
     end
 
-    trait :unmigrated_qwiklabs_sso do
-      unmigrated_sso
+    trait :qwiklabs_sso_provider do
+      sso_provider
       provider 'lti_lti_prod_kids.qwikcamps.com'
     end
 
-    trait :unmigrated_windowslive_sso do
-      unmigrated_sso_with_token
+    trait :windowslive_sso_provider do
+      sso_provider_with_token
       provider 'windowslive'
     end
 
@@ -365,7 +341,7 @@ FactoryGirl.define do
     end
 
     trait :with_migrated_google_authentication_option do
-      after(:create) do |user|
+      after(:create_commit) do |user|
         ao = create(:authentication_option,
           user: user,
           email: user.email,
@@ -413,36 +389,6 @@ FactoryGirl.define do
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
-        )
-        user.update!(
-          primary_contact_info: ao,
-          provider: User::PROVIDER_MIGRATED,
-          email: '',
-          hashed_email: nil
-        )
-      end
-    end
-
-    trait :with_email_authentication_option do
-      after(:create) do |user|
-        create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::EMAIL,
-          authentication_id: user.hashed_email
-        )
-      end
-    end
-
-    trait :with_migrated_email_authentication_option do
-      after(:create) do |user|
-        ao = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::EMAIL,
-          authentication_id: user.hashed_email
         )
         user.update!(
           primary_contact_info: ao,

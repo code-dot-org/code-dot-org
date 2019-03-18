@@ -420,6 +420,10 @@ GameLab.prototype.init = function(config) {
  * @param {Object} expoOpts
  */
 GameLab.prototype.exportApp = async function(expoOpts) {
+  const {mode, expoSnackId} = expoOpts || {};
+  if (mode === 'expoGenerateApk') {
+    return Exporter.generateExpoApk(expoSnackId, this.studioApp_.config);
+  }
   await this.whenAnimationsAreReady();
   return this.exportAppWithAnimations(
     getStore().getState().animationList,
@@ -446,7 +450,8 @@ GameLab.prototype.exportAppWithAnimations = function(animationList, expoOpts) {
       allAnimationsSingleFrame,
       pauseAnimationsByDefault
     },
-    expoOpts
+    expoOpts,
+    this.studioApp_.config
   );
 };
 

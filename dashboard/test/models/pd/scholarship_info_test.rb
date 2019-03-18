@@ -23,4 +23,25 @@ class Pd::ScholarshipInfoTest < ActiveSupport::TestCase
       Pd::ScholarshipInfo.create(user: @user, scholarship_status: YES_CDO)
     end
   end
+
+  test 'update or create' do
+    user = create :teacher
+    application_year = APPLICATION_CURRENT_YEAR
+
+    assert_creates(Pd::ScholarshipInfo) do
+      Pd::ScholarshipInfo.update_or_create(user, application_year, Pd::ScholarshipInfoConstants::NO)
+    end
+
+    scholarship_info = Pd::ScholarshipInfo.where(user: user, application_year: application_year).first
+    assert_equal Pd::ScholarshipInfoConstants::NO, scholarship_info.scholarship_status
+
+    refute Pd::ScholarshipInfo.update_or_create(user, application_year, 'invalid status')
+
+    refute_creates(Pd::ScholarshipInfo) do
+      Pd::ScholarshipInfo.update_or_create(user, application_year, Pd::ScholarshipInfoConstants::YES_OTHER)
+    end
+
+    scholarship_info.reload
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, scholarship_info.scholarship_status
+  end
 end

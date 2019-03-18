@@ -165,7 +165,7 @@ class TopInstructions extends Component {
         method: 'GET',
         contentType: 'application/json;charset=UTF-8'
       }).done(data => {
-        this.setState({feedbacks: data});
+        this.setState({feedbacks: data}, this.forceTabResizeToMaxHeight);
       });
     }
     //While this is behind an experiment flag we will only pull the rubric
@@ -177,7 +177,7 @@ class TopInstructions extends Component {
         method: 'GET',
         contentType: 'application/json;charset=UTF-8'
       }).done(data => {
-        this.setState({rubric: data});
+        this.setState({rubric: data}, this.forceTabResizeToMaxHeight);
       });
     }
   }
@@ -201,6 +201,18 @@ class TopInstructions extends Component {
       );
     }
   }
+
+  /**
+   * Function to force the height of the instructions area to be the
+   * full size of the content for that area. This is used when the comment
+   * tab loads in order to make the instructions area show the whole
+   * contents of the comment tab.
+   */
+  forceTabResizeToMaxHeight = () => {
+    if (this.state.tabSelected === TabType.COMMENTS) {
+      this.props.setInstructionsRenderedHeight(this.adjustMaxNeededHeight());
+    }
+  };
 
   /**
    * Given a prospective delta, determines how much we can actually change the
@@ -279,7 +291,10 @@ class TopInstructions extends Component {
   };
 
   handleCommentTabClick = () => {
-    this.setState({tabSelected: TabType.COMMENTS});
+    this.setState(
+      {tabSelected: TabType.COMMENTS},
+      this.forceTabResizeToMaxHeight
+    );
   };
 
   render() {
@@ -308,7 +323,10 @@ class TopInstructions extends Component {
       this.state.feedbacks.length > 0 &&
       (this.state.feedbacks[0].comment || this.state.feedbacks[0].performance);
     const displayFeedbackTeacher =
-      this.props.viewAs === ViewType.Teacher && this.state.rubric;
+      this.state.displayFeedbackTeacherFacing ||
+      (!this.state.displayFeedbackTeacherFacing &&
+        this.props.viewAs === ViewType.Teacher &&
+        this.state.rubric);
     const displayFeedback = displayFeedbackStudent || displayFeedbackTeacher;
     const teacherOnly =
       this.state.tabSelected === TabType.COMMENTS &&
@@ -397,9 +415,10 @@ class TopInstructions extends Component {
                 referenceLinks={this.props.referenceLinks}
               />
             )}
-            {this.state.tabSelected === TabType.COMMENTS && (
+            {displayFeedback && (
               <TeacherFeedback
                 user={this.props.user}
+                visible={this.state.tabSelected === TabType.COMMENTS}
                 disabledMode={
                   this.props.viewAs === ViewType.Student ||
                   !this.state.displayFeedbackTeacherFacing
