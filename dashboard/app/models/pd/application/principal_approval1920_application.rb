@@ -137,16 +137,6 @@ module Pd::Application
           'No, my school or teacher will not be able to pay the program fee. We would like to be considered for a scholarship.',
           'Not applicable: there is no fee for the program for teachers in my region.',
           'Not applicable: there is no Regional Partner in my region.'
-        ],
-        how_heard: [
-          'From a teacher',
-          'From an administrator',
-          'Code.org website',
-          'Code.org email',
-          'Regional Partner website',
-          'Regional Partner email',
-          'Regional Partner event or workshop',
-          TEXT_FIELDS[:other_with_text]
         ]
       }
     end
@@ -177,8 +167,7 @@ module Pd::Application
               :replace_course,
               :committed_to_diversity,
               :understand_fee,
-              :pay_fee,
-              :how_heard
+              :pay_fee
             ]
 
             if teacher_application&.course == 'csd'
@@ -214,7 +203,8 @@ module Pd::Application
         [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
         [:do_you_approve],
         [:plan_to_teach],
-        [:how_heard]
+        [:contact_invoicing],
+        [:contact_invoicing_detail]
       ]
     end
 
