@@ -569,7 +569,7 @@ export function statusForLevel(level, levelProgress) {
  * {string[]} Object.lessonNames
  * {Object[]} Object.stageLevels
  */
-export const categorizedLessons = state => {
+export const categorizedLessons = (state, includeBonusLevels = false) => {
   let byCategory = {};
 
   const allLevels = levelsByLesson(state);
@@ -577,7 +577,10 @@ export const categorizedLessons = state => {
   state.stages.forEach((stage, index) => {
     const category = stage.flex_category;
     const lesson = lessonFromStageAtIndex(state, index);
-    const stageLevels = allLevels[index];
+    let stageLevels = allLevels[index];
+    if (!includeBonusLevels) {
+      stageLevels = stageLevels.filter(level => !level.bonus);
+    }
 
     byCategory[category] = byCategory[category] || {
       category,
