@@ -787,6 +787,18 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'foo-2017', versions[2][:name]
   end
 
+  test 'summarize includes bonus levels for stages if include_bonus_levels and include_stages are true' do
+    script = create :script
+    stage = create :stage, script: script
+    level = create :level
+    create :script_level, stage: stage, levels: [level], bonus: true
+
+    response = script.summarize(true, nil, true)
+    assert_equal 1, response[:stages].length
+    assert_equal 1, response[:stages].first[:levels].length
+    assert_equal [level.id], response[:stages].first[:levels].first[:ids]
+  end
+
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])
@@ -1576,6 +1588,10 @@ endvariants
     other_pilot_section.script = nil
     other_pilot_section.save!
 
+    # student of pilot teacher, student never assigned to pilot script
+    non_pilot_section = create :section, user: pilot_teacher
+    student_of_pilot_teacher = create(:follower, section: non_pilot_section).student_user
+
     levelbuilder = create :levelbuilder
 
     refute script.pilot?
@@ -1587,6 +1603,7 @@ endvariants
     refute script.has_pilot_access?(pilot_student)
     refute script.has_pilot_access?(teacher_in_section)
     refute script.has_pilot_access?(previous_student)
+    refute script.has_pilot_access?(student_of_pilot_teacher)
     refute script.has_pilot_access?(levelbuilder)
 
     assert pilot_script.pilot?
@@ -1598,6 +1615,7 @@ endvariants
     assert pilot_script.has_pilot_access?(pilot_student)
     assert pilot_script.has_pilot_access?(teacher_in_section)
     assert pilot_script.has_pilot_access?(previous_student)
+    refute script.has_pilot_access?(student_of_pilot_teacher)
     assert pilot_script.has_pilot_access?(levelbuilder)
   end
 

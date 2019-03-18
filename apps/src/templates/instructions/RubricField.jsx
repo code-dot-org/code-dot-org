@@ -25,6 +25,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
+
     margin: '0px 8px',
     padding: 4,
     ':hover': {

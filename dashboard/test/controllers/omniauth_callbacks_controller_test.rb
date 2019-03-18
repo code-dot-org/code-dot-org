@@ -468,7 +468,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'clever: signs in user if user is found by credentials' do
     # Given I have a Clever-Code.org account
-    user = create :student, :unmigrated_clever_sso
+    user = create :student, :clever_sso_provider
 
     # When I hit the clever oauth callback
     auth = generate_auth_user_hash \
@@ -487,7 +487,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'clever: updates tokens when unmigrated user is found by credentials' do
     # Given I have a Clever-Code.org account
-    user = create :teacher, :unmigrated_clever_sso, :demigrated
+    user = create :teacher, :clever_sso_provider, :demigrated
 
     # When I hit the clever oauth callback
     auth = generate_auth_user_hash \
@@ -615,7 +615,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'google_oauth2: signs in user if user is found by credentials' do
     # Given I have a Google-Code.org account
-    user = create :student, :unmigrated_google_sso
+    user = create :student, :google_sso_provider
 
     # When I hit the google oauth callback
     auth = generate_auth_user_hash \
@@ -634,7 +634,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'google_oauth2: updates tokens when unmigrated user is found by credentials' do
     # Given I have a Google-Code.org account
-    user = create :teacher, :unmigrated_google_sso, :demigrated
+    user = create :teacher, :google_sso_provider, :demigrated
 
     # When I hit the google oauth callback
     auth = generate_auth_user_hash \
@@ -663,7 +663,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'google_oauth2: updates tokens when migrated user is found by credentials' do
     # Given I have a Google-Code.org account
     user = create(:teacher,
-      :unmigrated_google_sso,
+      :google_sso_provider,
       uid: 'fake-uid'
     )
     assert user.migrated?
@@ -1001,7 +1001,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'login: microsoft_v2_auth deletes an existing windowslive authentication_option for migrated user' do
     email = 'test@foo.xyz'
     uid = '654321'
-    user = create(:user, :unmigrated_windowslive_sso, email: email)
+    user = create(:user, :windowslive_sso_provider, email: email)
     auth = OmniAuth::AuthHash.new(
       provider: 'microsoft_v2_auth',
       uid: uid,
@@ -1197,7 +1197,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: returns bad_request if user not migrated' do
-    user = create :user, :unmigrated_facebook_sso
+    user = create :user, :facebook_sso_provider
     Timecop.freeze do
       setup_should_connect_provider(user)
       get :google_oauth2
