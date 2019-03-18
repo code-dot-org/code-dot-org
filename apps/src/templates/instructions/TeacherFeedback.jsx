@@ -12,6 +12,12 @@ import RubricField from './RubricField';
 import {CommentArea} from './CommentArea';
 
 const styles = {
+  tabAreaHidden: {
+    display: 'none'
+  },
+  tabAreaVisible: {
+    display: 'block'
+  },
   button: {
     fontWeight: 'bold'
   },
@@ -87,6 +93,7 @@ class TeacherFeedback extends Component {
       approaches: PropTypes.string,
       noEvidence: PropTypes.string
     }),
+    visible: PropTypes.bool,
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']),
     serverLevelId: PropTypes.number,
@@ -153,6 +160,10 @@ class TeacherFeedback extends Component {
         });
     }
   };
+
+  componentWillUnmount() {
+    window.removeEventListener('beforeunload');
+  }
 
   onCommentChange = value => {
     this.setState({comment: value});
@@ -245,13 +256,19 @@ class TeacherFeedback extends Component {
 
     const rubricLevels = ['exceeds', 'meets', 'approaches', 'noEvidence'];
 
+    // Instead of unmounting the component when switching tabs, hide and show it
+    // so a teacher does not lose the feedback they are giving if they switch tabs
+    const tabVisible = this.props.visible
+      ? styles.tabAreaVisible
+      : styles.tabAreaHidden;
+
     const timeStyle =
       this.props.viewAs === ViewType.Student
         ? styles.timeStudent
         : styles.timeTeacher;
 
     return (
-      <div>
+      <div style={tabVisible}>
         {this.state.errorState === ErrorType.Load && (
           <span>
             <i className="fa fa-warning" style={styles.errorIcon} />
