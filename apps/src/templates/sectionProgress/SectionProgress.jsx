@@ -172,6 +172,7 @@ class SectionProgress extends Component {
             <div id="uitest-detail-view">
               <VirtualizedDetailView
                 section={section}
+                stageExtrasEnabled={section.stageExtras}
                 scriptData={scriptData}
                 onScroll={this.afterScroll}
               />

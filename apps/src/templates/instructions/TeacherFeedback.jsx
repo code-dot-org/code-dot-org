@@ -161,6 +161,10 @@ class TeacherFeedback extends Component {
     }
   };
 
+  componentWillUnmount() {
+    window.removeEventListener('beforeunload');
+  }
+
   onCommentChange = value => {
     this.setState({comment: value});
   };
@@ -252,15 +256,16 @@ class TeacherFeedback extends Component {
 
     const rubricLevels = ['exceeds', 'meets', 'approaches', 'noEvidence'];
 
-    const timeStyle =
-      this.props.viewAs === ViewType.Student
-        ? styles.timeStudent
-        : styles.timeTeacher;
     // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs
     const tabVisible = this.props.visible
       ? styles.tabAreaVisible
       : styles.tabAreaHidden;
+
+    const timeStyle =
+      this.props.viewAs === ViewType.Student
+        ? styles.timeStudent
+        : styles.timeTeacher;
 
     return (
       <div style={tabVisible}>
