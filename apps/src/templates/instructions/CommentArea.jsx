@@ -1,25 +1,30 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 const styles = {
   textInput: {
     marginTop: 0,
-    marginBottom: 16,
-    display: 'block',
-    width: '90%'
-  },
-  textInputStudent: {
-    margin: 10,
+    marginBottom: 8,
     display: 'block',
     width: '90%',
-    backgroundColor: color.lightest_cyan
+    fontSize: 12
+  },
+  textInputStudent: {
+    marginTop: 0,
+    marginBottom: 8,
+    display: 'block',
+    width: '90%',
+    backgroundColor: color.lightest_cyan,
+    fontSize: 12
   },
   h1: {
     color: color.charcoal,
-    marginTop: 8,
-    marginBottom: 12,
-    fontSize: 24,
+    marginTop: 0,
+    marginBottom: 8,
+    fontSize: 18,
+    lineHeight: '18px',
     fontFamily: '"Gotham 5r", sans-serif',
     fontWeight: 'normal'
   }
@@ -43,7 +48,7 @@ export class CommentArea extends Component {
       : styles.textInput;
     return (
       <div>
-        <h1 style={styles.h1}>Teacher Feedback</h1>
+        <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
         <textarea
           id="ui-test-feedback-input"
           style={textInputStyle}

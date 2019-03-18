@@ -8,12 +8,14 @@ ru:
       draw a circle: нарисовать круг
       draw a car: нарисовать машину
       draw square: нарисовать квадрат
+      jump to middle: перейти к центру
       draw a button: нарисовать кнопку
       draw left leg: нарисовать левую ногу
       draw right leg: нарисовать правую ногу
       draw body and arms: нарисовать туловище и руки
       draw a head: нарисовать голову
       draw head: нарисовать голову
+      draw arms: нарисовать руки
       draw O: нарисовать О
       draw D: нарисовать Д
       draw E: нарисовать Е
@@ -31,6 +33,7 @@ ru:
       draw triangle: нарисовать треугольник
       draw circle: нарисовать окружность
       draw goal: нарисовать цель
+      graph: граф
       draw waves: нарисовать волны
       draw a wave: нарисовать волну
       draw a small triangle: нарисовать маленький треугольник
@@ -58,7 +61,9 @@ ru:
       drawHouseLayer: нарисоватьСлойДома
       do something: выполнить что-то
       draw_image: нарисовать_изображение
+      story: история
       jump: прыгнуть
+      patrol: проверка
       fill in bg: заполнить фон
       draw lines: нарисовать линии
       Draw a triangle: Нарисовать треугольник
@@ -74,6 +79,7 @@ ru:
       get nectar make honey: собери нектар сделай мед
       draw an octagon: нарисовать восьмиугольник
       draw octagons: нарисовать восьмиугольники
+      score_points: очки
       set score: задать счет
       get nectar: собрать нектар
       empty function: пустая функция

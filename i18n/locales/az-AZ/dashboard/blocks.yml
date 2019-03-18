@@ -218,6 +218,10 @@ az:
             '"space"': kosmos
             '"x"': x
             '"y"': 'y'
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': təsadüfi
       gamelab_locationDelta:
         options:
           DIR:

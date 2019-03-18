@@ -3,6 +3,12 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   include ::Pd::WorkshopConstants
   load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: ['create', 'cancel']
 
+  before_action :authorize_update_scholarship_info!, only: 'update_scholarship_info'
+  def authorize_update_scholarship_info!
+    @enrollment = Pd::Enrollment.find(params[:enrollment_id])
+    authorize! :update_scholarship_info, @enrollment
+  end
+
   RESPONSE_MESSAGES = {
     SUCCESS: "success".freeze,
     DUPLICATE: "duplicate".freeze,
@@ -72,6 +78,13 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     end
   end
 
+  # POST /api/v1/pd/enrollment/:enrollment_id/scholarship_info
+  def update_scholarship_info
+    @enrollment.update_scholarship_status(params[:scholarship_status])
+    serialized_enrollment = Api::V1::Pd::WorkshopEnrollmentSerializer.new(@enrollment).attributes
+    render json: serialized_enrollment
+  end
+
   # DELETE /api/v1/pd/workshops/1/enrollments/1
   def destroy
     enrollment = @workshop.enrollments.find_by(id: params[:id])
@@ -101,7 +114,9 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       attended_csf_intro_workshop: params[:attended_csf_intro_workshop],
       csf_course_experience: params[:csf_course_experience],
       csf_courses_planned: params[:csf_courses_planned],
-      csf_has_physical_curriculum_guide: params[:csf_has_physical_curriculum_guide]
+      csf_has_physical_curriculum_guide: params[:csf_has_physical_curriculum_guide],
+      previous_courses: params[:previous_courses],
+      replace_existing: params[:replace_existing]
     }
   end
 

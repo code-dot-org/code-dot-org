@@ -60,9 +60,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.1.tgz#007cfc859a14c3fbe686cae49d2114a3e03a223f"
+"@code-dot-org/craft@0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.2.tgz#4b117337a5a601613f2d38514aa50ba972362939"
 
 "@code-dot-org/dance-party@0.0.42":
   version "0.0.42"
@@ -97,9 +97,9 @@
     test262-harness "^2.4.0"
     yargs "^7.0.1"
 
-"@code-dot-org/js-interpreter@^1.3.8":
-  version "1.3.8"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.8.tgz#bde1737994250e676f9f4707017cd8d63f7eb13f"
+"@code-dot-org/js-interpreter@^1.3.9":
+  version "1.3.9"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.9.tgz#a29b3914f38e1655816d745cea80c24e76758001"
   dependencies:
     yargs "^7.0.1"
 
@@ -128,6 +128,20 @@
     remark-parse "^6.0.0"
     remark-stringify "^6.0.0"
     unified "^7.0.0"
+
+"@code-dot-org/snack-sdk@2.2.0-apkurl-v1":
+  version "2.2.0-apkurl-v1"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/snack-sdk/-/snack-sdk-2.2.0-apkurl-v1.tgz#51afb887f4e528f42411eb1761add0d6db4ce86e"
+  dependencies:
+    babel-runtime "^6.23.0"
+    diff "^3.2.0"
+    lodash "^4.17.4"
+    platform "^1.3.4"
+    pubnub "^4.3.3"
+    recast "^0.12.4"
+    semver "^5.3.0"
+    shortid "^2.2.8"
+    validate-npm-package-name "^3.0.0"
 
 "@sinonjs/formatio@^2.0.0":
   version "2.0.0"
@@ -7500,7 +7514,7 @@ lodash@3.7.x:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.7.0.tgz#3678bd8ab995057c07ade836ed2ef087da811d45"
 
-lodash@4.x.x, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.14.0, lodash@^4.16.1, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.7.0, lodash@^4.8.0:
+lodash@4.x.x, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.7.0, lodash@^4.8.0:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
@@ -10982,20 +10996,6 @@ slice-ansi@0.0.4:
 smart-buffer@^1.0.13:
   version "1.1.15"
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-1.1.15.tgz#7f114b5b65fab3e2a35aa775bb12f0d1c649bf16"
-
-snack-sdk@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/snack-sdk/-/snack-sdk-2.0.0.tgz#a4635e37319972ac7ab7d69b057a1771755fb451"
-  dependencies:
-    babel-runtime "^6.23.0"
-    diff "^3.2.0"
-    lodash "^4.16.1"
-    platform "^1.3.4"
-    pubnub "^4.3.3"
-    recast "^0.12.4"
-    semver "^5.3.0"
-    shortid "^2.2.8"
-    validate-npm-package-name "^3.0.0"
 
 snake-case@^1.1.0:
   version "1.1.2"

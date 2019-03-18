@@ -439,8 +439,8 @@ function layoutSprites(animation, format) {
     }
   } else if (format === "random") {
     group.forEach(function (sprite) {
-      sprite.x = randomInt(minX, maxX);
-      sprite.y = randomInt(minY, maxY);
+      sprite.x = randomNumber(minX, maxX);
+      sprite.y = randomNumber(minY, maxY);
       sprite.rotation = 0;
     });
   } else {
@@ -814,9 +814,9 @@ function runInputEvents() {
 
 function createCollisionHandler (collisionEvent) {
   return function (sprite1, sprite2) {
+    thisSprite = sprite1;
+    otherSprite = sprite2;
     if (!collisionEvent.touching || collisionEvent.keepFiring) {
-      thisSprite = sprite1;
-      otherSprite = sprite2;
       collisionEvent.event(sprite1, sprite2);
     }
   };

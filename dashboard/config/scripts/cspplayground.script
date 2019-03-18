@@ -90,7 +90,15 @@ level 'U4 L09 Thermostat App v7', progression: 'Declaring and Calling Functions'
 level 'updateScreen Pattern', progression: 'Update Screen Pattern'
 
 stage 'Functions Practice'
+level 'U4 L10 Functions Practice Calling Functions 1', progression: 'Call Functions'
 level 'U4 L10 Functions Practice 1', progression: 'Call Functions'
+level 'U4 L10 Functions Practice 2', progression: 'Call Functions'
+level 'U4 L10 Functions Practice 3', progression: 'Call Functions'
+level 'U4 L10 Functions Build Practice 2', progression: 'Declare Functions'
+level 'U4 L10 Functions Build Practice 1', progression: 'Declare Functions'
+level 'U4 L10 Variable Scope: Local vs. Global', progression: 'Function Scope'
+level 'U4 L10 Functions Scope Practice 1', progression: 'Function Scope'
+level 'U4L10 My Pet Rock Example App', progression: 'Creating Functions'
 
 stage 'Functions Make'
 level 'U4 L11 Functions Make 1', progression: 'Quote Maker App'
@@ -101,3 +109,20 @@ level 'U4 L11 Functions Make 4.5', progression: 'Make the Quote Maker App'
 level 'U4 L11 Functions Make 4.75', progression: 'Make the Quote Maker App'
 level 'U4 L11 Functions Make 5', progression: 'Make the Quote Maker App'
 level 'U4 L11 Functions Make 6', progression: 'Make the Quote Maker App'
+
+stage 'Practice PT Part 1'
+level 'U4 L12 Practice PT 1', progression: 'Sample Apps'
+level 'U4 L12 Practice PT 2', progression: 'Sample Apps'
+
+stage 'Practice PT Part 2'
+level 'U4 L13 Practice PT 1', progression: 'Create the Screens'
+level 'U4 L13 Practice PT 2', progression: 'Create the Variables'
+level 'U4 L13 Practice PT 3', progression: 'Create the Function'
+level 'U4 L13 Practice PT 4', progression: 'Add onEvents'
+
+stage 'Practice PT Part 3'
+level 'U4 L14 Practice PT 1', progression: 'Test Your Decision Maker App'
+level 'U4 L14 Practice PT 2', progression: 'Submit Your Decision Maker App'
+
+stage 'Unit 4 Assessment', lockable: true
+assessment 'CSP 20-21 Unit 4 Assessment'

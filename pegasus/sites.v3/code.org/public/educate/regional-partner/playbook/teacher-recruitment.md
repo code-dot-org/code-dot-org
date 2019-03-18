@@ -8,11 +8,17 @@ nav: regional_partner_playbook_nav
 # Teacher and District Recruitment
 
 ## Table of Contents
-- [Teacher Application](#teachapp)
+- [Teacher Applications and Recruitment](#teachapp)
 - [Teacher Outreach](#teachout)
 - [District Outreach](#district)
 
 Compiled document of all Teacher Recruitment Resources and Strategies **[here](https://docs.google.com/document/d/1pNyPvt54ACH7sfA0f13_-CZGQ4m-VhcH4NorEIhdx24/edit?ts=5a6baf6c#heading=h.a8j457kayvro)**.
+
+________________
+
+## Announcements
+
+**March 8:** A new fund is available to support teacher recruitment for the '19-'20 school year in your region. Jump to the [Teacher Recruitment Fund](#recruitment) section below.
 
 ________________
 <a id="teachapp"></a>
@@ -39,6 +45,19 @@ Review the <a href="https://docs.google.com/document/d/1Bx-o1kRCKZxM_prrQqxQH7mX
 - Visit the [Curriculum Tile](https://code.org/educate/regional-partner/playbook/curriculum) for one-pagers on each program as well as a overview of the professional learning program that you can share with administrators and potential applications.  
 - Teachers and administrators can visit https://code.org/educate/professional-learning/middle-high to start learning about CS Discoveries, CS Principles and the program requirements.
 - Encourage teachers to check out our <a href="https://code.org/files/course-pl-options.pdf", target=_"blank">course and Professional Learning Program options</a> to determine the best fit for their teaching situation.
+
+<a id="recruitment"></a>
+
+### Teacher Recruitment Fund
+In order to support teacher recruitment efforts and increase the number of submitted teacher applications, Code.org will reimburse each Regional Partner a maximum of $1,000 towards the costs of teacher recruitment that you incur between March 8 and 8-weeks prior to your Local Summer Workshop. 
+
+This additional funding may be used for: 
+
+- Registration fees for a booth at education leadership/educator conferences
+- Travel for on-the-ground recruitment, including mileage, hotels, flights, and meals
+- Marketing materials such as flyers, swag/collateral (including printing), purchasing a distribution list, and other advertising (radio, print, etc.)
+- Facilitator payment/temporary staff stipends to help with teacher recruitment
+- Other ideas, with pre-approval from your Regional Manager
 
 ________________
 <a id="teachout"></a>

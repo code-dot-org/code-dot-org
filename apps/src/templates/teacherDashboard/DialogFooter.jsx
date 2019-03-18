@@ -19,6 +19,9 @@ const style = {
     display: 'flex',
     flexFlow: 'row',
     justifyContent: 'space-between'
+  },
+  rightAlign: {
+    justifyContent: 'flex-end'
   }
 };
 
@@ -29,16 +32,20 @@ const style = {
  */
 export default class DialogFooter extends Component {
   static propTypes = {
+    rightAlign: PropTypes.bool,
     children: PropTypes.any
   };
 
   render() {
+    let buttonRowStyle = this.props.rightAlign
+      ? {...style.buttonRow, ...style.rightAlign}
+      : style.buttonRow;
     return (
       <div>
         <div style={style.aboveFooter} />
         <div style={style.footer}>
           <hr />
-          <div style={style.buttonRow}>{this.props.children}</div>
+          <div style={buttonRowStyle}>{this.props.children}</div>
         </div>
       </div>
     );
