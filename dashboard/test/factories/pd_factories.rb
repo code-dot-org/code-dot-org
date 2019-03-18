@@ -1184,7 +1184,6 @@ FactoryGirl.define do
       committed_to_diversity 'Yes'
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]
-      how_heard Pd::Application::PrincipalApproval1920Application.options[:how_heard][0]
     end
 
     trait :replace_course_yes_csp do

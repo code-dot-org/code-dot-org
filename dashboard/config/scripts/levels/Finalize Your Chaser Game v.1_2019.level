@@ -59,7 +59,7 @@
     "makerlab_enabled": "false",
     "instructions_important": "false",
     "encrypted_examples": "WZEKaU5dwqXt17HK5muon0ZrofzjnSSy7raiieVO5BD9XFcMoQfmzgOQfigC\n00RC\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "parent_level_id": 13537,
     "name_suffix": "_2019",
     "preload_asset_list": null

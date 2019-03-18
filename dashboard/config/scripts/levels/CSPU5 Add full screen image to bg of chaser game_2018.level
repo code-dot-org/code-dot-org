@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:00:51.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -63,8 +59,13 @@
     "teacher_markdown": "### Teaching Tip\r\n\r\nThis may be a confusing step for students for two reasons:\r\n\r\n1) We want the background image to be it's own UI element *rather* than just giving the screen a background image.  -- we're doing this so that we can detect the difference between clicking on the target image, and the background.  (The event listener for the screen triggers on every click, no matter what).\r\n\r\n2) We're making the app respond to a click but *not changing anything about the screen* yet.  We're *only* printing a message to the console.  That's okay, here. We're doing this in small steps.\r\n\r\n  * The reason is that this is a good strategy for programming with UI elements. Using console.log is a simple half-step we can verify that we've properly set up the event handler to respond to the event we want.  Console.log WILL print something if the event fires.  If console.log doesn't print, then we know the event was never triggered and we can check: do we have the ID right? the event type? etc.\r\n  * Sometimes you can be too eager and add more code to the event handler, say to change the screen, and if it doesn't work you don't know what happened - did the event not fire? Or did is the code to set the screen wrong?\r\n",
     "parent_level_id": 7116,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "show_debug_watch": "true",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:00:51.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "published": true,
   "notes": ""
 }]]></config>
