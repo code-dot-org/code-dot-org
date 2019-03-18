@@ -9921,6 +9921,8 @@ en:
               name: Digital Sharing
             Running Simulations:
               name: Running Simulations
+            Simulating Experiments:
+              name: Simulating Experiments
         dance-low:
           stages:
             Dance Party:
