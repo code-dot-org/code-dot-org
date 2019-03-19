@@ -646,6 +646,18 @@ bs:
       Course1MazeAssessment2: |-
         Ovo je test!\r
         Kreći se u jednom smjeru, a zatim u drugom da bi me doveo/la do svinje.
+      CourseD_Dance_Party_01: Prevuci blok `kreiranje novog` u radni prostor i spoji ga unutar bloka `postavke`.
+      CourseD_Dance_Party_02: Učini da Los započne novi pokret svako 4 takta!
+      CourseD_Dance_Party_03: Sada napravi da plesač započne novi pokret svako 6 taktova!
+      CourseD_Dance_Party_04: Dodaj efekat pozadine u svoj program.
+      CourseD_Dance_Party_05: Iskoristi drugi novi blok kako bi plesač promjenio pokrete svako 2 takta.
+      CourseD_Dance_Party_06: Kreiraj dodatnog plesača koji se naziva `dodatni_plesac1` kako bi plesao sa mačkom.
+      CourseD_Dance_Party_08: Da li možeš podesiti istu visinu za oba plesača?
+      CourseD_Dance_Party_09: Upotrijebi blok `podesi nijanse` da bi promjenio boju plesača.
+      CourseD_Dance_Party_10: Napravi da drugi plesač reaguje na muziku korištenjem bloka `započni pratiti`.
+      CourseD_Dance_Party_11: Blok `kada pritisneš gore` omogučava ti da pokreneš kod kada pritisneš strelicu gore. Pokušaj da napraviš da plesač uradi brzi pokret kada pritisneš strelicu gore.
+      CourseD_Dance_Party_11_5: Iskoristi blok "sve patke" kako bi sve patke plesale skupa.
+      CourseD_Dance_Party_11b: Napravi da se robot "spusti" jednom kada pritisneš strelicu desno i da "klapne" jednom kada pritisneš stralicu gore. Uradi kombinaciju spusti-klapni što brže može!
       CourseF_PlayLab_vars10: "Vrijeme za slobodno igranje! Evo svih varijabli s kojima smo se igrali do sada, zajedno sa još nekoliko dodatni u slučaju da ih zatrebaš. Napravi igricu ili priču koja koristi ove varijable. Savjet: Pomjeraj radni prostor prema dolje da vidiš sve komande."
       CourseF_PlayLab_vars2: Utrka nije baš bila pravedna! Promijeni "brzina_psa" varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji prikupi 10 zastava je pobjednik!
       CourseF_PlayLab_vars3: Evo nova vrsta igrice! Koristi strelicu za lijevo i desno za kretanje, i strelicu na gore za skakanje. Vidi ako možeš prikupiti sve zastave.
@@ -660,8 +672,10 @@ bs:
       CourseF_PlayLab_vars9: Super. Hajde sada da se pobrinemo da ova igrice na bude baš prelagana. Svaki put kada Pas (lik 1) bude pogođen sa vatrenom kuglom, ti bi trebao/la izgubiti poen. Hajde da počnemo sa 10 poena tako da ne bude preteško. Neka tvoj rezultat padne sa 10 na 0 da bi prošao/la ovaj nivo.
       Crack Random Substitution: Upute
       Crack Random Substitution_2018: Upute
+      Crack Random Substitution_2019: Upute
       Crack a Caesar Cipher: Upute
       Crack a Caesar Cipher_2018: Upute
+      Crack a Caesar Cipher_2019: Upute
       Dance_Party_01: Prevuci blok `kreiranje novog` u radni prostor i spoji ga unutar bloka `postavke`.
       Dance_Party_01_low: Prevuci blok `kreiranje novog` u radni prostor i spoji ga unutar bloka `postavke`.
       Dance_Party_02: Učini da Los započne novi pokret svako 4 takta!
@@ -936,6 +950,7 @@ bs:
       Play Lab Rocket 2: Započeli smo Recept za Dizajn za visinu rakete koristeći ugovor i primjere koje si upravo napisao/la. Dovrši definiciju funkcije za visinu rakete i pokreni svoju animaciju.
       Play Lab Rocket 3: Odlično. Možeš li sada ažurirati tu funkciju tako da se naša raketa kreće brzo? Pobrini se da su izjave svrhe, primjeri, i definicija funkcije ažurirani da bi se raketa lansirala pri 40 metara u sekundi.
       Ryan Test Locked Blocks: Evo funkcija pod nazivom "izvidnica". Preuredi je da pokreće Mačku prema gore za 400 piksela i onda prema dole za 400 piksela.
+      Ryan_Demo: Učini da Los započne novi pokret svako 4 takta!
       SpecialFrozenLevel: Službeno si postao/postala majstor-umjetnik! Napravi snježnu bajku.
       Standalone_Artist_1: Dobrodošao u Umjetnik! Kao prvo, hajde da pokušamo napraviti jednostavan kvadrat koristeći blok za skretanje u desno i blok za kretanje naprijed. Svaka stranica bi trebala biti 100 piksela duga.
       Standalone_Artist_2: Nacrtaj ovaj dijamant sa stepenima od 120 i 60 stupnjeva te stranicama dugačkim 150 piksela.
@@ -951,6 +966,7 @@ bs:
       Testing Quantum Farmer: "Wow, pronašao sam stvarno duboku rupu! Ne znam koliko će mi zahvata lopatom trebati. Možeš li napraviti program koji je popunjava sve dok se zemlja ne izjednači? Savjet: Pokušaj koristiti \"dok\" petlju ovaj put."
       The Vigenere Cipher Widget: Upute
       The Vigenere Cipher Widget_2018: Upute
+      The Vigenere Cipher Widget_2019: Upute
       The Vigenere Cipher: Upute
       Total Artist Clone Me: 'Vrijeme za slobodno igranje! Evo funkcija koje si napisao/la i još nekih dodatnih. Nacrtaj nešto fantastično!'
       U2 frequency caesar: Upute

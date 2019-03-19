@@ -85,6 +85,14 @@ uz:
           VAL:
             'true': rost
             'false': yolgʻon
+      gamelab_keyPressed:
+        options:
+          KEY:
+            '"space"': koinot
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': tasodifiy
       gamelab_locationDelta:
         options:
           DIR:
@@ -93,6 +101,10 @@ uz:
         text: tasodifiy rang
       gamelab_randomColor:
         text: tasodifiy rang
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
       gamelab_setPosition:
         options:
           POSITION:
@@ -111,6 +123,19 @@ uz:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
+      aalab_keyPressed:
+        options:
+          KEY:
+            '"space"': koinot
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': rost
+            '"false"': yolgʻon
       binary_whenKey:
         options:
           KEY:

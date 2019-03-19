@@ -29,15 +29,21 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "long_instructions": "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long.\r\n\r\n",
     "examples_required": "false",
     "instructions_important": "true",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null,
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-01-29 19:58:11 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

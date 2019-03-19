@@ -1,21 +1,30 @@
-import { PropTypes } from 'react';
-import { SET_SECTION } from '@cdo/apps/redux/sectionDataRedux';
+import PropTypes from 'prop-types';
+import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 
 // Reducer for script selection in teacher dashboard.
 // Tab specific reducers can import actions from this file
 // if they need to respond to a script changing.
 
-const DEFAULT_SCRIPT_NAME = "Express Course";
+const DEFAULT_SCRIPT_NAME = 'express-2017';
 
 // Action type constants
 export const SET_SCRIPT = 'scriptSelection/SET_SCRIPT';
 export const SET_VALID_SCRIPTS = 'scriptSelection/SET_VALID_SCRIPTS';
 
 // Action creators
-export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
-export const setValidScripts = (validScripts, studentScriptIds, validCourses, assignedCourseId) => (
-  {type: SET_VALID_SCRIPTS, validScripts, studentScriptIds, validCourses, assignedCourseId}
-);
+export const setScriptId = scriptId => ({type: SET_SCRIPT, scriptId});
+export const setValidScripts = (
+  validScripts,
+  studentScriptIds,
+  validCourses,
+  assignedCourseId
+) => ({
+  type: SET_VALID_SCRIPTS,
+  validScripts,
+  studentScriptIds,
+  validCourses,
+  assignedCourseId
+});
 
 export const loadValidScripts = (section, validScripts) => {
   return async (dispatch, getState) => {
@@ -32,9 +41,36 @@ export const loadValidScripts = (section, validScripts) => {
       })
     ];
     const [studentScriptsData, validCourses] = await Promise.all(promises);
-    const { studentScriptIds } = studentScriptsData;
-    dispatch(setValidScripts(validScripts, studentScriptIds, validCourses, section.course_id));
+    const {studentScriptIds} = studentScriptsData;
+    dispatch(
+      setValidScripts(
+        validScripts,
+        studentScriptIds,
+        validCourses,
+        section.course_id
+      )
+    );
   };
+};
+
+// Selectors
+export const getSelectedScriptName = state => {
+  const scriptId = state.scriptSelection.scriptId;
+  if (!scriptId) {
+    return null;
+  }
+
+  const scripts = state.scriptSelection.validScripts;
+  let scriptName = null;
+  for (let i = 0; i < scripts.length; i++) {
+    const script = scripts[i];
+    if (script.id === scriptId) {
+      scriptName = script.script_name;
+      break;
+    }
+  }
+
+  return scriptName;
 };
 
 /**
@@ -45,47 +81,50 @@ export const validScriptPropType = PropTypes.shape({
   category_priority: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  position: PropTypes.number,
+  position: PropTypes.number
 });
 
 // Initial state of scriptSelectionRedux
 const initialState = {
   scriptId: null,
-  validScripts: [],
+  validScripts: []
 };
 
-export default function scriptSelection(state=initialState, action) {
+export default function scriptSelection(state = initialState, action) {
   if (action.type === SET_SCRIPT) {
     return {
       ...state,
-      scriptId: action.scriptId,
+      scriptId: action.scriptId
     };
   }
 
   if (action.type === SET_SECTION) {
     // Default the scriptId to the script assigned to the section
-    const defaultScriptId = action.section.script ? action.section.script.id : null;
+    const defaultScriptId = action.section.script
+      ? action.section.script.id
+      : null;
     // Setting the section is the first action to be called when switching
     // sections, which requires us to reset our state. This might need to change
     // once switching sections is in react/redux.
     return {
       ...initialState,
-      scriptId: defaultScriptId,
+      scriptId: defaultScriptId
     };
   }
 
   if (action.type === SET_VALID_SCRIPTS) {
-
     // Computes the set of valid scripts.
     let validScripts = action.validScripts;
     // Set defaultScript to Express Course to use if there are no validScripts
-    const defaultScript = validScripts.find(script => script.name === DEFAULT_SCRIPT_NAME);
+    const defaultScript = validScripts.find(
+      script => script.script_name === DEFAULT_SCRIPT_NAME
+    );
 
     if (action.studentScriptIds && action.validCourses) {
       const idMap = {};
       // First, construct an id map consisting only of script ids which a
       // student has participated in.
-      action.studentScriptIds.forEach(id => idMap[id] = true);
+      action.studentScriptIds.forEach(id => (idMap[id] = true));
 
       // If the student has participated in a script which is a unit in a
       // course, or if this section is assigned to a course, make sure that
@@ -95,7 +134,7 @@ export default function scriptSelection(state=initialState, action) {
           course.script_ids.some(id => idMap[id]) ||
           (action.assignedCourseId && action.assignedCourseId === course.id)
         ) {
-          course.script_ids.forEach(id => idMap[id] = true);
+          course.script_ids.forEach(id => (idMap[id] = true));
         }
       });
       validScripts = validScripts.filter(script => idMap[script.id]);
@@ -130,7 +169,7 @@ export default function scriptSelection(state=initialState, action) {
     return {
       ...state,
       validScripts,
-      scriptId: scriptId,
+      scriptId: scriptId
     };
   }
 

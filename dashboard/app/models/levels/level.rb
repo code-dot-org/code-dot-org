@@ -60,47 +60,16 @@ class Level < ActiveRecord::Base
     name_suffix
     parent_level_id
     hint_prompt_attempts_threshold
+    short_instructions
+    long_instructions
+    rubric_key_concept
+    rubric_exceeds
+    rubric_meets
+    rubric_approaches
+    rubric_no_evidence
+    mini_rubric
+    encrypted
   )
-
-  # Temporary aliases while we transition between naming schemes.
-  # TODO: elijah: migrate the data to these new field names and remove these
-  def short_instructions
-    read_attribute('properties')['short_instructions'] || read_attribute('properties')['instructions']
-  end
-  alias_method :instructions, :short_instructions
-
-  def short_instructions=(value)
-    read_attribute('properties')['short_instructions'] = value
-    read_attribute('properties')['instructions'] = nil
-  end
-  alias_method :instructions=, :short_instructions=
-
-  def short_instructions?
-    !!JSONValue.value(read_attribute('properties')['short_instructions']) ||
-    !!JSONValue.value(read_attribute('properties')['instructions'])
-  end
-  alias_method :instructions?, :short_instructions?
-
-  def long_instructions
-    read_attribute('properties')['long_instructions'] || read_attribute('properties')['markdown_instructions']
-  end
-  alias_method :markdown_instructions, :long_instructions
-
-  def long_instructions=(value)
-    read_attribute('properties')['long_instructions'] = value
-    read_attribute('properties')['markdown_instructions'] = nil
-  end
-  alias_method :markdown_instructions=, :long_instructions=
-
-  def long_instructions?
-    !!JSONValue.value(read_attribute('properties')['long_instructions']) ||
-    !!JSONValue.value(read_attribute('properties')['markdown_instructions'])
-  end
-  alias_method :markdown_instructions?, :long_instructions?
-
-  def self.permitted_params
-    super.concat(['short_instructions', 'long_instructions'])
-  end
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
@@ -119,14 +88,6 @@ class Level < ActiveRecord::Base
   def assign_attributes(new_attributes)
     attributes = new_attributes.stringify_keys
 
-    # TODO: elijah: migrate the data to these new field names and remove these
-    if attributes.key?('instructions')
-      attributes['short_instructions'] = attributes.delete('instructions')
-    end
-    if attributes.key?('markdown_instructions')
-      attributes['long_instructions'] = attributes.delete('markdown_instructions')
-    end
-
     concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
     if concept_difficulty_attributes
       assign_nested_attributes_for_one_to_one_association(
@@ -143,7 +104,7 @@ class Level < ActiveRecord::Base
 
   def specified_autoplay_video
     @@specified_autoplay_video ||= {}
-    @@specified_autoplay_video[video_key] ||= Video.find_by_key(video_key) unless video_key.nil?
+    @@specified_autoplay_video[video_key] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
   end
 
   def summarize_concepts
@@ -244,7 +205,22 @@ class Level < ActiveRecord::Base
   # Input: xml level file definition
   # Output: Hash of level properties
   def load_level_xml(xml_node)
-    JSON.parse(xml_node.xpath('//../config').first.text)
+    hash = JSON.parse(xml_node.xpath('//../config').first.text)
+    begin
+      encrypted_properties = hash.delete('encrypted_properties')
+      encrypted_notes = hash.delete('encrypted_notes')
+      if encrypted_properties
+        hash['properties'] =  Encryption.decrypt_object(encrypted_properties)
+      end
+      if encrypted_notes
+        hash['notes'] = Encryption.decrypt_object(encrypted_notes)
+      end
+    rescue Encryption::KeyMissingError
+      # developers must be able to seed levels without properties_encryption_key
+      raise unless rack_env?(:development)
+      puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
+    end
+    hash
   end
 
   def self.write_custom_levels
@@ -277,8 +253,12 @@ class Level < ActiveRecord::Base
       xml.send(type) do
         xml.config do
           hash = serializable_hash(include: :level_concept_difficulty).deep_dup
-          config_attributes = filter_level_attributes(hash)
-          xml.cdata(JSON.pretty_generate(config_attributes.as_json))
+          hash = filter_level_attributes(hash)
+          if encrypted?
+            hash['encrypted_properties'] = Encryption.encrypt_object(hash.delete('properties'))
+            hash['encrypted_notes'] = Encryption.encrypt_object(hash.delete('notes'))
+          end
+          xml.cdata(JSON.pretty_generate(hash.as_json))
         end
       end
     end
@@ -510,7 +490,8 @@ class Level < ActiveRecord::Base
   def summary_for_lesson_plans
     summary = summarize
 
-    %w(title questions answers short_instructions long_instructions markdown teacher_markdown pages reference).each do |key|
+    %w(title questions answers short_instructions long_instructions markdown teacher_markdown pages reference
+       rubric_key_concept rubric_exceeds rubric_meets rubric_approaches rubric_no_evidence mini_rubric).each do |key|
       value = properties[key] || try(key)
       summary[key] = value if value
     end

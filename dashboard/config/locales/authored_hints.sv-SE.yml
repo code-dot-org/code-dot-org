@@ -30,6 +30,105 @@ sv:
         4-5_Maze_5_b: Du kan använda mer än en 'Upprepa' loop i ett pussel.
       4-5 Nested Loops 12_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+          * Kontrollera att en dansare visas på skärmen.
+
+          *Denna nivå slutar efter 4 åtgärder.*
+        challenges: |-
+          **Valfria utmaningar**
+          * Välj en annan sång att spela.
+          * Välj en annan som ser ut som en älg!
+          * Byt namn på din dansare.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+          * Dansaren måste växla till en ny rörelse efter 4 åtgärder.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.
+
+          *Denna nivå slutar efter 12 åtgärder.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.
+
+          *Denna nivå slutar efter 10 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          Ändra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> händelserna.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Du måste ha minst två dansare.
+
+          *Denna nivå slutar efter 6 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          * Lägg till en tredje dansare (eller så många du vill!)
+          * Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Två dansare måste ha en annan storlek än 100.
+
+          *Denna nivå slutar efter 6 åtgärder.*
+        challenges: |-
+          **Valfri utmaning**
+
+          * Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Ändra färgtonen på minst en dansare.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Egenskaper för två eller flera dansare måste ändras.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Var bara kreativ!
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Var bara kreativ!
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          * Använd blocket ”när vänsterpilen är intryckt” för att få roboten att göra en dansrörelse när du trycker på den.
+
+          *Denna nivå slutar efter 8 åtgärder.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Vilket vackert korallrev! Blå korall är den **rätta** vägen
+          att gå och kontrollera att röd korall inte är till **vänster**!
       Dance short test 2_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
@@ -486,7 +585,29 @@ sv:
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Se om du kan få agenten att bygga några broar så att
           Alex eller Steve kan gå bortom kartans kanter.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+          * Dansaren måste växla till en ny rörelse efter 4 åtgärder.
+
+          *Denna nivå slutar efter 8 åtgärder.*
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -505,6 +626,25 @@ sv:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -542,7 +682,45 @@ sv:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -577,7 +755,29 @@ sv:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
@@ -585,7 +785,14 @@ sv:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have
           been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
@@ -606,7 +813,42 @@ sv:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -644,7 +886,45 @@ sv:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -679,9 +959,27 @@ sv:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: Det finns två sätt att lösa detta pussel!
       courseB_maze_seq8_2018_authored_hint:
+        courseB_maze_seq8_b: Det finns två sätt att lösa detta pussel!
+      courseB_maze_seq8_2019_authored_hint:
         courseB_maze_seq8_b: Det finns två sätt att lösa detta pussel!
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: Det finns två sätt att lösa detta pussel!

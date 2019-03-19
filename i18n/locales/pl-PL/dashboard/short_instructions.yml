@@ -425,27 +425,36 @@ pl:
       C3-Farmer While Loops Assessment 1: Jest tutaj wiele otworów i stert.  Pomóż mi wypełnić otwory i usunąć sterty, by wyrównać teren.
       CSD U3 L5 Freeplay: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       CSD U3 L5 Freeplay_2018: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
+      CSD U3 L5 Freeplay_2019: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       CSD U3 Variables TEMPLATE square: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       CSD U3 Variables change circle size: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       CSD U3 Variables change circle size_2018: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
+      CSD U3 Variables change circle size_2019: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       CSD U3 Variables multiple assignments: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       CSD U3 Variables naming rules v2-2018: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       CSD U3 Variables naming rules v2: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       CSD U3 Variables naming rules v2_2018: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
+      CSD U3 Variables naming rules v2_2018_2019: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       CSD U3 Variables naming rules: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       CSD U3 Variables random assignment: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       CSD U3 Variables random with assignment: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       CSD U3 Variables random with assignment_2018: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
+      CSD U3 Variables random with assignment_2019: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       CSD U5 black white images pixelation 2: Narysuj uśmiechniętą buźkę (kliknij tutaj aby zobaczyć obrazek)
       CSD U5 black white images pixelation 2_2018: Narysuj uśmiechniętą buźkę (kliknij tutaj aby zobaczyć obrazek)
+      CSD U5 black white images pixelation 2_2019: Narysuj uśmiechniętą buźkę (kliknij tutaj aby zobaczyć obrazek)
       CSD U5 black white images pixelation 3: Zmień szerokość i wysokość suwaka aby znaleźć obraz (kliknij tutaj aby dowiedzieć się więcej)
       CSD U5 black white images pixelation 3_2018: Zmień szerokość i wysokość suwaka aby znaleźć obraz (kliknij tutaj aby dowiedzieć się więcej)
+      CSD U5 black white images pixelation 3_2019: Zmień szerokość i wysokość suwaka aby znaleźć obraz (kliknij tutaj aby dowiedzieć się więcej)
       CSD U5 black white images pixelation 4: "Dodaj brwi do uśmiechniętej\nbuźki (kliknij tutaj, aby zobaczyć obraz)"
       CSD U5 black white images pixelation 4_2018: "Dodaj brwi do uśmiechniętej\nbuźki (kliknij tutaj, aby zobaczyć obraz)"
+      CSD U5 black white images pixelation 4_2019: "Dodaj brwi do uśmiechniętej\nbuźki (kliknij tutaj, aby zobaczyć obraz)"
       CSD U5 black white images pixelation 5: Teraz narysuj coś, co Ci się spodoba!
       CSD U5 black white images pixelation 5_2018: Teraz narysuj coś, co Ci się spodoba!
+      CSD U5 black white images pixelation 5_2019: Teraz narysuj coś, co Ci się spodoba!
       CSD U5 black white images pixelation: "Uzupełnij kształt X poprzez\ndopisywanie zer i jedynek"
       CSD U5 black white images pixelation_2018: "Uzupełnij kształt X poprzez\ndopisywanie zer i jedynek"
+      CSD U5 black white images pixelation_2019: "Uzupełnij kształt X poprzez\ndopisywanie zer i jedynek"
       CSDU4 - AppLab - 1: Przeczytaj dokumentacje dla funkcji penColor() oraz penWidth() zanim zaczniesz ich używać do rysowania niebieskich kwadratów.
       CSDU4 - Design Mode - 1: Dodaj przycisk, który przesuwa żółwia po kliknięciu.  (Kliknij, aby zobaczyć pełne instrukcje)
       CSDU4 - Design Mode - 33: Zmień kod, by dźwięk był grany tylko po naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
@@ -459,23 +468,31 @@ pl:
       CSDU6 arrays select icons: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSDU6 arrays select rainbow: "Przepisz zawartość\ntablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)"
       CSDU6 arrays select rainbow_2018: "Przepisz zawartość\ntablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)"
+      CSDU6 arrays select rainbow_2019: "Przepisz zawartość\ntablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)"
       CSDU6 arrays select random: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSDU6 arrays select random_2018: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
+      CSDU6 arrays select random_2019: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSDU6 arrays select variable: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSDU6 arrays select variable_2018: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
+      CSDU6 arrays select variable_2019: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSDU6 arrays variable: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSP student contact info: Wprowadź swój adres e-mail.
       CSPU5_U3 - Arrays - expressionsAsIndexes: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSPU5_U3 - Arrays - expressionsAsIndexes_2018: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
+      CSPU5_U3 - Arrays - expressionsAsIndexes_2019: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSPU5_U3 - Arrays - indexPractice: "Przepisz zawartość\ntablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)"
       CSPU5_U3 - Arrays - indexPractice_2018: "Przepisz zawartość\ntablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)"
+      CSPU5_U3 - Arrays - indexPractice_2019: "Przepisz zawartość\ntablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)"
       CSPU5_U3 - Canvas - freePlay: Rozszerz funkcjonalność jednego z efektu, lub stwórz samemu całkowicie nową. (Naciśnij, aby dowiedzieć się więcej)
       CSPU5_U3 - Canvas - freePlay_2018: Rozszerz funkcjonalność jednego z efektu, lub stwórz samemu całkowicie nową. (Naciśnij, aby dowiedzieć się więcej)
+      CSPU5_U3 - Canvas - freePlay_2019: Rozszerz funkcjonalność jednego z efektu, lub stwórz samemu całkowicie nową. (Naciśnij, aby dowiedzieć się więcej)
       CSPU5_U3 - Loops - 4: "Użyj Poleceń Debugowania do utworzenia listy\nwszystkich wartości, które wypadły przed 6. (Kliknij, aby zobaczyć pełne instrukcje)"
       CSPU5_U3 - Loops - 4_2018: "Użyj Poleceń Debugowania do utworzenia listy\nwszystkich wartości, które wypadły przed 6. (Kliknij, aby zobaczyć pełne instrukcje)"
+      CSPU5_U3 - Loops - 4_2019: "Użyj Poleceń Debugowania do utworzenia listy\nwszystkich wartości, które wypadły przed 6. (Kliknij, aby zobaczyć pełne instrukcje)"
       CSPU5_U3L13 - Turtle move with button: Dodaj przycisk, który przesuwa żółwia po kliknięciu.  (Kliknij, aby zobaczyć pełne instrukcje)
       CSPU5_U3L25 - play sound when up key: Zmień kod, by dźwięk był grany tylko po naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
       CSPU5_U3L25 - play sound when up key_2018: Zmień kod, by dźwięk był grany tylko po naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
+      CSPU5_U3L25 - play sound when up key_2019: Zmień kod, by dźwięk był grany tylko po naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
       Course 2 Bee Loops 1: 'Witam, jestem Pszczółka. Czy mógłbyś mi pomóc zebrać nektar z tych kwiatów? '
       Course 2 Bee Loops 4: Co się stanie, jeśli powtórzysz w pętli tę sekwencję 3 razy? Nie zapomnij zrobić na końcu miodu!
       Course 2 Maze Loops 1: Czy potrafisz doprowadzić mnie do świnki przy użyciu 5 bloków?
@@ -760,6 +777,23 @@ pl:
       Course 4 Variables Assessment: Czy mógłbyś utworzyć ten obraz używając zmiennej dla boków? Każda linia powinna mieć długość 50 pikseli.
       Course E MC Conditionals1: Najcenniejsze surowce znajdują się pod ziemią, ale robi się ciemno. Umieść co najmniej 2 pochodnie i wydobądź węgiel z co najmniej 2 bloków.
       Course1BeePuzzle12: Zbierz trzy nektary i następnie zrób dwa miody
+      CourseD_Dance_Party_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego i podłącz go w bloku "układ".
+      CourseD_Dance_Party_02: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
+      CourseD_Dance_Party_03: Teraz spraw, aby tancerz rozpoczął nowy ruch po 6 taktach!
+      CourseD_Dance_Party_04: Dodaj efekt tła do swojego programu.
+      CourseD_Dance_Party_05: Użyj innego nowego bloku, aby tancerz zmieniał ruchy co 2 takty.
+      CourseD_Dance_Party_06: Utwórz kopię tancerza o nazwie "kopia_tancerza1", aby zatańczył z kotem.
+      CourseD_Dance_Party_08: Czy możesz utworzyć obie kopie tancerzy tej samej wielkości?
+      CourseD_Dance_Party_09: Użyj bloku "ustaw odcień", aby zmienić kolor tancerza.
+      CourseD_Dance_Party_10: Spraw, aby drugi tancerz również reagowała na muzykę za pomocą bloku "zaczyna się to".
+      CourseD_Dance_Party_11: Blok "po naciśnięciu strzałki w górę" służy do uruchomienia kodu po naciśnięciu klawisza strzałki w górę. Postaraj się, aby tancerz wykonał szybki ruch, gdy naciskasz ten klawisz.
+      CourseD_Dance_Party_11_5: Użyj bloków "wszystkie kaczki", aby kaczki tańczyły razem.
+      CourseD_Dance_Party_11b: Spraw, aby Robot raz "tupnął" (Drop), gdy naciśniesz klawisz strzałki w prawo, i raz "klasnął" (Clap), gdy naciśniesz klawisz strzałki w górę. Wykonuj tupnij-klaśnij tak szybko, jak potrafisz!
+      CourseD_Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
+      CourseE_HOC 2018 Level_10: Dostań się do wejścia do tego Oceanicznego Monumentu.
+      CourseE_HOC 2018 Level_11: 'Zbuduj kanał z pryzmarynu wewnątrz Oceanicznego Monumentu.  '
+      CourseE_HOC 2018 Level_7a: Przeszukaj te podwodne ruiny, aby znaleźć kufer.
+      CourseE_HOC 2018 Level_9b: 'Użyj korala, jako punktu orientacyjnego na drodze do skarbu.'
       CourseF_PlayLab_vars1: 'Aby zagrać w tą grę, nie musisz pisać żadnego kodu, po prostu naciśnij "Graj"! '
       CourseF_PlayLab_vars10: "Czas na zabawę! Mamy tutaj wszystkie zmienne, których używaliśmy na tym etapie, jak również kilka dodatkowych, gdyby były potrzebne. \\r\n\\r\nMamy teraz w przyborniku tak wiele bloków, że powinny być uporządkowane. Każdy z nich przydzieliliśmy więc do odpowiedniej kategorii. Poświęć trochę czasu, by poznać, jakie bloki są dostępne. Kiedy już przejrzysz wszystko, utwórz grę lub historyjkę, która korzysta z powtórzeń, zmiennych i zdarzeń. \\r\n\\r\nWskazówka: przewiń ekran do dołu, aby zobaczyć wszystkie polecenia w polu roboczym."
       CourseF_PlayLab_vars2: Wyścig w poprzedniej łamigłówce nie był zbyt uczciwy! Zmień wartość zmiennej "dog_speed" (prędkość psa), aby być pewnym, że możesz zebrać więcej flag niż Kot. Wygrywa ten, kto pierwszy zbierze 10 flag!
@@ -778,8 +812,10 @@ pl:
       CourseF_PlayLab_vars9: Ładnie, teraz spowodujmy, że ta gra nie jest zbyt łatwa - za każdym razem, gdy Pies (postać 1) zostaje trafiony żółtymi sercami przez Kota (postać 2) powinieneś stracić punkt. Zacznij z 10 punktami, aby nie było to zbyt trudne. Aby ukończyć ten poziom, niech Twój wynik zmniejszy się od 10 do 0.
       Crack Random Substitution: Instrukcje
       Crack Random Substitution_2018: Instrukcje
+      Crack Random Substitution_2019: Instrukcje
       Crack a Caesar Cipher: Instrukcje
       Crack a Caesar Cipher_2018: Instrukcje
+      Crack a Caesar Cipher_2019: Instrukcje
       Dance_Party_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego i podłącz go w bloku "układ".
       Dance_Party_01_low: Przeciągnij blok "utwórz nowego" do obszaru roboczego i podłącz go w bloku "układ".
       Dance_Party_02: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
@@ -1145,10 +1181,13 @@ pl:
       PS copy 2-3 Bee Conditionals 5: "Uważaj, by nie zbierać nektaru z fioletowego kwiatka, jeśli go nie ma. \\r Musisz najpierw sprawdzić przy użyciu bloku \"jeśli nektar\", czy nektar jest równy 1."
       Pixelation - Lesson 14 - Make the Letter A: 'Stwórz literę "A" o wielkości 3x5. Widżet ma ustawione niepoprawne wymiary. Twoim pierwszym zadaniem jest ustawienie drugiego bajtu na 5 w kodzie binarnym: 0000 0101. Potem zacznij wprowadzać dane o pikselach.'
       Pixelation - Lesson 14 - Make the Letter A_2018: 'Stwórz literę "A" o wielkości 3x5. Widżet ma ustawione niepoprawne wymiary. Twoim pierwszym zadaniem jest ustawienie drugiego bajtu na 5 w kodzie binarnym: 0000 0101. Potem zacznij wprowadzać dane o pikselach.'
+      Pixelation - Lesson 14 - Make the Letter A_2019: 'Stwórz literę "A" o wielkości 3x5. Widżet ma ustawione niepoprawne wymiary. Twoim pierwszym zadaniem jest ustawienie drugiego bajtu na 5 w kodzie binarnym: 0000 0101. Potem zacznij wprowadzać dane o pikselach.'
       Pixelation - Lesson 15 - Color Shades 4x4: 'Dajemy Tobie na początek obraz o wielkości 4x4, który Maddie stworzyła w wideo. Twoim zadaniem jest wypełnić siatkę 4x4 kolorami używając 12 bitów na piksel. Oto wymagania: Wiersz 1 - wypełnij odcieniami czerwieni. Wiersz 2 - odcieniami zieleni. Wiersz 3 - odcieniami niebieskiego. Wiersz 4 - odcieniami szarości.'
       Pixelation - Lesson 15 - Color Shades 4x4_2018: 'Dajemy Tobie na początek obraz o wielkości 4x4, który Maddie stworzyła w wideo. Twoim zadaniem jest wypełnić siatkę 4x4 kolorami używając 12 bitów na piksel. Oto wymagania: Wiersz 1 - wypełnij odcieniami czerwieni. Wiersz 2 - odcieniami zieleni. Wiersz 3 - odcieniami niebieskiego. Wiersz 4 - odcieniami szarości.'
+      Pixelation - Lesson 15 - Color Shades 4x4_2019: 'Dajemy Tobie na początek obraz o wielkości 4x4, który Maddie stworzyła w wideo. Twoim zadaniem jest wypełnić siatkę 4x4 kolorami używając 12 bitów na piksel. Oto wymagania: Wiersz 1 - wypełnij odcieniami czerwieni. Wiersz 2 - odcieniami zieleni. Wiersz 3 - odcieniami niebieskiego. Wiersz 4 - odcieniami szarości.'
       Pixelation - Lesson 15 - Complete 3-bit color: Dajemy Tobie na początek obraz o wielkości 4x2, który Maddie tworzyła, ale zostawiła ostatnie dwa kwadraty. Dokończ rysunek przy użyciu dwóch brakujących kolorów i zakoduj je.
       Pixelation - Lesson 15 - Complete 3-bit color_2018: Dajemy Tobie na początek obraz o wielkości 4x2, który Maddie tworzyła, ale zostawiła ostatnie dwa kwadraty. Dokończ rysunek przy użyciu dwóch brakujących kolorów i zakoduj je.
+      Pixelation - Lesson 15 - Complete 3-bit color_2019: Dajemy Tobie na początek obraz o wielkości 4x2, który Maddie tworzyła, ale zostawiła ostatnie dwa kwadraty. Dokończ rysunek przy użyciu dwóch brakujących kolorów i zakoduj je.
       Pizza on a Plate: 'Pomysł na projekt: Stwórz obraz czegoś znajomego z prawdziwego świata. Wymaga to wytrwałości oraz planowania!'
       Project - Finish your canvas app: Rozszerz funkcjonalność jednego z efektu, lub stwórz samemu całkowicie nową. (Naciśnij, aby dowiedzieć się więcej)
       Prompt Test: "Buduj, co chcesz. To jest przykład\ngry w zgadywanie numeru!"
@@ -1161,6 +1200,7 @@ pl:
       Ryan - 4-5 Bee Conditionals 2: Pszczółka chce teraz tylko nektaru. Nie wszystkie obiekty są kwiatami, więc sprawdź pod KAŻDĄ CHMURKĄ, czy ukrywa kwiatek. Jeśli tak, to wtedy możesz zebrać nektar.
       Ryan - Bee Conditionals: Pszczółka chce teraz tylko nektaru. Nie wszystkie obiekty są kwiatami, więc sprawdź pod KAŻDĄ CHMURKĄ, czy ukrywa kwiatek. Jeśli tak, to wtedy możesz zebrać nektar.
       Ryan Test Locked Blocks: "Mamy tu funkcję, która nosi nazwę \"patrol\" (patrol).\nZmień ją tak, by Kot poruszał się 400 pikseli w górę, po czym 400 pikseli w dół."
+      Ryan_Demo: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
       SG U3L03 Draw a T using turnAround: Narysuj kształt plusa korzystając z dostępnej wersji turnAround(). (Naciśnij aby dowiedzieć się więcej)
       SG U3L06 Challenge 2 purple square: Przeczytaj dokumentacje dla funkcji penColor() oraz penWidth() zanim zaczniesz ich używać do rysowania niebieskich kwadratów.
       SG U3L06 Challenge 5 overlapping circles: 'Ten obraz jest stworzony tylko za pomocą funkcji dot() oraz penColor(), co możemy zrobić, aby te okręgi były przezroczyste? Jeśli jeszcze nie dostałeś wskazówki: sprawdź dokumentację!'
@@ -1181,6 +1221,7 @@ pl:
       Testing Quantum Farmer: "Wow, popatrz! \\r \\r Nie wiem, ile szufelek śmieci potrzebuje ten otwór.  \\r Czy potrafisz napisać program, który wykonuje blok \"wypełnij\" aż wypełni ten otwór do poziomu ziemi?  "
       The Vigenere Cipher Widget: Instrukcje
       The Vigenere Cipher Widget_2018: Instrukcje
+      The Vigenere Cipher Widget_2019: Instrukcje
       The Vigenere Cipher: Instrukcje
       Total Artist Clone Me: 'Czas na zabawę: To są funkcje, które napisałeś do tej pory, oraz kilka dodatkowych. Narysuj coś wspaniałego! Poeksperymentuj z szerokością pisaka, żeby zobaczyć jak zmieniają się Twoje rysunki!'
       U2 frequency caesar: Instrukcje
@@ -1194,17 +1235,22 @@ pl:
       U3 Variables randomize your square: "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?"
       U3L03 Draw a T using turnAround: Narysuj kształt plusa korzystając z dostępnej wersji turnAround(). (Naciśnij aby dowiedzieć się więcej)
       U3L03 Draw a T using turnAround_2018: Narysuj kształt plusa korzystając z dostępnej wersji turnAround(). (Naciśnij aby dowiedzieć się więcej)
+      U3L03 Draw a T using turnAround_2019: Narysuj kształt plusa korzystając z dostępnej wersji turnAround(). (Naciśnij aby dowiedzieć się więcej)
       U3L06 Challenge 2 purple square: Przeczytaj dokumentacje dla funkcji penColor() oraz penWidth() zanim zaczniesz ich używać do rysowania niebieskich kwadratów.
       U3L06 Challenge 2 purple square_2018: Przeczytaj dokumentacje dla funkcji penColor() oraz penWidth() zanim zaczniesz ich używać do rysowania niebieskich kwadratów.
+      U3L06 Challenge 2 purple square_2019: Przeczytaj dokumentacje dla funkcji penColor() oraz penWidth() zanim zaczniesz ich używać do rysowania niebieskich kwadratów.
       U3L06 Challenge 5 overlapping circles: 'Ten obraz jest stworzony tylko za pomocą funkcji dot() oraz penColor(), co możemy zrobić, aby te okręgi były przezroczyste? Jeśli jeszcze nie dostałeś wskazówki: sprawdź dokumentację!'
       U3L06 Challenge 5 overlapping circles_2018: 'Ten obraz jest stworzony tylko za pomocą funkcji dot() oraz penColor(), co możemy zrobić, aby te okręgi były przezroczyste? Jeśli jeszcze nie dostałeś wskazówki: sprawdź dokumentację!'
+      U3L06 Challenge 5 overlapping circles_2019: 'Ten obraz jest stworzony tylko za pomocą funkcji dot() oraz penColor(), co możemy zrobić, aby te okręgi były przezroczyste? Jeśli jeszcze nie dostałeś wskazówki: sprawdź dokumentację!'
       U3L07 - randomSquare: Narysuj figurę używając pętli. (Kliknij, aby zobaczyć pełne instrukcje)
       U3L07 - randomSquare_2018: Narysuj figurę używając pętli. (Kliknij, aby zobaczyć pełne instrukcje)
+      U3L07 - randomSquare_2019: Narysuj figurę używając pętli. (Kliknij, aby zobaczyć pełne instrukcje)
       U3L13 - Turtle move with button: Dodaj przycisk, który przesuwa żółwia po kliknięciu.  (Kliknij, aby zobaczyć pełne instrukcje)
       U3L25 - play sound when up key: Zmień kod, by dźwięk był grany tylko po naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
       U4 vigenere cipher 2: Instrukcje
       U4L02 - Objects - Template1: Szablon
       U4L02 - Objects - Template1_2018: Szablon
+      U4L02 - Objects - Template1_2019: Szablon
       Underground Avoiding Lava: Pod niektórymi z tych bloków ukrywa się lawa, którą musisz przykryć, zanim przejdziesz po niej. Przyda się do tego warunek "jeżeli". Dodaj polecenie "idź do przodu" we właściwym miejscu, aby wydobyć coś z tych bloków.
       Underground Avoiding Lava_2018: Pod niektórymi z tych bloków ukrywa się lawa, którą musisz przykryć, zanim przejdziesz po niej. Przyda się do tego warunek "jeżeli". Dodaj polecenie "idź do przodu" we właściwym miejscu, aby wydobyć coś z tych bloków.
       Underground Avoiding Lava_2019: Pod niektórymi z tych bloków ukrywa się lawa, którą musisz przykryć, zanim przejdziesz po niej. Przyda się do tego warunek "jeżeli". Dodaj polecenie "idź do przodu" we właściwym miejscu, aby wydobyć coś z tych bloków.
@@ -1313,31 +1359,39 @@ pl:
       course4_artist_fwp_challenge1: Uruchom ten program i wprowadzaj zmiany, aby zobaczyć co się dzieje. Czy możesz powiedzieć, co robi ten program? (Lub usuń go i zastąp go czymś zupełnie inny)
       courseA_artist_loops10: Pomóż mi położyć kamienie niżej, a nie spadnę!
       courseA_artist_loops10_2018: Pomóż mi położyć kamienie niżej, a nie spadnę!
+      courseA_artist_loops10_2019: Pomóż mi położyć kamienie niżej, a nie spadnę!
       courseA_artist_loops12: Artysta zobaczył w oddali coś śmiesznego. Narysuj, co Twoim zdaniem zobaczył.
       courseA_artist_loops12_2018: Artysta zobaczył w oddali coś śmiesznego. Narysuj, co Twoim zdaniem zobaczył.
+      courseA_artist_loops12_2019: Artysta zobaczył w oddali coś śmiesznego. Narysuj, co Twoim zdaniem zobaczył.
       courseA_artist_loops7: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops7_2018: Użyj pętli `repeat` aby dodać fale na wodzie.
+      courseA_artist_loops7_2019: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops7_forVideo: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops9: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops9_2018: 'Wyzwanie: Napraw schody.'
+      courseA_artist_loops9_2019: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops_challenge3: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
       courseA_collector_loops7: Co powinieneś dodać do tego kodu, aby zebrać wszystkie skarby?
       courseA_collector_loops7_2018: Co powinieneś dodać do tego kodu, aby zebrać wszystkie skarby?
+      courseA_collector_loops7_2019: Co powinieneś dodać do tego kodu, aby zebrać wszystkie skarby?
       courseA_collector_loops_challenge2kp: Zbierz przynajmniej *3* części skarbu aby przejść ten poziom.
       courseA_collector_loops_challenge2kp_2018: Zbierz przynajmniej *3* części skarbu aby przejść ten poziom.
+      courseA_collector_loops_challenge2kp_2019: Zbierz przynajmniej *3* części skarbu aby przejść ten poziom.
       courseA_collector_preLoops4: Dasz radę rozwiązać tą zagadkę?
       courseA_forVideoTest_artist: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_maze_ramp5a_2018: Doprowadź ptaka do świnki!
+      courseA_maze_ramp5a_2019: Doprowadź ptaka do świnki!
       courseA_maze_seq2: Zmień kod, aby doprowadzić mnie do świnki!
       courseA_maze_seq2_2018: Zmień kod, aby doprowadzić mnie do świnki!
-      courseB_Scrat_ramp5a_2018: Doprowadź ptaka do świnki!
       courseB_artist_loops_challenge2: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
       courseB_artist_loops_challenge2_2018: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
+      courseB_artist_loops_challenge2_2019: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
       courseB_collector_loops3_predict1: W jaki sposób Laurel może zebrać wszystkie pięć stosów złota używając tylko bloku `E-->`?
       courseB_collector_prog3: W jaki sposób Laurel może zebrać wszystkie pięć stosów złota używając tylko bloku `E-->`?
       courseB_maze_seq9_challenge1: "*Gdzie ukrywa się teraz świnia?*"
       courseB_maze_seq_challenge2: Debuguj ten poziom. Te bloki są poprawne, ale w złej kolejności!
       courseB_maze_seq_challenge2_2018: Debuguj ten poziom. Te bloki są poprawne, ale w złej kolejności!
+      courseB_maze_seq_challenge2_2019: Debuguj ten poziom. Te bloki są poprawne, ale w złej kolejności!
       courseC19_playLab_EOC5: Teraz poświęć trochę czasu, żeby upewnić się, że gra działa tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa twoją grę, a następnie zagraj, aby spełnić jeden z tych warunków.
       courseC_PlayLab_events3: Czy możesz napisać program, który sprawia, że Jorge (postać 1) idzie w kierunku Kota Oliwek?
       courseC_PlayLab_events3_2018: Czy możesz napisać program, który sprawia, że Jorge (postać 1) idzie w kierunku Kota Oliwek?

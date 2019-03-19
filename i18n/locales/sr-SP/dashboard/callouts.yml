@@ -67,13 +67,19 @@ sr:
         courseA_maze_seq1_1: Кликни сијалицу када ти треба савет!
       courseA_maze_seq1_2018_callout:
         courseA_maze_seq1_1: Кликни сијалицу када ти треба савет!
+      courseA_maze_seq1_2019_callout:
+        courseA_maze_seq1_1: Кликни сијалицу када ти треба савет!
       courseA_playLab_events4_callout:
         courseA_playlab_events4_callout1: Ово је облачић
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Ово је облачић
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: Ово је облачић
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Кликни сијалицу када ти треба савет!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Кликни сијалицу када ти треба савет!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: Кликни сијалицу када ти треба савет!
       courseF_playLab_func2_callout:
         sign_in_to_save_project: Желиш да поново приступиш свом пројекту касније? Пријави се да га сачуваш на свом налогу!

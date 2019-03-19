@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 
 const SchoolInfoPropType = PropTypes.shape({
   school_id: PropTypes.string,
@@ -7,9 +7,7 @@ const SchoolInfoPropType = PropTypes.shape({
   school_type: PropTypes.string,
   school_zip: PropTypes.string,
   school_district_name: PropTypes.string,
-  school_district_other: PropTypes.oneOf(["true", "false"])
+  school_district_other: PropTypes.oneOf(['true', 'false'])
 });
 
-export {
-  SchoolInfoPropType
-};
+export {SchoolInfoPropType};

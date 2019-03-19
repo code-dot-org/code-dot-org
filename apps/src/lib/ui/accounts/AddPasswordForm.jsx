@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import i18n from '@cdo/locale';
 import * as utils from '../../../utils';
 import color from '@cdo/apps/util/color';
@@ -7,31 +8,31 @@ import BootstrapButton from './BootstrapButton';
 
 const styles = {
   container: {
-    paddingTop: 20,
+    paddingTop: 20
   },
   header: {
-    fontSize: 22,
+    fontSize: 22
   },
   hint: {
     marginTop: 10,
-    marginBottom: 10,
+    marginBottom: 10
   },
   input: {
-    marginBottom: 4,
+    marginBottom: 4
   },
   buttonContainer: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   statusText: {
     paddingLeft: 10,
     paddingRight: 10,
-    fontStyle: 'italic',
+    fontStyle: 'italic'
   },
   errorText: {
-    color: color.red,
-  },
+    color: color.red
+  }
 };
 
 const MIN_PASSWORD_LENGTH = 6;
@@ -46,7 +47,7 @@ const DEFAULT_STATE = {
   submissionState: {
     message: '',
     isError: false
-  },
+  }
 };
 
 export default class AddPasswordForm extends React.Component {
@@ -56,7 +57,7 @@ export default class AddPasswordForm extends React.Component {
 
   state = DEFAULT_STATE;
 
-  onPasswordChange = (event) => {
+  onPasswordChange = event => {
     this.setState({
       // Clear any existing submission state
       submissionState: DEFAULT_STATE.submissionState,
@@ -64,7 +65,7 @@ export default class AddPasswordForm extends React.Component {
     });
   };
 
-  onPasswordConfirmationChange = (event) => {
+  onPasswordConfirmationChange = event => {
     this.setState({
       // Clear any existing submission state
       submissionState: DEFAULT_STATE.submissionState,
@@ -74,7 +75,10 @@ export default class AddPasswordForm extends React.Component {
 
   passwordsHaveMinimumContent = () => {
     const {password, passwordConfirmation} = this.state;
-    return password.length >= MIN_PASSWORD_LENGTH && passwordConfirmation.length >= MIN_PASSWORD_LENGTH;
+    return (
+      password.length >= MIN_PASSWORD_LENGTH &&
+      passwordConfirmation.length >= MIN_PASSWORD_LENGTH
+    );
   };
 
   passwordsMatch = () => {
@@ -86,8 +90,8 @@ export default class AddPasswordForm extends React.Component {
     return this.passwordsHaveMinimumContent() && this.passwordsMatch();
   };
 
-  minimumLengthError = (value) => {
-    if (value.length > 0 &&  value.length < MIN_PASSWORD_LENGTH) {
+  minimumLengthError = value => {
+    if (value.length > 0 && value.length < MIN_PASSWORD_LENGTH) {
       return PASSWORD_TOO_SHORT;
     }
   };
@@ -106,7 +110,8 @@ export default class AddPasswordForm extends React.Component {
         message: SAVING_STATE
       }
     });
-    this.props.handleSubmit(password, passwordConfirmation)
+    this.props
+      .handleSubmit(password, passwordConfirmation)
       .then(this.onSuccess, this.onFailure);
   };
 
@@ -120,7 +125,7 @@ export default class AddPasswordForm extends React.Component {
     utils.reload();
   };
 
-  onFailure = (error) => {
+  onFailure = error => {
     this.setState({
       submissionState: {
         message: error.message,
@@ -132,17 +137,15 @@ export default class AddPasswordForm extends React.Component {
   render() {
     const {password, passwordConfirmation, submissionState} = this.state;
     let statusTextStyles = styles.statusText;
-    statusTextStyles = submissionState.isError ? {...statusTextStyles, ...styles.errorText} : statusTextStyles;
+    statusTextStyles = submissionState.isError
+      ? {...statusTextStyles, ...styles.errorText}
+      : statusTextStyles;
 
     return (
       <div style={styles.container}>
-        <hr/>
-        <h2 style={styles.header}>
-          {i18n.addPassword()}
-        </h2>
-        <div style={styles.hint}>
-          {i18n.addPasswordHint()}
-        </div>
+        <hr />
+        <h2 style={styles.header}>{i18n.addPassword()}</h2>
+        <div style={styles.hint}>{i18n.addPasswordHint()}</div>
         <PasswordField
           label={i18n.password()}
           error={this.minimumLengthError(password)}
@@ -151,15 +154,15 @@ export default class AddPasswordForm extends React.Component {
         />
         <PasswordField
           label={i18n.passwordConfirmation()}
-          error={this.minimumLengthError(passwordConfirmation) || this.mismatchedPasswordsError()}
+          error={
+            this.minimumLengthError(passwordConfirmation) ||
+            this.mismatchedPasswordsError()
+          }
           value={passwordConfirmation}
           onChange={this.onPasswordConfirmationChange}
         />
         <div style={styles.buttonContainer}>
-          <div
-            id="uitest-add-password-status"
-            style={statusTextStyles}
-          >
+          <div id="uitest-add-password-status" style={statusTextStyles}>
             {submissionState.message}
           </div>
           {/* This button intentionally uses BootstrapButton to match other account page buttons */}
@@ -179,16 +182,13 @@ class PasswordField extends React.Component {
     label: PropTypes.string.isRequired,
     error: PropTypes.string,
     value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired
   };
 
   render() {
     const {label, value, onChange, error} = this.props;
     return (
-      <Field
-        label={label}
-        error={error}
-      >
+      <Field label={label} error={error}>
         <input
           type="password"
           value={value}

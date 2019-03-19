@@ -8,7 +8,7 @@ export const SET_RUN_IS_STARTING = 'dance/SET_RUN_IS_STARTING';
 export function setSelectedSong(song) {
   return {
     type: SET_SELECTED_SONG,
-    value: song,
+    value: song
   };
 }
 
@@ -34,7 +34,7 @@ export const actions = {
 
 const initialState = {
   selectedSong: 'macklemore90',
-  songData: {},
+  songData: {}
 };
 
 function songs(state, action) {
@@ -48,7 +48,7 @@ function songs(state, action) {
     case SET_SONG_DATA:
       return {
         ...state,
-        songData: action.songData,
+        songData: action.songData
       };
     case SET_RUN_IS_STARTING:
       return {
@@ -59,7 +59,6 @@ function songs(state, action) {
       return state;
   }
 }
-
 
 export const reducers = {
   songs

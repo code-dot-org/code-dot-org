@@ -670,6 +670,23 @@ sv:
       Course 4 SCVP 1: Skapa en funktion med parametrar som gör att konstnären kan hoppa bakåt och framåt med x antal pixlar, och också upp och ner me y antal bildpunkter (med positiva och negativa tal).
       Course 4 Variables Assessment: Kan du skapa denna bild med en variabel för sidor? Varje rad ska vara 50 bildpunkter lång.
       Course E MC Conditionals1: Du hittar mer värdefulla resurser under marken, men det är mörkt där. Placera minst 2 facklor och bryt minst 2 kol.
+      CourseD_Dance_Party_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det i ”setup”-blocket.
+      CourseD_Dance_Party_02: Gör så att älgen startar en ny rörelse efter 4 åtgärder!
+      CourseD_Dance_Party_03: Gör nu så att dansaren startar en ny rörelse efter 6 åtgärder!
+      CourseD_Dance_Party_04: Lägg till en bakgrundseffekt i ditt program.
+      CourseD_Dance_Party_05: Använda ett annat nytt block för att få dansaren att ändra rörelse efter 2 åtgärder.
+      CourseD_Dance_Party_06: Skapa en bakgrundsdansare som kallas ”backup_dancer1” för att dansa med katten.
+      CourseD_Dance_Party_08: Kan du göra båda bakgrundsdansarna i samma storlek?
+      CourseD_Dance_Party_09: Använd ”ange färgton”-blocket för att ändra en dansares färg.
+      CourseD_Dance_Party_10: Gör så att också de övriga dansarna reagerar på musiken med ”börjar imitera”-blocket.
+      CourseD_Dance_Party_11: '”Knapptryck uppåt”-blocket låter dig köra koden när du trycker på uppåtpilen. Försök att få dansaren att göra en snabb rörelse när du trycker uppåt.'
+      CourseD_Dance_Party_11_5: Använd ”bara ankor”-blocken för att göra så att ankorna dansar tillsammans.
+      CourseD_Dance_Party_11b: Gör så att roboten ”faller” en gång när du trycker på högerpilen och ”reser sig” när du trycker på uppåtpilen. Genomför ”fall-ihop-res-upp” så fort du kan!
+      CourseD_Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med dina vänner.
+      CourseE_HOC 2018 Level_10: Ta dig till ingången av detta havsmonument.
+      CourseE_HOC 2018 Level_11: 'Bygg en kanal med prismarin inuti havsmonumentet.'
+      CourseE_HOC 2018 Level_7a: Sök igenom dessa undervattensruiner efter en skattkista.
+      CourseE_HOC 2018 Level_9b: 'Använd korallen som riktmärken för att nå skatten.'
       CourseF_PlayLab_vars10: "Fri speltid! Här är alla variabler vi har lekt med så här långt, samt några fler om du vill ha dem. \\r \\r Notera att det nu finns så många block i vår verktygslåda att de måste organiseras!  Här har vi satt varje bit i en lämplig kategori.  Ta dig tid att utforska allt som finns. När du är klar, gör ett spel eller en berättelse med repetitioner, variabler och händelser.  \\r \\r Tips: scrolla ner för att se alla kommandon på arbetsytan."
       CourseF_PlayLab_vars2: Loppet i det sista pusslet var inte särskilt rättvist! Ändra variabeln "dog_speed" så att du kan samla fler flaggor än Katt. Först att samla in 10 flaggor vinner!
       CourseF_PlayLab_vars3: Här är en ny typ av spel! Använd vänster och höger pilarna för att flytta och uppåtpilen för att hoppa. Se om du kan samla in alla flaggor.
@@ -684,8 +701,10 @@ sv:
       CourseF_PlayLab_vars9: Nice, låt oss nu bli säkra på att detta spel inte är alltför lätt att spela. Varje gång Hund (actor 1) blir träffad av gula hjärtan från Katt (actor 2), bör du förlora en poäng. Börja med 10 poäng så det inte är så svårt. Låt dina poäng gå från 10 till 0 för att klara nivån.
       Crack Random Substitution: Instruktioner
       Crack Random Substitution_2018: Instruktioner
+      Crack Random Substitution_2019: Instruktioner
       Crack a Caesar Cipher: Instruktioner
       Crack a Caesar Cipher_2018: Instruktioner
+      Crack a Caesar Cipher_2019: Instruktioner
       Dance_Party_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det i ”setup”-blocket.
       Dance_Party_01_low: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det i ”setup”-blocket.
       Dance_Party_02: Gör så att älgen startar en ny rörelse efter 4 åtgärder!
@@ -1028,6 +1047,7 @@ sv:
       Ryan - 4-5 Bee Conditionals 2: Biet vill bara ha nektar just nu. Alla objekt är inte blommor, så kontrollera under ALLA MOLN för att se om de döljer en blomma. Om det är en blomma så kan du samla nektar.
       Ryan - Bee Conditionals: Biet vill bara ha nektar just nu. Alla objekt är inte blommor, så kontrollera under ALLA MOLN för att se om de döljer en blomma. Om det är en blomma så kan du samla nektar.
       Ryan Test Locked Blocks: Här är en funktion som kallas "patrol." Redigera den för att flytta Katt 400 pixlar upp och sedan ner 400 pixlar.
+      Ryan_Demo: Gör så att älgen startar en ny rörelse efter 4 åtgärder!
       SpecialFrozenLevel: Du har officiellt blivit en mästare! Skapa ett vinterlandskap.
       Standalone_Artist_1: Välkommen till Artist! Först och främst, låt oss försöka göra en enkel kvadrat med 'sväng höger' block och 'gå framåt' block. Varje sida ska vara 100 bildpunkter lång.
       Standalone_Artist_2: Rita denna diamant med 120 och 60 graders vinklar och 150 pixlar långa sidor.
@@ -1043,6 +1063,7 @@ sv:
       Testing Quantum Farmer: "Wow, jag hittade ett riktigt djupt hål! Jag vet inte hur många spadtag med jord som krävs.  Kan du skriva ett program som fyller det tills marken är jämn?  Tips: Försök att använda en 'medan'-slinga denna gång."
       The Vigenere Cipher Widget: Instruktioner
       The Vigenere Cipher Widget_2018: Instruktioner
+      The Vigenere Cipher Widget_2019: Instruktioner
       The Vigenere Cipher: Instruktioner
       Total Artist Clone Me: 'Fritt spel: Här är de funktioner som du har skrivit, och några fler för dig att spela med. Rita något fantastiskt! Lek med pennbredden och se hur olika dina ritningar ser ut!'
       U2 frequency caesar: Instruktioner
@@ -1051,6 +1072,7 @@ sv:
       U4 vigenere cipher 2: Instruktioner
       U4L02 - Objects - Template1: Mall
       U4L02 - Objects - Template1_2018: Mall
+      U4L02 - Objects - Template1_2019: Mall
       Underground Avoiding Lava: Lava döljer sig under några av de här blocken, och du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här blocken.
       Underground Avoiding Lava_2018: Lava döljer sig under några av de här blocken, och du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här blocken.
       Underground Avoiding Lava_2019: Lava döljer sig under några av de här blocken, och du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här blocken.
@@ -1117,8 +1139,11 @@ sv:
       course4_artist_fwp_challenge1: Prova att köra det här programmet och göra ändringar under tiden för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)
       courseA_maze_seq12: 'Fånga den där grisen! '
       courseA_maze_seq12_2018: 'Fånga den där grisen! '
+      courseA_maze_seq12_2019: 'Fånga den där grisen! '
       courseA_maze_seq2: Ändra koden för att få mig till grisen!
       courseA_maze_seq2_2018: Ändra koden för att få mig till grisen!
+      courseB_maze_seq10_2018: Fixa buggarna för att hjälpa Scrat att ta sig till ekollonet.
+      courseB_maze_seq10_2019: Fixa buggarna för att hjälpa Scrat att ta sig till ekollonet.
       courseC_PlayLab_events3: Kan du skriva ett program som får hunden Jorge (actor 2) att gå mot katten Olive?
       courseC_PlayLab_events3_2018: Kan du skriva ett program som får hunden Jorge (actor 2) att gå mot katten Olive?
       courseC_PlayLab_events3_2019: Kan du skriva ett program som får hunden Jorge (actor 2) att gå mot katten Olive?
@@ -1128,7 +1153,10 @@ sv:
         Huset behöver ett tak! Rita en triangel. Tips: alla tre sidor är lika långa.
       courseC_artist_prog5_2019: |-
         Huset behöver ett tak! Rita en triangel. Tips: alla tre sidor är lika långa.
+      courseC_maze_debugging1: Fixa koden för att hjälpa Scrat att ta sig till ekollonet.
       courseC_maze_debugging10: Felsök denna nivå genom att ordna om och lägga till block för att få mig till grisen!
+      courseC_maze_debugging1_2018: Fixa koden för att hjälpa Scrat att ta sig till ekollonet.
+      courseC_maze_debugging1_2019: Fixa koden för att hjälpa Scrat att ta sig till ekollonet.
       courseD_artist_binary1: Binärt är ett sätt att representera information med hjälp av endast två alternativ.  Här kommer vi att använda alternativen "av" (företrädd av siffran 0) och "på" (företrädd av nummer 1).  \r \r vi har försett dig med ett rutnät av "pixlar" som du kan gå igenom och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita "01010101" i binärt i första raden?
       courseD_artist_binary1_2018: Binärt är ett sätt att representera information med hjälp av endast två alternativ.  Här kommer vi att använda alternativen "av" (företrädd av siffran 0) och "på" (företrädd av nummer 1).  \r \r vi har försett dig med ett rutnät av "pixlar" som du kan gå igenom och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita "01010101" i binärt i första raden?
       courseD_artist_binary1_2019: Binärt är ett sätt att representera information med hjälp av endast två alternativ.  Här kommer vi att använda alternativen "av" (företrädd av siffran 0) och "på" (företrädd av nummer 1).  \r \r vi har försett dig med ett rutnät av "pixlar" som du kan gå igenom och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita "01010101" i binärt i första raden?

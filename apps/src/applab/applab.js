@@ -11,16 +11,17 @@ import {singleton as studioApp} from '../StudioApp';
 import commonMsg from '@cdo/locale';
 import applabMsg from '@cdo/applab/locale';
 import AppLabView from './AppLabView';
-import {
-  initializeSubmitHelper,
-  onSubmitComplete
-} from '../submitHelper';
+import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
-import { initFirebaseStorage } from '../storage/firebaseStorage';
-import { getColumnsRef, onColumnNames, addMissingColumns } from '../storage/firebaseMetadata';
-import { getDatabase } from '../storage/firebaseUtils';
+import {initFirebaseStorage} from '../storage/firebaseStorage';
+import {
+  getColumnsRef,
+  onColumnNames,
+  addMissingColumns
+} from '../storage/firebaseMetadata';
+import {getDatabase} from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -28,7 +29,7 @@ import applabCommands from './commands';
 import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import * as elementUtils from './designElements/elementUtils';
-import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
+import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
 import logToCloud from '../logToCloud';
 import DialogButtons from '../templates/DialogButtons';
 import executionLog from '../executionLog';
@@ -38,12 +39,18 @@ import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {actions, reducers} from './redux/applab';
 import {add as addWatcher} from '../redux/watchedExpressions';
-import { changeScreen } from './redux/screens';
+import {changeScreen} from './redux/screens';
 import * as applabConstants from './constants';
-const { ApplabInterfaceMode } = applabConstants;
-import { DataView } from '../storage/constants';
+const {ApplabInterfaceMode} = applabConstants;
+import {DataView} from '../storage/constants';
 import consoleApi from '../consoleApi';
-import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from '../storage/redux/data';
+import {
+  addTableName,
+  deleteTableName,
+  updateTableColumns,
+  updateTableRecords,
+  updateKeyValueData
+} from '../storage/redux/data';
 import {setStepSpeed} from '../redux/runState';
 import {
   getContainedLevelResultInfo,
@@ -51,13 +58,8 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
-import {
-  outputError,
-  injectErrorHandler
-} from '../lib/util/javascriptMode';
-import {
-  actions as jsDebugger,
-} from '../lib/tools/jsdebugger/redux';
+import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
+import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 import * as makerToolkitRedux from '../lib/kits/maker/redux';
@@ -68,8 +70,7 @@ import {makeDisabledConfig} from '../dropletUtils';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import experiments from '../util/experiments';
-
-
+import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
 
@@ -93,7 +94,7 @@ var jsInterpreterLogger = null;
  * @param {*} object
  * @param {string} logLevel
  */
-Applab.log = function (object, logLevel) {
+Applab.log = function(object, logLevel) {
   if (jsInterpreterLogger) {
     jsInterpreterLogger.log(object);
   }
@@ -113,13 +114,13 @@ var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 
 // Default Scalings
 Applab.scale = {
-  'snapRadius': 1,
-  'stepSpeed': 0
+  snapRadius: 1,
+  stepSpeed: 0
 };
 
 var twitterOptions = {
   text: applabMsg.shareApplabTwitterDonor({donor: getRandomDonorTwitter()}),
-  hashtag: "ApplabCode"
+  hashtag: 'ApplabCode'
 };
 
 function stepDelayFromStepSpeed(stepSpeed) {
@@ -142,7 +143,8 @@ function loadLevel() {
   // footer. We do that by making the play space slightly smaller elsewhere.
   // Applab.appHeight represents the height of the entire app (footer + other)
   // Applab.footerlessAppHeight represents the height of only the "other"
-  Applab.footerlessAppHeight = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
+  Applab.footerlessAppHeight =
+    applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
   // Override scalars.
   for (var key in level.scale) {
@@ -150,11 +152,13 @@ function loadLevel() {
   }
 }
 
-var drawDiv = function () {
-  ['divApplab', 'visualizationOverlay', 'designModeViz'].forEach(function (divId) {
+var drawDiv = function() {
+  ['divApplab', 'visualizationOverlay', 'designModeViz'].forEach(function(
+    divId
+  ) {
     var div = document.getElementById(divId);
-    div.style.width = Applab.appWidth + "px";
-    div.style.height = Applab.footerlessAppHeight + "px";
+    div.style.width = Applab.appWidth + 'px';
+    div.style.height = Applab.footerlessAppHeight + 'px';
   });
 
   if (shouldRenderFooter()) {
@@ -166,17 +170,18 @@ function shouldRenderFooter() {
   return studioApp().share;
 }
 
-Applab.makeFooterMenuItems = function (isIframeEmbed) {
+Applab.makeFooterMenuItems = function(isIframeEmbed) {
   const footerMenuItems = [
     window.location.search.indexOf('nosource') < 0 && {
       text: i18n.t('footer.how_it_works'),
       link: project.getProjectUrl('/view'),
-      newWindow: true,
+      newWindow: true
     },
-    isIframeEmbed && !dom.isMobile() && {
-      text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab/new',
-    },
+    isIframeEmbed &&
+      !dom.isMobile() && {
+        text: applabMsg.makeMyOwnApp(),
+        link: '/projects/applab/new'
+      },
     {
       text: commonMsg.reportAbuse(),
       link: '/report_abuse',
@@ -196,7 +201,6 @@ Applab.makeFooterMenuItems = function (isIframeEmbed) {
   return footerMenuItems;
 };
 
-
 function renderFooterInSharedGame() {
   const divApplab = document.getElementById('divApplab');
   const footerDiv = document.createElement('div');
@@ -215,25 +219,29 @@ function renderFooterInSharedGame() {
       copyrightStrings={copyrightStrings}
       baseMoreMenuString={commonMsg.builtOnCodeStudio()}
       rowHeight={applabConstants.FOOTER_HEIGHT}
-      style={{fontSize:18}}
+      style={{fontSize: 18}}
       baseStyle={{
-        width: $("#divApplab").width(),
+        width: $('#divApplab').width(),
         paddingLeft: 0
       }}
       className="dark"
       menuItems={menuItems}
       phoneFooter={true}
     />,
-    footerDiv);
+    footerDiv
+  );
 }
 
 /**
  * @param {string} code The code to search for Data Storage APIs
  * @return {boolean} True if the code uses any data storage APIs
  */
-Applab.hasDataStoreAPIs = function (code) {
-  return /createRecord/.test(code) || /updateRecord/.test(code) ||
-    /setKeyValue/.test(code);
+Applab.hasDataStoreAPIs = function(code) {
+  return (
+    /createRecord/.test(code) ||
+    /updateRecord/.test(code) ||
+    /setKeyValue/.test(code)
+  );
 };
 
 /**
@@ -241,7 +249,7 @@ Applab.hasDataStoreAPIs = function (code) {
  * to 1 (full speed).
  * @param {!number} speed - range 0..1
  */
-Applab.setStepSpeed = function (speed) {
+Applab.setStepSpeed = function(speed) {
   getStore().dispatch(setStepSpeed(speed));
   Applab.scale.stepSpeed = stepDelayFromStepSpeed(speed);
 };
@@ -259,7 +267,7 @@ function queueOnTick() {
 
 function handleExecutionError(err, lineNumber, outputString) {
   outputError(outputString, lineNumber);
-  Applab.executionError = { err: err, lineNumber: lineNumber };
+  Applab.executionError = {err: err, lineNumber: lineNumber};
 
   // prevent further execution
   Applab.clearEventHandlersKillTickLoop();
@@ -270,11 +278,11 @@ function handleExecutionError(err, lineNumber, outputString) {
   }
 }
 
-Applab.getCode = function () {
+Applab.getCode = function() {
   return studioApp().getCode();
 };
 
-Applab.getHtml = function () {
+Applab.getHtml = function() {
   // This method is called on autosave. If we're about to autosave, let's update
   // levelHtml to include our current state.
   if ($('#designModeViz').is(':visible')) {
@@ -289,14 +297,18 @@ Applab.getHtml = function () {
  * levelHtml can be lazily updated from designModeViz via serializeToLevelHtml.
  * @param html
  */
-Applab.setLevelHtml = function (html) {
+Applab.setLevelHtml = function(html) {
   if (html === '') {
     Applab.levelHtml = '';
   } else {
     Applab.levelHtml = designMode.addScreenIfNecessary(html);
   }
   var designModeViz = document.getElementById('designModeViz');
-  designMode.parseFromLevelHtml(designModeViz, true, applabConstants.DESIGN_ELEMENT_ID_PREFIX);
+  designMode.parseFromLevelHtml(
+    designModeViz,
+    true,
+    applabConstants.DESIGN_ELEMENT_ID_PREFIX
+  );
 
   // Make sure at least one screen exists, and that the first
   // screen is visible.
@@ -304,7 +316,7 @@ Applab.setLevelHtml = function (html) {
   designMode.serializeToLevelHtml();
 };
 
-Applab.onTick = function () {
+Applab.onTick = function() {
   if (!Applab.running) {
     return;
   }
@@ -329,7 +341,7 @@ Applab.onTick = function () {
  * Initialize Blockly and Applab for read-only (blocks feedback).
  * Called on iframe load for read-only.
  */
-Applab.initReadonly = function (config) {
+Applab.initReadonly = function(config) {
   // Do some minimal level loading so that
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
@@ -346,7 +358,7 @@ Applab.initReadonly = function (config) {
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
-Applab.init = function (config) {
+Applab.init = function(config) {
   // Gross, but necessary for tests, until we can instantiate AppLab and make
   // this a member variable: Reset this thing until we're ready to create it!
   jsInterpreterLogger = null;
@@ -364,9 +376,16 @@ Applab.init = function (config) {
     throw 'App Lab requires Droplet';
   }
 
-  if (!config.channel) {
-    throw new Error('Cannot initialize App Lab without a channel id. ' +
-      'You may need to sign in to your code studio account first.');
+  if (config.level.editBlocks) {
+    header.showLevelBuilderSaveButton(() => ({
+      start_blocks: Applab.getCode(),
+      start_html: Applab.getHtml()
+    }));
+  } else if (!config.channel) {
+    throw new Error(
+      'Cannot initialize App Lab without a channel id. ' +
+        'You may need to sign in to your code studio account first.'
+    );
   }
   Applab.channelId = config.channel;
   Applab.storage = initFirebaseStorage({
@@ -404,7 +423,7 @@ Applab.init = function (config) {
     config.level.sliderSpeed = 1.0;
   }
 
-  var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
+  var showDebugButtons = !config.hideSource && !config.level.debuggerDisabled;
   var breakpointsEnabled = !config.level.debuggerDisabled;
   var showDebugConsole = !config.hideSource;
 
@@ -414,9 +433,11 @@ Applab.init = function (config) {
   }
 
   if (showDebugButtons || showDebugConsole) {
-    getStore().dispatch(jsDebugger.initialize({
-      runApp: Applab.runButtonClick,
-    }));
+    getStore().dispatch(
+      jsDebugger.initialize({
+        runApp: Applab.runButtonClick
+      })
+    );
     if (config.level.expandDebugger) {
       getStore().dispatch(jsDebugger.open());
     }
@@ -428,20 +449,19 @@ Applab.init = function (config) {
   }
 
   // Set up an error handler for student errors and warnings.
-  injectErrorHandler(new JavaScriptModeErrorHandler(
-    () => Applab.JSInterpreter,
-    Applab
-  ));
+  injectErrorHandler(
+    new JavaScriptModeErrorHandler(() => Applab.JSInterpreter, Applab)
+  );
 
-  config.loadAudio = function () {
+  config.loadAudio = function() {
     studioApp().loadAudio(skin.failureSound, 'failure');
   };
 
   config.shareWarningInfo = {
-    hasDataAPIs: function () {
+    hasDataAPIs: function() {
       return Applab.hasDataStoreAPIs(Applab.getCode());
     },
-    onWarningsComplete: function () {
+    onWarningsComplete: function() {
       if (config.share) {
         // If this is a share page, autostart the app after warnings closed.
         window.setTimeout(Applab.runButtonClick.bind(studioApp()), 0);
@@ -449,7 +469,7 @@ Applab.init = function (config) {
     }
   };
 
-  config.afterInject = function () {
+  config.afterInject = function() {
     if (studioApp().isUsingBlockly()) {
       /**
        * The richness of block colours, regardless of the hue.
@@ -469,28 +489,35 @@ Applab.init = function (config) {
     // is stored in startHtml, not levelHtml. Also ignore levelHtml for embedded
     // or contained levels so that updates made to startHtml by levelbuilders
     // are shown.
-    if (!getStore().getState().pageConstants.hasDesignMode ||
-        getStore().getState().pageConstants.isEmbedView ||
-        getStore().getState().pageConstants.hasContainedLevels) {
+    if (
+      !getStore().getState().pageConstants.hasDesignMode ||
+      getStore().getState().pageConstants.isEmbedView ||
+      getStore().getState().pageConstants.hasContainedLevels
+    ) {
       config.level.levelHtml = '';
     }
 
     // Set designModeViz contents after it is created in configureDom()
     // and sized in drawDiv().
-    Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
+    Applab.setLevelHtml(level.levelHtml || level.startHtml || '');
   };
 
-  config.afterEditorReady = function () {
+  config.afterEditorReady = function() {
     if (breakpointsEnabled) {
       studioApp().enableBreakpoints();
     }
   };
 
-  config.afterClearPuzzle = function () {
+  config.afterClearPuzzle = function() {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
     Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
-    Applab.storage.populateKeyValue(level.dataProperties, true, () => {}, outputError); // overwrite = true
+    Applab.storage.populateKeyValue(
+      level.dataProperties,
+      true,
+      () => {},
+      outputError
+    ); // overwrite = true
     studioApp().resetButtonClick();
   };
 
@@ -536,15 +563,25 @@ Applab.init = function (config) {
   // console. If a json parse error is thrown before the applab debug console
   // initializes, the error will be printed only to the browser debug console.
   if (level.dataTables) {
-    Applab.storage.populateTable(level.dataTables, false, () => {}, outputError); // overwrite = false
+    Applab.storage.populateTable(
+      level.dataTables,
+      false,
+      () => {},
+      outputError
+    ); // overwrite = false
   }
   if (level.dataProperties) {
-    Applab.storage.populateKeyValue(level.dataProperties, false, () => {}, outputError); // overwrite = false
+    Applab.storage.populateKeyValue(
+      level.dataProperties,
+      false,
+      () => {},
+      outputError
+    ); // overwrite = false
   }
 
   Applab.handleVersionHistory = studioApp().getVersionHistoryHandler(config);
 
-  var onMount = function () {
+  var onMount = function() {
     studioApp().init(config);
 
     var finishButton = document.getElementById('finishButton');
@@ -596,8 +633,10 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: !!config.level.isProjectLevel || config.level.showDebugWatch,
-    showMakerToggle: !!config.level.isProjectLevel || config.level.makerlabEnabled,
+    showDebugWatch:
+      !!config.level.isProjectLevel || config.level.showDebugWatch,
+    showMakerToggle:
+      !!config.level.isProjectLevel || config.level.makerlabEnabled
   });
 
   config.dropletConfig = dropletConfig;
@@ -605,22 +644,31 @@ Applab.init = function (config) {
   if (config.level.makerlabEnabled) {
     makerToolkit.enable();
     config.dropletConfig = utils.deepMergeConcatArrays(
-        config.dropletConfig,
-        makerToolkit.dropletConfig);
+      config.dropletConfig,
+      makerToolkit.dropletConfig
+    );
   } else {
     // Push gray, no-autocomplete versions of maker blocks for display purposes.
-    const disabledMakerDropletConfig = makeDisabledConfig(makerToolkit.dropletConfig);
+    const disabledMakerDropletConfig = makeDisabledConfig(
+      makerToolkit.dropletConfig
+    );
     config.dropletConfig = utils.deepMergeConcatArrays(
-        config.dropletConfig,
-        disabledMakerDropletConfig);
+      config.dropletConfig,
+      disabledMakerDropletConfig
+    );
   }
 
   // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.
   config.level.levelBlocks = config.dropletConfig.blocks;
 
-  getStore().dispatch(actions.changeInterfaceMode(
-    (!Applab.isReadOnlyView && Applab.startInDesignMode()) ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+  getStore().dispatch(
+    actions.changeInterfaceMode(
+      !Applab.isReadOnlyView && Applab.startInDesignMode()
+        ? ApplabInterfaceMode.DESIGN
+        : ApplabInterfaceMode.CODE
+    )
+  );
 
   Applab.reactInitialProps_ = {
     onMount: onMount
@@ -628,20 +676,30 @@ Applab.init = function (config) {
 
   Applab.reactMountPoint_ = document.getElementById(config.containerId);
 
-  const loader = studioApp().loadLibraries(level.helperLibraries).then(() => {
-    Applab.render();
+  const loader = studioApp()
+    .loadLibraries(level.helperLibraries)
+    .then(() => {
+      Applab.render();
 
-    //Scale old-sized apps to fit the new sized display. Old height - 480.
-    if ($(".screen").height() === 480) {
-      const ratio = 450 / 480;
-      if (studioApp().share) { //share and embed pages
-        $("#divApplab").css('transform', 'scale(' + ratio + ', ' + ratio + ')');
-        $(".small-footer-base").css('transform', 'scale('+ ratio + ', 1)');
-      } else { //includes the frame on the edit page
-        $("#phoneFrameWrapper").css('transform', 'scale(' + ratio + ', ' + ratio + ')');
+      //Scale old-sized apps to fit the new sized display. Old height - 480.
+      if ($('.screen').height() === 480) {
+        const ratio = 450 / 480;
+        if (studioApp().share) {
+          //share and embed pages
+          $('#divApplab').css(
+            'transform',
+            'scale(' + ratio + ', ' + ratio + ')'
+          );
+          $('.small-footer-base').css('transform', 'scale(' + ratio + ', 1)');
+        } else {
+          //includes the frame on the edit page
+          $('#phoneFrameWrapper').css(
+            'transform',
+            'scale(' + ratio + ', ' + ratio + ')'
+          );
+        }
       }
-    }
-  });
+    });
 
   if (IN_UNIT_TEST) {
     return loader.catch(() => {});
@@ -650,8 +708,10 @@ Applab.init = function (config) {
 };
 
 function changedToDataMode(state, lastState) {
-  return state.interfaceMode !== lastState.interfaceMode &&
-      state.interfaceMode === ApplabInterfaceMode.DATA;
+  return (
+    state.interfaceMode !== lastState.interfaceMode &&
+    state.interfaceMode === ApplabInterfaceMode.DATA
+  );
 }
 
 /**
@@ -662,7 +722,7 @@ function setupReduxSubscribers(store) {
   designMode.setupReduxSubscribers(store);
 
   var state = {};
-  store.subscribe(function () {
+  store.subscribe(function() {
     var lastState = state;
     state = store.getState();
 
@@ -673,12 +733,22 @@ function setupReduxSubscribers(store) {
     // Simulate a data view change when switching into data mode.
     const view = state.data && state.data.view;
     const lastView = lastState.data && lastState.data.view;
-    const isDataMode = (state.interfaceMode === ApplabInterfaceMode.DATA);
-    if ((isDataMode && view !== lastView) || changedToDataMode(state, lastState)) {
-      onDataViewChange(state.data.view, lastState.data.tableName, state.data.tableName);
+    const isDataMode = state.interfaceMode === ApplabInterfaceMode.DATA;
+    if (
+      (isDataMode && view !== lastView) ||
+      changedToDataMode(state, lastState)
+    ) {
+      onDataViewChange(
+        state.data.view,
+        lastState.data.tableName,
+        state.data.tableName
+      );
     }
 
-    if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
+    if (
+      !lastState.runState ||
+      state.runState.isRunning !== lastState.runState.isRunning
+    ) {
       Applab.onIsRunningChange();
     }
   });
@@ -688,15 +758,23 @@ function setupReduxSubscribers(store) {
     // new tables are added and removed.
     const tablesRef = getDatabase(Applab.channelId).child('counters/tables');
     tablesRef.on('child_added', snapshot => {
-      store.dispatch(addTableName(typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key));
+      store.dispatch(
+        addTableName(
+          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
+        )
+      );
     });
     tablesRef.on('child_removed', snapshot => {
-      store.dispatch(deleteTableName(typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key));
+      store.dispatch(
+        deleteTableName(
+          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
+        )
+      );
     });
   }
 }
 
-Applab.onIsRunningChange = function () {
+Applab.onIsRunningChange = function() {
   Applab.setCrosshairCursorForPlaySpace();
 };
 
@@ -705,7 +783,7 @@ Applab.onIsRunningChange = function () {
  * a 'protected' div that React doesn't update, but eventually would rather do
  * this with React.
  */
-Applab.setCrosshairCursorForPlaySpace = function () {
+Applab.setCrosshairCursorForPlaySpace = function() {
   var showOverlays = shouldOverlaysBeVisible(getStore().getState());
   $('#divApplab').toggleClass('withCrosshair', showOverlays);
   $('#designModeViz').toggleClass('withCrosshair', true);
@@ -728,7 +806,7 @@ Applab.reactMountPoint_ = null;
 /**
  * Trigger a top-level React render
  */
-Applab.render = function () {
+Applab.render = function() {
   var nextProps = Object.assign({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
@@ -739,38 +817,47 @@ Applab.render = function () {
     <Provider store={getStore()}>
       <AppLabView {...nextProps} />
     </Provider>,
-    Applab.reactMountPoint_);
+    Applab.reactMountPoint_
+  );
 };
 
-Applab.exportApp = function (expoOpts) {
+Applab.exportApp = function(expoOpts) {
   Applab.runButtonClick();
   var html = document.getElementById('divApplab').outerHTML;
   studioApp().resetButtonClick();
+
+  const {mode, expoSnackId} = expoOpts || {};
+  if (mode === 'expoGenerateApk') {
+    return Exporter.generateExpoApk(expoSnackId, studioApp().config);
+  }
+
   return Exporter.exportApp(
     // TODO: find another way to get this info that doesn't rely on globals.
-    window.dashboard && window.dashboard.project.getCurrentName() || 'my-app',
+    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app',
     studioApp().editor.getValue(),
     html,
-    expoOpts
+    expoOpts,
+    studioApp().config
   );
 };
 
 /**
  * @param {string} newCode Code to append to the end of the editor
  */
-Applab.appendToEditor = function (newCode) {
-  var code = studioApp().editor.addEmptyLine(studioApp().editor.getValue()) + newCode;
+Applab.appendToEditor = function(newCode) {
+  var code =
+    studioApp().editor.addEmptyLine(studioApp().editor.getValue()) + newCode;
   studioApp().editor.setValue(code);
 };
 
-Applab.scrollToEnd = function () {
+Applab.scrollToEnd = function() {
   studioApp().editor.scrollCursorToEndOfDocument();
 };
 
 /**
  * Clear the event handlers and stop the onTick timer.
  */
-Applab.clearEventHandlersKillTickLoop = function () {
+Applab.clearEventHandlersKillTickLoop = function() {
   Applab.whenRunFunc = null;
   Applab.running = false;
   $('#headers').removeClass('dimmed');
@@ -781,7 +868,7 @@ Applab.clearEventHandlersKillTickLoop = function () {
 /**
  * @returns {boolean}
  */
-Applab.isRunning = function () {
+Applab.isRunning = function() {
   return studioApp().isRunning();
 };
 
@@ -789,7 +876,7 @@ Applab.isRunning = function () {
  * Toggle whether divApplab or designModeViz is visible.
  * @param isVisible whether divApplab should be visible.
  */
-Applab.toggleDivApplab = function (isVisible) {
+Applab.toggleDivApplab = function(isVisible) {
   if (isVisible) {
     $('#divApplab').show();
     $('#designModeViz').hide();
@@ -802,7 +889,7 @@ Applab.toggleDivApplab = function (isVisible) {
 /**
  * reset and initialize the state of the turtle object
  */
-Applab.resetTurtle = function () {
+Applab.resetTurtle = function() {
   Applab.turtle = {};
   Applab.turtle.heading = 0;
   Applab.turtle.x = Applab.appWidth / 2;
@@ -813,7 +900,7 @@ Applab.resetTurtle = function () {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Applab.reset = function () {
+Applab.reset = function() {
   Applab.clearEventHandlersKillTickLoop();
 
   // Reset configurable variables
@@ -896,7 +983,7 @@ function runButtonClickWrapper(callback) {
  * We also want to serialize in save in some other cases (i.e. entering code
  * mode from design mode).
  */
-Applab.serializeAndSave = function (callback) {
+Applab.serializeAndSave = function(callback) {
   designMode.serializeToLevelHtml();
   $(window).trigger('appModeChanged');
   if (callback) {
@@ -908,7 +995,7 @@ Applab.serializeAndSave = function (callback) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-Applab.runButtonClick = function () {
+Applab.runButtonClick = function() {
   studioApp().toggleRunReset('reset');
   if (studioApp().isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
@@ -924,10 +1011,14 @@ Applab.runButtonClick = function () {
   }
 
   if (studioApp().editor) {
-    logToCloud.addPageAction(logToCloud.PageAction.RunButtonClick, {
-      usingBlocks: studioApp().editor.session.currentlyUsingBlocks,
-      app: 'applab'
-    }, 1/100);
+    logToCloud.addPageAction(
+      logToCloud.PageAction.RunButtonClick,
+      {
+        usingBlocks: studioApp().editor.session.currentlyUsingBlocks,
+        app: 'applab'
+      },
+      1 / 100
+    );
   }
 
   postContainedLevelAttempt(studioApp());
@@ -937,7 +1028,7 @@ Applab.runButtonClick = function () {
  * App specific displayFeedback function that calls into
  * studioApp.displayFeedback when appropriate
  */
-var displayFeedback = function () {
+var displayFeedback = function() {
   if (!Applab.waitingForReport) {
     studioApp().displayFeedback({
       feedbackType: Applab.testResults,
@@ -949,13 +1040,16 @@ var displayFeedback = function () {
       feedbackImage: Applab.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToLegacyGalleryUrl: level.freePlay && Applab.response && Applab.response.save_to_gallery_url,
+      saveToLegacyGalleryUrl:
+        level.freePlay &&
+        Applab.response &&
+        Applab.response.save_to_gallery_url,
       message: Applab.message,
       appStrings: {
         reinfFeedbackMsg: applabMsg.reinfFeedbackMsg(),
         sharingText: applabMsg.shareGame()
       },
-      hideXButton: true,
+      hideXButton: true
     });
   }
 };
@@ -964,7 +1058,7 @@ var displayFeedback = function () {
  * Function to be called when the service report call is complete
  * @param {MilestoneResponse} response - JSON response (if available)
  */
-Applab.onReportComplete = function (response) {
+Applab.onReportComplete = function(response) {
   Applab.response = response;
   Applab.waitingForReport = false;
   studioApp().onReportComplete(response);
@@ -974,7 +1068,7 @@ Applab.onReportComplete = function (response) {
 /**
  * Execute the app
  */
-Applab.execute = function () {
+Applab.execute = function() {
   Applab.result = ResultType.UNSET;
   Applab.testResults = TestResults.NO_TESTS_RUN;
   Applab.waitingForReport = false;
@@ -988,9 +1082,9 @@ Applab.execute = function () {
 
   var codeWhenRun = '';
   if (level.helperLibraries) {
-    codeWhenRun += level.helperLibraries
-      .map((lib) => studioApp().libraries[lib])
-      .join("\n") + '\n';
+    codeWhenRun +=
+      level.helperLibraries.map(lib => studioApp().libraries[lib]).join('\n') +
+      '\n';
   }
   codeWhenRun += studioApp().getCode();
   Applab.currentExecutionLog = [];
@@ -1000,7 +1094,9 @@ Applab.execute = function () {
     Applab.JSInterpreter = new JSInterpreter({
       studioApp: studioApp(),
       logExecution: !!level.logConditions,
-      shouldRunAtMaxSpeed: function () { return getCurrentTickLength() === 0; },
+      shouldRunAtMaxSpeed: function() {
+        return getCurrentTickLength() === 0;
+      },
       maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK
     });
 
@@ -1027,27 +1123,30 @@ Applab.execute = function () {
   }
 
   if (makerToolkitRedux.isEnabled(getStore().getState())) {
-    makerToolkit.connect({
-      interpreter: Applab.JSInterpreter,
-      onDisconnect: () => studioApp().resetButtonClick(),
-    })
-        .then(Applab.beginVisualizationRun)
-        .catch(error => {
-          // Don't just throw any error away, but squelch errors that we already
-          // handle gracefully (like early disconnect or a missing board).
-          if (!(error instanceof makerToolkit.MakerError)) {
-            Applab.log(error);
-            return Promise.reject(error);
-          }
-        });
+    makerToolkit
+      .connect({
+        interpreter: Applab.JSInterpreter,
+        onDisconnect: () => studioApp().resetButtonClick()
+      })
+      .then(Applab.beginVisualizationRun)
+      .catch(error => {
+        // Don't just throw any error away, but squelch errors that we already
+        // handle gracefully (like early disconnect or a missing board).
+        if (!(error instanceof makerToolkit.MakerError)) {
+          Applab.log(error);
+          return Promise.reject(error);
+        }
+      });
   } else {
     Applab.beginVisualizationRun();
   }
 };
 
-Applab.beginVisualizationRun = function () {
+Applab.beginVisualizationRun = function() {
   // Call change screen on the default screen to ensure it has focus
-  var defaultScreenId = Applab.getScreens().first().attr('id');
+  var defaultScreenId = Applab.getScreens()
+    .first()
+    .attr('id');
   Applab.changeScreen(defaultScreenId);
 
   Applab.running = true;
@@ -1065,7 +1164,7 @@ Applab.encodedFeedbackImage = '';
  * @param {ApplabInterfaceMode} mode
  */
 function onInterfaceModeChange(mode) {
-  var showDivApplab = (mode !== ApplabInterfaceMode.DESIGN);
+  var showDivApplab = mode !== ApplabInterfaceMode.DESIGN;
   Applab.toggleDivApplab(showDivApplab);
 
   if (mode === ApplabInterfaceMode.DESIGN) {
@@ -1118,9 +1217,11 @@ function onDataViewChange(view, oldTableName, newTableName) {
         getStore().dispatch(updateTableColumns(newTableName, columnNames));
       });
 
-      storageRef.child(`tables/${newTableName}/records`).on('value', snapshot => {
-        getStore().dispatch(updateTableRecords(newTableName, snapshot.val()));
-      });
+      storageRef
+        .child(`tables/${newTableName}/records`)
+        .on('value', snapshot => {
+          getStore().dispatch(updateTableRecords(newTableName, snapshot.val()));
+        });
       return;
     default:
       return;
@@ -1135,19 +1236,27 @@ function onDataViewChange(view, oldTableName, newTableName) {
  * @param {string} [filterSelector] Optional selector to filter for.
  */
 
-Applab.showConfirmationDialog = function (config) {
-  config.text = config.text || "";
-  config.title = config.title || "";
+Applab.showConfirmationDialog = function(config) {
+  config.text = config.text || '';
+  config.title = config.title || '';
 
   var contentDiv = document.createElement('div');
-  contentDiv.innerHTML = '<p class="dialog-title">' + config.title + '</p>' +
-      '<p>' + config.text + '</p>';
+  contentDiv.innerHTML =
+    '<p class="dialog-title">' +
+    config.title +
+    '</p>' +
+    '<p>' +
+    config.text +
+    '</p>';
 
   var buttons = document.createElement('div');
-  ReactDOM.render(React.createElement(DialogButtons, {
-    confirmText: commonMsg.dialogOK(),
-    cancelText: commonMsg.dialogCancel()
-  }), buttons);
+  ReactDOM.render(
+    React.createElement(DialogButtons, {
+      confirmText: commonMsg.dialogOK(),
+      cancelText: commonMsg.dialogCancel()
+    }),
+    buttons
+  );
   contentDiv.appendChild(buttons);
 
   var dialog = studioApp().createModalDialog({
@@ -1157,14 +1266,14 @@ Applab.showConfirmationDialog = function (config) {
 
   var cancelButton = buttons.querySelector('#again-button');
   if (cancelButton) {
-    dom.addClickTouchEvent(cancelButton, function () {
+    dom.addClickTouchEvent(cancelButton, function() {
       dialog.hide();
     });
   }
 
   var confirmButton = buttons.querySelector('#confirm-button');
   if (confirmButton) {
-    dom.addClickTouchEvent(confirmButton, function () {
+    dom.addClickTouchEvent(confirmButton, function() {
       if (config.onConfirm) {
         config.onConfirm();
       }
@@ -1175,11 +1284,11 @@ Applab.showConfirmationDialog = function (config) {
   dialog.show();
 };
 
-Applab.onPuzzleFinish = function () {
+Applab.onPuzzleFinish = function() {
   Applab.onPuzzleComplete(false); // complete without submitting
 };
 
-Applab.onPuzzleComplete = function (submit) {
+Applab.onPuzzleComplete = function(submit) {
   if (Applab.executionError) {
     Applab.result = ResultType.ERROR;
   } else {
@@ -1188,15 +1297,17 @@ Applab.onPuzzleComplete = function (submit) {
   }
 
   // If we know they succeeded, mark levelComplete true
-  var levelComplete = (Applab.result === ResultType.SUCCESS);
+  var levelComplete = Applab.result === ResultType.SUCCESS;
 
   if (Applab.executionError) {
     Applab.testResults = studioApp().getTestResults(levelComplete, {
-        executionError: Applab.executionError
+      executionError: Applab.executionError
     });
   } else if (level.logConditions) {
-    var results = executionLog.getResultsFromLog(level.logConditions,
-        Applab.currentExecutionLog);
+    var results = executionLog.getResultsFromLog(
+      level.logConditions,
+      Applab.currentExecutionLog
+    );
     Applab.testResults = results.testResult;
     Applab.message = results.message;
   } else if (!submit) {
@@ -1221,7 +1332,9 @@ Applab.onPuzzleComplete = function (submit) {
   }
 
   var program;
-  const containedLevelResultsInfo = studioApp().hasContainedLevels ? getContainedLevelResultInfo() : null;
+  const containedLevelResultsInfo = studioApp().hasContainedLevels
+    ? getContainedLevelResultInfo()
+    : null;
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)
@@ -1239,8 +1352,8 @@ Applab.onPuzzleComplete = function (submit) {
 
   Applab.waitingForReport = true;
 
-  const sendReport = function () {
-    const onComplete = (submit ? onSubmitComplete : Applab.onReportComplete);
+  const sendReport = function() {
+    const onComplete = submit ? onSubmitComplete : Applab.onReportComplete;
 
     if (containedLevelResultsInfo) {
       // We already reported results when run was clicked. Make sure that call
@@ -1264,11 +1377,11 @@ Applab.onPuzzleComplete = function (submit) {
   sendReport();
 };
 
-Applab.executeCmd = function (id, name, opts) {
+Applab.executeCmd = function(id, name, opts) {
   var cmd = {
-    'id': id,
-    'name': name,
-    'opts': opts
+    id: id,
+    name: name,
+    opts: opts
   };
   return Applab.callCmd(cmd);
 };
@@ -1277,7 +1390,7 @@ Applab.executeCmd = function (id, name, opts) {
 // Execute an API command
 //
 
-Applab.callCmd = function (cmd) {
+Applab.callCmd = function(cmd) {
   var retVal = false;
   if (applabCommands[cmd.name] instanceof Function) {
     studioApp().highlight(cmd.id);
@@ -1315,19 +1428,27 @@ Studio.wait = function (opts) {
 };
 */
 
-Applab.timedOut = function () {
+Applab.timedOut = function() {
   return Applab.tickCount > Applab.timeoutFailureTick;
 };
 
-var checkFinished = function () {
+var checkFinished = function() {
   // if we have a succcess condition and have accomplished it, we're done and successful
-  if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
+  if (
+    level.goal &&
+    level.goal.successCondition &&
+    level.goal.successCondition()
+  ) {
     Applab.result = ResultType.SUCCESS;
     return true;
   }
 
   // if we have a failure condition, and it's been reached, we're done and failed
-  if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
+  if (
+    level.goal &&
+    level.goal.failureCondition &&
+    level.goal.failureCondition()
+  ) {
     Applab.result = ResultType.FAILURE;
     return true;
   }
@@ -1347,11 +1468,11 @@ var checkFinished = function () {
   return false;
 };
 
-Applab.startInDesignMode = function () {
+Applab.startInDesignMode = function() {
   return !!level.designModeAtStart;
 };
 
-Applab.isInDesignMode = function () {
+Applab.isInDesignMode = function() {
   const mode = getStore().getState().interfaceMode;
   return ApplabInterfaceMode.DESIGN === mode;
 };
@@ -1366,7 +1487,7 @@ function quote(str) {
  * @param {string} [filterSelector] Optional selector to filter for.
  * @returns {Array}
  */
-Applab.getIdDropdown = function (filterSelector) {
+Applab.getIdDropdown = function(filterSelector) {
   return Applab.getIdDropdownFromDom_($(document), filterSelector);
 };
 
@@ -1378,18 +1499,23 @@ Applab.getIdDropdown = function (filterSelector) {
  * @returns {Array}
  * @private
  */
-Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
-  var elements = documentRoot.find('#designModeViz [id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]');
+Applab.getIdDropdownFromDom_ = function(documentRoot, filterSelector) {
+  var elements = documentRoot.find(
+    '#designModeViz [id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]'
+  );
 
   // Return all elements when no filter is given
   if (filterSelector) {
     elements = elements.filter(filterSelector);
   }
 
-  return elements.sort(byId).map(function (_, element) {
-    var id = quote(elementUtils.getId(element));
-    return {text: id, display: id};
-  }).get();
+  return elements
+    .sort(byId)
+    .map(function(_, element) {
+      var id = quote(elementUtils.getId(element));
+      return {text: id, display: id};
+    })
+    .get();
 };
 
 function byId(a, b) {
@@ -1400,7 +1526,7 @@ function byId(a, b) {
  * Returns a list of IDs currently present in the DOM of the current screen,
  * including the screen, sorted by z-index.
  */
-Applab.getIdDropdownForCurrentScreen = function () {
+Applab.getIdDropdownForCurrentScreen = function() {
   return Applab.getIdDropdownForCurrentScreenFromDom_($('#designModeViz'));
 };
 
@@ -1408,25 +1534,34 @@ Applab.getIdDropdownForCurrentScreen = function () {
  * Internal helper for getIdDropdownForCurrentScreen.
  * @private
  */
-Applab.getIdDropdownForCurrentScreenFromDom_ = function (documentRoot) {
-  var screen = documentRoot.find('.screen').filter(function () {
-    return this.style.display !== 'none';
-  }).first();
+Applab.getIdDropdownForCurrentScreenFromDom_ = function(documentRoot) {
+  var screen = documentRoot
+    .find('.screen')
+    .filter(function() {
+      return this.style.display !== 'none';
+    })
+    .first();
 
-  var elements = screen.find('[id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]').add(screen);
+  var elements = screen
+    .find('[id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]')
+    .add(screen);
 
-  return elements.map(function (_, element) {
-    return elementUtils.getId(element);
-  }).get();
+  return elements
+    .map(function(_, element) {
+      return elementUtils.getId(element);
+    })
+    .get();
 };
 
 /**
  * @returns {HTMLElement} The first "screen" that isn't hidden.
  */
-Applab.activeScreen = function () {
-  return Applab.getScreens().filter(function () {
-    return this.style.display !== 'none';
-  }).first()[0];
+Applab.activeScreen = function() {
+  return Applab.getScreens()
+    .filter(function() {
+      return this.style.display !== 'none';
+    })
+    .first()[0];
 };
 
 /**
@@ -1434,10 +1569,10 @@ Applab.activeScreen = function () {
  * divApplab to be non-visible, unless they match the provided screenId. Also
  * focuses the screen.
  */
-Applab.changeScreen = function (screenId) {
-  Applab.getScreens().each(function () {
+Applab.changeScreen = function(screenId) {
+  Applab.getScreens().each(function() {
     $(this).toggle(this.id === screenId);
-    if ((this.id === screenId)) {
+    if (this.id === screenId) {
       // Allow the active screen to receive keyboard events.
       this.focus();
     }
@@ -1452,20 +1587,20 @@ Applab.changeScreen = function (screenId) {
   }
 };
 
-Applab.getScreens = function () {
+Applab.getScreens = function() {
   return $('#divApplab > .screen');
 };
 
 // Wrap design mode function so that we can call from commands
-Applab.updateProperty = function (element, property, value) {
+Applab.updateProperty = function(element, property, value) {
   return designMode.updateProperty(element, property, value);
 };
 
 // Wrap design mode function so that we can call from commands
-Applab.readProperty = function (element, property) {
+Applab.readProperty = function(element, property) {
   return designMode.readProperty(element, property);
 };
 
-Applab.getAppReducers = function () {
+Applab.getAppReducers = function() {
   return reducers;
 };

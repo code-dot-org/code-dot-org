@@ -161,7 +161,20 @@ ar:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: هل تواجه صعوبة في معرفة كيفية وضع الكتل في الأسفل؟ حاول معاملة الزهرة الحمراء بنفس طريقة الزهرة البنفسجية!
         2-3_Bee_Conditionals_14_b: لو كانت الوردة الحمراء وردة بنفسجية، هل يمكنك معرفة كيفية استخدام كتلة "كرر" إضافية لتختصر البرنامج؟
-        2-3_Bee_Conditionals_14_c: "حاول تقسيم هذا إلى مجموعتين منفصلتين: \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) جمع الرحيق 3 مرات\n  - تحرك إلى الأمام 5 مرات\n  - تحقق من وجود رحيق، إذا كان موجود: اجمعه\n  - اتجه إلى اليسار\n  \n2) اصنع العسل \n  - تحرك إلى الأمام مرة واحدة\n  - اصنع عسل مرتين"
+        2-3_Bee_Conditionals_14_c: |-
+          حاول تقسيم هذا إلى مجموعتين منفصلتين: 
+
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) جمع الرحيق 3 مرات
+            - تحرك إلى الأمام 5 مرات
+            - تحقق من وجود رحيق، إذا كان موجود: اجمعه
+            - اتجه إلى اليسار
+            
+          2) اصنع العسل 
+            - تحرك إلى الأمام مرة واحدة
+            - اصنع عسل مرتين
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'تذكر: الأزهار البنفسجية تحتوي فقط على 0 أو 1 رحيق ويمكن للرحيق أن يتغير كل مرة يتم فيها تشغيل البرنامج.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -331,7 +344,9 @@ ar:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'كل شكل متكرر هو مزيج من **نصف سداسي**، يليه **2/3 من مثلث**. '
         Course_4_Artist_12_b: 'شكل الوحدة هو نفسه تقريبا كما هو في اللغز الأخير، باستثناء أن نصف السداسي أكبر قليلاً. '
-        Course_4_Artist_12_c: "1) يبلغ طول الخطوط الثلاثة الأولى 60 بكسل وتحتاج الاستدارة 60 درجة.  \n 2) يبلغ طول الخطين التاليين 80 بكسل وتحتاج إلى الاستدارة 120 درجة "
+        Course_4_Artist_12_c: |-
+          1) يبلغ طول الخطوط الثلاثة الأولى 60 بكسل وتحتاج الاستدارة 60 درجة.  
+           2) يبلغ طول الخطين التاليين 80 بكسل وتحتاج إلى الاستدارة 120 درجة 
         Course_4_Artist_12_d: |-
           **الحل:**
 
@@ -2852,6 +2867,103 @@ ar:
           </xml>
       Course 4 SCV 3_authored_hint:
         Course_4_SCV_3_a: 'استخدم الكتلة البرمجية الحسابية لإضافة أو طرح نقاطة من المتغير "نقاط" عندما يتصادم الممثلون. '
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+          *تأكد من ظهور الراقص على الشاشة.
+
+          *ينتهي هذا المستوى بعد 4 إجراءات.*
+        challenges: |-
+          **التحديات الاختيارية**
+          *اختر تشغيل أغنية مختلفة
+          *اختر شكلًا مختلفًا يُشبه غزال الموظ!
+          *أعد تسمية راقصك.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+          *يحتاج الراقص إلى الانتقال إلى خطوة جديدة بعد 4 إجراءات.
+
+          *ينتهي هذا المستوى بعد 8 إجراءات.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+
+          * بعد 6 إجراءات، يلزم على راقصك أداء رقصة مختلفة عن الرقصة التي أدّاها بعد 4 إجراءات.
+
+          *ينتهي هذا المستوى بعد 12 إجراءًا.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+
+          *تحتاج إلى تغيير تأثيرات الخلفية أحيانًا عند الإجراء السابع من الأغنية.
+
+          *ينتهي هذا المستوى بعد 10 إجراءات.*
+        challenges: |-
+          **تحدٍّ اختياري**
+
+          غيّر تأثيرات الخلفية عند نقاط مختلفة أثناء تشغيل الأغنية من خلال وصلِ المربع البرمجي الجديد بالأحداث <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+
+          *ينبغي أن يكون لديك راقصان على الأقل.
+
+          *ينتهي هذا المستوى بعد 6 إجراءات.*
+        challenges: |-
+          **تحدٍّ اختياري**
+
+          * أضف راقصًا ثالثًا (أو أي عدد تريده!)
+          * اجعل جميع الراقصين لديك يؤدّوا حركات مختلفة عند نقاط مختلفة من الأغنية.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+
+          *يوجد راقصان يحتاجان إلى حجم غير الحجم 100.
+
+          *ينتهي هذا المستوى بعد 6 إجراءات.*
+        challenges: |-
+          **تحدٍّ اختياري**
+
+          * اختبر تغيير خصائص أخرى (العرض والارتفاع والدوران وغير ذلك)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+
+          *غيّر اللون الخفيف لراقص واحد على الأقل.
+
+          *ينتهي هذا المستوى بعد 8 إجراءات.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+
+          *ينبغي تغيير خصائص راقصين أو أكثر.
+
+          *ينتهي هذا المستوى بعد 8 إجراءات.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+
+          *ما عليك سوى أن تكون مبدعًا!
+
+          *ينتهي هذا المستوى بعد 8 إجراءات.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+
+          *ما عليك سوى أن تكون مبدعًا!
+
+          *ينتهي هذا المستوى بعد 8 إجراءات.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+
+          *استخدم المربع البرمجي "عند الضغط على السهم الأيسر" لجعل الروبوت يقم بحركة رقص عند الضغط عليه.
+
+          *ينتهي هذا المستوى بعد 8 إجراءات.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "هل ترى **فوانيس البحر** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? كيف يمكنك استخدام شرطٍ معها لتتجاوز نصب المحيط؟"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: يا لها من شعاب مرجانية جميلة! المرجان الأزرق هو الطريقة * * الصحيحة * * للمضي، وتحقق من أن المرجان الأحمر ليس إلى * * اليسار * *!
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: تأكد من ضبط الرقم في "سرعة الكلب" لقيمة ما تكون أكبر من "سرعة القطة".
       Dance short test 2_authored_hint:
@@ -3275,6 +3387,12 @@ ar:
         after: عند الانتهاء من كل بتلة، تأكد من التحرك إلى الأمام 20 بكسل قبل الاستدارة 60 درجة.
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: حاول أن تجعل الكائن يبني بعض الجسور بحيث يستطيع ألكس أو ستيف المشي خارج حدود الخريطة.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+          *يحتاج الراقص إلى الانتقال إلى خطوة جديدة بعد 4 إجراءات.
+
+          *ينتهي هذا المستوى بعد 8 إجراءات.*
       aE3_authored_hint:
         aE3_d: إذا أصبح برنامجك مربكاً جداً، يمكنك دائماً النقر فوق "البدء من جديد" والمحاولة مرة أخرى!
       aE3alternate_authored_hint:
@@ -3325,9 +3443,44 @@ ar:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -3365,7 +3518,45 @@ ar:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -3400,7 +3591,29 @@ ar:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
@@ -3408,7 +3621,12 @@ ar:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
       courseB_Scrat_ramp2_2018_authored_hint:
@@ -3427,7 +3645,42 @@ ar:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -3465,6 +3718,25 @@ ar:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -3484,7 +3756,42 @@ ar:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -4038,6 +4345,95 @@ ar:
       courseF_artist_for_challenge2_2018_authored_hint:
         courseF_artist_for_challenge2_c: 'تعد الحلقة "لأجل" من 5 إلى 250 بزيادة مقدارها 2. '
         courseF_artist_for_challenge2_a: تغيير اللون يحدث باستخدام الكتلة البرمجية "تعيين اللون - التلوين مع أحمر أخضر أزرق". الأحمر يكون ثابتاً بقيمة 255، والأخضر يكون دائماً بقيمة المتغير "عداد"، أما الأزرق فيكون "255 - عداد".
+        courseF_artist_for_challenge2_d: |
+          **الحل:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">250</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_rgb" inline="false">
+          <value name="RED">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="GREEN">
+          <block type="variables_get">
+          <title name="VAR">عداد</title>
+          </block>
+          </value>
+          <value name="BLUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ناقص</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">عداد</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">تحرك إلى الأمام</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">عداد</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">اتجه إلى اليمين</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">80</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: 'تعد الحلقة "لأجل" من 5 إلى 250 بزيادة مقدارها 2. '
         courseF_artist_for_challenge2_a: تغيير اللون يحدث باستخدام الكتلة البرمجية "تعيين اللون - التلوين مع أحمر أخضر أزرق". الأحمر يكون ثابتاً بقيمة 255، والأخضر يكون دائماً بقيمة المتغير "عداد"، أما الأزرق فيكون "255 - عداد".

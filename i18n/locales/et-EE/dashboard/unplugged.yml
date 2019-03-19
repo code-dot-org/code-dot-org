@@ -305,3 +305,19 @@ et:
       PaperPlanes_2019:
         title: 'Päris elu algoritmid: paberlennukid'
         desc: Selles õppetunnis näidatakse paberlennukite tegemise näitel seda, kuidas kasutame algoritme igapäevases elus. Lisaks käsitletakse selles arvutiteadust üldisemalt ja algoritmide suurt tähtsust.
+      PlantASeed_2019:
+        title: 'Päris elu algoritmid: Seemenda'
+        desc: Selles õppetunnis näidatakse seemendamise näitel seda, kuidas kasutame algoritme igapäevases elus. Lisaks käsitletakse selles arvutiteadust üldisemalt ja algoritmide suurt tähtsust.
+      UnplugHappyMaps_2019:
+        title: Happy Maps
+        desc: Õpilased loovad lihtsaid algoritme (juhendite komplekte), et liigutada tegelast läbi labürindi kasutades ainult üht käsku.
+      GoingPlacesSafely_2019:
+        title: Läheb asukohta turvaliselt
+        desc: Internet on võimas, kuid vahest ka ohtlik koht. Õpetajad õpetavad, kuidas end Internetis surfates kaitsta.
+      courseA_unplugged_loops_2019:
+        desc: Selles õppetunnis õpid sa tundma tsükleid!
+      MoveItMoveIt_2019:
+        title: Liiguta, liiguta
+      DigitalFootprint_2019:
+        title: Sinu digitaalne jalajälg
+        desc: Õpetajad selgitavad õpilastele ideed, et enda kohta teabe jätmine Internetti jätab digitaalse jalajälje või "jälje", millel on tagajärjed.

@@ -341,7 +341,7 @@
   homepage_slot_text_link_donate: "Haga una donación"
   homepage_slot_text_link_shop: "Camisetas, sombreros y más"
   homepage_slot_text_link_administrators: "Lleva las ciencias de la computación a tu escuela"
-  homepage_header_codestudio: "Creaciones de alumnos de Code.org"
+  homepage_gallery_header: "Más de %{project_count} millones de proyectos de Code.org creados"
   homepage_header_donors: "Code.org agradece a sus colaboradores"
   homepage_donors_seall: "Ver todo"
   homepage_donors_donate: "Dona"
@@ -465,7 +465,7 @@
   video_title_cs_is_everything: "Las Ciencias de la Computación están cambiando todo"
   video_title_inspire_girl: "Inspira a una chica"
   video_title_cs_intro: "Introducción a las Ciencias de la Computación"
-  video_title_schools_dont_teach: "Lo Que La Mayoría De Las Escuelas No Enseña (5 min)"
+  video_title_schools_dont_teach: "Lo Que La Mayoría De Las Escuelas No Enseña"
   video_title_obama: "El Presidente Obama en ciencias de la computación"
   video_title_hoc_is_here: "La Hora del Código está aquí - Todos pueden aprender"
   video_title_anybody_can_learn: "Cualquiera puede aprender"
@@ -917,6 +917,9 @@
   coursed-2017_name: Curso D (2017)
   coursee-2017_name: Curso E (2017)
   coursef-2017_name: Curso F (2017)
+  coursea-2018_name: Curso A (2018)
+  coursec-2018_name: Curso C (2018)
+  coursed-2018_name: Curso D (2018)
   accelerated_name: "Curso acelerado"
   express_name: "Curso Express"
   pre-express_name: 'Curso Express pre-lectores:'
@@ -1170,13 +1173,13 @@
   coursef_shortdescription_congrats: "Aprende todos los conceptos de Fundamentos de ciencias de la computación y crea tu propio arte, historia o juego."
   coursea-2017_shortdescription_congrats: Una introducción a las ciencias de la computación para pre lectores.
   courseb-2017_shortdescription_congrats: Una introducción a las ciencias de la computación para pre lectores. (Similar al curso A pero con más variedad para estudiantes mas avanzados)
-  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las ciencias de la computación y crea tu propio arte, historias y juegos.
+  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
   coursed-2017_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee-2017_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso de C y D y luego ir más allá con funciones.
   coursef-2017_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de ciencias de la computación y crea tu propio arte, historia o juego.
   coursea-2018_shortdescription_congrats: Una introducción a las ciencias de la computación para pre lectores.
   courseb-2018_shortdescription_congrats: Una introducción a las ciencias de la computación para pre lectores. (Similar al curso A pero con más variedad para estudiantes mas avanzados)
-  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las ciencias de la computación y crea tu propio arte, historias y juegos.
+  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
   coursed-2018_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee-2018_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso de C y D y luego ir más allá con funciones.
   coursef-2018_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de ciencias de la computación y crea tu propio arte, historia o juego.
@@ -1505,7 +1508,6 @@
   applab_tile_subtitle: "Crea tu propia aplicación en JavaScript usando la programación en bloque. O aplica tus habilidades en el siguiente nivel con la programación basada en texto. (Sólo en inglés)"
   applab_tile_start_tutorial: "Inicio"
   applab_tile_teacher_guide: "Ver la guía del profesor"
-  aquatic_name: 'Minecraft: Udhëtimi ujor'
   account_sign_up_email_opt_in: "¿Podemos enviarle por correo electrónico actualizaciones de nuestros cursos, oportunidades en su zona u otras noticias sobre informática?"
   account_sign_up_child_accept_terms: "Confirmo que tengo la autorización de mis padres o guardianes legales para utilizar los servicios de Code.org."
   hoc_overview_dance_title: "Fiesta de baile"
@@ -1567,7 +1569,7 @@
   hoc2018_mc_video_title_cs_is_everything: "Las Ciencias de la Computación están cambiando todo"
   hoc2018_mc_video_title_inspire_girl: "Inspira a una chica"
   hoc2018_mc_video_title_cs_intro: "Introducción a las Ciencias de la Computación"
-  hoc2018_mc_video_title_schools_dont_teach: "Lo Que La Mayoría De Las Escuelas No Enseña (5 min)"
+  hoc2018_mc_video_title_schools_dont_teach: "Lo Que La Mayoría De Las Escuelas No Enseña"
   hoc2018_mc_video_title_obama: "El Presidente Obama en ciencias de la computación"
   hoc2018_mc_video_title_hoc_is_here: "La Hora del Código está aquí - Todos pueden aprender"
   hoc2018_mc_video_title_anybody_can_learn: "Cualquiera puede aprender"
@@ -1587,6 +1589,7 @@
   hoc2018_mc_short_description_shorter: "Use su creatividad y habilidades para resolver problemas para explorar y construir mundos bajo el agua con el código."
   hoc2018_mc_journey: "Viaje a través de Minecraft con el código."
   hoc2018_dance_party_main_heading: "Fiesta de baile"
+  hoc2018_dance_party_landing_title: "Bailar"
   hoc2018_dance_party_subheading: "Ayude a traducir Fiesta de Baile"
   hoc2018_dance_create_your_own_dance_title: "Crea tu propia fiesta del baile"
   hoc2018_dance_party_box_title: "Fiesta de baile"

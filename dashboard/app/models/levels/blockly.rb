@@ -117,7 +117,7 @@ class Blockly < Level
     super(level_hash.tap {|hash| hash['properties'].except!(*xml_blocks)})
   end
 
-  before_save :update_contained_levels
+  before_validation :update_contained_levels
 
   def update_contained_levels
     contained_level_names = properties["contained_level_names"]
@@ -280,18 +280,16 @@ class Blockly < Level
 
       # For historical reasons, `localized_instructions` and
       # `localized_authored_hints` should happen independent of `should_localize?`
-      # TODO: elijah: update these instructions values to new names once we
-      # migrate to the new keys
-      set_unless_nil(level_options, 'instructions', localized_short_instructions)
+      set_unless_nil(level_options, 'shortInstructions', localized_short_instructions)
       set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
 
       if should_localize?
         set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
 
         if script && !script.localize_long_instructions?
-          level_options.delete('markdownInstructions')
+          level_options.delete('longInstructions')
         else
-          set_unless_nil(level_options, 'markdownInstructions', localized_long_instructions)
+          set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
         end
         set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
 
@@ -462,7 +460,7 @@ class Blockly < Level
     else
       hints = JSON.parse(authored_hints).map do |hint|
         if hint['hint_video'].present?
-          hint['hint_video'] = Video.find_by_key(hint['hint_video']).summarize
+          hint['hint_video'] = Video.current_locale.find_by_key(hint['hint_video']).summarize
         end
         hint
       end

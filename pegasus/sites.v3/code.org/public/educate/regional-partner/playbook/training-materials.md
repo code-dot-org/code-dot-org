@@ -9,6 +9,7 @@ nav: regional_partner_playbook_nav
 
 ## Table of Contents
 - [Virtual Trainings](#virtual)
+- [Regional Partner Summit - Feb 2019](#feb19)
 - [Regional Partner Summit - Sept 2018](#sept18)
 - [Regional Partner Summit - Mar 2018](#mar18)
 - [Regional Partner Summit - Sept 2017](#sept17)
@@ -26,6 +27,7 @@ January 2019
 
 - January 9 Facilitator Application Tools Webinar ([Recording](https://code.zoom.us/recording/play/2n-IjhW8o7xCjYAGXY2BpMOx38v0SCA3bsd7tIc1AgLuvc1uNSr4nGNiZbitNcTI?startTime=1547064114000), [Slides](https://docs.google.com/presentation/d/1Bpsx8s3gP-ZUPi_DX-POoYRqT0V0tm8FAb772TJ7bTg/edit#slide=id.g14d6c3396a_0_0))
 - January 11 Facilitator Application Tools Webinar ([Recording](https://code.zoom.us/recording/share/_CtI7t0LlClt0aGOGRdMwyaFpnK_QhTvR7Cn0NzQ9MY), [Slides](https://docs.google.com/presentation/d/1Bpsx8s3gP-ZUPi_DX-POoYRqT0V0tm8FAb772TJ7bTg/edit#slide=id.g14d6c3396a_0_0))
+- January 23 Facilitator Interview Preparation ([Recording](https://code.zoom.us/recording/play/_kbC3EU3s8sHFBPeessecWvewQcZLofgK0dFZXzOFL2BU8SYM-gorH_WBj6vuXQ-?startTime=1548267193000))
 
 November 2018
 
@@ -162,6 +164,12 @@ January 2017:
 [**Back to the top**](#top)
 <br/>
 
+________________
+<a id="feb19"></a>
+<br/>
+
+## Regional Partner Summit (February 2019)
+- [Regional Partner Summit Digest](https://bit.ly/addisondigest)
 
 ________________
 <a id="sept18"></a>
@@ -169,9 +177,7 @@ ________________
 
 ## Regional Partner Summit (September 2018)
 
-- [Regional Partner Summit Resources](https://bit.ly/dallasdigest)
-- <a href="https://drive.google.com/file/d/1tESjpvPuryIMeCidrjrWNGOdYSiND0qn/view">Session Teasers</a>
-
+- [Regional Partner Summit Digest](https://bit.ly/dallasdigest)
 
 
 <a id="mar18"></a>
@@ -180,7 +186,7 @@ ________________
 ## Regional Partner Summit (March 2018)
 
 
-- [Regional Partner Summit Resources](http://bit.ly/marchsummit" target=_blank>bit.ly/marchsummit)
+- [Regional Partner Summit Resources](http://bit.ly/marchsummit)
 - [High Level Agenda](https://docs.google.com/document/d/1FH4zGhL-zrP5dP6KyLspZ5xWWAV1-ApLxWGavyw0Z2U/edit)
 
 [**Back to the top**](#top)

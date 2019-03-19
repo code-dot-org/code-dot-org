@@ -482,3 +482,22 @@ eu:
           bizitza errealean, espezifikoki paperezko hegazkinak egiterakoan. Lekzio
           honetan informatikaren irudi zabalagoa ikus dezakegu, eta nola algoritmoak
           diren bere zati esentzialetako bat.
+      PlantASeed_2019:
+        title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
+        desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun
+          azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren
+          ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
+      UnplugHappyMaps_2019:
+        title: Mapa Zoriontsuak
+        desc: Ikasleek algoritmo sinpleak sortuko dituzte pertsonai bat labirinto
+          baten barnean gidatuko dute komando bakar bat erabiliz.
+      GoingPlacesSafely_2019:
+        title: Joan segurtasunez
+        desc: Interneta oso boteretsua da, baina leku oso arriskutsua ere. Irakasleek
+          adieraziko dute nola nabigatu modu seguruan interneten.
+      MoveItMoveIt_2019:
+        title: Mugi ezazu, mugi ezazu!
+      DigitalFootprint_2019:
+        title: Zure aztarna digitala
+        desc: Irakasleek norberaren informazioaren aztarnat interneten uzteak izan
+          ditzakeen ondorioak zeintzuk izan daitezkeen azalduko die ikasleei.

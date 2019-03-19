@@ -145,7 +145,7 @@ module ProjectsList
           state: 'active'
         ).
         exclude(published_at: nil).
-        order(Sequel.lit('RAND()')).limit(24).all
+        order(Sequel.desc(:published_at)).limit(8).all.shuffle!
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
 

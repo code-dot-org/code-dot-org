@@ -299,3 +299,19 @@ id:
       PaperPlanes_2019:
         title: 'Algoritma kehidupan nyata: Pesawat Kertas'
         desc: Pelajaran ini mengajarkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma memainkan peranan yang amat penting.
+      PlantASeed_2019:
+        title: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
+        desc: Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, contohnya menanam benih. Ini juga berfokus pada gambaran yang lebih besar mengenai ilmu komputer dan bagaimana algoritma memainkan peran amat penting.
+      UnplugHappyMaps_2019:
+        title: Pemetaan bahagia
+        desc: Siswa membuat algoritma sederhana (beberapa set instruksi) untuk memindahkan karakter melalui labirin menggunakan perintah tunggal.
+      GoingPlacesSafely_2019:
+        title: Pergi ke tempat-tempat dengan aman
+        desc: Internet adalah sesuatu yang canggih, namun terkadang dapat menjadi tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat melakukan navigasi Internet.
+      courseA_unplugged_loops_2019:
+        desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
+      MoveItMoveIt_2019:
+        title: Gerakkan itu, Gerakkan itu
+      DigitalFootprint_2019:
+        title: Digital Footprint Kamu
+        desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang memiliki konsekuensi.

@@ -121,6 +121,27 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to script_path(script)
   end
 
+  test "student without pilot access will go to index" do
+    pilot_script = create :script, pilot_experiment: 'pilot-experiment'
+    section = create :section, script: pilot_script
+    student = create(:follower, section: section).student_user
+    sign_in student
+    get :index
+
+    assert_redirected_to '/home'
+  end
+
+  test "student with pilot access will go to pilot script" do
+    pilot_script = create :script, pilot_experiment: 'pilot-experiment'
+    pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
+    section = create :section, script: pilot_script, user: pilot_teacher
+    student = create(:follower, section: section).student_user
+    sign_in student
+    get :index
+
+    assert_redirected_to script_path(pilot_script)
+  end
+
   test "student with assigned course or script during account takeover will go to index" do
     student = create :student
     script = create :script

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:00:47.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -71,15 +67,26 @@
         ],
         "matchType": "exact",
         "minTimes": 2,
-        "message": "Did you run the program and veryify that you can toggle back and forth between the two screens?  We did not detect two calls to setScreen.  Do you have two event handlers? each with a call to setScreen that switches to the other screen?"
+        "message": "Did you run the program and verify that you can toggle back and forth between the two screens?  We did not detect two calls to setScreen.  Do you have two event handlers? each with a call to setScreen that switches to the other screen?"
       }
     ],
     "parent_level_id": 6742,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:00:47.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-01 20:05:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

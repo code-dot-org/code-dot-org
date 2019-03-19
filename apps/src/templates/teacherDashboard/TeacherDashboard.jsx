@@ -1,49 +1,115 @@
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router-dom';
-import TeacherDashboardNavigation from './TeacherDashboardNavigation';
+import {connect} from 'react-redux';
+import {TeacherDashboardPath} from './TeacherDashboardNavigation';
+import {getStudentCount} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import TeacherDashboardHeader from './TeacherDashboardHeader';
 import StatsTableWithData from './StatsTableWithData';
+import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
+import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
+import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
+import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
+import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
+import EmptySection from './EmptySection';
 
-export default class TeacherDashboard extends Component {
+class TeacherDashboard extends Component {
   static propTypes = {
-    sectionId: PropTypes.string,
-    studioUrlPrefix: PropTypes.string
+    studioUrlPrefix: PropTypes.string.isRequired,
+    pegasusUrlPrefix: PropTypes.string.isRequired,
+    sectionId: PropTypes.number.isRequired,
+    sectionName: PropTypes.string.isRequired,
+
+    // Provided by React router in parent.
+    location: PropTypes.object.isRequired,
+
+    // Provided by redux.
+    studentCount: PropTypes.number.isRequired
   };
 
   render() {
-    const {sectionId, studioUrlPrefix} = this.props;
+    const {
+      location,
+      studioUrlPrefix,
+      pegasusUrlPrefix,
+      sectionId,
+      sectionName,
+      studentCount
+    } = this.props;
+
+    // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
+    const emptyOrInvalidPath = !Object.values(TeacherDashboardPath).includes(
+      location.pathname
+    );
+    if (emptyOrInvalidPath && studentCount === 0) {
+      // Default to the Manage Students tab if section has 0 students.
+      location.pathname = TeacherDashboardPath.manageStudents;
+    } else if (emptyOrInvalidPath) {
+      // Default to the Progress tab if section otherwise.
+      location.pathname = TeacherDashboardPath.progress;
+    }
+
+    // Include header components unless we are on the /login_info page.
+    const includeHeader = location.pathname !== TeacherDashboardPath.loginInfo;
 
     return (
       <div>
-        <TeacherDashboardNavigation/>
+        {includeHeader && <TeacherDashboardHeader sectionName={sectionName} />}
         <Switch>
           <Route
-            path="/stats"
-            component={props => <StatsTableWithData/>}
+            path={TeacherDashboardPath.manageStudents}
+            component={props => (
+              <ManageStudents
+                studioUrlPrefix={studioUrlPrefix}
+                pegasusUrlPrefix={pegasusUrlPrefix}
+              />
+            )}
           />
           <Route
-            path="/progress"
-            component={props => <div>Progress content goes here!</div>}
+            path={TeacherDashboardPath.loginInfo}
+            component={props => (
+              <SectionLoginInfo
+                studioUrlPrefix={studioUrlPrefix}
+                pegasusUrlPrefix={pegasusUrlPrefix}
+              />
+            )}
+          />
+          {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
+          {studentCount === 0 && (
+            <Route
+              component={props => <EmptySection sectionId={sectionId} />}
+            />
+          )}
+          <Route
+            path={TeacherDashboardPath.progress}
+            component={props => <SectionProgress />}
           />
           <Route
-            path="/manage_students"
-            component={props => <div>Manage Students content goes here!</div>}
+            path={TeacherDashboardPath.textResponses}
+            component={props => <TextResponses />}
           />
           <Route
-            path="/projects"
-            component={props => <SectionProjectsListWithData {...props} sectionId={sectionId} studioUrlPrefix={studioUrlPrefix}/>}
+            path={TeacherDashboardPath.assessments}
+            component={props => <SectionAssessments />}
           />
           <Route
-            path="/text_responses"
-            component={props => <div>Text responses content goes here!</div>}
+            path={TeacherDashboardPath.projects}
+            component={props => (
+              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+            )}
           />
           <Route
-            path="/assessments"
-            component={props => <div>Assessments/Surveys content goes here!</div>}
+            path={TeacherDashboardPath.stats}
+            component={props => <StatsTableWithData />}
           />
-          <Route component={props => <div>Progress content goes here - default for now.</div>} />
         </Switch>
       </div>
     );
   }
 }
+
+export const UnconnectedTeacherDashboard = TeacherDashboard;
+export default connect(state => ({
+  studentCount: getStudentCount(state)
+}))(TeacherDashboard);

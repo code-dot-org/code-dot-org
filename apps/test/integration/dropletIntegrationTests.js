@@ -1,20 +1,30 @@
 import {assert, expect} from '../util/configuredChai';
 import * as dropletUtils from '@cdo/apps/dropletUtils';
-import {singleton as studioApp, stubStudioApp, restoreStudioApp} from '@cdo/apps/StudioApp';
-import loadSource from "./util/loadSource";
+import {
+  singleton as studioApp,
+  stubStudioApp,
+  restoreStudioApp
+} from '@cdo/apps/StudioApp';
+import loadSource from './util/loadSource';
 
 describe('setParamAtIndex', () => {
   let editor, parser, plainTree, arrayTree;
 
-  before(function () {
+  before(function() {
     // Load droplet sources.
     return loadSource('/base/lib/ace/src-noconflict/ace.js')
-    .then(function () { return loadSource('/base/lib/ace/src-noconflict/mode-javascript.js'); })
-    .then(function () { return loadSource('/base/lib/ace/src-noconflict/ext-language_tools.js'); })
-    .then(function () { return loadSource('/base/lib/droplet/droplet-full.js'); })
-    .then(function () {
-      assert(window.droplet, 'droplet in global namespace');
-    });
+      .then(function() {
+        return loadSource('/base/lib/ace/src-noconflict/mode-javascript.js');
+      })
+      .then(function() {
+        return loadSource('/base/lib/ace/src-noconflict/ext-language_tools.js');
+      })
+      .then(function() {
+        return loadSource('/base/lib/droplet/droplet-full.js');
+      })
+      .then(function() {
+        assert(window.droplet, 'droplet in global namespace');
+      });
   });
 
   beforeEach(stubStudioApp);
@@ -26,7 +36,7 @@ describe('setParamAtIndex', () => {
     dropletCodeTextbox.setAttribute('id', 'dropletCodeTextbox');
     editor = new window.droplet.Editor(dropletCodeTextbox, {
       mode: 'javascript',
-      palette: [],
+      palette: []
     });
 
     studioApp().editor = editor;
@@ -49,12 +59,14 @@ describe('setParamAtIndex', () => {
 
   it('sets the third parameter', () => {
     dropletUtils.setParamAtIndex(2, 'updated', plainTree);
-    expect(plainTree.stringify()).to.equal("setProperty(obj, updated, 100);");
+    expect(plainTree.stringify()).to.equal('setProperty(obj, updated, 100);');
   });
 
   it('sets the second parameter when the first parameter is an array lookup', () => {
     dropletUtils.setParamAtIndex(2, 'updated', arrayTree);
-    expect(arrayTree.stringify()).to.equal("setProperty(arr[i], updated, 100);");
+    expect(arrayTree.stringify()).to.equal(
+      'setProperty(arr[i], updated, 100);'
+    );
   });
 
   it('does not modify sockets beyond the parameter requested when starting in a socket', () => {

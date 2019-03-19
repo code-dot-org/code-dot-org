@@ -144,6 +144,11 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': وقتی
+            '"while"': '"while"'
       gamelab_debugSprite:
         options:
           VAL:
@@ -153,6 +158,22 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': وقتی
+            '"while"': '"while"'
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+            '"x"': طول (x)
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': در هم
       gamelab_locationDelta:
         options:
           DIR:
@@ -166,6 +187,10 @@ fa:
         text: رنگ تصادفی
       gamelab_randomColor:
         text: رنگ تصادفی
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شهر
       gamelab_setPosition:
         options:
           POSITION:
@@ -179,6 +204,11 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': وقتی
+            '"while"': '"while"'
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -300,14 +330,49 @@ fa:
         text: بپیچ به چپ
       RyanLab_turnRight:
         text: بپیچ به راست
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': اندازه
-      aalab_spritesWhere:
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': وقتی
+            '"while"': '"while"'
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': وقتی
+            '"while"': '"while"'
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': وقتی
+            '"while"': '"while"'
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شهر
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': صحیح
+            '"false"': غلط
+      aalab_setProp:
         options:
           PROPERTY:
             '"scale"': اندازه
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': نشان می دهد
+            '"hide"': پنهان کردن
       binary_move:
         options:
           DIR:

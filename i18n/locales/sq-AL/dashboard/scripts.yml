@@ -1436,6 +1436,8 @@ sq:
               name: Crowdsourcing
             Relay Programming:
               name: Programimi i Besuar
+            Graph Paper Programming:
+              name: Programimi Grafik me Letër
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1566,6 +1568,10 @@ sq:
               name: Qef me Ciklet For
             The Artist:
               name: Artisti
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         coursed-2019:
           stages:
             Relay Programming:
@@ -1624,3 +1630,59 @@ sq:
               name: 'Algoritmet e Jetës-Reale: Planet në Letër'
             Binary Bracelets:
               name: Byzylykët Binarë
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
+            Going Places Safely:
+              name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Lëvize atë, lëvize atë
+            Your Digital Footprint:
+              name: Gjurmët e Tua Dixhitale
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Lëvize atë, lëvize atë
+            Your Digital Footprint:
+              name: Gjurmët e Tua Dixhitale
+            Spelling Bee:
+              name: Bleta Gërmëzuese
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Listat
+        csd3-2019:
+          stages:
+            Variables:
+              name: variabla
+            Conditionals:
+              name: Kushtet
+            Functions:
+              name: funksione
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funksionet me parametra
+        csp1-2019:
+          stages:
+            Personal Innovations:
+              name: Inovacionet Personale
+            Number Systems:
+              name: Sistemi Numerik
+            The Internet:
+              name: Interneti
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Krijimi i Funksioneve
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Përsëritjet Ndërsa

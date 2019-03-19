@@ -1,4 +1,4 @@
-import { assert, expect } from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/configuredChai';
 import sectionProgress, {
   setCurrentView,
   ViewType,
@@ -11,7 +11,7 @@ import sectionProgress, {
   getStudentPairing,
   getStudentLevelResult,
   getCurrentProgress,
-  getCurrentScriptData,
+  getCurrentScriptData
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
@@ -30,7 +30,7 @@ const fakeSectionData = {
   ],
   script: {
     id: 300,
-    name: 'csp2',
+    name: 'csp2'
   }
 };
 
@@ -39,10 +39,7 @@ const fakeScriptData789 = {
   excludeCsfColumnInLegend: false,
   title: 'Title 789',
   path: '/',
-  stages: [
-    {id: 1, levels: []},
-    {id: 2, levels: []},
-  ],
+  stages: [{id: 1, levels: []}, {id: 2, levels: []}]
 };
 
 const fakeScriptData456 = {
@@ -50,15 +47,12 @@ const fakeScriptData456 = {
   excludeCsfColumnInLegend: false,
   title: 'Title 456',
   path: '/',
-  stages: [
-    {id: 3, levels: []},
-    {id: 4, levels: []},
-  ],
+  stages: [{id: 3, levels: []}, {id: 4, levels: []}]
 };
 
 const fakeStudentProgress = {
   1: {242: 1001, 243: 1000},
-  2: {242: 1000, 243: 1000},
+  2: {242: 1000, 243: 1000}
 };
 
 const lessonOfInterest = 16;
@@ -95,7 +89,10 @@ describe('sectionProgressRedux', () => {
     });
 
     it('finishLoadingProgress sets isLoadingProgress to false', () => {
-      const nextState = sectionProgress({isLoadingProgress: true}, finishLoadingProgress());
+      const nextState = sectionProgress(
+        {isLoadingProgress: true},
+        finishLoadingProgress()
+      );
       assert.deepEqual(nextState.isLoadingProgress, false);
     });
   });
@@ -143,8 +140,14 @@ describe('sectionProgressRedux', () => {
     function isInvalidInput(input) {
       expect(() => {
         addStudentLevelPairing(130, input);
-      }).to.throw(undefined, undefined, `
-        Expected input ${JSON.stringify(input)} to be rejected as invalid, but it was accepted`);
+      }).to.throw(
+        undefined,
+        undefined,
+        `
+        Expected input ${JSON.stringify(
+          input
+        )} to be rejected as invalid, but it was accepted`
+      );
     }
 
     it('no students is valid', () => {
@@ -168,10 +171,10 @@ describe('sectionProgressRedux', () => {
     it('students with progress, who did pair are valid', () => {
       isValidInput({
         377: {
-          5336: true,
+          5336: true
         },
         378: {
-          5336: true,
+          5336: true
         }
       });
     });
@@ -197,46 +200,57 @@ describe('sectionProgressRedux', () => {
     it('adds multiple scriptData info', () => {
       const action = addStudentLevelProgress(130, fakeStudentProgress);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.studentLevelProgressByScript[130], fakeStudentProgress);
+      assert.deepEqual(
+        nextState.studentLevelProgressByScript[130],
+        fakeStudentProgress
+      );
 
       const action2 = addStudentLevelProgress(132, {
         ...fakeStudentProgress,
-        3: {},
+        3: {}
       });
       const nextState2 = sectionProgress(nextState, action2);
-      assert.deepEqual(nextState2.studentLevelProgressByScript[130], fakeStudentProgress);
+      assert.deepEqual(
+        nextState2.studentLevelProgressByScript[130],
+        fakeStudentProgress
+      );
       assert.deepEqual(nextState2.studentLevelProgressByScript[132], {
         ...fakeStudentProgress,
-        3: {},
+        3: {}
       });
 
-      const action3 = addStudentLevelProgress(132, { 4: {} });
+      const action3 = addStudentLevelProgress(132, {4: {}});
       const nextState3 = sectionProgress(nextState2, action3);
-      assert.deepEqual(nextState2.studentLevelProgressByScript[130], fakeStudentProgress);
+      assert.deepEqual(
+        nextState2.studentLevelProgressByScript[130],
+        fakeStudentProgress
+      );
       assert.deepEqual(nextState3.studentLevelProgressByScript[132], {
         ...fakeStudentProgress,
         3: {},
-        4: {},
+        4: {}
       });
     });
   });
 
   describe('getStudentPairing', () => {
     it('plucks paired value from object', () => {
-      expect(getStudentPairing({
-        377: {
-          5336: {
-            status: 'perfect',
-            result: 31,
-            paired: true,
-          },
-          5337: {
-            status: 'perfect',
-            result: 31,
-            paired: false,
+      expect(
+        getStudentPairing({
+          377: {
+            5336: {
+              status: 'perfect',
+              result: 31,
+              paired: true
+            },
+            5337: {
+              status: 'perfect',
+              result: 31,
+              paired: false
+            }
           }
-        }
-      })).to.deep.equal({
+        })
+      ).to.deep.equal({
         377: {
           5336: true,
           5337: false
@@ -252,11 +266,13 @@ describe('sectionProgressRedux', () => {
         sectionProgress: {
           studentLevelProgressByScript: {
             123: 'fake progress 1',
-            456: 'fake progress 2',
+            456: 'fake progress 2'
           }
         }
       };
-      expect(getCurrentProgress(stateWithProgress)).to.deep.equal('fake progress 1');
+      expect(getCurrentProgress(stateWithProgress)).to.deep.equal(
+        'fake progress 1'
+      );
     });
   });
 
@@ -269,22 +285,25 @@ describe('sectionProgressRedux', () => {
             123: {
               stages: [
                 {
-                  levels: [{
-                    url: 'url',
-                    name: 'name',
-                    progression: 'progression',
-                    kind: 'assessment',
-                    icon: 'fa-computer',
-                    is_concept_level: false,
-                    title: 'hello world'
-                  }]
+                  levels: [
+                    {
+                      url: 'url',
+                      name: 'name',
+                      progression: 'progression',
+                      kind: 'assessment',
+                      icon: 'fa-computer',
+                      is_concept_level: false,
+                      title: 'hello world',
+                      bonus: false
+                    }
+                  ]
                 }
               ]
             }
-          },
-        },
+          }
+        }
       };
-      expect((getCurrentScriptData(stateWithScript))).to.deep.equal({
+      expect(getCurrentScriptData(stateWithScript)).to.deep.equal({
         stages: [
           {
             levels: [
@@ -296,7 +315,8 @@ describe('sectionProgressRedux', () => {
                 levelNumber: 'hello world',
                 name: 'name',
                 progression: 'progression',
-                url: 'url'
+                url: 'url',
+                bonus: false
               }
             ]
           }
@@ -307,20 +327,22 @@ describe('sectionProgressRedux', () => {
 
   describe('getStudentLevelResult', () => {
     it('plucks level result value from object', () => {
-      expect(getStudentLevelResult({
-        377: {
-          5336: {
-            status: 'perfect',
-            result: 31,
-            paired: true,
-          },
-          5337: {
-            status: 'perfect',
-            result: 31,
-            paired: false,
+      expect(
+        getStudentLevelResult({
+          377: {
+            5336: {
+              status: 'perfect',
+              result: 31,
+              paired: true
+            },
+            5337: {
+              status: 'perfect',
+              result: 31,
+              paired: false
+            }
           }
-        }
-      })).to.deep.equal({
+        })
+      ).to.deep.equal({
         377: {
           5336: 31,
           5337: 31

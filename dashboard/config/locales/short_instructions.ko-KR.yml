@@ -668,6 +668,9 @@ ko:
       CSPU5_U3L15 full clicker app_2018: |-
         클리커 게임을 끝내세요
         (힌트를 보려면 여기를 눌러보세요)
+      CSPU5_U3L15 full clicker app_2019: |-
+        클리커 게임을 끝내세요
+        (힌트를 보려면 여기를 눌러보세요)
       Course 2 Bee Loops 1: "안녕하세요! 여러분? 저는 꿀벌입니다.\n이 꽃들로부터 꽃꿀을 모을 수 있게 도와주세요. "
       Course 2 Maze Loops 1: 5 개의 블록들만 사용해서 돼지로 이동시켜 주세요.
       Course 4 2: 꿀벌이 꽃꿀을 모으고 있습니다. 꽃들에서만 꽃꿀을 모을 수 있게 해 주세요.
@@ -1166,6 +1169,25 @@ ko:
       Course E MC Conditionals1: 가장 귀중한 자원은 땅속에서 찾을 수 있어요. 하지만, 땅속은 어두울 수 있지요. 횃불을
         2개 이상 놓고 석탄을 2개 이상 채굴하세요.
       Course1BeePuzzle12: 꽃꿀을 3개 모은 후, 2개의 꿀을 만들어보세요.
+      CourseD_Dance_Party_01: "‘새로 만들기’ 블록을 작업공간에 드래그하고, ‘설정’ 블록 안에서 연결하세요."
+      CourseD_Dance_Party_02: 4번째 마디 후 사슴이 새로운 움직임을 시작하도록 하세요!
+      CourseD_Dance_Party_03: 이제 댄서가 6번째 마디 후 새로운 움직임을 시작하도록 하세요!
+      CourseD_Dance_Party_04: 프로그램 배경 효과를 추가하세요.
+      CourseD_Dance_Party_05: 다른 새로운 블록을 사용하여 댄서가 두 마디마다 움직임을 변경하도록 하세요.
+      CourseD_Dance_Party_06: 고양이와 함께 춤을 추는 'backup_dancer1'라는 백업 댄서를 만드세요.
+      CourseD_Dance_Party_08: 두 백업 댄서를 모두 같은 크기로 만들 수 있나요?
+      CourseD_Dance_Party_09: 댄서의 색상을 변경하려면 `색조 설정` 블록을 사용하세요.
+      CourseD_Dance_Party_10: "`따라하기 시작` 블록을 사용하여 다른 댄서도 음악에 맞춰 반응하도록 하세요."
+      CourseD_Dance_Party_11: "‘위쪽 누를 때’ 블록을 사용하면 위쪽 화살표를 눌러서 코드를 실행할 수 있습니다. 위쪽 화살표를
+        누를 때 댄서가 빠른 움직임을 하도록 하세요."
+      CourseD_Dance_Party_11_5: '"모든 오리" 블록을 사용하여 오리들이 함께 춤을 추도록 하세요.'
+      CourseD_Dance_Party_11b: 오른쪽 화살표 키를 누를 때 로봇이 "드롭"하도록 하고, 위쪽 화살표 키를 누를 때 “플로스”하게
+        하세요. 드롭-플로스를 최대한 빨리해보세요!
+      CourseD_Dance_Party_12: 이제 리듬을 타보세요! 자신만의 댄스를 만들어 친구와 공유하세요.
+      CourseE_HOC 2018 Level_10: 이 바다 유적의 입구에 가세요.
+      CourseE_HOC 2018 Level_11: 바다 유적 안에 프리즈머린으로 도관을 만드세요.
+      CourseE_HOC 2018 Level_7a: 이 수중 유적을 탐색해서 상자를 찾으세요.
+      CourseE_HOC 2018 Level_9b: 산호를 보물에 도달하기 위한 경유지로 사용하세요.
       CourseF_PlayLab_vars10: "자유롭게 만들어보세요! 여기에는 지금까지 이 과정에서 사용했던 모든 변수들이 모두 있고,\r\n필요한
         몇 가지가 더 있습니다.\r\n\r\n도구 상자에 블록들이 아주 많은데 적당히 분류해야할 것 같습니다!\n이제, 각 블록들을 적당한
         카테고리로 묶어 두었습니다. 블록들을 충분히 살펴보세요.\n다 살펴본 이후에 반복 구조, 변수, 이벤트를 이용해 게임이나 이야기를 만들어보세요.
@@ -1198,8 +1220,10 @@ ko:
         10 부터 0 까지 포인트를 내려서 이 레벨을 통과해보세요.
       Crack Random Substitution: 소개
       Crack Random Substitution_2018: 소개
+      Crack Random Substitution_2019: 소개
       Crack a Caesar Cipher: 소개
       Crack a Caesar Cipher_2018: 소개
+      Crack a Caesar Cipher_2019: 소개
       Dance_Party_01: "‘새로 만들기’ 블록을 작업공간에 드래그하고, ‘설정’ 블록 안에서 연결하세요."
       Dance_Party_01_low: "‘새로 만들기’ 블록을 작업공간에 드래그하고, ‘설정’ 블록 안에서 연결하세요."
       Dance_Party_02: 4번째 마디 후 사슴이 새로운 움직임을 시작하도록 하세요!
@@ -1733,6 +1757,7 @@ ko:
       Ryan Test Locked Blocks: |-
         "순찰" 함수가 있습니다.
         함수를 수정해서 고양이가 400 픽셀 위로 이동 했다가, 다시 400 픽셀 아래로 이동하게 해보세요.
+      Ryan_Demo: 4번째 마디 후 사슴이 새로운 움직임을 시작하도록 하세요!
       SpecialFrozenLevel: 여러분은 이제 진짜 화가가 된 것 같아요! 겨울왕국을 만들어 보세요.
       Standalone_Artist_1: |-
         화가 퍼즐에 오신 것을 환영합니다.
@@ -1765,6 +1790,7 @@ ko:
         \r\n\"메우기\" 블록을 사용하여 구덩이가 다 메워질 때까지 계속 흙을 채우는 프로그램을 작성해 보세요.  "
       The Vigenere Cipher Widget: 소개
       The Vigenere Cipher Widget_2018: 소개
+      The Vigenere Cipher Widget_2019: 소개
       The Vigenere Cipher: 소개
       Total Artist Clone Me: |-
         자유 플레이: 여기 여러분들이 작성한 함수들과 가지고 놀 수 있는 몇 개의 함수가 더 있습니다.
@@ -1778,6 +1804,7 @@ ko:
       U4 vigenere cipher 2: 소개
       U4L02 - Objects - Template1: 템플릿
       U4L02 - Objects - Template1_2018: 템플릿
+      U4L02 - Objects - Template1_2019: 템플릿
       Underground Avoiding Lava: 이 블록들 아래에 용암이 숨어있습니다. 앞으로 이동하기 전에 덮어야 해요. "if"(만약)
         명령은 여기서 유용할 거에요. 올바른 곳에 "앞으로 이동" 명령을 더해서 이 블록을 채굴하세요.
       Underground Avoiding Lava_2018: 이 블록들 아래에 용암이 숨어있습니다. 앞으로 이동하기 전에 덮어야 해요. "if"(만약)

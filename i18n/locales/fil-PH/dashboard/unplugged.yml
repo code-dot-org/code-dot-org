@@ -292,6 +292,8 @@ fil:
       BinaryImages_2019:
         title: Binary na mga Larawan
         desc: Kahit karamihan sa mga tao ay nag-iisip sa binary bilang zeros at ones lang, ang ating nakaraan mga kurso ay nagtuturo sa mga estudyante na ang impormasyon ay maaaring irepresenta sa iba't ibang mga opsyon sa binary. Ang araling ito ay gumagamit sa konseptong ito habang ipinapakita kung paano ang kompyuter nagtatago ng mas komplikadong mga impormasyon (gaya ng mga larawan at mga kulay) pati na rin sa binary.
+      courseE_unplugged_privateInformation_2019:
+        title: Pribado at Personal na Impormasyon
       GettingLoopy_2019:
         title: Pagiging Loopy
         desc: Ang araling ito ay nagpapakila ng isang pang-program na konsepto ng mga loops (inuulit na mga utos) sa pamamagitan ng isang sayaw na gawain. Ang mga estudyante ay matutuo ng isang simpleng koreograpiya, at pagkatapos ay tuturan na ulitin ito.
@@ -307,3 +309,20 @@ fil:
       PaperPlanes_2019:
         title: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
         desc: Ang araling ito ay nagpapahiwatig ng mga pamamaraan na ginagamit natin ang mga algorithmo sa ating pang-araw-araw na buhay, espesipiko ang paggawa ng mga papel na eroplano. Ang araling ito ay nagbigay tuon sa buong larawan ng computer science at kung paano ang mga algoritmo nagdadala ng mga mahahalagang bahagi.
+      PlantASeed_2019:
+        title: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
+        desc: Ang araling ito ay nagpapahiwatig sa mga pamamaraan na gumamit tayo ng mga algoritmo sa ating pang-araw-araw na buhay, gamit ang pagtatanim ng buto bilang halimbawa. Ito ay nagpapakita din sa buong larawan ng computer science at kung paano ang algoritmo nagdadala ng mga mahalagang bahagi.
+      UnplugHappyMaps_2019:
+        title: Happy Maps
+        desc: Ang mga estudyante ay lilikha ng mga simpleng algoritmo (grupo ng mga instruksiyon) para mapagalaw ang karakter sa maze gamit ang isang utos.
+      GoingPlacesSafely_2019:
+        title: Matiwasay na pagpunta sa mga lugar
+        desc: Ang Internet ay makapangyarihan, ngunit kung minsan ay mapanganib na lugar. Ang mg guro ay nagbibigay ng payo kung paano maging ligtas habang nagbabaybay sa Internet.
+      courseA_unplugged_loops_2019:
+        title: Naka-Unplug na mga Loop
+        desc: Sa araling ito, matutunan mo ang tungkol sa mga loops!
+      MoveItMoveIt_2019:
+        title: Galawin ito, Galawin ito
+      DigitalFootprint_2019:
+        title: Ang Iyong Digital na Bakas
+        desc: Ang mga guro ay magpapakilala sa mga estudyante ng ideya na paglagay ng impormasyon tungkol sa kanilang mga sarili online ay lilikha ng isang digital na yapak o "bakas" na mayroong kahihinatnan.

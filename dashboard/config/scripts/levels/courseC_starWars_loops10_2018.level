@@ -43,7 +43,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.\",\"hint_id\":\"courseC_starWars_loops10_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2320034e9e439edd88ec81c953cfa9ec/courseC_starWars_loops10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you want to use less code, you can put one `repeat` loop inside of another!   \\nThis is called a **nested loop**.\",\"hint_id\":\"courseC_starWars_loops10_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8e19e1fc82a66571deb5ae7102097f2d/courseC_starWars_loops10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.\",\"hint_id\":\"courseC_starWars_loops10_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5dbc8a441cfe78f9f41366345e6db629/courseC_starWars_loops10.mp3\"}]",
     "step_speed": "3",
     "short_instructions": "You are doing great! Keep it up!",
-    "tts_markdown_instructions_override": "You are doing great! Keep it up!",
+    "tts_long_instructions_override": "You are doing great! Keep it up!",
     "long_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\r\n _\"Go BB-8!\"_\r\n\r\nYou are doing great! Keep it up!",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",

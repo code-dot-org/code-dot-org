@@ -625,6 +625,11 @@ cs:
             '"x"': souřadnice X
             '"y"': souřadnice Y
             '"direction"': směr pohybu
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': když
+            '"while"': dokud
       gamelab_createNewSprite:
         text: "vytvořit novou postavu \n nazvanou {NAME} \n s kostýmem {COSTUME} \n
           kde {LOCATION}"
@@ -645,6 +650,48 @@ cs:
             '"tint"': odstín
       gamelab_jumpTo:
         text: "{SPRITE} skoč na {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': když
+            '"while"': dokud
+          KEY:
+            '"up"': nahoru
+            '"down"': dolů
+            '"left"': vlevo
+            '"right"': vpravo
+            '"space"': vesmír
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': hranice
+            '"inner"': vnitřní čtverec
+            '"circle"': kruh
+            '"grid"': mřížka
+            '"row"': řádek
+            '"column"': sloupec
+            '"x"': křížem krážem
+            '"plus"': plus
+            '"random"': náhodně
       gamelab_locationDelta:
         options:
           DIR:
@@ -666,6 +713,10 @@ cs:
         text: postava {SPRITE} zastaví {BEHAVIOR}
       gamelab_setBackground:
         text: nastavit barvu pozadí {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': město
       gamelab_setPosition:
         text: přesunout {THIS} na pozici {POSITION}
         options:
@@ -698,6 +749,11 @@ cs:
             '"height"': výška
       gamelab_setup:
         text: nastavení
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': když
+            '"while"': dokud
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -935,7 +991,8 @@ cs:
         text: otočit vpravo
       Vector_positionCenter:
         text: uprostřed
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
+        text: změnit {SPRITE} {PROPERTY} o {VAL}
         options:
           PROPERTY:
             '"scale"': velikost
@@ -943,14 +1000,56 @@ cs:
             '"x"': souřadnice X
             '"y"': souřadnice Y
             '"direction"': směr pohybu
-      aalab_spritesWhere:
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': když
+            '"while"': dokud
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': když
+            '"while"': dokud
+      aalab_jumpTo:
+        text: "{SPRITE} skoč na {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': když
+            '"while"': dokud
+          KEY:
+            '"up"': nahoru
+            '"down"': dolů
+            '"left"': vlevo
+            '"right"': vpravo
+            '"space"': vesmír
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': město
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': pravda
+            '"false"': záporné
+      aalab_setProp:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"rotation"': otočení
             '"x"': souřadnice X
             '"y"': souřadnice Y
             '"direction"': směr pohybu
             '"tint"': odstín
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': navždy
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': zobrazit
+            '"hide"': skrýt
       binary_move:
         options:
           DIR:

@@ -914,26 +914,37 @@ fr:
         affichent true
       CSD U3 Boolean Modify_2018: Modifier le code pour que toutes les commandes console.log
         affichent true
+      CSD U3 Boolean Modify_2019: Modifier le code pour que toutes les commandes console.log
+        affichent true
       CSD U3 Keypress Boolean-2018: Modifier le code pour que toutes les commandes
         console.log affichent true
       CSD U3 Keypress Boolean: Modifier le code pour que toutes les commandes console.log
         affichent true
       CSD U3 Keypress Boolean_2018: Modifier le code pour que toutes les commandes
         console.log affichent true
+      CSD U3 Keypress Boolean_2018_2019: Modifier le code pour que toutes les commandes
+        console.log affichent true
       CSD U3 Keypress Watchers: Modifier le code pour que toutes les commandes console.log
         affichent true
       CSD U3 Keypress Watchers_2018: Modifier le code pour que toutes les commandes
+        console.log affichent true
+      CSD U3 Keypress Watchers_2019: Modifier le code pour que toutes les commandes
         console.log affichent true
       CSD U5 black white images pixelation 2: Dessine un visage de smiley (clique
         ici pour voir l'image)
       CSD U5 black white images pixelation 2_2018: Dessine un visage de smiley (clique
         ici pour voir l'image)
+      CSD U5 black white images pixelation 2_2019: Dessine un visage de smiley (clique
+        ici pour voir l'image)
       CSD U5 black white images pixelation 4: Ajoute des sourcils au visage du smiley
         (clique ici pour voir l'image)
       CSD U5 black white images pixelation 4_2018: Ajoute des sourcils au visage du
         smiley (clique ici pour voir l'image)
+      CSD U5 black white images pixelation 4_2019: Ajoute des sourcils au visage du
+        smiley (clique ici pour voir l'image)
       CSD U5 black white images pixelation 5: Dessine ce que tu veux
       CSD U5 black white images pixelation 5_2018: Dessine ce que tu veux
+      CSD U5 black white images pixelation 5_2019: Dessine ce que tu veux
       CSDU4 - Design Mode - 1: "Ajoute un bouton qui déplace la tortue quand on clique
         dessus. \n(Cliquer pour voir les instructions complètes)"
       CSP student contact info: Veuillez saisir votre adresse mail.
@@ -1640,6 +1651,41 @@ fr:
         mais il fait sombre là-dessous. Placez au moins 2 torches et minez au moins
         2 blocs de charbon.
       Course1BeePuzzle12: Recueille trois nectars et fabrique ensuite deux miels
+      CourseD_Dance_Party_01: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace
+        de travail et connectez-le à l'intérieur du bloc « configuration ».
+      CourseD_Dance_Party_02: Faites que l'orignal commence un nouveau mouvement après
+        4 mesures !
+      CourseD_Dance_Party_03: Maintenant, demandez au danseur de commencer un nouveau
+        mouvement après 6 mesures !
+      CourseD_Dance_Party_04: Ajoutez un effet de fond à votre programme.
+      CourseD_Dance_Party_05: Utilisez un autre nouveau bloc pour que le danseur change
+        de mouvement toutes les 2 mesures.
+      CourseD_Dance_Party_06: Créez un danseur de sauvegarde appelé « backup_dancer1
+        » pour danser avec le chat.
+      CourseD_Dance_Party_08: Pouvez-vous donner la même taille aux deux danseurs
+        de sauvegarde ?
+      CourseD_Dance_Party_09: Utilisez le bloc « définir la nuance » pour changer
+        la couleur d'un danseur.
+      CourseD_Dance_Party_10: Demandez également à l’autre danseur de répondre à la
+        musique à l’aide du bloc « commencer à suivre ».
+      CourseD_Dance_Party_11: Le bloc « lorsqu’on appuie vers le haut » vous permet
+        d'exécuter un programme lorsque vous appuyez sur la flèche vers le haut. Essayez
+        de faire faire un mouvement rapide au danseur lorsque vous appuyez vers le
+        haut.
+      CourseD_Dance_Party_11_5: Utiliser les blocs « tous les canards » pour faire
+        danser les canards ensemble.
+      CourseD_Dance_Party_11b: Faites le Robot faire le « drop » une fois lorsque
+        vous appuyez sur la touche fléchée droite et faire le « floss » une fois lorsque
+        vous appuyez sur la touche fléchée haut. Réalisez le « drop-floss » aussi
+        vite que possible !
+      CourseD_Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager
+        avec vos amis.
+      CourseE_HOC 2018 Level_10: Atteignez l'entrée du monument sous-marin.
+      CourseE_HOC 2018 Level_11: Construisez un conduit avec de la prismarine dans
+        le monument sous-marin.
+      CourseE_HOC 2018 Level_7a: Explorez les ruines sous-marines à la recherche d'un
+        coffre.
+      CourseE_HOC 2018 Level_9b: Suivez le corail pour atteindre le trésor.
       CourseF_PlayLab_vars1: 'Pour jouer à ce jeu, tu n''as besoin d''écrire aucun
         code, juste d''appuyer sur "Run"! '
       CourseF_PlayLab_vars10: |-
@@ -1680,8 +1726,10 @@ fr:
         de 10 à 0 pour changer de niveau.
       Crack Random Substitution: Consignes
       Crack Random Substitution_2018: Consignes
+      Crack Random Substitution_2019: Consignes
       Crack a Caesar Cipher: Consignes
       Crack a Caesar Cipher_2018: Consignes
+      Crack a Caesar Cipher_2019: Consignes
       Dance_Party_01: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace
         de travail et connectez-le à l'intérieur du bloc « configuration ».
       Dance_Party_01_low: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace
@@ -2376,6 +2424,10 @@ fr:
         3x5. Le widget est configuré avec des dimensions incorrectes. Votre première
         tâche sera de remplir le second octet avec le code binaire sur 8 bits pour
         5: 0000 0101. Ensuite commencez à entrer les donnés de pixels.'
+      Pixelation - Lesson 14 - Make the Letter A_2019: 'Faire une lettre ''A'' de
+        3x5. Le widget est configuré avec des dimensions incorrectes. Votre première
+        tâche sera de remplir le second octet avec le code binaire sur 8 bits pour
+        5: 0000 0101. Ensuite commencez à entrer les donnés de pixels.'
       Quantum Bee: Les fleurs pourpres peuvent avoir 1 ou 0 nectar, mais tu ne sais
         pas lesquelles en ont! Veille à ne pas butiner une fleur pourpre si elle n'a
         pas de nectar. Vérifier si le nectar est égal à 1 à l'aide du bloc «Si».
@@ -2389,6 +2441,8 @@ fr:
       Ryan Test Locked Blocks: Voici une fonction appelée «Patrouille». Modifie-la
         pour déplacer le Chat vers le haut de 400 pixels, puis vers le bas de 400
         pixels.
+      Ryan_Demo: Faites que l'orignal commence un nouveau mouvement après 4 mesures
+        !
       SpecialFrozenLevel: Tu es officiellement devenu un artiste maître ! Crée un
         merveilleux paysage hivernal.
       Standalone_Artist_1: Bienvenue à l'Artiste ! Tout d'abord, nous allons essayer
@@ -2432,6 +2486,7 @@ fr:
         :  essaie d''utiliser la boucle «Tant que» cette fois.'
       The Vigenere Cipher Widget: Consignes
       The Vigenere Cipher Widget_2018: Consignes
+      The Vigenere Cipher Widget_2019: Consignes
       The Vigenere Cipher: Consignes
       Total Artist Clone Me: 'Activité libre : Voici les fonctions que tu as écrites,
         et même un peu plus pour que tu puisses jouer avec. Dessine quelque chose
@@ -2445,6 +2500,7 @@ fr:
       U4 vigenere cipher 2: Consignes
       U4L02 - Objects - Template1: Modèle
       U4L02 - Objects - Template1_2018: Modèle
+      U4L02 - Objects - Template1_2019: Modèle
       Underground Avoiding Lava: La lave se cache sous certains de ces blocs, que
         tu devras couvrir avant d'avancer. Une commande « Si » serait très utile ici.
         Ajoute une commande «Avancer» au bon endroit pour extraire ces blocs.
@@ -2694,28 +2750,42 @@ fr:
       courseA_artist_loops12_2018: |-
         L'artiste a vu quelque chose d'étrange
         au loin. Dessine ce que tu penses qu'il a vu.
+      courseA_artist_loops12_2019: |-
+        L'artiste a vu quelque chose d'étrange
+        au loin. Dessine ce que tu penses qu'il a vu.
       courseA_artist_loops7: Utilisez la boucle `repeat` pour ajouter des vagues dans
         l'eau.
       courseA_artist_loops7_2018: Utilisez la boucle `repeat` pour ajouter des vagues
+        dans l'eau.
+      courseA_artist_loops7_2019: Utilisez la boucle `repeat` pour ajouter des vagues
         dans l'eau.
       courseA_artist_loops7_forVideo: Utilisez la boucle `repeat` pour ajouter des
         vagues dans l'eau.
       courseA_artist_loops9: 'Défi : Réparer l’escalier.'
       courseA_artist_loops9_2018: 'Défi : Réparer l’escalier.'
+      courseA_artist_loops9_2019: 'Défi : Réparer l’escalier.'
       courseA_collector_loops1: Déplace Laurel et récupère autant de trésors que tu
         peux!
       courseA_collector_loops10: Aide Laurel à récupérer tous les trésors de cette
         vallée profonde.
       courseA_collector_loops10_2018: Aide Laurel à récupérer tous les trésors de
         cette vallée profonde.
+      courseA_collector_loops10_2019: Aide Laurel à récupérer tous les trésors de
+        cette vallée profonde.
       courseA_collector_loops11: Aide Laurel à récupérer tous les trésors de cette
         cave.
       courseA_collector_loops11_2018: Aide Laurel à récupérer tous les trésors de
         cette cave.
+      courseA_collector_loops11_2019: Aide Laurel à récupérer tous les trésors de
+        cette cave.
       courseA_collector_loops12: Eurêka !  Récupère autant de trésors que tu peux!
       courseA_collector_loops12_2018: Eurêka !  Récupère autant de trésors que tu
         peux!
+      courseA_collector_loops12_2019: Eurêka !  Récupère autant de trésors que tu
+        peux!
       courseA_collector_loops1_2018: Déplace Laurel et récupère autant de trésors
+        que tu peux!
+      courseA_collector_loops1_2019: Déplace Laurel et récupère autant de trésors
         que tu peux!
       courseA_collector_preLoops1: "This is Laurel the Adventurer!\n\r\n\r\nPress
         \"Run\" to see her walk up to the treasure and grab it."
@@ -2727,8 +2797,12 @@ fr:
         cave.
       courseB_collector_loops10_2018: Aide Laurel à récupérer tous les trésors de
         cette cave.
+      courseB_collector_loops10_2019: Aide Laurel à récupérer tous les trésors de
+        cette cave.
       courseB_collector_loops11: Eurêka !  Récupère autant de trésors que tu peux!
       courseB_collector_loops11_2018: Eurêka !  Récupère autant de trésors que tu
+        peux!
+      courseB_collector_loops11_2019: Eurêka !  Récupère autant de trésors que tu
         peux!
       courseC_PlayLab_events3: |-
         Peux-tu écrire un programme pour que ce c

@@ -620,6 +620,11 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': כאשר
+            '"while"': כאשר
       gamelab_clickedOn:
         text: כאשר {SPRITE} נלחץ
       gamelab_comment:
@@ -657,6 +662,48 @@ he:
         text: "{SPRITE} קפוץ למיקום {LOCATION}"
       gamelab_keyDown:
         text: כפתור {KEY} לחוץ
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': כאשר
+            '"while"': כאשר
+          KEY:
+            '"up"': למעלה
+            '"down"': למטה
+            '"left"': שמאלה
+            '"right"': ימינה
+            '"space"': חלל
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': גבול
+            '"inner"': בתוך ריבוע
+            '"circle"': עיגול
+            '"grid"': רשת
+            '"row"': שורה
+            '"column"': עמודה
+            '"x"': קְרִיס-קְרוֹס
+            '"plus"': פלוס
+            '"random"': אקראי
       gamelab_locationAdd:
         options:
           OPERATOR:
@@ -713,6 +760,10 @@ he:
         text: צבע אקראי
       gamelab_setBackground:
         text: קבע צבע רקע {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': עיר
       gamelab_setPosition:
         text: העבר את {THIS} לעמדה {POSITION}
         options:
@@ -746,6 +797,11 @@ he:
         text: שנה צבע של {THIS} ל-{COLOR}
       gamelab_setup:
         text: הגדרה
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': כאשר
+            '"while"': כאשר
       gamelab_spriteCostume:
         text: "{COSTUME}"
       gamelab_spriteDirection:
@@ -1001,7 +1057,8 @@ he:
         options:
           PROPERTY:
             "'shapeColor'": צבע
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
+        text: שנה {PROPERTY} של {SPRITE} ב {VAL}
         options:
           PROPERTY:
             '"scale"': גודל
@@ -1009,16 +1066,60 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
-      aalab_spritesWhere:
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': כאשר
+            '"while"': כאשר
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': כאשר
+            '"while"': כאשר
+      aalab_jumpTo:
+        text: "{SPRITE} קפוץ למיקום {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': כאשר
+            '"while"': כאשר
+          KEY:
+            '"up"': למעלה
+            '"down"': למטה
+            '"left"': שמאלה
+            '"right"': ימינה
+            '"space"': חלל
+      aalab_location_picker:
+        text: "{LOCATION}"
+      aalab_removeOneAndAll:
+        text: הסר את {THIS}
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': עיר
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': נכון
+            '"false"': שגוי
+      aalab_setProp:
         options:
           PROPERTY:
             '"scale"': גודל
+            '"rotation"': סיבוב
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
-            '"costume"': תחפושת
             '"direction"': כיוון תנועה
-            '"rotation"': סיבוב או כיוון
             '"tint"': גוון
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': לנצח
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': הצג
+            '"hide"': הסתר
       binary_move:
         options:
           DIR:

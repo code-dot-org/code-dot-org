@@ -1127,7 +1127,7 @@ fa:
             Functions:
               name: توابع
             'null':
-              name: خالی
+              name: تهی
         coursef-ramp:
           stages:
             Introduction:
@@ -1375,6 +1375,8 @@ fa:
               name: کمک گیری جمعی
             Relay Programming:
               name: برنامه نویسی دست به دست
+            Graph Paper Programming:
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1498,6 +1500,10 @@ fa:
               name: برای تفریح حلقه ای
             The Artist:
               name: هنرمند
+            Internet:
+              name: اینترنت
+            Crowdsourcing:
+              name: کمک گیری جمعی
         coursed-2019:
           stages:
             Relay Programming:
@@ -1547,7 +1553,7 @@ fa:
         andrea-test:
           stages:
             'null':
-              name: خالی
+              name: تهی
         coursec-2019:
           stages:
             Building a Foundation:
@@ -1558,3 +1564,57 @@ fa:
               name: دستبند دودویی
         gamelab:
           title: کارگاه بازی سازی
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
+            Going Places Safely:
+              name: با خیال راحت سفرکردن
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: حرکت کن، حرکت کن
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: حرکت کن، حرکت کن
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
+            Spelling Bee:
+              name: زنبور عسل هجی کن
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
+        csd2-2019:
+          stages:
+            Lists:
+              name: فهرست‌ها
+        csd3-2019:
+          description_short: برنامه نویسی
+          stages:
+            Variables:
+              name: متغیرها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: معادله با پارامترها
+        csp1-2019:
+          stages:
+            The Internet:
+              name: اینترنت
+        csp3-2019:
+          description_short: برنامه نویسی
+          stages:
+            Creating Functions:
+              name: ساختن تابع ها
+        csp5-2019:
+          stages:
+            While Loops:
+              name: حلقه ها ی While

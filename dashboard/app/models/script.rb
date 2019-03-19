@@ -67,6 +67,12 @@ class Script < ActiveRecord::Base
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
+  before_validation :hide_pilot_scripts
+
+  def hide_pilot_scripts
+    self.hidden = true if pilot_experiment
+  end
+
   # As we read and write to files with the script name, to prevent directory
   # traversal (for security reasons), we do not allow the name to start with a
   # tilde or dot or contain a slash.
@@ -102,6 +108,7 @@ class Script < ActiveRecord::Base
         unit_description: I18n.t("data.script.name.#{name}.description")
       )
 
+      stages.reload
       stages.each do |stage|
         lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
         lm.update!(
@@ -139,6 +146,7 @@ class Script < ActiveRecord::Base
     version_year
     is_stable
     supported_locales
+    pilot_experiment
   )
 
   def self.twenty_hour_script
@@ -206,23 +214,38 @@ class Script < ActiveRecord::Base
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    user_experiments_enabled = Course.has_any_course_experiments?(user)
-    with_hidden = !user_experiments_enabled && user.hidden_script_access?
-    cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"
-    scripts = Rails.cache.fetch(cache_key) do
-      Script.
-          all.
-          select {|script| with_hidden || !script.hidden}
-    end
+    has_any_course_experiments = Course.has_any_course_experiments?(user)
+    with_hidden = !has_any_course_experiments && user.hidden_script_access?
+    scripts = with_hidden ? all_scripts : visible_scripts
 
-    if user_experiments_enabled
+    if has_any_course_experiments
       scripts = scripts.map do |script|
         alternate_script = script.alternate_script(user)
         alternate_script.presence || script
       end
     end
 
+    if !with_hidden && has_any_pilot_access?(user)
+      scripts = scripts.concat(all_scripts.select {|s| s.has_pilot_access?(user)})
+    end
+
     scripts
+  end
+
+  class << self
+    private
+
+    def all_scripts
+      Rails.cache.fetch('valid_scripts/all') do
+        Script.all
+      end
+    end
+
+    def visible_scripts
+      Rails.cache.fetch('valid_scripts/valid') do
+        Script.all.reject(&:hidden)
+      end
+    end
   end
 
   # @param [User] user
@@ -470,10 +493,11 @@ class Script < ActiveRecord::Base
     return false if user.nil?
     return true unless user.student?
 
-    # A student can view the script version if they have progress in it or are assigned to it.
-    has_progress = user.scripts.include?(self)
+    # A student can view the script version if they have progress in it or the course it belongs to.
+    has_progress = user.scripts.include?(self) || course&.has_progress?(user)
     return true if has_progress
 
+    # A student can view the script version if they are assigned to it.
     user.assigned_script?(self)
   end
 
@@ -697,7 +721,11 @@ class Script < ActiveRecord::Base
   private def hoc_tts_level?
     [
       Script::APPLAB_INTRO,
-      Script::DANCE_PARTY_NAME
+      Script::DANCE_PARTY_NAME,
+      Script::DANCE_PARTY_EXTRAS_NAME,
+      Script::ARTIST_NAME,
+      Script::SPORTS_NAME,
+      Script::BASKETBALL_NAME
     ].include?(name)
   end
 
@@ -788,8 +816,8 @@ class Script < ActiveRecord::Base
   # Create or update any scripts, script levels and stages specified in the
   # script file definitions. If new_suffix is specified, create a copy of the
   # script and any associated levels, appending new_suffix to the name when
-  # copying.
-  def self.setup(custom_files, new_suffix: nil)
+  # copying. Any new_properties are merged into the properties of the new script.
+  def self.setup(custom_files, new_suffix: nil, new_properties: {})
     transaction do
       scripts_to_add = []
 
@@ -797,7 +825,8 @@ class Script < ActiveRecord::Base
       # Load custom scripts from Script DSL format
       custom_files.map do |script|
         name = File.basename(script, '.script')
-        name += "-#{new_suffix}" if new_suffix
+        base_name = Script.base_name(name)
+        name = "#{base_name}-#{new_suffix}" if new_suffix
         script_data, i18n = ScriptDSL.parse_file(script, name)
 
         stages = script_data[:stages]
@@ -811,7 +840,7 @@ class Script < ActiveRecord::Base
           wrapup_video: script_data[:wrapup_video],
           new_name: script_data[:new_name],
           family_name: script_data[:family_name],
-          properties: Script.build_property_hash(script_data)
+          properties: Script.build_property_hash(script_data).merge(new_properties)
         }, stages]
       end
 
@@ -993,10 +1022,17 @@ class Script < ActiveRecord::Base
   # the suffix to the name of each level. Mark the new script as hidden, and
   # copy any translations and other metadata associated with the original script.
   def clone_with_suffix(new_suffix)
-    new_name = "#{name}-#{new_suffix}"
+    new_name = "#{base_name}-#{new_suffix}"
 
     script_filename = "#{Script.script_directory}/#{name}.script"
-    scripts, _ = Script.setup([script_filename], new_suffix: new_suffix)
+    new_properties = {
+      is_stable: false,
+      script_announcements: nil
+    }
+    if /^[0-9]{4}$/ =~ (new_suffix)
+      new_properties[:version_year] = new_suffix
+    end
+    scripts, _ = Script.setup([script_filename], new_suffix: new_suffix, new_properties: new_properties)
     new_script = scripts.first
 
     # Make sure we don't modify any files in unit tests.
@@ -1007,6 +1043,16 @@ class Script < ActiveRecord::Base
     end
 
     new_script
+  end
+
+  def base_name
+    Script.base_name(name)
+  end
+
+  def self.base_name(name)
+    # strip existing year suffix, if there is one
+    m = /^(.*)-([0-9]{4})$/.match(name)
+    m ? m[1] : name
   end
 
   # Creates a copy of all translations associated with this script, and adds
@@ -1026,7 +1072,7 @@ class Script < ActiveRecord::Base
   # any other name), and the corresponding script row in the db will be renamed.
   def self.fetch_script(options)
     options.symbolize_keys!
-    options[:wrapup_video] = options[:wrapup_video].blank? ? nil : Video.find_by!(key: options[:wrapup_video])
+    options[:wrapup_video] = options[:wrapup_video].blank? ? nil : Video.current_locale.find_by!(key: options[:wrapup_video])
     id = options.delete(:id)
     name = options[:name]
     new_name = options[:new_name]
@@ -1084,8 +1130,13 @@ class Script < ActiveRecord::Base
   def update_teacher_resources(types, links)
     return if types.nil? || links.nil? || types.length != links.length
     # Only take those pairs in which we have both a type and a link
-    self.teacher_resources = types.zip(links).select {|type, link| type.present? && link.present?}
-    save!
+    resources = types.zip(links).select {|type, link| type.present? && link.present?}
+    update!(
+      {
+        teacher_resources: resources,
+        skip_name_format_validation: true
+      }
+    )
   end
 
   def self.rake
@@ -1152,7 +1203,7 @@ class Script < ActiveRecord::Base
     nil
   end
 
-  def summarize(include_stages = true, user = nil)
+  def summarize(include_stages = true, user = nil, include_bonus_levels = false)
     if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
@@ -1210,10 +1261,10 @@ class Script < ActiveRecord::Base
       versions: summarize_versions(user),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
+      pilot_experiment: pilot_experiment,
     }
 
-    summary[:stages] = stages.map(&:summarize) if include_stages
-
+    summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
@@ -1286,8 +1337,11 @@ class Script < ActiveRecord::Base
   def summarize_versions(user = nil)
     return [] unless family_name
     return [] unless courses.empty?
+    with_hidden = user&.hidden_script_access?
     Script.
       where(family_name: family_name).
+      all.
+      select {|script| with_hidden || !script.hidden}.
       map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year, can_view_version: s.can_view_version?(user)}}.
       sort_by {|info| info[:version_year]}.
       reverse
@@ -1332,7 +1386,8 @@ class Script < ActiveRecord::Base
       script_announcements: script_data[:script_announcements] || false,
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
-      supported_locales: script_data[:supported_locales]
+      supported_locales: script_data[:supported_locales],
+      pilot_experiment: script_data[:pilot_experiment]
     }.compact
   end
 
@@ -1412,5 +1467,35 @@ class Script < ActiveRecord::Base
     script_levels.select do |sl|
       sl.levels.first.is_a?(LevelGroup) && sl.long_assessment? && !sl.anonymous?
     end
+  end
+
+  def pilot?
+    !!pilot_experiment
+  end
+
+  def has_pilot_access?(user = nil)
+    return false unless pilot? && user
+    return true if user.permission?(UserPermission::LEVELBUILDER)
+    return true if has_pilot_experiment?(user)
+
+    # A user without the experiment has pilot script access if
+    # (1) they have been assigned to or have progress in the pilot script, and
+    # (2) one of their teachers has the pilot experiment enabled.
+    has_progress = !!UserScript.find_by(user: user, script: self)
+    has_progress && user.teachers.any? {|t| has_pilot_experiment?(t)}
+  end
+
+  # Whether this particular user has the pilot experiment enabled.
+  def has_pilot_experiment?(user)
+    return false unless pilot_experiment
+    SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
+  end
+
+  # returns true if the user is a levelbuilder, or a teacher with any pilot
+  # script experiments enabled.
+  def self.has_any_pilot_access?(user = nil)
+    return false unless user&.teacher?
+    return true if user.permission?(UserPermission::LEVELBUILDER)
+    all_scripts.any? {|script| script.has_pilot_experiment?(user)}
   end
 end

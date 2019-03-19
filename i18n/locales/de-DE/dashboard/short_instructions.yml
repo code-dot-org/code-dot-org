@@ -422,6 +422,7 @@ de:
       C3-Farmer While Loops Assessment 1: Hier sind viele Löcher und Erdhaufen.  Hilf mir, die Löcher zu füllen und die Haufen zu entfernen und den Boden wieder zu ebnen.
       CSD U5 black white images pixelation 5: Zeichne was du willst
       CSD U5 black white images pixelation 5_2018: Zeichne was du willst
+      CSD U5 black white images pixelation 5_2019: Zeichne was du willst
       CSDU6 - Arrays - indexPractice: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSDU6 - for loop - color buttons with for: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSDU6 - for loop - color buttons: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
@@ -429,11 +430,14 @@ de:
       CSDU6 arrays rainbow: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSDU6 arrays select rainbow: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSDU6 arrays select rainbow_2018: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      CSDU6 arrays select rainbow_2019: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSP student contact info: Bitte gibt deine E-Mail-Adresse ein.
       CSPU5_U3 - Arrays - indexPractice: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSPU5_U3 - Arrays - indexPractice_2018: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      CSPU5_U3 - Arrays - indexPractice_2019: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSPU5_U3L15 full clicker app: Beende dein Klick-Spiel! (Klicke um die komplette Anweisung anzuzeigen)
       CSPU5_U3L15 full clicker app_2018: Beende dein Klick-Spiel! (Klicke um die komplette Anweisung anzuzeigen)
+      CSPU5_U3L15 full clicker app_2019: Beende dein Klick-Spiel! (Klicke um die komplette Anweisung anzuzeigen)
       Course 2 Bee Loops 1: 'Hallo, ich bin eine Biene. Kannst du mir helfen, den Nektar von diesen Blüten zu sammeln? '
       Course 2 Maze Loops 1: Kannst du mich zu dem Schwein bringen, indem du 5 Bausteine benutzt?
       Course 4 2: 'Die Biene will jetzt nur Nektar. Erinnere dich: Nicht alle Objekte sind Blüten, also prüfe, damit nur aus Blüten Nektar gesammelt wird.'
@@ -716,6 +720,23 @@ de:
       Course 4 SCVP 1: Schaffe eine Funktion mit Parametern, die es der Figur erlaubt, bei x Pixeln vor und zurück zu springen und bei y Pixeln auch hoch und runter (und dabei positive und negative Zahlen nutzt).
       Course 4 Variables Assessment: Kannst du dieses Bild mit einer Variablen für die Seiten erstellen? Jede Seite sollte 50 Pixel lang sein.
       Course E MC Conditionals1: Du wirst die wertvollsten Rohstoffe unter der Erde finden, aber dort kann es dunkel sein. Platziere mindestens 2 Fackeln und baue mindestens 2 Kohleblöcke ab.
+      CourseD_Dance_Party_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich, und verbinden Sie ihn innerhalb des "Setup" -Blocks.
+      CourseD_Dance_Party_02: Lassen Sie den Elch nach 4 Takten einen neuen Tanzschritt beginnen.
+      CourseD_Dance_Party_03: Lassen Sie jetzt den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen.
+      CourseD_Dance_Party_04: Fügen Sie Ihrem Programm einen Hintergrundeffekt hinzu.
+      CourseD_Dance_Party_05: Verwenden Sie einen weiteren neuen Block, damit der Tänzer alle 2 Takte den Tanzschritt wechselt.
+      CourseD_Dance_Party_06: Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
+      CourseD_Dance_Party_08: Können Sie beide Backup-Tänzer gleich groß machen?
+      CourseD_Dance_Party_09: Verwenden Sie den Block "Farbton einstellen", um den Farbton eines Tänzers zu verändern.
+      CourseD_Dance_Party_10: Lassen Sie die anderen Tänzer auch auf die Musik reagieren, indem Sie den Block "beginnt danach" verwenden.
+      CourseD_Dance_Party_11: Mit dem Block "Wenn nach oben gedrückt" können Sie Code ausführen, wenn die Pfeiltaste nach oben gedrückt wird. Versuchen Sie, den Tänzer eine schnelle Bewegung ausführen zu lassen, wenn Sie die Pfeiltaste nach oben drücken.
+      CourseD_Dance_Party_11_5: Verwenden Sie die Blöcke "alle Enten", um die Enten gemeinsam tanzen zu lassen.
+      CourseD_Dance_Party_11b: Lassen Sie den Roboter einmal "droppen", wenn Sie die rechte Pfeiltaste drücken, und einmal "flossen", wenn Sie die Pfeiltaste nach oben drücken. Machen Sie den Drop-Floss, so schnell es geht!
+      CourseD_Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen Sie ihn mit Ihren Freunden.
+      CourseE_HOC 2018 Level_10: Erreiche den Eingang dieses Ozeanmonuments.
+      CourseE_HOC 2018 Level_11: 'Baue mit dem Prismarin im Ozeanmonument einen Aquisator.'
+      CourseE_HOC 2018 Level_7a: Suche in diesen Unterwasserruine nach einer Truhe.
+      CourseE_HOC 2018 Level_9b: 'Verwende die Korallen als Wegpunkte, um den Schatz zu erreichen.'
       CourseF_PlayLab_vars10: "Zeit für freies Spiel! Hier sind alle Variablen, mit denen wir bis jetzt in dieser Phase gespielt haben, sowie ein paar mehr, falls du sie möchtest.\n\nBeachte, dass deine Toolbox jetzt über eine große Zahl von Bausteinen verfügt, die wir daher erneut nach Kategorien geordnet haben.  Hier haben wir jedes Teil in eine passende Kategorie eingeordnet.  Nimm dir Zeit und schau dir alles genau an. Wenn du mit Browsen fertig bist, gestalte ein Spiel oder eine Geschichte mit Wiederholungen, Variablen und Ereignissen.\n\nHinweis: Du musst vielleicht runterscrollen, um alle Befehle im Arbeitsraum zu finden."
       CourseF_PlayLab_vars2: Das Rennen im letzten Rätsel war nicht sehr fair! Ändere die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
       CourseF_PlayLab_vars3: Jetzt was anderes! Verwende die Pfeiltasten nach links und rechts sowie nach oben zum Springen. Schau mal, ob du alle Fahnen einsammeln kannst.
@@ -736,8 +757,10 @@ de:
       CourseF_PlayLab_vars9: Sehr schön, und jetzt sorgen wir dafür, dass das Spiel nicht zu einfach wird. Jedes Mal wenn der Hund (Figur 1) von der Katze (Figur 2) mit gelben Herzen getroffen wird, soll dir ein Punkt abgezogen werden. Beginne mit 10 Punkten, damit es nicht zu schwierig wird. Das Level ist erreicht, wenn deine Punktzahl von 10 auf 0 gesunken ist.
       Crack Random Substitution: Anweisungen
       Crack Random Substitution_2018: Anweisungen
+      Crack Random Substitution_2019: Anweisungen
       Crack a Caesar Cipher: Anweisungen
       Crack a Caesar Cipher_2018: Anweisungen
+      Crack a Caesar Cipher_2019: Anweisungen
       Dance_Party_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich, und verbinden Sie ihn innerhalb des "Setup" -Blocks.
       Dance_Party_01_low: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich, und verbinden Sie ihn innerhalb des "Setup" -Blocks.
       Dance_Party_02: Lassen Sie den Elch nach 4 Takten einen neuen Tanzschritt beginnen.
@@ -1092,6 +1115,7 @@ de:
       Ryan - 4-5 Bee Conditionals 2: Die Biene will jetzt nur Nektar. Nicht alle Objekte sind Blumen, also sieh unter jeder Wolke nach, ob dort eine Blume versteckt ist. Falls ja, dann kannst du Nektar sammeln.
       Ryan - Bee Conditionals: Die Biene will jetzt nur Nektar. Nicht alle Objekte sind Blumen, also sieh unter jeder Wolke nach, ob dort eine Blume versteckt ist. Falls ja, dann kannst du Nektar sammeln.
       Ryan Test Locked Blocks: Hier ist eine Funktion namens „Patrouille“. Ändere sie so, dass die Katze sich 400 Pixel auf- und abwärts bewegt.
+      Ryan_Demo: Lassen Sie den Elch nach 4 Takten einen neuen Tanzschritt beginnen.
       SpecialFrozenLevel: Du bist ein richtiger Künstler geworden. Zeichne ein Winter-Wunderland.
       Standalone_Artist_1: Willkommen zu Künstler! Als Erstes versuchen wir, ein einfaches Quadrat zu zeichnen, indem wir den „Nach rechts drehen“-Baustein und den „Nach vorne bewegen“-Baustein verwenden. Jede Seite sollte 100 Pixel lang sein.
       Standalone_Artist_2: Malen diesen Diamanten mit 120 und 60 Grad Winkeln und 150 Pixel langen Seiten.
@@ -1107,6 +1131,7 @@ de:
       Testing Quantum Farmer: "Wow, ich habe ein richtig tiefes Loch gefunden! Ich weiß nicht, wie viele Schaufeln Erde ich brauche.  Kannst du ein Programm schreiben, mit dem das Loch gefüllt wird, bis der Boden eben ist?  Hinweis:  Versuche es diesmal mit der Solange-Schleife."
       The Vigenere Cipher Widget: Anweisungen
       The Vigenere Cipher Widget_2018: Anweisungen
+      The Vigenere Cipher Widget_2019: Anweisungen
       The Vigenere Cipher: Anweisungen
       Total Artist Clone Me: 'Freies Spiel: Hier sind die Funktionen, die du geschrieben hast, und ein paar mehr für dich zum Spielen. Zeichne etwas Tolles! Spiele mit der Stiftbreite um zu sehen, wie unterschiedlich deine Zeichnungen aussehen!'
       U2 frequency caesar: Anweisungen
@@ -1117,6 +1142,7 @@ de:
       U4 vigenere cipher 2: Anweisungen
       U4L02 - Objects - Template1: Vorlage
       U4L02 - Objects - Template1_2018: Vorlage
+      U4L02 - Objects - Template1_2019: Vorlage
       Underground Avoiding Lava: Lava versteckt sich unter manchen dieser Bausteine, die du abdecken musst, bevor du dich vorwärts bewegst. Ein „Wenn“-Befehl ist hier praktisch. Füge einen „Bewege vorwärts“-Befehl an der richtigen Stelle ein, um diese Bausteine zu meiden.
       Underground Avoiding Lava_2018: Lava versteckt sich unter manchen dieser Bausteine, die du abdecken musst, bevor du dich vorwärts bewegst. Ein „Wenn“-Befehl ist hier praktisch. Füge einen „Bewege vorwärts“-Befehl an der richtigen Stelle ein, um diese Bausteine zu meiden.
       Underground Avoiding Lava_2019: Lava versteckt sich unter manchen dieser Bausteine, die du abdecken musst, bevor du dich vorwärts bewegst. Ein „Wenn“-Befehl ist hier praktisch. Füge einen „Bewege vorwärts“-Befehl an der richtigen Stelle ein, um diese Bausteine zu meiden.
@@ -1205,44 +1231,62 @@ de:
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)
       courseA_artist_loops10: Hilf mir, Stein abzulegen, so das ich nicht hineinfalle!
       courseA_artist_loops10_2018: Hilf mir, Stein abzulegen, so das ich nicht hineinfalle!
+      courseA_artist_loops10_2019: Hilf mir, Stein abzulegen, so das ich nicht hineinfalle!
       courseA_artist_loops11: Hilf mir, Stufen zu bauen, um das Schiff davonsegeln zu sehen.
       courseA_artist_loops11_2018: Hilf mir, Stufen zu bauen, um das Schiff davonsegeln zu sehen.
+      courseA_artist_loops11_2019: Hilf mir, Stufen zu bauen, um das Schiff davonsegeln zu sehen.
       courseA_artist_loops12: Der Zeichner sah etwas Lustiges in der Ferne. Zeichne, was Du denkst, was er sah!
       courseA_artist_loops12_2018: Der Zeichner sah etwas Lustiges in der Ferne. Zeichne, was Du denkst, was er sah!
+      courseA_artist_loops12_2019: Der Zeichner sah etwas Lustiges in der Ferne. Zeichne, was Du denkst, was er sah!
       courseA_artist_loops3: Zeichne eine Linie fünfmal geradeaus.
       courseA_artist_loops3_2018: Zeichne eine Linie fünfmal geradeaus.
+      courseA_artist_loops3_2019: Zeichne eine Linie fünfmal geradeaus.
       courseA_artist_loops7: Benutze die 'Wiederholen' Schleife um Wellen zum Wasser hinzuzufügen.
       courseA_artist_loops7_2018: Benutze die 'Wiederholen' Schleife um Wellen zum Wasser hinzuzufügen.
+      courseA_artist_loops7_2019: Benutze die 'Wiederholen' Schleife um Wellen zum Wasser hinzuzufügen.
       courseA_artist_loops7_forVideo: Benutze die 'Wiederholen' Schleife um Wellen zum Wasser hinzuzufügen.
       courseA_artist_loops9: 'Herausforderung: Repariere die Treppe!'
       courseA_artist_loops9_2018: 'Herausforderung: Repariere die Treppe!'
+      courseA_artist_loops9_2019: 'Herausforderung: Repariere die Treppe!'
       courseA_collector_loops1: Bewege Laurel umher und sammle so viel Gold, wie Du kannst!
       courseA_collector_loops11: Hilf Laurel, alles Gold aus der Höhle zu holen!
       courseA_collector_loops11_2018: Hilf Laurel, alles Gold aus der Höhle zu holen!
+      courseA_collector_loops11_2019: Hilf Laurel, alles Gold aus der Höhle zu holen!
       courseA_collector_loops12: 'Heureka!  Hol dir so viele Schätze wie möglich!'
       courseA_collector_loops12_2018: 'Heureka!  Hol dir so viele Schätze wie möglich!'
+      courseA_collector_loops12_2019: 'Heureka!  Hol dir so viele Schätze wie möglich!'
       courseA_collector_loops1_2018: Bewege Laurel umher und sammle so viel Gold, wie Du kannst!
+      courseA_collector_loops1_2019: Bewege Laurel umher und sammle so viel Gold, wie Du kannst!
       courseA_collector_loops2: Da sind drei Stapel Gold. Sammle Sie alle ein!
       courseA_collector_loops2_2018: Da sind drei Stapel Gold. Sammle Sie alle ein!
+      courseA_collector_loops2_2019: Da sind drei Stapel Gold. Sammle Sie alle ein!
       courseA_collector_loops4: Repariere Laurels Weg, um zu dem Gold zu kommen!
       courseA_collector_loops4_2018: Repariere Laurels Weg, um zu dem Gold zu kommen!
+      courseA_collector_loops4_2019: Repariere Laurels Weg, um zu dem Gold zu kommen!
       courseA_collector_loops6: Füge Blöcke zu diesem Code hinzu, um alle Münzen einzusammeln!
       courseA_collector_loops6_2018: Füge Blöcke zu diesem Code hinzu, um alle Münzen einzusammeln!
+      courseA_collector_loops6_2019: Füge Blöcke zu diesem Code hinzu, um alle Münzen einzusammeln!
       courseA_collector_loops8: Schreibe den Code um den ganzen Schatz zu erhalten.
       courseA_collector_loops8_2018: Schreibe den Code um den ganzen Schatz zu erhalten.
+      courseA_collector_loops8_2019: Schreibe den Code um den ganzen Schatz zu erhalten.
       courseA_collector_loops9: "**Aufgabe:** Das Gold liegt die ganze Treppe herauf. Schreibe Code, um mir zu helfen, alles einzusammeln!"
       courseA_collector_loops9_2018: "**Aufgabe:** Das Gold liegt die ganze Treppe herauf. Schreibe Code, um mir zu helfen, alles einzusammeln!"
+      courseA_collector_loops9_2019: "**Aufgabe:** Das Gold liegt die ganze Treppe herauf. Schreibe Code, um mir zu helfen, alles einzusammeln!"
       courseA_collector_preLoops7: Da sind drei Stapel Gold. Sammle Sie alle ein!
       courseA_forVideoTest_artist: Benutze die 'Wiederholen' Schleife um Wellen zum Wasser hinzuzufügen.
       courseA_maze_seq1: Bring den Vogel zum bösen Schwein!
       courseA_maze_seq10: 'Herausforderung: Geh um das TNT herum, um den Vogel zum Schwein zu bringen! '
       courseA_maze_seq11: Gehe den einen Weg, dann den anderen, um den Vogel zum Schwein zu bringen!
       courseA_maze_seq11_2018: Gehe den einen Weg, dann den anderen, um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq11_2019: Gehe den einen Weg, dann den anderen, um den Vogel zum Schwein zu bringen!
       courseA_maze_seq12: 'Hole das Schwein!'
       courseA_maze_seq12_2018: 'Hole das Schwein!'
+      courseA_maze_seq12_2019: 'Hole das Schwein!'
       courseA_maze_seq13: Hole das Schwein auf irgendeinem Weg!
       courseA_maze_seq13_2018: Hole das Schwein auf irgendeinem Weg!
+      courseA_maze_seq13_2019: Hole das Schwein auf irgendeinem Weg!
       courseA_maze_seq1_2018: Bring den Vogel zum bösen Schwein!
+      courseA_maze_seq1_2019: Bring den Vogel zum bösen Schwein!
       courseA_maze_seq2: Bring mich zum Schwein, indem du den Code änderst.
       courseA_maze_seq2_2018: Bring mich zum Schwein, indem du den Code änderst.
       courseA_maze_seq3: Repariere den Code, um den Vogel zum Schwein zu bringen!
@@ -1251,39 +1295,54 @@ de:
       courseA_maze_seq4_2018: ENTFERNE einen Block, um den Vogel zum Schwein zu bringen!
       courseA_maze_seq6: Gehe einen Weg und dann einen anderen, um den Vogel zum Schwein zu bringen!
       courseA_maze_seq6_2018: Gehe einen Weg und dann einen anderen, um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq6_2019: Gehe einen Weg und dann einen anderen, um den Vogel zum Schwein zu bringen!
       courseA_maze_seq7: Finde heraus, was fehlt, und füge dann Blöcke hinzu, um den Vogel zum Schwein zu bringen!
       courseA_maze_seq7_2018: Finde heraus, was fehlt, und füge dann Blöcke hinzu, um den Vogel zum Schwein zu bringen!
       courseA_maze_seq8: Löse dieses Level und bring den Vogel zum Schwein!
       courseA_maze_seq8_2018: Löse dieses Level und bring den Vogel zum Schwein!
+      courseA_maze_seq8_2019: Löse dieses Level und bring den Vogel zum Schwein!
       courseA_maze_seq9: Repariere dieses Level, indem Du Blöcke hinzufügst, um den Vogel zum Schwein zu kriegen!
       courseA_maze_seq9_2018: Repariere dieses Level, indem Du Blöcke hinzufügst, um den Vogel zum Schwein zu kriegen!
       courseA_playLab_events3: Verbinde den "nach links bewegen"-Block mit dem "wenn links"-Ereignisblock, den Du bereits auf der Arbeitsfläche vorfindest!
       courseA_playLab_events3_2018: Verbinde den "nach links bewegen"-Block mit dem "wenn links"-Ereignisblock, den Du bereits auf der Arbeitsfläche vorfindest!
+      courseA_playLab_events3_2019: Verbinde den "nach links bewegen"-Block mit dem "wenn links"-Ereignisblock, den Du bereits auf der Arbeitsfläche vorfindest!
       courseB_artist_loops3: Hilfe dem Künstler, eine Linie siebenmal zu zeichnen, um eine Gartenmauer zu bauen.
       courseB_artist_loops3_2018: Hilfe dem Künstler, eine Linie siebenmal zu zeichnen, um eine Gartenmauer zu bauen.
+      courseB_artist_loops3_2019: Hilfe dem Künstler, eine Linie siebenmal zu zeichnen, um eine Gartenmauer zu bauen.
       courseB_artist_loops6: Die Ranke hochklettern und sehen wo sie hinführt?
       courseB_artist_loops6_2018: Die Ranke hochklettern und sehen wo sie hinführt?
+      courseB_artist_loops6_2019: Die Ranke hochklettern und sehen wo sie hinführt?
       courseB_artist_loops7: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein bisschen herum."
       courseB_artist_loops7_2018: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein bisschen herum."
+      courseB_artist_loops7_2019: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein bisschen herum."
       courseB_collector_loops10: Hilf Laurel, alles Gold aus der Höhle zu holen!
       courseB_collector_loops10_2018: Hilf Laurel, alles Gold aus der Höhle zu holen!
+      courseB_collector_loops10_2019: Hilf Laurel, alles Gold aus der Höhle zu holen!
       courseB_collector_loops11: Heureka!  Hol dir so viele Schätze wie möglich!
       courseB_collector_loops11_2018: Heureka!  Hol dir so viele Schätze wie möglich!
+      courseB_collector_loops11_2019: Heureka!  Hol dir so viele Schätze wie möglich!
       courseB_collector_loops2: Sammeln Sie alle vier Haufen um dieses Level zu beenden.
       courseB_collector_loops2_2018: Sammeln Sie alle vier Haufen um dieses Level zu beenden.
+      courseB_collector_loops2_2019: Sammeln Sie alle vier Haufen um dieses Level zu beenden.
       courseB_collector_loops4: Repariere Laurels Weg, um alles Gold zu bekommen!
       courseB_collector_loops4_2018: Repariere Laurels Weg, um alles Gold zu bekommen!
+      courseB_collector_loops4_2019: Repariere Laurels Weg, um alles Gold zu bekommen!
       courseB_collector_loops6: Finden sie den Code heraus, um Laurel zu helfen und all das Gold zu kassieren!
       courseB_collector_loops6_2018: Finden sie den Code heraus, um Laurel zu helfen und all das Gold zu kassieren!
+      courseB_collector_loops6_2019: Finden sie den Code heraus, um Laurel zu helfen und all das Gold zu kassieren!
       courseB_collector_loops7: Schreibe den Code um den ganzen Schatz zu erhalten.
       courseB_collector_loops7_2018: Schreibe den Code um den ganzen Schatz zu erhalten.
+      courseB_collector_loops7_2019: Schreibe den Code um den ganzen Schatz zu erhalten.
       courseB_collector_loops8: "**Aufgabe:** Das Gold führt die gesamte Treppe herunter! Schreibe den Code um Laurel zu helfen, alles zu bekommen."
       courseB_collector_loops8_2018: "**Aufgabe:** Das Gold führt die gesamte Treppe herunter! Schreibe den Code um Laurel zu helfen, alles zu bekommen."
+      courseB_collector_loops8_2019: "**Aufgabe:** Das Gold führt die gesamte Treppe herunter! Schreibe den Code um Laurel zu helfen, alles zu bekommen."
       courseB_collector_loops9: '*"Hilf mir all das Gold aus diesen tiefen Tal zu bekommen."*'
       courseB_collector_loops9_2018: '*"Hilf mir all das Gold aus diesen tiefen Tal zu bekommen."*'
+      courseB_collector_loops9_2019: '*"Hilf mir all das Gold aus diesen tiefen Tal zu bekommen."*'
       courseB_collector_prog1: Dies ist Laurel, der Abenteurer. Kannst Du sie herumführen und Gold einsammeln?
       courseB_maze_seq12: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq12_2018: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
+      courseB_maze_seq12_2019: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq2: '*"Ein Fehler! Repariere den Code, damit ich das Schwein bekomme."*'
       courseB_maze_seq6: Gehe einen Weg und dann einen anderen, um den Vogel zum Schwein zu bringen!
       courseB_maze_seq7: Finde heraus, was fehlt, und füge dann Blöcke hinzu, um den Vogel zum Schwein zu bringen!
@@ -1293,6 +1352,7 @@ de:
       courseB_maze_seqOld: 'Gehe um das TNT herum, um den Vogel zum Schwein zu bringen!'
       courseB_playLab_events1: Mal sehen, ob du herausfindest, was jeder Block kann.
       courseB_playLab_events1_2018: Mal sehen, ob du herausfindest, was jeder Block kann.
+      courseB_playLab_events1_2019: Mal sehen, ob du herausfindest, was jeder Block kann.
       courseC_PlayLab_events3: Kannst Du ein Programm schreiben, so dass Jorge, der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
       courseC_PlayLab_events3_2018: Kannst Du ein Programm schreiben, so dass Jorge, der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
       courseC_PlayLab_events3_2019: Kannst Du ein Programm schreiben, so dass Jorge, der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?

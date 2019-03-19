@@ -369,7 +369,6 @@ es-MX:
         K5PD:
           title: K5 Desarrollo profesional
           description: Desarrollo profesional para los cursos de K5
-          description_short: Desarrollo profesional para los cursos de K5
           stages:
             Computer Science Pedagogy:
               name: Pedagogía en Ciencias de la Computación
@@ -457,7 +456,7 @@ es-MX:
             Graph Paper Programming:
               name: Programación de hoja cuadriculada
             Introduction to Computer Science:
-              name: Introducción al Arte de las Ciencias de la Computación
+              name: Introducción a Ciencias de la Computación
             Relay Programming:
               name: Programación de relevos
             Song Writing:
@@ -581,11 +580,11 @@ es-MX:
             Lossy Compression and File Formats:
               name: Compresión con Pérdida y Formatos de Archivos
             Number Systems:
-              name: Sistemas de numeración
+              name: Sistemas numéricos
             Personal Innovations:
               name: Invenciones que son personales
             Sending Binary Messages:
-              name: Envío de mensajes binarios
+              name: Enviando mensajes binarios
             Sending Binary Messages with the Internet Simulator:
               name: Envío de los mensajes que son binarios con el simulador de internet
             Sending Bits in the Real World:
@@ -1639,7 +1638,7 @@ es-MX:
             Binary Numbers:
               name: Números binarios
             Number Systems:
-              name: Sistemas de numeración
+              name: Sistemas numéricos
             Packets and Making a Reliable Internet:
               name: Paquetes y realización de una internet que sea de confianza
             Personal Innovations:
@@ -1647,7 +1646,7 @@ es-MX:
             Routers and Redundancy:
               name: Enrutadores y reiteración
             Sending Binary Messages:
-              name: Envío de mensajes binarios
+              name: Enviando mensajes binarios
             Sending Binary Messages with the Internet Simulator:
               name: Envío de los mensajes que son binarios con el simulador de internet
             Sending Numbers:
@@ -1872,7 +1871,7 @@ es-MX:
         cspunit1-support:
           stages:
             Sending Binary Messages:
-              name: Envío de mensajes binarios
+              name: Enviando mensajes binarios
         allthehiddenthings:
           stages:
             Game Lab:
@@ -1946,7 +1945,7 @@ es-MX:
             Unspotted Bugs:
               name: Errores desapercibidos
             'Debugging: Unspotted Bugs':
-              name: 'Depuración: Errores desapercibidos'
+              name: 'Debugging: Errores no Detectados'
         grade5:
           stages:
             'Artist: For Loops':
@@ -2414,13 +2413,13 @@ es-MX:
             Going Places Safely:
               name: Ir a sitios seguros
             'Debugging: Unspotted Bugs':
-              name: 'Depuración: Errores desapercibidos'
+              name: 'Debugging: Errores no Detectados'
         courseb-draft:
           description_short: Una introducción a las ciencias de la computación para
             pre lectores.
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Depuración: Errores desapercibidos'
+              name: 'Debugging: Errores no Detectados'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistencia y frustración: Stevie y las canicas'
             Sequence & Algorithms:
@@ -2432,7 +2431,7 @@ es-MX:
             Programming in Maze:
               name: Programación en Laberinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
             Keep it Private:
               name: Mantenlo privado
             'Real-life Algorithms: Plant a Seed':
@@ -2440,7 +2439,7 @@ es-MX:
             Your Digital Footprint:
               name: Tu huella dactilar
         coursec-draft:
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           stages:
             Programming in Maze:
@@ -2452,9 +2451,9 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: Getting Loopy':
-              name: 'Ciclos: Haciendo ciclos'
+              name: 'Loops: Buscando Loopy'
             Loops in Maze:
-              name: Ciclos en Maze
+              name: Loops en Laberinto
             Build a Flappy Game:
               name: Construye un juego Flappy
             Binary Bracelets:
@@ -2471,7 +2470,7 @@ es-MX:
               name: Ciclos en Harvester
         coursed-draft:
           title: 'Fundamentos de Ciencias de la Computación: Curso D'
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2519,7 +2518,7 @@ es-MX:
             Debugging in Collector:
               name: Depuración en Collector
         coursee-draft:
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           stages:
             Digital Citizenship:
@@ -2561,7 +2560,7 @@ es-MX:
             'Algorithms: Dice Race':
               name: 'Algoritmos: Carrera de dados'
         coursef-draft:
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           stages:
             Digital Citizenship:
@@ -2715,6 +2714,16 @@ es-MX:
           stages:
             Introduction:
               name: Introducción
+        applab-1hour:
+          description: Este taller está diseñado para dar a los estudiantes una introducción
+            básica al laboratorio de aplicación en 1 hora. Los estudiantes deberían
+            poder venir con diferentes antecedentes en Ciencias de la computación
+            y se diviertan creando algo.
+        applab-2hour:
+          description: Este taller está diseñado para dar a los estudiantes una introducción
+            básica al laboratorio de aplicaciones en 2 horas. Los estudiantes deben
+            poder venir con diferentes orígenes en Ciencias de la Computación y divertirse
+            creando algo.
         coursed-ramp:
           title: 'Fundamentos de Ciencias de la Computación: Curso D'
           stages:
@@ -2834,6 +2843,8 @@ es-MX:
               name: Revisión por pares
         artist-and-bb8:
           stages:
+            Loops with BB-8:
+              name: Loops con BB-8
             Ice Age Play Lab:
               name: Laboratorio de juegos de la Edad de hielo
             Bounce:
@@ -2841,11 +2852,12 @@ es-MX:
         coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Depuración: Errores desapercibidos'
+              name: 'Debugging: Errores no Detectados'
               description_teacher: 'Esta lección guiará a los estudiantes a través
                 de los pasos de depuración. Los estudiantes aprenderán el mantra:
-                "¿Que ocurrió? ¿Qué se suponia que pasara? ¿Eso que te dice?"'
+                "¿Que ocurrió? ¿Qué se suponía que pasara? ¿Eso que te dice?"'
             'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Perseverancia: Stevie y el Gran Proyecto'
               description_teacher: "Cuando los estudiantes se encuentran con una barrera
                 al responder a una pregunta o trabajando en un proyecto, es tan fácil
                 sentirse frustrado y abandonar.  Esta lección introducirá a los estudiantes
@@ -2861,6 +2873,7 @@ es-MX:
                 El objetivo aquí es empezar a construir habilidades para traducir
                 situaciones del mundo real en escenarios en linea y viceversa.\r\n"
             Learn to Drag and Drop:
+              name: Secuenciación con Arrastrar y Soltar
               description_teacher: Esta lección dará a los estudiantes una idea de
                 qué esperar cuando se dirigen al laboratorio de computación. Comienza
                 con una discusión como breve introducción a modales de un laboratorio
@@ -2883,6 +2896,7 @@ es-MX:
                 de depuración en este nivel para practicar la resolución de problemas
                 y pensamiento crítico.
             Going Places Safely:
+              name: 'Ciudadanía Digital: Ir a Lugares de Forma Segura'
               description_teacher: En colaboración con [r common-sense-media], esta
                 lección ayuda a los estudiantes a aprender que muchos sitios piden
                 información privada y discute como manejar esas solicitudes. Los estudiantes
@@ -2924,15 +2938,23 @@ es-MX:
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Depuración: Errores desapercibidos'
+              name: 'Debugging: Errores no Detectados'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Perseverancia: Stevie y el Gran Proyecto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la vida real: Planta una semilla'
+            Learn to Drag and Drop:
+              name: Secuenciación con Arrastrar y Soltar
+            Your Digital Footprint:
+              name: 'Ciudadanía Digital: Mi Huella Digital'
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Programming in Maze:
               name: Programación en Laberinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
+            More Programming in Maze:
+              name: Más Programación en Laberinto
             Programming with Rey and BB-8:
               name: Programación con Rey y BB-8
           title: Curso B
@@ -2945,6 +2967,8 @@ es-MX:
             Al final del curso, crea tu propio juego o historia para compartir.
         coursec-2017:
           stages:
+            Building a Foundation:
+              name: 'Perseverancia: Construyendo los Cimientos'
             Programming in Maze:
               name: Programación en Laberinto
             Debugging in Maze:
@@ -2956,19 +2980,23 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: Getting Loopy':
-              name: 'Ciclos: Haciendo ciclos'
+              name: 'Loops: Buscando Loopy'
             Loops in Maze:
-              name: Ciclos en Maze
+              name: Loops en Laberinto
             Loops in Harvester:
               name: Ciclos en Harvester
             Build a Flappy Game:
               name: Construye un juego Flappy
+            Screen Out the Mean:
+              name: 'Ciudadanía Digital: Identificar al/la Malo/a'
+            Binary Bracelets:
+              name: 'Más Allá de la Programación: Pulseras Binarias'
             Loops with Rey and BB-8:
               name: Ciclos con Rey y BB-8
           title: Curso C
           assignment_family_title: Curso C
           description_audience: Edades de 6 a 10 años
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           description: Crea programas con secuencias, ciclos y eventos. Traduce tus
             iniciales a binario, investiga distintas tecnicas de resolución de problemas
@@ -2978,12 +3006,54 @@ es-MX:
           stages:
             Introduction:
               name: Introducción a los acertijos en línea
+              description_student: Esta lección te entrenará en las habilidades que
+                necesitarás para este curso.
+              description_teacher: 'En este grupo de desafíos, los/as estudiantes
+                comenzarán con una introducción (o revisión dependiendo de la experiencia
+                de su clase) al espacio de trabajo online de Code.org. Habrá videos
+                señalando la funcionalidad básica del espacio de trabajo incluyendo
+                los botones Ejecutar, Reiniciar y Paso. También se discute en estos
+                videos: Arrastrar los bloques Blockly, borrar bloques Blockly y conectar
+                bloques Blockly. Luego, los/as estudiantes practicarán sus habilidades
+                de secuenciación y debugging en laberinto. Desde ahí en adelante,
+                los/as estudiantes verán nuevos desafíos como Recolector, Artista
+                y Cosechador una vez comprendan las bases de -loops-.'
+            'Algorithms: Graph Paper Programming':
+              name: 'Programación: Programación en Papel Cuadriculado'
+              description_student: "¡En esta lección, programarás a tu amigo para
+                que haga dibujos!"
+              description_teacher: "“Programándose” mutuamente para hacer dibujos,
+                los/as estudiantes comenzarán a comprender de qué se trata realmente
+                codificar. La clase comenzará haciendo que los/as estudiantes se den
+                instrucciones mutuamente para colorear cuadrados en un papel cuadriculado,
+                en un esfuerzo por reproducir un dibujo ya existente. Si hay tiempo,
+                la lección puede concluir con imágenes que los/as estudiantes creen
+                por si mismos/as."
             Events in Bounce:
               name: Eventos en Bounce
+              description_student: "¿Has pensado que alguna vez puedes jugar videojuegos
+                en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
+              description_teacher: En esta actividad online, los/as estudiantes aprenderán
+                lo que son los eventos, y cómo los computadores los usan en los programas
+                como los videojuegos. Los/as estudiantes trabajarán los desafíos haciendo
+                que el programa reaccione a los eventos (como presionar los botones
+                de flecha). Al final del desafío, los/as estudiantes tendrán la oportunidad
+                de personalizar su juego con diferentes velocidades y sonidos.
             Nested Loops:
               name: Bucles anidados
+              description_student: Loops dentro de loops dentro de loops. ¿Qué significa
+                esto? Esta lección te enseñará qué sucede cuando colocas un loop dentro
+                de otro loop.
+              description_teacher: En esta actividad online, los/as estudiantes tendrán
+                la oportunidad de llevar su comprensión de los loops a un nuevo nivel.
+                Jugando con la Abeja y Plantas versus Zombis, los/as estudiantes aprenderán
+                cómo programar un loop para que esté dentro de otro loop. También
+                se les animará a que descifren cómo cambios pequeños en cualquier
+                loop, afectarán su programa cuando hagan clic en Ejecutar.
             Nested Loops in Artist:
               name: Ciclos anidados en Artist
+              description_student: Aquí usarás loops anidados para hacer dibujos geniales
+                para mostrarle a tu familia y amigos.
             Debugging in Bee:
               name: Depuración en Bee
             While Loops in Farmer:
@@ -2994,8 +3064,14 @@ es-MX:
               name: Condicionales y ciclos en Maze
             Conditionals & Loops in Farmer:
               name: Condicionales y ciclos en Harvester
+            Digital Citizenship:
+              name: 'Ciudadanía Digital: Practicando Ciudadanía Digital'
             Build a Play Lab Game:
               name: Construye un juego de Play Lab
+            'Unplugged: Binary':
+              name: 'Más allá de la Programación: Imágenes Binarias'
+            Artist Binary:
+              name: Binario en Artista
             Nested Loops Project in Artist:
               name: Ciclos anidados con Frozen
             Debugging in Collector:
@@ -3189,13 +3265,17 @@ es-MX:
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Secuencias en Maze
+              name: Secuencias en Laberinto
             Building a Foundation:
               name: Construir una base
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
+            Nested Loops in Bee/Zombie:
+              name: Loops Anidados con Abeja/Zombie
+            Nested Loops with Frozen:
+              name: Loops Anidados con Frozen
             Nested Loops:
               name: Bucles anidados
             Functions in Harvester:
@@ -3243,6 +3323,7 @@ es-MX:
                 y en línea. Los estudiantes entonces piensan en maneras de responder
                 a la intimidación por el Internet. "
             Ice Age Play Lab:
+              name: Eventos en La Era del Hielo
               description_student: Piensa en tu videojuego favorito. ¿Te has preguntado
                 alguna vez cómo se hizo? ¡En estos acertijos desarrollarás un videojuego
                 propio con amigos de Ice Age!
@@ -3397,13 +3478,17 @@ es-MX:
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Secuencias en Maze
+              name: Secuencias en Laberinto
             Building a Foundation:
               name: Construir una base
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
+            Nested Loops in Bee/Zombie:
+              name: Loops Anidados con Abeja/Zombie
+            Nested Loops with Frozen:
+              name: Loops Anidados con Frozen
           title: Curso F
           assignment_family_title: Curso F
           description_audience: 9 a 13 años
@@ -3424,10 +3509,12 @@ es-MX:
               name: 'Programando Sin Conexión: Mis Amigos Robóticos'
             Introduction:
               name: Introducción
+            'Algorithms: Graph Paper Programming':
+              name: 'Programación: Programación en Papel Cuadriculado'
             Debugging in Collector:
               name: Introducción a la Depuración
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
             Nested Loops Project in Artist:
               name: Ciclos anidados en Artist
             Internet:
@@ -3482,6 +3569,10 @@ es-MX:
               name: Presenta tu proyecto
             Nested Loops Project in Frozen:
               name: Ciclos anidados con Frozen
+            'Common Sense Education: Digital Citizenship':
+              name: 'Ciudadanía Digital: Practicando Ciudadanía Digital'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Ciudadanía Digital: Identificar al/la Malo/a'
             Events in Star Wars:
               name: Eventos en la Guerra de las Galaxias
             Conditional Loops in Maze:
@@ -3508,9 +3599,15 @@ es-MX:
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Depuración: Errores desapercibidos'
+              name: 'Debugging: Errores no Detectados'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Perseverancia: Stevie y el Gran Proyecto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la vida real: Planta una semilla'
+            Learn to Drag and Drop:
+              name: Secuenciación con Arrastrar y Soltar
+            'Online Safety: Your Digital Footprint':
+              name: 'Ciudadanía Digital: Mi Huella Digital'
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Programming in Maze:
@@ -3518,7 +3615,7 @@ es-MX:
             'Programming: Star Wars':
               name: 'Programando: La Guerra de las Galaxias'
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
             Spelling Bee:
               name: Concurso de ortografía
           title: Curso rápido prescolar
@@ -3559,18 +3656,47 @@ es-MX:
             y herramientas de programación.\r\n\r\nEsta unidad se actualizó por última
             vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones
             de los planes de estudios en forum.code.org/c/csp/updates."
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro a AppLab - Elige tu propia aventura
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro a AppLab - Elige tu propia aventura 2
+            Intro to AppLab - Your First App:
+              name: Intro a AppLab - Tu primera aplicación
+            Intro to AppLab - Your First App 2:
+              name: Intro a AppLab - Tu primera aplicación 2
+            Intro to AppLab - Your First App 3:
+              name: Intro a AppLab - Tu primera aplicación 3
+            Intro to AppLab - Your First App 4:
+              name: Intro a AppLab - Tu primera aplicación 4
+            Intro to AppLab - Getting Started:
+              name: Intro a AppLab - Comenzar
+            Intro to App Lab:
+              name: Intro a App Lab
+          title: Intro a App Lab
+          description_short: Crear tu propia aplicación en JavaScript utilizando programación
+            en bloque o texto. Si ya has hecho alguna programación con bloques, llevar
+            sus habilidades al siguiente nivel.
+          description: Crear tu propia aplicación en JavaScript utilizando programación
+            en bloque o texto. Si ya has hecho alguna programación con bloques, llevar
+            sus habilidades al siguiente nivel.
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
+            Sequence and Preview in Maze:
+              name: Secuencia y revisión en Laberinto
             Building a Foundation:
               name: Construir una base
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
             Nested Loops:
               name: Bucles anidados
+            Nested Loops with Frozen:
+              name: Loops Anidados con Frozen
             'Algorithms: Dice Race':
               name: 'Algoritmos: Carrera de dados'
             Conditionals:
@@ -3605,8 +3731,10 @@ es-MX:
               name: Colaboración abierta
             Nested Loops in Bee:
               name: Ciclos anidados en Bee
+            Nested Loops in Bee/Zombie:
+              name: Loops Anidados con Abeja/Zombie
             Sequence in Maze:
-              name: Secuencias en Maze
+              name: Secuencias en Laberinto
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3658,7 +3786,7 @@ es-MX:
             Debugging in Collector:
               name: Depuración en Collector
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
             Events in Star Wars:
               name: Eventos en la Guerra de las Galaxias
             Events in Bounce:
@@ -3706,13 +3834,17 @@ es-MX:
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Secuencias en Maze
+              name: Secuencias en Laberinto
             Building a Foundation:
               name: Construir una base
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
+            Nested Loops in Bee/Zombie:
+              name: Loops Anidados con Abeja/Zombie
+            Nested Loops with Frozen:
+              name: Loops Anidados con Frozen
             'Algorithms: Dice Race':
               name: 'Algoritmos: Carrera de dados'
             Conditionals:
@@ -3750,13 +3882,17 @@ es-MX:
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Secuencias en Maze
+              name: Secuencias en Laberinto
             Building a Foundation:
               name: Construir una base
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
+            Nested Loops in Bee/Zombie:
+              name: Loops Anidados con Abeja/Zombie
+            Nested Loops with Frozen:
+              name: Loops Anidados con Frozen
             'Algorithms: Tangrams':
               name: 'Algoritmos: Tanagramas'
             The Power of Words:
@@ -3833,6 +3969,8 @@ es-MX:
               name: 'Desarrollo de aplicaciones: introducción al laboratorio de aplicaciones'
             Creating Webpages:
               name: Creando páginas web
+            Intro to App Lab:
+              name: Intro a App Lab
             Smart Clothing Design:
               name: Diseño de ropa inteligente
         hero:
@@ -3841,6 +3979,25 @@ es-MX:
               name: Hora de Código de Minecraft
           description: "¡Minecraft está de vuelta para la Hora del Código con una
             actividad nueva! Viaja a través de Minecraft con códigos."
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro a AppLab - Elige tu propia aventura
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro a AppLab - Elige tu propia aventura 2
+            Intro to AppLab - Your First App:
+              name: Intro a AppLab - Tu primera aplicación
+            Intro to AppLab - Your First App 2:
+              name: Intro a AppLab - Tu primera aplicación 2
+            Intro to AppLab - Your First App 3:
+              name: Intro a AppLab - Tu primera aplicación 3
+            Intro to AppLab - Your First App 4:
+              name: Intro a AppLab - Tu primera aplicación 4
+            Intro to AppLab - Getting Started:
+              name: Intro a AppLab - Comenzar
+            Intro to App Lab:
+              name: Intro a App Lab
+          title: Intro a App Lab Staging
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -3860,15 +4017,17 @@ es-MX:
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Secuencias en Maze
+              name: Secuencias en Laberinto
             Building a Foundation:
               name: Construir una base
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
             Nested Loops:
               name: Bucles anidados
+            Nested Loops with Frozen:
+              name: Loops Anidados con Frozen
             'Algorithms: Dice Race':
               name: 'Algoritmos: Carrera de dados'
             Introduction:
@@ -3910,13 +4069,17 @@ es-MX:
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Secuencias en Maze
+              name: Secuencias en Laberinto
             Building a Foundation:
               name: Construir una base
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
+            Nested Loops in Bee/Zombie:
+              name: Loops Anidados con Abeja/Zombie
+            Nested Loops with Frozen:
+              name: Loops Anidados con Frozen
             'Algorithms: Tangrams':
               name: 'Algoritmos: Tanagramas'
             Introduction:
@@ -4147,6 +4310,7 @@ es-MX:
                 analizar los sitios que encuentran confiables para identificar cuál
                 de los animales son realmente un engaño.
         coursea-2018:
+          title: Curso A (2018)
           assignment_family_title: Curso A
           description: Aprende los basicos de las ciencias de la compuación y el internet.
             Al final del curso, crea tu propio juego o historia para compartir.
@@ -4158,7 +4322,7 @@ es-MX:
               name: Errores desapercibidos
               description_teacher: 'Esta lección guiará a los estudiantes a través
                 de los pasos de depuración. Los estudiantes aprenderán el mantra:
-                "¿Que ocurrió? ¿Qué se suponia que pasara? ¿Eso que te dice?"'
+                "¿Que ocurrió? ¿Qué se suponía que pasara? ¿Eso que te dice?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie y el gran proyecto
               description_teacher: "Cuando los estudiantes se encuentran con una barrera
@@ -4170,6 +4334,7 @@ es-MX:
                 realizarse en una o dos clases.  Si tienes más tiempo, no dudes en
                 dibujar  el edificio y repasar la lección de Marble Run."
             'Real-life Algorithms: Plant a Seed':
+              name: Plantar una Semilla
               description_teacher: "En esta lección, los estudiantes relacionan el
                 concepto de algoritmos a actividades cotidianas, plantando una semilla.
                 El objetivo aquí es empezar a construir habilidades para traducir
@@ -4205,15 +4370,18 @@ es-MX:
                 tambien descubren que pueden ir a lugares emocionantes en linea, pero
                 necesitan seguir ciertas reglas para estar seguros.
             'Loops: Happy Loops':
+              name: Loops Felices
               description_teacher: Los ciclos son una herramienta muy util y poderosa
                 en la programación. Para entender cuan útiles pueden ser, los estudiantes
                 deben ser motivador a querer resolver problemas mundanos de manera
                 mas facil.
             Loops in Collector:
+              name: Loops con Laurel
               description_teacher: Trabajando sobre el concepto de repetir instrucciones
                 de "Ciclos felices", en este nivel los estudiantes usaran ciclos para
                 recoger tesoro mas eficientemente en Code.org.
             Loops in Artist:
+              name: Ocean Scene con Loops
               description_teacher: Regresando a los ciclos, los estudiantes aprenden
                 a dibujar imagenes ciclando secuencias simples de instrucciones. En
                 la lección desconectada previa, los ciclos fueron usados para recorrer
@@ -4221,11 +4389,13 @@ es-MX:
                 Al final de esta etapa, los estudiantes tendrán la oportunidad de
                 crear sus propias imagenes usando ciclos.
             'Events: The Big Event':
+              name: El Gran Evento Jr.
               description_teacher: Los eventos son una excelente manera de agregar
                 variedad a un algoritmo preescrito. A veces deseas que el programa
                 responda al usuario exactamente cuando éste lo desea. Para esto son
                 los eventos.
             Events in Play Lab:
+              name: En Movimiento con Eventos
               description_teacher: En esta actividad en linea, los estudiantes tendrán
                 la oportunidad de aprender como usar eventos en Play Lab y de aplicar
                 las habilidades de código que han aprendidod para crear un juego animado.
@@ -4254,7 +4424,7 @@ es-MX:
             Debugging in Collector:
               name: Depuración en Collector
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
             Nested Loops:
               name: Bucles anidados
             'Events: The Big Event':
@@ -4310,7 +4480,7 @@ es-MX:
             Loops with Rey and BB-8:
               name: Ciclos con Rey y BB-8
             'Concept Practice with Minecraft ':
-              name: Observando hacia el futuro
+              name: Mirando hacia el Futuro con Minecraft
             Nested Loops in Bee:
               name: Ciclos anidados en Bee
             Nested Loops in Frozen:
@@ -4349,6 +4519,8 @@ es-MX:
               name: Colaboración abierta
             Relay Programming:
               name: Programación de relevos
+            Graph Paper Programming:
+              name: Programación de hoja cuadriculada
         courseb-2018:
           assignment_family_title: Curso B
           description: Aprende los basicos de las ciencias de la compuación y el internet.
@@ -4356,7 +4528,7 @@ es-MX:
           description_audience: Edades de 5 a 8 años
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Depuración: Errores desapercibidos'
+              name: 'Debugging: Errores no Detectados'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistencia y frustración: Stevie y las canicas'
             'Real-life Algorithms: Plant a Seed':
@@ -4372,7 +4544,11 @@ es-MX:
             Programming with Rey and BB-8:
               name: Programación con Rey y BB-8
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: 'Loops: Mis amigos Robóticos Loopy.'
+            Loops in Collector:
+              name: Loops con Laurel
+            'Events: The Big Event':
+              name: El Gran Evento Jr.
             Programming in Ice Age:
               name: Programación en Ice Age
             Loops in Ice Age:
@@ -4381,7 +4557,10 @@ es-MX:
               name: Secuencias con Scrat
             Move It, Move It:
               name: Muévelo, Muévelo
+            Copyright and Creativity:
+              name: Es estupendo crear y jugar limpio
         coursed-2018:
+          title: Curso D (2018)
           assignment_family_title: Curso D
           description_audience: Edades de 7 a 11 años
           stages:
@@ -4429,15 +4608,18 @@ es-MX:
               name: Programación de relevos
             Introduction to Online Puzzles:
               name: Introducción a los acertijos en línea
+            Nested Loops in Bees:
+              name: Loops Anidados en Abeja
             Nested Loops in Maze:
               name: Ciclos anidados en Maze
         coursec-2018:
+          title: Curso C (2018)
           assignment_family_title: Curso C
           description: Crea programas con secuencias, ciclos y eventos. Traduce tus
             iniciales a binario, investiga distintas tecnicas de resolución de problemas
             y aprende como responder a las amenazas en linea. ¡Al final del curso,
             crea tu propio juego o historia que puedes compartir!
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           description_audience: Edades de 6 a 10 años
           stages:
@@ -4447,6 +4629,8 @@ es-MX:
               name: Programación en Laberinto
             Debugging in Maze:
               name: Depuración en Maze
+            'Real-life Algorithms: Paper Planes':
+              name: Aviones de Papel
             Programming in Collector:
               name: Programación en Collector
             Programming in Artist:
@@ -4461,12 +4645,14 @@ es-MX:
               name: El gran evento
             Build a Flappy Game:
               name: Construye un juego Flappy
+            Events in Play Lab:
+              name: Chase Game con Eventos
             Screen Out the Mean:
               name: Encuentra la media
             Binary Bracelets:
               name: Pulseras binarias
             Looking Ahead:
-              name: Observando hacia el futuro
+              name: Mirando hacia el Futuro con Minecraft
         csd6-2018:
           stages:
             Making Music:
@@ -4490,9 +4676,11 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: Mis amigos Robóticos Loopy
             Nested Loops:
               name: Ciclos anidados en Maze
+            Nested Loops with Frozen:
+              name: Loops Anidados con Frozen
             'Algorithms: Dice Race':
               name: 'Algoritmos: Carrera de dados'
               description_student: Aprende a describir un juego desde la perspectiva
@@ -4651,6 +4839,8 @@ es-MX:
               name: Condicionales con tarjetas
             Minecraft Hour of Code:
               name: Hora de Código de Minecraft
+            Copyright and Creativity:
+              name: Compartir digital
         coursef-2018:
           assignment_family_title: Curso F
           description: Aprende a usar diferentes tipos de ciclos, eventos, funciones
@@ -4671,9 +4861,11 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: Mis amigos Robóticos Loopy
             Nested Loops in Bee/Zombie:
               name: Ciclos anidados en Maze
+            Nested Loops with Frozen:
+              name: Loops Anidados con Frozen
             'Algorithms: Tangrams':
               name: 'Algoritmos: Tanagramas'
               description_student: "¡Aquí usted aprenderá acerca de algoritmos usando
@@ -4864,11 +5056,11 @@ es-MX:
             Personal Innovations:
               name: Invenciones que son personales
             Sending Binary Messages:
-              name: Envío de mensajes binarios
+              name: Enviando mensajes binarios
             Sending Binary Messages with the Internet Simulator:
               name: Envío de los mensajes que son binarios con el simulador de internet
             Number Systems:
-              name: Sistemas de numeración
+              name: Sistemas numéricos
             Binary Numbers:
               name: Números binarios
             Sending Numbers:
@@ -5089,7 +5281,11 @@ es-MX:
             'Programming: Star Wars':
               name: 'Programando: La Guerra de las Galaxias'
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: 'Loops: Mis amigos Robóticos Loopy.'
+            Loops in Collector:
+              name: Loops con Laurel
+            'Events: The Big Event':
+              name: El Gran Evento Jr.
             Spelling Bee:
               name: Concurso de ortografía
             Move It, Move It:
@@ -5100,6 +5296,8 @@ es-MX:
               name: Tu huella dactilar
             Programming in Ice Age:
               name: Programación en Ice Age
+            Copyright and Creativity:
+              name: Es estupendo crear y jugar limpio
             Programming with Rey and BB-8:
               name: Programación con Rey y BB-8
             Loops in Ice Age:
@@ -5127,8 +5325,6 @@ es-MX:
           stages:
             Artist:
               name: Artista
-        aquatic:
-          title: 'Minecraft: Udhëtimi ujor'
         dance--draft:
           stages:
             Dance Party:
@@ -5153,13 +5349,17 @@ es-MX:
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Secuencias en Maze
+              name: Secuencias en Laberinto
             Building a Foundation:
               name: Construir una base
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
+            Nested Loops in Bee/Zombie:
+              name: Loops Anidados con Abeja/Zombie
+            Nested Loops with Frozen:
+              name: Loops Anidados con Frozen
             Conditionals with Cards:
               name: Condicionales con tarjetas
             The Power of Words:
@@ -5263,11 +5463,18 @@ es-MX:
                 al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
             The Artist:
               name: El artista
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Colaboración abierta
+            Digital Sharing:
+              name: Compartir digital
         dance-low:
           stages:
             Dance Party:
               name: Fiesta de baile
         coursed-2019:
+          title: Curso D (2019)
           description_audience: Edades de 7 a 11 años
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5306,6 +5513,8 @@ es-MX:
               name: Artista binario
             Build a Star Wars Game:
               name: Construye un juego de Star Wars
+            Dance Party:
+              name: Fiesta de baile
         coursee-2019:
           description: Empieza a programar con algoritmos, ciclos, condicionales,
             y eventos y luego te moverás en funciones. En la segunda parte de este
@@ -5316,15 +5525,17 @@ es-MX:
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Secuencias en Maze
+              name: Secuencias en Laberinto
             Building a Foundation:
               name: Construir una base
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Ciclos: Mis amigos roboticos'
+              name: "´Loops: Mis amigos Robóticos Loopy"
             Nested Loops:
               name: Bucles anidados
+            Nested Loops with Frozen:
+              name: Loops Anidados con Frozen
             Conditionals with Cards:
               name: Condicionales con tarjetas
             Conditionals:
@@ -5452,6 +5663,8 @@ es-MX:
               name: Ciclos anidados con Frozen
             Conditionals in Minecraft:
               name: Condicionales en Minecraft
+            Digital Sharing:
+              name: Compartir digital
         express-2019:
           description: Aprende los basicos de las ciencias de la compuación y el internet.
             Al final del curso, crea tu propio juego o historia para compartir.
@@ -5469,7 +5682,7 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: Getting Loopy':
-              name: 'Ciclos: Haciendo ciclos'
+              name: 'Loops: Buscando Loopy'
             Loops with Rey and BB-8:
               name: Ciclos con Rey y BB-8
             Nested Loops in Bee:
@@ -5591,11 +5804,12 @@ es-MX:
           title: Sigue bailando
           description: Ve más allá de la primera hora con ideas extendidas del proyecto.
         coursec-2019:
+          title: Curso C (2019)
           description: Crea programas con secuencias, ciclos y eventos. Traduce tus
             iniciales a binario, investiga distintas tecnicas de resolución de problemas
             y aprende como responder a las amenazas en linea. ¡Al final del curso,
             crea tu propio juego o historia que puedes compartir!
-          description_short: Aprende los conceptos básicos de las ciencias de la computación
+          description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           description_audience: Edades de 6 a 10 años
           stages:
@@ -5612,7 +5826,7 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: Getting Loopy':
-              name: 'Ciclos: Haciendo ciclos'
+              name: 'Loops: Buscando Loopy'
             Loops with Rey and BB-8:
               name: Ciclos con Rey y BB-8
             Loops in Harvester:
@@ -5625,5 +5839,454 @@ es-MX:
               name: Observando hacia el futuro
             Binary Bracelets:
               name: Pulseras binarias
+            'End of Course Project: Play Lab':
+              name: 'Fin del Proyecto del Curso: Play Lab'
+            Create a Design with Loops:
+              name: Crea un Diseño con Loops
+            'End of Course Project: Create a Play Lab Game':
+              name: 'Fin del Proyecto del Curso: Crea un Juego de Play Lab'
+            'Programming: My Robotic Friends':
+              name: 'Programación: Mis amigos robóticos'
+            'Loops: My Loopy Robotic Friends':
+              name: "´Loops: Mis amigos Robóticos Loopy"
+            Graphing Data:
+              name: Datos de gráfico
         gamelab:
           title: Laboratorio de juegos
+        coursea-2019:
+          description: Aprende los basicos de las ciencias de la compuación y el internet.
+            Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: Una introducción a las ciencias de la computación para
+            pre lectores.
+          description_audience: Edades de 4 a 7 años
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Errores no Detectados'
+              description_teacher: 'Esta lección guiará a los estudiantes a través
+                de los pasos de depuración. Los estudiantes aprenderán el mantra:
+                "¿Que ocurrió? ¿Qué se suponía que pasara? ¿Eso que te dice?"'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos de la vida real: Planta una semilla'
+              description_teacher: "En esta lección, los estudiantes relacionan el
+                concepto de algoritmos a actividades cotidianas, plantando una semilla.
+                El objetivo aquí es empezar a construir habilidades para traducir
+                situaciones del mundo real en escenarios en linea y viceversa.\r\n"
+            'Programming: Happy Maps':
+              name: 'Programación: Mapas felices'
+              description_teacher: El puente de algoritmos a programación puede ser
+                corto si los estudiantes entienden la diferencia entre planificación
+                de una secuencia y codificación de la secuencia en el idioma apropiado.  Esta
+                actividad ayudará a los estudiantes a adquirir experiencia de lectura
+                y escritura de código.
+            Programming in Maze:
+              name: Programación en Laberinto
+              description_teacher: En esta serie de acertijos en linea, los estudiantes
+                aprenderán sobre algoritmos, depuración y conocimientos generales
+                de computación. Presentando personajes del juego Angry Birds, los
+                estudiantes desarrollaran algoritmos secuenciales para llevar el pajaro
+                al puerco sin estrellarse con paredes o TNT. Se han mezclado acertijos
+                de depuración en este nivel para practicar la resolución de problemas
+                y pensamiento crítico.
+            Going Places Safely:
+              name: Ir a sitios seguros
+              description_teacher: En colaboración con [r common-sense-media], esta
+                lección ayuda a los estudiantes a aprender que muchos sitios piden
+                información privada y discute como manejar esas solicitudes. Los estudiantes
+                tambien descubren que pueden ir a lugares emocionantes en linea, pero
+                necesitan seguir ciertas reglas para estar seguros.
+            'Loops: Happy Loops':
+              description_teacher: Los ciclos son una herramienta muy util y poderosa
+                en la programación. Para entender cuan útiles pueden ser, los estudiantes
+                deben ser motivador a querer resolver problemas mundanos de manera
+                mas facil.
+            Loops in Harvester:
+              name: Ciclos en Harvester
+            Loops in Collector:
+              description_teacher: Trabajando sobre el concepto de repetir instrucciones
+                de "Ciclos felices", en este nivel los estudiantes usaran ciclos para
+                recoger tesoro mas eficientemente en Code.org.
+            Loops in Artist:
+              description_teacher: Regresando a los ciclos, los estudiantes aprenden
+                a dibujar imagenes ciclando secuencias simples de instrucciones. En
+                la lección desconectada previa, los ciclos fueron usados para recorrer
+                un laberinto y recoger tesoro. Aquí, los ciclos estan creando patrones.
+                Al final de esta etapa, los estudiantes tendrán la oportunidad de
+                crear sus propias imagenes usando ciclos.
+            'Events: The Big Event':
+              description_teacher: Los eventos son una excelente manera de agregar
+                variedad a un algoritmo preescrito. A veces deseas que el programa
+                responda al usuario exactamente cuando éste lo desea. Para esto son
+                los eventos.
+            Events in Play Lab:
+              description_teacher: En esta actividad en linea, los estudiantes tendrán
+                la oportunidad de aprender como usar eventos en Play Lab y de aplicar
+                las habilidades de código que han aprendidod para crear un juego animado.
+                ¡Es tiempo de ponerse creativo y hacer una historia en Play Lab!
+            Ocean Scene with Loops:
+              name: Ocean Scene con Loops
+            Learn to Drag and Drop:
+              name: Aprende a arrastrar y soltar
+        courseb-2019:
+          description: Aprende los basicos de las ciencias de la compuación y el internet.
+            Al final del curso, crea tu propio juego o historia para compartir.
+          description_audience: Edades de 5 a 8 años
+          stages:
+            Move It, Move It:
+              name: Muévelo, Muévelo
+            Sequencing with Scrat:
+              name: Secuencias con Scrat
+            Your Digital Footprint:
+              name: Tu huella dactilar
+            'Programming: My Robotic Friends':
+              name: 'Programación: Mis amigos robóticos'
+            Programming with Rey and BB-8:
+              name: Programación con Rey y BB-8
+            'Loops: My Loopy Robotic Friends':
+              name: "´Loops: Mis amigos Robóticos Loopy"
+            Loops in Ice Age:
+              name: Ciclos en Ice Age
+            'Loops: Getting Loopy':
+              name: 'Loops: Buscando Loopy'
+        pre-express-2019:
+          description: Aprende los basicos de las ciencias de la compuación y el internet.
+            Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: 'Introducción a las ciencias de la computación para preescolar:
+            combina lo mejor de nuestros cursos de jardín de infantes y primer grado.'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Errores no Detectados'
+            Move It, Move It:
+              name: Muévelo, Muévelo
+            Sequencing with Scrat:
+              name: Secuencias con Scrat
+            Your Digital Footprint:
+              name: Tu huella dactilar
+            'Programming: My Robotic Friends':
+              name: 'Programación: Mis amigos robóticos'
+            Programming with Rey and BB-8:
+              name: Programación con Rey y BB-8
+            'Loops: My Loopy Robotic Friends':
+              name: "´Loops: Mis amigos Robóticos Loopy"
+            Loops in Ice Age:
+              name: Ciclos en Ice Age
+            Spelling Bee:
+              name: Concurso de ortografía
+        removed19:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Errores no Detectados'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos de la vida real: Planta una semilla'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Listas
+            Sources and Search Engines:
+              description_teacher: Esta lección alienta a los estudiantes a pensar
+                más críticamente sobre cómo funcionan las búsquedas web y cómo encontrar
+                información relevante y confiable en línea. Después de ver y debatir
+                un video sobre cómo funcionan los motores de búsqueda, los estudiantes
+                buscarán información sobre varios animales poco comunes. Tendrán que
+                analizar los sitios que encuentran confiables para identificar cuál
+                de los animales son realmente un engaño.
+        csd3-2019:
+          description_short: Programación
+          stages:
+            Programming for Entertainment:
+              description_student: Se le pide a la clase que considere los "problemas"
+                del aburrimiento y de autoexpresión, y una reflexion sobre cómo abordan
+                esos problemas en sus propias vidas. A partir de ahí, explorarán cómo
+                la informática en general, y la programación mas específico, juegan
+                un papel en una forma específica de entretenimiento o como vehículo
+                de autoexpresión.
+            Plotting Shapes:
+              description_student: Los estudiantes exploran los desafíos de comunicación
+                en cómo dibujar con formas y usan una herramienta que introduce la
+                forma de abordar este problema en Game Lab. La actividad de calentamiento
+                demuestra rápidamente los desafíos de comunicar sin algún punto de
+                referencia compartido. En la actividad principal, los estudiantes
+                exploran una herramienta de Game Lab que les permite a los mismo colocar
+                formas interactivamente en la cuadrícula de 400 por 400 de Game Lab.
+                Luego se turnan para instruir a un compañero sobre cómo dibujar una
+                imagen oculta con esta herramienta, lo que representa muchos desafíos
+                que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes
+                opcionalmente crean su propia imagen para comunicarse antes de discutir
+                la informacion.
+              description_teacher: Los estudiantes exploran los desafíos de comunicación
+                en cómo dibujar con formas y usan una herramienta que introduce la
+                forma de abordar este problema en Game Lab. La actividad de calentamiento
+                demuestra rápidamente los desafíos de comunicar sin algún punto de
+                referencia compartido. En la actividad principal, los estudiantes
+                exploran una herramienta de Game Lab que les permite a los mismo colocar
+                formas interactivamente en la cuadrícula de 400 por 400 de Game Lab.
+                Luego se turnan para instruir a un compañero sobre cómo dibujar una
+                imagen oculta con esta herramienta, lo que representa muchos desafíos
+                que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes
+                opcionalmente crean su propia imagen para comunicarse antes de discutir
+                la informacion.
+            Drawing in Game Lab:
+              description_teacher: Se les presenta a los estudiantes el Game Lab,
+                el entorno de programación de esta unidad, y comienzan a usarlo para
+                colocar las formas en la pantalla. Aprenden los conceptos básicos
+                de secuenciación y depuración, así como algunos comandos simples.
+                Al final de la lección, los estudiantes podrán programar imágenes
+                como las que hicieron con la herramienta de dibujo en la lección anterior.
+            Variables:
+              name: Variables
+              description_student: Esta lección introduce variables como una forma
+                de etiquetar un número en un programa o guardar un valor generado
+                aleatoriamente. La clase comienza la lección con una descripción muy
+                básica del propósito de una variable y práctica usando los nuevos
+                bloques. Después, la clase usa variables para guardar un número aleatorio,
+                permitiendo que los programas usen el mismo número aleatorio varias
+                veces.
+              description_teacher: En esta lección, los estudiantes aprenden a usar
+                variables para etiqueta un número en su programa o guardar un valor
+                generado aleatoriamente. Los estudiantes comienzan la lección con
+                una descripción muy básica del propósito de una variable. Luego, los
+                estudiantes completan un nivel de progreso que refuerza el modelo
+                de una variable como una forma de etiquetar o nombrar un número. Los
+                estudiantes usan variables para guardar un número aleatorio para ver
+                que las variables realmente almacenan o guardan sus valores, lo que
+                les permite usar el mismo número aleatorio varias veces en sus programas.
+            Sprites:
+              description_student: Para crear imágenes más interesantes y detalladas,
+                la clase se introduce en el objeto sprite. A cada sprite se le puede
+                asignar una imagen para mostrar, y los sprites también hacen un seguimiento
+                de múltiples valores acerca de ellos mismos, lo que resultará útil
+                en la via para hacer animaciones. Al final de la lección, todos crean
+                una escena usando sprites.
+            Booleans Unplugged:
+              description_teacher: |-
+                En esta lección, se les presenta a los estudiantes los valores booleanos y la lógica, así como las declaraciones condicionales. La clase comienza jugando un juego simple de Levantarse, Sentarse en el que las afirmaciones booleanas (verdadero / falso) describen propiedades personales (color de pelo o ojos, tipo de ropa, edad, etc.). Esto hace que los estudiantes piensen cómo pueden enmarcar una propiedad con múltiples valores potenciales (como la edad) con una pregunta binaria.
+
+                A partir de ahí, los estudiantes reciben un grupo de objetos con propiedades físicas similares pero variables. Con un compañero, agrupan esos objetos basándose en declaraciones booleanas cada vez más complejas, incluidos booleanos compuestos con "y" y "o".
+
+                Finalmente, revelamos los Condicionales como una herramienta para tomar decisiones o afectar el flujo de un programa usando declaraciones booleanas como entrada.
+            Conditionals:
+              name: Condicionales
+            Keyboard Input:
+              description_teacher: Después de la introducción a los booleanos y las
+                instrucciones _if_ en la lección anterior, se introduce a los estudiantes
+                en un nuevo bloque llamado `keyDown()` que devuelve un booleano y
+                se puede usar en sentencias de condicionales para mover sprites alrededor
+                de la pantalla. Al final de esta lección, los estudiantes tendrán
+                programas escritos que tomarán como entrada el teclado del usuario
+                para controlar los sprites en la pantalla.
+            Other Forms of Input:
+              description_student: La clase continúa explorando formas de usar declaraciones
+                condicionales para tomar la entrada del usuario. Además del sencillo
+                comando keyDown() aprendido ayer, la clase aprende sobre varios otros
+                comandos de entrada del teclado, así como formas de entrada para el
+                mouse.
+            Project - Interactive Card:
+              description_teacher: En este proyecto acumulativo para el Capítulo 1,
+                los estudiantes planifican y desarrollan una tarjeta de felicitación
+                interactiva usando todas las técnicas de programación que han aprendido
+                hasta este momento.
+            Velocity:
+              name: Velocidad
+              description_student: Después de una breve revisión de cómo se usa el
+                patrón de contador para mover los sprites, se introduce la clase a
+                las propiedades que establecen la velocidad y la velocidad de rotación
+                directamente. A medida que utilizan estas nuevas propiedades de diferentes
+                maneras, desarrollan las habilidades que necesitan para crear un juego
+                básico de desplazamiento lateral.
+            Collision Detection:
+              description_student: La clase aprende sobre la detección de colisión
+                en la computadora. Las parejas exploran cómo una computadora podría
+                usar las propiedades de tamaño y ubicación de los sprites y las matemáticas
+                para detectar si dos sprites se están tocando. Luego, la clase usa
+                el bloque isTouching() para crear diferentes efectos cuando los sprites
+                colisionan, incluidos los sonidos de reproducción. Por último, ellos
+                usan sus nuevas habilidades para mejorar el juego de desplazamiento
+                lateral que comenzaron en la última lección.
+            Complex Sprite Movement:
+              description_student: 'La clase aprende a combinar las propiedades de
+                velocidad de los sprites con el patrón de contador para crear un movimiento
+                de sprite más complejo, como simular la gravedad, hacer que un sprite
+                salte y permitir que un sprite flote hacia la izquierda o hacia la
+                derecha. En los niveles finales, la clase combina estos movimientos
+                para animar y controlar un solo sprite y construir un juego simple
+                en el que un personaje vuela y recoge monedas. '
+            Collisions:
+              description_student: La clase programa sus sprites para interactuar
+                de nuevas maneras. Después de una breve revisión de cómo usaron el
+                bloque isTouching, la clase intercambia ideas sobre otras formas en
+                que dos sprites podrían interactuar. Luego usan isTouching para hacer
+                que un sprite presione otro en la pantalla antes de practicar con
+                los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotar).
+            Functions:
+              name: Funciones
+            Using the Game Design Process:
+              description_student: En esta lección de varios días, la clase usa el
+                proceso de resolución de problemas de la Unidad 1 para crear un juego
+                de salto de plataforma. Después de mirar un juego de muestra, la clase
+                define cómo se verán sus juegos y utiliza un proceso estructurado
+                para construirlos. Finalmente, la clase reflexiona sobre cómo se podrían
+                mejorar los juegos e implementa esos cambios.
+              description_teacher: En esta lección de varios días, los estudiantes
+                usan el proceso de resolución de problemas de la Unidad 1 para crear
+                un juego de salto de plataforma. Comienzan por mirar un ejemplo de
+                un saltador de plataforma y luego definen cómo se verán sus juegos.
+                A continuación, utilizan un proceso estructurado para planificar los
+                fondos, las variables, los sprites y las funciones que necesitarán
+                para implementar su juego. Después de escribir el código del juego,
+                los estudiantes reflexionarán sobre cómo se puede mejorar el juego
+                e implementarán esos cambios.
+            Project - Design a Game:
+              description_teacher: Los estudiantes planificarán y construirán su propio
+                juego utilizando la guía del proyecto de las dos lecciones anteriores
+                para guiar su proyecto. Trabajando individualmente o en parejas, los
+                estudiantes primero decidirán el tipo de juego que les gustaría construir,
+                tomando como inspiración un conjunto de juegos de muestra. Luego completarán
+                una guía de proyecto en blanco donde describirán el comportamiento
+                del juego y el alcance de las variables, sprites y funciones que necesitarán
+                construir. En Code Studio, una serie de niveles les indica una secuencia
+                general que pueden usar para implementar este plan. A mitad del proceso,
+                los estudiantes compartirán sus proyectos para la revisión por pares
+                e incorporarán comentarios a medida que finalicen su juego. Al final
+                de la lección, los estudiantes compartirán sus juegos completados
+                con sus compañeros de clase. Este proyecto abarcará múltiples clases
+                y puede tomar fácilmente de 3-5 períodos de clase.
+        csd4-2019:
+          stages:
+            User-Centered Design Micro Activity:
+              description_teacher: Esta lección guía a los estudiantes a través de
+                una versión resumida del proceso de diseño que verán a lo largo de
+                esta unidad. Los estudiantes primero generan una lluvia de ideas para
+                una lista de usuarios potenciales de ropa inteligente. Como clase,
+                agrupan estas ideas en categorías amplias y cada grupo elegirá una
+                categoría de usuario. Los grupos repiten este proceso para generar
+                una lluvia de ideas sobre las necesidades o inquietudes de sus usuarios,
+                eventualmente categorizar estas necesidades y eligen una para enfocarse.
+                Finalmente, los estudiantes diseñan una pieza de ropa inteligente,
+                usando las necesidades y preocupaciones específicas que cada uno creó
+                para guiar sus decisiones. Al final de la clase, los estudiantes comparten
+                rápidamente su proceso de toma de decisiones y reciben comentarios
+                sobre qué tan bien sus productos abordan las necesidades del usuario
+                que seleccionaron.
+        csd5-2019:
+          stages:
+            Problem Solving with Big Data:
+              description_teacher: En esta lección, los alumnos observan cómo las
+                organizaciones recopilan y utilizan los datos para resolver problemas
+                en el mundo real. La lección comienza con una revisión rápida del
+                proceso de resolución de problemas de datos que exploraron en la última
+                lección. A continuación, los estudiantes presentaran tres escenarios
+                que podrían resolverse utilizando datos y una lluvia de ideas sobre
+                los tipos de datos que desearían resolver y cómo podrían recopilar
+                los datos. Cada problema está diseñado para reflejar un servicio existente
+                en el mundo real. Después de una lluvia de ideas, los estudiantes
+                ven un video sobre un servicio en el mundo real y tomar notas sobre
+                qué datos recopila el servicio del mundo real y cómo se usan. Al final
+                de la lección, los estudiantes indicaran si los datos fueron provistos
+                activamente por un usuario, si se registraron de forma pasiva o si
+                fueron recopilados por sensores.
+        csd6-2019:
+          stages:
+            Making Music:
+              name: Haciendo música
+            Functions with Parameters:
+              name: Funciones con parámetros
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Encuestas
+        csp1-2019:
+          stages:
+            Personal Innovations:
+              name: Invenciones que son personales
+            Sending Binary Messages:
+              name: Enviando mensajes binarios
+            Sending Binary Messages with the Internet Simulator:
+              name: Envío de los mensajes que son binarios con el simulador de internet
+            Number Systems:
+              name: Sistemas numéricos
+            Binary Numbers:
+              name: Números binarios
+            Sending Numbers:
+              name: Envío de los números
+            The Internet:
+              name: Internet
+            The Need for Addressing:
+              name: La necesidad para el redireccionamiento
+            Routers and Redundancy:
+              name: Enrutadores y reiteración
+            Packets and Making a Reliable Internet:
+              name: Paquetes y realización de una internet que sea de confianza
+            The Need for DNS:
+              name: La necesidad para el DNS
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: Bytes y tamaños de los archivos
+            Text Compression:
+              name: Compresión de texto
+            Encoding B&W Images:
+              name: Codificación de imágenes B&W
+            Encoding Color Images:
+              name: Codificación de imágenes a color
+        csp3-2019:
+          description: "Esta unidad presenta los conceptos fundamentales de la programación
+            informática, que desbloquea la capacidad de crear aplicaciones ricas e
+            interactivas. Este curso utiliza JavaScript como lenguaje de programación
+            y App Lab como el entorno de programación para crear aplicaciones, pero
+            los conceptos aprendidos en estas lecciones abarcan todos los lenguajes
+            y herramientas de programación.\r\n\r\nEsta unidad se actualizó por última
+            vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones
+            de los planes de estudios en forum.code.org/c/csp/updates."
+          description_short: Programación
+          stages:
+            The Need For Programming Languages:
+              name: La necesidad de lenguajes de programación
+            Using Simple Commands:
+              name: Uso de comandos simples
+            Creating Functions:
+              name: Creando funciones
+            Functions and Top-Down Design:
+              name: Funciones y el Diseño Top-Down
+            APIs and Function Parameters:
+              name: Las API y los parámetros de las funciones
+            Looping and Random Numbers:
+              name: Bucles y Números Aleatorios
+            Practice PT - Design a Digital Scene:
+              name: Práctica PT - Diseña una Escena Digital
+            Unit 3 Chapter 1 Assessment:
+              name: Unidad 3 Capitulo 1 Evaluacion
+        csp4-2019:
+          stages:
+            Check Your Assumptions:
+              name: Verifica tus suposiciones
+            Identifying People with Data:
+              name: Identificando personas con datos
+            Simple Encryption:
+              name: Encriptación Simple
+        csp5-2019:
+          stages:
+            Buttons and Events:
+              name: Botones y eventos
+            Multi-screen Apps:
+              name: Aplicaciones multi-pantalla
+            Controlling Memory with Variables:
+              name: Manejando la memoria con las variables
+            User Input and Strings:
+              name: Entradas de usuario y cadenas
+            While Loops:
+              name: Bucles While
+            Loops and Simulations:
+              name: Bucles y Simulaciones
+            Introduction to Arrays:
+              name: Introducción a los Arrays
+            Processing Arrays:
+              name: Procesando Arrays
+            Functions with Return Values:
+              name: Funciones con Valores de Retorno
+        csppostap-2019:
+          stages:
+            Updating Records:
+              name: Actualización de registros
+            Importing and Exporting Data:
+              name: Importación y exportación de datos
+            Sample Apps:
+              name: Aplicaciones de ejemplo

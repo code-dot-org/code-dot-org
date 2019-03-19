@@ -291,6 +291,11 @@ ka:
             '"x"': x პოზიცია
             '"y"': y პოზიცია
             '"direction"': მოძრაობის მიმართულება
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': როდის
+            '"while"': სანამ
       gamelab_debugSprite:
         options:
           VAL:
@@ -313,6 +318,34 @@ ka:
             '"y"': y პოზიცია
             '"direction"': მოძრაობის მიმართულება
             '"tint"': შეფერადება
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': სხვა
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': როდის
+            '"while"': სანამ
+          KEY:
+            '"up"': ზემოთ
+            '"down"': ქვემოთ
+            '"left"': მარცხნივ
+            '"right"': მარჯვნივ
+            '"space"': კოსმოსი
+            '"a"': a
+            '"d"': d
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': ბადე
+            '"row"': მწკრივი
+            '"column"': სვეტი
+            '"random"': შემთხვევითი
       gamelab_locationConstant:
         options:
           DIR:
@@ -367,6 +400,10 @@ ka:
         text: შემთხვევითი ფერი
       gamelab_randomLocation:
         text: შემთხვევითი მდებარეობა
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ქალაქი
       gamelab_setPosition:
         options:
           POSITION:
@@ -397,6 +434,11 @@ ka:
             '"height"': სიმაღლე
       gamelab_setup:
         text: დაყენება
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': როდის
+            '"while"': სანამ
       gamelab_spriteDirection:
         options:
           DIRECTION:
@@ -652,7 +694,7 @@ ka:
         text: შემთხვევითი მდებარეობა
       Vector_vectorNorth:
         text: ჩრდილოეთი
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': ზომა
@@ -660,16 +702,67 @@ ka:
             '"x"': x პოზიცია
             '"y"': y პოზიცია
             '"direction"': მოძრაობის მიმართულება
-      aalab_spritesWhere:
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': როდის
+            '"while"': სანამ
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': როდის
+            '"while"': სანამ
+      aalab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': სხვა
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': როდის
+            '"while"': სანამ
+          KEY:
+            '"up"': ზემოთ
+            '"down"': ქვემოთ
+            '"left"': მარცხნივ
+            '"right"': მარჯვნივ
+            '"space"': კოსმოსი
+      aalab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': ჩრდილოეთი
+            '"East"': აღმოსავლეთი
+            '"South"': სამრხეთი
+            '"West"': აღმოსავლეთი
+      aalab_randomLocation:
+        text: შემთხვევითი მდებარეობა
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ქალაქი
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': ჭეშმარიტი
+            '"false"': მცდარი
+      aalab_setProp:
         options:
           PROPERTY:
             '"scale"': ზომა
+            '"rotation"': შებრუნება
             '"x"': x პოზიცია
             '"y"': y პოზიცია
-            '"costume"': კოსტუმი
             '"direction"': მოძრაობის მიმართულება
-            '"rotation"': მოტრიალება ან მიმართულება
             '"tint"': შეფერადება
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': ყოველთვის
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': ჩვენება
+            '"hide"': დამალვა
       binary_move:
         options:
           DIR:

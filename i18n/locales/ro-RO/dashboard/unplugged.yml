@@ -318,3 +318,18 @@ ro:
         desc: Această lecție evidențiază moduri în care folosim algoritmi în viața de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie. De asemenea, această lecție se concentrează pe o imagine de ansamblu despre informatică și rolul esențial pe care îl joacă algoritmii.
       test-uid-passthrough:
         title: '[șir gol]'
+      PlantASeed_2019:
+        title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+        desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea, aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul în care algoritmii joacă un rol esențial.
+      UnplugHappyMaps_2019:
+        title: Hărţi Fericite
+        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa un personaj printr-un labirint folosind o singură comandă.
+      GoingPlacesSafely_2019:
+        title: Mergând în locuri în siguranţă
+        desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii arată cum poate fi sigură navigarea pe Internet.
+      MoveItMoveIt_2019:
+        title: Mutaţi-l, mutați-l
+        desc: '[șir gol]'
+      DigitalFootprint_2019:
+        title: Amprenta ta Digitală
+        desc: Profesorii introduc elevilor ideea că postarea informațiilor online despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.

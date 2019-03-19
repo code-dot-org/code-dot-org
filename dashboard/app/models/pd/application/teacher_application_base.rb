@@ -35,29 +35,22 @@
 #
 
 module Pd::Application
-  class TeacherApplicationBase < WorkshopAutoenrolledApplication
+  class TeacherApplicationBase < ApplicationBase
+    include PdWorkshopHelper
     include Rails.application.routes.url_helpers
     include Pd::TeacherCommonApplicationConstants
     include SchoolInfoDeduplicator
 
     serialized_attrs %w(
-      scholarship_status
+      pd_workshop_id
     )
 
     validate :scholarship_status_valid
 
     def scholarship_status_valid
-      unless scholarship_status.nil? || self.class.scholarship_statuses.include?(scholarship_status)
+      unless scholarship_status.nil? || Pd::ScholarshipInfoConstants::SCHOLARSHIP_STATUSES.include?(scholarship_status)
         errors.add(:scholarship_status, 'is not included in the list.')
       end
-    end
-
-    def self.scholarship_statuses
-      %w(
-        no
-        yes_code_dot_org
-        yes_other
-      )
     end
 
     # Updates the associated user's school info with the info from this teacher application
@@ -67,8 +60,16 @@ module Pd::Application
     def update_user_school_info!
       if school_id || user.school_info.try(&:school).nil?
         school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
-        user.update_column(:school_info_id, school_info.id)
+        user.update_school_info(school_info)
       end
+    end
+
+    def update_scholarship_status(scholarship_status)
+      Pd::ScholarshipInfo.update_or_create(user, application_year, scholarship_status)
+    end
+
+    def scholarship_status
+      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year)&.scholarship_status
     end
 
     # Implement in derived class.
@@ -198,22 +199,7 @@ module Pd::Application
           TEXT_FIELDS[:other_please_list]
         ],
 
-        taught_in_past: [
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'CS Discoveries',
-          'CS Principles (intro or AP-level)',
-          'AP CS A',
-          'Beauty and Joy of Computing',
-          'Code HS',
-          'Edhesive',
-          'Exploring Computer Science',
-          'Mobile CSP',
-          'NMSI',
-          'Project Lead the Way',
-          'Robotics',
-          'ScratchEd',
+        taught_in_past: SUBJECTS_TAUGHT_IN_PAST + [
           TEXT_FIELDS[:other_please_list],
           "I don't have experience teaching any of these courses"
         ],
@@ -635,9 +621,8 @@ module Pd::Application
       Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id) ? 'Yes' : 'No'
     end
 
-    # override
     def self.prefetch_associated_models(applications)
-      super(applications)
+      prefetch_workshops applications.map(&:pd_workshop_id).uniq.compact
 
       # also prefetch schools
       prefetch_schools applications.map(&:school_id).uniq.compact

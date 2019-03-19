@@ -39,7 +39,7 @@
     "permitted_errors": "0",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_markdown_instructions_override": "Draw a line seven steps long. This will become our horizon.",
+    "tts_long_instructions_override": "Draw a line seven steps long. This will become our horizon.",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 5911,
     "name_suffix": "_2018",

@@ -70,6 +70,12 @@ class Pd::Enrollment < ActiveRecord::Base
   serialized_attrs %w(
     role
     grades_teaching
+    attended_csf_intro_workshop
+    csf_course_experience
+    csf_courses_planned
+    csf_has_physical_curriculum_guide
+    previous_courses
+    replace_existing
   )
 
   def self.for_user(user)
@@ -247,6 +253,18 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def school_district_name
     school_info.try :effective_school_district_name
+  end
+
+  def update_scholarship_status(scholarship_status)
+    if workshop.local_summer?
+      Pd::ScholarshipInfo.update_or_create(user, workshop.summer_workshop_school_year, scholarship_status)
+    end
+  end
+
+  def scholarship_status
+    if workshop.local_summer?
+      Pd::ScholarshipInfo.find_by(user: user, application_year: workshop.summer_workshop_school_year)&.scholarship_status
+    end
   end
 
   # Removes the name and email information stored within this Pd::Enrollment.

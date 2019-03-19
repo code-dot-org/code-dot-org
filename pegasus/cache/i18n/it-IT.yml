@@ -1,4 +1,5 @@
-"it-IT":
+---
+it-IT:
   hour_of_code: Ora del codice
   hello: Ciao a tutti
   'yes': Sì
@@ -419,7 +420,7 @@
   homepage_action_text_teachervideo: Guarda il video
   homepage_action_text_watchvideo: Guarda il video
   homepage_action_text_girlvideo: Convinci una ragazza a partecipare
-  homepage_action_text_learn: Inizia ad apprendere
+  homepage_action_text_learn: Inizia a imparare
   homepage_action_text_signpetition: Firma la petizione
   homepage_action_text_wincelebritychat: Vinci una conversazione con una celebrità
   homepage_signpetition_dropdown: Firma la nostra petizione &#x25BE;
@@ -470,7 +471,7 @@
   homepage_slot_text_link_donate: Fai una donazione
   homepage_slot_text_link_shop: T-shirts, cappellini & altro
   homepage_slot_text_link_administrators: Porta l'informatica nella tua scuola
-  homepage_header_codestudio: Creazioni degli studenti di Code.org
+  homepage_gallery_header: Oltre %{project_count} milioni di progetti creati in Code.org
   homepage_header_donors: Code.org ringrazia i suoi sostenitori
   homepage_donors_seall: Mostra tutto
   homepage_donors_donate: Sostienici
@@ -548,20 +549,20 @@
   minecraft_agent: Minecraft Il viaggio dell'eroe
   minecraft_designer: Programma il tuo Minecraft
   minecraft_adventurer: Un'avventura con Minecraft
-  minecraft_tutorials: I corsi di Minecraft per l'Ora del Codice
+  minecraft_tutorials: Le esercitazioni di Minecraft per l'Ora del Codice
   minecraft_specs: Molte lingue | Browser e tablet moderni | Da 7 anni in su
   minecraft_agent_description: Minecraft è tornato per l'Ora del Codice con una nuovissima
     attività! Viaggia attraverso Minecraft grazie al coding.
   minecraft_agent_button: Inizia
-  minecraft_designer_description: Programma il comportamento degli animali e delle
-    altre creature di Minecraft nella tua versione di questo gioco.
+  minecraft_designer_description: Programma animali e altre creature di Minecraft
+    nella tua versione di questo gioco.
   minecraft_designer_button: Inizia
   minecraft_adventurer_description: Usa il codice per far vivere un'avventura ad Alex
     o Steve.
   minecraft_adventurer_button: Inizia
   minecraft_no_internet: Non hai Internet?
   minecraft_download_adventurer: Scarica la versione da usare <i>in locale</i> di
-    "Un avventura con Minecraft".
+    "Un'avventura con Minecraft".
   minecraft_subtitle: L'Ora del Codice con Minecraft
   minecraft_store_camps: Campi gratuiti per Ora di Codice Minecraft al Microsoft Store
   minecraft_teach_resources: Risorse per l'insegnante e piano di lavoro della lezione.
@@ -616,11 +617,11 @@
   watch_inspirational_videos: Prima di iniziare, guarda uno di questi video stimolanti
   video_title_cs_is_everything: L'informatica sta cambiando ogni cosa
   video_title_inspire_girl: Convinci una ragazza a partecipare
-  video_title_cs_intro: Introduzione all'Informatica
-  video_title_schools_dont_teach: Cosa NON Insegnano nella maggior parte delle Scuole
+  video_title_cs_intro: Introduzione all'informatica
+  video_title_schools_dont_teach: Cosa NON insegnano nella maggior parte delle scuole
   video_title_obama: Il Presidente Obama a proposito dell'informatica
-  video_title_hoc_is_here: L'Ora del Codice è Qui - Chiunque Può Imparare
-  video_title_anybody_can_learn: Chiunque Può Imparare
+  video_title_hoc_is_here: L'Ora del Codice è qui - Chiunque può imparare
+  video_title_anybody_can_learn: Chiunque può imparare
   video_title_steph_curry: L'Ora del Codice con Steph Curry
   video_title_draymond_green: Ora del Codice con Draymond Green
   video_title_russell_okung: Ora del Codice con Russell Okung
@@ -1303,7 +1304,7 @@
   minecraft_name: Minecraft
   starwarsblocks_name: Guerre Stellari (Blocchi)
   hoc-encryption_name: Crittografia semplice
-  text-compression_name: Compressione del Testo
+  text-compression_name: Compressione del testo
   math_category_name: Matematica
   hoc_category_name: L'Ora del Codice
   csf_category_name: Corsi base
@@ -1502,7 +1503,7 @@
     di Guerre Stellari, in una galassia lontana lontana...
   playlab_shortdescription: Crea una storia o inventa un gioco col Laboratorio!
   infinity_shortdescription: Usa il Laboratorio per creare una storia o inventare
-    un gioco con i personaggi di Disney Infinity come protagonisti!
+    un gioco con i personaggi di Disney Infinity.
   artist_shortdescription: Disegna fantastiche immagini e decorazioni con l'artista!
   monsterocding_shortdescription: Una colorata avventura dir programmazione autoguidata  per
     i bambini.
@@ -1532,45 +1533,45 @@
     trovare soluzioni a problemi più complessi. Alla fine di questo corso, gli studenti
     saranno in grado di creare storie interattive e giochi che potranno condividere
     con chiunque.
-  coursea_shortdescription_congrats: Un'introduzione all'informatica per bambini che
+  coursea_shortdescription_congrats: Introduzione all'informatica per bambini che
     non leggono ancora.
-  courseb_shortdescription_congrats: Introduzione all'informatica per alunni che devono
-    imparare a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente
-    più grandi.)
-  coursec_shortdescription_congrats: Impara le basi dell'informatica e dai vita a
-    creazioni artistiche, storie animate o giochi interattivi.
-  coursed_shortdescription_congrats: Vengono spiegati brevemente i concetti del corso
-    C e poi vengono aggiunti algoritmi, cicli annidati, condizioni e altro ancora.
-  coursee_shortdescription_congrats: Vengono spiegati brevemente i concetti dei corsi
-    C e D e poi viene aggiunto il concetto di funzione.
-  coursef_shortdescription_congrats: Impara tutti i concetti dei corsi di Fondamenti
-    di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
-  coursea-2017_shortdescription_congrats: Un'introduzione all'informatica per bambini
+  courseb_shortdescription_congrats: Introduzione all'informatica per bambini che
+    stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà
+    per bambini leggermente più grandi.)
+  coursec_shortdescription_congrats: Impara le basi dell'informatica e crea disegni,
+    storie animate o giochi interattivi.
+  coursed_shortdescription_congrats: Vengono ripresi brevemente i concetti del corso
+    C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+  coursee_shortdescription_congrats: Vengono ripresi brevemente i concetti dei corsi
+    C e D e viene aggiunto il concetto di funzione.
+  coursef_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
+    di informatica e crea disegni, storie o giochi interattivi.
+  coursea-2017_shortdescription_congrats: Introduzione all'informatica per bambini
     che non leggono ancora.
-  courseb-2017_shortdescription_congrats: Introduzione all'informatica per alunni
-    che devono imparare a leggere. (Simile al Corso A, ma con maggior varietà per
-    bambini leggermente più grandi.)
-  coursec-2017_shortdescription_congrats: Impara le basi dell'informatica e dai vita
-    a creazioni artistiche, storie animate o giochi interattivi.
-  coursed-2017_shortdescription_congrats: Vengono spiegati brevemente i concetti del
-    corso C e poi vengono aggiunti algoritmi, cicli annidati, condizioni e altro ancora.
-  coursee-2017_shortdescription_congrats: Vengono spiegati brevemente i concetti dei
-    corsi C e D e poi viene aggiunto il concetto di funzione.
-  coursef-2017_shortdescription_congrats: Impara tutti i concetti dei corsi di Fondamenti
-    di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
-  coursea-2018_shortdescription_congrats: Un'introduzione all'informatica per bambini
+  courseb-2017_shortdescription_congrats: Introduzione all'informatica per bambini
+    che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà
+    per bambini leggermente più grandi.)
+  coursec-2017_shortdescription_congrats: Impara le basi dell'informatica e crea disegni,
+    storie animate o giochi interattivi.
+  coursed-2017_shortdescription_congrats: Vengono ripresi brevemente i concetti del
+    corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+  coursee-2017_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
+    corsi C e D e viene aggiunto il concetto di funzione.
+  coursef-2017_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
+    di informatica e crea disegni, storie o giochi interattivi.
+  coursea-2018_shortdescription_congrats: Introduzione all'informatica per bambini
     che non leggono ancora.
-  courseb-2018_shortdescription_congrats: Introduzione all'informatica per alunni
-    che devono imparare a leggere. (Simile al Corso A, ma con maggior varietà per
-    bambini leggermente più grandi.)
-  coursec-2018_shortdescription_congrats: Impara le basi dell'informatica e dai vita
-    a creazioni artistiche, storie animate o giochi interattivi.
-  coursed-2018_shortdescription_congrats: Vengono spiegati brevemente i concetti del
-    corso C e poi vengono aggiunti algoritmi, cicli annidati, condizioni e altro ancora.
-  coursee-2018_shortdescription_congrats: Vengono spiegati brevemente i concetti dei
-    corsi C e D e poi viene aggiunto il concetto di funzione.
-  coursef-2018_shortdescription_congrats: Impara tutti i concetti dei corsi di Fondamenti
-    di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
+  courseb-2018_shortdescription_congrats: Introduzione all'informatica per bambini
+    che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà
+    per bambini leggermente più grandi.)
+  coursec-2018_shortdescription_congrats: Impara le basi dell'informatica e crea disegni,
+    storie animate o giochi interattivi.
+  coursed-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti del
+    corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+  coursee-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
+    corsi C e D e viene aggiunto il concetto di funzione.
+  coursef-2018_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
+    di informatica e crea disegni, storie o giochi interattivi.
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
     e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".
@@ -2216,7 +2217,7 @@
   hoc_overview_partner_activities_body: Nel sito dell'Ora del Codice puoi trovare
     più di 100 esercitazioni per tutte le età e livelli di esperienza, sviluppate
     da Code.org e partner.
-  hoc_overview_partner_activities_link: Visualizza le attività
+  hoc_overview_partner_activities_link: Visualizza tutte le attività
   hoc_overview_start_tutorial: Inizia
   hoc_overview_view_teacher_guide: Visualizza la guida per l'insegnante
   hoc2018_creativity: creatività
@@ -2236,7 +2237,7 @@
     di Code.org</a>
   hoc2018_homepage: Iscrivi la tua classe per provare una delle oltre 150 NUOVE attività
     dell'Ora del Codice (3-9 dicembre)!
-  hoc2018_mc_page_title: I corsi di Minecraft per l'Ora del Codice
+  hoc2018_mc_page_title: Le esercitazioni di Minecraft per l'Ora del Codice
   hoc2018_mc_details: Molte lingue | Browser e tablet moderni | Da 7 anni in su
   hoc2018_mc_aquatic_announcement: 'Iscrivi la tua classe per provare una delle oltre
     150 NUOVE attività dell''Ora del Codice (3-9 dicembre). Prova soprattutto la nostra
@@ -2249,23 +2250,29 @@
   hoc2018_mc_hero_description: Minecraft è tornato per l'Ora del Codice con una nuovissima
     attività! Viaggia attraverso Minecraft grazie al coding.
   hoc2018_mc_designer_title: Programma il tuo Minecraft
-  hoc2018_mc_designer_description: Programma il comportamento degli animali e delle
-    altre creature di Minecraft nella tua versione di questo gioco.
+  hoc2018_mc_designer_description: Programma animali e altre creature di Minecraft
+    nella tua versione di questo gioco.
   hoc2018_mc_adventurer_title: Un'avventura con Minecraft
   hoc2018_mc_adventurer_description: Usa il codice per far vivere un'avventura ad
     Alex o Steve.
   hoc2018_mc_start: Inizia
   hoc2018_mc_no_internet: Non hai Internet?
   hoc2018_mc_download_adventurer: Scarica la versione da usare <i>in locale</i> di
-    "Un avventura con Minecraft".
-  hoc2018_mc_educators: Per Insegnanti
+    "Un'avventura con Minecraft".
+  hoc2018_mc_educators: Per gli insegnanti
   hoc2018_mc_educators_box1_title: Programma con Minicraft
+  hoc2018_mc_educators_box1_desc: Su Minecraft Education Edition si trovano curriculum
+    standard, formazione e programmazione in Minecraft.
   hoc2018_mc_educators_box1_button: Inizia
-  hoc2018_mc_educators_box2_title: Scarica la Guida del Formatore
+  hoc2018_mc_educators_box2_title: Scarica la Guida per l'insegnante
   hoc2018_mc_educators_box2_desc: Questi strumenti ti aiuteranno ad organizzare un'Ora
     del Codice per coinvolgere i tuoi studenti sui temi dell'informatica.
   hoc2018_mc_educators_box2_button: Scarica
+  hoc2018_mc_educators_box3_title: Partecipa ad un seminario gratuito per studenti
+    (solo in USA)
   hoc2018_mc_educators_box4_title: Accedi ad ulteriori risorse di informatica
+  hoc2018_mc_educators_box4_desc: Contribuisci a migliorare la tua comunità diffondendo
+    competenze digitali e risorse di formazione in informatica con Microsoft.
   hoc2018_mc_educators_box4_button: Esplora le risorse disponibili
   hoc2018_mc_watch_videos: Prima di iniziare, guarda uno di questi video stimolanti
   hoc2018_mc_videos_more: Ulteriori<a href='%{inspiring_videos_playlist}'> video stimolanti</a>
@@ -2281,12 +2288,12 @@
   hoc2018_mc_video_title_sports: Forza! Chiunque può imparare...
   hoc2018_mc_video_title_cs_is_everything: L'informatica sta cambiando ogni cosa
   hoc2018_mc_video_title_inspire_girl: Convinci una ragazza a partecipare
-  hoc2018_mc_video_title_cs_intro: Introduzione all'Informatica
-  hoc2018_mc_video_title_schools_dont_teach: Cosa NON Insegnano nella maggior parte
-    delle Scuole
+  hoc2018_mc_video_title_cs_intro: Introduzione all'informatica
+  hoc2018_mc_video_title_schools_dont_teach: Cosa NON insegnano nella maggior parte
+    delle scuole
   hoc2018_mc_video_title_obama: Il Presidente Obama a proposito dell'informatica
-  hoc2018_mc_video_title_hoc_is_here: L'Ora del Codice è Qui - Chiunque Può Imparare
-  hoc2018_mc_video_title_anybody_can_learn: Chiunque Può Imparare
+  hoc2018_mc_video_title_hoc_is_here: L'Ora del Codice è qui - Chiunque può imparare
+  hoc2018_mc_video_title_anybody_can_learn: Chiunque può imparare
   hoc2018_mc_video_title_my_name_is_aracely: Mi chiamo Aracely
   hoc2018_mc_homepage_hoc_coming: L'Ora del Codice è in arrivo...
   hoc2018_mc_homepage_what_create: Tu cosa creerai?
@@ -2305,10 +2312,11 @@
   hoc2018_mc_short_description: Usa la tua creatività e le competenze di problem solving
     per trovare il tesoro ed esplorare i mondi sottomarini grazie alla potenza della
     programmazione.
-  hoc2018_mc_short_description_shorter: Usa la tua creatività e le competenze di problem
-    solving per esplorare e costruire mondi sottomarini con la programmazione.
+  hoc2018_mc_short_description_shorter: Usa la tua creatività e la tua abilità a risolvere
+    i problemi per esplorare e costruire mondi sottomarini con la programmazione.
   hoc2018_mc_journey: Viaggio attraverso Minecraft con la programmazione.
   hoc2018_dance_party_main_heading: Ballando col codice
+  hoc2018_dance_party_subheading: Aiuta a tradurre Ballando col codice
   hoc2018_dance_create_your_own_dance_title: Crea il tuo progetto in "Ballando col
     codice"
   hoc2018_dance_party_box_title: Ballando col codice
@@ -2323,7 +2331,7 @@
   hoc2018_dance_keep_on_dancing_button: Inizia la seconda parte
   hoc2018_dance_teacher_resources_title: Risorse per l'insegnante
   hoc2018_dance_teacher_resources_tile1_description: Programmi di lezione, certificati
-    e filtering della musica.
+    e scelta della musica.
   hoc2018_dance_teacher_resources_tile1_button: Piano di lavoro della lezione
   hoc2018_dance_teacher_resources_tile2_title: Ballando col Codice Unplugged (lezione
     tradizionale)
@@ -2336,10 +2344,18 @@
   hoc2018_dance_view_creativity_video_playlist: Cos'è la creatività? Visualizza la
     serie completa (5 min)
   hoc2018_dance_amazon_sponsor_section_with_logo_title: In collaborazione con
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer* è un programma completo di orientamento al lavoro per ispirare, educare
+    e addestrare bambini e ragazzi di famiglie a basso reddito e di altre categorie
+    svantaggiate affinché intraprendano una carriera in informatica. <a href='%{amazon_future_engineer_link}'
+    target='_blank'>Maggiori informazioni</a>
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Ulteriori informazioni
     su Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_button: Ulteriori informazioni
   hoc2018_dance_amazon_scholarship_programs_button: Applica ora
+  hoc2018_dance_amazon_future_engineer_footer: "* Gli artisti che hanno permesso di
+    usare la loro musica in questo tutorial non stanno sponsorizzando o sostenendo
+    Amazon come parte della licenza d'uso della loro musica su Code.org.\n\n"
   hoc2018_dance_measure: Battuta
   hoc2018_dance_measure_colon: 'Battuta:'
   hoc2018_aquatic_video1: Minecraft Viaggio Acquatico - Introduzione
@@ -2355,167 +2371,3 @@
   page_not_found_description: La pagina che stai cercando non esiste a questo indirizzo.
     Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage.
   page_not_found_button: Ritorna alla homepage
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_gallery_header: Over %{project_count} million Code.org projects created
-  minecraft_start_tutorial: Start tutorial
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
-    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
-    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
-    problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
-    facilitator quick start guide and PowerPoint presentations for younger and older
-    students now."
-  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
-    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
-    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
-    from the Minecraft team. Get a head start on thinking through what you need to
-    bring Hour of Code to young people during Computer Science Education week (December
-    4-10) and beyond.
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
-  minecraft_continue_learning_description: No computer science experience required!
-    Help ensure all youth can learn the valuable skills gained through computer science
-    education. Join us at the Microsoft Store to engage in a free series of three,
-    1-hour workshops where you will experience coding in a fun and stress-free environment,
-    become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
-    target='_blank'>Sign up today</a>.
-  minecraft_future_description: Find out how other schools and nonprofits are bringing
-    digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
-    target='_blank'>access the resources</a> they found most valuable.
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  thinkersmithspanish_name: Mis Amigos Roboticos
-  lightbot_name: Lightbot
-  lightbotintl_name: Lightbot
-  codecademy_name: Codecademy
-  codecombat_name: CodeCombat
-  touchdevelop_name: TouchDevelop
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
-  codesters_name: Codesters
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp-explore-2017_name: 'AP: Explore PT Prep'
-  csp-create-2017_name: 'AP: Create PT Prep'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp-explore-2018_name: 'AP: Explore PT Prep'
-  csp-create-2018_name: 'AP: Create PT Prep'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
-  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
-    of computer programming, which unlocks the ability to make rich, interactive apps.
-    This course uses JavaScript as the programming language, and App Lab as the programming
-    environment to build apps, but the concepts learned in these lessons span all
-    programming languages and tools.
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: CS Discoveries ('17-'18)
-  csd_2018_category_name: CS Discoveries ('18-'19)
-  research_studies_category_name: Research Studies
-  thinkersmithspanish_gradelevel: Por todos
-  kodable_platformtext: iPad
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  lightbot_beyond_name: LightBot
-  codecademy_beyond_name: Codecademy
-  touchdevelop_beyond_name: TouchDevelop
-  udacity_beyond_name: CS 101
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
-  mozilla_beyond_name: Webmaker
-  codecombat_beyond_name: CodeCombat
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
-  kodable_beyond_platformtext: iPad
-  scratchjr_beyond_platformtext: iPad
-  hopscotch_beyond_platformtext: iPad
-  kodu_beyond_platformtext: Windows, xBox
-  cargobot_beyond_platformtext: iPad
-  codea_beyond_platformtext: iPad
-  starwars_shortcode: star
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  csd_name: CS Discoveries
-  csd_2018_name: CS Discoveries
-  joining_section_overview: If a student has not already joined your section, please
-    ask them to do the following steps. Note that they only need to do this once.
-    By joining your section, students will be able see the course assigned to them
-    and you will be able to track the progress of the work they complete while they
-    are signed in.
-  syncing_students_instructions: 'If your Code.org section is ever out of date with
-    your list of students in Google Classroom, click on the “Sync students from Google
-    Classroom” button on the “Manage students” tab:'
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned
-    curriculum, training and coding in Minecraft.'
-  hoc2018_mc_educators_box3_title: Attend a free student workshop
-  hoc2018_mc_educators_box3_desc: Visit a Microsoft Store in your area for a free
-    Hour of Code workshop. For participants of all skill levels, ages six and up.
-  hoc2018_mc_educators_box3_button: Find a workshop
-  hoc2018_mc_educators_box4_desc: Create change in your community with digital skills
-    and computer science education resources from Microsoft.
-  hoc2018_mc_back: Minecraft is back with a brand new activity for Hour of Code!
-  hoc2018_dance_party_subheading: Help translate Dance Party
-  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
-    Engineer* is a comprehensive childhood-to-career program to inspire, educate,
-    and train low-income and other disadvantaged children and young people to pursue
-    careers in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn
-    more</a>
-  hoc2018_dance_amazon_about_future_engineer_title: About Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_description: Learn about Amazon’s kindergarten
-    to career program to increase access to computer science education. Find information
-    on how to get involved in our summer camps, high school CS classes, scholarships,
-    and internships.
-  hoc2018_dance_amazon_try_coding_this_summer_title: Try coding this summer
-  hoc2018_dance_amazon_try_coding_this_summer_description: Get involved in Amazon
-    Future Engineer’s free, fun, and inclusive computer science camps! Summer camps
-    are available for students from kindergarten through 8th grade in multiple locations
-    in the US for summer 2019.
-  hoc2018_dance_amazon_try_coding_this_summer_button: Join a camp
-  hoc2018_dance_amazon_scholarship_programs_title: Scholarship programs
-  hoc2018_dance_amazon_scholarship_programs_description: Amazon is offering scholarships
-    of $10,000 per year for underserved students who have successfully completed or
-    are currently enrolled in an AP CS course and intend to study a CS degree at a
-    4-year college or university in the United States.
-  hoc2018_dance_amazon_internships_title: Come Intern at Amazon
-  hoc2018_dance_amazon_internships_description: Applications are now open for summer
-    2019 Amazon Future Engineer internships. Interns will partner with a manager,
-    technical mentor, and other interns to innovate and create new features and services
-    on behalf of Amazon customers. Internships are available in the US and Canada.
-  hoc2018_dance_amazon_internships_button: Find an internship
-  hoc2018_dance_amazon_k8_programs_title: K-8 programs
-  hoc2018_dance_amazon_funding_title: Get funding for your CS degree
-  hoc2018_dance_amazon_future_engineer_footer: "* The artists whose music is used
-    in this tutorial are not sponsoring or endorsing Amazon as part of licensing use
-    of their music to Code.org.\n\n"

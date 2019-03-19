@@ -1,4 +1,5 @@
-"es-MX":
+---
+es-MX:
   hour_of_code: La Hora del Código
   hello: Hola mundo
   'yes': Sí
@@ -449,7 +450,8 @@
   homepage_slot_text_link_shop: Camisetas, sombreros y más
   homepage_slot_text_link_administrators: Lleva las ciencias de la computación a tu
     escuela
-  homepage_header_codestudio: Creaciones de alumnos de Code.org
+  homepage_gallery_header: Más de %{project_count} millones de proyectos de Code.org
+    creados
   homepage_header_donors: Code.org agradece a sus colaboradores
   homepage_donors_seall: Ver todo
   homepage_donors_donate: Dona
@@ -631,7 +633,7 @@
   video_title_cs_is_everything: Las Ciencias de la Computación están cambiando todo
   video_title_inspire_girl: Inspira a una chica
   video_title_cs_intro: Introducción a las Ciencias de la Computación
-  video_title_schools_dont_teach: Lo Que La Mayoría De Las Escuelas No Enseña (5 min)
+  video_title_schools_dont_teach: Lo Que La Mayoría De Las Escuelas No Enseña
   video_title_obama: El Presidente Obama en ciencias de la computación
   video_title_hoc_is_here: La Hora del Código está aquí - Todos pueden aprender
   video_title_anybody_can_learn: Cualquiera puede aprender
@@ -1262,6 +1264,9 @@
   coursed-2017_name: Curso D (2017)
   coursee-2017_name: Curso E (2017)
   coursef-2017_name: Curso F (2017)
+  coursea-2018_name: Curso A (2018)
+  coursec-2018_name: Curso C (2018)
+  coursed-2018_name: Curso D (2018)
   accelerated_name: Curso acelerado
   express_name: Curso Express
   pre-express_name: 'Curso Express pre-lectores:'
@@ -1303,10 +1308,13 @@
   cspexam1-mWU7ilDYM9_name: Parte del test 1 - 25 preguntas
   cspexam2-AKwgAh1ac5_name: Parte del test 2 - 25 preguntas
   cspunit3_gradelevel: Grados 9-12
-  cspunit3_shortdescription_congrats: |-
-    Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\r
-    \r
-    Esta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates.
+  cspunit3_shortdescription_congrats: "Esta unidad presenta los conceptos fundamentales
+    de la programación informática, que desbloquea la capacidad de crear aplicaciones
+    ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación
+    y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos
+    aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\r\n\r\nEsta
+    unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información
+    sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
   20-hour_name: Curso acelerado
   algebra_name: CS en Álgebra
   AlgebraA_name: CS en Álgebra Curso A
@@ -1569,8 +1577,8 @@
   courseb-2017_shortdescription_congrats: Una introducción a las ciencias de la computación
     para pre lectores. (Similar al curso A pero con más variedad para estudiantes
     mas avanzados)
-  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
-    de la computación y crea tu propio arte, historias y juegos.
+  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
+    de la Computación y crea tu propio arte, historias y juegos.
   coursed-2017_shortdescription_congrats: Rápidamente repasada conceptos del Curso
     C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee-2017_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso
@@ -1582,8 +1590,8 @@
   courseb-2018_shortdescription_congrats: Una introducción a las ciencias de la computación
     para pre lectores. (Similar al curso A pero con más variedad para estudiantes
     mas avanzados)
-  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
-    de la computación y crea tu propio arte, historias y juegos.
+  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
+    de la Computación y crea tu propio arte, historias y juegos.
   coursed-2018_shortdescription_congrats: Rápidamente repasada conceptos del Curso
     C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee-2018_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso
@@ -2229,7 +2237,6 @@
     basada en texto. (Sólo en inglés)
   applab_tile_start_tutorial: Inicio
   applab_tile_teacher_guide: Ver la guía del profesor
-  aquatic_name: 'Minecraft: Udhëtimi ujor'
   account_sign_up_email_opt_in: "¿Podemos enviarle por correo electrónico actualizaciones
     de nuestros cursos, oportunidades en su zona u otras noticias sobre informática?"
   account_sign_up_child_accept_terms: Confirmo que tengo la autorización de mis padres
@@ -2323,7 +2330,7 @@
   hoc2018_mc_video_title_inspire_girl: Inspira a una chica
   hoc2018_mc_video_title_cs_intro: Introducción a las Ciencias de la Computación
   hoc2018_mc_video_title_schools_dont_teach: Lo Que La Mayoría De Las Escuelas No
-    Enseña (5 min)
+    Enseña
   hoc2018_mc_video_title_obama: El Presidente Obama en ciencias de la computación
   hoc2018_mc_video_title_hoc_is_here: La Hora del Código está aquí - Todos pueden
     aprender
@@ -2349,6 +2356,7 @@
     problemas para explorar y construir mundos bajo el agua con el código.
   hoc2018_mc_journey: Viaje a través de Minecraft con el código.
   hoc2018_dance_party_main_heading: Fiesta de baile
+  hoc2018_dance_party_landing_title: Bailar
   hoc2018_dance_party_subheading: Ayude a traducir Fiesta de Baile
   hoc2018_dance_create_your_own_dance_title: Crea tu propia fiesta del baile
   hoc2018_dance_party_box_title: Fiesta de baile
@@ -2428,49 +2436,3 @@
   page_not_found_description: La página que buscas no existe en esta dirección. Comprueba
     la dirección web y vuelve a enviarla. O, regrese a nuestra página web.
   page_not_found_button: Regresa a casa
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_gallery_header: Over %{project_count} million Code.org projects created
-  codesters_name: Codesters
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
-  express-2018_name: Express Course (2018)
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: CS Discoveries ('17-'18)
-  research_studies_category_name: Research Studies
-  sphero_beyond_name: SPRK
-  starwars_shortcode: star
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  user_header_spritelab: Sprite Lab
-  hero_name: 'Minecraft: Hero''s Journey'
-  hoc2018_mc_back: Minecraft is back with a brand new activity for Hour of Code!

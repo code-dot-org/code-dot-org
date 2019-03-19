@@ -499,3 +499,25 @@ pt:
         desc: Esta lição mostra como usamos algoritmos em nossa vida, especificamente
           na hora de fazer aviões de papel. Esta lição também apresenta a ciência
           da computação de forma geral, e como os algoritmos têm um papel essencial.
+      PlantASeed_2019:
+        title: 'Algoritmos da Vida Real: Plante uma Semente'
+        desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando
+          o ato de plantar uma semente como exemplo. Também se concentra no quadro
+          geral de ciência da computação e como os algoritmos desempenham um papel
+          fundamental.
+      UnplugHappyMaps_2019:
+        title: Mapas felizes
+        desc: Estudantes criam um algoritmo simples (conjunto de instruções) para
+          mover a personagem através de um labirinto usando um único comando.
+      GoingPlacesSafely_2019:
+        title: Ir a Locais de um modo Seguro
+        desc: A Internet é poderosa, mas às vezes perigosa. Os professores mostram
+          como navegar em segurança pela Internet.
+      courseA_unplugged_loops_2019:
+        desc: Nesta aula, vais aprender mais sobre os ciclos!
+      MoveItMoveIt_2019:
+        title: Criando caminhos
+      DigitalFootprint_2019:
+        title: Seu rastro digital
+        desc: Os professores informam aos alunos que colocar informações pessoais
+          online cria um rastro digital, ou uma "trilha" que tem consequências.

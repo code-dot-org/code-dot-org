@@ -2,9 +2,8 @@
  * Facilitator bio as used on the workshop enrollment form
  */
 import React from 'react';
-import marked from 'marked';
 import {FacilitatorPropType} from './enrollmentConstants';
-
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 export default class FacilitatorBio extends React.Component {
   static propTypes = {
@@ -13,16 +12,15 @@ export default class FacilitatorBio extends React.Component {
 
   image = () => {
     if (this.props.facilitator.image_path) {
-      return <img src={this.props.facilitator.image_path}/>;
+      return <img src={this.props.facilitator.image_path} />;
     }
   };
 
   bio = () => {
     if (this.props.facilitator.bio) {
       return (
-        <div
-          dangerouslySetInnerHTML={{__html: marked(this.props.facilitator.bio)}} // eslint-disable-line react/no-danger
-        >
+        <div>
+          <UnsafeRenderedMarkdown markdown={this.props.facilitator.bio} />
         </div>
       );
     } else {
@@ -30,7 +28,9 @@ export default class FacilitatorBio extends React.Component {
         <div>
           <h2>{this.props.facilitator.name}</h2>
           <p>
-            <a href={`mailto:${this.props.facilitator.email}`}>{this.props.facilitator.email}</a>
+            <a href={`mailto:${this.props.facilitator.email}`}>
+              {this.props.facilitator.email}
+            </a>
           </p>
         </div>
       );

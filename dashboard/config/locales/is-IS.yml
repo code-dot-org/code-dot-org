@@ -17,6 +17,7 @@ is:
       messages:
         blank: er nauðsynlegt
         blank_plural: eru áskilin
+        invalid: er ógilt
         invalid_plural: eru ógild
     attributes:
       user:
@@ -30,10 +31,16 @@ is:
         password: Lykilorð
         password_confirmation: Staðfesting lykilorðs
         current_password: Núverandi lykilorð
-        locale: Tungumál
+        locale: Forritunarmál
         age: Aldur
         gender: Kyn
         edit_header: Breyta upplýsingum reiknings
+        finish_sign_up_header: Ljúka við að stofna aðgang
+        finish_sign_up_subheader: Færðu inn eftirfarandi upplýsingar til að ljúka
+          við að stofna Code.org aðgang fyrir <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider: Færðu inn eftirfarandi upplýsingar til
+          að ljúka við að stofna Code.org aðgang hjá <strong>%{provider}</strong>
+          fyrir <strong>%{email}</strong>.
         error:
           future: má ekki vera í framtíð
   hello: Halló heimur
@@ -67,8 +74,8 @@ is:
   trophies: bikarar
   courses: Námskeið
   courses_page:
-    title_student: Lærðu í Kóðastúdíóinu
-    title_teacher: Kenna Tölvunarfræði
+    title_student: Læra Tölvunarfræði
+    title_teacher: Kenndu Tölvunarfræði
   unplugged_activity: Verkefni án tölvu
   of: af
   more: MEIRA
@@ -83,6 +90,7 @@ is:
   prize: verðlaun
   more_info: Nánar
   auth:
+    continue_with: Halda áfram hjá %{provider}
     sign_in_with: Innskrá með %{provider}
     signed_in: Skráð(ur) inn!
     signed_out: Þú hefur skráð þig út af <a href="%{url}">Code.org</a>.
@@ -96,14 +104,24 @@ is:
     windowslive: Microsoft
     microsoft_v2_auth: Microsoft
     clever: Clever aðgangur
+    powerschool: Kraftaskólinn
     forgot_password: Gleymdir þú lykilorðinu þínu ?
+    migration_success: Þetta tókst! Þú hefur uppfært þig í nýja aðgangsumhverfið okkar.
+    demigration_success: Nýja aðgangsumhverfið er nú óvirkt fyrir aðgang þinn.
     need_confirmation: Fékkstu ekki sendar leiðbeiningar um staðfestingu?
     need_unlock: Fékkstu ekki leiðbeiningar um opnun?
     not_linked: Því miður er Code.org aðgangur þinn ekki tengur við %{provider}. Þú
       þarft því að skrá þig inn með því að rita lykilorð hér fyrir neðan.
     use_clever: Því miður er Code.org aðgangurinn þinn ekki tengdur %{provider}. Skráðu
       þig inn í gegnum Clever gáttina í staðinn.
+    unable_to_connect_provider: Tókst ekki að tengja Code.org aðgang þinn við aðgang
+      þinn hjá %{provider}. Vinsamlegast reyndu aftur.
+    already_in_use: Aðgangur þinn hjá %{provider} er nú þegar tengdur við annan Code.org
+      aðgang.
+    already_linked: Aðgangur þinn hjá %{provider} er nú þegar tengdur við Code.org
+      aðgang þinn.
   signup_form:
+    email_signup: Skráðu þig með netfangi
     student_count: "%{count} nemendur hafa þegar skráð sig."
     teacher_count: "%{count} kennarar hafa þegar skráð sig."
     overview: Skráðu þig til að geta fylgst með framvindu þinni eða haft umsjón með
@@ -132,6 +150,7 @@ is:
     age: Aldur
     user_type: Ert þú nemandi eða kennari?
     submit: Skráning
+    go_to_account: Opna aðgang minn
     teacher: Ertu kennari?
     valid_username: Laust!
     invalid_username: Notandanafn verður að vera að minnsta kosti 5 stafir
@@ -139,6 +158,15 @@ is:
     valid_password: Gilt lykilorð!
     invalid_password: Lykilorð verður að vera að minnsta kosti 6 stafir
     mismatch_password: Lykilorðin tvö sem þú slóst inn eru ekki eins
+    agree_tos_privacy: Ég samþykki <a href='http://code.org/tos'>Þjónustuskilmálana</a>
+      og <a href='http://code.org/privacy'>Persónuverndarstefnuna</a>.
+    under_13_consent: Ef ég er undir 13 ára aldri, staðfesti ég hér með að ég hef
+      samþykki foreldris eða forráðamanns til að nota þjónustur Code.org.
+    student_consent: Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns
+      til að nota þjónustur Code.org.
+    agree_us_website: Ég samþykki að nota vef sem er staðsettur í Bandaríkjunum.
+    my_data_to_us: Gögn sem verða til með notkun minni á þessum vef kunna að verða
+      send til og geymd eða greind í Bandaríkjunum.
     student_terms: Netföng eru ekki geymd á sniði sem gerir okkur kleift að hafa samband
       við nemendur. Nemendur munu aldrei fá póst frá Code.org nema til að endurstilla
       aðgangsorð. Sjá nánar um þetta í <a href='http://code.org/privacy'>persónuverndarstefnu</a>
@@ -148,14 +176,19 @@ is:
       okkar.
     additional_information: Við þurfum viðbótarupplýsingar til að geta haldið áfram
       að skrá þig.
+    user_type_button: Uppfæra tegund aðgangs
     user_type_label: Tegund aðgangs
     user_type_teacher: Kennari
-    user_type_student: Nemandi
+    user_type_student: nemandi
     field_is_required: er nauðsynlegt
     accept_terms: Þú verður að samþykkja að stofna aðgang
     error: Villa kom upp.
+    email_preference_question: Megum við senda þér tölvupóst með upplýsingum um námskeið,
+      tækifæri á þínu svæði eða aðrar fréttir um tölvunarfræði? (u. þ. b. einu sinni
+      í mánuði)
     email_preference_yes: Já
     email_preference_no: Nei
+    email_preference_required: Þú verður tilgreina tölvupóst.
   school_info:
     title: Upplýsingar skóla (val)
     school_country: Land skóla
@@ -228,6 +261,7 @@ is:
     student_associated_subject: Innskráningarupplýsingar fyrir Code.org
   teacher_mailer:
     new_teacher_subject: Velkomin á Code.org!
+    delete_teacher_subject: 'Tilkynning frá Code.org: Aðgangi þínum hefur verið eytt'
   section:
     your_section:
       one: 'Hópur þinn:'
@@ -235,6 +269,7 @@ is:
     code_with_teacher: "%{section_code}, kennari %{teacher_name}"
     confirm:
       remove: Ertu viss um að þú viljir yfirgefa þennan hóp?
+    default_name: Hópur án heitis
     remove: "(fjarlægja hóp)"
     type:
       picture: Leynimynd
@@ -302,7 +337,7 @@ is:
       course_catalog: Námskeiðalisti
       project_gallery: Verkefni
       sections: Hópar
-      help_support: Aðstoð og þjónusta
+      help_support: Hjálp og stuðningur
       report_bug: Tilkynna galla
       teacher_community: Kennarasamfélag
       professional_learning: Fagnám
@@ -332,7 +367,7 @@ is:
       stats: Tölfræði
       help_us: Hjálpaðu
       teach: Kenndu
-      about: Um
+      about: Um okkur
     user:
       classroom: Heimasíða kennara
       district_dashboard: Stjórnborð umdæmis
@@ -343,16 +378,20 @@ is:
       signin: Innskráning
       signup: Búa til aðgang
       already_registered: Þegar skráð/ur?
+      pair_programming: Félagaforritun
       team: Félagar
       driver: Ökumaður
       navigator: Leiðsögumaður
       create: Búa til
-      applab: Appsmiðja
+      applab: Appsmiðjan
       artist: Listamaður
       gamelab: Leikjasmiðjan
-      playlab: Leikjasmiðja
+      playlab: Leikjasmiðjan
+      spritelab: Kvikasmiðjan
       minecraft: Minecraft
       flappy: Flappy
+      dance: Danspartý
+      view_all: Sjá öll verkefni...
     popup:
       progress_for_user: Framvinda %{name}
       progress: Framvinda þín
@@ -379,13 +418,14 @@ is:
     student_teacher_disassociated: Þú hefur fjarlægt %{teacher_name} sem kennara þinn.
     panel:
       answer_viewer: Kennaraborðið
-      student: Nemandi
+      student: nemandi
       viewing_solution: Skoðun lausnar
       try_it_yourself: Prófaðu þetta
       section: Hópur
       example: Dæmi um lausn
       example_with_number: Dæmi %{solution_number} um lausn
       submitted_on: Sent inn dags. %{date}
+      last_updated: 'Síðast uppfært:'
       unsubmit: Afturkalla innsendingu
       worked_with: vann með
       update_lock_settings: Uppfærðu stillingar fyrir læsingu hér.
@@ -395,12 +435,16 @@ is:
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
     email_confirm_wrong_email: "(Rangt netfang?)"
     email_resend_confirm: Endursenda leiðbeiningar um staðfestingu
+    new_email_hint: "(gakktu úr skugga um að þú getir tekið við pósti á þetta netfang)"
     new_password_hint: "(hafðu autt ef þú vilt ekki breyta því)"
     current_password_hint: "(við þurfum að fá núverandi lykilorð þitt til að staðfesta
       breytingarnar)"
     delete: Eyða aðgangi
     delete_text: Ef aðgangi er eytt þurrkar það út allar upplýsingar sem tengjast
       aðganginum, svo sem árangur í verkefnum.
+    delete_text_teacher_managed_note: Þú hefur ekki leyfi til að eyða þessum aðgangi
+      því hann er undir umsjón kennara þíns. Kennari verður að fjarlægja þig úr hópum
+      sínum áður en þú getur aðgangi þínum.
     delete_text_teacher_note: 'Vinsamlegast athugaðu: þó þú eyðir þínum aðgangi, eyðir
       það ekki aðgangi nemenda þinna.'
     delete_confirm: Ertu viss um að þú viljir eyða aðgangi þínum?
@@ -416,6 +460,8 @@ is:
     create_personal_login_under_13_parent_email: Netfang foreldris/forráðamanns
     create_personal_login_info: Ef þú vilt halda áfram að nota Code.org eftir lok
       skólaársins, getur þú stofnað þinn eigin aðgang hér fyrir neðan.
+    create_personal_login_link_account: Þú getur líka í staðinn valið að tengja við
+      persónulegan aðgang undir "Umsjón tengdra aðganga".
     create_personal_login_terms: Með því að stofna minn eigin aðgang, samþykki ég
       að undirgangast <a href='%{terms_of_service_url}', target='_blank'>þjónustuskilmála</a>
       Code.org. Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns til
@@ -428,8 +474,12 @@ is:
     enter_new_login_info: Færðu inn nýju innskráningarupplýsingarnar þínar
     confirm_secret_words: Staðfestu að þetta sért þú með því að slá inn núverandi
       leyniorð
+    parent_email_label: Netfang foreldris/forráðamanns (valkostur)
+    parent_email_hint: "(það má nota fyrir endurheimt aðgangsorðs)"
     enter_parent_email: Skráðu netfang foreldris eða forráðamanns (ef leyniorð skyldi
       gleymast)
+    update: Uppfæra aðgang
+    account_successfully_updated: Uppfærsla aðgangs tókst.
   user_level:
     completed: Lokið
     tried: Reynt
@@ -501,7 +551,7 @@ is:
       bekknum þínum hvernig Internetið virkar, hvernig dulkóðun verndar gögn og önnur
       hugtök? Við höfum tekið bestu gagnvirku verkfærin í námsefni okkar Grunnhugtök
       tölvunarfræði og útbúið sjálfstæð örforrit sem þú getur notað hvenær sem er!
-    announcement_learn_more_button: Læra meira
+    announcement_learn_more_button: Nánar
     announcement_try_now_button: Prófaðu núna
     announcement_host_an_hour_button: Sjá um Klukkustund
     announcement_watch_video_button: Horfa á myndband
@@ -610,6 +660,8 @@ is:
       í hópinn þinn.
     already_enrolled_in_new_section: Þú getur ekki fært þessa nemendur vegna þess
       að þessi kennari er þegar með þá í öðrum hópi.
+    third_party_login: Þú getur ekki fært nemendur í hóp sem er speglaður með búnaði
+      þriðja aðila.
   share:
     title: Lærðu í Kóðastúdíóinu
     description: Allir geta lært tölvunarfræði. Búðu til leiki, öpp og list með kóða.
@@ -617,9 +669,11 @@ is:
   gender:
     male: Karlkyns
     female: Kvenkyns
+    non_binary: Óflokkað
+    not_listed: Ekki tilgreint hér
     none: Kýs að svara ekki
   user_type:
-    student: Nemandi
+    student: nemandi
     teacher: Kennari
   footer:
     thank_you: Þakkir til <a href="https://code.org/about/donors">stuðningsaðila</a>,
@@ -659,7 +713,7 @@ is:
     support_url: http://support.code.org
     tos_short: Skilmálar
     tos: Skilmálar
-    privacy: Persónuvernd
+    privacy: Persónuverndarstefna
     secure: Örugg útgáfa
     report_abuse: Tilkynna misnotkun
     built_on_code_studio: Byggt á Kóðastúdíóinu
@@ -688,7 +742,7 @@ is:
         href='%{supported_browsers_url}', target='_blank'>einhvern af vöfrunum sem
         við styðjum</a>. Þú getur prófað að skoða síðuna en mátt búast við því að
         eitthvað virki ekki.
-      link: Læra meira
+      link: Nánar
       applab_unsupported_tablet: Appsmiðjan virkar best á borð- eða fartölvu með mús
         og lyklaborði. Það gætu komið upp vandamál við notkun þessa verkfæris á núverandi
         tæki.
@@ -737,7 +791,7 @@ is:
       unused: Ónotaðir áfangar
   upsell:
     applab:
-      title: Appsmiðja
+      title: Appsmiðjan
       body: App Lab smiðjan er forritunarumhverfi þar sem þú getur búið til einföld
         öpp. Hannaðu app og forritaðu það með kubbum eða JavaScript svo það virki.
         Deildu því svo með öðrum.
@@ -745,15 +799,17 @@ is:
         Deildu því svo með öðrum.
       audience: Aldur 13+
       cta: Læra hvernig
+    dance:
+      title: Danspartý
     hoc:
-      title: Hefðbundið völundarhús
+      title: Völundarhús
       body: Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.
     flappy:
       title: Flappy kóði
       body: Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu kennsluna
         með Flappy kóða!
     20-hour:
-      title: Hraðnámskeið
+      title: Hraðnámskeiðið
       body: Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun.
         Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára,
         en er skemmtilegt fyrir alla aldurshópa.
@@ -775,7 +831,7 @@ is:
       title: Einföld dulkóðun
       body: Nemendur munu læra aðferðir til að búa til og þýða dulkóðuð skilaboð.
     weblab:
-      title: Vefsmiðja (beta)
+      title: Vefsmiðjan (beta)
       body: Vefsmiðjan er forritunarumhverfi þar sem þú getur búið til einfaldar vefsíður
         með HTML og CSS. Hannaðu vefsíður og deildu vefsetrinu á augabragði.
       audience: Aldur 13+
@@ -785,7 +841,7 @@ is:
     starwars:
       title: Star Wars
     infinity:
-      title: Infinity leikjasmiðja
+      title: Infinity Leikjasmiðja
       body: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum.
     minecraft:
       title: Minecraft
@@ -797,13 +853,16 @@ is:
       title: Minecraft
     hero:
       title: Minecraft
+      body: |-
+        Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
+        Ferðist um Minecraft með kóða.
     sports:
       title: Íþróttir
-      body: Búðu til körfuboltaleik eða blandaðu saman íþróttum.
+      body: Búa til körfuboltaleik eða blanda saman íþróttum.
     text-compression:
       title: Þjöppun texta
       body: Í þessari kennslustund munu nemendur nota græjuna fyrir textaþjöppun til
-        að þjappa texta með skipta út mynstrum fyrir tákn.
+        að þjappa texta með því að skipta út mynstrum fyrir tákn.
     unplugged:
       title: Verkefni án tölvu
       audience: Aldur 6+
@@ -852,7 +911,7 @@ is:
     support: Fá hjálp
     support_url: "//support.code.org"
     help_resources: Hjálp og tilföng
-    help_support: Aðstoð og þjónusta
+    help_support: Hjálp og stuðningur
     documentation: Skjölun
     tutorials: Kennslutímar
   multi:
@@ -945,7 +1004,7 @@ is:
       megi persónulegum gögnum um nemandann til notkunar og hagsbóta fyrir skólann,
       þar á meðal í kennsluverkefnum eins og Kóðastúdíóinu.
     tos: Skilmálar
-    privacy: Persónuvernd
+    privacy: Persónuverndarstefna
     privacy_notice: Tilkynning um persónuvernd
     accept_label: Ég samþykki <a href="%{tos_url}" target="_blank">þjónustuskilmálana</a>
       og <a href="%{privacy_url}" target="_blank">persónuverndarstefnuna</a>.
@@ -1127,6 +1186,7 @@ is:
     csd5_2: 'Kafli 2: Lausn vandamála með gögn'
     csd6_1: 'Kafli 1: Forritun vélbúnaðar'
     csd6_2: 'Kafli 2: Smíði frumgerða vélbúnaðar'
+    csd_survey: Könnun eftir námskeið
     csp1_1: 'Kafli 1: Framsetning og flutningur upplýsinga'
     csp1_2: 'Kafli 2: Að finna upp internetið'
     csp2_1: 'Kafli 1: Að umkóða og þjappa margbrotnar upplýsingar'
@@ -1140,7 +1200,10 @@ is:
     csp_ap_1: 'Kafli 1: AP - Tækniumhverfið'
     csp_ap_2: 'Kafli 2: AP - Skilningsverkefni'
     csp_ap_3: 'Kafli 3: AP - Sköpunarverkefni'
+    csp_postap_1: 'Kafli 1: Mótun og sjóngerving gagna'
+    csp_postap_2: 'Kafli 2: Öpp og gagnagrunnar'
     csp2_1_2018: Kafli 2 - Stafrænar upplýsingar
+    csp3_1_2018: 'Kafli 3: Inngangur að forritun'
     dlp: Kvaðningar um íhugun
   external_links:
     disclaimer: Afsal ábyrgðar
@@ -1211,6 +1274,10 @@ is:
     download_in_Vietnamese: 'Hlaða niður á víetnömsku:'
     windows: Windows (64-bita)
     mac: Mac OS X
+  stage_extras_teacher_message: Þú hefur slökkt á Aukaefni (Lesson Extras) fyrir suma
+    hópa þína. Nemendur þínir sjá ekki þessa síðu nema þú gerir það virkt. Þú getur
+    virkjað Aukaefni með því að heimsækja þitt <a href='http://code.org/teacher-dashboard'>Stjórnborð
+    kennara</a>.
   locked_stage: Innihald þessa áfanga er ekki sýnilegt eins og er vegna þess að áfanginn
     er læstur. Kennarinn þinn getur aflæst áfanganum þegar tími er kominn til að vinna
     með hann eða til að fara yfir svörin.
@@ -1221,32 +1288,132 @@ is:
   return_unit_overview: Fara í yfirlit kafla
   return_course_overview: Fara í yfirlit kafla
   view_all_units: Sjá allar einingar
+  view_teacher_guide: Leiðbeiningar kennara
   pd:
     form_labels:
+      first_name: Fornafn
+      first_name_preferred: Fornafn sem þú vilt að sé notað
+      last_name: Eftirnafn
       email: Netfang
+      email_alternate: Annað netfang
+      gender: Kyn
       school_name: Nafn skóla
       school_city: Bær skóla
       school_country: Land skóla
+      ages: Hvaða aldurshóp(um) kennir þú þetta árið?
+      subjects: Hvaða fag/fög kennir þú þetta árið?
+      resources: Hvaða eftirfarandi tilföng notar þú fyrir tölvunarfræði?
+      robotics: Hvaða eftirfarandi tilföng notar þú fyrir þjarkafræði?
+      workshop_organizer: Skipuleggjandi smiðju
+      workshop_facilitator: Leiðbeinandi
+      workshop_course: Smiðja
+      email_opt_in: Megum við senda þér upplýsingar um alþjóðleg verkefni Code.org,
+        uppfærslur á námskeiðum okkar eða aðrar fréttir tengdar tölvunarfræði?
+      legal_opt_in: 'Með því að senda inn þetta form samþykkir þú að Code.org sé heimilt
+        að deila upplýsingum um hvernig þú notar Code.org og Professional Learning
+        tilföngin með Alþjóðlegum samstarfsaðila (International Partner) Code.org
+        í þínu landi, skólayfirvöldum og forsvarsaðilum viðburða. Við munum deila
+        með þessum aðilum tengslaupplýsingum þínum, hvaða námskeið/einingar þú ert
+        að nota og samantektum um hópa þína. Þar á meðal fjölda nemenda í bekkjunum,
+        lýðfræðilegri greiningu á bekkjum og heiti skóla og skólaumdæmis. Við munum
+        ekki deila neinum upplýsingum um einstaka nemendur með samstarfsaðilum okkar:
+        öll auðkenni verða fjarlægð úr upplýsingum nemenda og aðeins samtölur notaðar.
+        Alþjóðlegir samstarfsaðilar okkar og forsvarsaðilar eru samningslega skuldbundnir
+        til að meðhöndla þessi gögn með sama trúnaði og Code.org.'
     form_entries:
       gender:
         male: Karlkyns
         female: Kvenkyns
+        non_binary: Óflokkað
+        not_listed: Ekki tilgreint hér
         none: Kýs að svara ekki
+      school_country:
+        canada: Kanada
+        chile: Síle
+        israel: Ísrael
+        malaysia: Malasía
+        mexico: Mexíkó
+        thailand: Thailand
+      ages:
+        ages_under_6: "< 6 ára"
+        ages_7_8: 7-8 ára
+        ages_9_10: 9-10 ára
+        ages_11_12: 11-12 ára
+        ages_13_14: 13-14 ára
+        ages_15_16: 15-16 ára
+        ages_17_18: 17-18 ára
+        ages_19_over: 19+ ára
       subjects:
         cs: Tölvunarfræði
+        ict: UPPT
         math: Reikningur
         science: Vísindi
+        history: Saga / Félagsfræði
         la: Tungumál
+        efl: Enska sem útlent tungumál
+        music: Tónlist
+        art: Listir
+        other: 'Annað:'
       resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
+        scratch: Scratch
+        tynker: Tynker
+        other: 'Annað:'
       robotics:
+        grok: Grok Learning
         kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        wonder: Wonder Workshop
+        other: 'Annað:'
       workshop_course:
+        csf_af: Grunnatriði TF (Námskeið A-F)
+        csf_express: Grunnatriði TF (Forstig Hraðferðar eða Hraðferð)
+        csd: Uppgötvanir tölvunarfræði
         csp: Grunnhugtök tölvunarfræði
       email_opt_in:
         opt_in_yes: Já
         opt_in_no: Nei
+    international_opt_in:
+      title: Aðsókn að Smiðju
+      intro: Takk fyrir að gefa þér tíma til að fá þjálfun í námsefni Code.org. Markmið
+        okkar er að veita börnum í skólum um allan heim tækifæri til að nema tölvunarfræði
+        og það væri ekki hægt án þín.
+      instructions: Vinsamlegast fylltu út formið hér fyrir neðan til að láta vita
+        að 1) þú hafir sótt þjálfunarsmiðju sem haldin var af einum af alþjóðlegum
+        samstarfsaðilum Code.org og 2) þú samþykkir að deila upplýsingum þínum með
+        alþjóðlegum samstarfsaðila okkar í þínu landi svo þeir geti hjálpað til að
+        styðja þig í vegferð þinni sem tölvunarfræðikennari.
+      thanks: Takk fyrir þessar upplýsingar! Við hlökkum til að styðja þig í að kynnast
+        námsefni og verkfærum Code.org. Vinsamlegast haltu áfram að deila spurningum
+        þínum og endurgjöf með okkur með því að skrifa til okkar á <a href='%{support_email_url}'>support@code.org</a>
+        eða með innlögnum á <a href='%{teacher_forum_url}' target='_blank'>spjallvef
+        kennara</a>!
+    logged_out:
+      heading: Takk fyrir áhuga inn á Fagkennsluverkefninu (Professional Learning
+        Program)!
+      body: Áður en þú getur byrjað þarftu að skrá þig inn á Code.org aðganginn þinn.
+        Ef þú vilt fá meiri upplýsingar áður en þú sækir um getur fundið þær á <a
+        href="%{url}">Professional Learning Program overview</a>.
+    not_teacher:
+      body: Takk fyrir áhuga þinn á Fagkennsluverkefni Code.org (Professional Learning
+        Program)! Þú ert nú skráð/ur inn sem nemandi. Vinsamlegast stofnaðu sérstakan
+        kennaraaðgang eða <a href="%{user_settings}">farðu í notendastillingar þínar</a>
+        til að uppfæra aðganginn frá nemanda til kennara.
+      more: Vanti þig meiri upplýsingar um verkefnið áður en þú sækir um er þær að
+        finna á <a href="%{pl_overview}">Professional Learning Program overview</a>.
+    no_teacher_email:
+      body: Það er ekkert netfang skráð á aðgang þinn. Vinsamlegast <a href="%{user_registration}">farðu
+        í notendastillingar þínar</a> til að bæta við netfangi áður en þú fyllir út
+        þetta form.
   courses_category: Heil námskeið
   cookie_banner:
     message: Með því að halda áfram að vafra á vef okkar eða smella á "Ég samþykki"

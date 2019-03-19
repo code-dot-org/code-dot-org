@@ -2,7 +2,8 @@
 /* global dashboard */
 import classNames from 'classnames';
 import {connect} from 'react-redux';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import AnimationTab from './AnimationTab/AnimationTab';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import ErrorDialogStack from './ErrorDialogStack';
@@ -15,8 +16,7 @@ import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
-import VisualizationResizeBar from "../lib/ui/VisualizationResizeBar";
-
+import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
 
 /**
  * Top-level React wrapper for GameLab
@@ -27,7 +27,10 @@ class GameLabView extends React.Component {
     showFinishButton: PropTypes.bool.isRequired,
     onMount: PropTypes.func.isRequired,
     // Provided by Redux
-    interfaceMode: PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
+    interfaceMode: PropTypes.oneOf([
+      GameLabInterfaceMode.CODE,
+      GameLabInterfaceMode.ANIMATION
+    ]).isRequired,
     isResponsive: PropTypes.bool.isRequired,
     hideSource: PropTypes.bool.isRequired,
     pinWorkspaceToBottom: PropTypes.bool.isRequired,
@@ -35,7 +38,7 @@ class GameLabView extends React.Component {
     showVisualizationHeader: PropTypes.bool.isRequired,
     isIframeEmbed: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
-    spriteLab: PropTypes.bool.isRequired,
+    spriteLab: PropTypes.bool.isRequired
   };
 
   getChannelId() {
@@ -50,8 +53,13 @@ class GameLabView extends React.Component {
   }
 
   renderCodeMode() {
-    const {interfaceMode, isResponsive, hideSource, pinWorkspaceToBottom,
-           showFinishButton} = this.props;
+    const {
+      interfaceMode,
+      isResponsive,
+      hideSource,
+      pinWorkspaceToBottom,
+      showFinishButton
+    } = this.props;
 
     // Code mode contains protected (non-React) content.  We have to always
     // render it, so when we're not in code mode use CSS to hide it.
@@ -78,15 +86,15 @@ class GameLabView extends React.Component {
           {this.props.showVisualizationHeader && <GameLabVisualizationHeader />}
           <GameLabVisualizationColumn finishButton={showFinishButton} />
         </div>
-        {this.props.isIframeEmbed &&
-         !this.props.isRunning &&
-         <IFrameEmbedOverlay
-           appWidth={GAME_WIDTH}
-           appHeight={GAME_HEIGHT}
-           style={{top: 79, left: 17}}
-           playButtonStyle={{top: 620, left: 179}}
-         />}
-        <VisualizationResizeBar/>
+        {this.props.isIframeEmbed && !this.props.isRunning && (
+          <IFrameEmbedOverlay
+            appWidth={GAME_WIDTH}
+            appHeight={GAME_HEIGHT}
+            style={{top: 79, left: 17}}
+            playButtonStyle={{top: 620, left: 179}}
+          />
+        )}
+        <VisualizationResizeBar />
         <InstructionsWithWorkspace>
           <CodeWorkspace withSettingsCog={!this.props.spriteLab} />
         </InstructionsWithWorkspace>
@@ -96,9 +104,12 @@ class GameLabView extends React.Component {
 
   renderAnimationMode() {
     const {allowAnimationMode, interfaceMode} = this.props;
-    return allowAnimationMode && interfaceMode === GameLabInterfaceMode.ANIMATION ?
-        <AnimationTab channelId={this.getChannelId()} /> :
-        undefined;
+    return allowAnimationMode &&
+      interfaceMode === GameLabInterfaceMode.ANIMATION ? (
+      <AnimationTab channelId={this.getChannelId()} />
+    ) : (
+      undefined
+    );
   }
 
   render() {
@@ -106,8 +117,8 @@ class GameLabView extends React.Component {
       <StudioAppWrapper>
         {this.renderCodeMode()}
         {this.renderAnimationMode()}
-        <ErrorDialogStack/>
-        <AnimationJsonViewer/>
+        <ErrorDialogStack />
+        <AnimationJsonViewer />
       </StudioAppWrapper>
     );
   }
@@ -121,5 +132,5 @@ export default connect(state => ({
   showVisualizationHeader: showVisualizationHeader(state),
   isRunning: state.runState.isRunning,
   isIframeEmbed: state.pageConstants.isIframeEmbed,
-  spriteLab: state.pageConstants.isBlockly,
+  spriteLab: state.pageConstants.isBlockly
 }))(GameLabView);

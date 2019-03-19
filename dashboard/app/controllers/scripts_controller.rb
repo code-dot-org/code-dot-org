@@ -35,9 +35,10 @@ class ScriptsController < ApplicationController
 
     # Lastly, if user is assigned to newer version of this script, we will
     # ask if they want to be redirected to the newer version.
-    redirect_script_url = @script.redirect_to_script_url(@current_user, locale: request.locale)
+    @redirect_script_url = @script.redirect_to_script_url(current_user, locale: request.locale)
 
-    render 'show', locals: {show_redirect_warning: params[:redirect_warning] == 'true', redirect_script_url: redirect_script_url}
+    @show_redirect_warning = params[:redirect_warning] == 'true'
+    @section = current_user&.sections&.find_by(id: params[:section_id])&.summarize
   end
 
   def index
@@ -115,6 +116,9 @@ class ScriptsController < ApplicationController
 
   def set_script
     @script = Script.get_from_cache(params[:id])
+    if current_user && @script&.pilot? && !@script.has_pilot_access?(current_user)
+      render :no_access
+    end
   end
 
   def script_params
@@ -126,6 +130,7 @@ class ScriptsController < ApplicationController
       :visible_to_teachers,
       :login_required,
       :hideable_stages,
+      :curriculum_path,
       :professional_learning_course,
       :peer_reviews_to_complete,
       :wrapup_video,
@@ -136,6 +141,7 @@ class ScriptsController < ApplicationController
       :has_verified_resources,
       :has_lesson_plan,
       :script_announcements,
+      :pilot_experiment,
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],

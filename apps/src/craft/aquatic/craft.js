@@ -8,7 +8,7 @@ import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMar
 import {
   GameController,
   EventType,
-  utils as CraftUtils,
+  utils as CraftUtils
 } from '@code-dot-org/craft';
 import dom from '@cdo/apps/dom';
 import MusicController from '@cdo/apps/MusicController';
@@ -31,43 +31,45 @@ var Craft = module.exports;
 
 var characters = {
   Steve: {
-    name: "Steve",
-    staticAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Steve_Neutral.png",
-    smallStaticAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Steve_Neutral.png",
-    failureAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Steve_Fail.png",
-    winAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Steve_Win.png",
+    name: 'Steve',
+    staticAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Neutral.png',
+    smallStaticAvatar:
+      MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Neutral.png',
+    failureAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Fail.png',
+    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Win.png'
   },
   Alex: {
-    name: "Alex",
-    staticAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Alex_Neutral.png",
-    smallStaticAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Alex_Neutral.png",
-    failureAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Alex_Fail.png",
-    winAvatar: MEDIA_URL + "Sliced_Parts/Pop_Up_Character_Alex_Win.png",
+    name: 'Alex',
+    staticAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Neutral.png',
+    smallStaticAvatar:
+      MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Neutral.png',
+    failureAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Fail.png',
+    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Win.png'
   }
 };
 
 var interfaceImages = {
   DEFAULT: [
-    MEDIA_URL + "Sliced_Parts/MC_Loading_Spinner.gif",
-    MEDIA_URL + "Sliced_Parts/Frame_Large_Plus_Logo.png",
-    MEDIA_URL + "Sliced_Parts/Pop_Up_Slice.png",
-    MEDIA_URL + "Sliced_Parts/X_Button.png",
-    MEDIA_URL + "Sliced_Parts/Button_Grey_Slice.png",
-    MEDIA_URL + "Sliced_Parts/Run_Button_Up_Slice.png",
-    MEDIA_URL + "Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png",
-    MEDIA_URL + "Sliced_Parts/Run_Button_Down_Slice.png",
-    MEDIA_URL + "Sliced_Parts/Reset_Button_Up_Slice.png",
-    MEDIA_URL + "Sliced_Parts/MC_Reset_Arrow_Icon.png",
-    MEDIA_URL + "Sliced_Parts/Reset_Button_Down_Slice.png",
-    MEDIA_URL + "Sliced_Parts/Callout_Tail.png",
+    MEDIA_URL + 'Sliced_Parts/MC_Loading_Spinner.gif',
+    MEDIA_URL + 'Sliced_Parts/Frame_Large_Plus_Logo.png',
+    MEDIA_URL + 'Sliced_Parts/Pop_Up_Slice.png',
+    MEDIA_URL + 'Sliced_Parts/X_Button.png',
+    MEDIA_URL + 'Sliced_Parts/Button_Grey_Slice.png',
+    MEDIA_URL + 'Sliced_Parts/Run_Button_Up_Slice.png',
+    MEDIA_URL + 'Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png',
+    MEDIA_URL + 'Sliced_Parts/Run_Button_Down_Slice.png',
+    MEDIA_URL + 'Sliced_Parts/Reset_Button_Up_Slice.png',
+    MEDIA_URL + 'Sliced_Parts/MC_Reset_Arrow_Icon.png',
+    MEDIA_URL + 'Sliced_Parts/Reset_Button_Down_Slice.png',
+    MEDIA_URL + 'Sliced_Parts/Callout_Tail.png'
   ],
   1: [
-    MEDIA_URL + "Sliced_Parts/Steve_Character_Select.png",
-    MEDIA_URL + "Sliced_Parts/Alex_Character_Select.png",
+    MEDIA_URL + 'Sliced_Parts/Steve_Character_Select.png',
+    MEDIA_URL + 'Sliced_Parts/Alex_Character_Select.png',
     characters.Steve.staticAvatar,
     characters.Steve.smallStaticAvatar,
     characters.Alex.staticAvatar,
-    characters.Alex.smallStaticAvatar,
+    characters.Alex.smallStaticAvatar
   ],
   2: [
     // TODO(bjordan): find different pre-load point for feedback images,
@@ -75,23 +77,23 @@ var interfaceImages = {
     characters.Alex.winAvatar,
     characters.Steve.winAvatar,
     characters.Alex.failureAvatar,
-    characters.Steve.failureAvatar,
+    characters.Steve.failureAvatar
   ],
   6: [
-    MEDIA_URL + "Sliced_Parts/House_Option_A_v3.png",
-    MEDIA_URL + "Sliced_Parts/House_Option_B_v3.png",
-    MEDIA_URL + "Sliced_Parts/House_Option_C_v3.png",
+    MEDIA_URL + 'Sliced_Parts/House_Option_A_v3.png',
+    MEDIA_URL + 'Sliced_Parts/House_Option_B_v3.png',
+    MEDIA_URL + 'Sliced_Parts/House_Option_C_v3.png'
   ]
 };
 
 var MUSIC_METADATA = [
-  {volume: 1, hasOgg: true, name: "vignette1"},
-  {volume: 1, hasOgg: true, name: "vignette2-quiet"},
-  {volume: 1, hasOgg: true, name: "vignette3"},
-  {volume: 1, hasOgg: true, name: "vignette4-intro"},
-  {volume: 1, hasOgg: true, name: "vignette5-shortpiano"},
-  {volume: 1, hasOgg: true, name: "vignette7-funky-chirps-short"},
-  {volume: 1, hasOgg: true, name: "vignette8-free-play"},
+  {volume: 1, hasOgg: true, name: 'vignette1'},
+  {volume: 1, hasOgg: true, name: 'vignette2-quiet'},
+  {volume: 1, hasOgg: true, name: 'vignette3'},
+  {volume: 1, hasOgg: true, name: 'vignette4-intro'},
+  {volume: 1, hasOgg: true, name: 'vignette5-shortpiano'},
+  {volume: 1, hasOgg: true, name: 'vignette7-funky-chirps-short'},
+  {volume: 1, hasOgg: true, name: 'vignette8-free-play'}
 ];
 
 var CHARACTER_STEVE = 'Steve';
@@ -115,7 +117,7 @@ function trySetLocalStorageItem(key, value) {
 /**
  * Initialize Blockly and the Craft app. Called on page load.
  */
-Craft.init = function (config) {
+Craft.init = function(config) {
   if (config.level.puzzle_number === 1 && config.level.stage_total === 1) {
     // Not viewing level within a script, bump puzzle # to unused one so
     // asset loading system and levelbuilder overrides don't think this is
@@ -130,25 +132,25 @@ Craft.init = function (config) {
   config.level.disableFinalStageMessage = true;
 
   // Return the version of Internet Explorer (8+) or undefined if not IE.
-  var getIEVersion = function () {
+  var getIEVersion = function() {
     return document.documentMode;
   };
 
   var ieVersionNumber = getIEVersion();
   if (ieVersionNumber) {
-    $('body').addClass("ieVersion" + ieVersionNumber);
+    $('body').addClass('ieVersion' + ieVersionNumber);
   }
 
   var bodyElement = document.body;
-  bodyElement.className = bodyElement.className + " minecraft";
+  bodyElement.className = bodyElement.className + ' minecraft';
 
   // Always add a hook for after the video but before the level proper begins.
   // Use this to start music, and sometimes to show an extra dialog.
-  config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
+  config.level.afterVideoBeforeInstructionsFn = showInstructions => {
     Craft.beginBackgroundMusic();
     if (config.level.showPopupOnLoad) {
       if (config.level.showPopupOnLoad === 'playerSelection') {
-        Craft.showPlayerSelectionPopup(function (selectedPlayer) {
+        Craft.showPlayerSelectionPopup(function(selectedPlayer) {
           trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
           Craft.clearPlayerState();
           trySetLocalStorageItem('craftSelectedPlayer', selectedPlayer);
@@ -173,23 +175,23 @@ Craft.init = function (config) {
 
   var levelTracks = [];
   if (Craft.level.songs && MUSIC_METADATA) {
-    levelTracks = MUSIC_METADATA.filter(function (trackMetadata) {
+    levelTracks = MUSIC_METADATA.filter(function(trackMetadata) {
       return Craft.level.songs.indexOf(trackMetadata.name) !== -1;
     });
   }
 
   Craft.musicController = new MusicController(
-      Sounds.getSingleton(),
-      function (filename) {
-        return config.skin.assetUrl(`music/${filename}`);
-      },
-      levelTracks,
-      levelTracks.length > 1 ? 7500 : null
+    Sounds.getSingleton(),
+    function(filename) {
+      return config.skin.assetUrl(`music/${filename}`);
+    },
+    levelTracks,
+    levelTracks.length > 1 ? 7500 : null
   );
 
   // Play music when the instructions are shown
-  Craft.beginBackgroundMusic = function () {
-    Sounds.getSingleton().whenAudioUnlocked(function () {
+  Craft.beginBackgroundMusic = function() {
+    Sounds.getSingleton().whenAudioUnlocked(function() {
       var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
       var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
       Craft.musicController.play(songToPlayFirst);
@@ -204,70 +206,88 @@ Craft.init = function (config) {
 
   var levelConfig = config.level;
 
-  var onMount = function () {
-    studioApp().init(Object.assign({}, config, {
-      forceInsertTopBlock: 'when_run',
-      appStrings: {
-        generatedCodeDescription: craftMsg.generatedCodeDescription(),
-      },
-      loadAudio: function () {},
-      afterInject: function () {
-        // NaN if not set
-        var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
-        Craft.gameController = new GameController({
-          Phaser: window.Phaser,
-          containerId: 'phaser-game',
-          assetRoot: Craft.skin.assetUrl(''),
-          audioPlayer: {
-            register: studioApp().registerAudio.bind(studioApp()),
-            play: studioApp().playAudio.bind(studioApp())
-          },
-          debug: false,
-          customSlowMotion: config.level.isTestLevel ? 0.5 : slowMotionURLParam,
-          /**
-           * First asset packs to load while video playing, etc.
-           * Won't matter for levels without delayed level initialization
-           * (due to e.g. character / house select popups).
-           */
-          earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(levelConfig.puzzle_number),
-          afterAssetsLoaded: function () {
-            // preload music after essential game asset downloads completely finished
-            Craft.musicController.preload();
-          },
-          earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(levelConfig.puzzle_number),
-        });
+  var onMount = function() {
+    studioApp().init(
+      Object.assign({}, config, {
+        forceInsertTopBlock: 'when_run',
+        appStrings: {
+          generatedCodeDescription: craftMsg.generatedCodeDescription()
+        },
+        loadAudio: function() {},
+        afterInject: function() {
+          // NaN if not set
+          var slowMotionURLParam = parseFloat(
+            (location.search.split('customSlowMotion=')[1] || '').split('&')[0]
+          );
+          Craft.gameController = new GameController({
+            Phaser: window.Phaser,
+            containerId: 'phaser-game',
+            assetRoot: Craft.skin.assetUrl(''),
+            audioPlayer: {
+              register: studioApp().registerAudio.bind(studioApp()),
+              play: studioApp().playAudio.bind(studioApp())
+            },
+            debug: false,
+            customSlowMotion: config.level.isTestLevel
+              ? 0.5
+              : slowMotionURLParam,
+            /**
+             * First asset packs to load while video playing, etc.
+             * Won't matter for levels without delayed level initialization
+             * (due to e.g. character / house select popups).
+             */
+            earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(
+              levelConfig.puzzle_number
+            ),
+            afterAssetsLoaded: function() {
+              // preload music after essential game asset downloads completely finished
+              Craft.musicController.preload();
+            },
+            earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(
+              levelConfig.puzzle_number
+            )
+          });
 
-        if (!config.level.showPopupOnLoad) {
-          Craft.initializeAppLevel(config.level);
-        }
+          if (!config.level.showPopupOnLoad) {
+            Craft.initializeAppLevel(config.level);
+          }
 
-        if (studioApp().hideSource) {
-          // Set visualizationColumn width in share mode so it can be centered
-          var visualizationColumn = document.getElementById('visualizationColumn');
-          visualizationColumn.style.width = this.nativeVizWidth + 'px';
+          if (studioApp().hideSource) {
+            // Set visualizationColumn width in share mode so it can be centered
+            var visualizationColumn = document.getElementById(
+              'visualizationColumn'
+            );
+            visualizationColumn.style.width = this.nativeVizWidth + 'px';
+          }
+        },
+        twitter: {
+          text: 'Share on Twitter',
+          hashtag: 'Craft'
         }
-      },
-      twitter: {
-        text: "Share on Twitter",
-        hashtag: "Craft"
-      }
-    }));
+      })
+    );
 
     var interfaceImagesToLoad = [];
-    interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
+    interfaceImagesToLoad = interfaceImagesToLoad.concat(
+      interfaceImages.DEFAULT
+    );
 
-    if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
-      interfaceImagesToLoad =
-          interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
+    if (
+      config.level.puzzle_number &&
+      interfaceImages[config.level.puzzle_number]
+    ) {
+      interfaceImagesToLoad = interfaceImagesToLoad.concat(
+        interfaceImages[config.level.puzzle_number]
+      );
     }
 
-    interfaceImagesToLoad.forEach(function (url) {
+    interfaceImagesToLoad.forEach(function(url) {
       preloadImage(url);
     });
 
     var shareButton = $('.mc-share-button');
     if (shareButton.length) {
-      dom.addClickTouchEvent(shareButton[0], function () {
+      dom.addClickTouchEvent(shareButton[0], function() {
         Craft.reportResult(true);
       });
     }
@@ -293,29 +313,32 @@ Craft.init = function (config) {
   );
 };
 
-var preloadImage = function (url) {
+var preloadImage = function(url) {
   var img = new Image();
   img.src = url;
 };
 
-Craft.characterAssetPackName = function (playerName) {
+Craft.characterAssetPackName = function(playerName) {
   return 'player' + playerName + 'Aquatic';
 };
 
-Craft.getCurrentCharacter = function () {
-  return window.localStorage.getItem('craftSelectedPlayer') || DEFAULT_CHARACTER;
+Craft.getCurrentCharacter = function() {
+  return (
+    window.localStorage.getItem('craftSelectedPlayer') || DEFAULT_CHARACTER
+  );
 };
 
-Craft.updateUIForCharacter = function (character) {
+Craft.updateUIForCharacter = function(character) {
   Craft.initialConfig.skin.staticAvatar = characters[character].staticAvatar;
-  Craft.initialConfig.skin.smallStaticAvatar = characters[character].smallStaticAvatar;
+  Craft.initialConfig.skin.smallStaticAvatar =
+    characters[character].smallStaticAvatar;
   Craft.initialConfig.skin.failureAvatar = characters[character].failureAvatar;
   Craft.initialConfig.skin.winAvatar = characters[character].winAvatar;
   studioApp().setIconsFromSkin(Craft.initialConfig.skin);
   $('#prompt-icon').attr('src', characters[character].smallStaticAvatar);
 };
 
-Craft.showPlayerSelectionPopup = function (onSelectedCallback) {
+Craft.showPlayerSelectionPopup = function(onSelectedCallback) {
   var selectedPlayer = DEFAULT_CHARACTER;
   var popupDiv = document.createElement('div');
   popupDiv.innerHTML = require('../simple/dialogs/playerSelection.html.ejs')({
@@ -324,37 +347,50 @@ Craft.showPlayerSelectionPopup = function (onSelectedCallback) {
   var popupDialog = studioApp().createModalDialog({
     contentDiv: popupDiv,
     defaultBtnSelector: '#choose-steve',
-    onHidden: function () {
+    onHidden: function() {
       onSelectedCallback(selectedPlayer);
     },
-    id: 'craft-popup-player-selection',
+    id: 'craft-popup-player-selection'
   });
-  dom.addClickTouchEvent($('#close-character-select')[0], function () {
-    popupDialog.hide();
-  }.bind(this));
-  dom.addClickTouchEvent($('#choose-steve')[0], function () {
-    selectedPlayer = CHARACTER_STEVE;
-    trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
-    popupDialog.hide();
-  }.bind(this));
-  dom.addClickTouchEvent($('#choose-alex')[0], function () {
-    selectedPlayer = CHARACTER_ALEX;
-    trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
-    popupDialog.hide();
-  }.bind(this));
+  dom.addClickTouchEvent(
+    $('#close-character-select')[0],
+    function() {
+      popupDialog.hide();
+    }.bind(this)
+  );
+  dom.addClickTouchEvent(
+    $('#choose-steve')[0],
+    function() {
+      selectedPlayer = CHARACTER_STEVE;
+      trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
+      popupDialog.hide();
+    }.bind(this)
+  );
+  dom.addClickTouchEvent(
+    $('#choose-alex')[0],
+    function() {
+      selectedPlayer = CHARACTER_ALEX;
+      trackEvent('Minecraft', 'ClickedCharacter', selectedPlayer);
+      popupDialog.hide();
+    }.bind(this)
+  );
   popupDialog.show();
 };
 
-Craft.clearPlayerState = function () {
+Craft.clearPlayerState = function() {
   window.localStorage.removeItem('craftSelectedPlayer');
 };
 
-Craft.initializeAppLevel = function (levelConfig) {
+Craft.initializeAppLevel = function(levelConfig) {
   CraftUtils.convertActionPlaneEntitiesToConfig(levelConfig);
 
   var fluffPlane = [];
   // TODO(bjordan): remove configuration requirement in visualization
-  for (var i = 0; i < (levelConfig.gridWidth || 10) * (levelConfig.gridHeight || 10); i++) {
+  for (
+    var i = 0;
+    i < (levelConfig.gridWidth || 10) * (levelConfig.gridHeight || 10);
+    i++
+  ) {
     fluffPlane.push('');
   }
 
@@ -379,20 +415,22 @@ Craft.initializeAppLevel = function (levelConfig) {
     assetPacks: levelAssetPacks,
     specialLevelType: levelConfig.specialLevelType,
     houseBottomRight: levelConfig.houseBottomRight,
-    gridDimensions: levelConfig.gridWidth && levelConfig.gridHeight ?
-        [levelConfig.gridWidth, levelConfig.gridHeight] :
-        null,
+    gridDimensions:
+      levelConfig.gridWidth && levelConfig.gridHeight
+        ? [levelConfig.gridWidth, levelConfig.gridHeight]
+        : null,
     // eslint-disable-next-line no-eval
     verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0] // TODO(bjordan): add to utils
   });
 };
 
-Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
-  return Craft.minAssetsForLevelNumber(levelNumber)
-      .concat([Craft.characterAssetPackName(Craft.getCurrentCharacter())]);
+Craft.minAssetsForLevelWithCharacter = function(levelNumber) {
+  return Craft.minAssetsForLevelNumber(levelNumber).concat([
+    Craft.characterAssetPackName(Craft.getCurrentCharacter())
+  ]);
 };
 
-Craft.minAssetsForLevelNumber = function (levelNumber) {
+Craft.minAssetsForLevelNumber = function(levelNumber) {
   switch (levelNumber) {
     case 1:
       return ['aquaticIslandAssets'];
@@ -407,13 +445,13 @@ Craft.minAssetsForLevelNumber = function (levelNumber) {
   }
 };
 
-Craft.afterLoadAssetsForLevel = function (levelNumber) {
+Craft.afterLoadAssetsForLevel = function(levelNumber) {
   // After level loads & player starts playing, kick off further asset downloads
   // TODO
   return [];
 };
 
-Craft.earlyLoadAssetsForLevel = function (levelNumber) {
+Craft.earlyLoadAssetsForLevel = function(levelNumber) {
   switch (levelNumber) {
     case 1:
       return Craft.minAssetsForLevelNumber(levelNumber);
@@ -422,7 +460,7 @@ Craft.earlyLoadAssetsForLevel = function (levelNumber) {
   }
 };
 
-Craft.niceToHaveAssetsForLevel = function (levelNumber) {
+Craft.niceToHaveAssetsForLevel = function(levelNumber) {
   switch (levelNumber) {
     case 1:
       return ['playerSteve', 'playerAlex'];
@@ -435,7 +473,7 @@ Craft.niceToHaveAssetsForLevel = function (levelNumber) {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first true if first reset
  */
-Craft.reset = function (first) {
+Craft.reset = function(first) {
   if (first) {
     return;
   }
@@ -443,16 +481,18 @@ Craft.reset = function (first) {
   Craft.gameController.codeOrgAPI.resetAttempt();
 };
 
-Craft.phaserLoaded = function () {
-  return Craft.gameController &&
-      Craft.gameController.game &&
-      !Craft.gameController.game.load.isLoading;
+Craft.phaserLoaded = function() {
+  return (
+    Craft.gameController &&
+    Craft.gameController.game &&
+    !Craft.gameController.game.load.isLoading
+  );
 };
 
 /**
  * Click the run button.  Start the program.
  */
-Craft.runButtonClick = function () {
+Craft.runButtonClick = function() {
   if (!Craft.phaserLoaded()) {
     return;
   }
@@ -474,8 +514,10 @@ Craft.runButtonClick = function () {
   if (Craft.level.freePlay && !studioApp().hideSource) {
     var finishBtnContainer = $('#right-button-cell');
 
-    if (finishBtnContainer.length &&
-        !finishBtnContainer.hasClass('right-button-cell-enabled')) {
+    if (
+      finishBtnContainer.length &&
+      !finishBtnContainer.hasClass('right-button-cell-enabled')
+    ) {
       finishBtnContainer.addClass('right-button-cell-enabled');
       studioApp().onResize();
 
@@ -486,7 +528,7 @@ Craft.runButtonClick = function () {
   }
 };
 
-Craft.executeUserCode = function () {
+Craft.executeUserCode = function() {
   if (Craft.initialConfig.level.edit_blocks) {
     this.reportResult(true);
     return;
@@ -508,10 +550,16 @@ Craft.executeUserCode = function () {
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
   appCodeOrgAPI.registerEventCallback(null, event => {
-    if (event.eventType === EventType.WhenUsed && event.targetType === 'sheep') {
+    if (
+      event.eventType === EventType.WhenUsed &&
+      event.targetType === 'sheep'
+    ) {
       appCodeOrgAPI.drop(null, 'wool', event.targetIdentifier);
     }
-    if (event.eventType === EventType.WhenTouched && event.targetType === 'creeper') {
+    if (
+      event.eventType === EventType.WhenTouched &&
+      event.targetType === 'creeper'
+    ) {
       appCodeOrgAPI.flashEntity(null, event.targetIdentifier);
       appCodeOrgAPI.explodeEntity(null, event.targetIdentifier);
     }
@@ -519,10 +567,11 @@ Craft.executeUserCode = function () {
 
   let code = '';
   if (this.level.sharedBlocks) {
-    code += this.level.sharedBlocks
-      .map(blockOptions => blockOptions.helperCode)
-      .filter(helperCode => helperCode)
-      .join("\n") + '\n';
+    code +=
+      this.level.sharedBlocks
+        .map(blockOptions => blockOptions.helperCode)
+        .filter(helperCode => helperCode)
+        .join('\n') + '\n';
   }
 
   const resume = callback => () => {
@@ -531,57 +580,69 @@ Craft.executeUserCode = function () {
   };
 
   const asyncMethods = {
-    moveForward: function (callback) {
+    moveForward: function(callback) {
       appCodeOrgAPI.moveForward(null, 'Player', resume(callback));
     },
-    turnLeft: function (callback) {
+    turnLeft: function(callback) {
       appCodeOrgAPI.turnLeft(null, 'Player', resume(callback));
     },
-    turnRight: function (callback) {
+    turnRight: function(callback) {
       appCodeOrgAPI.turnRight(null, 'Player', resume(callback));
-    },
+    }
   };
 
   // Run user code.
   let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
   code += Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
-  interpreter = CustomMarshalingInterpreter.evalWith(code, {
-    console: {
-      log: console.log,
+  interpreter = CustomMarshalingInterpreter.evalWith(
+    code,
+    {
+      console: {
+        log: console.log
+      },
+      ...asyncMethods,
+      api: appCodeOrgAPI,
+      walkableAhead: () => Craft.gameController.levelModel.canMoveForward()[0],
+      walkableToRight: () => {
+        Craft.gameController.levelModel.turnRight();
+        const value = Craft.gameController.levelModel.canMoveForward()[0];
+        Craft.gameController.levelModel.turnLeft();
+        return value;
+      },
+      walkableToLeft: () => {
+        Craft.gameController.levelModel.turnLeft();
+        const value = Craft.gameController.levelModel.canMoveForward()[0];
+        Craft.gameController.levelModel.turnRight();
+        return value;
+      },
+      getStandingOnBlockType: () =>
+        Craft.gameController.levelModel.groundPlane.getBlockAt(
+          Craft.gameController.getEntity().position
+        ).blockType,
+      isStandingOnMiniBlock: () =>
+        Craft.gameController.levelModel.actionPlane
+          .getBlockAt(Craft.gameController.getEntity().position)
+          .getIsMiniblock(),
+      isFinished: () =>
+        Craft.gameController.levelModel.isFailed() ||
+        Craft.gameController.levelModel.isSolved()
     },
-    ...asyncMethods,
-    api: appCodeOrgAPI,
-    walkableAhead: () => Craft.gameController.levelModel.canMoveForward()[0],
-    walkableToRight: () => {
-      Craft.gameController.levelModel.turnRight();
-      const value = Craft.gameController.levelModel.canMoveForward()[0];
-      Craft.gameController.levelModel.turnLeft();
-      return value;
-    },
-    walkableToLeft: () => {
-      Craft.gameController.levelModel.turnLeft();
-      const value = Craft.gameController.levelModel.canMoveForward()[0];
-      Craft.gameController.levelModel.turnRight();
-      return value;
-    },
-    getStandingOnBlockType: () => Craft.gameController.levelModel.groundPlane.getBlockAt(
-      Craft.gameController.getEntity().position).blockType,
-    isStandingOnMiniBlock: () => Craft.gameController.levelModel.actionPlane.getBlockAt(
-      Craft.gameController.getEntity().position).getIsMiniblock(),
-    isFinished: () => (Craft.gameController.levelModel.isFailed() || Craft.gameController.levelModel.isSolved())
-  }, {
-    asyncFunctionList: Object.values(asyncMethods),
-  });
-
-  appCodeOrgAPI.startAttempt(function (success, levelModel) {
-    if (Craft.level.freePlay) {
-      return;
+    {
+      asyncFunctionList: Object.values(asyncMethods)
     }
-    this.reportResult(success);
-  }.bind(this));
+  );
+
+  appCodeOrgAPI.startAttempt(
+    function(success, levelModel) {
+      if (Craft.level.freePlay) {
+        return;
+      }
+      this.reportResult(success);
+    }.bind(this)
+  );
 };
 
-Craft.getTestResultFrom = function (success, studioTestResults) {
+Craft.getTestResultFrom = function(success, studioTestResults) {
   if (studioTestResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
     return TestResults.APP_SPECIFIC_FAIL;
   }
@@ -593,12 +654,13 @@ Craft.getTestResultFrom = function (success, studioTestResults) {
   return studioTestResults;
 };
 
-Craft.reportResult = function (success) {
+Craft.reportResult = function(success) {
   var studioTestResults = studioApp().getTestResults(success);
   var testResultType = Craft.getTestResultFrom(success, studioTestResults);
 
-  const image = Craft.initialConfig.level.freePlay ?
-      Craft.gameController.getScreenshot() : null;
+  const image = Craft.initialConfig.level.freePlay
+    ? Craft.gameController.getScreenshot()
+    : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
   const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
 
@@ -609,13 +671,13 @@ Craft.reportResult = function (success) {
     testResult: testResultType,
     image: encodedImage,
     program: encodeURIComponent(
-        Blockly.Xml.domToText(
-            Blockly.Xml.blockSpaceToDom(
-                Blockly.mainBlockSpace))),
+      Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
+    ),
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
-    onComplete: function (response) {
-      const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
+    onComplete: function(response) {
+      const isSignedIn =
+        getStore().getState().progress.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
         feedbackType: testResultType,
         response: response,
@@ -632,7 +694,7 @@ Craft.reportResult = function (success) {
         feedbackImage: image,
         showingSharing: Craft.initialConfig.level.freePlay,
         saveToProjectGallery: true,
-        disableSaveToGallery: !isSignedIn,
+        disableSaveToGallery: !isSignedIn
       });
     }
   });
@@ -644,7 +706,7 @@ Craft.reportResult = function (success) {
  * @param {string} testResultType TestResults type of this level completion
  * @returns {boolean} whether to continue
  */
-Craft.shouldDefaultToContinue = function (testResultType) {
+Craft.shouldDefaultToContinue = function(testResultType) {
   var isFreePlay = testResultType === TestResults.FREE_PLAY;
   var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
   return isSuccess && !isFreePlay;

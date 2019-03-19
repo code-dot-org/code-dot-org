@@ -2,10 +2,8 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
-import {
-  UnconnectedStageLockDialog as StageLockDialog
-} from "@cdo/apps/code-studio/components/progress/StageLockDialog";
-import {LockStatus} from "@cdo/apps/code-studio/stageLockRedux";
+import {UnconnectedStageLockDialog as StageLockDialog} from '@cdo/apps/code-studio/components/progress/StageLockDialog';
+import {LockStatus} from '@cdo/apps/code-studio/stageLockRedux';
 
 const MINIMUM_PROPS = {
   isOpen: false,
@@ -13,31 +11,24 @@ const MINIMUM_PROPS = {
   initialLockStatus: [],
   selectedSectionId: '',
   saving: false,
-  saveDialog: () => {},
+  saveDialog: () => {}
 };
 
 describe('StageLockDialog', () => {
   it('renders with a selected section', () => {
     const wrapper = shallow(
-      <StageLockDialog
-        {...MINIMUM_PROPS}
-        selectedSectionId="fakeSectionId"
-      />
+      <StageLockDialog {...MINIMUM_PROPS} selectedSectionId="fakeSectionId" />
     );
     expect(wrapper).not.to.be.null;
   });
 
   it('updates lock status from new props if not saving', () => {
-    const wrapper = shallow(
-      <StageLockDialog {...MINIMUM_PROPS}/>
-    );
+    const wrapper = shallow(<StageLockDialog {...MINIMUM_PROPS} />);
     expect(wrapper.state().lockStatus).to.deep.equal([]);
 
     wrapper.setProps({
       ...wrapper.props(),
-      initialLockStatus: [
-        {name: 'fakeName', lockStatus: LockStatus.Locked}
-      ],
+      initialLockStatus: [{name: 'fakeName', lockStatus: LockStatus.Locked}],
       saving: false
     });
     expect(wrapper.state().lockStatus).to.deep.equal([
@@ -46,16 +37,12 @@ describe('StageLockDialog', () => {
   });
 
   it('does not update lock status from new props while saving', () => {
-    const wrapper = shallow(
-      <StageLockDialog {...MINIMUM_PROPS}/>
-    );
+    const wrapper = shallow(<StageLockDialog {...MINIMUM_PROPS} />);
     expect(wrapper.state().lockStatus).to.deep.equal([]);
 
     wrapper.setProps({
       ...wrapper.props(),
-      initialLockStatus: [
-        {name: 'fakeName', lockStatus: LockStatus.Locked}
-      ],
+      initialLockStatus: [{name: 'fakeName', lockStatus: LockStatus.Locked}],
       saving: true
     });
     expect(wrapper.state().lockStatus).to.deep.equal([]);
@@ -67,16 +54,16 @@ describe('StageLockDialog', () => {
         {...MINIMUM_PROPS}
         initialLockStatus={[
           {name: 'fakeName', lockStatus: LockStatus.Locked},
-          {name: 'fakeName2', lockStatus: LockStatus.Locked},
+          {name: 'fakeName2', lockStatus: LockStatus.Locked}
         ]}
       />
     );
-    wrapper.state().lockStatus.forEach((stage) => {
+    wrapper.state().lockStatus.forEach(stage => {
       expect(stage).to.have.property('lockStatus', LockStatus.Locked);
     });
 
     wrapper.instance().allowEditing();
-    wrapper.state().lockStatus.forEach((stage) => {
+    wrapper.state().lockStatus.forEach(stage => {
       expect(stage).to.have.property('lockStatus', LockStatus.Editable);
     });
   });
@@ -87,16 +74,16 @@ describe('StageLockDialog', () => {
         {...MINIMUM_PROPS}
         initialLockStatus={[
           {name: 'fakeName', lockStatus: LockStatus.Editable},
-          {name: 'fakeName2', lockStatus: LockStatus.Editable},
+          {name: 'fakeName2', lockStatus: LockStatus.Editable}
         ]}
       />
     );
-    wrapper.state().lockStatus.forEach((stage) => {
+    wrapper.state().lockStatus.forEach(stage => {
       expect(stage).to.have.property('lockStatus', LockStatus.Editable);
     });
 
     wrapper.instance().lockStage();
-    wrapper.state().lockStatus.forEach((stage) => {
+    wrapper.state().lockStatus.forEach(stage => {
       expect(stage).to.have.property('lockStatus', LockStatus.Locked);
     });
   });
@@ -107,16 +94,16 @@ describe('StageLockDialog', () => {
         {...MINIMUM_PROPS}
         initialLockStatus={[
           {name: 'fakeName', lockStatus: LockStatus.Editable},
-          {name: 'fakeName2', lockStatus: LockStatus.Editable},
+          {name: 'fakeName2', lockStatus: LockStatus.Editable}
         ]}
       />
     );
-    wrapper.state().lockStatus.forEach((stage) => {
+    wrapper.state().lockStatus.forEach(stage => {
       expect(stage).to.have.property('lockStatus', LockStatus.Editable);
     });
 
     wrapper.instance().showAnswers();
-    wrapper.state().lockStatus.forEach((stage) => {
+    wrapper.state().lockStatus.forEach(stage => {
       expect(stage).to.have.property('lockStatus', LockStatus.ReadonlyAnswers);
     });
   });
@@ -127,16 +114,14 @@ describe('StageLockDialog', () => {
 
     it('opens a window to the section assessments page', () => {
       const wrapper = shallow(
-        <StageLockDialog
-          {...MINIMUM_PROPS}
-          selectedSectionId="fakeSectionId"
-        />
+        <StageLockDialog {...MINIMUM_PROPS} selectedSectionId="fakeSectionId" />
       );
       expect(window.open).not.to.have.been.called;
 
       wrapper.instance().viewSection();
-      expect(window.open).to.have.been.calledOnce
-        .and.calledWith(`${window.dashboard.CODE_ORG_URL}/teacher-dashboard#/sections/fakeSectionId/assessments`);
+      expect(window.open).to.have.been.calledOnce.and.calledWith(
+        '/teacher-dashboard#/sections/fakeSectionId/assessments'
+      );
     });
   });
 
@@ -148,7 +133,7 @@ describe('StageLockDialog', () => {
         selectedSectionId="fakeSectionId"
         initialLockStatus={[
           {name: 'fakeStage1', lockStatus: LockStatus.Editable},
-          {name: 'fakeStage2', lockStatus: LockStatus.Editable},
+          {name: 'fakeStage2', lockStatus: LockStatus.Editable}
         ]}
         saveDialog={saveDialog}
       />
@@ -156,7 +141,9 @@ describe('StageLockDialog', () => {
     expect(saveDialog).not.to.have.been.called;
 
     wrapper.instance().handleSave();
-    expect(saveDialog).to.have.been.calledOnce
-      .and.calledWith("fakeSectionId", wrapper.state().lockStatus);
+    expect(saveDialog).to.have.been.calledOnce.and.calledWith(
+      'fakeSectionId',
+      wrapper.state().lockStatus
+    );
   });
 });

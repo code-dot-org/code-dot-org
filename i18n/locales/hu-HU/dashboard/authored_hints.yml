@@ -117,7 +117,17 @@ hu:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Nem vágod hogy mi kellet tenni a blokkokkal? Próbáld ugyanúgy kezelni a piros virágot, mint a lilát!
         2-3_Bee_Conditionals_14_b: Ha a piros virág lila lenne, kitalálnád hogyan kell a kódba egy extra "ismétlés" ciklust tenni a levágáshoz?
-        2-3_Bee_Conditionals_14_c: "Próbáld meg ezt két külön részben:\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n1) Gyűjts nektárt 3-szor\n   - Menj előre 5-ször\n   - Ellenőrizd, hogy látod-e a nektárt, ha igen szerezd meg\n   - Fordulj balra\n\n2) Készíts mézet  \n  - Menj előre egyszer\n  - Készíts két mézet"
+        2-3_Bee_Conditionals_14_c: |-
+          Próbáld meg ezt két külön részben:
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+          1) Gyűjts nektárt 3-szor
+             - Menj előre 5-ször
+             - Ellenőrizd, hogy látod-e a nektárt, ha igen szerezd meg
+             - Fordulj balra
+
+          2) Készíts mézet  
+            - Menj előre egyszer
+            - Készíts két mézet
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Emlékezz: a lila virágok csak 0 vagy 1 nektár tartalmaznak és meg tudnak változni minden alkalommal, amikor futtatod a programot.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -145,8 +155,110 @@ hu:
         4-5_Maze_5_b: Több `repeat` ciklust is használhatsz a feladványban.
       4-5 Maze 6_authored_hint:
         4-5_Maze_6_a: "Próbáld követni az utat az ujjaddal!\nEz a legrövidebb út, amit találhatsz?"
+      4-5 Nested Loops 7_authored_hint:
+        4-5_Nested_Loops_7_a: |-
+          A minta tízszer ismétlődik, és összesen 360 fokot fordul. **360/10=?**
       Artist Autorun Test_authored_hint:
         2-3_Artist_Functions_4_a: A művész el kell fordítani 120 fokkal minden négyzet között, hogy elkészüljön a design.
+      Course 4 Artist 6_authored_hint:
+        Course_4_Artist_6_a: Itt van három háromszög egy körben egyenlően elforgatva... mennyi 360-ban a 3?
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+          * Gondoskodj róla, hogy egy táncos megjelenjen a képernyőn.
+
+          *Ez a szint 4 ütem után ér véget.*
+        challenges: |-
+          **Választható feladatok**
+          * Válassz másik dalt a lejátszáshoz.
+          * Válassz másikat, ami úgy néz ki, mint egy jávorszarvas!
+          * Nevezd át a táncosodat.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+          * A táncosnak 4 ütem után új mozdulatra kell váltania.
+
+          *A szint 8 ütem után ér véget.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * 6 ütem után a táncosodnak másfajta táncot kell járnia, mint amit 4 ütem után járt.
+
+          *A szint 12 ütem után ér véget.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Meg kell adnod, hogy a háttéreffekt valamikor a dal hetedik üteménél megváltozzon.
+
+          *Ez a szint 10 ütem után ér véget.*
+        challenges: |-
+          **Választható feladat**
+
+          Módosítsd a háttéreffektet a dal különböző pontjain. Ehhez csatlakoztasd az új blokkot az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> események alá.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Legalább két táncosodnak kell lennie.
+
+          *Ez a szint 6 ütem után ér véget.*
+        challenges: |-
+          **Választható feladat**
+
+          * Adj hozzá egy harmadik táncost (vagy amennyit csak akarsz!)
+          * Állítsd be, hogy a dal különböző pontjain mindegyik táncosod különböző mozdulatokat mutasson be.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Két táncosnak 100-tól eltérő méretűnek kell lennie.
+
+          *Ez a szint 6 ütem után ér véget.*
+        challenges: |-
+          **Választható feladat**
+
+          * Kísérletezz más tulajdonságok (szélesség, magasság, forgás stb.) módosításával
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Módosítsd legalább egy táncos árnyalatát.
+
+          *Ez a szint 8 ütem után ér véget.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Kettő vagy több táncos tulajdonságainak módosulnia kell.
+
+          *Ez a szint 8 ütem után ér véget.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Egyszerűen legyél kreatív!
+
+          *Ez a szint 8 ütem után ér véget.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * Egyszerűen legyél kreatív!
+
+          *Ez a szint 8 ütem után ér véget.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          * A „balra nyíl megnyomásakor“ blokk használatával érd el, hogy a Robot valamilyen táncmozdulatot tegyen, amikor megnyomod.
+
+          *Ez a szint 8 ütem után ér véget.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Látod a **Tengeri lámpásokat** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hogyan tudsz feltételt használni velük kapcsolatban, hogy átjuss a Víz alatti templomon?"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Micsoda gyönyörű korallzátony! A kék korall jelzi a **jobb** utat, de nehogy **balszerencsét** hozzon az itt hagyott vörös korall!
       Dance short test 2_authored_hint:
         validation: |-
           **Hogyan csinálhatom meg ezt a szintet?**
@@ -347,9 +459,9 @@ hu:
 
           *Ez a szint 8 ütem után ér véget.*
       Function intro Ryan_authored_hint:
-        Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy funkciót.  A kirakós megoldásához próbáld kétszer meghívni!
+        Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy függvényt.  A kirakós megoldásához próbáld kétszer meghívni.
       Function intro Ryan_2019_authored_hint:
-        Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy funkciót.  A kirakós megoldásához próbáld kétszer meghívni!
+        Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy függvényt.  A kirakós megoldásához próbáld kétszer meghívni.
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "Látod a **Tengeri lámpásokat** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hogyan tudsz feltételt használni velük kapcsolatban, hogy átjuss a Víz alatti templomon?"
       HOC 2018 Level_9b_authored_hint:
@@ -512,11 +624,11 @@ hu:
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Próbálj több utasítást helyezni egy "ismétlés" ciklusba.
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_a: A kirakós megoldásához találd ki, hogy mit csinál az "út szabaddá tétele" funkció, és hívd meg annyiszor, amennyiszer szükséges az eszköztár kis zöld "út szabaddá tétele" blokkjával.
-        MC_HOC_2017_07_Cole_b: A kirakós megoldásához próbáld keverni a funkciókblokkokat az eszköztár más blokkjaival.
+        MC_HOC_2017_07_Cole_a: A kirakós megoldásához találd ki, hogy mit csinál az "út szabaddá tétele" függvény, és hívd meg annyiszor, amennyiszer szükséges az eszköztár kis zöld "út szabaddá tétele" blokkjával.
+        MC_HOC_2017_07_Cole_b: A kirakós megoldásához próbáld keverni a függvénykblokkokat az eszköztár más blokkjaival.
       MC_HOC_2017_07_Cole_2019_authored_hint:
-        MC_HOC_2017_07_Cole_a: A kirakós megoldásához találd ki, hogy mit csinál az "út szabaddá tétele" funkció, és hívd meg annyiszor, amennyiszer szükséges az eszköztár kis zöld "út szabaddá tétele" blokkjával.
-        MC_HOC_2017_07_Cole_b: A kirakós megoldásához próbáld keverni a funkciókblokkokat az eszköztár más blokkjaival.
+        MC_HOC_2017_07_Cole_a: A kirakós megoldásához találd ki, hogy mit csinál az "út szabaddá tétele" függvény, és hívd meg annyiszor, amennyiszer szükséges az eszköztár kis zöld "út szabaddá tétele" blokkjával.
+        MC_HOC_2017_07_Cole_b: A kirakós megoldásához próbáld keverni a függvénykblokkokat az eszköztár más blokkjaival.
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           Nyomd meg az "Agent futtatása" gombot. 
@@ -528,11 +640,11 @@ hu:
           A kódot akkor is futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra, amíg rá nem jössz a hibájára.
         MC_HOC_2017_08_RY_b: Ezt a kirakóst RENGETEG módon meg lehet oldani.  Próbálj ki néhányat!
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a funkciókat!
+        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a függvényeket!
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a funkciókat!
+        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a függvényeket!
       MC_HOC_2017_10_RETRY_2019_authored_hint:
-        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a funkciókat!
+        MC_HOC_2017_10_Cole_a: A kirakós megoldásának megkönnyítéséhez használd a függvényeket!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy Steve túl tudjanak jutni a térkép szélein.
       MC_HOC_2017_4.5v2_authored_hint:
@@ -555,7 +667,29 @@ hu:
         MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy Steve túl tudjanak jutni a térkép szélein.
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy Steve túl tudjanak jutni a térkép szélein.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+          * A táncosnak 4 ütem után új mozdulatra kell váltania.
+
+          *A szint 8 ütem után ér véget.*
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -574,6 +708,25 @@ hu:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -611,7 +764,45 @@ hu:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -646,7 +837,29 @@ hu:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
@@ -654,7 +867,12 @@ hu:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
       courseB_Scrat_ramp2_2018_authored_hint:
@@ -673,7 +891,42 @@ hu:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -711,6 +964,25 @@ hu:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -730,7 +1002,42 @@ hu:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -836,6 +1143,9 @@ hu:
         2-3_Bee_Loops_4A_a: Az első dolog inkább fordulás legyen mint mozgás.(lépés).
       grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: 6 blokk kell a ciklusodba.
+      grade4_arist_nested_loop_polygons1_authored_hint:
+        4-5_Nested_Loops_7_a: |-
+          A minta tízszer ismétlődik, és összesen 360 fokot fordul. **360/10=?**
       grade4_artist_functions1_authored_hint:
         2-3_Artist_Functions_1_a: A négyzetek oldali 100 pixelesek, ez azt jelenti, hogy 175 pixelt kell előre menned, mielőtt elkezded a második négyzet rajzolását.
         2-3_Artist_Functions_1_b: Rajzolhatsz egymást fedő vonalakat, hogy elkészítsd a szemüveged.
@@ -845,6 +1155,9 @@ hu:
           - függvényt használni
           - előrehaladni 100 + 75 pixelt
           - függvényt használni
+      grade4_artist_nested_loop_polygons1_authored_hint:
+        4-5_Nested_Loops_7_a: |-
+          A minta tízszer ismétlődik, és összesen 360 fokot fordul. **360/10=?**
       grade4_bee_functions8_authored_hint:
         2-3_Bee_Functions_8_b: |-
           Ne feledd, hogy a kódod a zöld blokkon belül építheted.

@@ -134,9 +134,9 @@ class HttpCache
             cookies: whitelisted_cookies
           }
         ],
-        # Remaining Pegasus paths are cached, and vary only on language and default cookies.
+        # Remaining Pegasus paths are cached, and vary only on language, country, and default cookies.
         default: {
-          headers: LANGUAGE_HEADER,
+          headers: LANGUAGE_HEADER + COUNTRY_HEADER,
           cookies: default_cookies
         }
       },

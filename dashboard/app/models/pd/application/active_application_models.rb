@@ -23,6 +23,7 @@ module Pd
       FIT_WEEKEND_REGISTRATION_CLASS = Pd::FitWeekend1920Registration
 
       FIT_WEEKEND_REGISTRATION_FACTORY = :pd_fit_weekend1920_registration
+      FIT_WEEKEND_REGISTRATION_SYMBOL = :pd_fit_weekend1920_registration
       FIT_WEEKEND_REGISTRATION_HASH_FACTORY = :pd_fit_weekend1920_registration_hash
     end
   end

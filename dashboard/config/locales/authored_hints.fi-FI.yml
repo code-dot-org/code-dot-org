@@ -172,6 +172,105 @@ fi:
       Artist Autorun Test_authored_hint:
         2-3_Artist_Functions_4_a: Taiteilijan on käännyttävä 120 astetta jokaisen
           neliön välissä, jotta se voi suorittaa loppuun tämän mallin.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+          *Varmista, että tanssija näkyy ruudulla.
+
+          *Tämä taso päättyy 4 tahdin jälkeen.*
+        challenges: |-
+          **Vapaaehtoisia haasteita**
+          * Valitse muu kappale soitettavaksi.
+          * Valitse jokin muu, joka näyttää hirveltä!
+          * Nimeä tanssijasi
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+          * Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
+
+          *Tämä taso päättyy 8 tahdin jälkeen.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.
+
+          *Tämä taso päättyy 12 tahdin jälkeen.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
+
+          *Tämä taso päättyy 10 tahdin jälkeen.*
+        challenges: |-
+          **Vapaaehtoinen haaste**
+
+          Muuta taustaefektiä kappaleen eri vaiheissa yhdistämällä uusi blokki tapahtumien <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> alle.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Sinulla täytyy olla vähintään kaksi tanssijaa.
+
+          *Tämä taso päättyy 6 tahdin jälkeen.*
+        challenges: |-
+          **Vapaaehtoinen haaste**
+
+          * Lisää kolmas tanssija (tai niin monta kuin haluat!)
+          * Laita tanssijasi suorittamaan eri liikkeitä kappaleen eri aikoina.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Kahden tanssijan koon on oltava muu kuin 100.
+
+          *Tämä taso päättyy 6 tahdin jälkeen.*
+        challenges: |-
+          **Vapaaehtoinen haaste**
+
+          * Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Muuta vähintään yhden tanssijan sävyä.
+
+          *Tämä taso päättyy 8 tahdin jälkeen.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          *Kahden tai useamman tanssijan ominaisuudet on muutettava.
+
+          *Tämä taso päättyy 8 tahdin jälkeen.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Käytä luovuuttasi!
+
+          *Tämä taso päättyy 8 tahdin jälkeen.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          * Käytä luovuuttasi!
+
+          *Tämä taso päättyy 8 tahdin jälkeen.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          *Käytä `kun vasenta nuolta painetaan` -blokkia saadaksesi Robotin tekemään tanssiliikkeen, kun painat sitä.
+
+          *Tämä taso päättyy 8 tahdin jälkeen.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: Katso **Merilyhdyt** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Kuinka käytät konditionaalia heidän kanssaan päästäksesi Ocean Monumentille?
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Miten kaunis koralliriutta! Sininen koralli on **oikea**
+          tie. Varmista, että punainen koralli ei ole **vasemmalla**!
       Dance short test 2_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
@@ -607,7 +706,29 @@ fi:
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Kokeile laittaa Agent rakentamaan siltoja, jotta Alex
           tai Steve voi tehdä tutkimusmatkoja kartan reunojen ulkopuolelle.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+          * Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
+
+          *Tämä taso päättyy 8 tahdin jälkeen.*
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -626,6 +747,25 @@ fi:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -663,7 +803,45 @@ fi:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -698,7 +876,29 @@ fi:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
@@ -706,7 +906,14 @@ fi:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have
+          been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
+          try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have
           been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
@@ -727,7 +934,42 @@ fi:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -765,6 +1007,25 @@ fi:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -784,7 +1045,42 @@ fi:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 

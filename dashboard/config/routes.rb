@@ -2,8 +2,8 @@
 
 Dashboard::Application.routes.draw do
   # React-router will handle sub-routes on the client.
-  get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#index', via: :all
-  get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#index'
+  get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
+  get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#show'
 
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
@@ -221,9 +221,11 @@ Dashboard::Application.routes.draw do
   resources :libraries
 
   resources :levels do
+    get 'get_rubric', to: 'levels#get_rubric'
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
     get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
+    post 'update_properties'
     post 'clone', to: 'levels#clone'
   end
 
@@ -406,14 +408,12 @@ Dashboard::Application.routes.draw do
       resources :workshop_organizers, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
       delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
+      post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
 
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
 
-      # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-      post 'teachercon_registrations', to: 'teachercon1819_registrations#create'
-      post 'teachercon_partner_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
-      post 'teachercon_lead_facilitator_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
+      # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
       post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
 
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
@@ -423,6 +423,7 @@ Dashboard::Application.routes.draw do
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
       post :regional_partner_contacts, to: 'regional_partner_contacts#create'
+      post :regional_partner_mini_contacts, to: 'regional_partner_mini_contacts#create'
       post :international_opt_ins, to: 'international_opt_ins#create'
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
       get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
@@ -453,6 +454,7 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
   get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
+  post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
 
   get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
@@ -489,12 +491,8 @@ Dashboard::Application.routes.draw do
     end
 
     # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-    get 'teachercon_registration/partner(/:city)', to: 'teachercon1819_registration#partner'
-    get 'teachercon_registration/lead_facilitator(/:city)', to: 'teachercon1819_registration#lead_facilitator'
-    get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
     get 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#new'
 
-    delete 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#destroy'
     delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
@@ -531,6 +529,9 @@ Dashboard::Application.routes.draw do
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
+
+    get 'regional_partner_mini_contact/new', to: 'regional_partner_mini_contact#new'
+    get 'regional_partner_mini_contact/:contact_id/thanks', to: 'regional_partner_mini_contact#thanks'
 
     get 'international_workshop', to: 'international_opt_in#new'
     get 'international_workshop/:contact_id/thanks', to: 'international_opt_in#thanks'
@@ -585,6 +586,7 @@ Dashboard::Application.routes.draw do
       concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
+      get 'users/:user_id/contact_details', to: 'users#get_contact_details'
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
@@ -619,6 +621,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
   post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
@@ -636,4 +639,6 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
+
+  post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 end

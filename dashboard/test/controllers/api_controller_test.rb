@@ -8,11 +8,6 @@ class ApiControllerTest < ActionController::TestCase
   setup_all do
     @teacher = create(:teacher)
 
-    # make them an authorized_Teacher
-    cohort = create(:cohort)
-    cohort.teachers << @teacher
-    cohort.save!
-
     @teacher_other = create(:teacher)
 
     @section = create(:section, user: @teacher, login_type: 'word')
@@ -751,7 +746,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Script.stubs(:should_cache?).returns true
 
-    assert_queries 8 do
+    assert_queries 7 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
@@ -990,6 +985,18 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal expected_script, response["script"]
   end
 
+  test "script_structure returns summarized script" do
+    overview_path = 'http://script.overview/path'
+    CDO.stubs(:studio_url).returns(overview_path)
+    script = Script.find_by_name('algebra')
+
+    get :script_structure, params: {script: script.id}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    expected_response = script.summarize(true, nil, true).merge({path: overview_path}).with_indifferent_access
+    assert_equal expected_response, response
+  end
+
   test "user menu should open pairing dialog if asked to in the session" do
     sign_in create(:student)
 
@@ -1103,7 +1110,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test 'clever_classrooms queries clever with user uid for unmigrated user' do
-    teacher = create :teacher, :unmigrated_sso, provider: AuthenticationOption::CLEVER
+    teacher = create :teacher, :sso_provider, :demigrated, provider: AuthenticationOption::CLEVER
     sign_in teacher
 
     expected_uri = "https://api.clever.com/v1.1/teachers/#{teacher.uid}/sections"

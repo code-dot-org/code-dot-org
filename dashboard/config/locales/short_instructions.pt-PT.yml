@@ -1726,6 +1726,13 @@ pt:
       Course E MC Conditionals1: Vais encontrar os recursos mais valiosos no subsolo,
         mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas e escava pelo
         menos 2 carvões.
+      CourseE_HOC 2018 Level_10: Vai até à entrada deste Monumento do Oceano.
+      CourseE_HOC 2018 Level_11: Constrói um canal com Prismarine dentro do Monumento
+        do Oceano.
+      CourseE_HOC 2018 Level_7a: Revista estas ruínas subaquáticas para encontrar
+        um baú.
+      CourseE_HOC 2018 Level_9b: Utiliza o coral como pontos de passagem para chegar
+        ao tesouro.
       CourseF_PlayLab_vars10: |-
         Hora da atividade livre! Aqui estão todas as
         variáveis que usamos até agora e também algumas a mais, caso você as
@@ -1772,8 +1779,10 @@ pt:
         pontuação cair de 10 para 0 para passar de nível.
       Crack Random Substitution: Instruções
       Crack Random Substitution_2018: Instruções
+      Crack Random Substitution_2019: Instruções
       Crack a Caesar Cipher: Instruções
       Crack a Caesar Cipher_2018: Instruções
+      Crack a Caesar Cipher_2019: Instruções
       Food Fight!: |-
         Adicionamos uma última função para
         que você use. Programe seu jogo para chamar a função "suba de nível" se "pontos_jogador"
@@ -2504,6 +2513,7 @@ pt:
         até que o solo fique nivelado? Dica: dessa vez, tente usar o laço enquanto.
       The Vigenere Cipher Widget: Instruções
       The Vigenere Cipher Widget_2018: Instruções
+      The Vigenere Cipher Widget_2019: Instruções
       The Vigenere Cipher: Instruções
       Total Artist Clone Me: |-
         Atividade livre: aqui estão as funções

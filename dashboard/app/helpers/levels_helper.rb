@@ -95,7 +95,7 @@ module LevelsHelper
       )
     end
 
-    channel_token.try :channel
+    channel_token&.channel
   end
 
   def select_and_track_autoplay_video
@@ -152,8 +152,11 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    if @level.channel_backed?
-      view_options(channel: get_channel_for(@level, @user))
+    if @level.channel_backed? && params[:action] != 'edit_blocks'
+      view_options(
+        channel: get_channel_for(@level, @user),
+        server_project_level_id: @level.project_template_level.try(:id),
+      )
       # readonly if viewing another user's channel
       readonly_view_options if @user
     end
@@ -187,11 +190,6 @@ module LevelsHelper
     # External project levels are any levels of type 'external' which use
     # the projects code to save and load the user's progress on that level.
     view_options(is_external_project_level: true) if @level.is_a? Pixelation
-
-    if @level.channel_backed?
-      view_options(is_channel_backed: true)
-      view_options(server_project_level_id: @level.project_template_level.try(:id))
-    end
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     post_failed_run_milestone = @script ? Gatekeeper.allows('postFailedRunMilestone', where: {script_name: @script.name}, default: true) : true
@@ -248,17 +246,6 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
-    # Temporary conversion from old instructions naming scheme to new
-    #TODO: elijah: remove this override once we have fully converted
-    if @app_options[:level]
-      # Level types are unfortunately inconsistent in their use of strings vs
-      # symbols for keys, forcing us to consider both here.
-      @app_options[:level]['shortInstructions'] = @app_options[:level].delete('instructions') if @app_options[:level]['instructions']
-      @app_options[:level]['longInstructions'] = @app_options[:level].delete('markdownInstructions') if @app_options[:level]['markdownInstructions']
-      @app_options[:level][:shortInstructions] = @app_options[:level].delete(:instructions) if @app_options[:level][:instructions]
-      @app_options[:level][:longInstructions] = @app_options[:level].delete(:markdownInstructions) if @app_options[:level][:markdownInstructions]
-    end
-
     # Blockly caches level properties, whereas this field depends on the user
     @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?) && I18n.en?
 
@@ -307,7 +294,7 @@ module LevelsHelper
     use_droplet = @level.uses_droplet?
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
-    use_gamelab = @level.game.app == Game::GAMELAB
+    use_gamelab = @level.is_a?(Gamelab)
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim && !use_weblab
@@ -538,6 +525,11 @@ module LevelsHelper
       if level_options[key]
         app_options[key.to_sym] = level_options.delete key
       end
+    end
+
+    # Expo-specific options (only needed for Applab and Gamelab)
+    if (@level.is_a? Gamelab) || (@level.is_a? Applab)
+      app_options[:expoSession] = CDO.expo_session_secret.to_json unless CDO.expo_session_secret.blank?
     end
 
     # User/session-dependent options
@@ -780,8 +772,7 @@ module LevelsHelper
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
-    return false unless level.game == Game.applab || level.game == Game.gamelab
-    return false if level.is_a? GamelabJr
+    return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
       error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")

@@ -1,11 +1,12 @@
 /* eslint-disable react/no-danger */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 export default class GeneratedCode extends React.Component {
   static propTypes = {
     message: PropTypes.string.isRequired,
     code: PropTypes.string.isRequired,
-    style: PropTypes.object,
+    style: PropTypes.object
   };
 
   render() {
@@ -20,7 +21,7 @@ export default class GeneratedCode extends React.Component {
         <pre
           className="generatedCode"
           dir="ltr"
-          dangerouslySetInnerHTML={{ __html: this.props.code }}
+          dangerouslySetInnerHTML={{__html: this.props.code}}
         />
       </div>
     );

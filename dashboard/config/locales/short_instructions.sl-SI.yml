@@ -805,6 +805,11 @@ sl:
         Opaziš, kako so sode vrstice zamaknjene v desno?
       Course E MC Conditionals1: Najbolj dragocene vire boš našel/a pod zemljo, vendar
         je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
+      CourseE_HOC 2018 Level_10: Pridi do vhoda v ta morski spomenik.
+      CourseE_HOC 2018 Level_11: Izgradi strugo s pomočjo prismarina v sredini morskega
+        spomenika.
+      CourseE_HOC 2018 Level_9b: Korale uporabi kot navigacijski točki, da prideš
+        do zaklada.
       CourseF_PlayLab_vars2: Igra v prejšnji nalogi ni bila najbolj poštena. Spremeni
         vrednost spremenljivke hitrost psa 'dog speed' tako, da boš lahko pobral več
         zastavic, kot maček. Prvi, ki prvi zbere 10 točk, zmaga!
@@ -831,8 +836,10 @@ sl:
         točk iz 10 na nič, da končaš to nalogo.
       Crack Random Substitution: Navodila
       Crack Random Substitution_2018: Navodila
+      Crack Random Substitution_2019: Navodila
       Crack a Caesar Cipher: Navodila
       Crack a Caesar Cipher_2018: Navodila
+      Crack a Caesar Cipher_2019: Navodila
       HOC 2018 Level_1: Vzemi čoln iz zaboja.
       HOC 2018 Level_10: Pridi do vhoda v ta morski spomenik.
       HOC 2018 Level_11: Izgradi strugo s pomočjo prismarina v sredini morskega spomenika.
@@ -1205,6 +1212,7 @@ sl:
         tla ravna? '
       The Vigenere Cipher Widget: Navodila
       The Vigenere Cipher Widget_2018: Navodila
+      The Vigenere Cipher Widget_2019: Navodila
       The Vigenere Cipher: Navodila
       U2 frequency caesar: Navodila
       U2 frequency random sub: Navodila

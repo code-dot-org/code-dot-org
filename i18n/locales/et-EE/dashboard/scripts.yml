@@ -1520,6 +1520,8 @@ et:
               name: Ühistegevused
             Relay Programming:
               name: Relee programmeerimine
+            Graph Paper Programming:
+              name: Millimeetripaberi programmeerimine
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1676,6 +1678,10 @@ et:
               name: For Loop Fun
             The Artist:
               name: Kunstnik
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
         dance-low:
           stages:
             Dance Party:
@@ -1694,6 +1700,8 @@ et:
               name: 'Unplugged: Binaar'
             Artist Binary:
               name: Kunstnik Binaar
+            Dance Party:
+              name: Tantsuõhtu
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1745,3 +1753,67 @@ et:
               name: Binaarsed käevõrud
         gamelab:
           title: Game Lab
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
+            Going Places Safely:
+              name: Läheb asukohta turvaliselt
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Liiguta, liiguta
+            Your Digital Footprint:
+              name: Sinu digitaalne jalajälg
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Liiguta, liiguta
+            Your Digital Footprint:
+              name: Sinu digitaalne jalajälg
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+            Spelling Bee:
+              name: Sõnamesilane
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Päris elu algoritmid: Seemenda'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Loendid
+        csd3-2019:
+          stages:
+            Variables:
+              name: Muutujad
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Parameetritega funktsioonid
+        csp1-2019:
+          stages:
+            Binary Numbers:
+              name: Binaararvud
+            The Internet:
+              name: Internet
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: Baidid ja faili suurused
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Loomisfunktsioonid
+        csp5-2019:
+          stages:
+            While Loops:
+              name: '„Kui“ tsüklid'

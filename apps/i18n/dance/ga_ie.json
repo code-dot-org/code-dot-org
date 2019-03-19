@@ -1,14 +1,12 @@
 {
-  "danceFeedbackNeedNewDancer": "",
-  "danceFeedbackNoDancers": "",
-  "danceFeedbackNoBackground": "",
-  "danceFeedbackTooManyDancers": "",
-  "danceFeedbackUseSetSize": "",
-  "danceFeedbackUseSetTint": "",
-  "danceFeedbackUseStartMapping": "",
-  "danceFeedbackStartNewMove": "",
-  "danceFeedbackNeedDifferentDance": "",
-  "danceFeedbackNeedEveryTwoMeasures": "",
-  "danceFeedbackNeedMakeANewDancer": "",
-  "measure": ""
+  "danceFeedbackNeedNewDancer": "Caithfidh tú damhsóir a chruthú.",
+  "danceFeedbackNoDancers": "Níl aon damhsóir agat.",
+  "danceFeedbackNoBackground": "Caithfidh tú éifeacht chúlra a chur leis.",
+  "danceFeedbackTooManyDancers": "Fainic anois! Má chuireann tú bloc `déan ceann nua` laistigh den bhloc `gach dara tomhas`, cruthóidh tú go leor leor damhsóirí.",
+  "danceFeedbackUseSetTint": "Úsáid an bloc `socraigh an imir` chun imir an damhsóra a athrú.",
+  "danceFeedbackStartNewMove": "Ní dhearna do dhamhsóir gluaiseacht nua tar éis an cheathrú tomhas.",
+  "danceFeedbackNeedDifferentDance": "Caithfidh tú damhsa difriúil a úsáid.",
+  "danceFeedbackNeedEveryTwoMeasures": "Ní mór duit an bloc `gach dara tomhas` a úsáid",
+  "danceFeedbackNeedMakeANewDancer": "Úsáid an bloc `déan ceann nua` chun damhsóir eile a chruthú.",
+  "measure": "Tomhas:"
 }

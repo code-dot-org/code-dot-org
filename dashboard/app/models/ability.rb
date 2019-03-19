@@ -17,11 +17,6 @@ class Ability
       Follower,
       PeerReview,
       Section,
-      # Ops models
-      District,
-      Workshop,
-      Cohort,
-      WorkshopAttendance,
       # PLC Stuff
       Plc::Course,
       Plc::LearningModule,
@@ -83,7 +78,6 @@ class Ability
         end
         can [:create, :get_feedback_from_teacher], TeacherFeedback, student_sections: {user_id: user.id}
         can :manage, Follower
-        can :read, Workshop
         can :manage, UserLevel do |user_level|
           !user.students.where(id: user_level.user_id).empty?
         end
@@ -102,17 +96,6 @@ class Ability
       end
 
       if user.facilitator?
-        can :read, Workshop
-        can :teachers, Workshop
-        can :read, District
-        # Allow facilitator to manage Workshop/Attendance for
-        # workshops in which they are a facilitator.
-        can :manage, WorkshopAttendance do |attendance|
-          attendance.segment.workshop.facilitators.include? user
-        end
-        can :manage, Workshop do |workshop|
-          workshop.facilitators.include? user
-        end
         can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
         can [:read, :update], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
@@ -125,19 +108,6 @@ class Ability
         end
       end
 
-      if user.district_contact?
-        can [:cohort, :teacher], WorkshopAttendance
-        can :manage, Cohort do |cohort| # if the cohort has the district contact's district
-          cohort.districts.any? do |district|
-            district.contact_id == user.id
-          end
-        end
-        can :group_view, Plc::UserCourseEnrollment
-        can :manager_view, Plc::UserCourseEnrollment do |enrollment|
-          DistrictsUsers.exists?(user: enrollment.user, district: District.where(contact: user.id).pluck(:id))
-        end
-      end
-
       if user.workshop_organizer? || user.program_manager?
         can :create, Pd::Workshop
         can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, organizer_id: user.id
@@ -147,6 +117,9 @@ class Ability
         if user.regional_partners.any?
           can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id)
           can :manage_attendance, Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id), ended_at: nil
+          can :update_scholarship_info, Pd::Enrollment do |enrollment|
+            !!user.regional_partners.pluck(enrollment.workshop.regional_partner_id)
+          end
         end
 
         can :read, Pd::CourseFacilitator
@@ -199,15 +172,19 @@ class Ability
     end
 
     # Override Script and ScriptLevel.
-    if user.persisted?
-      can :read, Script
-      can :read, ScriptLevel
-    else
-      can :read, Script do |script|
-        !script.login_required?
+    can :read, Script do |script|
+      if script.pilot?
+        script.has_pilot_access?(user)
+      else
+        user.persisted? || !script.login_required?
       end
-      can :read, ScriptLevel do |script_level|
-        !script_level.script.login_required?
+    end
+    can :read, ScriptLevel do |script_level|
+      script = script_level.script
+      if script.pilot?
+        script.has_pilot_access?(user)
+      else
+        user.persisted? || !script.login_required?
       end
     end
 

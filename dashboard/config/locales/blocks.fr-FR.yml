@@ -154,7 +154,7 @@ fr:
             '"verse"': verset
             '"chorus"': chœur
       Dancelab_getEnergy:
-        text: obtenir [RANGE][0]
+        text: obtenir [RANGE] [0]
         options:
           RANGE:
             '"low"': grave
@@ -653,6 +653,11 @@ fr:
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': quand
+            '"while"': tant que
       gamelab_clickedOn:
         text: quand on clique sur {SPRITE}
       gamelab_comment:
@@ -690,6 +695,10 @@ fr:
             '"y"': position y
             '"direction"': direction du mouvement
             '"tint"': nuance
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"this"': ceci
       gamelab_groupLength:
         text: nombre de sprites dans {THIS}
       gamelab_hasBehavior:
@@ -708,6 +717,48 @@ fr:
         text: "{SPRITE} passer à {LOCATION}"
       gamelab_keyDown:
         text: touche pressée {KEY}
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': quand
+            '"while"': tant que
+          KEY:
+            '"up"': vers le haut
+            '"down"': vers le bas
+            '"left"': vers la gauche
+            '"right"': vers la droite
+            '"space"': espace
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': frontière
+            '"inner"': carré intérieur
+            '"circle"': cercle
+            '"grid"': grille
+            '"row"': ligne
+            '"column"': colonne
+            '"plus"': plus
+            '"random"': aléatoire
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:
@@ -796,6 +847,10 @@ fr:
         text: enlever la couleur de {THIS}
       gamelab_setBackground:
         text: définir la couleur de fond {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ville
       gamelab_setPosition:
         text: déplacer {THIS} à la position {POSITION}
         options:
@@ -830,6 +885,11 @@ fr:
         text: changer la couleur de {THIS} en {COLOR}
       gamelab_setup:
         text: configuration
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': quand
+            '"while"': tant que
       gamelab_spriteCostume:
         text: "{COSTUME}"
       gamelab_spriteDirection:
@@ -840,8 +900,6 @@ fr:
             '"East"': Est
             '"South"': Sud
             '"West"': Ouest
-      gamelab_spriteSay:
-        text: sprite {SPRITE} dire {TEXT}
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -1140,7 +1198,8 @@ fr:
         text: lieu aléatoire
       Vector_vectorNorth:
         text: nord
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
+        text: changer {SPRITE} {PROPERTY} par {VAL}
         options:
           PROPERTY:
             '"scale"': taille
@@ -1148,16 +1207,73 @@ fr:
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
-      aalab_spritesWhere:
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': quand
+            '"while"': tant que
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': quand
+            '"while"': tant que
+      aalab_getThisSprite:
+        options:
+          CHOICE:
+            '"this"': ceci
+      aalab_jumpTo:
+        text: "{SPRITE} passer à {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': quand
+            '"while"': tant que
+          KEY:
+            '"up"': vers le haut
+            '"down"': vers le bas
+            '"left"': vers la gauche
+            '"right"': vers la droite
+            '"space"': espace
+      aalab_location_picker:
+        text: "{LOCATION}"
+      aalab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Ouest
+      aalab_randomLocation:
+        text: lieu aléatoire
+      aalab_removeOneAndAll:
+        text: enlever {THIS}
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ville
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': vrai
+            '"false"': faux
+      aalab_setProp:
         options:
           PROPERTY:
             '"scale"': taille
+            '"rotation"': orientation
             '"x"': position x
             '"y"': position y
-            '"costume"': costume
             '"direction"': direction du mouvement
-            '"rotation"': rotation ou direction
             '"tint"': nuance
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': à l'infini
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': montrer
+            '"hide"': cacher
       binary_drawPixelHere:
         options:
           VAL:

@@ -62,6 +62,17 @@ ja:
         edit_add_parameter: 編集をクリックして関数にパラメーターを追加します
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: やじるしをつかって、キャラをうごかそう。
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: プログラムにこのブロックを追加！
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: プログラムにこのブロックを追加！
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: プログラムにこのブロックを追加！
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: 新しいダンサーをここに追加
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: 新しいブロック！
+        dance_callout_11_b: 新しいブロック！
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: やじるしをつかって、キャラをうごかそう。
       Dance_Party_01_callout:
@@ -196,6 +207,8 @@ ja:
       Rock Paper Scissors_callout:
         New Play Lab Project_callout1: ここをクリックして、どんなブロックがあるか、見てみてください。ブロックをワークスペースにドラッグして、プログラムをつくりましょう。
         New Play Lab Project_callout2: '「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。'
+      Ryan_Demo_callout:
+        dance_callout_02: プログラムにこのブロックを追加！
       Test Play Lab Project With Walls_callout:
         New Play Lab Project_callout1: ここをクリックして、どんなブロックがあるか、見てみてください。ブロックをワークスペースにドラッグして、プログラムをつくりましょう。
         New Play Lab Project_callout2: '「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。'
@@ -216,6 +229,8 @@ ja:
       courseA_collector_preLoops1_callout:
         courseA_collector_preLoops1_1: ここをクリックしてプログラムが動くのを見てみよう！
       courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
+      courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。

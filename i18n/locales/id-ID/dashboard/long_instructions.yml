@@ -106,7 +106,12 @@ id:
       2-3 Bee Conditionals 11: "Kumpulkan nektar di bunga yang memilikinya."
       2-3 Bee Conditionals 13: |-
         Kumpulkan nektar dan buatlah madu. Petunjuk: Apa yang terjadi jika Anda menggunakan syarat "jika nektar" pada bunga merah? Anda dapat menyelesaikan hal ini dengan pengulangan?
-      2-3 Bee Conditionals 14: "Mari kita menggabungkan semuanya! \\ r \n\\ r \nGunakan apa yang telah Anda pelajari untuk membantu saya mengumpulkan nektar hanya dari bunga yang memilikinya, menggunakan sebagai beberapa blok mungkin.  \\ r \n\\ r \nJangan lupa untuk membuat madu di akhir."
+      2-3 Bee Conditionals 14: |-
+        Mari kita menggabungkan semuanya! \ r 
+        \ r 
+        Gunakan apa yang telah Anda pelajari untuk membantu saya mengumpulkan nektar hanya dari bunga yang memilikinya, menggunakan sebagai beberapa blok mungkin.  \ r 
+        \ r 
+        Jangan lupa untuk membuat madu di akhir.
       2-3 Bee Conditionals 15: "Pola langkah tangga ini seharusnya terlihat familier.  \\ r \nr \\ \nDapatkah Anda mengumpulkan nektar hanya dari bunga-bunga yang memiliki beberapa , menggunakan sebagai beberapa blok mungkin?"
       2-3 Bee Conditionals 2: "Saya seorang lebah lapar! \\ r \n\\ r \n\\ r \nBantu saya mengumpulkan semua nektar dari bunga menggunakan jumlah paling sedikit blok ."
       2-3 Bee Conditionals 3: "Bantu saya kumpulkan nektar dari bunga-bunga ini dan buatlah madu. Gunakan pengulangan."
@@ -358,6 +363,28 @@ id:
         * Apa yang anda pikirkan untuk seruan mark(`!`) pada baris 10
         Kerjakan?\r
         * Bagaimana mungkin anda bisa menggunakan blok berbagai tombol yang berbeda dalam sebuah permainan?
+      CSD U3 Keypress Watchers Predict_2019: |-
+        Membuat sebua Prediksi:
+        Input pengguna\r
+        \r
+        Sejauh ini anda telah menggunakan `keyDown` sebuah cara untuk memungkinkan pengguna mengontrol
+        program-program anda, tapi itu hanya salah satu dari banyak cara untuk mengambil input. Pada kenyataannya, hanya
+        salah satu dari banyak cara menekan tombol untuk mendeteksi_! Tergantung bagaimana anda ingin bereaksi
+        untuk menekan tombol, ada beberapa blok lain mungkin anda ingin menggunakannya.\r
+        \r
+        Baca
+        program dan memprediksi di bawah ini apa yang akan terjadi ketika anda menekan masing-masing tmbol
+        atas, bawah, kiri, dan kanan panah.\r
+        \r
+        Setelah anda membuat prediksi, jalankan
+        kode dan menulis atau berbagi dengan tetanggamu untu pengamatan anda.\r
+        \r
+        *
+        seperti apa yang menjadi perbedaan antara `keyDown()`, `keyWentDown()`, dan
+        `keyWentUp()`?\r
+        * Apa yang anda pikirkan untuk seruan mark(`!`) pada baris 10
+        Kerjakan?\r
+        * Bagaimana mungkin anda bisa menggunakan blok berbagai tombol yang berbeda dalam sebuah permainan?
       CSD U3 Movement Your Own 1: |-
         # Membuat sebuah animasi untuk anda
         sendiri\r
@@ -392,6 +419,23 @@ id:
         * M
         * Tetapkan
         hingga gambar loop untuk gambar latar belakang dan sprite anda.
+      CSD U3 Movement Your Own 1_2019: |-
+        # Membuat sebuah animasi untuk anda
+        sendiri\r
+        \r
+        Menggunakan pola counter dan dan bersifat sprite, membuat animasi milikmu semuanya. Anda mungkin mempertimbangkan pada gambar untuk membangun statis yang telah anda buat di masa lalu, atau masa datang dengan membuat gambar baru atau cerita untuk memberitahukan.\r
+        \r
+        #
+        Lakukan Ini\r
+        \r
+        Untuk memulai, mari kita tetapkan hanya dengan statis.\r
+        \r
+        * Tambahkan tab
+        gambar Animasi.\r
+        * Membuat sprite dan menetapkan gambar.\r
+        * M
+        * Tetapkan
+        hingga gambar loop untuk gambar latar belakang dan sprite anda.
       CSD U5 black white images pixelation 2: |-
         # lakukan ini\r
         \r
@@ -410,6 +454,15 @@ id:
         ![](https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-
         1491425592286.52.47
         PM.png)
+      CSD U5 black white images pixelation 2_2019: |-
+        # lakukan ini\r
+        \r
+        gunakan
+        widget pixelasi untuk menggambar wajah tersenyum\r
+        \r
+        ![](https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-
+        1491425592286.52.47
+        PM.png)
       CSD U6 circuit predict multi: |-
         # Membuat Prediksi\r
         \r
@@ -419,6 +472,14 @@ id:
         untuk pin 13, kemudian membaca kode ini dan memprediksi apa yang akan terjadi ketika
         program ini dijalankan.
       CSD U6 circuit predict multi_2018: |-
+        # Membuat Prediksi\r
+        \r
+        Semua
+        perangkat yang telah digunakan sejauh ini adalah benar-benar terhubung ke sirkuit untuk
+        nomor pin! Mencari **#13** pada papan anda untuk melihat mana sirkuit terhubung
+        untuk pin 13, kemudian membaca kode ini dan memprediksi apa yang akan terjadi ketika
+        program ini dijalankan.
+      CSD U6 circuit predict multi_2019: |-
         # Membuat Prediksi\r
         \r
         Semua
@@ -460,12 +521,24 @@ id:
         pilihan desain membingungkan, atau hilang fitur yang anda ingin bekerja.\r
         \r
         Setelah Anda selesai dengan semua versi ini dari program anda, klik Submit untuk mengaktifkannya.
+      CSD U6 game project finish_2019: |-
+        # Menyelesaikan Sentuhan dan Pengujian\r
+        \r
+        Di
+        Poin ini anda harus memiliki sebagian besar program di tempat Anda. Sekarang anda perlu untuk
+        Menambahkan dengan menyelesaikan sentuhan yang diperlukan dan melakukan pengujian. Ketika aplikasi Anda siap, mintalah teman-teman sekelas anda untuk mencobanya. Lihat jika anda dapat menemukan bug,
+        pilihan desain membingungkan, atau hilang fitur yang anda ingin bekerja.\r
+        \r
+        Setelah Anda selesai dengan semua versi ini dari program anda, klik Submit untuk mengaktifkannya.
       CSD U6 params starchaser template: Tingkat templat.
       CSD U6 params starchaser template_2018: Tingkat templat.
+      CSD U6 params starchaser template_2019: Tingkat templat.
       CSD-Arrays: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       CSD-Arrays_2018: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
+      CSD-Arrays_2019: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       CSDU6 frequency template: Lakukan sesuatu!
       CSDU6 frequency template_2018: Lakukan sesuatu!
+      CSDU6 frequency template_2019: Lakukan sesuatu!
       Course 4 Artist 13: "Masih bermain? Ini ada kanvas kosong di mana\nAnda dapat mendesain apa saja yang Anda inginkan!"
       Course 4 Artist 6: Lengkapi kode untuk menggambar tiga segitiga sama sisi ini.
       Course 4 Artist 8: "Gambarlah matahari ini dengan mengulang seluruh \nblok kode ini beberapa kali."
@@ -588,6 +661,7 @@ id:
       MC_HOC_Kiki_02: Seseorang harus berada di pelat tekanan agar pintu samping terbuka.  Bantu Agent mencapai pelat sehingga pemain bisa meninggalkan rumah.
       Making Music: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       Making Music_2018: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
+      Making Music_2019: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       Mike Test Bee Conditionals 1: "Awan ini menghalangi pandangan saya!\n\\r\n\\r\nperiksa untuk melihat apakah ada bunga di bawah awan, dan hanya mengambil madu bunga\npada bunga itu. \\r\nhati-hati, itu bisa berubah!"
       Mike Test Bee Conditionals 2: "** Penilaian : ** Kumpulkan semua nektar.  \\ r \nHati-hati untuk tidak mencoba untuk mengumpulkan nektar dari sebuah bunga ungu jika itu tidak memiliki."
       NEW Course 4 Artist Functions 3: "Berikut ini adalah Blok jenis baru. Ini disebut blok \"Fungsi\". Klik \"Sunting\" kemudian isi dengan kode untuk menggambar persegi dengan sisi 100 piksel. Setelah selesai, klik \"Tutup\" untuk kembali ke program Anda."
@@ -600,11 +674,14 @@ id:
       PS copy 2-3 Bee Conditionals 5: "Ini perubahan sihir bunga-bunga ungu!\\r\n\\r\nSetiap\nsaat anda mencoba teka-teki, bunga ungu dapat memiliki 1 nektar atau tidak sama sekali...tapi anda tidak akan tahu jumlahnya sampai anda menjalankan kode! \\r\n\\r\nBerhati-hati jangan sampai pertamamengumpulkan nektar dari bunga ungu jika itu tidak memiliki apapun. \\r\nPertama Anda harus terlebih dahulu memeriksa apakah nektar sama dengan 1 `jika...`menggunakan blok."
       Revisiting the Counter Pattern: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       Revisiting the Counter Pattern_2018: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
+      Revisiting the Counter Pattern_2019: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       Testing Quantum Farmer: "Wow, lihat itu! \\r\n\\r\nSaya tidak tahu berapa banyak \nsekop tanah yang dibutuhkan lubang ini. \\r \nDapatkah Anda menulis sebuah program yang \nterus menggunakan `isi` blok sampai tanah merata?  "
       The Accelerometer: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       The Accelerometer_2018: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
+      The Accelerometer_2019: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       Using Accelerometer Events: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       Using Accelerometer Events_2018: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
+      Using Accelerometer Events_2019: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       course4_artist_fwp_challenge1: Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)
       courseD_bee_nestedLoops5: 'Kumpulkan semua nektar dari setiap bunga dan buatlah madu pada setiap sarang madu. Gunakan putaran bersarang. '
       courseD_bee_nestedLoops8: 'Kumpulkan semua nektar dari setiap bunga dan buatlah madu pada setiap sarang madu. Gunakan putaran bersarang. '

@@ -59,12 +59,12 @@ sk:
     farmer_intro:
       1:
         text: Ahoj, ja som Paola! V týchto úlohách si farmárkou, ktorej úlohou je
-          vyhladiť pole, aby mohol začať pestovať plodiny.
+          vyhladiť pole, aby mohla začať pestovať plodiny.
       2:
         text: Musíš jej pomôcť odstrániť všetky hromady hliny a vyplniť všetky jamy.
       3:
-        text: 'Nové bloky: odstrániť 1 lopatu hliny z hromady a naplniť jamu 1 lopatou
-          hliny.'
+        text: Nové bloky odstránia 1 lopatu hliny z hromady a naplnia jamu 1 lopatou
+          hliny.
       4:
         text: Kôpky a jamy sú rozdielnych veľkostí, tak budeš musieť farmárke povedať
           koľko krát lopatu použije.
@@ -140,8 +140,8 @@ sk:
         text: Ak vložíme "pohni sa vpred" blok do "opakuj dovtedy" bloku, vták sa
           bude posúvať vpred, pokým nedosiahne prasa (alebo nenarazí do steny).
       4:
-        text: 'Toto je dôležité: rovnako ako predtým, aj do bloku "opakuj dokiaľ"
-          môžeme vložiť viaceré bloky, ktoré sa budú všetky opakovať.'
+        text: 'Toto je dôležité: rovnako ako predtým, aj do bloku "opakuj dovtedy"
+          môžeme vložiť viacero blokov, ktoré sa budú všetky opakovať.'
     if:
       1:
         text: Ahoj ja som Bill! Poďme sa naučiť niečo o podmienkach "ak". Prostredníctvom
@@ -155,27 +155,15 @@ sk:
       4:
         text: Pre napísanie kódu pre toto vytiahnime von náš blok "if" a vložme doňho
           bloky "zabočiť doľava".
-      5: 
-      6: 
       7:
         text: Zabávaj sa používaním "if" bloku!
     if_else:
-      1: 
-      2: 
-      3: 
       4:
         text: Teraz pošli týchto zombie tam, kde patria!
     if_else_scrat:
-      1: 
-      2: 
-      3: 
       4:
         text: Teraz pomôž veveričke Scrat získať žaluď!
     function:
-      1: 
-      2: 
-      3: 
-      4: 
       5:
         text: 'Vráťme naspäť "fun" do "FUNkcií!" '
     loop_while:
@@ -185,7 +173,7 @@ sk:
         text: Blok "pokiaľ" bude robiť čokoľvek doňho dáte POKIAĽ bude výraz na jeho
           vrchu PRAVDIVÝ.
       3:
-        text: Napríklad, ak farmár stojí na kope, bude stále pokračovať v odstraňovaní
+        text: Napríklad, ak farmárka stojí na kope, bude stále pokračovať v odstraňovaní
           lopatou POKIAĽ bude mať pod sebou kopu.
     loop_for:
       1:
@@ -210,15 +198,7 @@ sk:
         text: Čo ak chceme nakresliť niekoľko trojuholníkov s rôznymi dĺžkami strán?
       3:
         text: Môžeme napísať celý kód ručne alebo môžeme použiť funkcie s parametrami.
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
     hoc_wrapup:
-      1: 
-      2: 
-      3: 
       4:
         text: 'Technológie menia všetko čo robíme, nezáleží na tom, či si mladý, alebo
           starý: programovanie je zábava, používaš svoju kreativitu a programovať
@@ -321,12 +301,9 @@ sk:
           Vieš tento blok použiť a pomôcť nakresliť Else do snehu zložité a nádherné
           vzory?
     playlab_events:
-      1: 
       2:
         text: Niektoré príklady udalostí čakajú na kliknutie myškou, na stlačenie
           tlačidla šípky, alebo na dotyk na dotykovú obrazovku.
-      3: 
-      4: 
     playlab_repeat_forever:
       1:
         text: Toto je blok "opakuj donekonečna". Čokoľvek vložíme do tohoto bloku,
@@ -334,30 +311,28 @@ sk:
       2:
         text: Ak má postava niečo opakovane vykonávať bez zásahu hráča, budeme vkladať
           tieto bloky do vnútra bloku "opakuj donekonečna".
-      3: 
     C1_bee_loops:
       1:
         text: Cyklus znamená opakovanie činnosti. Keď kontrolujem úľ, vytiahnem a
           skontrolujem jeden rám a potom ho vrátim a túto činnosť opakujem viackrát.
           Toto je vlastne cyklus - vykonávanie rovnakej činnosti opakovane.
-      2: 
     C1_bigevent_unplugged:
-      1: 
       2:
         text: V tejto lekcii budeš ovládaný papierovým diaľkovým ovládačom. Je to
           niečo ako reálna-živá video hra.
-      3: 
-      4: 
-      5: 
-      6: 
     C1_happy_maps_unplugged:
-      1: 
-      2: 
+      1:
+        text: Táto lekcia sa volá Veselé mapy. Dnes budeme pomáhať našej malej chlpatej
+          kamarátke Flurb na ceste ku jej ovociu.
+      2:
+        text: Pomôž Flurb dostať sa k ovociu. Najprv potrebuješ zistiť, ktorým smerom
+          sa musí Flurb posunúť a potom ju tam navigovať pomocou šípok. Ktorým smerom
+          sa musí Flurb pohnúť, aby sa dostala k jablku? Smerom hore.
       3:
-        text: Pre dostanie sa tam, kam chcete, zakrúžkujte smer, ktorým má isť.
+        text: Aby sa tam dostala, zakrúžkuj smer, ktorým má ísť.
       4:
-        text: Vytvorte si vlastný algoritmus pospájaním šipiek vedľa mapy, ktorú sa
-          snažíte vyriešiť. To druhé je to isté, ale pôjde sa nadol.
+        text: Vytvor si vlastný algoritmus tak, že šípky prilepíš vedľa mapy, ktorú
+          sa snažíš vyriešiť. Druhá úloha je rovnaká, ale smerom nadol.
       5:
         text: Je to ako programovanie s papierom. To je všetko!
     C1_maze_debugging:
@@ -366,58 +341,59 @@ sk:
           spôsobmi. Jedným z najľahších je ísť krok po kroku až kým nenarazíš na miesto,
           kde program funguje inak, ako si plánoval. Tu sa snažím spraviť premet vzad
           na stožiari, no vždy padnem.
-      2: 
-      3: 
-      4: 
+    C1_moveitmoveit_unplugged:
+      1:
+        text: Táto lekcia sa volá "Pohni sa, pohni sa". Spolu v nej napíšeme program,
+          vďaka ktorému sa náš kamarát presunie zo začiatočného bodu s kompasom ku
+          cieľu, na ktorom je smajlík.
     C1_going_places_safely:
       1:
-        text: Moje meno je Jeremiah. Ahoj! Mám sedem rokov. Rád sa hrám na maminom
-          počítači, ale najprv musím dostať povolenie. "Mami, môžem ísť na počítač?
-          Iste zlatko!"
-      2: 
+        text: Volám sa Jeremiah. Ahoj! Mám sedem rokov. Rád sa hrám na maminom počítači,
+          ale najprv musím dostať povolenie. "Mami, môžem ísť na počítač? Iste zlatko!"
       3:
         text: Včera som navštívil zoologickú záhradu, je blízko môjho domu. Videl
           som tam žriebätko zebry. Odfotil som si ho, zmenil som mu farbu pruhov,
           pridal klobúk a zaradil ho do svojej kolekcie nezvyčajných zvierat. Úžasné!
           Neskôr som šiel na veľmi vzdialené miesto. Navštívil som Keňu. Je to krajina
           v Afrike. Žije tu mnoho zebier.
-      4: 
-      5: 
-      6: 
-      7: 
     C2_artist_debugging:
-      1: 
-      2: 
       3:
         text: Och, tu je ten problém! Mačacie fúzy sú dlhé 75 pixelov, nie 25.
     C2_bee_debugging:
       1:
         text: Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje.
           Keď ladíš kód, identifikuješ a odstraňuješ chyby.
-      2: 
-      3: 
+    C2_graph_paper:
+      1:
+        text: Táto lekcia sa nazýva "Programovanie na štvorčekový papier" a je celá
+          o algoritmoch. Dnes sa naučíme písať programy, v ktorých budeme kresliť
+          čierno-biele obrázky len pomocou šípiek.
+    C2_relay_programming:
+      1:
+        text: Dnes budeme programovať v štafete. Bude to o programovaní pod tlakom
+          a o hľadaní a opravovaní chýb, ktoré sa stávajú, keď pracujete v tíme a
+          naozaj rýchlo. Využijeme programovanie na štvorčekový papier, aby sme nasimulovali
+          skutočné programovanie a štafetové preteky, aby sme cítili aj časový tlak.
+      2:
+        text: V štafetovom programovaní sa tímy budú pretekať v písaní programu na
+          štvorčekový papier. Musíš skontrolovať kamarátovu prácu a v prípade, že
+          v nej nádeš chybu, tak túto chybu opraviť, pridať vlastnú šípku a rýchlo
+          bežať so štafetou za ďalším členom tvojho tímu.
     C3_bee_debugging:
       1:
         text: Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje.
           Keď ladíš kód, identifikuješ a odstraňuješ chyby.
-      2: 
-      3: 
     C3_internet:
-      1: 
-      2: 
-      3: 
-      4: 
       5:
         text: Som Amanda Camp a pracujem ako softvérový inžinier v Googli. Pracujem
           v tíme, ktorý pracuje na serveroch uchovávajúcich profily a kontakty. Pri
           mojej práci často rozmýšľame, ako sa dajú kontakty posielať na iné zariadenia
-          ako napríklad Váš telefón. Väčšina ľudí má veľa kontaktov, povedzme že tisíc,
-          a my nechceme poslať všetky tieto kontakty na Váš telefón naraz, lebo by
+          ako napríklad váš telefón. Väčšina ľudí má veľa kontaktov, povedzme že tisíc,
+          a my nechceme poslať všetky tieto kontakty na váš telefón naraz, lebo by
           to bolo priveľa na správu. Tak, ako internet delí veľké správy na pakety,
-          my používame koncept nazvaný stránkovanie, v ktorom môžeme poslať na Váš
+          my používame koncept nazvaný stránkovanie, v ktorom môžeme poslať na váš
           telefón len 100 kontaktov naraz, nechať telefón nech ich spracuje a čakať,
           kým si vypýta ďaľších 100 kontaktov.
-      6: 
     C3_maze_conditionals:
       1:
         text: Ľudia robia rozhodnutia každý deň. Napríklad, predtým než idete von,
@@ -426,16 +402,12 @@ sk:
           tak ich spracuvávajú neskutočne rýchlo a zodpovedne. Počítačový program
           je vlastne trošku matematiky a niekoľko podmieňovacích výrazov, pri ktorých
           sa robia rozhodnutia.
-      2: 
-      3: 
-      4: 
     C3_maze_level_4:
       1:
         text: V tomto príklade je tvojou úlohou dostať zombíka k slnečnici. Mohli
           by sme použiť 5 blokov "posun sa dopredu", alebo môžeme počítaču povedať,
           nech sa raz posunie dopredu a prikázať mu to zopakovať 5 krát použitím jedného
           opakovacieho bloku.
-      2: 
     infinity_playlab_events:
       1:
         text: Teraz sa naučíme o niečom, čo programátori hier používajú každý deň.
@@ -504,11 +476,25 @@ sk:
           hráč, tak tie bloky umiestnime do vnútra bloku "opakuj donekonečna". V nasledujúcej
           úlohe je našim cieľom, aby Anna neustále chodila hore a dole. Ak sa naučíš
           používať opakovacie príkazy, ušetrí ti pri tvorbe vlastnej hry kopec času.
+    unplug3:
+      1:
+        text: V programovaní na štvorčekový papier sa snažíme vysvetliť, ako programovanie
+          skutočne funguje. Jedna osoba dostane malú kresbu na štvorčekovom papieri
+          a jej úlohou je pomocou šípiek a znakov definovať algoritmus (postup na
+          kreslenie), podľa ktorého bude možné kresbu zreprodukovať.
+    unplug4:
+      1:
+        text: V programovaní na štvorčekový papier sa snažíme vysvetliť, ako programovanie
+          skutočne funguje. Jedna osoba dostane malú kresbu na štvorčekovom papieri
+          a jej úlohou je pomocou šípiek a znakov definovať algoritmus (postup na
+          kreslenie), podľa ktorého bude možné kresbu zreprodukovať.
+    unplug5:
+      1:
+        text: V programovaní na štvorčekový papier sa snažíme vysvetliť, ako programovanie
+          skutočne funguje. Jedna osoba dostane malú kresbu na štvorčekovom papieri
+          a jej úlohou je pomocou šípiek a znakov definovať algoritmus (postup na
+          kreslenie), podľa ktorého bude možné kresbu zreprodukovať.
     starwars_intro:
-      1: 
-      2: 
-      3: 
-      4: 
       5:
         text: Toto miesto v strede je panel s nástrojmi a každý z týchto blokov je
           príkaz, ktorému BB-8 rozumie.
@@ -518,12 +504,7 @@ sk:
       7:
         text: Ak potiahnem do nášho pracovného priestoru blok pohybVľavo(); a potom
           kliknem Spustiť, čo sa stane? BB=8 sa pohne doľava o jedno pole v mriežke.
-      8: 
-      9: 
-      10: 
     starwars_events:
-      1: 
-      2: 
       3:
         text: 'Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori
           hier používajú každý deň: sú to udalosti. Udalosti hovoria programu, aby
@@ -531,27 +512,17 @@ sk:
       4:
         text: Medzi príklady akcií patrí napríklad čakanie na kliknutie myšou, stlačenie
           klávesy so šípkou alebo ťuknutie na obrazovku.
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 
     starwars_blocks_intro:
-      1: 
-      2: 
-      3: 
-      4: 
+      3:
+        text: Počas najbližšej hodiny si spolu vybudujeme našu vlastnú hru Star Wars,
+          pričom sa naučíme niekoľko základných programovacích konceptov. Väčšinou
+          programátori vypisujú text, my ale použijeme bloky, ktoré budeme spájať
+          a tým vytvoríme program. Na úvod si spolu s Rey naprogramujeme BB-8 tak,
+          aby chodil a zbieral kovový šrot.
       5:
         text: Toto miesto v strede je panel s nástrojmi a každý z týchto blokov je
           príkaz, ktorému BB-8 rozumie.
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
     starwars_blocks_events:
-      1: 
-      2: 
       3:
         text: 'Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori
           hier používajú každý deň: sú to udalosti. Udalosti hovoria programu, aby
@@ -559,8 +530,6 @@ sk:
       4:
         text: Medzi príklady akcií patrí napríklad čakanie na kliknutie myšou, stlačenie
           klávesy so šípkou alebo ťuknutie na obrazovku.
-      5: 
-      6: 
       7:
         text: Krok po kroku, sa tvoja hra stáva viac interaktívnou.
     mc_intro:
@@ -581,7 +550,7 @@ sk:
       4:
         text: Naučíš sa koncepty, ktoré počítačoví programátori používajú každý deň
           a ktoré tvoria základ informatiky. Tu v Mojangu používame tie isté koncepty
-          na to, aby sme sfunkčnili Minecraft.
+          nato, aby sme sfunkčnili Minecraft.
       5:
         text: Predtým než začneš, vyberieš si svoju postavu. Ja si vyberiem Alex.
           Poďme vytvoriť kód pre program, ktorý jej pomôže hýbať sa po obrazovke.
@@ -697,43 +666,25 @@ sk:
         text: Ak by si chcel vytvoriť svoju vlastnú hru, je to naozaj jednoduché.
           Potrebuješ poznať len zopár základov programovania a za chvíľu už môžeš
           hrať hru ktorú si si sám vytvoril.
-      2: 
-      3: 
-      4: 
-      5: 
       6:
         text: Biela oblasť vpravo sa nazýva pracovný priestor a je to miesto, kde
           budeme budovať náš program.
-      7: 
-      8: 
-      9: 
     gumball_repeat:
       1:
         text: Dokážeš si predstaviť, že by si musel niečo opakovať donekonečna? Dúfajme,
           že nikdy nebudeš musieť pretože počítače sú v opakovaní skutočne dobré.
-      2: 
-      3: 
     iceage_intro:
       1:
         text: Ak by si chcel vytvoriť svoju vlastnú hru, je to naozaj jednoduché.
           Potrebuješ poznať len zopár základov programovania a za chvíľu už môžeš
           hrať hru ktorú si si sám vytvoril.
-      2: 
-      3: 
-      4: 
-      5: 
       6:
         text: Biela oblasť vpravo sa nazýva pracovný priestor a je to miesto, kde
           budeme budovať náš program.
-      7: 
-      8: 
-      9: 
     iceage_repeat:
       1:
         text: Dokážeš si predstaviť, že by si musel niečo opakovať donekonečna? Dúfajme,
           že nikdy nebudeš musieť pretože počítače sú v opakovaní skutočne dobré.
-      2: 
-      3: 
     mc_2016_intro:
       1:
         text: Ahoj, volám sa Jens a som hlavná kreatívna dizajnérka Minecraftu. V
@@ -934,8 +885,8 @@ sk:
     mc_2017_agent_intro:
       1:
         image: notes/mc_2017_agent_intro_1.png
-        text: 'Stacy: Stampy, Lizzy, Preston = vďaka, že ste išli so mnou. Chcem Vám
-          ukázať niečo, čo je za touto planinou. Myslím si, že sa Vám to bude páčiť!'
+        text: 'Stacy: Stampy, Lizzy, Preston = vďaka, že ste išli so mnou. Chcem vám
+          ukázať niečo, čo je za touto planinou. Myslím si, že sa vám to bude páčiť!'
       2:
         image: notes/mc_2017_agent_intro_2.png
         text: Moment - v trati je diera! (krik)
@@ -1089,8 +1040,8 @@ sk:
           a práci softvérového Agenta.'
       5:
         image: notes/mc_2017_congratulations_5.png
-        text: Teraz je čas zahrať si voľný level, kde budeš ty vývojárom. Využi svoj
-          voľný čas na napísanie svojich vlastných funkcií a objavuj, doluj a stavaj.
+        text: Teraz je čas na hru - vývojárom sa stávaš ty! Využi svoj voľný čas na
+          napísanie svojich vlastných funkcií a objavuj, doluj a stavaj.
       6:
         image: notes/mc_2017_congratulations_6.png
         text: 'Môžeš si zobrať kód, ktorý si napísal v tomto leveli do svojho Minecraft

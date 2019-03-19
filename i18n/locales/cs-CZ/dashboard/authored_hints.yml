@@ -16,6 +16,7 @@ cs:
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Vše co je třeba pro dokončení domu je nakreslit čtverec!
       2-3 Artist 6_authored_hint:
+        2-3_Artist_6_a: 'Pro nakreslení těchto malých úhlů se musíš ještě otočit pokaždé, když namaluješ čtverec.   '
         2-3_Artist_6_b: Protože už jsem otočen doprava, je pri vytvoření trojúhelníku jednodušší začít tím že půjdu dopředu a potom se otočím doleva.
         2-3_Artist_6_c: Každá strana trojúhelníku je stejně dlouhá jako každá strana čtverce... 100 pixelů!
       2-3 Artist 7_authored_hint:
@@ -24,6 +25,8 @@ cs:
         2-3_Artist_8_a: Pokud rozdělíš 200 na polovinu, kolik pixelů na šířku musí mít každý čtverec?
       2-3 Artist 9 NEW_authored_hint:
         2-3_Artist_9_a: Tvar diamantu je jen pootočený čtverec
+      2-3 Artist 9 REPLACEMENT_authored_hint:
+        step_size: Každý krok je 100 pixelů široký a 100 pixelů vysoký.
       2-3 Artist 9_authored_hint:
         2-3_Artist_9_a: Tento diamant je jen čtverec pootočený o 45 stupňů.
         2-3_Artist_9_b: |-
@@ -48,10 +51,40 @@ cs:
       2-3 Artist Debugging 9_authored_hint:
         2-3_Artist_Debugging_9_a: Umělec se potřebuje otočit o 60 stupňů více doleva, než začne kreslit!
         2-3_Artist_Debugging_9_b: K úplnému otočení není potřeba přidat další blok. Stačí přidat 60 stupňů do bloku `otočit vlevo`, který už tam je!
+      2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_a: Každý čtverec má strany o délce 100 pixelů, to znamená, že se budete muset posunout o 175 pixelů vpřed, dřív než začnete kreslit druhý čtverec.
+        2-3_Artist_Functions_1_b: Je v pořádku, pokud se čáry překrývají.
+      2-3 Artist Functions 1_authored_hint:
+        2-3_Artist_Functions_1_a: Každý čtverec má strany o délce 100 pixelů, to znamená, že se budete muset posunout o 175 pixelů vpřed, dřív než začnete kreslit druhý čtverec.
+        2-3_Artist_Functions_1_b: Je v pořádku, pokud se čáry překrývají.
+      2-3 Artist Functions 11 a_authored_hint:
+        2-3_Artist_Functions_11_a: Budete muset změnit nejen počet a délku stran v rámci funkce, ale také úhel, kterým se umělec otočí mezi oběma stranami.
+      2-3 Artist Functions 11_authored_hint:
+        2-3_Artist_Functions_11_a: Budete muset změnit nejen počet a délku stran v rámci funkce, ale také úhel, kterým se umělec otočí mezi oběma stranami.
+      2-3 Artist Functions 12 a_authored_hint:
+        2-3_Artist_Functions_12_a: Zkuste nejprve spustit kód, abyste zjistili, co potřebujete přidat.
+      2-3 Artist Functions 12_authored_hint:
+        2-3_Artist_Functions_12_a: Zkuste nejprve spustit kód, abyste zjistili, co potřebujete přidat.
+      2-3 Artist Functions 2 a_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Váš program by měl:
+          - použít funkci
+          - posunout se vpřed o 100 + 75 pixelů
+          - použít funkci
+      2-3 Artist Functions 2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Váš program by měl:
+          - použít funkci
+          - posunout se vpřed o 100 + 75 pixelů
+          - použít funkci
       2-3 Artist Functions 3 a_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 4 a_authored_hint:
+        2-3_Artist_Functions_4_a: Umělec se potřebuje otočit o 120 stupňů mezi každým čtvercem, aby dokončil obrazec.
+      2-3 Artist Functions 4_authored_hint:
+        2-3_Artist_Functions_4_a: Umělec se potřebuje otočit o 120 stupňů mezi každým čtvercem, aby dokončil obrazec.
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           Vzpomeňte si, že kód z předchozí hádanky byl:
@@ -96,6 +129,7 @@ cs:
           </next>
           </block>
           </xml>
+        2-3_Artist_Loops_New_11_b: Váš nový obrat by měl jít na **konec** kódu uvnitř smyčky.
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_a: Než začne diamant, umělec se potřebuje otočit doleva o 60 stupňů, aby byl správně nasměrován.
         2-3_Artist Loops_New_12_b: Až se umělec posune dopředu o 100 pixelů, bude se potřebovat otočit doprava o 120 stupňů, aby udělal ostrý roh.
@@ -106,10 +140,30 @@ cs:
       2-3 Artist Loops New 9_authored_hint:
         2-3_Artist_Loops_New_9_a: Umělec se potřebuje otočit o 45 stupňů doprava, než začne kreslit.
         2-3_Artist_Loops_New_9_b: Tohle V je ve skutečnosti prostě polovina čtverce. Jaký by byl kód k nakreslení půlky čtverce?
+      2-3 Artist Nested Loops 1_authored_hint:
+        2-3_Artist_Nested_Loops_1_a: Nezapomeňte vložit všechny šedé bloky dovnitř vaší smyčky.
+      2-3 Artist Nested Loops 3_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: "Potřebujete pomoc s úhly?  \n** 360/12 = 30 **"
+        2-3_Artist_Nested_Loops_3_b: Nezapomeňte dovnitř smyčky vložit celý šedý kód a bloky měnící směr.
+      2-3 Artist Nested Loops 4_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: "Potřebujete pomoc s úhly?  \n** 360/12 = 30 **"
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Těžko najít způsob, jak vyzrát na bloky? Zkus zacházet s červenou květinou úplně stejně jako s fialovou květinou!
         2-3_Bee_Conditionals_14_b: Pokud by červená květina byla fialová, našel bys jak použít blok `opakuj` abys zmenšil kód?
-        2-3_Bee_Conditionals_14_c: "Zkus to rozložit na dva samostatné úkoly:\n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Získat nektar 3 krát\n  - Posun vpřed 5 krát\n  - Zkontroluj, jestli je tam nektar: pokud ano, získej ho\n  - Otoč se doleva\n  \n2) Vyrob med\n  - Posuň se vpřed 2 krát\n  - Vyrob dva medy"
+        2-3_Bee_Conditionals_14_c: |-
+          Zkus to rozložit na dva samostatné úkoly:
+
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Získat nektar 3 krát
+            - Posun vpřed 5 krát
+            - Zkontroluj, jestli je tam nektar: pokud ano, získej ho
+            - Otoč se doleva
+            
+          2) Vyrob med
+            - Posuň se vpřed 2 krát
+            - Vyrob dva medy
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Pamatuj: Fialová květina může mít 0 nebo 1 nektaru and mohou se změnit pokaždé, když spustíš program.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -156,8 +210,120 @@ cs:
         2-3_Maze_Loops_21_a: Pokud se ti nedaří najít schodovitý vzor, zkus si zakrýt blokované cesty prstem.
       4-5 Artist 4_authored_hint:
         4-5_Artist_4_a: "V kruhu je 360 stupňů!\n\nTo je, kolikrát je potřeba kód opakovat (s otočením o 1 stupeň pokaždé), aby se kruh dokončil!"
+      4-5 Artist Patterns 2_authored_hint:
+        4-5_Artist_Patterns_2_a: Pokud jsou čtverce 20 pixelů dlouhé, bude třeba před nakreslením dalšího čtverce skočit o 20 pixelů.
+      4-5 Artist Patterns 3_authored_hint:
+        4-5_Artist_Patterns_3_a: Vytáhni celý blok kódu z panelu příkazů.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: Umělec se potřebuje otočit o 120 stupňů mezi každým čtvercem, aby dokončil obrazec.
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: Chcete-li použití blok `posunout vpřed`, přetáhněte ho z panelu bloků do pracovního prostoru a připojte ho k bloku `při spuštění`.
+      Course 4 Artist 11_authored_hint:
+        Course_4_Artist_11_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka vpravo je o 120 stupňů. '
+      Course 4 Artist Binary Free Play 2b_authored_hint:
+        Course_4_Artist_Binary_Free_Play_2b_c: V každém opakování potřebuješ "counter" pro jedničky a "16-(2 x counter)" pro nuly.
+      Course 4 Artist Inspire_authored_hint:
+        Course_4_Artist_Inspire_a: Po dokončení jednoho čtverce zkus skok vpřed o jeho poloviční délku před otočkou a kreslením dalšího čtverce.
+        Course_4_Artist_Inspire_b: Každý čtverec a skok se opakuje čtyřikrát ( s otočkou vlevo mezi ) k nakreslení celého větrníku kola.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          *Tato úroveň končí po 4 taktech.*
+        challenges: |-
+          **Volitelné výzvy**
+          * Zvol jinou píseň k přehrání.
+          * Zvol jiného tanečníka, který vypadá jako los!
+          * Přejmenuj tanečníka.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          *Tato úroveň končí po 8 taktech.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+
+          *Tato úroveň končí po 12 taktech.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+
+          *Tato úroveň končí po 10 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Potřebuješ mít alespoň dva tanečníky.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Dva tanečníci musí mít velikost jinou než 100.
+
+          *Tato úroveň končí po 6 taktech.*
+        challenges: |-
+          **Volitelná výzva**
+
+          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Změň odstín nejméně jednoho tanečníka.
+
+          *Tato úroveň končí po 8 taktech.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Musí se změnit vlastnosti dvou nebo více tanečníků.
+
+          *Tato úroveň končí po 8 taktech.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Buď prostě kreativní!
+
+          *Tato úroveň končí po 8 taktech.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          * Použij blok `když je stisknuta šipka vlevo`, abys přiměl(a) Robota k tanečnímu pohybu, když stiskneš tuto klávesu.
+
+          *Tato úroveň končí po 8 taktech.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Vidíš **Mořské lucerny** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak je můžeš využít, aby ses dostal skrz oceánský monument?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Můžeš použít bloky "pokud je cesta", aby ti pomohly otočit se doprava.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Vidíš červené a modré korálové bloky? Použij je jako orientační body pro otočení doprava nebo doleva.
       Dance short test 2_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
@@ -568,6 +734,12 @@ cs:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla Alex nebo Steve projít za kraj mapy.
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla Alex nebo Steve projít za kraj mapy.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **Jak splním tuto úroveň?**
+          * Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          *Tato úroveň končí po 8 taktech.*
       course2_bee_conditionals_challenge2_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
           Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř se bude opakovat, dokud zbývá nějaký nektar. Zkus tento vzor:
@@ -595,7 +767,25 @@ cs:
           Pokud jste se dostali až sem, potřebujete jen `otočit vlevo` a pak párkrát `posunout vpřed`. Nevzdávejte to!
 
           ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
+      course3_artist_concept_challenge1_authored_hint:
+        courseE_artist_concept_challenge1_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka vpravo je o 120 stupňů. '
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -614,6 +804,25 @@ cs:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -651,7 +860,45 @@ cs:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -686,7 +933,29 @@ cs:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
@@ -694,7 +963,12 @@ cs:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
       courseB_Scrat_ramp2_2018_authored_hint:
@@ -713,7 +987,42 @@ cs:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -751,7 +1060,45 @@ cs:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -786,15 +1133,35 @@ cs:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_maze_seq6_authored_hint:
         courseB_maze_seq5_c: Tuto hádanku lze vyřešit dvěma způsoby.
       courseB_maze_seq6_2018_authored_hint:
+        courseB_maze_seq5_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseB_maze_seq6_2019_authored_hint:
         courseB_maze_seq5_c: Tuto hádanku lze vyřešit dvěma způsoby.
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: Tuto hádanku lze vyřešit dvěma způsoby!
       courseB_maze_seq9_authored_hint:
         courseB_maze_seq9_c: Tuto hádanku lze vyřešit dvěma způsoby.
       courseB_maze_seq9_2018_authored_hint:
+        courseB_maze_seq9_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseB_maze_seq9_2019_authored_hint:
         courseB_maze_seq9_c: Tuto hádanku lze vyřešit dvěma způsoby.
       courseC_collector_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
@@ -820,6 +1187,12 @@ cs:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      courseD_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          Váš program by měl:
+          - použít funkci
+          - posunout se vpřed o 100 + 75 pixelů
+          - použít funkci
       courseD_bee_conditionals_challenge2_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
           Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
@@ -870,10 +1243,30 @@ cs:
         courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseD_scrat_ramp7_2018_authored_hint:
         courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseE_artist_concept_challenge1_authored_hint:
+        courseE_artist_concept_challenge1_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka vpravo je o 120 stupňů. '
+      courseE_artist_concept_challenge1_2018_authored_hint:
+        courseE_artist_concept_challenge1_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka vpravo je o 120 stupňů. '
+      courseE_artist_concept_challenge1_2019_authored_hint:
+        courseE_artist_concept_challenge1_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka vpravo je o 120 stupňů. '
+      courseE_artist_functions1_authored_hint:
+        courseE_artist_functions1_a: Každý čtverec má strany o délce 100 pixelů, to znamená, že se budete muset posunout o 175 pixelů vpřed, dřív než začnete kreslit druhý čtverec.
+        courseE_artist_functions1_b: Je v pořádku, pokud se čáry překrývají.
+      courseE_artist_functions1_2018_authored_hint:
+        courseE_artist_functions1_a: Každý čtverec má strany o délce 100 pixelů, to znamená, že se budete muset posunout o 175 pixelů vpřed, dřív než začnete kreslit druhý čtverec.
+        courseE_artist_functions1_b: Je v pořádku, pokud se čáry překrývají.
+      courseE_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          Váš program by měl:
+          - použít funkci
+          - posunout se vpřed o 100 + 75 pixelů
+          - použít funkci
       courseE_bee_ramp14_authored_hint:
         courseE_bee_ramp14_a: Včela pracuje jako farmář v předchozí hádance. Jdi po cestě a sbírej nektar, dokud tam nějaký je (dokud nektar > 0) a vyrob všechen med.
       courseE_bee_ramp14_2018_authored_hint:
         courseE_bee_ramp14_a: Včela pracuje jako farmář v předchozí hádance. Jdi po cestě a sbírej nektar, dokud tam nějaký je (dokud nektar > 0) a vyrob všechen med.
+      courseE_farmer_concept4_authored_hint:
+        4-5_Artist_Patterns_3_a: Vytáhni celý blok kódu z panelu příkazů.
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseE_maze_ramp6_2018_authored_hint:
@@ -887,6 +1280,8 @@ cs:
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: Když použiješ příkazový blok, který mě posílají dopředu o 100 pixelů, nakreslím automaticky cestou čáru.
         2-3_Artist_1_new_b: Máš problém s otáčením v rohu? Použij příkaz "otočení o 90° doprava".
+      grade2_MakeDogTag_9_authored_hint:
+        2-3_Artist_Loops_New_11_b: Váš nový obrat by měl jít na **konec** kódu uvnitř smyčky.
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
           Kolikrát se můj tvar opakuje?
@@ -942,10 +1337,22 @@ cs:
         grade3_maze_loops2_b: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
       grade3_maze_loops5_authored_hint:
         2-3_Maze_Loops_21_a: Pokud se ti nedaří najít schodovitý vzor, zkus si zakrýt blokované cesty prstem.
+      grade4_artist_functions1_authored_hint:
+        2-3_Artist_Functions_1_a: Každý čtverec má strany o délce 100 pixelů, to znamená, že se budete muset posunout o 175 pixelů vpřed, dřív než začnete kreslit druhý čtverec.
+        2-3_Artist_Functions_1_b: Je v pořádku, pokud se čáry překrývají.
+      grade4_artist_functions2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          Váš program by měl:
+          - použít funkci
+          - posunout se vpřed o 100 + 75 pixelů
+          - použít funkci
+      grade4_artist_nestedLoops_challenge2_authored_hint:
+        Course_4_Artist_11_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka vpravo je o 120 stupňů. '
       grade4_review_artist1_authored_hint:
         2-3_Artist_1_new_a: Když použiješ příkazový blok, který mě posílají dopředu o 100 pixelů, nakreslím automaticky cestou čáru.
         2-3_Artist_1_new_b: Máš problém s otáčením v rohu? Použij příkaz "otočení o 90° doprava".
       grade4_review_artist2_authored_hint:
+        2-3_Artist_6_a: 'Pro nakreslení těchto malých úhlů se musíš ještě otočit pokaždé, když namaluješ čtverec.   '
         2-3_Artist_6_b: Protože už jsem otočen doprava, je pri vytvoření trojúhelníku jednodušší začít tím že půjdu dopředu a potom se otočím doleva.
         2-3_Artist_6_c: Každá strana trojúhelníku je stejně dlouhá jako každá strana čtverce... 100 pixelů!
       grade4_review_bee1_authored_hint:
@@ -954,6 +1361,10 @@ cs:
         2-3_Bee_Loops_3_a: Uvnitř své smyčky bys měl mít 6 bloků.
       grade4_review_bee3_authored_hint:
         2-3_Bee_Loops_4_a: Měl bys skončit s pěti bloky uvnitř své smyčky.
+      grade5_artist_binary10_authored_hint:
+        Course_4_Artist_Binary_Free_Play_2b_c: V každém opakování potřebuješ "counter" pro jedničky a "16-(2 x counter)" pro nuly.
+      grade5_artist_variables_freeplay15_authored_hint:
+        Course_4_Artist_Inspire_b: Každý čtverec a skok se opakuje čtyřikrát ( s otočkou vlevo mezi ) k nakreslení celého větrníku kola.
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Měl bys skončit s pěti bloky uvnitř své smyčky.
       level 'grade3_Loops_11_authored_hint:

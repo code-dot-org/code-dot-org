@@ -243,26 +243,6 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
-  test 'add_and_remove_student moves enrollment' do
-    old_section = create :section
-    new_section = create :section
-    student = (create :follower, section: old_section).student_user
-    new_section.add_and_remove_student(student, old_section)
-
-    followers = Follower.with_deleted.where(student_user: student).all
-
-    assert_equal 2, followers.count
-    assert_equal old_section, followers.first.section
-    assert followers.first.deleted?
-    assert_equal new_section, followers.second.section
-  end
-
-  test 'add_and_remove_student noops unless old follower is found' do
-    @section.add_and_remove_student(@student, create(:section))
-
-    assert_equal 0, Follower.where(student_user: @student).count
-  end
-
   test 'section_type validation' do
     section = build :section
 
@@ -380,7 +360,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with a course assigned' do
-    course = create :course, name: 'somecourse'
+    course = create :course, name: 'somecourse', family_name: 'coursefam'
     section = create :section, script: nil, course: course
 
     expected = {
@@ -400,7 +380,7 @@ class SectionTest < ActiveSupport::TestCase
       sharing_disabled: false,
       login_type: "email",
       course_id: course.id,
-      script: {id: nil, name: nil},
+      script: {id: nil, name: nil, course_family_name: course.family_name},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
@@ -432,7 +412,7 @@ class SectionTest < ActiveSupport::TestCase
       sharing_disabled: false,
       login_type: "email",
       course_id: nil,
-      script: {id: script.id, name: script.name},
+      script: {id: script.id, name: script.name, course_family_name: script.course&.family_name},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
@@ -445,7 +425,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-    course = create :course, name: 'somecourse'
+    course = create :course, name: 'somecourse', family_name: 'coursefam'
     # If this were a real section, it would actually have a script that is part of
     # the provided course
     section = create :section, script: script, course: course
@@ -467,7 +447,7 @@ class SectionTest < ActiveSupport::TestCase
       sharing_disabled: false,
       login_type: "email",
       course_id: course.id,
-      script: {id: script.id, name: script.name},
+      script: {id: script.id, name: script.name, course_family_name: course.family_name},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
@@ -497,7 +477,7 @@ class SectionTest < ActiveSupport::TestCase
       sharing_disabled: false,
       login_type: "email",
       course_id: nil,
-      script: {id: nil, name: nil},
+      script: {id: nil, name: nil, course_family_name: nil},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
@@ -517,6 +497,19 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal 2, summarized_section[:studentCount]
     assert_includes summarized_section[:students], student1.summarize
     assert_includes summarized_section[:students], student2.summarize
+  end
+
+  test 'summarize: section with duplicate students' do
+    section = create :section, script: nil, course: nil
+    student = create :student
+    create(:follower, section: section, student_user: student)
+    create(:follower, section: section, student_user: student)
+    assert_equal 2, Follower.where(section: section, student_user: student).count
+
+    summarized_section = section.summarize
+    assert_equal 1, summarized_section[:numberOfStudents]
+    assert_equal 1, summarized_section[:studentCount]
+    assert_includes summarized_section[:students], student.summarize
   end
 
   test 'valid_grade? accepts K-12 and Other' do

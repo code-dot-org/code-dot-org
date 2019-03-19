@@ -5,7 +5,7 @@ vi:
         Unplug1: Giới thiệu về khoa học máy tính
         Maze: mê cung
         Multi: Các lựa chọn chất liệu
-        Unplug2: suy nghĩ máy móc
+        Unplug2: Tư duy máy tính
         Unplug3: lập trình đồ thị trên giấy
         Artist: nghệ sĩ
         Unplug4: các bước lập trình
@@ -215,6 +215,7 @@ vi:
         studio_iceage_hello2: Manny (nhân vật 1) tìm thấy Sid (nhân vật 2) và muốn mời anh ta vào cuộc phiêu lưu. Giúp họ chào nhau bằng cách sử dụng khối "nhân vật nói" hai lần.
         studio_iceage_move_to_flag: Scrat đang tìm kiếm acorn của mình!  Giúp cậu ấy đi tới cuối 200 pixels bằng cách sử dụng  khối "di chuyển".
         studio_iceage_move_to_actor: Diego (nhân vật 1) đang tìm kiếm Manny (nhân vật 2). Giúp Diego di chuyển 200 điểm ảnh xuống để Manny sử dụng khối "di chuyển nhân vật". Tiếp theo, kết nối một khối với sự kiện "khi nhân vật chạm" để phát âm thanh khi họ tìm thấy nhau.
+        studio_iceage_repeat: Khối lệnh "lặp lại mãi mãi" cho phép bạn có thể chạy đoạn mã liên tục. Bạn có thể gắn khối lệnh để giúp Granny tập thể dục bằng cách di chuyển qua trái và qua phải lặp lại không?
         studio_full_sandbox: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại của họ.
         studio_k1_1: Bạn có thể làm chú chó nói "hello world" không?
         studio_k1_2: Bạn có thể làm chú chó nói vài điều, sau đó chú mèo nói tiếp vài điều không?
@@ -253,7 +254,7 @@ vi:
         parameters: Hàm và tham số
         hoc_wrapup: Giờ lập trình in a nut shell
         Unplug1: CS là gì?
-        Unplug2: suy nghĩ máy móc
+        Unplug2: Tư duy máy tính
         Unplug3: lập trình đồ thị trên giấy
         Unplug4: các bước lập trình
         Unplug5: Các hàm
@@ -308,7 +309,7 @@ vi:
         C3_bee_debugging: 'Ong: sửa lỗi'
         C3_bounce: Bật lại
         C3_playlab_create_game: 'Phòng trò chơi: Thiết kế trò chơi'
-        C3_computational_thinking: suy nghĩ máy móc
+        C3_computational_thinking: Tư duy máy tính
         C3_dice_race: Vòng quay xúc sắc
         C3_internet: Kết nối mạng
         C3_crowdsourcing: Đa nguồn

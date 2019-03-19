@@ -143,6 +143,55 @@ bs:
       Course 4 Play Lab Params 8: Upotrijebi "pri dodiru" blok da bi poslao/la Psa nazad u gornji lijevi ugao u slučaju kada Pas dodirne neki od likova.
       Course 4 Play Lab Vars 2: Utrka nije baš bila pravedna! Promijeni "brzina_psa" varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji prikupi 10 zastava je pobjednik!
       Course 4 Play Labs For Loops 1: Hajde da učinimo da ovaj pas izgovori svaki broj od 1 do 100. Upotrijebi petlju i brojač blok za izgovaranje svake brojač varijable pri svakom prolasku kroz petlju.
+      CourseD_Dance_Party_01: |-
+        *Hajde da održimo jednu plesnu zabavu!*
+
+        Prevucite blok `kreiraj novog` u radni prostor, postavite ga i spojite ga unutar bloka `postavke` kako bi kreirali svog prvog plesača.
+
+        * *Isto tako možete kliknuti na sijalicu sa lijeve strane ukoliko želite dodatne informacije ili dodatne izazove.*
+      CourseD_Dance_Party_02: |-
+        Hajde da pokrenemo ovog losa!
+
+        Prevucite blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE"> novog plesača</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> unutar radnog prostora. Spojite ga ispod bloka <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"takta"</title></block></xml>. Vaš plesač bi trebao da započne sa novim pokretom nakon četvrtog takta.
+
+        **Taktovi** se koriste kako bi se brojalo u muzici. U ovom slučaju taktovi su dugi četiri otkucaja.
+      CourseD_Dance_Party_03: "*Sada smo napredovali!*\n\nDodajte još jedan blok od <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takta\"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova."
+      CourseD_Dance_Party_04: |-
+        *Ovom plesu je potrebno malo svjetlosti!*
+
+        Potražite novi blok u vašim blokovima koji dodaje pozadinski efekat vašem plesaču. Posmatrajte kako se efekat mijenja sa muzikom!
+      CourseD_Dance_Party_05: |-
+        Iskoristite novi blok kako bi plesač izmjenio pokret **svako 2 takta**!
+
+        *Odairom `(Sljedeći)`, `(Prethodni)`, ili `(Slučajno)` govorite pelsaču da odigra druge pokrete svaki put kada se kod pokrene.
+      CourseD_Dance_Party_06: |-
+        *Potrebno nam je još plesača!*
+
+        Kreirajte dodatnog plesača sa imenom `backup_dancer1` kako bi plesao sa mačkom.
+      CourseD_Dance_Party_08: |-
+        Svaki plesač ima skup _osobenosti_ koje kontrolišu konačni izgled.
+
+        Možete napraviti da izgleda kao da je plesač u pozadini tako što ga _umanjite_. Možete li napraviti da su oba plesača iste veličine?
+      CourseD_Dance_Party_09: |-
+        Plesači imaju osobine "nijanse" koje dodaju novu boju. Probajte da izmjenite nijansu boje jednog od vaših igrača.
+
+        * Nijanse će izmješati boju koju odaberete sa trenutnom bojom plesača.
+      CourseD_Dance_Party_10: |-
+        Sada kada znamo kako da promjenimo osobinu plesača. Možemo napraviti i iste osobine automatski reaguju na muziku korištenjem ovog bloka:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_unicorn</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Ovaj program koristi razinu "basova" (niski tonovi) da bi kontrolisao visinu plesača. Možete li učiniti da i drugi plesač reaguje na muziku takođe?
+      CourseD_Dance_Party_11: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> omogućava vam da se kod pokrene kada kliknete strelicu gore. Možete mijenjati i pokrete, osobine plesača ili da ubrzate jedan pokret jednom. Budite kreativni i potražite i nove blokove!"
+      CourseD_Dance_Party_11_5: "Pogledajte ovaj blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"PATKA\"</title>\n<title name=\"LAYOUT\">\"krug\"</title>\n</block></xml>\n\nSada možete napraviti mnogo plesača odjednom! Pokušajte upotrijebiti neke od blokova \"sve patke\" kako bi napravili da sve patke plešu skupa."
+      CourseD_Dance_Party_11b: |-
+        Vrijeme je za plesno natjecanje! Mačka podigne ruke kada pritisnete lijevu strelicu. Neka se robot "spusti" kada kliknete desnu stelicu i "klapne rukama" kada pritisnete strelicu gore.
+
+        **Iskoristite strelice kako bi robot što brže se spustio-klepnuo-spustio-klepnuo!**
       CourseF_PlayLab_vars2: Utrka nije baš bila pravedna! Promijeni "brzina_psa" varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji prikupi 10 zastava je pobjednik!
       Dance_Party_01: |-
         *Hajde da održimo jednu plesnu zabavu!*
@@ -282,6 +331,12 @@ bs:
       NEW Course 4 Artist Vars 4: "Hajde da pokušamo ponovo. Hajde sada da napravimo ovaj cool crtež sa šestougaonicima od 60 piksela."
       NEW Course 4 Artist Vars 6: "Možeš li mi pomoći da nacrtam ovaj cool uzorak tako što ćeš ubaciti \"dužina\" varijablu u ispravno mjesto?"
       Play Lab Rocket 3: Odlično. Možeš li sada ažurirati tu funkciju tako da se naša raketa kreće brzo? Pobrini se da su izjave svrhe, primjeri, i definicija funkcije ažurirani da bi se raketa lansirala pri 40 metara u sekundi.
+      Ryan_Demo: |-
+        Hajde da pokrenemo ovog losa!
+
+        Prevucite blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE"> novog plesača</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> unutar radnog prostora. Spojite ga ispod bloka <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"takta"</title></block></xml>. Vaš plesač bi trebao da započne sa novim pokretom nakon četvrtog takta.
+
+        **Taktovi** se koriste kako bi se brojalo u muzici. U ovom slučaju taktovi su dugi četiri otkucaja.
       Testing Quantum Farmer: "Wow, pronašao sam stvarno duboku rupu! Ne znam koliko će mi zahvata lopatom trebati. Možeš li napraviti program koji je popunjava sve dok se zemlja ne izjednači? Savjet: Pokušaj koristiti \"dok\" petlju ovaj put."
       course4_artist_fwp_challenge1: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
       courseD_bee_nestedLoops5: 'Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. '

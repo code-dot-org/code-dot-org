@@ -32,25 +32,37 @@ fr:
         CSDU6L10_rainbow: Ajoute tes blocs ici
       CSD U6 colorLeds intensity_2018_callout:
         CSDU6L10_rainbow: Ajoute tes blocs ici
+      CSD U6 colorLeds intensity_2019_callout:
+        CSDU6L10_rainbow: Ajoute tes blocs ici
       CSD U6 light show predict_callout:
         CSDUDL03P09: Que fait cette ligne?
       CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: Que fait cette ligne?
+      CSD U6 light show predict_2019_callout:
         CSDUDL03P09: Que fait cette ligne?
       CSD U6 light show_callout:
         CSDUDL03P09: Que fait cette ligne?
       CSD U6 light show_2018_callout:
         CSDUDL03P09: Que fait cette ligne?
+      CSD U6 light show_2019_callout:
+        CSDUDL03P09: Que fait cette ligne?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Définie startGame ici
       CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: Définie startGame ici
+      CSD U6 tugowar variables 1_2019_callout:
         CSD_U6_startGame: Définie startGame ici
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Définie movePlayer() ici
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Définie movePlayer() ici
+      CSD U6 tugowar variables 2_2019_callout:
+        CSD_U6_movePlayer: Définie movePlayer() ici
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Vérifie si un joueur a gagné
       CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Vérifie si un joueur a gagné
+      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Vérifie si un joueur a gagné
       Course 4 Artist 4_callout:
         repeat_full_circle: Entre le nombre de fois que le zombie doit se déplacer
@@ -112,6 +124,17 @@ fr:
           fonction
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Utilise les flèches pour déplacer l'acteur
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Ajoutez ce bloc à votre programme!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Ajoutez ce bloc à votre programme!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Ajoutez ce bloc à votre programme!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Ajoutez votre nouveau danseur ici
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Nouveau bloc !
+        dance_callout_11_b: Nouveau bloc !
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Utilise les flèches pour déplacer l'acteur
       Dance_Party_01_callout:
@@ -272,6 +295,8 @@ fr:
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR.
           Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
+      Ryan_Demo_callout:
+        dance_callout_02: Ajoutez ce bloc à votre programme!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Ce code recherchera de la lave, peux-tu ajouter
           une commande pour avancer ?

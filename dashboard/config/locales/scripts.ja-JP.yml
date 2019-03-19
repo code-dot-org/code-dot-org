@@ -163,7 +163,7 @@ ja:
             Maze:
               name: 迷路
         frozen:
-          title: アナとエルザとコーディング
+          title: アナとエルサとコードを書く
           description: コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！
           description_short: コードを使って、アナとエルサと一緒に魔法と氷の美しさを探検しましょう
           stages:
@@ -247,7 +247,7 @@ ja:
             Binary:
               name: ２しんすう
             For Loops:
-              name: ループ用
+              name: forループ
             Intro:
               name: イントロ
             Variables:
@@ -695,7 +695,7 @@ ja:
             Events:
               name: イベント
             For Loops:
-              name: ループ用
+              name: forループ
             Functions:
               name: 関数(かんすう)
             Functions with Parameters:
@@ -902,7 +902,7 @@ ja:
             Lists:
               name: リスト
             For Loops:
-              name: ループ用
+              name: forループ
             Functions with Parameters:
               name: パラメーター付き関数
         workshop-gamelab:
@@ -924,7 +924,7 @@ ja:
             Lists:
               name: リスト
             For Loops:
-              name: ループ用
+              name: forループ
             Functions with Parameters:
               name: パラメーター付き関数
             Functions with Parameters_:
@@ -1223,7 +1223,7 @@ ja:
             Lists:
               name: リスト
             For Loops:
-              name: ループ用
+              name: forループ
         csd3-1819draft:
           stages:
             Variables:
@@ -1306,6 +1306,8 @@ ja:
               name: クラウドソーシング
             Relay Programming:
               name: プログラミングをリレーする
+            Graph Paper Programming:
+              name: グラフ用紙のプログラミング
         courseb-2018:
           assignment_family_title: コース B
           stages:
@@ -1490,6 +1492,10 @@ ja:
               name: カードと条件
             The Artist:
               name: アーティスト
+            Internet:
+              name: インターネット
+            Crowdsourcing:
+              name: クラウドソーシング
         dance-low:
           stages:
             Dance Party:
@@ -1506,6 +1512,8 @@ ja:
               name: 'アンプラグド: バイナリ'
             Artist Binary:
               name: アーティスト：バイナリ
+            Dance Party:
+              name: ダンスパーティー
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1569,3 +1577,107 @@ ja:
               name: バイナリブレスレット
         gamelab:
           title: ゲーム ラボ
+        coursea-2019:
+          description_short: 読み書き前の子ども向けのコンピューターサイエンスの紹介
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'デバッグ: 気づかれていないバグ'
+              description_teacher: このレッスンで、生徒はデバッグ（虫を取り除く、プログラムの間違いを直す）の手順を概観します。生徒は「何が起きたか」「何が起きるべきだったのか」「それは何を意味しているのか」と言った、考え方を学びます。
+            'Real-life Algorithms: Plant a Seed':
+              name: 現実のアルゴリズム：種を植えましょう
+            'Programming: Happy Maps':
+              name: プログラミング：ハッピー マップ
+            Programming in Maze:
+              name: めいろ のプログラミング
+            Going Places Safely:
+              name: 安全な道を通って行く
+            'Loops: Happy Loops':
+              name: くりかえし：ハッピー ループ
+            Loops in Collector:
+              name: くりかえし あつめる
+            Loops in Artist:
+              name: アーティストくりかえし
+            'Events: The Big Event':
+              name: 'イベント: おおきなイベント'
+            Events in Play Lab:
+              name: プレイ ラボのイベント
+            Ocean Scene with Loops:
+              name: アーティストくりかえし
+            Learn to Drag and Drop:
+              name: ドラッグ＆ドロップ
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: 動かせ！動かせ！
+            Your Digital Footprint:
+              name: あなたのデジタルフットプリント
+            Loops in Collector:
+              name: くりかえし あつめる
+            Loops in Artist:
+              name: アーティストくりかえし
+            'Events: The Big Event':
+              name: 'イベント: おおきなイベント'
+            Events in Play Lab:
+              name: プレイ ラボのイベント
+        pre-express-2019:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'デバッグ: 気づかれていないバグ'
+            Move It, Move It:
+              name: 動かせ！動かせ！
+            Your Digital Footprint:
+              name: あなたのデジタルフットプリント
+            Loops in Collector:
+              name: くりかえし あつめる
+            Loops in Artist:
+              name: アーティストくりかえし
+            'Events: The Big Event':
+              name: 'イベント: おおきなイベント'
+            Events in Play Lab:
+              name: プレイ ラボのイベント
+            Spelling Bee:
+              name: つづりみつばち
+        removed19:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'デバッグ: 気づかれていないバグ'
+            'Real-life Algorithms: Plant a Seed':
+              name: 現実のアルゴリズム：種を植えましょう
+        csd2-2019:
+          stages:
+            Lists:
+              name: リスト
+        csd3-2019:
+          stages:
+            Variables:
+              name: 変数
+            Conditionals:
+              name: 条件
+            Velocity:
+              name: 速度
+            Functions:
+              name: 関数(かんすう)
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: パラメーター付き関数
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: アンケート
+        csp1-2019:
+          stages:
+            The Internet:
+              name: インターネット
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: 関数の作成
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: 単純な暗号化
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Whileループ

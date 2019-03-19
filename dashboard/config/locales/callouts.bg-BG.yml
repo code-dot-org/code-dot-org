@@ -26,16 +26,25 @@ bg:
         grid: Щракни тук, за да се покаже мрежата.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Щракни тук, за да се покаже мрежата.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: Щракни тук, за да се покаже мрежата.
       CSD U3 Variables Predict Where XY_callout:
         grid: Щракни тук, за да се покаже мрежата.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Щракни тук, за да се покаже мрежата.
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: Щракни тук, за да се покаже мрежата.
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Промене номера тук
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Промене номера тук
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Тук е кодът
         CSD_U3_rect_c2: Плъзни този блок в областта за програмиране.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Тук е кодът
+        CSD_U3_rect_c2: Плъзни този блок в областта за програмиране.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Тук е кодът
         CSD_U3_rect_c2: Плъзни този блок в областта за програмиране.
       CSD U3 ellipse_callout:
@@ -44,10 +53,16 @@ bg:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Тук е кодът
         CSD_U3_rect_c2: Плъзни този блок в областта за програмиране.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Тук е кодът
+        CSD_U3_rect_c2: Плъзни този блок в областта за програмиране.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Тук е кодът
         CSD_U3_rect_c2: Плъзни този блок в областта за програмиране.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Тук е кодът
+        CSD_U3_rect_c2: Плъзни този блок в областта за програмиране.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Тук е кодът
         CSD_U3_rect_c2: Плъзни този блок в областта за програмиране.
       CSD U3 my-rect_callout:
@@ -58,10 +73,15 @@ bg:
         CSD_U3_rect_c2: Тук е бутона "Старт".
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Тук е кодът
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Тук е кодът
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Тук е кодът
         CSD_U3_rect_c2: Плъзни този блок в областта за програмиране.
       CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: Тук е кодът
+        CSD_U3_rect_c2: Плъзни този блок в областта за програмиране.
+      CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: Тук е кодът
         CSD_U3_rect_c2: Плъзни този блок в областта за програмиране.
       Counting_callout:
@@ -352,6 +372,9 @@ bg:
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не
           се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не
+          се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
       courseA_collector_preLoops2_callout:
         courseA_collector_loops1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не
           се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
@@ -371,6 +394,9 @@ bg:
         courseB_collector_loops1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не
           се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
       courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не
+          се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
+      courseB_collector_loops1_2019_callout:
         courseB_collector_loops1_1: Виждате ли някои нови блокове в кутията с инструменти?  Не
           се притеснявайте, ние ще ви покажем как да ги използвате по-късно в сцената.
       courseC_collector_prog1_callout:

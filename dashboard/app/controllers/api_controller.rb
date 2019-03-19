@@ -327,7 +327,7 @@ class ApiController < ApplicationController
   def script_structure
     script = Script.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))
-    summary = script.summarize
+    summary = script.summarize(true, nil, true)
     summary[:path] = overview_path
     render json: summary
   end
@@ -336,8 +336,9 @@ class ApiController < ApplicationController
   def user_progress
     if current_user
       script = Script.get_from_cache(params[:script])
-      user = params[:user_id] ? User.find(params[:user_id]) : current_user
-      render json: summarize_user_progress(script, user)
+      user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
+      teacher_viewing_student = current_user.students.include?(user)
+      render json: summarize_user_progress(script, user).merge({teacherViewingStudent: teacher_viewing_student})
     else
       render json: {}
     end

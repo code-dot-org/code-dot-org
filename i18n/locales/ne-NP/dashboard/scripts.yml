@@ -1146,6 +1146,8 @@ ne:
               name: Crowdsourcing
             Relay Programming:
               name: Relay programming
+            Graph Paper Programming:
+              name: Graph Paper Programming
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1270,6 +1272,10 @@ ne:
               name: For Loop Fun
             The Artist:
               name: The Artist
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         coursed-2019:
           stages:
             Relay Programming:
@@ -1328,3 +1334,59 @@ ne:
               name: 'Real-life Algorithms: Paper Planes'
             Binary Bracelets:
               name: Binary Bracelets
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life Algorithms: Plant a Seed'
+            Going Places Safely:
+              name: Going Places Safely
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Move It, Move It
+            Your Digital Footprint:
+              name: Your Digital Footprint
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Move It, Move It
+            Your Digital Footprint:
+              name: Your Digital Footprint
+            Spelling Bee:
+              name: Spelling Bee
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life Algorithms: Plant a Seed'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Lists
+        csd3-2019:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Conditionals
+            Functions:
+              name: Functions
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Functions with Parameters
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Surveys
+        csp1-2019:
+          stages:
+            The Internet:
+              name: The Internet
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Creating Functions
+        csp5-2019:
+          stages:
+            While Loops:
+              name: While Loops

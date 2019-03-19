@@ -30,11 +30,11 @@ el:
         Jigsaw: Παζλ
         MazeStep: Κατάσταση Βήμα Λαβυρίνθου
         Wordsearch: Αναζήτηση Λέξεων
-        Webapp: Εργαστήριο εφαρμογών
+        Webapp: App Lab
         ArtistEC: Ο Καλλιτέχνης
         TextMatch: Ταίριασμα Κειμένου
         StudioEC: Εργαστήριο Παιχνιδιού
-        Applab: Εργαστήριο εφαρμογών
+        Applab: App Lab
         NetSim: Προσομοιωτής Διαδικτύου
         Custom: Καλλιτέχνης
         CustomStudio: Εργαστήριο Παιχνιδιού
@@ -589,7 +589,7 @@ el:
         C1_happy_maps_unplugged: Χαρούμενοι Χάρτες
         C1_moveitmoveit_unplugged: Μετακίνησέ το, Μετακίνησέ το
         C1_bigevent_unplugged: Το Μεγάλο Γεγονός
-        C1_getting_loopy: Παίρνοντας Επαναληπτικά
+        C1_getting_loopy: Επαναλαμβανόμαστε
         C1_pair_programming: Προγραμματισμός κατά ζεύγη
         C1_maze_intro_sequencing: Αλληλουχία Λαβυρίνθου - Εισαγωγικά
         C1_maze_debugging: Εκσφαλμάτωση Λαβυρίνθου
@@ -694,10 +694,22 @@ el:
         csd_concept_search: Πως λειτουργεί η αναζήτηση
         csd_external_amazon_data: Πως τα Big Data χρησιμοποιούνται από τα συστήματα
           προτάσεων της Amazon για να μας αλλάξουν τις ζωές
+        csd_external_netflix_data: Πως κάνει το Netflix προτάσεις για τηλεοπτικές
+          σειρές και ταινίες;
+        csd_external_waze_data: Γιατί είναι τόσο πολλοί χρήστες παθιασμένοι με το
+          Waze;
+        csd_gamelab_animation_tab: Η Καρτέλα Κίνησης
+        csd_gamelab_velocity: Ταχύτητα
+        csd_weblab_intro_1: Εισαγωγή στο Εργαστήριο Ιστού - Μέρος 1
+        csd_weblab_intro_2: Εισαγωγή στο Εργαστήριο Ιστού - Μέρος 2
+        csd_weblab_css_1: Εισαγωγή στην CSS - μέρος 1
+        csd_weblab_css_2: Εισαγωγή στην CSS - μέρος 2
+        csd_weblab_intro_3: Εισαγωγή στο Εργαστήριο Ιστού - Μέρος 3
         csp_applab_functions: Εισαγωγή στις Συναρτήσεις
         csp_applab_functions_parameters: Συναρτήσεις με παραμέτρους
         csp_applab_loops: Βρόχοι
         csp_concept_rgb: Λίγα για τα Εικονοστοιχεία
+        csp_cs_is_changing_everything: H Επιστήμη των Υπολογιστών αλλάζει τα Πάντα
         csp_pixelation_color_1: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 1
         csp_pixelation_color_2: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 2
         csp_pixelation_color_3: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 3
@@ -752,7 +764,68 @@ el:
         iceage_intro: Ωρα του Κώδικα, Εποχή των Παγετώνων - Εισαγωγή
         iceage_events: Ωρα του Κώδικα, Εποχή των Παγετώνων - Γεγονότα
         iceage_repeat: Ωρα του Κώδικα, Εποχή των Παγετώνων - Εντολές επανάληψης
+        mc_2016_intro: Minecraft Ώρα του Κώδικα - Εισαγωγή
+        mc_2016_loops: Minecraft Ώρα του Κώδικα - Βρόχοι
+        mc_2016_events: Minecraft Ώρα του Κώδικα - Γεγονότα
+        mc_2016_spawn: Minecraft Ώρα του Κώδικα - Αναπαραγωγή
+        mc_2016_congrats: Minecraft Ώρα του Κώδικα - Συγχαρητήρια
+        applab_hoc_welcome: Εργαστήριο Εφαρμογών Ώρα του Κώδικα - Καλώς ήρθατε
+        applab_hoc_setproperty: Εργαστήριο Εφαρμογών Ώρα του Κώδικα - θέσεΙδιότητα
+        applab_hoc_onevent: Εργαστήριο Εφαρμογών Ώρα του Κώδικα - στοΓεγονός
+        applab_hoc_designmode: Εργαστήριο Εφαρμογών Ώρα του Κώδικα - Λειτουργία Σχεδίασης
+        applab_hoc_share: Εργαστήριο Εφαρμογών Ώρα του Κώδικα - Μοιράσου
+        mc_2017_agent_intro: Minecraft Ώρα του Κώδικα - Ο Πράκτορας
+        mc_2017_repeat: Minecraft Ώρα του Κώδικα - Βρόχοι Επανάληψης
+        mc_2017_functions: Minecraft Ώρα του Κώδικα - Συναρτήσεις
+        mc_2017_congratulations: Minecraft Ώρα του Κώδικα - Συγχαρητήρια
+        mc_2017_puzzle_1: Minecraft Ώρα του Κώδικα - Ο Πράκτορας
+        mc_2017_puzzle_3: Minecraft Ώρα του Κώδικα - Βρόχοι Επανάληψης
+        mc_2017_puzzle_8: Minecraft Ώρα του Κώδικα - Συναρτήσεις
+        mc_2017_puzzle_12: Minecraft Ώρα του Κώδικα - Ελεύθερο παιχνίδι
+        hint_videos_d_11_3_first: 'Βίντεο συμβουλών: D.11.3 Πρώτο'
+        hint_videos_d_11_3_last: 'Βίντεο συμβουλών: D.11.3 Τελευταίο'
+        hint_videos_d_11_4_first: 'Βίντεο συμβουλών: D.11.4 Πρώτο'
+        hint_videos_d_11_4_last: 'Βίντεο συμβουλών: D.11.4 Τελευταίο'
+        hint_videos_d_11_5_first: 'Βίντεο συμβουλών: D.11.5 Πρώτο'
+        hint_videos_d_11_5_last: 'Βίντεο συμβουλών: D.11.5 Τελευταίο'
+        hint_videos_d_11_6_first: 'Βίντεο συμβουλών: D.11.6 Πρώτο'
+        hint_videos_d_11_6_last: 'Βίντεο συμβουλών: D.11.6 Τελευταίο'
+        hint_videos_d_11_7_first: 'Βίντεο συμβουλών: D.11.7 Πρώτο'
+        hint_videos_d_11_7_last: 'Βίντεο συμβουλών: D.11.7 Τελευταίο'
+        hint_videos_d_11_9_first: 'Βίντεο συμβουλών: D.11.9 Πρώτο'
+        hint_videos_d_11_9_last: 'Βίντεο συμβουλών: D.11.9 Τελευταίο'
+        hint_videos_d_11_11_first: 'Βίντεο συμβουλών: D.11.11 Πρώτο'
+        hint_videos_d_11_11_last: 'Βίντεο συμβουλών: D.11.11 Τελευταίο'
+        applab_intro_welcome: Εργαστήριο Εφαρμογών - Ξεκινώντας
+        applab_intro_events: Εργαστήριο Εφαρμογών - Κάντο Διαδραστικό
+        applab_intro_sounds: Εργαστήριο Εφαρμογών - Εικόνες και Ήχοι
+        applab_intro_designmode: Εργαστήριο Εφαρμογών - Λειτουργία Σχεδίασης
+        applab_intro_share: Εργαστήριο Εφαρμογών - Μοιράσου την Εφαρμογή σου
+        CSF_skinOverview_Harvester: Ο Θεριστής
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_harvester_skinOverview_K-1: Ο Θεριστής
+        CSF_scrat_loops_K1: Βρόχοι στην Εποχή των Παγετώνων
+        CSF_scrat_loops_CF: Βρόχοι στην Εποχή των Παγετώνων
+        CSF_if_allskins: Το Τουβλάκι Αν
+        CSF_ifelse_allskins: Χρησιμοποιώντας Τουβλάκια Αν/Αλλιώς
+        CSF_ifelseifelse_allskins: Χρησιμοποιώντας Τουβλάκια Αν/ΑλλιώςΑν/Αλλιώς
         CSF_loops_AB: Βρόχοι
+        csd_gamelab_booleans: Boolean Εκφράσεις
+        csd_gamelab_conditional_statements: Συνθήκες Ελέγχου
+        csd_gamelab_if_else: Δηλώσεις Αν/Αλλιώς
+        CSF_SpriteLabIntro_CDEF: Αυτό είναι το Εργαστήριο Χαρακτήρων
+        CSF_Spritelab_MakeSprite_CDEF: Πως να φτιάξεις έναν Χαρακτήρα στο Εργαστήριο
+          Χαρακτήρων
+        CDEF_Video_SpritesInAction: Χαρακτήρες σε Δράση
+        CSF_SpriteLab_SpritesInAction_CDEF: Χαρακτήρες σε Δράση
+        CSF_StarWars_ProjectIntro: Εισαγωγή στο έργο του Star Wars
+        mc_2018_intro: 'Minecraft: Υδάτινο Ταξίδι Εισαγωγή'
+        MC_2018_loops: 'Minecraft: Υδάτινο Ταξίδι Επανάλαβε Μέχρι'
+        mc_2018_conditionals: 'Minecraft: Υδάτινο Ταξίδι Συνθήκες'
+        mc_2018_closing: 'Minecraft: Υδάτινο Ταξίδι Συγχαρητήρια'
+        hoc_dance_warmup: Πάρτυ Χορού - Ζέσταμα
+        hoc_dance_congrats: Πάρτυ Χορού - Συνέχισε το πάρτυ!
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ

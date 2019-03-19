@@ -351,6 +351,10 @@ pl:
         tekstu i niektórych subtelnych animacji może naprawdę doprowadzić do ciekawych
         komiksów lub graficznych historii.  Kliknij przycisk \"Uruchom\", aby zobaczyć
         przykład. \r\n"
+      CSD U3 Entertainment Sample 3_2019: "# Animowany Komiks\r \n\r \nŁączenie obrazów,
+        tekstu i niektórych subtelnych animacji może naprawdę doprowadzić do ciekawych
+        komiksów lub graficznych historii.  Kliknij przycisk \"Uruchom\", aby zobaczyć
+        przykład. \r\n"
       CSD U3 Random background: "#Tło\r\n\r\nCzasami będziesz chciał wypełnić kolorem
         cały ekran. Aby to zrobić, możesz wykorzystać `background`. Pokrywa ono wszystko
         na ekranie kolorem, który wybierzesz.\r\n\r\n#\nWykonaj to\r\n\r\n*Uruchom
@@ -365,10 +369,20 @@ pl:
         żółtego na pomarańczowy.\r\n\r\n*Zadanie: Fioletowy kwadrat jest w całości
         zakryty tłem. Czy możesz zmień kolejność kodu, aby zobaczyć jednocześnie fioletowy
         i niebieski kwadrat?*"
+      CSD U3 Random background_2019: "#Tło\r\n\r\nCzasami będziesz chciał wypełnić
+        kolorem cały ekran. Aby to zrobić, możesz wykorzystać `background`. Pokrywa
+        ono wszystko na ekranie kolorem, który wybierzesz.\r\n\r\n#\nWykonaj to\r\n\r\n*Uruchom
+        kod aby zobaczyć, czy funkcja `background` działa.\r\n* Zmień tło z koloru
+        żółtego na pomarańczowy.\r\n\r\n*Zadanie: Fioletowy kwadrat jest w całości
+        zakryty tłem. Czy możesz zmień kolejność kodu, aby zobaczyć jednocześnie fioletowy
+        i niebieski kwadrat?*"
       CSD U5 Amazon Data Video: Obejrzyj ten film, aby nauczyć się jak z tym problemem
         radzi sobie Amazon. Podczas oglądania filmu, pomyśl jak zbierane są dane oraz
         skąd pochodzą.
       CSD U5 Amazon Data Video_2018: Obejrzyj ten film, aby nauczyć się jak z tym
+        problemem radzi sobie Amazon. Podczas oglądania filmu, pomyśl jak zbierane
+        są dane oraz skąd pochodzą.
+      CSD U5 Amazon Data Video_2019: Obejrzyj ten film, aby nauczyć się jak z tym
         problemem radzi sobie Amazon. Podczas oglądania filmu, pomyśl jak zbierane
         są dane oraz skąd pochodzą.
       CSD U6 getProperty var: "# Pobieranie właściwości oraz zmiennych\r\n\r\nW poprzednim
@@ -440,6 +454,90 @@ pl:
       Course 4 SCVP 1: Utwórz funkcję z parametrami, która pozwoli artyście skoczyć
         do przodu i do tyłu o x pikseli oraz w górę i w dół o y pikseli (stosując
         liczby dodatnie i ujemne).
+      CourseD_Dance_Party_01: |-
+        *Urządźmy potańcówkę!*
+
+        Przeciągnij blok „utwórz nowego” do obszaru roboczego i połącz go wewnątrz bloku „układ”, aby utworzyć pierwszego tancerza.
+
+        * *Jeśli chcesz uzyskać dodatkowe informacje lub potrzebujesz ekstra wyzwań, możesz także kliknąć żarówkę po lewej.*
+      CourseD_Dance_Party_02: |-
+        Stwórzmy ten taniec łosi!
+
+        Przeciągnij do pola roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Podłącz go pod blokiem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Twój tancerz powinien zacząć nowy ruch po czwartym takcie.
+
+        **Takty** służą w muzyce do odmierzania czasu. W tym samouczku takt składa się z 4 uderzeń.
+      CourseD_Dance_Party_03: |-
+        *Teraz się bawimy!*
+
+        Dodaj do swojego obszaru roboczego blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml>. Spraw, aby tancerz zaczął nowy ruch po 6 taktach.
+      CourseD_Dance_Party_04: |-
+        *Ten taniec wymaga trochę świateł!*
+
+        W swoim zestawie narzędzi znajdź blok, który dodaje efekt tła za twoim tancerzem. Zobacz, jak w rytm muzyki zmieniają się efekty!
+      CourseD_Dance_Party_05: |-
+        Użyj kolejnego nowego bloku, aby tancerz zmieniał ruchy **co 2 takty**!
+
+        *Wybranie (Następny), (Poprzedni), or (Losowy) mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
+      CourseD_Dance_Party_06: |-
+        *Potrzebujemy więcej tancerzy!*
+
+        Utwórz kopię tancerza do tańca z kotem i nazwij go „kopia_tancerza1”.
+      CourseD_Dance_Party_08: |-
+        Każdy tancerz odznacza się zestawem _właściwości_, które decydują o tym, jak wygląda.
+
+        Zmniejszając _wielkość_ tancerza możesz spowodować, że będzie wyglądał, jak gdyby był tancerzem drugiego planu. Czy możesz sprawić, by obie kopie tancerzy były tej samej wielkości?
+      CourseD_Dance_Party_09: |-
+        Tancerze mają właściwość „odcień”, która pozwala dodać warstwę koloru. Spróbuj zmienić odcień jednego ze swoich tancerzy.
+        * Wybór odcienia spowoduje zmieszanie wybranego koloru z kolorami tancerza.
+      CourseD_Dance_Party_10: |-
+        Teraz wiemy, jak zmieniać właściwości tancerza. Stosując poniższy blok możemy także sprawić, że te same właściwości będą automatycznie reagować na muzykę:
+        <xml>
+        <block type="Dancelab_startMapping">
+        < nazwa tytuł = "SPRITE" > right_pineapple < / title >
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Ten program wykorzystuje „basy” (niskie tony) w muzyce do sterowania wysokością tancerza. Czy możesz spowodować, aby drugi tancerz także reagował na muzykę?
+      CourseD_Dance_Party_11: |-
+        Blok <xml><block type="Dancelab_whenKey"></block></xml> pozwoli Ci uruchomić kod po naciśnięciu strzałki w górę.
+
+        Możesz zmienić ruchy w tańcu, właściwości tancerza lub spowodować szybki ruch dokładnie raz. Bądź twórczy i wypatruj nowych bloków!
+      CourseD_Dance_Party_11_5: |-
+        Sprawdź ten blok:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Teraz możesz utworzyć wielu tancerzy na raz!
+
+        Spróbuj użyć kilku bloków „wszystkie kaczki", aby napisać kod, który sprawi, że wszystkie kaczki będą tańczyć razem.
+      CourseD_Dance_Party_11b: "Czas, by potańczyć! Po naciśnięciu strzałki w lewo,
+        Kot podnosi ręce do góry (ruch \"dab\"). Gdy naciśniesz strzałkę w prawo,
+        Robot robi szpagat (ruch \"drop\") a klaszcze (ruch \"clap\"), gdy naciśniesz
+        strzałkę do góry. \n\n**Użyj klawiszy, by Robot na przemian klaskał i robił
+        szpagat tak szybko, jak potrafisz!**"
+      CourseD_Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go
+        przyjaciołom.
+      CourseE_HOC 2018 Level_10: "Gdzieś w tym Monumencie oceanicznym ukrywa się **kałamarnica**
+        ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png),
+        czy potrafisz ją znaleźć?\n\n"
+      CourseE_HOC 2018 Level_11: Zbuduj mur z **pryzmarynu** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        wokół czarnego betonu. Spowoduje to uaktywnienie **kanału** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        i zakończy Twoje wyzwanie!
+      CourseE_HOC 2018 Level_7a: "Znalazłeś podwodne ruiny. Przeszukaj piaskowiec,
+        by odnaleźć **kufer** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        zawierający **pryzmaryn** skarb ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      CourseE_HOC 2018 Level_8: "Najpierw góry lodowe, a teraz lawa? Przeszukaj tę
+        wulkaniczną wyspę i znajdź w rafie koralowej **tropikalną rybę** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png).\n\n"
+      CourseE_HOC 2018 Level_9b: Zrobiłeś to na rafie, teraz przeszukaj **Serce morza**
+        ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Wykorzystaj niebieski i czerwony koral, aby dotrzeć do **kufra** ze skarbem
+        ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       CourseF_PlayLab_vars2: Wyścig w poprzedniej łamigłówce nie był zbyt uczciwy!
         Zmień wartość zmiennej "dog_speed" (prędkość psa), aby być pewnym, że możesz
         zebrać więcej flag niż Kot. Wygrywa ten, kto pierwszy zbierze 10 flag!
@@ -910,6 +1008,12 @@ pl:
         ostrożny, nie zbieraj nektaru z fioletowych kwiatków, jeśli nie mają żadnego.\r\nMusisz
         sprawdzić czy nektar w kwiatku jest równy 1, aby to zrobić użyj bloku `if
         nectar`."
+      Ryan_Demo: |-
+        Stwórzmy ten taniec łosi!
+
+        Przeciągnij do pola roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Podłącz go pod blokiem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Twój tancerz powinien zacząć nowy ruch po czwartym takcie.
+
+        **Takty** służą w muzyce do odmierzania czasu. W tym samouczku takt składa się z 4 uderzeń.
       Testing Quantum Farmer: "Wow, popatrz! \r \r Nie wiem, ile szufelek śmieci potrzebuje
         ten otwór.  \r Czy potrafisz napisać program, który wykonuje blok \"wypełnij\"
         aż wypełni ten otwór do poziomu ziemi?  "
@@ -957,6 +1061,8 @@ pl:
         którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."*'
       courseA_collector_loops_challenge1_2018: '*"Czy możesz mi pomóc znaleźć błędy?
         Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."*'
+      courseA_collector_loops_challenge1_2019: '*"Czy możesz mi pomóc znaleźć błędy?
+        Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."*'
       courseA_playlab_events_challenge1: "*\"Gdzie ukrywają się moi przyjaciele? W
         tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"*\r\n\r\nKlikając
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
@@ -967,14 +1073,24 @@ pl:
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
         postaci?\r\n\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
         pomogą Ci zrobić ten projekt krok po kroku!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
+      courseA_playlab_events_challenge1_2019: "*\"Gdzie ukrywają się moi przyjaciele?
+        W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"*\r\n\r\nKlikając
+        na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
+        postaci?\r\n\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
+        pomogą Ci zrobić ten projekt krok po kroku!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
       courseB_artist_loops6: Za krzakami jest piękna winorośl pełna kwiatów. Czy możesz
         wspiąć się na winorośl i zobaczyć dokąd zmierza?
       courseB_artist_loops6_2018: Za krzakami jest piękna winorośl pełna kwiatów.
+        Czy możesz wspiąć się na winorośl i zobaczyć dokąd zmierza?
+      courseB_artist_loops6_2019: Za krzakami jest piękna winorośl pełna kwiatów.
         Czy możesz wspiąć się na winorośl i zobaczyć dokąd zmierza?
       courseB_artist_loops_challenge2: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       courseB_artist_loops_challenge2_2018: |-
+        Zagrajmy w grę!
+        Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
+      courseB_artist_loops_challenge2_2019: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       courseB_collector_loops3_predict1: W jaki sposób Laurel może zebrać wszystkie
@@ -989,11 +1105,18 @@ pl:
       courseB_playlab_events_challenge1_2018: "Czas na Wielki Wyścig Zwierząt! Zrób
         aby zwierzęta po naciśnięciu `▼` poruszały się na dół.\r\n\r\nKto będzie biegł
         szybciej?\r\n"
+      courseB_playlab_events_challenge1_2019: "Czas na Wielki Wyścig Zwierząt! Zrób
+        aby zwierzęta po naciśnięciu `▼` poruszały się na dół.\r\n\r\nKto będzie biegł
+        szybciej?\r\n"
       courseB_playlab_events_challenge2: "Zrób tak, aby zwierzęta po kliknięciu na
         nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć
         do gry/\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
         Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
       courseB_playlab_events_challenge2_2018: "Zrób tak, aby zwierzęta po kliknięciu
+        na nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć
+        do gry/\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
+        Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
+      courseB_playlab_events_challenge2_2019: "Zrób tak, aby zwierzęta po kliknięciu
         na nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć
         do gry/\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
         Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"

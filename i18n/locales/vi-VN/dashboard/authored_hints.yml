@@ -158,7 +158,20 @@ vi:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Gặp khó khăn trong việc tìm cách đặt các khối?  Thử coi bông hoa đỏ giống hệt bông hoa tím xem!
         2-3_Bee_Conditionals_14_b: Nếu bông hoa đỏ có màu tím, bạn có thể tìm ra cách dùng thêm một vòng lặp để giảm số khối trong mã không?
-        2-3_Bee_Conditionals_14_c: "Thử chia việc này thành hai việc riêng biệt: \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Thu hoạch mật hoa 3 lần\n - Đi thẳng 5 lần\n - Kiểm tra xem có mật hoa không, nếu có: thu hoạch nó\n - Rẽ trái\n \n2) Làm mật ong\n - Đi thẳng 1 lần\n - Làm mật ong 2 lần"
+        2-3_Bee_Conditionals_14_c: |-
+          Thử chia việc này thành hai việc riêng biệt: 
+
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Thu hoạch mật hoa 3 lần
+           - Đi thẳng 5 lần
+           - Kiểm tra xem có mật hoa không, nếu có: thu hoạch nó
+           - Rẽ trái
+           
+          2) Làm mật ong
+           - Đi thẳng 1 lần
+           - Làm mật ong 2 lần
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Nhớ rằng: Những bông hoa tím có 0 hoặc 1 mật hoa và nó có thể thay đổi mỗi làn bạn chạy chương trình.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -212,6 +225,105 @@ vi:
           **Lời giải**
           ![Hình ảnh của Lời Giải]
           (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          * Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
+
+          *Cấp độ này kết thúc sau 4 nhịp.*
+        challenges: |-
+          **Thử thách tùy chọn**
+          * Chọn một bài hát khác để phát.
+          * Chọn một đối tượng khác trông giống nai sừng tấm!
+          * Đổi tên vũ công.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          * Vũ công cần chuyển sang động tác mới sau 4 nhịp.
+
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
+
+          *Cấp độ này kết thúc sau 12 nhịp.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
+
+          *Cấp độ này kết thúc sau 10 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+
+          Thay đổi hiệu ứng nền ở những thời điểm khác nhau trong bài hát bằng cách liên kết những khối mới theo sự kiện <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"nhịp"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Bạn cần có ít nhất hai vũ công.
+
+          *Cấp độ này kết thúc sau 6 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+
+          * Thêm vũ công thứ ba (hoặc một số lượng vũ công tùy ý!)
+          * Làm cho tất cả các vũ công của bạn thực hiện các động tác khác nhau tại các thời điểm khác nhau trong bài hát.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Hai vũ công cần phải có một kích cỡ khác ngoài 100.
+
+          *Cấp độ này kết thúc sau 6 nhịp.*
+        challenges: |-
+          **Thách thức phụ**
+
+          * Thử nghiệm bằng cách thay đổi các thuộc tính khác (chiều rộng, chiều cao, xoay, v.v.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Thay đổi sắc thái của ít nhất một vũ công.
+
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Thuộc tính cho hai vũ công trở lên phải thay đổi.
+
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Thoải mái sáng tạo!
+
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Thoải mái sáng tạo!
+
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          * Sử dụng khối `when left arrow pressed` để làm Robot thực hiện một động tác nhảy khi bạn nhấn mũi tên trái.
+
+          *Cấp độ này kết thúc sau 8 nhịp.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Xem các ** ngọn đèn biển **![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Làm thế nào bạn có thể sử dụng một điều kiện với chúng để vượt qua một Tòa nhà đại dương?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Bạn có thể sử dụng khối lệnh nếu để giúp bạn thực hiện những ngã rẽ đúng.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Hãy xem các khối lệnh san hô màu đỏ và màu xanh? Sử dụng chúng như điểm chỉ dẫn để rẽ phải hoặc trái qua các rạn san hô.
       Dance short test 2_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
@@ -665,6 +777,12 @@ vi:
         MC_HOC_2017_13_Cole_a: Hãy thử để Đặc vụ xây dựng vài đường ray cho xe chở quặng để bạn có thể khám phá thế giới!
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Hãy thử để Đặc vụ xây một vài chiếc cầu để Alex hoặc Steve có thể đi bộ xung quanh các cạnh của bản đồ.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+          * Vũ công cần chuyển sang động tác mới sau 4 nhịp.
+
+          *Cấp độ này kết thúc sau 8 nhịp.*
       course3_bee_functions_challenge1_authored_hint:
         courseE_bee_functions_challenge1_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi thử lại.  Sẽ có lúc bạn hoàn thành nó!"
       course3_bee_functions_challenge2_authored_hint:
@@ -685,9 +803,44 @@ vi:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -725,7 +878,45 @@ vi:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -760,7 +951,29 @@ vi:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
@@ -768,7 +981,12 @@ vi:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
       courseB_Scrat_ramp2_2018_authored_hint:
@@ -787,7 +1005,42 @@ vi:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -825,6 +1078,25 @@ vi:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -844,7 +1116,42 @@ vi:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 

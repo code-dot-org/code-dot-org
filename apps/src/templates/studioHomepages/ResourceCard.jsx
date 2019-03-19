@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import Button from '../Button';
 import color from '../../util/color';
@@ -10,39 +11,39 @@ const styles = {
   card: {
     height: 250,
     width: 310,
-    background: color.teal,
+    background: color.teal
   },
   cardSmall: {
-    width: "100%"
+    width: '100%'
   },
   cardAllowWrap: {
-    position: 'relative',
+    position: 'relative'
   },
   text: {
     paddingLeft: 20,
     paddingRight: 20,
-    color: color.white,
+    color: color.white
   },
   title: {
     fontFamily: '"Gotham 7r", sans-serif',
     paddingTop: 20,
     paddingBottom: 15,
     fontSize: 27,
-    width: "100%",
+    width: '100%',
     display: 'inline',
-    boxSizing: 'border-box',
+    boxSizing: 'border-box'
   },
   titleSmall: {
-    width: "100%",
+    width: '100%',
     boxSizing: 'border-box'
   },
   titleNoWrap: {
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
-    overflow: 'hidden',
+    overflow: 'hidden'
   },
   titleAllowWrap: {
-    lineHeight: '1.1',
+    lineHeight: '1.1'
   },
   description: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -50,27 +51,27 @@ const styles = {
     lineHeight: '21px',
     height: 140,
     marginBottom: 5,
-    overflowY: 'auto',
+    overflowY: 'auto'
   },
   descriptionSmall: {
-    width: "100%",
+    width: '100%',
     boxSizing: 'border-box'
   },
   button: {
     marginLeft: 20,
-    marginRight: 20,
+    marginRight: 20
   },
   buttonAllowWrap: {
     position: 'absolute',
     bottom: 20,
-    left: 0,
+    left: 0
   },
   ltr: {
-    float: 'left',
+    float: 'left'
   },
   rtl: {
-    float: 'right',
-  },
+    float: 'right'
+  }
 };
 
 class ResourceCard extends Component {
@@ -84,7 +85,7 @@ class ResourceCard extends Component {
     allowWrap: PropTypes.bool,
     allowDangerouslySetInnerHtml: PropTypes.bool,
     linkId: PropTypes.string,
-    linkClass: PropTypes.string,
+    linkClass: PropTypes.string
   };
 
   render() {
@@ -98,7 +99,7 @@ class ResourceCard extends Component {
       allowDangerouslySetInnerHtml,
       linkId,
       linkClass,
-      responsiveSize,
+      responsiveSize
     } = this.props;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
 
@@ -153,5 +154,5 @@ class ResourceCard extends Component {
 
 export default connect(state => ({
   isRtl: state.isRtl,
-  responsiveSize: state.responsive.responsiveSize,
+  responsiveSize: state.responsive.responsiveSize
 }))(Radium(ResourceCard));

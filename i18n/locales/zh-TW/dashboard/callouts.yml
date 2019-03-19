@@ -15,10 +15,15 @@ zh-TW:
         CSD_U3_variables: 在此修改數值
       CSD U3 Variables Predict Where X_2018_callout:
         CSD_U3_variables: 在此修改數值
+      CSD U3 Variables Predict Where X_2019_callout:
+        CSD_U3_variables: 在此修改數值
       CSD U3 debug_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 ellipse_callout:
@@ -27,10 +32,16 @@ zh-TW:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 fill_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 my-rect_callout:
@@ -41,10 +52,15 @@ zh-TW:
         CSD_U3_rect_c2: 這個是「運行」按鈕。
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: 這兒是代碼
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: 這兒是代碼
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
+      CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       Counting_callout:
@@ -119,6 +135,17 @@ zh-TW:
         Course_4_Playlab_For_Loops_4b_2: 這個關卡你只能修改`計數迴圈`中的「增量」。
       Course 4 SCV 6_callout:
         Course_4_SCV_6: 這個積木可以讓你自訂任何顏色！換換不同的數值，看看有什麼改變！
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: 將此程式積木新增至您的程式！
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: 將此程式積木新增至您的程式！
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: 將此程式積木新增至您的程式！
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: 在此新增您的新舞者
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: 新的程式積木！
+        dance_callout_11_b: 新的程式積木！
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: 使用這些方向鍵來移動角色
       CourseF_PlayLab_vars10_callout:
@@ -285,6 +312,8 @@ zh-TW:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
+      Ryan_Demo_callout:
+        dance_callout_02: 將此程式積木新增至您的程式！
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: 編輯這個函式可以避免讓 Sam 走到右側
       Test Play Lab Project With Walls_callout:
@@ -335,9 +364,13 @@ zh-TW:
         courseA_artist_loops4_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
       courseA_artist_loops7_forVideo_callout:
         courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
@@ -345,9 +378,13 @@ zh-TW:
         courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_collector_preLoops2_callout:
         courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
@@ -363,6 +400,8 @@ zh-TW:
         courseA_maze_seq1_1: 當您需要提示時，點一下燈泡！
       courseA_maze_seq1_2018_callout:
         courseA_maze_seq1_1: 當您需要提示時，點一下燈泡！
+      courseA_maze_seq1_2019_callout:
+        courseA_maze_seq1_1: 當您需要提示時，點一下燈泡！
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: 使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！
       courseA_maze_seq2_2018_callout:
@@ -371,9 +410,13 @@ zh-TW:
         courseA_playlab_events4_callout1: 這是一個標注
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: 這是一個標注
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: 這是一個標注
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: 點擊此處變更方向事件的箭頭方向。
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: 點擊此處變更方向事件的箭頭方向。
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: 點擊此處變更方向事件的箭頭方向。
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: 這個數字指的是工具箱中已經沒有這個積木。
@@ -381,9 +424,13 @@ zh-TW:
         courseB_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseB_maze_seq1_callout:
         courseB_maze_seq1: 當您需要提示時，點一下燈泡！
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: 當您需要提示時，點一下燈泡！
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: 當您需要提示時，點一下燈泡！
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: 使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！

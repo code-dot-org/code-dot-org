@@ -19,7 +19,7 @@ jobs:
         - /dtl_candidate_.*/
     parallelism: 2
     docker:
-      - image: wjordan/code-dot-org:0.5
+      - image: jmkulwik/code-dot-org:0.7
         environment:
           RAILS_ENV: test
           RACK_ENV: test
@@ -118,6 +118,7 @@ jobs:
             dashboard_enable_pegasus: true
             dashboard_workers: 5
             skip_seed_all: true
+            google_maps_api_key: boguskey
             " >> locals.yml
 
       - run:

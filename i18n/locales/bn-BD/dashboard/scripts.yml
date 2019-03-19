@@ -783,6 +783,8 @@ bn:
               name: ইন্টারনেট
             Relay Programming:
               name: রিলে-স্যুইচ প্রোগ্রামিং
+            Graph Paper Programming:
+              name: ছক-কাগজে প্রোগ্রামিং
         courseb-2018:
           assignment_family_title: কোর্স B
         coursed-2018:
@@ -867,6 +869,8 @@ bn:
               name: কার্ড সঙ্গে শর্ত
             The Artist:
               name: শিল্পী
+            Internet:
+              name: ইন্টারনেট
         coursed-2019:
           stages:
             Relay Programming:
@@ -899,3 +903,34 @@ bn:
           stages:
             'null':
               name: 'শূন্য'
+        pre-express-2019:
+          stages:
+            Spelling Bee:
+              name: বানান মৌমাছি
+        csd2-2019:
+          stages:
+            Lists:
+              name: তালিকা
+        csd3-2019:
+          description_short: "প্রোগ্রামিং"
+          stages:
+            Variables:
+              name: চলকগুলো
+            Conditionals:
+              name: শর্তযুক্ত
+            Functions:
+              name: ফাংশনগুলি
+        csp1-2019:
+          stages:
+            The Internet:
+              name: ইন্টারনেট
+        csp3-2019:
+          description_short: প্রোগ্রামিং
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: সাধারণ এনক্রিপশন
+        csp5-2019:
+          stages:
+            While Loops:
+              name: হোয়াইল লুপ

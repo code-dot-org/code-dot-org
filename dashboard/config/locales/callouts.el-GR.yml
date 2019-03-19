@@ -64,6 +64,17 @@ el:
           στην συνάρτή σου
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Προσθέστε το νέο σας χορευτή εδώ
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Νέο μπλοκ*!
+        dance_callout_11_b: Νέο μπλοκ*!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
       Dance_Party_01_callout:
@@ -201,6 +212,8 @@ el:
         craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
       Overworld Place Wall_2019_callout:
         craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
+      Ryan_Demo_callout:
+        dance_callout_02: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να
           προσθέσεις μία εντολή για να προχωρήσεις μπροστά;

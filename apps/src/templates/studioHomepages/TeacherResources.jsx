@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ImageResourceCard from './ImageResourceCard';
 import ContentContainer from '../ContentContainer';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import styleConstants from '../../styleConstants';
 
@@ -10,21 +10,18 @@ const contentWidth = styleConstants['content-width'];
 const styles = {
   container: {
     width: contentWidth,
-    display: "flex",
-    justifyContent: "space-between",
+    display: 'flex',
+    justifyContent: 'space-between',
     flexWrap: 'wrap'
-  },
+  }
 };
 
 export default class TeacherResources extends Component {
   render() {
-    const planUrl = pegasus('/teacher-dashboard#/plan');
     const volunteerUrl = pegasus('/volunteer/local');
 
     return (
-      <ContentContainer
-        heading={i18n.resources()}
-      >
+      <ContentContainer heading={i18n.resources()}>
         <div style={styles.container}>
           <ImageResourceCard
             title={i18n.teacherCommunity()}
@@ -45,7 +42,7 @@ export default class TeacherResources extends Component {
             description={i18n.standardsAndFrameworkDescription()}
             image="standards-framework"
             buttonText={i18n.reviewDocuments()}
-            link={planUrl}
+            link={pegasus('/lesson_plans')}
           />
           <ImageResourceCard
             title={i18n.findGuestSpeaker()}

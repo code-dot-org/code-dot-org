@@ -42,7 +42,7 @@
     "CONTROLS_FOREACH_TOOLTIP": "リストの各項目に対してアイテムに変数 '%1' を設定し、いくつかのステートメントをしてください。",
     "CONTROLS_FOR_HELPURL": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "%1から%2まで%3ずつ",
-    "CONTROLS_FOR_INPUT_WITH": "まつ",
+    "CONTROLS_FOR_INPUT_WITH": "くりかえす",
     "CONTROLS_FOR_TOOLTIP": "変数%1は、始めの数字から終わりの数字まで指定した間隔で値をとり、指定したブロックを実行します。",
     "CONTROLS_IF_ELSEIF_TOOLTIP": "「もし」ブロックに条件を追加します。",
     "CONTROLS_IF_ELSE_TOOLTIP": "Ifブロックに、すべてをキャッチする条件を追加。",
@@ -161,7 +161,7 @@
     "LISTS_SET_INDEX_HELPURL": "\nhttps://code.google.com/p/blockly/wiki/Lists#in_list_..._set\n",
     "LISTS_SET_INDEX_INPUT_TO": "として",
     "LISTS_SET_INDEX_INSERT": "挿入します。",
-    "LISTS_SET_INDEX_SET": "セット",
+    "LISTS_SET_INDEX_SET": "セットする",
     "LISTS_SET_INDEX_TOOLTIP_INSERT_FIRST": "リストの先頭に項目を挿入します。",
     "LISTS_SET_INDEX_TOOLTIP_INSERT_FROM_END": "リスト内の指定位置に項目を挿入します。＃ 1 は、最後の項目です。",
     "LISTS_SET_INDEX_TOOLTIP_INSERT_FROM_START": "リスト内の指定位置に項目を挿入します。＃ 1 は、最初の項目です。",
@@ -387,6 +387,6 @@
     "VARIABLES_SET_CREATE_GET": "「%1から取得」 を作成",
     "VARIABLES_SET_HELPURL": "",
     "VARIABLES_SET_TAIL": "は",
-    "VARIABLES_SET_TITLE": "セット",
+    "VARIABLES_SET_TITLE": "セットする",
     "VARIABLES_SET_TOOLTIP": "この変数を入力と等しくなるように設定します。"
 }

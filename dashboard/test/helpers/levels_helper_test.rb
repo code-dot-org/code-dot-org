@@ -51,37 +51,49 @@ class LevelsHelperTest < ActionView::TestCase
 
     I18n.locale = default_locale
     options = blockly_options
-    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: default_locale), options[:level]['instructions']
+    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: default_locale), options[:level]['shortInstructions']
 
     reset_view_options
 
     I18n.locale = new_locale
     options = blockly_options
-    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: new_locale), options[:level]['instructions']
+    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: new_locale), options[:level]['shortInstructions']
   end
 
   test "custom level displays english instruction" do
     default_locale = 'en-US'
-    @level = Level.find_by_name 'frozen line'
+    @level.short_instructions = "English instructions"
 
     I18n.locale = default_locale
     options = blockly_options
-    assert_equal @level.short_instructions, options[:level]['instructions']
+    refute_nil options[:level]['shortInstructions']
+    assert_equal @level.short_instructions, options[:level]['shortInstructions']
   end
 
   test "custom level displays localized instruction if exists" do
+    @level.short_instructions = "English instructions"
     new_locale = 'es-ES'
+    new_instructions = "Spanish instructions"
 
     I18n.locale = new_locale
-    @level = Level.find_by_name 'frozen line'
+    custom_i18n = {
+      "data" => {
+        "short_instructions" => {
+          @level.name => new_instructions
+        }
+      }
+    }
+    I18n.backend.store_translations new_locale, custom_i18n
+    assert_equal new_instructions, I18n.t("data.short_instructions.#{@level.name}", locale: new_locale)
+
     options = blockly_options
-    assert_equal I18n.t("data.short_instructions.#{@level.name}", locale: new_locale), options[:level]['instructions']
+    assert_equal new_instructions, options[:level]['shortInstructions']
 
     reset_view_options
 
     @level.update(name: 'this_level_doesnt_exist')
     options = blockly_options
-    assert_equal @level.short_instructions, options[:level]['instructions']
+    assert_equal @level.short_instructions, options[:level]['shortInstructions']
   end
 
   test "get video choices" do

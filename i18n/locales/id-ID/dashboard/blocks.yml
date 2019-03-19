@@ -351,6 +351,11 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': ketika
+            '"while"': Selagi
       gamelab_debugSprite:
         options:
           VAL:
@@ -373,6 +378,26 @@ id:
         text: menyembunyikan judul layar
       gamelab_joystickDirection:
         text: Arah joystick
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': ketika
+            '"while"': Selagi
+          KEY:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': luar angkasa
+            '"x"': x
+            '"y"': 'y'
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': Kisi
+            '"row"': baris
+            '"column"': kolom
+            '"random"': acak
       gamelab_locationConstant:
         options:
           DIR:
@@ -415,6 +440,10 @@ id:
         text: warna acak
       gamelab_secondTouched:
         text: Sentuhan kedua sprite
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': kota
       gamelab_setPosition:
         options:
           POSITION:
@@ -434,6 +463,11 @@ id:
           PROPERTY:
             '"scale"': ukuran
             '"height"': tinggi
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': ketika
+            '"while"': Selagi
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -632,7 +666,7 @@ id:
         text: Tengah
       Vector_vectorNorth:
         text: Utara
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': ukuran
@@ -640,14 +674,54 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
-      aalab_spritesWhere:
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': ketika
+            '"while"': Selagi
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': ketika
+            '"while"': Selagi
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': ketika
+            '"while"': Selagi
+          KEY:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': luar angkasa
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': kota
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': Benar
+            '"false"': Salah
+      aalab_setProp:
         options:
           PROPERTY:
             '"scale"': ukuran
+            '"rotation"': Perputaran
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
             '"tint"': Mewarnai
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': selamanya
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': tampilkan
+            '"hide"': Sembunyikan
       binary_move:
         options:
           DIR:

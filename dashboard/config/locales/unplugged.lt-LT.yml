@@ -313,3 +313,23 @@ lt:
         desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
           bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
           kalbama apie informatiką ir algoritmų svarbą joje.
+      PlantASeed_2019:
+        title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+          pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
+      UnplugHappyMaps_2019:
+        title: Laimingieji žemėlapiai
+        desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
+          veikėją per labirintą, naudodami vieną komandą.
+      GoingPlacesSafely_2019:
+        title: Saugus naršymas internete
+        desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko,
+          kaip būti saugiam naršant internete.
+      MoveItMoveIt_2019:
+        title: Judėk, judėk
+      DigitalFootprint_2019:
+        title: Virtualūs pirštų antspaudai
+        desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą
+          apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų
+          galima sekti ir tai gali turėti pasėkmių.

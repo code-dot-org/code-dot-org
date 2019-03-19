@@ -1,4 +1,6 @@
 class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
+  include Pd::Application::ActiveApplicationModels
+
   attributes(
     :id,
     :type,
@@ -9,7 +11,6 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
     :email,
     :assigned_workshop,
     :registered_workshop,
-    :accepted_teachercon,
     :assigned_fit,
     :registered_fit,
     :accepted_fit,
@@ -38,14 +39,6 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
     object.try(:registered_workshop?)
   end
 
-  def teachercon_assigned_at_registration
-    tc_registration.try(:teachercon_city)
-  end
-
-  def accepted_teachercon
-    tc_registration.try(:accepted_seat_simplified)
-  end
-
   def assigned_fit
     object.try(:fit_workshop_date_and_location)
   end
@@ -55,11 +48,11 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
   end
 
   def fit_assigned_at_registration
-    object.try(:pd_fit_weekend1819_registration).try(:fit_city)
+    object.try(FIT_WEEKEND_REGISTRATION_FACTORY).try(:fit_city)
   end
 
   def accepted_fit
-    object.try(:pd_fit_weekend1819_registration).try(:accepted_seat_simplified)
+    object.try(FIT_WEEKEND_REGISTRATION_FACTORY).try(:accepted_seat_simplified)
   end
 
   def role
@@ -79,21 +72,6 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
   end
 
   def form_data
-    if @scope[:view] == 'teachercon'
-      if object.is_a? Pd::Teachercon1819Registration
-        object.form_data_hash
-      else
-        object.try(:pd_teachercon1819_registration).try(:form_data_hash)
-      end
-    else # fit
-      object.try(:pd_fit_weekend1819_registration).try(:form_data_hash)
-    end
-  end
-
-  private
-
-  def tc_registration
-    # object is either an application (with possibly a linked TC registration), or itself a TC registration
-    object.try(:pd_teachercon1819_registration) || object
+    object.try(FIT_WEEKEND_REGISTRATION_SYMBOL).try(:form_data_hash)
   end
 end

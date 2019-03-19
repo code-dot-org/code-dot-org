@@ -33,16 +33,25 @@ ru:
         grid: Нажмите здесь, чтобы показать сетку.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Нажмите здесь, чтобы показать сетку.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: Нажмите здесь, чтобы показать сетку.
       CSD U3 Variables Predict Where XY_callout:
         grid: Нажмите здесь, чтобы показать сетку.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Нажмите здесь, чтобы показать сетку.
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: Нажмите здесь, чтобы показать сетку.
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Поменяйте число здесь
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Поменяйте число здесь
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Перетащите этот блок в область кода.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 ellipse_callout:
@@ -51,10 +60,16 @@ ru:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Перетащите этот блок в область кода.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 my-rect_callout:
@@ -65,27 +80,40 @@ ru:
         CSD_U3_rect_c2: Здесь находится кнопка «Запустить».
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Вот код
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Вот код
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
+      CSD U3 sequence_2019_callout:
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Добавь свой код здесь
       CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Добавь свой код здесь
+      CSD U6 colorLeds intensity_2019_callout:
         CSDU6L10_rainbow: Добавь свой код здесь
       CSD U6 light show predict_callout:
         CSDUDL03P09: Что делает эта линия?
       CSD U6 light show predict_2018_callout:
         CSDUDL03P09: Что делает эта линия?
+      CSD U6 light show predict_2019_callout:
+        CSDUDL03P09: Что делает эта линия?
       CSD U6 light show_callout:
         CSDUDL03P09: Что делает эта линия?
       CSD U6 light show_2018_callout:
         CSDUDL03P09: Что делает эта линия?
+      CSD U6 light show_2019_callout:
+        CSDUDL03P09: Что делает эта линия?
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Проверьте, если игрок выиграл
       CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Проверьте, если игрок выиграл
+      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Проверьте, если игрок выиграл
       Counting_callout:
         New Play Lab Project_callout1: Выберите категорию, чтобы увидеть блоки, которые
@@ -191,6 +219,17 @@ ru:
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Этот блок позволяет Вам выбрать почти любой цвет, который
           Вам хочется! Попробуйте разные значения и посмотрите что из этого получится!
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Добавьте этот блок в вашу программу!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Добавьте этот блок в вашу программу!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Добавьте этот блок в вашу программу!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Добавьте нового танцора здесь
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Новый блок!
+        dance_callout_11_b: Новый блок!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Используй стрелки для перемещения персонажа
       CourseF_PlayLab_vars10_callout:
@@ -416,6 +455,8 @@ ru:
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
           свой цветок. Вам вовсе не нужно проверять для этого соты.
+      Ryan_Demo_callout:
+        dance_callout_02: Добавьте этот блок в вашу программу!
       SG U3L08 how to add comments_callout:
         comment_highlight: Перетащить блок с комментариями в ваш код
       SGU3L2A Introducing Subgoals_callout:
@@ -432,6 +473,8 @@ ru:
       U3L08 how to add comments_callout:
         comment_highlight: Перетащить блок с комментариями в ваш код
       U3L08 how to add comments_2018_callout:
+        comment_highlight: Перетащить блок с комментариями в ваш код
+      U3L08 how to add comments_2019_callout:
         comment_highlight: Перетащить блок с комментариями в ваш код
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Этот код проверит наличие лавы, можешь добавить
@@ -491,10 +534,16 @@ ru:
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Эти числа показывают вам, как много блоков вы можете
           использовать в этой задаче.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: Эти числа показывают вам, как много блоков вы можете
+          использовать в этой задаче.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Это число означает, что только один вид блоков может
           быть использован в итоговом ответе.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: Это число означает, что только один вид блоков может
+          быть использован в итоговом ответе.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: Это число означает, что только один вид блоков может
           быть использован в итоговом ответе.
       courseA_artist_loops7_forVideo_callout:
@@ -506,10 +555,16 @@ ru:
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
           Не волнуйтесь, мы покажем как их использовать позже.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Эти числа показывают вам, как много блоков вы
           можете использовать в этой задаче.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Эти числа показывают вам, как много блоков вы
+          можете использовать в этой задаче.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: Эти числа показывают вам, как много блоков вы
           можете использовать в этой задаче.
       courseA_collector_preLoops2_callout:
@@ -539,10 +594,16 @@ ru:
       courseB_Scrat_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: После соединения всех блоков нажми "Выполнить",
           чтобы запустить свою программу.
+      courseB_Scrat_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: После соединения всех блоков нажми "Выполнить",
+          чтобы запустить свою программу.
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
           Не волнуйтесь, мы покажем как их использовать позже.
       courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
+      courseB_collector_loops1_2019_callout:
         courseB_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
           Не волнуйтесь, мы покажем как их использовать позже.
       courseC_collector_prog1_callout:

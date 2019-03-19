@@ -470,3 +470,23 @@ ga:
         desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil,
           ag úsáid eitleán páipéir mar shampla. Díríonn sé ar an ríomheolaíocht níos
           ginearálta, agus an ról tábhachtach a imríonn algartaim inti.
+      PlantASeed_2019:
+        title: 'Algartaim Fhíorshaoil: Síol a Chur'
+        desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil,
+          ag úsáid cur síl mar shampla. Díríonn sé ar an ríomheolaíocht níos ginearálta,
+          agus an ról tábhachtach a imríonn algartaim inti.
+      UnplugHappyMaps_2019:
+        title: Mapaí Meidhreacha
+        desc: Cruthóidh na daltaí algartaim shimplí (treoracha) chun carachtar a threorú
+          trí chathair ghríobháin le hordú amháin.
+      GoingPlacesSafely_2019:
+        title: Ag Taisteal Slán Sábháilte
+        desc: Tá an tIdirlíon cumhachtach, ach uaireanta contúirteach freisin. Foghlaimeoidh
+          na daltaí conas is féidir fanacht slán sábháilte ar an Idirlíon.
+      MoveItMoveIt_2019:
+        title: Bog é, Bog é
+      DigitalFootprint_2019:
+        title: Do Lorg Digiteach
+        desc: Foghlaimeoidh na daltaí go bhfágann siad "lorg digiteach" nuair a chuireann
+          siad faisnéis fúthu féin ar líne, agus go mbaineann torthaí leis an lorg
+          digiteach seo.

@@ -1144,6 +1144,8 @@ sr:
               name: Crowdsourcing
             Relay Programming:
               name: Relay programming
+            Graph Paper Programming:
+              name: Графиконско - Папирно Програмирање
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1244,6 +1246,10 @@ sr:
               name: Услови са картама
             The Artist:
               name: Уметник
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing
         coursed-2019:
           stages:
             Relay Programming:
@@ -1296,3 +1302,52 @@ sr:
               name: 'Стварни алгоритми: Папирни авиони'
             Binary Bracelets:
               name: Бинарне наруквице
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Прави алгоритми: Засади семе'
+            Going Places Safely:
+              name: Сигурна путања
+        courseb-2019:
+          stages:
+            Your Digital Footprint:
+              name: Твој дигитални траг
+        pre-express-2019:
+          stages:
+            Your Digital Footprint:
+              name: Твој дигитални траг
+            Spelling Bee:
+              name: Пчелица словарица
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Прави алгоритми: Засади семе'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Листе
+        csd3-2019:
+          description_short: Programming
+          stages:
+            Variables:
+              name: Променљиве
+            Conditionals:
+              name: Кондиционали
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Функције са параметрима
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Интернет
+        csp3-2019:
+          description_short: Programming
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Понављања са условима

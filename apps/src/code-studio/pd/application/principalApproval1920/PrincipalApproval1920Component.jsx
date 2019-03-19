@@ -1,26 +1,58 @@
 import React from 'react';
-import {FormGroup, Row, Col, ControlLabel} from "react-bootstrap";
+import {FormGroup, Row, Col, ControlLabel} from 'react-bootstrap';
 import {
   PageLabels,
   TextFields
 } from '@cdo/apps/generated/pd/principalApproval1920ApplicationConstants';
 import LabeledFormComponent from '../../form_components/LabeledFormComponent';
+import PrivacyDialog from '../PrivacyDialog';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
 import {styles} from '../teacher1920/TeacherApplicationConstants';
 
-const MANUAL_SCHOOL_FIELDS = ['schoolName', 'schoolAddress', 'schoolCity',
-  'schoolState', 'schoolZipCode', 'schoolType'];
-const RACE_LIST = ['white', 'black', 'hispanic', 'asian', 'pacificIslander', 'americanIndian', 'other'];
-const REQUIRED_SCHOOL_INFO_FIELDS = ['planToTeach', 'school', 'totalStudentEnrollment',
-  'freeLunchPercent', ...RACE_LIST, 'committedToMasterSchedule', 'replaceCourse', 'committedToDiversity',
-  'understandFee', 'payFee', 'howHeard'
+const MANUAL_SCHOOL_FIELDS = [
+  'schoolName',
+  'schoolAddress',
+  'schoolCity',
+  'schoolState',
+  'schoolZipCode',
+  'schoolType'
+];
+const RACE_LIST = [
+  'white',
+  'black',
+  'hispanic',
+  'asian',
+  'pacificIslander',
+  'americanIndian',
+  'other'
+];
+const REQUIRED_SCHOOL_INFO_FIELDS = [
+  'planToTeach',
+  'school',
+  'totalStudentEnrollment',
+  'freeLunchPercent',
+  ...RACE_LIST,
+  'committedToMasterSchedule',
+  'replaceCourse',
+  'committedToDiversity',
+  'understandFee',
+  'payFee'
 ];
 // Since the rails model allows empty principal approvals as placeholders, we require these fields here
-const ALWAYS_REQUIRED_FIELDS = ["doYouApprove", "firstName", "lastName", "email", "confirmPrincipal"];
-const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd'];
+const ALWAYS_REQUIRED_FIELDS = [
+  'doYouApprove',
+  'firstName',
+  'lastName',
+  'email',
+  'confirmPrincipal'
+];
+const REPLACE_COURSE_FIELDS = [
+  'replaceWhichCourseCsp',
+  'replaceWhichCourseCsd'
+];
 const IMPLEMENTATION_FIELDS = ['csdImplementation', 'cspImplementation'];
-const YEAR = "2019-20";
+const YEAR = '2019-20';
 
 export default class PrincipalApproval1920Component extends LabeledFormComponent {
   static labels = PageLabels;
@@ -33,11 +65,27 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     'planToTeach',
     'committedToMasterSchedule',
     'committedToDiversity',
-    'howHeard'
+    'contactInvoicing',
+    'contactInvoicingDetail'
   ];
 
   handleSchoolChange = selectedSchool => {
     this.handleChange({school: selectedSchool && selectedSchool.value});
+  };
+
+  state = {
+    isPrivacyDialogOpen: false
+  };
+
+  openPrivacyDialog = event => {
+    // preventDefault so clicking this link inside the label doesn't
+    // also check the checkbox.
+    event.preventDefault();
+    this.setState({isPrivacyDialogOpen: true});
+  };
+
+  handleClosePrivacyDialog = () => {
+    this.setState({isPrivacyDialogOpen: false});
   };
 
   renderSchoolSection() {
@@ -47,7 +95,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         <FormGroup
           id="school"
           controlId="school"
-          validationState={this.getValidationState("school")}
+          validationState={this.getValidationState('school')}
         >
           <Row>
             <Col md={6}>
@@ -66,33 +114,37 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
             </Col>
           </Row>
         </FormGroup>
-        {
-          this.props.data.school && this.props.data.school === '-1' &&
+        {this.props.data.school && this.props.data.school === '-1' && (
           <div style={styles.indented}>
-            {this.inputFor("schoolName")}
-            {this.inputFor("schoolAddress")}
-            {this.inputFor("schoolCity")}
-            {this.selectFor("schoolState", {placeholder: "Select a state"})}
-            {this.inputFor("schoolZipCode")}
-            {this.radioButtonsFor("schoolType")}
+            {this.inputFor('schoolName')}
+            {this.inputFor('schoolAddress')}
+            {this.inputFor('schoolCity')}
+            {this.selectFor('schoolState', {placeholder: 'Select a state'})}
+            {this.inputFor('schoolZipCode')}
+            {this.radioButtonsFor('schoolType')}
           </div>
-        }
+        )}
       </div>
     );
   }
 
   renderSchoolInfoSection() {
-    const planToTeachOther = 'I don’t know if they will teach this course (Please Explain):';
+    const planToTeachOther =
+      'I don’t know if they will teach this course (Please Explain):';
     return (
       <div>
-        {
-          this.radioButtonsWithAdditionalTextFieldsFor('planToTeach', {
-            [planToTeachOther] : "other"
-          }, {
-            label: `Is ${this.props.teacherApplication.name} planning to teach this course in
-                    the ${YEAR} school year?`,
-          })
-        }
+        {this.radioButtonsWithAdditionalTextFieldsFor(
+          'planToTeach',
+          {
+            [planToTeachOther]: 'other'
+          },
+          {
+            label: `Is ${
+              this.props.teacherApplication.name
+            } planning to teach this course in
+                    the ${YEAR} school year?`
+          }
+        )}
         {this.renderSchoolSection()}
         {this.inputFor('totalStudentEnrollment')}
         {this.numberInputFor('freeLunchPercent', {
@@ -103,69 +155,88 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         <p style={styles.questionText}>
           Percentage of student enrollment by race
         </p>
-        {
-          RACE_LIST.map(race => {
-            return this.numberInputFor(race, {
-              inlineControl: true,
-              labelWidth: { md: 3 },
-              controlWidth: { md: 2 },
-              min: 0,
-              max: 100,
-              step: 1
-            });
-          })
-        }
-        {
-          this.radioButtonsWithAdditionalTextFieldsFor('committedToMasterSchedule', {
-            [TextFields.otherWithText]: "other"
-          }, {
-            label: `Are you committed to including ${this.props.teacherApplication.course}
-                    on the master schedule in ${YEAR} if ${this.props.teacherApplication.name}
+        {RACE_LIST.map(race => {
+          return this.numberInputFor(race, {
+            inlineControl: true,
+            labelWidth: {md: 3},
+            controlWidth: {md: 2},
+            min: 0,
+            max: 100,
+            step: 1
+          });
+        })}
+        {this.radioButtonsWithAdditionalTextFieldsFor(
+          'committedToMasterSchedule',
+          {
+            [TextFields.otherWithText]: 'other'
+          },
+          {
+            label: `Are you committed to including ${
+              this.props.teacherApplication.course
+            }
+                    on the master schedule in ${YEAR} if ${
+              this.props.teacherApplication.name
+            }
                     is accepted into the program? Note: the program may be listed under a different
                     course name as determined by your district.`
-          })
-        }
+          }
+        )}
         {this.radioButtonsWithAdditionalTextFieldsFor('replaceCourse', {
-          [TextFields.dontKnowExplain] : "other"
+          [TextFields.dontKnowExplain]: 'other'
         })}
-        {
-          this.props.data.replaceCourse === TextFields.yesReplaceExistingCourse && this.renderCourseReplacementSection()
-        }
+        {this.props.data.replaceCourse ===
+          TextFields.yesReplaceExistingCourse &&
+          this.renderCourseReplacementSection()}
         {this.renderImplementationSection()}
-        {
-          this.radioButtonsWithAdditionalTextFieldsFor('committedToDiversity', {
-            [TextFields.otherPleaseExplain] : "other"
-          }, {
+        {this.radioButtonsWithAdditionalTextFieldsFor(
+          'committedToDiversity',
+          {
+            [TextFields.otherPleaseExplain]: 'other'
+          },
+          {
             label: `A key part of Code.org's mission is to increase and diversify participation
                     in computer science, especially among female students and underrepresented
                     minorities. To that end, do you commit to recruiting and enrolling a diverse
                     group of students in this course, representative of the overall demographics
                     of your school?`
-          })
-        }
+          }
+        )}
         <p style={styles.questionText}>
-          There may be a fee associated with your teacher’s professional learning program.
-          Please <a href="https://code.org/educate/professional-learning/program-information" target="_blank">
-          check here</a> to see if there are fees for your teacher’s professional learning
-          program and/or if there are scholarships available in your region.
+          There may be scholarships available in your region to cover the cost
+          of the program.{' '}
+          <a
+            href={
+              'https://code.org/educate/professional-learning/program-information' +
+              (!!this.props.data.schoolZipCode
+                ? '?zip=' + this.props.data.schoolZipCode
+                : '')
+            }
+            target="_blank"
+          >
+            Click here to check the fees and discounts for your program
+          </a>
+          . Let us know if your school would be able to pay the fee or if you
+          need to be considered for a scholarship.
         </p>
         <div>
           {this.singleCheckboxFor('understandFee')}
           {this.radioButtonsFor('payFee')}
+          {this.inputFor('contactInvoicing', {required: false})}
+          {this.inputFor('contactInvoicingDetail', {required: false})}
         </div>
-        {this.checkBoxesWithAdditionalTextFieldsFor('howHeard', {
-          [TextFields.otherWithText] : "other"
-        }, {
-          label:
-            <span style={styles.questionText}>How did you hear about Code.org’s Professional Learning program? (To see a list of local Regional
-              Partners, <a href="https://code.org/educate/professional-learning/about-partners" target="_blank">visit this page</a>.)
-            </span>
-        })}
-        {this.props.teacherApplication.course === 'Computer Science Principles' &&
+        {this.props.teacherApplication.course ===
+          'Computer Science Principles' && (
           <div>
             <p style={styles.questionText}>
-              If you are planning to offer CS Principles as an AP course, please review
-              the <a href="https://code.org/csp/ap-score-sharing-agreement" target="_blank">AP Score Sharing Agreement</a>.
+              If you are planning to offer CS Principles as an AP course, please
+              review the{' '}
+              <a
+                href="https://code.org/csp/ap-score-sharing-agreement"
+                target="_blank"
+              >
+                AP Score Sharing Agreement
+              </a>
+              .
             </p>
             {this.singleCheckboxFor('shareApScores', {
               required: false,
@@ -175,58 +246,72 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
               tied to individual students, will not be used to evaluate teachers, and will greatly
               help Code.org evaluate its program effectiveness.`
             })}
-            <br/>
-            <br/>
+            <br />
+            <br />
           </div>
-        }
-        <p>
-          Code.org works closely with local Regional Partners to organize and deliver the Professional
-          Learning Program. By submitting their application to the professional learning program,
-          teachers have agreed to allow Code.org to share information on how they use Code.org and the
-          Professional Learning resources with their Regional Partner and school district. In order to
-          organize the workshops and support teachers, our partners need to know who is attending and
-          what content is relevant for them. So, we will share teachers’ contact information, which
-          courses/units they are using in their classrooms and aggregate data about their classes. This
-          includes the number of students in their classes, the demographic breakdown of their classroom,
-          and the name of their school and district. We will not share any information about individual
-          students with our Regional Partners - all information will be de-identified and aggregated. Our
-          Regional Partners are contractually obliged to treat this information with the same level of
-          confidentiality as Code.org. To see Code.org’s complete Privacy Policy,
-          visit <a href="http://code.org/privacy" target="_blank">http://code.org/privacy</a>.
-        </p>
+        )}
       </div>
     );
   }
 
   renderCourseReplacementSection() {
-    if (this.props.teacherApplication.course === 'Computer Science Discoveries') {
-      return this.checkBoxesWithAdditionalTextFieldsFor('replaceWhichCourseCsd', {
-        [TextFields.otherPleaseExplain] : "other"
-      });
-    } else if (this.props.teacherApplication.course === 'Computer Science Principles') {
-      return this.checkBoxesWithAdditionalTextFieldsFor('replaceWhichCourseCsp',{
-        [TextFields.otherPleaseExplain] : "other"
-      });
+    if (
+      this.props.teacherApplication.course === 'Computer Science Discoveries'
+    ) {
+      return this.checkBoxesWithAdditionalTextFieldsFor(
+        'replaceWhichCourseCsd',
+        {
+          [TextFields.otherPleaseExplain]: 'other'
+        }
+      );
+    } else if (
+      this.props.teacherApplication.course === 'Computer Science Principles'
+    ) {
+      return this.checkBoxesWithAdditionalTextFieldsFor(
+        'replaceWhichCourseCsp',
+        {
+          [TextFields.otherPleaseExplain]: 'other'
+        }
+      );
     }
   }
 
   renderImplementationSection() {
-    const questionLabel = (<span>To participate in Code.org’s {this.props.teacherApplication.course} Professional
-                  Learning Program, we require that this course be offered in one of the following
-                  ways. Please select which option will be implemented at your school. Be sure
-                  to <a href="https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18" target="_blank">
-                  review the guidance on required number of hours here</a> prior to answering.</span>);
-    const otherLabel = "We will use a different implementation schedule. (Please Explain):";
+    const questionLabel = (
+      <span>
+        To participate in Code.org’s {this.props.teacherApplication.course}{' '}
+        Professional Learning Program, we require that this course be offered in
+        one of the following ways. Please select which option will be
+        implemented at your school. Be sure to{' '}
+        <a
+          href="https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18"
+          target="_blank"
+        >
+          review the guidance on required number of hours here
+        </a>{' '}
+        prior to answering.
+      </span>
+    );
+    const otherLabel =
+      'We will use a different implementation schedule. (Please Explain):';
 
-    if (this.props.teacherApplication.course === 'Computer Science Discoveries') {
-      return this.radioButtonsWithAdditionalTextFieldsFor('csdImplementation', {
-          [otherLabel] : 'other'
+    if (
+      this.props.teacherApplication.course === 'Computer Science Discoveries'
+    ) {
+      return this.radioButtonsWithAdditionalTextFieldsFor(
+        'csdImplementation',
+        {
+          [otherLabel]: 'other'
         },
         {label: questionLabel}
       );
-    } else if (this.props.teacherApplication.course === 'Computer Science Principles') {
-      return this.radioButtonsWithAdditionalTextFieldsFor('cspImplementation', {
-          [otherLabel] : 'other'
+    } else if (
+      this.props.teacherApplication.course === 'Computer Science Principles'
+    ) {
+      return this.radioButtonsWithAdditionalTextFieldsFor(
+        'cspImplementation',
+        {
+          [otherLabel]: 'other'
         },
         {label: questionLabel}
       );
@@ -234,40 +319,72 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   }
 
   render() {
-    const courseSuffix = this.props.teacherApplication.course === 'Computer Science Discoveries' ? 'csd' : 'csp';
+    const courseSuffix =
+      this.props.teacherApplication.course === 'Computer Science Discoveries'
+        ? 'csd'
+        : 'csp';
     return (
       <FormGroup>
         <p>
-          A teacher at your school, {this.props.teacherApplication.name}, has applied to be a part of{' '}
-          <a href="https://code.org/educate/professional-learning-2019" target="_blank">Code.org’s Professional Learning Program</a>
-          {' '}in order to teach the{' '}
-          <a href={`https://code.org/educate/${courseSuffix}`} target="_blank">{this.props.teacherApplication.course} curriculum</a>
-          {' '}during the {YEAR} school year. Your approval is required for the teacher’s application to be considered.
+          A teacher at your school, {this.props.teacherApplication.name}, has
+          applied to be a part of{' '}
+          <a
+            href="https://code.org/educate/professional-learning-2019"
+            target="_blank"
+          >
+            Code.org’s Professional Learning Program
+          </a>{' '}
+          in order to teach the{' '}
+          <a href={`https://code.org/educate/${courseSuffix}`} target="_blank">
+            {this.props.teacherApplication.course} curriculum
+          </a>{' '}
+          during the {YEAR} school year. Your approval is required for the
+          teacher’s application to be considered.
         </p>
-        {
-          this.selectFor('title', {
-            required: false,
-            placeholder: 'Select a title',
-          })
-        }
+        {this.selectFor('title', {
+          required: false,
+          placeholder: 'Select a title'
+        })}
         {this.inputFor('firstName')}
         {this.inputFor('lastName')}
         {this.inputFor('email')}
         <p>Teachers in this program are required to participate in both:</p>
         <ul>
           <li>One five-day, in-person summer workshop in 2019</li>
-          <li>Up to four one-day, in-person local workshops during the 2019-20 school year (typically held on Saturdays)</li>
+          <li>
+            Up to four one-day, in-person local workshops during the 2019-20
+            school year (typically held on Saturdays)
+          </li>
         </ul>
-        {
-          this.radioButtonsWithAdditionalTextFieldsFor('doYouApprove', {
-            [TextFields.otherWithText]: "other"
-          }, {
-            label: `Do you approve of ${this.props.teacherApplication.name} participating
-                    in Code.org's ${YEAR} Professional Learning Program?`,
-          })
-        }
-        {this.props.data.doYouApprove !== 'No' && this.renderSchoolInfoSection()}
-        {this.singleCheckboxFor('confirmPrincipal')}
+        {this.radioButtonsWithAdditionalTextFieldsFor(
+          'doYouApprove',
+          {
+            [TextFields.otherWithText]: 'other'
+          },
+          {
+            label: `Do you approve of ${
+              this.props.teacherApplication.name
+            } participating
+                    in Code.org's ${YEAR} Professional Learning Program?`
+          }
+        )}
+        {this.props.data.doYouApprove !== 'No' &&
+          this.renderSchoolInfoSection()}
+
+        <label className="control-label">Submit your approval</label>
+        {this.singleCheckboxFor('confirmPrincipal', {
+          label: (
+            <span>
+              {this.labelFor('confirmPrincipal')}{' '}
+              <a onClick={this.openPrivacyDialog}>Learn more.</a>
+            </span>
+          )
+        })}
+        <PrivacyDialog
+          show={this.state.isPrivacyDialogOpen}
+          onHide={this.handleClosePrivacyDialog}
+          teacherApproval={false}
+        />
       </FormGroup>
     );
   }
@@ -280,12 +397,12 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
 
     if (data.school && data.school === '-1') {
       requiredFields.push(
-        "schoolName",
-        "schoolAddress",
-        "schoolCity",
-        "schoolState",
-        "schoolZipCode",
-        "schoolType"
+        'schoolName',
+        'schoolAddress',
+        'schoolCity',
+        'schoolState',
+        'schoolZipCode',
+        'schoolType'
       );
     }
 
@@ -317,12 +434,12 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     const formatErrors = {};
 
     if (data.totalStudentEnrollment && !isInt(data.totalStudentEnrollment)) {
-      formatErrors.totalStudentEnrollment = "Must be a valid number";
+      formatErrors.totalStudentEnrollment = 'Must be a valid number';
     }
 
-    ['freeLunchPercent', ...RACE_LIST].forEach((key) => {
+    ['freeLunchPercent', ...RACE_LIST].forEach(key => {
       if (data[key] && !isPercent(data[key])) {
-        formatErrors[key] = "Must be a valid percent between 0 and 100";
+        formatErrors[key] = 'Must be a valid percent between 0 and 100';
       }
     });
 
@@ -338,7 +455,11 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
 
     // Clear out all the form data if the principal rejects the application
     if (data.doYouApprove === 'No') {
-      fieldsToClear.add([...REQUIRED_SCHOOL_INFO_FIELDS, REPLACE_COURSE_FIELDS, IMPLEMENTATION_FIELDS]);
+      fieldsToClear.add([
+        ...REQUIRED_SCHOOL_INFO_FIELDS,
+        REPLACE_COURSE_FIELDS,
+        IMPLEMENTATION_FIELDS
+      ]);
     }
 
     // Clear out school form data if we have a school
@@ -353,7 +474,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
 
     // Sanitize numeric fields (necessary for older browsers that don't
     // automatically enforce numeric inputs)
-    ['freeLunchPercent', ...RACE_LIST].forEach((field) => {
+    ['freeLunchPercent', ...RACE_LIST].forEach(field => {
       changes[field] = parseFloat(data[field]).toString();
     });
 
@@ -361,4 +482,9 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   }
 }
 
-export {ALWAYS_REQUIRED_FIELDS, MANUAL_SCHOOL_FIELDS, REQUIRED_SCHOOL_INFO_FIELDS, RACE_LIST};
+export {
+  ALWAYS_REQUIRED_FIELDS,
+  MANUAL_SCHOOL_FIELDS,
+  REQUIRED_SCHOOL_INFO_FIELDS,
+  RACE_LIST
+};

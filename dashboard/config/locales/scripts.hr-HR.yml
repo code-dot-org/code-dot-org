@@ -1246,6 +1246,8 @@ hr:
               name: Crowdsourcing
             Relay Programming:
               name: Odnosno programiranje
+            Graph Paper Programming:
+              name: Grafičko programiranje
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1364,6 +1366,10 @@ hr:
               name: For Petlja Zabava
             The Artist:
               name: Umjetnik
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         coursed-2019:
           stages:
             Relay Programming:
@@ -1420,3 +1426,55 @@ hr:
               name: 'Algoritmi iz stvarnog života: Papirnati avioni'
             Binary Bracelets:
               name: Binarne narukvice
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+            Going Places Safely:
+              name: Sigurna putovanja
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Pomakni, pomakni
+            Your Digital Footprint:
+              name: Tvoj digitalni trag
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Pomakni, pomakni
+            Your Digital Footprint:
+              name: Tvoj digitalni trag
+            Spelling Bee:
+              name: Slovkanje
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Liste
+        csd3-2019:
+          stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funkcije s parametrima
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Internet
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Stvaranje funkcija
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Petlje s uvjetom

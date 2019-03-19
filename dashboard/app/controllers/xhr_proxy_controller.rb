@@ -57,6 +57,7 @@ class XhrProxyController < ApplicationController
     herokuapp.com
     isenseproject.org
     lakeside-cs.org
+    qrng.anu.edu.au
     quandl.com
     query.yahooapis.com
     rejseplanen.dk
@@ -65,13 +66,16 @@ class XhrProxyController < ApplicationController
     nuevaschool2.ngrok.io
     nuevaschool3.ngrok.io
     numbersapi.com
+    random.org
     rhcloud.com
     runescape.com
     sheets.googleapis.com
     spreadsheets.google.com
+    stats.minecraftservers.org
     swapi.co
     transitchicago.com
     translate.yandex.net
+    vpic.nhtsa.dot.gov
     wikipedia.org
   ).freeze
 

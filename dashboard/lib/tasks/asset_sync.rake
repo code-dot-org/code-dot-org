@@ -44,35 +44,23 @@ Rerun `assets:precompile` to regenerate new assets and try again."
     manifest.compile('application.js')
   end
 
-  desc 'Copy digested assets to non-digested file paths'
-  task no_digests: :environment do
-    # For example, files that look like:
-    #   public/assets/js/some-imagewp<webpack-hash>-<rails-digest>.png
-    # will be copied to
-    #   public/assets/js/some-imagewp<webpack-hash>.png
-    #
-    # this is necessary because webpack doesn't have any knowledge of
-    # the rails digests, so any images that get imported in javascript
-    # will reference the undigested file paths in the production js bundles.
-    # webpack adds its own hash to filenames for imported images to get
-    # cache busting behavior, so there is absolutely no need for the rails
-    # digest to be added to these files. Unfortunately, there is no way to
-    # tell rails which files to digest and which to not digest, so we
-    # have to do this nonsense.
-    assets = Dir.glob("#{dashboard_dir}/public/assets/js/**/*")
-    regex = /(^.*)-\w{32,64}(\.\w+$)/
-    assets.each do |file|
-      next if File.directory?(file) || file !~ regex
-      non_digested = file.gsub(regex, '\1\2')
-      next if File.exist?(non_digested)
-      puts "Copying file #{file} to #{non_digested}"
-      FileUtils.cp(file, non_digested)
+  # Patch Sprockets to skip digesting already-digested webpack ('wp') assets.
+  # Webpack adds its own hash to imported image files and doesn't have any
+  # knowledge of Sprockets digests, so the Sprockets processed-asset digest
+  # path should equal the logical path for these assets.
+  #
+  # This means that the digest for these assets is based on the webpack content
+  # and not the Sprockets-processed output, so the wp-digest will not get
+  # updated if there are any changes to Sprockets processors.
+  module NoDoubleDigest
+    def digest_path
+      logical_path.match?(/wp\h{32}/) ? logical_path : super
     end
   end
+  Sprockets::Asset.prepend NoDoubleDigest
 end
 
 Rake::Task['assets:precompile'].enhance([:record_manifest_files]) do
   Rake::Task['assets:precompile_application_js'].invoke
-  Rake::Task['assets:no_digests'].invoke
   Rake::Task['assets:sync'].invoke if CDO.cdn_enabled
 end

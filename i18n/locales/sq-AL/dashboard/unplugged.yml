@@ -310,3 +310,17 @@ sq:
       PaperPlanes_2019:
         title: 'Algoritmet e Jetës-Reale: Planet në Letër'
         desc: Ky mësim tregon mënyra se si ne të përdorim algoritmat në jetën e përditshme, në mënyrë specifike të të bërit aeroplanë letre. Ky mësim gjithashtu fokusohet në figura më të mëdha të shkencës kompjuterike dhe se si algoritmet luajnë një rol të rëndësishëm.
+      PlantASeed_2019:
+        title: 'Algoritmet e jetës-Reale: Mbill një Farë'
+        desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
+      UnplugHappyMaps_2019:
+        title: Hartat e Gëzuara
+        desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
+      GoingPlacesSafely_2019:
+        title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
+        desc: Interneti është një vend i fuqishëm, por ndonjëherë i rrezikshëm. Mësuesit prezantojnë si të qëndrojmë të sigurtë ndërsa navigojmë në Internet.
+      MoveItMoveIt_2019:
+        title: Lëvize atë, lëvize atë
+      DigitalFootprint_2019:
+        title: Gjurmët e Tua Dixhitale
+        desc: Mësuesit i prezantojnë studentëve idenë që futja e informacionit online rreth vetes krijon një gjurmë dixhitale ose "shteg" që ka pasoja.

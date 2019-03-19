@@ -4,6 +4,8 @@ video_player: true
 theme: responsive
 ---
 
+<link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
+
 <style>
   details summary {
     cursor: pointer;
@@ -11,18 +13,62 @@ theme: responsive
 </style>
 
 # Professional Learning for Middle and High School
+<%= view :professional_learning_apply_banner %>
+<br/>
+<br/>
 
-<div class="col-50" style="padding-right: 20px;">
+<div class="col-50">
+<%= view :regional_partner_zip_form %>
 
+</div>
+<div class="col-50" width="75%" style='padding-top: 10px'>
+<center>
+	<img class="quote-image" src="/images/testimonials/fit-150/twoteachers.jpg">
+	<p class="quote-title">"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."</p>
+</center>
+</div>
+
+
+<div style="clear: both;"></div>
+<%= view :three_circles, circles: [] %>
+
+
+## Why should I apply?
+
+The majority of our workshop attendees rank it the **best professional development ever.** Over 90% of attendees would recommend our program to another teacher. 
+
+**No experience needed!** Whether you are new to teaching computer science (CS) or have experience teaching other CS courses, the Code.org Professional Learning Program offers year round support. We’ve designed this program to promote growth by providing space for you to become comfortable with curricular materials, CS content, and pedagogy.
+
+**Over a third of schools** use Code.org's curriculum, including the largest school districts in the U.S., such as LAUSD, Broward, and Dallas ISD. And, over a quarter of our teachers come from rural schools.
+
+**Proven results** - peer reviewed research shows that school participation in the Code.org program causes an estimated 5x increase in students that take and pass the AP Computer Science Principles exam. 
+
+## Find the right course for your classroom
+
+The program supports teachers with diverse teaching backgrounds as they prepare to teach either of the following courses:
+
+[col-50]
+### [CS Discoveries (Grades 6-10)](/educate/csd)
+
+<div style="width: 96%;">
 <%=view :display_video_thumbnail, id: "intro_csd", video_code: "uQim0hBHco0", play_button: 'center', letterbox: "false" %>
+
+* <a href="https://code.org/educate/csd">An introductory computer science course</a> that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun
+* Can be taught as a 1 or 2 semester course (or 50+ course hours)
 
 </div>
 
+[/col-50]
+
 [col-50]
+### [CS Principles (Grades 9-12)](/educate/csp)
 
 <div style="width: 96%;">
-
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: "false" %>
+
+* <a href="https://code.org/educate/csp">A higher level introductory course</a> that introduces the foundational concepts of computer science while challenging students to explore how computing and technology can impact the world
+* Can be taught as an AP or non-AP class
+* Requires a full year to teach (or 100+ course hours)
 
 </div>
 
@@ -30,47 +76,26 @@ theme: responsive
 
 <div style="clear: both;"></div>
 
-## New to computer science? No worries!
-
-Whether you are new to teaching computer science (CS) or have experience teaching other CS courses, the Code.org Professional Learning Program offers year round support. We’ve designed this program to promote growth by providing space for you to become comfortable with curricular materials, CS content, and pedagogy.
-
-[Check out our professional learning values](/educate/professional-learning/values) for more information about our goals and approach to professional learning. Interested in sharing details about the program with teachers and administrators at your school? <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">Print a flyer!</a>
-
-<a href="https://code.org/educate/professional-learning/program-information"><button>Apply now!</button>
-
-## Find the right course for your classroom
-
-The program supports teachers with diverse teaching backgrounds as they prepare to teach either of the following courses:
-
-[col-50]
-
-### [CS Discoveries (Grades 6-10)](/educate/csd)
-* An introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun
-* Can be taught as a 1 or 2 semester course (or 50+ course hours)
-
-[/col-50]
-
-[col-50]
-
-### [CS Principles (Grades 9-12)](/educate/csp)
-* A higher level introductory course that introduces the foundational concepts of computer science while challenging students to explore how computing and technology can impact the world
-* Can be taught as an AP or non-AP class
-* Requires a full year to teach (or 100+ course hours)
 <br/>
-
-[/col-50]
 
 Teach a different grade level or have fewer hours available with your students? <a href="https://code.org/files/course-pl-options.pdf", target=_"blank">Find the right course for your classroom.</a>
 
-## Program commitments 
-The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Discoveries or CS Principles.
+## Program commitments and schedule
+The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Discoveries or CS Principles. Professional learning workshops will be hosted by our [Regional Partners](/educate/professional-learning/about-partners) beginning in the summer of 2019.
+<%=
+link = "/educate/professional-learning/program-information"
+link += "?nominated=true" if params[:nominated]
+"<a class='linktag' id='pl-apps-open-link' href='#{link}'>**Applications are now open!**</a>"
+%>
+
+
 
 <img src="/images/professional-learning/pl_timeline.png" width="100%"/>
 
 <br/>
 
 <a name="features"></a>
-## Program features
+## What can you expect?
 
 Click on the features below to learn more about what our programs have to offer!
 
@@ -127,36 +152,34 @@ Check out these 3 key benefits of ISTE membership:
 
 </details>
 
+[Check out our professional learning values](/educate/professional-learning/values) for more information about our goals and approach to professional learning. Interested in sharing details about the program with teachers and administrators at your school? <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">Print a flyer!</a>
+
 ## <a name="participate"></a>Who can participate?
 
 The Code.org Professional Learning Program is open to educators who are interested in teaching Code.org courses - no prior computer science experience required! In order to participate in this program, we ask that applicants:
 
-* Commit to participating in the full, year-long professional learning program
+* Commit to participating in the full, year-long professional learning program 
 * Plan to teach the course in the 2019-20 school year
 * For CS Discoveries, teach students between 6th and 10th grade
 * For CS Principles, teach students between 9th and 12th grade
 * Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population
 
-## <a name="cost"></a>When does the program start and what does it cost?
-
-Professional learning workshops will be hosted by our [Regional Partners](/educate/professional-learning/about-partners) beginning in the summer of 2019. **Applications are now available!**
-
-Generous scholarships and grants are available across the country to cover the cost of the program. Costs in each region will be available when applications open.
-
-Enter your school's zip code to learn more.
-
-<%= view :regional_partner_search, source_page_id: "middle-high" %>
-
 ## Have questions?
 
-Along with our Regional Partners, we're here to help!
+<%= view :professional_learning_regional_partner_mini_contact, source_page_id: "middle-high", notes: "Please tell me more about the professional learning program!" %>
 
-Be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vSxBryx0io9I8VE5PtBmmaLaVUlorblmLBmZ9FYLV_sqse86stk_WHidIUjsyCptR7itNfqPrVJlTx0/pub", target=_"blank">Professional Learning Program FAQs</a> or <a href="https://studio.code.org/pd/regional_partner_contact/new">contact your Regional Partner</a>.
+<br/>
+
+And be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vSxBryx0io9I8VE5PtBmmaLaVUlorblmLBmZ9FYLV_sqse86stk_WHidIUjsyCptR7itNfqPrVJlTx0/pub", target=_"blank">Professional Learning Program FAQs</a>.
+
 
 ## Ready to apply?
 
-<a href="https://code.org/educate/professional-learning/program-information"><button>Get started!</button>
-
+<%=
+link = "/educate/professional-learning/program-information"
+link += "?nominated=true" if params[:nominated]
+"<a class='linktag' id='pl-get-started-link' href='#{link}'><button>Get started!</button></a>"
+%>
 
 <!--
 

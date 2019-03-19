@@ -60,6 +60,17 @@ ca:
         edit_add_parameter: Fes clic a Edita per afegir un paràmetre a la funció
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Utilitza les fletxes per moure l'actor
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Afegir aquest bloc al teu programa!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Afegir aquest bloc al teu programa!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Afegir aquest bloc al teu programa!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Afegir el teu nou dansaire aquí
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Nou bloc!
+        dance_callout_11_b: Nou bloc!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Utilitza les fletxes per moure l'actor
       Dance_Party_01_callout:
@@ -144,6 +155,8 @@ ca:
         craft_inside_repeat: Repeteix accions posant blocs d'aquí
       Overworld Place Wall_2019_callout:
         craft_inside_repeat: Repeteix accions posant blocs d'aquí
+      Ryan_Demo_callout:
+        dance_callout_02: Afegir aquest bloc al teu programa!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre
           per a seguir endavant?

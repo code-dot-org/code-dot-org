@@ -36,7 +36,7 @@ el:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             Getting Loopy:
-              name: Παίρνοντας Επαναληπτικά
+              name: Επαναλαμβανόμαστε
             Going Places Safely:
               name: Πηγαίνοντας σε Μέρη με Ασφάλεια
             Happy Maps:
@@ -89,7 +89,7 @@ el:
             Flappy:
               name: Πουλάκι
             Getting Loopy:
-              name: Παίρνοντας Επαναληπτικά
+              name: Επαναλαμβανόμαστε
             Graph Paper Programming:
               name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
             'Maze: Loops':
@@ -442,6 +442,9 @@ el:
               name: Ώρα του Κώδικα 2013
         cspunit1:
           description_short: Προγραμματισμός
+          stages:
+            Text Compression:
+              name: Συμπίεση κειμένου
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -458,6 +461,11 @@ el:
               name: Sam η νυχτερίδα
             Strings and Images:
               name: Strings και εικόνες
+        text-compression:
+          title: Συμπίεση κειμένου
+          stages:
+            Text Compression:
+              name: Συμπίεση κειμένου
         cspunit3:
           description_short: Προγραμματισμός
           stages:
@@ -540,6 +548,10 @@ el:
               name: Minecraft
             Multi:
               name: Πολύ
+            Text Compression:
+              name: Συμπίεση κειμένου
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
@@ -561,7 +573,7 @@ el:
         cspfacilitator:
           stages:
             App Lab:
-              name: Εργαστήριο εφαρμογών
+              name: App Lab
             Internet Simulator:
               name: Προσομοιωτής Διαδικτύου
             Welcome!:
@@ -653,7 +665,7 @@ el:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             Getting Loopy:
-              name: Παίρνοντας Επαναληπτικά
+              name: Επαναλαμβανόμαστε
             Graph Paper Programming:
               name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
             Happy Maps:
@@ -788,6 +800,10 @@ el:
           stages:
             The Internet:
               name: Το Διαδίκτυο
+        csp2-2017:
+          stages:
+            Text Compression:
+              name: Συμπίεση κειμένου
         csp3-2017:
           description_short: Προγραμματισμός
           stages:
@@ -806,6 +822,8 @@ el:
           stages:
             Functions:
               name: Συναρτήσεις
+            Velocity:
+              name: Ταχύτητα
         TEMP CSD Unit 3:
           description_short: Προγραμματισμός
         CSF_Secret_Sample:
@@ -907,6 +925,8 @@ el:
         csd3-2017:
           description_short: Προγραμματισμός
           stages:
+            Velocity:
+              name: Ταχύτητα
             Functions:
               name: Συναρτήσεις
             Variables:
@@ -1057,6 +1077,10 @@ el:
           stages:
             Hour of Code 2013:
               name: Ώρα του Κώδικα 2013
+        sports:
+          stages:
+            Sports:
+              name: Αθλητισμός
         2016_sciencePD-phase2b:
           stages:
             Welcome!:
@@ -1131,10 +1155,14 @@ el:
               name: Μεταβλητές
             Conditionals:
               name: Συνθήκες
+            Velocity:
+              name: Ταχύτητα
             Functions:
               name: Συναρτήσεις
         csd3-old:
           stages:
+            Velocity:
+              name: Ταχύτητα
             Functions:
               name: Συναρτήσεις
         csd2-draft:
@@ -1147,6 +1175,8 @@ el:
               name: Μεταβλητές
             Conditionals:
               name: Συνθήκες
+            Velocity:
+              name: Ταχύτητα
             Functions:
               name: Συναρτήσεις
             'null':
@@ -1260,6 +1290,8 @@ el:
               name: Δυαδικοί Καλλιτέχνη
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+            Loops in Ice Age:
+              name: Βρόχοι στην Εποχή των Παγετώνων
         new-express:
           stages:
             Introduction:
@@ -1344,6 +1376,8 @@ el:
               name: Μεταβλητές
             Conditionals:
               name: Συνθήκες
+            Velocity:
+              name: Ταχύτητα
             Functions:
               name: Συναρτήσεις
           description_short: Προγραμματισμός
@@ -1354,6 +1388,8 @@ el:
               name: Μεταβλητές
             Conditionals:
               name: Συνθήκες
+            Velocity:
+              name: Ταχύτητα
             Functions:
               name: Συναρτήσεις
         csd2-2018:
@@ -1385,7 +1421,7 @@ el:
             'Events: The Big Event':
               name: Το Μεγάλο Γεγονός
             'Loops: Getting Loopy':
-              name: Παίρνοντας Επαναληπτικά
+              name: Επαναλαμβανόμαστε
             Conditionals with Cards:
               name: Υποθέσεις με Κάρτες
             'Functions: Songwriting':
@@ -1406,6 +1442,8 @@ el:
               name: Crowdsourcing
             Relay Programming:
               name: Προγραμματισμός Ρελέ
+            Graph Paper Programming:
+              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1430,6 +1468,8 @@ el:
               name: Δυαδικές Εικόνες
             Artist Binary:
               name: Δυαδικοί Καλλιτέχνη
+            Loops in Ice Age:
+              name: Βρόχοι στην Εποχή των Παγετώνων
             Graph Paper Programming:
               name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
             Relay Programming:
@@ -1439,7 +1479,7 @@ el:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             'Loops: Getting Loopy':
-              name: Παίρνοντας Επαναληπτικά
+              name: Επαναλαμβανόμαστε
             'Events: The Big Event':
               name: Το Μεγάλο Γεγονός
             Binary Bracelets:
@@ -1488,6 +1528,10 @@ el:
           stages:
             The Internet:
               name: Το Διαδίκτυο
+        csp2-2018:
+          stages:
+            Text Compression:
+              name: Συμπίεση κειμένου
         csp3-2018:
           description_short: Προγραμματισμός
           stages:
@@ -1568,6 +1612,10 @@ el:
               name: Διασκέδαση με το Βρόχο Για
             The Artist:
               name: Ο Καλλιτέχνης
+            Internet:
+              name: Διαδίκτυο
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:
@@ -1576,6 +1624,8 @@ el:
           stages:
             Relay Programming:
               name: Προγραμματισμός Ρελέ
+            Loops in Ice Age:
+              name: Βρόχοι στην Εποχή των Παγετώνων
             Conditionals with Cards:
               name: Υποθέσεις με Κάρτες
             Digital Citizenship:
@@ -1584,6 +1634,8 @@ el:
               name: 'Εκτός Σύνδεσης: Δυαδικοί'
             Artist Binary:
               name: Δυαδικοί Καλλιτέχνη
+            Dance Party:
+              name: Πάρτι Χορού
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1635,3 +1687,71 @@ el:
               name: Δυαδικά Βραχιόλια
         gamelab:
           title: Game Lab
+        coursea-2019:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+            Going Places Safely:
+              name: Πηγαίνοντας σε Μέρη με Ασφάλεια
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Μετακίνησέ το, Μετακίνησέ το
+            Your Digital Footprint:
+              name: Το Ψηφιακό σου Αποτύπωμα
+            Loops in Ice Age:
+              name: Βρόχοι στην Εποχή των Παγετώνων
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Μετακίνησέ το, Μετακίνησέ το
+            Your Digital Footprint:
+              name: Το Ψηφιακό σου Αποτύπωμα
+            Loops in Ice Age:
+              name: Βρόχοι στην Εποχή των Παγετώνων
+            Spelling Bee:
+              name: Η μέλισσα της ορθογραφίας
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Λίστες
+        csd3-2019:
+          description_short: Προγραμματισμός
+          stages:
+            Variables:
+              name: Μεταβλητές
+            Conditionals:
+              name: Συνθήκες
+            Velocity:
+              name: Ταχύτητα
+            Functions:
+              name: Συναρτήσεις
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Συναρτήσεις με παραμέτρους
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Το Διαδίκτυο
+        csp2-2019:
+          stages:
+            Text Compression:
+              name: Συμπίεση κειμένου
+        csp3-2019:
+          description_short: Προγραμματισμός
+          stages:
+            Creating Functions:
+              name: Δημιουργούμε Συναρτήσεις
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: Απλή Κρυπτογράφηση
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Βρόχοι με «Όσο»

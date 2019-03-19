@@ -380,15 +380,15 @@ pt-BR:
       district_dashboard: Painel do distrito
       label: Oi, %{username}
       stats: Code Studio
-      settings: Minha conta
+      settings: Configurações da conta
       logout: Sair
       signin: Entrar
       signup: Criar uma conta
       already_registered: Já se cadastrou?
       pair_programming: Programação em duplas
       team: Equipe
-      driver: Líder
-      navigator: Navegador
+      driver: Conectado
+      navigator: Parceiro
       create: Criar
       applab: Laboratório de Aplicativo
       artist: Artista
@@ -423,7 +423,7 @@ pt-BR:
     students:
       dashboard: Vá para o painel de controle do professor
     user_not_found: Esse professor não pôde ser encontrado.
-    student_teacher_disassociated: Você removeu %{teacher_name} como seu professor.
+    student_teacher_disassociated: Você saiu da seção %{section_code} com %{teacher_name}.
     panel:
       answer_viewer: Painel do professor
       student: Estudante
@@ -448,7 +448,8 @@ pt-BR:
     new_password_hint: "(deixe em branco se não quiser fazer alteração)"
     current_password_hint: "(precisamos de sua senha atual para confirmar suas alterações)"
     delete: Excluir sua conta
-    delete_text: Clicando no botão abaixo, você vai excluir sua conta.
+    delete_text: Excluir sua conta apagará todas as informações e progresso conectados
+      a esta conta.
     delete_text_teacher_managed_note: Você não tem permissão para deletar esta conta,
       pois ela é gerenciada pelo seu professor. Seu(s) professor(es) deve(m) remover
       você das sessões dele(s) antes de você deletar sua conta.
@@ -478,7 +479,7 @@ pt-BR:
       nunca irão receber e-mails do Code.org exceto para recuperação de senha. Consulte
       nossa <a href=''%{privacy_policy_url}'', target=''_blank''>política de privacidade</a>
       para obter mais informações.'
-    enter_new_login_info: Digite sua nova conta individual
+    enter_new_login_info: Digite suas novas informações de login
     confirm_secret_words: Confirme que é você ao digitar suas palavras secretas atuais
     parent_email_label: Email do Pai/guardião (opcional)
     parent_email_hint: "(isto pode ser usado para recuperar a senha)"
@@ -624,11 +625,11 @@ pt-BR:
       utilizarem o nome completo dos estudantes</i>.
     announcement_apcsp_recruitment: '<strong>Professores de Princípios da Ciência
       da Computação:</strong> Seus estudantes podem ser destaque no próximo vídeo
-      viral do Code.org que encoraja estudantes a fazerem o exame AP CS este ano.
-      Estamos convidando todos os estudantes de Princípios da Ciência da Computação
-      a enviarem um vídeo de 10 a 20 segundos para o Twitter, Instagram ou Facebook
-      dizendo "Eu farei o exame #APCSP porque..." Os melhores terão destaque em nosso
-      vídeo e os estudantes ganhadores receberão um brinde do Code.org!'
+      viral do Code.org que encoraja estudantes a fazerem o exame AP Princípios da
+      CC este ano. Estamos convidando todos os estudantes de Princípios da Ciência
+      da Computação a enviarem um vídeo de 10 a 20 segundos para o Twitter, Instagram
+      ou Facebook dizendo "Eu farei o exame #APCSP porque..." Os melhores terão destaque
+      em nosso vídeo e os estudantes ganhadores receberão um brinde do Code.org!'
     announcement_apcsp_recruitment2: 'O exame de Princípios de Ciência da Computação
       do programa de Colocação Avançada (AP CS) está prestes a quebrar recordes. A
       participação dos estudantes no exame poderá mudar drasticamente a diversidade
@@ -652,11 +653,11 @@ pt-BR:
       a liderança em ciência da computação na sua escola e aplique para nossos programas
       de aprendizado profissional de alta qualidade <strong>sem absolutamente nenhum
       custo para sua escola</strong>. Aplicações encerram dia 14 de Abril.
-    announcement_applab_export: App Lab, nosso ambiente de programação baseado na
-      web, agora suporta exportar o seu código! Você pode começar a construir apps
-      com blocos de arrastar-e-soltar em JavaScript, e então exportar o código para
-      continuar editando em qualquer ambiente de desenvolvimento profissional de sua
-      escolha.
+    announcement_applab_export: Laboratório de Aplicativo, nosso ambiente de programação
+      baseado na web, agora suporta exportar o seu código! Você pode começar a construir
+      apps com blocos de arrastar-e-soltar em JavaScript, e então exportar o código
+      para continuar editando em qualquer ambiente de desenvolvimento profissional
+      de sua escolha.
     announcement_csp_survey: "<b>Parabéns aos professores do curso de Princípios de
       Ciência da Computação!</b><br/>Seus alunos do curso de Princípios de Ciência
       da Computação que farão o exame de Princípios de Ciência da Computação do programa
@@ -705,10 +706,10 @@ pt-BR:
       <a href="https://code.org/about/partners">parceiros</a>, nossa <a href="https://code.org/about/team">equipe</a>,
       nosso pessoal de vídeo e nossos <a href="https://code.org/about/advisors">professores</a>
       por sua ajuda na criação do Code Studio.
-    help_from_html: Queremos agradecer principalmente os engenheiros da Google, Microsoft,
-      Facebook, Twitter e muitos outros que ajudaram a criar esses materiais.
-    help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
-      a criar esses materiais.
+    help_from_html: Queremos especialmente reconhecer os engenheiros da Amazon, Google
+      e Microsoft que ajudaram a criar estes materiais.
+    help_from_html_old: Engenheiros da Amazon, Google e Microsoft ajudaram a criar
+      estes materiais.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos
       reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm.
       Todos os direitos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney.
@@ -906,8 +907,8 @@ pt-BR:
         de aula.
     unplugged_conditionals:
       title: Condições
-      body: Saiba mais sobre algoritmos e condicionais nessa atividade "unplugged",
-        utilizando um baralho de cartas.
+      body: Aprenda sobre algoritmos e declarações condicionais nesta atividade "off-line"
+        usando um baralho de cartas.
     widgets:
       title: Widgets
       body: Os alunos podem colocar as mãos na massa para explorar os conceitos do
@@ -1099,9 +1100,9 @@ pt-BR:
     delete: Excluir
     import: Importar
     share_link_import_bad_link_header: link de compartilhamento não reconhecido
-    share_link_import_bad_link_body: 'Não foi possível importar o link de compartilhamento.
-      Verifique se você está usando um link de um enigma do Minecraft: Agent e se
-      copiou o link completo.'
+    share_link_import_bad_link_body: 'Não foi possível importar esse link de compartilhamento.
+      Certifique-se de que você está usando um link de um Minecraft: quebra-cabeça
+      do Agente e que você copiou o link completo.'
     share_link_import_error_header: Ocorreu um erro.
     share_link_import_error_body: Houve um problema ao importar o link de compartilhamento.
       Tente novamente.
@@ -1216,7 +1217,7 @@ pt-BR:
     csd4_1: 'Capítulo 1: Desenho orientado ao usuário'
     csd4_2: 'Capítulo 1: Prototipando o App'
     csd5_1: 'Capítulo 1: Representando Informação'
-    csd5_2: 'Capítulo 2: Resolvendo Problemas de Informações'
+    csd5_2: 'Capítulo 2: Resolvendo problemas de dados'
     csd6_1: 'Capítulo 1: Programando com Hardware'
     csd6_2: 'Capítulo 2: Construindo protótipos físicos'
     csd_survey: Pesquisa Pós-Curso
@@ -1317,8 +1318,13 @@ pt-BR:
     com ela ou quando for revisar suas respostas.
   hidden_stage: Seu professor não esperava você por aqui. Pergunte a ele em que aula
     você deveria estar.
-  hidden_script: O seu professor não esperava você por aqui. Por favor pergunte ao
-    seu professor em qual unidade você deveria estar.
+  hidden_script: Seu professor não esperava que estivesse aqui. Por favor, pergunte
+    ao seu professor qual unidade você deveria estar.
+  no_script_access_student: Você não tem acesso a esta unidade. Por favor, pergunte
+    ao seu professor em qual unidade você deveria estar.
+  no_script_access_teacher: Você não tem acesso a esta unidade. Se você acredita que
+    deve ter acesso a esta unidade, por favor, escreva para support@code.org para
+    que possamos corrigir a situação.
   return_unit_overview: Ir para visão geral da unidade
   return_course_overview: Ir para visão geral da unidade
   view_all_units: Visualizar todas unidades
@@ -1342,9 +1348,8 @@ pt-BR:
       workshop_organizer: Organizador de Oficina
       workshop_facilitator: Facilitador de Oficina
       workshop_course: Curso de Oficina
-      email_opt_in: Eu concordo que o Code.org pode compartilhar minhas informações
-        de contato e dados agregados sobre minhas aulas com o Parceiro Internacional
-        do Code.org em meu país.
+      email_opt_in: Podemos enviar um e-mail sobre o programa internacional da Code.org,
+        atualizações para nossos cursos ou outras notícias de ciência da computação?
       legal_opt_in: 'Ao enviar este formulário, você concorda em permitir que o Code.org
         compartilhe informações sobre como você utiliza o Code.org e os recursos de
         Aprendizagem Profissional com o Parceiro Internacional do Code.org em seu
@@ -1415,12 +1420,12 @@ pt-BR:
         csf_af: Fundamentos de Ciência da Computação (Cursos A-F)
         csf_express: Fundamentos de Ciência da Computação (Pré-Expresso ou Expresso)
         csd: Descobertas da Ciência da Computação
-        csp: Princípios da CC - 16-17
+        csp: Princípios da CC
       email_opt_in:
         opt_in_yes: Sim
         opt_in_no: Não
     international_opt_in:
-      title: Comparecimento ao Workshop para Professores de fora dos E.U.A.
+      title: Presença da Oficina
       intro: Obrigado por tomar tempo para receber formação sobre o currículo do Code.org.
         Nossa missão para trazer oportunidades de educação em ciência da computação
         para todas as crianças em todas as escolas de todo o mundo não seria possível
@@ -1430,10 +1435,10 @@ pt-BR:
         Code.org, e 2) você concorda em compartilhar suas informações com o nosso
         parceiro international em seu país para que nós possamos ajudar a apoiar a
         sua jornada como um professor de ciência da computação.
-      thanks: Obrigado por se inscrever! Estamos ansiosos para apoiar você enquanto
-        você aprende sobre o currículo e ferramentas do Code.org. Por favor continue
-        compartilhando suas dúvidas e feedback conosco escrevendo para support@code.org
-        ou postando no fórum do professor!
+      thanks: Obrigado por enviar! Aguardamos com expectativa o seu apoio quando você
+        tiver conhecimento dos currículos e ferramentas da Code.org. Por favor, continue
+        compartilhando suas perguntas e feedback conosco escrevendo para <a href='%{support_email_url}'>support@code.org</a>
+        ou postando no <a href='%{teacher_forum_url}' target='_blank'>fórum de professores</a>!
     logged_out:
       heading: Obrigado pelo seu interesse no Programa de Aprendizagem Profissional!
       body: Para começar, primeiro você precisa estar logado em sua conta do Code.org.
@@ -1441,10 +1446,10 @@ pt-BR:
         por favor verifique a <a href="%{url}">visão geral do Programa de Aprendizagem
         Profissional</a>.
     not_teacher:
-      body: Obrigado pelo seu interesse no Programa de Aprendizagem Profissional do
-        Code.org. Você está conectado em uma de estudante. Por favor <a href="%{create_teacher}">crie
-        uma conta de professor</a> ou <a href="%{user_settings}">vá para suas configurações
-        de usuário</a> para atualizar sua conta de estudante para professor.
+      body: Obrigado pelo seu interesse no Programa de Aprendizagem Profissional da
+        Code.org! Você está atualmente logado em uma conta do aluno. Por favor, crie
+        uma conta de professor ou <a href="%{user_settings}">vá para suas configurações
+        de usuário</a> para atualizar sua conta do aluno para professor.
       more: Caso você queira mais informações sobre o programa antes de iniciar sua
         aplicação, por favor verifique a <a href="%{pl_overview}">visão geral do Programa
         de Aprendizagem Profissional</a>.

@@ -136,6 +136,11 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       gamelab_debugSprite:
         options:
           VAL:
@@ -145,6 +150,18 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+          KEY:
+            '"up"': माथि
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
+            '"x"': x
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -154,6 +171,10 @@ ne:
         text: कुनै एक  रङ
       gamelab_randomColor:
         text: कुनै एक  रङ
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
       gamelab_setProp:
         options:
           PROPERTY:
@@ -163,6 +184,11 @@ ne:
           PROPERTY:
             '"scale"': size
             '"height"': height
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -280,14 +306,53 @@ ne:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': size
-      aalab_spritesWhere:
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+          KEY:
+            '"up"': माथि
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': 'true'
+            '"false"': 'false'
+      aalab_setProp:
         options:
           PROPERTY:
             '"scale"': size
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': forever
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': देखाउ
+            '"hide"': लुकेको
       binary_move:
         options:
           DIR:

@@ -498,3 +498,25 @@ is:
         desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi
           og tekur sem dæmi að búa til pappírsskutlu. Einnig er horft almennar til
           tölvunarfræði og hvernig algrím gegna nauðsynlegu hlutverki.
+      PlantASeed_2019:
+        title: 'Algrím úr raunheimi: Sá fræi'
+        desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi
+          og notar fræsáningu sem dæmi. Einnig er horft almennar til tölvunarfræði
+          og hvernig algrím gegna nauðsynlegu hlutverki.
+      UnplugHappyMaps_2019:
+        title: Krúttleg kort
+        desc: Nemendur búa til einföld algrím (röð leiðbeininga) til að láta einhvern
+          ferðast um völundarhús með einni skipun.
+      GoingPlacesSafely_2019:
+        title: Ferðast í öryggi
+        desc: Internetið er öflugur en stundum hættulegur staður. Kennarar kynna hvernig
+          þarf að passa sig þegar farið er um netið.
+      courseA_unplugged_loops_2019:
+        title: Lykkjur án tölvu
+        desc: Í þessum tíma munt þú læra um lykkjur!
+      MoveItMoveIt_2019:
+        title: Hreyfa sig, hreyfa sig
+      DigitalFootprint_2019:
+        title: Stafræna fótsporið þitt
+        desc: Kennarinn kynnir fyrir nemendum þá hugmynd að með því að setja upplýsingar
+          um sig á netið búi þeir til stafrænt fótspor eða slóð sem getur haft afleiðingar.

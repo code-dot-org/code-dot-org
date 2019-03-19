@@ -10,7 +10,6 @@ require 'yaml'
 require 'cdo/erb'
 require 'cdo/slog'
 require 'os'
-require 'cdo/aws/cdo_google_credentials'
 require 'cdo/git_utils'
 require 'uri'
 
@@ -131,7 +130,8 @@ def load_configuration
     'stub_school_data'            => [:adhoc, :development, :test].include?(rack_env),
     'stack_name'                  => rack_env == :production ? 'autoscale-prod' : rack_env.to_s,
     'videos_s3_bucket'            => 'videos.code.org',
-    'videos_url'                  => '//videos.code.org'
+    'videos_url'                  => '//videos.code.org',
+    'google_safe_browsing_key'    => 'fake_api_key'
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
@@ -387,6 +387,8 @@ class CDOImpl < OpenStruct
 end
 
 CDO ||= CDOImpl.new
+
+require 'cdo/aws/cdo_google_credentials'
 
 ####################################################################################################
 ##

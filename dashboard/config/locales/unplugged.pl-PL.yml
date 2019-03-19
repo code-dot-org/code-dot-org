@@ -539,3 +539,26 @@ pl:
         desc: Ta lekcja jest poświęcona sposobom wykorzystania algorytmów w naszym
           codziennym życiu, w szczególności przy tworzeniu papierowych samolotów.
           Uwaga jest skupiona na znaczeniu algorytmów w informatyce.
+      PlantASeed_2019:
+        title: 'Algorytmy z życia wzięte: sadź nasiona'
+        desc: Ta lekcja przywołuje sposoby stosowania algorytmów w naszym codziennym
+          życiu, posługując się przykładem sadzenia nasion. Koncentruje się również
+          na rozleglejszym obrazie informatyki i zasadniczej roli, jaką odgrywają
+          algorytmy.
+      UnplugHappyMaps_2019:
+        title: Szczęśliwe Mapy (Happy Maps)
+        desc: Uczniowie tworzą proste algorytmy (zestawy instrukcji), by przeprowadzić
+          postać przez labirynt posługując się pojedynczym poleceniem.
+      GoingPlacesSafely_2019:
+        title: Bezpiecznie dotrzeć na miejsce
+        desc: Internet jest potężny, ale czasami jest to niebezpieczne miejsce. Nauczyciele
+          przedstawiają, jak bezpiecznie nawigować po Internecie.
+      courseA_unplugged_loops_2019:
+        title: Pętle bez komputera
+        desc: W tej lekcji dowiesz się, jak używać pętli!
+      MoveItMoveIt_2019:
+        title: Przenieść go, przenieść go
+      DigitalFootprint_2019:
+        title: Twój cyfrowy ślad
+        desc: Nauczycieli przedstawia uczniom, że umieszczenie informacji o sobie
+          online tworzy cyfrowy ślad lub "szlak", co może mieć konsekwencje.

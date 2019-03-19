@@ -24,21 +24,22 @@ pt-BR:
       Picker: Seletor
       Comment: Comentário
       'Variables ': 'Variáveis '
+      Default: Padrão
+      Behaviors: Comportamentos
+      Locations: Localizações
       everythingelse: todoresto
+      World: Mundo
+      Sprites: Sprite
+      Location: Localização
       numbers: números
       Numbers: Números
       Input: Entrada
-      Default: Padrão
-      World: Mundo
-      Sprites: Sprite
-      Behaviors: Comportamentos
-      Advanced: Avançado
-      Start: Começar
-      Locations: Localizações
-      Music: Música
-      Dancing: Dança
       Dancers: Bailarinos
       Groups: Grupos
+      Advanced: Avançado
+      Start: Começar
+      Music: Música
+      Dancing: Dança
       Sprite: Sprite
       Brush: Pincel
       Make Sprite: Fazer Sprite

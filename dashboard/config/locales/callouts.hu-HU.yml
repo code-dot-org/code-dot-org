@@ -76,6 +76,17 @@ hu:
         edit_add_parameter: Kattints a szerkesztésre, hogy paramétert adj a függvényedhez
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: A nyilak segítségével mozgasd a szereplőt!
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Add hozzá ezt a blokkot a programodhoz!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Add hozzá ezt a blokkot a programodhoz!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Add hozzá ezt a blokkot a programodhoz!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Itt add hozzá az új táncosodat
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Új blokk!
+        dance_callout_11_b: Új blokk!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: A nyilak segítségével mozgasd a szereplőt!
       Dance_Party_01_callout:
@@ -229,6 +240,8 @@ hu:
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Emlékezz, ellenőrizni kell hogy van-e virág minden
           felhőben. A lépeket nem kell ellenőrizned.
+      Ryan_Demo_callout:
+        dance_callout_02: Add hozzá ezt a blokkot a programodhoz!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Ez a kód leellenőrzi a lávát, hozzá tudsz adni
           egy utasítást, hogy előrelépjen?

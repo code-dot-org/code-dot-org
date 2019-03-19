@@ -59,19 +59,29 @@ tr:
         grid: Izgarayı göstermek için buraya tıklayın.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Izgarayı göstermek için buraya tıklayın.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: Izgarayı göstermek için buraya tıklayın.
       CSD U3 Variables Predict Where XY_callout:
         grid: Izgarayı göstermek için buraya tıklayın.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Izgarayı göstermek için buraya tıklayın.
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: Izgarayı göstermek için buraya tıklayın.
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Buradaki sayıyı değiştir
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Buradaki sayıyı değiştir
       CSD U3 abstraction accelerateX_callout:
         CSD_U3_L11_S6_C1: Kodunu buraya ekle.
       CSD U3 abstraction accelerateX_2018_callout:
         CSD_U3_L11_S6_C1: Kodunu buraya ekle.
+      CSD U3 abstraction accelerateX_2019_callout:
+        CSD_U3_L11_S6_C1: Kodunu buraya ekle.
       CSD U3 abstraction accelerateY_callout:
         CSD_U3_L11_S7_C1: Kodunu buraya ekle.
       CSD U3 abstraction accelerateY_2018_callout:
+        CSD_U3_L11_S7_C1: Kodunu buraya ekle.
+      CSD U3 abstraction accelerateY_2019_callout:
         CSD_U3_L11_S7_C1: Kodunu buraya ekle.
       CSD U3 abstraction change velocityX_callout:
         CSD_U3_L11_S5_C1: Kodunu buraya ekle.
@@ -90,19 +100,27 @@ tr:
         CSD_U3_L11_S5_C1: Bu koda bakın.
       CSD U3 abstraction rotation control_2018_callout:
         CSD_U3_L11_S5_C1: Bu koda bakın.
+      CSD U3 abstraction rotation control_2019_callout:
+        CSD_U3_L11_S5_C1: Bu koda bakın.
       CSD U3 abstraction setSpeed accelerate_callout:
         CSD_U3_L11_S14_C1: Kodunu buraya ekle.
       CSD U3 abstraction velocityX control_callout:
         CSD_U3_L11_S5_C1: Bu koda bakın.
       CSD U3 abstraction velocityX control_2018_callout:
         CSD_U3_L11_S5_C1: Bu koda bakın.
+      CSD U3 abstraction velocityX control_2019_callout:
+        CSD_U3_L11_S5_C1: Bu koda bakın.
       CSD U3 abstraction velocityX if-statements_callout:
         CSD_U3_L11_S5_C1: Bu koda bakın.
       CSD U3 abstraction velocityX if-statements_2018_callout:
         CSD_U3_L11_S5_C1: Bu koda bakın.
+      CSD U3 abstraction velocityX if-statements_2019_callout:
+        CSD_U3_L11_S5_C1: Bu koda bakın.
       CSD U3 abstraction velocityX_callout:
         CSD_U3_L11_S4_C1: Kodunu buraya ekle.
       CSD U3 abstraction velocityX_2018_callout:
+        CSD_U3_L11_S4_C1: Kodunu buraya ekle.
+      CSD U3 abstraction velocityX_2019_callout:
         CSD_U3_L11_S4_C1: Kodunu buraya ekle.
       CSD U3 abstraction velocityY 2_callout:
         CSD_U3_L11_S5_C1: Kodunu buraya ekle.
@@ -110,22 +128,33 @@ tr:
         CSD_U3_L11_S5_C1: Bu koda bakın.
       CSD U3 abstraction velocityY control_2018_callout:
         CSD_U3_L11_S5_C1: Bu koda bakın.
+      CSD U3 abstraction velocityY control_2019_callout:
+        CSD_U3_L11_S5_C1: Bu koda bakın.
       CSD U3 abstraction velocityY_callout:
         CSD_U3_L11_S5_C1: Kodunu buraya ekle.
       CSD U3 abstraction velocityY_2018_callout:
+        CSD_U3_L11_S5_C1: Kodunu buraya ekle.
+      CSD U3 abstraction velocityY_2019_callout:
         CSD_U3_L11_S5_C1: Kodunu buraya ekle.
       CSD U3 collisions isTouching intro_callout:
         CSD_U3_L12_S2_C1: Kodunu buraya ekle.
       CSD U3 collisions isTouching intro_2018_callout:
         CSD_U3_L12_S2_C1: Kodunu buraya ekle.
+      CSD U3 collisions isTouching intro_2019_callout:
+        CSD_U3_L12_S2_C1: Kodunu buraya ekle.
       CSD U3 collisions types_callout:
         CSD_U3_L13_S6_C1: Kodunu buraya ekle.
       CSD U3 collisions types_2018_callout:
+        CSD_U3_L13_S6_C1: Kodunu buraya ekle.
+      CSD U3 collisions types_2019_callout:
         CSD_U3_L13_S6_C1: Kodunu buraya ekle.
       CSD U3 debug_callout:
         CSD_U3_rect_c1: İşte kod
         CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: İşte kod
+        CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: İşte kod
         CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
       CSD U3 ellipse_callout:
@@ -134,10 +163,16 @@ tr:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: İşte kod
         CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: İşte kod
+        CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: İşte kod
         CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: İşte kod
+        CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: İşte kod
         CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
       CSD U3 my-rect_callout:
@@ -148,39 +183,58 @@ tr:
         CSD_U3_rect_c2: '"Çalıştır" düğmesi burada.'
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: İşte kod
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: İşte kod
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: İşte kod
         CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: İşte kod
         CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
+      CSD U3 sequence_2019_callout:
+        CSD_U3_rect_c1: İşte kod
+        CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Kodunuzu buraya ekleyin
       CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Kodunuzu buraya ekleyin
+      CSD U6 colorLeds intensity_2019_callout:
         CSDU6L10_rainbow: Kodunuzu buraya ekleyin
       CSD U6 getProperty input_callout:
         CSD_U6L06P03: Kodunu buraya ekle.
       CSD U6 getProperty input_2018_callout:
         CSD_U6L06P03: Kodunu buraya ekle.
+      CSD U6 getProperty input_2019_callout:
+        CSD_U6L06P03: Kodunu buraya ekle.
       CSD U6 light show predict_callout:
         CSDUDL03P09: Bu satır ne yapıyor?
       CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: Bu satır ne yapıyor?
+      CSD U6 light show predict_2019_callout:
         CSDUDL03P09: Bu satır ne yapıyor?
       CSD U6 light show_callout:
         CSDUDL03P09: Bu satır ne yapıyor?
       CSD U6 light show_2018_callout:
         CSDUDL03P09: Bu satır ne yapıyor?
+      CSD U6 light show_2019_callout:
+        CSDUDL03P09: Bu satır ne yapıyor?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Burada oyunaBaşla'yı tanımlayın
       CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: Burada oyunaBaşla'yı tanımlayın
+      CSD U6 tugowar variables 1_2019_callout:
         CSD_U6_startGame: Burada oyunaBaşla'yı tanımlayın
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Burada oyuncuyuHareketEttir()'i tanımla
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Burada oyuncuyuHareketEttir()'i tanımla
+      CSD U6 tugowar variables 2_2019_callout:
+        CSD_U6_movePlayer: Burada oyuncuyuHareketEttir()'i tanımla
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Oyuncu kazandı mı kontrol edin
       CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Oyuncu kazandı mı kontrol edin
+      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Oyuncu kazandı mı kontrol edin
       Counting_callout:
         New Play Lab Project_callout1: Kategorilere ait blokları görmek için tıklayın!
@@ -279,6 +333,17 @@ tr:
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Bu blok rengi istediğin gibi ayarlamanı sağlar. Sayılarla
           oyna ve rengin nasıl değiştiğini gör!
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Bu bloğu programınıza ekleyin!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Bu bloğu programınıza ekleyin!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Bu bloğu programınıza ekleyin!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Buraya yeni dansçınızı ekleyin
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Yeni blok!
+        dance_callout_11_b: Yeni blok!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Karakteri hareket ettirmek için okları kullan
       CourseF_PlayLab_vars10_callout:
@@ -518,6 +583,8 @@ tr:
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını
           görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
+      Ryan_Demo_callout:
+        dance_callout_02: Bu bloğu programınıza ekleyin!
       SG U3L08 how to add comments_callout:
         comment_highlight: Buradan kodunuza bir yorum karesi sürükleyin
       SG U3L2_Turtle3by3Grid_callout:
@@ -537,6 +604,8 @@ tr:
       U3L08 how to add comments_callout:
         comment_highlight: Buradan kodunuza bir yorum karesi sürükleyin
       U3L08 how to add comments_2018_callout:
+        comment_highlight: Buradan kodunuza bir yorum karesi sürükleyin
+      U3L08 how to add comments_2019_callout:
         comment_highlight: Buradan kodunuza bir yorum karesi sürükleyin
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Bu kod, lav olup olmadığını kontrol edecek, ileri
@@ -613,10 +682,15 @@ tr:
         courseA_artist_loops4_1: Bu sayı her bloktan kaç tane kullanabileceğini söylüyor.
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Bu sayı her bloktan kaç tane kullanabileceğini söylüyor.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: Bu sayı her bloktan kaç tane kullanabileceğini söylüyor.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: Bu numara bu bloktan kaç tane kullanılabilir anlamına
           gelir.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: Bu numara bu bloktan kaç tane kullanılabilir anlamına
+          gelir.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: Bu numara bu bloktan kaç tane kullanılabilir anlamına
           gelir.
       courseA_artist_loops7_forVideo_callout:
@@ -628,16 +702,25 @@ tr:
       courseA_artist_loops8_2018_callout:
         courseA_artist_loops8_1: İhtiyacın olduğu zaman bir satır öncesine geri dönebileceğini
           biliyor muydun?
+      courseA_artist_loops8_2019_callout:
+        courseA_artist_loops8_1: İhtiyacın olduğu zaman bir satır öncesine geri dönebileceğini
+          biliyor muydun?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
+          aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Bu sayı her bloktan kaç tane kullanabileceğini
           söylüyor.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Bu sayı her bloktan kaç tane kullanabileceğini
+          söylüyor.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: Bu sayı her bloktan kaç tane kullanabileceğini
           söylüyor.
       courseA_collector_preLoops1_callout:
@@ -660,6 +743,9 @@ tr:
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
           bunun içinde fazladan bloklar bulabilirsin.
+      courseA_maze_ramp2_2019_callout:
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
           bunun içinde fazladan bloklar bulabilirsin.
@@ -673,6 +759,8 @@ tr:
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Bir ipucu gerektiğinde ampülü tıklayın!
       courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Bir ipucu gerektiğinde ampülü tıklayın!
+      courseA_maze_seq1_2019_callout:
         courseA_maze_seq1_1: Bir ipucu gerektiğinde ampülü tıklayın!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Programda adım adım gitmek için adım düğmesini
@@ -690,9 +778,13 @@ tr:
         courseA_playlab_events4_callout1: Bu bir belirtme
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Bu bir belirtme
+      courseA_playLab_events4_2019_callout:
+        courseA_playlab_events4_callout1: Bu bir belirtme
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Olay ok yönünü değiştirmek için burayı tıklatın.
       courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: Olay ok yönünü değiştirmek için burayı tıklatın.
+      courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: Olay ok yönünü değiştirmek için burayı tıklatın.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: Bu, duyana kadar ne tür bir ses çıkacağını bilmediğin
@@ -700,13 +792,22 @@ tr:
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: Bu, duyana kadar ne tür bir ses çıkacağını bilmediğin
           durumlarda ''rastgele" bir ses seçmene izin verir!
+      courseA_playLab_events6_2019_callout:
+        courseA_playLab_events6_1: Bu, duyana kadar ne tür bir ses çıkacağını bilmediğin
+          durumlarda ''rastgele" bir ses seçmene izin verir!
       courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
+      courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
           a bas ve programını başlat.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Bu bloklardan alet kutusunda yalnızca bir adet var.
           Onu nasıl kullanacaksın?
       courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: Bu bloklardan alet kutusunda yalnızca bir adet var.
+          Onu nasıl kullanacaksın?
+      courseB_artist_loops3_2019_callout:
         courseB_artist_loops3_1: Bu bloklardan alet kutusunda yalnızca bir adet var.
           Onu nasıl kullanacaksın?
       courseB_artist_loops5_callout:
@@ -717,9 +818,14 @@ tr:
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
+          aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Bir ipucu gerektiğinde ampülü tıklayın!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Bir ipucu gerektiğinde ampülü tıklayın!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: Bir ipucu gerektiğinde ampülü tıklayın!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Programda adım adım gitmek için adım düğmesini
@@ -735,6 +841,9 @@ tr:
         courseB_playlab_events6_a: Yönü değiştirmek için yeşil renkli açılır ok işaretini
           kullan.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Yönü değiştirmek için yeşil renkli açılır ok işaretini
+          kullan.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: Yönü değiştirmek için yeşil renkli açılır ok işaretini
           kullan.
       courseC19_playLab_EOC3_callout:
@@ -1367,6 +1476,9 @@ tr:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Bu değişkene nasıl değer atadığını göstermektedir.
       coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
+      coursea_maze_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
           a bas ve programını başlat.
       coursef_maze_ramp3_callout:

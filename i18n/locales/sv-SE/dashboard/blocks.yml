@@ -77,6 +77,7 @@ sv:
             '"scale"': storlek
             '"width"': bredd
             '"height"': höjd
+            '"rotation"': rotation
             '"x"': horisontellt läge
             '"y"': vertikalt läge
       Dancelab_doMoveEachLR:
@@ -97,15 +98,27 @@ sv:
             '"UNICORN"': alla enhörningar
           MOVE:
             '"rand"': "(Slumpad)"
+            MOVES.XBend: Böj
             MOVES.Roll: Kroppsrullning
+            MOVES.XClapSide: Klappa
             MOVES.ClapHigh: Klappa högt
             MOVES.Dab: Badda
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
             MOVES.Floss: Res dig
             MOVES.Fresh: Färsk
             MOVES.Clown: Clown
+            MOVES.XHeadHips: Huvud + Höfter
+            MOVES.XHop: Hoppa
+            MOVES.XHighKick: Sparka
+            MOVES.XKnee: Knä
+            MOVES.XKneel: Knäa
+            MOVES.XOle: Olé
+            MOVES.XArmsSide: Sträck dig
+            MOVES.XSlide: Glid
             MOVES.Kick: Stjärna
+            MOVES.XArmsUp: Sträck dig
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
           DIR:
@@ -116,15 +129,27 @@ sv:
         options:
           MOVE:
             '"rand"': "(Slumpad)"
+            MOVES.XBend: Böj
             MOVES.Roll: Kroppsrullning
+            MOVES.XClapSide: Klappa
             MOVES.ClapHigh: Klappa högt
             MOVES.Dab: Badda
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
             MOVES.Floss: Res dig
             MOVES.Fresh: Färsk
             MOVES.Clown: Clown
+            MOVES.XHeadHips: Huvud + Höfter
+            MOVES.XHop: Hoppa
+            MOVES.XHighKick: Sparka
+            MOVES.XKnee: Knä
+            MOVES.XKneel: Knäa
+            MOVES.XOle: Olé
+            MOVES.XArmsSide: Sträck dig
+            MOVES.XSlide: Glid
             MOVES.Kick: Stjärna
+            MOVES.XArmsUp: Sträck dig
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
           DIR:
@@ -161,6 +186,7 @@ sv:
             '"scale"': storlek
             '"width"': bredd
             '"height"': höjd
+            '"rotation"': rotation
             '"x"': horisontellt läge
             '"y"': vertikalt läge
             '"tint"': färgton
@@ -307,11 +333,11 @@ sv:
       Dancelab_nMeasures:
         text: "{N} åtgärder"
       Dancelab_onPointerDown:
-        text: på pekaren för ned
+        text: när pekaren förs nedåt
       Dancelab_onPointerDrag:
-        text: på pekaren för drag
+        text: när pekaren drar
       Dancelab_onPointerUp:
-        text: på pekaren för upp
+        text: när pekaren förs uppåt
       Dancelab_randomColor:
         text: slumpad färg
       Dancelab_setBackground:
@@ -325,6 +351,7 @@ sv:
             '"color_cycle"': Färger
             '"diamonds"': Diamanter
             '"disco_ball"': Discokula
+            '"fireworks"': Fyrverkerier
             '"kaleidoscope"': Kalejdoskop
             '"lasers"': Laserdansgolv
             '"splatter"': Färgstänk
@@ -338,6 +365,8 @@ sv:
           PALETTE:
             '"rave"': Svartvitt
             '"cool"': Blues
+            '"electronic"': Elektroniskt
+            '"iceCream"': Glass
             '"default"': Ljus
             '"tropical"': Tropisk
             '"warm"': Röda
@@ -351,6 +380,7 @@ sv:
             '"color_cycle"': Färger
             '"diamonds"': Diamanter
             '"disco_ball"': Discokula
+            '"fireworks"': Fyrverkerier
             '"kaleidoscope"': Kalejdoskop
             '"lasers"': Laserdansgolv
             '"splatter"': Färgstänk
@@ -364,6 +394,8 @@ sv:
           PALETTE:
             '"rave"': Svartvitt
             '"cool"': Blues
+            '"electronic"': Elektroniskt
+            '"iceCream"': Glass
             '"default"': Ljus
             '"tropical"': Tropisk
             '"warm"': Röda
@@ -407,10 +439,12 @@ sv:
             '"hearts_red"': Hjärtan
             '"music_notes"': Musiknoter
             '"pineapples"': Ananaser
+            '"pizzas"': Pizzor
             '"smiling_poop"': Bajs
             '"rain"': Regn
             '"floating_rainbows"': Regnbåge
             '"smile_face"': Smiley
+            '"color_lights"': Scenljus
       Dancelab_setForegroundEffectExtended:
         text: ställ in förgrundseffekt {EFFECT}
         options:
@@ -422,10 +456,12 @@ sv:
             '"hearts_red"': Hjärtan
             '"music_notes"': Musiknoter
             '"pineapples"': Ananaser
+            '"pizzas"': Pizzor
             '"smiling_poop"': Bajs
             '"rain"': Regn
             '"floating_rainbows"': Regnbåge
             '"smile_face"': Smiley
+            '"color_lights"': Scenljus
       Dancelab_setProp:
         text: 'Ställ in {SPRITE} {PROPERTY} till {VAL} '
         options:
@@ -433,6 +469,7 @@ sv:
             '"scale"': storlek
             '"width"': bredd
             '"height"': höjd
+            '"rotation"': rotation
             '"x"': horisontellt läge
             '"y"': vertikalt läge
             '"tint"': färgton
@@ -456,6 +493,7 @@ sv:
             '"scale"': storlek
             '"width"': bredd
             '"height"': höjd
+            '"rotation"': rotation
             '"x"': horisontellt läge
             '"y"': vertikalt läge
             '"tint"': färgton
@@ -466,6 +504,7 @@ sv:
             '"scale"': storlek
             '"width"': bredd
             '"height"': höjd
+            '"rotation"': rotation
             '"x"': horisontellt läge
             '"y"': vertikalt läge
             '"tint"': färgton
@@ -519,6 +558,7 @@ sv:
             '"scale"': storlek
             '"width"': bredd
             '"height"': höjd
+            '"rotation"': rotation
             '"x"': horisontellt läge
             '"y"': vertikalt läge
             '"tint"': färgton
@@ -533,6 +573,7 @@ sv:
             '"scale"': storlek
             '"width"': bredd
             '"height"': höjd
+            '"rotation"': rotation
             '"x"': horisontellt läge
             '"y"': vertikal position
             '"direction"': rörelseriktning
@@ -577,9 +618,15 @@ sv:
         options:
           PROPERTY:
             '"scale"': storlek
+            '"rotation"': rotation
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': när
+            '"while"': medan
       gamelab_debugSprite:
         options:
           VAL:
@@ -589,12 +636,36 @@ sv:
         options:
           PROPERTY:
             '"scale"': storlek
+            '"rotation"': rotation
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
             '"tint"': färgton
       gamelab_jumpTo:
         text: "{SPRITE} hoppa till {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': när
+            '"while"': medan
+          KEY:
+            '"up"': upp
+            '"down"': ner
+            '"left"': vänster
+            '"right"': höger
+            '"space"': rymden
+            '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': gräns
+            '"inner"': innanför kvadrat
+            '"circle"': cirkel
+            '"grid"': rutnät
+            '"row"': rad
+            '"column"': kolumn
+            '"x"': korsvis
+            '"random"': slumpad
       gamelab_locationDelta:
         options:
           DIR:
@@ -612,6 +683,10 @@ sv:
         text: slumpad färg
       gamelab_setBackground:
         text: ange bakgrundsfärg {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
       gamelab_setPosition:
         text: flytta {THIS} till positionen av {POSITION}
         options:
@@ -630,6 +705,7 @@ sv:
         options:
           PROPERTY:
             '"scale"': storlek
+            '"rotation"': rotation
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
@@ -643,6 +719,11 @@ sv:
             '"height"': höjd
       gamelab_setup:
         text: ställ in
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': när
+            '"while"': medan
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -692,6 +773,7 @@ sv:
         options:
           PROPERTY:
             '"scale"': storlek
+            '"rotation"': rotation
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
@@ -711,6 +793,7 @@ sv:
         options:
           PROPERTY:
             '"scale"': storlek
+            '"rotation"': rotation
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
@@ -724,6 +807,7 @@ sv:
             '"all"': alla
           PROPERTY:
             '"scale"': storlek
+            '"rotation"': rotation
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
@@ -747,6 +831,7 @@ sv:
         options:
           PROPERTY:
             '"scale"': storlek
+            '"rotation"': rotation
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
@@ -768,6 +853,7 @@ sv:
             '"all"': alla
           PROPERTY:
             '"scale"': storlek
+            '"rotation"': rotation
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
@@ -802,6 +888,7 @@ sv:
         options:
           PROPERTY:
             '"scale"': storlek
+            '"rotation"': rotation
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
@@ -856,21 +943,65 @@ sv:
         text: sväng höger
       Vector_positionCenter:
         text: mittersta delen
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
+        text: ändra {SPRITE} {PROPERTY} via {VAL}
         options:
           PROPERTY:
             '"scale"': storlek
+            '"rotation"': rotation
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
-      aalab_spritesWhere:
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': när
+            '"while"': medan
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': när
+            '"while"': medan
+      aalab_jumpTo:
+        text: "{SPRITE} hoppa till {LOCATION}"
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': när
+            '"while"': medan
+          KEY:
+            '"up"': upp
+            '"down"': ner
+            '"left"': vänster
+            '"right"': höger
+            '"space"': rymden
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': sant
+            '"false"': falskt
+      aalab_setProp:
         options:
           PROPERTY:
             '"scale"': storlek
+            '"rotation"': rotation
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
             '"tint"': färgton
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': alltid
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': visa
+            '"hide"': göm
       binary_move:
         options:
           DIR:

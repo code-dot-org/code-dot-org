@@ -47,8 +47,8 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
 
+gem 'aws-google' # use Google Accounts for AWS access
 gem 'google-api-client', '~> 0.23'
-gem 'launchy' # Peer dependency of Google::APIClient::InstalledAppFlow
 
 # CSRF protection for Sinatra.
 gem 'rack_csrf'
@@ -61,6 +61,7 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate'
   gem 'pry'
+  gem 'rb-readline'
   gem 'ruby-progressbar', require: false
   gem 'web-console'
 end
@@ -169,7 +170,7 @@ gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 # Ref: https://github.com/Clever/omniauth-clever/pull/7
 gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
 gem 'omniauth-facebook', '~> 4.0.0'
-gem 'omniauth-google-oauth2', '~> 0.3.1'
+gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # Ref: https://github.com/joel/omniauth-windowslive/pull/16
 # Ref: https://github.com/joel/omniauth-windowslive/pull/17

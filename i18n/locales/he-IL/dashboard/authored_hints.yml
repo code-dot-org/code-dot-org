@@ -159,7 +159,20 @@ he:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: מתקשה בלהבין כיצד להוריד את הבלוקים למטה? נסה להתייחס לפרח האדום בדיוק כמו לפרח הסגול!
         2-3_Bee_Conditionals_14_b: אם הפרח האדום היה סגול, היית מצליח לחשוב על דרך כיצד להשתמש בלולאת ה"חזור" כדי לחסוך בכמות הבלוקים בקוד?
-        2-3_Bee_Conditionals_14_c: "נסה לחלק את זה ל2 חלקים שונים: \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) הבא צוף 3 פעמים\n - זוז קדימה 5 פעמים\n - בדוק אם מדובר בצוף, אם כן: קח אותו\n - הסתובב שמאלה\n\n2) צור דבש\n - זוז קדימה פעם אחת\n - צור 2 דבש"
+        2-3_Bee_Conditionals_14_c: |-
+          נסה לחלק את זה ל2 חלקים שונים: 
+
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) הבא צוף 3 פעמים
+           - זוז קדימה 5 פעמים
+           - בדוק אם מדובר בצוף, אם כן: קח אותו
+           - הסתובב שמאלה
+
+          2) צור דבש
+           - זוז קדימה פעם אחת
+           - צור 2 דבש
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'זכור: פרחים סגולים יכולים להכיל או 0 או 1 צופים והם יכולים להשתנות בכל פעם שתפעיל את התוכנית.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -328,7 +341,9 @@ he:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'כל צורה החוזרת על עצמה היא שילוב של **חצי משושה**, ולאחר מכן **שני שלישים של משולש**. '
         Course_4_Artist_12_b: 'הצורה המצוירת דומה מאוד כמו לזו בחידה הקודמת למעט כך שחצי המשושה הוא מעט גדול יותר. '
-        Course_4_Artist_12_c: "1) שלוש הקווים הראשונים הם באורך 60 פיקסלים וצריך לסובב את האמן ב-60 מעלות.\n2) שני הקווים הבאים הם באורך 80 פיקסלים ועליך לסובב את האמן ב-120 מעלות."
+        Course_4_Artist_12_c: |-
+          1) שלוש הקווים הראשונים הם באורך 60 פיקסלים וצריך לסובב את האמן ב-60 מעלות.
+          2) שני הקווים הבאים הם באורך 80 פיקסלים ועליך לסובב את האמן ב-120 מעלות.
         Course_4_Artist_12_d: |-
           **פתרון:**
 
@@ -408,6 +423,8 @@ he:
       Course 4 Artist For Loops 11a_authored_hint:
         Course_4_Artist_For_Loops_11a_a: '360 חלקי מספר הפאות של הצורה זו הזווית שבה תצטרך להסתובב. '
         Course_4_Artist_For_Loops_11a_b: 'בכל פעם, יהיה עליך לזוז קדימה 10 פעמים את האורך הנוכחי של כל אחד מהצדדים. '
+      Course 4 Artist For Loops 3_authored_hint:
+        Course_4_Artist_For_Loops_3_a: בכדי לוודא שלולאת ה-for מובילה את התנועה, וודאו שאתם משתמשים ב-counter למרחק.
       Course 4 Artist For Loops 4_authored_hint:
         Course_4_Artist_For_Loops_4_a: "**מה הספר הקטן ביותר שתצטרכו?\nמה המספר הגדול ביותר?\nכמה יש להוסיף כל פעם?**\n\nאלו השאלות שאתם צריכים לשאול על מנת לכתוב לולאת 'for'."
       Course 4 Artist For Loops Challenge_authored_hint:
@@ -419,6 +436,7 @@ he:
       Course 4 Artist For Loops inspire_authored_hint:
         Course_4_Artist_For_Loops_inspire_a: הבסיס של הקוד הזה הוא כמו הפתרון של החידה הקודמת...עם כמה שינויים.
         Course_4_Artist_For_Loops_inspire_b: נסה להשתמש בלולאת 'עבור' אשר סופרת מ-3 עד 10 עם תוספת קבועה של 1.
+        Course_4_Artist_For_Loops_inspire_c: ישנן שתי חזרות של אותה לולאת חזרה בתוך לולא ה-for, אבל החזרה השניה פונה לכיוון ההפוך.
         Course_4_Artist_For_Loops_inspire_d: "**פתרון**\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_arithmetic\" inline=\"true\">\n                <title name=\"OP\">מינוס</title>\n                <value name=\"A\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">סופר</title>\n                  </block>\n                </value>\n                <value name=\"B\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">1</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">זוז קדימה</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">40</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">פנה ימינה</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">חילוק</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">360</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">סופר</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">1</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">40</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">360</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
       Course 4 Artist Functions Inspiration_authored_hint:
         Course_4_Artist_Functions_Inspiration_a: התחילו עם הקוד מהחידה הקודמת והוסיפו 'פנה ימינה' בשלוש מעלות לתוך הלולאה.
@@ -490,11 +508,13 @@ he:
           </xml>
       Course 4 Artist Functions challenge_authored_hint:
         Course_4_Artist_Functions_challenge_a: חלק מהלמידה וההבנה כיצד להשתמש בפונקציות היא ההבנה לאיזה מהן אתה נדרש ולאיזה מהן אתה לא זקוק.
+        Course_4_Artist_Functions_challenge_b: השתמשו בלולאת for ואז השתמשו במשתנה counter בתוך לולאת repeat מקוננת.
         Course_4_Artist_Functions_challenge_c: בכל חזרה (איטרציה), אתה נדרש לצייר ריבוע ואז לקפוץ קדימה.
         Course_4_Artist_Functions_challenge_d: תצטרך להסתובב שמאלה ב90 מעלות מחוץ ללולאת `חזור`, אבל עדיין שתישאר בתוך לולאת `עבור`.
       Course 4 Artist Inspire_authored_hint:
         Course_4_Artist_Inspire_a: אחרי שתשלים ריבוע אחד, נסה לקפוץ קדימה חצי מהאורך שלו לפני שתסתובב כדי לייצר אחד נוסף.
         Course_4_Artist_Inspire_b: כל ריבוע וקפיצה חוזרים על עצמם 4 פעמים (כאשר יש פניה שמאלה ביניהם) כדי לייצר מעין שבשבת מלאה.
+        Course_4_Artist_Inspire_c: כל לשבשבת חוזרת על עצמה עם פניה ימינה של **360/מס' הצדדים**.
         Course_4_Artist_Inspire_d: |-
           **פתרון:**
 
@@ -670,6 +690,10 @@ he:
           </xml>
       Course 4 Artist Vars 13_authored_hint:
         Course_4_Artist_Vars_13_a: אתה זקוק לשתי לולאות חזור (אחד בתוך השני) כאשר שניהם חוזרים על עצמם `sides` פעמים.
+        Course_4_Artist_Vars_13_b: "לולאת החזרה הפנימית מציירת מתומן (בפניה לשמאל).\nלאחר מכן, צריך לנוע קדימה ולפנות ימינה רק בלולאה החיצונית."
+        Course_4_Artist_Vars_13_c: בכדי להתאים את הצורה להישאר באותו גודל כאשר מספר הצדדים משתנה, השתמש בבלוק חשבון בכדי לחלק את הארוך (בפיקסלים) במספר הצדדים.
+      Course 4 Artist Vars 6_authored_hint:
+        Course_4_Artist_Vars_6_a: בכדי לצייר מצולע רגיל, יש לפנות ב-**360/מספר הצדדים** בכל פעם.
       Course 4 SCF 1_authored_hint:
         Course_4_SCF_1_a: לכל משושה אורך כל פאה הוא 40 פיקסלים.
         Course_4_SCF_1_b: יש לקפוץ 120 פיקסלים בין כל משושה ומשושה בכל שורה אופקית.
@@ -677,6 +701,106 @@ he:
         mc_9_a: האם אתם פונים לכיוון הנכון? פקודת ה-`השמד בלוק` חוצבת את הלבנה שנמצאת מולכם.
         mc_9_b: הכתמים השחורים שעל הקיר הם פחם! השתמשו בפקודת `השמד בלוק` עליהם כדי לכרות את הפחם.
         mc_9_c: השתמשו ב`הנח לפיד` כדי לשים לפיד במקום שאתם עומדים בו.
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **איך עוברים את השלב הזה?**
+          * ודאו שהרקדן מופיע על גבי המסך.
+
+          *השלב הזה מסתיים אחרי 4 תיבות.*
+        challenges: |-
+          **אתגרי רשות**
+          * בחרו שיר אחר לנגן.
+          * בחרו רקדן אחר שנראה כמו מוּס!
+          * תנו שם חדש לרקדן שלכם.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **איך עוברים את השלב הזה?**
+          * הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.
+
+          *השלב הזה מסתיים אחרי 8 תיבות.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **איך עוברים את השלב הזה?**
+
+          * אחרי 6 תיבות, הרקדן שלכם צריך לרקוד ריקוד שונה מזה שהוא רקד אחרי 4 תיבות.
+
+          *השלב הזה מסתיים אחרי 12 תיבות.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **איך עוברים את השלב הזה?**
+
+          * אתם צריכים לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר.
+
+          *השלב הזה מסתיים אחרי 10 תיבות.*
+        challenges: |-
+          **אתגר רשות**
+
+          שנו את אפקט הרקע בנקודות שונות במהלך השיר על ידי חיבור הבלוק החדש מתחת ל-
+          <block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">״תיבות״</title></block></xml>
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **איך עוברים את השלב הזה?**
+
+          * אתם צריכים שיהיו לכם לפחות שני רקדנים.
+
+          *השלב הזה מסתיים אחרי 6 תיבות.*
+        challenges: |-
+          **אתגר רשות**
+
+          *הוסיפו רקדן שלישי (או כמה שבא לכם!)
+          * גרמו לכל הרקדנים שלכם לבצע צעדים אחרים בנקודות שונות במהלך השיר.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **איך עוברים את השלב הזה?**
+
+          * שני רקדנים חייבים להיות בגודל שונה מ-100.
+
+          *השלב הזה מסתיים אחרי 6 תיבות.*
+        challenges: |-
+          **אתגר רשות**
+
+          *התנסו בשינוי המאפיינים האחרים (רוחב, גובה, סיבוב וכו'...)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **איך עוברים את השלב הזה?**
+
+          * שנו את הגוון של רקדן אחד לפחות.
+
+          *השלב הזה מסתיים אחרי 8 תיבות.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **איך עוברים את השלב הזה?**
+
+          * המאפיינים עבור שני רקדנים או יותר חייבים להשתנות.
+
+          *השלב הזה מסתיים אחרי 8 תיבות.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **איך עוברים את השלב הזה?**
+
+          * פשוט היו יצירתיים!
+
+          *השלב הזה מסתיים אחרי 8 תיבות.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **איך עוברים את השלב הזה?**
+
+          * פשוט היו יצירתיים!
+
+          *השלב הזה מסתיים אחרי 8 תיבות.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **איך  עוברים את השלב הזה?**
+
+          * השתמשו בבלוק ה-"כאשר החץ השמאלי לחוץ" כדי לגרום לרובוט לעשות צעד ריקוד כשאתם לוחצים עליו.
+
+          *השלב הזה מסתיים אחרי 8 תיבות.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "רואים את **המנורות הימיות** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? איך תוכלו להשתמש בפקודת תנאי איתן כדי לעבור את האנדרטה הימית?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: אתם יכולים להשתמש בבלוק "אִם יש נתיב" כדי לעזור לכם לבצע את הפניות הנכונות / ימינה.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: רואים את הבלוקים של השוניות האדומות והכחולות? היעזרו בהם כציוני דרך עבור הפניות ימינה ושמאלה בתוך השונית.
       Dance short test 2_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
@@ -1221,6 +1345,12 @@ he:
         mc_3_a: 'בלוק ה-`גְזוז` פועל רק כאשר הכבשה עומדת מולכם. האם אתם פונים לעבר הכבשה?  '
         mc_3_b: 'אם אתם צריכים לשנות את הכיוון שאתם פונים אליו, השתמשו בבלוק `פנה`.  '
         mc_3_c: 'אל תפחדו מטעויות! הריצו את הקוד ותראו מה קורה, גם אם עוד לא פתרתם את החידה.  '
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **איך עוברים את השלב הזה?**
+          * הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.
+
+          *השלב הזה מסתיים אחרי 8 תיבות.*
       Underground Avoiding Lava_authored_hint:
         mc_11_a: כל הקוד מוכן ומזומן לבדוק האם יש בשטח לבה, ולהתמודד איתה. כל שעליכם לעשות הוא להוסיף בלוק כדי לזוז.
         mc_11_b: האם פקודת ה`זוז קדימה` שהצבתם צריכה להיות בתוך הצהרת ה`אם` - או אחריה?
@@ -1305,24 +1435,57 @@ he:
         courseA_artist_loops8_c: "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
       courseA_artist_loops8_2018_authored_hint:
         courseA_artist_loops8_c: "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
+      courseA_artist_loops8_2019_authored_hint:
+        courseA_artist_loops8_c: "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
       courseA_collector_loops_challenge2kp_authored_hint:
         courseA_collector_loops_challenge2kp_a: האם תוכלו להשתמש בלולאות על מנת לפתור את החידה הזו?
       courseA_collector_loops_challenge2kp_2018_authored_hint:
         courseA_collector_loops_challenge2kp_a: האם תוכלו להשתמש בלולאות על מנת לפתור את החידה הזו?
+      courseA_collector_loops_challenge2kp_2019_authored_hint:
+        courseA_collector_loops_challenge2kp_a: האם תוכלו להשתמש בלולאות על מנת לפתור את החידה הזו?
       courseA_harvester_loops5_authored_hint:
+        courseA_harvester_loops5_c: השתמשו בנתיב כדי לאסוף את כל התירס!
+      courseA_harvester_loops5_2019_authored_hint:
         courseA_harvester_loops5_c: השתמשו בנתיב כדי לאסוף את כל התירס!
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: לחצו 'הרץ' וראו מה קורה!
         courseA_harvester_loops5b_c: זוזו בכיוון אחד, ואז בכיוון השני בנתיב הזה.
+      courseA_harvester_loops5b_2019_authored_hint:
+        courseA_harvester_loops5b_a: לחצו 'הרץ' וראו מה קורה!
+        courseA_harvester_loops5b_c: זוזו בכיוון אחד, ואז בכיוון השני בנתיב הזה.
       courseA_harvester_loops7_authored_hint:
+        courseA_harvester_loops7_b: השתמשו בשתי לולאות כדי ללכת בנתיב הזה.
+      courseA_harvester_loops7_2019_authored_hint:
         courseA_harvester_loops7_b: השתמשו בשתי לולאות כדי ללכת בנתיב הזה.
       courseA_harvester_loops9_authored_hint:
         courseA_harvester_loops9_c: לך בנתיב כדי לאסוף את כל התירס.
+      courseA_harvester_loops9_2019_authored_hint:
+        courseA_harvester_loops9_c: לך בנתיב כדי לאסוף את כל התירס.
       courseA_harvester_seq10_authored_hint:
+        courseA_harvester_seq10_c: נסו להשתמש בנתיב הזה כדי לאסוף את כל התירס.
+      courseA_harvester_seq10_2019_authored_hint:
         courseA_harvester_seq10_c: נסו להשתמש בנתיב הזה כדי לאסוף את כל התירס.
       courseA_harvester_seq5_authored_hint:
         courseA_harvester_seq5_b: אתם צריכים למחוק בלוק אחד.
+      courseA_harvester_seq5_2019_authored_hint:
+        courseA_harvester_seq5_b: אתם צריכים למחוק בלוק אחד.
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1361,6 +1524,25 @@ he:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
           הקוד שלך צריך להיראות כך:
@@ -1380,7 +1562,45 @@ he:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          הקוד שלך צריך להיראות כך:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1422,9 +1642,30 @@ he:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          הקוד שלך צריך להיראות כך:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_b: אל תפחד לעשות טעות! נסה להוסיף בלוקים והרץ את הקוד כדי לראות מה קורה.
       courseA_maze_seq13_2018_authored_hint:
+        courseA_maze_seq13_b: אל תפחד לעשות טעות! נסה להוסיף בלוקים והרץ את הקוד כדי לראות מה קורה.
+      courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_b: אל תפחד לעשות טעות! נסה להוסיף בלוקים והרץ את הקוד כדי לראות מה קורה.
       courseA_maze_seq5_2018_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
@@ -1432,9 +1673,20 @@ he:
           You will need to use this block:
 
           <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        '2': אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
         '2': אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!
       courseB_Scrat_ramp2_2018_authored_hint:
@@ -1453,7 +1705,42 @@ he:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -1491,7 +1778,45 @@ he:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          הקוד שלך צריך להיראות כך:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -1529,9 +1854,30 @@ he:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          הקוד שלך צריך להיראות כך:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_collector_loops_challenge2a_authored_hint:
         courseB_collector_loops_challenge2a_c: כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג <xml><block type="collector_collect"/></xml> בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו.
       courseB_collector_loops_challenge2a_2018_authored_hint:
+        courseB_collector_loops_challenge2a_c: כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג <xml><block type="collector_collect"/></xml> בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו.
+      courseB_collector_loops_challenge2a_2019_authored_hint:
         courseB_collector_loops_challenge2a_c: כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג <xml><block type="collector_collect"/></xml> בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו.
       courseB_iceage_loops1_authored_hint:
         courseB_iceage_loops1_a: היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!
@@ -1540,17 +1886,37 @@ he:
           <xml><block type="maze_moveEast"/></xml>
       courseB_iceage_loops10_authored_hint:
         courseB_iceage_loops10_a: היזהרו מהקרח השבור! סקראט ייפול ישר לתוך המים!
+      courseB_iceage_loops10_2019_authored_hint:
+        courseB_iceage_loops10_a: היזהרו מהקרח השבור! סקראט ייפול ישר לתוך המים!
+      courseB_iceage_loops1_2019_authored_hint:
+        courseB_iceage_loops1_a: היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!
+        courseB_iceage_loops1_b: |-
+          יהיה עליך להשתמש בבלוק הזה:
+          <xml><block type="maze_moveEast"/></xml>
       courseB_iceage_loops2_authored_hint:
+        courseB_iceage_loops2_a: נסה לחלק את פתרון הבעיה ל-2 חלקים, אחד לפני הפינה ואחד אחרי הפינה.
+        courseB_iceage_loops2_b: אם אתה מרגיש שאתה נתקע, נסה לומר בקול את הצעדים.
+        courseB_iceage_loops2_c: לך בנתיב אשר יביא את סקראט אל הבלוט.
+      courseB_iceage_loops2_2019_authored_hint:
         courseB_iceage_loops2_a: נסה לחלק את פתרון הבעיה ל-2 חלקים, אחד לפני הפינה ואחד אחרי הפינה.
         courseB_iceage_loops2_b: אם אתה מרגיש שאתה נתקע, נסה לומר בקול את הצעדים.
         courseB_iceage_loops2_c: לך בנתיב אשר יביא את סקראט אל הבלוט.
       courseB_iceage_loops6_authored_hint:
         courseB_iceage_loops6_a: בקוד הסופי שלכם יהיו **שלושה** בלוקים של תנועה.
+      courseB_iceage_loops6_2019_authored_hint:
+        courseB_iceage_loops6_a: בקוד הסופי שלכם יהיו **שלושה** בלוקים של תנועה.
       courseB_iceage_loops7_authored_hint:
+        courseB_iceage_loops7_a: אם אתה נתקע, נסה לכתוב את הצעדים על נייר. האם אתה רואה את התבנית החוזרת על עצמה?
+      courseB_iceage_loops7_2019_authored_hint:
         courseB_iceage_loops7_a: אם אתה נתקע, נסה לכתוב את הצעדים על נייר. האם אתה רואה את התבנית החוזרת על עצמה?
       courseB_iceage_loops9_authored_hint:
         courseB_iceage_loops9_c: סקראט צריך ללכת בדרך המובילה אל הבלוט.
+      courseB_iceage_loops9_2019_authored_hint:
+        courseB_iceage_loops9_c: סקראט צריך ללכת בדרך המובילה אל הבלוט.
       courseB_maze_seq1_2018_authored_hint:
+        courseB_maze_seq1_a: חבר את הבלוקים אל הבלוק <xml><block type="when_run"/></xml> כדי לגרום לסקראט לזוז!
+        courseB_maze_seq1_b: גרור את שלושת החצים <xml><block type="maze_moveSouth"/></xml> החוצה וחבר אותם אל הבלוק <xml><block type="when_run"/></xml> כדי לגרום לסקראט להגיע אל הבלוט.
+      courseB_maze_seq1_2019_authored_hint:
         courseB_maze_seq1_a: חבר את הבלוקים אל הבלוק <xml><block type="when_run"/></xml> כדי לגרום לסקראט לזוז!
         courseB_maze_seq1_b: גרור את שלושת החצים <xml><block type="maze_moveSouth"/></xml> החוצה וחבר אותם אל הבלוק <xml><block type="when_run"/></xml> כדי לגרום לסקראט להגיע אל הבלוט.
       courseB_maze_seq2_2018_authored_hint:
@@ -1561,11 +1927,17 @@ he:
         courseB_maze_seq5_a: אם אתה נתקע, נסה לכתוב את הצעדים על גבי נייר.
       courseB_maze_seq5_2018_authored_hint:
         courseB_maze_seq5_a: אם אתה נתקע, נסה לכתוב את הצעדים על גבי נייר.
+      courseB_maze_seq5_2019_authored_hint:
+        courseB_maze_seq5_a: אם אתה נתקע, נסה לכתוב את הצעדים על גבי נייר.
       courseB_maze_seq6_authored_hint:
         courseB_maze_seq6_b: אם אתה מרגיש תקוע, נסה לפתור את החידה בשני שלבים, אחד לצדדים ואחד למטה-ולמעלה.
       courseB_maze_seq6_2018_authored_hint:
         courseB_maze_seq6_b: אם אתה מרגיש תקוע, נסה לפתור את החידה בשני שלבים, אחד לצדדים ואחד למטה-ולמעלה.
+      courseB_maze_seq6_2019_authored_hint:
+        courseB_maze_seq6_b: אם אתה מרגיש תקוע, נסה לפתור את החידה בשני שלבים, אחד לצדדים ואחד למטה-ולמעלה.
       courseB_maze_seq7_2018_authored_hint:
+        courseB_maze_seq7_a: הוסף בלוק אחד כדי להזיז את סקראט אל הבלוט.
+      courseB_maze_seq7_2019_authored_hint:
         courseB_maze_seq7_a: הוסף בלוק אחד כדי להזיז את סקראט אל הבלוט.
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: ישנן 2 דרכים לפתור את החידה הזו!
@@ -1573,13 +1945,19 @@ he:
         courseB_maze_seq9_d: תקועים? נסו את הנתיב הזה!
       courseB_maze_seq9_2018_authored_hint:
         courseB_maze_seq9_d: תקועים? נסו את הנתיב הזה!
+      courseB_maze_seq9_2019_authored_hint:
+        courseB_maze_seq9_d: תקועים? נסו את הנתיב הזה!
       courseB_playlab_events6_authored_hint:
         courseB_playlab_events6_c: הגיעו לכל הדגלים כדי לעבור!
       courseB_playlab_events6_2018_authored_hint:
         courseB_playlab_events6_c: הגיעו לכל הדגלים כדי לעבור!
+      courseB_playlab_events6_2019_authored_hint:
+        courseB_playlab_events6_c: הגיעו לכל הדגלים כדי לעבור!
       courseB_starWars_prog9_authored_hint:
         courseB_starWars_prog9_a: אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       courseB_starWars_prog9_2018_authored_hint:
+        courseB_starWars_prog9_a: אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
+      courseB_starWars_prog9_2019_authored_hint:
         courseB_starWars_prog9_a: אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: 'אם תשתמש בבלוק ''הזז קדימה ב 100 פיקסלים'', אני אצייר קו בצורה אוטומטית.'
@@ -2531,6 +2909,9 @@ he:
       coursea_maze_ramp1_2018_authored_hint:
         courseC_maze_programming1_a: אם הציפור לא מגיעה אל החזיר, בדוק היטב ששני הבלוקים מחוברים יחד היטב ואז לחץ "הרץ" שוב.
         courseC_maze_programming1_b: אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!
+      coursea_maze_ramp1_2019_authored_hint:
+        courseC_maze_programming1_a: אם הציפור לא מגיעה אל החזיר, בדוק היטב ששני הבלוקים מחוברים יחד היטב ואז לחץ "הרץ" שוב.
+        courseC_maze_programming1_b: אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!
       coursef_maze_ramp3_authored_hint:
         courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם.\n"
       coursef_maze_ramp3_2018_authored_hint:
@@ -2735,6 +3116,7 @@ he:
       grade5_artist_for_loopsfreeplay11_authored_hint:
         Course_4_Artist_For_Loops_inspire_a: הבסיס של הקוד הזה הוא כמו הפתרון של החידה הקודמת...עם כמה שינויים.
         Course_4_Artist_For_Loops_inspire_b: נסה להשתמש בלולאת 'עבור' אשר סופרת מ-3 עד 10 עם תוספת קבועה של 1.
+        Course_4_Artist_For_Loops_inspire_c: ישנן שתי חזרות של אותה לולאת חזרה בתוך לולא ה-for, אבל החזרה השניה פונה לכיוון ההפוך.
       grade5_artist_functionparameters10_authored_hint:
         brush_width: הגדרנו לעובי 1 את רוחב המברשת, ואז את צבע המברשת לכחול לפני שהתחלנו לעשות כל דבר אחר.
         double_loop: נסה לשים לולאת "עם" בתוך לולאת "חזור".
@@ -2743,8 +3125,13 @@ he:
       grade5_artist_variables_freeplay15_authored_hint:
         Course_4_Artist_Inspire_a: אחרי שתשלים ריבוע אחד, נסה לקפוץ קדימה חצי מהאורך שלו לפני שתסתובב כדי לייצר אחד נוסף.
         Course_4_Artist_Inspire_b: כל ריבוע וקפיצה חוזרים על עצמם 4 פעמים (כאשר יש פניה שמאלה ביניהם) כדי לייצר מעין שבשבת מלאה.
+        Course_4_Artist_Inspire_c: כל לשבשבת חוזרת על עצמה עם פניה ימינה של **360/מס' הצדדים**.
       grade5_artist_variables_octagons13_authored_hint:
         Course_4_Artist_Vars_13_a: אתה זקוק לשתי לולאות חזור (אחד בתוך השני) כאשר שניהם חוזרים על עצמם `sides` פעמים.
+        Course_4_Artist_Vars_13_b: "לולאת החזרה הפנימית מציירת מתומן (בפניה לשמאל).\nלאחר מכן, צריך לנוע קדימה ולפנות ימינה רק בלולאה החיצונית."
+        Course_4_Artist_Vars_13_c: בכדי להתאים את הצורה להישאר באותו גודל כאשר מספר הצדדים משתנה, השתמש בבלוק חשבון בכדי לחלק את הארוך (בפיקסלים) במספר הצדדים.
+      grade5_artist_variables_square7_authored_hint:
+        Course_4_Artist_Vars_6_a: בכדי לצייר מצולע רגיל, יש לפנות ב-**360/מספר הצדדים** בכל פעם.
       gradek_artist_loops7_authored_hint:
         gradek_artist_loops7_c: "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
       level 'grade3_Loops_10_authored_hint:

@@ -286,6 +286,80 @@ et:
       Course 4 SCVP 1: Loo funktsioon parameetritega, mis võimaldavad kunstnikul hüpata
         edasi ja tagasi x piksli võrra ning üles ja alla y piksli võrra (kasutades
         positiivseid ja negatiivseid arve).
+      CourseD_Dance_Party_01: |-
+        * Korraldame tantsuõhtu! *
+
+        Lohista `tee uus` plokk töölauale ja ühenda see `seadista` plokiga, et luua esimene tantsija...
+
+        * * võite klõpsata ka vasakul olevat elektripirni, kui soovite rohkem teavet või lisaväljakutseid.*
+      CourseD_Dance_Party_02: |-
+        Paneme selle põdra tantisma!
+
+         <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">uus&#95;tantsija</title>Lohistage<title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> plokk töölauale. Ühendage see allpool <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"ühikud"</title></block></xml> plokiga. Sinu tantsija peaks alustama uue liigutusega peale neljandat ühikut.
+
+
+        * ühikuid * kasutatakse, et muusikas aega mõõta. Selle juhendi puhul on ühiku pikkuseks neli takti.
+      CourseD_Dance_Party_03: "* Nüüd gruuvime! * \n\nLisa <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">plokk \"ühikud\"<div class=\"notranslate\">6</div></block></xml>
+        oma töölauale. Las tantsija alustab uue liigutusega peale 6 ühikut."
+      CourseD_Dance_Party_04: |-
+        *See tants vajab natuke särtsu!*
+
+        Otsi oma tööriistakastist uus plokk, mis lisab tantsija taha tasustaefekti. Vaata, kuidas efektid koos muusikaga aja jooksul muutuvad!
+      CourseD_Dance_Party_05: |-
+        Kasuta uut plokki, et tantsija **iga 2 ühiku järel** liigutusi muudaks!
+
+        * Valides `(järgmine)`, `(Eelmine)`, or `(Juhuslik)` ütleb tantsijale, et ta sooritaks iga kord uue liigutuse kui kood tööle pannakse.
+      CourseD_Dance_Party_06: |-
+        *Meil on vaja rohkem tantsijaid!*
+
+        Loo taustatantsija, keda kutustakse `taustatantsija1`, et ta kassiga tantsiks.
+      CourseD_Dance_Party_08: |-
+        Igal tantsijal on hulk _omadusi_, mis määravad, milline ta välja näeb.
+
+        Võid muuta tantsija taustatantsijaks, muutes nende_suuruse_ väiksemaks. Kas saad muuta mõlemad taustatantsijad ühesuuruseks?
+      CourseD_Dance_Party_09: |-
+        Tantsijatel on omadus "toon", millega saab neile värvi lisada. Proovi muuta ühe oma tantsija tooni.
+        * Toonid segavad sinu valitud värvid tantsijate värviga.
+      CourseD_Dance_Party_10: |-
+        Nüüd me teame, kuidas muuta tantsijate omadusi. Saame neid omadusi ka automaatselt muusikale vastavalt muuta, kasutades seda plokki:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">parem_ükssarvik</title>
+        <title name="PROPERTY">"suurus"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        See program kasutab muusika "bassi" -heli (madalad noodid), et kontrollida tantsija pikkust. Kas saad panna ka teise tantsija muusikale vastavalt muutuma?
+      CourseD_Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml>
+        plokk laseb koodi käivitada siis, kui vajutatakse ülesse suunatud noolt. \n\nVõid
+        muuta tontsuliigutust, muuta tantsija omadusi või teha korra kiire liigutuse.
+        Ole loominguline ja otsi uusi plokke!"
+      CourseD_Dance_Party_11_5: "Vaata seda plokki:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"PART\"</title>\n
+        \   <title name=\"LAYOUT\">\"ring\"</title>\n  </block></xml>\n  \nNüüd saad
+        korraga luua terve hulga tantsijaid!\n\nProovi kasutada mõnda plokki \"kõik
+        pardid\", et kirjutada kood, mis paneb kõik pardid koos tantsima."
+      CourseD_Dance_Party_11b: |-
+        On aeg tantsuvõistluseks! Kass teeb dabi kui vajutad vasakut nooleklahvi. Pane Robot üks kord "kükitama", kui vajutatakse paremat nooleklahvi ja tegema üks "kõrge plaks", kui vajutatakse ülemist nooleklahvi.
+
+        ** Kasuta nooleklahve, et Robot kükitaks-plaksutaks-kükitaks-plaksutaks nii kiiresti kui võimalik! **
+      CourseD_Dance_Party_12: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
+      CourseE_HOC 2018 Level_10: "**Kalmaar** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        peidab end kuskil Ookeani monumendi juures, kas sa leiad ta ülesse?\n\n"
+      CourseE_HOC 2018 Level_11: Ehita **merekristallidest** sein ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        musta betooni ümber. See aktiviseeribe **kanali** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        ja lõpeta väljakutse!
+      CourseE_HOC 2018 Level_7a: "Sa leidsid veealused varemed. Otsi liivakivi hulgast
+        **kirstu** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png),
+        mille sees on **merekristallidest** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        aarded.\n\n"
+      CourseE_HOC 2018 Level_8: "Esmalt jäämäed, nüüd laava? Mine sellelt troopiliselt
+        saarelt läbi ja leia **troopilised kalad** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        korallrahult.\n\n"
+      CourseE_HOC 2018 Level_9b: "Sa jõudsid korallrahuni, nüüd otsida sealt ** Mere
+        Süda **! [] (https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
+        Kasuta siniseid ja punaseid koralle, et jõuda aarde ** kirstuni **! [] (https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       CourseF_PlayLab_vars2: Võidujooks viimases ülesandes ei olnud kuigi aus! Muuda
         muutujat „koera_kiirus“, et saaksid koguda kassist rohkem lippe. Võidab see,
         kes kogub esimesena 10 lippu!
@@ -649,6 +723,13 @@ et:
       Overworld Move to Sheep: Lisa teine käsk „liigu edasi“, et jõuda lambani.
       Overworld Move to Sheep_2018: Lisa teine käsk „liigu edasi“, et jõuda lambani.
       Overworld Move to Sheep_2019: Lisa teine käsk „liigu edasi“, et jõuda lambani.
+      Ryan_Demo: |-
+        Paneme selle põdra tantisma!
+
+         <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">uus&#95;tantsija</title>Lohistage<title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> plokk töölauale. Ühendage see allpool <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"ühikud"</title></block></xml> plokiga. Sinu tantsija peaks alustama uue liigutusega peale neljandat ühikut.
+
+
+        * ühikuid * kasutatakse, et muusikas aega mõõta. Selle juhendi puhul on ühiku pikkuseks neli takti.
       Testing Quantum Farmer: "Uskumatu, ma leidsin tõeliselt sügava augu!\r\rMa ei
         tea, kui mitu labidatäit mulda selle täitmiseks vaja on. \r Kas sa saaksid
         kirjutada programmi, millega täidetakse auk, kuni maapind on tasane? Vihje:

@@ -159,7 +159,19 @@ nn:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Har du vanskar med å finne ut korleis du kan få blokkene ned? Prøv å gjere det same med den røde blomen akkurat som den lilla blomen!
         2-3_Bee_Conditionals_14_b: Dersom den røde blomen var lilla, kan du finne ut korleis ein kan bruke en ekstra "gjenta"-løkke for å kutte ned på koden?
-        2-3_Bee_Conditionals_14_c: "Prøv å bryte dette opp i to separate delar:  \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Samle Nektar 3 gonger\n  - Flytt framover 5 gonger\n  - Sjå om det er nektar, dersom nektar: samle den\n  - Snut til venstre\n  \n2) Lag honning \n  - Gå fram ein gong\n  - Lag to honningar"
+        2-3_Bee_Conditionals_14_c: |-
+          Prøv å bryte dette opp i to separate delar:  
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Samle Nektar 3 gonger
+            - Flytt framover 5 gonger
+            - Sjå om det er nektar, dersom nektar: samle den
+            - Snut til venstre
+            
+          2) Lag honning 
+            - Gå fram ein gong
+            - Lag to honningar
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Hugs: Lilla blomsar har enten 0 eller 1 nektar, og dei kan endre seg kvar gong du køyrer programmet.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -327,7 +339,9 @@ nn:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Hver gjentatte form er kombinasjonen av **halvparten av ein sekskant**, etterfulgt av **2/3 av ein trekant**. '
         Course_4_Artist_12_b: 'Den unike forma er nesten den same som i siste oppgåva, bortsett frå at halv-sekskanten er litt større. '
-        Course_4_Artist_12_c: "1) Dei tre første linjene er 60 pikslar lang, og du må snu 60 gradar.  \n 2) De to neste linjene er 80 pikslar lange og du må snu 120 gradar "
+        Course_4_Artist_12_c: |-
+          1) Dei tre første linjene er 60 pikslar lang, og du må snu 60 gradar.  
+           2) De to neste linjene er 80 pikslar lange og du må snu 120 gradar 
         Course_4_Artist_12_d: |-
           **Løysing:**
 
@@ -2671,6 +2685,105 @@ nn:
         Course_4_SCV_6_c: Hver av figurens 5 sider er delt opp i biter av 'lengde' / 'sider' der zig er blågrønn (rgb = 0,175,200) og zag er lilla (rgb = 100, 50, 150).
         Course_4_SCV_6_d: 'For sikke, ta til venstre ved ''360 ''/'' sider''.  For å sakke, snu til høyre ved ''360 ''/'' sider''. '
         Course_4_SCV_6_e: 'Resten av programmet er veldig standard for å lage en full 360 graders rotasjon fra en form, bortsett fra at vi overlapper formene med halvering, slik at vi må snu mot høyre med "180"/"side", noe som betyr at vi trenger dobbelt så mange av dem som vanlig ("sider" * "2" repetisjoner). '
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Sørg for at det er ein dansar på skjermen.
+
+          *Denne øvinga endar etter 4 taktar.*
+        challenges: |-
+          **Ekstrautfordringer**
+          * Vel ein annan song.
+          * Vel ein dansar som ser ut som ein elg!
+          * Gi dansaren nytt navn.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Dansaren må bytte til ein ny dans etter 4 taktar.
+
+          *Denne øvingar endar etter 8 taktar.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Etter 6 takter må dansaren din danse ein annan dans enn etter 4 takter.
+
+          *Denne øvinga ender etter 12 taktar.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må skifte bakgrunnseffekt ein gong i den sjuende takten i songen.
+
+          *Denne øvinga ender etter 10 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          Endre bakgrunnseffekten på ulike tidspunkt i songen ved å koble til den nye blokka under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktar"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må ha minst to dansarar.
+
+          *Denne øvinga ender etter 6 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          * Legg til ein tredje dansar (eller så mange du vil!)
+          * Få alle dansarane dine til å danse ulike dansar på ulike tidspunkt i songen.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * To av dansarane må ha ei anna storleik enn 100.
+
+          *Denne øvinga ender etter 6 taktar.*
+        challenges: |-
+          **Ekstrautfordring**
+
+          * Eksperimenter ved å endre andre eigenskapar (breidde, høgde, rotasjon osv.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Skift farge på minst ein dansar.
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Du må endre eigenskapane til to eller flere dansarar.
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Berre vêr kreativ!
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Berre vêr kreativ!
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          * Bruk ‘når venstrepila blir trykka ned’-blokka til å få roboten til å gjere ein bestemt dans når du trykkar på venstrepila.
+
+          *Denne øvinga ender etter 8 taktar.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Ser du **sjølanternene** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Korleis kan du bruke eit vilkår for å komme deg gjennom havmonumentet?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Ser du dei røde og blå korall-blokkene? Bruk dei som guide for å snu til høgre og venstre gjennom revet.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Kontroller at nummeret for `dog_speed` til noe større enn `cat_speed`.
       Dance short test 2_authored_hint:
@@ -2897,6 +3010,8 @@ nn:
         Function_intro_Ryan_a: Du kan kalle en funksjon mange ganger i programmet ditt!  Prøv å kalle den to ganger for å løse denne oppgaven.
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "Ser du **sjølanternene** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Korleis kan du bruke eit vilkår for å komme deg gjennom havmonumentet?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning.
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: Ser du dei røde og blå korall-blokkene? Bruk dei som guide for å snu til høgre og venstre gjennom revet.
       HOC Dance 0_draft_authored_hint:
@@ -3174,6 +3289,12 @@ nn:
         mc_3_b: 'Dersom du trenger å forandre på hvilken vei du står, bruk en ''snu''-blokk.'
       Quantum Bee - Ryan_authored_hint:
         test_hint: Dette er et test hint.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+          * Dansaren må bytte til ein ny dans etter 4 taktar.
+
+          *Denne øvingar endar etter 8 taktar.*
       Underground If Statements_authored_hint:
         mc_12_a: Du finner redstone i blokkene med røde merker på.
       Underground If Statements_2018_authored_hint:
@@ -3192,6 +3313,8 @@ nn:
       aE4_authored_hint:
         aE4_b: "Ikke glem å flytte tegneren ned før du begynner med en ny rad!\n\nFor å flytte tegneren ned og få ham til å se mot høyre igjen:\n- Snu 90 grader (for å få tegneren til å se nedover).\n- Hopp 20 piksler (for å komme til ny rad).\n- Snu tilbake 90 grader (for å få tegneren til å se mot høyre igjen)."
         aE4_d: Dersom det blir altfor forvirrande kode, kan du alltid klikke "Start på nytt" og prøve ein gong til!
+      allthethings_ttscsf contained_authored_hint:
+        courseE_farmer_ramp12a: Gå gjerne tilbake til den forrige oppgave hvis du trenger en påminnelse om hvordan man skal plukke vekster bare hvis det finnes noe å plukke.
       artistLoopsK4_authored_hint:
         artistLoopsK4_a: Sitter du fast? Prøv å kjøre koden for å se hvilken blokk som ikke stemmer.
       artistLoopsKB_authored_hint:
@@ -3237,6 +3360,9 @@ nn:
       courseA_collector_loops_challenge1_2018_authored_hint:
         courseA_collector_loops_challenge1_a: Hvis noe går galt kan du forsøke å endre tallene i hver løkke.
         courseA_collector_loops_challenge1_b: Du trenger ikke å bruke løkke hvis du bare skal gjøre noe én gang.
+      courseA_collector_loops_challenge1_2019_authored_hint:
+        courseA_collector_loops_challenge1_a: Hvis noe går galt kan du forsøke å endre tallene i hver løkke.
+        courseA_collector_loops_challenge1_b: Du trenger ikke å bruke løkke hvis du bare skal gjøre noe én gang.
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_a: Du kan flytte tilbake over veien enda en gang før du går sydover.
       courseA_maze_ramp2_2018_authored_hint:
@@ -3255,9 +3381,44 @@ nn:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -3295,7 +3456,45 @@ nn:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -3330,7 +3529,29 @@ nn:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
@@ -3338,11 +3559,18 @@ nn:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseA_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge1_a: Det er to løsninger til dette puslespillet.
       courseA_maze_seq_challenge1_2018_authored_hint:
         courseA_maze_seq_challenge1_a: Det er to løsninger til dette puslespillet.
+      courseA_maze_seq_challenge1_2019_authored_hint:
+        courseA_maze_seq_challenge1_a: Det er to løsninger til dette puslespillet.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
       courseB_Scrat_ramp2_2018_authored_hint:
@@ -3361,7 +3589,42 @@ nn:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -3399,7 +3662,45 @@ nn:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -3434,6 +3735,22 @@ nn:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_collector_loops_challenge2_authored_hint:
         courseB_collector_loops_challenge2_a: Hvis noe går galt, ikke vær redd for å starte på nytt. Ikke gi opp!
       courseB_collector_loops_challenge2_2018_authored_hint:
@@ -3447,9 +3764,13 @@ nn:
         courseB_maze_seq1_a: Koble blokker til <xml><block type="when_run"/></xml> for å få fuglen til å flytte på seg!
       courseB_maze_seq1_2018_authored_hint:
         courseB_maze_seq1_a: Koble blokker til <xml><block type="when_run"/></xml> for å få fuglen til å flytte på seg!
+      courseB_maze_seq1_2019_authored_hint:
+        courseB_maze_seq1_a: Koble blokker til <xml><block type="when_run"/></xml> for å få fuglen til å flytte på seg!
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: Det er to måtar å løyse denne oppgåva!
       courseB_maze_seq8_2018_authored_hint:
+        courseB_maze_seq8_b: Det er to måtar å løyse denne oppgåva!
+      courseB_maze_seq8_2019_authored_hint:
         courseB_maze_seq8_b: Det er to måtar å løyse denne oppgåva!
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: '*"Hvis du bruker <xml><block type="draw_move_by_constant"><title name="DIR">flyttFremover</title><title name="VALUE">100</title></block></xml>-blokken, vil jeg tegne en linje."*'
@@ -4079,6 +4400,95 @@ nn:
       courseF_artist_for_challenge2_2018_authored_hint:
         courseF_artist_for_challenge2_c: 'Løkka `tell` går fra 5 til 250 med steg på 2. '
         courseF_artist_for_challenge2_a: Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`.
+        courseF_artist_for_challenge2_d: |
+          **Løsning:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">250</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_rgb" inline="false">
+          <value name="RED">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="GREEN">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="BLUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MINUS</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">80</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_for_challenge2_2019_authored_hint:
         courseF_artist_for_challenge2_c: 'Løkka `tell` går fra 5 til 250 med steg på 2. '
         courseF_artist_for_challenge2_a: Fargen forandrer seg ved å bruke blokka `angi farge rød, grønn, blå`. Rød er satt konstant til 255, grønn er alltid verdien av `teller` og blå er alltid `255 - teller`.

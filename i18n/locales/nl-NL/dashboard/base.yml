@@ -76,6 +76,7 @@ nl:
   prize: 'prijs'
   more_info: 'Meer informatie'
   auth:
+    continue_with: 'Ga verder met %{provider}'
     sign_in_with: 'Meld je aan met %{provider}'
     signed_in: 'Ingelogd!'
     signed_out: 'Je bent nu uitgelogd uit <a href="%{url}">Code.org</a>.'
@@ -801,10 +802,12 @@ nl:
         none: 'Wil ik liever niet zeggen'
       subjects:
         cs: 'informatica'
+        ict: 'ICT'
         math: 'wiskundige'
         science: 'Wetenschap'
         la: 'Taalvaardigheden'
       resources:
+        bootstrap: 'Bootstrap'
         kodable: 'Kodable'
         lightbot: 'LightBot'
       robotics:

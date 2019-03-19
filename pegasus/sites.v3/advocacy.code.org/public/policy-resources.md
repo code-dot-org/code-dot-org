@@ -29,6 +29,7 @@ style_min: true
   * [District computer science implementation examples](https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit?usp=sharing)
   * [Guidance for standards developers (from the K-12 Computer Science Framework)](http://k12cs.org/wp-content/uploads/2016/09/K%E2%80%9312-CS-Framework-Guidance-for-Standards-Developers.pdf)
   * [Guidance for standards developers checklist](https://docs.google.com/document/d/1Md_Iww2IRKnXjIU0CAiQD7i-InTihXA7nM9P6LIsB-Y/edit?usp=sharing)
+  * [Standards and accountability whitepaper](https://docs.google.com/document/d/1vLQLVU5gqvoNEyvAP0ERYWweRB0gx5fxoi7bAG_t_hI/edit?usp=sharing)
 
 ### Federal resources
   * [Growing K-12 CS using the Perkins Act](https://code.org/files/RethinkingPerkins.pdf)

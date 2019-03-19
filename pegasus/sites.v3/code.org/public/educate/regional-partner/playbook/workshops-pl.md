@@ -17,6 +17,7 @@ Workshops are the core of Code.org's Teacher [Professional Learning Program](htt
 - **[6-12 Workshops](#csp)**
 - **[Local Summer Workshop Specific](#local)**
 - **[Academic Year Workshop Specific](#academic)**
+- **[Virtual PL Specific](#virtual)**
 - **[Workshop Dashboard](#dashboard)**
 - **[Professional Learning Program One-Pager](https://code.org/files/PLProgramsOverview_1-Pager.pdf)**
 
@@ -26,7 +27,8 @@ ________________
 
 ## Announcements
 
-- Printing instructions and materials are now available for Academic Year Workshop 3 [here](#printing)!
+- **New** resources for the '19-'20 Virtual Professional Learning Program are available [here](#virtual)
+- **New** resources for the CS Fundamentals Deep Dive workshop are available [here](#csf)
 
 
 [**Back to the top**](#top)
@@ -40,6 +42,10 @@ ________________
 See these resources to plan and run CS Fundamentals workshops. Partners should work with an approved CS Fundamentals facilitator when organizing one of these workshops.
 
 - <a href="https://docs.google.com/document/d/1oRjTXIu12XF2dR9G6qfo7VfBeNn0GPrUPF_s4Pk3Ckg/edit#" target=_blank>CS Fundamentals Workshop Process Document</a>
+- <a href="https://docs.google.com/document/d/1so6ZyrtydTOmW6YHDgpdpDIUBAssQ_uCI130iCBA8SQ/edit"target=_blank>2019 Intro and Deep Dive Workshop Overview</a>
+- <a href="https://docs.google.com/document/d/1rhqOSkvVoh4LjBoug4pYTXECmifBkOUxlb8rMgRgTAI/edit?usp=drive_web&ouid=101665711587844633285"target=_blank>2019 Deep Dive Workshop FAQ</a>
+- <a href="https://docs.google.com/presentation/d/1A1WWW0Lr0ZcRLvaHOA6Qai_rTHiEsD5zrm-Mu8W2T2Y/edit"target=_blank>2019 Deep Dive One-Pager</a>
+- <a href="https://docs.google.com/presentation/d/1vWCJwbUo_DkhnSWc8GAvRVRokTHrRqD1rKSxK34UYVY/edit#slide=id.g4e9da0141c_0_0"target=_blank>2019 Deep Dive Marketing Deck</a>
 - <a href="https://docs.google.com/document/d/1E3-0OajPte60A4IFovfmO0W7zRufDwJ7n-SHZCeSK_8/edit" target=_blank>Mimeo Marketplace Guidelines</a> for ordering materials & swag
 
 [**Back to the top**](#top)
@@ -96,14 +102,6 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
 </p>
 </details>
 
-<details>
-  <summary>**Other**</summary>
-  <p>
-
-- **[2018-19 Workshop Surveys Guide](https://docs.google.com/document/d/1YFHuan6wZWwqiN9YMymtzOKrAHMhiM7bOgRS8QPPF6w/edit):** Includes guidance for summer and academic year workshop surveys
-- **Automated Emails:** Teachers attending your workshop will receive automated emails 10 days and 3 days prior to attending the workshop. You can see a copy of these emails in your workshop process documents.
-</p>
-</details>
 
 <a id="local"></a>
 
@@ -112,51 +110,24 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
 Updated guidance for hosting 2019 Local Summer Workshops is now available!
 
 - **[2019 Local Summer Workshop Process Document](https://docs.google.com/document/d/1YSLD6U1gkUSAMpymoHeXX_NniC0WY7eSFxzOvu9U23I/edit?usp=sharing)**
+- **[Sample Logistics Questions for Registration](https://docs.google.com/document/d/1PPnxnoWYim-8qWqOEdwHi0fadx2y-Hc2PWd4QWKd3p8/edit?ts=5c5dc1e6#heading=h.9xw1ckl4l6ru)**
 
 
 <a id="academic"></a>
 
 ### Academic Year Workshop Specific
 
+- **[2019-2020 Academic Year Workshop Process Document] (https://docs.google.com/document/d/1sJUI1F7r270k8LYMbLBBZwqQho7xJMc0G-YUrfiRJwM/edit?usp=sharing)**
 - **[2018-2019 Academic Year Workshop Process Document] (https://docs.google.com/document/d/1P1IhiMVgGCGZFVaof9bdc7pRKmTK0ZOQTOw0KDkhMxs/edit?ts=5b294bbb)**
 
-<a id="printing"></a>
+<a id="virtual"></a>
 
-##### Printing Instructions for Academic Year - Workshop 3
+### Virtual PL Specific
 
-<details>
-  <summary>CS Discoveries</summary>
-  <p>
-
-<b>Unit 4 Lesson 4:</b>
-
-- Print one copy of the <a href="https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/edit" target=_blank> User Interface Screens - Activity Guide</a> for each pair of participants
-- Print one copy of the <a href="https://docs.google.com/document/d/1Rtla8WSmJol6sHT5SToep5_hhTM5I8z3UjA7yCap-nw/edit" target=_blank> User Testing (Computer) - Activity Guide </a> for each pair of participants
-- Print one copy of the <a href="https://docs.google.com/document/d/1IPu6hsHRui_ChXogq0nklAUuPUae2yx0RaADW9b4Nrs/edit" target=_blank> User Testing (User) - Activity Guide </a> for each pair of participants
-- Cut out the UI Screens
-
-<b>Unit 5 Lesson 2</b>
-
-- Print one copy per pair of participants - <a href="https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/edit" target=_blank> Representing Information - Activity Guide </a>
-- Print one copy per pair of participants - <a href="https://docs.google.com/document/d/1Ljb64Eb31y5HkZayQvI0u0uLSuTkVtkXnh1jBiGCU18/edit" target=_blank> Animal Shapes - Manipulative </a>
-- Make sure to cut up animal shapes before workshop
-
-<b>Unit 5 Lesson 6</b>
-
-- Print one copy per participants - <a href="https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/edit" target=_blank> Keeping Data Secret - Activity Guide </a>
-
-</p>
-</details>
-
-<details>
-  <summary>CS Principles</summary>
-  <p>
-
-1. Print one copy of the <a href="https://apcentral.collegeboard.org/pdf/ap-csp-explore-performance-task-scoring-guidelines-2019.pdf" target=_blank> Explore Task Rubric </a> for each participant
-
-
-</p>
-</details>
+- **[Teacher Signup Form](https://form.jotform.com/90353759556165)**
+- **[Teacher Tracking Sheet](https://docs.google.com/spreadsheets/d/19KrOp4JyAufdFowL9Yqnq1HTs7XXlUwUJF7QFotVRsg/edit)**
+- **[Process for Claiming Seats](https://docs.google.com/document/d/1d-PaJErPIoID-N5fyJHdwkwxOHFiJWY2VpYM6QaAChU/edit)**
+- **[Teacher-Facing Handout](https://docs.google.com/document/d/1lX_jgewtUmPxfCqCdNopaylvnNKnolIkIknoSJtZ4Zc/edit)**
 
 [**Back to the top**](#top)
 <br/>

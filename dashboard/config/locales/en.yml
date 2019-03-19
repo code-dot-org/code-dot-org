@@ -156,7 +156,7 @@ en:
     student_consent: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
     agree_us_website: "I agree to using a website based in the United States."
     my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
-    student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: "We need some additional information to continue signing you up."
     user_type_button: "Update Account Type"
@@ -916,6 +916,7 @@ en:
     peer_review: 'Peer Review'
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
+    optional: 'Optional'
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
@@ -939,7 +940,7 @@ en:
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
+    csp2_2: 'Chapter 2: Manipulating and Visualizing Data'
     csp3_1: 'Chapter 1: Programming Languages and Algorithms'
     csp4_1: 'Chapter 1: The World of Big Data and Encryption'
     csp5_1: 'Chapter 1: Event-Driven Programming'
@@ -1026,6 +1027,8 @@ en:
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  no_script_access_student: "You don't have access to this unit. Please ask your teacher which unit you should be on."
+  no_script_access_teacher: "You don't have access to this unit. If you believe you should have access to this unit, please write to support@code.org so that we can fix the situation."
   return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Go to course overview'
   view_all_units: 'View all units'

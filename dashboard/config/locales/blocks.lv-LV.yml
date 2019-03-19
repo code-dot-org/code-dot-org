@@ -171,6 +171,11 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kad
+            '"while"': kamēr
       gamelab_debugSprite:
         options:
           VAL:
@@ -180,6 +185,24 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kad
+            '"while"': kamēr
+          KEY:
+            '"up"': uz augšu
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
+            '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"row"': rinda
+            '"column"': kolonna
+            '"random"': nejaušs
       gamelab_locationConstant:
         options:
           DIR:
@@ -220,6 +243,10 @@ lv:
         text: nejauša krāsa
       gamelab_randomColor:
         text: nejauša krāsa
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': pilsēta
       gamelab_setPosition:
         options:
           POSITION:
@@ -233,6 +260,11 @@ lv:
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kad
+            '"while"': kamēr
       gamelab_spriteDirection:
         options:
           DIRECTION:
@@ -360,14 +392,53 @@ lv:
         text: pagriezt pa labi
       Vector_vectorNorth:
         text: uz ziemeļiem
-      aalab_changeGroupPropBy:
+      aalab_changePropByFlexible:
         options:
           PROPERTY:
             '"scale"': izmērs
-      aalab_spritesWhere:
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kad
+            '"while"': kamēr
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': kad
+            '"while"': kamēr
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kad
+            '"while"': kamēr
+          KEY:
+            '"up"': uz augšu
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
+      aalab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Ziemeļi
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': pilsēta
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': patiess
+            '"false"': nepatiess
+      aalab_setProp:
         options:
           PROPERTY:
             '"scale"': izmērs
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': rādīt
+            '"hide"': paslēpt
       binary_move:
         options:
           DIR:

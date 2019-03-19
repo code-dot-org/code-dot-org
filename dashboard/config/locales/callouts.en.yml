@@ -89,75 +89,105 @@ en:
       CSD U3 - complex - compound conditionals_callout: {}
       CSD U3 - complex - key up and down_callout: {}
       CSD U3 - complex - key up and down_2018_callout: {}
+      CSD U3 - complex - key up and down_2019_callout: {}
       CSD U3 - complex - mouse down_callout: {}
       CSD U3 - complex - mouse down_2018_callout: {}
+      CSD U3 - complex - mouse down_2019_callout: {}
       CSD U3 - complex - mouse move_callout: {}
       CSD U3 - complex - mouse move_2018_callout: {}
+      CSD U3 - complex - mouse move_2019_callout: {}
       CSD U3 - complex - nested conditional_callout: {}
       CSD U3 - conditionals - first conditional 2-2018_callout: {}
       CSD U3 - conditionals - first conditional 2_callout: {}
       CSD U3 - conditionals - first conditional 2_2018_callout: {}
+      CSD U3 - conditionals - first conditional 2_2018_2019_callout: {}
       CSD U3 - conditionals - first conditional_callout: {}
       CSD U3 - conditionals - first conditional_2018_callout: {}
+      CSD U3 - conditionals - first conditional_2019_callout: {}
       CSD U3 - conditionals - transition 2_callout: {}
       CSD U3 - conditionals - transition_callout:
         CSD_U3_L8_S6_C1: Put the console log statement here
       CSD U3 - conditionals - transition_2018_callout:
         CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 - conditionals - transition_2019_callout:
+        CSD_U3_L8_S6_C1: Put the console log statement here
       CSD U3 - images - first sprite with image_callout: {}
       CSD U3 Boolean Modify_callout: {}
       CSD U3 Boolean Modify_2018_callout: {}
+      CSD U3 Boolean Modify_2019_callout: {}
       CSD U3 Boolean Predict_callout: {}
       CSD U3 Boolean Predict_2018_callout: {}
+      CSD U3 Boolean Predict_2019_callout: {}
       CSD U3 Compound Nested Challenge_callout: {}
       CSD U3 Compound Nested Challenge_2018_callout: {}
+      CSD U3 Compound Nested Challenge_2019_callout: {}
       CSD U3 Compound Nested Examples_callout: {}
       CSD U3 Conditional Project_callout: {}
       CSD U3 Conditionals Apple 2-2018_callout: {}
       CSD U3 Conditionals Apple 2_callout: {}
       CSD U3 Conditionals Apple 2_2018_callout: {}
+      CSD U3 Conditionals Apple 2_2018_2019_callout: {}
       CSD U3 Conditionals Apple-2018_callout: {}
       CSD U3 Conditionals Apple_callout: {}
       CSD U3 Conditionals Apple_2018_callout: {}
+      CSD U3 Conditionals Apple_2018_2019_callout: {}
       CSD U3 Diagonal Movement_callout: {}
       CSD U3 Diagonal Movement_2018_callout: {}
+      CSD U3 Diagonal Movement_2019_callout: {}
       CSD U3 Direction Animations-2018_callout: {}
       CSD U3 Direction Animations_callout: {}
       CSD U3 Direction Animations_2018_callout: {}
+      CSD U3 Direction Animations_2018_2019_callout: {}
       CSD U3 Direction Arrows-2018_callout: {}
       CSD U3 Direction Arrows_callout: {}
       CSD U3 Direction Arrows_2018_callout: {}
+      CSD U3 Direction Arrows_2018_2019_callout: {}
       CSD U3 Draw Loop Plugged update your scene_callout: {}
       CSD U3 Draw Loop Plugged update your scene_2018_callout: {}
+      CSD U3 Draw Loop Plugged update your scene_2019_callout: {}
       CSD U3 Draw Loop Plugged wiggle sprite y_2018_callout: {}
+      CSD U3 Draw Loop Plugged wiggle sprite y_2019_callout: {}
       CSD U3 Drawing Squares to Corners_callout: {}
       CSD U3 Drawing Squares to Corners_2018_callout: {}
+      CSD U3 Drawing Squares to Corners_2019_callout: {}
       CSD U3 Else_callout: {}
       CSD U3 Else_2018_callout: {}
+      CSD U3 Else_2019_callout: {}
       CSD U3 If Else_callout: {}
       CSD U3 If Else_2018_callout: {}
+      CSD U3 If Else_2019_callout: {}
       CSD U3 Keyboard Input Challenge-2018_callout: {}
       CSD U3 Keyboard Input Challenge_callout: {}
       CSD U3 Keyboard Input Challenge_2018_callout: {}
+      CSD U3 Keyboard Input Challenge_2018_2019_callout: {}
       CSD U3 Keypress Boolean-2018_callout: {}
       CSD U3 Keypress Boolean_callout: {}
       CSD U3 Keypress Boolean_2018_callout: {}
+      CSD U3 Keypress Boolean_2018_2019_callout: {}
       CSD U3 Keypress Watchers_callout: {}
       CSD U3 Keypress Watchers_2018_callout: {}
+      CSD U3 Keypress Watchers_2019_callout: {}
       CSD U3 L11 Freeplay_callout: {}
       CSD U3 L11 Freeplay_2018_callout: {}
+      CSD U3 L11 Freeplay_2019_callout: {}
       CSD U3 L12 Freeplay_callout: {}
       CSD U3 L12 Freeplay_2018_callout: {}
+      CSD U3 L12 Freeplay_2019_callout: {}
       CSD U3 L13 Freeplay_callout: {}
       CSD U3 L13 Freeplay_2018_callout: {}
+      CSD U3 L13 Freeplay_2019_callout: {}
       CSD U3 L3 Freeplay_callout: {}
       CSD U3 L3 Freeplay_2018_callout: {}
+      CSD U3 L3 Freeplay_2019_callout: {}
       CSD U3 L4 Freeplay_callout: {}
       CSD U3 L4 Freeplay_2018_callout: {}
+      CSD U3 L4 Freeplay_2019_callout: {}
       CSD U3 L6 Freeplay_callout: {}
       CSD U3 L6 Freeplay_2018_callout: {}
+      CSD U3 L6 Freeplay_2019_callout: {}
       CSD U3 L7 Freeplay_callout: {}
       CSD U3 L7 Freeplay_2018_callout: {}
+      CSD U3 L7 Freeplay_2019_callout: {}
       CSD U3 Property Conditional Multi_callout: {}
       CSD U3 Property Conditional_callout: {}
       CSD U3 Random Choice_callout: {}
@@ -166,55 +196,78 @@ en:
       CSD U3 Simple Drawing - Animation 2_callout: {}
       CSD U3 Sprites anitab 1_callout: {}
       CSD U3 Sprites anitab 1_2018_callout: {}
+      CSD U3 Sprites anitab 1_2019_callout: {}
       CSD U3 Sprites intro debug_callout: {}
       CSD U3 Sprites intro debug_2018_callout: {}
+      CSD U3 Sprites intro debug_2019_callout: {}
       CSD U3 Sprites intro predict_callout: {}
       CSD U3 Sprites intro predict_2018_callout: {}
+      CSD U3 Sprites intro predict_2019_callout: {}
       CSD U3 Sprites intro sprites_callout: {}
       CSD U3 Sprites intro sprites_2018 - Validation Test_callout: {}
       CSD U3 Sprites intro sprites_2018_callout: {}
+      CSD U3 Sprites intro sprites_2019_callout: {}
       CSD U3 Sprites scene challenge_callout: {}
       CSD U3 Sprites scene challenge_2018_callout: {}
+      CSD U3 Sprites scene challenge_2019_callout: {}
       CSD U3 Sprites scene drawing_callout: {}
       CSD U3 Sprites scene drawing_2018_callout: {}
+      CSD U3 Sprites scene drawing_2019_callout: {}
       CSD U3 Sprites scene sprites_callout: {}
       CSD U3 Sprites scene sprites_2018_callout: {}
+      CSD U3 Sprites scene sprites_2019_callout: {}
       CSD U3 Sprites scene template_callout: {}
       CSD U3 Sprites scene template_2018_callout: {}
+      CSD U3 Sprites scene template_2019_callout: {}
       CSD U3 Sprites scene text_callout: {}
       CSD U3 Sprites scene text_2018_callout: {}
+      CSD U3 Sprites scene text_2019_callout: {}
       CSD U3 Sprites text debug-2018_callout: {}
       CSD U3 Sprites text debug_callout: {}
       CSD U3 Sprites text debug_2018_callout: {}
+      CSD U3 Sprites text debug_2018_2019_callout: {}
       CSD U3 Sprites text_callout: {}
       CSD U3 Sprites text_2018_callout: {}
+      CSD U3 Sprites text_2019_callout: {}
       CSD U3 UP_ARROW-2018_callout: {}
       CSD U3 UP_ARROW_callout: {}
       CSD U3 UP_ARROW_2018_callout: {}
+      CSD U3 UP_ARROW_2018_2019_callout: {}
       CSD U3 Variables Predict Where X_callout:
         CSD_U3_variables: Change the number here
       CSD U3 Variables Predict Where XY Embed_callout:
         grid: Click here to show the grid.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Click here to show the grid.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: Click here to show the grid.
       CSD U3 Variables Predict Where XY_callout:
         grid: Click here to show the grid.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Click here to show the grid.
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: Click here to show the grid.
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Change the number here
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Change the number here
       CSD U3 Variables TEMPLATE square_callout: {}
       CSD U3 Variables make a big square_callout: {}
       CSD U3 Variables make a square_callout: {}
       CSD U3 Watcher Debug_callout: {}
       CSD U3 Watcher Debug_2018_callout: {}
+      CSD U3 Watcher Debug_2019_callout: {}
       CSD U3 abstraction accelerateX_callout:
         CSD_U3_L11_S6_C1: Add your code here.
       CSD U3 abstraction accelerateX_2018_callout:
         CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateX_2019_callout:
+        CSD_U3_L11_S6_C1: Add your code here.
       CSD U3 abstraction accelerateY_callout:
         CSD_U3_L11_S7_C1: Add your code here.
       CSD U3 abstraction accelerateY_2018_callout:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction accelerateY_2019_callout:
         CSD_U3_L11_S7_C1: Add your code here.
       CSD U3 abstraction change velocityX_callout:
         CSD_U3_L11_S5_C1: Add your block here.
@@ -245,6 +298,9 @@ en:
       CSD U3 abstraction jump_2018_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
         CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jump_2018_2019_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
       CSD U3 abstraction jumper intro_callout:
         CSD_U3_L11_S17_C1: Set the sprite's starting position here.
         CSD_U3_L11_S17_C2: Set the hay bale's velocity here
@@ -257,9 +313,13 @@ en:
         CSD_U3_L13_S8_C1: Set the velocity here
       CSD U3 abstraction jumping_2018_callout:
         CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction jumping_2019_callout:
+        CSD_U3_L13_S8_C1: Set the velocity here
       CSD U3 abstraction looping_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
       CSD U3 abstraction looping_2018_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction looping_2019_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
       CSD U3 abstraction parabola_callout:
         CSD_U3_L11_S13_C1: Add your block here.
@@ -270,9 +330,13 @@ en:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction rotation control_2018_callout:
         CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation control_2019_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction rotation_callout:
         CSD_U3_L11_S4_C1: Use the rotationSpeed block here
       CSD U3 abstraction rotation_2018_callout:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction rotation_2019_callout:
         CSD_U3_L11_S4_C1: Use the rotationSpeed block here
       CSD U3 abstraction setSpeed accelerate_callout:
         CSD_U3_L11_S14_C1: Add your code here.
@@ -292,6 +356,10 @@ en:
         CSD_U3_L11_S17_C1: Set the sprite's starting position here.
         CSD_U3_L11_S17_C2: Set the hay bale's velocity here
         CSD_U3_L11_S17_C3: Add your if statement here.
+      CSD U3 abstraction sidescroll template_2019_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
       CSD U3 abstraction sidescroll_callout:
         CSD_U3_L11_S17_C1: Set the sprite's starting position here.
         CSD_U3_L11_S17_C2: Set the hay bale's velocity here
@@ -300,17 +368,25 @@ en:
         CSD_U3_L11_S17_C1: Look at this if statement
       CSD U3 abstraction tumbleweed_2018_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction tumbleweed_2019_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
       CSD U3 abstraction velocityX control_callout:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityX control_2018_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX control_2019_callout:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityX if-statements_callout:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityX if-statements_2018_callout:
         CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements_2019_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityX_callout:
         CSD_U3_L11_S4_C1: Add your block here.
       CSD U3 abstraction velocityX_2018_callout:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityX_2019_callout:
         CSD_U3_L11_S4_C1: Add your block here.
       CSD U3 abstraction velocityY 2_callout:
         CSD_U3_L11_S5_C1: Add your block here.
@@ -318,20 +394,28 @@ en:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityY control_2018_callout:
         CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY control_2019_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityY_callout:
         CSD_U3_L11_S5_C1: Add your block here.
       CSD U3 abstraction velocityY_2018_callout:
         CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction velocityY_2019_callout:
+        CSD_U3_L11_S5_C1: Add your block here.
       CSD U3 challenge face_callout: {}
       CSD U3 challenge face_2018_callout: {}
+      CSD U3 challenge face_2019_callout: {}
       CSD U3 challenge new shape_callout: {}
       CSD U3 challenge new shape_2018_callout: {}
+      CSD U3 challenge new shape_2019_callout: {}
       CSD U3 collisions getSpeed_callout:
         CSD_U3_L11_S2_C1: Add your code for the compass here.
         CSD_U3_L11_S2_C2: Change the code to display speed here.
       CSD U3 collisions isTouching intro_callout:
         CSD_U3_L12_S2_C1: Add your block here.
       CSD U3 collisions isTouching intro_2018_callout:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions isTouching intro_2019_callout:
         CSD_U3_L12_S2_C1: Add your block here.
       CSD U3 collisions pinball2_callout:
         CSD_U3_L14_S16_C1: Sprite interactions go in this function.
@@ -341,18 +425,28 @@ en:
       CSD U3 collisions scoreboard_2018_callout:
         CSD_U3_L12_S8_C1: These blocks display the score.
         CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the carrot go here.
+      CSD U3 collisions scoreboard_2019_callout:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the carrot go here.
       CSD U3 collisions try blocks_callout:
         CSD_U3_L13_S6_C1: Change this block.
       CSD U3 collisions try blocks_2018_callout:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions try blocks_2019_callout:
         CSD_U3_L13_S6_C1: Change this block.
       CSD U3 collisions types_callout:
         CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 collisions types_2018_callout:
         CSD_U3_L13_S6_C1: Add your code here.
+      CSD U3 collisions types_2019_callout:
+        CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 ellipse_callout:
@@ -361,10 +455,16 @@ en:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 game backgrounds_callout:
@@ -373,20 +473,28 @@ en:
       CSD U3 game backgrounds_2018_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game backgrounds_2019_callout:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
       CSD U3 game variables_callout:
         CSD_U3_S18_L3_C1: This block creates a new variable.
         CSD_U3_L18_S3_C2: Variables area
       CSD U3 game variables_2018_callout:
         CSD_U3_S18_L3_C1: This block creates a new variable.
         CSD_U3_L18_S3_C2: Variables area
+      CSD U3 game variables_2019_callout:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
       CSD U3 keydown conditional-2018_callout: {}
       CSD U3 keydown conditional_callout: {}
       CSD U3 keydown conditional_2018_callout: {}
+      CSD U3 keydown conditional_2018_2019_callout: {}
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Here is the "Run" button.
       CSD U3 picture_callout: {}
       CSD U3 picture_2018_callout: {}
+      CSD U3 picture_2019_callout: {}
       CSD U3 platform background1_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
         CSD_U3_L16_S3_C2: the code that calls the function
@@ -395,22 +503,34 @@ en:
         CSD_U3_L16_S3_C1: the function that draws the background
         CSD_U3_L16_S3_C2: the code that calls the function
         CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform background1_2019_callout:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
       CSD U3 platform platform1_callout:
         CSD_U3_S17_L8_C1: This block creates a new sprite.
       CSD U3 platform platform1_2018_callout:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform platform1_2019_callout:
         CSD_U3_S17_L8_C1: This block creates a new sprite.
       CSD U3 platform scoreboard_callout:
         CSD_U3_L17_S7_C1: Score is printed here.
       CSD U3 platform scoreboard_2018_callout:
         CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform scoreboard_2019_callout:
+        CSD_U3_L17_S7_C1: Score is printed here.
       CSD U3 platform variable1_callout:
         callout: This block creates a variable.
       CSD U3 platform variable1_2018_callout:
+        callout: This block creates a variable.
+      CSD U3 platform variable1_2019_callout:
         callout: This block creates a variable.
       CSD U3 rect_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Here is the "Run" button.
       CSD U3 rect_2018_callout:
+        CSD_U3_rect_c1: Here is the code
+      CSD U3 rect_2019_callout:
         CSD_U3_rect_c1: Here is the code
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Here is the code
@@ -418,35 +538,53 @@ en:
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 sequence_2019_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Add your code here
       CSD U6 colorLeds intensity_2018_callout:
         CSDU6L10_rainbow: Add your code here
+      CSD U6 colorLeds intensity_2019_callout:
+        CSDU6L10_rainbow: Add your code here
       CSD U6 colorLeds predict_callout: {}
       CSD U6 colorLeds predict_2018_callout: {}
+      CSD U6 colorLeds predict_2019_callout: {}
       CSD U6 getProperty input_callout:
         CSD_U6L06P03: Add your block here.
       CSD U6 getProperty input_2018_callout:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2019_callout:
         CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
         CSDUDL03P09: What does this line do?
       CSD U6 light show predict_2018_callout:
         CSDUDL03P09: What does this line do?
+      CSD U6 light show predict_2019_callout:
+        CSDUDL03P09: What does this line do?
       CSD U6 light show_callout:
         CSDUDL03P09: What does this line do?
       CSD U6 light show_2018_callout:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_2019_callout:
         CSDUDL03P09: What does this line do?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Define startGame here
       CSD U6 tugowar variables 1_2018_callout:
         CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 1_2019_callout:
+        CSD_U6_startGame: Define startGame here
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Define movePlayer() here
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 2_2019_callout:
+        CSD_U6_movePlayer: Define movePlayer() here
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: Check if the player has won
       CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: Check if the player has won
+      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: Check if the player has won
       CSDU4 - Design Mode - 3_callout: {}
       CSPU5_U3L16 - setPosition to fixed location_callout:
@@ -455,9 +593,13 @@ en:
         randNumReminder: Use this as the the value for the x and y coordinates in setPosition.  Just drag it into the parameter you want.
       CSPU5_U3L16 - setPosition to move button_2018_callout:
         randNumReminder: Use this as the the value for the x and y coordinates in setPosition.  Just drag it into the parameter you want.
+      CSPU5_U3L16 - setPosition to move button_2019_callout:
+        randNumReminder: Use this as the the value for the x and y coordinates in setPosition.  Just drag it into the parameter you want.
       CSPU5_setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
       CSPU5_setPosition to fixed location_2018_callout:
+        firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
+      CSPU5_setPosition to fixed location_2019_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
       Calc Circles of Eval .1_callout:
         Calc Circles of Eval .1: This is the evaluation block. Click on the drop down box to change the number
@@ -563,6 +705,20 @@ en:
       Course 4 Playlab For Loops 6b_callout: {}
       Course 4 SCV 6_callout:
         Course_4_SCV_6: This block allows you to customize your color to almost anything you want to see!  Play around with the numbers to see what happens!
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Add this block to your program!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Add this block to your program!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Add this block to your program!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Add your new dancer here
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: New block!
+        dance_callout_11_b: New block!
+      CourseD_Dance_Party_11_5_callout:
+        dance_party_11_5_groups: Look here for "all ducks" blocks
+      CourseD_Dance_Party_11b_callout: {}
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Use the arrows to move the actor
       CourseF_PlayLab_vars10_callout:
@@ -843,6 +999,8 @@ en:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+      Ryan_Demo_callout:
+        dance_callout_02: Add this block to your program!
       SG Add Subgoals practice_callout: {}
       SG U3L08 how to add comments_callout:
         comment_highlight: Drag a comment block from here into your code
@@ -885,15 +1043,21 @@ en:
         comment_highlight: Drag a comment block from here into your code
       U3L08 how to add comments_2018_callout:
         comment_highlight: Drag a comment block from here into your code
+      U3L08 how to add comments_2019_callout:
+        comment_highlight: Drag a comment block from here into your code
       U3L2 Using Simple Commands (no tooltips)_callout: {}
       U3L2 Using Simple Commands_callout: {}
       U3L2 Using Simple Commands_2018_callout: {}
+      U3L2 Using Simple Commands_2019_callout: {}
       U3L2_Turtle3by3Grid_callout: {}
       U3L2_Turtle3by3Grid_2018_callout: {}
+      U3L2_Turtle3by3Grid_2019_callout: {}
       U3L2_TurtleSquare_right_callout: {}
       U3L2_TurtleSquare_right_2018_callout: {}
+      U3L2_TurtleSquare_right_2019_callout: {}
       U5 ColorSleuth Template_callout: {}
       U5 ColorSleuth Template_2018_callout: {}
+      U5 ColorSleuth Template_2019_callout: {}
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
       Underground Avoiding Lava_2018_callout:
@@ -975,9 +1139,13 @@ en:
         courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
+      courseA_artist_loops4_2019_callout:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
       courseA_artist_loops7_2018_callout:
+        courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
+      courseA_artist_loops7_2019_callout:
         courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
       courseA_artist_loops7_forVideo_callout:
         courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
@@ -985,13 +1153,19 @@ en:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
       courseA_artist_loops8_2018_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
+      courseA_artist_loops8_2019_callout:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+      courseA_collector_loops1_2019_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
+      courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_collector_loops3_predict1_callout: {}
       courseA_collector_preLoops1_callout:
@@ -1009,21 +1183,29 @@ en:
       courseA_forVideoTest_artist_callout: {}
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseA_maze_ramp2_2019_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
         stone_block_2: Grey blocks are made of stone and cannot be thrown away.
       courseA_maze_ramp3a_2018_callout: {}
+      courseA_maze_ramp3a_2019_callout: {}
       courseA_maze_ramp3b_2018_callout: {}
+      courseA_maze_ramp3b_2019_callout: {}
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseA_maze_ramp4a_2018_callout: {}
+      courseA_maze_ramp4a_2019_callout: {}
       courseA_maze_ramp5_2018_callout: {}
       courseA_maze_ramp5a_2018_callout: {}
+      courseA_maze_ramp5a_2019_callout: {}
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Click the lightbulb when you need a hint!
       courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+      courseA_maze_seq1_2019_callout:
         courseA_maze_seq1_1: Click the lightbulb when you need a hint!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
@@ -1036,42 +1218,64 @@ en:
       courseA_maze_seq4a_callout: {}
       courseA_playLab_events2_callout: {}
       courseA_playLab_events2_2018_callout: {}
+      courseA_playLab_events2_2019_callout: {}
       courseA_playLab_events3_callout: {}
       courseA_playLab_events3_2018_callout: {}
+      courseA_playLab_events3_2019_callout: {}
       courseA_playLab_events4_callout:
         courseA_playlab_events4_callout1: This is a callout
       courseA_playLab_events4_2018_callout:
+        courseA_playlab_events4_callout1: This is a callout
+      courseA_playLab_events4_2019_callout:
         courseA_playlab_events4_callout1: This is a callout
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Click here to change the direction of the event arrow.
       courseA_playLab_events5_2018_callout:
         courseA_playLab_events5_1: Click here to change the direction of the event arrow.
+      courseA_playLab_events5_2019_callout:
+        courseA_playLab_events5_1: Click here to change the direction of the event arrow.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+      courseA_playLab_events6_2019_callout:
+        courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
       courseA_toMakeLoopsVideo_Collector_callout: {}
       courseB_Scrat_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+      courseB_Scrat_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseB_Scrat_ramp2_2018_callout: {}
+      courseB_Scrat_ramp2_2019_callout: {}
       courseB_Scrat_ramp3a_2018_callout: {}
+      courseB_Scrat_ramp3a_2019_callout: {}
       courseB_Scrat_ramp3b_2018_callout: {}
+      courseB_Scrat_ramp3b_2019_callout: {}
       courseB_Scrat_ramp4a_2018_callout: {}
+      courseB_Scrat_ramp4a_2019_callout: {}
       courseB_Scrat_ramp5a_2018_callout: {}
+      courseB_Scrat_ramp5a_2019_callout: {}
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
       courseB_artist_loops3_2018_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+      courseB_artist_loops3_2019_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: This number means that there are no more of this block left in the toolbox.
       courseB_artist_loops5_2018_callout: {}
+      courseB_artist_loops5_2019_callout: {}
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+      courseB_collector_loops1_2019_callout:
+        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Click the lightbulb when you need a hint!
       courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Click the lightbulb when you need a hint!
+      courseB_maze_seq1_2019_callout:
         courseB_maze_seq1: Click the lightbulb when you need a hint!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
@@ -1083,9 +1287,12 @@ en:
         courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown away.
       courseB_maze_seq7_callout: {}
       courseB_maze_seq7_2018_callout: {}
+      courseB_maze_seq7_2019_callout: {}
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Use the green drop down arrow to change directions.
       courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseB_playlab_events6_2019_callout:
         courseB_playlab_events6_a: Use the green drop down arrow to change directions.
       courseC19_playLab_EOC3_callout:
         courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the next level.
@@ -1389,6 +1596,9 @@ en:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseD_scrat_ramp8_2018_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseE_aboutme_5_callout:
+        courseE_aboutme_4_callout_1: Click here!
+      courseE_aboutme_6_callout: {}
       courseE_artist_concept_challenge2_callout: {}
       courseE_artist_concept_challenge2_2018_callout: {}
       courseE_artist_concept_challenge2_2019_callout: {}
@@ -1843,6 +2053,8 @@ en:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
       coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After snapping all the blocks together, press "Run" to start your program.
+      coursea_maze_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: After snapping all the blocks together, press "Run" to start your program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.

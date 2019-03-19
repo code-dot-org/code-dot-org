@@ -347,6 +347,33 @@ EOS
     assert_nil level.embed
   end
 
+  test 'encrypted level properties are preserved after export and import' do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    level = Level.create(name: 'test encrypted properties', short_instructions: 'test', type: 'Artist', encrypted: true, disable_sharing: true, notes: 'original notes')
+    assert level.disable_sharing
+    assert level.encrypted
+
+    level_xml = level.to_xml
+    n = Nokogiri::XML(level_xml, &:noblanks)
+    level_config = n.xpath('//../config').first.child
+    encrypted_hash = JSON.parse(level_config.text)
+    assert encrypted_hash['encrypted_properties']&.is_a? String
+    refute encrypted_hash['properties']
+    assert encrypted_hash['encrypted_notes']&.is_a? String
+    refute encrypted_hash['notes']
+
+    level.disable_sharing = false
+    level.notes = nil
+    decrypted_hash = level.load_level_xml(n)
+    refute decrypted_hash['encrypted_properties']
+    assert decrypted_hash['properties']
+    assert decrypted_hash['properties']['disable_sharing']
+    assert decrypted_hash['properties']['encrypted']
+    refute decrypted_hash['encrypted_notes']
+    assert_equal decrypted_hash['notes'], 'original notes'
+  end
+
   test 'project template level' do
     template_level = Blockly.create(name: 'project_template')
     template_level.start_blocks = '<xml/>'
@@ -713,6 +740,40 @@ EOS
     assert_equal '<xml>foo</xml>', new_level.start_blocks
   end
 
+  test 'can clone multi level and preserve encrypted flag' do
+    dsl_text = <<EOS
+name 'old multi level'
+title 'Multiple Choice'
+question 'What is your favorite color?'
+wrong 'Red'
+wrong 'Green'
+right 'Blue'
+EOS
+
+    old_level = create :multi, name: 'old multi level'
+    old_level.stubs(:dsl_text).returns(dsl_text)
+
+    new_level = old_level.clone_with_name('new multi level')
+    assert_equal 'new multi level', new_level.name
+    assert_equal 1, new_level.properties['questions'].length
+    assert_equal 3, new_level.properties['answers'].length
+    assert_equal 'Blue', new_level.properties['answers'].last['text']
+    refute new_level.encrypted
+
+    old_level.encrypted = true
+    new_level = old_level.clone_with_name('encrypted level')
+    assert_equal 'encrypted level', new_level.name
+    assert_equal 1, new_level.properties['questions'].length
+    assert_equal 3, new_level.properties['answers'].length
+    assert_equal 'Blue', new_level.properties['answers'].last['text']
+    assert new_level.encrypted, 'clone_with_name preserves encrypted flag'
+
+    new_level = old_level.clone_with_suffix(' copy')
+    assert_equal 'old multi level copy', new_level.name
+    assert_equal 3, new_level.properties['answers'].length
+    assert new_level.encrypted, 'clone_with_suffix preserves encrypted flag'
+  end
+
   test 'can clone with suffix' do
     old_level = create :level, name: 'level', start_blocks: '<xml>foo</xml>'
     new_level = old_level.clone_with_suffix(' copy')
@@ -805,5 +866,13 @@ EOS
     assert_equal 2, level_2_copy.contained_levels.size
     assert_equal contained_level_1_copy, level_2_copy.contained_levels.first
     assert_equal contained_level_2_copy, level_2_copy.contained_levels.last
+  end
+
+  test 'contained_level_names filters blank names before validation' do
+    level = build :level
+    level.contained_level_names = ['', 'real_name']
+    assert_equal level.contained_level_names, ['', 'real_name']
+    level.valid?
+    assert_equal level.contained_level_names, ['real_name']
   end
 end

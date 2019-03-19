@@ -6,7 +6,7 @@ student_detail_progress_view true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-18/post-ap/{LESSON}'
-script_announcements [{"notice"=>"No Lesson Plans for Chapter 2", "details"=>"Chapter 2 of this unit does not currently have lesson plans available. \"Lesson Plan\" links for that chapter will not work as expected.", "link"=>"", "type"=>"information"}]
+script_announcements [{"notice"=>"No Lesson Plans for Chapter 2", "details"=>"Chapter 2 of this unit does not currently have lesson plans available. \"Lesson Plan\" links for that chapter will not work as expected.", "link"=>"", "type"=>"information"}, {"notice"=>"Are you signed up for the AP exam?", "details"=>"Now’s the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school’s registration deadline and sign up today. Click to learn more about six great reasons why you should.", "link"=>"https://code.org/educate/csp/ap-students", "type"=>"bullhorn", "visibility"=>"Student-only"}]
 family_name 'csppostap'
 version_year '2018'
 is_stable true

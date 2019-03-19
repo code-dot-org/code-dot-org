@@ -803,6 +803,7 @@ et:
         neid täita ja eemaldada, et saada maapind tasaseks.
       CSD U5 black white images pixelation 5: Joonista nüüd ükskõik mida soovid
       CSD U5 black white images pixelation 5_2018: Joonista nüüd ükskõik mida soovid
+      CSD U5 black white images pixelation 5_2019: Joonista nüüd ükskõik mida soovid
       CSP student contact info: Palun sisestage e-posti aadress.
       Course 2 Bee Loops 1: 'Tere, mina olen mesilane. Kas sa aitad mul koguda nektarit
         nendelt lilledelt? '
@@ -1407,6 +1408,33 @@ et:
       Course E MC Conditionals1: Kõige väärtuslikumad maavarad leiad maa alt, kuid
         seal võib pimedaks minna. Pane paika vähemalt kaks tõrvikut ja kaevanda vähemalt
         kaks sütt.
+      CourseD_Dance_Party_01: Lohista `tee uus` plokk töölauale ja ühenda see `seadista`
+        ploki sisse.
+      CourseD_Dance_Party_02: Las põder alustab uue liigutusega peale 4 ühikut!
+      CourseD_Dance_Party_03: Las tantsija alustab uue liigutusega peale 6 ühikut!
+      CourseD_Dance_Party_04: Lisa oma programmile taustaeffekt.
+      CourseD_Dance_Party_05: Lisa uus plokk, et tantsija muudaks liigutusi iga 2
+        ühiku järel.
+      CourseD_Dance_Party_06: Loo taustatantsija, keda kutustakse `taustatantsija1`,
+        et ta kassiga tantsiks.
+      CourseD_Dance_Party_08: Kas saad muuta mõlemad taustatantsijad sama suureks?
+      CourseD_Dance_Party_09: Kasuta `määra toon` plokki, et tantsija värvi muuta.
+      CourseD_Dance_Party_10: Pane teine tantsija muusikale vastavalt liikuma, kasutades
+        `hakkab järgnema` plokki.
+      CourseD_Dance_Party_11: Plokk `kui vajutad ülesse` laseb koodi käivitada siis,
+        kui vajutatakse ülemist nooleklahvi. Proovi panna tantsija kiireid liigutusi
+        tegema kui vajutad ülemist nooleklahvi.
+      CourseD_Dance_Party_11_5: Kasuta "kõik pardid" plokke, et panna kõik pardid
+        koos tantsima.
+      CourseD_Dance_Party_11b: Pane Robot üks kord "kükitama", kui vajutatakse paremat
+        nooleklahvi ja tegema ühe "kõrge plaksu", kui vajutatakse ülemist nooleklahvi.
+        Kükita-plaksuta nii kiiresti kui võimalik!
+      CourseD_Dance_Party_12: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
+      CourseE_HOC 2018 Level_10: Mine selle Ocean Monument (ookeani monumendi) sissepääsu
+        juurde.
+      CourseE_HOC 2018 Level_11: 'Ehitage koos Prismarine kanal Ocean Monument sisse.  '
+      CourseE_HOC 2018 Level_7a: Kirstu leidmiseks otsi läbi need veealused varemed.
+      CourseE_HOC 2018 Level_9b: 'Et jõuda aardeni, kasuta koralle asukohapunktidena.  '
       CourseF_PlayLab_vars10: "Vaba mängu aeg! Siin on kõik muutujad, millega me oleme
         selles etapis seni mänginud, ja veel mõni juhuks, kui sa neid soovid. \r \r
         Pane tähele, et meie tööriistakastis on nüüd nii palju plokke, et neid on
@@ -1445,8 +1473,10 @@ et:
         oma skoor langeda kümnelt nullile.
       Crack Random Substitution: Juhised
       Crack Random Substitution_2018: Juhised
+      Crack Random Substitution_2019: Juhised
       Crack a Caesar Cipher: Juhised
       Crack a Caesar Cipher_2018: Juhised
+      Crack a Caesar Cipher_2019: Juhised
       Dance_Party_01: Lohista `tee uus` plokk töölauale ja ühenda see `seadista` ploki
         sisse.
       Dance_Party_01_low: Lohista `tee uus` plokk töölauale ja ühenda see `seadista`
@@ -2052,6 +2082,7 @@ et:
         end lill. Kui leiad lille, kogu sellelt nektar.
       Ryan Test Locked Blocks: Siin on funktsioon nimega „patrull“. Muuda seda, et
         liigutada kassi 400 pikslit üles ja siis 400 pikslit alla.
+      Ryan_Demo: Las põder alustab uue liigutusega peale 4 ühikut!
       SpecialFrozenLevel: Sa oled ametlikult meister kunstnik! Loo talve võlumaa.
       Standalone_Artist_1: Tere tulemast rakendusse Kunstnik! Proovime kõigepealt
         teha lihtsa ruudu, kasutades paremale pööramise plokki ja edasiliikumise plokki.
@@ -2089,6 +2120,7 @@ et:
         proovi see kord kasutada tsüklit „kuni“?  "
       The Vigenere Cipher Widget: Juhised
       The Vigenere Cipher Widget_2018: Juhised
+      The Vigenere Cipher Widget_2019: Juhised
       The Vigenere Cipher: Juhised
       Total Artist Clone Me: 'Vaba mäng: Siin on funktsioonid, mille oled kirjutanud
         ning veel mõned, millega saad mängida. Joonista midagi ägedat! Katseta pliiatsijoone
@@ -2101,6 +2133,7 @@ et:
       U4 vigenere cipher 2: Juhised
       U4L02 - Objects - Template1: Šabloon
       U4L02 - Objects - Template1_2018: Šabloon
+      U4L02 - Objects - Template1_2019: Šabloon
       Underground Avoiding Lava: Mõne ploki all on peidus laava, mis sul tuleb enne
         edasiliikumist kinni katta. Siin on abi käsust „kui“. Lisa õigesse kohta käsk
         „liigu edasi“, et neid plokke koguda.
@@ -2296,17 +2329,23 @@ et:
         lisa selle asemel hoopis midagi muud)
       courseA_collector_loops8: Kirjutage kood, et saada kätte kõik aare.
       courseA_collector_loops8_2018: Kirjutage kood, et saada kätte kõik aare.
+      courseA_collector_loops8_2019: Kirjutage kood, et saada kätte kõik aare.
       courseA_collector_loops9: "** Väljakutse: ** Aare läheb treppide üles välja!
         Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
       courseA_collector_loops9_2018: "** Väljakutse: ** Aare läheb treppide üles välja!
+        Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
+      courseA_collector_loops9_2019: "** Väljakutse: ** Aare läheb treppide üles välja!
         Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
       courseA_maze_seq2: Muud koodi, et jõuaksin põrsani!
       courseA_maze_seq2_2018: Muud koodi, et jõuaksin põrsani!
       courseB_collector_loops7: Kirjutage kood, et saada kätte kõik aare.
       courseB_collector_loops7_2018: Kirjutage kood, et saada kätte kõik aare.
+      courseB_collector_loops7_2019: Kirjutage kood, et saada kätte kõik aare.
       courseB_collector_loops8: "** Väljakutse: ** Aare läheb treppidest alla välja!
         Kirjutage kood, et aidata Laurelil see kõik kätte saada."
       courseB_collector_loops8_2018: "** Väljakutse: ** Aare läheb treppidest alla
+        välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
+      courseB_collector_loops8_2019: "** Väljakutse: ** Aare läheb treppidest alla
         välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
       courseC_PlayLab_events3: Kas sa saad kirjutada programmi, mis paneks Jorge (tegelane
         1) liikuma kass Olive poole?

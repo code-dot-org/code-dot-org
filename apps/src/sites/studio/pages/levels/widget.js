@@ -8,24 +8,22 @@ import {
   showDialog,
   processResults
 } from '@cdo/apps/code-studio/levels/dialogHelper';
-import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import { setupApp } from '@cdo/apps/code-studio/initApp/loadApp';
-import { StartOverDialog, InstructionsDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
-import marked from 'marked';
+import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
+import {
+  StartOverDialog,
+  InstructionsDialog
+} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import i18n from '@cdo/locale';
 
 export function showInstructionsDialog() {
-  let content;
-  if (appOptions.level.longInstructions) {
-    content = marked(appOptions.level.longInstructions);
-  }
   showDialog(
     <InstructionsDialog
       title={i18n.puzzleTitle({
         stage_total: appOptions.level.stage_total,
-        puzzle_number: appOptions.level.puzzle_number,
+        puzzle_number: appOptions.level.puzzle_number
       })}
-      markdownContent={content}
+      markdown={appOptions.level.longInstructions}
     />
   );
   $('details').details();
@@ -46,12 +44,12 @@ window.dashboard = window.dashboard || {};
 window.dashboard.widget = {
   setupWidgetLevel: setupWidgetLevel,
   // used by pixelation widget
-  showStartOverDialog: callback => showDialog(<StartOverDialog/>, callback),
+  showStartOverDialog: callback => showDialog(<StartOverDialog />, callback),
   // used by frequency, vigenere, and pixelation widgets
   processResults: processResults
 };
 
 // On load (note - widget-specific setup may happen before this!)
-$(document).ready(function () {
+$(document).ready(function() {
   $('#bubble').click(showInstructionsDialog);
 });

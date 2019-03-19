@@ -3,27 +3,23 @@ skip_dialog true
 markdown <<MARKDOWN
 # Planning > Exploring Teacher Resources
 
-Now that you have a firm grasp on how to code, as well as some beginning understandings of how to teach computer science, it's time to start planning your instruction.
+Throughout Stages 4-8, you took a look at some of the "unplugged" and online learning resources available for CS Fundamentals, as they aligned with the computer science concepts you were learning. 
+
+Now that you have some understanding over how to code, as well as how to teach computer science, it's time to start planning your instruction. In this stage, we'll be touring other areas of the Code.org platform and the **[Teacher Dashboard](http://studio.code.org/)**. 
 
 By completing Stage 10, you will:
 
-- Explore Code Studio and [Teacher Dashboard](http://code.org/teacher-dashboard#/) resources
+- Explore resources available to teachers
+- Explore the Code.org **[Teacher Dashboard](http://studio.code.org/)**
 - Plan for how you might integrate computer science into your practice
 
-Throughout Stages 4-8, you took a look at some of the "unplugged" and online learning resources available for CS Fundamentals, as they aligned with the computer science concepts you were learning. In this stage, we'll be touring other areas of the Code.org platofrm and the [Teacher Dashboard](http://code.org/teacher-dashboard#/). 
+***
 
-<img src="https://code.org/images/teacher-dashboard/teacher-homepage.png" width="450px" style="margin-right:45px; border-radius:10px;">
+A screenshot of the Teacher Dashboard is below. You will need to log into your Code.org teacher account in order to see it – once you are logged in, it should the default screen that you see on the Code.org website. If you do not have a teacher account, you can **[sign up for one here](https://studio.code.org/users/sign_up)**.
 
-When you're logged into Code.org as a teacher, you have access to many features that your students do not. We will explore those features in this stage. Let's start first with an overview. Here are the tiles on the Teacher Dashboard:
+![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
+MARKDOWN
 
-- [Student Accounts and Progress](http://code.org/teacher-dashboard#/sections): Create sections for each of your classes, and assess the learning of all of your students.
-- [Your Course Progress](http://studio.code.org/): View your own personal progress on Code Studio lessons, as a learner. Your students also have access to this tile. However, as a teacher, the only difference you'll see from the student view is that you are able to view lesson plans and see the solutions for every puzzle.
-- [Lesson Plans and Resources](https://docs.google.com/document/d/1BU0GrahTUwSuJzG2smN3Sjh5RcnzmhEpU-m3SUSlROo/pub): Access lessons plans, additional videos, and more.
-- [Help and Community](https://support.code.org/): Connect to support.code.org, where you can post questions, respond to other teacher's posts, and read FAQs by Code.org staff. On this page, you'll also be able to directly contact Code.org with any questions you may have.
-- [Professional Development](https://code.org/educate/curriculum/elementary-school#teach): Access free training resources for teachers, including this online workshop.
-- [Computer Science Guest Speakers](https://code.org/volunteer/local): Find smart, passionate and engaging tech industry professionals who would love to talk to your class about their jobs. 
+teacher_markdown <<MARKDOWN
 
-* * *
-
-Let's begin exploring in more detail.
 MARKDOWN

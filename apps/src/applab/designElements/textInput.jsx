@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
@@ -7,7 +8,11 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
+import FontFamilyPropertyRow from './FontFamilyPropertyRow';
+import BorderProperties from './BorderProperties';
 import * as elementUtils from './elementUtils';
+import designMode from '../designMode';
+import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
 
 class TextInputProperties extends React.Component {
   static propTypes = {
@@ -25,7 +30,7 @@ class TextInputProperties extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <PropertyRow
           desc={'placeholder'}
@@ -34,25 +39,25 @@ class TextInputProperties extends React.Component {
         />
         <PropertyRow
           desc={'width (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
           desc={'height (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
           desc={'x position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
           desc={'y position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
@@ -66,17 +71,38 @@ class TextInputProperties extends React.Component {
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
+        <FontFamilyPropertyRow
+          initialValue={designMode.fontFamilyOptionFromStyle(
+            element.style.fontFamily
+          )}
+          handleChange={this.props.handleChange.bind(this, 'fontFamily')}
+        />
         <PropertyRow
           desc={'font size (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
         <EnumPropertyRow
           desc={'text alignment'}
           initialValue={element.style.textAlign || 'left'}
-          options={['left','right','center','justify']}
+          options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
+        />
+        <BorderProperties
+          element={element}
+          handleBorderWidthChange={this.props.handleChange.bind(
+            this,
+            'borderWidth'
+          )}
+          handleBorderColorChange={this.props.handleChange.bind(
+            this,
+            'borderColor'
+          )}
+          handleBorderRadiusChange={this.props.handleChange.bind(
+            this,
+            'borderRadius'
+          )}
         />
         <BooleanPropertyRow
           desc={'hidden'}
@@ -87,7 +113,8 @@ class TextInputProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-      </div>);
+      </div>
+    );
   }
 }
 
@@ -101,8 +128,14 @@ class TextInputEvents extends React.Component {
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
+      'onEvent("' +
+      id +
+      '", "change", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' entered text: " + getText("' +
+      id +
+      '"));\n' +
       '});\n';
     return code;
   }
@@ -114,8 +147,14 @@ class TextInputEvents extends React.Component {
   getInputEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "input", function(event) {\n' +
-      '  console.log("' + id + ' current text: " + getText("' + id + '"));\n' +
+      'onEvent("' +
+      id +
+      '", "input", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' current text: " + getText("' +
+      id +
+      '"));\n' +
       '});\n';
     return code;
   }
@@ -128,10 +167,12 @@ class TextInputEvents extends React.Component {
     const element = this.props.element;
 
     const changeName = 'Change';
-    const changeDesc = 'Triggered when the text input loses focus if the text has changed.';
+    const changeDesc =
+      'Triggered when the text input loses focus if the text has changed.';
 
     const inputName = 'Input';
-    const inputDesc = 'Triggered immediately every time the text input contents change.';
+    const inputDesc =
+      'Triggered immediately every time the text input contents change.';
 
     return (
       <div id="eventRowContainer">
@@ -139,9 +180,9 @@ class TextInputEvents extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={changeName}
           desc={changeDesc}
@@ -161,19 +202,30 @@ export default {
   PropertyTab: TextInputProperties,
   EventTab: TextInputEvents,
 
-  create: function () {
+  create: function() {
     const element = document.createElement('input');
     element.style.margin = '0px';
     element.style.width = '200px';
     element.style.height = '30px';
+    element.style.fontFamily = fontFamilyStyles[0];
+    element.style.fontSize = defaultFontSizeStyle;
     element.style.color = '#000000';
     element.style.backgroundColor = '';
+    elementUtils.setDefaultBorderStyles(element, {
+      forceDefaults: true,
+      textInput: true
+    });
 
     return element;
   },
 
-  onDeserialize: function (element) {
-    $(element).on('mousedown', function (e) {
+  onDeserialize: function(element) {
+    // Set border styles for older projects that didn't set them on create:
+    elementUtils.setDefaultBorderStyles(element, {textInput: true});
+    // Set the font family for older projects that didn't set them on create:
+    elementUtils.setDefaultFontFamilyStyle(element);
+
+    $(element).on('mousedown', function(e) {
       if (!Applab.isRunning()) {
         // Disable clicking into text input unless running
         e.preventDefault();
@@ -181,14 +233,14 @@ export default {
     });
 
     // swallow keydown unless we're running
-    $(element).on('keydown', function (e) {
+    $(element).on('keydown', function(e) {
       if (!Applab.isRunning()) {
         e.preventDefault();
       }
     });
   },
 
-  onPropertyChange: function (element, name, value) {
+  onPropertyChange: function(element, name, value) {
     switch (name) {
       case 'value':
         element.value = value;
@@ -202,7 +254,7 @@ export default {
     return true;
   },
 
-  readProperty: function (element, name) {
+  readProperty: function(element, name) {
     switch (name) {
       case 'value':
         return element.value;

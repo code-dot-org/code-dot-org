@@ -16,6 +16,7 @@ el:
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Για να ολοκληρώσουμε το σπίτι, πρέπει απλά να σχεδιάσουμε ένα τετράγωνο!
       2-3 Artist 6_authored_hint:
+        2-3_Artist_6_a: 'Για να φτιάξεις αυτές τις μικρές γωνίες, θα πρέπει να στρίβεις *περισσσότερο* κάθε φορά, απ'' ότι έκανες με το τετράγωνο.   '
         2-3_Artist_6_b: Δεδομένου ότι ήδη κοιτάζω προς τα δεξιά, είναι πιο εύκολο να ξεκινήσετε προχωρώντας εμπρός, και στη συνέχεια, να κάνετε αριστερές στροφές για να δημιουργήσετε το τρίγωνο.
         2-3_Artist_6_c: Κάθε πλευρά του τριγώνου έχει το ίδιο μήκος με κάθε πλευρά του τετραγώνου... 100 pixel!
       2-3 Artist 7_authored_hint:
@@ -156,7 +157,127 @@ el:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Εχετε δυσκολία να βρείτε πως θα κινήσετε τα μπλοκ προς τα κάτω;  Δοκιμάστε να χειριστείτε το κόκκινο λουλούδι ακριβώς με τον ίδιο τρόπο όπως το πορφυρό λουλούδι!
         2-3_Bee_Conditionals_14_b: Αν το κόκκινο λουλούδι ήταν πορφυρό, μπορείτε να βρείτε πως θα χρησιμοποιήσετε ένα επιπλέον βρόγχο «επανάληψη» για να μειώσετε τον κώδικα;
-        2-3_Bee_Conditionals_14_c: "Δοκιμάστε να σπάσετε το παρακάτω σε δύο μέρη:  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar, if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n  - Make two honey"
+        2-3_Bee_Conditionals_14_c: |-
+          Δοκιμάστε να σπάσετε το παρακάτω σε δύο μέρη:  
+
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Gather nectar 3 times
+            - Move forward 5 times
+            - Check to see if nectar, if so: get it
+            - Turn left
+            
+          2) Make honey 
+            - Move forward one time
+            - Make two honey
+      2-3 Bee Conditionals 15_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'Θυμήσου: Τα μοβ λουλούδια έχουν νέκταρ είτε 0, είτε 1, και μπορούν να αλλάξουν κάθε φορά που εκτελείς το πρόγραμμα.'
+      2-3 Bee Conditionals 3_authored_hint:
+        2-3_Bee_Conditionals_3_a: Ο κώδικας θα είναι μικρότερος εάν χρησιμοποιήσεις ένα βρόχο κάθε φορά που προχωράς προς τα εμπρός, έναν άλλο βρόχο για να συλλέξεις νέκταρ, και έναν άλλο για να φτιάξεις μέλι.
+      2-3 Bee Conditionals 6_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Θυμήσου: Τα μοβ λουλούδια αλλάζουν το νέκταρ τους μεταξύ του 0 και του 1 όταν εκτελείς το πρόγραμμά σου!'
+      2-3 Bee Debugging 1_authored_hint:
+        2-3_Bee_Debugging_1_a: Όταν βρεις και διορθώσεις το λανθασμένο τουβλάκι, μπορείς να δεις κάποια μοτίβα που θα μπορούσαν να γ'ινουν πιο απλά χρησιμοποιώντας ένα βρόχο «επανάλαβε»;
+      2-3 Bee Debugging 2_authored_hint:
+        2-3_Bee_Debugging_2_a: Όταν βρεις και διορθώσεις το λανθασμένο τουβλάκι, μπορείς να δεις κάποια μοτίβα που θα μπορούσαν να γ'ινουν πιο απλά χρησιμοποιώντας ένα βρόχο «επανάλαβε»;
+      2-3 Bee Debugging 4_authored_hint:
+        2-3_Bee_Debugging_4_a: Υπάρχει κάποιο σημείο όπου η μέλισσα κάνει κάτι που δεν έχει νόημα; Τι συμβαίνει όταν αλλάζεις αυτό το τουβλάκι;
+      2-3 Bee Functions 4_authored_hint:
+        2-3_Bee_Functions_4_a: Δεν χρειάζεται να χρησιμοποιήσεις ένα βρόχο μαζί με τη συνάρτηση. Προσπάθηες να κινηθείς, να χρησιμοποιήσεις τη συνάρτηση, και μετά να κινηθείς και να χρησιμοποιήσεις τη συνάρτηση ξανά.
+      2-3 Bee Functions 6_authored_hint:
+        2-3_Bee_Functions_6_a: Δεν χρειάζεται να χρησιμοποιήσεις ένα βρόχο μαζί με τη συνάρτηση. Προσπάθηες να κινηθείς, να χρησιμοποιήσεις τη συνάρτηση, και μετά να κινηθείς και να χρησιμοποιήσεις τη συνάρτηση ξανά.
+      2-3 Bee Functions 8_authored_hint:
+        2-3_Bee_Functions_8_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+      2-3 Bee Functions 9_authored_hint:
+        2-3_Bee_Functions_8_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+        2-3_Bee_Functions_8_b: |-
+          Θυμίσου ότι πρέπει να φτιάξεις τον κώδικά σου μέσα στο πράσινο τουβλάκι της συνάρτησης.
+
+           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      2-3 Bee Loops 2_authored_hint:
+        2-3_Bee_Loops_2_a: Θα πρέπει να καταλήξεις με τέσσερα τουβλάκια μέσα στο βρόχο σου.
+      2-3 Bee Loops 3_authored_hint:
+        2-3_Bee_Loops_3_a: Θα πρέπει να έχεις 6 τουβλάκια μέσα στο βρόχο σου.
+      2-3 Bee Loops 3B_authored_hint:
+        2-3_Bee_Loops_3B_a: Θα χρειαστείς δύο διαφορετικούς βρόχους "επανάλαβε", τον έναν μετά τον άλλο.
+      2-3 Bee Loops 4_authored_hint:
+        2-3_Bee_Loops_4_a: Θα πρέπει να καταλήξεις με πέντε τουβλάκια μέσα στο βρόχο σου.
+      2-3 Bee Loops 4A_authored_hint:
+        2-3_Bee_Loops_4A_a: Η πρώτη ενέργεια να είναι στροφή, αντί για κίνηση.
+        2-3_Bee_Loops_4A_b: Το τελευταίο κομμάτι του προγράμματος μπορεί να ολοκληρωθεί, γράφοντας κώδικα στο τέλος του προγράμματός σου, έξω από τον βρόχο.
+        2-3_Bee_Loops_4A_c: Εάν ακόμα δεν μπορείς να αναγνωρίσεις τους βρόχους, προσπάθησε να το προγραμματίσεις με τον "μακρύ" τρόπο πρώτα, και μετά δες τι μπορείς να συνδυάσεις μέσα σε ένα βρόχο "επανάλαβε" στο τέλος.
+      2-3 Bee Loops 5_authored_hint:
+        2-3_Bee_Loops_5_a: Εάν δεν μπορείς να αναγνωρίσεις τα τουβλάκια που πρέπει να μπουν μέσα στο "επανάλαβε" κατευθείαν, ξεκίνα προγραμματίζοντας κάθε ξεχωριστή κίνηση και ψάξε για ένα μοτίβο.
+      2-3 Bee Loops 6_authored_hint:
+        2-3_Bee_Loops_6_a: Εάν δεν μπορείς να αναγνωρίσεις τι πρέπει να μπει μέσα στο βρόχο "επανάλαβε", προσπάθησε να τραβήξεις τουβλάκια ένα-ένα και δες εάν μπορείς να βρεις ένα μοτίβο.
+        2-3_Bee_Loops_6_b: Όταν τελειώσεις, θα πρέπει να βρίσκονται 6 τουβλάκια μέσα στο βρόχο "επανάλαβε".
+      2-3 Bee Loops 7_authored_hint:
+        2-3_Bee_Loops_7_a: Η πρώτη ενέργεια να είναι στροφή, αντί για κίνηση.
+        2-3_Bee_Loops_7_b: 'Εάν δεν μπορείς να αναγνωρίσεις τους βρόχους από την αρχή, προσπάθησε να το προγραμματίσεις με τον "μακρύ" τρόπο πρώτα, και μετά ψάξε για ένα μοτίβο.  '
+      2-3 Maze 1_authored_hint:
+        2-3_Maze_1_a: Για να χρησιμοποιήσεις ένα τουβλάκι "προχώρησε μπροστά", τράβηξέ το από την εργαλειοθήκη στον χώρο εργασίας και σύνδεσέ το στο τουβλάκι "όταν εκτελείται".
+      2-3 Maze 16_authored_hint:
+        2-3_Maze_16_a: Εάν σου είναι δύσκολο να βρεις το μοτίβο, προσπάθησε να το προγραμματίσεις όλο πρώτα και μετά να δεις ποια πράγματα επαναλαμβάνονται ξανά και ξανά, πριν βάλεις τους βρόχους.
+        2-3_Maze_16_b: "Για να βάλεις πολλά τουβλάκια μέσα σε ένα βρόχο \"επανάλαβε\", απλά τράβηξε έναν βρόχο στον χώρο εργασίας, και μετά τράβηξε όλα τα τουβλάκια από το αρχικό πρόγραμμα μέσα σε αυτόν.\nΣύνδεσέ τα πάλι όλα στο τουβλάκι \"όταν εκτελείται\" και είσαι έτοιμος!"
+      2-3 Maze 6_authored_hint:
+        2-3_Maze_6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
+      2-3 Maze Loops 17_authored_hint:
+        2-3_Maze_Loops_17_a: Εάν σου είναι δύσκολο να βρεις το μοτίβο, προσπάθησε να το προγραμματίσεις όλο πρώτα και μετά να δεις ποια πράγματα επαναλαμβάνονται ξανά και ξανά, πριν βάλεις τους βρόχους.
+        2-3_Maze_Loops_17_b: Σβήστηκε ο αρχικός κώδικας; Πάτησε "ξεκίνα ξανά" για να τον φέρεις πίσω!
+      2-3 Maze Loops 18_authored_hint:
+        2-3_Maze_Loops_18_a: Εάν σου είναι δύσκολο να βρεις το μοτίβο, προσπάθησε να το προγραμματίσεις όλο πρώτα και μετά να δεις ποια πράγματα επαναλαμβάνονται ξανά και ξανά, πριν βάλεις τους βρόχους.
+      2-3 Maze Loops 19_authored_hint:
+        2-3_Maze_Loops_19_a: Εάν έχεις κολλήσει, προσπάθησε να γράψεις τον κώδικα πρώτα χωρίς βρόχους και μετά να ψάξεις για μοτίβα.
+        2-3_Maze_Loops_19_b: Το να βάλεις έναν βρόχο "επανάλαβε" μέσα σε έναν άλλο, μπορεί να βοηθήσει να μειωθεί ο αριθμός των τούβλων που χρησιμοποιούνται.
+      2-3 Maze Loops 20_authored_hint:
+        2-3_Maze_Loops_20_a: Ψάξε για ένα μοτίβο "σκάλας" σε αυτόν τον λαβύρινθο για να βρεις που πρέπει να χρησιμοποιηθεί βρόχος.
+      2-3 Maze Loops 21_authored_hint:
+        2-3_Maze_Loops_21_a: Εάν δυσκολεύεσαι να βρεις το μοτίβο "σκάλας", προσπάθησε να καλύψεις τα αποκλεισμένα μονοπάτια με το δάχτυλό σου.
+      4-5 Artist 1_authored_hint:
+        4-5_Artist_1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      4-5 Artist 11_authored_hint:
+        4-5_Artist_11_a: Μέσα στον βρόχο σου, φρόντισε ο καλλιτέχνης να πηδάει προς τα πίσω και προς τα πάνω αφού ζωγραφίσει κάθε γραμμή.
+      4-5 Artist 3_authored_hint:
+        4-5_Artist_3_a: |-
+          Εάν το παρτέρι έχει περίμετρο 600 pixel και δύο πλευρές του έχουν μήκος 200 pixel, έτσι μπορείς να βρεις το άθροισμα των κοντών πλευρών:
+
+          **600 - 200 - 200 = 200**
+
+          Αυτό σημαίνει ότι και οι δύο κοντές πλευρές έχουν άθροισμα 200 pixel.
+
+          **Πόσο είναι 200 / 2;**
+        4-5_Artist_3_b: Εάν δεν μπορείς να δεις που πηγαίνει ο βρόχος "επανάλαβε" κατευθείαν, προσπάθησε να προγραμματίσεις όλη τη λύση και να ψάξεις για ένα μοτίβο.
+      4-5 Artist 4_authored_hint:
+        4-5_Artist_4_a: "Ένας κύκλος έχει 360 μοίρες! \n\nΤόσες είναι οι φορές που πρέπει να επαναλάβεις αυτόν τον κώδικα (στρίβοντας 1 μοίρα τη φορά) για να ολοκληρωθεί ο κύκλος!"
+      4-5 Artist 5_authored_hint:
+        4-5_Artist_5_a: |-
+          Το να δοκιμάζεις διαφορετικά πράματα είναι μία καλή μέθοδος, όμως μπορείς επίσης να λύσεις το πρόβλημα διαιρώντας την γωνία των 90 μοιρών σε τρίτα.
+
+           **90 / 3 = _____**
+      4-5 Artist 7_authored_hint:
+        4-5_Artist_7_a: 'Ποια γωνία είναι η μικρότερη; Σε τι γωνία στέκεται ο καλλιτέχνης; '
+      4-5 Artist 8_authored_hint:
+        4-5_Artist_8_a: "Οι μακριές πλευρές είναι 240 pixel η καθεμία. Αυτό σημαίνει ότι οι 2 κοντές πλευρές πρέπει να έχουν άθροισμα:\n\n **800 - 240 - 240 = 320** \n\nΠόσο είναι **320/2** ; "
+        4-5_Artist_8_b: "Αυτή η εικόνα μπορεί να γίνει με 2 τρόπους!  \n- Ζωγράφισε δύο παραλληλόγραμμα που είναι **120** στο πλάτος και **160** στο ύψος, με μία επικαλυπτόμενη πλευρά\n- Ζωγράφισε ένα παραλληλόγραμμο που είναι **240** στο μήκος και **160** στο ύψος και μετά πρόσθεσε μία γραμμή στη μέση."
+      4-5 Artist 9_authored_hint:
+        4-5_Artist_9_a: "Όταν ένα τρίγωνο είναι ισόπλευρο, όλες οι πλευρές του και όλες οι γωνίες του είναι ίσες.\n"
+        4-5_Artist_9_b: Χρειάζεται να ζωγραφίσεις τρία τρίγωνα με το ίδιο μέγεθος. Μην ξεχνάς να πηδάς στην νέα σου θέση μετά απο το καθένα.
+      4-5 Artist Assessment 1_authored_hint:
+        4-5_Artist_Assessment_1_a: Χρειάζεται να ζωγραφίσεις μόνο το εξωτερικό τρίγωνο για να ολοκληρώσεις αυτόν τον γρίφο.
+      4-5 Artist Patterns 11_authored_hint:
+        4-5_Artist_Patterns_11_a: Εάν ένας κύκλος έχει 360 μοίρες, και κάθε βρόχος στρίβει 3 μοίρες, πόσες φορές χρειάζεται να επαναλάβεις για να ζωγραφίσεις έναν μισό ή έναν ολόκληρο κύκλο;
+      4-5 Artist Patterns 2_authored_hint:
+        4-5_Artist_Patterns_2_a: Πρόσεξε ότι αφού τα τετράγωνα είναι 20 pixel στο μήκος, χρειάζεται να πηδήξεις 20 pixel πριν ξεκινήσεις το επόμενο τετράγωνο.
+      4-5 Artist Patterns 3_authored_hint:
+        4-5_Artist_Patterns_3_a: Πρόσεξε να τραβάς ολόκληρο το τούβλο του κώδικα από την εργαλειοθήκη κάθε φορά που θέλεις να δοκιμάσεις ένα καινούριο.
+        4-5_Artist_Patterns_3_b: Εάν ο κώδικάς σου γίνει πολύ μπερδεμένος, μπορείς πάντα να πατήσεις το "Ξεκίνα Ξανά" και να προσπαθήσεις πάλι!
+      4-5 Artist Patterns 5_authored_hint:
+        4-5_Artist_Patterns_5_a: "Τώρα, όταν ο καλλιτέχνης τελειώνει το κάθε διαμάντι, κοιτάει προς την αντίθετη κατεύθυνση από αυτή που χρειάζεται για να ξεκινήσει το επόμενο. \n\nΠόσες μοίρες χρειάζεται να στρίψει για να διορθωθεί;"
+      4-5 Bee Conditionals 4_authored_hint:
+        remember_quantum: "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
+      4-5 Bee Conditionals 5_authored_hint:
+        remember_quantum: "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
       4-5 Bee Conditionals 6_authored_hint:
         4-5 Bee Conditionals 6_a: Μπορείτε να λύσετε το παζλ χρησιμοποιώντας μόνο τα μπλοκς στον χώρο εργασίας.  Με ποια σειρά θα πρέπει να πάνε;
         4-5 Bee Conditionals 6_b: Βεβαιωθείτε ότι ελέγχετε αν το λουλούδι έχει περισσότερο από ** 0 ** νέκταρ τουλάχιστον ** 3 ** φορές για να λύσουμε αυτό το παζλ.
@@ -172,8 +293,111 @@ el:
       4-5 Maze 5_authored_hint:
         4-5_Maze_5_a: Δοκιμάστε να χρησιμοποιήσετε ένα βρόγχο 'επανάληψηt' όποτε χρειάζεστε να «προχωρήστε μπροστά» περισσότερο από δύο βήματα.
         4-5_Maze_5_b: Μπορείτε να χρησιμοποιήσετε περισσότερους από έναν βρόγχους 'επανάληψη' σε ένα παζλ.
+      4-5 Maze 6_authored_hint:
+        4-5_Maze_6_a: "Προσπάθησε να ακολουθήεις το μονοπάτι με το δάχτυλό σου. \nΕίναι το συντομότερο μονοπάτι που μπορείς να βρεις;"
+      4-5 Maze 7_authored_hint:
+        4-5_Maze_7_a: "**Θέλεις να κάνεις τον κώδικά σου όσο μικρότερο γίνεται;** \n\nΨάξε για μοτίβα στα τουβλάκια σου. Βλέπεις κάτι που επαναλαμβάνεται; Προσπάθησε να βάλεις έναν βρόχο γύρω του!"
       Artist Autorun Test_authored_hint:
         2-3_Artist_Functions_4_a: Ο καλλιτέχνης πρέπει να γυρίσει 120 μοίρες μεταξύ κάθε τετραγώνου για να ολοκληρωθεί αυτό το σχέδιο.
+      Bergeron Robot Maze1_authored_hint:
+        2-3_Maze_1_a: Για να χρησιμοποιήσεις ένα τουβλάκι "προχώρησε μπροστά", τράβηξέ το από την εργαλειοθήκη στον χώρο εργασίας και σύνδεσέ το στο τουβλάκι "όταν εκτελείται".
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          ** Πώς μπορώ να περάσω αυτό επίπεδο; **
+          * Βεβαιωθείτε ότι εμφανίζεται στην οθόνη ένας χορευτής.
+
+          *Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα.*
+        challenges: |-
+          **Προαιρετικές Δοκιμασίας**
+          *Επιλέξτε να παίζει ένα διαφορετικό τραγούδι.
+          * Επιλέξτε ένα διαφορετικό που μοιάζει με ελάφι!
+          *Μετονομάστε τον χορευτή σας.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          ** Πώς μπορώ να περάσω αυτό επίπεδο; **
+          * Ο χορευτής πρέπει να κάνει μια νέα κίνηση μετά από 4 μέτρα.
+
+          *Αυτό το επίπεδο τελειώνει μετά από 8 μέτρα.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          ** Πώς μπορώ να περάσω αυτό επίπεδο; **
+
+          * Μετά από 6 μέτρα, ο χορευτής σας πρέπει να κάνει ένα χορό διαφορετικό από εκείνον που έκανε μετά από 4 μέτρα.
+
+          *Αυτό το επίπεδο τελειώνει μετά από 12 μέτρα.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          ** Πώς μπορώ να περάσω αυτό επίπεδο; **
+
+          * Θα πρέπει να κάνετε το εφέ φόντου να αλλάξει κάποια στιγμή κατά τη διάρκεια του έβδομου μέτρου του τραγουδιού.
+
+          *Αυτό το επίπεδο τελειώνει μετά από 10 μέτρα.*
+        challenges: |-
+          **Προαιρετική Δοκιμασία**
+
+          Αλλάξτε το εφέ φόντου σε διαφορετικά σημεία του τραγουδιού συνδέοντας στο νέο μπλοκ* κάτω από τα <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> γεγονότα.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          ** Πώς μπορώ να περάσω αυτό επίπεδο; **
+
+          * Πρέπει να έχετε τουλάχιστον δύο χορευτές.
+
+          *Αυτό το επίπεδο τελειώνει μετά από 6 μέτρα.*
+        challenges: |-
+          **Προαιρετική Δοκιμασία**
+
+          * Προσθέστε έναν τρίτο χορευτή (ή όσους θέλετε!)
+          * Κάνετε όλους σας τους χορευτές να εκτελούν διαφορετικές κινήσεις σε διάφορα σημεία του τραγουδιού.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          ** Πώς μπορώ να περάσω αυτό επίπεδο; **
+
+          * Δύο χορευτές πρέπει να έχουν μέγεθος διαφορετικό από 100.
+
+          *Αυτό το επίπεδο τελειώνει μετά από 6 μέτρα.*
+        challenges: |-
+          **Προαιρετική Δοκιμασία**
+
+          * Πειραματιστείτε με την αλλαγή άλλων ιδιοτήτων (πλάτος, ύψος, περιστροφή, κλπ.)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          ** Πώς μπορώ να περάσω αυτό επίπεδο; **
+
+          * Αλλάξτε την απόχρωση σε τουλάχιστον έναν χορευτή.
+
+          *Αυτό το επίπεδο τελειώνει μετά από 8 μέτρα.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          ** Πώς μπορώ να περάσω αυτό επίπεδο; **
+
+          * Πρέπει να αλλάξουν οι ιδιότητες για δύο ή περισσότερους χορευτές.
+
+          *Αυτό το επίπεδο τελειώνει μετά από 8 μέτρα.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          ** Πώς μπορώ να περάσω αυτό επίπεδο; **
+
+          * Απλά να είστε δημιουργικοί!
+
+          *Αυτό το επίπεδο τελειώνει μετά από 8 μέτρα.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          ** Πώς μπορώ να περάσω αυτό επίπεδο; **
+
+          * Απλά να είστε δημιουργικοί!
+
+          *Αυτό το επίπεδο τελειώνει μετά από 8 μέτρα.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          ** Πώς μπορώ να περάσω αυτό επίπεδο; **
+
+          * Χρησιμοποιήστε το μπλοκ «όταν είναι πατημένο το αριστερό βέλος» για να κάνετε το ρομπότ να κάνει μια χορευτική κίνηση όταν το πατήσετε.
+
+          *Αυτό το επίπεδο τελειώνει μετά από 8 μέτρα.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Δείτε τα **Θαλάσσια Φανάρια** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Πώς μπορείτε να χρησιμοποιήσετε μια συνθήκη υπό όρους με αυτά για να περάσετε μέσα από το Μνημείο Ωκεανού;"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Τι πανέμορφος κοραλλιογενής ύφαλος! Το μπλε κοράλλι είναι ο **σωστός** δρόμος που πρέπει να ακολουθήσετε. Βεβαιωθείτε ότι το κόκκινο κοράλλι δεν είναι **αριστερά**!
       Dance short test 2_authored_hint:
         validation: |-
           ** Πώς μπορώ να περάσω αυτό επίπεδο; **
@@ -582,7 +806,41 @@ el:
         MC_HOC_2017_13_Cole_a: Δοκίμασε να χρησιμοποιήσεις τον Agent για να χτίσεις μερικές γέφυρες, ώστε η Alex και ο Steve να μπορούν να περιπλανηθούν πέρα από τις άκρες του χάρτη.
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Δοκίμασε να χρησιμοποιήσεις τον Agent για να χτίσεις μερικές γέφυρες, ώστε η Alex και ο Steve να μπορούν να περιπλανηθούν πέρα από τις άκρες του χάρτη.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          ** Πώς μπορώ να περάσω αυτό επίπεδο; **
+          * Ο χορευτής πρέπει να κάνει μια νέα κίνηση μετά από 4 μέτρα.
+
+          *Αυτό το επίπεδο τελειώνει μετά από 8 μέτρα.*
+      aE3_authored_hint:
+        aE3_d: Εάν ο κώδικάς σου γίνει πολύ μπερδεμένος, μπορείς πάντα να πατήσεις το "Ξεκίνα Ξανά" και να προσπαθήσεις πάλι!
+      aE3alternate_authored_hint:
+        aE3alternate_d: Εάν ο κώδικάς σου γίνει πολύ μπερδεμένος, μπορείς πάντα να πατήσεις το "Ξεκίνα Ξανά" και να προσπαθήσεις πάλι!
+      aE3alternateB_authored_hint:
+        aE4alternateB_d: Εάν ο κώδικάς σου γίνει πολύ μπερδεμένος, μπορείς πάντα να πατήσεις το "Ξεκίνα Ξανά" και να προσπαθήσεις πάλι!
+      aE4_authored_hint:
+        aE4_d: Εάν ο κώδικάς σου γίνει πολύ μπερδεμένος, μπορείς πάντα να πατήσεις το "Ξεκίνα Ξανά" και να προσπαθήσεις πάλι!
+      course3_bee_functions_challenge1_authored_hint:
+        courseE_bee_functions_challenge1_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+      course3_bee_functions_challenge2_authored_hint:
+        courseE_bee_functions_challenge1_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
       courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -601,6 +859,25 @@ el:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -638,7 +915,45 @@ el:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -673,7 +988,29 @@ el:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq5_2018_authored_hint:
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019_authored_hint:
         '1': Try writing down the steps on paper to find a solution!
         '2': |-
           You will need to use this block:
@@ -681,7 +1018,12 @@ el:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_maze_seq5a_2019_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
+      courseB_Scrat_ramp1_2019_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
       courseB_Scrat_ramp2_2018_authored_hint:
@@ -700,7 +1042,42 @@ el:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp2_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |
           Your code should look like this:
 
@@ -738,7 +1115,45 @@ el:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2019_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
           Your code should look like this:
 
@@ -773,6 +1188,34 @@ el:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp5a_2019_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_maze_seq8_authored_hint:
+        courseB_maze_seq8_b: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
+      courseC_maze_loops6_authored_hint:
+        courseC_maze_loops6_b: "Για να βάλεις πολλά τουβλάκια μέσα σε ένα βρόχο \"επανάλαβε\", απλά τράβηξε έναν βρόχο στον χώρο εργασίας, και μετά τράβηξε όλα τα τουβλάκια από το αρχικό πρόγραμμα μέσα σε αυτόν.\nΣύνδεσέ τα πάλι όλα στο τουβλάκι \"όταν εκτελείται\" και είσαι έτοιμος!"
+      courseC_maze_loops7_authored_hint:
+        courseC_maze_loops7_a: Εάν σου είναι δύσκολο να βρεις το μοτίβο, προσπάθησε να το προγραμματίσεις όλο πρώτα και μετά να δεις ποια πράγματα επαναλαμβάνονται ξανά και ξανά, πριν βάλεις τους βρόχους.
+      courseC_maze_programming6_authored_hint:
+        courseC_maze_programming6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
+      courseC_maze_programming6_2018_authored_hint:
+        courseC_maze_programming6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
+      courseC_maze_programming6_2019_authored_hint:
+        courseC_maze_programming6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_artist_5_2018_2019_authored_hint:
@@ -789,6 +1232,18 @@ el:
         courseD_artist_nestedLoops3_a: "Δοκιμάστε να χρησιμοποιήσετε το μπλοκ «άλμα προς τα εμπρός» για να μεταφερθείτε από την κορυφή ενός τετραγώνου στο σημείο που θα ξεκινήσετε το επόμενο. Αν τα τετράγωνά σας έχουν ύψος 20 pixels και απέχουν 20 pixels το ένα από το άλλο, πόσο μακριά χρειάζεται να πηδήξετε;"
       courseD_artist_nestedLoops3_2019_authored_hint:
         courseD_artist_nestedLoops3_a: "Δοκιμάστε να χρησιμοποιήσετε το μπλοκ «άλμα προς τα εμπρός» για να μεταφερθείτε από την κορυφή ενός τετραγώνου στο σημείο που θα ξεκινήσετε το επόμενο. Αν τα τετράγωνά σας έχουν ύψος 20 pixels και απέχουν 20 pixels το ένα από το άλλο, πόσο μακριά χρειάζεται να πηδήξετε;"
+      courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_a: "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
+      courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_a: "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
+      courseD_bee_conditionals8_2019_authored_hint:
+        courseD_bee_conditionals8_a: "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
+      courseD_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
+      courseD_scrat_ramp7_authored_hint:
+        courseD_scrat_programming6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
+      courseD_scrat_ramp7_2018_authored_hint:
+        courseD_scrat_programming6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Τα τετράγωνα έχουν 100 pixels πλευρές το καθένα, που σημαίνει ότι θα πρέπει να μετακινηθείτε προς τα εμπρός 175 pixels πριν σχεδιάσετε το δεύτερο τετράγωνο.
         courseE_artist_functions1_b: Είναι αποδεκτό να σχεδιάσετε επικαλυπτόμενες γραμμές για να σχεδιάσετε τα γυαλιά σας.
@@ -813,6 +1268,61 @@ el:
           - Να χρησιμοποιήσει την συνάρτηση
           - Να κινηθεί εμπρός κατά 100 + 75 pixels
           - Να χρησιμοποιήσει την συνάρτηση
+      courseE_bee_functions6_authored_hint:
+        courseE_bee_functions6_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+      courseE_bee_functions6_2018_authored_hint:
+        courseE_bee_functions6_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+      courseE_bee_functions6test_authored_hint:
+        courseE_bee_functions6_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+      courseE_bee_functions7_authored_hint:
+        courseE_bee_functions7_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+        courseE_bee_functions7_b: |-
+          Θυμίσου ότι πρέπει να φτιάξεις τον κώδικά σου μέσα στο πράσινο τουβλάκι της συνάρτησης.
+
+           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      courseE_bee_functions7_2018_authored_hint:
+        courseE_bee_functions7_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+        courseE_bee_functions7_b: |-
+          Θυμίσου ότι πρέπει να φτιάξεις τον κώδικά σου μέσα στο πράσινο τουβλάκι της συνάρτησης.
+
+           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      courseE_bee_functions_challenge1_authored_hint:
+        courseE_bee_functions_challenge1_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+      courseE_bee_functions_challenge1_2018_authored_hint:
+        courseE_bee_functions_challenge1_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+      courseE_bee_functions_challenge2_authored_hint:
+        courseE_bee_functions_challenge1_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+      courseE_bee_functions_challenge2_2018_authored_hint:
+        courseE_bee_functions_challenge1_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+      courseE_farmer_concept4_authored_hint:
+        4-5_Artist_Patterns_3_a: Πρόσεξε να τραβάς ολόκληρο το τούβλο του κώδικα από την εργαλειοθήκη κάθε φορά που θέλεις να δοκιμάσεις ένα καινούριο.
+        4-5_Artist_Patterns_3_b: Εάν ο κώδικάς σου γίνει πολύ μπερδεμένος, μπορείς πάντα να πατήσεις το "Ξεκίνα Ξανά" και να προσπαθήσεις πάλι!
+      courseE_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
+      courseE_maze_ramp6_2018_authored_hint:
+        courseC_maze_programming6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
+      courseF_bee_conditionals8_authored_hint:
+        courseF_bee_conditionals8_a: "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
+      courseF_bee_conditionals8_2018_authored_hint:
+        courseF_bee_conditionals8_a: "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
+      courseF_bee_functions6_2018_authored_hint:
+        courseF_bee_functions6_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+      courseF_bee_functions8a_authored_hint:
+        courseF_bee_functions8a_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+      courseF_bee_functions8a_2018_authored_hint:
+        courseF_bee_functions8a_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+      courseF_bee_functionsPre7_authored_hint:
+        courseF_bee_functions7_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+      courseF_bee_functionsPre7_2018_authored_hint:
+        courseF_bee_functions7_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+      courseF_bee_functions_challenge2_recursion_authored_hint:
+        courseF_bee_functions8a_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+      courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
+      courseF_maze_ramp6_2018_authored_hint:
+        courseF_maze_ramp6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
+      grade2_CaringForNewPet_4_authored_hint:
+        2-3_Maze_6_a: Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: Αν χρησιμοποιήσεις το μπλοκ 'κινήσου εμπρός κατα 100 pixels', θα χαράξω αυτόματα μια ευθεία.
         2-3_Artist_1_new_b: Εχεις πρόβλημα να στρίψεις στην γωνία? Χρησιμοποίησε το μπλοκ 'στρίψε δεξιά 90 μοίρες'.
@@ -825,15 +1335,70 @@ el:
           Πόσες φορές *πρέπει* να επαναληφθεί το σχήμα?
 
           Που μπορείς να αλλάξεις αυτό στο πρόγραμμα;
+      grade2_PuppyLoops_6_authored_hint:
+        2-3_Maze_16_a: Εάν σου είναι δύσκολο να βρεις το μοτίβο, προσπάθησε να το προγραμματίσεις όλο πρώτα και μετά να δεις ποια πράγματα επαναλαμβάνονται ξανά και ξανά, πριν βάλεις τους βρόχους.
+        2-3_Maze_16_b: "Για να βάλεις πολλά τουβλάκια μέσα σε ένα βρόχο \"επανάλαβε\", απλά τράβηξε έναν βρόχο στον χώρο εργασίας, και μετά τράβηξε όλα τα τουβλάκια από το αρχικό πρόγραμμα μέσα σε αυτόν.\nΣύνδεσέ τα πάλι όλα στο τουβλάκι \"όταν εκτελείται\" και είσαι έτοιμος!"
+      grade2_PuppyLoops_7_authored_hint:
+        2-3_Maze_Loops_17_a: Εάν σου είναι δύσκολο να βρεις το μοτίβο, προσπάθησε να το προγραμματίσεις όλο πρώτα και μετά να δεις ποια πράγματα επαναλαμβάνονται ξανά και ξανά, πριν βάλεις τους βρόχους.
+        2-3_Maze_Loops_17_b: Σβήστηκε ο αρχικός κώδικας; Πάτησε "ξεκίνα ξανά" για να τον φέρεις πίσω!
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'Υπόδειξη: Κάθε μουστάκι είναι 75 pixels μακριά.'
       grade2_PuppyLoops_9_authored_hint:
         2-3_Artist_Debugging_7_a: Τι θα συμβεί εάν ο καλλιτέχνης μετακινείται ή πηδά προς τα πίσω, αφού χαράξει την πρώτη γραμμή;
+      grade2_puppy_loops6_authored_hint:
+        2-3_Maze_16_a: Εάν σου είναι δύσκολο να βρεις το μοτίβο, προσπάθησε να το προγραμματίσεις όλο πρώτα και μετά να δεις ποια πράγματα επαναλαμβάνονται ξανά και ξανά, πριν βάλεις τους βρόχους.
+        2-3_Maze_16_b: "Για να βάλεις πολλά τουβλάκια μέσα σε ένα βρόχο \"επανάλαβε\", απλά τράβηξε έναν βρόχο στον χώρο εργασίας, και μετά τράβηξε όλα τα τουβλάκια από το αρχικό πρόγραμμα μέσα σε αυτόν.\nΣύνδεσέ τα πάλι όλα στο τουβλάκι \"όταν εκτελείται\" και είσαι έτοιμος!"
+      grade2_puppy_loops7_authored_hint:
+        2-3_Maze_Loops_17_a: Εάν σου είναι δύσκολο να βρεις το μοτίβο, προσπάθησε να το προγραμματίσεις όλο πρώτα και μετά να δεις ποια πράγματα επαναλαμβάνονται ξανά και ξανά, πριν βάλεις τους βρόχους.
+      grade3_ConditionalsElse_4_authored_hint:
+        remember_quantum: "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
+      grade3_ConditionalsElse_5_authored_hint:
+        remember_quantum: "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
+      grade3_ConditionalsElse_TeacherIDo_authored_hint:
+        remember_quantum: "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
       grade3_Conditionals_10 BAD_authored_hint:
         4-5_Bee_Nested_Loops_Rows_a: Δοκιμάστε να αντιμετωπίσετε την λύση αυτού του παζλ σαν ένα μακρύ παραλληλόγραμμο όπου η μέλισσα πρέπει να προχωρήσει εμπρός και, στη συνέχεια, να στρίψει αριστερά αρκετές φορές για να ολοκληρώσει τη διαδρομή.
       grade3_Conditionals_11_authored_hint:
         2-3_Bee_Conditionals_14_a: Εχετε δυσκολία να βρείτε πως θα κινήσετε τα μπλοκ προς τα κάτω;  Δοκιμάστε να χειριστείτε το κόκκινο λουλούδι ακριβώς με τον ίδιο τρόπο όπως το πορφυρό λουλούδι!
         2-3_Bee_Conditionals_14_b: Αν το κόκκινο λουλούδι ήταν πορφυρό, μπορείτε να βρείτε πως θα χρησιμοποιήσετε ένα επιπλέον βρόγχο «επανάληψη» για να μειώσετε τον κώδικα;
+      grade3_Conditionals_12_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'Θυμήσου: Τα μοβ λουλούδια έχουν νέκταρ είτε 0, είτε 1, και μπορούν να αλλάξουν κάθε φορά που εκτελείς το πρόγραμμα.'
+      grade3_Conditionals_2_authored_hint:
+        2-3_Bee_Conditionals_3_a: Ο κώδικας θα είναι μικρότερος εάν χρησιμοποιήσεις ένα βρόχο κάθε φορά που προχωράς προς τα εμπρός, έναν άλλο βρόχο για να συλλέξεις νέκταρ, και έναν άλλο για να φτιάξεις μέλι.
+      grade3_Conditionals_4_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Θυμήσου: Τα μοβ λουλούδια αλλάζουν το νέκταρ τους μεταξύ του 0 και του 1 όταν εκτελείς το πρόγραμμά σου!'
+      grade3_Conditionals_TeacherIDo_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Θυμήσου: Τα μοβ λουλούδια αλλάζουν το νέκταρ τους μεταξύ του 0 και του 1 όταν εκτελείς το πρόγραμμά σου!'
+      grade3_Debugging_1_authored_hint:
+        2-3_Bee_Debugging_1_a: Όταν βρεις και διορθώσεις το λανθασμένο τουβλάκι, μπορείς να δεις κάποια μοτίβα που θα μπορούσαν να γ'ινουν πιο απλά χρησιμοποιώντας ένα βρόχο «επανάλαβε»;
+      grade3_Debugging_TeacherIDo_authored_hint:
+        2-3_Bee_Debugging_4_a: Υπάρχει κάποιο σημείο όπου η μέλισσα κάνει κάτι που δεν έχει νόημα; Τι συμβαίνει όταν αλλάζεις αυτό το τουβλάκι;
+      grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: Θα πρέπει να καταλήξεις με πέντε τουβλάκια μέσα στο βρόχο σου.
+      grade3_Loops_11_authored_hint:
+        2-3_Bee_Loops_5_a: Εάν δεν μπορείς να αναγνωρίσεις τα τουβλάκια που πρέπει να μπουν μέσα στο "επανάλαβε" κατευθείαν, ξεκίνα προγραμματίζοντας κάθε ξεχωριστή κίνηση και ψάξε για ένα μοτίβο.
+      grade3_Loops_12_authored_hint:
+        2-3_Bee_Loops_6_a: Εάν δεν μπορείς να αναγνωρίσεις τι πρέπει να μπει μέσα στο βρόχο "επανάλαβε", προσπάθησε να τραβήξεις τουβλάκια ένα-ένα και δες εάν μπορείς να βρεις ένα μοτίβο.
+        2-3_Bee_Loops_6_b: Όταν τελειώσεις, θα πρέπει να βρίσκονται 6 τουβλάκια μέσα στο βρόχο "επανάλαβε".
+      grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Θα χρειαστείς δύο διαφορετικούς βρόχους "επανάλαβε", τον έναν μετά τον άλλο.
+      grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: Η πρώτη ενέργεια να είναι στροφή, αντί για κίνηση.
+        2-3_Bee_Loops_7_b: 'Εάν δεν μπορείς να αναγνωρίσεις τους βρόχους από την αρχή, προσπάθησε να το προγραμματίσεις με τον "μακρύ" τρόπο πρώτα, και μετά ψάξε για ένα μοτίβο.  '
+      grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: Η πρώτη ενέργεια να είναι στροφή, αντί για κίνηση.
+        2-3_Bee_Loops_4A_b: Το τελευταίο κομμάτι του προγράμματος μπορεί να ολοκληρωθεί, γράφοντας κώδικα στο τέλος του προγράμματός σου, έξω από τον βρόχο.
+        2-3_Bee_Loops_4A_c: Εάν ακόμα δεν μπορείς να αναγνωρίσεις τους βρόχους, προσπάθησε να το προγραμματίσεις με τον "μακρύ" τρόπο πρώτα, και μετά δες τι μπορείς να συνδυάσεις μέσα σε ένα βρόχο "επανάλαβε" στο τέλος.
+      grade3_Loops_8_authored_hint:
+        2-3_Bee_Loops_2_a: Θα πρέπει να καταλήξεις με τέσσερα τουβλάκια μέσα στο βρόχο σου.
+      grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Θα πρέπει να έχεις 6 τουβλάκια μέσα στο βρόχο σου.
+      grade3_bee_conditionals_quantum5_authored_hint:
+        remember_quantum: "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
+      grade3_maze_loops2_authored_hint:
+        grade3_maze_loops2_b: Εάν σου είναι δύσκολο να βρεις το μοτίβο, προσπάθησε να το προγραμματίσεις όλο πρώτα και μετά να δεις ποια πράγματα επαναλαμβάνονται ξανά και ξανά, πριν βάλεις τους βρόχους.
+      grade3_maze_loops5_authored_hint:
+        2-3_Maze_Loops_21_a: Εάν δυσκολεύεσαι να βρεις το μοτίβο "σκάλας", προσπάθησε να καλύψεις τα αποκλεισμένα μονοπάτια με το δάχτυλό σου.
       grade4_artist_functions1_authored_hint:
         2-3_Artist_Functions_1_a: Τα τετράγωνα έχουν 100 pixels πλευρές το καθένα, που σημαίνει ότι θα πρέπει να μετακινηθείτε προς τα εμπρός 175 pixels πριν σχεδιάσετε το δεύτερο τετράγωνο.
         2-3_Artist_Functions_1_b: Είναι αποδεκτό να σχεδιάσετε επικαλυπτόμενες γραμμές για να σχεδιάσετε τα γυαλιά σας.
@@ -843,9 +1408,48 @@ el:
           - Να χρησιμοποιήσει την συνάρτηση
           - Να κινηθεί εμπρός κατά 100 + 75 pixels
           - Να χρησιμοποιήσει την συνάρτηση
+      grade4_bee_conditionals_quantum4_authored_hint:
+        remember_quantum: "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
+      grade4_bee_conditionals_quantum5_authored_hint:
+        remember_quantum: "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
+      grade4_bee_functions7_authored_hint:
+        2-3_Bee_Functions_8_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+      grade4_bee_functions8_authored_hint:
+        2-3_Bee_Functions_8_a: "Εάν αυτός ο γρίφος σου φαίνεται απαιτητικός, δοκίμασε να φτιάξεις την συνάρτησή σου λίγο-λίγο κάθε φορά.\nΠρόσθεσε μερικά τουβλάκια και μετά δοκίμασέ το. Πρόσθεσε κι άλλα και δοκίμασέ το πάλι. Γρήγορα, θα τα καταφέρεις!"
+        2-3_Bee_Functions_8_b: |-
+          Θυμίσου ότι πρέπει να φτιάξεις τον κώδικά σου μέσα στο πράσινο τουβλάκι της συνάρτησης.
+
+           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       grade4_review_artist1_authored_hint:
         2-3_Artist_1_new_a: Αν χρησιμοποιήσεις το μπλοκ 'κινήσου εμπρός κατα 100 pixels', θα χαράξω αυτόματα μια ευθεία.
         2-3_Artist_1_new_b: Εχεις πρόβλημα να στρίψεις στην γωνία? Χρησιμοποίησε το μπλοκ 'στρίψε δεξιά 90 μοίρες'.
       grade4_review_artist2_authored_hint:
+        2-3_Artist_6_a: 'Για να φτιάξεις αυτές τις μικρές γωνίες, θα πρέπει να στρίβεις *περισσσότερο* κάθε φορά, απ'' ότι έκανες με το τετράγωνο.   '
         2-3_Artist_6_b: Δεδομένου ότι ήδη κοιτάζω προς τα δεξιά, είναι πιο εύκολο να ξεκινήσετε προχωρώντας εμπρός, και στη συνέχεια, να κάνετε αριστερές στροφές για να δημιουργήσετε το τρίγωνο.
         2-3_Artist_6_c: Κάθε πλευρά του τριγώνου έχει το ίδιο μήκος με κάθε πλευρά του τετραγώνου... 100 pixel!
+      grade4_review_bee1_authored_hint:
+        2-3_Bee_Loops_3B_a: Θα χρειαστείς δύο διαφορετικούς βρόχους "επανάλαβε", τον έναν μετά τον άλλο.
+      grade4_review_bee2_authored_hint:
+        2-3_Bee_Loops_3_a: Θα πρέπει να έχεις 6 τουβλάκια μέσα στο βρόχο σου.
+      grade4_review_bee3_authored_hint:
+        2-3_Bee_Loops_4_a: Θα πρέπει να καταλήξεις με πέντε τουβλάκια μέσα στο βρόχο σου.
+      level 'grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: Θα πρέπει να καταλήξεις με πέντε τουβλάκια μέσα στο βρόχο σου.
+      level 'grade3_Loops_11_authored_hint:
+        2-3_Bee_Loops_5_a: Εάν δεν μπορείς να αναγνωρίσεις τα τουβλάκια που πρέπει να μπουν μέσα στο "επανάλαβε" κατευθείαν, ξεκίνα προγραμματίζοντας κάθε ξεχωριστή κίνηση και ψάξε για ένα μοτίβο.
+      level 'grade3_Loops_12_authored_hint:
+        2-3_Bee_Loops_6_a: Εάν δεν μπορείς να αναγνωρίσεις τι πρέπει να μπει μέσα στο βρόχο "επανάλαβε", προσπάθησε να τραβήξεις τουβλάκια ένα-ένα και δες εάν μπορείς να βρεις ένα μοτίβο.
+        2-3_Bee_Loops_6_b: Όταν τελειώσεις, θα πρέπει να βρίσκονται 6 τουβλάκια μέσα στο βρόχο "επανάλαβε".
+      level 'grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Θα χρειαστείς δύο διαφορετικούς βρόχους "επανάλαβε", τον έναν μετά τον άλλο.
+      level 'grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: Η πρώτη ενέργεια να είναι στροφή, αντί για κίνηση.
+        2-3_Bee_Loops_7_b: 'Εάν δεν μπορείς να αναγνωρίσεις τους βρόχους από την αρχή, προσπάθησε να το προγραμματίσεις με τον "μακρύ" τρόπο πρώτα, και μετά ψάξε για ένα μοτίβο.  '
+      level 'grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: Η πρώτη ενέργεια να είναι στροφή, αντί για κίνηση.
+        2-3_Bee_Loops_4A_b: Το τελευταίο κομμάτι του προγράμματος μπορεί να ολοκληρωθεί, γράφοντας κώδικα στο τέλος του προγράμματός σου, έξω από τον βρόχο.
+        2-3_Bee_Loops_4A_c: Εάν ακόμα δεν μπορείς να αναγνωρίσεις τους βρόχους, προσπάθησε να το προγραμματίσεις με τον "μακρύ" τρόπο πρώτα, και μετά δες τι μπορείς να συνδυάσεις μέσα σε ένα βρόχο "επανάλαβε" στο τέλος.
+      level 'grade3_Loops_8_authored_hint:
+        2-3_Bee_Loops_2_a: Θα πρέπει να καταλήξεις με τέσσερα τουβλάκια μέσα στο βρόχο σου.
+      level 'grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Θα πρέπει να έχεις 6 τουβλάκια μέσα στο βρόχο σου.

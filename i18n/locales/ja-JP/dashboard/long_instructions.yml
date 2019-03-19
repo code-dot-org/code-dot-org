@@ -151,10 +151,64 @@ ja:
       Course 4 Play Lab Vars 2: "さっきのゲームは、ネコが早すぎだったよね！\n'dog_speed'（ドッグ スピード） は、犬の早さを決めます。'cat_speed（キャット スピード）は、ネコの早さを決めます。\n'dog_speed'の数を大きくして、ネコより多くのハタを集めましょう。先に、10 ハタを集めたほうが勝ちです！"
       Course 4 Play Labs For Loops 1: "犬が1 から 100 までの数字を話すようにします。\n「キャラ1 言う」ブロックに、 `counter` 変数ブロックを組み合わせて、実行して下さい。"
       Course 4 Playlab For Loops 5b: くりかえしの「ずつ」の数を調整して、両方のキャラが真ん中の同じ所で止まるようにして下さい。
+      CourseD_Dance_Party_01: |-
+        *ダンスパーティーしよう！*
+
+        ’新しくつくる’ブロックをワークスペースにドラッグしてひっぱってきてください。それを’セットアップ’ブロックの中につなぎ、最初のダンサーを作成しましょう。
+
+        * *もっと情報が必要だったり、追加のチャレンジに挑戦したい時は、左側の電球をクリックしてください。*
+      CourseD_Dance_Party_02: |-
+        このムースを踊らせてみましょう！
+
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">フロス</title><title name="DIR">-1</title></block></xml> ブロックをワークスペースにドラッグしてひっぱってきてください。これを<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小節"</title></block></xml> ブロックの下につなげてください。ダンサーは4小節後に新しい動きを始めるはずです。
+
+
+        ** 小節**は音楽の中で時間の長さを数えるのに使う単位です。このチュートリアルでは、1小節は4拍になります。
+      CourseD_Dance_Party_03: "*グルーブが生まれたね！*\n\n<xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"小節\"</title></block></xml> のブロックをワークスペースに追加してください。6小節後にダンサーが新しい動きを始めるようにしましょう。"
+      CourseD_Dance_Party_04: |-
+        *このダンスはもっと派手にしないと！*
+
+        ダンサーの後ろに背景エフェクトを追加する新しいブロックを、ツールボックスの中から探してみましょう。音楽に合わせてエフェクトが変わるのを見てみましょう！
+      CourseD_Dance_Party_05: |-
+        もう1つ新しいブロックを使用して、ダンサーの動きを **2小節ごとに**変えてみましょう！
+
+        *’(次へ)’、’(前へ)’、または ’(ランダム)’を選択すると、コードを実行するたびにダンサーが異なる動きをするよう命令を出します。
+      CourseD_Dance_Party_06: |-
+        *もっとダンサーを増やそう！*
+
+        ’backup_dancer1’という名前のバックダンサーを追加して、猫と一緒に踊らせてみましょう。
+      CourseD_Dance_Party_08: |-
+        どのダンサーにも、外見を制御する_プロパティ_ のセットがあります
+
+        _おおきさ_ を小さくすると、ダンサーが背後で踊っているかのように見せることができます。両方のバックダンサーを同じ大きさにできますか？
+      CourseD_Dance_Party_09: |-
+        ダンサーには、色のレイヤーを追加する”色合い”プロパティがあります。ダンサーのうちの1人の色合いを変えてみましょう。
+        *色合いは、あなたがダンサーの色として選択した色と混ざり合います。
+      CourseD_Dance_Party_10: |-
+        これで、ダンサーのプロパティを変える方法がわかりました。以下のブロックを使用して、同じプロパティが音楽に反応して自動的に変わるよう設定することもできます。
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"スケール"</title>
+        <title name="RANGE">"ベース"</title>
+        </block></xml>
+
+        このプログラムでは、音楽の”低音”（低い音）の大きさを利用してダンサーの高さをコントロールします。他のダンサーも、音楽に反応させることができますか？
+      CourseD_Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> ブロックを使うと、上向きの矢印が押されたときにコードを実行することができます。\n\nダンスの動きを変更したり、ダンサーのプロパティを変更したり、短い動きを1回だけさせることもできます。クリエイティブになって、あたらしいブロックたちを見てみましょう！"
+      CourseD_Dance_Party_11_5: "このブロックをチェックしてみましょう。\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"アヒル\"</title>\n<title name=\"LAYOUT\">\"円\"</title>\n</block></xml>\n\n次は、たくさんのダンサーを一度に作成します！\n\n\"すべてのアヒル”のブロックを使用して、アヒルが全員一度にダンスするコードを書きましょう。"
+      CourseD_Dance_Party_11b: |-
+        思いっきりダンスする時間です！左矢印キーが押されると、ネコがダブの動きをします。右矢印キーを押したら、ロボットが”ドロップ”の動きをするようにしましょう。
+      CourseD_Dance_Party_12: グルーブをつづけて！自分だけのダンスを作成して、友達と共有しましょう。
+      CourseE_HOC 2018 Level_10: "海底神殿のどこかに**イカ** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) が隠れています。見つけられるかな？\n\n"
+      CourseE_HOC 2018 Level_11: 黒いコンクリートの周りに**海晶ブロック** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) の壁を作りましょう。すると**コンジット** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) が起動してあなたのチャレンジも終了です！
+      CourseE_HOC 2018 Level_7a: "海底神殿を見つけました。砂岩を調べて**海晶ブロック** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) のお宝が入っている**チェスト** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) を探そう。\n\n"
+      CourseE_HOC 2018 Level_8: "初めは氷山だったのに今は溶岩？この火山島を通り抜けてサンゴ礁の**熱帯魚** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) を見つけましょう。\n\n"
+      CourseE_HOC 2018 Level_9b: "サンゴ礁に着いた。次は**海の中心** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) を探そう！青と赤のサンゴを使ってお宝の**チェスト** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png) にたどりつこう。\n"
       CourseF_PlayLab_vars2: "さっきのゲームは、ネコが早すぎだったよね！\n'dog_speed'（ドッグ スピード） は、犬の早さを決めます。'cat_speed（キャット スピード）は、ネコの早さを決めます。\n'dog_speed'の数を大きくして、ネコより多くのハタを集めましょう。先に、10 ハタを集めたほうが勝ちです！"
       Dance Party 7 - Validated: "最後に「私のベル」という新しいベルスプライトを追加します。"
       Dance Party 7: "最後に「私のベル」という新しいベルスプライトを追加します。"
-      Dance Party 7_2019: "最後に「私のベル」という新しいベルスプライトを追加します。"
+      Dance Party 7_2019: |-
+        最後に「私のベル」という新しいベルスプライトを追加します。
       Dance Party 7_simple: "最後に「私のベル」という新しいベルスプライトを追加します。"
       Dance Party Freeplay: |-
         さあ、あなたのエイリアンディスコを作りましょう！ひらめきが欲しいですか？次のアイデアを試してみてください。
@@ -404,6 +458,13 @@ ja:
       Overworld Move to Sheep: 羊に近づくには"前進"コマンドを追加します。
       Overworld Move to Sheep_2018: 羊に近づくには"前進"コマンドを追加します。
       Overworld Move to Sheep_2019: 羊に近づくには"前進"コマンドを追加します。
+      Ryan_Demo: |-
+        このムースを踊らせてみましょう！
+
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">フロス</title><title name="DIR">-1</title></block></xml> ブロックをワークスペースにドラッグしてひっぱってきてください。これを<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小節"</title></block></xml> ブロックの下につなげてください。ダンサーは4小節後に新しい動きを始めるはずです。
+
+
+        ** 小節**は音楽の中で時間の長さを数えるのに使う単位です。このチュートリアルでは、1小節は4拍になります。
       Standalone_Artist_5.5: "「くりかえし」ブロックをつかって、ダイヤモンドが かんたんに書けるようにしてあります。このプログラムを12回くりかえすと花が書けます。ヒント：ひとつのダイヤモンドを書きおえたら、30度まがりましょう。ずっと同じところにダイヤモンドを書いていたらダメだよ。\n\n"
       Testing Quantum Farmer: "すごく大きい穴を見つけてびっくりしました。シャベル何杯分の土が必要かわかりません。穴が他の地面と同じくらいに平になるまで穴を埋めるプログラムをあなたは作れますか？ヒント：「以下の間繰り返し（while loop）」を今回は使ってみてください。"
       course4_artist_fwp_challenge1: このプログラムを実行してみてください、そして何が起こるかを参照し変更をしてください。それがどのように動作するかを理解できますか？(または削除し、完全に別の何かと交換)
@@ -415,8 +476,13 @@ ja:
         ## ボートまではしごが必要です。
 
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2019: |-
+        ## ボートまではしごが必要です。
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_bee_seq4: 自分でやってみよう！
       courseA_harvester_seq6: 自分でやってみよう！
+      courseA_harvester_seq6_2019: 自分でやってみよう！
       courseD_bee_nestedLoops5: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
       courseD_bee_nestedLoops8: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
       courseD_bee_nestedLoops8_2018: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "

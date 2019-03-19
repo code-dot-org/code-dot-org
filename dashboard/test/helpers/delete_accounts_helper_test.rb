@@ -67,13 +67,23 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged 'User is already purged'
   end
 
+  # It shouldn't be possible under the current system to create multiple
+  # accounts with the same email, but as of March 2019 we do have some users in
+  # our database that share emails.
   test 'purges all accounts associated with email' do
     email = 'fakeuser@example.com'
-    account1 = create :student, email: email
+    account1 = create :student
+    account2 = create :teacher
+    account3 = create :student
+
+    [account1, account2, account3].each do |account|
+      account.primary_contact_info.email = email
+      account.primary_contact_info.hashed_email = User.hash_email(email)
+      account.primary_contact_info.save!(validate: false)
+    end
+
     account1.destroy
-    account2 = create :teacher, email: email
     account2.destroy
-    account3 = create :student, email: email
 
     [account1, account2, account3].each(&:reload)
     refute_nil account1.deleted_at
@@ -156,17 +166,19 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil user.secret_words
   end
 
-  test 'clears provider uid but not provider type' do
+  test 'clears primary_contact_info but not provider type' do
     user = create :student,
       provider: 'clever',
       uid: 'fake-clever-uid'
-    assert_equal 'clever', user.provider
-    refute_nil user.uid
+    assert_equal 'migrated', user.provider
+    refute_nil user.primary_contact_info
+    assert_equal 'fake-clever-uid', user.primary_contact_info.authentication_id
 
     purge_user user
 
-    assert_equal 'clever', user.provider
+    assert_equal 'migrated', user.provider
     assert_nil user.uid
+    assert_nil user.primary_contact_info
   end
 
   test 'clears school information' do
@@ -508,10 +520,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     user.primary_contact_info = other_user.primary_contact_info
     user.save!(validate: false)
 
-    assert_empty user.authentication_options,
-      'Expected user to have no authentication options'
+    assert_equal 1, user.authentication_options.length,
+      'Expected user to have exactly one authentication option'
     refute_nil user.primary_contact_info,
       'Expected user to have primary_contact_info'
+    refute_equal user.primary_contact_info, user.authentication_options.first,
+      "Expected user's primary contact info to not be an authentication option"
 
     purge_user user
 
@@ -530,8 +544,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "removes all of user's authentication option rows" do
     user = create :user,
       :with_clever_authentication_option,
-      :with_google_authentication_option,
-      :with_email_authentication_option
+      :with_google_authentication_option
     ids = user.authentication_options.map(&:id)
 
     assert_equal 3, user.authentication_options.with_deleted.count,
@@ -548,7 +561,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "even removes soft-deleted authentication option rows" do
-    user = create :user, :with_email_authentication_option
+    user = create :user
     ids = user.authentication_options.map(&:id)
     user.authentication_options.first.destroy
 
@@ -717,124 +730,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil application.school_id
 
     assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
-  end
-
-  #
-  # Table: dashboard.cohorts_users
-  # Table: dashboard.cohorts_deleted_users
-  #
-
-  test 'removes relationship between user and any cohorts' do
-    user = create :teacher
-    cohort = create :cohort
-    cohort.teachers << user
-    cohort.teachers << create(:teacher) # a second teacher
-
-    assert_equal 2, cohort.teachers.with_deleted.size
-    assert_equal 0, cohort.deleted_teachers.with_deleted.size
-
-    purge_user user
-    cohort.reload
-
-    assert_equal 1, cohort.teachers.with_deleted.size
-    assert_equal 0, cohort.deleted_teachers.with_deleted.size
-  end
-
-  test 'will not remove more than 10 cohorts_users rows' do
-    teacher = create :teacher
-    11.times do
-      cohort = create :cohort
-      cohort.teachers << teacher
-    end
-
-    err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
-      purge_user teacher
-    end
-
-    assert_equal <<~MESSAGE, err.message
-      Safety constraints only permit deleting up to 10 rows from cohorts_users, but found 11 rows.
-      If you are a developer attempting to manually purge this account, run
-
-        DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
-
-      to bypass this constraint and purge the user from our system.
-    MESSAGE
-  end
-
-  test 'removes cohorts_deleted_users rows' do
-    user = create :teacher
-    cohort = create :cohort
-    cohort.deleted_teachers << user
-    cohort.deleted_teachers << create(:teacher) # a second teacher
-
-    assert_equal 0, cohort.teachers.with_deleted.size
-    assert_equal 2, cohort.deleted_teachers.with_deleted.size
-
-    purge_user user
-    cohort.reload
-
-    assert_equal 0, cohort.teachers.with_deleted.size
-    assert_equal 1, cohort.deleted_teachers.with_deleted.size
-  end
-
-  test 'will not remove more than 10 cohorts_deleted_users rows' do
-    teacher = create :teacher
-    11.times do
-      cohort = create :cohort
-      cohort.deleted_teachers << teacher
-    end
-
-    err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
-      purge_user teacher
-    end
-
-    assert_equal <<~MESSAGE, err.message
-      Safety constraints only permit deleting up to 10 rows from cohorts_deleted_users, but found 11 rows.
-      If you are a developer attempting to manually purge this account, run
-
-        DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
-
-      to bypass this constraint and purge the user from our system.
-    MESSAGE
-  end
-
-  #
-  # Table: dashboard.districts
-  # Table: dashboard.districts_users
-  #
-
-  test 'removes purged user from any districts' do
-    district1 = create :district
-    district2 = create :district
-    user = create :user
-    user.districts << district1
-    user.districts << district2
-
-    assert_equal 2, user.districts.count
-    assert_includes district1.users, user
-    assert_includes district2.users, user
-
-    purge_user user
-    district1.reload
-    district2.reload
-
-    assert_empty user.districts
-    refute_includes district1.users.with_deleted, user
-    refute_includes district2.users.with_deleted, user
-  end
-
-  test 'removes purged district contact from district' do
-    district = create :district
-    user = create :user, district_as_contact: district
-
-    assert_equal district, user.district_as_contact
-    assert_equal user, district.contact
-
-    purge_user user
-    district.reload
-
-    assert_nil user.district_as_contact
-    assert_nil district.contact
   end
 
   #
@@ -1511,30 +1406,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.workshop_attendance
-  #
-
-  test "clears teacher_id from workshop_attendance" do
-    attendance = create :attendance
-    refute_nil attendance.teacher_id
-
-    purge_user attendance.teacher
-
-    attendance.reload
-    assert_nil attendance.teacher_id
-  end
-
-  test "clears notes from workshop_attendance" do
-    attendance = create :attendance, notes: 'non-nil notes'
-    refute_nil attendance.notes
-
-    purge_user attendance.teacher
-
-    attendance.reload
-    assert_nil attendance.notes
-  end
-
-  #
   # Table: dashboard.survey_results
   #
 
@@ -1555,38 +1426,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute SurveyResult.where(id: survey_result_a.id).exists?
     refute SurveyResult.where(id: survey_result_b.id).exists?
     assert SurveyResult.where(id: survey_result_c.id).exists?
-  end
-
-  #
-  # Table: dashboard.unexpected_teachers_workshops
-  #
-
-  test "removes all rows for user from unexpected_teachers_workshops" do
-    teacher_a = create :teacher
-    teacher_b = create :teacher
-    workshop_a = create :workshop
-    workshop_a.unexpected_teachers << teacher_a
-    workshop_a.unexpected_teachers << teacher_b
-    workshop_b = create :workshop
-    workshop_b.unexpected_teachers << teacher_a
-
-    workshop_a.reload
-    workshop_b.reload
-
-    assert_equal 2, workshop_a.unexpected_teachers.with_deleted.count
-    assert_equal 1, workshop_b.unexpected_teachers.with_deleted.count
-
-    purge_user teacher_a
-
-    workshop_a.reload
-    workshop_b.reload
-
-    assert_equal 1, workshop_a.unexpected_teachers.with_deleted.count
-    assert_equal 0, workshop_b.unexpected_teachers.with_deleted.count
-    assert_empty ActiveRecord::Base.connection.exec_query(<<-SQL).rows
-      SELECT workshop_id FROM unexpected_teachers_workshops
-      WHERE unexpected_teacher_id = #{teacher_a.id}
-    SQL
   end
 
   #

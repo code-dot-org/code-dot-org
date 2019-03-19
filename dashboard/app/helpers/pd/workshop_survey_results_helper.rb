@@ -206,7 +206,7 @@ module Pd::WorkshopSurveyResultsHelper
 
     related_workshops = find_related_workshops(workshop)
 
-    summary[:all_my_workshops] = generate_workshops_survey_summary(related_workshops, questions) if related_workshops
+    summary[:all_my_workshops] = generate_workshops_survey_summary(related_workshops, questions) if related_workshops.present?
 
     summary[:facilitators] = Hash[*workshop.facilitators.pluck(:id, :name).flatten]
 
@@ -392,7 +392,11 @@ module Pd::WorkshopSurveyResultsHelper
     # responses, which the reduce_summary function does (see below)
     flattened_this_workshop_histograms = reduce_summary(summary[:this_workshop].values.flat_map(&:values).select {|x| x.is_a? Hash})
 
-    flattened_all_my_workshop_histograms = reduce_summary(summary[:all_my_workshops].values.flat_map(&:values).select {|x| x.is_a? Hash})
+    flattened_all_my_workshop_histograms = if summary[:all_my_workshops]
+                                             reduce_summary(summary[:all_my_workshops].values.flat_map(&:values).select {|x| x.is_a? Hash})
+                                           else
+                                             {}
+                                           end
 
     # Questions are also sorted by day and general vs. facilitator - that distinction needs
     # to be removed. Then we need to map each response option to the value that we assign it
@@ -453,8 +457,8 @@ module Pd::WorkshopSurveyResultsHelper
 
         facilitator_averages[facilitator][question_group[:primary_id]] = {this_workshop: (total_answer_for_this_workshop_sum / total_responses_for_this_workshop.to_f).round(2)}
 
-        total_responses_for_all_workshops = histogram_for_all_my_workshops.values.reduce(:+) || 0
-        total_answer_for_all_workshops_sum = histogram_for_all_my_workshops.map do |k, v|
+        total_responses_for_all_workshops = histogram_for_all_my_workshops&.values&.reduce(:+) || 0
+        total_answer_for_all_workshops_sum = histogram_for_all_my_workshops&.map do |k, v|
           option = question[:option_map][k]
 
           if option.nil?
@@ -468,13 +472,19 @@ module Pd::WorkshopSurveyResultsHelper
 
             0
           end
-        end.reduce(:+) || 0
+        end&.reduce(:+) || 0
 
-        facilitator_averages[facilitator][question_group[:primary_id]][:all_my_workshops] = (total_answer_for_all_workshops_sum / total_responses_for_all_workshops.to_f).round(2)
+        facilitator_averages[facilitator][question_group[:primary_id]][:all_my_workshops] = if total_answer_for_all_workshops_sum != 0 && total_responses_for_all_workshops != 0
+                                                                                              (total_answer_for_all_workshops_sum / total_responses_for_all_workshops.to_f).round(2)
+                                                                                            end
       end
 
       # Finally, keep hold of the question text to render in the averages table
-      facilitator_averages[:questions][question_group[:primary_id]] = question_group[:all_ids] ? question_group[:all_ids].map {|x| flattened_questions[x]}.compact.first[:text] : flattened_questions[question_group[:primary_id]][:text]
+      facilitator_averages[:questions][question_group[:primary_id]] = if question_group[:all_ids]
+                                                                        question_group[:all_ids].map {|x| flattened_questions[x]}.compact.first[:text]
+                                                                      else
+                                                                        flattened_questions[question_group[:primary_id]][:text]
+                                                                      end
     end
 
     facilitators.each do |facilitator|
@@ -483,7 +493,8 @@ module Pd::WorkshopSurveyResultsHelper
       QUESTIONS_FOR_FACILITATOR_AVERAGES.each do |category, questions|
         facilitator_averages[facilitator][category.to_s.downcase.to_sym] = {}
         [:this_workshop, :all_my_workshops].each do |column|
-          average = (facilitator_averages[facilitator].slice(*(questions.map {|question| question[:primary_id]})).values.map {|x| x[column]}.reduce(:+) || 0) / questions.size.to_f
+          response_values = facilitator_averages[facilitator].slice(*(questions.map {|question| question[:primary_id]})).values.map {|x| x[column]}
+          average = (response_values.reject(&:nil?).reduce(:+) || 0) / questions.size.to_f
           facilitator_averages[facilitator][category.to_s.downcase.to_sym][column] = average.round(2)
         end
       end

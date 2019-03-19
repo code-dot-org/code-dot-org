@@ -270,6 +270,88 @@ sv:
       Course 4 SCVP 1: Skapa en funktion med parametrar som gör att konstnären kan
         hoppa bakåt och framåt med x antal pixlar, och också upp och ner me y antal
         bildpunkter (med positiva och negativa tal).
+      CourseD_Dance_Party_01: |-
+        *Nu ska vi ha ett dansparty!*
+
+        Dra ”gör ett nytt”-blocket till arbetsytan och anslut den inuti ”installera”-blocket för att skapa din första dansare.
+
+        * *Du kan även klicka på glödlampan till vänster om du vill ha mer information eller extra utmaningar.*
+      CourseD_Dance_Party_02: |-
+        Låt oss få denna älg att dansa!
+
+        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
+
+
+        **Åtgärder** används för att mäta tid i musik. I denna handledning är en åtgärd fyra takter lång.
+      CourseD_Dance_Party_03: |-
+        *Nu rockar vi!*
+
+        Lägg till ett <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> block till din arbetsyta. Gör så att dansaren startar en ny rörelse efter 6 åtgärder.
+      CourseD_Dance_Party_04: |-
+        *Denna dans behöver lite effekter!*
+
+        Leta efter ett nytt block i din verktygslåda som lägger till en bakgrundseffekt bakom din dansare. Se effekterna ändras i takt med musiken!
+      CourseD_Dance_Party_05: |-
+        Använd ett annat nytt block för att få dansaren att ändra rörelse **efter 2 åtgärder**!
+
+        *Att välja ”(nästa)”, ”(föregående)”, eller ”(slumpad)” säger åt dansaren att utföra en annan rörelse varje gång koden körs.
+      CourseD_Dance_Party_06: |-
+        *Vi behöver fler dansare!*
+
+        Skapa en backgrundsdansare som kallas ”backup_dancer1” som ska dansa med katten.
+      CourseD_Dance_Party_08: |-
+        Varje dansare har en uppsättning _properties_ som styr hur den ser ut.
+
+        Du kan göra så att det ser ut som att en dansare är i bakgrunden genom att göra deras _size_ mindre. Kan du göra båda bakgrundsdansarna i samma storlek?
+      CourseD_Dance_Party_09: |-
+        Dansarna har en egenskap för färgtoner som kan lägga till ett lager av färg. Testa att ändra färgtonen på en av dina dansare.
+        * Färgtonerna kommer att blanda färgen som du väljer med dansarens färger.
+      CourseD_Dance_Party_10: |-
+        Nu vet vi hur man ändrar en dansares egenskaper. Vi kan även göra så att samma egenskaper automatiskt reagerar på musiken med hjälp av detta block:
+        <xml>
+        <block type="Dancelab_startMapping">
+        <title name="SPRITE">right_pineapple</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        Detta program använder musikens ”bas”-volym (de låga ljuden) för att styra en dansares längd. Kan du göra så att den andra dansaren också reagerar på musiken?
+      CourseD_Dance_Party_11: |-
+        Detta <xml><block type="Dancelab_whenKey"></block></xml> block låter dig köra kod när uppåtpilen trycks in.
+
+        Du kan ändra dansrörelser, ändra egenskaperna för en dansare eller göra en snabb rörelse en enda gång. Var kreativ och håll utkik efter nya block!
+      CourseD_Dance_Party_11_5: |-
+        Kolla in detta block:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Nu kan du skapa ett gäng dansare på samma gång!
+
+        Testa att skriva kod som gör så att alla ankor dansar tillsammans med hjälp av några av ”bara ankor”-blocken.
+      CourseD_Dance_Party_11b: Dags för en dansutmaning! Katten klappar när du trycker
+        på vänsterpilen. Gör så att roboten ”faller” när du trycker på högerpilen.
+      CourseD_Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att
+        dela med dina vänner.
+      CourseE_HOC 2018 Level_10: Det finns en **bläckfisk** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        som gömmer sig någonstans i detta havsmonument – kan du hitta den?
+      CourseE_HOC 2018 Level_11: Bygg en mur av **prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        runt den svarta betongen. Detta kommer att aktivera denna **kanal** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        och slutföra din utmaning!
+      CourseE_HOC 2018 Level_7a: Du hittade undervattensruinerna. Sök i sandstenen
+        efter en **kista** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        som innehåller en **prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        skatt.
+      CourseE_HOC 2018 Level_8: Först isberg – nu lava? Ta dig igenom denna vulkanö
+        och hitta **tropiska fiskar** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        i korallrevet.
+      CourseE_HOC 2018 Level_9b: Du tog dig till revet, sök nu efter **Havets hjärta**
+        ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Använd den blåa och röda korallen för att nå **skattkistan** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       CourseF_PlayLab_vars2: Loppet i det sista pusslet var inte särskilt rättvist!
         Ändra variabeln "dog_speed" så att du kan samla fler flaggor än Katt. Först
         att samla in 10 flaggor vinner!
@@ -668,6 +750,13 @@ sv:
         komma till fåret.
       Overworld Move to Sheep_2019: Lägg till ett till "gå framåt"-kommando för att
         komma till fåret.
+      Ryan_Demo: |-
+        Låt oss få denna älg att dansa!
+
+        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
+
+
+        **Åtgärder** används för att mäta tid i musik. I denna handledning är en åtgärd fyra takter lång.
       Testing Quantum Farmer: 'Wow, jag hittade ett riktigt djupt hål! Jag vet inte
         hur många spadtag med jord som krävs.  Kan du skriva ett program som fyller
         det tills marken är jämn?  Tips: Försök att använda en ''medan''-slinga denna

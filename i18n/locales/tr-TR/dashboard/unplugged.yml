@@ -293,6 +293,8 @@ tr:
       BinaryImages_2019:
         title: İkili Sistemle Resimler
         desc: Birçok kişi ikili düşünmeyi sadece birler ve sıfırlar olarak görebilir. Bizim desrslerimiz ikili kavramının farklı seçenekleri nasıl temsil edebildiğini gösterdi. Bu ders ise kavramı bir seviye ileri götürdü ve daha karmaşık bilgiler (resimlerdeki renkler gibi) ikili olarak nasıl temsil edilir onu öğretecek.
+      courseE_unplugged_privateInformation_2019:
+        title: Özel ve Kişisel Bilgiler
       courseE_unplugged_CnC_2019:
         title: Dijital Paylaşım
       GettingLoopy_2019:
@@ -310,3 +312,20 @@ tr:
       PaperPlanes_2019:
         title: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
         desc: Bu derste biz özellikle kağıt uçaklar yaparak algoritmanın bizim günlük hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların bilgisayar bilimindeki önemini göreceğiz.
+      PlantASeed_2019:
+        title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
+        desc: Bu derste biz özellikle tohum ekme işlemini kullanarak algoritmanın bizim günlük hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların bilgisayar bilimindeki önemini göreceğiz.
+      UnplugHappyMaps_2019:
+        title: Mutlu Haritalar
+        desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek bir komutla bir karakteri labirentte hareket ettirirler.
+      GoingPlacesSafely_2019:
+        title: Biryerlere Güvenle Gitmek
+        desc: İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette gezinirken nasıl güvende olunabileceğine dair bilgi verir.
+      courseA_unplugged_loops_2019:
+        title: Bağımsız (Unplugged) Döngüler
+        desc: Bu derste, döngüler hakkında bilgi edineceksiniz!
+      MoveItMoveIt_2019:
+        title: Çabuk, Çabuk Taşı
+      DigitalFootprint_2019:
+        title: Dijital İziniz
+        desc: Öğretmenler dijital ayak izi hakkında bilgi verecekler. Kendi hakkında yayımladıkları bilginin nasıl dijital ayak izi yarattığını ve sonuçlarını tartışacaklar.
