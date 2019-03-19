@@ -983,6 +983,8 @@ module Api::V1::Pd
         "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
         "How did you hear about this program? (Principal's response)",
         "Principal authorizes college board to send AP Scores",
+        "Contact name for invoicing",
+        "Contact email or phone number for invoicing",
         "Title I status code (NCES data)",
         "Total student enrollment (NCES data)",
         "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
