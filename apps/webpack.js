@@ -317,7 +317,7 @@ function create(options) {
     output: {
       path: outputDir,
       publicPath: '/assets/js/',
-      filename: "[name]." + ((minify && !debugMinify) ? "min." : "") + "js",
+      filename: '[name].' + (minify && !debugMinify ? 'min.' : '') + 'js'
     },
     devtool: !process.env.CI && options.minify ? 'source-map' : devtool,
     entry: entries,
@@ -341,15 +341,15 @@ function create(options) {
 
   if (minify) {
     config.plugins = config.plugins.concat([
-        new webpack.optimize.UglifyJsPlugin({
-          compressor: {
-            warnings: false
-          },
-          // Don't generate source maps for our minified code, as these are expensive
-          // and we haven't been using them. Only use them when debugging minified code.
-          sourceMap: debugMinify
-        }),
-        new UnminifiedWebpackPlugin(),
+      new webpack.optimize.UglifyJsPlugin({
+        compressor: {
+          warnings: false
+        },
+        // Don't generate source maps for our minified code, as these are expensive
+        // and we haven't been using them. Only use them when debugging minified code.
+        sourceMap: debugMinify
+      }),
+      new UnminifiedWebpackPlugin()
     ]);
   }
 
