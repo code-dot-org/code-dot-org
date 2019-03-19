@@ -137,3 +137,6 @@ stage 'Project - Personal Portfolio Website', flex_category: 'csd2_2'
 named_level 'CSD U2L14 TFMD_2019'
 named_level 'Final Personal Website_2019'
 assessment 'csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019', progression: 'Reflection'
+
+stage 'Post-Project Test', lockable: true
+assessment 'CSD Web Development Post-Project Test'

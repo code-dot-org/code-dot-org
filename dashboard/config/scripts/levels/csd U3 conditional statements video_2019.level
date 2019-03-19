@@ -11,11 +11,14 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 14346,
-    "name_suffix": "_2019"
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "long_instructions": "## Question to Consider\r\n\r\n* When would you want to use an if statement?",
+    "encrypted_teacher_markdown": "SbGYX6wVeybMezOUSwf/YipbM/7MQipAp2Ch4mPNQ67f/LmscWtLJb5Y693k\ni7QiETCzvc+47wF9yQFJfdT4126LfTXAFgigGCoo1BmuxVwyjoiI+0EaWzTQ\n2SOHJ9OgfRs4Nf3EW/ybLmA0A4empFy2OoKlrLXvY6Cmu7fBA+f62zs6Cb7W\nnnDDmyjsRYkk/g4xtly4HBmxiVwSUYcJmybiGr+uAlDLdhAyjfu55mQvcttf\nel9mtKbLAZM8unb7/AzegLp3u8jYl++yub8lyywCNYfbVMIBpNQoffX7/HWA\nXjwX34MnJz7BzlDnu45cHqrgjiLHwJe5nbP35Lo6E+0SdllMx7A2e3ikrAwS\nm/UZ//X33JALxq9OnrPxSr9nfVLENPQZvxjnMVz3+OrIAF4mdvbeM+F3PfqG\nrcRfJId3Z+wW99ji/Mu/NwwkGnO5lpT81rO2nk9V7pCrv3SSBPw/MzKauD4d\nk3plFPwDb695dV4ZNvfWE3W7VVf6t4XJokUpOVmVPf4Mtd69PXzGI2p9unL+\nWzaVVNAAMOHfKXatFV13CTz3fWFLeSHDAqRclBPuqWRL7bbhiLVnlylmokLx\nyrGbXtnsthw1y6rFUupMnepoOd6hral6lEjCtyu1hghLkkTejMJUmkLN0cq6\nbJ4Qdsk5qveAhBKMJjzk97t/gSQLw78tlM5T78R1KE2mxSVtZUh2gkOv8l0B\nd+aVliK3mtEFWfT+i+fLW+5nCgQk2KCou1bqvJkEHeWEqYKnLakYwK88lMxp\nixhNuhyEao4xml2eBA6k8kLhmlzKfYP61mFQ0ZTDuvh9uKPlc7ah\n"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-06-07 22:15:06 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-11 02:39:33 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-15 17:18:49 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-06-07 22:15:06 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-11 02:39:33 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-15 17:18:49 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-18 23:36:35 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
