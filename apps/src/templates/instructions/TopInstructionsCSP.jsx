@@ -165,7 +165,7 @@ class TopInstructions extends Component {
         method: 'GET',
         contentType: 'application/json;charset=UTF-8'
       }).done(data => {
-        this.setState({feedbacks: data}, this.forceTabResizeToMaxHeight);
+        this.setState({feedbacks: data}, this.forceCommentTabResizeToMaxHeight);
       });
     }
     //While this is behind an experiment flag we will only pull the rubric
@@ -177,7 +177,7 @@ class TopInstructions extends Component {
         method: 'GET',
         contentType: 'application/json;charset=UTF-8'
       }).done(data => {
-        this.setState({rubric: data}, this.forceTabResizeToMaxHeight);
+        this.setState({rubric: data}, this.forceCommentTabResizeToMaxHeight);
       });
     }
   }
@@ -203,15 +203,23 @@ class TopInstructions extends Component {
   }
 
   /**
-   * Function to force the height of the instructions area to be the
+   * Function to force the height of the instructions area when the comment tab is chosen to be the
    * full size of the content for that area. This is used when the comment
    * tab loads in order to make the instructions area show the whole
    * contents of the comment tab.
    */
-  forceTabResizeToMaxHeight = () => {
+  forceCommentTabResizeToMaxHeight = () => {
     if (this.state.tabSelected === TabType.COMMENTS) {
-      this.props.setInstructionsRenderedHeight(this.adjustMaxNeededHeight());
+      this.forceTabResizeToMaxHeight();
     }
+  };
+
+  /**
+   * Function to force the height of the instructions area to be the
+   * full size of the content for that area.
+   */
+  forceTabResizeToMaxHeight = () => {
+    this.props.setInstructionsRenderedHeight(this.adjustMaxNeededHeight());
   };
 
   /**
