@@ -4,7 +4,12 @@ import {connect} from 'react-redux';
 import {Table} from 'react-bootstrap';
 import _ from 'lodash';
 import {COURSE_CSF} from '../../workshopConstants';
-import {PermissionPropType, Organizer} from '../../permission';
+import {
+  PermissionPropType,
+  WorkshopAdmin,
+  ProgramManager,
+  Organizer
+} from '../../permission';
 
 const questionOrder = {
   facilitator_effectiveness: [
@@ -47,11 +52,23 @@ class FacilitatorAveragesTable extends React.Component {
     };
   }
 
-  workshopDescriptor() {
-    if (this.props.permission.has(Organizer)) {
-      return 'organized';
+  relatedWorkshopDescriptor(possessiveName) {
+    if (this.props.permission.has(WorkshopAdmin)) {
+      return `${possessiveName} average for this workshop`;
+    } else if (this.props.permission.has(ProgramManager)) {
+      return `Average for all your regional partner's ${
+        this.props.courseName
+      } workshops since June 2018`;
+    } else if (this.props.permission.has(Organizer)) {
+      return `${possessiveName} average for all ${
+        this.props.courseName
+      } workshops
+        organized since June 2018`;
     } else {
-      return 'facilitated';
+      return `${possessiveName} average for all ${
+        this.props.courseName
+      } workshops
+        facilitated since June 2018`;
     }
   }
 
@@ -76,10 +93,7 @@ class FacilitatorAveragesTable extends React.Component {
           <tr>
             <th />
             <th>{possessiveName} average for this workshop</th>
-            <th>
-              {possessiveName} average for all {this.props.courseName} workshops{' '}
-              {this.workshopDescriptor()} since June 2018
-            </th>
+            <th>{this.relatedWorkshopDescriptor(possessiveName)}</th>
           </tr>
         </thead>
         <tbody>
