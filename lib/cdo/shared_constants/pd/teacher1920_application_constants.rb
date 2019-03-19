@@ -435,6 +435,8 @@ module Pd
         :pay_fee,
         :how_heard,
         :share_ap_scores,
+        :contact_invoicing,
+        :contact_invoicing_detail
       ],
       nces: [
         :title_i_status,
