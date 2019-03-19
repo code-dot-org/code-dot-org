@@ -26,6 +26,10 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :level
   belongs_to :teacher, class_name: 'User'
 
+  def self.get_student_level_feedback
+    p "trying to get student feedback"
+  end
+
   def self.latest_per_teacher
     #Only select feedback from teachers who lead sections in which the student is still enrolled
     find(
