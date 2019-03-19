@@ -24,6 +24,7 @@ export const ALL_STUDENT_FILTER = 0;
 const initialState = {
   assessmentResponsesByScript: {},
   assessmentQuestionsByScript: {},
+  feedbackByScript: {},
   surveysByScript: {},
   isLoading: false,
   assessmentId: 0,
@@ -54,6 +55,7 @@ const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 const SET_ASSESSMENT_RESPONSES = 'sectionAssessments/SET_ASSESSMENT_RESPONSES';
 const SET_ASSESSMENTS_QUESTIONS =
   'sectionAssessments/SET_ASSESSMENTS_QUESTIONS';
+const SET_FEEDBACK = 'sectionAssessments/SET_FEEDBACK';
 const SET_SURVEYS = 'sectionAssessments/SET_SURVEYS';
 const START_LOADING_ASSESSMENTS =
   'sectionAssessments/START_LOADING_ASSESSMENTS';
@@ -75,6 +77,11 @@ export const setAssessmentQuestions = (scriptId, assessments) => ({
   type: SET_ASSESSMENTS_QUESTIONS,
   scriptId,
   assessments
+});
+export const setFeedback = (scriptId, feedback) => ({
+  type: SET_FEEDBACK,
+  scriptId,
+  feedback
 });
 export const startLoadingAssessments = () => ({
   type: START_LOADING_ASSESSMENTS
@@ -125,10 +132,12 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
     );
     const loadQuestions = loadAssessmentQuestionsFromServer(scriptId);
     const loadSurveys = loadSurveysFromServer(sectionId, scriptId);
-    Promise.all([loadResponses, loadQuestions, loadSurveys])
+    const loadFeedback = loadFeedbackFromServer(sectionId, scriptId);
+    Promise.all([loadResponses, loadQuestions, loadSurveys, loadFeedback])
       .then(arrayOfValues => {
         dispatch(setAssessmentResponses(scriptId, arrayOfValues[0]));
         dispatch(setAssessmentQuestions(scriptId, arrayOfValues[1]));
+        dispatch(setFeedback(scriptId, arrayOfValues[3]));
         dispatch(setSurveys(scriptId, arrayOfValues[2]));
         dispatch(setInitialAssessmentId(scriptId));
         dispatch(finishLoadingAssessments());
@@ -191,6 +200,16 @@ export default function sectionAssessments(state = initialState, action) {
       assessmentResponsesByScript: {
         ...state.assessmentResponsesByScript,
         [action.scriptId]: action.assessments
+      }
+    };
+  }
+  if (action.type === SET_FEEDBACK) {
+    console.log('setting feedback');
+    return {
+      ...state,
+      feedbackByScript: {
+        ...state.feedbackByScript,
+        [action.scriptId]: action.feedback
       }
     };
   }
@@ -861,6 +880,17 @@ export const getExportableAssessmentData = state => {
 };
 
 /**
+ * @returns {array} of objects with keys corresponding to columns
+ * of CSV to download. Columns are studentName, stage, level, key concept, rubric, comment, timestamp, .
+ */
+export const getExportableFeedbackData = state => {
+  console.log(
+    state.sectionAssessments.feedbackByScript[state.scriptSelection.scriptId]
+  );
+  return [];
+};
+
+/**
  *  @returns {boolean} true if current studentId has submitted responses for current script.
  */
 export const currentStudentHasResponses = state => {
@@ -964,6 +994,17 @@ const loadSurveysFromServer = (sectionId, scriptId) => {
   const payload = {script_id: scriptId, section_id: sectionId};
   return $.ajax({
     url: `/dashboardapi/assessments/section_surveys`,
+    method: 'GET',
+    contentType: 'application/json;charset=UTF-8',
+    data: payload
+  });
+};
+
+// Loads comment and rubric feedback.
+const loadFeedbackFromServer = (sectionId, scriptId) => {
+  const payload = {script_id: scriptId, section_id: sectionId};
+  return $.ajax({
+    url: `/dashboardapi/assessments/section_feedback`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
     data: payload

@@ -426,6 +426,7 @@
   "dontForget": "Don't forget",
   "downloadCSV": "Download CSV",
   "downloadAssessmentCSV": "Download CSV of student responses",
+  "downloadFeedbackCSV": "Download Feedback CSV",
   "downloadReplayVideoButtonDownload": "Animation",
   "downloadReplayVideoButtonError": "Sorry, we were unable to download your animation. Please try re-running your project and trying again.",
   "dragBlocksToMatch": "Drag the blocks to match",

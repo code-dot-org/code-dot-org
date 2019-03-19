@@ -2,7 +2,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   include LevelsHelper
 
   before_action :load_from_cache
-  load_and_authorize_resource :section, only: [:section_responses, :section_surveys]
+  load_and_authorize_resource :section, only: [:section_responses, :section_surveys, :section_feedback]
   load_and_authorize_resource :script
 
   def load_from_cache
@@ -186,5 +186,26 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # GET '/dashboardapi/assessments/section_surveys'
   def section_surveys
     render json: LevelGroup.get_summarized_survey_results(@script, @section)
+  end
+
+  def section_feedback
+    feedback = {}
+    @script.script_levels.each do |script_level|
+      @section.students.each do |student|
+        #const tempFeedback = TeacherFeedback.get_student_level_feedback(student.id, script_level.level.id, @section.user_id)
+        feedback[script_level.level.id] = {
+          student_name: student.name,
+          stage_num: script_level.stage.relative_position.to_s,
+          stage_name: script_level.stage.localized_title,
+          level_num: script_level.position.to_s,
+          keyConcept: (script_level.level.rubric_key_concept || '')
+          #p 'rubric:' + tempFeedback.performance
+          #p 'comment:' + tempFeedback.comment
+          #p 'timestamp:' + tempFeedback.updated_at
+        }
+      end
+    end
+    p feedback
+    render json: feedback
   end
 end

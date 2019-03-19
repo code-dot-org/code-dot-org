@@ -11,6 +11,7 @@ import {
   isCurrentAssessmentSurvey,
   countSubmissionsForCurrentAssessment,
   getExportableData,
+  getExportableFeedbackData,
   setStudentId
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {getStudentList} from '@cdo/apps/redux/sectionDataRedux';
@@ -30,6 +31,7 @@ import AssessmentSelector from './AssessmentSelector';
 import StudentSelector from './StudentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
+import Button from '@cdo/apps/templates/Button';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -38,6 +40,17 @@ const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.question(), key: 'question'},
   {label: i18n.response(), key: 'response'},
   {label: i18n.correct(), key: 'correct'}
+];
+
+const CSV_FEEDBACK_HEADERS = [
+  {label: 'Student Name', key: 'studentName'},
+  {label: 'Lesson Number', key: 'stageNum'},
+  {label: 'Lesson Name', key: 'stageName'},
+  {label: 'Level', key: 'levelNum'},
+  {label: 'Key Concept', key: 'keyConcept'},
+  {label: 'Performance Level', key: 'performance'},
+  {label: 'Feedback', key: 'comment'},
+  {label: 'Date Updated By Teacher', key: 'timestamp'}
 ];
 
 const CSV_SURVEY_HEADERS = [
@@ -94,6 +107,7 @@ class SectionAssessments extends Component {
     isCurrentAssessmentSurvey: PropTypes.bool,
     totalStudentSubmissions: PropTypes.number,
     exportableData: PropTypes.array,
+    exportableFeedbackData: PropTypes.array,
     studentId: PropTypes.number,
     setStudentId: PropTypes.func,
     studentList: PropTypes.array
@@ -144,6 +158,7 @@ class SectionAssessments extends Component {
       isCurrentAssessmentSurvey,
       totalStudentSubmissions,
       exportableData,
+      exportableFeedbackData,
       studentId,
       studentList
     } = this.props;
@@ -187,6 +202,22 @@ class SectionAssessments extends Component {
                   studentId={studentId}
                   onChange={this.props.setStudentId}
                 />
+                <CSVLink
+                  filename={
+                    this.props.scriptId +
+                    `_` +
+                    this.props.sectionId +
+                    `_feedback.csv`
+                  }
+                  data={exportableFeedbackData}
+                  headers={CSV_FEEDBACK_HEADERS}
+                >
+                  <Button
+                    text={i18n.downloadFeedbackCSV()}
+                    onClick={() => {}}
+                    color={Button.ButtonColor.gray}
+                  />
+                </CSVLink>
                 {totalStudentSubmissions > 0 && (
                   <div style={styles.download}>
                     <CSVLink
@@ -276,6 +307,7 @@ export default connect(
     isCurrentAssessmentSurvey: isCurrentAssessmentSurvey(state),
     totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
     exportableData: getExportableData(state),
+    exportableFeedbackData: getExportableFeedbackData(state),
     studentId: state.sectionAssessments.studentId,
     studentList: getStudentList(state)
   }),
