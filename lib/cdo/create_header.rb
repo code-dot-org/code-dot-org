@@ -3,8 +3,10 @@
 
 class CreateHeader
   PROJECT_INFO_OVERRIDES = {
-    minecraft: {
-      url: CDO.studio_url('projects/minecraft_designer/new'),
+    minecraft_designer: {
+      id: "create_dropdown_minecraft",
+      image: "logo_minecraft.png",
+      title: "minecraft",
     },
     applab: {
       image: "logo_applab_square.png"
@@ -33,7 +35,7 @@ class CreateHeader
     applab_gamelab = %w(applab gamelab)
 
     entries = options[:limit_project_types] == "true" ?
-      everyone_entries + ["minecraft"] :
+      everyone_entries + ["minecraft_designer"] :
       everyone_entries + applab_gamelab
 
     entries << "dance"
