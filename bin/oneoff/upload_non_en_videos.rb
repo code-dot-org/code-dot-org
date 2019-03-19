@@ -79,7 +79,7 @@ end
 def initialize_youtube
   service = Google::Apis::YoutubeV3::YouTubeService.new
   service.client_options.application_name = APPLICATION_NAME
-  service.authorization = authorize
+  service.authorization = authorize unless DRY_RUN
   service
 end
 
@@ -107,16 +107,14 @@ end
 
 videos = parse_video_file_paths(MAP_FILE)
 service = initialize_youtube
-uploaded_videos = 0
 videos.each do |video|
   if validate_key(video[:key], LOCALE)
     puts "uploading " + video[:key]
-    download = upload_to_s3(File.open(video.file_path))
+    download_filename = upload_to_s3(File.open(video[:file_path]))
+    download = "https://videos.code.org/#{download_filename}"
     youtube_code = upload_to_youtube(service, video[:file_path], video[:title])
-    Video.merge_and_write_attributes(video[:key], youtube_code, download, LOCALE, 'dashboard/config/videos.csv')
-    uploaded_videos += 1
+    Video.merge_and_write_attributes(video[:key], youtube_code, download, LOCALE, 'dashboard/config/videos.csv') unless DRY_RUN
   else
     puts "Failed to validate " + video[:key]
   end
 end
-put "uploaded " + uploaded_videos.to_s + " videos"
