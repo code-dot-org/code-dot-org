@@ -582,6 +582,20 @@ GameLab.prototype.afterInject_ = function(config) {
         'levelFailure'
       ].join(',')
     );
+    Blockly.JavaScript.addReservedWords(
+      // Gamelab globals:
+      'CENTER,World,background,createEdgeSprites,createGroup,createSprite,drawSprites,edges,fill,' +
+        'keyDown,keyWentDown,keyWentUp,mousePressedOver,mouseWentDown,randomNumber,rect,text,textAlign,textSize,' +
+        // GamelabJr.interpreted.js:
+        'inputEvents,touchEvents,collisionEvents,callbacks,loops,sprites,score,game_over,show_score,title,subTitle,' +
+        'initialize,addBehavior,addBehaviorSimple,removeBehavior,removeBehaviorSimple,Behavior,normalizeBehavior,' +
+        'findBehavior,behaviorsEqual,whenUpArrow,whenDownArrow,whenLeftArrow,whenRightArrow,whenSpace,whileUpArrow,' +
+        'whileDownArrow,whileLeftArrow,whileRightArrow,whileSpace,whenMouseClicked,whenPressedAndReleased,clickedOn,' +
+        'spriteDestroyed,whenTouching,whileTouching,whenStartAndStopTouching,repeatWhile,forever,register,' +
+        'makeNewSpriteLocation,setAnimation,makeNewSprite,makeNewGroup,setProp,getProp,changePropBy,getDirection,' +
+        'moveForward,jumpTo,mirrorSprite,turn,debugSprite,randomLoc,setBackground,showScore,endGame,isDestroyed,' +
+        'showTitleScreen,hideTitleScreen,shouldUpdate,moveInDirection,unitVectorTowards,draw'
+    );
 
     // Don't add infinite loop protection
     Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
