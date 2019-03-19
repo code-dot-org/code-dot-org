@@ -6,13 +6,27 @@ class CreateHeader
     minecraft_designer: {
       id: "create_dropdown_minecraft",
       image: "logo_minecraft.png",
-      title: "minecraft",
+    },
+    minecraft_adventurer: {
+      image: "logo_mc.png",
+    },
+    minecraft_hero: {
+      image: "logo_minecraft_hero_square.jpg"
+    },
+    minecraft_aquatic: {
+      image: "logo_minecraft_aquatic_square.jpg"
     },
     applab: {
       image: "logo_applab_square.png"
     },
     gamelab: {
       image: "logo_gamelab_square.png"
+    },
+    playlab_k1: {
+      image: "logo_playlab.png"
+    },
+    artist_k1: {
+      image: "logo_artist.png"
     }
   }.freeze
 
@@ -39,6 +53,10 @@ class CreateHeader
       everyone_entries + applab_gamelab
 
     entries << "dance"
+
+    if options[:project_type]
+      entries.unshift(options[:project_type]) unless entries.include? options[:project_type]
+    end
 
     entries.map(&method(:get_project_info))
   end
