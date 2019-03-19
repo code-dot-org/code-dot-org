@@ -202,10 +202,6 @@ applabCommands.button = function(opts) {
   newButton.style.fontFamily = fontFamilyStyles[0];
   elementLibrary.applyCurrentTheme(newButton, Applab.activeScreen());
 
-  // newButton.style.color = color.white;
-  // newButton.style.backgroundColor = color.applab_button_teal;
-  // elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
-
   return Boolean(
     newButton.appendChild(textNode) &&
       Applab.activeScreen().appendChild(newButton)
