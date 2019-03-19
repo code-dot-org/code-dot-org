@@ -598,15 +598,20 @@ designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
   // Unwrap the draggable wrappers around the elements in the source screen:
   const madeUndraggable = makeUndraggable(currentScreen.children());
 
-  // Modify each element in the screen:
-  currentScreen.children().each(function() {
-    const child = $(this)[0];
-    const themeValues = elementLibrary.getThemeValues(child);
+  const screenAndChildren = [
+    currentScreen[0],
+    ...currentScreen.children().toArray()
+  ];
+
+  // Modify each element in the screen (including the screen itself):
+  screenAndChildren.forEach(element => {
+    const themeValues = elementLibrary.getThemeValues(element);
+    let modifiedProperty = false;
     for (const propName in themeValues) {
       const propTheme = themeValues[propName];
       const prevDefault = propTheme[prevThemeValue];
       const newDefault = propTheme[themeValue];
-      const currentPropValue = designMode.readProperty(child, propName);
+      const currentPropValue = designMode.readProperty(element, propName);
       const {type} = propTheme;
       let propIsDefault = false;
       if (type === 'color') {
@@ -617,8 +622,12 @@ designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
         propIsDefault = currentPropValue === prevDefault;
       }
       if (propIsDefault) {
-        designMode.updateProperty(child, propName, newDefault);
+        designMode.updateProperty(element, propName, newDefault);
+        modifiedProperty = true;
       }
+    }
+    if (modifiedProperty) {
+      designMode.renderDesignWorkspace(element);
     }
   });
 

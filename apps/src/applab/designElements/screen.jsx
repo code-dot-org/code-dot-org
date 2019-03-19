@@ -8,8 +8,10 @@ import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import DefaultScreenButtonPropertyRow from './DefaultScreenButtonPropertyRow';
 import designMode from '../designMode';
+import elementLibrary from './library';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
+import color from '../../util/color';
 
 class ScreenProperties extends React.Component {
   static propTypes = {
@@ -148,6 +150,13 @@ class ScreenEvents extends React.Component {
 export default {
   PropertyTab: ScreenProperties,
   EventTab: ScreenEvents,
+  themeValues: {
+    backgroundColor: {
+      type: 'color',
+      classic: color.white,
+      dark: color.black
+    }
+  },
 
   create: function() {
     const element = document.createElement('div');
@@ -167,6 +176,7 @@ export default {
     element.style.position = 'absolute';
     element.style.zIndex = 0;
     element.setAttribute('data-theme', applabConstants.themeOptions[0]);
+    elementLibrary.applyCurrentTheme(element, element);
 
     return element;
   },
@@ -183,6 +193,11 @@ export default {
     }
 
     element.setAttribute('tabIndex', '1');
+    if (element.style.backgroundColor === '') {
+      element.style.backgroundColor = this.themeValues.backgroundColor[
+        applabConstants.themeOptions[0]
+      ];
+    }
   },
   readProperty: function(element, name) {
     switch (name) {

@@ -239,9 +239,6 @@ export default {
     element.style.fontFamily = fontFamilyStyles[0];
     element.style.fontSize = defaultFontSizeStyle;
     elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    // elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-    // element.style.color = color.white;
-    // element.style.backgroundColor = color.applab_button_teal;
 
     return element;
   },
