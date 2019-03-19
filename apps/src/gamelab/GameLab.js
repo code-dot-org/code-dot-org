@@ -594,7 +594,17 @@ GameLab.prototype.afterInject_ = function(config) {
         'spriteDestroyed,whenTouching,whileTouching,whenStartAndStopTouching,repeatWhile,forever,register,' +
         'makeNewSpriteLocation,setAnimation,makeNewSprite,makeNewGroup,setProp,getProp,changePropBy,getDirection,' +
         'moveForward,jumpTo,mirrorSprite,turn,debugSprite,randomLoc,setBackground,showScore,endGame,isDestroyed,' +
-        'showTitleScreen,hideTitleScreen,shouldUpdate,moveInDirection,unitVectorTowards,draw'
+        'showTitleScreen,hideTitleScreen,shouldUpdate,moveInDirection,unitVectorTowards,draw,' +
+        // Blocks:
+        'addBehaviorUntil,beginBehavior,bounceOff,bounceOffEdges,changeColor,changeColorBy,comment,createNewSprite,' +
+        'distance,draggable,edgesDisplace,enableDebug,getAnim,getFrameDelay,getThisSprite,hasBehavior,hsbColor,' +
+        'isTouchingEdges,joystickDirection,locationAdd,locationAt,locationConstant,locationDelta,locationEast,' +
+        'locationMouse,locationNorth,locationOf,locationSouth,locationWest,mixColors,moveInDirection2,' +
+        'pointInDirection,pointToward,randColor,randomColor,randomLocation,removeAllBehaviors,setDirection,' +
+        'setFrameDelay,setSizes,setupSim,spriteCostume,spriteDirection,spritesWhere,spritesWhereFirst,' +
+        'spritesWhereGenerator,spritesWhereLast,spritesWhereRandom,whenDownArrow,whenJoystick,whenKey,whenLeftArrow,' +
+        'whenRightArrow,whenTouchingAny,whenTrue,whenUpArrow,whileDownArrow,whileJoystick,whileKey,whileLeftArrow,' +
+        'whileRightArrow,whileUpArrow,xLocationOf,yLocationOf'
     );
 
     // Don't add infinite loop protection
