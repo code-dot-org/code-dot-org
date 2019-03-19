@@ -124,6 +124,11 @@ en:
       CSD Set Scale Map_2019: Changing Sensor Scale
       CSD Timed For Loop Map: Timed For Loops
       CSD Timed Loop Map: Timed Loops
+      CSD U1 Feedback FR: Question 6
+      CSD U1 Test Collaborate FR: Question 7
+      CSD U1 Test Feedback FR: Question 6
+      CSD U1 Test Iteration FR: Question 8
+      CSD U1 Test storage FR: Question 5
       CSD U1L01 TFMD_2018: Lesson Overview
       CSD U1L01 TFMD_2019: Lesson Overview
       CSD U1L02 TFMD_2018: Lesson Overview
@@ -183,6 +188,10 @@ en:
       CSD U2 Style Sheet Map: CSS and Style Sheets
       CSD U2 Style Sheet Map_2018: CSS and Style Sheets
       CSD U2 Style Sheet Map_2019: CSS and Style Sheets
+      CSD U2 Test Bug FR: Question 8
+      CSD U2 Test Bug: Question 8
+      CSD U2 Test Copyright FR: Question 9
+      CSD U2 Test DigCit FR: Question 10
       CSD U2 Text Properties Map: CSS Text Properties
       CSD U2 Text Properties Map_2018: CSS Text Properties
       CSD U2 Text Properties Map_2019: CSS Text Properties
@@ -234,7 +243,7 @@ en:
       CSD U3 - Booleans Video_2019: 'Video: Booleans'
       CSD U3 - Conditionals Video: 'Video: Conditionals'
       CSD U3 - Conditionals Video_2018: 'Video: Conditionals'
-      CSD U3 - Conditionals Video_2019: 'Video: Conditionals'
+      CSD U3 - Conditionals Video_2019: 'Video: If/Else Statements'
       CSD U3 - conditionals - first conditional 2-2018: Visibility Challenge
       CSD U3 - conditionals - first conditional 2_2018: Visibility Challenge
       CSD U3 - conditionals - first conditional 2_2018_2019: Visibility Challenge
@@ -1115,6 +1124,7 @@ en:
       U4 L08 Conditionals Make Project Sample: Museum Ticket App
       U4 L09 Score Clicker Investigate: Score Clicker
       U4 L09 Thermostat App v7: Thermostat App v6
+      U4 My Pet Rock Example App: My Pet Rock App
       U4 String Concatenation Pattern: Counter Patterns
       U4 Variable with String Concatenation Pattern: Variable with String Concatenation Pattern
       U4-AP-Practice-Choose-The-Data-Concern: "(new) AP Practice Response - Identify the Data Concern"
@@ -1129,6 +1139,7 @@ en:
       'U4L06 Introduction to Conditionals: if Statements': 'Conditionals: If Statements'
       'U4L06 Introduction to Conditionals: if-else Statements': 'Conditionals: If-Else Statements'
       'U4L06 Introduction to Conditionals: if-else-if Statements': 'Conditionals: If-Else-If Statements'
+      U4L10 My Pet Rock Example App: My Pet Rock App
       U5 AP Create Practice onEvent Doesnt Count: "(new) AP Practice Response - Choosing an Abstraction"
       U5 AP Create Practice onEvent Doesnt Count_2018: "(new) AP Practice Response - Choosing an Abstraction"
       U5 AP Create Practice onEvent Doesnt Count_2019: "(new) AP Practice Response - Choosing an Abstraction"
@@ -1172,7 +1183,7 @@ en:
       coursee_explore_4: Alien Defender
       cp1dlp-q1: Lesson Connections and Philosophy
       csd U3 conditional statements video: 'Video: "If/Else" Statements'
-      csd U3 conditional statements video_2019: 'Video: "If/Else" Statements'
+      csd U3 conditional statements video_2019: 'Video: Conditional Statements'
       csd u5 recommender sample: Sample App
       csd u5 recommender sample_2019: Sample App
       csd-thursday-facilitation: Facilitation Reflection
