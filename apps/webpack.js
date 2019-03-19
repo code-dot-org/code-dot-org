@@ -317,6 +317,11 @@ function create(options) {
     output: {
       path: outputDir,
       publicPath: '/assets/js/',
+
+      // When debugging minified code, use the .js suffix (rather than .min.js)
+      // to allow the application to load minified js locally without running it
+      // through the rails asset pipeline. This is much simpler than hacking the
+      // application to load .min.js locally.
       filename: '[name].' + (minify && !debugMinify ? 'min.' : '') + 'js'
     },
     devtool: !process.env.CI && options.minify ? 'source-map' : devtool,
