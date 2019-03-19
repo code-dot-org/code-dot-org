@@ -23,15 +23,18 @@ describe('ScriptTeacherPanel', () => {
     const wrapper = shallow(
       <ScriptTeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Student} />
     );
-    expect(wrapper.containsMatchingElement(
-      <TeacherPanel>
-        <h3>{commonMsg.teacherPanel()}</h3>
-        <div>
-          <ViewAsToggle />
-          <div>{commonMsg.loading()}</div>
-        </div>
-      </TeacherPanel>
-    )).to.be.true;
+
+    expect(
+      wrapper.containsMatchingElement(
+        <TeacherPanel>
+          <h3>{commonMsg.teacherPanel()}</h3>
+          <div>
+            <ViewAsToggle />
+            <div>{commonMsg.loading()}</div>
+          </div>
+        </TeacherPanel>
+      )
+    ).to.be.true;
   });
 
   it('initial view as teacher', () => {

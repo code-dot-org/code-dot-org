@@ -221,7 +221,7 @@ describe('ImportScreensDialog', () => {
           .at(1)
           .type()
       ).to.equal(Buttons);
-      expect(dialog.find("MultiCheckboxSelector").length).to.equal(1);
+      expect(dialog.find('MultiCheckboxSelector').length).to.equal(1);
     });
 
     it('renders an Import button which calls onImport when clicked', () => {
