@@ -9921,6 +9921,8 @@ en:
               name: Digital Sharing
             Running Simulations:
               name: Running Simulations
+            Simulating Experiments:
+              name: Simulating Experiments
         dance-low:
           stages:
             Dance Party:
@@ -10396,6 +10398,8 @@ en:
               name: Project - Propose an App
               description_student: To conclude the study of the problem solving process and the input/output/store/process model of a computer, the class proposes apps designed to solve real world problems. This project is completed across multiple days and culminates in a poster presentation highlighting the features of each app. The project is designed to be completed in pairs though it can be completed individually.
               description_teacher: To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.
+            Post-Project Test:
+              name: Post-Project Test
         andrea-test:
           stages:
             new stage:
@@ -10834,6 +10838,8 @@ en:
               name: Project - Personal Portfolio Website
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
+            Post-Project Test:
+              name: Post-Project Test
         csd3-2019:
           title: CSD Unit 3 - Animations and Games ('19-'20)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -10937,6 +10943,8 @@ en:
               name: CS Discoveries End of Semester Survey
               description_student: ''
               description_teacher: ''
+            Post-Project Test:
+              name: Post-Project Test
         csd4-2019:
           title: CSD Unit 4 - The Design Process ('19-'20)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
@@ -11629,3 +11637,23 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csd-videos:
+          stages:
+            new stage:
+              name: new stage
+            Problem Solving and Computers:
+              name: Problem Solving and Computers
+            Web Development:
+              name: Web Development
+            Games and Animations:
+              name: Games and Animations
+            User Centered Design:
+              name: User Centered Design
+            Data and Society:
+              name: Data and Society
+            Physical Computing:
+              name: Physical Computing
+          title: CSD Videos
+          description_audience: ''
+          description_short: All the Videos in CS Discoveries
+          description: All the Videos in CS Discoveries
