@@ -8,28 +8,30 @@ import DisabledBubblesModal from '@cdo/apps/code-studio/DisabledBubblesModal';
 describe('DisabledBubblesModal', () => {
   it('is open to begin with', () => {
     const wrapper = shallow(<DisabledBubblesModal />);
-    expect(wrapper.containsMatchingElement(
-      <BaseDialog isOpen={true} uncloseable={true}>
-        <div>
-          <div>{i18n.disabledProgress1()}</div>
-          <div>{i18n.disabledProgress2()}</div>
-          <div>{i18n.disabledProgress3()}</div>
+    expect(
+      wrapper.containsMatchingElement(
+        <BaseDialog isOpen={true} uncloseable={true}>
           <div>
-            <a
-              target="_blank"
-              href="https://support.code.org/hc/en-us/articles/115002660852"
-            >
-              {i18n.learnMore()}
-            </a>
+            <div>{i18n.disabledProgress1()}</div>
+            <div>{i18n.disabledProgress2()}</div>
+            <div>{i18n.disabledProgress3()}</div>
+            <div>
+              <a
+                target="_blank"
+                href="https://support.code.org/hc/en-us/articles/115002660852"
+              >
+                {i18n.learnMore()}
+              </a>
+            </div>
+            <div>
+              <button onClick={wrapper.instance().handleClose}>
+                {i18n.dialogOK()}
+              </button>
+            </div>
           </div>
-          <div>
-            <button onClick={wrapper.instance().handleClose}>
-              {i18n.dialogOK()}
-            </button>
-          </div>
-        </div>
-      </BaseDialog>
-    )).to.be.true;
+        </BaseDialog>
+      )
+    ).to.be.true;
   });
 
   it('closes when the button is clicked', () => {

@@ -45,13 +45,15 @@ describe('ScriptOverview', () => {
     const wrapper = shallow(
       <ScriptOverview {...defaultProps} scriptHasLockableStages={true} />
     );
-    expect(wrapper.containsMatchingElement(<LabeledSectionSelector />)).to.be.true;
+    expect(wrapper.containsMatchingElement(<LabeledSectionSelector />)).to.be
+      .true;
   });
 
   it('renders section selector if script allows hidden stages', () => {
     const wrapper = shallow(
       <ScriptOverview {...defaultProps} scriptAllowsHiddenStages={true} />
     );
-    expect(wrapper.containsMatchingElement(<LabeledSectionSelector />)).to.be.true;
+    expect(wrapper.containsMatchingElement(<LabeledSectionSelector />)).to.be
+      .true;
   });
 });
