@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import {Table} from 'react-bootstrap';
 import _ from 'lodash';
 import {COURSE_CSF} from '../../workshopConstants';
+import {PermissionPropType, Organizer} from '../../permission';
 
 const questionOrder = {
   facilitator_effectiveness: [
@@ -24,14 +26,15 @@ const questionOrder = {
   ]
 };
 
-export default class FacilitatorAveragesTable extends React.Component {
+class FacilitatorAveragesTable extends React.Component {
   static propTypes = {
     facilitatorAverages: PropTypes.object.isRequired,
     facilitatorId: PropTypes.number.isRequired,
     facilitatorName: PropTypes.string.isRequired,
     questions: PropTypes.object.isRequired,
     courseName: PropTypes.string.isRequired,
-    facilitatorResponseCounts: PropTypes.object.isRequired
+    facilitatorResponseCounts: PropTypes.object.isRequired,
+    permission: PermissionPropType.isRequired
   };
 
   constructor(props) {
@@ -42,6 +45,14 @@ export default class FacilitatorAveragesTable extends React.Component {
       teacher_engagement: props.courseName === COURSE_CSF ? 5 : 6,
       overall_success: 6
     };
+  }
+
+  workshopDescriptor() {
+    if (this.props.permission.has(Organizer)) {
+      return 'organized';
+    } else {
+      return 'facilitated';
+    }
   }
 
   renderAverage(displayNumber, category) {
@@ -66,8 +77,8 @@ export default class FacilitatorAveragesTable extends React.Component {
             <th />
             <th>{possessiveName} average for this workshop</th>
             <th>
-              {possessiveName} average for all {this.props.courseName} workshops
-              since June 2018
+              {possessiveName} average for all {this.props.courseName} workshops{' '}
+              {this.workshopDescriptor()} since June 2018
             </th>
           </tr>
         </thead>
@@ -140,3 +151,7 @@ export default class FacilitatorAveragesTable extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  permission: state.workshopDashboard.permission
+}))(FacilitatorAveragesTable);
