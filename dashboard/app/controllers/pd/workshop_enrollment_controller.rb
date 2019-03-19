@@ -5,6 +5,10 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   load_resource :workshop, class: 'Pd::Workshop', through: :session, singleton: true,
     only: [:join_session, :confirm_join_session]
 
+  def csd_or_csp_workshop
+    [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].include?(@workshop.course)
+  end
+
   # GET /pd/workshops/1/enroll
   def new
     view_options(no_footer: true, answerdash: true)
@@ -30,8 +34,10 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           workshop_enrollment_status: "full"
         }.to_json
       }
-    elsif [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].include?(@workshop.course) && !current_user
+    elsif csd_or_csp_workshop && !current_user
       render :logged_out
+    elsif csd_or_csp_workshop && current_user && current_user.teacher? && !current_user.email.present?
+      render '/pd/application/teacher_application/no_teacher_email'
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       if current_user
