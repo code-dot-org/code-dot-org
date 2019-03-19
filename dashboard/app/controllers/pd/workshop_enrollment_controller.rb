@@ -32,6 +32,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       }
     elsif [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].include?(@workshop.course) && !current_user
       render :logged_out
+    elsif current_user.teacher? && !current_user.email.present?
+      render '/pd/application/teacher_application/no_teacher_email'
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       if current_user
