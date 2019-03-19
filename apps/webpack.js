@@ -307,7 +307,7 @@ function create(options) {
   var entries = options.entries;
   var minify = options.minify;
   var watch = options.watch;
-  var debugMinify = options.debugMinify;
+  var debugMinify = envConstants.DEBUG_MINIFIED;
   var watchNotify = options.watchNotify;
   var piskelDevMode = options.piskelDevMode;
   var plugins = options.plugins;
