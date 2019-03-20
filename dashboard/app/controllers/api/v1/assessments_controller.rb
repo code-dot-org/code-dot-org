@@ -193,12 +193,14 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
     @script.script_levels.each do |script_level|
       @section.students.each do |student|
         #const tempFeedback = TeacherFeedback.get_student_level_feedback(student.id, script_level.level.id, @section.user_id)
+        next unless script_level.level.mini_rubric&.to_bool
         feedback[script_level.level.id] = {
-          student_name: student.name,
-          stage_num: script_level.stage.relative_position.to_s,
-          stage_name: script_level.stage.localized_title,
-          level_num: script_level.position.to_s,
-          keyConcept: (script_level.level.rubric_key_concept || '')
+          studentName: student.name,
+          stageNum: script_level.stage.relative_position.to_s,
+          stageName: script_level.stage.localized_title,
+          levelNum: script_level.position.to_s,
+          keyConcept: (script_level.level.rubric_key_concept || ''),
+          performanceLevelDetails: (script_level.level.rubric_exceeds || '')
           #p 'rubric:' + tempFeedback.performance
           #p 'comment:' + tempFeedback.comment
           #p 'timestamp:' + tempFeedback.updated_at
