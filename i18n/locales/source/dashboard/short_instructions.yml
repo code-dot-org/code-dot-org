@@ -653,16 +653,6 @@ en:
           * (Hint: you will use almost all the same code as the `moveCloud0` function)
         * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
           * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
-      CSD U6 params modify clouds_2019: |-
-        # Clouds
-
-        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
-
-        # Do This
-        * Create a new function `moveCloud(name)` that will move any cloud.
-          * (Hint: you will use almost all the same code as the `moveCloud0` function)
-        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
-          * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
       CSD U6 params modify planes: |-
         # Multi-plane Controller
 
@@ -1450,6 +1440,7 @@ en:
       Code Studio Puzzle Challenge Square - Artist: Draw a square by using the variable length provided.
       Code Studio Puzzle Challenge Var - Artist: Draw a line by using a variable "length" set to 180.
       Collector Demo: Look at all this loot! Help me get as many coins as I can so I can improve my farm. I can only use 9 blocks though!
+      CoureE_HOC 2018 Level_7a: Search these underwater ruins for a chest.
       Course 2 Bee Loops 1: 'Hi, I''m a bee. Can you help me collect the nectar from these flowers? '
       Course 2 Bee Loops 13: 'Assessment: Use the repeat block to collect all of the nectar.'
       Course 2 Bee Loops 2: Can you do the same task more easily with a loop?
@@ -3601,16 +3592,15 @@ en:
       Valentine_playlab_01: 'Program Kiki (Actor 1) to move left and right when the left and right arrows are pressed. When Kiki is clicked, she should throw hearts towards her friends. '
       Vigenere: Test
       Virtual Pet 1 Predict: 'What do you think will happen when you click on the alien?  '
-      Virtual Pet 1 Predict_2019: 'What do you think will happen when you click on the alien?  '
+      Virtual Pet 1 Predict_2019: 'What do you think will happen when you click "▶ Run"?  '
       Virtual Pet 1 Predict_simple: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1 fix: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 1: What do you think will happen if you press "Run" and then click on her?
-      Virtual Pet 1_2019: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 1_simple: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 2 - Validated (Ram): Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2 - Validated: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
-      Virtual Pet 2_2019: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2_2019: Use the **Costumes** tab to create or select new costumes for your virtual pet and its food.
       Virtual Pet 2_simple: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 2_simple_clone: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 3: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
@@ -4330,7 +4320,7 @@ en:
       courseC19_playLab_EOC2: Use events and actions to make your hero move. Get to the targets.
       courseC19_playLab_EOC3: Add two or more additional actors to your game and make them move.
       courseC19_playLab_EOC4: Find some interesting ways to change the score in your game. Get the score to show something other than 0 to continue.
-      courseC19_playLab_EOC5: Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.
+      courseC19_playLab_EOC5: Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want.
       courseC19_playLab_EOC6: You've finished! Now you can play your game or share it with your friends and classmates!
       courseC_PlayLab_events1: Make Jorge the Dog (actor 1) say "Hi there."
       courseC_PlayLab_events1_2018: Make Jorge the Dog (actor 1) say "Hi there."
@@ -5347,16 +5337,16 @@ en:
         When Thuy is clicked, make Rikki share some SAFE information about her!
       courseE_aboutme_5: "Rikki loves ice cream! She searched for an ice cream cone costume, but the closest thing she could find was... soap. Yuck! \n\nLet's surprise her by **drawing an ice cream cone costume** that she can use for that sprite.\n\n**Create an Ice Cream Cone Costume**\n\n* Click the **Costumes** tab.\n \n* Draw an ice cream cone!\n \n* Replace the soap sprite's costume with your ice cream cone costume in the code below!"
       courseE_aboutme_6: |-
-        Rikki's poster is looking good, but it could use more excitement!
+        Rikki's poster is looking good, but it could use more action!
 
         **Three Tasks to Complete Rikki's Poster**
 
         * Make Rikki begin wandering when she's clicked. She loves exploring!
 
-        * Make Thuy begin jittering when Rikki touches her. She's ticklish!
+        * Make Thuy begin jittering when Rikki touches her. Tickle tickle!
 
-        * Make the ice cream cone disappear when Rikki touches it. All gone!
-      courseE_aboutme_freeplay: "Thanks for helping Rikki. Now it's your turn to **make your own interactive poster**! \n\nUse costumes, messages, events, and behaviors to tell the world about yourself! \n\nJust as with Rikki, remember to share SAFE information!\n\n**Examples of SAFE Information**\n* first name\n* favorite video games, books, or TV shows\n* respectful opinions (no insults or bad language)\n\n**Examples of UNSAFE Information**\n* full name\n* home address\n* phone number"
+        * Remove the ice cream cone when Rikki touches it. Yummy!
+      courseE_aboutme_freeplay: "Thanks for helping Rikki. Now it's your turn to **make your own interactive poster**! \n\nUse costumes, messages, events, and behaviors to tell the world about yourself! \n\nJust as with Rikki, remember to share SAFE information!"
       courseE_artist_concept1: 'Recreate this image. '
       courseE_artist_concept1_2018: 'Recreate this image. '
       courseE_artist_concept1_2019: 'Recreate this image. '
