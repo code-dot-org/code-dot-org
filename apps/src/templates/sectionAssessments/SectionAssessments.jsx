@@ -193,7 +193,7 @@ class SectionAssessments extends Component {
         {!isLoading && assessmentList.length > 0 && (
           <div style={styles.tableContent}>
             {/* Assessments */}
-            {!isCurrentAssessmentSurvey && (
+            {!isCurrentAssessmentSurvey && this.props.assessmentId !== 0 && (
               <div>
                 <div style={{...h3Style, ...styles.header}}>
                   {i18n.selectStudent()}
@@ -203,22 +203,6 @@ class SectionAssessments extends Component {
                   studentId={studentId}
                   onChange={this.props.setStudentId}
                 />
-                <CSVLink
-                  filename={
-                    exportableFeedbackData[0].sectionName +
-                    `_` +
-                    exportableFeedbackData[0].scriptName +
-                    `_feedback.csv`
-                  }
-                  data={exportableFeedbackData}
-                  headers={CSV_FEEDBACK_HEADERS}
-                >
-                  <Button
-                    text={i18n.downloadFeedbackCSV()}
-                    onClick={() => {}}
-                    color={Button.ButtonColor.gray}
-                  />
-                </CSVLink>
                 {totalStudentSubmissions > 0 && (
                   <div style={styles.download}>
                     <CSVLink
@@ -245,6 +229,40 @@ class SectionAssessments extends Component {
                     />
                   </div>
                 )}
+              </div>
+            )}
+            {/* Feedback Download */}
+            {this.props.assessmentId === 0 && (
+              <div>
+                <CSVLink
+                  filename={
+                    exportableFeedbackData[0].sectionName +
+                    `_` +
+                    exportableFeedbackData[0].scriptName +
+                    `_feedback.csv`
+                  }
+                  data={exportableFeedbackData}
+                  headers={CSV_FEEDBACK_HEADERS}
+                >
+                  <Button
+                    text={i18n.downloadFeedbackCSV()}
+                    onClick={() => {}}
+                    color={Button.ButtonColor.gray}
+                  />
+                </CSVLink>
+                <p>
+                  {`This CSV file contains all feedback and rubric evaluations you’ve completed for your section
+                  ${exportableFeedbackData[0].sectionName}
+                   in levels within
+                  ${exportableFeedbackData[0].scriptName}
+                  . You can leave feedback your students by going to a level in this unit, viewing a students work,
+                   and clicking the “Feedback” tab`}
+                </p>
+                <p>
+                  {
+                    'We recommend checking student progress and giving feedback on levels marked as assessment opportunities'
+                  }
+                </p>
               </div>
             )}
             {/* Surveys */}
