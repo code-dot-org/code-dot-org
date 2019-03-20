@@ -9,6 +9,7 @@ import Select from 'react-select';
 import $ from 'jquery';
 import downloadCsv from '../downloadCsv';
 import AdminCohortViewTable from './admin_cohort_view_table';
+import _ from 'lodash';
 
 const styles = {
   downloadCsvButton: {
@@ -63,6 +64,18 @@ export default class AdminCohortView extends React.Component {
     }
   }
 
+  sanitizeStringForCsv = str => {
+    let res = str;
+    if (str) {
+      // Convert line breaker to dot, multiple spaces to single space
+      res = res.replace(/\n|\r\n|\r+/gm, '.');
+      res = res.replace(/\s+/gm, ' ');
+      res = res.trim();
+    }
+
+    return res;
+  };
+
   handleDownloadCsv = () => {
     const headers = {
       date_accepted: 'Date Accepted',
@@ -72,6 +85,8 @@ export default class AdminCohortView extends React.Component {
       email: 'Email',
       assigned_workshop: 'Assigned Workshop',
       registered_workshop: 'Registered Workshop',
+      assigned_fit: 'Assigned FiT',
+      registered_fit_submission_time: 'Registered FiT Submission Time',
       accepted_seat: 'Accepted Seat?',
       course_name: 'Course',
       regional_partner_name: 'Regional Partner',
@@ -91,12 +106,21 @@ export default class AdminCohortView extends React.Component {
       // Make sure we include all form_data keys that appear on any row:
       Object.keys(row.form_data).forEach(formDataHeader => {
         if (!headers[formDataHeader]) {
-          // Use the raw formData key as the column header
-          headers[formDataHeader] = formDataHeader;
+          // Convert formData key to more readable format, use it as the column header
+          headers[formDataHeader] = _.startCase(formDataHeader);
         }
       });
 
       return {...row, ...row.form_data};
+    });
+
+    // Sanitize string content before exporting it to CSV
+    filteredCohortWithFormData.forEach(row => {
+      Object.keys(row).forEach(key => {
+        if (_.isString(row[key])) {
+          row[key] = this.sanitizeStringForCsv(row[key]);
+        }
+      });
     });
 
     downloadCsv({

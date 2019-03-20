@@ -14,6 +14,7 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
     :assigned_fit,
     :registered_fit,
     :accepted_fit,
+    :registered_fit_submission_time,
     :role,
     :status,
     :locked,
@@ -47,12 +48,16 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
     object.try(:registered_fit_workshop?)
   end
 
+  def registered_fit_submission_time
+    object.try(FIT_WEEKEND_REGISTRATION_SYMBOL).try(:created_at)
+  end
+
   def fit_assigned_at_registration
-    object.try(FIT_WEEKEND_REGISTRATION_FACTORY).try(:fit_city)
+    object.try(FIT_WEEKEND_REGISTRATION_SYMBOL).try(:fit_city)
   end
 
   def accepted_fit
-    object.try(FIT_WEEKEND_REGISTRATION_FACTORY).try(:accepted_seat_simplified)
+    object.try(FIT_WEEKEND_REGISTRATION_SYMBOL).try(:accepted_seat_simplified)
   end
 
   def role
