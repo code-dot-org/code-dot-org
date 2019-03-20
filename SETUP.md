@@ -122,7 +122,9 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. `curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -`
     1. `sudo apt-get install -y nodejs`
 1. Ensure rbenv and ruby-build are properly installed
-    1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#installation) to verify rbenv is set up correctly.
+    1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to verify rbenv is set up correctly:
+        1. curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+    1. If there are any errors (they appear red), follow the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`.
     1. Install [ruby-build as a rbenv plugin](https://github.com/rbenv/ruby-build#readme)
 1. Install Ruby 2.5.0 with rbenv
     1. `rbenv install 2.5.0`
