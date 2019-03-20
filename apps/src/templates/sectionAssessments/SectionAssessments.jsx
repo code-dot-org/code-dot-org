@@ -205,9 +205,9 @@ class SectionAssessments extends Component {
                 />
                 <CSVLink
                   filename={
-                    this.props.scriptId +
+                    exportableFeedbackData[0].sectionName +
                     `_` +
-                    this.props.sectionId +
+                    exportableFeedbackData[0].scriptName +
                     `_feedback.csv`
                   }
                   data={exportableFeedbackData}

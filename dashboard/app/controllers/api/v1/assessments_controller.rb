@@ -195,6 +195,8 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
         temp_feedback = TeacherFeedback.get_student_level_feedback(student.id, script_level.level.id, @section.user_id)
         next unless temp_feedback
         feedback[temp_feedback.id] = {
+          sectionName: @section.name,
+          scriptName: @script.name,
           studentName: student.name,
           stageNum: script_level.stage.relative_position.to_s,
           stageName: script_level.stage.localized_title,
