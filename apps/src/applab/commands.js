@@ -8,7 +8,6 @@ import * as setPropertyDropdown from './setPropertyDropdown';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
-import color from '../util/color';
 import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
@@ -200,6 +199,7 @@ applabCommands.button = function(opts) {
   newButton.style.position = 'relative';
   newButton.style.fontSize = defaultFontSizeStyle;
   newButton.style.fontFamily = fontFamilyStyles[0];
+  newButton.style.borderStyle = 'solid';
   elementLibrary.applyCurrentTheme(newButton, Applab.activeScreen());
 
   return Boolean(
@@ -905,10 +905,8 @@ applabCommands.textInput = function(opts) {
   newInput.style.fontFamily = fontFamilyStyles[0];
   newInput.style.height = '30px';
   newInput.style.width = '200px';
-  elementUtils.setDefaultBorderStyles(newInput, {
-    forceDefaults: true,
-    textInput: true
-  });
+  newInput.style.borderStyle = 'solid';
+  elementLibrary.applyCurrentTheme(newInput, Applab.activeScreen());
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
@@ -927,7 +925,8 @@ applabCommands.textLabel = function(opts) {
   newLabel.style.position = 'relative';
   newLabel.style.fontSize = defaultFontSizeStyle;
   newLabel.style.fontFamily = fontFamilyStyles[0];
-  elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
+  newLabel.style.borderStyle = 'solid';
+  elementLibrary.applyCurrentTheme(newLabel, Applab.activeScreen());
   var forElement = document.getElementById(opts.forId);
   if (forElement && Applab.activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
@@ -992,9 +991,8 @@ applabCommands.dropdown = function(opts) {
   newSelect.style.position = 'relative';
   newSelect.style.fontSize = defaultFontSizeStyle;
   newSelect.style.fontFamily = fontFamilyStyles[0];
-  newSelect.style.color = color.white;
-  newSelect.style.backgroundColor = color.applab_button_teal;
-  elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});
+  newSelect.style.borderStyle = 'solid';
+  elementLibrary.applyCurrentTheme(newSelect, Applab.activeScreen());
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
