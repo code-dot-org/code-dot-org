@@ -1,11 +1,15 @@
 <Applab>
   <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-04T23:04:56.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "properties": {
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Add a second parameter to the search function for the value to search for.  (Click to see full instructions)",
-    "long_instructions": "# General Search\r\n\r\nIn order to make a general search function, we should be able to **search for any value, not just 5**.  We can do this by making the value to search for a parameter as well.\r\n\r\n# Do This:\r\n\r\n* **Add a second parameter** to your `search` function to represent the item to search for. This example uses the name `searchValue`.\r\n\r\n* **Update the code inside the function to check for `searchValue` instead of 5.** \r\n\r\n* **Call your search function** to search for different values inside of each array.\r\n\r\n* The `console.log` statement **is now inaccurate**. Change it to say \"Array has searchValue: \" followed by the value in flag.\r\n\r\n(These steps are shown in the code animation below.)\r\n\r\n![](https://images.code.org/b71a0bd1cf725d58ae76836a6422ebeb-image-1447695946760.gif)",
+    "long_instructions": "# General Search\r\n\r\nIn order to make a general search function, we should be able to **search for any value, not just 5**.  We can do this by making the value to search for a parameter as well.\r\n\r\n# Do This:\r\n\r\n* **Add a second parameter** to your `search` function to represent the item to search for. This example uses the name `searchValue`.\r\n\r\n* **Update the code inside the function to check for `searchValue` instead of 5.** \r\n\r\n* **Call your search function** to search for different values inside of each array.\r\n\r\n* The `console.log` statement **is now inaccurate**. Change it to say \"Array has searchValue: \" followed by the value in flag.\r\n\r\n(These steps are shown in the code animation below.)\r\n\r\n![](https://images.code.org/8cf16bc1f47fa2cc94ac6094580a9a84-image-1553088622333.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -40,13 +44,20 @@
     "parent_level_id": 6934,
     "name_suffix": "_2018",
     "show_debug_watch": "true",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false"
   },
-  "game_id": 41,
-  "created_at": "2018-05-04T23:04:56.000Z",
-  "level_num": "custom",
-  "user_id": 155,
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-20 13:30:36 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

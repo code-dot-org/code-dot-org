@@ -2,7 +2,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-18/unit5/"], ["teacherForum", "https://forum.code.org/c/csd5"], ["vocabulary", "https://curriculum.code.org/csd-18/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd-18/unit5/standards/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit5/"], ["teacherForum", "https://forum.code.org/c/csd5"], ["vocabulary", "https://curriculum.code.org/csd-19/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd-19/unit5/standards/"]]
 has_verified_resources true
 has_lesson_plan true
 family_name 'csd5'
