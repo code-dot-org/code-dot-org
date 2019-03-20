@@ -61,7 +61,7 @@ export default class Section5AdditionalDemographicInformation extends LabeledFor
         <PrivacyDialog
           show={this.state.isPrivacyDialogOpen}
           onHide={this.handleClosePrivacyDialog}
-          mode={PrivacyDialogMode.PRINCIPAL_APPROVAL}
+          mode={PrivacyDialogMode.TEACHER_APPLICATION}
         />
       </FormGroup>
     );
