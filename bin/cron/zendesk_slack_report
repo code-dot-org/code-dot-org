@@ -29,10 +29,10 @@ STATUSES_TO_REPORT = %w(new open)
 # Slack room -> Zendesk group mappings to report on
 MONITORING_GROUPS = {
   # 'slack-room-name' => ['Zendesk group name', 'Zendesk group name', ...]
+  'developers' => ['Developers'],
   'learning-platform' => ['Learning Platform'],
+  'plc-engineering' => ['PLC Tools'],
   'star-labs-cabal' => ['*Labs'],
-  # 'developers' => ['Developers'],
-  # 'plc-engineering' => ['PLC Tools'],
   # 'privacy' => ['Privacy'],
   # 'user-accounts' => ['Accounts'],
 }
