@@ -20,49 +20,66 @@ const styles = {
   }
 };
 
-export function ConfirmImageDeleteDialog({
-  name,
-  usage,
-  onCancel,
-  handleDelete
-}) {
-  return (
-    <Dialog
-      title={i18n.warning()}
-      isOpen
-      handleClose={onCancel}
-      style={styles.leftAlign}
-    >
-      <Body>
-        <p>
-          {i18n.deleteUsedImage({
-            name: name,
-            value: usage,
-            places: usage > 1 ? i18n.places() : i18n.place()
-          })}
-        </p>
-        <DialogFooter>
-          <Button
-            onClick={onCancel}
-            text={i18n.no()}
-            color={Button.ButtonColor.gray}
-          />
-          <Button
-            onClick={handleDelete}
-            text={i18n.yesSure()}
-            color={Button.ButtonColor.orange}
-          />
-        </DialogFooter>
-      </Body>
-    </Dialog>
-  );
+class ConfirmImageDeleteDialog extends React.Component {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    usage: PropTypes.number,
+    onCancel: PropTypes.func.isRequired,
+    handleDelete: PropTypes.func.isRequired,
+    // For logging purposes
+    studyGroup: PropTypes.string.isRequired,
+    projectId: PropTypes.string.isRequired,
+    elementId: PropTypes.string
+  };
+
+  onConfirmDelete = () => {
+    firehoseClient.putRecord({
+      study: 'delete-asset',
+      study_group: this.props.studyGroup,
+      event: 'confirm-referenced',
+      project_id: this.props.projectId,
+      data_json: JSON.stringify({
+        assetName: this.props.name,
+        elementId: this.props.elementId,
+        usage: this.props.usage
+      })
+    });
+    this.props.handleDelete();
+  };
+
+  render() {
+    return (
+      <Dialog
+        title={i18n.warning()}
+        isOpen
+        handleClose={this.props.onCancel}
+        style={styles.leftAlign}
+      >
+        <Body>
+          <p>
+            {i18n.deleteUsedImage({
+              name: this.props.name,
+              value: this.props.usage,
+              places: this.props.usage > 1 ? i18n.places() : i18n.place()
+            })}
+          </p>
+          <DialogFooter>
+            <Button
+              onClick={this.props.onCancel}
+              text={i18n.no()}
+              color={Button.ButtonColor.gray}
+            />
+            <Button
+              onClick={this.onConfirmDelete}
+              text={i18n.yesSure()}
+              color={Button.ButtonColor.orange}
+            />
+          </DialogFooter>
+        </Body>
+      </Dialog>
+    );
+  }
 }
-ConfirmImageDeleteDialog.propTypes = {
-  name: PropTypes.string.isRequired,
-  usage: PropTypes.number,
-  onCancel: PropTypes.func.isRequired,
-  handleDelete: PropTypes.func.isRequired
-};
 
 /**
  * A single row in the AssetManager, describing one asset.
@@ -109,7 +126,8 @@ export default class AssetRow extends React.Component {
       project_id: this.props.projectId,
       data_json: JSON.stringify({
         assetName: this.props.name,
-        elementId: this.props.elementId
+        elementId: this.props.elementId,
+        usage: places.length
       })
     });
   };
@@ -182,6 +200,14 @@ export default class AssetRow extends React.Component {
                 usage={this.state.usage}
                 onCancel={this.cancelDelete}
                 handleDelete={this.handleDelete}
+                elementId={this.props.elementId}
+                projectId={this.props.projectId}
+                studyGroup={
+                  this.props.onChoose &&
+                  typeof this.props.onChoose === 'function'
+                    ? 'choose-assets'
+                    : 'manage-assets'
+                }
               />
             )}
             <button className="btn-danger" onClick={this.handleDelete}>
