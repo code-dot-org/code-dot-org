@@ -235,12 +235,11 @@ class SectionAssessments extends Component {
             {this.props.assessmentId === 0 && (
               <div>
                 <CSVLink
-                  filename={
-                    exportableFeedbackData[0].sectionName +
-                    `_` +
-                    exportableFeedbackData[0].scriptName +
-                    `_feedback.csv`
-                  }
+                  filename={`Feedback for ${
+                    exportableFeedbackData[0].sectionName
+                  } in ${
+                    exportableFeedbackData[0].scriptName
+                  } on ${new Date()}.csv`}
                   data={exportableFeedbackData}
                   headers={CSV_FEEDBACK_HEADERS}
                 >
