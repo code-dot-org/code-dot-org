@@ -238,6 +238,7 @@ export default {
     element.style.width = '80px';
     element.style.fontFamily = fontFamilyStyles[0];
     element.style.fontSize = defaultFontSizeStyle;
+    element.style.borderStyle = 'solid';
     elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
 
     return element;
