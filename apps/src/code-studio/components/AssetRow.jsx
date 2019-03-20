@@ -5,13 +5,63 @@ import AssetThumbnail from './AssetThumbnail';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
+import Dialog, {Body} from '@cdo/apps/templates/Dialog';
+import Button from '../../templates/Button';
+import DialogFooter from '../../templates/teacherDashboard/DialogFooter';
 
 const styles = {
   deleteWarning: {
     paddingLeft: '34px',
     textAlign: 'left',
     color: color.red
+  },
+  leftAlign: {
+    textAlign: 'left'
   }
+};
+
+export function ConfirmImageDeleteDialog({
+  name,
+  usage,
+  onCancel,
+  handleDelete
+}) {
+  return (
+    <Dialog
+      title={i18n.warning()}
+      isOpen
+      handleClose={onCancel}
+      style={styles.leftAlign}
+    >
+      <Body>
+        <p>
+          {i18n.deleteUsedImage({
+            name: name,
+            value: usage,
+            places: usage > 1 ? i18n.places() : i18n.place()
+          })}
+        </p>
+        <DialogFooter>
+          <Button
+            onClick={onCancel}
+            text={i18n.no()}
+            color={Button.ButtonColor.gray}
+          />
+          <Button
+            onClick={handleDelete}
+            text={i18n.yesSure()}
+            color={Button.ButtonColor.orange}
+          />
+        </DialogFooter>
+      </Body>
+    </Dialog>
+  );
+}
+ConfirmImageDeleteDialog.propTypes = {
+  name: PropTypes.string.isRequired,
+  usage: PropTypes.number,
+  onCancel: PropTypes.func.isRequired,
+  handleDelete: PropTypes.func.isRequired
 };
 
 /**
@@ -36,14 +86,19 @@ export default class AssetRow extends React.Component {
 
   state = {
     action: 'normal',
-    actionText: ''
+    actionText: '',
+    usage: 0
   };
 
   /**
    * Confirm the user actually wants to delete this asset.
    */
   confirmDelete = () => {
+    let places = $('#designModeViz').find(`[src$=\'${this.props.name}']`);
     this.setState({action: 'confirming delete', actionText: ''});
+    if (places.length > 0) {
+      this.setState({usage: places.length});
+    }
     firehoseClient.putRecord({
       study: 'delete-asset',
       study_group:
@@ -121,6 +176,14 @@ export default class AssetRow extends React.Component {
       case 'confirming delete':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
+            {this.state.usage > 0 && (
+              <ConfirmImageDeleteDialog
+                name={this.props.name}
+                usage={this.state.usage}
+                onCancel={this.cancelDelete}
+                handleDelete={this.handleDelete}
+              />
+            )}
             <button className="btn-danger" onClick={this.handleDelete}>
               Delete File
             </button>
