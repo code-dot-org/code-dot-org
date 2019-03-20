@@ -18,3 +18,5 @@
       do not have one available, one will be provided for you at the workshop.
   - if @workshop.course == Pd::Workshop::COURSE_CSF && @is_enrollment_receipt
     %li Your curiosity and readiness to learn!
+  - unless @workshop.teachercon? || @workshop.summer? || @workshop.fit_weekend?
+    %li Code.org Curriculum Guide.
