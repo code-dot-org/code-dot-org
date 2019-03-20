@@ -158,7 +158,8 @@ module Pd::Application
     end
 
     def formatted_teacher_email
-      "\"#{teacher_full_name}\" <#{user.email}>"
+      teacher_email = user.email.presence || sanitize_form_data_hash[:alternate_email]
+      "\"#{teacher_full_name}\" <#{teacher_email}>"
     end
 
     def formatted_principal_email

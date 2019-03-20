@@ -14,6 +14,7 @@ module Pd::Application
 
       return render :logged_out unless current_user
       return render :not_teacher unless current_user.teacher?
+      return render :no_teacher_email unless current_user.email.present?
 
       @application = TEACHER_APPLICATION_CLASS.find_by(user: current_user)
       return render :submitted if @application
