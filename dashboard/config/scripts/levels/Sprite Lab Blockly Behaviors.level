@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2018-05-31T20:34:38.000Z",
+  "game_id": 64,
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 9,
   "properties": {
@@ -52,7 +52,7 @@
     "show_type_hints": "true",
     "parent_level_id": 11086,
     "block_pool": "gamelab",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2018-07-05T20:37:21.000Z",
+  "game_id": 64,
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 255,
   "properties": {
@@ -49,7 +49,7 @@
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"createNewSpriteInGroup\",\r\n    \"inline\": false,\r\n    \"blockText\": \"make a new sprite \\n called {NAME} \\n in group {GROUP} \\n with costume {COSTUME} \\n at {LOCATION}\",\r\n    \"color\": [\r\n      355,\r\n      \".7\",\r\n      \".7\"\r\n    ],\r\n    \"args\": [\r\n      {\r\n        \"name\": \"NAME\",\r\n        \"assignment\": true,\r\n        \"customInput\": \"spritePicker\"\r\n      },\r\n      {\r\n        \"name\": \"GROUP\",\r\n        \"type\": \"Array\"\r\n      },\r\n      {\r\n        \"name\": \"COSTUME\",\r\n        \"customInput\": \"costumePicker\"\r\n      },\r\n      {\r\n        \"name\": \"LOCATION\",\r\n        \"type\": \"Location\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"createNewGroup\",\r\n    \"inline\": true,\r\n    \"blockText\": \"make a new group\",\r\n    \"returnType\": \"Array\"\r\n  },\r\n  {\r\n    \"func\": \"groupSize\",\r\n    \"inline\": true,\r\n    \"blockText\": \"size of {GROUP}\",\r\n    \"returnType\": \"Number\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"GROUP\",\r\n        \"type\": \"Array\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"groupAt\",\r\n    \"inline\": true,\r\n    \"blockText\": \"{GROUP} at {i}\",\r\n    \"returnType\": \"Sprite\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"GROUP\",\r\n        \"type\": \"Array\"\r\n      },\r\n      {\r\n        \"name\": \"i\",\r\n        \"type\": \"Number\"\r\n      }\r\n    ]\r\n  }\r\n]",
     "include_shared_functions": "false",
     "block_pool": "gamelab",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2018-11-30T20:35:47.000Z",
+  "game_id": 64,
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 831,
   "properties": {
@@ -41,12 +41,8 @@
     "validation_code": "if(tortoise.x>hare.x && tortoise.x>350){levelSuccess();}",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try editing the behaviors! \\n* Which value is controlling the speed of each sprite?\",\"hint_id\":\"behavior hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6eab8c19ece33bb3b302902c9cfc8161/Tortoise and Hare.mp3\"}]",
     "long_instructions": "Help the tortoise beat the hare!\r\n\r\n*Pretend you don't have a toolbox because I couldn't figure out how to remove it!",
-    "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "auto_run_setup": "DRAW_LOOP"
+    "auto_run_setup": "DRAW_LOOP",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

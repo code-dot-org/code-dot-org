@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2018-06-06T21:21:48.000Z",
+  "game_id": 64,
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
@@ -51,7 +51,6 @@
     "project_template_level_name": "Fish Tank Template",
     "short_instructions": "Use the `set background color` block to make the background blue.",
     "block_pool": "gamelab",
-    "contained_level_names": null,
     "preload_asset_list": null
   },
   "published": true,

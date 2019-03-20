@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2018-10-31T19:52:23.000Z",
+  "game_id": 64,
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
@@ -55,15 +55,12 @@
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"tumbling\",\r\n    \"blockText\": \"tumbling\",\r\n    \"returnType\": \"Behavior\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  }\r\n]",
     "block_pool": "gamelab",
     "name_suffix": "_2019",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "block_pools": [
       "GamelabJr",
       "SpriteLab2Beta"
     ],
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

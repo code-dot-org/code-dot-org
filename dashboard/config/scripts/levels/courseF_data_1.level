@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2019-02-25T19:03:16.000Z",
+  "game_id": 64,
+  "created_at": "2019-02-22T23:40:19.000Z",
   "level_num": "custom",
   "user_id": 833,
   "properties": {
@@ -39,11 +39,8 @@
     "pause_animations_by_default": "false",
     "parent_level_id": 17622,
     "mini_rubric": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "short_instructions": "Welcome to WildSim, the wildlife simulator YOU control! Click on the bunny, wolf, and carrot and watch what happens to the numbers above their head."
+    "short_instructions": "Welcome to WildSim, the wildlife simulator YOU control! Click on the bunny, wolf, and carrot and watch what happens to the numbers above their head.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

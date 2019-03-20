@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2018-03-27T18:10:23.000Z",
+  "game_id": 64,
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
@@ -48,7 +48,7 @@
     "long_instructions": "Check out these two new blocks - the green \"When dog is touching cat\" block will run everything attached to it when the dog touches the cat, and the \"Remove behavior\" block removes a behavior from a sprite.\r\n\r\nSee if you can make both the dog and cat stop moving when they run into each other.",
     "show_type_hints": "false",
     "block_pool": "gamelab",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

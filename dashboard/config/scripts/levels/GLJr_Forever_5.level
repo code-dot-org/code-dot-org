@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2018-03-28T03:41:20.000Z",
+  "game_id": 64,
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
@@ -49,7 +49,7 @@
     "long_instructions": "Now we have two sprites! Use a loop to make the dog jittery and make the cat wander",
     "show_type_hints": "false",
     "block_pool": "gamelab",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

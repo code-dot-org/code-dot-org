@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2018-04-12T19:58:01.000Z",
+  "game_id": 64,
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
@@ -48,7 +48,7 @@
     "parent_level_id": 12287,
     "long_instructions": "**It's time to make your own virtual pet!** You can change whatever code you want to to make your own pet. Here are some ideas:\r\n\r\n* Can you make your pet start something new when you click on it?\r\n* Can you make your pet run away when you drag the vacuum to it?\r\n* Can you add other animal friends to your pet's area?",
     "block_pool": "gamelab",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

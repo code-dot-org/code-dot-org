@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2019-02-25T04:46:28.000Z",
+  "game_id": 64,
+  "created_at": "2019-03-05T01:14:57.000Z",
   "level_num": "custom",
   "user_id": 9,
   "properties": {
@@ -56,11 +56,8 @@
     ],
     "mini_rubric": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"1481a30c-9795-4e24-903d-a64bbd43223c\",\r\n    \"ea85ba83-bac8-4e0c-a95d-48b717e13e50\",\r\n    \"3c1b31ad-2595-4ca5-a600-ba9e84d38a6f\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"1481a30c-9795-4e24-903d-a64bbd43223c\": {\r\n      \"name\": \"alligator\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/yqudwdcQUaU4jRACAJe9uQ/1481a30c-9795-4e24-903d-a64bbd43223c.png?version=n_o52lgMdGdrCAAIz6dNnzxdEeDRKuQC\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 55\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 4,\r\n      \"version\": \"n_o52lgMdGdrCAAIz6dNnzxdEeDRKuQC\"\r\n    },\r\n    \"ea85ba83-bac8-4e0c-a95d-48b717e13e50\": {\r\n      \"name\": \"python\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/yqudwdcQUaU4jRACAJe9uQ/ea85ba83-bac8-4e0c-a95d-48b717e13e50.png?version=fi6mAsKQ_5HOeifxKfdIrKwiJDdLj0Oi\",\r\n      \"frameSize\": {\r\n        \"x\": 99,\r\n        \"y\": 31\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"fi6mAsKQ_5HOeifxKfdIrKwiJDdLj0Oi\"\r\n    },\r\n    \"3c1b31ad-2595-4ca5-a600-ba9e84d38a6f\": {\r\n      \"name\": \"rabbit\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/yqudwdcQUaU4jRACAJe9uQ/3c1b31ad-2595-4ca5-a600-ba9e84d38a6f.png?version=LPsKCNfKIc.ejlz.BDb077bhF5oGad82\",\r\n      \"frameSize\": {\r\n        \"x\": 50,\r\n        \"y\": 43\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"LPsKCNfKIc.ejlz.BDb077bhF5oGad82\"\r\n    }\r\n  }\r\n}",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "long_instructions": "**Game Location:** The Everglades\r\n\r\n**Game Characters:** American Alligator (native to Everglades), Marsh Rabbit (native to Everglades), and the Burmese Python (non-native to Everglades)\r\n\r\n**Game:** Make any of the 3 characters as your protagonist. Include a goal and obstacle (if applicable) for your character. The game must be based on research you have done about each of the characters, what they eat, how often the reproduce, their natural predators, etc.\r\n\r\n**For Example:**\r\n\r\n* _Protagonist:_ Alligator\r\n* _Goal 1:_ Eat a Marsh Rabbit to survive\r\n* _Goal 2:_ Reproduce\r\n* _Obstacle 1:_ Get to the Marsh Rabbit before the Python does\r\n* _Obstacle 2:_ Don't get eaten by a Burmese Python that is larger than you.\r\n\r\nCreate a separate game with each of the characters as the protagonist and then compare which game is easier to succeed at. why is this? Do any of the characters experience less obstacles than others? Any of them experience more obstacles? Why is this?\r\n\r\nNow try combining all three of your games into one simulation that will demonstrate how these three species would interact in the real-world.\r\n"
+    "long_instructions": "**Game Location:** The Everglades\r\n\r\n**Game Characters:** American Alligator (native to Everglades), Marsh Rabbit (native to Everglades), and the Burmese Python (non-native to Everglades)\r\n\r\n**Game:** Make any of the 3 characters as your protagonist. Include a goal and obstacle (if applicable) for your character. The game must be based on research you have done about each of the characters, what they eat, how often the reproduce, their natural predators, etc.\r\n\r\n**For Example:**\r\n\r\n* _Protagonist:_ Alligator\r\n* _Goal 1:_ Eat a Marsh Rabbit to survive\r\n* _Goal 2:_ Reproduce\r\n* _Obstacle 1:_ Get to the Marsh Rabbit before the Python does\r\n* _Obstacle 2:_ Don't get eaten by a Burmese Python that is larger than you.\r\n\r\nCreate a separate game with each of the characters as the protagonist and then compare which game is easier to succeed at. why is this? Do any of the characters experience less obstacles than others? Any of them experience more obstacles? Why is this?\r\n\r\nNow try combining all three of your games into one simulation that will demonstrate how these three species would interact in the real-world.\r\n",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2018-05-16T21:59:57.000Z",
+  "game_id": 64,
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 9,
   "properties": {
@@ -54,13 +54,9 @@
     "block_pools": [
       "GamelabJr"
     ],
-    "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "short_instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
-    "long_instructions": "There's a mud puddle over in the corner.  \r\n\r\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown."
+    "long_instructions": "There's a mud puddle over in the corner.  \r\n\r\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

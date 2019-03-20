@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2019-01-31T21:59:03.000Z",
+  "game_id": 64,
+  "created_at": "2019-02-14T23:08:03.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
@@ -53,11 +53,7 @@
     "include_shared_functions": "true",
     "custom_helper_library": "function allSpritesWithCostume(costumeName) {\r\n  var allSprites = World.allSprites;\r\n  var sprites = [];\r\n  for(var i = 0; i < allSprites.length; i++) {\r\n    if(allSprites[i].getAnimationLabel() === costumeName) {\r\n      sprites.push(allSprites[i]);\r\n    }\r\n  }\r\n  return sprites;\r\n}\r\n\r\nfunction addBehaviorSimpleFlexible(sprite, behavior) {\r\n  if(sprite && behavior) {\r\n    if(sprite.length === undefined) {\r\n      addBehavior(sprite, behavior, behavior.name);\r\n    } else {\r\n      for(var i = 0; i < sprite.length; i++) {\r\n      \taddBehavior(sprite[i], behavior, behavior.name);\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\nfunction changePropByFlexible(sprite, property, val) {\r\n  if (sprite === undefined || val === undefined) {\r\n    return;\r\n  }\r\n  if(sprite.length === undefined) {\r\n  \tchangePropBy(sprite, property, val);\r\n  } else {\r\n  \tfor(var i = 0; i < sprite.length; i++) {\r\n      changePropBy(sprite[i], property, val);\r\n    }\r\n  }\r\n}\r\n\r\nfunction clickedOnFlexible(condition, sprite, event) {\r\n  var typeOfClick = condition === \"when\" ? mouseIsOver : mousePressedOver;\r\n  if(sprite.length === undefined) {\r\n    touchEvents.push({type: typeOfClick, event: event, sprite: sprite});\r\n  } else {\r\n    for(var i = 0; i < sprite.length; i++) {\r\n      touchEvents.push({type: typeOfClick, event: event, sprite: sprite[i]});\r\n    }\r\n  }\r\n}",
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"allSpritesWithCostume\",\r\n    \"inline\": false,\r\n    \"blockText\": \"aalab {COSTUME}\",\r\n    \"returnType\": \"Sprite\",\r\n    \"color\": [\r\n      355,\r\n      \".7\",\r\n      \".7\"\r\n    ],\r\n    \"args\": [\r\n      {\r\n        \"name\": \"COSTUME\",\r\n        \"customInput\": \"costumePicker\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"addBehaviorSimpleFlexible\",\r\n    \"blockText\": \"aalab sprite {SPRITE} begins {BEHAVIOR}\",\r\n    \"inline\": false,\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\",\r\n        \"type\": \"Behavior\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"changePropByFlexible\",\r\n    \"blockText\": \"aalab change {SPRITE} {PROPERTY} by {VAL}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"PROPERTY\",\r\n        \"options\": [\r\n          [\r\n            \"size\",\r\n            \"\\\"scale\\\"\"\r\n          ],\r\n          [\r\n            \"rotation\",\r\n            \"\\\"rotation\\\"\"\r\n          ],\r\n          [\r\n            \"x position\",\r\n            \"\\\"x\\\"\"\r\n          ],\r\n          [\r\n            \"y position\",\r\n            \"\\\"y\\\"\"\r\n          ],\r\n          [\r\n            \"movement direction\",\r\n            \"\\\"direction\\\"\"\r\n          ]\r\n        ]\r\n      },\r\n      {\r\n        \"name\": \"VAL\",\r\n        \"type\": \"Number\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"color\": [\r\n      140,\r\n      1,\r\n      0.74\r\n    ],\r\n    \"func\": \"clickedOnFlexible\",\r\n    \"blockText\": \"{CONDITION} {SPRITE} clicked\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"CONDITION\",\r\n        \"options\": [\r\n          [\r\n            \"when\",\r\n            \"\\\"when\\\"\"\r\n          ],\r\n          [\r\n            \"while\",\r\n            \"\\\"while\\\"\"\r\n          ]\r\n        ]\r\n      },\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\",\r\n        \"defer\": false\r\n      }\r\n    ],\r\n    \"eventBlock\": true\r\n  }\r\n]",
-    "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

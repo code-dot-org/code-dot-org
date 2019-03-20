@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2018-03-28T18:45:39.000Z",
+  "game_id": 64,
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 156,
   "properties": {
@@ -48,7 +48,7 @@
     "custom_blocks": "[\n  {\n    \"func\": \"moveTowards\",\n    \"blockText\": \"move towards {TARGET}\",\n    \"returnType\": \"Behavior\",\n    \"args\": [\n      {\n        \"name\": \"TARGET\",\n        \"type\": \"Sprite\"\n      }\n    ],\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"danceParty\",\n    \"blockText\": \"danceParty\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"jitter\",\n    \"blockText\": \"jitter\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"wander\",\n    \"blockText\": \"wander\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  }\n]\n",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\",\r\n    \"64c3a750-bf38-40a2-9efd-92369df37420\",\r\n    \"8ece3627-0db8-4171-84cc-6fa7a60a830b\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\": {\r\n      \"name\": \"dog\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Fstudio.code.org%252Fv3%252Fanimations%252FfyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA%252Fd19383c3-9b64-482d-811d-07f8997533ea.png%253Fversion%253Dv.GmQEfbU1j.B.l4vI46thaJVPawniCF\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 87\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"v.GmQEfbU1j.B.l4vI46thaJVPawniCF\"\r\n    },\r\n    \"64c3a750-bf38-40a2-9efd-92369df37420\": {\r\n      \"name\": \"bone\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/CTIG3FdqTB5gM5-niXMMLg/64c3a750-bf38-40a2-9efd-92369df37420.png?version=C_K1cncvqfnSz3QSL1FCOp8FIjvJLiPi\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 48\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"C_K1cncvqfnSz3QSL1FCOp8FIjvJLiPi\"\r\n    },\r\n    \"8ece3627-0db8-4171-84cc-6fa7a60a830b\": {\r\n      \"name\": \"ball\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/CTIG3FdqTB5gM5-niXMMLg/8ece3627-0db8-4171-84cc-6fa7a60a830b.png?version=Cxzahtz3Ee_n3xnudATKB2Cm6tsQ1n8.\",\r\n      \"frameSize\": {\r\n        \"x\": 50,\r\n        \"y\": 51\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"Cxzahtz3Ee_n3xnudATKB2Cm6tsQ1n8.\"\r\n    }\r\n  }\r\n}",
     "block_pool": "gamelab",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

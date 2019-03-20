@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2018-08-07T17:04:47.000Z",
+  "game_id": 64,
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 9,
   "properties": {
@@ -55,13 +55,9 @@
     "name_suffix": "_simple",
     "include_shared_functions": "false",
     "block_pool": "gamelab",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "preload_asset_list": null,
     "short_instructions": "Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?",
-    "long_instructions": "The giraffe is too dirty!\r\n\r\n1. Add a new soap sprite to the screen.\r\n2. When the giraffe and the soap touch, change the giraffe to its normal color.\r\n\r\n---\r\n\r\nTo change to the giraffe's normal color, use this block:\r\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\r\n      <value name=\"THIS\">\r\n        <block type=\"sprite_variables_get\">\r\n          <title name=\"VAR\">mySprite</title>\r\n        </block>\r\n      </value>\r\n    </block></xml>\r\n"
+    "long_instructions": "The giraffe is too dirty!\r\n\r\n1. Add a new soap sprite to the screen.\r\n2. When the giraffe and the soap touch, change the giraffe to its normal color.\r\n\r\n---\r\n\r\nTo change to the giraffe's normal color, use this block:\r\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\r\n      <value name=\"THIS\">\r\n        <block type=\"sprite_variables_get\">\r\n          <title name=\"VAR\">mySprite</title>\r\n        </block>\r\n      </value>\r\n    </block></xml>\r\n",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

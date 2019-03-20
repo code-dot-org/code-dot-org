@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2018-08-09T00:05:52.000Z",
+  "game_id": 64,
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 9,
   "properties": {
@@ -53,7 +53,7 @@
     "include_shared_functions": "true",
     "validation_code": "(function () {\r\n  if (!validationProps.successCount) {\r\n    validationProps.successCount = 0;\r\n  }\r\n  if (sprites.length) {\r\n    var sprite = sprites[0];\r\n    if (!validationProps.behavior) {\r\n      validationProps.behavior = sprite.behaviors[0];\r\n    }\r\n    if (keyDown('up')) {\r\n      if (sprite.behaviors[0].func != validationProps.behavior.func) {\r\n        validationProps.success = true;\r\n      }\r\n    }\r\n    if (validationProps.success) {\r\n      validationProps.successCount++;\r\n      if (validationProps.successCount > 50) {\r\n        levelSuccess();\r\n      }\r\n    }\r\n  }\r\n})();",
     "block_pool": "gamelab",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2018-12-03T21:18:50.000Z",
+  "game_id": 64,
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 831,
   "properties": {
@@ -47,11 +47,8 @@
       "behaviors 4 predict"
     ],
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"behaviors_edit\",\r\n  \"callout_text\": \"Click here to see how this behavior works.\",\r\n  \"element_id\": \"#callout\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": -15,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "open_function_definition": "move south and west"
+    "open_function_definition": "move south and west",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
