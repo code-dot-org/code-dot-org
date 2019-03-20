@@ -30,10 +30,10 @@ STATUSES_TO_REPORT = %w(new open)
 MONITORING_GROUPS = {
   # "slack-room-name" => ["Zendesk group name", "Zendesk group name", ...]
   "learning-platform" => ["Learning Platform"],
+  "star-labs-cabal" => ["*Labs"],
   # "developers" => ["Developers"],
   # "plc-engineering" => ["PLC Tools"],
   # "privacy" => ["Privacy"],
-  # "star-labs-cabal" => ["*Labs"],
   # "user-accounts" => ["Accounts"],
 }
 
