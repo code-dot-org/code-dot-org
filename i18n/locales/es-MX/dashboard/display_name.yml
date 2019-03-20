@@ -119,6 +119,11 @@ es-MX:
       CSD Set Scale Map_2018: Cambiar escala de sensor
       CSD Set Scale Map_2019: Cambiar escala de sensor
       CSD Timed For Loop Map: Bucles con tiempo
+      CSD U1 Feedback FR: Pregunta 6
+      CSD U1 Test Collaborate FR: Pregunta 7
+      CSD U1 Test Feedback FR: Pregunta 6
+      CSD U1 Test Iteration FR: Pregunta 8
+      CSD U1 Test storage FR: Pregunta 5
       CSD U1L01 TFMD_2018: Resumen de la lección
       CSD U1L01 TFMD_2019: Resumen de la lección
       CSD U1L02 TFMD_2018: Resumen de la lección
@@ -169,15 +174,19 @@ es-MX:
       CSD U2 Layout Properties Map: Propiedades de diseño
       CSD U2 Layout Properties Map_2018: Propiedades de diseño
       CSD U2 Layout Properties Map_2019: Propiedades de diseño
-      CSD U2 Pair Programming Video: Programación en Parejas
-      CSD U2 Pair Programming Video_2018: Programación en Parejas
-      CSD U2 Pair Programming Video_2019: Programación en Parejas
+      CSD U2 Pair Programming Video: Programación en parejas
+      CSD U2 Pair Programming Video_2018: Programación en parejas
+      CSD U2 Pair Programming Video_2019: Programación en parejas
       CSD U2 RGB intro: Widget RGB
       CSD U2 RGB intro_2018: Widget RGB
       CSD U2 RGB intro_2019: Widget RGB
       CSD U2 Style Sheet Map: CSS y hojas de estilo
       CSD U2 Style Sheet Map_2018: CSS y hojas de estilo
       CSD U2 Style Sheet Map_2019: CSS y hojas de estilo
+      CSD U2 Test Bug FR: Pregunta 8
+      CSD U2 Test Bug: Pregunta 8
+      CSD U2 Test Copyright FR: Pregunta 9
+      CSD U2 Test DigCit FR: Pregunta 10
       CSD U2 Text Properties Map: Propiedades de texto CSS
       CSD U2 Text Properties Map_2018: Propiedades de texto CSS
       CSD U2 Text Properties Map_2019: Propiedades de texto CSS
@@ -908,9 +917,9 @@ es-MX:
       CourseEF_video_IntroSpriteLab_2019: Esto es Sprite Lab
       CourseEF_video_MakeSprite: Como hacer un sprite
       CourseEF_video_MakeSprite_2019: Como hacer un sprite
-      CourseE_Project_SpriteLab: Proyecto de Laboratorio de gráficos del Curso E
-      CourseE_Project_SpriteLab_2019: Proyecto de Laboratorio de gráficos del Curso E
-      CourseE_hoops - take2: Rayas horizontales
+      CourseE_Project_SpriteLab: Proyecto Curso E Sprite Lab
+      CourseE_Project_SpriteLab_2019: Proyecto Curso E Sprite Lab
+      CourseE_hoops - take2: Hoops
       CourseE_hoops: 'Conejito '
       CourseE_hoops_2019: 'Conejito '
       CourseF_Project_Revise_SpriteLab: Revisar Proyecto de Laboratorio de gráficos
@@ -1084,6 +1093,12 @@ es-MX:
       U4 L06 Thermostat App v5 Code: Aplicación de Termostato v.5
       U4 L06 Thermostat App v5: Aplicación de Termostato v.5
       U4 L06 Thermostat App v6 Code: Aplicación de Termostato v.5
+      U4 L06 Thermostat App v6: Aplicación de Termostato v6
+      U4 L08 Conditionals Make Project Flowchart: Aplicación de entrada de Museo
+      U4 L08 Conditionals Make Project Sample: Aplicación de entrada de Museo
+      U4 L09 Score Clicker Investigate: Puntuación de Clicker
+      U4 L09 Thermostat App v7: Aplicación de Termostato v6
+      U4 My Pet Rock Example App: Mi aplicación Pet Rock
       U4 String Concatenation Pattern: Patrones del contador
       U4 Variable with String Concatenation Pattern: Variable con Patrón de Concatenación de Cadena
       U4-AP-Practice-Choose-The-Data-Concern: "(nuevo) Respuesta de Práctica AP - Identificar la preocupación de Datos"
@@ -1098,6 +1113,7 @@ es-MX:
       'U4L06 Introduction to Conditionals: if Statements': 'Condicionales: Declaraciones Si'
       'U4L06 Introduction to Conditionals: if-else Statements': 'Condicionales: Declaraciones Si-Else'
       'U4L06 Introduction to Conditionals: if-else-if Statements': 'Condicionales: Declaraciones Si-Else-Si'
+      U4L10 My Pet Rock Example App: Mi aplicación Pet Rock
       U5 AP Create Practice onEvent Doesnt Count: "(nuevo) Respuesta práctica AP - elegir una abstracción"
       U5 AP Create Practice onEvent Doesnt Count_2018: "(nuevo) Respuesta práctica AP - elegir una abstracción"
       U5 AP Create Practice onEvent Doesnt Count_2019: "(nuevo) Respuesta práctica AP - elegir una abstracción"
@@ -1125,9 +1141,9 @@ es-MX:
       courseA_video_Stevie: Stevie y el gran proyecto
       courseA_video_Stevie_2018: Stevie y el gran proyecto
       courseA_video_Stevie_2019: Stevie y el gran proyecto
-      courseB_video_Unspotted: Errores desapercibidos
-      courseB_video_Unspotted_2018: Errores desapercibidos
-      courseB_video_Unspotted_2019: Errores desapercibidos
+      courseB_video_Unspotted: Errores no detectados
+      courseB_video_Unspotted_2018: Errores no detectados
+      courseB_video_Unspotted_2019: Errores no detectados
       courseE_Dogger_2: Ejemplo de Dogger
       courseE_Dogger_2_2019: Ejemplo de Dogger
       courseF_artist_for1: Juego libre de bucles "for" (Comienzo)
@@ -1135,7 +1151,7 @@ es-MX:
       courseF_artist_for1_2019: Juego libre de bucles "for" (Comienzo)
       courseF_project_1: Proyecto de ejemplo de Laboratorio de gráficos
       courseF_project_1_2019: Proyecto de ejemplo de Laboratorio de gráficos
-      courseF_video_csMatters: Fin de proyectos del curso
+      courseF_video_csMatters: Proyectos Final de Curso
       courseF_video_csMatters_2018: 'Video: Materias CS'
       courseF_video_csMatters_2019: 'Video: Materias CS'
       coursee_explore_4: Defensor alienígena

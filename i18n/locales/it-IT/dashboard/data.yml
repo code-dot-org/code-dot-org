@@ -38,6 +38,7 @@ it:
         Custom: Artista
         CustomStudio: Laboratorio
         Gamelab: Sviluppo Giochi
+        Spritelab: Laboratorio dei Personaggi
     trophy:
       name:
         Bronze: Bronzo

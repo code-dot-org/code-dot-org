@@ -38,6 +38,7 @@ el:
         Custom: Καλλιτέχνης
         CustomStudio: Εργαστήριο Παιχνιδιού
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Χάλκινο

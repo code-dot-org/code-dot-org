@@ -165,15 +165,20 @@ gl:
       de privacidade</a>.
     additional_information: Necesitamos máis informacións para continuarmos o proceso
       de creacción da conta.
+    user_type_button: Actualizar tipo de conta
     user_type_label: Tipo de conta
     user_type_teacher: Profesor
     user_type_student: Estudante
     field_is_required: é obrigatorio
     accept_terms: Debe estar de acordo para crear unha conta
     error: Ocorreu un erro.
+    email_preference_question: Marca esta casilla para recibir correos sobre melloras
+      nos nosos cursos, oportunidades locales, ou outras noticias de informática.
+      (aproximadamente unha ao mes)
     email_preference_privacy: "(Ver a nosa política de privacidade)"
     email_preference_yes: Si
     email_preference_no: Non
+    email_preference_required: Tes que especificar un e-mail de preferencia.
   school_info:
     title: Información da escola (opcional)
     school_country: País da escola

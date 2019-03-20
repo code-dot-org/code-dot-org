@@ -68,8 +68,8 @@ pl:
   trophies: Trofea
   courses: Kursy
   courses_page:
-    title_student: Ucz się z Code Studio
-    title_teacher: Ucz z Code Studio
+    title_student: Ucz się Informatyki
+    title_teacher: Ucz informatyki
   unplugged_activity: Aktywność unplugged (bez komputera)
   of: z
   more: WIĘCEJ
@@ -372,10 +372,11 @@ pl:
       artist: Artysta
       gamelab: Laboratorium Gier (Game Lab)
       playlab: Play Lab
+      spritelab: Sprite Lab
       minecraft: Minecraft
       flappy: Flappy
       dance: Potańcówka
-      view_all: Zobacz wszystkie projekty...
+      view_all: Obejrzyj wszystkie projekty...
     popup:
       progress_for_user: "%{name} w toku"
       progress: Twoje postępy
@@ -660,8 +661,8 @@ pl:
     help_from_html: Szczególnie chcielibyśmy podziękować inżynierom z firm Google,
       Microsoft, Facebook i Twitter, jak i wielu innym, którzy pomogli nam utworzyć
       te materiały.
-    help_from_html_old: Inżynierowie z Google, Microsoft, Facebook i Twitter pomogli
-      utworzyć te materiały.
+    help_from_html_old: Inżynierowie z Amazon, Google i Microsoft pomogli utworzyć
+      te materiały.
     art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa
       zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm.
       Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney.
@@ -784,11 +785,11 @@ pl:
       title: Klasyczny labirynt
       body: Wypróbuj podstawy informatyki. Miliony dały im już szansę.
     flappy:
-      title: Flappy Code
+      title: Kod Flappiego
       body: Czy chciałbyś utworzyć własną grę w mniej niż 10 minut? Wypróbuj nasz
-        poradnik Flappy Code!
+        samouczek dla kodowania Flappiego!
     20-hour:
-      title: Przyspieszony Kurs
+      title: Przyspieszony kurs
       body: Ten 20-godzinny godzinny kurs pokrywa podstawowe pojęcia z zakresu informatyki
         i programowania z kursów 2-4. Kurs jest przeznaczony dla uczniów w wieku 10-18
         lat. Przejrzyj bogatsze w doświadczenia kursy 2-4!
@@ -802,23 +803,23 @@ pl:
         użytkowników
     gamelab:
       title: Laboratorium Gier (Game Lab)
-      body: Laboratorium Gier jest środowiskiem programistycznym, w którym można wykonać
-        proste animacje i gry używając obiektów i postaci, które współdziałają ze
-        sobą.
+      body: Laboratorium Gier (Game Lab) jest środowiskiem programistycznym, w którym
+        możesz wykonać proste animacje i gry używając obiektów i postaci, które współdziałają
+        ze sobą.
       audience: Wiek 13+
       cta: Zobacz instrukcję
     hoc-encryption:
       title: Proste szyfrowanie
-      body: Studenci nauczą się technik tworzenia i łamania zaszyfrowanych wiadomości.
+      body: Uczniowie poznają techniki tworzenia i łamania zaszyfrowanych wiadomości.
     weblab:
       title: Laboratorium Sieci (beta)
-      body: Web Lab to środowisko programowania, w którym można tworzyć proste strony
-        www za pomocą HTML i CSS. Zaprojektuj swoją stronę www i udostępnij ją w kilka
-        sekund.
+      body: Web Lab (Laboratorium sieci) to środowisko programowania, w którym możesz
+        tworzyć proste strony internetowe za pomocą HTML i CSS. Zaprojektuj swoją
+        stronę i udostępnij ją natychmiast.
       audience: Wiek 13+
       cta: Zobacz instrukcję
     frozen:
-      title: Frozen
+      title: Kraina lodu (Frozen)
     starwars:
       title: Gwiezdne Wojny
     infinity:
@@ -831,7 +832,7 @@ pl:
     minecraft2016:
       title: Minecraft
       body: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry
-        Minecraft.
+        Minecrafta.
     aquatic:
       title: Minecraft
     hero:
@@ -840,8 +841,9 @@ pl:
         podróżując po świecie Minecraftu.
     sports:
       title: Zawody
-      body: Stwórz grę w koszykówkę albo włąsną mieszankę różnych sportów.
+      body: Stwórz grę w koszykówkę lub mieszankę różnych sportów.
     text-compression:
+      title: Kompresja tekstu
       body: W tej lekcji uczniowie użyją Widżetu Kompresji Tekstu, by skompresować
         tekst, zastępując wzorce symbolami.
     unplugged:
@@ -854,7 +856,7 @@ pl:
       body_short: Jeżeli nie macie dostępu do komputerów, to wypróbujcie w klasie
         te lekcje bez komputerów.
     unplugged_conditionals:
-      title: Warunkowe
+      title: Zdania z warunkami
       body: Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności bez komputera,
         przy użyciu talii kart.
     widgets:
@@ -1279,7 +1281,7 @@ pl:
       subjects:
         cs: Informatyka
         math: Matematyka
-        science: Nauka/Przyroda
+        science: Przyroda/Nauka
         la: Sztuki języków
       resources:
         kodable: Kodable

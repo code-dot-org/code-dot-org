@@ -253,7 +253,7 @@
     "MATH_RANDOM_FLOAT_TITLE_RANDOM": "隨機分數",
     "MATH_RANDOM_FLOAT_TOOLTIP": "回傳一個大於等於 0.0，但小於 1.0 的隨機數字。",
     "MATH_RANDOM_INT_HELPURL": "",
-    "MATH_RANDOM_INT_TITLE": "隨機整數（%1 到 %2）",
+    "MATH_RANDOM_INT_TITLE": "隨機取數 %1 到 %2",
     "MATH_RANDOM_INT_TOOLTIP": "回傳介於指定數字之間的隨機整數（可以等於指定數）。",
     "MATH_ROUND_HELPURL": "",
     "MATH_ROUND_OPERATOR_ROUND": "四捨五入",

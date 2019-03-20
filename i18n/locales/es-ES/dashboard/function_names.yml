@@ -84,6 +84,7 @@ es:
       do something: hacer algo
       filter_pixel: filtrar_píxel
       draw_image: diseñar_imagen
+      checkSimulationEnd: checkSimulationEnd
       witch ending: fin de la bruja
       story: historia
       starting path: camino de partida

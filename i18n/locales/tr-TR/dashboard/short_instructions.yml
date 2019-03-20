@@ -543,19 +543,6 @@ tr:
         *
         Olay karesinin içindeki yeni 'bulutuHareketEttir(isim)' fonksiyonunuzu her bir bulut ismi için birer kez çağırın.\r
          *(İpucu: bu birçok kere çağırdığınız 'bulutDögüsü(isim) fonksiyonuyla benzer.
-      CSD U6 params modify clouds_2019: |-
-        #Bulutlar\r
-        \r
-        Ses sensörüne vurduğunuzda bu program bulutları hareket ettiriyor, ama henüz bitmedi.\r
-        \r
-        #
-        Bunu yap\r
-        *Herhangi bir bulutu hareket ettirecek yeni bir fonksiyon oluşturun 'bulutu HareketEttir(isim)'.\r
-         *
-        (İpucu: 'bulutuHareketEttir0' fonksiyonuyla neredeyse aynı kodu kullanacaksınız)\r
-        *
-        Olay karesinin içindeki yeni 'bulutuHareketEttir(isim)' fonksiyonunuzu her bir bulut ismi için birer kez çağırın.\r
-         *(İpucu: bu birçok kere çağırdığınız 'bulutDögüsü(isim) fonksiyonuyla benzer.
       CSD U6 params modify planes: |-
         # Çoklu-uçak Kumandası\r
         \r
@@ -621,6 +608,7 @@ tr:
       CSPU5_U3L15 full clicker app: Tıkırtı oyununu tamamla! (Tüm talimatlar için tıklayınız)
       CSPU5_U3L15 full clicker app_2018: Tıkırtı oyununu tamamla! (Tüm talimatlar için tıklayınız)
       CSPU5_U3L15 full clicker app_2019: Tıkırtı oyununu tamamla! (Tüm talimatlar için tıklayınız)
+      CoureE_HOC 2018 Level_7a: Sandık bulmak için bu su altı harabelerini araştır.
       Course 2 Bee Loops 1: 'Merhaba , ben bir arıyım. Çiçeklerdeki nektarları toplamama yardım eder misin? '
       Course 2 Maze Loops 1: 5 blok kullanarak domuzcuğa ulaştırabilir misin?
       Course 4 2: Arı sadece nektar istiyor. Unutmayın ki bütün nesneler çiçek değildir. Sadece çiçeklerden nektar toplamak için kontrol edin.

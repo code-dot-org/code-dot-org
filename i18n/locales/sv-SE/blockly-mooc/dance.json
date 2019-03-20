@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Du behöver använda en annan dans.",
   "danceFeedbackNeedEveryTwoMeasures": "Försäkra dig om att du använder ”varannan åtgärd”-blocket",
   "danceFeedbackNeedMakeANewDancer": "Använd ”gör ett nytt”-blocket för att skapa en andra dansare.",
+  "danceFeedbackKeyEvent": "",
   "measure": "Åtgärd:"
 }

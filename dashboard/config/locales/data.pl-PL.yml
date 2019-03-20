@@ -13,7 +13,7 @@ pl:
         Artist2: Artysta 2
         Unplug5: Funkcje
         Farmer: Rolnik
-        Unplug6: Warunkowe
+        Unplug6: Zdania z warunkami
         Artist3: Artysta 3
         Unplug7: Pisanie piosenek
         Farmer2: Rolnik 2
@@ -39,6 +39,7 @@ pl:
         Custom: Artysta
         CustomStudio: Play Lab
         Gamelab: Laboratorium Gier (Game Lab)
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Brąz
@@ -605,7 +606,7 @@ pl:
         C4_function_edit: Edytowanie Funkcji
         C4_function_create: Tworzenie Funkcji
         C4_function_parameters: Funkcje z parametrami
-        C4_conditionals: Warunkowe
+        C4_conditionals: Zdania z warunkami
         C4_unplugged_algorithms: Algorytmy z Tangramami
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Zmienne w Kopertach
