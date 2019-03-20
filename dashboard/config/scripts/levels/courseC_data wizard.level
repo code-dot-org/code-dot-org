@@ -60,8 +60,8 @@
     "default_num_example_blocks": "false",
     "background": "rainbow",
     "mini_rubric": "false",
-    "preload_asset_list": null,
-    "encrypted": "false"
+    "encrypted": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
