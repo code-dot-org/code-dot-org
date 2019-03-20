@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Lesson Overview",
-    "reference": "/curriculum/csp-18/unit5/14/overview/index.html",
+    "reference": "/curriculum/csp-19/unit5/14/overview/index.html",
     "parent_level_id": 13986,
     "teacher_markdown": "### Notes about this lesson\r\n\r\nThere are two major things happening in this lesson\r\n\r\n1. Using the `event` parameter from `onEvent` to determine which key was pressed.  \r\n2. Modifying the \"My Favority Things\" Apps made in the last lesson\r\n\r\n**Helping Students with Incomplete “My Favorite Things” Apps**: \r\n   \r\nIt is quite possible that some of your students will not have succeeded in creating the text version of the **My Favorite Things** app. Since this lesson asks students to extend that project, it might be a challenge for those students to participate. Some strategies are below.\r\n\r\n* Let students continue working on the text version of their app. While this lesson introduces new event types, it falls in a sequence focused on arrays. Students can still participate in discussions about refactoring code and will be exposed to the new key events.\r\n\r\n* Provide students the **exemplar version** of the text-based **My Favorite Things** app. They can Remix the project and work on it in Free Play mode (i.e., outside of the curriculum). This way, they have a clean starting point and focus on the content of the lesson. If they wish, students can copy the code into Code Studio and will only need to create the UI elements themselves. \r\n\r\n[key]\r\n\r\n* [My Favorite Things Exemplar](https://levelbuilder-studio.code.org/projects/applab/crEIVQmJhiqUgJOEPmy8Eg/view)\r\n\r\n[/key]\r\n",
     "name_suffix": "_2019"

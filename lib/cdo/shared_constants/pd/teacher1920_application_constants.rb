@@ -128,6 +128,8 @@ module Pd
         principal_schedule_confirmed: 'Are you committed to including Computer Science <Program> on the master schedule in 2019-20 if <Teacher Name> is accepted into the program?',
         principal_implementation: "To participate in Code.org's Computer Science <Program> Professional Learning Program, we require that this course be offered in one of the following ways. Please select which option will be implemented at your school.",
         principal_diversity_recruitment: 'Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?',
+        contact_invoicing: "Contact name for invoicing",
+        contact_invoicing_detail: "Contact email or phone number for invoicing",
       }
     }.freeze
 
@@ -235,6 +237,9 @@ module Pd
       pay_fee: {teacher: :pay_fee, principal: :principal_pay_fee},
 
       how_heard: {teacher: :how_heard, principal: :principal_how_heard},
+
+      contact_invoicing: {principal: :principal_contact_invoicing},
+      contact_invoicing_detail: {principal: :principal_contact_invoicing_detail},
 
       title_i_status: {stats: :title_i_status},
       school_type: {teacher: :school_type, stats: :school_type},
@@ -430,6 +435,8 @@ module Pd
         :pay_fee,
         :how_heard,
         :share_ap_scores,
+        :contact_invoicing,
+        :contact_invoicing_detail
       ],
       nces: [
         :title_i_status,
