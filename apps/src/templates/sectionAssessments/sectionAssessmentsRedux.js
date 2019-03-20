@@ -256,7 +256,10 @@ export const getCurrentScriptAssessmentList = state =>
   computeScriptAssessmentList(
     state.sectionAssessments,
     state.scriptSelection.scriptId
-  );
+  ).concat({
+    id: 0,
+    name: 'All teacher feedback in this unit'
+  });
 
 // Get the student responses for assessments in the current script and current assessment
 export const getAssessmentResponsesForCurrentScript = state => {
