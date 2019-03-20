@@ -469,6 +469,18 @@ module Api::V1::Pd
       assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
     end
 
+    test 'do not re-lock locked applications on update' do
+      sign_in @workshop_admin
+      @csp_facilitator_application.update(status: 'declined', locked_at: Time.zone.now)
+      @csp_facilitator_application.reload
+      assert @csp_facilitator_application.locked?
+
+      Pd::Application::Facilitator1920Application.any_instance.expects(:lock!).never
+
+      # edit locked application
+      post :update, params: {id: @csp_facilitator_application.id, application: {locked: true}}
+    end
+
     test 'workshop admins can lock and unlock applications' do
       sign_in @workshop_admin
       put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', locked: 'true'}}
