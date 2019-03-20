@@ -58,13 +58,15 @@ const styles = {
     margin: 0,
     padding: 0
   },
-  watchValue: {
+  watchItemDescription: {
     whiteSpace: 'nowrap',
     height: buttonSize,
-    lineHeight: buttonSize,
     marginLeft: 3,
     overflow: 'hidden',
     width: valueAndInputWidth
+  },
+  watchValue: {
+    whiteSpace: 'normal'
   },
   watchInputSection: {
     clear: 'both'
@@ -135,7 +137,13 @@ class Watchers extends React.Component {
       case 'regexp':
         return <span className="watch-value">[regexp]</span>;
       case 'array':
-        return <span className="watch-value">[array]</span>;
+        return (
+          <span style={styles.watchValue} className="watch-value">
+            {`[list (${obj.length})]`}
+            <br />
+            {`[${obj.toString()}]`}
+          </span>
+        );
       case 'function':
         // [function MyFunctionName]
         return (
@@ -377,7 +385,7 @@ class Watchers extends React.Component {
                 >
                   ×
                 </div>
-                <div style={styles.watchValue}>
+                <div style={styles.watchItemDescription}>
                   <span className="watch-variable">{varName}</span>
                   <span className="watch-separator">: </span>
                   {this.renderValue(varValue)}
