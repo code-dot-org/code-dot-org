@@ -22,7 +22,7 @@ module Pd
       understand_fee: 'By checking this box, you indicate that you understand there may be a fee for the professional learning program your teacher attends.',
       pay_fee: 'If there is a fee for the program, will your teacher or your school be able to pay for the fee?',
       contact_invoicing: "Contact name for invoicing (if applicable)",
-      contact_invoicing_detail: "Contact e-mail or phone number for invoicing (if applicable)",
+      contact_invoicing_detail: "Contact email or phone number for invoicing (if applicable)",
       confirm_principal: 'By submitting this application, I confirm that I am the principal of this school and agree to share my contact info, school info, and this application with my local Code.org Regional Partner.',
 
       school: 'School',

@@ -119,10 +119,12 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
 1. Install Node and Nodejs
-    1. Type `curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -`
-    1. And then `sudo apt-get install -y nodejs`
+    1. `curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -`
+    1. `sudo apt-get install -y nodejs`
 1. Ensure rbenv and ruby-build are properly installed
-    1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#installation) to verify rbenv is set up correctly.
+    1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to verify rbenv is set up correctly:
+        1. curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+    1. If there are any errors (they appear red), follow the [`rbenv` installation instructions] (https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`, following steps for **Ubuntu Desktop** so that config changes go into `.bashrc`.
     1. Install [ruby-build as a rbenv plugin](https://github.com/rbenv/ruby-build#readme)
 1. Install Ruby 2.5.0 with rbenv
     1. `rbenv install 2.5.0`
@@ -131,11 +133,11 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. `rbenv global 2.5.0`
     1. `rbenv rehash`
 1. Install yarn
-    1. First, type `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
-    1. Then `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-    1. And lastly, `sudo apt-get update && sudo apt-get install yarn=1.6.0-1`
+    1. `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
+    1. `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
+    1. `sudo apt-get update && sudo apt-get install yarn=1.6.0-1`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
-   1. Type `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
+   1. `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
 1. **IMPORTANT:** Read the following notes, then go back up to the [overview](#overview) and run the commands there.
    1. If, for any reason, you are forced to interrupt the `rake install` command before it completes,
       cd into dashboard and run `bundle exec rake db:drop` before trying `rake install` again

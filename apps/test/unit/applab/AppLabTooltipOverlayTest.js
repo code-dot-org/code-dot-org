@@ -121,6 +121,7 @@ describe('AppLabTooltipOverlay', () => {
           <AppLabTooltipOverlay {...TEST_PROPS} />
         );
         appLabTooltipOverlay.instance().onMouseMove({target: fakeElement});
+        appLabTooltipOverlay.update();
         result = appLabTooltipOverlay.find('TooltipOverlay');
       });
 
@@ -139,6 +140,7 @@ describe('AppLabTooltipOverlay', () => {
           <AppLabTooltipOverlay {...TEST_PROPS} />
         );
         appLabTooltipOverlay.instance().onMouseMove({target: fakeScreen});
+        appLabTooltipOverlay.update();
         result = appLabTooltipOverlay.find('TooltipOverlay');
       });
 
