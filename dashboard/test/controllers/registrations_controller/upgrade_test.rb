@@ -13,7 +13,7 @@ module RegistrationsControllerTests
     #
 
     test 'upgrade migrated word student to password without secret words fails' do
-      student_without_password = create :student_in_word_section, :multi_auth_migrated
+      student_without_password = create :student_in_word_section
       assert_empty student_without_password.hashed_email
       sign_in student_without_password
 
@@ -35,7 +35,7 @@ module RegistrationsControllerTests
     end
 
     test 'upgrade migrated word student to password with secret words succeeds' do
-      student_without_password = create :student_in_word_section, :multi_auth_migrated
+      student_without_password = create :student_in_word_section
       assert_empty student_without_password.hashed_email
       sign_in student_without_password
 
@@ -58,7 +58,7 @@ module RegistrationsControllerTests
     end
 
     test 'upgrade migrated picture student to password succeeds' do
-      student_without_password = create :student_in_picture_section, :multi_auth_migrated
+      student_without_password = create :student_in_picture_section
       assert_empty student_without_password.hashed_email
       sign_in student_without_password
 
@@ -80,7 +80,7 @@ module RegistrationsControllerTests
     end
 
     test 'upgrade migrated student to password account with parent email succeeds and sends email' do
-      student_without_password = create :student_in_picture_section, :multi_auth_migrated
+      student_without_password = create :student_in_picture_section
       assert_empty student_without_password.hashed_email
       sign_in student_without_password
 
@@ -112,7 +112,7 @@ module RegistrationsControllerTests
     end
 
     test 'upgrade migrated student to password account with malformed parent email fails and does not send email' do
-      student_without_password = create :student_in_picture_section, :multi_auth_migrated
+      student_without_password = create :student_in_picture_section
       assert_empty student_without_password.hashed_email
       sign_in student_without_password
 
