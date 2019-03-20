@@ -586,7 +586,7 @@ GameLab.prototype.afterInject_ = function(config) {
         'levelFailure'
       ].join(',')
     );
-    Blockly.JavaScript.addReservedWords(SpritelabReservedWords);
+    Blockly.JavaScript.addReservedWords(SpritelabReservedWords.join(','));
 
     // Don't add infinite loop protection
     Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
