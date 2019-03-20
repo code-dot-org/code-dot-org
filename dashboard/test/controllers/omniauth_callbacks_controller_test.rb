@@ -512,7 +512,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'clever: updates tokens when migrated user is found by credentials' do
     # Given I have a Clever-Code.org account
-    user = create :teacher, :with_migrated_clever_authentication_option
+    user = create :teacher, :clever_sso_provider
     assert user.migrated?
 
     # When I hit the clever oauth callback
@@ -1206,7 +1206,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: returns bad_request if session[:connect_provider] is expired' do
-    user = create :user, :multi_auth_migrated
+    user = create :user
     Timecop.freeze do
       setup_should_connect_provider(user, 3.minutes.ago)
       get :google_oauth2
@@ -1215,7 +1215,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: creates new google auth option for signed in user' do
-    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    user = create :user, uid: 'some-uid'
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: user.uid, refresh_token: '54321')
 
     @request.env['omniauth.auth'] = auth
@@ -1233,7 +1233,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: creates new windowslive auth option for signed in user' do
-    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    user = create :user, uid: 'some-uid'
     auth = generate_auth_user_hash(provider: 'windowslive', uid: user.uid)
 
     @request.env['omniauth.auth'] = auth
@@ -1251,7 +1251,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: creates new facebook auth option for signed in user' do
-    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    user = create :user, uid: 'some-uid'
     auth = generate_auth_user_hash(provider: 'facebook', uid: user.uid)
 
     @request.env['omniauth.auth'] = auth
@@ -1269,7 +1269,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: creates new clever auth option for signed in user' do
-    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    user = create :user, uid: 'some-uid'
     auth = generate_auth_user_hash(provider: 'clever', uid: user.uid)
 
     @request.env['omniauth.auth'] = auth
@@ -1287,7 +1287,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: creates new powerschool auth option for signed in user' do
-    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    user = create :user, uid: 'some-uid'
     auth = generate_auth_user_hash(provider: 'powerschool', uid: user.uid)
 
     @request.env['omniauth.auth'] = auth
@@ -1305,7 +1305,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: redirects to account edit page with an error if AuthenticationOption cannot save' do
-    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    user = create :user, uid: 'some-uid'
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: user.uid, refresh_token: '54321')
 
     @request.env['omniauth.auth'] = auth
@@ -1324,12 +1324,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "connect_provider: Performs takeover of an account with matching credential that has no activity" do
-    user = create :user, :multi_auth_migrated
+    user = create :user
 
     # Given there exists another user
     #   having credential X
     #   and having no activity
-    other_user = create :user, :multi_auth_migrated
+    other_user = create :user
     credential = create :google_authentication_option, user: other_user
     refute other_user.has_activity?
 
@@ -1349,13 +1349,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "connect_provider: Successful takeover also enrolls in replaced user's sections" do
-    user = create :user, :multi_auth_migrated
+    user = create :user
 
     # Given there exists another user
     #   having credential X
     #   and having no activity
     #   and enrolled in section Y
-    other_user = create :user, :multi_auth_migrated
+    other_user = create :user
     credential = create :google_authentication_option, user: other_user
     refute other_user.has_activity?
     section = create :section
