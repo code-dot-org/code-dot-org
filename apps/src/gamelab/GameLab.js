@@ -4,7 +4,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
-import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
+import {
+  GameLabInterfaceMode,
+  GAME_WIDTH,
+  SpritelabReservedWords
+} from './constants';
 import experiments from '../util/experiments';
 import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
@@ -582,30 +586,7 @@ GameLab.prototype.afterInject_ = function(config) {
         'levelFailure'
       ].join(',')
     );
-    Blockly.JavaScript.addReservedWords(
-      // Gamelab globals:
-      'CENTER,World,background,createEdgeSprites,createGroup,createSprite,drawSprites,edges,fill,' +
-        'keyDown,keyWentDown,keyWentUp,mousePressedOver,mouseWentDown,randomNumber,rect,text,textAlign,textSize,' +
-        // GamelabJr.interpreted.js:
-        'inputEvents,touchEvents,collisionEvents,callbacks,loops,sprites,score,game_over,show_score,title,subTitle,' +
-        'initialize,addBehavior,addBehaviorSimple,removeBehavior,removeBehaviorSimple,Behavior,normalizeBehavior,' +
-        'findBehavior,behaviorsEqual,whenUpArrow,whenDownArrow,whenLeftArrow,whenRightArrow,whenSpace,whileUpArrow,' +
-        'whileDownArrow,whileLeftArrow,whileRightArrow,whileSpace,whenMouseClicked,whenPressedAndReleased,clickedOn,' +
-        'spriteDestroyed,whenTouching,whileTouching,whenStartAndStopTouching,repeatWhile,forever,register,' +
-        'makeNewSpriteLocation,setAnimation,makeNewSprite,makeNewGroup,setProp,getProp,changePropBy,getDirection,' +
-        'moveForward,jumpTo,mirrorSprite,turn,debugSprite,randomLoc,setBackground,showScore,endGame,isDestroyed,' +
-        'showTitleScreen,hideTitleScreen,shouldUpdate,moveInDirection,unitVectorTowards,draw,' +
-        // Blocks:
-        'addBehaviorUntil,beginBehavior,bounceOff,bounceOffEdges,changeColor,changeColorBy,comment,createNewSprite,' +
-        'distance,draggable,edgesDisplace,enableDebug,getAnim,getFrameDelay,getThisSprite,hasBehavior,hsbColor,' +
-        'isTouchingEdges,joystickDirection,locationAdd,locationAt,locationConstant,locationDelta,locationEast,' +
-        'locationMouse,locationNorth,locationOf,locationSouth,locationWest,mixColors,moveInDirection2,' +
-        'pointInDirection,pointToward,randColor,randomColor,randomLocation,removeAllBehaviors,setDirection,' +
-        'setFrameDelay,setSizes,setupSim,spriteCostume,spriteDirection,spritesWhere,spritesWhereFirst,' +
-        'spritesWhereGenerator,spritesWhereLast,spritesWhereRandom,whenDownArrow,whenJoystick,whenKey,whenLeftArrow,' +
-        'whenRightArrow,whenTouchingAny,whenTrue,whenUpArrow,whileDownArrow,whileJoystick,whileKey,whileLeftArrow,' +
-        'whileRightArrow,whileUpArrow,xLocationOf,yLocationOf'
-    );
+    Blockly.JavaScript.addReservedWords(SpritelabReservedWords);
 
     // Don't add infinite loop protection
     Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
