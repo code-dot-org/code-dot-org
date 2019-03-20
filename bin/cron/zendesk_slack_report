@@ -28,24 +28,22 @@ STATUSES_TO_REPORT = %w(new open)
 
 # Slack room -> Zendesk group mappings to report on
 MONITORING_GROUPS = {
-  # "slack-room-name" => ["Zendesk group name", "Zendesk group name", ...]
-  "learning-platform" => ["Learning Platform"],
-  "star-labs-cabal" => ["*Labs"],
-  # "developers" => ["Developers"],
-  # "plc-engineering" => ["PLC Tools"],
-  # "privacy" => ["Privacy"],
-  # "user-accounts" => ["Accounts"],
+  # 'slack-room-name' => ['Zendesk group name', 'Zendesk group name', ...]
+  'learning-platform' => ['Learning Platform'],
+  'star-labs-cabal' => ['*Labs'],
+  # 'developers' => ['Developers'],
+  # 'plc-engineering' => ['PLC Tools'],
+  # 'privacy' => ['Privacy'],
+  # 'user-accounts' => ['Accounts'],
 }
 
 # Zendesk group -> Zendesk filter id mappings for helpful links (optional)
-# rubocop:disable Style/NumericLiterals
 GROUP_FILTERS = {
-  "Developers" => 47222126,
-  "Learning Platform" => 360082967212,
-  "PLC Tools" => 114103940251,
-  "*Labs" => 301129028,
+  'Developers' => '47222126',
+  'Learning Platform' => '360082967212',
+  'PLC Tools' => '114103940251',
+  '*Labs' => '301129028',
 }
-# rubocop:enable Style/NumericLiterals
 
 class Zendesk
   include HTTParty
