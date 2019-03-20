@@ -204,7 +204,6 @@ export default function sectionAssessments(state = initialState, action) {
     };
   }
   if (action.type === SET_FEEDBACK) {
-    console.log('setting feedback');
     return {
       ...state,
       feedbackByScript: {
@@ -884,10 +883,18 @@ export const getExportableAssessmentData = state => {
  * of CSV to download. Columns are studentName, stage, level, key concept, rubric, comment, timestamp, .
  */
 export const getExportableFeedbackData = state => {
-  console.log(
-    state.sectionAssessments.feedbackByScript[state.scriptSelection.scriptId]
-  );
-  return [];
+  let feedback = [];
+  let feedbackForCurrentScript =
+    state.sectionAssessments.feedbackByScript[state.scriptSelection.scriptId] ||
+    {};
+
+  Object.keys(feedbackForCurrentScript).forEach(feedbackId => {
+    feedbackId = parseInt(feedbackId, 10);
+    const feedbackObject = feedbackForCurrentScript[feedbackId];
+    feedback.push(feedbackObject);
+  });
+
+  return feedback;
 };
 
 /**

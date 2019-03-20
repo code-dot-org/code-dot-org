@@ -49,6 +49,7 @@ const CSV_FEEDBACK_HEADERS = [
   {label: 'Level', key: 'levelNum'},
   {label: 'Key Concept', key: 'keyConcept'},
   {label: 'Performance Level', key: 'performance'},
+  {label: 'Performance Level Details', key: 'performanceLevelDetails'},
   {label: 'Feedback', key: 'comment'},
   {label: 'Date Updated By Teacher', key: 'timestamp'}
 ];
