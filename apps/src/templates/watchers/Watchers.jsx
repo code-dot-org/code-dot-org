@@ -60,7 +60,8 @@ const styles = {
   },
   watchItemDescription: {
     whiteSpace: 'nowrap',
-    height: buttonSize,
+    //height: buttonSize,
+    minHeight: buttonSize,
     marginLeft: 3,
     overflow: 'hidden',
     width: valueAndInputWidth
@@ -141,7 +142,7 @@ class Watchers extends React.Component {
           <span style={styles.watchValue} className="watch-value">
             {`[list (${obj.length})]`}
             <br />
-            {`[${obj.toString()}]`}
+            {`[${parseArray(obj)}]`}
           </span>
         );
       case 'function':
@@ -469,4 +470,25 @@ function nonValueDescriptor(obj) {
 
 function wrapValue(index, length) {
   return (index + length) % length;
+}
+
+function parseArray(array) {
+  let parsedArray = '';
+  array.forEach((element, index, array) => {
+    if (Array.isArray(element)) {
+      parsedArray = parsedArray + 'list (' + element.length + ')';
+    } else if (typeof element === 'string') {
+      parsedArray = parsedArray + '"' + element + '"';
+    } else if (typeof element === 'object') {
+      parsedArray = parsedArray + 'object {}';
+    } else {
+      parsedArray = parsedArray + element;
+    }
+
+    if (index !== array.length - 1) {
+      parsedArray = parsedArray + ', ';
+    }
+  });
+
+  return parsedArray;
 }
