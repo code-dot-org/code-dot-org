@@ -63,7 +63,11 @@ class FeedbackDownload extends Component {
     return (
       <div>
         <CSVLink
-          filename={`Feedback for ${sectionName} in ${scriptName} on ${new Date().toDateString()}.csv`}
+          filename={i18n.feedbackDownloadFileName({
+            sectionName: sectionName,
+            scriptName: scriptName,
+            date: new Date().toDateString()
+          })}
           data={exportableFeedbackData}
           headers={HEADERS}
         >
@@ -73,20 +77,17 @@ class FeedbackDownload extends Component {
             color={Button.ButtonColor.gray}
           />
         </CSVLink>
-        <p>
-          {`This CSV file contains all feedback you’ve completed for your section
-            ${sectionName}
-           in levels within `}
-          <strong>{scriptName}</strong>
-          {`. You can leave feedback your students by going to a level in this unit, viewing a students work,
-             and clicking the “Feedback” tab`}
-        </p>
-        <FontAwesome icon="check_circle" className="fa" style={styles.icon} />
-        <p>
-          {
-            'We recommend checking student progress and giving feedback on levels marked as assessment opportunities.'
-          }
-        </p>
+        <div>
+          <p>
+            {i18n.feedbackDownloadOverviewPart1({sectionName: sectionName})}
+            <strong>{scriptName}</strong>
+            {i18n.feedbackDownloadOverviewPart2()}
+          </p>
+          <p>
+            <FontAwesome icon="check-circle" style={styles.icon} />
+            {i18n.feedbackDownloadRecommendation()}
+          </p>
+        </div>
       </div>
     );
   }

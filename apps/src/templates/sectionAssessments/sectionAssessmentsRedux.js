@@ -4,6 +4,7 @@ import {
   getSelectedScriptName
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 
 export const ALL_STUDENT_FILTER = 0;
 
@@ -909,18 +910,14 @@ export const getExportableFeedbackData = state => {
   return feedback;
 };
 
-/* Only CSD and CSP have the feedback feature currently */
+/*
+ * Only show feedback option if in experiment and its CSD and CSP
+ * TODO: Remove experiment code once we remove mini rubric experiment
+ * */
 export const doesCurrentCourseUseFeedback = state => {
-  const courseFamily = getSelectedScriptName(state);
-  if (courseFamily.includes('csp') || courseFamily.includes('csd')) {
-    return true;
-  }
-};
-
-export const isCurrentScriptCSP = state => {
-  const courseFamily = getSelectedScriptName(state);
-  if (courseFamily.includes('csp')) {
-    return true;
+  if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
+    const courseFamily = getSelectedScriptName(state);
+    return courseFamily.includes('csp') || courseFamily.includes('csd');
   }
 };
 
