@@ -92,7 +92,7 @@ class TeacherDashboard extends Component {
           <Route
             path={TeacherDashboardPath.assessments}
             component={props => (
-              <SectionAssessments sectionName={sectionName}/>
+              <SectionAssessments sectionName={sectionName} />
             )}
           />
           <Route

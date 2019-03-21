@@ -1,5 +1,8 @@
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
-import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
+import {
+  SET_SCRIPT,
+  getSelectedScriptName
+} from '@cdo/apps/redux/scriptSelectionRedux';
 import i18n from '@cdo/locale';
 
 export const ALL_STUDENT_FILTER = 0;
@@ -252,14 +255,19 @@ export default function sectionAssessments(state = initialState, action) {
 
 // Returns an array of objects, each indicating an assessment name and it's id
 // for the assessments and surveys in the current script.
-export const getCurrentScriptAssessmentList = state =>
-  computeScriptAssessmentList(
+export const getCurrentScriptAssessmentList = state => {
+  let tempAssessmentList = computeScriptAssessmentList(
     state.sectionAssessments,
     state.scriptSelection.scriptId
-  ).concat({
-    id: 0,
-    name: 'All teacher feedback in this unit'
-  });
+  );
+  if (doesCurrentCourseUseFeedback(state)) {
+    tempAssessmentList = tempAssessmentList.concat({
+      id: 0,
+      name: 'All teacher feedback in this unit'
+    });
+  }
+  return tempAssessmentList;
+};
 
 // Get the student responses for assessments in the current script and current assessment
 export const getAssessmentResponsesForCurrentScript = state => {
@@ -898,6 +906,13 @@ export const getExportableFeedbackData = state => {
   });
 
   return feedback;
+};
+
+export const doesCurrentCourseUseFeedback = state => {
+  const courseFamily = getSelectedScriptName(state);
+  if (courseFamily.includes('csp') || courseFamily.includes('csd')) {
+    return true;
+  }
 };
 
 /**
