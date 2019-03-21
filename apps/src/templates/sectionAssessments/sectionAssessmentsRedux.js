@@ -260,6 +260,7 @@ export const getCurrentScriptAssessmentList = state => {
     state.sectionAssessments,
     state.scriptSelection.scriptId
   );
+  /* Only add the feedback option to the dropdown for CSD and CSP */
   if (doesCurrentCourseUseFeedback(state)) {
     tempAssessmentList = tempAssessmentList.concat({
       id: 0,
@@ -908,9 +909,24 @@ export const getExportableFeedbackData = state => {
   return feedback;
 };
 
+/* Only CSD and CSP have the feedback feature currently */
 export const doesCurrentCourseUseFeedback = state => {
   const courseFamily = getSelectedScriptName(state);
   if (courseFamily.includes('csp') || courseFamily.includes('csd')) {
+    return true;
+  }
+};
+
+export const isCurrentScriptCSP = state => {
+  const courseFamily = getSelectedScriptName(state);
+  if (courseFamily.includes('csp')) {
+    return true;
+  }
+};
+
+export const isCurrentScriptCSD = state => {
+  const courseFamily = getSelectedScriptName(state);
+  if (courseFamily.includes('csd')) {
     return true;
   }
 };
