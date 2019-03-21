@@ -712,7 +712,8 @@ describe('entry tests', () => {
             const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
             const plugin = new UglifyJsPlugin({
               cache: true,
-              parallel: true
+              parallel: true,
+              sourceMap: envConstants.DEBUG_MINIFIED
             });
             plugin.apply(compiler);
           }
