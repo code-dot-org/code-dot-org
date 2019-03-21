@@ -53,7 +53,7 @@ class SchoolInfoConfirmationDialog extends Component {
           text={i18n.yes()}
           color={Button.ButtonColor.orange}
           onClick={onConfirm}
-          href={'www.google.com'}
+          href={'#'}
         />
       </div>
     );
@@ -63,19 +63,13 @@ class SchoolInfoConfirmationDialog extends Component {
     return (
       <Body>
         <SchoolInfoInterstitial
-          onClose={() => console.log('onclose click')}
           scriptData={{
             formUrl: '',
-            authTokenName: 'hello',
-            authTokenValue: 3,
-            existingSchoolInfo: {
-              school_id: 2,
-              country: 'usa',
-              school_type: 'public',
-              school_name: 'hello',
-              full_address: '1 happy street'
-            }
+            authTokenName: 'auth_token',
+            authTokenValue: 'fake_auth_token',
+            existingSchoolInfo: {}
           }}
+          onClose={() => 'onclose click'}
         />
       </Body>
     );
