@@ -179,7 +179,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
      * run `ssh yourname-ec2` to connect to your instance
   1. Go back up to the [overview](#overview) and run the commands there.
   1. Once you have successfully completed `rake build`, you can connect to it as follows:
-     * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2 ~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your dashboard server is running.
+     * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2` and then `~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your dashboard server is running.
      * navigate to http://localhost-studio.code.org:3000/ on your local machine
 
 ## Enabling JavaScript builds
