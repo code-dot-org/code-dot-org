@@ -9,6 +9,7 @@ var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
+var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
 module.exports = function(grunt) {
   // Decorate grunt to record and report build durations.
@@ -748,6 +749,10 @@ describe('entry tests', () => {
         }
       },
       plugins: [
+        // Needed only because our chef-managed environments rely on an
+        // unminified (but digested) version of blockly.js. It's possible this
+        // could be removed if we start serving minified blockly.js instead.
+        new UnminifiedWebpackPlugin(),
         ...(process.env.ANALYZE_BUNDLE
           ? [
               new BundleAnalyzerPlugin({
