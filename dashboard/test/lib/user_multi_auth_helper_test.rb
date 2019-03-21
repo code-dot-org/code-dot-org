@@ -46,9 +46,9 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'oauth_tokens_for_provider returns correct token for demigrated Clever teacher' do
-    user = create :teacher, :with_migrated_clever_authentication_option, :demigrated
+    user = create :teacher, :clever_sso_provider, :demigrated
     clever_token = user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]
-    assert_equal 'some-clever-token', clever_token
+    assert_equal 'fake-oauth-token', clever_token
   end
 
   test 'does nothing if user is already migrated' do

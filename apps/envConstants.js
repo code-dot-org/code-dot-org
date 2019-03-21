@@ -29,6 +29,10 @@ module.exports = {
   CDO_VERBOSE_TEST_OUTPUT: getBoolEnv('CDO_VERBOSE_TEST_OUTPUT'),
   // If set, will build uncompressed JS
   DEV: !!getMoocEnv('DEV'),
+  // enable sourceMaps and skip adding .min suffix when building minified js,
+  // making it easier to debug and iterate quickly. For details, see:
+  // https://github.com/code-dot-org/code-dot-org/blob/staging/apps/docs/build.md
+  DEBUG_MINIFIED: !!getMoocEnv('DEBUG_MINIFIED'),
   // Used by karma to force singleRun mode
   WATCH: !!getMoocEnv('WATCH'),
   // If set, will collect code coverage info
