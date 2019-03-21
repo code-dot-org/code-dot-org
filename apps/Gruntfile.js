@@ -708,7 +708,7 @@ describe('entry tests', () => {
       mode: minify ? 'production' : 'development',
       optimization: {
         minimizer: [
-          (compiler) => {
+          compiler => {
             const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
             const plugin = new UglifyJsPlugin({
               cache: true,
@@ -722,26 +722,26 @@ describe('entry tests', () => {
             common: {
               name: 'common',
               minChunks: 2,
-              chunks: (chunk) => {
+              chunks: chunk => {
                 return _.keys(appsEntries).includes(chunk.name);
               }
             },
             'code-studio-common': {
               name: 'code-studio-common',
               minChunks: 2,
-              chunks: (chunk) => {
+              chunks: chunk => {
                 const chunkNames = _.keys(codeStudioEntries); // .concat(_.keys(appsEntries))
                 return chunkNames.includes(chunk.name);
               },
               priority: 10
             },
-            'essential': {
+            essential: {
               name: 'essential',
               minChunks: 2,
-              chunks: (chunk) => {
+              chunks: chunk => {
                 const chunkNames = ['plc', 'peer_reviews']; // .concat(['code-studio-common'])
                 return chunkNames.includes(chunk.name);
-              },
+              }
             }
           }
         }
