@@ -714,13 +714,8 @@ describe('entry tests', () => {
         }),
         new webpack.optimize.CommonsChunkPlugin({
           name: 'code-studio-common',
-          chunks: _.keys(codeStudioEntries).concat(['common']),
+          chunks: _.keys(codeStudioEntries).concat(['common', 'plc']),
           minChunks: 2
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-          name: 'essential',
-          minChunks: 2,
-          chunks: ['peer_reviews', 'plc', 'pd', 'code-studio-common']
         }),
         ...(process.env.ANALYZE_BUNDLE
           ? [
