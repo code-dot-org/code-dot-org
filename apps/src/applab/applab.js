@@ -124,7 +124,8 @@ var twitterOptions = {
 };
 
 function stepDelayFromStepSpeed(stepSpeed) {
-  return 300 * Math.pow(1 - stepSpeed, 2);
+  // 3 sec per block in turtle mode
+  return 1500 * Math.pow(1 - stepSpeed, 2);
 }
 
 function loadLevel() {
