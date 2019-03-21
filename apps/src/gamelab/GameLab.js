@@ -364,9 +364,15 @@ GameLab.prototype.init = function(config) {
     showDebugWatch:
       config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
     showDebugSlider: experiments.isEnabled('showDebugSlider'),
-    showAnimationMode: !config.level.hideAnimationMode,
+    // ToDo: Remove experiment flag and turn off hideAnimationMode for Spritelab Levels
+    showAnimationMode:
+      !config.level.hideAnimationMode ||
+      experiments.isEnabled('sprite-costumes'),
     startInAnimationTab: config.level.startInAnimationTab,
-    allAnimationsSingleFrame: config.level.allAnimationsSingleFrame,
+    // ToDo: Remove experiment flag and turn on allAnimationsSingleFrame for Spritelab Levels
+    allAnimationsSingleFrame:
+      config.level.allAnimationsSingleFrame ||
+      experiments.isEnabled('sprite-costumes'),
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
