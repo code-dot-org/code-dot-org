@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {
   setScriptId,
-  validScriptPropType
+  validScriptPropType,
+  getSelectedScriptFriendlyName
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {
   asyncLoadAssessments,
@@ -94,6 +95,7 @@ const styles = {
 
 class SectionAssessments extends Component {
   static propTypes = {
+    sectionName: PropTypes.string.isRequired,
     // provided by redux
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool.isRequired,
@@ -111,7 +113,8 @@ class SectionAssessments extends Component {
     exportableFeedbackData: PropTypes.array,
     studentId: PropTypes.number,
     setStudentId: PropTypes.func,
-    studentList: PropTypes.array
+    studentList: PropTypes.array,
+    scriptName: PropTypes.string
   };
 
   state = {
@@ -151,6 +154,7 @@ class SectionAssessments extends Component {
 
   render() {
     const {
+      sectionName,
       validScripts,
       scriptId,
       assessmentList,
@@ -161,7 +165,8 @@ class SectionAssessments extends Component {
       exportableData,
       exportableFeedbackData,
       studentId,
-      studentList
+      studentList,
+      scriptName
     } = this.props;
 
     return (
@@ -235,11 +240,7 @@ class SectionAssessments extends Component {
             {this.props.assessmentId === 0 && (
               <div>
                 <CSVLink
-                  filename={`Feedback for ${
-                    exportableFeedbackData[0].sectionName
-                  } in ${
-                    exportableFeedbackData[0].scriptName
-                  } on ${new Date()}.csv`}
+                  filename={`Feedback for ${sectionName} in ${scriptName} on ${new Date()}.csv`}
                   data={exportableFeedbackData}
                   headers={CSV_FEEDBACK_HEADERS}
                 >
@@ -251,10 +252,10 @@ class SectionAssessments extends Component {
                 </CSVLink>
                 <p>
                   {`This CSV file contains all feedback and rubric evaluations you’ve completed for your section
-                  ${exportableFeedbackData[0].sectionName}
-                   in levels within
-                  ${exportableFeedbackData[0].scriptName}
-                  . You can leave feedback your students by going to a level in this unit, viewing a students work,
+                  ${sectionName}
+                  in levels within `}
+                  <strong>{scriptName}</strong>
+                  {`. You can leave feedback your students by going to a level in this unit, viewing a students work,
                    and clicking the “Feedback” tab`}
                 </p>
                 <p>
@@ -327,7 +328,8 @@ export default connect(
     exportableData: getExportableData(state),
     exportableFeedbackData: getExportableFeedbackData(state),
     studentId: state.sectionAssessments.studentId,
-    studentList: getStudentList(state)
+    studentList: getStudentList(state),
+    scriptName: getSelectedScriptFriendlyName(state)
   }),
   dispatch => ({
     setScriptId(scriptId) {
