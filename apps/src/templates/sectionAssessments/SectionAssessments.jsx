@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {
   setScriptId,
-  validScriptPropType,
-  getSelectedScriptFriendlyName
+  validScriptPropType
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {
   asyncLoadAssessments,
@@ -13,9 +12,7 @@ import {
   countSubmissionsForCurrentAssessment,
   getExportableData,
   getExportableFeedbackData,
-  setStudentId,
-  isCurrentScriptCSP,
-  isCurrentScriptCSD
+  setStudentId
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {getStudentList} from '@cdo/apps/redux/sectionDataRedux';
 import {connect} from 'react-redux';
@@ -34,7 +31,7 @@ import AssessmentSelector from './AssessmentSelector';
 import StudentSelector from './StudentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
-import Button from '@cdo/apps/templates/Button';
+import FeedbackDownload from './FeedbackDownload';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -43,27 +40,6 @@ const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.question(), key: 'question'},
   {label: i18n.response(), key: 'response'},
   {label: i18n.correct(), key: 'correct'}
-];
-
-const CSV_FEEDBACK_RUBRIC_HEADERS = [
-  {label: 'Student Name', key: 'studentName'},
-  {label: 'Lesson Number', key: 'stageNum'},
-  {label: 'Lesson Name', key: 'stageName'},
-  {label: 'Level', key: 'levelNum'},
-  {label: 'Key Concept', key: 'keyConcept'},
-  {label: 'Performance Level', key: 'performance'},
-  {label: 'Performance Level Details', key: 'performanceLevelDetails'},
-  {label: 'Feedback', key: 'comment'},
-  {label: 'Date Updated By Teacher', key: 'timestamp'}
-];
-
-const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
-  {label: 'Student Name', key: 'studentName'},
-  {label: 'Lesson Number', key: 'stageNum'},
-  {label: 'Lesson Name', key: 'stageName'},
-  {label: 'Level', key: 'levelNum'},
-  {label: 'Feedback', key: 'comment'},
-  {label: 'Date Updated By Teacher', key: 'timestamp'}
 ];
 
 const CSV_SURVEY_HEADERS = [
@@ -121,13 +97,9 @@ class SectionAssessments extends Component {
     isCurrentAssessmentSurvey: PropTypes.bool,
     totalStudentSubmissions: PropTypes.number,
     exportableData: PropTypes.array,
-    exportableFeedbackData: PropTypes.array,
     studentId: PropTypes.number,
     setStudentId: PropTypes.func,
-    studentList: PropTypes.array,
-    scriptName: PropTypes.string,
-    isCurrentScriptCSP: PropTypes.bool,
-    isCurrentScriptCSD: PropTypes.bool
+    studentList: PropTypes.array
   };
 
   state = {
@@ -176,12 +148,8 @@ class SectionAssessments extends Component {
       isCurrentAssessmentSurvey,
       totalStudentSubmissions,
       exportableData,
-      exportableFeedbackData,
       studentId,
-      studentList,
-      scriptName,
-      isCurrentScriptCSP,
-      isCurrentScriptCSD
+      studentList
     } = this.props;
 
     return (
@@ -253,64 +221,7 @@ class SectionAssessments extends Component {
             )}
             {/* Feedback Download */}
             {this.props.assessmentId === 0 && (
-              <div>
-                {isCurrentScriptCSD && (
-                  <div>
-                    <CSVLink
-                      filename={`Feedback for ${sectionName} in ${scriptName} on ${new Date()}.csv`}
-                      data={exportableFeedbackData}
-                      headers={CSV_FEEDBACK_RUBRIC_HEADERS}
-                    >
-                      <Button
-                        text={i18n.downloadFeedbackCSV()}
-                        onClick={() => {}}
-                        color={Button.ButtonColor.gray}
-                      />
-                    </CSVLink>
-                    <p>
-                      {`This CSV file contains all feedback and rubric evaluations you’ve completed for your section
-                      ${sectionName}
-                      in levels within `}
-                      <strong>{scriptName}</strong>
-                      {`. You can leave feedback your students by going to a level in this unit, viewing a students work,
-                       and clicking the “Feedback” tab`}
-                    </p>
-                    <p>
-                      {
-                        'We recommend checking student progress and giving feedback on levels marked as assessment opportunities'
-                      }
-                    </p>
-                  </div>
-                )}
-                {isCurrentScriptCSP && (
-                  <div>
-                    <CSVLink
-                      filename={`Feedback for ${sectionName} in ${scriptName} on ${new Date()}.csv`}
-                      data={exportableFeedbackData}
-                      headers={CSV_FEEDBACK_NO_RUBRIC_HEADERS}
-                    >
-                      <Button
-                        text={i18n.downloadFeedbackCSV()}
-                        onClick={() => {}}
-                        color={Button.ButtonColor.gray}
-                      />
-                    </CSVLink>
-                    <p>
-                      {`This CSV file contains all feedback you’ve completed for your section
-                       ${sectionName}
-                       in levels within `}
-                      <strong>{scriptName}</strong>
-                      {`. You can leave feedback your students by going to a level in this unit, viewing a students work,
-                       and clicking the “Feedback” tab`}
-                    </p>
-                    <p>
-                      {
-                        'We recommend checking student progress and giving feedback on levels marked as assessment opportunities'
-                      }
-                    </p>
-                  </div>
-                )}
-              </div>
+              <FeedbackDownload sectionName={sectionName} />
             )}
             {/* Surveys */}
             {isCurrentAssessmentSurvey && (
@@ -375,10 +286,7 @@ export default connect(
     exportableData: getExportableData(state),
     exportableFeedbackData: getExportableFeedbackData(state),
     studentId: state.sectionAssessments.studentId,
-    studentList: getStudentList(state),
-    scriptName: getSelectedScriptFriendlyName(state),
-    isCurrentScriptCSP: isCurrentScriptCSP(state),
-    isCurrentScriptCSD: isCurrentScriptCSD(state)
+    studentList: getStudentList(state)
   }),
   dispatch => ({
     setScriptId(scriptId) {

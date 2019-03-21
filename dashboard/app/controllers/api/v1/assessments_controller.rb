@@ -205,7 +205,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
           performanceLevelDetails: (script_level.level.properties["rubric_#{temp_feedback.performance}"] || ''),
           performance: temp_feedback.performance,
           comment: temp_feedback.comment,
-          timestamp: temp_feedback.updated_at
+          timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r")
         }
       end
     end
