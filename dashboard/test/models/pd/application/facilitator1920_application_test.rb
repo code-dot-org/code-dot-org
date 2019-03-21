@@ -348,6 +348,25 @@ module Pd::Application
       end
     end
 
+    test 'should_send_decision_email?' do
+      application = build :pd_facilitator1920_application, status: :pending
+
+      # no auto-email status: no email
+      refute application.should_send_decision_email?
+
+      # auto-email status with no partner: yes email
+      application.status = :declined
+      assert application.should_send_decision_email?
+    end
+
+    test 'queue_email queues up email' do
+      application = build :pd_facilitator1920_application, status: 'declined'
+
+      assert_creates Email do
+        application.queue_email :declined
+      end
+    end
+
     test 'meets_criteria says yes if everything is set to YES, no if anything is NO, and INCOMPLETE if anything is unset' do
       %w(csf csd csp).each do |course|
         application = create :pd_facilitator1920_application, course: course
