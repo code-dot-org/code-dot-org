@@ -736,14 +736,6 @@ describe('entry tests', () => {
                 return chunkNames.includes(chunk.name);
               },
               priority: 10
-            },
-            essential: {
-              name: 'essential',
-              minChunks: 2,
-              chunks: chunk => {
-                const chunkNames = ['plc', 'peer_reviews']; // .concat(['code-studio-common'])
-                return chunkNames.includes(chunk.name);
-              }
             }
           }
         }
