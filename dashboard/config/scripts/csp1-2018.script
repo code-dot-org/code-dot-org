@@ -1,4 +1,3 @@
-hidden false
 login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
@@ -18,8 +17,8 @@ stage 'Personal Innovations', flex_category: 'csp1_1'
 named_level 'CSP U1L01 SFLP'
 named_level 'Computer Science is Changing Everything_2018', progression: 'Computer Science is Changing Everything'
 variants
-  level 'csp_socialBelonging_control_2018', active: false, progression: 'Reflection: starting out in computer science'
-  level 'csp_socialBelonging_intervention_2018', progression: 'Reflection: starting out in computer science'
+  assessment 'csp_socialBelonging_control_2018', active: false, progression: 'Reflection: starting out in computer science'
+  assessment 'csp_socialBelonging_intervention_2018', progression: 'Reflection: starting out in computer science'
 endvariants
 
 stage 'Sending Binary Messages', flex_category: 'csp1_1'
