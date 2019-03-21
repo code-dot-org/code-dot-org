@@ -1,60 +1,69 @@
 name 'U3 whats a comment_2018_2019'
-title 'title'
-description 'description here'
-markdown <<MARKDOWN
-# What are "Comments" in code?
-
-You will begin to see code that has a new type of block in it that looks like this: ![](https://images.code.org/e8dd8a644e33f2037fef87b1bc7b9622-image-1508962098287.png)  
-
-A "Comment" block doesn't do anything when you run the code. It is simply a way to leave notes in code. 
-
-Programmers write comments into their code for two main reasons:
-
-1. sharing code with other programmers
-2. remembering their own thoughts or plans for code they write. 
-
-For both cases a **programmers write comments into their code to explain their thinking to a human reader.** 
-Writing your own comments is a skill you'll develop over time.
-
-Click continue to see how to add your own comments, or keep reading below about how and why to write comments.
-
-<a class="btn btn-large btn-primary next-stage submitButton pull-right"> Continue </a>
-
-<br><br><br><br><br>
-<hr style="clear: both"/>
-
-### Why write comments?
-
-**For others - collaborating:**
-
-When sharing code with others, comments are useful to point out sections of code you might want help with, or to explain a complicated section of code that's hard to reason about.  It's useful for example to write a comment like: 
-
-<table>
-<tr>
- <td style="text-align: center; background-color: #d9eff7; border: solid 2px white"><i>Block version</i></td>
- <td style="text-align: center; background-color: #d9eff7; border: solid 2px white"><i>Text version</i></td>
-</tr>
-<tr>
-  <td width=50%><img src="https://images.code.org/5932bb0ae416f259d2b4e0759935c581-image-1509376121407.png"/></td>
-  <td><img src="https://images.code.org/5bdac2f64e9c50c692edff7af0716715-image-1509376098461.png"/></td>
-</tr>
-
-</table>
-    
-because it helps the reader understand when, where, why that section of code might be executed.
-
-**For yourself**
-
-When writing comments for yourself, it might be a note about how you plan to solve a problem, or jotting down the reason you did something to remind yourself later when you come back to it.  For example you might write a comment like:
-
-![](https://images.code.org/ceec3486cdb014cc7f1e475b6c1c8787-image-1508965033865.56.26 PM.png)
-
-**For planning**
-
-Many programmers, when starting from scratch, like to write out a high level plan for the code they want to write in comments, and then go in starting writing code to fill in the plan. This is particularly useful if you're facing a large problem that needs to be broken down into parts.  A plan for drawing an under the sea scene might look like this:
-
-![](https://images.code.org/353175cf07d6fe765da03d45da49c266-image-1508965031708.56.55 PM.png)
-    
-Once you have written out a strategy in comments you'll be able to remember the big picture, after you inevitably run into lots of sub-problems that require your time and brain to solve, or debug.
-
-MARKDOWN
+encrypted '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
+K+JuwMLi5gqPBAjWjgSIHbNe2mXj3w==
+'
