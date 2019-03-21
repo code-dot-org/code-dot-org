@@ -577,7 +577,17 @@ cs:
         C4_unplugged_forloops: For cykly
         C4_unplugged_parameters: Psaní písniček s parametry
         C4_unplugged_binary: Binární
+        CSF_artist_angles: Úhly s Malířem
+        CSF_collector_k1_blocks: 'CS Fundamentals: Sběrač'
+        CSF_collector_repeat_loops: Sběrač opakuje smyčku
+        CSF_collector_text_blocks: 'CS Fundamentals: Sběrač'
+        CSF_create_functions: Vytváření funkcí
         CSF_my_robotic_friends: Mí robotičtí přátelé
+        CSF_Power_of_Words: Síla slov
+        CSF_Super_Digital_Citizen: Super digitální občan
+        CSF_stevie_big_project: Stevie a Velký projekt
+        CSF_unspotted_bugs: Nezachycené chyby
+        CSF_zuck_loops_short: Opakování smyček
         frozen_intro: Úvod do Hodiny kódu
         frozen_loops: Úvod do cyklů
         frozen_functions: Úvod do funkcí
@@ -588,6 +598,13 @@ cs:
         infinity_playlab_intro: Play Lab - Úvod
         infinity_playlab_events: Play Lab - události
         infinity_playlab_repeat_forever: Play Lab trvalé opakování
+        csd_concept_how_computers_work: Úvod do fungování počítačů
+        csd_concept_computer: 'Jak fungují počítače: Co dělá počítač, počítačem?'
+        csd_concept_circuits_logic: 'Jak fungují počítače: Obvody a logika'
+        csd_concept_memory_cpu_input_output: 'Jak fungují počítače: Paměť, procesor,
+          vstup a výstup'
+        csd_concept_hardware_software: 'Jak fungují počítače: Hardware a software'
+        csd_concept_search: Jak funguje vyhledávání
         csp_applab_functions: Úvod do funkcí
         csp_applab_functions_parameters: Funkce s Parametry
         csp_applab_loops: Smyčky
@@ -614,7 +631,14 @@ cs:
         mc_2016_events: Hodina kódu s Minecraftem - Události
         mc_2016_spawn: Hodina kódu s Minecraftem - Tvoření
         mc_2016_congrats: Hodina kódu s Minecraftem - Gratulujeme
+        mc_2017_agent_intro: Hodina kódu s Minecraftem - Agent
+        mc_2017_repeat: Hodina kódu s Minecraftem - Cykly
+        mc_2017_functions: Hodina kódu s Minecraftem - Funkce
         mc_2017_congratulations: Hodina kódu s Minecraftem - Gratulujeme
+        mc_2017_puzzle_1: Hodina kódu s Minecraftem - Agent
+        mc_2017_puzzle_3: Hodina kódu s Minecraftem - Cykly
+        mc_2017_puzzle_8: Hodina kódu s Minecraftem - Funkce
+        mc_2017_puzzle_12: Hodina kódu s Minecraftem - Volná hra
         CSF_loops_AB: Smyčky
     callout:
       text:

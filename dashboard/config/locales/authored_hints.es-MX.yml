@@ -426,6 +426,9 @@ es-MX:
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: Para usar un bloque "avanzar", arrástralo desde el área de barra
           de herramientas al lugar de trabajo y conéctalo al bloque "cuando ejecutar".
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Puedes usar el bloque de ruta if para ayudarte a hacer los giros
+          correctos.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'El semi-hexágono tiene una ** longitud de 30 ** y gira
           a la derecha por ** 60 grados **.  '
@@ -6587,7 +6590,7 @@ es-MX:
       courseA_harvester_loops2_authored_hint:
         courseA_harvester_loops2_a: Tu código tendrá ** cuatro ** bloques `de mover
           el oeste` y ** cuatro ** bloques de` selección de maíz`.
-        courseA_harvester_loops2_b: 'Si aun tienes problemas, intenta decir lo pasos
+        courseA_harvester_loops2_b: 'Si aún tienes problemas, intenta contar los pasos
           en voz alta. '
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: 'Tu código tendrá ** cuatro ** bloques `de mover
@@ -9637,10 +9640,6 @@ es-MX:
       courseC19_playLab_EOC4_authored_hint:
         courseE_playLab_scaffold4_a: Usa `anotar punto` para agregar un punto, y`
           quitar punto` para restar uno.
-      courseC19_playLab_EOC5_authored_hint:
-        courseE_playLab_scaffold5_a: Para finalizar este nivel, debes ganar o perder.
-          Utilizar un bloque `final del juego como ganar` o 'final del juego como
-          perder` para terminar.
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Fija este bloque al bloque 'cuando corre':
@@ -12110,27 +12109,27 @@ es-MX:
           un cuadrado. A continuación, repite ese cuadro 8 veces, saltando 40 píxeles
           en el medio. '
       courseD_artist_nestedLoops4_authored_hint:
-        courseD_artist_nestedLoops4_d: Para resolver esto correctamente, necesitarás
-          moverte ** antes ** de girar, ¡o de lo contrario tus círculos se apagarán
-          por la mínima cantidad!
+        courseD_artist_nestedLoops4_d: Para resolver este desafío, necesitarás moverte
+          **antes** de girar. De lo contrario, ¡tus círculos se apagarán con la mínima
+          cantidad!
         courseD_artist_nestedLoops4_a: "Para hacer un círculo: \n- Repetir 360 ​​veces
           \n- Avanzar 1 píxel \n- Girar a la izquierda 1 grado"
         courseD_artist_nestedLoops4_b: No te olvides de saltar 50 píxeles entre círculos.
         courseD_artist_nestedLoops4_c: Usa un loop anidado para dibujar sus círculos
           4 veces.
       courseD_artist_nestedLoops4_2018_authored_hint:
-        courseD_artist_nestedLoops4_d: Para resolver esto correctamente, necesitarás
-          moverte ** antes ** de girar, ¡o de lo contrario tus círculos se apagarán
-          por la mínima cantidad!
+        courseD_artist_nestedLoops4_d: Para resolver este desafío, necesitarás moverte
+          **antes** de girar. De lo contrario, ¡tus círculos se apagarán con la mínima
+          cantidad!
         courseD_artist_nestedLoops4_a: "Para hacer un círculo: \n- Repetir 360 ​​veces
           \n- Avanzar 1 píxel \n- Girar a la izquierda 1 grado"
         courseD_artist_nestedLoops4_b: No te olvides de saltar 50 píxeles entre círculos.
         courseD_artist_nestedLoops4_c: Usa un loop anidado para dibujar sus círculos
           4 veces.
       courseD_artist_nestedLoops4_2019_authored_hint:
-        courseD_artist_nestedLoops4_d: Para resolver esto correctamente, necesitarás
-          moverte ** antes ** de girar, ¡o de lo contrario tus círculos se apagarán
-          por la mínima cantidad!
+        courseD_artist_nestedLoops4_d: Para resolver este desafío, necesitarás moverte
+          **antes** de girar. De lo contrario, ¡tus círculos se apagarán con la mínima
+          cantidad!
         courseD_artist_nestedLoops4_a: "Para hacer un círculo: \n- Repetir 360 ​​veces
           \n- Avanzar 1 píxel \n- Girar a la izquierda 1 grado"
         courseD_artist_nestedLoops4_b: No te olvides de saltar 50 píxeles entre círculos.
@@ -14017,14 +14016,16 @@ es-MX:
         courseD_farmer_condLoops6_b: "¡Asegúrate de comprobar 'si' hay un camino por
           delante antes de tomar el siguiente paso!"
       courseD_farmer_condLoops6_2018_authored_hint:
-        courseD_farmer_condLoops6_a: Utilizar un ciclo «mientras camino por delante»
-          para mover al agricultor hacia abajo en cada parte de la espiral.
+        courseD_farmer_condLoops6_a: Utiliza un bucle `mientras camino por delante`
+          o un bloque `si camino por delante / si no` para mover a la granjera hacia
+          abajo en cada parte de la espiral.
         courseD_farmer_condLoops6_b: Sólo necesita el control del maíz durante la
           mayor parte de la cosecha. Sólo debes elegir una calabaza al final de su
           programa.
       courseD_farmer_condLoops6_2019_authored_hint:
-        courseD_farmer_condLoops6_a: Utilizar un ciclo «mientras camino por delante»
-          para mover al agricultor hacia abajo en cada parte de la espiral.
+        courseD_farmer_condLoops6_a: Utiliza un bucle `mientras camino por delante`
+          o un bloque `si camino por delante / si no` para mover a la granjera hacia
+          abajo en cada parte de la espiral.
         courseD_farmer_condLoops6_b: Sólo necesita el control del maíz durante la
           mayor parte de la cosecha. Sólo debes elegir una calabaza al final de su
           programa.
@@ -16219,6 +16220,22 @@ es-MX:
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Crea una función que lleva al agricultor al maíz,
           obtiene todo el maíz, da la vuelta y vuelve.
+      courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: Usarás la misma función que hiciste en
+          los últimos desafíos.
+        courseE_farmer_functions9a1_2018b: Usa los mismos pasos del desafío anterior
+          para resolver la primera mitad del desafío.
+        courseE_farmer_functions9a1_2018c: Deberás `girar` algunas veces y `avanzar`
+          para llegar al último cultivo de lechuga antes de que puedas llamar a tu
+          función de nuevo.
+      courseE_farmer_functions9a1_2019_authored_hint:
+        courseE_farmer_functions9a1_2018a: Usarás la misma función que hiciste en
+          los últimos desafíos.
+        courseE_farmer_functions9a1_2018b: Usa los mismos pasos del desafío anterior
+          para resolver la primera mitad del desafío.
+        courseE_farmer_functions9a1_2018c: Deberás `girar` algunas veces y `avanzar`
+          para llegar al último cultivo de lechuga antes de que puedas llamar a tu
+          función de nuevo.
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: "¿Puedes utilizar 'si' y ' si/si no' anidados
           para avanzar por el camino?"

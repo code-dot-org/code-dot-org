@@ -2151,6 +2151,8 @@ nn-NO:
   hoc2018_mc_continue_learning: Hald fram med å lære med Minecraft.
   hoc2018_mc_go_to_mc_education: Gå til Minecraft Education
   hoc2018_dance_party_main_heading: Dansefest
+  hoc2018_dance_party_landing_title: Dans
+  hoc2018_dance_party_subheading: Hjelp oversette Dansefest
   hoc2018_dance_create_your_own_dance_title: Lag din egen dansefest
   hoc2018_dance_party_box_title: Dansefest
   hoc2018_dance_party_box_description: Programmer en dansefest du kan dele med vennene
@@ -2225,3 +2227,4 @@ nn-NO:
   page_not_found_description: Sida du leiter etter finst ikkje på denne adressa. Sjekk
     nettadressa og send inn på nytt. Eller gå tilbake til heimesida vår.
   page_not_found_button: Gå heim
+  hoc2018_mc_with_microsoft: I samarbeid med

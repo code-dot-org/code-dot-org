@@ -12,7 +12,7 @@ es-MX:
         pdfs:
           - unplug2-es-ES
       Unplug3:
-        title: Programación de hoja cuadriculada
+        title: Programación con Papel Cuadriculado
         desc: Al programar algunos dibujos, los estudiantes empezarán a comprender de qué se trata la programación. Para comenzar la clase, los estudiantes intercambiarán instrucciones para colorear cuadrados en una hoja cuadriculada, con el fin de reproducir una imagen en la hoja. La clase puede terminar exhibiendo los dibujos que los estudiantes realizaron.
         pdfs:
           - unplug3-es-ES
@@ -63,7 +63,7 @@ es-MX:
         title: Muévelo, muévelo
         desc: Los estudiantes crean algoritmos sencillos (conjuntos de instrucciones) para mover un personaje a través de un laberinto utilizando un solo comando.
       PlantASeed:
-        title: 'Algoritmos de la vida real: Planta una semilla'
+        title: 'Algoritmos de la vida real: plantar una semilla'
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra vida cotidiana, usando de ejemplo plantar una semilla. También se centra en el panorama general de la informática y cómo los algoritmos juegan un papel esencial.
       BuildingAFoundation:
         title: Construir una base
@@ -84,7 +84,7 @@ es-MX:
         title: Ir a sitios seguros
         desc: Internet es una herramienta poderosa, pero a veces peligrosa. Los maestros muestran cómo mantenerse a salvo mientras se navega en Internet.
       GraphPaperProgramming:
-        title: Programación de hoja cuadriculada
+        title: Programación con Papel Cuadriculado
         desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.
       PaperPlanes:
         title: 'Algoritmos de la vida real : Aviones de papel'
@@ -102,8 +102,8 @@ es-MX:
         title: Tragaluces funcionales
         desc: Los estudiantes crean un algoritmo con variables y funciones (pedazos de código que quieres usar una y otra vez) para crear un tragaluz con un hilo y pequeños cristales.
       SongwritingParameters:
-        title: Composición Musical
-        desc: Los estudiantes usan el concepto del coro en una canción para aprender sobre el paso de parámetros (que personaliza una función sin tener que reescribir la función entera).
+        title: Composición musical
+        desc: Los estudiantes usan el concepto del coro en una canción para aprender sobre cómo definir y llamar funciones.
       DiceRace:
         title: 'Algoritmos de la vida real: Carrera de dados'
         desc: Esta clase muestra modos en los que usamos algoritmos en nuestra vida diaria. Como parte de eso, los estudiantes identificarán y escribirán el algoritmo de un juego de carrera con dados.
@@ -153,22 +153,22 @@ es-MX:
         title: Detección de colisiones y el teorema de Pitágoras
         desc: Determinar cuándo los objetos en la pantalla táctil es un aspecto importante de la mayoría de los juegos. En esta lección analizaremos cómo la fórmula de la distancia y el teorema de Pitágoras se pueden utilizar para medir la distancia entre dos puntos en el avión y luego decidir si se tocan los dos puntos (o juego de caracteres).
       courseA_unplugged_loops:
-        title: Ciclos desconectados
-        desc: '¡En esta lección aprenderas sobre ciclos!'
+        title: Bucles desconectados
+        desc: '¡En esta lección aprenderás sobre bucles!'
       courseB_unplugged_MRF:
         title: Actividad desconectada
         desc: '¡En esta lección ''programarás'' a tus amigos!'
       courseB_unplugged_loopyMRF:
         title: Actividad desconectada
-        desc: '¡Al igual que en "Mis amigos robóticos", "programarás" tus amigos, pero esta vez con ciclos!'
+        desc: '"Programarás" a tus amigos como en "Mis amigos robóticos", ¡pero esta vez, con bucles!'
       courseC_Unplugged_ScreenOutTheMean:
         title: Actividad desconectada
         desc: Hoy aprenderás qué significa que alguien esté en linea.
       courseD_unplugged_digitalCitizenship:
         title: Actividad desconectada
-        desc: Hoy aprenderas lo que significa ser un ciudadano digital.
+        desc: Hoy aprenderás qué significa ser un ciudadano digital.
       courseE_unplugged_privateInformation:
-        title: 'Educación de Sentido Común: Información Privada y Personal '
+        title: 'Common Sense Education: Información Privada y Personal '
         desc: '¡Hoy aprenderás la diferencia entre información privada y personal!'
       courseF_unplugged_powerOfWords:
         title: Actividad desconectada
@@ -176,7 +176,7 @@ es-MX:
       deeper learning description:
         desc: 'falta la traducción: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
-        title: 'Algoritmos de la vida real: Planta una semilla'
+        title: 'Algoritmos de la vida real: plantar una semilla'
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra vida cotidiana, usando de ejemplo plantar una semilla. También se centra en el panorama general de la informática y cómo los algoritmos juegan un papel esencial.
       courseA_unplugged_happyMaps:
         title: Mapas felices
@@ -203,7 +203,7 @@ es-MX:
         title: Pulseras binarias
         desc: Los estudiantes crean pulseras como representaciones binarias de la primera letra de su nombre. Aprenden que los datos se pueden representar y guardar de más de una forma.
       courseD_unplugged_graphPaperProgramming:
-        title: Programación de hoja cuadriculada
+        title: Programación con Papel Cuadriculado
         desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.
       courseD_unplugged_relayProgramming:
         title: Programación de relevos
@@ -215,11 +215,11 @@ es-MX:
         title: Imágenes binarias
         desc: Aunque muchas personas piensan que el binario es estrictamente ceros y unos, nuestros cursos anteriores enseñaron a los alumnos que la información puede ser representada en una variedad de opciones binarias. Esta clase lleva ese concepto un paso más allá que ilustra cómo una computadora también puede almacenar información aún más compleja (por ejemplo, imágenes y colores) en binario.
       courseE_unplugged_diceRace:
-        title: 'Algoritmos de la vida real: Carrera de Dados'
+        title: 'Algoritmos de la vida real: Carrera de dados'
         desc: Esta clase muestra modos en los que usamos algoritmos en nuestra vida diaria. Como parte de eso, los estudiantes identificarán y escribirán el algoritmo de un juego de carrera con dados.
       courseE_unplugged_songwritingParameters:
         title: Composicion musical con parámetros
-        desc: Los estudiantes usan el concepto del coro en una canción para aprender sobre el paso de parámetros (que personaliza una función sin tener que reescribir la función entera).
+        desc: Los estudiantes usan el concepto del coro en una canción para aprender sobre cómo definir y llamar funciones.
       courseE_unplugged_internet:
         title: Internet
         desc: Los alumnos envían mensajes representando varios métodos de transmisión de Internet usando pedazos de papel.
@@ -227,8 +227,8 @@ es-MX:
         title: Colaboración abierta
         desc: Los estudiantes usan crowdsourcing, una técnica habitual para resolver problemas en informática, para completar una tarea juntos como un aula, más eficientemente que si un alumno lo intentara solo.
       courseE_unplugged_songwriting:
-        title: Composición Musical
-        desc: Los estudiantes usan el concepto del coro en una canción para aprender sobre el paso de parámetros (que personaliza una función sin tener que reescribir la función entera).
+        title: Composición musical
+        desc: Los estudiantes usan el concepto del coro en una canción para aprender sobre cómo definir y llamar funciones.
       courseF_unplugged_tangrams:
         title: Algoritmos de tangram
         desc: Esta clase nos enseña algo importante acerca de los algoritmos. Si mantienes un algoritmo simple hay muchas maneras de usarlo. Si quieres asegurarte de que todos terminen con el mismo resultado, entonces el algoritmo necesita más detalle.
@@ -252,9 +252,9 @@ es-MX:
         desc: "# Brad Repro Bug 000\\r\n## Intento de recrear un error Brooke registrado\\r\nel proceso se especifica a continuación:\\r\n1. empezó con un nivel 'unplugged'. completado con información. pulse guardar y publique.\\r\n2. “destruido” el nivel\\r\n3. hecho un nivel 'markdown' con el mismo contenido y nombre. verificado para encriptarlo. pulse guardar y publicar"
       courseB_unplugged_MRF_2018:
         title: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        desc: '¡Aprende a programar y escribir código con tus amigos!'
       PlantASeed_2018:
-        title: 'Algoritmos de la vida real: Planta una semilla'
+        title: 'Algoritmos de la vida real: plantar una semilla'
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra vida cotidiana, usando de ejemplo plantar una semilla. También se centra en el panorama general de la informática y cómo los algoritmos juegan un papel esencial.
       UnplugHappyMaps_2018:
         title: Mapas felices
@@ -263,17 +263,17 @@ es-MX:
         title: Ir a sitios seguros
         desc: Internet es una herramienta poderosa, pero a veces peligrosa. Los maestros muestran cómo mantenerse a salvo mientras se navega en Internet.
       courseA_unplugged_loops_2018:
-        title: Ciclos desconectados
-        desc: '¡En esta lección aprenderas sobre ciclos!'
+        title: Bucles desconectados
+        desc: '¡En esta lección aprenderás sobre bucles!'
       BigEvent_2018:
         title: El gran evento
         desc: Se presenta a los estudiantes el concepto de "eventos" en programación, que son acciones que una computadora monitoréa constántemente. El profesor presionará botones en un control remoto de papel y los estudiantes reaccionarán dependiendo de qué botón se presiona.
       GraphPaperProgramming_2018:
-        title: Programación de hoja cuadriculada
+        title: Programación con Papel Cuadriculado
         desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.
       courseD_unplugged_digitalCitizenship_2018:
         title: Actividad desconectada
-        desc: Hoy aprenderas lo que significa ser un ciudadano digital.
+        desc: Hoy aprenderás qué significa ser un ciudadano digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Actividad desconectada
         desc: Hoy aprenderás qué significa que alguien esté en linea.
@@ -298,17 +298,17 @@ es-MX:
       MoveItMoveIt_2018:
         title: Muévelo, Muévelo
       courseB_unplugged_CnC_2018:
-        title: Es estupendo crear y jugar limpio
-        desc: Prestada para los fundamentos de la Ciencia de la Computación por el equipo de Copyright y Creatividad, esta lección se ha creado para ayudar a los estudiantes a entender el proceso creativo de compartir e de inspiración. Esto conlleva la promoción de la expresión creativas y la necesidad de ser justo con el trabajo creativo.
+        title: Crear y jugar limpio es lo mejor
+        desc: Esta lección, cedida al curso de Fundamentos de Ciencias de la Computación por parte del equipo de Derechos de Autor y Creatividad, tiene como objetivo ayudar a los alumnos a entender cómo funciona el intercambio y la inspiración en el proceso creativo. Esto conlleva la promoción de la expresión creativa y la necesidad de ser justos con el trabajo creativo.
       courseE_unplugged_CnC_2018:
-        title: Compartir digital
-        desc: Prestada para los fundamentos de la Ciencia de la Computación por el equipo de Copyright y Creatividad, esta lección se ha creado para ayudar a los estudiantes a entender los retos y beneficios de respetar la propiedad y derechos de autos, en particular en entornos digitales. Se debería animar a los estudiantes a respetar los derechos de los artistas como una parte importante para ser un ciudadano digital ético.
+        title: Colaboración digital
+        desc: A manera de préstamo para los Fundamentos de Ciencias de la Computación por parte del equipo de Derechos de autor y Creatividad, esta lección tiene el propósito de ayudar a los estudiantes a entender los desafíos y beneficios de respetar la propiedad y los derechos de autor, particularmente en entornos digitales. Los estudiantes deberían ser alentados a respetar los derechos de los artistas como una parte importante de ser un ciudadano digital ético.
       RelayProgramming_2018:
         title: Programación de relevos
         desc: Esta actividad comenzará con una breve lección sobre debugging y persistencia, luego pasará rápidamente a una carrera contrarreloj a medida que los estudiantes se dividen en equipos y trabajan juntos para escribir un programa a la vez.
       courseB_unplugged_MRF_2019:
-        title: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: Mis amigos robóticos
+        desc: '¡Aprende a programar y escribir código con tus amigos!'
       BuildingAFoundation_2019:
         title: 'traducción pendiente: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'traducción pendiente: en-US.data.unplugged.BuildingAFoundation_2018.desc'
@@ -328,26 +328,26 @@ es-MX:
         title: 'traducción pendiente: en-US.data.unplugged.ForLoopFun_2018.title'
         desc: 'traducción pendiente: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
-        title: Programación de hoja cuadriculada
+        title: Programación con Papel Cuadriculado
         desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.
       RelayProgramming_2018_2019:
         title: Programación de relevos
         desc: Esta actividad comenzará con una breve lección sobre debugging y persistencia, luego pasará rápidamente a una carrera contrarreloj a medida que los estudiantes se dividen en equipos y trabajan juntos para escribir un programa a la vez.
       courseD_unplugged_digitalCitizenship_2019:
         title: Actividad desconectada
-        desc: Hoy aprenderas lo que significa ser un ciudadano digital.
+        desc: Hoy aprenderás qué significa ser un ciudadano digital.
       BinaryImages_2019:
         title: Imágenes binarias
         desc: Aunque muchas personas piensan que el binario es estrictamente ceros y unos, nuestros cursos anteriores enseñaron a los alumnos que la información puede ser representada en una variedad de opciones binarias. Esta clase lleva ese concepto un paso más allá que ilustra cómo una computadora también puede almacenar información aún más compleja (por ejemplo, imágenes y colores) en binario.
       courseE_unplugged_privateInformation_2019:
         title: Información privada y personal
-        desc: 'traducción pendiente: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.desc'
+        desc: Desarrollada por Common Sense Education, esta lección gira en torno a la diferencia entre la información que es segura de compartir en línea y la información que no lo es.
       SongwritingParameters_2019:
         title: 'traducción pendiente: en-US.data.unplugged.SongwritingParameters_2018.title'
         desc: 'traducción pendiente: en-US.data.unplugged.SongwritingParameters_2018.desc'
       courseE_unplugged_CnC_2019:
-        title: Compartir digital
-        desc: Prestada para los fundamentos de la Ciencia de la Computación por el equipo de Copyright y Creatividad, esta lección se ha creado para ayudar a los estudiantes a entender los retos y beneficios de respetar la propiedad y derechos de autos, en particular en entornos digitales. Se debería animar a los estudiantes a respetar los derechos de los artistas como una parte importante para ser un ciudadano digital ético.
+        title: Colaboración digital
+        desc: A manera de préstamo para los Fundamentos de Ciencias de la Computación por parte del equipo de Derechos de autor y Creatividad, esta lección tiene el propósito de ayudar a los estudiantes a entender los desafíos y beneficios de respetar la propiedad y los derechos de autor, particularmente en entornos digitales. Los estudiantes deberían ser alentados a respetar los derechos de los artistas como una parte importante de ser un ciudadano digital ético.
       Internet_2019:
         title: 'traducción pendiente: en-US.data.unplugged.Internet_2018.title'
         desc: 'traducción pendiente: en-US.data.unplugged.Internet_2018.desc'
@@ -372,7 +372,7 @@ es-MX:
       test-uid-passthrough:
         desc: "# Sesión de escenario de reclutamiento\\r\n\\r\n## Deslizar a la derecha para CS\\r\nPara esta sesión usaremos una herramienta llamada \"Deslizar a la derecha para CS\", la cual ha sido desarrollada por nuestros compañeros del MIT. En Deslizar a la derecha para CS, leerá algunos perfiles de estudiantes y considerará declaraciones específicas que puede usar para convencerle para unirse a su curso de Principios de CS. \\r\n\\r\n### Cómo funciona\\r\nCuando juegue a Deslizar a la derecha para CS verá una serie de citas que puede decirle a cada estudiante. Deslizará a la derecha en las citas que cree que pueden ser efectivas para convencer a ese estudiante en concreto a unirse al curso y deslizará a la izquierda en las declaraciones que cree que no serán efectivas. Durante la sesión discutiremos en grupo sus consideraciones sobre los tipos de declaraciones que son más efectivas para llegar a los estudiantes para unirse a CS y tendrá la oportunidad de ver cómo otras personas en su taller deslizaron en cada uno de los argumentos.\\r\n<br><br><br><br>\\r\n\\r\n<span style=\"display:none\">submitButton next-stage</span>\\r\n\\r\n<a class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\"> ¡Haga clic aquí para jugar a Deslizar a la derecha para CS!</a>\\r\n\\r\n"
       PlantASeed_2019:
-        title: 'Algoritmos de la vida real: Planta una semilla'
+        title: 'Algoritmos de la vida real: plantar una semilla'
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra vida cotidiana, usando de ejemplo plantar una semilla. También se centra en el panorama general de la informática y cómo los algoritmos juegan un papel esencial.
       UnplugHappyMaps_2019:
         title: Mapas felices
@@ -381,16 +381,22 @@ es-MX:
         title: Ir a sitios seguros
         desc: Internet es una herramienta poderosa, pero a veces peligrosa. Los maestros muestran cómo mantenerse a salvo mientras se navega en Internet.
       courseA_unplugged_loops_2019:
-        title: Ciclos desconectados
-        desc: '¡En esta lección aprenderas sobre ciclos!'
+        title: Bucles desconectados
+        desc: '¡En esta lección aprenderás sobre bucles!'
       MoveItMoveIt_2019:
         title: Muévelo, Muévelo
       DigitalFootprint_2019:
         title: Tu huella dactilar
         desc: Los profesores le presentan a los alumnos la idea de que poner información sobre ellos en línea crea una huella dactilar o un "rastro" que tiene consecuencias.
       courseB_unplugged_CnC_2019:
-        title: Es estupendo crear y jugar limpio
-        desc: Prestada para los fundamentos de la Ciencia de la Computación por el equipo de Copyright y Creatividad, esta lección se ha creado para ayudar a los estudiantes a entender el proceso creativo de compartir e de inspiración. Esto conlleva la promoción de la expresión creativas y la necesidad de ser justo con el trabajo creativo.
+        title: Crear y jugar limpio es lo mejor
+        desc: Esta lección, cedida al curso de Fundamentos de Ciencias de la Computación por parte del equipo de Derechos de Autor y Creatividad, tiene como objetivo ayudar a los alumnos a entender cómo funciona el intercambio y la inspiración en el proceso creativo. Esto conlleva la promoción de la expresión creativa y la necesidad de ser justos con el trabajo creativo.
       GraphingData_2019:
         title: Datos de gráfico
         desc: " En esta lección, los estudiantes recopilarán datos de un proyecto de Laboratorio de Juegos o escenario real del mundo y lo utilizarán para hacer predicciones."
+      courseE_unplugged_accessAbility_2019:
+        title: Habilidad de acceso
+        desc: Aprende sobre accesibilidad y sobre el valor de la empatía mediante la reflexión y el diseño de soluciones accesibles para aplicaciones hipotéticas.
+      courseE_simon_says_2019:
+        title: Simón dice
+        desc: Juega y piensa sobre qué comandos son necesarios para obtener los resultados adecuados.

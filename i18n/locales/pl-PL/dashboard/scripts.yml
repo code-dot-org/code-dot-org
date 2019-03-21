@@ -16,7 +16,7 @@ pl:
           title: Kurs 1
           description: Kurs 1 umożliwia początkującym tworzenie programów komputerowych, które pomogą im nauczyć się współpracować z innymi, rozwijać umiejętności rozwiązywania problemów i wytrwać przy rozwiązywaniu trudnych zadań. Przy końcu tego kursu uczniowie tworzą własne gry lub historyjki, którymi mogą podzielić się z innymi. Zalecany dla przedszkola i pierwszej klasy.
           description_short: Kurs 1 jest przeznaczony dla początkujących.
-          description_audience: W wieku 4-6
+          description_audience: Wiek 4-6
           stages:
             'Artist: Loops':
               name: 'Artysta: Pętle'
@@ -77,7 +77,7 @@ pl:
             Binary Bracelets:
               name: Binarne bransoletki
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             Flappy:
               name: Flappy
             Getting Loopy:
@@ -101,8 +101,8 @@ pl:
         course3:
           title: Kurs 3
           description: Kurs 3 jest przeznaczony dla uczniów, którzy ukończyli Kurs 2. Uczniowie będą wnikać głębiej w zagadnienia programowania wprowadzone w poprzednich kursach, aby tworzyć elastyczne rozwiązania dla bardziej złożonych problemów. Kończąc kurs, uczniowie będą tworzyć interaktywne opowiadania i gry, którymi mogą się dzielić z innymi. Zalecany dla klas 4-5.
-          description_short: Kurs 3 jest kontynuacją Kursu 2.
-          description_audience: W wieku 8-18
+          description_short: Zagłębiaj się w programowanie, tworząc gry i interaktywne historie. To jest kontynuacja Kursu 2.
+          description_audience: Wiek 8-18
           stages:
             Artist:
               name: Artysta
@@ -177,8 +177,8 @@ pl:
         course4:
           title: Kurs 4
           description: Kurs 4 przeznaczony jest dla uczniów, którzy ukończyli Kursy 2 i 3. Uczniowie nauczą się jak rozwiązywać bardziej złożone łamigłówki, nauczą się jak łączyć kilka pojęć przy rozwiązywaniu każdego wyzwania. Do czasu ukończenia tego Kursu, uczniowie utworzą programy, w których zademonstrują wiele umiejętności, w tym z wykorzystaniem pętli i funkcji z parametrami. Zalecany dla klas 4-8.
-          description_short: Uczniowie uczestniczący w Kursie 4 powinni wcześniej ukończyć Kursy 2 i 3.
-          description_audience: W wieku 10-18
+          description_short: Twórz bardziej złożone programy wykorzystując pętle i funkcje z parametrami. To jest kontynuacja Kursu 3.
+          description_audience: Wiek 10-18
           stages:
             Artist:
               name: Artysta
@@ -264,7 +264,7 @@ pl:
             'Eval: Boolean Operators':
               name: Operatory logiczne
             'Eval: Conditionals':
-              name: Warunkowe
+              name: Zdania z warunkami
             'Eval: Defining Functions':
               name: Złożonych funkcji
             'Eval: Strings and Images':
@@ -364,7 +364,7 @@ pl:
             Computational Thinking:
               name: Myślenie komputacyjne
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             Functions:
               name: Funkcje
             Graph Paper Programming:
@@ -424,12 +424,12 @@ pl:
             Studio:
               name: Studio
         flappy:
-          title: Flappy Code
-          description: Czy chciałbyś utworzyć własną grę w mniej niż 10 minut? Wypróbuj nasz poradnik Flappy Code!
+          title: Kod Flappiego
+          description: Czy chciałbyś utworzyć własną grę w mniej niż 10 minut? Wypróbuj nasz samouczek dla kodowania Flappiego!
           description_short: Napisz własną grę z Flappym w mniej niż 10 minut!
           stages:
             Flappy Code:
-              name: Flappy Code
+              name: Kod Flappiego
         jigsaw:
           title: Układanka
           description: Wypróbuj nasz samouczek łamigłówek
@@ -492,6 +492,8 @@ pl:
               name: Wysyłanie sformatowanego tekstu
             Sending Numbers:
               name: Wysyłanie numerów
+            Text Compression:
+              name: Kompresja tekstu
         algebraPD:
           stages:
             Course Overview:
@@ -524,6 +526,11 @@ pl:
               name: Twoja gra - Detekcja kolizji
             Your Game - Player Movement:
               name: Twoja gra - Ruch gracza
+        text-compression:
+          title: Kompresja tekstu
+          stages:
+            Text Compression:
+              name: Kompresja tekstu
         CSPPD:
           stages:
             Growth Mindset:
@@ -811,8 +818,12 @@ pl:
               name: Gwiezdne Wojny
             Studio:
               name: Studio
+            Text Compression:
+              name: Kompresja tekstu
             Web Lab:
               name: Web Lab
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -1220,15 +1231,15 @@ pl:
               name: Gumball Play Lab
         starwars:
           title: 'Star Wars: Tworzenie Galaktyki za pomocą kodu'
-          description: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
-          description_short: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
+          description: Dowiedz się, jak programować droidy i utwórz własną grę Gwiezdnych Wojen w galaktyce daleko, daleko.
+          description_short: Dowiedz się, jak programować droidy i utwórz własną grę Gwiezdnych Wojen w galaktyce daleko, daleko.
           stages:
             Hour of Code 2015:
               name: Godzina Kodowania 2015
         starwarsblocks:
           title: 'Star Wars: Tworzenie Galaktyki za pomocą kodu'
-          description: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
-          description_short: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
+          description: Dowiedz się, jak programować droidy i utwórz własną grę Gwiezdnych Wojen w galaktyce daleko, daleko.
+          description_short: Dowiedz się, jak programować droidy i utwórz własną grę Gwiezdnych Wojen w galaktyce daleko, daleko.
           stages:
             Hour of Code 2015:
               name: Godzina Kodowania 2015
@@ -1449,6 +1460,8 @@ pl:
               name: Kompresja stratna oraz formaty plików
             Making Data Visualizations:
               name: Tworzenie wizualizacji danych
+            Text Compression:
+              name: Kompresja tekstu
             Unit 2 Chapter 1 Assessment:
               name: Oszacowanie Jednostki 2 rozdziału 1
             Unit 2 Chapter 2 Assessment:
@@ -1567,7 +1580,7 @@ pl:
             Drawing in Game Lab:
               name: Rysowanie w laboratorium gier
         CSF_Secret_Sample:
-          description_audience: W wieku 8-18
+          description_audience: Wiek 8-18
           stages:
             Sample Stage:
               name: Przykładowy etap
@@ -1732,7 +1745,7 @@ pl:
             Sample Stage:
               name: Przykładowy etap
         artistExemplar:
-          description_audience: W wieku 8-18
+          description_audience: Wiek 8-18
         teachercon:
           stages:
             Discovery Learning:
@@ -2001,7 +2014,7 @@ pl:
             Variables:
               name: Zmienne
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             Keyboard Input:
               name: Wejście klawiatury
             Other Forms of Input:
@@ -2047,7 +2060,7 @@ pl:
             Binary:
               name: Binarny
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             Events:
               name: Zdarzenia
             For Loops:
@@ -2296,7 +2309,7 @@ pl:
               name: Projekt - Prezentacja aplikacji
         minecraft:
           title: Minecraft w Godzinie Kodowania - Projektant
-          description_short: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecraft.
+          description_short: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecrafta.
           description: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecraft.
           stages:
             Minecraft Hour of Code Designer:
@@ -2304,7 +2317,7 @@ pl:
         flappy-impact-study:
           stages:
             Flappy Code:
-              name: Flappy Code
+              name: Kod Flappiego
         coursea-draft:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2338,6 +2351,7 @@ pl:
             Your Digital Footprint:
               name: Twój cyfrowy ślad
         coursec-draft:
+          description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           stages:
             Programming in Maze:
               name: Programowanie w labiryncie
@@ -2356,6 +2370,7 @@ pl:
             Debugging in Maze:
               name: Debugowanie labiryntu
         coursed-draft:
+          description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           stages:
             Nested Loops in Maze:
               name: Zagnieżdżone pętle w labiryncie
@@ -2378,6 +2393,7 @@ pl:
             Introduction:
               name: Wstęp
         coursee-draft:
+          description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           stages:
             Digital Citizenship:
               name: Cyfrowe obywatelstwo
@@ -2396,8 +2412,9 @@ pl:
             Introduction:
               name: Wstęp
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
         coursef-draft:
+          description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           stages:
             Digital Citizenship:
               name: Cyfrowe obywatelstwo
@@ -2639,7 +2656,7 @@ pl:
             Introduction:
               name: Wstęp
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             'Real Life Algorithms: Dice Race':
               name: 'Algorytmy z życia wzięte: Gra w kości'
         csd6-2017:
@@ -2712,7 +2729,7 @@ pl:
             Booleans and Conditionals:
               name: Wyrażenia boolowskie i warunkowe
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             Taking Input:
               name: Pobieranie wejścia
             Complex Conditionals:
@@ -2848,7 +2865,7 @@ pl:
             Booleans and Conditionals:
               name: Wyrażenia boolowskie i warunkowe
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             Keyboard Input:
               name: Wejście klawiatury
             Other Forms of Input:
@@ -2947,7 +2964,8 @@ pl:
               name: 'Pętle: Szczęśliwe pętle'
           title: Kurs A
           assignment_family_title: Kurs A
-          description_audience: 'W wieku 4-7'
+          description_audience: 'Wiek 4-7'
+          description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -2958,7 +2976,8 @@ pl:
               name: Programowanie w labiryncie
           title: Kurs B
           assignment_family_title: Kurs B
-          description_audience: 'W wieku 5-8'
+          description_audience: 'Wiek 5-8'
+          description_short: Wprowadzenie do informatyki dla nie umiejących czytać. (Podobny do Kursu A, ale bardziej różnorodny dla starszych uczniów.)
         coursec-2017:
           stages:
             Programming in Maze:
@@ -2975,7 +2994,8 @@ pl:
               name: Pętle z Rey i BB-8
           title: Kurs C
           assignment_family_title: Kurs C
-          description_audience: 'W wieku 6-10'
+          description_audience: 'Wiek 6-10'
+          description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
         coursed-2017:
           stages:
             Introduction:
@@ -2986,6 +3006,8 @@ pl:
               name: Wyrażenie warunkowe w pszczole
           title: Kurs D
           assignment_family_title: Kurs D
+          description_audience: 'Wiek 7-11'
+          description_short: Szybko omów pojęcia z kursu C, a następnie przejdź dalej do algorytmów, zagnieżdżonych pętli, warunków i innych.
         coursee-2017:
           stages:
             Introduction:
@@ -3024,7 +3046,8 @@ pl:
               name: Zagnieżdżające się  pętle
           title: Kurs E
           assignment_family_title: Kurs E
-          description_audience: 'W wieku 8-12'
+          description_audience: 'Wiek 8-12'
+          description_short: Szybko omów pojęcia w kursch C i D, a następnie przejdź dalej do funkcji.
         coursef-2017:
           stages:
             Introduction:
@@ -3053,7 +3076,8 @@ pl:
               name: Kładąc podwaliny (Building a Foundation)
           title: Kurs F
           assignment_family_title: Kurs F
-          description_audience: 'W wieku 9-13'
+          description_audience: 'Wiek 9-13'
+          description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
         csdnovice:
           stages:
             Tuesday:
@@ -3116,7 +3140,9 @@ pl:
               name: Kładąc podwaliny (Building a Foundation)
             Nested Loops:
               name: Zagnieżdżające się  pętle
+          title: Szybki Kurs
           description_audience: 'W wieku 9-18'
+          description_short: 'Wprowadzenie do informatyki: łączy nasze najlepsze programy nauczania w szkole podstawowej dla starszych uczniów.'
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -3129,7 +3155,9 @@ pl:
               name: 'Programowanie: Star Wars'
             Spelling Bee:
               name: Literująca Pszczółka
+          title: Szybki kurs dla dzieci, które nie umieją czytać
           description_audience: 'W wieku 4-8'
+          description_short: 'Wprowadzenie do informatyki dla nie umiejących czytać: łączy najlepsze elementy z naszych kursów dla przedszkoli i pierwszej klasy.'
         subgoal-labels-opt-in:
           stages:
             deprecated:
@@ -3216,7 +3244,7 @@ pl:
             Nested Loops:
               name: Zagnieżdżające się  pętle
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             Functions in Bee:
               name: Funkcje w pszczole
             Functions in Farmer:
@@ -3301,7 +3329,7 @@ pl:
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             Functions in Bee:
               name: Funkcje w pszczole
             Functions in Farmer:
@@ -3452,7 +3480,7 @@ pl:
             Introduction:
               name: Wstęp
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             Functions in Bee:
               name: Funkcje w pszczole
             Functions in Farmer:
@@ -3528,7 +3556,7 @@ pl:
             Booleans Unplugged:
               name: Wyrażenia boolowskie bez komputera
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             Keyboard Input:
               name: Wejście klawiatury
             Other Forms of Input:
@@ -3568,7 +3596,7 @@ pl:
             Booleans Unplugged:
               name: Wyrażenia boolowskie bez komputera
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             Keyboard Input:
               name: Wejście klawiatury
             Other Forms of Input:
@@ -3613,7 +3641,8 @@ pl:
               name: Projekt - Własna strona portfolio
         coursea-2018:
           assignment_family_title: Kurs A
-          description_audience: 'W wieku 4-7'
+          description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
+          description_audience: 'Wiek 4-7'
           stages:
             'Debugging: Unspotted Bugs':
               name: Niewykryte Błędy
@@ -3704,7 +3733,7 @@ pl:
               name: Programowanie na papierze milimetrowym
         courseb-2018:
           assignment_family_title: Kurs B
-          description_audience: 'W wieku 5-8'
+          description_audience: 'Wiek 5-8'
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugowanie: Nie wykryte błędy'
@@ -3720,6 +3749,7 @@ pl:
               name: Przenieść go, przenieść go
         coursed-2018:
           assignment_family_title: Kurs D
+          description_audience: 'Wiek 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programowanie na papierze milimetrowym
@@ -3751,7 +3781,8 @@ pl:
               name: Zagnieżdżone pętle w labiryncie
         coursec-2018:
           assignment_family_title: Kurs C
-          description_audience: 'W wieku 6-10'
+          description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
+          description_audience: 'Wiek 6-10'
           stages:
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
@@ -3791,7 +3822,7 @@ pl:
               name: Funkcje z parametrami
         coursee-2018:
           assignment_family_title: Kurs E
-          description_audience: 'W wieku 8-12'
+          description_audience: 'Wiek 8-12'
           stages:
             'Programming: My Robotic Friends':
               name: Moi przyjaciele wśród robotów
@@ -3819,7 +3850,8 @@ pl:
               name: Godzina Kodowania z Minecraft
         coursef-2018:
           assignment_family_title: Kurs F
-          description_audience: 'W wieku 9-13'
+          description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
+          description_audience: 'Wiek 9-13'
           stages:
             'Programming: My Robotic Friends':
               name: Moi przyjaciele wśród robotów
@@ -3941,6 +3973,8 @@ pl:
           stages:
             Bytes and File Sizes:
               name: Rozmiary plików i bajtów
+            Text Compression:
+              name: Kompresja tekstu
             Encoding B&W Images:
               name: Kodowanie czarno-białych obrazów
             Encoding Color Images:
@@ -4147,7 +4181,7 @@ pl:
             Aquatic:
               name: Wodny
           title: 'Minecraft: Wodna podróż'
-          description_short: Minecraft powrócił i proponuje zupełnie nową aktywność na rzecz Godziny Kodowania!
+          description_short: Bądź kreatywny i wykorzystaj swoje umiejętności rozwiązywania problemów, aby odkrywać i budować podwodne światy za pomocą kodu!
         sconyers:
           stages:
             Linking Screens:
@@ -4164,7 +4198,8 @@ pl:
           title: Nie przestawaj tańczyć
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
         coursef-2019:
-          description_audience: 'W wieku 9-13'
+          description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
+          description_audience: 'Wiek 9-13'
           stages:
             Sequence in Maze:
               name: Sekwencje w labiryncie
@@ -4199,6 +4234,7 @@ pl:
             Dance Party:
               name: Potańcówka
         coursed-2019:
+          description_audience: 'Wiek 7-11'
           stages:
             Introduction to Online Puzzles:
               name: Wprowadzenie do puzzli online
@@ -4221,7 +4257,7 @@ pl:
             Dance Party:
               name: Potańcówka
         coursee-2019:
-          description_audience: 'W wieku 8-12'
+          description_audience: 'Wiek 8-12'
           stages:
             Sequence in Maze:
               name: Sekwencje w labiryncie
@@ -4232,7 +4268,7 @@ pl:
             Conditionals with Cards:
               name: Warunkowe z kartami
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             Explore Project Ideas:
               name: Odkrywanie pomysłów na projekt
             Internet:
@@ -4308,7 +4344,8 @@ pl:
           title: Nie przestawaj tańczyć
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
         coursec-2019:
-          description_audience: 'W wieku 6-10'
+          description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
+          description_audience: 'Wiek 6-10'
           stages:
             Building a Foundation:
               name: Kładąc podwaliny (Building a Foundation)
@@ -4329,7 +4366,8 @@ pl:
         gamelab:
           title: Laboratorium Gier (Game Lab)
         coursea-2019:
-          description_audience: 'W wieku 4-7'
+          description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
+          description_audience: 'Wiek 4-7'
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugowanie: Nie wykryte błędy'
@@ -4343,8 +4381,10 @@ pl:
               name: 'Pętle: Szczęśliwe pętle'
             Learn to Drag and Drop:
               name: Nauka metody "przeciągnij i upuść"
+            Loops in Ice Age:
+              name: Pętle w Epoce Lodowcowej
         courseb-2019:
-          description_audience: 'W wieku 5-8'
+          description_audience: 'Wiek 5-8'
           stages:
             Move It, Move It:
               name: Przenieść go, przenieść go
@@ -4352,6 +4392,8 @@ pl:
               name: Twój cyfrowy ślad
             Loops in Ice Age:
               name: Pętle w Epoce Lodowcowej
+            Programming in Maze:
+              name: Programowanie w labiryncie
         pre-express-2019:
           description_audience: 'W wieku 4-8'
           stages:
@@ -4411,7 +4453,7 @@ pl:
             Booleans Unplugged:
               name: Wyrażenia boolowskie bez komputera
             Conditionals:
-              name: Warunkowe
+              name: Zdania z warunkami
             Keyboard Input:
               name: Wejście klawiatury
             Other Forms of Input:
@@ -4514,6 +4556,8 @@ pl:
           stages:
             Bytes and File Sizes:
               name: Rozmiary plików i bajtów
+            Text Compression:
+              name: Kompresja tekstu
             Encoding B&W Images:
               name: Kodowanie czarno-białych obrazów
             Encoding Color Images:

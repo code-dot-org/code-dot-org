@@ -626,6 +626,8 @@ zh-TW:
     hero:
       title: "Minecraft"
       body: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
+    sports:
+      title: "運動"
     unplugged:
       title: "不插電的教學活動"
       audience: "年齡 4+"
