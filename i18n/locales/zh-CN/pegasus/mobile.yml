@@ -1620,3 +1620,4 @@
   page_not_found_header: '404：找不到页面'
   page_not_found_description: "您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。"
   page_not_found_button: "返回主页"
+  hoc2018_mc_with_microsoft: "与以下机构合作: "

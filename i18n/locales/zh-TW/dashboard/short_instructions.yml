@@ -230,8 +230,8 @@ zh-TW:
       2-3 Maze Loops 20: 使用最少的積木讓我吃到向日葵！
       2-3 Maze Loops 21: 使用最少的積木帶我吃到向日葵！
       2-3 Maze Loops Assessment 1: '評量：只能用 5 個積木，把我帶到向日葵那兒。 '
-      2-3 Maze sq10: 拿頭豬來讓我看看吧！ 有哪些方塊重複了呢?
-      2-3 Maze sq10v2: 拿頭豬來讓我看看吧！ 有哪些方塊重複了呢?
+      2-3 Maze sq10: 讓我到豬那裡！哪個積木重複了？
+      2-3 Maze sq10v2: 讓我到豬那裡！哪個積木重複了？
       2-3 Maze sq2: 順著路徑讓我抓到那隻蠢豬，當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！
       2-3 Maze sq3: 帶我去找那綠色的小惡魔！（小心 TNT 炸藥）
       2-3 Maze sq4: 保持冷靜，幫我找到那隻壞豬豬。否則我真的會憤怒！
@@ -240,7 +240,7 @@ zh-TW:
       2-3 Maze sq7: 試著用 3 個程式積木讓我到綠色入侵者那。
       2-3 Maze sq8: 讓我抓到那隻豬！（我需要的重複積木在哪裡？）
       2-3 Maze sq9: 創造迴圈 以更少的積木抵達豬那裏。
-      2-3 maze sq11: 拿頭豬來讓我看看吧！ 有哪些方塊重複了呢?
+      2-3 maze sq11: 讓我到豬那裡！哪個積木重複了？
       2-3 maze sq12: 你能使用"重複次數"的積木來取代先前的答案嗎？
       2-3 maze sq13: "親愛的... 人類, 我... 殭屍。需要... 到... 向日葵。\n用「重複直到」積木來建立一個迴圈。"
       2-3 maze sq14: 你可以只用 4 個積木就到達向日葵那裡嗎？
@@ -558,6 +558,7 @@ zh-TW:
       CSPU5_U3L16 - textInput getText write: 添加一個輸入姓名、年齡的文字方塊。（點擊觀看完整說明）
       CSPU5_U3L16 - textInput getText write_2018: 添加一個輸入姓名、年齡的文字方塊。（點擊觀看完整說明）
       CSPU5_U3L16 - textInput getText write_2019: 添加一個輸入姓名、年齡的文字方塊。（點擊觀看完整說明）
+      CoureE_HOC 2018 Level_7a: 搜尋這些水底廢墟以尋找箱子。
       Course 2 Bee Loops 1: '嗨，我是蜜蜂。你能幫助我從這些花朵中收集花蜜嗎？ '
       Course 2 Bee Loops 13: '評量：使用重複積木來收集所有的花蜜。'
       Course 2 Maze Loops 1: 你可以只用 5 個積木就讓我抓到豬嗎？
@@ -777,7 +778,7 @@ zh-TW:
       Course 4 SCVP 1: 建立一個帶參數的函式，讓小藝術家能往前、往後跳躍 x 像素，還有往上、往下 y 像素（使用正數和負數）。
       Course E MC Conditionals1: 在地下可以找到稀有資源，但這兒真的太黑了。請放置至少 2 根火把，並且開採到至少 2 塊煤炭。
       Course1BeePuzzle12: 讓我採3次花蜜來製作2次蜂蜜
-      CourseD_Dance_Party_01: 將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接。
+      CourseD_Dance_Party_01: 將「創建一個新的」積木拖曳至工作區中，並把它放到「設定」積木裡頭。
       CourseD_Dance_Party_02: 讓麋鹿在 4 個小節後開始新的動作！
       CourseD_Dance_Party_03: 現在讓舞者在 6 個小節後開始新的動作！
       CourseD_Dance_Party_04: 將背景效果新增至您的程式。
@@ -787,7 +788,7 @@ zh-TW:
       CourseD_Dance_Party_09: 使用「設定色調」程式積木來變更舞者的顏色。
       CourseD_Dance_Party_10: 使用「開始跟隨」程式積木，讓另一個舞者也能回應音樂。
       CourseD_Dance_Party_11: '「按下向上鍵時」程式積木允許您在按下向上箭頭時執行程式碼。按下向上鍵時，嘗試讓舞者進行一個快速的動作。'
-      CourseD_Dance_Party_11_5: 使用「所有鴨子」程式積木，讓鴨子一起跳舞。
+      CourseD_Dance_Party_11_5: 使用「全部鴨子」積木，讓鴨子一起跳舞。
       CourseD_Dance_Party_11b: 按下向右鍵時，會讓機器人「掉落」一次，而按下向上鍵時，會讓機器人跳「牙線舞」一次。盡可能快速地掉落又跳牙線舞！
       CourseD_Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       CourseE_HOC 2018 Level_10: 前往這個海洋遺址的入口。
@@ -818,8 +819,8 @@ zh-TW:
       Crack a Caesar Cipher: 說明
       Crack a Caesar Cipher_2018: 說明
       Crack a Caesar Cipher_2019: 說明
-      Dance_Party_01: 將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接。
-      Dance_Party_01_low: 將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接。
+      Dance_Party_01: 將「創建一個新的」積木拖曳至工作區中，並把它放到「設定」積木裡頭。
+      Dance_Party_01_low: 將「創建一個新的」積木拖曳至工作區中，並把它放到「設定」積木裡頭。
       Dance_Party_02: 讓麋鹿在 4 個小節後開始新的動作！
       Dance_Party_03: 現在讓舞者在 6 個小節後開始新的動作！
       Dance_Party_04: 將背景效果新增至您的程式。
@@ -828,9 +829,9 @@ zh-TW:
       Dance_Party_08: 您是否能讓兩個備用舞者的大小相同？
       Dance_Party_09: 使用「設定色調」程式積木來變更舞者的顏色。
       Dance_Party_10: 使用「開始跟隨」程式積木，讓另一個舞者也能回應音樂。
-      Dance_Party_11.5_test: 使用「所有鴨子」程式積木，讓鴨子一起跳舞。
+      Dance_Party_11.5_test: 使用「全部鴨子」積木，讓鴨子一起跳舞。
       Dance_Party_11: '「按下向上鍵時」程式積木允許您在按下向上箭頭時執行程式碼。按下向上鍵時，嘗試讓舞者進行一個快速的動作。'
-      Dance_Party_11_5: 使用「所有鴨子」程式積木，讓鴨子一起跳舞。
+      Dance_Party_11_5: 使用「全部鴨子」積木，讓鴨子一起跳舞。
       Dance_Party_11b: 按下向右鍵時，會讓機器人「掉落」一次，而按下向上鍵時，會讓機器人跳「牙線舞」一次。盡可能快速地掉落又跳牙線舞！
       Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       Eval Booleans 1: 布林運算子（像是 >、 <、 =）讓我們能夠比較不同的值，並返回 true 或 false。點擊「運行」來看看這個運算式的結果。
@@ -840,6 +841,7 @@ zh-TW:
       Food Fight!: "我們已經為你添加了上一關的函數。 \\r\n\\r\n用“如果”模塊來編寫你的遊戲，當play_score玩家分數 大於某個值時，調用level_up升級 函數。 \\r\n\\r\n例如：“play_score” > 6\\r\n\\r\n玩遊戲，並且達到第4級來到達下一關。 "
       FoodFight: 這是一個遊戲範例，你也可以在 play lab 裡自己做一個。
       FoodFight_2018: 這是一個遊戲範例，你也可以在 play lab 裡自己做一個。
+      Frequency Analysis: 測試
       Function intro Ryan: 使用「建造橋樑」功能兩次，以開闢路徑前往火把。
       Function intro Ryan_2019: 使用「建造橋樑」功能兩次，以開闢路徑前往火把。
       Get To The Goal: 做你喜歡的任何東西。比方說一個猜數字遊戲！
@@ -1036,15 +1038,15 @@ zh-TW:
       MC_HOC_2017_05_Cole: 讓玩家前往鏟子的位置。
       MC_HOC_2017_05_Cole_2019: 讓玩家前往鏟子的位置。
       MC_HOC_2017_05_Josh: 讓玩家前往鏟子的位置。
-      MC_HOC_2017_05_Kiki: 讓玩家前往橙色方塊。
+      MC_HOC_2017_05_Kiki: 讓玩家到達橙色區域。
       MC_HOC_2017_06_Cole: 修正此代碼，讓 Agent 可建造橫跨這條河流的橋樑。
       MC_HOC_2017_06_Cole_2019: 修正此代碼，讓 Agent 可建造橫跨這條河流的橋樑。
       MC_HOC_2017_06_Josh: 修正此代碼，幫助 Agent 建造橫跨這條河流的橋樑。
       MC_HOC_2017_06_Kiki: 修正此代碼，幫助 Agent 建造橫跨這條河流的橋樑。
       MC_HOC_2017_07_Cole: 破壞冰塊，並讓 {currentPlayerName} 前往礦車。
       MC_HOC_2017_07_Cole_2019: 破壞冰塊，並讓 {currentPlayerName} 前往礦車。
-      MC_HOC_2017_07_Kiki: 使用一種功能，清除前往橙色方塊的路徑。
-      MC_HOC_2017_07a_Kiki: 清除前往橙色方塊的路徑。
+      MC_HOC_2017_07_Kiki: 使用函式清理前往橙色區域的路徑。
+      MC_HOC_2017_07a_Kiki: 清理前往橙色區域的路徑。
       MC_HOC_2017_08_Cole: 變更提供的功能以於此生態域中使用。
       MC_HOC_2017_08_Kiki: 變更功能以於此版圖中使用。
       MC_HOC_2017_08_RY: 使用功能以找到穿過熔岩的路。
@@ -1206,9 +1208,11 @@ zh-TW:
       The Vigenere Cipher Widget_2019: 說明
       The Vigenere Cipher: 說明
       Total Artist Clone Me: '自由發揮：這是除了你寫的函式，還有更多的函式讓你發揮。畫些令人驚嘆的東西吧！用不同的筆跡寬度來看看你能畫出什麼不一樣的圖形！'
+      U2 Vigenere: 測試
       U2 frequency caesar: 說明
       U2 frequency random sub: 說明
       U2 vigenere cipher: 說明
+      U2L14 frequency random: 測試
       U3 - Arrays - indexPractice: 將陣列的內容依序寫到畫面上。（點擊查看完整說明）
       U3 - Canvas - 200dots: 添加一個迴圈到程式，以在畫布上畫出 200 個黑點。（點擊觀看完整說明）
       U3 - Canvas - introCanvas: 添加一個畫布（canvas）到你的 app 上，並將它設定成啟用。接著在你的畫布上新增一個大的圓點。（點擊觀看完整說明）
@@ -1284,6 +1288,9 @@ zh-TW:
       U4 - Read Record - 1.3: "添加一個控制紀錄指令到回呼函式（callback function）裡。（點擊觀看完整說明）\\r\n"
       U4 - Read Record - 1.3_2018: "添加一個控制紀錄指令到回呼函式（callback function）裡。（點擊觀看完整說明）\\r\n"
       U4 - Read Record - 1.3_2019: "添加一個控制紀錄指令到回呼函式（callback function）裡。（點擊觀看完整說明）\\r\n"
+      U4 - add createRecord to contacts App: 將程式添加到你的聯絡人應用程式，如此就可以新添加的聯絡人儲存在表格中（點擊以觀看完整說明）。
+      U4 - add createRecord to contacts App_2018: 將程式添加到你的聯絡人應用程式，如此就可以新添加的聯絡人儲存在表格中（點擊以觀看完整說明）。
+      U4 - add createRecord to contacts App_2019: 將程式添加到你的聯絡人應用程式，如此就可以新添加的聯絡人儲存在表格中（點擊以觀看完整說明）。
       U4 Model App: 添加一個大的紅色按鈕到設計模式畫面上。（點擊觀看完整說明）
       U4 Model App_2018: 添加一個大的紅色按鈕到設計模式畫面上。（點擊觀看完整說明）
       U4 Model App_2019: 添加一個大的紅色按鈕到設計模式畫面上。（點擊觀看完整說明）
@@ -1310,6 +1317,7 @@ zh-TW:
       Underground Mining Coal: 在地下可以找到稀有資源，但這兒真的太黑了。請放置至少 2 根火把，並且開採到至少 2 塊煤炭。
       Underground Mining Coal_2018: 在地下可以找到稀有資源，但這兒真的太黑了。請放置至少 2 根火把，並且開採到至少 2 塊煤炭。
       Underground Mining Coal_2019: 在地下可以找到稀有資源，但這兒真的太黑了。請放置至少 2 根火把，並且開採到至少 2 塊煤炭。
+      Vigenere: 測試
       XML Scratchpad: 使用這個測試標準來抓取 xml 以作為單元測試
       aE7: "如果要建立另一個像這樣的迴圈，不過把左轉改成右轉，那會發生什麼事呢？\\r\n\\r\n你可以重複那些程式來畫出波浪嗎？"
       aE8: "現在我們來循環做這件 4 次以建立這個畫框。當心轉角處 - 你不能直接轉向 90 度！\\r\n\\r\n如果循環 3 度 60 次會產生一個半圓，這些程式中的哪些積木可以額外畫出四分之一圓作為畫框圓角呢？"

@@ -86,6 +86,7 @@ zh-TW:
       do something: do something
       filter_pixel: filter_pixel
       draw_image: draw_image
+      checkSimulationEnd: checkSimulationEnd
       witch ending: witch ending
       story: story
       starting path: starting path
@@ -224,6 +225,7 @@ zh-TW:
       draw line of triangles: draw line of triangles
       draw a window: draw a window
       stop_everything: stop_everything
+      lose: lose
       draw a plane of squares: draw a plane of squares
       draw hexagon: draw hexagon
       draw line of hexagons: draw line of hexagons

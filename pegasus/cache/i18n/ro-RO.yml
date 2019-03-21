@@ -320,6 +320,7 @@ ro-RO:
   studiobar_title_nolink: Explorează cursurile Code.org
   studiobar_elementary_title: Cursuri elementare
   studiobar_elementary_body: Cele trei cursuri noi ale noastre pentru K&#8209;5
+  studiobar_dance_title: Petrecere cu dans
   studiobar_hoc_title: Ora de Programare
   studiobar_hoc_body: Învaţă să programezi cu Angry Birds
   studiobar_flappy_title: Codul Flappy
@@ -622,6 +623,7 @@ ro-RO:
     Dallas Mavericks
   watch_inspirational_videos: Inainte sa incepi, vizioneaza unul dintre aceste videoclipuri
     inspirationale
+  video_title_cs_is_everything: Știința calculatoarelor schimbă totul
   video_title_inspire_girl: Inspira o fata
   video_title_cs_intro: Introducere in tehnologia computerelor
   video_title_schools_dont_teach: Ceea ce multe scoli nu predau
@@ -710,6 +712,8 @@ ro-RO:
   volunteer_engineer_submission_field_email_preference: Sunteți de acord să vă trimitem
     prin e-mail actualizări cu privire la cursurile noastre, oportunitățile locale
     sau alte știri din domeniul informaticii?
+  volunteer_engineer_submission_field_email_preference_privacy: "(Vedeți polica noastră
+    de confidențialitate)"
   volunteer_engineer_submission_field_email_preference_yes: Da
   volunteer_engineer_submission_field_email_preference_no: Nu
   volunteer_engineer_submission_final_paragraph: Vei aparea pe o hartă pentru ca profesorii
@@ -2066,10 +2070,12 @@ ro-RO:
     dar aşteptati-va ca functionalitatea sa fie nesatisfacatoare.
   flappy_shortcode: zboară
   header_home: Acasă
+  header_my_dashboard: Panoul meu principal
   header_courses: cursuri
   header_course_catalog: Catalog de cursuri
   header_project_gallery: Proiecte
   header_sections: Secțiuni
+  header_professional_learning: Dezvoltare profesională
   header_educate_overview: Prezentare profesor
   header_educate_elementary: Şcoala elementară
   header_educate_middle: Gimnaziu
@@ -2111,9 +2117,11 @@ ro-RO:
   user_header_signin: Loghează-te
   user_header_gamelab: Laborator de jocuri
   user_header_playlab: Laborator de Joacă
+  user_header_dance: Petrecere cu dans
   user_header_spritelab: Laborator Sprite
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  user_header_view_my_projects: Vezi proiectele
   view_all_sections: Vizualizați toate secțiunile
   view_section: Vedeți secţiunea
   view_named_section: Vezi %{section_name}
@@ -2171,10 +2179,16 @@ ro-RO:
     informaticii?
   account_sign_up_child_accept_terms: Confirm că am permisiunea părintelui sau tutorelui
     meu legal de a utiliza serviciile Code.org.
+  hoc_overview_dance_title: Petrecere cu dans
   hoc_overview_start_tutorial: Începe
   hoc2018_creativity_create: Crează
+  hoc2018_creativity_what_will_you_create: Ce vei creea?
   hoc2018_mc_page_title: Tutoriale Hour of Code Minecraft
   hoc2018_mc_details: Mai multe limbi | Browsere moderne și tablete | Clasele 2+
+  hoc2018_mc_aquatic_announcement: Înregistrează-ţi clasa pentru a încerca peste 150
+    de activităţi noi în cadrul Orei de cod (3+9 decembrie). Fi sigur că verifici
+    noua noastră activitate Minecraft pentru 2018, Aventura acvatică! Înregistrează-ţi
+    clasa astăzi.
   hoc2018_mc_hero_title: 'Minecraft: Călătoria eroului'
   hoc2018_mc_designer_title: Minecraft Designer
   hoc2018_mc_designer_description: Programeaza animale şi alte creaturi Minecraft
@@ -2198,6 +2212,7 @@ ro-RO:
   hoc2018_mc_video_5min: 5 min
   hoc2018_mc_video_title_steph_curry: Ora de cod cu Steph Curry
   hoc2018_mc_video_title_sports: Da-ti silinta. Oricine poate învăţa.
+  hoc2018_mc_video_title_cs_is_everything: Știința calculatoarelor schimbă totul
   hoc2018_mc_video_title_inspire_girl: Inspira o fata
   hoc2018_mc_video_title_cs_intro: Introducere in tehnologia computerelor
   hoc2018_mc_video_title_schools_dont_teach: Ceea ce multe scoli nu predau
@@ -2205,10 +2220,85 @@ ro-RO:
   hoc2018_mc_video_title_hoc_is_here: Hour of Code este aici - Oricine poate învăţa
   hoc2018_mc_video_title_anybody_can_learn: Oricine poate învăța
   hoc2018_mc_video_title_my_name_is_aracely: Numele meu este Aracely
+  hoc2018_mc_homepage_what_create: Ce vei creea?
   hoc2018_mc_homepage_join_us: Alatura-ni-te
   hoc2018_mc_homepage_try_it: Încearcă
+  hoc2018_mc_minecraft_education: Educație cu Minecraft
+  hoc2018_mc_continue_learning: Continuă să înveți cu Minecraft.
+  hoc2018_mc_go_to_mc_education: Mergi la Minecraft Education
+  hoc2018_dance_party_main_heading: Petrecere cu dans
+  hoc2018_dance_party_landing_title: Dans
+  hoc2018_dance_party_subheading: Ajută la traducerea Petreceii cu dans
+  hoc2018_dance_create_your_own_dance_title: Crează propria Petrecere cu dans
+  hoc2018_dance_party_box_title: Petrecere cu dans
+  hoc2018_dance_party_box_description: Programează o Petrecere cu dans pentru a o
+    partaja cu prietenii!
+  hoc2018_dance_party_specs: Limbă | Format | Vârsta 6-106
   hoc2018_dance_party_button: Începe
+  hoc2018_dance_keep_on_dancing_box_title: Continuă să dansezi
+  hoc2018_dance_keep_on_dancing_description: Mergi mai departe de prima oră cu ideile
+    de extindere a proiectelor.
+  hoc2018_dance_keep_on_dancing_specs: Limbă | Format | Vârsta 13+
+  hoc2018_dance_keep_on_dancing_button: Începe partea a 2-a
+  hoc2018_dance_teacher_resources_title: Resurse pentru profesori
+  hoc2018_dance_teacher_resources_tile1_description: Planuri de lecţii, certificate
+    şi filtrarea mizicii.
   hoc2018_dance_teacher_resources_tile1_button: Plan de lecţie
+  hoc2018_dance_teacher_resources_tile2_title: Petrecere cu dans fără calculator
+  hoc2018_dance_teacher_resources_tile2_description: Nu sunt necesare calculatoare!
+    Învaţă concepte de programare pentru a face coregrafia unei petreceri cu dans
+    împreună.
   hoc2018_dance_teacher_resources_tile2_button: Activitate fără Calculator
+  hoc2018_dance_featured_student_creations_title: Creaţii ale elevilor recomandate
+  hoc2018_dance_videos_section_heading: Fi inspirat
+  hoc2018_dance_video_title_what_is_creativity: Ce este creativitatea?
+  hoc2018_dance_view_creativity_video_playlist: Ce este creativitatea? Vizualizează
+    întreaga serie (5 min)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: În parteneriat cu â
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Viitorii ingineri
+    de la Amazon* este un program complet pentru a inspira, educa şi pregăti, din
+    copilărie până la profesie, copii cu venituri mici sau alte dezavantaje şi tineri
+    care urmăresc obţinerea unei cariere în domeniul ştiinţei calculatoarelor. <a
+    href='%{amazon_future_engineer_link}' target='_blank'>Află mai multe</a>
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Află mai multe
+    despre Viitorii ingineri de la Amazon
+  hoc2018_dance_amazon_about_future_engineer_title: Despre Viitorii infineri de la
+    Amazon
+  hoc2018_dance_amazon_about_future_engineer_description: Află despre programul complet
+    din copilărie până la profesie al Amazon care facilitează accesul la educaţia
+    în domeniul ştiinţei calculatoarelor. Găseşti informaţii despre cum să te implici
+    în taberele de vară, clasele de CS din licee, burse de studiu şi stagii.
   hoc2018_dance_amazon_about_future_engineer_button: Află mai mult
+  hoc2018_dance_amazon_try_coding_this_summer_title: Încearcă să programezi în vara
+    asta
+  hoc2018_dance_amazon_try_coding_this_summer_description: Implică-te în vacanţele
+    gratuite, amuzante şi cuprinzătoare despre ştiinţa calculatoarelor numit Viitorii
+    ingineri de la Amazon! Vacanţele de vară sunt disponibile pentru elevii de la
+    grădiniţă până la clasa a 8-a în mai multe locaţii din SUA pentru vara lui 2019.
+  hoc2018_dance_amazon_try_coding_this_summer_button: Înscrie-te într-o vacanţă
+  hoc2018_dance_amazon_scholarship_programs_title: Programe cu burse de studiu
+  hoc2018_dance_amazon_scholarship_programs_description: Amazon oferă burse de studiu
+    de 10.000$ pe an pentru elevi defavorizaţi care au finalizat cu succes sau care
+    sunt înscrişi în acest moment la un curs de nivel colegiu (AP) în domeniul ştiinţei
+    calculatoarelor(CS) şi care intenţionează să studieze pentru o diplomă în CS la
+    un colegiu de 4 ani sau universitate în Satele Unite ale Americii.
   hoc2018_dance_amazon_scholarship_programs_button: Înscrieți-vă acum
+  hoc2018_dance_amazon_internships_title: Vin-o ca intern la Amazon
+  hoc2018_dance_amazon_internships_description: Acum sunt deschise înscrierile pentru
+    stagiile Viitorii ingineri de la Amazon pentru vara 2019. Stagiarii vor face echip
+    cu un manager, un mentor tehnic sau cu alţi interni pentru a inova şi crea noi
+    capabilităţi şi servicii pentru clienţii Amazon. Stagiile sunt disponibile în
+    SUA şi Canada.
+  hoc2018_dance_amazon_internships_button: Găseşte un stadiu
+  hoc2018_dance_amazon_k8_programs_title: Programe pentru K-8
+  hoc2018_dance_amazon_funding_title: Obţine finanţare pentru diploma ta în CS
+  hoc2018_dance_amazon_future_engineer_footer: "* Artiştii a căror muzică a fost folosită
+    în acest tutorial nu sponsorizează sau nu sunt de acord cu Amazon din punct de
+    vedere al licenţei de utilizare a muzicii lor la Code.org.\n\n"
+  hoc2018_dance_measure: Măsură
+  hoc2018_dance_measure_colon: 'Măsură:'
+  hoc2018_dance_video1: Petrecere cu dans - Introducere
+  hoc2018_dance_video2: Petrecere cu dans - Evenimente
+  hoc2018_dance_video3: Petrecere cu dans - Proprietăţi
+  hoc2018_dance_video4: Petrecere cu dans - Felicitări
+  hoc2018_mc_with_microsoft: În parteneriat cu â

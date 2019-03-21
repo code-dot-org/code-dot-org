@@ -2,7 +2,7 @@ es:
   errors:
     messages:
       not_saved: 'Corrige los siguientes errores:'
-      too_young: 'https://code.org/mc'
+      too_young: 'Este contenido tiene restricciones de edad y no es aconsejable para los estudiantes más jóvenes.'
       teacher_must_accept_terms: 'Este contenido tiene restricciones de edad asignadas y no está disponible para alumnos mas jóvenes. Pide a tu maestro que acepte los Términos de Servicio actualizados para darte acceso a este contenido. Tu maestro puede hacer esto ingresando en Code Studio y dando clic en el botón "Revisar términos actualizados" cerca de la parte superior de la pagina inicial del Code Studio.'
       pair_programmer: 'Estás trabajando en programación por pares con un alumno que no tiene acceso a este contenido. Para acceder a este contenido, anula la programación por pares e intenta de nuevo.'
   activerecord:

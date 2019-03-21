@@ -603,16 +603,6 @@ zh-CN:
         * （提示: 代码几乎和`moveCloud0`函数相同）\r
         * 在事件模块内调用新的`moveCloud(name)`函数, 每个云朵名称一次。\r
         * （提示: 这类似于 `loopCloud(name)` 函数被多次调用的方式。）
-      CSD U6 params modify clouds_2019: |-
-        # 云\r
-        \r
-        当你吹声音传感器的时候, 这个程序会让云朵移动。但它还没完成。\r
-        \r
-        # 这样做\r
-        * 创建一个新函数`moveCloud(name)`（移动云朵 名称），它将移动任何云朵。\r
-        * （提示: 代码几乎和`moveCloud0`函数相同）\r
-        * 在事件模块内调用新的`moveCloud(name)`函数, 每个云朵名称一次。\r
-        * （提示: 这类似于 `loopCloud(name)` 函数被多次调用的方式。）
       CSD U6 params modify planes: |-
         # 多飞机控制器\r
         \r
@@ -694,6 +684,7 @@ zh-CN:
       Calc Circles of Eval 9: 完成评估模块来匹配此声明。
       Choose Your Own Adventure: 你可以在游戏实验室做任何你想做的事! 下面是一个在游戏实验室中选择自己的冒险故事的例子。
       Choose Your Own Adventure_2018: 你可以在游戏实验室做任何你想做的事! 下面是一个在游戏实验室中选择自己的冒险故事的例子。
+      CoureE_HOC 2018 Level_7a: 搜索水下废墟，寻找箱子。
       Course 2 Bee Loops 1: '你好，我是蜜蜂。可以帮我从这些花里收集花蜜吗？ '
       Course 2 Maze Loops 1: 你能用5个模块来帮我到达猪那里吗？
       Course 4 2: 蜜蜂想在只想要花蜜。记住，不是所有目标都是花，所以检查一下，只从花上采集花蜜。
@@ -1729,7 +1720,6 @@ zh-CN:
       Virtual Pet 1 Predict_simple: '当点击这个外星人的时候, 你认为会发生什么？  '
       Virtual Pet 1 fix: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
       Virtual Pet 1: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
-      Virtual Pet 1_2019: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
       Virtual Pet 1_simple: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
       Virtual Pet 2 - Validated (Ram): 创建 **事件** 使杰拉尔丁掉到泥坑时，她的颜色变成褐色。
       Virtual Pet 2 - Validated: 创建 **事件** 使杰拉尔丁掉到泥坑时，她的颜色变成褐色。

@@ -768,7 +768,7 @@
   "loginInfo_oauthSectionCodes": "{provider} sekce nemají 6místný kód, takže váš student nebude moci použít kódu k přihlášení.",
   "loginInfo_resetTitle": "Resetování studentských hesel",
   "loginInfo_resetPasswordBody": "Pokud si váš student vytvořil účet Code.org pomocí své e-mailové adresy a hesla (místo přihlášení prostřednictvím služby Google, Facebook, Microsoft nebo Clever), můžete obnovit jeho heslo na kartě [Manage Students] ({url}) z vašeho oddílu kliknutím na tlačítko \"Resetovat heslo\" ve sloupci \"Heslo\".",
-  "loginInfo_resetSecretBody": "Můžete obnovit bezpečnost pro každého ze svých studentů tím, že kliknete na kartu [Manage Students] ({url}) této sekce a dále na tlačítko Zobrazit tajné ve sloupci Heslo a zvolíte tlačítko Reset secret.",
+  "loginInfo_resetSecretBody": "Můžete obnovit bezpečnost pro každého ze svých studentů tím, že kliknete na kartu [Manage Students]({url}) této sekce a dále na tlačítko Zobrazit tajné ve sloupci Heslo a zvolíte tlačítko Reset secret.",
   "loginInfo_signingIn": "",
   "loginInfo_signingInDescription": "Studenti se mohou přihlásit do svých účtů Code.org na adrese https://code.org a kliknutím na tlačítko \"Přihlásit se\" v pravém horním rohu.",
   "loginInfo_signingInClever": "Vaši studenti by se měli přihlásit ke svým účtům Code.org tím, že přejdou na svůj Chytrý panel a kliknou na logo Code.org.",

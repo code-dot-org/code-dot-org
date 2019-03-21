@@ -2667,44 +2667,87 @@ pt-BR:
         estão em ordem do maior para o menor, e o texto mostre o tamanho correto,
         como visto na imagem abaixo. \n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
         PM.png\" style=\"width:100px\" style=\"float:left\">\n"
-      CSD U2 Header Test: "# Cabeçalhos e Parágrafos\n\n<div style=\"float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
-        markdown=\"1\">\n<details>\n\n<summary>\n\n**O que é um elemento de parágrafo?**\n\n</summary>\nParágrafos
-        são marcados por tags de início (`<p>`) e fim (`</p>`) também. Parágrafos
-        em HTML podem ter qualquer tamanho de texto desde uma palavra até várias sentenças.
-        Todo o seu texto na página web deve estar dentro de um elemento HTML (cabeçalhos
-        ou parágrafos). Parágrafos agrupam juntos conjuntos de sentenças e colocam
-        algum espaço entre aquele grupo de texto e o próximo grupo de texto.\n</details>\n<details>\n<summary>\n\n**Como
-        eu crio múltiplos parágrafos?**\n\n</summary>\nParágrafos são marcados por
-        tags de início (`<p>`) e fim (`</p>`) também. Para criar mais de um parágrafo
-        você vai precisar de vários conjuntos de tags `<p>` início e fim. Por exemplo\n<pre>\n\\t&lt;p&gt;\n
-        \   \\tEste é um parágrafo.\n    &lt;/p&gt;\n\\t&lt;p&gt;\n    \\tEste é outro
-        parágrafo.\n    &lt;/p&gt;\n</pre>\n</details>\n<details>\n<summary>\n\n**O
-        que são cabeçalhos?**\n\n</summary>\nCabeçalhos são \nCabeçalhos são os títulos
-        de seções de tamanhos diferentes em uma página web. Os cabeçalhos adicionam
-        estrutura à sua página através da divisão da mesma facilitando a leitura do
-        usuário.\n</details>\n<details>\n<summary>\n\n**Como eu faço um cabeçalho
-        de tamanho diferenciado?**\n\n</summary>\nCabeçalhos podem ter 6 tamanhos
-        diferentes. O mais comum é o &lt;h1&gt; O número 1 na tag HTML informa que
-        este é o maior cabeçalho. O menor cabeçalho é &lt;h6&gt;. VOcê também pode
-        tentar as tags &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, e &lt;h5&gt; que diminuem
-        conforme aumenta o número.\n</h1>\n</details>\n<details>\n<summary>\n\n**O
-        que é HTML?**\n\n</summary>\nHTML significa Hypertext Markup Language (Linguagem
-        de Marcação de Hipertexto, em tradução livre). o HTML é usado para adicionar
-        estratura ao conteúdo de uma página web. O HTML usa tags para especificar
-        onde certas estruturas começam e terminam. Estas tags são conjuntos de caracteres
-        não encontrados no idioma Inglês para que o conteúdo e a estrutura possam
-        ser diferenciados.\n</details>\n<details>\n<summary>\n\n**O que é um elemento
-        HTML?**\n\n</summary>\nUm elemento HTML é uma peça do website que é marcado
-        por uma tag inicial e algumas vezes encerrado por uma tag final. O elemento
-        também inclui o conteúdo entre as tags. Por exemplo:\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
-        style=\"width:500px\">\n</details>\n<details>\n<summary>\n\n**O que é uma
-        tag HTML?**\n\n</summary>\n\nUma tag HTML é um conjunto especial de caracteres
-        que instrui a máquina onde está o começo e fim de um elemento HTML e de que
-        tipo ele é.\n\n\n</details>\n</div>\n\nO autor desta página adicionou um monte
-        de conteúdo, mas não pensou sobre a estrutura. Todo o texto está misturado.\n\nFaça
-        Isto:\n* Veja o conteúdo com seu parceiro e decida qual seria a melhor estrutura.\n*
-        Use suas tags de cabeçalho e parágrafo para codificar a estrutura na página.\n"
+      CSD U2 Header Test: |
+        # Cabeçalhos e Parágrafos
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+
+        **O que é um elemento de parágrafo?**
+
+        </summary>
+        Parágrafos são marcados por tags de início (`<p>`) e fim (`</p>`) também. Parágrafos em HTML podem ter qualquer tamanho de texto desde uma palavra até várias sentenças. Todo o seu texto na página web deve estar dentro de um elemento HTML (cabeçalhos ou parágrafos). Parágrafos agrupam juntos conjuntos de sentenças e colocam algum espaço entre aquele grupo de texto e o próximo grupo de texto.
+        </details>
+        <details>
+        <summary>
+
+        **Como eu crio múltiplos parágrafos?**
+
+        </summary>
+        Parágrafos são marcados por tags de início (`<p>`) e fim (`</p>`) também. Para criar mais de um parágrafo você vai precisar de vários conjuntos de tags `<p>` início e fim. Por exemplo
+        <pre>
+        \t&lt;p&gt;
+            \tEste é um parágrafo.
+            &lt;/p&gt;
+        \t&lt;p&gt;
+            \tEste é outro parágrafo.
+            &lt;/p&gt;
+        </pre>
+        </details>
+        <details>
+        <summary>
+
+        **O que são cabeçalhos?**
+
+        </summary>
+        Cabeçalhos são os títulos de seções de tamanhos diferentes em uma página web. Os cabeçalhos adicionam estrutura à sua página através da divisão da mesma facilitando a leitura do usuário.
+        </details>
+        <details>
+        <summary>
+
+        **Como eu faço um cabeçalho de tamanho diferenciado?**
+
+        </summary>
+        Cabeçalhos podem ter 6 tamanhos diferentes. O mais comum é o &lt;h1&gt; O número 1 na tag HTML informa que este é o maior cabeçalho. O menor cabeçalho é &lt;h6&gt;. Você também pode tentar as tags &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, e &lt;h5&gt; que diminuem conforme aumenta o número.
+        </h1>
+        </details>
+        <details>
+        <summary>
+
+        **O que é HTML?**
+
+        </summary>
+        HTML significa Hypertext Markup Language (Linguagem de Marcação de Hipertexto, em tradução livre). o HTML é usado para adicionar estratura ao conteúdo de uma página web. O HTML usa tags para especificar onde certas estruturas começam e terminam. Estas tags são conjuntos de caracteres não encontrados no idioma Inglês para que o conteúdo e a estrutura possam ser diferenciados.
+        </details>
+        <details>
+        <summary>
+
+        **O que é um elemento HTML?**
+
+        </summary>
+        Um elemento HTML é uma peça do website que é marcado por uma tag inicial e algumas vezes encerrado por uma tag final. O elemento também inclui o conteúdo entre as tags. Por exemplo:
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+        </details>
+        <details>
+        <summary>
+
+        **O que é uma tag HTML?**
+
+        </summary>
+
+        Uma tag HTML é um conjunto especial de caracteres que instrui a máquina onde está o começo e fim de um elemento HTML e de que tipo ele é.
+
+
+        </details>
+        </div>
+
+        O autor desta página adicionou um monte de conteúdo, mas não pensou sobre a estrutura. Todo o texto está misturado.
+
+        Faça Isto:
+        * Veja o conteúdo com seu parceiro e decida qual seria a melhor estrutura.
+        * Use suas tags de cabeçalho e parágrafo para codificar a estrutura na página.
       CSD U2 Headers: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -2976,6 +3019,582 @@ pt-BR:
         o menor, e os textos indiquem o tamanho correto, como na figura abaixo.\n\n<img
         src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
         PM.png\" style=\"width:100px\" style=\"float:left\">\n"
+      CSD U2 Heading Test: |
+        # Cabeçalhos e Parágrafos
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>O que é um elemento de parágrafo?</strong>
+        </summary>
+
+        Parágrafos são marcados por tags de início (`<p>`) e fim (`</p>`) também. Parágrafos em HTML podem ter qualquer tamanho de texto desde uma palavra até várias sentenças. Todo o seu texto na página web deve estar dentro de um elemento HTML (cabeçalhos ou parágrafos). Parágrafos agrupam juntos conjuntos de sentenças e colocam algum espaço entre aquele grupo de texto e o próximo grupo de texto.
+
+        </details>
+        <details>
+        <summary><strong>Como eu crio múltiplos parágrafos?</strong>
+        </summary>
+
+        Parágrafos são marcados por tags de início (`<p>`) e fim (`</p>`) também. Para criar mais de um parágrafo você vai precisar de vários conjuntos de tags `<p>` início e fim. Por exemplo
+
+        <pre>
+        &lt;p&gt;
+          Este é um parágrafo.
+        &lt;/p&gt;
+        &lt;p&gt;
+          Este é outro parágrafo.
+        &lt;/p&gt;
+        </pre>
+
+        </details>
+        <details>
+        <summary><strong>O que são cabeçalhos?</strong>
+        </summary>
+
+        Cabeçalhos são os títulos de seções de tamanhos diferentes em uma página web. Os cabeçalhos adicionam estrutura à sua página através da divisão da mesma facilitando a leitura do usuário.
+
+        </details>
+        <details>
+        <summary><strong>Como eu faço um cabeçalho de tamanho diferenciado?</strong>
+        </summary>
+
+        Cabeçalhos podem ter 6 tamanhos diferentes. O mais comum é o &lt;h1&gt; O número 1 na tag HTML informa que este é o maior cabeçalho. O menor cabeçalho é &lt;h6&gt;. Você também pode tentar as tags &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, e &lt;h5&gt; que diminuem conforme aumenta o número.
+
+        </details>
+        <details>
+        <summary><strong>O que é HTML?</strong>
+        </summary>
+
+        HTML significa Hypertext Markup Language (Linguagem de Marcação de Hipertexto, em tradução livre). o HTML é usado para adicionar estratura ao conteúdo de uma página web. O HTML usa tags para especificar onde certas estruturas começam e terminam. Estas tags são conjuntos de caracteres não encontrados no idioma Inglês para que o conteúdo e a estrutura possam ser diferenciados.
+
+        </details>
+        <details>
+        <summary><strong>O que é um elemento HTML?</strong>
+        </summary>
+
+        Um elemento HTML é uma peça do website que é marcado por uma tag inicial e algumas vezes encerrado por uma tag final. O elemento também inclui o conteúdo entre as tags. Por exemplo:
+
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+
+        </details>
+        <details>
+        <summary><strong>O que é uma tag HTML?</strong>
+        </summary>
+
+        Uma tag HTML é um conjunto especial de caracteres que instrui a máquina onde está o começo e fim de um elemento HTML e de que tipo ele é.
+
+
+        </details>
+        </div>
+
+        O autor desta página adicionou vários conteúdos, mas não pensou na sua estrutura. Todo o texto está amontoado.
+
+        Faça Isto:
+        * Dê uma olhada no conteúdo com seu parceiro e decidam o que vocês acham que seria a melhor estrutura.
+        * Utilize suas tags cabeçalho e parágrafo para codificar a estrutura da página.
+      CSD U2 Heading Test_2018: |
+        # Cabeçalhos e Parágrafos
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>O que é um elemento de parágrafo?</strong></summary>
+
+        Parágrafos são marcados por tags de início (`<p>`) e fim (`</p>`) também. Parágrafos em HTML podem ter qualquer tamanho de texto desde uma palavra até várias sentenças. Todo o seu texto na página web deve estar dentro de um elemento HTML (cabeçalhos ou parágrafos). Parágrafos agrupam juntos conjuntos de sentenças e colocam algum espaço entre aquele grupo de texto e o próximo grupo de texto.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu crio múltiplos parágrafos?</strong>
+
+        </summary>
+
+        Parágrafos são marcados por tags de início (`<p>`) e fim (`</p>`) também. Para criar mais de um parágrafo você vai precisar de vários conjuntos de tags `<p>` início e fim. Por exemplo
+
+        <pre>
+            &lt;p&gt;
+                Este é um parágrafo.
+            &lt;/p&gt;
+            &lt;p&gt;
+                Este é outro parágrafo.
+            &lt;/p&gt;
+        </pre>
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que são cabeçalhos?</strong>
+        </summary>
+        Cabeçalhos são os títulos de seções de tamanhos diferentes em uma página web. Os cabeçalhos adicionam estrutura à sua página através da divisão da mesma facilitando a leitura do usuário.
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu faço um cabeçalho de tamanho diferenciado?</strong>
+        </summary>
+        Cabeçalhos podem ter 6 tamanhos diferentes. O mais comum é o &lt;h1&gt; O número 1 na tag HTML informa que este é o maior cabeçalho. O menor cabeçalho é &lt;h6&gt;. Você também pode tentar as tags &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, e &lt;h5&gt; que diminuem conforme aumenta o número.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é HTML?</strong>
+        </summary>
+        HTML significa Hypertext Markup Language (Linguagem de Marcação de Hipertexto, em tradução livre). o HTML é usado para adicionar estratura ao conteúdo de uma página web. O HTML usa tags para especificar onde certas estruturas começam e terminam. Estas tags são conjuntos de caracteres não encontrados no idioma Inglês para que o conteúdo e a estrutura possam ser diferenciados.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um elemento HTML?</strong>
+        </summary>
+        Um elemento HTML é uma peça do website que é marcado por uma tag inicial e algumas vezes encerrado por uma tag final. O elemento também inclui o conteúdo entre as tags. Por exemplo:
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma tag HTML?</strong>
+        </summary>
+
+        Uma tag HTML é um conjunto especial de caracteres que instrui a máquina onde está o começo e fim de um elemento HTML e de que tipo ele é.
+
+
+        </details>
+        </div>
+
+        O autor desta página adicionou vários conteúdos, mas não pensou na sua estrutura. Todo o texto está amontoado.
+
+        Faça Isto:
+        * Dê uma olhada no conteúdo com seu parceiro e decidam o que vocês acham que seria a melhor estrutura.
+        * Utilize suas tags cabeçalho e parágrafo para codificar a estrutura da página.
+      CSD U2 Heading Test_2019: |
+        # Cabeçalhos e Parágrafos
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>O que é um elemento de parágrafo?</strong></summary>
+
+        Parágrafos são marcados por tags de início (`<p>`) e fim (`</p>`) também. Parágrafos em HTML podem ter qualquer tamanho de texto desde uma palavra até várias sentenças. Todo o seu texto na página web deve estar dentro de um elemento HTML (cabeçalhos ou parágrafos). Parágrafos agrupam juntos conjuntos de sentenças e colocam algum espaço entre aquele grupo de texto e o próximo grupo de texto.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu crio múltiplos parágrafos?</strong>
+
+        </summary>
+
+        Parágrafos são marcados por tags de início (`<p>`) e fim (`</p>`) também. Para criar mais de um parágrafo você vai precisar de vários conjuntos de tags `<p>` início e fim. Por exemplo
+
+        <pre>
+            &lt;p&gt;
+                Este é um parágrafo.
+            &lt;/p&gt;
+            &lt;p&gt;
+                Este é outro parágrafo.
+            &lt;/p&gt;
+        </pre>
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que são cabeçalhos?</strong>
+        </summary>
+        Cabeçalhos são os títulos de seções de tamanhos diferentes em uma página web. Os cabeçalhos adicionam estrutura à sua página através da divisão da mesma facilitando a leitura do usuário.
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu faço um cabeçalho de tamanho diferenciado?</strong>
+        </summary>
+        Cabeçalhos podem ter 6 tamanhos diferentes. O mais comum é o &lt;h1&gt; O número 1 na tag HTML informa que este é o maior cabeçalho. O menor cabeçalho é &lt;h6&gt;. Você também pode tentar as tags &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, e &lt;h5&gt; que diminuem conforme aumenta o número.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é HTML?</strong>
+        </summary>
+        HTML significa Hypertext Markup Language (Linguagem de Marcação de Hipertexto, em tradução livre). o HTML é usado para adicionar estratura ao conteúdo de uma página web. O HTML usa tags para especificar onde certas estruturas começam e terminam. Estas tags são conjuntos de caracteres não encontrados no idioma Inglês para que o conteúdo e a estrutura possam ser diferenciados.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um elemento HTML?</strong>
+        </summary>
+        Um elemento HTML é uma peça do website que é marcado por uma tag inicial e algumas vezes encerrado por uma tag final. O elemento também inclui o conteúdo entre as tags. Por exemplo:
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma tag HTML?</strong>
+        </summary>
+
+        Uma tag HTML é um conjunto especial de caracteres que instrui a máquina onde está o começo e fim de um elemento HTML e de que tipo ele é.
+
+
+        </details>
+        </div>
+
+        O autor desta página adicionou vários conteúdos, mas não pensou na sua estrutura. Todo o texto está amontoado.
+
+        Faça Isto:
+        * Dê uma olhada no conteúdo com seu parceiro e decidam o que vocês acham que seria a melhor estrutura.
+        * Utilize suas tags cabeçalho e parágrafo para codificar a estrutura da página.
+      CSD U2 Image Tag 1: "<div style=\"float: right; height: 250px; width: 40%; overflow-y:
+        scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como
+        eu adiciono imagens?</strong></summary>\n\nA tag `<img>` permite mostrar imagens
+        na sua página web. <br><br>\n\nExemplo:\n<pre>&lt;img src=\"dog.png\" alt=\"dog
+        jumping\"/&gt;</pre><br><br>\n\nA fim de informar o browser qual arquivo usar,
+        uma informação extra, chamada de um **atributo**, é adicionada à tag &lt;img&gt;.
+        O atributo `src` identifica a fonte e se referece o nome da imagem. Arquivos
+        de imagem incluem extensões que dizem ao computador que tipo de imagem é aquela.
+        Extensões comuns são .jpg, .jpeg, .png. <br><br>\n\nAlém de ter o atributo
+        src, os elementos de imagem tabém tem um atributo `alt` que descreve a imagem.
+        Ele é importante no caso da imagem não carregar corretamente ou para pessoas
+        que tem algum problema de visão. <br><br>\n\nUma tag `<img>` é um exemplo
+        de um **tag auto finalizada** porque ela abre e fecha em apenas uma tag. Para
+        marcar isto colocamos o `/` que geralmente iria na tag fim.\n\n</details>\n<details>\n<summary><strong>Por
+        que uma tag de imagem não tem uma tag fim?</strong></summary>\n\nUma tag de
+        imagem não precisa de uma tag fim porque não há um conteúdo de texto para
+        ser colocado entre as tags. O conteúdo mostrado na tela é especificado pelos
+        atributos da tag.\n\n</details>\n<details>\n<summary><strong>O que é um atributo?</strong></summary>\n\nAtributos
+        são informações extras incluídas em uma tag. Os atributos tem nomes e valores.
+        O nome diz que tipo de informação é fornecida e então o valor indica a informação
+        específica para aquela tag. \n\nPor exemplo as tags &lt;img&gt; tem dois atributos,
+        src e alt. src especifica o nome do arquivo da image e alt diz ao browser
+        em um formato de leitura o que a imagem é.\n\n\n</details>\n</div>\n\n# Imagens\n\nUma
+        página web Cachorro x Gato foi iniciada para você. A imagem do cachorro  já
+        foi adicionada nela. Use uma tag de imagem para adicionar a imagem `cat.jpeg`
+        à página abaixo para o cabeçalho do gato."
+      CSD U2 Image Tag 1_2018: "<div style=\"float: right; height: 250px; width: 40%;
+        overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        eu adiciono imagens?</strong>\n</summary>\n\nA tag `<img>` permite mostrar
+        imagens na sua página web. <br><br>\n\nExemplo:\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\n\nA fim de informar o browser qual
+        arquivo usar, uma informação extra, chamada de um **atributo**, é adicionada
+        à tag &lt;img&gt;. O atributo `src` identifica a fonte e se referece o nome
+        da imagem. Arquivos de imagem incluem extensões que dizem ao computador que
+        tipo de imagem é aquela. Extensões comuns são .jpg, .jpeg, .png. <br><br>\n\nAlém
+        de ter o atributo src, os elementos de imagem tabém tem um atributo `alt`
+        que descreve a imagem. Ele é importante no caso da imagem não carregar corretamente
+        ou para pessoas que tem algum problema de visão.\n<br><br>\n\nUma tag `<img>`
+        é um exemplo de um **tag auto finalizada** porque ela abre e fecha em apenas
+        uma tag. Para marcar isto colocamos o `/` que geralmente iria na tag fim.\n\n</details>\n<details>\n<summary>\n<strong>Por
+        que uma tag de imagem não tem uma tag fim?</strong>\n</summary>\nUma tag de
+        imagem não precisa de uma tag fim porque não há um conteúdo de texto para
+        ser colocado entre as tags. O conteúdo mostrado na tela é especificado pelos
+        atributos da tag.\n</details>\n<details>\n<summary>\n<strong>O que é um atributo?</strong>\n</summary>\n\nAtributos
+        são informações extras incluídas em uma tag. Os atributos tem nomes e valores.
+        O nome diz que tipo de informação é fornecida e então o valor indica a informação
+        específica para aquela tag. \n\nPor exemplo as tags &lt;img&gt; tem dois atributos,
+        src e alt. src especifica o nome do arquivo da image e alt diz ao browser
+        em um formato de leitura o que a imagem é.\n\n\n</details>\n</div>\n\n# Imagens\n\nUma
+        página web Cachorro x Gato foi iniciada para você. A imagem do cachorro  já
+        foi adicionada nela. Use uma tag de imagem para adicionar a imagem `cat.jpeg`
+        à página abaixo para o cabeçalho do gato."
+      CSD U2 Image Tag 1_2019: "<div style=\"float: right; height: 250px; width: 40%;
+        overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        eu adiciono imagens?</strong>\n</summary>\n\nA tag `<img>` permite mostrar
+        imagens na sua página web. <br><br>\n\nExemplo:\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\n\nA fim de informar o browser qual
+        arquivo usar, uma informação extra, chamada de um **atributo**, é adicionada
+        à tag &lt;img&gt;. O atributo `src` identifica a fonte e se referece o nome
+        da imagem. Arquivos de imagem incluem extensões que dizem ao computador que
+        tipo de imagem é aquela. Extensões comuns são .jpg, .jpeg, .png. <br><br>\n\nAlém
+        de ter o atributo src, os elementos de imagem tabém tem um atributo `alt`
+        que descreve a imagem. Ele é importante no caso da imagem não carregar corretamente
+        ou para pessoas que tem algum problema de visão.\n<br><br>\n\nUma tag `<img>`
+        é um exemplo de um **tag auto finalizada** porque ela abre e fecha em apenas
+        uma tag. Para marcar isto colocamos o `/` que geralmente iria na tag fim.\n\n</details>\n<details>\n<summary>\n<strong>Por
+        que uma tag de imagem não tem uma tag fim?</strong>\n</summary>\nUma tag de
+        imagem não precisa de uma tag fim porque não há um conteúdo de texto para
+        ser colocado entre as tags. O conteúdo mostrado na tela é especificado pelos
+        atributos da tag.\n</details>\n<details>\n<summary>\n<strong>O que é um atributo?</strong>\n</summary>\n\nAtributos
+        são informações extras incluídas em uma tag. Os atributos tem nomes e valores.
+        O nome diz que tipo de informação é fornecida e então o valor indica a informação
+        específica para aquela tag. \n\nPor exemplo as tags &lt;img&gt; tem dois atributos,
+        src e alt. src especifica o nome do arquivo da image e alt diz ao browser
+        em um formato de leitura o que a imagem é.\n\n\n</details>\n</div>\n\n# Imagens\n\nUma
+        página web Cachorro x Gato foi iniciada para você. A imagem do cachorro  já
+        foi adicionada nela. Use uma tag de imagem para adicionar a imagem `cat.jpeg`
+        à página abaixo para o cabeçalho do gato."
+      CSD U2 Image Tag 2: "<div style=\"float: right; height: 250px; width: 40%; overflow-y:
+        scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como
+        eu adiciono imagens?</strong></summary>\n\nA tag `<img>` permite mostrar imagens
+        na sua página web. <br><br>\n\nExemplo:\n<pre>&lt;img src=\"dog.png\" alt=\"dog
+        jumping\"/&gt;</pre><br><br>\n\nA fim de informar o browser qual arquivo usar,
+        uma informação extra, chamada de um **atributo**, é adicionada à tag &lt;img&gt;.
+        O atributo `src` identifica a fonte e se referece o nome da imagem. Arquivos
+        de imagem incluem extensões que dizem ao computador que tipo de imagem é aquela.
+        Extensões comuns são .jpg, .jpeg, .png. <br><br>\n\nAlém de ter o atributo
+        src, os elementos de imagem tabém tem um atributo `alt` que descreve a imagem.
+        Ele é importante no caso da imagem não carregar corretamente ou para pessoas
+        que tem algum problema de visão.<br><br>\n\nUma tag `<img>` é um exemplo de
+        um **tag auto finalizada** porque ela abre e fecha em apenas uma tag. Para
+        marcar isto colocamos o `/` que geralmente iria na tag fim.\n\n</details>\n<details>\n<summary><strong>Por
+        que uma tag de imagem não tem uma tag fim?</strong></summary>\n\nUma tag de
+        imagem não precisa de uma tag fim porque não há um conteúdo de texto para
+        ser colocado entre as tags. O conteúdo mostrado na tela é especificado pelos
+        atributos da tag.\n\n</details>\n<details>\n<summary><strong>O que é um atributo?</strong></summary>\n\nAtributos
+        são informações extras incluídas em uma tag. Os atributos tem nomes e valores.
+        O nome diz que tipo de informação é fornecida e então o valor indica a informação
+        específica para aquela tag. \n\nPor exemplo as tags &lt;img&gt; tem dois atributos,
+        src e alt. src especifica o nome do arquivo da image e alt diz ao browser
+        em um formato de leitura o que a imagem é.\n\n</details>\n</div>\n\n# Carregando
+        imagems\n\nVocê pode carregar imagens que você encontrou em algum outro lugar
+        usando o botão **Adicionar Imagem**. Encontre uma imagem de um tipo diferente
+        de animal que você goste e baixe para o seu computador (usando o botão direito
+        e \"Salvar Como\").\n\nAssim que você tiver as imagens, clique em ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49
+        PM.png) e carregue a imagem do seu computador para o projeto, assim você poderá
+        usá-la em sua página.\n\n# Faça Isto\n\n* Carregue pelo menos uma imagem na
+        sua página web\n* Use a tag `<img>` para exibir a imagem no seu website.\n*
+        Certifique-se de adicionar um atributo `alt`."
+      CSD U2 Image Tag 2_2018: "<div style=\"float: right; height: 250px; width: 40%;
+        overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        eu adiciono imagens?</strong>\n</summary>\n\nA tag `<img>` permite mostrar
+        imagens na sua página web. <br><br>\n\nExemplo:\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\n\nA fim de informar o browser qual
+        arquivo usar, uma informação extra, chamada de um **atributo**, é adicionada
+        à tag &lt;img&gt;. O atributo `src` identifica a fonte e se referece o nome
+        da imagem. Arquivos de imagem incluem extensões que dizem ao computador que
+        tipo de imagem é aquela. Extensões comuns são .jpg, .jpeg, .png. <br><br>\n\nAlém
+        de ter o atributo src, os elementos de imagem tabém tem um atributo `alt`
+        que descreve a imagem. Ele é importante no caso da imagem não carregar corretamente
+        ou para pessoas que tem algum problema de visão.<br><br>\n\nUma tag `<img>`
+        é um exemplo de um **tag auto finalizada** porque ela abre e fecha em apenas
+        uma tag. Para marcar isto colocamos o `/` que geralmente iria na tag fim.\n</details>\n<details>\n<summary>\n<strong>Por
+        que uma tag de imagem não tem uma tag fim?</strong>\n</summary>\nUma tag de
+        imagem não precisa de uma tag fim porque não há um conteúdo de texto para
+        ser colocado entre as tags. O conteúdo mostrado na tela é especificado pelos
+        atributos da tag.\n</details>\n<details>\n<summary>\n<strong>O que é um atributo?</strong>\n</summary>\n\nAtributos
+        são informações extras incluídas em uma tag. Os atributos tem nomes e valores.
+        O nome diz que tipo de informação é fornecida e então o valor indica a informação
+        específica para aquela tag. \n\nPor exemplo as tags &lt;img&gt; tem dois atributos,
+        src e alt. src especifica o nome do arquivo da image e alt diz ao browser
+        em um formato de leitura o que a imagem é.\n\n</details>\n</div>\n\n# Carregando
+        imagems\n\nVocê pode carregar imagens que você encontrou em algum outro lugar
+        usando o botão **Adicionar Imagem**. Encontre uma imagem de um tipo diferente
+        de animal que você goste e baixe para o seu computador (usando o botão direito
+        e \"Salvar Como\").\n\nAssim que você tiver as imagens, clique em ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49
+        PM.png) e carregue a imagem do seu computador para o projeto, assim você poderá
+        usá-la em sua página.\n\n# Faça Isto\n\n* Carregue pelo menos uma imagem na
+        sua página web\n* Use a tag `<img>` para exibir a imagem no seu website.\n*
+        Certifique-se de adicionar um atributo `alt`."
+      CSD U2 Image Tag 2_2019: "<div style=\"float: right; height: 250px; width: 40%;
+        overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        eu adiciono imagens?</strong>\n</summary>\n\nA tag `<img>` permite mostrar
+        imagens na sua página web. <br><br>\n\nExemplo:\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\n\nA fim de informar o browser qual
+        arquivo usar, uma informação extra, chamada de um **atributo**, é adicionada
+        à tag &lt;img&gt;. O atributo `src` identifica a fonte e se referece o nome
+        da imagem. Arquivos de imagem incluem extensões que dizem ao computador que
+        tipo de imagem é aquela. Extensões comuns são .jpg, .jpeg, .png. <br><br>\n\nAlém
+        de ter o atributo src, os elementos de imagem tabém tem um atributo `alt`
+        que descreve a imagem. Ele é importante no caso da imagem não carregar corretamente
+        ou para pessoas que tem algum problema de visão.<br><br>\n\nUma tag `<img>`
+        é um exemplo de um **tag auto finalizada** porque ela abre e fecha em apenas
+        uma tag. Para marcar isto colocamos o `/` que geralmente iria na tag fim.\n</details>\n<details>\n<summary>\n<strong>Por
+        que uma tag de imagem não tem uma tag fim?</strong>\n</summary>\nUma tag de
+        imagem não precisa de uma tag fim porque não há um conteúdo de texto para
+        ser colocado entre as tags. O conteúdo mostrado na tela é especificado pelos
+        atributos da tag.\n</details>\n<details>\n<summary>\n<strong>O que é um atributo?</strong>\n</summary>\n\nAtributos
+        são informações extras incluídas em uma tag. Os atributos tem nomes e valores.
+        O nome diz que tipo de informação é fornecida e então o valor indica a informação
+        específica para aquela tag. \n\nPor exemplo as tags &lt;img&gt; tem dois atributos,
+        src e alt. src especifica o nome do arquivo da image e alt diz ao browser
+        em um formato de leitura o que a imagem é.\n\n</details>\n</div>\n\n# Carregando
+        imagems\n\nVocê pode carregar imagens que você encontrou em algum outro lugar
+        usando o botão **Adicionar Imagem**. Encontre uma imagem de um tipo diferente
+        de animal que você goste e baixe para o seu computador (usando o botão direito
+        e \"Salvar Como\").\n\nAssim que você tiver as imagens, clique em ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49
+        PM.png) e carregue a imagem do seu computador para o projeto, assim você poderá
+        usá-la em sua página.\n\n# Faça Isto\n\n* Carregue pelo menos uma imagem na
+        sua página web\n* Use a tag `<img>` para exibir a imagem no seu website.\n*
+        Certifique-se de adicionar um atributo `alt`."
+      CSD U2 Image Tag Attribution: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como
+        eu adiciono imagens?</strong></summary>\n\nA tag `<img>` permite mostrar imagens
+        na sua página web. <br><br>\n\nExemplo:\n<pre>&lt;img src=\"dog.png\" alt=\"dog
+        jumping\"/&gt;</pre><br><br>\n\nA fim de informar o browser qual arquivo usar,
+        uma informação extra, chamada de um **atributo**, é adicionada à tag &lt;img&gt;.
+        O atributo `src` identifica a fonte e se referece o nome da imagem. Arquivos
+        de imagem incluem extensões que dizem ao computador que tipo de imagem é aquela.
+        Extensões comuns são .jpg, .jpeg, .png. <br><br>\n\nAlém de ter o atributo
+        src, os elementos de imagem tabém tem um atributo `alt` que descreve a imagem.
+        Ele é importante no caso da imagem não carregar corretamente ou para pessoas
+        que tem algum problema de visão. <br><br>\n\nUma tag `<img>` é um exemplo
+        de um **tag auto finalizada** porque ela abre e fecha em apenas uma tag. Para
+        marcar isto colocamos o `/` que geralmente iria na tag fim.\n\n</details>\n<details>\n<summary><strong>Por
+        que uma tag de imagem não tem uma tag fim?</strong></summary>\n\nUma tag de
+        imagem não precisa de uma tag fim porque não há um conteúdo de texto para
+        ser colocado entre as tags. O conteúdo mostrado na tela é especificado pelos
+        atributos da tag.\n\n</details>\n<details>\n<summary><strong>O que é um atributo?</strong></summary>\n\nAtributos
+        são informações extras incluídas em uma tag. Os atributos tem nomes e valores.
+        O nome diz que tipo de informação é fornecida e então o valor indica a informação
+        específica para aquela tag. \n\nPor exemplo as tags &lt;img&gt; tem dois atributos,
+        src e alt. src especifica o nome do arquivo da image e alt diz ao browser
+        em um formato de leitura o que a imagem é.\n\n\n</details>\n</div>\n\n# Dando
+        crédito\n\nQuando estiver usando uma imagem com licença Creative Commons,
+        você precisa dar crédito ao criador original (também chamado called _attribution_).
+        Existem vários jeitos de prover esta atribuição, mas a forma mais fácil é
+        adicionar um texto abaixo da imagem que identifica o criador e o website de
+        onde ela veio.\n\n# Faça Isto\n\nNesta página nós já adicionamos uma imagem
+        atribuída de um sapo. Use a ferramenta de pesquisa de Creative Commons para
+        encontrar outra imagem de um anfíbio. Adicione a imagem encontrada à esta
+        página, junto com a atribuição devida, incluindo:\n\n* O nome do criado (se
+        disponível)\n* O website onde foi encontrada (por exemplo, commons.wikimedia.org)\n*
+        A licença à qual ela foi publicada (por exemplo, CC-BY)"
+      CSD U2 Image Tag Attribution_2018: "<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        eu adiciono imagens?</strong>\n</summary>\n\nA tag `<img>` permite mostrar
+        imagens na sua página web. <br><br>\n\nExemplo:\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\n\nA fim de informar o browser qual
+        arquivo usar, uma informação extra, chamada de um **atributo**, é adicionada
+        à tag &lt;img&gt;. O atributo `src` identifica a fonte e se referece o nome
+        da imagem. Arquivos de imagem incluem extensões que dizem ao computador que
+        tipo de imagem é aquela. Extensões comuns são .jpg, .jpeg, .png. <br><br>\n\nAlém
+        de ter o atributo src, os elementos de imagem tabém tem um atributo `alt`
+        que descreve a imagem. Ele é importante no caso da imagem não carregar corretamente
+        ou para pessoas que tem algum problema de visão. <br><br>\n\nUma tag `<img>`
+        é um exemplo de um **tag auto finalizada** porque ela abre e fecha em apenas
+        uma tag. Para marcar isto colocamos o `/` que geralmente iria na tag fim.\n</details>\n<details>\n<summary>\n<strong>Por
+        que uma tag de imagem não tem uma tag fim?</strong>\n</summary>\nUma tag de
+        imagem não precisa de uma tag fim porque não há um conteúdo de texto para
+        ser colocado entre as tags. O conteúdo mostrado na tela é especificado pelos
+        atributos da tag.\n</details>\n<details>\n<summary>\n<strong>O que é um atributo?</strong>\n</summary>\n\nAtributos
+        são informações extras incluídas em uma tag. Os atributos tem nomes e valores.
+        O nome diz que tipo de informação é fornecida e então o valor indica a informação
+        específica para aquela tag. \n\nPor exemplo as tags &lt;img&gt; tem dois atributos,
+        src e alt. src especifica o nome do arquivo da image e alt diz ao browser
+        em um formato de leitura o que a imagem é.\n\n\n</details>\n</div>\n\n# Dando
+        crédito\n\nQuando estiver usando uma imagem com licença Creative Commons,
+        você precisa dar crédito ao criador original (também chamado called _attribution_).
+        Existem vários jeitos de prover esta atribuição, mas a forma mais fácil é
+        adicionar um texto abaixo da imagem que identifica o criador e o website de
+        onde ela veio.\n\n# Faça Isto\n\nNesta página nós já adicionamos uma imagem
+        atribuída de um sapo. Use a ferramenta de pesquisa de Creative Commons para
+        encontrar outra imagem de um anfíbio. Adicione a imagem encontrada à esta
+        página, junto com a atribuição devida, incluindo:\n\n* O nome do criado (se
+        disponível)\n* O website onde foi encontrada (por exemplo, commons.wikimedia.org)\n*
+        A licença à qual ela foi publicada (por exemplo, CC-BY)"
+      CSD U2 Image Tag Attribution_2019: "<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        eu adiciono imagens?</strong>\n</summary>\n\nA tag `<img>` permite mostrar
+        imagens na sua página web. <br><br>\n\nExemplo:\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\n\nA fim de informar o browser qual
+        arquivo usar, uma informação extra, chamada de um **atributo**, é adicionada
+        à tag &lt;img&gt;. O atributo `src` identifica a fonte e se referece o nome
+        da imagem. Arquivos de imagem incluem extensões que dizem ao computador que
+        tipo de imagem é aquela. Extensões comuns são .jpg, .jpeg, .png. <br><br>\n\nAlém
+        de ter o atributo src, os elementos de imagem tabém tem um atributo `alt`
+        que descreve a imagem. Ele é importante no caso da imagem não carregar corretamente
+        ou para pessoas que tem algum problema de visão. <br><br>\n\nUma tag `<img>`
+        é um exemplo de um **tag auto finalizada** porque ela abre e fecha em apenas
+        uma tag. Para marcar isto colocamos o `/` que geralmente iria na tag fim.\n</details>\n<details>\n<summary>\n<strong>Por
+        que uma tag de imagem não tem uma tag fim?</strong>\n</summary>\nUma tag de
+        imagem não precisa de uma tag fim porque não há um conteúdo de texto para
+        ser colocado entre as tags. O conteúdo mostrado na tela é especificado pelos
+        atributos da tag.\n</details>\n<details>\n<summary>\n<strong>O que é um atributo?</strong>\n</summary>\n\nAtributos
+        são informações extras incluídas em uma tag. Os atributos tem nomes e valores.
+        O nome diz que tipo de informação é fornecida e então o valor indica a informação
+        específica para aquela tag. \n\nPor exemplo as tags &lt;img&gt; tem dois atributos,
+        src e alt. src especifica o nome do arquivo da image e alt diz ao browser
+        em um formato de leitura o que a imagem é.\n\n\n</details>\n</div>\n\n# Dando
+        crédito\n\nQuando estiver usando uma imagem com licença Creative Commons,
+        você precisa dar crédito ao criador original (também chamado called _attribution_).
+        Existem vários jeitos de prover esta atribuição, mas a forma mais fácil é
+        adicionar um texto abaixo da imagem que identifica o criador e o website de
+        onde ela veio.\n\n# Faça Isto\n\nNesta página nós já adicionamos uma imagem
+        atribuída de um sapo. Use a ferramenta de pesquisa de Creative Commons para
+        encontrar outra imagem de um anfíbio. Adicione a imagem encontrada à esta
+        página, junto com a atribuição devida, incluindo:\n\n* O nome do criado (se
+        disponível)\n* O website onde foi encontrada (por exemplo, commons.wikimedia.org)\n*
+        A licença à qual ela foi publicada (por exemplo, CC-BY)"
+      CSD U2 Image Tag Debug: "<div style=\"float: right; height: 250px; width: 40%;
+        overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como
+        eu adiciono imagens?</strong>\n</summary>\n\nA tag `<img>` permite mostrar
+        imagens na sua página web. <br><br>\n\nExemplo:\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\n\nA fim de informar o browser qual
+        arquivo usar, uma informação extra, chamada de um **atributo**, é adicionada
+        à tag &lt;img&gt;. O atributo `src` identifica a fonte e se referece o nome
+        da imagem. Arquivos de imagem incluem extensões que dizem ao computador que
+        tipo de imagem é aquela. Extensões comuns são .jpg, .jpeg, .png. <br><br>\n\nAlém
+        de ter o atributo src, os elementos de imagem tabém tem um atributo `alt`
+        que descreve a imagem. Ele é importante no caso da imagem não carregar corretamente
+        ou para pessoas que tem algum problema de visão. <br><br>\n\nUma tag `<img>`
+        é um exemplo de um **tag auto finalizada** porque ela abre e fecha em apenas
+        uma tag. Para marcar isto colocamos o `/` que geralmente iria na tag fim.\n</details>\n<details>\n<summary><strong>Por
+        que uma tag de imagem não tem uma tag fim?</strong>\n</summary>\n\nUma tag
+        de imagem não precisa de uma tag fim porque não há um conteúdo de texto para
+        ser colocado entre as tags. O conteúdo mostrado na tela é especificado pelos
+        atributos da tag.\n\n</details>\n<details>\n<summary><strong>O que é um atributo?</strong>\n</summary>\n\nAtributos
+        são informações extras incluídas em uma tag. Os atributos tem nomes e valores.
+        O nome diz que tipo de informação é fornecida e então o valor indica a informação
+        específica para aquela tag. \n\nPor exemplo as tags &lt;img&gt; tem dois atributos,
+        src e alt. src especifica o nome do arquivo da image e alt diz ao browser
+        em um formato de leitura o que a imagem é.\n\n\n</details>\n</div>\n\n# Os
+        Detalhes Importam\n\nO atributo `src` precisa apontar para o nome _exato_
+        do arquivo da imagem que você quer usar. Isto significar que você precisa
+        prestar atenção à grafia, letras maiúsculas e minúsculas, e a extensão de
+        arquivo. Cada uma das três imagens nesta página está quebrada por causa de
+        um atributo `src` incorreto. Usando o menu de arquivo como referência, corrija
+        cada uma das tags de imagem.\n\n_Nota: Mesmo que as imagens não sejam carregadas
+        propriamente, seu website ainda mostra textos descriptivos do que deveria
+        estar lá porque usamos os atributos `alt`. Legal!_"
+      CSD U2 Image Tag Debug_2018: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        eu adiciono imagens?</strong>\n</summary>\n\nA tag `<img>` permite mostrar
+        imagens na sua página web. <br><br>\n\nExemplo:\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\n\nA fim de informar o browser qual
+        arquivo usar, uma informação extra, chamada de um **atributo**, é adicionada
+        à tag &lt;img&gt;. O atributo `src` identifica a fonte e se referece o nome
+        da imagem. Arquivos de imagem incluem extensões que dizem ao computador que
+        tipo de imagem é aquela. Extensões comuns são .jpg, .jpeg, .png. <br><br>\n\nAlém
+        de ter o atributo src, os elementos de imagem tabém tem um atributo `alt`
+        que descreve a imagem. Ele é importante no caso da imagem não carregar corretamente
+        ou para pessoas que tem algum problema de visão. <br><br>\n\nUma tag `<img>`
+        é um exemplo de um **tag auto finalizada** porque ela abre e fecha em apenas
+        uma tag. Para marcar isto colocamos o `/` que geralmente iria na tag fim.\n</details>\n<details>\n<summary>\n<strong>Por
+        que uma tag de imagem não tem uma tag fim?</strong>\n</summary>\nUma tag de
+        imagem não precisa de uma tag fim porque não há um conteúdo de texto para
+        ser colocado entre as tags. O conteúdo mostrado na tela é especificado pelos
+        atributos da tag.\n</details>\n<details>\n<summary><strong>O que é um atributo?</strong>\n</summary>\n\nAtributos
+        são informações extras incluídas em uma tag. Os atributos tem nomes e valores.
+        O nome diz que tipo de informação é fornecida e então o valor indica a informação
+        específica para aquela tag. \n\nPor exemplo as tags &lt;img&gt; tem dois atributos,
+        src e alt. src especifica o nome do arquivo da image e alt diz ao browser
+        em um formato de leitura o que a imagem é.\n\n\n</details>\n</div>\n\n# Os
+        Detalhes Importam\n\nO atributo `src` precisa apontar para o nome _exato_
+        do arquivo da imagem que você quer usar. Isto significar que você precisa
+        prestar atenção à grafia, letras maiúsculas e minúsculas, e a extensão de
+        arquivo. Cada uma das três imagens nesta página está quebrada por causa de
+        um atributo `src` incorreto. Usando o menu de arquivo como referência, corrija
+        cada uma das tags de imagem.\n\n_Nota: Mesmo que as imagens não sejam carregadas
+        propriamente, seu website ainda mostra textos descriptivos do que deveria
+        estar lá porque usamos os atributos `alt`. Legal!_"
+      CSD U2 Image Tag Debug_2019: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        eu adiciono imagens?</strong>\n</summary>\n\nA tag `<img>` permite mostrar
+        imagens na sua página web. <br><br>\n\nExemplo:\n<pre>&lt;img src=\"dog.png\"
+        alt=\"dog jumping\"/&gt;</pre><br><br>\n\nA fim de informar o browser qual
+        arquivo usar, uma informação extra, chamada de um **atributo**, é adicionada
+        à tag &lt;img&gt;. O atributo `src` identifica a fonte e se referece o nome
+        da imagem. Arquivos de imagem incluem extensões que dizem ao computador que
+        tipo de imagem é aquela. Extensões comuns são .jpg, .jpeg, .png. <br><br>\n\nAlém
+        de ter o atributo src, os elementos de imagem tabém tem um atributo `alt`
+        que descreve a imagem. Ele é importante no caso da imagem não carregar corretamente
+        ou para pessoas que tem algum problema de visão. <br><br>\n\nUma tag `<img>`
+        é um exemplo de um **tag auto finalizada** porque ela abre e fecha em apenas
+        uma tag. Para marcar isto colocamos o `/` que geralmente iria na tag fim.\n</details>\n<details>\n<summary>\n<strong>Por
+        que uma tag de imagem não tem uma tag fim?</strong>\n</summary>\nUma tag de
+        imagem não precisa de uma tag fim porque não há um conteúdo de texto para
+        ser colocado entre as tags. O conteúdo mostrado na tela é especificado pelos
+        atributos da tag.\n</details>\n<details>\n<summary><strong>O que é um atributo?</strong>\n</summary>\n\nAtributos
+        são informações extras incluídas em uma tag. Os atributos tem nomes e valores.
+        O nome diz que tipo de informação é fornecida e então o valor indica a informação
+        específica para aquela tag. \n\nPor exemplo as tags &lt;img&gt; tem dois atributos,
+        src e alt. src especifica o nome do arquivo da image e alt diz ao browser
+        em um formato de leitura o que a imagem é.\n\n\n</details>\n</div>\n\n# Os
+        Detalhes Importam\n\nO atributo `src` precisa apontar para o nome _exato_
+        do arquivo da imagem que você quer usar. Isto significar que você precisa
+        prestar atenção à grafia, letras maiúsculas e minúsculas, e a extensão de
+        arquivo. Cada uma das três imagens nesta página está quebrada por causa de
+        um atributo `src` incorreto. Usando o menu de arquivo como referência, corrija
+        cada uma das tags de imagem.\n\n_Nota: Mesmo que as imagens não sejam carregadas
+        propriamente, seu website ainda mostra textos descriptivos do que deveria
+        estar lá porque usamos os atributos `alt`. Legal!_"
       CSD U2 Info Page Content: |
         # Adicionando seu conteúdo
 
@@ -3004,6 +3623,154 @@ pt-BR:
 
         * Adicione um novo arquivo HTML ao seu projeto para sua página informativa.
         * Adicione um título e uma descrição
+      CSD U2 Info Page Final Touches: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+
+        <h2>
+        Lista de Verificação
+        </h2>
+
+        <input type="checkbox" style="float: left"><span style="display: block; margin-left: 20px; margin-bottom: 10px">Certifique-se que sua imagem possui a licença de uso necessária</span>
+        <input type="checkbox" style="float: left"><span style="display: block; margin-left: 20px; margin-bottom: 10px">Faça o upload da imagem no Web Lab</span>
+        <input type="checkbox" style="float: left"><span style="display: block; margin-left: 20px; margin-bottom: 10px">Crie uma tag de imagem com um atributo de descrição alt</span>
+        <input type="checkbox" style="float: left"><span style="display: block; margin-left: 20px; margin-bottom: 10px">Se a imagem não for sua, acrescente a atribuição na parte inferior<br/>
+
+        </div>
+
+
+        # Inserindo Imagens no Seu Site
+
+        Você já criou algumas páginas com ótimo conteúdo no seu website, agora você pode adicionar algumas imagens!
+
+        # Faça Isto
+
+        Utilizando ou suas próprias imagens, ou aquelas encontradas através de uma Busca Commons, acrescente algumas imagens às páginas que você já criou. Seja criativo! Use a lista de verificação à direita para acompanhar os passos que devem ser seguidos ao inserir imagens.
+      CSD U2 Info Page Final Touches_2018: |
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+
+        <h2>
+        Lista de Verificação
+        </h2>
+
+        <input type="checkbox" style="float: left"><span style="display: block; margin-left: 20px; margin-bottom: 10px">Certifique-se que sua imagem possui a licença de uso necessária</span>
+        <input type="checkbox" style="float: left"><span style="display: block; margin-left: 20px; margin-bottom: 10px">Faça o upload da imagem no Web Lab</span>
+        <input type="checkbox" style="float: left"><span style="display: block; margin-left: 20px; margin-bottom: 10px">Crie uma tag de imagem com um atributo de descrição alt</span>
+        <input type="checkbox" style="float: left"><span style="display: block; margin-left: 20px; margin-bottom: 10px">Se a imagem não for sua, acrescente a atribuição na parte inferior<br/>
+
+        </div>
+
+
+        # Inserindo Imagens no Seu Site
+
+        Você já criou algumas páginas com ótimo conteúdo no seu website, agora você pode adicionar algumas imagens!
+
+        # Faça Isto
+
+        Utilizando ou suas próprias imagens, ou aquelas encontradas através de uma Busca Commons, acrescente algumas imagens às páginas que você já criou. Seja criativo! Use a lista de verificação à direita para acompanhar os passos que devem ser seguidos ao inserir imagens.
+      CSD U2 Info Page Final Touches_2019: |
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+
+        <h2>
+        Lista de Verificação
+        </h2>
+
+        <input type="checkbox" style="float: left"><span style="display: block; margin-left: 20px; margin-bottom: 10px">Certifique-se que sua imagem possui a licença de uso necessária</span>
+        <input type="checkbox" style="float: left"><span style="display: block; margin-left: 20px; margin-bottom: 10px">Faça o upload da imagem no Web Lab</span>
+        <input type="checkbox" style="float: left"><span style="display: block; margin-left: 20px; margin-bottom: 10px">Crie uma tag de imagem com um atributo de descrição alt</span>
+        <input type="checkbox" style="float: left"><span style="display: block; margin-left: 20px; margin-bottom: 10px">Se a imagem não for sua, acrescente a atribuição na parte inferior<br/>
+
+        </div>
+
+
+        # Inserindo Imagens no Seu Site
+
+        Você já criou algumas páginas com ótimo conteúdo no seu website, agora você pode adicionar algumas imagens!
+
+        # Faça Isto
+
+        Utilizando ou suas próprias imagens, ou aquelas encontradas através de uma Busca Commons, acrescente algumas imagens às páginas que você já criou. Seja criativo! Use a lista de verificação à direita para acompanhar os passos que devem ser seguidos ao inserir imagens.
+      CSD U2 Info Page Images: |-
+        # Inserindo Suas Imagens
+
+        Com imagens e informações dos atributos em mãos, chegou a hora de incrementar sua nova página.
+
+        # Faça Isto
+
+        Faça upload de suas imagens para o Web Lab e, usando tags `<img>`, adicione-as onde vc desejar. Para cada imagem:
+
+        * Inclua um atributo descritivo `alt`
+        * Adiciona a atribuição embaixo da imagem, incluindo
+        \t* Nome ou apelido do autor (se disponível)
+            * Título da imagem (se disponível)
+            * Url do site original
+            * O tipo de licença sob a qual a imagem foi publicada, ou através de texto (ex: CC-BY), ou utilizando um distintivo do [site da Creative Commons](https://creativecommons.org/about/downloads/).
+
+        Por exemplo
+
+        ![Cão Triste]
+        (https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Longhaired_Dachshund_portrait.jpg/629px-Longhaired_Dachshund_portrait.jpg)
+
+        Dachshund de Pelo Comprido imagem por Flickr usuário Soggydan (ht<span>tps://</span>commons.wikimedia.org/wiki/File:Longhaired_Dachshund_portrait.jpg) - CC-BY
+      CSD U2 Inspector Warm Up: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary><strong>Como
+        eu utilizo a Ferramenta de Inspeção?</strong>\n\n</summary>\n\nA Ferramenta
+        de Inspeção é uma ótima forma de aprender mais sobre o código, no Web Lab.
+        Para ativar a Ferramenta de Inspeção, clique <img src=\"https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
+        PM.png\" style=\"width:100px\">. Você vai perceber que a Ferramenta de Inspeção
+        foi ativada porque o botão irá se tornar branco, e mostrar \"Inspetor: Ligado\".
+        Quando a Ferramenta de Inspeção estiver ativada, você poderá passar o cursor
+        do mouse sobre qualquer coisa na área de visualização, e o Web Lab irá indicar
+        o código responsável pela exibição daquela parte. \n\n\n</details>\n</div>\n\n#
+        Explore o HTML\n\nEsta é uma página web escrita em HTML, a linguagem da web.
+        Você irá aprender mais sobre como ela funciona, mas antes vamos explorá-la
+        através da Ferramenta de Inspeção.\n\n# Faça Isto\n\n* Clique sobre a Dica
+        \"Como eu utilizo a Ferramenta de Inspeção?\" à direita para aprender a usar
+        a Ferramenta de Inspeção.\n* Siga as instruções para explorar a página web,
+        e discuta com um colega como ela funciona."
+      CSD U2 Inspector Warm Up_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong><span>Como eu utilizo a Ferramenta de Inspeção?</span></strong>
+        </summary>
+
+        A Ferramenta de Inspeção é uma ótima forma de aprender mais sobre código no Web Lab. Para ativar a Ferramenta de Inspeção, clique <img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56 PM.png" style="width:100px">. Você vai perceber que a Ferramenta de Inspeção foi ativada porque o botão se tornará branco, e dirá "Inspetor: Ligado". Após ativar a Ferramenta de Inspeção, você poderá passar o cursor do mouse sobre qualquer coisa que estiver na área de visualização, e o Web Lab irá indicar qual o código responsável pela exibição daquela parte da página.
+
+
+        </details>
+        </div>
+
+        # Explore o HTML
+
+        Esta é uma página escrita em HTML, a linguagem da web. Você irá aprender mais sobre seu funcionamento, mas vamos antes explorá-la com a Ferramenta de Inspeção.
+
+        # Faça Isto
+
+        * Clique sobre a Dica "Como eu utilizo a Ferramenta de Inspeção?" à direita, para aprender como utilizar a Ferramenta de Inspeção.
+        * Siga as instruções para explorar a página web, e discuta com um coleta sobre seu funcionamento.
+      CSD U2 Inspector Warm Up_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong><span>Como eu utilizo a Ferramenta de Inspeção?</span></strong>
+        </summary>
+
+        A Ferramenta de Inspeção é uma ótima forma de aprender mais sobre código no Web Lab. Para ativar a Ferramenta de Inspeção, clique <img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56 PM.png" style="width:100px">. Você vai perceber que a Ferramenta de Inspeção foi ativada porque o botão se tornará branco, e dirá "Inspetor: Ligado". Após ativar a Ferramenta de Inspeção, você poderá passar o cursor do mouse sobre qualquer coisa que estiver na área de visualização, e o Web Lab irá indicar qual o código responsável pela exibição daquela parte da página.
+
+
+        </details>
+        </div>
+
+        # Explore o HTML
+
+        Esta é uma página escrita em HTML, a linguagem da web. Você irá aprender mais sobre seu funcionamento, mas vamos antes explorá-la com a Ferramenta de Inspeção.
+
+        # Faça Isto
+
+        * Clique sobre a Dica "Como eu utilizo a Ferramenta de Inspeção?" à direita, para aprender como utilizar a Ferramenta de Inspeção.
+        * Siga as instruções para explorar a página web, e discuta com um coleta sobre seu funcionamento.
       CSD U2 Project Start: |-
         # Inicie seu projeto
 
@@ -3034,6 +3801,129 @@ pt-BR:
         * Pelo menos ** dois capítulos de diferentes tamanhos **
         * Pelo menos ** um parágrafo **
         *** Assemelha *** a sua página, comparando ao seu desenho e mostrando ao seu parceiro
+      CSD U2 RGB intro: |-
+        # Cores RGB
+
+        Todas as cores, caso tenham nomes ou não, podem ser descritas pelos níveis de luz vermelha, verde e azul que as compõem. Isto é chamado um valor RGB (abreviação de Red/Vermelho - Green/Verde - Blue/Azul). Você pode usar a ferramenta à sua esquerda para experimentar valores RGB diferentes, e verificar as cores que surgem.
+
+        * **Clique "Iniciar" para ativar a ferramenta à esquerda,** e use os deslizadores para ajustar os níveis de iluminação vermelha, verde e azul.
+        * Para cada uma das cores abaixo, ajuste-a para seu valor RGB.
+
+        A) vermelho: 216, verde: 191, azul: 216 - rgb(216,191,216)
+
+        B) vermelho: 255, verde: 239, azul: 213 - rgb(255,239,213)
+
+        C) vermelho: 250, verde: 128, azul: 114 - rgb(250,128,114)
+
+        D) vermelho: 70, verde: 130, azul: 180 - rgb(70, 130, 180)
+
+        E) vermelho: 107, verde: 142, azul: 35 - rgb(107,142,35)
+
+
+        <div style="font-size: 16px">
+        <br />
+        <details>
+
+        <summary><strong>Por que vermelho e verde produzem amarelo?</strong></summary>
+
+        Quando você mistura tintas, vermelho e verde produzem marrom, mas a mistura de cores RGB utilizam luz ao invés de tinta, então as cores se misturam de forma diferente. RGB utiliza _mistura de cores aditiva_. Em uma mistura de cores aditiva, vermelho e verde geram amarelo, vermelho e azul geram magenta, e azul e verde produzem ciano. Quando se misturam as três cores primárias juntas (vermelho, verde e azul), obtém-se branco. Você pode ler mais em <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Cores Aditivas</a>
+
+        </details>
+        <details>
+        <summary><strong>Quantas cores eu posso fazer com misturas de cores RGB?</strong></summary>
+
+        <p>
+        Você pode produzir mais do que dezesseis milhões de cores com a mistura de cores RGB.
+        </p>
+
+        </details>
+        </div>
+      CSD U2 RGB intro_2018: |-
+        # Cores RGB
+
+        Todas as cores, caso tenham nomes ou não, podem ser descritas pelos níveis de luz vermelha, verde e azul que as compõem. Isto é chamado um valor RGB (abreviação de Red/Vermelho - Green/Verde - Blue/Azul). Você pode usar a ferramenta à sua esquerda para experimentar valores RGB diferentes, e verificar as cores que surgem.
+
+        * **Clique "Iniciar" para ativar a ferramenta à esquerda,** e use os deslizadores para ajustar os níveis de iluminação vermelha, verde e azul.
+        * Para cada uma das cores abaixo, ajuste-a para seu valor RGB.
+
+        A) vermelho: 216, verde: 191, azul: 216 - rgb(216,191,216)
+
+        B) vermelho: 255, verde: 239, azul: 213 - rgb(255,239,213)
+
+        C) vermelho: 250, verde: 128, azul: 114 - rgb(250,128,114)
+
+        D) vermelho: 70, verde: 130, azul: 180 - rgb(70, 130, 180)
+
+        E) vermelho: 107, verde: 142, azul: 35 - rgb(107,142,35)
+
+
+        <div style="font-size: 16px">
+        <br />
+        <details>
+
+        <summary>
+        <strong>Por que vermelho e verde produzem amarelo?</strong>
+        </summary>
+
+        <p>
+
+        Quando você mistura tintas, vermelho e verde produzem marrom, mas a mistura de cores RGB utilizam luz ao invés de tinta, então as cores se misturam de forma diferente. RGB utiliza _mistura de cores aditiva_. Em uma mistura de cores aditiva, vermelho e verde geram amarelo, vermelho e azul geram magenta, e azul e verde produzem ciano. Quando se misturam as três cores primárias juntas (vermelho, verde e azul), obtém-se branco. Você pode ler mais em <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Cores Aditivas</a>
+
+        </p></details>
+        <details>
+        <summary>
+        <strong>Quantas cores eu posso fazer com misturas de cores RGB?</strong>
+        </summary>
+
+        <p>
+        Você pode produzir mais do que dezesseis milhões de cores com a mistura de cores RGB.
+        </p>
+
+        </details>
+        </div>
+      CSD U2 RGB intro_2019: |-
+        # Cores RGB
+
+        Todas as cores, caso tenham nomes ou não, podem ser descritas pelos níveis de luz vermelha, verde e azul que as compõem. Isto é chamado um valor RGB (abreviação de Red/Vermelho - Green/Verde - Blue/Azul). Você pode usar a ferramenta à sua esquerda para experimentar valores RGB diferentes, e verificar as cores que surgem.
+
+        * **Clique "Iniciar" para ativar a ferramenta à esquerda,** e use os deslizadores para ajustar os níveis de iluminação vermelha, verde e azul.
+        * Para cada uma das cores abaixo, ajuste-a para seu valor RGB.
+
+        A) vermelho: 216, verde: 191, azul: 216 - rgb(216,191,216)
+
+        B) vermelho: 255, verde: 239, azul: 213 - rgb(255,239,213)
+
+        C) vermelho: 250, verde: 128, azul: 114 - rgb(250,128,114)
+
+        D) vermelho: 70, verde: 130, azul: 180 - rgb(70, 130, 180)
+
+        E) vermelho: 107, verde: 142, azul: 35 - rgb(107,142,35)
+
+
+        <div style="font-size: 16px">
+        <br />
+        <details>
+
+        <summary>
+        <strong>Por que vermelho e verde produzem amarelo?</strong>
+        </summary>
+
+        <p>
+
+        Quando você mistura tintas, vermelho e verde produzem marrom, mas a mistura de cores RGB utilizam luz ao invés de tinta, então as cores se misturam de forma diferente. RGB utiliza _mistura de cores aditiva_. Em uma mistura de cores aditiva, vermelho e verde geram amarelo, vermelho e azul geram magenta, e azul e verde produzem ciano. Quando se misturam as três cores primárias juntas (vermelho, verde e azul), obtém-se branco. Você pode ler mais em <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Cores Aditivas</a>
+
+        </p></details>
+        <details>
+        <summary>
+        <strong>Quantas cores eu posso fazer com misturas de cores RGB?</strong>
+        </summary>
+
+        <p>
+        Você pode produzir mais do que dezesseis milhões de cores com a mistura de cores RGB.
+        </p>
+
+        </details>
+        </div>
       CSD U2 add content: |
         # Adicione HTML
 
@@ -3187,6 +4077,44 @@ pt-BR:
         * `margem`
 
         Entretanto, nós o encorajamos que você use mais que três!  Explore propriedades CSS adicionais e inclua elas em sua página.
+      CSD U2 link demo: |-
+        # Criando um site de várias páginas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>O que são hyperlinks?</strong>
+        </summary>
+
+        Os hiperlinks podem se conectar a páginas da web locais ou a páginas da web externas. Para adicionar navegação ao seu site, você precisará adicionar hiperlinks que conectem suas páginas da web individuais. Você pode **adicionar hiperlinks à sua página da web usando o elemento `<a>` **. O texto que você deseja exibir como o hiperlink fica entre as tags de hiperlink de abertura e fechamento. O elemento `<a>` tem um atributo `href`, que é o local para o qual se vincula a página que você quer alcançar. A localização de uma página local é apenas o caminho do arquivo para essa página. <br> <br>
+
+        Por exemplo, para criar um link para a página de casas exclusivas, você adicionaria o seguinte código dentro do seu elemento `<body>`. <br> <br>
+
+        <pre>
+        &lt;a href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;
+        </pre>
+        </details>
+        <details>
+        <summary><strong>Como eu adiciono um hyperlink?</strong>
+        </summary>
+
+        Você pode **adicionar hiperlinks à sua página da web usando o elemento `<a>` **. O texto que você deseja exibir como o hiperlink fica entre as tags de hiperlink de abertura e fechamento. O elemento `<a>` tem um atributo `href`, que é o local para o qual se vincula a página a qual se quer alcançar. A localização de uma página local é apenas o caminho do arquivo para essa página. <br> <br>
+
+        Por exemplo, para criar um link para a página de casas exclusivas, você adicionaria o seguinte código dentro do seu elemento `<body>`. <br> <br>
+
+        <pre>
+        &lt;a href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;
+        </pre>
+
+        </details>
+        </div>
+
+        Um site deve incluir mais de uma página da Web e elas devem se conectar umas às outras. Aqui está um exemplo de um projeto com várias páginas conectadas por hiperlinks (as palavras sublinhadas em azul que levam você a outra página quando você clica nelas).
+
+        # Faça isso
+        * Use a ferramenta de inspeção para ver o código que cria os hyperlinks no topo de index.html.
+        * Discuta com seu parceiro como você acha que o código funciona.
+        * Clique em recipe.html na lista de arquivos no lado esquerdo. Adicione um hiperlink ao topo desta página que o levará de volta a index.html.
       CSD U2 link demo_2018: |-
         # Criando um site de várias páginas
 
@@ -3269,7 +4197,167 @@ pt-BR:
         * Use a ferramenta de inspeção para ver o código que cria os hyperlinks no topo do index.html.
         * Discuta com seu parceiro como você acha que o código funciona.
         * Clique em recipe.html na lista de arquivos no lado esquerdo. Adicione um hiperlink ao topo desta página que o levará de volta a index.html.
+      CSD U2 new page: |
+        # Crie uma nova página para o seu site.
+
+        Aqui está o seu projeto de antes. Você estará adicionando outra página. Sua nova página pode ser uma lista dos 10 melhores, uma receita ou qualquer coisa que você goste.
+
+        # Faça isso
+        * Adicione um novo arquivo HTML clicando em ![](https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38 PM.png). O novo arquivo aparecerá na lista de arquivos no lado esquerdo do espaço de trabalho.
+        * Renomeie o arquivo, clicando com o botão direito e escolhendo "Renomear", ou clicando nele quando já estiver destacado. ** Verifique se o nome é exclusivo, descritivo e termina em ".html" **.
+        * Use HTML para preencher sua nova página. Deve incluir:
+        * uma lista
+        * um cabeçalho
+      CSD U2 new page_2018: |
+        # Crie uma nova página para o seu site.
+
+        Aqui está o seu projeto de antes. Você estará adicionando outra página. Sua nova página pode ser uma lista dos 10 melhores, uma receita ou qualquer coisa que você goste.
+
+        # Faça isso
+        * Adicione um novo arquivo HTML clicando em ![](https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38 PM.png). O novo arquivo aparecerá na lista de arquivos no lado esquerdo do espaço de trabalho.
+        * Renomeie o arquivo, clicando com o botão direito e escolhendo "Renomear", ou clicando nele quando já estiver destacado. ** Verifique se o nome é exclusivo, descritivo e termina em ".html" **.
+        * Use HTML para preencher sua nova página. Deve incluir:
+        * uma lista
+        * um cabeçalho
+      CSD U2 new page_2019: |
+        # Crie uma nova página para o seu site.
+
+        Aqui está o seu projeto de antes. Você estará adicionando outra página. Sua nova página pode ser uma lista dos 10 melhores, uma receita ou qualquer coisa que você goste.
+
+        # Faça isso
+        * Adicione um novo arquivo HTML clicando em ![](https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38 PM.png). O novo arquivo aparecerá na lista de arquivos no lado esquerdo do espaço de trabalho.
+        * Renomeie o arquivo, clicando com o botão direito e escolhendo "Renomear", ou clicando nele quando já estiver destacado. ** Verifique se o nome é exclusivo, descritivo e termina em ".html" **.
+        * Use HTML para preencher sua nova página. Deve incluir:
+        * uma lista
+        * um cabeçalho
+      CSD U2 project review: |
+        # Revise seu projeto
+
+        Você está quase pronto para publicar o seu projeto, mas você deve verificar mais uma vez que você preencheu todos os requisitos para este projeto.
+
+        # Faça isso
+        * Verifique se você está confortável em compartilhar todas as informações do seu site.
+        * Verifique se todas as suas imagens estão corretamente atribuídas e se você tem o direito de colocá-las em seu site.
+        * Verifique se o seu projeto inclui tudo incluído na avaliação do projeto.
+        * Use comentários e espaço em branco para tornar seu site legível.
+        * Peça ao seu parceiro para ajudá-lo a encontrar possíveis problemas com seu site.
+      CSD U2 project review_2018: |
+        # Revise seu projeto
+
+        Você está quase pronto para publicar o seu projeto, mas você deve verificar mais uma vez que você preencheu todos os requisitos para este projeto.
+
+        # Faça isso
+        * Verifique se você está confortável em compartilhar todas as informações do seu site.
+        * Verifique se todas as suas imagens estão corretamente atribuídas e se você tem o direito de colocá-las em seu site.
+        * Verifique se o seu projeto inclui tudo incluído na avaliação do projeto.
+        * Use comentários e espaço em branco para tornar seu site legível.
+        * Peça ao seu parceiro para ajudá-lo a encontrar possíveis problemas com seu site.
+      CSD U2 project review_2019: |
+        # Revise seu projeto
+
+        Você está quase pronto para publicar o seu projeto, mas você deve verificar mais uma vez que você preencheu todos os requisitos para este projeto.
+
+        # Faça isso
+        * Verifique se você está confortável em compartilhar todas as informações do seu site.
+        * Verifique se todas as suas imagens estão corretamente atribuídas e se você tem o direito de colocá-las em seu site.
+        * Verifique se o seu projeto inclui tudo incluído na avaliação do projeto.
+        * Use comentários e espaço em branco para tornar seu site legível.
+        * Peça ao seu parceiro para ajudá-lo a encontrar possíveis problemas com seu site.
+      CSD U2 text style freeplay - OLD: |-
+        # Adicionando Estilos
+
+        Agora você pode estilizar o texto em seu site pessoal!
+
+        * Abra sua folha de estilo e adicione o estilo de sua escolha à sua página. Certifique-se de usar pelo menos 3 propriedades CSS diferentes.
+
+        # Lista de controle
+
+        * Pelo menos 3 das seguintes propriedades CSS são usadas:
+        * `font-size`
+        * `font-family`
+        * `color`
+        * `text-decoration`
+        * `text-align`
+
+        Se você usou pelo menos três das propriedades da lista de verificação, explore algumas propriedades de texto adicionais para adicionar ao seu projeto.
+      CSD U2 text style freeplay: |-
+        # Adicionando Estilos
+
+        Agora você pode estilizar o texto em seu site pessoal!
+
+        * Abra sua folha de estilo e adicione o estilo de sua escolha ao seu projeto. Certifique-se de usar pelo menos 3 propriedades CSS diferentes.
+
+        # Lista de controle
+
+        * Pelo menos 3 das seguintes propriedades CSS são usadas:
+        * `font-size`
+        * `font-family`
+        * `color`
+        * `text-decoration`
+        * `text-align`
+
+        Se você usou pelo menos três das propriedades da lista de verificação, explore algumas propriedades de texto adicionais para adicionar ao seu projeto.
+      CSD U2 text style freeplay_2018: |-
+        # Adicionando Estilos
+
+        Agora você pode estilizar o texto em seu site pessoal!
+
+        * Abra sua folha de estilo e adicione o estilo de sua escolha ao seu projeto. Certifique-se de usar pelo menos 3 propriedades CSS diferentes.
+
+        # Lista de controle
+
+        * Pelo menos 3 das seguintes propriedades CSS são usadas:
+        * `font-size`
+        * `font-family`
+        * `color`
+        * `text-decoration`
+        * `text-align`
+
+        Se você usou pelo menos três das propriedades da lista de verificação, explore algumas propriedades de texto adicionais para adicionar ao seu projeto.
+      CSD U2 text style freeplay_2019: |-
+        # Adicionando Estilos
+
+        Agora você pode estilizar o texto em seu site pessoal!
+
+        * Abra sua folha de estilo e adicione o estilo de sua escolha ao seu projeto. Certifique-se de usar pelo menos 3 propriedades CSS diferentes.
+
+        # Lista de controle
+
+        * Pelo menos 3 das seguintes propriedades CSS são usadas:
+        * `font-size`
+        * `font-family`
+        * `color`
+        * `text-decoration`
+        * `text-align`
+
+        Se você usou pelo menos três das propriedades da lista de verificação, explore algumas propriedades de texto adicionais para adicionar ao seu projeto.
+      CSD U3 - Booleans Video: "# Video de Expressões Booleanas"
+      CSD U3 - Sprites - Sprite v Rect: |-
+        # Sprites vs Rect
+
+        Atualmente sprites e retângulos parecem muito semelhantes. Ficará claro mais tarde porque os sprites são mais poderosos que as formas básicas. Antes de chegar lá, é importante destacar uma grande diferença na forma como sprites e retângulos desenham.
+
+        # Faça isso
+        Você pode descobrir a diferença apenas tentando isso?
+
+        * Crie um retângulo com largura e altura de 30
+        * Defina o preenchimento para o retângulo para uma cor diferente de cinza (Então, é claro que é o retângulo)
+        * Crie um sprite e dê os mesmos valores de x e y que você deu ao retângulo
+        * Certifique-se de chamar `drawSprites` no laço de desenho
+        * Execute o programa
+        * Você consegue ver a diferença?
       CSD U3 - images - Embed Project: Exemplo do Projeto Final
+      CSD U3 - images - animations: |-
+        # Animações
+
+        Vocês viram através desta Unidade que, quando você monta um conjunto de imagens e as reproduz juntas de volta para trás, ela se parece um movimento! Bem, sprites fazem essa animação mais fácil! Você pode montar um conjunto de imagens para criar uma animação. Existem animações pré-carregadas para você no gerenciador de animações.
+
+        Definir a animação com setAnimation.
+
+        # Faça isso
+
+        * Crie um sprite
+        * Adicione a animação.
       CSD U5 Waze Data Video: Assista este vídeo para aprender como esse problema
         é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo
         coletados e de onde eles estão vindo.
@@ -3327,6 +4415,7 @@ pt-BR:
         # Faça isso
 
         Usando o manipulador de eventos fornecido, escreva um programa que acione a campainha e atualize "valor_temporário" sempre que a leitura do sensor de temperatura mudar. Coloque o polegar sobre o sensor de temperatura para que ele mude e veja como o seu programa responde.
+      'CSD: Boolean Expressions': "# Video de Expressões Booleanas"
       CSDU2 - First-Weblab: |-
         # Adicionando conteúdo
 
@@ -3461,6 +4550,9 @@ pt-BR:
       Calc Rocket 2: |-
         Excelente, vamos fazer mais um exemplo antes de escrever
         a função - qual deve ser a altura do foguete após 30 segundos?
+      CoureE_HOC 2018 Level_7a: "Você encontrou as ruínas subaquáticas. No arenito,
+        procure um **baú** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        que contém tesouro de **prismarinho** (https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
       Course 4 Artist 13: |-
         Ainda jogando?  Temos aqui uma tela em branco
         na qual você pode projetar o que quiser!

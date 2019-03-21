@@ -5,16 +5,54 @@ ro:
       Loops: Bucle
       Functions: Funcţii
       Color: Culoare
+      Brushes: Pensule
       Math: Matematică
       Logic: Logică
       Variables: Variabile
+      Number: Număr
+      String: Șir de carcatere
+      Image: Imagine
+      Boolean: Boolean
       Conditionals: Condiţionale
       Events: Evenimente
+      Games/Score: Jocuri/Scor
+      Comments: Comentarii
+      Category: Categorie
+      Prebuilt: Precompilate
       Text: Text
+      Picker: Selector
+      Comment: Comentariu
+      'Variables ': 'Variabile '
+      Default: Predefinit
+      Behaviors: Comportamente
+      Locations: Locaţii
+      Bunny Game: Joc cu iepuraș
+      everythingelse: toate celelalte
+      World: Lume
       Location: Locatie
+      numbers: numere
+      Numbers: Numere
+      Dancers: Dansatori
+      Groups: Grupuri
+      Advanced: Avansat
       Start: Începe
       Music: Muzică
+      Dancing: Dans
+      Sprite: Spiriduș
+      Brush: Periază
+      Make Sprite: Fă un spiriduș
+      Movement: Mișcare
       Booleans: Booleene
+      Functional: Funcţionale
+      While Events: Evenimente `atâta timp` (while)
+      Sprite Properties: Proprietăți spiriduș
+      Predefined: Predefinite
       test: test
+      test2: test2
+      Use These Blocks: Utilizează aceste blocuri
+      Do Not Use: Nu utilizaţi
       Name: Nume
+      NEW BLOCKS: BLOCURI NOI
+      'Functions ': 'Funcţii '
+      Game/Score: Joc/Scor
       Function: Funcţie
