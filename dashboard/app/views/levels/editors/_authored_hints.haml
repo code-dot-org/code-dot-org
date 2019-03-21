@@ -42,6 +42,9 @@
 - content_for :body_scripts do
   :javascript
     $(document).ready(function () {
+      // Hint id is only required when there is an authored hint.
+      // If authored hint does not exist, a level can be created or
+      // edited and saved.
       var hintMarkdown = document.getElementById('hint_markdown_input');
       var hintId = document.getElementById('hint_id_input');
       hintMarkdown.addEventListener('change', function() {
@@ -50,7 +53,6 @@
         } else {
           hindId.removeAttribute("required");
         }
-        console.log(e.target.value);
       })
 
       // A markdown parser that supports a subset of rules; specifically,
