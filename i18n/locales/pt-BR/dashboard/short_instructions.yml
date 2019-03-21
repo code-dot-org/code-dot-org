@@ -683,16 +683,6 @@ pt-BR:
         * (Dica: você usará quase todo o mesmo código da função 'moverNuvem0')
         * Chame sua nova função 'moverNuvem(nome)' dentro do bloco do evento, uma vez para cada nome de nuvem.
         * (Dica: isso é semelhante a como a função 'repeticaoNuvem(nome)' é chamada muitas vezes.
-      CSD U6 params modify clouds_2019: |-
-        # Nuvens
-
-        Este programa faz as nuvens se mover quando você soprar no sensor de som, mas não termina por aqui.
-
-        # Faça isso
-        * Crie uma nova função 'moverNuvem(nome)' que irá mover qualquer nuvem.
-        * (Dica: você usará quase todo o mesmo código da função 'moverNuvem0')
-        * Chame sua nova função 'moverNuvem(nome)' dentro do bloco do evento, uma vez para cada nome de nuvem.
-        * (Dica: isso é semelhante a como a função 'repeticaoNuvem(nome)' é chamada muitas vezes.
       CSD U6 params modify planes: |-
         # Controlador Multiplo de Aviões
 
@@ -1113,6 +1103,7 @@ pt-BR:
       CSPU5_U3 - Loops And Arrays - Printing Single True: Processe o array e exiba um único "verdadeiro" se o array contiver um 5 ou um único "falso" caso não tenha. (Clique para ver instruções completas)
       CSPU5_U3 - Loops And Arrays - Printing Single True_2018: Processe o array e exiba um único "verdadeiro" se o array contiver um 5 ou um único "falso" caso não tenha. (Clique para ver instruções completas)
       CSPU5_U3 - Loops And Arrays - Printing Single True_2019: Processe o array e exiba um único "verdadeiro" se o array contiver um 5 ou um único "falso" caso não tenha. (Clique para ver instruções completas)
+      CSPU5_U3 - Movie Bot - Nested Motivation: Adicione um conjunto separado de declarações "se" para verificar por um "?" na entrada. (Clique para ver instruções completas)
       CSPU5_U3 - Return Values - constrainTurtle: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
       CSPU5_U3 - Return Values - constrainTurtle_2018: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
       CSPU5_U3 - Return Values - constrainTurtle_2019: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
@@ -1271,6 +1262,7 @@ pt-BR:
       Code Studio Puzzle Challenge Bee Screencast: "Mova a abelha até as\nflores e pegue todo o néctar."
       Code Studio Puzzle Challenge Square - Artist: "Desenhe um quadrado\nusando a variável comprimento fornecida."
       Code Studio Puzzle Challenge Var - Artist: "Desenhe uma reta usando\numa variável \"comprimento\" definida como 180."
+      CoureE_HOC 2018 Level_7a: Procure um baú nas ruínas subaquáticas.
       Course 2 Bee Loops 1: "Olá, eu sou uma abelha. Você pode me ajudar a coletar\no néctar dessas flores? "
       Course 2 Bee Loops 13: "Avaliação: use o bloco repita para coletar\ntodo o néctar."
       Course 2 Bee Loops 2: "Você consegue realizar a mesma tarefa mais facilmente\ncom um laço?"
@@ -2498,6 +2490,7 @@ pt-BR:
       U3 - Loops And Arrays - Print Array: Use um laço for para imprimir todos os valores em um array. (Clique para ver instruções completas)
       U3 - Loops And Arrays - Printing Single True: Processe o array e exiba um único "verdadeiro" se o array contiver um 5 ou um único "falso" caso não tenha. (Clique para ver instruções completas)
       U3 - Loops And Arrays - Return Value: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
+      U3 - Movie Bot - Nested Motivation: Adicione um conjunto separado de declarações "se" para verificar por um "?" na entrada. (Clique para ver instruções completas)
       U3 - Return Values - constrainTurtle: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
       U3 - Return Values - debuggingConstrain: Corrija o erro na restrição para que ele retorne o valor apropriado. (Clique para ver instruções completas)
       U3 - Return Values - debuggingMaxVal: Corrija o erro no maxVal para que ele reporte corretamente o valor máximo. (Clique para ver instruções completas)
@@ -2653,6 +2646,25 @@ pt-BR:
       U4 - Objects - eventParameter: Acione ambos os eventos do teclado e do mouse e examine os objetos de evento exibidos no console. Por que um objeto seria a melhor maneira de armazenar esta informação? (Clique para ver as instruções completas)
       U4 - Objects - eventParameter_2018: Acione ambos os eventos do teclado e do mouse e examine os objetos de evento exibidos no console. Por que um objeto seria a melhor maneira de armazenar esta informação? (Clique para ver as instruções completas)
       U4 - Objects - eventParameter_2019: Acione ambos os eventos do teclado e do mouse e examine os objetos de evento exibidos no console. Por que um objeto seria a melhor maneira de armazenar esta informação? (Clique para ver as instruções completas)
+      U4 - Objects - resetIndexAndShow: Adicione código no seu manipulador de evento para o botão "Salvar Contato" para que, quando um novo contato for adicionado, as entradas sejam apagadas, a tela seja trocada e o contato correto seja exibido. (Clique para ver instruções completas)
+      U4 - Objects - resetIndexAndShow_2018: Adicione código no seu manipulador de evento para o botão "Salvar Contato" para que, quando um novo contato for adicionado, as entradas sejam apagadas, a tela seja trocada e o contato correto seja exibido. (Clique para ver instruções completas)
+      U4 - Objects - resetIndexAndShow_2019: Adicione código no seu manipulador de evento para o botão "Salvar Contato" para que, quando um novo contato for adicionado, as entradas sejam apagadas, a tela seja trocada e o contato correto seja exibido. (Clique para ver instruções completas)
+      U4 - Objects - showContact1: Adicione código à função mostrarContatoAtual para mostrar o nome do contato armazenado no indiceAtual do seu vetor. (Clique para ver instruções completas)
+      U4 - Objects - showContact1_2018: Adicione código à função mostrarContatoAtual para mostrar o nome do contato armazenado no indiceAtual do seu vetor. (Clique para ver instruções completas)
+      U4 - Objects - showContact1_2019: Adicione código à função mostrarContatoAtual para mostrar o nome do contato armazenado no indiceAtual do seu vetor. (Clique para ver instruções completas)
+      U4 - Objects - showContact2: Adicione o número de telefone e o texto de aniversário à sua área de texto. (Clique para ver instruções completas)
+      U4 - Objects - showContact2_2018: Adicione o número de telefone e o texto de aniversário à sua área de texto. (Clique para ver instruções completas)
+      U4 - Objects - showContact2_2019: Adicione o número de telefone e o texto de aniversário à sua área de texto. (Clique para ver instruções completas)
+      U4 - Objects - showContact3: Exiba as informações de imagem para cada contato. (Clique para ver instruções completas)
+      U4 - Objects - showContact3_2018: Exiba as informações de imagem para cada contato. (Clique para ver instruções completas)
+      U4 - Objects - showContact3_2019: Exiba as informações de imagem para cada contato. (Clique para ver instruções completas)
+      U4 - Objects - showSampleImage: Anexe um manipulador de evento à entrada de texto de URL da imagem para que o usuário possa confirmar que sua imagem funcionará conforme o esperado. (Clique para ver instruções completas)
+      U4 - Objects - showSampleImage_2018: Anexe um manipulador de evento à entrada de texto de URL da imagem para que o usuário possa confirmar que sua imagem funcionará conforme o esperado. (Clique para ver instruções completas)
+      U4 - Objects - showSampleImage_2019: Anexe um manipulador de evento à entrada de texto de URL da imagem para que o usuário possa confirmar que sua imagem funcionará conforme o esperado. (Clique para ver instruções completas)
+      U4 - Objects - writeWrap: Use a função conter para impedir que indiceAtual deixe os limites do seu vetor. (Clique para ver instruções completas)
+      U4 - Read Record - 1.2: 'Coloque um comando console.log abaixo do comando lerInformacoes. (Clique para ver instruções completas)  '
+      U4 - Read Record - 1.2_2018: 'Coloque um comando console.log abaixo do comando lerInformacoes. (Clique para ver instruções completas)  '
+      U4 - Read Record - 1.2_2019: 'Coloque um comando console.log abaixo do comando lerInformacoes. (Clique para ver instruções completas)  '
       U4 - ReadRecords - Contacts App 2: Crie uma função chamada atualizaDadosLocais. (Clique para ver todas as instruções)
       U4 - ReadRecords - Contacts App 2_2018: Crie uma função chamada atualizaDadosLocais. (Clique para ver todas as instruções)
       U4 - ReadRecords - Contacts App 2_2019: Crie uma função chamada atualizaDadosLocais. (Clique para ver todas as instruções)
@@ -3062,6 +3074,13 @@ pt-BR:
       courseA_playLab_events4: Adicione blocos para mover para a direita quando o botão `direito` é clicado.
       courseA_playLab_events4_2018: Adicione outro bloco de evento para fazer Jorge mover para a direita quando o botão `direito` é clicado.
       courseA_playLab_events4_2019: Adicione outro bloco de evento para fazer Jorge mover para a direita quando o botão `direito` é clicado.
+      courseA_playLab_events5: Adicione eventos para que o Jorge suba e desça quando os botões `para cima` e` para baixo` forem pressionados.
+      courseA_playLab_events5_2018: Adicione eventos para que o Jorge suba e desça quando os botões `para cima` e` para baixo` forem pressionados.
+      courseA_playLab_events5_2019: Adicione eventos para que o Jorge suba e desça quando os botões `para cima` e` para baixo` forem pressionados.
+      courseA_playLab_events6: Torne isso mais interessante alterando o fundo e tocando um som aleatório quando Jorge for clicado.
+      courseA_playLab_events6_2018: Torne isso mais interessante alterando o fundo e tocando um som aleatório quando Jorge for clicado.
+      courseA_playLab_events6_2019: Torne isso mais interessante alterando o fundo e tocando um som aleatório quando Jorge for clicado.
+      courseA_playLab_events7: Adicione o que quiser a este jogo. Você pode fazer o dinossauro desaparecer quando Jorge se depara com ele?
       courseA_playLab_events7_2018: "*Jogo Livre*: Adicione o que você quiser neste jogo."
       courseA_playLab_events7_2019: "*Jogo Livre*: Adicione o que você quiser neste jogo."
       courseA_playlab_events_challenge1: Você consegue escrever o código para mostrar o resto dos meus amigos? As dicas vão te ajudar a fazer isto passo a passo.
@@ -3085,11 +3104,20 @@ pt-BR:
       courseB_Scrat_ramp5a_2018: Tente este sozinho!
       courseB_Scrat_ramp5a_2019: Tente este sozinho!
       courseB_artist_loops1: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
+      courseB_artist_loops10: Use o que você aprendeu para desenhar uma imagem do que você acha que o artista viu quando chegou em casa.
+      courseB_artist_loops10_2018: Use o que você aprendeu para desenhar uma imagem do que você acha que o artista viu quando chegou em casa.
+      courseB_artist_loops10_2019: Use o que você aprendeu para desenhar uma imagem do que você acha que o artista viu quando chegou em casa.
       courseB_artist_loops1_2018: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
       courseB_artist_loops1_2019: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
       courseB_artist_loops2: O Artista está tentando desenhar uma linha **6** vezes, mas não conseguiu fazer direito. Você pode ajudá-lo?
       courseB_artist_loops2_2018: O Artista está tentando desenhar uma linha **6** vezes, mas não conseguiu fazer direito. Você pode ajudá-lo?
       courseB_artist_loops2_2019: O Artista está tentando desenhar uma linha **6** vezes, mas não conseguiu fazer direito. Você pode ajudá-lo?
+      courseB_artist_loops3: Ajude o artista a desenhar uma linha 7 vezes para fazer uma parede de jardim.
+      courseB_artist_loops3_2018: Ajude o artista a desenhar uma linha 7 vezes para fazer uma parede de jardim.
+      courseB_artist_loops3_2019: Ajude o artista a desenhar uma linha 7 vezes para fazer uma parede de jardim.
+      courseB_artist_loops4: 'Agora precisamos preparar o solo para plantar. Encontre os bugs no código e ajude o artista preparar o terreno.'
+      courseB_artist_loops4_2018: 'Agora precisamos preparar o solo para plantar. Encontre os bugs no código e ajude o artista preparar o terreno.'
+      courseB_artist_loops4_2019: 'Agora precisamos preparar o solo para plantar. Encontre os bugs no código e ajude o artista preparar o terreno.'
       courseB_artist_loops5: Hora de consertar as escadas! Repita este padrão **5** vezes para o artista conseguir atingir o topo dos arbustos.
       courseB_artist_loops5_2018: Hora de consertar as escadas! Repita este padrão **5** vezes para o artista conseguir atingir o topo dos arbustos.
       courseB_artist_loops5_2019: Hora de consertar as escadas! Repita este padrão **5** vezes para o artista conseguir atingir o topo dos arbustos.
@@ -3099,6 +3127,9 @@ pt-BR:
       courseB_artist_loops8: Hora de voltar para casa. Você pode consertar esta escada usando apenas um bloco para ajudar a artista a descer?
       courseB_artist_loops8_2018: Hora de voltar para casa. Você pode consertar esta escada usando apenas um bloco para ajudar a artista a descer?
       courseB_artist_loops8_2019: Hora de voltar para casa. Você pode consertar esta escada usando apenas um bloco para ajudar a artista a descer?
+      courseB_artist_loops9: Vamos pegar o caminho mais curto para casa, pela lagoa. Você pode ajudar o artista a ficar nas pedras?
+      courseB_artist_loops9_2018: Vamos pegar o caminho mais curto para casa, pela lagoa. Você pode ajudar o artista a ficar nas pedras?
+      courseB_artist_loops9_2019: Vamos pegar o caminho mais curto para casa, pela lagoa. Você pode ajudar o artista a ficar nas pedras?
       courseB_artist_loops_challenge1: '"É hora de jogar os dados! Você consegue me ajudar a desenhar estes?"'
       courseB_artist_loops_challenge1_2018: '"É hora de jogar os dados! Você consegue me ajudar a desenhar estes?"'
       courseB_artist_loops_challenge1_2019: '"É hora de jogar os dados! Você consegue me ajudar a desenhar estes?"'
@@ -3144,6 +3175,7 @@ pt-BR:
       courseB_collector_loops_challenge2a_2018: Ajude Laurel a pegar pelo menos **5** peças do tesouro para finalizar este enigma.
       courseB_collector_loops_challenge2a_2019: Ajude Laurel a pegar pelo menos **5** peças do tesouro para finalizar este enigma.
       courseB_collector_loops_challenge`: 'Desta vez você só pode usar um bloco de cada seta. Pegue todo o tesouro! '
+      courseB_collector_prog1: Esta é Laurel, a Aventureira! Você pode movê-la e obter ouro?
       courseB_collector_prog2: Quatro pilhas de ouro! Colete todas elas.
       courseB_iceage_loops1: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseB_iceage_loops10: Ajude Scrat a chegar até a noz!
@@ -3196,6 +3228,7 @@ pt-BR:
       courseB_maze_seq7: Descubra o que está faltando e então adicione blocos para levar o pássaro até o porco!
       courseB_maze_seq7_2018: Descubra o que está faltando e então adicione blocos para levar Scrat até a noz!
       courseB_maze_seq7_2019: Descubra o que está faltando e então adicione blocos para levar Scrat até a noz!
+      courseB_maze_seq8: Sua vez! O que você precisa fazer para levar o pássaro para o porco?
       courseB_maze_seq8_2018: Sua vez! O que você precisa fazer para levar Scrat até a noz?
       courseB_maze_seq8_2019: Sua vez! O que você precisa fazer para levar Scrat até a noz?
       courseB_maze_seq9: 'Desafio: Dê a volta na TNT para levar o pássaro até o porco.'
@@ -3239,6 +3272,8 @@ pt-BR:
       courseB_playlab_events7: Torne deste jogo mais divertido, fazendo com que o cavaleiro desapareça quando ele correr até o dragão para pegar as bandeiras! Execute um som quando eles colidirem para parecer mais real.
       courseB_playlab_events7_2018: "1) Faça com que o cavaleiro desapareça quando ele corre até o dragão.\n2) Execute um som quando eles colidirem para que pareça mais real.  "
       courseB_playlab_events7_2019: "1) Faça com que o cavaleiro desapareça quando ele corre até o dragão.\n2) Execute um som quando eles colidirem para que pareça mais real.  "
+      courseB_playlab_events8: Use sua imaginação. O que você pode fazer para tornar este jogo mais divertido?
+      courseB_playlab_eventsFP: Use sua imaginação. O que você pode fazer para tornar este jogo mais divertido?
       courseB_playlab_eventsFP_2018: "**Jogo Livre:** Use sua imaginação. O que você pode fazer para deixar este jogo mais divertido?"
       courseB_playlab_eventsFP_2019: "**Jogo Livre:** Use sua imaginação. O que você pode fazer para deixar este jogo mais divertido?"
       courseB_playlab_eventsToolbox: Termine executando um som e fazendo com que o cavaleiro desapareça quando ele correr para o dragão!
@@ -3286,6 +3321,8 @@ pt-BR:
       courseB_starWars_prog9: Ajude BB-8 a recolher os pedaços de metais brilhantes
       courseB_starWars_prog9_2018: Ajude BB-8 a recolher os pedaços de metais brilhantes
       courseB_starWars_prog9_2019: Ajude BB-8 a recolher os pedaços de metais brilhantes
+      courseC19_playLab_EOC2: Use eventos e ações para fazer seu herói se mover. Chegue aos alvos.
+      courseC19_playLab_EOC5: Ótimo trabalho! Você tem todos os componentes básicos de um jogo em funcionamento. Agora passe algum tempo certificando-se de que o jogo funciona do jeito que você deseja.
       courseC_PlayLab_events1: Faça Jorge o Cachorro (ator 1) dizer "Olá."
       courseC_PlayLab_events1_2018: Faça Jorge o Cachorro (ator 1) dizer "Olá."
       courseC_PlayLab_events1_2019: Faça Jorge o Cachorro (ator 1) dizer "Olá."
@@ -3307,24 +3344,76 @@ pt-BR:
       courseC_PlayLab_events7: O bloco `repetir para sempre` permite você executar um código várias vezes para sempre. Use este bloco para mover Chomp o dinossauro (personagem  2) 400 pixels para cima e para baixo, para sempre.
       courseC_PlayLab_events7_2018: O bloco `repetir para sempre` permite você executar um código várias vezes para sempre. Use este bloco para mover Chomp o dinossauro (personagem  2) 400 pixels para cima e para baixo, para sempre.
       courseC_PlayLab_events7_2019: O bloco `repetir para sempre` permite você executar um código várias vezes para sempre. Use este bloco para mover Chomp o dinossauro (personagem  2) 400 pixels para cima e para baixo, para sempre.
+      courseC_PlayLab_events9: "Você pode adicionar um bloco para marcar um ponto quando Waddles, o Pinguim (ator 1), se deparar com Octavia, o Polvo (ator 3)?\nJogue e mova o Waddles com as setas até você marcar ponto!"
+      courseC_PlayLab_events9_2018: "Você pode adicionar um bloco para marcar um ponto quando Waddles, o Pinguim (ator 1), se deparar com Octavia, o Polvo (ator 3)?\nJogue e mova o Waddles com as setas até você marcar ponto!"
+      courseC_PlayLab_events9_2019: "Você pode adicionar um bloco para marcar um ponto quando Waddles, o Pinguim (ator 1), se deparar com Octavia, o Polvo (ator 3)?\nJogue e mova o Waddles com as setas até você marcar ponto!"
+      courseC_PlayLab_eventsA: |-
+        Adicione blocos ao evento `quando correr ' para alterar a cena de fundo e a velocidade do Waddles, o Pinguim.
+
+        Jogue e mova o Waddles com as setas até você marcar ponto.
+      courseC_PlayLab_eventsA_2018: |-
+        Adicione blocos ao evento `quando correr ' para alterar a cena de fundo e a velocidade do Waddles, o Pinguim.
+
+        Jogue e mova o Waddles com as setas até você marcar ponto.
+      courseC_PlayLab_eventsA_2019: |-
+        Adicione blocos ao evento `quando correr ' para alterar a cena de fundo e a velocidade do Waddles, o Pinguim.
+
+        Jogue e mova o Waddles com as setas até você marcar ponto.
       courseC_PlayLab_eventsFP: Crie sua própria estória. Quando terminar, clique em "Concluir" para compartilhar com seus amigos. Veja ideias para estórias nas dicas.
       courseC_PlayLab_eventsFP_2018: Crie sua própria estória. Quando terminar, clique em "Concluir" para compartilhar com seus amigos. Veja ideias para estórias nas dicas.
       courseC_PlayLab_eventsFP_2019: Crie sua própria estória. Quando terminar, clique em "Concluir" para compartilhar com seus amigos. Veja ideias para estórias nas dicas.
+      courseC_PlayLab_events_challenge1: "Use um novo bloco para fazer com que o Waddles volte automaticamente para o início quando ele se deparar com o Dinossauro e quando ele marcar um ponto.\nJogue e mova o Waddles com as setas até marcar pontos suficientes."
+      courseC_PlayLab_events_challenge1_2018: "Use um novo bloco para fazer com que o Waddles volte automaticamente para o início quando ele se deparar com o Dinossauro e quando ele marcar um ponto.\nJogue e mova o Waddles com as setas até marcar pontos suficientes."
+      courseC_PlayLab_events_challenge1_2019: "Use um novo bloco para fazer com que o Waddles volte automaticamente para o início quando ele se deparar com o Dinossauro e quando ele marcar um ponto.\nJogue e mova o Waddles com as setas até marcar pontos suficientes."
+      courseC_PlayLab_events_challenge1_xy_blocks: |-
+        Aqui está um novo bloco que é um pouco complicado. Use-o para mover o Waddles de volta ao começo quando ele se deparar com o Dinossauro e quando ele marcar um ponto. Isso tornará seu jogo mais desafiador e divertido!
+
+        Jogue e mova o Waddles com as setas até marcar pontos suficientes.
+      courseC_artist_loop1: Vamos adicionar um pouco de entusiasmo!
+      courseC_artist_loop1_2018: Vamos adicionar um pouco de entusiasmo com um bloco `definir padrão`.
+      courseC_artist_loop1_2019: Vamos adicionar um pouco de entusiasmo com um bloco `definir padrão`.
+      courseC_artist_loops1: "* \"Zumbi. Desenhe!\"\n\nO zumbi quer desenhar uma linha de onde ele está para o jardim de girassóis. Você pode ajudá-lo?\n* (O jardim está a 250 pixels de distância) *"
+      courseC_artist_loops1a: 'Leve o artista para o centro da área de jogo, em seguida, desenhe um pássaro usando um adesivo.'
+      courseC_artist_loops1a_2018: 'Leve o artista para o centro da área de jogo, em seguida, desenhe um pássaro usando um adesivo.'
+      courseC_artist_loops1a_2019: 'Leve o artista para o centro da área de jogo, em seguida, desenhe um pássaro usando um adesivo.'
+      courseC_artist_loops2: Agora que o zumbi conhece seu caminho, ajude-o a cavar buracos ao longo do caminho para plantar mais flores!
+      courseC_artist_loops3: Excelente! Agora que as flores brotaram, ajude o zumbi a colocar um amigo a cada 50 pixels para protegê-las até que elas cresçam.
       courseC_artist_loops3a: Agora adicione um morcego!
       courseC_artist_loops3a_2018: Agora adicione um morcego!
       courseC_artist_loops3a_2019: Agora adicione um morcego!
+      courseC_artist_loops4: O zumbi encontrou uma fazenda vazia! Você pode ajudá-lo a trazê-la à vida estampando adesivos de animais a cada 100 pixels ao redor da fronteira?
+      courseC_artist_loops4a: Tente avançar 75 pixels.
+      courseC_artist_loops4a_2018: Tente avançar 75 pixels.
+      courseC_artist_loops4a_2019: Tente avançar 75 pixels.
       courseC_artist_loops5a: Experimente novos adesivos!
       courseC_artist_loops5a_2018: Experimente novos adesivos!
       courseC_artist_loops5a_2019: Experimente novos adesivos!
       courseC_artist_loops5b: Tente adicionar linhas!
       courseC_artist_loops5b_2018: Tente adicionar linhas!
       courseC_artist_loops5b_2019: Tente adicionar linhas!
+      courseC_artist_loops6: "O que o zumbi deveria colocar dentro do jardim?"
+      courseC_artist_loops6a: Adicione outro adesivo!
+      courseC_artist_loops6a_2018: Adicione outro adesivo!
+      courseC_artist_loops6a_2019: Adicione outro adesivo!
+      courseC_artist_loops7a: Brinque com os laços e ângulos.
+      courseC_artist_loops7a_2018: Brinque com os laços e ângulos.
+      courseC_artist_loops7a_2019: Brinque com os laços e ângulos.
       courseC_artist_loops8a: Agora tente algo você mesmo!
       courseC_artist_loops8a_2018: Agora tente algo você mesmo!
       courseC_artist_loops8a_2019: Agora tente algo você mesmo!
+      courseC_artist_loopsPrePre1a: 'Coloque o artista no centro da área do jogo e desenhe uma linha.'
+      courseC_artist_loopsPrePre1a_2018: 'Coloque o artista no centro da área do jogo e desenhe uma linha.'
+      courseC_artist_loopsPrePre1a_2019: 'Coloque o artista no centro da área do jogo e desenhe uma linha.'
+      courseC_artist_loopsTemplate: Excelente! Agora que as flores brotaram, ajude o zumbi a colocar um amigo a cada 50 pixels para protegê-las até que elas cresçam.
+      courseC_artist_loopsTemplateA: 'Leve o artista para o centro da área de jogo, em seguida, desenhe um pássaro usando um adesivo.'
+      courseC_artist_loopsTemplateA_2018: 'Leve o artista para o centro da área de jogo, em seguida, desenhe um pássaro usando um adesivo.'
+      courseC_artist_loopsTemplateA_2019: 'Leve o artista para o centro da área de jogo, em seguida, desenhe um pássaro usando um adesivo.'
       courseC_artist_prog1: Brinque com os blocos da caixa de ferramentas para saber o que eles fazem!
       courseC_artist_prog1_2018: Brinque com os blocos da caixa de ferramentas para saber o que eles fazem!
       courseC_artist_prog1_2019: Brinque com os blocos da caixa de ferramentas para saber o que eles fazem!
+      courseC_artist_prog3: Cada lado do quadrado interno é de 100 pixels e todos os ângulos são de 90 graus.
+      courseC_artist_prog3_2018: Cada lado do quadrado interno é de 100 pixels e todos os ângulos são de 90 graus.
+      courseC_artist_prog3_2019: Cada lado do quadrado interno é de 100 pixels e todos os ângulos são de 90 graus.
       courseC_artist_prog5: |-
         Essa casa precisa de um telhado! Desenhe o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.
       courseC_artist_prog5_2018: |-
@@ -3529,6 +3618,14 @@ pt-BR:
       courseC_starWars_loops6: Laços até funcionam com mais de um bloco dentro! Você pode repetir essa sequência?
       courseC_starWars_loops6_2018: Laços até funcionam com mais de um bloco dentro! Você pode repetir essa sequência?
       courseC_starWars_loops6_2019: Laços até funcionam com mais de um bloco dentro! Você pode repetir essa sequência?
+      courseC_starWars_loops7: Você pode tentar obter toda a sucata usando apenas um laço? Tente programar tudo e então encontre o código de repetição para colocar em um laço.
+      courseC_starWars_loops7_2018: Você pode tentar obter toda a sucata usando apenas um laço? Tente programar tudo e então encontre o código de repetição para colocar em um laço.
+      courseC_starWars_loops7_2019: Você pode tentar obter toda a sucata usando apenas um laço? Tente programar tudo e então encontre o código de repetição para colocar em um laço.
+      courseC_starWars_loops9: Use o que você aprendeu para pegar toda a sucata!
+      courseC_starWars_loops9_2018: Use o que você aprendeu para pegar toda a sucata!
+      courseC_starWars_loops9_2019: Use o que você aprendeu para pegar toda a sucata!
+      courseD_Frozen_nested1: 'Desenhe uma pequena forma, entre ** 20 e 50 ** pixels de largura. Pode ser qualquer forma que você goste.'
+      courseD_Frozen_nested2: Agora pegue sua forma e desenhe duas ou três seguidas!
       courseD_Frozen_nested5: Brinque com os flocos de neve!
       courseD_Frozen_nested6: Desenhe um modelo de degrau de escada que tenha voltas entre 75 e 105 graus.
       courseD_Frozen_nested7: Agora, vire 180 graus e desenhe o modelo da escada novamente!
@@ -3633,9 +3730,15 @@ pt-BR:
       courseD_artist_nestedLoops_challenge2: Conserte o código para fazer esta pintura!
       courseD_artist_nestedLoops_challenge2_2018: Conserte o código para fazer esta pintura!
       courseD_artist_nestedLoops_challenge2_2019: Conserte o código para fazer esta pintura!
+      courseD_artist_project1: 'Desenhe uma pequena forma, entre ** 20 e 50 ** pixels de largura. Pode ser qualquer forma que você goste.'
+      courseD_artist_project1_2018: 'Desenhe uma pequena forma, entre ** 20 e 50 ** pixels de largura. Pode ser qualquer forma que você goste.'
+      courseD_artist_project1_2019: 'Desenhe uma pequena forma, entre ** 20 e 50 ** pixels de largura. Pode ser qualquer forma que você goste.'
       courseD_artist_project1a: Desenhe um modelo de degrau de escada que tenha voltas entre 75 e 105 graus.
       courseD_artist_project1a_2018: Desenhe um modelo de degrau de escada que tenha voltas entre 75 e 105 graus.
       courseD_artist_project1a_2019: Desenhe um modelo de degrau de escada que tenha voltas entre 75 e 105 graus.
+      courseD_artist_project2: Agora pegue sua forma e desenhe duas ou três seguidas!
+      courseD_artist_project2_2018: Agora pegue sua forma e desenhe duas ou três seguidas!
+      courseD_artist_project2_2019: Agora pegue sua forma e desenhe duas ou três seguidas!
       courseD_artist_project2a: Agora, vire 180 graus e desenhe o modelo da escada novamente!
       courseD_artist_project2a_2018: Agora, vire 180 graus e desenhe o modelo da escada novamente!
       courseD_artist_project2a_2019: Agora, vire 180 graus e desenhe o modelo da escada novamente!
@@ -4178,11 +4281,16 @@ pt-BR:
       frozen square loop: "Oi, eu sou Anna de Arendelle! Vamos fazer um quadrado\ncom o bloco \"repita\", que usa menos blocos. Quantas vezes (???) o bloco\n\"repita\" deve repetir os blocos dentro dele para fazer um quadrado?"
       frozen square snowflake: "Você consegue criar um floco de neve usando o bloco\n\"repita\" para criar um quadrado 10 vezes e o bloco \"vire\" para virar 36\ngraus entre cada quadrado?"
       grade1_adventurer_loops1: Quatro pilhas de ouro! Colete todas elas.
+      grade1_adventurer_loopsPre: Esta é Laurel, a Aventureira! Você pode movê-la e obter ouro?
       grade1_artist_loops1: O Artista está tentando desenhar uma linha seis vezes, mas não consegue fazer direito. Você pode ajudá-lo?
+      grade1_artist_loops2: Ajude o artista a desenhar uma linha 7 vezes para fazer uma parede de jardim.
+      grade1_artist_loops3: 'Agora precisamos preparar o solo para plantar. Encontre os bugs no código e ajude o artista preparar o terreno.'
       grade1_artist_loops4: Hora de consertar as escadas! Repita esse padrão cinco vezes para que o artista possa alcançar o topo dos arbustos.
       grade1_artist_loops7: As flores aqui embaixo são tão bonitas. Vamos olhar mais de perto.
       grade1_artist_loops7b: Hora de ir para casa. Você pode consertar esta escada para ajudar o artista a descer?
+      grade1_artist_loops8: Vamos pegar o caminho mais curto para casa, pela lagoa. Você pode ajudar o artista a ficar nas pedras?
       grade1_artist_loops9: Eu ainda preciso de uma história pra este quebra-cabeça
+      grade1_artist_loopsFP: Use o que você aprendeu para desenhar uma imagem do que você acha que o artista viu quando chegou em casa.
       grade1_maze_sequence1: Altere o código para me levar até o porco!
       grade1_maze_sequence10: Me mova ao redor da TNT para chegar até o porco.
       grade1_maze_sequence2: Altere o código para me levar até o porco!
@@ -4190,6 +4298,7 @@ pt-BR:
       grade1_maze_sequence4: Agora tente este quebra-cabeça do início!
       grade1_maze_sequence5: Mova-me por um caminho, e então por outro para me levar até o porco!
       grade1_maze_sequence6: "Descubra o que está faltando e então adicione blocos\npara me levar até o porco!"
+      grade1_maze_sequence7: Sua vez! O que você precisa fazer para levar o pássaro para o porco?
       grade1_maze_sequence8: Analise este nível adicionando blocos para me levar até o porco!
       grade1_maze_sequence9: 'Desvie do TNT para me levar até o porco! '
       grade1_maze_sequenceA: 'Desafio: Me mova em volta da TNT para chegar até o porco.'
@@ -4211,6 +4320,7 @@ pt-BR:
       grade1_playlab_events8: Adicione um bloco de modo que quando o cavaleiro colide com o dragão, toque um som.
       grade1_playlab_events9 RYAN COPY: Agora, faça Robin esperar um segundo, então voltar depois que desaparecer.
       grade1_playlab_events9: Agora, adicione um bloco para contar cada vez que o cavaleiro atinge o dragão.
+      grade1_playlab_eventsFP: Use sua imaginação. O que você pode fazer para tornar este jogo mais divertido?
       grade1_sequence_pre: Brinque com estes blocos pra ver o que eles fazem o pássaro fazer!
       grade1_video_frustrationRainbow: Este vídeo descreve o arco-íris da frustração e introduz persistência.
       grade2_CaringForNewPet_10: Leve-me até o porco!
@@ -4640,8 +4750,11 @@ pt-BR:
       gradek_playlab_events3: Quando o terceiro pássaro é clicado, o fundo de tela deveria mudar para uma cidade. Você pode adicionar código para fazer isso acontecer?
       gradek_playlab_events3a: Quando o terceiro pássaro é clicado, o fundo de tela deveria mudar para uma cidade. Você pode adicionar código para fazer isso acontecer?
       gradek_playlab_events4: Adicione código para fazer alguma coisa acontecer quando o quarto pássaro é clicado. Seja criativo!
+      gradek_playlab_events4c: Adicione eventos para que o Jorge suba e desça quando os botões `para cima` e` para baixo` forem pressionados.
       gradek_playlab_events5: Sobre o Projeto Meu Robô! Escreva código para que ao clicar em cada pássaro seja mostrado um novo fato sobre seu robô.
       gradek_playlab_events5a: Sobre o Projeto Meu Robô! Escreva código para que ao clicar em cada pássaro seja mostrado um novo fato sobre seu robô.
+      gradek_playlab_events5c: Torne isso mais interessante alterando o fundo e tocando um som aleatório quando Jorge for clicado.
+      gradek_playlab_eventsFP: Adicione o que quiser a este jogo. Você pode fazer o dinossauro desaparecer quando Jorge se depara com ele?
       gradek_playlab_eventsPre: Este é um nível de Laboratório. Mova os blocos para o área de trabalho e veja o que acontece!
       group test: Faça um jogo
       iceAgeLoopsforVideo: Você consegue chegar à bolota com apenas um bloco `avançar`?

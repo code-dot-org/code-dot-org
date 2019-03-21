@@ -293,6 +293,8 @@ es:
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: Para usar un bloque `avanzar`, arrástralo desde el área de la barra de herramientas al espacio de trabajo y conéctelo al bloque`al ejecutar`.
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Puedes utilizar el bloque "si en ruta" para ayudarte a hacer los giros de forma correcta.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'El semi-hexágono tiene una ** longitud de 30 ** y gira a la derecha por ** 60 grados **.  '
         Course_4_Artist_11_b: 'El triángulo 2/3 tiene una ** longitud de 80 ** y gira a la derecha por ** 120 grados **. '
@@ -4438,10 +4440,15 @@ es:
         courseA_artist_loops6_b: Necesitarás 2 bloques en 2 direcciones para resolver este acertijo.
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_b: Escribe el código ara una ola primero, luego repite eso para dibujar los otros dos.
+        courseA_artist_loops7_c: Recuerda que puedes poner más de un bloque en un bucle <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>.
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_b: Escribe el código ara una ola primero, luego repite eso para dibujar los otros dos.
+        courseA_artist_loops7_c: |-
+          Recuerda que puedes poner más de un bloque en un bucle <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title> </block></xml>.
       courseA_artist_loops7_2019_authored_hint:
         courseA_artist_loops7_b: Escribe el código ara una ola primero, luego repite eso para dibujar los otros dos.
+        courseA_artist_loops7_c: |-
+          Recuerda que puedes poner más de un bloque en un bucle <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title> </block></xml>.
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_b: Escribe el código ara una ola primero, luego repite eso para dibujar los otros dos.
       courseA_artist_loops8_authored_hint:
@@ -4713,6 +4720,7 @@ es:
 
           y luego **cuatro** bloques `recoge maíz` como este:
           <block type="harvester_corn"/></xml>
+        courseA_harvester_loops2_b: 'Si aún tienes problemas, intenta contar los pasos en voz alta. '
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: "Tu código tendrá **cuatro** bloques `avanza hacia el oeste` como este:\n<xml><block type=\"maze_moveWest\"/></xml>\n\ny luego **cuatro** bloques `recoge maíz` como este:\n<block type=\"harvester_corn\"/></xml>"
       courseA_harvester_loops3_authored_hint:
@@ -4727,9 +4735,127 @@ es:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
+      courseA_harvester_loops4_authored_hint:
+        courseA_harvester_loops4_a: '¡No tengas miedo de presionar `Adelante` para ver qué ocurre!'
+        courseA_harvester_loops4_b: '¿Cuántas piezas de grano hay? ¿Cuántas veces se repite tu código?'
+      courseA_harvester_loops4_2019_authored_hint:
+        courseA_harvester_loops4_a: '¡No tengas miedo de presionar `Adelante` para ver qué ocurre!'
+        courseA_harvester_loops4_b: '¿Cuántas piezas de grano hay? ¿Cuántas veces se repite tu código?'
+      courseA_harvester_loops5_authored_hint:
+        courseA_harvester_loops5_c: '¡Usa este camino para recoger todo el grano!'
+      courseA_harvester_loops5_2019_authored_hint:
+        courseA_harvester_loops5_c: '¡Usa este camino para recoger todo el grano!'
+      courseA_harvester_loops5a_authored_hint:
+        courseA_harvester_loops5a_a: |-
+          Necesitarás usar un bucle `repetir` <xml> <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title> 
+          </block></xml> tras otro.
+        courseA_harvester_loops5a_c: Usa esta ruta para moverte en un sentido, y luego en el otro.
+      courseA_harvester_loops5a_2019_authored_hint:
+        courseA_harvester_loops5a_a: |-
+          Necesitarás usar un bucle `repetir` <xml> <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title> 
+          </block></xml> tras otro.
+        courseA_harvester_loops5a_c: Usa esta ruta para moverte en un sentido, y luego en el otro.
+      courseA_harvester_loops5b_authored_hint:
+        courseA_harvester_loops5b_a: '¡Pulsa `Ejecutar`para ver qué ocurre!'
+        courseA_harvester_loops5b_b: '¿Se repiten tus bucles el número adecuado de veces?'
+      courseA_harvester_loops5b_2019_authored_hint:
+        courseA_harvester_loops5b_a: '¡Pulsa `Ejecutar`para ver qué ocurre!'
+        courseA_harvester_loops5b_b: '¿Se repiten tus bucles el número adecuado de veces?'
+      courseA_harvester_loops7_authored_hint:
+        courseA_harvester_loops7_b: Usa dos bucles para seguir este camino.
+      courseA_harvester_loops7_2019_authored_hint:
+        courseA_harvester_loops7_b: Usa dos bucles para seguir este camino.
+      courseA_harvester_loops9_authored_hint:
+        courseA_harvester_loops9_a: Rompe este puzzle en tres partes diferentes. Una parte es la primera esquina, otra parte en la segunda esquina, y la tercera sería el final.
+        courseA_harvester_loops9_b: '¡No tengas miedo de ejecutar el código tras cada parte para ver qué ocurre!'
+        courseA_harvester_loops9_c: Sigue este camino para recoger todo el grano.
+      courseA_harvester_loops9_2019_authored_hint:
+        courseA_harvester_loops9_a: Rompe este puzzle en tres partes diferentes. Una parte es la primera esquina, otra parte en la segunda esquina, y la tercera sería el final.
+        courseA_harvester_loops9_b: '¡No tengas miedo de ejecutar el código tras cada parte para ver qué ocurre!'
+        courseA_harvester_loops9_c: Sigue este camino para recoger todo el grano.
+      courseA_harvester_seq1_authored_hint:
+        courseA_harvester_seq1_a: |-
+          ¡Usa este bloque para recoger el grano en cuanto el cosechador lo encuentre!
+
+          <xml>
+          <block type="harvester_corn"/>
+          </xml>
+        courseA_harvester_seq1_b: |-
+          El cosechador necesita moverse tres veces hacia el Este para recoger el grano. Usa este bloque:
+
+          <xml>
+          <block type="maze_moveEast"/>
+          </xml>
+      courseA_harvester_seq10_authored_hint:
+        courseA_harvester_seq10_a: '¿Estás atascado/a? Intenta anotar primero los pasos en un trozo de papel.'
+        courseA_harvester_seq10_b: Necesitas `Mover al Este`, y después `Mover al Norte`. Haz esto dos veces. ¡No te olvides de recoger también todo el grano!
+        courseA_harvester_seq10_c: Intenta usar este camino para recoger todo el grano.
+      courseA_harvester_seq10_2019_authored_hint:
+        courseA_harvester_seq10_a: '¿Estás atascado/a? Intenta anotar primero los pasos en un trozo de papel.'
+        courseA_harvester_seq10_b: Necesitas `Mover al Este`, y después `Mover al Norte`. Haz esto dos veces. ¡No te olvides de recoger también todo el grano!
+        courseA_harvester_seq10_c: Intenta usar este camino para recoger todo el grano.
+      courseA_harvester_seq13_authored_hint:
+        courseA_bee_seq1_a: |-
+          Usa este bloque para recoger grano una vez que el cosechador llegue a él.
+
+          <xml>
+          <block type="harvester_corn"/>
+          </xml>
+      courseA_harvester_seq13_2019_authored_hint:
+        courseA_bee_seq1_a: |-
+          Usa este bloque para recoger grano una vez que el cosechador llegue a él.
+
+          <xml>
+          <block type="harvester_corn"/>
+          </xml>
+      courseA_harvester_seq1_2019_authored_hint:
+        courseA_harvester_seq1_a: |-
+          ¡Usa este bloque para recoger el grano en cuanto el cosechador lo encuentre!
+
+          <xml>
+          <block type="harvester_corn"/>
+          </xml>
+        courseA_harvester_seq1_b: |-
+          El cosechador necesita moverse tres veces hacia el Este para recoger el grano. Usa este bloque:
+
+          <xml>
+          <block type="maze_moveEast"/>
+          </xml>
+      courseA_harvester_seq2_authored_hint:
+        courseA_harvester_seq2_a: '¡No te olvides de usar <xml><block type="harvester_corn"/></xml> para recoger el grano!'
+      courseA_harvester_seq2_2019_authored_hint:
+        courseA_harvester_seq2_a: '¡No te olvides de usar <xml><block type="harvester_corn"/></xml> para recoger el grano!'
+      courseA_harvester_seq3_authored_hint:
+        courseA_harvester_seq3_a: |-
+          ¿Te has acordado de usar este bloque?
+
+          <xml><block type="harvester_corn"/></xml>
+        courseA_harvester_seq3_b: Di los pasos en voz alta y mira si te ayuda a encontrar la respuesta.
+      courseA_harvester_seq3_2019_authored_hint:
+        courseA_harvester_seq3_a: |-
+          ¿Te has acordado de usar este bloque?
+
+          <xml><block type="harvester_corn"/></xml>
+        courseA_harvester_seq3_b: Di los pasos en voz alta y mira si te ayuda a encontrar la respuesta.
+      courseA_harvester_seq4_authored_hint:
+        courseA_harvester_seq4_a: '¿Cuántos espacios hay entre el Cosechador y el grano? ¿Cuántos bloques has usado ya en tu zona de trabajo?'
+        courseA_harvester_seq4_b: |-
+          Necesitas cinco bloques de `Mover al Este` y un bloque de `Coger Grano`:
+
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_seq4_2019_authored_hint:
+        courseA_harvester_seq4_a: '¿Cuántos espacios hay entre el Cosechador y el grano? ¿Cuántos bloques has usado ya en tu zona de trabajo?'
+        courseA_harvester_seq4_b: |-
+          Necesitas cinco bloques de `Mover al Este` y un bloque de `Coger Grano`:
+
+          <xml><block type="harvester_corn"/></xml>
       courseA_harvester_seq5_authored_hint:
+        courseA_harvester_seq5_a: '¿Qué bloque mueve al cosechador en la dirección errónea?'
         courseA_harvester_seq5_b: Necesitas eliminar un bloque.
       courseA_harvester_seq5_2019_authored_hint:
+        courseA_harvester_seq5_a: '¿Qué bloque mueve al cosechador en la dirección errónea?'
         courseA_harvester_seq5_b: Necesitas eliminar un bloque.
       courseA_harvester_seq6_authored_hint:
         courseA_harvester_seq6_a: Si estás atascado, intenta contar los pasos en voz alto. Podría ayudarte a encontrar el camino correcto.
@@ -4946,9 +5072,9 @@ es:
 
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
-        '1': Say the steps out loud and see if it helps you figure out the answer.
+        '1': Di los pasos en voz alta y mira si te ayuda a encontrar la respuesta.
       courseA_maze_seq5a_2019_authored_hint:
-        '1': Say the steps out loud and see if it helps you figure out the answer.
+        '1': Di los pasos en voz alta y mira si te ayuda a encontrar la respuesta.
       courseA_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge1_a: Hay dos soluciones para este puzzle.
       courseA_maze_seq_challenge1_2018_authored_hint:

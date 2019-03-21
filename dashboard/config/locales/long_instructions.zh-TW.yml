@@ -320,6 +320,8 @@ zh-TW:
       Color Contrast Checker: "# 顏色對比\r\n\r\n因為它，我們才能夠看到和閱讀網頁上的內容。但有些人的視力差，有些人是色盲，你要怎麼為這些差異進行設計呢？\r\n\r\n有個最簡單的方法，就是在網站上使用能形成足夠的對比的不同顏色，來確保大部分的人都可以閱讀你的站台內容。\r\n\r\nhttp://gomedia.com/zine/tutorials/rule-three-contrast-contrast-contrast/\r\n\r\n\r\n#\n做做看\r\n\r\n*
         使用顏色對比檢查器，看看你在站台使用的顏色是不是有足夠的對比度。"
       Considerations for the 1-to-1 Classroom: "## 1-1 教室\r\n\r\n如果你是初次管理有電腦的教室，參考這篇在教育週上的文章，其中概述了一些需要考量的要點。\r\n\r\n<br><br>"
+      CoureE_HOC 2018 Level_7a: "您找到了水底廢墟。在沙岩中搜尋一個裡面有**海磷石** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        寶藏的**箱子** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)。\n\n"
       Course 4 Artist 1: "幫我畫個盒子。   \r\n（每個線段長度為 200 像素）\r\n\r\n<br/><br/>\r\n\r\n"
       Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"\nwidth=\"150px;\"
         style=\"mix-blend-mode: multiply;\" />\r\n\r\n**遊戲時間：**這兒有個程式能畫出有趣的圖形。 \r\n\r\n如果把它重複個幾次，然後在每次的循環都轉向，會發生什麼事呢？\r\n\r\n注意當這個圖形的轉向到達了
@@ -570,20 +572,20 @@ zh-TW:
       CourseD_Dance_Party_01: |-
         *來舉行一場舞會！*
 
-        將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接，以建立第一個舞者。
+        將「創建一個新的」程式積木拖曳至工作區中，並把它放到「設定」積木裡頭，以建立第一個舞者。
 
-        * *如果您想要更多資訊或其他挑戰，也可以按一下左側的燈泡。*
+        * *如果你想要更多資訊或其它挑戰，也可以按一下左側的燈泡。*
       CourseD_Dance_Party_02: |-
         讓這隻麋鹿跳舞！
 
-        拖出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區上。在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木之下進行連接。您的舞者應該在第四個小節之後開始新的動作。
+        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區上。連接到在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小節"</title></block></xml> 程式積木之的後面。您的舞者應該在第 4 個小節之後開始新的動作。
 
 
         **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
       CourseD_Dance_Party_03: |-
-        *現在我們要跟著音樂律動了！*
+        *跟著音浪一起流動！*
 
-        將 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> 程式積木新增至您的工作區。讓舞者在 6 個小節後開始新的動作。
+        添加 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"小節"</title></block></xml> 程式積木到工作區。讓舞者在 6 個小節後開始新的動作。
       CourseD_Dance_Party_04: |-
         *這支舞需要一些閃光！*
 
@@ -591,7 +593,7 @@ zh-TW:
       CourseD_Dance_Party_05: |-
         使用另一個新的程式積木，讓舞者**每 2 個小節**改變動作！
 
-        * 選擇「（下一步）」、「（上一步）」或「（隨機）」告訴舞者每次執行程式碼時執行不同的動作。
+        * 選擇「下一個」、「下一個」或「隨機」告訴舞者每次執行程式時執行不同的動作。
       CourseD_Dance_Party_06: |-
         *我們需要更多舞者！*
 
@@ -629,7 +631,7 @@ zh-TW:
 
         現在您可以一次建立一群舞者了！
 
-        嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。
+        嘗試用一些「全部鴨子」積木來編寫程式，這可以讓所有的鴨子一起跳舞。
       CourseD_Dance_Party_11b: 是時候跳舞了！按下向左鍵時，貓會輕拍。按下向右鍵時，可讓機器人「掉落」。
       CourseD_Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       CourseE_HOC 2018 Level_10: "有一隻**烏賊** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
@@ -660,26 +662,26 @@ zh-TW:
       Dance_Party_01: |-
         *來舉行一場舞會！*
 
-        將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接，以建立第一個舞者。
+        將「創建一個新的」程式積木拖曳至工作區中，並把它放到「設定」積木裡頭，以建立第一個舞者。
 
-        * *如果您想要更多資訊或其他挑戰，也可以按一下左側的燈泡。*
+        * *如果你想要更多資訊或其它挑戰，也可以按一下左側的燈泡。*
       Dance_Party_01_low: |-
         *來舉行一場舞會！*
 
-        將「製作新內容」程式積木拖曳至工作區中，並在「設定」程式積木內部進行連接，以建立第一個舞者。
+        將「創建一個新的」程式積木拖曳至工作區中，並把它放到「設定」積木裡頭，以建立第一個舞者。
 
-        * *如果您想要更多資訊或其他挑戰，也可以按一下左側的燈泡。*
+        * *如果你想要更多資訊或其它挑戰，也可以按一下左側的燈泡。*
       Dance_Party_02: |-
         讓這隻麋鹿跳舞！
 
-        拖出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區上。在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木之下進行連接。您的舞者應該在第四個小節之後開始新的動作。
+        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區上。連接到在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小節"</title></block></xml> 程式積木之的後面。您的舞者應該在第 4 個小節之後開始新的動作。
 
 
         **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
       Dance_Party_03: |-
-        *現在我們要跟著音樂律動了！*
+        *跟著音浪一起流動！*
 
-        將 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> 程式積木新增至您的工作區。讓舞者在 6 個小節後開始新的動作。
+        添加 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"小節"</title></block></xml> 程式積木到工作區。讓舞者在 6 個小節後開始新的動作。
       Dance_Party_04: |-
         *這支舞需要一些閃光！*
 
@@ -687,7 +689,7 @@ zh-TW:
       Dance_Party_05: |-
         使用另一個新的程式積木，讓舞者**每 2 個小節**改變動作！
 
-        * 選擇「（下一步）」、「（上一步）」或「（隨機）」告訴舞者每次執行程式碼時執行不同的動作。
+        * 選擇「下一個」、「下一個」或「隨機」告訴舞者每次執行程式時執行不同的動作。
       Dance_Party_06: |-
         *我們需要更多舞者！*
 
@@ -721,7 +723,7 @@ zh-TW:
 
         現在您可以一次建立一群舞者了！
 
-        嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。
+        嘗試用一些「全部鴨子」積木來編寫程式，這可以讓所有的鴨子一起跳舞。
       Dance_Party_11: |-
         <xml><block type="Dancelab_whenKey"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。
 
@@ -738,7 +740,7 @@ zh-TW:
 
         現在您可以一次建立一群舞者了！
 
-        嘗試使用一些「所有鴨子」程式積木來編寫程式碼，這將使所有的鴨子一起跳舞。
+        嘗試用一些「全部鴨子」積木來編寫程式，這可以讓所有的鴨子一起跳舞。
       Dance_Party_11b: 是時候跳舞了！按下向左鍵時，貓會輕拍。按下向右鍵時，可讓機器人「掉落」。
       Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       Dance_Party_extras_battle: |-
@@ -858,7 +860,7 @@ zh-TW:
       HOC Dance 4_draft: |-
         使用另一個新的程式積木，讓舞者**每 2 個小節**改變動作！
 
-        * 選擇「（下一步）」、「（上一步）」或「（隨機）」告訴舞者每次執行程式碼時執行不同的動作。
+        * 選擇「下一個」、「下一個」或「隨機」告訴舞者每次執行程式時執行不同的動作。
       HOC Dance 5_draft: |-
         *我們需要更多舞者！*
 
@@ -899,7 +901,7 @@ zh-TW:
       K-1 Maze Loops 8: 使用「重複」迴圈讓我抓到豬。
       K-1 Maze Loops Assessment 1: "我們來看看你學得怎麼樣！\r\n使用「重複」迴圈來讓我抓到這頭豬！"
       LaurelDebugging4Video1: "這是冒險家 Laurel！\r\n\r\n讓她四處移動，並盡可能獲得最多的寶石。"
-      MC Agent Freeplay: "**自由遊戲：**現在，就看您的表現了！使用 Agent 的代碼來探索這個世界。"
+      MC Agent Freeplay: "**自由發揮：**現在換你表現囉，在 Agent 上編程來探索這個世界。"
       MC_HOC_2017 Agent Test: "按一下「執行」，即可使用**箭頭按鍵**移動玩家。 \n\n\n若要完成此關卡，您將必須到門的位置並開門
         (使用**空白鍵**)，這樣您就可前往門內的橙色方塊。"
       MC_HOC_2017_01: "按一下「執行」，即可使用**箭頭按鍵**移動玩家。 \n\n\n若要完成此關卡，您將必須到門的位置並開門 (使用**空白鍵**)，這樣您就可前往門內的橙色方塊。"
@@ -978,7 +980,7 @@ zh-TW:
       MC_HOC_2017_10_RYAN: 請嘗試從一開始建立功能，讓 Agent 可以更輕鬆地完成此礦車，並讓玩家可以前往橙色方塊。
       MC_HOC_2017_10_RYAN2: 請嘗試從一開始建立功能，讓 Agent 可以更輕鬆地完成此礦車，並讓玩家可以前往橙色方塊。
       MC_HOC_2017_11_Kiki: 現在，就看您的表現了！看看您可以在這片凍湖四周打造出什麼。
-      MC_HOC_2017_13_Cole: "**自由遊戲：**現在，就看您的表現了！使用 Agent 的代碼來探索這個世界。"
+      MC_HOC_2017_13_Cole: "**自由發揮：**現在換你表現囉，在 Agent 上編程來探索這個世界。"
       MC_HOC_2017_4.5v2: "您已安全離開沼澤！現在，讓玩家安全地抵達橙色方塊。 \n\n\n找到簡單的圖形，並使用循環來通過前兩個壓板，幫助
         Agent 清除路徑。"
       MC_HOC_2017_Ali: 請查看下方的功能。您要如何使用這些功能來避開地獄幽靈，並幫助 {currentPlayerName} 安全拿到**附魔書**
@@ -987,8 +989,8 @@ zh-TW:
         [book_enchanted]？
       MC_HOC_2017_FP10x10: "**自由遊戲：**現在，就看您的表現了！您可以挑戰自己，在此關卡中收集到所有鑽石嗎？ "
       MC_HOC_2017_FP10x10_RE: "**自由遊戲：**現在，就看您的表現了！您可以挑戰自己，在此關卡中收集到所有鑽石嗎？ "
-      MC_HOC_2017_FP20x20: "**自由遊戲：**現在，就看您的表現了！使用 Agent 的代碼來探索這個世界。"
-      MC_HOC_2017_FP20x20_2019: "**自由遊戲：**現在，就看您的表現了！使用 Agent 的代碼來探索這個世界。"
+      MC_HOC_2017_FP20x20: "**自由發揮：**現在換你表現囉，在 Agent 上編程來探索這個世界。"
+      MC_HOC_2017_FP20x20_2019: "**自由發揮：**現在換你表現囉，在 Agent 上編程來探索這個世界。"
       MC_HOC_2017_Ryan_03: "您知道嗎？您可以在循環中加入多段代碼。 \n\n\n使用「重複」循環，在水中放置方塊，幫助 Agent 建造渡河橋樑。"
       MC_HOC_2017_Ryan_05: "有時候，您必須破壞擋住玩家路徑的東西。 \n使用「破壞」方塊來清除 Agent 和壓板之間的所有仙人掌。"
       MC_HOC_Kiki_02: 有人必須先在壓板上，然後側門才會開啟。幫助 Agent 抵達壓板，這樣玩家才能離開房屋。
@@ -1065,6 +1067,11 @@ zh-TW:
       NEW Course 4 Bee For Loops 7: "現在，我們來組合 counter（計數器）變數和一個運算積木！怎樣透過 counter 變數減少積木使用數來遊覽花園呢？\r\n\r\n這次你要怎麼做才能收集到
         3、6、9、12、15個花蜜呢？counter 變數就是秘密武器！\r\n\r\n<br/>\r\n記住：如果你的循環是遞增計數的，增量就會在每次循環加到
         counter 裡。\r\n\r\n"
+      NEW Course 4 Bee For Loops 8: |+
+        你明白了吧！
+
+        如果要依次收集 3、6、9、12、15 個花蜜，要在每次的數字後加多少呢？
+
       NEW Course 4 Bee For Loops 95: 仔細看看你建立的計數迴圈中的每個片段。想一想，哪個數字需要被加倍才能完成這個關卡？為什麼呢？
       NEW Course 4 Play Lab Params 11: "自由活動時間到了！\n好好享用工具箱的所有積木吧。\r\n<br/>\r\n\r\n<h5>\r\n<details>\r\n<summary><b>這裡有些點子。</b></summary>\r\n\\t<br/>\r\n\\t<h5>\r\n\\t\\t<ul>\r\n
         \       \\t<li><strong>追著跑</strong>\n- 讓角色 2 來回走動，然後使用你的方向鍵移動角色 1，追著角色 1 跑，直到他們碰在一起。
@@ -1072,7 +1079,7 @@ zh-TW:
         </li>\r\n            <li><strong>猜誰先出現</strong> - 讓二個角色都先消失，隨機的改變位置，並隨機出現其中一個角色。點擊第一個出現的角色就得分，如果點擊到第二個出現的角色就扣分！
         </li>\r\n        </ul>\r\n\\t</h5>\r\n</details>\r\n</h5>\r\n"
       NEW Course 4 Play Labs For Loops 8a: "*挑戰：** 你可以使用「計數迴圈」從上而下的讓每個角色先說出自己的角色編號，然後在畫面上消失嗎？ "
-      New Minecraft Hero Project: "**自由遊戲：**現在，就看您的表現了！使用 Agent 的代碼來探索這個世界。"
+      New Minecraft Hero Project: "**自由發揮：**現在換你表現囉，在 Agent 上編程來探索這個世界。"
       Overworld Move to Sheep: 添加第二個「移動-向前」指令，到達綿羊的位置。
       Overworld Move to Sheep_2018: 添加第二個「移動-向前」指令，到達綿羊的位置。
       Overworld Move to Sheep_2019: 添加第二個「移動-向前」指令，到達綿羊的位置。
@@ -1089,7 +1096,7 @@ zh-TW:
       Ryan_Demo: |-
         讓這隻麋鹿跳舞！
 
-        拖出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區上。在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木之下進行連接。您的舞者應該在第四個小節之後開始新的動作。
+        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區上。連接到在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小節"</title></block></xml> 程式積木之的後面。您的舞者應該在第 4 個小節之後開始新的動作。
 
 
         **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
@@ -1549,6 +1556,18 @@ zh-TW:
       courseF_bee_conditionals1_predict1_2018: "*「這雲擋住了我的視線 ！」* \r\n\r\n檢查看看雲下面藏了什麼，如果是花，就把花蜜採集起來。"
       courseF_bee_conditionals7_predict2: "有時雲裡面有花朵，有時雲裡藏著蜂窩！\r\n\r\n使用`如果…否則`積木，如果是花朵就收集花蜜。\n否則，就釀造蜂蜜（因為它是蜂窩）。"
       courseF_bee_conditionals7_predict2_2018: "有時雲裡面有花朵，有時雲裡藏著蜂窩！\r\n\r\n使用`如果…否則`積木，如果是花朵就收集花蜜。\n否則，就釀造蜂蜜（因為它是蜂窩）。"
+      courseF_bee_for8: |
+        你明白了吧！
+
+        如果要依次收集 3、6、9、12、15 個花蜜，要在**每次的數字後加多少**呢？
+      courseF_bee_for8_2018: |
+        你明白了吧！
+
+        如果要依次收集 3、6、9、12、15 個花蜜，要在**每次的數字後加多少**呢？
+      courseF_bee_for8_2019: |
+        你明白了吧！
+
+        如果要依次收集 3、6、9、12、15 個花蜜，要在**每次的數字後加多少**呢？
       courseF_bee_for_challenge2: 盡可能使用最少的程式積木來完成這個關卡。
       courseF_bee_for_challenge2_2018: 盡可能使用最少的程式積木來完成這個關卡。
       courseF_bee_for_challenge2_2019: 盡可能使用最少的程式積木來完成這個關卡。
@@ -1850,6 +1869,11 @@ zh-TW:
       grade5_artist_variables_triangles3: '拖曳數字積木到「設定長度」積木和「重複」積木裡，以畫出一連串的 50 像素長的三角形。 '
       grade5_bee_for_loops5: 現在，我們需要向前移動，移動距離為計數器的次數，接著採集花蜜，採集個數也是計數器的次數。你可以使用 2 個「重複」迴圈來完成這個挑戰嗎？
       grade5_bee_for_loops6: 你也可以使用一個「計數迴圈」來倒數，試著從 5 數到 1，間隔數為 1 的方式來採集這些花蜜。
+      grade5_bee_for_loops8: |+
+        你明白了吧！
+
+        如果要依次收集 3、6、9、12、15 個花蜜，要在每次的數字後加多少呢？
+
       grade5_bee_parameters_new3: "是時候測試這個函式了！\n\r\n\r\n我們來看看它是不是可以容易的收集到這 3 個橫列上的所有花蜜。"
       grade5_bee_parameters_new4: "**要如何讓函式能維持運作？**   \r\n\r\n我們需要做一些調整。點擊「編輯」，添加一個
         `length`（長度）參數到函式裡，這樣一來，就算列數與長度不相同，函式也能正常運作囉。"
@@ -1904,3 +1928,4 @@ zh-TW:
         \       \\t<li><strong>對話</strong>\n- 當你在他們上面點一下時，精靈之間會互相交談。</li>\r\n            <li><strong>彈力球</strong>\n-
         讓一個精靈發出聲音，當其他的精靈撞到她時。</li>\r\n            <li><strong>方向鍵</strong>\n- 寫個程式，用方向鍵控制精靈的移動方向！</li>\r\n
         \       </ul>\r\n\\t</h5>\r\n</details>\r\n</h5>"
+      test_sarah: hi

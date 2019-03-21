@@ -394,6 +394,9 @@ pl:
         poprzez przechowywanie tekstu w zmiennej `name`, ale to nie koniec.\r\n\r\nKorzystając
         z bloku `getProperty()` przypisz zmienną `name` do właściwości tekstu \"name_input\".
         Przetestuj swój program wpisując swoje imię i klikając \"Zapisz.\""
+      CoureE_HOC 2018 Level_7a: "Znalazłeś podwodne ruiny. Przeszukaj piaskowiec,
+        by odnaleźć **kufer** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        zawierający **pryzmaryn** skarb ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
       Course 4 Artist 13: Nadal grasz? Tutaj jest czyste płótno, na którym możesz
         zaprojektować cokolwiek chcesz!
       Course 4 Artist 6: Uzupełnij kod, aby narysować te trzy równoboczne trójkąty.

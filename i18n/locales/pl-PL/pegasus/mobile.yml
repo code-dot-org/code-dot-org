@@ -15,7 +15,7 @@
   n_have_learned_an_hoc: "<h1>Wypróbuj</h1><h2>Godzinę Kodowania</h2><h3>#</h3>"
   anybody_can_learn: "Każdy może się uczyć."
   learn_now: "Rozpocznij naukę teraz"
-  petition_message: "Każdy uczeń w każdej szkole powinien mieć możliwość nauki informatyki"
+  petition_message: "Każdy uczeń w każdej szkole powinien móc uczyć się informatyki"
   petition_sign_message: 'Jeśli zgadzasz się, wpisz swoje nazwisko. Przyłącz się do # innych.'
   petition_sign_message_support: 'Jeśli nas wspierasz, wpisz swoje nazwisko. Dołącz do # innych.'
   petition_join_others: 'Dołącz do # innych'
@@ -64,7 +64,7 @@
   all_ages: "Wszystkie grupy wiekowe"
   beginner: "Początkujący"
   n_participants: "# uczestników"
-  go: "Idź"
+  go: "Przejdź"
   thank_you_: "Dziękujemy!"
   congratulations: "Gratulacje!"
   congratulations_on_completing_hoc: "Gratulacje z okazji ukończenia godziny programowania (One Hour of Code)"
@@ -163,7 +163,7 @@
   share_on_facebook: "Udostępnij na Facebooku"
   share_on_twitter: "Udostępnij na Twitterze"
   beyond_an_hour: "Poza Godziną Kodowania"
-  get_started: "Start"
+  get_started: "Rozpocznij"
   i_agree: "Zgadzam się"
   participant_select: "-Wybierz-"
   participant_student: "Uczeń"
@@ -226,7 +226,7 @@
   studiobar_elementary_title: "Kursy podstawowe"
   studiobar_elementary_body: "Nasze trzy nowe kursy dla K &#8209;5"
   studiobar_dance_title: "Potańcówka"
-  studiobar_dance_body: "Stwórz i udostępnij swoją imprezę taneczną"
+  studiobar_dance_body: "Utwórz i udostępnij swoją Potańcówkę"
   studiobar_hoc_title: "Godzina Kodowania"
   studiobar_hoc_body: "Ucz się kodowania (programowania) z Angry Birds"
   studiobar_flappy_title: "Flappy Code"
@@ -330,7 +330,7 @@
   homepage_slot_text_link_local: "Znajdź klasę w okolicy"
   homepage_slot_text_link_othercourses: "Pozostałe kursy online"
   homepage_slot_text_title_educators: "Nauczyciele"
-  homepage_slot_text_blurb_educators: "Naucz twoich uczniów/studentów"
+  homepage_slot_text_blurb_educators: "Naucz swoich uczniów/studentów"
   homepage_slot_text_link_elementary: "Szkoła podstawowa"
   homepage_slot_text_link_middle: "Gimnazjum"
   homepage_slot_text_link_high: "Szkoła ponadgimnazjalna"
@@ -344,6 +344,7 @@
   homepage_slot_text_link_donate: "Ofiaruj darowiznę"
   homepage_slot_text_link_shop: "Koszulki, czapki i inne"
   homepage_slot_text_link_administrators: "Wprowadź w swojej szkole lub odwodzie"
+  homepage_gallery_header: "Utworzono ponad %{project_count} mln projektów w Code.org"
   homepage_header_donors: "Code.org dziękuje za wsparcie"
   homepage_donors_seall: "Zobacz wszystkich"
   homepage_donors_donate: "Podaruj"
@@ -413,11 +414,11 @@
   minecraft_tutorials: "Samouczki Minecrafta w Godzinie Kodowania"
   minecraft_specs: "Wiele języków | Nowoczesne przeglądarki i tablety | Klasy 2 +"
   minecraft_agent_description: "Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj podróżując po świecie Minecraftu."
-  minecraft_agent_button: "Start"
-  minecraft_designer_description: "Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecraft."
-  minecraft_designer_button: "Start"
+  minecraft_agent_button: "Rozpocznij"
+  minecraft_designer_description: "Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecrafta."
+  minecraft_designer_button: "Rozpocznij"
   minecraft_adventurer_description: "Użyj kodu, aby zabrać Alexa lub Steva na wycieczkę."
-  minecraft_adventurer_button: "Start"
+  minecraft_adventurer_button: "Rozpocznij"
   minecraft_no_internet: "Nie masz internetu?"
   minecraft_download_adventurer: "Pobierz wersję offline Poszukiwacza Przygód z Minecraftem."
   minecraft_subtitle: "Godzina Kodowania z Minecraft"
@@ -465,7 +466,7 @@
   watch_inspirational_videos: "Zanim zaczniesz, obejrzyj jeden z tych inspirujących filmów"
   video_title_cs_is_everything: "Informatyka zmienia wszystko"
   video_title_inspire_girl: "Zainspiruj dziewczynę"
-  video_title_cs_intro: "Wstęp do informatyki"
+  video_title_cs_intro: "Wprowadzenie do informatyki"
   video_title_schools_dont_teach: "Czego nie uczy większość szkół"
   video_title_obama: "Prezydent Obama o informatyce"
   video_title_hoc_is_here: "Godzina Kodowania jest tutaj - każdy może się uczyć"
@@ -476,6 +477,7 @@
   video_title_real_madrid: "Godzina Kodowania z Realem Madryt"
   video_title_marco_belinelli: "Godzina Kodowania z Marco Belinellim"
   video_title_chris_bosh: "Chris Bosh o informatyce"
+  video_title_my_name_is_aracely: "Nazywam się Aracely"
   video_1min: "1 min"
   video_2min: "2 min"
   video_3min: "3 min"
@@ -907,7 +909,7 @@
   coursee_name: "Kurs E"
   coursef-draft_name: Kurs F
   coursef_name: "Kurs F"
-  accelerated_name: "Przyspieszony Kurs"
+  accelerated_name: "Przyspieszony kurs"
   pre-express_name: Ekspresowy kurs dla dzieci, które nie umieją czytać
   cspunit1_name: "(stary) Unit 1: Informacje cyfrowe"
   cspunit2_name: "(stary) Unit 2: Internet"
@@ -937,7 +939,7 @@
   cspexam1-mWU7ilDYM9_name: Test Część 1 - 25 pytań
   cspexam2-AKwgAh1ac5_name: Test Część 2 - 25 pytań
   cspunit3_gradelevel: "Klasy 9-12"
-  20-hour_name: Przyspieszony Kurs
+  20-hour_name: Przyspieszony kurs
   algebra_name: "Informatyka w algebrze"
   AlgebraA_name: "Informatyka w Kursie A Algebry"
   AlgebraB_name: "Informatyka w Kursie B Algebry"
@@ -947,6 +949,7 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Bloki)"
   hoc-encryption_name: Proste szyfrowanie
+  text-compression_name: Kompresja tekstu
   math_category_name: "Matematyka"
   hoc_category_name: "Godzina Kodowania"
   csf_category_name: "Podstawy Informatyki"
@@ -1011,9 +1014,9 @@
   codesters_gradelevel: "W wieku 12-14"
   texasinstruments_gradelevel: "W wieku 13-16"
   teacherled_gradelevel: "W wieku 5+"
-  course1_gradelevel: "W wieku 4-6"
+  course1_gradelevel: "Wiek 4-6"
   course2_gradelevel: "W wieku 6-18"
-  course3_gradelevel: "W wieku 8-18"
+  course3_gradelevel: "Wiek 8-18"
   course4_gradelevel: "W wieku 10-18"
   coursea_gradelevel: "Klasa 5+"
   courseb_gradelevel: "Klasy 6+"
@@ -1135,6 +1138,24 @@
   course2_shortdescription_congrats: "Dla uczniów z podstawową umiejętnością czytania, ten kurs jest oparty na Kursie 1. Uczniowie będą tworzyli programy, by rozwiązywać problemy i rozwijać interaktywne gry lub historyjki, którymi mogą się dzielić. Zalecane dla klas 2-5."
   course3_shortdescription_congrats: "Czy jesteście gotowi na następny poziom? Uczniowie będą zgłębiać zagadnienia programowania wprowadzone w poprzednich kursach znajdując elastyczne rozwiązania dla bardziej złożonych problemów. Do końca tego kursu uczniowie tworzą interaktywne historie i gry, którymi mogą się dzielić z każdym. Zalecane dla klas 4-5."
   course4_shortdescription_congrats: "Czy jesteście gotowi iść dalej? Uczniowie będą zgłębiać zagadnienia programowania wprowadzone w poprzednich kursach znajdując elastyczne rozwiązania dla bardziej złożonych problemów. Do końca tego kursu uczniowie tworzą interaktywne historie i gry, którymi mogą się dzielić z każdym. Zalecane dla klas 4-8."
+  coursea_shortdescription_congrats: "Wprowadzenie do informatyki dla nie umiejących czytać."
+  courseb_shortdescription_congrats: "Wprowadzenie do informatyki dla nie umiejących czytać. (Podobny do Kursu A, ale bardziej różnorodny dla starszych uczniów.)"
+  coursec_shortdescription_congrats: "Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry."
+  coursed_shortdescription_congrats: "Szybko omów pojęcia z kursu C, a następnie przejdź dalej do algorytmów, zagnieżdżonych pętli, warunków i innych."
+  coursee_shortdescription_congrats: "Szybko omów pojęcia w kursch C i D, a następnie przejdź dalej do funkcji."
+  coursef_shortdescription_congrats: "Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę."
+  coursea-2017_shortdescription_congrats: Wprowadzenie do informatyki dla nie umiejących czytać.
+  courseb-2017_shortdescription_congrats: Wprowadzenie do informatyki dla nie umiejących czytać. (Podobny do Kursu A, ale bardziej różnorodny dla starszych uczniów.)
+  coursec-2017_shortdescription_congrats: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
+  coursed-2017_shortdescription_congrats: Szybko omów pojęcia z kursu C, a następnie przejdź dalej do algorytmów, zagnieżdżonych pętli, warunków i innych.
+  coursee-2017_shortdescription_congrats: Szybko omów pojęcia w kursch C i D, a następnie przejdź dalej do funkcji.
+  coursef-2017_shortdescription_congrats: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
+  coursea-2018_shortdescription_congrats: Wprowadzenie do informatyki dla nie umiejących czytać.
+  courseb-2018_shortdescription_congrats: Wprowadzenie do informatyki dla nie umiejących czytać. (Podobny do Kursu A, ale bardziej różnorodny dla starszych uczniów.)
+  coursec-2018_shortdescription_congrats: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
+  coursed-2018_shortdescription_congrats: Szybko omów pojęcia z kursu C, a następnie przejdź dalej do algorytmów, zagnieżdżonych pętli, warunków i innych.
+  coursee-2018_shortdescription_congrats: Szybko omów pojęcia w kursch C i D, a następnie przejdź dalej do funkcji.
+  coursef-2018_shortdescription_congrats: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
   codeorg_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   codeintl_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1423,9 +1444,10 @@
   user_header_gamelab: "Laboratorium Gier (Game Lab)"
   user_header_playlab: "Play Lab"
   user_header_dance: "Potańcówka"
+  user_header_spritelab: "Sprite Lab"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
-  user_header_view_all: "Zobacz wszystkie projekty..."
+  user_header_view_all: "Obejrzyj wszystkie projekty..."
   user_header_view_project_gallery: "Przeglądaj galerię projektów"
   user_header_view_my_projects: "Zobacz moje projekty"
   view_all_sections: "Zobacz Wszystkie Sekcje"
@@ -1457,16 +1479,21 @@
   google_sign_in_instruct: 'Z tamtego miejsca powinni wybrać opcję &ldquor;Zaloguj się używając konta Google&rdquo;:'
   hero_name: 'Minecraft: Podróż Bohatera'
   applab-intro_name: Wprowadzenie do App Lab
-  applab_tile_start_tutorial: "Start"
+  applab_tile_title: "Wprowadzenie do App Lab (od 13 lat)"
+  applab_tile_subtitle: "Stwórz własną aplikację w JavaScript za pomocą programowania blokowego. Lub wykorzystaj swoje umiejętności na wyższym poziomie programowania tekstowego. (Tylko w języku angielskim)"
+  applab_tile_start_tutorial: "Rozpocznij"
   applab_tile_teacher_guide: "Zobacz przewodnik nauczyciela"
   aquatic_name: 'Minecraft: Wodna podróż'
   account_sign_up_email_opt_in: "Czy wyrażasz zgodę na otrzymywanie od nas wiadomości e-mail z najnowszymi informacjami o naszych kursach, lokalnymi ofertami oraz innymi nowościami informatycznymi?"
   account_sign_up_child_accept_terms: "Jeżeli mam mniej niż 13 lat, to potwierdzam, że mam zgodę mojego rodzica lub prawnego opiekuna na korzystanie przeze mnie z serwisu na stronie Code.org."
   hoc_overview_dance_title: "Potańcówka"
+  hoc_overview_dance_subtitle: "Zakoduj potańcówkę, aby podzielić się nią ze znajomymi. Występują Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara i 25 innych!"
+  hoc_overview_title: "Aktywności Godziny Kodowania z Code.org"
+  hoc_overview_subtitle: "<a href=\"https://hourofcode.com\"> Godzina Kodowania (Hour of Code) </a> to globalna inicjatywa docierająca do dziesiątek milionów studentów w ponad 180 krajach. Każdy, gdziekolwiek, może zorganizować wydarzenie Godziny Kodowania lub wypróbować ponad 200 godzinnych samouczków dostępnych w ponad 45 językach."
   hoc_overview_partner_activities_title: "Więcej aktywności od naszych partnerów"
   hoc_overview_partner_activities_body: "Strona Godziny Kodowania zawiera ponad 100 aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla osób w każdym wieku i na każdym poziomie."
   hoc_overview_partner_activities_link: "Zobacz aktywności"
-  hoc_overview_start_tutorial: "Start"
+  hoc_overview_start_tutorial: "Rozpocznij"
   hoc_overview_view_teacher_guide: "Zobacz przewodnik nauczyciela"
   hoc2018_creativity: "kreatywność"
   hoc2018_creativity_create: "Utwórz"
@@ -1486,17 +1513,17 @@
   hoc2018_mc_hero_title: "Minecraft: Podróż Bohatera"
   hoc2018_mc_hero_description: "Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj podróżując po świecie Minecraftu."
   hoc2018_mc_designer_title: "Projektant Minecrafta"
-  hoc2018_mc_designer_description: "Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecraft."
+  hoc2018_mc_designer_description: "Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecrafta."
   hoc2018_mc_adventurer_title: "Poszukiwacz przygód z Minecraftem"
   hoc2018_mc_adventurer_description: "Użyj kodu, aby zabrać Alexa lub Steva na wycieczkę."
-  hoc2018_mc_start: "Start"
+  hoc2018_mc_start: "Rozpocznij"
   hoc2018_mc_no_internet: "Nie masz internetu?"
   hoc2018_mc_download_adventurer: "Pobierz wersję offline Poszukiwacza Przygód z Minecraftem."
   hoc2018_mc_educators: "Dla nauczycieli"
   hoc2018_mc_educators_box1_title: "Koduj z Minecraftem"
   hoc2018_mc_educators_box1_desc: 'Minecraft: Edycja Edukacyjna zapewnia program nauczania zgodny ze standardami, szkolenie i kodowanie z Minecraftem.'
   hoc2018_mc_educators_box1_button: "Rozpocznij"
-  hoc2018_mc_educators_box2_title: "Pobierz przewodnik facylitatora"
+  hoc2018_mc_educators_box2_title: "Pobierz przewodnik dla facylitatorów"
   hoc2018_mc_educators_box2_desc: "Ten zestaw narzędzi pomoże Ci przeprowadzić Godzinę Kodowania (the Hour of Code) i zachęcić uczniów do informatyki."
   hoc2018_mc_educators_box2_button: "Pobierz"
   hoc2018_mc_educators_box3_title: "Weź udział w otwartych warsztatach dla uczniów"
@@ -1516,7 +1543,7 @@
   hoc2018_mc_video_title_sports: "Zmuś się. Każdy może się uczyć."
   hoc2018_mc_video_title_cs_is_everything: "Informatyka wszystko zmienia"
   hoc2018_mc_video_title_inspire_girl: "Zainspiruj dziewczynę"
-  hoc2018_mc_video_title_cs_intro: "Wstęp do informatyki"
+  hoc2018_mc_video_title_cs_intro: "Wprowadzenie do informatyki"
   hoc2018_mc_video_title_schools_dont_teach: "Czego nie uczy większość szkół"
   hoc2018_mc_video_title_obama: "Prezydent Obama o informatyce"
   hoc2018_mc_video_title_hoc_is_here: "Godzina Kodowania jest tutaj - każdy może się uczyć"
@@ -1582,3 +1609,4 @@
   hoc2018_dance_video2: "Potańcówka - Zdarzenia"
   hoc2018_dance_video3: "Potańcówka - Właściwości"
   hoc2018_dance_video4: "Potańcówka - Gratulacje"
+  hoc2018_mc_with_microsoft: "W partnerstwie z: "

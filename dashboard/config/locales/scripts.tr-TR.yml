@@ -10440,6 +10440,8 @@ tr:
               name: Sanatçıların Döngüleri
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
+            Programming with Rey and BB-8:
+              name: Rey ve BB-8 ile programlama
         courseb-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -10466,6 +10468,8 @@ tr:
               name: Play Lab' da Olaylar
             'Loops: Getting Loopy':
               name: 'Döngüler: Loopy Başlarken'
+            Programming in Maze:
+              name: Labirentte Programlama
         pre-express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
