@@ -35,8 +35,8 @@ class SchoolInfoConfirmationDialog extends Component {
   renderInitialContent() {
     const {onConfirm} = this.props;
     return (
-      <div style={styles.description}>
-        <Body style={styles.description}>
+      <div>
+        <Body>
           <div>
             <p>
               {i18n.schoolInfoDialogDescription()} Lincoln Elementary School?
