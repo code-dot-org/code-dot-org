@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Caithfidh tú damhsa difriúil a úsáid.",
   "danceFeedbackNeedEveryTwoMeasures": "Ní mór duit an bloc `gach dara tomhas` a úsáid",
   "danceFeedbackNeedMakeANewDancer": "Úsáid an bloc `déan ceann nua` chun damhsóir eile a chruthú.",
+  "danceFeedbackKeyEvent": "",
   "measure": "Tomhas:"
 }

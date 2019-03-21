@@ -6,7 +6,7 @@ es-MX:
         Maze: El laberinto
         Multi: Materias de elección múltiple
         Unplug2: Pensamiento computacional
-        Unplug3: Programación de hoja cuadriculada
+        Unplug3: Programación con Papel Cuadriculado
         Artist: El artista
         Unplug4: Algoritmos
         Artist2: El artista 2
@@ -161,14 +161,14 @@ es-MX:
         Custom_builder: Arrastra los bloques desde la caja de herramientas al espacio de trabajo para dibujar el nivel que deseas crear. Presiona "Ejecutar" cuando estés listo.
         jigsaw_1: Haz clic en el bloque
         jigsaw_2: Arrastra el bloque al objetivo
-        jigsaw_3: Acomoda los bloques para formar una imagen
-        jigsaw_4: Acomoda los bloques para formar una imagen
-        jigsaw_5: Acomoda los bloques para formar una imagen
-        jigsaw_6: Acomoda los bloques para formar una imagen
-        jigsaw_7: Acomoda los bloques para formar una imagen
-        jigsaw_8: Acomoda los bloques para formar una imagen
-        jigsaw_9: Acomoda los bloques para formar una imagen
-        jigsaw_10: Acomoda los bloques para formar una imagen
+        jigsaw_3: Acomoda los bloques para formar la imagen
+        jigsaw_4: Acomoda los bloques para formar la imagen
+        jigsaw_5: Acomoda los bloques para formar la imagen
+        jigsaw_6: Acomoda los bloques para formar la imagen
+        jigsaw_7: Acomoda los bloques para formar la imagen
+        jigsaw_8: Acomoda los bloques para formar la imagen
+        jigsaw_9: Acomoda los bloques para formar la imagen
+        jigsaw_10: Acomoda los bloques para formar la imagen
         jigsaw_11: Pon estos bloques en orden de número
         jigsaw_12: Pon estos bloques en orden de número
         jigsaw_13: '¡Arregla el desafío!'
@@ -257,7 +257,7 @@ es-MX:
     video:
       name:
         maze_intro: Introducción al Laberinto
-        artist_intro: Introducción al Artista
+        artist_intro: Introducción al artista
         farmer_intro: Introducción al Granjero
         flappy_intro: Introducción a Flappy
         loop_times: Bloque Repetir Veces
@@ -272,7 +272,7 @@ es-MX:
         hoc_wrapup: Repaso de la Hora del Código
         Unplug1: '¿Qué son las CC?'
         Unplug2: Pensamiento computacional
-        Unplug3: Programación de hoja cuadriculada
+        Unplug3: Programación con Papel Cuadriculado
         Unplug4: Algoritmos
         Unplug5: Funciones
         Unplug6: Condicionales
@@ -285,11 +285,11 @@ es-MX:
         C1_moveitmoveit_unplugged: Muévelo, Muévelo
         C1_bigevent_unplugged: El gran evento
         C1_getting_loopy: Girar y girar
-        C1_pair_programming: Programación en Parejas
+        C1_pair_programming: Programación en parejas
         C1_maze_intro_sequencing: Introducción a Secuenciamiento del Laberinto
         C1_maze_debugging: Depuración del Laberinto
         C1_bee_level_intro: Nivel de Abeja - Introducción
-        C1_artist_intro: Introducción al Artista
+        C1_artist_intro: Introducción al artista
         C1_spelling_bee_intro: Abeja de Deletreo - Introducción
         C1_zuck_repeat_loop: Bucles del laberinto
         C1_bee_loops: Bucles de abeja
@@ -299,7 +299,7 @@ es-MX:
         C1_building_foundation: Construir una base
         C1_going_places_safely: Ir a sitios seguros
         C2_maze_intro: Introducción al Laberinto
-        C2_artist_intro: Introducción al Artista
+        C2_artist_intro: Introducción al artista
         C2_zuck_repeat_loop: Bucles del laberinto
         C2_artist_loops: Ciclos del artista
         C2_artist_debugging: Depuración del artista
@@ -307,7 +307,7 @@ es-MX:
         C2_bee_debugging: Depuración abeja
         C2_bee_conditionals: Condiciones de la abeja
         C2_playlab_createstory: Laboratorio de Juego - Crear una Historia
-        C2_graph_paper: Programación de hoja cuadriculada
+        C2_graph_paper: Programación con Papel Cuadriculado
         C2_conditionals_with_cards: Condicionales
         C2_binary_bracelets: Pulseras binarias
         C2_relay_programming: Programación de relevos
@@ -315,7 +315,7 @@ es-MX:
         C2_digital_footprint: Tu huella dactilar
         C2_digital_footprint_v2: Tu huella dactilar
         C3_maze_level_4: Bucles del laberinto
-        C3_artist_intro: Introducción al Artista
+        C3_artist_intro: Introducción al artista
         C3_artist_functions: Funciones de artista
         C3_bee_functions: Funciones de la abeja
         C3_bee_conditionals: Condiciones de la abeja
@@ -351,21 +351,22 @@ es-MX:
         C4_unplugged_forloops: Bucles Para
         C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
+        CSF_a_b_artist_loops: Loops en Artista
         CSF_artist_angles: Ángulos en Artist
-        CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El recolector'
-        CSF_collector_repeat_loops: Bucles de repetición de colector
-        CSF_collector_text_blocks: 'Fundamentos de las Ciencias de la Computación: El recolector'
+        CSF_collector_k1_blocks: 'Fundamentos de Ciencias de la Computación: El recolector'
+        CSF_collector_repeat_loops: Bucles de repetición del recolector
+        CSF_collector_text_blocks: 'Fundamentos de Ciencias de la Computación: El recolector'
         CSF_create_functions: Crear funciones
         CSF_debugging_k1_blocks: Depuración
         CSF_debugging_text_blocks: Depuración
         CSF_EF_cs_matters: Importancia de las Ciencias de la Computación
         CSF_maze_intro_k1_blocks: Introducción a Code Studio
         CSF_maze_intro_text_blocks: Introducción a Code Studio
-        CSF_my_robotic_friends: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        CSF_my_robotic_friends: Mis amigos robóticos
         CSF_Power_of_Words: Poder de las palabras
         CSF_Super_Digital_Citizen: Super ciudadano digital
         CSF_stevie_big_project: Stevie y el gran proyecto
-        CSF_unspotted_bugs: Errores desapercibidos
+        CSF_unspotted_bugs: Errores no detectados
         CSF_zuck_loops_short: Bucles de repetición
         frozen_intro: Prueba la Hora del Código
         frozen_loops: Introducción a los bucles
@@ -484,9 +485,9 @@ es-MX:
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Loops con BB-8
         CSF_harvester_skinOverview_K-1: El recolector
-        CSF_harvester_loops_K1: Ciclos en Harvester
-        CSF_scrat_loops_K1: Ciclos en Ice Age
-        CSF_scrat_loops_CF: Ciclos en Ice Age
+        CSF_harvester_loops_K1: Bucles en la cosechadora
+        CSF_scrat_loops_K1: Bucles de la Era de Hielo
+        CSF_scrat_loops_CF: Bucles de la Era de Hielo
         CSF_if_allskins: El Bloque si
         CSF_ifelse_allskins: Usando Bloques "Si/Más"
         CSF_ifelseifelse_allskins: Usando Bloques Si/El mismo/Más
@@ -496,8 +497,8 @@ es-MX:
         csd_gamelab_if_else: Sentencias Si/Más
         CSF_SpriteLabIntro_CDEF: Esto es Sprite Lab
         CSF_Spritelab_MakeSprite_CDEF: Como hacer un Sprite en Sprite Lab
-        CDEF_Video_SpritesInAction: Sprites en Acción
-        CSF_SpriteLab_SpritesInAction_CDEF: Sprites en Acción
+        CDEF_Video_SpritesInAction: Sprites en acción
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acción
         CSF_StarWars_ProjectIntro: Introducción al Proyecto de Star Wars
         mc_2018_intro: 'Minecraft: Viaje Acuático Introducción'
         MC_2018_loops: 'Minecraft: Viaje Acuático Repetir Hasta'
@@ -507,8 +508,8 @@ es-MX:
         hoc_dance_events: Fiesta de Baile - Eventos
         hoc_dance_properties: Fiesta de Baile - Propiedades
         hoc_dance_congrats: Fiesta de Baile - ¡A la fiesta!
-        c_and_c_great_to_create: Es estupendo crear y jugar limpio
-        c_and_c_digital_sharing: Compartir digital
+        c_and_c_great_to_create: Crear y jugar limpio es lo mejor
+        c_and_c_digital_sharing: Colaboración digital
         'Teaching CS Fundamentals: How the Course Works': 'Enseñando Fundamentos CS: Cómo funciona el curso'
         elem_pd_2: Informática de la Escuela Primaria - vídeo PD 2/2
         what_is_cs: '¿Qué son las Ciencias de la computación?'

@@ -8666,10 +8666,6 @@ ka:
       courseC19_playLab_EOC4_authored_hint:
         courseE_playLab_scaffold4_a: გამოიყენეთ `ქულის დამატება`, ქულის დასამატებლად
           და `ქულის გამოკლება` - გამოსაკლებად.
-      courseC19_playLab_EOC5_authored_hint:
-        courseE_playLab_scaffold5_a: ამ დონის დასასრულებლად უნდა მოიგოთ, ან წააგოთ.
-          გამოიყენეთ `თამაშის მოგებულად დასრულება` ან `თამაშის წაგებულად დასრულება`
-          ბლოკი დასასრულებლად.
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           მიამაგრეთ ეს ბლოკი, ბლოკს `გაშვებისას`:
