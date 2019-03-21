@@ -191,7 +191,7 @@ different configurations get run. Here is the approximate flow of commands/files
    serving the exact same assets. Cloudfront provides a caching layer in front
    of this.
 
-### Replicating production behavior locally
+### Replicating production behavior locally (long way)
 
 Sometimes, bugs may show up only in production (or circle ci) and not locally
 under development configurations. Usually these bugs are related to the build
@@ -216,3 +216,7 @@ will need to redo steps 2-4. Relying on watch mode won't work. If you are having
 a hard time wrapping your head around the minified bundles which get used with
 this configuration, you can try changing `pretty_js` back to `true`
 so that the unminified files get served instead.
+
+### Replicating production behavior locally (short way)
+
+If you believe that the production behavior you are observing has only to do with the js being minified and not with the dashboard asset pipeline, you can quickly build minified JS locally by running `npm run build:dist:debug`. **WARNING** this will output minified js with the `.js` suffix, without the `.min` suffix. If you do this, it's on you to remember to do a regular `npm run build` to get back into a normal state.
