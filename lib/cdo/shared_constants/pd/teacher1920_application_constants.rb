@@ -252,8 +252,7 @@ module Pd
       hispanic_or_latino_percent: {principal: :principal_hispanic_or_latino_percent, stats: :hispanic_or_latino_percent},
       native_hawaiian_or_pacific_islander_percent: {principal: :principal_native_hawaiian_or_pacific_islander_percent, stats: :native_hawaiian_or_pacific_islander_percent},
       white_percent: {principal: :principal_white_percent, stats: :white_percent},
-      two_or_more_races_percent: {stats: :two_or_more_races_percent},
-      other_races_percent: {principal: :principal_other_percent}
+      other_races_percent: {principal: :principal_other_percent, stats: :two_or_more_races_percent}
     }
 
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
