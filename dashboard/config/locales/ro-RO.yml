@@ -192,6 +192,7 @@ ro:
     email_preference_question: Sunteți de acord să vă trimitem prin e-mail actualizări
       cu privire la cursurile noastre, oportunitățile locale sau alte știri din domeniul
       informaticii?
+    email_preference_privacy: "(Vedeți polica noastră de confidențialitate)"
     email_preference_yes: Da
     email_preference_no: Nu
     email_preference_required: Trebuie să specificaţi un email preferat.
@@ -280,6 +281,8 @@ ro:
       picture: Poză - parolă
       word: Cuvinte secrete
       email: E-mail
+      google_classroom: Clasa Google
+      clever: Clever
   follower:
     invite_sent: Invitație trimisă
     added_teacher: "%{name} adăugat(ă) ca și profesorul tău"
@@ -337,12 +340,14 @@ ro:
         applab: Creează o aplicație
         gamelab: Creați un proiect în Laboratorul de Joc
         weblab: Creați un proiect în Laboratorul Web (beta)
+      my_dashboard: Panoul meu principal
       course_catalog: Catalog de cursuri
       project_gallery: Proiecte
       sections: Secțiuni
       help_support: Ajutor şi suport
       report_bug: Raporteazã eroare
       teacher_community: Comunitate profesori
+      professional_learning: Dezvoltare profesională
       documentation: Documentație
       tutorials: Tutoriale
       educate_overview: Prezentare profesor
@@ -392,6 +397,7 @@ ro:
       spritelab: Laborator Sprite
       minecraft: Minecraft
       flappy: Flappy
+      dance: Petrecere cu dans
     popup:
       progress_for_user: Progresul lui %{name}
       progress: Progresul tău
@@ -596,15 +602,15 @@ ro:
       dvs.</b>
     announcement_teacher_recruitment: Profesori asemenea dumneavoastră conduc mișcarea
       de educație informatică. Puteți participa la programe de învățământ profesional
-      de înaltă calitate la nivel secundar pre-universitar, <strong>complet gratuit
+      de înaltă calitate pentru grădiniță până la clasa a 12, <strong>complet gratuit
       pentru dvs. sau pentru școala dvs.</strong>. Preluați conducerea în domeniul
       științelor informatice în școala dvs. și aplicați pentru învățarea profesională.
     announcement_teacher_recruitment2: Profesori asemenea dumneavoastră conduc mișcarea
       de educație informatică. Puteți participa la programe de învățământ profesional
-      de înaltă calitate la nivel secundar pre-universitar, <strong>complet gratuit
+      de înaltă calitate pentru grădiniță până la clasa a 12, <strong>complet gratuit
       pentru dvs. sau pentru școala dvs.</strong>. Preluați conducerea în domeniul
       științelor informatice în școala dvs. și aplicați pentru învățarea profesională.
-      Profesorii de gimnaziu și liceu aplică până pe 17 martie.
+      Profesori ai ciclului gimnazial și liceal aplicați până în 17 martie.
     announcement_csf_pilot: "<strong>Profesori de școală primară:</strong> Participați
       la actualizarea cursurilor noastre care predau fundamentele Informaticii! Căutăm
       cadre didactice care să piloteze un curriculum actualizat al Fundamentelor Informatice
@@ -823,6 +829,8 @@ ro:
         a o face să funcționeze, apoi partajează aplicația în doar câteva secunde.
       audience: Vârste 13 +
       cta: Află cum
+    dance:
+      title: Petrecere cu dans
     hoc:
       title: Labirint Clasic
       body: Încearcă bazele programarii. Milioane de oameni au încercat.
@@ -1214,6 +1222,8 @@ ro:
     csd4_1: 'Capitolul 1: Design orientat spre utilizator'
     csd4_2: 'Capitolul 2: Prototipare aplicații'
     csd5_1: 'Capitolul 1: Reprezentarea informaţiilor'
+    csd5_2: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+    csd6_1: 'Capitolul 1: Programare cu hardware'
     cspSurvey: Sondaj
     cspAssessment: Evaluare capitol
     csp2_1_2018: 'Unitatea 2: Informaţii digitale'
@@ -1302,6 +1312,7 @@ ro:
       email_alternate: Email alternativ
       gender: Identitate de gen
       school_name: Numele școlii
+      school_city: Orașul în care se află școala
       school_country: Țara școlii
     form_entries:
       gender:
@@ -1335,6 +1346,7 @@ ro:
         tynker: Tynker
       robotics:
         kodable: Kodable
+        ozobot: Ozobot
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Atelierul minune

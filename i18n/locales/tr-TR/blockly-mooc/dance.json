@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Başka bir dans kullanmanız gerekiyor.",
   "danceFeedbackNeedEveryTwoMeasures": "`Her 2 ölçüde bir` bloğunu kullandığınızdan emin olun",
   "danceFeedbackNeedMakeANewDancer": "İkinci bir dansçı yaratmak için `yeni yap` bloğunu kullanın.",
+  "danceFeedbackKeyEvent": "",
   "measure": "Ölçü:"
 }

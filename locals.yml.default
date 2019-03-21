@@ -53,7 +53,9 @@ use_my_apps: true
 
 
 # Encryption key required for decoding certain protected level sources.
-# Ask a Code.org dev for this if you need access to protected levels.
+# Code.org engineers should obtain this from cdo-secrets at:
+# https://manage.chef.io/organizations/code-dot-org/environments/development/attributes
+# Contributors should ask a Code.org engineer for this if needed.
 #properties_encryption_key: ''
 
 

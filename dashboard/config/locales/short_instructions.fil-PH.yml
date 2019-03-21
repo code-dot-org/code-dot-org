@@ -984,14 +984,6 @@ fil:
         na function sa loob ng pangyayari na bloke, isang beses sa bawat pangalan
         ng ulap.\\\\\\\r\n* (Hint: ito ay kapareho kung paano ang `loopCloud(name)`
         na function ay tinawag nang napakaraming beses."
-      CSD U6 params modify clouds_2019: "# Mga Ulap\r\n\r\nAng programang ito ay nagpapagalaw
-        sa mga ulap kapag nag-ihip ka nang tunog sa sensor, ngunit hindi pa ito tapos.\r\n\r\n#Gawin
-        Ito\r\n* Maglikha ng bagong function na `moveCloud(name)` na magpapagalaw
-        sa kahit anong ulap.\r\n *\n(Hint: ikaw ay gagamit na halos kaparehong code
-        nang `moveCloud()` na function\r\n*\nTawagin ang iyong bagong `moveCloud(name)`
-        na function sa loob ng pangyayari na bloke, isang beses sa bawat pangalan
-        ng ulap.\\\\\\\r\n* (Hint: ito ay kapareho kung paano ang `loopCloud(name)`
-        na function ay tinawag nang napakaraming beses."
       CSD U6 params modify planes: "# Maraming Lapya na Controller\r\n\r\nAng programang
         ito ay gumagalaw sa tatlong lapya gamit ang accelerometer at ang on-screen
         na mga checkbox. Sa ngayon, tanging ang pulang lapya lang ang gumagana.\r\n\r\n#

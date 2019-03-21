@@ -100,13 +100,17 @@ cs:
           MOVE:
             '"rand"': "(Náhodně)"
             MOVES.Roll: Naklánění
+            MOVES.XClapSide: Tlesk
             MOVES.ClapHigh: Clap High
             MOVES.Dab: Dab
+            MOVES.XFever: Disko
             MOVES.DoubleJam: Dvojitě dolů
             MOVES.Drop: Roznožka
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Clown: Šaškují
+            MOVES.XHighKick: Kop
+            MOVES.XKneel: Poklek
             MOVES.Kick: Kopou
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Rest: Žádný
@@ -119,13 +123,17 @@ cs:
           MOVE:
             '"rand"': "(Náhodně)"
             MOVES.Roll: Naklánění
+            MOVES.XClapSide: Tlesk
             MOVES.ClapHigh: Clap High
             MOVES.Dab: Dab
+            MOVES.XFever: Disko
             MOVES.DoubleJam: Dvojitě dolů
             MOVES.Drop: Roznožka
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Clown: Šaškují
+            MOVES.XHighKick: Kop
+            MOVES.XKneel: Poklek
             MOVES.Kick: Kopou
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Rest: Žádný
@@ -609,6 +617,7 @@ cs:
         options:
           METHOD:
             '"tint"': odstín
+            '"shade"': stín
       gamelab_changeColorBy:
         text: změnit {COLOR} {METHOD} o {AMOUNT}
         options:
@@ -630,14 +639,27 @@ cs:
           CONDITION:
             '"when"': když
             '"while"': dokud
+      gamelab_clickedOn:
+        text: po klepnutí na {SPRITE}
+      gamelab_comment:
+        text: 'komentář: {COMMENT}'
+      gamelab_countByCostume:
+        text: počet {COSTUME}
       gamelab_createNewSprite:
         text: "vytvořit novou postavu \n nazvanou {NAME} \n s kostýmem {COSTUME} \n
           kde {LOCATION}"
       gamelab_debugSprite:
+        text: ladit {SPRITE} {VAL}
         options:
           VAL:
             'true': pravda
             'false': záporné
+      gamelab_destroy:
+        text: odstranit {THIS}
+      gamelab_distance:
+        text: vzdálenost od {LOCATION1} do {LOCATION2}
+      gamelab_enableDebug:
+        text: povolení ladění
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -953,6 +975,8 @@ cs:
             "{x: 300, y: 100}": nahoře vpravo
             "{x: 100, y: 300}": dole vlevo
             "{x: 300, y: 300}": dole vpravo
+      Mikelab_whenClickedOn:
+        text: po klepnutí na {SPRITE}
       Mikelab_whenKeyPressed:
         text: když je stisknuta {KEY}
         options:
@@ -1023,6 +1047,8 @@ cs:
             '"left"': vlevo
             '"right"': vpravo
             '"space"': vesmír
+      aalab_removeOneAndAll:
+        text: odstranit {THIS}
       aalab_setBG:
         options:
           BG:

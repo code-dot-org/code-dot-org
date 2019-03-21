@@ -307,6 +307,8 @@ tr:
           ** Çözüm **! [Çözüm Bloklarının resmi] (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: '''İlerle'' bloğunu kullanmak için araç çubuğu alanından dışarı çalışma alanına sürükleyin ve ''çalıştığı zaman'' bloğuna bağlayın.'
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Sağa dönüşler için "Eğer" bloğunu kullanabilirsiniz.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'Yarım altıgenin ** 30 kenar uzunluğu ** ve ** 60 derece**sağa dönüşü vardır.  '
         Course_4_Artist_11_b: '2/3 üçgeninin ** 80 kenar uzunluğunu ** ve ** 120 derece **sağa dönüşü vardır.  '
@@ -4399,8 +4401,6 @@ tr:
         courseE_playLab_scaffold1_c: Yaptığında kahramanını yön ok tuşlarıyla hareket ettirebilmelisin!
       courseC19_playLab_EOC4_authored_hint:
         courseE_playLab_scaffold4_a: Bir puan eklemek için 'skor puanı' ve bir puan çıkarmak için 'puanı sil' kullanın.
-      courseC19_playLab_EOC5_authored_hint:
-        courseE_playLab_scaffold5_a: Bu seviyeyi bitirmek için, kazanman veya kaybetmen gerekir. Bitirmek için bir adet 'kazanarak oyunu bitir' veya 'kaybederek oyunu bitir' kullanın.
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Bu blokları 'Çalıştığı zaman'(when run) bloğuna ekleyin:

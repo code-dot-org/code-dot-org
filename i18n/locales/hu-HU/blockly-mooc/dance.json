@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Másik táncot kell használnod.",
   "danceFeedbackNeedEveryTwoMeasures": "Ügyelj rá, hogy használd a „2 ütemenként“ blokkot",
   "danceFeedbackNeedMakeANewDancer": "Második táncos létrehozásához használd az „új készítése“ blokkot.",
+  "danceFeedbackKeyEvent": "",
   "measure": "Ütem:"
 }
