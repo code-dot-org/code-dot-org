@@ -99,7 +99,8 @@ class AnimationListItem extends React.Component {
     setAnimationFrameDelay: PropTypes.func.isRequired,
     children: PropTypes.node,
     style: PropTypes.object,
-    allAnimationsSingleFrame: PropTypes.bool.isRequired
+    allAnimationsSingleFrame: PropTypes.bool.isRequired,
+    spriteLab: PropTypes.bool.isRequired
   };
 
   getAnimationProps(props) {
@@ -267,7 +268,7 @@ class AnimationListItem extends React.Component {
           isSelected={this.props.isSelected}
           singleFrameAnimation={this.props.allAnimationsSingleFrame}
         />
-        {animationName}
+        {!this.props.spriteLab && animationName}
         {this.props.isSelected && (
           <ListItemButtons
             onFrameDelayChanged={this.setAnimationFrameDelay}
@@ -289,7 +290,8 @@ export default connect(
   state => ({
     columnWidth: state.animationTab.columnSizes[0],
     allAnimationsSingleFrame:
-      state.pageConstants.allAnimationsSingleFrame || false
+      state.pageConstants.allAnimationsSingleFrame || false,
+    spriteLab: state.pageConstants.isBlockly
   }),
   dispatch => {
     return {
