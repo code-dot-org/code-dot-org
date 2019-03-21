@@ -120,7 +120,7 @@ stage 'Practice PT - Design a Digital Scene', flex_category: 'csp3_1_2018'
 named_level 'CSP U3L10 SFLP_2019'
 level 'U3L08 - individualCode_2019', progression: 'Design Your Components'
 level 'How To: Share Code with Teammates_2018_2019', progression: 'How to Share Code with Teammates'
-level 'U3L08 - digitalScene_2019', progression: 'Challenge: Design Your Digital Scene'
+assessment 'U3L08 - digitalScene_2019', progression: 'Challenge: Design Your Digital Scene'
 
 stage 'Unit 3 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
 assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018_2019'
