@@ -756,7 +756,7 @@ describe('entry tests', () => {
             },
             'code-studio-multi': {
               name: 'code-studio-common',
-              minChunks: 3,
+              minChunks: _.keys(appsEntries).length + 1,
               chunks: chunk => {
                 const chunkNames = _.keys(codeStudioEntries).concat(
                   _.keys(appsEntries)
