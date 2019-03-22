@@ -16,6 +16,7 @@ import designMode from '../designMode';
 import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
 import color from '../../util/color';
 import elementLibrary from './library';
+import experiments from '../../util/experiments';
 
 class TextAreaProperties extends React.Component {
   static propTypes = {
@@ -227,8 +228,17 @@ export default {
     element.style.height = '100px';
     element.style.fontFamily = fontFamilyStyles[0];
     element.style.fontSize = defaultFontSizeStyle;
-    element.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    if (experiments.isEnabled('applabThemes')) {
+      element.style.borderStyle = 'solid';
+      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    } else {
+      element.style.color = '#000000';
+      element.style.backgroundColor = '#ffffff';
+      elementUtils.setDefaultBorderStyles(element, {
+        forceDefaults: true,
+        textInput: true
+      });
+    }
 
     $(element).addClass('textArea');
 

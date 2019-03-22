@@ -20,6 +20,7 @@ import {
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import elementLibrary from './library';
+import experiments from '../../util/experiments';
 
 class ButtonProperties extends React.Component {
   static propTypes = {
@@ -238,8 +239,14 @@ export default {
     element.style.width = '80px';
     element.style.fontFamily = fontFamilyStyles[0];
     element.style.fontSize = defaultFontSizeStyle;
-    element.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    if (experiments.isEnabled('applabThemes')) {
+      element.style.borderStyle = 'solid';
+      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    } else {
+      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
+      element.style.color = color.white;
+      element.style.backgroundColor = color.applab_button_teal;
+    }
 
     return element;
   },

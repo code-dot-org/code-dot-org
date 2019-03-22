@@ -17,6 +17,7 @@ import designMode from '../designMode';
 import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
 import elementLibrary from './library';
 import RGBColor from 'rgbcolor';
+import experiments from '../../util/experiments';
 
 class DropdownProperties extends React.Component {
   static propTypes = {
@@ -223,8 +224,17 @@ export default {
     element.style.fontFamily = fontFamilyStyles[0];
     element.style.fontSize = defaultFontSizeStyle;
     element.style.margin = '0';
-    element.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    if (experiments.isEnabled('applabThemes')) {
+      element.style.borderStyle = 'solid';
+      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    } else {
+      element.style.color = color.white;
+      element.style.backgroundImage = svgArrowUrl(
+        new RGBColor(element.style.color).toHex()
+      );
+      element.style.backgroundColor = color.applab_button_teal;
+      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
+    }
 
     const option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';

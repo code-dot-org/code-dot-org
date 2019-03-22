@@ -16,6 +16,7 @@ import * as gridUtils from '../gridUtils';
 import designMode from '../designMode';
 import color from '../../util/color';
 import elementLibrary from './library';
+import experiments from '../../util/experiments';
 
 class LabelProperties extends React.Component {
   static propTypes = {
@@ -226,8 +227,13 @@ export default {
     element.textContent = 'text';
     element.style.backgroundColor = '';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
-    element.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    if (experiments.isEnabled('applabThemes')) {
+      element.style.borderStyle = 'solid';
+      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    } else {
+      element.style.color = '#333333';
+      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
+    }
 
     this.resizeToFitText(element);
     return element;
