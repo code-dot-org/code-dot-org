@@ -720,7 +720,7 @@ describe('entry tests', () => {
           }
         ],
         runtimeChunk: {
-          name: 'essential'
+          name: 'webpack-runtime'
         },
         splitChunks: {
           cacheGroups: {
