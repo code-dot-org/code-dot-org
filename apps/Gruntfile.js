@@ -10,6 +10,7 @@ var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
+var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
 module.exports = function(grunt) {
   // Decorate grunt to record and report build durations.
@@ -706,6 +707,20 @@ describe('entry tests', () => {
           qtip2: 'var $'
         }
       ],
+      mode: minify ? 'production' : 'development',
+      optimization: {
+        minimizer: [
+          compiler => {
+            const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+            const plugin = new UglifyJsPlugin({
+              cache: true,
+              parallel: true,
+              sourceMap: envConstants.DEBUG_MINIFIED
+            });
+            plugin.apply(compiler);
+          }
+        ]
+      },
       plugins: [
         // new webpack.optimize.CommonsChunkPlugin({
         //   name: 'common',
@@ -732,7 +747,10 @@ describe('entry tests', () => {
           : []),
         new StatsWriterPlugin({
           fields: ['assetsByChunkName', 'assets']
-        })
+        }),
+        // Needed because our production environment relies on an unminified
+        // (but digested) version of certain files such as blockly.js.
+        new UnminifiedWebpackPlugin()
       ],
       minify: minify,
       watch: watch,

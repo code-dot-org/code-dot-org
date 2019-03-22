@@ -3,7 +3,6 @@ var webpack = require('webpack');
 var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
-var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var WebpackNotifierPlugin = require('webpack-notifier');
 
 // Certain packages ship in ES6 and need to be transpiled for our purposes -
@@ -342,20 +341,6 @@ function create(options) {
     keepalive: watch,
     failOnError: !watch
   });
-
-  if (minify) {
-    config.plugins = config.plugins.concat([
-      new webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false
-        },
-        // Don't generate source maps for our minified code, as these are expensive
-        // and we haven't been using them. Only use them when debugging minified code.
-        sourceMap: debugMinify
-      }),
-      new UnminifiedWebpackPlugin()
-    ]);
-  }
 
   if (watch) {
     config.plugins = config.plugins.concat(
