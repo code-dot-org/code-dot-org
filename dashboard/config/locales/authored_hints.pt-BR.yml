@@ -454,6 +454,9 @@ pt-BR:
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: Para usar um bloco `Avançar`, arraste-o da área de blocos para
           fora, na área de trabalho e conecte-o ao bloco `quando executar`.
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Você pode usar o bloco de caminho se para ajudá-lo a fazer as curvas
+          certas.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'O metade-hexágono tem um ** comprimento de 30 ** e
           gira para a direita em ** 60 graus **.  '
@@ -5885,10 +5888,118 @@ pt-BR:
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       course4_bee_fwp_challenge1_authored_hint:
+        courseF_bee_fwp_challenge1_a: |-
+          O programa principal deve parecer algo como isso:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
         courseF_bee_fwp_challenge1_b: |-
           Veja quanto milho está disponível para colheita em cada espaço. Consegue ver o padrão do contador? O padrão 'comprimento' pode ser usado para definir o valor máximo do 'laço for'.
 
           Não se esqueça de mover o fazendeiro de volta ao caminho principal após a colheita!
+        courseF_bee_fwp_challenge1_c: |-
+          Coloque um `for loop` dentro de uma função e configure ele para contar de `1` até o `tamanho` menos `1`. Dentro deste loop, você deve ir avançando e pegar todos os milhos.
+
+          <xml>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          </statement>
+          </block></xml>
         courseF_bee_fwp_challenge1_d: |-
           Dentro do `Laço Enquanto` você quer `mover para frente` e então `pegar o nectar`**Counter times**. Depois do `laço enquanto` você ´pode `mover para trás` *Length Times*.
 
@@ -5965,11 +6076,150 @@ pt-BR:
           </statement>
           </block></xml>
       course4_bee_fwp_challenge2_authored_hint:
+        courseF_bee_fwp_challenge2_a: |-
+          Comece por certificar-se de que você entende como *supostamente* que funciona esta função. À medida que a fazendeira se move em cada caminho, ela só tentará coletar milho. Em vez disso, como você pode fazer sua verificação para cada um dos 3 verduras e escolher apenas o que encontra?
+
+          Adicione declarações condicionais à função para verificar por milho, abóboras e alface.
         courseF_bee_fwp_challenge2_b: |-
           Os seus blocos `mova para frente` estão acabando?
           Tente usar um *segundo* `laço for` no seu programa principal.
 
           **Nota:** Tome cuidado para não confundir `contador` com `contador2` no seu código.
+        courseF_bee_fwp_challenge2_c: |-
+          **Aqui está como a sua função deveria se parecer:**
+
+          <xml><block type="procedures_defnoreturn" deletable="false" movable="false" editable="false" usercreated="true">
+          <mutation>
+          <arg name="length"/>
+          </mutation>
+          <title name="NAME">pick row</title>
+          <statement name="STACK">
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="harvester_ifHasCrop">
+          <title name="LOC">Corn</title>
+          <statement name="DO">
+          <block type="harvester_corn"/>
+          </statement>
+          <next>
+          <block type="harvester_ifHasCrop">
+          <title name="LOC">Pumpkin</title>
+          <statement name="DO">
+          <block type="harvester_pumpkin"/>
+          </statement>
+          <next>
+          <block type="harvester_ifHasCrop">
+          <title name="LOC">Lettuce</title>
+          <statement name="DO">
+          <block type="harvester_lettuce"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveBackward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </xml>
+        courseF_bee_fwp_challenge2_d: |
+          **Aqui está como o seu programa principal deveria parecer:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter2</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="variables_get">
+          <title name="VAR">counter2</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block></xml>
       course4_collector_nested_loops_challenge2_authored_hint:
         courseD_bee_nested_loops_challenge2_a: Não se esqueça que você pode `repetir`
           um único comando ou um padrão maior. Você pode até `repetir` um bloco `repetir`!
@@ -9625,10 +9875,6 @@ pt-BR:
       courseC19_playLab_EOC4_authored_hint:
         courseE_playLab_scaffold4_a: Use `marcar ponto` para adicionar um ponto, e
           `remover ponto` para subtrair um.
-      courseC19_playLab_EOC5_authored_hint:
-        courseE_playLab_scaffold5_a: Para terminar este nível, você precisa ganhar
-          ou perder. Use um bloco `fim de jogo como vitória` ou `fim de jogo como
-          derrota` para terminar.
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Encaixe esse bloco no bloco `Quando executar`:
@@ -10061,20 +10307,14 @@ pt-BR:
         courseC_artist_loops2a_a: Dentro do seu loop, você vai querer saltar para
           200 mais de 200 para baixo, em seguida, desenhe o adesivo do pássaro, em
           seguida, gire 30 graus.
-        courseC_artist_loops2a_b: Clique no número na parte superior do loop `repetir`
-          para alterar quantas vezes ele será repetido.
       courseC_artist_loops2a_2018_authored_hint:
         courseC_artist_loops2a_a: Dentro do seu loop, você vai querer saltar para
           200 mais de 200 para baixo, em seguida, desenhe o adesivo do pássaro, em
           seguida, gire 30 graus.
-        courseC_artist_loops2a_b: Clique no número na parte superior do loop `repetir`
-          para alterar quantas vezes ele será repetido.
       courseC_artist_loops2a_2019_authored_hint:
         courseC_artist_loops2a_a: Dentro do seu loop, você vai querer saltar para
           200 mais de 200 para baixo, em seguida, desenhe o adesivo do pássaro, em
           seguida, gire 30 graus.
-        courseC_artist_loops2a_b: Clique no número na parte superior do loop `repetir`
-          para alterar quantas vezes ele será repetido.
       courseC_artist_loops3a_authored_hint:
         courseC_artist_loops3a_a: Você vai querer adicionar apenas um bloco dentro
           do seu loop, após o adesivo do pássaro.
@@ -19139,6 +19379,12 @@ pt-BR:
           Para chegar a este primeiro conjunto, a abelha deve cavar **7 quadrados**
           (ou 14 quadrados divididos por 2.) Quantas flores estão no próximo conjunto
           e quantos quadrados terão que viajar para chegar lá?
+        courseF_bee_for10_c: "No desafio, o primeiro conjunto de flores tem um total
+          de **14** flores, o segundo conjunto de flores tem um total de **10** flores
+          , o terceiro conjunto tem **6** flores, e o quarto conjunto tem **2** flores.
+          \n\nNesse desenho, note que existem **7** quadrados vermelhos, **5** quadrados
+          laranja, **3** quadrados verdes, e **1** bloco azul.\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
+          Hint Drawing.png) \n\nComo os números se relacionam?"
       courseF_bee_for10_2018_authored_hint:
         courseF_bee_for10_a: Você consegue encontrar um padrão entre o número de passos
           que você precisa dar e o número de néctares para coletar?
@@ -19146,6 +19392,12 @@ pt-BR:
           Para chegar a este primeiro conjunto, a abelha deve cavar **7 quadrados**
           (ou 14 quadrados divididos por 2.) Quantas flores estão no próximo conjunto
           e quantos quadrados terão que viajar para chegar lá?
+        courseF_bee_for10_c: "No desafio, o primeiro conjunto de flores tem um total
+          de **14** flores, o segundo conjunto de flores tem um total de **10** flores
+          , o terceiro conjunto tem **6** flores, e o quarto conjunto tem **2** flores.
+          \n\nNesse desenho, note que existem **7** quadrados vermelhos, **5** quadrados
+          laranja, **3** quadrados verdes, e **1** bloco azul.\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
+          Hint Drawing.png) \n\nComo os números se relacionam?"
       courseF_bee_for10_2019_authored_hint:
         courseF_bee_for10_a: Você consegue encontrar um padrão entre o número de passos
           que você precisa dar e o número de néctares para coletar?
@@ -19153,6 +19405,12 @@ pt-BR:
           Para chegar a este primeiro conjunto, a abelha deve cavar **7 quadrados**
           (ou 14 quadrados divididos por 2.) Quantas flores estão no próximo conjunto
           e quantos quadrados terão que viajar para chegar lá?
+        courseF_bee_for10_c: "No desafio, o primeiro conjunto de flores tem um total
+          de **14** flores, o segundo conjunto de flores tem um total de **10** flores
+          , o terceiro conjunto tem **6** flores, e o quarto conjunto tem **2** flores.
+          \n\nNesse desenho, note que existem **7** quadrados vermelhos, **5** quadrados
+          laranja, **3** quadrados verdes, e **1** bloco azul.\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
+          Hint Drawing.png) \n\nComo os números se relacionam?"
       courseF_bee_for11_authored_hint:
         courseF_bee_for11_a: "Quanto menos 12 é do que 15?  \nQuanto menos 9 é do
           que 12?\n\nVocê vê um padrão?"
@@ -20285,11 +20543,19 @@ pt-BR:
           você está indo.
         courseF_bee_fwp3_b: Há 3 linhas de néctar, que tipo de curvas e movimentos
           você precisa fazer entre cada linha?
+        courseF_bee_fwp3_c: Para resolver este desafio, você precisará chamar sua
+          função 3 vezes. Entre cada chamada, você precisa `virar para a direita`,
+          `Avançar` 2 vezes, e então `virar a direita` novamente. OU, você precisa
+          `virar a esquerda`, `avançar` 2 vezes, depois `virar a esquerda` novamente.
       courseF_bee_fwp3_2018_authored_hint:
         courseF_bee_fwp3_a: Sua função será executada sem saber qual é a direção que
           você está indo.
         courseF_bee_fwp3_b: Há 3 linhas de néctar, que tipo de curvas e movimentos
           você precisa fazer entre cada linha?
+        courseF_bee_fwp3_c: Para resolver este desafio, você precisará chamar sua
+          função 3 vezes. Entre cada chamada, você precisa `virar para a direita`,
+          `Avançar` 2 vezes, e então `virar a direita` novamente. OU, você precisa
+          `virar a esquerda`, `avançar` 2 vezes, depois `virar a esquerda` novamente.
       courseF_bee_fwp4_authored_hint:
         courseF_bee_fwp4_a: Você precisará adicionar um parâmetro e usar a variável
           resultante em seu loop.
@@ -20337,12 +20603,122 @@ pt-BR:
         courseF_bee_fwp8_b: Uma vez que a espiral fica menor à medida que você entra,
           seu laço `para` deve ser diminuído.
       courseF_bee_fwp_challenge1_authored_hint:
+        courseF_bee_fwp_challenge1_a: |-
+          O programa principal deve parecer algo como isso:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
         courseF_bee_fwp_challenge1_b: 'Veja quanto milho está disponível para colher
           em cada espaço. Você vê o padrão do contador? '
         courseF_bee_fwp_challenge1_b1: |-
           O parâmetro `tamanho` deve ser usado para definir o valor máximo no `laço para`.
 
           Não se esqueça de fazer agricultor voltar para o caminho principal após a colheita!
+        courseF_bee_fwp_challenge1_c: |-
+          Coloque um `for loop` dentro de uma função e configure ele para contar de `1` até o `tamanho` menos `1`. Dentro deste loop, você deve ir avançando e pegar todos os milhos.
+
+          <xml>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          </statement>
+          </block></xml>
+        courseF_bee_fwp_challenge1_d: Dentro do `for loop` você vai querer `avançar`
+          e então `pegar milho` **número de vezes do contador**.
         courseF_bee_fwp_challenge1_d2: Após o laço `para` você pode apenas `mover
           para trás` **tempo de comprimento**.
         courseF_bee_fwp_challenge1_e: |
@@ -20417,12 +20793,122 @@ pt-BR:
           </statement>
           </block></xml>
       courseF_bee_fwp_challenge1_2018_authored_hint:
+        courseF_bee_fwp_challenge1_a: |-
+          O programa principal deve parecer algo como isso:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
         courseF_bee_fwp_challenge1_b: 'Veja quanto milho está disponível para colher
           em cada espaço. Você vê o padrão do contador? '
         courseF_bee_fwp_challenge1_b1: |-
           O parâmetro `tamanho` deve ser usado para definir o valor máximo no `laço para`.
 
           Não se esqueça de fazer agricultor voltar para o caminho principal após a colheita!
+        courseF_bee_fwp_challenge1_c: |-
+          Coloque um `for loop` dentro de uma função e configure ele para contar de `1` até o `tamanho` menos `1`. Dentro deste loop, você deve ir avançando e pegar todos os milhos.
+
+          <xml>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          </statement>
+          </block></xml>
+        courseF_bee_fwp_challenge1_d: Dentro do `for loop` você vai querer `avançar`
+          e então `pegar milho` **número de vezes do contador**.
         courseF_bee_fwp_challenge1_d2: Após o laço `para` você pode apenas `mover
           para trás` **tempo de comprimento**.
         courseF_bee_fwp_challenge1_e: |
@@ -20497,19 +20983,306 @@ pt-BR:
           </statement>
           </block></xml>
       courseF_bee_fwp_challenge2_authored_hint:
+        courseF_bee_fwp_challenge2_a: |-
+          Comece por certificar-se de que você entende como *supostamente* que funciona esta função. À medida que a fazendeira se move em cada caminho, ela só tentará coletar milho. Em vez disso, como você pode fazer sua verificação para cada um dos 3 verduras e escolher apenas o que encontra?
+
+          Adicione declarações condicionais à função para verificar por milho, abóboras e alface.
         courseF_bee_fwp_challenge2_b: |-
           Você está ficando sem blocos `avançar`?
           Tente usar um *segundo* `laço para` no seu programa principal.
+        courseF_bee_fwp_challenge2_c: |-
+          **Aqui está como a sua função deveria se parecer:**
+
+          <xml><block type="procedures_defnoreturn" deletable="false" movable="false" editable="false" usercreated="true">
+          <mutation>
+          <arg name="length"/>
+          </mutation>
+          <title name="NAME">pick row</title>
+          <statement name="STACK">
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="harvester_ifHasCrop">
+          <title name="LOC">Corn</title>
+          <statement name="DO">
+          <block type="harvester_corn"/>
+          </statement>
+          <next>
+          <block type="harvester_ifHasCrop">
+          <title name="LOC">Pumpkin</title>
+          <statement name="DO">
+          <block type="harvester_pumpkin"/>
+          </statement>
+          <next>
+          <block type="harvester_ifHasCrop">
+          <title name="LOC">Lettuce</title>
+          <statement name="DO">
+          <block type="harvester_lettuce"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveBackward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </xml>
+        courseF_bee_fwp_challenge2_d: |
+          **Aqui está como o seu programa principal deveria parecer:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter2</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="variables_get">
+          <title name="VAR">counter2</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block></xml>
       courseF_bee_fwp_challenge2_2018_authored_hint:
+        courseF_bee_fwp_challenge2_a: |-
+          Comece por certificar-se de que você entende como *supostamente* que funciona esta função. À medida que a fazendeira se move em cada caminho, ela só tentará coletar milho. Em vez disso, como você pode fazer sua verificação para cada um dos 3 verduras e escolher apenas o que encontra?
+
+          Adicione declarações condicionais à função para verificar por milho, abóboras e alface.
         courseF_bee_fwp_challenge2_b: |-
           Você está ficando sem blocos `avançar`?
           Tente usar um *segundo* `laço para` no seu programa principal.
+        courseF_bee_fwp_challenge2_c: |-
+          **Aqui está como a sua função deveria se parecer:**
+
+          <xml><block type="procedures_defnoreturn" deletable="false" movable="false" editable="false" usercreated="true">
+          <mutation>
+          <arg name="length"/>
+          </mutation>
+          <title name="NAME">pick row</title>
+          <statement name="STACK">
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="harvester_ifHasCrop">
+          <title name="LOC">Corn</title>
+          <statement name="DO">
+          <block type="harvester_corn"/>
+          </statement>
+          <next>
+          <block type="harvester_ifHasCrop">
+          <title name="LOC">Pumpkin</title>
+          <statement name="DO">
+          <block type="harvester_pumpkin"/>
+          </statement>
+          <next>
+          <block type="harvester_ifHasCrop">
+          <title name="LOC">Lettuce</title>
+          <statement name="DO">
+          <block type="harvester_lettuce"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveBackward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </xml>
+        courseF_bee_fwp_challenge2_d: |
+          **Aqui está como o seu programa principal deveria parecer:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter2</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="variables_get">
+          <title name="VAR">counter2</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block></xml>
       courseF_farmer_ramp11_authored_hint:
         courseF_farmer_ramp11_a: Se você está tendo dificuldade de ver onde os laços
           devem ir, tente programá-los todos em seguida procurando um padrão.
+        courseF_farmer_ramp11_b: Como você pode usar um loop <xml><block type="controls_repeat"><title
+          name="TIMES">???</title></block></xml> para selecionar repolhos, ao invés
+          de utilizar 5 blocos <xml><block type="harvester_lettuce"/></xml>?
       courseF_farmer_ramp11_2018_authored_hint:
         courseF_farmer_ramp11_a: Se você está tendo dificuldade de ver onde os laços
           devem ir, tente programá-los todos em seguida procurando um padrão.
+        courseF_farmer_ramp11_b: Como você pode usar um loop <xml><block type="controls_repeat"><title
+          name="TIMES">???</title></block></xml> para selecionar repolhos, ao invés
+          de utilizar 5 blocos <xml><block type="harvester_lettuce"/></xml>?
+      courseF_maze_ramp1_authored_hint:
+        courseF_maze_ramp1_b: Você não precisa de nenhum bloco extra da caixa de ferramentas
+          aqui!
       courseF_maze_ramp13_authored_hint:
         courseF_maze_ramp13_b: Não se esqueça de usar o botão "Passo" para percorrer
           bloco a bloco e procurar erros.
@@ -20523,11 +21296,26 @@ pt-BR:
           bloco a bloco e procurar erros.
         courseF_maze_ramp7_a: Use blocos de repetição para executar um único bloco
           ou um pedaço de código repetidamente.
+      courseF_maze_ramp1_2018_authored_hint:
+        courseF_maze_ramp1_b: Você não precisa de nenhum bloco extra da caixa de ferramentas
+          aqui!
+      courseF_maze_ramp2_authored_hint:
+        courseF_maze_ramp2_b: Certifique-se de que o bloco <xml><block type="maze_moveForward"/></xml>
+          está dentro do laço, para que ele seja repetido.
+      courseF_maze_ramp2_2018_authored_hint:
+        courseF_maze_ramp2_b: Certifique-se de que o bloco <xml><block type="maze_moveForward"/></xml>
+          está dentro do laço, para que ele seja repetido.
       courseF_maze_ramp4_authored_hint:
+        courseF_maze_ramp4_b: Para seguir o caminho, siga em frente e vire para um
+          lado, em seguida, mova-se novamente e vire no sentido oposto. Avance mais
+          uma vez para alcançar o porco.
         courseF_maze_ramp4_c: Não tenha medo de cometer um erro! Tente adicionar blocos
           e executar o código para ver o que vai acontecer, mesmo se você achar que
           ainda não resolveu o quebra-cabeça.
       courseF_maze_ramp4_2018_authored_hint:
+        courseF_maze_ramp4_b: Para seguir o caminho, siga em frente e vire para um
+          lado, em seguida, mova-se novamente e vire no sentido oposto. Avance mais
+          uma vez para alcançar o porco.
         courseF_maze_ramp4_c: Não tenha medo de cometer um erro! Tente adicionar blocos
           e executar o código para ver o que vai acontecer, mesmo se você achar que
           ainda não resolveu o quebra-cabeça.

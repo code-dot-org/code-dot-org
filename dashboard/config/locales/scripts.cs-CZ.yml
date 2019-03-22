@@ -828,6 +828,8 @@ cs:
               name: Smyčky
             Programming:
               name: Programování
+            Unspotted Bugs:
+              name: Nezachycené chyby
         grade5:
           stages:
             'Artist: For Loops':
@@ -1362,10 +1364,16 @@ cs:
         coursea-2018:
           assignment_family_title: Kurz A
           stages:
+            'Debugging: Unspotted Bugs':
+              name: Nezachycené chyby
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stevie a Velký projekt
             'Programming: Happy Maps':
               name: Šťastné mapy
             Going Places Safely:
               name: Cestování bezpečně
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie a Velký projekt
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1506,6 +1514,10 @@ cs:
               name: While (zatímco) cykly
         pre-express-2018:
           stages:
+            'Debugging: Unspotted Bugs':
+              name: Nezachycené chyby
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stevie a Velký projekt
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy ze života: Zasadit semínko'
             Spelling Bee:
@@ -1514,6 +1526,8 @@ cs:
               name: Pohyb, pohyb
             Your Digital Footprint:
               name: Tvé digitální stopy
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie a Velký projekt
         frozen-2018:
           stages:
             Artist:

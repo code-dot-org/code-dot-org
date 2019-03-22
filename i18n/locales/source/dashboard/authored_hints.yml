@@ -345,6 +345,8 @@ en:
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area out into the workspace and connect it to the `when run` block.
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: You can use the if path block to help you make the right turns.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
         Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
@@ -8848,8 +8850,7 @@ en:
       courseC19_playLab_EOC3_authored_hint: {}
       courseC19_playLab_EOC4_authored_hint:
         courseE_playLab_scaffold4_a: Use `score point` to add a point, and `remove point` to subtract one.
-      courseC19_playLab_EOC5_authored_hint:
-        courseE_playLab_scaffold5_a: To finish this level, you need to win or lose. Use a `end game as win` or `end game as loss` block to finish.
+      courseC19_playLab_EOC5_authored_hint: {}
       courseC_PlayLab_embed_events9_authored_hint: {}
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
@@ -12414,10 +12415,10 @@ en:
         courseD_farmer_condLoops6_a: Use a `while there is corn` loop to make sure you get all of the corn along the way. This block won't do anything if there's no corn to pick.
         courseD_farmer_condLoops6_b: Make sure to check `if` there's a path ahead before you take your next step!
       courseD_farmer_condLoops6_2018_authored_hint:
-        courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer down each piece of the spiral.
+        courseD_farmer_condLoops6_a: Use a `while path ahead` loop or `if path ahead / else` block to move the farmer down each piece of the spiral.
         courseD_farmer_condLoops6_b: You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.
       courseD_farmer_condLoops6_2019_authored_hint:
-        courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer down each piece of the spiral.
+        courseD_farmer_condLoops6_a: Use a `while path ahead` loop or a `if path ahead / else` block to move the farmer down each piece of the spiral.
         courseD_farmer_condLoops6_b: You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.
       courseD_farmer_condLoops7_authored_hint:
         courseD_farmer_condLoops7_a: |-

@@ -113,9 +113,9 @@ level 'courseF_markdown_variables_end_2019'
 bonus 'courseF_artist_variables_challenge1_2019'
 bonus 'courseF_artist_variables_challenge2_2019'
 
-stage 'Running Simulations', flex_category: 'csf_f_2'
-level 'simconfig'
-level 'CSTAdata1b'
+stage 'Simulating Experiments', flex_category: 'csf_f_2'
+level 'simstarter', progression: 'Run a simulation'
+level 'simconfig', progression: 'Modify simulation variables'
 
 stage 'For Loop Fun', flex_category: 'csf_f_2'
 level 'ForLoopFun_2019'

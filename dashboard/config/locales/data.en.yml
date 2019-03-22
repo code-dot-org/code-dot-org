@@ -564,6 +564,7 @@ en:
         what_is_an_event: What is an event?
         teaching_cs_pair_programming: 'Teaching CS Fundamentals: Pair Programming'
         teaching_problem_solving: 'Teaching CS Fundamentals: Teaching Problem Solving'
+        csd_applab_designmode: 'CS Discoveries: App Lab - Design Mode'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

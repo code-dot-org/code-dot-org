@@ -2,7 +2,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/unit1/"], ["teacherForum", "https://forum.code.org/c/csp1"], ["vocabulary", "https://curriculum.code.org/csp-18/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-18/unit1/standards/"], ["professionalLearning", "https://studio.code.org/s/csp1-support"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit1/"], ["teacherForum", "https://forum.code.org/c/csp1"], ["vocabulary", "https://curriculum.code.org/csp-19/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit1/standards/"], ["professionalLearning", "https://studio.code.org/s/csp1-support"]]
 has_verified_resources true
 has_lesson_plan true
 family_name 'csp1'
@@ -15,8 +15,8 @@ stage 'Personal Innovations', flex_category: 'csp1_1'
 named_level 'CSP U1L01 SFLP_2019'
 named_level 'Computer Science is Changing Everything_2019', progression: 'Computer Science is Changing Everything'
 variants
-  level 'csp_socialBelonging_control_2019', progression: 'Reflection: starting out in computer science'
-  level 'csp_socialBelonging_intervention_2019', progression: 'Reflection: starting out in computer science'
+  assessment 'csp_socialBelonging_control_2019', progression: 'Reflection: starting out in computer science'
+  assessment 'csp_socialBelonging_intervention_2019', progression: 'Reflection: starting out in computer science'
 endvariants
 
 stage 'Sending Binary Messages', flex_category: 'csp1_1'

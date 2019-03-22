@@ -990,6 +990,7 @@ it:
       C3-Farmer While Loops Assessment 1: Questo è un esercizio di riepilogo -- Ci
         sono molte buche e mucchi di terra. Aiutami a riempire le buche e a rimuovere
         i mucchi di terra per rendere livellato il terreno.
+      CoureE_HOC 2018 Level_7a: Cerca una cassa tra le rovine sottomarine.
       Course 2 Bee Loops 1: 'Ciao, sono un''ape. Riesci ad aiutarmi a raccogliere
         il nettare da questi fiori? '
       Course 2 Bee Loops 13: Questo è un esercizio di verifica -- Usa il blocco "ripeti"
@@ -3256,7 +3257,7 @@ it:
       courseA_bee_seq4: Prova da solo!
       courseA_bee_seq5: Prova da solo!
       courseA_bee_seq6: Adesso l'ape deve raccogliere il nettare da due fiori!
-      courseA_bee_seq7: Aggiungi due blocchi per competare l'esercizio!
+      courseA_bee_seq7: Aggiungi due blocchi per completare l'esercizio!
       courseA_bee_seq8: Assicurati di raccogliere il nettare da tutti i fiori!
       courseA_bee_seq9: Assicurati di raccogliere il nettare da tutti i fiori!
       courseA_collector_loops1: |-
@@ -3392,6 +3393,10 @@ it:
       courseA_harvester_seq11_2019: Prova da solo! Raccogli tutte le pannocchie.
       courseA_harvester_seq12: Raccogli tutte le pannocchie.
       courseA_harvester_seq12_2019: Raccogli tutte le pannocchie.
+      courseA_harvester_seq13: Gioca con questi blocchi per aiutare la contadina a
+        raccogliere le pannocchie.
+      courseA_harvester_seq13_2019: Gioca con questi blocchi per aiutare la contadina
+        a raccogliere le pannocchie.
       courseA_harvester_seq1_2019: Gioca con questi blocchi per aiutare la contadina
         a raccogliere la pannocchia.
       courseA_harvester_seq2: Usa tre blocchi `O ←` e un blocco `prendi pannocchia`
@@ -3413,8 +3418,8 @@ it:
       courseA_harvester_seq8: Ora la contadina dovrà raccogliere pannocchie due volte!
       courseA_harvester_seq8_2019: Ora la contadina dovrà raccogliere pannocchie due
         volte!
-      courseA_harvester_seq9: Aggiungi due blocchi per competare l'esercizio!
-      courseA_harvester_seq9_2019: Aggiungi due blocchi per competare l'esercizio!
+      courseA_harvester_seq9: Aggiungi due blocchi per completare l'esercizio!
+      courseA_harvester_seq9_2019: Aggiungi due blocchi per completare l'esercizio!
       courseA_maze_ramp2_2018: Unisci tutti i blocchi per completare il programma,
         poi fai clic su "Esegui".
       courseA_maze_ramp2_2019: Unisci tutti i blocchi per completare il programma,
@@ -5893,8 +5898,8 @@ it:
         e zucche.
       courseE_farmer_functions2ba: Aiuta la contadina a raccogliere le pannocchie
         e le zucche utilizzando la funzione `pannocchie e zucca`.
-      courseE_farmer_functions2ba_2018: Aiuta la contadina a raccogliere le pannocchie
-        e le zucche utilizzando la funzione `pannocchie e zucca`.
+      courseE_farmer_functions2ba_2018: Usa le funzioni qui sotto, per aiutare la
+        contadina a raccogliere le pannocchie e le zucche.
       courseE_farmer_functions2ba_2019: Aiuta la contadina a raccogliere le pannocchie
         e le zucche utilizzando la funzione `pannocchie e zucca`.
       courseE_farmer_functions3c: Ora, inserisci tu il codice all'interno della funzione,

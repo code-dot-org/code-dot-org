@@ -1531,6 +1531,28 @@ ro:
       Course E MC Conditionals1: Vei gasi cele mai valoroase resurse in subteran,
         dar se poate face intuneric. Plaseaza cel putin 2 torte si cauta cel putin
         2 carbuni.
+      CourseD_Dance_Party_01: Trage blocul `crează un nou` în spaţiul de lucru, şi
+        conectează-l în interiorul blocului `configurare`.
+      CourseD_Dance_Party_02: Fă elanul să înceapă o nouă mişcare după 4 măsuri!
+      CourseD_Dance_Party_03: Acum fă dansatorul să înceapă o nouă mişcare dup 6 măsuri!
+      CourseD_Dance_Party_04: Adaugă un efect de fundal pentru programul tău.
+      CourseD_Dance_Party_05: Utilizează un alt bloc nou pentru a face dansatorul
+        să îşi schimbe mişcările la fiecare 2 măsuri.
+      CourseD_Dance_Party_06: Creează un dansator de rezervă numit `dansator_rezervă1`
+        pentru a dansa cu pisica.
+      CourseD_Dance_Party_08: Poţi face ambii dansatori de aceeaşi mărime?
+      CourseD_Dance_Party_09: Utilizează blocul `setează nuanţă` pentru a schimba
+        culoarea dansatorului.
+      CourseD_Dance_Party_10: Fă ca şi celălalt dansator să reacţioneze la muzică
+        utilizând blocul `începe cu`.
+      CourseD_Dance_Party_11: Blocul "când sus este apăsat(ă)" te lasă să execuţi
+        cod atunci cînd tasta săgeată în sus este apăsată. Încearcă să faci dansatorul
+        să facă o mişcare rapidă cănd apeşi săgeata în sus.
+      CourseD_Dance_Party_11_5: Utilizează blocurile "toate raţele" pentru a face
+        raţele să danseze împreună.
+      CourseD_Dance_Party_11b: Fă robotul să facă o "cădere" atunci când apeşi tasta
+        săgeată în dreapta, şi să facă "bated din palme" atunci când apeşi tasta săgeată
+        în sus. Fă secvenţa "cădere"-"bate din palme" cât de repede poţi!
       CourseF_PlayLab_vars10: 'Joc liber! Aici avem toate variabilele cu care ne-am
         jucat în acest nivel şi chiar câteva în plus în caz că aveţi nevoie. Faceţi
         un joc sau o poveste utilizând oricare dintre aceste variabile. Indicaţie:
@@ -1574,6 +1596,43 @@ ro:
       Crack a Caesar Cipher: Instrucţiuni
       Crack a Caesar Cipher_2018: Instrucţiuni
       Crack a Caesar Cipher_2019: Instrucţiuni
+      Dance_Party_01: Trage blocul `crează un nou` în spaţiul de lucru, şi conectează-l
+        în interiorul blocului `configurare`.
+      Dance_Party_01_low: Trage blocul `crează un nou` în spaţiul de lucru, şi conectează-l
+        în interiorul blocului `configurare`.
+      Dance_Party_02: Fă elanul să înceapă o nouă mişcare după 4 măsuri!
+      Dance_Party_03: Acum fă dansatorul să înceapă o nouă mişcare dup 6 măsuri!
+      Dance_Party_04: Adaugă un efect de fundal pentru programul tău.
+      Dance_Party_05: Utilizează un alt bloc nou pentru a face dansatorul să îşi schimbe
+        mişcările la fiecare 2 măsuri.
+      Dance_Party_06: Creează un dansator de rezervă numit `dansator_rezervă1` pentru
+        a dansa cu pisica.
+      Dance_Party_08: Poţi face ambii dansatori de aceeaşi mărime?
+      Dance_Party_09: Utilizează blocul `setează nuanţă` pentru a schimba culoarea
+        dansatorului.
+      Dance_Party_10: Fă ca şi celălalt dansator să reacţioneze la muzică utilizând
+        blocul `începe cu`.
+      Dance_Party_11.5_test: Utilizează blocurile "toate raţele" pentru a face raţele
+        să danseze împreună.
+      Dance_Party_11: Blocul "când sus este apăsat(ă)" te lasă să execuţi cod atunci
+        cînd tasta săgeată în sus este apăsată. Încearcă să faci dansatorul să facă
+        o mişcare rapidă cănd apeşi săgeata în sus.
+      Dance_Party_11_5: Utilizează blocurile "toate raţele" pentru a face raţele să
+        danseze împreună.
+      Dance_Party_11b: Fă robotul să facă o "cădere" atunci când apeşi tasta săgeată
+        în dreapta, şi să facă "bated din palme" atunci când apeşi tasta săgeată în
+        sus. Fă secvenţa "cădere"-"bate din palme" cât de repede poţi!
+      Dance_Party_12: Stabileşte ritmul tău! Creează un dans al tău şi partajează-l
+        cu prietenii tăi.
+      Dance_Party_extras_battle: Dans pe echipe (apasă "Mai mult" pentru detalii)
+      Dance_Party_extras_every_beat: Sfert de note (apasă pe "Mai mult" pentru detalii)
+      Dance_Party_extras_layout: Hai să trecem în formaţie! (apasă pe "Mai mult" pentru
+        detalii)
+      Dance_Party_extras_on_beat: Sunete joase, medii şi înalte (apasă pe "Mai mult"
+        pentru detalii)
+      Dance_Party_extras_speed: Măreşte viteza, Micşorează viteza (apasă pe "Mai mult"
+        pentru detalii)
+      Dance_Party_extras_visible: Unde au dispărut? (apasă pe "Mai mult" pentru detalii)
       Food Fight!: "Am adăugat o ultimă funcţie pentru a o utiliza.\r\n\r\nFoloseste
         comanda \"if\" pentru a-ti programa jocul catre functie \"level_up\" dor cand
         \"player_score\" devine mai mare decat un numar.\n\r\nDe exemplu: \"player_score\"
@@ -2093,6 +2152,7 @@ ro:
       Ryan Test Locked Blocks: |-
         Aici este o funcţie numită "patrol."
         Editeaz-o pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli.
+      Ryan_Demo: Fă elanul să înceapă o nouă mişcare după 4 măsuri!
       SpecialFrozenLevel: Ai devenit oficial un artist maestru! Creează un paradis
         de iarnă.
       Standalone_Artist_1: Bine ai venit la Artist! În primul rând, să încercăm să

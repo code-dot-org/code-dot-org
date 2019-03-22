@@ -195,11 +195,11 @@
   just_did_course2: "He terminado el Curso 2 - ¡mira! @codeorg"
   just_did_course3: "He terminado el Curso 3 – ¡míralo! @codeorg"
   just_did_course4: "He terminado el Curso 4 – ¡mira! @codeorg"
-  just_did_coursea: "He terminado el Curso A - ¡mira! @codeorg"
-  just_did_courseb: "He terminado el Curso B - ¡mira! @codeorg"
+  just_did_coursea: "He terminado el Curso A. ¡Echa un vistazo! @codeorg"
+  just_did_courseb: "He terminado el Curso B. ¡Echa un vistazo! @codeorg"
   just_did_coursec: "He terminado el Curso C - ¡mira! @codeorg"
   just_did_coursed: "He terminado el Curso D - ¡mira! @codeorg"
-  just_did_coursee: "He terminado el Curso E - ¡mira! @codeorg"
+  just_did_coursee: "He terminado el Curso E - ¡Mira! @codeorg"
   just_did_coursef: "He terminado el Curso F – ¡míralo! @codeorg"
   just_did_accelerated: "He terminado el Curso Acelerado - ¡mira! @codeorg"
   just_did_hoc_donor: 'Acabo de hacer la #HoraDelCódigo - ¡Dale un vistazo! (Gracias %{donor_twitter} por apoyar a @codeorg)'
@@ -657,7 +657,7 @@
   dashboard_sections_table_secret: "Tipo de inicio de sesión"
   dashboard_sections_table_grade: "Grado"
   dashboard_sections_table_course: "Curso"
-  dashboard_sections_table_pairing_allowed: "Programación en Parejas"
+  dashboard_sections_table_pairing_allowed: "Programación en parejas"
   dashboard_sections_table_stage_extras: "Etapa Extra"
   dashboard_sections_table_students: "Estudiantes"
   dashboard_sections_table_code: "Código de sección"
@@ -860,7 +860,7 @@
   tynker_name: "Crea tu propio juego"
   scratch_name: "Despierta tu creatividad con la programación"
   lightbot_name: "Lightbot"
-  thinkersmith_name: "falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title"
+  thinkersmith_name: "Mis amigos robóticos"
   condcards_name: "Condicionales con tarjetas"
   lightbotintl_name: "Lightbot"
   codehs_name: "Aprende a programar con Karel, el perro"
@@ -918,8 +918,10 @@
   coursee-2017_name: Curso E (2017)
   coursef-2017_name: Curso F (2017)
   coursea-2018_name: Curso A (2018)
+  courseb-2018_name: Curso B (2018)
   coursec-2018_name: Curso C (2018)
   coursed-2018_name: Curso D (2018)
+  coursee-2018_name: Curso E (2018)
   accelerated_name: "Curso acelerado"
   express_name: "Curso Express"
   pre-express_name: 'Curso Express pre-lectores:'
@@ -1045,22 +1047,22 @@
   course2_gradelevel: "Edades de 6 a 18 años"
   course3_gradelevel: "Edades de 8 a 18 años"
   course4_gradelevel: "Edades de 10 a 18 años"
-  coursea_gradelevel: "Edades de 4 a 7 años"
-  courseb_gradelevel: "Edades de 5 a 8 años"
+  coursea_gradelevel: "De 4 a 7 años"
+  courseb_gradelevel: "De 5 a 8 años"
   coursec_gradelevel: "Edades de 6 a 10 años"
-  coursed_gradelevel: "Califación 8+"
+  coursed_gradelevel: "Edades de 7 a 11 años"
   coursee_gradelevel: "Edad 8-12"
   coursef_gradelevel: "9-13 años"
-  coursea-2017_gradelevel: Edades de 4 a 7 años
-  courseb-2017_gradelevel: Edades de 5 a 8 años
+  coursea-2017_gradelevel: De 4 a 7 años
+  courseb-2017_gradelevel: De 5 a 8 años
   coursec-2017_gradelevel: Edades de 6 a 10 años
-  coursed-2017_gradelevel: Califación 8+
+  coursed-2017_gradelevel: Edades de 7 a 11 años
   coursee-2017_gradelevel: Edad 8-12
   coursef-2017_gradelevel: 9-13 años
-  coursea-2018_gradelevel: Edades de 4 a 7 años
-  courseb-2018_gradelevel: Edades de 5 a 8 años
+  coursea-2018_gradelevel: De 4 a 7 años
+  courseb-2018_gradelevel: De 5 a 8 años
   coursec-2018_gradelevel: Edades de 6 a 10 años
-  coursed-2018_gradelevel: Califación 8+
+  coursed-2018_gradelevel: Edades de 7 a 11 años
   coursee-2018_gradelevel: Edad 8-12
   coursef-2018_gradelevel: 9-13 años
   accelerated_gradelevel: "Edades de 10 a 18 años"
@@ -1165,23 +1167,23 @@
   course2_shortdescription_congrats: "Para los estudiantes con habilidades básicas de lectura, este curso se basa en el Curso 1. Los estudiantes crearán programas para resolver problemas y desarrollar juegos interactivos o historias que puedan compartir. Recomendado para los grados del 2 al 5."
   course3_shortdescription_congrats: "¿Listo para el siguiente nivel? Los estudiantes profundizarán en los temas de programación introducidos en cursos previos para encontrar soluciones flexibles a los problemas más complejos. Al terminar este curso, los estudiantes crearán historias interactivas y juegos que puedan compartir con cualquier persona. Recomendado para los grados del 4 al 5."
   course4_shortdescription_congrats: "¿Listo para ir más lejos? Los estudiantes profundizarán en los temas de programación introducidos en cursos previos para encontrar soluciones flexibles a los problemas más complejos. Al terminar este curso, los estudiantes crearán historias interactivas y juegos que puedan compartir con cualquier persona. Recomendado para los grados del 4 al 8."
-  coursea_shortdescription_congrats: "Una introducción a las ciencias de la computación para pre lectores."
-  courseb_shortdescription_congrats: "Una introducción a las ciencias de la computación para pre lectores. (Similar al curso A pero con más variedad para estudiantes mas avanzados)"
+  coursea_shortdescription_congrats: "Una introducción a las ciencias de la computación para prelectores."
+  courseb_shortdescription_congrats: "Una introducción a las ciencias de la computación para prelectores (similar al Curso A, pero con más variedad para estudiantes más avanzados)."
   coursec_shortdescription_congrats: "Aprende los conceptos básicos de las ciencias de la computación y crea tu propio arte, historias y juegos."
   coursed_shortdescription_congrats: "Rápidamente repasada conceptos del Curso C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más."
-  coursee_shortdescription_congrats: "Cubrir rápidamente los conceptos en el curso de C y D y luego ir más allá con funciones."
+  coursee_shortdescription_congrats: "Cubre rápidamente los conceptos del Curso C y D, y luego avanza con funciones."
   coursef_shortdescription_congrats: "Aprende todos los conceptos de Fundamentos de ciencias de la computación y crea tu propio arte, historia o juego."
-  coursea-2017_shortdescription_congrats: Una introducción a las ciencias de la computación para pre lectores.
-  courseb-2017_shortdescription_congrats: Una introducción a las ciencias de la computación para pre lectores. (Similar al curso A pero con más variedad para estudiantes mas avanzados)
+  coursea-2017_shortdescription_congrats: Una introducción a las ciencias de la computación para prelectores.
+  courseb-2017_shortdescription_congrats: Una introducción a las ciencias de la computación para prelectores (similar al Curso A, pero con más variedad para estudiantes más avanzados).
   coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
   coursed-2017_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
-  coursee-2017_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso de C y D y luego ir más allá con funciones.
+  coursee-2017_shortdescription_congrats: Cubre rápidamente los conceptos del Curso C y D, y luego avanza con funciones.
   coursef-2017_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de ciencias de la computación y crea tu propio arte, historia o juego.
-  coursea-2018_shortdescription_congrats: Una introducción a las ciencias de la computación para pre lectores.
-  courseb-2018_shortdescription_congrats: Una introducción a las ciencias de la computación para pre lectores. (Similar al curso A pero con más variedad para estudiantes mas avanzados)
+  coursea-2018_shortdescription_congrats: Una introducción a las ciencias de la computación para prelectores.
+  courseb-2018_shortdescription_congrats: Una introducción a las ciencias de la computación para prelectores (similar al Curso A, pero con más variedad para estudiantes más avanzados).
   coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
   coursed-2018_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
-  coursee-2018_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso de C y D y luego ir más allá con funciones.
+  coursee-2018_shortdescription_congrats: Cubre rápidamente los conceptos del Curso C y D, y luego avanza con funciones.
   coursef-2018_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de ciencias de la computación y crea tu propio arte, historia o juego.
   codeorg_longdescription: "Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas."
   codeintl_longdescription: "Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas."
@@ -1642,3 +1644,5 @@
   page_not_found_header: '404 Página no encontrada'
   page_not_found_description: "La página que buscas no existe en esta dirección. Comprueba la dirección web y vuelve a enviarla. O, regrese a nuestra página web."
   page_not_found_button: "Regresa a casa"
+  hoc2018_mc_with_microsoft: "En colaboración con"
+  hoc2018_mc_thank_microsoft: "Agradecemos a Microsoft el apoyo a nuestra visión y misión para asegurar que cada niño tenga la oportunidad de aprender Ciencias de la Computación y las habilidades para tener éxito en el siglo XXI."
