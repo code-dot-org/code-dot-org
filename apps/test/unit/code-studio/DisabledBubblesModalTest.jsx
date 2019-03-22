@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import i18n from '@cdo/locale';
