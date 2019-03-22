@@ -157,15 +157,6 @@ module Pd::Application
       nil
     end
 
-    def formatted_teacher_email
-      teacher_email = user.email.presence || sanitize_form_data_hash[:alternate_email]
-      if teacher_email.blank?
-        raise "invalid email address for application #{id}"
-      end
-
-      "\"#{teacher_full_name}\" <#{teacher_email}>"
-    end
-
     def formatted_principal_email
       "\"#{principal_greeting}\" <#{principal_email}>"
     end
