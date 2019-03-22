@@ -19,6 +19,7 @@ import {
 } from '../constants';
 import color from '../../util/color';
 import elementLibrary from './library';
+import experiments from '../../util/experiments';
 
 class TextInputProperties extends React.Component {
   static propTypes = {
@@ -240,8 +241,17 @@ export default {
     element.style.height = '30px';
     element.style.fontFamily = fontFamilyStyles[0];
     element.style.fontSize = defaultFontSizeStyle;
-    element.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    if (experiments.isEnabled('applabThemes')) {
+      element.style.borderStyle = 'solid';
+      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    } else {
+      element.style.color = '#000000';
+      element.style.backgroundColor = '';
+      elementUtils.setDefaultBorderStyles(element, {
+        forceDefaults: true,
+        textInput: true
+      });
+    }
 
     return element;
   },
@@ -251,11 +261,13 @@ export default {
     elementUtils.setDefaultBorderStyles(element, {textInput: true});
     // Set the font family for older projects that didn't set it on create:
     elementUtils.setDefaultFontFamilyStyle(element);
-    // Set the background color for older projects that didn't set it on create:
-    if (element.style.backgroundColor === '') {
-      element.style.backgroundColor = this.themeValues.backgroundColor[
-        themeOptions[0]
-      ];
+    if (experiments.isEnabled('applabThemes')) {
+      // Set the background color for older projects that didn't set it on create:
+      if (element.style.backgroundColor === '') {
+        element.style.backgroundColor = this.themeValues.backgroundColor[
+          themeOptions[0]
+        ];
+      }
     }
 
     $(element).on('mousedown', function(e) {
