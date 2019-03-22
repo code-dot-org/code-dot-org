@@ -2,6 +2,7 @@ import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
 import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
+import experiments from '../util/experiments';
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import * as setPropertyDropdown from './setPropertyDropdown';
@@ -198,11 +199,16 @@ applabCommands.button = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
-  newButton.style.color = color.white;
-  newButton.style.backgroundColor = color.applab_button_teal;
   newButton.style.fontSize = defaultFontSizeStyle;
   newButton.style.fontFamily = fontFamilyStyles[0];
-  elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
+  if (experiments.isEnabled('applabThemes')) {
+    newButton.style.borderStyle = 'solid';
+    elementLibrary.applyCurrentTheme(newButton, Applab.activeScreen());
+  } else {
+    newButton.style.color = color.white;
+    newButton.style.backgroundColor = color.applab_button_teal;
+    elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
+  }
 
   return Boolean(
     newButton.appendChild(textNode) &&
@@ -907,10 +913,15 @@ applabCommands.textInput = function(opts) {
   newInput.style.fontFamily = fontFamilyStyles[0];
   newInput.style.height = '30px';
   newInput.style.width = '200px';
-  elementUtils.setDefaultBorderStyles(newInput, {
-    forceDefaults: true,
-    textInput: true
-  });
+  if (experiments.isEnabled('applabThemes')) {
+    newInput.style.borderStyle = 'solid';
+    elementLibrary.applyCurrentTheme(newInput, Applab.activeScreen());
+  } else {
+    elementUtils.setDefaultBorderStyles(newInput, {
+      forceDefaults: true,
+      textInput: true
+    });
+  }
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
@@ -929,7 +940,12 @@ applabCommands.textLabel = function(opts) {
   newLabel.style.position = 'relative';
   newLabel.style.fontSize = defaultFontSizeStyle;
   newLabel.style.fontFamily = fontFamilyStyles[0];
-  elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
+  if (experiments.isEnabled('applabThemes')) {
+    newLabel.style.borderStyle = 'solid';
+    elementLibrary.applyCurrentTheme(newLabel, Applab.activeScreen());
+  } else {
+    elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
+  }
   var forElement = document.getElementById(opts.forId);
   if (forElement && Applab.activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
@@ -994,9 +1010,19 @@ applabCommands.dropdown = function(opts) {
   newSelect.style.position = 'relative';
   newSelect.style.fontSize = defaultFontSizeStyle;
   newSelect.style.fontFamily = fontFamilyStyles[0];
-  newSelect.style.color = color.white;
-  newSelect.style.backgroundColor = color.applab_button_teal;
-  elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});
+  if (experiments.isEnabled('applabThemes')) {
+    newSelect.style.borderStyle = 'solid';
+    elementLibrary.applyCurrentTheme(newSelect, Applab.activeScreen());
+  } else {
+    newSelect.style.color = color.white;
+    elementLibrary.typeSpecificPropertyChange(
+      newSelect,
+      'textColor',
+      newSelect.style.color
+    );
+    newSelect.style.backgroundColor = color.applab_button_teal;
+    elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});
+  }
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
