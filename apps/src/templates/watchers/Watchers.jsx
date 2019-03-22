@@ -480,19 +480,19 @@ function parseArray(array) {
   let parsedArray = '';
   array.forEach((element, index, array) => {
     if (element === null) {
-      parsedArray = parsedArray + 'null';
+      parsedArray += 'null';
     } else if (Array.isArray(element)) {
-      parsedArray = parsedArray + 'list (' + element.length + ')';
+      parsedArray += 'list (' + element.length + ')';
     } else if (typeof element === 'string') {
-      parsedArray = parsedArray + '"' + element + '"';
+      parsedArray += '"' + element + '"';
     } else if (typeof element === 'object') {
-      parsedArray = parsedArray + 'object {}';
+      parsedArray += 'object {}';
     } else {
-      parsedArray = parsedArray + element;
+      parsedArray += element;
     }
 
     if (index !== array.length - 1) {
-      parsedArray = parsedArray + ', ';
+      parsedArray += ', ';
     }
   });
 
