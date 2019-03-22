@@ -47,7 +47,7 @@ class AnimationPickerBody extends React.Component {
     onPickLibraryAnimation: PropTypes.func.isRequired,
     onUploadClick: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
-    spriteLab: PropTypes.bool.isRequired
+    spriteLab: PropTypes.bool
   };
 
   state = {
@@ -179,6 +179,8 @@ class AnimationPickerBody extends React.Component {
     );
   }
 }
+
+export const UnconnectedAnimationPickerBody = Radium(AnimationPickerBody);
 
 export default connect(state => ({
   spriteLab: state.pageConstants.isBlockly
