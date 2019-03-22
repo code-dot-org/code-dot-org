@@ -749,9 +749,8 @@ describe('entry tests', () => {
                 );
                 return chunkNames.includes(chunk.name);
               },
-              test(module, chunks) {
-                console.log(module.resource);
-                return /code-studio/.test(module.resource);
+              test(module) {
+                return /apps[\\/]src[\\/]code-studio/.test(module.resource);
               },
               priority: 20
             }
