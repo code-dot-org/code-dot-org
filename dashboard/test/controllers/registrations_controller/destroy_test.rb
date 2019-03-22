@@ -154,5 +154,19 @@ module RegistrationsControllerTests
       assert_equal ['noreply@code.org'], mail.from
       assert_match 'Your account has been deleted', mail.body.encoded
     end
+
+    test "does not send email when teacher destroyed if teacher has no email" do
+      user = create :teacher, password: 'apassword'
+      user.update_primary_contact_info(new_email: "", new_hashed_email: "")
+      user.save(validate: false)
+      refute user.valid?
+      sign_in user
+
+      TeacherMailer.expects(:delete_teacher_email).never
+      assert_destroys(User) do
+        delete '/users', params: {password_confirmation: 'apassword'}
+      end
+      assert_equal 0, ActionMailer::Base.deliveries.length
+    end
   end
 end
