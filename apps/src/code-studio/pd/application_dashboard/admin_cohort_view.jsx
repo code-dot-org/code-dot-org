@@ -39,8 +39,11 @@ export default class AdminCohortView extends React.Component {
   static propTypes = {
     route: PropTypes.shape({
       cohortType: PropTypes.oneOf(['TeacherCon', 'FiT'])
-    })
+    }),
+    downloadCsv: PropTypes.func
   };
+
+  static defaultProps = {downloadCsv: downloadCsv};
 
   constructor(props) {
     super(props);
@@ -64,17 +67,15 @@ export default class AdminCohortView extends React.Component {
     }
   }
 
-  sanitizeStringForCsv = str => {
-    let res = str;
-    if (str) {
-      // Convert line breaker to dot, multiple spaces to single space
-      res = res.replace(/\n|\r\n|\r+/gm, '.');
-      res = res.replace(/\s+/gm, ' ');
-      res = res.trim();
-    }
-
-    return res;
-  };
+  /**
+   * Clean a string, convert line breaker to dot and multiple spaces to single space.
+   */
+  static sanitizeString(str) {
+    return (str || '')
+      .replace(/(\n|\r)+/gm, '. ')
+      .replace(/\s+/gm, ' ')
+      .trim();
+  }
 
   handleDownloadCsv = () => {
     const headers = {
@@ -114,16 +115,17 @@ export default class AdminCohortView extends React.Component {
       return {...row, ...row.form_data};
     });
 
-    // Sanitize string content before exporting it to CSV
+    // Clean string content of line breakers and whitespaces before exporting it to CSV.
+    // Separator (comma) will be escaped later in downloadCsv function.
     filteredCohortWithFormData.forEach(row => {
       Object.keys(row).forEach(key => {
         if (_.isString(row[key])) {
-          row[key] = this.sanitizeStringForCsv(row[key]);
+          row[key] = AdminCohortView.sanitizeString(row[key]);
         }
       });
     });
 
-    downloadCsv({
+    this.props.downloadCsv({
       data: filteredCohortWithFormData,
       filename: `${this.props.route.cohortType.toLowerCase()}_cohort.csv`,
       headers
