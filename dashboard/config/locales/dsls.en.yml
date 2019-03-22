@@ -2023,7 +2023,6 @@ en:
       How to pick a random button_2018_2019:
         How to pick a random button: How to pick a random button
         description here: description here
-        title: title
       'How to: Make Charts from your Data': {}
       Importing Screens: {}
       Internet Simulator Setup:
@@ -2380,6 +2379,9 @@ en:
         description here: description here
         title: title
       Personal Website Examples: {}
+      Pilot Student App Interest Survey CSP 20-21:
+        Pilot Student Survey: Pilot Student Survey
+        Survey for student participating in the CSP Pilot.: Survey for student participating in the CSP Pilot.
       Pilot Student Survey:
         Pilot Student Survey: Pilot Student Survey
         Survey for student participating in the CSP Pilot.: Survey for student participating in the CSP Pilot.
@@ -2722,7 +2724,6 @@ en:
         description here: description here
         title: title
       U3 whats a comment_2018_2019:
-        Whats a Comment?: Whats a Comment?
         description here: description here
         title: title
       U3- L12 -Design Mode SFLP: {}
@@ -20172,15 +20173,13 @@ en:
         Any time between 10 and 19: Any time between 10 and 19
         Any time between 6 and 9: Any time between 6 and 9
         The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
-        There is no value of time that will result in "Good Morning!" being displayed: There is no value of time that will result in "Good Morning!" being displayed
-        There is no value of time that will result in "Good Morning" being displayed: There is no value of time that will result in "Good Morning" being displayed
+        There is no value of time that will result in “Good Morning!” being displayed: There is no value of time that will result in “Good Morning!” being displayed
       cspu5_assess2_wrongLogic_2018_2019:
         Any time between 0 and 20: Any time between 0 and 20
         Any time between 10 and 19: Any time between 10 and 19
         Any time between 6 and 9: Any time between 6 and 9
         The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
-        There is no value of time that will result in "Good Morning!" being displayed: There is no value of time that will result in "Good Morning!" being displayed
-        There is no value of time that will result in "Good Morning" being displayed: There is no value of time that will result in "Good Morning" being displayed
+        There is no value of time that will result in “Good Morning!” being displayed: There is no value of time that will result in “Good Morning!” being displayed
       cspu5_assess2_wrongLogic_exam_prep:
         Any time between 0 and 20: Any time between 0 and 20
         Any time between 10 and 19: Any time between 10 and 19
