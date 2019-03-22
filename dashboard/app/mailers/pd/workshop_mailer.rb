@@ -261,7 +261,11 @@ class Pd::WorkshopMailer < ActionMailer::Base
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       "Your upcoming #{workshop.course_name} workshop"
     elsif workshop.local_summer?
-      "Your upcoming #{workshop.course} workshop and next steps"
+      if @is_first_pre_survey_email
+        "Your upcoming #{workshop.course} workshop and next steps"
+      else
+        "See you soon for your upcoming #{workshop.course} workshop!"
+      end
     else
       'Your upcoming Code.org workshop and next steps'
     end

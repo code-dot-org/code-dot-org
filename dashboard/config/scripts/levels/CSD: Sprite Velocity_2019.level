@@ -11,10 +11,15 @@
     "skip_sound": true,
     "display_name": "Video: Velocity",
     "parent_level_id": 11313,
-    "name_suffix": "_2019"
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "long_instructions": "## Questions to Consider\r\n\r\n* Why might you want to use a velocity block instead of the counter pattern?\r\n* Give an example of a counter pattern and how you could use a velocity block instead.\r\n",
+    "encrypted_teacher_markdown": "9x/bgztEA0GgndtFlUbVdNV345Sq+9DIgrkssFRlvZ/A1GbZYtrDfkC7hmoN\n7w4w38HQhOmJ4P+UwANhYXDMvu7teX3IJvM+5Tq9f2QArJoqvXRD96J/UZ7o\nhHeOnofam9mKBpP0WUIliy4Jg1vkBvqd6tzUVW85rY9PIjA0ejOpTVkQZ9/g\niOOP7EDgZY/qObhSJQvyXTqdRNCRc1YjzK+mYnGqehaWlPXTCUcupCcf3AgJ\nboByU2My9Srjc/aMV1W5Vf3Jsg5/0oIQtu7UUCqJ0XKUfdx2O4vJQTH1EDSF\n6kZOGTCjfz3Xv1kd+O+XTnarox1pmRMKtFAprFKc/BOSj/pq1MpM/kKY8jjT\nfZVYwGfMVq4kreITT+EcO0YC2sagUTpoEBjMLWanb8MryJTDR0+RxpolARgn\nnDdwz6gFpogVpYw4n+Nlz+v0q9wVSofsZAFHDZCSHTNClWVhl2pPYrCHErO3\np4LZjDrXQLz9eCLW5Gvwa55Y06e9vgM8Ufl6RmNnOWo1I2nMnSZ4zJbg8kP3\nCjBmtXfEp2GNezueg6WUyOOwiGCX+CUIxuuameG+5wjPVW4oYkfYqU5VIRfm\nwzOR3OBjDlUeUR0iknC9xWtwxwclxskBkYtOp6XQiEFuVVQWzUct6ki6rmLr\npsNhoShn9KT1/NirDG1P+MHnGNnQqBh/Tx945UnAJ3SKb9pfP9HU60l8wY/w\nFT+yHntYKbL2emwneUAwarJnAomfZhurl2tgtLJbvlvjIiqi5rXJg2EJupa+\nu12dpJNmlu5Lto78xbi6JXjyJ6ZNTuO2U8AZBbQMwz56mDrCQIxZL0VUmvE4\nYyoAeFbGtKUpZ9n5jcnFwUJngUe1jEooNf08D9Ox0dRK57S1052Qv9r/MeyC\nw/e0aVD0T2ErO1nMgi4/1SgHAEhHjn8GSv2e2vnyLF0+iIRzFiesoc2rN+A0\n"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-15 23:42:06 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-15 23:42:06 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-18 23:49:45 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>
