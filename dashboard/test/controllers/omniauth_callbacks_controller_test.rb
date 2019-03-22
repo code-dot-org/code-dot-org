@@ -1397,6 +1397,36 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     refute_equal other_user, section.teacher
   end
 
+  test "connect_provider: Refuses to link credential if student is taking over teacher account" do
+    # Given I am a student
+    user = create :student
+
+    # And there exists a teacher
+    #   having credential X
+    #   and has no activity
+    other_user = create :teacher
+    credential = create :google_authentication_option, user: other_user
+    refute other_user.has_activity?
+
+    # When I attempt to add credential X
+    link_credential user,
+      type: credential.credential_type,
+      id: credential.authentication_id
+
+    # Then the other user should not be destroyed
+    other_user.reload
+    refute other_user.deleted?
+
+    # And I should fail to add credential X
+    user.reload
+    assert_equal 1, user.authentication_options.count
+
+    # And receive a helpful error message about the credential already being in use.
+    assert_redirected_to 'http://test.host/users/edit'
+    expected_error = I18n.t('auth.already_in_use', provider: I18n.t("auth.google_oauth2"))
+    assert_equal expected_error, flash.alert
+  end
+
   test "connect_provider: Refuses to link credential if there is an account with matching credential that has activity" do
     user = create :user
 
