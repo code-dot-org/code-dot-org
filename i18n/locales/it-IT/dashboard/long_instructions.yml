@@ -305,6 +305,7 @@ it:
         \r
         \r
 
+      CoureE_HOC 2018 Level_7a: "Hai scovato le rovine sottomarine. Cerca nell'arenaria, c'è una **cassa** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) che contiene un tesoro in **prismarino** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
       Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\" width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Tempo di giocare:**  Ecco il codice per una figura interessante.   \n\nChe cosa succede se la ripeti più volte, girando ad ogni iterazione?   \n\nNota che il codice per disegnarla fa ruotare l'artista di *420 gradi* in totale. Ciò significa che, una volta completata la figura, l'artista sarà rivolto in una direzione differente rispetto a quando ha iniziato. Questa nuova direzione sarà esattamente *60 gradi a destra* rispetto alla direzione iniziale.\n\n<hr/>\n\n<h4>\n<details>\n\n<summary>\n\n<b>Ripeti 4</b>\n\n</summary>\n<br/>\nSe vuoi fare un giro completo con solo 4 ripetizioni, l'artista deve ruotare di **360 gradi/4 = 90 gradi** ogni volta. Puoi farlo aggiungendo un blocco `gira a destra di 30 gradi` prima di ripetere la figura (dato che **60+30 = 90**).<br/>\n<img src=\"https://programmailfuturo.it/images/codeorg/4-3-11-a.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" /><br/>\n<a href=\"https://studio.code.org/c/120106816\" target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Ripeti 6</b>\n\n</summary>\n<br/>\nSe ripeti per 6 volte questo codice così com'è, ottieni una rotazione totale pari a **6x60**, ossia un giro completo di **360 gradi**.<br>\n<img\nsrc=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"  width=\"500px;\"  style=\"mix-blend-mode:\nmultiply;\" /><br/>\n<a href=\"https://studio.code.org/c/105644852\" target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Ripeti 12</b>\n\n</summary>\n\n<br/>\nSe vuoi invece ripetere la figura 12 volte, l'artista deve effettuare una rotazione di **360 gradi/12 = 30 gradi** ad ogni ripetizione. Ciò significa che, prima di ripetere la figura, l'artista deve tornare un po' indietro con un blocco `gira a sinistra di 30 gradi` (infatti 60-30 = 30).<br/>\n<img src=\"https://programmailfuturo.it/images/codeorg/4-3-11-b.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br/>\n<a href=\"https://studio.code.org/c/120106805\" target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\nNow it's your turn!  Can you recreate each image by repeating the starting shape?  "
       Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/><br>\n<br>\nE ora una piccola sfida!<br>\n<br>\nPer ottenere la figura che vedi devi usare solo blocchi che ti sono già stati mostrati. Riesci a capire come ricrearla? Sentiti libero di fare più tentativi e di commettere errori. Nessuno si aspetta che tu ci riesca perfettamente al primo tentativo. <br>\n<br>\n<b>Suggerimento</b>: La figura che viene ripetuta è quasi identica a quella del <a href=\"https://studio.code.org/s/course4/stage/3/puzzle/11\" target=\"_blank\">precedente esercizio</a>, l'unica differenza consiste nel fatto che il primo ciclo disegna tratti di lunghezza leggermente diversa."
       Course 4 Artist 12: |-
@@ -1002,12 +1003,14 @@ it:
       Virtual Pet 1 fix: "Questa è Geraldine, la tua nuova giraffa domestica.  \n\nCosa pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai su di lei?"
       Virtual Pet 1-validated: Questa è Geraldine, la tua nuova giraffa domestica. Cosa pensi accadrà quando premerai  "▶ Esegui" e cliccherai su di lei?
       Virtual Pet 1: "Questa è Geraldine, la tua nuova giraffa domestica.  \n\nCosa pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai su di lei?"
-      Virtual Pet 1_2019: "Questa è Geraldine, la tua nuova giraffa domestica.  \n\nCosa pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai su di lei?"
       Virtual Pet 1_simple: "Questa è Geraldine, la tua nuova giraffa domestica.  \n\nCosa pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai su di lei?"
       Virtual Pet 2 - Validated (Ram): "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore diventi marrone."
       Virtual Pet 2 - Validated: "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore diventi marrone."
       Virtual Pet 2: "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore diventi marrone."
-      Virtual Pet 2_2019: "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore diventi marrone."
+      Virtual Pet 2_2019: |-
+        Nell'angolo c'è una pozzanghera fangosa.  
+
+        Crea un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore diventi marrone.
       Virtual Pet 3: "Non possiamo lasciare in giro una giraffa tutta sporca!  \n\n1.  Aggiungi sullo schermo un nuovo personaggio sapone.\n2.  Puoi crearlo in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al suo colore normale?\n\n---\n\nPer ripristinare il colore, usa il blocco:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n       <value name=\"THIS\">\n         <block type=\"sprite_variables_get\">\n           <title name=\"VAR\">mySprite</title>\n         </block>\n       </value>\n     </block></xml>\n"
       Virtual Pet 3_2019: "Non possiamo lasciare in giro una giraffa tutta sporca!  \n\n1)  Aggiungi sullo schermo un nuovo personaggio Sapone.\n2)  Puoi crearlo in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al suo colore normale?\n\n---\n\nPer ripristinare il colore, usa il blocco:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
       Virtual Pet 4: "Non vogliamo aspettare che la giraffa si pulisca da sola ogni volta che si sporca.  \n\nAggiungi un comportamento al tuo Sapone per renderlo trascinabile, quindi trascinalo sopra la giraffa per pulirla!\n"
@@ -1273,7 +1276,7 @@ it:
       courseA_bee_seq10: Prova tu! Raccogli tutto il nettare.
       courseA_bee_seq4: Prova da solo!
       courseA_bee_seq6: Adesso l'ape deve raccogliere il nettare da due fiori!
-      courseA_bee_seq7: Aggiungi due blocchi per competare l'esercizio!
+      courseA_bee_seq7: Aggiungi due blocchi per completare l'esercizio!
       courseA_collector_loops1: |-
         **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
 
@@ -1361,8 +1364,8 @@ it:
       courseA_harvester_seq7_2019: Bisogna muoversi in due direzioni per raggiungere la pannocchia! Aiuta la contadina a prendere la direzione giusta.
       courseA_harvester_seq8: Ora la contadina dovrà raccogliere pannocchie due volte!
       courseA_harvester_seq8_2019: Ora la contadina dovrà raccogliere pannocchie due volte!
-      courseA_harvester_seq9: Aggiungi due blocchi per competare l'esercizio!
-      courseA_harvester_seq9_2019: Aggiungi due blocchi per competare l'esercizio!
+      courseA_harvester_seq9: Aggiungi due blocchi per completare l'esercizio!
+      courseA_harvester_seq9_2019: Aggiungi due blocchi per completare l'esercizio!
       courseA_maze_ramp2_2018: "Per completare l'esercizio, connetti entrambi i blocchi <xml><block type=\"maze_moveEast\"/></xml> al blocco <xml><block type=\"when_run\"/></xml>, quindi clicca su  \"▶ Esegui\".  \n\n\n---\n"
       courseA_maze_ramp2_2019: "Per completare l'esercizio, connetti entrambi i blocchi <xml><block type=\"maze_moveEast\"/></xml> al blocco <xml><block type=\"when_run\"/></xml>, quindi clicca su  \"▶ Esegui\".  \n\n\n---\n"
       courseA_maze_ramp3_2018: "*\"Questo maialino mi fa arricciare le penne.\"*\n\nC'è un blocco di troppo che fa andare a sbattere l'uccellino.\nButtalo via sganciandolo dagli altri blocchi grigi e trascinandolo nella cassetta degli attrezzi."

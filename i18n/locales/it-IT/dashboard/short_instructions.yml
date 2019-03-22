@@ -447,6 +447,7 @@ it:
       C3-Farmer While Loops 6: Wow, c'è un grande mucchio di terra! Riesci a scrivere un programma che lo rimuove completamente fino a quando il terreno è livellato?
       C3-Farmer While Loops 7: Wow, ora ci sono 3 grandi mucchi di terra! Riesci a scrivere un programma che li rimuove completamente fino a quando il terreno è livellato?
       C3-Farmer While Loops Assessment 1: Questo è un esercizio di riepilogo -- Ci sono molte buche e mucchi di terra. Aiutami a riempire le buche e a rimuovere i mucchi di terra per rendere livellato il terreno.
+      CoureE_HOC 2018 Level_7a: Cerca una cassa tra le rovine sottomarine.
       Course 2 Bee Loops 1: 'Ciao, sono un''ape. Riesci ad aiutarmi a raccogliere il nettare da questi fiori? '
       Course 2 Bee Loops 13: 'Questo è un esercizio di verifica -- Usa il blocco "ripeti" per raccogliere tutto il nettare.'
       Course 2 Maze Loops 1: Riesci a farmi arrivare al maialino usando 5 blocchi?
@@ -1437,7 +1438,7 @@ it:
       courseA_bee_seq4: Prova da solo!
       courseA_bee_seq5: Prova da solo!
       courseA_bee_seq6: Adesso l'ape deve raccogliere il nettare da due fiori!
-      courseA_bee_seq7: Aggiungi due blocchi per competare l'esercizio!
+      courseA_bee_seq7: Aggiungi due blocchi per completare l'esercizio!
       courseA_bee_seq8: Assicurati di raccogliere il nettare da tutti i fiori!
       courseA_bee_seq9: Assicurati di raccogliere il nettare da tutti i fiori!
       courseA_collector_loops1: "Muovi Laura raccogliendo più diamanti che puoi! <br>\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
@@ -1520,6 +1521,8 @@ it:
       courseA_harvester_seq11_2019: Prova da solo! Raccogli tutte le pannocchie.
       courseA_harvester_seq12: Raccogli tutte le pannocchie.
       courseA_harvester_seq12_2019: Raccogli tutte le pannocchie.
+      courseA_harvester_seq13: Gioca con questi blocchi per aiutare la contadina a raccogliere le pannocchie.
+      courseA_harvester_seq13_2019: Gioca con questi blocchi per aiutare la contadina a raccogliere le pannocchie.
       courseA_harvester_seq1_2019: Gioca con questi blocchi per aiutare la contadina a raccogliere la pannocchia.
       courseA_harvester_seq2: Usa tre blocchi `O ←` e un blocco `prendi pannocchia` per risolvere questo esercizio.
       courseA_harvester_seq2_2019: Usa tre blocchi `O ←` e un blocco `prendi pannocchia` per risolvere questo esercizio.
@@ -1535,8 +1538,8 @@ it:
       courseA_harvester_seq7_2019: Prova da solo!
       courseA_harvester_seq8: Ora la contadina dovrà raccogliere pannocchie due volte!
       courseA_harvester_seq8_2019: Ora la contadina dovrà raccogliere pannocchie due volte!
-      courseA_harvester_seq9: Aggiungi due blocchi per competare l'esercizio!
-      courseA_harvester_seq9_2019: Aggiungi due blocchi per competare l'esercizio!
+      courseA_harvester_seq9: Aggiungi due blocchi per completare l'esercizio!
+      courseA_harvester_seq9_2019: Aggiungi due blocchi per completare l'esercizio!
       courseA_maze_ramp2_2018: Unisci tutti i blocchi per completare il programma, poi fai clic su "Esegui".
       courseA_maze_ramp2_2019: Unisci tutti i blocchi per completare il programma, poi fai clic su "Esegui".
       courseA_maze_ramp2a_2018: Unisci tutti i blocchi per completare il programma, poi fai clic su "Esegui".
@@ -2889,7 +2892,7 @@ it:
       courseE_farmer_functions2b_2018: Aiuta la contadina a raccogliere pannocchie e zucche.
       courseE_farmer_functions2b_2019: Aiuta la contadina a raccogliere pannocchie e zucche.
       courseE_farmer_functions2ba: Aiuta la contadina a raccogliere le pannocchie e le zucche utilizzando la funzione `pannocchie e zucca`.
-      courseE_farmer_functions2ba_2018: Aiuta la contadina a raccogliere le pannocchie e le zucche utilizzando la funzione `pannocchie e zucca`.
+      courseE_farmer_functions2ba_2018: Usa le funzioni qui sotto, per aiutare la contadina a raccogliere le pannocchie e le zucche.
       courseE_farmer_functions2ba_2019: Aiuta la contadina a raccogliere le pannocchie e le zucche utilizzando la funzione `pannocchie e zucca`.
       courseE_farmer_functions3c: Ora, inserisci tu il codice all'interno della funzione, trascinando i blocchi dal programma principale e rilasciandoli nel blocco verde che **definisce la funzione**.
       courseE_farmer_functions3c1_2018: Questa funzione richiama altre funzioni!

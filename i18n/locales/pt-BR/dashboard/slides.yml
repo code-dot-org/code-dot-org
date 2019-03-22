@@ -1624,6 +1624,7 @@ pt-BR:
       1:
         text: "Hora do Código | Festa Dançante: Aquecimento"
       2:
+        text: "Olá. Meu nome é Miral Kotb e eu sou um dançarino, desenvolvedor de software e criador do iLuminate."
       3:
       4:
       5:
@@ -1659,14 +1660,32 @@ pt-BR:
       8:
       9:
       10:
+    hoc_dance_congrats:
+      1:
+        text: "Hora do Código | Festa da Dança: Que comece a Festa!"
+      2:
+        text: "Parabéns! Você acabou de aprender o básico da ciência da computação. Agora você pode usar estes blocos para criar uma festa de dança com seu próprio design para compartilhar com seus amigos."
+      3:
+        text: "Se você olhar na caixa de ferramentas, você encontrará alguns blocos totalmente novos que você não havia visto antes. Por exemplo, você pode usar o bloco de layout para organizar os dançarinos de formas diferentes na tela."
+      4:
+        text: "Dê uma olhada ao redor e tente experimentar com estes novos blocos e funcionalidades. Você consegue criar cuidadosamente uma dança coreografada da sua canção favorita?"
+      5:
+        text: "Ou uma batalha de dança com seus amigos?"
+      6:
+        text: "Ou algo completamente diferente?"
+      7:
+        text: "No final do tutorial você pode compartilhar um link para sua criação com seus amigos. Exercite a sua imaginação e apenas se divirta!"
     mc_2018_intro:
       1:
       2:
       3:
         text: "No lado esquerdo, você verá o mundo de Minecraft."
       4:
+        text: "A área central é sua caixa de ferramentas onde você pode encontrar comandos de codificação."
       5:
+        text: "E a área grande a direita é o seu espaço de trabalho. É aqui que você pode empilhar comandos para construir seu programa e controlar seus movimentos."
       6:
+        text: "As instruções de cada nível estão no topo da página. Clique no sinal de mais para mudar entre instruções longas e curtas."
       7:
       8:
       9:

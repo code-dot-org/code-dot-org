@@ -38,6 +38,7 @@ ro:
         Custom: Artist
         CustomStudio: Laborator de Joacă
         Gamelab: Laborator de jocuri
+        Spritelab: Laborator Sprite
     trophy:
       name:
         Bronze: Bronz
@@ -383,6 +384,7 @@ ro:
         csd_concept_hardware_software: 'Cum funcționează calculatoarele: Hardware și Software (aparatură și programe)'
         csd_concept_search: Cum funcţionează căutarea
         csd_external_amazon_data: Cum se utilizează cantitățile mari de date în sistemele de recomandare Amazon pentru a ne schimba viaţa
+        csd_external_netflix_data: Cum realizează Netflix desfășurarea de programe TV și sugestiile pentru filme?
         csd_external_waze_data: De ce sunt atât de mulţi utilizatori obsedați de Waze?
         csd_gamelab_animation_tab: Fila de animație
         csd_gamelab_velocity: Viteza
@@ -394,6 +396,7 @@ ro:
         csp_applab_functions: Introducere în Funcții
         csp_applab_functions_parameters: Funcții cu Parametrii
         csp_applab_loops: Bucle
+        csp_cs_is_changing_everything: Știința calculatoarelor schimbă totul
         starwars_intro: 'Star Wars: Programarea unei galaxii - Introducere'
         starwars_typing: 'Star Wars: Programarea unei galaxii - JavaScript'
         starwars_events: 'Star Wars: Programarea unei galaxii - Evenimente'
@@ -418,6 +421,8 @@ ro:
         mc_2016_spawn: Ora de Programare Minecraft - Generare
         mc_2016_congrats: Ora de Programare Minecraft - Felicitari
         applab_hoc_welcome: Laboratorul de Aplicații Ora de Cod - Bine ați venit
+        applab_hoc_setproperty: App Lab și Ora de cod - setProperty
+        applab_hoc_onevent: App Lab și Ora de cod - onEvent
         applab_hoc_designmode: Laboratorul de Aplicații Ora de Cod - mod de proiectare
         applab_hoc_share: Laboratorul de Aplicații Ora de Cod - Distribuire
         mc_2017_agent_intro: Ora de Programare Minecraft - Agentul
@@ -448,9 +453,45 @@ ro:
         applab_intro_designmode: Laborator de aplicații - mod de proiectare
         applab_intro_share: Laborator de applicații - Distribuie applicația ta
         csd_applab_arrays: Introducere în matrice
+        CSF_skinOverview_Harvester: Culegătorul
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_harvester_skinOverview_K-1: Culegătorul
+        CSF_scrat_loops_K1: Bucle în Ice Age
+        CSF_scrat_loops_CF: Bucle în Ice Age
+        CSF_if_allskins: Blocul `dacă` (if)
+        CSF_ifelse_allskins: Utilizarea blocurilor Dacă/Altfel (if/else)
+        CSF_ifelseifelse_allskins: Utilizarea blocurilor Dacă/Altfel Dacă/Altfel (if/elseif/else)
         CSF_loops_AB: Bucle
         csd_gamelab_booleans: Expresii booleene
         csd_gamelab_conditional_statements: Declarații condiționale
+        csd_gamelab_if_else: Declarațiile Dacă/Altfel (if/else)
+        CSF_SpriteLabIntro_CDEF: Acesta este Sprite Lab (laboratorul de spiriduși)
+        CSF_Spritelab_MakeSprite_CDEF: Cum să faci un spiriduș în Sprite Lab
+        CDEF_Video_SpritesInAction: Spiriduși în acțiune
+        CSF_SpriteLab_SpritesInAction_CDEF: Spiriduși în acțiune
+        CSF_StarWars_ProjectIntro: Introducere în proiectul Star Wars
+        mc_2018_intro: 'Minecraft: Introducere în aventura acvatică'
+        MC_2018_loops: 'Minecraft: Repetă până când (repeat until) în aventura acvatică'
+        mc_2018_conditionals: 'Minecraft: Condiționale în aventura acvatică'
+        mc_2018_closing: 'Minecraft: Felicitări pentru aventura acvatică'
+        hoc_dance_warmup: Petrecere cu dans - Pregătire
+        hoc_dance_events: Petrecere cu dans - Evenimente
+        hoc_dance_properties: Petrecere cu dans - Proprietăţi
+        hoc_dance_congrats: Petrecere cu dans - Petrecerea continuă!
+        'Teaching CS Fundamentals: How the Course Works': 'Predarea cursului Fundamentele CS: Cum funcționează cursul'
+        elem_pd_2: Știința calculatoarelor în școala elementară - PD film 2/2
+        what_is_cs: Ce este știința calculatoarelor?
+        repeat_block: Utilizarea blocului ”repetă” (repeat)
+        lesson_planning: Planificare lecție
+        opd_closing: 'Predarea cursului Fundamentele CS: Închiderea & Pasul următor'
+        why_unplugged_lessons: Pregătire pentru activități fără conectare
+        writing_first_program: Scrierea primului program de calculator
+        conditionals_with_cards: Lecție fără conectare în acțiune - Condiționale cu carduri
+        songwriting_with_functions: Lecție fără conectare în acțiune - Scrierea de cântece cu funcții
+        what_is_an_event: Ce este un eveniment?
+        teaching_cs_pair_programming: 'Predarea cursului Fundamentele CS: Programarea pe perechi'
+        teaching_problem_solving: 'Predarea cursului Fundamentele CS: Predarea modalităților de rezolvare a problemelor'
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc

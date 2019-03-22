@@ -565,46 +565,46 @@ zh-TW:
         mc_9_c: 用“放置火炬”把火炬放在你站的地方。
       CourseD_Dance_Party_01_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 確保舞者出現在螢幕上。
+          **我要怎麼過關？**
+          * 確定有個舞者在畫面。
 
-          *此層級在 4 個小節後結束。*
+          *這個關卡會在 4 個小節後結束。*
         challenges: |-
-          **可選挑戰**
+          **額外挑戰**
           * 選擇不同的歌曲播放。
-          * 選擇一個看起來像麋鹿的不同項目！
-          * 重新命名您的舞者。
+          * 重新命名你的舞者。
       CourseD_Dance_Party_02_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 舞者需要在 4 小節後切換到新的動作。
+          **我要怎麼通過這個關卡？**
 
-          *該層級在 8 個小節後結束。*
+          * 舞者要在 4 小節後換個新的舞姿。
+
+          *這個關卡會在 7 小節後結束。*
       CourseD_Dance_Party_03_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 6 個小節後，您的舞者需要進行與 4 小節之後不同的舞蹈。
+          * 在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
 
-          *該層級在 12 個小節後結束。*
+          *這個關卡會在 11 小節後結束。*
       CourseD_Dance_Party_04_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *此層級在 10 個小節後結束。*
+          *這個關卡會在 9 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
       CourseD_Dance_Party_06_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要至少有兩個舞者。
+          * 你至少添加兩個舞者。
 
-          *此層級在 6 個小節後結束。*
+          *這個關卡會在 5 小節後結束。*
         challenges: |-
           **可選挑戰**
 
@@ -612,50 +612,50 @@ zh-TW:
           * 讓所有舞者在歌曲的不同時間點執行不同的動作。
       CourseD_Dance_Party_08_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個舞者需要有 100 以外的尺寸。
+          * 兩個舞者的尺寸必須超過 100。
 
-          *此層級在 6 個小節後結束。*
+          *這個關卡會在 5 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
       CourseD_Dance_Party_09_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 變更至少一個舞者的色調。
+          * 你至少要添加一個舞者。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 7 小節後結束。*
       CourseD_Dance_Party_10_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個或更多的舞者屬性必須變更。
+          * 兩個以上的舞者的屬性必須有改變。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 7 小節後結束。*
       CourseD_Dance_Party_11_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 7 個小節。*
       CourseD_Dance_Party_11_5_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 7 個小節。*
       CourseD_Dance_Party_11b_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 使用「按下左箭頭時」程式積木，讓機器人在您按下時進行舞蹈動作。
+          * 使用 `當左鍵被按下` 積木讓舞者在你按下按鍵時跳個舞。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 7小節後結束。*
       CourseE_HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "看到**海燈籠** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) 了嗎？如何有條件地使用它們以穿越海洋遺址？\n\n"
       CourseE_HOC 2018 Level_9b_authored_hint:
@@ -664,79 +664,79 @@ zh-TW:
         Course_4_Play_Lab_Vars_2_a: 確定在 `dog_speed`（小狗的速度）上設定的數值要大於 `cat_speed`（小貓的速度）。
       Dance short test 2_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *此層級在 10 個小節後結束。*
+          *這個關卡會在 10 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
       Dance short test_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *此層級在 10 個小節後結束。*
+          *這個關卡會在 10 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
       Dance_Party_01_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 確保舞者出現在螢幕上。
+          **我要怎麼過關？**
+          * 確定有個舞者在畫面。
 
-          *此層級在 4 個小節後結束。*
+          *這個關卡會在 4 個小節後結束。*
         challenges: |-
-          **可選挑戰**
+          **額外挑戰**
           * 選擇不同的歌曲播放。
-          * 選擇一個看起來像麋鹿的不同項目！
-          * 重新命名您的舞者。
+          * 重新命名你的舞者。
       Dance_Party_01_low_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 確保舞者出現在螢幕上。
+          **我要怎麼過關？**
+          * 確定有個舞者在畫面。
 
-          *此層級在 4 個小節後結束。*
+          *這個關卡會在 4 個小節後結束。*
         challenges: |-
-          **可選挑戰**
+          **額外挑戰**
           * 選擇不同的歌曲播放。
           * 選擇一個看起來像麋鹿的不同項目！
-          * 重新命名您的舞者。
+          * 重新命名你的舞者。
       Dance_Party_02_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 舞者需要在 4 小節後切換到新的動作。
+          **我要怎麼通過這個關卡？**
 
-          *該層級在 8 個小節後結束。*
+          * 舞者要在 4 小節後換個新的舞姿。
+
+          *這個關卡會在 7 小節後結束。*
       Dance_Party_03_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 6 個小節後，您的舞者需要進行與 4 小節之後不同的舞蹈。
+          * 在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
 
-          *該層級在 12 個小節後結束。*
+          *這個關卡會在 11 小節後結束。*
       Dance_Party_04_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *此層級在 10 個小節後結束。*
+          *這個關卡會在 9 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
       Dance_Party_06_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要至少有兩個舞者。
+          * 你至少添加兩個舞者。
 
-          *此層級在 6 個小節後結束。*
+          *這個關卡會在 5 小節後結束。*
         challenges: |-
           **可選挑戰**
 
@@ -744,99 +744,100 @@ zh-TW:
           * 讓所有舞者在歌曲的不同時間點執行不同的動作。
       Dance_Party_08_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個舞者需要有 100 以外的尺寸。
+          * 兩個舞者的尺寸必須超過 100。
 
-          *此層級在 6 個小節後結束。*
+          *這個關卡會在 5 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
       Dance_Party_09_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 變更至少一個舞者的色調。
+          * 你至少要添加一個舞者。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 7 小節後結束。*
       Dance_Party_1_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 確保舞者出現在螢幕上。
+          **我要怎麼過關？**
+          * 確定有個舞者在畫面。
 
-          *此層級在 4 個小節後結束。*
+          *這個關卡會在 4 個小節後結束。*
         challenges: |-
-          **可選挑戰**
+          **額外挑戰**
           * 選擇不同的歌曲播放。
           * 選擇一個看起來像麋鹿的不同項目！
-          * 重新命名您的舞者。
+          * 重新命名你的舞者。
       Dance_Party_10_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個或更多的舞者屬性必須變更。
+          * 兩個以上的舞者的屬性必須有改變。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 7 小節後結束。*
       Dance_Party_11.5_test_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 7 個小節。*
       Dance_Party_11_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 7 個小節。*
       Dance_Party_11_5_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 7 個小節。*
       Dance_Party_11b_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 使用「按下左箭頭時」程式積木，讓機器人在您按下時進行舞蹈動作。
+          * 使用 `當左鍵被按下` 積木讓舞者在你按下按鍵時跳個舞。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 7小節後結束。*
       Dance_Party_2_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 舞者需要在 4 小節後切換到新的動作。
+          **我要怎麼通過這個關卡？**
 
-          *該層級在 8 個小節後結束。*
+          * 舞者要在 4 小節後換個新的舞姿。
+
+          *這個關卡會在 8 小節後結束。*
       Dance_Party_3_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 6 個小節後，您的舞者需要進行與 4 小節之後不同的舞蹈。
+          * 在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
 
-          *該層級在 12 個小節後結束。*
+          *這個關卡會在 12 小節後結束。*
       Dance_Party_4_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *此層級在 10 個小節後結束。*
+          *這個關卡會在 10 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
       Dance_Party_5_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您的舞蹈必須在歌曲的前 12 個小節當中執行不同的動作。
+          * 你的舞蹈必須在歌曲的前 12 小節當中有不同的舞姿。
 
-          *此層級在 12 個小節後結束。*
+          *這個關卡會在 12 小節後結束。*
       Dance_Party_6_authored_hint:
         challenges: |-
           **可選挑戰**
@@ -845,22 +846,22 @@ zh-TW:
           * 讓所有舞者在歌曲的不同時間點執行不同的動作。
       Dance_Party_8_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個舞者需要有 100 以外的尺寸。
+          * 兩個舞者的尺寸必須超過 100。
 
-          *此層級在 6 個小節後結束。*
+          *這個關卡會在 6 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
       Dance_Party_9_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 變更至少一個舞者的色調。
+          * 你至少要添加一個舞者。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 8 小節後結束。*
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           這是第一個提示。
@@ -890,46 +891,47 @@ zh-TW:
         voyage_aquatic_9a: 真是美麗的珊瑚礁！藍色珊瑚應該要在**右**，還有紅色珊瑚應該要在**左**！
       HOC Dance 0_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 確保舞者出現在螢幕上。
+          **我要怎麼過關？**
+          * 確定有個舞者在畫面。
 
-          *此層級在 4 個小節後結束。*
+          *這個關卡會在 4 個小節後結束。*
         challenges: |-
-          **可選挑戰**
+          **額外挑戰**
           * 選擇不同的歌曲播放。
           * 選擇一個看起來像麋鹿的不同項目！
-          * 重新命名您的舞者。
+          * 重新命名你的舞者。
       HOC Dance 1_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 舞者需要在 4 小節後切換到新的動作。
+          **我要怎麼通過這個關卡？**
 
-          *該層級在 8 個小節後結束。*
+          * 舞者要在 4 小節後換個新的舞姿。
+
+          *這個關卡會在 8 小節後結束。*
       HOC Dance 2_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 6 個小節後，您的舞者需要進行與 4 小節之後不同的舞蹈。
+          * 在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
 
-          *該層級在 12 個小節後結束。*
+          *這個關卡會在 12 小節後結束。*
       HOC Dance 3_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *此層級在 10 個小節後結束。*
+          *這個關卡會在 10 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
       HOC Dance 4_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您的舞蹈必須在歌曲的前 12 個小節當中執行不同的動作。
+          * 你的舞蹈必須在歌曲的前 12 小節當中有不同的舞姿。
 
-          *此層級在 12 個小節後結束。*
+          *這個關卡會在 12 小節後結束。*
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **可選挑戰**
@@ -938,43 +940,43 @@ zh-TW:
           * 讓所有舞者在歌曲的不同時間點執行不同的動作。
       HOC Dance 6_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個舞者需要有 100 以外的尺寸。
+          * 兩個舞者的尺寸必須超過 100。
 
-          *此層級在 6 個小節後結束。*
+          *這個關卡會在 6 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
       HOC Dance 7_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 變更至少一個舞者的色調。
+          * 你至少要添加一個舞者。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 8 小節後結束。*
       HOC Dance 8_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個或更多的舞者屬性必須變更。
+          * 兩個以上的舞者的屬性必須有改變。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 8 小節後結束。*
       HOC Dance 9_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 8 個小節。*
       HOC Dance make group_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 8 個小節。*
       Harvesting_authored_hint:
         pointer_harvester_test: 哪種積木可以幫助我判斷（檢查還有做決定）？
       Inspirational Artwork_authored_hint:
@@ -1066,11 +1068,11 @@ zh-TW:
       MC_HOC_2017_07_Cole_authored_hint:
         MC_HOC_2017_07_Cole_c: 你所需要做的就是讓特工為你掃清通往礦車的道路。
         MC_HOC_2017_07_Cole_a: 若要解決此版圖，請找出「清除路徑」的功能，並使用工具箱中小型綠色「清除路徑」方塊，依照自己的所需次數呼叫。
-        MC_HOC_2017_07_Cole_b: 請嘗試混合功能方塊與工具箱中的其他方塊，以協助您解決此版圖。
+        MC_HOC_2017_07_Cole_b: 試著混合函式積木和工具箱中的其它積木，看看能不能幫助你解決這個關卡。
       MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_c: 你所需要做的就是讓特工為你掃清通往礦車的道路。
         MC_HOC_2017_07_Cole_a: 若要解決此版圖，請找出「清除路徑」的功能，並使用工具箱中小型綠色「清除路徑」方塊，依照自己的所需次數呼叫。
-        MC_HOC_2017_07_Cole_b: 請嘗試混合功能方塊與工具箱中的其他方塊，以協助您解決此版圖。
+        MC_HOC_2017_07_Cole_b: 試著混合函式積木和工具箱中的其它積木，看看能不能幫助你解決這個關卡。
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           按「執行 Agent」！ 
@@ -1249,10 +1251,11 @@ zh-TW:
         test_hint: 這是測試用提示。
       Ryan_Demo_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 舞者需要在 4 小節後切換到新的動作。
+          **我要怎麼通過這個關卡？**
 
-          *該層級在 8 個小節後結束。*
+          * 舞者要在 4 小節後換個新的舞姿。
+
+          *這個關卡會在 7 小節後結束。*
       Underground Avoiding Lava_authored_hint:
         mc_11_a: 所有的代碼都是用來檢查熔岩並處理它的。您所需要做的就是添加一個程式積木來移動。
         mc_11_b: 你的“前進”命令是否應該進入“if”語句或之後再進入？
@@ -3115,6 +3118,8 @@ zh-TW:
           - 使用函式
           - 向前移動 100 + 75 像素
           - 使用函式
+      courseD_artist_functions5_authored_hint:
+        courseD_artist_functions5_b: 利用函式可以很容易在任何使用呼叫先前儲存的程式，不要只是在裡頭用迴圈！
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: "試著用`跳躍-向前`積木，讓小藝術家在畫完一個正方形後，跳到下一個要開始的地方。\n\n如果你的正方形是 20 像素高，而且兩個正方形相隔 20 像素遠，你需要跳多遠？"
       courseD_artist_nestedLoops3_2018_authored_hint:
@@ -3188,6 +3193,12 @@ zh-TW:
           - 使用函式
           - 向前移動 100 + 75 像素
           - 使用函式
+      courseE_artist_functions5_authored_hint:
+        courseD_artist_functions5_b: 利用函式可以很容易在任何使用呼叫先前儲存的程式，不要只是在裡頭用迴圈！
+      courseE_artist_functions5_2018_authored_hint:
+        courseD_artist_functions5_b: 利用函式可以很容易在任何使用呼叫先前儲存的程式，不要只是在裡頭用迴圈！
+      courseE_artist_functions5_2019_authored_hint:
+        courseD_artist_functions5_b: 利用函式可以很容易在任何使用呼叫先前儲存的程式，不要只是在裡頭用迴圈！
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: 別忘了在每個三角形畫完後轉向 60 度，你要在迴圈裡放置哪些程式積木呢？
       courseE_artist_ramp11_authored_hint:
@@ -3643,6 +3654,8 @@ zh-TW:
           **解決方案：**
 
           ![Solution Blocks](https://images.code.org/d64a0e22c1db1d98c35b243bca6460ab-image-1469727090121.png)
+      grade4_artist_functions_stars2_authored_hint:
+        grade4_artist_functions_stars2_b: 利用函式可以很容易在任何使用呼叫先前儲存的程式，不要只是在裡頭用迴圈！
       grade4_artist_nestedLoops_challenge2_authored_hint:
         Course_4_Artist_11_a: '這個半六邊形有一個**30 像素的邊**還有需要轉向**60 度**。  '
         Course_4_Artist_11_b: '這個 2/3 的三角形有一個**80 像素的邊**還有需要轉向**120 度**。 '

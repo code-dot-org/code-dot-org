@@ -478,6 +478,9 @@ fr:
         2-3_Maze_1_a: Pour utiliser un bloc ˋavancerˋ, fais-le glisser depuis la barre
           d'outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand l’exécution
           commenceˋ.
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Tu peux utiliser le bloc si chemin pour t’aider à faire les bons
+          virages.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'Le demi-hexagone a une **longueur de 30** et tourne
           à droite de **60 degrés**.  '

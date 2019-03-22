@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "تحتاج إلى استخدام رقصة مختلفة.",
   "danceFeedbackNeedEveryTwoMeasures": "تأكد من أنك تستخدم الكتلة البرمجية \"كل 2 إجراء\"",
   "danceFeedbackNeedMakeANewDancer": "استخدم الكتلة البرمجية \"اصنع جديداً\" لإنشاء راقص ثانٍ.",
+  "danceFeedbackKeyEvent": "",
   "measure": ""
 }

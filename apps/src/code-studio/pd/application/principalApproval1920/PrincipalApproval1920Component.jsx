@@ -384,7 +384,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         <PrivacyDialog
           show={this.state.isPrivacyDialogOpen}
           onHide={this.handleClosePrivacyDialog}
-          mode={PrivacyDialogMode.TEACHER_APPLICATION}
+          mode={PrivacyDialogMode.PRINCIPAL_APPROVAL}
         />
       </FormGroup>
     );

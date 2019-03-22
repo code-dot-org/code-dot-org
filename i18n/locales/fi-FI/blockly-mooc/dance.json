@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Sinun täytyy käyttää eri tanssia.",
   "danceFeedbackNeedEveryTwoMeasures": "Varmista, että käytät `joka toisella tahdilla`-blokkia.",
   "danceFeedbackNeedMakeANewDancer": "Käytä `tee uusi`-blokkia luodaksesi toisen tanssijan.",
+  "danceFeedbackKeyEvent": "",
   "measure": ""
 }
