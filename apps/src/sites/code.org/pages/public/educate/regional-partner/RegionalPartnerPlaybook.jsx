@@ -137,7 +137,7 @@ export default class RegionalPartnerPlaybook extends Component {
             {...card}
             buttonText="Learn More"
             allowWrap={true}
-            allowDangerouslySetInnerHtml={true}
+            allowMarkdown={true}
           />
         ))}
       </ResourceCardResponsiveContainer>
