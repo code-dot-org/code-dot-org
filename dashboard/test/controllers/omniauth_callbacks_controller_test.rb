@@ -1372,6 +1372,30 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     refute_includes section.students, other_user
   end
 
+  test "connect_provider: Teacher takeover of student transfers section enrollment" do
+    # Given I am a teacher
+    user = create :teacher
+
+    # And there exists a student
+    #   having credential X
+    #   and has no activity
+    other_user = create :student
+    credential = create :google_authentication_option, user: other_user
+    refute other_user.has_activity?
+    section = create :section
+    section.students << other_user
+
+    # When I add credential X
+    link_credential user,
+      type: credential.credential_type,
+      id: credential.authentication_id
+
+    # Then I should be enrolled in section Y instead of the other user
+    section.reload
+    assert_includes section.students, user
+    refute_includes section.students, other_user
+  end
+
   test "connect_provider: Successful takeover transfers ownership of sections" do
     # Given I am a teacher
     user = create :teacher
