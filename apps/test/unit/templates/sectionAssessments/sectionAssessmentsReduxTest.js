@@ -1,4 +1,5 @@
 import {assert} from '../../../util/configuredChai';
+import sinon from 'sinon';
 import sectionAssessments, {
   setAssessmentResponses,
   setSurveys,
@@ -31,6 +32,7 @@ import sectionAssessments, {
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('sectionAssessmentsRedux', () => {
   const initialState = sectionAssessments(undefined, {});
@@ -193,13 +195,14 @@ describe('sectionAssessmentsRedux', () => {
     });
   });
 
-  //TODO how to deal with experiment?
+  //TODO When turn off experiment come in and delete cases that are no longer needed
   describe('getCurrentScriptAssessmentList - Not Feedback Section', () => {
-    it('gets a list of assessments in current script with no feedback option added', () => {
+    it('gets a list of assessments - script is not csd or csp - experiment on', () => {
+      sinon.stub(experiments, 'isEnabled').returns(true);
       const rootState = {
         scriptSelection: {
           scriptId: 123,
-          script_name: 'learn-cs'
+          validScripts: [{id: 123, script_name: 'learn-cs'}]
         },
         sectionAssessments: {
           ...initialState,
@@ -225,16 +228,49 @@ describe('sectionAssessmentsRedux', () => {
       assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
       assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
       assert.deepEqual(result[2], {id: 9, name: 'Survey 9'});
+      experiments.isEnabled.restore();
     });
-  });
 
-  //TODO how to deal with experiment?
-  describe('getCurrentScriptAssessmentList with feedback option', () => {
-    it('gets a list of assessments in current script with feedback option added', () => {
+    it('gets a list of assessments - script is not csd or csp - experiment off', () => {
+      sinon.stub(experiments, 'isEnabled').returns(false);
       const rootState = {
         scriptSelection: {
           scriptId: 123,
-          script_name: 'csp8-2011'
+          validScripts: [{id: 123, script_name: 'learn-cs'}]
+        },
+        sectionAssessments: {
+          ...initialState,
+          assessmentQuestionsByScript: {
+            123: {
+              7: {id: 7, name: 'Assessment 7'},
+              8: {id: 8, name: 'Assessment 8'}
+            },
+            456: {
+              4: {id: 4, name: 'Assessment 4'},
+              5: {id: 5, name: 'Assessment 5'}
+            }
+          },
+          surveysByScript: {
+            123: {
+              9: {stage_name: 'Survey 9'}
+            }
+          }
+        }
+      };
+      const result = getCurrentScriptAssessmentList(rootState);
+      assert.deepEqual(result.length, 3);
+      assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
+      assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
+      assert.deepEqual(result[2], {id: 9, name: 'Survey 9'});
+      experiments.isEnabled.restore();
+    });
+
+    it('gets a list of assessments - script is csd or csp - experiment on', () => {
+      sinon.stub(experiments, 'isEnabled').returns(true);
+      const rootState = {
+        scriptSelection: {
+          scriptId: 123,
+          validScripts: [{id: 123, script_name: 'csp8-2011'}]
         },
         sectionAssessments: {
           ...initialState,
@@ -264,6 +300,41 @@ describe('sectionAssessmentsRedux', () => {
         id: 0,
         name: 'All teacher feedback in this unit'
       });
+      experiments.isEnabled.restore();
+    });
+
+    it('gets a list of assessments - script is csd or csp - experiment off', () => {
+      sinon.stub(experiments, 'isEnabled').returns(false);
+      const rootState = {
+        scriptSelection: {
+          scriptId: 123,
+          validScripts: [{id: 123, script_name: 'csp8-2011'}]
+        },
+        sectionAssessments: {
+          ...initialState,
+          assessmentQuestionsByScript: {
+            123: {
+              7: {id: 7, name: 'Assessment 7'},
+              8: {id: 8, name: 'Assessment 8'}
+            },
+            456: {
+              4: {id: 4, name: 'Assessment 4'},
+              5: {id: 5, name: 'Assessment 5'}
+            }
+          },
+          surveysByScript: {
+            123: {
+              9: {stage_name: 'Survey 9'}
+            }
+          }
+        }
+      };
+      const result = getCurrentScriptAssessmentList(rootState);
+      assert.deepEqual(result.length, 3);
+      assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
+      assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
+      assert.deepEqual(result[2], {id: 9, name: 'Survey 9'});
+      experiments.isEnabled.restore();
     });
   });
 
@@ -640,7 +711,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           scriptSelection: {
             scriptId: 2,
-            script_name: 'csd7-2009'
+            validScripts: [{id: 2, script_name: 'csd8-2011'}]
           }
         };
         const result = isCurrentScriptCSD(state);
@@ -652,7 +723,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           scriptSelection: {
             scriptId: 2,
-            script_name: 'learn-cs'
+            validScripts: [{id: 2, script_name: 'learn-cs'}]
           }
         };
         const result = isCurrentScriptCSD(state);
@@ -660,30 +731,48 @@ describe('sectionAssessmentsRedux', () => {
       });
     });
 
-    //TODO how to deal with experiment?
+    //TODO: Remove cases for experiment when remove experiment
     describe('doesCurrentCourseUseFeedback', () => {
-      it('returns true when the current script is CSD or CSP', () => {
+      it('returns true when the current script is CSD or CSP- experiment on', () => {
+        sinon.stub(experiments, 'isEnabled').returns(true);
         const state = {
           ...rootState,
           scriptSelection: {
             scriptId: 2,
-            script_name: 'csp8-2011'
+            validScripts: [{id: 2, script_name: 'csp8-2011'}]
           }
         };
         const result = doesCurrentCourseUseFeedback(state);
         assert.deepEqual(result, true);
+        experiments.isEnabled.restore();
       });
 
-      it('returns false when the current script is not CSD or CSP', () => {
+      it('returns false when the current script is not CSD or CSP- experiment on', () => {
+        sinon.stub(experiments, 'isEnabled').returns(true);
         const state = {
           ...rootState,
           scriptSelection: {
             scriptId: 2,
-            script_name: 'learn-cs'
+            validScripts: [{id: 2, script_name: 'learn-cs'}]
           }
         };
         const result = doesCurrentCourseUseFeedback(state);
         assert.deepEqual(result, false);
+        experiments.isEnabled.restore();
+      });
+
+      it('returns false when experiment off', () => {
+        sinon.stub(experiments, 'isEnabled').returns(false);
+        const state = {
+          ...rootState,
+          scriptSelection: {
+            scriptId: 2,
+            validScripts: [{id: 2, script_name: 'csp8-2011'}]
+          }
+        };
+        const result = doesCurrentCourseUseFeedback(state);
+        assert.deepEqual(result, false);
+        experiments.isEnabled.restore();
       });
     });
 
@@ -1176,54 +1265,59 @@ describe('sectionAssessmentsRedux', () => {
       it('returns an array of objects', () => {
         const stateWithFeedback = {
           ...rootState,
+          scriptSelection: {
+            scriptId: 2
+          },
           sectionAssessments: {
             ...rootState.sectionAssessments,
             feedbackByScript: {
-              13: {
-                studentName: 'Mike',
-                stageNum: '4',
-                stageName: 'Loops',
-                levelNum: '7',
-                keyConcept: 'You should be learning about loops',
-                performanceLevelDetails: 'A loop is in the code',
-                performance: 'exceeds',
-                comment: 'Nice job using loops!',
-                timestamp: '03/21/19 at 12:17:17 PM'
-              },
-              40: {
-                studentName: 'Anne',
-                stageNum: '8',
-                stageName: 'Functions',
-                levelNum: '10',
-                keyConcept: '',
-                performanceLevelDetails: '',
-                performance: '',
-                comment: '',
-                timestamp: '05/08/18 at 6:21:11 AM'
-              },
-              52: {
-                studentName: 'Mike',
-                stageNum: '3',
-                stageName: 'Variables',
-                levelNum: '3',
-                keyConcept: 'Use variables to help and make coding better.',
-                performanceLevelDetails:
-                  'You have some variables but are still missing out on their amazingness',
-                performance: 'approaches',
-                comment:
-                  'There are at least 3 more variables you could be using.',
-                timestamp: '03/21/19 at 12:17:17 PM'
-              },
-              61: {
-                studentName: 'Anne',
-                stageNum: '3',
-                stageName: 'Variables',
-                levelNum: '3',
-                keyConcept: 'Use variables to help and make coding better.',
-                performanceLevelDetails: 'You uses no variables',
-                performance: 'no evidence',
-                comment: "Why didn't you use variables?",
-                timestamp: '03/21/19 at 12:21:17 PM'
+              2: {
+                13: {
+                  studentName: 'Mike',
+                  stageNum: '4',
+                  stageName: 'Loops',
+                  levelNum: '7',
+                  keyConcept: 'You should be learning about loops',
+                  performanceLevelDetails: 'A loop is in the code',
+                  performance: 'exceeds',
+                  comment: 'Nice job using loops!',
+                  timestamp: '03/21/19 at 12:17:17 PM'
+                },
+                40: {
+                  studentName: 'Anne',
+                  stageNum: '8',
+                  stageName: 'Functions',
+                  levelNum: '10',
+                  keyConcept: '',
+                  performanceLevelDetails: '',
+                  performance: '',
+                  comment: '',
+                  timestamp: '05/08/18 at 6:21:11 AM'
+                },
+                52: {
+                  studentName: 'Mike',
+                  stageNum: '3',
+                  stageName: 'Variables',
+                  levelNum: '3',
+                  keyConcept: 'Use variables to help and make coding better.',
+                  performanceLevelDetails:
+                    'You have some variables but are still missing out on their amazingness',
+                  performance: 'approaches',
+                  comment:
+                    'There are at least 3 more variables you could be using.',
+                  timestamp: '03/21/19 at 12:17:17 PM'
+                },
+                61: {
+                  studentName: 'Anne',
+                  stageNum: '3',
+                  stageName: 'Variables',
+                  levelNum: '3',
+                  keyConcept: 'Use variables to help and make coding better.',
+                  performanceLevelDetails: 'You uses no variables',
+                  performance: 'no evidence',
+                  comment: "Why didn't you use variables?",
+                  timestamp: '03/21/19 at 12:21:17 PM'
+                }
               }
             }
           }
