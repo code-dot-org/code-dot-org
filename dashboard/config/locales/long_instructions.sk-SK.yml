@@ -264,6 +264,11 @@ sk:
 
         Keď skončíš, môžeš "Zdieľať" tvoju prácu s kamarátmi cez telefón, alebo s linkom. Vytvor si vlastný účet, s ktorým budeš pokračovať v budovaní v App Labe!
       Artist Autorun Test: Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.
+      Course 4 Artist Binary 1: |-
+        Tu máme funkciu, ktorá vezme reťazec binárnych 1 a 0 a spracováva ich z ľava do prava, z hore dolu.
+        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje, pokiaľ na 0, tak štvorec nechá tak.
+
+        ** Skús spustiť kód, aby si videl ako Umelec použije binárny reťazec na namaľovanie obrazca. **
       CourseD_Dance_Party_01: |-
         *Spravme si tanečnú párty!*
 
@@ -324,6 +329,49 @@ sk:
         **S použitím šípiek donúť Robota tancovať špagát-tlesk-špagát-tlesk ako najrýchlejšie vieš!**
       CourseD_Dance_Party_12: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý
         môžeš zdieľať s kamarátmi.
+      D_Frozen_nested3: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Poďme z toho vytvoriť snehovú vločku.\"_\n\nPo nakreslení radu tvarov skoč
+        s Elsou späť do stredu. Použi blok `skoč na pozíciu v strede do stredu` a
+        otoč ju, aby ďalší rad tvarov nakreslila iným smerom.\n\nAké úžasné snehové
+        vločky vieš vytvoriť!\n<hr/>\nPozri sa na tieto príklady s polygónmi:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nAbstraktné
+        tvary môžu vytvoriť snehovú vločku podobnú niektorej z týchto:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      D_Frozen_nested4: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Čo sa stane, ak nakreslíme jednu snehovú vločku na druhú?\"_\n\nSkús navrstviť
+        dve snehové vločky vytvorené z odlišných tvarov na seba s malým natočením
+        medzi nimi - pozri čo vznikne! "
+      D_Frozen_nested5: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Využi svoju tvorivú fantáziu a vyskúšaj rôzne tvary a uhly - uvidíme aké
+        rôzne nové snehové vločky sa ti podarí nakresliť!"_  '
+      D_Frozen_nested6: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Poďme teraz skúsiť niečo nové. Nastal čas korčuľovať sa cik-cak.\"_\n\n\n<img
+        src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
+        width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\nNakresli
+        schodový vzor. Použi otočky medzi 75 a 105 stupňami, ale uisti sa, že pre
+        pravú i ľavú otočku používaš rovnaký uhol.  \n(Neskôr uvidíš prečo.)"
+      D_Frozen_nested7: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Teraz poďme späť po tej istej ceste.\"_\n\nOtoč sa o 180 stupňov a nakresli
+        znovu presne ten istý vzor!  \n\n- Ďalšie úlohy budú jednoduchšie, ak vložíš
+        svoj kód do cyklu. Nechaj Elsu kresliť, urob otočku o 180 stupňov, zase nechaj
+        Elsu kresliť a znovu otočka o 180 stupňov.\n\n<hr/>\n\nTakto vyzerajú schody
+        pri použití uhla 76 stupňov:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
+      D_Frozen_nested8: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Trochu sa zatočme a vyrobme si opäť snehovú vločku."_
+
+        Zrotuj svoj obrazec 5 alebo 6 krát dookola.
+        - Ak budeš rotovať 5 krát,  skús obrazec otáčať o 72 stupňov
+        - Ak zvolíš 6 otočení, skús použiť 60 stupňov
+        <hr/>
+
+        Tu je príklad, kde Elsa zrotovala obrazec 6 krát:
+
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      D_Frozen_nested9: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"A čo urobíme teraz? Poďme si vytvoriť našu vlastnú zázračnú zimnú krajinu!"_
+
+        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľvek chceš!
+        - Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
+        - Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
+        - Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
       Dance Party 1-validated: "**Skús predvídať:** Tu je postavička s menom `alien1`!
         \n\nČo myslíš, že sa stane, keď na neho klikneš?  "
       Dance Party 1-validated_2019: "**Skús predvídať:** Tu je postavička s menom
@@ -786,13 +834,39 @@ sk:
       Testing Quantum Farmer: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných
         hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude
         zasypávať jamu až kým nebude zem vyrovnaná?  "
+      comment_intro_maze_2018: "*\"Hmm, čo robí tento program?\"*  \n\n---\n\nVyrieš
+        úlohu a použi vový blok <xml><block type=\"comment\">\n    <title name=\"TEXT\">
+        </title>\n  </block></xml>. Zapíš si tam svoje poznýmky. Pomôže ti to zapamätať
+        si čo program robí a prečo keď sa k nemu neskôr vrátiš.\n  \n\nKomentáre slúžia
+        len pre **teba** a nijako neovplyvnia vykonávanie programu."
+      comment_intro_maze_2018_2019: "*\"Hmm, čo robí tento program?\"*  \n\n---\n\nVyrieš
+        úlohu a použi vový blok <xml><block type=\"comment\">\n    <title name=\"TEXT\">
+        </title>\n  </block></xml>. Zapíš si tam svoje poznýmky. Pomôže ti to zapamätať
+        si čo program robí a prečo keď sa k nemu neskôr vrátiš.\n  \n\nKomentáre slúžia
+        len pre **teba** a nijako neovplyvnia vykonávanie programu."
+      course1_artist_loops_challenge4: '*"Poďme hádzať kockami! Pomôžeš mi ich nakresliť?"*'
       course1_maze_debugging_challenge2: Analyzuj tento level. Toto sú tie správne
         bloky, ale sú v nesprávnom poradí!
+      course2_artist_nestedLoops_challenge1: |-
+        Prídeš na to, ako nakresliť takýto obrázok?
+
+        - Oba útvary majú **strany o dĺžke 50 pixelov**
+        - Pri kreslení *osemuholníkov* sa musíš otáčať o ** 45 stupňov**.
+        - Pri kreslení *trojuholníkov* sa musíš otáčať o **120 stupňov**.
+      course2_collector_loops_challenge2: "*\"Poďme pátrať po poklade - pomocou cyklov!\"*
+        \n\nPomôž zberateľke nájsť chyby (krokovaním) tohto kódu. Vyzbieraj všetok
+        poklad!"
       course3_maze_debugging_challenge2: "*Ak sa otáčam príliš často, môže sa mi zakrútiť
         hlava! Pomôž mi dostať sa k prasaťu iba pomocou štyroch blokov `otoč sa`.*"
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny
         a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž
         a nahraď niečim úplne iným)
+      course4_collector_nested_loops_challenge2: "*\"Poďme pátrať po poklade - pomocou
+        cyklov!\"* \n\nPomôž zberateľke dostať sa k aspoň 2-om pokladom len s blokmi,
+        ktoré máš v paneli nástrojov. Je však možné pozbierať všetky 4 poklady."
+      course4_harvester_nested_loops_challenge1: '*"Potrebujem pomoc na farme! Pomôž
+        mi pozbierať túto kukuricu a použi na to len tie bloky, ktoré sú v paneli
+        nástrojov."*'
       courseA_collector_loops3: Ako môze Laurel pozbierať všetkých päť kôp drahokamov
         s použitím iba jedného bloku <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: Ako môze Laurel pozbierať všetkých päť kôp drahokamov
@@ -810,9 +884,9 @@ sk:
       courseA_maze_ramp3a_2019: Zober <xml><block type="maze_moveNorth"/></xml> z
         panelu nástrojov a pridaj ich na spodok ostatných blokov, aby si dokončíl
         tento kód, potom klikni "▶ Spustiť".
-      courseA_maze_ramp3b_2018: "Na konci tohto kódu je naviac jeden blok! \n\nPotiahni
+      courseA_maze_ramp3b_2018: "Na konci tohto kódu je jeden blok navyše! \n\nPotiahni
         ho naspäť do panelu nástrojov, aby si ho zahodil preč."
-      courseA_maze_ramp3b_2019: "Na konci tohto kódu je naviac jeden blok! \n\nPotiahni
+      courseA_maze_ramp3b_2019: "Na konci tohto kódu je jeden blok navyše! \n\nPotiahni
         ho naspäť do panelu nástrojov, aby si ho zahodil preč."
       courseA_maze_ramp4_2018: "*\"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu.\"*
         \n\nVyhni sa TNT, inak bude lietať perie!"
@@ -858,6 +932,58 @@ sk:
         na spodok ostatných blokov, aby si dokončíl tento kód?
       courseB_Scrat_ramp5a_2018: Vyskúšaj vyriešiť celú túto úlohu sám!
       courseB_Scrat_ramp5a_2019: Vyskúšaj vyriešiť celú túto úlohu sám!
+      courseB_artist_loops10: |-
+        Použi, čo si sa naučil, a nakresli obrázok toho, čo si myslíš, že umelec uvidel, keď prišiel domov.
+
+        ___
+        ### Ideas
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseB_artist_loops10_2018: |-
+        Použi, čo si sa naučil, a nakresli obrázok toho, čo si myslíš, že umelec uvidel, keď prišiel domov.
+
+        ___
+        ### Ideas
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseB_artist_loops10_2019: |-
+        Použi, čo si sa naučil, a nakresli obrázok toho, čo si myslíš, že umelec uvidel, keď prišiel domov.
+
+        ___
+        ### Ideas
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseB_artist_loops6: Za kríkmi je nádherný vinič plný kvetov. Dokáźeš sa vyštverať
+        po viniči, aby si uvidel kam smeruje?
+      courseB_artist_loops6_2018: Za kríkmi je nádherný vinič plný kvetov. Dokáźeš
+        sa vyštverať po viniči, aby si uvidel kam smeruje?
+      courseB_artist_loops6_2019: Za kríkmi je nádherný vinič plný kvetov. Dokáźeš
+        sa vyštverať po viniči, aby si uvidel kam smeruje?
+      courseB_artist_loops7: "**Výzva:** Toto je skrytá záhrada! Prejdime sa okolo."
+      courseB_artist_loops7_2018: "**Výzva:** Toto je skrytá záhrada! Prejdime sa
+        okolo."
+      courseB_artist_loops7_2019: "**Výzva:** Toto je skrytá záhrada! Prejdime sa
+        okolo."
+      courseB_artist_loops_challenge1: '*"Poďme hádzať kockami! Pomôžeš mi ich nakresliť?"*'
+      courseB_artist_loops_challenge1_2018: '*"Poďme hádzať kockami! Pomôžeš mi ich
+        nakresliť?"*'
+      courseB_artist_loops_challenge1_2019: '*"Poďme hádzať kockami! Pomôžeš mi ich
+        nakresliť?"*'
+      courseB_artist_loops_challenge2: Nakresli toľko X, koľko len dokážes. Dokážeš
+        dostať 3 do jedného riadku?
+      courseB_artist_loops_challenge2_2018: Nakresli toľko X, koľko len dokážes. Dokážeš
+        dostať 3 do jedného riadku?
+      courseB_artist_loops_challenge2_2019: Nakresli toľko X, koľko len dokážes. Dokážeš
+        dostať 3 do jedného riadku?
       courseB_collector_loops1_2018: "**Voľná hra:** Pohybuj Laurel po hracej ploche
         a pozbieraj toľko drahokamov, koľko zvládneš. Na splnenie úlohy musíš zobrať
         aspoň jeden.  \n\n---\n\nPresuň bloky na pracovú plochu a skús prísť na to,
@@ -884,6 +1010,18 @@ sk:
         s použitím iba jedného bloku <xml><block type="maze_moveEast"/></xml>?
       courseB_collector_loops3_2019: Ako môze Laurel pozbierať všetkých päť kôp drahokamov
         s použitím iba jedného bloku <xml><block type="maze_moveEast"/></xml>?
+      courseB_collector_loops_challenge2a: |-
+        *"Poďme zbierať drahokamy!"*
+
+        Pomôž Laurel pozbierať aspoň **5** drahokamov, aby si dokončil túto úlohu.
+      courseB_collector_loops_challenge2a_2018: |-
+        *"Poďme zbierať drahokamy!"*
+
+        Pomôž Laurel pozbierať aspoň **5** drahokamov, aby si dokončil túto úlohu.
+      courseB_collector_loops_challenge2a_2019: |-
+        *"Poďme zbierať drahokamy!"*
+
+        Pomôž Laurel pozbierať aspoň **5** drahokamov, aby si dokončil túto úlohu.
       courseB_iceage_loops1: Pomôž Scratovi prejsť po šmykľavom ľade až k žaluďu!
       courseB_iceage_loops10: Pomôž Scratovi prejsť celú cestu až k vytúženému žaluďu!
       courseB_iceage_loops10_2019: Pomôž Scratovi prejsť celú cestu až k vytúženému
@@ -926,6 +1064,36 @@ sk:
         nájsť cestu skôr, ako minieš všetky bloky?
       courseB_maze_seq_challenge1_2019: Máš iba štyri kusy z každého bloku. Dokážes
         nájsť cestu skôr, ako minieš všetky bloky?
+      courseB_playLab_events1: "Táto hra sa volá \"Play Lab\". \n\nPozrime sa, či
+        prídeš na to, čo každý blok robí."
+      courseB_playLab_events1_2018: "Táto hra sa volá \"Play Lab\". \n\nPozrime sa,
+        či prídeš na to, čo každý blok robí."
+      courseB_playLab_events1_2019: "Táto hra sa volá \"Play Lab\". \n\nPozrime sa,
+        či prídeš na to, čo každý blok robí."
+      courseB_playlab_events3: Použi udalosť, aby Dračica Daisy zmenila náhodne ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
+        náladu , ked na ňu klikneš.
+      courseB_playlab_events3_2018: Použi udalosť, aby Dračica Daisy zmenila náhodne
+        ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
+        náladu , ked na ňu klikneš.
+      courseB_playlab_events3_2019: Použi udalosť, aby Dračica Daisy zmenila náhodne
+        ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
+        náladu , ked na ňu klikneš.
+      courseB_playlab_events4_2018: |-
+        Doba rytierov! Dostaň draka, aby si dokončil tento level.
+
+        Pridaj takú udalosť, že sa rytier pohne smerom k drakovi, keď stlačíš ľavú šípku.
+      courseB_playlab_events4_2019: |-
+        Doba rytierov! Dostaň draka, aby si dokončil tento level.
+
+        Pridaj takú udalosť, že sa rytier pohne smerom k drakovi, keď stlačíš ľavú šípku.
+      courseB_playlab_events5_2018: |-
+        Teraz pridaj takú udalosť, že rytier utečie preč od draka, keď stlačíš pravú šípku.
+
+        Pohni rytiera doprava, aby si dokončil tento level.
+      courseB_playlab_events5_2019: |-
+        Teraz pridaj takú udalosť, že rytier utečie preč od draka, keď stlačíš pravú šípku.
+
+        Pohni rytiera doprava, aby si dokončil tento level.
       courseB_playlab_events6: |-
         Pomôž tvojmu rytierovi získať všetky vlajky!
 
@@ -956,6 +1124,27 @@ sk:
         ---
 
         Na dokončenie úlohy prejdi cez všetky ciele a potom naraz do draka.
+      courseB_playlab_events_challenge1: "Je čas na Veľké Zvieracie Preteky! Prikáž
+        zviaratám hýbať sa dole, keď stlačíš `▼`. \n\nKto bude najrýchlejší?"
+      courseB_playlab_events_challenge1_2018: "Je čas na Veľké Zvieracie Preteky!
+        Prikáž zviaratám hýbať sa dole, keď stlačíš `▼`. \n\nKto bude najrýchlejší?"
+      courseB_playlab_events_challenge1_2019: "Je čas na Veľké Zvieracie Preteky!
+        Prikáž zviaratám hýbať sa dole, keď stlačíš `▼`. \n\nKto bude najrýchlejší?"
+      courseB_playlab_events_challenge2: |-
+        Nechajme zvieratá zmiznúť, keď na ne klikneš.
+        Teraz sa skús pohrať so psom, potom pomôž ostatným zvieratám, aby sa pridali. Môžeš pridať aj zvuky a body do skóre, aby si vytvoril hru Chytanie zvierat!
+
+         ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
+      courseB_playlab_events_challenge2_2018: |-
+        Nechajme zvieratá zmiznúť, keď na ne klikneš.
+        Teraz sa skús pohrať so psom, potom pomôž ostatným zvieratám, aby sa pridali. Môžeš pridať aj zvuky a body do skóre, aby si vytvoril hru Chytanie zvierat!
+
+         ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
+      courseB_playlab_events_challenge2_2019: |-
+        Nechajme zvieratá zmiznúť, keď na ne klikneš.
+        Teraz sa skús pohrať so psom, potom pomôž ostatným zvieratám, aby sa pridali. Môžeš pridať aj zvuky a body do skóre, aby si vytvoril hru Chytanie zvierat!
+
+         ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
       courseB_starWars_prog1: |-
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Choď pozbierať kusy kovu, BB-8!"_
 
@@ -1338,7 +1527,7 @@ sk:
         škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať
         aj tvoji kamaráti."
       courseC_harvester_loops1: |-
-        Opakovanie môžeš použiť aj na iné príkazy ako sú pohyby.
+        Opakovanie môžeš použiť aj na iné príkazy ako pohyb.
 
         Použi opakovanie na pozbieranie všetkých tekvíc.
       courseC_harvester_loops10: Pozbieraj všetky kukurice a tekvice.
@@ -1348,11 +1537,11 @@ sk:
       courseC_harvester_loops11_2018: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops11_2019: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops1_2018: |-
-        Opakovanie môžeš použiť aj na iné príkazy ako sú pohyby.
+        Opakovanie môžeš použiť aj na iné príkazy ako pohyb.
 
         Použi opakovanie na pozbieranie všetkých tekvíc.
       courseC_harvester_loops1_2019: |-
-        Opakovanie môžeš použiť aj na iné príkazy ako sú pohyby.
+        Opakovanie môžeš použiť aj na iné príkazy ako pohyb.
 
         Použi opakovanie na pozbieranie všetkých tekvíc.
       courseC_harvester_loops5: Pozbieraj všetky kukurice a tekvice.
@@ -1403,6 +1592,8 @@ sk:
         `otoč sa`.
       courseC_maze_loops8: "**Výzva:** Na vyriešenie tejto úlohy skombinuj nápady
         z predchádzajúcich levelov."
+      courseC_maze_loops_challenge2: Poďme pátrať po poklade - pomocou cyklov! Pomôž
+        zberateľke nájsť chyby (krokovaním) tohto kódu. Vyzbieraj všetok poklad!
       courseC_maze_programming1: V tejto úlohe pospájaj všetky bloky, klikni na tlačítko
         "Spustiť" a sleduj, čo sa stane!
       courseC_maze_programming1_2018: V tejto úlohe pospájaj všetky bloky, klikni
@@ -1550,6 +1741,12 @@ sk:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ideš BB-8!"_
 
         Ak chceš pozbierať všetky kusy šrotu, vytvor cyklus použitím len jedného bloku vo vnútri opakovania.
+      courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"BB-8, ideš!"_'
+      courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"BB-8, ideš!"_'
+      courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"BB-8, ideš!"_'
       courseC_starWars_loops6: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš to všetko pozbierať?"_
 
@@ -1598,24 +1795,518 @@ sk:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Pokračuj!"_
 
         Použi, čo si sa zatiaľ naučil a pozbieraj všetok šrot!
+      courseD_Frozen_nested2: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“A teraz si nakreslime viac rovnakých tvarov.”_\n\nVezmi svoj tvar a nakresli
+        ho dva alebo tri razy, medzi nimi skoč dopredu o niekoľko pixlov.  \n\n- Ak
+        skočíš dopredu o **menej** pixelov ako je šírka tvojho tvaru, tvary sa môžu
+        prekrývať\n- Ak skočíš dopredu o **viac** pixelov ako je šírka tvojho tvaru,
+        bude medzi nimi medzera\n\n<hr/>\n\nTvoje tvary možno budú v priamom rade
+        ako na týchto príkladoch:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>
+        \ <br/>\n\n\nAlebo možno budú tvoje tvary uložené do oblúka či kruhu ako tu:
+        \n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_Frozen_nested3: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Poďme z toho vytvoriť snehovú vločku.\"_\n\nPo nakreslení radu tvarov skoč
+        s Elsou späť do stredu. Použi blok `skoč na pozíciu v strede do stredu` a
+        otoč ju, aby ďalší rad tvarov nakreslila iným smerom.\n\nAké úžasné snehové
+        vločky vieš vytvoriť!\n<hr/>\nPozri sa na tieto príklady s polygónmi:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nAbstraktné
+        tvary môžu vytvoriť snehovú vločku podobnú niektorej z týchto:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_Frozen_nested4: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Čo sa stane, ak nakreslíme jednu snehovú vločku na druhú?\"_\n\nSkús navrstviť
+        dve snehové vločky vytvorené z odlišných tvarov na seba s malým natočením
+        medzi nimi - pozri čo vznikne! "
+      courseD_Frozen_nested5: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Využi svoju tvorivú fantáziu a vyskúšaj rôzne tvary a uhly - uvidíme aké
+        rôzne nové snehové vločky sa ti podarí nakresliť!"_  '
+      courseD_Frozen_nested6: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Poďme teraz skúsiť niečo nové. Nastal čas korčuľovať sa cik-cak.\"_\n\n\n<img
+        src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
+        width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\nNakresli
+        schodový vzor. Použi otočky medzi 75 a 105 stupňami, ale uisti sa, že pre
+        pravú i ľavú otočku používaš rovnaký uhol.  \n(Neskôr uvidíš prečo.)"
+      courseD_Frozen_nested7: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Teraz poďme späť po tej istej ceste.\"_\n\nOtoč sa o 180 stupňov a nakresli
+        znovu presne ten istý vzor!  \n\n- Ďalšie úlohy budú jednoduchšie, ak vložíš
+        svoj kód do cyklu. Nechaj Elsu kresliť, urob otočku o 180 stupňov, zase nechaj
+        Elsu kresliť a znovu otočka o 180 stupňov.\n\n<hr/>\n\nTakto vyzerajú schody
+        pri použití uhla 76 stupňov:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
+      courseD_Frozen_nested8: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Trochu sa zatočme a vyrobme si opäť snehovú vločku."_
+
+        Zrotuj svoj obrazec 5 alebo 6 krát dookola.
+        - Ak budeš rotovať 5 krát,  skús obrazec otáčať o 72 stupňov
+        - Ak zvolíš 6 otočení, skús použiť 60 stupňov
+        <hr/>
+
+        Tu je príklad, kde Elsa zrotovala obrazec 6 krát:
+
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      courseD_Frozen_nested9: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"A čo urobíme teraz? Poďme si vytvoriť našu vlastnú zázračnú zimnú krajinu!"_
+
+        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľvek chceš!
+        - Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
+        - Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
+        - Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
+      courseD_artist_7_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Teraz poďme späť po tej istej ceste.\"_\n\nOtoč sa o 180 stupňov a nakresli
+        znovu presne ten istý vzor!  \n\n- Ďalšie úlohy budú jednoduchšie, ak vložíš
+        svoj kód do cyklu. Nechaj Elsu kresliť, urob otočku o 180 stupňov, zase nechaj
+        Elsu kresliť a znovu otočka o 180 stupňov.\n\n<hr/>\n\nTakto vyzerajú schody
+        pri použití uhla 76 stupňov:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
+      courseD_artist_8_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Trochu sa zatočme a vyrobme si opäť snehovú vločku."_
+
+        Zrotuj svoj obrazec 5 alebo 6 krát dookola.
+        - Ak budeš rotovať 5 krát,  skús obrazec otáčať o 72 stupňov
+        - Ak zvolíš 6 otočení, skús použiť 60 stupňov
+        <hr/>
+
+        Tu je príklad, kde Elsa zrotovala obrazec 6 krát:
+
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      courseD_artist_9_2018: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"A čo urobíme teraz? Poďme si vytvoriť našu vlastnú zázračnú zimnú krajinu!"_
+
+        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľvek chceš!
+        - Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
+        - Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
+        - Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
+      courseD_artist_nestedLoops1a: |-
+        Teraz opakuj trojuholník 6 krát.
+
+        Po každom trojuholníku sa musíš otočiť o 60 stupňov, aby si mohol nakresliť ďalší.
+      courseD_artist_nestedLoops1a_2018: |-
+        Teraz opakuj trojuholník 6 krát.
+
+        Po každom trojuholníku sa musíš otočiť o 60 stupňov, aby si mohol nakresliť ďalší.
+      courseD_artist_nestedLoops1a_2019: |-
+        Teraz opakuj trojuholník 6 krát.
+
+        Po každom trojuholníku sa musíš otočiť o 60 stupňov, aby si mohol nakresliť ďalší.
+      courseD_artist_nestedLoops2: |-
+        Tentoraz vyrieš úlohu s čo najmenším počtom blokov.
+
+        Po každom trojuholníku sa musíš otočiť o 60 stupňov, aby si mohol nakresliť ďalší.
+        Všimni si, o čo jednoduchšie to je s použitím **vnorených cyklov**?
+      courseD_artist_nestedLoops2_2018: |-
+        Tentoraz vyrieš úlohu s čo najmenším počtom blokov.
+
+        Po každom trojuholníku sa musíš otočiť o 60 stupňov, aby si mohol nakresliť ďalší.
+        Všimni si, o čo jednoduchšie to je s použitím **vnorených cyklov**?
+      courseD_artist_nestedLoops2_2019: |-
+        Tentoraz vyrieš úlohu s čo najmenším počtom blokov.
+
+        Po každom trojuholníku sa musíš otočiť o 60 stupňov, aby si mohol nakresliť ďalší.
+        Všimni si, o čo jednoduchšie to je s použitím **vnorených cyklov**?
+      courseD_artist_nestedLoops4: "Výborne! A teraz urob to isté s týmito kruhmi.
+        \n\n- Každý kruh nakreslíš tak, že sa posunieš o jeden pixel a následne otočíš
+        o 1 stupeň a zopakuješ to 360 krát.\n- Každý kruh začína presne 50 pixelov
+        od miesta, kde skončil predošlý kruh."
+      courseD_artist_nestedLoops4_2018: "Výborne! A teraz urob to isté s týmito kruhmi.
+        \n\n- Každý kruh nakreslíš tak, že sa posunieš o jeden pixel a následne otočíš
+        o 1 stupeň a zopakuješ to 360 krát.\n- Každý kruh začína presne 50 pixelov
+        od miesta, kde skončil predošlý kruh."
+      courseD_artist_nestedLoops4_2019: "Výborne! A teraz urob to isté s týmito kruhmi.
+        \n\n- Každý kruh nakreslíš tak, že sa posunieš o jeden pixel a následne otočíš
+        o 1 stupeň a zopakuješ to 360 krát.\n- Každý kruh začína presne 50 pixelov
+        od miesta, kde skončil predošlý kruh."
+      courseD_artist_nestedLoops5: |-
+        Čo sa stane, ak sa medzi kreslením jednotlivých kruhov ešte otočíš o 90 stupňov?
+
+        (Aby si obrázok nakreslil, aj tu musíš skákať o 50 pixelov medzi kreslením jednotlivých kruhov)
+      courseD_artist_nestedLoops5_2018: |-
+        Čo sa stane, ak sa medzi kreslením jednotlivých kruhov ešte otočíš o 90 stupňov?
+
+        (Aby si obrázok nakreslil, aj tu musíš skákať o 50 pixelov medzi kreslením jednotlivých kruhov)
+      courseD_artist_nestedLoops5_2019: |-
+        Čo sa stane, ak sa medzi kreslením jednotlivých kruhov ešte otočíš o 90 stupňov?
+
+        (Aby si obrázok nakreslil, aj tu musíš skákať o 50 pixelov medzi kreslením jednotlivých kruhov)
+      courseD_artist_nestedLoops7: |-
+        Na nakreslenie tohto obrázka využi, čo si sa zatiaľ naučil.
+
+        - Každý štvorec má stranu o dĺžke **100 pixelov** a **90 stupňové uhly**
+        - Budeš sa musieť otočiť o **60 stupňov po každom štvorci **. Prečo? Pretože tam je 6 štvorcov a 360 stupňov (úplné otočenie) delených 6-imi je 60 stupňov.
+        - Uisti sa, že skočíš o **50 pixelov, aby si sa dostal na ďalší štvorec**
+      courseD_artist_nestedLoops7_2018: |-
+        Na nakreslenie tohto obrázka využi, čo si sa zatiaľ naučil.
+
+        - Každý štvorec má stranu o dĺžke **100 pixelov** a **90 stupňové uhly**
+        - Budeš sa musieť otočiť o **60 stupňov po každom štvorci **. Prečo? Pretože tam je 6 štvorcov a 360 stupňov (úplné otočenie) delených 6-imi je 60 stupňov.
+        - Uisti sa, že skočíš o **50 pixelov, aby si sa dostal na ďalší štvorec**
+      courseD_artist_nestedLoops7_2019: |-
+        Na nakreslenie tohto obrázka využi, čo si sa zatiaľ naučil.
+
+        - Každý štvorec má stranu o dĺžke **100 pixelov** a **90 stupňové uhly**
+        - Budeš sa musieť otočiť o **60 stupňov po každom štvorci **. Prečo? Pretože tam je 6 štvorcov a 360 stupňov (úplné otočenie) delených 6-imi je 60 stupňov.
+        - Uisti sa, že skočíš o **50 pixelov, aby si sa dostal na ďalší štvorec**
+      courseD_artist_nestedLoops8: |-
+        Využite, čo ste sa naučili v posledných dvoch úlohách a nakreslite tento obrázok od začiatku.
+
+        - Každý šesťuholník má **50 pixelov dlhé strany** a na konci hrany je potrebné sa otočiť o **60 stupňov**
+      courseD_artist_nestedLoops8_2018: |-
+        Využite, čo ste sa naučili v posledných dvoch úlohách a nakreslite tento obrázok od začiatku.
+
+        - Každý šesťuholník má **50 pixelov dlhé strany** a na konci hrany je potrebné sa otočiť o **60 stupňov**
+      courseD_artist_nestedLoops8_2019: |-
+        Využite, čo ste sa naučili v posledných dvoch úlohách a nakreslite tento obrázok od začiatku.
+
+        - Každý šesťuholník má **50 pixelov dlhé strany** a na konci hrany je potrebné sa otočiť o **60 stupňov**
+      courseD_artist_nestedLoops9: |-
+        **Výzva: ** Prídeš na to, ako nakresliť takýto obrázok?
+
+        - Oba útvary majú **strany o dĺžke 50 pixelov**
+        - Medzi každou dvojicou útvarov, musíš skočiť dopredu o dĺžku jednej strany a otočiť sa o 45 stupňov.
+      courseD_artist_nestedLoops9_2018: |-
+        **Výzva: ** Prídeš na to, ako nakresliť takýto obrázok?
+
+        - Oba útvary majú **strany o dĺžke 50 pixelov**
+        - Medzi každou dvojicou útvarov, musíš skočiť dopredu o dĺžku jednej strany a otočiť sa o 45 stupňov.
+      courseD_artist_nestedLoops9_2019: |-
+        **Výzva: ** Prídeš na to, ako nakresliť takýto obrázok?
+
+        - Oba útvary majú **strany o dĺžke 50 pixelov**
+        - Medzi každou dvojicou útvarov, musíš skočiť dopredu o dĺžku jednej strany a otočiť sa o 45 stupňov.
+      courseD_artist_nestedLoopsFP: |-
+        Teraz je rad na tebe. S vedomosťami, ktoré už máš, nakresli niečo, čo by sa páčilo tebe!
+
+        Nič ťa nenapadá? Skús teda nakresliť jeden z týhcto obrázkov:
+
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+      courseD_artist_nestedLoopsFP_2018: |-
+        Teraz je rad na tebe. S vedomosťami, ktoré už máš, nakresli niečo, čo by sa páčilo tebe!
+
+        Nič ťa nenapadá? Skús teda nakresliť jeden z týhcto obrázkov:
+
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+      courseD_artist_nestedLoopsFP_2019: |-
+        Teraz je rad na tebe. S vedomosťami, ktoré už máš, nakresli niečo, čo by sa páčilo tebe!
+
+        Nič ťa nenapadá? Skús teda nakresliť jeden z týhcto obrázkov:
+
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+      courseD_artist_nestedLoops_challenge1: |-
+        Prídeš na to, ako nakresliť takýto obrázok?
+
+        - Oba útvary majú **strany o dĺžke 50 pixelov**
+        - Pri kreslení *osemuholníkov* sa musíš otáčať o ** 45 stupňov**.
+        - Pri kreslení *trojuholníkov* sa musíš otáčať o **120 stupňov**.
+      courseD_artist_nestedLoops_challenge1_2018: |-
+        Prídeš na to, ako nakresliť takýto obrázok?
+
+        - Oba útvary majú **strany o dĺžke 50 pixelov**
+        - Pri kreslení *osemuholníkov* sa musíš otáčať o ** 45 stupňov**.
+        - Pri kreslení *trojuholníkov* sa musíš otáčať o **120 stupňov**.
+      courseD_artist_nestedLoops_challenge1_2019: |-
+        Prídeš na to, ako nakresliť takýto obrázok?
+
+        - Oba útvary majú **strany o dĺžke 50 pixelov**
+        - Pri kreslení *osemuholníkov* sa musíš otáčať o ** 45 stupňov**.
+        - Pri kreslení *trojuholníkov* sa musíš otáčať o **120 stupňov**.
+      courseD_artist_nestedLoops_challenge2: |-
+        Tento kód má zopár chybičiek! Vieš ich nájsť a opraviť, aby sa obrázok na pracovnej ploche nakreslil správne?
+
+        - Prvý vnorený cyklus by mal vykresliť osemuholník.
+        - Prvý vnorený cyklus by mal vykresliť šesťuholník.
+        - Prvý vnorený cyklus by mal vykresliť štvorec.
+      courseD_artist_nestedLoops_challenge2_2018: |-
+        Tento kód má zopár chybičiek! Vieš ich nájsť a opraviť, aby sa obrázok na pracovnej ploche nakreslil správne?
+
+        - Prvý vnorený cyklus by mal vykresliť osemuholník.
+        - Prvý vnorený cyklus by mal vykresliť šesťuholník.
+        - Prvý vnorený cyklus by mal vykresliť štvorec.
+      courseD_artist_nestedLoops_challenge2_2019: |-
+        Tento kód má zopár chybičiek! Vieš ich nájsť a opraviť, aby sa obrázok na pracovnej ploche nakreslil správne?
+
+        - Prvý vnorený cyklus by mal vykresliť osemuholník.
+        - Prvý vnorený cyklus by mal vykresliť šesťuholník.
+        - Prvý vnorený cyklus by mal vykresliť štvorec.
+      courseD_artist_project1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Ahoj, ja som Elsa z Arendelle. Pomôž mi nakresliť nejaké tvary.”_\n\nNakresli
+        ľubovoľný malý tvar, široký **20 až 50** pixelov.  \n<hr/>\n\nMôžeš skúsiť
+        vytvoriť polygón, pozri tieto príklady:  \n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
+        \ \n\n  \n  \nAlebo skús nejaký abstraktný tvar, napríklad niečo takéto:  \n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Ahoj, ja som Elsa z Arendelle. Pomôž mi nakresliť nejaké tvary.”_\n\nNakresli
+        ľubovoľný malý tvar, široký **20 až 50** pixelov.  \n<hr/>\n\nMôžeš skúsiť
+        vytvoriť polygón, pozri tieto príklady:  \n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
+        \ \n\n  \n  \nAlebo skús nejaký abstraktný tvar, napríklad niečo takéto:  \n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Poďme teraz skúsiť niečo nové. Nastal čas korčuľovať sa cik-cak.\"_\n\n\n<img
+        src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
+        width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nNakresli
+        schodový vzor. Použi otočky medzi 75 a 105 stupňami, ale uisti sa, že pre
+        pravú i ľavú otočku používaš rovnaký uhol.  \n(Neskôr uvidíš prečo.)"
+      courseD_artist_project1a_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Poďme teraz skúsiť niečo nové. Nastal čas korčuľovať sa cik-cak.\"_\n\n<img
+        src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
+        width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nNakresli
+        schodový vzor. Použi otočky medzi 75 a 105 stupňami, ale uisti sa, že pre
+        pravú i ľavú otočku používaš rovnaký uhol.  \n(Neskôr uvidíš prečo.)"
+      courseD_artist_project1a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Poďme teraz skúsiť niečo nové. Nastal čas korčuľovať sa cik-cak.\"_\n\n<img
+        src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
+        width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nNakresli
+        schodový vzor. Použi otočky medzi 75 a 105 stupňami, ale uisti sa, že pre
+        pravú i ľavú otočku používaš rovnaký uhol.  \n(Neskôr uvidíš prečo.)"
+      courseD_artist_project2: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“A teraz si nakreslime viac rovnakých tvarov.”_\n\nVezmi svoj tvar a nakresli
+        ho dva alebo tri razy, medzi nimi skoč dopredu o niekoľko pixlov.  \n\n- Ak
+        skočíš dopredu o **menej** pixelov ako je šírka tvojho tvaru, tvary sa môžu
+        prekrývať\n- Ak skočíš dopredu o **viac** pixelov ako je šírka tvojho tvaru,
+        bude medzi nimi medzera\n\n<hr/>\n\nTvoje tvary možno budú v priamom rade
+        ako na týchto príkladoch:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>
+        \ <br/>\n\n\nAlebo možno budú tvoje tvary uložené do oblúka či kruhu ako tu:
+        \n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_artist_project2_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“A teraz si nakreslime viac rovnakých tvarov.”_\n\nVezmi svoj tvar a nakresli
+        ho dva alebo tri razy, medzi nimi skoč dopredu o niekoľko pixlov.  \n\n- Ak
+        skočíš dopredu o **menej** pixelov ako je šírka tvojho tvaru, tvary sa môžu
+        prekrývať\n- Ak skočíš dopredu o **viac** pixelov ako je šírka tvojho tvaru,
+        bude medzi nimi medzera\n\n<hr/>\n\nTvoje tvary možno budú v priamom rade
+        ako na týchto príkladoch:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>
+        \ <br/>\n\n\nAlebo možno budú tvoje tvary uložené do oblúka či kruhu ako tu:
+        \n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_artist_project2_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“A teraz si nakreslime viac rovnakých tvarov.”_\n\nVezmi svoj tvar a nakresli
+        ho dva alebo tri razy, medzi nimi skoč dopredu o niekoľko pixlov.  \n\n- Ak
+        skočíš dopredu o **menej** pixelov ako je šírka tvojho tvaru, tvary sa môžu
+        prekrývať\n- Ak skočíš dopredu o **viac** pixelov ako je šírka tvojho tvaru,
+        bude medzi nimi medzera\n\n<hr/>\n\nTvoje tvary možno budú v priamom rade
+        ako na týchto príkladoch:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>
+        \ <br/>\n\n\nAlebo možno budú tvoje tvary uložené do oblúka či kruhu ako tu:
+        \n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_artist_project2a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Teraz poďme späť po tej istej ceste.\"_\n\nOtoč sa o 180 stupňov a nakresli
+        znovu presne ten istý vzor!  \n\n- Ďalšie úlohy budú jednoduchšie, ak vložíš
+        svoj kód do cyklu. Nechaj Elsu kresliť, urob otočku o 180 stupňov, zase nechaj
+        Elsu kresliť a znovu otočka o 180 stupňov.\n\n<hr/>\n\nTakto vyzerajú schody
+        pri použití uhla 76 stupňov:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
+      courseD_artist_project2a_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Teraz poďme späť po tej istej ceste.\"_\n\nOtoč sa o 180 stupňov a nakresli
+        znovu presne ten istý vzor!  \n\n- Ďalšie úlohy budú jednoduchšie, ak vložíš
+        svoj kód do cyklu. Nechaj Elsu kresliť, urob otočku o 180 stupňov, zase nechaj
+        Elsu kresliť a znovu otočka o 180 stupňov.\n\n<hr/>\n\nTakto vyzerajú schody
+        pri použití uhla 76 stupňov:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
+      courseD_artist_project2a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Teraz poďme späť po tej istej ceste.\"_\n\nOtoč sa o 180 stupňov a nakresli
+        znovu presne ten istý vzor!  \n\n- Ďalšie úlohy budú jednoduchšie, ak vložíš
+        svoj kód do cyklu. Nechaj Elsu kresliť, urob otočku o 180 stupňov, zase nechaj
+        Elsu kresliť a znovu otočka o 180 stupňov.\n\n<hr/>\n\nTakto vyzerajú schody
+        pri použití uhla 76 stupňov:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
+      courseD_artist_project3: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Poďme z toho vytvoriť snehovú vločku.\"_\n\nPo nakreslení radu tvarov skoč
+        s Elsou späť do stredu. Použi blok `skoč na pozíciu v strede do stredu` a
+        otoč ju, aby ďalší rad tvarov nakreslila iným smerom.\n\nAké úžasné snehové
+        vločky vieš vytvoriť!\n\n---\n\nPozri si tieto príklady s polygónmi:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nAbstraktné
+        tvary môžu vytvoriť snehovú vločku podobnú na niektorú z týchto:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Poďme z toho vytvoriť snehovú vločku.\"_\n\nPo nakreslení radu tvarov skoč
+        s Elsou späť do stredu. Použi blok `skoč na pozíciu v strede do stredu` a
+        otoč ju, aby ďalší rad tvarov nakreslila iným smerom.\n\nAké úžasné snehové
+        vločky vieš vytvoriť!\n\n---\n\nPozri si tieto príklady s polygónmi:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nAbstraktné
+        tvary môžu vytvoriť snehovú vločku podobnú na niektorú z týchto:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Poďme z toho vytvoriť snehovú vločku.\"_\n\nPo nakreslení radu tvarov skoč
+        s Elsou späť do stredu. Použi blok `skoč na pozíciu v strede do stredu` a
+        otoč ju, aby ďalší rad tvarov nakreslila iným smerom.\n\nAké úžasné snehové
+        vločky vieš vytvoriť!\n\n---\n\nPozri si tieto príklady s polygónmi:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nAbstraktné
+        tvary môžu vytvoriť snehovú vločku podobnú na niektorú z týchto:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3a: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Trochu sa zatočme a vyrobme si opäť snehovú vločku."_
+
+        Zrotuj svoj obrazec 5 alebo 6 krát dookola.
+        - Ak budeš rotovať 5 krát,  skús obrazec otáčať o 72 stupňov
+        - Ak zvolíš 6 otočení, skús použiť 60 stupňov
+        <hr/>
+
+        Tu je príklad, kde Elsa zrotovala obrazec 6 krát:
+
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      courseD_artist_project3a_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Trochu sa zatočme a vyrobme si opäť snehovú vločku."_
+
+        Zrotuj svoj obrazec 5 alebo 6 krát dookola.
+        - Ak budeš rotovať 5 krát,  skús obrazec otáčať o 72 stupňov
+        - Ak zvolíš 6 otočení, skús použiť 60 stupňov
+        <hr/>
+
+        Tu je príklad, kde Elsa zrotovala obrazec 6 krát:
+
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      courseD_artist_project3a_2019: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Trochu sa zatočme a vyrobme si opäť snehovú vločku."_
+
+        Zrotuj svoj obrazec 5 alebo 6 krát dookola.
+        - Ak budeš rotovať 5 krát,  skús obrazec otáčať o 72 stupňov
+        - Ak zvolíš 6 otočení, skús použiť 60 stupňov
+        <hr/>
+
+        Tu je príklad, kde Elsa zrotovala obrazec 6 krát:
+
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      courseD_artist_project4: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Čo sa stane, ak nakreslíme jednu snehovú vločku na druhú?\"_\n\nSkús navrstviť
+        dve snehové vločky vytvorené z odlišných tvarov na seba s malým natočením
+        medzi nimi - pozri čo vznikne! "
+      courseD_artist_project4_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Čo sa stane, ak nakreslíme jednu snehovú vločku na druhú?\"_\n\nSkús navrstviť
+        dve snehové vločky vytvorené z odlišných tvarov na seba s malým natočením
+        medzi nimi - pozri čo vznikne! "
+      courseD_artist_project4_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Čo sa stane, ak nakreslíme jednu snehovú vločku na druhú?\"_\n\nSkús navrstviť
+        dve snehové vločky vytvorené z odlišných tvarov na seba s malým natočením
+        medzi nimi - pozri čo vznikne! "
+      courseD_artist_project4a: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"A čo urobíme teraz? Poďme si vytvoriť našu vlastnú zázračnú zimnú krajinu!"_
+
+        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľvek chceš!
+        - Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
+        - Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
+        - Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
+      courseD_artist_project4a_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"A čo urobíme teraz? Poďme si vytvoriť našu vlastnú zázračnú zimnú krajinu!"_
+
+        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľvek chceš!
+        - Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
+        - Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
+        - Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
+      courseD_artist_project4a_2019: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"A čo urobíme teraz? Poďme si vytvoriť našu vlastnú zázračnú zimnú krajinu!"_
+
+        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľvek chceš!
+        - Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
+        - Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
+        - Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
+      courseD_artist_project5: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Využi svoju tvorivú fantáziu a vyskúšaj rôzne tvary a uhly - uvidíme aké
+        rôzne nové snehové vločky sa ti podarí nakresliť!"_  '
+      courseD_artist_project5_2018: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Využi svoju tvorivú fantáziu a skús rôzne tvary a uhly - uvidíme aké rôzne
+        nové snehové vločky sa ti podarí nakresliť!"_'
+      courseD_artist_project5_2019: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Využi svoju tvorivú fantáziu a skús rôzne tvary a uhly - uvidíme aké rôzne
+        nové snehové vločky sa ti podarí nakresliť!"_'
       courseD_bee_debugging5: |-
         **Výzva:** *"Z tejto úlohy sa mi točí hlava!"*
 
         Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
       courseD_bee_nestedLoops1: |-
-        "_Chystá sa niečo veľké!_"
+        "_Chystá sa niečo **VČEĽKÉ**!_"
 
-        Pomôž včelám zozbierať všetok nektár.
+        Pomôž včele zozbierať všetok nektár.
       courseD_bee_nestedLoops1_2018: |-
-        "_Chystá sa niečo veľké!_"
+        "_Chystá sa niečo **VČEĽKÉ**!_"
 
-        Pomôž včelám zozbierať všetok nektár.
+        Pomôž včele zozbierať všetok nektár.
       courseD_bee_nestedLoops1_2019: |-
-        "_Chystá sa niečo veľké!_"
+        "_Chystá sa niečo **VČEĽKÉ**!_"
 
-        Pomôž včelám zozbierať všetok nektár.
+        Pomôž včele zozbierať všetok nektár.
+      courseD_bee_nestedLoops1a: |-
+        _"Toto bude **VČEĽKÉ**!"_
+
+        Pomôž včele zozbierať všetok nektár.
+      courseD_bee_nestedLoops1a_2018: |-
+        _"Toto bude **VČEĽKÉ**!"_
+
+        Pomôž včele zozbierať všetok nektár.
+      courseD_bee_nestedLoops1a_2019: |-
+        _"Toto bude **VČEĽKÉ**!"_
+
+        Pomôž včele zozbierať všetok nektár.
+      courseD_bee_nestedLoops2: Aj v tejto úlohe pomôž včele zozbierať všetok nektár,
+        skús ale použiť čo najmenej blokov.
+      courseD_bee_nestedLoops2_2018: Aj v tejto úlohe pomôž včele zozbierať všetok
+        nektár, skús ale použiť čo najmenej blokov.
+      courseD_bee_nestedLoops2_2019: Aj v tejto úlohe pomôž včele zozbierať všetok
+        nektár, skús ale použiť čo najmenej blokov.
+      courseD_bee_nestedLoops2_predict1: Aj v tejto úlohe pomôž včele zozbierať všetok
+        nektár, skús ale použiť čo najmenej blokov.
+      courseD_bee_nestedLoops2_predict1_2018: Aj v tejto úlohe pomôž včele zozbierať
+        všetok nektár, skús ale použiť čo najmenej blokov.
+      courseD_bee_nestedLoops2_predict1_2019: Aj v tejto úlohe pomôž včele zozbierať
+        všetok nektár, skús ale použiť čo najmenej blokov.
+      courseD_bee_nestedLoops5: 'Pozbieraj všetok nektár z každého kvetu a v plástoch
+        vyrob med. '
+      courseD_bee_nestedLoops6_2018: |-
+        *"Musieť jesť slnečnica!"*
+
+        Dostaň zombíka k slnečnici pomocou dostupných blokov.
+      courseD_bee_nestedLoops7: "**Výzva:** Vymysli, ako pozbierať všetok nektár pomocou
+        dostupných blokov."
+      courseD_bee_nestedLoops7_2018: "**Výzva:** Vymysli, ako pozbierať všetok nektár
+        pomocou dostupných blokov."
+      courseD_bee_nestedLoops7_2019: "**Výzva:** Vymysli, ako pozbierať všetok nektár
+        pomocou dostupných blokov."
+      courseD_bee_nestedLoops8: 'Pozbieraj všetok nektár z každého kvetu a v plástoch
+        vyrob med. '
+      courseD_bee_nestedLoops8_2018: 'Pozbieraj všetok nektár z každého kvetu a v
+        plástoch vyrob med. '
+      courseD_bee_nestedLoops8_2019: 'Pozbieraj všetok nektár z každého kvetu a v
+        plástoch vyrob med. '
+      courseD_bee_nestedLoops9: Vyrob všetok med.
+      courseD_bee_nestedLoops9_2018: Vyrob všetok med.
+      courseD_bee_nestedLoops9_2019: Vyrob všetok med.
+      courseD_bee_nestedLoops9_predict2: Vyrob všetok med.
+      courseD_bee_nestedLoops9_predict2_2018: Vyrob všetok med.
+      courseD_bee_nestedLoops9_predict2_2019: Vyrob všetok med.
+      courseD_bee_nested_loops_challenge1: Poďme pátrať po poklade - pomocou cyklov!
+        Pomôž zberateľke dostať sa k aspoň 2-om pokladom len s blokmi, ktoré máš v
+        paneli nástrojov.
+      courseD_bee_nested_loops_challenge2: Poďme pátrať po poklade - pomocou cyklov!
+        Pomôž zberateľke dostať sa k aspoň 2-om pokladom len s blokmi, ktoré máš v
+        paneli nástrojov.
       courseD_bounce_events1: Dostaň sa k vlajke! Pripoj blok ku bloku "keď šípka
         vľavo". Stlač "Spustiť" a šípkou presuň hráča k vlajke.
+      courseD_bounce_events10s: |-
+        Teraz máme kôš navrchu ihriska.
+
+        Pripoj blok `pridaj bod` pod blok s udalosťou`keď je lopta v bránke` a blok `pridaj bod súperovi` pod blok  s udalosťou `keď lopta netrafí ruku` a hra môže začať.
+
+        ---
+
+        Skús získať čo najviac bodov predtým, ako tvoj súper získa 2 body.
+      courseD_bounce_events10s_2018: |-
+        Teraz máme kôš navrchu ihriska.
+
+        Pripoj blok `pridaj bod` pod blok s udalosťou`keď je lopta v bránke` a blok `pridaj bod súperovi` pod blok  s udalosťou `keď lopta netrafí ruku` a hra môže začať.
+
+        ---
+
+        Skús získať čo najviac bodov predtým, ako tvoj súper získa 2 body.
+      courseD_bounce_events10s_2019: |-
+        Teraz máme kôš navrchu ihriska.
+
+        Pripoj blok `pridaj bod` pod blok s udalosťou`keď je lopta v bránke` a blok `pridaj bod súperovi` pod blok  s udalosťou `keď lopta netrafí ruku` a hra môže začať.
+
+        ---
+
+        Skús získať čo najviac bodov predtým, ako tvoj súper získa 2 body.
+      courseD_bounce_events11s: |-
+        Teraz máš loptu vo svojich rukách! Pridaj blok `hodiť novú loptu` všade tam, kde je potrebné vhodiť do hry loptu.
+
+        ---
+
+        Skús získať čo najviac bodov predtým, ako tvoj súper získa 2 body!
+      courseD_bounce_events11s_2018: |-
+        Teraz máš loptu vo svojich rukách! Pridaj blok `hodiť novú loptu` všade tam, kde je potrebné vhodiť do hry loptu.
+
+        ---
+
+        Skús získať čo najviac bodov predtým, ako tvoj súper získa 2 body!
+      courseD_bounce_events11s_2019: |-
+        Teraz máš loptu vo svojich rukách! Pridaj blok `hodiť novú loptu` všade tam, kde je potrebné vhodiť do hry loptu.
+
+        ---
+
+        Skús získať čo najviac bodov predtým, ako tvoj súper získa 2 body!
       courseD_bounce_events1s_2018: |-
         Dostaň sa ku košu!
 
@@ -1630,6 +2321,36 @@ sk:
         aby sa ruka mohla dostať ku obom košom.
       courseD_bounce_events2s_2019: Teraz pripoj blok ku udalosti `keď šípka vpravo`,
         aby sa ruka mohla dostať ku obom košom.
+      courseD_bounce_events5s: K ruke hodíme loptu. Pridaj blok ku bloku s udalosťou
+        `keď lopta zasiahne ruku`, aby sa lopta odrazila do koša.
+      courseD_bounce_events5s_2018: K ruke hodíme loptu. Pridaj blok ku bloku s udalosťou
+        `keď lopta zasiahne ruku`, aby sa lopta odrazila do koša.
+      courseD_bounce_events5s_2019: K ruke hodíme loptu. Pridaj blok ku bloku s udalosťou
+        `keď lopta zasiahne ruku`, aby sa lopta odrazila do koša.
+      courseD_bounce_events6s: "Teraz máme kôš hore.  \n\nPridaj kód (bloky), aby
+        sa lopta odrazila od steny a trafila do koša."
+      courseD_bounce_events6s_2018: "Teraz máme kôš hore.  \n\nPridaj kód (bloky),
+        aby sa lopta odrazila od steny a trafila do koša."
+      courseD_bounce_events6s_2019: "Teraz máme kôš hore.  \n\nPridaj kód (bloky),
+        aby sa lopta odrazila od steny a trafila do koša."
+      courseD_bounce_events7s: |-
+        Pridaj bloky so zvukom, aby zašuchotala sieťka, keď lopta trafí kôš, a aby zapískala píštalka, keď lopta netrafí ruku.. Odrážaj loptu, kým nezasiahne svoj cieľ.
+
+        ---
+
+        Odrážaj loptu, kým nezasiahne svoj cieľ.
+      courseD_bounce_events7s_2018: |-
+        Pridaj bloky so zvukom, aby zašuchotala sieťka, keď lopta trafí kôš, a aby zapískala píštalka, keď lopta netrafí ruku.. Odrážaj loptu, kým nezasiahne svoj cieľ.
+
+        ---
+
+        Odrážaj loptu, kým nezasiahne svoj cieľ.
+      courseD_bounce_events7s_2019: |-
+        Pridaj bloky so zvukom, aby zašuchotala sieťka, keď lopta trafí kôš, a aby zapískala píštalka, keď lopta netrafí ruku.. Odrážaj loptu, kým nezasiahne svoj cieľ.
+
+        ---
+
+        Odrážaj loptu, kým nezasiahne svoj cieľ.
       courseD_collector_debugging1: |-
         *"Oh nie! Vidím tu problém"*
 
@@ -1791,10 +2512,36 @@ sk:
         *"To je ako na ostrove pokladov!"*
 
         Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
+      courseD_collector_nested_loops_challenge2: "*\"Poďme pátrať po poklade - pomocou
+        cyklov!\"* \n\nPomôž zberateľke dostať sa k aspoň 2-om pokladom len s blokmi,
+        ktoré máš v paneli nástrojov. Je však možné pozbierať všetky 4 poklady."
+      courseD_collector_nested_loops_challenge2_2018: "*\"Poďme pátrať po poklade
+        - pomocou cyklov!\"* \n\nPomôž zberateľke dostať sa k aspoň 2-om pokladom
+        len s blokmi, ktoré máš v paneli nástrojov. Je však možné pozbierať všetky
+        4 poklady."
+      courseD_collector_nested_loops_challenge2_2019: "*\"Poďme pátrať po poklade
+        - pomocou cyklov!\"* \n\nPomôž zberateľke dostať sa k aspoň 2-om pokladom
+        len s blokmi, ktoré máš v paneli nástrojov. Je však možné pozbierať všetky
+        4 poklady."
+      courseD_collector_nested_loops_challenge2a: "*\"Poďme pátrať po poklade - pomocou
+        cyklov!\"* \n\nPomôž Laurel dostať sa k aspoň 2-om pokladom len s blokmi,
+        ktoré máš v paneli nástrojov. Je však možné pozbierať všetky 4 poklady."
       courseD_debugging_5: |-
         **Výzva:** *"Z tejto úlohy sa mi točí hlava!"*
 
         Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
+      courseD_harvester_nested_loops_challenge1-broken: '*"Potrebujem pomoc na farme!
+        Pomôž mi pozbierať túto kukuricu a použi na to len tie bloky, ktoré sú v paneli
+        nástrojov."*'
+      courseD_harvester_nested_loops_challenge1: '*"Potrebujem pomoc na farme! Pomôž
+        mi pozbierať túto kukuricu a použi na to len tie bloky, ktoré sú v paneli
+        nástrojov."*'
+      courseD_harvester_nested_loops_challenge1_2018: '*"Potrebujem pomoc na farme!
+        Pomôž mi pozbierať túto kukuricu a použi na to len tie bloky, ktoré sú v paneli
+        nástrojov."*'
+      courseD_harvester_nested_loops_challenge1_2019: '*"Potrebujem pomoc na farme!
+        Pomôž mi pozbierať túto kukuricu a použi na to len tie bloky, ktoré sú v paneli
+        nástrojov."*'
       courseD_iceage_loops1: Pomôž Scratovi prejsť po šmykľavom ľade až k žaluďu!
       courseD_iceage_loops10: Pomôž Scratovi prejsť celú cestu až k vytúženému žaluďu!
       courseD_iceage_loops10_2019: Pomôž Scratovi prejsť celú cestu až k vytúženému
@@ -1829,6 +2576,39 @@ sk:
         sa poň dostať?
       courseD_iceage_loops9_2019: Žaluď je tak ďaleko! Dokážeš použiť cykly a pomôcť
         Scratovi sa poň dostať?
+      courseD_maze_loops_challenge1: Poďme pátrať po poklade - pomocou cyklov! Pomôž
+        zberateľke dostať sa k aspoň 2-om pokladom len s blokmi, ktoré máš v paneli
+        nástrojov.
+      courseD_maze_nestedLoops3: |-
+        *"Zombík hladný!"*
+
+        Dostaň zombíka k slnečnici použitím čo najmenšieho počtu blokov.
+      courseD_maze_nestedLoops3_2018: |-
+        *"Zombík hladný!"*
+
+        Dostaň zombíka k slnečnici použitím čo najmenšieho počtu blokov.
+      courseD_maze_nestedLoops3_2019: |-
+        *"Zombík hladný!"*
+
+        Dostaň zombíka k slnečnici použitím čo najmenšieho počtu blokov.
+      courseD_maze_nestedLoops4: 'Dostaň zombíka k slnečnici použitím čo najmenšieho
+        počtu blokov!  '
+      courseD_maze_nestedLoops4_2018: 'Dostaň zombíka k slnečnici použitím čo najmenšieho
+        počtu blokov!  '
+      courseD_maze_nestedLoops4_2019: 'Dostaň zombíka k slnečnici použitím čo najmenšieho
+        počtu blokov!  '
+      courseD_maze_nestedLoops6: |-
+        *"Musieť jesť slnečnica!"*
+
+        Dostaň zombíka k slnečnici pomocou dostupných blokov.
+      courseD_maze_nestedLoops6_2018: |-
+        *"Musieť jesť slnečnica!"*
+
+        Dostaň zombíka k slnečnici pomocou dostupných blokov.
+      courseD_maze_nestedLoops6_2019: |-
+        *"Musieť jesť slnečnica!"*
+
+        Dostaň zombíka k slnečnici pomocou dostupných blokov.
       courseD_maze_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni na
         tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_maze_ramp1_2018: V tejto hre pospájaj všetky bloky dokopy, potom klikni
@@ -1914,6 +2694,27 @@ sk:
         do ďaľšieho cyklu, ale pre nakreslenie ďalšej čiary sa Umelec potrebuje dostať
         na správne miesto. Ktorý z týchto blokov s kódom treba dať na koniec vonkajšej
         slučky, aby nakreslil celú mriežku?
+      courseE_farmer_ramp11a: "Ach jaj!  Táto hromada je taká veľká, že je ťažké  odhadnúť
+        koľko je v nej hliny.  \n\n___\n\nPridali sme nový blok do panela nástrojov
+        - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstranenie hromady
+        a odoberaj z nej len kým je čo! "
+      courseE_farmer_ramp11a_2018: "Ach jaj!  Táto hromada je taká veľká, že je ťažké
+        \ odhadnúť koľko je v nej hliny.  \n\n___\n\nPridali sme nový blok do panela
+        nástrojov - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstranenie
+        hromady a odoberaj z nej len kým je čo! "
+      courseE_farmer_ramp11a_2019: "Ach jaj!  Táto hromada je taká veľká, že je ťažké
+        \ odhadnúť koľko je v nej hliny.  \n\n___\n\nPridali sme nový blok do panela
+        nástrojov - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstranenie
+        hromady a odoberaj z nej len kým je čo! "
+      courseE_farmer_ramp11b: A teraz to skús znova ale s viacerými hromadami!
+      courseE_farmer_ramp11b_2018: A teraz to skús znova ale s viacerými hromadami!
+      courseE_farmer_ramp11b_2019: A teraz to skús znova ale s viacerými hromadami!
+      courseE_farmer_ramp12b: Teraz farmárka potrebuje pozbierať všetok šalát. Použi
+        blok `pokiaľ tam je šalát` a daj ho do bloku pre cyklus `opakuj`!
+      courseE_farmer_ramp12b_2018: Teraz farmárka potrebuje pozbierať všetok šalát.
+        Použi blok `pokiaľ tam je šalát` a daj ho do bloku pre cyklus `opakuj`!
+      courseE_farmer_ramp12b_2019: Teraz farmárka potrebuje pozbierať všetok šalát.
+        Použi blok `pokiaľ tam je šalát` a daj ho do bloku pre cyklus `opakuj`!
       courseE_maze_ramp1: V tejto úlohe pospájaj všetky bloky, klikni na tlačítko
         "Spustiť" a sleduj, čo sa stane!
       courseE_maze_ramp1_2018: V tejto úlohe pospájaj všetky bloky, klikni na tlačítko
@@ -2181,6 +2982,12 @@ sk:
       frozen square snowflake_test: "Zmeň kód z predchádzajúcej úlohy tak, aby si
         vytvoril takúto vločku. \n   \nPomôcka: použili sme ** 10 ** štvorcov a otočky
         o ** 36 stupňov **."
+      grade1_artist_loops6: "**Výzva:** Toto je skrytá záhrada! Prejdime sa okolo."
+      grade1_playlab_events1: |-
+        Táto hra sa volá "Play Lab".
+
+        <br/>
+        Pozrime sa, či prídeš na to, čo každý blok robí.
       grade2_CaringForNewPet_0: V tejto úlohe pospájaj všetky bloky, klikni na tlačítko
         "Spustiť" a sleduj, čo sa stane!
       grade2_CaringForNewPet_1: Na dokončenie kódu vytiahni z panela nástrojov ešte
@@ -2306,6 +3113,16 @@ sk:
       grade3_bee_conditionals_quantum2: "Ďalšie oblaky!\n\nSkontroluj každý oblak,
         či sa pod ním neschováva kvetinka predtým, ako pozbieraš nektár.  \n\nPamätaj:
         Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
+      grade3_maze_loops2: 'Dostaň zombíka k slnečnici použitím čo najmenšieho počtu
+        blokov!  '
+      grade3_maze_loops2a: |-
+        *"Zombík hladný!"*
+
+        Dostaň zombíka k slnečnici použitím čo najmenšieho počtu blokov.
+      grade3_maze_loops3: |-
+        *"Musieť jesť slnečnica!"*
+
+        Dostaň zombíka k slnečnici pomocou dostupných blokov.
       grade3_maze_nestedLoops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať
         prasa s najmenším možným počtom blokov!
       grade4_arist_nested_loop_polygons1: "Zopakuj tento dizajn 10 krát. \n\nO koľko
@@ -2329,6 +3146,10 @@ sk:
       grade4_bee_functions3: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu
         "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si
         mal ideálny počet blokov.
+      grade4_bee_nestedLoops2: "**Výzva:** Vymysli, ako pozbierať všetok nektár pomocou
+        dostupných blokov."
+      grade4_bee_nestedLoops4: 'Pozbieraj všetok nektár z každého kvetu a v plástoch
+        vyrob med. '
       grade4_frozen_freeplay: Oficiálne se z teba stal majster umelec! Vytvor zimnú
         krajinu zázrakov.
       grade4_frozen_functions0: Kružnica je zvláštny tvar. Dokážeš zistiť, akým číslom
@@ -2374,6 +3195,11 @@ sk:
         Každá čiara má dĺžku 50 pixelov.
       grade4_review_bee1: Teraz použi blok "opakuj" na pozbieranie všetkého nektáru
         a vyrobenie všetkého medu.
+      grade5_artist_binary2: |-
+        Tu máme funkciu, ktorá vezme reťazec binárnych 1 a 0 a spracováva ich z ľava do prava, z hore dolu.
+        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje, pokiaľ na 0, tak štvorec nechá tak.
+
+        ** Skús spustiť kód, aby si videl ako Umelec použije binárny reťazec na namaľovanie obrazca. **
       iceAgeLoopsforVideo: Dokážeš sa dostať k žaluďu s použitím len jedného bloku
         <xml><block type="maze_moveForward"/></xml>? Skús použiť cyklus!
       level 'grade3_Loops_3: Použi cyklus "opakuj" a pozbieraj všetok nektár.
@@ -2386,6 +3212,10 @@ sk:
         Tieto kvetinky vyzerajú lákavo!
 
         Pozbieraj nektár z každého kvetu použitím čo možno najmenej blokov.
+      playEventsK1: |-
+        Táto hra sa volá "Play Lab".
+
+        Pozrime sa, či prídeš na to, čo každý blok robí.
       ramp_artist_loops1: |-
         Aký nádherný deň!
         Pomôž umelcovi zachrániť kvety pred zimou posunom dopredu o 60 pixelov.
@@ -2441,6 +3271,9 @@ sk:
         Toto schodisko je omnoho väčšie, ale na jeho nakreslenie potrebuješ toľko isto riadkov kódu ako v poslednom príklade!
 
         Uprav cyklus tak, aby si ho nakreslil.
+      ramp_artist_loops7: Nájdi vzor a skráť tento kód pomocou cyklov!
+      ramp_artist_loops7_2018: Nájdi vzor a skráť tento kód pomocou cyklov!
+      ramp_artist_loops7_2019: Nájdi vzor a skráť tento kód pomocou cyklov!
       ramp_artist_loops8: "**Výzva:** Skús upraviť kód tak, aby si nakreslil obrázok
         podľa predlohy s použitím cyklov."
       ramp_artist_loops8_2018: "**Výzva:** Skús upraviť kód tak, aby si nakreslil

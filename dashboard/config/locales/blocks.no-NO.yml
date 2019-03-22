@@ -233,6 +233,8 @@
             "{x: 200, y: 200}": midten
             "{x: 100, y: 100}": øverst til venstre
             "{x: 300, y: 100}": øverst til høyre
+            "{x: 100, y: 300}": nederst til venstre
+            "{x: 300, y: 300}": nederst til høyre
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfeldig
       Dancelab_layoutSprites:
         options:
@@ -284,6 +286,8 @@
             "{x: 200, y: 200}": midten
             "{x: 100, y: 100}": øverst til venstre
             "{x: 300, y: 100}": øverst til høyre
+            "{x: 100, y: 300}": nederst til venstre
+            "{x: 300, y: 300}": nederst til høyre
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfeldig
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
@@ -884,6 +888,7 @@
           IMG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': by
       gamelab_setPosition:
+        text: flytt {THIS} til {POSITION} posisjonen
         options:
           POSITION:
             "{x: 50, y: 50}": øverst til venstre
@@ -892,7 +897,9 @@
             "{x: 50, y: 200}": midten venstre
             "{x: 200, y: 200}": midten
             "{x: 350, y: 200}": midten høyre
+            "{x: 50, y: 350}": nederst til venstre
             "{x: 200, y: 350}": midten nederst
+            "{x: 350, y: 350}": nederst til høyre
             '"random"': tilfeldig
       gamelab_setProp:
         options:
@@ -996,6 +1003,8 @@
             "{x: 200, y: 200}": midten
             "{x: 100, y: 100}": øverst til venstre
             "{x: 300, y: 100}": øverst til høyre
+            "{x: 100, y: 300}": nederst til venstre
+            "{x: 300, y: 300}": nederst til høyre
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -1030,6 +1039,8 @@
             "{x: 200, y: 200}": midten
             "{x: 100, y: 100}": øverst til venstre
             "{x: 300, y: 100}": øverst til høyre
+            "{x: 100, y: 300}": nederst til venstre
+            "{x: 300, y: 300}": nederst til høyre
       Mikelab_groupDestroy:
         options:
           SELECT:
@@ -1130,6 +1141,8 @@
             "{x: 200, y: 200}": midten
             "{x: 100, y: 100}": øverst til venstre
             "{x: 300, y: 100}": øverst til høyre
+            "{x: 100, y: 300}": nederst til venstre
+            "{x: 300, y: 300}": nederst til høyre
       Mikelab_whenClickedOn:
         text: når {SPRITE} klikkes på
       Mikelab_whenKeyPressed:

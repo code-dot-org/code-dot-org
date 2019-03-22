@@ -997,13 +997,6 @@ id:
         fungsi 'moveCloud0')\r\n*\nPanggil fungsi` moveCloud (nama) `Anda yang baru
         di dalam blok, satu kali untuk \nsetiap nama awan.\r \n * (Petunjuk: ini mirip
         dengan bagaimana fungsi\n `loopCloud (nama)` dipanggil beberap kali."
-      CSD U6 params modify clouds_2019: "#Awan\r\n\r\nProgram ini membuat awan bergerak
-        ketika anda meniup pada elemen pengubah sinyal suara, tapi belum selesai.\r\n\r\n#\nLakukan
-        ini\r\n*Buat fungsi baru 'moveCloud(nama)\" yang akan menggerakkan awan.\r\n
-        \ *\n(Petunjuk: anda akan menggunakan hampir semua kode yang sama sebagai
-        fungsi 'moveCloud0')\r\n*\nPanggil fungsi` moveCloud (nama) `Anda yang baru
-        di dalam blok, satu kali untuk \nsetiap nama awan.\r \n * (Petunjuk: ini mirip
-        dengan bagaimana fungsi\n `loopCloud (nama)` dipanggil beberap kali."
       CSD U6 params modify planes: "# Multi-pesawat Controller\r \r program ini bergerak
         tiga pesawat menggunakan accelerometer papan dan layar kotak centang.  Sekarang,
         hanya pesawat merah bekerja. \r \r # This\r melakukan * membuat baru 'movePlane(name)'

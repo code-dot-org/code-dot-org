@@ -13,7 +13,7 @@ pl:
       String: Łańcuch
       Image: Obraz
       Boolean: Wartość logiczna
-      Conditionals: Warunkowe
+      Conditionals: Zdania z warunkami
       Events: Zdarzenia
       Games/Score: Gry/Punkty
       Comments: Komentarze
@@ -35,7 +35,7 @@ pl:
       Dancers: Tancerze
       Groups: Grupy
       Advanced: Zaawansowane
-      Start: Start
+      Start: Rozpocznij
       Music: Muzyka
       Dancing: Taniec
       Sprite: Duszek
