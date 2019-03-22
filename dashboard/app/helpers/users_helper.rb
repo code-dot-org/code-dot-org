@@ -42,6 +42,13 @@ module UsersHelper
         end
       end
 
+      # If both users are teachers, transfer ownership of sections
+      if source_user.teacher? && destination_user.teacher?
+        Section.where(user: source_user).each do |owned_section|
+          owned_section.update! user: destination_user
+        end
+      end
+
       source_user.destroy!
     end
 
