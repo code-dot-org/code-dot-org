@@ -504,21 +504,6 @@ id:
         setiap nama awan.\r 
          * (Petunjuk: ini mirip dengan bagaimana fungsi
          `loopCloud (nama)` dipanggil beberap kali.
-      CSD U6 params modify clouds_2019: |-
-        #Awan\r
-        \r
-        Program ini membuat awan bergerak ketika anda meniup pada elemen pengubah sinyal suara, tapi belum selesai.\r
-        \r
-        #
-        Lakukan ini\r
-        *Buat fungsi baru 'moveCloud(nama)" yang akan menggerakkan awan.\r
-          *
-        (Petunjuk: anda akan menggunakan hampir semua kode yang sama sebagai fungsi 'moveCloud0')\r
-        *
-        Panggil fungsi` moveCloud (nama) `Anda yang baru di dalam blok, satu kali untuk 
-        setiap nama awan.\r 
-         * (Petunjuk: ini mirip dengan bagaimana fungsi
-         `loopCloud (nama)` dipanggil beberap kali.
       CSD U6 params modify planes: |-
         # Multi-pesawat Controller\r \r program ini bergerak tiga pesawat menggunakan accelerometer papan dan layar kotak centang.  Sekarang, hanya pesawat merah bekerja. \r \r # This\r melakukan * membuat baru 'movePlane(name)' fungsi yang dapat memindahkan apapun pesawat. \r * memanggil fungsi 'movePlane(name)' dalam blok acara, sehingga hanya bergerak ketika dengan kotak centang dicentang. \r \r _Challenge: Sekarang pesawat bergerak terlalu cepat.  Dapatkah Anda mengetahui bagaimana untuk mengubah kode sehingga mereka bergerak lebih lambat? _zxsxXXsx
       CSD U6 params modify planes_2018: |-

@@ -1282,3 +1282,87 @@ ro:
       11:
         text: "Daca ati uitat ce trebuie sa faceti, instructiunile pentru fiecare nivel sunt in partea de sus."
       12:
+    hoc_dance_warmup:
+      1:
+        text: "Ora de cod | Petrecere cu dans: Pregătire"
+      2:
+        text: "Bună! Numele meu este Miral Kotb şi sunt dansator, dezvoltator de software\nşi creator al iLuminate."
+      3:
+        text: "Aşadar, ştiinţa calculatoarelor se relaţionează cu creativitatea în foarte multe moduri. Vreau să spun, că odată ce poţi scrie software poţi pune idei în orice. Eu o fac prin costume cu lumini. Sunt atâtea lucruri pe care le poţi face odată ce ai uneltele de scris software, iar posibilităţile sunt fără sfârşit."
+      4:
+        text: "În următoarea oră, vei începe ştiinţa calculatoarelor prin programarea petrecerii tale cu dans! Noi am adunat pentru tine câteva melodii de top şi o echipă de mari dansatori să te joci cu ei."
+      5:
+        text: "Vei folosi blocuri de cod pentru a alege diferiţi dansatori, a schimba mişcările lor de dans, a-i face să reacţioneze la muzică şi a-i face interactivi."
+      6:
+        text: "Vei vedea că ecranul tău este împărţit în trei părţi principale. În partea stângă este zona de dans. Aici vor apărea dansatorii tăi."
+      7:
+        text: "Această zonă din mijloc este bara cu unelte. Blocuri noi de cod vor fi disponibile în \nacest spaţiu odată cu trecerea ta prin lecţii."
+      8:
+        text: "Spaţiul din dreapta este zona de lucru. Poţi trage blocuri din bara cu unelte în\nzona de lucru pentru a-ţi construi programul."
+      9:
+        text: "Instrucţiunile pentru fiecare nivel vor fi afişate aici în partea de sus a ecranului. Dacă doreşti o sugestie, apasă pe bec."
+      10:
+        text: "Pentru a porni, hai să facem un nou dansator cu acest bloc roşu. Mai întâi, trage-l afară din bara cu unelte şi potriveşte-l sub blocul portocaliu \"setup\" (configurare). Dansatorul este o pisică cu numele \"my_first_dancer\" (primul meu dansator). Poţi schimba numele dansatorului \ndupă cum vrei apăsând aici."
+      11:
+        text: "Poţi să schimbi unde apare dansatorul în scena ta cu asta."
+      12:
+        text: "Deasupra scenei este un meniu pentru alegerea cântecului. Sunt multe cântece din care poţi alege, deci distrează-te căutându-ţi cântecul favorit. Sub scenă se află butonul de execuţie (Run). Când apeşi butonul Execută (Run), vei vedea că dansatorii, din programul tău, vor apare pe scenă şi muzica va porni."
+      13:
+        text: "Încearcă şi tu! Dacă te simţi blocat, este în regulă! Doar ridică-te şi mişcă-te, şi înainte să\nîţi dai seama, ţi-ai făcut propria petrecere cu dans. Deci, ce vei crea?"
+    hoc_dance_events:
+      1:
+        text: "Ora de cod | Petrecere cu dans: Evenimente"
+      2:
+        text: "Sunt Aloe Blacc. Sunt câtăreţ/scriitor de cântece şi comediant. Cred că este foarte important \nsă învăţăm ştiinţa calculatoarelor deoarece aceasta reprezintă viitorul, şi cred că este important pentru oameni să controleze tehnologia care le controlează literalmente viaţa."
+      3:
+        text: "Pentru a face diverse mişcări de dans care să aibă loc la momentul potrivit din muzică, poţi folosi ceva numit evenimente (events). Un eveniment îi spune programului tău să urmărească ceva care o să se întâmple, după care să reacţioneze în modul potrivit."
+      4:
+        text: "Căteva exemple de evenimente sunt: să aştepte un click de mouse, un buton săgeată sau o atingere de ecran. Evenimentul pe care îl vom folosi acum va urmări o schimbare în cântec. Schimbarea va face ca dansatorul să facă un alt dans."
+      5:
+        text: "Dansatorii profesionali îşi practică coregrafia numărând bătăile cântecului."
+      6:
+        text: "În muzică, o măsură se referă la un anumit număr de bătăi. În cântecele cele mai populare o măsură are o lungime de 4 bătăi."
+      7:
+        text: "Pentru a lăsa dansatorii liberi, ai nevoie de un bloc de tip eveniment verde. Acest bloc de tip eveniment spune \"după patru măsuri\"."
+      8:
+        text: "Dacă tragi un bloc portocaliu de tipul 'fă la nesfârşit' ('do forever'), poţi alege un dans pentru dansatorul tău. Deoarece este sub blocul de tip eveniment \"după patru măsuri\", dansatorul va aştepta 4 măsuri din cântec înainte de a începe dansul."
+      9:
+        text: "Urmăreşte numărătorul de măsuri din partea de sus a ecranului."
+      10:
+        text: "Priveşte şi ascultă evenimentul care va declanşa codul de dans. Şi chiar la timp, dansatorul nostru începe."
+    hoc_dance_properties:
+      1:
+        text: "Ora de cod | Petrecere cu dans: Proprietăţi"
+      2:
+        text: "Numele meu este Maria. Sunt studentă în primul an la Universitatea din Washington şi sunt un viitor inginer la Amazon."
+      3:
+        text: "Iubesc ştiinţa calculatoarelor pentru că încorporează rezolvarea de probleme \nşi gîndirea critică şi după ce petreci multe ore de lucru pentru ceva, poţi obţine ceva foarte interesant şi profitabil din asta."
+      4:
+        text: "Până acum, ai avut şansa să te joci cu diferite tipuri de dansatori şi i-ai programat să facă diferite mişcări de dans. Dar cum se obţin de fapt aceste mişcări?"
+      5:
+        text: "Fiecare mişcare de dans este făcută dintr-o serie de imagini numite cadre (frames). Fiecare cadru este uşor diferit de cel anterior. Când programul tău se execută, calculatorul arată cadrele unul după altul. Ele sunt afişate atât de repede încât ţi se pare că dansatorul se mişcă. Acesta este secretul din spatele tuturor animaţiilor."
+      6:
+        text: "Pe lângă faptul că poţi schimba mişcările dansatorului, poţi schimba şi proprietăţile dansatorului. Proprietăţile descriu lucruri ca poziţia dansatorului pe ecran, dimensiunea dansatorului şi culoarea dansatorului."
+      7:
+        text: "Pentru a schimba proprietăţile dansatorului, vei folosi un bloc \"setează\" (set). Hai să folosim un bloc \"setează\" pentru a face dansatorul să pară mai mic. Mai întâi, trage blocul \"setează\" în program. Apoi, selectează dansatorul pe care vrei să-l modifici şi introdu dimensiunea pe care să o aibă pe ecran."
+      8:
+        text: "Mărimea normală este 100. Dacă alegi un număr mai mic, va face ca dansatorul să fie mai mic. Cu cât este mai mic dansatorul cu atât acesta pare mai departe. Asta este o tehnică foarte bună să faci un dansator de rezervă."
+      9:
+        text: "Utilizând un bloc \"setează\", poţi schimba dansatorului următoarele: dimensiunea, rotaţia, poziţia şi culoarea. Jucându-te cu aceste proprietăţi poţi face orice tip de modificări pe care\nsă le legi la diverse părţi din cântec."
+      10:
+        text: "Adu-ţi aminte, poţi seta proprietăţile unui dansator care există deja. Asigură-te că blocul \"setează\" urmează după blocul \"crează un nou dansator\". Simte-te liber să experimentezi, fi creativ şi distrează-te."
+    hoc_dance_congrats:
+      1:
+        text: "Ora de cod | Petrecere cu dans: Petrecerea continuă!"
+      2:
+        text: "Felicitări! Tocmai ai învăţat fundamentele ştiinţei calculatoarelor. Acum poţi utiliza aceste blocuri pentru a creea o petrecere cu dans după cum vrei tu şi să o partajezi cu prietenii tăi."
+      3:
+        text: "Dacă te uiţi în cutia de unelte, vei găsi nişte blocuri noi nouţe pe care nu le-ai mai văzut până acum. De exemplu, poţi folosi blocul \"schemă\" (layout) pentru a aranja dansatorii pe ecran\nîn diferite moduri."
+      4:
+        text: "Uită-te în jur şi încearcă să experimentezi cu aceste blocuri noi şi catacteristici. Vei creea o coregrafie bine pusă la punct pentru cântecul tău favorit?"
+      5:
+        text: "Sau o competiţie de dans cu prietenii tăi?"
+      6:
+        text: "Sau orice altceva care să le cuprindă pe toate?"
+      7:
+        text: "La sfârşitul tutorialului poţi partaja link-ul creaţiei tale cu prietenii. Extindeţi imaginaţia şi distrează-te!"

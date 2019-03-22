@@ -126,7 +126,7 @@ zh-TW:
             Bounce:
               name: 彈跳
             Computational Thinking:
-              name: 電腦計算式思維
+              name: 計算機式思維
             Crowdsourcing:
               name: 群眾外包（Crowdsourcing）
             Dice Race:
@@ -392,7 +392,7 @@ zh-TW:
             Algorithms:
               name: 演算法
             Computational Thinking:
-              name: 電腦計算式思維
+              name: 計算機式思維
             Conditionals:
               name: 條件判斷（Conditionals）
             Functions:
@@ -720,7 +720,7 @@ zh-TW:
             Invent an Addressing Protocol:
               name: 發明一個定址協定
             One Way Functions - Ice Cream Vans:
-              name: 單向函數 - Wifi熱點問題
+              name: 單向函式 - WiFi 熱點問題
             Public Key Crypto:
               name: 公開金鑰加密
             Tell Me a Secret - Encrypting Text:
@@ -784,6 +784,10 @@ zh-TW:
               name: 迷宮
             Minecraft:
               name: Minecraft
+            Multi2:
+              name: 雙人
+            Netsim:
+              name: 籃網
             Online PD:
               name: 線上 PD
             PlayLab:
@@ -1552,6 +1556,10 @@ zh-TW:
           stages:
             Unit 1 Overview:
               name: 單元 1 概覽
+        cspunit1-tools:
+          stages:
+            netsim:
+              name: 籃網
         csp-facilitators:
           description: 計算機科學原理課程的工具集成。這裡提供了我們在整個課程上使用到的工具概覽。
           description_short: 計算機科學原理導論 - 給新的輔導員
@@ -1996,6 +2004,7 @@ zh-TW:
               name: 簡單加密
         fesbinary:
           title: 二進制（Binary）
+          description_audience: Mike
           stages:
             Binary Bracelets:
               name: 二進制手環
@@ -2231,6 +2240,9 @@ zh-TW:
           title: 編寫一個你自己的運動遊戲程式
           description_short: 搞個混搭的運動遊戲
           description: 搞個混搭的運動遊戲
+          stages:
+            Sports:
+              name: 運動
         2016_sciencePD-phase2b:
           stages:
             Welcome!:
@@ -2368,6 +2380,8 @@ zh-TW:
               name: '專案：原型創新'
             Map:
               name: 地圖
+            Arrays:
+              name: 陣列
             Functions with Parameters:
               name: 函式帶參數
         workshop-gamelab:
@@ -2494,6 +2508,8 @@ zh-TW:
               name: 傳感器應用
             'Project: Prototype an Innovation':
               name: '專案：原型創新'
+            Arrays:
+              name: 陣列
             Functions with Parameters:
               name: 函式帶參數
             The Circuit Playground_:
@@ -2609,6 +2625,8 @@ zh-TW:
               name: 數位足跡
             Images in HTML:
               name: 在 HTML 中的圖像
+            Images:
+              name: 圖像
             Clean Code and Debugging:
               name: 乾淨代碼和偵錯調試
             Styling Text with CSS:
@@ -2653,6 +2671,8 @@ zh-TW:
               name: '專案：設計一個遊戲'
             'null':
               name: 'null'
+            temp:
+              name: temp
         coursef-ramp:
           stages:
             Introduction:
@@ -2695,6 +2715,8 @@ zh-TW:
               name: '專案：個人作品網站'
         artist-and-bb8:
           stages:
+            B8 BB8:
+              name: B8 BB8
             Ice Age Play Lab:
               name: 冰原歷險記 Play Lab
             Bounce:
@@ -2794,6 +2816,13 @@ zh-TW:
           stages:
             Wrap Up:
               name: 總結
+        novice-view:
+          description_short: NA
+          description: NA
+        allthettsthings:
+          stages:
+            TTS:
+              name: TTS
         express-2017:
           stages:
             Introduction:
@@ -2840,6 +2869,8 @@ zh-TW:
           stages:
             Thanks:
               name: 謝謝
+            " ":
+              name: " "
         csp-pre-survey-test-2017:
           stages:
             new stage:
@@ -2854,6 +2885,8 @@ zh-TW:
               name: 建立函式
             APIs and Function Parameters:
               name: API 和函式參數
+            foo:
+              name: foo
         csd4-draft:
           stages:
             Analysis of Design:
@@ -3623,18 +3656,56 @@ zh-TW:
           stages:
             Wrap Up:
               name: 總結
+            Friday:
+              name: 週五
+            Monday:
+              name: 週一
+            Day 1:
+              name: 第 1 天
+            Day 2:
+              name: 第 2 天
+            Day 3:
+              name: 第 3 天
+            Day 4:
+              name: 第 4 天
         csd-apprentice-18:
           stages:
             Wrap Up:
               name: 總結
+            Day 1:
+              name: 第 1 天
+            Day 2:
+              name: 第 2 天
+            Day 3:
+              name: 第 3 天
+            Day 4:
+              name: 第 4 天
         csp-novice-18:
           stages:
             Wrap Up:
               name: 總結
+            Monday:
+              name: 週一
+            Day 1:
+              name: 第 1 天
+            Day 2:
+              name: 第 2 天
+            Day 3:
+              name: 第 3 天
+            Day 4:
+              name: 第 4 天
         csp-apprentice-18:
           stages:
             Wrap Up:
               name: 總結
+            Day 1:
+              name: 第 1 天
+            Day 2:
+              name: 第 2 天
+            Day 3:
+              name: 第 3 天
+            Day 4:
+              name: 第 4 天
         pre-express-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -3768,6 +3839,8 @@ zh-TW:
               name: 蜜蜂裡的巢狀迴圈（Nested Loops）
             Nested Loops in Artist:
               name: 小藝術家裡的巢狀迴圈（Nested Loops）
+            About Me:
+              name: 關於我
         express-2019:
           stages:
             Programming in Maze:
@@ -3844,6 +3917,8 @@ zh-TW:
               name: '迴圈：快樂迴圈'
             Learn to Drag and Drop:
               name: 學習滑鼠的拖放
+            Loops in Ice Age:
+              name: 冰河歷險紀中的迴圈
         courseb-2019:
           stages:
             Move It, Move It:
@@ -3854,6 +3929,8 @@ zh-TW:
               name: 冰河歷險紀中的迴圈
             'Loops: Getting Loopy':
               name: '迴圈：學習迴圈'
+            Programming in Maze:
+              name: 迷宮中的程式設計
         pre-express-2019:
           stages:
             Move It, Move It:

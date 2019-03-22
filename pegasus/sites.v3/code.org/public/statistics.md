@@ -30,22 +30,20 @@ And, many of these test-takers were female or minority students.
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="https://twitter.com/codeorg/status/1085626759146586112" target="_blank"><img src="/images/statistics/fit-250/where-teachers-came-from.png"></a>
+<a href="https://twitter.com/codeorg/status/1093197136974544896" target="_blank"><img src="/images/statistics/fit-250/perception-vs-reality.png"></a>
 
 <br>
 
-Two-thirds of computing jobs are outside the tech sector, which is why we need teachers from diverse backgrounds. Teachers at our 2018 summer workshops came with varied experience from all over the country!
-
+Young women are 11% more likely to say the CS Principles programming units are too difficult for them, but they score just as high as male students!
 </div>
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="https://twitter.com/TeachCode/status/1089885912362872835" target="_blank"><img src="/images/statistics/fit-250/teacher-experience.png"></a>
+<a href="" target="_blank"><img src="/images/statistics/fit-250/URM-CSaccess.png"></a>
 
 <br>
 
-Don't be intimidated; almost half the teachers in our Professional Learning program have zero prior experience teaching computer science.
-
+There’s something wrong here: Schools reaching the most diverse student groups are far less likely to offer computer science. Students at these schools never even have the chance to learn.
 </div>
 
 <div style="clear: both;"></div>
@@ -79,8 +77,6 @@ Teachers from any background can teach computer science.
 Over the last 5 years, Code.org use in schools has expanded across the US. Here's a look at the growth in US schools from 2013-2018.
 </div>
 
-<br>
-<br>
 <br>
 
 <div style="clear: both;"></div>
@@ -195,11 +191,12 @@ It's never too late to start teaching CS!
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="https://twitter.com/codeorg/status/1093197136974544896" target="_blank"><img src="/images/statistics/fit-250/perception-vs-reality.png"></a>
+<a href="https://twitter.com/codeorg/status/1085626759146586112" target="_blank"><img src="/images/statistics/fit-250/where-teachers-came-from.png"></a>
 
 <br>
 
-Young women are 11% more likely to say the CS Principles programming units are too difficult for them, but they score just as high as male students!
+Two-thirds of computing jobs are outside the tech sector, which is why we need teachers from diverse backgrounds. Teachers at our past workshops came with varied experience from all over the country!
+
 </div>
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
@@ -211,6 +208,15 @@ Young women are 11% more likely to say the CS Principles programming units are t
 We have scholarships for <a href="https://code.org/educate/professional-learning">teacher professional learning</a> available to help us reach high needs schools so we can change this picture.
 </div>
 
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/TeachCode/status/1089885912362872835" target="_blank"><img src="/images/statistics/fit-250/teacher-experience.png"></a>
+
+<br>
+
+Don't be intimidated; almost half the teachers in our Professional Learning program have zero prior experience teaching computer science.
+
+</div>
 
 <div style="clear: both;"></div>
 

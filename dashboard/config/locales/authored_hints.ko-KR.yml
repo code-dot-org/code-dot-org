@@ -349,6 +349,8 @@ ko:
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: "'앞으로 이동' 블럭을 사용하기 위해서는 블럭들 모음 메뉴에서 마우스를 클릭한채 이동하여 작업 영역의 '실행하면'
           위치에 연결합니다."
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: If 블록을 사용하면 올바른 턴을 만들 수 있습니다.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: '반 육각형은 ** 길이가 30 **이며 **는 ** 60도 오른쪽으로 회전합니다 **.  '
         Course_4_Artist_11_b: '2/3 삼각형은 ** 길이가 80 **이며 ** 120도 **만큼 우회전 합니다. '

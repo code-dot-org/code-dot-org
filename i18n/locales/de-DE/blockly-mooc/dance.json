@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Sie müssen einen anderen Tanz verwenden.",
   "danceFeedbackNeedEveryTwoMeasures": "Stellen Sie sicher, dass Sie den Block \"alle 2 Takte\" verwenden",
   "danceFeedbackNeedMakeANewDancer": "Verwenden Sie den Block \"einen Neuen erstellen\", um zu einen zweiten Tänzer zu erstellen.",
+  "danceFeedbackKeyEvent": "",
   "measure": "Takt:"
 }

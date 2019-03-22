@@ -1064,16 +1064,6 @@ is:
          * (Vísbending: þú notar næstum því sama kóðann og í `moveCloud0` fallinu)
         * Kallaðu á nýja `moveCloud(heiti)` fallið innan úr atburðarkubbnum, einu sinni fyrir hvert skýjaheiti.
          * (Vísbending: þetta er líkt því hvernig kallað er oft á `loopCloud(heiti)` fallið.
-      CSD U6 params modify clouds_2019: |-
-        # Ský
-
-        Þetta forrit lætur skýin hreyfast þegar þú blæst á hljóðnemann, en það er óklárað.
-
-        # Gerðu þetta
-        * Búðu til nýtt fall `moveCloud(heiti)` sem getur fært hvaða ský sem er.
-         * (Vísbending: þú notar næstum því sama kóðann og í `moveCloud0` fallinu)
-        * Kallaðu á nýja `moveCloud(heiti)` fallið innan úr atburðarkubbnum, einu sinni fyrir hvert skýjaheiti.
-         * (Vísbending: þetta er líkt því hvernig kallað er oft á `loopCloud(heiti)` fallið.
       CSDU4 - AppLab - 1: Lestu gegnum skjölunina fyrir penColor() og penWidth() áður
         en þú notar þau til að teikna bláa ferninginn.
       CSDU4 - Design Mode - 1: Bættu við hnappi sem hreyfir skjaldbökuna við smell.
@@ -1282,6 +1272,7 @@ is:
         "lengd" með gildið 180.
       Collector Demo: Sjáðu þessar fúlgur fjár! Hjálpaðu mér að ná sem flestum peningum
         svo að ég geti endurbætt býlið mitt. Ég má þó aðeins nota 9 kubba!
+      CoureE_HOC 2018 Level_7a: Leitaðu að kistu í þessum neðansjávarrústum.
       Course 2 Bee Loops 1: 'Hæ, ég er býfluga. Getur þú hjálpað mér að safna blómasafanum
         úr þessum blómum? '
       Course 2 Bee Loops 13: 'Mat: Notaðu "endurtaka" kubbinn til að safna öllum blómasafanum.'
@@ -3670,8 +3661,6 @@ is:
       Virtual Pet 1 fix: Hvað heldur þú að muni gerast ef þú ýtir á "Keyra" og smellir
         svo á hana?
       Virtual Pet 1: Hvað heldur þú að muni gerast ef þú ýtir á "Keyra" og smellir
-        svo á hana?
-      Virtual Pet 1_2019: Hvað heldur þú að muni gerast ef þú ýtir á "Keyra" og smellir
         svo á hana?
       Virtual Pet 1_simple: Hvað heldur þú að muni gerast ef þú ýtir á "Keyra" og
         smellir svo á hana?
