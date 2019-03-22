@@ -13,7 +13,8 @@ module UsersHelper
   ACCT_TAKEOVER_OAUTH_TOKEN = 'clever_takeover_token'
   ACCT_TAKEOVER_FORCE_TAKEOVER = 'force_clever_takeover'
 
-  # Move followed sections from source_user to destination_user and destroy source_user.
+  # Move section membership and (for teachers) section ownership from source_user to
+  # destination_user and destroy source_user.
   # Returns a boolean - true if all steps were successful, false otherwise.
   def move_sections_and_destroy_source_user(source_user:, destination_user:, takeover_type:, provider:)
     # No-op if source_user is nil
