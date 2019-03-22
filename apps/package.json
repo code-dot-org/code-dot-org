@@ -102,6 +102,7 @@
     "eslint-plugin-react": "^5.2.2",
     "fake-fetch": "^2.0.0",
     "fast-memoize": "2.0.2",
+    "file-loader": "^3.0.1",
     "firebase": "^2.4.2",
     "firebase-bolt": "^0.8.0",
     "firebase-mock": "^1.0.5",
