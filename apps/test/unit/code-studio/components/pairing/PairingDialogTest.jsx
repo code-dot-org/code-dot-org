@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing';
 import PairingDialog from '@cdo/apps/code-studio/components/pairing/PairingDialog';

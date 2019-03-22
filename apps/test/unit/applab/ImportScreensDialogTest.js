@@ -2,7 +2,7 @@
 import React from 'react';
 import sinon from 'sinon';
 import {shallow, mount} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import Dialog, {
   Body,
   Buttons,

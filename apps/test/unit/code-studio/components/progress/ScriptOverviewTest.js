@@ -1,5 +1,5 @@
 import React from 'react';
-import {assert, expect} from '../../../../util/configuredChai';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import {UnconnectedScriptOverview as ScriptOverview} from '@cdo/apps/code-studio/components/progress/ScriptOverview';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
