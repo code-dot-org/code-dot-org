@@ -36,10 +36,8 @@ module UsersHelper
 
     ActiveRecord::Base.transaction do
       # Move over sections that source_user follows
-      if destination_user.student?
-        Follower.where(student_user_id: source_user.id).each do |followed|
-          followed.update!(student_user_id: destination_user.id)
-        end
+      Follower.where(student_user_id: source_user.id).each do |followed|
+        followed.update!(student_user_id: destination_user.id)
       end
 
       # If both users are teachers, transfer ownership of sections
