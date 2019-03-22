@@ -156,9 +156,7 @@ module RegistrationsControllerTests
     end
 
     test "does not send email when teacher destroyed if teacher has no email" do
-      user = create :teacher, password: 'apassword'
-      user.update_primary_contact_info(new_email: "", new_hashed_email: "")
-      user.save(validate: false)
+      user = create :teacher, :without_email, password: 'apassword'
       refute user.valid?
       sign_in user
 
