@@ -740,20 +740,6 @@ describe('entry tests', () => {
               },
               priority: 10
             },
-            // 'code-studio-test': {
-            //   name: 'code-studio-common',
-            //   minChunks: 2,
-            //   chunks: chunk => {
-            //     const chunkNames = _.keys(codeStudioEntries).concat(
-            //       _.keys(appsEntries)
-            //     );
-            //     return chunkNames.includes(chunk.name);
-            //   },
-            //   test(module) {
-            //     return /apps[\\/]src[\\/]code-studio/.test(module.resource);
-            //   },
-            //   priority: 20
-            // },
             'code-studio-multi': {
               name: 'code-studio-common',
               minChunks: _.keys(appsEntries).length + 1,
