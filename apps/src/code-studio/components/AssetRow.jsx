@@ -59,8 +59,7 @@ class ConfirmImageDeleteDialog extends React.Component {
           <p>
             {i18n.deleteUsedImage({
               name: this.props.name,
-              value: this.props.usage,
-              places: this.props.usage > 1 ? i18n.places() : i18n.place()
+              value: this.props.usage
             })}
           </p>
           <DialogFooter>

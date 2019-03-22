@@ -32,6 +32,7 @@ MONITORING_GROUPS = {
   'developers' => ['Developers'],
   'learning-platform' => ['Learning Platform'],
   'plc-engineering' => ['PLC Tools'],
+  'product' => ['Product'],
   'star-labs-cabal' => ['*Labs'],
   # 'privacy' => ['Privacy'],
   # 'user-accounts' => ['Accounts'],
@@ -42,6 +43,7 @@ GROUP_FILTERS = {
   'Developers' => '47222126',
   'Learning Platform' => '360082967212',
   'PLC Tools' => '114103940251',
+  'Product' => '360007773991',
   '*Labs' => '301129028',
 }
 
