@@ -26,7 +26,8 @@ import sectionAssessments, {
   getStudentAnswersForCurrentQuestion,
   setFeedback,
   doesCurrentCourseUseFeedback,
-  getExportableFeedbackData
+  getExportableFeedbackData,
+  isCurrentScriptCSD
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
@@ -630,6 +631,32 @@ describe('sectionAssessmentsRedux', () => {
             notAnswered: 0
           }
         ]);
+      });
+    });
+
+    describe('isCurrentScriptCSD', () => {
+      it('returns true when the current script is CSD', () => {
+        const state = {
+          ...rootState,
+          scriptSelection: {
+            scriptId: 2,
+            script_name: 'csd7-2009'
+          }
+        };
+        const result = isCurrentScriptCSD(state);
+        assert.deepEqual(result, true);
+      });
+
+      it('returns false when the current script is not CSD', () => {
+        const state = {
+          ...rootState,
+          scriptSelection: {
+            scriptId: 2,
+            script_name: 'learn-cs'
+          }
+        };
+        const result = isCurrentScriptCSD(state);
+        assert.deepEqual(result, false);
       });
     });
 
