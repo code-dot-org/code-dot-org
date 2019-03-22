@@ -140,8 +140,8 @@ level 'Overworld Plant Crops_2019'
 level 'Overworld Avoid Monsters_2019'
 level 'Underground Mining Coal_2019'
 level 'Underground Iron_2019'
-level 'Underground Avoiding Lava_2019'
-level 'Underground If Statements_2019'
+level 'Underground Avoiding Lava_2019', progression: 'Challenge', challenge: true
+level 'Underground If Statements_2019', progression: 'Challenge', challenge: true
 level 'Overworld Powered Minecart_2019'
 level 'Overworld Free Play 20x20_2019', progression: 'Free Play'
 
