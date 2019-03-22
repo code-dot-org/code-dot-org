@@ -196,7 +196,7 @@ describe('sectionAssessmentsRedux', () => {
   });
 
   //TODO When turn off experiment come in and delete cases that are no longer needed
-  describe('getCurrentScriptAssessmentList - Not Feedback Section', () => {
+  describe('getCurrentScriptAssessmentList', () => {
     it('gets a list of assessments - script is not csd or csp - experiment on', () => {
       sinon.stub(experiments, 'isEnabled').returns(true);
       const rootState = {
