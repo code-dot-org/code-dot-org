@@ -12,6 +12,8 @@ import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
 import PaginationWrapper from '../../templates/PaginationWrapper';
 import {searchAssets} from '../../code-studio/assets/searchAssets';
+import experiments from '@cdo/apps/util/experiments';
+import {connect} from 'react-redux';
 
 const MAX_SEARCH_RESULTS = 27;
 const animationPickerStyles = {
@@ -44,7 +46,8 @@ class AnimationPickerBody extends React.Component {
     onDrawYourOwnClick: PropTypes.func.isRequired,
     onPickLibraryAnimation: PropTypes.func.isRequired,
     onUploadClick: PropTypes.func.isRequired,
-    playAnimations: PropTypes.bool.isRequired
+    playAnimations: PropTypes.bool.isRequired,
+    spriteLab: PropTypes.bool
   };
 
   state = {
@@ -100,6 +103,11 @@ class AnimationPickerBody extends React.Component {
       this.state.currentPage,
       MAX_SEARCH_RESULTS
     );
+
+    // Hide the upload option for students in spritelab
+    let hideUploadOption =
+      experiments.isEnabled('sprite-costumes') && this.props.spriteLab;
+
     return (
       <div>
         <h1 style={styles.title}>{gamelabMsg.animationPicker_title()}</h1>
@@ -152,11 +160,13 @@ class AnimationPickerBody extends React.Component {
                 icon="pencil"
                 onClick={this.props.onDrawYourOwnClick}
               />
-              <AnimationPickerListItem
-                label={gamelabMsg.animationPicker_uploadImage()}
-                icon="upload"
-                onClick={this.props.onUploadClick}
-              />
+              {!hideUploadOption && (
+                <AnimationPickerListItem
+                  label={gamelabMsg.animationPicker_uploadImage()}
+                  icon="upload"
+                  onClick={this.props.onUploadClick}
+                />
+              )}
             </div>
           )}
           {this.state.searchQuery === '' &&
@@ -170,7 +180,11 @@ class AnimationPickerBody extends React.Component {
   }
 }
 
-export default Radium(AnimationPickerBody);
+export const UnconnectedAnimationPickerBody = Radium(AnimationPickerBody);
+
+export default connect(state => ({
+  spriteLab: state.pageConstants.isBlockly
+}))(Radium(AnimationPickerBody));
 
 export const WarningLabel = ({children}) => (
   <span style={{color: color.red}}>{children}</span>
