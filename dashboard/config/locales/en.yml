@@ -995,10 +995,10 @@ en:
     csp2_1_2018: 'Unit 2: Digital Information'
     csp3_1_2018: 'Unit 3: Intro to Programming'
     csp4_1_2018: 'Unit 4: Big Data and Privacy'
-    csp-variables: 'Variables'
-    csp-conditionals: 'Conditionals'
-    csp-functions: 'Functions'
-    csp-project: 'Project'
+    csp_variables: 'Variables'
+    csp_conditionals: 'Conditionals'
+    csp_functions: 'Functions'
+    csp_project: 'Project'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
