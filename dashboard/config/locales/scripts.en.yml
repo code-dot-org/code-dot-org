@@ -1149,6 +1149,8 @@ en:
               name: Dance Lab
             Mini Rubric:
               name: Mini Rubric
+            Pluralsight Test:
+              name: Pluralsight Test
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
