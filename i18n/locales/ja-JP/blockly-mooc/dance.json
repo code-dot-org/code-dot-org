@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "違うダンスを使いましょう。",
   "danceFeedbackNeedEveryTwoMeasures": "'すべての2小節'ブロックを使いましょう。",
   "danceFeedbackNeedMakeANewDancer": "`新しくつくる`ブロックを使って2番目のダンサーを作りましょう。",
+  "danceFeedbackKeyEvent": "",
   "measure": "小節:"
 }

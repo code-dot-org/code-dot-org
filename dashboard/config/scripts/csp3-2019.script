@@ -2,7 +2,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp-18/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp-18/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp-18/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp-19/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp-19/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
 has_verified_resources true
 has_lesson_plan true
 family_name 'csp3'
@@ -120,7 +120,7 @@ stage 'Practice PT - Design a Digital Scene', flex_category: 'csp3_1_2018'
 named_level 'CSP U3L10 SFLP_2019'
 level 'U3L08 - individualCode_2019', progression: 'Design Your Components'
 level 'How To: Share Code with Teammates_2018_2019', progression: 'How to Share Code with Teammates'
-level 'U3L08 - digitalScene_2019', progression: 'Challenge: Design Your Digital Scene'
+assessment 'U3L08 - digitalScene_2019', progression: 'Challenge: Design Your Digital Scene'
 
 stage 'Unit 3 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
 assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018_2019'

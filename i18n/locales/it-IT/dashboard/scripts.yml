@@ -1615,7 +1615,7 @@ it:
           assignment_family_title: Corso A
           description_audience: 'Età: da 4 a 7 anni'
           description_short: Introduzione all'informatica per bambini che non leggono ancora.
-          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1650,7 +1650,7 @@ it:
           assignment_family_title: Corso B
           description_audience: 'Da 5 a 8 anni'
           description_short: Introduzione all'informatica per bambini che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente più grandi.)
-          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
         coursec-2017:
           stages:
             Building a Foundation:
@@ -2014,7 +2014,7 @@ it:
           title: Corso rapido
           assignment_family_title: Corso Rapido
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
-          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -2045,7 +2045,7 @@ it:
               name: Ape Sapiente
           title: Corso rapido pre-scolare
           description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
-          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
         subgoal-labels-opt-in:
           stages:
             other:
@@ -2495,7 +2495,7 @@ it:
         coursea-2018:
           title: Corso A (2018)
           assignment_family_title: Corso A
-          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
           description_short: Introduzione all'informatica per bambini che non leggono ancora.
           description_audience: 'Età: da 4 a 7 anni'
           stages:
@@ -2547,7 +2547,7 @@ it:
         express-2018:
           title: Corso Rapido
           assignment_family_title: Corso Rapido
-          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programmazione su carta a quadretti
@@ -2672,7 +2672,7 @@ it:
         courseb-2018:
           title: Corso B (2018)
           assignment_family_title: Corso B
-          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
           description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
           description_audience: 'Da 5 a 8 anni'
           stages:
@@ -3039,7 +3039,7 @@ it:
             Alien Dance Party - Input:
               name: La festa degli alieni - Ingressi
         pre-express-2018:
-          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
           stages:
             'Debugging: Unspotted Bugs':
               name: Errori Non Riconosciuti
@@ -3126,6 +3126,16 @@ it:
           stages:
             Dance Party:
               name: Ballando col codice
+        cspplayground:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
         dance-extras:
           stages:
             Dance Party - Go Further:
@@ -3219,6 +3229,8 @@ it:
               name: Intelligenza Collettiva
             Digital Sharing:
               name: Condivisione Digitale
+            Running Simulations:
+              name: Simulazioni in corso
         dance-low:
           stages:
             Dance Party:
@@ -3355,7 +3367,7 @@ it:
             Digital Sharing:
               name: Condivisione Digitale
         express-2019:
-          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
           stages:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmi: Programmazione su carta a quadretti'
@@ -3491,7 +3503,7 @@ it:
         gamelab:
           title: Sviluppo Giochi
         coursea-2019:
-          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
           description_short: Introduzione all'informatica per bambini che non leggono ancora.
           description_audience: 'Età: da 4 a 7 anni'
           stages:
@@ -3531,8 +3543,14 @@ it:
               name: Al mare con i Cicli
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
+            Loops in Ice Age:
+              name: Cicli con l'Era Glaciale
+            Programming with Rey and BB-8:
+              name: Programmare con Rey e BB-8
+            Sequencing with Scrat:
+              name: Sequenze di istruzioni con Scrat
         courseb-2019:
-          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
           description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
           description_audience: 'Da 5 a 8 anni'
           stages:
@@ -3562,8 +3580,12 @@ it:
               name: 'Laboratorio: Eventi'
             'Loops: Getting Loopy':
               name: 'Cicli: Diventare Ripetitivi'
+            Loops in Harvester:
+              name: Cicli con la Contadina
+            Programming in Maze:
+              name: Programmazione nel Labirinto
         pre-express-2019:
-          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Correzione Errori (Debugging)'
@@ -3627,6 +3649,10 @@ it:
           stages:
             Surveys:
               name: Sondaggi
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
         csp1-2019:
           stages:
             Personal Innovations:

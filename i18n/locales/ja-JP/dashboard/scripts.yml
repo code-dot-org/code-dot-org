@@ -1617,6 +1617,8 @@ ja:
               name: 'イベント: おおきなイベント'
             Events in Play Lab:
               name: プレイ ラボのイベント
+            Programming in Maze:
+              name: めいろ のプログラミング
         pre-express-2019:
           stages:
             'Debugging: Unspotted Bugs':

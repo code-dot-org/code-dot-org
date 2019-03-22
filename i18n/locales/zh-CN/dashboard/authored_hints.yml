@@ -336,6 +336,8 @@ zh-CN:
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: 要使用 “向前移动” 模块，将它从工具栏拖进工作区并将其连接到 “当运行时” 模块。
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: 你可以用“如果路径”模块来帮助你做正确的转弯。
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: '这半个六边形有一条**30像素长**的边，并且需要向右转**60度**。  '
         Course_4_Artist_11_b: '这2/3个三角形有一条**80像素长**的边，并且需要向右转**120度**。 '
@@ -8298,8 +8300,6 @@ zh-CN:
         courseE_playLab_scaffold1_c: 当你完成后，你应该能够用方向键来移动你的英雄!
       courseC19_playLab_EOC4_authored_hint:
         courseE_playLab_scaffold4_a: 使用`得分`添加一分, 并用`扣分`减去一分。
-      courseC19_playLab_EOC5_authored_hint:
-        courseE_playLab_scaffold5_a: 要完成这个关卡, 你需要赢或输。使用`胜利结束游戏`或`失败结束游戏`模块完成。
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           将此块附加到 "当运行时" 模块：

@@ -144,6 +144,7 @@ ro:
     accept_terms: "Trebuie să fii de acord pentru a crea un cont"
     error: "S-a produs o eroare."
     email_preference_question: "Sunteți de acord să vă trimitem prin e-mail actualizări cu privire la cursurile noastre, oportunitățile locale sau alte știri din domeniul informaticii?"
+    email_preference_privacy: "(Vedeți polica noastră de confidențialitate)"
     email_preference_yes: "Da"
     email_preference_no: "Nu"
     email_preference_required: "Trebuie să specificaţi un email preferat."
@@ -229,6 +230,8 @@ ro:
       picture: 'Poză - parolă'
       word: 'Cuvinte secrete'
       email: 'E-mail'
+      google_classroom: 'Clasa Google'
+      clever: 'Clever'
   follower:
     invite_sent: 'Invitație trimisă'
     added_teacher: '%{name} adăugat(ă) ca și profesorul tău'
@@ -278,12 +281,14 @@ ro:
         applab: 'Creează o aplicație'
         gamelab: 'Creați un proiect în Laboratorul de Joc'
         weblab: 'Creați un proiect în Laboratorul Web (beta)'
+      my_dashboard: "Panoul meu principal"
       course_catalog: "Catalog de cursuri"
       project_gallery: "Proiecte"
       sections: "Secțiuni"
       help_support: "Ajutor şi suport"
       report_bug: "Raporteazã eroare"
       teacher_community: "Comunitate profesori"
+      professional_learning: "Dezvoltare profesională"
       documentation: "Documentație"
       tutorials: "Tutoriale"
       educate_overview: "Prezentare profesor"
@@ -333,6 +338,7 @@ ro:
       spritelab: 'Laborator Sprite'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Petrecere cu dans'
     popup:
       progress_for_user: "Progresul lui %{name}"
       progress: 'Progresul tău'
@@ -464,8 +470,8 @@ ro:
     announcement_mc_launch: "Unul din tutorialele noastre cele mai populare acum are o continuare! Minecraft Designer permite studenţilor sa faca regulile din lumea Minecraft. Ei pot crea o experienţă total unica de Minecraft, apoi sa o împărtăşească cu prietenii sau sa se joace pe telefoanele lor. Parcurge acest tutorial cu clasa ta la Hour of Code."
     announcement_how_code_studio: "Nu aveţi nevoie de nici o experienţă pentru a începe predarea informaticii în clasa dvs. Code.org oferă curriculum, planuri de lecţie, programe de învățare profesionale de înaltă calitate şi tone de instrumente excelente pentru toate nivelurile de clasă&mdash;toate cele necesare, toate gratuit.Vă întrebați de unde să începeți? Descărcați <a href='%{video_download_url}'>acest video</a>!"
     announcement_go_beyond: "Parcurgeți mai mult de o Oră de Cod și explorați concepte informatice cu elevii dvs. în fiecare săptămână. Code.org oferă programe curriculare, planuri de lecții, programe profesionale de învățare de înaltă calitate și tone de instrumente excelente pentru toate nivelele de clasă&mdash; și totul este gratuit :) Nu aveți nevoie de experiență pentru a începe să predați știința informaticii în sala de clasă. <b>Identificați pasul următor potrivit clasei dvs.</b>"
-    announcement_teacher_recruitment: "Profesori asemenea dumneavoastră conduc mișcarea de educație informatică. Puteți participa la programe de învățământ profesional de înaltă calitate la nivel secundar pre-universitar, <strong>complet gratuit pentru dvs. sau pentru școala dvs.</strong>. Preluați conducerea în domeniul științelor informatice în școala dvs. și aplicați pentru învățarea profesională."
-    announcement_teacher_recruitment2: "Profesori asemenea dumneavoastră conduc mișcarea de educație informatică. Puteți participa la programe de învățământ profesional de înaltă calitate la nivel secundar pre-universitar, <strong>complet gratuit pentru dvs. sau pentru școala dvs.</strong>. Preluați conducerea în domeniul științelor informatice în școala dvs. și aplicați pentru învățarea profesională. Profesorii de gimnaziu și liceu aplică până pe 17 martie."
+    announcement_teacher_recruitment: "Profesori asemenea dumneavoastră conduc mișcarea de educație informatică. Puteți participa la programe de învățământ profesional de înaltă calitate pentru grădiniță până la clasa a 12, <strong>complet gratuit pentru dvs. sau pentru școala dvs.</strong>. Preluați conducerea în domeniul științelor informatice în școala dvs. și aplicați pentru învățarea profesională."
+    announcement_teacher_recruitment2: "Profesori asemenea dumneavoastră conduc mișcarea de educație informatică. Puteți participa la programe de învățământ profesional de înaltă calitate pentru grădiniță până la clasa a 12, <strong>complet gratuit pentru dvs. sau pentru școala dvs.</strong>. Preluați conducerea în domeniul științelor informatice în școala dvs. și aplicați pentru învățarea profesională. Profesori ai ciclului gimnazial și liceal aplicați până în 17 martie."
     announcement_csf_pilot: "<strong>Profesori de școală primară:</strong> Participați la actualizarea cursurilor noastre care predau fundamentele Informaticii! Căutăm cadre didactice care să piloteze un curriculum actualizat al Fundamentelor Informatice pe perioada iernii și în primăvara anului 2019. Suntem dornici să auzim feedbackul dvs. înainte ca aceste actualizări să fie lansate live în august 2019."
     announcement_student_privacy: "La Code.org, acordăm o seriozitate deosebită protecției confidențialității elevilor. Pentru a proteja confidențialitatea elevilor dvs., am modificat pagina de conectare din secțiunea dvs. pentru a evita afișarea numelor complete. Chiar dacă această actualizare ar trebui să reducă preocupările în privința menținerii confidențialității pe pagina de conectare, noi încurajăm totuși utilizatorii în <i>a nu utiliza numele complete ale elevilor</i>."
     announcement_apcsp_recruitment: "<strong>Profesori care predați Pricipiile Informaticii:</strong> Elevii dvs. ar putea fi prezentați în următorul videoclip viral al Code.org, care îi încurajează pe studenți să suțină anul acesta examenul la nivel avansat AP (Advanced Placement) în Principii ale Informaticii. Invităm toți elevii care studiază Principiile Informaticii să trimită un clip video de 10-20 de secunde pe Twitter, Instagram sau Facebook, spunând că \"susțin examenul #APCSP pentru că...\" Cele mai bune înregistrări vor fi prezentate în videoclipul nostru și elevii câștigători vor primi Code.org swag/stil Code.org!"
@@ -584,6 +590,8 @@ ro:
       body_short: "Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde."
       audience: 'Vârste 13 +'
       cta: 'Află cum'
+    dance:
+      title: 'Petrecere cu dans'
     hoc:
       title: 'Labirint Clasic'
       body: 'Încearcă bazele programarii. Milioane de oameni au încercat.'
@@ -880,6 +888,8 @@ ro:
     csd4_1: 'Capitolul 1: Design orientat spre utilizator'
     csd4_2: 'Capitolul 2: Prototipare aplicații'
     csd5_1: 'Capitolul 1: Reprezentarea informaţiilor'
+    csd5_2: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+    csd6_1: 'Capitolul 1: Programare cu hardware'
     cspSurvey: 'Sondaj'
     cspAssessment: 'Evaluare capitol'
     csp2_1_2018: 'Unitatea 2: Informaţii digitale'
@@ -953,6 +963,7 @@ ro:
       email_alternate: 'Email alternativ'
       gender: 'Identitate de gen'
       school_name: 'Numele școlii'
+      school_city: 'Orașul în care se află școala'
       school_country: 'Țara școlii'
     form_entries:
       gender:
@@ -986,6 +997,7 @@ ro:
         tynker: 'Tynker'
       robotics:
         kodable: 'Kodable'
+        ozobot: 'Ozobot'
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Atelierul minune'

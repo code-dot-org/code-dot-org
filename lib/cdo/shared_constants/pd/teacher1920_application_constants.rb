@@ -128,6 +128,8 @@ module Pd
         principal_schedule_confirmed: 'Are you committed to including Computer Science <Program> on the master schedule in 2019-20 if <Teacher Name> is accepted into the program?',
         principal_implementation: "To participate in Code.org's Computer Science <Program> Professional Learning Program, we require that this course be offered in one of the following ways. Please select which option will be implemented at your school.",
         principal_diversity_recruitment: 'Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?',
+        contact_invoicing: "Contact name for invoicing",
+        contact_invoicing_detail: "Contact email or phone number for invoicing",
       }
     }.freeze
 
@@ -236,6 +238,9 @@ module Pd
 
       how_heard: {teacher: :how_heard, principal: :principal_how_heard},
 
+      contact_invoicing: {principal: :principal_contact_invoicing},
+      contact_invoicing_detail: {principal: :principal_contact_invoicing_detail},
+
       title_i_status: {stats: :title_i_status},
       school_type: {teacher: :school_type, stats: :school_type},
       total_student_enrollment: {principal: :principal_total_enrollment, stats: :students_total},
@@ -247,8 +252,7 @@ module Pd
       hispanic_or_latino_percent: {principal: :principal_hispanic_or_latino_percent, stats: :hispanic_or_latino_percent},
       native_hawaiian_or_pacific_islander_percent: {principal: :principal_native_hawaiian_or_pacific_islander_percent, stats: :native_hawaiian_or_pacific_islander_percent},
       white_percent: {principal: :principal_white_percent, stats: :white_percent},
-      two_or_more_races_percent: {stats: :two_or_more_races_percent},
-      other_races_percent: {principal: :principal_other_percent}
+      other_races_percent: {principal: :principal_other_percent, stats: :two_or_more_races_percent}
     }
 
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
@@ -430,6 +434,8 @@ module Pd
         :pay_fee,
         :how_heard,
         :share_ap_scores,
+        :contact_invoicing,
+        :contact_invoicing_detail
       ],
       nces: [
         :title_i_status,

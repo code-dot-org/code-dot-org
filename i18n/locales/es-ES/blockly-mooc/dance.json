@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Debes usar una baile diferente.",
   "danceFeedbackNeedEveryTwoMeasures": "Asegúrate de utilizar el bloque «cada 2 compases»",
   "danceFeedbackNeedMakeANewDancer": "Utiliza el bloque «hacer uno nuevo» para crear un segundo bailarín.",
+  "danceFeedbackKeyEvent": "",
   "measure": "Compás:"
 }

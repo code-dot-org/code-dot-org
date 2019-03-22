@@ -15219,6 +15219,7 @@ zh-CN:
         如果你是来管理计算机教室的新人，读一读教育周的这篇文章。它概括了一些重要的考虑。\r
         \r
         <br><br>
+      CoureE_HOC 2018 Level_7a: "找到了水下废墟。在沙石红搜寻包含**海晶石** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)宝藏的**箱子** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)。\n\n"
       Course 4 Artist 1: "帮我画个盒子  \\r\n (每行200像素长) \\r\n\\r\n<br/><br/>\\r\n\\r\n"
       Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"\nwidth=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**游戏时间：** 这是一个有趣的形状的代码。\n\n当你重复它多次，在每个迭代间转向时，会发生什么？ \n\n注意形状中的这些转向最多增加*420度*。这意味着，当小艺术家完成绘画时，他朝向的方向和开始时不同。新方向和开始的方向相比，会恰好往*右* *60度*。\n\n<hr/>\n\n<h4>\n<details>\n<summary><b>重复4次</b></summary>\n<br/>\n如果你想只重复4次来画一个整圆，你需要让小艺术家每次转**360度/4 = 90度**。通过加入一个` 向右转30度`模块到外层循环来实现（因为**60+30=90**。）\n<br/>\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br/><br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>重复6次</b></summary>\n<br/>\n当你重复这个形状6次，能一共转**6x60度**，正好是一整个圆的**360 度**。\n<img\nsrc=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\" width=\"500px;\" style=\"mix-blend-mode:\nmultiply;\" />\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>重复12次</b></summary>\n<br/>\n如果你重复这个图12次，每次需要转**360度/12=30度**。这意味着你要在重复形状前，用`向左转30度`来调整一下小艺术家。<br/><br/>\n<img src=\"https://images.code.org/ad254952522674496918561096817c66-image-1440132424792.44.01.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n</details>\n</h4>\n\n现在，到你了！你能通过重复开始的形状来重新创建每个图片吗？  "
       Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\n挑战的时候到了！\\r\n\\r\n这个设计只使用了你见过的模块。你能想出如何再次创建出它吗？随便试错。没有人期待第一次就能做好。\\r\n\\r\n重复的形状基本和上一关的一样，只有第一个的循环的长度要小一点。 "
@@ -18002,12 +18003,14 @@ zh-CN:
       Virtual Pet 1 fix: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
       Virtual Pet 1-validated: 这是杰拉尔丁，你的宠物长颈鹿。你觉得按下运行之后点击她会发生什么事？
       Virtual Pet 1: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
-      Virtual Pet 1_2019: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
       Virtual Pet 1_simple: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
       Virtual Pet 2 - Validated (Ram): "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。"
       Virtual Pet 2 - Validated: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。"
       Virtual Pet 2: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。"
-      Virtual Pet 2_2019: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。"
+      Virtual Pet 2_2019: |-
+        那边角落里有个泥坑。  
+
+        创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。
       Virtual Pet 2_simple: |-
         那边角落里有一堆灰尘。 
 

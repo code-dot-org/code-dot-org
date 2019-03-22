@@ -6,6 +6,7 @@ import {
 } from '@cdo/apps/generated/pd/principalApproval1920ApplicationConstants';
 import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import PrivacyDialog from '../PrivacyDialog';
+import {PrivacyDialogMode} from '../../constants';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
 import {styles} from '../teacher1920/TeacherApplicationConstants';
@@ -383,7 +384,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         <PrivacyDialog
           show={this.state.isPrivacyDialogOpen}
           onHide={this.handleClosePrivacyDialog}
-          teacherApproval={false}
+          mode={PrivacyDialogMode.PRINCIPAL_APPROVAL}
         />
       </FormGroup>
     );

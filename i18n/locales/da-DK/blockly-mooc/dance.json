@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Du skal bruge en anden dans.",
   "danceFeedbackNeedEveryTwoMeasures": "Kontroller, at du bruger 'hver 2 foranstaltninger'-blok",
   "danceFeedbackNeedMakeANewDancer": "Brug 'lave en ny' blok til at oprette en anden danser.",
+  "danceFeedbackKeyEvent": "",
   "measure": ""
 }
