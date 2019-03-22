@@ -915,16 +915,16 @@ export const getExportableFeedbackData = state => {
  * */
 export const doesCurrentCourseUseFeedback = state => {
   if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
-    const courseFamily = getSelectedScriptName(state);
-    return courseFamily.includes('csp') || courseFamily.includes('csd');
+    const scriptName = getSelectedScriptName(state) || '';
+    return scriptName.includes('csp') || scriptName.includes('csd');
+  } else {
+    return false;
   }
 };
 
 export const isCurrentScriptCSD = state => {
-  const courseFamily = getSelectedScriptName(state);
-  if (courseFamily.includes('csd')) {
-    return true;
-  }
+  const scriptName = getSelectedScriptName(state) || '';
+  return scriptName.includes('csd');
 };
 
 /**
