@@ -40,6 +40,12 @@ const styles = {
   }
 };
 
+/*
+ * Part of the Assessment Tab of Teacher Dashboard.
+ * Shown when select a script that is either CSD or CSP
+ * and you select the all feedback option from the
+ * assessment dropdown.
+ * */
 class FeedbackDownload extends Component {
   static propTypes = {
     sectionName: PropTypes.string.isRequired,

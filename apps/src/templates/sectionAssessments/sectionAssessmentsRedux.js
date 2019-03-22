@@ -903,8 +903,7 @@ export const getExportableFeedbackData = state => {
 
   Object.keys(feedbackForCurrentScript).forEach(feedbackId => {
     feedbackId = parseInt(feedbackId, 10);
-    const feedbackObject = feedbackForCurrentScript[feedbackId];
-    feedback.push(feedbackObject);
+    feedback.push(feedbackForCurrentScript[feedbackId]);
   });
 
   return feedback;

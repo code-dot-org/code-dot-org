@@ -11,7 +11,6 @@ import {
   isCurrentAssessmentSurvey,
   countSubmissionsForCurrentAssessment,
   getExportableData,
-  getExportableFeedbackData,
   setStudentId
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {getStudentList} from '@cdo/apps/redux/sectionDataRedux';
@@ -152,6 +151,8 @@ class SectionAssessments extends Component {
       studentList
     } = this.props;
 
+    const isCurrentAssessmentFeedbackOption = this.props.assessmentId === 0;
+
     return (
       <div>
         <div style={styles.selectors}>
@@ -181,7 +182,7 @@ class SectionAssessments extends Component {
         {!isLoading && assessmentList.length > 0 && (
           <div style={styles.tableContent}>
             {/* Assessments */}
-            {!isCurrentAssessmentSurvey && this.props.assessmentId !== 0 && (
+            {!isCurrentAssessmentSurvey && !isCurrentAssessmentFeedbackOption && (
               <div>
                 <div style={{...h3Style, ...styles.header}}>
                   {i18n.selectStudent()}
@@ -220,7 +221,7 @@ class SectionAssessments extends Component {
               </div>
             )}
             {/* Feedback Download */}
-            {this.props.assessmentId === 0 && (
+            {isCurrentAssessmentFeedbackOption && (
               <FeedbackDownload sectionName={sectionName} />
             )}
             {/* Surveys */}
@@ -284,7 +285,6 @@ export default connect(
     isCurrentAssessmentSurvey: isCurrentAssessmentSurvey(state),
     totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
     exportableData: getExportableData(state),
-    exportableFeedbackData: getExportableFeedbackData(state),
     studentId: state.sectionAssessments.studentId,
     studentList: getStudentList(state)
   }),
