@@ -2453,77 +2453,74 @@ en:
         text: "You've certainly proven yourself an intrepid coder by now, and I can’t wait to see what you build. And hopefully your adventures with code don't end here. Bon Voyage!"
     teaching_cs_fundamentals:
       1:
-        image:
-        text: "This course is broken down into stages. The first few stages will introduce what computer science is, as well as some key vocabulary."
+        image: 'notes/teaching_cs_fundamentals_1.png'
+        text: "This course is broken down into stages."
       2:
-        image:
-        text: "Next, you will learn how to code in the same way your students will. The final stages of the course will help you make a plan to teach computer science in your classroom."
+        image: 'notes/teaching_cs_fundamentals_2.png'
+        text: "The first few stages will introduce what computer science is, as well as some key vocabulary."
       3:
-        image:
-        text: "Throughout the course, you will see examples of both plugged – or online – lessons, as well as unplugged lessons that are done without a computer."
+        image: 'notes/teaching_cs_fundamentals_3.png'
+        text: "Next, you will learn how to code in the same way your students will. The final stages of the course will help you make a plan to teach computer science in your classroom. Throughout the course, you will see examples of both plugged – or online – lessons, as well as unplugged lessons that are done without a computer."
       4:
-        image:
+        image: 'notes/teaching_cs_fundamentals_4.png'
         text: "The learning platform will track your progress, so you can pick up where you left off at any time."
     what_is_cs:
       1:
-        image:
-        text: "Coding is the set of instructions you give to a computer."
-      2:
-        image:
-        text: "Computer science is a field where people use the power of computers to solve big problems."
-      3:
-        image:
-        text: "Computer science includes coding, but it also includes other things, like how the internet works and impacts society, what to do with big data, and how to break down big problems. Computer science is about problem solving, critical thinking, and persistence."
+        image: 'notes/what_is_cs.png'
+        text: "Coding is the set of instructions you give to a computer. Computer science is a field where people use the power of computers to solve big problems. Computer science includes coding, but it also includes other things, like how the internet works and impacts society, what to do with big data, and how to break down big problems. Computer science is about problem solving, critical thinking, and persistence."
     writing_first_program:
       1.
-        image:
+        image: 'notes/writing_first_program_1.png'
         text: "Code.org uses a visual, drag and drop programming language called Blockly. Blockly uses colorful instructions called blocks to build programs and solve puzzles."
       2:
-        image:
-        text: "Each puzzle has four parts. The play area is on the left, where your program runs."
+        image: 'notes/writing_first_program_2.png'
+        text: "Each puzzle has four parts."
       3:
-        image:
-        text: "The center has the toolbox area, which has all the blocks you need."
+        image: 'notes/writing_first_program_3.png'
+        text: "The play area is on the left, where your program runs."
       4:
-        image:
-        text: "On the right is the workspace, where you will drag blocks to build your program."
+        image: 'notes/writing_first_program_4.png'
+        text: "The center has the toolbox area, which has all the blocks you need."
       5:
-        image:
-        text: "Above the workspace are the instructions for each puzzle."
+        image: 'notes/writing_first_program_5.png'
+        text: "On the right is the workspace, where you will drag blocks to build your program."
       6:
-        image:
+        image: 'notes/writing_first_program_6.png'
+        text: "Above the workspace are the instructions for each puzzle."
+      7:
+        image: 'notes/writing_first_program_7.png'
         text: "If you drag out too many blocks from the toolbox, just drag the extra block back into the toolbox.  Hit run to try your program, and reset to try again."
     repeat_block:
       1:
-        image:
+        image: 'notes/repeat_block.png'
         text: "A repeat block lets you loop the code inside of it as many times as you tell it to."
     what_is_an_event:
       1:
-        image:
+        image: 'notes/what_is_an_event.png'
         text: "An event tells your program to listen for something to happen. When that thing happens, the program performs an action. A computer might listen for a mouse click, press on an arrow button, or a tap on the screen."
     lesson_planning:
       1:
-        image:
+        image: 'notes/lesson_planning_1.png'
         text: "CS Fundamentals lessons begin with overviews to let you know what the lesson will cover. Lessons have warm ups, activities, and wrap ups."
       2:
-        image:
+        image: 'notes/lesson_planning_2.png'
         text: "If you want to create your own lesson plans, you might want to keep these tips in mind"
       3:
-        image:
+        image: 'notes/lesson_planning_3.png'
         text: "1. Try to use a spiraling curriculum design. Introduce concepts once and then revisit them."
       4:
-        image:
+        image: 'notes/lesson_planning_4.png'
         text: "2. Create a blended learning experience by combining online lessons with unplugged lessons."
       5:
-        image:
+        image: 'notes/lesson_planning_5.png'
         text: "3. Break your curriculum into smaller chunks."
       6:
-        image:
+        image: 'notes/lesson_planning_6.png'
         text: "4. Make sure that you align to local standards and college and career readiness skills."
     opd_closing:
       1:
-        image:
+        image: 'notes/opd_closing_1.png'
         text: "Congratulations! You completed the Teaching Computer Science Fundamentals online course. You’re now part of the growing community of teachers preparing their students for the future."
       2:
-        image:
+        image: 'notes/opd_closing_2.png'
         text: "Check out these resources if you need more support: 1. forum.code.org 2. @teachcode on Twitter 3. studio.code.org "
