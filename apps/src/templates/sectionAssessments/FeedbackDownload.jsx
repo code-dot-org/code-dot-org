@@ -35,7 +35,8 @@ const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
 
 const styles = {
   icon: {
-    color: color.purple
+    color: color.purple,
+    paddingRight: 5
   }
 };
 
