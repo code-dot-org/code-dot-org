@@ -121,7 +121,6 @@ module Pd
         hispanic_or_latino_percent: 'Percentage of student enrollment by race: Hispanic or Latino',
         native_hawaiian_or_pacific_islander_percent: 'Percentage of student enrollment by race: Native Hawaiian or Pacific Islander',
         white_percent: 'Percentage of student enrollment by race: White',
-        two_or_more_races_percent: 'Percentage of student enrollment by race: Two or More Races',
         other_races_percent: 'Percentage of student enrollment by race: Other',
         principal_approval: "Do you approve of <Teacher Name> participating in Code.org's 2019-20 Professional Learning Program?",
         principal_plan_to_teach: 'Is <Teacher Name> planning to teach this course in the 2019-20 school year?',
@@ -252,8 +251,7 @@ module Pd
       hispanic_or_latino_percent: {principal: :principal_hispanic_or_latino_percent, stats: :hispanic_or_latino_percent},
       native_hawaiian_or_pacific_islander_percent: {principal: :principal_native_hawaiian_or_pacific_islander_percent, stats: :native_hawaiian_or_pacific_islander_percent},
       white_percent: {principal: :principal_white_percent, stats: :white_percent},
-      two_or_more_races_percent: {stats: :two_or_more_races_percent},
-      other_races_percent: {principal: :principal_other_percent}
+      other_races_percent: {principal: :principal_other_percent, stats: :two_or_more_races_percent}
     }
 
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
