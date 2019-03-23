@@ -720,6 +720,9 @@ describe('entry tests', () => {
             plugin.apply(compiler);
           }
         ],
+        runtimeChunk: {
+          name: 'essential'
+        },
         splitChunks: {
           cacheGroups: {
             common: {
