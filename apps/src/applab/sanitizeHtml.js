@@ -186,7 +186,6 @@ export default function sanitizeHtml(
     div: standardAttributes.concat([
       'contenteditable',
       'data-canonical-image-url',
-      'data-theme',
       'tabindex',
       'xmlns'
     ]),
