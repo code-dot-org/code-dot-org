@@ -2501,10 +2501,10 @@ en:
     lesson_planning:
       1:
         image: 'notes/lesson_planning_1.png'
-        text: "CS Fundamentals lessons begin with overviews to let you know what the lesson will cover. Lessons have warm ups, activities, and wrap ups."
+        text: "CS Fundamentals lessons begin with overviews to let you know what the lesson will cover."
       2:
         image: 'notes/lesson_planning_2.png'
-        text: "If you want to create your own lesson plans, you might want to keep these tips in mind"
+        text: "Lessons have warm ups, activities, and wrap ups. If you want to create your own lesson plans, you might want to keep these tips in mind."
       3:
         image: 'notes/lesson_planning_3.png'
         text: "1. Try to use a spiraling curriculum design. Introduce concepts once and then revisit them."
