@@ -310,6 +310,8 @@ function create(options) {
   var piskelDevMode = options.piskelDevMode;
   var plugins = options.plugins;
   var externals = options.externals;
+  var optimization = options.optimization;
+  var mode = options.mode;
 
   var config = _.extend({}, baseConfig, {
     output: {
@@ -325,6 +327,8 @@ function create(options) {
     devtool: !process.env.CI && options.minify ? 'source-map' : devtool,
     entry: entries,
     externals: externals,
+    optimization: optimization,
+    mode: mode,
     plugins: [
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
