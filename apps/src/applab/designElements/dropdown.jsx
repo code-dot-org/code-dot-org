@@ -15,9 +15,6 @@ import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
-import elementLibrary from './library';
-import RGBColor from 'rgbcolor';
-import experiments from '../../util/experiments';
 
 class DropdownProperties extends React.Component {
   static propTypes = {
@@ -183,39 +180,9 @@ class DropdownEvents extends React.Component {
   }
 }
 
-const svgArrowUrl = color =>
-  `url(data:image/svg+xml;charset=US-ASCII,${encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 448" enable-background="new 0 0 256 448"><style type="text/css">.arrow{fill:${color};}</style><path class="arrow" d="M255.9 168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2 0-7.9 1.6-11.2 4.8S0 163.8 0 168c0 4.4 1.6 8.2 4.8 11.4l112 112c3.1 3.1 6.8 4.6 11.2 4.6 4.4 0 8.2-1.5 11.4-4.6l112-112c3-3.2 4.5-7 4.5-11.4z"/></svg>`
-  )})`;
-
 export default {
   PropertyTab: DropdownProperties,
   EventTab: DropdownEvents,
-  themeValues: {
-    backgroundColor: {
-      type: 'color',
-      classic: color.applab_button_teal,
-      dark: color.yellow
-    },
-    borderRadius: {
-      classic: 0,
-      dark: 10
-    },
-    borderWidth: {
-      classic: 0,
-      dark: 0
-    },
-    borderColor: {
-      type: 'color',
-      classic: color.black,
-      dark: color.white
-    },
-    textColor: {
-      type: 'color',
-      classic: color.white,
-      dark: color.black
-    }
-  },
 
   create: function() {
     const element = document.createElement('select');
@@ -224,17 +191,9 @@ export default {
     element.style.fontFamily = fontFamilyStyles[0];
     element.style.fontSize = defaultFontSizeStyle;
     element.style.margin = '0';
-    if (experiments.isEnabled('applabThemes')) {
-      element.style.borderStyle = 'solid';
-      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    } else {
-      element.style.color = color.white;
-      element.style.backgroundImage = svgArrowUrl(
-        new RGBColor(element.style.color).toHex()
-      );
-      element.style.backgroundColor = color.applab_button_teal;
-      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-    }
+    element.style.color = color.white;
+    element.style.backgroundColor = color.applab_button_teal;
+    elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
 
     const option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';
@@ -272,11 +231,6 @@ export default {
       case 'text':
         // Overrides generic text setter and sets from the dropdown options
         element.value = value;
-        break;
-      case 'textColor':
-        element.style.backgroundImage = svgArrowUrl(
-          new RGBColor(element.style.color).toHex()
-        );
         break;
       case 'index':
         element.selectedIndex = value;
