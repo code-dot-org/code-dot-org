@@ -719,24 +719,43 @@ describe('entry tests', () => {
             });
             plugin.apply(compiler);
           }
-        ]
+        ],
+        splitChunks: {
+          cacheGroups: {
+            common: {
+              name: 'common',
+              minChunks: 2,
+              chunks: chunk => {
+                return _.keys(appsEntries).includes(chunk.name);
+              }
+            },
+            'code-studio-common': {
+              name: 'code-studio-common',
+              minChunks: 2,
+              chunks: chunk => {
+                const chunkNames = _.keys(codeStudioEntries).concat(['common']);
+                return chunkNames.includes(chunk.name);
+              },
+              priority: 10
+            },
+            essential: {
+              name: 'essential',
+              minChunks: 2,
+              chunks: chunk => {
+                const chunkNames = [
+                  'peer_reviews',
+                  'plc',
+                  'pd',
+                  'code-studio-common'
+                ];
+                return chunkNames.includes(chunk.name);
+              },
+              priority: 20
+            }
+          }
+        }
       },
       plugins: [
-        // new webpack.optimize.CommonsChunkPlugin({
-        //   name: 'common',
-        //   chunks: _.keys(appsEntries),
-        //   minChunks: 2
-        // }),
-        // new webpack.optimize.CommonsChunkPlugin({
-        //   name: 'code-studio-common',
-        //   chunks: _.keys(codeStudioEntries).concat(['common']),
-        //   minChunks: 2
-        // }),
-        // new webpack.optimize.CommonsChunkPlugin({
-        //   name: 'essential',
-        //   minChunks: 2,
-        //   chunks: ['peer_reviews', 'plc', 'pd', 'code-studio-common']
-        // }),
         ...(process.env.ANALYZE_BUNDLE
           ? [
               new BundleAnalyzerPlugin({
