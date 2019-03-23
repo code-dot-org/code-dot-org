@@ -2469,7 +2469,7 @@ en:
         image: 'notes/what_is_cs.png'
         text: "Coding is the set of instructions you give to a computer. Computer science is a field where people use the power of computers to solve big problems. Computer science includes coding, but it also includes other things, like how the internet works and impacts society, what to do with big data, and how to break down big problems. Computer science is about problem solving, critical thinking, and persistence."
     writing_first_program:
-      1.
+      1:
         image: 'notes/writing_first_program_1.png'
         text: "Code.org uses a visual, drag and drop programming language called Blockly. Blockly uses colorful instructions called blocks to build programs and solve puzzles."
       2:
