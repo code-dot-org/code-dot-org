@@ -720,6 +720,25 @@ describe('entry tests', () => {
             plugin.apply(compiler);
           }
         ],
+
+        // We use a single, named runtimeChunk in order to be able to load
+        // multiple webpack entry points on a single page. **The resulting
+        // 'webpack-runtime' chunk must be included exactly once on each page
+        // which includes webpack entry points.** If you do not include the
+        // runtime, webpack entry points you include will not be loaded. If you
+        // include the runtime twice, webpack entry points will be loaded twice.
+        //
+        // Without a single, named runtimeChunk there would be no runtimeChunk
+        // to include, and entry point would load and run separately.
+        // However, those entry points would create separate instances of any
+        // shared modules. This would mean that state within webpack modules
+        // cannot be shared between entry points, breaking many assumptions made
+        // by our application. For more information, see:
+        // https://webpack.js.org/concepts/manifest/#runtime
+        // https://webpack.js.org/configuration/optimization/#optimizationruntimechunk
+        //
+        // In the future, if we can limit ourselves to one webpack entry point
+        // per page, we could consider removing the runtimeChunk config.
         runtimeChunk: {
           name: 'webpack-runtime'
         },
