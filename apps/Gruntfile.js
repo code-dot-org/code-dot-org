@@ -742,12 +742,7 @@ describe('entry tests', () => {
               name: 'essential',
               minChunks: 2,
               chunks: chunk => {
-                const chunkNames = [
-                  'peer_reviews',
-                  'plc',
-                  'pd',
-                  'code-studio-common'
-                ];
+                const chunkNames = ['pd', 'code-studio-common'];
                 return chunkNames.includes(chunk.name);
               },
               priority: 20
