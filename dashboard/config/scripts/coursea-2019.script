@@ -8,10 +8,10 @@ project_widget_types ["playlab_k1", "artist_k1"]
 family_name 'coursea'
 version_year '2019'
 
-stage 'Going Places Safely'
+stage 'Going Places Safely', flex_category: 'csf_f_1'
 level 'GoingPlacesSafely_2019'
 
-stage 'Learn to Drag and Drop'
+stage 'Learn to Drag and Drop', flex_category: 'csf_jigsaw'
 skin 'jigsaw'
 level 'blockly:Jigsaw:1'
 skin 'jigsaw'
