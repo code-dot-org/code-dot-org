@@ -759,6 +759,17 @@ describe('entry tests', () => {
                 return chunkNames.includes(chunk.name);
               },
               priority: 10
+            },
+            'code-studio-multi': {
+              name: 'code-studio-common',
+              minChunks: _.keys(appsEntries).length + 1,
+              chunks: chunk => {
+                const chunkNames = _.keys(codeStudioEntries).concat(
+                  _.keys(appsEntries)
+                );
+                return chunkNames.includes(chunk.name);
+              },
+              priority: 20
             }
           }
         }
