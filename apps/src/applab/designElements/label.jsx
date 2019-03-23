@@ -14,9 +14,6 @@ import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 import * as gridUtils from '../gridUtils';
 import designMode from '../designMode';
-import color from '../../util/color';
-import elementLibrary from './library';
-import experiments from '../../util/experiments';
 
 class LabelProperties extends React.Component {
   static propTypes = {
@@ -194,26 +191,6 @@ const STILL_FITS = 5;
 export default {
   PropertyTab: LabelProperties,
   EventTab: LabelEvents,
-  themeValues: {
-    borderRadius: {
-      classic: 0,
-      dark: 10
-    },
-    borderWidth: {
-      classic: 0,
-      dark: 0
-    },
-    borderColor: {
-      type: 'color',
-      classic: color.text_input_default_border_color,
-      dark: color.applab_dark_border
-    },
-    textColor: {
-      type: 'color',
-      classic: color.default_text,
-      dark: color.white
-    }
-  },
 
   create: function() {
     const element = document.createElement('label');
@@ -225,15 +202,10 @@ export default {
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
+    element.style.color = '#333333';
     element.style.backgroundColor = '';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
-    if (experiments.isEnabled('applabThemes')) {
-      element.style.borderStyle = 'solid';
-      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    } else {
-      element.style.color = '#333333';
-      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-    }
+    elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
 
     this.resizeToFitText(element);
     return element;
