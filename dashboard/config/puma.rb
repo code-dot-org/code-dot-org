@@ -28,6 +28,7 @@ end
 
 on_worker_boot do |_index|
   Cdo::AppServerHooks.after_fork(host: CDO.dashboard_hostname)
+  ActiveRecord::Base.establish_connection
 end
 
 require 'gctools/oobgc'
