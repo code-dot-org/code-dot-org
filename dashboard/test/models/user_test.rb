@@ -144,12 +144,8 @@ class UserTest < ActiveSupport::TestCase
 
   # Test updating the school_info of an older user without an email address.
   test 'update_school_info with specific school overwrites user school info for user without email' do
-    user = create :teacher, :with_school_info
+    user = create :teacher, :without_email, :with_school_info
     new_school_info = create :school_info
-
-    user.update_primary_contact_info(new_email: "", new_hashed_email: "")
-    user.save(validate: false)
-    refute user.valid?
 
     user.update_school_info(new_school_info)
     assert_equal new_school_info, user.school_info
