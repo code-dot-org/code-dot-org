@@ -252,6 +252,12 @@ export default {
     elementUtils.setDefaultBorderStyles(element);
     // Set the font family for older projects that didn't set them on create:
     elementUtils.setDefaultFontFamilyStyle(element);
+    // Set the dropdown SVG for older projects that didn't have them:
+    if (!element.style.backgroundImage) {
+      element.style.backgroundImage = svgArrowUrl(
+        new RGBColor(element.style.color).toHex()
+      );
+    }
 
     // In the future we may want to trigger this on focus events as well.
     $(element).on('mousedown', function(e) {
