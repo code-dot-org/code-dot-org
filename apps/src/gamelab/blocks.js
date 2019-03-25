@@ -4,6 +4,7 @@ import {SVG_NS} from '../constants';
 import {getStore} from '../redux';
 import {getLocation} from './locationPickerModule';
 import {GAME_HEIGHT} from './constants';
+import {animationSourceUrl} from './animationListModule';
 
 let sprites = () => {
   const animationList = getStore().getState().animationList;
@@ -13,7 +14,16 @@ let sprites = () => {
   }
   return animationList.orderedKeys.map(key => {
     const animation = animationList.propsByKey[key];
-    return [animation.sourceUrl, `"${animation.name}"`];
+    if (animation.sourceUrl) {
+      return [animation.sourceUrl, `"${animation.name}"`];
+    } else {
+      const url = animationSourceUrl(
+        key,
+        animation,
+        getStore().getState().pageConstants.channelId
+      );
+      return [url, `"${animation.name}"`];
+    }
   });
 };
 
