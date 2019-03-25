@@ -5,7 +5,9 @@ require 'webmock/minitest'
 class SafeBrowsingTest < Minitest::Test
   include SetupTest
 
-  CDO.google_safe_browsing_key = 'mockkey'
+  def setup
+    CDO.stubs(google_safe_browsing_key: 'mockkey')
+  end
 
   # Do additional VCR configuration so as to prevent the CDO.google_safe_browsing_key from being logged to the
   # YML cassette, instead replacing it with a placeholder string.
