@@ -210,6 +210,11 @@ class AdvancedShareOptions extends React.Component {
     }
   };
 
+  visitExpoSite = () => {
+    const {expoSnackId} = this.state;
+    window.open(`https://snack.expo.io/${expoSnackId}`, '_blank');
+  };
+
   renderEmbedTab() {
     let url = `${this.props.shareUrl}/embed`;
     if (this.state.embedWithoutCode) {
@@ -371,6 +376,12 @@ class AdvancedShareOptions extends React.Component {
                   >
                     {generateApkSpinner}
                     Create Android App
+                  </button>
+                  <button
+                    onClick={this.visitExpoSite}
+                    style={[style.expoButton, style.expoButtonApk]}
+                  >
+                    Visit Expo Site
                   </button>
                   <p style={style.p}>{apkStatusString}</p>
                   {!!expoApkUri && (

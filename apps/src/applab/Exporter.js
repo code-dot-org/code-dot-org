@@ -624,6 +624,16 @@ export default {
       })
     );
 
+    // TODO: remove the onlineOnlyExpo patching once getApkUrlAsync()
+    // properly supports our full app.json
+    const {
+      updates, // eslint-disable-line no-unused-vars
+      assetBundlePatterns, // eslint-disable-line no-unused-vars
+      packagerOpts, // eslint-disable-line no-unused-vars
+      ...onlineOnlyExpo
+    } = appJson.expo;
+    appJson.expo = onlineOnlyExpo;
+
     const artifactUrl = await session.getApkUrlAsync(appJson);
 
     return artifactUrl;
@@ -673,7 +683,7 @@ export default {
     const session = new SnackSession({
       sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
       files,
-      name: project.getCurrentName(),
+      name: `project-${project.getCurrentId()}`,
       sdkVersion: '31.0.0',
       user: {
         sessionSecret: config.expoSession || EXPO_SESSION_SECRET

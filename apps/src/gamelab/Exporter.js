@@ -316,6 +316,16 @@ export default {
       })
     );
 
+    // TODO: remove the onlineOnlyExpo patching once getApkUrlAsync()
+    // properly supports our full app.json
+    const {
+      updates, // eslint-disable-line no-unused-vars
+      assetBundlePatterns, // eslint-disable-line no-unused-vars
+      packagerOpts, // eslint-disable-line no-unused-vars
+      ...onlineOnlyExpo
+    } = appJson.expo;
+    appJson.expo = onlineOnlyExpo;
+
     const artifactUrl = await session.getApkUrlAsync(appJson);
 
     return artifactUrl;
