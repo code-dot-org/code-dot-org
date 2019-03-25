@@ -14,6 +14,9 @@ import * as elementUtils from './elementUtils';
 import EnumPropertyRow from './EnumPropertyRow';
 import designMode from '../designMode';
 import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
+import color from '../../util/color';
+import elementLibrary from './library';
+import experiments from '../../util/experiments';
 
 class TextAreaProperties extends React.Component {
   static propTypes = {
@@ -192,6 +195,31 @@ class TextAreaEvents extends React.Component {
 export default {
   PropertyTab: TextAreaProperties,
   EventTab: TextAreaEvents,
+  themeValues: {
+    backgroundColor: {
+      type: 'color',
+      classic: color.white,
+      dark: color.applab_dark_background
+    },
+    borderRadius: {
+      classic: 0,
+      dark: 10
+    },
+    borderWidth: {
+      classic: 1,
+      dark: 1
+    },
+    borderColor: {
+      type: 'color',
+      classic: color.text_input_default_border_color,
+      dark: color.applab_dark_border
+    },
+    textColor: {
+      type: 'color',
+      classic: color.black,
+      dark: color.white
+    }
+  },
 
   create: function() {
     const element = document.createElement('div');
@@ -200,12 +228,17 @@ export default {
     element.style.height = '100px';
     element.style.fontFamily = fontFamilyStyles[0];
     element.style.fontSize = defaultFontSizeStyle;
-    element.style.color = '#000000';
-    element.style.backgroundColor = '#ffffff';
-    elementUtils.setDefaultBorderStyles(element, {
-      forceDefaults: true,
-      textInput: true
-    });
+    if (experiments.isEnabled('applabThemes')) {
+      element.style.borderStyle = 'solid';
+      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    } else {
+      element.style.color = '#000000';
+      element.style.backgroundColor = '#ffffff';
+      elementUtils.setDefaultBorderStyles(element, {
+        forceDefaults: true,
+        textInput: true
+      });
+    }
 
     $(element).addClass('textArea');
 
