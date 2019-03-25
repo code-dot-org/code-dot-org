@@ -136,16 +136,9 @@ class ActivitiesController < ApplicationController
         locale: locale
       )
     end
-
-    # log this at the end so that server errors (which might be caused by invalid input) prevent logging
-    log_milestone(@level_source, params)
   end
 
   private
-
-  def milestone_logger
-    @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
-  end
 
   def track_progress_for_user
     authorize! :create, Activity
@@ -240,21 +233,5 @@ class ActivitiesController < ApplicationController
 
       client_state.add_script(@script_level.script_id)
     end
-  end
-
-  def log_milestone(level_source, params)
-    log_string = 'Milestone Report:'
-    log_string +=
-      if current_user || session.id
-        "\t#{(current_user ? current_user.id.to_s : ('s:' + session.id))}"
-      else
-        "\tanon"
-      end
-    log_string += "\t#{request.remote_ip}\t#{params[:app]}\t#{params[:level]}\t#{params[:result]}" \
-                  "\t#{params[:testResult]}\t#{params[:time]}\t#{params[:attempt]}\t#{params[:lines]}"
-    log_string += level_source.try(:id) ? "\t#{level_source.id}" : "\t"
-    log_string += "\t#{request.user_agent}"
-
-    milestone_logger.info log_string
   end
 end
