@@ -390,14 +390,35 @@ pt-BR:
       driver: Conectado
       navigator: Parceiro
       create: Criar
+      algebra_game: Álgebra
       applab: Laboratório de Aplicativo
       artist: Artista
-      gamelab: Laboratório de Jogos
-      playlab: Laboratório
-      spritelab: Laboratório de Sprite
-      minecraft: Minecraft
-      flappy: Flappy bird
+      artist_k1: Artista (Pré-leitor)
+      basketball: Basquete
+      bounce: Pingue-pongue
+      calc: Calc
       dance: Festa dançante
+      eval: Eval
+      flappy: Flappy bird
+      frozen: Frozen
+      gamelab: Laboratório de Jogos
+      gamelab_jr: Laboratório de Jogos (beta)
+      gumball: O Incrível Mundo de Gumball
+      iceage: Era do Gelo
+      infinity: Infinito
+      minecraft_adventurer: Aventureiro de Minecraft
+      minecraft_aquatic: Minecraft Aquático
+      minecraft_designer: Minecraft
+      minecraft_hero: Herói de Minecraft
+      playlab: Laboratório
+      playlab_k1: Laboratório de Jogos (Pré-leitor)
+      scratch: Scratch
+      sports: Esportes
+      spritelab: Laboratório de Sprite
+      starwars: Star Wars
+      starwarsblocks: Star Wars (Blocos)
+      starwarsblocks_hour: Star Wars (Blocos)
+      weblab: Laboratório Web
       view_all: Ver todos os projetos...
     popup:
       progress_for_user: progresso de %{name}'s
@@ -1208,6 +1229,19 @@ pt-BR:
     csf_e_2: Conteúdo do curso E
     csf_f_1: Treinamento até Curso F (Opcional)
     csf_f_2: Conteúdo do curso F
+    csf_digcit: Cidadania digital
+    csf_jigsaw: Quebra-cabeça
+    csf_loops: laços
+    csf_events: Eventos
+    csf_binary: Binário
+    csf_conditionals: Condições
+    csf_sprites: Sprite
+    csf_spritelab: Laboratório de Sprite
+    csf_nested_loops: Laços aninhados
+    csf_functions: funções
+    csf_variables: variáveis
+    csf_for_loops: Laços para
+    csf_internet: Internet
     csd1_1: 'Capítulo 1: O Processo de Solução de Problemas'
     csd1_2: 'Capítulo 2: Computadores e Solução de Problemas'
     csd2_1: 'Capítulo 1: Conteúdo Web e HTML'
@@ -1238,6 +1272,9 @@ pt-BR:
     csp_postap_2: 'Capítulo 2: Aplicativos e Bancos de Dados'
     csp2_1_2018: 'Unidade 2: Informação Digital'
     csp3_1_2018: 'Unidade 3: Introdução à Programação'
+    csp_variables: variáveis
+    csp_conditionals: Condições
+    csp_functions: funções
     dlp: Prompts de reflexão
   external_links:
     disclaimer: Aviso
