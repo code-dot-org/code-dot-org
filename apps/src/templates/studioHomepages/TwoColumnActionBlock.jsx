@@ -219,29 +219,6 @@ export class SpecialAnnouncementActionBlock extends Component {
   };
 
   render() {
-    const imageExtra = (
-      <div>
-        <img
-          className="sparkle sparkle1"
-          src={pegasus(
-            '/images/homepage/professional-learning-2019-trophy-sparkle.svg'
-          )}
-        />
-        <img
-          className="sparkle sparkle2"
-          src={pegasus(
-            '/images/homepage/professional-learning-2019-trophy-sparkle.svg'
-          )}
-        />
-        <img
-          className="sparkle sparkle3"
-          src={pegasus(
-            '/images/homepage/professional-learning-2019-trophy-sparkle.svg'
-          )}
-        />
-      </div>
-    );
-
     return !!this.props.hasIncompleteApplication ? (
       <TwoColumnActionBlock
         id="teacher-application-continue-announcement"
@@ -266,20 +243,20 @@ export class SpecialAnnouncementActionBlock extends Component {
       />
     ) : (
       <TwoColumnActionBlock
-        id="teacher-nomination-announcement"
+        id="teacher-application-announcement"
         imageUrl={pegasus(
-          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-trophy.jpg'
+          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg'
         )}
-        imageExtra={imageExtra}
-        teacherStyle={true}
-        subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019Trophy()}
-        subHeadingSmallFont={false}
-        description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019Trophy()}
+        subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019()}
+        subHeadingSmallFont={true}
+        description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019()}
+        imageExtra={false}
+        teacherStyle={false}
         buttons={[
           {
-            id: 'teacher-nomination-button',
-            url: pegasus('/nominate'),
-            text: i18n.nominateATeacher()
+            id: 'teacher-application-join-button',
+            url: pegasus('/educate/professional-learning'),
+            text: i18n.joinUs()
           }
         ]}
       />
