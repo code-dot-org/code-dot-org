@@ -407,6 +407,8 @@ describe('The Gamelab Exporter,', function() {
 
   describe('globally exposed functions', () => {
     beforeEach(() => {
+      // webpack-runtime must appear exactly once on any page containing webpack entries.
+      require('../../../build/package/js/webpack-runtime.js');
       require('../../../build/package/js/gamelab-api.js');
     });
   });
@@ -442,6 +444,8 @@ describe('The Gamelab Exporter,', function() {
             );
             window.$ = require('jquery');
 
+            // webpack-runtime must appear exactly once on any page containing webpack entries.
+            require('../../../build/package/js/webpack-runtime.js');
             require('../../../build/package/js/gamelab-api.js');
 
             //
