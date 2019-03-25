@@ -27,7 +27,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" is visible
     # Old teacher dashboard
-    # And I click selector "#learn-tabs a:contains(Assessments/Surveys)" once I see it
+    And I click selector "#learn-tabs a:contains(Assessments/Surveys)" once I see it
     # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
@@ -49,7 +49,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" is visible
     # Old teacher dashboard
-    # And I click selector "#learn-tabs a:contains(Assessments/Surveys)" once I see it
+    And I click selector "#learn-tabs a:contains(Assessments/Surveys)" once I see it
     # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
     #And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
