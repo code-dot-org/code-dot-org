@@ -57,8 +57,9 @@ module RegistrationsControllerTests
     end
 
     test "destroys the user if password is not required" do
-      user = create :user, :with_migrated_google_authentication_option
+      user = create :user, :with_google_authentication_option
       user.update_attribute(:encrypted_password, nil)
+      user.reload
       sign_in user
       assert_destroys(User) do
         delete '/users'

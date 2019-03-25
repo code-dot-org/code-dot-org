@@ -1790,7 +1790,7 @@ sk-SK:
   alice_beyond_shortdescription: Učte programovanie v 3D prostredí
   sphero_beyond_shortdescription: SPRK lekcie dajú deťom zábavný rýchlokurz programovania
     robotov, zatiaľ čo si budú vylepšovať schopnosti v matematike a fyzike.
-  codeorg_beyond_longdescription: Nauč sa základné pojmy informatiky pomocou blokového
+  codeorg_beyond_longdescription: Nauč sa základné koncepty informatiky pomocou blokového
     programovania. 3 kurzy, z ktorých každý obsahuje 15-20 lekcií kombinujú aktivity
     bez počítača s online aktivitami pripomínajúcimi hru, ktorej tempo si určuješ
     ty sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry
@@ -2139,3 +2139,4 @@ sk-SK:
   page_not_found_description: Stránka, ktorú hľadáte na tejto adrese neexistuje. Skontrolujte
     adresu a zadajte ju znova. Alebo prejdite na našu domovskú stránku.
   page_not_found_button: Späť na domovskú stránku
+  hoc2018_mc_with_microsoft: V spolupráci s

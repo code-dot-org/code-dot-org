@@ -339,6 +339,13 @@ ka:
             '"w"': w
             '"x"': x
             '"y"': y
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': ბადე
+            '"row"': მწკრივი
+            '"column"': სვეტი
+            '"random"': შემთხვევითი
       gamelab_locationConstant:
         options:
           DIR:

@@ -535,6 +535,16 @@ bg:
             '"w"': w
             '"x"': x
             '"y"': y
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': рамка
+            '"circle"': кръг
+            '"grid"': мрежа
+            '"row"': ред
+            '"column"': колона
+            '"plus"': плюс
+            '"random"': случаен
       gamelab_locationConstant:
         options:
           DIR:

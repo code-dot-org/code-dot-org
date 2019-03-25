@@ -171,6 +171,7 @@
     "execute_palette_apis_only": "false",
     "parent_level_id": 13633,
     "name_suffix": "_2019",
+    "show_debug_watch": "true",
     "preload_asset_list": null
   },
   "published": true

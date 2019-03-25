@@ -25,7 +25,6 @@
 #
 
 require 'cdo/shared_constants'
-require 'honeybadger/ruby'
 
 class PeerReview < ActiveRecord::Base
   include SharedConstants
@@ -128,6 +127,13 @@ class PeerReview < ActiveRecord::Base
   end
 
   def self.create_for_submission(user_level, level_source_id)
+    return if PeerReview.where(
+      submitter: user_level.user,
+      level: user_level.level,
+      from_instructor: true,
+      status: :accepted
+    ).exists?
+
     transaction do
       # Remove old unassigned reviews for this submitter+script+level combination
       where(
@@ -250,7 +256,7 @@ class PeerReview < ActiveRecord::Base
       level_name: user_level.level.name,
       submission_date: reviews.any? && reviews.first.created_at.strftime("%-m/%-d/%Y"),
       escalated_review_id: status == 'escalated' ? escalated_review.id : nil,
-      review_ids: reviews.pluck(:id, :status),
+      review_ids: reviews.pluck(:id, :status, :updated_at),
       status: status
     }
   end

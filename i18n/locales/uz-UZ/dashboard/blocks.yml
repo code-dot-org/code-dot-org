@@ -89,6 +89,10 @@ uz:
         options:
           KEY:
             '"space"': koinot
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': tasodifiy
       gamelab_locationDelta:
         options:
           DIR:

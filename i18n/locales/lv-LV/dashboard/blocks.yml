@@ -197,6 +197,12 @@ lv:
             '"right"': pa labi
             '"space"': telpa
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"row"': rinda
+            '"column"': kolonna
+            '"random"': nejaušs
       gamelab_locationConstant:
         options:
           DIR:

@@ -78,6 +78,7 @@ cs:
   prize: 'odměna'
   more_info: 'Více informací'
   auth:
+    continue_with: 'Pokračujte s %{provider}'
     sign_in_with: 'Přihlásit se přes %{provider}'
     signed_in: 'Přihlášen!'
     signed_out: 'Jste odhlášeni z <a href="%{url}"> Code.org</a>.'
@@ -99,7 +100,10 @@ cs:
     not_linked: "Váš účet Code.org není propojen s %{provider}. Budete se muset přihlásit zadáním vašeho hesla níže."
     use_clever: "Váš účet Code.org není bohužel propojen se systémem %{provider}. Přihlaste se prosím prostřednictvím systému Clever Portal."
     unable_to_connect_provider: "Váš účet Code.org nelze propojit se systémem %{provider}. Opakujte prosím akci."
+    already_in_use: "Účet %{provider} je již připojen k jinému účtu Code.org."
+    already_linked: "Účet %{provider} je již propojen s vaším účtem Code.org."
   signup_form:
+    email_signup: 'Zaregistrujte se svou e-mailovou adresou'
     student_count: 'Již se zaregistrovalo %{count} studentů.'
     teacher_count: 'Již se přihlásilo %{count} učitelů.'
     overview: 'Přihlaš se na účet, aby jsi mohl/a sledovat svůj pokrok nebo spravovat svoji třídu <a href="/">Můžeš procházet jednotlivé stupně a puzzle</a> i bez účtu, ale pokud chceš uložit svoje pokroky a projekty musíš se přihlásit.'
@@ -116,6 +120,7 @@ cs:
     age: 'Věk'
     user_type: 'Jste student nebo učitel?'
     submit: 'Registrace'
+    go_to_account: 'Přejít do mého účtu'
     teacher: 'Jste učitel?'
     valid_username: "K dispozici!"
     invalid_username: "Uživatelské jméno musí mít nejméně 5 znaků"
@@ -125,6 +130,7 @@ cs:
     mismatch_password: "Zadaná dvě hesla se neshodují"
     agree_tos_privacy: "Souhlasím tímto s <a href='http://code.org/tos'>Podmínkami poskytování služeb</a> a se <a href='http://code.org/privacy'>Zásadami ochrany osobních údajů</a>."
     under_13_consent: "Pokud jsem mladší 13 let, mohu potvrdit, že mám souhlas svého rodiče nebo zákonného zástupce k používání služeb Code.org."
+    student_consent: "Potvrzuji, že mám od svých rodičů nebo zákonného zástupce dovoleno používat Code.org."
     agree_us_website: "Souhlasím s používáním webových stránek provozovaných ve Spojených státech."
     my_data_to_us: "Informace ohledně mého používání těchto stránek mohou být posílány do Spojených států a tamtéž i uchovávány."
     student_terms: "Souhlasím, že budu dodržovat <a href='http://code.org/tos'>podmínky služeb</a>. Pokud jsem mladší 13 let, přihlášením potvrzuji souhlas rodičů nebo mého zákonného zástupce s používáním služeb Code.org.<br/><br/> E-mailové adresy se neukládají. Studenti nebudou dostávat e-maily od Code.org s výjimkou obnovení hesla. Pro více informací navštivte<a href='http://code.org/privacy'>zásady ochrany osobních údajů</a>."
@@ -219,6 +225,7 @@ cs:
     code_with_teacher: '%{section_code} s učitelem %{teacher_name}'
     confirm:
       remove: 'Jste si jisti, že chcete opustit tuto sekci?'
+    default_name: 'Sekce bez názvu'
     remove: '(odstranit sekci)'
     type:
       picture: 'Obrázkové heslo'
@@ -304,8 +311,11 @@ cs:
       about_evaluation: "Vyzkoušení"
       about_jobs: "Pracovní místa"
       about_contact: "Napište nám"
+      about_faqs: "Často kladené dotazy"
+      learn: "Učit se"
       stats: "Statistiky"
       help_us: "Pomozte nám"
+      teach: "Učit"
       about: "O nás"
     user:
       classroom: 'Učitelská domovská stránka'
@@ -317,6 +327,7 @@ cs:
       signin: 'Přihlásit'
       signup: 'Vytvořit účet'
       already_registered: 'Už jste zaregistrováni?'
+      pair_programming: 'Programování ve dvojicích'
       team: 'Tým'
       driver: 'Řidič'
       navigator: 'Navigátor'
@@ -360,6 +371,7 @@ cs:
       example: 'Vzorové řešení'
       example_with_number: 'Vzorové řešení %{solution_number}'
       submitted_on: 'Odesláno na %{date}'
+      last_updated: 'Naposledy aktualizováno:'
       unsubmit: 'Neodesláno'
       worked_with: 'Pracoval s'
       update_lock_settings: 'Aktualizace zámku zde.'
@@ -369,18 +381,29 @@ cs:
     email_confirm_needed_required: 'Vaše e-mailová adresa %{email} nebyla potvrzena:'
     email_confirm_wrong_email: '(Špatná e-mailová adresa?)'
     email_resend_confirm: 'Znovu odeslat instrukce o potvrzení'
+    new_email_hint: '(Ujistěte se, že můžete přijímat e-maily poslané na tuto e-mailovou adresu.)'
     new_password_hint: "(zanech prázdné, pokud nechceš provést změnu)"
     current_password_hint: '(potřebujeme tvé aktuální heslo pro potvrzení změn)'
     delete: 'Vymazat účet'
     delete_text: "Klepnutím na následující tlačítko se vymaže váš účet."
+    delete_text_teacher_managed_note: "Nemáte oprávnění smazat tento účet, protože je spravován vaším učitelem, který Vás bude muset nejprve odstranit ze svých oddílů, než budete moci smazat svůj účet."
     delete_text_teacher_note: "Upozornění: smazáním účtu nebudou vymazané vaše studentské účty."
     delete_confirm: 'Jste si jisti, že chcete vymazat tento účet?'
     deleted_user: 'odstraněný uživatel'
     no_password_because_oauth: 'Bez hesla, protože se přihlašujete pomocí jiného poskytovatele.'
+    create_personal_login: 'Vytvořte osobní přihlašovací heslo'
+    create_personal_login_under_13_info: 'Pokud chcete používat účet Code.org i po skončení školního roku, požádejte své rodiče nebo zákonného zástupce, aby vám pomohl vytvořit vlastní přístup níže.'
+    create_personal_login_under_13_username: "Uživatelské jméno (nepoužívejte vaše skutečné jméno!)"
     create_personal_login_under_13_parent_email: 'E-mail rodiče/zákonného zástupce'
     create_personal_login_info: 'Pokud chcete používat svůj účet Code.org i po skončení školního roku, můžete si níže vytvořit své vlastní přihlášení.'
+    create_personal_login_link_account: 'Můžete také zvolit připojení k osobnímu účtu v sekci "Správa propojených účtů".'
+    create_personal_login_terms: "Vytvořením osobních přihlašovacích údajů souhlasím s tím, že budu vázán <a href='%{terms_of_service_url}', target='_blank'> smluvními podmínkami </a> Code.org. Potvrzuji, že mám oprávnění od svých rodičů nebo právního zástupce používat Code.org i bez učitele."
+    create_personal_login_email_note: "Poznámka: E-mailové adresy nejsou uloženy ve formě, která by nám umožnila kontaktovat studenty. Studenti nikdy dostávají e-maily od Code.org kromě obnovení hesla. Viz naše <a href='%{privacy_policy_url}', target='_blank'>Zásady ochrany osobních údajů</a>."
     enter_new_login_info: 'Zadejte své nové přihlašovací údaje'
+    confirm_secret_words: 'Potvrďte že jste to vy zadáním vaší bezpečnostní fráze'
     parent_email_label: "E-mail rodiče/zákonného zástupce (volitelné)"
+    parent_email_hint: "(lze použít k obnovení hesla)"
+    enter_parent_email: "Zadejte e-mailovou adresu vašich rodičů nebo zákonného zástupce (pro obnovení hesla)"
     update: "Aktualizovat účet"
     account_successfully_updated: "Účet úspěšně aktualizován."
   user_level:
@@ -430,17 +453,25 @@ cs:
     choose_next_course: "Zkuste kurz Code Studio výběrem níže"
     print_certificate: "Vytisknout certifikát"
     announcement_title: "Oznámení"
+    announcement_message_fall2016_features: "Strávili jsme léto zapracováním vašich připomínek do nových funkcí. Nyní můžete <a href=\"%{pp_url}\" target=\"_blank\"> sledovat pokrok více studentů </a>, i když pracují na jednom zařízení. Můžete použít <a href=\"%{csp_widgets_url}\" target=\"_blank\"> nejlepší interaktivní nástroje </a> z našeho kurzu CS Principles <i>jakékoli</i> v učebně. A Vaši studenti mohou <a href=\"%{unused_code_url}\" target=\"_blank\"> zachovat nepoužívaný kód </a> ve svém pracovním prostoru, aby podpořili experimentování! Podívejte se na všechny naše nové funkce a dejte nám vědět, co si myslíte."
+    announcement_csp_widgets_message: "Hledáte zábavné způsoby, jak učit svou třídu, jak funguje internet, jak kryptografie udržuje data v bezpečí i jiné pojmy? Získali jsme nejlepší interaktivní nástroje z našich studijních plánů o zásadách výpočetní techniky a uvolnili jsme samostatné widgety, které můžete kdykoli použít!"
     announcement_learn_more_button: "Zjisti více"
     announcement_try_now_button: "Vyzkoušej hned"
     announcement_host_an_hour_button: "Hostit hodinu"
     announcement_watch_video_button: "Přehrát Video"
     announcement_petition: "Jako učitel patříte mezi propagátory hnutí za to, aby každý student v každé škole dostal příležitost učit se informatiku. A teď je čas, aby vaši zástupci vyslechli Váš názor. Tento týden se zástupci učitelů, 28 guvernérů a generální ředitelé největších amerických společností spojili v otevřeném dopise, kde žádají, aby americký kongres financoval výuku informatiky v rámci celé školní docházky na základních i středních školách."
     announcement_petition_button: "Přidej své jméno"
+    announcement_go_beyond_button: "Jeďte dál"
     announcement_apply_now: "Přihlaš se nyní"
     announcement_all: "Udržuj krok s novými funkcemi a aktualizacemi na našem blogu učitele. <a href='%{teacher_blog_url}' target='_blank'>Podívej se na minulé oznámení.</a>"
     announcement_hoc_launch: "Tisíce pedagogů ve více než 180 zemích začne vyučovat informatiku během Týdne Hodiny kódu. Spoléháme na vás, aby jste nám pomohli se dostat k ještě více studentům než kdy předtím. <a href='%{signup_url}' target='_blank'> Zaregistrujt vaši Hodinu kódu </a> a upozněte i ostatní pedagogy, že i oni mohou začít vyučovat informatiku."
     announcement_mc_launch: "Jeden z našich nejpopulárnějších kurzů má nyní pokračování! Zcela nová Hodina kódu Minecraft Designer umožňuje studentům ovlivňovat pravidla světu Minecraft. Mohou vytvořit naprosto unikátní verzi Minecraftu a pak ji sdílet s přáteli nebo hrát na svých telefonech. Vytvořte si je ve své třídě na Hodině kódu."
     announcement_how_code_studio: "Nepotřebujete žádné zkušenosti začít učit informatiku ve své třídě. Code.org nabízí učební osnovy, učební plány, vysoce kvalitní profesionální vzdělávací programy a tuny skvělých nástrojů pro všechny stupně úrovně &mdash; vše, co potřebujete, bez příplatku. Nevíte, kde začít? Stáhněte <a href='%{video_download_url}'> Toto video</a>!"
+    announcement_go_beyond: "Překonejte Hodinu kódu a každý týden zkoumejte informatiku se svými studenty. Code.org nabízí učební plány, plány výuky, vysoce kvalitní profesionální učební programy a spoustu skvělých nástrojů pro všechny úrovně&mdash;a to vše je zdarma. :) Nepotřebujete žádné zkušenosti, abyste mohli začít učit informatiku ve své třídě. <b> Objevte další krok, který je vhodný pro vaši třídu. </b>"
+    announcement_teacher_recruitment: "Učitelé, jako Vy, posouvají výuku informatiky. Můžete se účastnit vysoce kvalitních programů odborné výuky K-12th <strong> zcela zdarma pro Vás nebo Vaši školu </strong>. Převezměte vedení v oblasti informatiky ve Vaší škole a začněte učit profesionálně."
+    announcement_teacher_recruitment2: "Učitelé, jako Vy, posouvají výuku informatiky. Můžete se účastnit vysoce kvalitních programů odborné výuky K-12th <strong> zcela zdarma pro Vás nebo Vaši školu </strong>. Převezměte vedení v oblasti informatiky ve Vaší škole a začněte učit profesionálně. Středoškolští a vysokoškolští učitelé se přihlásí do 17. března."
+    announcement_student_privacy: "Na Code.org bereme soukromí studentů velmi vážně. Chcete-li chránit soukromí vašich studentů, změnili jsme přihlašovací stránku vaší sekce, abyste se vyhnuli zobrazování plných jmen. Přestože by tato aktualizace měla snížit množství námitek týkajících se ochrany soukromí na přihlašovací stránce, stále upozorňujeme uživatele, aby <i> nepoužívali plná jména pro studenty </i>."
+    announcement_apcsp_recruitment: "<strong> Učitelé informatiky: </strong> Vaši studenti by se mohli zúčastnit dalšího virálního videa Code.org, které by studentům pomohlo v letošním roce absolvovat zkoušku AP CS Principles. Vyzýváme studenty CS Principles k odeslání videoklipu o délce 10-20 sekund na Twitter, Instagram nebo Facebook, ve kterém řeknou, že \"absolvuji zkoušku #APCSP, protože...\" Nejlepší příspěvky budou uvedeny v našem videu a vítězní studenti obdrží tašku Code.org!"
   move_students:
     new_section_dne: "Omlouváme se, ale sekce %{new_section_code} neexistuje. Zadejte jiný kód sekce."
     section_code_cant_be_current_section: "Aktuální sekce nemůže být stejná jako nová sekce."

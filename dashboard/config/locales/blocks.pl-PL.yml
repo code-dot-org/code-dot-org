@@ -758,6 +758,18 @@ pl:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': brzeg
+            '"inner"': wewnątrz kwadratu
+            '"circle"': koło
+            '"grid"': siatka
+            '"row"': rząd
+            '"column"': kolumna
+            '"x"': krzyż
+            '"plus"': plus
+            '"random"': losowy
       gamelab_locationDelta:
         options:
           DIR:

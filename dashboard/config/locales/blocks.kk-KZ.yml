@@ -170,6 +170,10 @@ kk:
             '"right"': оңға
             '"space"': кеңестік
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': кездейсоқ
       gamelab_locationDelta:
         options:
           DIR:

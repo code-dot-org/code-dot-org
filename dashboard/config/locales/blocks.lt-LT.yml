@@ -174,6 +174,10 @@ lt:
             '"right"': dešinėn
             '"space"': kosmosas
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': atsitiktinis
       gamelab_locationDelta:
         options:
           DIR:

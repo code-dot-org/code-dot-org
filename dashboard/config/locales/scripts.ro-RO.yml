@@ -2423,6 +2423,8 @@ ro:
               name: Binar cu artist
             Building a Foundation:
               name: Construirea unei Fundaţii
+            Loops in Ice Age:
+              name: Bucle în Ice Age
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
@@ -2931,6 +2933,8 @@ ro:
               name: Binar cu artist
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+            Loops in Ice Age:
+              name: Bucle în Ice Age
             Graph Paper Programming:
               name: Programare pe Hârtie Milimetrică
             Relay Programming:
@@ -3634,6 +3638,10 @@ ro:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
         dance:
+          stages:
+            Dance Party:
+              name: Petrecere cu dans
+          title: Petrecere cu dans
           description_audience: "[șir gol]"
         frozen-2018-test-b:
           description: "[șir gol]"
@@ -3657,6 +3665,7 @@ ro:
           description_audience: "[șir gol]"
           stages:
             Dance Party:
+              name: Petrecere cu dans
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
         dance-draft:
@@ -3665,6 +3674,7 @@ ro:
           description_audience: "[șir gol]"
           stages:
             Dance Party:
+              name: Petrecere cu dans
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
         cspplayground:
@@ -3672,7 +3682,9 @@ ro:
           description_short: "[șir gol]"
           description: "[șir gol]"
         dance-extras:
+          title: Continuă să dansezi
           description_audience: "[șir gol]"
+          description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
         coursef-2019:
           description_short: Învățați toate conceptele din fundamentele informaticii
             şi creați propria dvs. artă, poveste sau joc.
@@ -3744,6 +3756,9 @@ ro:
             Crowdsourcing:
               name: Obţinând Informaţii/Critici
         dance-low:
+          stages:
+            Dance Party:
+              name: Petrecere cu dans
           description_audience: "[șir gol]"
           description: "[șir gol]"
         coursed-2019:
@@ -3765,6 +3780,7 @@ ro:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Loops in Ice Age:
+              name: Bucle în Ice Age
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Loops in Artist:
@@ -3810,6 +3826,8 @@ ro:
               name: Binar cu artist
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+            Dance Party:
+              name: Petrecere cu dans
         coursee-2019:
           stages:
             'Programming: My Robotic Friends':
@@ -4032,7 +4050,9 @@ ro:
             'null':
               name: nul
         dance-extras-gallery:
+          title: Continuă să dansezi
           description_audience: "[șir gol]"
+          description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
         coursec-2019:
           stages:
             Building a Foundation:
@@ -4127,6 +4147,8 @@ ro:
               description_student: "[șir gol]"
             Events in Play Lab:
               description_student: "[șir gol]"
+            Loops in Ice Age:
+              name: Bucle în Ice Age
         courseb-2019:
           stages:
             Move It, Move It:
@@ -4156,6 +4178,7 @@ ro:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Loops in Ice Age:
+              name: Bucle în Ice Age
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Loops in Collector:
@@ -4205,6 +4228,7 @@ ro:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Loops in Ice Age:
+              name: Bucle în Ice Age
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Loops in Collector:
@@ -4672,6 +4696,10 @@ ro:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
         csp1-pilot:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csd-tests:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"

@@ -319,12 +319,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(Teacher1920Application.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 98, csv_header_csd.length
+      assert_equal 100, csv_header_csd.length
 
       csv_header_csp = CSV.parse(Teacher1920Application.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 100, csv_header_csp.length
+      assert_equal 102, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -993,16 +993,13 @@ module Pd::Application
       application = create :pd_teacher1920_application
       assert_nil application.scholarship_status
 
-      assert_creates(Pd::ScholarshipInfo) do
-        application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
-      end
+      application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
       assert_equal Pd::ScholarshipInfoConstants::NO, application.scholarship_status
 
       refute application.update_scholarship_status 'invalid status'
+      assert_equal Pd::ScholarshipInfoConstants::NO, application.scholarship_status
 
-      refute_creates(Pd::ScholarshipInfo) do
-        application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
-      end
+      application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
       assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, application.scholarship_status
     end
 

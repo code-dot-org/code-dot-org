@@ -5808,18 +5808,33 @@ is:
       Dance Party 1: "**Spáðu hvað mun gerast:** Hér er vera sem heitir `alien1`! Hvað heldur þú að muni gerast þegar þú smellir á hana?"
       Dance Party 2 Validated: Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðanna. Geturðu breytt hegðuninni í `byrjar` kubbnum til að láta hana snúast í hringi?
       Dance Party 2: "Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðanna. \n\nGeturðu breytt hegðuninni í <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> kubbnum til að láta hana snúast í hringi?  "
-      Dance Party 2_2019: "Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðanna. \n\nGeturðu breytt hegðuninni í <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> kubbnum til að láta hana snúast í hringi?  "
+      Dance Party 2_2019: |-
+        Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðanna. 
+
+        Geturðu breytt hegðuninni í <xml> <block type="gamelab_addBehaviorSimple" inline="true">
+              <value name="SPRITE">
+                <block type="sprite_variables_get">
+                  <title name="VAR">alien1</title>
+                </block>
+              </value>
+            </block></xml> kubbnum til að láta hana snúast í hringi?  
       Dance Party 2_simple: "Geimveran getur aðeins hreyft sig til hægri og vinstri.\n\nBreyttu hegðuninni innan í kubbnum <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> svo geimveran geti snúið sér.  "
       Dance Party 3 - Validated: "Búðu til nýja veru sem heitir `alien2`. \n\nLáttu hana skipta um hreyfingu þegar þú smellir á hana.  "
       Dance Party 3: "Búðu til nýja veru sem heitir `alien2`. \n\nLáttu hana skipta um hreyfingu þegar þú smellir á hana.  "
-      Dance Party 3_2019: "Búðu til nýja veru sem heitir `alien2`. \n\nLáttu hana skipta um hreyfingu þegar þú smellir á hana.  "
+      Dance Party 3_2019: |-
+        Búðu til nýja veru sem heitir `alien2`. 
+
+        Láttu hana skipta um hreyfingu þegar þú smellir á hana.  
       Dance Party 3_simple: |-
         Búðu til nýja veru sem heitir `alien2`.
 
         Þegar þú smellir á hana ætti hún að gera eitthvað.
       Dance Party 4 Validated: "Búðu til þriðju veruna sem heitir `alien3`. \n\nGetur þú látið allar geimverurnar standa í beinni röð? Þetta er geimverudansflokkur!"
       Dance Party 4: "Búðu til þriðju veruna sem heitir `alien3`. \n\nGetur þú látið allar geimverurnar standa í beinni röð? Þetta er geimverudansflokkur!"
-      Dance Party 4_2019: "Búðu til þriðju veruna sem heitir `alien3`. \n\nGetur þú látið allar geimverurnar standa í beinni röð? Þetta er geimverudansflokkur!"
+      Dance Party 4_2019: |-
+        Búðu til þriðju veruna sem heitir `alien3`. 
+
+        Getur þú látið allar geimverurnar standa í beinni röð? Þetta er geimverudansflokkur!
       Dance Party 4_simple: "Búðu til þriðju veruna sem heitir `alien3`. \n\nHafðu allar geimverurnar í beinni röð. Þetta er danspartý úr geimnum!"
       Dance Party 5 - Validated: "Við getum breytt alls konar hlutum í þessu forriti þegar þú smellir á verurnar. Hvernig væri að breyta lit þeirra!\n\n**Bættu við kóða til að breyta lit hverrar geimveru þegar þú smellir á hana.**"
       Dance Party 5: "Við getum breytt alls konar hlutum í þessu forriti þegar þú smellir á verurnar. Hvernig væri að breyta lit þeirra!\n\n**Bættu við kóða til að breyta lit hverrar geimveru þegar þú smellir á hana.**"
@@ -5834,7 +5849,10 @@ is:
       Dance Party 6_simple: "Þessar geimverur þurfa að róa sig!  \n\nNotaðu <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value name=\"SPRITE\"/>\n    </block></xml> kubbinn til að láta hverja geimveru hætta að hreyfast þegar smellt er á hana."
       Dance Party 7 - Validated: "Bættu loks við nýrri bjöllu sem heitir `myBell`. \n\nÞegar þú smellir á hana eiga allar geimverurnar að hreyfa sig eins!"
       Dance Party 7: "Bættu loks við nýrri bjöllu sem heitir `myBell`. \n\nÞegar þú smellir á hana eiga allar geimverurnar að hreyfa sig eins!"
-      Dance Party 7_2019: "Bættu loks við nýrri bjöllu sem heitir `myBell`. \n\nÞegar þú smellir á hana eiga allar geimverurnar að hreyfa sig eins!"
+      Dance Party 7_2019: |-
+        Bættu loks við nýrri bjöllu sem heitir `myBell`. 
+
+        Þegar þú smellir á hana eiga allar geimverurnar að hreyfa sig eins!
       Dance Party 7_simple: "Bættu loks við nýrri bjöllu sem heitir `myBell`. \n\nÞegar þú smellir á hana eiga allar geimverurnar að hreyfa sig eins!"
       Dance Party Freeplay: |-
         Búðu nú til þitt eigið geimverudiskó! Vantar hugmyndir? Prófaðu þessar:

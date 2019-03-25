@@ -493,6 +493,7 @@ pl:
       CSPU5_U3L25 - play sound when up key: Zmień kod, by dźwięk był grany tylko po naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
       CSPU5_U3L25 - play sound when up key_2018: Zmień kod, by dźwięk był grany tylko po naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
       CSPU5_U3L25 - play sound when up key_2019: Zmień kod, by dźwięk był grany tylko po naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
+      CoureE_HOC 2018 Level_7a: Przeszukaj te podwodne ruiny, aby znaleźć kufer.
       Course 2 Bee Loops 1: 'Witam, jestem Pszczółka. Czy mógłbyś mi pomóc zebrać nektar z tych kwiatów? '
       Course 2 Bee Loops 4: Co się stanie, jeśli powtórzysz w pętli tę sekwencję 3 razy? Nie zapomnij zrobić na końcu miodu!
       Course 2 Maze Loops 1: Czy potrafisz doprowadzić mnie do świnki przy użyciu 5 bloków?
@@ -1383,8 +1384,6 @@ pl:
       courseA_maze_ramp5a_2019: Doprowadź ptaka do świnki!
       courseA_maze_seq2: Zmień kod, aby doprowadzić mnie do świnki!
       courseA_maze_seq2_2018: Zmień kod, aby doprowadzić mnie do świnki!
-      courseB_Scrat_ramp5a_2018: Doprowadź ptaka do świnki!
-      courseB_Scrat_ramp5a_2019: Doprowadź ptaka do świnki!
       courseB_artist_loops_challenge2: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
       courseB_artist_loops_challenge2_2018: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
       courseB_artist_loops_challenge2_2019: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"

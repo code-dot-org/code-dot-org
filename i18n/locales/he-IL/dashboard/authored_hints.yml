@@ -335,6 +335,8 @@ he:
           ![,תמונה של בלוקים לפתרון](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: כדי להשתמש בבלוק "זוז קדימה", גרור אותו מאזור סרגל הכלים לתוך סביבת העבודה וחבר אותו לבלוק "כשהריצה מתחילה".
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: אתם יכולים להשתמש בבלוק "אִם יש נתיב" כדי לעזור לכם לבצע את הפניות הנכונות / ימינה.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'לחצי המשושה יש **אורך של 30** וזוויות של **60 מעלות**.  '
         Course_4_Artist_11_b: '2 שלישים המשולש הוא **באורך 80** עם זווית של **120 מעלות**. '
@@ -423,6 +425,8 @@ he:
       Course 4 Artist For Loops 11a_authored_hint:
         Course_4_Artist_For_Loops_11a_a: '360 חלקי מספר הפאות של הצורה זו הזווית שבה תצטרך להסתובב. '
         Course_4_Artist_For_Loops_11a_b: 'בכל פעם, יהיה עליך לזוז קדימה 10 פעמים את האורך הנוכחי של כל אחד מהצדדים. '
+      Course 4 Artist For Loops 3_authored_hint:
+        Course_4_Artist_For_Loops_3_a: בכדי לוודא שלולאת ה-for מובילה את התנועה, וודאו שאתם משתמשים ב-counter למרחק.
       Course 4 Artist For Loops 4_authored_hint:
         Course_4_Artist_For_Loops_4_a: "**מה הספר הקטן ביותר שתצטרכו?\nמה המספר הגדול ביותר?\nכמה יש להוסיף כל פעם?**\n\nאלו השאלות שאתם צריכים לשאול על מנת לכתוב לולאת 'for'."
       Course 4 Artist For Loops Challenge_authored_hint:
@@ -434,6 +438,7 @@ he:
       Course 4 Artist For Loops inspire_authored_hint:
         Course_4_Artist_For_Loops_inspire_a: הבסיס של הקוד הזה הוא כמו הפתרון של החידה הקודמת...עם כמה שינויים.
         Course_4_Artist_For_Loops_inspire_b: נסה להשתמש בלולאת 'עבור' אשר סופרת מ-3 עד 10 עם תוספת קבועה של 1.
+        Course_4_Artist_For_Loops_inspire_c: ישנן שתי חזרות של אותה לולאת חזרה בתוך לולא ה-for, אבל החזרה השניה פונה לכיוון ההפוך.
         Course_4_Artist_For_Loops_inspire_d: "**פתרון**\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_arithmetic\" inline=\"true\">\n                <title name=\"OP\">מינוס</title>\n                <value name=\"A\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">סופר</title>\n                  </block>\n                </value>\n                <value name=\"B\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">1</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">זוז קדימה</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">40</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">פנה ימינה</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">חילוק</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">360</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">סופר</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">1</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">40</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">360</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
       Course 4 Artist Functions Inspiration_authored_hint:
         Course_4_Artist_Functions_Inspiration_a: התחילו עם הקוד מהחידה הקודמת והוסיפו 'פנה ימינה' בשלוש מעלות לתוך הלולאה.
@@ -505,11 +510,13 @@ he:
           </xml>
       Course 4 Artist Functions challenge_authored_hint:
         Course_4_Artist_Functions_challenge_a: חלק מהלמידה וההבנה כיצד להשתמש בפונקציות היא ההבנה לאיזה מהן אתה נדרש ולאיזה מהן אתה לא זקוק.
+        Course_4_Artist_Functions_challenge_b: השתמשו בלולאת for ואז השתמשו במשתנה counter בתוך לולאת repeat מקוננת.
         Course_4_Artist_Functions_challenge_c: בכל חזרה (איטרציה), אתה נדרש לצייר ריבוע ואז לקפוץ קדימה.
         Course_4_Artist_Functions_challenge_d: תצטרך להסתובב שמאלה ב90 מעלות מחוץ ללולאת `חזור`, אבל עדיין שתישאר בתוך לולאת `עבור`.
       Course 4 Artist Inspire_authored_hint:
         Course_4_Artist_Inspire_a: אחרי שתשלים ריבוע אחד, נסה לקפוץ קדימה חצי מהאורך שלו לפני שתסתובב כדי לייצר אחד נוסף.
         Course_4_Artist_Inspire_b: כל ריבוע וקפיצה חוזרים על עצמם 4 פעמים (כאשר יש פניה שמאלה ביניהם) כדי לייצר מעין שבשבת מלאה.
+        Course_4_Artist_Inspire_c: כל לשבשבת חוזרת על עצמה עם פניה ימינה של **360/מס' הצדדים**.
         Course_4_Artist_Inspire_d: |-
           **פתרון:**
 
@@ -685,6 +692,10 @@ he:
           </xml>
       Course 4 Artist Vars 13_authored_hint:
         Course_4_Artist_Vars_13_a: אתה זקוק לשתי לולאות חזור (אחד בתוך השני) כאשר שניהם חוזרים על עצמם `sides` פעמים.
+        Course_4_Artist_Vars_13_b: "לולאת החזרה הפנימית מציירת מתומן (בפניה לשמאל).\nלאחר מכן, צריך לנוע קדימה ולפנות ימינה רק בלולאה החיצונית."
+        Course_4_Artist_Vars_13_c: בכדי להתאים את הצורה להישאר באותו גודל כאשר מספר הצדדים משתנה, השתמש בבלוק חשבון בכדי לחלק את הארוך (בפיקסלים) במספר הצדדים.
+      Course 4 Artist Vars 6_authored_hint:
+        Course_4_Artist_Vars_6_a: בכדי לצייר מצולע רגיל, יש לפנות ב-**360/מספר הצדדים** בכל פעם.
       Course 4 SCF 1_authored_hint:
         Course_4_SCF_1_a: לכל משושה אורך כל פאה הוא 40 פיקסלים.
         Course_4_SCF_1_b: יש לקפוץ 120 פיקסלים בין כל משושה ומשושה בכל שורה אופקית.
@@ -3107,6 +3118,7 @@ he:
       grade5_artist_for_loopsfreeplay11_authored_hint:
         Course_4_Artist_For_Loops_inspire_a: הבסיס של הקוד הזה הוא כמו הפתרון של החידה הקודמת...עם כמה שינויים.
         Course_4_Artist_For_Loops_inspire_b: נסה להשתמש בלולאת 'עבור' אשר סופרת מ-3 עד 10 עם תוספת קבועה של 1.
+        Course_4_Artist_For_Loops_inspire_c: ישנן שתי חזרות של אותה לולאת חזרה בתוך לולא ה-for, אבל החזרה השניה פונה לכיוון ההפוך.
       grade5_artist_functionparameters10_authored_hint:
         brush_width: הגדרנו לעובי 1 את רוחב המברשת, ואז את צבע המברשת לכחול לפני שהתחלנו לעשות כל דבר אחר.
         double_loop: נסה לשים לולאת "עם" בתוך לולאת "חזור".
@@ -3115,8 +3127,13 @@ he:
       grade5_artist_variables_freeplay15_authored_hint:
         Course_4_Artist_Inspire_a: אחרי שתשלים ריבוע אחד, נסה לקפוץ קדימה חצי מהאורך שלו לפני שתסתובב כדי לייצר אחד נוסף.
         Course_4_Artist_Inspire_b: כל ריבוע וקפיצה חוזרים על עצמם 4 פעמים (כאשר יש פניה שמאלה ביניהם) כדי לייצר מעין שבשבת מלאה.
+        Course_4_Artist_Inspire_c: כל לשבשבת חוזרת על עצמה עם פניה ימינה של **360/מס' הצדדים**.
       grade5_artist_variables_octagons13_authored_hint:
         Course_4_Artist_Vars_13_a: אתה זקוק לשתי לולאות חזור (אחד בתוך השני) כאשר שניהם חוזרים על עצמם `sides` פעמים.
+        Course_4_Artist_Vars_13_b: "לולאת החזרה הפנימית מציירת מתומן (בפניה לשמאל).\nלאחר מכן, צריך לנוע קדימה ולפנות ימינה רק בלולאה החיצונית."
+        Course_4_Artist_Vars_13_c: בכדי להתאים את הצורה להישאר באותו גודל כאשר מספר הצדדים משתנה, השתמש בבלוק חשבון בכדי לחלק את הארוך (בפיקסלים) במספר הצדדים.
+      grade5_artist_variables_square7_authored_hint:
+        Course_4_Artist_Vars_6_a: בכדי לצייר מצולע רגיל, יש לפנות ב-**360/מספר הצדדים** בכל פעם.
       gradek_artist_loops7_authored_hint:
         gradek_artist_loops7_c: "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
       level 'grade3_Loops_10_authored_hint:

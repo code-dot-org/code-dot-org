@@ -470,6 +470,10 @@ ru:
         Course_4_SCF_3_e: Как цвет каждого восьмиугольника, так и ширина пера контролируются переменной `counter`.
       Course 4 SCFL 1b_authored_hint:
         Course_4_SCFL_1b_a: Попробуйте «предопределённый цикл».
+      Course 4 SCFL 2_authored_hint:
+        Course_4_SCFL_2_b: Обратите внимание, что во время каждой итерации цикла `for` есть три точки, где вы перестаете взаимодействовать с объектами.
+      Course 4 SCFL 3_authored_hint:
+        Course_4_SCFL_3_b: Прозрачность на кисти всегда составляет `counter`/2.
       Course 4 SCFL 6_authored_hint:
         Course_4_SCFL_6_c: '«предопределённый цикл» от 5 до 250 с шагом 2. '
       CourseD_Dance_Party_01_authored_hint:
@@ -1541,6 +1545,12 @@ ru:
         courseF_artist_for4_a: "** Какое наименьшее число вам понадобиться?   \nКакое наибольшее число?   \nНасколько большим является увеличение каждый раз?** \n\nТакие вопросы вам нужно спрашивать чтобы заполнить пробелы цикла «для»."
       courseF_artist_for4_2019_authored_hint:
         courseF_artist_for4_a: "** Какое наименьшее число вам понадобиться?   \nКакое наибольшее число?   \nНасколько большим является увеличение каждый раз?** \n\nТакие вопросы вам нужно спрашивать чтобы заполнить пробелы цикла «для»."
+      courseF_artist_for_challenge1_authored_hint:
+        courseF_artist_for_challenge1_b: Прозрачность на кисти всегда составляет `counter`/2.
+      courseF_artist_for_challenge1_2018_authored_hint:
+        courseF_artist_for_challenge1_b: Прозрачность на кисти всегда составляет `counter`/2.
+      courseF_artist_for_challenge1_2019_authored_hint:
+        courseF_artist_for_challenge1_b: Прозрачность на кисти всегда составляет `counter`/2.
       courseF_artist_for_challenge2_authored_hint:
         courseF_artist_for_challenge2_c: '«предопределённый цикл» от 5 до 250 с шагом 2. '
       courseF_artist_for_challenge2_2018_authored_hint:

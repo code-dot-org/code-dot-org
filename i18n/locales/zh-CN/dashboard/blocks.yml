@@ -799,6 +799,18 @@ zh-CN:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': 边框
+            '"inner"': 正方形内部
+            '"circle"': 圆
+            '"grid"': 网格
+            '"row"': 行
+            '"column"': 列
+            '"x"': 十字交叉
+            '"plus"': 添加
+            '"random"': 随机
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:

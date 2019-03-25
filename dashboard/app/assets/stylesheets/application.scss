@@ -388,12 +388,10 @@ img.video_thumbnail {
         border-bottom: 1px solid $charcoal;
         box-sizing: content-box;
         white-space: nowrap;
+        cursor: pointer;
       }
       a:hover {
-        color: $teal;
-        font-weight: 900;
-        background-color: $white;
-        cursor: pointer;
+        background-color: $lightest_gray;
       }
       img {
         height: 70px;
@@ -458,11 +456,6 @@ img.video_thumbnail {
   .freeplay_links {
     float: left;
     padding-top: 13px;
-  }
-
-  .project_list {
-    float: left;
-    margin-top: 6px;
   }
 }
 

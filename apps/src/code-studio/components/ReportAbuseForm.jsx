@@ -1,8 +1,8 @@
-/* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -122,18 +122,17 @@ export default class ReportAbuseForm extends React.Component {
             name="abuse_url"
           />
 
-          {/* we dangerouslySetInnerHTML because our string has html in it*/}
-          <div
-            dangerouslySetInnerHTML={{
-              __html: i18n.t(
+          <div>
+            <UnsafeRenderedMarkdown
+              markdown={i18n.t(
                 'project.abuse.report_abuse_form.abuse_type.question',
                 {
                   link_start: '<a href="https://code.org/tos" target="_blank">',
                   link_end: '</a>'
                 }
-              )
-            }}
-          />
+              )}
+            />
+          </div>
           <select
             style={{width: DROPDOWN_WIDTH}}
             name="abuse_type"
@@ -165,18 +164,17 @@ export default class ReportAbuseForm extends React.Component {
             id="uitest-abuse-detail"
           />
 
-          {/* we dangerouslySetInnerHTML because our string has html in it*/}
-          <div
-            dangerouslySetInnerHTML={{
-              __html: i18n.t('project.abuse.report_abuse_form.acknowledge', {
+          <div>
+            <UnsafeRenderedMarkdown
+              markdown={i18n.t('project.abuse.report_abuse_form.acknowledge', {
                 link_start_privacy:
                   '<a href="https://code.org/privacy" target="_blank">',
                 link_start_tos:
                   '<a href="https://code.org/tos" target="_blank">',
                 link_end: '</a>'
-              })
-            }}
-          />
+              })}
+            />
+          </div>
           <button onClick={this.handleSubmit} id="uitest-submit-report-abuse">
             {i18n.t('submit')}
           </button>

@@ -81,6 +81,10 @@ ku:
           VAL:
             'true': ڕاست
             'false': هەڵە
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': هەڕەمەکی
       gamelab_locationDelta:
         options:
           DIR:

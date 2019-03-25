@@ -56,10 +56,7 @@
     ],
     "mini_rubric": "false",
     "long_instructions": "# Collecting Data\r\n\r\nRun this simulation 5 times. Each time, use the Collecting Data activity guide to record:\r\n* How many apples did the elephant collect?\r\n* How many apples did the hippo collect?\r\n* How much time did it take for all of the apples to be collected?",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

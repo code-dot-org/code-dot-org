@@ -799,6 +799,18 @@ es:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': frontera
+            '"inner"': cuadrado
+            '"circle"': círculo
+            '"grid"': cuadrícula
+            '"row"': fila
+            '"column"': columna
+            '"x"': cruz
+            '"plus"': signo más
+            '"random"': aleatorio
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:

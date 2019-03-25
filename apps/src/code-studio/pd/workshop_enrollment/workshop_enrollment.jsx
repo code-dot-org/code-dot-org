@@ -33,7 +33,9 @@ export default class WorkshopEnrollment extends React.Component {
       info_icon: PropTypes.string,
       sign_in_url: PropTypes.string
     }),
-    workshop_enrollment_status: PropTypes.string
+    workshop_enrollment_status: PropTypes.string,
+    previous_courses: PropTypes.arrayOf(PropTypes.string).isRequired,
+    collect_demographics: PropTypes.bool
   };
 
   constructor(props) {
@@ -218,6 +220,8 @@ export default class WorkshopEnrollment extends React.Component {
                         email={this.props.enrollment.email}
                         onSubmissionComplete={this.onSubmissionComplete}
                         workshop_subject={this.props.workshop.subject}
+                        previous_courses={this.props.previous_courses}
+                        collect_demographics={this.props.collect_demographics}
                       />
                     </div>
                   </div>

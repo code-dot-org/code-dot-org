@@ -495,7 +495,7 @@ it:
   share:
     title: "Impara su Code Studio"
     description: "Chiunque può imparare l'informatica. Realizza giochi, app e lavori artistici con la programmazione."
-    try_hour_of_code: 'Prova un Ora di Programmazione!'
+    try_hour_of_code: 'Prova l''Ora del Codice!'
   gender:
     male: 'Maschile'
     female: 'Femminile'
@@ -528,7 +528,7 @@ it:
     built_on_code_studio: 'Costruito con Code Studio'
     make_my_own_app: 'Creo la mia App'
     how_it_works: 'Come funziona'
-    try_hour_of_code: 'Prova un Ora di Programmazione!'
+    try_hour_of_code: 'Prova l''Ora del Codice!'
   reference_area:
     title: 'Hai bisogno di aiuto?'
     subtitle: 'Guarda questi video e suggerimenti'
@@ -617,7 +617,7 @@ it:
       cta: "Scopri come"
     hoc-encryption:
       title: "Crittografia semplice"
-      body: "Gli studenti impareranno tecniche per creare e decifrare un messaggio cifrato."
+      body: "Gli studenti imparano delle tecniche per creare e decodificare un messaggio cifrato."
     weblab:
       title: "Sviluppo Web"
       body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi. (Versione provvisoria.)"
@@ -629,23 +629,24 @@ it:
       title: "Guerre Stellari"
     infinity:
       title: "Laboratorio con Disney Infinity"
-      body: "Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity come protagonisti!"
+      body: "Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity."
     minecraft:
       title: "Minecraft"
       body: "Esplora il mondo di Minecraft attraverso il codice."
     minecraft2016:
       title: "Minecraft"
-      body: "Programma il comportamento degli animali e delle altre creature di Minecraft nella tua versione di questo gioco."
+      body: "Programma animali e altre creature di Minecraft nella tua versione di questo gioco."
     aquatic:
       title: "Minecraft"
     hero:
       title: "Minecraft"
       body: "Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding."
     sports:
+      title: "Sport"
       body: "Crea una partita di basket o abbina diversi sport."
     text-compression:
-      title: "Compressione del Testo"
-      body: "In questa lezione impari come si comprime un testo sostituendo le sequenze di caratteri che si ripetono con dei simboli."
+      title: "Compressione del testo"
+      body: "In questa lezione impari come comprimere un testo, sostituendo sequenze di caratteri ripetuti con simboli."
     unplugged:
       title: "Lezioni Tradizionali"
       audience: "Età 4+"

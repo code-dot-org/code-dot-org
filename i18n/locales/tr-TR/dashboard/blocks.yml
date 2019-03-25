@@ -615,6 +615,18 @@ tr:
             '"space"': uzay
             '"x"': x
             '"y"': 'y'
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': kenarlık
+            '"inner"': iç kare
+            '"circle"': çember
+            '"grid"': ızgara
+            '"row"': satır
+            '"column"': sütun
+            '"x"': çapraz geçiş
+            '"plus"': artı
+            '"random"': gelişigüzel
       gamelab_locationDelta:
         options:
           DIR:

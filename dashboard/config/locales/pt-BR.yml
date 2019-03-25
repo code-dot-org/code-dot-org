@@ -1320,6 +1320,11 @@ pt-BR:
     você deveria estar.
   hidden_script: Seu professor não esperava que estivesse aqui. Por favor, pergunte
     ao seu professor qual unidade você deveria estar.
+  no_script_access_student: Você não tem acesso a esta unidade. Por favor, pergunte
+    ao seu professor em qual unidade você deveria estar.
+  no_script_access_teacher: Você não tem acesso a esta unidade. Se você acredita que
+    deve ter acesso a esta unidade, por favor, escreva para support@code.org para
+    que possamos corrigir a situação.
   return_unit_overview: Ir para visão geral da unidade
   return_course_overview: Ir para visão geral da unidade
   view_all_units: Visualizar todas unidades

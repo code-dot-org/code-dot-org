@@ -672,9 +672,9 @@ pt-BR:
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} começa a {BEHAVIOR}
       gamelab_addBehaviorUntil:
-        text: sprite {SPRITE} começa {BEHAVIOR} até {CONDITION}
+        text: elemento {SPRITE} começa {BEHAVIOR} até {CONDITION}
       gamelab_allSpritesWithAnimation:
-        text: aalab todos {ANIMATION}
+        text: "{ANIMATION}"
       gamelab_beginBehavior:
         text: começar {BEHAVIOR}
       gamelab_bounceOff:
@@ -716,6 +716,8 @@ pt-BR:
         text: 'comentário: {COMMENT}'
       gamelab_console.log:
         text: mostra mensagem {MESSAGE}
+      gamelab_countByCostume:
+        text: número de {COSTUME}
       gamelab_createNewSprite:
         text: "faça um novo sprite\n chamado {NAME} \n com fantasia {COSTUME} \n em
           {LOCATION}"
@@ -823,6 +825,18 @@ pt-BR:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': borda
+            '"inner"': quadrado interno
+            '"circle"': círculo
+            '"grid"': grade
+            '"row"': linha
+            '"column"': coluna
+            '"x"': linhas cruzadas
+            '"plus"': mais
+            '"random"': aleatório
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:
@@ -868,6 +882,8 @@ pt-BR:
         text: definir localização de {VAR} para {VAL}
       gamelab_makeNewGroup:
         text: criar um novo grupo
+      gamelab_makeNewSpriteAnon:
+        text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} vira para {DIRECTION}"
         options:
@@ -914,6 +930,8 @@ pt-BR:
             '"West"': Oeste
       gamelab_pointToward:
         text: aponte {SPRITE} para {LOCATION}
+      gamelab_printText:
+        text: imprimir {TEXT}
       gamelab_randColor:
         text: cor aleatória
       gamelab_randomColor:
@@ -926,6 +944,8 @@ pt-BR:
         text: personagem {SPRITE} para {BEHAVIOR}
       gamelab_removeTint:
         text: retirar cor de {THIS}
+      gamelab_say:
+        text: "{THIS} diga {TEXT}"
       gamelab_secondTouched:
         text: segunda fada a ser tocada
       gamelab_setAnimation:
@@ -933,9 +953,11 @@ pt-BR:
       gamelab_setBackground:
         text: definir a cor do plano de fundo {COLOR}
       gamelab_setBackgroundImage:
+        text: definir plano de fundo para {IMG}
         options:
           IMG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
+            undefined: nenhum
       gamelab_setDirection:
         text: definir {SPRITE} direção de movimento {DIRECTION}
       gamelab_setFrameDelay:
@@ -975,6 +997,13 @@ pt-BR:
         text: mudar a cor de {THIS} para {COLOR}
       gamelab_setup:
         text: configuração
+      gamelab_setupSim:
+        text: |-
+          simulação de configuração com
+          {SPRITE1N}{SPRITE1COSTUME}velocidade{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}velocidade{SPRITE2SPEED}
+          coletando
+          {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: mostrar tela de título {BREAK} título {TITLE} texto {SUBTITLE}
       gamelab_spriteClicked:
@@ -1104,6 +1133,8 @@ pt-BR:
         text: enquanto {SPRITE1} estiver tocando {SPRITE2}
       gamelab_whileUpArrow:
         text: enquanto a seta para cima estiver pressionada
+      gamelab_worldSeconds:
+        text: segundos decorridos
       gamelab_xLocationOf:
         text: coordenada x do {SPRITE}
       gamelab_yLocationOf:
@@ -1142,11 +1173,13 @@ pt-BR:
             '"y"': posição y
             '"direction"': direção do movimento
       Mikelab_groupChangeAnim:
+        text: alterar {SELECT} {COSTUME} para {COSTUME2}
         options:
           SELECT:
             '"all"': todos
             '"this"': este
       Mikelab_groupChangePropBy:
+        text: mudar {PROPERTY} de {SELECT} {COSTUME} para {VAL}
         options:
           SELECT:
             '"all"': todos
@@ -1180,7 +1213,7 @@ pt-BR:
       Mikelab_groupEdgesDisplace:
         text: bordas bloqueiam {COSTUME} de se mover
       Mikelab_groupGetProp:
-        text: "{SELECT} {PROPERTY} de {COSTUME}"
+        text: "{SELECT} {COSTUME} de{PROPERTY}"
         options:
           SELECT:
             '"average"': média
@@ -1198,7 +1231,7 @@ pt-BR:
             '"all"': todos
             '"this"': este
       Mikelab_groupRemoveBehaviorSimple:
-        text: "{SELECT} {COSTUME} para {BEHAVIOR}"
+        text: "{SELECT} {COSTUME} interrompe {BEHAVIOR}"
         options:
           SELECT:
             '"all"': todos
@@ -1282,7 +1315,7 @@ pt-BR:
             '"right"': para direita
             '"left"': para esquerda
       Mikelab_sprite:
-        text: novo {COSTUME} sprite em {LOCATION}
+        text: novo elemento {COSTUME} em {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": parte de cima
@@ -1340,7 +1373,7 @@ pt-BR:
       RyanLab_turnRight:
         text: vire à direita
       SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} diz {TEXT} por {SECONDS} segundos
+        text: elemento {SPRITE} diz {TEXT} por {SECONDS} segundos
       Vector_createSpriteWith:
         text: |-
           criar um personagem
@@ -1367,15 +1400,15 @@ pt-BR:
           PROPERTY:
             "'shapeColor'": cor
       aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} começa a {BEHAVIOR} por {SECONDS} segundos
+        text: aalab elemento {SPRITE} começa a {BEHAVIOR} por {SECONDS} segundos
       aalab_addBehaviorSimpleFlexible:
-        text: aalab sprite {SPRITE} começa a {BEHAVIOR}
+        text: aalab elemento {SPRITE} começa a {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
         text: aalab sprite {SPRITE} começa a {BEHAVIOR} até {CONDITION}
       aalab_addToSpriteGroup:
         text: adicionar personagem {SPRITE} ao grupo {GROUP}
       aalab_allSpritesWithAnimation:
-        text: aalab todos {ANIMATION}
+        text: "{ANIMATION}"
       aalab_changePropByFlexible:
         text: alterar {SPRITE} {PROPERTY} por {VAL}
         options:
@@ -1398,15 +1431,19 @@ pt-BR:
             '"when"': quando
             '"while"': enquanto
       aalab_createNewSprite:
-        text: "aalab faz um novo sprite \n chamado {NAME} \n com fantasia {COSTUME}
+        text: "aalab faz um novo elemento\n chamado {NAME} \n com fantasia {COSTUME}
           \n em {LOCATION}"
       aalab_createNewSpriteAdvanced:
-        text: "faça um novo sprite chamado {NAME} \n com fantasia {COSTUME} \n em
+        text: "faça um novo elemento chamado {NAME} \n com fantasia {COSTUME} \n em
           {LOCATION}"
+      aalab_createNewSpriteAnon:
+        text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
+      aalab_createNewSpriteAnonReturn:
+        text: aalab criará novo {ANIMATION_NAME} elemento em {LOCATION}
       aalab_createPropertyGroup:
         text: |-
-          faça um novo grupo de sprite chamado {VAR}
-          de todos os sprites {COSTUME}
+          faça um novo grupo de elementos chamado {VAR}
+          de todos os elementos {COSTUME}
       aalab_createSpriteGroup:
         text: faça um novo grupo de personagens chamado {VAR}
       aalab_getSpritesByName:
@@ -1459,10 +1496,13 @@ pt-BR:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
       aalab_setCollidable:
+        text: aalab define {SPRITE} passível de colisão com {VAL}
         options:
           VAL:
             '"true"': verdadeiro
             '"false"': falso
+      aalab_setDirection:
+        text: aalab define {SPRITE} direção de movimento {DIRECTION}
       aalab_setProp:
         text: aalab define {SPRITE} {PROPERTY} para {VAL}
         options:
@@ -1486,11 +1526,11 @@ pt-BR:
             '"5"': 5 segundos
             '"0"': eterno
       aalab_showSpriteLabel:
-        text: mostrar rótulo{TEXT} {LOCATION} sprite{SPRITE}
+        text: mostrar rótulo{TEXT} {LOCATION} elemento{SPRITE}
       aalab_speakerSaysConsole:
         text: "{SPRITE} diz {MESSAGE}"
       aalab_spriteSay:
-        text: sprite {SPRITE} diz {TEXT} por {SECONDS} segundos
+        text: elemento {SPRITE} diz {TEXT} por {SECONDS} segundos
       aalab_toggleHideCustomText:
         text: "{OPTION} texto personalizado"
         options:

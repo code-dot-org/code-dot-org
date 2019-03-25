@@ -222,6 +222,10 @@ ga:
             '"space"': spás
             '"x"': x
             '"y"': y
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': randamach
       gamelab_locationDelta:
         options:
           DIR:

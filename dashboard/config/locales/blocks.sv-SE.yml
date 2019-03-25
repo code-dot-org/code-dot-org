@@ -655,6 +655,17 @@ sv:
             '"right"': höger
             '"space"': rymden
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': gräns
+            '"inner"': innanför kvadrat
+            '"circle"': cirkel
+            '"grid"': rutnät
+            '"row"': rad
+            '"column"': kolumn
+            '"x"': korsvis
+            '"random"': slumpad
       gamelab_locationDelta:
         options:
           DIR:

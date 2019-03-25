@@ -705,6 +705,18 @@ bs:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': ivica
+            '"inner"': unutar kvadrata
+            '"circle"': krug
+            '"grid"': mreža
+            '"row"': red
+            '"column"': kolona
+            '"x"': unakrsno
+            '"plus"': plus
+            '"random"': slučajno odabran
       gamelab_locationDelta:
         options:
           DIR:

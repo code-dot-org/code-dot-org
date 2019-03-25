@@ -576,7 +576,7 @@ sk:
       pravidlá pre svet Minecraftu. Žiaci vytvoria unikátne Minecraftové zážitky,
       ktoré následne môžu zdieľať s priateľmi, či zahrať sa s nimi na telefóne. Prejdite
       si kurz vo vašej triede na Hodine Kódu.
-    announcement_how_code_studio: Nepotrebujete žiadne skúsenosti na to, aby ste začali
+    announcement_how_code_studio: Nepotrebujete žiadne skúsenosti nato, aby ste začali
       vyučovať informatiku vo vašej triede. Code.org ponúka osnovy, učebné plány,
       vysoko-kvalitné profesionálne vyučovacie programy a tony skvelých nástrojov
       pre všetky úrovne&mdash;všetko, čo potrebujete, všetko zadarmo. Hľadáte, kde
@@ -1163,8 +1163,9 @@ sk:
     practice: Učiteľské cvičenia
     peer_review: Recenzia
     ramp_up: Príprava
+    end_of_course_project: Záverečný projekt
     main_course: Hlavný kurz
-    extra_course_content: Obsah ku kurzom navyše
+    extra_course_content: Doplnkové lekcie
     csf_e_1: Príprava na Kurz E (voliteľné)
     csf_e_2: Obsah kurzu E
     csf_f_1: Príprava na Kurz F (voliteľné)
@@ -1183,7 +1184,6 @@ sk:
     csd6_2: 'Kapitola 2: Vytváranie fyzických prototypov'
     csd_survey: Hodnotenie kurzu
     csp1_1: 'Kapitola 1: Predstavenie a prenos informácií'
-    csp1_2: 'Kapitola 2: Vynájdenie Internetu'
     csp2_1: 'Kapitola 1: Zakódovanie a kompresia komplexných informácií'
     csp2_2: 'Kapitola 2: Manipulácia a vizualizácia dát'
     csp3_1: 'Kapitola 1: Programovacie jazyky a algoritmy'

@@ -469,6 +469,30 @@ module Api::V1::Pd
       assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
     end
 
+    test 'do not re-lock locked applications on update' do
+      sign_in @workshop_admin
+      @csp_facilitator_application.update(status: 'declined', locked_at: Time.zone.now)
+      @csp_facilitator_application.reload
+      assert @csp_facilitator_application.locked?
+
+      Pd::Application::Facilitator1920Application.any_instance.expects(:lock!).never
+
+      # edit locked application
+      post :update, params: {id: @csp_facilitator_application.id, application: {locked: true}}
+    end
+
+    test 'do not re-unlock unlocked applications on update' do
+      sign_in @workshop_admin
+      @csp_facilitator_application.update(status: 'declined')
+      @csp_facilitator_application.reload
+      refute @csp_facilitator_application.locked?
+
+      Pd::Application::Facilitator1920Application.any_instance.expects(:unlock!).never
+
+      # edit locked application
+      post :update, params: {id: @csp_facilitator_application.id, application: {locked: false}}
+    end
+
     test 'workshop admins can lock and unlock applications' do
       sign_in @workshop_admin
       put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', locked: 'true'}}
@@ -577,12 +601,13 @@ module Api::V1::Pd
       refute response_csv.first.include?(column)
     end
 
-    test 'cohort view returns applications that are accepted and withdrawn' do
+    test 'cohort view returns teacher applications of correct statuses' do
       expected_applications = []
-      (Pd::Application::ApplicationBase.statuses - ['interview']).each do |status|
+      teacher_cohort_view_statuses = Api::V1::Pd::ApplicationsController::COHORT_VIEW_STATUSES & TEACHER_APPLICATION_CLASS.statuses
+      TEACHER_APPLICATION_CLASS.statuses.each do |status|
         application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
         application.update_column(:status, status)
-        if ['accepted', 'withdrawn'].include? status
+        if teacher_cohort_view_statuses.include? status
           expected_applications << application
         end
       end
@@ -592,8 +617,29 @@ module Api::V1::Pd
       assert_response :success
 
       assert_equal(
-        expected_applications.map {|application| application[:id]}.sort,
-        JSON.parse(@response.body).map {|application| application['id']}.sort
+        expected_applications.map {|application| application[:status]}.sort,
+        JSON.parse(@response.body).map {|application| application['status']}.sort
+      )
+    end
+
+    test 'cohort view returns facilitator applications of correct statuses' do
+      expected_applications = []
+      facilitator_cohort_view_statuses = Api::V1::Pd::ApplicationsController::COHORT_VIEW_STATUSES & FACILITATOR_APPLICATION_CLASS.statuses
+      FACILITATOR_APPLICATION_CLASS.statuses.each do |status|
+        application = create FACILITATOR_APPLICATION_FACTORY, course: 'csp'
+        application.update_column(:status, status)
+        if facilitator_cohort_view_statuses.include? status
+          expected_applications << application
+        end
+      end
+
+      sign_in @workshop_admin
+      get :cohort_view, params: {role: 'csp_facilitators', regional_partner_value: 'none'}
+      assert_response :success
+
+      assert_equal(
+        expected_applications.map {|application| application[:status]}.sort,
+        JSON.parse(@response.body).map {|application| application['status']}.sort
       )
     end
 
@@ -961,6 +1007,8 @@ module Api::V1::Pd
         "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
         "How did you hear about this program? (Principal's response)",
         "Principal authorizes college board to send AP Scores",
+        "Contact name for invoicing",
+        "Contact email or phone number for invoicing",
         "Title I status code (NCES data)",
         "Total student enrollment (NCES data)",
         "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",

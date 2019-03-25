@@ -127,6 +127,10 @@ ta:
           KEY:
             '"space"': வெளி
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       gamelab_locationDelta:
         options:
           DIR:

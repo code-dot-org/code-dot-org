@@ -24,19 +24,19 @@ bg:
       Picker: Избор
       Comment: Коментар
       'Variables ': 'Променливи '
+      Default: По подразбиране
+      Behaviors: Поведения
+      Locations: Места
       everythingelse: всичко останало
       Sprites: Спрайт
       Location: Адрес
-      Behaviors: Поведения
       numbers: числа
       Numbers: Числа
       Input: Поле за въвеждане
-      Default: По подразбиране
       Dancers: Танцьори
       Groups: Групи
       Advanced: Разширено
       Start: Старт
-      Locations: Места
       Music: Музика
       Dancing: Танци
       Sprite: Спрайт

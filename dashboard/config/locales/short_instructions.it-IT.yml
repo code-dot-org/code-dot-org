@@ -246,7 +246,7 @@ it:
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
         <b>Suggerimenti</b><br>
         - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
-        - Puoi risolvere questo esercizio usando il <i>ciclo</i>`ripeti ... volte`?
+        - Puoi risolvere questo esercizio usando il <i>ciclo</i> `ripeti ... volte`?
       2-3 Bee Conditionals 14: |-
         Metti insieme tutto ciò che hai imparato!<br>
         Raccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi. Non dimenticarti di fare il miele alla fine.
@@ -990,6 +990,7 @@ it:
       C3-Farmer While Loops Assessment 1: Questo è un esercizio di riepilogo -- Ci
         sono molte buche e mucchi di terra. Aiutami a riempire le buche e a rimuovere
         i mucchi di terra per rendere livellato il terreno.
+      CoureE_HOC 2018 Level_7a: Cerca una cassa tra le rovine sottomarine.
       Course 2 Bee Loops 1: 'Ciao, sono un''ape. Riesci ad aiutarmi a raccogliere
         il nettare da questi fiori? '
       Course 2 Bee Loops 13: Questo è un esercizio di verifica -- Usa il blocco "ripeti"
@@ -3256,7 +3257,7 @@ it:
       courseA_bee_seq4: Prova da solo!
       courseA_bee_seq5: Prova da solo!
       courseA_bee_seq6: Adesso l'ape deve raccogliere il nettare da due fiori!
-      courseA_bee_seq7: Aggiungi due blocchi per competare l'esercizio!
+      courseA_bee_seq7: Aggiungi due blocchi per completare l'esercizio!
       courseA_bee_seq8: Assicurati di raccogliere il nettare da tutti i fiori!
       courseA_bee_seq9: Assicurati di raccogliere il nettare da tutti i fiori!
       courseA_collector_loops1: |-
@@ -3392,6 +3393,10 @@ it:
       courseA_harvester_seq11_2019: Prova da solo! Raccogli tutte le pannocchie.
       courseA_harvester_seq12: Raccogli tutte le pannocchie.
       courseA_harvester_seq12_2019: Raccogli tutte le pannocchie.
+      courseA_harvester_seq13: Gioca con questi blocchi per aiutare la contadina a
+        raccogliere le pannocchie.
+      courseA_harvester_seq13_2019: Gioca con questi blocchi per aiutare la contadina
+        a raccogliere le pannocchie.
       courseA_harvester_seq1_2019: Gioca con questi blocchi per aiutare la contadina
         a raccogliere la pannocchia.
       courseA_harvester_seq2: Usa tre blocchi `O ←` e un blocco `prendi pannocchia`
@@ -3413,8 +3418,8 @@ it:
       courseA_harvester_seq8: Ora la contadina dovrà raccogliere pannocchie due volte!
       courseA_harvester_seq8_2019: Ora la contadina dovrà raccogliere pannocchie due
         volte!
-      courseA_harvester_seq9: Aggiungi due blocchi per competare l'esercizio!
-      courseA_harvester_seq9_2019: Aggiungi due blocchi per competare l'esercizio!
+      courseA_harvester_seq9: Aggiungi due blocchi per completare l'esercizio!
+      courseA_harvester_seq9_2019: Aggiungi due blocchi per completare l'esercizio!
       courseA_maze_ramp2_2018: Unisci tutti i blocchi per completare il programma,
         poi fai clic su "Esegui".
       courseA_maze_ramp2_2019: Unisci tutti i blocchi per completare il programma,
@@ -3587,8 +3592,10 @@ it:
         fine di questo programma per completare l'esercizio?
       courseB_Scrat_ramp4a_2019: Riesci a capire quale blocco devi aggiungere alla
         fine di questo programma per completare l'esercizio?
-      courseB_Scrat_ramp5a_2018: Fai arrivare l'uccellino fino al maialino!
-      courseB_Scrat_ramp5a_2019: Fai arrivare l'uccellino fino al maialino!
+      courseB_Scrat_ramp5a_2018: Questo esercizio prova a risolverlo completamente
+        da solo!
+      courseB_Scrat_ramp5a_2019: Questo esercizio prova a risolverlo completamente
+        da solo!
       courseB_artist_loops1: Questo è un nuovo tipo di esercizio chiamato "Artista".
         Prova a disegnare qualcosa di divertente. Quando sei soddisfatto, premi "Termina"
         per passare all'esercizio successivo.
@@ -5891,8 +5898,8 @@ it:
         e zucche.
       courseE_farmer_functions2ba: Aiuta la contadina a raccogliere le pannocchie
         e le zucche utilizzando la funzione `pannocchie e zucca`.
-      courseE_farmer_functions2ba_2018: Aiuta la contadina a raccogliere le pannocchie
-        e le zucche utilizzando la funzione `pannocchie e zucca`.
+      courseE_farmer_functions2ba_2018: Usa le funzioni qui sotto, per aiutare la
+        contadina a raccogliere le pannocchie e le zucche.
       courseE_farmer_functions2ba_2019: Aiuta la contadina a raccogliere le pannocchie
         e le zucche utilizzando la funzione `pannocchie e zucca`.
       courseE_farmer_functions3c: Ora, inserisci tu il codice all'interno della funzione,
@@ -6678,7 +6685,7 @@ it:
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
         <b>Suggerimenti</b><br>
         - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
-        - Puoi risolvere questo esercizio usando il <i>ciclo</i>`ripeti ... volte`?
+        - Puoi risolvere questo esercizio usando il <i>ciclo</i> `ripeti ... volte`?
       grade3_Conditionals_11 BAD: Questo è un esercizio di riepilogo -- Usa un ciclo
         `mentre` per raccogliere tutto il nettare da questi fiori.
       grade3_Conditionals_11: |-

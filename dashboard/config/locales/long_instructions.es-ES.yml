@@ -2,6 +2,10 @@
 es:
   data:
     long_instructions:
+      "'pre-assessment survey q25A'": 'Si es asi, ¿qué curso(s) de ciencias de la
+        computación has recibido antes del curso actual de ciencias de la computación?
+
+'
       2-3 Artist 1 new: "Hola, soy un artista. Puedes escribir código\npara hacerme
         escribir casi cualquier cosa. Usa unos bloques para hacerme dibujar sobre
         las\nlíneas grises en la imagen. (Cada línea mide 100 píxeles)\r\n\r\n"
@@ -99,9 +103,14 @@ es:
         movido los bloques para dibujar un cuadrado en la función llamada "dibuja
         un cuadrado". ¿Puedes utilizar la función "dibuja un cuadrado" para crear
         los lentes? Los cuadrados están separados por 75 píxeles.
+      2-3 Artist Functions 3 a: "Edita la función \"dibuja un cuadrado\" para dibujar
+        cristales con fotogramas de 115px por cada lado. \n\nLos cuadrados ahora están
+        separados 45 píxeles."
       2-3 Artist Functions 3: Editar la función para dibujar un cuadrado con una longitud
         lateral de 115 y dibuja los lentes más grandes. Los cuadrados están ahora
         separados 45 píxeles.
+      2-3 Artist Functions 4 a: Ahora, coloca la función dentro de un bucle y añade
+        un turno extra para dibujar estos tres cuadrados.
       2-3 Artist Functions 4: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
       2-3 Artist Functions 9: "** Freeplay: ** esta es una función del copo de nieve.
         ¡Experimentar con él para crear una escena de invierno! \r \r este es un nivel
@@ -377,6 +386,8 @@ es:
       4-5 Bee Debugging Assessment 1: |-
         ** Evaluación: ** Repare el
         código.
+      4-5 Bee Nested Loops 2: "Recolecta todo el néctar de cada flor. \n\nUsa un bucle
+        anidado. "
       4-5 Bee Nested Loops 4: 'Recolecta todo el néctar de cada flor y haz miel en
         cada panel. Utiliza un bucle anidado. '
       4-5 Bee Nested Loops Assessment 1: |-
@@ -423,6 +434,8 @@ es:
         un circuito insertado? \r\n\r\nCada cuadrado tiene 30 píxeles."
       4-5 Nested Loops 12: "¿Puedes dibujar estos 36 triángulos utilizando un bucle
         anidado?"
+      4-5 Nested Loops 2: "Ahora anida este bucle dentro de otro para dibujar 10 triángulos.
+        \nEsto se llama un bucle \"anidado\".  "
       4-5 Nested Loops 3: "Crea un sol anidando el código de arranque en otro bucle.
         Esto se llama un bucle anidado. \r"
       4-5 Nested Loops 5: has un bucle con el código dado para crear un molino de
@@ -435,6 +448,8 @@ es:
       4-5 Nested Loops 8: 'Repite el bucle 6 veces. ¿Cuánto tienes que girar cada
         vez el bucle? (Pista: ¿Cuánto es 360 dividido por 6?)'
       4-5 Nested Loops 9: Dibujar los dientes en la boca del cocodrilo!
+      4-5 Nested Loops Assessment 1: "**Evaluación:** Usa un bucle anidado para completar
+        el diseño."
       4-5 While Loops 1: |-
         Muéveme al hoyo y llénalo con
         dos paladas de tierra, usando el bloque `llenar`.
@@ -447,6 +462,11 @@ es:
       4-5 While Loops 4: "Wow, mira eso! \r\n\r\nYo no\nse cuántas palas de tierra
         necesita este hoyo. \r\n¿Puedes tu escribir un programa\nque siga usando el
         bloque `llenar` hasta que el suelo esté parejo?\n  "
+      AWS applab: |-
+        # Ahora haz esto
+
+        *primer paso
+        *segundo paso
       AWS link: "# Usa esta herramienta para cosas"
       Alien Defender: |-
         ** La Idea del proyecto **: hacer un juego protector
@@ -506,6 +526,8 @@ es:
         un enlace o incluso enviarle un texto. \r\n\r\nPuedes seguir trabajando en
         tu proyecto\naquí. Cada vez que tus amigos vayan al enlace que compartiste,
         recibirán la última\nversión que hiciste ¿Cuán lejos construirás tu aventura?"
+      AppLab Intro 4 - Video share your work: "# ¡Crea y comparte tu Aplicación!"
+      AppLab Intro 4 - Video share: "# ¡Crea y comparte tu Aplicación!"
       AppLab Intro 4 - thisOrThat design: "** Objetivo: ** probar\nModo de diseño
         para seguir haciendo cambios a esta o aquella aplicación. También hay\nalgunos
         nuevos bloques en tu caja de herramientas! Aprenderá más sobre esto en lecciones
@@ -555,6 +577,48 @@ es:
       Bergeron Robot Maze1: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso? \r\n\r\njunta
         un par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea y presiona
         \"Ejecutar\". "
+      Big Game Final: |-
+        ¡Lo has conseguido!
+
+        En este punto, tu juego debería funcionar sin problemas, tómate tu tiempo para disfrutar de tu juego y hacer algunos cambios finales en él.
+
+        Cuando estés contento con el producto final, haz click en Finalizar y tendrás la oportunidad de compartir un link con tu juego.
+
+        ¡Buen trabajo!
+      Big Game Player 1: |-
+        ¡Ya estamos terminando un juego completo!
+
+        La última vez que trabajaste en el juego, usaste booleanos para hacer que tu Objetivo y Peligro regresaran a la pantalla tras desaparecer. Haz click en "Ejecutar" para ver el aspecto que tiene tu juego ahora, tras lo cual haremos que tu Jugador pueda moverse arriba y abajo.
+      Big Game Vars 2: El primer paso para hacer este juego único y tuyo es darle
+        un buen Título. Haz click en editar en las variables `título` y `subtítulo`
+        y cámbialas por algo nuevo.
+      Big Game Vars 3: Ahora vamos a establecer el fondo de tu nuevo juego. Edita
+        la variable `bg` y selecciona una nueva Imagen de fondo del menú desplegable.
+      Big Game Vars 4: ¡Impresionante! Ahora puedes actualizar las variables de tu
+        Jugador, Objetivo, y Peligro. Juega con todas las variables libremente para
+        hacer que tu juego tenga el aspecto que deseas. Haz click en "Finalizar" cuando
+        acabes.
+      Boolean Expressions: |-
+        ### Puntos a tener en cuenta:
+
+        1. ¿Qué es una *Expresión Booleana?*
+        2. ¿Por qué se llama  "Booleano"?
+        3. ¿Es esta una expresión legal: `10 > 25`?
+      Brad Spooky House Copy: "Juego Libre: Aquí están las funciones que has escrito,
+        y algunas más con las que podrás juguetear. ¡Experimenta con la anchura del
+        lápiz para crear dibujos diferentes y únicos!\n\n"
+      Brad Spooky House: "Juego Libre: Aquí están las funciones que has escrito, y
+        algunas más con las que podrás juguetear. ¡Experimenta con la anchura del
+        lápiz para crear dibujos diferentes y únicos!\n\n"
+      Brand Book Example: |
+        # Manual
+
+        Echa un ojo a un ejemplo de un manual
+      CSD - Predict List Accessing: |
+        # Predicción
+
+        El código mostrado a continuación tiene 4 cosas a introducir en la consola. ¿Qué crees que imprimirá en la consola como resultado del código?
+      CSD U1 - PixFilter Full: "# Las Instrucciones Van Aquí"
       CSD U3 - conditionals - arrows and gears: "# Engranajes con Condicionales\r\n\r\nVamos
         a\nhacer girar los engranajes solo cuando la tecla de espacio se mantiene
         presionada.\r\n\r\n# Hagamos\nEsto\r\n\r\n* Agregar una instrucción `if`.\r\n*
@@ -973,6 +1037,9 @@ es:
       CSD U6 for loop click predict question_2019: "# Hacer una predicción\r\n\r\nLea
         el código de este programa y prediga qué sucederá cada vez que se haga clic
         en el botón?"
+      CoureE_HOC 2018 Level_7a: "Has encontrado las ruinas subacuáticas. Busca un
+        **cofre** en la arenisca ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png),
+        contiene un tesoro de **prismarina** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
       Course 4 Artist 13: "¿Aún jugando? aquí hay un lienzo en blanco donde usted
         podrá diseñar lo que quiera!"
       Course 4 Artist 6: |-
@@ -1331,6 +1398,24 @@ es:
       HOC Dance Predraw: |-
         ¡Mueve el esqueleto! Crea un baile propio para compartirlo
         con tus amigos.
+      'Introduction to Conditionals: Boolean Expressions': |-
+        ### Puntos a tener en cuenta:
+
+        1. ¿Qué es una *Expresión Booleana?*
+        2. ¿Por qué se llama  "Booleano"?
+        3. ¿Es esta una expresión legal: `10 > 25`?
+      'Introduction to Conditionals: Boolean Expressions_2018': |-
+        ### Puntos a tener en cuenta:
+
+        1. ¿Qué es una *Expresión Booleana?*
+        2. ¿Por qué se llama  "Booleano"?
+        3. ¿Es esta una expresión legal: `10 > 25`?
+      'Introduction to Conditionals: Boolean Expressions_2019': |-
+        ### Puntos a tener en cuenta:
+
+        1. ¿Qué es una *Expresión Booleana?*
+        2. ¿Por qué se llama  "Booleano"?
+        3. ¿Es esta una expresión legal: `10 > 25`?
       K-1 Bee Loops 2: |-
         ¡Utiliza un enlace para moverte obtener el nectar y
         hacer miel!
@@ -1559,6 +1644,13 @@ es:
         caer el bloque de variable "longitud" en los lugares correctos?
       New Minecraft Hero Project: "**Juego libre:** ¡Te toca! Utiliza el código del
         Agent para ayudarte a explorar este mundo."
+      Nike Example Brand Book: |
+        # Manual
+
+        Echa un ojo a un ejemplo de un manual
+      October15 bat: "Juego Libre: Aquí están las funciones que has escrito, y algunas
+        más con las que podrás juguetear. ¡Experimenta con la anchura del lápiz para
+        crear dibujos diferentes y únicos!\n\n"
       Overworld Move to Sheep: Añade un segundo comando "avanzar" para llegar a la
         oveja.
       Overworld Move to Sheep_2018: Añade un segundo comando "avanzar" para llegar
@@ -1607,6 +1699,27 @@ es:
       Testing Quantum Farmer: "Wow, mira eso! \r\n\r\nYo no\nse cuántas palas de tierra
         necesita este hoyo. \r\n¿Puedes tu escribir un programa\nque siga usando el
         bloque `llenar` hasta que el suelo esté parejo?\n  "
+      Total Artist Clone Me: "Juego Libre: Aquí están las funciones que has escrito,
+        y algunas más con las que podrás juguetear. ¡Experimenta con la anchura del
+        lápiz para crear dibujos diferentes y únicos!\n\n"
+      U5 Booleans: |-
+        ### Puntos a tener en cuenta:
+
+        1. ¿Qué es una *Expresión Booleana?*
+        2. ¿Por qué se llama  "Booleano"?
+        3. ¿Es esta una expresión legal: `10 > 25`?
+      U5 video Booleans: |-
+        ### Puntos a tener en cuenta:
+
+        1. ¿Qué es una *Expresión Booleana?*
+        2. ¿Por qué se llama  "Booleano"?
+        3. ¿Es esta una expresión legal: `10 > 25`?
+      Video. Introduction to Conditionals - Part 1: |-
+        ### Puntos a tener en cuenta:
+
+        1. ¿Qué es una *Expresión Booleana?*
+        2. ¿Por qué se llama  "Booleano"?
+        3. ¿Es esta una expresión legal: `10 > 25`?
       course1_artist_loops_challenge2: |-
         ¡Vamos a jugar un juego!! Dibuja tantas X como tú
         puedas! ¿Puedes obtener 3 en una fila?
@@ -1808,6 +1921,8 @@ es:
         Llévame al cerdo! tu solo puedes usar un
         bloque de `avanzar`en esta oportunidad
       grade3_maze_nestedLoops4: Usa dos ciclos para hacer que el cerdo use menos bloques.
+      grade4_arist_nested_loop_circles1: "**Evaluación:** Usa un bucle anidado para
+        completar el diseño."
       grade4_arist_nested_loop_flags1: has un bucle con el código dado para crear
         un molino de viento.
       grade4_arist_nested_loop_polygons1: 'con el bucle repite este diseño 10 veces.
@@ -1817,6 +1932,8 @@ es:
         que girar cada vez el bucle? (Pista: ¿Cuánto es 360 dividido por 6?)'
       grade4_arist_nested_loop_squares1: "¿Puedes tu dibujar los 10 cuadrados de\nesta
         acera usando un circuito insertado? \r\n\r\nCada cuadrado tiene 30 píxeles."
+      grade4_arist_nested_loop_triangles2: "Ahora anida este bucle dentro de otro
+        para dibujar 10 triángulos. \nEsto se llama un bucle \"anidado\".  "
       grade4_arist_nested_loop_triangles3: |-
         ¿Puedes dibujar un hexágono haciendo un enlace
         con el código triangular?
@@ -1829,6 +1946,8 @@ es:
         movido los bloques para dibujar un cuadrado en la función llamada "dibuja
         un cuadrado". ¿Puedes utilizar la función "dibuja un cuadrado" para crear
         los lentes? Los cuadrados están separados por 75 píxeles.
+      grade4_artist_nested_loop_circles1: "**Evaluación:** Usa un bucle anidado para
+        completar el diseño."
       grade4_artist_nested_loop_flags1: has un bucle con el código dado para crear
         un molino de viento.
       grade4_artist_nested_loop_polygons1: 'con el bucle repite este diseño 10 veces.

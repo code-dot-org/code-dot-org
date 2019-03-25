@@ -22,6 +22,63 @@ describe('App Lab redux module', () => {
     restoreRedux();
   });
 
+  describe('redirectNotice', () => {
+    describe('the initial state', () => {
+      it('has no redirect notices', () => {
+        expect(store.getState().redirectDisplay).to.be.empty;
+      });
+    });
+
+    describe('the addRedirectNotice action', () => {
+      it('adds a single redirect notice', () => {
+        store.dispatch(actions.addRedirectNotice(false, 'this-is.a.url'));
+
+        expect(store.getState().redirectDisplay.length).to.equal(1);
+        const redirect = store.getState().redirectDisplay[0];
+        expect(redirect.url).to.equal('this-is.a.url');
+        expect(redirect.approved).to.equal(false);
+      });
+
+      it('adds a multiple redirect notices back to back', () => {
+        store.dispatch(actions.addRedirectNotice(false, 'this-is.a.url'));
+        store.dispatch(actions.addRedirectNotice(true, 'also-a.url'));
+
+        expect(store.getState().redirectDisplay.length).to.equal(2);
+        const redirect = store.getState().redirectDisplay[0];
+        expect(redirect.url).to.equal('also-a.url');
+        expect(redirect.approved).to.equal(true);
+      });
+    });
+
+    describe('the dismissRedirectNotice action', () => {
+      it('removes the first redirect notice of many', () => {
+        store.dispatch(actions.addRedirectNotice(false, 'this-is.a.url'));
+        store.dispatch(actions.addRedirectNotice(true, 'also-a.url'));
+        expect(store.getState().redirectDisplay.length).to.equal(2);
+        store.dispatch(actions.dismissRedirectNotice());
+
+        expect(store.getState().redirectDisplay.length).to.equal(1);
+        const redirect = store.getState().redirectDisplay[0];
+        expect(redirect.url).to.equal('this-is.a.url');
+        expect(redirect.approved).to.equal(false);
+      });
+
+      it('removes the only redirect notice', () => {
+        store.dispatch(actions.addRedirectNotice(false, 'this-is.a.url'));
+        expect(store.getState().redirectDisplay.length).to.equal(1);
+
+        store.dispatch(actions.dismissRedirectNotice());
+        expect(store.getState().redirectDisplay).to.be.empty;
+      });
+
+      it('does not affect state when no redirects exist', () => {
+        expect(store.getState().redirectDisplay).to.be.empty;
+        store.dispatch(actions.dismissRedirectNotice());
+        expect(store.getState().redirectDisplay).to.be.empty;
+      });
+    });
+  });
+
   describe('interfaceMode', () => {
     it('exposes state on the interfaceMode key', () => {
       expect(store.getState().interfaceMode).to.be.defined;
