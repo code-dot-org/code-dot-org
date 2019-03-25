@@ -11,15 +11,12 @@ describe('GeneratedCode', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <div className="generated-code-container">
-        <p
-          className="generatedCodeMessage"
-          dangerouslySetInnerHTML={{__html: 'Test message'}}
-        />
-        <pre
-          className="generatedCode"
-          dir="ltr"
-          dangerouslySetInnerHTML={{__html: 'Test code'}}
-        />
+        <div className="generatedCodeMessage">
+          <p>Test message</p>
+        </div>
+        <pre className="generatedCode" dir="ltr">
+          Test code
+        </pre>
       </div>
     );
   });
