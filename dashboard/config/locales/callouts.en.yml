@@ -1358,7 +1358,7 @@ en:
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Grey blocks cannot be deleted!
       courseC_maze_debugging5_2018_callout:
-        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+        courseC_maze_debugging5_1: These gray blocks are locked and cannot be deleted!
       courseC_maze_debugging5_2019_callout:
         courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
       courseC_maze_debugging9_2019_callout:
