@@ -1121,7 +1121,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test 'clever_classrooms queries clever with clever authentication_id for migrated user' do
-    teacher = create :teacher, :with_migrated_clever_authentication_option
+    teacher = create :teacher, :with_clever_authentication_option
     auth_option = teacher.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
     sign_in teacher
     assert_nil teacher.uid
