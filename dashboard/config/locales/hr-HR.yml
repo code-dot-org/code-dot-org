@@ -199,9 +199,13 @@ hr:
       create: Stvori
       applab: Laboratorij aplikacija
       artist: Umjetnik
-      playlab: Laboratorij igara
-      minecraft: Minecraft
+      bounce: Odskok
       flappy: Flappy
+      frozen: Snježno kraljevstvo
+      infinity: Beskonačnost
+      minecraft_designer: Minecraft
+      playlab: Laboratorij igara
+      starwars: Ratovi zvijezda
     popup:
       progress_for_user: Napredak %{name}
       progress: Tvoj napredak
@@ -627,6 +631,20 @@ hr:
           korištenja%{link_end}
   flex_category:
     required: Pregled
+    csf_digcit: Digitalno građanstvo
+    csf_jigsaw: Slagalica
+    csf_loops: Petlje
+    csf_events: Događaji
+    csf_binary: Binarno
+    csf_conditionals: Uvjeti
+    csf_nested_loops: Ugniježđene petlje
+    csf_functions: Funkcije
+    csf_variables: Varijable
+    csf_for_loops: Petlja brojača
+    csf_internet: Internet
+    csp_variables: Varijable
+    csp_conditionals: Uvjeti
+    csp_functions: Funkcije
   pd:
     form_labels:
       email: E-mail
