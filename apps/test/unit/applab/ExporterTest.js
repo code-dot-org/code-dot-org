@@ -736,6 +736,8 @@ describe('The Exporter,', function() {
 
   describe('globally exposed functions', () => {
     beforeEach(() => {
+      // webpack-runtime must appear exactly once on any page containing webpack entries.
+      require('../../../build/package/js/webpack-runtime.js');
       require('../../../build/package/js/applab-api.js');
     });
   });
@@ -769,6 +771,8 @@ describe('The Exporter,', function() {
 
           new Function(getAppOptionsFile())();
           setAppOptions(Object.assign(window.APP_OPTIONS, {isExported: true}));
+          // webpack-runtime must appear exactly once on any page containing webpack entries.
+          require('../../../build/package/js/webpack-runtime.js');
           require('../../../build/package/js/applab-api.js');
           new Function(zipFiles['my-app/code.js'])();
           if (globalPromiseName) {
