@@ -55,14 +55,14 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 11638,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "encrypted": "false",
     "mini_rubric": "false",
     "top_level_procedure_autopopulate": "false",
     "default_num_example_blocks": "false",
     "project_template_level_name": "gradek_playlab_events5c_template_2019",
     "show_type_hints": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
