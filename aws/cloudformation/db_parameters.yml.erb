@@ -107,11 +107,7 @@ Primary: &primary
 Replica:
   # Merge all primary variables into replica.
   <<: *primary
-  
-  # Use default durability configuration on Reporting Instance to ensure that AWS RDS Point In Time Restore works.
-  innodb_flush_log_at_trx_commit: 1
-  sync_binlog: 1
-  
+
   # Performance Schema not needed on reporting DB.
   performance_schema: null
   # No max execution time on reporting DB.
