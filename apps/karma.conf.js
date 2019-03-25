@@ -51,7 +51,7 @@ module.exports = function (config) {
       "test/scratch-tests.js": ["webpack"],
     },
 
-    webpack: {...webpackConfig, optimization: undefined, mode: 'development'},
+    webpack: {...webpackConfig, optimization: undefined, mode: 'none'},
     webpackMiddleware: {
       noInfo: true,
       stats: {
