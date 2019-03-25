@@ -771,14 +771,6 @@ class Script < ActiveRecord::Base
     ].include?(name)
   end
 
-  def freeplay_links
-    if cs_in_a?
-      ['calc', 'eval']
-    else
-      []
-    end
-  end
-
   def has_peer_reviews?
     peer_reviews_to_complete.try(:>, 0)
   end
