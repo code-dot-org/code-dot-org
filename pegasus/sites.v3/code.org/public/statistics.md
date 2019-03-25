@@ -39,7 +39,7 @@ Young women are 11% more likely to say the CS Principles programming units are t
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="" target="_blank"><img src="/images/statistics/fit-250/URM-CSaccess.png"></a>
+<a href="https://twitter.com/codeorg/status/1109125088794890240" target="_blank"><img src="/images/statistics/fit-250/URM-CSaccess.png"></a>
 
 <br>
 
