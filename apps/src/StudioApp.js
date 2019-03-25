@@ -10,7 +10,7 @@ import {Provider} from 'react-redux';
 import trackEvent from './util/trackEvent';
 
 // comment to trigger apps tests to run on drone
-  
+
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
 import * as aceMode from './acemode/mode-javascript_codeorg';
