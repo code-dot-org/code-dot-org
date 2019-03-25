@@ -248,19 +248,6 @@ img.video_thumbnail {
     }
   }
 
-  .header_status_bar {
-    background-color: $dark_color;
-    border-radius: 5px;
-    min-width: 20px;
-    padding: 3px;
-    font-size: 16px;
-    display: inline-block;
-  }
-
-  a.header_status_bar:hover {
-    background-color: $orange;
-  }
-
   .header_text {
     font-size: 16px;
     display: inline-block;
@@ -451,11 +438,6 @@ img.video_thumbnail {
 
   #signin_button .header_button {
     margin-top: 6px;
-  }
-
-  .freeplay_links {
-    float: left;
-    padding-top: 13px;
   }
 }
 
@@ -1031,11 +1013,6 @@ $default-modal-width: 640px;
 .header_right {
   position: absolute;
   right: 16px;
-}
-
-.freeplay_links {
-  display: inline-block;
-  text-align: center;
 }
 
 input.header_input {
