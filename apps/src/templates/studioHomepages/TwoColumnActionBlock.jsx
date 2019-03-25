@@ -243,7 +243,7 @@ export class SpecialAnnouncementActionBlock extends Component {
       />
     ) : (
       <TwoColumnActionBlock
-        id="teacher-nomination-announcement"
+        id="teacher-application-announcement"
         imageUrl={pegasus(
           '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg'
         )}
@@ -254,6 +254,7 @@ export class SpecialAnnouncementActionBlock extends Component {
         teacherStyle={false}
         buttons={[
           {
+            id: 'teacher-application-join-button',
             url: pegasus('/educate/professional-learning'),
             text: i18n.joinUs()
           }
