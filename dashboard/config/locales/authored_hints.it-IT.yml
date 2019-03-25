@@ -185,15 +185,17 @@ it:
         2-3_Bee_Conditionals_14_b: Se consideri il fiore rosso come se fosse viola,
           allora puoi usare un ulteriore <i>ciclo</i> `ripeti ... volte`.
         2-3_Bee_Conditionals_14_c: |-
-          Prova a suddividere il problema in due parti separate:<br>
-          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)<br>
-          <b>1)</b> Raccogliere il nettare 3 volte<br>
-          - Vai avanti di 5 passi<br>
-          - Controlla se c'è del nettare, in caso affermativo: prendilo<br>
+          Prova a suddividere il problema in due parti separate:
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Raccogliere il nettare 3 volte
+          - Vai avanti di 5 passi
+          - Controlla se c'è del nettare, in caso affermativo: prendilo
           - Gira a sinistra
 
-          <b>2)</b> Produrre il miele<br>
-          - Fai un passo avanti<br>
+          2) Produrre il miele
+          - Fai un passo avanti
           - Produci due volte il miele
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Ricorda: i fiori viola possono avere una quantità
@@ -446,6 +448,8 @@ it:
         2-3_Maze_1_a: Per usare un blocco `vai avanti`, trascinalo dalla cassetta
           degli attrezzi nell'area di lavoro e collegalo al blocco `quando si clicca
           su "Esegui"`.
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Puoi usare il blocco `se c'è strada` per girare dalla parte giusta.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: Nel primo ciclo, per disegnare il mezzo esagono, l'artista
           percorre tratti di **30 pixel** e gira a destra di **60 gradi**.
@@ -456,9 +460,10 @@ it:
           di **mezzo esagono** con **due terzi di un triangolo**. '
         Course_4_Artist_12_b: 'Ogni singola figura è quasi uguale a quella dell''ultimo
           esercizio, tranne per il fatto che il mezzo esagono è un po'' più grande. '
-        Course_4_Artist_12_c: "Le prime tre linee sono lunghe 60 pixel e devi ruotare
-          di 60 gradi.<br>\n<br>\nLe ultime due linee sono lunghe 80 pixel e devi
-          ruotare di 120 gradi. "
+        Course_4_Artist_12_c: |-
+          Le prime tre linee sono lunghe 60 pixel e devi ruotare di 60 gradi.
+
+          Le ultime due linee sono lunghe 80 pixel e devi ruotare di 120 gradi.
         Course_4_Artist_12_d: |-
           **Soluzione:**
 
@@ -5456,14 +5461,14 @@ it:
 
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops3_authored_hint:
-        courseA_collector_loops3_a: "Prova ad utilizzare un ciclo \n\n<xml><block
-          type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        courseA_collector_loops3_a: "Prova ad usare un ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         courseA_collector_loops3_b: 'Ricorda: puoi mettere più di un blocco dentro
           un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="3-10">???</title></block></xml>'
       courseA_collector_loops3_2018_authored_hint:
-        courseA_collector_loops3_a: "Prova ad utilizzare un ciclo \n\n<xml><block
-          type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        courseA_collector_loops3_a: "Prova ad usare un ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         courseA_collector_loops3_b: 'Ricorda: puoi mettere più di un blocco dentro
           un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="3-10">???</title></block></xml>'
@@ -5702,10 +5707,12 @@ it:
           Quando vai avanti verso le pannocchie, usa questo blocco per raccoglierle!
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: "Il tuo codice avrà **quattro**  blocchi vai avanti
-          verso ovest\n<xml><block type=\"maze_moveWest\"/></xml> e **quattro** blocchi
-          \nper raccogliere le pannocchie  <xml> <block type=\"harvester_corn\"/>
-          </xml> "
+        courseA_harvester_loops2_a: |-
+          Il tuo codice avrà **quattro** blocchi vai avanti verso ovest <xml><block type="maze_moveWest"/></xml>
+
+          e **quattro** blocchi per raccogliere le pannocchie <xml> <block type="harvester_corn"/> </xml>
+        courseA_harvester_loops2_b: 'Se hai ancora difficoltà, prova a pronunciare
+          le istruzioni a voce alta. '
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: "Il tuo codice avrà **quattro**  blocchi vai avanti
           verso ovest\n<xml><block type=\"maze_moveWest\"/></xml> e **quattro** blocchi
@@ -5947,6 +5954,12 @@ it:
           parte prima della curva e l'altra dopo la curva.
         courseA_harvester_seq7_b: Sei in difficoltà? È questo il percorso che la contadina
           dovrebbe seguire.
+      courseA_harvester_seq8_authored_hint:
+        courseA_harvester_seq8_a: Il tuo programma dovrebbe avere **4** blocchi di
+          movimento e **2** blocchi `prendi pannocchia`.
+      courseA_harvester_seq8_2019_authored_hint:
+        courseA_harvester_seq8_a: Il tuo programma dovrebbe avere **4** blocchi di
+          movimento e **2** blocchi `prendi pannocchia`.
       courseA_harvester_seq9_authored_hint:
         courseA_harvester_seq9_a: Esegui il programma un paio di volte per vedere
           cosa succede. Dove si blocca la contadina?
@@ -6194,17 +6207,15 @@ it:
           per tracciare il tuo percorso dall'uccellino fino al maialino.
         courseA_maze_seq13_b: Non aver paura di commettere errori! Prova ad aggiungere
           blocchi e fai eseguire il programma per vedere cosa succede.
-        courseA_maze_seq13_c: "Questi blocchi <xml><block type=\"maze_moveNorth\"/></xml>
-          \n\n<xml><block type=\"maze_moveEast\"/></xml> ti aiuteranno ad avvicinarti
-          al maialino."
+        courseA_maze_seq13_c: Questi blocchi <xml><block type="maze_moveNorth"/></xml><xml><block
+          type="maze_moveEast"/></xml> ti aiuteranno ad avvicinarti al maialino.
       courseA_maze_seq13_2018_authored_hint:
         courseA_maze_seq13_a: Se non ti è chiaro quale percorso seguire, usa il dito
           per tracciare il tuo percorso dall'uccellino fino al maialino.
         courseA_maze_seq13_b: Non aver paura di commettere errori! Prova ad aggiungere
           blocchi e fai eseguire il programma per vedere cosa succede.
-        courseA_maze_seq13_c: "Questi blocchi <xml><block type=\"maze_moveNorth\"/></xml>
-          \n\n<xml><block type=\"maze_moveEast\"/></xml> ti aiuteranno ad avvicinarti
-          al maialino."
+        courseA_maze_seq13_c: Questi blocchi <xml><block type="maze_moveNorth"/></xml><xml><block
+          type="maze_moveEast"/></xml> ti aiuteranno ad avvicinarti al maialino.
       courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_a: Se non ti è chiaro quale percorso seguire, usa il dito
           per tracciare il tuo percorso dall'uccellino fino al maialino.
@@ -7617,9 +7628,14 @@ it:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
-        courseB_iceage_loops3_b: Per ripetere una sequenza di istruzioni, trascina
-          nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno
-          i blocchi che vuoi ripetere.
+        courseB_iceage_loops3_b: |-
+          Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `ripeti ... volte`
+
+          <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml>
+
+          e inserisci al suo interno i blocchi che vuoi ripetere.
       courseB_iceage_loops3_2019_authored_hint:
         courseB_iceage_loops3_a: |-
           Prova ad usare un ciclo!
@@ -8699,10 +8715,6 @@ it:
       courseC19_playLab_EOC4_authored_hint:
         courseE_playLab_scaffold4_a: Per modificare il punteggio, usa i blocchi `aggiungi
           un punto` e `togli un punto`.
-      courseC19_playLab_EOC5_authored_hint:
-        courseE_playLab_scaffold5_a: 'Per completare l''esercizio, è necessario vincere
-          o perdere: imposta adeguatamente i blocchi `fine del gioco con una vittoria`
-          e `fine del gioco con una sconfitta`.'
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Collega questo blocco al blocco `quando si clicca su "Esegui"`:

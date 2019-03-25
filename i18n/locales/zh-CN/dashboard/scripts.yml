@@ -8362,6 +8362,8 @@ zh-CN:
               name: Hannah的测试阶段
             Hannah Test Stage:
               name: Hannah 测试阶段
+            Unit 4 Assessment:
+              name: 第4单元评估
           title: 计算机科学原理游戏板
         dance-extras:
           stages:
@@ -8849,6 +8851,12 @@ zh-CN:
               name: 艺术家里的循环
             Learn to Drag and Drop:
               name: 学习拖放
+            Loops in Ice Age:
+              name: 冰河时代里的循环
+            Programming with Rey and BB-8:
+              name: 与雷伊，BB-8一起编程
+            Sequencing with Scrat:
+              name: 斯奎特和序列
         courseb-2019:
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 为学前学生准备的计算机科学介绍。类似于课程A，但是增加了概念的深度。
@@ -8880,6 +8888,10 @@ zh-CN:
               name: 游戏实验室中的事件
             'Loops: Getting Loopy':
               name: '循环: 变得糊涂'
+            Loops in Harvester:
+              name: 收割者中的循环
+            Programming in Maze:
+              name: 迷宫编程
         pre-express-2019:
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: '学龄前读者的计算机科学介绍：结合了我们最好的幼儿园和一年级的课程。'

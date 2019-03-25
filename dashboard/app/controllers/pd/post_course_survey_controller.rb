@@ -28,6 +28,16 @@ module Pd
       @form_params = key_params.merge(
         submitRedirect: url_for(action: 'submit', params: {key: key_params})
       )
+
+      if CDO.newrelic_logging
+        NewRelic::Agent.record_custom_event(
+          "RenderJotFormView",
+          {
+            route: "GET /pd/post_course_survey/#{params[:course_initials]}",
+            form_id: @form_id
+          }
+        )
+      end
     end
 
     # POST /pd/post_course_survey/submit

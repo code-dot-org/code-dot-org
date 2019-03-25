@@ -1638,6 +1638,8 @@ el:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             Going Places Safely:
               name: Πηγαίνοντας σε Μέρη με Ασφάλεια
+            Loops in Ice Age:
+              name: Βρόχοι στην Εποχή των Παγετώνων
         courseb-2019:
           stages:
             Move It, Move It:

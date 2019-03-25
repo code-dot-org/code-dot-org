@@ -7757,6 +7757,8 @@ fil:
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
             Learn to Drag and Drop:
               name: Matutong Mag-Drag at Mag-Drop
+            Programming with Rey and BB-8:
+              name: Pag-Program kasama sina Rey at BB-8
         courseb-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_audience: 'Mga Edad: 5-8'
@@ -7773,6 +7775,10 @@ fil:
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             'Loops: Getting Loopy':
               name: 'Mga Loops: Pagiging Loopy'
+            Loops in Harvester:
+              name: Mga Loops sa Harvester
+            Programming in Maze:
+              name: Pag-Program sa Maze
         pre-express-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'

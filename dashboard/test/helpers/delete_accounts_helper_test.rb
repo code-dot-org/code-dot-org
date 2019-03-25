@@ -1448,6 +1448,19 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty PEGASUS_DB[:contacts].where(id: contact_ids)
   end
 
+  test "removes contacts rows for email if purging by email" do
+    email = 'test@example.com'
+    Poste2.create_recipient(email, name: 'Fake name', ip_address: '127.0.0.1')
+
+    refute_empty PEGASUS_DB[:contacts].where(email: email)
+    contact_ids = PEGASUS_DB[:contacts].where(email: email).map {|s| s[:id]}
+
+    purge_all_accounts_with_email email
+
+    assert_empty PEGASUS_DB[:contacts].where(email: email)
+    assert_empty PEGASUS_DB[:contacts].where(id: contact_ids)
+  end
+
   test "removes poste_deliveries for user" do
     user = create :teacher
     email = user.email
@@ -1457,6 +1470,18 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
 
     purge_user user
+
+    assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+  end
+
+  test "removes poste_deliveries for email if purging by email" do
+    email = 'test@example.com'
+    recipient = Poste2.create_recipient(email, name: 'Fake name', ip_address: '127.0.0.1')
+    Poste2.send_message('dashboard', recipient)
+
+    refute_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+
+    purge_all_accounts_with_email email
 
     assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
   end
@@ -1472,6 +1497,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert DB[:poste_opens].where(delivery_id: id).any?
 
     purge_user user
+
+    assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+    assert_empty DB[:poste_opens].where(delivery_id: id)
+  end
+
+  test "removes poste_opens for email if purging by email" do
+    email = 'test@example.com'
+    recipient = Poste2.create_recipient(email, name: 'Fake name', ip_address: '127.0.0.1')
+    id = Poste2.send_message('dashboard', recipient)
+    refute_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+    pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
+    pegasus.get "/o/#{Poste.encrypt(id)}"
+    assert DB[:poste_opens].where(delivery_id: id).any?
+
+    purge_all_accounts_with_email email
 
     assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
     assert_empty DB[:poste_opens].where(delivery_id: id)

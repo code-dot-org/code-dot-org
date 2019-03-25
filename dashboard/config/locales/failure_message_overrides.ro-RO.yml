@@ -1,1 +1,46 @@
---- {}
+---
+ro:
+  data:
+    failure_message_overrides:
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: Frumoasă încercare!
+        Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: Frumoasă încercare!
+        Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: Frumoasă încercare!
+        Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: Frumoasă
+        încercare! Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: Frumoasă
+        încercare! Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: Frumoasă
+        încercare! Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: Frumoasă
+        încercare! Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: Frumoasă încercare!
+        Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: Frumoasă încercare!
+        Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: Frumoasă încercare!
+        Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: Frumoasă încercare!
+        Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: Frumoasă încercare!
+        Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: Frumoasă încercare!
+        Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: Frumoasă încercare!
+        Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: Frumoasă încercare!
+        Încearcă din nou pentru a-l face corect.
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: Frumoasă
+        încercare! Încearcă din nou pentru a-l face corect.
+      Course 4 Artist Vars 10_failure_message_override: Fi sigur că utilizezi variabilele
+        laturi!
+      Course 4 Playlab For Loops 4b_failure_message_override: Amintește-ți, ambele
+        personaje trebuie să ajungă la propriul steag în același număr de mișcări!
+      Course 4 Playlab For Loops 5b_failure_message_override: Amintește-ți, ambele
+        personaje trebuie să se oprească în același loc.
+      Eval Strings Images .2_failure_message_override: Asigură-te că adaugi la sfârșit
+        șirul de caractere ”Universe” pentru a face codul să creeze "Hello, Universe"
+      Kiki_StarWars_Test_5_failure_message_override: Jocul s-a terminat!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Jocul s-a terminat!

@@ -1,13 +1,14 @@
 {
-  "danceFeedbackNeedNewDancer": "Este necesar să creați un dansator.",
-  "danceFeedbackNoDancers": "Nu aveți nici un dansator.",
-  "danceFeedbackNoBackground": "Este necesar să adăugați un efect de fundal.",
-  "danceFeedbackTooManyDancers": "Atenție! Dacă puneți un bloc ' crează unul nou' în interiorul 'la fiecare 2 măsuri', veți crea o mulţime de dansatori.",
-  "danceFeedbackUseSetSize": "Folosiţi blocul \"setare dimensiune dansator_de rezervă2\" pentru a face respectivul dansator mai mic.",
-  "danceFeedbackUseSetTint": "Utilizaţi blocul 'setare nuanță' pentru a schimba nuanța unui dansator.",
-  "danceFeedbackUseStartMapping": "Încercați să adăugați blocul <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">unicorn_la dreapta</title><title name=\"PROPERTY\">''scară''</title><title name=\"RANGE\">''bas''</title></block></xml> la programul dumneavoastră.",
-  "danceFeedbackStartNewMove": "Dansatorul dumneavoastră nu realiza o mișcare nouă după a patra măsură de timp muzical.",
-  "danceFeedbackNeedDifferentDance": "Trebuie să utilizați un dans diferit.",
-  "danceFeedbackNeedEveryTwoMeasures": "Asiguraţi-vă că utilizaţi blocul 'la fiecare 2 măsuri'",
-  "danceFeedbackNeedMakeANewDancer": "Folosiţi blocul 'crează unul nou' pentru a crea un al doilea dansator."
+  "danceFeedbackNeedNewDancer": "Trebuie să creezi un dansator.",
+  "danceFeedbackNoDancers": "Nu ai nici un dansator.",
+  "danceFeedbackNoBackground": "Trebuie să adaugi un efect la fundal.",
+  "danceFeedbackTooManyDancers": "Fi atent! Dacă pui blocul `crează un nou` în interiorul blocului `la fiecare 2 măsuri`, vei creea o mulţime de dansatori.",
+  "danceFeedbackUseSetSize": "Utilizează blocul \"setare dimensiune dansator_rezervă2\" pentru a face dansatorul mai mic.",
+  "danceFeedbackUseSetTint": "Utilizează `setare nuanță` pentru a schimba nuanța unui dansator.",
+  "danceFeedbackUseStartMapping": "Încercă să adaugi blocul <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">unicorn_în_dreapta</title><title name=\"PROPERTY\">''gamă''</title><title name=\"RANGE\">''sunet jos''</title></block></xml> la programul tău.",
+  "danceFeedbackStartNewMove": "Dansatorul tău nu realizează o mișcare nouă după a patra măsură a melodiei.",
+  "danceFeedbackNeedDifferentDance": "Trebuie să utilizezi un dans diferit.",
+  "danceFeedbackNeedEveryTwoMeasures": "Asigură-te că utilizezi blocul `la fiecare 2 măsuri`",
+  "danceFeedbackNeedMakeANewDancer": "Foloseşte blocul `crează un nou` pentru a crea un al doilea dansator.",
+  "measure": "Măsură:"
 }

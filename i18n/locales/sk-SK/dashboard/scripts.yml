@@ -3550,6 +3550,8 @@ sk:
               name: Vnorené cykly v bludisku
             Loops with the Artist:
               name: Cykly s umelcom
+            End of Course Project:
+              name: Záverečný projekt
             Copyright and Creativity:
               name: Autorské práva a Kreativita
             Internet:
@@ -3690,6 +3692,8 @@ sk:
               name: Vnorené cykly s Umelcom
             Nested Loops in Frozen:
               name: Vnorené cykly vo Frozen
+            End of Course Project:
+              name: Záverečný projekt
             Digital Sharing:
               name: Digitálne zdieľanie
         express-2019:
@@ -3849,7 +3853,7 @@ sk:
             Create a Design with Loops:
               name: Vytvor si vlastné obrázky s cyklami
             'End of Course Project: Create a Play Lab Game':
-              name: 'Záverečný projekt: vytvor si hru v Play Labe'
+              name: 'Záverečný projekt: Vytvor si hru v Play Labe'
             'Programming: My Robotic Friends':
               name: 'Programovanie: Moji robotickí kamaráti'
             'Loops: My Loopy Robotic Friends':
@@ -3899,6 +3903,14 @@ sk:
               description_teacher: V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!
             Ocean Scene with Loops:
               name: Na mori s cyklami
+            Loops in Ice Age:
+              name: Cykly v Dobe ľadovej
+            Programming in Ice Age:
+              name: Programovanie v Dobe ľadovej
+            Programming with Rey and BB-8:
+              name: Programovanie s Rey a BB-8
+            Sequencing with Scrat:
+              name: Postupnosť krokov so Scratom
         courseb-2019:
           title: Kurz B (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
@@ -3929,6 +3941,10 @@ sk:
               name: 'Cykly sa zacykľujú'
             The Right App:
               name: Správna aplikácia
+            Loops in Harvester:
+              name: Cykly s Pestovateľkou
+            Programming in Maze:
+              name: Programovanie v bludisku
         pre-express-2019:
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
           description_audience: 'Vek: 4-8'

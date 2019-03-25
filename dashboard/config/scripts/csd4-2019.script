@@ -2,7 +2,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-18/unit4/"], ["teacherForum", "https://forum.code.org/c/csd4"], ["vocabulary", "https://curriculum.code.org/csd-18/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-18/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-18/unit4/code/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit4/"], ["teacherForum", "https://forum.code.org/c/csd4"], ["vocabulary", "https://curriculum.code.org/csd-19/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-19/unit4/code/"]]
 has_verified_resources true
 has_lesson_plan true
 family_name 'csd4'

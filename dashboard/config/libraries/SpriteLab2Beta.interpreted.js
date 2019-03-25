@@ -548,6 +548,61 @@ function makeNewGroup() {
   group.setScale = group.setScaleEach;
   group.setVisible = group.setVisibleEach;
 
+  group.setSpeed = function (speed) {
+    group.forEach(function (sprite) {
+    	sprite.speed = speed;
+    });
+  };
+  group.moveUp = function () {
+    group.forEach(function (sprite) {
+    	sprite.y = sprite.y - sprite.speed;
+    });
+  };
+  group.moveDown = function () {
+    group.forEach(function (sprite) {
+    	sprite.y = sprite.y + sprite.speed;
+    });
+  };
+  group.moveLeft = function () {
+    group.forEach(function (sprite) {
+    	sprite.x = sprite.x - sprite.speed;
+    });
+  };
+  group.moveRight = function () {
+    group.forEach(function (sprite) {
+    	sprite.x = sprite.x + sprite.speed;
+    });
+  };
+  group.jump = function () {
+    group.forEach(function (sprite) {
+    	sprite.velocityY = -7;
+    });
+  };
+  group.setPosition = function (position) {
+    group.forEach(function (sprite) {
+      if (position === "random") {
+        sprite.x = randomNumber(50, 350);
+        sprite.y = randomNumber(50, 350);
+      } else {
+        sprite.x = position.x;
+        sprite.y = position.y;
+      }
+    });
+  };
+  group.removeTint = function () {
+    group.forEach(function (sprite) {
+    	sprite.tint = null;
+    });
+  };
+  group.getScale = function () {
+    if (group.length > 0) {
+      var sprite = group[group.length - 1]; 
+      return sprite.scale / sprite.baseScale;
+    } else {
+      return;
+    }
+  };
+
   group.say = function (text) {
     console_queue.push({sprite: group.get(0), txt: text, time: millis() + 2000});
   };
