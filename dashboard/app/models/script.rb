@@ -70,7 +70,7 @@ class Script < ActiveRecord::Base
   before_validation :hide_pilot_scripts
 
   def hide_pilot_scripts
-    self.hidden = true if pilot_experiment
+    self.hidden = true unless pilot_experiment.blank?
   end
 
   # As we read and write to files with the script name, to prevent directory
@@ -1203,7 +1203,7 @@ class Script < ActiveRecord::Base
     nil
   end
 
-  def summarize(include_stages = true, user = nil)
+  def summarize(include_stages = true, user = nil, include_bonus_levels = false)
     if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
@@ -1264,8 +1264,7 @@ class Script < ActiveRecord::Base
       pilot_experiment: pilot_experiment,
     }
 
-    summary[:stages] = stages.map(&:summarize) if include_stages
-
+    summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 

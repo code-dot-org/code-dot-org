@@ -143,7 +143,7 @@ module RegistrationsControllerTests
       # so it's possible to add a recovery option to their account.  Once they are
       # on multi-auth they can just add an email or another SSO, so this is no
       # longer needed.
-      student = create :student, :unmigrated_clever_sso
+      student = create :student, :clever_sso_provider
       assert_nil student.parent_email
       assert_nil student.encrypted_password
 
@@ -217,22 +217,6 @@ module RegistrationsControllerTests
         }
       }
       assert_response :unprocessable_entity
-
-      student.reload
-      assert_nil student.parent_email
-    end
-
-    test "single-auth student can update with a blank parent email without password" do
-      student = create :student, :unmigrated_clever_sso
-      assert_nil student.hashed_email
-      assert_nil student.parent_email
-
-      sign_in student
-      put '/users', params: {
-        format: 'json',
-        user: {parent_email: '', age: '9'}
-      }
-      assert_response :no_content
 
       student.reload
       assert_nil student.parent_email

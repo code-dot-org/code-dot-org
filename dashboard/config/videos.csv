@@ -7,7 +7,7 @@ loop_until,Repeat until block,loop_until,G2hdlhDYICw,http://videos.code.org/new/
 if,If block,if,m2Ux2PnJe6E,http://videos.code.org/new/2d-HoC-Bill+Gates-IF-STATEMENTS.mp4,en-US
 if_else,If/else block,if_else,JtL7w6ja5iI,http://videos.code.org/new/2e-HoC-saloni-ifelse.mp4,en-US
 if_else_scrat,If/else block,if_else_scrat,QM8fAy47kHc,http://videos.code.org/new/saloni-ifelse-scrat.mp4,en-US
-function,Functions,function,Esp1kkKFpg0,http://videos.code.org/new/8-functions-activity.mp4,en-US
+function,Functions,function,Esp1kkKFpg0,https://videos.code.org/levelbuilder/stage_13-farmer2-functions-mp4.mp4,en-US
 loop_while,While block,loop_while,F8H-41bpJ6E,http://videos.code.org/new/13_farmer2-while-block.mp4,en-US
 loop_for,Counter block,loop_for,gxc9RCMvky0,http://videos.code.org/new/11-artist3-counter-loops.mp4,en-US
 parameters,Functions with parameters,parameters,w6T7nynqRpw,http://videos.code.org/new/15-artist4-function-w-parameters.mp4,en-US
@@ -131,22 +131,22 @@ csd_concept_search,,,LVV_93mBfSU,https://videos.code.org/cs-discoveries/concept/
 csd_external_amazon_data,,,S4RL6prqtGQ,https://videos.code.org/cs-discoveries/concept/amazon_data.mp4,en-US
 csd_external_netflix_data,,,hqFHAnkSP2U,https://videos.code.org/cs-discoveries/concept/netflix_data.mp4,en-US
 csd_external_waze_data,,,Uu-uTo_ma9c,https://videos.code.org/cs-discoveries/concept/waze_data.mp4,en-US
-csd_gamelab_animation_tab,,,DQPruYTJ0Fk,https://videos.code.org/cs-discoveries/gamelab/gamelab_animation_tab.mp4,en-US
+csd_gamelab_animation_tab,,,DQPruYTJ0Fk,https://videos.code.org/levelbuilder/gamelab_theanimationtab-mp4.mp4,en-US
 csd_gamelab_conditionals_1,,,D5fSbCKobko,https://videos.code.org/cs-discoveries/gamelab/gamelab_conditionals_1.mp4,en-US
 csd_gamelab_conditionals_2,,,V_0ru3RBq08,https://videos.code.org/cs-discoveries/gamelab/gamelab_conditionals_2.mp4,en-US
-csd_gamelab_draw_1,,,PXn9gKiKKFo,https://videos.code.org/cs-discoveries/gamelab/gamelab_drawing_1.mp4,en-US
-csd_gamelab_draw_2,,,QLabeWhw_O0,https://videos.code.org/cs-discoveries/gamelab/gamelab_drawing_2.mp4,en-US
-csd_gamelab_drawloop,,,G6QJeuHhqCM,https://videos.code.org/cs-discoveries/gamelab/gamelab_drawloop.mp4,en-US
-csd_gamelab_sprites_1,,,aUHzpGt9nso,https://videos.code.org/cs-discoveries/gamelab/gamelab_sprites.mp4,en-US
-csd_gamelab_sprites_2,,,G666sFzAg5g,https://videos.code.org/cs-discoveries/gamelab/gamelab_animating_sprites.mp4,en-US
+csd_gamelab_draw_1,,,PXn9gKiKKFo,https://videos.code.org/levelbuilder/gamelab_introtodrawing-mp4.mp4,en-US
+csd_gamelab_draw_2,,,QLabeWhw_O0,https://videos.code.org/levelbuilder/gamelab_addingcolors-mp4.mp4,en-US
+csd_gamelab_drawloop,,,G6QJeuHhqCM,https://videos.code.org/levelbuilder/gamelab_draw-loop-mp4.mp4,en-US
+csd_gamelab_sprites_1,,,aUHzpGt9nso,https://videos.code.org/levelbuilder/gamelab_sprites-mp4.mp4,en-US
+csd_gamelab_sprites_2,,,G666sFzAg5g,https://videos.code.org/levelbuilder/gamelab_animatingwithsprites-mp4.mp4,en-US
 csd_gamelab_variables_1,,,UG7Q1Sr0_F0,https://videos.code.org/cs-discoveries/gamelab/gamelab_variables_1.mp4,en-US
 csd_gamelab_variables_2,,,luR8Al5CjEw,https://videos.code.org/cs-discoveries/gamelab/gamelab_variables_2.mp4,en-US
-csd_gamelab_velocity,,,zcP94yMYqrI,https://videos.code.org/cs-discoveries/gamelab/gamelab_velocity.mp4,en-US
-csd_weblab_intro_1,,,itx0RYOnoBs,https://videos.code.org/cs-discoveries/weblab/weblab_intro_1.mp4,en-US
-csd_weblab_intro_2,,,Hjl6gbg9kmk,https://videos.code.org/cs-discoveries/weblab/weblab_intro_2.mp4,en-US
-csd_weblab_intro_3,,,2qcIlRtdpgE,https://videos.code.org/cs-discoveries/weblab/weblab_intro_3.mp4,en-US
-csd_weblab_css_1,,,EP9QMdoXvXE,https://videos.code.org/cs-discoveries/weblab/weblab_css_1.mp4,en-US
-csd_weblab_css_2,,,VgBVKlpLqsE,https://videos.code.org/cs-discoveries/weblab/weblab_css_2.mp4,en-US
+csd_gamelab_velocity,,,zcP94yMYqrI,https://videos.code.org/levelbuilder/gamelab_velocity-mp4.mp4,en-US
+csd_weblab_intro_1,,,itx0RYOnoBs,https://videos.code.org/levelbuilder/weblab_introtoweblab-mp4.mp4,en-US
+csd_weblab_intro_2,,,Hjl6gbg9kmk,https://videos.code.org/levelbuilder/weblab_introtohtml-mp4.mp4,en-US
+csd_weblab_intro_3,,,2qcIlRtdpgE,https://videos.code.org/levelbuilder/weblab_publishingyourwebsite-mp4.mp4,en-US
+csd_weblab_css_1,,,EP9QMdoXvXE,https://videos.code.org/levelbuilder/weblab_introtocss-mp4.mp4,en-US
+csd_weblab_css_2,,,VgBVKlpLqsE,https://videos.code.org/levelbuilder/weblab_usingastylesheet-mp4.mp4,en-US
 csp_applab_objects,,,ZunUF_WGMb4,https://videos.code.org/2015/csp/applab/intro-to-objects.mp4,en-US
 csp_applab_databases_1,,,d8ByCh-BouQ,https://videos.code.org/2015/csp/applab/databases_intro_1_create.mp4,en-US
 csp_applab_databases_2,,,RZlHfbtO2C4,https://videos.code.org/2015/csp/applab/databases_intro_2_dataviewer.mp4,en-US
@@ -304,3 +304,15 @@ songwriting_with_functions,,,QuIMLel1mmw,https://videos.code.org/levelbuilder/un
 what_is_an_event,,,HcljJx_0Elw,https://videos.code.org/levelbuilder/disneyinfinityplay-lab-events-mp4.mp4,en-US
 teaching_cs_pair_programming,,,sxToW3ixrwo,https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4,en-US
 teaching_problem_solving,,,XN0G6bSbQ2M,https://videos.code.org/levelbuilder/05teachingproblemsolving_small-mp4.mp4,en-US
+CSF_unspotted_bugs,,,s-9_9Eqx_L4,https://videos.code.org/levelbuilder/leccion-1-unspotted-bugs_es-mp4.mp4,es-MX
+CSF_stevie_big_project,,,IZlfO25nMyE,https://videos.code.org/levelbuilder/leccion-2stevie_es-mp4.mp4,es-MX
+C1_maze_debugging,,,qtEiwvphOMU,https://videos.code.org/levelbuilder/curos-b-leccion-7-maze-debugging_es-mp4.mp4,es-MX
+CSF_my_robotic_friends,,,YSzTR8NB02Y,https://videos.code.org/levelbuilder/curso-b-leccion-6my-robotic-friends-activity_es-mp4.mp4,es-MX
+C1_building_foundation,,,WPsywWCtl1w,https://videos.code.org/levelbuilder/curso-c-leccion-1-building-foundation_es-mp4.mp4,es-MX
+C2_graph_paper,,,GjeZdcYBpeE,https://videos.code.org/levelbuilder/curso-d-leccion-1-graph-paper_es-mp4.mp4,es-MX
+C1_planting_seed,,,vXP1LyM3R8M,https://videos.code.org/levelbuilder/leccion-3-c1-planting-seed_es-mp4.mp4,es-MX
+C1_happy_maps_unplugged,,,3pJTQ97vOrM,https://videos.code.org/levelbuilder/leccion-5-happy-maps-unplugged_es-mp4.mp4,es-MX
+C2_paper_airplanes,,,5oZcZIWbHdM,https://videos.code.org/levelbuilder/curso-c-leccion-4-paper-airplanes_es-mp4.mp4,es-MX
+C2_artist_intro,,,2xIF_pyLPFo,https://videos.code.org/levelbuilder/curso-c-leccion-6-artist-intro_es-mp4.mp4,es-MX
+CSF_artist_angles,,,80C7pm5BBwo,https://videos.code.org/levelbuilder/curso-d-leccion-2_es-angulos-mp4.mp4,es-MX
+csd_applab_designmode,,,tAtvWkYBUoU,https://videos.code.org/levelbuilder/applab-01-design-mode-sm-mp4.mp4,en-US

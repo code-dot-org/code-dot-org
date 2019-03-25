@@ -23,6 +23,9 @@ import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
+import {actions} from './redux/applab';
+import {getStore} from '../redux';
+import $ from 'jquery';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
@@ -1578,16 +1581,39 @@ function filterUrl(urlToCheck) {
   })
     .success(data => {
       let approved = data['approved'];
-      console.log('Url determined safe to open: ' + approved);
+      getStore().dispatch(actions.addRedirectNotice(approved, urlToCheck));
     })
     .fail((jqXhr, status) => {
-      console.log('Error. Please re-run program');
+      // When this query fails, default to the dialog that allows the user to choose
+      getStore().dispatch(actions.addRedirectNotice(true, urlToCheck));
     });
 }
 
 applabCommands.openUrl = function(opts) {
-  apiValidateType(opts, 'openUrl', 'url', opts.url, 'string');
-  filterUrl(opts.url);
+  if (apiValidateType(opts, 'openUrl', 'url', opts.url, 'string')) {
+    // Studio and code.org links are immediately opened, other links are filtered
+    // Remove protocol from url string if present
+    let hostname = opts.url;
+    let protocols = ['https://', 'http://', 'www.'];
+    protocols.forEach(protocol => {
+      if (hostname.startsWith(protocol)) {
+        hostname = hostname.slice(protocol.length);
+      }
+    });
+    if (
+      hostname.startsWith('studio.code.org') ||
+      hostname.startsWith('code.org')
+    ) {
+      if (opts.url.startsWith('http')) {
+        window.open(opts.url);
+      } else {
+        // If url doesn't have a protocol, add one
+        window.open('https://' + opts.url);
+      }
+    } else {
+      filterUrl(opts.url);
+    }
+  }
 };
 
 applabCommands.onHttpRequestEvent = function(opts) {

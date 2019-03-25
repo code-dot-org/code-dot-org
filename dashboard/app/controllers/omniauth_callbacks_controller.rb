@@ -65,8 +65,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
 
     # Credential is already held by another user with activity
+    #   Or a student is trying to take over a teacher account
     # Display an error explaining that the credential is already in use.
-    if existing_credential_holder&.has_activity?
+    if existing_credential_holder&.has_activity? || (current_user.student? && existing_credential_holder&.teacher?)
       flash.alert = I18n.t('auth.already_in_use', provider: I18n.t("auth.#{provider}"))
       return redirect_to edit_user_registration_path
     end

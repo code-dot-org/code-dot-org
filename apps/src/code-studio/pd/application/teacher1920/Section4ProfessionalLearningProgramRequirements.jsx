@@ -14,6 +14,7 @@ import {
 } from './TeacherApplicationConstants';
 import Spinner from '../../components/spinner';
 import color from '@cdo/apps/util/color';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import _ from 'lodash';
 
 const styles = {
@@ -283,7 +284,9 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
                 cost of the program.{' '}
                 <a
                   href={
-                    'https://code.org/educate/professional-learning/program-information' +
+                    pegasus(
+                      '/educate/professional-learning/program-information'
+                    ) +
                     (!!this.props.data.schoolZipCode
                       ? '?zip=' + this.props.data.schoolZipCode
                       : '')

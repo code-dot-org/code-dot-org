@@ -75,10 +75,38 @@ class PeerReviewTest < ActiveSupport::TestCase
     # Assign one review
     PeerReview.last.update! reviewer: create(:user)
 
+    # Submit a new answer
     updated_level_source = create :level_source, data: 'UPDATED: My submitted answer'
 
+    # Two new reviews were created
     track_progress updated_level_source.id
     assert_equal 3, PeerReview.count - original_count
+  end
+
+  test 'resubmitting a previously-accepted submission should not create new PeerReview objects' do
+    # Original submission
+    track_progress @level_source.id, @user
+    assert_equal 2, PeerReview.where(submitter: @user).count
+
+    # Instructor accepts submission
+    PeerReview.find_by(submitter: @user, status: 'escalated').
+      update status: 'accepted', reviewer: @instructor, from_instructor: true
+    assert PeerReview.find_by(submitter: @user, reviewer: @instructor).accepted?
+
+    # Unsubmit the level
+    user_level = UserLevel.find_by(user: @user, level: @level, script: @script)
+    user_level.update(submitted: false)
+
+    # The unassigned review was destroyed on unsubmit
+    assert_equal 1, PeerReview.where(submitter: @user).count
+
+    # Submit a new answer
+    updated_level_source = create :level_source, data: 'UPDATED: My submitted answer'
+    track_progress updated_level_source.id, @user
+
+    # No new reviews were created
+    assert_equal 1, PeerReview.where(submitter: @user).count
+    assert PeerReview.find_by(submitter: @user, reviewer: @instructor).accepted?
   end
 
   test 'instructor review should mark as accepted' do
@@ -389,9 +417,11 @@ class PeerReviewTest < ActiveSupport::TestCase
       unit_name: @learning_module.name,
     }
 
+    level_1_pr_1 = PeerReview.find_by(level: level_1, status: nil)
+    level_1_pr_2 = PeerReview.find_by(level: level_1, status: 'escalated')
     expected_level_1_ids = [
-      [PeerReview.find_by(level: level_1, status: nil).id, nil],
-      [PeerReview.find_by(level: level_1, status: 'escalated').id, 'escalated']
+      [level_1_pr_1.id, nil, level_1_pr_1.updated_at],
+      [level_1_pr_2.id, 'escalated', level_1_pr_2.updated_at]
     ]
 
     assert_equal base_expected.merge(
@@ -403,9 +433,11 @@ class PeerReviewTest < ActiveSupport::TestCase
       }
     ), PeerReview.get_submission_summary_for_user_level(ul1, @script).except(:submission_date)
 
+    level_2_pr_1 = PeerReview.find_by(level: level_2, status: nil)
+    level_2_pr_2 = PeerReview.find_by(level: level_2, status: 'accepted')
     expected_level_2_ids = [
-      [PeerReview.find_by(level: level_2, status: nil).id, nil],
-      [PeerReview.find_by(level: level_2, status: 'accepted').id, 'accepted']
+      [level_2_pr_1.id, nil, level_2_pr_1.updated_at],
+      [level_2_pr_2.id, 'accepted', level_2_pr_2.updated_at]
     ]
     assert_equal base_expected.merge(
       {
@@ -416,9 +448,11 @@ class PeerReviewTest < ActiveSupport::TestCase
       }
     ), PeerReview.get_submission_summary_for_user_level(ul2, @script).except(:submission_date)
 
+    level_3_pr_1 = PeerReview.find_by(level: level_3, status: nil)
+    level_3_pr_2 = PeerReview.find_by(level: level_3, status: 'rejected')
     expected_level_3_ids = [
-      [PeerReview.find_by(level: level_3, status: nil).id, nil],
-      [PeerReview.find_by(level: level_3, status: 'rejected').id, 'rejected']
+      [level_3_pr_1.id, nil, level_3_pr_1.updated_at],
+      [level_3_pr_2.id, 'rejected', level_3_pr_2.updated_at]
     ]
     assert_equal base_expected.merge(
       {
@@ -472,14 +506,19 @@ class PeerReviewTest < ActiveSupport::TestCase
   test 'create_for_submission rolls back if there is an error' do
     track_progress @level_source.id
 
-    original_peer_reviews = PeerReview.where(level_source_id: @level_source.id)
+    original_peer_reviews = PeerReview.where(level_id: @level.id)
+    assert_equal 2, original_peer_reviews.count
     PeerReview.stubs(:create!).raises(Exception, "Some error")
 
+    # We don't try to create new peer reviews if nothing changed, so make a
+    # new level source to simulate a new submission.
+    new_level_source = create :level_source, level: @level
     assert_raises(Exception) do
-      track_progress @level_source.id
+      track_progress new_level_source.id
     end
 
-    assert original_peer_reviews == PeerReview.where(level_source_id: @level_source.id)
+    assert original_peer_reviews == PeerReview.where(level_id: @level.id)
+    refute PeerReview.where(level_source_id: new_level_source.id).exists?
   end
 
   private

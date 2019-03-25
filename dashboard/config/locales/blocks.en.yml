@@ -848,6 +848,19 @@ en:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: layout {COSTUME} as a {FORMAT}
+        options:
+          FORMAT:
+            '"border"': border
+            '"inner"': inside square
+            '"circle"': circle
+            '"grid"': grid
+            '"row"': row
+            '"column"': column
+            '"x"': criss-cross
+            '"plus"': plus
+            '"random"': random
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:

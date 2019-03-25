@@ -134,7 +134,7 @@ Selecting your language from this dropdown will update all the links on this pag
 
 <map name="image-map-2">
     <area target="_blank" alt="In partnership with" title="In partnership with" href="https://crowdin.com/translate/codeorg/56/enus-#330360" coords="176,7,343,35" shape="rect">
-    <area target="_blank" alt="We thank Microsoft for supporting our vision..." title="We thank Microsoft for supporting our vision..." href="" coords="138,54,561,94" shape="rect">
+    <area target="_blank" alt="We thank Microsoft for supporting our vision..." title="We thank Microsoft for supporting our vision..." href="https://crowdin.com/translate/hour-of-code/595/en-#328056" coords="138,54,561,94" shape="rect">
     <area target="_blank" alt="For Educators" title="For Educators" href="https://crowdin.com/translate/codeorg/56/enus-#304460" coords="332,160,502,191" shape="rect">
     <area target="_blank" alt="Code with Minecraft" title="Code with Minecraft" href="https://crowdin.com/translate/codeorg/56/enus-#304462" coords="344,205,432,251" shape="rect">
     <area target="_blank" alt="Minecraft: Education Edition provides..." title="Minecraft: Education Edition provides..." href="https://crowdin.com/translate/codeorg/56/enus-#304464" coords="341,254,483,320" shape="rect">
@@ -205,7 +205,7 @@ These are the same links found in the images above. They are included here in ca
 - Don't have Internet? (<a href="https://crowdin.com/translate/codeorg/56/enus-#57869" target="_blank">Crowdin Link</a>)
 - Download the offline version of Minecraft Adventurer. (<a href="https://crowdin.com/translate/codeorg/56/enus-#69181" target="_blank">Crowdin Link</a>)
 - In partnership with (<a href="https://crowdin.com/translate/codeorg/56/enus-#330360" target="_blank">Crowdin Link</a>)
-- We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century. (<a href="" target="_blank">Crowdin Link</a>)
+- We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century. (<a href="https://crowdin.com/translate/hour-of-code/595/en-#328056" target="_blank">Crowdin Link</a>)
 - For Educators (<a href="https://crowdin.com/translate/codeorg/56/enus-#304460" target="_blank">Crowdin Link</a>)
 - Code with Minecraft (<a href="https://crowdin.com/translate/codeorg/56/enus-#304462" target="_blank">Crowdin Link</a>)
 - Minecraft: Education Edition provides standards-aligned curriculum, training and coding in Minecraft. (<a href="https://crowdin.com/translate/codeorg/56/enus-#304464" target="_blank">Crowdin Link</a>)

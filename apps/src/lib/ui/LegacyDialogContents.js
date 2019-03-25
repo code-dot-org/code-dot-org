@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 export const SingleLevelGroupDialog = ({id, title, body}) => (
   <ProtectedStatefulDiv id={id}>
@@ -117,16 +118,14 @@ export const StartOverDialog = () => (
   </ProtectedStatefulDiv>
 );
 
-/* eslint-disable react/no-danger */
-export const InstructionsDialog = ({title, markdownContent}) => (
+export const InstructionsDialog = ({title, markdown}) => (
   <ProtectedStatefulDiv>
     <div className="modal-content no-modal-icon markdown-instructions-container">
       <p className="dialog-title">{title}</p>
       <p />
-      <div
-        className="instructions-markdown scrollable-element"
-        dangerouslySetInnerHTML={{__html: markdownContent}}
-      />
+      <div className="instructions-markdown scrollable-element">
+        <UnsafeRenderedMarkdown markdown={markdown} />
+      </div>
       <div id="buttons">
         <button id="ok-button" style={{float: 'right'}}>
           {i18n.ok()}
@@ -137,7 +136,7 @@ export const InstructionsDialog = ({title, markdownContent}) => (
 );
 InstructionsDialog.propTypes = {
   title: PropTypes.string.isRequired,
-  markdownContent: PropTypes.string.isRequired
+  markdown: PropTypes.string.isRequired
 };
 
 export const SuccessDialog = ({title, body}) => (

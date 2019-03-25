@@ -111,10 +111,27 @@
     "long_instructions": "# Board Input Events\r\n\r\nNow you can add the events which will take input from the board. Again, feel free to just use `console.log()` statements at this point to ensure that your events are working.",
     "parent_level_id": 12548,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/docs/concepts/maker-toolkit/physical-input/",
+      "/docs/concepts/maker-toolkit/board-events/",
+      "/docs/concepts/maker-toolkit/analog-sensors/",
+      "/docs/concepts/maker-toolkit/data-and-change-events/",
+      "/docs/concepts/maker-toolkit/changing-sensor-scale/",
+      "/docs/concepts/maker-toolkit/the-accelerometer/",
+      "/docs/concepts/maker-toolkit/accelerometer-events/",
+      "/docs/concepts/maker-toolkit/circuits-and-buttons/"
+    ],
+    "mini_rubric": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-11 08:41:19 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-11 08:45:06 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

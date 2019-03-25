@@ -60,7 +60,7 @@
     "start_blocks": "var age = promptNum(\"How many years old are you?\");\r\n\r\nconsole.log(\"You can see an R movie alone\");\r\nconsole.log(\"You can see a PG-13 movie alone\");\r\nconsole.log(\"You can see a PG movie alone\");\r\nconsole.log(\"Uh. You're too young for most things.\");\r\nconsole.log(\"Thanks for verifying!\");\r\n\r\n\r\n",
     "lock_zero_param_functions": "false",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "encrypted_examples": "RuCxAioErp45Q2JZmxlgAQT7u4hNkvWz1SjGr2MseWPBmgCj5WSFyo5gBGA1\nctKY\n",

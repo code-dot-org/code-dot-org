@@ -66,7 +66,7 @@
         "message": "The task asked you to add console.log statements to each event handler, and then click on at least 4 different locations to test it out.  We do not see enough messages in the debugger console for this to be true."
       }
     ],
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "parent_level_id": 13552,
     "name_suffix": "_2019",
     "hide_share_and_remix": "false",

@@ -55,7 +55,7 @@
     "makerlab_enabled": "false",
     "instructions_important": "false",
     "project_template_level_name": "CSPU5_twoButtonTurtleDriver_templateLevel_2019",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "parent_level_id": 13344,
     "name_suffix": "_2019",
     "preload_asset_list": null
