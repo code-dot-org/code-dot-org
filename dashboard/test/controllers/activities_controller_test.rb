@@ -119,9 +119,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     Gatekeeper.set('async_activity_writes', value: async_activity_writes)
 
-    # do all the logging
-    @controller.expects :log_milestone
-
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
@@ -210,7 +207,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "logged in milestone with existing userlevel with script" do
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     UserScript.create(user: @user, script: @script_level.script)
@@ -231,7 +227,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # the column that we store the program is 20000 bytes, don't crash if we fail to save because the field is too large
 
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     assert_creates(Activity, UserLevel, UserScript) do
@@ -260,7 +255,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "logged in milestone with panda does not crash" do
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     assert_creates(Activity, UserLevel, UserScript, LevelSource) do
@@ -358,7 +352,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     Gatekeeper.set('async_activity_writes', value: async_activity_writes)
 
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     expect_s3_upload
@@ -388,7 +381,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "logged in milestone should save to gallery when passing an impressive level with a jpg image" do
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     expect_s3_upload
@@ -418,7 +410,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # insurance for weird things that happen in javascript.
 
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     assert_creates(LevelSource, Activity, UserLevel) do
@@ -445,7 +436,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # insurance for weird things that happen in javascript.
 
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     assert_creates(LevelSource, Activity, UserLevel) do
@@ -469,8 +459,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone not passing" do
-    # do all the logging
-    @controller.expects :log_milestone
 
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
@@ -486,8 +474,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with image not passing" do
-    # do all the logging
-    @controller.expects :log_milestone
 
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
@@ -521,7 +507,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     Gatekeeper.set('async_activity_writes', value: async_activity_writes)
 
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     expect_s3_upload
@@ -574,7 +559,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "logged in milestone with existing level source and level source image" do
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     program = "<whatever>"
@@ -731,7 +715,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # will get the 'existing' object)
 
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     # some Mocha shenanigans to simulate throwing a duplicate entry
@@ -794,7 +777,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     sign_out @user
 
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     assert_creates(LevelSource) do
@@ -820,7 +802,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     client_state.add_lines(10)
 
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     assert_creates(LevelSource) do
@@ -842,9 +823,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     sign_out @user
 
     client_state.add_lines(10)
-
-    # do all the logging
-    @controller.expects :log_milestone
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
@@ -874,7 +852,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     client_state.add_lines(10)
 
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     expect_s3_upload
@@ -907,7 +884,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     client_state.add_lines(10)
 
     # do all the logging
-    @controller.expects :log_milestone
     @controller.expects :slog
 
     expect_s3_upload_failure
