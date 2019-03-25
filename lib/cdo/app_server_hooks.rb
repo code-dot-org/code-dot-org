@@ -35,7 +35,6 @@ module Cdo
           }
         ]
       )
-      ActiveRecord::Base.establish_connection
       require 'dynamic_config/gatekeeper'
       require 'dynamic_config/dcdo'
       Gatekeeper.after_fork
