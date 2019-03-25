@@ -10,8 +10,8 @@
 #
 # Indexes
 #
-#  index_ap_school_codes_on_school_code  (school_code) UNIQUE
-#  index_ap_school_codes_on_school_id    (school_id) UNIQUE
+#  fk_rails_08d2269647                                   (school_id)
+#  index_ap_school_codes_on_school_code_and_school_year  (school_code,school_year) UNIQUE
 #
 
 class Census::ApSchoolCode < ApplicationRecord
