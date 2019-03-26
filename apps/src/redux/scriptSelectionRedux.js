@@ -61,16 +61,8 @@ export const getSelectedScriptName = state => {
   }
 
   const scripts = state.scriptSelection.validScripts;
-  let scriptName = null;
-  for (let i = 0; i < scripts.length; i++) {
-    const script = scripts[i];
-    if (script.id === scriptId) {
-      scriptName = script.script_name;
-      break;
-    }
-  }
-
-  return scriptName;
+  const script = scripts.find(script => script.id === scriptId);
+  return script ? script.script_name : null;
 };
 
 /* Get the user friendly name of a script(the unit or course name) */
@@ -81,16 +73,8 @@ export const getSelectedScriptFriendlyName = state => {
   }
 
   const scripts = state.scriptSelection.validScripts;
-  let scriptName = null;
-  for (let i = 0; i < scripts.length; i++) {
-    const script = scripts[i];
-    if (script.id === scriptId) {
-      scriptName = script.name;
-      break;
-    }
-  }
-
-  return scriptName;
+  const script = scripts.find(script => script.id === scriptId);
+  return script ? script.name : null;
 };
 
 /**
