@@ -290,11 +290,31 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
       pilot_experiment: 'pilot-experiment',
-      hidden: false,
+      visible_to_teachers: true,
     }
     assert_equal 'pilot-experiment', Script.find_by_name(script.name).pilot_experiment
     # pilot scripts are always marked hidden
     assert Script.find_by_name(script.name).hidden
+  end
+
+  test 'does not hide script with blank pilot_experiment' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      pilot_experiment: '',
+      visible_to_teachers: true,
+    }
+
+    assert_nil Script.find_by_name(script.name).pilot_experiment
+    # blank pilot_experiment does not cause script to be hidden
+    refute Script.find_by_name(script.name).hidden
   end
 
   no_access_msg = "You don&#39;t have access to this unit."

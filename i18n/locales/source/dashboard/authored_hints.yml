@@ -4560,6 +4560,7 @@ en:
         aE7_b: You will need 4 segments to complete this puzzle.
       aE8_authored_hint:
         aE8_a: "To make a square from your line, you will need to: \n-  draw the line \n-  use the curvy corner\n\nRepeat these steps 4 times."
+      aalevelcopy_authored_hint: {}
       allHallows2017_authored_hint:
         allHallows2017_a: Careful!  GT might follow behind you on his bike and erase your line!
         allHallows2017_g: 'Sarah says: "Are you cold? Come sit in the corner... It''s 90 degrees!"'
@@ -6234,6 +6235,7 @@ en:
         courseA_harvester_loops2_b: 'If you''re still having trouble, try saying the steps out loud. '
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: "Your code will have **four** `move west`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nblocks and **four** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blocks. "
+        courseA_harvester_loops2_b: 'If you''re still having trouble, try saying the steps out loud. '
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Use a `repeat` block like this to help you!
@@ -9226,9 +9228,8 @@ en:
           This is the first block you will need:
 
           <xml>
-          <block type="jump_to_xy">
-              <title name="XPOS">200</title>
-              <title name="YPOS">200</title>
+            <block type="jump_to">
+              <title name="VALUE">13</title>
             </block>
           </xml>
         courseC_artist_loops1a_b: |-
@@ -9239,6 +9240,18 @@ en:
               <title name="VALUE">Bird</title>
             </block>
           </xml>
+      courseC_artist_loops1b_2019_authored_hint:
+        courseC_artist_loops1b_a: |-
+          This is the first block you will need:
+
+          <xml>
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">???</title>
+              <title name="VALUE" config="45,60,90,120,180">???</title>
+            </block>
+          </xml>
+
+          You can choose either left or right and any number of degrees.
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_a: Inside your loop, you will want to jump to 200 over 200 down, then draw the bird sticker, then turn 30 degrees.
         courseC_artist_loops2a_b: Click on the number at the top of the `repeat` loop to change how many times it repeats.
@@ -9246,7 +9259,7 @@ en:
         courseC_artist_loops2a_a: Inside your loop, you will want to jump to 200 over 200 down, then draw the bird sticker, then turn 30 degrees.
         courseC_artist_loops2a_b: Click on the number at the top of the `repeat` loop to change how many times it repeats.
       courseC_artist_loops2a_2019_authored_hint:
-        courseC_artist_loops2a_a: Inside your loop, you will want to jump to 200 over 200 down, then draw the bird sticker, then turn 30 degrees.
+        courseC_artist_loops2a_a: Inside your loop, you will want to jump to the middle, then turn, then draw a sticker.
         courseC_artist_loops2a_b: Click on the number at the top of the `repeat` loop to change how many times it repeats.
       courseC_artist_loops3a_authored_hint:
         courseC_artist_loops3a_a: You will want to add just one block inside of your loop, after the bird sticker.
@@ -9255,8 +9268,42 @@ en:
         courseC_artist_loops3a_a: You will want to add just one block inside of your loop, after the bird sticker.
         courseC_artist_loops3a_b: Use the drop down menu on the `draw sticker` block to find the bat sticker.
       courseC_artist_loops3a_2019_authored_hint:
-        courseC_artist_loops3a_a: You will want to add just one block inside of your loop, after the bird sticker.
-        courseC_artist_loops3a_b: Use the drop down menu on the `draw sticker` block to find the bat sticker.
+        courseC_artist_loops3a_a: You will want to add just one block inside of your loop, after the first sticker.
+        courseC_artist_loops3a_b: |-
+          Your program should look like this!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="sticker">
+                                  <title name="VALUE">Dog</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+
+          You can use any stickers you like!
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
           Use this block to jump forward:
@@ -9288,11 +9335,50 @@ en:
           <xml>
           <block type="jump_by_constant">
               <title name="DIR">jumpForward</title>
-              <title name="VALUE">100</title>
+              <title name="VALUE">???</title>
             </block>
           </xml>
 
           Don't forget to change how far!
+        courseC_artist_loops4a_b: |-
+          Your program should look like this!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="jump_by_constant">
+                                  <title name="DIR">jumpForward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="sticker">
+                                      <title name="VALUE">Dog</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseC_artist_loops5_authored_hint:
         courseC_artist_loops5_a: |-
           Try using the `jump to` block to get your artist back toward the center:
@@ -9339,6 +9425,62 @@ en:
             </block>
           </xml>
         courseC_artist_loops5b_b: To make a design like the one above, you will want to move backward the same amount that you move forward.
+        courseC_artist_loops5b_c: |-
+          Your program should look like this!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_line_style_pattern">
+                  <title name="VALUE">rainbowLine</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="jump_to">
+                          <title name="VALUE">13</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">???</title>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveBackward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant_dropdown">
+                                      <title name="DIR">???</title>
+                                      <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                                      <next>
+                                        <block type="sticker">
+                                          <title name="VALUE">Cat</title>
+                                          <next>
+                                            <block type="jump_by_constant">
+                                              <title name="DIR">jumpForward</title>
+                                              <title name="VALUE">???</title>
+                                              <next>
+                                                <block type="sticker">
+                                                  <title name="VALUE">Dog</title>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseC_artist_loops6_authored_hint:
         courseC_artist_loops6_a: |
           Try a triangle flower:
@@ -13053,6 +13195,7 @@ en:
         courseD_playLab_cond6_b: You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses.
       courseD_playLab_cond6_2019_authored_hint:
         courseD_playLab_cond6_a: Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.
+        courseD_playLab_cond6_c: The 'safe zone' is an area the ninja can't go into, making it safe for the pirate.
         courseD_playLab_cond6_b: You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses.
       courseD_playLab_cond6a_authored_hint:
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat forever` loop that checks the pirate position (but not inside the `if` statement) to keep points from being removed too quickly.
@@ -17936,10 +18079,51 @@ en:
       courseF_bee_variables_1_2019_authored_hint: {}
       courseF_bee_variables_2_2018_authored_hint: {}
       courseF_bee_variables_2_2019_authored_hint: {}
-      courseF_bee_variables_3_2018_authored_hint: {}
-      courseF_bee_variables_3_2019_authored_hint: {}
+      courseF_bee_variables_3_2018_authored_hint:
+        courseF_beevariables_3a: |-
+          To subtract one from the variable, you can use this code in your program:
+          <xml><block type="variables_set" inline="false">
+                              <title name="VAR">gather</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" inline="true">
+                                  <title name="OP">MINUS</title>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <title name="VAR">gather</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number">
+                                      <title name="NUM">1</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block></xml>
+      courseF_bee_variables_3_2019_authored_hint:
+        courseF_bee_variables_3_2019_1: |-
+          To subtract one from the variable, you can use this code in your program:
+          <xml><block type="variables_set" inline="false">
+                              <title name="VAR">gather</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" inline="true">
+                                  <title name="OP">MINUS</title>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <title name="VAR">gather</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number">
+                                      <title name="NUM">1</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block></xml>
       courseF_bee_variables_4_2018_authored_hint: {}
-      courseF_bee_variables_4_2019_authored_hint: {}
+      courseF_bee_variables_4_2019_authored_hint:
+        courseF_bee_variables_4_2019_1: Instead of subtracting 1 from `gather`, add 1 each time instead. What should value should the variable have at first?
       courseF_bee_variables_5_2018_authored_hint: {}
       courseF_bee_variables_5_2019_authored_hint: {}
       courseF_bee_variables_6_2018_authored_hint: {}
@@ -18416,6 +18600,7 @@ en:
         repeat_bottom_out: Use a `repeat 3 times` block!
       express_maze_debugging9_2019_authored_hint: {}
       farmer-test-lb_authored_hint:
+        farmer_test_lb_a: How might you get the bird to the pig?
         hint_2: Pointing 123
       grade1_adventurer_loops10_authored_hint:
         grade1_adventurer_loops10_a: You'll need three `repeat` loops to solve this puzzle.
