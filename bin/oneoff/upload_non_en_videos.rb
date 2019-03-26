@@ -16,10 +16,10 @@ require_relative '../../dashboard/config/environment'
 
 # The directory where the files are in. There can be multiple folders in this folder,
 # but those must be noted in the map file below
-VIDEO_FILE_DIRECTORY = ''
+VIDEO_FILE_DIRECTORY = '/path/to/VideoFolder'
 # CSV that maps video keys to their title and filename
 # Must have columns titled 'Folder', 'Partner filename', 'Key', and 'Video Title'
-MAP_FILE = 'test.csv'
+MAP_FILE = '/path/to/map.csv'
 # Switch this to false when ready to run
 DRY_RUN = true
 LOCALE = 'es-MX'
@@ -113,6 +113,7 @@ videos.each do |video|
     download_filename = upload_to_s3(File.open(video[:file_path]))
     download = "https://videos.code.org/#{download_filename}"
     youtube_code = upload_to_youtube(service, video[:file_path], video[:title])
+    puts video[:key] + " " + download + " " + youtube_code + " " + video[:file_path]
     Video.merge_and_write_attributes(video[:key], youtube_code, download, LOCALE, 'dashboard/config/videos.csv') unless DRY_RUN
   else
     puts "Failed to validate " + video[:key]
