@@ -1,6 +1,5 @@
 # Code.org
 
-[![Circle CI](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging.svg?style=svg)](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging)
 [![Coverage Status](https://codecov.io/gh/code-dot-org/code-dot-org/branch/staging/graph/badge.svg)](https://codecov.io/gh/code-dot-org/code-dot-org)
 
 Welcome! You've found the source code for [the Code.org website](https://code.org/) and [the Code Studio platform](https://studio.code.org/). Code.org is a non-profit dedicated to expanding access to computer science education. You can read more about our efforts at [code.org/about](https://code.org/about).

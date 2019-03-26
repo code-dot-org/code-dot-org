@@ -24,7 +24,8 @@ export default class PrincipalApproval1920Application extends FormController {
       hispanic_or_latino_percent: PropTypes.string,
       asian_percent: PropTypes.string,
       native_hawaiian_or_pacific_islander_percent: PropTypes.string,
-      american_indian_alaskan_native_percent: PropTypes.string
+      american_indian_alaskan_native_percent: PropTypes.string,
+      two_or_more_races_percent: PropTypes.string
     }).isRequired
   };
   /**
@@ -55,7 +56,8 @@ export default class PrincipalApproval1920Application extends FormController {
           .native_hawaiian_or_pacific_islander_percent,
       americanIndian:
         props.teacherApplicationSchoolStats
-          .american_indian_alaskan_native_percent
+          .american_indian_alaskan_native_percent,
+      other: props.teacherApplicationSchoolStats.two_or_more_races_percent
     });
   }
   /**
