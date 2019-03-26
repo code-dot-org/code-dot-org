@@ -2,7 +2,6 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
-var webpack = require('webpack');
 var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
@@ -10,6 +9,7 @@ var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
+var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
 module.exports = function(grunt) {
   // Decorate grunt to record and report build durations.
@@ -706,22 +706,59 @@ describe('entry tests', () => {
           qtip2: 'var $'
         }
       ],
+      mode: minify ? 'production' : 'development',
+      optimization: {
+        minimizer: [
+          compiler => {
+            const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+            const plugin = new UglifyJsPlugin({
+              cache: true,
+              parallel: true,
+              sourceMap: envConstants.DEBUG_MINIFIED
+            });
+            plugin.apply(compiler);
+          }
+        ],
+        runtimeChunk: {
+          name: 'webpack-runtime'
+        },
+        splitChunks: {
+          cacheGroups: {
+            common: {
+              name: 'common',
+              minChunks: 2,
+              chunks: chunk => {
+                return _.keys(appsEntries).includes(chunk.name);
+              }
+            },
+            'code-studio-common': {
+              name: 'code-studio-common',
+              minChunks: 2,
+              chunks: chunk => {
+                const chunkNames = _.keys(codeStudioEntries); // .concat(_.keys(appsEntries))
+                return chunkNames.includes(chunk.name);
+              },
+              priority: 10
+            },
+            'code-studio-multi': {
+              name: 'code-studio-common',
+              minChunks: _.keys(appsEntries).length + 1,
+              chunks: chunk => {
+                const chunkNames = _.keys(codeStudioEntries).concat(
+                  _.keys(appsEntries)
+                );
+                return chunkNames.includes(chunk.name);
+              },
+              priority: 20
+            }
+          }
+        }
+      },
       plugins: [
-        new webpack.optimize.CommonsChunkPlugin({
-          name: 'common',
-          chunks: _.keys(appsEntries),
-          minChunks: 2
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-          name: 'code-studio-common',
-          chunks: _.keys(codeStudioEntries).concat(['common']),
-          minChunks: 2
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-          name: 'essential',
-          minChunks: 2,
-          chunks: ['peer_reviews', 'plc', 'pd', 'code-studio-common']
-        }),
+        // Needed only because our chef-managed environments rely on an
+        // unminified (but digested) version of blockly.js. It's possible this
+        // could be removed if we start serving minified blockly.js instead.
+        new UnminifiedWebpackPlugin(),
         ...(process.env.ANALYZE_BUNDLE
           ? [
               new BundleAnalyzerPlugin({

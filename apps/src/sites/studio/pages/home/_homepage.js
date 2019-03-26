@@ -7,7 +7,7 @@ import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import i18n from '@cdo/locale';
 import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
+import {getStore} from '@cdo/apps/code-studio/redux';
 import {
   setValidGrades,
   setStageExtrasScriptIds,
