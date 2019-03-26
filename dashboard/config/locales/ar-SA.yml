@@ -362,12 +362,21 @@ ar:
       driver: سائق
       navigator: مستكشف
       create: أنشئ
+      algebra_game: الجبر
       applab: مختبر التطبيق
       artist: الرسام
-      playlab: مختبر اللعب
-      minecraft: Minecraft
-      flappy: فلابي
+      bounce: الارتداد
       dance: حفلة رقص
+      eval: تقييم
+      flappy: فلابي
+      frozen: ملكة الثلج Frozen
+      gumball: جومبول
+      iceage: العصر الجليدي
+      infinity: ما لانهاية
+      minecraft_adventurer: مغامر في Minecraft
+      minecraft_designer: Minecraft
+      playlab: مختبر اللعب
+      starwars: حرب النجوم "Star Wars"
     popup:
       progress_for_user: تقدم %{name}
       progress: إنجازاتك
@@ -982,6 +991,20 @@ ar:
     required: لمحة عامة
     content: محتوى
     practice: تمارين معلم الرياضيات
+    csf_digcit: المواطنة الرقمية
+    csf_jigsaw: بانوراما
+    csf_loops: الحلقات
+    csf_events: الأحداث
+    csf_binary: ثنائي
+    csf_conditionals: الجمل الشرطية
+    csf_nested_loops: الحلقات المتداخلة
+    csf_functions: دوال
+    csf_variables: المتغيرات
+    csf_for_loops: للحلقات
+    csf_internet: الإنترنت
+    csp_variables: المتغيرات
+    csp_conditionals: الجمل الشرطية
+    csp_functions: دوال
   hoc_download:
     title: ساعة تحميل التعليمات البرمجية
     capsule_title: هل لديك إنترنت؟

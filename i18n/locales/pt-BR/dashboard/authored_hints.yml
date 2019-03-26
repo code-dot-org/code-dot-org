@@ -5840,6 +5840,7 @@ pt-BR:
         courseA_harvester_loops2_b: 'Se você ainda está tendo problemas, tente dizer os passos em voz alta. '
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: "Seu código terá **quatro** blocos 'mover para oeste'\n<xml><block type=\"maze_moveWest\"/></xml> e **quatro** blocos  <xml> 'pegar milho' <block type=\"harvester_corn\"/>. "
+        courseA_harvester_loops2_b: 'Se você ainda está tendo problemas, tente dizer os passos em voz alta. '
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Use um bloco `repetição` como este para te ajudar!
@@ -8713,7 +8714,8 @@ pt-BR:
         courseC_artist_loops3a_b: Use o menu suspenso no bloco 'desenhar adesivo' para encontrar o adesivo de morcego.
       courseC_artist_loops3a_2019_authored_hint:
         courseC_artist_loops3a_a: Você vai querer adicionar apenas um bloco dentro do seu loop, após o adesivo do pássaro.
-        courseC_artist_loops3a_b: Use o menu suspenso no bloco 'desenhar adesivo' para encontrar o adesivo de morcego.
+        courseC_artist_loops3a_b: |-
+          Use o menu suspenso no bloco 'desenhar adesivo' para encontrar o adesivo de morcego.
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
           Use este bloco para pular para frente: 
@@ -17103,6 +17105,7 @@ pt-BR:
         courseF_farmer_ramp11_a: Se você está tendo dificuldade de ver onde os laços devem ir, tente programá-los todos em seguida procurando um padrão.
         courseF_farmer_ramp11_b: Como você pode usar um loop <xml><block type="controls_repeat"><title name="TIMES">???</title></block></xml> para selecionar repolhos, ao invés de utilizar 5 blocos <xml><block type="harvester_lettuce"/></xml>?
       courseF_maze_ramp1_authored_hint:
+        courseF_maze_ramp1_a: Se o pássaro não está chegando ao porco, certifique-se de que todos os blocos foram totalmente encaixados juntos, então clique em "Executar" novamente.
         courseF_maze_ramp1_b: Você não precisa de nenhum bloco extra da caixa de ferramentas aqui!
       courseF_maze_ramp13_authored_hint:
         courseF_maze_ramp13_b: Não se esqueça de usar o botão "Passo" para percorrer bloco a bloco e procurar erros.
@@ -17112,6 +17115,7 @@ pt-BR:
         courseF_maze_ramp7_b: Não se esqueça de usar o botão "Passo" para percorrer bloco a bloco e procurar erros.
         courseF_maze_ramp7_a: Use blocos de repetição para executar um único bloco ou um pedaço de código repetidamente.
       courseF_maze_ramp1_2018_authored_hint:
+        courseF_maze_ramp1_a: Se o pássaro não está chegando ao porco, certifique-se de que todos os blocos foram totalmente encaixados juntos, então clique em "Executar" novamente.
         courseF_maze_ramp1_b: Você não precisa de nenhum bloco extra da caixa de ferramentas aqui!
       courseF_maze_ramp2_authored_hint:
         courseF_maze_ramp2_b: Certifique-se de que o bloco <xml><block type="maze_moveForward"/></xml> está dentro do laço, para que ele seja repetido.
