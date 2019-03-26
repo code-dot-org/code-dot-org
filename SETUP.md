@@ -12,7 +12,6 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      ```
      ruby --version  # --> ruby 2.5.0
      node --version  # --> v8.15.0
-     npm --version   # --> 3.10.8
      yarn --version  # --> 1.6.0
      ```
 1. If using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, if using SSH: `git@github.com:code-dot-org/code-dot-org.git`
@@ -85,7 +84,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
         ```
 
     1. Pick up those changes: `source ~/.bash_profile`
-1. Install Node, npm, and yarn
+1. Install Node and yarn
     1. `nvm install 8.15.0 && nvm alias default 8.15.0` this command should make this version the default version and print something like: `Creating default alias: default -> 8.15.0 (-> v8.15.0)`
     1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.6.0`
     1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
@@ -115,7 +114,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server rbenv npm`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server rbenv`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
 1. Install Node and Nodejs
