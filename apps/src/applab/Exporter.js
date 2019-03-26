@@ -424,6 +424,26 @@ export default {
     const rootRelativeApplabAssetPrefix = rootApplabPrefix + 'assets';
     const zipApplabAssetPrefix = appName + '/' + rootRelativeApplabAssetPrefix;
 
+    // webpack-runtime must appear exactly once on any page containing webpack entries.
+    //
+    // Attempt to fetch webpack-runtime.min.js if possible, but when running on
+    // non-production environments, fallback if we can't fetch that file to use
+    // webpack-runtime.js:
+
+    const webpackRuntimeAsset = new $.Deferred();
+    download('/blockly/js/webpack-runtime.min.js' + cacheBust, 'text').then(
+      (data, success, jqXHR) =>
+        webpackRuntimeAsset.resolve([data, success, jqXHR]),
+      download('/blockly/js/webpack-runtime.js' + cacheBust, 'text').then(
+        (data, success, jqXHR) =>
+          webpackRuntimeAsset.resolve([data, success, jqXHR]),
+        () =>
+          webpackRuntimeAsset.reject(
+            new Error('failed to fetch webpack-runtime.js')
+          )
+      )
+    );
+
     // Attempt to fetch applab-api.min.js if possible, but when running on non-production
     // environments, fallback if we can't fetch that file to use applab-api.js:
     const applabApiAsset = new $.Deferred();
@@ -440,12 +460,14 @@ export default {
 
     return new Promise((resolve, reject) => {
       $.when(
+        webpackRuntimeAsset,
         applabApiAsset,
         ...[...staticAssets, ...appAssets].map(assetToDownload =>
           download(assetToDownload.url, assetToDownload.dataType || 'text')
         )
       ).then(
         (
+          [webpackRuntime],
           [applabApi],
           [commonLocale],
           [applabLocale],
@@ -464,9 +486,13 @@ export default {
               (expoMode
                 ? 'assets/applab-api.j'
                 : rootApplabPrefix + 'applab-api.js'),
-            [appOptionsContents, commonLocale, applabLocale, applabApi].join(
-              '\n'
-            )
+            [
+              webpackRuntime,
+              appOptionsContents,
+              commonLocale,
+              applabLocale,
+              applabApi
+            ].join('\n')
           );
           zip.file(
             mainProjectFilesPrefix + fontAwesomeWOFFPath,
