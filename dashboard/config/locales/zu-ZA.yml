@@ -4,6 +4,9 @@ zu:
   continue: Qhubeka
   signup_form:
     email_preference_no: Cha
+  nav:
+    user:
+      infinity: Akugcini noma utalagu
   dialog:
     ok: Kulungile
     startover_title: Ingabe uqinisekile ufuna ukuqala phansi?

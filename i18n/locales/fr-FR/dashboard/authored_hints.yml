@@ -8440,7 +8440,8 @@ fr:
         courseC_artist_loops3a_b: Utilise le menu déroulant du bloc ˋdessiner un autocollant` pour trouver l’autocollant de chauve-souris.
       courseC_artist_loops3a_2019_authored_hint:
         courseC_artist_loops3a_a: Tu devras ajouter seulement un bloc à l’intérieur de ta boucle après l’autocollant d’oiseau.
-        courseC_artist_loops3a_b: Utilise le menu déroulant du bloc ˋdessiner un autocollant` pour trouver l’autocollant de chauve-souris.
+        courseC_artist_loops3a_b: |-
+          Utilise le menu déroulant du bloc ˋdessiner un autocollant` pour trouver l’autocollant de chauve-souris.
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
           Utilise ce bloc pour sauter en avant :

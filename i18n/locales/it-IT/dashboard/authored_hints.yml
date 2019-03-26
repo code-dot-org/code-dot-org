@@ -3945,7 +3945,7 @@ it:
         courseA_playlab_events_challenge1_d: "Fai apparire il robot quando clicchi sul mostro!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Infine, fai apparire il Mago Wendel quando clicchi su Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visibili\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       course1_playlab_events_challenge2_authored_hint:
-        courseA_playlab_events_challenge2_a: "Puoi fare cantare l'uccellino.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Puoi fare cantare l'uccellino.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_b: "Puoi far suonare il robot.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           Puoi fare ringhiare il mostro arrabbiato.
@@ -4423,9 +4423,9 @@ it:
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
         courseA_artist_loops4_b: |-
-          Dato che puoi utilizzare solo un blocco <xml><block type="simple_move_right"/></xml>
+          Dato che puoi usare solo un blocco <xml><block type="simple_move_right"/></xml>
 
-          prova a metterlo all'interno del ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
+          prova a metterlo all'interno del ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> loop.
       courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_a: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
         courseA_artist_loops4_b: |-
@@ -4436,19 +4436,19 @@ it:
       courseA_artist_loops4_2019_authored_hint:
         courseA_artist_loops4_a: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
         courseA_artist_loops4_b: |-
-          Dato che puoi utilizzare solo un blocco <xml><block type="simple_move_right"/></xml>
+          Dato che puoi usare solo un blocco <xml><block type="simple_move_right"/></xml>
 
-          prova a metterlo all'interno del ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
+          prova a metterlo all'interno del ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> loop.
       courseA_artist_loops5_authored_hint:
-        courseA_artist_loops5_a: "Prova a utilizzare quello che hai imparato sui blocchi\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nper completare questo esercizio!"
+        courseA_artist_loops5_a: Prova a utilizzare quello che hai imparato sui blocchi <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per completare questo esercizio!
         courseA_artist_loops5_b: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
         courseA_artist_loops5_c: "Dato che puoi utilizzare solo un blocco <xml><block type=\"simple_move_right\"/></xml> prova a metterlo all'interno del ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_artist_loops5_2018_authored_hint:
-        courseA_artist_loops5_a: "Prova a utilizzare quello che hai imparato sui blocchi\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nper completare questo esercizio!"
+        courseA_artist_loops5_a: Prova a utilizzare quello che hai imparato sui blocchi <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per completare questo esercizio!
         courseA_artist_loops5_b: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
         courseA_artist_loops5_c: "Dato che puoi utilizzare solo un blocco <xml><block type=\"simple_move_right\"/></xml> prova a metterlo all'interno del ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_artist_loops5_2019_authored_hint:
-        courseA_artist_loops5_a: "Prova a utilizzare quello che hai imparato sui blocchi\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nper completare questo esercizio!"
+        courseA_artist_loops5_a: Prova a utilizzare quello che hai imparato sui blocchi <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per completare questo esercizio!
         courseA_artist_loops5_b: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
         courseA_artist_loops5_c: "Dato che puoi utilizzare solo un blocco <xml><block type=\"simple_move_right\"/></xml> prova a metterlo all'interno del ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_artist_loops6_authored_hint:
@@ -4463,37 +4463,38 @@ it:
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: Non riesci a capire dove posizionare il ciclo? Allora prima prova a scrivere il programma con tanti blocchi azzurri, poi individua una sequenza che si ripete e sostituiscila con il ciclo.
         courseA_artist_loops7_b: Scrivi il codice per disegnare un'onda, poi ripetilo per disegnare le altre due.
-        courseA_artist_loops7_c: "Ricorda: puoi mettere più di un blocco all'interno di un ciclo\n<xml><block type=\"controls_repeat\"> <title name=\"TIMES\">???</title></block></xml>"
+        courseA_artist_loops7_c: 'Ricorda: puoi mettere più di un blocco all''interno di un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>'
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: Non riesci a capire dove posizionare il ciclo? Allora prima prova a scrivere il programma con tanti blocchi azzurri, poi individua una sequenza che si ripete e sostituiscila con il ciclo.
         courseA_artist_loops7_b: Scrivi il codice per disegnare un'onda, poi ripetilo per disegnare le altre due.
         courseA_artist_loops7_c: |-
           Ricorda: puoi mettere più di un blocco all'interno di un ciclo <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">???</title>
-          </block></xml> loop.
+          </block></xml>
       courseA_artist_loops7_2019_authored_hint:
         courseA_artist_loops7_a: Non riesci a capire dove posizionare il ciclo? Allora prima prova a scrivere il programma con tanti blocchi azzurri, poi individua una sequenza che si ripete e sostituiscila con il ciclo.
         courseA_artist_loops7_b: Scrivi il codice per disegnare un'onda, poi ripetilo per disegnare le altre due.
         courseA_artist_loops7_c: |-
           Ricorda: puoi mettere più di un blocco all'interno di un ciclo <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">???</title>
-          </block></xml> loop.
+          </block></xml>
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: Non riesci a capire dove posizionare il ciclo? Allora prima prova a scrivere il programma con tanti blocchi azzurri, poi individua una sequenza che si ripete e sostituiscila con il ciclo.
         courseA_artist_loops7_b: Scrivi il codice per disegnare un'onda, poi ripetilo per disegnare le altre due.
         courseA_artist_loops7_c: |-
-          Ricorda: puoi mettere più di un blocco all'interno di un ciclo
-          <xml><block type="controls_repeat"> <title name="TIMES">???</title></block></xml>
+          Ricorda: puoi mettere più di un blocco all'interno di un ciclo <xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml>
       courseA_artist_loops8_authored_hint:
-        courseA_artist_loops8_a: Prova ad eseguire il codice, per capire cosa è già stato scritto per te.
+        courseA_artist_loops8_a: Prova ad eseguire il codice per capire cosa è già stato scritto per te.
         courseA_artist_loops8_b: Come inseriresti in un ciclo il codice che ti è stato dato?
         courseA_artist_loops8_c: "Cosa fa il codice?  \nChe cosa dovrebbe fare?  \nChe cosa ti suggerisce questo?"
       courseA_artist_loops8_2018_authored_hint:
-        courseA_artist_loops8_a: Prova ad eseguire il codice, per capire cosa è già stato scritto per te.
+        courseA_artist_loops8_a: Prova ad eseguire il codice per capire cosa è già stato scritto per te.
         courseA_artist_loops8_b: Come inseriresti in un ciclo il codice che ti è stato dato?
         courseA_artist_loops8_c: "Cosa fa il codice?  \nChe cosa dovrebbe fare?  \nChe cosa ti suggerisce questo?"
       courseA_artist_loops8_2019_authored_hint:
-        courseA_artist_loops8_a: Prova ad eseguire il codice, per capire cosa è già stato scritto per te.
+        courseA_artist_loops8_a: Prova ad eseguire il codice per capire cosa è già stato scritto per te.
         courseA_artist_loops8_b: Come inseriresti in un ciclo il codice che ti è stato dato?
         courseA_artist_loops8_c: "Cosa fa il codice?  \nChe cosa dovrebbe fare?  \nChe cosa ti suggerisce questo?"
       courseA_artist_loops9_authored_hint:
@@ -4530,19 +4531,19 @@ it:
           Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
 
           <xml><block type="collector_collect"/></xml>
-        courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi verso Est `E -->` 2 volte, quindi prendere il diamante.
+        courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi verso Est `E →` 2 volte, quindi prendere il diamante.
       courseA_collector_loops1_2018_authored_hint:
         courseA_collector_loops1_a: |-
           Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
 
           <xml><block type="collector_collect"/></xml>
-        courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi verso Est `E -->` 2 volte, quindi prendere il diamante.
+        courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi verso Est `E →` 2 volte, quindi prendere il diamante.
       courseA_collector_loops1_2019_authored_hint:
         courseA_collector_loops1_a: |-
           Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
 
           <xml><block type="collector_collect"/></xml>
-        courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi verso Est `E -->` 2 volte, quindi prendere il diamante.
+        courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi verso Est `E →` 2 volte, quindi prendere il diamante.
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi diamante.
         courseA_collector_loops2_b: |-
@@ -4568,7 +4569,7 @@ it:
         courseA_collector_loops3_a: "Prova ad usare un ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         courseA_collector_loops3_b: 'Ricorda: puoi mettere più di un blocco dentro un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>'
       courseA_collector_loops3_2019_authored_hint:
-        courseA_collector_loops3_a: "Prova ad utilizzare un ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        courseA_collector_loops3_a: "Prova ad usare un ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         courseA_collector_loops3_b: 'Ricorda: puoi mettere più di un blocco dentro un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>'
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: Per modificare di quante caselle deve spostarsi Laura, cambia il numero di volte che il ciclo viene eseguito.
@@ -4582,24 +4583,24 @@ it:
       courseA_collector_loops5_authored_hint:
         courseA_collector_loops5_a: Se non riesci subito a capire la risposta, prova ad utilizzare un foglio di carta per capire di quali frecce hai bisogno e cerca di definire un percorso.
         courseA_collector_loops5_b: Prova a dividere il problema in due parti, muovendoti prima lateralmente e poi verso il basso.
-        courseA_collector_loops5_c: Potresti iniziare con un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> che muove Laura verso Ovest `O ←` e raccoglie i diamanti.
+        courseA_collector_loops5_c: Potresti iniziare con un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> che fa andare Laura verso Ovest `O ←` e raccoglie i diamanti.
       courseA_collector_loops5_2018_authored_hint:
         courseA_collector_loops5_a: Se non riesci subito a capire la risposta, prova ad utilizzare un foglio di carta per capire di quali frecce hai bisogno e cerca di definire un percorso.
         courseA_collector_loops5_b: Prova a dividere il problema in due parti, muovendoti prima lateralmente e poi verso il basso.
-        courseA_collector_loops5_c: Potresti iniziare con un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> che muove Laura verso Ovest `O ←` e raccoglie i diamanti.
+        courseA_collector_loops5_c: Potresti iniziare con un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> che fa andare Laura verso Ovest `O ←` e raccoglie i diamanti.
       courseA_collector_loops5_2019_authored_hint:
         courseA_collector_loops5_a: Se non riesci subito a capire la risposta, prova ad utilizzare un foglio di carta per capire di quali frecce hai bisogno e cerca di definire un percorso.
         courseA_collector_loops5_b: Prova a dividere il problema in due parti, muovendoti prima lateralmente e poi verso il basso.
-        courseA_collector_loops5_c: Potresti iniziare con un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> che muove Laura verso Ovest `O ←` e raccoglie i diamanti.
+        courseA_collector_loops5_c: Potresti iniziare con un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> che fa andare Laura verso Ovest `O ←` e raccoglie i diamanti.
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: Non riesci a capire cosa non va? Prova ad eseguire il codice un paio di volte per vedere cosa succede.
-        courseA_collector_loops6_b: "La soluzione più breve ha 2 cicli\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nuno dopo l'altro."
+        courseA_collector_loops6_b: La soluzione più breve ha 2 cicli <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> uno dopo l'altro.
       courseA_collector_loops6_2018_authored_hint:
         courseA_collector_loops6_a: Non riesci a capire cosa non va? Prova ad eseguire il codice un paio di volte per vedere cosa succede.
-        courseA_collector_loops6_b: "La soluzione più breve ha 2 cicli\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nuno dopo l'altro."
+        courseA_collector_loops6_b: La soluzione più breve ha 2 cicli <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> uno dopo l'altro.
       courseA_collector_loops6_2019_authored_hint:
         courseA_collector_loops6_a: Non riesci a capire cosa non va? Prova ad eseguire il codice un paio di volte per vedere cosa succede.
-        courseA_collector_loops6_b: "La soluzione più breve ha 2 cicli\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nuno dopo l'altro."
+        courseA_collector_loops6_b: La soluzione più breve ha 2 cicli <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> uno dopo l'altro.
       courseA_collector_loops7_authored_hint:
         courseA_collector_loops7_a: Se non riesci a capire che cosa succede dopo, prova ad eseguire il codice per vedere dove va a finire Laura.
       courseA_collector_loops7_2018_authored_hint:
@@ -4630,7 +4631,7 @@ it:
       courseA_collector_loops_challenge1_authored_hint:
         courseA_collector_loops_challenge1_a: Prova a cambiare i numeri nei cicli dove ti sembra che qualcosa vada storto.
         courseA_collector_loops_challenge1_b: 'Attenzione: non hai bisogno di usare un ciclo se un''azione devi svolgerla una sola volta.'
-        courseA_collector_loops_challenge1_c: Ci sono 6 diamanti nel lato destro della grotta, ma dovrai prenderne solo 5 spostandoti verso Sud `v S`. Sai perché?
+        courseA_collector_loops_challenge1_c: Ci sono 6 diamanti nel lato destro della grotta, ma dovrai prenderne solo 5 spostandoti verso Sud `S ↓`. Sai perché?
         courseA_collector_loops_challenge1_d: |-
           Il programma che trovi già pronto non permette di raccogliere gli ultimi 2 diamanti. Prova ad aggiungere questi blocchi alla fine del programma:
 
@@ -4650,7 +4651,7 @@ it:
       courseA_collector_loops_challenge1_2018_authored_hint:
         courseA_collector_loops_challenge1_a: Prova a cambiare i numeri nei cicli dove ti sembra che qualcosa vada storto.
         courseA_collector_loops_challenge1_b: 'Attenzione: non hai bisogno di usare un ciclo se un''azione devi svolgerla una sola volta.'
-        courseA_collector_loops_challenge1_c: Ci sono 6 diamanti nel lato destro della grotta, ma dovrai prenderne solo 5 spostandoti verso Sud `v S`. Sai perché?
+        courseA_collector_loops_challenge1_c: Ci sono 6 diamanti nel lato destro della grotta, ma dovrai prenderne solo 5 spostandoti verso Sud `S ↓`. Sai perché?
         courseA_collector_loops_challenge1_d: |-
           Il programma che trovi già pronto non permette di raccogliere gli ultimi 2 diamanti. Prova ad aggiungere questi blocchi alla fine del programma:
 
@@ -4670,7 +4671,7 @@ it:
       courseA_collector_loops_challenge1_2019_authored_hint:
         courseA_collector_loops_challenge1_a: Prova a cambiare i numeri nei cicli dove ti sembra che qualcosa vada storto.
         courseA_collector_loops_challenge1_b: 'Attenzione: non hai bisogno di usare un ciclo se un''azione devi svolgerla una sola volta.'
-        courseA_collector_loops_challenge1_c: Ci sono 6 diamanti nel lato destro della grotta, ma dovrai prenderne solo 5 spostandoti verso Sud `v S`. Sai perché?
+        courseA_collector_loops_challenge1_c: Ci sono 6 diamanti nel lato destro della grotta, ma dovrai prenderne solo 5 spostandoti verso Sud `S ↓`. Sai perché?
         courseA_collector_loops_challenge1_d: |-
           Il programma che trovi già pronto non permette di raccogliere gli ultimi 2 diamanti. Prova ad aggiungere questi blocchi alla fine del programma:
 
@@ -4719,81 +4720,77 @@ it:
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2_authored_hint:
         courseA_harvester_loops2_a: |-
-          Il tuo codice avrà **quattro** blocchi vai avanti verso ovest <xml><block type="maze_moveWest"/></xml>
-
-          e **quattro** blocchi per raccogliere le pannocchie <xml> <block type="harvester_corn"/> </xml>
+          Il tuo codice avrà **quattro** blocchi <xml><block type="maze_moveWest"/></xml>
+          e **quattro** blocchi <xml><block type="harvester_corn"/> </xml>
         courseA_harvester_loops2_b: 'Se hai ancora difficoltà, prova a pronunciare le istruzioni a voce alta. '
       courseA_harvester_loops2_2019_authored_hint:
-        courseA_harvester_loops2_a: "Il tuo codice avrà **quattro**  blocchi vai avanti verso ovest\n<xml><block type=\"maze_moveWest\"/></xml> e **quattro** blocchi \nper raccogliere le pannocchie  <xml> <block type=\"harvester_corn\"/> </xml> "
+        courseA_harvester_loops2_a: "Il tuo codice avrà **quattro**  blocchi <xml><block type=\"maze_moveWest\"/></xml>\ne **quattro** blocchi <xml><block type=\"harvester_corn\"/> </xml> "
+        courseA_harvester_loops2_b: 'Se hai ancora difficoltà, prova a pronunciare le istruzioni a voce alta. '
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Usa un blocco `ripeti` come questo per aiutarti!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
-        courseA_harvester_loops3_b: "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno i blocchi che vuoi ripetere."
+        courseA_harvester_loops3_b: "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-10\">4</title></block></xml>\nquindi inserisci al suo interno i blocchi che vuoi ripetere. "
       courseA_harvester_loops3_2019_authored_hint:
         courseA_harvester_loops3_a: |-
           Usa un blocco `ripeti` come questo per aiutarti!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
-        courseA_harvester_loops3_b: "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno i blocchi che vuoi ripetere."
+        courseA_harvester_loops3_b: "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-10\">4</title></block></xml>\nquindi inserisci al suo interno i blocchi che vuoi ripetere. "
       courseA_harvester_loops4_authored_hint:
-        courseA_harvester_loops4_a: Non aver paura di premere `Esegui` per vedere cosa succede!
+        courseA_harvester_loops4_a: Non aver paura di premere "Esegui" per vedere cosa succede!
         courseA_harvester_loops4_b: Quante pannocchie ci sono? Quante volte si ripete il tuo ciclo?
       courseA_harvester_loops4_2019_authored_hint:
-        courseA_harvester_loops4_a: Non aver paura di premere `Esegui` per vedere cosa succede!
+        courseA_harvester_loops4_a: Non aver paura di premere "Esegui" per vedere cosa succede!
         courseA_harvester_loops4_b: Quante pannocchie ci sono? Quante volte si ripete il tuo ciclo?
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: Se ti blocchi, prova a risolvere l'esercizio in due parti, una parte prima della curva e l'altra dopo la curva.
         courseA_harvester_loops5_b: |-
-          Il programma finale dovrà avere **un** ciclo `ripeti ... volte` <xml><block type="controls_repeat_simplified_dropdown">
+          Il programma finale dovrà avere **un** ciclo <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">6</title>
-          </block></xml>, **un** blocco vai avanti verso Sud  <xml><block type="maze_moveSouth" limit="1"/></xml>  e **un** blocco vai avanti verso Est <xml><block type="maze_moveEast" limit="1"/> </xml>
+          </block></xml>, **un** blocco <xml><block type="maze_moveSouth" limit="1"/></xml>  e **un** blocco <xml><block type="maze_moveEast" limit="1"/> </xml>
         courseA_harvester_loops5_c: Usa questo percorso per raccogliere tutte le pannocchie!
       courseA_harvester_loops5_2019_authored_hint:
         courseA_harvester_loops5_a: Se ti blocchi, prova a risolvere l'esercizio in due parti, una parte prima della curva e l'altra dopo la curva.
         courseA_harvester_loops5_b: |-
-          Il programma finale dovrà avere **un** ciclo `ripeti ... volte` <xml><block type="controls_repeat_simplified_dropdown">
+          Il programma finale dovrà avere **un** ciclo <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">6</title>
-          </block></xml>, **un** blocco vai avanti verso Sud  <xml><block type="maze_moveSouth" limit="1"/></xml>  e **un** blocco vai avanti verso Est <xml><block type="maze_moveEast" limit="1"/> </xml>
+          </block></xml>, **un** blocco <xml><block type="maze_moveSouth" limit="1"/></xml>  e **un** blocco <xml><block type="maze_moveEast" limit="1"/> </xml>
         courseA_harvester_loops5_c: Usa questo percorso per raccogliere tutte le pannocchie!
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: |-
-          Avrai bisogno di due cicli `ripeti ... volte`, uno dopo l'altro.
+          Avrai bisogno di due cicli <xml> <block type="controls_repeat_simplified_dropdown"> <title name="TIMES" config="2-10">6</title> </block></xml> uno dopo l'altro.
         courseA_harvester_loops5a_b: Un ciclo ripeterà vai verso Sud <xml><block type="maze_moveSouth" limit="1"/></xml> e l'altro ripeterà vai verso Est <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Usa questo percorso per andare avanti in una direzione e poi nell'altra.
       courseA_harvester_loops5a_2019_authored_hint:
         courseA_harvester_loops5a_a: |-
-          Avrai bisogno di due cicli `ripeti ... volte`, uno dopo l'altro.
+          Avrai bisogno di due cicli <xml> <block type="controls_repeat_simplified_dropdown"> <title name="TIMES" config="2-10">6</title> </block></xml> uno dopo l'altro.
         courseA_harvester_loops5a_b: Un ciclo ripeterà vai verso Sud <xml><block type="maze_moveSouth" limit="1"/></xml> e l'altro ripeterà vai verso Est <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Usa questo percorso per andare avanti in una direzione e poi nell'altra.
       courseA_harvester_loops5b_authored_hint:
-        courseA_harvester_loops5b_a: Premi `Esegui` e vedi cosa succede!
+        courseA_harvester_loops5b_a: Premi "Esegui" e vedi cosa succede!
         courseA_harvester_loops5b_b: I tuoi cicli si ripetono il giusto numero di volte?
         courseA_harvester_loops5b_c: Vai avanti in una direzione e poi in un'altra seguendo questo percorso.
       courseA_harvester_loops5b_2019_authored_hint:
-        courseA_harvester_loops5b_a: Premi `Esegui` e vedi cosa succede!
+        courseA_harvester_loops5b_a: Premi "Esegui" e vedi cosa succede!
         courseA_harvester_loops5b_b: I tuoi cicli si ripetono il giusto numero di volte?
         courseA_harvester_loops5b_c: Vai avanti in una direzione e poi in un'altra seguendo questo percorso.
       courseA_harvester_loops6_authored_hint:
         courseA_harvester_loops6_a: Se ti blocchi, prova a scrivere i passaggi su carta e cerca gli schemi che si ripetono.
-        courseA_harvester_loops6_b: Questo è il percorso che dovresti seguire per raccoglier tutte le pannocchie.
+        courseA_harvester_loops6_b: Questo è il percorso che dovresti seguire per raccogliere tutte le pannocchie.
       courseA_harvester_loops6_2019_authored_hint:
         courseA_harvester_loops6_a: Se ti blocchi, prova a scrivere i passaggi su carta e cerca gli schemi che si ripetono.
-        courseA_harvester_loops6_b: Questo è il percorso che dovresti seguire per raccoglier tutte le pannocchie.
+        courseA_harvester_loops6_b: Questo è il percorso che dovresti seguire per raccogliere tutte le pannocchie.
       courseA_harvester_loops7_authored_hint:
         courseA_harvester_loops7_a: |-
-          Avrai bisogno di due cicli `ripeti ... volte` <xml><block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="2-10">5</title>
-          </block></xml> uno dopo l'altro!
+          Avrai bisogno di due cicli <xml> <block type="controls_repeat_simplified_dropdown"> <title name="TIMES" config="2-10">5</title> </block></xml> uno dopo l'altro!
         courseA_harvester_loops7_b: Usa due cicli per seguire questo percorso.
       courseA_harvester_loops7_2019_authored_hint:
         courseA_harvester_loops7_a: |-
-          Avrai bisogno di due cicli `ripeti ... volte` <xml><block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="2-10">5</title>
-          </block></xml> uno dopo l'altro!
+          Avrai bisogno di due cicli <xml> <block type="controls_repeat_simplified_dropdown"> <title name="TIMES" config="2-10">5</title> </block></xml> uno dopo l'altro!
         courseA_harvester_loops7_b: Usa due cicli per seguire questo percorso.
       courseA_harvester_loops9_authored_hint:
         courseA_harvester_loops9_a: Dividi questo esercizio in tre parti differenti. Una parte fino al primo angolo, una parte fino al secondo e una fino alla fine.
@@ -4872,13 +4869,13 @@ it:
       courseA_harvester_seq4_authored_hint:
         courseA_harvester_seq4_a: Quante caselle ci sono tra la contadina e la pannocchia? Quanti blocchi ci sono già nell'area di lavoro?
         courseA_harvester_seq4_b: |-
-          Ti servono cinque blocchi `E -->` più uno
+          Ti servono cinque blocchi `E →` più uno
 
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_seq4_2019_authored_hint:
         courseA_harvester_seq4_a: Quante caselle ci sono tra la contadina e la pannocchia? Quanti blocchi ci sono già nell'area di lavoro?
         courseA_harvester_seq4_b: |-
-          Ti servono cinque blocchi `E -->` più uno
+          Ti servono cinque blocchi `E →` più uno
 
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_seq5_authored_hint:
@@ -5243,7 +5240,7 @@ it:
           <block type="when_run" movable="false" deletable="false"> 
           <next> <block type="studio_saySpriteChoices"> 
           <title name="SPRITE">1</title> 
-          <title name="VALUE">Hi there.</title> 
+          <title name="VALUE">Ciao!</title> 
           </block> 
           </next> 
           </block>
@@ -5257,7 +5254,7 @@ it:
           <block type="when_run" movable="false" deletable="false"> 
           <next> <block type="studio_saySpriteChoices"> 
           <title name="SPRITE">1</title> 
-          <title name="VALUE">Hi there.</title> 
+          <title name="VALUE">Ciao!</title> 
           </block> 
           </next> 
           </block>
@@ -5271,15 +5268,14 @@ it:
           <block type="when_run" movable="false" deletable="false"> 
           <next> <block type="studio_saySpriteChoices"> 
           <title name="SPRITE">1</title> 
-          <title name="VALUE">Hi there.</title> 
+          <title name="VALUE">Ciao!</title> 
           </block> 
           </next> 
           </block>
            </xml>
       courseA_playLab_events3_authored_hint:
         courseA_playLab_events3_a: |-
-          Trascina questo blocco
-          <xml><block type="studio_move">
+          Trascina questo blocco  <xml><block type="studio_move">
           <title name="SPRITE">1</title>
           <title name="DIR">8</title>
           </block></xml> e aggancialo sotto al blocco <xml><block type="studio_whenArrow">
@@ -5288,8 +5284,7 @@ it:
         courseA_playLab_events3_b: Dopo che hai scritto il programma, ricorda di utilizzare la freccia a sinistra per muovere il cane fino alla bandierina. Quando la bandierina diventa verde, hai finito! (Puoi cliccare sulle frecce che vedi sullo schermo, oppure usare le frecce della tastiera.)
       courseA_playLab_events3_2018_authored_hint:
         courseA_playLab_events3_a: |-
-          Trascina questo blocco
-          <xml><block type="studio_move">
+          Trascina questo blocco  <xml><block type="studio_move">
           <title name="SPRITE">1</title>
           <title name="DIR">8</title>
           </block></xml> e aggancialo sotto al blocco <xml><block type="studio_whenArrow">
@@ -5298,8 +5293,7 @@ it:
         courseA_playLab_events3_b: Dopo che hai scritto il programma, ricorda di utilizzare la freccia a sinistra per muovere il cane fino alla bandierina. Quando la bandierina diventa verde, hai finito! (Puoi cliccare sulle frecce che vedi sullo schermo, oppure usare le frecce della tastiera.)
       courseA_playLab_events3_2019_authored_hint:
         courseA_playLab_events3_a: |-
-          Trascina questo blocco
-          <xml><block type="studio_move">
+          Trascina questo blocco  <xml><block type="studio_move">
           <title name="SPRITE">1</title>
           <title name="DIR">8</title>
           </block></xml> e aggancialo sotto al blocco <xml><block type="studio_whenArrow">
@@ -5308,7 +5302,7 @@ it:
         courseA_playLab_events3_b: Dopo che hai scritto il programma, ricorda di utilizzare la freccia a sinistra per muovere il cane fino alla bandierina. Quando la bandierina diventa verde, hai finito! (Puoi cliccare sulle frecce che vedi sullo schermo, oppure usare le frecce della tastiera.)
       courseA_playLab_events4_authored_hint:
         courseA_playLab_events4_a: |-
-          Ecco il blocco evento che dovresti usare per far muovere il cane a destra:
+          Ecco il blocco che dovresti usare per far muovere il cane a destra:
           <xml><block type="studio_move">
           <title name="SPRITE">1</title>
           <title name="DIR">2</title>
@@ -5324,7 +5318,7 @@ it:
           </block></next></block></xml>
       courseA_playLab_events4_2018_authored_hint:
         courseA_playLab_events4_a: |-
-          Ecco il blocco evento che dovresti usare per far muovere il cane a destra:
+          Ecco il blocco che dovresti usare per far muovere il cane a destra:
           <xml><block type="studio_move">
           <title name="SPRITE">1</title>
           <title name="DIR">2</title>
@@ -5340,7 +5334,7 @@ it:
           </block></next></block></xml>
       courseA_playLab_events4_2019_authored_hint:
         courseA_playLab_events4_a: |-
-          Ecco il blocco evento che dovresti usare per far muovere il cane a destra:
+          Ecco il blocco che dovresti usare per far muovere il cane a destra:
           <xml><block type="studio_move">
           <title name="SPRITE">1</title>
           <title name="DIR">2</title>
@@ -5463,7 +5457,7 @@ it:
         courseA_playlab_events_challenge1_d: "Fai apparire il robot quando clicchi sul mostro!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Infine, fai apparire il mago quando clicchi sul robot!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_playlab_events_challenge1a_authored_hint:
-        courseA_playlab_events_challenge1_a: "Puoi fare cantare l'uccellino.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "Puoi fare cantare l'uccellino.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Puoi far suonare il robot.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: |-
           Puoi fare ringhiare il mostro arrabbiato.
@@ -5490,7 +5484,7 @@ it:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_authored_hint:
-        courseA_playlab_events_challenge2_a: "Puoi fare cantare l'uccellino.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Puoi fare cantare l'uccellino.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_b: "Puoi far suonare il robot.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           Puoi fare ringhiare il mostro arrabbiato.
@@ -5517,7 +5511,7 @@ it:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_2018_authored_hint:
-        courseA_playlab_events_challenge2_a: "Puoi fare cantare l'uccellino.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Puoi fare cantare l'uccellino.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_b: "Puoi far suonare il robot.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           Puoi fare ringhiare il mostro arrabbiato.
@@ -5544,7 +5538,7 @@ it:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_2019_authored_hint:
-        courseA_playlab_events_challenge2_a: "Puoi fare cantare l'uccellino.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Puoi fare cantare l'uccellino.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_b: "Puoi far suonare il robot.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           Puoi fare ringhiare il mostro arrabbiato.
@@ -7487,7 +7481,8 @@ it:
         courseC_artist_loops3a_b: Usa il menù a discesa (▼) del blocco `disegna un adesivo` per trovare l'adesivo del pipistrello.
       courseC_artist_loops3a_2019_authored_hint:
         courseC_artist_loops3a_a: Dovrai aggiungere solo un blocco all'interno del ciclo, dopo l'adesivo dell'uccello.
-        courseC_artist_loops3a_b: Usa il menù a discesa (▼) del blocco `disegna un adesivo` per trovare l'adesivo del pipistrello.
+        courseC_artist_loops3a_b: |-
+          Usa il menù a discesa (▼) del blocco `disegna un adesivo` per trovare l'adesivo del pipistrello.
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
           Usa questo blocco per saltare in avanti:
@@ -15207,7 +15202,7 @@ it:
       gradek_artist_loops6_authored_hint:
         gradek_artist_loops6_a: Non riesci a capire dove posizionare il ciclo? Allora prima prova a scrivere il programma con tanti blocchi azzurri, poi individua una sequenza che si ripete e sostituiscila con il ciclo.
       gradek_artist_loops7_authored_hint:
-        gradek_artist_loops7_a: Prova ad eseguire il codice, per capire cosa è già stato scritto per te.
+        gradek_artist_loops7_a: Prova ad eseguire il codice per capire cosa è già stato scritto per te.
         gradek_artist_loops7_b: Come inseriresti in un ciclo il codice che ti è stato dato?
         gradek_artist_loops7_c: "Cosa fa il codice?  \nChe cosa dovrebbe fare?  \nChe cosa ti suggerisce questo?"
       gradek_artist_loops9_authored_hint:

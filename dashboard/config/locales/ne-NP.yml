@@ -253,9 +253,20 @@ ne:
       create: बनाउनुहोस्
       applab: App Lab
       artist: Artist
-      playlab: Play Lab
-      minecraft: Minecraft
+      bounce: Bounce
+      calc: Calc
+      eval: Eval
       flappy: Flappy
+      frozen: Frozen
+      gumball: The Amazing World of Gumball
+      iceage: Ice Age
+      infinity: Infinity
+      minecraft_adventurer: Minecraft Adventurer
+      minecraft_designer: Minecraft
+      playlab: Play Lab
+      starwars: Star Wars
+      starwarsblocks: Star Wars (Blocks)
+      starwarsblocks_hour: Star Wars (Blocks)
     popup:
       progress_for_user: "%{name}'s progress"
       progress: तपाईँको प्रगति
@@ -850,7 +861,21 @@ ne:
     content: Content
     practice: Teaching Practices
     peer_review: Peer Review
+    csf_digcit: Digital Citizenship
+    csf_jigsaw: Jigsaw
+    csf_loops: Loops
+    csf_events: 'कार्य '
+    csf_binary: Binary
+    csf_conditionals: Conditionals
+    csf_nested_loops: Nested Loops
+    csf_functions: Functions
+    csf_variables: Variables
+    csf_for_loops: For Loops
+    csf_internet: Internet
     csp2_1_2018: 'Unit 2: Digital Information'
+    csp_variables: Variables
+    csp_conditionals: Conditionals
+    csp_functions: Functions
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated

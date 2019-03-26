@@ -1614,6 +1614,9 @@ sk:
       courseB_iceage_loops2: Použi dva rôzne pohybové bloky, aby si sa dostal k žaluďu!
       courseB_iceage_loops2_2019: Použi dva rôzne pohybové bloky, aby si sa dostal
         k žaluďu!
+      courseB_iceage_loops3: Dostaneš sa ku žaluďu s použitím len jedného bloku `Z`?
+      courseB_iceage_loops3_2019: Dostaneš sa ku žaluďu s použitím len jedného bloku
+        `Z`?
       courseB_iceage_loops4: Pridaj ešte jeden blok, aby sa Scrat dostal až k žaluďu!
       courseB_iceage_loops4_2019: Pridaj ešte jeden blok, aby sa Scrat dostal až k
         žaluďu!
@@ -2658,24 +2661,24 @@ sk:
       courseD_bee_nestedLoops9_predict2: Vyrob všetok med.
       courseD_bee_nestedLoops9_predict2_2018: Vyrob všetok med.
       courseD_bee_nestedLoops9_predict2_2019: Vyrob všetok med.
-      courseD_bee_nested_loops_challenge1: Poďme pátrať po poklade - pomocou cyklov!
-        Pomôž zberateľke dostať sa k aspoň 2-om pokladom len s blokmi, ktoré máš v
-        paneli nástrojov.
-      courseD_bee_nested_loops_challenge2: Poďme pátrať po poklade - pomocou cyklov!
-        Pomôž zberateľke dostať sa k aspoň 2-om pokladom len s blokmi, ktoré máš v
-        paneli nástrojov.
+      courseD_bee_nested_loops_challenge1: |-
+        Poďme pátrať po poklade - pomocou cyklov!
+        Pomôž zberateľke získať aspoň 2 drahokamy len s blokmi, ktoré máš v paneli nástrojov.
+      courseD_bee_nested_loops_challenge2: |-
+        Poďme pátrať po poklade - pomocou cyklov!
+        Pomôž zberateľke získať aspoň 2 drahokamy len s blokmi, ktoré máš v paneli nástrojov.
       courseD_bounce_embed_endgame: Pohybuj pálkou pomocou ľavej a pravej šípky. Koľko
         bodov nazbieraš predtým, ako tvoj súper získa 2 body?
       courseD_bounce_embedded: Inštrukcie zapíš sem
-      courseD_bounce_events12s: Vytvor si svoju vlastnú hru. Môžeš zmeniť pravidlá.
-        Keď budeš hotový, klikni na Skončiť, nech tvoju hru môžu vyskúšať kamaráti
-        na svojich telefónoch.
-      courseD_bounce_events12s_2018: Vytvor si svoju vlastnú hru. Môžeš zmeniť pravidlá.
-        Keď budeš hotový, klikni na Skončiť, nech tvoju hru môžu vyskúšať kamaráti
-        na svojich telefónoch.
-      courseD_bounce_events12s_2019: Vytvor si svoju vlastnú hru. Môžeš zmeniť pravidlá.
-        Keď budeš hotový, klikni na Skončiť, nech tvoju hru môžu vyskúšať kamaráti
-        na svojich telefónoch.
+      courseD_bounce_events12s: A teraz si vytvor tvoju vlastnú hru! Môžeš zmeniť
+        jej vzhľad aj vymyslieť vlastné pravidlá. Keď skončíš, klikni na "Dokončiť",
+        nech si ju môžu vyskúšať aj kamaráti na svojich mobiloch.
+      courseD_bounce_events12s_2018: A teraz si vytvor tvoju vlastnú hru! Môžeš zmeniť
+        jej vzhľad aj vymyslieť vlastné pravidlá. Keď skončíš, klikni na "Dokončiť",
+        nech si ju môžu vyskúšať aj kamaráti na svojich mobiloch.
+      courseD_bounce_events12s_2019: A teraz si vytvor tvoju vlastnú hru! Môžeš zmeniť
+        jej vzhľad aj vymyslieť vlastné pravidlá. Keď skončíš, klikni na "Dokončiť",
+        nech si ju môžu vyskúšať aj kamaráti na svojich mobiloch.
       courseD_bounce_events2s: Teraz pripoj blok ku udalosti `keď šípka vpravo`, aby
         sa ruka mohla dostať ku obom košom.
       courseD_bounce_events2s_2018: Teraz pripoj blok ku udalosti `keď šípka vpravo`,
@@ -2920,9 +2923,9 @@ sk:
       courseD_iceage_loops9_2019: Žaluď je tak ďaleko! Dokážeš použiť cykly a pomôcť
         Scratovi sa poň dostať?
       courseD_maze_intro4_2019: Pomôž Redovi dostať sa ku prasaťu.
-      courseD_maze_loops_challenge1: Poďme pátrať po poklade - pomocou cyklov! Pomôž
-        zberateľke dostať sa k aspoň 2-om pokladom len s blokmi, ktoré máš v paneli
-        nástrojov.
+      courseD_maze_loops_challenge1: |-
+        Poďme pátrať po poklade - pomocou cyklov!
+        Pomôž zberateľke získať aspoň 2 drahokamy len s blokmi, ktoré máš v paneli nástrojov.
       courseD_maze_nestedLoops3: Dostaň zombíka k slnečnici použitím čo najmenšieho
         počtu blokov.
       courseD_maze_nestedLoops3_2018: Dostaň zombíka k slnečnici použitím čo najmenšieho
@@ -3791,9 +3794,9 @@ sk:
         príkaz v cykle opakuj?
       ramp_artist_loops4_2018: Čo sa stane ak pridáš obrat o 72 stupňov doprava ako
         posledný príkaz v cykle opakuj?
-      ramp_artist_loops7: Nájdi vzor a skráť tento kód pomocou cyklov!
-      ramp_artist_loops7_2018: Nájdi vzor a skráť tento kód pomocou cyklov!
-      ramp_artist_loops7_2019: Nájdi vzor a skráť tento kód pomocou cyklov!
+      ramp_artist_loops7: Nájdi opakujúci sa vzor a skráť tento kód pomocou cyklov!
+      ramp_artist_loops7_2018: Nájdi opakujúci sa vzor a skráť tento kód pomocou cyklov!
+      ramp_artist_loops7_2019: Nájdi opakujúci sa vzor a skráť tento kód pomocou cyklov!
       ramp_artist_loops8: Uprav kód tak, aby si nakreslil obrázok podľa predlohy s
         použitím cyklov.
       ramp_artist_loops8_2018: Uprav kód tak, aby si nakreslil obrázok podľa predlohy

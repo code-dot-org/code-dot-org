@@ -357,12 +357,30 @@ ga:
       driver: Logáilte isteach
       navigator: Comhpháirtí
       create: Cruthaigh
+      algebra_game: Ailgéabar
       applab: Saotharlann Aipeanna
       artist: Ealaíontóir
-      gamelab: An tSaotharlann Cluichíochta
-      playlab: Spraotharlann
-      minecraft: Minecraft
+      artist_k1: Ealaíontóir (Réamhléitheoir)
+      basketball: Cispheil
+      bounce: Preabadh
+      calc: Áireamh
+      eval: Luacháil
       flappy: Flappy
+      frozen: Frozen
+      gamelab: An tSaotharlann Cluichíochta
+      gamelab_jr: An tSaotharlann Cluichíochta (béite)
+      gumball: Saol Iontach Gumball
+      iceage: Ice Age
+      infinity: Éigríoch
+      minecraft_adventurer: Eachtránaí Minecraft
+      minecraft_designer: Minecraft
+      minecraft_hero: Laoch Minecraft
+      playlab: Spraotharlann
+      playlab_k1: Spraotharlann (Réamhléitheoir)
+      starwars: Star Wars
+      starwarsblocks: Star Wars (Blocanna)
+      starwarsblocks_hour: Star Wars (Blocanna)
+      weblab: Saotharlann an Ghréasáin
     popup:
       progress_for_user: Dul chun cinn %{name}
       progress: Do dhul chun cinn
@@ -1137,6 +1155,17 @@ ga:
     csf_e_2: Ábhar Cúrsa E
     csf_f_1: Réamhullmhúchán do Chúrsa F (Roghnach)
     csf_f_2: Ábhar Cúrsa F
+    csf_digcit: Saoránacht Dhigiteach
+    csf_jigsaw: Míreanna Mearaí
+    csf_loops: Lúba
+    csf_events: Teagmhais
+    csf_binary: Dénártha
+    csf_conditionals: Coinníollacha
+    csf_nested_loops: Lúba Neadaithe
+    csf_functions: Feidhmeanna
+    csf_variables: Athróga
+    csf_for_loops: Lúba "Do Gach"
+    csf_internet: An tIdirlíon
     csd1_1: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
     csd1_2: 'Caibidil 2: Ríomhairí agus Réiteach Fadhbanna'
     csd2_1: 'Caibidil 1: Ábhar Gréasáin agus HTML'
@@ -1166,6 +1195,9 @@ ga:
     csp_postap_2: 'Caibidil 2: Aipeanna agus Bunachair Sonraí'
     csp2_1_2018: 'Aonad 2: Faisnéis dhigiteach'
     csp3_1_2018: 'Aonad 3: Buneolas ar Ríomhchlárú'
+    csp_variables: Athróga
+    csp_conditionals: Coinníollacha
+    csp_functions: Feidhmeanna
     dlp: Ábhar Machnaimh
   external_links:
     disclaimer: Séanadh

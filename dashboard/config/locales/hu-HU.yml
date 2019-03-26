@@ -329,13 +329,30 @@ hu:
       driver: Vezető
       navigator: Navigátor
       create: Létrehoz
+      algebra_game: Algebra
       applab: App Lab
       artist: Művész
-      playlab: Játéklabor
-      spritelab: Sprite labor
-      minecraft: Minecraft
-      flappy: Flappy
+      artist_k1: Művész (nem olvasó)
+      basketball: Kosárlabda
+      bounce: Ugrál
+      calc: Számolás
       dance: Táncos buli
+      eval: Kiértékel
+      flappy: Flappy
+      frozen: Jégvarázs
+      gamelab_jr: Játéklabor (beta)
+      gumball: Gumball csodálatos világa
+      iceage: Jégkorszak
+      infinity: Végtelen
+      minecraft_adventurer: Minecraft kaland
+      minecraft_aquatic: Minecraft Tenger
+      minecraft_designer: Minecraft
+      minecraft_hero: Minecraft Hős
+      playlab: Játéklabor
+      playlab_k1: Játéklabor (nem olvasó)
+      spritelab: Sprite labor
+      starwars: Star Wars
+      weblab: Web-Lab
       view_all: Összes projekt áttekintése...
     popup:
       progress_for_user: "%{name} fejlődése"
@@ -851,6 +868,19 @@ hu:
     required: Összefoglaló
     content: Tartalom
     practice: Tanítási gyakorlatok
+    csf_digcit: Digitális állampolgárság
+    csf_jigsaw: Kirakós játék
+    csf_loops: hurkok
+    csf_events: Események
+    csf_binary: Bináris
+    csf_conditionals: Feltételek
+    csf_sprites: Sprite-ok
+    csf_spritelab: Sprite labor
+    csf_nested_loops: Egymásba ágyazott ciklusok
+    csf_functions: funkciók
+    csf_variables: változók
+    csf_for_loops: Számláló ciklusok
+    csf_internet: Internet
     csd1_1: '1. fejezet: A probléma-megoldási folyamat'
     csd1_2: '2. fejezet: Számítógépek és problémamegoldás'
     csp1_1: '1. fejezet: Az információ ábrázolása és továbbítása'
@@ -863,6 +893,9 @@ hu:
     cspSurvey: Kérdőív
     cspAssessment: Fejezet végi értékelés
     csp2_1_2018: '2. fejezet: Digitális információ'
+    csp_variables: változók
+    csp_conditionals: Feltételek
+    csp_functions: funkciók
   external_links:
     disclaimer: Felelősséget kizáró nyilatkozat
   hoc_download:

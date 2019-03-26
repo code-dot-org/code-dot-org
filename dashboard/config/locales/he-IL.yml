@@ -360,13 +360,25 @@ he:
       driver: מחובר/ת
       navigator: נווט
       create: צור
+      algebra_game: חשבון
       applab: מעבדת היישומים
       artist: אמן
-      gamelab: מעבדת המשחקים
-      playlab: מעבדת הצעצועים
-      minecraft: מיינקראפט
-      flappy: פלאפי
+      artist_k1: האמן (טרום-קריאה)
+      basketball: כדורסל
+      bounce: להקפיץ
       dance: מסיבת ריקודים
+      flappy: פלאפי
+      frozen: לשבור את הקרח
+      gamelab: מעבדת המשחקים
+      gamelab_jr: מעבדת המשחקים (בטא)
+      iceage: עידן הקרח
+      infinity: אינסוף
+      minecraft_designer: מיינקראפט
+      minecraft_hero: גיבור מיינקרפט
+      playlab: מעבדת הצעצועים
+      playlab_k1: מעבדת הצעצועים (טרום-קריאה)
+      starwars: מלחמת הכוכבים
+      weblab: מעבדת האתרים
     popup:
       progress_for_user: ההתקדמות של %{name}
       progress: ההתקדמות שלך
@@ -1008,6 +1020,15 @@ he:
     csf_e_2: תכני קורס ה
     csf_f_1: המשך אל קורס ו (רשות)
     csf_f_2: תכני קורס ו
+    csf_jigsaw: פאזל
+    csf_loops: חזרות
+    csf_events: אירועים
+    csf_binary: בינארי
+    csf_conditionals: תנאים
+    csf_functions: פונקציות
+    csf_variables: משתנים
+    csf_for_loops: בשביל לולאות
+    csf_internet: אינטרנט
     csd1_1: 'פרק 1: הדרך לפתרון תהליך'
     csd1_2: 'פרק 2: מחשבים ופתרון בעיות'
     csd2_1: 'פרק 1: תוכן אינטרנט ו-HTML'
@@ -1029,6 +1050,9 @@ he:
     cspAssessment: הערכה לפרק
     csp_postap_2: 'פרק 2: אפליקציות ומסדי נתונים'
     csp3_1_2018: 'יחידה 3: מבוא לתכנות'
+    csp_variables: משתנים
+    csp_conditionals: תנאים
+    csp_functions: פונקציות
   external_links:
     disclaimer: כתב ויתור
     leaving_domain: אתה עוזב כעת את התחום הזה לעבר אתר אשר אינו מנוהל על-ידי Code.org.

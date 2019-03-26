@@ -830,7 +830,8 @@ nn:
       courseB_maze_seq9_challenge1: "*Kor har den grisen gøymd seg no?*"
       courseC_artist_loops2a: No kan du bruke ei løkke for å spinne fuglen din rundt tolv gongar med ein 30 graders sving.
       courseC_artist_loops2a_2018: No kan du bruke ei løkke for å spinne fuglen din rundt tolv gongar med ein 30 graders sving.
-      courseC_artist_loops2a_2019: No kan du bruke ei løkke for å spinne fuglen din rundt tolv gongar med ein 30 graders sving.
+      courseC_artist_loops2a_2019: |-
+        No kan du bruke ei løkke for å spinne fuglen din rundt tolv gongar med ein 30 graders sving.
       courseC_artist_prog_challenge1-doghouse: La oss byggje eit hundehus til Jorge!
       courseC_artist_prog_challenge2: "*Hjelp meg å måle dei gule linjene på denne vegen! *"
       courseC_collector_prog9: '*"La oss få heile skatten!"*'

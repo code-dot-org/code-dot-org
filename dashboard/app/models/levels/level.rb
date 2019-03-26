@@ -216,8 +216,8 @@ class Level < ActiveRecord::Base
         hash['notes'] = Encryption.decrypt_object(encrypted_notes)
       end
     rescue Encryption::KeyMissingError
-      # developers must be able to seed levels without properties_encryption_key
-      raise unless rack_env?(:development)
+      # developers and adhoc environments must be able to seed levels without properties_encryption_key
+      raise unless rack_env?(:development) || rack_env?(:adhoc)
       puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
     end
     hash

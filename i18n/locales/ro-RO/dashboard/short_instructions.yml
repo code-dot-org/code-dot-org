@@ -1098,6 +1098,7 @@ ro:
       bounce_7_2018: Atașează blocuri la fiecare din blocurile "când". Fă bila să ricoșeze până ajunge la țintă.
       bounce_7_basketball: Atașează blocuri la fiecare dintre blocurile "când". Fă bila să ricoșeze până ajunge la țintă.
       bounce_7_sports: Atașează blocuri la fiecare dintre blocurile "când". Fă bila să ricoșeze până ajunge la țintă.
+      course1_maze_seq_challenge1: '”Urmărește traseul şi condu-mă la porcul prostuț. Evită dinamita (TNT) sau penele vor zbura!”'
       course2_maze_seq_challenge1: Trasează calea și du-mă la porcușorul nătâng. Evită TNT-ul sau penele-mi vor zbura!
       course2_playlab_stage17_1: Poți să îl faci pe Câinele Jorge (actor 1) să spună "Bună"?
       course2_playlab_stage17_10: |-
@@ -1125,8 +1126,12 @@ ro:
       course3_playlab_stage17_6: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza lui Waddles, şi apoi să îl mutaţi cu săgeţile până când marcați?
       course3_playlab_stage17_7: Creați-vă propria poveste. Când ați terminat, faceți click pe Terminare pentru a permite prietenilor să vă încerce povestea pe telefoanele lor.
       course4_artist_fwp_challenge1: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
+      courseA_maze_ramp4_2018: Evită dinamita (TNT) sau penele vor zbura!
       courseA_maze_seq2: Modifică secvenţa de cod pentru a mă duce la porc!
       courseA_maze_seq2_2018: Modifică secvenţa de cod pentru a mă duce la porc!
+      courseA_maze_seq_challenge2: Urmărește traseul şi condupasărea la porc. Evită dinamita (TNT) sau penele vor zbura!
+      courseA_maze_seq_challenge2_2018: Urmărește traseul şi condupasărea la porc. Evită dinamita (TNT) sau penele vor zbura!
+      courseA_maze_seq_challenge2_2019: Urmărește traseul şi condupasărea la porc. Evită dinamita (TNT) sau penele vor zbura!
       courseC_PlayLab_events3: Poți scrie un program pentru a-l face pe Jorge (actor 1) să se mute spre Pisica Olive?
       courseC_PlayLab_events3_2018: Poți scrie un program pentru a-l face pe Jorge (actor 1) să se mute spre Pisica Olive?
       courseC_PlayLab_events3_2019: Poți scrie un program pentru a-l face pe Jorge (actor 1) să se mute spre Pisica Olive?
@@ -1137,6 +1142,9 @@ ro:
       courseC_artist_prog5_2019: |-
         Această casă are nevoie de un acoperiş! Desenează triunghiul.  Sugestie: toate trei laturile au aceeaşi lungime.
       courseC_maze_debugging10: Repară acest nivel prin rearanjarea şi adăugarea blocurilor de instrucţiuni pentru a mă duce la porc!
+      courseC_maze_programming4: Evită dinamita (TNT) sau penele vor zbura!
+      courseC_maze_programming4_2018: Evită dinamita (TNT) sau penele vor zbura!
+      courseC_maze_programming4_2019: Evită dinamita (TNT) sau penele vor zbura!
       courseD_artist_binary1: Codul binar este un mod de a reprezenta informatia utilizand numai doua optiuni. Aici, vom folosi optiunile "off"(reprezentat de numarul zero) si "on" (reprezentat de numarul 1). \r\r V-am pus la dispozitie o grila de pixeli prin care va puteti plimba si face design-uri intorcand doar anumite patrate. Il poti face pe artist sa deseneze "01010101"in cod binar in primul rand?
       courseD_artist_binary1_2018: Codul binar este un mod de a reprezenta informatia utilizand numai doua optiuni. Aici, vom folosi optiunile "off"(reprezentat de numarul zero) si "on" (reprezentat de numarul 1). \r\r V-am pus la dispozitie o grila de pixeli prin care va puteti plimba si face design-uri intorcand doar anumite patrate. Il poti face pe artist sa deseneze "01010101"in cod binar in primul rand?
       courseD_artist_binary1_2019: Codul binar este un mod de a reprezenta informatia utilizand numai doua optiuni. Aici, vom folosi optiunile "off"(reprezentat de numarul zero) si "on" (reprezentat de numarul 1). \r\r V-am pus la dispozitie o grila de pixeli prin care va puteti plimba si face design-uri intorcand doar anumite patrate. Il poti face pe artist sa deseneze "01010101"in cod binar in primul rand?
@@ -1177,6 +1185,8 @@ ro:
       courseD_maze_nestedLoops6: Du-mă la floarea-soarelui!
       courseD_maze_nestedLoops6_2018: Du-mă la floarea-soarelui!
       courseD_maze_nestedLoops6_2019: Du-mă la floarea-soarelui!
+      courseD_maze_ramp4: Evită dinamita (TNT) sau penele vor zbura!
+      courseD_maze_ramp4_2018: Evită dinamita (TNT) sau penele vor zbura!
       courseE_artist_functions1: "Ajuta zombieul sa deseneze ochelarii folosind patrate cu laturi de 100 de pixeli. \\r Spatiul dintre ochelari este de 75 de pixeli."
       courseE_artist_functions1_2018: "Ajuta zombieul sa deseneze ochelarii folosind patrate cu laturi de 100 de pixeli. \\r Spatiul dintre ochelari este de 75 de pixeli."
       courseE_bee_concept1: Colectează tot nectarul din fiecare floare. Folosește o buclă imbricată. 
@@ -1189,6 +1199,8 @@ ro:
       courseE_bee_functions4: "Funcţia \"mută şi obține nectar\" face albina să se întoarcă, să colecteze nectar şi apoi returnează albina la locul de unde a început. Folosește \nfuncţia pentru a colecta tot nectarul."
       courseE_bee_functions4_2018: "Funcţia \"mută şi obține nectar\" face albina să se întoarcă, să colecteze nectar şi apoi returnează albina la locul de unde a început. Folosește \nfuncţia pentru a colecta tot nectarul."
       courseE_farmer_concept4: Acum, hai să mergem încă un nivel în profunzimea problemei?
+      courseE_maze_ramp4: Evită dinamita (TNT) sau penele vor zbura!
+      courseE_maze_ramp4_2018: Evită dinamita (TNT) sau penele vor zbura!
       courseF_artist_for7: Fă trei modificări mici la codul de la ultimul nivel pentru a obţine aceast lucru!
       courseF_artist_for7_2018: Fă trei modificări mici la codul de la ultimul nivel pentru a obţine aceast lucru!
       courseF_artist_for7_2019: Fă trei modificări mici la codul de la ultimul nivel pentru a obţine aceast lucru!
@@ -1207,6 +1219,8 @@ ro:
       courseF_bee_for_challenge3: Rezolvă acest puzzle folosind cât mai puține blocuri posibil.
       courseF_bee_functions4: "Funcţia \"mută şi obține nectar\" face albina să se întoarcă, să colecteze nectar şi apoi returnează albina la locul de unde a început. Folosește \nfuncţia pentru a colecta tot nectarul."
       courseF_bee_functions4_2018: "Funcţia \"mută şi obține nectar\" face albina să se întoarcă, să colecteze nectar şi apoi returnează albina la locul de unde a început. Folosește \nfuncţia pentru a colecta tot nectarul."
+      courseF_maze_ramp4: Evită dinamita (TNT) sau penele vor zbura!
+      courseF_maze_ramp4_2018: Evită dinamita (TNT) sau penele vor zbura!
       flappy_1: Atașează un bloc la blocul "când clic", apoi apasă "Rulează Programul". Fă clic sau bate ușor cu degetul pe ecran ca să îl muți pe Flappy la țintă.
       flappy_11: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele vizuale şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să încerce jocul pe telefoanele lor.
       flappy_11_2018: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele vizuale şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să încerce jocul pe telefoanele lor.
@@ -1253,6 +1267,7 @@ ro:
       grade1_maze_sequence6: Găsește ce lipsește şi apoi adaugă blocuri de instrucțiuni pentru a mă duce la porc!
       grade1_maze_sequence9: 'Ocolește dinamita pentru a mă duce la porc! '
       grade2_CaringForNewPet_10: Du-mă la porc!
+      grade2_CaringForNewPet_3: '”Urmărește traseul şi condu-mă la porcul prostuț. Evită dinamita (TNT) sau penele vor zbura!”'
       grade2_CaringForNewPet_5: Du-mă la porc!
       grade2_MakeDogTag_10: Deseneaza ceva distractiv!
       grade2_MakeDogTag_3: |-
