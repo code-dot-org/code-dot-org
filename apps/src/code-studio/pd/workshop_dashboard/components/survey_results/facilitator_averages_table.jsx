@@ -31,7 +31,7 @@ const questionOrder = {
   ]
 };
 
-class FacilitatorAveragesTable extends React.Component {
+export class FacilitatorAveragesTable extends React.Component {
   static propTypes = {
     facilitatorAverages: PropTypes.object.isRequired,
     facilitatorId: PropTypes.number.isRequired,
