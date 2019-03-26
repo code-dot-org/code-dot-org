@@ -1023,6 +1023,9 @@ en:
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP
       CSF19Placeholder: {}
+      CSP 18-19 Unit 4 Data Questions:
+        Optional Data Questions: Optional Data Questions
+        Optional data questions for classroom review prior to the AP Exam.: Optional data questions for classroom review prior to the AP Exam.
       CSP 2018 Precourse Placeholder: {}
       CSP Abstraction in Programming: {}
       CSP Abstraction in Programming 2: {}
@@ -2018,8 +2021,8 @@ en:
         description here: description here
         title: title
       How to pick a random button_2018_2019:
+        How to pick a random button: How to pick a random button
         description here: description here
-        title: title
       'How to: Make Charts from your Data': {}
       Importing Screens: {}
       Internet Simulator Setup:
@@ -2376,6 +2379,9 @@ en:
         description here: description here
         title: title
       Personal Website Examples: {}
+      Pilot Student App Interest Survey CSP 20-21:
+        Pilot Student Survey: Pilot Student Survey
+        Survey for student participating in the CSP Pilot.: Survey for student participating in the CSP Pilot.
       Pilot Student Survey:
         Pilot Student Survey: Pilot Student Survey
         Survey for student participating in the CSP Pilot.: Survey for student participating in the CSP Pilot.
@@ -2419,6 +2425,9 @@ en:
         How to use the B&W Pixelation Widget: How to use the B&W Pixelation Widget
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
+        description here: description here
+      Pluralsight for CSP:
+        Pluralsight for CSP: Pluralsight for CSP
         description here: description here
       Practice Performance Task in Unit 5: {}
       Practice Performance Tasks in Unit 1: {}
@@ -4562,6 +4571,7 @@ en:
         PS pre-assessment all: {}
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
+        Pluralsight LevelGroup Test: {}
         RQB test levelgroup: {}
         SG csp3_U3_turtle_subgoal_mc_levelgroup: {}
         Sample CSP Assessment: {}
@@ -5796,17 +5806,9 @@ en:
         The name of the button: The name of the button
         The name of the table: The name of the table
       csp-20-21-u4-assess-vocab:
-        Alternating Frequencies: Alternating Frequencies
-        Beam of Light: Beam of Light
         Concatenation: Concatenation
         Conditional Statement: Conditional Statement
-        Copper Wire: Copper Wire
-        Electric Voltage: Electric Voltage
-        Fiber Optic Cable: Fiber Optic Cable
-        Match the bit sending technology with the underlying system: Match the bit sending technology with the underlying system
         Match the vocabulary: Match the vocabulary
-        'Matching Assessment: Sending Bits in the Real World': 'Matching Assessment: Sending Bits in the Real World'
-        Radio Wave: Radio Wave
         String: String
         Variable: Variable
         affects the sequential flow of control by executing different statements based on the value of a Boolean expression: affects the sequential flow of control by executing different statements based on the value of a Boolean expression
@@ -15659,52 +15661,30 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-20-21-u4-assess-conditionals pick 1:
-        <img src="https://images.code.org/0e12f2c50c38461985462f00c9c0d3c4-image-1552671815316.23.42 AM.png">: <img src="https://images.code.org/0e12f2c50c38461985462f00c9c0d3c4-image-1552671815316.23.42 AM.png">
-        <img src="https://images.code.org/1cd58d6994689cc6891507bf49cb8cf6-image-1552671823240.30.59 AM.png">: <img src="https://images.code.org/1cd58d6994689cc6891507bf49cb8cf6-image-1552671823240.30.59 AM.png">
         <img src="https://images.code.org/365cfe7314133bb8f99a4075df41a2a0-image-1552685852116.36.58 PM.png">: <img src="https://images.code.org/365cfe7314133bb8f99a4075df41a2a0-image-1552685852116.36.58 PM.png">
-        <img src="https://images.code.org/3921059f8be92705b034af70120e93df-image-1552671829344.39.50 AM.png">: <img src="https://images.code.org/3921059f8be92705b034af70120e93df-image-1552671829344.39.50 AM.png">
         <img src="https://images.code.org/4736267db8711822944b7ccc6c9000f3-image-1552686069909.40.42 PM.png">: <img src="https://images.code.org/4736267db8711822944b7ccc6c9000f3-image-1552686069909.40.42 PM.png">
         <img src="https://images.code.org/59c71451ab39d278349d4f4f062d82f2-image-1552685961385.38.56 PM.png">: <img src="https://images.code.org/59c71451ab39d278349d4f4f062d82f2-image-1552685961385.38.56 PM.png">
-        <img src="https://images.code.org/d4eb8ac0489f64e2e3d79ec69002e20d-image-1552671807489.22.22 AM.png">: <img src="https://images.code.org/d4eb8ac0489f64e2e3d79ec69002e20d-image-1552671807489.22.22 AM.png">
         <img src="https://images.code.org/ee9cda3b7b0a4b992e6d085ca15191b4-image-1552686189426.42.47 PM.png">: <img src="https://images.code.org/ee9cda3b7b0a4b992e6d085ca15191b4-image-1552686189426.42.47 PM.png">
-        Output A: Output A
-        Output B: Output B
-        Output C: Output C
-        Output D: Output D
-        Output E: Output E
       csp-20-21-u4-assess-conditionals pick 2:
         <img src="https://images.code.org/4eb6a7de156e4d1bc38fa3c00eab5cf4-image-1552673101201.59.04 AM.png">: <img src="https://images.code.org/4eb6a7de156e4d1bc38fa3c00eab5cf4-image-1552673101201.59.04 AM.png">
         <img src="https://images.code.org/508274c56822da6f7dfd2ec600b6380c-image-1552673112428.57.16 AM.png">: <img src="https://images.code.org/508274c56822da6f7dfd2ec600b6380c-image-1552673112428.57.16 AM.png">
         <img src="https://images.code.org/52035e8a9e31603b152838e12bb2d086-image-1552673105778.58.30 AM.png">: <img src="https://images.code.org/52035e8a9e31603b152838e12bb2d086-image-1552673105778.58.30 AM.png">
         <img src="https://images.code.org/54f871758b10b1dcda46f8fefd8cb117-image-1552673109465.57.53 AM.png">: <img src="https://images.code.org/54f871758b10b1dcda46f8fefd8cb117-image-1552673109465.57.53 AM.png">
-        <img src="https://images.code.org/d4eb8ac0489f64e2e3d79ec69002e20d-image-1552671807489.22.22 AM.png">: <img src="https://images.code.org/d4eb8ac0489f64e2e3d79ec69002e20d-image-1552671807489.22.22 AM.png">
       csp-20-21-u4-assess-flowchart apples:
         '1': '1'
         '2': '2'
         '3': '3'
         '4': '4'
-        Functions are called once but can be declared many times: Functions are called once but can be declared many times
-        Functions can help remove repeated code from a program: Functions can help remove repeated code from a program
-        Programs written with functions run more quickly: Programs written with functions run more quickly
-        Replacing repeated code with a function will reduce the number of commands the computer needs to run: Replacing repeated code with a function will reduce the number of commands the computer needs to run
       csp-20-21-u4-assess-functions-missing-code:
-        '1': '1'
-        '3': '3'
-        '4': '4'
-        '5': '5'
         <img src="https://images.code.org/231baaf9cfc275c8d1edb47b3793da30-image-1552676931179.PNG">: <img src="https://images.code.org/231baaf9cfc275c8d1edb47b3793da30-image-1552676931179.PNG">
         <img src="https://images.code.org/4d412f2464fb28db3ff728c693df31b3-image-1552676931183.PNG">: <img src="https://images.code.org/4d412f2464fb28db3ff728c693df31b3-image-1552676931183.PNG">
         <img src="https://images.code.org/8de5202b2cf38e6b8c4992395060e20e-image-1552676931182.PNG">: <img src="https://images.code.org/8de5202b2cf38e6b8c4992395060e20e-image-1552676931182.PNG">
         <img src="https://images.code.org/f5291340af6853e1131ea3f6a86b648a-image-1552676931180.PNG">: <img src="https://images.code.org/f5291340af6853e1131ea3f6a86b648a-image-1552676931180.PNG">
       csp-20-21-u4-assess-functions-naming:
         <img src="https://images.code.org/2262a3ac3016081e11699f1fbb7d1555-image-1552677679175.PNG">: <img src="https://images.code.org/2262a3ac3016081e11699f1fbb7d1555-image-1552677679175.PNG">
-        <img src="https://images.code.org/231baaf9cfc275c8d1edb47b3793da30-image-1552676931179.PNG">: <img src="https://images.code.org/231baaf9cfc275c8d1edb47b3793da30-image-1552676931179.PNG">
-        <img src="https://images.code.org/4d412f2464fb28db3ff728c693df31b3-image-1552676931183.PNG">: <img src="https://images.code.org/4d412f2464fb28db3ff728c693df31b3-image-1552676931183.PNG">
-        <img src="https://images.code.org/8de5202b2cf38e6b8c4992395060e20e-image-1552676931182.PNG">: <img src="https://images.code.org/8de5202b2cf38e6b8c4992395060e20e-image-1552676931182.PNG">
         <img src="https://images.code.org/b74947fab672e53b21f2aadb165cf07f-image-1552677679174.PNG">: <img src="https://images.code.org/b74947fab672e53b21f2aadb165cf07f-image-1552677679174.PNG">
         <img src="https://images.code.org/e01333c4ba95da46ca79442e5e6209a2-image-1552677679171.PNG">: <img src="https://images.code.org/e01333c4ba95da46ca79442e5e6209a2-image-1552677679171.PNG">
         <img src="https://images.code.org/e446cd4e0758705815f39e33bca49b79-image-1552677679169.PNG">: <img src="https://images.code.org/e446cd4e0758705815f39e33bca49b79-image-1552677679169.PNG">
-        <img src="https://images.code.org/f5291340af6853e1131ea3f6a86b648a-image-1552676931180.PNG">: <img src="https://images.code.org/f5291340af6853e1131ea3f6a86b648a-image-1552676931180.PNG">
       csp-20-21-u4-assess-functions-order:
         a b c: a b c
         a b c a: a b c a
@@ -15715,19 +15695,11 @@ en:
         '3': '3'
         '4': '4'
         '5': '5'
-        a b c: a b c
-        a b c a: a b c a
-        a b c b c: a b c b c
-        a b c b c b c: a b c b c b c
       csp-20-21-u4-assess-functions-setup:
-        <img src="https://images.code.org/2262a3ac3016081e11699f1fbb7d1555-image-1552677679175.PNG">: <img src="https://images.code.org/2262a3ac3016081e11699f1fbb7d1555-image-1552677679175.PNG">
         <img src="https://images.code.org/32a201b3a9c48181bfd5f88cfbd9b226-image-1552679190072.PNG">: <img src="https://images.code.org/32a201b3a9c48181bfd5f88cfbd9b226-image-1552679190072.PNG">
-        <img src="https://images.code.org/b74947fab672e53b21f2aadb165cf07f-image-1552677679174.PNG">: <img src="https://images.code.org/b74947fab672e53b21f2aadb165cf07f-image-1552677679174.PNG">
         <img src="https://images.code.org/c4e386b972f26c983d38788893e743f4-image-1552679190074.PNG">: <img src="https://images.code.org/c4e386b972f26c983d38788893e743f4-image-1552679190074.PNG">
-        <img src="https://images.code.org/e01333c4ba95da46ca79442e5e6209a2-image-1552677679171.PNG">: <img src="https://images.code.org/e01333c4ba95da46ca79442e5e6209a2-image-1552677679171.PNG">
         <img src="https://images.code.org/e16d430b332a7318b8bb122ba66f7f31-image-1552679190075.PNG">: <img src="https://images.code.org/e16d430b332a7318b8bb122ba66f7f31-image-1552679190075.PNG">
         <img src="https://images.code.org/e337f1ec93e24a1f7f1be08033f8fc42-image-1552679190077.PNG">: <img src="https://images.code.org/e337f1ec93e24a1f7f1be08033f8fc42-image-1552679190077.PNG">
-        <img src="https://images.code.org/e446cd4e0758705815f39e33bca49b79-image-1552677679169.PNG">: <img src="https://images.code.org/e446cd4e0758705815f39e33bca49b79-image-1552677679169.PNG">
       csp-20-21-u4-assess-variables trace:
         '10': '10'
         '100': '100'
@@ -15756,19 +15728,11 @@ en:
         Output D: Output D
         Output E: Output E
       csp-20-21-u4-assess-vocabulary:
-        <img src="https://images.code.org/2262a3ac3016081e11699f1fbb7d1555-image-1552677679175.PNG">: <img src="https://images.code.org/2262a3ac3016081e11699f1fbb7d1555-image-1552677679175.PNG">
-        <img src="https://images.code.org/b74947fab672e53b21f2aadb165cf07f-image-1552677679174.PNG">: <img src="https://images.code.org/b74947fab672e53b21f2aadb165cf07f-image-1552677679174.PNG">
-        <img src="https://images.code.org/e01333c4ba95da46ca79442e5e6209a2-image-1552677679171.PNG">: <img src="https://images.code.org/e01333c4ba95da46ca79442e5e6209a2-image-1552677679171.PNG">
-        <img src="https://images.code.org/e446cd4e0758705815f39e33bca49b79-image-1552677679169.PNG">: <img src="https://images.code.org/e446cd4e0758705815f39e33bca49b79-image-1552677679169.PNG">
         affects the sequential flow of control by executing different statements based on the value of a Boolean expression: affects the sequential flow of control by executing different statements based on the value of a Boolean expression
         an ordered sequence of characters: an ordered sequence of characters
         joins together two or more strings end-to-end to make a new string: joins together two or more strings end-to-end to make a new string
         stores information as a number, String, or Boolean: stores information as a number, String, or Boolean
       csp-20-21-u4-assess-why functions:
-        <img src="https://images.code.org/4eb6a7de156e4d1bc38fa3c00eab5cf4-image-1552673101201.59.04 AM.png">: <img src="https://images.code.org/4eb6a7de156e4d1bc38fa3c00eab5cf4-image-1552673101201.59.04 AM.png">
-        <img src="https://images.code.org/508274c56822da6f7dfd2ec600b6380c-image-1552673112428.57.16 AM.png">: <img src="https://images.code.org/508274c56822da6f7dfd2ec600b6380c-image-1552673112428.57.16 AM.png">
-        <img src="https://images.code.org/52035e8a9e31603b152838e12bb2d086-image-1552673105778.58.30 AM.png">: <img src="https://images.code.org/52035e8a9e31603b152838e12bb2d086-image-1552673105778.58.30 AM.png">
-        <img src="https://images.code.org/54f871758b10b1dcda46f8fefd8cb117-image-1552673109465.57.53 AM.png">: <img src="https://images.code.org/54f871758b10b1dcda46f8fefd8cb117-image-1552673109465.57.53 AM.png">
         Functions are called once but can be declared many times: Functions are called once but can be declared many times
         Functions can help remove repeated code from a program: Functions can help remove repeated code from a program
         Programs written with functions run more quickly: Programs written with functions run more quickly
@@ -20209,13 +20173,13 @@ en:
         Any time between 10 and 19: Any time between 10 and 19
         Any time between 6 and 9: Any time between 6 and 9
         The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
-        There is no value of time that will result in "Good Morning" being displayed: There is no value of time that will result in "Good Morning" being displayed
+        There is no value of time that will result in “Good Morning!” being displayed: There is no value of time that will result in “Good Morning!” being displayed
       cspu5_assess2_wrongLogic_2018_2019:
         Any time between 0 and 20: Any time between 0 and 20
         Any time between 10 and 19: Any time between 10 and 19
         Any time between 6 and 9: Any time between 6 and 9
         The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
-        There is no value of time that will result in "Good Morning" being displayed: There is no value of time that will result in "Good Morning" being displayed
+        There is no value of time that will result in “Good Morning!” being displayed: There is no value of time that will result in “Good Morning!” being displayed
       cspu5_assess2_wrongLogic_exam_prep:
         Any time between 0 and 20: Any time between 0 and 20
         Any time between 10 and 19: Any time between 10 and 19
