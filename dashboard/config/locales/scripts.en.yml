@@ -10361,8 +10361,8 @@ en:
               description_student: ''
               description_teacher: ''
         csd1-2019:
-          title: CSD Unit 1 - Problem Solving ('19-'20)
-          description: " \r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
+          title: CSD Unit 1 - Problem Solving and Computing('19-'20)
+          description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
           description_short: "  Learn how humans work with computers to solve problems."
           description_audience: ''
           stages:
