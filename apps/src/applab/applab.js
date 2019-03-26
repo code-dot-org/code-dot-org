@@ -808,7 +808,7 @@ Applab.reactMountPoint_ = null;
  */
 Applab.render = function() {
   var nextProps = Object.assign({}, Applab.reactInitialProps_, {
-    isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
+    isEditingProject: project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
     onScreenCreate: designMode.createScreen,
     handleVersionHistory: Applab.handleVersionHistory
@@ -827,8 +827,7 @@ Applab.exportApp = function(expoOpts) {
   studioApp().resetButtonClick();
 
   // TODO: find another way to get this info that doesn't rely on globals.
-  const appName =
-    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app';
+  const appName = project.getCurrentName() || 'my-app';
 
   const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
   if (mode === 'expoGenerateApk') {
