@@ -2426,8 +2426,8 @@ en:
       NetSim_Variant2: 'NetSim: Variant 2: Students connect directly to one another and send entire packets back and forth, exploring systems of encoding data.'
       NetSim_Variant3: 'NetSim: Variant 3: Connects groups of 2-6 students with a router, and explores issues in routing and DNS'
       New Artist Project: Draw something awesome! Your code is saved as a project that you can return to at any time.
-      New Basketball Project: Create your own Basketball game. You can change all the rules. When you're done, click Finish to let friends try your game on their phones.
-      New Bounce Project: Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones.
+      New Basketball Project: Create your own Basketball game. You can change all the rules. When you're done, click Share to let friends try your game on their phones.
+      New Bounce Project: Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Share to let friends try your game on their phones.
       New Course 4 Artist Functions Level 4: Use the "draw a square" function to draw this pattern.
       New Gumball Project: Create anything you like and share it!
       New Ice Age Project: Create anything you like and share it!
@@ -3600,21 +3600,21 @@ en:
       Virtual Pet 2 - Validated (Ram): Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2 - Validated: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
-      Virtual Pet 2_2019: Use the **Costumes** tab to create or select new costumes for your virtual pet and its food.
+      Virtual Pet 2_2019: Use the **Costumes** tab to create or select a new costume for your virtual pet.
       Virtual Pet 2_simple: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 2_simple_clone: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 3: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
-      Virtual Pet 3_2019: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
+      Virtual Pet 3_2019: Add a new sprite to the screen, then give it a costume that looks like food your pet enjoys eating.
       Virtual Pet 3_simple: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
-      Virtual Pet 4_2019: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
+      Virtual Pet 4_2019: Add a behavior to the food to make it follow your mouse, then lead it to your pet.
       Virtual Pet 4_simple: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
       Virtual Pet 5 - Validated: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
-      Virtual Pet 5_2019: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
+      Virtual Pet 5_2019: Add an event that removes the food when it touches your pet.
       Virtual Pet 5_simple: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 6: Add an apple that returns the giraffe back to regular size when they touch.
-      Virtual Pet 6_2019: Add an apple that returns the giraffe back to regular size when they touch.
+      Virtual Pet 6_2019: Add a new food container sprite to your screen. Add code that makes the food container create new food when it is clicked. As soon as it is created, the food should immediately begin following your pointer.
       Virtual Pet 6_simple: Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet Freeplay: 'Freeplay: What more can you make your giraffe do? '
       Virtual Pet Freeplay_2019: 'Freeplay: What more can you make your giraffe do? '
@@ -3641,6 +3641,7 @@ en:
       aE7: "If you create another loop like this one, but turn left instead of right, what happens? \n\nCan you repeat all of that to draw this wave?"
       aE8: "Now let's loop that whole thing four times to create this picture frame. Watch out for the corners - you can't just turn 90 degrees! \n\nIf looping a 3 degree turn 60 times makes a half circle, which of these blocks of code will make an additional quarter circle for the corners?"
       aEfreeplay: Free Play!
+      aalevelcopy: Add instructions
       allHallows2017: Trap the Code.org employees in the crayon box by drawing a square with 320 pixel sides!
       allthethings data blocks test: Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
       allthethings design mode elements: Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
@@ -4378,19 +4379,20 @@ en:
       courseC_artist_loops1: "*\"Zombie.  Draw!\"*\n\nThe zombie wants to draw a line from where he is to the garden of sunflowers.  Can you help him?  \n*(The garden is 250 pixels away)*  "
       courseC_artist_loops1a: 'Get the artist to the center of the play area, then draw a bird using a sticker. '
       courseC_artist_loops1a_2018: 'Get the artist to the center of the play area, then draw a bird using a sticker. '
-      courseC_artist_loops1a_2019: 'Get the artist to the center of the play area, then draw a bird using a sticker. '
+      courseC_artist_loops1a_2019: 'Get the artist to the center of the play area, then draw a sticker. '
+      courseC_artist_loops1b_2019: 'Change the direction your sticker is facing by adding a `turn` command to your code. '
       courseC_artist_loops2: Now that the zombie knows his way, help him dig holes along the path to plant more flowers!
       courseC_artist_loops2a: Now, use a loop to spin your bird around 12 times with a 30 degree turn.
       courseC_artist_loops2a_2018: Now, use a loop to spin your bird around 12 times with a 30 degree turn.
-      courseC_artist_loops2a_2019: Now, use a loop to spin your bird around 12 times with a 30 degree turn.
+      courseC_artist_loops2a_2019: Now, use a loop to make more copies of your sticker. Try changing the numbers in the turn and repeat blocks to make different patterns.
       courseC_artist_loops3: Excellent!  Now that the flowers have sprouted, help the zombie place a friend every 50 pixels to guard over them until they are grown.
       courseC_artist_loops3a: Now add a bat!
       courseC_artist_loops3a_2018: Now add a bat!
-      courseC_artist_loops3a_2019: Now add a bat!
+      courseC_artist_loops3a_2019: Now add a second sticker!
       courseC_artist_loops4: The zombie has found an empty farm!  Can you help him bring it to life by stamping animal stickers every 100 pixels around the border?
       courseC_artist_loops4a: Try jumping forward by 75 pixels.
       courseC_artist_loops4a_2018: Try jumping forward by 75 pixels.
-      courseC_artist_loops4a_2019: Try jumping forward by 75 pixels.
+      courseC_artist_loops4a_2019: Edit your code so that you jump forward between drawing the two stickers.
       courseC_artist_loops5: "Great!  Now it's time to make a fence inside to keep the animals out.   \n\n"
       courseC_artist_loops5a: Try new stickers!
       courseC_artist_loops5a_2018: Try new stickers!

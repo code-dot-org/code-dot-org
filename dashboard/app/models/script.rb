@@ -70,7 +70,7 @@ class Script < ActiveRecord::Base
   before_validation :hide_pilot_scripts
 
   def hide_pilot_scripts
-    self.hidden = true if pilot_experiment
+    self.hidden = true unless pilot_experiment.blank?
   end
 
   # As we read and write to files with the script name, to prevent directory
