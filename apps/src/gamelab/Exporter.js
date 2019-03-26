@@ -110,8 +110,28 @@ export default {
       rewriteAssetUrls(appAssets, exportCode)
     );
 
-    // Attempt to fetch applab-api.min.js if possible, but when running on non-production
-    // environments, fallback if we can't fetch that file to use applab-api.js:
+    // webpack-runtime must appear exactly once on any page containing webpack entries.
+    //
+    // Attempt to fetch webpack-runtime.min.js if possible, but when running on
+    // non-production environments, fallback if we can't fetch that file to use
+    // webpack-runtime.js:
+
+    const webpackRuntimeAsset = new $.Deferred();
+    download('/blockly/js/webpack-runtime.min.js' + cacheBust, 'text').then(
+      (data, success, jqXHR) =>
+        webpackRuntimeAsset.resolve([data, success, jqXHR]),
+      download('/blockly/js/webpack-runtime.js' + cacheBust, 'text').then(
+        (data, success, jqXHR) =>
+          webpackRuntimeAsset.resolve([data, success, jqXHR]),
+        () =>
+          webpackRuntimeAsset.reject(
+            new Error('failed to fetch webpack-runtime.js')
+          )
+      )
+    );
+
+    // Attempt to fetch gamelab-api.min.js if possible, but when running on non-production
+    // environments, fallback if we can't fetch that file to use gamelab-api.js:
     const gamelabApiAsset = new $.Deferred();
     download('/blockly/js/gamelab-api.min.js' + cacheBust, 'text').then(
       (data, success, jqXHR) => gamelabApiAsset.resolve([data, success, jqXHR]),
@@ -130,7 +150,13 @@ export default {
       '/blockly/js/p5play/p5.play.js' + cacheBust,
       'text'
     );
-    const staticDownloads = [gamelabApiAsset, cssAsset, p5Asset, p5playAsset];
+    const staticDownloads = [
+      webpackRuntimeAsset,
+      gamelabApiAsset,
+      cssAsset,
+      p5Asset,
+      p5playAsset
+    ];
     // Fetch jquery when in expo mode
     if (expoMode) {
       staticDownloads.push(
@@ -152,12 +178,19 @@ export default {
           }
         })
       ).then(
-        ([gamelabApiText], [cssText], [p5Text], [p5playText], ...rest) => {
+        (
+          [webpackRuntimeText],
+          [gamelabApiText],
+          [cssText],
+          [p5Text],
+          [p5playText],
+          ...rest
+        ) => {
           zip.file(
             appName +
               '/' +
               (expoMode ? 'assets/gamelab-api.j' : 'gamelab-api.js'),
-            gamelabApiText
+            [webpackRuntimeText, gamelabApiText].join('\n')
           );
           zip.file(
             appName + '/' + (expoMode ? 'assets/' : '') + 'gamelab.css',
