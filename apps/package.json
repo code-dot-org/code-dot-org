@@ -5,7 +5,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "engines": {
     "node": ">=8.15",
-    "npm": "^3.10.8"
+    "npm": ">=3.10.8"
   },
   "scripts": {
     "lint": "eslint --ext .js,.jsx src test",
