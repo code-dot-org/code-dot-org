@@ -20,7 +20,9 @@ zh-CN:
       AppLab Intro 3 - onEvent mouseOver: 使用 鼠标悬停
       AppLab Intro 3 - onEvent twoButtons: 更多 当事件发生时(onEvent) 的练习
       AppLab Intro 3 - playSound: 使用 播放声音
+      AppLab Intro 3 - share and keep going: 交替摆臂
       AppLab Intro 3 - stopSound: 使用 播放声音
+      AppLab Intro 3 - thisOrThat: 交替摆臂
       AppLab Intro 4 - Change Screen Color: 更改屏幕颜色
       AppLab Intro 4 - Change Text 2: 更改文本
       AppLab Intro 4 - Change Text: 更改文本
@@ -36,6 +38,7 @@ zh-CN:
       AppLab Intro 4 - onEvent twoButtons: 更多 当事件发生时(onEvent) 的练习
       AppLab Intro 4 - playSound: 使用 播放声音
       AppLab Intro 4 - stopSound: 使用 播放声音
+      AppLab Intro 4 - thisOrThat: 交替摆臂
       AppLab Intro 5 - Change Screen Color: 更改屏幕颜色
       AppLab Intro 5 - Change Text 2: 更改文本
       AppLab Intro 5 - Change Text: 更改文本
@@ -61,12 +64,21 @@ zh-CN:
       AppLab Intro 6 - playSound Template: 使用 播放声音
       AppLab Intro 6 - playSound: 使用 播放声音
       AppLab Intro 6 - quizApp: 使用 播放声音
+      AppLab Intro 6 - thisOrThatAddButton Template: 交替摆臂
+      AppLab Intro 6 - thisOrThatAddButton: 交替摆臂
+      AppLab Intro 6 - thisOrThatAddScreen: 交替摆臂
+      AppLab Intro 6 - thisOrThatPersonalize: 交替摆臂
+      AppLab Intro 6 - thisOrThatSetScreen: 交替摆臂
       AppLab Intro 7 - Change Screen Color: 更改屏幕颜色
       AppLab Intro 7 - Change Text 2: 更改文本
       AppLab Intro 7 - Full Text: 两个按钮
       AppLab Intro 7 - onEvent intro: 使按钮工作
       AppLab Intro 7 - onEvent twoButtons: 更多 当事件发生时(onEvent) 的练习
       AppLab Intro 7 - playSound: 使用 播放声音
+      AppLab Intro 7 - thisOrThatAddButton: 交替摆臂
+      AppLab Intro 7 - thisOrThatAddScreen: 交替摆臂
+      AppLab Intro 7 - thisOrThatPersonalize: 交替摆臂
+      AppLab Intro 7 - thisOrThatSetScreen: 交替摆臂
       CSD If Else Map: If-else 语句
       CSD If Else Map_2018: If-else 语句
       CSD If Else Map_2019: If-else 语句
@@ -196,8 +208,7 @@ zh-CN:
       CSD U6 Event Types_2019: 事件类型
       CSD U6 arrays intro: 数组的简介
       CSD U6 arrays intro_2018: 数组的简介
-      CSD U6 arrays intro_2019: 数组的简介
-      CSD U6 arrays video: 数组的简介
+      CSD U6 arrays intro_2019: 数组
       CSD U6 for loop map: 计数循环
       CSD U6 for loop map_2018: 计数循环
       CSD U6 for loop map_2019: 计数循环

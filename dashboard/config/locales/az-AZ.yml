@@ -229,11 +229,19 @@ az:
       team: Komanda
       driver: Sürücü
       create: Düzəlt
+      algebra_game: Cəbr
       applab: Proqram Labı
       artist: Rəssam
-      playlab: Oyun labı
-      minecraft: Minecraft
+      bounce: Tullan
+      calc: Hesablama
+      eval: Qiymət
       flappy: Flappy
+      frozen: Buzlu ürək
+      iceage: Buz dövrü
+      infinity: Sonsuzluq
+      minecraft_designer: Minecraft
+      playlab: Oyun labı
+      starwars: Star Wars
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"
       progress: Sizin nəticələriniz
@@ -520,6 +528,17 @@ az:
     required: Yekun
     content: Məzmun
     practice: Öyrədici proqramlar
+    csf_jigsaw: Mozaika
+    csf_loops: dövrlər
+    csf_events: Hadisələr
+    csf_binary: İkilik
+    csf_conditionals: Şərti ifadələr
+    csf_functions: funksiyalar
+    csf_variables: dəyişənlər
+    csf_internet: İnternet
+    csp_variables: dəyişənlər
+    csp_conditionals: Şərti ifadələr
+    csp_functions: funksiyalar
   hoc_download:
     title: Kod saatı yükləmələr
     capsule_title: Internetiniz varmı?

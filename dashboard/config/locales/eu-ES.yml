@@ -209,11 +209,22 @@ eu:
       signin: Hasi saioa
       already_registered: Dagoeneko izena emanda?
       create: Sortu
+      algebra_game: Aljebra
       applab: App laborategia
       artist: Artista
-      playlab: Jolas Laborategia
-      minecraft: Minecraft
+      bounce: Errebotea
+      calc: Kalk
+      eval: Ebal
       flappy: Flappy
+      frozen: Frozen
+      gamelab_jr: Game Lab (beta)
+      gumball: Gumball
+      iceage: Izotz Aroa
+      infinity: Infinitu
+      minecraft_designer: Minecraft
+      playlab: Jolas Laborategia
+      starwars: Star Wars
+      weblab: Web Lab
     popup:
       progress_for_user: "%{name}'ren aurrerapenak"
       progress: Zure aurrerapena
@@ -640,6 +651,21 @@ eu:
           erabiliko dela onartzen duzu
   flex_category:
     required: Bista orokorra
+    csf_digcit: Hiritartasun digitala
+    csf_jigsaw: Buruhaustea
+    csf_loops: Itzuliak
+    csf_events: Gertaerak
+    csf_binary: Bitarra
+    csf_data: Datu
+    csf_conditionals: Baldintzak
+    csf_nested_loops: Kabiatutako begiztak
+    csf_functions: Funtzioak
+    csf_variables: Aldagaiak
+    csf_for_loops: For begiztak
+    csf_internet: Internet
+    csp_variables: Aldagaiak
+    csp_conditionals: Baldintzak
+    csp_functions: Funtzioak
   pd:
     form_labels:
       email: E-posta

@@ -6595,6 +6595,8 @@ es-MX:
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: 'Tu código tendrá ** cuatro ** bloques `de mover
           el oeste` y ** cuatro ** bloques de` selección de maíz`. '
+        courseA_harvester_loops2_b: 'Si aún tienes problemas, intenta contar los pasos
+          en voz alta. '
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Use un bloque de repetición como este para ayudarlo.
@@ -18028,17 +18030,17 @@ es-MX:
           las figuras.
       courseF_artist_fwp5_authored_hint:
         courseF_artist_fwp5_d: "¡Un loop 'para' te ayudaría mucho!"
-        courseF_artist_fwp5_c: Tendrás que editar la función un poco, debido a que
-          tu función previa giró al artista a la derecha luego de cada lado, y esta
-          imagen necesita a giro a la izquierda.
+        courseF_artist_fwp5_c: Tendrás que editar un poco la función, ya que la función
+          anterior hacía girar al artista a la derecha luego de cada lado, y esta
+          imagen necesita un giro a la izquierda.
         courseF_artist_fwp5_a: La longitud de los lados de cada forma es 7 veces el
           número de lados que tiene.
         courseF_artist_fwp5_b: No te olvides de saltar 100 píxeles entre figuras.
       courseF_artist_fwp5_2018_authored_hint:
         courseF_artist_fwp5_d: "¡Un loop 'para' te ayudaría mucho!"
-        courseF_artist_fwp5_c: Tendrás que editar la función un poco, debido a que
-          tu función previa giró al artista a la derecha luego de cada lado, y esta
-          imagen necesita a giro a la izquierda.
+        courseF_artist_fwp5_c: Tendrás que editar un poco la función, ya que la función
+          anterior hacía girar al artista a la derecha luego de cada lado, y esta
+          imagen necesita un giro a la izquierda.
         courseF_artist_fwp5_a: La longitud de los lados de cada forma es 7 veces el
           número de lados que tiene.
         courseF_artist_fwp5_b: No te olvides de saltar 100 píxeles entre figuras.
@@ -18082,12 +18084,12 @@ es-MX:
            ! [] (https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png)
       courseF_artist_fwp_challenge1_authored_hint:
         courseF_artist_fwp_challenge1_b: Esta es una serie de polígonos con lados
-          que son de largo de pixeles opuestos.
+          que tienen largos de pixeles opuestos.
         courseF_artist_fwp_challenge1_c: Cada polígono se llama desde dentro de un
           loop que va desde 3 hasta 6 por un incremento de 1. ¿Qué formas está haciendo?
       courseF_artist_fwp_challenge1_2018_authored_hint:
         courseF_artist_fwp_challenge1_b: Esta es una serie de polígonos con lados
-          que son de largo de pixeles opuestos.
+          que tienen largos de pixeles opuestos.
         courseF_artist_fwp_challenge1_c: Cada polígono se llama desde dentro de un
           loop que va desde 3 hasta 6 por un incremento de 1. ¿Qué formas está haciendo?
       courseF_artist_fwp_challenge2_authored_hint:
@@ -18146,6 +18148,8 @@ es-MX:
           Para dibujar los 4 lados, pon el bloque <xml><block type="draw_move_by_constant"><title name="DIR">moverHaciaAdelante</title><title name="VALUE">200</title></block></xml> dentro de un ciclo de repetición y asegúrate de que el bucle se dibuja 4.
 
           ¡No olvides girar después!
+        courseF_artist_ramp8_c: Tu giro también irá dentro del bucle <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml>.
       courseF_artist_ramp8_2018_authored_hint:
         courseF_artist_ramp8_a: Para dibujar un lado, usa el bloque <xml><block type="draw_move_by_constant"><title
           name="DIR">moverHaciaAdelante</title><title name="VALUE">100</title></block></xml>
@@ -18154,6 +18158,8 @@ es-MX:
           Para dibujar los 4 lados, pon el bloque <xml><block type="draw_move_by_constant"><title name="DIR">moverHaciaAdelante</title><title name="VALUE">200</title></block></xml> dentro de un ciclo de repetición y asegúrate de que el bucle se dibuja 4.
 
           ¡No olvides girar después!
+        courseF_artist_ramp8_c: Tu giro también irá dentro del bucle <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml>.
       courseF_artist_ramp9_authored_hint:
         courseF_artist_ramp9_a: "¿Cómo es esto similar a un cuadrado? ¿Como es diferente?"
         courseF_artist_ramp9_b: "¡Puedes utilizar el menú desplegable en los bloques

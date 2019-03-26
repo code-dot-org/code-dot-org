@@ -6591,7 +6591,8 @@ is:
         courseC_artist_loops3a_b: Notaðu fellilistann á `teikna límmiða` kubbnum til að finna leðurblökuna.
       courseC_artist_loops3a_2019_authored_hint:
         courseC_artist_loops3a_a: Þú þarft að bæta bara einum kubbi í lykkjuna, eftir límmiðann með fuglinum.
-        courseC_artist_loops3a_b: Notaðu fellilistann á `teikna límmiða` kubbnum til að finna leðurblökuna.
+        courseC_artist_loops3a_b: |-
+          Notaðu fellilistann á `teikna límmiða` kubbnum til að finna leðurblökuna.
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
           Notaðu þennan kubb til að hoppa áfram:
