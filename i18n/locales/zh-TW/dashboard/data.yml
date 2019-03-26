@@ -5,7 +5,7 @@ zh-TW:
         Unplug1: 電腦科學導論
         Maze: 迷宮
         Multi: 多選項目
-        Unplug2: 電腦計算式思維
+        Unplug2: 計算機式思維
         Unplug3: 圖畫紙程式設計
         Artist: 藝術家
         Unplug4: 演算法
@@ -271,7 +271,7 @@ zh-TW:
         parameters: 函式帶參數
         hoc_wrapup: 一小時玩程式總結
         Unplug1: CS 是什麼？
-        Unplug2: 電腦計算式思維
+        Unplug2: 計算機式思維
         Unplug3: 圖畫紙程式設計
         Unplug4: 演算法
         Unplug5: 函數類別
@@ -326,7 +326,7 @@ zh-TW:
         C3_bee_debugging: 蜜蜂：除錯（Debugging）
         C3_bounce: 彈跳
         C3_playlab_create_game: Play Lab - 設計一個遊戲
-        C3_computational_thinking: 電腦計算式思維
+        C3_computational_thinking: 計算機式思維
         C3_dice_race: 擲骰子比賽
         C3_internet: 網際網路 Internet
         C3_crowdsourcing: 群眾外包（Crowdsourcing）

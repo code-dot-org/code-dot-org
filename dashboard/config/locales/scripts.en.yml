@@ -1149,6 +1149,8 @@ en:
               name: Dance Lab
             Mini Rubric:
               name: Mini Rubric
+            Pluralsight Test:
+              name: Pluralsight Test
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -9921,6 +9923,8 @@ en:
               name: Digital Sharing
             Running Simulations:
               name: Running Simulations
+            Simulating Experiments:
+              name: Simulating Experiments
         dance-low:
           stages:
             Dance Party:
@@ -10160,6 +10164,8 @@ en:
               name: Digital Sharing
             Simon Says:
               name: Simon Says
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Conditionals in Minecraft: Voyage Aquatic'
         express-2019:
           title: Express Course (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -10396,6 +10402,8 @@ en:
               name: Project - Propose an App
               description_student: To conclude the study of the problem solving process and the input/output/store/process model of a computer, the class proposes apps designed to solve real world problems. This project is completed across multiple days and culminates in a poster presentation highlighting the features of each app. The project is designed to be completed in pairs though it can be completed individually.
               description_teacher: To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.
+            Post-Project Test:
+              name: Post-Project Test
         andrea-test:
           stages:
             new stage:
@@ -10520,6 +10528,8 @@ en:
               name: 'Loops: My Loopy Robotic Friends'
             Graphing Data:
               name: Graphing Data
+            Powerful Passwords:
+              name: Powerful Passwords
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
@@ -10834,6 +10844,8 @@ en:
               name: Project - Personal Portfolio Website
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
+            Post-Project Test:
+              name: Post-Project Test
         csd3-2019:
           title: CSD Unit 3 - Animations and Games ('19-'20)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -10937,6 +10949,8 @@ en:
               name: CS Discoveries End of Semester Survey
               description_student: ''
               description_teacher: ''
+            Post-Project Test:
+              name: Post-Project Test
         csd4-2019:
           title: CSD Unit 4 - The Design Process ('19-'20)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
@@ -11180,7 +11194,7 @@ en:
           description_short: ''
           description: ''
         csp1-2019:
-          title: CSP Unit 1 - The Internet ('18-'19)
+          title: CSP Unit 1 - The Internet ('19-'20)
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
           description_short: Explore the challenges about representing information as bits and how to get those bits from one place to another.
           description_audience: ''
@@ -11254,7 +11268,7 @@ en:
               description_student: ''
               description_teacher: ''
         csp2-2019:
-          title: CSP Unit 2 - Digital Information ('18-'19)
+          title: CSP Unit 2 - Digital Information ('19-'20)
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
           description_short: Explore how more complex digital information is represented and manipulated through computation and visualization.
           description_audience: ''
@@ -11288,7 +11302,7 @@ en:
               description_student: ''
               description_teacher: ''
         csp3-2019:
-          title: CSP Unit 3 - Intro to Programming ('18-'19)
+          title: CSP Unit 3 - Intro to Programming ('19-'20)
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
           description_audience: ''
@@ -11342,7 +11356,7 @@ en:
               description_student: ''
               description_teacher: ''
         csp4-2019:
-          title: CSP Unit 4 - Big Data and Privacy ('18-'19)
+          title: CSP Unit 4 - Big Data and Privacy ('19-'20)
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
           description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
@@ -11398,7 +11412,7 @@ en:
             'Optional: Data Questions':
               name: 'Optional: Data Questions'
         csp5-2019:
-          title: CSP Unit 5 - Building Apps ('18-'19)
+          title: CSP Unit 5 - Building Apps ('19-'20)
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
           description_audience: ''
@@ -11496,7 +11510,7 @@ en:
               description_student: ''
               description_teacher: ''
         csp-explore-2019:
-          title: Explore - AP Performance Task Prep ('18-'19)
+          title: Explore - AP Performance Task Prep ('19-'20)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
           description_audience: ''
@@ -11518,7 +11532,7 @@ en:
               description_student: ''
               description_teacher: ''
         csp-create-2019:
-          title: Create - AP Performance Task Prep ('18-'19)
+          title: Create - AP Performance Task Prep ('19-'20)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
           description_audience: ''
@@ -11536,7 +11550,7 @@ en:
               description_student: ''
               description_teacher: ''
         csppostap-2019:
-          title: Post AP - Data Tools ('18-'19)
+          title: Post AP - Data Tools ('19-'20)
           description: "In the first chapter of this unit students develop skills interpreting visual data and using spreadsheet and visualization tools to create their own digital artifacts.  Through an ongoing project  - the “class data tracker” - students learn how to collect and clean data, and to use a few common tools for computing aggregations and creating visualizations. \r\n\r\nThe second chapter explores the importance of data within apps. App Lab has a number of tools that allow you to collect and use data in your apps. The second chapter provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project."
           description_short: Learn to collect and use data in App Lab apps.
           description_audience: ''
@@ -11629,3 +11643,23 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csd-videos:
+          stages:
+            new stage:
+              name: new stage
+            Problem Solving and Computers:
+              name: Problem Solving and Computers
+            Web Development:
+              name: Web Development
+            Games and Animations:
+              name: Games and Animations
+            User Centered Design:
+              name: User Centered Design
+            Data and Society:
+              name: Data and Society
+            Physical Computing:
+              name: Physical Computing
+          title: CSD Videos
+          description_audience: ''
+          description_short: All the Videos in CS Discoveries
+          description: All the Videos in CS Discoveries

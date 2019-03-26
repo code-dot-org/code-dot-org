@@ -307,6 +307,7 @@ function create(options) {
   var entries = options.entries;
   var minify = options.minify;
   var watch = options.watch;
+  var debugMinify = envConstants.DEBUG_MINIFIED;
   var watchNotify = options.watchNotify;
   var piskelDevMode = options.piskelDevMode;
   var plugins = options.plugins;
@@ -316,7 +317,12 @@ function create(options) {
     output: {
       path: outputDir,
       publicPath: '/assets/js/',
-      filename: '[name].' + (minify ? 'min.' : '') + 'js'
+
+      // When debugging minified code, use the .js suffix (rather than .min.js)
+      // to allow the application to load minified js locally without running it
+      // through the rails asset pipeline. This is much simpler than hacking the
+      // application to load .min.js locally.
+      filename: '[name].' + (minify && !debugMinify ? 'min.' : '') + 'js'
     },
     devtool: !process.env.CI && options.minify ? 'source-map' : devtool,
     entry: entries,
@@ -345,8 +351,8 @@ function create(options) {
           warnings: false
         },
         // Don't generate source maps for our minified code, as these are expensive
-        // and we haven't been using them.
-        sourceMap: false
+        // and we haven't been using them. Only use them when debugging minified code.
+        sourceMap: debugMinify
       }),
       new UnminifiedWebpackPlugin()
     ]);

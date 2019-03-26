@@ -46,11 +46,11 @@
     "timeout_failure_tick": "0",
     "parent_level_id": 11640,
     "name_suffix": "_2019",
-    "contained_level_names": null,
     "preload_asset_list": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-25 18:35:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -65,12 +65,6 @@
         </block>
         <block type="studio_whenArrow">
           <title name="VALUE">left</title>
-          <next>
-            <block type="studio_move">
-              <title name="SPRITE">1</title>
-              <title name="DIR">8</title>
-            </block>
-          </next>
         </block>
       </xml>
     </start_blocks>

@@ -1,4 +1,4 @@
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import i18n from '@cdo/locale';
@@ -36,28 +36,31 @@ describe('ScriptOverviewTopRow', () => {
         scriptProgress={NOT_STARTED}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
+
+    expect(
+      wrapper.containsMatchingElement(
         <div>
-          <Button
-            href="/s/test-script/next"
-            text={i18n.tryNow()}
-            size={Button.ButtonSize.large}
-          />
-          <Button
-            href="//support.code.org"
-            text={i18n.getHelp()}
-            color={Button.ButtonColor.white}
-            size={Button.ButtonSize.large}
-          />
+          <div>
+            <Button
+              href="/s/test-script/next"
+              text={i18n.tryNow()}
+              size={Button.ButtonSize.large}
+            />
+            <Button
+              href="//support.code.org"
+              text={i18n.getHelp()}
+              color={Button.ButtonColor.white}
+              size={Button.ButtonSize.large}
+            />
+          </div>
+          <div>
+            <span>
+              <ProgressDetailToggle />
+            </span>
+          </div>
         </div>
-        <div>
-          <span>
-            <ProgressDetailToggle />
-          </span>
-        </div>
-      </div>
-    );
+      )
+    ).to.be.true;
   });
 
   it('renders "Continue" for student', () => {
@@ -68,13 +71,16 @@ describe('ScriptOverviewTopRow', () => {
         scriptProgress={IN_PROGRESS}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <Button
-        href="/s/test-script/next"
-        text={i18n.continue()}
-        size={Button.ButtonSize.large}
-      />
-    );
+
+    expect(
+      wrapper.containsMatchingElement(
+        <Button
+          href="/s/test-script/next"
+          text={i18n.continue()}
+          size={Button.ButtonSize.large}
+        />
+      )
+    ).to.be.true;
   });
 
   it('renders "Print Certificate" for student', () => {
@@ -85,34 +91,40 @@ describe('ScriptOverviewTopRow', () => {
         scriptProgress={COMPLETED}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <Button
-        href="/s/test-script/next"
-        text={i18n.printCertificate()}
-        size={Button.ButtonSize.large}
-      />
-    );
+
+    expect(
+      wrapper.containsMatchingElement(
+        <Button
+          href="/s/test-script/next"
+          text={i18n.printCertificate()}
+          size={Button.ButtonSize.large}
+        />
+      )
+    ).to.be.true;
   });
 
   it('renders "Assign to section" for teacher', () => {
     const wrapper = shallow(
       <ScriptOverviewTopRow {...defaultProps} viewAs={ViewType.Teacher} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <AssignToSection
-          sectionsInfo={defaultProps.sectionsInfo}
-          courseId={defaultProps.currentCourseId}
-          scriptId={defaultProps.scriptId}
-          assignmentName={defaultProps.scriptTitle}
-        />
+
+    expect(
+      wrapper.containsMatchingElement(
         <div>
-          <span>
-            <ProgressDetailToggle />
-          </span>
+          <AssignToSection
+            sectionsInfo={defaultProps.sectionsInfo}
+            courseId={defaultProps.currentCourseId}
+            scriptId={defaultProps.scriptId}
+            assignmentName={defaultProps.scriptTitle}
+          />
+          <div>
+            <span>
+              <ProgressDetailToggle />
+            </span>
+          </div>
         </div>
-      </div>
-    );
+      )
+    ).to.be.true;
   });
 
   it('renders resources for teacher', () => {
@@ -132,34 +144,36 @@ describe('ScriptOverviewTopRow', () => {
         ]}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <AssignToSection
-          sectionsInfo={defaultProps.sectionsInfo}
-          courseId={defaultProps.currentCourseId}
-          scriptId={defaultProps.scriptId}
-          assignmentName={defaultProps.scriptTitle}
-        />
+    expect(
+      wrapper.containsMatchingElement(
         <div>
-          <DropdownButton
-            text={i18n.teacherResources()}
-            color={Button.ButtonColor.blue}
-          >
-            <a href="https://example.com/a" target="_blank">
-              {i18n.curriculum()}
-            </a>
-            <a href="https://example.com/b" target="_blank">
-              {i18n.vocabulary()}
-            </a>
-          </DropdownButton>
+          <AssignToSection
+            sectionsInfo={defaultProps.sectionsInfo}
+            courseId={defaultProps.currentCourseId}
+            scriptId={defaultProps.scriptId}
+            assignmentName={defaultProps.scriptTitle}
+          />
+          <div>
+            <DropdownButton
+              text={i18n.teacherResources()}
+              color={Button.ButtonColor.blue}
+            >
+              <a href="https://example.com/a" target="_blank">
+                {i18n.curriculum()}
+              </a>
+              <a href="https://example.com/b" target="_blank">
+                {i18n.vocabulary()}
+              </a>
+            </DropdownButton>
+          </div>
+          <div>
+            <span>
+              <ProgressDetailToggle />
+            </span>
+          </div>
         </div>
-        <div>
-          <span>
-            <ProgressDetailToggle />
-          </span>
-        </div>
-      </div>
-    );
+      )
+    ).to.be.true;
   });
 
   it('renders RTL without errors', () => {

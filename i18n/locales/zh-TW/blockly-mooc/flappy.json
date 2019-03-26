@@ -98,7 +98,7 @@
   "setSpeed": "速度設置",
   "setSpeedTooltip": "設置關卡的速度",
   "shareFlappyTwitter": "來玩玩我在 @codeorg　自己完成的像素鳥遊戲吧。",
-  "shareFlappyTwitterDonor": "",
+  "shareFlappyTwitterDonor": "看看我做的像素鳥遊戲。(感謝 {donor} 支援 @codeorg)",
   "shareGame": "分享你的遊戲：",
   "soundRandom": "隨機",
   "soundBounce": "反彈",

@@ -787,6 +787,18 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'foo-2017', versions[2][:name]
   end
 
+  test 'summarize includes bonus levels for stages if include_bonus_levels and include_stages are true' do
+    script = create :script
+    stage = create :stage, script: script
+    level = create :level
+    create :script_level, stage: stage, levels: [level], bonus: true
+
+    response = script.summarize(true, nil, true)
+    assert_equal 1, response[:stages].length
+    assert_equal 1, response[:stages].first[:levels].length
+    assert_equal [level.id], response[:stages].first[:levels].first[:ids]
+  end
+
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])

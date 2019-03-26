@@ -907,6 +907,7 @@ ro:
           </xml>
       Course 4 SCF 1a_authored_hint:
         Course_4_SCF_1a_a: Aduceți-vă aminte de funcțiile din etapa 16.
+        Course_4_SCF_1a_b: "Priveşte acest traseu ca şi drum principal:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
         Course_4_SCF_1a_c: Ar trebui să luați în considerare utilizarea unei "bucle pentru". Nu pentru pași, ci pentru parametrul funcției.
       Course 4 SCF 1b_authored_hint:
         Course_4_SCF_1b_c: Ar trebui să luați în considerare utilizarea unei "bucle for" pentru distanța parcursă de albine.
@@ -1546,10 +1547,306 @@ ro:
           </next>
           </block>
           </xml>
+      CourseD_Dance_Party_01_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Fi sigur că un dansator apare pe ecran.
+
+          *Nivelul se termină după 4 măsuri.*
+        challenges: |-
+          **Provocări suplimentare**
+          * Alege să se audă un alt song.
+          * Redenumeşte-ţi dansatorul.
+      CourseD_Dance_Party_02_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Dansatorul trebuie să treacă la o nouă mişcare după 4 măsuri.
+
+          *Nivelul se termină după 7 măsuri.*
+      CourseD_Dance_Party_03_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          * După 6 măsuri, dansatorul trebuie să facă alt dans decât cel cel făcut după 4 măsuri.
+
+          *Nivelul se termină după 11 măsuri.*
+      CourseD_Dance_Party_04_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          * Trebuie să faci să se schimbe efectul de fundal cândva înainte de măsura 7 a cântecului.
+
+          *Nivelul se termină după 9 măsuri.*
+        challenges: |-
+          **Provocări suplimentare**
+
+          Schimbă efectul de fundal la diferite momente din timpul cântecului conectând noul bloc sub evenimentele <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"măsuri"</title></block></xml>.
+      CourseD_Dance_Party_06_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          * Trebuie să ai cel puţin doi dansatori.
+
+          *Nivelul se termină după 5 măsuri.*
+        challenges: |-
+          **Optional Challenge**
+
+          * Adaugă un al treilea dansator (sau cât de mulţi vrei!)
+          * Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
+      CourseD_Dance_Party_08_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Doi dansatori trebuie să aibă o dimensiune diferită de 100.
+
+          *Nivelul se termină după 5 măsuri.*
+        challenges: |-
+          **Optional Challenge**
+
+          * Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
+      CourseD_Dance_Party_09_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Schimbă nuanţa a cel puţin un caracter.
+
+          *Nivelul se termină după 7 măsuri.*
+      CourseD_Dance_Party_10_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Proprietăţile a doi sau mai mulţi dansatori trebuie să fie schimbate.
+
+          *Nivelul se termină după 7 măsuri.*
+      CourseD_Dance_Party_11_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Fi creativ!
+
+          *Nivelul se termină după 7 măsuri.*
+      CourseD_Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Fi creativ!
+
+          *Nivelul se termină după 7 măsuri.*
+      CourseD_Dance_Party_11b_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Foloseşte blocul `când săgeata stângă este apăsată` pentru a face Robotul să facă o mişcare de dans când apeşi pe ea.
+
+          *Nivelul se termină după 7 măsuri.*
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Asigurați-vă că setați numărul pentru "viteză_câine" la ceva mai mare decât "viteză_pisică".
       D_Frozen_nested3_authored_hint:
         courseD_artist_project3_b: "Încercați buclele imbricate!\n\nUtilizați codul pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.  \n\n- Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n- Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
+      Dance short test 2_authored_hint:
+        challenges: |-
+          **Provocări suplimentare**
+
+          Schimbă efectul de fundal la diferite momente din timpul cântecului conectând noul bloc sub evenimentele <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"măsuri"</title></block></xml>.
+      Dance short test_authored_hint:
+        challenges: |-
+          **Provocări suplimentare**
+
+          Schimbă efectul de fundal la diferite momente din timpul cântecului conectând noul bloc sub evenimentele <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"măsuri"</title></block></xml>.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Fi sigur că un dansator apare pe ecran.
+
+          *Nivelul se termină după 4 măsuri.*
+        challenges: |-
+          **Provocări suplimentare**
+          * Alege să se audă un alt song.
+          * Redenumeşte-ţi dansatorul.
+      Dance_Party_01_low_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Fi sigur că un dansator apare pe ecran.
+
+          *Nivelul se termină după 4 măsuri.*
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Dansatorul trebuie să treacă la o nouă mişcare după 4 măsuri.
+
+          *Nivelul se termină după 7 măsuri.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          * După 6 măsuri, dansatorul trebuie să facă alt dans decât cel cel făcut după 4 măsuri.
+
+          *Nivelul se termină după 11 măsuri.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          * Trebuie să faci să se schimbe efectul de fundal cândva înainte de măsura 7 a cântecului.
+
+          *Nivelul se termină după 9 măsuri.*
+        challenges: |-
+          **Provocări suplimentare**
+
+          Schimbă efectul de fundal la diferite momente din timpul cântecului conectând noul bloc sub evenimentele <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"măsuri"</title></block></xml>.
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          * Trebuie să ai cel puţin doi dansatori.
+
+          *Nivelul se termină după 5 măsuri.*
+        challenges: |-
+          **Optional Challenge**
+
+          * Adaugă un al treilea dansator (sau cât de mulţi vrei!)
+          * Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Doi dansatori trebuie să aibă o dimensiune diferită de 100.
+
+          *Nivelul se termină după 5 măsuri.*
+        challenges: |-
+          **Optional Challenge**
+
+          * Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Schimbă nuanţa a cel puţin un caracter.
+
+          *Nivelul se termină după 7 măsuri.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Fi sigur că un dansator apare pe ecran.
+
+          *Nivelul se termină după 4 măsuri.*
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Proprietăţile a doi sau mai mulţi dansatori trebuie să fie schimbate.
+
+          *Nivelul se termină după 7 măsuri.*
+      Dance_Party_11.5_test_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Fi creativ!
+
+          *Nivelul se termină după 7 măsuri.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Fi creativ!
+
+          *Nivelul se termină după 7 măsuri.*
+      Dance_Party_11_5_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Fi creativ!
+
+          *Nivelul se termină după 7 măsuri.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Foloseşte blocul `când săgeata stângă este apăsată` pentru a face Robotul să facă o mişcare de dans când apeşi pe ea.
+
+          *Nivelul se termină după 7 măsuri.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Dansatorul trebuie să schimbe cu o altă mişcare dup 4 măsuri.
+
+          *Nivelul se termină după 8 măsuri.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Dup 6 măsuri dansatorul trebuie să facă un dans diferit decât cel făcut după 4 măsuri.
+
+          *Nivelul se termină după 12 măsuri.*
+      Dance_Party_4_authored_hint:
+        challenges: |-
+          **Provocări suplimentare**
+
+          Schimbă efectul de fundal la diferite momente din timpul cântecului conectând noul bloc sub evenimentele <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"măsuri"</title></block></xml>.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Dansatorul tău trebuie să facă diferite mutări în primele 12 măsuri ale cântecului.
+
+          *Nivelul se termină după 12măsuri.*
+      Dance_Party_6_authored_hint:
+        challenges: |-
+          **Optional Challenge**
+
+          * Adaugă un al treilea dansator (sau cât de mulţi vrei!)
+          * Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Cei doi dansatori trebuie să aibă o altă dimensiune decât 100.
+
+          *Nivelul se termină după 6 măsuri.*
+        challenges: |-
+          **Optional Challenge**
+
+          * Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Schimbă nunaţa la cel puţin un dansator.
+
+          *Nivelul se termină după 8 măsuri.*
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Fi sigur că un dansator apare pe ecran.
+
+          *Nivelul se termină după 4 măsuri.*
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Dansatorul trebuie să schimbe cu o altă mişcare dup 4 măsuri.
+
+          *Nivelul se termină după 8 măsuri.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Dup 6 măsuri dansatorul trebuie să facă un dans diferit decât cel făcut după 4 măsuri.
+
+          *Nivelul se termină după 12 măsuri.*
+      HOC Dance 3_draft_authored_hint:
+        challenges: |-
+          **Provocări suplimentare**
+
+          Schimbă efectul de fundal la diferite momente din timpul cântecului conectând noul bloc sub evenimentele <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"măsuri"</title></block></xml>.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Dansatorul tău trebuie să facă diferite mutări în primele 12 măsuri ale cântecului.
+
+          *Nivelul se termină după 12măsuri.*
+      HOC Dance 5_draft_authored_hint:
+        challenges: |-
+          **Optional Challenge**
+
+          * Adaugă un al treilea dansator (sau cât de mulţi vrei!)
+          * Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Cei doi dansatori trebuie să aibă o altă dimensiune decât 100.
+
+          *Nivelul se termină după 6 măsuri.*
+        challenges: |-
+          **Optional Challenge**
+
+          * Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Schimbă nunaţa la cel puţin un dansator.
+
+          *Nivelul se termină după 8 măsuri.*
       Inspirational Artwork_authored_hint:
         brush_width: Am setat lățimea periei la 1 apoi culoarea la albastru, înainte de a face orice altceva.
         double_loop: Încercați să puneți o buclă "pentru" în interiorul unei bucle "repetă".
@@ -1565,6 +1862,12 @@ ro:
         double_loop: Încercați să puneți o buclă "pentru" în interiorul unei bucle "repetă".
         specifics: "Bucla \"pentru\" rulează de la trei la șaptesprezece pentru fiecare dintre cele șase \"petale\" înainte de a trece la următoarea, desenând forme doar cu un număr impar de laturi.\n        \nBlocul `setează alfa` folosește diviziunea pentru a decolora culoarea, pe măsură ce numărul de cadre devine mai mare."
         after: După ce ați terminat cu fiecare "petală", asigurați-vă că "mutați înainte" cu 20 de pixeli înainte de a efectua o rotație de 60 de grade.
+      Ryan_Demo_authored_hint:
+        validation: |-
+          **Cum trec de acest nivel?**
+          * Dansatorul trebuie să treacă la o nouă mişcare după 4 măsuri.
+
+          *Nivelul se termină după 7 măsuri.*
       aE3_authored_hint:
         aE3_d: Dacă codul dvs. devine prea confuz, puteți oricând să faceți clic pe "Începeți din nou" și să o luați de la capăt!
       aE3alternate_authored_hint:

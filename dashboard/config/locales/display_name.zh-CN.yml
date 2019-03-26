@@ -6,28 +6,83 @@ zh-CN:
       App Lab Intro 8 - Video Design Mode: 视频：设计模式
       App Lab Intro 8 - Video Getting Started: 视频：开始
       App Lab Intro 8 - Video Images and Sounds: 视频：图像和声音
+      App Lab Intro 8 - Video Make It Interactive: 视频：使其可互动
       App Lab Intro 8 - Video Share Your App: 视频：分享应用程序
       AppLab Intro 3 - Change Screen Color: 更改屏幕颜色
       AppLab Intro 3 - Change Text 2: 更改文本
       AppLab Intro 3 - Change Text: 更改文本
+      AppLab Intro 3 - Change Two Buttons: 两个按钮
+      AppLab Intro 3 - Full Text: 两个按钮
+      AppLab Intro 3 - onEvent before: 更多 当事件发生时(onEvent) 的练习
+      AppLab Intro 3 - onEvent intro: 使按钮工作
+      AppLab Intro 3 - onEvent mouseInOut: 更多 当事件发生时(onEvent) 的练习
       AppLab Intro 3 - onEvent mouseOut: 使用 mouseout
+      AppLab Intro 3 - onEvent mouseOver: 使用 鼠标悬停
+      AppLab Intro 3 - onEvent twoButtons: 更多 当事件发生时(onEvent) 的练习
+      AppLab Intro 3 - playSound: 使用 播放声音
+      AppLab Intro 3 - stopSound: 使用 播放声音
       AppLab Intro 4 - Change Screen Color: 更改屏幕颜色
       AppLab Intro 4 - Change Text 2: 更改文本
       AppLab Intro 4 - Change Text: 更改文本
+      AppLab Intro 4 - Change Two Buttons: 两个按钮
+      AppLab Intro 4 - Full Text: 两个按钮
       AppLab Intro 4 - Video Welcome: 欢迎来到《编程一小时》
+      AppLab Intro 4 - Video onEvent: 使用 onEvent
       AppLab Intro 4 - Video setProperty: 开始
+      AppLab Intro 4 - Video using onEvent: 使用 onEvent
+      AppLab Intro 4 - onEvent before: 更多 当事件发生时(onEvent) 的练习
+      AppLab Intro 4 - onEvent intro: 使按钮工作
+      AppLab Intro 4 - onEvent mouseOver: 使用 鼠标悬停
+      AppLab Intro 4 - onEvent twoButtons: 更多 当事件发生时(onEvent) 的练习
+      AppLab Intro 4 - playSound: 使用 播放声音
+      AppLab Intro 4 - stopSound: 使用 播放声音
       AppLab Intro 5 - Change Screen Color: 更改屏幕颜色
       AppLab Intro 5 - Change Text 2: 更改文本
       AppLab Intro 5 - Change Text: 更改文本
+      AppLab Intro 5 - Change Two Buttons: 两个按钮
+      AppLab Intro 5 - Full Text: 两个按钮
+      AppLab Intro 5 - addButton: 使用 播放声音
+      AppLab Intro 5 - go further: 使用 播放声音
+      AppLab Intro 5 - onEvent intro: 使按钮工作
+      AppLab Intro 5 - onEvent twoButtons: 更多 当事件发生时(onEvent) 的练习
+      AppLab Intro 5 - playSound: 使用 播放声音
+      AppLab Intro 5 - rate it app: 使用 播放声音
+      AppLab Intro 5 - setScreen: 使用 播放声音
+      AppLab Intro 5 - share keep going: 使用 播放声音
+      AppLab Intro 5 - socialTemplate: 使用 播放声音
       AppLab Intro 6 - Change Screen Color: 更改屏幕颜色
       AppLab Intro 6 - Change Text 2: 更改文本
+      AppLab Intro 6 - Full Text: 两个按钮
       AppLab Intro 6 - Video welcome: 开始
+      AppLab Intro 6 - animalSoundBoard: 使用 播放声音
+      AppLab Intro 6 - blankApp: 使用 播放声音
+      AppLab Intro 6 - onEvent intro: 使按钮工作
+      AppLab Intro 6 - onEvent twoButtons: 更多 当事件发生时(onEvent) 的练习
+      AppLab Intro 6 - playSound Template: 使用 播放声音
+      AppLab Intro 6 - playSound: 使用 播放声音
+      AppLab Intro 6 - quizApp: 使用 播放声音
       AppLab Intro 7 - Change Screen Color: 更改屏幕颜色
       AppLab Intro 7 - Change Text 2: 更改文本
+      AppLab Intro 7 - Full Text: 两个按钮
+      AppLab Intro 7 - onEvent intro: 使按钮工作
+      AppLab Intro 7 - onEvent twoButtons: 更多 当事件发生时(onEvent) 的练习
+      AppLab Intro 7 - playSound: 使用 播放声音
+      CSD If Else Map: If-else 语句
+      CSD If Else Map_2018: If-else 语句
+      CSD If Else Map_2019: If-else 语句
       CSD Polling Events Map: 轮询事件
       CSD Polling Events Map_2018: 轮询事件
       CSD Polling Events Map_2019: 轮询事件
       CSD Timed Loop Map: 定时的循环
+      CSD U2 CC Search Map: 知识共享检索
+      CSD U2 CC Search Map_2018: 知识共享检索
+      CSD U2 CC Search Map_2019: 知识共享检索
+      CSD U2 CSS Classes Map: CSS 类
+      CSD U2 CSS Classes Map_2018: CSS 类
+      CSD U2 CSS Classes Map_2019: CSS 类
+      CSD U2 HTML Tags Map: HTML 标签
+      CSD U2 HTML Tags Map_2018: HTML 标签
+      CSD U2 HTML Tags Map_2019: HTML 标签
       CSD U2 Heading Sizes: 标题大小
       CSD U2 Heading Sizes_2018: 标题大小
       CSD U2 Heading Sizes_2019: 标题大小
@@ -49,12 +104,27 @@ zh-CN:
       CSD U2 Style Sheet Map: CSS和样式表
       CSD U2 Style Sheet Map_2018: CSS和样式表
       CSD U2 Style Sheet Map_2019: CSS和样式表
+      CSD U2 a tag map: 超链接
+      CSD U2 a tag map_2018: 超链接
+      CSD U2 a tag map_2019: 超链接
       CSD U2 images map: HTML 中的图像
       CSD U2 images map_2018: HTML 中的图像
       CSD U2 images map_2019: HTML 中的图像
+      CSD U3 - Booleans Video: '视频: 布尔值'
+      CSD U3 - Booleans Video_2018: '视频: 布尔值'
+      CSD U3 - Booleans Video_2019: '视频: 布尔值'
+      CSD U3 - Conditionals Video: 视频：条件
+      CSD U3 - Conditionals Video_2018: 视频：条件
+      CSD U3 - Conditionals Video_2019: 视频：条件
+      CSD U3 Animation Edit Map: 编辑图像
+      CSD U3 Animation Edit Map_2018: 编辑图像
+      CSD U3 Animation Edit Map_2019: 编辑图像
       CSD U3 Animation Tab Map: 动画标签页
       CSD U3 Animation Tab Map_2018: 动画标签页
       CSD U3 Animation Tab Map_2019: 动画标签页
+      CSD U3 AnimationsMulti Play Defender: 示例游戏
+      CSD U3 AnimationsMulti Play Defender_2018: 示例游戏
+      CSD U3 AnimationsMulti Play Defender_2019: 示例游戏
       CSD U3 Draw Loop Map: 绘制循环
       CSD U3 L11 Freeplay: 自由发挥
       CSD U3 L11 Freeplay_2018: 自由发挥
@@ -114,6 +184,9 @@ zh-CN:
       CSD U3 collisions build isTouching: 碰撞检测
       CSD U3 collisions build isTouching_2018: 碰撞检测
       CSD U3 collisions build isTouching_2019: 碰撞检测
+      CSD U3 collisions car intro: 示例游戏
+      CSD U3 collisions car intro_2018: 示例游戏
+      CSD U3 collisions car intro_2019: 示例游戏
       CSD U3 functions map: 函数
       CSD U4 Mult Screen Map: 多屏幕应用程序
       CSD U4 Mult Screen Map_2018: 多屏幕应用程序
@@ -136,6 +209,7 @@ zh-CN:
       CSD U6 setProperty Map_2019: 使用代码设计屏幕
       'CSD: For Loop_2018': 计数循环
       'CSD: For Loop_2019': 计数循环
+      CSDu2 IP CC Search: 知识共享检索
       CourseEF_video_IntroSpriteLab: 这是精灵实验室
       CourseEF_video_IntroSpriteLab_2019: 这是精灵实验室
       Dance_Party_extras_battle: 舞蹈团队
