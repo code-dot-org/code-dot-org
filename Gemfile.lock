@@ -431,7 +431,7 @@ GEM
       redis (~> 3.2)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.23)
+    ffi (1.10.0)
     firebase (0.2.6)
       httpclient
       json
