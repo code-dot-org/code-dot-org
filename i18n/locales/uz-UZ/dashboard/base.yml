@@ -87,6 +87,8 @@ uz:
       classroom: 'O‘qituvchining bosh sahifasi'
       create: 'Yaratmoq'
       applab: 'Ilova labaratoriyasi'
+      bounce: 'Sakrash'
+      iceage: 'Muzlik davri'
   teacher:
     panel:
       student: 'O‘quvchi'
@@ -166,6 +168,15 @@ uz:
       report_abuse_form:
         abuse_type:
           other: 'Boshqa'
+  flex_category:
+    csf_jigsaw: 'Topishmoq'
+    csf_loops: 'Sikllar'
+    csf_conditionals: 'Shart buyruqlari'
+    csf_functions: 'Funksiyalar'
+    csf_variables: 'O‘zgaruvchilar'
+    csp_variables: 'O‘zgaruvchilar'
+    csp_conditionals: 'Shart buyruqlari'
+    csp_functions: 'Funksiyalar'
   pd:
     form_labels:
       email: 'Elektron pochta'

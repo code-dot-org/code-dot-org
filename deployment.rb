@@ -6,17 +6,12 @@ ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __FILE__)
 require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
 
 require 'csv'
-require 'yaml'
+require 'cdo/yaml'
 require 'cdo/erb'
 require 'cdo/slog'
 require 'os'
 require 'cdo/git_utils'
 require 'uri'
-
-def load_yaml_file(path)
-  return nil unless File.file?(path)
-  YAML.load(IO.read(path))
-end
 
 def load_languages(path)
   [].tap do |results|
@@ -48,8 +43,8 @@ def load_configuration
 
   hostname = `hostname`.strip
 
-  global_config = load_yaml_file(File.join(root_dir, 'globals.yml')) || {}
-  local_config = load_yaml_file(File.join(root_dir, 'locals.yml')) || {}
+  global_config = YAML.load_file(File.join(root_dir, 'globals.yml')) || {}
+  local_config = YAML.load_file(File.join(root_dir, 'locals.yml')) || {}
 
   env = local_config['env'] || global_config['env'] || ENV['RACK_ENV'] || ENV['RAILS_ENV'] || 'development'
 

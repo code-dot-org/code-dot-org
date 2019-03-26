@@ -312,14 +312,25 @@ el:
       driver: Οδηγός-αρχηγός
       navigator: Πλοηγός
       create: Δημιουργία
+      algebra_game: Άλγεβρα
       applab: App Lab
       artist: Καλλιτέχνης
-      gamelab: Game Lab
-      playlab: Εργαστήριο Παιχνιδιού
-      spritelab: Sprite Lab
-      minecraft: Minecraft
-      flappy: Πουλάκι
+      bounce: Αναπήδηση
       dance: Πάρτι Χορού
+      flappy: Πουλάκι
+      frozen: Ψυχρά κι ανάποδα
+      gamelab: Game Lab
+      gumball: Τσιχλόμπαλα
+      iceage: Εποχή των Παγετώνων
+      infinity: Άπειρο
+      minecraft_adventurer: Ζήστε μια περιπέτεια στο Minecraft
+      minecraft_designer: Minecraft
+      playlab: Εργαστήριο Παιχνιδιού
+      sports: Αθλητισμός
+      spritelab: Sprite Lab
+      starwars: Star Wars
+      starwarsblocks: Πόλεμος τον Άστρων (μπλοκ)
+      starwarsblocks_hour: Πόλεμος τον Άστρων (μπλοκ)
       view_all: Όλα τα έργα...
     popup:
       progress_for_user: πρόοδος του %{name}
@@ -862,6 +873,21 @@ el:
           και το %{link_start_tos}Terms του Service%{link_end}
   flex_category:
     required: Επισκόπηση
+    csf_digcit: Ψηφιακή υπηκοότητα
+    csf_jigsaw: Παζλ
+    csf_loops: Βρόχοι
+    csf_events: Συμβάντα
+    csf_binary: Δυαδικό
+    csf_conditionals: Συνθήκες
+    csf_spritelab: Sprite Lab
+    csf_nested_loops: Φωλιασμένες Επαναλήψεις
+    csf_functions: Συναρτήσεις
+    csf_variables: Μεταβλητές
+    csf_for_loops: Βρόχοι Για
+    csf_internet: Διαδίκτυο
+    csp_variables: Μεταβλητές
+    csp_conditionals: Συνθήκες
+    csp_functions: Συναρτήσεις
   view_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
   pd:
     form_labels:

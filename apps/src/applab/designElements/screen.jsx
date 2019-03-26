@@ -3,11 +3,16 @@ import React from 'react';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ImagePickerPropertyRow from './ImagePickerPropertyRow';
+import ThemePropertyRow from './ThemePropertyRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import DefaultScreenButtonPropertyRow from './DefaultScreenButtonPropertyRow';
+import designMode from '../designMode';
+import elementLibrary from './library';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
+import color from '../../util/color';
+import experiments from '../../util/experiments';
 
 class ScreenProperties extends React.Component {
   static propTypes = {
@@ -48,6 +53,12 @@ class ScreenProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
+        {experiments.isEnabled('applabThemes') && (
+          <ThemePropertyRow
+            initialValue={element.getAttribute('data-theme')}
+            handleChange={this.props.handleChange.bind(this, 'theme')}
+          />
+        )}
         <ColorPickerPropertyRow
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
@@ -142,6 +153,13 @@ class ScreenEvents extends React.Component {
 export default {
   PropertyTab: ScreenProperties,
   EventTab: ScreenEvents,
+  themeValues: {
+    backgroundColor: {
+      type: 'color',
+      classic: color.white,
+      dark: color.black
+    }
+  },
 
   create: function() {
     const element = document.createElement('div');
@@ -160,6 +178,10 @@ export default {
     // see http://philipwalton.com/articles/what-no-one-told-you-about-z-index/
     element.style.position = 'absolute';
     element.style.zIndex = 0;
+    if (experiments.isEnabled('applabThemes')) {
+      element.setAttribute('data-theme', applabConstants.themeOptions[0]);
+      elementLibrary.applyCurrentTheme(element, element);
+    }
 
     return element;
   },
@@ -171,7 +193,47 @@ export default {
     // Properly position existing screens, so that canvases appear correctly.
     element.style.position = 'absolute';
     element.style.zIndex = 0;
-
     element.setAttribute('tabIndex', '1');
+
+    if (experiments.isEnabled('applabThemes')) {
+      if (!element.getAttribute('data-theme')) {
+        element.setAttribute('data-theme', applabConstants.themeOptions[0]);
+      }
+
+      if (element.style.backgroundColor === '') {
+        element.style.backgroundColor = this.themeValues.backgroundColor[
+          applabConstants.themeOptions[0]
+        ];
+      }
+    }
+  },
+  readProperty: function(element, name) {
+    switch (name) {
+      case 'theme':
+        if (experiments.isEnabled('applabThemes')) {
+          return element.getAttribute('data-theme');
+        } else {
+          throw `unknown property name ${name}`;
+        }
+      default:
+        throw `unknown property name ${name}`;
+    }
+  },
+  onPropertyChange: function(element, name, value) {
+    if (experiments.isEnabled('applabThemes')) {
+      switch (name) {
+        case 'theme': {
+          const prevValue =
+            element.getAttribute('data-theme') ||
+            applabConstants.themeOptions[0];
+          element.setAttribute('data-theme', value);
+          designMode.changeThemeForCurrentScreen(prevValue, value);
+          return true;
+        }
+        default:
+          break;
+      }
+    }
+    return false;
   }
 };

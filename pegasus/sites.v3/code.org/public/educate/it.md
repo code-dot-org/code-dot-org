@@ -18,7 +18,7 @@ Code.org takes a tiered approach to the level of support we provide for differen
 
 | **Browser** | **Operating System** |
 |---------------|---------------|
-| Chrome 33.x and higher | XP & Windows 7 and higher <br><br> Mac OS 10.6 and higher <br><br> Android 4.1.2 and higher <br><br> ChromeOS (Chromebooks)|
+| Chrome 33.x and higher | Windows 7 and higher <br><br> Mac OS 10.6 and higher <br><br> Android 4.1.2 and higher <br><br> ChromeOS (Chromebooks) |
 | Safari 7.0.x and higher | Mac OS 10.6 and higher <br><br> iOS 7.x and higher|
 | Internet Explorer 11 and higher | Windows 7 and higher <br><br> Mac OS 10.6 and higher|
 | Microsoft Edge | Windows 10 and higher |
