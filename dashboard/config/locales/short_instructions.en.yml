@@ -653,16 +653,6 @@ en:
           * (Hint: you will use almost all the same code as the `moveCloud0` function)
         * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
           * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
-      CSD U6 params modify clouds_2019: |-
-        # Clouds
-
-        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
-
-        # Do This
-        * Create a new function `moveCloud(name)` that will move any cloud.
-          * (Hint: you will use almost all the same code as the `moveCloud0` function)
-        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
-          * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
       CSD U6 params modify planes: |-
         # Multi-plane Controller
 
@@ -1450,6 +1440,7 @@ en:
       Code Studio Puzzle Challenge Square - Artist: Draw a square by using the variable length provided.
       Code Studio Puzzle Challenge Var - Artist: Draw a line by using a variable "length" set to 180.
       Collector Demo: Look at all this loot! Help me get as many coins as I can so I can improve my farm. I can only use 9 blocks though!
+      CoureE_HOC 2018 Level_7a: Search these underwater ruins for a chest.
       Course 2 Bee Loops 1: 'Hi, I''m a bee. Can you help me collect the nectar from these flowers? '
       Course 2 Bee Loops 13: 'Assessment: Use the repeat block to collect all of the nectar.'
       Course 2 Bee Loops 2: Can you do the same task more easily with a loop?
@@ -2435,8 +2426,8 @@ en:
       NetSim_Variant2: 'NetSim: Variant 2: Students connect directly to one another and send entire packets back and forth, exploring systems of encoding data.'
       NetSim_Variant3: 'NetSim: Variant 3: Connects groups of 2-6 students with a router, and explores issues in routing and DNS'
       New Artist Project: Draw something awesome! Your code is saved as a project that you can return to at any time.
-      New Basketball Project: Create your own Basketball game. You can change all the rules. When you're done, click Finish to let friends try your game on their phones.
-      New Bounce Project: Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones.
+      New Basketball Project: Create your own Basketball game. You can change all the rules. When you're done, click Share to let friends try your game on their phones.
+      New Bounce Project: Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Share to let friends try your game on their phones.
       New Course 4 Artist Functions Level 4: Use the "draw a square" function to draw this pattern.
       New Gumball Project: Create anything you like and share it!
       New Ice Age Project: Create anything you like and share it!
@@ -3601,30 +3592,29 @@ en:
       Valentine_playlab_01: 'Program Kiki (Actor 1) to move left and right when the left and right arrows are pressed. When Kiki is clicked, she should throw hearts towards her friends. '
       Vigenere: Test
       Virtual Pet 1 Predict: 'What do you think will happen when you click on the alien?  '
-      Virtual Pet 1 Predict_2019: 'What do you think will happen when you click on the alien?  '
+      Virtual Pet 1 Predict_2019: 'What do you think will happen when you click "▶ Run"?  '
       Virtual Pet 1 Predict_simple: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1 fix: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 1: What do you think will happen if you press "Run" and then click on her?
-      Virtual Pet 1_2019: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 1_simple: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 2 - Validated (Ram): Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2 - Validated: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
-      Virtual Pet 2_2019: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2_2019: Use the **Costumes** tab to create or select a new costume for your virtual pet.
       Virtual Pet 2_simple: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 2_simple_clone: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 3: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
-      Virtual Pet 3_2019: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
+      Virtual Pet 3_2019: Add a new sprite to the screen, then give it a costume that looks like food your pet enjoys eating.
       Virtual Pet 3_simple: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
-      Virtual Pet 4_2019: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
+      Virtual Pet 4_2019: Add a behavior to the food to make it follow your mouse, then lead it to your pet.
       Virtual Pet 4_simple: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
       Virtual Pet 5 - Validated: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
-      Virtual Pet 5_2019: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
+      Virtual Pet 5_2019: Add an event that removes the food when it touches your pet.
       Virtual Pet 5_simple: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 6: Add an apple that returns the giraffe back to regular size when they touch.
-      Virtual Pet 6_2019: Add an apple that returns the giraffe back to regular size when they touch.
+      Virtual Pet 6_2019: Add a new food container sprite to your screen. Add code that makes the food container create new food when it is clicked. As soon as it is created, the food should immediately begin following your pointer.
       Virtual Pet 6_simple: Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet Freeplay: 'Freeplay: What more can you make your giraffe do? '
       Virtual Pet Freeplay_2019: 'Freeplay: What more can you make your giraffe do? '
@@ -3651,6 +3641,7 @@ en:
       aE7: "If you create another loop like this one, but turn left instead of right, what happens? \n\nCan you repeat all of that to draw this wave?"
       aE8: "Now let's loop that whole thing four times to create this picture frame. Watch out for the corners - you can't just turn 90 degrees! \n\nIf looping a 3 degree turn 60 times makes a half circle, which of these blocks of code will make an additional quarter circle for the corners?"
       aEfreeplay: Free Play!
+      aalevelcopy: Add instructions
       allHallows2017: Trap the Code.org employees in the crayon box by drawing a square with 320 pixel sides!
       allthethings data blocks test: Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
       allthethings design mode elements: Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
@@ -4330,7 +4321,7 @@ en:
       courseC19_playLab_EOC2: Use events and actions to make your hero move. Get to the targets.
       courseC19_playLab_EOC3: Add two or more additional actors to your game and make them move.
       courseC19_playLab_EOC4: Find some interesting ways to change the score in your game. Get the score to show something other than 0 to continue.
-      courseC19_playLab_EOC5: Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.
+      courseC19_playLab_EOC5: Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want.
       courseC19_playLab_EOC6: You've finished! Now you can play your game or share it with your friends and classmates!
       courseC_PlayLab_events1: Make Jorge the Dog (actor 1) say "Hi there."
       courseC_PlayLab_events1_2018: Make Jorge the Dog (actor 1) say "Hi there."
@@ -4388,19 +4379,20 @@ en:
       courseC_artist_loops1: "*\"Zombie.  Draw!\"*\n\nThe zombie wants to draw a line from where he is to the garden of sunflowers.  Can you help him?  \n*(The garden is 250 pixels away)*  "
       courseC_artist_loops1a: 'Get the artist to the center of the play area, then draw a bird using a sticker. '
       courseC_artist_loops1a_2018: 'Get the artist to the center of the play area, then draw a bird using a sticker. '
-      courseC_artist_loops1a_2019: 'Get the artist to the center of the play area, then draw a bird using a sticker. '
+      courseC_artist_loops1a_2019: 'Get the artist to the center of the play area, then draw a sticker. '
+      courseC_artist_loops1b_2019: 'Change the direction your sticker is facing by adding a `turn` command to your code. '
       courseC_artist_loops2: Now that the zombie knows his way, help him dig holes along the path to plant more flowers!
       courseC_artist_loops2a: Now, use a loop to spin your bird around 12 times with a 30 degree turn.
       courseC_artist_loops2a_2018: Now, use a loop to spin your bird around 12 times with a 30 degree turn.
-      courseC_artist_loops2a_2019: Now, use a loop to spin your bird around 12 times with a 30 degree turn.
+      courseC_artist_loops2a_2019: Now, use a loop to make more copies of your sticker. Try changing the numbers in the turn and repeat blocks to make different patterns.
       courseC_artist_loops3: Excellent!  Now that the flowers have sprouted, help the zombie place a friend every 50 pixels to guard over them until they are grown.
       courseC_artist_loops3a: Now add a bat!
       courseC_artist_loops3a_2018: Now add a bat!
-      courseC_artist_loops3a_2019: Now add a bat!
+      courseC_artist_loops3a_2019: Now add a second sticker!
       courseC_artist_loops4: The zombie has found an empty farm!  Can you help him bring it to life by stamping animal stickers every 100 pixels around the border?
       courseC_artist_loops4a: Try jumping forward by 75 pixels.
       courseC_artist_loops4a_2018: Try jumping forward by 75 pixels.
-      courseC_artist_loops4a_2019: Try jumping forward by 75 pixels.
+      courseC_artist_loops4a_2019: Edit your code so that you jump forward between drawing the two stickers.
       courseC_artist_loops5: "Great!  Now it's time to make a fence inside to keep the animals out.   \n\n"
       courseC_artist_loops5a: Try new stickers!
       courseC_artist_loops5a_2018: Try new stickers!
@@ -5347,16 +5339,16 @@ en:
         When Thuy is clicked, make Rikki share some SAFE information about her!
       courseE_aboutme_5: "Rikki loves ice cream! She searched for an ice cream cone costume, but the closest thing she could find was... soap. Yuck! \n\nLet's surprise her by **drawing an ice cream cone costume** that she can use for that sprite.\n\n**Create an Ice Cream Cone Costume**\n\n* Click the **Costumes** tab.\n \n* Draw an ice cream cone!\n \n* Replace the soap sprite's costume with your ice cream cone costume in the code below!"
       courseE_aboutme_6: |-
-        Rikki's poster is looking good, but it could use more excitement!
+        Rikki's poster is looking good, but it could use more action!
 
         **Three Tasks to Complete Rikki's Poster**
 
         * Make Rikki begin wandering when she's clicked. She loves exploring!
 
-        * Make Thuy begin jittering when Rikki touches her. She's ticklish!
+        * Make Thuy begin jittering when Rikki touches her. Tickle tickle!
 
-        * Make the ice cream cone disappear when Rikki touches it. All gone!
-      courseE_aboutme_freeplay: "Thanks for helping Rikki. Now it's your turn to **make your own interactive poster**! \n\nUse costumes, messages, events, and behaviors to tell the world about yourself! \n\nJust as with Rikki, remember to share SAFE information!\n\n**Examples of SAFE Information**\n* first name\n* favorite video games, books, or TV shows\n* respectful opinions (no insults or bad language)\n\n**Examples of UNSAFE Information**\n* full name\n* home address\n* phone number"
+        * Remove the ice cream cone when Rikki touches it. Yummy!
+      courseE_aboutme_freeplay: "Thanks for helping Rikki. Now it's your turn to **make your own interactive poster**! \n\nUse costumes, messages, events, and behaviors to tell the world about yourself! \n\nJust as with Rikki, remember to share SAFE information!"
       courseE_artist_concept1: 'Recreate this image. '
       courseE_artist_concept1_2018: 'Recreate this image. '
       courseE_artist_concept1_2019: 'Recreate this image. '

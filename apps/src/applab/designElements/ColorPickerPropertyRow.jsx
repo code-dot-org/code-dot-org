@@ -24,6 +24,15 @@ export default class ColorPickerPropertyRow extends React.Component {
     window.removeEventListener('mousedown', this.handlePageClick);
   }
 
+  componentWillReceiveProps(nextProps) {
+    const {initialValue} = nextProps;
+    if (this.props.initialValue !== initialValue) {
+      this.setState({
+        value: initialValue
+      });
+    }
+  }
+
   handlePageClick = e => {
     if (e.target === ReactDOM.findDOMNode(this.refs.button)) {
       return;
