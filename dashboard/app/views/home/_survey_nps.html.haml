@@ -11,7 +11,7 @@
   }
 
 
-.survey{style: "background-color: rgb(200,200,200); padding:25px; font-size:14px; border-radius: 4px; margin-bottom: 60px"}
+.survey{style: "background-color: rgb(236,236,236); padding:25px; font-size:14px; border-radius: 4px; margin-bottom: 60px; border: 1px solid rgb(187,187,187)"}
   #surveythanks{style: "display: none"} Thank you for your response.
   #surveybody
     %h1{style: "margin-top:0px; color: rgb(80,80,80); font-size: 25px"} Quick survey
@@ -22,7 +22,7 @@
         - -1.upto(10) do |i|
           - display = i == -1 ? "none" : "inline-block"
           %input{style: "margin-right:3px; vertical-align:top; display: none", id: "radio_#{i}", type: "radio", name: "survey[nps_value]", value: i, onclick: "enableSurveySubmit()"}
-          %label{style: "display: #{display}; font-size: 14px; width: 32px; height: 32px; margin-right: 24px; background-color: white; border-radius: 32px; text-align: center; line-height: 32px", for: "radio_#{i}"}
+          %label{style: "display: #{display}; font-size: 14px; width: 32px; height: 32px; margin-right: 24px; background-color: white; border-radius: 32px; text-align: center; line-height: 32px; border: 1px solid rgb(187,187,187)", for: "radio_#{i}"}
             = i
       #scale{style: "font-size: 12px; width: 710px; padding-left: 20px; overflow: hidden; padding-bottom: 20px"}
         #left{style: "float: left"}
