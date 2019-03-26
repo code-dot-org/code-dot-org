@@ -767,12 +767,11 @@ describe('entry tests', () => {
             // chunks. The next cache group eliminates some of this duplication
             // by pulling more modules from "common" into "code-studio-common".
             //
-            // The cacheGroup below opportunistically pulls modules from
-            // "common" into "code-studio-common". The key is that it uses
-            // minChunks to prevent any modules used only by appsEntries from
-            // being extracted, providing a guarantee that we don't
-            // unnecessarily increase the download size for pages which include
-            // code-studio-common.js but not common.js.
+            // The use of minChunks provides a guarantee that we don't
+            // unnecessarily move things into "code-studio-common" which are
+            // needed only by appsEntries. This avoids increasing the download
+            // size for code studio pages which include code-studio-common.js
+            // but not common.js.
             //
             // There is no converse guarantee that this strategy will eliminate
             // all duplication between "common" and "code-studio-common".
@@ -781,7 +780,7 @@ describe('entry tests', () => {
             //
             // In the future, we want to move toward asynchronous imports, which
             // allow webpack to manage bundle splitting and sharing behind the
-            // scene. Once we adopt this approach, the need for predefined
+            // scenes. Once we adopt this approach, the need for predefined
             // cacheGroups will go away.
             //
             // For more information see: https://webpack.js.org/guides/code-splitting/
