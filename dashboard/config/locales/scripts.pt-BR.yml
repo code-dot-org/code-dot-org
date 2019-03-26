@@ -3234,6 +3234,8 @@ pt-BR:
             longe com funções.
         coursef-2017:
           stages:
+            Ice Age Play Lab:
+              name: Eventos na Era do Gelo
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
             Building a Foundation:

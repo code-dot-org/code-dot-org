@@ -205,9 +205,18 @@ hy:
       create: Ստեղծել
       applab: App Lab
       artist: Արտիստ
-      playlab: Play Lab
-      minecraft: Minecraft
+      bounce: Ցատկում
       flappy: Flappy
+      frozen: սառած
+      gumball: The Amazing World of Gumball
+      iceage: Ice Age
+      infinity: անվերջություն
+      minecraft_adventurer: Արկածներ Minecraft-ի հետ
+      minecraft_designer: Minecraft
+      playlab: Play Lab
+      starwars: Աստղային պատերազմներ
+      starwarsblocks: Star Wars (Blocks)
+      starwarsblocks_hour: Star Wars (Blocks)
     popup:
       progress_for_user: "%{name}-ի առաջընթացը"
       progress: Ձեր առաջընթացը
@@ -727,7 +736,21 @@ hy:
     required: Overview
     content: պարունակություն
     practice: Ուսուցիչի փորձեր
+    csf_digcit: Digital Citizenship
+    csf_jigsaw: ոլորահատ սղոց
+    csf_loops: loops
+    csf_events: Իրադարձություններ
+    csf_binary: երկուական
+    csf_conditionals: conditionals
+    csf_nested_loops: nested Loops
+    csf_functions: գործառույթները
+    csf_variables: փոփոխականների
+    csf_for_loops: For Loops
+    csf_internet: Internet
     csp2_1_2018: 'Unit 2: Digital Information'
+    csp_variables: փոփոխականների
+    csp_conditionals: conditionals
+    csp_functions: գործառույթները
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

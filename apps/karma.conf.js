@@ -13,10 +13,9 @@ if (envConstants.COVERAGE) {
   reporters.push('coverage');
 }
 
-module.exports = function (config) {
+module.exports = function(config) {
   var browser = envConstants.BROWSER || 'PhantomJS';
   config.set({
-
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
@@ -26,29 +25,29 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     // handled in grunt-karma config
-    files: [
-    ],
+    files: [],
 
     proxies: {
-      '/blockly/media/': 'http://localhost:'+PORT+'/base/static/',
-      '/lib/blockly/media/': 'http://localhost:'+PORT+'/base/static/',
-      '/base/static/1x1.gif': 'http://localhost:'+PORT+'/base/lib/blockly/media/1x1.gif',
-      '/v3/assets/fake_id': 'http://localhost:'+PORT+'/base/test/integration/assets/fake_id',
+      '/blockly/media/': 'http://localhost:' + PORT + '/base/static/',
+      '/lib/blockly/media/': 'http://localhost:' + PORT + '/base/static/',
+      '/base/static/1x1.gif':
+        'http://localhost:' + PORT + '/base/lib/blockly/media/1x1.gif',
+      '/v3/assets/fake_id':
+        'http://localhost:' + PORT + '/base/test/integration/assets/fake_id'
     },
 
     // list of files to exclude
-    exclude: [
-    ],
+    exclude: [],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      "test/index.js": ["webpack", "sourcemap"],
-      "test/integration-tests.js": ["webpack", "sourcemap"],
-      "test/unit-tests.js": ["webpack"],
-      "test/code-studio-tests.js": ["webpack", "sourcemap"],
-      "test/storybook-tests.js": ["webpack", "sourcemap"],
-      "test/scratch-tests.js": ["webpack"],
+      'test/index.js': ['webpack', 'sourcemap'],
+      'test/integration-tests.js': ['webpack', 'sourcemap'],
+      'test/unit-tests.js': ['webpack'],
+      'test/code-studio-tests.js': ['webpack', 'sourcemap'],
+      'test/storybook-tests.js': ['webpack', 'sourcemap'],
+      'test/scratch-tests.js': ['webpack']
     },
 
     webpack: webpackConfig,
@@ -64,7 +63,7 @@ module.exports = function (config) {
       mocha: {
         timeout: 14000,
         bail: browser === 'PhantomJS'
-      },
+      }
     },
 
     // test results reporter to use
@@ -73,43 +72,36 @@ module.exports = function (config) {
     reporters: reporters,
 
     junitReporter: {
-      outputDir: envConstants.CIRCLECI ? `${envConstants.CIRCLE_TEST_REPORTS}/apps` : '',
-      outputFile: 'all.xml',
+      outputDir: envConstants.CIRCLECI
+        ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
+        : '',
+      outputFile: 'all.xml'
     },
     coverageReporter: {
       dir: 'coverage',
-      reporters: [
-        { type: 'html' },
-        { type: 'lcovonly' }
-      ]
+      reporters: [{type: 'html'}, {type: 'lcovonly'}]
     },
     mochaReporter: {
       output: envConstants.CDO_VERBOSE_TEST_OUTPUT ? 'full' : 'minimal',
-      showDiff: true,
+      showDiff: true
     },
-
 
     // web server port
     port: PORT,
 
-
     // enable / disable colors in the output (reporters and logs)
     colors: tty.isatty(process.stdout.fd),
-
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_INFO,
 
-
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
-
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: [browser],
-
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

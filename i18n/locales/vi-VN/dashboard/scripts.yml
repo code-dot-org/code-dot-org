@@ -5120,3 +5120,7 @@ vi:
           stages:
             new stage:
               name: giai đoạn mới
+        csd-videos:
+          stages:
+            new stage:
+              name: giai đoạn mới
