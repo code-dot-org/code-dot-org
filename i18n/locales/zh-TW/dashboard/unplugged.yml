@@ -8,7 +8,7 @@ zh-TW:
           - 不插電活動 1
         video: 不插電活動 1
       Unplug2:
-        title: 電腦計算式思維
+        title: 計算機式思維
         desc: 我們只需要紙和筆，學生就可以學習到電腦式的思考模式。在簡短的介紹之後，學生們將會被分組以繪出一隻怪物(從預先發下的樣本中選取)。這整個任務必須要分工，小組才能夠將這隻怪物分析為一種特定的畫法，包括怪物身上的不同細節。然後他們會需要把圖像轉換成演算法(畫圖的技巧、指示)寫在紙上並交給別組讓他們畫出一樣的怪物來。學生們的組別將會相互交換演算法並畫出那隻建構在演算法基礎上的怪物。畫圖是小組最初的目標嗎？
         pdfs:
           - 不插電活動 2
@@ -107,7 +107,7 @@ zh-TW:
         title: 你的數位足跡
         desc: 教師向學生介紹，把關於自己的信息放在網路上會留下數位足跡（或痕跡），從而導致某些後果。
       ComputationalThinking:
-        title: 電腦計算式思維
+        title: 計算機式思維
         desc: 學生用計算思維（Computational Thinking）的步驟（分解、模式匹配、抽象化、演算法），來找出要如何玩一個沒有任何說明指示的遊戲。
       FunctionalSuncatchers:
         title: 實用的透光窗飾（Suncatcher）
@@ -238,8 +238,6 @@ zh-TW:
       courseF_unplugged_songwritingParameters:
         title: 用參數寫歌
         desc: '在計算機科學世界中，函式（function）可以說是最壯觀的建築物之一。函式，有時候稱為程序，是在龐大的程式中，可以被不斷重複利用的一些程式小片段。這個課程將會幫助學生直觀的了解，把這麼多零碎的代碼組合成函式是非常有用的。  '
-      courseB_unplugged_MRF_2018:
-        title: 我的機器人朋友
       PlantASeed_2018:
         title: '生活中的演算法 - 植物種植'
         desc: 這課以種植植物為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。
@@ -281,8 +279,6 @@ zh-TW:
         title: 移動它，移動它
       RelayProgramming_2018:
         title: 接力編程
-      courseB_unplugged_MRF_2019:
-        title: 我的機器人朋友
       Conditionals_2019:
         title: 條件判斷（Conditionals）
         desc: 為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。
@@ -324,3 +320,5 @@ zh-TW:
       DigitalFootprint_2019:
         title: 你的數位足跡
         desc: 教師向學生介紹，把關於自己的信息放在網路上會留下數位足跡（或痕跡），從而導致某些後果。
+      courseE_unplugged_accessAbility_2019:
+        title: 輔助功能

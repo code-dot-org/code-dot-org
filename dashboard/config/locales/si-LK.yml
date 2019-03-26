@@ -255,9 +255,20 @@ si:
       create: තනන්න
       applab: මෘදුකාංග විද්‍යාගාරය
       artist: කලාකරු
-      playlab: ක්‍රීඩා පරීක්ෂණාගාරය
-      minecraft: Minecraft
+      bounce: Bounce
+      calc: Calc
+      eval: Eval
       flappy: ෆ්ලැපි
+      frozen: Frozen
+      gumball: Gumball ගේ අරුම පුදුම ලෝකය
+      iceage: Ice Age
+      infinity: අනන්තය
+      minecraft_adventurer: Minecraft Adventurer
+      minecraft_designer: Minecraft
+      playlab: ක්‍රීඩා පරීක්ෂණාගාරය
+      starwars: Star Wars
+      starwarsblocks: Star Wars (කොටස්)
+      starwarsblocks_hour: Star Wars (කොටස්)
     popup:
       progress_for_user: "%{name} ගේ ප්‍රගතිය"
       progress: ඔබගේ ප්‍රගතිය
@@ -833,7 +844,22 @@ si:
     content: අන්තර්ගතය
     practice: ඉගැන්වීමේ පිළිවෙත්
     peer_review: සමූහ විමර්ශනය
+    csf_digcit: ඩිජිටල් පුරවැසිකම
+    csf_jigsaw: පින්තූර ප්‍රෙහේලිකාව
+    csf_loops: ලූපයන්
+    csf_events: වැඩසටහන්
+    csf_binary: ද්විමය
+    csf_data: දත්ත
+    csf_conditionals: කන්ඩිෂනලස්
+    csf_nested_loops: නැවත නැවත සිදුවන ලුප
+    csf_functions: ශ්‍රිතයන්
+    csf_variables: විචල්‍යන්
+    csf_for_loops: ලූපයන් සඳහා
+    csf_internet: අන්තර්ජාලය
     csp2_1_2018: '2වන ඒකකය: අංකිත තොරතුරු'
+    csp_variables: විචල්‍යන්
+    csp_conditionals: කන්ඩිෂනලස්
+    csp_functions: ශ්‍රිතයන්
   external_links:
     disclaimer: වියාචනය
     leaving_domain: දැන් ඔබට Code.org විසින් ක්‍රියාත්මක නොවන බව අඩවියකට, යොමුකරයි.

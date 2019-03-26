@@ -386,13 +386,34 @@ sk:
       driver: Prihlásený
       navigator: Navigátor
       create: Vytvoriť
+      algebra_game: Algebra
       applab: App Lab
       artist: Umelec
-      gamelab: Game Lab
-      playlab: Play Lab
-      minecraft: Minecraft
-      flappy: Flappy
+      artist_k1: Umelec (predškolský vek)
+      basketball: Basketbal
+      bounce: Bounce
+      calc: Vypočítaj
       dance: Tanečná Párty
+      eval: Vyhodnoť
+      flappy: Flappy
+      frozen: Frozen
+      gamelab: Game Lab
+      gamelab_jr: Game Lab (beta)
+      gumball: Úžasný svet s Gumball
+      iceage: Doba ľadová
+      infinity: Infinity
+      minecraft_adventurer: Minecraft Objavovateľ
+      minecraft_aquatic: Minecraft Aquatic
+      minecraft_designer: Minecraft
+      minecraft_hero: Minecraft hrdina
+      playlab: Play Lab
+      playlab_k1: Play Lab (predškolský vek)
+      scratch: Scratch
+      sports: Športy
+      starwars: Star Wars
+      starwarsblocks: Star Wars (Bloky)
+      starwarsblocks_hour: Star Wars (Bloky)
+      weblab: Web Lab
       view_all: Zobraziť všetky projekty...
     popup:
       progress_for_user: Pokrok pre užívateľa %{name}
@@ -1163,12 +1184,25 @@ sk:
     practice: Učiteľské cvičenia
     peer_review: Recenzia
     ramp_up: Príprava
+    end_of_course_project: Záverečný projekt
     main_course: Hlavný kurz
-    extra_course_content: Obsah ku kurzom navyše
+    extra_course_content: Doplnkové lekcie
     csf_e_1: Príprava na Kurz E (voliteľné)
     csf_e_2: Obsah kurzu E
     csf_f_1: Príprava na Kurz F (voliteľné)
     csf_f_2: Obsah kurzu F
+    csf_digcit: Digitálne občianstvo
+    csf_jigsaw: Skladačka
+    csf_loops: Cykly
+    csf_events: Udalosti
+    csf_binary: Binárny
+    csf_conditionals: Podmienky
+    csf_nested_loops: Vnorené cykly
+    csf_functions: Funkcie
+    csf_variables: Premenné
+    csf_for_loops: Cykly "For"
+    csf_internet: Internet
+    csf_impacts: Vplyv Informatiky
     csd1_1: 'Kapitola 1: Proces riešenia problémov'
     csd1_2: 'Kapitola 2: Počítače a riešenie problémov'
     csd2_1: 'Kapitola 1: Obsah webu a HTML'
@@ -1198,6 +1232,9 @@ sk:
     csp_postap_2: 'Kapitola 2: Aplikáce a databázy'
     csp2_1_2018: 'Lekcia 2: Digitálne informácie'
     csp3_1_2018: 'Kapitola 3: Úvod do programovania'
+    csp_variables: Premenné
+    csp_conditionals: Podmienky
+    csp_functions: Funkcie
     dlp: Výzvy na zhodnotenie
   external_links:
     disclaimer: Upozornenie

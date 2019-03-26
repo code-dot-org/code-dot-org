@@ -30,22 +30,20 @@ And, many of these test-takers were female or minority students.
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="https://twitter.com/codeorg/status/1085626759146586112" target="_blank"><img src="/images/statistics/fit-250/where-teachers-came-from.png"></a>
+<a href="https://twitter.com/codeorg/status/1093197136974544896" target="_blank"><img src="/images/statistics/fit-250/perception-vs-reality.png"></a>
 
 <br>
 
-Two-thirds of computing jobs are outside the tech sector, which is why we need teachers from diverse backgrounds. Teachers at our 2018 summer workshops came with varied experience from all over the country!
-
+Young women are 11% more likely to say the CS Principles programming units are too difficult for them, but they score just as high as male students!
 </div>
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="https://twitter.com/TeachCode/status/1089885912362872835" target="_blank"><img src="/images/statistics/fit-250/teacher-experience.png"></a>
+<a href="https://twitter.com/codeorg/status/1109125088794890240" target="_blank"><img src="/images/statistics/fit-250/URM-CSaccess.png"></a>
 
 <br>
 
-Don't be intimidated; almost half the teachers in our Professional Learning program have zero prior experience teaching computer science.
-
+There’s something wrong here: Schools reaching the most diverse student groups are far less likely to offer computer science. Students at these schools never even have the chance to learn.
 </div>
 
 <div style="clear: both;"></div>
@@ -79,8 +77,6 @@ Teachers from any background can teach computer science.
 Over the last 5 years, Code.org use in schools has expanded across the US. Here's a look at the growth in US schools from 2013-2018.
 </div>
 
-<br>
-<br>
 <br>
 
 <div style="clear: both;"></div>
@@ -195,11 +191,12 @@ It's never too late to start teaching CS!
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="https://twitter.com/codeorg/status/1093197136974544896" target="_blank"><img src="/images/statistics/fit-250/perception-vs-reality.png"></a>
+<a href="https://twitter.com/codeorg/status/1085626759146586112" target="_blank"><img src="/images/statistics/fit-250/where-teachers-came-from.png"></a>
 
 <br>
 
-Young women are 11% more likely to say the CS Principles programming units are too difficult for them, but they score just as high as male students!
+Two-thirds of computing jobs are outside the tech sector, which is why we need teachers from diverse backgrounds. Teachers at our past workshops came with varied experience from all over the country!
+
 </div>
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
@@ -211,6 +208,15 @@ Young women are 11% more likely to say the CS Principles programming units are t
 We have scholarships for <a href="https://code.org/educate/professional-learning">teacher professional learning</a> available to help us reach high needs schools so we can change this picture.
 </div>
 
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/TeachCode/status/1089885912362872835" target="_blank"><img src="/images/statistics/fit-250/teacher-experience.png"></a>
+
+<br>
+
+Don't be intimidated; almost half the teachers in our Professional Learning program have zero prior experience teaching computer science.
+
+</div>
 
 <div style="clear: both;"></div>
 
@@ -221,30 +227,126 @@ Code.org partners with researchers on a variety of studies. Want more? <a href="
 
 ### Teachers are taking on computer science
 Over 800,000 teachers have taken steps to bring computer science to their schools.
-<%= view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=A2:B64&headers=1", width: 1000, height: 500 %>
+<%= view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=A2:B65&headers=1", width: 1000, height: 500 %>
 Does your local school teach computer science? [Encourage them to start today](/yourschool)!  
 
 <br>
 
 ### The Hour of Code goes global
 With over [200 partners](https://hourofcode.com/partners), since 2013, the [Hour of Code](https://hourofcode.com) has reached 10% of students around the world.
-<%= view :display_chart, id: "chart2", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=D2:E64&headers=1", width: 1000, height: 500 %>
+<%= view :display_chart, id: "chart2", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=D2:E65&headers=1", width: 1000, height: 500 %>
 
 ## What we're doing
 Tracking the work of thousands of teachers and millions of students.
 <br>
-<br>
+<div class="solid-block-header">
 
-| Code.org Goal                                                                         | End of 2013                          | End of 2014                               | End of 2015                               | End of 2016                                                                                                                    | End of 2017                                                                                                                        |
-| --------------------------------------------------------------------------------------| -------------------------------------| ------------------------------------------| ------------------------------------------| -------------------------------------------------------------------------------------------------------------------------------| -----------------------------------------------------------------------------------------------------------------------------------|
-| Inspire students and increase diversity with the Hour of Code                         | 20 million served                    | 90M<br>48% female                         | 195M<br>49% female                        | 344M<br>49% female                                                                                                             | 500M<br>49% female                                                                                                                 |
-| Engage classrooms and students in our CS courses. (Total # of accounts on Code Studio)| 10,000 teachers, <br>500,000 students| 90,000 teachers, <br>4M students          | 250,000 teachers, <br>8M students         | 495,000 teachers, <br>16M students                                                                                             | 750,000 teachers, <br>25M students                                                                                                 |
-| Enable students to show “basic coding proficiency” with CS Fundamentals.              | N/A                                  | N/A                                       | N/A                                       | 887,840 total, <br>365,842 female                                                                                              | 2,061,449 total, <br>860,361 female                                                                                                |
-| Code.org students take and pass the AP CS Principles exam                             | N/A                                  | N/A                                       | N/A                                       | N/A                                                                                                                            | 5,544 total, <br>1,478 female, <br>1,439 URM*                                                                                      |
-| Improve diversity in CS (survey of teachers on Code Studio)                           | N/A                                  | 43% female, <br>37% URM*                  | 43% female, <br>37% URM*                  | 45% female, <br>48% URM*, <br>47% free/reduced meal plans                                                                      | 45% female, <br>48% URM*, <br>47% free/reduced meal plans                                                                          |
-| Help school districts implement CS curricula                                          | 10 district partners                 | 60 district partners                      | 100 district partners                     | 41 regional partners<br> (120+ districts)                                                                                      | 56 regional partners<br>(175+ districts)                                                                                           |
-| Prepare new CS teachers across grades K-12                                            | N/A                                  | 4,000                                     | 20,000                                    | 52,000                                                                                                                         | 72,000                                                                                                                             |
-| Lead a coalition to set policies supporting CS. Policies changed in:                  | 5 states                             | 16 states                                 | 17 states, <br>including $9M in CS funding| [31 states](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit), including $13M in CS funding| [40 states](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit), <br>including $29M in CS funding|
-| Go global                                                                             | 30 languages supported               | 34 languages, <br>7 international partners| 46 langs, <br>70 intl partners            | 50 langs, <br>70 intl partners                                                                                                 | 62 langs, <br>84 intl partners                                                                                                     |
+<p>Code.org by the Numbers</p>
 
-<br>
+</div>
+<table>
+<thead>
+<tr>
+<th>Code.org Goal</th>
+<th>End of 2013</th>
+<th>End of 2014</th>
+<th>End of 2015</th>
+<th>End of 2016</th>
+<th>End of 2017</th>
+<th>End of 2018</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inspire students and increase diversity with the Hour of Code</td>
+<td>20 million served</td>
+<td>90M, <br>48%<br> female</td>
+<td>195M, <br>49%<br> female</td>
+<td>344M, <br>49%<br> female</td>
+<td>520M, <br>49%<br> female</td>
+<td>720M, <br>50%<br> female</td>
+</tr>
+<tr>
+<td>Engage classrooms and students in our CS courses. (Total # of accounts on Code Studio)</td>
+<td>10,000 teachers,<br>500,000<br>students</td>
+<td>90,000 teachers,<br>4M <br>students</td>
+<td>250,000 teachers,<br>8M<br> students</td>
+<td>495,000 teachers,<br>16M <br>students</td>
+<td>750,000 teachers,<br>25M<br>students</td>
+<td>1M teachers,<br>36M<br>students</td>
+</tr>
+<tr>
+<td>Enable students to show “basic coding proficiency” with CS Fundamentals.</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>887,840 total,<br>365,842 female</td>
+<td>2,061,449 total,<br>860,361 female</td>
+<td>3,296,655 total,<br>1,394,208 female</td>
+</tr>
+<tr>
+<td>Code.org students take and pass the AP CS Principles exam</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>11,975 total,<br>3,406 female,<br>2,268 URM*</td>
+<td>19,409 total,<br>5,838 female,<br>4,009 URM*</td>
+</tr>
+<tr>
+<td>Improve diversity in CS (survey of teachers on Code Studio)</td>
+<td>N/A</td>
+<td>43% female,<br>37% URM*</td>
+<td>43% female,<br>37% URM*</td>
+<td>45% female,<br>48% URM*,<br>47% in high needs schools</td>
+<td>45% female,<br>48% URM*,<br>47% in high needs schools</td>
+<td>46% female,<br>48% URM*,<br>47% in high needs schools</td>
+</tr>
+<tr>
+<td>Help school districts implement CS curricula</td>
+<td>10<br>district partners</td>
+<td>60<br>district partners</td>
+<td>100 district partners</td>
+<td>41 regional partners<br>(120+ districts)</td>
+<td>56 regional partners<br>(175+ districts)</td>
+<td>64 regional partners</td>
+</tr>
+<tr>
+<td>Prepare new CS teachers across grades K-12</td>
+<td>N/A</td>
+<td>4,000</td>
+<td>20,000</td>
+<td>52,000</td>
+<td>72,000</td>
+<td>86,565</td>
+</tr>
+<tr>
+<td>Lead a coalition to set policies supporting CS.<br>Policies changed in:</td>
+<td>5 states</td>
+<td>16 states</td>
+<td>17 states,<br>including $9M<br>in CS funding</td>
+<td>31 states, <br>including $13M <br>in CS funding</td>
+<td>40 states,<br>including $29M<br> in CS funding</td>
+<td>
+<a href="https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit">48 states</a>,<br>including $63M<br>in CS funding</td>
+</tr>
+<tr>
+<td>Go global</td>
+<td>30 languages supported</td>
+<td>34 langs,<br>7 intl partners</td>
+<td>46 langs,<br>70 intl partners</td>
+<td>50 langs,<br>70 intl partners</td>
+<td>62 langs,<br>84 intl partners</td>
+<td>63 langs,<br>102 intl partners</td>
+</tr>
+<tr>
+<td>Team size</td>
+<td>14</td>
+<td>38</td>
+<td>54</td>
+<td>59</td>
+<td>69</td>
+<td>80</td>
+</tr>
+</tbody>
+</table>
