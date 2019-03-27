@@ -256,7 +256,7 @@ es-MX:
           decisión. Y al igual que los bloques "si", puedes poner bloques "si-si no"
           dentro de bloques "repetir".
       4:
-        text: "¡Ahora vamos a ayudar a la ardilla Scrat a conseguir esa bellota!"
+        text: "¡Ahora vamos a ayudar a la ardilla Scrat a llegar hasta esa bellota!"
     function:
       1:
         image: notes/stage13_1.jpg
@@ -3060,9 +3060,9 @@ es-MX:
     applab_intro_designmode:
       1:
         image: notes/applab_intro_designmode_1.png
-        text: Para construir tus propias aplicaciones necesitarás a empezar diseñando
-          pantallas y elementos desde cero. App Lab hace esto fácil de hacer con el
-          Modo de Diseño.
+        text: Para crear tus propias aplicaciones, necesitarás empezar a diseñar pantallas
+          y elementos desde cero. Puedes hacerlo fácilmente con el Modo Diseño del
+          Laboratorio de aplicaciones.
       2:
         image: notes/applab_intro_designmode_2.png
         text: Utilice el interruptor en la parte superior de su aplicación para entrar
@@ -3134,11 +3134,11 @@ es-MX:
           compartir.
       6:
         image: notes/applab_intro_share_6.png
-        text: Solo has arañado la superficie de lo que App Lab puede hacer. La aplicación
-          al completo presenta interacciones de usuario más avanzadas, nuevos elementos
-          de pantalla e incluso una base de datos para que puedas construir rápidamente
-          apps con todas las características. En "code.org/applab" podrás encontrar
-          la herramienta completa y montones de ideas si quieres seguir avanzando.
+        text: Estas son solo algunas de las cosas que el Laboratorio de aplicaciones
+          puede hacer. El laboratorio completo cuenta con interacciones de usuario
+          más avanzadas, nuevos elementos de pantalla y hasta una base de datos para
+          que puedas crear aplicaciones completas rápidamente. En "code.org/applab"
+          encontrarás la herramienta completa y muchas ideas para seguir avanzando.
       7:
         image: notes/applab_intro_share_7.png
         text: Gracias por acompañarnos en el recorrido. Ahora construye y comparte

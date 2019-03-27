@@ -174,7 +174,9 @@ ms:
       logout: Daftar keluar
       signin: Log masuk
       create: Buat
+      bounce: Lantunan
       flappy: Flappy
+      infinity: Infiniti
     popup:
       progress: Kemajuan anda
       lines: 'Total baris kod: %{lines}'
@@ -354,6 +356,16 @@ ms:
       report_abuse_form:
         abuse_type:
           other: Lain-lain
+  flex_category:
+    csf_loops: Gelung
+    csf_events: Acara-acara
+    csf_conditionals: Bersyarat
+    csf_functions: Fungsi
+    csf_variables: Pembolehubah
+    csf_internet: Internet
+    csp_variables: Pembolehubah
+    csp_conditionals: Bersyarat
+    csp_functions: Fungsi
   pd:
     form_labels:
       email: E-mel

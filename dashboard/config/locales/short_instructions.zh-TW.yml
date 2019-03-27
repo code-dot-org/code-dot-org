@@ -412,7 +412,7 @@ zh-TW:
       4-5 Nested Loops 12: 你可以用巢狀迴圈來畫出這 36 個三角形嗎？
       4-5 Nested Loops 2: '現在將這個迴圈嵌套進另一個迴圈內，以畫出 10 個三角形。這就是所謂的「巢狀式迴圈」。  '
       4-5 Nested Loops 3: "把起始程式碼嵌進另一個迴圈中來畫出一個太陽。\r\n\r\n要能夠製作出這樣酷炫的圖案，你必須在轉向之前向前跳一段距離。"
-      4-5 Nested Loops 5: 重複已給的代碼來畫出一個風車。
+      4-5 Nested Loops 5: 重複執行已有的程式來畫出一個風車。
       4-5 Nested Loops 6: 你可以藉由重複畫三角形的程式碼來畫出一個六邊形嗎？
       4-5 Nested Loops 7: "循環這個圖樣 10 次。\r\n\r\n你知道在每個圖樣畫完後要轉多少角度嗎？"
       4-5 Nested Loops 8: "重複這個圖案6次。\r\n\r\n你知道每次重複畫圖案時需要轉多少度？ "
@@ -435,7 +435,7 @@ zh-TW:
       Artist - Nested Loops 1: '完成代碼來畫這些三角形。第一個三角形的代碼已經幫你打好了。提示: 3個三角形旋轉了360度'
       Artist - Nested Loops 11: 你可以用巢狀迴圈來畫出在人行道上的 10 個正方形嗎？每個正方形的邊長為 30 像素。
       Artist - Nested Loops 12: 你可以用巢狀迴圈來畫出這 36 個三角形嗎？
-      Artist - Nested Loops 5: 重複已給的代碼來畫出一個風車。
+      Artist - Nested Loops 5: 重複執行已有的程式來畫出一個風車。
       Artist - Nested Loops 6: 你可以藉由重複畫三角形的程式碼來畫出一個六邊形嗎？
       Artist - Nested Loops 9: 在鱷魚的嘴內畫出牙齒!
       Artist - Nested Loops Assessment 1: 用一個巢狀迴圈來完成這個圖案。
@@ -461,9 +461,25 @@ zh-TW:
       CSD Hackathon Pt 2: "（點擊觀看完整說明）"
       CSD Hackathon Week 1: "（點擊觀看完整說明）"
       CSD Hackathon Week 2: "（點擊觀看完整說明）"
+      CSD U3 Boolean Modify: 修改一下程式，讓所有的 console.log 指令輸出 true
+      CSD U3 Boolean Modify_2018: 修改一下程式，讓所有的 console.log 指令輸出 true
+      CSD U3 Boolean Modify_2019: 修改一下程式，讓所有的 console.log 指令輸出 true
+      CSD U3 Keypress Boolean-2018: 修改一下程式，讓所有的 console.log 指令輸出 true
+      CSD U3 Keypress Boolean: 修改一下程式，讓所有的 console.log 指令輸出 true
+      CSD U3 Keypress Boolean_2018: 修改一下程式，讓所有的 console.log 指令輸出 true
+      CSD U3 Keypress Boolean_2018_2019: 修改一下程式，讓所有的 console.log 指令輸出 true
+      CSD U3 Keypress Watchers: 修改一下程式，讓所有的 console.log 指令輸出 true
+      CSD U3 Keypress Watchers_2018: 修改一下程式，讓所有的 console.log 指令輸出 true
+      CSD U3 Keypress Watchers_2019: 修改一下程式，讓所有的 console.log 指令輸出 true
       CSD U3 L5 Freeplay: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 L5 Freeplay_2018: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 L5 Freeplay_2019: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
+      CSD U3 Variable Arithmetic: 改變「尺寸」的值以畫出更大的方形。
+      CSD U3 Variables Initialize: 預測：主控台中會顯示什麼？
+      CSD U3 Variables Random: 預測：主控台中會顯示什麼？
+      CSD U3 Variables Reassign: 預測：主控台中會顯示什麼？
+      CSD U3 Variables Square Random: 改變「尺寸」的值以畫出更大的方形。
+      CSD U3 Variables Square: 改變「尺寸」的值以畫出更大的方形。
       CSD U3 Variables TEMPLATE square: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 Variables change circle size: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 Variables change circle size_2018: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
@@ -478,6 +494,7 @@ zh-TW:
       CSD U3 Variables random with assignment: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 Variables random with assignment_2018: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 Variables random with assignment_2019: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
+      CSD U3 Variables use value rect: 預測：主控台中會顯示什麼？
       CSD U4 - Events Template: 添加一個大的紅色按鈕到設計模式畫面上。（點擊觀看完整說明）
       CSD U5 black white images pixelation 2: 畫一個笑臉(點擊這裡瀏覽圖案)
       CSD U5 black white images pixelation 2_2018: 畫一個笑臉(點擊這裡瀏覽圖案)
@@ -491,12 +508,19 @@ zh-TW:
       CSD U5 black white images pixelation: 利用 0 和 1 來完成這個 X 圖形。
       CSD U5 black white images pixelation_2018: 利用 0 和 1 來完成這個 X 圖形。
       CSD U5 black white images pixelation_2019: 利用 0 和 1 來完成這個 X 圖形。
+      CSDU4 - AppLab - 2: 寫個能當簡易計算機的程式。（點擊觀看完整說明）
+      CSDU4 - AppLab - 3: 使用 console（系統監控台）來檢查最後一個數字。（點擊觀看完整說明）
       CSDU4 - AppLab - 4: " 使用偵錯指令以列出在第 6 點之前的清單。（點擊查看完整說明）"
       CSDU4 - Design Mode - 1: 添加一個按鈕，讓你在點擊它時，烏龜能夠移動。（點擊觀看完整說明）
+      CSDU4 - Design Mode - 18: 修復靶心遊戲的佈局。（點擊觀看完整說明）
       CSDU4 - Design Mode - 24: 添加一個輸入姓名、年齡的文字方塊。（點擊觀看完整說明）
+      CSDU4 - Design Mode - 26: 用變數儲存使用者的年齡與姓名（點擊觀看完整說明）
+      CSDU4 - Design Mode - 27: 輸出一個訊息到 'textArea'（點擊觀看完整說明）
       CSDU4 - Design Mode - 29: 添加一個下拉式清單供選擇，取代 promptNum（點擊觀看完整說明）
+      CSDU4 - Design Mode - 8: 把按鈕移到畫面的中間。（點擊觀看完整說明）
       CSDU4 nameAgeTemplate: 添加一個輸入姓名、年齡的文字方塊。（點擊觀看完整說明）
       CSDU6 - Arrays - indexPractice: 將陣列的內容依序寫到畫面上。（點擊查看完整說明）
+      CSDU6 - Arrays - length: 用 list.length 來確定每個陣列的長度，也就是陣列中的項目數量。（點擊觀看完整說明）
       CSDU6 - for loop - color buttons with for: 將陣列的內容依序寫到畫面上。（點擊查看完整說明）
       CSDU6 - for loop - color buttons: 將陣列的內容依序寫到畫面上。（點擊查看完整說明）
       CSDU6 - for loop - why for: 將陣列的內容依序寫到畫面上。（點擊查看完整說明）
@@ -508,12 +532,50 @@ zh-TW:
       CSPU5 First Time Console.log: 添加 3 個控制紀錄訊息，並測試將它們輸出。（點擊觀看完整說明）
       CSPU5 First Time Console.log_2018: 添加 3 個控制紀錄訊息，並測試將它們輸出。（點擊觀看完整說明）
       CSPU5 First Time Console.log_2019: 添加 3 個控制紀錄訊息，並測試將它們輸出。（點擊觀看完整說明）
+      CSPU5 Layering and Deleting in Design Mode: 修復靶心遊戲的佈局。（點擊觀看完整說明）
+      CSPU5 Layering and Deleting in Design Mode_2018: 修復靶心遊戲的佈局。（點擊觀看完整說明）
+      CSPU5 Layering and Deleting in Design Mode_2019: 修復靶心遊戲的佈局。（點擊觀看完整說明）
+      CSPU5 Project - Multi Screen App: 創建你的多畫面應用程式。（點擊觀看完整說明）
+      CSPU5_Project - Multi Screen App: 創建你的多畫面應用程式。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - assignment: 使用索引的方式將陣列中的 1 改成 0。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - assignment2: 計算儲存在陣列中的三個值的總和。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - assignment2_2018: 計算儲存在陣列中的三個值的總和。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - assignment2_2019: 計算儲存在陣列中的三個值的總和。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - assignment_2018: 使用索引的方式將陣列中的 1 改成 0。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - assignment_2019: 使用索引的方式將陣列中的 1 改成 0。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - favThings firstOutput: 使用 setText 顯示陣列裡的第一個項目。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - favThings firstOutput_2018: 使用 setText 顯示陣列裡的第一個項目。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - favThings firstOutput_2019: 使用 setText 顯示陣列裡的第一個項目。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - favThings giveIDs: 給你的 UI 起個具描述和意義的 ID。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - favThings giveIDs_2018: 給你的 UI 起個具描述和意義的 ID。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - favThings giveIDs_2019: 給你的 UI 起個具描述和意義的 ID。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - favThings keepPlaying: 改進任何你想的到的！（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - favThings keepPlaying_2018: 改進任何你想的到的！（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - favThings keepPlaying_2019: 改進任何你想的到的！（點擊觀看完整說明）
       CSPU5_U3 - Arrays - indexPractice: 將陣列的內容依序寫到畫面上。（點擊查看完整說明）
       CSPU5_U3 - Arrays - indexPractice_2018: 將陣列的內容依序寫到畫面上。（點擊查看完整說明）
       CSPU5_U3 - Arrays - indexPractice_2019: 將陣列的內容依序寫到畫面上。（點擊查看完整說明）
+      CSPU5_U3 - Arrays - insertingItems: 插入項目到陣列裡頭以形成一個完整的句子。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - insertingItems_2018: 插入項目到陣列裡頭以形成一個完整的句子。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - insertingItems_2019: 插入項目到陣列裡頭以形成一個完整的句子。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - length: 用 list.length 來確定每個陣列的長度，也就是陣列中的項目數量。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - length_2018: 用 list.length 來確定每個陣列的長度，也就是陣列中的項目數量。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - length_2019: 用 list.length 來確定每個陣列的長度，也就是陣列中的項目數量。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - remove: 從陣列中移除項目以形成一個完整的句子。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - remove_2018: 從陣列中移除項目以形成一個完整的句子。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - remove_2019: 從陣列中移除項目以形成一個完整的句子。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - stringsInArrays: 將句子中的每個單字逐一的寫入到陣列裡頭。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - stringsInArrays_2018: 將句子中的每個單字逐一的寫入到陣列裡頭。（點擊觀看完整說明）
+      CSPU5_U3 - Arrays - stringsInArrays_2019: 將句子中的每個單字逐一的寫入到陣列裡頭。（點擊觀看完整說明）
       CSPU5_U3 - Canvas - 200dots: 添加一個迴圈到程式，以在畫布上畫出 200 個黑點。（點擊觀看完整說明）
       CSPU5_U3 - Canvas - 200dots_2018: 添加一個迴圈到程式，以在畫布上畫出 200 個黑點。（點擊觀看完整說明）
       CSPU5_U3 - Canvas - 200dots_2019: 添加一個迴圈到程式，以在畫布上畫出 200 個黑點。（點擊觀看完整說明）
+      CSPU5_U3 - Canvas - changeToMouseMove: 修改你的程式，在你點擊滑鼠按鍵時能繪製點狀圖形。（點擊觀看完整說明）
+      CSPU5_U3 - Canvas - changeToMouseMove_2018: 修改你的程式，在你點擊滑鼠按鍵時能繪製點狀圖形。（點擊觀看完整說明）
+      CSPU5_U3 - Canvas - changeToMouseMove_2019: 修改你的程式，在你點擊滑鼠按鍵時能繪製點狀圖形。（點擊觀看完整說明）
+      CSPU5_U3 - Canvas - draw at click point: 修改你的程式，在你點擊滑鼠按鍵時能繪製點狀圖形。（點擊觀看完整說明）
+      CSPU5_U3 - Canvas - draw at click point_2018: 修改你的程式，在你點擊滑鼠按鍵時能繪製點狀圖形。（點擊觀看完整說明）
+      CSPU5_U3 - Canvas - draw at click point_2019: 修改你的程式，在你點擊滑鼠按鍵時能繪製點狀圖形。（點擊觀看完整說明）
       CSPU5_U3 - Canvas - introCanvas: 添加一個畫布（canvas）到你的 app 上，並將它設定成啟用。接著在你的畫布上新增一個大的圓點。（點擊觀看完整說明）
       CSPU5_U3 - Canvas - introCanvas_2018: 添加一個畫布（canvas）到你的 app 上，並將它設定成啟用。接著在你的畫布上新增一個大的圓點。（點擊觀看完整說明）
       CSPU5_U3 - Canvas - introCanvas_2019: 添加一個畫布（canvas）到你的 app 上，並將它設定成啟用。接著在你的畫布上新增一個大的圓點。（點擊觀看完整說明）
@@ -521,21 +583,50 @@ zh-TW:
       CSPU5_U3 - Canvas - usingOffsetXY_2018: 添加一個控制紀錄指令到你的事件處理函式裡，使用它來顯示事件參數，同時在上面點擊能觀看事件參數的內容。（點擊觀看完整說明）
       CSPU5_U3 - Canvas - usingOffsetXY_2019: 添加一個控制紀錄指令到你的事件處理函式裡，使用它來顯示事件參數，同時在上面點擊能觀看事件參數的內容。（點擊觀看完整說明）
       CSPU5_U3 - Conditional Basics - 6: 添加一個「設定文字」到如果陳述式的「不對，再猜猜。」之後。（點擊觀看完整說明）
+      CSPU5_U3 - Design Mode - Layers and Delete: 修復靶心遊戲的佈局。（點擊觀看完整說明）
       CSPU5_U3 - Design Mode - WTF Console Log: 添加 3 個控制紀錄訊息，並測試將它們輸出。（點擊觀看完整說明）
       CSPU5_U3 - Design Mode 1: 添加一個大的紅色按鈕到設計模式畫面上。（點擊觀看完整說明）
       CSPU5_U3 - Design Mode 1_2018: 添加一個大的紅色按鈕到設計模式畫面上。（點擊觀看完整說明）
       CSPU5_U3 - Design Mode 1_2019: 添加一個大的紅色按鈕到設計模式畫面上。（點擊觀看完整說明）
+      CSPU5_U3 - Dice - Dropdown and Score: 添加猜測和得分機制到擲骰子遊戲（點擊觀看完整說明）
       CSPU5_U3 - Dice - Dropdown with Strings: 添加一個下拉式選單來選擇難度，並將所選的結果輸出到控制台。（點擊觀看完整說明）
       CSPU5_U3 - High Low - Dropdown: 添加一個下拉式清單供選擇，取代 promptNum（點擊觀看完整說明）
+      CSPU5_U3 - Keys - Multiple Keys: 當點擊下向鍵時播放不同的音效。（點擊觀看完整說明）
+      CSPU5_U3 - Keys - Multiple Keys_2018: 當點擊下向鍵時播放不同的音效。（點擊觀看完整說明）
+      CSPU5_U3 - Keys - Multiple Keys_2019: 當點擊下向鍵時播放不同的音效。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - 1: 改變當…迴圈的條件，以判斷變數的值是否小於 90（點擊觀看完整說明）
+      CSPU5_U3 - Loops - 15: 計算骰子總合為 12 出現的次數。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - 15_2018: 計算骰子總合為 12 出現的次數。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - 15_2019: 計算骰子總合為 12 出現的次數。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - 1_2018: 改變當…迴圈的條件，以判斷變數的值是否小於 90（點擊觀看完整說明）
+      CSPU5_U3 - Loops - 1_2019: 改變當…迴圈的條件，以判斷變數的值是否小於 90（點擊觀看完整說明）
+      CSPU5_U3 - Loops - 2: 試著用 !=, > 還有 < 創建一個無限迴圈。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - 2_2018: 試著用 !=, > 還有 < 創建一個無限迴圈。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - 2_2019: 試著用 !=, > 還有 < 創建一個無限迴圈。（點擊觀看完整說明）
       CSPU5_U3 - Loops - 4: " 使用偵錯指令以列出在第 6 點之前的清單。（點擊查看完整說明）"
       CSPU5_U3 - Loops - 4_2018: " 使用偵錯指令以列出在第 6 點之前的清單。（點擊查看完整說明）"
       CSPU5_U3 - Loops - 4_2019: " 使用偵錯指令以列出在第 6 點之前的清單。（點擊查看完整說明）"
       CSPU5_U3 - Loops - 9: " 修改條件讓它持續轉動，只要每個都小於 3。（點擊觀看完整說明）"
       CSPU5_U3 - Loops - 9_2018: " 修改條件讓它持續轉動，只要每個都小於 3。（點擊觀看完整說明）"
       CSPU5_U3 - Loops - 9_2019: " 修改條件讓它持續轉動，只要每個都小於 3。（點擊觀看完整說明）"
+      CSPU5_U3 - Loops - Minus Minus: 修改程式，讓它從 10 倒數到 1。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - Minus Minus_2018: 修改程式，讓它從 10 倒數到 1。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - Minus Minus_2019: 修改程式，讓它從 10 倒數到 1。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - Typing in Console: 使用 console（系統監控台）來檢查最後一個數字。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - Typing in Console_2018: 使用 console（系統監控台）來檢查最後一個數字。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - Typing in Console_2019: 使用 console（系統監控台）來檢查最後一個數字。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - plus and minus = operator: 用 += 運算子來更新程式。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - plus and minus = operator_2018: 用 += 運算子來更新程式。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - plus and minus = operator_2019: 用 += 運算子來更新程式。（點擊觀看完整說明）
       CSPU5_U3 - Loops And Arrays - Add 5: 將陣列裡的所有數值都加 5（點擊觀看完整說明）
       CSPU5_U3 - Loops And Arrays - Add 5_2018: 將陣列裡的所有數值都加 5（點擊觀看完整說明）
       CSPU5_U3 - Loops And Arrays - Add 5_2019: 將陣列裡的所有數值都加 5（點擊觀看完整說明）
+      CSPU5_U3 - Loops And Arrays - Counting Times: 計算在陣列裡 5 出現的次數。（點擊觀看完整說明）
+      CSPU5_U3 - Loops And Arrays - Counting Times_2018: 計算在陣列裡 5 出現的次數。（點擊觀看完整說明）
+      CSPU5_U3 - Loops And Arrays - Counting Times_2019: 計算在陣列裡 5 出現的次數。（點擊觀看完整說明）
+      CSPU5_U3 - Loops And Arrays - Divid by 2: 讓陣列的每個值除以 2。（點擊觀看完整說明）
+      CSPU5_U3 - Loops And Arrays - Divid by 2_2018: 讓陣列的每個值除以 2。（點擊觀看完整說明）
+      CSPU5_U3 - Loops And Arrays - Divid by 2_2019: 讓陣列的每個值除以 2。（點擊觀看完整說明）
       CSPU5_U3 - Loops And Arrays - General Search Param: 添加第二個參數到搜尋函式，作為要搜尋的值。（點擊觀看完整說明）
       CSPU5_U3 - Loops And Arrays - General Search Param_2018: 添加第二個參數到搜尋函式，作為要搜尋的值。（點擊觀看完整說明）
       CSPU5_U3 - Loops And Arrays - General Search Param_2019: 添加第二個參數到搜尋函式，作為要搜尋的值。（點擊觀看完整說明）
@@ -544,10 +635,45 @@ zh-TW:
         3 次。（點擊觀看完整說明）
       CSPU5_U3 - Loops And Arrays - Intro For Loop_2019: 添加一個 for 迴圈，裡頭帶有控制紀錄，並試試輸出
         3 次。（點擊觀看完整說明）
+      CSPU5_U3 - Loops And Arrays - Print Array: 使用計數迴圈來輸出陣列中所有的值。（點擊觀看完整說明）
+      CSPU5_U3 - Loops And Arrays - Print Array_2018: 使用計數迴圈來輸出陣列中所有的值。（點擊觀看完整說明）
+      CSPU5_U3 - Loops And Arrays - Print Array_2019: 使用計數迴圈來輸出陣列中所有的值。（點擊觀看完整說明）
+      CSPU5_U3 - Practice Create Performance Task: 設計並實踐你的練習創建性能任務。（點擊觀看完整說明）
+      CSPU5_U3 - User Input - Save getText To Variable: 用變數儲存使用者的年齡與姓名（點擊觀看完整說明）
+      CSPU5_U3 - User Input - Save getText To Variable_2018: 用變數儲存使用者的年齡與姓名（點擊觀看完整說明）
+      CSPU5_U3 - User Input - Save getText To Variable_2019: 用變數儲存使用者的年齡與姓名（點擊觀看完整說明）
+      CSPU5_U3 - Variables - Set to Expression: 試試新的表達式。（點擊觀看完整說明）
+      CSPU5_U3 - Variables - Set to Expression_2018: 試試新的表達式。（點擊觀看完整說明）
+      CSPU5_U3 - Variables - Set to Expression_2019: 試試新的表達式。（點擊觀看完整說明）
       CSPU5_U3- Variables - Text Mode: 1. 切換到文字模式並輸入說明；2. 拖曳積木到文字模式；3. 實驗程式碼完成
       CSPU5_U3- Variables - Text Mode_2018: 1. 切換到文字模式並輸入說明；2. 拖曳積木到文字模式；3. 實驗程式碼完成
       CSPU5_U3- Variables - Text Mode_2019: 1. 切換到文字模式並輸入說明；2. 拖曳積木到文字模式；3. 實驗程式碼完成
+      CSPU5_U3L13 - Project: 創建你的多畫面應用程式。（點擊觀看完整說明）
       CSPU5_U3L13 - Turtle move with button: 添加一個按鈕，讓你在點擊它時，烏龜能夠移動。（點擊觀看完整說明）
+      CSPU5_U3L14 - User Input Division calculator: 寫個能當簡易計算機的程式。（點擊觀看完整說明）
+      CSPU5_U3L14 - User Input Division calculator_2018: 寫個能當簡易計算機的程式。（點擊觀看完整說明）
+      CSPU5_U3L14 - User Input Division calculator_2019: 寫個能當簡易計算機的程式。（點擊觀看完整說明）
+      CSPU5_U3L15 - DEMO up down count practice app: 測試這個應用程式（點擊觀看完整說明）
+      CSPU5_U3L15 - DEMO up down count practice app_2018: 測試這個應用程式（點擊觀看完整說明）
+      CSPU5_U3L15 - DEMO up down count practice app_2019: 測試這個應用程式（點擊觀看完整說明）
+      CSPU5_U3L15 - add code to make count down work: 寫個程式，讓向下鍵如你預期般的運作。（點擊觀看完整說明）
+      CSPU5_U3L15 - add code to make count down work_2018: 寫個程式，讓向下鍵如你預期般的運作。（點擊觀看完整說明）
+      CSPU5_U3L15 - add code to make count down work_2019: 寫個程式，讓向下鍵如你預期般的運作。（點擊觀看完整說明）
+      CSPU5_U3L15 - count upDown bug forget to set text: 找出程式中的 BUG 並修復它。（點擊觀看完整說明）
+      CSPU5_U3L15 - count upDown bug forget to set text_2018: 找出程式中的 BUG 並修復它。（點擊觀看完整說明）
+      CSPU5_U3L15 - count upDown bug forget to set text_2019: 找出程式中的 BUG 並修復它。（點擊觀看完整說明）
+      CSPU5_U3L15 - count upDown bug logic error wrong update: 找出程式中的 BUG 並修復它。（點擊觀看完整說明）
+      CSPU5_U3L15 - count upDown bug logic error wrong update_2018: 找出程式中的 BUG 並修復它。（點擊觀看完整說明）
+      CSPU5_U3L15 - count upDown bug logic error wrong update_2019: 找出程式中的 BUG 並修復它。（點擊觀看完整說明）
+      CSPU5_U3L15 - count upDown bug var not created globally: 找出程式中的 BUG 並修復它。（點擊觀看完整說明）
+      CSPU5_U3L15 - count upDown bug var not created globally_2018: 找出程式中的 BUG 並修復它。（點擊觀看完整說明）
+      CSPU5_U3L15 - count upDown bug var not created globally_2019: 找出程式中的 BUG 並修復它。（點擊觀看完整說明）
+      CSPU5_U3L15 - mini clicker update score: 添加程式碼，讓蘋果被點擊時更新得分的值。（點擊觀看完整說明）
+      CSPU5_U3L15 - mini clicker update score_2018: 添加程式碼，讓蘋果被點擊時更新得分的值。（點擊觀看完整說明）
+      CSPU5_U3L15 - mini clicker update score_2019: 添加程式碼，讓蘋果被點擊時更新得分的值。（點擊觀看完整說明）
+      CSPU5_U3L15 - variable scoping problem debugging: 看看你能不能找到這個程式不能運行的原因。（點擊觀看完整說明）
+      CSPU5_U3L15 - variable scoping problem debugging_2018: 看看你能不能找到這個程式不能運行的原因。（點擊觀看完整說明）
+      CSPU5_U3L15 - variable scoping problem debugging_2019: 看看你能不能找到這個程式不能運行的原因。（點擊觀看完整說明）
       CSPU5_U3L15 full clicker app: |-
         完成你的點點點遊戲！
         （點此觀看完整說明）
@@ -557,9 +683,30 @@ zh-TW:
       CSPU5_U3L15 full clicker app_2019: |-
         完成你的點點點遊戲！
         （點此觀看完整說明）
+      CSPU5_U3L16 - chaserApp: 創建你自己的追逐遊戲。（點擊觀看完整說明）
+      CSPU5_U3L16 - chooseImages: 把應用程式中的圖像取代成你想要的。（點擊觀看完整說明）
+      CSPU5_U3L16 - introSetPosition: 把按鈕移到畫面的底部。（點擊觀看完整說明）
+      CSPU5_U3L16 - outputWithTextArea: 輸出一個訊息到 'textArea'（點擊觀看完整說明）
+      CSPU5_U3L16 - outputWithTextArea_2018: 輸出一個訊息到 'textArea'（點擊觀看完整說明）
+      CSPU5_U3L16 - outputWithTextArea_2019: 輸出一個訊息到 'textArea'（點擊觀看完整說明）
+      CSPU5_U3L16 - singleSetPosition: 把按鈕移到畫面的中間。（點擊觀看完整說明）
       CSPU5_U3L16 - textInput getText write: 添加一個輸入姓名、年齡的文字方塊。（點擊觀看完整說明）
       CSPU5_U3L16 - textInput getText write_2018: 添加一個輸入姓名、年齡的文字方塊。（點擊觀看完整說明）
       CSPU5_U3L16 - textInput getText write_2019: 添加一個輸入姓名、年齡的文字方塊。（點擊觀看完整說明）
+      CSPU5_U3L16 - toUpper: 讓使用者的姓名以英文小寫樣式顯示（點擊觀看完整說明）
+      CSPU5_U3L16 - toUpper_2018: 讓使用者的姓名以英文小寫樣式顯示（點擊觀看完整說明）
+      CSPU5_U3L16 - toUpper_2019: 讓使用者的姓名以英文小寫樣式顯示（點擊觀看完整說明）
+      CSPU5_U3L24 Chatbot Basic Conditionals: 查看專看說明以取得幫助。（點擊觀看完整說明）
+      CSPU5_U3L24 introIncludes: 練習 includes 指令的用法。（點擊觀看完整說明）
+      CSPU5_clickerGame_v1_template: 創建你自己的追逐者應用程式。（點擊觀看完整說明）
+      CSPU5_clickerGame_v1_template_2018: 創建你自己的追逐者應用程式。（點擊觀看完整說明）
+      CSPU5_clickerGame_v1_template_2019: 創建你自己的追逐者應用程式。（點擊觀看完整說明）
+      Code Studio Puzzle Challenge 1 - Artist: 畫出這條線，長度為 200 像素。
+      Code Studio Puzzle Challenge 1 Artist1: 畫出這條線，長度為 200 像素。
+      Code Studio Puzzle Challenge 3 - Artist: 畫個邊長 100 像素的正方形。
+      Code Studio Puzzle Challenge 4 - Artist: 畫個邊長 100 像素的八邊形。
+      Code Studio Puzzle Challenge Artist Screencast (copy 1): 畫出這個線條，每段長 100 像素。
+      Code Studio Puzzle Challenge Artist Screencast: 畫出這個線條，每段長 100 像素。
       CoureE_HOC 2018 Level_7a: 搜尋這些水底廢墟以尋找箱子。
       Course 2 Bee Loops 1: '嗨，我是蜜蜂。你能幫助我從這些花朵中收集花蜜嗎？ '
       Course 2 Bee Loops 13: 評量：使用重複積木來收集所有的花蜜。
@@ -727,8 +874,8 @@ zh-TW:
       Course 4 Play Lab For Loops 2: 這次，我們來試著算出從 1 到 100 的奇數。
       Course 4 Play Lab Params 1: 這裡有個函式叫做 `jump`（跳躍），它可以讓你的主要角色向上跳 100 像素。運行這個程式，用方向鍵來控制小狗，並利用
         `jump` 函式收集所有的旗幟。
-      Course 4 Play Lab Params 10: "我們已經為你添加了上一關的函數。 \r\n\r\n用“如果”模塊來編寫你的遊戲，當play_score玩家分數
-        大於某個值時，調用level_up升級 函數。 \r\n\r\n例如：“play_score” > 6\r\n\r\n玩遊戲，並且達到第4級來到達下一關。 "
+      Course 4 Play Lab Params 10: "我們為你準備了最後一個函式。\n\n使用一個「如果」陳述式來編程你的遊戲，當 player_score（玩家分數）達到了一定的數字後，就呼叫
+        level_up（升級）這個函式。\n\n例如 player_score > 6\n\n玩玩看這個遊戲，達到 level 3 你就可以移動到下個關卡。 "
       Course 4 Play Lab Params 2: "現在我們知道有些旗子太高了，跳不上去！讓我們使用「向上」、「向下」方向鍵來讓我們能夠跳躍不同的高度。\r\n\r\n我們添加一個
         height（高度）參數到 jump（跳躍）函式裡，向上鍵用來讓小狗跳 200 像素高， 向下鍵用來讓小狗跳 100 像素高。\n"
       Course 4 Play Lab Params 3: '我們已經添加另一個參數到 jump（跳躍）函式裡，這樣一來我們就可以在其他角色使用它。每個角色有個數字作代表，從
@@ -798,9 +945,9 @@ zh-TW:
       CourseD_Dance_Party_03: 現在讓舞者在 6 個小節後開始新的動作！
       CourseD_Dance_Party_04: 將背景效果新增至您的程式。
       CourseD_Dance_Party_05: 使用另一個新的程式積木，讓舞者每 2 個小節改變動作。
-      CourseD_Dance_Party_06: 建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
+      CourseD_Dance_Party_06: 建立一個名為 `backup_dancer1` 的舞者，為皮斯貓伴舞。
       CourseD_Dance_Party_08: 您是否能讓兩個備用舞者的大小相同？
-      CourseD_Dance_Party_09: 使用「設定色調」程式積木來變更舞者的顏色。
+      CourseD_Dance_Party_09: 使用「設定色調」積木來變更舞者的顏色。
       CourseD_Dance_Party_10: 使用「開始跟隨」程式積木，讓另一個舞者也能回應音樂。
       CourseD_Dance_Party_11: "「按下向上鍵時」程式積木允許您在按下向上箭頭時執行程式碼。按下向上鍵時，嘗試讓舞者進行一個快速的動作。"
       CourseD_Dance_Party_11_5: 使用「全部鴨子」積木，讓鴨子一起跳舞。
@@ -833,15 +980,20 @@ zh-TW:
       Crack a Caesar Cipher: 說明
       Crack a Caesar Cipher_2018: 說明
       Crack a Caesar Cipher_2019: 說明
+      D_Frozen_nested7: 現在，轉 180 度，再畫一次樓梯形狀的圖案！
+      Dance Party 5 - Validated: 添加程式，讓外星人被點擊時變成不同的顏色。
+      Dance Party 5: 添加程式，讓外星人被點擊時變成不同的顏色。
+      Dance Party 5_2019: 添加程式，讓外星人被點擊時變成不同的顏色。
+      Dance Party 5_simple: 添加程式，讓外星人被點擊時變成不同的顏色。
       Dance_Party_01: 將「創建一個新的」積木拖曳至工作區中，並把它放到「設定」積木裡頭。
       Dance_Party_01_low: 將「創建一個新的」積木拖曳至工作區中，並把它放到「設定」積木裡頭。
       Dance_Party_02: 讓麋鹿在 4 個小節後開始新的動作！
       Dance_Party_03: 現在讓舞者在 6 個小節後開始新的動作！
       Dance_Party_04: 將背景效果新增至您的程式。
       Dance_Party_05: 使用另一個新的程式積木，讓舞者每 2 個小節改變動作。
-      Dance_Party_06: 建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
+      Dance_Party_06: 建立一個名為 `backup_dancer1` 的舞者，為皮斯貓伴舞。
       Dance_Party_08: 您是否能讓兩個備用舞者的大小相同？
-      Dance_Party_09: 使用「設定色調」程式積木來變更舞者的顏色。
+      Dance_Party_09: 使用「設定色調」積木來變更舞者的顏色。
       Dance_Party_10: 使用「開始跟隨」程式積木，讓另一個舞者也能回應音樂。
       Dance_Party_11.5_test: 使用「全部鴨子」積木，讓鴨子一起跳舞。
       Dance_Party_11: "「按下向上鍵時」程式積木允許您在按下向上箭頭時執行程式碼。按下向上鍵時，嘗試讓舞者進行一個快速的動作。"
@@ -852,8 +1004,8 @@ zh-TW:
       Eval Booleans: 布林值（Booleans）讓我們能夠比較不同的值，如果二者相等則返回 true；如果沒有則返回 false。你覺得這個程式運行後的結果會是什麼呢？
       Find the Wizard: 做你喜歡的任何東西。比方說一個猜數字遊戲！
       Find the Wizard_2018: 做你喜歡的任何東西。比方說一個猜數字遊戲！
-      Food Fight!: "我們已經為你添加了上一關的函數。 \r\n\r\n用“如果”模塊來編寫你的遊戲，當play_score玩家分數 大於某個值時，調用level_up升級
-        函數。 \r\n\r\n例如：“play_score” > 6\r\n\r\n玩遊戲，並且達到第4級來到達下一關。 "
+      Food Fight!: "我們為你準備了最後一個函式。\n\n使用一個「如果」陳述式來編程你的遊戲，當 player_score（玩家分數）達到了一定的數字後，就呼叫
+        level_up（升級）這個函式。\n\n例如 player_score > 6\n\n玩玩看這個遊戲，達到 level 3 你就可以移動到下個關卡。 "
       FoodFight: 這是一個遊戲範例，你也可以在 play lab 裡自己做一個。
       FoodFight_2018: 這是一個遊戲範例，你也可以在 play lab 裡自己做一個。
       Frequency Analysis: 測試
@@ -869,7 +1021,7 @@ zh-TW:
       HOC 2018 Level_12: 設計您自己的水下環境，您自己決定！
       HOC 2018 Level_2: 走向碼頭盡頭。
       HOC 2018 Level_3: 穿越開放海域前往鱈魚的所在位置。
-      HOC 2018 Level_4: 使用循環前往海豚的所在位置。
+      HOC 2018 Level_4: 使用重複迴圈前往海豚的所在位置。
       HOC 2018 Level_5: 探索沉船以找到箱子。
       HOC 2018 Level_6: 在冰塊中尋找以找到鮭魚。
       HOC 2018 Level_7a: 搜尋這些水底廢墟以尋找箱子。
@@ -891,6 +1043,9 @@ zh-TW:
       InspirationalArtwork: 如果這個圖形給了你靈感，試著自己做一個類似的。或者，你也可以隨意的創作。
       InspirationalArtwork_2018: 如果這個圖形給了你靈感，試著自己做一個類似的。或者，你也可以隨意的創作。
       InspirationalArtwork_2019: 如果這個圖形給了你靈感，試著自己做一個類似的。或者，你也可以隨意的創作。
+      'Internet Simulator: Routers': 和你的同學互相發送訊息（點擊觀看完整說明）
+      'Internet Simulator: Routers_2018': 和你的同學互相發送訊息（點擊觀看完整說明）
+      'Internet Simulator: Routers_2019': 和你的同學互相發送訊息（點擊觀看完整說明）
       K-1 Artist 1 Assessment 1: 繪製一條短線條在上及一條長線條在右！
       K-1 Artist Loops 1: 向東移動 4 次來畫出這條線。
       K-1 Artist Loops 2: 現在，使用一個迴圈畫出相同的線條。
@@ -1008,6 +1163,7 @@ zh-TW:
       K-1 maze debug 9: 找出這個關卡的錯誤，重新調整積木的順序，並添加積木，讓使我能移動到豬那兒！
       K2.0 sequence 1: 有個臭蟲（bug，程式中有錯誤的意思）！修正這個程式讓我到豬豬那兒。
       K2.0 sequence 2: 修正這個程式，使我能到達豬的位置！
+      K2.0 sequence 3: 有些地方不大正確，移除這些程式積木，讓我抓到這隻豬！
       K2.0 sequence 5: 先往一個方向移動，接著再往另一個方向移動，讓我抓到那頭豬。
       K2.0 sequence 6: 找找看遺失了哪些積木，添加積木以到達豬那兒！
       K2.0 sequence 9: '挑戰：繞開 TNT 炸藥，讓我抓到豬！ '
@@ -1039,8 +1195,8 @@ zh-TW:
       MC_HOC_2017_02_Cole_2019: 移動 Agent 前往壓板，這樣 {currentPlayerName} 才能前往地圖。
       MC_HOC_2017_02_Kiki: 讓 Agent 前往壓板，然後讓玩家前往橙色方塊。
       MC_HOC_2017_02_Will: 讓 Agent 前往壓板。
-      MC_HOC_2017_03_Cole: 設定 Agent 的代碼以開啟大門。
-      MC_HOC_2017_03_Cole_2019: 設定 Agent 的代碼以開啟大門。
+      MC_HOC_2017_03_Cole: 為代理 Agent 編寫程式以開啟大門。
+      MC_HOC_2017_03_Cole_2019: 為代理 Agent 編寫程式以開啟大門。
       MC_HOC_2017_03_Kiki: 讓 Agent 前往壓板。
       MC_HOC_2017_04: 變更上一個版圖的循環，讓 Agent 可以在這條河較寬的部分開闢路徑。
       MC_HOC_2017_04POINT5_Cole: 讓 Agent 前往壓板。
@@ -1064,21 +1220,21 @@ zh-TW:
       MC_HOC_2017_07a_Kiki: 清理前往橙色區域的路徑。
       MC_HOC_2017_08_Cole: 變更提供的功能以於此生態域中使用。
       MC_HOC_2017_08_Kiki: 變更功能以於此版圖中使用。
-      MC_HOC_2017_08_RY: 使用功能以找到穿過熔岩的路。
-      MC_HOC_2017_08_Will: 使用功能以找到穿過熔岩的路。
-      MC_HOC_2017_09_Cole: 設定 Agent 的程式以清除玩家的路徑。
-      MC_HOC_2017_09_Kiki: 設定 Agent 的程式以清除玩家的路徑，並讓玩家前往壓板。
-      MC_HOC_2017_10_Cole: 建立一種功能，幫助您完成此礦車。
-      MC_HOC_2017_10_Cole_old: 建立一種功能，幫助您完成此礦車。
-      MC_HOC_2017_10_Kiki: 建立一種功能，幫助您完成此礦車。
-      MC_HOC_2017_10_RETRY: 建立一種功能，幫助您完成此礦車。
-      MC_HOC_2017_10_RETRY_2019: 建立一種功能，幫助您完成此礦車。
-      MC_HOC_2017_10_RYAN: 建立一種功能，幫助您完成此礦車。
-      MC_HOC_2017_10_RYAN2: 建立一種功能，幫助您完成此礦車。
+      MC_HOC_2017_08_RY: 使用函式來找出能避開岩漿的路。
+      MC_HOC_2017_08_Will: 使用函式來找出能避開岩漿的路。
+      MC_HOC_2017_09_Cole: 為代理 Agent 編寫程式以幫玩家清除路障。
+      MC_HOC_2017_09_Kiki: 為代理 Agent 編寫程式，先幫玩家清除路障，再帶玩家前往壓力板的位置。
+      MC_HOC_2017_10_Cole: 創建一個能幫你完成關卡的函式。
+      MC_HOC_2017_10_Cole_old: 創建一個能幫你完成關卡的函式。
+      MC_HOC_2017_10_Kiki: 創建一個能幫你完成關卡的函式。
+      MC_HOC_2017_10_RETRY: 使用函式來完成礦車軌道。
+      MC_HOC_2017_10_RETRY_2019: 使用函式來完成礦車軌道。
+      MC_HOC_2017_10_RYAN: 創建一個能幫你完成關卡的函式。
+      MC_HOC_2017_10_RYAN2: 創建一個能幫你完成關卡的函式。
       MC_HOC_2017_13_Cole: "**自由遊戲：**是自己探索的時候了！"
       MC_HOC_2017_4.5v2: 讓 Agent 前往壓板。
-      MC_HOC_2017_Ali: 使用功能以找到穿過熔岩的路。
-      MC_HOC_2017_Ali_2019: 使用功能以找到穿過熔岩的路。
+      MC_HOC_2017_Ali: 使用函式來找出能避開岩漿的路。
+      MC_HOC_2017_Ali_2019: 使用函式來找出能避開岩漿的路。
       MC_HOC_2017_FP10x10: "**自由遊戲：**您可以挑戰自己，在此關卡中收集到所有鑽石嗎？"
       MC_HOC_2017_FP10x10_RE: "**自由遊戲：**您可以挑戰自己，在此關卡中收集到所有鑽石嗎？"
       MC_HOC_2017_FP20x20: "**自由遊戲：**是自己探索的時候了！"
@@ -1159,13 +1315,13 @@ zh-TW:
       NEW Course 4 Play Lab Params 11: '自由發揮的時間到了，用工具箱裡的程式積木來做一些好玩的事吧。 '
       NEW Course 4 Play Labs For Loops 8 Free Play: '自由發揮的時間到了，用工具箱裡的程式積木來做一些好玩的事吧。 '
       New Artist Project: 畫些厲害的東西！你的程式碼會被保存成專案，讓你可以隨時回來繼續創作。
-      New Basketball Project: 創造你的籃球遊戲，你可以改變所有的遊戲規則。當你做好了，點擊「完成」，讓朋友可以在手機上玩你的遊戲。
+      New Basketball Project: 創造你的籃球遊戲，你可以改變所有的遊戲規則。當你做好了，就可以分享給朋友可以在手機上玩你的遊戲。
       New Bounce Project: 創造你自己的彈跳遊戲。您可以改變所有看的到的東西，也可以改變規則。當你完成時，點擊完成，讓朋友可以在他們的手機上試試你的遊戲。
       New Course 4 Artist Functions Level 4: 使用 draw a square（畫個正方形）積木來完成這個圖案。
       New Gumball Project: 自由發揮吧！然後把您的成果分享出來！
       New Ice Age Project: 自由發揮吧！然後把您的成果分享出來！
       New Infinity Project: 自由發揮吧！然後把您的成果分享出來！
-      New Minecraft Hero Project: "**自由遊戲：**是自己探索的時候了！"
+      New Minecraft Hero Project: "**自由發揮：**是時候自己探索了！"
       New Sports Project: 創建你自己的遊戲 ！這裡一切由你做主：你可以更改所有規則、混合搭配不同的運動，愈多創意愈好！當你完成後，點擊完成就可以讓你的朋友在手機上試試看你創造的遊戲。
       Overworld Avoid Monsters: 碰上苦力怕就糟了。小心的從苦力怕身邊通過，安全地抵達你的家裡。
       Overworld Avoid Monsters_2018: 碰上苦力怕就糟了。小心的從苦力怕身邊通過，安全地抵達你的家裡。
@@ -1186,9 +1342,9 @@ zh-TW:
       Overworld Move to Sheep: 添加第二個「移動-向前」指令，到達綿羊的位置。
       Overworld Move to Sheep_2018: 添加第二個「移動-向前」指令，到達綿羊的位置。
       Overworld Move to Sheep_2019: 添加第二個「移動-向前」指令，到達綿羊的位置。
-      Overworld Place Wall: 每幢房子都是由砌牆開始的。在循環指令裡嵌入「放置」與「移動」積木，建造房子的第一部分。
-      Overworld Place Wall_2018: 每幢房子都是由砌牆開始的。在循環指令裡嵌入「放置」與「移動」積木，建造房子的第一部分。
-      Overworld Place Wall_2019: 每幢房子都是由砌牆開始的。在循環指令裡嵌入「放置」與「移動」積木，建造房子的第一部分。
+      Overworld Place Wall: 萬丈高樓平地起，在重複指令裡嵌入「放置」與「移動」積木，建造房子的第一部分。
+      Overworld Place Wall_2018: 萬丈高樓平地起，在重複指令裡嵌入「放置」與「移動」積木，建造房子的第一部分。
+      Overworld Place Wall_2019: 萬丈高樓平地起，在重複指令裡嵌入「放置」與「移動」積木，建造房子的第一部分。
       Overworld Plant Crops: 提前規劃是很棒的！在水的兩側種植作物，這樣以後就不會挨餓了。
       Overworld Plant Crops_2018: 提前規劃是很棒的！在水的兩側種植作物，這樣以後就不會挨餓了。
       Overworld Plant Crops_2019: 提前規劃是很棒的！在水的兩側種植作物，這樣以後就不會挨餓了。
@@ -1210,21 +1366,44 @@ zh-TW:
         Code.org 這個標誌恢復正常。
       Play Lab Rocket 1: 火箭升空，以每秒 15 米的速度航行…點擊「運行」以檢查文字在動畫播放時的問題。
       Play Lab Rocket 2B: 火箭升空，以 15 米/秒的速度航行。使用設計程序，寫出一個名為「rocket-height」的函式，以顯示一個以秒為單位的高度指示儀板，並顯示火箭從起飛到目前為止的高度。
+      Practice Create Performance Task: 設計並實踐你的練習創建性能任務。（點擊觀看完整說明）
+      Practice Create Performance Task_2018: 設計並實踐你的練習創建性能任務。（點擊觀看完整說明）
+      Practice Create Performance Task_2019: 設計並實踐你的練習創建性能任務。（點擊觀看完整說明）
       Project - Make Your Own Clicker Game: |-
         完成你的點點點遊戲！
         （點此觀看完整說明）
+      Project - Your Own Multi Screen App: 創建你的多畫面應用程式。（點擊觀看完整說明）
+      Project - Your Own Multi Screen App_2018: 創建你的多畫面應用程式。（點擊觀看完整說明）
+      Project - Your Own Multi Screen App_2019: 創建你的多畫面應用程式。（點擊觀看完整說明）
       Prompt Test: 做你喜歡的任何東西。比方說一個猜數字遊戲！
       Ryan - 4-5 Bee Conditionals 2: 蜂蜜現在只想要花蜜。不是全部的東西都是花朵，所以檢查每朵雲裡面是否藏著花朵。如果是的話，那就可以採集花蜜。
       Ryan - Bee Conditionals: 蜂蜜現在只想要花蜜。不是全部的東西都是花朵，所以檢查每朵雲裡面是否藏著花朵。如果是的話，那就可以採集花蜜。
+      Ryan Doily Step 2: |-
+        現在，你要重複旋轉 20 次！
+        但每次要轉幾度，最後才會完整轉一圈 360 度？
+      Ryan Doily Step 3: |-
+        現在，你要重複旋轉 20 次！
+        但每次要轉幾度，最後才會完整轉一圈 360 度？
       Ryan Test Locked Blocks: 這裡有個函式名叫 patrol（巡邏）。編輯它以讓貓向上移動 400 像素，然後往下 400 像素。
       Ryan_Demo: 讓麋鹿在 4 個小節後開始新的動作！
+      SG U3L03 - draw rect function: |-
+        寫個名為 drawRectangle（中文意為畫個長方形）的函式。
+        （點擊觀看完整說明）
+      SG U3L03 - draw step: 寫個 drawStep 函式以畫出樓梯（點擊觀看完整說明）
+      SG U3L04 - 3 by 3 with functions: 盡你所能，寫個能快速畫出 3X3 正方形的程式。（點擊觀看完整說明）
+      SG U3L06 Challenge 4 bullseye: 使用 16 進位的顏色代碼還有 dot() 來創建一個靶心。（點擊觀看完整說明）
+      SG U3L06 Challenge 7 smiley face: 使用 turnTo() 與 moveTo()  來畫出一個笑臉。（點擊觀看完整說明）
+      SG U3L06 Challenge 8 make your own: 創作一張你自己的圖畫。（點擊觀看完整說明）
       SG U3L07 - allSeaGrass: 用迴圈的方式在圖片上添加 50 個海草。（點擊觀看完整說明）
       SG U3L07 - bubbles: 用迴圈的方式在圖片上添加 200 個泡泡。（點擊觀看完整說明）
       SG U3L07 - fish: 用迴圈的方式在圖片上添加 15 隻魚。（點擊觀看完整說明）
+      SG U3L07 - randomSquare: 用迴圈繪製這個圖案。（點擊觀看完整說明）
       SG U3L07 - seaGrass: 添加一個參數到「畫個海草」裡，以改變海草在繪製時的彎曲數。（點擊觀看完整說明）
       SG U3L07 - seaStar: 用迴圈的方式在圖片上添加 5 個海星。（點擊觀看完整說明）
       SG U3L07 - sunBeams: 用迴圈的方式在圖片上添加 100 道陽光光芒。（點擊觀看完整說明）
+      SG U3L08 - drawSquareWithParam: 使用 drawSquare() 來再次創建二個正方形，這次要用到參數（點擊觀看完整說明）
       SG U3L08 - fish: 添加一個參數到「畫個魚兒」裡，以改變魚兒在繪製時的尺寸。（點擊觀看完整說明）
+      SG U3L08 - freePlay: 繼續呼叫你的新的函式帶參數來添加圖案。（點擊觀看完整說明）
       SG U3L08 - paramsToStarfish: 添加一個參數到「畫個海星」裡，以改變海星在繪製時的尺寸。（點擊觀看完整說明）
       SG U3L08 - seaGrass: 添加一個參數到「畫個海草」裡，以改變海草在繪製時的尺寸。（點擊觀看完整說明）
       SpecialFrozenLevel: 您已經變成一個專業的藝術家囉！開始打造一個冬季仙境吧。
@@ -1258,30 +1437,93 @@ zh-TW:
       U2 frequency caesar: 說明
       U2 frequency random sub: 說明
       U2 vigenere cipher: 說明
+      U2L04 - NetSim Routers with Addresses: 和你的同學互相發送訊息（點擊觀看完整說明）
       U2L14 frequency random: 測試
+      U3 - Arrays - assignment: 使用索引的方式將陣列中的 1 改成 0。（點擊觀看完整說明）
+      U3 - Arrays - assignment2: 計算儲存在陣列中的三個值的總和。（點擊觀看完整說明）
+      U3 - Arrays - favThings firstOutput: 使用 setText 顯示陣列裡的第一個項目。（點擊觀看完整說明）
+      U3 - Arrays - favThings giveIDs: 給你的 UI 起個具描述和意義的 ID。（點擊觀看完整說明）
+      U3 - Arrays - favThings keepPlaying: 改進任何你想的到的！（點擊觀看完整說明）
+      U3 - Arrays - favThings template: 給你的 UI 起個具描述和意義的 ID。（點擊觀看完整說明）
+      U3 - Arrays - favThings template_2018: 給你的 UI 起個具描述和意義的 ID。（點擊觀看完整說明）
+      U3 - Arrays - favThings template_2019: 給你的 UI 起個具描述和意義的 ID。（點擊觀看完整說明）
+      U3 - Arrays - globalVariableIndex: 給你的 UI 起個具描述和意義的 ID。（點擊觀看完整說明）
       U3 - Arrays - indexPractice: 將陣列的內容依序寫到畫面上。（點擊查看完整說明）
+      U3 - Arrays - insertingItems: 插入項目到陣列裡頭以形成一個完整的句子。（點擊觀看完整說明）
+      U3 - Arrays - length: 用 list.length 來確定每個陣列的長度，也就是陣列中的項目數量。（點擊觀看完整說明）
+      U3 - Arrays - remove: 從陣列中移除項目以形成一個完整的句子。（點擊觀看完整說明）
+      U3 - Arrays - stringsInArrays: 將句子中的每個單字逐一的寫入到陣列裡頭。（點擊觀看完整說明）
       U3 - Canvas - 200dots: 添加一個迴圈到程式，以在畫布上畫出 200 個黑點。（點擊觀看完整說明）
+      U3 - Canvas - changeToMouseMove: 修改你的程式，在你點擊滑鼠按鍵時能繪製點狀圖形。（點擊觀看完整說明）
+      U3 - Canvas - draw at click point: 修改你的程式，在你點擊滑鼠按鍵時能繪製點狀圖形。（點擊觀看完整說明）
       U3 - Canvas - introCanvas: 添加一個畫布（canvas）到你的 app 上，並將它設定成啟用。接著在你的畫布上新增一個大的圓點。（點擊觀看完整說明）
       U3 - Canvas - usingOffsetXY: 添加一個控制紀錄指令到你的事件處理函式裡，使用它來顯示事件參數，同時在上面點擊能觀看事件參數的內容。（點擊觀看完整說明）
       U3 - Conditional Basics - 6: 添加一個「設定文字」到如果陳述式的「不對，再猜猜。」之後。（點擊觀看完整說明）
       U3 - Conditionals - intoOr: 添加 2 個用上「或」運算子的如果陳述式。（點擊觀看完整說明）
       U3 - Conditionals - introAND: 添加 2 個用上「或」運算子的如果陳述式。（點擊觀看完整說明）
+      U3 - Design Mode - Layers and Delete: 修復靶心遊戲的佈局。（點擊觀看完整說明）
       U3 - Design Mode - WTF Console Log: 添加 3 個控制紀錄訊息，並測試將它們輸出。（點擊觀看完整說明）
       U3 - Design Mode 1: 添加一個大的紅色按鈕到設計模式畫面上。（點擊觀看完整說明）
+      U3 - Dice - Dropdown and Score: 添加猜測和得分機制到擲骰子遊戲（點擊觀看完整說明）
       U3 - Dice - Dropdown with Strings: 添加一個下拉式選單來選擇難度，並將所選的結果輸出到控制台。（點擊觀看完整說明）
       U3 - High Low - Dropdown: 添加一個下拉式清單供選擇，取代 promptNum（點擊觀看完整說明）
+      U3 - Keys - Multiple Keys: 當點擊下向鍵時播放不同的音效。（點擊觀看完整說明）
+      U3 - Loops - 1: 改變當…迴圈的條件，以判斷變數的值是否小於 90（點擊觀看完整說明）
+      U3 - Loops - 13: 更新程式，讓它從 3 開始數，每次加 1。（點擊觀看完整說明）
+      U3 - Loops - 15: 計算骰子總合為 12 出現的次數。（點擊觀看完整說明）
+      U3 - Loops - 2: 試著用 !=, > 還有 < 創建一個無限迴圈。（點擊觀看完整說明）
       U3 - Loops - 4: " 使用偵錯指令以列出在第 6 點之前的清單。（點擊查看完整說明）"
       U3 - Loops - 9: " 修改條件讓它持續轉動，只要每個都小於 3。（點擊觀看完整說明）"
       U3 - Loops - Continue: " 使用偵錯指令以列出在第 6 點之前的清單。（點擊查看完整說明）"
+      U3 - Loops - Minus Minus: 修改程式，讓它從 10 倒數到 1。（點擊觀看完整說明）
+      U3 - Loops - Typing in Console: 使用 console（系統監控台）來檢查最後一個數字。（點擊觀看完整說明）
+      U3 - Loops - plus and minus = operator: 用 += 運算子來更新程式。（點擊觀看完整說明）
       U3 - Loops And Arrays - Add 5: 將陣列裡的所有數值都加 5（點擊觀看完整說明）
+      U3 - Loops And Arrays - Counting Times: 計算在陣列裡 5 出現的次數。（點擊觀看完整說明）
+      U3 - Loops And Arrays - Divid by 2: 讓陣列的每個值除以 2。（點擊觀看完整說明）
       U3 - Loops And Arrays - General Search Param: 添加第二個參數到搜尋函式，作為要搜尋的值。（點擊觀看完整說明）
       U3 - Loops And Arrays - Intro For Loop: 添加一個 for 迴圈，裡頭帶有控制紀錄，並試試輸出 3 次。（點擊觀看完整說明）
+      U3 - Loops And Arrays - Multiple Returns: 測試一下函式 findMax 返回的值是多少。（點擊觀看完整說明）
+      U3 - Loops And Arrays - Print Array: 使用計數迴圈來輸出陣列中所有的值。（點擊觀看完整說明）
+      U3 - Loops And Arrays - Search and Remove: 搜尋陣列中的值 5，並從陣列中移除它。（點擊觀看完整說明）
+      U3 - Practice Create Performance Task: 設計並實踐你的練習創建性能任務。（點擊觀看完整說明）
+      U3 - Return Values - min1: 測試一下函式 findMax 返回的值是多少。（點擊觀看完整說明）
+      U3 - User Input - Save getText To Variable: 用變數儲存使用者的年齡與姓名（點擊觀看完整說明）
+      U3 - User Input - Saving After Input: 使用 getText() 儲存使用者的年齡（點擊觀看完整說明）
+      U3 - User Input and String -  Concat: 在文字方塊輸出關於年齡的訊息（點擊觀看完整說明）
+      U3 - Variables - Clicker Game: 創建你自己的改良版追逐遊戲。（點擊觀看完整說明）
+      U3 - Variables - Decrement: 讓變數值遞減。（點擊觀看完整說明）
       U3 - Variables - Set to Expression with Other Variables and Turtle: "（點擊觀看完整說明）"
       U3 - Variables - Set to Expression with Turtle: "（點擊觀看全部）"
+      U3 - Variables - Set to Expression: 試試新的表達式。（點擊觀看完整說明）
       U3 Variables flower example: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       U3 Variables gray square: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       U3 Variables randomize your square: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       U3- Variables - Text Mode: 1. 切換到文字模式並輸入說明；2. 拖曳積木到文字模式；3. 實驗程式碼完成
+      U3L03 - draw rect function: |-
+        寫個名為 drawRectangle（中文意為畫個長方形）的函式。
+        （點擊觀看完整說明）
+      U3L03 - draw rect function_2018: |-
+        寫個名為 drawRectangle（中文意為畫個長方形）的函式。
+        （點擊觀看完整說明）
+      U3L03 - draw rect function_2019: |-
+        寫個名為 drawRectangle（中文意為畫個長方形）的函式。
+        （點擊觀看完整說明）
+      U3L03 - draw step: 寫個 drawStep 函式以畫出樓梯（點擊觀看完整說明）
+      U3L03 - draw step_2018: 寫個 drawStep 函式以畫出樓梯（點擊觀看完整說明）
+      U3L03 - draw step_2019: 寫個 drawStep 函式以畫出樓梯（點擊觀看完整說明）
+      U3L04 - 3 by 3 with functions: 盡你所能，寫個能快速畫出 3X3 正方形的程式。（點擊觀看完整說明）
+      U3L04 - 3 by 3 with functions_2018: 盡你所能，寫個能快速畫出 3X3 正方形的程式。（點擊觀看完整說明）
+      U3L04 - 3 by 3 with functions_2019: 盡你所能，寫個能快速畫出 3X3 正方形的程式。（點擊觀看完整說明）
+      U3L06 Challenge 4 bullseye: 使用 16 進位的顏色代碼還有 dot() 來創建一個靶心。（點擊觀看完整說明）
+      U3L06 Challenge 4 bullseye_2018: 使用 16 進位的顏色代碼還有 dot() 來創建一個靶心。（點擊觀看完整說明）
+      U3L06 Challenge 4 bullseye_2019: 使用 16 進位的顏色代碼還有 dot() 來創建一個靶心。（點擊觀看完整說明）
+      U3L06 Challenge 7 smiley face: 使用 turnTo() 與 moveTo()  來畫出一個笑臉。（點擊觀看完整說明）
+      U3L06 Challenge 7 smiley face_2018: 使用 turnTo() 與 moveTo()  來畫出一個笑臉。（點擊觀看完整說明）
+      U3L06 Challenge 7 smiley face_2019: 使用 turnTo() 與 moveTo()  來畫出一個笑臉。（點擊觀看完整說明）
+      U3L06 Challenge 8 make your own: 創作一張你自己的圖畫。（點擊觀看完整說明）
+      U3L06 Challenge 8 make your own_2018: 創作一張你自己的圖畫。（點擊觀看完整說明）
+      U3L06 Challenge 8 make your own_2019: 創作一張你自己的圖畫。（點擊觀看完整說明）
       U3L07 - allSeaGrass: 用迴圈的方式在圖片上添加 50 個海草。（點擊觀看完整說明）
       U3L07 - allSeaGrass_2018: 用迴圈的方式在圖片上添加 50 個海草。（點擊觀看完整說明）
       U3L07 - allSeaGrass_2019: 用迴圈的方式在圖片上添加 50 個海草。（點擊觀看完整說明）
@@ -1291,6 +1533,9 @@ zh-TW:
       U3L07 - fish: 用迴圈的方式在圖片上添加 15 隻魚。（點擊觀看完整說明）
       U3L07 - fish_2018: 用迴圈的方式在圖片上添加 15 隻魚。（點擊觀看完整說明）
       U3L07 - fish_2019: 用迴圈的方式在圖片上添加 15 隻魚。（點擊觀看完整說明）
+      U3L07 - randomSquare: 用迴圈繪製這個圖案。（點擊觀看完整說明）
+      U3L07 - randomSquare_2018: 用迴圈繪製這個圖案。（點擊觀看完整說明）
+      U3L07 - randomSquare_2019: 用迴圈繪製這個圖案。（點擊觀看完整說明）
       U3L07 - seaGrass: 添加一個參數到「畫個海草」裡，以改變海草在繪製時的彎曲數。（點擊觀看完整說明）
       U3L07 - seaGrass_2018: 添加一個參數到「畫個海草」裡，以改變海草在繪製時的彎曲數。（點擊觀看完整說明）
       U3L07 - seaGrass_2019: 添加一個參數到「畫個海草」裡，以改變海草在繪製時的彎曲數。（點擊觀看完整說明）
@@ -1300,24 +1545,55 @@ zh-TW:
       U3L07 - sunBeams: 用迴圈的方式在圖片上添加 100 道陽光光芒。（點擊觀看完整說明）
       U3L07 - sunBeams_2018: 用迴圈的方式在圖片上添加 100 道陽光光芒。（點擊觀看完整說明）
       U3L07 - sunBeams_2019: 用迴圈的方式在圖片上添加 100 道陽光光芒。（點擊觀看完整說明）
+      U3L08 - drawSquareWithParam - for video: 使用 drawSquare() 來再次創建二個正方形，這次要用到參數（點擊觀看完整說明）
+      U3L08 - drawSquareWithParam: 使用 drawSquare() 來再次創建二個正方形，這次要用到參數（點擊觀看完整說明）
+      U3L08 - drawSquareWithParam_2018: 使用 drawSquare() 來再次創建二個正方形，這次要用到參數（點擊觀看完整說明）
+      U3L08 - drawSquareWithParam_2019: 使用 drawSquare() 來再次創建二個正方形，這次要用到參數（點擊觀看完整說明）
+      U3L08 - drawSquaresWithParams: 寫個  drawSmallSquare() 函式來畫出邊長 25px 的正方形。（點擊觀看完整說明）
       U3L08 - fish: 添加一個參數到「畫個魚兒」裡，以改變魚兒在繪製時的尺寸。（點擊觀看完整說明）
       U3L08 - fish_2018: 添加一個參數到「畫個魚兒」裡，以改變魚兒在繪製時的尺寸。（點擊觀看完整說明）
       U3L08 - fish_2019: 添加一個參數到「畫個魚兒」裡，以改變魚兒在繪製時的尺寸。（點擊觀看完整說明）
+      U3L08 - freePlay: 繼續呼叫你的新的函式帶參數來添加圖案。（點擊觀看完整說明）
+      U3L08 - freePlay_2018: 繼續呼叫你的新的函式帶參數來添加圖案。（點擊觀看完整說明）
+      U3L08 - freePlay_2019: 繼續呼叫你的新的函式帶參數來添加圖案。（點擊觀看完整說明）
+      U3L08 - multipleLayersofParams: 呼叫 drawPlusSign() 來完成這個圖像。（點擊觀看完整說明）
       U3L08 - paramsToStarfish: 添加一個參數到「畫個海星」裡，以改變海星在繪製時的尺寸。（點擊觀看完整說明）
       U3L08 - paramsToStarfish_2018: 添加一個參數到「畫個海星」裡，以改變海星在繪製時的尺寸。（點擊觀看完整說明）
       U3L08 - paramsToStarfish_2019: 添加一個參數到「畫個海星」裡，以改變海星在繪製時的尺寸。（點擊觀看完整說明）
       U3L08 - seaGrass: 添加一個參數到「畫個海草」裡，以改變海草在繪製時的尺寸。（點擊觀看完整說明）
       U3L08 - seaGrass_2018: 添加一個參數到「畫個海草」裡，以改變海草在繪製時的尺寸。（點擊觀看完整說明）
       U3L08 - seaGrass_2019: 添加一個參數到「畫個海草」裡，以改變海草在繪製時的尺寸。（點擊觀看完整說明）
+      U3L13 - Project: 創建你的多畫面應用程式。（點擊觀看完整說明）
       U3L13 - Turtle move with button: 添加一個按鈕，讓你在點擊它時，烏龜能夠移動。（點擊觀看完整說明）
+      U3L14 - User Input Division calculator: 寫個能當簡易計算機的程式。（點擊觀看完整說明）
+      U3L15 - DEMO up down count practice app: 測試這個應用程式（點擊觀看完整說明）
+      U3L15 - add code to make count down work: 寫個程式，讓向下鍵如你預期般的運作。（點擊觀看完整說明）
+      U3L15 - clicker update score: 添加程式碼，讓蘋果被點擊時更新得分的值。（點擊觀看完整說明）
+      U3L15 - count upDown bug forget to set text: 找出程式中的 BUG 並修復它。（點擊觀看完整說明）
+      U3L15 - count upDown bug logic error wrong update: 找出程式中的 BUG 並修復它。（點擊觀看完整說明）
+      U3L15 - count upDown bug var not created globally: 找出程式中的 BUG 並修復它。（點擊觀看完整說明）
+      U3L15 - mini clicker update score: 添加程式碼，讓蘋果被點擊時更新得分的值。（點擊觀看完整說明）
+      U3L15 - variable scoping problem debugging: 看看你能不能找到這個程式不能運行的原因。（點擊觀看完整說明）
       U3L15 full clicker app: |-
         完成你的點點點遊戲！
         （點此觀看完整說明）
+      U3L16 - chaserApp: 創建你自己的追逐遊戲。（點擊觀看完整說明）
+      U3L16 - chooseImages: 把應用程式中的圖像取代成你想要的。（點擊觀看完整說明）
+      U3L16 - introSetPosition: 把按鈕移到畫面的底部。（點擊觀看完整說明）
       U3L16 - nameAgeTemplate: 添加一個輸入姓名、年齡的文字方塊。（點擊觀看完整說明）
       U3L16 - nameAgeTemplate_2018: 添加一個輸入姓名、年齡的文字方塊。（點擊觀看完整說明）
       U3L16 - nameAgeTemplate_2019: 添加一個輸入姓名、年齡的文字方塊。（點擊觀看完整說明）
+      U3L16 - outputWithTextArea: 輸出一個訊息到 'textArea'（點擊觀看完整說明）
+      U3L16 - projectTemplate: 創建你自己的追逐者應用程式。（點擊觀看完整說明）
+      U3L16 - singleSetPosition: 把按鈕移到畫面的中間。（點擊觀看完整說明）
       U3L16 - textInput getText write: 添加一個輸入姓名、年齡的文字方塊。（點擊觀看完整說明）
+      U3L16 - toUpper: 讓使用者的姓名以英文小寫樣式顯示（點擊觀看完整說明）
+      U3L17 - introKeyValue: 用資料檢視器觀察你的鍵值對。（點擊觀看完整說明）
+      U3L17 - readKeyValue: 用資料檢視器觀察你的鍵值對。（點擊觀看完整說明）
+      U3L19 - DEMO up down count practice app: 測試這個應用程式（點擊觀看完整說明）
+      U3L24 Chatbot Basic Conditionals: 查看專看說明以取得幫助。（點擊觀看完整說明）
       U3L24 Chatbot Nested Conditionals: 添加一個條件式到你的個人助理，裡頭至少包含 3 個「否則」陳述式。
+      U3L24 introIncludes: 練習 includes 指令的用法。（點擊觀看完整說明）
       U4 - Add Row By Hand: 添加一筆資料到你在數據檢視器上的資料表。（點擊觀看完整說明）
       U4 - Add Row By Hand_2018: 添加一筆資料到你在數據檢視器上的資料表。（點擊觀看完整說明）
       U4 - Add Row By Hand_2019: 添加一筆資料到你在數據檢視器上的資料表。（點擊觀看完整說明）
@@ -1333,9 +1609,21 @@ zh-TW:
       U4 - Objects - accessingPropertiesInArray: 存取陣列中的物件屬性。（點擊查看完整說明）
       U4 - Objects - accessingPropertiesInArray_2018: 存取陣列中的物件屬性。（點擊查看完整說明）
       U4 - Objects - accessingPropertiesInArray_2019: 存取陣列中的物件屬性。（點擊查看完整說明）
+      U4 - Objects - showContact3: 為每個聯絡人顯示圖片資訊。（點擊觀看完整說明）
+      U4 - Objects - showContact3_2018: 為每個聯絡人顯示圖片資訊。（點擊觀看完整說明）
+      U4 - Objects - showContact3_2019: 為每個聯絡人顯示圖片資訊。（點擊觀看完整說明）
       U4 - Read Record - 1.3: "添加一個控制紀錄指令到回呼函式（callback function）裡。（點擊觀看完整說明）\r\n"
       U4 - Read Record - 1.3_2018: "添加一個控制紀錄指令到回呼函式（callback function）裡。（點擊觀看完整說明）\r\n"
       U4 - Read Record - 1.3_2019: "添加一個控制紀錄指令到回呼函式（callback function）裡。（點擊觀看完整說明）\r\n"
+      U4 - ReadRecords - Contacts App 2: 創建個名為 refreshLocalData（中文為刷新本地資料）的函式（點擊觀看完整說明）
+      U4 - ReadRecords - Contacts App 2_2018: 創建個名為 refreshLocalData（中文為刷新本地資料）的函式（點擊觀看完整說明）
+      U4 - ReadRecords - Contacts App 2_2019: 創建個名為 refreshLocalData（中文為刷新本地資料）的函式（點擊觀看完整說明）
+      U4 - ReadRecords - Contacts App 4: 創建一個刪除按鈕。（點擊觀看完整說明）
+      U4 - ReadRecords - Contacts App 4_2018: 創建一個刪除按鈕。（點擊觀看完整說明）
+      U4 - ReadRecords - Contacts App 4_2019: 創建一個刪除按鈕。（點擊觀看完整說明）
+      U4 - ReadRecords - Contacts App 5 make delete work: 為你建立的「刪除」按鈕寫個事件處理常式。（點擊觀看完整說明）
+      U4 - ReadRecords - Contacts App 5 make delete work_2018: 為你建立的「刪除」按鈕寫個事件處理常式。（點擊觀看完整說明）
+      U4 - ReadRecords - Contacts App 5 make delete work_2019: 為你建立的「刪除」按鈕寫個事件處理常式。（點擊觀看完整說明）
       U4 - add createRecord to contacts App: 將程式添加到你的聯絡人應用程式，如此就可以新添加的聯絡人儲存在表格中（點擊以觀看完整說明）。
       U4 - add createRecord to contacts App_2018: 將程式添加到你的聯絡人應用程式，如此就可以新添加的聯絡人儲存在表格中（點擊以觀看完整說明）。
       U4 - add createRecord to contacts App_2019: 將程式添加到你的聯絡人應用程式，如此就可以新添加的聯絡人儲存在表格中（點擊以觀看完整說明）。
@@ -1354,6 +1642,18 @@ zh-TW:
       U4L06 Data Storage 6: " 使用「取得時間」或是「取得使用者 Id」積木來收集額外的資訊。 "
       U4L06 Data Storage 7: 添加第二個畫面到我們所建立的簡單應用程式裡，用來截取使用者的圖像。在 JSON 物件被儲存到資料表之後返回畫面
         1。
+      U6 - Final Project - Project Level: 在這裡創建你的成果專案。（點擊觀看完整說明）
+      U6 - Final Project - Project Level_2018: 在這裡創建你的成果專案。（點擊觀看完整說明）
+      U6 - Final Project - Project Level_2019: 在這裡創建你的成果專案。（點擊觀看完整說明）
+      U6 - updateRecord - Contacts - Edit UI: 設定 UI 中需要編輯聯絡人的元素。（點擊觀看完整說明）
+      U6 - updateRecord - Contacts - Edit UI_2018: 設定 UI 中需要編輯聯絡人的元素。（點擊觀看完整說明）
+      U6 - updateRecord - Contacts - Edit UI_2019: 設定 UI 中需要編輯聯絡人的元素。（點擊觀看完整說明）
+      U6 - updateRecord - Contacts - Edit event handler: 為編輯聯絡人的 UI 元件寫個事件處理常式。（點擊觀看完整說明）
+      U6 - updateRecord - Contacts - Edit event handler_2018: 為編輯聯絡人的 UI 元件寫個事件處理常式。（點擊觀看完整說明）
+      U6 - updateRecord - Contacts - Edit event handler_2019: 為編輯聯絡人的 UI 元件寫個事件處理常式。（點擊觀看完整說明）
+      U6 - updateRecord - Contacts - Save edited contact: 使用 updateRecord 來將使用者的編輯內容存到資料庫。（點擊觀看完整說明）
+      U6 - updateRecord - Contacts - Save edited contact_2018: 使用 updateRecord 來將使用者的編輯內容存到資料庫。（點擊觀看完整說明）
+      U6 - updateRecord - Contacts - Save edited contact_2019: 使用 updateRecord 來將使用者的編輯內容存到資料庫。（點擊觀看完整說明）
       Underground Avoiding Lava: 有些方塊下有熔岩，您必須先覆蓋好才能夠往前移動。這時候「如果」指令就派上用場了。在正確位置添加「移動-向前」指令，開採到這些方塊。
       Underground Avoiding Lava_2018: 有些方塊下有熔岩，您必須先覆蓋好才能夠往前移動。這時候「如果」指令就派上用場了。在正確位置添加「移動-向前」指令，開採到這些方塊。
       Underground Avoiding Lava_2019: 有些方塊下有熔岩，您必須先覆蓋好才能夠往前移動。這時候「如果」指令就派上用場了。在正確位置添加「移動-向前」指令，開採到這些方塊。
@@ -1374,6 +1674,12 @@ zh-TW:
       artistFunctionsVideo1: 按照指示來做出你自己的函式。
       artistLoopsK9: "**挑戰：**可愛極了！讓我們在花園裡散個步。"
       beeDebugVideo1: 使用一個`重複`迴圈來收集所有的花蜜。
+      behaviors 1: 建立一個預測！
+      behaviors 2: 讓小小鳥展翅高飛！
+      behaviors 3: 幫烏龜擊敗兔子！
+      behaviors 4: 建立一個預測！
+      behaviors 5a: 讓球滾動。
+      behaviors 6: 讓球滾動。
       birdsDebugVideo1: 順著路徑讓我抓到那隻蠢豬，當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！
       bounce_1: 添加一個積木到「當按向左鍵時」積木下，並點擊「運行」。讓球拍可以用向左鍵移動到目標。
       bounce_10: 畫面上方有個新的目標區域，把「得分 - 自己」和「得分 - 對手」積木分別附加到「當球命中目標時」和「當球沒有碰到球拍時」積木下以製作一個遊戲。看看在對手得到
@@ -1394,7 +1700,7 @@ zh-TW:
         2 分前，你可以得幾分！
       bounce_12: 創造你自己的彈跳遊戲。您可以改變所有看的到的東西，也可以改變規則。當你完成時，點擊完成，讓朋友可以在他們的手機上試試你的遊戲。
       bounce_12_2018: 創造你自己的彈跳遊戲。您可以改變所有看的到的東西，也可以改變規則。當你完成時，點擊完成，讓朋友可以在他們的手機上試試你的遊戲。
-      bounce_12_basketball: 創造你的籃球遊戲，你可以改變所有的遊戲規則。當你做好了，點擊「完成」，讓朋友可以在手機上玩你的遊戲。
+      bounce_12_basketball: 創造你的籃球遊戲，你可以改變所有的遊戲規則。當你做好了，就可以分享給朋友可以在手機上玩你的遊戲。
       bounce_12_sports: 創建你自己的遊戲 ！這裡一切由你做主：你可以更改所有規則、混合搭配不同的運動，愈多創意愈好！當你完成後，點擊完成就可以讓你的朋友在手機上試試看你創造的遊戲。
       bounce_1_2018: 添加一個積木到「當按向左鍵時」積木下，並點擊「運行」。讓球拍可以用向左鍵移動到目標。
       bounce_1_basketball: 在「當按向左鍵時」積木的下方添加程式並點擊「運行」。用向左鍵來移動手來到達終點目標。
@@ -1432,6 +1738,10 @@ zh-TW:
       course1_playlab_events_challenge1: |-
         我的朋友藏在哪兒？
         你能寫個程式把我的朋友找出來嗎？
+      course2_artist_nestedLoops_challenge1: 你知道要怎麼製作出這樣的圖像嗎？
+      course2_artist_nestedLoops_challenge2: 你知道要怎麼製作出這樣的圖像嗎？
+      course2_bee_conditionals_challenge1: 收集所有的花蜜及蜂蜜。
+      course2_bee_conditionals_challenge2: 收集所有的花蜜及蜂蜜。
       course2_harvester_loops_challenge1: 收集所有的玉米。
       course2_harvester_loops_challenge2: |-
         收集所有的生菜。
@@ -1481,7 +1791,12 @@ zh-TW:
       courseA_artist_loops9_2018: 挑戰：修復這些階梯。
       courseA_artist_loops9_2019: 挑戰：修復這些階梯。
       courseA_artist_loops_challenge2: 啾啾！你能幫我做兩個鳥屋嗎？
+      courseA_artist_loops_challenge2a: "*「幫我把帳篷搭起來！」*"
+      courseA_artist_loops_challenge2a_2018: "*「幫我把帳篷搭起來！」*"
+      courseA_artist_loops_challenge2a_2019: "*「幫我把帳篷搭起來！」*"
       courseA_artist_loops_challenge3: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
+      courseA_bee_seq4: 自己試試！
+      courseA_bee_seq5: 自己試試！
       courseA_collector_loops1: 幫助 Laurel 移動，盡可能讓他找到所有的寶石！
       courseA_collector_loops10: 幫助 Laurel 在幽深的山谷得到所有的寶藏。
       courseA_collector_loops10_2018: 幫助 Laurel 在幽深的山谷得到所有的寶藏。
@@ -1518,6 +1833,12 @@ zh-TW:
       courseA_collector_loops_challenge2: '試著收集到寶藏吧！ '
       courseA_collector_preLoops7: 這裡有 3 堆黃金！把它們全部收集起來。
       courseA_forVideoTest_artist: 使用`重複`迴圈為水添加波紋。
+      courseA_harvester_loops7: 換你自己試試！
+      courseA_harvester_loops7_2019: 換你自己試試！
+      courseA_harvester_seq6: 自己試試！
+      courseA_harvester_seq6_2019: 自己試試！
+      courseA_harvester_seq7: 自己試試！
+      courseA_harvester_seq7_2019: 自己試試！
       courseA_maze_ramp3_2018: 這裡有個多餘的積木害得鳥撞牆，找到它，然後把它拖回工具箱以消除它。
       courseA_maze_ramp4_2018: 小心 TNT 炸藥，不然羽毛會被炸飛！
       courseA_maze_ramp5_2018: 小心 TNT 炸藥。
@@ -1542,6 +1863,8 @@ zh-TW:
       courseA_maze_seq3_2018: 修正這個程式，讓鳥抓到這頭豬！
       courseA_maze_seq4: "「移除」一個積木，讓鳥抓到這頭豬！"
       courseA_maze_seq4_2018: "「移除」一個積木，讓鳥抓到這頭豬！"
+      courseA_maze_seq5_2018: 測試一下吧。
+      courseA_maze_seq5_2019: 測試一下吧。
       courseA_maze_seq6: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！
       courseA_maze_seq6_2018: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！
       courseA_maze_seq6_2019: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！
@@ -1642,6 +1965,9 @@ zh-TW:
       courseB_playLab_events1: 看看你是否能指出每個積木的用途。
       courseB_playLab_events1_2018: 看看你是否能指出每個積木的用途。
       courseB_playLab_events1_2019: 看看你是否能指出每個積木的用途。
+      courseB_playlab_events2: 在你點擊`運行`按鈕後，讓飛龍 Daisy 說些話。
+      courseB_playlab_events2_2018: 在你點擊`運行`按鈕後，讓飛龍 Daisy 說些話。
+      courseB_playlab_events2_2019: 在你點擊`運行`按鈕後，讓飛龍 Daisy 說些話。
       courseB_playlab_events_challenge2_embed: 這兒是你完成的遊戲！
       courseB_starWars_prog1: 幫助 BB-8 拿到所有廢金屬！
       courseB_starWars_prog10: 幫助 BB-8 收集到所有發光的廢金屬
@@ -1680,6 +2006,7 @@ zh-TW:
       courseC_PlayLab_events3: 你可以寫一個程式來讓小狗（角色1）走向小貓嗎？
       courseC_PlayLab_events3_2018: 你可以寫一個程式來讓小狗（角色1）走向小貓嗎？
       courseC_PlayLab_events3_2019: 你可以寫一個程式來讓小狗（角色1）走向小貓嗎？
+      courseC_artist_loops3a_2019: 現在添加一隻蝙蝠！
       courseC_artist_prog5: |-
         這棟房子需要屋頂！請畫出三角形。
         提示：三邊都是同樣的長度。
@@ -1692,6 +2019,9 @@ zh-TW:
       courseC_artist_prog7: "**挑戰：**這個標記非常特別！你想的到要怎麼畫出這種輪廓嗎？"
       courseC_artist_prog7_2018: "**挑戰：**這個標記非常特別！你想的到要怎麼畫出這種輪廓嗎？"
       courseC_artist_prog7_2019: "**挑戰：**這個標記非常特別！你想的到要怎麼畫出這種輪廓嗎？"
+      courseC_artist_prog_challenge2a: "*「幫我在這條路上頭漆上黃線！」*"
+      courseC_artist_prog_challenge2a_2018: "*「幫我在這條路上頭漆上黃線！」*"
+      courseC_artist_prog_challenge2a_2019: "*「幫我在這條路上頭漆上黃線！」*"
       courseC_collector_prog1: 利用這些程式積木，幫 Laurel 收集寶石。
       courseC_collector_prog1_2018: 利用這些程式積木，幫 Laurel 收集寶石。
       courseC_collector_prog1_2019: 利用這些程式積木，幫 Laurel 收集寶石。
@@ -1705,9 +2035,30 @@ zh-TW:
       courseC_collector_prog9_2018: "*「讓我們獲得所有的硬幣！」*"
       courseC_collector_prog9_2019: "*「讓我們獲得所有的硬幣！」*"
       courseC_collector_progA: 幫 Laurel 收集到所有寶石。
+      courseC_harvester_loops10: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops10_2018: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops10_2019: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops11: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops11_2018: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops11_2019: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops4: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops4_2018: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops4_2019: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops5: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops5_2018: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops5_2019: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops6: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops6_2018: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops6_2019: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops7: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops7_2018: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops7_2019: 收集所有的玉米和所有的南瓜。
       courseC_harvester_loops8: "**挑戰：**收集所有的玉米和所有的南瓜。"
       courseC_harvester_loops8_2018: "**挑戰：**收集所有的玉米和所有的南瓜。"
       courseC_harvester_loops8_2019: "**挑戰：**收集所有的玉米和所有的南瓜。"
+      courseC_harvester_loops9: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops9_2018: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops9_2019: 收集所有的玉米和所有的南瓜。
       courseC_harvester_loops_challenge1: 收集所有的玉米。
       courseC_harvester_loops_challenge1a: 收集所有的玉米。
       courseC_harvester_loops_challenge1a_2018: 收集所有的玉米。
@@ -1753,6 +2104,10 @@ zh-TW:
       courseC_maze_programming9: "*「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」*"
       courseC_maze_programming9_2018: "*「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」*"
       courseC_maze_programming9_2019: "*「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」*"
+      courseD_Frozen_nested7: 現在，轉 180 度，再畫一次樓梯形狀的圖案！
+      courseD_artist_1_2018: 畫個邊長 **50** 像素的六邊形。
+      courseD_artist_1_2018_2019: 畫個邊長 **50** 像素的六邊形。
+      courseD_artist_7_2018: 現在，轉 180 度，再畫一次樓梯形狀的圖案！
       courseD_artist_binary1: 使用下方的程式積木讓小藝術家在網格中的第一行以二進位畫出「01010101」。
       courseD_artist_binary1_2018: 使用下方的程式積木讓小藝術家在網格中的第一行以二進位畫出「01010101」。
       courseD_artist_binary1_2019: 使用下方的程式積木讓小藝術家在網格中的第一行以二進位畫出「01010101」。
@@ -1771,12 +2126,24 @@ zh-TW:
       courseD_artist_binary8_predict1: 完成這些程式來畫出圖案。
       courseD_artist_binary8_predict1_2018: 完成這些程式來畫出圖案。
       courseD_artist_binary8_predict1_2019: 完成這些程式來畫出圖案。
+      courseD_artist_functions10: 這次，用 8 個邊長 25 像素的六邊形來畫圖。
+      courseD_artist_functions6: 畫出正方形的窗戶，方式是在畫完線條以後轉 90 度，然後再然後。
+      courseD_artist_functions9: 用現有的積木創建出這個圖像。
+      courseD_artist_nestedLoops5: 如果在每次畫出圓形間轉 90 度，結果會怎樣？
+      courseD_artist_nestedLoops5_2018: 如果在每次畫出圓形間轉 90 度，結果會怎樣？
+      courseD_artist_nestedLoops5_2019: 如果在每次畫出圓形間轉 90 度，結果會怎樣？
       courseD_artist_nestedLoops9: "**挑戰：**想的到要怎麼製作出這樣的圖像嗎？"
       courseD_artist_nestedLoops9_2018: "**挑戰：**想的到要怎麼製作出這樣的圖像嗎？"
       courseD_artist_nestedLoops9_2019: "**挑戰：**想的到要怎麼製作出這樣的圖像嗎？"
       courseD_artist_nestedLoops9_predict1: "**挑戰：**想的到要怎麼製作出這樣的圖像嗎？"
       courseD_artist_nestedLoops9_predict1_2018: "**挑戰：**想的到要怎麼製作出這樣的圖像嗎？"
       courseD_artist_nestedLoops9_predict1_2019: "**挑戰：**想的到要怎麼製作出這樣的圖像嗎？"
+      courseD_artist_nestedLoops_challenge1: 你知道要怎麼製作出這樣的圖像嗎？
+      courseD_artist_nestedLoops_challenge1_2018: 你知道要怎麼製作出這樣的圖像嗎？
+      courseD_artist_nestedLoops_challenge1_2019: 你知道要怎麼製作出這樣的圖像嗎？
+      courseD_artist_project2a: 現在，轉 180 度，再畫一次樓梯形狀的圖案！
+      courseD_artist_project2a_2018: 現在，轉 180 度，再畫一次樓梯形狀的圖案！
+      courseD_artist_project2a_2019: 現在，轉 180 度，再畫一次樓梯形狀的圖案！
       courseD_artist_ramp11: 現在用小藝術家來畫出一個正方形！
       courseD_artist_ramp12: 使用你學到的方法，在正方形裡頭畫出這個三角形。
       courseD_autorun_binary4_2019: 你可以靠迴圈，只用 3 個二進制（0 或 1）來完成這個圖案嗎？
@@ -1794,6 +2161,13 @@ zh-TW:
       courseD_bee_conditionals7_predict2: 使用`如果/否則`積木來收集花朵上的花蜜，並在蜂窩上釀造蜂蜜。
       courseD_bee_conditionals7_predict2_2018: 使用`如果/否則`積木來收集花朵上的花蜜，並在蜂窩上釀造蜂蜜。
       courseD_bee_conditionals7_predict2_2019: 使用`如果/否則`積木來收集花朵上的花蜜，並在蜂窩上釀造蜂蜜。
+      courseD_bee_conditionals9: 收集所有的花蜜及蜂蜜。
+      courseD_bee_conditionals9_2018: 收集所有的花蜜及蜂蜜。
+      courseD_bee_conditionals9_2019: 收集所有的花蜜及蜂蜜。
+      courseD_bee_conditionals_challenge2: 收集所有的花蜜及蜂蜜。
+      courseD_bee_conditionals_challenge2_2018: 收集所有的花蜜及蜂蜜。
+      courseD_bee_conditionals_challenge2_2019: 收集所有的花蜜及蜂蜜。
+      courseD_bee_conditionals_challenge3: 收集所有的花蜜及蜂蜜。
       courseD_bee_debugging3: 修復錯誤（可能不只一個）以收集所有的花蜜與蜂蜜。
       courseD_bee_nestedLoops2: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops2_2018: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
@@ -1803,10 +2177,17 @@ zh-TW:
       courseD_bee_nestedLoops2_predict1_2019: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops3: 使用巢狀迴圈從每朵花中收集所有的花蜜。
       courseD_bee_nestedLoops5: 使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。
+      courseD_bee_nestedLoops6: 收集所有的花蜜。
       courseD_bee_nestedLoops6_2018: 帶我到那朵向日葵的位置!
       courseD_bee_nestedLoops8: 使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。
       courseD_bee_nestedLoops8_2018: 使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。
       courseD_bee_nestedLoops8_2019: 使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。
+      courseD_bee_nestedLoops9: 釀造全部的蜂蜜。
+      courseD_bee_nestedLoops9_2018: 釀造全部的蜂蜜。
+      courseD_bee_nestedLoops9_2019: 釀造全部的蜂蜜。
+      courseD_bee_nestedLoops9_predict2: 釀造全部的蜂蜜。
+      courseD_bee_nestedLoops9_predict2_2018: 釀造全部的蜂蜜。
+      courseD_bee_nestedLoops9_predict2_2019: 釀造全部的蜂蜜。
       courseD_bounce_events10: 畫面上方有個新的目標區域，把「得分 - 自己」和「得分 - 對手」積木分別附加到「當球命中目標時」和「當球沒有碰到球拍時」積木下以製作一個遊戲。看看在對手得到
         2 分前，你能得到幾分。
       courseD_bounce_events11: 現在你可以附加積木到「當運行時」積木下。你必須在超過一個地方附加新的「重新新球」積木。並且試著改變場景、球拍和球的移動速度，看看在對手得
@@ -1820,6 +2201,26 @@ zh-TW:
       courseD_bounce_events5: 我們將發送一顆球到手上。添加一個程式到「當球碰到手」積木下，確保球能到達旗幟的位置。
       courseD_bounce_events6: 現在目標在最上方，你需要附加一些積木到二個「當球碰到…」積木中間以完成這個關卡。
       courseD_bounce_events7: 新增一個積木到「當…」積木中。試著讓球反彈，直到球擊中目標區為止。
+      courseD_collector_debugging1: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging1_2018: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging1a: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging1a_2018: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging1a_2019: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging2: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging2_2018: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging2a: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging2a_2018: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging2a_2019: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging3: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging3_2018: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging3a: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging3a_2018: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging3a_2019: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging4: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging4_2018: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging4a: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging4a_2018: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging4a_2019: 修復一個或多個錯誤以收集到所有的寶藏。
       courseD_collector_nested_loops_challenge2a: 幫 Laurel 收集到至少 2 塊寶石。
       courseD_collector_ramp10: 幫 Laurel 收集到所有寶石。
       courseD_collector_ramp8: 幫 Laurel 收集到所有寶石。
@@ -1838,9 +2239,18 @@ zh-TW:
       courseD_farmer_condLoops9_predict1_2018: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_condLoops9_predict1_2019: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_conditionals6: 使用「當…」迴圈來輕鬆的填滿所有坑洞。
+      courseD_farmer_conditionals8: '挑戰：填滿所有的洞，使用的積木愈少愈好。 '
       courseD_farmer_while6: 使用「當…」迴圈來輕鬆的填滿所有坑洞。
       courseD_farmer_while6_2018: 使用「當…」迴圈來輕鬆的填滿所有坑洞。
       courseD_farmer_while6_2019: 使用「當…」迴圈來輕鬆的填滿所有坑洞。
+      courseD_farmer_while8: '挑戰：填滿所有的洞，使用的積木愈少愈好。 '
+      courseD_farmer_while8_2018: '挑戰：填滿所有的洞，使用的積木愈少愈好。 '
+      courseD_farmer_while8_2019: '挑戰：填滿所有的洞，使用的積木愈少愈好。 '
+      courseD_farmer_while_challenge1: 填滿所有的坑垌，並移走全部的土堆。
+      courseD_farmer_while_challenge1_2018: 填滿所有的坑垌，並移走全部的土堆。
+      courseD_farmer_while_challenge1_2019: 填滿所有的坑垌，並移走全部的土堆。
+      courseD_farmer_while_challenge2: 填滿所有的坑垌，並移走全部的土堆。
+      courseD_farmer_while_challenge2_2018: 填滿所有的坑垌，並移走全部的土堆。
       courseD_maze_nestedLoops4: 帶我到那朵向日葵的位置!
       courseD_maze_nestedLoops4_2018: 帶我到那朵向日葵的位置!
       courseD_maze_nestedLoops4_2019: 帶我到那朵向日葵的位置!
@@ -1862,6 +2272,12 @@ zh-TW:
       courseD_maze_ramp5: 小心 TNT 炸藥。
       courseD_maze_ramp5_2018: 小心 TNT 炸藥。
       courseD_maze_ramp5_2019: 小心 TNT 炸藥。
+      courseD_maze_ramp5b: 幫忙引導憤怒鳥抓到豬！
+      courseD_maze_ramp5b_2018: 幫忙引導憤怒鳥抓到豬！
+      courseD_maze_ramp5b_2019: 幫忙引導憤怒鳥抓到豬！
+      courseD_maze_ramp5d: 讓鳥抓到這隻豬！
+      courseD_maze_ramp5d_2018: 讓鳥抓到這隻豬！
+      courseD_maze_ramp5d_2019: 讓鳥抓到這隻豬！
       courseD_maze_ramp6: "「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」"
       courseD_maze_ramp6a: "「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」"
       courseD_maze_ramp7: 讓鳥抓到這隻豬！
@@ -1871,6 +2287,9 @@ zh-TW:
       courseD_maze_until10_predict2: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until10_predict2_2018: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until10_predict2_2019: 幫助殭屍，讓牠吃到向日葵。
+      courseD_maze_until3: 讓鳥抓到這隻豬！
+      courseD_maze_until3_2018: 讓鳥抓到這隻豬！
+      courseD_maze_until3_2019: 讓鳥抓到這隻豬！
       courseD_maze_until6: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until6_2018: 幫助殭屍，讓牠吃到向日葵。
       courseD_maze_until6_2019: 幫助殭屍，讓牠吃到向日葵。
@@ -1882,14 +2301,28 @@ zh-TW:
       courseD_maze_until9: "**挑戰：**避開食僵花，並幫助僵屍移動到向日葵那兒。"
       courseD_maze_until9_2018: "**挑戰：**避開食僵花，並幫助僵屍移動到向日葵那兒。"
       courseD_maze_until9_2019: "**挑戰：**避開食僵花，並幫助僵屍移動到向日葵那兒。"
+      courseD_playLab_cond2: 讓 Pegleg 在每次到達龍的位置時都能得到 1 分。
+      courseD_playLab_cond2_2018: 讓 Pegleg 在每次到達龍的位置時都能得到 1 分。
+      courseD_playLab_cond2_2019: 讓 Pegleg 在每次到達龍的位置時都能得到 1 分。
+      courseD_playLab_cond3: 讓龍的情緒隨機的變化，每秒一次（歇斯底里的龍？）。
+      courseD_playLab_cond3_2018: 讓龍的情緒隨機的變化，每秒一次（歇斯底里的龍？）。
+      courseD_playLab_cond3_2019: 讓龍的情緒隨機的變化，每秒一次（歇斯底里的龍？）。
       courseD_scrat_ramp1: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseD_scrat_ramp1_2018: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
       courseD_scrat_ramp2: 從工具箱中拖曳出另一個`移動-向前`積木，把它放在`當運行時`積木下，就可以完成編碼。
       courseD_scrat_ramp2_2018: 從工具箱中拖曳出另一個`移動-向前`積木，把它放在`當運行時`積木下，就可以完成編碼。
       courseE_artist_functions1: "哈囉。我是個僵屍。我是個熱愛繪畫的殭屍！ 幫我畫一副方形眼鏡。 \n提示： 眼鏡框之間的鼻樑比鏡框的長度短
         25 像素。"
+      courseE_artist_functions10: 這次，用 8 個邊長 25 像素的六邊形來畫圖。
+      courseE_artist_functions10_2018: 這次，用 8 個邊長 25 像素的六邊形來畫圖。
+      courseE_artist_functions10_2019: 這次，用 8 個邊長 25 像素的六邊形來畫圖。
       courseE_artist_functions1_2018: "哈囉。我是個僵屍。我是個熱愛繪畫的殭屍！ 幫我畫一副方形眼鏡。 \n提示： 眼鏡框之間的鼻樑比鏡框的長度短
         25 像素。"
+      courseE_artist_functions6: 畫出正方形的窗戶，方式是在畫完線條以後轉 90 度，然後再然後。
+      courseE_artist_functions6_2018: 畫出正方形的窗戶，方式是在畫完線條以後轉 90 度，然後再然後。
+      courseE_artist_functions8a_2018: 創建一個能繪出正方形的函式。
+      courseE_artist_functions8a_2019: 創建一個能繪出正方形的函式。
+      courseE_artist_functions9: 用現有的積木創建出這個圖像。
       courseE_artist_ramp10: 現在，把上個畫出三角形的程式放到新的迴圈積木裡，讓它邊轉邊畫，就可以畫出一個雪花囉！
       courseE_artist_ramp11: 現在用小藝術家來畫出一個正方形！
       courseE_artist_ramp12: 使用你學到的方法，在正方形裡頭畫出這個三角形。
@@ -1904,14 +2337,13 @@ zh-TW:
       courseE_bee_concept1: 使用巢狀迴圈從每朵花中收集所有的花蜜。
       courseE_bee_concept1_2018: 使用巢狀迴圈從每朵花中收集所有的花蜜。
       courseE_bee_concept1_2019: 使用巢狀迴圈從每朵花中收集所有的花蜜。
+      courseE_bee_concept5: 幫蜜蜂在花朵上收集花蜜。
+      courseE_bee_concept5_2018: 幫蜜蜂在花朵上收集花蜜。
+      courseE_bee_concept5_2019: 幫蜜蜂在花朵上收集花蜜。
       courseE_bee_functions1: 收集每一朵花的花蜜。
       courseE_bee_functions1_2018: 收集每一朵花的花蜜。
-      courseE_bee_functions3: |-
-        函式是執行特定任務的一串程式碼。用「get 5」這個函式來一次拿5個花蜜。
-        記得用迴圈來計算理想的積木塊次數。
-      courseE_bee_functions3_2018: |-
-        函式是執行特定任務的一串程式碼。用「get 5」這個函式來一次拿5個花蜜。
-        記得用迴圈來計算理想的積木塊次數。
+      courseE_bee_functions3: 在這個關卡創建名為 get 5 的函式以一次拿取 5 個花蜜。
+      courseE_bee_functions3_2018: 在這個關卡創建名為 get 5 的函式以一次拿取 5 個花蜜。
       courseE_bee_functions4: |-
         "移動，並得到花蜜"函式能讓蜜蜂轉身，收集花蜜，最後返回到開始的地方。
         使用函式來收集所有的花蜜。
@@ -1924,12 +2356,14 @@ zh-TW:
       courseE_farmer_concept4: |-
         現在讓我們加深難度！
         我們已經將整個程式積木嵌套在另一個迴圈內，但你需要讓小藝術家回到初始位置來畫出下一行。要在最外層迴圈下添加哪個積木，才能畫完整個網格？
+      courseE_farmer_functions10b: 使用你的新函式兩次以完成這個關卡。
+      courseE_farmer_functions10b_2018: 使用你的新函式兩次以完成這個關卡。
       courseE_farmer_functions4b: 使用你的新函式以完成這個關卡。
       courseE_farmer_functions4b_2018: 使用你的新函式以完成這個關卡。
       courseE_farmer_functions6: "*「生菜，試點新玩意！」*\r\n\r\n這裡有某個可以收集所有生菜的程式，將它變成函式，這樣一來我們之後可以方便的使用它。"
       courseE_farmer_functions8: "**挑戰：**完成這個關卡，使用的積木愈少愈好。"
-      courseE_farmer_functions8b: "**挑戰：**讓農夫走到南瓜那兒，並沿著路收集生菜與玉米。 "
-      courseE_farmer_functions8b_2018: "**挑戰：**讓農夫走到南瓜那兒，並沿著路收集生菜與玉米。 "
+      courseE_farmer_functions8b: "**挑戰：**讓農夫走到南瓜那兒，並沿著路收集所有的南瓜。 "
+      courseE_farmer_functions8b_2018: "**挑戰：**讓農夫走到南瓜那兒，並沿著路收集所有的南瓜。 "
       courseE_farmer_ramp11: 這個關卡用到了巢狀迴圈，想想看，要怎麼完成呢？
       courseE_farmer_ramp12: 現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。
       courseE_farmer_ramp12_2018: 現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。
@@ -1950,14 +2384,20 @@ zh-TW:
       courseE_maze_ramp5_2018: 小心 TNT 炸藥。
       courseE_maze_ramp6: "「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」"
       courseE_maze_ramp6_2018: "「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」"
-      courseE_maze_ramp7: "**挑戰：** 讓鳥抓到這隻豬！"
-      courseE_maze_ramp7_2018: "**挑戰：** 讓鳥抓到這隻豬！"
+      courseE_maze_ramp7: 用你學到的方式，幫助鳥抓到這隻豬！
+      courseE_maze_ramp7_2018: 用你學到的方式，幫助鳥抓到這隻豬！
       courseE_multi_maze_ramp5: 小心 TNT 炸藥。
       courseE_playLab_scaffold5: 現在花些時間確保遊戲按照你想要的方式運作。包括輸或贏的方式，還有滿足的條件設定。
       courseE_playLab_scaffold5_2018: 現在花些時間確保遊戲按照你想要的方式運作。包括輸或贏的方式，還有滿足的條件設定。
+      courseF_artist_for6: 利用上一關的程式，改成轉 89 度，就能讓正方形產生螺旋效果。
+      courseF_artist_for6_2018: 利用上一關的程式，改成轉 89 度，就能讓正方形產生螺旋效果。
+      courseF_artist_for6_2019: 利用上一關的程式，改成轉 89 度，就能讓正方形產生螺旋效果。
       courseF_artist_for7: 修改 3 個小地方，把上個關卡的程式修改成這樣！
       courseF_artist_for7_2018: 修改 3 個小地方，把上個關卡的程式修改成這樣！
       courseF_artist_for7_2019: 修改 3 個小地方，把上個關卡的程式修改成這樣！
+      courseF_artist_for8: 把角度變小成 72 度，以畫出螺旋狀的五邊形。
+      courseF_artist_for8_2018: 把角度變小成 72 度，以畫出螺旋狀的五邊形。
+      courseF_artist_for8_2019: 把角度變小成 72 度，以畫出螺旋狀的五邊形。
       courseF_artist_for_challenge1: 想想看，如何重複的繪製出這個圖？
       courseF_artist_for_challenge1_2018: 想想看，如何重複的繪製出這個圖？
       courseF_artist_for_challenge1_2019: 想想看，如何重複的繪製出這個圖？
@@ -1990,6 +2430,9 @@ zh-TW:
       courseF_artist_ramp8_2018: 現在用小藝術家來畫出一個正方形！
       courseF_artist_ramp9: 使用你學到的方法來畫出這個三角形。
       courseF_artist_ramp9_2018: 使用你學到的方法來畫出這個三角形。
+      courseF_artist_variables7: 畫個周長為 150 像素的三角形。
+      courseF_artist_variables7_2018: 畫個周長為 150 像素的三角形。
+      courseF_artist_variables7_2019: 畫個周長為 150 像素的三角形。
       courseF_artist_variables_FP: "**自由活動：**用你學過的東西，繪製出自己的作品。\r\n\r\n你知道怎麼畫出帶變數正方形、五角形、六角形嗎？"
       courseF_bee_conditionals1_predict1: 檢查看看雲裡面是不是有花朵，如果有的話，就採集花蜜。
       courseF_bee_conditionals1_predict1_2018: 檢查看看雲裡面是不是有花朵，如果有的話，就採集花蜜。
@@ -2030,14 +2473,14 @@ zh-TW:
       courseF_bee_fwp9_predict1_2018: 使用你的新函式以完成這個關卡。
       courseF_farmer_ramp11: 這個關卡用到了巢狀迴圈，想想看，要怎麼完成呢？
       courseF_farmer_ramp11_2018: 這個關卡用到了巢狀迴圈，想想看，要怎麼完成呢？
-      courseF_maze_ramp15: "**挑戰：** 讓鳥抓到這隻豬！"
+      courseF_maze_ramp15: 用你學到的方式，幫助鳥抓到這隻豬！
       courseF_maze_ramp4: 小心 TNT 炸藥，不然羽毛會被炸飛！
       courseF_maze_ramp4_2018: 小心 TNT 炸藥，不然羽毛會被炸飛！
       courseF_maze_ramp5: 小心 TNT 炸藥。
       courseF_maze_ramp5_2018: 小心 TNT 炸藥。
       courseF_maze_ramp6: "「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」"
       courseF_maze_ramp6_2018: "「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」"
-      courseF_maze_ramp7: "**挑戰：** 讓鳥抓到這隻豬！"
+      courseF_maze_ramp7: 用你學到的方式，幫助鳥抓到這隻豬！
       coursef_maze_ramp3: 這裡有個多餘的積木害得鳥撞牆，找到它，然後把它拖回工具箱以消除它。
       coursef_maze_ramp3_2018: 這裡有個多餘的積木害得鳥撞牆，找到它，然後把它拖回工具箱以消除它。
       flappy_1: 添加一個積木到「當點擊時」積木下，然後點擊「運行」。點擊或輕觸螢幕，讓像素鳥移動至目標。
@@ -2072,15 +2515,21 @@ zh-TW:
       frozen cross: 將這些指令放入「重複」積木裡來畫出一個加號。注意到了嗎？艾莎可以向後移動了。
       frozen diamond mini snowflake: 你知道每個雪花的形狀都不同嗎？讓我們用另一個「循環」積木創造一個新的雪花，它是由 4 個重複的平行四邊形所組成，每畫完一個平行四邊形就向右轉
         90 度。
+      frozen diamond mini snowflake_b: 重複菱形 4 次，就可以做出一個新的雪花。
+      frozen diamond mini snowflake_test: 重複菱形 4 次，就可以做出一個新的雪花。
       frozen diamond snowflake: 現在，讓我們創建新的雪花圖案，通過使用「重複」積木來畫出平行四邊形 10 次，每畫一個之後轉向 36
         度。
       frozen diamond: 將這些程式放到「重複」積木裡來畫出平行四邊形，它就像一個長方形，但角度不同。我們要畫的是有 60 度和 120 度角的四邊形，而長方形的所有角度都是
         90 度。
       frozen freeplay: 您已經變成一個專業的藝術家囉！開始打造一個冬季仙境吧。
       frozen line: 嗨！我是艾倫戴爾的艾莎女王。請幫幫我畫出一條線。
+      frozen line_b: 幫忙愛莎畫條 100 像素長的線條。
+      frozen line_test: 幫忙愛莎畫條 100 像素長的線條。
       frozen perpendicular: 現在看看我們是不是可以畫出互相垂直的二條線（2 條線的夾角 90 度）。你需要用到「轉向」還有「移動」積木。
       frozen snowflake branch: 用用看「建立雪花分支」積木，建立 3 個分支，讓它一開始像個雪花。
       frozen snowflake full: 現在我們來重複它 18 次以製作出美麗的雪花！
+      frozen snowflake full_b: 現在我們來重複它 **8** 次以製作出美麗的雪花！
+      frozen snowflake full_test: 現在我們來重複它 **8** 次以製作出美麗的雪花！
       frozen snowflower: 精細複雜的雪花樣式其實可以用非常簡單的形狀來產生。您可以畫重複五個大小為 5 的圓，以及五個大小為 10 個圓嗎？
       frozen square iterative: 看來我們已經畫出了正方形的一半了！來，我們一起把 4 條線組合起來，變成一個正方形吧！
       frozen square loop 3x: 這次我們來建立 3 個正方形吧！每個正方形完成後，記得要轉 120 度，再畫下一個正方形。
@@ -2100,6 +2549,7 @@ zh-TW:
       grade1_maze_sequence6: 找找看遺失了哪些積木，添加積木以到達豬那兒！
       grade1_maze_sequence7: 輪到你了！要怎麼樣才能讓鳥抓到這頭豬呢？
       grade1_maze_sequence9: '繞開 TNT 炸藥，讓我抓到豬！ '
+      grade1_playlab_events1a: 讓你的機器人在點擊按鍵時說出「Hello!」。
       grade1_playlab_events4: 添加一個積木，讓羅賓在撞到機器人時消失。
       grade1_playlab_events5: 添加一個積木到「當運行時」事件，讓龍在遊戲開始時就在天空上飛來飛去。
       grade1_playlab_events5a: 關於我的機器人專案！寫下程式，在點擊每隻鳥時分別顯示你的機器人特色。
@@ -2154,6 +2604,7 @@ zh-TW:
       grade2_puppy_loops5: "「愈快抓到豬愈好！」"
       grade2_puppy_loops6: "「這隻豬真的把我惹毛了！」\r\n\r\n迴圈\n事件裡可以執行一個以上的程式積木！你可以調整一下迴圈裡指令的順序嗎？"
       grade2_puppy_loops7: "「讓我抓到這隻豬！」\r\n\r\n利用你在其他關卡學到的技巧！"
+      grade3_AboutMyRobot_1: 讓你的機器人在點擊按鍵時說出「Hello!」。
       grade3_AboutMyRobot_5: 關於我的機器人專案！寫下程式，在點擊每隻鳥時分別顯示你的機器人特色。
       grade3_ConditionalsElse_1: 這雲遮住了我的視線！檢查看看雲的下面是不是有花朵，只有在有花朵的時候才採集花蜜。注意，它會變來變去的！
       grade3_ConditionalsElse_2: "雲愈來愈多了！\r\n\r\n檢查每個雲，在你採集花蜜前看看是不是有花朵藏在裡頭。\r\n\r\n記住：\n雲底下藏的東西不見得一樣！"
@@ -2231,7 +2682,7 @@ zh-TW:
       grade3_robotFarmer_ConditionalsIntro_9: "**挑戰：**填滿所有的洞，使用的積木愈少愈好。 "
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 幫助我填滿這些坑洞，每個坑洞需要填入 5 鏟的泥土。提示：你可以在「當…」積木中，放進「重複」積木來完成這個關卡。
       grade4_arist_nested_loop_circles1: 評量：使用巢狀迴圈完成設計。
-      grade4_arist_nested_loop_flags1: 重複已給的代碼來畫出一個風車。
+      grade4_arist_nested_loop_flags1: 重複執行已有的程式來畫出一個風車。
       grade4_arist_nested_loop_polygons1: "循環這個圖樣 10 次。\r\n\r\n你知道在每個圖樣畫完後要轉多少角度嗎？"
       grade4_arist_nested_loop_polygons2: "重複這個圖案6次。\r\n\r\n你知道每次重複畫圖案時需要轉多少度？ "
       grade4_arist_nested_loop_squares1: 你可以用巢狀迴圈來畫出在人行道上的 10 個正方形嗎？每個正方形的邊長為 30 像素。
@@ -2245,18 +2696,25 @@ zh-TW:
       grade4_artist_functions2: "函式（Functions）能讓你能夠製作一個屬於自己的新積木！\r\n\r\n我們已經把繪製一個正方形所需要的所有積木放到一個名叫
         `draw a square` 的函式裡。這一次，使用 `draw a square` 函式來製作個眼鏡。\n\r\n\r\n鏡片外框之間的距離為
         75 像素。"
+      grade4_artist_functions2a: 用現有的積木創建出這個圖像。
+      grade4_artist_functions3a: 用現有的積木創建出這個圖像。
+      grade4_artist_functions3b: 這次，用 8 個邊長 25 像素的六邊形來畫圖。
       grade4_artist_functionsChallenge0: "**挑戰：**盡可能做出你想要的函式，用函式來繪製邊長為 50 像素的正方形。"
       grade4_artist_functions_challenge: 使用建議的函式來畫出四列的六角形，注意到我們的偶數列是如何移動到右邊的嗎？
       grade4_artist_functions_challenge2: 使用建議的函式來畫出四列的六角形，注意到我們的偶數列是如何移動到右邊的嗎？
+      grade4_artist_functions_windows0: 畫出正方形的窗戶，方式是在畫完線條以後轉 90 度，然後再然後。
       grade4_artist_nestedLoops_challenge: "點擊此處再次觀看完整說明！\r\r\n這是有趣圖形的程式碼。當你每次都轉一點方向角度，重複程式碼很多次會發生什麼事呢？注意在此圖案中會轉到
         420 度，這表示小藝術家晝完時，它會朝向與開始不同的方向。它會朝著從開始方向右邊 60 度的方向。"
       grade4_artist_nestedLoops_challenge2: 現在來挑戰一下！多試驗、多試錯，不要指望一次就能畫出完全的圖案。想觀看更多提示？點擊這裡！
       grade4_artist_nested_loop_circles1: 評量：使用巢狀迴圈完成設計。
-      grade4_artist_nested_loop_flags1: 重複已給的代碼來畫出一個風車。
+      grade4_artist_nested_loop_flags1: 重複執行已有的程式來畫出一個風車。
       grade4_artist_nested_loop_polygons1: "循環這個圖樣 10 次。\r\n\r\n你知道在每個圖樣畫完後要轉多少角度嗎？"
       grade4_artist_nested_loop_squares1: 你可以用巢狀迴圈來畫出在人行道上的 10 個正方形嗎？每個正方形的邊長為 30
         像素。
       grade4_artist_nested_loop_triangles1: '完成代碼來畫這些三角形。第一個三角形的代碼已經幫你打好了。提示: 3個三角形旋轉了360度'
+      grade4_artist_nested_loop_triangles3: |-
+        你可以藉由重複畫三角形的程式碼來畫出一個六邊形嗎？
+        提示：6 × ? = 360
       grade4_artist_nested_loop_triangles5: "把起始程式碼嵌進另一個迴圈中來畫出一個太陽。\r\n\r\n要能夠製作出這樣酷炫的圖案，你必須在轉向之前向前跳一段距離。"
       grade4_artist_nested_loop_triangles6: 你可以用巢狀迴圈來畫出這 36 個三角形嗎？
       grade4_artist_parameters_squares1: 點擊「編輯」來完成 draw a square（畫個正方形）函式的定義，並且加一個參數。它應該像三角形一樣有一個
@@ -2276,9 +2734,7 @@ zh-TW:
       grade4_bee_conditionals_quantum5: "雲下藏的不是花朵就是蜂窩！\r\n\r\n用`如果…否則`積木，如果是花的話就採集花蜜，\r\n否則，就釀造蜂蜜。"
       grade4_bee_functions1: 收集每一朵花的花蜜。
       grade4_bee_functions2: 函式是一段程式碼，用來執行某個任務。請使用 get 2 nectar（採集 2 個花蜜）函式，從每一朵花中採集花蜜。
-      grade4_bee_functions3: |-
-        函式是執行特定任務的一串程式碼。用「get 5」這個函式來一次拿5個花蜜。
-        記得用迴圈來計算理想的積木塊次數。
+      grade4_bee_functions3: 在這個關卡創建名為 get 5 的函式以一次拿取 5 個花蜜。
       grade4_bee_functions4: |-
         "移動，並得到花蜜"函式能讓蜜蜂轉身，收集花蜜，最後返回到開始的地方。
         使用函式來收集所有的花蜜。
@@ -2338,6 +2794,7 @@ zh-TW:
       grade5_artist_for_loops5: "只是小小的修改了上個可以繪製出這個圖案的程式，你能找出改變了什麼嗎？\r\n\r\n提示，你需要移除某個東西！"
       grade5_artist_for_loops6: 如果每次都多轉或少轉一些角度，那麼你可以創作出一個有規律的效果。試著重用上一關的一些代碼，但是轉89度來創造螺旋的正方形。
       grade5_artist_for_loops7: 修改 3 個小地方，把上個關卡的程式修改成這樣！
+      grade5_artist_for_loops7a: 把角度變小成 72 度，以畫出螺旋狀的五邊形。
       grade5_artist_for_loops8: "還記得在上一個階段，我們使用一個變數來控制圖形的邊數嗎？\n現在我們要用 counter 這個變數來做相同的事情。\n這個圖案從一個三角形開始，且每次增加
         1 個邊直到畫出一個十邊形。每個圖形的邊長為 100 像素。 "
       grade5_artist_for_loops9: "讓我們總結一下吧！用你所知道的計數迴圈與計數器變數，來創造出每個形狀都比前一個多 2 條邊的圖案，確保每條邊長是這個多邊形邊數的
@@ -2409,8 +2866,8 @@ zh-TW:
       grade5_playlab_variables71: "這是一個早先的遊戲，但是大部分程式都隱藏了。這裡有個新函式叫做 score_points（獲得分數）。\r\n\r\n編輯這個函式，使得
         points（分數）參數能被添加到 player_score （玩家分數）變數上。 \r\n\r\n變數 player_score 應該會在每次小狗的派碰到小貓時增加；在每次小貓的三明治碰到小狗時減少。
         \r\n\r\n注意：當你完成後，點擊「運行」玩玩看，當小狗得到 6 分時，就可以進入下一關。 "
-      grade5_playlab_variables81: "我們已經為你添加了上一關的函數。 \r\n\r\n用“如果”模塊來編寫你的遊戲，當play_score玩家分數
-        大於某個值時，調用level_up升級 函數。 \r\n\r\n例如：“play_score” > 6\r\n\r\n玩遊戲，並且達到第4級來到達下一關。 "
+      grade5_playlab_variables81: "我們為你準備了最後一個函式。\n\n使用一個「如果」陳述式來編程你的遊戲，當 player_score（玩家分數）達到了一定的數字後，就呼叫
+        level_up（升級）這個函式。\n\n例如 player_score > 6\n\n玩玩看這個遊戲，達到 level 3 你就可以移動到下個關卡。 "
       grade5_playlab_variables9: "這裡有個函式叫做 `patrol`（巡邏）。\n\r\n\r\n編輯 `patrol` 讓貓能夠向上移動
         400 像素，再向下 400 像素。"
       grade5_playlab_variables_freeplay: "自由遊戲時間！這裡我們目前為止玩過的所有變數，還有一些是你可能想要的。\r\n\r\n注意現在在工具箱裡有好多好多可以被組合的積木！在這裡，我們已經將它們分類放好。花點時間去嘗試每一個東西，當你一切就緖，就可以用重複、變數、事件類的各種指令製作一個遊戲或是故事。\r\n\r\n提示：可以捲動頁面以查看工作區裡的所有指令。"
@@ -2418,12 +2875,14 @@ zh-TW:
       gradek_artist_loops6: 使用`重複`迴圈為水添加波紋。
       gradek_artist_loopsA: 幫我建置階梯，讓我可以看著船航行到遠方。
       gradek_artist_loopsFP: 小藝術家在遠處看到了一些有趣的東西，你覺得他看到了什麼？把它畫出來。
+      gradek_playlab_events1: 讓你的機器人在點擊按鍵時說出「Hello!」。
       gradek_playlab_events1a: 添加一個積木，讓你在點擊「向上按鈕」時，貓也向上移動。
       gradek_playlab_events2a: 添加一個積木，讓你在點擊「向下按鈕」時，貓也向下移動。
       gradek_playlab_events3b: 添加一個按鈕，讓你在點擊它時，貓能向右移動。
       gradek_playlab_events4a: 添加一個積木，讓你在點擊「向左按鈕」時，貓也向左移動。
       gradek_playlab_events5: 關於我的機器人專案！寫下程式，在點擊每隻鳥時分別顯示你的機器人特色。
       gradek_playlab_events5a: 關於我的機器人專案！寫下程式，在點擊每隻鳥時分別顯示你的機器人特色。
+      group test: 創建一個遊戲
       harvey_tictactoe: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
       k-1 maze 1: 你可以讓我往西邊移動到達豬的位置嗎？
       k1stickerfreeplay: 小藝術家在遠處看到了一些有趣的東西，你覺得他看到了什麼？把它畫出來。
@@ -2441,6 +2900,7 @@ zh-TW:
       level grade3_Loops_2: 這一回，用一個迴圈來收集所有的花蜜。
       loops_forvideo_collector_cf: 用迴圈的方式讓 Laurel 收集到寶石！
       mike3bitmario: "粗心的二進位編碼器（binary coder）在圖像數據裡頭多輸入了一個 0 還是 1。這個額外的位元（bit）害得瑪利歐故障了！\r\n\r\n刪除這個額外的位元，讓瑪利歐恢復原狀！"
+      pet game 1: 使用「創建一個新角色」的積木，做出一個專屬的寵物！
       scrat 16 (copy 1): 橡樹！果實！橡樹果實！用「如果」積木帶我到達那裡，使用的積木數愈少愈好。
       scrat 16: 橡樹！果實！橡樹果實！用「如果」積木帶我到達那裡，使用的積木數愈少愈好。
       scrat 17 (copy 1): 好的，讓我們再練習一次，不會太難的，只是請注意 <insert obstacle name for Scrat>！

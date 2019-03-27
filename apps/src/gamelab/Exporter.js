@@ -65,6 +65,9 @@ export default {
       animationListJSON
     });
 
+    const iconPath = '/appassets/icon.png';
+    const splashImagePath = '/appassets/splash.png';
+
     if (expoMode) {
       appAssets.push({
         url: exportExpoWarningPng,
@@ -73,12 +76,12 @@ export default {
       });
       appAssets.push({
         url: exportExpoIconPng,
-        zipPath: appName + '/appassets/icon.png',
+        zipPath: appName + iconPath,
         dataType: 'binary'
       });
       appAssets.push({
         url: exportExpoSplashPng,
-        zipPath: appName + '/appassets/splash.png',
+        zipPath: appName + splashImagePath,
         dataType: 'binary'
       });
     }
@@ -89,7 +92,9 @@ export default {
     if (expoMode) {
       const appJson = exportExpoAppJsonEjs({
         appName,
-        projectId: project.getCurrentId()
+        projectId: project.getCurrentId(),
+        iconPath: '.' + iconPath,
+        splashImagePath: '.' + splashImagePath
       });
       const appJs = exportExpoAppEjs({
         appHeight,
@@ -307,18 +312,36 @@ export default {
     return exportExpoPackagedFilesEjs({entries});
   },
 
-  async generateExpoApk(snackId, config) {
+  async generateExpoApk(options, config) {
+    const {appName, expoSnackId, iconUri, splashImageUri} = options;
     const session = new SnackSession({
       sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
       name: `project-${project.getCurrentId()}`,
       sdkVersion: '31.0.0',
-      snackId,
+      snackId: expoSnackId,
       user: {
         sessionSecret: config.expoSession || EXPO_SESSION_SECRET
       }
     });
 
-    const appJson = session.generateAppJson();
+    const appJson = JSON.parse(
+      exportExpoAppJsonEjs({
+        appName,
+        projectId: project.getCurrentId(),
+        iconPath: iconUri,
+        splashImagePath: splashImageUri
+      })
+    );
+
+    // TODO: remove the onlineOnlyExpo patching once getApkUrlAsync()
+    // properly supports our full app.json
+    const {
+      updates, // eslint-disable-line no-unused-vars
+      assetBundlePatterns, // eslint-disable-line no-unused-vars
+      packagerOpts, // eslint-disable-line no-unused-vars
+      ...onlineOnlyExpo
+    } = appJson.expo;
+    appJson.expo = onlineOnlyExpo;
 
     const artifactUrl = await session.getApkUrlAsync(appJson);
 
@@ -405,6 +428,18 @@ export default {
       filename: 'warning.png',
       assetLocation: 'appassets/'
     });
+    appAssets.push({
+      url: exportExpoIconPng,
+      dataType: 'binary',
+      filename: 'icon.png',
+      assetLocation: 'appassets/'
+    });
+    appAssets.push({
+      url: exportExpoSplashPng,
+      dataType: 'binary',
+      filename: 'splash.png',
+      assetLocation: 'appassets/'
+    });
 
     const assetDownloads = appAssets.map(asset => {
       if (asset.blob) {
@@ -441,7 +476,9 @@ export default {
 
     return {
       expoUri,
-      expoSnackId
+      expoSnackId,
+      iconUri: files['appassets/icon.png'].contents,
+      splashImageUri: files['appassets/splash.png'].contents
     };
   },
 

@@ -10760,21 +10760,21 @@ zh-CN:
         name=\"THIS\">\n<block type=\"sprite_variables_get\">\n<title name=\"VAR\">mySprite</title>\n</block>\n</value>\n</block></xml>\n"
       Virtual Pet 3_2019: "我们不能让脏兮兮的长颈鹿到处走来走去!  \n\n1) 在屏幕上添加一个新的肥皂精灵。  \n2) 你能否使长颈鹿和肥皂接触的时候变回正常的颜色？
         \n\n---\n\n要重置颜色, 请使用此模块:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n<value
-        name=\"THIS\">\n<block type=\"sprite_variables_get\">\n<title name=\"VAR\">mySprite</title>\n</block>\n</value>\n</block></xml>\n"
+        name=\"THIS\">\n<block type=\"sprite_variables_get\">\n<title name=\"VAR\">mySprite</title>\n</block>\n</value>\n</block></xml>"
       Virtual Pet 3_simple: "长颈鹿好脏!  \n\n1) 在屏幕上添加一个新的 肥皂 精灵。  \n2) 当长颈鹿和肥皂接触的时候她变回正常的颜色。
         \n\n---\n\n要重置颜色, 请使用此模块:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n
         \     <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n
         \         <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n
         \   </block></xml>\n"
       Virtual Pet 4: "我们不希望每次都要等着长颈鹿花时间清理它自己。  \n\n为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。\n"
-      Virtual Pet 4_2019: "我们不希望每次都要等着长颈鹿花时间清理它自己。  \n\n为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。\n"
+      Virtual Pet 4_2019: "我们不希望每次都要等着长颈鹿花时间清理它自己。  \n\n为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。"
       Virtual Pet 4_simple: "我们不希望每次都要等着长颈鹿花时间清理它自己。 \n\n为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。\n"
       Virtual Pet 5 - Validated: "玩耍是需要能量的！  \n\n对每个事件添加一个操作，使得长颈鹿每次和其他精灵碰撞时，她的尺寸减小5.\n"
       Virtual Pet 5: "玩耍是需要能量的！  \n\n对每个事件添加一个操作，使得长颈鹿每次和其他精灵碰撞时，她的尺寸减小5.\n"
-      Virtual Pet 5_2019: "玩耍是需要能量的！  \n\n对每个事件添加一个操作，使得长颈鹿每次和其他精灵碰撞时，她的尺寸减小5.\n"
+      Virtual Pet 5_2019: "玩耍是需要能量的！  \n\n对每个事件添加一个操作，使得长颈鹿每次和其他精灵碰撞时，她的尺寸减小5."
       Virtual Pet 5_simple: "长颈鹿太大了！ \n\n在每个事件中添加动作，使长颈鹿在和其他精灵碰撞时变小。 \n"
       Virtual Pet 6: "均衡的饮食非常重要，我们需要给长颈鹿喂食好让她恢复体力。  \n\n在屏幕上添加一个苹果，并使得苹果和长颈鹿相碰时，长颈鹿变回原来的大小。\n"
-      Virtual Pet 6_2019: "均衡的饮食非常重要，我们需要给长颈鹿喂食好让她恢复体力。  \n\n在屏幕上添加一个苹果，并使得苹果和长颈鹿相碰时，长颈鹿变回原来的大小。\n"
+      Virtual Pet 6_2019: "均衡的饮食非常重要，我们需要给长颈鹿喂食好让她恢复体力。  \n\n在屏幕上添加一个苹果，并使得苹果和长颈鹿相碰时，长颈鹿变回原来的大小。"
       Virtual Pet 6_simple: "长颈鹿饿了！ \n\n在每个事件中添加动作，使长颈鹿在和苹果碰撞时变回普通的大小。\n"
       Virtual Pet Freeplay: "自由发挥：还能让长颈鹿做些什么？ \n\n- 能添加更多特殊组件吗？  \n- 能为她找到朋友吗？  "
       Virtual Pet Freeplay_2019: "自由发挥：还能让长颈鹿做些什么？ \n\n- 能添加更多特殊组件吗？  \n- 能为她找到朋友吗？
