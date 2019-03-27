@@ -478,6 +478,9 @@ fr:
         2-3_Maze_1_a: Pour utiliser un bloc ˋavancerˋ, fais-le glisser depuis la barre
           d'outils jusqu'à l'espace de travail et connecte-le au bloc ˋquand l’exécution
           commenceˋ.
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Tu peux utiliser le bloc si chemin pour t’aider à faire les bons
+          virages.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'Le demi-hexagone a une **longueur de 30** et tourne
           à droite de **60 degrés**.  '
@@ -3908,6 +3911,15 @@ fr:
           * Utilise le bloc ˋen appuyant sur vers la gaucheˋ pour que le robot fasse un mouvement de danse.
 
           *Ce niveau se termine après 7 mesures.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Tu vois les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ?
+          Comment les combiner à un bloc conditionnel pour traverser le monument sous-marin ?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Tu peux utiliser le bloc si chemin pour t’aider à faire les bons
+          virages.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Quel manifique récif de corail ! Si le corail bleu est
+          dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Assure-toi que le nombre pour ˋvitesse_chien`
           est plus grand que ˋvitesse_chat`.

@@ -1030,6 +1030,7 @@ pl:
         po naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
       CSPU5_U3L25 - play sound when up key_2019: Zmień kod, by dźwięk był grany tylko
         po naciśnięciu strzałki do góry. (Kliknij, aby zobaczyć pełne instrukcje)
+      CoureE_HOC 2018 Level_7a: Przeszukaj te podwodne ruiny, aby znaleźć kufer.
       Course 2 Bee Loops 1: 'Witam, jestem Pszczółka. Czy mógłbyś mi pomóc zebrać
         nektar z tych kwiatów? '
       Course 2 Bee Loops 4: Co się stanie, jeśli powtórzysz w pętli tę sekwencję 3
@@ -1732,6 +1733,12 @@ pl:
         w górę. Wykonuj tupnij-klaśnij tak szybko, jak potrafisz!
       CourseD_Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go
         przyjaciołom.
+      CourseE_HOC 2018 Level_10: Dostań się do wejścia do tego Oceanicznego Monumentu.
+      CourseE_HOC 2018 Level_11: 'Zbuduj kanał z pryzmarynu wewnątrz Oceanicznego
+        Monumentu.  '
+      CourseE_HOC 2018 Level_7a: Przeszukaj te podwodne ruiny, aby znaleźć kufer.
+      CourseE_HOC 2018 Level_9b: Użyj korala, jako punktu orientacyjnego na drodze
+        do skarbu.
       CourseF_PlayLab_vars1: 'Aby zagrać w tą grę, nie musisz pisać żadnego kodu,
         po prostu naciśnij "Graj"! '
       CourseF_PlayLab_vars10: "Czas na zabawę! Mamy tutaj wszystkie zmienne, których
@@ -2889,8 +2896,6 @@ pl:
       courseA_maze_ramp5a_2019: Doprowadź ptaka do świnki!
       courseA_maze_seq2: Zmień kod, aby doprowadzić mnie do świnki!
       courseA_maze_seq2_2018: Zmień kod, aby doprowadzić mnie do świnki!
-      courseB_Scrat_ramp5a_2018: Doprowadź ptaka do świnki!
-      courseB_Scrat_ramp5a_2019: Doprowadź ptaka do świnki!
       courseB_artist_loops_challenge2: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?

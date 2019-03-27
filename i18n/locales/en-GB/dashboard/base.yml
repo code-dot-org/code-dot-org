@@ -37,16 +37,13 @@ en-GB:
   nav:
     user:
       create: 'Create'
-      dance: 'Fiesta Bailabel'
+      infinity: 'Infinity'
   teacher:
     panel:
       answer_viewer: 'Teacher Panel'
   home:
     trynow: 'Try now'
     announcement_try_now_button: "Try now"
-  upsell:
-    dance:
-      title: 'Fiesta Bailabel'
   dialog:
     ok: "OK"
     startover_title: "Are you sure you want to start over?"
@@ -65,6 +62,10 @@ en-GB:
     delete_no: 'No'
     saved: "Saved"
     cancel: 'Cancel'
+  flex_category:
+    csf_loops: 'Loops'
+    csf_variables: 'Variables'
+    csp_variables: 'Variables'
   pd:
     form_labels:
       email: 'Email'

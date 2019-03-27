@@ -983,6 +983,7 @@ nn:
         å bli 100 pikslar lange. '
       Code Studio Puzzle Challenge 2 - Artist: No kan du legge til ein sving og ei
         anna linje. Linjene er 200 pikslar lange.
+      CoureE_HOC 2018 Level_7a: Let i undervassruinane for å finne ei kiste.
       Course 2 Bee Loops 1: 'Hei, eg er ei bie. Kan du hjelpe meg med å samle all
         nektaren frå desse blomane? '
       Course 2 Bee Loops 2: Kan du gjøre akkurat det samme på en enklere måte med
@@ -1626,6 +1627,10 @@ nn:
         og gjere ein “floss” når du trykker på oppoverpilen. Gjer en droppfloss så
         fort du kan!
       CourseD_Dance_Party_12: Groove i veg! Lag ein dans du kan dele med venene dine.
+      CourseE_HOC 2018 Level_10: Kom deg til inngangen av havmonumentet.
+      CourseE_HOC 2018 Level_11: 'Bygg ein kanal med prismarin inne i havmonumentet.  '
+      CourseE_HOC 2018 Level_7a: Let i undervassruinane for å finne ei kiste.
+      CourseE_HOC 2018 Level_9b: 'Bruk korallar som guide for å finne skatten.  '
       CourseF_PlayLab_vars10: "Tid for fritt spel! Her er alle variablane vi har brukt
         så langt, i tillegg til nokre ekstra om du vil bruke dei.\n\nLegg merke til
         at det er så mange brikker i verktøykassa vår at dei treng å bli organisert!
@@ -3198,8 +3203,6 @@ nn:
         skrive koden slik at venene mine kjem fram?
       courseA_toMakeLoopsVideo_Collector: Løkker lar deg gjere det som er inni igjen
         og igjen!
-      courseB_Scrat_ramp5a_2018: Få fuglen til grisen!
-      courseB_Scrat_ramp5a_2019: Få fuglen til grisen!
       courseB_artist_loops2: Kunstnaren prøver å teikne ei linje **6** gongar, men
         kan ikkje få det riktig. Kan du hjelpe?
       courseB_artist_loops2_2018: Kunstnaren prøver å teikne ei linje **6** gongar,
@@ -3453,8 +3456,6 @@ nn:
       courseC_artist_loops2a: No kan du bruke ei løkke for å spinne fuglen din rundt
         tolv gongar med ein 30 graders sving.
       courseC_artist_loops2a_2018: No kan du bruke ei løkke for å spinne fuglen din
-        rundt tolv gongar med ein 30 graders sving.
-      courseC_artist_loops2a_2019: No kan du bruke ei løkke for å spinne fuglen din
         rundt tolv gongar med ein 30 graders sving.
       courseC_artist_loops3: Nydeleg!  No som blomen spirer, hjelp zombien med å plassere
         ein ven for kvar 50 piksel for å vakte over dei til dei har vokst ut.

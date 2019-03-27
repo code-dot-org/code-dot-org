@@ -349,6 +349,8 @@ ko:
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: "'앞으로 이동' 블럭을 사용하기 위해서는 블럭들 모음 메뉴에서 마우스를 클릭한채 이동하여 작업 영역의 '실행하면'
           위치에 연결합니다."
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: If 블록을 사용하면 올바른 턴을 만들 수 있습니다.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: '반 육각형은 ** 길이가 30 **이며 **는 ** 60도 오른쪽으로 회전합니다 **.  '
         Course_4_Artist_11_b: '2/3 삼각형은 ** 길이가 80 **이며 ** 120도 **만큼 우회전 합니다. '
@@ -3589,6 +3591,14 @@ ko:
           * ‘왼쪽 화살표 누를 때’ 블록을 사용하여 블록을 누를 때 로봇이 춤을 추도록 하세요.
 
           *이 단계는 8번째 마디 이후에 끝납니다.
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "**바다 랜턴**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)을
+          볼까요? 어떻게 조건부를 사용해서 바다 유적을 통과할 수 있나요?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: If 블록을 사용하면 올바른 턴을 만들 수 있습니다.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: 정말 아름다운 산호초네요! 파란색 산호가 **올바른** 길이며, 빨간색 산호가 **왼쪽**이 아님을
+          확인하세요!
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: "`강아지_속도`의 번호를`고양이_속도`보다 큰 값으로 설정하십시오."
       Dance short test 2_authored_hint:

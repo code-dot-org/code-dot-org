@@ -24,17 +24,19 @@ es-MX:
       Picker: Rocolector/a
       Comment: Comentario
       'Variables ': 'Variables '
+      Default: Incumplimiento
+      Behaviors: Comportamientos
+      Locations: Ubicaciones
+      Bunny Game: Juego del conejo
       everythingelse: detodolodemás
+      World: Mundo
+      Location: Ubicación
       numbers: números
       Numbers: Números
-      Default: Incumplimiento
-      World: Mundo
       Dancers: Bailarines
       Groups: Grupos
-      Behaviors: Comportamientos
       Advanced: Avanzado
       Start: Inicio
-      Locations: Ubicaciones
       Music: Música
       Dancing: Baile
       Sprite: Sprite

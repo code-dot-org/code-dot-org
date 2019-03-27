@@ -1427,6 +1427,10 @@ ar:
               name: حلقة فور، مرح
             The Artist:
               name: الاعب
+            Internet:
+              name: الإنترنت
+            Crowdsourcing:
+              name: حشد المصادر
         dance-low:
           stages:
             Dance Party:

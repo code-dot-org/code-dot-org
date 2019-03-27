@@ -476,16 +476,6 @@ cs:
         * (Tip: použijete téměř stejný kód jako ve funkci "moveCloud0")
         * Zavolejte vaši novou funkci "moveCloud(name)" uvnitř bloku události jednou pro každý název mraku.
         * (Tip: je to podobné tomu, jak je 'loopCloud(name)' funkce volána mnohokrát.
-      CSD U6 params modify clouds_2019: |-
-        # Mraky
-
-        Tento program rozpohybuje mraky, když zafoukáte do mikrofonu. Není však dokončen.
-
-        # Udělejte následující:
-        * Vytvořit novou funkci "moveCloud(name)", která pohne libovolným mrakem.
-        * (Tip: použijete téměř stejný kód jako ve funkci "moveCloud0")
-        * Zavolejte vaši novou funkci "moveCloud(name)" uvnitř bloku události jednou pro každý název mraku.
-        * (Tip: je to podobné tomu, jak je 'loopCloud(name)' funkce volána mnohokrát.
       CSD U6 params modify planes: |-
         # Ovladání letadel
 
@@ -528,6 +518,7 @@ cs:
       Calc Circles of Eval 7: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
       Calc Circles of Eval 8: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
       Calc Circles of Eval 9: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
+      CoureE_HOC 2018 Level_7a: V podmořských ruinách hledej truhlu.
       Course 2 Bee Loops 1: 'Ahoj, já jsem včela. Pomůžeš mi sesbírat nektar z těchto květin? '
       Course 2 Bee Loops 3: Nyní použij nový blok opakuj k sesbírání všeho nektaru a vyrobení všeho med.
       Course 2 Maze Loops 1: Můžeš mě dostat k prasátku pomocí 5 bloků?
@@ -796,6 +787,10 @@ cs:
       CourseD_Dance_Party_11_5: Pomocí bloků "všechny kachny" přiměj kachny tančit spolu.
       CourseD_Dance_Party_11b: Přiměj Robota, aby "poklesl", když stiskneš šipku vpravo, a "high clap", když stiskneš šipku nahoru. Střídej pokles-clap co nejrychleji!
       CourseD_Dance_Party_12: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
+      CourseE_HOC 2018 Level_10: Dostaň se do vchodu tohoto Mořského monumentu.
+      CourseE_HOC 2018 Level_11: 'Uvnitř Mořského monumentu vybuduj potrubí.'
+      CourseE_HOC 2018 Level_7a: V podmořských ruinách hledej truhlu.
+      CourseE_HOC 2018 Level_9b: 'Použij korál jako souřadnice k dosažení pokladu.'
       CourseF_PlayLab_vars1: 'Chcete-li hrát tuto hru, není nutné napsat žádný kód, stačí kliknout na "Spustit"! '
       CourseF_PlayLab_vars10: "Čas k volnému hraní! Zde jsou všechny proměnné, se kterými jsme hráli až dosud v této fázi, stejně jako pár dalších v případě, že je chcete. \\r \\r Všimni si, že zde nyní máme tolik bloků v našem panelu nástrojů, které potřebují být zorganizované!  Zde si dáme každý kus do příslušné kategorie.  Věnuj nějaký čas k prozkoumání všeho, co je k dispozici. Až budeš hotov s průzkumem, udělej hru nebo příběh  s pomocí opakování, proměnných a událostí.  \\r \\r Rada: Přejdi dolů, abys viděl všechny příkazy v pracovním prostoru."
       CourseF_PlayLab_vars2: Závod v tom posledním puzzle nebyl velmi fér! Změň proměnnou "pes_rychlost", a ujisti se, že můžeš sesbírat více vlajek než kočka. Kdo první sesbírá 10 vyhrává!
@@ -1343,8 +1338,6 @@ cs:
       courseA_maze_seq1_2019: Dostaň mne k prasátku!
       courseA_maze_seq2: Změň kód, abys mne dostal k prasátku!
       courseA_maze_seq2_2018: Změň kód, abys mne dostal k prasátku!
-      courseB_Scrat_ramp5a_2018: Dostaň mne k prasátku!
-      courseB_Scrat_ramp5a_2019: Dostaň mne k prasátku!
       courseC_PlayLab_events3: Můžete napsat program, aby se Jorge (pes) posunul směrem k Olivii (kočka)?
       courseC_PlayLab_events3_2018: Můžete napsat program, aby se Jorge (pes) posunul směrem k Olivii (kočka)?
       courseC_PlayLab_events3_2019: Můžete napsat program, aby se Jorge (pes) posunul směrem k Olivii (kočka)?

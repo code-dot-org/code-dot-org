@@ -1,9 +1,112 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  IAM layer including roles and access permissions for Code.org infrastructure.
-  Note: Admin permissions are required to manage this stack.
+  IAM layer including global/shared roles and access permissions for Code.org infrastructure.
+  Note: Admin permissions are required to manage some admin-only resources in this stack.
 Resources:
+  # Admin Service Role for managing all resources in CloudFormation stacks.
+  # Only admins can update stacks using this service role.
+  CloudFormationAdmin:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: CloudFormationAdmin
+      <%=service_role 'cloudformation'%>
+      Path: /admin/
+      ManagedPolicyArns: ['arn:aws:iam::aws:policy/AdministratorAccess']
+  # Shared CloudFormation Service Role used by all stacks.
+  CloudFormationService:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: CloudFormationService
+      <%=service_role 'cloudformation'%>
+      Path: /admin/
+      Policies:
+        # Grant permissions for managing specific non-admin AWS::IAM resources.
+        - PolicyName: RolePermissionsBoundary
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  # AWS::IAM::ManagedPolicy
+                  - iam:CreatePolicy
+                  - iam:CreatePolicyVersion
+                  - iam:DeletePolicy
+                  - iam:DeletePolicyVersion
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+              - Effect: Allow
+                Action:
+                  # AWS::IAM::InstanceProfile
+                  - iam:CreateInstanceProfile
+                  - iam:AddRoleToInstanceProfile
+                  - iam:RemoveRoleFromInstanceProfile
+                  - iam:DeleteInstanceProfile
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:instance-profile/admin/*"
+              - Effect: Allow
+                Action:
+                  - iam:DeleteRole
+                  - iam:UpdateAssumeRolePolicy
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+              - Effect: Allow
+                Action:
+                  # AWS::IAM::Role
+                  - iam:CreateRole
+                  - iam:PutRolePermissionsBoundary
+                  # Managed policies attached to a Role
+                  - iam:AttachRolePolicy
+                  - iam:DetachRolePolicy
+                  # Inline policies embedded in a Role
+                  - iam:PutRolePolicy
+                  - iam:DeleteRolePolicy
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+                # Require DevPermissions boundary on all Roles, e.g.:
+                # PermissionsBoundary: !ImportValue IAM-DevPermissions
+                Condition:
+                  StringEquals:
+                    iam:PermissionsBoundary: !Ref DevPermissions
+      ManagedPolicyArns: [!Ref DevPermissions]
+  # Shared 'Developer' permissions.
+  # Used as default permissions for all developer Roles,
+  # and as a required permissions boundary for CloudFormation-managed resources.
+  DevPermissions:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: DevPermissions
+      Path: /admin/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            NotAction:
+              - iam:*
+              - organizations:*
+            Resource: '*'
+          - Sid: IAMReadOnlyAccess
+            Effect: Allow
+            Action:
+              - iam:GenerateCredentialReport
+              - iam:GenerateServiceLastAccessedDetails
+              - iam:Get*
+              - iam:List*
+              - iam:SimulateCustomPolicy
+              - iam:SimulatePrincipalPolicy
+            Resource: '*'
+          - Effect: Allow
+            Action: iam:PassRole
+            Resource: '*'
+          # Require CloudFormation Service Role on all stack operations.
+          - Effect: Deny
+            Action:
+              - cloudformation:CreateStack
+              - cloudformation:UpdateStack
+              - cloudformation:DeleteStack
+              - cloudformation:CreateChangeSet
+            Resource: '*'
+            Condition:
+              StringNotEquals:
+                cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+
+  # Deprecated: use FrontendRole in application stack
   FrontendRole:
     Type: AWS::IAM::Role
     Properties:
@@ -42,6 +145,7 @@ Resources:
             - 'dynamodb:*'
             - 'sqs:*'
             Resource: '*'
+  # Deprecated: use FrontendRole in application stack
   StandaloneFrontendRole:
     Type: AWS::IAM::Role
     Properties:
@@ -83,6 +187,7 @@ Resources:
             Resource:
             - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_tables"
             - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_properties"
+  # Deprecated: use DaemonRole in application stack
   StandaloneRole:
     Type: AWS::IAM::Role
     Properties:
@@ -97,7 +202,9 @@ Resources:
         PolicyDocument:
           Statement:
           - Effect: Allow
-            Action: ['s3:GetObject']
+            Action:
+            - 's3:GetObject'
+            - 's3:ListBucket'
             Resource: 'arn:aws:s3:::*'
           - Effect: Allow
             Action:
@@ -128,6 +235,7 @@ Resources:
             - "arn:aws:s3:::cdo-dist/adhoc/*"
             - "arn:aws:s3:::cdo-build-logs/*"
             - "arn:aws:s3:::<%=TEMP_BUCKET%>/*"
+  # Deprecated: use DaemonRole in application stack
   DaemonRole:
     Type: AWS::IAM::Role
     Properties:
@@ -149,31 +257,37 @@ Resources:
             Action:
             - 'iam:GetServerCertificate'
             Resource: '*'
+  # Deprecated: use FrontendInstanceProfile in application stack
   FrontendInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
       Roles: [!Ref FrontendRole]
+  # Deprecated: use DaemonInstanceProfile in application stack
   StandaloneInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: /
       Roles: [!Ref StandaloneRole]
+  # Deprecated: use FrontendInstanceProfile in application stack
   StandaloneFrontendInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
       Roles: [!Ref StandaloneFrontendRole]
+  # Deprecated: use DaemonInstanceProfile in application stack
   ProductionInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
       Roles: [!Ref DaemonRole]
+  # Deprecated: use DaemonInstanceProfile in application stack
   StagingInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
       Roles: [!Ref DaemonRole]
+  # Deprecated: use WebServerHookRole in application stack
   LifecycleHookRole:
     Type: AWS::IAM::Role
     Properties:
@@ -191,6 +305,8 @@ Resources:
           - Effect: Allow
             Action: ['sns:Publish']
             Resource: '*'
+  # Used by FirehoseMicroservice Lambda function.
+  # TODO move to Data stack
   FirehoseLambdaRole:
     Type: AWS::IAM::Role
     Properties:
@@ -214,6 +330,7 @@ Resources:
             - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
       ManagedPolicyArns:
       - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+  # Deprecated: use CloudFormationService for all stack updates
   CloudFormationRole:
     Type: AWS::IAM::Role
     Properties:
@@ -233,7 +350,8 @@ Resources:
             - 'iam:PassRole'
             Resource: '*'
       ManagedPolicyArns:
-      - "arn:aws:iam::aws:policy/PowerUserAccess"
+        - "arn:aws:iam::aws:policy/PowerUserAccess"
+  # TODO: Move to Data stack
   GlueRole:
     Type: AWS::IAM::Role
     Properties:
@@ -255,7 +373,64 @@ Resources:
             - !Sub 'arn:aws:s3:::cdo-logs/production-codeorg/AWSLogs/${AWS::AccountId}/elasticloadbalancing/${AWS::Region}/*'
       ManagedPolicyArns:
       - 'arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole'
+  # Percona Monitoring and Management RDS access role.
+  # See: https://www.percona.com/doc/percona-monitoring-and-management/amazon-rds.html#creating-a-policy
+  # TODO: Move to Data stack
+  PMMRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: [ec2.amazonaws.com]
+            Action: ['sts:AssumeRole']
+      Policies:
+        - PolicyName: PMMRolePolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Sid: Stmt1508404837000
+                Effect: Allow
+                Action:
+                  - 'rds:DescribeDBInstances'
+                  - 'cloudwatch:GetMetricStatistics'
+                  - 'cloudwatch:ListMetrics'
+                Resource: '*'
+              - Sid: Stmt1508410723001
+                Effect: Allow
+                Action:
+                  - 'logs:DescribeLogStreams'
+                  - 'logs:GetLogEvents'
+                  - 'logs:FilterLogEvents'
+                Resource:
+                  - "arn:aws:logs:*:*:log-group:RDSOSMetrics:*"
+  # TODO: Move to Data stack
+  PMMInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: Percona-Monitoring-Management
+      Path: '/'
+      Roles: [!Ref PMMRole]
+  # Global managed-policy named role used by ECS.
+  # Ref: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html
+  EcsTaskExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: ecsTaskExecutionRole
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: 'sts:AssumeRole'
+            Effect: Allow
+            Principal: {Service: ecs-tasks.amazonaws.com}
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy'
 Outputs:
+  DevPermissions:
+    Description: Developer Permissions
+    Value: !Ref DevPermissions
+    Export: {Name: !Sub "${AWS::StackName}-DevPermissions"}
   FrontendInstanceProfile:
     Description: Frontend Instance Profile
     Value: !Ref FrontendInstanceProfile

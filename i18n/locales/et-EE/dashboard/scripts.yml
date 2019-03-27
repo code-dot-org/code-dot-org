@@ -1678,6 +1678,10 @@ et:
               name: For Loop Fun
             The Artist:
               name: Kunstnik
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
         dance-low:
           stages:
             Dance Party:
@@ -1755,6 +1759,8 @@ et:
               name: 'Päris elu algoritmid: Seemenda'
             Going Places Safely:
               name: Läheb asukohta turvaliselt
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
         courseb-2019:
           stages:
             Move It, Move It:

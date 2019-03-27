@@ -23,17 +23,19 @@ es:
       Picker: Seleccionador
       Comment: Comentario
       'Variables ': 'Variables'
+      Default: Por defecto
+      Behaviors: Comportamientos
+      Locations: Ubicaciones
+      Bunny Game: Juego del conejo
       everythingelse: todolodemás
+      World: Mundo
+      Location: Ubicación
       numbers: Numeros
       Numbers: Numeros
-      Default: Por defecto
-      World: Mundo
       Dancers: Bailarines
       Groups: Grupos
-      Behaviors: Comportamientos
       Advanced: Avanzado
       Start: Inicio
-      Locations: Ubicaciones
       Music: Musica
       Dancing: Bailando
       Sprite: Sprite

@@ -12,6 +12,7 @@ bs:
       Conditionals: Uvjeti
       Events: Događaji
       Text: Tekst
+      Location: Mjesto
       Start: Počni
       Booleans: Logika
       test: uslov

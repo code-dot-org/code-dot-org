@@ -24,18 +24,19 @@ hu:
       Picker: Választó
       Comment: Megjegyzés
       'Variables ': 'Változók '
+      Default: Alapértelmezett
+      Behaviors: Viselkedések
+      Locations: Helyek
       everythingelse: minden más
+      World: Világ
+      Sprites: Sprite-ok
+      Location: Helyszín
       numbers: számok
       Numbers: Számok
-      Default: Alapértelmezett
-      World: Világ
       Dancers: Táncosok
       Groups: Csoportok
-      Sprites: Sprite-ok
-      Behaviors: Viselkedések
       Advanced: Haladó
       Start: Kezdés
-      Locations: Helyek
       Dancing: Tánc
       Sprite: Sprite
       Brush: Ecset

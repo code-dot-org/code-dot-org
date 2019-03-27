@@ -94,6 +94,10 @@ ca:
           * Emprar el bloc `quan prems la fletxa esquerra` per fer que el robot faci un moviment de dansa quan el prems.
 
           *Aquest nivell acaba després de 8 mesures.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Mira les **Llanternes de la mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Com es pot fer servir un condicional amb ells per passar a través del Monument de l'Oceà?"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Quin escull de corall més preciós! El corall blau està bé si és a la **dreta**, i assegura-te'n que el corall vermell queda a l'**esquerra**!
       Dance short test 2_authored_hint:
         validation: |-
           **Com passo aquest nivell?**

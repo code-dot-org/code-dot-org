@@ -23,17 +23,18 @@ el:
       Picker: Επιλέκτης
       Comment: Σχόλιο
       'Variables ': 'Μεταβλητές '
+      Default: Προεπιλογή
+      Behaviors: Συμπεριφορές
+      Locations: Τοποθεσίες
       everythingelse: όλαταάλλα
+      World: Κόσμος
+      Location: Τοποθεσία
       numbers: αριθμοί
       Numbers: Αριθμοί
-      Default: Προεπιλογή
-      World: Κόσμος
       Dancers: Χορευτές
       Groups: Ομάδες
-      Behaviors: Συμπεριφορές
       Advanced: Για προχωρημένους
       Start: Έναρξη
-      Locations: Τοποθεσίες
       Dancing: Χορεύοντας
       Sprite: Χαρακτήρας
       Brush: Πινέλο

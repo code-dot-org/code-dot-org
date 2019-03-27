@@ -363,8 +363,8 @@ en:
         title: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       courseB_unplugged_loopyMRF_2019:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
+        title: My Loopy Robotic Friends
+        desc: ''
       Conditionals_2019:
         title: Conditionals
         desc: To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."
@@ -390,8 +390,8 @@ en:
         title: Binary Images
         desc: Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
       courseE_unplugged_privateInformation_2019:
-        title: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.desc'
+        title: Private and Personal Information
+        desc: Developed by Common Sense Education, this lesson is about the difference between information that is safe to share online and information that is not.
       SongwritingParameters_2019:
         title: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
         desc: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.desc'
@@ -446,3 +446,12 @@ en:
       GraphingData_2019:
         title: Graphing Data
         desc: " In this lesson, students will collect data from a Play Lab project or real world scenario and use it to make predictions."
+      courseE_unplugged_accessAbility_2019:
+        title: Access Ability
+        desc: Learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.
+      courseE_simon_says_2019:
+        title: Simon Says
+        desc: Play a game and think about what commands are needed to get the right result.
+      courseB_unplugged_passwords_2019:
+        title: Powerful Passwords
+        desc: Explore why people use passwords, learn the benefits of using passwords, and discover strategies for creating and keeping strong, secure passwords.

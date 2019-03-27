@@ -246,7 +246,7 @@ it:
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
         <b>Suggerimenti</b><br>
         - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
-        - Puoi risolvere questo esercizio usando il <i>ciclo</i>`ripeti ... volte`?
+        - Puoi risolvere questo esercizio usando il <i>ciclo</i> `ripeti ... volte`?
       2-3 Bee Conditionals 14: |-
         Metti insieme tutto ciò che hai imparato!<br>
         Raccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi. Non dimenticarti di fare il miele alla fine.
@@ -559,7 +559,7 @@ it:
         di 15 pixel.
       4-5 Artist 2: Riesci a ripetere questo codice per completare il quadrato?
       4-5 Artist 3.5: Cerca di immaginare cosa succede se si eseguono questi blocchi
-        di codice già pronti (o clicca su`Esegui` per verificarlo). Poi, ripetili
+        di codice già pronti (o clicca su"Esegui" per verificarlo). Poi, ripetili
         una quantità di volte sufficiente a completare il disegno. I colori saranno
         diversi ogni volta.
       4-5 Artist 3: Questa aiuola rettangolare ha un perimetro di 600 pixel. Il lato
@@ -990,6 +990,7 @@ it:
       C3-Farmer While Loops Assessment 1: Questo è un esercizio di riepilogo -- Ci
         sono molte buche e mucchi di terra. Aiutami a riempire le buche e a rimuovere
         i mucchi di terra per rendere livellato il terreno.
+      CoureE_HOC 2018 Level_7a: Cerca una cassa tra le rovine sottomarine.
       Course 2 Bee Loops 1: 'Ciao, sono un''ape. Riesci ad aiutarmi a raccogliere
         il nettare da questi fiori? '
       Course 2 Bee Loops 13: Questo è un esercizio di verifica -- Usa il blocco "ripeti"
@@ -1776,6 +1777,12 @@ it:
         Alterna le due mosse più velocemente che puoi!
       CourseD_Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato
         da condividere con i tuoi amici.
+      CourseE_HOC 2018 Level_10: Raggiungi l'entrata di questo Monumento oceanico.
+      CourseE_HOC 2018 Level_11: Costruisci un condotto di prismarino all'interno
+        del Monumento oceanico.
+      CourseE_HOC 2018 Level_7a: Cerca una cassa tra le rovine sottomarine.
+      CourseE_HOC 2018 Level_9b: Usa i coralli rossi e blu come punti di riferimento
+        per raggiungere il tesoro.
       CourseF_PlayLab_vars10: "Tempo di giocare: qui ci sono tutte le variabili con
         cui abbiamo giocato finora, e anche qualcuna in più in caso ti serva.<br>\n<b>Attenzione</b>:
         se vuoi, puoi cambiare nome alle variabili esistenti o introdurne di nuove.
@@ -3250,7 +3257,7 @@ it:
       courseA_bee_seq4: Prova da solo!
       courseA_bee_seq5: Prova da solo!
       courseA_bee_seq6: Adesso l'ape deve raccogliere il nettare da due fiori!
-      courseA_bee_seq7: Aggiungi due blocchi per competare l'esercizio!
+      courseA_bee_seq7: Aggiungi due blocchi per completare l'esercizio!
       courseA_bee_seq8: Assicurati di raccogliere il nettare da tutti i fiori!
       courseA_bee_seq9: Assicurati di raccogliere il nettare da tutti i fiori!
       courseA_collector_loops1: |-
@@ -3268,19 +3275,19 @@ it:
         questa grotta.
       courseA_collector_loops11_2019: Aiuta Laura a raccogliere tutti i diamanti da
         questa grotta.
-      courseA_collector_loops12: '*"Evviva! Raccogli più tesori che puoi!"*'
-      courseA_collector_loops12_2018: '*"Evviva! Raccogli più tesori che puoi!"*'
-      courseA_collector_loops12_2019: '*"Evviva! Raccogli più tesori che puoi!"*'
+      courseA_collector_loops12: '*"Evviva! Raccogli più diamanti che puoi!"*'
+      courseA_collector_loops12_2018: '*"Evviva! Raccogli più diamanti che puoi!"*'
+      courseA_collector_loops12_2019: '*"Evviva! Raccogli più diamanti che puoi!"*'
       courseA_collector_loops1_2018: |-
         Muovi Laura raccogliendo più diamanti che puoi! <br>
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
       courseA_collector_loops1_2019: |-
         Muovi Laura raccogliendo più diamanti che puoi! <br>
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
-      courseA_collector_loops2: Raccogli tutte e tre le gemme per completare l'esercizio.
-      courseA_collector_loops2_2018: Raccogli tutte e tre le gemme per completare
+      courseA_collector_loops2: Raccogli tutti e tre i diamanti per completare l'esercizio.
+      courseA_collector_loops2_2018: Raccogli tutti e tre i diamanti per completare
         l'esercizio.
-      courseA_collector_loops2_2019: Raccogli tutte e tre le gemme per completare
+      courseA_collector_loops2_2019: Raccogli tutti e tre i diamanti per completare
         l'esercizio.
       courseA_collector_loops4: Correggi il percorso di Laura per raccogliere tutti
         i diamanti.
@@ -3329,13 +3336,14 @@ it:
         Grande! Ora puoi aggiungere codice liberamente!
 
         Attacca un blocco "raccogli diamante" in fondo al programma e clicca su "Esegui".
-      courseA_collector_preLoops3: Inserisci due blocchi `E -->` ed un blocco `prendi
-        il diamante` alla fine del programma, infine fai click su "Esegui".
+      courseA_collector_preLoops3: Inserisci due blocchi `E →` ed un blocco `prendi
+        il diamante` alla fine del programma, infine fai clic su "Esegui".
       courseA_collector_preLoops4: Riesci a risolvere questo esercizio?
       courseA_collector_preLoops5: Raccogli 1 dei 2 diamanti per risolvere l'esercizio.
       courseA_collector_preLoops6: Raccogli entrambi i diamanti per risolvere questo
         esercizio.
-      courseA_collector_preLoops7: Raccogli tutte e tre le gemme per completare l'esercizio.
+      courseA_collector_preLoops7: Raccogli tutti e tre i diamanti per completare
+        l'esercizio.
       courseA_forVideoTest_artist: Usa il ciclo `ripeti` per aggiungere le onde all'acqua.
       courseA_harvester_forVideo: Riesci a raccogliere tutte le pannocchie usando
         **un** solo blocco di movimento?
@@ -3368,16 +3376,16 @@ it:
         la contadina raccolga tutte le pannocchie?
       courseA_harvester_loops5b_2019: Puoi modificare il programma per fare in modo
         che la contadina raccolga tutte le pannocchie?
-      courseA_harvester_loops6: Avrai bisogno di **un** blocco verso Sud `v S` ed
-        **uno** verso Ovest `--> O`.
-      courseA_harvester_loops6_2019: Avrai bisogno di **un** blocco verso Sud `v S`
-        ed **uno** verso Ovest `--> O`.
+      courseA_harvester_loops6: Avrai bisogno di **un** blocco verso Ovest `O ←` ed
+        **uno** verso Nord `N ↑`.
+      courseA_harvester_loops6_2019: Avrai bisogno di **un** blocco verso Ovest `O
+        ←` ed **uno** verso Nord `N ↑`.
       courseA_harvester_loops7: Prova da solo!
       courseA_harvester_loops7_2019: Prova da solo!
       courseA_harvester_loops8: Questo è lo stesso puzzle, ma ora dovrai ripeterlo
         **tre** volte!
-      courseA_harvester_loops9: Riesci a capire come raccogliere tutto il grano?
-      courseA_harvester_loops9_2019: Riesci a capire come raccogliere tutto il grano?
+      courseA_harvester_loops9: Riesci a capire come raccogliere tutte le pannocchie?
+      courseA_harvester_loops9_2019: Riesci a capire come raccogliere tutte le pannocchie?
       courseA_harvester_seq1: Gioca con questi blocchi per aiutare la contadina a
         raccogliere la pannocchia.
       courseA_harvester_seq10: Assicurati di raccogliere tutte le pannocchie!
@@ -3386,6 +3394,10 @@ it:
       courseA_harvester_seq11_2019: Prova da solo! Raccogli tutte le pannocchie.
       courseA_harvester_seq12: Raccogli tutte le pannocchie.
       courseA_harvester_seq12_2019: Raccogli tutte le pannocchie.
+      courseA_harvester_seq13: Gioca con questi blocchi per aiutare la contadina a
+        raccogliere le pannocchie.
+      courseA_harvester_seq13_2019: Gioca con questi blocchi per aiutare la contadina
+        a raccogliere le pannocchie.
       courseA_harvester_seq1_2019: Gioca con questi blocchi per aiutare la contadina
         a raccogliere la pannocchia.
       courseA_harvester_seq2: Usa tre blocchi `O ←` e un blocco `prendi pannocchia`
@@ -3407,8 +3419,8 @@ it:
       courseA_harvester_seq8: Ora la contadina dovrà raccogliere pannocchie due volte!
       courseA_harvester_seq8_2019: Ora la contadina dovrà raccogliere pannocchie due
         volte!
-      courseA_harvester_seq9: Aggiungi due blocchi per competare l'esercizio!
-      courseA_harvester_seq9_2019: Aggiungi due blocchi per competare l'esercizio!
+      courseA_harvester_seq9: Aggiungi due blocchi per completare l'esercizio!
+      courseA_harvester_seq9_2019: Aggiungi due blocchi per completare l'esercizio!
       courseA_maze_ramp2_2018: Unisci tutti i blocchi per completare il programma,
         poi fai clic su "Esegui".
       courseA_maze_ramp2_2019: Unisci tutti i blocchi per completare il programma,
@@ -3509,9 +3521,9 @@ it:
         di lavoro e prova a vedere cosa succede!
       courseA_playLab_events1_2019: Questo è il Laboratorio. Metti dei blocchi nell'area
         di lavoro e prova a vedere cosa succede!
-      courseA_playLab_events2: Il cane, vuole dire "Ciao". Riesci ad aiutarlo?
-      courseA_playLab_events2_2018: Il cane, vuole dire "Ciao". Riesci ad aiutarlo?
-      courseA_playLab_events2_2019: Il cane, vuole dire "Ciao". Riesci ad aiutarlo?
+      courseA_playLab_events2: Il cane, vuole dire "Ciao!" Riesci ad aiutarlo?
+      courseA_playLab_events2_2018: Il cane, vuole dire "Ciao!" Riesci ad aiutarlo?
+      courseA_playLab_events2_2019: Il cane, vuole dire "Ciao!" Riesci ad aiutarlo?
       courseA_playLab_events3: Aggancia il blocco `sposta il cane a sinistra` al blocco
         verde dell'evento `quando si preme la freccia sinistra` che si trova già nell'area
         di lavoro.
@@ -3542,9 +3554,9 @@ it:
       courseA_playLab_events7: Aggiungi ciò che vuoi a questo gioco. Riesci a fare
         in modo che il dinosauro scompaia quando il cane sbatte contro di lui? (Quando
         sei soddisfatto, premi "Termina" per completare il corso.)
-      courseA_playLab_events7_2018: "*Tempo di giocare:* Aggiungi ciò che vuoi a questo
+      courseA_playLab_events7_2018: "*Tempo di giocare:* aggiungi ciò che vuoi a questo
         gioco."
-      courseA_playLab_events7_2019: "*Tempo di giocare:* Aggiungi ciò che vuoi a questo
+      courseA_playLab_events7_2019: "*Tempo di giocare:* aggiungi ciò che vuoi a questo
         gioco."
       courseA_playlab_events_challenge1: Riesci a scrivere un programma per mostrare
         gli altri miei amici? I suggerimenti ti aiuteranno a realizzare questo progetto
@@ -3566,23 +3578,25 @@ it:
       courseB_Scrat_ramp1_2019: Per risolvere questo esercizio, aggancia insieme i
         blocchi e clicca su "▶ Esegui"!
       courseB_Scrat_ramp2_2018: Unisci tutti i blocchi per finire il tuo codice, poi
-        fai click su "▶ Esegui".
+        fai clic su "▶ Esegui".
       courseB_Scrat_ramp2_2019: Unisci tutti i blocchi per finire il tuo codice, poi
-        fai click su "▶ Esegui".
+        fai clic su "▶ Esegui".
       courseB_Scrat_ramp3a_2018: Aggiungi un blocco verso Nord `N ↑` come ultimo blocco,
         poi clicca su "▶ Esegui".
       courseB_Scrat_ramp3a_2019: Aggiungi un blocco verso Nord `N ↑` come ultimo blocco,
         poi clicca su "▶ Esegui".
-      courseB_Scrat_ramp3b_2018: Trascinarlo il blocco in eccesso nella cassetta degli
+      courseB_Scrat_ramp3b_2018: Trascina il blocco in eccesso nella cassetta degli
         attrezzi per eliminarlo.
-      courseB_Scrat_ramp3b_2019: Trascinarlo il blocco in eccesso nella cassetta degli
+      courseB_Scrat_ramp3b_2019: Trascina il blocco in eccesso nella cassetta degli
         attrezzi per eliminarlo.
       courseB_Scrat_ramp4a_2018: Riesci a capire quale blocco devi aggiungere alla
         fine di questo programma per completare l'esercizio?
       courseB_Scrat_ramp4a_2019: Riesci a capire quale blocco devi aggiungere alla
         fine di questo programma per completare l'esercizio?
-      courseB_Scrat_ramp5a_2018: Fai arrivare l'uccellino fino al maialino!
-      courseB_Scrat_ramp5a_2019: Fai arrivare l'uccellino fino al maialino!
+      courseB_Scrat_ramp5a_2018: Questo esercizio prova a risolverlo completamente
+        da solo!
+      courseB_Scrat_ramp5a_2019: Questo esercizio prova a risolverlo completamente
+        da solo!
       courseB_artist_loops1: Questo è un nuovo tipo di esercizio chiamato "Artista".
         Prova a disegnare qualcosa di divertente. Quando sei soddisfatto, premi "Termina"
         per passare all'esercizio successivo.
@@ -3803,6 +3817,10 @@ it:
       courseB_maze_seq5_2019: Questo esercizio è un po' complicato!
       courseB_maze_seq6: Muovi in una direzione, poi in un'altra per far arrivare
         l'uccellino fino al maialino!
+      courseB_maze_seq6_2018: Muovi in una direzione, poi in un'altra, per far arrivare
+        Scrat fino alla ghianda!
+      courseB_maze_seq6_2019: Muovi in una direzione, poi in un'altra, per far arrivare
+        Scrat fino alla ghianda!
       courseB_maze_seq7: Cerca di capire cosa manca, quindi aggiungi i blocchi necessari
         per far arrivare l'uccellino fino al maialino!
       courseB_maze_seq7_2018: Scopri che cosa manca e aggiungi i blocchi per far arrivare
@@ -3817,9 +3835,9 @@ it:
         fino alla ghianda?
       courseB_maze_seq9: 'Sfida: Evita la dinamite (TNT) per far arrivare l''uccellino
         fino al maialino.'
-      courseB_maze_seq9_2018: 'Sfida: Aggira il ghiaccio rotto per far arrivare Scrat
+      courseB_maze_seq9_2018: 'Sfida: aggira il ghiaccio rotto per far arrivare Scrat
         fino alla ghianda.'
-      courseB_maze_seq9_2019: 'Sfida: Aggira il ghiaccio rotto per far arrivare Scrat
+      courseB_maze_seq9_2019: 'Sfida: aggira il ghiaccio rotto per far arrivare Scrat
         fino alla ghianda.'
       courseB_maze_seq_challenge2: Correggi questo esercizio. Ci sono già tutti i
         blocchi giusti, ma sono nell'ordine sbagliato!
@@ -3921,11 +3939,11 @@ it:
       courseB_starWars_prog7: Vai a prenderli!
       courseB_starWars_prog7_2018: Vai a prenderli!
       courseB_starWars_prog7_2019: Vai a prenderli!
-      courseB_starWars_prog8: "**Sfida:** Aiuta BB-8 a recuperare i brillanti rottami
+      courseB_starWars_prog8: "**Sfida:** aiuta BB-8 a recuperare i brillanti rottami
         metallici."
-      courseB_starWars_prog8_2018: "**Sfida:** Aiuta BB-8 a recuperare i brillanti
+      courseB_starWars_prog8_2018: "**Sfida:** aiuta BB-8 a recuperare i brillanti
         rottami metallici."
-      courseB_starWars_prog8_2019: "**Sfida:** Aiuta BB-8 a recuperare i brillanti
+      courseB_starWars_prog8_2019: "**Sfida:** aiuta BB-8 a recuperare i brillanti
         rottami metallici."
       courseB_starWars_prog9: Aiuta BB-8 a recuperare i brillanti rottami metallici.
       courseB_starWars_prog9_2018: Aiuta BB-8 a recuperare i brillanti rottami metallici.
@@ -4062,8 +4080,6 @@ it:
       courseC_artist_loops2a: Ora usa un ciclo per disegnare l'uccello 12 volte con
         un angolo di 30 gradi.
       courseC_artist_loops2a_2018: Ora usa un ciclo per disegnare l'uccello 12 volte
-        con un angolo di 30 gradi.
-      courseC_artist_loops2a_2019: Ora usa un ciclo per disegnare l'uccello 12 volte
         con un angolo di 30 gradi.
       courseC_artist_loops3: Ottimo! Ora che i fiori sono germogliati, aiuta lo zombie
         a piazzare un amico ogni 50 pixel per proteggerli finché non crescono.
@@ -5885,8 +5901,8 @@ it:
         e zucche.
       courseE_farmer_functions2ba: Aiuta la contadina a raccogliere le pannocchie
         e le zucche utilizzando la funzione `pannocchie e zucca`.
-      courseE_farmer_functions2ba_2018: Aiuta la contadina a raccogliere le pannocchie
-        e le zucche utilizzando la funzione `pannocchie e zucca`.
+      courseE_farmer_functions2ba_2018: Usa le funzioni qui sotto, per aiutare la
+        contadina a raccogliere le pannocchie e le zucche.
       courseE_farmer_functions2ba_2019: Aiuta la contadina a raccogliere le pannocchie
         e le zucche utilizzando la funzione `pannocchie e zucca`.
       courseE_farmer_functions3c: Ora, inserisci tu il codice all'interno della funzione,
@@ -6672,7 +6688,7 @@ it:
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
         <b>Suggerimenti</b><br>
         - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
-        - Puoi risolvere questo esercizio usando il <i>ciclo</i>`ripeti ... volte`?
+        - Puoi risolvere questo esercizio usando il <i>ciclo</i> `ripeti ... volte`?
       grade3_Conditionals_11 BAD: Questo è un esercizio di riepilogo -- Usa un ciclo
         `mentre` per raccogliere tutto il nettare da questi fiori.
       grade3_Conditionals_11: |-
@@ -7352,7 +7368,7 @@ it:
       gradek_artist_loopsPre: Questo è un nuovo tipo di esercizio chiamato "Artista".
         Prova a disegnare qualcosa di divertente. Quando sei soddisfatto, premi "Termina"
         per passare all'esercizio successivo.
-      gradek_playlab_events1c: Il cane, vuole dire "Ciao". Riesci ad aiutarlo?
+      gradek_playlab_events1c: Il cane, vuole dire "Ciao!" Riesci ad aiutarlo?
       gradek_playlab_events4c: Aggiungi gli eventi per far muovere il cane su e giù
         quando si premono le frecce in su e in giù.
       gradek_playlab_events5c: Rendi questa scena più interessante, cambiando lo sfondo
@@ -7465,7 +7481,7 @@ it:
         il suo raccolto!
       loops_forvideo_iceage_ab: Usa i cicli per far arrivare Scrat alla ghianda!
       loops_forvideo_iceage_cf: Usa i cicli per far arrivare Scrat alla ghianda!
-      playLabDebugVideo1: Il cane, vuole dire "Ciao". Riesci ad aiutarlo?
+      playLabDebugVideo1: Il cane, vuole dire "Ciao!" Riesci ad aiutarlo?
       ramp_artist_loops1: Vai avanti di 60 pixel per completare l'esercizio.
       ramp_artist_loops1_2018: Vai avanti di 60 pixel per completare l'esercizio.
       ramp_artist_loops1_2019: Vai avanti di 60 pixel per completare l'esercizio.

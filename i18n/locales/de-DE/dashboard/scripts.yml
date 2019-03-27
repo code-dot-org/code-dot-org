@@ -1693,6 +1693,10 @@ de:
               name: '„Zähle mit“-Schleifenspaß'
             The Artist:
               name: Der Künstler
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:

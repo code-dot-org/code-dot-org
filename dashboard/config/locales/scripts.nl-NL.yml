@@ -1946,6 +1946,10 @@ nl:
               name: For Lus fun
             The Artist:
               name: De Artiest
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:

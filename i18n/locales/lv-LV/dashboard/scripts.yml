@@ -1223,6 +1223,10 @@ lv:
               name: Jautrība ar "For" Cikliem
             The Artist:
               name: Mākslinieks
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
         coursed-2019:
           stages:
             Relay Programming:

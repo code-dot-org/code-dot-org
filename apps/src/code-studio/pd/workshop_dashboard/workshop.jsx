@@ -760,6 +760,7 @@ export class Workshop extends React.Component {
           workshopCourse={this.state.workshop.course}
           workshopSubject={this.state.workshop.subject}
           workshopDate={firstSessionDate}
+          numSessions={this.state.workshop.sessions.length}
           enrollments={this.state.enrollments}
           onDelete={this.handleDeleteEnrollment}
           accountRequiredForAttendance={

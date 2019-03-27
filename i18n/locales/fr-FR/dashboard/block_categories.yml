@@ -23,18 +23,19 @@ fr:
       Picker: Sélecteur
       Comment: Commentaire
       'Variables ': 'Variables '
+      Default: Par défaut
+      Behaviors: Comportements
+      Locations: Emplacements
       everythingelse: toutlereste
+      World: Monde
+      Location: Localisation
       numbers: nombres
       Numbers: Nombres
       Input: Entrée
-      Default: Par défaut
-      World: Monde
       Dancers: Danseurs
       Groups: Groupes
-      Behaviors: Comportements
       Advanced: Avancé
       Start: Commencer
-      Locations: Emplacements
       Music: Musique
       Dancing: Danse
       Sprite: Lutin

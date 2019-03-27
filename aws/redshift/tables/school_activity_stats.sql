@@ -26,7 +26,7 @@ hoc_event as (
   ),
 applied_to_csd_csp_pd as (
   select distinct json_extract_path_text(form_data, 'school') school_id
-  from pd_applications
+  from dashboard_production_pii.pd_applications
   where left(application_year, 4)::int = date_part_year(getdate()::date)
   and application_type = 'Teacher'
   and json_extract_path_text(form_data, 'school') != '-1'

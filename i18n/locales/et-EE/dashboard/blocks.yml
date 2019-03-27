@@ -589,6 +589,11 @@ et:
             '"x"': x asukoht
             '"y"': y asukoht
             '"direction"': liikumise suund
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kui
+            '"while"': tingimusel
       gamelab_debugSprite:
         options:
           VAL:
@@ -606,6 +611,47 @@ et:
             '"tint"': toon
       gamelab_jumpTo:
         text: "{SPRITE} hüppavad {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kui
+            '"while"': tingimusel
+          KEY:
+            '"up"': üles
+            '"down"': alla
+            '"left"': vasakule
+            '"right"': paremale
+            '"space"': kosmos
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': piir
+            '"inner"': ruudu sees
+            '"circle"': ring
+            '"grid"': ruudustikus
+            '"row"': rida
+            '"column"': veerg
+            '"x"': risti-rästi
+            '"plus"': pluss
+            '"random"': juhuslik
       gamelab_locationDelta:
         options:
           DIR:
@@ -623,6 +669,10 @@ et:
         text: juhuslik värv
       gamelab_setBackground:
         text: määra taustavärv {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': linn
       gamelab_setPosition:
         text: liiguta {THIS} {POSITION} asendisse
         options:
@@ -654,6 +704,11 @@ et:
             '"height"': kõrgus
       gamelab_setup:
         text: seadistus
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kui
+            '"while"': tingimusel
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -886,6 +941,7 @@ et:
       Vector_positionCenter:
         text: keskel
       aalab_changePropByFlexible:
+        text: muuda {SPRITE} {PROPERTY} {VAL} võrra
         options:
           PROPERTY:
             '"scale"': suurus

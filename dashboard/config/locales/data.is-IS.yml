@@ -33,12 +33,13 @@ is:
         Webapp: Appsmiðjan
         ArtistEC: Listamaðurinn
         TextMatch: Textaleikur
-        StudioEC: Leikjasmiðja
+        StudioEC: Leikjasmiðjan
         Applab: Appsmiðjan
         NetSim: Internet hermir
         Custom: Listamaður
-        CustomStudio: Leikjasmiðja
+        CustomStudio: Leikjasmiðjan
         Gamelab: Leikjasmiðjan
+        Spritelab: Kvikasmiðjan
     trophy:
       name:
         Bronze: Brons
@@ -733,9 +734,29 @@ is:
         csd_gamelab_booleans: Rökyrðingar
         csd_gamelab_conditional_statements: Skilyrðingar
         csd_gamelab_if_else: Ef/Annars yrðingar
+        CSF_SpriteLabIntro_CDEF: Þetta er Kvikasmiðjan
+        CSF_Spritelab_MakeSprite_CDEF: Hvernig á að búa til kvika í Kvikasmiðjunni
+        CDEF_Video_SpritesInAction: Kvikar í verki
+        CSF_SpriteLab_SpritesInAction_CDEF: Kvikar í verki
+        CSF_StarWars_ProjectIntro: Kynning á Stars Wars verkefni
+        mc_2018_intro: 'Minecraft: Neðansjávarferð - Kynning'
+        MC_2018_loops: 'Minecraft: Neðansjávarferð - Endurtaka uns'
+        mc_2018_conditionals: 'Minecraft: Neðansjávarferð - Skilyrði'
+        mc_2018_closing: 'Minecraft: Neðansjávarferð - Til hamingju'
         hoc_dance_warmup: Danspartý - Upphitun
+        hoc_dance_events: Danspartý - Atvik
+        hoc_dance_properties: Danspartý - Eiginleikar
         hoc_dance_congrats: Danspartý - Meira fjör!
+        'Teaching CS Fundamentals: How the Course Works': Kennsla Grunnatriða tölvunarfræði
+          - Hvernig námskeiðið virkar
+        elem_pd_2: Tölvunarfræði fyrir grunnskóla - Fagmenntunarmyndband 2/2
         what_is_cs: Hvað er tölvunarfræði?
+        repeat_block: Notkun "Endurtaka" kubbsins
+        lesson_planning: Gerð kennsluáætlana
+        opd_closing: 'Kennsla Grunnatriða tölvunarfræði: Niðurlag og næstu skref'
+        why_unplugged_lessons: Að vera "án tölvu"
+        writing_first_program: Að skrifa fyrsta forritið
+        conditionals_with_cards: Kennslustund án tölvu - Skilyrði með kortum
         what_is_an_event: Hvað er atvik?
     callout:
       text:

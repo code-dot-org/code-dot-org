@@ -144,6 +144,11 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': විට
+            '"while"': while
       gamelab_debugSprite:
         options:
           VAL:
@@ -153,6 +158,22 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': විට
+            '"while"': while
+          KEY:
+            '"up"': උඩ
+            '"down"': යට
+            '"left"': වම
+            '"right"': දකුණ
+            '"space"': අභ්‍යාවකාශය
+            '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': අහඹු
       gamelab_locationDelta:
         options:
           DIR:
@@ -166,6 +187,10 @@ si:
         text: අහඹු වර්ණයක්
       gamelab_randomColor:
         text: අහඹු වර්ණයක්
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': නගරය
       gamelab_setPosition:
         options:
           POSITION:
@@ -179,6 +204,11 @@ si:
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': විට
+            '"while"': while
       gamelab_spritesWhere:
         options:
           PROPERTY:

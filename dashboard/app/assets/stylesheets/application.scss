@@ -343,6 +343,10 @@ img.video_thumbnail {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+
+      html[dir=rtl] & {
+        float: right;
+      }
     }
 
     .pairing_icon {
@@ -377,19 +381,17 @@ img.video_thumbnail {
       border: 1px solid $charcoal;
       border-bottom: 0;
       a {
-        color: $teal;
+        color: $charcoal;
         font-family: 'Gotham 5r', sans-serif;
         min-width: 240px;
         font-size: 14px;
         border-bottom: 1px solid $charcoal;
         box-sizing: content-box;
         white-space: nowrap;
+        cursor: pointer;
       }
       a:hover {
-        color: $teal;
-        font-weight: 900;
-        background-color: $white;
-        cursor: pointer;
+        background-color: $lightest_gray;
       }
       img {
         height: 70px;
@@ -454,11 +456,6 @@ img.video_thumbnail {
   .freeplay_links {
     float: left;
     padding-top: 13px;
-  }
-
-  .project_list {
-    float: left;
-    margin-top: 6px;
   }
 }
 
@@ -2032,9 +2029,17 @@ a.download-video {
   transform: translateY($offset);
 }
 
+/* overrides .unplugged for match levels in level groups */
+.level-group-content .unplugged.match {
+  width: auto;
+}
+
 .match {
   .mainblock {
     margin-left: 0;
+    .level-group-content & {
+      margin-left: 50px;
+    }
   }
   .column {
     width: 260px;
@@ -2098,6 +2103,12 @@ a.download-video {
     }
     .active.emptyslot {
       background-color: $lighter_yellow;
+    }
+  }
+  .question {
+    p {
+      font-size: 16px;
+      line-height: 24px;
     }
   }
   .answer {
@@ -2247,6 +2258,9 @@ a.download-video {
     background-color: $lightest_cyan;
     border-radius: 5px;
     margin: 10px auto;
+    .level-group-content & {
+      margin-left: 50px;
+    }
     .content {
       padding: 10px;
     }

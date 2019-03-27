@@ -2165,6 +2165,10 @@ nn:
               name: Morro med for-løkker
             The Artist:
               name: Kunstnaren
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:

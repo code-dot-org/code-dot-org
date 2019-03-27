@@ -368,7 +368,6 @@ es:
         K5PD:
           title: K5 Desarrollo profesional
           description: Desarrollo profesional para los cursos de K5
-          description_short: Desarrollo profesional para los cursos de K5
           stages:
             Computer Science Pedagogy:
               name: Pedagogía de la ciencia informática
@@ -3590,6 +3589,12 @@ es:
               name: Diversión con bucles Para
             The Artist:
               name: El artista
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Colaboración Abierta
+            Digital Sharing:
+              name: Compartir digital
         dance-low:
           stages:
             Dance Party:
@@ -3637,6 +3642,8 @@ es:
               name: Internet
             Crowdsourcing:
               name: Colaboración Abierta
+            Digital Sharing:
+              name: Compartir digital
         express-2019:
           stages:
             Relay Programming:
@@ -3745,6 +3752,8 @@ es:
               name: 'Algoritmos de la Vida Real: Planta una Semilla'
             Going Places Safely:
               name: Ir a Sitios Seguro
+            Loops in Ice Age:
+              name: Bucles en la Edad del Hielo
         courseb-2019:
           stages:
             Move It, Move It:

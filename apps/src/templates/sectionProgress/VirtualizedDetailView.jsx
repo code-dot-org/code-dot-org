@@ -77,7 +77,8 @@ class VirtualizedDetailView extends Component {
     setLessonOfInterest: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
     getLevels: PropTypes.func,
-    onScroll: PropTypes.func
+    onScroll: PropTypes.func,
+    stageExtrasEnabled: PropTypes.bool
   };
 
   state = {
@@ -187,7 +188,7 @@ class VirtualizedDetailView extends Component {
   };
 
   studentCellRenderer = (studentStartIndex, stageIdIndex, key, style) => {
-    const {section, scriptData, getLevels} = this.props;
+    const {section, scriptData, getLevels, stageExtrasEnabled} = this.props;
 
     // Alternate background colour of each row
     if (studentStartIndex % 2 === 1) {
@@ -214,6 +215,7 @@ class VirtualizedDetailView extends Component {
             studentId={student.id}
             sectionId={section.id}
             stageId={stageIdIndex}
+            stageExtrasEnabled={stageExtrasEnabled}
             levelsWithStatus={getLevels(student.id, stageIdIndex)}
           />
         )}

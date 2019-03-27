@@ -224,12 +224,11 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     store.dispatch(setStudentDefaultsSummaryView(false));
   }
 
-  // Set our initial view type
-  const query = queryString.parse(location.search);
+  // Set our initial view type from current user's user_type or our query string.
   let initialViewAs = ViewType.Student;
-  if (clientState.getUserIsTeacher() && query.viewAs !== ViewType.Student) {
-    // query param viewAs takes precedence over whether or not user is a teacher
-    initialViewAs = ViewType.Teacher;
+  if (scriptData.user_type === 'teacher') {
+    const query = queryString.parse(location.search);
+    initialViewAs = query.viewAs || ViewType.Teacher;
   }
   store.dispatch(setViewType(initialViewAs));
 
@@ -282,7 +281,6 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       }
 
       renderTeacherPanel(store, scriptData.id, scriptData.section);
-      clientState.cacheUserIsTeacher(true);
     }
 
     if (data.focusAreaStageIds) {

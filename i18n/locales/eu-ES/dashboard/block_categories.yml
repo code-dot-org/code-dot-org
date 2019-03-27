@@ -23,17 +23,18 @@ eu:
       Picker: Hautatzailea
       Comment: Iruzkina
       'Variables ': 'Aldagaiak '
+      Default: Lehenetsia
+      Behaviors: Jokabideak
+      Locations: Kokalekuak
       everythingelse: besteguztia
+      World: Mundua
+      Location: Kokalekua
       numbers: zenbakiak
       Numbers: Zenbakiak
-      Default: Lehenetsia
-      World: Mundua
       Dancers: Dantzariak
       Groups: Taldeak
-      Behaviors: Jokabideak
       Advanced: Aurreratua
       Start: Hasiera
-      Locations: Kokalekuak
       Dancing: Dantzan
       Sprite: Sprite
       Brush: Pintzela

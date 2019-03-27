@@ -319,7 +319,6 @@ hu:
         K5PD:
           title: Szakmai fejlődés tanítóknak
           description: Szakmai fejlődés alsó tagozatos kurzusokhoz
-          description_short: Szakmai fejlődés alsó tagozatos kurzusokhoz
           stages:
             K-5 Courses:
               name: Alsó tagozatos tanfolyamok
@@ -1845,6 +1844,10 @@ hu:
               name: A művész
             Sprite Lab Behaviors:
               name: Sprite labor viselkedések
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Csoportos megoldás
         dance-low:
           stages:
             Dance Party:

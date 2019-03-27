@@ -36,7 +36,9 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 ## <a name="pl"></a>Professional Learning
 
-Code.org offers hands-on workshops and online support. Over 80,000 teachers have been through our professional development workshops and thousands more attend every month. Whether you’re brand new to computer science or an experienced tech teacher looking for the best way to use the Code.org curriculum, our Professional Learning Program is a great way to get started. And teachers love it! Over 90% rank it the best professional development ever.
+Code.org offers hands-on workshops and online support. Over 80,000 teachers have been through our professional development workshops and thousands more attend every month. This year, we even have virtual professional learning options available! 
+
+Whether you’re brand new to computer science or an experienced tech teacher looking for the best way to use the Code.org curriculum, our Professional Learning Program is a great way to get started. And teachers love it! Over 90% rank it the best professional development ever.
 
 [<button>Learn about professional learning</button>](/educate/professional-learning/middle-high)
 

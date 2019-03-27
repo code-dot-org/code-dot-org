@@ -315,6 +315,13 @@ hu:
           * A „balra nyíl megnyomásakor“ blokk használatával érd el, hogy a Robot valamilyen táncmozdulatot tegyen, amikor megnyomod.
 
           *Ez a szint 8 ütem után ér véget.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: Látod a **Tengeri lámpásokat** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Hogyan tudsz feltételt használni velük kapcsolatban, hogy átjuss a Víz alatti
+          templomon?
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Micsoda gyönyörű korallzátony! A kék korall jelzi a **jobb**
+          utat, de nehogy **balszerencsét** hozzon az itt hagyott vörös korall!
       Dance short test 2_authored_hint:
         validation: |-
           **Hogyan csinálhatom meg ezt a szintet?**

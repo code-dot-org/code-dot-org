@@ -603,6 +603,11 @@ th:
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
             '"direction"': ทิศทางการเคลื่อนไหว
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
       gamelab_debugSprite:
         options:
           VAL:
@@ -619,6 +624,30 @@ th:
             '"tint"': ระดับอ่อนสี
       gamelab_jumpTo:
         text: "{SPRITE} ข้ามไปที่ {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
+          KEY:
+            '"up"': ขึ้นข้างบน
+            '"down"': เป็นตำแหน่ง
+            '"left"': ซ้าย
+            '"right"': ขวา
+            '"space"': อวกาศ
+            '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': เส้นขอบ
+            '"inner"': แถวจตุรัส
+            '"circle"': วงกลม
+            '"grid"': ตาข่าย
+            '"row"': แถว
+            '"column"': คอลัมน์
+            '"x"': กากบาท
+            '"plus"': เครื่องหมายบวก
+            '"random"': สุ่ม
       gamelab_locationDelta:
         options:
           DIR:
@@ -636,6 +665,10 @@ th:
         text: สุ่มสี
       gamelab_setBackground:
         text: กำหนดสีแบ็กกราวนด์ {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
       gamelab_setPosition:
         text: ย้าย {THIS} ไป {POSITION} ตำแหน่ง
         options:
@@ -668,6 +701,11 @@ th:
             '"height"': ความสูง
       gamelab_setup:
         text: การตั้งค่า
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -888,6 +926,7 @@ th:
       Vector_positionCenter:
         text: ตรงกลาง
       aalab_changePropByFlexible:
+        text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
         options:
           PROPERTY:
             '"scale"': ขนาด

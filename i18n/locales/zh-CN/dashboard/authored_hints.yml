@@ -336,6 +336,8 @@ zh-CN:
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: 要使用 “向前移动” 模块，将它从工具栏拖进工作区并将其连接到 “当运行时” 模块。
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: 你可以用“如果路径”模块来帮助你做正确的转弯。
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: '这半个六边形有一条**30像素长**的边，并且需要向右转**60度**。  '
         Course_4_Artist_11_b: '这2/3个三角形有一条**80像素长**的边，并且需要向右转**120度**。 '
@@ -3393,6 +3395,12 @@ zh-CN:
           *使用`当按左方向键时`模块让机器人在按下时做一个舞蹈动作。
 
           * 此关在 8 个小节后结束。*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "看到**海晶灯** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) 了吗？怎样可以用条件来使用它们，穿过海底遗迹？\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: 你可以用“如果路径”模块来帮助你做正确的转弯。
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: 看见红色和蓝色的珊瑚块了吗？将它们用作向右向左转的路标来通过礁石。
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: 请确保将“小狗的速度”的数值设置为大于“小猫的速度”的数值。
       D_Frozen_nested3_authored_hint:
@@ -4064,6 +4072,8 @@ zh-CN:
           *舞者需要在 4 个小节后变换到新动作。
 
           *此关在 8 个小节后结束。*
+      Tortoise and Hare_authored_hint:
+        behavior hint: "尝试编辑行为！\n*哪个值控制每个精灵的速度？"
       Underground Avoiding Lava_authored_hint:
         mc_11_a: 所有的来检查和处理熔岩代码都有了。您需要做的就是添加一个模块来移动。
         mc_11_b: 你的`向前移动`命令要在`如果`语句的里面还是后面？
@@ -4217,6 +4227,21 @@ zh-CN:
         artistLoopsKA_a: 使用向前跳模块来向前移动，并且不会画线。
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: 您的循环中应该有3个模块来解决这个关卡。
+      behaviors 1_authored_hint:
+        behavior hint: "尝试编辑行为！\n鸟需要朝哪个方向飞？"
+      behaviors 2_authored_hint:
+        behavior hint: "尝试编辑行为！\n鸟需要朝哪个方向飞？"
+      behaviors 3_authored_hint:
+        behavior hint: "尝试编辑行为！\n*哪个值控制每个精灵的速度？"
+      behaviors 4_authored_hint:
+        behavior hint: "尝试编辑行为！\n鸟需要朝哪个方向飞？"
+      behaviors 5_authored_hint:
+        target hint: 你可以选择这四个玩具中的任何一个。宠物想要哪一个?
+        behavior hint: 编辑行为来解决这个难题。宠物小精灵需要在两个不同的方向移动，以结束对角线移动。
+      behaviors 5a_authored_hint:
+        behavior hint: "尝试编辑行为！\n*哪个值控制每个精灵的速度？"
+      behaviors 6_authored_hint:
+        behavior hint: "尝试编辑行为！\n*哪个值控制每个精灵的速度？"
       comment_intro_maze_2018_authored_hint:
         courseC_maze_programming4_a: 当其他人试图读取您的代码时，注释也很有用。
         courseC_maze_programming4_b: 当你更改方向时，增加一条注释 - 如果转向另一条路，会发生什么情况？
@@ -5947,6 +5972,10 @@ zh-CN:
       courseA_harvester_seq7_2019_authored_hint:
         courseA_harvester_seq7_a: 试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。
         courseA_harvester_seq7_b: 有困难了？这是收割者应该走的路。
+      courseA_harvester_seq8_authored_hint:
+        courseA_harvester_seq8_a: 你的最终代码应该有**4**移动块和**2**选择块。
+      courseA_harvester_seq8_2019_authored_hint:
+        courseA_harvester_seq8_a: 你的最终代码应该有**4**移动块和**2**选择块。
       courseA_harvester_seq9_authored_hint:
         courseA_harvester_seq9_a: 运行代码几次来看看发生了什么。收割者在哪里停下来了？
         courseA_harvester_seq9_b: 别忘了采摘所有的玉米！你需要**3**个采摘玉米模块。
@@ -8271,8 +8300,6 @@ zh-CN:
         courseE_playLab_scaffold1_c: 当你完成后，你应该能够用方向键来移动你的英雄!
       courseC19_playLab_EOC4_authored_hint:
         courseE_playLab_scaffold4_a: 使用`得分`添加一分, 并用`扣分`减去一分。
-      courseC19_playLab_EOC5_authored_hint:
-        courseE_playLab_scaffold5_a: 要完成这个关卡, 你需要赢或输。使用`胜利结束游戏`或`失败结束游戏`模块完成。
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           将此块附加到 "当运行时" 模块：
@@ -8677,7 +8704,8 @@ zh-CN:
         courseC_artist_loops3a_b: 使用`画贴纸`模块上的下拉菜单来查找蝙蝠贴纸。
       courseC_artist_loops3a_2019_authored_hint:
         courseC_artist_loops3a_a: 你要在循环中的鸟贴纸之后只添加一个模块 。
-        courseC_artist_loops3a_b: 使用`画贴纸`模块上的下拉菜单来查找蝙蝠贴纸。
+        courseC_artist_loops3a_b: |-
+          使用`画贴纸`模块上的下拉菜单来查找蝙蝠贴纸。
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
           使用此模块向前跳转：
@@ -11968,9 +11996,11 @@ zh-CN:
         courseD_iceage_loops9_b: 最后的代码会有**4**个循环。
         courseD_iceage_loops9_c: 斯奎特应该沿着这条路去找橡子。
       courseD_maze_intro4_2019_authored_hint:
+        courseC_maze_programming4_a: 你可以从红色的角度向右或向左拐。如果你面向右，向右转会使你朝下。
         courseC_maze_programming4_b: 要沿着这条路前进, 向前移动，然后转向一条路, 然后再移动, 转向相反的方向。再往前走一次就能到达橡子。
       courseD_maze_intro5a_2019_authored_hint:
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
+        courseC_maze_programming5_b: 记住，转弯是从鸟的角度看的。
         courseC_maze_programming5_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: 不要忘记, 你可以`重复`一个单一的命令或较长的模式。你甚至可以`重复`一个`重复`模块!

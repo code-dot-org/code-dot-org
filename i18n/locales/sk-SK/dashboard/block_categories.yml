@@ -23,19 +23,20 @@ sk:
       Picker: Nástroj výberu
       Comment: Komentár
       'Variables ': 'Premenné '
+      Default: Predvolené
+      Behaviors: Správanie
+      Locations: Miesta
       everythingelse: všetko ostatné
+      World: Prostredie
+      Sprites: Postavy
+      Location: Miesto
       numbers: čisla
       Numbers: Čísla
       Input: Vstup
-      Default: Predvolené
-      World: Prostredie
       Dancers: Tanečníci
       Groups: Skupiny
-      Sprites: Postavy
-      Behaviors: Správanie
       Advanced: Pokročilé
       Start: Spustiť
-      Locations: Miesta
       Music: Hudba
       Dancing: Tancovanie
       Sprite: Postavy

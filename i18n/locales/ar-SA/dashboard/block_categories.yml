@@ -22,17 +22,18 @@ ar:
       Text: النص
       Comment: تعليق
       'Variables ': 'المتغيرات '
+      Default: الافتراضي
+      Behaviors: السلوك
+      Locations: مواقع
       everythingelse: كل شيء اخر
+      World: العالم
+      Location: الموقع
       numbers: أرقام
       Numbers: أرقام
-      Default: الافتراضي
-      World: العالم
       Dancers: الراقصون
       Groups: المجموعات
-      Behaviors: السلوك
       Advanced: مُتقدم
       Start: إبدأ
-      Locations: مواقع
       Dancing: رقص
       Brush: فرشاة
       Movement: حركة

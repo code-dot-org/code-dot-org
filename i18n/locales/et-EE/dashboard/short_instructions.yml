@@ -432,6 +432,7 @@ et:
       CSD U5 black white images pixelation 5_2018: Joonista nüüd ükskõik mida soovid
       CSD U5 black white images pixelation 5_2019: Joonista nüüd ükskõik mida soovid
       CSP student contact info: Palun sisestage e-posti aadress.
+      CoureE_HOC 2018 Level_7a: Kirstu leidmiseks otsi läbi need veealused varemed.
       Course 2 Bee Loops 1: 'Tere, mina olen mesilane. Kas sa aitad mul koguda nektarit nendelt lilledelt? '
       Course 2 Maze Loops 1: Kas oskad mind viit plokki kasutades põrsa juurde viia?
       Course 4 2: Mesilane tahab praegu ainult nektarit. Pea meeles, et kõik objektid pole lilled, seega jälgi, et nektarit kogutaks vaid lilledest.
@@ -694,6 +695,10 @@ et:
       CourseD_Dance_Party_11_5: Kasuta "kõik pardid" plokke, et panna kõik pardid koos tantsima.
       CourseD_Dance_Party_11b: Pane Robot üks kord "kükitama", kui vajutatakse paremat nooleklahvi ja tegema ühe "kõrge plaksu", kui vajutatakse ülemist nooleklahvi. Kükita-plaksuta nii kiiresti kui võimalik!
       CourseD_Dance_Party_12: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
+      CourseE_HOC 2018 Level_10: Mine selle Ocean Monument (ookeani monumendi) sissepääsu juurde.
+      CourseE_HOC 2018 Level_11: 'Ehitage koos Prismarine kanal Ocean Monument sisse.  '
+      CourseE_HOC 2018 Level_7a: Kirstu leidmiseks otsi läbi need veealused varemed.
+      CourseE_HOC 2018 Level_9b: 'Et jõuda aardeni, kasuta koralle asukohapunktidena.  '
       CourseF_PlayLab_vars10: "Vaba mängu aeg! Siin on kõik muutujad, millega me oleme selles etapis seni mänginud, ja veel mõni juhuks, kui sa neid soovid. \\r \\r Pane tähele, et meie tööriistakastis on nüüd nii palju plokke, et neid on vaja korrastada! Siin panime iga tüki sobivasse kategooriasse.  Vaata kõik pakutav läbi. Kui oled sirvimise lõpetanud, loo mäng või lugu, kasutades kordusi, muutujaid ja sündmusi.  \\r \\r Vihje: kõigi tööruumi käskude nägemiseks keri alla."
       CourseF_PlayLab_vars2: Võidujooks viimases ülesandes ei olnud kuigi aus! Muuda muutujat „koera_kiirus“, et saaksid koguda kassist rohkem lippe. Võidab see, kes kogub esimesena 10 lippu!
       CourseF_PlayLab_vars3: Kasuta liikumiseks vasak- ja paremnoolt ning hüppamiseks ülesnoolt. Vaata, kas sul õnnestub kõik lipud kätte saada.

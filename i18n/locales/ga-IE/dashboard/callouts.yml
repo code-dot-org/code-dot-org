@@ -277,6 +277,8 @@ ga:
       CourseD_Dance_Party_11_callout:
         dance_callout_11_a: Bloc nua!
         dance_callout_11_b: Bloc nua!
+      CourseD_Dance_Party_11_5_callout:
+        dance_party_11_5_groups: Gheobhaidh tú na blocanna "gach lacha" anseo
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Úsáid na saighde chun an t-aisteoir a aistriú
       CourseF_PlayLab_vars10_callout:
@@ -291,9 +293,13 @@ ga:
         dance_callout_04: Cuir an bloc seo le do chlár!
       Dance_Party_06_callout:
         dance_callout_06: Cuir do dhamhsóir anseo
+      Dance_Party_11.5_test_callout:
+        dance_party_11.5_groups: Gheobhaidh tú na blocanna "gach lacha" anseo
       Dance_Party_11_callout:
         dance_callout_11_a: Bloc nua!
         dance_callout_11_b: Bloc nua!
+      Dance_Party_11_5_callout:
+        dance_party_11_5_groups: Gheobhaidh tú na blocanna "gach lacha" anseo
       Eval Design Recipe .1_callout:
         edit_function: Cliceáil anseo le d'fheidhm a chur in eagar.
       Frozen Project Test Toolbox_callout:
@@ -797,6 +803,10 @@ ga:
         courseD_bee_debugging_challenge1_callout1: Úsáid an t-ordú seo chun an beach a aistriú ar gcúl.
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Úsáid an bloc seo chun píosa maoine amháin a bhailiú.  '
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: Ní mór duit an bloc `chomh fada is atá cosán os do chomhair` a úsáid chun an dúshlán seo a réiteach.
+      courseD_farmer_while7_2019_callout:
+        courseD_farmer_while7_2018_PathAhead: Ní mór duit an bloc `chomh fada is atá cosán os do chomhair` a úsáid chun an dúshlán seo a réiteach.
       courseD_maze_intro4_2019_callout:
         courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseD_maze_ramp1_callout:

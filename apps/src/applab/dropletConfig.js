@@ -337,6 +337,13 @@ export var blocks = [
     params: ['250', '0', '75', '0.5'],
     type: 'value'
   },
+  {
+    func: 'open',
+    parent: api,
+    category: 'UI controls',
+    paletteParams: ['url'],
+    params: ['"https://code.org"']
+  },
 
   {
     func: 'createCanvas',

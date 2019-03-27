@@ -41,8 +41,10 @@
             MOVES.DoubleJam: Double down
             MOVES.Drop: Fall
             MOVES.Floss: Floss
+            MOVES.Fresh: Frisk
             MOVES.Clown: Gangnam
             MOVES.Kick: Stjerne
+            MOVES.ThisOrThat: Dette eller det
             MOVES.Rest: Ingen
           DIR:
             '1': "→"
@@ -60,8 +62,10 @@
             MOVES.DoubleJam: Double down
             MOVES.Drop: Fall
             MOVES.Floss: Floss
+            MOVES.Fresh: Frisk
             MOVES.Clown: Gangnam
             MOVES.Kick: Stjerne
+            MOVES.ThisOrThat: Dette eller det
             MOVES.Rest: Ingen
           DIR:
             '1': "→"
@@ -94,6 +98,7 @@
             '"UNICORN"': alle enhjørninger
           MOVE:
             '"rand"': "(Tilfeldig)"
+            MOVES.XBend: Bøy
             MOVES.Roll: Kroppsrulling
             MOVES.XClapSide: Klapp
             MOVES.ClapHigh: Klapp høyt
@@ -102,10 +107,19 @@
             MOVES.DoubleJam: Double down
             MOVES.Drop: Fall
             MOVES.Floss: Floss
+            MOVES.Fresh: Frisk
             MOVES.Clown: Gangnam
+            MOVES.XHeadHips: Hode + hofte
+            MOVES.XHop: Hopp
             MOVES.XHighKick: Spark
+            MOVES.XKnee: Kne
             MOVES.XKneel: Knel
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Nå
+            MOVES.XSlide: Skli
             MOVES.Kick: Stjerne
+            MOVES.XArmsUp: Strekk
+            MOVES.ThisOrThat: Dette eller det
             MOVES.Rest: Ingen
           DIR:
             '1': "→"
@@ -115,6 +129,7 @@
         options:
           MOVE:
             '"rand"': "(Tilfeldig)"
+            MOVES.XBend: Bøy
             MOVES.Roll: Kroppsrulling
             MOVES.XClapSide: Klapp
             MOVES.ClapHigh: Klapp høyt
@@ -123,10 +138,19 @@
             MOVES.DoubleJam: Double down
             MOVES.Drop: Fall
             MOVES.Floss: Floss
+            MOVES.Fresh: Frisk
             MOVES.Clown: Gangnam
+            MOVES.XHeadHips: Hode + hofte
+            MOVES.XHop: Hopp
             MOVES.XHighKick: Spark
+            MOVES.XKnee: Kne
             MOVES.XKneel: Knel
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Nå
+            MOVES.XSlide: Skli
             MOVES.Kick: Stjerne
+            MOVES.XArmsUp: Strekk
+            MOVES.ThisOrThat: Dette eller det
             MOVES.Rest: Ingen
           DIR:
             '1': "→"
@@ -168,11 +192,15 @@
             '"y"': vertikal posisjon
             '"tint"': fargetone
       Dancelab_getTime:
+        text: gjeldende tid i [UNIT]-[0]
         options:
           UNIT:
             '"measures"': takter
             '"seconds"': sekunder
       Dancelab_ifDanceIs:
+        text: |-
+          hvis {SPRITE} gjør {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Klapp høyt
@@ -181,23 +209,32 @@
             MOVES.DoubleJam: Double down
             MOVES.Drop: Fall
             MOVES.Floss: Floss
+            MOVES.Fresh: Frisk
             MOVES.Roll: Kroppsrulling
             MOVES.Kick: Stjerne
+            MOVES.ThisOrThat: Dette eller det
             MOVES.Rest: Ingen
       Dancelab_ifTime:
+        text: |-
+          hvis {UNIT} er {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': takter
             '"seconds"': sekunder
       Dancelab_jumpTo:
+        text: "{SPRITE} hopp til {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": topp
             "{x: 200, y: 300}": bunn
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": høyre
+            "{x: 200, y: 200}": midten
             "{x: 100, y: 100}": øverst til venstre
             "{x: 300, y: 100}": øverst til høyre
+            "{x: 100, y: 300}": nederst til venstre
+            "{x: 300, y: 300}": nederst til høyre
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfeldig
       Dancelab_layoutSprites:
         options:
@@ -246,10 +283,16 @@
             "{x: 200, y: 300}": bunn
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": høyre
+            "{x: 200, y: 200}": midten
             "{x: 100, y: 100}": øverst til venstre
             "{x: 300, y: 100}": øverst til høyre
+            "{x: 100, y: 300}": nederst til venstre
+            "{x: 300, y: 300}": nederst til høyre
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfeldig
       Dancelab_makeNewDanceSpriteGroup:
+        text: |-
+          lag {N} ny {COSTUME}
+          i et {LAYOUT}
         options:
           'N':
             '2': '2'
@@ -568,7 +611,7 @@
             '"left"': venstre
             '"down"': ned
             '"right"': høyre
-            '"space"': verdensrommmet
+            '"space"': mellomrom
             '"enter"': enter
             '"a"': a
             '"d"': d
@@ -578,6 +621,7 @@
             '"k"': k
             '"l"': l
             '"m"': m
+            '"n"': 'n'
             '"o"': o
             '"p"': p
             '"r"': r
@@ -585,7 +629,10 @@
             '"t"': t
             '"u"': u
             '"v"': v
+            '"w"': w
             '"x"': x
+            '"y"': 'y'
+            '"z"': z
       Dancelab_whenPeak:
         options:
           RANGE:
@@ -594,13 +641,19 @@
             '2': diskant
       Dancelab_whenSetup:
         text: oppsett
+      gamelab_add:
+        text: legg {SPRITE} til i gruppen {THIS}
       gamelab_beginBehavior:
         text: start {BEHAVIOR}
+      gamelab_bounceOffEdges:
+        text: "{SPRITE} spretter vekk fra kanter"
       gamelab_changeColor:
         text: endre {COLOR} {METHOD} av [AMOUNT]-[2]
         options:
           METHOD:
             '"tint"': fargetone
+            '"tone"': tone
+            '"shade"': skygge
       gamelab_changeColorBy:
         text: endre {COLOR} {METHOD} av [AMOUNT]-[2]
         options:
@@ -617,6 +670,11 @@
             '"x"': x-posisjon
             '"y"': y-posisjon
             '"direction"': bevegelsesretning
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': når
+            '"while"': så lenge
       gamelab_clickedOn:
         text: når {SPRITE} klikkes på
       gamelab_comment:
@@ -660,13 +718,73 @@
             '"y"': y-posisjon
             '"direction"': bevegelsesretning
             '"tint"': fargetone
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"this"': denne
       gamelab_groupLength:
         text: antall figurer i {THIS}
       gamelab_hasBehavior:
         text: "{SPRITE} er foreløpig {BEHAVIOR}"
       gamelab_hideTitleScreen:
         text: skjul tittelskjerm
+      gamelab_jumpTo:
+        text: "{SPRITE} hopp til {LOCATION}"
+      gamelab_keyDown:
+        text: tast er nede {KEY}
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': når
+            '"while"': så lenge
+          KEY:
+            '"up"': opp
+            '"down"': ned
+            '"left"': venstre
+            '"right"': høyre
+            '"space"': verdensrommmet
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': kantlinje
+            '"inner"': indre kvadrat
+            '"circle"': sirkel
+            '"grid"': rutenett
+            '"row"': rad
+            '"column"': kolonne
+            '"x"': kryss
+            '"plus"': pluss
+            '"random"': tilfeldig
+      gamelab_locationAdd:
+        text: "{LOC1} {OPERATOR} {LOC2}"
+        options:
+          OPERATOR:
+            "'plus'": "\\+"
+            "'minus'": "\\-"
+      gamelab_locationAt:
+        text: 'plassering x: {X} y: {Y}'
       gamelab_locationConstant:
+        text: "{DIR}"
         options:
           DIR:
             "'north'": nord
@@ -674,6 +792,7 @@
             "'east'": øst
             "'west'": vest
       gamelab_locationDelta:
+        text: "{DISTANCE} piksler {DIR} av {LOCATION}"
         options:
           DIR:
             "'north'": nord
@@ -683,12 +802,24 @@
             "'random'": tilfeldig
       gamelab_locationEast:
         text: øst
+      gamelab_locationMouse:
+        text: musens plassering
       gamelab_locationNorth:
         text: nord
+      gamelab_locationOf:
+        text: plassering av {SPRITE}
       gamelab_locationSouth:
         text: sør
       gamelab_locationWest:
         text: vest
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_location_variable_get:
+        text: plassering av {VAR}
+      gamelab_location_variable_set:
+        text: sett plassering for {VAR} til {VAL}
+      gamelab_makeNewGroup:
+        text: lag en ny gruppe
       gamelab_mirrorSprite:
         text: "{SPRITE} se til {DIRECTION}"
         options:
@@ -699,6 +830,8 @@
         text: bland {COLOR1} og {COLOR2}
       gamelab_mouseDown:
         text: museknapp er nede
+      gamelab_mouseLocation:
+        text: musens plassering
       gamelab_moveDown:
         text: "{THIS} gå ned"
       gamelab_moveForward:
@@ -721,6 +854,8 @@
         text: gå {SPRITE} distanse {DISTANCE} mot {TARGET}
       gamelab_moveUp:
         text: "{THIS} gå opp"
+      gamelab_playSound:
+        text: spillLyd {SOUND}
       gamelab_pointInDirection:
         text: pek {SPRITE} {DIRECTION}
         options:
@@ -743,14 +878,27 @@
         text: figur {SPRITE} stopper {BEHAVIOR}
       gamelab_removeTint:
         text: fjern farge fra {THIS}
+      gamelab_secondTouched:
+        text: andre berørte figur
       gamelab_setBackground:
         text: sett bakgrunnsfarge {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': by
       gamelab_setPosition:
+        text: flytt {THIS} til {POSITION} posisjonen
         options:
           POSITION:
             "{x: 50, y: 50}": øverst til venstre
             "{x: 200, y: 50}": øverst i midten
             "{x: 350, y: 50}": øverst til høyre
+            "{x: 50, y: 200}": midten venstre
+            "{x: 200, y: 200}": midten
+            "{x: 350, y: 200}": midten høyre
+            "{x: 50, y: 350}": nederst til venstre
+            "{x: 200, y: 350}": midten nederst
+            "{x: 350, y: 350}": nederst til høyre
             '"random"': tilfeldig
       gamelab_setProp:
         options:
@@ -769,6 +917,11 @@
             '"height"': høyde
       gamelab_setup:
         text: oppsett
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': når
+            '"while"': så lenge
       gamelab_spriteDirection:
         options:
           DIRECTION:
@@ -809,6 +962,7 @@
             '"right"': høyre
             '"space"': verdensrommmet
             '"a"': a
+            '"w"': w
             '"s"': s
             '"d"': d
       gamelab_whenPressedAndReleased:
@@ -827,6 +981,7 @@
             '"right"': høyre
             '"space"': verdensrommmet
             '"a"': a
+            '"w"': w
             '"s"': s
             '"d"': d
       Mikelab_changePropBy:
@@ -844,8 +999,11 @@
             "{x: 200, y: 300}": bunn
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": høyre
+            "{x: 200, y: 200}": midten
             "{x: 100, y: 100}": øverst til venstre
             "{x: 300, y: 100}": øverst til høyre
+            "{x: 100, y: 300}": nederst til venstre
+            "{x: 300, y: 300}": nederst til høyre
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -877,8 +1035,11 @@
             "{x: 200, y: 300}": bunn
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": høyre
+            "{x: 200, y: 200}": midten
             "{x: 100, y: 100}": øverst til venstre
             "{x: 300, y: 100}": øverst til høyre
+            "{x: 100, y: 300}": nederst til venstre
+            "{x: 300, y: 300}": nederst til høyre
       Mikelab_groupDestroy:
         options:
           SELECT:
@@ -928,6 +1089,9 @@
       Mikelab_hasBehavior:
         text: "{SPRITE} er foreløpig {BEHAVIOR}"
       Mikelab_ifDanceIs:
+        text: |-
+          hvis {SPRITE} gjør {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Klapp høyt
@@ -936,9 +1100,15 @@
             MOVES.DoubleJam: Double down
             MOVES.Drop: Fall
             MOVES.Floss: Floss
+            MOVES.Fresh: Frisk
             MOVES.Roll: Kroppsrulling
             MOVES.Kick: Stjerne
+            MOVES.ThisOrThat: Dette eller det
             MOVES.Rest: Ingen
+      Mikelab_locationAt:
+        text: 'plassering x: {X} y: {Y}'
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: tilfeldig farge
       Mikelab_removeBehaviorSimple:
@@ -967,8 +1137,11 @@
             "{x: 200, y: 300}": bunn
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": høyre
+            "{x: 200, y: 200}": midten
             "{x: 100, y: 100}": øverst til venstre
             "{x: 300, y: 100}": øverst til høyre
+            "{x: 100, y: 300}": nederst til venstre
+            "{x: 300, y: 300}": nederst til høyre
       Mikelab_whenClickedOn:
         text: når {SPRITE} klikkes på
       Mikelab_whenKeyPressed:
@@ -1009,11 +1182,14 @@
         text: snu mot høyre
       Vector_log:
         text: loggmelding {MESSAGE}
+      Vector_positionCenter:
+        text: midten
       Vector_randomLocation:
         text: tilfeldig sted
       Vector_vectorNorth:
         text: nord
       aalab_changePropByFlexible:
+        text: endre {SPRITE} {PROPERTY} med {VAL}
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -1046,6 +1222,8 @@
             '"left"': venstre
             '"right"': høyre
             '"space"': verdensrommmet
+      aalab_location_picker:
+        text: "{LOCATION}"
       aalab_moveInDirection:
         options:
           DIRECTION:
@@ -1053,6 +1231,10 @@
             '"East"': Øst
             '"South"': Sør
             '"West"': Vest
+      aalab_randomLocation:
+        text: tilfeldig sted
+      aalab_removeOneAndAll:
+        text: slett {THIS}
       aalab_setBG:
         options:
           BG:
@@ -1099,6 +1281,7 @@
             '"right"': høyre
             '"space"': verdensrommmet
             '"a"': a
+            '"w"': w
             '"s"': s
             '"d"': d
       craft_ifPath:
@@ -1175,7 +1358,7 @@
       craft_repeatUntilGoal:
         text: gjenta til mål {STATEMENT}
       craft_spawnEntity:
-        text: legg {ENTITY}
+        text: skap {ENTITY}
         options:
           ENTITY:
             '"cod"': torsk

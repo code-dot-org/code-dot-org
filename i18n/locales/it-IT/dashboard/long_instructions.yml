@@ -89,7 +89,7 @@ it:
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
         <b>Suggerimenti</b><br>
         - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
-        - Puoi risolvere questo esercizio usando il <i>ciclo</i>`ripeti ... volte`?
+        - Puoi risolvere questo esercizio usando il <i>ciclo</i> `ripeti ... volte`?
       2-3 Bee Conditionals 14: |-
         Metti insieme tutto ciò che hai imparato!<br>
         Raccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi. Non dimenticarti di fare il miele alla fine.
@@ -156,7 +156,7 @@ it:
       4-5 Artist 10: Premi "Esegui" per provare il codice. Poi, ripetilo abbastanza volte per completare il disegno. I colori saranno diversi ogni volta.
       4-5 Artist 11: "Completa le linee verdi. Le linee sono lunghe 300 pixel e distanziate di 15 pixel."
       4-5 Artist 2: Riesci a ripetere questo codice per completare il quadrato?
-      4-5 Artist 3.5: "Cerca di immaginare cosa succede se si eseguono questi blocchi di codice già pronti (o clicca su `Esegui` per verificarlo). Poi, ripetili una quantità di volte sufficiente a completare il disegno. I colori saranno diversi ogni volta."
+      4-5 Artist 3.5: "Cerca di immaginare cosa succede se si eseguono questi blocchi di codice già pronti (o clicca su \"Esegui\" per verificarlo). Poi, ripetili una quantità di volte sufficiente a completare il disegno. I colori saranno diversi ogni volta."
       4-5 Artist 3: "Questa aiuola rettangolare ha un perimetro di 600 pixel. Il lato lungo ha una lunghezza di 200.<br>\nDisegna il rettangolo usando il minor numero possibile di blocchi."
       4-5 Artist 4: "Quanti gradi ci sono in un cerchio?  Inserisci questo valore nel blocco `ripeti ... volte` in modo da creare un cerchio tutto colorato."
       4-5 Artist 5: Che angolo devi usare in questo esercizio, per essere sicuro di disegnare tutte e 3 le linee con i blocchi all'interno del ciclo?
@@ -305,6 +305,7 @@ it:
         \r
         \r
 
+      CoureE_HOC 2018 Level_7a: "Hai scovato le rovine sottomarine. Cerca nell'arenaria, c'è una **cassa** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) che contiene un tesoro in **prismarino** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
       Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\" width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Tempo di giocare:**  Ecco il codice per una figura interessante.   \n\nChe cosa succede se la ripeti più volte, girando ad ogni iterazione?   \n\nNota che il codice per disegnarla fa ruotare l'artista di *420 gradi* in totale. Ciò significa che, una volta completata la figura, l'artista sarà rivolto in una direzione differente rispetto a quando ha iniziato. Questa nuova direzione sarà esattamente *60 gradi a destra* rispetto alla direzione iniziale.\n\n<hr/>\n\n<h4>\n<details>\n\n<summary>\n\n<b>Ripeti 4</b>\n\n</summary>\n<br/>\nSe vuoi fare un giro completo con solo 4 ripetizioni, l'artista deve ruotare di **360 gradi/4 = 90 gradi** ogni volta. Puoi farlo aggiungendo un blocco `gira a destra di 30 gradi` prima di ripetere la figura (dato che **60+30 = 90**).<br/>\n<img src=\"https://programmailfuturo.it/images/codeorg/4-3-11-a.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" /><br/>\n<a href=\"https://studio.code.org/c/120106816\" target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Ripeti 6</b>\n\n</summary>\n<br/>\nSe ripeti per 6 volte questo codice così com'è, ottieni una rotazione totale pari a **6x60**, ossia un giro completo di **360 gradi**.<br>\n<img\nsrc=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"  width=\"500px;\"  style=\"mix-blend-mode:\nmultiply;\" /><br/>\n<a href=\"https://studio.code.org/c/105644852\" target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Ripeti 12</b>\n\n</summary>\n\n<br/>\nSe vuoi invece ripetere la figura 12 volte, l'artista deve effettuare una rotazione di **360 gradi/12 = 30 gradi** ad ogni ripetizione. Ciò significa che, prima di ripetere la figura, l'artista deve tornare un po' indietro con un blocco `gira a sinistra di 30 gradi` (infatti 60-30 = 30).<br/>\n<img src=\"https://programmailfuturo.it/images/codeorg/4-3-11-b.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br/>\n<a href=\"https://studio.code.org/c/120106805\" target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\nNow it's your turn!  Can you recreate each image by repeating the starting shape?  "
       Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/><br>\n<br>\nE ora una piccola sfida!<br>\n<br>\nPer ottenere la figura che vedi devi usare solo blocchi che ti sono già stati mostrati. Riesci a capire come ricrearla? Sentiti libero di fare più tentativi e di commettere errori. Nessuno si aspetta che tu ci riesca perfettamente al primo tentativo. <br>\n<br>\n<b>Suggerimento</b>: La figura che viene ripetuta è quasi identica a quella del <a href=\"https://studio.code.org/s/course4/stage/3/puzzle/11\" target=\"_blank\">precedente esercizio</a>, l'unica differenza consiste nel fatto che il primo ciclo disegna tratti di lunghezza leggermente diversa."
       Course 4 Artist 12: |-
@@ -555,6 +556,11 @@ it:
 
         **Usa i tasti per far fare al Robot il ballo spaccata-applauso-spaccata-applauso il più velocemente possibile!**
       CourseD_Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato da condividere con i tuoi amici.
+      CourseE_HOC 2018 Level_10: "C'è un **calamaro** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) nascosto da qualche parte in questo Monumento oceanico, riesci a trovarlo?\n\n"
+      CourseE_HOC 2018 Level_11: Costruisci un muro di **prismarino** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) intorno al calcestruzzo nero. Così si attiverà il **condotto** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) e avrai completato la sfida!
+      CourseE_HOC 2018 Level_7a: "Hai scovato le rovine sottomarine. Cerca nell'arenaria, c'è una **cassa** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) che contiene un tesoro in **prismarino** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      CourseE_HOC 2018 Level_8: "Prima gli iceberg, ora la lava? Attraversa quest'isola vulcanica e trova i **pesci tropicali** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) nella barriera corallina.\n\n"
+      CourseE_HOC 2018 Level_9b: "Sei arrivato alla barriera corallina, ora cerca il **Cuore del mare** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Usa i coralli rossi e blu come punti di riferimento per raggiungere il **forziere** del tesoro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       CourseF_PlayLab_vars10: "Tempo di giocare: qui ci sono tutte le variabili con cui abbiamo giocato finora, e anche qualcuna in più in caso ti serva.<br>\n<br>\n<b>Attenzione</b>: se vuoi, puoi cambiare nome alle variabili esistenti o introdurne di nuove. Clicca sul triangolino con la punta verso il basso accanto al nome della variabile.<br>\n<br>\nOra ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Prenditi un po' di tempo per esaminare tutto ciò che è a tua disposizione. Scorri verso il basso per vedere tutti i comandi nell'area di lavoro.<br>\n<br>\n<i>Scorri verso il basso per vedere tutti i comandi presenti nell'area di lavoro.</i><br>\nQuando hai finito la tua esplorazione, prova a creare un gioco oppure una storia usando i cicli, le variabili e gli eventi. "
       CourseF_PlayLab_vars2: "Quella del precedente esercizio non è stata un bella gara! Modifica la variabile denominata `dog_speed` (<i>velocità del cane</i>) per essere sicuro di poter raccogliere più bandierine del gatto. Il primo che raccoglie 10 bandierine, vince!\n<br><a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-7#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
       CourseF_PlayLab_vars3: "Ecco un nuovo tipo di gioco!<br><br>Non devi modificare niente in questo esercizio.<br><br>Utilizza le frecce verso sinistra e verso destra per muoverti, e la freccia verso l'alto per saltare. Riesci a raccogliere tutte le bandierine?"
@@ -590,13 +596,28 @@ it:
       Dance Party 1-validated_2019: "**Fai una previsione:** Ecco un personaggio chiamato `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
       Dance Party 1-validated_simple: "**Fai una previsione:** Ecco un personaggio chiamato `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
       Dance Party 2: "L'alieno era orgoglioso delle sue capacità di ballo su Marte, ma ora può spostarsi solo da un lato all'altro.\n\nPuoi modificare il comportamento all'interno del blocco <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> per fare in modo che inizi gironzolando qua e là?  "
-      Dance Party 2_2019: "L'alieno era orgoglioso delle sue capacità di ballo su Marte, ma ora può spostarsi solo da un lato all'altro.\n\nPuoi modificare il comportamento all'interno del blocco <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> per fare in modo che inizi gironzolando qua e là?  "
+      Dance Party 2_2019: |-
+        L'alieno era orgoglioso delle sue capacità di ballo su Marte, ma ora può spostarsi solo da un lato all'altro.
+
+        Puoi modificare il comportamento all'interno del blocco <xml> <block type="gamelab_addBehaviorSimple" inline="true">
+              <value name="SPRITE">
+                <block type="sprite_variables_get">
+                  <title name="VAR">alien1</title>
+                </block>
+              </value>
+            </block></xml> per fare in modo che inizi gironzolando qua e là?  
       Dance Party 3 - Validated: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli fare un passo di danza diverso ogni volta che ci clicchi sopra."
       Dance Party 3: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli fare un passo di danza diverso ogni volta che ci clicchi sopra."
-      Dance Party 3_2019: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli fare un passo di danza diverso ogni volta che ci clicchi sopra."
+      Dance Party 3_2019: |-
+        Crea un nuovo personaggio chiamato `alien2`.  
+
+        Fagli fare un passo di danza diverso ogni volta che ci clicchi sopra.
       Dance Party 4 Validated: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci ad posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!"
       Dance Party 4: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci ad posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!"
-      Dance Party 4_2019: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci ad posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!"
+      Dance Party 4_2019: |-
+        Crea un terzo personaggio chiamato `alien3`.  
+
+        Riesci ad posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!
       Dance Party 5 - Validated: "Possiamo modificare ogni cosa in questo programma quando si clicca sui personaggi. Cambiamo il loro colore!  \n\n**Aggiungi il codice per modificare il colore di ogni alieno quando si clicca su di esso.**"
       Dance Party 5: "Possiamo modificare ogni cosa in questo programma quando si clicca sui personaggi. Cambiamo il loro colore!  \n\n**Aggiungi il codice per modificare il colore di ogni alieno quando si clicca su di esso.**"
       Dance Party 5_2019: "Possiamo modificare ogni cosa in questo programma quando si clicca sui personaggi. Cambiamo il loro colore!  \n\n**Aggiungi il codice per modificare il colore di ogni alieno quando si clicca su di esso.**"
@@ -605,7 +626,10 @@ it:
       Dance Party 6_2019: "Questi alieni si stanno scatenando!  \n\nUsa il blocco <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value name=\"SPRITE\"/>\n    </block></xml> per fare in modo che ogni alieno si fermi quando si clicca su di esso."
       Dance Party 7 - Validated: "Infine, aggiungi un nuovo personaggio a campanella chiamato `myBell`.  \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa danza!"
       Dance Party 7: "Infine, aggiungi un nuovo personaggio a campanella chiamato `myBell`.  \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa danza!"
-      Dance Party 7_2019: "Infine, aggiungi un nuovo personaggio a campanella chiamato `myBell`.  \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa danza!"
+      Dance Party 7_2019: |-
+        Infine, aggiungi un nuovo personaggio a campanella chiamato `myBell`.  
+
+        Quando viene cliccata, fa fare a tutti gli alieni la sua stessa danza!
       Dance Party 7_simple: "Infine, aggiungi un nuovo personaggio a campanella chiamato `myBell`.  \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa danza!"
       Dance Party Freeplay: |-
         Ora crea la tua discoteca aliena! Cerchi un'ispirazione? Prova queste idee:
@@ -979,21 +1003,51 @@ it:
       Virtual Pet 1 fix: "Questa è Geraldine, la tua nuova giraffa domestica.  \n\nCosa pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai su di lei?"
       Virtual Pet 1-validated: Questa è Geraldine, la tua nuova giraffa domestica. Cosa pensi accadrà quando premerai  "▶ Esegui" e cliccherai su di lei?
       Virtual Pet 1: "Questa è Geraldine, la tua nuova giraffa domestica.  \n\nCosa pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai su di lei?"
-      Virtual Pet 1_2019: "Questa è Geraldine, la tua nuova giraffa domestica.  \n\nCosa pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai su di lei?"
       Virtual Pet 1_simple: "Questa è Geraldine, la tua nuova giraffa domestica.  \n\nCosa pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai su di lei?"
       Virtual Pet 2 - Validated (Ram): "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore diventi marrone."
       Virtual Pet 2 - Validated: "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore diventi marrone."
       Virtual Pet 2: "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore diventi marrone."
-      Virtual Pet 2_2019: "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore diventi marrone."
+      Virtual Pet 2_2019: |-
+        Nell'angolo c'è una pozzanghera fangosa.  
+
+        Crea un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore diventi marrone.
       Virtual Pet 3: "Non possiamo lasciare in giro una giraffa tutta sporca!  \n\n1.  Aggiungi sullo schermo un nuovo personaggio sapone.\n2.  Puoi crearlo in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al suo colore normale?\n\n---\n\nPer ripristinare il colore, usa il blocco:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n       <value name=\"THIS\">\n         <block type=\"sprite_variables_get\">\n           <title name=\"VAR\">mySprite</title>\n         </block>\n       </value>\n     </block></xml>\n"
-      Virtual Pet 3_2019: "Non possiamo lasciare in giro una giraffa tutta sporca!  \n\n1)  Aggiungi sullo schermo un nuovo personaggio Sapone.\n2)  Puoi crearlo in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al suo colore normale?\n\n---\n\nPer ripristinare il colore, usa il blocco:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
+      Virtual Pet 3_2019: |-
+        Non possiamo lasciare in giro una giraffa tutta sporca!  
+
+        1)  Aggiungi sullo schermo un nuovo personaggio Sapone.
+        2)  Puoi crearlo in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al suo colore normale?
+
+        ---
+
+        Per ripristinare il colore, usa il blocco:
+        <xml><block type="gamelab_removeTint" inline="true">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">mySprite</title>
+                </block>
+              </value>
+            </block></xml>
+
       Virtual Pet 4: "Non vogliamo aspettare che la giraffa si pulisca da sola ogni volta che si sporca.  \n\nAggiungi un comportamento al tuo Sapone per renderlo trascinabile, quindi trascinalo sopra la giraffa per pulirla!\n"
-      Virtual Pet 4_2019: "Non vogliamo aspettare che la giraffa si pulisca da sola ogni volta che si sporca.  \n\nAggiungi un comportamento al tuo Sapone per renderlo trascinabile, quindi trascinalo sopra la giraffa per pulirla!\n"
+      Virtual Pet 4_2019: |-
+        Non vogliamo aspettare che la giraffa si pulisca da sola ogni volta che si sporca.  
+
+        Aggiungi un comportamento al tuo Sapone per renderlo trascinabile, quindi trascinalo sopra la giraffa per pulirla!
+
       Virtual Pet 5 - Validated: "Tutta questa attività consuma energia!  \n\nAggiungi delle azioni ad ogni evento in modo che la giraffa diventi un po' più piccola (si restringa di 5) ogni volta che si scontra con un altro personaggio.  \n"
       Virtual Pet 5: "Tutta questa attività consuma energia!  \n\nAggiungi delle azioni ad ogni evento in modo che la giraffa diventi un po' più piccola (si restringa di 5) ogni volta che si scontra con un altro personaggio.  \n"
-      Virtual Pet 5_2019: "Tutta questa attività consuma energia!  \n\nAggiungi delle azioni ad ogni evento in modo che la giraffa diventi un po' più piccola (si restringa di 5) ogni volta che si scontra con un altro personaggio.  \n"
+      Virtual Pet 5_2019: |-
+        Tutta questa attività consuma energia!  
+
+        Aggiungi delle azioni ad ogni evento in modo che la giraffa diventi un po' più piccola (si restringa di 5) ogni volta che si scontra con un altro personaggio.  
+
       Virtual Pet 6: "Una dieta bilanciata è molto importante! Dobbiamo alimentare la giraffa per ridarle forza.  \n\nAggiungi una mela che riporti la giraffa alla sua dimensione originale quando i due personaggi si toccano.\n"
-      Virtual Pet 6_2019: "Una dieta bilanciata è molto importante! Dobbiamo alimentare la giraffa per ridarle forza.  \n\nAggiungi una mela che riporti la giraffa alla sua dimensione originale quando i due personaggi si toccano.\n"
+      Virtual Pet 6_2019: |-
+        Una dieta bilanciata è molto importante! Dobbiamo alimentare la giraffa per ridarle forza.  
+
+        Aggiungi una mela che riporti la giraffa alla sua dimensione originale quando i due personaggi si toccano.
+
       Virtual Pet Freeplay: "Tempo di giocare: Cos'altro puoi far fare alla tua giraffa? \n\n- Puoi aggiungere altri elementi caratteristici al tuo animaletto virtuale?\n- Puoi procurarle degli amici?  "
       Virtual Pet Freeplay_2019: "Tempo di giocare: Cos'altro puoi far fare alla tua giraffa? \n\n- Puoi aggiungere altri elementi caratteristici al tuo animaletto virtuale?\n- Puoi procurarle degli amici?  "
       Virtual Pet Predict: "**Fai una previsione:** Questa è Geraldine, la tua nuova giraffa domestica. Cosa pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai su di lei?"
@@ -1119,15 +1173,15 @@ it:
       courseA_artist_loops3: |-
         Il nostro artista sta cercando di disegnare cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi aiutarlo?
 
-        ![expandable] (https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops3_2018: |-
         Il nostro artista sta cercando di disegnare cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi aiutarlo?
 
-        ![expandable] (https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops3_2019: |-
         Il nostro artista sta cercando di disegnare cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi aiutarlo?
 
-        ![expandable] (https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
         name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
@@ -1146,45 +1200,41 @@ it:
       courseA_artist_loops5: |-
         ## Disegna una linea composta da sette segmenti. Questo diventerà il nostro orizzonte. 
 
-        ![expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops5_2018: |-
         ## Disegna una linea composta da sette segmenti. Questo diventerà il nostro orizzonte. 
 
-        ![expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops5_2019: |-
         ## Disegna una linea composta da sette segmenti. Questo diventerà il nostro orizzonte. 
 
-        ![expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops6: |-
         ## Mettiamo una bella collina sullo sfondo.
 
-        ![expandable] (https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops6_2018: |-
         ## Mettiamo una bella collina sullo sfondo.
 
-        ![expandable] (https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops6_2019: |-
         ## Mettiamo una bella collina sullo sfondo.
 
-        ![expandable] (https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7: |-
-        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
+        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2018: |-
-        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
+        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2019: |-
-        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
+        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_forVideo: |-
-        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
+        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops8: |-
@@ -1250,16 +1300,16 @@ it:
       courseA_bee_seq10: Prova tu! Raccogli tutto il nettare.
       courseA_bee_seq4: Prova da solo!
       courseA_bee_seq6: Adesso l'ape deve raccogliere il nettare da due fiori!
-      courseA_bee_seq7: Aggiungi due blocchi per competare l'esercizio!
+      courseA_bee_seq7: Aggiungi due blocchi per completare l'esercizio!
       courseA_collector_loops1: |-
         **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
 
         Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
 
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
-      courseA_collector_loops12: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
-      courseA_collector_loops12_2018: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
-      courseA_collector_loops12_2019: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
+      courseA_collector_loops12: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\".)"
+      courseA_collector_loops12_2018: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\".)"
+      courseA_collector_loops12_2019: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\".)"
       courseA_collector_loops1_2018: |-
         **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
 
@@ -1273,15 +1323,15 @@ it:
 
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
       courseA_collector_loops2: |-
-        Raccogli tutte e tre le perle! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\r
+        Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
          <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: "Raccogli tutte e tre le perle! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\\r\n <xml><block type=\"collector_collect\"/></xml>"
-      courseA_collector_loops2_2019: "Raccogli tutte e tre le perle! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\\r\n <xml><block type=\"collector_collect\"/></xml>"
-      courseA_collector_loops3: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
-      courseA_collector_loops3_2018: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
-      courseA_collector_loops3_2019: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
+      courseA_collector_loops2_2018: "Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:\n <xml><block type=\"collector_collect\"/></xml>"
+      courseA_collector_loops2_2019: "Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:\n <xml><block type=\"collector_collect\"/></xml>"
+      courseA_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
+      courseA_collector_loops3_2018: Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
+      courseA_collector_loops3_2019: Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_preLoops7: |-
-        Raccogli tutte e tre le perle! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\r
+        Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
          <xml><block type="collector_collect"/></xml>
       courseA_harvester_forVideo: Riesci a raccogliere tutte le pannocchie usando **un** solo blocco di movimento?
       courseA_harvester_loops1: Aiuta la contadina a raccogliere tutte le pannocchie!
@@ -1338,8 +1388,8 @@ it:
       courseA_harvester_seq7_2019: Bisogna muoversi in due direzioni per raggiungere la pannocchia! Aiuta la contadina a prendere la direzione giusta.
       courseA_harvester_seq8: Ora la contadina dovrà raccogliere pannocchie due volte!
       courseA_harvester_seq8_2019: Ora la contadina dovrà raccogliere pannocchie due volte!
-      courseA_harvester_seq9: Aggiungi due blocchi per competare l'esercizio!
-      courseA_harvester_seq9_2019: Aggiungi due blocchi per competare l'esercizio!
+      courseA_harvester_seq9: Aggiungi due blocchi per completare l'esercizio!
+      courseA_harvester_seq9_2019: Aggiungi due blocchi per completare l'esercizio!
       courseA_maze_ramp2_2018: "Per completare l'esercizio, connetti entrambi i blocchi <xml><block type=\"maze_moveEast\"/></xml> al blocco <xml><block type=\"when_run\"/></xml>, quindi clicca su  \"▶ Esegui\".  \n\n\n---\n"
       courseA_maze_ramp2_2019: "Per completare l'esercizio, connetti entrambi i blocchi <xml><block type=\"maze_moveEast\"/></xml> al blocco <xml><block type=\"when_run\"/></xml>, quindi clicca su  \"▶ Esegui\".  \n\n\n---\n"
       courseA_maze_ramp3_2018: "*\"Questo maialino mi fa arricciare le penne.\"*\n\nC'è un blocco di troppo che fa andare a sbattere l'uccellino.\nButtalo via sganciandolo dagli altri blocchi grigi e trascinandolo nella cassetta degli attrezzi."
@@ -1481,42 +1531,42 @@ it:
       courseA_playLab_events5: Aggiungi gli eventi per far muovere il cane su e giù quando si premono le frecce in su e in giù.
       courseA_playLab_events5_2018: Aggiungi gli eventi per far muovere il cane su e giù quando si premono le frecce in su e in giù.
       courseA_playLab_events5_2019: Aggiungi gli eventi per far muovere il cane su e giù quando si premono le frecce in su e in giù.
-      courseA_playLab_events7_2018: "*Tempo di giocare:* Aggiungi ciò che vuoi a questo gioco. Riesci a fare in modo che il dinosauro scompaia quando il cane sbatte contro di lui? (Quando sei soddisfatto, premi \"Termina\" per completare il corso.)"
-      courseA_playLab_events7_2019: "*Tempo di giocare:* Aggiungi ciò che vuoi a questo gioco. Riesci a fare in modo che il dinosauro scompaia quando il cane sbatte contro di lui? (Quando sei soddisfatto, premi \"Termina\" per completare il corso.)"
+      courseA_playLab_events7_2018: "*Tempo di giocare:* aggiungi ciò che vuoi a questo gioco. Riesci a fare in modo che il dinosauro scompaia quando il cane sbatte contro di lui? (Quando sei soddisfatto, premi \"Termina\" per completare il corso.)"
+      courseA_playLab_events7_2019: "*Tempo di giocare:* aggiungi ciò che vuoi a questo gioco. Riesci a fare in modo che il dinosauro scompaia quando il cane sbatte contro di lui? (Quando sei soddisfatto, premi \"Termina\" per completare il corso.)"
       courseA_playlab_events_challenge1: |-
         Cliccando sul gatto apparirà l'uccellino! Puoi scrivere un programma per mostrare anche gli altri personaggi?
 
-        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge1_2018: |-
         Cliccando sul gatto apparirà l'uccellino! Puoi scrivere un programma per mostrare anche gli altri personaggi?
 
-        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge1_2019: |-
         Cliccando sul gatto apparirà l'uccellino! Puoi scrivere un programma per mostrare anche gli altri personaggi?
 
-        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge2: |-
         Dai ad ognuno di loro qualcosa da fare quando ci clicchi sopra. Cosa diranno gli animali? Cos'altro succederà?
 
-        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee!
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee!
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge2_2018: |-
         Dai ad ognuno di loro qualcosa da fare quando ci clicchi sopra. Cosa diranno gli animali? Cos'altro succederà?
 
-        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee!
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee!
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge2_2019: |-
         Dai ad ognuno di loro qualcosa da fare quando ci clicchi sopra. Cosa diranno gli animali? Cos'altro succederà?
 
-        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee!
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee!
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseB_Scrat_ramp1_2018: "Per far arrivare Scrat fino alla ghianda, trascina il blocco <xml><block type=\"maze_moveEast\"/></xml> sotto al blocco <xml><block type=\"when_run\"/></xml>, poi premi \"▶ Esegui\"!  \n\n\n---\n"
@@ -1599,9 +1649,9 @@ it:
         Muovi Laura lungo i diamanti e usa il blocco <xml><block type="collector_collect"/></xml> per racccoglierlo.
 
         Raccogli tutti e quattro i diamanti per completare l'esercizio.
-      courseB_collector_loops3: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
-      courseB_collector_loops3_2018: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
-      courseB_collector_loops3_2019: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
+      courseB_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
+      courseB_collector_loops3_2018: Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
+      courseB_collector_loops3_2019: Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseB_collector_loops_challenge2a: |-
         *"Prendiamo i diamanti!"*
 
@@ -1639,8 +1689,8 @@ it:
       courseB_iceage_loops9_2019: La ghianda è così lontana! Riesci ad aiutare Scrat ad arrivarci usando i cicli?
       courseB_maze_seq3: '*"Correggi il programma per farmi arrivare fino al maialino!"*'
       courseB_maze_seq9: "**Sfida**: Evita la dinamite (TNT) per far arrivare l'uccellino fino al maialino."
-      courseB_maze_seq9_2018: "**Sfida:** Aggira il ghiaccio rotto per far arrivare Scrat fino alla ghianda."
-      courseB_maze_seq9_2019: "**Sfida:** Aggira il ghiaccio rotto per far arrivare Scrat fino alla ghianda."
+      courseB_maze_seq9_2018: "**Sfida:** aggira il ghiaccio rotto per far arrivare Scrat fino alla ghianda."
+      courseB_maze_seq9_2019: "**Sfida:** aggira il ghiaccio rotto per far arrivare Scrat fino alla ghianda."
       courseB_maze_seq_challenge1: Hai solo quattro esemplari per ogni tipo di blocco. Riesci a trovare un percorso che ti faccia arrivare fino al maialino prima di terminare tutti i blocchi a disposizione?
       courseB_maze_seq_challenge1_2018: Hai solo quattro esemplari per ogni tipo di blocco. Riesci a trovare un percorso che ti faccia arrivare fino al maialino prima di terminare tutti i blocchi a disposizione?
       courseB_maze_seq_challenge1_2019: Hai solo quattro esemplari per ogni tipo di blocco. Riesci a trovare un percorso che ti faccia arrivare fino al maialino prima di terminare tutti i blocchi a disposizione?
@@ -1787,10 +1837,18 @@ it:
       courseC_artist_loop1_2019: "Fantastico!\n\nAggiungiamo un po' di stile modificando il pennello con il blocco `imposta lo schema` prima che inizi il ciclo."
       courseC_artist_loops1a: "**Tempo di giocare:** Facciamo qualcosa di più intrigante, un passo alla volta! Puoi creare ciò che preferisci, ma se vuoi ti mostriamo come fare un disegno come questo!\n\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)\n\nUsa il blocco `salta a 200 avanti 200 in basso` per portarti al centro dell'area di gioco, quindi usa il blocco `disegna un adesivo` per far apparire un uccello.\n\n---\n\nPremi \"Termina\" quando sei soddisfatto di ciò che hai creato."
       courseC_artist_loops1a_2018: "**Tempo di giocare:** Facciamo qualcosa di più intrigante, un passo alla volta!  \n\nUsa il blocco `salta a 200 avanti 200 in basso` per portare l'artista al centro dell'area di gioco, quindi usa il blocco `disegna un adesivo` per far apparire un uccello.  \n\n---\n\nPremi \"Termina\" quando sei soddisfatto di ciò che hai creato."
-      courseC_artist_loops1a_2019: "**Tempo di giocare:** Facciamo qualcosa di più intrigante, un passo alla volta!  \n\nUsa il blocco `salta a 200 avanti 200 in basso` per portare l'artista al centro dell'area di gioco, quindi usa il blocco `disegna un adesivo` per far apparire un uccello.  \n\n---\n\nPremi \"Termina\" quando sei soddisfatto di ciò che hai creato."
+      courseC_artist_loops1a_2019: |-
+        **Tempo di giocare:** Facciamo qualcosa di più intrigante, un passo alla volta!  
+
+        Usa il blocco `salta a 200 avanti 200 in basso` per portare l'artista al centro dell'area di gioco, quindi usa il blocco `disegna un adesivo` per far apparire un uccello.  
+
+        ---
+
+        Premi "Termina" quando sei soddisfatto di ciò che hai creato.
       courseC_artist_loops2a: Ora usa un ciclo per disegnare l'uccello 12 volte con un angolo di 30 gradi.
       courseC_artist_loops2a_2018: Ora usa un ciclo per disegnare l'uccello 12 volte con un angolo di 30 gradi.
-      courseC_artist_loops2a_2019: Ora usa un ciclo per disegnare l'uccello 12 volte con un angolo di 30 gradi.
+      courseC_artist_loops2a_2019: |-
+        Ora usa un ciclo per disegnare l'uccello 12 volte con un angolo di 30 gradi.
       courseC_artist_loops3a: "Troppo divertente!\n\nOra aggiungi l'adesivo di un pipistrello subito dopo l'uccello per ottenere un'immagine come quella qui sotto.\n___\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops3a_2018: "Troppo divertente!\n\nOra aggiungi l'adesivo di un pipistrello subito dopo l'uccello per ottenere un'immagine come quella qui sotto.\n___\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops3a_2019: "Troppo divertente!\n\nOra aggiungi l'adesivo di un pipistrello subito dopo l'uccello per ottenere un'immagine come quella qui sotto.\n___\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
@@ -4161,7 +4219,7 @@ it:
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
         <b>Suggerimenti</b><br>
         - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
-        - Puoi risolvere questo esercizio usando il <i>ciclo</i>`ripeti ... volte`?
+        - Puoi risolvere questo esercizio usando il <i>ciclo</i> `ripeti ... volte`?
       grade3_Conditionals_11 BAD: "Questo è un esercizio di riepilogo -- Usa un ciclo `mentre` per raccogliere tutto il nettare da questi fiori."
       grade3_Conditionals_11: "Metti insieme tutto ciò che hai imparato!<br>\nRaccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi. Non dimenticarti di fare il miele alla fine."
       grade3_Conditionals_12: "Questo percorso a gradini ormai dovrebbe essere familiare.<br>\nRaccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi."
@@ -4397,7 +4455,7 @@ it:
         Il nostro artista sta cercando di disegnare cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi aiutarlo?
 
         ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
-      gradek_playlab_events1c: Il cane, vuole dire "Ciao". Riesci ad aiutarlo?
+      gradek_playlab_events1c: Il cane, vuole dire "Ciao!" Riesci ad aiutarlo?
       iceAgeLoopsforVideo: Riesci a raggiungere la ghianda con un solo blocco <xml><block type="maze_moveForward"/></xml>? Prova con un ciclo!
       iceage_click_hello: "Puoi aiutare Sid a chiamare i suoi amici quando si clicca su di lui? Quando hai finito, premi \"Esegui\" e clicca su Sid per vedere il tuo codice al lavoro!"
       iceage_click_hello_2018: "Puoi aiutare Sid a chiamare i suoi amici quando si clicca su di lui? Quando hai finito, premi \"Esegui\" e clicca su Sid per vedere il tuo codice al lavoro!"

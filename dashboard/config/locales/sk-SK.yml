@@ -386,13 +386,34 @@ sk:
       driver: Prihlásený
       navigator: Navigátor
       create: Vytvoriť
+      algebra_game: Algebra
       applab: App Lab
       artist: Umelec
-      gamelab: Game Lab
-      playlab: Play Lab
-      minecraft: Minecraft
-      flappy: Flappy
+      artist_k1: Umelec (predškolský vek)
+      basketball: Basketbal
+      bounce: Bounce
+      calc: Vypočítaj
       dance: Tanečná Párty
+      eval: Vyhodnoť
+      flappy: Flappy
+      frozen: Frozen
+      gamelab: Game Lab
+      gamelab_jr: Game Lab (beta)
+      gumball: Úžasný svet s Gumball
+      iceage: Doba ľadová
+      infinity: Infinity
+      minecraft_adventurer: Minecraft Objavovateľ
+      minecraft_aquatic: Minecraft Aquatic
+      minecraft_designer: Minecraft
+      minecraft_hero: Minecraft hrdina
+      playlab: Play Lab
+      playlab_k1: Play Lab (predškolský vek)
+      scratch: Scratch
+      sports: Športy
+      starwars: Star Wars
+      starwarsblocks: Star Wars (Bloky)
+      starwarsblocks_hour: Star Wars (Bloky)
+      weblab: Web Lab
       view_all: Zobraziť všetky projekty...
     popup:
       progress_for_user: Pokrok pre užívateľa %{name}
@@ -576,7 +597,7 @@ sk:
       pravidlá pre svet Minecraftu. Žiaci vytvoria unikátne Minecraftové zážitky,
       ktoré následne môžu zdieľať s priateľmi, či zahrať sa s nimi na telefóne. Prejdite
       si kurz vo vašej triede na Hodine Kódu.
-    announcement_how_code_studio: Nepotrebujete žiadne skúsenosti na to, aby ste začali
+    announcement_how_code_studio: Nepotrebujete žiadne skúsenosti nato, aby ste začali
       vyučovať informatiku vo vašej triede. Code.org ponúka osnovy, učebné plány,
       vysoko-kvalitné profesionálne vyučovacie programy a tony skvelých nástrojov
       pre všetky úrovne&mdash;všetko, čo potrebujete, všetko zadarmo. Hľadáte, kde
@@ -1163,12 +1184,25 @@ sk:
     practice: Učiteľské cvičenia
     peer_review: Recenzia
     ramp_up: Príprava
+    end_of_course_project: Záverečný projekt
     main_course: Hlavný kurz
-    extra_course_content: Obsah ku kurzom navyše
+    extra_course_content: Doplnkové lekcie
     csf_e_1: Príprava na Kurz E (voliteľné)
     csf_e_2: Obsah kurzu E
     csf_f_1: Príprava na Kurz F (voliteľné)
     csf_f_2: Obsah kurzu F
+    csf_digcit: Digitálne občianstvo
+    csf_jigsaw: Skladačka
+    csf_loops: Cykly
+    csf_events: Udalosti
+    csf_binary: Binárny
+    csf_conditionals: Podmienky
+    csf_nested_loops: Vnorené cykly
+    csf_functions: Funkcie
+    csf_variables: Premenné
+    csf_for_loops: Cykly "For"
+    csf_internet: Internet
+    csf_impacts: Vplyv Informatiky
     csd1_1: 'Kapitola 1: Proces riešenia problémov'
     csd1_2: 'Kapitola 2: Počítače a riešenie problémov'
     csd2_1: 'Kapitola 1: Obsah webu a HTML'
@@ -1183,7 +1217,6 @@ sk:
     csd6_2: 'Kapitola 2: Vytváranie fyzických prototypov'
     csd_survey: Hodnotenie kurzu
     csp1_1: 'Kapitola 1: Predstavenie a prenos informácií'
-    csp1_2: 'Kapitola 2: Vynájdenie Internetu'
     csp2_1: 'Kapitola 1: Zakódovanie a kompresia komplexných informácií'
     csp2_2: 'Kapitola 2: Manipulácia a vizualizácia dát'
     csp3_1: 'Kapitola 1: Programovacie jazyky a algoritmy'
@@ -1199,6 +1232,9 @@ sk:
     csp_postap_2: 'Kapitola 2: Aplikáce a databázy'
     csp2_1_2018: 'Lekcia 2: Digitálne informácie'
     csp3_1_2018: 'Kapitola 3: Úvod do programovania'
+    csp_variables: Premenné
+    csp_conditionals: Podmienky
+    csp_functions: Funkcie
     dlp: Výzvy na zhodnotenie
   external_links:
     disclaimer: Upozornenie

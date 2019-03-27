@@ -653,6 +653,8 @@ is:
         text: vera {SPRITE} byrjar {BEHAVIOR}
       gamelab_addBehaviorUntil:
         text: vera {SPRITE} gerir {BEHAVIOR} þar til {CONDITION}
+      gamelab_allSpritesWithAnimation:
+        text: aalab allar {ANIMATION}
       gamelab_beginBehavior:
         text: byrjar {BEHAVIOR}
       gamelab_bounceOff:
@@ -682,6 +684,12 @@ is:
             '"x"': x staða
             '"y"': y staða
             '"direction"': stefna hreyfingar
+      gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} snertir {SPRITE2}"
+        options:
+          CONDITION:
+            '"when"': þegar
+            '"while"': meðan
       gamelab_clickedOn:
         text: þegar smellt á {SPRITE}
       gamelab_comment:
@@ -733,6 +741,11 @@ is:
             '"y"': y staða
             '"direction"': stefna hreyfingar
             '"tint"': litur
+      gamelab_getThisSprite:
+        text: "{CHOICE} vera"
+        options:
+          CHOICE:
+            '"this"': þetta
       gamelab_groupLength:
         text: fjöldi vera í {THIS}
       gamelab_hasBehavior:
@@ -753,6 +766,49 @@ is:
         text: "{SPRITE} hoppa til {LOCATION}"
       gamelab_keyDown:
         text: ýtt er á hnapp {KEY}
+      gamelab_keyPressed:
+        text: "{CONDITION} {KEY} niðri"
+        options:
+          CONDITION:
+            '"when"': þegar
+            '"while"': meðan
+          KEY:
+            '"up"': uppi
+            '"down"': niðri
+            '"left"': vinstri
+            '"right"': hægri
+            '"space"': geimur
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': rammi
+            '"inner"': ferningur
+            '"circle"': hringur
+            '"grid"': fylking
+            '"row"': hlið við hlið
+            '"column"': í röð upp
+            '"x"': þvers-og-kruss
+            '"plus"': plús
+            '"random"': eitthvað
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:
@@ -798,6 +854,8 @@ is:
         text: stilla stað {VAR} á {VAL}
       gamelab_makeNewGroup:
         text: búa til nýjan hóp
+      gamelab_makeNewSpriteAnon:
+        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} snýr {DIRECTION}"
         options:
@@ -862,6 +920,10 @@ is:
         text: breyta búningi {THIS} í {ANIMATION}
       gamelab_setBackground:
         text: stilla bakgrunnslitinn {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': borg
       gamelab_setDirection:
         text: láta {SPRITE} hreyfast í stefnu {DIRECTION}
       gamelab_setFrameDelay:
@@ -903,6 +965,12 @@ is:
         text: uppstilling
       gamelab_showTitleScreen:
         text: sýna titilskjá {BREAK} titill {TITLE} texti {SUBTITLE}
+      gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} ef smellt"
+        options:
+          CONDITION:
+            '"when"': þegar
+            '"while"': meðan
       gamelab_spriteCostume:
         text: "{COSTUME}"
       gamelab_spriteDirection:
@@ -913,8 +981,6 @@ is:
             '"East"': austur
             '"South"': suður
             '"West"': vestur
-      gamelab_spriteSay:
-        text: vera {SPRITE} segir {TEXT}
       gamelab_spritesWhere:
         text: verur með {PROPERTY} = {VALUE}
         options:
@@ -1326,9 +1392,9 @@ is:
       aalab_createNewSpriteAdvanced:
         text: "búa til nýja veru \n nafn {NAME} \n búningur {COSTUME} \n staður {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: aalab búa til nýja {ANIMATION\_NAME} veru á stað {LOCATION}
+        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab búa til nýja {ANIMATION\_NAME} veru á stað {LOCATION}
+        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           búa til nýjan hóp sem heitir {VAR}

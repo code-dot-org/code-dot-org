@@ -5,6 +5,8 @@ et:
         2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Paremale keeramiseks sa saad kasutada "kui" raja-plokki (if path block).
       CourseD_Dance_Party_01_authored_hint:
         validation: |-
           ** Kuidas ma siit tasemelt läbi saan? **
@@ -98,6 +100,12 @@ et:
           * Kasuta plokki `kui vajutatakse vasakut nooleklahvi`, et Robot sooritaks tantsuliigutuse kui seda klahvi vajutatakse.
 
           *See tase lõppeb peale 8 ühikut*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Vaata **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Kuidas sa saad kasutada Tingimusi koos sellega, et jõuda Ocean Monument juurde?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Paremale keeramiseks sa saad kasutada "kui" raja-plokki (if path block).
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Näed punaseid ja siniseid koralli plokke? Kasuta neid juhtpostidena, et keerata paremale ja vasakule läbi kaljuriffi.
       Dance short test 2_authored_hint:
         validation: |-
           **Kuidas ma siit tasemelt läbi saan?**

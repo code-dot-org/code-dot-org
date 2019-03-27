@@ -5808,18 +5808,33 @@ is:
       Dance Party 1: "**Spáðu hvað mun gerast:** Hér er vera sem heitir `alien1`! Hvað heldur þú að muni gerast þegar þú smellir á hana?"
       Dance Party 2 Validated: Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðanna. Geturðu breytt hegðuninni í `byrjar` kubbnum til að láta hana snúast í hringi?
       Dance Party 2: "Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðanna. \n\nGeturðu breytt hegðuninni í <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> kubbnum til að láta hana snúast í hringi?  "
-      Dance Party 2_2019: "Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðanna. \n\nGeturðu breytt hegðuninni í <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> kubbnum til að láta hana snúast í hringi?  "
+      Dance Party 2_2019: |-
+        Geimveran var stolt af dansfærni sinni á Mars, en nú getur hún bara fært sig til hliðanna. 
+
+        Geturðu breytt hegðuninni í <xml> <block type="gamelab_addBehaviorSimple" inline="true">
+              <value name="SPRITE">
+                <block type="sprite_variables_get">
+                  <title name="VAR">alien1</title>
+                </block>
+              </value>
+            </block></xml> kubbnum til að láta hana snúast í hringi?  
       Dance Party 2_simple: "Geimveran getur aðeins hreyft sig til hægri og vinstri.\n\nBreyttu hegðuninni innan í kubbnum <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> svo geimveran geti snúið sér.  "
       Dance Party 3 - Validated: "Búðu til nýja veru sem heitir `alien2`. \n\nLáttu hana skipta um hreyfingu þegar þú smellir á hana.  "
       Dance Party 3: "Búðu til nýja veru sem heitir `alien2`. \n\nLáttu hana skipta um hreyfingu þegar þú smellir á hana.  "
-      Dance Party 3_2019: "Búðu til nýja veru sem heitir `alien2`. \n\nLáttu hana skipta um hreyfingu þegar þú smellir á hana.  "
+      Dance Party 3_2019: |-
+        Búðu til nýja veru sem heitir `alien2`. 
+
+        Láttu hana skipta um hreyfingu þegar þú smellir á hana.  
       Dance Party 3_simple: |-
         Búðu til nýja veru sem heitir `alien2`.
 
         Þegar þú smellir á hana ætti hún að gera eitthvað.
       Dance Party 4 Validated: "Búðu til þriðju veruna sem heitir `alien3`. \n\nGetur þú látið allar geimverurnar standa í beinni röð? Þetta er geimverudansflokkur!"
       Dance Party 4: "Búðu til þriðju veruna sem heitir `alien3`. \n\nGetur þú látið allar geimverurnar standa í beinni röð? Þetta er geimverudansflokkur!"
-      Dance Party 4_2019: "Búðu til þriðju veruna sem heitir `alien3`. \n\nGetur þú látið allar geimverurnar standa í beinni röð? Þetta er geimverudansflokkur!"
+      Dance Party 4_2019: |-
+        Búðu til þriðju veruna sem heitir `alien3`. 
+
+        Getur þú látið allar geimverurnar standa í beinni röð? Þetta er geimverudansflokkur!
       Dance Party 4_simple: "Búðu til þriðju veruna sem heitir `alien3`. \n\nHafðu allar geimverurnar í beinni röð. Þetta er danspartý úr geimnum!"
       Dance Party 5 - Validated: "Við getum breytt alls konar hlutum í þessu forriti þegar þú smellir á verurnar. Hvernig væri að breyta lit þeirra!\n\n**Bættu við kóða til að breyta lit hverrar geimveru þegar þú smellir á hana.**"
       Dance Party 5: "Við getum breytt alls konar hlutum í þessu forriti þegar þú smellir á verurnar. Hvernig væri að breyta lit þeirra!\n\n**Bættu við kóða til að breyta lit hverrar geimveru þegar þú smellir á hana.**"
@@ -5834,7 +5849,10 @@ is:
       Dance Party 6_simple: "Þessar geimverur þurfa að róa sig!  \n\nNotaðu <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value name=\"SPRITE\"/>\n    </block></xml> kubbinn til að láta hverja geimveru hætta að hreyfast þegar smellt er á hana."
       Dance Party 7 - Validated: "Bættu loks við nýrri bjöllu sem heitir `myBell`. \n\nÞegar þú smellir á hana eiga allar geimverurnar að hreyfa sig eins!"
       Dance Party 7: "Bættu loks við nýrri bjöllu sem heitir `myBell`. \n\nÞegar þú smellir á hana eiga allar geimverurnar að hreyfa sig eins!"
-      Dance Party 7_2019: "Bættu loks við nýrri bjöllu sem heitir `myBell`. \n\nÞegar þú smellir á hana eiga allar geimverurnar að hreyfa sig eins!"
+      Dance Party 7_2019: |-
+        Bættu loks við nýrri bjöllu sem heitir `myBell`. 
+
+        Þegar þú smellir á hana eiga allar geimverurnar að hreyfa sig eins!
       Dance Party 7_simple: "Bættu loks við nýrri bjöllu sem heitir `myBell`. \n\nÞegar þú smellir á hana eiga allar geimverurnar að hreyfa sig eins!"
       Dance Party Freeplay: |-
         Búðu nú til þitt eigið geimverudiskó! Vantar hugmyndir? Prófaðu þessar:
@@ -7433,14 +7451,22 @@ is:
       courseC_artist_loop1_2019: "Frábært!\n\nGerum þetta svolítið skrautlegra með því að breyta penslinum með <xml><block type=\"draw_line_style_pattern\"> <title name=\"VALUE\">DEFAULT</title></block></xml> kubbnum áður en lykkjan okkar byrjar."
       courseC_artist_loops1a: "**Frjáls æfing:** Byggjum nú eitthvað stærra, en í skrefum! Þú getur búið til hvað sem þú vilt, en við ætlum að sýna þér hvernig þú getur gert eitthvað líkt þessu!\n\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)\n\nNotaðu kubbinn `hoppa á 200 þvert 200 niður` til að koma listamanninum í miðju leiksvæðisins, og notaðu svo `teikna límmiða` kubbinn til að líma mynd af fugli. \n\n---\n\nÝttu á \"Ljúka\" þegar þú ert ánægð/ur með sköpunarverk þitt."
       courseC_artist_loops1a_2018: "**Frjáls æfing:** Byggjum eitthvað stærra en í þrepum!  \n\nNotaðu `hoppa á 200 frá hlið 200 niður` til að koma listamanninum í miðju svæðisins. Notaðu svo kubbinn `teikna límmiða` til að láta fugl birtast.  \n\n---\n\nÝttu á \"Ljúka\" þegar þú ánægð/ur með árangurinn."
-      courseC_artist_loops1a_2019: "**Frjáls æfing:** Byggjum eitthvað stærra en í þrepum!  \n\nNotaðu `hoppa á 200 frá hlið 200 niður` til að koma listamanninum í miðju svæðisins. Notaðu svo kubbinn `teikna límmiða` til að láta fugl birtast.  \n\n---\n\nÝttu á \"Ljúka\" þegar þú ánægð/ur með árangurinn."
+      courseC_artist_loops1a_2019: |-
+        **Frjáls æfing:** Byggjum eitthvað stærra en í þrepum!  
+
+        Notaðu `hoppa á 200 frá hlið 200 niður` til að koma listamanninum í miðju svæðisins. Notaðu svo kubbinn `teikna límmiða` til að láta fugl birtast.  
+
+        ---
+
+        Ýttu á "Ljúka" þegar þú ánægð/ur með árangurinn.
       courseC_artist_loops2: |-
         Nú þegar uppvakningurinn þekkir leiðina, þarf að hjálpa honum að grafa **25 díla langar** holur á slóðinni til að planta fleiri blómum!\r
         - Hver hola á að vera 25 díla löng\r
         - Bilið á milli hola er 25 dílar
       courseC_artist_loops2a: Notaðu nú lykkju til að snúa fuglinum um 30 gráður 12 sinnum.
       courseC_artist_loops2a_2018: Notaðu nú lykkju til að snúa fuglinum um 30 gráður 12 sinnum.
-      courseC_artist_loops2a_2019: Notaðu nú lykkju til að snúa fuglinum um 30 gráður 12 sinnum.
+      courseC_artist_loops2a_2019: |-
+        Notaðu nú lykkju til að snúa fuglinum um 30 gráður 12 sinnum.
       courseC_artist_loops3a: "Þetta er skemmtilegt!  \\r\n\\r\nBættu nú við límmiða með leðurblöku rétt á eftir fuglinum til að búa til mynd eins og þá hér fyrir neðan.\\r\n___\\r\n\\r\n![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops3a_2018: "Þetta er skemmtilegt!  \\r\n\\r\nBættu nú við límmiða með leðurblöku rétt á eftir fuglinum til að búa til mynd eins og þá hér fyrir neðan.\\r\n___\\r\n\\r\n![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops3a_2019: "Þetta er skemmtilegt!  \\r\n\\r\nBættu nú við límmiða með leðurblöku rétt á eftir fuglinum til að búa til mynd eins og þá hér fyrir neðan.\\r\n___\\r\n\\r\n![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"

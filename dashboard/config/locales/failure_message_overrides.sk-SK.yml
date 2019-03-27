@@ -54,20 +54,20 @@ sk:
       MC HOC 2016 Level 5_failure_message_override: Skús použiť blok 'opakuj donekonečna'
         s blokom 'urob krok smerom k hráčovi'.
       MC HOC 2016 Level 6_failure_message_override: Skús použiť príkaz `vytvor zombíka`
-        pod`ak je noc` pre vytvorenie aspoň troch zombíkov. Potom pridaj slučku `sprav
+        pod `ak je noc` pre vytvorenie aspoň troch zombíkov. Potom pridaj cyklus `sprav
         krok smerom k hráčovi` k akcii `po vyvorení`, aby ťa mohli naháňať. Ak idú
         príliš rýchlo, pridaj príkaz `počkaj` pre ich spomalenie.
-      MC HOC 2016 Level 8_failure_message_override: Musíš použiť explodujúce Strašidlo
-        pre zničenie steny, aby si sa mohol dostať k svojim ovečkám.
+      MC HOC 2016 Level 8_failure_message_override: Musíš použiť explodujúceho Creepera,
+        aby zničil stenu a ty si sa dostal k svojim ovečkám.
       MC HOC 2016 New Drop_failure_message_override: Použi klávesy so šípkami pre
         prechod k ovečkám a stlač medzerník alebo klikni na hraciu plochu pre použitie
-        ovečky. A nezabudni pridať blok 'Spusti' do svojho kódu.
+        ovečky. A nezabudni pridať blok 'Pusti' do svojho kódu.
       MC HOC 2016 New Spawn_failure_message_override: Umiestni `vytvor ovečku` pod
         `po spustení`.
-      MC HOC 2016 New Walk_failure_message_override: Pre otvorenie dverí stlač medzerník
-        alebo sa dotkni hracej plochy, keď si k nej otočený. Vojdi dovnútra pre pokračovanie.
-      MC HOC 2016 SCORE LEVEL_failure_message_override: Ak máš problem s označením
-        5 Golemov, skús zmeniť skóre za značku na 2.
+      MC HOC 2016 New Walk_failure_message_override: Dvere otvoríš stlačením medzerníka,
+        alebo tak, že sa dotkneš doštičky, keď si k nej otočený. Vojdi dovnútra.
+      MC HOC 2016 SCORE LEVEL_failure_message_override: Ak máš problém chytiť 5 Golemov,
+        skús zvýšiť počet bodov za každé chytenie na 2.
       MC HOC 2016 Village Test_failure_message_override: Musíš donútiť železného Golema
         naháňať a zaútočiť na zombíkov, aby si vyhral.
       Valentine_playlab_01_failure_message_override: Takmer! Skús ešte raz.

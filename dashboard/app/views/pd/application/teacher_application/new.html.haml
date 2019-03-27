@@ -1,6 +1,12 @@
 = stylesheet_link_tag 'css/pd', media: 'all'
 %script{src: minifiable_asset_path('js/pd/application/teacher_application/new.js'), data: @script_data}
 
+:css
+  /* Make the X in regional partner mini-contact form's header look correct. */
+  div.modal-content .modal-header .close {
+    height: 34px
+  }
+
 %h1
   2019-20 Professional Learning Program Teacher Application
 

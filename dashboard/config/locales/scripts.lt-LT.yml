@@ -1547,6 +1547,10 @@ lt:
               name: Sąlyginiai sakiniai su kortomis
             The Artist:
               name: Menininkas
+            Internet:
+              name: Internetas
+            Crowdsourcing:
+              name: Komandinis programavimas
         coursed-2019:
           stages:
             Relay Programming:

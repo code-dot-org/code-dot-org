@@ -46,7 +46,7 @@
     "execute_palette_apis_only": "false",
     "encrypted_examples": "sI9lgrunYUg0l1Ne67xUC/B/rfVSaj2P/bU9svj8xzqfDCWmx+BvfjkoFPE2\nj29r\n",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "disable_procedure_autopopulate": "false",

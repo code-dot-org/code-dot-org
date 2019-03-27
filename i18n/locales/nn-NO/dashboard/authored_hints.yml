@@ -333,6 +333,8 @@ nn:
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: For å bruke ei "framover"-blokk, dra den fra verktøylinjeområdet ut på arbeidsområdet og koble den til 'når køyrer'-blokka.
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'Halv-sekskanten har ein **lengde på 30** og snur seg **60 gradar** til høgre.  '
         Course_4_Artist_11_b: '2/3-trekanten har ein **lengde på 80** og snur seg **120 grader** til høgre. '
@@ -2778,6 +2780,12 @@ nn:
           * Bruk ‘når venstrepila blir trykka ned’-blokka til å få roboten til å gjere ein bestemt dans når du trykkar på venstrepila.
 
           *Denne øvinga ender etter 8 taktar.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Ser du **sjølanternene** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Korleis kan du bruke eit vilkår for å komme deg gjennom havmonumentet?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Ser du dei røde og blå korall-blokkene? Bruk dei som guide for å snu til høgre og venstre gjennom revet.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Kontroller at nummeret for `dog_speed` til noe større enn `cat_speed`.
       Dance short test 2_authored_hint:

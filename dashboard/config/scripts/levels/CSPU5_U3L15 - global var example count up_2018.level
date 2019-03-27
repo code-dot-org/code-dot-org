@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:01:23.000Z",
-  "level_num": "custom",
-  "user_id": 13,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -53,7 +49,7 @@
     "execute_palette_apis_only": "false",
     "lock_zero_param_functions": "false",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "parent_level_id": 6776,
@@ -62,12 +58,13 @@
     "expand_debugger": "false",
     "short_instructions": "Look at the code for this app and see how the code works to update the count variable when the up arrow is clicked. (Click to see full instructions).",
     "long_instructions": "# Using Variables in Apps!\r\n<img src=\"https://images.code.org/f156f8d8524c3c0316e4db394e331bdc-image-1446060829590.gif\" style=\"float: right; width: 200px;\">\r\n\r\nThe example program here has a small portion of the *Count Up/Down App* written.  Right now, what the app should do is  shown in the animation to the right.\r\n\r\n# Important Concept!\r\n\r\nThis small functionality **demonstrates an important concept** - how to create a variable in the app and update it when an event occurs. It may seem fairly straightforward but there are some common misconceptions that we want to alert you to.\r\n\r\n# Do This: Misconception Investigation\r\nOver the next few levels you are going to do a small investigation of two apps that do almost the same thing but *one  works as expected* and *one with a bug* that demonstrates an important concept about using variables in apps.  Here is what you'll do:\r\n\r\n1. **Run this app, which works properly.**\r\n   * Study the code until you think you understand what's happening.\r\n   * Pay attention to the code that handles the up arrow being clicked.\r\n2. **Run the app on the next screen, which has a bug.**\r\n   * On the next screen we show you almost the same app, but with a subtle problem.\r\n   * See if you can spot the difference and fix it.\r\n3. **Report what you found!**\r\n   * We'll ask you to report what you found.  It's not a quiz.  You can go back and forth until you spot the problem, but you should find it and be able to write what it is.\r\n",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:01:23.000Z",
+  "level_num": "custom",
+  "user_id": 13,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-12-11 00:44:42 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-15 04:27:45 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",

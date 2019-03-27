@@ -165,6 +165,11 @@ pt:
             '"scale"': tamanho
             '"x"': posição x
             '"y"': posição y
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': enquanto
       gamelab_debugSprite:
         options:
           VAL:
@@ -176,6 +181,23 @@ pt:
             '"scale"': tamanho
             '"x"': posição x
             '"y"': posição y
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': enquanto
+          KEY:
+            '"up"': para cima
+            '"down"': para baixo
+            '"left"': para a esquerda
+            '"right"': para a direita
+            '"space"': espaço
+            '"x"': x
+            '"y"': 'y'
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': aleatório
       gamelab_locationDelta:
         options:
           DIR:
@@ -189,6 +211,10 @@ pt:
         text: cor aleatória
       gamelab_randomColor:
         text: cor aleatória
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
       gamelab_setPosition:
         options:
           POSITION:
@@ -204,6 +230,11 @@ pt:
           PROPERTY:
             '"scale"': tamanho
             '"height"': altura
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': enquanto
       gamelab_spritesWhere:
         options:
           PROPERTY:

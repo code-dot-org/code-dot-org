@@ -469,6 +469,7 @@
   sports_athlete_Chris: "克里斯 · 波什，奥运会金牌得主和NBA 总冠军，来自迈阿密热火队。"
   sports_athlete_Harrison: "哈里森 · 巴恩斯，奥运金牌得主、NBA 总冠军，来自达拉斯小牛队。"
   watch_inspirational_videos: "在开始之前，看一段鼓舞人心的视频"
+  video_title_cs_is_everything: "计算机科学正在改变一切"
   video_title_inspire_girl: "鼓励女生参与"
   video_title_cs_intro: "计算机科学简介"
   video_title_schools_dont_teach: "大部分学校没有教的内容"
@@ -1545,6 +1546,7 @@
   hoc2018_mc_video_5min: "5 分钟"
   hoc2018_mc_video_title_steph_curry: "编程一小时和Steph Curry"
   hoc2018_mc_video_title_sports: "推动自己。任何人都可以学会。"
+  hoc2018_mc_video_title_cs_is_everything: "计算机科学正在改变一切"
   hoc2018_mc_video_title_inspire_girl: "鼓励女生参与"
   hoc2018_mc_video_title_cs_intro: "计算机科学简介"
   hoc2018_mc_video_title_schools_dont_teach: "大部分学校没有教的内容"
@@ -1620,3 +1622,4 @@
   page_not_found_header: '404：找不到页面'
   page_not_found_description: "您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。"
   page_not_found_button: "返回主页"
+  hoc2018_mc_with_microsoft: "与以下机构合作: "

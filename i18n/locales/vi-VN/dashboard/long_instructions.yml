@@ -111,6 +111,7 @@ vi:
       4-5 Artist 5: Những gì chúng ta có thể thay thế "???" để đảm bảo rằng xác chết hoàn thành bản vẽ bằng cách sử dụng các vòng lặp được cung cấp?
       4-5 Artist 6: Tam giác đều này có các góc là 60, 60, và 60 độ. Mỗi cạnh là 200 pixel. Hoàn tất bản vẽ.
       Artist Autorun Test: Bây giờ, đặt hàm vào trong một vòng lặp để vẽ ba hình vuông.
+      CoureE_HOC 2018 Level_7a: "Bạn đã tìm thấy những di tích dưới nước. Hãy tìm kiếm ** chiếc rương **![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) có chứa kho báu ** prismarine **![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
       CourseD_Dance_Party_01: |-
         *Hãy mở tiệc khiêu vũ nào!*
 
@@ -159,6 +160,11 @@ vi:
       CourseD_Dance_Party_11b: |-
         Đã đến lúc khiêu vũ rồi! Mèo sẽ làm động tác dab khi bạn nhấn phím mũi tên trái. Hãy làm cho Robot "drop" khi bạn nhấn phím mũi tên phải.
       CourseD_Dance_Party_12: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để chia sẻ với bạn bè.
+      CourseE_HOC 2018 Level_10: "Có một ** con mực **![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) đang ẩn nấp ở một nơi nào đó trong đại dương, có thể bạn tìm thấy nó?\n\n"
+      CourseE_HOC 2018 Level_11: Xây dựng một bức tường ** prismarine **![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) quanh khối bê tông đen. Điều này sẽ kích hoạt các ** ống dẫn **! [] (https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) và hoàn thành thử thách của bạn!
+      CourseE_HOC 2018 Level_7a: "Bạn đã tìm thấy những di tích dưới nước. Hãy tìm kiếm ** chiếc rương **![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) có chứa kho báu ** prismarine **![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      CourseE_HOC 2018 Level_8: "Đầu tiên là các tảng băng, bây giờ là dung nham ư? Hãy đi qua hòn đảo núi lửa này và tìm ** cá nhiệt đới **![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) trong các rạn san hô.\n\n"
+      CourseE_HOC 2018 Level_9b: "Bạn đã tới rạn san hô, bây giờ tìm kiếm ** Trái tim đại dương **![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)! Sử dụng san hô màu xanh và đỏ để tới ** rương** kho báu![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       Dance_Party_01: |-
         *Hãy mở tiệc khiêu vũ nào!*
 

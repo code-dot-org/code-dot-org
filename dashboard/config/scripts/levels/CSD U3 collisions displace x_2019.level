@@ -62,10 +62,18 @@
     "expand_debugger": "false",
     "parent_level_id": 11358,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "reference_links": [
+      "/docs/concepts/game-lab/sprites/collision-detection/",
+      "/docs/concepts/game-lab/sprites/velocity/"
+    ],
+    "mini_rubric": "false"
   },
   "published": true,
-  "notes": "\r\n"
+  "notes": "\r\n",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 19:07:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

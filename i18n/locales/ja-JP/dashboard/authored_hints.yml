@@ -362,6 +362,10 @@ ja:
           *`左矢印キーが押されたとき’のブロックを使って、左矢印キーを押したらロボットが踊るようにしましょう。
 
           *このレベルは8小節で終わります。*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "**海のランタン** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) が見えますか?海のランタンと条件をどう組み合わせれば、海底遺跡を通りぬけられるでしょうか?\n\n"
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: 赤色と青色のサンゴブロックが見えますか？それぞれ左と右に曲がる道しるべにしてサンゴ礁を進みます。
       Dance short test 2_authored_hint:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**

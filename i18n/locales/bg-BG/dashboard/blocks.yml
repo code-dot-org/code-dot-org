@@ -491,6 +491,11 @@ bg:
             '"x"': x позиция
             '"y"': y позиция
             '"direction"': посока на движение
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': когато
+            '"while"': докато
       gamelab_debugSprite:
         options:
           VAL:
@@ -513,6 +518,33 @@ bg:
             '"tint"': оттенък
       gamelab_hideTitleScreen:
         text: скрива заглавния екран
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': когато
+            '"while"': докато
+          KEY:
+            '"up"': нагоре
+            '"down"': надолу
+            '"left"': наляво
+            '"right"': надясно
+            '"space"': космос
+            '"a"': а
+            '"d"': d
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': рамка
+            '"circle"': кръг
+            '"grid"': мрежа
+            '"row"': ред
+            '"column"': колона
+            '"plus"': плюс
+            '"random"': случаен
       gamelab_locationConstant:
         options:
           DIR:
@@ -557,6 +589,10 @@ bg:
         text: случаен цвят
       gamelab_secondTouched:
         text: второ докосване на спрайт
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': град
       gamelab_setPosition:
         options:
           POSITION:
@@ -576,6 +612,11 @@ bg:
           PROPERTY:
             '"scale"': размер
             '"height"': височина
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': когато
+            '"while"': докато
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -796,6 +837,7 @@ bg:
       Vector_vectorNorth:
         text: север
       aalab_changePropByFlexible:
+        text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер

@@ -2616,6 +2616,10 @@ ru:
               name: Цикл for в Художнике
             The Artist:
               name: Художник
+            Internet:
+              name: интернет
+            Crowdsourcing:
+              name: Краудсорсинг
         dance-low:
           stages:
             Dance Party:
@@ -2734,6 +2738,8 @@ ru:
               name: Циклы в исполнителе Художник
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
+            Loops in Ice Age:
+              name: Циклы в ледниковом периоде
         courseb-2019:
           stages:
             Move It, Move It:

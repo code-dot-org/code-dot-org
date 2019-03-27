@@ -339,7 +339,6 @@ bs:
         K5PD:
           title: Profesionalni Razvoj za 5-11 dob
           description: Profesionalni razvoj za Kurseve za dob 5-11
-          description_short: Profesionalni razvoj za Kurseve za dob 5-11
           stages:
             Computer Science Pedagogy:
               name: Pedagogija Računarstva
@@ -2004,6 +2003,10 @@ bs:
               name: Predstavite Vaš projekat
             The Artist:
               name: Umjetnik
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:

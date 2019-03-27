@@ -474,6 +474,7 @@ hu:
       CSPU5_U3 - Loops - 4: Használd a Hibakereső parancsokat egy olyan lista készítéséhez, ami a 6-os előtt dobott értékeket tartalmazza. (Kattints ide az összes utasításhoz)
       CSPU5_U3 - Loops - 4_2018: Használd a Hibakereső parancsokat egy olyan lista készítéséhez, ami a 6-os előtt dobott értékeket tartalmazza. (Kattints ide az összes utasításhoz)
       CSPU5_U3 - Loops - 4_2019: Használd a Hibakereső parancsokat egy olyan lista készítéséhez, ami a 6-os előtt dobott értékeket tartalmazza. (Kattints ide az összes utasításhoz)
+      CoureE_HOC 2018 Level_7a: Kutasd át ezeket a víz alatti romokat, és keresd meg a ládát.
       Course 2 Bee Loops 1: 'Szia, én egy méh vagyok. Segítesz nekem összegyűjteni a nektárt ezekről a virágokról? '
       Course 2 Bee Loops 3: Most használd az ismételd blokkot, hogy összegyűjtsük a nektárt és elkészítsük az összes mézet.
       Course 2 Bee Loops 3_: Fel tudsz használni egy ciklust a nektár összegyűjtéséhez?
@@ -703,6 +704,10 @@ hu:
       CourseD_Dance_Party_11_5: Az „összes kacsa“ blokkokkal érd el, hogy a kacsák együtt táncoljanak.
       CourseD_Dance_Party_11b: Állítsd be, hogy a Robot egyszer „spárga“ mozdulatot tegyen, amikor megnyomod a jobbra nyilat, és egyszer „taps“ mozdulatot tegyen, amikor megnyomod a felfelé nyilat. Csináld a spárga-taps mozdulatokat olyan gyorsan, ahogyan csak tudod!
       CourseD_Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd meg az ismerőseiddel.
+      CourseE_HOC 2018 Level_10: Menj a Víz alatti templom bejáratához.
+      CourseE_HOC 2018 Level_11: 'Prizmarinnal építs csatornát a Víz alatti templom belsejében.'
+      CourseE_HOC 2018 Level_7a: Kutasd át ezeket a víz alatti romokat, és keresd meg a ládát.
+      CourseE_HOC 2018 Level_9b: 'Kincskeresés közben használd a korallokat útjelzőként.'
       CourseF_PlayLab_vars10: "Szabad játék! Itt van minden olyan változó, amellyel a pályákon eddig találkoztál, és még egy pár, ha esetleg szeretnéd használni őket.\\r\n\\r\nFigyeld meg, hogy most már olyan sok blokk van az eszköztárunkban, hogy rendszerezésre volt szükség! Mindegyiket elhelyeztük egy megfelelő kategóriába. Szánj egy kis időt az összes felfedezésére. Miután végeztél a böngészéssel, készíts egy olyan játékot, amely felhasznál ismétléseket, változókat és eseményeket is. \\r\n\\r\nTipp: görgess lefelé, hogy lásd a munkaterület minden parancsát."
       CourseF_PlayLab_vars2: Az előző feladvány versenye nem volt igazán fair. Változtasd meg a `dog_speed` változó értékét úgy, hogy biztosan több zászlót szerezz meg, mint a Macska. Az nyer, aki előbb összegyűjt 10 zászlót!
       CourseF_PlayLab_vars3: Használd a bal és jobb nyílbillentyűket a mozgáshoz, és a felfele nyilat az ugráshoz. Vajon össze tudod gyűjteni az összes zászlót?

@@ -369,7 +369,6 @@ fr:
         K5PD:
           title: Perfectionnement professionnel en CM2
           description: Perfectionnement professionnel pour les cours de CM2
-          description_short: Perfectionnement professionnel pour les cours de CM2
           stages:
             Computer Science Pedagogy:
               name: Pédagogie des sciences informatiques
@@ -2965,6 +2964,12 @@ fr:
               name: Jouons avec les boucles « Pour »
             The Artist:
               name: L'Artiste
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Financement participatif
+            Digital Sharing:
+              name: Partage numérique
         dance-low:
           stages:
             Dance Party:
@@ -2999,6 +3004,8 @@ fr:
               name: Internet
             Crowdsourcing:
               name: Financement participatif
+            Digital Sharing:
+              name: Partage numérique
         express-2019:
           stages:
             Relay Programming:
@@ -3052,6 +3059,8 @@ fr:
                 real-world situations to online scenarios and vice versa.\r\n"
             Going Places Safely:
               name: Se déplacer en toute sécurité
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace
         courseb-2019:
           stages:
             Move It, Move It:

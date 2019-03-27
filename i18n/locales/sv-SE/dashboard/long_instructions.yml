@@ -120,6 +120,7 @@ sv:
       4-5 While Loops 3: "Flytta mig till högen och ta bort hela, gå sedan till hålet och fyll det helt.  Tips: Använd så få block som möjligt."
       4-5 While Loops 4: "Wow, jag hittade ett riktigt djupt hål! Jag vet inte hur många spadtag med jord som krävs.  Kan du skriva ett program som fyller det tills marken är jämn?  Tips: Försök att använda en 'medan'-slinga denna gång."
       Artist Autorun Test: Använd blocket "Upprepa" för att rita dessa 3 kvadrater.
+      CoureE_HOC 2018 Level_7a: "Du hittade undervattensruinerna. Sök i sandstenen efter en **kista** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) som innehåller en **prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) skatt."
       Course 4 Artist 13: Spelar fortfarande?  Här är en tom duk där du kan designa vad du vill!
       Course 4 Artist 6: 'Slutför koden för att rita dessa trianglar. Tips: Det finns 3 trianglar inom 360 graders rotation... hur många gånger går 3 i 360?'
       Course 4 Artist 8: Rita denna sol genom att upprepa hela detta kodblock flera gånger.
@@ -190,6 +191,11 @@ sv:
       CourseD_Dance_Party_11b: |-
         Dags för en dansutmaning! Katten klappar när du trycker på vänsterpilen. Gör så att roboten ”faller” när du trycker på högerpilen.
       CourseD_Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med dina vänner.
+      CourseE_HOC 2018 Level_10: "Det finns en **bläckfisk** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) som gömmer sig någonstans i detta havsmonument – kan du hitta den?"
+      CourseE_HOC 2018 Level_11: Bygg en mur av **prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) runt den svarta betongen. Detta kommer att aktivera denna **kanal** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) och slutföra din utmaning!
+      CourseE_HOC 2018 Level_7a: "Du hittade undervattensruinerna. Sök i sandstenen efter en **kista** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) som innehåller en **prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) skatt."
+      CourseE_HOC 2018 Level_8: "Först isberg – nu lava? Ta dig igenom denna vulkanö och hitta **tropiska fiskar** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) i korallrevet."
+      CourseE_HOC 2018 Level_9b: "Du tog dig till revet, sök nu efter **Havets hjärta** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Använd den blåa och röda korallen för att nå **skattkistan** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)."
       CourseF_PlayLab_vars2: Loppet i det sista pusslet var inte särskilt rättvist! Ändra variabeln "dog_speed" så att du kan samla fler flaggor än Katt. Först att samla in 10 flaggor vinner!
       Dance_Party_01: |-
         *Nu ska vi ha ett dansparty!*

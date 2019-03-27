@@ -144,6 +144,11 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kur
+            '"while"': ndërsa
       gamelab_debugSprite:
         options:
           VAL:
@@ -153,6 +158,22 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kur
+            '"while"': ndërsa
+          KEY:
+            '"up"': lart
+            '"down"': poshtë
+            '"left"': majtas
+            '"right"': djathtas
+            '"space"': hapësirë
+            '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': zakonshëm
       gamelab_locationDelta:
         options:
           DIR:
@@ -166,6 +187,10 @@ sq:
         text: ngjyrë e rastësishme
       gamelab_randomColor:
         text: ngjyrë e rastësishme
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': qytet
       gamelab_setPosition:
         options:
           POSITION:
@@ -179,6 +204,11 @@ sq:
           PROPERTY:
             '"scale"': madhësia
             '"height"': gjatësia
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kur
+            '"while"': ndërsa
       gamelab_spritesWhere:
         options:
           PROPERTY:

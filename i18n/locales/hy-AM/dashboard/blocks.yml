@@ -144,6 +144,11 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': երբ
+            '"while"': ժամանակ
       gamelab_debugSprite:
         options:
           VAL:
@@ -153,6 +158,22 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': երբ
+            '"while"': ժամանակ
+          KEY:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
+            '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': կամայական
       gamelab_locationDelta:
         options:
           DIR:
@@ -166,6 +187,10 @@ hy:
         text: կամայական գույն
       gamelab_randomColor:
         text: կամայական գույն
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': քաղաք
       gamelab_setPosition:
         options:
           POSITION:
@@ -179,6 +204,11 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': երբ
+            '"while"': ժամանակ
       gamelab_spritesWhere:
         options:
           PROPERTY:

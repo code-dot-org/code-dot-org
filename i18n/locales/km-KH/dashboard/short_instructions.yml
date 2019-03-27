@@ -226,22 +226,6 @@ km:
         each cloud name.\\r
          * (Hint: this is similar to how the `loopCloud(name)`
         function is called many times.
-      CSD U6 params modify clouds_2019: |-
-        # Clouds\\r
-        \\r
-        This program makes
-        the clouds move when you blow on the sound sensor, but it's not finished.\\r
-        \\r
-        #
-        Do This\\r
-        * Create a new function `moveCloud(name)` that will move any cloud.\\r
-          *
-        (Hint: you will use almost all the same code as the `moveCloud0` function)\\r
-        *
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\\r
-         * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times.
       CSD U6 params modify planes: |-
         # Multi-plane Controller\\r
         \\r

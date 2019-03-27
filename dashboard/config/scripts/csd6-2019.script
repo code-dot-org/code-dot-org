@@ -2,7 +2,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-18/unit6/"], ["teacherForum", "https://forum.code.org/c/csd6"], ["vocabulary", "https://curriculum.code.org/csd-18/unit6/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-18/unit6/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-18/unit6/code/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit6/"], ["teacherForum", "https://forum.code.org/c/csd6"], ["vocabulary", "https://curriculum.code.org/csd-19/unit6/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit6/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-19/unit6/code/"]]
 stage_extras_available true
 has_verified_resources true
 has_lesson_plan true
@@ -136,6 +136,7 @@ assessment 'csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019', progression: '
 stage 'Arrays and Color LEDs', flex_category: 'csd6_2'
 named_level 'CSD U6L10 TFMD_2019'
 named_level 'CSD U6 arrays intro_2019'
+named_level 'CSD U6 arrays video'
 level 'CSD U6 arrays select predict_2019', progression: 'Introduction to Arrays'
 level 'CSDU6 arrays select rainbow_2019', progression: 'Introduction to Arrays'
 level 'CSDU6 array select days_2019', progression: 'Introduction to Arrays'

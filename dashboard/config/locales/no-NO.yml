@@ -176,7 +176,7 @@
     email_preference_privacy: "(Se våre retningslinjer for personvern)"
     email_preference_yes: Ja
     email_preference_no: Nei
-    email_preference_required: Du må angi en e-post preferanse.
+    email_preference_required: Du må angi en e-postpreferanse.
   school_info:
     title: Informasjon til skolen (valgfritt)
     school_country: Landet til skolen
@@ -372,13 +372,33 @@
       driver: Logget inn som
       navigator: Kartleser
       create: Opprett
+      algebra_game: Algebra
       applab: App Lab
       artist: Kunstner
-      gamelab: Spill-lab
-      playlab: Spill-lab
-      minecraft: Minecraft
-      flappy: Flakse
+      artist_k1: Kunstner (førskole)
+      basketball: Basketball
+      bounce: sprett
+      calc: Regn ut
       dance: Dansefest
+      eval: Evaluer
+      flappy: Flakse
+      frozen: Frost
+      gamelab: Spill-lab
+      gamelab_jr: Spillaboratoriet (beta)
+      gumball: Gumballs fantastiske verden
+      iceage: Istid
+      infinity: Uendelig
+      minecraft_adventurer: Minecraft-eventyrer
+      minecraft_designer: Minecraft
+      minecraft_hero: Minecraft Helt
+      playlab: Spill-lab
+      playlab_k1: Spill lab(førskole)
+      scratch: Scratch
+      sports: Sport
+      starwars: Star Wars
+      starwarsblocks: Star Wars (blokker)
+      starwarsblocks_hour: Star Wars (blokker)
+      weblab: Weblaboratoriet
     popup:
       progress_for_user: "%{name}s fremgang"
       progress: Din fremdrift
@@ -586,10 +606,6 @@
       eller Facebook hvor de sier "I''m taking the #APCSP exam because..." De beste
       videoene vil benyttes i vår video og vinneren vil motta Code.org produkter i
       premie!'
-    announcement_csp_deadline: Final call for high school teachers! Take the lead
-      on computer science in your school and apply for our high-quality professional
-      learning programs <strong>at absolutely no cost to you or your school</strong>.
-      Applications close on April 14th.
     announcement_applab_export: App-lab, vårt web-baserte programmeringsmiljø, støtter
       nå eksport av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av
       JavaScript-blokker, eksporter så koden for å fortsette kodingen i ditt foretrukne
@@ -1116,6 +1132,17 @@
     csf_e_2: 'Kurs E: innhold'
     csf_f_1: Oppgrader til Kurs F (Valgfritt)
     csf_f_2: 'Kurs F: innhold'
+    csf_digcit: Digitalt statsborgerskap
+    csf_jigsaw: Puslespill
+    csf_loops: Løkker
+    csf_events: Hendelser
+    csf_binary: Binær
+    csf_conditionals: Betingelser
+    csf_nested_loops: Løkker i løkker
+    csf_functions: Funksjoner
+    csf_variables: Variabler
+    csf_for_loops: For-løkker
+    csf_internet: Internett
     csd1_1: 'Kapittel 1: Problemløsingsprosessen'
     csd1_2: 'Kapittel 2: Datamaskiner og problemløsning'
     csd2_1: 'Kapittel 1: Nettinnhold og HTML'
@@ -1142,6 +1169,9 @@
     csp_ap_2: 'Kapittel 2: AP utforske ytelsesoppgave'
     csp_ap_3: 'Kapittel 3: AP opprette ytelsesoppgave'
     csp2_1_2018: 'Enhet 2: Digital informasjon'
+    csp_variables: Variabler
+    csp_conditionals: Betingelser
+    csp_functions: Funksjoner
     dlp: Spørsmål til refleksjon
   external_links:
     disclaimer: Ansvarsfraskrivelse
@@ -1230,7 +1260,7 @@
       last_name: Etternavn
       email: E-post
       email_alternate: Alternativ e-post
-      gender: Kjønns-identitet
+      gender: Kjønnsidentitet
       school_name: Skolens navn
       school_city: Skolens poststed
       school_country: Landet til skolen
@@ -1241,7 +1271,7 @@
         non_binary: Ikke-binær
         none: Foretrekker å ikke svare
       school_country:
-        canada: Kanada
+        canada: Canada
         chile: Chile
         israel: Israel
         malaysia: Malaysia
@@ -1258,16 +1288,23 @@
         ages_19_over: 19+ år gammel
       subjects:
         cs: Datavitenskap
+        ict: IKT
         math: Matematikk
         science: Vitenskap
+        history: Historie / Samfunnsfag
         la: Språkfag
         music: Musikk
+        art: Kunst
+        other: 'Annet:'
       resources:
         kodable: Kodbart
         scratch: Scratch
+        other: 'Annet:'
       robotics:
         kodable: Kodbart
         microbit: Microbit
+        raspberry: Raspberry Pi
+        other: 'Annet:'
       workshop_course:
         csp: Prinsipper i informatikk
       email_opt_in:

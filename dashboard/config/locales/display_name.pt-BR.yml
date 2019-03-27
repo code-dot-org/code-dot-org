@@ -93,15 +93,15 @@ pt-BR:
       CSD Board Buttons Map: Botões e Interruptor
       CSD Board Buttons Map_2018: Botões e Interruptor
       CSD Board Buttons Map_2019: Botões e Interruptor
-      CSD Board Sensors Map: Sensores correspondentes
-      CSD Board Sensors Map_2018: Sensores correspondentes
-      CSD Board Sensors Map_2019: Sensores correspondentes
+      CSD Board Sensors Map: Sensores analógicos
+      CSD Board Sensors Map_2018: Sensores analógicos
+      CSD Board Sensors Map_2019: Sensores analógicos
       CSD Booleans Map: Operadores de comparação e valores booleanos
       CSD Booleans Map_2018: Operadores de comparação e valores booleanos
       CSD Booleans Map_2019: Operadores de comparação e valores booleanos
-      CSD Buzzer Map: 'Parque de Circuitos: Buzina'
-      CSD Buzzer Map_2018: 'Parque de Circuitos: Buzina'
-      CSD Buzzer Map_2019: 'Parque de Circuitos: Buzina'
+      CSD Buzzer Map: 'Circuit Playground: Buzina'
+      CSD Buzzer Map_2018: 'Circuit Playground: Buzina'
+      CSD Buzzer Map_2019: 'Circuit Playground: Buzina'
       CSD Counter Pattern Map: O padrão Contador
       CSD Counter Pattern Map_2018: O padrão Contador
       CSD Counter Pattern Map_2019: O padrão Contador
@@ -113,9 +113,9 @@ pt-BR:
       CSD If Statements Map_2018: Instruções Se
       CSD If Statements Map_2019: Instruções Se
       CSD Introduction to Lists - Length: Introdução a Listas - Comprimento
-      CSD LEDs Map: 'Parque de Circuitos: LEDs'
-      CSD LEDs Map_2018: 'Parque de Circuitos: LEDs'
-      CSD LEDs Map_2019: 'Parque de Circuitos: LEDs'
+      CSD LEDs Map: 'Circuit Playground: LEDs'
+      CSD LEDs Map_2018: 'Circuit Playground: LEDs'
+      CSD LEDs Map_2019: 'Circuit Playground: LEDs'
       CSD Set Scale Map: Alterando a escala do Sensor
       CSD Set Scale Map_2018: Alterando a escala do Sensor
       CSD Set Scale Map_2019: Alterando a escala do Sensor
@@ -387,12 +387,12 @@ pt-BR:
       CSD U3 platform sample3: Coelho Saltador
       CSD U3 platform sample3_2018: Coelho Saltador
       CSD U3 platform sample3_2019: Coelho Saltador
-      CSD U3 plotting shapes map: Imprimindo Formas no Jogo do Laboratório
-      CSD U3 plotting shapes map_2018: Imprimindo Formas no Jogo do Laboratório
-      CSD U3 plotting shapes map_2019: Imprimindo Formas no Jogo do Laboratório
-      CSD U3 rect: Introdução ao Jogo do Laboratório
-      CSD U3 rect_2018: Introdução ao Jogo do Laboratório
-      CSD U3 rect_2019: Introdução ao Jogo do Laboratório
+      CSD U3 plotting shapes map: Plotando Formas no Jogo do Laboratório
+      CSD U3 plotting shapes map_2018: Plotando Formas no Jogo do Laboratório
+      CSD U3 plotting shapes map_2019: Plotando Formas no Jogo do Laboratório
+      CSD U3 rect: Introdução ao Laboratório de Jogos
+      CSD U3 rect_2018: Introdução ao Laboratório de Jogos
+      CSD U3 rect_2019: Introdução ao Laboratório de Jogos
       CSD U3 shape size map: Formas e Parâmetros
       CSD U3 shape size map_2018: Formas e Parâmetros
       CSD U3 shape size map_2019: Formas e Parâmetros
@@ -581,8 +581,6 @@ pt-BR:
       CSD U6 analog challenge_2019: 'Desafio: Entendendo os sensores'
       CSD U6 arrays intro: Introdução a Arrays
       CSD U6 arrays intro_2018: Introdução a Arrays
-      CSD U6 arrays intro_2019: Introdução a Arrays
-      CSD U6 arrays video: Introdução a Arrays
       CSD U6 challenge motorcycle: 'Desafio: Motocicleta'
       CSD U6 challenge motorcycle_2018: 'Desafio: Motocicleta'
       CSD U6 challenge motorcycle_2019: 'Desafio: Motocicleta'
@@ -697,9 +695,9 @@ pt-BR:
         um computador?'
       CSD What Makes a Computer a Computer Video_2019: 'Vídeo: O que faz de um computador,
         um computador?'
-      CSD colorLed Map: 'Parque de Circuito: LEDs de cor'
-      CSD colorLed Map_2018: 'Parque de Circuito: LEDs de cor'
-      CSD colorLed Map_2019: 'Parque de Circuito: LEDs de cor'
+      CSD colorLed Map: 'Circuit Playground: LEDs coloridos'
+      CSD colorLed Map_2018: 'Circuit Playground: LEDs coloridos'
+      CSD colorLed Map_2019: 'Circuit Playground: LEDs coloridos'
       CSD onBoardEvent Map: Respondendo aos eventos da placa
       CSD onBoardEvent Map_2018: Respondendo aos eventos da placa
       CSD onBoardEvent Map_2019: Respondendo aos eventos da placa
@@ -745,9 +743,9 @@ pt-BR:
       CSDU4 Project Events_2018: 'Projeto do Aplicativo: Vinculando Telas'
       CSDU4 Project Events_2019: 'Projeto do Aplicativo: Vinculando Telas'
       CSDU4 Project Functionality: 'Projeto do Aplicativo: Adicionando Funcionalidade'
-      CSDU4 Project Import: 'Projeto do Aplicativo: Tela de Importação'
-      CSDU4 Project Import_2018: 'Projeto do Aplicativo: Tela de Importação'
-      CSDU4 Project Import_2019: 'Projeto do Aplicativo: Tela de Importação'
+      CSDU4 Project Import: 'Projeto do Aplicativo: Importação de Tela'
+      CSDU4 Project Import_2018: 'Projeto do Aplicativo: Importação de Tela'
+      CSDU4 Project Import_2019: 'Projeto do Aplicativo: Importação de Tela'
       CSDU6 - UI and Inputs - event type testing: Teste de Evento
       CSDU6 - UI and Inputs - getNumber: pegarNúmero
       CSDU6 - board event challenge: Placa de Som
@@ -966,7 +964,7 @@ pt-BR:
       Kiki_StarWars_Test_4: Protótipo do Projeto Star Wars
       Kiki_StarWars_Test_5: Protótipo do Projeto Star Wars
       Kiki_StarWars_Test_5_Example: Protótipo do Projeto Star Wars
-      MC Agent Freeplay: Gratuito
+      MC Agent Freeplay: Jogo livre
       MC_HOC_2017_01: Prólogo
       MC_HOC_2017_02_Cole: A Fazenda
       MC_HOC_2017_02_Cole_2019: A Fazenda
@@ -996,15 +994,15 @@ pt-BR:
       MC_HOC_2017_10_RYAN2: A Caverna
       MC_HOC_2017_11_Cole: O Lago Congelado
       MC_HOC_2017_11_Kiki: O Lago Congelado
-      MC_HOC_2017_13_Cole: Gratuito
+      MC_HOC_2017_13_Cole: Jogo livre
       MC_HOC_2017_FP10x10: Atividade livre
       MC_HOC_2017_FP10x10_RE: Atividade livre
-      MC_HOC_2017_FP20x20: Gratuito
-      MC_HOC_2017_FP20x20_2019: Gratuito
+      MC_HOC_2017_FP20x20: Jogo livre
+      MC_HOC_2017_FP20x20_2019: Jogo livre
       MC_HOC_2017_Ryan_03: Um Rio...
       Making Music_2018: Fazendo Música
       Making Music_2019: Fazendo Música
-      New Minecraft Hero Project: Gratuito
+      New Minecraft Hero Project: Jogo livre
       OPD-K5 S2L2: O que é ciência da computação?
       OPD-K5 WhatIsCS: O que é ciência da computação?
       OPD-K5S2L2: O que é ciência da computação?
@@ -1029,6 +1027,7 @@ pt-BR:
       U4 L03 Thermostat App Modify 1: Aplicativo Termostato v.1
       U4 L03 Thermostat App Modify 2: Aplicativo Termostato v.1
       U4 L05 CYU Exit Ticket: Verifique Sua Compreensão
+      U4 L06 CYU Exit Ticket: Verifique Sua Compreensão
       'Video: Intro to CSS Part 2_2018': 'Vídeo: Introdução a CSS Parte 2'
       'Video: Intro to CSS Part 2_2019': 'Vídeo: Introdução a CSS Parte 2'
       'Video: Intro to CSS_2018': 'Vídeo: Introdução a CSS'

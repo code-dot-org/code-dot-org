@@ -295,6 +295,8 @@
           [Bilde av løsning blokker] (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: For å bruke en `gå fremover`-blokk, dra den fra verktøykassa til arbeidsområdet og koble den til `når den kjører`-blokken.
+      CoureE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'Halv-sekskanten har en ** lengde på 30 ** og snur seg ** 60 grader **.  '
         Course_4_Artist_11_b: 'En 2/3-sekskant har en ** lengde på 80 ** og snur seg ** 120 grader **. '
@@ -2676,6 +2678,12 @@
 
           * Du skal endre en bakgrunnseffekt et sted i den syvende takten av sangen.
           * Dette nivået ender etter 9 takter.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Se de ** havlanternene**! [] (https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hvordan kan du bruke en \"hvis blokk\" med dem for å komme gjennom havmonumentet?\n\n"
+      CourseE_HOC 2018 Level_7a_authored_hint:
+        aquatic7: Du kan bruke en hvis sti blokk for å hjelpe deg å snu i riktig retning.
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Se de røde og blå korall blokkene? Bruk dem for å velge høyre eller venstre.
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Kontroller at nummeret for `dog_speed` til noe større enn `cat_speed`.
       Dance short test 2_authored_hint:

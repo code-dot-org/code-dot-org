@@ -289,6 +289,8 @@ ro:
         title: Programare de releu
       courseB_unplugged_MRF_2019:
         title: Amicii mei roboți
+      courseB_unplugged_loopyMRF_2019:
+        desc: '[șir gol]'
       Conditionals_2019:
         title: Condiţionale
         desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct” și ”Dacă trag o carte neagră, tu obții un punct.”'

@@ -413,7 +413,7 @@ export default class CensusMap extends Component {
           </div>
           <div id="right">
             <span id="footer-text">In partnership with</span>
-            <img src="/images/fit-200/avatars/computer_science_teachers_association.png" />
+            <img src="/images/fit-100/avatars/computer_science_teachers_association.png" />
           </div>
         </div>
         <br />

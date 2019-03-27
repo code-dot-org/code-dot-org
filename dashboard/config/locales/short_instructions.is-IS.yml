@@ -1064,16 +1064,6 @@ is:
          * (Vísbending: þú notar næstum því sama kóðann og í `moveCloud0` fallinu)
         * Kallaðu á nýja `moveCloud(heiti)` fallið innan úr atburðarkubbnum, einu sinni fyrir hvert skýjaheiti.
          * (Vísbending: þetta er líkt því hvernig kallað er oft á `loopCloud(heiti)` fallið.
-      CSD U6 params modify clouds_2019: |-
-        # Ský
-
-        Þetta forrit lætur skýin hreyfast þegar þú blæst á hljóðnemann, en það er óklárað.
-
-        # Gerðu þetta
-        * Búðu til nýtt fall `moveCloud(heiti)` sem getur fært hvaða ský sem er.
-         * (Vísbending: þú notar næstum því sama kóðann og í `moveCloud0` fallinu)
-        * Kallaðu á nýja `moveCloud(heiti)` fallið innan úr atburðarkubbnum, einu sinni fyrir hvert skýjaheiti.
-         * (Vísbending: þetta er líkt því hvernig kallað er oft á `loopCloud(heiti)` fallið.
       CSDU4 - AppLab - 1: Lestu gegnum skjölunina fyrir penColor() og penWidth() áður
         en þú notar þau til að teikna bláa ferninginn.
       CSDU4 - Design Mode - 1: Bættu við hnappi sem hreyfir skjaldbökuna við smell.
@@ -1282,6 +1272,7 @@ is:
         "lengd" með gildið 180.
       Collector Demo: Sjáðu þessar fúlgur fjár! Hjálpaðu mér að ná sem flestum peningum
         svo að ég geti endurbætt býlið mitt. Ég má þó aðeins nota 9 kubba!
+      CoureE_HOC 2018 Level_7a: Leitaðu að kistu í þessum neðansjávarrústum.
       Course 2 Bee Loops 1: 'Hæ, ég er býfluga. Getur þú hjálpað mér að safna blómasafanum
         úr þessum blómum? '
       Course 2 Bee Loops 13: 'Mat: Notaðu "endurtaka" kubbinn til að safna öllum blómasafanum.'
@@ -1943,6 +1934,10 @@ is:
         eins hratt og þú getur!
       CourseD_Dance_Party_12: Finndu taktinn! Búðu til eigin dans sem þú getur deilt
         með vinum þínum.
+      CourseE_HOC 2018 Level_10: Farðu að inngangi Neðansjávarhallarinnar.
+      CourseE_HOC 2018 Level_11: 'Búðu til leiðslu úr prismarín inni í neðansjávarhöllinni.  '
+      CourseE_HOC 2018 Level_7a: Leitaðu að kistu í þessum neðansjávarrústum.
+      CourseE_HOC 2018 Level_9b: 'Notaðu kórallinn sem vegvísi til að finna fjársjóðinn.  '
       CourseF_PlayLab_vars1: 'Til að spila þennan leik þarftu ekki að skrifa neinn
         kóða, bara ýta á "Keyra"! '
       CourseF_PlayLab_vars10: "Frjáls æfing: Hér eru allar breyturnar sem við höfum
@@ -2085,12 +2080,12 @@ is:
         eins hratt og þú getur!
       Dance_Party_12: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum
         þínum.
-      Dance_Party_extras_battle: Danshópar (Meira um þá undir "Nánar")
-      Dance_Party_extras_every_beat: Fjórðapartsnótur (Meira um þær undir "Nánar")
-      Dance_Party_extras_layout: Stillum okkur upp! (Meira um það undir "Nánar")
-      Dance_Party_extras_on_beat: Bassa-, mið- og háhljóð (Meira um þau undir "Nánar")
-      Dance_Party_extras_speed: Hraðar, Hægar (Meira um það undir "Nánar")
-      Dance_Party_extras_visible: Hvert fóru þau? (Meira undir "Nánar")
+      Dance_Party_extras_battle: Danshópar (Meira um þá undir "Meira")
+      Dance_Party_extras_every_beat: Fjórðapartsnótur (Meira um þær undir "Meira")
+      Dance_Party_extras_layout: Stillum okkur upp! (Meira um það undir "Meira")
+      Dance_Party_extras_on_beat: Bassa-, mið- og háhljóð (Meira um þau undir "Meira")
+      Dance_Party_extras_speed: Hraðar, Hægar (Meira um það undir "Meira")
+      Dance_Party_extras_visible: Hvert fóru þau? (Meira um það undir "Meira")
       Eval Booleans 1: Með Boole virkjum (t.d. > < = ) getum við borið saman gildi
         og fengið útkomuna "true" (satt) eða "false" (ósatt). Smelltu á "Keyra" til
         að sjá hvernig þessi formúla er metin.
@@ -3667,8 +3662,6 @@ is:
         svo á hana?
       Virtual Pet 1: Hvað heldur þú að muni gerast ef þú ýtir á "Keyra" og smellir
         svo á hana?
-      Virtual Pet 1_2019: Hvað heldur þú að muni gerast ef þú ýtir á "Keyra" og smellir
-        svo á hana?
       Virtual Pet 1_simple: Hvað heldur þú að muni gerast ef þú ýtir á "Keyra" og
         smellir svo á hana?
       XML Scratchpad: Nota þennan prófáfanga til að ná í xml fyrir áfangapróf
@@ -4439,8 +4432,8 @@ is:
         til að ljúka við þennan kóða?
       courseB_Scrat_ramp4a_2019: Sérðu hvaða kubb þarf að setja neðan við hina kubbana
         til að ljúka við þennan kóða?
-      courseB_Scrat_ramp5a_2018: Komdu fuglinum til svínsins!
-      courseB_Scrat_ramp5a_2019: Komdu fuglinum til svínsins!
+      courseB_Scrat_ramp5a_2018: Prófaðu þetta án hjálpar!
+      courseB_Scrat_ramp5a_2019: Prófaðu þetta án hjálpar!
       courseB_artist_loops1: Þetta er ný tegund af þraut sem nefnist "Listamaðurinn".
         Prófaðu þetta borð og teiknaðu eitthvað skemmtilegt.
       courseB_artist_loops10: Notaðu það sem þú hefur lært til að teikna mynd af því
@@ -4844,8 +4837,6 @@ is:
       courseC_artist_loops2a: Notaðu nú lykkju til að snúa fuglinum um 30 gráður 12
         sinnum.
       courseC_artist_loops2a_2018: Notaðu nú lykkju til að snúa fuglinum um 30 gráður
-        12 sinnum.
-      courseC_artist_loops2a_2019: Notaðu nú lykkju til að snúa fuglinum um 30 gráður
         12 sinnum.
       courseC_artist_loops3: Fínt! Blómin eru að springa út svo nú þarf að hjálpa
         uppvakningnum að setja vin með 50 díla millibili til að verja blómin þar til

@@ -1618,6 +1618,10 @@ sq:
               name: Qef me Ciklet For
             The Artist:
               name: Artisti
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         coursed-2019:
           stages:
             Relay Programming:

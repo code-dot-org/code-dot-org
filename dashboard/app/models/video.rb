@@ -45,7 +45,7 @@ class Video < ActiveRecord::Base
 
   def self.setup
     videos = CSV.read('config/videos.csv', headers: true).map.with_index(1) do |row, id|
-      {id: id, key: row['Key'], youtube_code: row['YoutubeCode'], download: row['Download']}
+      {id: id, key: row['Key'], youtube_code: row['YoutubeCode'], download: row['Download'], locale: row['Locale']}
     end
     transaction do
       reset_db

@@ -23,7 +23,7 @@ is:
         password: 'Lykilorð'
         password_confirmation: 'Staðfesting lykilorðs'
         current_password: 'Núverandi lykilorð'
-        locale: 'Tungumál'
+        locale: 'Forritunarmál'
         age: 'Aldur'
         gender: 'Kyn'
         edit_header: 'Breyta upplýsingum reiknings'
@@ -331,14 +331,31 @@ is:
       driver: 'Ökumaður'
       navigator: 'Leiðsögumaður'
       create: 'Búa til'
+      algebra_game: 'Algebra'
       applab: 'Appsmiðjan'
       artist: 'Listamaður'
-      gamelab: 'Leikjasmiðjan'
-      playlab: 'Leikjasmiðja'
-      spritelab: 'Kvikasmiðja'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
+      basketball: 'Körfubolti'
+      bounce: 'Skopp'
+      calc: 'Reikningur'
       dance: 'Danspartý'
+      eval: 'Mat'
+      flappy: 'Flappy'
+      frozen: 'Frozen'
+      gamelab: 'Leikjasmiðjan'
+      gamelab_jr: 'Leikjasmiðja (beta)'
+      gumball: 'The Amazing World of Gumball'
+      iceage: 'Ice Age'
+      infinity: 'Óendanleiki'
+      minecraft_adventurer: 'Minecraft Könnuður'
+      minecraft_designer: 'Minecraft'
+      playlab: 'Leikjasmiðjan'
+      scratch: 'Scratch'
+      sports: 'Íþróttir'
+      spritelab: 'Kvikasmiðjan'
+      starwars: 'Star Wars'
+      starwarsblocks: 'Star Wars (Kubbar)'
+      starwarsblocks_hour: 'Star Wars (Kubbar)'
+      weblab: 'Vefsmiðja'
       view_all: 'Sjá öll verkefni...'
     popup:
       progress_for_user: "Framvinda %{name}"
@@ -594,7 +611,7 @@ is:
     dance:
       title: 'Danspartý'
     hoc:
-      title: 'Hefðbundið völundarhús'
+      title: 'Völundarhús'
       body: 'Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.'
     flappy:
       title: 'Flappy kóði'
@@ -627,7 +644,7 @@ is:
     starwars:
       title: "Star Wars"
     infinity:
-      title: "Infinity leikjasmiðja"
+      title: "Infinity Leikjasmiðja"
       body: "Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum."
     minecraft:
       title: "Minecraft"
@@ -639,12 +656,13 @@ is:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!\nFerðist um Minecraft með kóða."
     sports:
       title: "Íþróttir"
-      body: "Búðu til körfuboltaleik eða blandaðu saman íþróttum."
+      body: "Búa til körfuboltaleik eða blanda saman íþróttum."
     text-compression:
       title: "Þjöppun texta"
-      body: "Í þessari kennslustund munu nemendur nota græjuna fyrir textaþjöppun til að þjappa texta með skipta út mynstrum fyrir tákn."
+      body: "Í þessari kennslustund munu nemendur nota græjuna fyrir textaþjöppun til að þjappa texta með því að skipta út mynstrum fyrir tákn."
     unplugged:
       title: "Verkefni án tölvu"
       audience: "Aldur 6+"
@@ -881,6 +899,19 @@ is:
     csf_e_2: 'Innihald Námskeiðs E'
     csf_f_1: 'Uppfærsla í Námskeið F (val)'
     csf_f_2: 'Innihald Námskeiðs F'
+    csf_digcit: 'Stafrænn borgari'
+    csf_jigsaw: 'Púsl'
+    csf_loops: 'Lykkjur'
+    csf_events: 'Atvik'
+    csf_binary: 'Tvíundir'
+    csf_data: 'Gögn'
+    csf_conditionals: 'Skilyrði'
+    csf_spritelab: 'Kvikasmiðjan'
+    csf_nested_loops: 'Innri lykkjur'
+    csf_functions: 'Föll'
+    csf_variables: 'Breytur'
+    csf_for_loops: 'Frá lykkjur'
+    csf_internet: 'Internet'
     csd1_1: 'Kafli 1: Lausn vandamála sem ferli'
     csd1_2: 'Kafli 2: Tölvur og lausn vandamála'
     csd2_1: 'Kafli 1: Innihald vefja og HTML'
@@ -911,6 +942,9 @@ is:
     csp_postap_2: 'Kafli 2: Öpp og gagnagrunnar'
     csp2_1_2018: 'Kafli 2 - Stafrænar upplýsingar'
     csp3_1_2018: 'Kafli 3: Inngangur að forritun'
+    csp_variables: 'Breytur'
+    csp_conditionals: 'Skilyrði'
+    csp_functions: 'Föll'
     dlp: 'Kvaðningar um íhugun'
   external_links:
     disclaimer: Afsal ábyrgðar
@@ -1055,6 +1089,7 @@ is:
       workshop_course:
         csf_af: 'Grunnatriði TF (Námskeið A-F)'
         csf_express: 'Grunnatriði TF (Forstig Hraðferðar eða Hraðferð)'
+        csd: 'Uppgötvanir tölvunarfræði'
         csp: 'Grunnhugtök tölvunarfræði'
       email_opt_in:
         opt_in_yes: 'Já'

@@ -74,8 +74,6 @@ is:
       CSD U4 Mult Screen Map_2019: Öpp með fleiri en eina skjámynd
       CSD U6 arrays intro: Kynning á fylkjum
       CSD U6 arrays intro_2018: Kynning á fylkjum
-      CSD U6 arrays intro_2019: Kynning á fylkjum
-      CSD U6 arrays video: Kynning á fylkjum
       CSD U6 for loop map: Frá lykkjur
       CSD U6 for loop map_2018: Frá lykkjur
       CSD U6 for loop map_2019: Frá lykkjur
@@ -87,6 +85,8 @@ is:
       'CSD: Animating Sprite Movement_2019': 'Myndband: Hreyfing kvika'
       'CSD: For Loop_2018': Frá lykkjur
       'CSD: For Loop_2019': Frá lykkjur
+      CourseEF_video_IntroSpriteLab: Þetta er Kvikasmiðjan
+      CourseEF_video_IntroSpriteLab_2019: Þetta er Kvikasmiðjan
       Dance_Party_extras_battle: Danshópar
       Dance_Party_extras_every_beat: Fjórðungsnótur
       Dance_Party_extras_layout: Stilla upp
@@ -110,4 +110,5 @@ is:
       courseB_video_Unspotted: Ófundnar villur
       courseB_video_Unspotted_2018: Ófundnar villur
       courseB_video_Unspotted_2019: Ófundnar villur
+      expresslink: Hraðnámskeið
       harvey_pixelation: Dílamynstursgræja

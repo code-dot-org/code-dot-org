@@ -3,7 +3,7 @@ es-MX:
     messages:
       not_saved: 'Corrige los siguientes errores:'
       too_young: 'Este contenido tiene restricciones de edad establecidas y no está disponible para estudiantes jóvenes.'
-      teacher_must_accept_terms: 'Este contenido tiene restricciones de edad establecidas y no está disponible para estudiantes jóvenes. Solicítale a tu profesor que acepte los Términos de Servicio actualizados para darte acceso a este contenido. Tu instructor puede hacerlo iniciando sesión en Code Studio y haciendo clic en el botón "Revisar términos actualizados" cerca de la parte superior de la página de inicio de Code Studio.'
+      teacher_must_accept_terms: 'Este contenido tiene restricciones de edad establecidas y no está disponible para estudiantes jóvenes. Pídele a tu docente que acepte los Términos de Servicio actualizados para darte acceso a este contenido. Para hacerlo, puede iniciar sesión en Code Studio y hacer clic en el botón "Revisar términos actualizados" cerca de la parte superior de la página de inicio de Code Studio.'
       pair_programmer: 'En este momento, estás programando a la par con un estudiante que no tiene acceso a este contenido. Para acceder a este contenido, detén la programación en par e intenta nuevamente.'
   activerecord:
     errors:
@@ -326,13 +326,36 @@ es-MX:
       driver: 'Conectado'
       navigator: 'Socio'
       create: 'Crear'
+      algebra_game: 'Álgebra'
       applab: 'Laboratorio de App'
       artist: 'Artista'
-      gamelab: 'Laboratorio de juegos'
-      playlab: 'Laboratorio de juegos'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
+      artist_k1: 'Artista ( Pre-lector)'
+      basketball: 'Baloncesto'
+      bounce: 'Rebotar'
+      calc: 'Calc'
       dance: 'Fiesta de baile'
+      eval: 'Eval'
+      flappy: 'Flappy'
+      frozen: 'Congelado'
+      gamelab: 'Laboratorio de juegos'
+      gamelab_jr: 'Game Lab ( beta)'
+      gumball: 'Gumball'
+      iceage: 'La Era de Hielo'
+      infinity: 'Infinito'
+      makerlab: 'Herramientas de Maker'
+      minecraft_adventurer: 'Aventurero de Minecraft'
+      minecraft_aquatic: 'Minecraft acuático'
+      minecraft_codebuilder: 'Minecraft: Conexión de código'
+      minecraft_designer: 'Minecraft'
+      minecraft_hero: 'Minecraft Hero'
+      playlab: 'Laboratorio de juegos'
+      playlab_k1: 'Play Lab ( Pre-lector)'
+      scratch: 'Scratch'
+      sports: 'Спорт'
+      starwars: 'Guerra de las Galaxias'
+      starwarsblocks: 'Star Wars (bloques)'
+      starwarsblocks_hour: 'Star Wars (bloques)'
+      weblab: 'Web Lab'
       view_all: 'Ver todos los proyectos...'
     popup:
       progress_for_user: "progreso de %{name}"
@@ -475,7 +498,7 @@ es-MX:
     announcement_csp_deadline: "¡Última llamada para los profesores de preparatoria! Toma la delantera en ciencias de la computación en tu escuela y aplica para programas de aprendizaje de alta calidad <strong>sin ningún costo para ti o para tu escuela</strong>. Las aplicaciones cerrarán el 14 de abril."
     announcement_applab_export: "¡App Lab, nuestrp ambiente de programación web, ahora soporta exportar tu código! Puedes empezar a construir aplicaciones con bloques de JavaScript para jalar y soltar, y exportar el código para continuar editando en cualquier ambiente de desarrollo profesional de tu elección."
     announcement_csp_survey: "<b>¡Felicidades profesores de Principios de CC!</b><br/> Su estudiante de Principios de CC que realizó el examen de CC para avanzados se unirá con otros 50,000 estudiantes en el examen para avanzados mas largo que se ha realizado en la historia. Ahora, permitamos que las voces de sus estudiantes sean oídas - ¡recuérdele que debe completar la encuesta de fin de curso! Usted podrá revisar las respuestas de sus estudiantes y compartiremos también un reporte nacional con usted."
-    announcement_navigation_redesign: "<b>Próximos cambios en el sitio de navegación</b><br/>Próximamente este verano, estaremos mejorando la navegación dentro del sitio web de Code.org para que siempre tengas acceso a sus principales recursos desde cualquier parte. Tan pronto como inicies sesión en tu cuenta de profesor, cada página tendrá una nueva barra de navegación con enlaces a su página de inicio, cursos, galería de proyectos, secciones y aprendizaje profesional."
+    announcement_navigation_redesign: "<b>Próximos cambios de navegación en el sitio</b><br/>Este verano mejoraremos la navegación dentro del sitio web Code.org para que siempre tengas acceso a los principales recursos desde cualquier lugar. Tan pronto como inicies sesión en tu cuenta de docente, las páginas tendrán una nueva barra de navegación con enlaces a tu página de inicio, cursos, galería de proyectos, secciones y aprendizaje profesional."
   move_students:
     new_section_dne: "Lo sentimos, pero no existe la sección %{new_section_code}. Introduzca un código de sección diferente."
     section_code_cant_be_current_section: "La sección actual no puede ser igual a la nueva sección."
@@ -872,10 +895,25 @@ es-MX:
     ramp_up: 'Introducción'
     main_course: 'Curso principal'
     extra_course_content: 'Contenido adicional del curso'
-    csf_e_1: 'Introducción al Curso E (Opcional)'
+    csf_e_1: 'Avanzar al Curso E (Opcional)'
     csf_e_2: 'Contenido del Curso E'
-    csf_f_1: 'Avanzar al Curso F (Opcional)'
+    csf_f_1: 'Avanzar al Curso F (opcional)'
     csf_f_2: 'Contenido del Curso F'
+    csf_digcit: 'Ciudadanía digital'
+    csf_jigsaw: 'Rompecabezas'
+    csf_sequencing: 'Secuenciando'
+    csf_loops: 'Bucles'
+    csf_events: 'Eventos'
+    csf_online_safety: 'Seguridad en línea'
+    csf_binary: 'Binario'
+    csf_data: 'Datos'
+    csf_conditionals: 'Condicionales'
+    csf_nested_loops: 'Bucles anidados'
+    csf_functions: 'Funciones'
+    csf_variables: 'Variables'
+    csf_for_loops: 'Bucles Para'
+    csf_internet: 'Internet'
+    csf_impacts: 'Impactos de la computación'
     csd1_1: 'Capítulo 1: El proceso de resolución de problemas'
     csd1_2: 'Capítulo 2: Computadoras y resolución de problemas'
     csd2_1: 'Capítulo 1: Contenido Web y HTML'
@@ -906,6 +944,10 @@ es-MX:
     csp_postap_2: 'Capítulo 2: Aplicaciones y bases de datos'
     csp2_1_2018: 'Unidad 2: Información Digital'
     csp3_1_2018: 'Unidad 3: Introducción a la Programación'
+    csp_variables: 'Variables'
+    csp_conditionals: 'Condicionales'
+    csp_functions: 'Funciones'
+    csp_project: 'Proyecto'
     dlp: 'Preguntas de reflexión'
   external_links:
     disclaimer: Descargo de responsabilidad
@@ -969,6 +1011,8 @@ es-MX:
   locked_stage: 'Los contenidos de esta etapa no son visibles ya que se encuentra actualmente bloqueada. Tu maestro puede desbloquear esta etapa cuando sea tiempo de trabajar en ella o para revisar tus respuestas.'
   hidden_stage: "Tu instructor no esperaba que estuvieras aquí. Por favor pregunta a tu instructor en qué lección deberías estar."
   hidden_script: "Tu maestro no esparaba que estuvieras aquí. Por favor pregúntale a tu maestro en cual unidad deberías estar."
+  no_script_access_student: "No tienes acceso a esta unidad. Por favor, pregunta a tu profesor qué unidad debe estar."
+  no_script_access_teacher: "No tienes acceso a esta unidad. Si crees que debes tener acceso a esta unidad, por favor escribe a support@code.org para que podamos solucionar la situación."
   return_unit_overview: 'Ir al resumen de la unidad'
   return_course_overview: 'Ve a la vista general de la unidad'
   view_all_units: 'Ver todas las unidades'

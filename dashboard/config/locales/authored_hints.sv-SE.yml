@@ -123,6 +123,12 @@ sv:
           * Använd blocket ”när vänsterpilen är intryckt” för att få roboten att göra en dansrörelse när du trycker på den.
 
           *Denna nivå slutar efter 8 åtgärder.*
+      CourseE_HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?
+      CourseE_HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Vilket vackert korallrev! Blå korall är den **rätta** vägen
+          att gå och kontrollera att röd korall inte är till **vänster**!
       Dance short test 2_authored_hint:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**

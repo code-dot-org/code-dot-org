@@ -572,6 +572,8 @@ fil:
         title: Relay Programming
       courseB_unplugged_MRF_2019:
         title: Ang Robot Kong Mga Kaibigan
+      courseB_unplugged_loopyMRF_2019:
+        title: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
       Conditionals_2019:
         title: Mga conditional
         desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante
@@ -598,6 +600,8 @@ fil:
           Ang araling ito ay gumagamit sa konseptong ito habang ipinapakita kung paano
           ang kompyuter nagtatago ng mas komplikadong mga impormasyon (gaya ng mga
           larawan at mga kulay) pati na rin sa binary.
+      courseE_unplugged_privateInformation_2019:
+        title: Pribado at Personal na Impormasyon
       GettingLoopy_2019:
         title: Pagiging Loopy
         desc: Ang araling ito ay nagpapakila ng isang pang-program na konsepto ng

@@ -2,10 +2,13 @@ is:
   data:
     script:
       category:
+        csd_2018_category_name: Uppgötvanir tölvunarfræði ('18-'19)
         csf_category_name: TF Grunnur
+        csf_2018_category_name: Grunnatriði tölvunarfræði (2018)
         csf_international_category_name: Grunnatriði TF - alþjóðlegt
         csf2_draft_category_name: 'Í þróun: Námskeið A-F'
         csp_category_name: "'15-'16 TF Grundvöllur"
+        csp_2018_category_name: Grunnhugtök tölvunarfræði ('18-'19)
         cspexams_category_name: Æfingapróf fyrir Undirstöðuatriði TF
         csp17_category_name: Grunnhugtök tölvunarfræði
         full_course_category_name: Heil námskeið
@@ -147,21 +150,21 @@ is:
             'Studio: Create a Story':
               name: 'Leikjasmiðja: Búa til sögu'
         playlab:
-          title: Leikjasmiðja
-          description: Búðu til sögu eða leik með Leikjasmiðju!
+          title: Leikjasmiðjan
+          description: Búðu til sögu eða leik með Leikjasmiðjunni!
           description_short: Búðu til sögu eða leik með Leikjasmiðju!
           stages:
             Play Lab:
-              name: Leikjasmiðja
+              name: Leikjasmiðjan
         artist:
           title: Listamaður
-          description: Teiknaðu flottar myndir og mynstur með listamanninum!
+          description: Teiknaðu flottar myndir og mynstur með Listamanninum!
           description_short: Teiknaðu flottar myndir og mynstur með listamanninum!
           stages:
             Artist:
               name: Listamaður
         hourofcode:
-          title: Hefðbundið völundarhús
+          title: Völundarhús
           description: Prófaðu undirstöðuatriði í tölvunarfræði með persónum úr Angry Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
           description_short: Prófaðu grunnatriði í tölvufræði með mörgum skemmtilegum fígúrum!
           stages:
@@ -330,8 +333,7 @@ is:
               name: Hönnunaruppskriftin
         K5PD:
           title: Fagmenntun kennara 5 - 11 ára (K-5)
-          description: Fagmenntun kennara fyrir 5 - 11 ára námskeið
-          description_short: Fagmenntun kennara fyrir 5 - 11 ára námskeið
+          description: 'Fagmenntun kennara fyrir 5 - 11 ára námskeið'
           stages:
             Computer Science Pedagogy:
               name: Kennsluhættir í tölvunarfræði
@@ -355,6 +357,8 @@ is:
               name: Verkefni án tölvu
             Writing computer programs:
               name: Skrifa tölvuforrit
+            new stage:
+              name: nýr áfangi
         netsim:
           title: Internet hermir
           stages:
@@ -449,7 +453,7 @@ is:
             Hoc2015 Blockly:
               name: Hoc2015 Blockly
             Play Lab:
-              name: Leikjasmiðja
+              name: Leikjasmiðjan
             The Artist:
               name: Listamaðurinn
             The Maze:
@@ -998,7 +1002,7 @@ is:
             Curriculum Reference:
               name: Tilvísun í námskrá
             Sprite Lab:
-              name: Kvikasmiðja
+              name: Kvikasmiðjan
             Dance Lab:
               name: Danssmiðja
         algebraPD2b:
@@ -1792,6 +1796,8 @@ is:
               name: Einföld dulkóðun
             Post-Course Survey:
               name: Könnun eftir námskeið
+            Student Post-Course Survey:
+              name: Nemendakönnun að loknu námskeiði
         csp5-2017:
           stages:
             Beyond Buttons Toward Apps:
@@ -2476,7 +2482,7 @@ is:
             RGB Color:
               name: RGB litir
             Play Lab:
-              name: Leikjasmiðja
+              name: Leikjasmiðjan
         csd2-2017:
           description_short: "  Lærðu að búa til þinn eigin vef í Vefsmiðjunni."
           stages:
@@ -3160,6 +3166,7 @@ is:
             Nested Loops:
               name: Innri lykkjur
           title: Hraðnámskeið
+          assignment_family_title: Hraðnámskeið
           description_short: 'Kynning á tölvunarfræði: sameinar það besta úr námsefni okkar fyrir eldri nemendur í grunnskóla.'
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         pre-express-2017:
@@ -3344,6 +3351,7 @@ is:
           stages:
             Minecraft Hour of Code:
               name: Klukkustund kóðunar með Minecraft
+          description: "Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!\nFerðist um Minecraft með kóða."
         csp-explore-2017:
           stages:
             new stage:
@@ -3539,6 +3547,7 @@ is:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og Stóra verkefnið
         express-2018:
+          assignment_family_title: Hraðnámskeið
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3928,6 +3937,9 @@ is:
           stages:
             Dance Party:
               name: Danspartý
+        dance-extras:
+          title: Halda áfram að dansa
+          description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
         coursef-2019:
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           description_audience: 'Aldur: 9-13'
@@ -3952,6 +3964,10 @@ is:
               name: nýr áfangi
             The Artist:
               name: Listamaðurinn
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Hópvistun
         dance-low:
           stages:
             Dance Party:
@@ -4034,6 +4050,9 @@ is:
               name: nýr áfangi
             'null':
               name: 'tómagildi'
+        dance-extras-gallery:
+          title: Halda áfram að dansa
+          description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
         coursec-2019:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           description_audience: 'Aldur: 6-10'
@@ -4066,6 +4085,8 @@ is:
               name: Ferðast í öryggi
             'Loops: Happy Loops':
               description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni.
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
         courseb-2019:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
@@ -4075,6 +4096,10 @@ is:
               name: Stafræna fótsporið þitt
             Loops in Ice Age:
               name: Lykkjur í Ísöld
+            Programming in Harvester:
+              name: Forritun með Hirðinum
+            Sequencing in Maze:
+              name: Röð aðgerða í Völundarhúsi
         pre-express-2019:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
@@ -4311,6 +4336,10 @@ is:
             Final Project:
               name: Lokaverkefni
         csp1-pilot:
+          stages:
+            new stage:
+              name: nýr áfangi
+        csd-videos:
           stages:
             new stage:
               name: nýr áfangi

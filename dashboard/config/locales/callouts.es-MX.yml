@@ -132,23 +132,23 @@ es-MX:
       CSD U6 light show_2019_callout:
         CSDUDL03P09: "¿Qué hace esta línea?"
       CSD U6 tugowar variables 1_callout:
-        CSD_U6_startGame: Define inicioJuego aquí
+        CSD_U6_startGame: Definir Inicio de Juego aqui
       CSD U6 tugowar variables 1_2018_callout:
-        CSD_U6_startGame: Define inicioJuego aquí
+        CSD_U6_startGame: Definir Inicio de Juego aqui
       CSD U6 tugowar variables 1_2019_callout:
-        CSD_U6_startGame: Define inicioJuego aquí
+        CSD_U6_startGame: Definir Inicio de Juego aqui
       CSD U6 tugowar variables 2_callout:
-        CSD_U6_movePlayer: Define moverJugador () aquí
+        CSD_U6_movePlayer: Definir moverJugador () aquí
       CSD U6 tugowar variables 2_2018_callout:
-        CSD_U6_movePlayer: Define moverJugador () aquí
+        CSD_U6_movePlayer: Definir moverJugador () aquí
       CSD U6 tugowar variables 2_2019_callout:
-        CSD_U6_movePlayer: Define moverJugador () aquí
+        CSD_U6_movePlayer: Definir moverJugador () aquí
       CSD U6 tugowar variables 3_callout:
-        CSD_U6_checkWin: Verifica si el jugador ha ganado
+        CSD_U6_checkWin: Verificar si el jugador ha ganado
       CSD U6 tugowar variables 3_2018_callout:
-        CSD_U6_checkWin: Verifica si el jugador ha ganado
+        CSD_U6_checkWin: Verificar si el jugador ha ganado
       CSD U6 tugowar variables 3_2019_callout:
-        CSD_U6_checkWin: Verifica si el jugador ha ganado
+        CSD_U6_checkWin: Verificar si el jugador ha ganado
       Counting_callout:
         New Play Lab Project_callout1: "¡Haz click en las categorías para ver los
           bloques en tu caja de herramientas! Arrastra los bloques al área de trabajo
@@ -174,9 +174,10 @@ es-MX:
       Course 4 Artist Functions 8_callout:
         edit_function: Haz clic aquí para editar tu función.
       Course 4 Artist Functions challenge_callout:
-        Course_4_Artist_Functions_challenge_1: Observe que hemos ordenado todos los
-          bloques y los pusimos detrás de categorías para mantener las cosas ordenadas.  Haga
-          clic aquí para encontrar todos los bloques que usted necesita.
+        Course_4_Artist_Functions_challenge_1: Observar que hemos ordenado todos los
+          bloques y los hemos colocado detrás de las categorías para mantener las
+          cosas ordenadas. Haga clic aquí para encontrar todos los bloques que usted
+          necesita.
       Course 4 Artist Params 2_callout:
         length_parameter: ¿Puedes actualizar esta función para que utilice el parámetro
           "longitud"?
@@ -199,17 +200,17 @@ es-MX:
         degrees_per_side: Divide 360 entre el número de lados para obtener el tamaño
           de cada ángulo en grados.
       Course 4 Artist Vars 8_callout:
-        Course_4_Artist_Vars_8_a: "¿Necesitas más espacio?  Arrastre esta barra para
-          hacer el área de codificación más amplia."
+        Course_4_Artist_Vars_8_a: "¿Necesitas más espacio? Arrastre esta barra para
+          ampliar el área de codificación."
       Course 4 Artist Vars 9_callout:
         set_sides: Usa este bloque para dar a "lados" el valor necesario para completar
           el rompecabezas.
       Course 4 Bee 1_callout:
-        if_bee_nectar: Utilice el bloque "if" para decidir si la abeja debe obtener
-          el néctar o hacer miel
+        if_bee_nectar: Utilice el bloque "si" para decidir si la abeja debe obtener
+          néctar o hacer miel
       Course 4 Bee 3_callout:
-        if_else_bee: Use el bloque "if/else" para que la abeja obtenga néctar de una
-          flor, y haga miel si no es una flor
+        if_else_bee: Use el bloque "si/si no" para que la abeja obtenga néctar de
+          una flor y haga miel si no es una flor
       Course 4 Bee For Loops 1_callout:
         get_nectar: Usa el bloque nuevo "obtener néctar".
       Course 4 Bee For Loops 6_callout:
@@ -219,13 +220,13 @@ es-MX:
         edit_get_nectar: Usa este botón para editar la función y cambiar la dirección
           hacia la que la abeja girará para obtener el néctar.
       Course 4 Bee Params 4 - Two WhenRun_callout:
-        Course_4_Bee_Params_4: Ajuste estas variables a "0" ó "1" esto es llamado
-          establecer una "bandera". Esta bandera puede señalar a nuestra función cuál
-          es la dirección en que la abeja tiene que ir.
+        Course_4_Bee_Params_4: Ajuste estas variables a "0" o "1" a esto le llamamos
+          establecer una "bandera". Esta bandera puede señalar a nuestra función hacia
+          cual dirección nuestra abeja tiene que ir.
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: Dale a "Ejecutar" para probar el programa.
-        Course 4 Maze 1_callout2: Usa el bloque de "Repetir" y ponlo alrededor de
-          los bloques del espacio de trabajo
+        Course 4 Maze 1_callout2: Arrastre el bloque "mover" y pégalo debajo de otros
+          bloques en el área de trabajo
       Course 4 Maze 4_callout:
         repeat: Ponga bloques dentro del bucle para repetir comandos
       Course 4 Play Lab Params 2_callout:
@@ -603,8 +604,8 @@ es-MX:
       behaviors 5_callout:
         behaviors_edit: Añadir código a este comportamiento.
       course2_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: Usa este bucle para recolectar todo
-          el nectar (o miel) de una flor (o panal).
+        courseD_bee_conditionals_challenge2_1: Usa este loop para recolectar todo
+          el néctar (o miel) de una flor (o panal).
       course3_artist_functions_challenge1_callout:
         courseE_artist_functions_challenge1_callout1: Mantén este programa funcionando
           agregando más códigos al final.
@@ -876,8 +877,8 @@ es-MX:
         courseC_maze_debugging5_1: "¡Estos bloques están bloqueados y no se pueden
           eliminar!"
       courseC_maze_debugging9_2019_callout:
-        courseC_maze_debugging9_2019_1: Arrastra los bloques de la caja de herramientas
-          al espacio de trabajo.
+        courseC_maze_debugging9_2019_1: Arrastra los bloques desde la caja de herramientas
+          hacia tu espacio de trabajo.
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: Sólo tienes disponible uno de estos bloques en este
           rompecabezas.
@@ -953,16 +954,13 @@ es-MX:
           bajo esta etiqueta en la caja de herramientas.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: No tienes que usar colores para resolver este
-          rompecabezas correctamente. Si lo deseas, ¡Este bloque "colores al azar"
-          lo facilita!
+          desafío correctamente. Si lo deseas, ¡Este bloque "colores al azar" lo facilita!
       courseD_artist_nestedLoops1a_2018_callout:
         courseD_artist_nestedLoops1a_1: No tienes que usar colores para resolver este
-          rompecabezas correctamente. Si lo deseas, ¡Este bloque "colores al azar"
-          lo facilita!
+          desafío correctamente. Si lo deseas, ¡Este bloque "colores al azar" lo facilita!
       courseD_artist_nestedLoops1a_2019_callout:
         courseD_artist_nestedLoops1a_1: No tienes que usar colores para resolver este
-          rompecabezas correctamente. Si lo deseas, ¡Este bloque "colores al azar"
-          lo facilita!
+          desafío correctamente. Si lo deseas, ¡Este bloque "colores al azar" lo facilita!
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Puedes cambiar este número.
         courseD_artist_ramp11_2: Haz click aquí para ingresar el número de veces que
@@ -984,14 +982,14 @@ es-MX:
         4_5_Bee_Conditionals_2_2: "¿Necesitas algo de ayuda? ¡Haga click aquí para
           ver nuestro nuevo VIDEO de AYUDA!"
       courseD_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: Usa este bucle para recolectar todo
-          el nectar (o miel) de una flor (o panal).
+        courseD_bee_conditionals_challenge2_1: Usa este loop para recolectar todo
+          el néctar (o miel) de una flor (o panal).
       courseD_bee_conditionals_challenge2_2018_callout:
-        courseD_bee_conditionals_challenge2_1: Usa este bucle para recolectar todo
-          el nectar (o miel) de una flor (o panal).
+        courseD_bee_conditionals_challenge2_1: Usa este loop para recolectar todo
+          el néctar (o miel) de una flor (o panal).
       courseD_bee_conditionals_challenge2_2019_callout:
-        courseD_bee_conditionals_challenge2_1: Usa este bucle para recolectar todo
-          el nectar (o miel) de una flor (o panal).
+        courseD_bee_conditionals_challenge2_1: Usa este loop para recolectar todo
+          el néctar (o miel) de una flor (o panal).
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Intenta repetir el bloque de movimiento
           hacia adelante usando este bucle.
@@ -1127,13 +1125,13 @@ es-MX:
         courseD_maze_ramp7_1: "¡Este es tu primer súper desafío! Estos están hechos
           difíciles a propósito y pueden implicar varios intentos."
       courseE_aboutme_5_callout:
-        courseE_aboutme_4_callout_1: Pulse aquí!
+        courseE_aboutme_4_callout_1: "¡Haz clic aquí!"
       courseE_artist_functions1_callout:
-        courseD_artist_functions1_1: Comencemos usando este block para ayudar a crear
-          la primera plaza.
+        courseD_artist_functions1_1: Comencemos usando este bloque para ayudar a crear
+          el primer cuadrado.
       courseE_artist_functions1_2018_callout:
-        courseD_artist_functions1_1: Comencemos usando este block para ayudar a crear
-          la primera plaza.
+        courseD_artist_functions1_1: Comencemos usando este bloque para ayudar a crear
+          el primer cuadrado.
       courseE_artist_functions2_callout:
         courseD_artist_functions2_1: Cuando este bloque verde se ejecuta, todos los
           códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después
@@ -1420,7 +1418,7 @@ es-MX:
         courseF_bee_functions6_1: "¡No te olvides buscar aquí más bloques que podrían
           ayudarte a hacerlo más fácl!"
       courseF_bee_functions_1_2018_callout:
-        courseF_bee_functions_1_2018_1: "¡Puedes encontrar las variables aquí!"
+        courseF_bee_functions_1_2018_1: "¡Puedes encontrar tus variables aquí!"
       courseF_bee_functions_challenge1_callout:
         courseF_bee_functions_challenge1_1: "¿Qué código deberías poner en esta función?"
         courseF_bee_functions_challenge1_2: La funcón "revisar el nectar o la miel"
@@ -1444,10 +1442,10 @@ es-MX:
         courseF_bee_fwp3_1: La misma función se puede usar cuando cuando busques espacios
           vacíos, asi como nubes.
       courseF_bee_fwp4_callout:
-        courseF_bee_fwp4_1: Presiona el botón "editar" para agregar un parametro a
+        courseF_bee_fwp4_1: Presiona el botón "editar" para agregar un parámetro a
           esta función.
       courseF_bee_fwp4_2018_callout:
-        courseF_bee_fwp4_1: Presiona el botón "editar" para agregar un parametro a
+        courseF_bee_fwp4_1: Presiona el botón "editar" para agregar un parámetro a
           esta función.
       courseF_bee_fwp_challenge2_callout:
         courseF_bee_fwp_challenge2_callout1: Esta función hará un buen trabajo con
@@ -1456,9 +1454,9 @@ es-MX:
         courseF_bee_fwp_challenge2_callout1: Esta función hará un buen trabajo con
           el maiz, pero ¿y las otras verduras?
       courseF_bee_variables_1_2018_callout:
-        courseF_bee_functions_1_2018_1: "¡Puedes encontrar las variables aquí!"
+        courseF_bee_functions_1_2018_1: "¡Puedes encontrar tus variables aquí!"
       courseF_bee_variables_1_2019_callout:
-        courseF_bee_functions_1_2018_1: "¡Puedes encontrar las variables aquí!"
+        courseF_bee_functions_1_2018_1: "¡Puedes encontrar tus variables aquí!"
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
@@ -1546,8 +1544,8 @@ es-MX:
         courseC_maze_programming3_2: Puedes arrastrar los bloques adicionales a la
           caja de herramientas para eliminarlos.
       express_maze_debugging9_2019_callout:
-        express_maze_debugging9_2019_1: Arrastra los bloques de la caja de herramientas
-          al espacio de trabajo.
+        express_maze_debugging9_2019_1: Arrastra los bloques desde la caja de herramientas
+          hacia tu espacio de trabajo.
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Utiliza el bloque de "crear
           un círculo" y cambia su tamaño.
@@ -1673,8 +1671,8 @@ es-MX:
         4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
           en categorías.  ¡Haz click sobre estas palabras para verlo todo!
       grade4_artist_functions1_callout:
-        grade4_artist_functions1_1: Comencemos usando este block para ayudar a crear
-          la primera plaza.
+        grade4_artist_functions1_1: Comencemos usando este bloque para ayudar a crear
+          el primer cuadrado.
       grade4_artist_functions2_callout:
         grade4_artist_funcions2_1: Cuando este bloque verde se ejecuta, todos los
           códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después
@@ -1746,8 +1744,8 @@ es-MX:
         add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haz clic en
           agregar y luego arrastrarlo en la definición de la función
       grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: "¿Necesitas más espacio?  Arrastre esta barra para
-          hacer el área de codificación más amplia."
+        Course_4_Artist_Vars_8_a: "¿Necesitas más espacio? Arrastre esta barra para
+          ampliar el área de codificación."
       grade5_artist_variables_pentagons1_callout:
         place_length_variable: Arrastre aquí la variable longitud para reemplazar
           los signos de interrogación
@@ -1776,7 +1774,7 @@ es-MX:
         grade5_bee_parameters_new3_1: La misma función se puede usar cuando cuando
           busques espacios vacíos, asi como nubes.
       grade5_bee_parameters_new4_callout:
-        grade5_bee_parameters_new4_1: Presiona el botón "editar" para agregar un parametro
+        grade5_bee_parameters_new4_1: Presiona el botón "editar" para agregar un parámetro
           a esta función.
       grade5_playlab_variables1_callout:
         arrows_move_actor: Usa las flechas para mover al actor

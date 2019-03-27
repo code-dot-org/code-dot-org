@@ -350,6 +350,8 @@ zh-CN:
               name: 离线课程
             Writing computer programs:
               name: 编写计算机程序
+            new stage:
+              name: 新的阶段
         netsim:
           title: 互联网模拟器
           stages:
@@ -8360,6 +8362,8 @@ zh-CN:
               name: Hannah的测试阶段
             Hannah Test Stage:
               name: Hannah 测试阶段
+            Unit 4 Assessment:
+              name: 第4单元评估
           title: 计算机科学原理游戏板
         dance-extras:
           stages:
@@ -8453,6 +8457,14 @@ zh-CN:
               name: 新的阶段
             The Artist:
               name: 小艺术家
+            Copyright and Creativity:
+              name: 版权和创造力
+            Internet:
+              name: 互联网
+            Crowdsourcing:
+              name: 众包
+            Digital Sharing:
+              name: 数字共享
         dance-low:
           stages:
             Dance Party:
@@ -8602,6 +8614,8 @@ zh-CN:
               name: 冰雪奇缘里的嵌套循环
             Conditionals in Minecraft:
               name: '《我的世界》中的条件'
+            Digital Sharing:
+              name: 数字共享
         express-2019:
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: '计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。'
@@ -8837,6 +8851,12 @@ zh-CN:
               name: 艺术家里的循环
             Learn to Drag and Drop:
               name: 学习拖放
+            Loops in Ice Age:
+              name: 冰河时代里的循环
+            Programming with Rey and BB-8:
+              name: 与雷伊，BB-8一起编程
+            Sequencing with Scrat:
+              name: 斯奎特和序列
         courseb-2019:
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 为学前学生准备的计算机科学介绍。类似于课程A，但是增加了概念的深度。
@@ -8868,6 +8888,10 @@ zh-CN:
               name: 游戏实验室中的事件
             'Loops: Getting Loopy':
               name: '循环: 变得糊涂'
+            Loops in Harvester:
+              name: 收割者中的循环
+            Programming in Maze:
+              name: 迷宫编程
         pre-express-2019:
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: '学龄前读者的计算机科学介绍：结合了我们最好的幼儿园和一年级的课程。'
@@ -9466,6 +9490,10 @@ zh-CN:
             Final Project:
               name: 最终项目
         csp1-pilot:
+          stages:
+            new stage:
+              name: 新的阶段
+        csd-videos:
           stages:
             new stage:
               name: 新的阶段
