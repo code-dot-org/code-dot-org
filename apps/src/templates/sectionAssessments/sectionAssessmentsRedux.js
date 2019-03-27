@@ -55,6 +55,8 @@ const MultiAnswerStatus = {
 
 const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
+export const ASSESSMENT_FEEDBACK_OPTION_ID = 0;
+
 // Action type constants
 const SET_ASSESSMENT_RESPONSES = 'sectionAssessments/SET_ASSESSMENT_RESPONSES';
 const SET_ASSESSMENTS_QUESTIONS =
@@ -264,7 +266,7 @@ export const getCurrentScriptAssessmentList = state => {
   /* Only add the feedback option to the dropdown for CSD and CSP */
   if (doesCurrentCourseUseFeedback(state)) {
     tempAssessmentList = tempAssessmentList.concat({
-      id: 0,
+      id: ASSESSMENT_FEEDBACK_OPTION_ID,
       name: 'All teacher feedback in this unit'
     });
   }

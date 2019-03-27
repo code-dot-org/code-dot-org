@@ -14,24 +14,24 @@ import color from '@cdo/apps/util/color';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const CSV_FEEDBACK_RUBRIC_HEADERS = [
-  {label: 'Student Name', key: 'studentName'},
-  {label: 'Lesson Number', key: 'stageNum'},
-  {label: 'Lesson Name', key: 'stageName'},
-  {label: 'Level', key: 'levelNum'},
-  {label: 'Key Concept', key: 'keyConcept'},
-  {label: 'Performance Level', key: 'performance'},
-  {label: 'Performance Level Details', key: 'performanceLevelDetails'},
-  {label: 'Feedback', key: 'comment'},
-  {label: 'Date Updated By Teacher', key: 'timestamp'}
+  {label: i18n.studentName(), key: 'studentName'},
+  {label: i18n.lessonNumber(), key: 'stageNum'},
+  {label: i18n.lessonName(), key: 'stageName'},
+  {label: i18n.level(), key: 'levelNum'},
+  {label: i18n.keyConcept(), key: 'keyConcept'},
+  {label: i18n.performanceLevel(), key: 'performance'},
+  {label: i18n.performanceLevelDetails(), key: 'performanceLevelDetails'},
+  {label: i18n.feedback(), key: 'comment'},
+  {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'}
 ];
 
 const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
-  {label: 'Student Name', key: 'studentName'},
-  {label: 'Lesson Number', key: 'stageNum'},
-  {label: 'Lesson Name', key: 'stageName'},
-  {label: 'Level', key: 'levelNum'},
-  {label: 'Feedback', key: 'comment'},
-  {label: 'Date Updated By Teacher', key: 'timestamp'}
+  {label: i18n.studentName(), key: 'studentName'},
+  {label: i18n.lessonNumber(), key: 'stageNum'},
+  {label: i18n.lessonName(), key: 'stageName'},
+  {label: i18n.level(), key: 'levelNum'},
+  {label: i18n.feedback(), key: 'comment'},
+  {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'}
 ];
 
 const styles = {
@@ -51,8 +51,8 @@ class FeedbackDownload extends Component {
   static propTypes = {
     sectionName: PropTypes.string.isRequired,
     // provided by redux
-    exportableFeedbackData: PropTypes.array,
-    scriptName: PropTypes.string,
+    exportableFeedbackData: PropTypes.array.isRequired,
+    scriptName: PropTypes.string.isRequired,
     isCurrentScriptCSD: PropTypes.bool
   };
 
