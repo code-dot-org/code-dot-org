@@ -282,7 +282,14 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user = create(:user, provider: 'google_oauth2', uid: '1111')
     sign_in user
 
-    @request.env['omniauth.auth'] = OmniAuth::AuthHash.new(provider: user.provider, uid: user.uid)
+    @request.env['omniauth.auth'] = OmniAuth::AuthHash.new(
+      provider: 'google_oauth2',
+      uid: '1111',
+      credentials: {
+        token: 'my-new-token',
+        refresh_token: 'my-new-refresh-token'
+      }
+    )
     @request.env['omniauth.params'] = {
       'scope' => 'userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly'
     }
@@ -291,6 +298,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :google_oauth2
     end
     assert_redirected_to 'http://test.host/home?open=rosterDialog'
+    google_ao = user.authentication_options.find_by_credential_type('google_oauth2')
+    assert_equal 'my-new-token', google_ao.data_hash[:oauth_token]
+    assert_equal 'my-new-refresh-token', google_ao.data_hash[:oauth_refresh_token]
   end
 
   test "login: omniauth callback sets token on user when passed with credentials" do

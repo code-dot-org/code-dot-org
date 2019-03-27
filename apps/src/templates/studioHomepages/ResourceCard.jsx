@@ -132,7 +132,7 @@ class ResourceCard extends Component {
     return (
       <div style={cardStyles}>
         <div style={titleStyles}>{title}</div>
-        <div style={descriptionStyles}>{descriptionContent}</div>;
+        <div style={descriptionStyles}>{descriptionContent}</div>
         <br />
         <Button
           id={linkId}
