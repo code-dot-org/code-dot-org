@@ -3,25 +3,27 @@ title: Pluralsight One
 video_player: true
 theme: responsive
 ---
-# Bring Pluralsight One To Your Classroom
+# Pluralsight One for Code.org Classrooms
 ![AP Computer Science Principles](/images/fit-700/2018-hoc-334-rs.jpg)
-## Keep growing their skills long after the AP Exam
-Once the AP Computer Science Principles Exam is over, continue growing learning and engagement in your classroom with [Pluralsight One's special partnership with Code.org](https://www.pluralsightone.org/product/education).  
+## Keep them learning after the AP Exam
+Once the AP Computer Science Principles Exam is over, you can continue encouraging student learning and engagement in your classroom through [Pluralsight One's special partnership with Code.org](https://www.pluralsightone.org/product/education).  
 
-Students who participate in Code.org’s AP Computer Science Principles curriculum can continue to develop the skills they've spent the year building with free and unlimited access to the Pluralsight course library. Designed specifically for your students, these courses allow your classroom to dive deeper into intermediate and advanced topics. <br>
+Students who participate in Code.org’s AP Computer Science Principles curriculum can continue to develop the skills they've spent the year building with free access to the Pluralsight course library designed especially for Code.org students..These courses allow your students to dive deeper into many of the concepts introduced in CS Principles. <br>
 
 ### **Code.org AP Computer Science student access**<br>
-Advance your students’ futures by enabling them to build in-demand skills and learn from expert technologists.
+Students can build in-demand skills and learn from expert technologists. The Pluralsight One offering for Code.org students provides:
+* Dozens of expert-led courses<br>
+* Deeper dives into networking, databases, programming, game development and more<br>
+* Skill assessments to benchmark your abilities<br>
+* Learning paths to learn skills in an appropriate progression<br>
+* Channels to focus learning on goals 
+* Mobile and offline viewing to learn anytime, anywhere<br> 
 
-* Dozens of expert-led courses <br>
-* Topics in networking, help desk, databases, programming, game dev and more <br>
-* Skill assessments to benchmark your abilities <br>
-* Learning paths to learn the right skills in the right order <br>
-* Channels to focus learning on your goals <br>
-* Mobile and offline viewing to learn anytime, anywhere <br>
-
-[<button>Get Started</button>](https://www.pluralsightone.org/product/education) <br><br>
 Curated by expert technologists, the library features over 150 courses totaling over 500 hours of content across four major areas: IT/OPs, software development, design/creative, and product management.
+<Br>
+
+As the AP CS Principles exam approaches, Code.org teachers will be notified through email newsletters and the teacher dashboard on how to get access the Pluralsight One offering. 
+
 
 ## Teachers
 <div class="col-50" style="padding-right: 0px;">

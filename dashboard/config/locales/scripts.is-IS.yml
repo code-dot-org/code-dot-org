@@ -5047,3 +5047,7 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+        csd-videos:
+          stages:
+            new stage:
+              name: nýr áfangi

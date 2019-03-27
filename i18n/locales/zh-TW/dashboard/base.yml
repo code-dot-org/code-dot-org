@@ -83,7 +83,7 @@ zh-TW:
     sign_out_of: '您正在使用 %{provider} 登入。<a href="%{url}">點這裡</a>登出 %{provider}。'
     already_signedup: '已經註冊了？'
     notyet_signedup: "還沒加入？"
-    google_oauth2: 'Google帳戶'
+    google_oauth2: 'Google 帳戶'
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: '微軟帳戶'
@@ -275,8 +275,8 @@ zh-TW:
         playlab: '製作一個 Play Lab App'
         artist: '畫些什麼'
         applab: '製作一個 App Lab app'
-        gamelab: '製作遊戲實驗室專案'
-        weblab: '製作網路實驗室 (測試版) 專案'
+        gamelab: '創建一個 Game Lab 專案'
+        weblab: '創建一個 Web Lab 專案'
       my_dashboard: "我的控制台"
       course_catalog: "課程目錄"
       project_gallery: "所有專案"
@@ -326,13 +326,32 @@ zh-TW:
       driver: '已登入'
       navigator: '夥伴'
       create: '建立'
+      algebra_game: '代數'
       applab: 'App Lab'
       artist: '藝術家'
-      gamelab: 'Game Lab'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
-      flappy: '像素鳥'
+      basketball: '籃球'
+      bounce: '彈跳'
+      calc: '計算'
       dance: '舞蹈派對'
+      eval: 'Eval'
+      flappy: '像素鳥'
+      frozen: '冰雪奇緣'
+      gamelab: 'Game Lab'
+      gamelab_jr: 'Game Lab（測試版）'
+      gumball: '阿甘妙世界'
+      iceage: '冰原歷險記'
+      infinity: '無限'
+      minecraft_adventurer: 'Minecraft 探險家'
+      minecraft_aquatic: 'Minecraft 水世界'
+      minecraft_designer: 'Minecraft'
+      minecraft_hero: 'Minecraft 英雄們'
+      playlab: 'Play Lab'
+      scratch: 'Scratch'
+      sports: '運動'
+      starwars: '星際大戰'
+      starwarsblocks: '星際大戰（程式積木）'
+      starwarsblocks_hour: '星際大戰（程式積木）'
+      weblab: 'Web Lab'
       view_all: '瀏覽所有專案…'
     popup:
       progress_for_user: "%{name} 的進度"
@@ -471,7 +490,7 @@ zh-TW:
     announcement_apcsp_recruitment: "<strong>CSP 的教師：</strong>你的學生可以在 Code.org 的下一個病毒介紹視頻中被鼓勵參加這個年度的 AP CS Principles 考試。我們將邀請所有 CS Principles 的學生在 Twitter、Instagram或是 Facebook ，上提交一個 10-20 秒的片段，影片內容說明為何要參加 APCSP 考式。最棒的提交內容會被放入我們的推薦影片中，並可以獲得 Code.org 提供的禮物！"
     announcement_apcsp_recruitment2: "今年的 AP CS Principles 考試有望打破記錄。學生在考試中的參與可能急劇轉變多樣性在 AP 電腦科學中，但我們需要你的説明。鼓勵每個 CS Principles 學生選修 AP CSP 考試，我們會 <a href='%{gift_url}' target='_blank'> 送你一個禮物</a>。學生也可以到我們的 <a href='%{challenge_url}' target='_blank'> #APCSP 視頻的挑戰</a>，鼓勵在全國各地的同好。"
     announcement_apcsp_recruitment3: "今年的 AP CS Principles考試有望打破記錄。參與 AP 電腦科學考試的學生中可能有極大轉變的多樣性，但我們需要您的幫助。鼓勵每個 CS Principles 學生參與 AP CSP 考試且你將可以贏得 <a href='%{gift_url}' target='_blank'> 一張禮品卡、 一台筆記本電腦或其他很酷的獎品</a> ！分享 <a href='%{video_url}' target='_blank'> 這部影片</a> 所以你的學生可以聽到來自全國各地參加考試的同年紀學生。"
-    announcement_csp_deadline: "最後呼籲高中教師 ！請成為你的學校電腦科學領域的表率，使用我們高品質的專業學習程式，<strong>絕對不對你或你的學校收費</strong>。4 月 14 日截止申請。"
+    announcement_csp_deadline: "最後呼籲高中教師！使用我們高品質的專業學習程式，成為你的學校在計算機科學領域的表率吧！<strong>我們絕對不會向你或你的學校收費</strong>。4 月 14 日截止申請。"
     announcement_applab_export: "應用實驗室，即我們的網頁式程式設計環境，現在支援匯出你的程式碼 ！你可以拖放 JavaScript 積木開始構建應用程式與，然後匯出以便在你所選擇的任何專業的開發環境中繼續編輯程式碼。"
   move_students:
     new_section_dne: "抱歉，學習小組 %{new_section_code} 不存在。請輸入其他的學習小組代碼。"
@@ -628,6 +647,7 @@ zh-TW:
       body: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
     sports:
       title: "運動"
+      body: "製作一個籃球遊戲或是混合搭配多種不同的運動的遊戲。"
     unplugged:
       title: "不插電的教學活動"
       audience: "年齡 4+"
@@ -732,7 +752,7 @@ zh-TW:
     tos: "服務條款"
     privacy: "隱私政策"
     privacy_notice: "隱私聲明"
-    accept_label: '我同意更新的 <a href="%{tos_url}"target="_blank"> 服務條款</a> 和 <a href="%{privacy_url}"target="_blank"> 隱私政策</a>'
+    accept_label: '我同意 <a href="%{tos_url}"target="_blank"> 服務條款</a> 和 <a href="%{privacy_url}"target="_blank"> 隱私政策</a>'
     accept: "接受"
     print: "列印"
     reminder_desc: '我們已經更新了<a href="%{tos_url}"target="_blank"> 服務條款</a>和<a href="%{privacy_url}"target="_blank">隱私政策</a>。同意前請仔細閱讀。注意，在你的學生接受更新的條款之前，可能無法使用我們教授 JavaScript 的工具。'
@@ -861,6 +881,19 @@ zh-TW:
     csf_e_2: '課程 E 內容'
     csf_f_1: '提升至課程 F（可選）'
     csf_f_2: '課程 F 內容'
+    csf_digcit: '數位公民'
+    csf_jigsaw: '拼圖'
+    csf_loops: '迴圈'
+    csf_events: '事件'
+    csf_binary: '二進制（Binary）'
+    csf_data: '數據'
+    csf_conditionals: '條件判斷（Conditionals）'
+    csf_sprites: '角色'
+    csf_nested_loops: '巢狀迴圈'
+    csf_functions: '函式'
+    csf_variables: '變數'
+    csf_for_loops: '計數迴圈（For Loops）'
+    csf_internet: '網際網路 Internet'
     csd1_1: '第 1 章：解決問題的流程'
     csd1_2: '第 2 章：計算機與問題解決能力'
     csd2_1: '第 1 章：網站內容和 HTML'
@@ -876,6 +909,9 @@ zh-TW:
     cspSurvey: '問卷'
     cspAssessment: '章節測驗'
     csp2_1_2018: '單元 2：數位資訊'
+    csp_variables: '變數'
+    csp_conditionals: '條件判斷（Conditionals）'
+    csp_functions: '函式'
     dlp: '反思提問'
   external_links:
     disclaimer: 免責聲明
@@ -940,7 +976,7 @@ zh-TW:
   return_unit_overview: '移至單元概覽'
   return_course_overview: '移至課程概覽'
   view_all_units: '檢視所有單元'
-  view_teacher_guide: '查看教師指導'
+  view_teacher_guide: '檢視教學指引'
   pd:
     form_labels:
       first_name: '名字'
@@ -998,13 +1034,11 @@ zh-TW:
         codecademy: 'CodeCademy'
         csfirst: 'Google CS First'
         khan: 'Khan Academy'
-        kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
         other: "其它："
       robotics:
         grok: 'Grok Learning'
-        kodable: 'Kodable'
         lego: 'LEGO Education'
         microbit: 'Microbit'
         ozobot: 'Ozobot'

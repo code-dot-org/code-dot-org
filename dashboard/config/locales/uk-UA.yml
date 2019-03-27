@@ -282,13 +282,26 @@ uk:
       driver: Водій
       navigator: Навігатор
       create: Створити
+      algebra_game: Алгебра
       applab: App Lab
       artist: Художник
-      gamelab: Ігрова лабораторія
-      playlab: Ігрова студія
-      minecraft: Майнкрафт
-      flappy: Пурх
+      bounce: Арканоід
+      calc: Калькулятор
       dance: Танцювальна вечірка
+      eval: Оцінювання
+      flappy: Пурх
+      frozen: Крижане серце
+      gamelab: Ігрова лабораторія
+      gumball: Гамбол
+      iceage: Льодовиковий період
+      infinity: Infinity
+      minecraft_adventurer: Майнкрафт - Пригоди
+      minecraft_designer: Майнкрафт
+      playlab: Ігрова студія
+      sports: Спорт
+      starwars: Зоряні війни
+      starwarsblocks: Зоряні війни (блоки)
+      starwarsblocks_hour: Зоряні війни (блоки)
     popup:
       progress_for_user: Прогрес %{name}
       progress: Ваш прогрес
@@ -902,6 +915,17 @@ uk:
     extra_course_content: Додатковий вміст курсу
     csf_e_2: Зміст курсу E
     csf_f_2: Зміст курсу F
+    csf_digcit: Цифрове громадянство
+    csf_jigsaw: Пазли
+    csf_loops: Цикли
+    csf_events: Події
+    csf_binary: Двійкова система
+    csf_conditionals: Умови
+    csf_nested_loops: Вкладені цикли
+    csf_functions: функції
+    csf_variables: змінні
+    csf_for_loops: Цикли For
+    csf_internet: Інтернет
     csd1_1: 'Глава 1: Процес вирішення проблем'
     csd1_2: 'Глава 2: Комп''ютери та вирішення проблем'
     csd2_1: 'Глава 1: Веб-контент та HTML'
@@ -925,6 +949,9 @@ uk:
     csp5_1: 'Глава 1: Програмування, кероване подіями'
     csp5_2: 'Глава 2: Програмування з структурами даних'
     csp2_1_2018: 'Розділ 2: Цифрова інформація'
+    csp_variables: змінні
+    csp_conditionals: Умови
+    csp_functions: функції
   external_links:
     disclaimer: Відмова від відповідальності
     leaving_domain: Ви покидаєте цей домен на сайт, який не керується Code.org.

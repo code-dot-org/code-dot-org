@@ -8704,7 +8704,8 @@ zh-CN:
         courseC_artist_loops3a_b: 使用`画贴纸`模块上的下拉菜单来查找蝙蝠贴纸。
       courseC_artist_loops3a_2019_authored_hint:
         courseC_artist_loops3a_a: 你要在循环中的鸟贴纸之后只添加一个模块 。
-        courseC_artist_loops3a_b: 使用`画贴纸`模块上的下拉菜单来查找蝙蝠贴纸。
+        courseC_artist_loops3a_b: |-
+          使用`画贴纸`模块上的下拉菜单来查找蝙蝠贴纸。
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
           使用此模块向前跳转：
