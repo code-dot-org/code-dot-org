@@ -38,6 +38,7 @@ class Level < ActiveRecord::Base
 
   validates_length_of :name, within: 1..70
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
+  validates :name, format: {with: /\A(?~:)\z/}
 
   after_save :write_custom_level_file
   after_destroy :delete_custom_level_file
