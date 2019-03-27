@@ -728,7 +728,7 @@ describe('entry tests', () => {
         // include the runtime twice, webpack entry points will be loaded twice.
         //
         // Without a single, named runtimeChunk there would be no runtimeChunk
-        // to include, and entry point would load and run separately.
+        // to include, and entry points would load and run separately.
         // However, those entry points would create separate instances of any
         // shared modules. This would mean that state within webpack modules
         // cannot be shared between entry points, breaking many assumptions made
