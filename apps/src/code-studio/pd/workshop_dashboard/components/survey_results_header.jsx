@@ -580,6 +580,7 @@ export default class SurveyResultsHeader extends React.Component {
                 name="year"
                 onChange={this.handleYearChange}
                 value={this.state.selectedYear}
+                disabled={this.state.selectedWorkshopId}
               >
                 {yearOptions}
               </select>
