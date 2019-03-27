@@ -11,7 +11,8 @@ import {
   isCurrentAssessmentSurvey,
   countSubmissionsForCurrentAssessment,
   getExportableData,
-  setStudentId
+  setStudentId,
+  ASSESSMENT_FEEDBACK_OPTION_ID
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {getStudentList} from '@cdo/apps/redux/sectionDataRedux';
 import {connect} from 'react-redux';
@@ -151,7 +152,8 @@ class SectionAssessments extends Component {
       studentList
     } = this.props;
 
-    const isCurrentAssessmentFeedbackOption = this.props.assessmentId === 0;
+    const isCurrentAssessmentFeedbackOption =
+      this.props.assessmentId === ASSESSMENT_FEEDBACK_OPTION_ID;
 
     return (
       <div>
