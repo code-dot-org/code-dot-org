@@ -103,7 +103,8 @@ class Level < ActiveRecord::Base
   end
 
   def specified_autoplay_video
-    Video.current_locale.find_by_key(video_key)
+    @@specified_autoplay_video ||= {}
+    @@specified_autoplay_video[video_key + ":" + I18n.locale.to_s] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
   end
 
   def summarize_concepts
