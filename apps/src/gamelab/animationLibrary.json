@@ -6143,24 +6143,6 @@
         "y": 300
       }
     },
-    "category_food/eggplant": {
-      "name": "eggplant",
-      "frameCount": 1,
-      "frameSize": {
-        "x": 611,
-        "y": 628
-      },
-      "looping": true,
-      "frameDelay": 2,
-      "jsonLastModified": "2017-04-18 06:01:09 UTC",
-      "pngLastModified": "2017-04-18 06:01:10 UTC",
-      "version": "HvZ.C6iEgJsllxV83otQnDqytZ.QBYEv",
-      "sourceUrl": "/api/v1/animation-library/HvZ.C6iEgJsllxV83otQnDqytZ.QBYEv/category_food/eggplant.png",
-      "sourceSize": {
-        "x": 611,
-        "y": 628
-      }
-    },
     "category_food/fish_cooked": {
       "name": "fish_cooked",
       "frameCount": 1,
@@ -17709,7 +17691,6 @@
       "category_food/cracked_egg",
       "category_food/cucumber",
       "category_food/cupcake",
-      "category_food/eggplant",
       "category_food/fish_cooked",
       "category_food/fries",
       "category_food/grapes",
@@ -18991,9 +18972,6 @@
     ],
     "drum_set": [
       "category_music/drum_set"
-    ],
-    "eggplant": [
-      "category_food/eggplant"
     ],
     "eighth_note": [
       "category_music/eighth_note"

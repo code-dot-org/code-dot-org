@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Потрібно використати інший танець.",
   "danceFeedbackNeedEveryTwoMeasures": "Переконайся, що використовується блок `every two measures`",
   "danceFeedbackNeedMakeANewDancer": "Використай блок `make new` для створення другого танцюриста.",
+  "danceFeedbackKeyEvent": "",
   "measure": "Крок:"
 }

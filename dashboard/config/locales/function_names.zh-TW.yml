@@ -87,6 +87,7 @@ zh-TW:
       do something: do something
       filter_pixel: filter_pixel
       draw_image: draw_image
+      checkSimulationEnd: checkSimulationEnd
       witch ending: witch ending
       story: story
       starting path: starting path
@@ -127,7 +128,7 @@ zh-TW:
       shift down: shift down
       level_up: level_up
       score_points: score_points
-      set score: set score
+      set score: 得分 文字設為
       draw a line of hexagons: draw a line of hexagons
       shift down/forward: shift down/forward
       shift down/backward: shift down/backward
@@ -225,6 +226,7 @@ zh-TW:
       draw line of triangles: draw line of triangles
       draw a window: draw a window
       stop_everything: stop_everything
+      lose: lose
       draw a plane of squares: draw a plane of squares
       draw hexagon: draw hexagon
       draw line of hexagons: draw line of hexagons

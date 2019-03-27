@@ -36,8 +36,8 @@ es-MX:
       MC HOC 2016 Village Test_failure_message_override: Necesitas realizar la persecución del Golem de Hierro y atacar a los zombies para ganar.
       Valentine_playlab_01_failure_message_override: '¡Casi! inténtalo otra vez.'
       WhileAdventure_failure_message_override: '¡Felicidades! Recogiste X monedas!'
-      courseC19_playLab_EOC3_failure_message_override: "Debe agregar dos o más\nNuevos actores a tu juego y programarlos para que se muevan."
-      courseE_playLab_scaffold3_failure_message_override: "Debe agregar dos o más\nNuevos actores a tu juego y programarlos para que se muevan."
+      courseC19_playLab_EOC3_failure_message_override: Debes agregar dos o más nuevos actores a tu juego y programarlos para que se muevan.
+      courseE_playLab_scaffold3_failure_message_override: Debes agregar dos o más nuevos actores a tu juego y programarlos para que se muevan.
       courseE_playLab_scaffold3_2018_failure_message_override: "Debe agregar dos o más\nNuevos actores a tu juego y programarlos para que se muevan."
       grade4_scaffolded_project3_failure_message_override: Debes agregar dos o más nuevos actores que se muevan a tu juego.
       kikiTesta_failure_message_override: '¡Felicidades! Recogiste X monedas!'

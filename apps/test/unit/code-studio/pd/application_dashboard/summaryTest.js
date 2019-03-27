@@ -82,6 +82,7 @@ describe('Summary', () => {
     let summary = createSummary();
 
     server.respond();
+    summary.update();
     const rows = summary.find(Row);
     expect(rows).to.have.length(2);
     expect(rows.at(0).children()).to.have.length(3);

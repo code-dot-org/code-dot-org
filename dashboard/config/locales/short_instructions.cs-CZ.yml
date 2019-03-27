@@ -852,16 +852,6 @@ cs:
         * (Tip: použijete téměř stejný kód jako ve funkci "moveCloud0")
         * Zavolejte vaši novou funkci "moveCloud(name)" uvnitř bloku události jednou pro každý název mraku.
         * (Tip: je to podobné tomu, jak je 'loopCloud(name)' funkce volána mnohokrát.
-      CSD U6 params modify clouds_2019: |-
-        # Mraky
-
-        Tento program rozpohybuje mraky, když zafoukáte do mikrofonu. Není však dokončen.
-
-        # Udělejte následující:
-        * Vytvořit novou funkci "moveCloud(name)", která pohne libovolným mrakem.
-        * (Tip: použijete téměř stejný kód jako ve funkci "moveCloud0")
-        * Zavolejte vaši novou funkci "moveCloud(name)" uvnitř bloku události jednou pro každý název mraku.
-        * (Tip: je to podobné tomu, jak je 'loopCloud(name)' funkce volána mnohokrát.
       CSD U6 params modify planes: |-
         # Ovladání letadel
 
@@ -908,6 +898,7 @@ cs:
       Calc Circles of Eval 7: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
       Calc Circles of Eval 8: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
       Calc Circles of Eval 9: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
+      CoureE_HOC 2018 Level_7a: V podmořských ruinách hledej truhlu.
       Course 2 Bee Loops 1: 'Ahoj, já jsem včela. Pomůžeš mi sesbírat nektar z těchto
         květin? '
       Course 2 Bee Loops 3: Nyní použij nový blok opakuj k sesbírání všeho nektaru

@@ -181,9 +181,8 @@ module Api::V1::Pd
 
             if locked_param != @application.locked?
               lock_changed = true
+              locked_param ? @application.lock! : @application.unlock!
             end
-
-            locked_param ? @application.lock! : @application.unlock!
           end
         end
 

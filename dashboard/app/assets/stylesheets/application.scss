@@ -381,19 +381,17 @@ img.video_thumbnail {
       border: 1px solid $charcoal;
       border-bottom: 0;
       a {
-        color: $teal;
+        color: $charcoal;
         font-family: 'Gotham 5r', sans-serif;
         min-width: 240px;
         font-size: 14px;
         border-bottom: 1px solid $charcoal;
         box-sizing: content-box;
         white-space: nowrap;
+        cursor: pointer;
       }
       a:hover {
-        color: $teal;
-        font-weight: 900;
-        background-color: $white;
-        cursor: pointer;
+        background-color: $lightest_gray;
       }
       img {
         height: 70px;
@@ -458,11 +456,6 @@ img.video_thumbnail {
   .freeplay_links {
     float: left;
     padding-top: 13px;
-  }
-
-  .project_list {
-    float: left;
-    margin-top: 6px;
   }
 }
 
