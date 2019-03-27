@@ -302,6 +302,13 @@ export default class SurveyResultsHeader extends React.Component {
     );
   };
 
+  handleYearChange = event => {
+    // eventually call
+    // setSurveyPanel with year, have that set the year in state
+    // for now:
+    this.setState({year: event.target.value});
+  };
+
   handleOnClickDownloadCsv = () => {
     if (this.props.organizerView && !this.state.selectedWorkshopId) {
       window.open(`${organizerViewApiRoot}${this.state.selectedCourse}.csv`);
@@ -527,6 +534,21 @@ export default class SurveyResultsHeader extends React.Component {
       );
     }
 
+    const yearOptions = [
+      '2013-2014',
+      '2014-2015',
+      '2015-2016',
+      '2016-2017',
+      '2017-2018',
+      '2018-2019'
+    ].map((year, i) => {
+      return (
+        <option key={i} value={year}>
+          {year}
+        </option>
+      );
+    });
+
     return (
       <div>
         <div> View Survey Results </div>
@@ -551,6 +573,18 @@ export default class SurveyResultsHeader extends React.Component {
               {workshopOptions}
             </select>
           </Col>
+
+          {this.props.organizerView && (
+            <Col sm={2}>
+              <select
+                name="year"
+                onChange={this.handleYearChange}
+                value={this.state.selectedYear}
+              >
+                {yearOptions}
+              </select>
+            </Col>
+          )}
         </Row>
         <br />
         {/* Temporary warning about missing data until we fix this view to include new results! */}
