@@ -28,6 +28,7 @@ import logToCloud from '../logToCloud';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {EXPO_SESSION_SECRET} from '../constants';
+import {fetchWebpackRuntime} from '../util/exporter';
 
 // This whitelist determines which appOptions properties
 // will get exported with the applab app, appearing in the
@@ -425,24 +426,7 @@ export default {
     const zipApplabAssetPrefix = appName + '/' + rootRelativeApplabAssetPrefix;
 
     // webpack-runtime must appear exactly once on any page containing webpack entries.
-    //
-    // Attempt to fetch webpack-runtime.min.js if possible, but when running on
-    // non-production environments, fallback if we can't fetch that file to use
-    // webpack-runtime.js:
-
-    const webpackRuntimeAsset = new $.Deferred();
-    download('/blockly/js/webpack-runtime.min.js' + cacheBust, 'text').then(
-      (data, success, jqXHR) =>
-        webpackRuntimeAsset.resolve([data, success, jqXHR]),
-      download('/blockly/js/webpack-runtime.js' + cacheBust, 'text').then(
-        (data, success, jqXHR) =>
-          webpackRuntimeAsset.resolve([data, success, jqXHR]),
-        () =>
-          webpackRuntimeAsset.reject(
-            new Error('failed to fetch webpack-runtime.js')
-          )
-      )
-    );
+    const webpackRuntimeAsset = fetchWebpackRuntime(cacheBust);
 
     // Attempt to fetch applab-api.min.js if possible, but when running on non-production
     // environments, fallback if we can't fetch that file to use applab-api.js:
