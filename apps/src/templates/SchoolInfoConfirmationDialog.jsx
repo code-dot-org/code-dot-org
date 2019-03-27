@@ -36,14 +36,10 @@ class SchoolInfoConfirmationDialog extends Component {
   renderInitialContent() {
     const {onConfirm} = this.props;
     return (
-      <div>
-        <Body>
-          <div>
-            <p>
-              {i18n.schoolInfoDialogDescription()} Lincoln Elementary School?
-            </p>
-          </div>
-        </Body>
+      <Body>
+        <div>
+          <p>{i18n.schoolInfoDialogDescription()} Lincoln Elementary School?</p>
+        </div>
         <Button
           text={i18n.schoolInfoDialogUpdate()}
           color={Button.ButtonColor.blue}
@@ -56,7 +52,7 @@ class SchoolInfoConfirmationDialog extends Component {
           onClick={onConfirm}
           href={'#'}
         />
-      </div>
+      </Body>
     );
   }
 
