@@ -48,6 +48,20 @@ module Pd::Application
 
     REVIEWING_INCOMPLETE = 'Reviewing Incomplete'
 
+    TAUGHT_IN_PAST_NO_BONUS_POINT_RESPONSES = [
+      "CS Discoveries",
+      "CS Principles (intro or AP-level)",
+      "AP CS A",
+      "Beauty and Joy of Computing",
+      "Code HS",
+      "Edhesive",
+      "Exploring Computer Science",
+      "Mobile CSP",
+      "NMSI",
+      "Project Lead the Way",
+      TEXT_FIELDS[:other_please_list]
+    ]
+
     serialized_attrs %w(
       status_log
       principal_approval_not_required
@@ -144,7 +158,8 @@ module Pd::Application
     end
 
     def formatted_teacher_email
-      "\"#{teacher_full_name}\" <#{user.email}>"
+      teacher_email = user.email.presence || sanitize_form_data_hash[:alternate_email]
+      "\"#{teacher_full_name}\" <#{teacher_email}>"
     end
 
     def formatted_principal_email
@@ -501,7 +516,7 @@ module Pd::Application
         meets_scholarship_criteria_scores[:previous_yearlong_cdo_pd] = responses[:previous_yearlong_cdo_pd].exclude?('CS Principles') ? YES : NO
       end
 
-      bonus_points_scores[:taught_in_past] = responses[:taught_in_past] == [options[:taught_in_past].last] ? 2 : 0
+      bonus_points_scores[:taught_in_past] = (responses[:taught_in_past] & TAUGHT_IN_PAST_NO_BONUS_POINT_RESPONSES).any? ? 0 : 2
 
       # Section 4
       meets_minimum_criteria_scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
@@ -519,25 +534,25 @@ module Pd::Application
           responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO
 
         meets_minimum_criteria_scores[:plan_to_teach] =
-          if responses[:principal_plan_to_teach].in? principal_options[:plan_to_teach].first(2)
+          if responses[:principal_plan_to_teach]&.in? principal_options[:plan_to_teach].first(2)
             YES
-          elsif responses[:principal_plan_to_teach].in? principal_options[:plan_to_teach].slice(2..3)
+          elsif responses[:principal_plan_to_teach]&.in? principal_options[:plan_to_teach].slice(2..3)
             NO
           else
             nil
           end
 
         meets_scholarship_criteria_scores[:plan_to_teach] =
-          if responses[:principal_plan_to_teach].in? principal_options[:plan_to_teach].first
+          if responses[:principal_plan_to_teach]&.in? principal_options[:plan_to_teach].first
             YES
-          elsif responses[:principal_plan_to_teach].in? principal_options[:plan_to_teach].slice(1..3)
+          elsif responses[:principal_plan_to_teach]&.in? principal_options[:plan_to_teach].slice(1..3)
             NO
           else
             nil
           end
 
         meets_minimum_criteria_scores[:principal_schedule_confirmed] =
-          if responses[:principal_schedule_confirmed].in?(principal_options[:committed_to_master_schedule].slice(0..1))
+          if responses[:principal_schedule_confirmed]&.in?(principal_options[:committed_to_master_schedule].slice(0..1))
             YES
           elsif responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][2]
             NO
@@ -548,7 +563,7 @@ module Pd::Application
         meets_scholarship_criteria_scores[:principal_schedule_confirmed] =
           if responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][0]
             YES
-          elsif responses[:principal_schedule_confirmed].in?(principal_options[:committed_to_master_schedule].slice(1..2))
+          elsif responses[:principal_schedule_confirmed]&.in?(principal_options[:committed_to_master_schedule].slice(1..2))
             NO
           else
             nil
@@ -557,14 +572,14 @@ module Pd::Application
         bonus_points_scores[:replace_existing] =
           if responses[:principal_wont_replace_existing_course] == principal_options[:replace_course][1]
             5
-          elsif responses[:principal_wont_replace_existing_course].in? [principal_options[:replace_course][0], principal_options[:replace_course][2]]
+          elsif responses[:principal_wont_replace_existing_course]&.in? [principal_options[:replace_course][0], principal_options[:replace_course][2]]
             0
           else
             nil
           end
 
         if course == 'csd'
-          meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation].in?(principal_options[:csd_implementation].first(2)) ? YES : NO
+          meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation]&.in?(principal_options[:csd_implementation].first(2)) ? YES : NO
           bonus_points_scores[:principal_implementation] = responses[:principal_implementation] == principal_options[:csd_implementation][1] ? 2 : 0
         elsif course == 'csp'
           meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation] == principal_options[:csp_implementation].first ? YES : NO
@@ -688,9 +703,10 @@ module Pd::Application
           principal_white_percent: format("%0.02f%%", principal_response[:white]),
           principal_other_percent: format("%0.02f%%", principal_response[:other]),
           principal_wont_replace_existing_course: replace_course_string,
-          principal_how_heard: principal_response.values_at(:how_heard, :how_heard_other).compact.join(" "),
           principal_send_ap_scores: principal_response[:send_ap_scores],
-          principal_pay_fee: principal_response[:pay_fee]
+          principal_pay_fee: principal_response[:pay_fee],
+          principal_contact_invoicing: principal_response[:contact_invoicing],
+          principal_contact_invoicing_detail: principal_response[:contact_invoicing_detail]
         }
       )
       save!

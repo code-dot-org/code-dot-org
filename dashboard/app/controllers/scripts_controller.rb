@@ -116,6 +116,9 @@ class ScriptsController < ApplicationController
 
   def set_script
     @script = Script.get_from_cache(params[:id])
+    if current_user && @script&.pilot? && !@script.has_pilot_access?(current_user)
+      render :no_access
+    end
   end
 
   def script_params

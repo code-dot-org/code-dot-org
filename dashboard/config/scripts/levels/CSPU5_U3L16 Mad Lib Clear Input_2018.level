@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:01:54.000Z",
-  "level_num": "custom",
-  "user_id": 42,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -170,15 +166,19 @@
     "name_suffix": "_2018",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "short_instructions": "Clear the user's previous text when the Play Again button is clicked (Click to see full instructions) ",
     "long_instructions": "# Play It Again and Again!\r\n\r\nWhen the user clicks the \"Play again\" button, the first screen should reset and not show the user's previous text.\r\n\r\n# Do This:\r\n- When the \"Play again\" button is clicked, __clear the text from each text input__ on Screen 1.\r\n- __Free play:__ Add images, or more How-to steps for your Mad Libs, and invite others to play!\r\n\r\n<img src=\"https://images.code.org/a49fe3eba4d2d2fb03e45d15aad53dbf-image-1450143105779.16.14 Mad Libs play again button.gif\" style=\"width:200px\">\r\n\r\n<details>\r\n\r\n<summary><strong>Hint</strong></summary>\r\n\r\nTry setting the text to the empty string: `\"\"`.\r\n\r\n</details>\r\n",
-    "preload_asset_list": null,
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:01:54.000Z",
+  "level_num": "custom",
+  "user_id": 42,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-12-11 00:48:32 +0000\",\"changed\":[\"notes\",\"code_functions\",\"instructions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-15 04:21:55 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",

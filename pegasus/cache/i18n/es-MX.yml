@@ -140,21 +140,22 @@ es-MX:
     estimula a los niños a innovar y crear.
   third_party_tynker_btn_curriculum: Prueba el Currículo Tynker para Lectores Principiantes
   third_party_tynker_btn_site: Visita Tynker
-  third_party_scratchjr_desc: Scratch Jr. es un lenguaje de programación introductorio
-    que permite a los pequeños (de 5 a 7 años) crear sus propias historias interactivas
-    y juegos. Los niños empatan bloques gráficos de programación para hacer que los
-    personajes se muevan, brinquen. bailen y canten. Los niños pueden modificar a
-    los personajes en el editor de dibujo, agregar sus propias voces y sonidos, incluso
-    insertar fotos de ellos, luego usar los bloques de programación para hacer que
-    sus personajes tomen vida.
-  third_party_scratchjr_btn_curriculum: Descarga el Currículo de Scratch Jr.
+  third_party_scratchjr_desc: Scratch Jr. es un lenguaje de programación básico que
+    ayuda a los niños pequeños (de 5 a 7 años) a crear sus propias historias y juegos
+    interactivos. Los niños conectan bloques gráficos de programación para que los
+    personajes se muevan, salten, bailen y canten. También pueden modificar a los
+    personajes en el editor de dibujo, agregar sus propias voces y sonidos, e incluso
+    insertar fotos de ellos. Luego, pueden dar vida a sus personajes con los bloques
+    de programación.
+  third_party_scratchjr_btn_curriculum: Descarga el plan de estudios de Scratch Jr.
   third_party_scratchjr_btn_site: Visita Scratch Jr.
-  third_party_scratch_desc: Con Scratch, puedes programar tus propias historias interactivas,
-    juegos y animaciones y compartir tus creaciones con otros en la comunidad en línea.
-    Scratch ayuda a los jóvenes a aprender a pensar creativamente, razonar sistemáticamente
-    y trabajar colaborativamente – habilidades esenciales para la vida en el s. XXI.
-  third_party_scratch_btn_curriculum: Descarga el Currículo de Scratch
-  third_party_scratch_btn_forum: Foro de Scratch Educator
+  third_party_scratch_desc: Con Scratch, puedes programar tus propias historias, juegos
+    y animaciones interactivos, y compartir tus creaciones con otras personas de la
+    comunidad en línea. Scratch ayuda a los jóvenes a aprender a pensar de forma creativa,
+    razonar de manera sistemática y trabajar en equipo, habilidades esenciales para
+    la vida en el siglo 21.
+  third_party_scratch_btn_curriculum: Descarga el plan de estudios de Scratch
+  third_party_scratch_btn_forum: Foro de docentes de Scratch
   third_party_scratch_btn_site: Visita Scratch
   third_party_lightbot_desc: En Lightbot, los estudiantes deben programar un robot
     con comandos para resolver rompecabezas. Los estudiantes pueden jugar en el Navegador
@@ -276,12 +277,12 @@ es-MX:
   just_did_course2: He terminado el Curso 2 - ¡mira! @codeorg
   just_did_course3: He terminado el Curso 3 – ¡míralo! @codeorg
   just_did_course4: He terminado el Curso 4 – ¡mira! @codeorg
-  just_did_coursea: He terminado el Curso A - ¡mira! @codeorg
-  just_did_courseb: He terminado el Curso B - ¡mira! @codeorg
+  just_did_coursea: He terminado el Curso A. ¡Echa un vistazo! @codeorg
+  just_did_courseb: He terminado el Curso B. ¡Echa un vistazo! @codeorg
   just_did_coursec: He terminado el Curso C - ¡mira! @codeorg
   just_did_coursed: He terminado el Curso D - ¡mira! @codeorg
-  just_did_coursee: He terminado el Curso E - ¡mira! @codeorg
-  just_did_coursef: He terminado el Curso F – ¡míralo! @codeorg
+  just_did_coursee: He terminado el Curso E - ¡Echa un vistazo! @codeorg
+  just_did_coursef: Acabo de completar el Curso F - ¡Dale un vistazo! @codeorg
   just_did_accelerated: He terminado el Curso Acelerado - ¡mira! @codeorg
   just_did_hoc_donor: 'Acabo de hacer la #HoraDelCódigo - ¡Dale un vistazo! (Gracias
     %{donor_twitter} por apoyar a @codeorg)'
@@ -929,7 +930,7 @@ es-MX:
   dashboard_sections_table_secret: Tipo de inicio de sesión
   dashboard_sections_table_grade: Grado
   dashboard_sections_table_course: Curso
-  dashboard_sections_table_pairing_allowed: Programación en Parejas
+  dashboard_sections_table_pairing_allowed: Programación en parejas
   dashboard_sections_table_stage_extras: Etapa Extra
   dashboard_sections_table_students: Estudiantes
   dashboard_sections_table_code: Código de sección
@@ -1140,7 +1141,7 @@ es-MX:
   hoc2014_try_new_tutorials: Pruebe nuestros nuevos tutoriales de la Hora del Código
   hoc2014_try_new_tutorial: Prueba nuestro nuevo tutorial de la hora del código en
     beta
-  hoc2014_try_scrat: Scrat, PvZ y Angry Birds
+  hoc2014_try_scrat: Angry Birds, PvZ y Scrat
   hoc2014_try_frozen: Artista con Anna y Elsa de "Frozen"
   carousel_heading_codeorg: Tutoriales realizados por Code.org
   carousel_heading_codeorg_any_device: Tutoriales por Code.org (para todos los dispositivos)
@@ -1206,7 +1207,7 @@ es-MX:
   tynker_name: Crea tu propio juego
   scratch_name: Despierta tu creatividad con la programación
   lightbot_name: Lightbot
-  thinkersmith_name: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+  thinkersmith_name: Mis amigos robóticos
   condcards_name: Condicionales con tarjetas
   lightbotintl_name: Lightbot
   codehs_name: Aprende a programar con Karel, el perro
@@ -1264,6 +1265,12 @@ es-MX:
   coursed-2017_name: Curso D (2017)
   coursee-2017_name: Curso E (2017)
   coursef-2017_name: Curso F (2017)
+  coursea-2018_name: Curso A (2018)
+  courseb-2018_name: Curso B (2018)
+  coursec-2018_name: Curso C (2018)
+  coursed-2018_name: Curso D (2018)
+  coursee-2018_name: Curso E (2018)
+  coursef-2018_name: Curso F (2018)
   accelerated_name: Curso acelerado
   express_name: Curso Express
   pre-express_name: 'Curso Express pre-lectores:'
@@ -1353,7 +1360,7 @@ es-MX:
   khanfr_gradelevel: Secundaria
   khanpl_gradelevel: Secundaria
   tynker_gradelevel: Edad 5-13
-  scratch_gradelevel: Edad 8+
+  scratch_gradelevel: Más de 8 años
   lightbot_gradelevel: Todas las edades
   thinkersmith_gradelevel: Todas las edades
   condcards_gradelevel: Edad 8-12
@@ -1377,7 +1384,7 @@ es-MX:
   touchdevelop_gradelevel: Preparatoria
   appinventor_gradelevel: Secundaria
   blockly_gradelevel: Todas las edades
-  thinkersmith2_gradelevel: Edad 8+
+  thinkersmith2_gradelevel: Más de 8 años
   kodableunplugged_gradelevel: Edad 8-13
   projguts_gradelevel: Edad 10-13
   hourofcode_gradelevel: Edades 6+
@@ -1397,24 +1404,24 @@ es-MX:
   course2_gradelevel: Edades de 6 a 18 años
   course3_gradelevel: Edades de 8 a 18 años
   course4_gradelevel: Edades de 10 a 18 años
-  coursea_gradelevel: Edades de 4 a 7 años
-  courseb_gradelevel: Edades de 5 a 8 años
+  coursea_gradelevel: De 4 a 7 años
+  courseb_gradelevel: De 5 a 8 años
   coursec_gradelevel: Edades de 6 a 10 años
-  coursed_gradelevel: Califación 8+
+  coursed_gradelevel: Edades de 7 a 11 años
   coursee_gradelevel: Edad 8-12
-  coursef_gradelevel: 9-13 años
-  coursea-2017_gradelevel: Edades de 4 a 7 años
-  courseb-2017_gradelevel: Edades de 5 a 8 años
+  coursef_gradelevel: De 9 a 13 años
+  coursea-2017_gradelevel: De 4 a 7 años
+  courseb-2017_gradelevel: De 5 a 8 años
   coursec-2017_gradelevel: Edades de 6 a 10 años
-  coursed-2017_gradelevel: Califación 8+
+  coursed-2017_gradelevel: Edades de 7 a 11 años
   coursee-2017_gradelevel: Edad 8-12
-  coursef-2017_gradelevel: 9-13 años
-  coursea-2018_gradelevel: Edades de 4 a 7 años
-  courseb-2018_gradelevel: Edades de 5 a 8 años
+  coursef-2017_gradelevel: De 9 a 13 años
+  coursea-2018_gradelevel: De 4 a 7 años
+  courseb-2018_gradelevel: De 5 a 8 años
   coursec-2018_gradelevel: Edades de 6 a 10 años
-  coursed-2018_gradelevel: Califación 8+
+  coursed-2018_gradelevel: Edades de 7 a 11 años
   coursee-2018_gradelevel: Edad 8-12
-  coursef-2018_gradelevel: 9-13 años
+  coursef-2018_gradelevel: De 9 a 13 años
   accelerated_gradelevel: Edades de 10 a 18 años
   codeorg_platformtext: Navegadores modernos, smartphones, tabletas
   codeintl_platformtext: Navegadores modernos, smartphones, tabletas
@@ -1557,44 +1564,44 @@ es-MX:
     crearán historias interactivas y juegos que puedan compartir con cualquier persona.
     Recomendado para los grados del 4 al 8."
   coursea_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para pre lectores.
+    para prelectores.
   courseb_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para pre lectores. (Similar al curso A pero con más variedad para estudiantes
-    mas avanzados)
+    para prelectores (similar al Curso A, pero con más variedad para estudiantes más
+    avanzados).
   coursec_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
     de la computación y crea tu propio arte, historias y juegos.
   coursed_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego
     puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
-  coursee_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso
-    de C y D y luego ir más allá con funciones.
+  coursee_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos
+    C y D, y luego avanza con funciones.
   coursef_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de
-    ciencias de la computación y crea tu propio arte, historia o juego.
+    Ciencias de la Computación y crea tu propio arte, historia o juego.
   coursea-2017_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para pre lectores.
+    para prelectores.
   courseb-2017_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para pre lectores. (Similar al curso A pero con más variedad para estudiantes
-    mas avanzados)
-  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
-    de la computación y crea tu propio arte, historias y juegos.
+    para prelectores (similar al Curso A, pero con más variedad para estudiantes más
+    avanzados).
+  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
+    de la Computación y crea tu propio arte, historias y juegos.
   coursed-2017_shortdescription_congrats: Rápidamente repasada conceptos del Curso
     C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
-  coursee-2017_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso
-    de C y D y luego ir más allá con funciones.
+  coursee-2017_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos
+    C y D, y luego avanza con funciones.
   coursef-2017_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
-    de ciencias de la computación y crea tu propio arte, historia o juego.
+    de Ciencias de la Computación y crea tu propio arte, historia o juego.
   coursea-2018_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para pre lectores.
+    para prelectores.
   courseb-2018_shortdescription_congrats: Una introducción a las ciencias de la computación
-    para pre lectores. (Similar al curso A pero con más variedad para estudiantes
-    mas avanzados)
-  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
-    de la computación y crea tu propio arte, historias y juegos.
+    para prelectores (similar al Curso A, pero con más variedad para estudiantes más
+    avanzados).
+  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
+    de la Computación y crea tu propio arte, historias y juegos.
   coursed-2018_shortdescription_congrats: Rápidamente repasada conceptos del Curso
     C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
-  coursee-2018_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso
-    de C y D y luego ir más allá con funciones.
+  coursee-2018_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos
+    C y D, y luego avanza con funciones.
   coursef-2018_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
-    de ciencias de la computación y crea tu propio arte, historia o juego.
+    de Ciencias de la Computación y crea tu propio arte, historia o juego.
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante
     programación de arrastrar y soltar. Este tutorial autodirigido que se parece a
     un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg,
@@ -1788,7 +1795,7 @@ es-MX:
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
-  scratchjr_beyond_name: ScratchJR para pre-lectores
+  scratchjr_beyond_name: ScratchJR para prelectores
   hopscotch_beyond_name: 'Hopscotch: programando en tu iPad'
   pocketcode_beyond_name: Código de bolsillo
   groklearning_beyond_name: Aprenda el lenguaje de programación Python
@@ -1820,7 +1827,7 @@ es-MX:
   codeorg_beyond_gradelevel: Edad 4-104
   khan_beyond_gradelevel: Secundaria
   tynker_beyond_gradelevel: Edad 5-13
-  scratch_beyond_gradelevel: Edad 8+
+  scratch_beyond_gradelevel: Más de 8 años
   lightbot_beyond_gradelevel: Todas las edades
   codecademy_beyond_gradelevel: Preparatoria
   kodable_beyond_gradelevel: Escuela primaria
@@ -1840,8 +1847,8 @@ es-MX:
   coursera_beyond_gradelevel: Universidad
   udacity_beyond_gradelevel: Universidad
   teachingtree_beyond_gradelevel: Universidad
-  kodu_beyond_gradelevel: Edad 8+
-  cargobot_beyond_gradelevel: Edad 8+
+  kodu_beyond_gradelevel: Más de 8 años
+  cargobot_beyond_gradelevel: Más de 8 años
   kidsruby_beyond_gradelevel: Edad 12+
   w3schools_beyond_gradelevel: Edad 12+
   codeavengers_beyond_gradelevel: Secundaria
@@ -1849,11 +1856,11 @@ es-MX:
   codecombat_beyond_gradelevel: Secundaria
   codea_beyond_gradelevel: Secundaria
   lego_beyond_gradelevel: Secundaria
-  finch_beyond_gradelevel: Edad 8+
+  finch_beyond_gradelevel: Más de 8 años
   arduino_beyond_gradelevel: Secundaria
   processing_beyond_gradelevel: Preparatoria
   alice_beyond_gradelevel: Secundaria
-  sphero_beyond_gradelevel: Edad 8+
+  sphero_beyond_gradelevel: Más de 8 años
   codeorg_beyond_platformtext: Navegadores modernos, tabletas
   khan_beyond_platformtext: Cualquier navegador moderno
   tynker_beyond_platformtext: Navegadores modernos (requiere $$)
@@ -1901,7 +1908,8 @@ es-MX:
   codecademy_beyond_shortdescription: Aprende programación en JavaScript en un navegador
   kodable_beyond_shortdescription: Un juego divertido para aprender los conceptos
     básicos de la programación en un iPad
-  scratchjr_beyond_shortdescription: 'Crea historias interactivas y juegos con ScratchJr. '
+  scratchjr_beyond_shortdescription: 'Crea historias y juegos interactivos con Scratch
+    Jr. '
   hopscotch_beyond_shortdescription: Aprende programación visual en un iPad
   pocketcode_beyond_shortdescription: "¡Crea un juego en tu teléfono inteligente y
     compártelo con amigos para probarlo!"
@@ -2259,8 +2267,8 @@ es-MX:
   hoc2018_creativity_hoc_coming: Ya viene la Hora del código…
   hoc2018_creativity_what_will_you_create: "¿Qué crearás?"
   hoc2018_creativity_homepage: Deja volar la imaginación y que nazca la innovación.
-    Comienza con una Hora del código y establece tu propio estilo creativo, cualquiera
-    que sea. Ve nuestro video.
+    Comienza con una Hora del Código y define tu propio estilo creativo, sea cual
+    sea. Mira nuestro video.
   hoc2018_creativity_hoc_about: 'Este año, la Hora del Código es completamente sobre
     creatividad. '
   hoc2018_creativity_social_media: 'Este año #HourOfCode se enfoca en la creatividad.
@@ -2270,8 +2278,8 @@ es-MX:
   hoc2018_creativity_courses: Anda más allá con los cursos de la Hora del Código
   hoc2018_creativity_courses_link: Anda más allá con <a href="https://studio.code.org/courses">cursos
     Code.org</a>
-  hoc2018_homepage: Registra tu clase para probar una de los más de 150 NUEVAS actividades
-    de la Hora del Código (Dic 3-9)!
+  hoc2018_homepage: "¡Inscribe a tu clase para probar una de las más de 150 NUEVAS
+    actividades de la Hora del Código (del 3 al 9 de diciembre)!"
   hoc2018_mc_page_title: Tutoriales de Minecraft Hora del Código
   hoc2018_mc_details: Muchos idiomas| Navegadores y tabletas modernos | Grados 2+
   hoc2018_mc_aquatic_announcement: Registra tu clase para probar una de las más de
@@ -2333,12 +2341,12 @@ es-MX:
     aprender
   hoc2018_mc_video_title_anybody_can_learn: Cualquiera puede aprender
   hoc2018_mc_video_title_my_name_is_aracely: Mi nombre es Aracely
-  hoc2018_mc_homepage_hoc_coming: Está llegando la Hora del Código...
+  hoc2018_mc_homepage_hoc_coming: La Hora del Código está llegando...
   hoc2018_mc_homepage_what_create: "¿Qué crearás?"
-  hoc2018_mc_homepage_give_flight: Deja volar la imaginación y nacimiento a la innovación.
-    Comienza con una Hora del Código y dale tu propio estilo creativo, cualquiera
-    este sea.
-  hoc2018_mc_homepage_watch_video: "¡Mira este video"
+  hoc2018_mc_homepage_give_flight: Deja volar la imaginación y que nazca la innovación.
+    Comienza con una Hora del Código y define tu propio estilo creativo, sea cual
+    sea.
+  hoc2018_mc_homepage_watch_video: Mira nuestro video
   hoc2018_mc_homepage_join_us: Únete
   hoc2018_mc_homepage_try_it: Pruébalo
   hoc2018_mc_back_journey: "¡Minecraft está de vuelta para la Hora del Código con
@@ -2353,6 +2361,7 @@ es-MX:
     problemas para explorar y construir mundos bajo el agua con el código.
   hoc2018_mc_journey: Viaje a través de Minecraft con el código.
   hoc2018_dance_party_main_heading: Fiesta de baile
+  hoc2018_dance_party_landing_title: Bailar
   hoc2018_dance_party_subheading: Ayude a traducir Fiesta de Baile
   hoc2018_dance_create_your_own_dance_title: Crea tu propia fiesta del baile
   hoc2018_dance_party_box_title: Fiesta de baile
@@ -2430,5 +2439,9 @@ es-MX:
   page_not_found_title: Página no encontrada
   page_not_found_header: 404 Página no encontrada
   page_not_found_description: La página que buscas no existe en esta dirección. Comprueba
-    la dirección web y vuelve a enviarla. O, regrese a nuestra página web.
+    la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio.
   page_not_found_button: Regresa a casa
+  hoc2018_mc_with_microsoft: En colaboración con
+  hoc2018_mc_thank_microsoft: Agradecemos a Microsoft el apoyo a nuestra visión y
+    misión para asegurar que cada niño tenga la oportunidad de aprender Ciencias de
+    la Computación y las habilidades para tener éxito en el siglo XXI.

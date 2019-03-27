@@ -32,7 +32,8 @@ class UserLevel < ActiveRecord::Base
   belongs_to :script
   belongs_to :level_source
 
-  before_save :handle_unsubmit
+  after_save :after_submit, if: :submitted_or_resubmitted?
+  before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
 
   validate :readonly_requires_submitted
 
@@ -94,12 +95,31 @@ class UserLevel < ActiveRecord::Base
     driver? || navigator?
   end
 
-  def handle_unsubmit
-    if submitted_changed? from: true, to: false
-      self.best_result = ActivityConstants::UNSUBMITTED_RESULT
-    end
+  def submitted_or_resubmitted?
+    submitted_changed?(to: true) || (submitted? && level_source_id_changed?)
+  end
 
-    # Destroy any existing peer reviews
+  def after_submit
+    submitted_level = Level.cache_find(level_id)
+
+    # Create peer reviews after submitting a peer_reviewable solution
+    if submitted_level.try(:peer_reviewable?)
+      submitted_script_level = submitted_level.script_levels.find_by(script_id: script_id)
+      learning_module = submitted_script_level&.stage&.plc_learning_module
+      assignment_exists = learning_module && Plc::EnrollmentModuleAssignment.exists?(
+        user_id: user_id,
+        plc_learning_module: learning_module
+      )
+      if assignment_exists
+        PeerReview.create_for_submission(self, level_source_id)
+      end
+    end
+  end
+
+  def before_unsubmit
+    self.best_result = ActivityConstants::UNSUBMITTED_RESULT
+
+    # Destroy any existing, unassigned peer reviews
     if Script.cache_find_level(level_id).try(:peer_reviewable?)
       PeerReview.where(submitter: user.id, reviewer: nil, level: level).destroy_all
     end

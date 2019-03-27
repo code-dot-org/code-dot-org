@@ -96,7 +96,7 @@ The Hour of Code is an international campaign to recruit students to try compute
 
 A [recent study](/files/HourOfCodeImpactStudy_Jan2017.pdf) of students participating in the Hour of Code showed significant improvements in attitudes and self-efficacy towards computer science, *especially among female students.*
 
-The results speak for themselves, with 100 million “hours served”, and 48% of participants being female, the Hour of Code is the largest-scale effort to introduce computer science to girls.
+The results speak for themselves, with over 700 million “hours served”, and 50% of participants being female, the Hour of Code is the largest-scale effort to introduce computer science to girls.
 
 <center><img src="/images/hourofcodewomen.png" /></center>
 
@@ -111,9 +111,9 @@ We’ve also distributed [recruitment posters, videos, and other marketing mater
 | Our own team gender diversity |             |
 |------| ----------- |
 | Code.org full time staff |  62% female |
-| Our leadership team |  60% female |
-| Our engineering team (software engineers only) |  30% female |
-| Our technical staff (software engineers, technical product managers, computer science educators) |  42% female |
+| Our leadership team |  55% female |
+| Our engineering team (software engineers only) |  50% female |
+| Our technical staff (software engineers, technical product managers, computer science educators) |  51% female |
 | Our extended team of expert facilitators|  66% female |
 | The teachers attending our professional development |  86% female |
 

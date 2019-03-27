@@ -1,11 +1,12 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RegionalPartnerMiniContact from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
+import {
+  RegionalPartnerMiniContact,
+  RegionalPartnerMiniContactPopupLink
+} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 
-$(document).ready(showRegionalPartnerMiniContact);
-
-function showRegionalPartnerMiniContact() {
+window.showRegionalPartnerMiniContact = function() {
   const regionalPartnerMiniContactElement = $(
     '#regional-partner-mini-contact-container'
   );
@@ -35,4 +36,27 @@ function showRegionalPartnerMiniContact() {
         regionalPartnerMiniContactElement[0]
       );
     });
-}
+};
+
+window.showRegionalPartnerMiniContactPopupLink = function() {
+  const regionalPartnerMiniContactPopupLinkElement = $(
+    '#regional-partner-mini-contact-popup-link-container'
+  );
+
+  const sourcePageId = regionalPartnerMiniContactPopupLinkElement.data(
+    'source-page-id'
+  );
+  const notes = regionalPartnerMiniContactPopupLinkElement.data(
+    'options-notes'
+  );
+  const linkText = regionalPartnerMiniContactPopupLinkElement.data('link-text');
+
+  ReactDOM.render(
+    <RegionalPartnerMiniContactPopupLink
+      notes={notes}
+      sourcePageId={sourcePageId}
+      children={linkText}
+    />,
+    regionalPartnerMiniContactPopupLinkElement[0]
+  );
+};

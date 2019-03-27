@@ -1645,6 +1645,13 @@ Then /^I navigate to teacher dashboard for the section I saved$/ do
   }
 end
 
+Then /^I navigate to the script "([^"]*)" stage (\d+) lesson extras page for the section I saved$/ do |script_name, stage_num|
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/s/#{script_name}/stage/#{stage_num}/extras?section_id=#{@section_id}"
+  }
+end
+
 Then /^I hide unit "([^"]+)"$/ do |unit_name|
   selector = ".uitest-CourseScript:contains(#{unit_name}) .fa-eye-slash"
   @browser.execute_script("$(#{selector.inspect}).click();")

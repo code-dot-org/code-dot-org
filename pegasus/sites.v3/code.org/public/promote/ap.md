@@ -292,7 +292,7 @@ For 2018 College Board data, we consider the following ethnic group categories t
 
 ### Deep Historical Analysis of State Data by Barb Ericson
 
-* Barb Ericson at Georgia Tech has been doing much deeper analyses of these AP Computer Science A Exam data for many years. If you're interested in the *really* deep dive, check out her [AP Data Page](http://home.cc.gatech.edu/ice-gt/595).
+* Barb Ericson at Georgia Tech has been doing much deeper analyses of these AP Computer Science A Exam data for many years. If you're interested in the *really* deep dive, check out her [AP Data Page](http://cs4all.home.blog).
 
 ## Downloads
 

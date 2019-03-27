@@ -53,7 +53,7 @@
     "makerlab_enabled": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"firstTimeSetPosition\",\r\n  \"callout_text\": \"Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"setPosition\\\"]\",\r\n  \"on\": \"setPosHover\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"UI Controls\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "parent_level_id": 13532,
     "name_suffix": "_2019",
     "hide_share_and_remix": "false",

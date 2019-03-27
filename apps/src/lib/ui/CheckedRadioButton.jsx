@@ -27,7 +27,10 @@ export class CheckedRadioButton extends Component {
           onChange={this.handleChange}
           disabled={this.props.disabledMode}
         />
-        <label htmlFor={this.props.id} />
+        <label
+          htmlFor={this.props.id}
+          className="hidden-label-checked-radio-button"
+        />
       </div>
     );
   }

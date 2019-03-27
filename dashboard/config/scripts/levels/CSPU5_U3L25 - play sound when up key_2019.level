@@ -62,6 +62,7 @@
     "encrypted_examples": "jCj8yap7qFx+bpyASKmF2HPzbsAE9MR5b9W0c8uPrlEFpvwNo2tIFqsbua4W\nzg7x\n",
     "parent_level_id": 13810,
     "name_suffix": "_2019",
+    "show_debug_watch": "true",
     "preload_asset_list": null
   },
   "published": true

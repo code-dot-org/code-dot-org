@@ -172,19 +172,6 @@ class Section < ActiveRecord::Base
     return ADD_STUDENT_SUCCESS
   end
 
-  # Enrolls student in this section (possibly restoring an existing deleted follower) and removes
-  # student from old section.
-  # @param student [User] The student to enroll in this section.
-  # @param old_section [Section] The section from which to remove the student.
-  # @return [boolean] Whether a new student was added.
-  def add_and_remove_student(student, old_section)
-    old_follower = old_section.followers.where(student_user: student).first
-    return false unless old_follower
-
-    old_follower.destroy
-    add_student student
-  end
-
   # Remove a student from the section.
   # Follower is determined by the controller so that it can authorize first.
   # Optionally email the teacher.
@@ -248,6 +235,7 @@ class Section < ActiveRecord::Base
         script.course&.family_name
       end
 
+    unique_students = students.uniq(&:id)
     {
       id: id,
       name: name,
@@ -257,7 +245,7 @@ class Section < ActiveRecord::Base
       linkToAssigned: link_to_assigned,
       currentUnitTitle: title_of_current_unit,
       linkToCurrentUnit: link_to_current_unit,
-      numberOfStudents: students.length,
+      numberOfStudents: unique_students.length,
       linkToStudents: "#{base_url}#{id}/manage",
       code: code,
       stage_extras: stage_extras,
@@ -270,11 +258,11 @@ class Section < ActiveRecord::Base
         name: script.try(:name),
         course_family_name: course_family_name
       },
-      studentCount: students.size,
+      studentCount: unique_students.size,
       grade: grade,
       providerManaged: provider_managed?,
       hidden: hidden,
-      students: students.map(&:summarize),
+      students: unique_students.map(&:summarize),
     }
   end
 

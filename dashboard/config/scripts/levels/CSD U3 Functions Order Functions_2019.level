@@ -62,11 +62,15 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 11376,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "map_reference": "/docs/concepts/javascript/functions/",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-03-19 15:02:59 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-03-19 15:02:59 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2019-03-05 22:55:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

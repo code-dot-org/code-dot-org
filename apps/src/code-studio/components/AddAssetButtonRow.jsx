@@ -9,7 +9,6 @@ export const assetButtonStyles = {
     paddingLeft: 10,
     paddingRight: 10,
     marginTop: 5,
-    borderRadius: 4,
     fontSize: 'large',
     fontWeight: 'lighter',
     marginRight: 10
