@@ -106,7 +106,7 @@ Scenario: Project Version Checkpoints
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(1)" is not visible
 
 # Brad (2018-11-14) Skip on IE due to blocked pop-ups
-@no_mobile @no_ie
+@no_mobile @no_ie @no_chrome
 Scenario: Project page refreshes when other client adds a newer version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
