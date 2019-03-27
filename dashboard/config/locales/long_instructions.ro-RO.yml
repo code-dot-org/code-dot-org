@@ -327,7 +327,7 @@ ro:
 
         Trage blocul `crează un nou` în spaţiul de lucru, şi conectează-l în interiorul blocului `configurare` pentru a creea primul tău dansator.
 
-        * *Poţi apăsa de asemenea şi becul din partea stîngă dacă vrei mai multe informaţii sau mai multe provocări.*
+        * *Poţi apăsa de asemenea şi becul din partea stângă dacă vrei mai multe informaţii sau mai multe provocări.*
       CourseD_Dance_Party_02: |-
         Hai să facem acest elan să danseze!
 
@@ -388,9 +388,9 @@ ro:
 
         Încearcă să foloseşti câteva dintre blocurile "toate raţele" să scri cod care va face ca toate raţele să danseze împreună.
       CourseD_Dance_Party_11b: |-
-        Este timpul să dansăm! Pisica va face o mişcare "dab" când apeşi pe tasta săgeată în stânga. Fă robotul facă o "cădere" când apeşi tasta săgeată în jos, şi să facă "bate din palme" atunci când este apăsată tasta săgeată în sus.
+        Este timpul să dansăm! Pisica va face o mişcare "dab" când apeşi pe tasta săgeată în stânga. Fă robotul să facă o "cădere" când apeşi tasta săgeată în jos, şi să facă "bate din palme" atunci când este apăsată tasta săgeată în sus.
 
-        **Utilizează tastele să facă robotul să facă mişcările "cădere"-"bate din palme"-"cădere"-"bate din palme" cât de repede poţi!**
+        **Utilizează tastele pentru a face robotul să facă mişcările "cădere"-"bate din palme"-"cădere"-"bate din palme" cât de repede poţi!**
       CourseF_PlayLab_vars2: Cursa în acest ultim puzzle nu a fost foarte corectă!
         Schimbă variabila "dog_speed" pentru a fi sigur că poţi aduna mai multe steaguri
         decât pisica. Primul care adună 10 steaguri câştigă!
@@ -399,13 +399,13 @@ ro:
 
         Trage blocul `crează un nou` în spaţiul de lucru, şi conectează-l în interiorul blocului `configurare` pentru a creea primul tău dansator.
 
-        * *Poţi apăsa de asemenea şi becul din partea stîngă dacă vrei mai multe informaţii sau mai multe provocări.*
+        * *Poţi apăsa de asemenea şi becul din partea stângă dacă vrei mai multe informaţii sau mai multe provocări.*
       Dance_Party_01_low: |-
         *Hai să facem o petrecere cu dans!*
 
         Trage blocul `crează un nou` în spaţiul de lucru, şi conectează-l în interiorul blocului `configurare` pentru a creea primul tău dansator.
 
-        * *Poţi apăsa de asemenea şi becul din partea stîngă dacă vrei mai multe informaţii sau mai multe provocări.*
+        * *Poţi apăsa de asemenea şi becul din partea stângă dacă vrei mai multe informaţii sau mai multe provocări.*
       Dance_Party_02: |-
         Hai să facem acest elan să danseze!
 
@@ -479,9 +479,9 @@ ro:
 
         Încearcă să foloseşti câteva dintre blocurile "toate raţele" să scri cod care va face ca toate raţele să danseze împreună.
       Dance_Party_11b: |-
-        Este timpul să dansăm! Pisica va face o mişcare "dab" când apeşi pe tasta săgeată în stânga. Fă robotul facă o "cădere" când apeşi tasta săgeată în jos, şi să facă "bate din palme" atunci când este apăsată tasta săgeată în sus.
+        Este timpul să dansăm! Pisica va face o mişcare "dab" când apeşi pe tasta săgeată în stânga. Fă robotul să facă o "cădere" când apeşi tasta săgeată în jos, şi să facă "bate din palme" atunci când este apăsată tasta săgeată în sus.
 
-        **Utilizează tastele să facă robotul să facă mişcările "cădere"-"bate din palme"-"cădere"-"bate din palme" cât de repede poţi!**
+        **Utilizează tastele pentru a face robotul să facă mişcările "cădere"-"bate din palme"-"cădere"-"bate din palme" cât de repede poţi!**
       Dance_Party_3: "*Acum vom avea ritm!* \n\nAdaugă un bloc <xml><block type=\"Dancelab_atTimestamp\"><title
         name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"măsuri\"</title></block></xml>
         în spaţiul de lucru. Fă dansatorul să pornească o nouă mişcare după 6 măsuri."

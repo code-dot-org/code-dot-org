@@ -361,12 +361,31 @@ fil:
       driver: Maglog-in
       navigator: Kasama
       create: I-create
+      algebra_game: Algebra
       applab: App na Lab
       artist: Artista
-      gamelab: Game Lab
-      playlab: Play Lab
-      minecraft: Minecraft
+      artist_k1: Artista (Pre-reader)
+      basketball: Basketbol
+      bounce: Bounce
+      calc: Cacl
+      eval: Eval
       flappy: Flappy
+      frozen: Frozen
+      gamelab: Game Lab
+      gamelab_jr: Game Lab (beta)
+      gumball: Ang Kamangha-manghang Mundo ng Gumball
+      iceage: Ice Age
+      infinity: Walang katapusan
+      minecraft_adventurer: Tagapaglakbay sa Minecraft
+      minecraft_designer: Minecraft
+      minecraft_hero: Minecraft Hero
+      playlab: Play Lab
+      playlab_k1: Play Lab (Pre-reader)
+      sports: Mga Palakasan
+      starwars: Star Wars
+      starwarsblocks: Star Wars (Mga bloke)
+      starwarsblocks_hour: Star Wars (Mga bloke)
+      weblab: Web Lab
     popup:
       progress_for_user: Progreso ni %{name}
       progress: Progreso mo
@@ -1185,6 +1204,19 @@ fil:
     csf_e_2: Nilalaman ng Kurso na E
     csf_f_1: Mag-ramp up sa Kursong F (Opsyonal)
     csf_f_2: Nilalaman ng Kursong F
+    csf_digcit: Digital na Pagkamamamayan
+    csf_jigsaw: Jigsaw
+    csf_loops: Mga loop
+    csf_events: Mga event
+    csf_binary: Binary
+    csf_conditionals: Mga conditional
+    csf_sprites: Mga Sprites
+    csf_nested_loops: Mga Loops na naka-nest
+    csf_functions: Mga function
+    csf_variables: Mga variable
+    csf_for_loops: For Loops
+    csf_internet: Internet
+    csf_impacts: Epekto ng Pag-Compute
     csd1_1: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
     csd1_2: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
     csd2_1: 'Kabanata 1: Web Content at HTML'
@@ -1211,6 +1243,9 @@ fil:
     csp_ap_2: 'Kabanata 2: AP Explore na Performance Task'
     csp_ap_3: 'Kabanata 3: AP Maglikha ng Performance Task'
     csp2_1_2018: 'Yunit 2: Digital na Impormasyon'
+    csp_variables: Mga variable
+    csp_conditionals: Mga conditional
+    csp_functions: Mga function
     dlp: Pagmunimuni na mga Prompt
   external_links:
     disclaimer: Disclaimer

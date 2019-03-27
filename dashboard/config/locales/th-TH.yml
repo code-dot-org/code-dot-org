@@ -241,9 +241,16 @@ th:
       create: สร้าง
       applab: แอ๊ปแล็บ
       artist: ศิลปิน
-      gamelab: เกมแล๊บ (Game Lab)
-      minecraft: ไมน์คราฟท์
+      bounce: กระเด้ง
       dance: งานเต้นรำ
+      gamelab: เกมแล๊บ (Game Lab)
+      gumball: โลกมหัศจรรย์ของ Gumball
+      iceage: ยุคน้ำแข็ง (Ice Age)
+      infinity: ไม่จำกัด
+      minecraft_adventurer: การผจญภัยในไมน์คราฟท์
+      minecraft_designer: ไมน์คราฟท์
+      starwarsblocks: สตาร์วอร์ส (บล็อก)
+      starwarsblocks_hour: สตาร์วอร์ส (บล็อก)
     popup:
       progress_for_user: ความคืบหน้าของ %{name}
       progress: ความคืบหน้าของคุณ
@@ -490,6 +497,19 @@ th:
     review_in_progress: พร้อมพื่อทบทวน
   flex_category:
     required: ภาพรวม
+    csf_digcit: พลเมืองดิจิทัล
+    csf_jigsaw: จิ๊กซอว์
+    csf_loops: ลูป
+    csf_events: เหตุการณ์
+    csf_conditionals: 'เงื่อนไข '
+    csf_nested_loops: ลูปซ้อนลูป
+    csf_functions: ฟังก์ชัน
+    csf_variables: ตัวแปร
+    csf_for_loops: การวนรอบ
+    csf_internet: อินเทอร์เน็ต
+    csp_variables: ตัวแปร
+    csp_conditionals: 'เงื่อนไข '
+    csp_functions: ฟังก์ชัน
   hoc_download:
     minecraft_name: ชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
   view_teacher_guide: ดูคำแนะนำสำหรับครู

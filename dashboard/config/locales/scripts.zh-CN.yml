@@ -10091,3 +10091,7 @@ zh-CN:
           stages:
             new stage:
               name: 新的阶段
+        csd-videos:
+          stages:
+            new stage:
+              name: 新的阶段

@@ -156,7 +156,7 @@ it:
       4-5 Artist 10: Premi "Esegui" per provare il codice. Poi, ripetilo abbastanza volte per completare il disegno. I colori saranno diversi ogni volta.
       4-5 Artist 11: "Completa le linee verdi. Le linee sono lunghe 300 pixel e distanziate di 15 pixel."
       4-5 Artist 2: Riesci a ripetere questo codice per completare il quadrato?
-      4-5 Artist 3.5: "Cerca di immaginare cosa succede se si eseguono questi blocchi di codice già pronti (o clicca su `Esegui` per verificarlo). Poi, ripetili una quantità di volte sufficiente a completare il disegno. I colori saranno diversi ogni volta."
+      4-5 Artist 3.5: "Cerca di immaginare cosa succede se si eseguono questi blocchi di codice già pronti (o clicca su \"Esegui\" per verificarlo). Poi, ripetili una quantità di volte sufficiente a completare il disegno. I colori saranno diversi ogni volta."
       4-5 Artist 3: "Questa aiuola rettangolare ha un perimetro di 600 pixel. Il lato lungo ha una lunghezza di 200.<br>\nDisegna il rettangolo usando il minor numero possibile di blocchi."
       4-5 Artist 4: "Quanti gradi ci sono in un cerchio?  Inserisci questo valore nel blocco `ripeti ... volte` in modo da creare un cerchio tutto colorato."
       4-5 Artist 5: Che angolo devi usare in questo esercizio, per essere sicuro di disegnare tutte e 3 le linee con i blocchi all'interno del ciclo?
@@ -1012,14 +1012,42 @@ it:
 
         Crea un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera, il suo colore diventi marrone.
       Virtual Pet 3: "Non possiamo lasciare in giro una giraffa tutta sporca!  \n\n1.  Aggiungi sullo schermo un nuovo personaggio sapone.\n2.  Puoi crearlo in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al suo colore normale?\n\n---\n\nPer ripristinare il colore, usa il blocco:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n       <value name=\"THIS\">\n         <block type=\"sprite_variables_get\">\n           <title name=\"VAR\">mySprite</title>\n         </block>\n       </value>\n     </block></xml>\n"
-      Virtual Pet 3_2019: "Non possiamo lasciare in giro una giraffa tutta sporca!  \n\n1)  Aggiungi sullo schermo un nuovo personaggio Sapone.\n2)  Puoi crearlo in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al suo colore normale?\n\n---\n\nPer ripristinare il colore, usa il blocco:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
+      Virtual Pet 3_2019: |-
+        Non possiamo lasciare in giro una giraffa tutta sporca!  
+
+        1)  Aggiungi sullo schermo un nuovo personaggio Sapone.
+        2)  Puoi crearlo in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al suo colore normale?
+
+        ---
+
+        Per ripristinare il colore, usa il blocco:
+        <xml><block type="gamelab_removeTint" inline="true">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">mySprite</title>
+                </block>
+              </value>
+            </block></xml>
+
       Virtual Pet 4: "Non vogliamo aspettare che la giraffa si pulisca da sola ogni volta che si sporca.  \n\nAggiungi un comportamento al tuo Sapone per renderlo trascinabile, quindi trascinalo sopra la giraffa per pulirla!\n"
-      Virtual Pet 4_2019: "Non vogliamo aspettare che la giraffa si pulisca da sola ogni volta che si sporca.  \n\nAggiungi un comportamento al tuo Sapone per renderlo trascinabile, quindi trascinalo sopra la giraffa per pulirla!\n"
+      Virtual Pet 4_2019: |-
+        Non vogliamo aspettare che la giraffa si pulisca da sola ogni volta che si sporca.  
+
+        Aggiungi un comportamento al tuo Sapone per renderlo trascinabile, quindi trascinalo sopra la giraffa per pulirla!
+
       Virtual Pet 5 - Validated: "Tutta questa attività consuma energia!  \n\nAggiungi delle azioni ad ogni evento in modo che la giraffa diventi un po' più piccola (si restringa di 5) ogni volta che si scontra con un altro personaggio.  \n"
       Virtual Pet 5: "Tutta questa attività consuma energia!  \n\nAggiungi delle azioni ad ogni evento in modo che la giraffa diventi un po' più piccola (si restringa di 5) ogni volta che si scontra con un altro personaggio.  \n"
-      Virtual Pet 5_2019: "Tutta questa attività consuma energia!  \n\nAggiungi delle azioni ad ogni evento in modo che la giraffa diventi un po' più piccola (si restringa di 5) ogni volta che si scontra con un altro personaggio.  \n"
+      Virtual Pet 5_2019: |-
+        Tutta questa attività consuma energia!  
+
+        Aggiungi delle azioni ad ogni evento in modo che la giraffa diventi un po' più piccola (si restringa di 5) ogni volta che si scontra con un altro personaggio.  
+
       Virtual Pet 6: "Una dieta bilanciata è molto importante! Dobbiamo alimentare la giraffa per ridarle forza.  \n\nAggiungi una mela che riporti la giraffa alla sua dimensione originale quando i due personaggi si toccano.\n"
-      Virtual Pet 6_2019: "Una dieta bilanciata è molto importante! Dobbiamo alimentare la giraffa per ridarle forza.  \n\nAggiungi una mela che riporti la giraffa alla sua dimensione originale quando i due personaggi si toccano.\n"
+      Virtual Pet 6_2019: |-
+        Una dieta bilanciata è molto importante! Dobbiamo alimentare la giraffa per ridarle forza.  
+
+        Aggiungi una mela che riporti la giraffa alla sua dimensione originale quando i due personaggi si toccano.
+
       Virtual Pet Freeplay: "Tempo di giocare: Cos'altro puoi far fare alla tua giraffa? \n\n- Puoi aggiungere altri elementi caratteristici al tuo animaletto virtuale?\n- Puoi procurarle degli amici?  "
       Virtual Pet Freeplay_2019: "Tempo di giocare: Cos'altro puoi far fare alla tua giraffa? \n\n- Puoi aggiungere altri elementi caratteristici al tuo animaletto virtuale?\n- Puoi procurarle degli amici?  "
       Virtual Pet Predict: "**Fai una previsione:** Questa è Geraldine, la tua nuova giraffa domestica. Cosa pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai su di lei?"
@@ -1145,15 +1173,15 @@ it:
       courseA_artist_loops3: |-
         Il nostro artista sta cercando di disegnare cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi aiutarlo?
 
-        ![expandable] (https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops3_2018: |-
         Il nostro artista sta cercando di disegnare cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi aiutarlo?
 
-        ![expandable] (https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops3_2019: |-
         Il nostro artista sta cercando di disegnare cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi aiutarlo?
 
-        ![expandable] (https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
         name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
@@ -1172,45 +1200,41 @@ it:
       courseA_artist_loops5: |-
         ## Disegna una linea composta da sette segmenti. Questo diventerà il nostro orizzonte. 
 
-        ![expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops5_2018: |-
         ## Disegna una linea composta da sette segmenti. Questo diventerà il nostro orizzonte. 
 
-        ![expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops5_2019: |-
         ## Disegna una linea composta da sette segmenti. Questo diventerà il nostro orizzonte. 
 
-        ![expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops6: |-
         ## Mettiamo una bella collina sullo sfondo.
 
-        ![expandable] (https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops6_2018: |-
         ## Mettiamo una bella collina sullo sfondo.
 
-        ![expandable] (https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops6_2019: |-
         ## Mettiamo una bella collina sullo sfondo.
 
-        ![expandable] (https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7: |-
-        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
+        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2018: |-
-        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
+        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2019: |-
-        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
+        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_forVideo: |-
-        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
+        ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops8: |-
@@ -1283,9 +1307,9 @@ it:
         Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
 
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
-      courseA_collector_loops12: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
-      courseA_collector_loops12_2018: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
-      courseA_collector_loops12_2019: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
+      courseA_collector_loops12: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\".)"
+      courseA_collector_loops12_2018: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\".)"
+      courseA_collector_loops12_2019: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\".)"
       courseA_collector_loops1_2018: |-
         **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
 
@@ -1299,15 +1323,15 @@ it:
 
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
       courseA_collector_loops2: |-
-        Raccogli tutte e tre le perle! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\r
+        Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
          <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: "Raccogli tutte e tre le perle! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\\r\n <xml><block type=\"collector_collect\"/></xml>"
-      courseA_collector_loops2_2019: "Raccogli tutte e tre le perle! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\\r\n <xml><block type=\"collector_collect\"/></xml>"
-      courseA_collector_loops3: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
-      courseA_collector_loops3_2018: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
-      courseA_collector_loops3_2019: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
+      courseA_collector_loops2_2018: "Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:\n <xml><block type=\"collector_collect\"/></xml>"
+      courseA_collector_loops2_2019: "Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:\n <xml><block type=\"collector_collect\"/></xml>"
+      courseA_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
+      courseA_collector_loops3_2018: Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
+      courseA_collector_loops3_2019: Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_preLoops7: |-
-        Raccogli tutte e tre le perle! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\r
+        Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
          <xml><block type="collector_collect"/></xml>
       courseA_harvester_forVideo: Riesci a raccogliere tutte le pannocchie usando **un** solo blocco di movimento?
       courseA_harvester_loops1: Aiuta la contadina a raccogliere tutte le pannocchie!
@@ -1507,42 +1531,42 @@ it:
       courseA_playLab_events5: Aggiungi gli eventi per far muovere il cane su e giù quando si premono le frecce in su e in giù.
       courseA_playLab_events5_2018: Aggiungi gli eventi per far muovere il cane su e giù quando si premono le frecce in su e in giù.
       courseA_playLab_events5_2019: Aggiungi gli eventi per far muovere il cane su e giù quando si premono le frecce in su e in giù.
-      courseA_playLab_events7_2018: "*Tempo di giocare:* Aggiungi ciò che vuoi a questo gioco. Riesci a fare in modo che il dinosauro scompaia quando il cane sbatte contro di lui? (Quando sei soddisfatto, premi \"Termina\" per completare il corso.)"
-      courseA_playLab_events7_2019: "*Tempo di giocare:* Aggiungi ciò che vuoi a questo gioco. Riesci a fare in modo che il dinosauro scompaia quando il cane sbatte contro di lui? (Quando sei soddisfatto, premi \"Termina\" per completare il corso.)"
+      courseA_playLab_events7_2018: "*Tempo di giocare:* aggiungi ciò che vuoi a questo gioco. Riesci a fare in modo che il dinosauro scompaia quando il cane sbatte contro di lui? (Quando sei soddisfatto, premi \"Termina\" per completare il corso.)"
+      courseA_playLab_events7_2019: "*Tempo di giocare:* aggiungi ciò che vuoi a questo gioco. Riesci a fare in modo che il dinosauro scompaia quando il cane sbatte contro di lui? (Quando sei soddisfatto, premi \"Termina\" per completare il corso.)"
       courseA_playlab_events_challenge1: |-
         Cliccando sul gatto apparirà l'uccellino! Puoi scrivere un programma per mostrare anche gli altri personaggi?
 
-        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge1_2018: |-
         Cliccando sul gatto apparirà l'uccellino! Puoi scrivere un programma per mostrare anche gli altri personaggi?
 
-        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge1_2019: |-
         Cliccando sul gatto apparirà l'uccellino! Puoi scrivere un programma per mostrare anche gli altri personaggi?
 
-        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge2: |-
         Dai ad ognuno di loro qualcosa da fare quando ci clicchi sopra. Cosa diranno gli animali? Cos'altro succederà?
 
-        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee!
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee!
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge2_2018: |-
         Dai ad ognuno di loro qualcosa da fare quando ci clicchi sopra. Cosa diranno gli animali? Cos'altro succederà?
 
-        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee!
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee!
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge2_2019: |-
         Dai ad ognuno di loro qualcosa da fare quando ci clicchi sopra. Cosa diranno gli animali? Cos'altro succederà?
 
-        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee!
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee!
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseB_Scrat_ramp1_2018: "Per far arrivare Scrat fino alla ghianda, trascina il blocco <xml><block type=\"maze_moveEast\"/></xml> sotto al blocco <xml><block type=\"when_run\"/></xml>, poi premi \"▶ Esegui\"!  \n\n\n---\n"
@@ -1625,9 +1649,9 @@ it:
         Muovi Laura lungo i diamanti e usa il blocco <xml><block type="collector_collect"/></xml> per racccoglierlo.
 
         Raccogli tutti e quattro i diamanti per completare l'esercizio.
-      courseB_collector_loops3: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
-      courseB_collector_loops3_2018: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
-      courseB_collector_loops3_2019: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
+      courseB_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
+      courseB_collector_loops3_2018: Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
+      courseB_collector_loops3_2019: Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseB_collector_loops_challenge2a: |-
         *"Prendiamo i diamanti!"*
 
@@ -1665,8 +1689,8 @@ it:
       courseB_iceage_loops9_2019: La ghianda è così lontana! Riesci ad aiutare Scrat ad arrivarci usando i cicli?
       courseB_maze_seq3: '*"Correggi il programma per farmi arrivare fino al maialino!"*'
       courseB_maze_seq9: "**Sfida**: Evita la dinamite (TNT) per far arrivare l'uccellino fino al maialino."
-      courseB_maze_seq9_2018: "**Sfida:** Aggira il ghiaccio rotto per far arrivare Scrat fino alla ghianda."
-      courseB_maze_seq9_2019: "**Sfida:** Aggira il ghiaccio rotto per far arrivare Scrat fino alla ghianda."
+      courseB_maze_seq9_2018: "**Sfida:** aggira il ghiaccio rotto per far arrivare Scrat fino alla ghianda."
+      courseB_maze_seq9_2019: "**Sfida:** aggira il ghiaccio rotto per far arrivare Scrat fino alla ghianda."
       courseB_maze_seq_challenge1: Hai solo quattro esemplari per ogni tipo di blocco. Riesci a trovare un percorso che ti faccia arrivare fino al maialino prima di terminare tutti i blocchi a disposizione?
       courseB_maze_seq_challenge1_2018: Hai solo quattro esemplari per ogni tipo di blocco. Riesci a trovare un percorso che ti faccia arrivare fino al maialino prima di terminare tutti i blocchi a disposizione?
       courseB_maze_seq_challenge1_2019: Hai solo quattro esemplari per ogni tipo di blocco. Riesci a trovare un percorso che ti faccia arrivare fino al maialino prima di terminare tutti i blocchi a disposizione?
@@ -1813,10 +1837,18 @@ it:
       courseC_artist_loop1_2019: "Fantastico!\n\nAggiungiamo un po' di stile modificando il pennello con il blocco `imposta lo schema` prima che inizi il ciclo."
       courseC_artist_loops1a: "**Tempo di giocare:** Facciamo qualcosa di più intrigante, un passo alla volta! Puoi creare ciò che preferisci, ma se vuoi ti mostriamo come fare un disegno come questo!\n\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)\n\nUsa il blocco `salta a 200 avanti 200 in basso` per portarti al centro dell'area di gioco, quindi usa il blocco `disegna un adesivo` per far apparire un uccello.\n\n---\n\nPremi \"Termina\" quando sei soddisfatto di ciò che hai creato."
       courseC_artist_loops1a_2018: "**Tempo di giocare:** Facciamo qualcosa di più intrigante, un passo alla volta!  \n\nUsa il blocco `salta a 200 avanti 200 in basso` per portare l'artista al centro dell'area di gioco, quindi usa il blocco `disegna un adesivo` per far apparire un uccello.  \n\n---\n\nPremi \"Termina\" quando sei soddisfatto di ciò che hai creato."
-      courseC_artist_loops1a_2019: "**Tempo di giocare:** Facciamo qualcosa di più intrigante, un passo alla volta!  \n\nUsa il blocco `salta a 200 avanti 200 in basso` per portare l'artista al centro dell'area di gioco, quindi usa il blocco `disegna un adesivo` per far apparire un uccello.  \n\n---\n\nPremi \"Termina\" quando sei soddisfatto di ciò che hai creato."
+      courseC_artist_loops1a_2019: |-
+        **Tempo di giocare:** Facciamo qualcosa di più intrigante, un passo alla volta!  
+
+        Usa il blocco `salta a 200 avanti 200 in basso` per portare l'artista al centro dell'area di gioco, quindi usa il blocco `disegna un adesivo` per far apparire un uccello.  
+
+        ---
+
+        Premi "Termina" quando sei soddisfatto di ciò che hai creato.
       courseC_artist_loops2a: Ora usa un ciclo per disegnare l'uccello 12 volte con un angolo di 30 gradi.
       courseC_artist_loops2a_2018: Ora usa un ciclo per disegnare l'uccello 12 volte con un angolo di 30 gradi.
-      courseC_artist_loops2a_2019: Ora usa un ciclo per disegnare l'uccello 12 volte con un angolo di 30 gradi.
+      courseC_artist_loops2a_2019: |-
+        Ora usa un ciclo per disegnare l'uccello 12 volte con un angolo di 30 gradi.
       courseC_artist_loops3a: "Troppo divertente!\n\nOra aggiungi l'adesivo di un pipistrello subito dopo l'uccello per ottenere un'immagine come quella qui sotto.\n___\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops3a_2018: "Troppo divertente!\n\nOra aggiungi l'adesivo di un pipistrello subito dopo l'uccello per ottenere un'immagine come quella qui sotto.\n___\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops3a_2019: "Troppo divertente!\n\nOra aggiungi l'adesivo di un pipistrello subito dopo l'uccello per ottenere un'immagine come quella qui sotto.\n___\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
@@ -4423,7 +4455,7 @@ it:
         Il nostro artista sta cercando di disegnare cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi aiutarlo?
 
         ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
-      gradek_playlab_events1c: Il cane, vuole dire "Ciao". Riesci ad aiutarlo?
+      gradek_playlab_events1c: Il cane, vuole dire "Ciao!" Riesci ad aiutarlo?
       iceAgeLoopsforVideo: Riesci a raggiungere la ghianda con un solo blocco <xml><block type="maze_moveForward"/></xml>? Prova con un ciclo!
       iceage_click_hello: "Puoi aiutare Sid a chiamare i suoi amici quando si clicca su di lui? Quando hai finito, premi \"Esegui\" e clicca su Sid per vedere il tuo codice al lavoro!"
       iceage_click_hello_2018: "Puoi aiutare Sid a chiamare i suoi amici quando si clicca su di lui? Quando hai finito, premi \"Esegui\" e clicca su Sid per vedere il tuo codice al lavoro!"
