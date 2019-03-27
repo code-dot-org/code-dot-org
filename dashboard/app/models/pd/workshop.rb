@@ -311,12 +311,14 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.order(:start).first.start.strftime('%Y')
   end
 
-  # returns the school year the summer workshop is preparing for, in
+  # returns the school year the workshop is preparing for, in
   # the form "2019-2020", like application_year on Pd Applications
-  def summer_workshop_school_year
-    if local_summer?
-      y = year
-      "#{y}-#{y.to_i + 1}"
+  def school_year
+    return nil if sessions.empty?
+    if sessions.order(:start).first.start.month < 6
+      "#{year.to_i - 1}-#{year}"
+    else
+      "#{year}-#{year.to_i + 1}"
     end
   end
 
