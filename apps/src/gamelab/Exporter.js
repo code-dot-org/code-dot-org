@@ -24,6 +24,7 @@ import logToCloud from '../logToCloud';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {GAME_WIDTH, GAME_HEIGHT} from './constants';
 import {EXPO_SESSION_SECRET} from '../constants';
+import {fetchWebpackRuntime} from '../util/exporter';
 
 const CONTROLS_HEIGHT = 165;
 
@@ -111,24 +112,7 @@ export default {
     );
 
     // webpack-runtime must appear exactly once on any page containing webpack entries.
-    //
-    // Attempt to fetch webpack-runtime.min.js if possible, but when running on
-    // non-production environments, fallback if we can't fetch that file to use
-    // webpack-runtime.js:
-
-    const webpackRuntimeAsset = new $.Deferred();
-    download('/blockly/js/webpack-runtime.min.js' + cacheBust, 'text').then(
-      (data, success, jqXHR) =>
-        webpackRuntimeAsset.resolve([data, success, jqXHR]),
-      download('/blockly/js/webpack-runtime.js' + cacheBust, 'text').then(
-        (data, success, jqXHR) =>
-          webpackRuntimeAsset.resolve([data, success, jqXHR]),
-        () =>
-          webpackRuntimeAsset.reject(
-            new Error('failed to fetch webpack-runtime.js')
-          )
-      )
-    );
+    const webpackRuntimeAsset = fetchWebpackRuntime(cacheBust);
 
     // Attempt to fetch gamelab-api.min.js if possible, but when running on non-production
     // environments, fallback if we can't fetch that file to use gamelab-api.js:
