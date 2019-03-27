@@ -5,6 +5,8 @@ import {
   TextFields
 } from '@cdo/apps/generated/pd/principalApproval1920ApplicationConstants';
 import LabeledFormComponent from '../../form_components/LabeledFormComponent';
+import PrivacyDialog from '../PrivacyDialog';
+import {PrivacyDialogMode} from '../../constants';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
 import {styles} from '../teacher1920/TeacherApplicationConstants';
@@ -36,8 +38,7 @@ const REQUIRED_SCHOOL_INFO_FIELDS = [
   'replaceCourse',
   'committedToDiversity',
   'understandFee',
-  'payFee',
-  'howHeard'
+  'payFee'
 ];
 // Since the rails model allows empty principal approvals as placeholders, we require these fields here
 const ALWAYS_REQUIRED_FIELDS = [
@@ -65,11 +66,27 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     'planToTeach',
     'committedToMasterSchedule',
     'committedToDiversity',
-    'howHeard'
+    'contactInvoicing',
+    'contactInvoicingDetail'
   ];
 
   handleSchoolChange = selectedSchool => {
     this.handleChange({school: selectedSchool && selectedSchool.value});
+  };
+
+  state = {
+    isPrivacyDialogOpen: false
+  };
+
+  openPrivacyDialog = event => {
+    // preventDefault so clicking this link inside the label doesn't
+    // also check the checkbox.
+    event.preventDefault();
+    this.setState({isPrivacyDialogOpen: true});
+  };
+
+  handleClosePrivacyDialog = () => {
+    this.setState({isPrivacyDialogOpen: false});
   };
 
   renderSchoolSection() {
@@ -186,42 +203,28 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           }
         )}
         <p style={styles.questionText}>
-          There may be a fee associated with your teacher’s professional
-          learning program. Please{' '}
+          There may be scholarships available in your region to cover the cost
+          of the program.{' '}
           <a
-            href="https://code.org/educate/professional-learning/program-information"
+            href={
+              'https://code.org/educate/professional-learning/program-information' +
+              (!!this.props.data.schoolZipCode
+                ? '?zip=' + this.props.data.schoolZipCode
+                : '')
+            }
             target="_blank"
           >
-            check here
-          </a>{' '}
-          to see if there are fees for your teacher’s professional learning
-          program and/or if there are scholarships available in your region.
+            Click here to check the fees and discounts for your program
+          </a>
+          . Let us know if your school would be able to pay the fee or if you
+          need to be considered for a scholarship.
         </p>
         <div>
           {this.singleCheckboxFor('understandFee')}
           {this.radioButtonsFor('payFee')}
+          {this.inputFor('contactInvoicing', {required: false})}
+          {this.inputFor('contactInvoicingDetail', {required: false})}
         </div>
-        {this.checkBoxesWithAdditionalTextFieldsFor(
-          'howHeard',
-          {
-            [TextFields.otherWithText]: 'other'
-          },
-          {
-            label: (
-              <span style={styles.questionText}>
-                How did you hear about Code.org’s Professional Learning program?
-                (To see a list of local Regional Partners,{' '}
-                <a
-                  href="https://code.org/educate/professional-learning/about-partners"
-                  target="_blank"
-                >
-                  visit this page
-                </a>
-                .)
-              </span>
-            )
-          }
-        )}
         {this.props.teacherApplication.course ===
           'Computer Science Principles' && (
           <div>
@@ -248,29 +251,6 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
             <br />
           </div>
         )}
-        <p>
-          Code.org works closely with local Regional Partners to organize and
-          deliver the Professional Learning Program. By submitting their
-          application to the professional learning program, teachers have agreed
-          to allow Code.org to share information on how they use Code.org and
-          the Professional Learning resources with their Regional Partner and
-          school district. In order to organize the workshops and support
-          teachers, our partners need to know who is attending and what content
-          is relevant for them. So, we will share teachers’ contact information,
-          which courses/units they are using in their classrooms and aggregate
-          data about their classes. This includes the number of students in
-          their classes, the demographic breakdown of their classroom, and the
-          name of their school and district. We will not share any information
-          about individual students with our Regional Partners - all information
-          will be de-identified and aggregated. Our Regional Partners are
-          contractually obliged to treat this information with the same level of
-          confidentiality as Code.org. To see Code.org’s complete Privacy
-          Policy, visit{' '}
-          <a href="http://code.org/privacy" target="_blank">
-            http://code.org/privacy
-          </a>
-          .
-        </p>
       </div>
     );
   }
@@ -391,7 +371,21 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         )}
         {this.props.data.doYouApprove !== 'No' &&
           this.renderSchoolInfoSection()}
-        {this.singleCheckboxFor('confirmPrincipal')}
+
+        <label className="control-label">Submit your approval</label>
+        {this.singleCheckboxFor('confirmPrincipal', {
+          label: (
+            <span>
+              {this.labelFor('confirmPrincipal')}{' '}
+              <a onClick={this.openPrivacyDialog}>Learn more.</a>
+            </span>
+          )
+        })}
+        <PrivacyDialog
+          show={this.state.isPrivacyDialogOpen}
+          onHide={this.handleClosePrivacyDialog}
+          mode={PrivacyDialogMode.PRINCIPAL_APPROVAL}
+        />
       </FormGroup>
     );
   }

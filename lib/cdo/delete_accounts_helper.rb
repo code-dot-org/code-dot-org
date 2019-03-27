@@ -354,6 +354,7 @@ class DeleteAccountsHelper
 
     migrated_users.or(unmigrated_users).each {|u| purge_user u}
 
+    remove_poste_data(email)
     remove_from_pardot_by_email(email)
     clean_pegasus_forms_for_email(email)
   end

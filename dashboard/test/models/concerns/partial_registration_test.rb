@@ -68,7 +68,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     # This avoids "cookie overflow" errors.
 
     session = fake_empty_session
-    user = build :student, :unmigrated_google_sso
+    user = build :student, :google_sso_provider
 
     PartialRegistration.persist_attributes session, user
 
@@ -85,7 +85,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
 
   test 'round-trip preserves important attributes' do
     session = fake_empty_session
-    user = build :user, :unmigrated_google_sso
+    user = build :user, :google_sso_provider
 
     PartialRegistration.persist_attributes session, user
 
@@ -102,7 +102,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'cancel ends signup tracking and deletes user attributes from the session' do
-    user = build :user, :unmigrated_google_sso
+    user = build :user, :google_sso_provider
     session = fake_session user.attributes
 
     SignUpTracking.expects(:log_cancel_finish_sign_up)

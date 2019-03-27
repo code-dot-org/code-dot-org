@@ -158,7 +158,8 @@ module Pd::Application
     end
 
     def formatted_teacher_email
-      "\"#{teacher_full_name}\" <#{user.email}>"
+      teacher_email = user.email.presence || sanitize_form_data_hash[:alternate_email]
+      "\"#{teacher_full_name}\" <#{teacher_email}>"
     end
 
     def formatted_principal_email
@@ -702,9 +703,10 @@ module Pd::Application
           principal_white_percent: format("%0.02f%%", principal_response[:white]),
           principal_other_percent: format("%0.02f%%", principal_response[:other]),
           principal_wont_replace_existing_course: replace_course_string,
-          principal_how_heard: principal_response.values_at(:how_heard, :how_heard_other).compact.join(" "),
           principal_send_ap_scores: principal_response[:send_ap_scores],
-          principal_pay_fee: principal_response[:pay_fee]
+          principal_pay_fee: principal_response[:pay_fee],
+          principal_contact_invoicing: principal_response[:contact_invoicing],
+          principal_contact_invoicing_detail: principal_response[:contact_invoicing_detail]
         }
       )
       save!
