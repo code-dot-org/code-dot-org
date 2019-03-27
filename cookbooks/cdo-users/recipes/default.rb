@@ -111,7 +111,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
       # SSH requires that hostnames consist of zero or more non-whitespace
       # characters, with optional wildcards:
       # http://man.openbsd.org/OpenBSD-current/man5/ssh_config.5#PATTERNS
-      next unless name.value.match =~ /^\S*$/
+      next unless name.value =~ /^\S*$/
 
       hosts[name.value] = instance.private_dns_name
     end
