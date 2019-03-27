@@ -16,7 +16,7 @@ class SchoolInfoConfirmationDialog extends Component {
     schoolName: PropTypes.string,
     onUpdate: PropTypes.func,
     onConfirm: PropTypes.func,
-    isOpen: React.PropTypes.bool.isRequired
+    isOpen: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -24,7 +24,8 @@ class SchoolInfoConfirmationDialog extends Component {
 
     this.state = {
       showSchoolInterstitial: false,
-      schoolName: props.schoolName
+      schoolName: props.schoolName,
+      isOpen: true
     };
   }
 
@@ -69,16 +70,16 @@ class SchoolInfoConfirmationDialog extends Component {
             authTokenValue: 'fake_auth_token',
             existingSchoolInfo: {}
           }}
-          onClose={() => 'onclose click'}
+          onClose={() => this.setState({isOpen: false})}
         />
       </Body>
     );
   }
 
   render() {
-    const {showSchoolInterstitial} = this.state;
+    const {showSchoolInterstitial, isOpen} = this.state;
     return (
-      <Dialog isOpen={this.props.isOpen}>
+      <Dialog isOpen={isOpen}>
         {!showSchoolInterstitial
           ? this.renderInitialContent()
           : this.renderSchoolInformationForm()}
