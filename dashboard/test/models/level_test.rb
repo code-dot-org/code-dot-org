@@ -11,6 +11,7 @@ class LevelTest < ActiveSupport::TestCase
     @maze_data = {game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", short_instructions: "sdfdfs", type: 'Maze'}
     @custom_maze_data = @maze_data.merge(user_id: 1)
     @gamelab_data = {game_id: 48, name: 'some gamelab level', level_num: 'custom', type: 'Gamelab'}
+    @custom_gamelab_data = {game_id: 30, name: 'game:puzzle', level_num: 'custom', type: 'Gamelab'}
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
 
@@ -69,6 +70,14 @@ class LevelTest < ActiveSupport::TestCase
 
     assert_raises ArgumentError do
       Karel.parse_maze(json, 7)
+    end
+  end
+
+  test "cannot create a level with a name that contains a colon" do
+    assert_does_not_create(Level) do
+      level2 = Level.create(@custom_gamelab_data)
+      assert_not level2.valid?
+      assert level2.errors.include?(:name)
     end
   end
 
