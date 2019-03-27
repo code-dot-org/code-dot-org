@@ -61,3 +61,5 @@ export class CommentArea extends Component {
     );
   }
 }
+
+export const UnconnectedCommentArea = CommentArea;
