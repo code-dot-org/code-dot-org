@@ -159,6 +159,7 @@ module SharedConstants
       "getYPosition": null,
       "setScreen": null,
       "rgb": null,
+      "open": null,
 
       // Canvas
       "createCanvas": null,
