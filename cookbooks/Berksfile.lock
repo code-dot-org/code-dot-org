@@ -142,7 +142,7 @@ GRAPH
     apt (~> 2.6.0)
     sudo-user (>= 0.0.0)
   cdo-secrets (0.1.7)
-  cdo-users (0.1.21)
+  cdo-users (0.1.22)
     apt (~> 2.6.0)
   cdo-varnish (0.3.209)
     apt (>= 0.0.0)
