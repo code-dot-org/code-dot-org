@@ -26,11 +26,31 @@ const DEFAULT_PROPS = {
   user: 5
 };
 
-// add test about clicking the feedback tab
-// switching tabs and saving state?
-
 describe('TopInstructionsCSP', () => {
   describe('Feedback Tab', () => {
+    it('While giving feedback I switch to the instructions tab and back', () => {
+      /* const wrapper = shallow(<TopInstructionsCSP {...DEFAULT_PROPS} />);
+
+      wrapper.setState({
+        tabSelected: 'comments',
+        feedbacks: [],
+        rubric: null,
+        displayFeedbackTeacherFacing: true
+      });
+
+      const instructionsTab = wrapper.find('.uitest-instructionsTab').at(0);
+      instructionsTab.simulate('click');
+      expect(
+        wrapper.find('TeacherFeedback').props().visible
+      ).to.equal(false);
+
+      const feedbackTab = wrapper.find('.uitest-feedback').at(0);
+      feedbackTab.simulate('click');
+      expect(
+        wrapper.find('TeacherFeedback').props().visible
+      ).to.equal(true);
+      */
+    });
     it('height of instructions area is full size needed for content when feedback tab opened', () => {
       /*
       stubRedux();
