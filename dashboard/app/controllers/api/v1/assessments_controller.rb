@@ -189,24 +189,6 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   end
 
   def section_feedback
-    feedback = {}
-    @script.script_levels.each do |script_level|
-      @section.students.each do |student|
-        temp_feedback = TeacherFeedback.get_student_level_feedback(student.id, script_level.level.id, @section.user_id)
-        next unless temp_feedback
-        feedback[temp_feedback.id] = {
-          studentName: student.name,
-          stageNum: script_level.stage.relative_position.to_s,
-          stageName: script_level.stage.localized_title,
-          levelNum: script_level.position.to_s,
-          keyConcept: (script_level.level.rubric_key_concept || ''),
-          performanceLevelDetails: (script_level.level.properties["rubric_#{temp_feedback.performance}"] || ''),
-          performance: temp_feedback.performance,
-          comment: temp_feedback.comment,
-          timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r")
-        }
-      end
-    end
-    render json: feedback
+    render json: @script.get_feedback_for_section(@section)
   end
 end
