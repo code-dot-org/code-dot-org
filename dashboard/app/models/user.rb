@@ -2103,6 +2103,10 @@ class User < ActiveRecord::Base
     RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
   end
 
+  def show_school_info_confirmation_dialog?
+    SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(self)
+  end
+
   def show_school_info_interstitial?
     SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
   end
