@@ -13,7 +13,6 @@ class DialogInstructions extends React.Component {
     puzzleNumber: PropTypes.number.isRequired,
     stageTotal: PropTypes.number.isRequired,
     shortInstructions: PropTypes.string.isRequired,
-    shortInstructions2: PropTypes.string,
     longInstructions: PropTypes.string,
     imgURL: PropTypes.string,
     imgOnly: PropTypes.bool,
@@ -32,9 +31,6 @@ class DialogInstructions extends React.Component {
         shortInstructions={
           showInstructions ? this.props.shortInstructions : undefined
         }
-        instructions2={
-          showInstructions ? this.props.shortInstructions2 : undefined
-        }
         longInstructions={
           showInstructions ? this.props.longInstructions : undefined
         }
@@ -49,7 +45,6 @@ export default connect(state => ({
   puzzleNumber: state.pageConstants.puzzleNumber,
   stageTotal: state.pageConstants.stageTotal,
   shortInstructions: state.instructions.shortInstructions,
-  shortInstructions2: state.instructions.shortInstructions2,
   longInstructions: state.instructions.longInstructions,
   imgURL: state.instructionsDialog.imgUrl || state.pageConstants.aniGifURL,
   imgOnly: state.instructionsDialog.imgOnly,

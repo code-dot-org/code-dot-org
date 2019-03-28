@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import MarkdownInstructions from './MarkdownInstructions';
-import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
 import AniGifPreview from './AniGifPreview';
 
@@ -11,6 +10,10 @@ const styles = {
   },
   notInTopPane: {
     overflow: 'auto'
+  },
+  standaloneTitle: {
+    marginBottom: 35,
+    marginLeft: 80
   }
 };
 
@@ -25,7 +28,6 @@ class Instructions extends React.Component {
   static propTypes = {
     puzzleTitle: PropTypes.string,
     shortInstructions: PropTypes.string,
-    instructions2: PropTypes.string,
     longInstructions: PropTypes.string,
     imgURL: PropTypes.string,
     authoredHints: PropTypes.element,
@@ -37,33 +39,31 @@ class Instructions extends React.Component {
   /**
    * Body logic is as follows:
    *
-   * If we have been given long instructions, render a div containing
-   * that, optionally with inline-styled margins. We don't need to
-   * worry about the title in this case, as it is rendered by the
-   * Dialog header
+   * Long Instructions always take priority over Short Instructions.
    *
-   * Otherwise, render the title and up to two sets of instructions.
-   * These instructions may contain spans and images as determined by
-   * substituteInstructionImages
+   * If we have been given either flavor of instructions, render a div
+   * containing them, optionally with inline-styled margins. We don't need to
+   * worry about the title in this case, as it is rendered by the Dialog header
+   *
+   * Otherwise, just render the title.
    */
   renderMainBody() {
-    if (this.props.longInstructions) {
+    const instructions =
+      this.props.longInstructions || this.props.shortInstructions;
+
+    if (instructions) {
       return (
         <MarkdownInstructions
-          markdown={this.props.longInstructions}
+          markdown={instructions}
           onResize={this.props.onResize}
           inTopPane={this.props.inTopPane}
         />
       );
     } else {
-      // Note: In this case props.shortInstructions might be undefined, but we
-      // still want to render NonMarkdownInstructions to get the puzzle title
       return (
-        <NonMarkdownInstructions
-          puzzleTitle={this.props.puzzleTitle}
-          shortInstructions={this.props.shortInstructions}
-          instructions2={this.props.instructions2}
-        />
+        <div style={styles.standaloneTitle}>
+          <p className="dialog-title">{this.props.puzzleTitle}</p>
+        </div>
       );
     }
   }
