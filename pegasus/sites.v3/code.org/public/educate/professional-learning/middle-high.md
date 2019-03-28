@@ -43,6 +43,8 @@ The majority of our workshop attendees rank it the **best professional developme
 
 **Proven results** - peer reviewed research shows that school participation in the Code.org program causes an estimated 5x increase in students that take and pass the AP Computer Science Principles exam.
 
+**Every Student Succeeds Act**. The Code.org program meets the six key criteria for professional development outlined in the Every Student Succeeds Act (ESSA). Learn more in our [Program Brochure](https://www.dropbox.com/s/s66wf8f0zqy81hb/codeorg-program-brochure.pdf?dl=0). 
+
 ## Find the right course for your classroom
 
 The program supports teachers with diverse teaching backgrounds as they prepare to teach either of the following courses:
@@ -152,7 +154,9 @@ Check out these 3 key benefits of ISTE membership:
 
 </details>
 
-[Check out our professional learning values](/educate/professional-learning/values) for more information about our goals and approach to professional learning. Interested in sharing details about the program with teachers and administrators at your school? <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">Print a flyer!</a>
+[Check out our professional learning values](/educate/professional-learning/values) for more information about our goals and approach to professional learning. <br><br>
+**Administrator Information**: [Share this flyer](https://www.dropbox.com/s/s66wf8f0zqy81hb/codeorg-program-brochure.pdf?dl=0) with your principal or administrators to encourage their support for your professional learning and expanding computer science opportunities at your school. See how this program meets the six key criteria for professional development outlined in the Every Student Succeeds Act (ESSA).<br><br>
+Want to help spread the word? [Print a flyer](https://code.org/files/PLProgramsOverview_1-Pager.pdf) to share with teachers.
 
 ## <a name="participate"></a>Who can participate?
 
