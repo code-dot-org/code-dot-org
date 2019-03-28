@@ -77,12 +77,10 @@ es-MX:
         del Golem de Hierro y atacar a los zombies para ganar.
       Valentine_playlab_01_failure_message_override: "¡Casi! inténtalo otra vez."
       WhileAdventure_failure_message_override: "¡Felicidades! Recogiste X monedas!"
-      courseC19_playLab_EOC3_failure_message_override: |-
-        Debe agregar dos o más
-        Nuevos actores a tu juego y programarlos para que se muevan.
-      courseE_playLab_scaffold3_failure_message_override: |-
-        Debe agregar dos o más
-        Nuevos actores a tu juego y programarlos para que se muevan.
+      courseC19_playLab_EOC3_failure_message_override: Debes agregar dos o más nuevos
+        actores a tu juego y programarlos para que se muevan.
+      courseE_playLab_scaffold3_failure_message_override: Debes agregar dos o más
+        nuevos actores a tu juego y programarlos para que se muevan.
       courseE_playLab_scaffold3_2018_failure_message_override: |-
         Debe agregar dos o más
         Nuevos actores a tu juego y programarlos para que se muevan.

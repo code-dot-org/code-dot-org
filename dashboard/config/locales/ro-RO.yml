@@ -390,14 +390,35 @@ ro:
       driver: Conducătorul
       navigator: Navigator
       create: Crează
+      algebra_game: Algebră
       applab: Laboratului Aplicației
       artist: Artist
-      gamelab: Laborator de jocuri
-      playlab: Laborator de Joacă
-      spritelab: Laborator Sprite
-      minecraft: Minecraft
-      flappy: Flappy
+      artist_k1: Artist (pre-cititor)
+      basketball: Baschet
+      bounce: Săritură
+      calc: Calculează
       dance: Petrecere cu dans
+      eval: Evaluează
+      flappy: Flappy
+      frozen: Frozen
+      gamelab: Laborator de jocuri
+      gamelab_jr: Game Lab (beta)
+      gumball: Minunata lume a lui Gumball
+      iceage: Epoca de gheață
+      infinity: Infinit
+      minecraft_adventurer: Minecraft Adventurer
+      minecraft_aquatic: Minecraft Aquatic
+      minecraft_designer: Minecraft
+      minecraft_hero: Minecraft Hero
+      playlab: Laborator de Joacă
+      playlab_k1: Play Lab (Pre-cititor)
+      scratch: Scratch
+      sports: Sporturi
+      spritelab: Laborator Sprite
+      starwars: Star Wars
+      starwarsblocks: Star Wars (blocuri)
+      starwarsblocks_hour: Star Wars (blocuri)
+      weblab: Laboratorul de web
     popup:
       progress_for_user: Progresul lui %{name}
       progress: Progresul tău
@@ -1213,6 +1234,18 @@ ro:
     csf_e_2: Conținut curs E
     csf_f_1: Avansare la Cursul F (Opțional)
     csf_f_2: Conținut curs F
+    csf_digcit: Cetățenia Digitală
+    csf_jigsaw: Puzzle
+    csf_loops: Bucle
+    csf_events: Evenimente
+    csf_binary: Binar
+    csf_conditionals: Condiţionale
+    csf_spritelab: Laborator Sprite
+    csf_nested_loops: Repetiții imbricate
+    csf_functions: Funcţii
+    csf_variables: Variabile
+    csf_for_loops: Bucle Pentru
+    csf_internet: Internet
     csd1_1: 'Capitolul 1: Procesul de rezolvare a problemelor'
     csd1_2: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
     csd2_1: 'Capitolul 1: Conţinutul Web şi HTML'
@@ -1227,6 +1260,9 @@ ro:
     cspSurvey: Sondaj
     cspAssessment: Evaluare capitol
     csp2_1_2018: 'Unitatea 2: Informaţii digitale'
+    csp_variables: Variabile
+    csp_conditionals: Condiţionale
+    csp_functions: Funcţii
   external_links:
     disclaimer: Act de renuntare
     leaving_domain: Acum parasesti acest domeniu, la un site care nu este operat de

@@ -481,6 +481,8 @@ tr:
       courseB_unplugged_MRF_2019:
         title: Robot dostlarım
         desc: Arkadaşların için kod yazarak programlamayı öğren!
+      courseB_unplugged_loopyMRF_2019:
+        title: 'Döngüler: Loopy robot dostlarım'
       Conditionals_2019:
         title: Koşullar
         desc: Koşullu ifadeleri öğrenmek için öğrenciler kart oyunu oynayacak. Burada

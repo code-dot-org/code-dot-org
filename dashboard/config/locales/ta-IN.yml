@@ -102,6 +102,7 @@ ta:
       logout: வெளியேறு
       signin: உள்நுழை
       create: உருவாக்கு
+      infinity: முடிவிலி
     popup:
       close: மூடு
   teacher:
@@ -138,6 +139,12 @@ ta:
       report_abuse_form:
         abuse_type:
           other: வேறு
+  flex_category:
+    csf_loops: சுழற்சிகள்
+    csf_functions: செயல்பாடுகள்
+    csf_variables: மாறிலிகள்
+    csp_variables: மாறிலிகள்
+    csp_functions: செயல்பாடுகள்
   pd:
     form_labels:
       email: மின்னஞ்சல்
