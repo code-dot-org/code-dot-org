@@ -283,6 +283,7 @@ Devise.setup do |config|
 
   config.omniauth :google_oauth2, CDO.dashboard_google_key, CDO.dashboard_google_secret, {
     include_granted_scopes: true,
+    prompt: 'consent',
     setup: lambda do |env|
       # If requesting additional scopes, always re-confirm with the user so we get a new refresh token.
       if env['omniauth.strategy'].authorize_params['scope'] != 'email profile'
