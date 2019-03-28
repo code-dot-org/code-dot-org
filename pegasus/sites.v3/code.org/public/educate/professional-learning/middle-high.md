@@ -45,7 +45,6 @@ The majority of our workshop attendees rank it the **best professional developme
 
 **Every Student Succeeds Act**. The Code.org program meets the six key criteria for professional development outlined in the Every Student Succeeds Act (ESSA). Learn more in our [Program Brochure](https://www.dropbox.com/s/s66wf8f0zqy81hb/codeorg-program-brochure.pdf?dl=0). 
 
-
 ## Find the right course for your classroom
 
 The program supports teachers with diverse teaching backgrounds as they prepare to teach either of the following courses:

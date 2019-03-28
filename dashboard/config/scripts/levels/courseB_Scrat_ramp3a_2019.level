@@ -38,10 +38,9 @@
     "name_suffix": "_2019",
     "parent_level_id": 12180,
     "show_type_hints": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
     "mini_rubric": "false",
-    "maze_data": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
