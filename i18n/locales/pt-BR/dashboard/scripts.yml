@@ -3102,6 +3102,8 @@ pt-BR:
           description_short: Rapidamente cobrem conceitos de curso C e D e vai mais longe com funções.
         coursef-2017:
           stages:
+            Ice Age Play Lab:
+              name: Eventos na Era do Gelo
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
             Building a Foundation:

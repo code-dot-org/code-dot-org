@@ -4716,3 +4716,7 @@ pl:
           stages:
             new stage:
               name: nowy etap
+        csd-videos:
+          stages:
+            new stage:
+              name: nowy etap

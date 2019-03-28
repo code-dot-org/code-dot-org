@@ -521,6 +521,7 @@ es-MX:
       CSD U5 Amazon Data Video: Recopilar información sobre los usuarios
       CSD U5 Amazon Data Video_2018: Recopilar información sobre los usuarios
       CSD U5 Amazon Data Video_2019: Recopilar información sobre los usuarios
+      CSD U5 Netflix Data Video_2019: Cómo Netflix utiliza datos
       CSD U5 Waze Data Video: Recopilar información sobre los usuarios
       CSD U5 Waze Data Video_2018: Recopilar información sobre los usuarios
       CSD U5 Waze Data Video_2019: Recopilar información sobre los usuarios
@@ -585,8 +586,7 @@ es-MX:
       CSD U6 analog challenge_2019: 'Desafío: Entendiendo los sensores'
       CSD U6 arrays intro: Introducción a los Arrays
       CSD U6 arrays intro_2018: Introducción a los Arrays
-      CSD U6 arrays intro_2019: Introducción a los Arrays
-      CSD U6 arrays video: Introducción a los Arrays
+      CSD U6 arrays video: 'Vídeo: Introducción a matrices'
       CSD U6 challenge motorcycle: 'Desafío: Motocicleta'
       CSD U6 challenge motorcycle_2018: 'Desafío: Motocicleta'
       CSD U6 challenge motorcycle_2019: 'Desafío: Motocicleta'
@@ -939,16 +939,15 @@ es-MX:
       CourseEF_video_IntroSpriteLab_2019: Esto es Sprite Lab
       CourseEF_video_MakeSprite: Como hacer un sprite
       CourseEF_video_MakeSprite_2019: Como hacer un sprite
-      CourseE_Project_SpriteLab: Proyecto Curso E Sprite Lab
-      CourseE_Project_SpriteLab_2019: Proyecto Curso E Sprite Lab
-      CourseE_hoops - take2: Hoops
-      CourseE_hoops: 'Conejito '
-      CourseE_hoops_2019: 'Conejito '
-      CourseF_Project_Revise_SpriteLab: Revisar Proyecto de Laboratorio de gráficos
-      CourseF_Project_Revise_SpriteLab_2019: Revisar Proyecto de Laboratorio de gráficos
-      CourseF_Project_SpriteLab: Proyecto de Laboratorio de gráficos del Curso F
-      CourseF_Project_SpriteLab_2019: Proyecto de Laboratorio de gráficos del Curso
-        F
+      CourseE_Project_SpriteLab: Proyecto de Sprite Lab del Curso E
+      CourseE_Project_SpriteLab_2019: Proyecto de Sprite Lab del Curso E
+      CourseE_hoops - take2: Aros
+      CourseE_hoops: Conejito
+      CourseE_hoops_2019: Conejito
+      CourseF_Project_Revise_SpriteLab: Revisar el proyecto de Sprite Lab
+      CourseF_Project_Revise_SpriteLab_2019: Revisar el proyecto de Sprite Lab
+      CourseF_Project_SpriteLab: Proyecto de Sprite Lab del Curso F
+      CourseF_Project_SpriteLab_2019: Proyecto de Sprite Lab del Curso F
       Dance_Party_extras_battle: Grupos de baile
       Dance_Party_extras_every_beat: Negras
       Dance_Party_extras_layout: Poner en Formación
@@ -1197,14 +1196,14 @@ es-MX:
       courseB_video_Unspotted_2019: Errores no detectados
       courseE_Dogger_2: Ejemplo de Dogger
       courseE_Dogger_2_2019: Ejemplo de Dogger
-      courseF_artist_for1: Juego libre de bucles "for" (Comienzo)
-      courseF_artist_for1_2018: Juego libre de bucles "for" (Comienzo)
-      courseF_artist_for1_2019: Juego libre de bucles "for" (Comienzo)
-      courseF_project_1: Proyecto de ejemplo de Laboratorio de gráficos
-      courseF_project_1_2019: Proyecto de ejemplo de Laboratorio de gráficos
-      courseF_video_csMatters: Proyectos Final de Curso
-      courseF_video_csMatters_2018: 'Video: Materias CS'
-      courseF_video_csMatters_2019: 'Video: Materias CS'
+      courseF_artist_for1: Juego libre de bucles 'desde' (inicio)
+      courseF_artist_for1_2018: Juego libre de bucles 'desde' (inicio)
+      courseF_artist_for1_2019: Juego libre de bucles 'desde' (inicio)
+      courseF_project_1: Ejemplo de proyecto de Sprite Lab
+      courseF_project_1_2019: Ejemplo de proyecto de Sprite Lab
+      courseF_video_csMatters: Proyectos de final de curso
+      courseF_video_csMatters_2018: 'Video: Asuntos de las Ciencias de la Computación'
+      courseF_video_csMatters_2019: 'Video: Asuntos de las Ciencias de la Computación'
       coursee_explore_4: Defensor alienígena
       cp1dlp-q1: Conexiones de Lección y Filosofía
       csd U3 conditional statements video: 'Vídeo: Declaraciones "If/Else"'
@@ -1320,5 +1319,5 @@ es-MX:
       harvey_snowflake_artist2: 'Copo de nieve #2 (Convertido al Artista)'
       maker workshop final: 'Desafío: ¡Explorar!'
       okToDelete: Evaluador
-      scrat_loops_C-F_video: Bucles en la Edad del Hielo - Vídeo
-      scrat_loops_C-F_video_2019: Bucles en la Edad del Hielo - Vídeo
+      scrat_loops_C-F_video: Video de bucles en la Era de Hielo
+      scrat_loops_C-F_video_2019: Video de bucles en la Era de Hielo

@@ -102,8 +102,9 @@ node['cdo-users'].each_pair do |user_name, user_data|
         aws_config['access_key_id'],
         aws_config['access_key_secret']
       )
-    ).describe_instances.reservations.map(&:instances).flatten.each do |instance|
-      next unless instance.private_dns_name
+    ).describe_instances(filters: [{name: 'instance-state-name', values: ['running']}]).
+      reservations.map(&:instances).flatten.each do |instance|
+      next if instance.private_dns_name.nil? || instance.private_dns_name.empty?
 
       name = instance.tags.find {|tag| tag.key == "Name"}
       next unless name && name.value
@@ -111,7 +112,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
       # SSH requires that hostnames consist of zero or more non-whitespace
       # characters, with optional wildcards:
       # http://man.openbsd.org/OpenBSD-current/man5/ssh_config.5#PATTERNS
-      next unless name.value.match =~ /^\S*$/
+      next unless name.value =~ /^\S*$/
 
       hosts[name.value] = instance.private_dns_name
     end

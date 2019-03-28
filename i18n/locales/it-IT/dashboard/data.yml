@@ -11,15 +11,15 @@ it:
         Unplug4: Algoritmi
         Artist2: L'artista 2
         Unplug5: Funzioni
-        Farmer: La Contadina
+        Farmer: La contadina
         Unplug6: Istruzioni condizionali
         Artist3: L'artista 3
         Unplug7: Composizione di canzoni
-        Farmer2: La Contadina 2
+        Farmer2: La contadina 2
         Unplug8: Astrazione
         Artist4: L'artista 4
         Unplug9: Programmazione a Staffetta
-        Farmer3: La Contadina 3
+        Farmer3: La contadina 3
         Unplug10: Internet
         Artist5: L'artista 5
         Unplug11: Conclusione
@@ -259,7 +259,7 @@ it:
       name:
         maze_intro: 'Labirinto - Corso 2: Introduzione'
         artist_intro: Artista - Introduzione
-        farmer_intro: Introduzione a "La Contadina"
+        farmer_intro: Introduzione a "La contadina"
         flappy_intro: Introduzione a "Flappy"
         loop_times: Blocco "ripeti ... volte"
         loop_until: Blocco "ripeti fino a che"
@@ -286,7 +286,7 @@ it:
         C1_moveitmoveit_unplugged: Muovilo, muovilo
         C1_bigevent_unplugged: Gli Eventi
         C1_getting_loopy: Diventare Ripetitivi
-        C1_pair_programming: Programmazione in Coppia
+        C1_pair_programming: Programmazione in coppia
         C1_maze_intro_sequencing: 'Labirinto - Corso 1: Introduzione'
         C1_maze_debugging: 'Labirinto: Correzione di Errori'
         C1_bee_level_intro: 'Ape: Introduzione'
@@ -295,10 +295,10 @@ it:
         C1_zuck_repeat_loop: 'Labirinto: Cicli'
         C1_bee_loops: 'Ape: Cicli'
         C1_maze_loops: 'Labirinto: Cicli'
-        C1_playlab_storytelling: 'Laboratorio: Crea una Storia'
+        C1_playlab_storytelling: 'Laboratorio: crea una storia'
         C1_planting_seed: Piantare un seme
         C1_building_foundation: Costruire le Fondamenta
-        C1_going_places_safely: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+        C1_going_places_safely: Cittadinanza digitale - Visitare luoghi in modo sicuro
         C2_maze_intro: 'Labirinto - Corso 2: Introduzione'
         C2_artist_intro: Artista - Introduzione
         C2_zuck_repeat_loop: 'Labirinto: Cicli'
@@ -313,8 +313,8 @@ it:
         C2_binary_bracelets: Braccialetti Binari
         C2_relay_programming: Programmazione a Staffetta
         C2_paper_airplanes: Aeroplani di Carta
-        C2_digital_footprint: La tua Impronta Digitale
-        C2_digital_footprint_v2: La tua Impronta Digitale
+        C2_digital_footprint: La tua impronta digitale
+        C2_digital_footprint_v2: La tua impronta digitale
         C3_maze_level_4: 'Labirinto: Cicli'
         C3_artist_intro: Artista - Introduzione
         C3_artist_functions: 'Artista: Funzioni'
@@ -352,23 +352,23 @@ it:
         C4_unplugged_forloops: Cicli con Contatore
         C4_unplugged_parameters: Composizione di Canzoni - Parametri
         C4_unplugged_binary: Binario
-        CSF_a_b_artist_loops: Cicli con l'Artista
+        CSF_a_b_artist_loops: Cicli con l'artista
         CSF_artist_angles: Angoli con l'Artista
-        CSF_collector_k1_blocks: 'La Collezionista'
-        CSF_collector_repeat_loops: 'Collezionista: Cicli di Ripetizione'
-        CSF_collector_text_blocks: 'La Collezionista'
+        CSF_collector_k1_blocks: 'La collezionista'
+        CSF_collector_repeat_loops: 'La collezionista: Cicli (istruzioni di ripetizione)'
+        CSF_collector_text_blocks: 'La collezionista'
         CSF_create_functions: Creazione di funzioni
-        CSF_debugging_k1_blocks: Correzione Errori (Debugging)
-        CSF_debugging_text_blocks: Correzione Errori (Debugging)
+        CSF_debugging_k1_blocks: Correzione errori (debugging)
+        CSF_debugging_text_blocks: Correzione errori (debugging)
         CSF_EF_cs_matters: L'informatica è importante
         CSF_maze_intro_k1_blocks: Introduzione a Code Studio
         CSF_maze_intro_text_blocks: Introduzione a Code Studio
-        CSF_my_robotic_friends: I Miei Amici Robotici
-        CSF_Power_of_Words: Cittadinanza Digitale - Il Potere delle Parole
-        CSF_Super_Digital_Citizen: Cittadinanza Digitale - Super Cittadino Digitale
-        CSF_stevie_big_project: Stevie e il Grande Progetto
-        CSF_unspotted_bugs: Errori Non Riconosciuti
-        CSF_zuck_loops_short: Cicli di Ripetizione
+        CSF_my_robotic_friends: I miei amici robotici
+        CSF_Power_of_Words: Cittadinanza digitale - Il potere delle parole
+        CSF_Super_Digital_Citizen: Cittadinanza digitale - Super cittadino digitale
+        CSF_stevie_big_project: Stevie e il grande progetto
+        CSF_unspotted_bugs: Errori non riconosciuti
+        CSF_zuck_loops_short: Cicli (istruzioni di ripetizione)
         frozen_intro: Introduzione all'Ora del Codice
         frozen_loops: Introduzione ai Cicli
         frozen_functions: Introduzione alle Funzioni
@@ -480,12 +480,12 @@ it:
         applab_intro_designmode: Sviluppo App - Modalità Interfaccia
         applab_intro_share: Sviluppo App - Condividi la tua app
         csd_applab_arrays: Introduzione agli array
-        CSF_skinOverview_Harvester: La Contadina
+        CSF_skinOverview_Harvester: La contadina
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Cicli con BB-8
-        CSF_harvester_skinOverview_K-1: La Contadina
-        CSF_harvester_loops_K1: Cicli con la Contadina
+        CSF_harvester_skinOverview_K-1: La contadina
+        CSF_harvester_loops_K1: Cicli con la contadina
         CSF_scrat_loops_K1: Cicli con l'Era Glaciale
         CSF_scrat_loops_CF: Cicli con l'Era Glaciale
         CSF_if_allskins: Il Blocco Se
@@ -508,7 +508,7 @@ it:
         hoc_dance_events: Ballando col codice - Eventi
         hoc_dance_properties: Ballando col codice - Proprietà
         hoc_dance_congrats: Ballando col codice - Parte la festa!
-        c_and_c_great_to_create: È Fantastico Creare e Comportarsi Lealmente
+        c_and_c_great_to_create: È fantastico creare e comportarsi lealmente
         c_and_c_digital_sharing: Condivisione Digitale
         what_is_cs: Cos'é l'informatica?
         repeat_block: Uso del blocco Ripeti
