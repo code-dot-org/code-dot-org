@@ -59,4 +59,9 @@ Follow Hadi &nbsp;&nbsp;
 
 [/col-50]
 
+[col-50]
+
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F60minutes%2Fvideos%2F293803374621664%2F" width="388" height="291" style="border:none;overflow:none" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+
+[/col-50]
 

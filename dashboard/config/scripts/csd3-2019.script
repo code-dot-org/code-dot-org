@@ -326,7 +326,7 @@ level 'CSD U3 game interactions_2019', progression: 'Project - Sprites and Inter
 named_level 'CSD U3 finishing touches_2019'
 assessment 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019', progression: 'Reflection'
 
-stage 'Post-Project Test', lockable: true
+stage 'Post-Project Test', lockable: true, flex_category: 'csd3_2'
 assessment 'CSD Interactive Animations and Games Post-Project Test'
 
 stage 'CS Discoveries End of Semester Survey', lockable: true, flex_category: 'cspSurvey'
