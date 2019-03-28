@@ -521,13 +521,6 @@ function draw() {
       }
     }
 
-    var createCollisionHandler = function (collisionEvent) {
-      return function (sprite1, sprite2) {
-        if (!collisionEvent.touching || collisionEvent.keepFiring) {
-          collisionEvent.event(sprite1, sprite2);
-        }
-      };
-    };
     // Run collision events
     for (i = 0; i<collisionEvents.length; i++) {
       var collisionEvent = collisionEvents[i];
