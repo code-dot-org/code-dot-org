@@ -747,7 +747,7 @@ is:
         hoc_dance_events: Danspartý - Atvik
         hoc_dance_properties: Danspartý - Eiginleikar
         hoc_dance_congrats: Danspartý - Meira fjör!
-        'Teaching CS Fundamentals: How the Course Works': Kennsla Grunnatriða tölvunarfræði
+        teaching_csf_how_it_works: Kennsla Grunnatriða tölvunarfræði
           - Hvernig námskeiðið virkar
         elem_pd_2: Tölvunarfræði fyrir grunnskóla - Fagmenntunarmyndband 2/2
         what_is_cs: Hvað er tölvunarfræði?
