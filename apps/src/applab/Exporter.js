@@ -28,7 +28,6 @@ import logToCloud from '../logToCloud';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {EXPO_SESSION_SECRET} from '../constants';
-import {fetchWebpackRuntime} from '../util/exporter';
 
 // This whitelist determines which appOptions properties
 // will get exported with the applab app, appearing in the
@@ -430,9 +429,6 @@ export default {
     const rootRelativeApplabAssetPrefix = rootApplabPrefix + 'assets';
     const zipApplabAssetPrefix = appName + '/' + rootRelativeApplabAssetPrefix;
 
-    // webpack-runtime must appear exactly once on any page containing webpack entries.
-    const webpackRuntimeAsset = fetchWebpackRuntime(cacheBust);
-
     // Attempt to fetch applab-api.min.js if possible, but when running on non-production
     // environments, fallback if we can't fetch that file to use applab-api.js:
     const applabApiAsset = new $.Deferred();
@@ -449,14 +445,12 @@ export default {
 
     return new Promise((resolve, reject) => {
       $.when(
-        webpackRuntimeAsset,
         applabApiAsset,
         ...[...staticAssets, ...appAssets].map(assetToDownload =>
           download(assetToDownload.url, assetToDownload.dataType || 'text')
         )
       ).then(
         (
-          [webpackRuntime],
           [applabApi],
           [commonLocale],
           [applabLocale],
@@ -475,13 +469,9 @@ export default {
               (expoMode
                 ? 'assets/applab-api.j'
                 : rootApplabPrefix + 'applab-api.js'),
-            [
-              webpackRuntime,
-              appOptionsContents,
-              commonLocale,
-              applabLocale,
-              applabApi
-            ].join('\n')
+            [appOptionsContents, commonLocale, applabLocale, applabApi].join(
+              '\n'
+            )
           );
           zip.file(
             mainProjectFilesPrefix + fontAwesomeWOFFPath,
