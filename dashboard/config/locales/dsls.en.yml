@@ -4856,27 +4856,10 @@ en:
         RGB Colors: RGB Colors
         rgb(216,191,216) <br />red:216, green:191, blue:216: rgb(216,191,216) <br />red:216, green:191, blue:216
       CSD U2 image debug match:
-        "![](https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png)": "![](https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png)"
-        "![](https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png)": "![](https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png)"
-        "![](https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png)": "![](https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png)"
-        "![](https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png)": "![](https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png)"
-        "![](https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png)": "![](https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png)"
-        ? <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png" alt="<img alt=\"a cute little dog\">browndog.jpg</img>">
-        : <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png" alt="<img alt=\"a cute little dog\">browndog.jpg</img>">
         <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png">: <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png">
-        ? <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png" alt="<img src=\"a cute little dog\" alt=\"browndog.jpg\">">
-        : <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png" alt="<img src=\"a cute little dog\" alt=\"browndog.jpg\">">
         <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png">: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png">
-        ? <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.pn" alt="<img scr=\"browndog.jpg\" alt=\"a cute little dog\">">
-        : <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.pn" alt="<img scr=\"browndog.jpg\" alt=\"a cute little dog\">">
-        ? <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png" alt="<img scr=\"browndog.jpg\" alt=\"a cute little dog\">">
-        : <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png" alt="<img scr=\"browndog.jpg\" alt=\"a cute little dog\">">
         <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png">: <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png">
-        ? <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png" alt="<img src=\"brown dog.jpg\" alt=\"a cute little dog\">">
-        : <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png" alt="<img src=\"brown dog.jpg\" alt=\"a cute little dog\">">
         <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png">: <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png">
-        ? <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png" alt=" <img src=\"browndog\" alt=\"a cute little dog\">">
-        : <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png" alt=" <img src=\"browndog\" alt=\"a cute little dog\">">
         <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png">: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png">
         Match the buggy HTML code with the description of its bug.: Match the buggy HTML code with the description of its bug.
         The `src` and `alt` attributes are switched: The `src` and `alt` attributes are switched
