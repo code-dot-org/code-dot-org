@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {UnconnectedRubricField as RubricField} from '@cdo/apps/templates/instructions/RubricField';
+import {UnwrappedRubricField as RubricField} from '@cdo/apps/templates/instructions/RubricField';
 
 const DEFAULT_PROPS = {
   showFeedbackInputAreas: true,
@@ -13,41 +13,44 @@ const DEFAULT_PROPS = {
 };
 
 describe('RubricField', () => {
-  it('Renders with the correct values', () => {
+  it('renders with the correct values', () => {
     const wrapper = shallow(<RubricField {...DEFAULT_PROPS} />);
 
     // Radio Button
-    const confirmCheckedRadioButton = wrapper.find('CheckedRadioButton').at(0);
+    const confirmCheckedRadioButton = wrapper
+      .find('CheckedRadioButton')
+      .first();
     expect(confirmCheckedRadioButton.props().checked).to.equal(false);
 
     // Details
-    const confirmDetails = wrapper.find('details').at(0);
+    const confirmDetails = wrapper.find('details').first();
     expect(confirmDetails).to.contain('Exceeds');
     expect(confirmDetails).to.contain('exceeded expectations');
   });
-  it('When showFeedbackInputAreas is false, there should not be a CheckedRadioButton', () => {
+  it('does not have a CheckedRadioButton when showFeedbackInputAreas is false', () => {
     const wrapper = shallow(
       <RubricField {...DEFAULT_PROPS} showFeedbackInputAreas={false} />
     );
-    expect(wrapper.find('CheckedRadioButton')).to.have.lengthOf(0);
+    expect(wrapper).to.not.have.descendants('CheckedRadioButton');
   });
-  it('When that RubricField is the currently checked one', () => {
+  it('has a radio button that is checked if currentlyChecked is true', () => {
     const wrapper = shallow(
       <RubricField {...DEFAULT_PROPS} currentlyChecked={true} />
     );
 
-    const confirmCheckedRadioButton = wrapper.find('CheckedRadioButton').at(0);
+    const confirmCheckedRadioButton = wrapper
+      .find('CheckedRadioButton')
+      .first();
     expect(confirmCheckedRadioButton.props().checked).to.equal(true);
   });
-  it('Disable mode - the Checked button also disabled ', () => {
+  it('has a disabled radio button if disabledMode is true.', () => {
     const wrapper = shallow(
       <RubricField {...DEFAULT_PROPS} disabledMode={true} />
     );
 
-    const confirmCheckedRadioButton = wrapper.find('CheckedRadioButton').at(0);
+    const confirmCheckedRadioButton = wrapper
+      .find('CheckedRadioButton')
+      .first();
     expect(confirmCheckedRadioButton.props().disabledMode).to.equal(true);
-  });
-  it('When hover, a border is added and tooltip shows', () => {
-    // not sure how to do this
   });
 });

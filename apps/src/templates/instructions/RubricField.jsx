@@ -118,5 +118,5 @@ class RubricField extends Component {
     );
   }
 }
-export const UnconnectedRubricField = RubricField;
+export const UnwrappedRubricField = RubricField;
 export default Radium(RubricField);
