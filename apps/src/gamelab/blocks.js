@@ -153,7 +153,7 @@ const customInputTypes = {
       currentInputRow
         .appendTitle(inputConfig.label)
         .appendTitle(
-          new Blockly.FieldImageDropdown(sprites(), 32, 32),
+          new Blockly.FieldImageDropdown(sprites, 32, 32),
           inputConfig.name
         );
     },
