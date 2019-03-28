@@ -2,8 +2,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import {UnconnectedTopInstructionsCSP as TopInstructionsCSP} from '@cdo/apps/templates/instructions/TopInstructionsCSP';
-//import {stubRedux, restoreRedux, getStore} from '@cdo/apps/redux';
-//import {Provider} from 'react-redux';
 
 const DEFAULT_PROPS = {
   isEmbedView: false,
@@ -27,52 +25,9 @@ const DEFAULT_PROPS = {
 };
 
 describe('TopInstructionsCSP', () => {
-  describe('Feedback Tab', () => {
-    it('While giving feedback I switch to the instructions tab and back', () => {
-      /* const wrapper = shallow(<TopInstructionsCSP {...DEFAULT_PROPS} />);
-
-      wrapper.setState({
-        tabSelected: 'comments',
-        feedbacks: [],
-        rubric: null,
-        displayFeedbackTeacherFacing: true
-      });
-
-      const instructionsTab = wrapper.find('.uitest-instructionsTab').at(0);
-      instructionsTab.simulate('click');
-      expect(
-        wrapper.find('TeacherFeedback').props().visible
-      ).to.equal(false);
-
-      const feedbackTab = wrapper.find('.uitest-feedback').at(0);
-      feedbackTab.simulate('click');
-      expect(
-        wrapper.find('TeacherFeedback').props().visible
-      ).to.equal(true);
-      */
-    });
-    it('height of instructions area is full size needed for content when feedback tab opened', () => {
-      /*
-      stubRedux();
-      const store = getStore();
-      const wrapper = mount(
-        <Provider store={store}>
-          <TopInstructionsCSP {...DEFAULT_PROPS} />
-        </Provider>
-      );
-
-      wrapper.setState({
-        tabSelected:'comments',
-        feedbacks: [],
-        rubric: null,
-        displayFeedbackTeacherFacing: false
-      });
-
-      expect(wrapper.props().height).to.equal(wrapper.props().maxHeight);
-      restoreRedux();*/
-    });
-    describe('Teachers', () => {
-      it('No Rubric - Viewing Level - Teacher Can Not See Feedback Tab', () => {
+  describe('viewing the Feedback Tab', () => {
+    describe('as a teacher', () => {
+      it('does not show the feedback tab on a level with no rubric where the teacher is not giving feedback', () => {
         const wrapper = shallow(<TopInstructionsCSP {...DEFAULT_PROPS} />);
 
         wrapper.setState({
@@ -84,7 +39,8 @@ describe('TopInstructionsCSP', () => {
 
         expect(wrapper.find('.uitest-feedback')).to.have.lengthOf(0);
       });
-      it('Rubric - Viewing Level - Teacher Can See Feedback Tab', () => {
+
+      it('shows the feedback tab on a level with a rubric where the teacher is not giving feedback', () => {
         const wrapper = shallow(<TopInstructionsCSP {...DEFAULT_PROPS} />);
 
         wrapper.setState({
@@ -103,8 +59,9 @@ describe('TopInstructionsCSP', () => {
         expect(wrapper.find('.uitest-feedback')).to.have.lengthOf(1);
       });
     });
-    describe('Students', () => {
-      it('teacher has given feedback', () => {
+
+    describe('as a student', () => {
+      it('shows the feedback tab on a level where the teacher has given feedback', () => {
         const wrapper = shallow(
           <TopInstructionsCSP {...DEFAULT_PROPS} viewAs={'Student'} />
         );
@@ -128,7 +85,8 @@ describe('TopInstructionsCSP', () => {
 
         expect(wrapper.find('.uitest-feedback')).to.have.lengthOf(1);
       });
-      it('teacher has not given feedback', () => {
+
+      it('does not show the feedback tab on a level where the teacher has not given feedback', () => {
         const wrapper = shallow(
           <TopInstructionsCSP {...DEFAULT_PROPS} viewAs={'Student'} />
         );
