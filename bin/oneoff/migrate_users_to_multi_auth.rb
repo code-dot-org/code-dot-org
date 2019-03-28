@@ -11,7 +11,7 @@ def migrate_batches(limit=nil)
 
   slice_count = 0
   puts "Migrating #{limit || 'all'} slice(s)"
-  unmigrated_users.each_slice(SLICE_SIZE) do |slice|
+  unmigrated_users.find_in_batches(batch_size: SLICE_SIZE) do |slice|
     puts "\tSLICE_COUNT: #{slice_count + 1} of ~#{unmigrated_users_count / SLICE_SIZE}..."
     ActiveRecord::Base.transaction do
       successes = 0
