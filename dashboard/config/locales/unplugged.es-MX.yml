@@ -295,8 +295,9 @@ es-MX:
         title: Actividad desconectada
         desc: Hoy aprenderás qué significa ser un ciudadano digital.
       courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Información Privada y Personal '
-        desc: "¡Hoy aprenderás la diferencia entre información privada y personal!"
+        title: 'Common Sense Education: Información privada y personal '
+        desc: "¡Hoy aprenderás la diferencia entre información privada e información
+          personal!"
       courseF_unplugged_powerOfWords:
         title: Actividad desconectada
         desc: Hoy aprenderás qué significa que alguien esté en linea.
@@ -373,7 +374,7 @@ es-MX:
           puede almacenar información aún más compleja (por ejemplo, imágenes y colores)
           en binario.
       courseE_unplugged_diceRace:
-        title: 'Algoritmos de la vida real: Carrera de dados'
+        title: 'Algoritmos de la vida real: carrera de dados'
         desc: Esta clase muestra modos en los que usamos algoritmos en nuestra vida
           diaria. Como parte de eso, los estudiantes identificarán y escribirán el
           algoritmo de un juego de carrera con dados.
@@ -542,12 +543,12 @@ es-MX:
           y la necesidad de ser justos con el trabajo creativo.
       courseE_unplugged_CnC_2018:
         title: Colaboración digital
-        desc: A manera de préstamo para los Fundamentos de Ciencias de la Computación
-          por parte del equipo de Derechos de autor y Creatividad, esta lección tiene
-          el propósito de ayudar a los estudiantes a entender los desafíos y beneficios
-          de respetar la propiedad y los derechos de autor, particularmente en entornos
-          digitales. Los estudiantes deberían ser alentados a respetar los derechos
-          de los artistas como una parte importante de ser un ciudadano digital ético.
+        desc: Esta lección, cedida al curso de Fundamentos de Ciencias de la Computación
+          por parte del equipo de Derechos de Autor y Creatividad, tiene el propósito
+          de ayudar a los estudiantes a entender los desafíos y beneficios de respetar
+          la propiedad y los derechos de autor, particularmente en entornos digitales.
+          Los estudiantes deberían ser alentados a respetar los derechos de los artistas
+          como una parte importante de ser un ciudadano digital ético.
       RelayProgramming_2018:
         title: Programación de relevos
         desc: Esta actividad comenzará con una breve lección sobre debugging y persistencia,
@@ -607,12 +608,12 @@ es-MX:
         desc: 'traducción pendiente: en-US.data.unplugged.SongwritingParameters_2018.desc'
       courseE_unplugged_CnC_2019:
         title: Colaboración digital
-        desc: A manera de préstamo para los Fundamentos de Ciencias de la Computación
-          por parte del equipo de Derechos de autor y Creatividad, esta lección tiene
-          el propósito de ayudar a los estudiantes a entender los desafíos y beneficios
-          de respetar la propiedad y los derechos de autor, particularmente en entornos
-          digitales. Los estudiantes deberían ser alentados a respetar los derechos
-          de los artistas como una parte importante de ser un ciudadano digital ético.
+        desc: Esta lección, cedida al curso de Fundamentos de Ciencias de la Computación
+          por parte del equipo de Derechos de Autor y Creatividad, tiene el propósito
+          de ayudar a los estudiantes a entender los desafíos y beneficios de respetar
+          la propiedad y los derechos de autor, particularmente en entornos digitales.
+          Los estudiantes deberían ser alentados a respetar los derechos de los artistas
+          como una parte importante de ser un ciudadano digital ético.
       Internet_2019:
         title: 'traducción pendiente: en-US.data.unplugged.Internet_2018.title'
         desc: 'traducción pendiente: en-US.data.unplugged.Internet_2018.desc'
@@ -703,5 +704,5 @@ es-MX:
           la reflexión y el diseño de soluciones accesibles para aplicaciones hipotéticas.
       courseE_simon_says_2019:
         title: Simón dice
-        desc: Juega y piensa sobre qué comandos son necesarios para obtener los resultados
+        desc: Juega y piensa qué comandos son necesarios para obtener los resultados
           adecuados.

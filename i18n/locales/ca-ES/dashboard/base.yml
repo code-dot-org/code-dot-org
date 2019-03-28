@@ -265,10 +265,14 @@ ca:
       create: 'Crea'
       applab: 'Laboratori d''aplicacions'
       artist: 'Artista'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
+      bounce: 'Rebota'
       dance: 'Festa amb ball'
+      flappy: 'Flappy'
+      frozen: 'Frozen'
+      infinity: 'Infinit'
+      minecraft_designer: 'Minecraft'
+      playlab: 'Play Lab'
+      starwars: 'Star Wars'
     popup:
       progress_for_user: "Progrés de %{name}"
       progress: 'El teu progrés'
@@ -610,6 +614,20 @@ ca:
           other: 'Altres'
   flex_category:
     required: 'Vista general'
+    csf_digcit: 'Ciutadania digital'
+    csf_jigsaw: 'Puzzle'
+    csf_loops: 'Bucles'
+    csf_events: 'Esdeveniments'
+    csf_binary: 'Binari'
+    csf_conditionals: 'Condicionals'
+    csf_nested_loops: 'Bucles imbricats'
+    csf_functions: 'Funcions'
+    csf_variables: 'Variables'
+    csf_for_loops: 'Per bucles'
+    csf_internet: 'Internet'
+    csp_variables: 'Variables'
+    csp_conditionals: 'Condicionals'
+    csp_functions: 'Funcions'
   view_teacher_guide: 'Veure la guia docent'
   pd:
     form_labels:

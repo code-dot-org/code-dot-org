@@ -124,6 +124,17 @@ ur:
     user:
       classroom: 'استاد کی ہوم پیج'
       create: 'بنائیں'
+      algebra_game: 'الجبرا'
+      artist_k1: 'آرٹسٹ (پری ریڈر)'
+      basketball: 'باسکٹ بال'
+      frozen: 'فروزن'
+      gamelab_jr: 'کھیل لیب (بیٹا)'
+      iceage: 'برفانی عہد'
+      infinity: 'Infinity'
+      minecraft_aquatic: 'Minecraft تعلیم کے لئے جانا'
+      minecraft_hero: 'Minecraft ہیرو'
+      playlab_k1: 'لیب کھیلیں (پری ریڈر)'
+      weblab: 'ویب لیب'
   teacher:
     panel:
       student: 'Talib-e-ilm'
@@ -166,6 +177,13 @@ ur:
       report_abuse_form:
         abuse_type:
           other: 'دیگر'
+  flex_category:
+    csf_loops: 'لوپس'
+    csf_events: 'موقعے'
+    csf_conditionals: 'شرائط'
+    csf_variables: 'متغیرات'
+    csp_variables: 'متغیرات'
+    csp_conditionals: 'شرائط'
   pd:
     form_labels:
       email: 'Email'

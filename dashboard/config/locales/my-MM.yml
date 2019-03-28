@@ -30,6 +30,15 @@ my:
       professional_learning: Professional Learning
     user:
       create: ဖန်တီးပါ
+      algebra_game: Algebra
+      artist_k1: Artist(စာစဖတ်တတ်စသူများ)
+      basketball: Basketball
+      gamelab_jr: Game Lab (beta)
+      infinity: Infinity
+      minecraft_adventurer: Minecraft စွန့်စားခန်း
+      minecraft_hero: Minecraft သူရဲကောင်း
+      playlab_k1: Play Lab(Pre-reader)
+      weblab: Web Lab
   teacher:
     panel:
       answer_viewer: ဆရာအဖွဲ့
@@ -62,6 +71,10 @@ my:
     name: အမည္
     saved: သိမ်းထားပြီးပါပြီ
     cancel: ပယ်ဖျတ်သည်
+  flex_category:
+    csf_loops: Loops
+    csf_variables: Variables
+    csp_variables: Variables
   pd:
     form_labels:
       email: email လိပ္စာ

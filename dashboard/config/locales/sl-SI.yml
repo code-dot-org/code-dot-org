@@ -256,9 +256,18 @@ sl:
       navigator: Navigator
       create: Ustvari
       artist: Umetnik
-      playlab: Play Lab
-      minecraft: Minecraft
+      bounce: Skokica
       flappy: Flappy
+      frozen: Zmrznjenka (Frozen)
+      gumball: Gumballov fantastični svet
+      iceage: Ledena doba
+      infinity: Neskončnost
+      minecraft_adventurer: Minecraft Pustolovec
+      minecraft_designer: Minecraft
+      playlab: Play Lab
+      starwars: Star Wars
+      starwarsblocks: Vojna Zvezd (Kocke)
+      starwarsblocks_hour: Vojna Zvezd (Kocke)
     popup:
       progress_for_user: Napredek od %{name}
       progress: Tvoj napredek
@@ -684,6 +693,19 @@ sl:
   flex_category:
     required: Pregled
     content: Vsebina
+    csf_digcit: Digitalno državljanstvo
+    csf_jigsaw: Sestavljanka
+    csf_loops: Zanke
+    csf_events: Dogodki
+    csf_binary: Binarno
+    csf_conditionals: Pogoji
+    csf_nested_loops: Gnezdenje zank
+    csf_functions: Funkcije
+    csf_variables: Spremenljivke
+    csf_internet: Internet
+    csp_variables: Spremenljivke
+    csp_conditionals: Pogoji
+    csp_functions: Funkcije
   hoc_download:
     minecraft_name: Minecraft Ura za kodo
     download_in_Albanian: 'Prenesi v albanskem jeziku:'

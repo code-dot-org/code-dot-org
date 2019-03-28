@@ -200,6 +200,7 @@ hi:
   nav:
     user:
       create: 'बनाए'
+      infinity: 'अनंत'
   teacher:
     panel:
       student: 'छात्र'
@@ -279,6 +280,15 @@ hi:
     delete_no: 'नहीं'
     saved: "सहेजा गया"
     cancel: 'रद्द करें'
+  flex_category:
+    csf_loops: 'फंदे'
+    csf_events: 'घटनाएँ'
+    csf_conditionals: 'शर्तें'
+    csf_functions: 'कार्य'
+    csf_variables: 'चर'
+    csp_variables: 'चर'
+    csp_conditionals: 'शर्तें'
+    csp_functions: 'कार्य'
   pd:
     form_labels:
       email: 'ईमेल'

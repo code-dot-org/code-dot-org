@@ -324,9 +324,16 @@ gl:
       create: 'Crear'
       applab: 'Laboratorio de aplicacións'
       artist: 'Artista'
-      playlab: 'Laboratorio de Xogos'
-      minecraft: 'Minecraft'
+      bounce: 'Rebote'
       flappy: 'Flappy bird'
+      frozen: 'Frozen'
+      gumball: 'Gumball'
+      iceage: 'Era do Xeo'
+      infinity: 'Infinito'
+      minecraft_designer: 'Minecraft'
+      playlab: 'Laboratorio de Xogos'
+      playlab_k1: 'Play Lab (para Educación Infantil)'
+      starwars: 'Star Wars'
     popup:
       progress_for_user: "progreso de %{name}'s"
       progress: 'O teu progreso'
@@ -376,6 +383,7 @@ gl:
     delete_text: "Clicando no botón de abaixo, vostede vai eliminar a súa conta."
     delete_text_teacher_note: "Lémbrese: a eliminación da súa conta non vai eliminar as contas dos seus alumnos."
     delete_confirm: 'Ten certeza de que desexa eliminar a súa conta?'
+    deleted_user: 'usuario borrado'
     create_personal_login_terms: "Ao crear unha conta individual, acepto os <a href='%{terms_of_service_url}', target='_blank'>termos de serviço</a> do Code.org. Se son menor de 13 anos, declaro que teño autorización de meus pais ou responsables legais para usar os servizos de Code.org incluso sen a supervisión dun profesor."
   user_level:
     completed: 'Concluído'
@@ -694,6 +702,20 @@ gl:
         acknowledge: 'Ao enviar esta información, acepta que esta será tratada de acordo cos termos da nosa %{link_start_privacy}Política de Privacidade%{link_end} e dos %{link_start_tos}Termos de Utilización%{link_end}'
   flex_category:
     required: 'Visión xeral'
+    csf_digcit: 'Cidadanía dixital'
+    csf_jigsaw: 'Crebacabezas'
+    csf_loops: 'Bucles'
+    csf_events: 'Eventos'
+    csf_binary: 'Binario'
+    csf_conditionals: 'Condicionais'
+    csf_nested_loops: 'Bucles aniñados'
+    csf_functions: 'Funcións'
+    csf_variables: 'Variables'
+    csf_for_loops: 'Bucles "Para" (For)'
+    csf_internet: 'Internet'
+    csp_variables: 'Variables'
+    csp_conditionals: 'Condicionais'
+    csp_functions: 'Funcións'
   pd:
     form_labels:
       email: 'E-mail'

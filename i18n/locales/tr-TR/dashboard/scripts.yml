@@ -8110,3 +8110,7 @@ tr:
           stages:
             new stage:
               name: yeni kademe
+        csd-videos:
+          stages:
+            new stage:
+              name: yeni kademe

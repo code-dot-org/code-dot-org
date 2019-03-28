@@ -38,5 +38,5 @@ stage 'Project - Propose an App', flex_category: 'csd1_2'
 named_level 'CSD U1L09 TFMD_2019'
 assessment 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019', progression: 'Reflection'
 
-stage 'Post-Project Test', lockable: true
+stage 'Post-Project Test', lockable: true, flex_category: 'csd1_2'
 assessment 'CSD U1 Test'
