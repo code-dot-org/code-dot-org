@@ -8,6 +8,7 @@ import {setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
 const assets = require('@cdo/apps/code-studio/assets');
 
+const WEBPACK_RUNTIME_JS_CONTENT = 'webpack-runtime.js content';
 const COMMON_LOCALE_JS_CONTENT = 'common_locale.js content';
 const APPLAB_LOCALE_JS_CONTENT = 'applab_locale.js content';
 const APPLAB_API_JS_CONTENT = 'applab-api.js content';
@@ -54,6 +55,10 @@ describe('The Exporter,', function() {
 
   beforeEach(function() {
     server = sinon.fakeServerWithClock.create();
+    server.respondWith(
+      /\/blockly\/js\/webpack-runtime\.js\?__cb__=\d+/,
+      WEBPACK_RUNTIME_JS_CONTENT
+    );
     server.respondWith(
       /\/blockly\/js\/en_us\/common_locale\.js\?__cb__=\d+/,
       COMMON_LOCALE_JS_CONTENT
@@ -359,7 +364,7 @@ describe('The Exporter,', function() {
         assert.property(zipFiles, 'my-app/applab/applab-api.js');
         assert.equal(
           zipFiles['my-app/applab/applab-api.js'],
-          `${getAppOptionsFile()}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
+          `${WEBPACK_RUNTIME_JS_CONTENT}\n${getAppOptionsFile()}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
         );
       });
 
@@ -580,7 +585,7 @@ describe('The Exporter,', function() {
         assert.property(zipFiles, 'my-app/assets/applab-api.j');
         assert.equal(
           zipFiles['my-app/assets/applab-api.j'],
-          `${getAppOptionsFile(
+          `${WEBPACK_RUNTIME_JS_CONTENT}\n${getAppOptionsFile(
             true,
             'new_fake_id'
           )}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
@@ -736,6 +741,8 @@ describe('The Exporter,', function() {
 
   describe('globally exposed functions', () => {
     beforeEach(() => {
+      // webpack-runtime must appear exactly once on any page containing webpack entries.
+      require('../../../build/package/js/webpack-runtime.js');
       require('../../../build/package/js/applab-api.js');
     });
   });
@@ -769,6 +776,8 @@ describe('The Exporter,', function() {
 
           new Function(getAppOptionsFile())();
           setAppOptions(Object.assign(window.APP_OPTIONS, {isExported: true}));
+          // webpack-runtime must appear exactly once on any page containing webpack entries.
+          require('../../../build/package/js/webpack-runtime.js');
           require('../../../build/package/js/applab-api.js');
           new Function(zipFiles['my-app/code.js'])();
           if (globalPromiseName) {
