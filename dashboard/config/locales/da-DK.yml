@@ -299,13 +299,24 @@ da:
       team: Hold
       navigator: Partner
       create: Opret
+      algebra_game: Algebra
       applab: App Lab
       artist: Kunstner
-      gamelab: Spil Laboratoriet
-      playlab: Play Lab
-      minecraft: Minecraft
-      flappy: Flappy
+      bounce: Hoppe
+      calc: Infinitesimalregning
       dance: Dansefest
+      eval: Evaluer
+      flappy: Flappy
+      frozen: Frozen
+      gamelab: Spil Laboratoriet
+      gumball: Gumball
+      iceage: Is-tid
+      infinity: Uendelig
+      minecraft_designer: Minecraft
+      playlab: Play Lab
+      starwars: Star Wars
+      starwarsblocks: Star Wars (Blocks)
+      starwarsblocks_hour: Star Wars (Blocks)
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: Dine fremskridt
@@ -761,6 +772,20 @@ da:
       name: Eskalerede
   flex_category:
     required: Oversigt
+    csf_digcit: Digital statsborgerskab
+    csf_jigsaw: Puslespil
+    csf_loops: Løkker
+    csf_events: Hændelser
+    csf_binary: Binære
+    csf_conditionals: Betingelser
+    csf_nested_loops: Indlejret Løkker
+    csf_functions: Funktioner
+    csf_variables: Variabler
+    csf_for_loops: For Loops
+    csf_internet: Internet
+    csp_variables: Variabler
+    csp_conditionals: Betingelser
+    csp_functions: Funktioner
   view_teacher_guide: Vis lærervejledning
   pd:
     form_labels:

@@ -222,6 +222,10 @@ fi:
         tähän kuoppaan tarvitaan.\r\nOsaatko kirjoittaa ohjelman, joka käyttää 'täytä'-palikkaa,
         kunnes maa on tasainen?  "
       Artist Autorun Test: Käytä "toista" lohkoa piirtääksesi nämä 3 neliötä.
+      CoureE_HOC 2018 Level_7a: Löysit vedenalaiset rauniot. Tutki hiekkakiveä löytääksesi
+        **arkun** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        joka sisältää **prismariinisen** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        aarteen.
       Course 4 Artist 13: Pelaatko edelleen? Tässä sinulle tyhjä maalauspohja, jolle
         voit piirtää, mitä haluat!
       Course 4 Artist 6: "Täydennä koodi ja piirrä nämä kolmiot. \r\n\r\nJokaisen

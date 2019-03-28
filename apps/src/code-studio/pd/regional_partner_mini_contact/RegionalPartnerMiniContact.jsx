@@ -60,7 +60,8 @@ export class RegionalPartnerMiniContact extends React.Component {
       name: this.state.name,
       email: this.state.email,
       zip: this.state.zip,
-      notes: this.state.notes
+      notes: this.state.notes,
+      source: this.props.sourcePageId
     };
 
     this.setState({submitting: true});

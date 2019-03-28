@@ -170,6 +170,16 @@ FactoryGirl.define do
           create :single_user_experiment, min_user_id: teacher.id, name: evaluator.pilot_experiment
         end
       end
+
+      # We have some teacher records in our system that do not pass validation because they have
+      # no email address.  Sometimes we want to test against this case because we still want features
+      # to work for these teachers.
+      trait :without_email do
+        after(:create) do |user|
+          user.update_primary_contact_info new_email: '', new_hashed_email: ''
+          user.save validate: false
+        end
+      end
     end
 
     factory :student do
@@ -340,29 +350,6 @@ FactoryGirl.define do
       end
     end
 
-    trait :with_migrated_google_authentication_option do
-      after(:create_commit) do |user|
-        ao = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: user.uid,
-          data: {
-            oauth_token: 'some-google-token',
-            oauth_refresh_token: 'some-google-refresh-token',
-            oauth_token_expiration: '999999'
-          }.to_json
-        )
-        user.update!(
-          primary_contact_info: ao,
-          provider: User::PROVIDER_MIGRATED,
-          email: '',
-          hashed_email: nil
-        )
-      end
-    end
-
     trait :with_clever_authentication_option do
       after(:create) do |user|
         create(:authentication_option,
@@ -374,56 +361,6 @@ FactoryGirl.define do
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
-        )
-      end
-    end
-
-    trait :with_migrated_clever_authentication_option do
-      after(:create) do |user|
-        ao = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::CLEVER,
-          authentication_id: '456efgh',
-          data: {
-            oauth_token: 'some-clever-token'
-          }.to_json
-        )
-        user.update!(
-          primary_contact_info: ao,
-          provider: User::PROVIDER_MIGRATED,
-          email: '',
-          hashed_email: nil
-        )
-      end
-    end
-
-    trait :with_migrated_windowslive_authentication_option do
-      after(:create) do |user|
-        ao = create(:authentication_option,
-          user: user,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          credential_type: AuthenticationOption::WINDOWS_LIVE,
-          authentication_id: user.hashed_email
-        )
-        user.update!(
-          primary_contact_info: ao,
-          provider: User::PROVIDER_MIGRATED,
-          email: '',
-          hashed_email: nil
-        )
-      end
-    end
-
-    trait :multi_auth_migrated do
-      after(:create) do |user|
-        user.update_attributes(
-          provider: 'migrated',
-          uid: '',
-          email: '',
-          hashed_email: ''
         )
       end
     end

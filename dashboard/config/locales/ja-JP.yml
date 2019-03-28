@@ -333,13 +333,27 @@ ja:
       driver: ドライバー
       navigator: ナビゲーター
       create: つくる
+      algebra_game: 代数
       applab: アプリ ラボ
       artist: アーティスト
-      gamelab: ゲーム ラボ
-      playlab: プレイラボ
-      minecraft: マインクラフト
-      flappy: フラッピー
+      basketball: バスケットボール
+      bounce: バウンド
       dance: ダンスパーティー
+      flappy: フラッピー
+      frozen: アナと雪の女王
+      gamelab: ゲーム ラボ
+      gamelab_jr: ゲーム ラボ(ベータ版)
+      gumball: おかしなガムボール
+      iceage: アイス・エイジ
+      infinity: インフィニティ
+      minecraft_adventurer: Minecraftアドベンチャー
+      minecraft_designer: マインクラフト
+      playlab: プレイラボ
+      sports: スポーツ
+      starwars: スター・ウォーズ
+      starwarsblocks: スター ・ ウォーズ (ブロック)
+      starwarsblocks_hour: スター ・ ウォーズ (ブロック)
+      weblab: ウェッブ ラボ
       view_all: すべてのプロジェクトを見る
     popup:
       progress_for_user: "%{name} の進捗状況"
@@ -930,6 +944,16 @@ ja:
     csf_e_2: コースEの内容
     csf_f_1: コースFへの強化（オプション）
     csf_f_2: コースFの内容
+    csf_jigsaw: ジグソーパズル
+    csf_loops: くりかえし
+    csf_events: イベント
+    csf_binary: ２しんすう
+    csf_conditionals: 条件
+    csf_nested_loops: 入れ子のループ
+    csf_functions: '関数(かんすう) '
+    csf_variables: 変数
+    csf_for_loops: ループ用
+    csf_internet: インターネット
     csd1_1: '第 1章: 問題解決プロセス'
     csd1_2: 第 2 章コンピューターと問題解決
     csd2_1: 第 1 章： Web コンテンツと HTML
@@ -946,6 +970,9 @@ ja:
     csp3_1: '章 1: プログラミング言語とアルゴリズム'
     cspSurvey: アンケート
     csp2_1_2018: '第 2 章: デジタル情報'
+    csp_variables: 変数
+    csp_conditionals: 条件
+    csp_functions: '関数(かんすう) '
   external_links:
     disclaimer: 免責事項
     leaving_domain: このドメインから離れ、Code.org が運営していないサイトに移動します。

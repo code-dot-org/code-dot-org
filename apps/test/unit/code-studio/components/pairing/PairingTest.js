@@ -54,8 +54,8 @@ describe('Pairing component', function() {
     beforeEach(function() {
       server = setupFakeAjax(ajaxState);
       component = createDomElement();
-      component.update();
       server.respond();
+      component.update();
     });
 
     afterEach(function() {
@@ -67,12 +67,14 @@ describe('Pairing component', function() {
       verifyStartingValues(component, 0, 1);
 
       // choose first section
-      component.find('select').simulate('change', {target: {value: '1'}});
+      component.find('select').prop('onChange')({target: {value: '1'}});
+      component.update();
       expect(component.find('select').props().value).to.equal(1);
       expect(component.find('.student').length).to.equal(2);
 
       // choose second section
-      component.find('select').simulate('change', {target: {value: '15'}});
+      component.find('select').prop('onChange')({target: {value: '15'}});
+      component.update();
       expect(component.find('select').props().value).to.equal(15);
       expect(component.find('.student').length).to.equal(0);
     });
@@ -114,8 +116,8 @@ describe('Pairing component', function() {
     beforeEach(function() {
       server = setupFakeAjax(ajaxState);
       component = createDomElement();
-      component.update();
       server.respond();
+      component.update();
     });
 
     afterEach(function() {
@@ -214,8 +216,8 @@ describe('Pairing component', function() {
     beforeEach(function() {
       server = setupFakeAjax(ajaxState);
       component = createDomElement();
-      component.update();
       server.respond();
+      component.update();
     });
 
     afterEach(function() {

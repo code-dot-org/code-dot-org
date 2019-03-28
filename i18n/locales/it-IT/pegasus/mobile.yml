@@ -97,7 +97,7 @@
   third_party_price_individual: 'Prezzo individuale: Prova gratuita & $25/mese'
   third_party_price_school: 'Prezzo della scuola: Progetti gratuiti & pro a $2500+'
   third_party_tynker_desc: "La piattaforma Tynker di computazione creativa aiuta i bambini a sviluppare il pensiero computazionale e le abilita' di programmazione in maniera divertente, intuitiva e fantasiosa. Il nostro innovativo linguaggio di programmazione visuale, corsi interattivi autoregolati e attivita' di programmazione basate sul gioco, forniscono un'introduzione semplice alla programmazione e permettono ai bambini di innovare e creare."
-  third_party_tynker_btn_curriculum: "Prova il Curriculum di Trynker per primi lettori"
+  third_party_tynker_btn_curriculum: "Prova il curriculum pre-scolare di Trynker"
   third_party_tynker_btn_site: "Visita Tynker"
   third_party_scratchjr_desc: "Scratch Junior e' un linguaggio di programmazione introduttivo che consente a bambini piccoli (eta' 5-7) di creare i propri giochi e le proprie storie interattive. I bambini collegano insieme dei blocchi di programmazione grafica per far muovere, saltare, ballare e cantare i personaggi. I bambini possono modificare i personaggi nell'editor di disegno, aggiungere le proprie voci e suoni, perfino aggiungere foto di se' stessi, e poi usare i blocchi di programmazione per dar vita ai propri personaggi."
   third_party_scratchjr_btn_curriculum: "Scarica il curriculum di Scratch Jr."
@@ -664,7 +664,7 @@
   dashboard_sections_table_secret: "Tipo di accesso"
   dashboard_sections_table_grade: "Livello"
   dashboard_sections_table_course: "Corso"
-  dashboard_sections_table_pairing_allowed: "Programmazione in Coppia"
+  dashboard_sections_table_pairing_allowed: "Programmazione in coppia"
   dashboard_sections_table_stage_extras: "Esercizi Supplementari"
   dashboard_sections_table_students: "Studenti"
   dashboard_sections_table_code: "Codice-Classe"
@@ -864,7 +864,7 @@
   khanpl_name: "Un'introduzione a JavaScript"
   tynker_name: "Costruisci un gioco come vuoi tu"
   scratch_name: "Scopri la tua creatività con la programmazione"
-  thinkersmith_name: "I Miei Amici Robotici"
+  thinkersmith_name: "I miei amici robotici"
   condcards_name: "Istruzioni condizionali con le Carte da Gioco"
   codehs_name: "Imparare a programmare con il cane Karel"
   codemonkey_name: "CodeMonkey"
@@ -1596,3 +1596,5 @@
   page_not_found_header: '404 Pagina non trovata'
   page_not_found_description: "La pagina che stai cercando non esiste a questo indirizzo. Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage."
   page_not_found_button: "Ritorna alla homepage"
+  hoc2018_mc_with_microsoft: "In collaborazione con"
+  hoc2018_mc_thank_microsoft: "Ringraziamo Microsoft per il supporto che dà alla nostra missione per garantire che ogni bambino abbia l'opportunità di imparare l'informatica e le competenze per avere successo nel XXI secolo."

@@ -287,6 +287,17 @@ km:
       already_registered: 'បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?'
       team: 'ក្រុម'
       create: 'បង្កើត'
+      algebra_game: 'ពិជគណិត'
+      artist_k1: 'សិល្បករ (អ្នកដែលទើបតែរៀនអាន)'
+      basketball: 'កីឡាបាល់បោះ'
+      bounce: 'បាល់​លោត'
+      gamelab_jr: 'បន្ទប់ហ្គេម (beta)'
+      gumball: 'The Amazing World of Gumball'
+      iceage: 'Ice Age'
+      infinity: 'អនន្ត'
+      minecraft_adventurer: 'Minecraft Adventurer'
+      playlab_k1: 'បន្ទប់លេង (សម្រាប់អ្នកដែលទើបរៀនអាន)'
+      weblab: 'បន្ទប់វេប'
     popup:
       progress_for_user: "ដំណើរការរបស់%{name}"
       progress: 'ដំណើរការ​របស់​អ្នក'
@@ -488,6 +499,15 @@ km:
       report_abuse_form:
         abuse_type:
           other: 'ផ្សេងៗ'
+  flex_category:
+    csf_loops: 'រង្វិល​ជុំ'
+    csf_events: 'ព្រឹត្តិការណ៍'
+    csf_conditionals: 'លក្ខខណ្ឌ'
+    csf_functions: 'អនុ​គមន៍'
+    csf_variables: 'អ​ថេរ'
+    csp_variables: 'អ​ថេរ'
+    csp_conditionals: 'លក្ខខណ្ឌ'
+    csp_functions: 'អនុ​គមន៍'
   pd:
     form_labels:
       email: 'អ៊ីមែល'

@@ -144,12 +144,8 @@ class UserTest < ActiveSupport::TestCase
 
   # Test updating the school_info of an older user without an email address.
   test 'update_school_info with specific school overwrites user school info for user without email' do
-    user = create :teacher, :with_school_info
+    user = create :teacher, :without_email, :with_school_info
     new_school_info = create :school_info
-
-    user.update_primary_contact_info(new_email: "", new_hashed_email: "")
-    user.save(validate: false)
-    refute user.valid?
 
     user.update_school_info(new_school_info)
     assert_equal new_school_info, user.school_info
@@ -684,7 +680,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "find_for_authentication finds migrated multi-auth email user first" do
     email = 'test@foo.bar'
-    migrated_student = create(:student, :multi_auth_migrated, email: email)
+    migrated_student = create(:student, email: email)
     migrated_student.primary_contact_info = migrated_student.primary_contact_info
     migrated_student.primary_contact_info.update(authentication_id: User.hash_email(email))
     legacy_student = build(:student, email: email)
@@ -699,7 +695,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "find_for_authentication finds migrated Google email user" do
     email = 'test@foo.bar'
-    migrated_student = create(:student, :with_migrated_google_authentication_option, email: email)
+    migrated_student = create(:student, :with_google_authentication_option, email: email)
 
     looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))
 
@@ -1754,14 +1750,14 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'update_email_for does not update migrated user AuthenticationOption if provider and uid are not present' do
-    user = create :user, :multi_auth_migrated
+    user = create :user
     user.update_email_for(provider: nil, uid: nil, email: 'new@email.com')
     user.reload
     refute_equal User.hash_email('new@email.com'), user.hashed_email
   end
 
   test 'update_email_for does not update migrated user AuthenticationOption if no matching AuthenticationOption' do
-    user = create :user, :multi_auth_migrated
+    user = create :user
     google_auth_option = create :google_authentication_option, user: user, authentication_id: '123456'
     user.update_email_for(provider: AuthenticationOption::GOOGLE, uid: 'not-my-uid', email: 'new@email.com')
     google_auth_option.reload
@@ -1770,7 +1766,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'update_email_for updates migrated user AuthenticationOption if matching AuthenticationOption' do
     uid = '123456'
-    user = create :user, :multi_auth_migrated
+    user = create :user
     google_auth_option = create :google_authentication_option, user: user, authentication_id: uid
     user.reload
     user.update_email_for(provider: AuthenticationOption::GOOGLE, uid: uid, email: 'new@email.com')
@@ -1915,7 +1911,7 @@ class UserTest < ActiveSupport::TestCase
     taken_email = 'taken@example.org'
     create :student, email: taken_email
     update_primary_contact_info_fails_safely_for \
-      create(:student_in_picture_section, :multi_auth_migrated),
+      create(:student_in_picture_section),
       new_email: taken_email
   end
 
@@ -1931,7 +1927,7 @@ class UserTest < ActiveSupport::TestCase
     taken_email = 'taken@example.org'
     create :student, email: taken_email
     update_primary_contact_info_fails_safely_for \
-      create(:student, :with_migrated_google_authentication_option),
+      create(:student, :with_google_authentication_option),
       new_email: taken_email
   end
 
@@ -1980,7 +1976,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'upgrade_to_personal_login is false for migrated student if update_primary_contact_info fails' do
-    student = create :student, :with_migrated_google_authentication_option
+    student = create :student, :with_google_authentication_option
     student.stubs(:update_primary_contact_info!).raises(RuntimeError)
     params = upgrade_to_personal_login_params
     new_email = params[:email]
@@ -1995,7 +1991,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'upgrade_to_personal_login is false for migrated student if update fails' do
-    student = create :student, :with_migrated_google_authentication_option
+    student = create :student, :with_google_authentication_option
     student.stubs(:update!).raises(ActiveRecord::RecordInvalid)
     params = upgrade_to_personal_login_params
     new_email = params[:email]
@@ -3258,7 +3254,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'from_omniauth: updates migrated user oauth tokens if authentication option with matching credentials exists' do
     uid = '654321'
-    user = create :user, :multi_auth_migrated
+    user = create :user
     google_auth_option = create :authentication_option, credential_type: AuthenticationOption::GOOGLE, authentication_id: uid, user: user
     auth = OmniAuth::AuthHash.new(
       provider: AuthenticationOption::GOOGLE,

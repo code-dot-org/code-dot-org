@@ -383,10 +383,19 @@ cs:
       create: Vytvořit
       applab: App Lab
       artist: Umělec
-      playlab: Play Lab
-      minecraft: Minecraft
-      flappy: Flappy
+      bounce: Odraz
       dance: Taneční večírek
+      flappy: Flappy
+      frozen: Frozen
+      gumball: Žvýkačku
+      iceage: Doba ledová
+      infinity: Nekonečno
+      minecraft_adventurer: Minecraft Adventurer
+      minecraft_designer: Minecraft
+      playlab: Play Lab
+      starwars: Hvězdné války
+      starwarsblocks: Hvězdné války (kostky)
+      starwarsblocks_hour: Hvězdné války (kostky)
     popup:
       progress_for_user: pokrok je %{name}
       progress: Tvůj pokrok
@@ -1062,6 +1071,17 @@ cs:
     practice: Výukové postupy
     peer_review: Nezávislý posudek
     main_course: Hlavní kurs
+    csf_digcit: Digitální občanství
+    csf_jigsaw: Skládačka
+    csf_loops: Smyčky
+    csf_events: Události
+    csf_binary: Binární
+    csf_conditionals: Podmínky
+    csf_nested_loops: Vnořené cykly
+    csf_functions: Funkce
+    csf_variables: Proměnné
+    csf_for_loops: For cykly
+    csf_internet: Internet
     csd1_1: 'Kapitola 1: Proces řešení problémů'
     csd1_2: 'Kapitola 2: Počítače a řešení problémů'
     csd2_1: 'Kapitola 1: Obsah webu a HTML'
@@ -1079,6 +1099,9 @@ cs:
     csp3_1: 'Kapitola 1: Programovací jazyky a algoritmy'
     csp2_1_2018: '2. lekce: Digitální informace'
     csp3_1_2018: 'Jednotka 3: Úvod do programování'
+    csp_variables: Proměnné
+    csp_conditionals: Podmínky
+    csp_functions: Funkce
   external_links:
     disclaimer: Zřeknutí se
     leaving_domain: Opouštíte tuto doménu na stránku, která není provázaná se společností

@@ -54,7 +54,9 @@ es:
       2-3 Artist Functions 13: "Tienes cuatro funciones.\nUtilízalas como quieras dentro de uno o varios bucles para hacer dibujos que puedes compartir con tus amigos. Pulsa \"run\" para ver un ejemplo."
       2-3 Artist Functions 2 a: 'Usa el bloque pequeño verde de ''dibujar un cuadrado'' para llamar a esta nueva función y crear las gafas. '
       2-3 Artist Functions 2: "¡Las funciones permiten definir nuevos bloques! Hemos movido los bloques para dibujar un cuadrado en la función llamada \"dibuja un cuadrado\". ¿Puedes utilizar la función \"dibuja un cuadrado\" para crear los lentes? Los cuadrados están separados por 75 píxeles."
+      2-3 Artist Functions 3 a: "Edita la función \"dibuja un cuadrado\" para dibujar cristales con fotogramas de 115px por cada lado. \n\nLos cuadrados ahora están separados 45 píxeles."
       2-3 Artist Functions 3: "Editar la función para dibujar un cuadrado con una longitud lateral de 115 y dibuja los lentes más grandes. Los cuadrados están ahora separados 45 píxeles."
+      2-3 Artist Functions 4 a: Ahora, coloca la función dentro de un bucle y añade un turno extra para dibujar estos tres cuadrados.
       2-3 Artist Functions 4: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
       2-3 Artist Functions 7: 'Utiliza la función "dibuja una casa" para dibujar dos casas utilizando dos parámetros diferentes. (Sugerencia: la primera casa es de 100 pixeles).'
       2-3 Artist Functions 9: 'Esta es la función copo de nieve. ¡Experimenta con ella para crea una escena invernal! Este es un nivel libre de acertijos, puedes jugar libremente . ¡Diviértete!'
@@ -444,6 +446,7 @@ es:
       Bee Recommended Blocks test: '¡ Las flores moradas pueden tener un tipo de néctar de 1 ó 0, pero tu no sabes cuál !. Ten cuidado de no recolectar el néctar de una flor morada sin  néctar. Revisa si el valor del néctar es igual a 1 usando el bloque “if”. '
       Bergeron Robot Maze1: "¿Me puedes ayudar a atrapar al cerdo malo? Apila un\npar de bloques \"avanzar\" juntos y presiona \"Ejecutar\". "
       Big Game Collision 3: Usa la formula de distancia, para que la funcion de distancia regrese la distancia entre las coordenadas del centro del jugardor (px, py) y del centro de otro sprinte (cx, cy).
+      Big Game Vars 4: '¡Impresionante! Ahora puedes actualizar las variables de tu Jugador, Objetivo, y Peligro. Juega con todas las variables libremente para hacer que tu juego tenga el aspecto que deseas. Haz click en "Finalizar" cuando acabes.'
       Brad Spooky House Copy: 'Juego Libre: Aquí están las funciones que has escrito y algunas más para que juegues con ellas. ¡Dibuja algo impresionante!'
       Brad Spooky House: 'Juego Libre: Aquí están las funciones que has escrito y algunas más para que juegues con ellas. ¡Dibuja algo impresionante!'
       Building a Foundation Assessment: "Construye una piramide de tres niveles,\n¡No hay mas instrucciones, simplemente juega con las piezas hasta lograrlo!"
@@ -461,6 +464,7 @@ es:
       CSPU5_U3 - Canvas - freePlay_2018: Extiende la funcionalidad de uno de los efectos o crea uno completamente nuevo (haz clic para ver instrucciones completas)
       CSPU5_U3 - Canvas - freePlay_2019: Extiende la funcionalidad de uno de los efectos o crea uno completamente nuevo (haz clic para ver instrucciones completas)
       CSPU5_U3 - Keys - Final Image Scroller: Actualice el desplazamiento de la imagen para responder a los botones y presionar las teclas. (Haga clic para ver instrucciones completas)
+      CoureE_HOC 2018 Level_7a: Explora las ruinas subacuáticas en busca de un cofre.
       Course 2 Bee Loops 1: "Hola, soy una abeja. ¿Puedes ayudarme a recolectar \nel néctar de estas flores? "
       Course 2 Maze Loops 1: '¿Puedes llevarme hasta el cerdo usando 5 bloques?'
       Course 4 2: La abeja solo quiere néctar ahora mismo. Recuerda, no todos los objetos son flores, así que chequea, para solo recoger néctar de las flores.

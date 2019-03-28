@@ -208,9 +208,19 @@ kk:
       create: Құру
       applab: Қосымшалар Лабораториясы
       artist: Кейіпкер
-      playlab: Ойындар Лабораториясы
-      minecraft: Minecraft
+      bounce: Секіру
+      calc: Қақ
+      eval: Eval
       flappy: Flappy
+      frozen: Мұзды жүрек
+      gumball: Гамболдың таңғажайып әлемі
+      iceage: Мұз дәуірі
+      infinity: Шексіздік
+      minecraft_adventurer: Minecraft Adventurer
+      minecraft_designer: Minecraft
+      playlab: Ойындар Лабораториясы
+      sports: Спорттар
+      starwars: Жұлдызды Соғыстар
     popup:
       progress_for_user: "%{name} сабақ оқу барысы"
       progress: Сіздің сабақ оқу барысыңыз
@@ -686,6 +696,20 @@ kk:
     required: Қысқаша шолу
     content: Контент
     practice: Сабақ беру Практикалары
+    csf_digcit: Сандық Азаматтық
+    csf_jigsaw: Бас қатырғыш
+    csf_loops: Ілмек
+    csf_events: Шаралар
+    csf_binary: Бинарлы
+    csf_conditionals: Шарттар
+    csf_nested_loops: Кіріккен Циклдер
+    csf_functions: Функциялар
+    csf_variables: Айнымалылар
+    csf_for_loops: For ілмектері
+    csf_internet: Ғаламтор
+    csp_variables: Айнымалылар
+    csp_conditionals: Шарттар
+    csp_functions: Функциялар
   hoc_download:
     instructions_headline: Интернет жоқ па?
     minecraft_name: Minecraft Кодтау Сағаты

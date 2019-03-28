@@ -54,7 +54,7 @@ Scenario: Signed out user in Spanish should see 3 header links
   And element "#header-non-en-about" has "es" text from key "nav.header.about"
 
 Scenario: Student in Spanish should see 3 header links
-  Given I create a student named "Estrella Estudiante"
+  Given I create a student named "Eva Estudiante"
   Then check that I am on "http://studio.code.org/home"
   Given I am on "http://studio.code.org/courses/lang/es"
   Then check that I am on "http://studio.code.org/courses"

@@ -677,50 +677,50 @@ zh-TW:
           ![Solution](https://images.code.org/72f0ce970999deffe87bd93af0db959f-image-1469642214408.png)
       Course E MC Conditionals1_authored_hint:
         mc_9_a: 你面對的是正確的方式嗎?“破壞程式積木”把你前面的程式積木埋起來。
-        mc_9_b: 牆上的黑點是煤！用“摧毀程式積木”來開採煤炭。
+        mc_9_b: 牆裡面一點一點的黑點是煤！用`破壞方塊`來開採煤炭。
         mc_9_c: 用“放置火炬”把火炬放在你站的地方。
       CourseD_Dance_Party_01_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 確保舞者出現在螢幕上。
+          **我要怎麼過關？**
+          * 確定有個舞者在畫面。
 
-          *此層級在 4 個小節後結束。*
+          *這個關卡會在 4 個小節後結束。*
         challenges: |-
-          **可選挑戰**
+          **額外挑戰**
           * 選擇不同的歌曲播放。
-          * 選擇一個看起來像麋鹿的不同項目！
-          * 重新命名您的舞者。
+          * 重新命名你的舞者。
       CourseD_Dance_Party_02_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 舞者需要在 4 小節後切換到新的動作。
+          **我要怎麼通過這個關卡？**
 
-          *該層級在 8 個小節後結束。*
+          * 舞者要在 4 小節後換個新的舞姿。
+
+          *這個關卡會在 7 小節後結束。*
       CourseD_Dance_Party_03_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 6 個小節後，您的舞者需要進行與 4 小節之後不同的舞蹈。
+          * 在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
 
-          *該層級在 12 個小節後結束。*
+          *這個關卡會在 11 小節後結束。*
       CourseD_Dance_Party_04_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *此層級在 10 個小節後結束。*
+          *這個關卡會在 9 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
       CourseD_Dance_Party_06_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要至少有兩個舞者。
+          * 你至少添加兩個舞者。
 
-          *此層級在 6 個小節後結束。*
+          *這個關卡會在 5 小節後結束。*
         challenges: |-
           **可選挑戰**
 
@@ -728,50 +728,50 @@ zh-TW:
           * 讓所有舞者在歌曲的不同時間點執行不同的動作。
       CourseD_Dance_Party_08_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個舞者需要有 100 以外的尺寸。
+          * 兩個舞者的尺寸必須超過 100。
 
-          *此層級在 6 個小節後結束。*
+          *這個關卡會在 5 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
       CourseD_Dance_Party_09_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 變更至少一個舞者的色調。
+          * 你至少要添加一個舞者。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 7 小節後結束。*
       CourseD_Dance_Party_10_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個或更多的舞者屬性必須變更。
+          * 兩個以上的舞者屬性必須有變化。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 7 小節後結束。*
       CourseD_Dance_Party_11_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 7 個小節。*
       CourseD_Dance_Party_11_5_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 7 個小節。*
       CourseD_Dance_Party_11b_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 使用「按下左箭頭時」程式積木，讓機器人在您按下時進行舞蹈動作。
+          * 使用 `當左鍵被按下` 積木讓舞者在你按下按鍵時跳個舞。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 7 小節後結束。*
       CourseE_HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "看到**海燈籠** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)
           了嗎？如何有條件地使用它們以穿越海洋遺址？\n\n"
@@ -781,79 +781,79 @@ zh-TW:
         Course_4_Play_Lab_Vars_2_a: 確定在 `dog_speed`（小狗的速度）上設定的數值要大於 `cat_speed`（小貓的速度）。
       Dance short test 2_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *此層級在 10 個小節後結束。*
+          *這個關卡會在 10 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
       Dance short test_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *此層級在 10 個小節後結束。*
+          *這個關卡會在 10 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
       Dance_Party_01_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 確保舞者出現在螢幕上。
+          **我要怎麼過關？**
+          * 確定有個舞者在畫面。
 
-          *此層級在 4 個小節後結束。*
+          *這個關卡會在 4 個小節後結束。*
         challenges: |-
-          **可選挑戰**
+          **額外挑戰**
           * 選擇不同的歌曲播放。
-          * 選擇一個看起來像麋鹿的不同項目！
-          * 重新命名您的舞者。
+          * 重新命名你的舞者。
       Dance_Party_01_low_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 確保舞者出現在螢幕上。
+          **我要怎麼過關？**
+          * 確定有個舞者在畫面。
 
-          *此層級在 4 個小節後結束。*
+          *這個關卡會在 4 個小節後結束。*
         challenges: |-
-          **可選挑戰**
+          **額外挑戰**
           * 選擇不同的歌曲播放。
           * 選擇一個看起來像麋鹿的不同項目！
-          * 重新命名您的舞者。
+          * 重新命名你的舞者。
       Dance_Party_02_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 舞者需要在 4 小節後切換到新的動作。
+          **我要怎麼通過這個關卡？**
 
-          *該層級在 8 個小節後結束。*
+          * 舞者要在 4 小節後換個新的舞姿。
+
+          *這個關卡會在 7 小節後結束。*
       Dance_Party_03_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 6 個小節後，您的舞者需要進行與 4 小節之後不同的舞蹈。
+          * 在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
 
-          *該層級在 12 個小節後結束。*
+          *這個關卡會在 11 小節後結束。*
       Dance_Party_04_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *此層級在 10 個小節後結束。*
+          *這個關卡會在 9 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
       Dance_Party_06_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要至少有兩個舞者。
+          * 你至少添加兩個舞者。
 
-          *此層級在 6 個小節後結束。*
+          *這個關卡會在 5 小節後結束。*
         challenges: |-
           **可選挑戰**
 
@@ -861,99 +861,100 @@ zh-TW:
           * 讓所有舞者在歌曲的不同時間點執行不同的動作。
       Dance_Party_08_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個舞者需要有 100 以外的尺寸。
+          * 兩個舞者的尺寸必須超過 100。
 
-          *此層級在 6 個小節後結束。*
+          *這個關卡會在 5 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
       Dance_Party_09_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 變更至少一個舞者的色調。
+          * 你至少要添加一個舞者。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 7 小節後結束。*
       Dance_Party_1_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 確保舞者出現在螢幕上。
+          **我要怎麼過關？**
+          * 確定有個舞者在畫面。
 
-          *此層級在 4 個小節後結束。*
+          *這個關卡會在 4 個小節後結束。*
         challenges: |-
-          **可選挑戰**
+          **額外挑戰**
           * 選擇不同的歌曲播放。
           * 選擇一個看起來像麋鹿的不同項目！
-          * 重新命名您的舞者。
+          * 重新命名你的舞者。
       Dance_Party_10_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個或更多的舞者屬性必須變更。
+          * 兩個以上的舞者屬性必須有變化。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 7 小節後結束。*
       Dance_Party_11.5_test_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 7 個小節。*
       Dance_Party_11_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 7 個小節。*
       Dance_Party_11_5_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 7 個小節。*
       Dance_Party_11b_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 使用「按下左箭頭時」程式積木，讓機器人在您按下時進行舞蹈動作。
+          * 使用 `當左鍵被按下` 積木讓舞者在你按下按鍵時跳個舞。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 7 小節後結束。*
       Dance_Party_2_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 舞者需要在 4 小節後切換到新的動作。
+          **我要怎麼通過這個關卡？**
 
-          *該層級在 8 個小節後結束。*
+          * 舞者要在 4 小節後換個新的舞姿。
+
+          *這個關卡會在 8 小節後結束。*
       Dance_Party_3_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 6 個小節後，您的舞者需要進行與 4 小節之後不同的舞蹈。
+          * 在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
 
-          *該層級在 12 個小節後結束。*
+          *這個關卡會在 12 小節後結束。*
       Dance_Party_4_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *此層級在 10 個小節後結束。*
+          *這個關卡會在 10 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
       Dance_Party_5_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您的舞蹈必須在歌曲的前 12 個小節當中執行不同的動作。
+          * 你的舞蹈必須在歌曲的前 12 小節當中有不同的舞姿。
 
-          *此層級在 12 個小節後結束。*
+          *這個關卡會在 12 小節後結束。*
       Dance_Party_6_authored_hint:
         challenges: |-
           **可選挑戰**
@@ -962,22 +963,22 @@ zh-TW:
           * 讓所有舞者在歌曲的不同時間點執行不同的動作。
       Dance_Party_8_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個舞者需要有 100 以外的尺寸。
+          * 兩個舞者的尺寸必須超過 100。
 
-          *此層級在 6 個小節後結束。*
+          *這個關卡會在 6 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
       Dance_Party_9_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 變更至少一個舞者的色調。
+          * 你至少要添加一個舞者。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 8 小節後結束。*
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           這是第一個提示。
@@ -1011,46 +1012,47 @@ zh-TW:
         voyage_aquatic_9a: 真是美麗的珊瑚礁！藍色珊瑚應該要在**右**，還有紅色珊瑚應該要在**左**！
       HOC Dance 0_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 確保舞者出現在螢幕上。
+          **我要怎麼過關？**
+          * 確定有個舞者在畫面。
 
-          *此層級在 4 個小節後結束。*
+          *這個關卡會在 4 個小節後結束。*
         challenges: |-
-          **可選挑戰**
+          **額外挑戰**
           * 選擇不同的歌曲播放。
           * 選擇一個看起來像麋鹿的不同項目！
-          * 重新命名您的舞者。
+          * 重新命名你的舞者。
       HOC Dance 1_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 舞者需要在 4 小節後切換到新的動作。
+          **我要怎麼通過這個關卡？**
 
-          *該層級在 8 個小節後結束。*
+          * 舞者要在 4 小節後換個新的舞姿。
+
+          *這個關卡會在 8 小節後結束。*
       HOC Dance 2_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 6 個小節後，您的舞者需要進行與 4 小節之後不同的舞蹈。
+          * 在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
 
-          *該層級在 12 個小節後結束。*
+          *這個關卡會在 12 小節後結束。*
       HOC Dance 3_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您需要在歌曲第七個小節的某個時候變更背景效果。
+          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *此層級在 10 個小節後結束。*
+          *這個關卡會在 10 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
       HOC Dance 4_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 您的舞蹈必須在歌曲的前 12 個小節當中執行不同的動作。
+          * 你的舞蹈必須在歌曲的前 12 小節當中有不同的舞姿。
 
-          *此層級在 12 個小節後結束。*
+          *這個關卡會在 12 小節後結束。*
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **可選挑戰**
@@ -1059,43 +1061,43 @@ zh-TW:
           * 讓所有舞者在歌曲的不同時間點執行不同的動作。
       HOC Dance 6_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個舞者需要有 100 以外的尺寸。
+          * 兩個舞者的尺寸必須超過 100。
 
-          *此層級在 6 個小節後結束。*
+          *這個關卡會在 6 小節後結束。*
         challenges: |-
           **可選挑戰**
 
           * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
       HOC Dance 7_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 變更至少一個舞者的色調。
+          * 你至少要添加一個舞者。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 8 小節後結束。*
       HOC Dance 8_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要怎麼通過這個關卡？**
 
-          * 兩個或更多的舞者屬性必須變更。
+          * 兩個以上的舞者屬性必須有變化。
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡會在 8 小節後結束。*
       HOC Dance 9_draft_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 8 個小節。*
       HOC Dance make group_authored_hint:
         validation: |-
-          **我如何通過此層級？**
+          **我要如何通過這一關？**
 
-          * 發揮創意即可！
+          * 自由發揮就可以囉！
 
-          *此層級在 8 個小節後結束。*
+          *這個關卡最多可以有 8 個小節。*
       Harvesting_authored_hint:
         pointer_harvester_test: 哪種積木可以幫助我判斷（檢查還有做決定）？
       Inspirational Artwork_authored_hint:
@@ -1116,27 +1118,27 @@ zh-TW:
       MC_HOC_2017_01_Cole_authored_hint:
         MC_HOC_2017_01_Cole_a: 使用您的箭頭按鍵來引導玩家進入房屋。在橙色方塊中結束就獲勝。
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: 從工具箱中拖曳一個「往前移動」方塊至工作空間，然後將該方塊放在「當按下執行時」方塊下方。
-        MC_HOC_2017_01_RETRY_b: 別忘了按一下「執行」以執行 Agent 的代碼。
-        MC_HOC_2017_01_RETRY_c: 當 Agent 已執行其所有代碼後，您就可以使用箭頭按鍵移動玩家！
+        MC_HOC_2017_01_RETRY_a: 從工具箱中拖曳一個`移動-向前`積木到工作區，然後將該積木貼合到`當運行時`積木下。
+        MC_HOC_2017_01_RETRY_b: 別忘了點擊「運行」按鈕才能執行代理 Agent 的程式。
+        MC_HOC_2017_01_RETRY_c: 當代理 Agent 的程式運行後，你就可以用鍵盤上的方向鍵移動玩家！
       MC_HOC_2017_01_RETRY_2019_authored_hint:
-        MC_HOC_2017_01_RETRY_a: 從工具箱中拖曳一個「往前移動」方塊至工作空間，然後將該方塊放在「當按下執行時」方塊下方。
-        MC_HOC_2017_01_RETRY_b: 別忘了按一下「執行」以執行 Agent 的代碼。
-        MC_HOC_2017_01_RETRY_c: 當 Agent 已執行其所有代碼後，您就可以使用箭頭按鍵移動玩家！
+        MC_HOC_2017_01_RETRY_a: 從工具箱中拖曳一個`移動-向前`積木到工作區，然後將該積木貼合到`當運行時`積木下。
+        MC_HOC_2017_01_RETRY_b: 別忘了點擊「運行」按鈕才能執行代理 Agent 的程式。
+        MC_HOC_2017_01_RETRY_c: 當代理 Agent 的程式運行後，你就可以用鍵盤上的方向鍵移動玩家！
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: 向前移動 Agent 兩步以站在壓板上。這將為玩家開門。
-        MC_HOC_2017_02_Cole_b: "按「執行」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
-        MC_HOC_2017_02_Cole_c: 當 Agent 把門打開之後，使用箭頭按鍵移動玩家至地圖上！
-        MC_HOC_2017_02_Cole_d: 確保特工按照地圖上列出的路徑執行！
+        MC_HOC_2017_02_Cole_a: 讓代理 Agent 向前移動 2 步，站在壓力板上幫玩家開門。
+        MC_HOC_2017_02_Cole_b: "點擊「運行」就對了！ \n\n也許你不知道你的程式是否可行，但你還是可以試試，運行、重置程式，直到你找到解決的方法吧！"
+        MC_HOC_2017_02_Cole_c: 在代理 Agent 把門打開之後，還要用方向鍵控制玩家，讓他移動到地圖的位置！
+        MC_HOC_2017_02_Cole_d: 運行看看代理 Agent 行走的路徑是否和所想的一樣！
       MC_HOC_2017_02_Cole_2019_authored_hint:
-        MC_HOC_2017_02_Cole_a: 向前移動 Agent 兩步以站在壓板上。這將為玩家開門。
-        MC_HOC_2017_02_Cole_b: "按「執行」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
-        MC_HOC_2017_02_Cole_c: 當 Agent 把門打開之後，使用箭頭按鍵移動玩家至地圖上！
-        MC_HOC_2017_02_Cole_d: 確保特工按照地圖上列出的路徑執行！
+        MC_HOC_2017_02_Cole_a: 讓代理 Agent 向前移動 2 步，站在壓力板上幫玩家開門。
+        MC_HOC_2017_02_Cole_b: "點擊「運行」就對了！ \n\n也許你不知道你的程式是否可行，但你還是可以試試，運行、重置程式，直到你找到解決的方法吧！"
+        MC_HOC_2017_02_Cole_c: 在代理 Agent 把門打開之後，還要用方向鍵控制玩家，讓他移動到地圖的位置！
+        MC_HOC_2017_02_Cole_d: 運行看看代理 Agent 行走的路徑是否和所想的一樣！
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: 向前移動 Agent 兩步以站在壓板上。這將為玩家開門。
-        MC_HOC_2017_02_Cole_b: "按「執行 Agent」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
-        MC_HOC_2017_02_Cole_c: 當 Agent 把門打開之後，使用箭頭按鍵移動玩家至橙色方塊上！
+        MC_HOC_2017_02_Cole_a: 讓代理 Agent 向前移動 2 步，站在壓力板上幫玩家開門。
+        MC_HOC_2017_02_Cole_b: "點擊「運行」就對了！ \n\n也許你不知道你的程式是否可行，但你還是可以試試，運行、重置程式，直到你找到解決的方法吧！"
+        MC_HOC_2017_02_Cole_c: 在代理 Agent 把門打開之後，還要用方向鍵控制玩家，讓他移動到橙色正方形的位置。
       MC_HOC_2017_03_Cole_authored_hint:
         MC_HOC_2017_03_Cole_a: 當您將 Agent 移至壓板上後，您可以使用箭頭按鍵移動玩家至羅盤上！
         MC_HOC_2017_03_Cole_b: 代碼長度是否有點過長？請嘗試使用「重複」循環，看看是否能找出縮短代碼的方式！
@@ -1153,11 +1155,11 @@ zh-TW:
         MC_HOC_2017_04POINT5_RYAN_a: Agent 只需要抵達第一塊壓板，即可引導愛莉克斯或史提夫通過斧頭。
       MC_HOC_2017_04_Cole_authored_hint:
         MC_HOC_2017_04_Cole_a: Agent 必須「往前移動」7 次。您可以如何使用「重複」循環來完成這個任務？
-        MC_HOC_2017_04_Cole_c: "按「執行」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
+        MC_HOC_2017_04_Cole_c: "點擊「運行」就對了！ \n\n也許你不知道你的程式是否可行，但你還是可以試試，運行、重置程式，直到你找到解決的方法吧！"
         MC_HOC_2017_04_Cole_b: 當 Agent 抵達壓板後，他將為玩家開門。
       MC_HOC_2017_04_Cole_2019_authored_hint:
         MC_HOC_2017_04_Cole_a: Agent 必須「往前移動」7 次。您可以如何使用「重複」循環來完成這個任務？
-        MC_HOC_2017_04_Cole_c: "按「執行」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
+        MC_HOC_2017_04_Cole_c: "點擊「運行」就對了！ \n\n也許你不知道你的程式是否可行，但你還是可以試試，運行、重置程式，直到你找到解決的方法吧！"
         MC_HOC_2017_04_Cole_b: 當 Agent 抵達壓板後，他將為玩家開門。
       MC_HOC_2017_05_Cole_authored_hint:
         MC_HOC_2017_05_Cole_a: 您知道嗎？您可以將代碼的多個部分放在循環中。請嘗試放置木板**並**向前移動至「重複」內以完成此版圖。
@@ -1168,26 +1170,26 @@ zh-TW:
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: 您知道嗎？您可以將代碼的多個部分放在循環中。請嘗試放置木板**並**向前移動至「重複」內以完成此版圖。
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: 此循環會執行多少次？循環*應*執行多少次？
+        MC_HOC_2017_06_Cole_a: 這個迴圈會循環多少次？*應該*重複多少次呢？
         MC_HOC_2017_06_Cole_b: '幫助特工在水面上架起一座橋！ '
       MC_HOC_2017_06_Cole_2019_authored_hint:
-        MC_HOC_2017_06_Cole_a: 此循環會執行多少次？循環*應*執行多少次？
+        MC_HOC_2017_06_Cole_a: 這個迴圈會循環多少次？*應該*重複多少次呢？
         MC_HOC_2017_06_Cole_b: '幫助特工在水面上架起一座橋！ '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: 請嘗試在「重複」循環中放置多個指令！
       MC_HOC_2017_07_Cole_authored_hint:
         MC_HOC_2017_07_Cole_c: 你所需要做的就是讓特工為你掃清通往礦車的道路。
         MC_HOC_2017_07_Cole_a: 若要解決此版圖，請找出「清除路徑」的功能，並使用工具箱中小型綠色「清除路徑」方塊，依照自己的所需次數呼叫。
-        MC_HOC_2017_07_Cole_b: 請嘗試混合功能方塊與工具箱中的其他方塊，以協助您解決此版圖。
+        MC_HOC_2017_07_Cole_b: 試著混合函式積木和工具箱中的其它積木，看看能不能幫助你解決這個關卡。
       MC_HOC_2017_07_Cole_2019_authored_hint:
         MC_HOC_2017_07_Cole_c: 你所需要做的就是讓特工為你掃清通往礦車的道路。
         MC_HOC_2017_07_Cole_a: 若要解決此版圖，請找出「清除路徑」的功能，並使用工具箱中小型綠色「清除路徑」方塊，依照自己的所需次數呼叫。
-        MC_HOC_2017_07_Cole_b: 請嘗試混合功能方塊與工具箱中的其他方塊，以協助您解決此版圖。
+        MC_HOC_2017_07_Cole_b: 試著混合函式積木和工具箱中的其它積木，看看能不能幫助你解決這個關卡。
       MC_HOC_2017_08_RY_authored_hint:
-        MC_HOC_2017_08_RY_a: "按「執行 Agent」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
+        MC_HOC_2017_08_RY_a: "點擊「運行」就對了！ \n\n也許你不知道你的程式是否可行，但你還是可以試試，運行、重置程式，直到你找到解決的方法吧！"
         MC_HOC_2017_08_RY_b: 解決此版圖有許多方式。請嘗試採用幾個！
       MC_HOC_2017_08_Will_authored_hint:
-        MC_HOC_2017_08_RY_a: "按「執行 Agent」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
+        MC_HOC_2017_08_RY_a: "點擊「運行」就對了！ \n\n也許你不知道你的程式是否可行，但你還是可以試試，運行、重置程式，直到你找到解決的方法吧！"
         MC_HOC_2017_08_RY_b: 解決此版圖有許多方式。請嘗試採用幾個！
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: 使用功能以更輕鬆檢決此版圖！
@@ -1202,11 +1204,11 @@ zh-TW:
       MC_HOC_2017_4.5v2_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: "交叉這兩塊壓板，將為玩家開啟路徑。 \n![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)"
       MC_HOC_2017_Ali_authored_hint:
-        MC_HOC_2017_08_RY_a: "按「執行」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
+        MC_HOC_2017_08_RY_a: "點擊「運行」就對了！ \n\n也許你不知道你的程式是否可行，但你還是可以試試，運行、重置程式，直到你找到解決的方法吧！"
         MC_HOC_2017_08_RY_b: 解決此版圖有許多方式。請嘗試採用幾個！
         MC_HOC_2017_08_RY_c: 試著沿著這條虛線，找到一條穿過熔岩的簡單路徑。
       MC_HOC_2017_Ali_2019_authored_hint:
-        MC_HOC_2017_08_RY_a: "按「執行」！ \n即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。"
+        MC_HOC_2017_08_RY_a: "點擊「運行」就對了！ \n\n也許你不知道你的程式是否可行，但你還是可以試試，運行、重置程式，直到你找到解決的方法吧！"
         MC_HOC_2017_08_RY_b: 解決此版圖有許多方式。請嘗試採用幾個！
         MC_HOC_2017_08_RY_c: 試著沿著這條虛線，找到一條穿過熔岩的簡單路徑。
       MC_HOC_2017_FP20x20_authored_hint:
@@ -1247,15 +1249,15 @@ zh-TW:
         MC_HOC_2017_13_Cole_a: 請嘗試讓 Agent 建立幾座橋樑，這樣愛莉克斯或史提夫才可走出地圖邊緣。
       Overworld Avoid Monsters_authored_hint:
         mc_8_a: 你可以走幾條路。哪條是最短的？
-        mc_8_b: 使用“重複”循環來簡化代碼。
+        mc_8_b: 使用`重複`迴圈來簡化程式。
         mc_8_c: 你的目標是進入屏幕頂端的房子的門口。
       Overworld Avoid Monsters_2018_authored_hint:
         mc_8_a: 你可以走幾條路。哪條是最短的？
-        mc_8_b: 使用“重複”循環來簡化代碼。
+        mc_8_b: 使用`重複`迴圈來簡化程式。
         mc_8_c: 你的目標是進入屏幕頂端的房子的門口。
       Overworld Avoid Monsters_2019_authored_hint:
         mc_8_a: 你可以走幾條路。哪條是最短的？
-        mc_8_b: 使用“重複”循環來簡化代碼。
+        mc_8_b: 使用`重複`迴圈來簡化程式。
         mc_8_c: 你的目標是進入屏幕頂端的房子的門口。
       Overworld Chop Tree_authored_hint:
         mc_2_a: 你需要“前進”兩次才能站在樹前。
@@ -1278,15 +1280,15 @@ zh-TW:
       Overworld House Frame Chosen_authored_hint:
         mc_6_a: 單擊“位置”程式積木的箭頭，選擇要放置的內容。
         mc_6_b: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
-        mc_6_c: 您可以在“重複”循環中放入多個程式積木。
+        mc_6_c: 你可以在`重複`積木裡頭放入多個程式積木。
       Overworld House Frame Chosen_2018_authored_hint:
         mc_6_a: 單擊“位置”程式積木的箭頭，選擇要放置的內容。
         mc_6_b: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
-        mc_6_c: 您可以在“重複”循環中放入多個程式積木。
+        mc_6_c: 你可以在`重複`積木裡頭放入多個程式積木。
       Overworld House Frame Chosen_2019_authored_hint:
         mc_6_a: 單擊“位置”程式積木的箭頭，選擇要放置的內容。
         mc_6_b: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
-        mc_6_c: 您可以在“重複”循環中放入多個程式積木。
+        mc_6_c: 你可以在`重複`積木裡頭放入多個程式積木。
       Overworld Move to Sheep_authored_hint:
         mc_1_a: "“前進”程式積木在工具箱的頂部。"
         mc_1_b: 確保兩個“向前移動”程式積木在“運行”程式積木的時候被捕捉了。
@@ -1298,37 +1300,37 @@ zh-TW:
         mc_1_b: 確保兩個“向前移動”程式積木在“運行”程式積木的時候被捕捉了。
       Overworld Place Wall_authored_hint:
         mc_5_a: 先使用“放置”程式積木，然後使用“移動”程式積木。
-        mc_5_b: 確保兩個塊都在“重複”循環的內部，以便多次運行代碼。
+        mc_5_b: 確保兩個積木都在`重複`積木裡頭，這樣才可以執行程式多次。
         mc_5_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       Overworld Place Wall_2018_authored_hint:
         mc_5_a: 先使用“放置”程式積木，然後使用“移動”程式積木。
-        mc_5_b: 確保兩個塊都在“重複”循環的內部，以便多次運行代碼。
+        mc_5_b: 確保兩個積木都在`重複`積木裡頭，這樣才可以執行程式多次。
         mc_5_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       Overworld Place Wall_2019_authored_hint:
         mc_5_a: 先使用“放置”程式積木，然後使用“移動”程式積木。
-        mc_5_b: 確保兩個塊都在“重複”循環的內部，以便多次運行代碼。
+        mc_5_b: 確保兩個積木都在`重複`積木裡頭，這樣才可以執行程式多次。
         mc_5_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       Overworld Plant Crops_authored_hint:
         mc_7_a: 使用“植物作物”程式積木在你站立的地方種植作物。
         mc_7_b: 兩條帶深棕色的土地都需要種滿莊稼。
-        mc_7_c: 您可以在“重複”循環中放入多個程式積木。
+        mc_7_c: 你可以在`重複`積木裡頭放入多個程式積木。
       Overworld Plant Crops_2018_authored_hint:
         mc_7_a: 使用“植物作物”程式積木在你站立的地方種植作物。
         mc_7_b: 兩條帶深棕色的土地都需要種滿莊稼。
-        mc_7_c: 您可以在“重複”循環中放入多個程式積木。
+        mc_7_c: 你可以在`重複`積木裡頭放入多個程式積木。
       Overworld Plant Crops_2019_authored_hint:
         mc_7_a: 使用“植物作物”程式積木在你站立的地方種植作物。
         mc_7_b: 兩條帶深棕色的土地都需要種滿莊稼。
-        mc_7_c: 您可以在“重複”循環中放入多個程式積木。
+        mc_7_c: 你可以在`重複`積木裡頭放入多個程式積木。
       Overworld Powered Minecart_authored_hint:
         mc_13_a: 在你所站的廣場上使用“放置鐵路”鋪設鐵路。
-        mc_13_b: 使用“重複”循環來縮短代碼。
+        mc_13_b: 使用`重複`迴圈來把程式縮短。
       Overworld Powered Minecart_2018_authored_hint:
         mc_13_a: 在你所站的廣場上使用“放置鐵路”鋪設鐵路。
-        mc_13_b: 使用“重複”循環來縮短代碼。
+        mc_13_b: 使用`重複`迴圈來把程式縮短。
       Overworld Powered Minecart_2019_authored_hint:
         mc_13_a: 在你所站的廣場上使用“放置鐵路”鋪設鐵路。
-        mc_13_b: 使用“重複”循環來縮短代碼。
+        mc_13_b: 使用`重複`迴圈來把程式縮短。
       Overworld Shear Sheep_authored_hint:
         mc_3_a: "“剪切”程式積木把羊放在你的前面。你面對著羊群嗎?"
         mc_3_b: 如果你需要改變你面對的方式，那就用“轉動”程式積木。
@@ -1357,10 +1359,11 @@ zh-TW:
         test_hint: 這是測試用提示。
       Ryan_Demo_authored_hint:
         validation: |-
-          **我如何通過此層級？**
-          * 舞者需要在 4 小節後切換到新的動作。
+          **我要怎麼通過這個關卡？**
 
-          *該層級在 8 個小節後結束。*
+          * 舞者要在 4 小節後換個新的舞姿。
+
+          *這個關卡會在 7 小節後結束。*
       Underground Avoiding Lava_authored_hint:
         mc_11_a: 所有的代碼都是用來檢查熔岩並處理它的。您所需要做的就是添加一個程式積木來移動。
         mc_11_b: 你的“前進”命令是否應該進入“if”語句或之後再進入？
@@ -1372,15 +1375,15 @@ zh-TW:
         mc_11_b: 你的“前進”命令是否應該進入“if”語句或之後再進入？
       Underground If Statements_authored_hint:
         mc_12_a: 紅色斑點的空間是你找到紅石的地方。
-        mc_12_b: 你能使用“重複”循環來縮短你的代碼嗎?
+        mc_12_b: 你能用`重複`迴圈縮短程式嗎？
         mc_12_c: '使用“if”語句檢查熔岩空間，然後放置鵝卵石。 '
       Underground If Statements_2018_authored_hint:
         mc_12_a: 紅色斑點的空間是你找到紅石的地方。
-        mc_12_b: 你能使用“重複”循環來縮短你的代碼嗎?
+        mc_12_b: 你能用`重複`迴圈縮短程式嗎？
         mc_12_c: '使用“if”語句檢查熔岩空間，然後放置鵝卵石。 '
       Underground If Statements_2019_authored_hint:
         mc_12_a: 紅色斑點的空間是你找到紅石的地方。
-        mc_12_b: 你能使用“重複”循環來縮短你的代碼嗎?
+        mc_12_b: 你能用`重複`迴圈縮短程式嗎？
         mc_12_c: '使用“if”語句檢查熔岩空間，然後放置鵝卵石。 '
       Underground Iron_authored_hint:
         mc_10_a: 鐵塊是火炬背後的斑點空間！你打算怎麼去那兒？
@@ -1396,15 +1399,15 @@ zh-TW:
         mc_10_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       Underground Mining Coal_authored_hint:
         mc_9_a: 你面對的是正確的方式嗎?“破壞程式積木”把你前面的程式積木埋起來。
-        mc_9_b: 牆上的黑點是煤！用“摧毀程式積木”來開採煤炭。
+        mc_9_b: 牆裡面一點一點的黑點是煤！用`破壞方塊`來開採煤炭。
         mc_9_c: 用“放置火炬”把火炬放在你站的地方。
       Underground Mining Coal_2018_authored_hint:
         mc_9_a: 你面對的是正確的方式嗎?“破壞程式積木”把你前面的程式積木埋起來。
-        mc_9_b: 牆上的黑點是煤！用“摧毀程式積木”來開採煤炭。
+        mc_9_b: 牆裡面一點一點的黑點是煤！用`破壞方塊`來開採煤炭。
         mc_9_c: 用“放置火炬”把火炬放在你站的地方。
       Underground Mining Coal_2019_authored_hint:
         mc_9_a: 你面對的是正確的方式嗎?“破壞程式積木”把你前面的程式積木埋起來。
-        mc_9_b: 牆上的黑點是煤！用“摧毀程式積木”來開採煤炭。
+        mc_9_b: 牆裡面一點一點的黑點是煤！用`破壞方塊`來開採煤炭。
         mc_9_c: 用“放置火炬”把火炬放在你站的地方。
       Valentine_artist2_01_authored_hint:
         Valentine_artist2_01_a: 草的每一面长度为30像素。尝试使用楼梯踏步模式。
@@ -1515,7 +1518,6 @@ zh-TW:
         allHallows2017_c: Jordyn說： “你現在不能停下來！繼續！”
         allHallows2017_d: Josh說：“你需要利用你的編碼技能來解決這個難題！”
         allHallows2017_e: Dani說：“我不擅長雙關語。試著用一個重複的程式積木！”
-        allHallows2017_b: Baker說：“芝加哥的蠟筆只在*綠線*上工作。”
         allHallows2017_f: Amy說：“你可以做到！只要跳出固有的思維模式”
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
@@ -1715,6 +1717,9 @@ zh-TW:
           - 繪製一個三角形
           - 向前跳50個像素
           - 向右轉90度
+      course2_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: 要畫出八邊形，藝術家需要轉向 45 度 8 次。
+        courseD_artist_nestedLoops_challenge2_b: 要畫出正方形，藝術家需要轉向 90 度 4 次。
       course2_artist_prog_challenge1_authored_hint:
         courseC_artist_prog_challenge1_a: 這個矩形的寬是 200 像素，高是 100 像素。
       course2_bee_conditionals_challenge1_authored_hint:
@@ -2698,6 +2703,8 @@ zh-TW:
         courseB_artist_loops2_a: 如果你想要重複程式 4 次以上，你可以修改積木上的數字。
       courseB_artist_loops2_2019_authored_hint:
         courseB_artist_loops2_a: 如果你想要重複程式 4 次以上，你可以修改積木上的數字。
+      courseB_artist_loops3_authored_hint:
+        courseB_artist_loops3_a: 別忘了用 `重複` 迴圈積木讓程式更精簡！
       courseB_artist_loops7_authored_hint:
         courseB_artist_loops7_a: 這個挑戰用了 4 個迴圈，一個接著一個！
       courseB_artist_loops7_2018_authored_hint:
@@ -2752,6 +2759,8 @@ zh-TW:
         courseB_collector_prog3_b: 記得在一個重複迴圈裡你可以用多於一塊程式積木。
       courseB_collector_loops3_2019_authored_hint:
         courseB_collector_prog3_b: 記得在一個重複迴圈裡你可以用多於一塊程式積木。
+      courseB_collector_loops3_predict1_authored_hint:
+        courseB_collector_prog3_a: 試試用`重複`積木來收集黃金。
       courseB_collector_loops_challenge1_authored_hint:
         courseB_collector_loops_challenge1_b: '只要一個 ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
           PM.png) 積木就可以解決囉！
@@ -2908,6 +2917,8 @@ zh-TW:
           在往南移動之前，你可以重複移動到相同路徑。
 
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+      courseB_collector_prog3_authored_hint:
+        courseB_collector_prog3_a: 試試用`重複`積木來收集黃金。
       courseB_maze_seq1_authored_hint:
         courseB_maze_seq1_a: |-
           拖曳三個往`南`移動的積木，然後把它們連接到`當運行時`積木下，讓憤怒鳥可以抓到這頭豬。
@@ -3191,6 +3202,12 @@ zh-TW:
           讓某些動物得到的分數比其他的動物還高。
           使用不同的音效。
           改變動物的表情！
+      courseB_starWars_prog3_authored_hint:
+        courseB_starWars_prog3_a: 你需要移動三步才能過關。
+      courseB_starWars_prog3_2018_authored_hint:
+        courseB_starWars_prog3_a: 你需要移動三步才能過關。
+      courseB_starWars_prog3_2019_authored_hint:
+        courseB_starWars_prog3_a: 你需要移動三步才能過關。
       courseB_starWars_prog8_authored_hint:
         courseB_starWars_prog8_a: 沒關係，走過的路可以再走。
         courseB_starWars_prog8_b: |-
@@ -3267,6 +3284,24 @@ zh-TW:
       courseC_artist_prog2_2019_authored_hint:
         courseC_artist_prog2_a: 如果你使用`移動-向前 100 像素`這個積木，我就會向前移動並自動畫一條線啦。
         courseC_artist_prog2_b: 要如何才能轉彎？試試`轉向-右方 90 度`積木。
+      courseC_artist_prog5_authored_hint:
+        courseC_artist_prog5_d: 每次的轉向應該是向右轉 90 度。
+      courseC_artist_prog5_2018_authored_hint:
+        courseC_artist_prog5_d: 每次的轉向應該是向右轉 90 度。
+      courseC_artist_prog5_2019_authored_hint:
+        courseC_artist_prog5_d: 每次的轉向應該是向右轉 90 度。
+      courseC_artist_prog6_authored_hint:
+        courseC_artist_prog6_c: 因為這個鑽石形也是一個正方形， 請確定每次的轉彎為 90 度。
+      courseC_artist_prog6_2018_authored_hint:
+        courseC_artist_prog6_c: 因為這個鑽石形也是一個正方形， 請確定每次的轉彎為 90 度。
+      courseC_artist_prog6_2019_authored_hint:
+        courseC_artist_prog6_c: 因為這個鑽石形也是一個正方形， 請確定每次的轉彎為 90 度。
+      courseC_artist_prog7_authored_hint:
+        courseC_artist_prog7_a: 每個角度會是 45 度或 90 度。
+      courseC_artist_prog7_2018_authored_hint:
+        courseC_artist_prog7_a: 每個角度會是 45 度或 90 度。
+      courseC_artist_prog7_2019_authored_hint:
+        courseC_artist_prog7_a: 每個角度會是 45 度或 90 度。
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: 使用 60 度來做出這個屋頂。
       courseC_artist_prog_challenge1_authored_hint:
@@ -3416,6 +3451,8 @@ zh-TW:
         courseC_maze_debugging_challenge2_b: 如果你卡關了，你可以重頭開始，或者移除所有的程式碼後再試試別的方法！
       courseC_maze_debugging_challenge2_2019_authored_hint:
         courseC_maze_debugging_challenge2_b: 如果你卡關了，你可以重頭開始，或者移除所有的程式碼後再試試別的方法！
+      courseC_maze_loops3_authored_hint:
+        courseC_maze_loops3_b: 用 `重複 5 次` 積木來讓程式循環運行。
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_b: |-
           如果要在`重複`迴圈中放置多個積木，只要拖曳一個迴圈到工作區，然後再把工作區上的積木堆拖曳到裡面。
@@ -3459,12 +3496,20 @@ zh-TW:
       courseD_artist_5_2018_2019_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
+      courseD_artist_binary5_authored_hint:
+        courseD_artist_binary5_b: 只需要交換二個橫列位置，就可以做出笑臉圖案。
+      courseD_artist_binary5_2018_authored_hint:
+        courseD_artist_binary5_b: 只需要交換二個橫列位置，就可以做出笑臉圖案。
+      courseD_artist_binary5_2019_authored_hint:
+        courseD_artist_binary5_b: 只需要交換二個橫列位置，就可以做出笑臉圖案。
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           你的程式應該要：
           - 使用函式
           - 向前移動 100 + 75 像素
           - 使用函式
+      courseD_artist_functions5_authored_hint:
+        courseD_artist_functions5_b: 利用函式可以很容易在任何使用呼叫先前儲存的程式，不要只是在裡頭用迴圈！
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: |-
           試著用`跳躍-向前`積木，讓小藝術家在畫完一個正方形後，跳到下一個要開始的地方。
@@ -3480,26 +3525,65 @@ zh-TW:
           試著用`跳躍-向前`積木，讓小藝術家在畫完一個正方形後，跳到下一個要開始的地方。
 
           如果你的正方形是 20 像素高，而且兩個正方形相隔 20 像素遠，你需要跳多遠？
+      courseD_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: 要畫出八邊形，藝術家需要轉向 45 度 8 次。
+        courseD_artist_nestedLoops_challenge2_b: 要畫出正方形，藝術家需要轉向 90 度 4 次。
+      courseD_artist_nestedLoops_challenge2_2018_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: 要畫出八邊形，藝術家需要轉向 45 度 8 次。
+        courseD_artist_nestedLoops_challenge2_b: 要畫出正方形，藝術家需要轉向 90 度 4 次。
+      courseD_artist_nestedLoops_challenge2_2019_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: 要畫出八邊形，藝術家需要轉向 45 度 8 次。
+        courseD_artist_nestedLoops_challenge2_b: 要畫出正方形，藝術家需要轉向 90 度 4 次。
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: 若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。
         courseD_artist_ramp11b: 若要畫出 4 條邊，可以把`移動-向前 200 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。
       courseD_artist_ramp12_authored_hint:
         courseD_artist_ramp12_a: 你也可以先畫出正方形，然後再畫三角形。調換畫的順序也可以！
+      courseD_autorun_binary5_2019_authored_hint:
+        courseD_artist_binary5_b: 只需要交換二個橫列位置，就可以做出笑臉圖案。
+      courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_c: 你不必檢查蜂窩，在雲的底下，要嘛就是花，要嘛就是空的。
+      courseD_bee_conditionals2_2018_authored_hint:
+        courseD_bee_conditionals2_c: 你不必檢查蜂窩，在雲的底下，要嘛就是花，要嘛就是空的。
+      courseD_bee_conditionals2_2019_authored_hint:
+        courseD_bee_conditionals2_c: 你不必檢查蜂窩，在雲的底下，要嘛就是花，要嘛就是空的。
+      courseD_bee_conditionals2_test_authored_hint:
+        courseD_bee_conditionals2_c: 你不必檢查蜂窩，在雲的底下，要嘛就是花，要嘛就是空的。
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_a: |-
           **記住：**這個關卡在每次運行時都會有變化。
 
           你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
+        courseD_bee_conditionals8_b: |-
+          這關卡有點難喔，因為你無法只用一個條件來檢查雲底下是空的還是有花蜜或蜂蜜。
+
+          只要在路徑的最後查找花蜜與蜂蜜。
       courseD_bee_conditionals8_2018_authored_hint:
         courseD_bee_conditionals8_a: |-
           **記住：**這個關卡在每次運行時都會有變化。
 
           你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
+        courseD_bee_conditionals8_b: |-
+          這關卡有點難喔，因為你無法只用一個條件來檢查雲底下是空的還是有花蜜或蜂蜜。
+
+          只要在路徑的最後查找花蜜與蜂蜜。
       courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_a: |-
           **記住：**這個關卡在每次運行時都會有變化。
 
           你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
+        courseD_bee_conditionals8_b: |-
+          這關卡有點難喔，因為你無法只用一個條件來檢查雲底下是空的還是有花蜜或蜂蜜。
+
+          只要在路徑的最後查找花蜜與蜂蜜。
+      courseD_bee_debugging8_authored_hint:
+        courseD_bee_debugging8_b: 試試用巢狀迴圈來讓程式更精簡。
+      courseD_bee_nestedLoops6_2018_authored_hint:
+        courseD_maze_nestedLoops6_c: 這個難題需要用到 2 組巢狀的`重複`迴圈才能解決。
+      courseD_collector_debugging8_authored_hint:
+        courseD_collector_debugging8_b: 試試用巢狀迴圈來讓程式更精簡。
+      courseD_collector_debugging8_2018_authored_hint:
+        courseD_collector_debugging8_b: 試試用巢狀迴圈來讓程式更精簡。
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           替換掉使用四個`移動-向前`積木的方式，改成把`移動-向前`積木放進`重複`迴圈，像這樣：
@@ -3510,10 +3594,26 @@ zh-TW:
           </statement>
           </block></xml>
         courseD_artist_ramp10_b: 別忘了要收集寶藏後，再後在每步之後轉向！
+      courseD_farmer_while2_authored_hint:
+        courseD_farmer_while2_a: 你只需移動一次就能到達坑垌的位置。
+      courseD_farmer_while2_2018_authored_hint:
+        courseD_farmer_while2_a: 你只需移動一次就能到達坑垌的位置。
+      courseD_farmer_while2_2019_authored_hint:
+        courseD_farmer_while2_a: 你只需移動一次就能到達坑垌的位置。
+      courseD_maze_nestedLoops6_authored_hint:
+        courseD_maze_nestedLoops6_c: 這個難題需要用到 2 組巢狀的`重複`迴圈才能解決。
+      courseD_maze_nestedLoops6_2018_authored_hint:
+        courseD_maze_nestedLoops6_c: 這個難題需要用到 2 組巢狀的`重複`迴圈才能解決。
+      courseD_maze_nestedLoops6_2019_authored_hint:
+        courseD_maze_nestedLoops6_c: 這個難題需要用到 2 組巢狀的`重複`迴圈才能解決。
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: 有 2 個方法可以完成這個關卡！
       courseD_maze_ramp7_authored_hint:
         courseD_maze_ramp7_a: 使用重複積木來不停的運作同一個或是多個指令。
+      courseD_scrat_ramp5_authored_hint:
+        courseC_maze_programming5_b: 要走多遠才能到達轉角處？
+      courseD_scrat_ramp5_2018_authored_hint:
+        courseC_maze_programming5_b: 要走多遠才能到達轉角處？
       courseD_scrat_ramp7_authored_hint:
         courseD_scrat_programming6_a: 有 2 個方法可以完成這個關卡！
       courseD_scrat_ramp7_2018_authored_hint:
@@ -3522,6 +3622,18 @@ zh-TW:
         courseD_maze_ramp7_a: 使用重複積木來不停的運作同一個或是多個指令。
       courseD_scrat_ramp8_2018_authored_hint:
         courseD_maze_ramp7_a: 使用重複積木來不停的運作同一個或是多個指令。
+      courseE_artist_concept1_authored_hint:
+        courseE_artist_concept1_a: 這個六邊形的邊長為 50 像素，每個角的角度為 60 度。
+      courseE_artist_concept1_2018_authored_hint:
+        courseE_artist_concept1_a: 這個六邊形的邊長為 50 像素，每個角的角度為 60 度。
+      courseE_artist_concept1_2019_authored_hint:
+        courseE_artist_concept1_a: 這個六邊形的邊長為 50 像素，每個角的角度為 60 度。
+      courseE_artist_concept4_authored_hint:
+        courseE_artist_concept4_a: 要解決這個關卡的方法有幾種，你知道嗎？
+      courseE_artist_concept4_2018_authored_hint:
+        courseE_artist_concept4_a: 要解決這個關卡的方法有幾種，你知道嗎？
+      courseE_artist_concept4_2019_authored_hint:
+        courseE_artist_concept4_a: 要解決這個關卡的方法有幾種，你知道嗎？
       courseE_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: '這個半六邊形有一個**30 像素的邊**還有需要轉向**60 度**。  '
         courseE_artist_concept_challenge1_b: '這個 2/3 的三角形有一個**80 像素的邊**還有需要轉向**120
@@ -3558,6 +3670,12 @@ zh-TW:
           - 使用函式
           - 向前移動 100 + 75 像素
           - 使用函式
+      courseE_artist_functions5_authored_hint:
+        courseD_artist_functions5_b: 利用函式可以很容易在任何使用呼叫先前儲存的程式，不要只是在裡頭用迴圈！
+      courseE_artist_functions5_2018_authored_hint:
+        courseD_artist_functions5_b: 利用函式可以很容易在任何使用呼叫先前儲存的程式，不要只是在裡頭用迴圈！
+      courseE_artist_functions5_2019_authored_hint:
+        courseD_artist_functions5_b: 利用函式可以很容易在任何使用呼叫先前儲存的程式，不要只是在裡頭用迴圈！
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: 別忘了在每個三角形畫完後轉向 60 度，你要在迴圈裡放置哪些程式積木呢？
       courseE_artist_ramp11_authored_hint:
@@ -3685,6 +3803,10 @@ zh-TW:
         courseE_farmer_ramp16_a: 如果我們要沿著路徑走到南瓜那，我們要重複做什麼？什麼時候要停止重複？
       courseE_maze_ramp13_authored_hint:
         courseD_maze_ramp11_a: 使用重複積木來不停的運作同一個或是多個指令。
+      courseE_maze_ramp5_authored_hint:
+        courseC_maze_programming5_b: 要走多遠才能到達轉角處？
+      courseE_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_b: 要走多遠才能到達轉角處？
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: 有 2 個方法可以完成這個關卡！
       courseE_maze_ramp6_2018_authored_hint:
@@ -3693,6 +3815,12 @@ zh-TW:
         courseD_maze_ramp7_a: 使用重複積木來不停的運作同一個或是多個指令。
       courseE_maze_ramp7_2018_authored_hint:
         courseD_maze_ramp7_a: 使用重複積木來不停的運作同一個或是多個指令。
+      courseF_artist_for10_authored_hint:
+        courseF_artist_for10_b: 這個圖形用了一次 61 度轉彎。
+      courseF_artist_for10_2018_authored_hint:
+        courseF_artist_for10_b: 這個圖形用了一次 61 度轉彎。
+      courseF_artist_for10_2019_authored_hint:
+        courseF_artist_for10_b: 這個圖形用了一次 61 度轉彎。
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: |-
           **需要的數字至少要是多少？
@@ -3714,6 +3842,12 @@ zh-TW:
           每循環一次要增加多少？**
 
           這些問題是你每次在使用`計數`迴圈要思考的。
+      courseF_artist_for6_authored_hint:
+        courseF_artist_for6_c: 你要修改的是`轉彎`的度數。
+      courseF_artist_for6_2018_authored_hint:
+        courseF_artist_for6_c: 你要修改的是`轉彎`的度數。
+      courseF_artist_for6_2019_authored_hint:
+        courseF_artist_for6_c: 你要修改的是`轉彎`的度數。
       courseF_artist_for7_authored_hint:
         courseF_artist_for7_c: 這個關卡的`計數迴圈`是從 15 到 300，間隔數為 2。
         courseF_artist_for7_d: 這個圖案是用轉向 89 度做出來的。
@@ -3769,6 +3903,14 @@ zh-TW:
         courseF_artist_for_challenge2_a: 使用`設定顏色`積木，可以讓顏色改變，使用的是 Rgb 顏色代碼。R（Red，紅）的值固定為
           255、G（Green，綠）的值為 `counter`、B（Blue，藍）的值為 `255 - counter`。
         courseF_artist_for_challenge2_b: 這個程式並沒有你想的這麼複雜，只需要設定好`計數迴圈`裡頭的顏色部分，然後向前移動，最後轉向。
+      courseF_artist_fwp1_authored_hint:
+        courseF_artist_fwp1_a: 提醒你，要轉 90 度才能畫出正方形。
+      courseF_artist_fwp1_2018_authored_hint:
+        courseF_artist_fwp1_a: 提醒你，要轉 90 度才能畫出正方形。
+      courseF_artist_fwp5_authored_hint:
+        courseF_artist_fwp5_b: 別忘了在每個圖形之間跳躍 100 像素。
+      courseF_artist_fwp5_2018_authored_hint:
+        courseF_artist_fwp5_b: 別忘了在每個圖形之間跳躍 100 像素。
       courseF_artist_fwp9_authored_hint:
         courseF_artist_fwp9_a: |-
           試試底下的這些圖案。
@@ -3813,6 +3955,12 @@ zh-TW:
         courseF_artist_ramp9_a: 這和正方形有什麼類似的地方？又有哪些不同呢？
       courseF_artist_ramp9_2018_authored_hint:
         courseF_artist_ramp9_a: 這和正方形有什麼類似的地方？又有哪些不同呢？
+      courseF_artist_variables7_authored_hint:
+        courseF_artist_variables7_c: 要左轉 120 度才能做出三角形的角。
+      courseF_artist_variables7_2018_authored_hint:
+        courseF_artist_variables7_c: 要左轉 120 度才能做出三角形的角。
+      courseF_artist_variables7_2019_authored_hint:
+        courseF_artist_variables7_c: 要左轉 120 度才能做出三角形的角。
       courseF_artist_variablesFP_authored_hint:
         courseF_artist_variablesFP_a: |-
           試試下方的三個圖案。
@@ -3860,11 +4008,25 @@ zh-TW:
           **記住：**這個關卡在每次運行時都會有變化。
 
           你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
+        courseF_bee_conditionals8_b: |-
+          這關卡有點難喔，因為你無法只用一個條件來檢查雲底下是空的還是有花蜜或蜂蜜。
+
+          只要在路徑的最後查找花蜜與蜂蜜。
       courseF_bee_conditionals8_2018_authored_hint:
         courseF_bee_conditionals8_a: |-
           **記住：**這個關卡在每次運行時都會有變化。
 
           你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
+        courseF_bee_conditionals8_b: |-
+          這關卡有點難喔，因為你無法只用一個條件來檢查雲底下是空的還是有花蜜或蜂蜜。
+
+          只要在路徑的最後查找花蜜與蜂蜜。
+      courseF_bee_for1_authored_hint:
+        courseF_bee_for1_a: 把紫色的數字積木拖曳到`重複`積木裡，讓程式可以循環指定的次數。
+      courseF_bee_for1_2018_authored_hint:
+        courseF_bee_for1_a: 把紫色的數字積木拖曳到`重複`積木裡，讓程式可以循環指定的次數。
+      courseF_bee_for1_2019_authored_hint:
+        courseF_bee_for1_a: 把紫色的數字積木拖曳到`重複`積木裡，讓程式可以循環指定的次數。
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: |-
           看看可用的移動方式：
@@ -3988,8 +4150,12 @@ zh-TW:
         repeat_bottom_out: 使用一個`重複 3 次`積木！
       grade1_adventurer_loops10_authored_hint:
         grade1_adventurer_loops10_a: 你需要使用 3 個`重複`迴圈才能完成這個關卡。
+      grade1_adventurer_loops2_authored_hint:
+        grade1_adventurer_loops2_a: 試試用`重複`積木來收集黃金。
       grade1_artist_loops1_authored_hint:
         grade1_artist_loops1_a: 如果你想要重複程式 4 次以上，你可以修改積木上的數字。
+      grade1_artist_loops2_authored_hint:
+        grade1_artist_loops2_a: 別忘了用 `重複` 迴圈積木讓程式更精簡！
       grade1_artist_loops6_authored_hint:
         grade1_artist_loops6_a: 這個挑戰用了 4 個迴圈，一個接著一個！
       grade1_artist_loops7a_authored_hint:
@@ -3999,6 +4165,10 @@ zh-TW:
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: 如果你使用`移動-向前 100 像素`這個積木，我就會向前移動並自動畫一條線啦。
         2-3_Artist_1_new_b: 要如何才能轉彎？試試`轉向-右方 90 度`積木。
+      grade2_MakeDogTag_5_authored_hint:
+        grade2_MakeDogTag_5c: 因為這個鑽石形也是一個正方形， 請確定每次的轉彎為 90 度。
+      grade2_MakeDogTag_6_authored_hint:
+        grade2_MakeDogTag_6a: 每個角度會是 45 度或 90 度。
       grade2_MakeDogTag_9_authored_hint:
         2-3_Artist_Loops_New_11_b: 你的下一個轉彎動作應該要在迴圈中程式碼的**最後面**。
       grade2_PuppyLoops_10_authored_hint:
@@ -4008,6 +4178,8 @@ zh-TW:
           形狀 *應該* 要重複幾次？
 
           怎樣在你的程式裡做出對應的改變？
+      grade2_PuppyLoops_3_authored_hint:
+        hint2: 用 `重複 5 次` 積木來讓程式循環運行。
       grade2_PuppyLoops_6_authored_hint:
         2-3_Maze_16_a: 如果很難去找到匹配的模式，試試先一點一點的把指令全寫出來，然後看看哪些部分是重複的，最後把這些重複的部分放進迴圈裡。
         2-3_Maze_16_b: |-
@@ -4021,6 +4193,8 @@ zh-TW:
         2-3_Artist_Debugging_2_a: 提示：每個鬍鬚長度為 75 像素。
       grade2_PuppyLoops_9_authored_hint:
         2-3_Artist_Debugging_7_a: 如果你讓藝術家畫完第一條線之後就向後移動或跳躍的話，會發生什麼？
+      grade2_puppy_loops3_authored_hint:
+        hint2: 用 `重複 5 次` 積木來讓程式循環運行。
       grade2_puppy_loops6_authored_hint:
         2-3_Maze_16_a: 如果很難去找到匹配的模式，試試先一點一點的把指令全寫出來，然後看看哪些部分是重複的，最後把這些重複的部分放進迴圈裡。
         2-3_Maze_16_b: |-
@@ -4088,6 +4262,8 @@ zh-TW:
           你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
       grade3_maze_loops2_authored_hint:
         grade3_maze_loops2_b: 如果很難去找到匹配的模式，試試先一點一點的把指令全寫出來，然後看看哪些部分是重複的，最後把這些重複的部分放進迴圈裡。
+      grade3_maze_loops3_authored_hint:
+        2-3_Maze_Loops_19_c: 這個難題需要用到 2 組巢狀的`重複`迴圈才能解決。
       grade3_maze_loops5_authored_hint:
         2-3_Maze_Loops_21_a: 如果你一時之間找不到樓梯的組合模式，試試用手蓋住被擋住的路徑。
       grade4_arist_nested_loop_polygons1_authored_hint:
@@ -4144,6 +4320,8 @@ zh-TW:
           **解決方案：**
 
           ![Solution Blocks](https://images.code.org/d64a0e22c1db1d98c35b243bca6460ab-image-1469727090121.png)
+      grade4_artist_functions_stars2_authored_hint:
+        grade4_artist_functions_stars2_b: 利用函式可以很容易在任何使用呼叫先前儲存的程式，不要只是在裡頭用迴圈！
       grade4_artist_nestedLoops_challenge2_authored_hint:
         Course_4_Artist_11_a: '這個半六邊形有一個**30 像素的邊**還有需要轉向**60 度**。  '
         Course_4_Artist_11_b: '這個 2/3 的三角形有一個**80 像素的邊**還有需要轉向**120 度**。 '
@@ -4223,6 +4401,8 @@ zh-TW:
         Course_4_Artist_For_Loops_inspire_a: 這個程式的基礎和上個挑戰關卡很像…有些地方改了就是。
         Course_4_Artist_For_Loops_inspire_b: 試試看這個`計數`迴圈，從 3 算到 10，每次增加 1。
         Course_4_Artist_For_Loops_inspire_c: 在這個`計數`迴圈裡用了二個`重複`積木，不過第二個會轉成相反的方向。
+      grade5_artist_for_loopsfreeplay12_authored_hint:
+        grade5_artist_for_loopsfreeplay12_b: 這個圖形用了一次 61 度轉彎。
       grade5_artist_functionparameters10_authored_hint:
         brush_width: 在我們開始前，先將筆刷的寬度設為 1，顏色設為藍色。
         double_loop: 試著放置一個`計數迴圈`到`重複`積木裡頭。
@@ -4231,6 +4411,8 @@ zh-TW:
 
           `設置透明度`的積木中用了計數器，當計數器的值愈高時，顏色會變得愈淡。
         after: 當你完成每個「花瓣」時，請檢查是否在你轉彎 60 度之前`移動-向前`了 20 像素。
+      grade5_artist_parameters_squares1a_authored_hint:
+        grade5_artist_parameters_squares1a_a: 提醒你，要轉 90 度才能畫出正方形。
       grade5_artist_variables_freeplay10_authored_hint:
         Course_4_Artist_Vars_8_a: 如果你將起始長邊除以側邊數，當側邊個數越大時，每個的長邊將會變短
       grade5_artist_variables_freeplay15_authored_hint:
@@ -4246,6 +4428,12 @@ zh-TW:
         Course_4_Artist_Vars_13_c: 如果要在邊數改變的同時又保持圖形的尺寸，可以使用運算積木，將周長除以邊數。
       grade5_artist_variables_square7_authored_hint:
         Course_4_Artist_Vars_6_a: 若要畫出一個正多邊形，可以在每一次循環轉 **360/邊數** 度。
+      grade5_artist_variables_triangles1_authored_hint:
+        grade5_artist_variables_triangles1_a: 要讓三角形的每個角保持為 60 度，需要將藝術家轉 120 度。
+      grade5_artist_variables_triangles1_2018_authored_hint:
+        grade5_artist_variables_triangles1_a: 要讓三角形的每個角保持為 60 度，需要將藝術家轉 120 度。
+      grade5_artist_variables_triangles1_2019_authored_hint:
+        grade5_artist_variables_triangles1_a: 要讓三角形的每個角保持為 60 度，需要將藝術家轉 120 度。
       grade5_playlab_variables2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: 確定在 `dog_speed`（小狗的速度）上設定的數值要大於 `cat_speed`（小貓的速度）。
       gradek_artist_loops3_authored_hint:
