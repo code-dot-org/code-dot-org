@@ -30,7 +30,7 @@ class SchoolInfoConfirmationDialog extends Component {
 
   componentDidMount() {
     const {schoolName} = this.state;
-    if (!schoolName && schoolName.length > 0) {
+    if (schoolName && schoolName.length > 0) {
       fetch('/dashboardapi/v1/users/me/school_name')
         .then(response => response.json())
         .then(data => {
