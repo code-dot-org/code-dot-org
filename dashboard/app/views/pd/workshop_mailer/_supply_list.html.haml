@@ -16,7 +16,7 @@
     %li
       A physical copy of the 2019-2020 CS Fundamentals Curriculum Guide. If you
       do not have one available, one will be provided for you at the workshop.
-  - if @workshop.course == Pd::Workshop::COURSE_CSF && @is_enrollment_receipt
+  - if @workshop.csf? && @is_enrollment_receipt
     %li Your curiosity and readiness to learn!
-  - unless @workshop.teachercon? || @workshop.summer? || @workshop.fit_weekend? || @workshop.course == Pd::Workshop::COURSE_CSF
+  - unless @workshop.summer? || @workshop.fit_weekend? || @workshop.csf?
     %li Code.org Curriculum Guide.
