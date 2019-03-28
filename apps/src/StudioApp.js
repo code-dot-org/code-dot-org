@@ -222,7 +222,7 @@ StudioApp.prototype.configure = function(options) {
     options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 
   // Set default speed
-  if (options.level && typeof options.level.sliderSpeed === 'number') {
+  if (options.level) {
     getStore().dispatch(setStepSpeed(options.level.sliderSpeed));
   }
 };
