@@ -2,6 +2,7 @@ zh-TW:
   data:
     script:
       category:
+        csd_category_name: 計算機科學探索（'17-'18）
         csd_2018_category_name: 計算機科學探索（'18-'19）
         csf_category_name: CS 基本原理
         csf_2018_category_name: 計算機科學基礎（2018）
@@ -360,7 +361,7 @@ zh-TW:
             Manual DNS:
               name: 手動設定 DNS
             Overview and Setup Instructions:
-              name: 概述與設定說明
+              name: 概覽與操作說明
             Peer to Peer - Sending Ascii:
               name: 點對點傳輸 - 發送 Ascii
             Peer to Peer - Sending Bits on a Shared Wire:
@@ -519,6 +520,8 @@ zh-TW:
             Sending Numbers:
               name: 數字的發送
         algebraPD:
+          description: '階段 1 線上介紹'
+          description_short: '階段 1 線上介紹'
           stages:
             Course Overview:
               name: 課程概覽
@@ -546,7 +549,11 @@ zh-TW:
               name: 你的遊戲 - 角色移動
         CSPPD:
           title: 計算機科學原理專業發展
+          description: '階段 1 CSP 線上介紹'
+          description_short: '階段 1 CSP 線上介紹'
           stages:
+            Growth Mindset:
+              name: 增長思維
             Impact of Computer Science:
               name: 計算機科學的影響
             Introduction to PD:
@@ -562,7 +569,11 @@ zh-TW:
             Lesson 15:
               name: 第 15 課
         ECSPD:
+          description: '階段 1 線上介紹'
+          description_short: '階段 1 線上介紹'
           stages:
+            Growth Mindset:
+              name: 增長思維
             Impact of Computer Science:
               name: 計算機科學的影響
             Introduction to PD:
@@ -572,7 +583,12 @@ zh-TW:
             What is ECS?:
               name: ECS 是什麼？
         sciencePD:
+          title: Science PD 裡的計算機科學
+          description: '階段 1 線上介紹'
+          description_short: '階段 1 線上介紹'
           stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: 基於 Agent 的複雜適應系統建模
             Computational Thinking And The Framework For K-12 Science Education:
               name: 計算機式思維及為 K-12 科學教育設計的框架
             Introduction to PD:
@@ -600,6 +616,8 @@ zh-TW:
               name: 事件不插電
             Functions with Return Values:
               name: 帶返回值的函式
+            Image Scroller with Key Events:
+              name: 圖片播放器的按鍵事件
             Multi-screen Apps:
               name: 多螢幕應用程式
             Processing Arrays:
@@ -613,6 +631,7 @@ zh-TW:
             While Loops:
               name: 當…迴圈
         algebraPD3:
+          title: 階段 3 PD
           stages:
             Computer Science Pedagogy:
               name: 計算機科學教育學
@@ -629,7 +648,11 @@ zh-TW:
             The Design Recipe:
               name: 設計程序
         ECSPD-NexTech:
+          description: '階段 1 線上介紹'
+          description_short: '階段 1 線上介紹'
           stages:
+            Growth Mindset:
+              name: 增長思維
             Impact of Computer Science:
               name: 計算機科學的影響
             Introduction to PD:
@@ -639,7 +662,11 @@ zh-TW:
             What is ECS?:
               name: ECS 是什麼？
         ECSPD-iZone:
+          description: '階段 1 線上介紹'
+          description_short: '階段 1 線上介紹'
           stages:
+            Growth Mindset:
+              name: 增長思維
             Impact of Computer Science:
               name: 計算機科學的影響
             Introduction to PD:
@@ -649,6 +676,8 @@ zh-TW:
             What is ECS?:
               name: ECS 是什麼？
         algebraPD-NexTech:
+          description: '階段 1 線上介紹'
+          description_short: '階段 1 線上介紹'
           stages:
             Course Overview:
               name: 課程概覽
@@ -657,6 +686,8 @@ zh-TW:
             Teacher Dashboard:
               name: 教師控制台
         algebraPD-iZone:
+          description: '階段 1 線上介紹'
+          description_short: '階段 1 線上介紹'
           stages:
             Course Overview:
               name: 課程概覽
@@ -665,7 +696,12 @@ zh-TW:
             Teacher Dashboard:
               name: 教師控制台
         sciencePD-NexTech:
+          title: Science PD 裡的計算機科學
+          description: '階段 1 線上介紹'
+          description_short: '階段 1 線上介紹'
           stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: 基於 Agent 的複雜適應系統建模
             Computational Thinking And The Framework For K-12 Science Education:
               name: 計算機式思維及為 K-12 科學教育設計的框架
             Introduction to PD:
@@ -675,7 +711,12 @@ zh-TW:
             What to Expect:
               name: 有什麼期待
         sciencePD-iZone:
+          title: Science PD 裡的計算機科學
+          description: '階段 1 線上介紹'
+          description_short: '階段 1 線上介紹'
           stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: 基於 Agent 的複雜適應系統建模
             Computational Thinking And The Framework For K-12 Science Education:
               name: 計算機式思維及為 K-12 科學教育設計的框架
             Introduction to PD:
@@ -685,6 +726,8 @@ zh-TW:
             What to Expect:
               name: 有什麼期待
         sciencePD2:
+          description: 階段 2 暑假的線上混合式學習
+          description_short: 階段 2 暑假的線上混合式學習
           stages:
             Welcome!:
               name: 歡迎！
@@ -698,6 +741,10 @@ zh-TW:
               name: 解碼和分享
             Welcome Back!:
               name: 歡迎回來！
+        Testing:
+          stages:
+            Testing:
+              name: 測試階段
         cspunit2:
           title: "（舊）計算機科學原理 單元 2 - 網際網路"
           stages:
@@ -730,6 +777,8 @@ zh-TW:
             The Need for DNS:
               name: DNS 的需求
         algebraPD2a:
+          description: '階段 2 暑假的線上混合式學習'
+          description_short: '階段 2 暑假的線上混合式學習'
           stages:
             Big Game - Animation:
               name: Big Game - 動畫（Animation）
@@ -784,6 +833,8 @@ zh-TW:
               name: 迷宮
             Minecraft:
               name: Minecraft
+            Multi:
+              name: 多個
             Multi2:
               name: 雙人
             Netsim:
@@ -805,6 +856,8 @@ zh-TW:
             Curriculum Reference:
               name: 課程參考
         algebraPD2b:
+          description: '階段 2 暑假的線上混合式學習'
+          description_short: '階段 2 暑假的線上混合式學習'
           stages:
             Best Practices for Teaching Computer Science:
               name: 資訊工程的最佳實踐
@@ -860,6 +913,8 @@ zh-TW:
             Planning:
               name: 計畫
         ECSPD2:
+          description: '階段 2 暑假的線上混合式學習'
+          description_short: '階段 2 暑假的線上混合式學習'
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: 單元 1：第 10 日 - 用數據說故事
@@ -902,6 +957,9 @@ zh-TW:
             Welcome!:
               name: 歡迎！
         sciencePD2b:
+          title: PD 階段 2b Science 裡的計算機科學
+          description: '階段 2 暑假的線上混合式學習'
+          description_short: '階段 2 暑假的線上混合式學習'
           stages:
             Remixing Phases 1 and 2:
               name: 混合第1、2階段
@@ -916,6 +974,9 @@ zh-TW:
             Necessary Background:
               name: 前備知識
         science-PD2:
+          title: PD 階段 2b Science 裡的計算機科學
+          description: 階段 2 暑假的線上混合式學習
+          description_short: 階段 2 暑假的線上混合式學習
           stages:
             Remixing Phases 1 and 2:
               name: 混合第1、2階段
@@ -932,6 +993,9 @@ zh-TW:
             Next Steps:
               name: 下一步
         sciencePD2b-iZone:
+          title: PD 階段 2b Science 裡的計算機科學
+          description: '階段 2 暑假的線上混合式學習'
+          description_short: '階段 2 暑假的線上混合式學習'
           stages:
             Remixing Phases 1 and 2:
               name: 混合第1、2階段
@@ -942,6 +1006,8 @@ zh-TW:
             Wrap-Up:
               name: 總結
         ECSPD2-iZone:
+          description: '階段 2 暑假的線上混合式學習'
+          description_short: '階段 2 暑假的線上混合式學習'
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: 單元 1：第 10 日 - 用數據說故事
@@ -966,6 +1032,8 @@ zh-TW:
             Wrap-up:
               name: 總結
         ECSPD2-NexTech:
+          description: '階段 2 暑假的線上混合式學習'
+          description_short: '階段 2 暑假的線上混合式學習'
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: 單元 1：第 10 日 - 用數據說故事
@@ -1032,7 +1100,10 @@ zh-TW:
             Lesson Prep:
               name: 教學準備
         sciencePD3_pre1:
+          description_short: '階段 3 學年發展前備 1'
           stages:
+            The TLO:
+              name: The TLO
             Welcome Back!:
               name: 歡迎回來！
         ECSPD3-Unit2:
@@ -1114,10 +1185,14 @@ zh-TW:
               name: 數據的彙編
             Creating Javascript Objects:
               name: Javascript 物件的創建
+            Discover a Data Story:
+              name: 發現數據故事
             How is Data Collected?:
               name: 數據如何被收集？
             Import, Export, and Visualize Data:
               name: 數據的匯入、匯出及視覺化
+            Permanent Data Storage:
+              name: 永久資料儲存
             Reading Records:
               name: 紀錄的讀取
             Search Terms:
@@ -1125,6 +1200,8 @@ zh-TW:
             Why Make Apps?:
               name: 為什麼要製作 App？
         ScienceP3OLPT2:
+          description: 階段 3 學年發展
+          description_short: 階段 3 學年發展
           stages:
             Welcome!:
               name: 歡迎！
@@ -1161,6 +1238,8 @@ zh-TW:
           stages:
             Basic Circuits:
               name: 基本電路
+            JunkBot:
+              name: JunkBot
         Special Fun:
           description_audience: 年齡 10-18
           stages:
@@ -1206,6 +1285,8 @@ zh-TW:
           stages:
             Functions with Return Values:
               name: 帶返回值的函式
+            Image Scroller with Key Events:
+              name: 圖片播放器的按鍵事件
             Processing Arrays:
               name: 處理陣列
             While Loops:
@@ -1261,6 +1342,8 @@ zh-TW:
             Complete the Challenge:
               name: 完成這個挑戰
         ScienceP3OLPT3:
+          description: 階段 3 學年發展
+          description_short: 階段 3 學年發展
           stages:
             "(optional) Refresh your connection to Complex Adaptive Systems":
               name: "（非必填）重新連線到 Complex Adaptive Systems"
@@ -1275,6 +1358,8 @@ zh-TW:
           stages:
             Cleaning Data:
               name: 數據的清理
+            Discover a Data Story:
+              name: 發現數據故事
             What is Big Data?:
               name: 大數據是什麼？
         CSPPD3-Unit4:
@@ -1296,6 +1381,8 @@ zh-TW:
           stages:
             Creating Javascript Objects:
               name: Javascript 物件的創建
+            Permanent Data Storage:
+              name: 永久資料儲存
             Reading Records:
               name: 紀錄的讀取
             Visualizing Data:
@@ -1315,6 +1402,8 @@ zh-TW:
           stages:
             Creating Javascript Objects:
               name: Javascript 物件的創建
+            Permanent Data Storage:
+              name: 永久資料儲存
             Reading Records:
               name: 紀錄的讀取
             Visualizing Data:
@@ -1364,6 +1453,7 @@ zh-TW:
           description: 在 Game Lab 裡把東西試驗出來的地方
         algebraPD1:
           description: 通過函數式程式設計教代數
+          description_short: '階段 1 線上介紹'
           stages:
             Course Overview:
               name: 課程概覽
@@ -1407,6 +1497,8 @@ zh-TW:
               name: 位元組（Bytes）與檔案大小
             Cleaning Data:
               name: 數據的清理
+            Discover a Data Story:
+              name: 發現數據故事
             Encoding B&W Images:
               name: 黑白圖片的編碼
             Encoding Color Images:
@@ -1418,6 +1510,7 @@ zh-TW:
             Unit 2 Chapter 2 Assessment:
               name: 單元 2 第 2 節 評量
         csp3-2017:
+          title: CSP 單元 3 - 程式設計簡介 ('17-'18)
           stages:
             APIs and Function Parameters:
               name: API 和函式參數
@@ -1426,6 +1519,7 @@ zh-TW:
             Using Simple Commands:
               name: 簡單指令的使用
         csp4-2017:
+          title: CSP 單元 4 - 大數據與隱私 ('17-'18)
           stages:
             Cracking the Code:
               name: 解析程式碼
@@ -1442,6 +1536,8 @@ zh-TW:
               name: 事件不插電
             Functions with Return Values:
               name: 帶返回值的函式
+            Image Scroller with Key Events:
+              name: 圖片播放器的按鍵事件
             Multi-screen Apps:
               name: 多螢幕應用程式
             Processing Arrays:
@@ -1464,8 +1560,12 @@ zh-TW:
               name: 單元 5 評量 4
             '"if-else-if" and Conditional Logic':
               name: '「如果…否則」和條件判斷式'
+            'Building an App: Image Scroller':
+              name: '創建一個 APP：圖像播放器'
             'Building an App: Canvas Painter':
               name: '創建一個 App - 帆布畫家'
+            Unit 5 Assessment 5 - Practice AP questions:
+              name: 單元 5 評量 5 - 實踐 AP 問題
         CSDU3-Draft:
           title: " TEMP CSD 單元 3 - 互動遊戲與動畫"
           description_short: 程式設計
@@ -1492,6 +1592,8 @@ zh-TW:
               name: 使用遊戲設計流程
         2016_sciencePD_phase1:
           stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: 基於 Agent 的複雜適應系統建模
             Computational Thinking And The Framework For K-12 Science Education:
               name: 計算機式思維及為 K-12 科學教育設計的框架
             Introduction to PD:
@@ -1506,7 +1608,10 @@ zh-TW:
         CSF_Secret_Sample:
           description_audience: 年齡 8-18
         ECSPD1:
+          description_short: '階段 1 線上介紹'
           stages:
+            Welcome to Phase 1!:
+              name: 歡迎來到階段 1
             Wrap Up:
               name: 總結
         algebraFacilitator:
@@ -1518,7 +1623,10 @@ zh-TW:
             Teacher Dashboard:
               name: 教師控制台
         sciencePD1:
+          description_short: '階段 1 線上介紹'
           stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: 基於 Agent 的複雜適應系統建模
             Computational Thinking And The Framework For K-12 Science Education:
               name: 計算機式思維及為 K-12 科學教育設計的框架
             Introduction to PD:
@@ -1543,6 +1651,8 @@ zh-TW:
               name: 單元 1 - 路由器的學習
         cspunit1-support:
           stages:
+            Chapter Overviews:
+              name: 章節概覽
             Intro to the Unit:
               name: 單位簡介
             Sending Binary Messages:
@@ -1561,6 +1671,7 @@ zh-TW:
             netsim:
               name: 籃網
         csp-facilitators:
+          title: CSP 工具概覽
           description: 計算機科學原理課程的工具集成。這裡提供了我們在整個課程上使用到的工具概覽。
           description_short: 計算機科學原理導論 - 給新的輔導員
           stages:
@@ -1618,6 +1729,7 @@ zh-TW:
               name: 應用程式測試
         CSDU1-Draft:
           title: " TEMP CSD 單元 1"
+          description_short: 問題解決
           stages:
             Exploring Apps:
               name: 探索應用程式
@@ -1653,7 +1765,7 @@ zh-TW:
             Describing Web pages:
               name: 網頁描述
             Multi-Page Websites:
-              name: 多頁面網站
+              name: 多頁式網站
             External Style Sheets:
               name: 外部樣式表
             Peer Review:
@@ -1672,6 +1784,10 @@ zh-TW:
               name: 小藝術家 - 函式（Functions）
         artistExemplar:
           description_audience: 年齡 8-18
+        teachercon:
+          stages:
+            Discovery Learning:
+              name: 發現學習
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -1773,6 +1889,8 @@ zh-TW:
             Wrap-up:
               name: 總結
         ecs-unit2:
+          description: '單元 2：問題解決'
+          description_short: '單元 2：問題解決'
           stages:
             Close & Next Steps:
               name: 關閉 & 下一步
@@ -1903,6 +2021,8 @@ zh-TW:
               name: 像素鳥
             Getting Loopy with Puppy:
               name: 從小狗身上學習迴圈
+            Make a Dog Tag:
+              name: 做個狗牌
             Puppy Event:
               name: 小狗 - 事件（Event）
             Puppy Introduction:
@@ -1951,7 +2071,9 @@ zh-TW:
             While Loops:
               name: 當…迴圈
         algebrapdnext:
+          title: 階段 2 PD 代數裡的計算機科學
           description: 通過函數式程式設計教代數
+          description_short: "\\t階段 3 學年支援"
           stages:
             Lesson Prep:
               name: 教學準備
@@ -1971,15 +2093,28 @@ zh-TW:
             Unit 1 Chapter 1 Assessment:
               name: 單元 1 第 1 節 評量
         csd1-2017:
+          title: CSD 單元 1 - 問題解決 ('17-'18)
           stages:
             Intro to Problem Solving:
               name: 問題解決能力的介紹
+            The Problem Solving Process:
+              name: 問題解決流程
+            Exploring Problem Solving:
+              name: 問題解決探索
             What is a Computer?:
               name: 電腦是什麼？
+            'Project: Apps and Problem Solving':
+              name: '專案：App 與問題解決'
+            Apps and Problem Solving:
+              name: App 與問題解決
         csp-online-test:
           stages:
             Unit 1 Overview:
               name: 單元 1 概覽
+            Discovery Learning:
+              name: 發現學習
+            'Lessons 4 - 6: Encoding and Sending Numbers':
+              name: '課程  4 - 6：編碼和發送數字訊息'
             Unit 2 Overview:
               name: 單元 2 概覽
             Unit 3 Overview:
@@ -1990,6 +2125,10 @@ zh-TW:
           stages:
             Unit 1 Overview:
               name: 單元 1 概覽
+            'Lessons 4 - 6: Encoding and Sending Numbers':
+              name: '課程  4 - 6：編碼和發送數字訊息'
+            Discovery Learning:
+              name: 發現學習
         basketball:
           title: 選擇你的球隊，來場籃球比賽
           description_short: 選擇你的球隊，來場籃球比賽
@@ -2029,7 +2168,7 @@ zh-TW:
             Clean Code and Debugging:
               name: 乾淨代碼和偵錯調試
             Multi-Page Websites:
-              name: 多頁面網站
+              name: 多頁式網站
             External Style Sheets:
               name: 外部樣式表
             Peer Review:
@@ -2054,10 +2193,16 @@ zh-TW:
               name: 透過 CSS 修改元素樣式
             Lists:
               name: 清單
+            Project - Multi-Page Websites:
+              name: 專案 - 多頁式網站
+            Headings:
+              name: 標題
         csp2-support:
           stages:
             Unit 2 Overview:
               name: 單元 2 概覽
+            Discovery Learning:
+              name: 發現學習
         csd4-2017:
           stages:
             Analysis of Design:
@@ -2098,6 +2243,7 @@ zh-TW:
             Minecraft Hour of Code Designer:
               name: 一小時玩 Minecraft 設計師
         flappy-impact-study:
+          description_short: '在 10 分鐘內寫個你自己的像素鳥遊戲！'
           description: 想要在 10 分鐘內寫出你自己的遊戲程式嗎？試試我們的「一小時玩 Flapply」教程！這個版本包含了課前和課後的問卷調查，以幫助我們持續改善一小時玩程式活動。麻煩要求你的班級在課堂結束前 10 分鐘移到課後問卷頁面。
           stages:
             Pre Hour of Code Survey:
@@ -2267,12 +2413,16 @@ zh-TW:
           stages:
             Welcome Back!:
               name: 歡迎回來！
+            The TLO:
+              name: The TLO
         csp3-support:
           description_short: 教師專業學習課程 - CSP 單元 3
           description: 這是一套線上支援，安排了 CSP 專業訓練課程，讓教師可以為教授單元 3 作準備。
           stages:
             Unit 3 Overview:
               name: 單元 5 概覽
+            Discovery Learning:
+              name: 發現學習
         csdgraveyard:
           stages:
             new stage:
@@ -2285,9 +2435,13 @@ zh-TW:
           stages:
             Unit 3 Overview:
               name: 單元 5 概覽
+            Discovery Learning:
+              name: 發現學習
             Unit 4 Overview:
               name: 單元 4 概覽
         sciencepd4:
+          description_short: '階段 3 學期反思研討會'
+          description: '階段 3 學期反思研討會'
           stages:
             Welcome!:
               name: 歡迎！
@@ -2318,6 +2472,8 @@ zh-TW:
           stages:
             Unit 5 Overview:
               name: 單元 5 概覽
+            Discovery Learning:
+              name: 發現學習
         csp6-support:
           title: 單元 6 線上專業學習課程
           description: '即將推出：在 2 月中旬，這個頁面會有一系列提供給教師準備 AP 考試的資源。'
@@ -2325,6 +2481,8 @@ zh-TW:
           stages:
             Creating Javascript Objects:
               name: Javascript 物件的創建
+            Permanent Data Storage:
+              name: 永久資料儲存
             Reading Records:
               name: 紀錄的讀取
             Visualizing Data:
@@ -2380,6 +2538,8 @@ zh-TW:
               name: '專案：原型創新'
             Map:
               name: 地圖
+            'Project: Make a Game':
+              name: '專案：創建一個遊戲'
             Arrays:
               name: 陣列
             Functions with Parameters:
@@ -2508,6 +2668,8 @@ zh-TW:
               name: 傳感器應用
             'Project: Prototype an Innovation':
               name: '專案：原型創新'
+            'Project: Make a Game':
+              name: '專案：創建一個遊戲'
             Arrays:
               name: 陣列
             Functions with Parameters:
@@ -2518,10 +2680,14 @@ zh-TW:
               name: 不插電介紹輸入（Input）
             Analog Input_:
               name: 模擬輸入
+            'Project: Make a Game_':
+              name: '專案：創建一個遊戲'
             Functions with Parameters_:
               name: 函式帶參數
             'Project: Prototype an Innovation_':
               name: '專案：原型創新'
+            'Project: Make a Game__':
+              name: '專案：創建一個遊戲'
         csd3-draft:
           title: 'CSD 單元 3 - 程式設計：動畫與遊戲'
           description_short: 動畫和遊戲
@@ -2615,8 +2781,14 @@ zh-TW:
           stages:
             Intro to Problem Solving:
               name: 問題解決能力的介紹
+            The Problem Solving Process:
+              name: 問題解決流程
+            Exploring Problem Solving:
+              name: 問題解決探索
             What is a Computer?:
               name: 電腦是什麼？
+            'Project: Apps and Problem Solving':
+              name: '專案：App 與問題解決'
         csd2-draft:
           stages:
             Text on the Web:
@@ -2629,6 +2801,8 @@ zh-TW:
               name: 圖像
             Clean Code and Debugging:
               name: 乾淨代碼和偵錯調試
+            Project - Multi-Page Websites:
+              name: 專案 - 多頁式網站
             Styling Text with CSS:
               name: 透過 CSS 修改文字樣式
             Styling Elements with CSS:
@@ -2641,8 +2815,14 @@ zh-TW:
           stages:
             Intro to Problem Solving:
               name: 問題解決能力的介紹
+            The Problem Solving Process:
+              name: 問題解決流程
+            Exploring Problem Solving:
+              name: 問題解決探索
             What is a Computer?:
               name: 電腦是什麼？
+            Apps and Problem Solving:
+              name: App 與問題解決
         csd3-chapters:
           stages:
             Programming for Entertainment:
@@ -2702,7 +2882,7 @@ zh-TW:
             Styling Elements with CSS:
               name: 透過 CSS 修改元素樣式
             Multi-Page Websites:
-              name: 多頁面網站
+              name: 多頁式網站
             Peer Review:
               name: 同儕審查
             Digital Footprint:
@@ -2717,6 +2897,8 @@ zh-TW:
           stages:
             B8 BB8:
               name: B8 BB8
+            F5 Minecraft:
+              name: F5 Minecraft
             Ice Age Play Lab:
               name: 冰原歷險記 Play Lab
             Bounce:
@@ -2733,7 +2915,7 @@ zh-TW:
               name: '迴圈：快樂迴圈'
           title: 課程 A
           assignment_family_title: 課程 A
-          description_short: 給學齡前兒童的電腦科學指南
+          description_short: 為學齡前兒童設計的計算機科學指引。
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2793,6 +2975,8 @@ zh-TW:
           description_short: 快速地導覽在課程 C 和課程 D 的概念，進一步的介紹函式的使用。
         coursef-2017:
           stages:
+            Ice Age Play Lab:
+              name: 冰河歷險紀中的事件
             Variables in Artist:
               name: 小藝術家裡的變數
             Variables in Play Lab:
@@ -2803,6 +2987,9 @@ zh-TW:
               name: 建立你的專案
             Present Your Project:
               name: 說明你的專案
+            Conditionals in Minecraft:
+              name: Minecraft 中的條件式
+              description_student: 躲開岩漿！在 Minecraft 裡，你可以學會條件判斷。
             Building a Foundation:
               name: 打好基礎
           title: 課程 F
@@ -2810,15 +2997,90 @@ zh-TW:
           description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
         csdnovice:
           stages:
+            Tuesday:
+              name: 週二
             Wrap Up:
               name: 總結
         cspnovice:
           stages:
+            Tuesday:
+              name: 週二
             Wrap Up:
               name: 總結
         novice-view:
+          stages:
+            CSP Tuesday:
+              name: CSP 週二
+            CSD Tuesday:
+              name: CSD 週二
           description_short: NA
           description: NA
+        csp1-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 1 Deeper Learning Reflections:
+              name: 完成單元 1 深入學習反思
+        csp2-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 2 Deeper Learning Reflections:
+              name: 完成單元 2 深入學習反思
+        csp3-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 3 Deeper Learning Reflections:
+              name: 完成單元 3 深入學習反思
+        csp4-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 4 Deeper Learning Reflections:
+              name: 完成單元 4 深入學習反思
+        csp5-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 5 Deeper Learning Reflections:
+              name: 完成單元 5 深入學習反思
+        csd1-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 1 Deeper Learning Reflections:
+              name: 完成單元 1 深入學習反思
+        csd6-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 6 Deeper Learning Reflections:
+              name: 完成單元 6 深入學習反思
+        csd5-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 5 Deeper Learning Reflections:
+              name: 完成單元 5 深入學習反思
+        csd4-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 4 Deeper Learning Reflections:
+              name: 完成單元 4 深入學習反思
+        csd3-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 3 Deeper Learning Reflections:
+              name: 完成單元 3 深入學習反思
+        csd2-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 2 Deeper Learning Reflections:
+              name: 完成單元 2 深入學習反思
         allthettsthings:
           stages:
             TTS:
@@ -2835,6 +3097,8 @@ zh-TW:
               name: 數位公民
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
+            Conditionals in Minecraft:
+              name: Minecraft 中的條件式
             Envelope Variables:
               name: 信封變數
             Variables in Artist:
@@ -2867,6 +3131,8 @@ zh-TW:
               name: 拼字蜜蜂
         subgoal-labels-opt-in:
           stages:
+            other:
+              name: 其它
             Thanks:
               name: 謝謝
             " ":
@@ -2982,6 +3248,8 @@ zh-TW:
           stages:
             Introduction:
               name: 介紹
+            Conditionals in Minecraft:
+              name: Minecraft 中的條件式
             Variables in Artist:
               name: 小藝術家裡的變數
             Variables in Play Lab:
@@ -3018,6 +3286,8 @@ zh-TW:
               name: 打好基礎
             Ice Age Play Lab:
               name: 冰原歷險記 Play Lab
+            Conditionals in Minecraft:
+              name: Minecraft 中的條件式
             Envelope Variables:
               name: 信封變數
             Variables in Artist:
@@ -3065,6 +3335,10 @@ zh-TW:
             Project - Solve a Data Problem:
               name: 專案 - 解決數據問題
           title: CSD 單元 5 - 數據和社會
+        subgoals-assessment-staging:
+          stages:
+            dummy:
+              name: dummy
         hocali:
           stages:
             new stage:
@@ -3105,6 +3379,10 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+            'Problem Solving: Personal Innovations':
+              name: '問題解決：個人創新'
+            'Data Science: Problem Solving with Big Data':
+              name: '資料科學：用大數據解決問題'
             What is a Computer?:
               name: 電腦是什麼？
             Problem Solving with Big Data:
@@ -3117,8 +3395,12 @@ zh-TW:
               name: App Lab 入門 (13+)
         hero:
           stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft 英雄之旅 一小時玩程式'
             Minecraft Hour of Code:
               name: 一小時玩 Minecraft
+          title: 'Minecraft：英雄之旅'
+          description_short: Minecraft 回來啦，而且帶來了嶄新的一小時玩程式活動！
           description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
         applab-intro-staging:
           stages:
@@ -3160,6 +3442,8 @@ zh-TW:
               name: 介紹
             Conditionals:
               name: 條件判斷（Conditionals）
+            MINECRAFT STAGE GOES HERE:
+              name: 我的世界舞台在這裡
             Explore Project Ideas:
               name: 找些專案靈感
             Build Your Project:
@@ -3178,6 +3462,8 @@ zh-TW:
               name: 介紹
             Ice Age Play Lab:
               name: 冰原歷險記 Play Lab
+            Conditionals in Minecraft:
+              name: Minecraft 中的條件式
             Envelope Variables:
               name: 信封變數
             Variables in Artist:
@@ -3250,6 +3536,10 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+        glj-behavior-test:
+          stages:
+            Cats and Dogs:
+              name: 貓狗大戰
         csd3-2018:
           title: CSD 單元 3 -互動式遊戲和動畫
           description_short: "Game Lab 編程環境介紹"
@@ -3280,12 +3570,16 @@ zh-TW:
               name: 專案 - 設計一個遊戲
         csd2-2018:
           stages:
+            Headings:
+              name: 標題
             Digital Footprint:
               name: 數位足跡
             Lists:
               name: 清單
             Clean Code and Debugging:
               name: 乾淨代碼和偵錯調試
+            Project - Multi-Page Websites:
+              name: 專案 - 多頁式網站
             Styling Text with CSS:
               name: 透過 CSS 修改文字樣式
             Styling Elements with CSS:
@@ -3294,7 +3588,7 @@ zh-TW:
               name: 來源和搜尋引擎
         coursea-2018:
           assignment_family_title: 課程 A
-          description_short: 給學齡前兒童的電腦科學指南
+          description_short: 為學齡前兒童設計的計算機科學指引。
           stages:
             'Debugging: Unspotted Bugs':
               name: 沒被發現的蟲蟲
@@ -3327,6 +3621,8 @@ zh-TW:
               name: 巢狀迴圈
             'Events: The Big Event':
               name: 大事件
+            Conditionals in Minecraft:
+              name: Minecraft 中的條件式
             Variables in Artist:
               name: 小藝術家裡的變數
             Variables in Play Lab:
@@ -3343,12 +3639,16 @@ zh-TW:
               name: 和 Laurel 一起收集寶石
             'Loops: Getting Loopy':
               name: 學習迴圈
+            'Concept Practice with Minecraft ':
+              name: 與 Minecraft 一起展望未來
             Nested Loops in Bee:
               name: 蜜蜂裡的巢狀迴圈（Nested Loops）
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
             'Functions: Songwriting':
               name: 歌曲創作
+            Functions in Minecraft:
+              name: 在 Minecraft 裡寫函式
             Envelope Variables:
               name: 信封變數
             For Loop Fun:
@@ -3380,6 +3680,8 @@ zh-TW:
               name: 迷宮中的程式設計
             Loops in Collector:
               name: 與 Laurel 一起學習迴圈
+            Programming in Ice Age:
+              name: 和鼠奎特一定寫程式
             Move It, Move It:
               name: 移動它，移動它
         coursed-2018:
@@ -3413,6 +3715,14 @@ zh-TW:
               name: 接力編程
             Nested Loops in Maze:
               name: 迷宮裡的巢狀迴圈（Nested Loops）
+        jr-test:
+          stages:
+            Programming with Behaviors:
+              name: 用行為設計程式
+            Using Behaviors:
+              name: 行為的用法
+            Virtual Pet - Behaviors:
+              name: 虛擬寵物 - 行為
         coursec-2018:
           assignment_family_title: 課程 C
           stages:
@@ -3428,17 +3738,23 @@ zh-TW:
               name: 大事件
             Binary Bracelets:
               name: 二進制手環
+            Looking Ahead:
+              name: 與 Minecraft 一起展望未來
         csd6-2018:
           title: CSD 單元 6 - 物理運算
           description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
           description_short: 在實體裝置上開發程式
           stages:
+            'Project: Make a Game__':
+              name: '專案：創建一個遊戲__'
             The Circuit Playground:
               name: 電路（Circuit ）遊樂場
             Input Unplugged:
               name: 不插電介紹輸入（Input）
             Analog Input:
               name: 模擬輸入
+            'Project: Make a Game':
+              name: '專案：創建一個遊戲'
             Functions with Parameters:
               name: 函式帶參數
             'Project: Prototype an Innovation':
@@ -3446,8 +3762,6 @@ zh-TW:
         coursee-2018:
           assignment_family_title: 課程 E
           stages:
-            'Programming: My Robotic Friends':
-              name: 我的機器人朋友
             Building a Foundation:
               name: 打好基礎
             Nested Loops:
@@ -3470,12 +3784,12 @@ zh-TW:
               name: 用撲克牌學習條件判斷（Conditionals）
             Minecraft Hour of Code:
               name: 一小時玩 Minecraft
+            Functions in Minecraft:
+              name: Minecraft 中的函式
         coursef-2018:
           assignment_family_title: 課程 F
           description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
           stages:
-            'Programming: My Robotic Friends':
-              name: 我的機器人朋友
             Building a Foundation:
               name: 打好基礎
             Nested Loops in Bee/Zombie:
@@ -3484,6 +3798,9 @@ zh-TW:
               name: 介紹
             Ice Age Play Lab:
               name: 冰原歷險記 Play Lab
+            Conditionals in Minecraft:
+              name: Minecraft 中的條件式
+              description_student: 躲開岩漿！在 Minecraft 裡，你可以學會條件判斷。
             Envelope Variables:
               name: 信封變數
             Variables in Artist:
@@ -3502,6 +3819,8 @@ zh-TW:
               name: 說明你的專案
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
+            Functions in Minecraft:
+              name: 在 Minecraft 裡寫函式
         csp1-2018:
           stages:
             CS Principles Pre-survey:
@@ -3525,11 +3844,18 @@ zh-TW:
             Unit 1 Chapter 2 Assessment:
               name: 單元 1 第 2 節 評量
         csd1-2018:
+          title: CSD 單元 1 - 問題解決 ('18-'19)
           stages:
             Intro to Problem Solving:
               name: 問題解決能力的介紹
+            The Problem Solving Process:
+              name: 問題解決流程
+            Exploring Problem Solving:
+              name: 問題解決探索
             What is a Computer?:
               name: 電腦是什麼？
+            Apps and Problem Solving:
+              name: App 與問題解決
         csd4-2018:
           stages:
             Analysis of Design:
@@ -3593,11 +3919,14 @@ zh-TW:
               name: 單元 2 第 1 節 評量
             Intro to Data:
               name: 數據的介紹
+            Discover a Data Story:
+              name: 發現數據故事
             Cleaning Data:
               name: 數據的清理
             Unit 2 Chapter 2 Assessment:
               name: 單元 2 第 2 節 評量
         csp3-2018:
+          title: CSP 單元 3 - 程式設計簡介 ('18-'19)
           stages:
             Using Simple Commands:
               name: 簡單指令的使用
@@ -3605,7 +3934,10 @@ zh-TW:
               name: 建立函式
             APIs and Function Parameters:
               name: API 和函式參數
+        csp-create-2018:
+          title: 創建 - AP 效能任務準備 ('18-'19)
         csp4-2018:
+          title: CSP 單元 4 - 大數據與隱私 ('18-'19)
           stages:
             What is Big Data?:
               name: 大數據是什麼？
@@ -3628,6 +3960,8 @@ zh-TW:
               name: 單元 5 評量 2
             While Loops:
               name: 當…迴圈
+            'Building an App: Image Scroller':
+              name: '創建一個 APP：圖像播放器'
             Unit 5 Assessment 3:
               name: 單元 5 評量 3
             Processing Arrays:
@@ -3642,18 +3976,125 @@ zh-TW:
           stages:
             Creating Javascript Objects:
               name: Javascript 物件的創建
+            Permanent Data Storage:
+              name: 永久資料儲存
             Reading Records:
               name: 紀錄的讀取
             Visualizing Data:
               name: 資料視覺化
             Intro to Data:
               name: 數據的介紹
+            Discover a Data Story:
+              name: 發現數據故事
             Cleaning Data:
               name: 數據的清理
             Unit 2 Chapter 2 Assessment:
               name: 單元 2 第 2 節 評量
+        csd1-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 1 Deeper Learning Reflections:
+              name: 完成單元 1 深入學習反思
+            Complete Unit 2 Deeper Learning Reflections:
+              name: 完成單元 2 深入學習反思
+            Complete Unit 3 Deeper Learning Reflections:
+              name: 完成單元 3 深入學習反思
+          description_audience: CS Discoveries 輔導員培訓 2018-2019
+        csd2-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 2 Deeper Learning Reflections:
+              name: 完成單元 2 深入學習反思
+          description_audience: CS Discoveries 輔導員培訓 2018-2019
+        csd3-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 3 Deeper Learning Reflections:
+              name: 完成單元 3 深入學習反思
+          description_audience: CS Discoveries 輔導員培訓 2018-2019
+        csd4-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 2 Deeper Learning Reflections:
+              name: 完成單元 2 深入學習反思
+            Complete Unit 4 Deeper Learning Reflections:
+              name: 完成單元 4 深入學習反思
+          description_audience: CS Discoveries 輔導員培訓 2018-2019
+        csd5-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 5 Deeper Learning Reflections:
+              name: 完成單元 5 深入學習反思
+          description_audience: CS Discoveries 輔導員培訓 2018-2019
+        csd6-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 5 Deeper Learning Reflections:
+              name: 完成單元 5 深入學習反思
+            Complete Unit 6 Deeper Learning Reflections:
+              name: 完成單元 6 深入學習反思
+          description_audience: CS Discoveries 輔導員培訓 2018-2019
+        csp1-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 1 Deeper Learning Reflections:
+              name: 完成單元 1 深入學習反思
+          description_audience: CS Principles 輔導員培訓 2018-2019
+        csp2-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 2 Deeper Learning Reflections:
+              name: 完成單元 2 深入學習反思
+          description_audience: CS Principles 輔導員培訓 2018-2019
+        csp3-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 3 Deeper Learning Reflections:
+              name: 完成單元 3 深入學習反思
+          description_audience: CS Principles 輔導員培訓 2018-2019
+        csp4-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 3 Deeper Learning Reflections:
+              name: 完成單元 3 深入學習反思
+            Complete Unit 4 Deeper Learning Reflections:
+              name: 完成單元 4 深入學習反思
+          description_audience: CS Principles 輔導員培訓 2018-2019
+        csp5-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 5 Deeper Learning Reflections:
+              name: 完成單元 5 深入學習反思
+          description_audience: CS Principles 輔導員培訓 2018-2019
+        csp-explore-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+            Complete Unit 6 Deeper Learning Reflections:
+              name: 完成單元 6 深入學習反思
+          description_audience: CS Principles 輔導員培訓 2018-2019
+        csp-create-dlp-18:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+          description_audience: CS Principles 輔導員培訓 2018-2019
         csd-novice-18:
           stages:
+            Welcome:
+              name: 歡迎
+            Tuesday:
+              name: 週二
             Wrap Up:
               name: 總結
             Friday:
@@ -3668,8 +4109,11 @@ zh-TW:
               name: 第 3 天
             Day 4:
               name: 第 4 天
+          description_audience: CS Discoveries 輔導員培訓 2018-2019
         csd-apprentice-18:
           stages:
+            Tuesday:
+              name: 週二
             Wrap Up:
               name: 總結
             Day 1:
@@ -3680,8 +4124,11 @@ zh-TW:
               name: 第 3 天
             Day 4:
               name: 第 4 天
+          description_audience: CS Discoveries 輔導員培訓 2018-2019
         csp-novice-18:
           stages:
+            Tuesday:
+              name: 週二
             Wrap Up:
               name: 總結
             Monday:
@@ -3694,8 +4141,11 @@ zh-TW:
               name: 第 3 天
             Day 4:
               name: 第 4 天
+          description_audience: CS Principles 輔導員培訓 2018-2019
         csp-apprentice-18:
           stages:
+            Tuesday:
+              name: 週二
             Wrap Up:
               name: 總結
             Day 1:
@@ -3706,6 +4156,7 @@ zh-TW:
               name: 第 3 天
             Day 4:
               name: 第 4 天
+          description_audience: CS Principles 輔導員培訓 2018-2019
         pre-express-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -3726,8 +4177,14 @@ zh-TW:
               name: 移動它，移動它
             Your Digital Footprint:
               name: 你的數位足跡
+            Programming in Ice Age:
+              name: 和鼠奎特一定寫程式
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie 和 Big Project
+        fit-test:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
         frozen-2018:
           stages:
             Artist:
@@ -3751,6 +4208,8 @@ zh-TW:
               name: 藝術家
         aquatic:
           title: 'Minecraft: 水上巡航'
+          description_short: 拿出你的創造力和解決問題能力，用程式探索和建立水下世界！
+          description: Minecraft 帶著新活動回來啦！拿出你的創造力和解決問題能力，一同用程式探索與打造水世界。
         sconyers:
           stages:
             Digital Design:
@@ -3763,6 +4222,15 @@ zh-TW:
           stages:
             Dance Party:
               name: 舞蹈派對
+        cspplayground:
+          stages:
+            Variables Make:
+              name: 變數的建立
+            Student Survey:
+              name: 學生問卷
+            Functions Make:
+              name: 函式的建立
+          title: CSP 遊樂場
         dance-extras:
           title: 繼續跳舞
           description: 在一小時之後嘗試更多奇思妙想。
@@ -3773,6 +4241,8 @@ zh-TW:
               name: 打好基礎
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
+            Functions in Minecraft:
+              name: Minecraft 中的函式
             Envelope Variables:
               name: 信封變數
             For Loop Fun:
@@ -3787,6 +4257,10 @@ zh-TW:
               name: 新的階段
             The Artist:
               name: 藝術家
+            Sprite Lab Behaviors:
+              name: Sprite Lab 中的行為
+            Editing Behaviors:
+              name: 行為的修改
             Internet:
               name: 網際網路 Internet
             Crowdsourcing:
@@ -3825,6 +4299,8 @@ zh-TW:
               name: 用撲克牌學習條件判斷（Conditionals）
             Conditionals:
               name: 條件判斷（Conditionals）
+            Functions in Minecraft:
+              name: Minecraft 中的函式
             Explore Project Ideas:
               name: 找些專案靈感
             Build Your Project:
@@ -3839,8 +4315,14 @@ zh-TW:
               name: 蜜蜂裡的巢狀迴圈（Nested Loops）
             Nested Loops in Artist:
               name: 小藝術家裡的巢狀迴圈（Nested Loops）
+            Conditionals in Minecraft:
+              name: Minecraft 中的條件式
             About Me:
               name: 關於我
+            Aquatic Conditionals in Minecraft:
+              name: Minecraft 水上巡航的條件式
+            Access Ability:
+              name: 輔助功能
         express-2019:
           stages:
             Programming in Maze:
@@ -3849,10 +4331,14 @@ zh-TW:
               name: 接力編程
             'Loops: Getting Loopy':
               name: '迴圈：學習迴圈'
+            'Concept Practice with Minecraft ':
+              name: '與 Minecraft 一起實踐所學'
             Nested Loops in Bee:
               name: 蜜蜂裡的巢狀迴圈（Nested Loops）
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
+            Functions in Minecraft:
+              name: Minecraft 中的函式
             Envelope Variables:
               name: 信封變數
             For Loop Fun:
@@ -3874,9 +4360,14 @@ zh-TW:
             Crowdsourcing:
               name: 群眾外包（Crowdsourcing）
         csd1-2019:
+          title: CSD 單元 1 - 問題解決 ('19-'20)
           stages:
             Intro to Problem Solving:
               name: 問題解決能力的介紹
+            The Problem Solving Process:
+              name: 問題解決流程
+            Exploring Problem Solving:
+              name: 問題解決探索
             What is a Computer?:
               name: 電腦是什麼？
         andrea-test:
@@ -3885,6 +4376,8 @@ zh-TW:
               name: 新的階段
             'null':
               name: 'null'
+            Deeper Learning Overview:
+              name: 深度學習概覽
         dance-extras-gallery:
           title: 繼續跳舞
           description: 在一小時之後嘗試更多奇思妙想。
@@ -3900,10 +4393,12 @@ zh-TW:
               name: '迴圈：學習迴圈'
             Binary Bracelets:
               name: 二進制手環
+            Create a Design with Loops:
+              name: 用迴圈來創作
         gamelab:
           title: Game Lab
         coursea-2019:
-          description_short: 給學齡前兒童的電腦科學指南
+          description_short: 為學齡前兒童設計的計算機科學指引。
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: '生活中的演算法 - 植物種植'
@@ -3919,12 +4414,16 @@ zh-TW:
               name: 學習滑鼠的拖放
             Loops in Ice Age:
               name: 冰河歷險紀中的迴圈
+            Programming in Ice Age:
+              name: 在冰河歷險紀裡編程
         courseb-2019:
           stages:
             Move It, Move It:
               name: 移動它，移動它
             Your Digital Footprint:
               name: 你的數位足跡
+            Programming in Ice Age:
+              name: 在冰河歷險紀裡編程
             Loops in Ice Age:
               name: 冰河歷險紀中的迴圈
             'Loops: Getting Loopy':
@@ -3937,6 +4436,8 @@ zh-TW:
               name: 移動它，移動它
             Your Digital Footprint:
               name: 你的數位足跡
+            Programming in Ice Age:
+              name: 在冰河歷險紀裡編程
             Loops in Ice Age:
               name: 冰河歷險紀中的迴圈
             Spelling Bee:
@@ -3951,12 +4452,16 @@ zh-TW:
               name: 新的階段
         csd2-2019:
           stages:
+            Headings:
+              name: 標題
             Digital Footprint:
               name: 數位足跡
             Lists:
               name: 清單
             Clean Code and Debugging:
               name: 乾淨代碼和偵錯調試
+            Project - Multi-Page Websites:
+              name: 專案 - 多頁式網站
             Styling Text with CSS:
               name: 透過 CSS 修改文字樣式
             Styling Elements with CSS:
@@ -3977,6 +4482,8 @@ zh-TW:
               name: 角色
             Conditionals:
               name: 條件判斷（Conditionals）
+            Keyboard Input:
+              name: 鍵盤輸入
             Project - Interactive Card:
               name: 專案 - 互動式卡片
             Velocity:
@@ -4053,12 +4560,18 @@ zh-TW:
               name: 不插電介紹輸入（Input）
             Analog Input:
               name: 模擬輸入
+            'Project: Make a Game':
+              name: '專案：創建一個遊戲'
             Functions with Parameters:
               name: 函式帶參數
             'Project: Prototype an Innovation':
               name: '專案：原型創新'
         csp4-pilot:
           stages:
+            Variables Make:
+              name: 變數的建立
+            Student Survey:
+              name: 學生問卷
             Surveys:
               name: 問卷調查
         csp1-2019:
@@ -4092,6 +4605,7 @@ zh-TW:
             Encoding Color Images:
               name: 彩色圖片的編碼
         csp3-2019:
+          title: CSP 單元 3 - 程式設計簡介 ('18-'19)
           stages:
             Using Simple Commands:
               name: 簡單指令的使用
@@ -4100,6 +4614,7 @@ zh-TW:
             APIs and Function Parameters:
               name: API 和函式參數
         csp4-2019:
+          title: CSP 單元 4 - 大數據與隱私 ('18-'19)
           stages:
             What is Big Data?:
               name: 大數據是什麼？
@@ -4122,6 +4637,8 @@ zh-TW:
               name: 單元 5 評量 2
             While Loops:
               name: 當…迴圈
+            'Building an App: Image Scroller':
+              name: '創建一個 APP：圖像播放器'
             Unit 5 Assessment 3:
               name: 單元 5 評量 3
             Processing Arrays:
@@ -4132,19 +4649,33 @@ zh-TW:
               name: '創建一個 App - 帆布畫家'
             Unit 5 Assessment 4:
               name: 單元 5 評量 4
+        csp-create-2019:
+          title: 創建 - AP 效能任務準備 ('18-'19)
         csppostap-2019:
           stages:
             Intro to Data:
               name: 數據的介紹
+            Discover a Data Story:
+              name: 發現數據故事
             Cleaning Data:
               name: 數據的清理
             Creating Javascript Objects:
               name: Javascript 物件的創建
+            Permanent Data Storage:
+              name: 永久資料儲存
             Reading Records:
               name: 紀錄的讀取
             Visualizing Data:
               name: 資料視覺化
         csp1-pilot:
+          stages:
+            new stage:
+              name: 新的階段
+        csd-tests:
+          stages:
+            Computers and Problem Solving:
+              name: 計算機與問題解決
+        csd-videos:
           stages:
             new stage:
               name: 新的階段

@@ -218,8 +218,11 @@ sr:
       already_registered: Већ си регистрован?
       create: Креирај
       artist: Уметник
-      playlab: Играоница
       flappy: Флапи
+      frozen: Залеђено краљевство
+      iceage: Ледено доба
+      infinity: Бесконачно
+      playlab: Играоница
     popup:
       progress_for_user: Напредак %{name}
       progress: Напредак
@@ -439,6 +442,18 @@ sr:
           other: Други
   flex_category:
     required: Преглед
+    csf_digcit: Дигитално држављанство
+    csf_jigsaw: Слагалица
+    csf_loops: Петље
+    csf_events: Догађаји
+    csf_conditionals: Кондиционали
+    csf_functions: Функције
+    csf_variables: Променљиве
+    csf_for_loops: Бројачке петље
+    csf_internet: Интернет
+    csp_variables: Променљиве
+    csp_conditionals: Кондиционали
+    csp_functions: Функције
   pd:
     form_labels:
       email: Електронска пошта

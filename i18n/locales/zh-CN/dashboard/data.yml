@@ -399,6 +399,7 @@ zh-CN:
         csp_applab_functions: 函数介绍
         csp_applab_functions_parameters: 有参数的函数
         csp_applab_loops: 循环
+        csp_cs_is_changing_everything: 计算机科学正在改变一切
         starwars_intro: '星球大战: 用代码构建一个星系-介绍'
         starwars_typing: '星球大战: 用代码构建一个星系-JavaScript'
         starwars_events: '星球大战: 用代码构建一个星系-事件'
@@ -485,6 +486,12 @@ zh-CN:
         hoc_dance_congrats: 舞会 - 继续！
         c_and_c_great_to_create: 创建并实践公平非常的伟大。
         c_and_c_digital_sharing: 数字共享
+        'Teaching CS Fundamentals: How the Course Works': '教学 CS 基础知识: 课程的运作方式'
+        repeat_block: 使用循环块
+        lesson_planning: 课程计划
+        opd_closing: '教学 CS 基础知识: 关闭和下一步骤'
+        writing_first_program: 编写你的第一个计算机程序
+        what_is_an_event: 什么是事件？
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

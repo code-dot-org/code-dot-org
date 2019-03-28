@@ -401,13 +401,34 @@ fr:
       driver: Pilote
       navigator: Navigateur
       create: Créer
+      algebra_game: Algèbre
       applab: Labo des applis
       artist: Artiste
-      gamelab: Labo des jeux
-      playlab: Labo de jeux
-      minecraft: Minecraft
-      flappy: Flappy
+      artist_k1: Artiste (jeune lecteur)
+      basketball: Basket-ball
+      bounce: Rebond
+      calc: Calc
       dance: Fête dansante
+      eval: Eval
+      flappy: Flappy
+      frozen: La Reine des neiges
+      gamelab: Labo des jeux
+      gamelab_jr: Labo des jeux (beta)
+      gumball: Le monde incroyable de Gumball
+      iceage: L’âge de Glace
+      infinity: Infini
+      minecraft_adventurer: Aventurier de Minecraft
+      minecraft_aquatic: Minecraft Aquatique
+      minecraft_designer: Minecraft
+      minecraft_hero: Héros de Minecraft
+      playlab: Labo de jeux
+      playlab_k1: Play Lab (jeune lecteur)
+      scratch: Scratch
+      sports: Sports
+      starwars: Star Wars
+      starwarsblocks: Star Wars (blocs)
+      starwarsblocks_hour: Star Wars (blocs)
+      weblab: Web Lab
       view_all: Afficher tous les projets...
     popup:
       progress_for_user: progrès de %{name}
@@ -1239,6 +1260,17 @@ fr:
     csf_e_2: Contenu du cours E
     csf_f_1: Progression jusqu'au cours F (facultatif)
     csf_f_2: Contenu du cours F
+    csf_digcit: Citoyenneté numérique
+    csf_jigsaw: Puzzle
+    csf_loops: boucles
+    csf_events: Événements
+    csf_binary: Binaire
+    csf_conditionals: Instructions conditionnelles
+    csf_nested_loops: Boucles imbriquées
+    csf_functions: fonctions
+    csf_variables: variables
+    csf_for_loops: Boucles « Pour »
+    csf_internet: Internet
     csd1_1: 'Chapitre 1 : Résolution de problèmes'
     csd1_2: 'Chapitre 2 : Ordinateurs et résolution de problèmes'
     csd2_1: 'Chapitre 1 : Contenu Web et HTML'
@@ -1269,6 +1301,9 @@ fr:
     csp_postap_2: 'Chapitre 2 : Application et bases de données'
     csp2_1_2018: 'Unité 2: L’Information numérique'
     csp3_1_2018: 'Unité 3 : Introduction à la programmation'
+    csp_variables: variables
+    csp_conditionals: Instructions conditionnelles
+    csp_functions: fonctions
     dlp: Sujets de réflexion
   external_links:
     disclaimer: Clause de non-responsabilité

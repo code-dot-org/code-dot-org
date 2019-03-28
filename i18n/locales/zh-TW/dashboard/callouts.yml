@@ -17,6 +17,36 @@ zh-TW:
         CSD_U3_variables: 在此修改數值
       CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: 在此修改數值
+      CSD U3 abstraction dragonfly (OLD)_callout:
+        CSD_U3_L11_S5_C1: 添加你的積木到這兒。
+      CSD U3 abstraction dragonfly OLD_callout:
+        CSD_U3_L11_S5_C1: 添加你的積木到這兒。
+      CSD U3 abstraction horse2_callout:
+        CSD_U3_L11_S15_C1: 在此設定你的角色的 velocityY
+      CSD U3 abstraction jumper intro_callout:
+        CSD_U3_L11_S17_C1: 在此設定角色的初始位置。
+      CSD U3 abstraction jumper template_callout:
+        CSD_U3_L11_S17_C1: 在此設定角色的初始位置。
+      CSD U3 abstraction jumping_callout:
+        CSD_U3_L13_S8_C1: 在此設定速度
+      CSD U3 abstraction jumping_2018_callout:
+        CSD_U3_L13_S8_C1: 在此設定速度
+      CSD U3 abstraction jumping_2019_callout:
+        CSD_U3_L13_S8_C1: 在此設定速度
+      CSD U3 abstraction sidescroll intro_callout:
+        CSD_U3_L11_S17_C1: 在此設定角色的初始位置。
+      CSD U3 abstraction sidescroll template-2018_callout:
+        CSD_U3_L11_S17_C1: 在此設定角色的初始位置。
+      CSD U3 abstraction sidescroll template_callout:
+        CSD_U3_L11_S17_C1: 在此設定角色的初始位置。
+      CSD U3 abstraction sidescroll template_2018_callout:
+        CSD_U3_L11_S17_C1: 在此設定角色的初始位置。
+      CSD U3 abstraction sidescroll template_2019_callout:
+        CSD_U3_L11_S17_C1: 在此設定角色的初始位置。
+      CSD U3 abstraction sidescroll_callout:
+        CSD_U3_L11_S17_C1: 在此設定角色的初始位置。
+      CSD U3 collisions isTouching intro_2019_callout:
+        CSD_U3_L12_S2_C1: 添加你的積木到這兒。
       CSD U3 debug_callout:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
@@ -356,6 +386,8 @@ zh-TW:
         artistLoopsK2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
+      behaviors 5_callout:
+        behaviors_edit: 添加程式給這個行為。
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
       course3_bee_debugging_challenge1_callout:
@@ -418,6 +450,10 @@ zh-TW:
         courseA_playLab_events5_1: 點擊此處變更方向事件的箭頭方向。
       courseA_playLab_events5_2019_callout:
         courseA_playLab_events5_1: 點擊此處變更方向事件的箭頭方向。
+      courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
+      courseB_Scrat_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: 這個數字指的是工具箱中已經沒有這個積木。
       courseB_collector_loops1_callout:
@@ -454,6 +490,12 @@ zh-TW:
         courseC_harvester_loops1_callout1: 在南瓜上的數字 4 意思是有 4 個南瓜可以收集。
       courseC_harvester_loops1_2019_callout:
         courseC_harvester_loops1_callout1: 在南瓜上的數字 4 意思是有 4 個南瓜可以收集。
+      courseC_maze_programming1_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
+      courseC_maze_programming1_2018_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
+      courseC_maze_programming1_2019_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseC_maze_programming7_callout:
         courseC_maze_programming7_2: 這些積木就像石頭一樣，不能被破壞。
       courseC_maze_programming7_2018_callout:
@@ -495,10 +537,20 @@ zh-TW:
         courseD_bee_debugging_challenge1_callout1: 使用這個指令讓蜜蜂向後移動。
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: '使用這個積木來收集寶藏。'
+      courseD_maze_ramp1_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
+      courseD_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
+      courseD_maze_ramp1_2019_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_maze_ramp6a_callout:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
+      courseD_scrat_ramp1_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
+      courseD_scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseD_scrat_ramp6_callout:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_scrat_ramp6_2018_callout:
@@ -524,6 +576,10 @@ zh-TW:
         courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: '使用這個積木來收集寶藏。'
+      courseE_maze_ramp1_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseE_maze_ramp6_2018_callout:
@@ -572,6 +628,10 @@ zh-TW:
         courseF_bee_functions6_1: 別忘了看看這兒，裡頭有更多積木，也許可以幫助你！
       courseF_bee_functions6_2018_callout:
         courseF_bee_functions6_1: 別忘了看看這兒，裡頭有更多積木，也許可以幫助你！
+      courseF_maze_ramp1_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
+      courseF_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseF_maze_ramp6_callout:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseF_maze_ramp6_2018_callout:
@@ -588,6 +648,10 @@ zh-TW:
         course_playlab_variables3_1: 這是如何為你的變數設定值的方式。
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: 使用「建立一個圓形」積木並修改它的尺寸。
+      frozen circle function with parameter_b_callout:
+        frozen_circle_function_with_parameter_circle: 使用`建立一個圓形`積木並修改它的尺寸。
+      frozen circle function with parameter_test_callout:
+        frozen_circle_function_with_parameter_circle: 使用`建立一個圓形`積木並修改它的尺寸。
       frozen cross rotate_callout:
         replace_questions_degree: 使用下拉清單，把「???」換成一個數字。
       frozen cross rotate_b_callout:
@@ -620,6 +684,8 @@ zh-TW:
         turn_elsa: 使用「轉向」積木讓艾莎轉彎。下接清單中的數字可以決定艾莎轉向的角度。
       frozen snowflake branch_callout:
         frozen_snowflake_branch: 使用「建立雪花分支」積木
+      frozen snowflake branch_b_callout:
+        frozen_snowflake_branch: 使用函式 create a snowflake branch（中文意指建立雪花分支）
       frozen snowflake branch_test_callout:
         frozen_snowflake_branch: 使用「建立雪花分支」積木
       frozen square iterative_callout:
@@ -648,6 +714,8 @@ zh-TW:
         replace_questions: 使用下拉清單，把「???」換成一個數字。
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: 這些灰色的積木是用石頭做的！這表示他們不能被打掉。
+      grade2_CaringForNewPet_0_callout:
+        grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       grade3_Conditionals_3_callout:

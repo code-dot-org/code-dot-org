@@ -1686,6 +1686,18 @@ pt-BR:
 
         * Clique nas lâmpadas para ligar ou desligar cada cor e ver o que acontece com o seu pixel
         * Veja quantas cores diferentes você pode criar com apenas três bits
+      CSD U1 Feedback FR: Pense em um feedback que você recebeu, mas NÃO usou para
+        melhorar seu applicativo. Por que você optou por não usar este feedback?
+      CSD U1 Test Collaborate FR: Pense em um momento em que você e seu parceiro discordaram
+        em algo. Como você resolveu este desacordo?
+      CSD U1 Test Feedback FR: Pense em um feedback que você recebeu, mas NÃO usou
+        para melhorar seu applicativo. Por que você optou por não usar este feedback?
+      CSD U1 Test Iteration FR: Lembre-se de alguma forma em que sua ideia para o
+        aplicativo mudou enquanto você trabalhava em seu projeto. Qual foi a mudança,
+        e por que foi necessária?
+      CSD U1 Test storage FR: Pense em um tipo de informação que seu aplicativo usou,
+        mas NÃO armazenou para usar depois. Por que você decidiu não guardar esta
+        informação?
       CSD U2  layout style body: |-
         <div style="float: right; height: 150px; width: 400px; overflow-y: scroll; margin-left: 20px;">
         <details>
@@ -3771,6 +3783,10 @@ pt-BR:
 
         * Clique sobre a Dica "Como eu utilizo a Ferramenta de Inspeção?" à direita, para aprender como utilizar a Ferramenta de Inspeção.
         * Siga as instruções para explorar a página web, e discuta com um coleta sobre seu funcionamento.
+      CSD U2 Pair Programming Video_2019: |
+        ## Perguntas para considerar
+        * Por que você acha que programadores profissionais usam programação em pares?
+        * Como você acha que a programação em pares vai ajudá-lo a programar melhor?
       CSD U2 Project Start: |-
         # Inicie seu projeto
 
@@ -3924,6 +3940,270 @@ pt-BR:
 
         </details>
         </div>
+      CSD U2 RGB others: |-
+        # Cores de Verão e de Outono
+
+        Escolha valores RGB para cores de verão e de outono.
+
+        * Clique "Iniciar" para ativar a ferramenta.
+        * Ajuste os níveis até você encontrar uma cor de verão que você goste, depois escreva os valores obtidos no seu guia de atividades.
+        * Faça o mesmo para uma cor de outono. Você irá precisar dos valores RGB para a próxima atividade.
+
+
+        <div style="font-size: 16px">
+        <br />
+        <details>
+
+        <summary><strong>Onde eu posso encontrar uma relação completa de tipos de cores?</strong></summary>
+        Você pode encontrar muitas opções de cores em <a href="http://www.w3schools.com/colors/colors_picker.asp">W3Schools - HTML Color Picker</a></details>
+        <details>
+        <summary><strong>Por que vermelho e verde fazem amarelo?</strong></summary>
+
+        Quando você mistura tintas, vermelho e verde fazem marrom, mas a mistura de cores RGB utiliza luminosidade ao invés de tinta, então as cores se misturam de forma diferente. RGB usa uma _mistura de cores aditiva_. Em uma mistura aditiva, vermelho e verde fazem amarelo, vermelho e azul geram magenta, e azul com verde geram ciano. Quanto você mistura as três cores primárias juntas (vermelho, verde e azul), elas fazem branco. Você pode ler mais em <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a>.
+
+        </details>
+        <details>
+        <summary><strong>Quantas cores eu posso criar com a mistura de cores RGB?</strong></summary>
+
+        <p>Você pode criar mais de dezesseis milhões de cores com a mistura de cores RGB.</p>
+
+        </details>
+        </div>
+      CSD U2 RGB others_2018: |-
+        # Cores de Verão e de Outono
+
+        Escolha valores RGB para cores de verão e de outono.
+
+        * Clique "Iniciar" para ativar a ferramenta.
+        * Ajuste os níveis até você encontrar uma cor de verão que você goste, depois escreva os valores obtidos no seu guia de atividades.
+        * Faça o mesmo para uma cor de outono. Você irá precisar dos valores RGB para a próxima atividade.
+
+
+        <div style="font-size: 16px">
+        <br />
+        <details>
+
+        <summary>
+        <strong>Onde eu posso encontrar uma relação completa de tipos de cores?</strong>
+        </summary>
+
+        Você pode encontrar muitas opções de cores em <a href="http://www.w3schools.com/colors/colors_picker.asp">W3Schools - HTML Color Picker</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que vermelho e verde fazem amarelo?</strong>
+        </summary>
+
+        Quando você mistura tintas, vermelho e verde fazem marrom, mas a mistura de cores RGB utiliza luminosidade ao invés de tinta, então as cores se misturam de forma diferente. RGB usa uma _mistura de cores aditiva_. Em uma mistura aditiva, vermelho e verde fazem amarelo, vermelho e azul geram magenta, e azul com verde geram ciano. Quanto você mistura as três cores primárias juntas (vermelho, verde e azul), elas fazem branco. Você pode ler mais em <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a>.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Quantas cores eu posso criar com a mistura de cores RGB?</strong>
+        </summary>
+
+        Você pode criar mais de dezesseis milhões de cores com a mistura de cores RGB.
+
+        </details>
+        </div>
+      CSD U2 RGB others_2019: |-
+        # Cores de Verão e de Outono
+
+        Escolha valores RGB para cores de verão e de outono.
+
+        * Clique "Iniciar" para ativar a ferramenta.
+        * Ajuste os níveis até você encontrar uma cor de verão que você goste, depois escreva os valores obtidos no seu guia de atividades.
+        * Faça o mesmo para uma cor de outono. Você irá precisar dos valores RGB para a próxima atividade.
+
+
+        <div style="font-size: 16px">
+        <br />
+        <details>
+
+        <summary>
+        <strong>Onde eu posso encontrar uma relação completa de tipos de cores?</strong>
+        </summary>
+
+        Você pode encontrar muitas opções de cores em <a href="http://www.w3schools.com/colors/colors_picker.asp">W3Schools - HTML Color Picker</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que vermelho e verde fazem amarelo?</strong>
+        </summary>
+
+        Quando você mistura tintas, vermelho e verde fazem marrom, mas a mistura de cores RGB utiliza luminosidade ao invés de tinta, então as cores se misturam de forma diferente. RGB usa uma _mistura de cores aditiva_. Em uma mistura aditiva, vermelho e verde fazem amarelo, vermelho e azul geram magenta, e azul com verde geram ciano. Quanto você mistura as três cores primárias juntas (vermelho, verde e azul), elas fazem branco. Você pode ler mais em <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a>.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Quantas cores eu posso criar com a mistura de cores RGB?</strong>
+        </summary>
+
+        Você pode criar mais de dezesseis milhões de cores com a mistura de cores RGB.
+
+        </details>
+        </div>
+      CSD U2 RGB summer: |-
+        # Cor de Verão
+
+        Encontre os valores RGB para uma cor amarela típica de verão.
+
+        * Clique "Iniciar" para ativar a ferramenta.
+        * Ajuste os níveis até corresponder ao tom de amarelo de verão na parte inferior da ferramenta.
+        * Escreva os valores RGB no seu guia de atividades. Você irá precisar deles para a próxima ativdade.
+
+
+        <div style="font-size: 16px">
+        <br />
+        <details>
+
+        <summary><strong>Por que vermelho e verde fazem amarelo?</strong></summary>
+
+        Quando você mistura tintas, vermelho e verde fazem marrom, mas a mistura de cores RGB utiliza luminosidade ao invés de tinta, então as cores se misturam de forma diferente. RGB usa uma _mistura de cores aditiva_. Em uma mistura aditiva, vermelho e verde fazem amarelo, vermelho e azul geram magenta, e azul com verde geram ciano. Quanto você mistura as três cores primárias juntas (vermelho, verde e azul), elas fazem branco. Você pode ler mais em <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a>.
+
+        </details>
+        <details>
+        <summary><strong>Quantas cores eu posso criar com a mistura de cores RGB?</strong></summary>
+
+        <p>Você pode criar mais de dezesseis milhões de cores com a mistura de cores RGB.</p>
+
+        </details>
+        </div>
+      CSD U2 RGB summer_2018: |-
+        # Cor de Verão
+
+        Encontre os valores RGB para uma cor amarela típica de verão.
+
+        * Clique "Iniciar" para ativar a ferramenta.
+        * Ajuste os níveis até corresponder ao tom de amarelo de verão na parte inferior da ferramenta.
+        * Escreva os valores RGB no seu guia de atividades. Você irá precisar deles para a próxima ativdade.
+
+
+        <div style="font-size: 16px">
+        <br />
+        <details>
+
+        <summary>
+        <strong>Por que vermelho e verde fazem amarelo?</strong>
+        </summary>
+
+        Quando você mistura tintas, vermelho e verde fazem marrom, mas a mistura de cores RGB utiliza luminosidade ao invés de tinta, então as cores se misturam de forma diferente. RGB usa uma _mistura de cores aditiva_. Em uma mistura aditiva, vermelho e verde fazem amarelo, vermelho e azul geram magenta, e azul com verde geram ciano. Quanto você mistura as três cores primárias juntas (vermelho, verde e azul), elas fazem branco. Você pode ler mais em <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a>.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Quantas cores eu posso criar com a mistura de cores RGB?</strong>
+        </summary>
+
+        Você pode criar mais de dezesseis milhões de cores com a mistura de cores RGB.
+
+        </details>
+        </div>
+      CSD U2 RGB summer_2019: |-
+        # Cor de Verão
+
+        Encontre os valores RGB para uma cor amarela típica de verão.
+
+        * Clique "Iniciar" para ativar a ferramenta.
+        * Ajuste os níveis até corresponder ao tom de amarelo de verão na parte inferior da ferramenta.
+        * Escreva os valores RGB no seu guia de atividades. Você irá precisar deles para a próxima ativdade.
+
+
+        <div style="font-size: 16px">
+        <br />
+        <details>
+
+        <summary>
+        <strong>Por que vermelho e verde fazem amarelo?</strong>
+        </summary>
+
+        Quando você mistura tintas, vermelho e verde fazem marrom, mas a mistura de cores RGB utiliza luminosidade ao invés de tinta, então as cores se misturam de forma diferente. RGB usa uma _mistura de cores aditiva_. Em uma mistura aditiva, vermelho e verde fazem amarelo, vermelho e azul geram magenta, e azul com verde geram ciano. Quanto você mistura as três cores primárias juntas (vermelho, verde e azul), elas fazem branco. Você pode ler mais em <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a>.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Quantas cores eu posso criar com a mistura de cores RGB?</strong>
+        </summary>
+
+        Você pode criar mais de dezesseis milhões de cores com a mistura de cores RGB.
+
+        </details>
+        </div>
+      CSD U2 RGB winter: "# Cor de Inverno\n\nNos próximos níveis, você irá encontrar
+        cores das estações do ano para um website. Aqui, você precisará escolher os
+        valores RGB para uma cor azulada de inverno. \n\n* Clique \"Iniciar\" para
+        ativar a ferramenta.\n* Ajuste os níveis até que a cor na parte inferior da
+        ferramenta corresponda ao azul de inverno.\n* Escreva os valores RGB no seu
+        guia de atividades. Você irá precisar deles na próxima atividade.\n\n\n<div
+        style=\"font-size: 16px\">\n<br />\n<details>\n\n<summary><strong>Como eu
+        torno uma cor mais clara?</strong></summary>\n<p>Para clarear uma cor, você
+        precisa adicionar mais luminosidade (aumentar o nível do deslizador). Se você
+        já atingiu a quantidade máxima de luz azul, você terá que acrescentar mais
+        luminosidades vermelha e verde para tornar eu azul mais claro.</p></details>\n<details>\n<summary><strong>Por
+        que vermelho e verde fazem amarelo?</strong></summary>\n\nQuando você mistura
+        tintas, vermelho e verde fazem marrom, mas a mistura de cores RGB utiliza
+        luminosidade ao invés de tinta, então as cores se misturam de forma diferente.
+        RGB usa uma _mistura de cores aditiva_. Em uma mistura aditiva, vermelho e
+        verde fazem amarelo, vermelho e azul geram magenta, e azul com verde geram
+        ciano. Quanto você mistura as três cores primárias juntas (vermelho, verde
+        e azul), elas fazem branco. Você pode ler mais em <a href=\"https://en.wikipedia.org/wiki/Additive_color\">Wikipedia
+        - Additive Color</a>.\n\n</details>\n<details>\n<summary><strong>Quantas cores
+        eu posso criar com a mistura de cores RGB?</strong></summary>\n\n<p>Você pode
+        criar mais de dezesseis milhões de cores com a mistura de cores RGB.</p>\n\n</details>\n</div>"
+      CSD U2 RGB winter_2018: "# Cor de Inverno\n\nNos próximos níveis, você irá encontrar
+        cores das estações do ano para um website. Aqui, você precisará escolher os
+        valores RGB para uma cor azulada de inverno. \n\n* Clique \"Iniciar\" para
+        ativar a ferramenta.\n* Ajuste os níveis até que a cor na parte inferior da
+        ferramenta corresponda ao azul de inverno.\n* Escreva os valores RGB no seu
+        guia de atividades. Você irá precisar deles na próxima atividade.\n\n\n<div
+        style=\"font-size: 16px\">\n<br />\n<details>\n\n<summary>\n<strong>Como eu
+        torno uma cor mais clara?</strong>\n</summary>\n\nPara clarear uma cor, você
+        precisa adicionar mais luminosidade (aumentar o nível do deslizador). Se você
+        já atingiu a quantidade máxima de luz azul, você terá que acrescentar mais
+        luminosidades vermelha e verde para tornar eu azul mais claro.\n\n</details>\n<details>\n<summary>\n<strong>Por
+        que vermelho e verde fazem amarelo?</strong>\n</summary>\n\nQuando você mistura
+        tintas, vermelho e verde fazem marrom, mas a mistura de cores RGB utiliza
+        luminosidade ao invés de tinta, então as cores se misturam de forma diferente.
+        RGB usa uma _mistura de cores aditiva_. Em uma mistura aditiva, vermelho e
+        verde fazem amarelo, vermelho e azul geram magenta, e azul com verde geram
+        ciano. Quanto você mistura as três cores primárias juntas (vermelho, verde
+        e azul), elas fazem branco. Você pode ler mais em <a href=\"https://en.wikipedia.org/wiki/Additive_color\">Wikipedia
+        - Additive Color</a>.\n\n</details>\n<details>\n<summary>\n<strong>Quantas
+        cores eu posso criar com a mistura de cores RGB?</strong>\n</summary>\n\nVocê
+        pode criar mais de dezesseis milhões de cores com a mistura de cores RGB.\n\n</details>\n</div>"
+      CSD U2 RGB winter_2019: "# Cor de Inverno\n\nNos próximos níveis, você irá encontrar
+        cores das estações do ano para um website. Aqui, você precisará escolher os
+        valores RGB para uma cor azulada de inverno. \n\n* Clique \"Iniciar\" para
+        ativar a ferramenta.\n* Ajuste os níveis até que a cor na parte inferior da
+        ferramenta corresponda ao azul de inverno.\n* Escreva os valores RGB no seu
+        guia de atividades. Você irá precisar deles na próxima atividade.\n\n\n<div
+        style=\"font-size: 16px\">\n<br />\n<details>\n\n<summary>\n<strong>Como eu
+        torno uma cor mais clara?</strong>\n</summary>\n\nPara clarear uma cor, você
+        precisa adicionar mais luminosidade (aumentar o nível do deslizador). Se você
+        já atingiu a quantidade máxima de luz azul, você terá que acrescentar mais
+        luminosidades vermelha e verde para tornar eu azul mais claro.\n\n</details>\n<details>\n<summary>\n<strong>Por
+        que vermelho e verde fazem amarelo?</strong>\n</summary>\n\nQuando você mistura
+        tintas, vermelho e verde fazem marrom, mas a mistura de cores RGB utiliza
+        luminosidade ao invés de tinta, então as cores se misturam de forma diferente.
+        RGB usa uma _mistura de cores aditiva_. Em uma mistura aditiva, vermelho e
+        verde fazem amarelo, vermelho e azul geram magenta, e azul com verde geram
+        ciano. Quanto você mistura as três cores primárias juntas (vermelho, verde
+        e azul), elas fazem branco. Você pode ler mais em <a href=\"https://en.wikipedia.org/wiki/Additive_color\">Wikipedia
+        - Additive Color</a>.\n\n</details>\n<details>\n<summary>\n<strong>Quantas
+        cores eu posso criar com a mistura de cores RGB?</strong>\n</summary>\n\nVocê
+        pode criar mais de dezesseis milhões de cores com a mistura de cores RGB.\n\n</details>\n</div>"
+      CSD U2 Test Bug FR: Pense em um bug difícil que você precisava corrigir em seu
+        programa. Qual foi o seu processo para encontrar e corrigir o bug?
+      CSD U2 Test Bug: Pense em um bug difícil que você precisava corrigir em seu
+        programa. Qual foi o seu processo para encontrar e corrigir o bug?
+      CSD U2 Test Copyright FR: Escolha um pedaço de material protegido por direitos
+        autorais que você usou no seu site. Por que você acha que o criador escolheu
+        a licença que usou?
+      CSD U2 Test DigCit FR: Escolha um trecho de código que sua classe pode saber,
+        mas você não quer compartilhar no seu site. Por que é aceitável que este trecho
+        seja conhecido por seus colegas e pelo professor, mas não publicado para todos?
       CSD U2 add content: |
         # Adicione HTML
 
@@ -3948,6 +4228,265 @@ pt-BR:
         # Faça isso
         * Para cada uma das novas páginas que você criou, adicione HTML para fazer a página que você desenhou no seu guia de projeto.
         * Você pode também adicionar mais HTML em suas páginas que você já criou.
+      CSD U2 add file - OLD: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+
+        **O que é uma folha de estilos?**
+
+        </summary>
+        Uma folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados que são vinculados à página HTML.
+        </details>
+        <details>
+        <summary>
+
+        **O que é CSS?**
+
+        </summary>
+        CSS é uma linguagem que controla a forma como o conteúdo aparece em uma página web. Utiliza conjuntos de regras para alterar a aparência da página. Cada regra possui um seletor, que define quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e um valor para esta propriedade.
+
+
+        Segue um exemplo de um conjunto de regras, que torna o texto de uma tag `h2` azul e cursiva:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        </pre>
+
+        Neste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores para estas propriedades.
+        </details>
+        <details>
+        <summary>
+
+        **Como eu crio uma nova folha de estilos?**
+
+        </summary>
+        Para criar uma nova folha de estilos, clique sobre o botão "Novo CSS" sobre a área de código.
+        </details>
+        <details>
+        <summary>
+
+        **Que nome eu dou para a minha folha de estilos?**
+
+        </summary>
+        Você pode dar qualquer nome para sua folha de estilos, mas é melhor escolher um nome relevante, como "estilo.css" ou "sobremeusestilos.css", para que fique claro do que se trata. Seu arquivo deve sempre terminar com a extensão ".css".
+        </details>
+        <details>
+        <summary>
+
+        **Como eu renomeio um arquivo?**
+
+        </summary>
+        Para renomear um arquivo, você pode clicar com o botão direito (ou com a tecla Ctrl pressionada) sobre o nome, e escolher a opção "Renomear". Isto vai permitir a você digitar o novo nome. Clicar em um nome de arquivo quando ele já estiver selecionado também permite a alteração do nome.
+        </details>
+        <details>
+        <summary>
+
+        **Como eu insiro uma folha de estilos em uma página web?**
+
+        </summary>
+
+        Para inserir uma folha de estilos a uma página web, abra o código da página. Dentro da tag head, acrescente o seguinte código `<link rel="stylesheet" href="style.css">`. Em seguida, troque "style.css" para o nome da sua folha de estilos.
+
+
+        </details>
+        </div>
+
+        # Inserindo uma Folha de Estilos
+
+        Esta é sua página "Sobre mim" que você usou antes. No próximo nível, você terá a oportunidade de acrescentar alguns estilos diferentes a ela, mas antes, você vai precisar criar uma folha de estilos, renomeá-la, e vinculá-la à sua página HTML.
+
+        1. Crie uma nova folha de estilos para o seu projeto.
+        2. Renomeie o arquivo da folha de estilos
+        3. Insira a folha de estilos à sua página HTML.
+
+        <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png" style=" max-width:500px">
+      CSD U2 add file: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>O que é uma folha de estilos?</strong></summary>
+        Uma folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados que são vinculados à página HTML.
+        </details>
+        <details>
+        <summary><strong>O que é CSS?</strong></summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo aparece em uma página web. Utiliza conjuntos de regras para alterar a aparência da página. Cada regra possui um seletor, que define quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e um valor para esta propriedade.
+
+
+        Segue um exemplo de um conjunto de regras, que torna o texto de uma tag `h2` azul e cursiva:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        </pre>
+
+        Neste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores para estas propriedades.
+
+        </details>
+        <details>
+        <summary><strong>Como eu crio uma nova folha de estilos?</strong></summary>
+        Para criar uma nova folha de estilos, clique sobre o botão "Novo CSS" sobre a área de código.
+        </details>
+        <details>
+        <summary><strong>Que nome eu dou para a minha folha de estilos?</strong></summary>
+
+        Você pode dar qualquer nome para sua folha de estilos, mas é melhor escolher um nome relevante, como "estilo.css" ou "sobremeusestilos.css", para que fique claro do que se trata. Seu arquivo deve sempre terminar com a extensão ".css".
+
+        </details>
+        <details>
+        <summary><strong>Como eu renomeio um arquivo?</strong></summary>
+
+        Para renomear um arquivo, você pode clicar com o botão direito (ou com a tecla Ctrl pressionada) sobre o nome, e escolher a opção "Renomear". Isto vai permitir a você digitar o novo nome. Clicar em um nome de arquivo quando ele já estiver selecionado também permite a alteração do nome.
+
+        </details>
+        <details>
+        <summary><strong>Como eu insiro uma folha de estilos em uma página web?</strong></summary>
+
+        Para inserir uma folha de estilos a uma página web, abra o código da página. Dentro da tag head, acrescente o seguinte código `<link rel="stylesheet" href="style.css">`. Em seguida, troque "style.css" para o nome da sua folha de estilos.
+
+        </details>
+        </div>
+
+        # Inserindo uma Folha de Estilos
+
+        Este é o projeto que você usou antes. No próximo nível, você terá a oportunidade de acrescentar alguns estilos diferentes a ele, mas antes, você vai precisar criar uma folha de estilos, renomeá-la, e vinculá-la à sua página HTML.
+
+        1. Crie uma nova folha de estilos para o seu projeto.
+        2. Renomeie o arquivo da folha de estilos
+        3. Insira a folha de estilos à sua página HTML.
+
+        <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png" style=" max-width:500px">
+      CSD U2 add file_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>O que é uma folha de estilos?</strong>
+        </summary>
+
+        Uma folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados que são vinculados à página HTML.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é CSS?</strong>
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo aparece em uma página web. Utiliza conjuntos de regras para alterar a aparência da página. Cada regra possui um seletor, que define quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e um valor para esta propriedade.
+
+
+        Segue um exemplo de um conjunto de regras, que torna o texto de uma tag `h2` azul e cursiva:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        </pre>
+
+        Neste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores para estas propriedades.
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu crio uma nova folha de estilos?</strong>
+        </summary>
+        Para criar uma nova folha de estilos, clique sobre o botão "Novo CSS" sobre a área de código.
+        </details>
+        <details>
+        <summary>
+        <strong>Que nome eu dou para a minha folha de estilos?</strong>
+        </summary>
+        Você pode dar qualquer nome para sua folha de estilos, mas é melhor escolher um nome relevante, como "estilo.css" ou "sobremeusestilos.css", para que fique claro do que se trata. Seu arquivo deve sempre terminar com a extensão ".css".
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu renomeio um arquivo?</strong>
+        </summary>
+        Para renomear um arquivo, você pode clicar com o botão direito (ou com a tecla Ctrl pressionada) sobre o nome, e escolher a opção "Renomear". Isto vai permitir a você digitar o novo nome. Clicar em um nome de arquivo quando ele já estiver selecionado também permite a alteração do nome.
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu insiro uma folha de estilos em uma página web?</strong>
+        </summary>
+
+        Para inserir uma folha de estilos a uma página web, abra o código da página. Dentro da tag head, acrescente o seguinte código `<link rel="stylesheet" href="style.css">`. Em seguida, troque "style.css" para o nome da sua folha de estilos.
+
+        </details>
+        </div>
+
+        # Inserindo uma Folha de Estilos
+
+        Este é o projeto que você usou antes. No próximo nível, você terá a oportunidade de acrescentar alguns estilos diferentes a ele, mas antes, você vai precisar criar uma folha de estilos, renomeá-la, e vinculá-la à sua página HTML.
+
+        1. Crie uma nova folha de estilos para o seu projeto.
+        2. Renomeie o arquivo da folha de estilos
+        3. Insira a folha de estilos à sua página HTML.
+
+        <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png" style=" max-width:500px">
+      CSD U2 add file_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>O que é uma folha de estilos?</strong>
+        </summary>
+
+        Uma folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados que são vinculados à página HTML.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é CSS?</strong>
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo aparece em uma página web. Utiliza conjuntos de regras para alterar a aparência da página. Cada regra possui um seletor, que define quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e um valor para esta propriedade.
+
+
+        Segue um exemplo de um conjunto de regras, que torna o texto de uma tag `h2` azul e cursiva:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        </pre>
+
+        Neste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores para estas propriedades.
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu crio uma nova folha de estilos?</strong>
+        </summary>
+        Para criar uma nova folha de estilos, clique sobre o botão "Novo CSS" sobre a área de código.
+        </details>
+        <details>
+        <summary>
+        <strong>Que nome eu dou para a minha folha de estilos?</strong>
+        </summary>
+        Você pode dar qualquer nome para sua folha de estilos, mas é melhor escolher um nome relevante, como "estilo.css" ou "sobremeusestilos.css", para que fique claro do que se trata. Seu arquivo deve sempre terminar com a extensão ".css".
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu renomeio um arquivo?</strong>
+        </summary>
+        Para renomear um arquivo, você pode clicar com o botão direito (ou com a tecla Ctrl pressionada) sobre o nome, e escolher a opção "Renomear". Isto vai permitir a você digitar o novo nome. Clicar em um nome de arquivo quando ele já estiver selecionado também permite a alteração do nome.
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu insiro uma folha de estilos em uma página web?</strong>
+        </summary>
+
+        Para inserir uma folha de estilos a uma página web, abra o código da página. Dentro da tag head, acrescente o seguinte código `<link rel="stylesheet" href="style.css">`. Em seguida, troque "style.css" para o nome da sua folha de estilos.
+
+        </details>
+        </div>
+
+        # Inserindo uma Folha de Estilos
+
+        Este é o projeto que você usou antes. No próximo nível, você terá a oportunidade de acrescentar alguns estilos diferentes a ele, mas antes, você vai precisar criar uma folha de estilos, renomeá-la, e vinculá-la à sua página HTML.
+
+        1. Crie uma nova folha de estilos para o seu projeto.
+        2. Renomeie o arquivo da folha de estilos
+        3. Insira a folha de estilos à sua página HTML.
+
+        <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png" style=" max-width:500px">
       CSD U2 add links: |-
         # Link Inicial ausente
 
@@ -3990,6 +4529,249 @@ pt-BR:
         * Olhe para o código com seu parceiro e discuta como a página deve parecer.
         * Trabalhe juntos para terminar a página, prestando atenção à formatação.
         * Comparar com outro par para ver se suas páginas são as mesmas.
+      CSD U2 classes modify: "<div style=\"float: right; height: 250px; width: 40%;
+        overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        o código funciona?</strong>\n\n</summary>\nPara que o código funcione, você
+        precisa criar uma classe winter, e acrescentar elementos a esta classe.\n\nA
+        classe é criada na folha de estilos através do código a seguir.\n\n<pre>.winter
+        { \ncolor: rgb(195,230,255); \n}</pre>\n\nEste código cria uma classe denominada
+        \"winter\", e faz com que tudo o que estiver na classe seja exibido em tom
+        azulado de inverno, que tem os valores RGB de (195,230,255).\n\nO código que
+        adiciona um elemento `h5` à classe winter é `<h5 class=\"winter\">`. A cláusula
+        `class=\"winter\"` contida no interior da tag de abertura adiciona tudo que
+        estiver dentro da tag à classe.\n</details>\n<details>\n<summary>\n<strong>Quais
+        regras podem ser incluídas no conjunto de regras de uma classe?</strong>\n\n</summary>\n\nO
+        conjunto de regras de uma classe pode ter as mesmas regras que qualquer outro
+        tipo de seletor. Se uma regra não se aplicar ao conteúdo de uma classe (por
+        exemplo, usando `font-size` em um elemento sem texto), então o computador
+        irá ignorar esta regra, mas ainda assim continuar a usar as outras regras
+        que funcionam.\n</details>\n<details>\n<summary>\n<strong>Por que o seletor
+        é iniciado por um ponto?</strong>\n\n</summary>\nEm CSS, um ponto colocado
+        à frente do seletor indica que o seletor é o nome de uma classe. Se não houver
+        ponto, significa que o seletor é o nome de um tag HTML.\n</details>\n<details>\n<summary>\n<strong>Por
+        que um desenvolvedor web usaria classes?</strong>\n\n</summary>\nUm desenvolvedor
+        web usa classes quando alguns elementos devem ser exibidos de forma diferente
+        de outros, mesmo quando estiverem em tags iguais. Classes também podem ser
+        usadas para dar o mesmo estilo a elementos que estão em tags diferentes.\n</details>\n<details>\n<summary>\n<strong>Eu
+        obtive valores RGB diferentes, mas meus valores estão corretos também.</strong>\n\n</summary>\n\nConsiderando
+        que RGB gera milhões de cores diferentes, algumas são tão parecidas que as
+        pessoas não conseguem distingui-las. Isto significa que há vários valores
+        RGB que são próximos o suficiente para que funcionem como nossa cor de inverno.\n\n\n</details>\n</div>\n\n#
+        Adicionando Regras\n\nSuas palavras de inverno devem todas ter a mesma cor
+        e tipografia.\n\n* Localize o conjunto de regras CSS na folha de estilos que
+        fornece o estilo às palavras de inverno.\n* Acrescente uma regra que altera
+        a tipografia das palavras de inverno. Pode ser qualquer fonte, mas deverá
+        ser diferente daquelas usadas para as outras três estações.\n* Adicione quaisquer
+        outras regras que você gostaria para suas palavras de inverno."
+      CSD U2 classes modify_2018: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\nPara que o código funcione, você
+        precisa criar uma classe winter, e acrescentar elementos a esta classe.\n\nA
+        classe é criada na folha de estilos através do código a seguir.\n\n<pre>.winter
+        { \ncolor: rgb(195,230,255); \n}</pre>\n\nEste código cria uma classe denominada
+        \"winter\", e faz com que tudo o que estiver na classe seja exibido em tom
+        azulado de inverno, que tem os valores RGB de (195,230,255).\n\nO código que
+        adiciona um elemento `h5` à classe winter é `<h5 class=\"winter\">`. A cláusula
+        `class=\"winter\"` contida no interior da tag de abertura adiciona tudo que
+        estiver dentro da tag à classe.\n</details>\n<details>\n\n<summary>\n<strong>Quais
+        regras podem ser incluídas no conjunto de regras de uma classe?</strong>\n</summary>\n\nO
+        conjunto de regras de uma classe pode ter as mesmas regras que qualquer outro
+        tipo de seletor. Se uma regra não se aplicar ao conteúdo de uma classe (por
+        exemplo, usando `font-size` em um elemento sem texto), então o computador
+        irá ignorar esta regra, mas ainda assim continuar a usar as outras regras
+        que funcionam.\n\n</details>\n<details>\n<summary>\n<strong>Por que o seletor
+        é iniciado por um ponto?</strong>\n</summary>\nEm CSS, um ponto colocado à
+        frente do seletor indica que o seletor é o nome de uma classe. Se não houver
+        ponto, significa que o seletor é o nome de um tag HTML.\n</details>\n<details>\n<summary>\n<strong>Por
+        que um desenvolvedor web usaria classes?</strong>\n</summary>\nUm desenvolvedor
+        web usa classes quando alguns elementos devem ser exibidos de forma diferente
+        de outros, mesmo quando estiverem em tags iguais. Classes também podem ser
+        usadas para dar o mesmo estilo a elementos que estão em tags diferentes.\n</details>\n<details>\n<summary>\n<strong>Eu
+        obtive valores RGB diferentes, mas meus valores estão corretos também.</strong>\n</summary>\n\nConsiderando
+        que RGB gera milhões de cores diferentes, algumas são tão parecidas que as
+        pessoas não conseguem distingui-las. Isto significa que há vários valores
+        RGB que são próximos o suficiente para que funcionem como nossa cor de inverno.\n\n\n</details>\n</div>\n\n#
+        Adicionando Regras\n\nSuas palavras de inverno devem todas ter a mesma cor
+        e tipografia.\n\n* Localize o conjunto de regras CSS na folha de estilos que
+        fornece o estilo às palavras de inverno.\n* Acrescente uma regra que altera
+        a tipografia das palavras de inverno. Pode ser qualquer fonte, mas deverá
+        ser diferente daquelas usadas para as outras três estações.\n* Adicione quaisquer
+        outras regras que você gostaria para suas palavras de inverno."
+      CSD U2 classes modify_2019: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\nPara que o código funcione, você
+        precisa criar uma classe winter, e acrescentar elementos a esta classe.\n\nA
+        classe é criada na folha de estilos através do código a seguir.\n\n<pre>.winter
+        { \ncolor: rgb(195,230,255); \n}</pre>\n\nEste código cria uma classe denominada
+        \"winter\", e faz com que tudo o que estiver na classe seja exibido em tom
+        azulado de inverno, que tem os valores RGB de (195,230,255).\n\nO código que
+        adiciona um elemento `h5` à classe winter é `<h5 class=\"winter\">`. A cláusula
+        `class=\"winter\"` contida no interior da tag de abertura adiciona tudo que
+        estiver dentro da tag à classe.\n</details>\n<details>\n\n<summary>\n<strong>Quais
+        regras podem ser incluídas no conjunto de regras de uma classe?</strong>\n</summary>\n\nO
+        conjunto de regras de uma classe pode ter as mesmas regras que qualquer outro
+        tipo de seletor. Se uma regra não se aplicar ao conteúdo de uma classe (por
+        exemplo, usando `font-size` em um elemento sem texto), então o computador
+        irá ignorar esta regra, mas ainda assim continuar a usar as outras regras
+        que funcionam.\n\n</details>\n<details>\n<summary>\n<strong>Por que o seletor
+        é iniciado por um ponto?</strong>\n</summary>\nEm CSS, um ponto colocado à
+        frente do seletor indica que o seletor é o nome de uma classe. Se não houver
+        ponto, significa que o seletor é o nome de um tag HTML.\n</details>\n<details>\n<summary>\n<strong>Por
+        que um desenvolvedor web usaria classes?</strong>\n</summary>\nUm desenvolvedor
+        web usa classes quando alguns elementos devem ser exibidos de forma diferente
+        de outros, mesmo quando estiverem em tags iguais. Classes também podem ser
+        usadas para dar o mesmo estilo a elementos que estão em tags diferentes.\n</details>\n<details>\n<summary>\n<strong>Eu
+        obtive valores RGB diferentes, mas meus valores estão corretos também.</strong>\n</summary>\n\nConsiderando
+        que RGB gera milhões de cores diferentes, algumas são tão parecidas que as
+        pessoas não conseguem distingui-las. Isto significa que há vários valores
+        RGB que são próximos o suficiente para que funcionem como nossa cor de inverno.\n\n\n</details>\n</div>\n\n#
+        Adicionando Regras\n\nSuas palavras de inverno devem todas ter a mesma cor
+        e tipografia.\n\n* Localize o conjunto de regras CSS na folha de estilos que
+        fornece o estilo às palavras de inverno.\n* Acrescente uma regra que altera
+        a tipografia das palavras de inverno. Pode ser qualquer fonte, mas deverá
+        ser diferente daquelas usadas para as outras três estações.\n* Adicione quaisquer
+        outras regras que você gostaria para suas palavras de inverno."
+      CSD U2 classes sample: "<div style=\"float: right; height: 250px; width: 40%;
+        overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\nPara que o código funcione, você
+        precisa criar uma classe winter, e acrescentar elementos a esta classe.\n\nA
+        classe é criada na folha de estilos através do código a seguir.\n\n<pre>.winter
+        { \ncolor: rgb(195,230,255); \n}</pre>\n\nEste código cria uma classe denominada
+        \"winter\", e faz com que tudo o que estiver na classe seja exibido em tom
+        azulado de inverno, que tem os valores RGB de (195,230,255).\n\nO código que
+        adiciona um elemento `h5` à classe winter é `<h5 class=\"winter\">`. A cláusula
+        `class=\"winter\"` contida no interior da tag de abertura adiciona tudo que
+        estiver dentro da tag à classe.\n</details>\n<details>\n<summary>\n<strong>Por
+        que o seletor é iniciado por um ponto?</strong>\n\n</summary>\nEm CSS, um
+        ponto colocado à frente do seletor indica que o seletor é o nome de uma classe.
+        Se não houver ponto, significa que o seletor é o nome de um tag HTML.\n</details>\n<details>\n<summary>\n<strong>Por
+        que um desenvolvedor web usaria classes?</strong>\n\n</summary>\nUm desenvolvedor
+        web usa classes quando alguns elementos devem ser exibidos de forma diferente
+        de outros, mesmo quando estiverem em tags iguais. Classes também podem ser
+        usadas para dar o mesmo estilo a elementos que estão em tags diferentes.\n</details>\n<details>\n<summary>\n<strong>Eu
+        obtive valores RGB diferentes, mas meus valores estão corretos também.</strong>\n\n</summary>\n\nConsiderando
+        que RGB gera milhões de cores diferentes, algumas são tão parecidas que as
+        pessoas não conseguem distingui-las. Isto significa que há vários valores
+        RGB que são próximos o suficiente para que funcionem como nossa cor de inverno.\n\n\n</details>\n</div>\n\n#
+        Classes\n\nNesta página, o desenvolvedor web usou classes para colorir algumas
+        palavras com nosso azul de inverno.\n\n* Observe as palavras de inverno no
+        código HTML. Por que \"nevado\" é a única palavra de inverno sem a cor azulada?\n*
+        Acrescente ao HTML o código que irá colorir \"nevado\" com a mesma coloração
+        azul.\n* Examine a folha de estilos para encontrar a regra que torna as palavras
+        da classe winter azuis, e veja se os seus valores RGB estão próximos àqueles
+        contidos na folha de estilo.\n* Discuta com seu parceiro como o código funciona."
+      CSD U2 classes sample_2018: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\nPara que o código funcione, você
+        precisa criar uma classe winter, e acrescentar elementos a esta classe.\n\nA
+        classe é criada na folha de estilos através do código a seguir.\n\n<pre>.winter
+        { \ncolor: rgb(195,230,255); \n}</pre>\n\nEste código cria uma classe denominada
+        \"winter\", e faz com que tudo o que estiver na classe seja exibido em tom
+        azulado de inverno, que tem os valores RGB de (195,230,255).\n\nO código que
+        adiciona um elemento `h5` à classe winter é `<h5 class=\"winter\">`. A cláusula
+        `class=\"winter\"` contida no interior da tag de abertura adiciona tudo que
+        estiver dentro da tag à classe.\n</details>\n<details>\n<summary>\n<strong>Por
+        que o seletor é iniciado por um ponto?</strong>\n</summary>\nEm CSS, um ponto
+        colocado à frente do seletor indica que o seletor é o nome de uma classe.
+        Se não houver ponto, significa que o seletor é o nome de um tag HTML.\n</details>\n<details>\n<summary>\n<strong>Por
+        que um desenvolvedor web usaria classes?</strong>\n</summary>\nUm desenvolvedor
+        web usa classes quando alguns elementos devem ser exibidos de forma diferente
+        de outros, mesmo quando estiverem em tags iguais. Classes também podem ser
+        usadas para dar o mesmo estilo a elementos que estão em tags diferentes.\n</details>\n<details>\n<summary>\n<strong>Eu
+        obtive valores RGB diferentes, mas meus valores estão corretos também.</strong>\n</summary>\n\nConsiderando
+        que RGB gera milhões de cores diferentes, algumas são tão parecidas que as
+        pessoas não conseguem distingui-las. Isto significa que há vários valores
+        RGB que são próximos o suficiente para que funcionem como nossa cor de inverno.\n\n\n</details>\n</div>\n\n#
+        Classes\n\nNesta página, o desenvolvedor web usou classes para colorir algumas
+        palavras com nosso azul de inverno.\n\n* Observe as palavras de inverno no
+        código HTML. Por que \"nevado\" é a única palavra de inverno sem a cor azulada?\n*
+        Acrescente ao HTML o código que irá colorir \"nevado\" com a mesma coloração
+        azul.\n* Examine a folha de estilos para encontrar a regra que torna as palavras
+        da classe winter azuis, e veja se os seus valores RGB estão próximos àqueles
+        contidos na folha de estilo.\n* Discuta com seu parceiro como o código funciona."
+      CSD U2 classes sample_2019: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\nPara que o código funcione, você
+        precisa criar uma classe winter, e acrescentar elementos a esta classe.\n\nA
+        classe é criada na folha de estilos através do código a seguir.\n\n<pre>.winter
+        { \ncolor: rgb(195,230,255); \n}</pre>\n\nEste código cria uma classe denominada
+        \"winter\", e faz com que tudo o que estiver na classe seja exibido em tom
+        azulado de inverno, que tem os valores RGB de (195,230,255).\n\nO código que
+        adiciona um elemento `h5` à classe winter é `<h5 class=\"winter\">`. A cláusula
+        `class=\"winter\"` contida no interior da tag de abertura adiciona tudo que
+        estiver dentro da tag à classe.\n</details>\n<details>\n<summary>\n<strong>Por
+        que o seletor é iniciado por um ponto?</strong>\n</summary>\nEm CSS, um ponto
+        colocado à frente do seletor indica que o seletor é o nome de uma classe.
+        Se não houver ponto, significa que o seletor é o nome de um tag HTML.\n</details>\n<details>\n<summary>\n<strong>Por
+        que um desenvolvedor web usaria classes?</strong>\n</summary>\nUm desenvolvedor
+        web usa classes quando alguns elementos devem ser exibidos de forma diferente
+        de outros, mesmo quando estiverem em tags iguais. Classes também podem ser
+        usadas para dar o mesmo estilo a elementos que estão em tags diferentes.\n</details>\n<details>\n<summary>\n<strong>Eu
+        obtive valores RGB diferentes, mas meus valores estão corretos também.</strong>\n</summary>\n\nConsiderando
+        que RGB gera milhões de cores diferentes, algumas são tão parecidas que as
+        pessoas não conseguem distingui-las. Isto significa que há vários valores
+        RGB que são próximos o suficiente para que funcionem como nossa cor de inverno.\n\n\n</details>\n</div>\n\n#
+        Classes\n\nNesta página, o desenvolvedor web usou classes para colorir algumas
+        palavras com nosso azul de inverno.\n\n* Observe as palavras de inverno no
+        código HTML. Por que \"nevado\" é a única palavra de inverno sem a cor azulada?\n*
+        Acrescente ao HTML o código que irá colorir \"nevado\" com a mesma coloração
+        azul.\n* Examine a folha de estilos para encontrar a regra que torna as palavras
+        da classe winter azuis, e veja se os seus valores RGB estão próximos àqueles
+        contidos na folha de estilo.\n* Discuta com seu parceiro como o código funciona."
+      CSD U2 classes spring: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como o código funciona?</strong>
+
+        </summary>
+        Para que o código funcione, você precisa criar uma classe primavera e adicionar elementos à classe.
+
+        A classe primavera já foi criada na folha de estilos mas ainda não tem nenhuma regra.
+
+        <pre>.spring {
+        color: rgb(195,230,255);
+        }</pre>
+
+        Veja as regras na classe `inverno` para ter uma idéia de como criar regras para a classe verão.
+
+        Você também precisará adicionar elementos à classe primavera dentro do seu arquivo HTML.
+
+        O código no arquivo HTML que adiciona um elemento `h5` à classe inverno `<h5 class="inverno">`. Use esse padrão para adicionar elementos à classe primavera da mesma forma.
+        </details>
+        <details>
+        <summary>
+        <strong>Quais regras podem ser adicionadas ao conjunto de regras da classe?</strong>
+
+        </summary>
+
+        Um conjunto de regras de classe possui as mesmas regras do que qualquer outro tipo de seletor. Se uma regra não se aplica ao conteúdo da classe (por exemplo, usar `font-size` em um elemento que não seja texto), o computador vai ignorar esta regra mas ainda utilizará as regras que funcionam.
+        </details>
+        <details>
+        <summary>
+        <strong>Por que um seletor possui um ponto antes do nome?</strong>
+
+        </summary>
+        No CSS, um ponto em frente ao nome do seletor significa que este seletor é o nome de uma classe. Se não houver o ponto, significa que este seletor é o nome de uma tag HTML.
+        </details>
+        <details>
+        <summary>
+        <strong>Por que um desenvolvedor web usa classes?</strong>
+
+        </summary>
+        Um desenvolvedor web usa classes quando alguns elementos precisam ser estilizados de forma diferente, mesmo se eles possuem a mesma tag. Classes também podem ser usadas para aplicar o mesmo estilo a diferentes elementos que possam ter a mesma tag.
+
+        </details>
+        </div>
+
+        # Classe Primavera
+
+        Agora que sua classe inverno está pronta, você pode criar novas classes para outras estações.
+
+        * Encontre um conjunto de regras CSS vazio na folha de estilos que possui as regras e estilos para as as palavras.
+        * Adicione duas regas, uma para dar a cor ao texto primavera, mostrado anteriormente nessa aula e outra para dar ao texto uma nova fonte, tamanho da fonte ou. decoração
+        * Adicione a classe primavera aos elementos de mesmo nome na página HTML.
       CSD U2 create page: |
         Crie e Nomeie sua Nova Página
 
@@ -4358,6 +5140,8 @@ pt-BR:
 
         * Crie um sprite
         * Adicione a animação.
+      CSD U3 Test debug FR: Pense em um bug difícil que você precisava corrigir em
+        seu programa. Qual foi o seu processo para encontrar e corrigir o bug?
       CSD U5 Waze Data Video: Assista este vídeo para aprender como esse problema
         é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo
         coletados e de onde eles estão vindo.

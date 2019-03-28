@@ -254,7 +254,7 @@ zh-TW:
         把起始程式碼嵌進另一個迴圈中來畫出一個太陽。\r
         \r
         要能夠製作出這樣酷炫的圖案，你必須在轉向之前向前跳一段距離。
-      4-5 Nested Loops 5: 重複已給的代碼來畫出一個風車。
+      4-5 Nested Loops 5: 重複執行已有的程式來畫出一個風車。
       4-5 Nested Loops 6: 你可以藉由重複畫三角形的程式碼來畫出一個六邊形嗎？
       4-5 Nested Loops 7: "循環這個圖樣 10 次。\\r\n\\r\n你知道在每個圖樣畫完後要轉多少角度嗎？"
       4-5 Nested Loops 8: "重複這個圖案6次。\\r\n\\r\n你知道每次重複畫圖案時需要轉多少度？ "
@@ -266,8 +266,10 @@ zh-TW:
       4-5 While Loops 4: "哇，瞧瞧這兒！\\r\n\\r\n我不知道要用多少鏟土才可以把它填平。\\r\n你可以寫一個程式，讓它不斷的用`填充`積木填土，直到地面變平坦嗎？  "
       Alien Defender: "**專案點子**：在 Play Lab 裡設計一個獨一無二的遊戲！"
       Alien Defender_2018: "**專案點子**：在 Play Lab 裡設計一個獨一無二的遊戲！"
+      App Lab test: <a href="https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38" target="_blank">創新專案</a>
+      AppLab Intro 4 - Video onEvent: "# onEvent 的用法"
       Artist Autorun Test: 現在，把這個函式放進迴圈來畫出這 3 個正方形。
-      Artist Inspiration: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**自由發揮靈感：**你已經學會了製作這樣的圖案所需的知識了！\\r\n\\r\n如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n\\r\n注意：我們用了`設定透明度`積木來製作 petals（花瓣）向外褪色的效果。"
+      Artist Inspiration: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\n\n**自由發揮靈感：**你已經學會了製作這樣的圖案所需的知識了！\n\n如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。\n\n注意：我們用了`設定透明度`積木來製作 petals（花瓣）向外褪色的效果。"
       Bergeron Robot Maze1: "你可以幫我抓住那頑皮的豬嗎？\\r\n\\r\n把幾個`移動-向前`積木放到`當運行時`積木的下面，然後點擊「運行」。 "
       CSD - Predict - Array Length List Printing: "＃迴圈\n—在迴圈中使用列表\\r\n\\r\n用迴圈最常見的方法是和列表一起使用。在這個例子當中情況依照列表。\\r\n\\r\n什麼會顯示在控制台中呢？"
       CSD - Predict List Accessing: |
@@ -280,6 +282,7 @@ zh-TW:
         ＃檢入\r
         \r
         在這個框框中下面解釋這迴圈的三種不同的部分。為什麼每個都很重要？\r
+      CSD U1 - PixFilter Full: "# 操作說明移到這裡"
       CSD U3 - Simple Counter Predict: "# \n計數器模型（Counter Pattern）\\r\n\\r\n這個模型（Pattern）在程式設計中相當的重要。\\r\n\\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\\r\n    \\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\r\n\\r\n# 做做這個\\r\n\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\r\n\\r\n*\n**解讀程式** 然後預測輸出會是怎樣。\\r\n*\n**運行程式** 來檢查是否和你的預測一致。\\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\\r\n\\r\n"
       CSD U3 - Simple Counter Predict_2018: "# \n計數器模型（Counter Pattern）\\r\n\\r\n這個模型（Pattern）在程式設計中相當的重要。\\r\n\\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\\r\n    \\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\r\n\\r\n# 做做這個\\r\n\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\r\n\\r\n*\n**解讀程式** 然後預測輸出會是怎樣。\\r\n*\n**運行程式** 來檢查是否和你的預測一致。\\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\\r\n\\r\n"
       CSD U3 - Simple Counter Predict_2019: "# \n計數器模型（Counter Pattern）\\r\n\\r\n這個模型（Pattern）在程式設計中相當的重要。\\r\n\\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png)\\r\n    \\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\r\n\\r\n# 做做這個\\r\n\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\r\n\\r\n*\n**解讀程式** 然後預測輸出會是怎樣。\\r\n*\n**運行程式** 來檢查是否和你的預測一致。\\r\n* **跟隔壁的人討論看看**.\n看你能不能解釋你觀察到了什麼？\\r\n\\r\n"
@@ -531,11 +534,9 @@ zh-TW:
       Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\n挑戰時間到了！  \\r\n\\r\n這裡有個圖案，只用了你見到的積木做出來的。想一想，要怎麼重建它？你可以邊做邊試，錯了也沒關係。我們不要求你一次就做對。\\r\n\\r\n這些重複的圖形和上個關卡的圖案幾乎相同，除了第一個迴圈裡用的長度比較小以外。 "
       Course 4 Artist 12: |-
         <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png"
-        width="250px"/>\r
+        width="250px"/>
 
-        自由發揮靈感：你已經學會了製作這樣的圖案所需的知識了！如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \r
-        \r
-        <br/>\r
+        自由發揮靈感：你已經學會了製作這樣的圖案所需的知識了！如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。
 
       Course 4 Artist 13: 還在玩啊？給你一張空白畫布，你可以在上面設計任何東西，隨你高興！
       Course 4 Artist 2: "你可以用迴圈來繪製最外圍的灰色正方形嗎？\\r\n（每邊邊長為 300 像素）"
@@ -678,18 +679,16 @@ zh-TW:
       Course 4 Play Lab Params 7: "我們來點有趣的！仔細看看提供的程式碼，你能不能想像每個積木在做些什麼。 \\r\n\\r\n當你完成後，使用方向鍵來控制小狗，並收集到所有的旗子。 \\r\n\\r\n**注意：**\n你不需要對程式進行任何修改"
       Course 4 Play Lab Params 8: 使用`當角色碰到`積木，在小狗碰到其他角色時，把狗送回左上方的位置。
       Course 4 Play Lab Params 9: |-
-        這是一個早先的遊戲，但是大部分程式都隱藏了。這裡有個新函式叫做 `score_points`（獲得分數）。\r
-        <br/>\r
-        <hr>\r
-        <br/>\r
-        <h4>\r
-        編輯這個函式，使得 `points`（分數）參數能被添加到 `player_score` （玩家分數）變數上。 \r
-        <br/>\r
-        變數 `player_score` 應該會在每次小狗的派碰到小貓時增加；在每次小貓的三明治碰到小狗時減少。 \r
-        </h4>\r
-        <br/>\r
-        <hr>\r
-        *注意：當你完成後，點擊「運行」玩玩看，當小狗得到 6 分時，就可以進入下一關。
+        這是一個早先的遊戲，但是大部分程式都隱藏了。這裡有個新函式叫做 `score_points`（獲得分數）。
+
+        ---
+
+        #### 編輯這個函式，使得 `points`（分數）參數能被添加到 `player_score` （玩家分數）變數上。
+        #### 變數 `player_score` 應該會在每次小狗的派碰到小貓時增加；在每次小貓的三明治碰到小狗時減少。
+
+        ---
+
+        *注意：當你完成後，點擊「運行」玩玩看，當小狗得到 6 分時，就可以進入下一關。*
       Course 4 Play Lab Vars 1: |-
         這一次你不需要寫任何程式，只要點擊「運行」來玩這個遊戲！\r
         \r
@@ -741,8 +740,8 @@ zh-TW:
       Course 4 SCF 3 Fail 2: "**函式超級挑戰 1：**\n\\r\n\\r\n"
       Course 4 SCF 3: "**函式超級挑戰：**使用你在上個階段所學，畫出像這樣的圖像。\\r\n\\r\n*注意：如果你帶入參數的話，這個程式會變得更精簡。*\\r\n\\r\n<br/>\\r\n<img\nsrc=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/> \\r\n\\r\n\\r  "
       Course 4 SCFL 1: "**計數迴圈超級挑戰：**完成這個關卡，用的積木愈少愈好。"
-      Course 4 SCFL 1a: "**計數迴圈超級挑戰：**你能讓鼠奎特吃到橡樹果嗎？用的積木愈少愈好。\\r\n\\r\n"
-      Course 4 SCFL 1b: "**計數迴圈超級挑戰：**你能讓鼠奎特吃到橡樹果嗎？用的積木愈少愈好。\\r\n"
+      Course 4 SCFL 1a: "**計數迴圈超級挑戰：**你能讓鼠奎特吃到橡樹果嗎？用的積木愈少愈好。"
+      Course 4 SCFL 1b: "**計數迴圈超級挑戰：**你能讓鼠奎特吃到橡樹果嗎？用的積木愈少愈好。"
       Course 4 SCFL 2: "**計數迴圈超級挑戰：**完成這個關卡，用的積木愈少愈好。\\r\n<br/>\\r\n"
       Course 4 SCFL 3: "**計數迴圈超級挑戰：**想一想，要用什麼方法重建這個圖案？\\r\n\\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>\\r\n"
       Course 4 SCFL 4: "**計數迴圈超級挑戰：**想一想，要用什麼方法重建這個圖案？\\r\n\\r\n<img src=\"https://images.code.org/407f502735beec686187451bdf67aada-image-1446002848700.59.34.png\"\nwidth=\"350px\"/>"
@@ -761,23 +760,17 @@ zh-TW:
         \r
         **變數超級挑戰：**你現在學會了所有東西，能做出這樣圖案了！這個關卡相當困難，在想出解決方法前，你能堅持得了嗎？
       Course 4 SCV 3: |-
-        **變數超級挑戰：** 你現在已經學會完成所有關卡該知道的事了！這個遊戲相當的困難。在找到解法前，你能堅持的住嗎？\r
-        \r
-        <hr/>\r
-        \r
-        現在玩個捉人遊戲！捉到小貓可以獲得 2 分，捉到企鵝可以獲得 3 分。得到 10 分就勝利！\r
-        不過要小心的地方是，當小貓和企鵝互抓時，牠們會把分數偷回去。\r
-        \r
-        <strong>\r
-        要讓遊戲能如說明一樣運行，要添加些必須的積木。\r
-        - 要怎樣用方向鍵來控制小狗？  \r
-        - 當小狗碰到企鵝或小貓時，你要如何才能加分？  \r
-        - 當小貓和企鵝碰在一起時，你要怎麼才能減分？\r
-        </strong>\r
-        \r
-        <hr/>\r
-        \r
+        **變數超級挑戰：** 你現在已經學會完成所有關卡該知道的事了！這個遊戲相當的困難。在找到解法前，你能堅持的住嗎？
 
+        ---
+
+        現在玩個捉人遊戲！捉到小貓可以獲得 2 分，捉到企鵝可以獲得 3 分。得到 10 分就勝利！
+        不過要小心的地方是，當小貓和企鵝互抓時，牠們會把分數偷回去。
+
+        **要讓遊戲能如說明一樣運行，要添加些必須的積木。**
+        - **要怎樣用方向鍵來控制小狗？**
+        - **當小狗碰到企鵝或小貓時，你要如何才能加分？**
+        - **當小貓和企鵝碰在一起時，你要怎麼才能減分？**
       Course 4 SCV 4: "**變數超級挑戰：**完成這個關卡，用的積木愈少愈好。\\r\n\\r\n"
       Course 4 SCV 5: "**變數超級挑戰：**完成這個關卡，用的積木愈少愈好。\\r\n\\r\n"
       Course 4 SCV 6: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\r\n\\r\n**變數超級挑戰：**你現在學會了所有東西，能做出這樣圖案了！這個關卡相當困難，在想出解決方法前，你能堅持得了嗎？  "
@@ -800,7 +793,7 @@ zh-TW:
       CourseD_Dance_Party_04: |-
         *這支舞需要一些閃光！*
 
-        在工具箱中尋找新的程式積木，在舞者的背後新增背景效果。觀看隨著時間和音樂來變化的效果！
+        拿出工具箱的新積木，為舞者添加背景，並加上特效，讓它隨著時間和音樂變化！
       CourseD_Dance_Party_05: |-
         使用另一個新的程式積木，讓舞者**每 2 個小節**改變動作！
 
@@ -808,28 +801,30 @@ zh-TW:
       CourseD_Dance_Party_06: |-
         *我們需要更多舞者！*
 
-        建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
+        建立一個名為 `backup_dancer1` 的舞者，為皮斯貓伴舞。
       CourseD_Dance_Party_08: |-
-        每個舞者都有一套 _屬性_ 來控制外觀。
+        每個舞者都會有自己的 _屬性集_ ，用來控制它的外觀。
 
-        您可以縮小 _尺寸_，讓這看起來像一個舞者在背景中。您是否能讓兩個備用舞者的大小相同？
+        你可以用縮小 _尺寸_ 讓這舞者看起來像站在舞台上比較後面的地方。你能讓兩個伴舞舞者的尺寸保持一致嗎？
       CourseD_Dance_Party_09: |-
-        舞者具有可以新增一層顏色的「色調」屬性。試著變更其中一個舞者的色調。
-        * 色調將混合您選擇的顏色與舞者的顏色。
+        舞者有個「色調」屬性，可以在身上添加一層顏色。試著改變其中一個舞者的色調。
+        * 色調會在到舞者原來色彩上疊加指定的顏色。
       CourseD_Dance_Party_10: |-
-        現在我們已經知道如何改變舞者的屬性。我們也可以使用此程式積木，讓相同的屬性自動回應音樂：
+        現在我們已經知道如何改變舞者的屬性。我們也可以讓這些屬性自動回應音樂，使用的積木為：
         <xml>
         <block type="Dancelab_startMapping">
-        <title name="SPRITE">right_pineapple</title>
+        <title name="SPRITE">right_unicorn</title>
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
 
-        此程式使用音樂的「低音」音量（低音）來控制一個舞者的高度。您是否能讓另一個舞者也回應音樂？
-      CourseD_Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。\n\n您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！"
-      CourseD_Dance_Party_11_5: "查看此程式積木：\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在您可以一次建立一群舞者了！\n\n嘗試用一些「全部鴨子」積木來編寫程式，這可以讓所有的鴨子一起跳舞。"
+        此程式使用音樂的「低音」音量（比較低的聲音）來控制一個舞者的大小。你是否能讓其他舞者也隨著音樂有變化？
+      CourseD_Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 這個積木可讓你在按下按鍵時執行其中的程式。\n\n你可以變更舞蹈的動作、舞者的屬性，或者做一個快速動作。發揮創意，善用這些新的積木！"
+      CourseD_Dance_Party_11_5: "有看到這個積木嗎？\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在你可以一次建立一群舞者了！\n\n嘗試用一些「全部鴨子」積木來編寫程式，這可以讓所有的鴨子一起跳舞。"
       CourseD_Dance_Party_11b: |-
-        是時候跳舞了！按下向左鍵時，貓會輕拍。按下向右鍵時，可讓機器人「掉落」。
+        跳舞時間到啦！按下向左鍵時，貓會做 dab 的動作。現在試著讓機器人在按下向右鍵時，做出 drop 的動作，還有按下向上鍵時，做出 clap 的動作。
+
+        **連續按下按鍵讓機器人做出 drop-clap-drop-clap 的動作，看看你能做多快！**
       CourseD_Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       CourseE_HOC 2018 Level_10: "有一隻**烏賊** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) 躲在這片海洋遺址中，您找得到牠嗎？\n\n"
       CourseE_HOC 2018 Level_11: 使用**海磷石** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) 在黑色混凝土周圍建造一面牆。這將啟用**導管** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) 並完成您的挑戰！
@@ -839,9 +834,9 @@ zh-TW:
       CourseF_PlayLab_vars10: "自由遊戲時間！這裡我們目前為止玩過的所有變數，還有一些是你可能想要的。\\r\n\\r\n注意現在在工具箱裡有好多好多可以被組合的積木！在這裡，我們已經將它們分類放好。花點時間去嘗試每一個東西，當你一切就緖，就可以用重複、變數、事件類的各種指令製作一個遊戲或是故事。\\r\n\\r\n*提示：可以捲動頁面以查看工作區裡的所有指令。*"
       CourseF_PlayLab_vars2: 上一關的比賽一點都不公平！修改 `dog_speed`（小狗的速度）變數，確保你可以收集到比貓還要多的旗子，誰先拿到 10 個旗子就勝利！
       CourseF_PlayLab_vars3: "這裡有個新型態的遊戲！\n\\r\n\\r\n這一關你不需要改變任何東西。\\r\n\\r\n**指引：**\n使用向左鍵和向右鍵移動，向上鍵是跳，看看你能不能收集到所有旗子。"
-      CourseF_PlayLab_vars6: "<h5><b>\\r在我們的遊戲中，要怎樣才能獲得分數呢？\\r\n</b></h5>\\r\n<br/>\\r\n\\r\n1. 在每次小狗用派擊中小貓時，加 1 到你的 `points` 變數上。<br/><br/>\\r\n2. 使用`當角色2碰到任何東西`事件來觸發分數更新。你可以利用 `points = points +1` 的方式增加變數值。<br/><br/>\n\\r\n3. 分數到達 10 分（每次加 1 分）就過關。\\r\n\\r\n<br/><br/>\\r\n<h4>\\r\n**注意：**\n使用向右鍵扔出派！\\r\n</h4>"
-      CourseF_PlayLab_vars7: "<h5><b>\\r在我們的遊戲中，要怎樣才能獲得分數呢？\\r\n</b></h5>\\r\n<br/>\\r\n\\r\n1. 在每次小狗用派擊中小貓時，加 1 到你的 `points` 變數上。<br/><br/>\\r\n2. 使用`當角色2碰到任何東西`事件來觸發分數更新。你可以利用 `points = points +1` 的方式增加變數值。<br/><br/>\n\\r\n3. 分數到達 10 分（每次加 1 分）就過關。\\r\n\\r\n<br/><br/>\\r\n<h4>\\r\n**注意：**\n使用向右鍵扔出派！\\r\n</h4>"
-      CourseF_PlayLab_vars8: "<h5><b>\\r在我們的遊戲中，要怎樣才能獲得分數呢？\\r\n</b></h5>\\r\n<br/>\\r\n\\r\n1. 在每次小狗用派擊中小貓時，加 1 到你的 `points` 變數上。<br/><br/>\\r\n2. 使用`當角色2碰到任何東西`事件來觸發分數更新。你可以利用 `points = points +1` 的方式增加變數值。<br/><br/>\n\\r\n3. 分數到達 10 分（每次加 1 分）就過關。\\r\n\\r\n<br/><br/>\\r\n<h4>\\r\n**注意：**\n使用向右鍵扔出派！\\r\n</h4>"
+      CourseF_PlayLab_vars6: "<h5><b>\n在我們的遊戲中，要怎樣才能獲得分數呢？\n</b></h5>\n<br/>\n\n1. 在每次小狗用派擊中小貓時，加 1 到你的 `points` 變數上。<br/><br/>\n2. 使用`當角色2碰到任何東西`事件來觸發分數更新。你可以利用 `points = points +1` 的方式增加變數值。<br/><br/>\n\n3. 分數到達 10 分（每次加 1 分）就過關。\n\n<br/><br/>\n<h4>\n**注意：**使用向右鍵扔出派！\n</h4>"
+      CourseF_PlayLab_vars7: "<h5><b>\n在我們的遊戲中，要怎樣才能獲得分數呢？\n</b></h5>\n<br/>\n\n1. 在每次小狗用派擊中小貓時，加 1 到你的 `points` 變數上。<br/><br/>\n2. 使用`當角色2碰到任何東西`事件來觸發分數更新。你可以利用 `points = points +1` 的方式增加變數值。<br/><br/>\n\n3. 分數到達 10 分（每次加 1 分）就過關。\n\n<br/><br/>\n<h4>\n**注意：**使用向右鍵扔出派！\n</h4>"
+      CourseF_PlayLab_vars8: "<h5><b>\n在我們的遊戲中，要怎樣才能獲得分數呢？\n</b></h5>\n<br/>\n\n1. 在每次小狗用派擊中小貓時，加 1 到你的 `points` 變數上。<br/><br/>\n2. 使用`當角色2碰到任何東西`事件來觸發分數更新。你可以利用 `points = points +1` 的方式增加變數值。<br/><br/>\n\n3. 分數到達 10 分（每次加 1 分）就過關。\n\n<br/><br/>\n<h4>\n**注意：**使用向右鍵扔出派！\n</h4>"
       CourseF_PlayLab_vars9: "很好，現在我們來確定這個遊戲不至於太簡單！\\r\n\\r\n每當小狗（角色1）被小貓（角色2）的三明治丟到時就扣 1 分。\\r\n\\r\n初始分數 10 分似乎不大困難，我們把分數從 10 改成 0 後再試試吧。"
       Dance_Party_01: |-
         *來舉行一場舞會！*
@@ -866,7 +861,7 @@ zh-TW:
       Dance_Party_04: |-
         *這支舞需要一些閃光！*
 
-        在工具箱中尋找新的程式積木，在舞者的背後新增背景效果。觀看隨著時間和音樂來變化的效果！
+        拿出工具箱的新積木，為舞者添加背景，並加上特效，讓它隨著時間和音樂變化！
       Dance_Party_05: |-
         使用另一個新的程式積木，讓舞者**每 2 個小節**改變動作！
 
@@ -874,30 +869,36 @@ zh-TW:
       Dance_Party_06: |-
         *我們需要更多舞者！*
 
-        建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
+        建立一個名為 `backup_dancer1` 的舞者，為皮斯貓伴舞。
       Dance_Party_08: |-
-        每個舞者都有一套 _屬性_ 來控制外觀。
+        每個舞者都會有自己的 _屬性集_ ，用來控制它的外觀。
 
-        您可以縮小 _尺寸_，讓這看起來像一個舞者在背景中。您是否能讓兩個備用舞者的大小相同？
+        你可以用縮小 _尺寸_ 讓這舞者看起來像站在舞台上比較後面的地方。你能讓兩個伴舞舞者的尺寸保持一致嗎？
       Dance_Party_09: |-
-        舞者具有可以新增一層顏色的「色調」屬性。試著變更其中一個舞者的色調。
-        * 色調將混合您選擇的顏色與舞者的顏色。
+        舞者有個「色調」屬性，可以在身上添加一層顏色。試著改變其中一個舞者的色調。
+        * 色調會在到舞者原來色彩上疊加指定的顏色。
       Dance_Party_10: |-
-        現在我們已經知道如何改變舞者的屬性。我們也可以使用此程式積木，讓相同的屬性自動回應音樂：
+        現在我們已經知道如何改變舞者的屬性。我們也可以讓這些屬性自動回應音樂，使用的積木為：
         <xml>
         <block type="Dancelab_startMapping">
-        <title name="SPRITE">right_pineapple</title>
+        <title name="SPRITE">right_unicorn</title>
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
 
-        此程式使用音樂的「低音」音量（低音）來控制一個舞者的高度。您是否能讓另一個舞者也回應音樂？
-      Dance_Party_11.5_test: "查看此程式積木：\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在您可以一次建立一群舞者了！\n\n嘗試用一些「全部鴨子」積木來編寫程式，這可以讓所有的鴨子一起跳舞。"
-      Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。\n\n您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！"
-      Dance_Party_11_5: "查看此程式積木：\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在您可以一次建立一群舞者了！\n\n嘗試用一些「全部鴨子」積木來編寫程式，這可以讓所有的鴨子一起跳舞。"
+        此程式使用音樂的「低音」音量（比較低的聲音）來控制一個舞者的大小。你是否能讓其他舞者也隨著音樂有變化？
+      Dance_Party_11.5_test: "有看到這個積木嗎？\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在你可以一次建立一群舞者了！\n\n嘗試用一些「全部鴨子」積木來編寫程式，這可以讓所有的鴨子一起跳舞。"
+      Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 這個積木可讓你在按下按鍵時執行其中的程式。\n\n你可以變更舞蹈的動作、舞者的屬性，或者做一個快速動作。發揮創意，善用這些新的積木！"
+      Dance_Party_11_5: "有看到這個積木嗎？\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\n現在你可以一次建立一群舞者了！\n\n嘗試用一些「全部鴨子」積木來編寫程式，這可以讓所有的鴨子一起跳舞。"
       Dance_Party_11b: |-
-        是時候跳舞了！按下向左鍵時，貓會輕拍。按下向右鍵時，可讓機器人「掉落」。
+        跳舞時間到啦！按下向左鍵時，貓會做 dab 的動作。現在試著讓機器人在按下向右鍵時，做出 drop 的動作，還有按下向上鍵時，做出 clap 的動作。
+
+        **連續按下按鍵讓機器人做出 drop-clap-drop-clap 的動作，看看你能做多快！**
       Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
+      Dance_Party_6: |-
+        *我們需要更多的舞者！*
+
+        用 <xml><block type="Dancelab_makeNewDanceSprite"><title name="COSTUME">"鴨子"</title><title name="NAME">backup&#95;dancer1</title><title name="LOCATION">{x: 300, y: 200}</title></block></xml> 來產生一個叫做 `backup_dancer1` 的新舞者，和皮斯貓一同跳舞。
       Dance_Party_extras_battle: |-
         #舞蹈團隊
 
@@ -943,6 +944,9 @@ zh-TW:
       ECS Unit 3 Challenge Selection: "# 挑戰概覽\n> 你的挑戰有哪些？ \\r\n\\r\n## Enter the lesson you selected for your\nchallenge in the text box below.\\r\n\\r\nHTML Beginners:\\r\n\\r\n- Day 3-4,5:\nBasic HTML - Paragraph, Header, Strong, and EM Tags\\r\n- Day 6--7: HTML -\nImages\\r\n- Day 14: HTML - Links\\r\n\\r\nCSS Beginners:\\r\n\\r\n- Day 8-10:\nBasic CSS \\r\n\\r\nMore Experienced with HTML and CSS:\\r\n\\r\n- Day 11-13:\nHTML and CSS \\r\n- Day 17-19: HTML and CSS: Create Your Own Webpage\\r\n- Day\n22-25: Unit Final Project\\r\n- Day 18-21 Final Unit Project\\r\n\\r\n\\r\nNow\nthat you've selected a lesson, head to the forum and **share which lesson\nyou plan to complete** for your challenge.\\r\n\\r\n#### <a href=\"http://forum.code.org/c/ecs/ecs-unit3\"\ntarget=_blank>Forums <i class=\"fa fa-external-link\" /></a>"
       ECS Unit 4 Challenge Selection: "# 挑戰概覽\n> 你的挑戰有哪些？ \\r\n\\r\n## Enter the lesson you selected for your\nchallenge in the text box below.\\r\n\\r\n是編程新手嗎？\\r\n\\r\n- Day 2-3:\nScratch - Name Project\\r\n- Day 4: Scratch - Knock Knock Joke\\r\n- Day 5-6:\nScratch - Moving Sprites \\r\n\\r\nNew to Scratch:\\r\n\\r\n- Day 7-8: Scratch\n- Event Driven Programming\\r\n- Day 9: Scratch - Broadcast Roleplay\\r\n- Day\n10-13: Scratch - Broadcasting\\r\n\\r\nSome Experience with Scratch and Programming:\\r\n\\r\n-\nDay 18, 19: Rock Paper Scissors and Timer\\r\n- Day 20-23: Scratch - Timing\nGame\\r\n- Day 25-30: Unit Final Project\\r\n\\r\n\\r\n\\r\nNow that you've selected\na lesson, head to the forum and **share which lesson you plan to complete**\nfor your challenge.\\r\n\\r\n#### <a href=\"http://forum.code.org/c/ecs/ecs-unit4\"\ntarget=_blank>Forums <i class=\"fa fa-external-link\" /></a>"
       ECS Unit 5 Challenge Selection: "# 你的挑戰有哪些？\n\\r\n\\r\n## Enter the lesson you selected for your challenge in the text box\nbelow.\\r\n\\r\n- Day 1 - 3: Room data project, set up final project\\r\n- Day\n4 - 5: Developing research questions\\r\n- Day 6 - 7: Building group norms\\r\n-\nDay 8: Check in Day\\r\n- Day 9 - 11: Maps, identifying variables, subsetting\ndata, sorting data, frequency of types.\\r\n- Day 12: Bubble Charts\\r\n- Day\n13: Review: Bubble Charts\\r\n- Day 14 - 15: Bar Plots\\r\n- Day 16: Mosaic\nPlots\\r\n- Day 17: Review: Bar and Mosaic Plots\\r\n- Day 18 - 20: Mean, Median,\nMinimum, Maximum, Histograms, Box Plots\\r\n- Day 21: Review: Mean, Median,\nMinimum, Maximum\\r\n- Days 22 - 24: Filtering Text data (remove punctuation,\nremove case, remove stop words, stemming), Analyzing word counts.\\r\n- Day\n25: Review: Text Data\\r\n- Day 26 - 27: Incorporate  data techniques into\nfinal project\\r\n- Day 28 - 29: Build project presentations\\r\n- Day 30: Present\nfinal project\\r\n\\r\nNow that you've selected a lesson, head to the forum\nand **share which lesson you plan to complete** for your challenge.\\r\n\\r\n####\n<a href=\"http://forum.code.org/c/ecs/ecs-unit5\" target=_blank>Forums <i\nclass=\"fa fa-external-link\" /></a>"
+      Fish Tank Template: 專案範本
+      Fish Tank Template_2019: 專案範本
+      Fish Tank Template_simple: 專案範本
       Food Fight!: |-
         我們為你準備了最後一個函式。\r
         <hr/>\r
@@ -992,19 +996,28 @@ zh-TW:
         使用另一個新的程式積木，讓舞者**每 2 個小節**改變動作！
 
         * 選擇「下一個」、「下一個」或「隨機」告訴舞者每次執行程式時執行不同的動作。
+      HOC Dance 5: |-
+        我們需要更多的舞者！
+
+        用 <xml>
+        <block type="Dancelab_makeNewDanceSprite">
+        <title name="COSTUME">"鴨子"</title>
+        <title name="NAME">backup_dancer1</title>
+        <title name="LOCATION">{x: 300, y: 200}</title>
+        </block></xml> 來產生一個叫做 `backup_dancer1` 的新舞者，和皮斯貓一同跳舞。
       HOC Dance 5_draft: |-
         *我們需要更多舞者！*
 
-        建立一個名為「backup_dancer1」的備用舞者與貓跳舞。
-      HOC Dance 9_draft: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 程式積木可讓您在按下向上箭頭時執行程式碼。\n\n您可以變更舞蹈動作、變更舞者的屬性或者只進行一次快速動作。發揮創意，尋找新的程式積木！"
+        建立一個名為 `backup_dancer1` 的舞者，為皮斯貓伴舞。
+      HOC Dance 9_draft: "<xml><block type=\"Dancelab_whenKey\"></block></xml> 這個積木可讓你在按下按鍵時執行其中的程式。\n\n你可以變更舞蹈的動作、舞者的屬性，或者做一個快速動作。發揮創意，善用這些新的積木！"
       HOC Dance Freeplay: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       HOC Dance Freeplay_draft: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       HOC Dance Predraw: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       Harvesting: "喔哦，我弄丟了地圖，種了什麼也搞不清楚！每個芽苗可以種出**玉米** ![picture of corn](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)\n、**豌豆** ![picture of beans](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)\n、**南瓜** ![picture of pumpkin](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)\n。你可以寫些程式來收成這些作物嗎？不管它們是什麼。"
-      Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**自由發揮靈感：**你已經學會了製作這樣的圖案所需的知識了！\\r\n\\r\n如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n\\r\n注意：我們用了`設定透明度`積木來製作 petals（花瓣）向外褪色的效果。"
-      InspirationalArtwork: "你已經學會了所有需要創建這個模式的知識了！\\r\n\\r\n如果這個圖形引起了你的聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n"
-      InspirationalArtwork_2018: "你已經學會了所有需要創建這個模式的知識了！\\r\n\\r\n如果這個圖形引起了你的聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n"
-      InspirationalArtwork_2019: "你已經學會了所有需要創建這個模式的知識了！\\r\n\\r\n如果這個圖形引起了你的聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n"
+      Inspirational Artwork: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\n\n**自由發揮靈感：**你已經學會了製作這樣的圖案所需的知識了！\n\n如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。\n\n注意：我們用了`設定透明度`積木來製作 petals（花瓣）向外褪色的效果。"
+      InspirationalArtwork: "你已經學會了所有需要創建這個模式的知識了！\n\n如果這個圖形引起了你的聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。"
+      InspirationalArtwork_2018: "你已經學會了所有需要創建這個模式的知識了！\n\n如果這個圖形引起了你的聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。"
+      InspirationalArtwork_2019: "你已經學會了所有需要創建這個模式的知識了！\n\n如果這個圖形引起了你的聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。"
       K-1 Bee Loops 2: 使用一個「重複」迴圈來移動、接著採集花蜜、然後釀造蜂蜜！
       K-1 Bee Loops 3: 使用 3 個「重複」迴圈來採集花蜜和釀造蜂蜜！
       K-1 Bee Loops 4: 使用「重複」積木讓我收集到花蜜和蜂蜜，還有移動！
@@ -1032,18 +1045,18 @@ zh-TW:
       MC_HOC_2017_01_RETRY: |-
         房門反鎖住了，代理 Agent 快來幫忙！
 
-        將「移動-向前」積木黏貼到工作區域的「當運行時」積木下，讓代理 Agent 走到壓力板 [PressurePlate_Up] 以打開房門。接著再用方向箭走出房子，然後收集 **箱子** [chest]。
+        將「移動-向前」積木黏貼到工作區域的「當運行時」積木下，讓代理 Agent 走到壓力板 [PressurePlate_Up] 以打開房門。接著再用方向鍵走出房子，然後收集 **箱子** [chest]。
       MC_HOC_2017_01_RETRY_2019: |-
         房門反鎖住了，代理 Agent 快來幫忙！
 
-        將「移動-向前」積木黏貼到工作區域的「當運行時」積木下，讓代理 Agent 走到壓力板 [PressurePlate_Up] 以打開房門。接著再用方向箭走出房子，然後收集 **箱子** [chest]。
+        將「移動-向前」積木黏貼到工作區域的「當運行時」積木下，讓代理 Agent 走到壓力板 [PressurePlate_Up] 以打開房門。接著再用方向鍵走出房子，然後收集 **箱子** [chest]。
       MC_HOC_2017_02: 玩家必須進入秘密樹叢。撰寫代碼，幫助 Agent 打開大門，讓他可以前往壓板。
       MC_HOC_2017_02_Cole: "{currentPlayerName} 即將踏上冒險旅程！請先打開右邊上鎖的門，取得裡頭的**地圖** [map_empty]。\\r\n \\r\n在工作區域中加入程式讓代理 Agent 移至壓力板 [PressurePlate_Up]，這樣 {currentPlayerName} 才可以順利進入。"
       MC_HOC_2017_02_Cole_2019: "{currentPlayerName} 即將踏上冒險旅程！請先打開右邊上鎖的門，取得裡頭的**地圖** [map_empty]。\\r\n \\r\n在工作區域中加入程式讓代理 Agent 移至壓力板 [PressurePlate_Up]，這樣 {currentPlayerName} 才可以順利進入。"
       MC_HOC_2017_02_Kiki: "玩家已出發踏上冒險旅程，但首先他們必須先在上鎖的門後找到藏起來的火把。 \n\n\n設定 Agent 的程式以往前移動兩次，即可沿著白色路徑前進並抵達壓板，這樣他就可以為玩家開門。"
       MC_HOC_2017_02_Will: "若要完成此關卡，玩家必須進入秘密樹林，然後在上鎖的門後找到橙色方塊。 \n\n\n工作空間中的代碼可讓 Agent 往前移動兩次以前往壓板，並為愛莉克斯或史提夫開門。"
-      MC_HOC_2017_03_Cole: "{currentPlayerName} 繼續冒險，並需要**羅盤** [compass] 來為旅程做準備。\\r\n   \\r\n設定 Agent 的代碼以打開大門。"
-      MC_HOC_2017_03_Cole_2019: "{currentPlayerName} 繼續冒險，並需要**羅盤** [compass] 來為旅程做準備。\\r\n   \\r\n設定 Agent 的代碼以打開大門。"
+      MC_HOC_2017_03_Cole: "繼續冒險！玩家 {currentPlayerName} 需要先準備好**羅盤** [compass] 才不會迷路。\n\n幫代理 Agent 寫個程式，讓它先把門打開。"
+      MC_HOC_2017_03_Cole_2019: "繼續冒險！玩家 {currentPlayerName} 需要先準備好**羅盤** [compass] 才不會迷路。\n\n幫代理 Agent 寫個程式，讓它先把門打開。"
       MC_HOC_2017_03_Kiki: "玩家的冒險旅程將在秘密樹林中打開上鎖的門後開始！ \n\n\n\n\n撰寫代碼，幫助 Agent 開門以讓他前往壓板。"
       MC_HOC_2017_04: 變更上一個版圖的循環，讓 Agent 可以在這條河較寬的部分開闢路徑。
       MC_HOC_2017_04POINT5_Cole: |-
@@ -1099,7 +1112,7 @@ zh-TW:
       MC_HOC_2017_10_RETRY_2019: "您是否可找出工作空間中兩個功能之間的不同處？\\r\n \\r\n使用這些功能與工具箱中的其他代碼來清除前往礦車的路徑，然後收集**打火鐮** [flint_and_steel]。\\r\n "
       MC_HOC_2017_10_RYAN: 請嘗試從一開始建立功能，讓 Agent 可以更輕鬆地完成此礦車，並讓玩家可以前往橙色方塊。
       MC_HOC_2017_10_RYAN2: 請嘗試從一開始建立功能，讓 Agent 可以更輕鬆地完成此礦車，並讓玩家可以前往橙色方塊。
-      MC_HOC_2017_11_Kiki: 現在，就看您的表現了！看看您可以在這片凍湖四周打造出什麼。
+      MC_HOC_2017_11_Kiki: 現在看你表現了！看看你可以在這片凍湖打造出什麼。
       MC_HOC_2017_13_Cole: "**自由發揮：**現在換你表現囉，在 Agent 上編程來探索這個世界。"
       MC_HOC_2017_4.5v2: |-
         您已安全離開沼澤！現在，讓玩家安全地抵達橙色方塊。 
@@ -1117,6 +1130,7 @@ zh-TW:
       MC_HOC_Kiki_02: 有人必須先在壓板上，然後側門才會開啟。幫助 Agent 抵達壓板，這樣玩家才能離開房屋。
       Mike Test Bee Conditionals 1: "這雲遮住了我的視線！\n\\r\n\\r\n檢查看看雲的下面是不是有花朵，只有在有花朵的時候才採集花蜜。\\r\n注意，它會變來變去的！"
       Mike Test Bee Conditionals 2: "**評量：**收集所有的花蜜。\\r\n小心，不要採集沒有花蜜的紫花。"
+      MikeTest1: Markdown
       NEW Course 4 Artist Functions 1: "你能使用一個重複迴圈，畫出一個邊長 100 像素的正方形嗎？\\r\n\\r\n"
       NEW Course 4 Artist Functions 10.1: 使用上個關卡的函式來畫出這個圖案。
       NEW Course 4 Artist Functions 10: "點擊「編輯」，把所有積木放到函式定義中，來畫出邊長 40 像素的正方形。\\r\n\\r\n"
@@ -1148,7 +1162,7 @@ zh-TW:
       NEW Course 4 Artist Params 7: "你能完成這幅畫嗎？\n\\r\n\\r\n每一次畫的三角形的邊長比前一個多 25 像素。\\r\n第一個三角形的邊長是 25 像素。"
       NEW Course 4 Artist Params 8: "畫出三角形的程式壞掉了。\\r\n\\r\n你可以編輯並修正這個函式，以畫出邊長為 25、50、75 的三角形嗎？"
       NEW Course 4 Artist Params 9: "點擊「編輯」來完成 draw a square（畫個正方形）函式的定義，並且加一個參數。\\r\n它應該像三角形一樣有一個 length（長度）參數。\\r\n\\r\n**這次，畫出 3 個正方形**，邊長分別為 25、50、75 像素，每個正方形相隔 100 像素。"
-      NEW Course 4 Artist Params inspire: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**自由發揮靈感：**你已經學會了製作這樣的圖案所需的知識了！\\r\n\\r\n如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n\\r\n注意：我們用了`設定透明度`積木來製作 petals（花瓣）向外褪色的效果。"
+      NEW Course 4 Artist Params inspire: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\n\n**自由發揮靈感：**你已經學會了製作這樣的圖案所需的知識了！\n\n如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。\n\n注意：我們用了`設定透明度`積木來製作 petals（花瓣）向外褪色的效果。"
       NEW Course 4 Artist Vars 12: 現在，重新建立最後一關的演算法，並創作一個邊長 150 像素的五邊形。
       NEW Course 4 Artist Vars 2: '拖曳數字積木到「設定長度」積木和「重複」積木裡，以畫出一連串的 50 像素長的三角形。 '
       NEW Course 4 Artist Vars 4: "讓我們再試一次！\\r\n\\r\n你可以將 length（長度）變數設為 60，以完成這個酷炫的六邊形圖案嗎？"
@@ -1213,6 +1227,13 @@ zh-TW:
       U2L14 Free Response Getting Started: "破解程式和解密訊息有什麼不同？\\r\n"
       U2L14 Free Response Getting Started_2018: "破解程式和解密訊息有什麼不同？\\r\n"
       U2L14 Free Response Getting Started_2019: "破解程式和解密訊息有什麼不同？\\r\n"
+      U3L13 - Debug Id plus logic problem: "# 除錯 1"
+      U4 Model App: "# 這是提供給 U4 model app 的範本"
+      U4 Model App_2018: "# 這是提供給 U4 model app 的範本"
+      U4 Model App_2019: "# 這是提供給 U4 model app 的範本"
+      U4L02 - Objects - Template1: "# 範本"
+      U4L02 - Objects - Template1_2018: "# 範本"
+      U4L02 - Objects - Template1_2019: "# 範本"
       Unit 2 RGB Mapping: |
         # RGB 色彩\r
         \r
@@ -1558,6 +1579,7 @@ zh-TW:
         <img
         src="https://images.code.org/6e4dc767e55d11400f35c6680bbfe1e3-image-1470788284437.gif"
         width="300"/>
+      courseA_bee_seq4: 自己試試！
       courseA_collector_loops1: |-
         這是冒險家 Laurel！\r
         \r
@@ -1583,6 +1605,10 @@ zh-TW:
         移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\r
         \r
         收集 3 堆寶石以完成這個關卡。
+      courseA_harvester_loops7: '換你自己試試！'
+      courseA_harvester_loops7_2019: '換你自己試試！'
+      courseA_harvester_seq6: 自己試試！
+      courseA_harvester_seq6_2019: 自己試試！
       courseA_maze_ramp3_2018: "*「這隻豬真的把我惹毛了！」*\\r\n\\r\n有個積木會讓鳥崩潰，把它移除掉（拖曳回工具箱）。\\r"
       courseA_maze_ramp4_2018: "*「順著路徑讓我抓到那隻蠢豬。」\\r\n\\r\n當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！"
       courseA_maze_ramp5_2018: |-
@@ -1591,10 +1617,9 @@ zh-TW:
         注意別被 TNT 炸到。
       courseA_maze_seq1: '*「使用這些積木，試著讓我抓到這隻壞豬豬！」*'
       courseA_maze_seq10: |-
-        **挑戰：** 繞過 TNT 炸藥，讓鳥抓到豬！\r
-        \r
-        <img src="https://images.code.org/fa04813e9451e0bc070af50bc01d4a6b-image-1467932582838.gif"
-        width="200px"/>
+        **挑戰：** 繞過 TNT 炸藥，讓鳥抓到豬！
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq11: |-
         移動以讓鳥抓到猪。\r
         \r
@@ -1609,8 +1634,8 @@ zh-TW:
         <img src="https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif"
         width="200px"/>\r
 
-      courseA_maze_seq12_2018: "抓到那頭豬！\\r\n\\r\n<img src=\"https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif\"\nwidth=\"200px\"/>\\r\n"
-      courseA_maze_seq12_2019: "抓到那頭豬！\\r\n\\r\n<img src=\"https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif\"\nwidth=\"200px\"/>\\r\n"
+      courseA_maze_seq12_2018: 抓到那頭豬！
+      courseA_maze_seq12_2019: 抓到那頭豬！
       courseA_maze_seq1_2018: '*「使用這些積木，試著讓我抓到這隻壞豬豬！」*'
       courseA_maze_seq1_2019: '*「使用這些積木，試著讓我抓到這隻壞豬豬！」*'
       courseA_maze_seq3: |-
@@ -1633,6 +1658,8 @@ zh-TW:
         <img
         src="https://images.code.org/43001078c4df6feea1a6edf025192d85-image-1467929743355.gif"
         width="200px"/>
+      courseA_maze_seq5_2018: 測試一下吧。
+      courseA_maze_seq5_2019: 測試一下吧。
       courseA_maze_seq6: |-
         移動以讓鳥抓到這頭豬！\r
         \r
@@ -1658,15 +1685,13 @@ zh-TW:
       courseA_maze_seq8_2018: 完成這個關卡，讓鳥抓到這頭豬！
       courseA_maze_seq8_2019: 完成這個關卡，讓鳥抓到這頭豬！
       courseA_maze_seq9: |-
-        **挑戰：** 找出這個關卡的錯誤，添加積木讓鳥抓到這頭豬！\r
-        \r
-        <img src="https://images.code.org/810d7189bcd0767d37ea82319b4c678c-image-1467932445247.gif"
-        width="200px"/>
+        **挑戰：** 找出這個關卡的錯誤，添加積木讓鳥抓到這頭豬！
+
+        ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
       courseA_maze_seq9_2018: |-
-        **挑戰：** 找出這個關卡的錯誤，添加積木讓鳥抓到這頭豬！\r
-        \r
-        <img src="https://images.code.org/810d7189bcd0767d37ea82319b4c678c-image-1467932445247.gif"
-        width="200px"/>
+        **挑戰：** 找出這個關卡的錯誤，添加積木讓鳥抓到這頭豬！
+
+        ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
       courseA_maze_seq_challenge1: 替這個關卡除錯，移除多餘的積木並添加缺少的積木，讓憤怒鳥抓到這頭豬！
       courseA_maze_seq_challenge1_2018: 替這個關卡除錯，移除多餘的積木並添加缺少的積木，讓憤怒鳥抓到這頭豬！
       courseA_maze_seq_challenge1_2019: 替這個關卡除錯，移除多餘的積木並添加缺少的積木，讓憤怒鳥抓到這頭豬！
@@ -1828,6 +1853,7 @@ zh-TW:
 
         幫 Laurel 拿到至少 **5** 塊寶石才能過關。
       courseB_collector_prog3: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
+      courseB_iceage_loops8_2019: '你有辦法修好這些程式嗎？'
       courseB_maze_seq3: '*「修正這個程式，使我抓到這頭豬！」*'
       courseB_maze_seq9: "**挑戰：**繞開 TNT 炸蘗，讓鳥能夠抓到豬！"
       courseB_maze_seq9_challenge1: "*那隻豬現在藏在哪裡？*"
@@ -1839,10 +1865,29 @@ zh-TW:
       courseC_collector_prog9_2018: '*「讓我們獲得所有的硬幣！」*'
       courseC_collector_prog9_2019: '*「讓我們獲得所有的硬幣！」*'
       courseC_collector_progA: 幫 Laurel 收集到所有寶石。
+      courseC_harvester_loops10: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops10_2018: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops10_2019: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops11: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops11_2018: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops11_2019: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops5: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops5_2018: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops5_2019: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops6: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops6_2018: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops6_2019: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops7: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops7_2018: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops7_2019: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops9: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops9_2018: 收集所有的玉米和所有的南瓜。
+      courseC_harvester_loops9_2019: 收集所有的玉米和所有的南瓜。
       courseC_harvester_loops_challenge1: 收集所有的玉米。
       courseC_harvester_loops_challenge2: "收集所有的生菜。\n注意避開樹木和田地！"
       courseC_harvester_loops_challenge2_2018: "收集所有的生菜。\n注意避開樹木和田地！"
       courseC_harvester_loops_challenge2_2019: "收集所有的生菜。\n注意避開樹木和田地！"
+      courseC_harvester_loops_forVid: 收集所有的玉米和所有的南瓜。
       courseC_maze_loops2_predict1: "哇嗚，神奇的積木出現啦！\\r\n利用`重複`積木，你可以讓一段程式不斷的循環執行。\\r\n\\r\n你能在`重複`積木裡只用上一個`移動-向前`積木，透過迴圈的方式來抓到這隻豬嗎？"
       courseC_maze_loops5: '*「愈快抓到豬愈好！」*'
       courseC_maze_programming1: 在這一關，把所有的積木放在一起，然後點擊「運行」看看結果如何！
@@ -1873,6 +1918,9 @@ zh-TW:
       courseC_maze_programming9_2018: '*「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」*'
       courseC_maze_programming9_2019: '*「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」*'
       courseD_artist_functions8: "**挑戰：**盡可能做出你想要的函式，用函式來繪製邊長為 50 像素的正方形。"
+      courseD_artist_nestedLoops1a: "現在循環畫出這個三角形 6 次。\n\n每畫出一次，需要轉向 60 度後再畫下一個。"
+      courseD_artist_nestedLoops1a_2018: "現在循環畫出這個三角形 6 次。\n\n每畫出一次，需要轉向 60 度後再畫下一個。"
+      courseD_artist_nestedLoops1a_2019: "現在循環畫出這個三角形 6 次。\n\n每畫出一次，需要轉向 60 度後再畫下一個。"
       courseD_artist_nestedLoops9_predict1: |-
         **挑戰：** 想想看要怎麼畫出像這樣的圖案？ \r
         \r
@@ -1919,12 +1967,19 @@ zh-TW:
       courseD_bee_nestedLoops2_predict1_2018: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops2_predict1_2019: 這次，幫蜜蜂收集到所有花蜜，用的積木愈少愈好。
       courseD_bee_nestedLoops5: '使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。'
+      courseD_bee_nestedLoops6: 收集所有的花蜜。
       courseD_bee_nestedLoops7: "**挑戰：**想辦法用這些積木，得到所有的花蜜。"
       courseD_bee_nestedLoops7_2018: "**挑戰：**想辦法用這些積木，得到所有的花蜜。"
       courseD_bee_nestedLoops7_2019: "**挑戰：**想辦法用這些積木，得到所有的花蜜。"
       courseD_bee_nestedLoops8: '使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。'
       courseD_bee_nestedLoops8_2018: '使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。'
       courseD_bee_nestedLoops8_2019: '使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。'
+      courseD_bee_nestedLoops9: 釀造全部的蜂蜜。
+      courseD_bee_nestedLoops9_2018: 釀造全部的蜂蜜。
+      courseD_bee_nestedLoops9_2019: 釀造全部的蜂蜜。
+      courseD_bee_nestedLoops9_predict2: 釀造全部的蜂蜜。
+      courseD_bee_nestedLoops9_predict2_2018: 釀造全部的蜂蜜。
+      courseD_bee_nestedLoops9_predict2_2019: 釀造全部的蜂蜜。
       courseD_bounce_events1: 移動到旗幟那兒！在「當按向左鍵時」積木下添加程式，點擊「運行」讓球員移動到目標旗幟。
       courseD_collector_ramp10: "和之前的路徑一樣，不過這次要沿路收集到發現到的寶藏。\\r\n"
       courseD_collector_ramp8: |
@@ -1981,6 +2036,13 @@ zh-TW:
       courseD_farmer_while8: "**挑戰：**填滿所有的洞，使用的積木愈少愈好。 "
       courseD_farmer_while8_2018: "**挑戰：**填滿所有的洞，使用的積木愈少愈好。 "
       courseD_farmer_while8_2019: "**挑戰：**填滿所有的洞，使用的積木愈少愈好。 "
+      courseD_farmer_while_challenge1: 填滿所有的坑垌，並移走全部的土堆。
+      courseD_farmer_while_challenge1_2018: 填滿所有的坑垌，並移走全部的土堆。
+      courseD_farmer_while_challenge1_2019: 填滿所有的坑垌，並移走全部的土堆。
+      courseD_farmer_while_challenge2: 填滿所有的坑垌，並移走全部的土堆。
+      courseD_farmer_while_challenge2_2018: 填滿所有的坑垌，並移走全部的土堆。
+      courseD_iceage_loops8: '你有辦法修好這些程式嗎？'
+      courseD_iceage_loops8_2019: '你有辦法修好這些程式嗎？'
       courseD_maze_nestedLoops4: '帶我到那朵向日葵的位置!'
       courseD_maze_nestedLoops4_2018: '帶我到那朵向日葵的位置!'
       courseD_maze_nestedLoops4_2019: '帶我到那朵向日葵的位置!'
@@ -2011,6 +2073,9 @@ zh-TW:
         *「順著路徑，讓我抓到那頭豬！」\r
         \r
         注意別被 TNT 炸到。
+      courseD_maze_ramp5d: 讓鳥抓到這隻豬！
+      courseD_maze_ramp5d_2018: 讓鳥抓到這隻豬！
+      courseD_maze_ramp5d_2019: 讓鳥抓到這隻豬！
       courseD_maze_ramp6: |-
         *「冷靜！幫我抓到這頭壞豬，不然我就真的要變成憤怒鳥啦！」*\r
         \r
@@ -2074,8 +2139,8 @@ zh-TW:
         邊長都是 200 像素。你需要轉向 90 度來畫出正方形，還有轉向 120 度來畫出三角形。
       courseE_bee_functions2: "函式是一段程式碼，用來執行某個任務。\\r\n\\r\n請使用 `get 2 nectar`（採集 2 個花蜜）函式，從每一朵花中採集花蜜。"
       courseE_bee_functions2_2018: "函式是一段程式碼，用來執行某個任務。\\r\n\\r\n請使用 `get 2 nectar`（採集 2 個花蜜）函式，從每一朵花中採集花蜜。"
-      courseE_bee_functions3: "函式是執行特定任務的一串程式碼。用「get 5」這個函式來一次拿5個花蜜。\n記得用迴圈來計算理想的積木塊次數。"
-      courseE_bee_functions3_2018: "函式是執行特定任務的一串程式碼。用「get 5」這個函式來一次拿5個花蜜。\n記得用迴圈來計算理想的積木塊次數。"
+      courseE_bee_functions3: 在這個關卡創建名為 get 5 的函式以一次拿取 5 個花蜜。
+      courseE_bee_functions3_2018: 在這個關卡創建名為 get 5 的函式以一次拿取 5 個花蜜。
       courseE_collector_ramp10: "和之前的路徑一樣，不過這次要沿路收集到發現到的寶藏。\\r\n"
       courseE_collector_ramp8: |
         這關很像上一關，不過現在我們是要幫 Laurel 完成探險！\r
@@ -2084,6 +2149,8 @@ zh-TW:
         和之前的走法相同，不過這次試試改用一個重複迴圈來收集到寶藏。\r
       courseE_collector_ramp9: "和之前的路徑一樣，不過這次要沿路收集到發現到的寶藏。\\r\n"
       courseE_farmer_concept4: "現在讓我們加深難度！\n我們已經將整個程式積木嵌套在另一個迴圈內，但你需要讓小藝術家回到初始位置來畫出下一行。要在最外層迴圈下添加哪個積木，才能畫完整個網格？"
+      courseE_farmer_functions10b: 使用你的新函式兩次以完成這個關卡。
+      courseE_farmer_functions10b_2018: 使用你的新函式兩次以完成這個關卡。
       courseE_farmer_functions4b: 使用你的新函式以完成這個關卡。
       courseE_farmer_functions4b_2018: 使用你的新函式以完成這個關卡。
       courseE_farmer_ramp12: "現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。\\r\n\\r\n\\r\n\\r\n"
@@ -2129,6 +2196,30 @@ zh-TW:
         *「順著路徑，讓我抓到那頭豬！」\r
         \r
         注意別被 TNT 炸到。
+      courseF_artist_for6: |-
+        如果每次都多轉或少轉一些角度，那麼你可以創作出一種規律效果。
+
+        試著用上一關的一些程式碼，但是轉向角度變成 89 度，來創造漩渦狀的正方形。
+      courseF_artist_for6_2018: |-
+        如果每次都多轉或少轉一些角度，那麼你可以創作出一種規律效果。
+
+        試著用上一關的一些程式碼，但是轉向角度變成 89 度，來創造漩渦狀的正方形。
+      courseF_artist_for6_2019: |-
+        如果每次都多轉或少轉一些角度，那麼你可以創作出一種規律效果。
+
+        試著用上一關的一些程式碼，但是轉向角度變成 89 度，來創造漩渦狀的正方形。
+      courseF_artist_for_Template: |-
+        如果每次都多轉或少轉一些角度，那麼你可以創作出一種規律效果。
+
+        試著用上一關的一些程式碼，但是轉向角度變成 89 度，來創造漩渦狀的正方形。
+      courseF_artist_for_Template_2018: |-
+        如果每次都多轉或少轉一些角度，那麼你可以創作出一種規律效果。
+
+        試著用上一關的一些程式碼，但是轉向角度變成 89 度，來創造漩渦狀的正方形。
+      courseF_artist_for_Template_2019: |-
+        如果每次都多轉或少轉一些角度，那麼你可以創作出一種規律效果。
+
+        試著用上一關的一些程式碼，但是轉向角度變成 89 度，來創造漩渦狀的正方形。
       courseF_artist_fwp1: 今天，我們來試試功能強大函式編輯器，看看是否你能弄清楚如何編輯 draw a square（畫個正方形）函式並從中找到程式中的錯誤。
       courseF_artist_fwp1_2018: 今天，我們來試試功能強大函式編輯器，看看是否你能弄清楚如何編輯 draw a square（畫個正方形）函式並從中找到程式中的錯誤。
       courseF_artist_fwp2: "編輯這個函式，並在裡頭使用名為 length（長度）的參數。\\r\n\\r\n每個正方形的邊長應該會比上一個大 25 像素。第一個正方形的每邊長 25 像素，將問號（???）改成正確的數字，以畫出這個圖案。"
@@ -2148,19 +2239,17 @@ zh-TW:
       courseF_artist_fwp5: "使用上個關卡的函式來畫出這一系列的圖形。  \\r\n\\r\n\\r\n這個三角形的邊長為 21 像素，而接下來的圖形的邊長都比上一個長 7 像素。\\r\n使用 multipication（多重）積木，讓這個功能只要呼叫一個函式就可以完成。\\r\n<hr/>\\r\nmultipication（多重）積木就像這樣![](https://images.code.org/55e293447c6b26bbbcf29cda2036706b-image-1481322763779.png)\\r\n\\r\n"
       courseF_artist_fwp5_2018: "使用上個關卡的函式來畫出這一系列的圖形。  \\r\n\\r\n\\r\n這個三角形的邊長為 21 像素，而接下來的圖形的邊長都比上一個長 7 像素。\\r\n使用 multipication（多重）積木，讓這個功能只要呼叫一個函式就可以完成。\\r\n<hr/>\\r\nmultipication（多重）積木就像這樣![](https://images.code.org/55e293447c6b26bbbcf29cda2036706b-image-1481322763779.png)\\r\n\\r\n"
       courseF_artist_fwp6: |-
-        **挑戰：** 編輯 draw a spiral edge（畫個螺旋圖）以使用 length（邊長）和 sides（邊數）參數，然後重建出這些圖形。\r
-        \r
-        -
-        這個正方形是從 3 像素到 90 像素。\r
-        - 這個六邊形是從 3 像素到 100 像素。\r
-        - 這個三角形是從 3 像素到 105 像素。
+        **挑戰：** 編輯函式 draw a spiral edge（畫個螺旋圖）以使用 length（邊長）和 sides（邊數）參數，然後重建出這些圖形。
+
+        這個正方形是從 3 像素到 90 像素。
+        - 這個六邊形是從 3 像素到 100 像素。
+        - 這個三角形是從 3 像素到 95 像素。
       courseF_artist_fwp6_2018: |-
-        **挑戰：** 編輯 draw a spiral edge（畫個螺旋圖）以使用 length（邊長）和 sides（邊數）參數，然後重建出這些圖形。\r
-        \r
-        -
-        這個正方形是從 3 像素到 90 像素。\r
-        - 這個六邊形是從 3 像素到 100 像素。\r
-        - 這個三角形是從 3 像素到 105 像素。
+        **挑戰：** 編輯函式 draw a spiral edge（畫個螺旋圖）以使用 length（邊長）和 sides（邊數）參數，然後重建出這些圖形。
+
+        這個正方形是從 3 像素到 90 像素。
+        - 這個六邊形是從 3 像素到 100 像素。
+        - 這個三角形是從 3 像素到 95 像素。
       courseF_artist_fwp7: |-
         完成這個 draw a spiral edge（畫個螺旋圖）函式，並詢問螺旋圖中間最小的長度。\r
         \r
@@ -2293,6 +2382,8 @@ zh-TW:
       frozen perpendicular: 現在看看我們是不是可以畫出互相垂直的二條線（2 條線的夾角 90 度）。你需要用到「轉向」還有「移動」積木。
       frozen snowflake branch: 用用看「建立雪花分支」積木，建立 3 個分支，讓它一開始像個雪花。
       frozen snowflake full: 現在我們來重複它 18 次以製作出美麗的雪花！
+      frozen snowflake full_b: 現在我們來重複它 **8** 次以製作出美麗的雪花！
+      frozen snowflake full_test: 現在我們來重複它 **8** 次以製作出美麗的雪花！
       frozen snowflower: 精細複雜的雪花樣式其實可以用非常簡單的形狀來產生。您可以畫重複五個大小為 5 的圓，以及五個大小為 10 個圓嗎？
       frozen square iterative: 看來我們已經畫出了正方形的一半了！來，我們一起把 4 條線組合起來，變成一個正方形吧！
       frozen square loop 3x: 這次我們來建立 3 個正方形吧！每個正方形完成後，記得要轉 120 度，再畫下一個正方形。
@@ -2412,7 +2503,7 @@ zh-TW:
       grade3_maze_nestedLoops3: 讓我抓到那隻豬！這一次，你只能用 1 個`移動-向前`積木。
       grade3_maze_nestedLoops4: 這個關卡裡，2 個 `重複` 迴圈可以幫你使用最少的積木數來抓到豬！
       grade4_arist_nested_loop_circles1: "** 評量：** 使用一個巢狀迴圈來完成這個圖案。"
-      grade4_arist_nested_loop_flags1: 重複已給的代碼來畫出一個風車。
+      grade4_arist_nested_loop_flags1: 重複執行已有的程式來畫出一個風車。
       grade4_arist_nested_loop_polygons1: "循環這個圖樣 10 次。\\r\n\\r\n你知道在每個圖樣畫完後要轉多少角度嗎？"
       grade4_arist_nested_loop_polygons2: "重複這個圖案6次。\\r\n\\r\n你知道每次重複畫圖案時需要轉多少度？ "
       grade4_arist_nested_loop_squares1: "你可以用巢狀迴圈來畫出在人行道上的 10 個正方形嗎？\\r\n\\r\n每個正方形的邊長為 30 像素。"
@@ -2431,10 +2522,13 @@ zh-TW:
       grade4_artist_nestedLoops_challenge: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"\nwidth=\"150px;\" style=\"mix-blend-mode: multiply;\" />\\r\n\\r\n**遊戲時間：**這兒有個程式能畫出有趣的圖形。 \\r\n\\r\n如果把它重複個幾次，然後在每次的循環都轉向，會發生什麼事呢？\\r\n\\r\n注意當這個圖形的轉向到達了 **420 度**時，就表示小畫家畫完了，它面對的方向會和一開始畫圖的方向不同，這個新的方向會是初始繪圖方向的*向右 60 度*。\\r\n\\r\n<hr/>\\r\n\\r\n<h4>\\r\n<details>\\r\n<summary><b>重複 4 次</b></summary>\\r\n<br/>\\r\n如果你想要在 4 次重複內畫完一個圓形，小畫家需要每次轉 **360 度/4 = 90 度**。你可以在迴圈外層額外添加「轉向-右方 30 度」積木來做到（因為 **60+30 = 90**）。\n<br/>\\r\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\\r\n<br/><br/>\\r\n</details>\\r\n</h4>\\r\n\\r\n<h4>\\r\n<details>\\r\n<summary><b>重複 6 次</b></summary>\\r\n<br/>\\r\n當你重複這個圖形 6 次，你轉了 **6x60 度**， 也就是剛好一圈 **360 度**。\\r\n<img\nsrc=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"  width=\"500px;\"  style=\"mix-blend-mode:\nmultiply;\" />\\r\n</details>\\r\n</h4>\\r\n\\r\n<h4>\\r\n<details>\\r\n<summary><b>重複 12 次</b></summary>\\r\n<br/>\\r\n如果你想要重複這個圖形 12 次，小畫家每次循環需要轉 **360 度/12 = 30 度** 。那表示你需要在重複畫出圖形之前先稍微調整小畫家的方向，讓它向左轉 30 度。<br/><br/>\\r\n<img src=\"https://images.code.org/ad254952522674496918561096817c66-image-1440132424792.44.01.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\\r\n</details>\\r\n</h4>\\r\n\\r\n現在換你了！你能利用重複初始圖形的方式來創建出每個圖案嗎？  "
       grade4_artist_nestedLoops_challenge2: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\n挑戰時間到了！  \\r\n\\r\n這裡有個圖案，只用了你見到的積木做出來的。想一想，要怎麼重建它？你可以邊做邊試，錯了也沒關係。我們不要求你一次就做對。\\r\n\\r\n這些重複的圖形和上個關卡的圖案幾乎相同，除了第一個迴圈裡用的長度比較小以外。 "
       grade4_artist_nested_loop_circles1: "** 評量：** 使用一個巢狀迴圈來完成這個圖案。"
-      grade4_artist_nested_loop_flags1: 重複已給的代碼來畫出一個風車。
+      grade4_artist_nested_loop_flags1: 重複執行已有的程式來畫出一個風車。
       grade4_artist_nested_loop_polygons1: "循環這個圖樣 10 次。\\r\n\\r\n你知道在每個圖樣畫完後要轉多少角度嗎？"
       grade4_artist_nested_loop_squares1: "你可以用巢狀迴圈來畫出在人行道上的 10 個正方形嗎？\\r\n\\r\n每個正方形的邊長為 30 像素。"
       grade4_artist_nested_loop_triangles1: "完成程式碼來畫出這些三角形。第一個三角形的程式碼已經幫你建好了。提示：3 個三角形旋轉了 360 度。\\r\n\\r\n"
+      grade4_artist_nested_loop_triangles3: |-
+        你可以藉由重複畫三角形的程式碼來畫出一個六邊形嗎？
+        提示：6 × ? = 360
       grade4_artist_nested_loop_triangles5: |-
         把起始程式碼嵌進另一個迴圈中來畫出一個太陽。\r
         \r
@@ -2457,7 +2551,7 @@ zh-TW:
         用`如果…否則`積木，如果是花的話就採集花蜜，\r
         否則，就釀造蜂蜜。
       grade4_bee_functions2: "函式是一段程式碼，用來執行某個任務。\\r\n\\r\n請使用 `get 2 nectar`（採集 2 個花蜜）函式，從每一朵花中採集花蜜。"
-      grade4_bee_functions3: "函式是執行特定任務的一串程式碼。用「get 5」這個函式來一次拿5個花蜜。\n記得用迴圈來計算理想的積木塊次數。"
+      grade4_bee_functions3: 在這個關卡創建名為 get 5 的函式以一次拿取 5 個花蜜。
       grade4_bee_nestedLoops2: "**挑戰：**想辦法用這些積木，得到所有的花蜜。"
       grade4_bee_nestedLoops4: '使用巢狀迴圈來收集每一朵花的花蜜，並在每一個蜂巢製造蜂蜜。'
       grade4_frozen_freeplay: 您已經變成一個專業的藝術家囉！開始打造一個冬季仙境吧。
@@ -2473,7 +2567,7 @@ zh-TW:
       grade4_frozen_square_loop2: 這次我們來建立 3 個正方形吧！每個正方形完成後，記得要轉 120 度，再畫下一個正方形。
       grade4_frozen_square_loop3: 你可以用「重複」積木來畫 10 次正方形，每次轉 36 度嗎？這樣可以繪製出一個雪花喔！
       grade4_playlab_freeplay: "自由活動時間到了！\n好好享用工具箱的所有積木吧。\\r\n<br/>\\r\n\\r\n<h5>\\r\n<details>\\r\n<summary><b>這裡有些點子。</b></summary>\\r\n\\t<br/>\\r\n\\t<h5>\\r\n\\t\\t<ul>\\r\n        \\t<li><strong>追著跑</strong>\n- 讓角色 2 來回走動，然後使用你的方向鍵移動角色 1，追著角色 1 跑，直到他們碰在一起。 </li>\\r\n            <li><strong>打地鼠</strong>\n- 讓一個角色在隨機位置突然出現，在他消失前點擊他就得分。 </li>\\r\n            <li><strong>猜誰先出現</strong> - 讓二個角色都先消失，隨機的改變位置，並隨機出現其中一個角色。點擊第一個出現的角色就得分，如果點擊到第二個出現的角色就扣分！ </li>\\r\n        </ul>\\r\n\\t</h5>\\r\n</details>\\r\n</h5>\\r\n"
-      grade4_playlab_test: "<h5><b>\\r在我們的遊戲中，要怎樣才能獲得分數呢？\\r\n</b></h5>\\r\n<br/>\\r\n\\r\n1. 在每次小狗用派擊中小貓時，加 1 到你的 `points` 變數上。<br/><br/>\\r\n2. 使用`當角色2碰到任何東西`事件來觸發分數更新。你可以利用 `points = points +1` 的方式增加變數值。<br/><br/>\n\\r\n3. 分數到達 10 分（每次加 1 分）就過關。\\r\n\\r\n<br/><br/>\\r\n<h4>\\r\n**注意：**\n使用向右鍵扔出派！\\r\n</h4>"
+      grade4_playlab_test: "<h5><b>\n在我們的遊戲中，要怎樣才能獲得分數呢？\n</b></h5>\n<br/>\n\n1. 在每次小狗用派擊中小貓時，加 1 到你的 `points` 變數上。<br/><br/>\n2. 使用`當角色2碰到任何東西`事件來觸發分數更新。你可以利用 `points = points +1` 的方式增加變數值。<br/><br/>\n\n3. 分數到達 10 分（每次加 1 分）就過關。\n\n<br/><br/>\n<h4>\n**注意：**使用向右鍵扔出派！\n</h4>"
       grade4_playlab_test2: "這裡有個函式叫做 `jump`（跳躍），它可以讓你的主要角色向上跳 100 像素。\\r\n\\r\n運行這個程式，用方向鍵來控制小狗，並利用 `jump` 函式收集所有的旗幟。"
       grade4_review_artist2: "這個房子需要一個屋頂！畫出這個三角形。\\r\n\\r\n提示：三個邊的長度都相同。\\r\n\\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
       grade4_review_artist3: "跳躍積木只會移動小藝術家而不會繪圖。\n同時使用`跳躍-向前`和`移動-向前`積木來畫出這個虛線。\n每個線條長度為 50 像素。"
@@ -2489,10 +2583,15 @@ zh-TW:
         只是小小的修改了上個可以繪製出這個圖案的程式，你能找出改變了什麼嗎？\r
         \r
         提示，你需要移除某個東西！
+      grade5_artist_for_loops6: |-
+        如果每次都多轉或少轉一些角度，那麼你可以創作出一種規律效果。
+
+        試著用上一關的一些程式碼，但是轉向角度變成 89 度，來創造漩渦狀的正方形。
+      grade5_artist_for_loops7a: 把角度變小成 72 度，以畫出螺旋狀的五邊形。
       grade5_artist_for_loops8: "還記得在上一個階段，我們使用一個變數來控制圖形的邊數嗎？\n現在我們要用 `counter` 這個變數來做相同的事情。\\r\n\\r\n這個圖案從一個三角形開始，且每次增加 1 個邊直到畫出一個十邊形。每個圖形的邊長為 100 像素。 \\r\n\\r\n你要如何使用計數迴圈中的 `counter` 變數來重建圖案呢？"
       grade5_artist_for_loops9: "讓我們總結一下吧！\\r\n\\r\n用你所知道的計數迴圈與 `counter` 變數，來創造出每個形狀都比前一個多 2 條邊的圖案，確保每條邊長是這個多邊形邊數的 10 倍。\\r\n\\r\n這裡提供給你一些些參考的程式碼。"
       grade5_artist_for_loopsfreeplay11: "<br/><br/>\\r\n<img\nsrc=\"https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png\"\nwidth=\"250px\"/>\\r\n<br/><br/>\\r\n**自由發揮靈感：**你已經學會了製作這樣的圖案所需的知識了！如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。"
-      grade5_artist_functionparameters10: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**自由發揮靈感：**你已經學會了製作這樣的圖案所需的知識了！\\r\n\\r\n如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n\\r\n注意：我們用了`設定透明度`積木來製作 petals（花瓣）向外褪色的效果。"
+      grade5_artist_functionparameters10: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\n\n**自由發揮靈感：**你已經學會了製作這樣的圖案所需的知識了！\n\n如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。\n\n注意：我們用了`設定透明度`積木來製作 petals（花瓣）向外褪色的效果。"
       grade5_artist_functionparameters9a: |
         完成這個 draw a spiral edge（畫個螺旋圖）函式，並詢問螺旋圖中間最小的長度。\r
         \r
