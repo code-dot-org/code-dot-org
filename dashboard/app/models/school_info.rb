@@ -87,7 +87,7 @@ class SchoolInfo < ActiveRecord::Base
     # As of Nov. 2, 2017 there were 7 rows in school_infos with non-null school_id and conflicting
     # data between schools and school_infos. Until we better understand what is causing that we don't want
     # to flat out fail if we get conflicting inputs. Instead we overwrite the passed in fields with what
-    # is on the School and report the mismatch to HoneyBadger.
+    # is on the School.
     unless school.nil? && school_id.nil?
       original = {}
       original[:country] = country
@@ -112,21 +112,6 @@ class SchoolInfo < ActiveRecord::Base
       self.school_name = nil
       self.full_address = nil
       self.validation_type = VALIDATION_FULL
-
-      # Report if we are overriding a non-nil value that was originally passed in
-      something_overwritten = original.map {|key, value| value && value != self[key]}.reduce {|acc, b| acc || b}
-      if something_overwritten
-        Honeybadger.notify(
-          error_message: "Overwriting passed in data for new SchoolInfo",
-          error_class: "SchoolInfo.sync_from_schools",
-          context: {
-            original_input: original,
-            school_id: school.id
-          }
-        )
-        # Don't interrupt callback chain by returning false
-        return nil
-      end
     end
   end
 
