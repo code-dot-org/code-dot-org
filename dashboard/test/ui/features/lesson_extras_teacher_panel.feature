@@ -1,4 +1,6 @@
 @dashboard_db_access
+# TODO: (madelynkasula) 03/28/2019 De-flake and re-enable this test.
+@skip
 Feature: Lesson extras teacher panel
 
   Scenario: View student lesson extras progress
