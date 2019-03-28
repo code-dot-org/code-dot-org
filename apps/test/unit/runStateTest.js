@@ -32,7 +32,7 @@ describe('runState', () => {
 
     it('can be set to a decimal', function() {
       var state = reducer(null, runState.setStepSpeed(0.5));
-      assert.strictEqual(state.stepSpeed, .5);
+      assert.strictEqual(state.stepSpeed, 0.5);
     });
   });
 
