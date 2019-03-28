@@ -278,4 +278,16 @@ class SchoolInfo < ActiveRecord::Base
   def effective_school_name
     school.try(:name) || school_name
   end
+
+  def private_school?
+    school_type.eql? SCHOOL_TYPE_PRIVATE
+  end
+
+  def public_school?
+    school_type.eql? SCHOOL_TYPE_PUBLIC
+  end
+
+  def charter_school?
+    school_type.eql? SCHOOL_TYPE_CHARTER
+  end
 end
