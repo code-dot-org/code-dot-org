@@ -474,21 +474,6 @@ function moveInDirection(sprite,distance,direction) {
     }
 }
 
-function moveToward(sprite,distance,target) {
-  if (!sprite || distance === undefined || !target) {
-    return;
-  }
-  var dx = target.x - sprite.x;
-  var dy = target.y - sprite.y;
-  if (dx * dx + dy * dy > distance * distance) {
-    var angleOfMovement=Math.atan2(dy, dx);
-    dx = distance*Math.cos(angleOfMovement);
-    dy = distance*Math.sin(angleOfMovement);
-  }
-  sprite.x += dx;
-  sprite.y += dy;
-}
-
 function unitVectorTowards(from, to) {
   var angle = Math.atan2(to.y - from.y, to.x - from.x);
   return p5.Vector.fromAngle(angle);
@@ -551,13 +536,18 @@ function draw() {
       if (!a || !b) {
         continue;
       }
-      if (a.overlap(b, createCollisionHandler(collisionEvent))) {
+      if (a.overlap(b)) {
+        if (collisionEvent.keepFiring || !collisionEvent.fired) {
+          collisionEvent.event(a, b);
+        }
         collisionEvent.touching = true;
+        collisionEvent.fired = true;
       } else {
         if (collisionEvent.touching && collisionEvent.eventEnd) {
           collisionEvent.eventEnd(a, b);
         }
         collisionEvent.touching = false;
+        collisionEvent.fired = false;
       }
     }
 
