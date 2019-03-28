@@ -1,3 +1,4 @@
+require_relative '../../../../shared/test/spy_newrelic_agent'
 require 'test_helper'
 
 module Pd
@@ -114,6 +115,24 @@ module Pd
         }
       )
 
+      sign_in @enrolled_summer_teacher
+      get '/pd/workshop_survey/day/0'
+      assert_response :success
+    end
+
+    test 'pre-workshop survey reports render to New Relic' do
+      NewRelic::Agent.expects(:record_custom_event).with(
+        'RenderJotFormView',
+        {
+          route: 'GET /pd/workshop_survey/day/0',
+          form_id: FAKE_DAILY_FORM_IDS[0],
+          workshop_course: COURSE_CSP,
+          workshop_subject: SUBJECT_TEACHER_CON,
+          regional_partner_name: @regional_partner.name
+        }
+      )
+
+      CDO.stubs(:newrelic_logging).returns(true)
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/day/0'
       assert_response :success
@@ -374,6 +393,27 @@ module Pd
         }
       )
 
+      sign_in @enrolled_summer_teacher
+      get "/pd/workshop_survey/facilitators/#{@summer_workshop.sessions[0].id}/0"
+      assert_response :success
+    end
+
+    test 'facilitator specific survey reports render to New Relic' do
+      NewRelic::Agent.expects(:record_custom_event).with(
+        'RenderJotFormView',
+        {
+          route: "GET /pd/workshop_survey/facilitators/#{@summer_workshop.sessions[0].id}/0",
+          form_id: FAKE_FACILITATOR_FORM_ID,
+          workshop_course: COURSE_CSP,
+          workshop_subject: SUBJECT_TEACHER_CON,
+          regional_partner_name: @regional_partner.name
+        }
+      )
+
+      CDO.stubs(:newrelic_logging).returns(true)
+
+      Session.any_instance.expects(:open_for_attendance?).returns(true)
+      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       sign_in @enrolled_summer_teacher
       get "/pd/workshop_survey/facilitators/#{@summer_workshop.sessions[0].id}/0"
       assert_response :success

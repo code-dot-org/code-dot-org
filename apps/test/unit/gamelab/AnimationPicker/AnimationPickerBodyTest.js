@@ -2,9 +2,10 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 const gamelabMsg = require('@cdo/gamelab/locale');
-const moduleUnderTest = require('@cdo/apps/gamelab/AnimationPicker/AnimationPickerBody');
-const AnimationPickerBody = moduleUnderTest.default;
-const WarningLabel = moduleUnderTest.WarningLabel;
+import {
+  WarningLabel,
+  UnconnectedAnimationPickerBody as AnimationPickerBody
+} from '@cdo/apps/gamelab/AnimationPicker/AnimationPickerBody';
 
 const emptyFunction = function() {};
 
