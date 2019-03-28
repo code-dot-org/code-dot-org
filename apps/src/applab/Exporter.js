@@ -28,6 +28,7 @@ import logToCloud from '../logToCloud';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {EXPO_SESSION_SECRET} from '../constants';
+import {fetchWebpackRuntime} from '../util/exporter';
 
 // This whitelist determines which appOptions properties
 // will get exported with the applab app, appearing in the
@@ -361,6 +362,9 @@ export default {
       zipAssetPrefix
     });
 
+    const iconPath = '/appassets/icon.png';
+    const splashImagePath = '/appassets/splash.png';
+
     if (expoMode) {
       appAssets.push({
         url: exportExpoWarningPng,
@@ -369,12 +373,12 @@ export default {
       });
       appAssets.push({
         url: exportExpoIconPng,
-        zipPath: appName + '/appassets/icon.png',
+        zipPath: appName + iconPath,
         dataType: 'binary'
       });
       appAssets.push({
         url: exportExpoSplashPng,
-        zipPath: appName + '/appassets/splash.png',
+        zipPath: appName + splashImagePath,
         dataType: 'binary'
       });
     }
@@ -385,7 +389,9 @@ export default {
     if (expoMode) {
       const appJson = exportExpoAppJsonEjs({
         appName: appName,
-        projectId: project.getCurrentId()
+        projectId: project.getCurrentId(),
+        iconPath: '.' + iconPath,
+        splashImagePath: '.' + splashImagePath
       });
       const {shareWarningInfo = {}} = getAppOptions();
       const {hasDataAPIs} = shareWarningInfo;
@@ -424,6 +430,9 @@ export default {
     const rootRelativeApplabAssetPrefix = rootApplabPrefix + 'assets';
     const zipApplabAssetPrefix = appName + '/' + rootRelativeApplabAssetPrefix;
 
+    // webpack-runtime must appear exactly once on any page containing webpack entries.
+    const webpackRuntimeAsset = fetchWebpackRuntime(cacheBust);
+
     // Attempt to fetch applab-api.min.js if possible, but when running on non-production
     // environments, fallback if we can't fetch that file to use applab-api.js:
     const applabApiAsset = new $.Deferred();
@@ -440,12 +449,14 @@ export default {
 
     return new Promise((resolve, reject) => {
       $.when(
+        webpackRuntimeAsset,
         applabApiAsset,
         ...[...staticAssets, ...appAssets].map(assetToDownload =>
           download(assetToDownload.url, assetToDownload.dataType || 'text')
         )
       ).then(
         (
+          [webpackRuntime],
           [applabApi],
           [commonLocale],
           [applabLocale],
@@ -464,9 +475,13 @@ export default {
               (expoMode
                 ? 'assets/applab-api.j'
                 : rootApplabPrefix + 'applab-api.js'),
-            [appOptionsContents, commonLocale, applabLocale, applabApi].join(
-              '\n'
-            )
+            [
+              webpackRuntime,
+              appOptionsContents,
+              commonLocale,
+              applabLocale,
+              applabApi
+            ].join('\n')
           );
           zip.file(
             mainProjectFilesPrefix + fontAwesomeWOFFPath,
@@ -598,18 +613,36 @@ export default {
     return exportExpoPackagedFilesEjs({entries});
   },
 
-  async generateExpoApk(snackId, config) {
+  async generateExpoApk(options, config) {
+    const {appName, expoSnackId, iconUri, splashImageUri} = options;
     const session = new SnackSession({
       sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
       name: `project-${project.getCurrentId()}`,
       sdkVersion: '31.0.0',
-      snackId,
+      snackId: expoSnackId,
       user: {
         sessionSecret: config.expoSession || EXPO_SESSION_SECRET
       }
     });
 
-    const appJson = session.generateAppJson();
+    const appJson = JSON.parse(
+      exportExpoAppJsonEjs({
+        appName,
+        projectId: project.getCurrentId(),
+        iconPath: iconUri,
+        splashImagePath: splashImageUri
+      })
+    );
+
+    // TODO: remove the onlineOnlyExpo patching once getApkUrlAsync()
+    // properly supports our full app.json
+    const {
+      updates, // eslint-disable-line no-unused-vars
+      assetBundlePatterns, // eslint-disable-line no-unused-vars
+      packagerOpts, // eslint-disable-line no-unused-vars
+      ...onlineOnlyExpo
+    } = appJson.expo;
+    appJson.expo = onlineOnlyExpo;
 
     const artifactUrl = await session.getApkUrlAsync(appJson);
 
@@ -660,7 +693,7 @@ export default {
     const session = new SnackSession({
       sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
       files,
-      name: project.getCurrentName(),
+      name: `project-${project.getCurrentId()}`,
       sdkVersion: '31.0.0',
       user: {
         sessionSecret: config.expoSession || EXPO_SESSION_SECRET
@@ -702,6 +735,18 @@ export default {
       filename: 'warning.png',
       assetLocation: 'appassets/'
     });
+    appAssets.push({
+      url: exportExpoIconPng,
+      dataType: 'binary',
+      filename: 'icon.png',
+      assetLocation: 'appassets/'
+    });
+    appAssets.push({
+      url: exportExpoSplashPng,
+      dataType: 'binary',
+      filename: 'splash.png',
+      assetLocation: 'appassets/'
+    });
 
     const assetDownloads = appAssets.map(asset =>
       download(asset.url, asset.dataType || 'text')
@@ -734,7 +779,9 @@ export default {
 
     return {
       expoUri,
-      expoSnackId
+      expoSnackId,
+      iconUri: files['appassets/icon.png'].contents,
+      splashImageUri: files['appassets/splash.png'].contents
     };
   }
 };

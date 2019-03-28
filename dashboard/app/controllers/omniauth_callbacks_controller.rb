@@ -24,12 +24,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/google_oauth2/callback
   def google_oauth2
+    user = find_user_by_credential
+    user&.update_oauth_credential_tokens auth_hash
+
     # Redirect to open roster dialog on home page if user just authorized access
     # to Google Classroom courses and rosters
     return redirect_to '/home?open=rosterDialog' if just_authorized_google_classroom?
     return connect_provider if should_connect_provider?
 
-    user = find_user_by_credential
     if user
       sign_in_google_oauth2 user
     else
@@ -161,7 +163,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def sign_in_google_oauth2(user)
     SignUpTracking.log_oauth_callback AuthenticationOption::GOOGLE, session
     prepare_locale_cookie user
-    user.update_oauth_credential_tokens auth_hash
 
     if allows_google_classroom_takeover user
       user = silent_takeover user, auth_hash
@@ -227,6 +228,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def find_user_by_credential
+    return nil unless auth_hash
+
     User.find_by_credential \
       type: auth_hash.provider,
       id: auth_hash.uid
