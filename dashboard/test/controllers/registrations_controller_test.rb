@@ -106,7 +106,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: teacher without a password can add a password" do
-    teacher = create :teacher, :with_migrated_google_authentication_option, encrypted_password: nil
+    teacher = create :teacher, :with_google_authentication_option, encrypted_password: nil
     teacher.update_attribute(:password, nil)
     sign_in teacher
 
@@ -117,7 +117,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: student without a password can add a password" do
-    student = create :student, :with_migrated_google_authentication_option, encrypted_password: nil
+    student = create :student, :with_google_authentication_option, encrypted_password: nil
     student.update_attribute(:password, nil)
     sign_in student
 

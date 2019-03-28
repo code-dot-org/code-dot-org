@@ -60,6 +60,7 @@ DEPENDENCIES
     revision: 969318033aecd49dbbd57d9dafd03a84959d7736
     branch: cdo
   ntp (~> 1.8.6)
+  seven_zip (< 3.0.0)
   sudo-user
     path: sudo-user
 
@@ -73,7 +74,7 @@ GRAPH
   cdo-analytics (0.0.0)
     apt (~> 2.6.0)
     ark (>= 0.0.0)
-  cdo-apps (0.2.340)
+  cdo-apps (0.2.343)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-analytics (>= 0.0.0)
@@ -119,7 +120,7 @@ GRAPH
     build-essential (>= 0.0.0)
   cdo-jemalloc (0.1.2)
     ark (>= 0.0.0)
-  cdo-mysql (0.1.11)
+  cdo-mysql (0.1.13)
     apt (~> 2.6.0)
   cdo-networking (0.1.1)
     ixgbevf (>= 0.0.0)
@@ -128,7 +129,7 @@ GRAPH
   cdo-nginx (0.0.14)
     apt (>= 0.0.0)
     ssl_certificate (>= 0.0.0)
-  cdo-nodejs (0.2.25)
+  cdo-nodejs (0.2.26)
     nodejs (>= 0.0.0)
   cdo-postfix (0.2.7)
     apt (>= 0.0.0)
@@ -141,7 +142,8 @@ GRAPH
     apt (~> 2.6.0)
     sudo-user (>= 0.0.0)
   cdo-secrets (0.1.7)
-  cdo-users (0.1.20)
+  cdo-users (0.1.22)
+    apt (~> 2.6.0)
   cdo-varnish (0.3.209)
     apt (>= 0.0.0)
   chef-client (4.2.4)

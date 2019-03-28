@@ -66,6 +66,9 @@ class StageProgress extends Component {
       levels = levels.filter(level => !level.isConceptLevel);
     }
 
+    // Bonus levels should not count towards mastery.
+    levels = levels.filter(level => !level.bonus);
+
     return (
       <div
         className="react_stage"

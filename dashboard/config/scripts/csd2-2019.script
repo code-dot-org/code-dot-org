@@ -2,9 +2,10 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-18/unit2/"], ["teacherForum", "https://forum.code.org/c/csd2"], ["vocabulary", "https://curriculum.code.org/csd-18/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-18/unit2/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-18/unit2/code/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit2/"], ["teacherForum", "https://forum.code.org/c/csd2"], ["vocabulary", "https://curriculum.code.org/csd-19/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit2/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-19/unit2/code/"]]
 has_verified_resources true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/csd-19/unit2/{LESSON}'
 family_name 'csd2'
 version_year '2019'
 
@@ -46,9 +47,10 @@ named_level 'Social Sleuth_2018_2019'
 stage 'Lists', flex_category: 'csd2_1'
 named_level 'CSD U2L06 TFMD_2019'
 level 'CSD U2 lists intro_2019', progression: 'Lists'
-level 'CSD U2 ordered list_2019', progression: 'Lists'
 level 'CSD U2 unordered list_2019', progression: 'Lists'
+level 'CSD U2 ordered list_2019', progression: 'Lists'
 level 'CSD U2 lists match_2018_2019', progression: 'Lists'
+level 'CSD U2 un_ordered lists', progression: 'Lists'
 named_level 'CSD U2 lists map_2019'
 level 'CSD U2 expand project_2018_2019', progression: 'Expanding Your Website'
 level 'CSD U2 new page_2019', progression: 'Expanding Personal Website'
@@ -137,3 +139,6 @@ stage 'Project - Personal Portfolio Website', flex_category: 'csd2_2'
 named_level 'CSD U2L14 TFMD_2019'
 named_level 'Final Personal Website_2019'
 assessment 'csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019', progression: 'Reflection'
+
+stage 'Post-Project Test', lockable: true, flex_category: 'csd2_2'
+assessment 'CSD Web Development Post-Project Test'
