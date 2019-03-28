@@ -42,9 +42,9 @@ it:
             Getting Loopy:
               name: Diventare Ripetitivi
             Going Places Safely:
-              name: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+              name: Cittadinanza digitale - Visitare luoghi in modo sicuro
             Happy Maps:
-              name: Mappe Felici
+              name: Mappe felici
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Impara come trascinare e rilasciare (drag and drop)'
             'Maze: Debugging':
@@ -60,7 +60,7 @@ it:
             Spelling Bee:
               name: Ape Sapiente
             'Studio: Create a Story':
-              name: 'Laboratorio: Crea una Storia'
+              name: 'Laboratorio: crea una storia'
             The Big Event:
               name: Gli Eventi
         course2:
@@ -107,11 +107,11 @@ it:
             Relay programming:
               name: Programmazione a Staffetta
             'Studio: Create a Story':
-              name: 'Laboratorio: Crea una Storia'
+              name: 'Laboratorio: crea una storia'
             The Big Event:
               name: Gli Eventi
             Your Digital Footprint:
-              name: La tua Impronta Digitale
+              name: La tua impronta digitale
         course3:
           title: Corso 3
           description: Il Corso 3 è rivolto a studenti che hanno già svolto il Corso
@@ -166,7 +166,7 @@ it:
             'Studio: Create a Game':
               name: 'Laboratorio: Crea un Gioco'
             'Studio: Create a Story':
-              name: 'Laboratorio: Crea una Storia'
+              name: 'Laboratorio: crea una storia'
         playlab:
           title: Laboratorio
           description: Crea una storia o inventa un gioco col Laboratorio!
@@ -418,11 +418,11 @@ it:
             The Artist 5:
               name: L'artista 5
             The Farmer:
-              name: La Contadina
+              name: La contadina
             The Farmer 2:
-              name: La Contadina 2
+              name: La contadina 2
             The Farmer 3:
-              name: La Contadina 3
+              name: La contadina 3
             The Internet:
               name: Internet
             The Maze:
@@ -847,7 +847,7 @@ it:
             Graph Paper Programming:
               name: Programmazione su carta a quadretti
             Happy Maps:
-              name: Mappe Felici
+              name: Mappe felici
             Move it, Move it:
               name: Muovilo, Muovilo
             'Real-life Algorithms: Plant a Seed':
@@ -1098,7 +1098,7 @@ it:
         gradeKinder:
           stages:
             Debugging:
-              name: Correzione Errori (Debugging)
+              name: Correzione errori (debugging)
             Events:
               name: Eventi
             'Jigsaw: Learn to drag and drop':
@@ -1126,7 +1126,7 @@ it:
         grade1:
           stages:
             Debugging:
-              name: Correzione Errori (Debugging)
+              name: Correzione errori (debugging)
             Events:
               name: Eventi
             'Jigsaw: Learn to drag and drop':
@@ -1140,7 +1140,7 @@ it:
             Programming:
               name: Programmazione
             Unspotted Bugs:
-              name: Errori Non Riconosciuti
+              name: Errori non riconosciuti
             'Debugging: Unspotted Bugs':
               name: Correzione Errori (Debugging)
             'Events Unplugged: The Big Event':
@@ -1299,21 +1299,21 @@ it:
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
             'Programming: Happy Maps':
-              name: 'Programmazione: Mappe Felici'
+              name: 'Programmazione: Mappe felici'
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
             'Loops: Happy Loops':
-              name: 'Cicli: Cicli Felici'
+              name: Cicli felici
             Loops in Collector:
-              name: Cicli con la Collezionista
+              name: Cicli con la collezionista
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             Going Places Safely:
-              name: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+              name: Cittadinanza digitale - Visitare luoghi in modo sicuro
             'Debugging: Unspotted Bugs':
               name: Correzione Errori (Debugging)
         courseb-draft:
@@ -1327,15 +1327,15 @@ it:
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Collector:
-              name: Cicli con la Collezionista
+              name: Cicli con la collezionista
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
@@ -1343,13 +1343,13 @@ it:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Your Digital Footprint:
-              name: La tua Impronta Digitale
+              name: La tua impronta digitale
         coursec-draft:
           description_short: Impara le basi dell'informatica e crea disegni, storie
             animate o giochi interattivi.
           stages:
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmi della Vita Reale: Aeroplani di Carta'
             Programming in Collector:
@@ -1367,15 +1367,15 @@ it:
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             Your Digital Footprint:
-              name: La tua Impronta Digitale
+              name: La tua impronta digitale
             Building a Foundation:
               name: Costruire le Fondamenta
             Screen Out the Mean:
-              name: Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo
+              name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Debugging in Maze:
               name: 'Labirinto: Correzione di Errori'
             Loops in Harvester:
-              name: Cicli con la Contadina
+              name: Cicli con la contadina
         coursed-draft:
           description_short: Impara le basi dell'informatica e crea disegni, storie
             animate o giochi interattivi.
@@ -1387,15 +1387,15 @@ it:
             Nested Loops in Maze:
               name: Cicli Annidati nel Labirinto
             Nested Loops in Artist:
-              name: Cicli Annidati con l'Artista
+              name: Cicli annidati con l'artista
             While Loops in Farmer:
-              name: Cicli "Mentre" con la Contadina
+              name: Cicli "mentre" con la contadina
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             Conditionals & Loops in Maze:
               name: Istruzioni Condizionali & Cicli nel Labirinto
             Conditionals & Loops in Farmer:
-              name: Istruzioni Condizionali & Cicli con la Contadina
+              name: Istruzioni condizionali & Cicli con la contadina
             Build a Play Lab Game:
               name: Realizzare un gioco col Laboratorio
             Conditionals in Bee:
@@ -1439,7 +1439,7 @@ it:
             Present Your Project:
               name: Presenta il Tuo Progetto
             Private and Personal Information:
-              name: Cittadinanza Digitale - Dati Personali
+              name: Cittadinanza digitale - Dati personali
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1477,7 +1477,7 @@ it:
             Presentation Your Project:
               name: Presenta il Tuo Progetto
             The Power of Words:
-              name: Cittadinanza Digitale - Il Potere delle Parole
+              name: Cittadinanza digitale - Il potere delle parole
             Songwriting with Parameters:
               name: Composizione di Canzoni - Parametri
             Introduction:
@@ -1672,7 +1672,7 @@ it:
                 il mantra: "Cos''è successo? Che cosa sarebbe dovuto succedere? Questo
                 cosa ti suggerisce?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Perseveranza: Stevie e il Grande Progetto'
+              name: 'Perseveranza: Stevie e il grande progetto'
               description_teacher: Quando gli studenti si imbattono in una difficoltà
                 mentre rispondono a una domanda o lavorano su un progetto, è molto
                 facile per loro sentirsi frustrati e rinunciare. Questa lezione introduce
@@ -1697,14 +1697,14 @@ it:
                 in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
                 per completare degli esercizi online.
             'Programming: Happy Maps':
-              name: 'Programmazione: Mappe Felici'
+              name: 'Programmazione: Mappe felici'
               description_teacher: Il passaggio da algoritmo a programmazione può
                 essere più immediato se gli studenti capiscono la differenza tra pianificare
                 una sequenza e codificare tale sequenza in un linguaggio opportuno.
                 Questa attività aiuterà gli studenti ad acquisire esperienza leggendo
                 e scrivendo del codice costituito da semplici simboli.
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
               description_teacher: In questa serie di esercizi online, gli studenti
                 svilupperanno la comprensione degli algoritmi, la correzione degli
                 errori (debugging) e i primi principi generali dell'informatica. Utilizzando
@@ -1722,18 +1722,18 @@ it:
                 Gli studenti scoprono anche che possono raggiungere luoghi interessanti
                 online, ma devono seguire alcune regole per essere al sicuro.
             'Loops: Happy Loops':
-              name: 'Cicli: Cicli Felici'
+              name: Cicli felici
               description_teacher: I cicli sono uno strumento molto utile e potente
                 nella programmazione. Per capire quanto utili possono essere, gli
                 studenti dovranno essere condotti a desiderare un modo più semplice
                 per risolvere problemi banali.
             Loops in Collector:
-              name: Cicli con la Collezionista
+              name: Cicli con la collezionista
               description_teacher: Basandosi sul concetto di istruzioni ripetute appreso
                 in "Cicli Felici", in questa lezione gli studenti utilizzeranno i
                 cicli per raccogliere dei diamanti su Code.org in modo più efficiente.
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
               description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
                 immagini ripetendo semplici sequenze di istruzioni. Nella precedente
                 lezione, i cicli sono stati utilizzati per attraversare un labirinto
@@ -1766,7 +1766,7 @@ it:
             'Debugging: Unspotted Bugs':
               name: Correzione Errori (Debugging)
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Perseveranza: Stevie e il Grande Progetto'
+              name: 'Perseveranza: Stevie e il grande progetto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
@@ -1774,15 +1774,15 @@ it:
             Your Digital Footprint:
               name: 'Cittadinanza Digitale: La Mia Impronta Digitale'
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Collector:
-              name: Cicli con la Collezionista
+              name: Cicli con la collezionista
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
@@ -1805,7 +1805,7 @@ it:
             Building a Foundation:
               name: 'Persistenza: Costruire le Fondamenta'
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
             Debugging in Maze:
               name: 'Labirinto: Correzione di Errori'
             'Real-life Algorithms: Paper Planes':
@@ -1817,7 +1817,7 @@ it:
             'Loops: Getting Loopy':
               name: 'Cicli: Diventare Ripetitivi'
             Loops in Harvester:
-              name: Cicli con la Contadina
+              name: Cicli con la contadina
             'Events: The Big Event':
               name: Eventi
             Build a Flappy Game:
@@ -1829,7 +1829,7 @@ it:
             Binary Bracelets:
               name: 'Oltre la programmazione: Bracciali Binari'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
           title: Corso C
@@ -1893,7 +1893,7 @@ it:
                 Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti
                 in entrambi i cicli influenzano il programma quando si clicca su "Esegui".
             Nested Loops in Artist:
-              name: Cicli Annidati con l'Artista
+              name: Cicli annidati con l'artista
               description_student: Qui userai dei cicli annidati per creare spettacolari
                 disegni da mostrare ad amici e parenti.
               description_teacher: Ora che gli studenti sanno come annidare i loro
@@ -1910,7 +1910,7 @@ it:
                 contro il tempo: gli studenti si suddividono in squadre e lavorano
                 insieme per scrivere un programma un''istruzione alla volta.'
             While Loops in Farmer:
-              name: Cicli "Mentre" con la Contadina
+              name: Cicli "mentre" con la contadina
               description_student: 'I cicli sono molto utili nella programmazione.
                 Grazie a questa lezione imparerai un nuovo tipo di cicli: i cicli
                 "mentre"!'
@@ -1962,7 +1962,7 @@ it:
                 creeranno codice più complesso che darà spazio alla loro creatività
                 e al pensiero critico!'
             Conditionals & Loops in Farmer:
-              name: Istruzioni Condizionali & Cicli con la Contadina
+              name: Istruzioni condizionali & Cicli con la contadina
               description_student: Non è sempre facile capire quale istruzione condizionale
                 usare. Questa lezione ti aiuterà a prendere confidenza e imparare
                 a fare le scelte corrette.
@@ -2047,7 +2047,7 @@ it:
             Introduction:
               name: Introduzione agli Esercizi Online
             The Power of Words:
-              name: Cittadinanza Digitale - Il Potere delle Parole
+              name: Cittadinanza digitale - Il potere delle parole
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Envelope Variables:
@@ -2094,7 +2094,7 @@ it:
             'Algorithms: Dice Race':
               name: 'Algoritmi: Gara con i Dadi'
             Conditionals:
-              name: Istruzioni Condizionali con la Contadina
+              name: Istruzioni condizionali con la contadina
               description_teacher: Questa lezione introduce gli studenti allo studio
                 dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli
                 mentre_ sono cicli che continuano a ripetere le istruzioni finché
@@ -2170,7 +2170,7 @@ it:
                 studenti quanto utile possa essere il lavoro di squadra nel settore
                 dell'informatica.
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
@@ -2180,9 +2180,9 @@ it:
             Programming in Artist:
               name: Programmare l'Artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
               name: Cicli Annidati con l'Ape e lo Zombie
             Nested Loops with Frozen:
@@ -2318,7 +2318,7 @@ it:
             Functions in Bee:
               name: Funzioni con l'Ape
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
@@ -2328,9 +2328,9 @@ it:
             Programming in Artist:
               name: Programmare l'Artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
               name: Cicli Annidati con l'Ape e lo Zombie
             Nested Loops with Frozen:
@@ -2356,15 +2356,15 @@ it:
             Debugging in Collector:
               name: Introduzione al Debugging
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Internet:
               name: Internet
             Digital Citizenship:
               name: Cittadinanza Digitale
             Screen Out the Mean:
-              name: Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo
+              name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             'Events: The Big Event':
               name: Eventi
             Build a Star Wars Game:
@@ -2376,7 +2376,7 @@ it:
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             While Loops in Farmer:
-              name: Cicli "Mentre" con la Contadina
+              name: Cicli "mentre" con la contadina
             Conditionals & Loops in Maze:
               name: Istruzioni Condizionali & Cicli nel Labirinto
             Envelope Variables:
@@ -2420,7 +2420,7 @@ it:
             Nested Loops:
               name: Cicli annidati
             Conditionals & Loops in Harvester:
-              name: Istruzioni Condizionali & Cicli con la Contadina
+              name: Istruzioni condizionali & Cicli con la contadina
             Until Loops in Maze:
               name: Cicli "Fino a Che" con il Labirinto
           title: Corso rapido
@@ -2436,7 +2436,7 @@ it:
             'Debugging: Unspotted Bugs':
               name: Correzione Errori (Debugging)
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Perseveranza: Stevie e il Grande Progetto'
+              name: 'Perseveranza: Stevie e il grande progetto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
@@ -2444,15 +2444,15 @@ it:
             'Online Safety: Your Digital Footprint':
               name: 'Cittadinanza Digitale: La Mia Impronta Digitale'
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Collector:
-              name: Cicli con la Collezionista
+              name: Cicli con la collezionista
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
@@ -2497,7 +2497,7 @@ it:
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Building a Foundation:
               name: Costruire le Fondamenta
             Debugging with Scrat:
@@ -2505,9 +2505,9 @@ it:
             Programming in Artist:
               name: Programmare l'Artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops:
               name: Cicli annidati
             Nested Loops with Frozen:
@@ -2517,7 +2517,7 @@ it:
             Conditionals:
               name: Istruzioni condizionali
             Private and Personal Information:
-              name: Cittadinanza Digitale - Dati Personali
+              name: Cittadinanza digitale - Dati personali
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
             'Functions: Songwriting':
@@ -2559,11 +2559,11 @@ it:
             Nested Loops:
               name: Cicli annidati
             Nested Loops in Artist:
-              name: Cicli Annidati con l'Artista
+              name: Cicli annidati con l'artista
             Debugging in Collector:
               name: Debugging con la Collezionista
             While Loops in Farmer:
-              name: Cicli "Mentre" con la Contadina
+              name: Cicli "mentre" con la contadina
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             Conditionals in Bee:
@@ -2581,7 +2581,7 @@ it:
             Building a Foundation:
               name: Costruire le Fondamenta
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops in Bee:
               name: Cicli Annidati con l'Ape
             Loops in Ice Age:
@@ -2596,17 +2596,17 @@ it:
             Debugging in Collector:
               name: Debugging con la Collezionista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             'Common Sense Education: Screen Out the Mean':
-              name: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+              name: 'Cittadinanza digitale: Caccia via le cattiverie dallo schermo'
             'Events: The Big Event':
               name: Eventi
             Events in Bounce:
               name: Eventi con Ping-Pong
             While Loops in Farmer:
-              name: Cicli "Mentre" con la Contadina
+              name: Cicli "mentre" con la contadina
             'Variables: Envelope Variables':
               name: Variabili e Buste
             Variables in Play Lab:
@@ -2636,11 +2636,11 @@ it:
         new-stages-sept-2017:
           stages:
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
         new-e:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
@@ -2650,9 +2650,9 @@ it:
             Programming in Artist:
               name: Programmare l'Artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
               name: Cicli Annidati con l'Ape e lo Zombie
             Nested Loops with Frozen:
@@ -2662,7 +2662,7 @@ it:
             Conditionals:
               name: Istruzioni condizionali
             Private and Personal Information:
-              name: Cittadinanza Digitale - Dati Personali
+              name: Cittadinanza digitale - Dati personali
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
             'Functions: Songwriting':
@@ -2690,7 +2690,7 @@ it:
         new-f:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
@@ -2700,15 +2700,15 @@ it:
             Programming in Artist:
               name: Programmare l'Artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
               name: Cicli Annidati con l'Ape e lo Zombie
             Nested Loops with Frozen:
               name: Cicli Annidati con Frozen
             The Power of Words:
-              name: Cittadinanza Digitale - Il Potere delle Parole
+              name: Cittadinanza digitale - Il potere delle parole
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Envelope Variables:
@@ -2777,7 +2777,7 @@ it:
         course-e-2018:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
@@ -2787,9 +2787,9 @@ it:
             Programming in Artist:
               name: Programmare l'Artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops:
               name: Cicli annidati
             Nested Loops with Frozen:
@@ -2801,7 +2801,7 @@ it:
             Conditionals:
               name: Istruzioni condizionali
             Private and Personal Information:
-              name: Cittadinanza Digitale - Dati Personali
+              name: Cittadinanza digitale - Dati personali
             'Functions: Songwriting':
               name: 'Funzioni: Composizione di Canzoni'
             Functions in Artist:
@@ -2831,7 +2831,7 @@ it:
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
@@ -2841,9 +2841,9 @@ it:
             Programming in Artist:
               name: Programmare l'Artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
               name: Cicli Annidati con l'Ape e lo Zombie
             Nested Loops with Frozen:
@@ -2851,7 +2851,7 @@ it:
             Introduction:
               name: Introduzione
             The Power of Words:
-              name: Cittadinanza Digitale - Il Potere delle Parole
+              name: Cittadinanza digitale - Il potere delle parole
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Envelope Variables:
@@ -2931,13 +2931,13 @@ it:
           description_audience: 'Età: da 4 a 7 anni'
           stages:
             'Debugging: Unspotted Bugs':
-              name: Errori Non Riconosciuti
+              name: Errori non riconosciuti
               description_teacher: 'Questa lezione guiderà gli studenti attraverso
                 le fasi di ricerca degli errori (debugging).  Gli studenti impareranno
                 il mantra: "Cos''è successo? Che cosa sarebbe dovuto succedere? Questo
                 cosa ti suggerisce?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: Stevie e il Grande Progetto
+              name: Stevie e il grande progetto
               description_teacher: Quando gli studenti si imbattono in una difficoltà
                 mentre rispondono a una domanda o lavorano su un progetto, è molto
                 facile per loro sentirsi frustrati e rinunciare. Questa lezione introduce
@@ -2948,7 +2948,7 @@ it:
                 Se avete più tempo, non esitate a prolungare la durata della fase
                 di costruzione e revisione dell'attività Corsa delle Biglie.
             'Real-life Algorithms: Plant a Seed':
-              name: Pianta un Seme
+              name: Pianta un seme
               description_teacher: In questa lezione, gli studenti metteranno in relazione
                 il concetto di algoritmo con le attività di ogni giorno, nella vita
                 reale, piantando un vero seme. L'obiettivo è quello di iniziare a
@@ -2962,7 +2962,7 @@ it:
                 in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
                 per completare degli esercizi online.
             'Programming: Happy Maps':
-              name: Mappe Felici
+              name: Mappe felici
               description_teacher: Il passaggio da algoritmo a programmazione può
                 essere più immediato se gli studenti capiscono la differenza tra pianificare
                 una sequenza e codificare tale sequenza in un linguaggio opportuno.
@@ -2980,25 +2980,25 @@ it:
                 pratica con la risoluzione dei problemi (problem solving) e nello
                 sviluppo del pensiero critico (critical thinking).
             Going Places Safely:
-              name: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+              name: Cittadinanza digitale - Visitare luoghi in modo sicuro
               description_teacher: In collaborazione con Common-Sense-Media, questa
                 lezione aiuta gli studenti a imparare che molti siti Web richiedono
                 informazioni private e spiega come gestire responsabilmente tali richieste.
                 Gli studenti scoprono anche che possono raggiungere luoghi interessanti
                 online, ma devono seguire alcune regole per essere al sicuro.
             'Loops: Happy Loops':
-              name: Cicli Felici
+              name: Cicli felici
               description_teacher: I cicli sono uno strumento molto utile e potente
                 nella programmazione. Per capire quanto utili possono essere, gli
                 studenti dovranno essere condotti a desiderare un modo più semplice
                 per risolvere problemi banali.
             Loops in Collector:
-              name: Cicli con la Collezionista
+              name: Cicli con la collezionista
               description_teacher: Basandosi sul concetto di istruzioni ripetute appreso
                 in "Cicli Felici", in questa lezione gli studenti utilizzeranno i
                 cicli per raccogliere dei diamanti su Code.org in modo più efficiente.
             Loops in Artist:
-              name: Al mare con i Cicli
+              name: Al mare con i cicli
               description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
                 immagini ripetendo semplici sequenze di istruzioni. Nella precedente
                 lezione, i cicli sono stati utilizzati per attraversare un labirinto
@@ -3006,12 +3006,13 @@ it:
                 Alla fine di questa lezione, gli studenti avranno l'opportunità di
                 creare le proprie immagini utilizzando i cicli.
             'Events: The Big Event':
+              name: Gli eventi (per i più piccoli)
               description_teacher: Gli eventi sono un ottimo strumento per aggiungere
                 variazioni ad un algoritmo già scritto. A volte si desidera che il
                 proprio programma risponda all'utente esattamente quando l'utente
                 ne ha bisogno. Gli eventi servono proprio a questo.
             Events in Play Lab:
-              name: In Movimento con gli Eventi
+              name: In movimento con gli eventi
               description_teacher: In questa attività online, gli studenti avranno
                 l'opportunità di imparare a utilizzare gli eventi del Laboratorio
                 e di applicare tutte le competenze di programmazione che hanno imparato
@@ -3020,13 +3021,13 @@ it:
             Programming in Bee:
               name: Programmare l'Ape
             Programming in Harvester:
-              name: Programmazione con la Contadina
+              name: Programmazione con la contadina
             Loops in Harvester:
-              name: Cicli con la Contadina
+              name: Cicli con la contadina
             Sequencing in Maze:
               name: Sequenze di istruzioni con Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
-              name: Stevie e il Grande Progetto
+              name: Stevie e il grande progetto
         express-2018:
           title: Corso Rapido
           assignment_family_title: Corso Rapido
@@ -3043,19 +3044,19 @@ it:
             Debugging in Collector:
               name: Debugging con la Collezionista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops:
               name: Cicli annidati
             'Common Sense Education: Screen Out the Mean':
-              name: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+              name: 'Cittadinanza digitale: Caccia via le cattiverie dallo schermo'
             'Events: The Big Event':
               name: Gli Eventi
             Events in Bounce:
               name: Eventi con Ping-Pong
             While Loops in Farmer:
-              name: Cicli "Mentre" con la Contadina
+              name: Cicli "mentre" con la contadina
             'Variables: Envelope Variables':
               name: Variabili e Buste
             Variables in Play Lab:
@@ -3063,7 +3064,7 @@ it:
             For Loops in Bee:
               name: Cicli con Contatore con l'Ape
             For Loops in Artist:
-              name: Cicli con Contatore con l'Artista
+              name: Cicli con contatore con l'artista
             'Functions: Songwriting with Parameters':
               name: 'Funzioni: Composizione di Canzoni con Parametri'
             Functions in Bee:
@@ -3107,23 +3108,23 @@ it:
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             Conditionals & Loops in Harvester:
-              name: Istruzioni Condizionali & Cicli con la Contadina
+              name: Istruzioni condizionali & Cicli con la contadina
             'Functions: Songwriting':
               name: Composizione di canzoni
             Functions in Minecraft:
               name: Funzioni con Minecraft
             Functions in Harvester:
-              name: Funzioni con la Contadina
+              name: Funzioni con la contadina
             Functions in Artist:
               name: Funzioni con l'Artista
             Screen Out the Mean:
-              name: Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo
+              name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Determine the Concept:
               name: Fissare i Concetti
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
             The Power of Words:
-              name: Cittadinanza Digitale - Il Potere delle Parole
+              name: Cittadinanza digitale - Il potere delle parole
             Envelope Variables:
               name: Variabili e Buste
             Variables as Constant in Artist:
@@ -3173,19 +3174,21 @@ it:
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
             Your Digital Footprint:
-              name: La tua Impronta Digitale
+              name: La tua impronta digitale
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici per i più piccoli'
+              name: I miei amici robotici (per i più piccoli)
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici per i più piccoli'
+              name: 'Cicli: I miei ciclici amici robotici (per i più piccoli)'
             Loops in Collector:
-              name: Cicli con la Collezionista
+              name: Cicli con la collezionista
             Loops in Artist:
-              name: Disegnare Giardini con i Cicli
+              name: Disegnare giardini con i cicli
+            'Events: The Big Event':
+              name: Gli eventi (per i più piccoli)
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             Programming in Ice Age:
@@ -3197,7 +3200,7 @@ it:
             Move It, Move It:
               name: Muovilo, muovilo
             Copyright and Creativity:
-              name: È Fantastico Creare e Comportarsi Lealmente
+              name: È fantastico creare e comportarsi lealmente
         coursed-2018:
           title: Corso D (2018)
           assignment_family_title: Corso D
@@ -3220,13 +3223,13 @@ it:
             Events in Bounce:
               name: Eventi con Ping-Pong
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops in Bee:
               name: Cicli Annidati nel Labirinto
             Nested Loops in Artist:
-              name: Cicli Annidati con l'Artista
+              name: Cicli annidati con l'artista
             While Loops in Farmer:
-              name: Cicli "Mentre" con la Contadina
+              name: Cicli "mentre" con la contadina
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             Conditionals in Bee:
@@ -3250,7 +3253,7 @@ it:
             Conditionals in Maze:
               name: Istruzioni Condizionali nel Labirinto
             Conditionals & Loops in Harvester:
-              name: Istruzioni Condizionali & Cicli con la Contadina
+              name: Istruzioni condizionali & Cicli con la contadina
             Graph Paper Programming:
               name: Programmazione su carta a quadretti
             Relay Programming:
@@ -3292,9 +3295,9 @@ it:
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Loops in Harvester:
-              name: Cicli con la Contadina
+              name: Cicli con la contadina
             'Events: The Big Event':
               name: Gli Eventi
             Build a Flappy Game:
@@ -3302,7 +3305,7 @@ it:
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             Screen Out the Mean:
-              name: Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo
+              name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Binary Bracelets:
               name: Braccialetti Binari
             Looking Ahead:
@@ -3321,7 +3324,7 @@ it:
           description_audience: Da 8 a 12 anni
           stages:
             'Programming: My Robotic Friends':
-              name: I Miei Amici Robotici
+              name: I miei amici robotici
             Sequence in Maze:
               name: Aggiungere Commenti nei Programmi
             Building a Foundation:
@@ -3331,9 +3334,9 @@ it:
             Programming in Artist:
               name: Programmare l'Artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops:
               name: Cicli Annidati nel Labirinto
             Nested Loops with Frozen:
@@ -3343,7 +3346,7 @@ it:
             Introduction:
               name: Introduzione
             Conditionals:
-              name: Istruzioni Condizionali con la Contadina
+              name: Istruzioni condizionali con la contadina
               description_teacher: Questa lezione introduce gli studenti allo studio
                 dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli
                 mentre_ sono cicli che continuano a ripetere le istruzioni finché
@@ -3355,7 +3358,7 @@ it:
                 di codice solo se una certa condizione è vera, altrimenti viene eseguito
                 un insieme di istruzioni alternativo.
             Private and Personal Information:
-              name: Cittadinanza Digitale - Dati Personali
+              name: Cittadinanza digitale - Dati personali
               description_teacher: |-
                 In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono.
 
@@ -3383,7 +3386,7 @@ it:
                 più complessi, gli studenti impareranno ad usare le funzioni annidate,
                 richiamando una funzione dall'interno di un'altra.
             Functions in Harvester:
-              name: Funzioni con la Contadina
+              name: Funzioni con la contadina
             Determine the Concept:
               name: Fissare i Concetti
               description_teacher: Questa lezione riunisce i concetti delle lezioni
@@ -3472,7 +3475,7 @@ it:
           description_audience: Da 9 a 13 anni
           stages:
             'Programming: My Robotic Friends':
-              name: I Miei Amici Robotici
+              name: I miei amici robotici
             Sequence in Maze:
               name: Aggiungere Commenti nei Programmi
             Building a Foundation:
@@ -3482,9 +3485,9 @@ it:
             Programming in Artist:
               name: Programmare l'Artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
               name: Cicli Annidati nel Labirinto
             Nested Loops with Frozen:
@@ -3492,7 +3495,7 @@ it:
             Introduction:
               name: Introduzione
             The Power of Words:
-              name: Cittadinanza Digitale - Il Potere delle Parole
+              name: Cittadinanza digitale - Il potere delle parole
               description_student: Il bullismo non va mai bene. In questa lezione
                 imparerai cosa si può dire online e cosa deve essere evitato.
               description_teacher: "Gli studenti sanno che mentre si divertono con
@@ -3539,7 +3542,7 @@ it:
                 lezioni precedenti, poi proseguiranno usando i cicli con contatore
                 per risolvere più efficacemente problemi più complicati.
             For Loops in Artist:
-              name: Cicli con Contatore con l'Artista
+              name: Cicli con contatore con l'artista
               description_student: Preparati a creare il tuo prossimo capolavoro.
                 Qui userai i cicli con contatore per creare immagini sbalorditive.
               description_teacher: In questa lezione, gli studenti continuano ad esercitarsi
@@ -3610,7 +3613,7 @@ it:
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             Conditionals:
-              name: Istruzioni Condizionali con la Contadina
+              name: Istruzioni condizionali con la contadina
             Variables as Constant in Artist:
               name: Variabili con l'Artista
             Variables that Change in Bee:
@@ -3626,7 +3629,7 @@ it:
             Functions in Minecraft:
               name: Funzioni con Minecraft
             Conditionals in Farmer:
-              name: Istruzioni Condizionali con la Contadina
+              name: Istruzioni condizionali con la contadina
         csp1-2018:
           stages:
             Personal Innovations:
@@ -3674,23 +3677,25 @@ it:
             condividere.
           stages:
             'Debugging: Unspotted Bugs':
-              name: Errori Non Riconosciuti
+              name: Errori non riconosciuti
             'Persistence & Frustration: Stevie and the Marbles':
-              name: Stevie e il Grande Progetto
+              name: Stevie e il grande progetto
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici per i più piccoli'
+              name: I miei amici robotici (per i più piccoli)
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici per i più piccoli'
+              name: 'Cicli: I miei ciclici amici robotici (per i più piccoli)'
             Loops in Collector:
-              name: Cicli con la Collezionista
+              name: Cicli con la collezionista
             Loops in Artist:
-              name: Disegnare Giardini con i Cicli
+              name: Disegnare giardini con i cicli
+            'Events: The Big Event':
+              name: Gli eventi (per i più piccoli)
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             Spelling Bee:
@@ -3700,17 +3705,17 @@ it:
             Sequencing with Scrat:
               name: Sequenze di istruzioni con Scrat
             Your Digital Footprint:
-              name: La tua Impronta Digitale
+              name: La tua impronta digitale
             Programming in Ice Age:
               name: Programmare con Scrat
             Copyright and Creativity:
-              name: È Fantastico Creare e Comportarsi Lealmente
+              name: È fantastico creare e comportarsi lealmente
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
             Loops in Ice Age:
               name: Cicli con Scrat
             'Persistence & Frustration: Stevie and the Big Project':
-              name: Stevie e il Grande Progetto
+              name: Stevie e il grande progetto
         spritelab-validated:
           stages:
             Alien Dance Party - Input:
@@ -3790,7 +3795,7 @@ it:
           description_audience: Da 9 a 13 anni
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
@@ -3800,9 +3805,9 @@ it:
             Programming in Artist:
               name: Programmare l'Artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
               name: Cicli Annidati con l'Ape e lo Zombie
             Nested Loops with Frozen:
@@ -3810,11 +3815,11 @@ it:
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             Conditionals in Farmer:
-              name: Istruzioni Condizionali con la Contadina
+              name: Istruzioni condizionali con la contadina
             Functions in Minecraft:
               name: Funzioni con Minecraft
             The Power of Words:
-              name: Cittadinanza Digitale - Il Potere delle Parole
+              name: Cittadinanza digitale - Il potere delle parole
               description_student: Il bullismo non va mai bene. In questa lezione
                 imparerai cosa si può dire online e cosa deve essere evitato.
               description_teacher: "Gli studenti sanno che mentre si divertono con
@@ -3924,7 +3929,7 @@ it:
             Events with Sprite Lab:
               name: Eventi con il Laboratorio dei personaggi
             Loops with the Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Sprite Lab Behaviors:
               name: Comportamenti del Laboratorio dei personaggi
             End of Course Project:
@@ -3968,15 +3973,15 @@ it:
             Loops in Ice Age:
               name: Cicli con l'Era Glaciale
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops in Bee:
               name: Cicli Annidati con l'Ape
             Nested Loops in Artist:
-              name: Cicli Annidati con l'Artista
+              name: Cicli annidati con l'artista
             Nested Loops in Frozen:
               name: Cicli Annidati con Frozen
             While Loops in Farmer:
-              name: Cicli "Mentre" con la Contadina
+              name: Cicli "mentre" con la contadina
             Until Loops in Maze:
               name: Cicli "Fino a Che" con il Labirinto
             Conditionals with Cards:
@@ -3984,7 +3989,7 @@ it:
             Conditionals in Bee:
               name: Istruzioni Condizionali con l'Ape
             Conditionals & Loops in Harvester:
-              name: Istruzioni Condizionali & Cicli con la Contadina
+              name: Istruzioni condizionali & Cicli con la contadina
             Digital Citizenship:
               name: Cittadinanza Digitale
             Build a Play Lab Game:
@@ -4005,7 +4010,7 @@ it:
           description_audience: Da 8 a 12 anni
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
@@ -4015,9 +4020,9 @@ it:
             Programming in Artist:
               name: Programmare l'Artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Nested Loops:
               name: Cicli annidati
             Nested Loops with Frozen:
@@ -4037,7 +4042,7 @@ it:
                 di codice solo se una certa condizione è vera, altrimenti viene eseguito
                 un insieme di istruzioni alternativo.
             Private and Personal Information:
-              name: Cittadinanza Digitale - Dati Personali
+              name: Cittadinanza digitale - Dati personali
               description_teacher: |-
                 In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono.
 
@@ -4134,7 +4139,7 @@ it:
             Nested Loops in Bee:
               name: Cicli Annidati con l'Ape
             Nested Loops in Artist:
-              name: Cicli Annidati con l'Artista
+              name: Cicli annidati con l'artista
             Nested Loops in Frozen:
               name: Cicli Annidati con Frozen
             End of Course Project:
@@ -4149,7 +4154,7 @@ it:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmi: Programmazione su carta a quadretti'
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
             Relay Programming:
               name: Programmazione a Staffetta
             Debugging in Maze:
@@ -4163,7 +4168,7 @@ it:
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Copyright and Creativity:
               name: Diritti d'Autore e Creatività
             Nested Loops in Bee:
@@ -4171,7 +4176,7 @@ it:
             Nested Loops in Frozen:
               name: Cicli Annidati con Frozen
             While Loops in Farmer:
-              name: Cicli "Mentre" con la Contadina
+              name: Cicli "mentre" con la contadina
             Until Loops in Maze:
               name: Cicli "Fino a Che" con il Labirinto
             Conditionals with Cards:
@@ -4179,7 +4184,7 @@ it:
             Conditionals in Bee:
               name: Istruzioni Condizionali con l'Ape
             Conditionals & Loops in Harvester:
-              name: Istruzioni Condizionali & Cicli con la Contadina
+              name: Istruzioni condizionali & Cicli con la contadina
             'Functions: Songwriting':
               name: 'Funzioni: Composizione di Canzoni'
             Functions in Minecraft:
@@ -4189,7 +4194,7 @@ it:
             Functions in Artist:
               name: Funzioni con l'Artista
             Screen Out the Mean:
-              name: Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo
+              name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Determine the Concept:
               name: Fissare i Concetti
             'Events: The Big Event':
@@ -4197,7 +4202,7 @@ it:
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
             The Power of Words:
-              name: Cittadinanza Digitale - Il Potere delle Parole
+              name: Cittadinanza digitale - Il potere delle parole
             Envelope Variables:
               name: Variabili e Buste
             For Loop Fun:
@@ -4248,7 +4253,7 @@ it:
             Building a Foundation:
               name: Costruire le Fondamenta
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
             Debugging in Maze:
               name: 'Labirinto: Correzione di Errori'
             'Real-life Algorithms: Paper Planes':
@@ -4262,15 +4267,15 @@ it:
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             Loops in Harvester:
-              name: Cicli con la Contadina
+              name: Cicli con la contadina
             'Events: The Big Event':
               name: Eventi
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
             Screen Out the Mean:
-              name: Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo
+              name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             Looking Ahead:
@@ -4280,9 +4285,9 @@ it:
             'End of Course Project: Play Lab':
               name: 'Progetto di fine corso: Laboratorio'
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
         gamelab:
           title: Sviluppo Giochi
         coursea-2019:
@@ -4307,14 +4312,14 @@ it:
                 costruire le competenze per tradurre le situazioni del mondo reale
                 in algoritmi e viceversa.
             'Programming: Happy Maps':
-              name: 'Programmazione: Mappe Felici'
+              name: 'Programmazione: Mappe felici'
               description_teacher: Il passaggio da algoritmo a programmazione può
                 essere più immediato se gli studenti capiscono la differenza tra pianificare
                 una sequenza e codificare tale sequenza in un linguaggio opportuno.
                 Questa attività aiuterà gli studenti ad acquisire esperienza leggendo
                 e scrivendo del codice costituito da semplici simboli.
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
               description_teacher: In questa serie di esercizi online, gli studenti
                 svilupperanno la comprensione degli algoritmi, la correzione degli
                 errori (debugging) e i primi principi generali dell'informatica. Utilizzando
@@ -4325,27 +4330,27 @@ it:
                 pratica con la risoluzione dei problemi (problem solving) e nello
                 sviluppo del pensiero critico (critical thinking).
             Going Places Safely:
-              name: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+              name: Cittadinanza digitale - Visitare luoghi in modo sicuro
               description_teacher: In collaborazione con Common-Sense-Media, questa
                 lezione aiuta gli studenti a imparare che molti siti Web richiedono
                 informazioni private e spiega come gestire responsabilmente tali richieste.
                 Gli studenti scoprono anche che possono raggiungere luoghi interessanti
                 online, ma devono seguire alcune regole per essere al sicuro.
             'Loops: Happy Loops':
-              name: 'Cicli: Cicli Felici'
+              name: Cicli felici
               description_teacher: I cicli sono uno strumento molto utile e potente
                 nella programmazione. Per capire quanto utili possono essere, gli
                 studenti dovranno essere condotti a desiderare un modo più semplice
                 per risolvere problemi banali.
             Loops in Harvester:
-              name: Cicli con la Contadina
+              name: Cicli con la contadina
             Loops in Collector:
-              name: Cicli con la Collezionista
+              name: Cicli con la collezionista
               description_teacher: Basandosi sul concetto di istruzioni ripetute appreso
                 in "Cicli Felici", in questa lezione gli studenti utilizzeranno i
                 cicli per raccogliere dei diamanti su Code.org in modo più efficiente.
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
               description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
                 immagini ripetendo semplici sequenze di istruzioni. Nella precedente
                 lezione, i cicli sono stati utilizzati per attraversare un labirinto
@@ -4366,7 +4371,7 @@ it:
                 per creare un gioco animato. È il momento di essere creativi e costruire
                 una storia nel Laboratorio!
             Ocean Scene with Loops:
-              name: Al mare con i Cicli
+              name: Al mare con i cicli
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
             Loops in Ice Age:
@@ -4388,21 +4393,21 @@ it:
             Sequencing with Scrat:
               name: Sequenze di istruzioni con Scrat
             Your Digital Footprint:
-              name: La tua Impronta Digitale
+              name: La tua impronta digitale
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Copyright and Creativity:
               name: Diritti d'Autore e Creatività
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Ice Age:
               name: Cicli con l'Era Glaciale
             Loops in Collector:
-              name: Cicli con la Collezionista
+              name: Cicli con la collezionista
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:
@@ -4410,9 +4415,9 @@ it:
             'Loops: Getting Loopy':
               name: 'Cicli: Diventare Ripetitivi'
             Loops in Harvester:
-              name: Cicli con la Contadina
+              name: Cicli con la contadina
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
         pre-express-2019:
           description: Impara le basi dell'informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
@@ -4425,21 +4430,21 @@ it:
             Sequencing with Scrat:
               name: Sequenze di istruzioni con Scrat
             Your Digital Footprint:
-              name: La tua Impronta Digitale
+              name: La tua impronta digitale
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: I miei amici robotici
             Copyright and Creativity:
               name: Diritti d'Autore e Creatività
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I miei ciclici amici robotici'
             Loops in Ice Age:
               name: Cicli con l'Era Glaciale
             Loops in Collector:
-              name: Cicli con la Collezionista
+              name: Cicli con la collezionista
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Cicli con l'artista
             'Events: The Big Event':
               name: Eventi
             Events in Play Lab:

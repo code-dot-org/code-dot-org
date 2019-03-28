@@ -37,6 +37,7 @@ en-GB:
   nav:
     user:
       create: 'Create'
+      infinity: 'Infinity'
   teacher:
     panel:
       answer_viewer: 'Teacher Panel'
@@ -61,6 +62,10 @@ en-GB:
     delete_no: 'No'
     saved: "Saved"
     cancel: 'Cancel'
+  flex_category:
+    csf_loops: 'Loops'
+    csf_variables: 'Variables'
+    csp_variables: 'Variables'
   pd:
     form_labels:
       email: 'Email'

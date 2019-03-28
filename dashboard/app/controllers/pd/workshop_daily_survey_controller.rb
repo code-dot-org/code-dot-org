@@ -69,6 +69,19 @@ module Pd
         regionalPartnerName: workshop.regional_partner&.name,
         submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
       )
+
+      if CDO.newrelic_logging
+        NewRelic::Agent.record_custom_event(
+          "RenderJotFormView",
+          {
+            route: "GET /pd/workshop_survey/day/#{day}",
+            form_id: @form_id,
+            workshop_course: workshop.course,
+            workshop_subject: workshop.subject,
+            regional_partner_name: workshop.regional_partner&.name,
+          }
+        )
+      end
     end
 
     # POST /pd/workshop_survey/submit
@@ -139,6 +152,19 @@ module Pd
         numFacilitators: facilitators.size,
         submitRedirect: url_for(action: 'submit_facilitator', params: {key: key_params})
       )
+
+      if CDO.newrelic_logging
+        NewRelic::Agent.record_custom_event(
+          "RenderJotFormView",
+          {
+            route: "GET /pd/workshop_survey/facilitators/#{session.id}/#{facilitator_index}",
+            form_id: @form_id,
+            workshop_course: workshop.course,
+            workshop_subject: workshop.subject,
+            regional_partner_name: workshop.regional_partner&.name,
+          }
+        )
+      end
     end
 
     # POST /pd/workshop_survey/facilitators/submit

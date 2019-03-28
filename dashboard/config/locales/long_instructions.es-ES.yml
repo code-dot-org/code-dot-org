@@ -81,6 +81,9 @@ es:
         a 'dibuja un hexágono', pero del que todavía nos da plazas!  ¿\r \r puede
         modificar la función 'dibujar un hexágono' para dibujar un hexágono con lados
         de pixel 50? \r \r dibujar la imagen usando la nueva función!"
+      2-3 Artist Functions 11.5 a: "Aquí tienes la misma función `dibuja un hexágono`.
+        \n\n¿Qué ocurriría si haces un bucle del programa principal **6** veces, girando
+        **60** grados cada vez que se repita el bucle?"
       2-3 Artist Functions 11.5: Aquí está la misma función "Dibuja un hexágono".
         ¿Que pasa si sólo giras 60 grados en cada iteración?
       2-3 Artist Functions 11: "Hemos rebautizado la función 'dibujar un cuadrado'
@@ -99,6 +102,11 @@ es:
         complejas varias veces. Puedes utilizar la función "dibujar una flor" para
         llenar el resto de la caja del jardinero. (Pista: las plantas están separadas
         por una longitud de 100 píxeles)  '
+      2-3 Artist Functions 2 a: "¡Las Funciones te dejan definir nuevos bloques! \n\nHemos
+        movido los bloques necesarios para dibujar un cuadrado a una nueva función
+        llamada `dibujar cuadrado`. Esta vez, usa el pequeño bloque verde de `dibujar
+        cuadrado` para traer esta nueva función y crear los cristales.\n\nLos cuadrados
+        de este dibujo están separados entre sí unos 75 px."
       2-3 Artist Functions 2: ¡Las funciones permiten definir nuevos bloques! Hemos
         movido los bloques para dibujar un cuadrado en la función llamada "dibuja
         un cuadrado". ¿Puedes utilizar la función "dibuja un cuadrado" para crear

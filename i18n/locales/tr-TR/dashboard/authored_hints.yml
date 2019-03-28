@@ -4703,7 +4703,8 @@ tr:
         courseC_artist_loops3a_b: Yarasa etiketini bulmak için 'etiket çiz' bloğunun üzerindeki açılır menüyü kullan.
       courseC_artist_loops3a_2019_authored_hint:
         courseC_artist_loops3a_a: Kuş etiketinden sonra, döngünün içine yalnızca bir blok eklemek isteyeceksin.
-        courseC_artist_loops3a_b: Yarasa etiketini bulmak için 'etiket çiz' bloğunun üzerindeki açılır menüyü kullan.
+        courseC_artist_loops3a_b: |-
+          Yarasa etiketini bulmak için 'etiket çiz' bloğunun üzerindeki açılır menüyü kullan.
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
           İleri atlamak için bu bloğu kullan:

@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedScriptTeacherPanel as ScriptTeacherPanel} from '@cdo/apps/code-studio/components/progress/ScriptTeacherPanel';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import TeacherPanel from '@cdo/apps/code-studio/components/TeacherPanel';
@@ -23,15 +23,18 @@ describe('ScriptTeacherPanel', () => {
     const wrapper = shallow(
       <ScriptTeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Student} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <TeacherPanel>
-        <h3>{commonMsg.teacherPanel()}</h3>
-        <div>
-          <ViewAsToggle />
-          <div>{commonMsg.loading()}</div>
-        </div>
-      </TeacherPanel>
-    );
+
+    expect(
+      wrapper.containsMatchingElement(
+        <TeacherPanel>
+          <h3>{commonMsg.teacherPanel()}</h3>
+          <div>
+            <ViewAsToggle />
+            <div>{commonMsg.loading()}</div>
+          </div>
+        </TeacherPanel>
+      )
+    ).to.be.true;
   });
 
   it('initial view as teacher', () => {

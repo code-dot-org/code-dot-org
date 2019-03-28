@@ -192,9 +192,15 @@ bn:
       create: তৈরি করুন
       applab: অ্যাপ ল্যাব
       artist: শিল্পী
-      playlab: প্লে ল্যাব
-      minecraft: মাইনক্র্যাফট
+      bounce: বল লাফানো
       flappy: ফ্লাপি
+      frozen: হিমায়িত
+      gumball: গামবল
+      iceage: বরফযুগ
+      infinity: অসীম
+      minecraft_designer: মাইনক্র্যাফট
+      playlab: প্লে ল্যাব
+      starwars: স্টার ওয়ার্স
     popup:
       progress: আপনার অগ্রগতি
       close: বন্ধ
@@ -392,6 +398,19 @@ bn:
           other: অন্যান্য
   flex_category:
     required: সংক্ষিপ্ত বিবরণ
+    csf_jigsaw: টুকরো কাঠের ধাঁধা
+    csf_loops: চক্র
+    csf_events: ঘটনাবলী
+    csf_binary: দ্বি-আঙ্কিক
+    csf_conditionals: শর্তযুক্ত
+    csf_nested_loops: নেষ্টেড লুপ
+    csf_functions: ফাংশনগুলি
+    csf_variables: চলকগুলো
+    csf_for_loops: ফর লুপ
+    csf_internet: ইন্টারনেট
+    csp_variables: চলকগুলো
+    csp_conditionals: শর্তযুক্ত
+    csp_functions: ফাংশনগুলি
   pd:
     form_labels:
       email: ই-মেইল

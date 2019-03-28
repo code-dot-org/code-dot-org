@@ -156,19 +156,23 @@ describe('SetupChecklist', () => {
   });
 
   function yieldUntilDoneDetecting(wrapper) {
-    return yieldUntil(() => !wrapper.find(REDETECT_BUTTON).prop('disabled'));
+    return yieldUntil(
+      wrapper,
+      () => !wrapper.find(REDETECT_BUTTON).prop('disabled')
+    );
   }
 });
 
 /**
  * Returns a promise that resolves when a condition becomes true, or rejects
  * when a timeout is reached.
+ * @param {object} wrapper
  * @param {function():boolean} predicate
  * @param {number} timeoutMs - maximum time to wait
  * @param {number} intervalMs - time to wait between steps
  * @return {Promise}
  */
-function yieldUntil(predicate, timeoutMs = 2000, intervalMs = 5) {
+function yieldUntil(wrapper, predicate, timeoutMs = 2000, intervalMs = 5) {
   return new Promise((resolve, reject) => {
     let elapsedTime = 0;
     const key = setInterval(() => {
@@ -177,6 +181,7 @@ function yieldUntil(predicate, timeoutMs = 2000, intervalMs = 5) {
         resolve();
       } else {
         elapsedTime += intervalMs;
+        wrapper.update();
         if (elapsedTime > timeoutMs) {
           clearInterval(key);
           reject(new Error(`yieldUntil exceeded timeout of ${timeoutMs}ms`));
