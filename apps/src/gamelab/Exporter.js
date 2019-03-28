@@ -24,7 +24,6 @@ import logToCloud from '../logToCloud';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {GAME_WIDTH, GAME_HEIGHT} from './constants';
 import {EXPO_SESSION_SECRET} from '../constants';
-import {fetchWebpackRuntime} from '../util/exporter';
 
 const CONTROLS_HEIGHT = 165;
 
@@ -116,11 +115,8 @@ export default {
       rewriteAssetUrls(appAssets, exportCode)
     );
 
-    // webpack-runtime must appear exactly once on any page containing webpack entries.
-    const webpackRuntimeAsset = fetchWebpackRuntime(cacheBust);
-
-    // Attempt to fetch gamelab-api.min.js if possible, but when running on non-production
-    // environments, fallback if we can't fetch that file to use gamelab-api.js:
+    // Attempt to fetch applab-api.min.js if possible, but when running on non-production
+    // environments, fallback if we can't fetch that file to use applab-api.js:
     const gamelabApiAsset = new $.Deferred();
     download('/blockly/js/gamelab-api.min.js' + cacheBust, 'text').then(
       (data, success, jqXHR) => gamelabApiAsset.resolve([data, success, jqXHR]),
@@ -139,13 +135,7 @@ export default {
       '/blockly/js/p5play/p5.play.js' + cacheBust,
       'text'
     );
-    const staticDownloads = [
-      webpackRuntimeAsset,
-      gamelabApiAsset,
-      cssAsset,
-      p5Asset,
-      p5playAsset
-    ];
+    const staticDownloads = [gamelabApiAsset, cssAsset, p5Asset, p5playAsset];
     // Fetch jquery when in expo mode
     if (expoMode) {
       staticDownloads.push(
@@ -167,19 +157,12 @@ export default {
           }
         })
       ).then(
-        (
-          [webpackRuntimeText],
-          [gamelabApiText],
-          [cssText],
-          [p5Text],
-          [p5playText],
-          ...rest
-        ) => {
+        ([gamelabApiText], [cssText], [p5Text], [p5playText], ...rest) => {
           zip.file(
             appName +
               '/' +
               (expoMode ? 'assets/gamelab-api.j' : 'gamelab-api.js'),
-            [webpackRuntimeText, gamelabApiText].join('\n')
+            gamelabApiText
           );
           zip.file(
             appName + '/' + (expoMode ? 'assets/' : '') + 'gamelab.css',
