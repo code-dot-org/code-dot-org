@@ -8,7 +8,7 @@ import React from 'react';
 import _ from 'lodash';
 import sinon from 'sinon';
 import {expect} from '../../../../util/configuredChai';
-import {mount, ReactWrapper} from 'enzyme';
+import {mount} from 'enzyme';
 
 describe('DetailViewContents', () => {
   // We aren't testing any of the responses of the workshop selector control, so just
@@ -446,6 +446,7 @@ describe('DetailViewContents', () => {
         .filterWhere(row => row.text().includes('Scholarship Teacher?'))
         .find('Select');
       scholarshipDropdown.prop('onChange')({value: newValue});
+      detailView.update();
     }
 
     function isModalShowing() {
@@ -459,11 +460,11 @@ describe('DetailViewContents', () => {
     }
 
     function dismissModal() {
-      const okButton = new ReactWrapper(
-        document.querySelector('button.btn-primary'),
-        true
-      );
-      okButton.simulate('click');
+      detailView
+        .find('ConfirmationDialog')
+        .first()
+        .prop('onOk')();
+      detailView.update();
     }
   });
 });
