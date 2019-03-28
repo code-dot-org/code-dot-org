@@ -18,6 +18,7 @@ module Metrics
   # @param value [Float] Numerical value relevant to the specific metric. See constants above for examples.
   # @param timestamp [Datetime] Only used if we want to explicitly set the created_at value for a particular metric, otherwise it is automatically populated.
   def self.write_metric(name, metadata, value, timestamp=nil)
+    return if rack_env == :production
     if DEVINTERNAL_DB
       dataset = DEVINTERNAL_DB[:metrics]
     else
@@ -35,6 +36,7 @@ module Metrics
   # @param row[:value] [Float] Numerical value relevant to the specific metric. See constants above for examples.
   # @param row[:timestamp] [Datetime] Only used if we want to explicitly set the created_at value for a particular metric, otherwise it is automatically populated.
   def self.write_batch_metric(rows)
+    return if rack_env == :production
     if DEVINTERNAL_DB
       dataset = DEVINTERNAL_DB[:metrics]
     else
