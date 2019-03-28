@@ -176,8 +176,12 @@ function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
   touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
 }
 
+function whenSpriteClicked(sprite) {
+  return mouseWentDown("leftButton") && mouseIsOver(sprite);
+}
+
 function clickedOn(sprite, event) {
-  touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
+  touchEvents.push({type: whenSpriteClicked, event: event, sprite: sprite});
 }
 
 function spriteDestroyed(sprite, event) {
