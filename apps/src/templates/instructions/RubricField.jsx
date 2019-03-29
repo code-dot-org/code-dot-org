@@ -25,7 +25,6 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-
     margin: '0px 8px',
     padding: 4,
     ':hover': {
@@ -108,6 +107,7 @@ class RubricField extends Component {
     return (
       <div style={styles.rubricLevelHeaders}>
         <div
+          id="unit-test-rubric-field"
           style={performanceHeaderStyle}
           data-tip
           data-for={tooltipId}
@@ -146,5 +146,5 @@ class RubricField extends Component {
     );
   }
 }
-
+export const UnwrappedRubricField = RubricField;
 export default Radium(RubricField);
