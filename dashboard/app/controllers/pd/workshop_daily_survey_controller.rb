@@ -225,6 +225,67 @@ module Pd
       render :new_general
     end
 
+    # GET /pd/workshop_survey/csf/:survey_name/:enrollment_code
+    def new_csf
+      params[:survey_name] = params[:survey_name]&.downcase
+      return render_404 unless CSF_SURVEY_INDEXES.key? params[:survey_name]
+
+      if params[:survey_name] == PRE_DEEPDIVE_SURVEY
+        # TODO: what if we don't require log-in? what if pre-ws survey can be annonymous
+        workshop = Workshop.
+          where(course: COURSE_CSF).
+          where(subject: SUBJECT_CSF_201).
+          enrolled_in_by(current_user).nearest
+
+        return render :not_enrolled unless workshop
+        return render :too_late unless workshop.state == STATE_NOT_STARTED
+      elsif params[:survey_name] == POST_DEEPDIVE_SURVEY
+        workshop =
+          if params[:enrollment_code].present?
+            Enrollment.find_by(code: params[:enrollment_code])&.workshop
+          else
+            Workshop.
+            where(course: COURSE_CSF).
+            where(subject: SUBJECT_CSF_201).
+            with_nearest_attendance_by(current_user)
+          end
+
+        return render :not_enrolled unless workshop
+        return render :no_attendance unless workshop.state != STATE_NOT_STARTED
+      end
+
+      @form_id = WorkshopDailySurvey.get_form_id CSF_CATEGORY, params[:survey_name]
+
+      key_params = {
+        environment: Rails.env,
+        userId: current_user.id,
+        workshopId: workshop.id,
+        day: CSF_SURVEY_INDEXES[params[:survey_name]],
+        formId: @form_id
+      }
+
+      @form_params = key_params.merge(
+        userName: current_user.name,
+        userEmail: current_user.email,
+        submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
+      )
+
+      return redirect_general(key_params) if response_exists_general?(key_params)
+
+      if CDO.newrelic_logging
+        NewRelic::Agent.record_custom_event(
+          "RenderJotFormView",
+          {
+            route: "GET /pd/workshop_survey/csf/#{params[:survey_name]}",
+            form_id: @form_id,
+            workshop_course: workshop.course,
+            workshop_subject: workshop.subject,
+            regional_partner_name: workshop.regional_partner&.name,
+          }
+        )
+      end
+    end
+
     # GET /pd/workshop_survey/thanks
     def thanks
     end
