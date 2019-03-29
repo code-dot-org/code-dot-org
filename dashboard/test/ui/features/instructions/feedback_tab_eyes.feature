@@ -25,7 +25,7 @@ Feature: Feedback Tab Visibility
   If a teacher in experiment on a level with mini rubric can see the rubric without viewing student work.
   Otherwise don't show feedback tab
     When I open my eyes to test "teacher giving student feedback"
-    Then I sign in as "Teacher_Lillian"
+    And I sign in as "Teacher_Lillian"
 
     And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?enableExperiments=2019-mini-rubric"
     And I wait for the page to fully load

@@ -69,5 +69,3 @@ Scenario: CSF Top Instructions
 
   And execute JavaScript expression "window.localStorage.clear()"
   And I close my eyes
-
-
