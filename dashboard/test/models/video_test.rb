@@ -9,7 +9,7 @@ class VideoTest < ActiveSupport::TestCase
     VideosController.any_instance.stubs(:upload_to_s3).returns('_fake_s3_url_')
   end
 
-  test "converts key to snake case" do
+  test "cannot create video key that is not snake case" do
     # does not raise exception ..
     Video.check_i18n_names
 
