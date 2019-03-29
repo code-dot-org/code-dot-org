@@ -6,7 +6,7 @@ import {getLocation} from './locationPickerModule';
 import {GAME_HEIGHT} from './constants';
 import {animationSourceUrl} from './animationListModule';
 
-let sprites = () => {
+export function sprites() {
   const animationList = getStore().getState().animationList;
   if (!animationList || animationList.orderedKeys.length === 0) {
     console.warn('No sprites available');
@@ -25,7 +25,7 @@ let sprites = () => {
       return [url, `"${animation.name}"`];
     }
   });
-};
+}
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
