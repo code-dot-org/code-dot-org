@@ -270,7 +270,10 @@ export default class SurveyResultsHeader extends React.Component {
           this.setState({
             selectedWorkshopId: workshopId,
             workshopSurveyData: data,
-            workshopName: workshopName
+            workshopName: workshopName,
+            selectedYear: this.state.filteredWorkshops.find(w => {
+              return w.id.toString() === workshopId.toString();
+            }).school_year
           });
         });
       } else {
@@ -306,7 +309,7 @@ export default class SurveyResultsHeader extends React.Component {
     // eventually call
     // setSurveyPanel with year, have that set the year in state
     // for now:
-    this.setState({year: event.target.value});
+    this.setState({selectedYear: event.target.value});
   };
 
   handleOnClickDownloadCsv = () => {
