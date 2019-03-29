@@ -98,7 +98,7 @@ const audioStyle = {
   }
 };
 
-class TopInstructions extends Component {
+class TopInstructionsCSP extends Component {
   static propTypes = {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
@@ -448,6 +448,7 @@ class TopInstructions extends Component {
     );
   }
 }
+export const UnconnectedTopInstructionsCSP = TopInstructionsCSP;
 export default connect(
   state => ({
     isEmbedView: state.pageConstants.isEmbedView,
@@ -489,4 +490,4 @@ export default connect(
   }),
   null,
   {withRef: true}
-)(Radium(TopInstructions));
+)(Radium(TopInstructionsCSP));
