@@ -19,8 +19,6 @@ import exportExpoAppEjs from '../templates/export/expo/App.js.ejs';
 import exportExpoCustomAssetJs from '../templates/export/expo/CustomAsset.exported_js';
 import exportExpoDataWarningJs from '../templates/export/expo/DataWarning.exported_js';
 import exportExpoMetroConfigJs from '../templates/export/expo/metro.config.exported_js';
-import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
-import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
 import exportExpoWarningPng from '../templates/export/expo/warning.png';
 import exportExpoIconPng from '../templates/export/expo/icon.png';
 import exportExpoSplashPng from '../templates/export/expo/splash.png';
@@ -28,6 +26,13 @@ import logToCloud from '../logToCloud';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {EXPO_SESSION_SECRET} from '../constants';
+import {
+  extractSoundAssets,
+  createPackageFilesFromZip,
+  createPackageFilesFromExpoFiles,
+  rewriteAssetUrls,
+  getEnvironmentPrefix
+} from '../export';
 
 // This whitelist determines which appOptions properties
 // will get exported with the applab app, appearing in the
@@ -529,10 +534,7 @@ export default {
                 // Write a packagedFiles.js into the zip that contains require
                 // statements for each file under assets. This will allow the
                 // Expo app to locally install of these files onto the device.
-                const packagedFilesJs = this.createPackageFilesFromZip(
-                  zip,
-                  appName
-                );
+                const packagedFilesJs = createPackageFilesFromZip(zip, appName);
                 zip.file(appName + '/packagedFiles.js', packagedFilesJs);
               }
               return resolve(zip);
@@ -571,72 +573,6 @@ export default {
         saveAs(blob, appName + '.zip');
       });
     });
-  },
-
-  createPackageFilesFromZip(zip, appName) {
-    const moduleList = [];
-    zip.folder(appName + '/assets').forEach((fileName, file) => {
-      if (!file.dir) {
-        moduleList.push({fileName});
-      }
-    });
-    const entries = moduleList.map(module =>
-      exportExpoPackagedFilesEntryEjs({module})
-    );
-    return exportExpoPackagedFilesEjs({entries});
-  },
-
-  createPackageFilesFromExpoFiles(files) {
-    const moduleList = [];
-    const assetPrefix = 'assets/';
-    const assetPrefixLength = assetPrefix.length;
-    for (const fileName in files) {
-      if (fileName.indexOf(assetPrefix) !== 0) {
-        continue;
-      }
-      const relativePath = fileName.substring(assetPrefixLength);
-      moduleList.push({fileName: relativePath});
-    }
-    const entries = moduleList.map(module =>
-      exportExpoPackagedFilesEntryEjs({module})
-    );
-    return exportExpoPackagedFilesEjs({entries});
-  },
-
-  async generateExpoApk(options, config) {
-    const {appName, expoSnackId, iconUri, splashImageUri} = options;
-    const session = new SnackSession({
-      sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
-      name: `project-${project.getCurrentId()}`,
-      sdkVersion: '31.0.0',
-      snackId: expoSnackId,
-      user: {
-        sessionSecret: config.expoSession || EXPO_SESSION_SECRET
-      }
-    });
-
-    const appJson = JSON.parse(
-      exportExpoAppJsonEjs({
-        appName,
-        projectId: project.getCurrentId(),
-        iconPath: iconUri,
-        splashImagePath: splashImageUri
-      })
-    );
-
-    // TODO: remove the onlineOnlyExpo patching once getApkUrlAsync()
-    // properly supports our full app.json
-    const {
-      updates, // eslint-disable-line no-unused-vars
-      assetBundlePatterns, // eslint-disable-line no-unused-vars
-      packagerOpts, // eslint-disable-line no-unused-vars
-      ...onlineOnlyExpo
-    } = appJson.expo;
-    appJson.expo = onlineOnlyExpo;
-
-    const artifactUrl = await session.getApkUrlAsync(appJson);
-
-    return artifactUrl;
   },
 
   async publishToExpo(appName, code, levelHtml, config) {
@@ -758,7 +694,7 @@ export default {
       };
     });
     files['packagedFiles.js'] = {
-      contents: this.createPackageFilesFromExpoFiles(files),
+      contents: createPackageFilesFromExpoFiles(files),
       type: 'CODE'
     };
 
@@ -792,43 +728,13 @@ function generateAppAssets(params) {
     filename: asset.filename
   }));
 
-  const soundRegex = /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi;
-  const allSounds = [
-    ...(html.match(soundRegex) || []),
-    ...(code.match(soundRegex) || [])
-  ];
-  const uniqueSounds = [...new Set(allSounds)];
-  const soundAssets = uniqueSounds.map(soundProtocolUrl => {
-    const soundOriginUrl = assetPrefix.fixPath(soundProtocolUrl);
-    const filename = soundProtocolUrl.replace(assetPrefix.SOUND_PREFIX, '');
-    return {
-      url: soundOriginUrl,
-      rootRelativePath: rootRelativeAssetPrefix + filename,
-      zipPath: zipAssetPrefix + filename,
-      dataType: 'binary',
-      filename,
-      searchUrl: soundProtocolUrl
-    };
+  const soundAssets = extractSoundAssets({
+    sources: [html, code],
+    rootRelativeAssetPrefix,
+    zipAssetPrefix
   });
 
   return [...appAssets, ...soundAssets];
-}
-
-// TODO: for expoMode, replace spaces in asset filenames or wait for this fix
-// to make it into Metro Bundler:
-// https://github.com/facebook/react-native/pull/10365
-function rewriteAssetUrls(appAssets, data) {
-  return appAssets.reduce(function(data, assetToDownload) {
-    const searchUrl = assetToDownload.searchUrl || assetToDownload.filename;
-    data = data.replace(
-      new RegExp(`["|']${assetToDownload.url}["|']`, 'g'),
-      `"${assetToDownload.rootRelativePath}"`
-    );
-    return data.replace(
-      new RegExp(`["|']${searchUrl}["|']`, 'g'),
-      `"${assetToDownload.rootRelativePath}"`
-    );
-  }, data);
 }
 
 function transformLevelHtml(levelHtml) {
@@ -848,28 +754,4 @@ function transformLevelHtml(levelHtml) {
     outerHTML: appElement.outerHTML,
     css
   };
-}
-
-function getEnvironmentPrefix() {
-  const {hostname} = window.location;
-  if (hostname.includes('adhoc')) {
-    // As adhoc hostnames may include other keywords, check it first.
-    return 'cdo-adhoc';
-  }
-  if (hostname.includes('test')) {
-    return 'cdo-test';
-  }
-  if (hostname.includes('levelbuilder')) {
-    return 'cdo-levelbuilder';
-  }
-  if (hostname.includes('staging')) {
-    return 'cdo-staging';
-  }
-  if (hostname.includes('localhost')) {
-    return 'cdo-development';
-  }
-  if (hostname.includes('code.org')) {
-    return 'cdo';
-  }
-  return 'cdo-unknown';
 }
