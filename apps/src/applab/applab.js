@@ -73,7 +73,7 @@ import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
-import {generateExpoApk} from '../export';
+import {generateExpoApk} from '../util/exporter';
 
 /**
  * Create a namespace for the application.
@@ -125,7 +125,8 @@ var twitterOptions = {
 };
 
 function stepDelayFromStepSpeed(stepSpeed) {
-  return 300 * Math.pow(1 - stepSpeed, 2);
+  // 1.5 sec per socket in turtle mode
+  return 1500 * Math.pow(1 - stepSpeed, 2);
 }
 
 function loadLevel() {

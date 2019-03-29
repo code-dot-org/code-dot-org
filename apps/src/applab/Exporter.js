@@ -31,8 +31,9 @@ import {
   createPackageFilesFromZip,
   createPackageFilesFromExpoFiles,
   rewriteAssetUrls,
-  getEnvironmentPrefix
-} from '../export';
+  getEnvironmentPrefix,
+  fetchWebpackRuntime
+} from '../util/exporter';
 
 // This whitelist determines which appOptions properties
 // will get exported with the applab app, appearing in the
@@ -434,6 +435,9 @@ export default {
     const rootRelativeApplabAssetPrefix = rootApplabPrefix + 'assets';
     const zipApplabAssetPrefix = appName + '/' + rootRelativeApplabAssetPrefix;
 
+    // webpack-runtime must appear exactly once on any page containing webpack entries.
+    const webpackRuntimeAsset = fetchWebpackRuntime(cacheBust);
+
     // Attempt to fetch applab-api.min.js if possible, but when running on non-production
     // environments, fallback if we can't fetch that file to use applab-api.js:
     const applabApiAsset = new $.Deferred();
@@ -450,12 +454,14 @@ export default {
 
     return new Promise((resolve, reject) => {
       $.when(
+        webpackRuntimeAsset,
         applabApiAsset,
         ...[...staticAssets, ...appAssets].map(assetToDownload =>
           download(assetToDownload.url, assetToDownload.dataType || 'text')
         )
       ).then(
         (
+          [webpackRuntime],
           [applabApi],
           [commonLocale],
           [applabLocale],
@@ -474,9 +480,13 @@ export default {
               (expoMode
                 ? 'assets/applab-api.j'
                 : rootApplabPrefix + 'applab-api.js'),
-            [appOptionsContents, commonLocale, applabLocale, applabApi].join(
-              '\n'
-            )
+            [
+              webpackRuntime,
+              appOptionsContents,
+              commonLocale,
+              applabLocale,
+              applabApi
+            ].join('\n')
           );
           zip.file(
             mainProjectFilesPrefix + fontAwesomeWOFFPath,
@@ -583,6 +593,10 @@ export default {
     const exportConfig = await getExportConfig(true);
     const appOptionsJs = getAppOptionsFile(true, exportConfig.channelId);
     const {origin} = window.location;
+    const webpackRuntimePath =
+      getEnvironmentPrefix() === 'cdo-development'
+        ? `${origin}/blockly/js/webpack-runtime.js`
+        : `${origin}/blockly/js/webpack-runtime.min.js`;
     const applabApiPath =
       getEnvironmentPrefix() === 'cdo-development'
         ? `${origin}/blockly/js/applab-api.js`
@@ -596,6 +610,7 @@ export default {
       appOptionsPath: 'appOptions.j',
       fontPath: fontAwesomeWOFFPath,
       applabApiPath,
+      webpackRuntimePath,
       jQueryPath: 'https://code.jquery.com/jquery-1.12.1.min.js',
       commonCssPath: `${origin}/blockly/css/common.css`,
       applabCssPath: `${origin}/blockly/css/applab.css`

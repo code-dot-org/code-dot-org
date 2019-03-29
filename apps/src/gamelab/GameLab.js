@@ -66,7 +66,7 @@ import {
 } from '@cdo/apps/util/performance';
 import MobileControls from './MobileControls';
 import Exporter from './Exporter';
-import {generateExpoApk} from '../export';
+import {generateExpoApk} from '../util/exporter';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
