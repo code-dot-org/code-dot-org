@@ -11,7 +11,8 @@ import {
   isCurrentAssessmentSurvey,
   countSubmissionsForCurrentAssessment,
   getExportableData,
-  setStudentId
+  setStudentId,
+  ASSESSMENT_FEEDBACK_OPTION_ID
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {getStudentList} from '@cdo/apps/redux/sectionDataRedux';
 import {connect} from 'react-redux';
@@ -30,6 +31,7 @@ import AssessmentSelector from './AssessmentSelector';
 import StudentSelector from './StudentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
+import FeedbackDownload from './FeedbackDownload';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -80,6 +82,7 @@ const styles = {
 
 class SectionAssessments extends Component {
   static propTypes = {
+    sectionName: PropTypes.string.isRequired,
     // provided by redux
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool.isRequired,
@@ -136,6 +139,7 @@ class SectionAssessments extends Component {
 
   render() {
     const {
+      sectionName,
       validScripts,
       scriptId,
       assessmentList,
@@ -147,6 +151,9 @@ class SectionAssessments extends Component {
       studentId,
       studentList
     } = this.props;
+
+    const isCurrentAssessmentFeedbackOption =
+      this.props.assessmentId === ASSESSMENT_FEEDBACK_OPTION_ID;
 
     return (
       <div>
@@ -177,7 +184,7 @@ class SectionAssessments extends Component {
         {!isLoading && assessmentList.length > 0 && (
           <div style={styles.tableContent}>
             {/* Assessments */}
-            {!isCurrentAssessmentSurvey && (
+            {!isCurrentAssessmentSurvey && !isCurrentAssessmentFeedbackOption && (
               <div>
                 <div style={{...h3Style, ...styles.header}}>
                   {i18n.selectStudent()}
@@ -214,6 +221,10 @@ class SectionAssessments extends Component {
                   </div>
                 )}
               </div>
+            )}
+            {/* Feedback Download */}
+            {isCurrentAssessmentFeedbackOption && (
+              <FeedbackDownload sectionName={sectionName} />
             )}
             {/* Surveys */}
             {isCurrentAssessmentSurvey && (
