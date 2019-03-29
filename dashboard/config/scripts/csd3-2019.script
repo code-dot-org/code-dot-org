@@ -103,7 +103,7 @@ named_level 'CSD U3 Sprite Properties Map_2019'
 level 'CSD U3 Draw Loop Plugged wiggle sprite x_2019', progression: 'Sprites and the Draw Loop'
 level 'CSD U3 Draw Loop Plugged wiggle sprite y_2019', progression: 'Sprites and the Draw Loop'
 level 'CSD U3 Draw Loop Plugged wiggle sprite rotation_2019', progression: 'Sprites and the Draw Loop'
-level 'CSD U3 Draw Loop Plugged update your scene_2019', progression: 'Animate Your Scene'
+assessment 'CSD U3 Draw Loop Plugged update your scene_2019', progression: 'Animate Your Scene'
 bonus 'CSD U3 L7 Freeplay_2019'
 
 stage 'The Counter Pattern Unplugged', flex_category: 'csd3_1'
