@@ -569,6 +569,10 @@ class Pd::Workshop < ActiveRecord::Base
     ].include?(subject)
   end
 
+  def csf?
+    course == COURSE_CSF
+  end
+
   def funded_csf?
     course == COURSE_CSF && funded
   end
