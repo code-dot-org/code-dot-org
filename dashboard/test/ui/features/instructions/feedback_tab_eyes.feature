@@ -1,0 +1,65 @@
+@eyes
+Feature: Feedback Tab Visibility
+
+  Background:
+    Given I create a teacher-associated student named "Lillian"
+    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?noautoplay=true"
+    Then I rotate to landscape
+    And I wait to see "#runButton"
+    And I press "runButton"
+    And I wait to see "#finishButton"
+    And I press "finishButton"
+
+  Scenario: As student with dev experiment on, 'Feedback' tab is not visible if no feedback
+    When I open my eyes to test "student with no feedback"
+    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?enableExperiments=2019-mini-rubric"
+    And I wait for the page to fully load
+    Then I see no difference for "student with no feedback tab"
+    Then I sign out
+    And I close my eyes
+
+# Disabling IE due to bug where text changes in the feedback text input are not registered
+# so submit button remains disabled
+  Scenario: As teacher, when viewing a level with student work,
+  feedback can be submitted and displayed. If in experiment and there is a mini rubric, teacher can give feedback on rubric.
+  If a teacher in experiment on a level with mini rubric can see the rubric without viewing student work.
+  Otherwise don't show feedback tab
+    When I open my eyes to test "teacher giving student feedback"
+    Then I sign in as "Teacher_Lillian"
+
+    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?enableExperiments=2019-mini-rubric"
+    And I wait for the page to fully load
+    Then I see no difference for "teacher rubric feedback tab"
+
+  #As teacher, reviewing work, submit feedback
+    And I wait to see ".show-handle"
+    Then I click selector ".show-handle .fa-chevron-left"
+    Then I click selector ".section-student .name a"
+    And I wait for the page to fully load
+    Then I see no difference for "teacher giving feedback tab load"
+
+    And I wait to see "#rubric-input-exceeds"
+    And I press "#rubric-input-exceeds" using jQuery
+    And I wait to see "#ui-test-feedback-input"
+    And I press the first "#ui-test-feedback-input" element
+    And I press keys "Nice!" for element "#ui-test-feedback-input"
+    And I press "#ui-test-submit-feedback" using jQuery
+    And element ".editor-column" contains text "Nice!"
+    And element "#rubric-input-exceeds" is checked
+    And I wait until "#ui-test-feedback-time" contains text "Last updated"
+    And element "#ui-test-submit-feedback" contains text "Update"
+
+  #As teacher, refresh page and latest feedback is visible
+    And I reload the page
+    And I wait for the page to fully load
+    Then I see no difference for "teacher gave feedback"
+
+  #As student, latest feedback from teacher is displayed
+    Then I sign out
+    And I sign in as "Lillian"
+    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?enableExperiments=2019-mini-rubric"
+    And I press the first ".uitest-feedback" element
+    And I wait for the page to fully load
+    Then I see no difference for "student viewing teacher feedback"
+
+    And I close my eyes
