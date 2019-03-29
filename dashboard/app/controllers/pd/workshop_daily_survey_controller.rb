@@ -231,14 +231,13 @@ module Pd
       return render_404 unless CSF_SURVEY_INDEXES.key? params[:survey_name]
 
       if params[:survey_name] == PRE_DEEPDIVE_SURVEY
-        # TODO: what if we don't require log-in? what if pre-ws survey can be annonymous
         workshop = Workshop.
           where(course: COURSE_CSF).
           where(subject: SUBJECT_CSF_201).
           enrolled_in_by(current_user).nearest
 
         return render :not_enrolled unless workshop
-        return render :too_late unless workshop.state == STATE_NOT_STARTED
+        return render :too_late unless workshop.state != STATE_ENDED
       elsif params[:survey_name] == POST_DEEPDIVE_SURVEY
         workshop =
           if params[:enrollment_code].present?
