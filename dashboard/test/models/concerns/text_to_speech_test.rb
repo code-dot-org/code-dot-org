@@ -102,4 +102,59 @@ class TextToSpeechTest < ActiveSupport::TestCase
     assert_equal "This is contained\nThis is also contained\n", outer_level_with_multiple_contained_levels.tts_long_instructions_text
     assert_equal "Contained\nQuestion text\nanswer 1\nanswer 2\nanswer 3\n", outer_level_with_contained_multi_level.tts_long_instructions_text
   end
+
+  test 'tts works for non-english short instructions' do
+    translatable_level = create :level, name: 'TTS test Short Instructions',
+      type: 'Blockly', short_instructions: "regular instructions in English"
+
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "short_instructions" => {
+          translatable_level.name => "regular instructions in another language"
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+    assert_equal "regular instructions in another language\n", translatable_level.tts_short_instructions_text
+  end
+
+  test 'tts works for non-english long instructions' do
+    translatable_level = create :level, name: 'TTS test Long Instructions',
+      type: 'Blockly', long_instructions: "long instructions in English"
+
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "long_instructions" => {
+          translatable_level.name => "long instructions in another language"
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+    assert_equal "long instructions in another language\n", translatable_level.tts_long_instructions_text
+  end
+
+  test 'tts ignores overrides for non-english' do
+    translatable_level = create :level, name: 'TTS test Short Instructions',
+      type: 'Blockly', short_instructions: "regular instructions in English",
+      tts_short_instructions_override: "instructions override"
+
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "short_instructions" => {
+          translatable_level.name => "regular instructions in another language"
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+    assert_equal "regular instructions in another language\n", translatable_level.tts_short_instructions_text
+  end
 end
