@@ -99,7 +99,10 @@ class RubricField extends Component {
               disabledMode={this.props.disabledMode}
             />
           )}
-          <details style={styles.detailsArea}>
+          <details
+            style={styles.detailsArea}
+            open={!this.props.showFeedbackInputAreas}
+          >
             <summary style={styles.rubricHeader}>
               {rubricLevelHeaders[this.props.rubricLevel]}
             </summary>
