@@ -1,4 +1,3 @@
-/* eslint-disable react/no-danger */
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
@@ -26,10 +25,7 @@ class InlineFeedback extends Component {
     // styling.
     return (
       <ChatBubble borderColor={borderColor} ttsMessage={message}>
-        <p
-          className="uitest-topInstructions-inline-feedback"
-          dangerouslySetInnerHTML={{__html: message}}
-        />
+        <p className="uitest-topInstructions-inline-feedback">{message}</p>
         {extra && <p style={styles.message}>{extra}</p>}
       </ChatBubble>
     );
