@@ -66,6 +66,7 @@ import {
 } from '@cdo/apps/util/performance';
 import MobileControls from './MobileControls';
 import Exporter from './Exporter';
+import {generateExpoApk} from '../export';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -435,7 +436,7 @@ GameLab.prototype.exportApp = async function(expoOpts) {
     (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app';
   const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
   if (mode === 'expoGenerateApk') {
-    return Exporter.generateExpoApk(
+    return generateExpoApk(
       {
         appName,
         expoSnackId,
