@@ -243,10 +243,6 @@ When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
 
-When /^I submit$/ do
-  @element.submit
-end
-
 When /^I rotate to landscape$/ do
   if ENV['BS_ROTATABLE'] == "true"
     @browser.rotate(:landscape)
@@ -257,11 +253,6 @@ When /^I rotate to portrait$/ do
   if ENV['BS_ROTATABLE'] == "true"
     @browser.rotate(:portrait)
   end
-end
-
-When /^I inject simulation$/ do
-  #@browser.execute_script('$("body").css( "background-color", "black")')
-  @browser.execute_script("var fileref=document.createElement('script');  fileref.setAttribute('type','text/javascript'); fileref.setAttribute('src', '/assets/jquery.simulate.js'); document.getElementsByTagName('head')[0].appendChild(fileref)")
 end
 
 When /^I press "([^"]*)"( to load a new page)?$/ do |button, load|
