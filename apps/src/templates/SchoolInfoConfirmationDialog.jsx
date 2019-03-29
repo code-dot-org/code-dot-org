@@ -39,7 +39,6 @@ class SchoolInfoConfirmationDialog extends Component {
       fetch('/dashboardapi/v1/users/me/school_name')
         .then(response => response.json())
         .then(data => {
-          console.log(data);
           this.setState({
             schoolName: data.school_name
           });
