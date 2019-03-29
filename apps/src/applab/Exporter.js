@@ -321,7 +321,8 @@ export default {
         appOptionsPath: null,
         commonLocalePath: null,
         applabLocalePath: null,
-        commonCssPath: null
+        commonCssPath: null,
+        webpackRuntimePath: null
       });
     } else {
       html = exportProjectEjs({

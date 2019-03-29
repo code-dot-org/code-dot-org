@@ -51,7 +51,8 @@ export default {
       p5playPath: expoMode ? 'p5.play.j' : 'p5.play.js',
       codePath: expoMode ? 'code.j' : 'code.js',
       webExport: !expoMode,
-      exportClass: expoMode ? 'expo' : 'web'
+      exportClass: expoMode ? 'expo' : 'web',
+      webpackRuntimePath: null
     });
     const cacheBust = '?__cb__=' + '' + new String(Math.random()).slice(2);
 
