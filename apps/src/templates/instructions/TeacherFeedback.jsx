@@ -250,6 +250,10 @@ class TeacherFeedback extends Component {
     const dontShowStudentComment =
       !this.state.comment && this.props.viewAs === ViewType.Student;
 
+    const showFeedbackInputAreas =
+      !this.props.displayKeyConcept &&
+      !(!this.state.performance && this.props.viewAs === ViewType.Student);
+
     const rubricLevels = ['exceeds', 'meets', 'approaches', 'noEvidence'];
 
     // Instead of unmounting the component when switching tabs, hide and show it
@@ -283,7 +287,8 @@ class TeacherFeedback extends Component {
                 {rubricLevels.map(level => (
                   <RubricField
                     key={level}
-                    showFeedbackInputAreas={!this.props.displayKeyConcept}
+                    showFeedbackInputAreas={showFeedbackInputAreas}
+                    expandByDefault={this.props.displayKeyConcept}
                     rubricLevel={level}
                     rubricValue={this.props.rubric[level]}
                     disabledMode={this.props.disabledMode}

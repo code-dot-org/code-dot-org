@@ -73,7 +73,8 @@ class RubricField extends Component {
     rubricValue: PropTypes.string.isRequired,
     disabledMode: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
-    currentlyChecked: PropTypes.bool
+    currentlyChecked: PropTypes.bool,
+    expandByDefault: PropTypes.bool
   };
 
   constructor(props) {
@@ -124,7 +125,7 @@ class RubricField extends Component {
           <details
             id={`rubric-details-${this.props.rubricLevel}`}
             style={styles.detailsArea}
-            open={!this.props.showFeedbackInputAreas}
+            open={this.props.expandByDefault}
           >
             <summary style={styles.rubricHeader}>
               {rubricLevelHeaders[this.props.rubricLevel]}
