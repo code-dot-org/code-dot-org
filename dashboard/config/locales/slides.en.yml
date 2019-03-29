@@ -2451,7 +2451,7 @@ en:
       9:
         image: 'notes/mc_2018_closing_9.png'
         text: "You've certainly proven yourself an intrepid coder by now, and I can’t wait to see what you build. And hopefully your adventures with code don't end here. Bon Voyage!"
-    'Teaching CS Fundamentals: How the Course Works':
+    teaching_csf_how_it_works:
       1:
         image: 'notes/teaching_cs_fundamentals_1.png'
         text: "This course is broken down into stages."
