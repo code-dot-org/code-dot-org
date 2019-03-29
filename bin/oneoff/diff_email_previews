@@ -93,13 +93,13 @@ end
 def print_instruction
   puts "This script compares content of all workshop email previews before and after a change to make sure the change doesn't have unexpected results."
   puts "How to run:"
-  puts "In staging branch, run './emaildiff download base'"
-  puts "In feature branch, run './emaildiff download new'"
-  puts "Compare email content in base and feature branch: './emaildiff diff base new'"
+  puts "In staging branch, run './diff_email_previews download base'"
+  puts "In feature branch, run './diff_email_previews download new'"
+  puts "Compare email content in base and feature branch: './diff_email_previews diff base new'"
 
   puts "\n\nCommand syntax:"
-  puts "To download emails to a folder in the current directory: './emaildiff download <foldername>'"
-  puts "To diff emails in 2 folders in the current directory: './emaildiff diff <foldername1> <foldername2>'"
+  puts "To download emails to a folder in the current directory: './diff_email_previews download <foldername>'"
+  puts "To diff emails in 2 folders in the current directory: './diff_email_previews diff <foldername1> <foldername2>'"
 end
 
 def main
