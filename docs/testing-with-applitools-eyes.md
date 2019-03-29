@@ -32,7 +32,7 @@ You can find that key by [logging in](https://eyes.applitools.com/app/sessions/)
 
 ### Try it locally
 
-1. `./runner.rb -l --eyes -f ./path/to/your.feature` (running Chromedriver)
+1. `./runner.rb -l --html --eyes -f ./path/to/your.feature` (running Chromedriver)
   1. Toggle ONLY running @eyes annotated tests with `--eyes`
   1. Usually the first test run will fail due to there being no baseline yet. In `error.log` you can see the exact error which usually includes a link to the session
   1. to see your browser run the tests, append `--headed` to the command
