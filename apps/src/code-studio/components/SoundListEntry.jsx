@@ -78,6 +78,7 @@ class SoundListEntry extends React.Component {
         },
         {includeUserId: true}
       );
+      this.props.soundsRegistry.unmuteURLs();
       this.props.soundsRegistry.playURL(this.props.soundMetadata.sourceUrl, {
         onEnded: () => this.setState({isPlaying: false})
       });
