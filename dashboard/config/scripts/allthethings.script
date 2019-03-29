@@ -248,6 +248,8 @@ level 'allthethings HOC Dance 10 Measures'
 
 stage 'Mini Rubric'
 assessment 'allthethings-mini-rubric'
+assessment 'allthethings-mini-rubric-weblab'
+assessment 'allthethings-mini-rubric-gamelab'
 
 stage 'Pluralsight Test', lockable: true
 assessment 'Pluralsight LevelGroup Test'
