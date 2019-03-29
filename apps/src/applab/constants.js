@@ -39,7 +39,8 @@ export const fontFamilyOptions = [
   'Lucida Sans',
   'Tahoma',
   'Trebuchet',
-  'Verdana'
+  'Verdana',
+  'Gotham'
 ];
 
 export const fontFamilyStyles = [
@@ -55,7 +56,8 @@ export const fontFamilyStyles = [
   '"Lucida Sans Unicode", "Lucida Grande", sans-serif',
   'Tahoma, Geneva, sans-serif',
   '"Trebuchet MS", Helvetica, sans-serif',
-  'Verdana, Geneva, sans-serif'
+  'Verdana, Geneva, sans-serif',
+  '"Gotham 4r", sans-serif'
 ];
 
 if (fontFamilyOptions.length !== fontFamilyStyles.length) {
