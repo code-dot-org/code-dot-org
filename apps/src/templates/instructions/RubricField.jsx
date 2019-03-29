@@ -76,6 +76,28 @@ class RubricField extends Component {
     currentlyChecked: PropTypes.bool
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      detailsOpen: false
+    };
+  }
+
+  componentDidMount = () => {
+    const details = document.querySelector(
+      `#rubric-details-${this.props.rubricLevel}`
+    );
+
+    details.addEventListener('toggle', () => {
+      this.setState({detailsOpen: !this.state.detailsOpen});
+    });
+  };
+
+  componentWillUnmount() {
+    window.removeEventListener('toggle');
+  }
+
   render() {
     const performanceHeaderStyle = this.props.currentlyChecked
       ? styles.performanceLevelHeaderSelected
@@ -100,6 +122,7 @@ class RubricField extends Component {
             />
           )}
           <details
+            id={`rubric-details-${this.props.rubricLevel}`}
             style={styles.detailsArea}
             open={!this.props.showFeedbackInputAreas}
           >
@@ -114,6 +137,7 @@ class RubricField extends Component {
           role="tooltip"
           wrapper="div"
           effect="solid"
+          disable={this.state.detailsOpen}
         >
           <div style={styles.tooltip}>{this.props.rubricValue}</div>
         </ReactTooltip>
