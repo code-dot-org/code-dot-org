@@ -258,7 +258,7 @@ ro:
     video:
       name:
         maze_intro: Intro Labirint
-        artist_intro: Intro Artist 
+        artist_intro: Intro Artist
         farmer_intro: Intro Fermier
         flappy_intro: Introducere Flappy
         loop_times: Bloc Repetă ori
@@ -290,7 +290,7 @@ ro:
         C1_maze_intro_sequencing: Introducere în secvențierea unui labirint
         C1_maze_debugging: Labirint Depanare
         C1_bee_level_intro: Albină Nivel - Introducere
-        C1_artist_intro: Intro Artist 
+        C1_artist_intro: Intro Artist
         C1_spelling_bee_intro: Introducere în Albina ortografiind
         C1_zuck_repeat_loop: Bucle de Labirint
         C1_bee_loops: Bucle de Ortografie
@@ -300,7 +300,7 @@ ro:
         C1_building_foundation: Construirea unei Fundaţii
         C1_going_places_safely: Mergând în locuri în siguranţă
         C2_maze_intro: Intro Labirint
-        C2_artist_intro: Intro Artist 
+        C2_artist_intro: Intro Artist
         C2_zuck_repeat_loop: Bucle de Labirint
         C2_artist_loops: Bucle de Artist
         C2_artist_debugging: Depanare Artist
@@ -316,7 +316,7 @@ ro:
         C2_digital_footprint: Amprenta ta Digitală
         C2_digital_footprint_v2: Amprenta ta Digitală
         C3_maze_level_4: Bucle de Labirint
-        C3_artist_intro: Intro Artist 
+        C3_artist_intro: Intro Artist
         C3_artist_functions: Funcţii de Artist
         C3_bee_functions: Funcţii de Ortografie
         C3_bee_conditionals: Condiţii de Ortografie
@@ -479,7 +479,7 @@ ro:
         hoc_dance_events: Petrecere cu dans - Evenimente
         hoc_dance_properties: Petrecere cu dans - Proprietăţi
         hoc_dance_congrats: Petrecere cu dans - Petrecerea continuă!
-        'Teaching CS Fundamentals: How the Course Works': 'Predarea cursului Fundamentele CS: Cum funcționează cursul'
+        teaching_csf_how_it_works: 'Predarea cursului Fundamentele CS: Cum funcționează cursul'
         elem_pd_2: Știința calculatoarelor în școala elementară - PD film 2/2
         what_is_cs: Ce este știința calculatoarelor?
         repeat_block: Utilizarea blocului ”repetă” (repeat)
