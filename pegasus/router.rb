@@ -207,6 +207,9 @@ class Documents < Sinatra::Base
 
   # rubocop:disable Security/Eval
   Dir.glob(pegasus_dir('routes/*.rb')).sort.each {|path| eval(IO.read(path), nil, path, 1)}
+  unless rack_env?(:production)
+    Dir.glob(pegasus_dir('routes/dev/*.rb')).sort.each {|path| eval(IO.read(path), nil, path, 1)}
+  end
   # rubocop:enable Security/Eval
 
   # Manipulated images

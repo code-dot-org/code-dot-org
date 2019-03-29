@@ -2,6 +2,7 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
+var webpack = require('webpack');
 var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
@@ -9,7 +10,6 @@ var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
-var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
 module.exports = function(grunt) {
   // Decorate grunt to record and report build durations.
@@ -706,99 +706,22 @@ describe('entry tests', () => {
           qtip2: 'var $'
         }
       ],
-      mode: minify ? 'production' : 'development',
-      optimization: {
-        minimizer: [
-          compiler => {
-            const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-            const plugin = new UglifyJsPlugin({
-              cache: true,
-              parallel: true,
-              sourceMap: envConstants.DEBUG_MINIFIED
-            });
-            plugin.apply(compiler);
-          }
-        ],
-
-        // We use a single, named runtimeChunk in order to be able to load
-        // multiple webpack entry points on a single page. **The resulting
-        // 'webpack-runtime' chunk must be included exactly once on each page
-        // which includes webpack entry points.** If you do not include the
-        // runtime, webpack entry points you include will not be loaded. If you
-        // include the runtime twice, webpack entry points will be loaded twice.
-        //
-        // Without a single, named runtimeChunk there would be no runtimeChunk
-        // to include, and entry points would load and run separately.
-        // However, those entry points would create separate instances of any
-        // shared modules. This would mean that state within webpack modules
-        // cannot be shared between entry points, breaking many assumptions made
-        // by our application. For more information, see:
-        // https://webpack.js.org/concepts/manifest/#runtime
-        // https://webpack.js.org/configuration/optimization/#optimizationruntimechunk
-        //
-        // In the future, if we can limit ourselves to one webpack entry point
-        // per page, we could consider removing the runtimeChunk config.
-        runtimeChunk: {
-          name: 'webpack-runtime'
-        },
-        splitChunks: {
-          cacheGroups: {
-            // Pull any module shared by 2+ appsEntries into the "common" chunk.
-            common: {
-              name: 'common',
-              minChunks: 2,
-              chunks: chunk => {
-                return _.keys(appsEntries).includes(chunk.name);
-              }
-            },
-            // Pull any module shared by 2+ codeStudioEntries into the
-            // "code-studio-common" chunk.
-            'code-studio-common': {
-              name: 'code-studio-common',
-              minChunks: 2,
-              chunks: chunk => {
-                const chunkNames = _.keys(codeStudioEntries);
-                return chunkNames.includes(chunk.name);
-              },
-              priority: 10
-            },
-            // With just the cacheGroups listed above, we end up with many
-            // duplicate modules between the "common" and "code-studio-common"
-            // chunks. The next cache group eliminates some of this duplication
-            // by pulling more modules from "common" into "code-studio-common".
-            //
-            // The use of minChunks provides a guarantee that we don't
-            // unnecessarily move things into "code-studio-common" which are
-            // needed only by appsEntries. This avoids increasing the download
-            // size for code studio pages which include code-studio-common.js
-            // but not common.js.
-            //
-            // There is no converse guarantee that this strategy will eliminate
-            // all duplication between "common" and "code-studio-common".
-            // However, at the time of this writing, bundle analysis indicates
-            // that is currently effective in eliminating any duplication.
-            //
-            // In the future, we want to move toward asynchronous imports, which
-            // allow webpack to manage bundle splitting and sharing behind the
-            // scenes. Once we adopt this approach, the need for predefined
-            // cacheGroups will go away.
-            //
-            // For more information see: https://webpack.js.org/guides/code-splitting/
-            'code-studio-multi': {
-              name: 'code-studio-common',
-              minChunks: _.keys(appsEntries).length + 1,
-              chunks: chunk => {
-                const chunkNames = _.keys(codeStudioEntries).concat(
-                  _.keys(appsEntries)
-                );
-                return chunkNames.includes(chunk.name);
-              },
-              priority: 20
-            }
-          }
-        }
-      },
       plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+          name: 'common',
+          chunks: _.keys(appsEntries),
+          minChunks: 2
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+          name: 'code-studio-common',
+          chunks: _.keys(codeStudioEntries).concat(['common']),
+          minChunks: 2
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+          name: 'essential',
+          minChunks: 2,
+          chunks: ['peer_reviews', 'plc', 'pd', 'code-studio-common']
+        }),
         ...(process.env.ANALYZE_BUNDLE
           ? [
               new BundleAnalyzerPlugin({
@@ -809,10 +732,7 @@ describe('entry tests', () => {
           : []),
         new StatsWriterPlugin({
           fields: ['assetsByChunkName', 'assets']
-        }),
-        // Needed because our production environment relies on an unminified
-        // (but digested) version of certain files such as blockly.js.
-        new UnminifiedWebpackPlugin()
+        })
       ],
       minify: minify,
       watch: watch,
