@@ -197,10 +197,50 @@ class LevelsController < ApplicationController
     redirect_to(params[:redirect] || levels_url)
   end
 
+  # All level types that can be requested via /levels/new
+  VALID_CLASSES = [
+    Applab,
+    Artist,
+    Bounce,
+    Calc,
+    ContractMatch,
+    Craft,
+    CurriculumReference,
+    Dancelab,
+    Eval,
+    EvaluationMulti,
+    External,
+    ExternalLink,
+    Flappy,
+    FreeResponse,
+    FrequencyAnalysis,
+    Gamelab,
+    GamelabJr,
+    Karel,
+    LevelGroup,
+    Map,
+    Match,
+    Maze,
+    Multi,
+    NetSim,
+    Odometer,
+    Pixelation,
+    PublicKeyCryptography,
+    StandaloneVideo,
+    StarWarsGrid,
+    Studio,
+    TextCompression,
+    TextMatch,
+    Unplugged,
+    Vigenere,
+    Weblab
+  ]
+
   def new
     authorize! :create, Level
     if params.key? :type
-      @type_class = params[:type].constantize
+      @type_class = VALID_CLASSES.find {|klass| klass.name == params[:type]}
+      raise "Level type '#{params[:type]}' not permitted" unless @type_class
       if @type_class == Artist
         @game = Game.custom_artist
       elsif @type_class <= Studio
