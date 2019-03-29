@@ -147,7 +147,7 @@ Scenario: Project page refreshes when other client adds a newer version
   Then ace editor code is equal to "// comment Y// comment X"
 
 # Brad (2018-11-14) Skip on IE due to blocked pop-ups
-@no_mobile @no_ie
+@no_mobile @no_ie @no_chrome
 Scenario: Project page refreshes when other client replaces current version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"

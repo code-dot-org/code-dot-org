@@ -198,6 +198,25 @@ class LevelTest < ActiveSupport::TestCase
     assert_includes(level.related_videos, video)
   end
 
+  test 'returns locale-specific video with related videos' do
+    level = create(:level)
+    en_video = create(:video)
+    es_video = create(:video)
+    es_video.locale = 'es-MX'
+    es_video.key = en_video.key
+    es_video.save!
+    level.update(properties: {video_key: en_video.key})
+
+    with_locale('es-MX') do
+      assert_includes(level.related_videos, es_video)
+      refute_includes(level.related_videos, en_video)
+    end
+    with_locale('en-US') do
+      assert_includes(level.related_videos, en_video)
+      refute_includes(level.related_videos, es_video)
+    end
+  end
+
   test 'returns concept videos with related videos' do
     level = create(:level)
     level.concepts = [create(:concept, :with_video), create(:concept, :with_video)]
