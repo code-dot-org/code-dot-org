@@ -139,7 +139,7 @@ class TopInstructions extends Component {
         : TabType.INSTRUCTIONS,
       feedbacks: [],
       rubric: null,
-      displayFeedbackTeacherFacing: teacherViewingStudentWork
+      teacherViewingStudentWork: teacherViewingStudentWork
     };
   }
 
@@ -318,19 +318,27 @@ class TopInstructions extends Component {
       (this.props.referenceLinks && this.props.referenceLinks.length > 0);
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
-    const displayFeedbackStudent =
+
+    const studentHasFeedback =
       this.props.viewAs === ViewType.Student &&
       this.state.feedbacks.length > 0 &&
       (this.state.feedbacks[0].comment || this.state.feedbacks[0].performance);
-    const displayFeedbackTeacher =
-      this.state.displayFeedbackTeacherFacing ||
-      (!this.state.displayFeedbackTeacherFacing &&
-        this.props.viewAs === ViewType.Teacher &&
-        this.state.rubric);
-    const displayFeedback = displayFeedbackStudent || displayFeedbackTeacher;
+
+    const displayKeyConcept =
+      this.state.rubric &&
+      ((this.props.viewAs === ViewType.Student && !studentHasFeedback) ||
+        (this.props.viewAs === ViewType.Teacher &&
+          !this.state.teacherViewingStudentWork));
+    const feedbackTabText = displayKeyConcept ? 'Key Concept' : msg.feedback();
+
+    const displayFeedback =
+      displayKeyConcept ||
+      this.state.teacherViewingStudentWork ||
+      studentHasFeedback;
+
     const teacherOnly =
       this.state.tabSelected === TabType.COMMENTS &&
-      this.state.displayFeedbackTeacherFacing;
+      this.state.teacherViewingStudentWork;
 
     return (
       <div style={mainStyle} className="editor-column">
@@ -371,7 +379,7 @@ class TopInstructions extends Component {
                   className="uitest-feedback"
                   onClick={this.handleCommentTabClick}
                   selected={this.state.tabSelected === TabType.COMMENTS}
-                  text={msg.feedback()}
+                  text={feedbackTabText}
                   teacherOnly={teacherOnly}
                 />
               )}
@@ -419,9 +427,10 @@ class TopInstructions extends Component {
               <TeacherFeedback
                 user={this.props.user}
                 visible={this.state.tabSelected === TabType.COMMENTS}
+                displayKeyConcept={displayKeyConcept}
                 disabledMode={
                   this.props.viewAs === ViewType.Student ||
-                  !this.state.displayFeedbackTeacherFacing
+                  !this.state.teacherViewingStudentWork
                 }
                 rubric={this.state.rubric}
                 ref="commentTab"
