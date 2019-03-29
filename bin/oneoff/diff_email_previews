@@ -86,7 +86,7 @@ def compare_workshop_emails(folder1, folder2)
   # diff 2 folders, ignoring blank lines (-B) and lines containing enrollment codes (which are all caps 10-char strings).
   # GNU diffutils use basic version of regex so we have to escape meta-characters like ?, +, |, {, }, (, and ).
   # Reference: https://stackoverflow.com/questions/2072167/diff-tools-flavor-of-regex-seems-lacking
-  `diff -u -B -I '\\(/\\|=\\)[A-Z]\\{10,\\}' base new > diffresult.txt`
+  `diff -u -B -I '\\(/\\|=\\)[A-Z]\\{10,\\}' #{folder1} #{folder2} > diffresult.txt`
   puts "Comparision result saved to diffresult.txt"
 end
 
