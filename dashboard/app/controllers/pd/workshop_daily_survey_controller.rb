@@ -250,7 +250,8 @@ module Pd
           end
 
         return render :not_enrolled unless workshop
-        return render :no_attendance unless workshop.state != STATE_NOT_STARTED
+        # TODO: add more to this condition, only available to workshop ended x days ago
+        return render_404 unless workshop.state != STATE_NOT_STARTED
       end
 
       @form_id = WorkshopDailySurvey.get_form_id CSF_CATEGORY, params[:survey_name]
@@ -303,6 +304,7 @@ module Pd
     def redirect_general(key_params)
       session_id = key_params[:sessionId]
 
+      # TODO: redirect CSF to personalized thank you page.
       if session_id.present?
         redirect_to action: :new_facilitator, session_id: session_id, facilitator_index: 0
       else

@@ -4,6 +4,7 @@ require 'test_helper'
 module Pd
   class WorkshopDailySurveyControllerTest < ActionDispatch::IntegrationTest
     include WorkshopConstants
+    include WorkshopSurveyConstants
 
     self.use_transactional_test_case = true
     setup_all do
@@ -33,6 +34,7 @@ module Pd
     FAKE_FACILITATOR_FORM_ID = 123459
     FAKE_SUBMISSION_ID = 987654
     FAKE_ACADEMIC_YEAR_IDS = (54321...54324).to_a.freeze
+    FAKE_CSF_DEEPDIVE_FORM_IDS = [201903, 201904].freeze
 
     setup do
       CDO.stubs(:jotform_forms).returns(
@@ -53,6 +55,10 @@ module Pd
             day_2: FAKE_ACADEMIC_YEAR_IDS[1],
             post_workshop: FAKE_ACADEMIC_YEAR_IDS[4],
             facilitator: FAKE_FACILITATOR_FORM_ID
+          },
+          csf: {
+            pre201: FAKE_CSF_DEEPDIVE_FORM_IDS[0],
+            post201: FAKE_CSF_DEEPDIVE_FORM_IDS[1]
           }
         }.deep_stringify_keys
       )
@@ -604,14 +610,91 @@ module Pd
       assert_equal FAKE_ACADEMIC_YEAR_IDS[1], new_record.form_id
     end
 
+    test 'csf pre-deepdive survey: unenrolled user sees 404 msg' do
+      sign_in @unenrolled_teacher
+      get '/pd/workshop_survey/csf/pre201'
+
+      assert_response :success
+      assert_not_enrolled
+    end
+
+    test 'csf pre-deepdive survey: user enrolls in ended workshop sees too late msg' do
+      teacher = create :teacher
+      ended_workshop = create :pd_ended_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201
+      create :pd_enrollment, :from_user, user: teacher, workshop: ended_workshop
+
+      sign_in teacher
+      get '/pd/workshop_survey/csf/pre201'
+
+      assert_response :success
+      assert_closed
+    end
+
+    test 'csf pre-deepdive survey: user enrolls in unended workshop sees survey' do
+      teacher = create :teacher
+      not_started_workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner, num_sessions: 1, sessions_from: DateTime.now + 1.day
+      create :pd_enrollment, user: teacher, workshop: not_started_workshop
+
+      pre_deepdive_form_id = CDO.jotform_forms[CSF_CATEGORY][PRE_DEEPDIVE_SURVEY]
+      key_params = {
+        environment: 'test',
+        userId: teacher.id,
+        workshopId: not_started_workshop.id,
+        day: 0,
+        formId: pre_deepdive_form_id,
+      }
+      submit_redirect = url_for(controller: 'pd/workshop_daily_survey', action: 'submit_general', params: {key: key_params})
+      WorkshopDailySurveyController.view_context_class.any_instance.expects(:embed_jotform).with(
+        pre_deepdive_form_id,
+        key_params.merge(
+          userName: teacher.name,
+          userEmail: teacher.email,
+          submitRedirect: submit_redirect
+        )
+      )
+
+      CDO.stubs(:newrelic_logging).returns(true)
+      NewRelic::Agent.expects(:record_custom_event).with(
+        'RenderJotFormView',
+        {
+          route: 'GET /pd/workshop_survey/csf/pre201',
+          form_id: pre_deepdive_form_id,
+          workshop_course: COURSE_CSF,
+          workshop_subject: SUBJECT_CSF_201,
+          regional_partner_name: @regional_partner.name
+        }
+      )
+
+      sign_in teacher
+      get '/pd/workshop_survey/csf/pre201'
+
+      assert_response :success
+    end
+
+    test 'csf pre-deepdive survey: user enrolls in unended workshop can not submit survey twice' do
+      teacher = create :teacher
+      not_started_workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner, num_sessions: 1, sessions_from: DateTime.now + 1.day
+      create :pd_enrollment, user: teacher, workshop: not_started_workshop
+      # TODO: create existing survey placeholder
+
+      sign_in teacher
+      get '/pd/workshop_survey/csf/pre201'
+
+      assert_thanks
+    end
+
     test 'thanks displays thanks message' do
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/thanks'
       assert_response :success
-      assert_select 'h1', text: 'Thank you for submitting today’s survey.'
+      assert_thanks
     end
 
     private
+
+    def assert_thanks
+      assert_select 'h1', text: 'Thank you for submitting today’s survey.'
+    end
 
     def assert_not_enrolled
       assert_select 'h1', text: 'Not Enrolled'
