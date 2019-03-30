@@ -10,7 +10,7 @@
         %input.tts_url{type: 'hidden', value: 'general'}
         .row
           .span10
-            %input.hint_id{type: 'text', placeholder: 'hint_id', id: 'hint_id_input', required: true}
+            %input.hint_id{type: 'text', placeholder: 'hint_id'}
             %select.hint_class
               %option{value: 'content'} Content Hint
               %option{value: 'pointer'} Pointer Hint
@@ -19,7 +19,7 @@
             = select_tag :hint_video, options_for_select(video_key_choices), {include_blank: true, class: 'hint_video'}
         .row
           .span5
-            %textarea.hint_markdown{id: 'hint_markdown_input'}
+            %textarea.hint_markdown
           .span5
             .markdown_preview
         .row
@@ -42,19 +42,6 @@
 - content_for :body_scripts do
   :javascript
     $(document).ready(function () {
-      // Hint id is only required when there is an authored hint.
-      // If authored hint does not exist, a level can be created or
-      // edited and saved.
-      var hintMarkdown = document.getElementById('hint_markdown_input');
-      var hintId = document.getElementById('hint_id_input');
-      hintMarkdown.addEventListener('change', function() {
-        if (hintMarkdown.value.length > 0) {
-          hintId.addAttribute("required");
-        } else {
-          hindId.removeAttribute("required");
-        }
-      })
-
       // A markdown parser that supports a subset of rules; specifically,
       // those rules that we feel comfortable entrusting to translators
       var limitedMarked = (function () {
