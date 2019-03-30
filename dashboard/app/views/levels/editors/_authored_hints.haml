@@ -87,6 +87,7 @@
           levelbuilder.initializeCodeMirror(
             space.find('.hint_markdown').get(0),
             'markdown',
+            space.find('.hint_id').get(0).setAttribute("required", ""),
             {
               callback: function(editor, change) {
                 convertXmlToBlockly(space.find('.markdown_preview').get(0));
