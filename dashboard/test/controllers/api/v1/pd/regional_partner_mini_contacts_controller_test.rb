@@ -1,0 +1,42 @@
+require 'test_helper'
+
+class Api::V1::Pd::RegionalPartnerMiniContactsControllerTest < ActionDispatch::IntegrationTest
+  test 'can create a new regional partner mini contact' do
+    assert_valid_form build(:pd_regional_partner_mini_contact_hash)
+  end
+
+  test 'create returns error if email is missing' do
+    form_data = build(:pd_regional_partner_mini_contact_hash).
+      merge("email" => "")
+    assert_does_not_create Pd::RegionalPartnerMiniContact do
+      post '/api/v1/pd/regional_partner_mini_contacts',
+        as: :json,
+        params: {form_data: form_data}
+    end
+    assert_response :bad_request
+    response_body = JSON.parse(response.body)
+    assert_equal ['email'], response_body['errors']['form_data']
+  end
+
+  test 'create returns error if zip is missing' do
+    form_data = build(:pd_regional_partner_mini_contact_hash).
+      merge("zip" => "")
+    assert_does_not_create Pd::RegionalPartnerMiniContact do
+      post '/api/v1/pd/regional_partner_mini_contacts',
+        as: :json,
+        params: {form_data: form_data}
+    end
+    assert_response :bad_request
+    response_body = JSON.parse(response.body)
+    assert_equal ['zip'], response_body['errors']['form_data']
+  end
+
+  private def assert_valid_form(form_data)
+    assert_creates Pd::RegionalPartnerMiniContact do
+      post '/api/v1/pd/regional_partner_mini_contacts',
+        as: :json,
+        params: {form_data: form_data}
+    end
+    assert_response :created
+  end
+end
