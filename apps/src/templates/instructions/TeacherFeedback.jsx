@@ -268,7 +268,7 @@ export class TeacherFeedback extends Component {
         : styles.timeTeacher;
 
     return (
-      <div id="unit-test-teacher-feedback-div" style={tabVisible}>
+      <div style={tabVisible}>
         {this.state.errorState === ErrorType.Load && (
           <span>
             <i className="fa fa-warning" style={styles.errorIcon} />
