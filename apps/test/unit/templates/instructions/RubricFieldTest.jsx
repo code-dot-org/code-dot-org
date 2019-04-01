@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnwrappedRubricField as RubricField} from '@cdo/apps/templates/instructions/RubricField';
 
 const DEFAULT_PROPS = {
@@ -24,14 +24,14 @@ describe('RubricField', () => {
 
     // Details
     const confirmDetails = wrapper.find('details').first();
-    expect(confirmDetails).to.contain('Exceeds');
-    expect(confirmDetails).to.contain('exceeded expectations');
+    expect(confirmDetails.contains('Exceeds')).to.equal(true);
+    expect(confirmDetails.contains('exceeded expectations')).to.equal(true);
   });
   it('does not have a CheckedRadioButton when showFeedbackInputAreas is false', () => {
     const wrapper = shallow(
       <RubricField {...DEFAULT_PROPS} showFeedbackInputAreas={false} />
     );
-    expect(wrapper).to.not.have.descendants('CheckedRadioButton');
+    expect(wrapper.find('CheckedRadioButton')).to.have.lengthOf(0);
   });
   it('has a radio button that is checked if currentlyChecked is true', () => {
     const wrapper = shallow(

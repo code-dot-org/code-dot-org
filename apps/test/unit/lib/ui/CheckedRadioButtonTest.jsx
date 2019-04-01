@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {CheckedRadioButton} from '@cdo/apps/lib/ui/CheckedRadioButton';
 
 const DEFAULT_PROPS = {
