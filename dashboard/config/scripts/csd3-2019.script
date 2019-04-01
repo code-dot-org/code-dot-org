@@ -225,7 +225,7 @@ level 'CSD U3 abstraction accelerateX_2019', progression: 'Velocity and the Coun
 level 'CSD U3 abstraction accelerateY_2019', progression: 'Velocity and the Counter Pattern'
 level 'CSD U3 abstraction accelerateY up_2019', progression: 'Velocity and the Counter Pattern'
 level 'CSD U3 abstraction decelerateX_2019', progression: 'Velocity and the Counter Pattern'
-level 'CSD U3 abstraction decelerateY_2019', progression: 'Velocity and the Counter Pattern'
+assessment 'CSD U3 abstraction decelerateY_2019', progression: 'Velocity and the Counter Pattern'
 level 'CSD U3 abstraction jumping_2019', progression: 'Flyer Game'
 level 'CSD U3 abstraction left right counter_2019', progression: 'Flyer Game'
 level 'CSD U3 abstraction left right counter 2_2019', progression: 'Flyer Game'
