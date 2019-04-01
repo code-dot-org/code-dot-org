@@ -2489,7 +2489,7 @@ en:
         text: "Above the workspace are the instructions for each puzzle."
       7:
         image: 'notes/writing_first_program_7.png'
-        text: "If you drag out too many blocks from the toolbox, just drag the extra block back into the toolbox.  Hit run to try your program, and reset to try again."
+        text: "If you drag out too many blocks from the toolbox, just drag the extra block back into the toolbox.  Hit Run to try your program, and Reset to try again."
     repeat_block:
       1:
         image: 'notes/repeat_block.png'
@@ -2504,7 +2504,7 @@ en:
         text: "CS Fundamentals lessons begin with overviews to let you know what the lesson will cover."
       2:
         image: 'notes/lesson_planning_2.png'
-        text: "Lessons have warm ups, activities, and wrap ups. If you want to create your own lesson plans, you might want to keep these tips in mind."
+        text: "Lessons have warm-ups, activities, and wrap-ups. If you want to create your own lesson plans, you might want to keep these tips in mind."
       3:
         image: 'notes/lesson_planning_3.png'
         text: "1. Try to use a spiraling curriculum design. Introduce concepts once and then revisit them."
