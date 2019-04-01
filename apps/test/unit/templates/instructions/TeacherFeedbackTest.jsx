@@ -97,7 +97,10 @@ describe('TeacherFeedback', () => {
       <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} visible={false} />
     );
     expect(
-      wrapper.find('#unit-test-teacher-feedback-div').props().style.display
+      wrapper
+        .find('div')
+        .first()
+        .props().style.display
     ).to.equal('none');
   });
 
