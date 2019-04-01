@@ -47,7 +47,7 @@ const JQUERY_JS_CONTENT = 'jquery content';
 const PNG_ASSET_CONTENT = 'asset content';
 const FONTAWESOME_CONTENT = 'fontawesome content';
 
-describe('The Exporter,', function() {
+describe('Applab Exporter,', function() {
   var server;
   let stashedCookieKey;
 
