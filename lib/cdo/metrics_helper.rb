@@ -2,7 +2,7 @@ require_relative './db'
 
 module Metrics
 
-  def devinternal_db
+  def self.devinternal_db
     raise "devinternal_db_writer not defined" unless CDO.devinternal_db_writer
 
     # Connect to db. Third param sets frequency to check connection. Currently set
