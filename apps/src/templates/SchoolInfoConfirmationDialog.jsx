@@ -16,7 +16,9 @@ class SchoolInfoConfirmationDialog extends Component {
     schoolName: PropTypes.string,
     onUpdate: PropTypes.func,
     onConfirm: PropTypes.func,
-    isOpen: PropTypes.bool.isRequired
+    scriptData: PropTypes.object,
+    onClose: PropTypes.func,
+    isOpen: PropTypes.bool
   };
 
   constructor(props) {
@@ -29,8 +31,12 @@ class SchoolInfoConfirmationDialog extends Component {
   }
 
   static defaultProps = {
+    schoolName: '',
     onUpdate: () => {},
-    schoolName: ''
+    onConfirm: () => {},
+    scriptData: {},
+    onClose: () => {},
+    isOpen: true
   };
 
   componentDidMount() {
@@ -47,12 +53,21 @@ class SchoolInfoConfirmationDialog extends Component {
     }
   }
 
+  handleClickYes = () => {
+    fetch(
+      `/dashboardapi/v1/user_school_infos/${
+        this.props.scriptData.existingSchoolInfo.id
+      }`
+    )
+      .then(() => this.props.onClose())
+      .catch(error => this.setState({error}));
+  };
+
   handleUpdateClick = () => {
     this.setState({showSchoolInterstitial: true});
   };
 
   renderInitialContent() {
-    const {onConfirm} = this.props;
     const {schoolName} = this.state;
     return (
       <Body>
@@ -70,8 +85,7 @@ class SchoolInfoConfirmationDialog extends Component {
           style={styles.button}
           text={i18n.yes()}
           color={Button.ButtonColor.orange}
-          onClick={onConfirm}
-          href={'#'}
+          onClick={this.handleClickYes}
         />
       </Body>
     );
