@@ -19,6 +19,11 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     }
   end
 
+  # PATCH /api/vi/users/<user_id>/update_user_info
+  def update_user_info
+    current_user&.last_seen_school_info_interstitial = DateTime.now
+  end
+
   # GET /api/v1/users/<user_id>/contact_details
   def get_contact_details
     render json: {

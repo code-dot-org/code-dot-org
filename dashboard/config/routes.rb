@@ -615,6 +615,8 @@ Dashboard::Application.routes.draw do
 
       patch 'user_school_infos/:id', to: 'user_school_infos#update'
 
+      patch 'users/:id/update_user_info', to: 'users#update_user_info'
+
       resources :teacher_feedbacks, only: [:create] do
         collection do
           get 'get_feedback_from_teacher'

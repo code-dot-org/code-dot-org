@@ -63,8 +63,20 @@ class SchoolInfoConfirmationDialog extends Component {
       .catch(error => this.setState({error}));
   };
 
-  handleUpdateClick = () => {
+  handleClickUpdate = () => {
     this.setState({showSchoolInterstitial: true});
+  };
+
+  handleClickSave = () => {
+    this.props.onUpdate();
+
+    fetch('/dashboardapi/v1/users/me/update_user_info', {
+      method: 'PUT'
+    }).then(() => {
+      fetch('/dashboardapi/v1/user_school_infos/me').then(
+        () => this.props.onClose
+      );
+    });
   };
 
   renderInitialContent() {
@@ -79,7 +91,7 @@ class SchoolInfoConfirmationDialog extends Component {
         <Button
           text={i18n.schoolInfoDialogUpdate()}
           color={Button.ButtonColor.blue}
-          onClick={this.handleUpdateClick}
+          onClick={this.handleClickUpdate}
         />
         <Button
           style={styles.button}
