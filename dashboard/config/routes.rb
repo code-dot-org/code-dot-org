@@ -613,6 +613,8 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+      patch 'user_school_infos/:id', to: 'user_school_infos#update'
+
       resources :teacher_feedbacks, only: [:create] do
         collection do
           get 'get_feedback_from_teacher'
