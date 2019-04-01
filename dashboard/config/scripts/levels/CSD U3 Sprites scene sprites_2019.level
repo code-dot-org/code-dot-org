@@ -81,11 +81,20 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
+    "encrypted": "false",
+    "rubric_key_concept": "Create and modify objects (sprites) to manage the complexity of on-screen elements.  Use dot notation to get and set sprite properties.",
+    "rubric_exceeds": "At least one sprite is created, given an animation, scaled to a good size, and drawn to the screen.  The sprite variable has a reasonable name.  `drawSprites` is called after all sprite properties have been updated.",
+    "rubric_meets": "At least one sprite is created, given an animation, and drawn to the screen.  The sprite variable has been renamed.",
+    "rubric_approaches": "At least on sprite has been created and drawn to the screen.  There may be problems with the animation or conflicts from using the same variable name for multiple sprites.",
+    "rubric_no_evidence": "No sprites are created.",
+    "mini_rubric": "true",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-26 16:37:38 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:44:21 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 16:47:50 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-05-26 16:37:38 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:44:21 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 16:47:50 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-29 17:22:19 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>
