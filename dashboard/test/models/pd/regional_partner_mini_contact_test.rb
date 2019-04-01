@@ -100,6 +100,7 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
   end
 
   test 'Unmatched' do
+    RegionalPartner.stubs(:find_by_zip).returns([nil, nil])
     create :pd_regional_partner_mini_contact, form_data: build(:pd_regional_partner_mini_contact_hash).to_json
     mail = ActionMailer::Base.deliveries.first
 
@@ -111,6 +112,7 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
   end
 
   test 'Receipt email' do
+    RegionalPartner.stubs(:find_by_zip).returns([nil, nil])
     create :pd_regional_partner_mini_contact, form_data: build(:pd_regional_partner_mini_contact_hash).to_json
     mail = ActionMailer::Base.deliveries.last
 
