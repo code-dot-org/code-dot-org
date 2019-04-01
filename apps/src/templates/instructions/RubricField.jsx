@@ -84,7 +84,6 @@ class RubricField extends Component {
     return (
       <div style={styles.rubricLevelHeaders}>
         <div
-          id="unit-test-rubric-field"
           style={performanceHeaderStyle}
           data-tip
           data-for={tooltipId}

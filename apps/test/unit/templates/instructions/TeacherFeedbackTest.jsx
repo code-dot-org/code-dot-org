@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedTeacherFeedback as TeacherFeedback} from '@cdo/apps/templates/instructions/TeacherFeedback';
 
 const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
@@ -95,8 +95,8 @@ describe('TeacherFeedback', () => {
       });
 
       // Key Concept
-      expect(wrapper).to.contain('Key Concept');
-      expect(wrapper).to.contain('This is the Key Concept');
+      expect(wrapper.contains('Key Concept')).to.equal(true);
+      expect(wrapper.contains('This is the Key Concept')).to.equal(true);
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
@@ -147,8 +147,8 @@ describe('TeacherFeedback', () => {
       });
 
       // Key Concept
-      expect(wrapper).to.contain('Key Concept');
-      expect(wrapper).to.contain('This is the Key Concept');
+      expect(wrapper.contains('Key Concept')).to.equal(true);
+      expect(wrapper.contains('This is the Key Concept')).to.equal(true);
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
@@ -187,8 +187,8 @@ describe('TeacherFeedback', () => {
       });
 
       // Key Concept
-      expect(wrapper).to.contain('Key Concept');
-      expect(wrapper).to.contain('This is the Key Concept');
+      expect(wrapper.contains('Key Concept')).to.equal(true);
+      expect(wrapper.contains('This is the Key Concept')).to.equal(true);
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
@@ -200,10 +200,10 @@ describe('TeacherFeedback', () => {
       );
 
       // Comment
-      expect(wrapper).to.not.have.descendants('CommentArea');
+      expect(wrapper.find('CommentArea')).to.have.lengthOf(0);
 
       // Submit Feedback
-      expect(wrapper).to.not.have.descendants('Button');
+      expect(wrapper.find('Button')).to.have.lengthOf(0);
     });
 
     it('shows the correct components if teacher is giving feedback, on a level with no rubric, with no previous feedback', () => {
@@ -221,10 +221,11 @@ describe('TeacherFeedback', () => {
       });
 
       // Key Concept
-      expect(wrapper).to.not.contain('Key Concept');
+      expect(wrapper.contains('Key Concept')).to.equal(false);
+      expect(wrapper.contains('This is the Key Concept')).to.equal(false);
 
       // Rubric
-      expect(wrapper).to.not.have.descendants('RubricField');
+      expect(wrapper.find('RubricField')).to.have.lengthOf(0);
 
       // Comment
       const confirmCommentArea = wrapper.find('CommentArea').first();
@@ -263,11 +264,11 @@ describe('TeacherFeedback', () => {
       });
 
       // Key Concept
-      expect(wrapper).to.not.contain('Key Concept');
-      expect(wrapper).to.not.contain('This is the Key Concept');
+      expect(wrapper.contains('Key Concept')).to.equal(false);
+      expect(wrapper.contains('This is the Key Concept')).to.equal(false);
 
       // Rubric
-      expect(wrapper).to.not.have.descendants('RubricField');
+      expect(wrapper.find('RubricField')).to.have.lengthOf(0);
 
       // Comment
       const confirmCommentArea = wrapper.find('CommentArea').first();
@@ -276,7 +277,7 @@ describe('TeacherFeedback', () => {
       expect(confirmCommentArea.props().comment).to.equal('Good work!');
 
       // Submit Feedback
-      expect(wrapper).to.not.have.descendants('Button');
+      expect(wrapper.find('Button')).to.have.lengthOf(0);
     });
 
     it('shows the correct components if student is on a level with a rubric, where a comment was given by the teacher', () => {
@@ -302,11 +303,11 @@ describe('TeacherFeedback', () => {
       });
 
       // Key Concept
-      expect(wrapper).to.not.contain('Key Concept');
-      expect(wrapper).to.not.contain('This is the Key Concept');
+      expect(wrapper.contains('Key Concept')).to.equal(false);
+      expect(wrapper.contains('This is the Key Concept')).to.equal(false);
 
       // Rubric
-      expect(wrapper).to.not.have.descendants('RubricField');
+      expect(wrapper.find('RubricField')).to.have.lengthOf(0);
 
       // Comment
       const confirmCommentArea = wrapper.find('CommentArea').first();
@@ -315,7 +316,7 @@ describe('TeacherFeedback', () => {
       expect(confirmCommentArea.props().comment).to.equal('Good work!');
 
       // Submit Feedback
-      expect(wrapper).to.not.have.descendants('Button');
+      expect(wrapper.find('Button')).to.have.lengthOf(0);
     });
 
     it('shows the correct components if student is on a level with a rubric, where a comment and performance level was given by the teacher', () => {
@@ -341,8 +342,8 @@ describe('TeacherFeedback', () => {
       });
 
       // Key Concept
-      expect(wrapper).to.contain('Key Concept');
-      expect(wrapper).to.contain('This is the Key Concept');
+      expect(wrapper.contains('Key Concept')).to.equal(true);
+      expect(wrapper.contains('This is the Key Concept')).to.equal(true);
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
@@ -361,7 +362,7 @@ describe('TeacherFeedback', () => {
       expect(confirmCommentArea.props().comment).to.equal('Good work!');
 
       // Submit Feedback
-      expect(wrapper).to.not.have.descendants('Button');
+      expect(wrapper.find('Button')).to.have.lengthOf(0);
     });
 
     it('shows the correct components if student is on a level with a rubric, where a performance level was given by the teacher', () => {
@@ -387,8 +388,8 @@ describe('TeacherFeedback', () => {
       });
 
       // Key Concept
-      expect(wrapper).to.contain('Key Concept');
-      expect(wrapper).to.contain('This is the Key Concept');
+      expect(wrapper.contains('Key Concept')).to.equal(true);
+      expect(wrapper.contains('This is the Key Concept')).to.equal(true);
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
@@ -401,10 +402,10 @@ describe('TeacherFeedback', () => {
       expect(confirmExceedsRatioButton.props().currentlyChecked).to.equal(true);
 
       // Comment
-      expect(wrapper).to.not.have.descendants('CommentArea');
+      expect(wrapper.find('CommentArea')).to.have.lengthOf(0);
 
       // Submit Feedback
-      expect(wrapper).to.not.have.descendants('Button');
+      expect(wrapper.find('Button')).to.have.lengthOf(0);
     });
   });
 });
