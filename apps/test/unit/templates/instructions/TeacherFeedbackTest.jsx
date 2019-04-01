@@ -10,7 +10,8 @@ const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   visible: true,
   viewAs: 'Teacher',
   serverLevelId: 123,
-  teacher: 5
+  teacher: 5,
+  displayKeyConcept: false
 };
 const TEACHER_NOT_FEEDBACK_RUBRIC_PROPS = {
   user: 5,
@@ -25,7 +26,8 @@ const TEACHER_NOT_FEEDBACK_RUBRIC_PROPS = {
   visible: true,
   viewAs: 'Teacher',
   serverLevelId: 123,
-  teacher: 5
+  teacher: 5,
+  displayKeyConcept: true
 };
 
 const TEACHER_FEEDBACK_RUBRIC_PROPS = {
@@ -41,19 +43,21 @@ const TEACHER_FEEDBACK_RUBRIC_PROPS = {
   visible: true,
   viewAs: 'Teacher',
   serverLevelId: 123,
-  teacher: 5
+  teacher: 5,
+  displayKeyConcept: false
 };
 
-const STUDENT_NO_RUBRIC_PROPS = {
+const STUDENT_FEEDBACK_NO_RUBRIC_PROPS = {
   user: 1,
   disabledMode: true,
   rubric: null,
   visible: true,
   viewAs: 'Student',
   serverLevelId: 123,
-  teacher: 5
+  teacher: 5,
+  displayKeyConcept: false
 };
-const STUDENT_RUBRIC_PROPS = {
+const STUDENT_NO_FEEDBACK_RUBRIC_PROPS = {
   user: 1,
   disabledMode: true,
   rubric: {
@@ -66,7 +70,25 @@ const STUDENT_RUBRIC_PROPS = {
   visible: true,
   viewAs: 'Student',
   serverLevelId: 123,
-  teacher: 5
+  teacher: 5,
+  displayKeyConcept: true
+};
+
+const STUDENT_FEEDBACK_RUBRIC_PROPS = {
+  user: 1,
+  disabledMode: true,
+  rubric: {
+    keyConcept: 'This is the Key Concept',
+    exceeds: 'exceeded expectations',
+    meets: 'met expectations',
+    approaches: 'approaches expectations',
+    noEvidence: 'no evidence of trying'
+  },
+  visible: true,
+  viewAs: 'Student',
+  serverLevelId: 123,
+  teacher: 5,
+  displayKeyConcept: false
 };
 
 describe('TeacherFeedback', () => {
@@ -102,6 +124,10 @@ describe('TeacherFeedback', () => {
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
       const confirmExceedsRatioButton = wrapper.find('RubricField').first();
       expect(confirmExceedsRatioButton.props().disabledMode).to.equal(false);
+      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
+        true
+      );
+      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(false);
       expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('exceeds');
       expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
         'exceeded expectations'
@@ -154,6 +180,10 @@ describe('TeacherFeedback', () => {
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
       const confirmExceedsRatioButton = wrapper.find('RubricField').at(1);
       expect(confirmExceedsRatioButton.props().disabledMode).to.equal(false);
+      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
+        true
+      );
+      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(false);
       expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('meets');
       expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
         'met expectations'
@@ -194,6 +224,10 @@ describe('TeacherFeedback', () => {
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
       const confirmExceedsRatioButton = wrapper.find('RubricField').first();
       expect(confirmExceedsRatioButton.props().disabledMode).to.equal(true);
+      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
+        false
+      );
+      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(true);
       expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('exceeds');
       expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
         'exceeded expectations'
@@ -241,8 +275,47 @@ describe('TeacherFeedback', () => {
   });
 
   describe('viewed as a Student', () => {
+    it('shows the correct components if student is on a level with a rubric, where no feedback has been given by the teacher', () => {
+      const wrapper = shallow(
+        <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />
+      );
+
+      // Student Has Feedback
+      wrapper.setState({
+        comment: '',
+        performance: null,
+        studentId: 1,
+        latestFeedback: [],
+        submitting: false
+      });
+
+      // Key Concept
+      expect(wrapper.contains('Key Concept')).to.equal(true);
+      expect(wrapper.contains('This is the Key Concept')).to.equal(true);
+
+      // Rubric
+      expect(wrapper.find('RubricField')).to.have.lengthOf(4);
+      const confirmExceedsRatioButton = wrapper.find('RubricField').at(1);
+      expect(confirmExceedsRatioButton.props().disabledMode).to.equal(true);
+      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
+        false
+      );
+      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(true);
+      expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('meets');
+      expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
+        'met expectations'
+      );
+
+      // Comment
+      expect(wrapper.find('CommentArea')).to.have.lengthOf(0);
+
+      // Submit Feedback
+      expect(wrapper.find('Button')).to.have.lengthOf(0);
+    });
     it('shows the correct components if student is on a level with no rubric, where a comment was given by the teacher', () => {
-      const wrapper = shallow(<TeacherFeedback {...STUDENT_NO_RUBRIC_PROPS} />);
+      const wrapper = shallow(
+        <TeacherFeedback {...STUDENT_FEEDBACK_NO_RUBRIC_PROPS} />
+      );
 
       // Student Has Feedback
       wrapper.setState({
@@ -281,7 +354,9 @@ describe('TeacherFeedback', () => {
     });
 
     it('shows the correct components if student is on a level with a rubric, where a comment was given by the teacher', () => {
-      const wrapper = shallow(<TeacherFeedback {...STUDENT_RUBRIC_PROPS} />);
+      const wrapper = shallow(
+        <TeacherFeedback {...STUDENT_FEEDBACK_RUBRIC_PROPS} />
+      );
 
       // Student Has Feedback
       wrapper.setState({
@@ -303,11 +378,21 @@ describe('TeacherFeedback', () => {
       });
 
       // Key Concept
-      expect(wrapper.contains('Key Concept')).to.equal(false);
-      expect(wrapper.contains('This is the Key Concept')).to.equal(false);
+      expect(wrapper.contains('Key Concept')).to.equal(true);
+      expect(wrapper.contains('This is the Key Concept')).to.equal(true);
 
       // Rubric
-      expect(wrapper.find('RubricField')).to.have.lengthOf(0);
+      expect(wrapper.find('RubricField')).to.have.lengthOf(4);
+      const confirmExceedsRatioButton = wrapper.find('RubricField').at(1);
+      expect(confirmExceedsRatioButton.props().disabledMode).to.equal(true);
+      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
+        false
+      );
+      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(false);
+      expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('meets');
+      expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
+        'met expectations'
+      );
 
       // Comment
       const confirmCommentArea = wrapper.find('CommentArea').first();
@@ -320,7 +405,9 @@ describe('TeacherFeedback', () => {
     });
 
     it('shows the correct components if student is on a level with a rubric, where a comment and performance level was given by the teacher', () => {
-      const wrapper = shallow(<TeacherFeedback {...STUDENT_RUBRIC_PROPS} />);
+      const wrapper = shallow(
+        <TeacherFeedback {...STUDENT_FEEDBACK_RUBRIC_PROPS} />
+      );
 
       // Student Has Feedback
       wrapper.setState({
@@ -349,6 +436,10 @@ describe('TeacherFeedback', () => {
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
       const confirmExceedsRatioButton = wrapper.find('RubricField').at(1);
       expect(confirmExceedsRatioButton.props().disabledMode).to.equal(true);
+      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
+        true
+      );
+      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(false);
       expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('meets');
       expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
         'met expectations'
@@ -366,7 +457,9 @@ describe('TeacherFeedback', () => {
     });
 
     it('shows the correct components if student is on a level with a rubric, where a performance level was given by the teacher', () => {
-      const wrapper = shallow(<TeacherFeedback {...STUDENT_RUBRIC_PROPS} />);
+      const wrapper = shallow(
+        <TeacherFeedback {...STUDENT_FEEDBACK_RUBRIC_PROPS} />
+      );
 
       // Student Has Feedback
       wrapper.setState({
@@ -395,6 +488,10 @@ describe('TeacherFeedback', () => {
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
       const confirmExceedsRatioButton = wrapper.find('RubricField').at(1);
       expect(confirmExceedsRatioButton.props().disabledMode).to.equal(true);
+      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
+        true
+      );
+      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(false);
       expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('meets');
       expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
         'met expectations'

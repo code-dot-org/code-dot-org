@@ -85,7 +85,7 @@ const ErrorType = {
 export class TeacherFeedback extends Component {
   static propTypes = {
     user: PropTypes.number,
-    disabledMode: PropTypes.bool,
+    disabledMode: PropTypes.bool.isRequired,
     rubric: PropTypes.shape({
       keyConcept: PropTypes.string,
       exceeds: PropTypes.string,
@@ -98,7 +98,7 @@ export class TeacherFeedback extends Component {
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     serverLevelId: PropTypes.number,
     teacher: PropTypes.number,
-    displayKeyConcept: PropTypes.bool
+    displayKeyConcept: PropTypes.bool.isRequired
   };
 
   constructor(props) {
