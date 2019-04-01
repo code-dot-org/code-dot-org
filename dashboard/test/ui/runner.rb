@@ -604,7 +604,8 @@ end
 def cucumber_arguments_for_browser(browser, options)
   arguments = ' -S' # strict mode, so that we fail on undefined steps
   arguments += skip_tag('@skip')
-  arguments += tag('@eyes', eyes? && !browser['mobile'])
+  # by default, marking a test @eyes will only let it run in chrome.
+  arguments += tag('@eyes', eyes? && browser['browserName'] == 'chrome')
   arguments += tag('@eyes_mobile', eyes? && browser['mobile'])
   arguments += skip_tag('@no_mobile') if browser['mobile']
   arguments += skip_tag('@only_mobile') unless browser['mobile']
