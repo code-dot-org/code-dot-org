@@ -35,6 +35,7 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
   end
 
   test 'Matches regional partner' do
+    # Use the same state & zip as the mini-contact factory's defaults.
     state = 'OH'
     zip = '45242'
 
