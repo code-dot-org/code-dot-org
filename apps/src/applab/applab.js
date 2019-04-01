@@ -73,6 +73,7 @@ import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
+import {generateExpoApk} from '../util/exporter';
 
 /**
  * Create a namespace for the application.
@@ -832,7 +833,7 @@ Applab.exportApp = function(expoOpts) {
 
   const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
   if (mode === 'expoGenerateApk') {
-    return Exporter.generateExpoApk(
+    return generateExpoApk(
       {
         appName,
         expoSnackId,
