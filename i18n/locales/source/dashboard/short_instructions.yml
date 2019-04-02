@@ -1762,10 +1762,20 @@ en:
       CourseD_Dance_Party_11_5: Use the "all ducks" blocks to make the ducks dance together.
       CourseD_Dance_Party_11b: Make the Robot "drop" once when you press the right arrow key, and "clap" once when you press the up arrow key. Do the drop-clap as fast as you can!
       CourseD_Dance_Party_12: Get your groove on! Create a dance of your own to share with your friends.
+      CourseE_HOC 2018 Level_1: Collect a boat from the chest.
       CourseE_HOC 2018 Level_10: Get to the entrance of this Ocean Monument.
       CourseE_HOC 2018 Level_11: 'Build a conduit with Prismarine inside the Ocean Monument.
 
 '
+      CourseE_HOC 2018 Level_2: 'Head to the end of the dock.
+
+'
+      CourseE_HOC 2018 Level_3: 'Head across the open seas to the cod.
+
+'
+      CourseE_HOC 2018 Level_4: Use a loop to get to the dolphin.
+      CourseE_HOC 2018 Level_5: Explore the shipwreck to reach the chest.
+      CourseE_HOC 2018 Level_6: Navigate through the ice to reach the salmon.
       CourseE_HOC 2018 Level_7a: Search these underwater ruins for a chest.
       CourseE_HOC 2018 Level_9b: 'Use the coral as waypoints to reach the treasure.
 
@@ -2571,6 +2581,7 @@ en:
       Rocket Height Course A: Follow the Design Recipe to create a function rocket-height.
       Ryan - 4-5 Bee Conditionals 2: The bee only wants nectar right now. Not all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding a flower. If it is, then you can gather nectar.
       Ryan - Bee Conditionals: The bee only wants nectar right now. Not all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding a flower. If it is, then you can gather nectar.
+      Ryan App Lab: Solve this one!
       Ryan Doily Step 1: Now we're going to draw a doily step by step. First, draw a square.
       Ryan Doily Step 2: Now you need to turn and repeat it 20 times! How many degrees do you turn to get 360 after 20 iterations?
       Ryan Doily Step 3: Now you need to turn and repeat it 20 times! How many degrees do you turn to get 360 after 20 iterations?
@@ -3607,17 +3618,18 @@ en:
       Virtual Pet 3_2019: Add a new sprite to the screen, then give it a costume that looks like food your pet enjoys eating.
       Virtual Pet 3_simple: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
-      Virtual Pet 4_2019: Add a behavior to the food to make it follow your mouse, then lead it to your pet.
+      Virtual Pet 4_2019: Add an event that makes the food jump to a random location when your pet touches it.
       Virtual Pet 4_simple: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
       Virtual Pet 5 - Validated: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
-      Virtual Pet 5_2019: Add an event that removes the food when it touches your pet.
+      Virtual Pet 5_2019: Add a sprite for food your pet doesn't like to eat. Make an event that causes this food to jump to a random location when your pet touches it.
       Virtual Pet 5_simple: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 6: Add an apple that returns the giraffe back to regular size when they touch.
-      Virtual Pet 6_2019: Add a new food container sprite to your screen. Add code that makes the food container create new food when it is clicked. As soon as it is created, the food should immediately begin following your pointer.
+      Virtual Pet 6_2019: Set the variable `happiness` to 0 when the program starts. When your pet eats food it likes, change `happiness` by 1. When your pet eats food it doesn't like, change `happiness` by -1.
       Virtual Pet 6_simple: Add an apple that returns the giraffe back to regular size when they touch.
+      Virtual Pet 7_2019: Create an event that prints your pet's happiness value when your pet is clicked.
       Virtual Pet Freeplay: 'Freeplay: What more can you make your giraffe do? '
-      Virtual Pet Freeplay_2019: 'Freeplay: What more can you make your giraffe do? '
+      Virtual Pet Freeplay_2019: "**Free Play:** What more can you make your pet do? Try anything you like!"
       Virtual Pet Freeplay_simple: 'Freeplay: What more can you make your giraffe do? '
       WhileAdventure: Our adventurer wants to collect coins. Can you help her grab as many as she can using only one remove 1 block?
       'Widget: Black and White Pixelation': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
@@ -3674,6 +3686,7 @@ en:
       behaviors 2: Help the baby bird fly!
       behaviors 3: Help the tortoise beat the hare!
       behaviors 4: Make a prediction!
+      behaviors 4a: Give the dog a behavior to help her find her bone.
       behaviors 5: Move the pet diagonally.
       behaviors 5a: Make the ball roll.
       behaviors 6: Make the ball roll.
@@ -3902,7 +3915,7 @@ en:
       courseA_collector_loops1_2019: Move Laurel around and get as much treasure as you can!
       courseA_collector_loops2: Get all three piles to pass this level.
       courseA_collector_loops2_2018: Get all three piles to pass this level.
-      courseA_collector_loops2_2019: Get all three piles to pass this level.
+      courseA_collector_loops2_2019: Get all three piles! Move Laurel to each piece of treasure, then use the collect block.
       courseA_collector_loops4: Fix Laurel's path to get all of this treasure.
       courseA_collector_loops4_2018: Fix Laurel's path to get all of this treasure.
       courseA_collector_loops4_2019: Fix Laurel's path to get all of this treasure.
