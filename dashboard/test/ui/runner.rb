@@ -619,7 +619,6 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@chrome_before_62') if browser['browserName'] != 'chrome' || browser['version'].to_i == 0 || browser['version'].to_i >= 62
   # browser version 0 implies the latest version.
-  arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'
   arguments += skip_tag('@no_older_chrome') if browser['browserName'] == 'chrome' && (browser['version'].to_i != 0 && browser['version'].to_i <= 67)
   arguments += skip_tag('@no_safari_yosemite') if browser['browserName'] == 'Safari' && browser['platform'] == 'OS X 10.10'
   arguments += skip_tag('@no_firefox') if browser['browserName'] == 'firefox'
