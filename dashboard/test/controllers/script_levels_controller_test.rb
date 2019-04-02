@@ -287,8 +287,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should not show concept video for non-legacy script level' do
     non_legacy_script_level = create(:script_level)
-    concept_with_video = Concept.find_by_name('sequence')
-    non_legacy_script_level.level.concepts = [concept_with_video]
+    concept_without_video = Concept.find_by_name('sequence')
+    non_legacy_script_level.level.concepts = [concept_without_video]
 
     get :show, params: {
       script_id: non_legacy_script_level.script,

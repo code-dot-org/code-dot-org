@@ -58,6 +58,6 @@ class Concept < ActiveRecord::Base
 
   def related_video
     @@related_video ||= {}
-    @@related_video[I18n.locale.to_s] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
+    @@related_video[video_key + ":" + I18n.locale.to_s] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
   end
 end
