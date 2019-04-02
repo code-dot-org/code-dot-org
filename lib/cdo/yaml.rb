@@ -2,7 +2,7 @@ require 'yaml'
 
 module Cdo
   # Extend YAML with customizations.
-  module YAML
+  module YAMLExtension
     def parse_yaml_header(content, locals={})
       match = content.match(/\A\s*^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
       return [{}, content] unless match
@@ -17,5 +17,5 @@ module Cdo
     end
   end
 
-  ::YAML.singleton_class.prepend YAML
+  ::YAML.singleton_class.prepend YAMLExtension
 end
