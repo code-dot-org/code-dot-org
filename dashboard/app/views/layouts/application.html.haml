@@ -14,6 +14,8 @@
     = stylesheet_link_tag    'css/code-studio', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
     = render partial: 'layouts/analytics'
+    // webpack-runtime.js must appear exactly once on any page containing webpack entries
+    %script{src: minifiable_asset_path('js/webpack-runtime.js')}
     // essential.js is ordered above application.js to filter new relic errors
     %script{src: minifiable_asset_path('js/essential.js')}
     = render file: Rails.root.join('..', 'shared', 'haml', 'answerdash.haml') if view_options[:answerdash]

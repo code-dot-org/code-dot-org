@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190220233612) do
+ActiveRecord::Schema.define(version: 20190320200540) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -38,12 +38,13 @@ ActiveRecord::Schema.define(version: 20190220233612) do
   end
 
   create_table "ap_school_codes", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "school_year"
     t.string   "school_code", limit: 6,  null: false
     t.string   "school_id",   limit: 12, null: false
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.index ["school_code"], name: "index_ap_school_codes_on_school_code", unique: true, using: :btree
-    t.index ["school_id"], name: "index_ap_school_codes_on_school_id", unique: true, using: :btree
+    t.index ["school_code", "school_year"], name: "index_ap_school_codes_on_school_code_and_school_year", unique: true, using: :btree
+    t.index ["school_id"], name: "fk_rails_08d2269647", using: :btree
   end
 
   create_table "authentication_options", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
