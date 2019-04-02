@@ -64,10 +64,18 @@ class ViewAsToggle extends React.Component {
         <div style={styles.viewAs}>{commonMsg.viewPageAs()}</div>
         <div style={styles.toggleGroup}>
           <ToggleGroup selected={viewAs} onChange={this.onChange}>
-            <button className="uitest-viewAsStudent" value={ViewType.Student}>
+            <button
+              type="button"
+              className="uitest-viewAsStudent"
+              value={ViewType.Student}
+            >
               {commonMsg.student()}
             </button>
-            <button className="uitest-viewAsTeacher" value={ViewType.Teacher}>
+            <button
+              type="button"
+              className="uitest-viewAsTeacher"
+              value={ViewType.Teacher}
+            >
               {commonMsg.teacher()}
             </button>
           </ToggleGroup>
