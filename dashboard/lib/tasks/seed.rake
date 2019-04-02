@@ -315,5 +315,5 @@ namespace :seed do
   task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings]
 
   desc "seed only dashboard data required for tests"
-  task test: [:games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools]
+  task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools]
 end

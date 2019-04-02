@@ -21,10 +21,19 @@
       "/docs/csd-1718/cc_search/index.html"
     ],
     "map_reference": "/docs/csd-1718/style_sheets/index.html",
-    "video_key": "csd_weblab_css_1"
+    "video_key": "csd_weblab_css_1",
+    "encrypted": "false",
+    "rubric_key_concept": "Apply formatting in a web page using CSS",
+    "rubric_exceeds": "The `h3` headings are a new color (not black).  There is no extra code in the stylesheet, and there are no syntax errors in the code.",
+    "rubric_meets": "The `h3` headings are a new color (not black).",
+    "rubric_approaches": "The `h3` headings have a special rule-set in the stylesheet, and the color property is used, but there are enough errors that the text does not change color.",
+    "rubric_no_evidence": "There is no special rule-set for `h3` headings or the color property is not used in the rule-set.",
+    "mini_rubric": "true"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-11 04:38:30 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-07-19 20:37:42 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-09 17:59:21 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-20 15:58:30 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:38:30 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-07-19 20:37:42 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-09 17:59:21 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-20 15:58:30 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-04-02 09:00:12 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>
