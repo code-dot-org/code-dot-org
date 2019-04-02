@@ -55,8 +55,9 @@ window.showRegionalPartnerMiniContactPopupLink = function() {
     <RegionalPartnerMiniContactPopupLink
       notes={notes}
       sourcePageId={sourcePageId}
-      children={linkText}
-    />,
+    >
+      {linkText}
+    </RegionalPartnerMiniContactPopupLink>,
     regionalPartnerMiniContactPopupLinkElement[0]
   );
 };
