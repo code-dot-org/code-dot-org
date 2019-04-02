@@ -458,3 +458,6 @@ en:
       timeforcs_demo_crowdsourcing:
         title: Crowdsourcing
         desc: '_Josh note: in contrast with the first lesson, I''ve formatted this one just like a typical unplugged lesson._'
+      timeforcs_demo_conditionals:
+        title: Conditionals
+        desc: To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."
