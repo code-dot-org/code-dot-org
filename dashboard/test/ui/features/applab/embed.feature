@@ -10,7 +10,7 @@ Feature: App Lab Embed
     Given I start a new Applab project
     And I wait for the page to fully load
 
-  @no_chrome
+
   Scenario: App Lab Embed
     Given I ensure droplet is in text mode
     And I append text to droplet "button('hello', 'world');"

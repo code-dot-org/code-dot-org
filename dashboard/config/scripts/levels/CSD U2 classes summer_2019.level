@@ -17,10 +17,19 @@
       "/docs/concepts/css/style-sheets/",
       "/docs/concepts/css/text-properties/"
     ],
-    "map_reference": "/docs/concepts/css/classes/"
+    "map_reference": "/docs/concepts/css/classes/",
+    "encrypted": "false",
+    "rubric_key_concept": "Create classes that can be referenced and affected as a group.",
+    "rubric_exceeds": "The summer class and rule-set are created correctly and all text in the summer section of the website is the chosen color, as indicated by the RGB code.",
+    "rubric_meets": "The summer class and rule-set are created and most text in the summer section of the website is affected by this class, but there may be a few minor errors for some parts of text.",
+    "rubric_approaches": "The summer class and rule-set are created, and at least some elements in the website are in that class, but there may be major errors that prevent the text from being styled.",
+    "rubric_no_evidence": "The summer class or rule set are not created, or no website elements are put in the class.",
+    "mini_rubric": "true"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-11 04:46:14 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-24 22:15:51 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 21:22:19 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-01-30 23:22:54 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:46:14 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-24 22:15:51 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 21:22:19 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-01-30 23:22:54 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 17:51:35 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 17:52:16 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>
