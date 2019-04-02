@@ -40,7 +40,7 @@ module.exports = {
     "no-unused-vars": ["error", { args: "none" }],
     "no-with": "error",
     "object-curly-spacing": "off",
-    "react/button-has-type": "off", // TODO: turn this on
+    "react/button-has-type": "error",
     "react/display-name": "off",
     "react/jsx-closing-bracket-location": "error", // autofixable
     "react/jsx-curly-spacing": "error", // autofixable

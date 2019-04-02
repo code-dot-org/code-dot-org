@@ -28,6 +28,7 @@ const CollapserButton = props => (
   // the toggle; for minecraft, we have a custom asset.
 
   <button
+    type="button"
     style={[styles.collapseButton, props.style]}
     id="toggleButton"
     onClick={props.onClick}

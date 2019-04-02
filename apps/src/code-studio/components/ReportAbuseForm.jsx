@@ -175,7 +175,11 @@ export default class ReportAbuseForm extends React.Component {
               })}
             />
           </div>
-          <button onClick={this.handleSubmit} id="uitest-submit-report-abuse">
+          <button
+            type="button"
+            onClick={this.handleSubmit}
+            id="uitest-submit-report-abuse"
+          >
             {i18n.t('submit')}
           </button>
         </form>

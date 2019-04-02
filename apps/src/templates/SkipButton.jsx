@@ -11,7 +11,7 @@ export default class SkipButton extends React.Component {
 
   render() {
     return (
-      <button id="skipButton" className={LAUNCH_CLASS}>
+      <button type="button" id="skipButton" className={LAUNCH_CLASS}>
         {msg.skipPuzzle()}
       </button>
     );
