@@ -1,0 +1,12 @@
+stage_extras_available true
+has_lesson_plan true
+
+stage 'Introduction to the Problem', flex_category: 'time4cs_c1'
+named_level 'timeforcs_demo_c1_1'
+named_level 'timeforcs_demo_c1_2'
+named_level 'timeforcs_demo_c1_3'
+named_level 'timeforcs_demo_c1_4'
+named_level 'timeforcs_demo_c1_5_journal'
+
+stage 'Crowdsourcing', flex_category: 'time4cs_c1'
+level 'timeforcs_demo_crowdsourcing', progression: 'Crowdsourcing'
