@@ -1337,8 +1337,8 @@ def press_keys(element, key)
   end
 end
 
-# Known issue: ie does not register the key presses in this step.
-# Add @no_ie tag to your scenario to skip ie when using this step
+# Known issue: IE does not register the key presses in this step.
+# Add @no_ie tag to your scenario to skip IE when using this step.
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
@@ -1353,6 +1353,16 @@ end
 When /^I press keys "([^"]*)"$/ do |keys|
   # Note: Safari webdriver does not support actions API
   @browser.action.send_keys(make_symbol_if_colon(keys)).perform
+end
+
+# Press backspace repeatedly to clear an element.  Handy for React.
+# Known issue: IE does not register the key presses in this step.
+# Add @no_ie tag to your scenario to skip IE when using this step.
+When /^I press backspace to clear element "([^"]*)"$/ do |selector|
+  element = @browser.find_element(:css, selector)
+  while @browser.execute_script("return $('#{selector}').val()") != ""
+    press_keys(element, ":backspace")
+  end
 end
 
 When /^I press enter key$/ do
