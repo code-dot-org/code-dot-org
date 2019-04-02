@@ -39,14 +39,13 @@ ruby
 
   # Return a string containing the correct indexes.  e.g. "3" or "0,1"
   def correct_answer_indexes
-    # We use variable name _index so that the linter ignores the fact that it's not explicitly used.
-    properties["answers"].each_with_index.select {|a, _index| a["correct"] == true}.map(&:last).join(",")
+    correct_answer_indexes_array.join(",")
   end
 
   # Return an array containing the correct indexes.  e.g. [3] or [0,1]
   def correct_answer_indexes_array
     # We use variable name _index so that the linter ignores the fact that it's not explicitly used.
-    properties["answers"].each_with_index.select {|a, _index| a["correct"] == true}.map(&:last)
+    answers.each_with_index.select {|a, _index| a["correct"] == true}.map(&:last)
   end
 
   # Converts a value (e.g. 0 or 1) to its displayed letter (e.g. "A" or "B")
