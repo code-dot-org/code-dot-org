@@ -9,8 +9,7 @@ renderer.link = (href, _title, text) =>
 
 export default class MarkdownSpan extends React.Component {
   static propTypes = {
-    children: PropTypes.string.isRequired,
-    style: PropTypes.object
+    children: PropTypes.string.isRequired
   };
 
   render() {
@@ -20,7 +19,6 @@ export default class MarkdownSpan extends React.Component {
     return (
       <span
         dangerouslySetInnerHTML={{__html: renderedText}} // eslint-disable-line react/no-danger
-        style={this.props.style}
       />
     );
   }
