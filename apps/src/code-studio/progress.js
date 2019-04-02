@@ -150,6 +150,11 @@ progress.renderStageProgress = function(
 progress.renderCourseProgress = function(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
+
+  if (scriptData.student_detail_progress_view) {
+    store.dispatch(setStudentDefaultsSummaryView(false));
+  }
+  initViewAs(store, scriptData);
   queryUserProgress(store, scriptData, null);
 
   const teacherResources = (scriptData.teacher_resources || []).map(
@@ -213,17 +218,7 @@ progress.renderMiniView = function(
   });
 };
 
-/**
- * Query the server for user_progress data for this script, and update the store
- * as appropriate
- */
-function queryUserProgress(store, scriptData, currentLevelId) {
-  const onOverviewPage = !currentLevelId;
-
-  if (scriptData.student_detail_progress_view) {
-    store.dispatch(setStudentDefaultsSummaryView(false));
-  }
-
+function initViewAs(store, scriptData) {
   // Set our initial view type from current user's user_type or our query string.
   let initialViewAs = ViewType.Student;
   if (scriptData.user_type === 'teacher') {
@@ -231,6 +226,14 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     initialViewAs = query.viewAs || ViewType.Teacher;
   }
   store.dispatch(setViewType(initialViewAs));
+}
+
+/**
+ * Query the server for user_progress data for this script, and update the store
+ * as appropriate
+ */
+function queryUserProgress(store, scriptData, currentLevelId) {
+  const onOverviewPage = !currentLevelId;
 
   $.ajax('/api/user_progress/' + scriptData.name, {
     data: {
