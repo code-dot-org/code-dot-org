@@ -902,7 +902,7 @@ assertion-error@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.0.0.tgz#c7f85438fdd466bc7ca16ab90c81513797a5d23b"
 
-assertion-error@^1.0.1, assertion-error@^1.0.2:
+assertion-error@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.0.2.tgz#13ca515d86206da0bac66e834dd397d87581094c"
 
@@ -4606,12 +4606,6 @@ entities@1.0:
 entities@^1.1.1, entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
-
-enzyme-wait@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/enzyme-wait/-/enzyme-wait-1.0.9.tgz#f7a08bf49c7047358fa03e1f411a565c3a15101a"
-  dependencies:
-    assertion-error "^1.0.2"
 
 enzyme@~2.8.0:
   version "2.8.2"

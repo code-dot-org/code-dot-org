@@ -1101,6 +1101,8 @@ en:
         behaviors_edit: Click here to see how this behavior works.
       behaviors 4_callout:
         behaviors_edit: Click here to see how this behavior works.
+      behaviors 4a_callout:
+        behaviors_edit: Click here to see how this behavior works.
       behaviors 5_callout:
         behaviors_edit: Add code to this behavior.
       comment_intro_maze_2018_callout: {}

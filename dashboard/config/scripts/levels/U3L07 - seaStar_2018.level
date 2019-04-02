@@ -180,7 +180,7 @@
         ],
         "matchType": "inexact",
         "minTimes": 5,
-        "message": "drawAllSeaStars: App lab is expecting that you write a loop runs at least 5 times and repeatedly calls two commands: moveTo(x,y) and drawSeaStar(size).  It appears as though the sequence is slightly different or you're not running the loop 5 times."
+        "message": "drawAllSeaStars: App lab is expecting that you write a loop that runs at least 5 times and repeatedly calls two commands: moveTo(x,y) and drawSeaStar(size).  It appears as though the sequence is slightly different or you're not running the loop 5 times."
       },
       {
         "entries": [
@@ -212,7 +212,7 @@
         ],
         "matchType": "inexact",
         "minTimes": 15,
-        "message": "drawAllFish: App lab is expecting that you write a loop runs at least 15 times and repeatedly calls two commands: moveTo(x,y) and drawFish(size, red, green, blue).  It appears as though the sequence is slightly different or you're not running the loop 15 times."
+        "message": "drawAllFish: App lab is expecting that you write a loop that runs at least 15 times and repeatedly calls two commands: moveTo(x,y) and drawFish(size, red, green, blue).  It appears as though the sequence is slightly different or you're not running the loop 15 times."
       },
       {
         "entries": [
@@ -246,11 +246,15 @@
     "expand_debugger": "false",
     "parent_level_id": 3223,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-29 22:49:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-11-29 22:49:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2019-04-01 15:47:26 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

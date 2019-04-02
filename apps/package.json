@@ -92,7 +92,6 @@
     "ejs": "^2.6.1",
     "ejs-webpack-loader": "^2.2.2",
     "enzyme": "~2.8.0",
-    "enzyme-wait": "^1.0.9",
     "es6-promise": "3.0.2",
     "eslint": "^3.19.0",
     "eslint-config-prettier": "^3.6.0",
