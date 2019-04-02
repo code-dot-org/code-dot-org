@@ -119,7 +119,7 @@ class Stage < ActiveRecord::Base
   end
 
   def summarize(include_bonus_levels = false)
-    stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}") do
+    stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
       stage_data = {
