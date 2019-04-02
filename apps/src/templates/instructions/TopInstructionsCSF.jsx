@@ -6,7 +6,6 @@ import Radium from 'radium';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 var instructions = require('../../redux/instructions');
-import {openDialog} from '../../redux/instructionsDialog';
 var color = require('../../util/color');
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
@@ -224,8 +223,7 @@ class TopInstructions extends React.Component {
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
     setInstructionsHeight: PropTypes.func.isRequired,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
-    setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
-    showInstructionsDialog: PropTypes.func.isRequired
+    setInstructionsMaxHeightNeeded: PropTypes.func.isRequired
   };
 
   static defaultProps = {
@@ -888,15 +886,6 @@ module.exports = connect(
       },
       clearFeedback(height) {
         dispatch(instructions.setFeedback(null));
-      },
-      showInstructionsDialog(height) {
-        dispatch(
-          openDialog({
-            autoClose: false,
-            imgOnly: false,
-            hintsOnly: true
-          })
-        );
       }
     };
   },

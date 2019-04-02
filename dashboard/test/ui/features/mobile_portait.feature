@@ -13,6 +13,6 @@ Feature: Look at mobile portait view
     And I see no difference for "initial load"
     And I close my eyes
     Examples:
-      | url                                                                       | test_name     |
+      | url                                                                      | test_name     |
       | http://studio.code.org/s/allthethings/stage/18/puzzle/5?noautoplay=true  | droplet level |
       | http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true  | artist level  |
