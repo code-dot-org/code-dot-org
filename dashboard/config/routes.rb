@@ -102,6 +102,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'section_responses'
         get 'section_surveys'
+        get 'section_feedback'
       end
     end
   end

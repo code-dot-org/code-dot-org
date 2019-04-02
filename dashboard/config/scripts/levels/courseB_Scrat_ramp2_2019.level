@@ -40,10 +40,9 @@
     "parent_level_id": 12179,
     "tts_long_instructions_override": "Snap both move east blocks to the bottom of the when run block to finish your code, then click run!",
     "show_type_hints": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
     "mini_rubric": "false",
-    "maze_data": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
