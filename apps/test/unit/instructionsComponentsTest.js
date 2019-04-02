@@ -52,14 +52,14 @@ describe('instructions components', () => {
           />
         </div>
       );
-      var element = dom.find('p');
-      expect(element.length).to.equal(2);
-      expect(element.first())
+      var elements = dom.childAt(0).children();
+      expect(elements.length).to.equal(2);
+      expect(elements.first())
         .text()
         .to.equal('title');
-      expect(element.last())
+      expect(elements.last())
         .text()
-        .to.equal('instructions');
+        .to.equal('instructions\n');
     });
 
     it('can have both instructions and instructions2', function() {
@@ -72,11 +72,11 @@ describe('instructions components', () => {
           />
         </div>
       );
-      var element = dom.find('p');
-      expect(element.length).to.equal(3);
-      expect(element.get(0).textContent).to.equal('title');
-      expect(element.get(1).textContent).to.equal('instructions');
-      expect(element.get(2).textContent).to.equal('instructions2');
+      var elements = dom.childAt(0).children();
+      expect(elements.length).to.equal(3);
+      expect(elements.get(0).textContent).to.equal('title');
+      expect(elements.get(1).textContent).to.equal('instructions\n');
+      expect(elements.get(2).textContent).to.equal('instructions2\n');
     });
   });
 });
