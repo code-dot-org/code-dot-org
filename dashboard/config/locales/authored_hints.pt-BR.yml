@@ -6859,6 +6859,8 @@ pt-BR:
         courseA_harvester_loops2_a: "Seu código terá **quatro** blocos 'mover para
           oeste'\n<xml><block type=\"maze_moveWest\"/></xml> e **quatro** blocos  <xml>
           'pegar milho' <block type=\"harvester_corn\"/>. "
+        courseA_harvester_loops2_b: 'Se você ainda está tendo problemas, tente dizer
+          os passos em voz alta. '
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Use um bloco `repetição` como este para te ajudar!
@@ -21281,6 +21283,9 @@ pt-BR:
           name="TIMES">???</title></block></xml> para selecionar repolhos, ao invés
           de utilizar 5 blocos <xml><block type="harvester_lettuce"/></xml>?
       courseF_maze_ramp1_authored_hint:
+        courseF_maze_ramp1_a: Se o pássaro não está chegando ao porco, certifique-se
+          de que todos os blocos foram totalmente encaixados juntos, então clique
+          em "Executar" novamente.
         courseF_maze_ramp1_b: Você não precisa de nenhum bloco extra da caixa de ferramentas
           aqui!
       courseF_maze_ramp13_authored_hint:
@@ -21297,6 +21302,9 @@ pt-BR:
         courseF_maze_ramp7_a: Use blocos de repetição para executar um único bloco
           ou um pedaço de código repetidamente.
       courseF_maze_ramp1_2018_authored_hint:
+        courseF_maze_ramp1_a: Se o pássaro não está chegando ao porco, certifique-se
+          de que todos os blocos foram totalmente encaixados juntos, então clique
+          em "Executar" novamente.
         courseF_maze_ramp1_b: Você não precisa de nenhum bloco extra da caixa de ferramentas
           aqui!
       courseF_maze_ramp2_authored_hint:

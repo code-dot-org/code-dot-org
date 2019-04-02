@@ -70,7 +70,7 @@ class Script < ActiveRecord::Base
   before_validation :hide_pilot_scripts
 
   def hide_pilot_scripts
-    self.hidden = true if pilot_experiment
+    self.hidden = true unless pilot_experiment.blank?
   end
 
   # As we read and write to files with the script name, to prevent directory
@@ -1467,6 +1467,28 @@ class Script < ActiveRecord::Base
     script_levels.select do |sl|
       sl.levels.first.is_a?(LevelGroup) && sl.long_assessment? && !sl.anonymous?
     end
+  end
+
+  def get_feedback_for_section(section)
+    feedback = {}
+    script_levels.each do |script_level|
+      section.students.each do |student|
+        temp_feedback = TeacherFeedback.get_student_level_feedback(student.id, script_level.level.id, section.user_id)
+        next unless temp_feedback
+        feedback[temp_feedback.id] = {
+          studentName: student.name,
+          stageNum: script_level.stage.relative_position.to_s,
+          stageName: script_level.stage.localized_title,
+          levelNum: script_level.position.to_s,
+          keyConcept: (script_level.level.rubric_key_concept || ''),
+          performanceLevelDetails: (script_level.level.properties["rubric_#{temp_feedback.performance}"] || ''),
+          performance: temp_feedback.performance,
+          comment: temp_feedback.comment,
+          timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r")
+        }
+      end
+    end
+    return feedback
   end
 
   def pilot?

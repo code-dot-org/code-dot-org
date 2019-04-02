@@ -115,7 +115,7 @@ Scenario: Signed out user viewing hamburger dropdown in Spanish on desktop
   And I wait for 2 seconds
 
 Scenario: Student viewing hamburger dropdown in Spanish on desktop
-  Given I create a student named "Estrella Estudiante"
+  Given I create a student named "Eva Estudiante"
   Then I wait until I am on "http://studio.code.org/home"
   Given I am on "http://studio.code.org/home/lang/es"
   Then I wait until I am on "http://studio.code.org/home"
@@ -155,7 +155,7 @@ Scenario: Teacher viewing hamburger dropdown in Spanish on desktop
   And I wait for 2 seconds
 
 Scenario: Student viewing hamburger dropdown in Spanish on desktop on level
-  Given I create a student named "Estrella Estudiante"
+  Given I create a student named "Eva Estudiante"
   Given I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1/lang/es"
   Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
   Then I wait to see "#hamburger-icon"

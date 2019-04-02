@@ -1101,6 +1101,8 @@ en:
         behaviors_edit: Click here to see how this behavior works.
       behaviors 4_callout:
         behaviors_edit: Click here to see how this behavior works.
+      behaviors 4a_callout:
+        behaviors_edit: Click here to see how this behavior works.
       behaviors 5_callout:
         behaviors_edit: Add code to this behavior.
       comment_intro_maze_2018_callout: {}
@@ -1358,7 +1360,7 @@ en:
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Grey blocks cannot be deleted!
       courseC_maze_debugging5_2018_callout:
-        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+        courseC_maze_debugging5_1: These gray blocks are locked and cannot be deleted!
       courseC_maze_debugging5_2019_callout:
         courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
       courseC_maze_debugging9_2019_callout:

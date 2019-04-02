@@ -30,6 +30,7 @@ class XhrProxyController < ApplicationController
     apex.oracle.com
     api.coinmarketcap.com
     api.data.gov
+    api.datamuse.com
     api.football-data.org
     api.foursquare.com
     api.nasa.gov
@@ -55,6 +56,7 @@ class XhrProxyController < ApplicationController
     googleapis.com
     hamlin.myschoolapp.com
     herokuapp.com
+    hubblesite.org
     isenseproject.org
     lakeside-cs.org
     qrng.anu.edu.au

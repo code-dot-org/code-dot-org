@@ -104,7 +104,7 @@ class Level < ActiveRecord::Base
 
   def specified_autoplay_video
     @@specified_autoplay_video ||= {}
-    @@specified_autoplay_video[video_key] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
+    @@specified_autoplay_video[video_key + ":" + I18n.locale.to_s] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
   end
 
   def summarize_concepts
@@ -216,8 +216,8 @@ class Level < ActiveRecord::Base
         hash['notes'] = Encryption.decrypt_object(encrypted_notes)
       end
     rescue Encryption::KeyMissingError
-      # developers must be able to seed levels without properties_encryption_key
-      raise unless rack_env?(:development)
+      # developers and adhoc environments must be able to seed levels without properties_encryption_key
+      raise unless rack_env?(:development) || rack_env?(:adhoc)
       puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
     end
     hash

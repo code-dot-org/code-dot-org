@@ -69,9 +69,19 @@ ky:
     user:
       signin: Кирүү
       create: Түзүү
+      algebra_game: Алгебра
       applab: App Lab
       artist: Сүрөтчү
+      artist_k1: Сүрөтчү (мектепке чейин)
+      basketball: Баскетбол
+      bounce: Bounce
       gamelab: Оюн лабы
+      gamelab_jr: Game Lab (бета)
+      infinity: Чексиздик
+      minecraft_adventurer: Minecraft тентек
+      minecraft_hero: Minecraft каарманы
+      playlab_k1: Play Lab (мектепке чейин)
+      weblab: Web Lab
   teacher:
     panel:
       section: Секция
@@ -148,6 +158,16 @@ ky:
       report_abuse_form:
         abuse_type:
           other: Башка
+  flex_category:
+    csf_jigsaw: Jigsaw
+    csf_loops: Циклдер
+    csf_events: Окуялар
+    csf_conditionals: Шартуулар
+    csf_functions: Функциялар
+    csf_variables: Өзгөрмөлөр
+    csp_variables: Өзгөрмөлөр
+    csp_conditionals: Шартуулар
+    csp_functions: Функциялар
   view_all_units: Бардык бирдиктерди көрүү
   pd:
     form_labels:

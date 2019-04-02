@@ -5833,3 +5833,7 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
+        csd-videos:
+          stages:
+            new stage:
+              name: ახალი დონე

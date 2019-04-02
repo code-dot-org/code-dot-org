@@ -2379,6 +2379,9 @@ en:
         description here: description here
         title: title
       Personal Website Examples: {}
+      Pilot Student App Interest Survey CSP 20-21:
+        Pilot Student Survey: Pilot Student Survey
+        Survey for student participating in the CSP Pilot.: Survey for student participating in the CSP Pilot.
       Pilot Student Survey:
         Pilot Student Survey: Pilot Student Survey
         Survey for student participating in the CSP Pilot.: Survey for student participating in the CSP Pilot.
@@ -4852,6 +4855,18 @@ en:
         : In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
         RGB Colors: RGB Colors
         rgb(216,191,216) <br />red:216, green:191, blue:216: rgb(216,191,216) <br />red:216, green:191, blue:216
+      CSD U2 image debug match:
+        <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png">: <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png">
+        <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png">: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png">
+        <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png">: <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png">
+        <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png">: <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png">
+        <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png">: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png">
+        Match the buggy HTML code with the description of its bug.: Match the buggy HTML code with the description of its bug.
+        The `src` and `alt` attributes are switched: The `src` and `alt` attributes are switched
+        The `src` attribute is spelled incorrectly.: The `src` attribute is spelled incorrectly.
+        The image address is not given as a `src` attribute: The image address is not given as a `src` attribute
+        The the file extension (.jpg) is missing from the image address: The the file extension (.jpg) is missing from the image address
+        There is a space in the file name: There is a space in the file name
       CSD U2 lists match:
         Lists Quick Check: Lists Quick Check
         Match the list to the code that makes it.: Match the list to the code that makes it.

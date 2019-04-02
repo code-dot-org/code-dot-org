@@ -57,7 +57,7 @@ sk:
 
           **360 / 12 = 30**
       2-3 Maze 6_authored_hint:
-        2-3_Maze_6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        2-3_Maze_6_a: Sú dve možnosti ako vyriešiť túto úlohu!
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Každý predmet potrebuje vlastnú slučku "while".
       Artist Inspiration_authored_hint:
@@ -853,6 +853,12 @@ sk:
         courseA_collector_loops5_c: Môžeš začať cyklom <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>, ktorý posunie Laurel na západ (vľavo) a pozbiera drahokamy.
       courseA_collector_loops5_2019_authored_hint:
         courseA_collector_loops5_c: Môžeš začať cyklom <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>, ktorý posunie Laurel na západ (vľavo) a pozbiera drahokamy.
+      courseA_collector_loops8_authored_hint:
+        courseA_collector_loops8_a: Ak máš problém s vyriešením tejto úlohy, skús si zapísať všetky kroky na papier a pohľadať v nich vzor.
+      courseA_collector_loops8_2018_authored_hint:
+        courseA_collector_loops8_a: Ak máš problém s vyriešením tejto úlohy, skús si zapísať všetky kroky na papier a pohľadať v nich vzor.
+      courseA_collector_loops8_2019_authored_hint:
+        courseA_collector_loops8_a: Ak máš problém s vyriešením tejto úlohy, skús si zapísať všetky kroky na papier a pohľadať v nich vzor.
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_b: "Na opakovanie kódu vytiahni cyklus `opakuj`  (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ), a potom vlož dovnútra blok, ktorý chceš zopakovať. "
       courseA_harvester_loops3_2019_authored_hint:
@@ -1574,7 +1580,7 @@ sk:
         courseB_maze_seq7_c: Nevieš sa dostať k žaluďu? Skús túto cestu!
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_a: Vyskúšaj pridávať bloky po jednom dovtedy, kým nevyriešiš túto úlohu.
-        courseB_maze_seq8_b: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseB_maze_seq8_b: Sú dve možnosti ako vyriešiť túto úlohu!
         courseB_maze_seq8_c: Nevieš kadiaľ ísť? Skús túto cestu!
       courseB_maze_seq8_2018_authored_hint:
         courseB_maze_seq8_a: Vyskúšaj pridávať bloky po jednom dovtedy, kým nevyriešiš túto úlohu.
@@ -2197,14 +2203,26 @@ sk:
         courseB_starWars_prog5_a: Nepodobá sa tento vzor na predošlú úlohu?
         courseB_starWars_prog5_b: BB-8 pozbiera kus kov, keď sa naň prigúľa.
         courseB_starWars_prog5_c: Sleduj tento vzor so svojim prstom. Počas pohybu spočítaj kusy kovu.
+        courseB_starWars_prog5_da: |-
+          Pozri, čo sa stane, ak použiješ to isté riešenie ako v úlohe so schodami:
+
+          ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog5_2018_authored_hint:
         courseB_starWars_prog5_a: Nepodobá sa tento vzor na predošlú úlohu?
         courseB_starWars_prog5_b: BB-8 pozbiera kus kov, keď sa naň prigúľa.
         courseB_starWars_prog5_c: Sleduj tento vzor so svojim prstom. Počas pohybu spočítaj kusy kovu.
+        courseB_starWars_prog5_da: |-
+          Pozri, čo sa stane, ak použiješ to isté riešenie ako v úlohe so schodami:
+
+          ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog5_2019_authored_hint:
         courseB_starWars_prog5_a: Nepodobá sa tento vzor na predošlú úlohu?
         courseB_starWars_prog5_b: BB-8 pozbiera kus kov, keď sa naň prigúľa.
         courseB_starWars_prog5_c: Sleduj tento vzor so svojim prstom. Počas pohybu spočítaj kusy kovu.
+        courseB_starWars_prog5_da: |-
+          Pozri, čo sa stane, ak použiješ to isté riešenie ako v úlohe so schodami:
+
+          ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog6_authored_hint:
         courseB_starWars_prog6_a: Tento vzor je ako kráčanie po schodoch s dvomi krokmi na každom schode!
         courseB_starWars_prog6_b: |-
@@ -2267,16 +2285,16 @@ sk:
           </xml>
       courseB_starWars_prog9_authored_hint:
         courseB_starWars_prog9_a: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
-        courseB_starWars_prog9_b: Je veľa spôsobov, ako vyriešiť túto úlohu.
+        courseB_starWars_prog9_b: Je veľa spôsobov ako vyriešiť túto úlohu.
         courseB_starWars_prog9_c: Pomohol by tu cyklus `opakuj`?
       courseB_starWars_prog9_2018_authored_hint:
         courseB_starWars_prog9_a: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
-        courseB_starWars_prog9_b: Je veľa spôsobov, ako vyriešiť túto úlohu.
+        courseB_starWars_prog9_b: Je veľa spôsobov ako vyriešiť túto úlohu.
         courseB_starWars_prog9_c: |-
           Pomohol by tu cyklus <xml><block type="controls_repeat_simplified"> <title name="TIMES">3</title> </block></xml>?
       courseB_starWars_prog9_2019_authored_hint:
         courseB_starWars_prog9_a: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
-        courseB_starWars_prog9_b: Je veľa spôsobov, ako vyriešiť túto úlohu.
+        courseB_starWars_prog9_b: Je veľa spôsobov ako vyriešiť túto úlohu.
         courseB_starWars_prog9_c: |-
           Pomohol by tu cyklus <xml><block type="controls_repeat_simplified"> <title name="TIMES">3</title> </block></xml>?
       courseC_artist_prog2_authored_hint:
@@ -2824,17 +2842,17 @@ sk:
         courseC_maze_programming5_b: Na splnenie úlohy sa vták musí jeden krát otočiť. Podarí sa ti zistiť, ktorým smerom?
         courseC_maze_programming5_c: V riešení použiješ dva bloky `posuň sa dopredu`, otočku a znovu dva bloky `posuň sa dopredu`.
       courseC_maze_programming6_authored_hint:
-        courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseC_maze_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
         courseC_maze_programming6_b: Prejdi si cestu od vtáka ku prasaťu pomocou prsta. Aké kroky musíš spraviť?
         courseC_maze_programming6_c: Pamätaj, že sa musíš najprv otočiť, keďže na začiatku je vták otočený smerom k stene.
         courseC_maze_programming6_d: Stále nevieš ako na to? Pozri na túto cestu!
       courseC_maze_programming6_2018_authored_hint:
-        courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseC_maze_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
         courseC_maze_programming6_b: Prejdi si cestu od vtáka ku prasaťu pomocou prsta. Aké kroky musíš spraviť?
         courseC_maze_programming6_c: Pamätaj, že sa musíš najprv otočiť, keďže na začiatku je vták otočený smerom k stene.
         courseC_maze_programming6_d: Stále nevieš ako na to? Pozri na túto cestu!
       courseC_maze_programming6_2019_authored_hint:
-        courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseC_maze_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
         courseC_maze_programming6_b: Prejdi si cestu od vtáka ku prasaťu pomocou prsta. Aké kroky musíš spraviť?
         courseC_maze_programming6_c: Pamätaj, že sa musíš najprv otočiť, keďže na začiatku je vták otočený smerom k stene.
         courseC_maze_programming6_d: Stále nevieš ako na to? Pozri na túto cestu!
@@ -2985,32 +3003,32 @@ sk:
         courseD_artist_nestedLoops3_b: 'Nezabudnite použiť vnorené cykly na rýchle vyriešenie úlohy. '
         courseD_artist_nestedLoops3_c: 'Na vyrobenie jedného štvorca použi blok `opakuj`. Potom to 8 krát zopakuj a medzi štvorcami skáč o 40 pixelov. '
       courseD_artist_nestedLoops4_authored_hint:
-        courseD_artist_nestedLoops4_d: Na správne vyriešenie sa musíš **pred** otáčením najskôr posunúť, inak nakreslíš kruhy kúsok vedľa!
+        courseD_artist_nestedLoops4_d: Na správne vyriešenie sa musíš **pred** otáčaním najskôr posunúť, inak nakreslíš kruhy kúsok vedľa!
         courseD_artist_nestedLoops4_a: |-
           Aby si nakreslil kruh:
           - Opakuj 360 krát
           - Posuň sa dopredu o 1 pixel
           - Otoč sa vľavo o 1 stupeň
         courseD_artist_nestedLoops4_b: Nezabúdaj skákať dopredu o 50 pixelov po každom kruhu.
-        courseD_artist_nestedLoops4_c: Použi vnorené cykly na nakreslenie týchto 4-och kruhov.
+        courseD_artist_nestedLoops4_c: Použi vnorené cykly na nakreslenie týchto 4 kruhov.
       courseD_artist_nestedLoops4_2018_authored_hint:
-        courseD_artist_nestedLoops4_d: Na správne vyriešenie sa musíš **pred** otáčením najskôr posunúť, inak nakreslíš kruhy kúsok vedľa!
+        courseD_artist_nestedLoops4_d: Na správne vyriešenie sa musíš **pred** otáčaním najskôr posunúť, inak nakreslíš kruhy kúsok vedľa!
         courseD_artist_nestedLoops4_a: |-
           Aby si nakreslil kruh:
           - Opakuj 360 krát
           - Posuň sa dopredu o 1 pixel
           - Otoč sa vľavo o 1 stupeň
         courseD_artist_nestedLoops4_b: Nezabúdaj skákať dopredu o 50 pixelov po každom kruhu.
-        courseD_artist_nestedLoops4_c: Použi vnorené cykly na nakreslenie týchto 4-och kruhov.
+        courseD_artist_nestedLoops4_c: Použi vnorené cykly na nakreslenie týchto 4 kruhov.
       courseD_artist_nestedLoops4_2019_authored_hint:
-        courseD_artist_nestedLoops4_d: Na správne vyriešenie sa musíš **pred** otáčením najskôr posunúť, inak nakreslíš kruhy kúsok vedľa!
+        courseD_artist_nestedLoops4_d: Na správne vyriešenie sa musíš **pred** otáčaním najskôr posunúť, inak nakreslíš kruhy kúsok vedľa!
         courseD_artist_nestedLoops4_a: |-
           Aby si nakreslil kruh:
           - Opakuj 360 krát
           - Posuň sa dopredu o 1 pixel
           - Otoč sa vľavo o 1 stupeň
         courseD_artist_nestedLoops4_b: Nezabúdaj skákať dopredu o 50 pixelov po každom kruhu.
-        courseD_artist_nestedLoops4_c: Použi vnorené cykly na nakreslenie týchto 4-och kruhov.
+        courseD_artist_nestedLoops4_c: Použi vnorené cykly na nakreslenie týchto 4 kruhov.
       courseD_artist_nestedLoops5_authored_hint:
         courseD_artist_nestedLoops5_a: |-
           Urobíš to ľahko takto:
@@ -3039,12 +3057,12 @@ sk:
           - Otoč sa vpravo o 90 stupňov
         courseD_artist_nestedLoops5_b: Na nakreslenie kruhu musíš nastaviť opakovanie na 360 krát. Vnútri každého opakovania sa posuň o 1 pixel a otoč o 1 stupeň.
       courseD_artist_nestedLoops6_authored_hint:
-        courseD_artist_nestedLoops6_a: Teraz opakuj vonkajší cyklus 6 krát namiesto 4-och.
-        courseD_artist_nestedLoops6_b: 'Teraz delíš 360 stupňov do 6-ich častí namiesto 4-och, bude stačiť sa otáčať o 60 stupňov medzi jednotlivými kruhmi. '
+        courseD_artist_nestedLoops6_a: Teraz zopakuj vonkajší cyklus 6 krát namiesto 4-och.
+        courseD_artist_nestedLoops6_b: 'Keďže teraz delíš 360 stupňov na 6 častí namiesto 4, postačí ti otočiť sa medzi kruhmi len o 60 stupňov. '
       courseD_artist_nestedLoops7_authored_hint:
         courseD_artist_nestedLoops7_a: Tu musíš použiť vnorené cykly. Najskôr pomocou cyklu nakresli štvorec. Čo má robiť vonkajší cyklus, keď vnútorný kreslí štvorce?
         courseD_artist_nestedLoops7_b: |-
-          Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je v vnútornom cykle.
+          Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je vo vnútornom cykle.
 
           - Opakuj 6 krát
           - Nakresli štvorec
@@ -3053,7 +3071,7 @@ sk:
       courseD_artist_nestedLoops7_2018_authored_hint:
         courseD_artist_nestedLoops7_a: Tu musíš použiť vnorené cykly. Najskôr pomocou cyklu nakresli štvorec. Čo má robiť vonkajší cyklus, keď vnútorný kreslí štvorce?
         courseD_artist_nestedLoops7_b: |-
-          Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je v vnútornom cykle.
+          Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je vo vnútornom cykle.
 
           - Opakuj 6 krát
           - Nakresli štvorec
@@ -3062,7 +3080,7 @@ sk:
       courseD_artist_nestedLoops7_2019_authored_hint:
         courseD_artist_nestedLoops7_a: Tu musíš použiť vnorené cykly. Najskôr pomocou cyklu nakresli štvorec. Čo má robiť vonkajší cyklus, keď vnútorný kreslí štvorce?
         courseD_artist_nestedLoops7_b: |-
-          Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je v vnútornom cykle.
+          Použi vnorené cykly, pričom kód na nakreslenie jedného štvorca je vo vnútornom cykle.
 
           - Opakuj 6 krát
           - Nakresli štvorec
@@ -3811,7 +3829,7 @@ sk:
         courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu vtáka.
         courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
       courseD_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseC_maze_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
         courseC_maze_programming6_b: Vták začína tvárou k stene, tak sa nezabudni otočiť predtým, ako sa pohneš.
         courseC_maze_programming6_c: 'Pamätaj si, že môžeš pracovať postupne: po každom napísanom riadku kódu môžeš program spustiť, aby si lepšie uvidel, kam sa musíš posunúť ďalej.'
       courseD_maze_ramp6a_authored_hint:
@@ -3834,10 +3852,10 @@ sk:
       courseD_scrat_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj kód riadok po riadku. Zistíš, čo spraviť ďalej?
       courseD_scrat_ramp7_authored_hint:
-        courseD_scrat_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseD_scrat_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
         courseD_scrat_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
       courseD_scrat_ramp7_2018_authored_hint:
-        courseD_scrat_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseD_scrat_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
         courseD_scrat_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
       courseD_scrat_ramp8_authored_hint:
         courseD_maze_ramp7_b: Nezabudli používať tlačidlo "Krok". Pomôže ti prejsť bludiskom krok po kroku a nájsť chyby.
@@ -3873,10 +3891,10 @@ sk:
       courseE_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj kód riadok po riadku. Zistíš, čo spraviť ďalej?
       courseE_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseC_maze_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
         courseC_maze_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
       courseE_maze_ramp6_2018_authored_hint:
-        courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseC_maze_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
         courseC_maze_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
       courseE_maze_ramp7_authored_hint:
         courseD_maze_ramp7_b: Nezabudli používať tlačidlo "Krok". Pomôže ti prejsť bludiskom krok po kroku a nájsť chyby.
@@ -3903,10 +3921,10 @@ sk:
       courseF_maze_ramp5_2018_authored_hint:
         courseF_maze_ramp5_a: Použi tlačidlo "Krok", aby si si prezrel svoj kód riadok po riadku. Zistíš, čo spraviť ďalej?
       courseF_maze_ramp6_authored_hint:
-        courseF_maze_ramp6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseF_maze_ramp6_a: Sú dve možnosti ako vyriešiť túto úlohu!
         courseF_maze_ramp6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
       courseF_maze_ramp6_2018_authored_hint:
-        courseF_maze_ramp6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        courseF_maze_ramp6_a: Sú dve možnosti ako vyriešiť túto úlohu!
         courseF_maze_ramp6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
       courseF_maze_ramp7_authored_hint:
         courseF_maze_ramp7_b: Nezabudli používať tlačidlo "Krok". Pomôže ti prejsť bludiskom krok po kroku a nájsť chyby.
@@ -3941,7 +3959,7 @@ sk:
       grade2_CaringForNewPet_0_authored_hint:
         grade2_CaringForNewPet_0: Ak sa vták neposúva ku prasaťu, presvedč sa, či si dobre spojil všetky bloky a stlač "Spustiť".
       grade2_CaringForNewPet_4_authored_hint:
-        2-3_Maze_6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
+        2-3_Maze_6_a: Sú dve možnosti ako vyriešiť túto úlohu!
       grade2_CaringForNewPet_7D_authored_hint:
         grade2_CaringForNewPet_7D_a: Nezabudli používať tlačidlo "Krok". Pomôže ti prejsť bludiskom krok po kroku a nájsť chyby.
       grade2_MakeDogTag_1_authored_hint:

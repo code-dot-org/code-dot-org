@@ -551,7 +551,7 @@ en:
         hoc_dance_congrats: Dance Party - Party On!
         c_and_c_great_to_create: It's Great to Create and Play Fair
         c_and_c_digital_sharing: Digital Sharing
-        'Teaching CS Fundamentals: How the Course Works': 'Teaching CS Fundamentals: How the Course Works'
+        teaching_csf_how_it_works: 'Teaching CS Fundamentals: How the Course Works'
         elem_pd_2: Elementary School Computer Science - PD video 2/2
         what_is_cs: What is computer science?
         repeat_block: Using the Repeat Block
@@ -564,6 +564,8 @@ en:
         what_is_an_event: What is an event?
         teaching_cs_pair_programming: 'Teaching CS Fundamentals: Pair Programming'
         teaching_problem_solving: 'Teaching CS Fundamentals: Teaching Problem Solving'
+        csd_applab_designmode: 'CS Discoveries: App Lab - Design Mode'
+        csd_pair_programming: Pair Programming
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

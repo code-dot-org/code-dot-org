@@ -231,9 +231,15 @@ bs:
       create: 'Kreiraj'
       applab: 'Laboratorij za Aplikacije'
       artist: 'Umjetnik'
-      playlab: 'Play Lab'
-      flappy: 'Flappy'
+      bounce: 'Odskok'
+      calc: 'Calc'
       dance: 'Plesna zabava'
+      eval: 'Eval'
+      flappy: 'Flappy'
+      frozen: 'Sniježno kraljevstvo'
+      infinity: 'Beskonačnost'
+      playlab: 'Play Lab'
+      starwars: 'Zvijezdani ratovi'
     popup:
       progress_for_user: "Napredak za %{name}"
       progress: 'Tvoj napredak'
@@ -623,7 +629,21 @@ bs:
       name: 'Odbijeno'
   flex_category:
     required: 'Pregled'
+    csf_digcit: 'Digitalno Državljanstvo'
+    csf_jigsaw: 'Slagalica'
+    csf_loops: 'Petlje'
+    csf_events: 'Događaji'
+    csf_binary: 'Binarno'
+    csf_conditionals: 'Uvjeti'
+    csf_nested_loops: 'Ugniježdene Petlje'
+    csf_functions: 'Funkcije'
+    csf_variables: 'Varijable'
+    csf_for_loops: 'Od-Do-Za Petlje'
+    csf_internet: 'Internet'
     csd5_2: 'Poglavlje 2: Rješavanje problema podataka'
+    csp_variables: 'Varijable'
+    csp_conditionals: 'Uvjeti'
+    csp_functions: 'Funkcije'
   external_links:
     leaving_domain: Sada napuštate ovu domenu, na stranicu koja nije rukovođena od strane Code.org-a.
     disclaimer_text: Ova stranica može imati politike privatnosti koje se razlikuju od onih na Code.org-u. Mi smo izabrali ova sredstva od trećih strana zato što mislimo da će Vam biti od koristi. Iako mi nismo direktno odgovorni za sadržaj ove stranice, molimo<a href='%{support_url}'>kontaktirajke podršku</a> ako nađete sporni sadržaj, ili ako povezana stranice više nije dostupna.

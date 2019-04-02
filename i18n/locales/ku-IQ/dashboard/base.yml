@@ -148,6 +148,10 @@ ku:
       report_abuse_form:
         abuse_type:
           other: 'هی تر'
+  flex_category:
+    csf_loops: 'گرێکان'
+    csf_variables: 'گۆڕاوەکان'
+    csp_variables: 'گۆڕاوەکان'
   pd:
     form_labels:
       email: 'ئیمەیڵ'

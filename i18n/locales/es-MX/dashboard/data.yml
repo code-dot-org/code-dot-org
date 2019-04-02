@@ -257,7 +257,7 @@ es-MX:
     video:
       name:
         maze_intro: Introducción al Laberinto
-        artist_intro: Introducción al artista
+        artist_intro: Introducción al Artista
         farmer_intro: Introducción al Granjero
         flappy_intro: Introducción a Flappy
         loop_times: Bloque Repetir Veces
@@ -289,7 +289,7 @@ es-MX:
         C1_maze_intro_sequencing: Introducción a Secuenciamiento del Laberinto
         C1_maze_debugging: Depuración del Laberinto
         C1_bee_level_intro: Nivel de Abeja - Introducción
-        C1_artist_intro: Introducción al artista
+        C1_artist_intro: Introducción al Artista
         C1_spelling_bee_intro: Abeja de Deletreo - Introducción
         C1_zuck_repeat_loop: Bucles del laberinto
         C1_bee_loops: Bucles de abeja
@@ -299,7 +299,7 @@ es-MX:
         C1_building_foundation: Construir una base
         C1_going_places_safely: Ir a sitios seguros
         C2_maze_intro: Introducción al Laberinto
-        C2_artist_intro: Introducción al artista
+        C2_artist_intro: Introducción al Artista
         C2_zuck_repeat_loop: Bucles del laberinto
         C2_artist_loops: Ciclos del artista
         C2_artist_debugging: Depuración del artista
@@ -315,7 +315,7 @@ es-MX:
         C2_digital_footprint: Tu huella dactilar
         C2_digital_footprint_v2: Tu huella dactilar
         C3_maze_level_4: Bucles del laberinto
-        C3_artist_intro: Introducción al artista
+        C3_artist_intro: Introducción al Artista
         C3_artist_functions: Funciones de artista
         C3_bee_functions: Funciones de la abeja
         C3_bee_conditionals: Condiciones de la abeja
@@ -359,7 +359,7 @@ es-MX:
         CSF_create_functions: Crear funciones
         CSF_debugging_k1_blocks: Depuración
         CSF_debugging_text_blocks: Depuración
-        CSF_EF_cs_matters: Importancia de las Ciencias de la Computación
+        CSF_EF_cs_matters: Asuntos de las Ciencias de la Computación
         CSF_maze_intro_k1_blocks: Introducción a Code Studio
         CSF_maze_intro_text_blocks: Introducción a Code Studio
         CSF_my_robotic_friends: Mis amigos robóticos
@@ -496,7 +496,7 @@ es-MX:
         csd_gamelab_conditional_statements: Sentencias Condicionales
         csd_gamelab_if_else: Sentencias Si/Más
         CSF_SpriteLabIntro_CDEF: Esto es Sprite Lab
-        CSF_Spritelab_MakeSprite_CDEF: Como hacer un Sprite en Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: Cómo hacer un sprite en Sprite Lab
         CDEF_Video_SpritesInAction: Sprites en acción
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acción
         CSF_StarWars_ProjectIntro: Introducción al Proyecto de Star Wars
@@ -510,7 +510,7 @@ es-MX:
         hoc_dance_congrats: Fiesta de Baile - ¡A la fiesta!
         c_and_c_great_to_create: Crear y jugar limpio es lo mejor
         c_and_c_digital_sharing: Colaboración digital
-        'Teaching CS Fundamentals: How the Course Works': 'Enseñando Fundamentos CS: Cómo funciona el curso'
+        teaching_csf_how_it_works: 'Enseñando Fundamentos CS: Cómo funciona el curso'
         elem_pd_2: Informática de la Escuela Primaria - vídeo PD 2/2
         what_is_cs: '¿Qué son las Ciencias de la computación?'
         repeat_block: Usando el bloque de repetición
@@ -523,6 +523,7 @@ es-MX:
         what_is_an_event: '¿Qué es un evento?'
         teaching_cs_pair_programming: 'Enseñando Fundamentos CS: Programación de Pares'
         teaching_problem_solving: 'Enseñando Fundamentos CS: Enseñando resolución de problemas'
+        csd_applab_designmode: 'Descubrimientos de CS: Laboratorio de aplicación - modo de diseño'
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
