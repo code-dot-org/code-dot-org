@@ -120,6 +120,7 @@ namespace :test do
         fixture_hash = Digest::MD5.hexdigest(
           Dir["#{fixture_path}/{**,*}/*.yml"].
             push(dashboard_dir('db/schema.rb')).
+            push(dashboard_dir('config/videos.csv')).
             select(&File.method(:file?)).
             sort.
             map(&Digest::MD5.method(:file)).

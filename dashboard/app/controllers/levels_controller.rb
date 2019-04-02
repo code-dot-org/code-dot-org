@@ -200,7 +200,8 @@ class LevelsController < ApplicationController
   def new
     authorize! :create, Level
     if params.key? :type
-      @type_class = params[:type].constantize
+      @type_class = Level.descendants.find {|klass| klass.name == params[:type]}
+      raise "Level type '#{params[:type]}' not permitted" unless @type_class
       if @type_class == Artist
         @game = Game.custom_artist
       elsif @type_class <= Studio

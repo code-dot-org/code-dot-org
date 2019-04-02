@@ -8,7 +8,7 @@ import React from 'react';
 import _ from 'lodash';
 import sinon from 'sinon';
 import {expect} from '../../../../util/configuredChai';
-import {mount, ReactWrapper} from 'enzyme';
+import {mount} from 'enzyme';
 
 describe('DetailViewContents', () => {
   // We aren't testing any of the responses of the workshop selector control, so just
@@ -190,14 +190,14 @@ describe('DetailViewContents', () => {
         const detailView = mountDetailView(applicationType, {
           isWorkshopAdmin: false
         });
-        expect(detailView.find('#admin-edit')).to.have.length(0);
+        expect(detailView.find('button#admin-edit')).to.have.length(0);
       });
 
       it('Is visible to admins', () => {
         const detailView = mountDetailView(applicationType, {
           isWorkshopAdmin: true
         });
-        expect(detailView.find('#admin-edit')).to.have.length(2);
+        expect(detailView.find('button#admin-edit')).to.have.length(2);
       });
 
       it('Edit redirects to edit page', () => {
@@ -207,12 +207,13 @@ describe('DetailViewContents', () => {
         const mockRouter = sinon.mock(context.router);
 
         detailView
-          .find('#admin-edit')
+          .find('button#admin-edit')
           .first()
           .simulate('click');
         const adminEditMenuitem = detailView
           .find('.dropdown.open a')
-          .findWhere(a => a.text() === '(Admin) Edit Form Data');
+          .findWhere(a => a.text() === '(Admin) Edit Form Data')
+          .first();
 
         mockRouter.expects('push').withExactArgs('/1/edit');
         adminEditMenuitem.simulate('click');
@@ -224,12 +225,13 @@ describe('DetailViewContents', () => {
           isWorkshopAdmin: true
         });
         detailView
-          .find('#admin-edit')
+          .find('button#admin-edit')
           .first()
           .simulate('click');
         const deleteApplicationMenuitem = detailView
           .find('.dropdown.open a')
-          .findWhere(a => a.text() === 'Delete Application');
+          .findWhere(a => a.text() === 'Delete Application')
+          .first();
 
         expect(deleteApplicationMenuitem).to.have.length(1);
       });
@@ -241,12 +243,13 @@ describe('DetailViewContents', () => {
         };
         const detailView = mountDetailView(applicationType, overrides);
         detailView
-          .find('#admin-edit')
+          .find('button#admin-edit')
           .first()
           .simulate('click');
         const deleteFitWeekendRegistrationMenuitem = detailView
           .find('.dropdown.open a')
-          .findWhere(a => a.text() === 'Delete FiT Weekend Registration');
+          .findWhere(a => a.text() === 'Delete FiT Weekend Registration')
+          .first();
 
         expect(deleteFitWeekendRegistrationMenuitem).to.have.length(1);
       });
@@ -256,15 +259,17 @@ describe('DetailViewContents', () => {
           isWorkshopAdmin: true
         });
         detailView
-          .find('#admin-edit')
+          .find('button#admin-edit')
           .first()
           .simulate('click');
         const deleteTeacherconRegistrationMenuitem = detailView
           .find('.dropdown.open a')
-          .findWhere(a => a.text() === 'Delete Teachercon Registration');
+          .findWhere(a => a.text() === 'Delete Teachercon Registration')
+          .first();
         const deleteFitWeekendRegistrationMenuitem = detailView
           .find('.dropdown.open a')
-          .findWhere(a => a.text() === 'Delete FiT Weekend Registration');
+          .findWhere(a => a.text() === 'Delete FiT Weekend Registration')
+          .first();
 
         expect(deleteTeacherconRegistrationMenuitem).to.have.length(0);
         expect(deleteFitWeekendRegistrationMenuitem).to.have.length(0);
@@ -285,8 +290,8 @@ describe('DetailViewContents', () => {
         expect(
           detailView.find('#DetailViewHeader FormControl').prop('disabled')
         ).to.be.true;
-        expect(detailView.find('#notes').prop('disabled')).to.be.true;
-        expect(detailView.find('#notes_2').prop('disabled')).to.be.true;
+        expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
+        expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
 
         expectedButtons =
           applicationType === 'Facilitator'
@@ -304,8 +309,9 @@ describe('DetailViewContents', () => {
         expect(
           detailView.find('#DetailViewHeader FormControl').prop('disabled')
         ).to.be.false;
-        expect(detailView.find('#notes').prop('disabled')).to.be.false;
-        expect(detailView.find('#notes_2').prop('disabled')).to.be.false;
+        expect(detailView.find('textarea#notes').prop('disabled')).to.be.false;
+        expect(detailView.find('textarea#notes_2').prop('disabled')).to.be
+          .false;
 
         detailView
           .find('#DetailViewHeader Button')
@@ -314,8 +320,8 @@ describe('DetailViewContents', () => {
         expect(
           detailView.find('#DetailViewHeader FormControl').prop('disabled')
         ).to.be.true;
-        expect(detailView.find('#notes').prop('disabled')).to.be.true;
-        expect(detailView.find('#notes_2').prop('disabled')).to.be.true;
+        expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
+        expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
       });
     });
   }
@@ -323,13 +329,13 @@ describe('DetailViewContents', () => {
   describe('Scholarship Teacher? row', () => {
     it('on teacher applications', () => {
       const detailView = mountDetailView('Teacher');
-      const lastRow = detailView
-        .find('tr')
-        .filterWhere(row => row.text().includes('Scholarship Teacher?'));
-      const dropdown = lastRow.find('Select');
+      const getLastRow = () =>
+        detailView
+          .find('tr')
+          .filterWhere(row => row.text().includes('Scholarship Teacher?'));
 
       // Dropdown is disabled
-      expect(dropdown).to.have.prop('disabled', true);
+      expect(getLastRow().find('Select')).to.have.prop('disabled', true);
 
       // Click "Edit"
       detailView
@@ -338,7 +344,7 @@ describe('DetailViewContents', () => {
         .simulate('click');
 
       // Dropdown is enabled
-      expect(dropdown).to.have.prop('disabled', false);
+      expect(getLastRow().find('Select')).to.have.prop('disabled', false);
 
       // Click "Save"
       detailView
@@ -347,7 +353,7 @@ describe('DetailViewContents', () => {
         .simulate('click');
 
       // Dropdown is disabled
-      expect(dropdown).to.have.prop('disabled', true);
+      expect(getLastRow().find('Select')).to.have.prop('disabled', true);
     });
   });
 
@@ -440,6 +446,7 @@ describe('DetailViewContents', () => {
         .filterWhere(row => row.text().includes('Scholarship Teacher?'))
         .find('Select');
       scholarshipDropdown.prop('onChange')({value: newValue});
+      detailView.update();
     }
 
     function isModalShowing() {
@@ -453,11 +460,11 @@ describe('DetailViewContents', () => {
     }
 
     function dismissModal() {
-      const okButton = new ReactWrapper(
-        document.querySelector('button.btn-primary'),
-        true
-      );
-      okButton.simulate('click');
+      detailView
+        .find('ConfirmationDialog')
+        .first()
+        .prop('onOk')();
+      detailView.update();
     }
   });
 });
