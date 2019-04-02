@@ -71,7 +71,7 @@
         form_container: "#all_authored_hints_editor",
         wrapper: ".json_editor",
         onNewSpace: function (space) {
-          space.find('.hint_id').get(0).setAttribute("required", ""),
+          space.find('.hint_id').get(0).setAttribute("required", "");
           levelbuilder.initializeCodeMirror(
             space.find('.hint_markdown').get(0),
             'markdown',
