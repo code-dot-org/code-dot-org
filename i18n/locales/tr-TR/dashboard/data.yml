@@ -459,6 +459,7 @@ tr:
         CSF_bb8_loops_C-F: BB-8 ile Döngüler
         CSF_loops_AB: Döngüler
         c_and_c_digital_sharing: Dijital Paylaşım
+        csd_pair_programming: Eşli Programlama
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
