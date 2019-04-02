@@ -3200,6 +3200,12 @@ sk:
         courseC_collector_prog_challenge1_a: Na jednom políčku môžeš blok `zbieraj`
           použiť aj viackrát.
         courseC_collector_prog_challenge1_b: Stratil si sa? Vyskúšaj túto cestu!
+      courseC_flappy_events1_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+      courseC_flappy_events1_2018_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+      courseC_flappy_events1_2019_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_harvester_loops1_authored_hint:
         courseC_harvester_loops1_b: Môžeš použiť cyklus s blokom <xml><block type="harvester_pumpkin"/></xml>,
           aby si z políčka zobral viac ako jednu tekvicu.
@@ -3484,12 +3490,36 @@ sk:
       courseC_maze_programming3_authored_hint:
         courseC_maze_programming3_a: Skús najprv kód spustiť, aby si uvidel, kde robí
           chybu.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Ak chceš vymazať jeden blok zo stredu svojho kódu, potiahni všetky bloky nakraj svojej pracovnej plochy.
+
+          Potiahni blok, ktorý chceš odstrániť naspäť do panela nástrojov.
+
+          Nakoniec vráť ostatné bloky tam kde patria.
       courseC_maze_programming3_2018_authored_hint:
         courseC_maze_programming3_a: Skús najprv kód spustiť, aby si uvidel, kde robí
           chybu.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Ak chceš vymazať jeden blok zo stredu svojho kódu, potiahni všetky bloky nakraj svojej pracovnej plochy.
+
+          Potiahni blok, ktorý chceš odstrániť naspäť do panela nástrojov.
+
+          Nakoniec vráť ostatné bloky tam kde patria.
       courseC_maze_programming3_2019_authored_hint:
         courseC_maze_programming3_a: Skús najprv kód spustiť, aby si uvidel, kde robí
           chybu.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Ak chceš vymazať jeden blok zo stredu svojho kódu, potiahni všetky bloky nakraj svojej pracovnej plochy.
+
+          Potiahni blok, ktorý chceš odstrániť naspäť do panela nástrojov.
+
+          Nakoniec vráť ostatné bloky tam kde patria.
       courseC_maze_programming4_authored_hint:
         courseC_maze_programming4_a: Pamätaj, že keď sa otáčaš, robíš to z pohľadu
           *vtáka*. Ak sa otočíš vpravo, vták bude sa otočí smerom dole.

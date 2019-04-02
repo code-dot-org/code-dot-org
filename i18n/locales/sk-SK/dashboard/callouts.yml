@@ -467,6 +467,8 @@ sk:
         behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
       behaviors 4_callout:
         behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
+      behaviors 4a_callout:
+        behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
       behaviors 5_callout:
         behaviors_edit: Pridaj kód k tomuto správaniu.
       course2_bee_conditionals_challenge2_callout:
@@ -655,7 +657,7 @@ sk:
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Šedé bloky nemôžu byť vymazané!
       courseC_maze_debugging5_2018_callout:
-        courseC_maze_debugging5_1: Tieto bloky sú zamknuté a nie je možné ich odstrániť!
+        courseC_maze_debugging5_1: Tieto šedé bloky sú zamknuté a nie je možné ich odstrániť!
       courseC_maze_debugging5_2019_callout:
         courseC_maze_debugging5_1: Tieto bloky sú zamknuté a nie je možné ich odstrániť!
       courseC_maze_debugging9_2019_callout:
