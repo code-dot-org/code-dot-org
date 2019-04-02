@@ -1,7 +1,6 @@
 require_relative './db'
 
 module Metrics
-
   def self.devinternal_db
     raise "devinternal_db_writer not defined" unless CDO.devinternal_db_writer
 
