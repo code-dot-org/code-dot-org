@@ -91,9 +91,8 @@ def redact(source, dest, *plugins)
   data = YAML.load_file(source)
   args = ['bin/i18n/node_modules/.bin/redact',
           '-c bin/i18n/plugins/nonCommonmarkLinebreak.js']
-  unless plugins.empty?
-    args.push('-p ' + plugins)
-  end
+  args.push('-p ' + plugins) unless plugins.empty?
+
   stdout, _status = Open3.capture2(
     args.join(" "),
     stdin_data: JSON.generate(data)
@@ -122,9 +121,8 @@ def restore(source, redacted, dest, *plugins)
 
   args = ['bin/i18n/node_modules/.bin/restore',
           '-c bin/i18n/plugins/nonCommonmarkLinebreak.js']
-  unless plugins.empty?
-    args.push('-p ' + plugins)
-  end
+  args.push('-p ' + plugins) unless plugins.empty?
+
   args.push("-s #{source_json.path}")
   args.push("-r #{redacted_json.path}")
   stdout, _status = Open3.capture2(
