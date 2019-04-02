@@ -654,7 +654,7 @@ module LevelsHelper
       )
     else
       level_name = source_level ? source_level.name : @level.name
-      data_t(prefix + '.' + level_name, text)
+      data_t(prefix + '.' + level_name, text, text)
     end
   end
 
