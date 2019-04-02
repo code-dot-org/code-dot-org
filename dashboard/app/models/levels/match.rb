@@ -23,11 +23,7 @@
 #  index_levels_on_name     (name)
 #
 
-require "csv"
-
 class Match < DSLDefined
-  include LevelsHelper
-
   def dsl_default
     <<ruby
 name 'unique level name here'
@@ -69,10 +65,6 @@ ruby
 
     shuffled_answers = indexed_answers.shuffle until shuffled_answers && shuffled_answers != indexed_answers
     shuffled_answers
-  end
-
-  def localize_text(text)
-    string_or_image('match', text)
   end
 
   def supports_markdown?
