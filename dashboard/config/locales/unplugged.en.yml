@@ -455,3 +455,6 @@ en:
       courseB_unplugged_passwords_2019:
         title: Powerful Passwords
         desc: Explore why people use passwords, learn the benefits of using passwords, and discover strategies for creating and keeping strong, secure passwords.
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+        desc: '_Josh note: in contrast with the first lesson, I''ve formatted this one just like a typical unplugged lesson._'
