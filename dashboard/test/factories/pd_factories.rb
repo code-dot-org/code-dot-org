@@ -780,6 +780,23 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_regional_partner_mini_contact, class: 'Pd::RegionalPartnerMiniContact' do
+    user nil
+    regional_partner nil
+    form_data {build(:pd_regional_partner_mini_contact_hash).to_json}
+  end
+
+  factory :pd_regional_partner_mini_contact_hash, class: 'Hash' do
+    initialize_with do
+      {
+        name: 'name',
+        email: 'foo@bar.com',
+        zip: '45242',
+        notes: 'Sample notes to regional partner'
+      }
+    end
+  end
+
   factory :pd_international_opt_in, class: 'Pd::InternationalOptIn' do
     user nil
     form_data nil
