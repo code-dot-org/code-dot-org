@@ -15,7 +15,7 @@ const DEEP_DIVE = 'Deep Dive';
 const NA = 'N/A';
 const LOCAL_SUMMER = '5-day Summer';
 
-class WorkshopEnrollmentSchoolInfo extends React.Component {
+export class WorkshopEnrollmentSchoolInfo extends React.Component {
   constructor(props) {
     super(props);
 
