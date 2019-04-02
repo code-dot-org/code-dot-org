@@ -18,6 +18,7 @@ Students can build in-demand skills and learn from expert technologists. The Plu
 * Learning paths to learn skills in an appropriate progression<br>
 * Channels to focus learning on goals 
 * Mobile and offline viewing to learn anytime, anywhere<br> 
+* Access for a full year from the time they redeem the offering that is provided by their teacher<br>
 
 Curated by expert technologists, the library features over 150 courses totaling over 500 hours of content across four major areas: IT/OPs, software development, design/creative, and product management.
 <Br>
@@ -30,4 +31,4 @@ As the AP CS Principles exam approaches, Code.org teachers will be notified thro
 ***
 #### About Pluralsight
 
-Pluralsight is an enterprise technology skills platform that delivers a unified, end-to-end learning experience for businesses across the globe. Through a subscription service, companies are empowered to move at the speed of technology, increasing proficiency, innovation and efficiency. Founded in 2004 and trusted by Fortune 500 companies, Pluralsight provides members with on-demand access to a digital ecosystem of learning tools, including Pluralsight IQ, directed learning paths, expert-authored courses, interactive labs, and analytics. For more information, visit www.pluralsight.com.
+Pluralsight is an enterprise technology skills platform that delivers a unified, end-to-end learning experience for businesses across the globe. Through a subscription service, companies are empowered to move at the speed of technology, increasing proficiency, innovation and efficiency. Founded in 2004 and trusted by Fortune 500 companies, Pluralsight provides members with on-demand access to a digital ecosystem of learning tools, including Pluralsight IQ, directed learning paths, expert-authored courses, interactive labs, and analytics. For more information, visit www.pluralsight.com. Pluralsight One is Pluralsight’s social enterprise. It is the company’s commitment to drive significant, lasting social impact by improving equal access to technology skills and investing in catalytic solutions. For more information about Pluralsight One, visit www.pluralsightone.org.
