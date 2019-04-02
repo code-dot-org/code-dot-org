@@ -10087,6 +10087,18 @@ es-MX:
           <title name="VALUE">Bird</title>
           </block>
           </xml>
+      courseC_artist_loops1b_2019_authored_hint:
+        courseC_artist_loops1b_a: |-
+          Este es el primer bloque que necesitarás:
+
+          <xml>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">???</title>
+          <title name="VALUE" config="45,60,90,120,180">???</title>
+          </block>
+          </xml>
+
+          Puedes elegir tanto izquierda como derecha y cualquier número de grados.
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_a: Dentro del loop, querrás saltar a 200 más de 200,
           luego dibuja la calcomanía del pájaro, y luego gira 30 grados.
@@ -10153,6 +10165,45 @@ es-MX:
           </xml>
 
           ¡No olvides cambiar la distancia del salto!
+        courseC_artist_loops4a_b: |-
+          ¡Tu programa debería verse así!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">???</title>
+          <statement name="DO">
+          <block type="jump_to">
+          <title name="VALUE">13</title>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">???</title>
+          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">Cat</title>
+          <next>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">???</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">Dog</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseC_artist_loops5_authored_hint:
         courseC_artist_loops5_a: |-
           Intenta usar el bloque `jump to` para que tu artista vuelva al centro:
@@ -10204,6 +10255,62 @@ es-MX:
           </xml>
         courseC_artist_loops5b_b: Para hacer un diseño como el anterior, deberás retroceder
           la misma cantidad que avanzas.
+        courseC_artist_loops5b_c: |-
+          ¡Tu programa debería verse así!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">rainbowLine</title>
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="jump_to">
+          <title name="VALUE">13</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">???</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveBackward</title>
+          <title name="VALUE">???</title>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">???</title>
+          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">Cat</title>
+          <next>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">???</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">Dog</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseC_artist_loops6_authored_hint:
         courseC_artist_loops6_a: "Pruebe una flor de triángulo:\n <img src = \"https://images.code.org/4248a974a7631c4240effba06fdee731-image-1495821015097.49.18.png\"
           width = \"150px\" /> \n\nO un pequeño error verde:\n <img src = \"https:
@@ -14970,6 +15077,8 @@ es-MX:
       courseD_playLab_cond6_2019_authored_hint:
         courseD_playLab_cond6_a: Agrega el bloque ` establecer velocidad de ninja
           enmascarada` al comienzo del programa para ayudar a frenar al ninja.
+        courseD_playLab_cond6_c: La 'zona segura' es un área a la que el ninja no
+          puede entrar; por eso es segura para el pirata.
         courseD_playLab_cond6_b: Tendrás que utilizar un bloque `si actor 1 y la posición
           > 255` dentro de un bloque 'repetir siempre` para comprobar siempre si el
           pirata está por debajo de los pulpos.
@@ -16226,7 +16335,7 @@ es-MX:
         courseE_farmer_functions9a1_2018a: Usarás la misma función que hiciste en
           los últimos desafíos.
         courseE_farmer_functions9a1_2018b: Usa los mismos pasos del desafío anterior
-          para resolver la primera mitad del desafío.
+          para resolver la primera mitad de este desafío.
         courseE_farmer_functions9a1_2018c: Deberás `girar` algunas veces y `avanzar`
           para llegar al último cultivo de lechuga antes de que puedas llamar a tu
           función de nuevo.
@@ -16234,7 +16343,7 @@ es-MX:
         courseE_farmer_functions9a1_2018a: Usarás la misma función que hiciste en
           los últimos desafíos.
         courseE_farmer_functions9a1_2018b: Usa los mismos pasos del desafío anterior
-          para resolver la primera mitad del desafío.
+          para resolver la primera mitad de este desafío.
         courseE_farmer_functions9a1_2018c: Deberás `girar` algunas veces y `avanzar`
           para llegar al último cultivo de lechuga antes de que puedas llamar a tu
           función de nuevo.
@@ -20732,6 +20841,51 @@ es-MX:
           </block>
           </next>
           </block></xml>
+      courseF_bee_variables_3_2018_authored_hint:
+        courseF_beevariables_3a: |-
+          Para restar uno de la variable, puedes usar este código en tu programa:
+          <xml><block type="variables_set" inline="false">
+          <title name="VAR">recoger</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MENOS</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">recoger</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block></xml>
+      courseF_bee_variables_3_2019_authored_hint:
+        courseF_bee_variables_3_2019_1: |-
+          Para restar uno de la variable, puedes usar este código en tu programa:
+          <xml><block type="variables_set" inline="false">
+          <title name="VAR">recoger</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MENOS</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">recoger</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block></xml>
+      courseF_bee_variables_4_2019_authored_hint:
+        courseF_bee_variables_4_2019_1: En lugar de restar 1 de `recoger`, agrega
+          1 cada vez. ¿Qué valor debería tener la variable al principio?
       courseF_farmer_ramp11_authored_hint:
         courseF_farmer_ramp11_a: Si tienes problemas para ver donde van los ciclos,
           intenta programarlo y buscar patrones.
@@ -21317,6 +21471,7 @@ es-MX:
           usar para repetir la misma instrucción varias veces?
         repeat_bottom_out: "¡Usa un bloque `repetir 3 veces`!"
       farmer-test-lb_authored_hint:
+        farmer_test_lb_a: "¿Cómo puedes hacer que el pájaro llegue hasta el cerdo?"
         hint_2: Señalando 123
       grade1_adventurer_loops10_authored_hint:
         grade1_adventurer_loops10_a: Necesitarás tres bucles `repetir` para resolver
