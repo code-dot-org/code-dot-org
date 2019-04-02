@@ -23,14 +23,4 @@ describe('MarkdownSpan', () => {
       '<span>This is a <a href="https://code.org" target="_blank">link</a>.</span>'
     );
   });
-
-  it('Applies the supplied style to the rendered span', () => {
-    const markdownSpan = shallow(
-      <MarkdownSpan style={{fontFamily: 'Gotham 7r'}}>text</MarkdownSpan>
-    );
-
-    expect(markdownSpan).to.containMatchingElement(
-      <span style={{fontFamily: 'Gotham 7r'}} />
-    );
-  });
 });
