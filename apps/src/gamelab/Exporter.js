@@ -15,8 +15,6 @@ import exportExpoAppEjs from '../templates/export/expo/App.js.ejs';
 import exportExpoCustomAssetJs from '../templates/export/expo/CustomAsset.exported_js';
 import exportExpoDataWarningJs from '../templates/export/expo/DataWarning.exported_js';
 import exportExpoMetroConfigJs from '../templates/export/expo/metro.config.exported_js';
-import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
-import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
 import exportExpoWarningPng from '../templates/export/expo/warning.png';
 import exportExpoIconPng from '../templates/export/expo/icon.png';
 import exportExpoSplashPng from '../templates/export/expo/splash.png';
@@ -24,6 +22,14 @@ import logToCloud from '../logToCloud';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {GAME_WIDTH, GAME_HEIGHT} from './constants';
 import {EXPO_SESSION_SECRET} from '../constants';
+import {
+  extractSoundAssets,
+  createPackageFilesFromZip,
+  createPackageFilesFromExpoFiles,
+  rewriteAssetUrls,
+  getEnvironmentPrefix,
+  fetchWebpackRuntime
+} from '../util/exporter';
 
 const CONTROLS_HEIGHT = 165;
 
@@ -45,7 +51,8 @@ export default {
       p5playPath: expoMode ? 'p5.play.j' : 'p5.play.js',
       codePath: expoMode ? 'code.j' : 'code.js',
       webExport: !expoMode,
-      exportClass: expoMode ? 'expo' : 'web'
+      exportClass: expoMode ? 'expo' : 'web',
+      webpackRuntimePath: null
     });
     const cacheBust = '?__cb__=' + '' + new String(Math.random()).slice(2);
 
@@ -115,8 +122,11 @@ export default {
       rewriteAssetUrls(appAssets, exportCode)
     );
 
-    // Attempt to fetch applab-api.min.js if possible, but when running on non-production
-    // environments, fallback if we can't fetch that file to use applab-api.js:
+    // webpack-runtime must appear exactly once on any page containing webpack entries.
+    const webpackRuntimeAsset = fetchWebpackRuntime(cacheBust);
+
+    // Attempt to fetch gamelab-api.min.js if possible, but when running on non-production
+    // environments, fallback if we can't fetch that file to use gamelab-api.js:
     const gamelabApiAsset = new $.Deferred();
     download('/blockly/js/gamelab-api.min.js' + cacheBust, 'text').then(
       (data, success, jqXHR) => gamelabApiAsset.resolve([data, success, jqXHR]),
@@ -135,7 +145,13 @@ export default {
       '/blockly/js/p5play/p5.play.js' + cacheBust,
       'text'
     );
-    const staticDownloads = [gamelabApiAsset, cssAsset, p5Asset, p5playAsset];
+    const staticDownloads = [
+      webpackRuntimeAsset,
+      gamelabApiAsset,
+      cssAsset,
+      p5Asset,
+      p5playAsset
+    ];
     // Fetch jquery when in expo mode
     if (expoMode) {
       staticDownloads.push(
@@ -157,12 +173,19 @@ export default {
           }
         })
       ).then(
-        ([gamelabApiText], [cssText], [p5Text], [p5playText], ...rest) => {
+        (
+          [webpackRuntimeText],
+          [gamelabApiText],
+          [cssText],
+          [p5Text],
+          [p5playText],
+          ...rest
+        ) => {
           zip.file(
             appName +
               '/' +
               (expoMode ? 'assets/gamelab-api.j' : 'gamelab-api.js'),
-            gamelabApiText
+            [webpackRuntimeText, gamelabApiText].join('\n')
           );
           zip.file(
             appName + '/' + (expoMode ? 'assets/' : '') + 'gamelab.css',
@@ -193,10 +216,7 @@ export default {
             // Write a packagedFiles.js into the zip that contains require
             // statements for each file under assets. This will allow the
             // Expo app to locally install of these files onto the device.
-            const packagedFilesJs = this.createPackageFilesFromZip(
-              zip,
-              appName
-            );
+            const packagedFilesJs = createPackageFilesFromZip(zip, appName);
             zip.file(appName + '/packagedFiles.js', packagedFilesJs);
           }
           return resolve(zip);
@@ -265,74 +285,12 @@ export default {
     });
   },
 
-  createPackageFilesFromZip(zip, appName) {
-    const moduleList = [];
-    zip.folder(appName + '/assets').forEach((fileName, file) => {
-      if (!file.dir) {
-        moduleList.push({fileName});
-      }
-    });
-    const entries = moduleList.map(module =>
-      exportExpoPackagedFilesEntryEjs({module})
-    );
-    return exportExpoPackagedFilesEjs({entries});
-  },
-
-  createPackageFilesFromExpoFiles(files) {
-    const moduleList = [];
-    const assetPrefix = 'assets/';
-    const assetPrefixLength = assetPrefix.length;
-    for (const fileName in files) {
-      if (fileName.indexOf(assetPrefix) !== 0) {
-        continue;
-      }
-      const relativePath = fileName.substring(assetPrefixLength);
-      moduleList.push({fileName: relativePath});
-    }
-    const entries = moduleList.map(module =>
-      exportExpoPackagedFilesEntryEjs({module})
-    );
-    return exportExpoPackagedFilesEjs({entries});
-  },
-
-  async generateExpoApk(options, config) {
-    const {appName, expoSnackId, iconUri, splashImageUri} = options;
-    const session = new SnackSession({
-      sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
-      name: `project-${project.getCurrentId()}`,
-      sdkVersion: '31.0.0',
-      snackId: expoSnackId,
-      user: {
-        sessionSecret: config.expoSession || EXPO_SESSION_SECRET
-      }
-    });
-
-    const appJson = JSON.parse(
-      exportExpoAppJsonEjs({
-        appName,
-        projectId: project.getCurrentId(),
-        iconPath: iconUri,
-        splashImagePath: splashImageUri
-      })
-    );
-
-    // TODO: remove the onlineOnlyExpo patching once getApkUrlAsync()
-    // properly supports our full app.json
-    const {
-      updates, // eslint-disable-line no-unused-vars
-      assetBundlePatterns, // eslint-disable-line no-unused-vars
-      packagerOpts, // eslint-disable-line no-unused-vars
-      ...onlineOnlyExpo
-    } = appJson.expo;
-    appJson.expo = onlineOnlyExpo;
-
-    const artifactUrl = await session.getApkUrlAsync(appJson);
-
-    return artifactUrl;
-  },
-
   async publishToExpo(appName, code, animationOpts, config) {
     const {origin} = window.location;
+    const webpackRuntimePath =
+      getEnvironmentPrefix() === 'cdo-development'
+        ? `${origin}/blockly/js/webpack-runtime.js`
+        : `${origin}/blockly/js/webpack-runtime.min.js`;
     const gamelabApiPath =
       getEnvironmentPrefix() === 'cdo-development'
         ? `${origin}/blockly/js/gamelab-api.js`
@@ -347,6 +305,7 @@ export default {
       appHeight,
       appWidth,
       jQueryPath: 'https://code.jquery.com/jquery-1.12.1.min.js',
+      webpackRuntimePath,
       gamelabApiPath,
       gamelabCssPath,
       p5Path,
@@ -448,7 +407,7 @@ export default {
       };
     });
     files['packagedFiles.js'] = {
-      contents: this.createPackageFilesFromExpoFiles(files),
+      contents: createPackageFilesFromExpoFiles(files),
       type: 'CODE'
     };
 
@@ -486,6 +445,12 @@ export default {
       };
     });
 
+    const soundAssets = extractSoundAssets({
+      sources: [code],
+      rootRelativeAssetPrefix,
+      zipAssetPrefix
+    });
+
     const animAssets = Object.entries(animationPropsByKey).map(
       ([key, anim]) => {
         const {blob, sourceUrl} = anim;
@@ -508,22 +473,6 @@ export default {
       }
     );
 
-    const soundRegex = /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi;
-    const allSounds = code.match(soundRegex) || [];
-    const uniqueSounds = [...new Set(allSounds)];
-    const soundAssets = uniqueSounds.map(soundProtocolUrl => {
-      const soundOriginUrl = assetPrefix.fixPath(soundProtocolUrl);
-      const filename = soundProtocolUrl.replace(assetPrefix.SOUND_PREFIX, '');
-      return {
-        url: soundOriginUrl,
-        rootRelativePath: rootRelativeAssetPrefix + filename,
-        zipPath: zipAssetPrefix + filename,
-        dataType: 'binary',
-        filename,
-        searchUrl: soundProtocolUrl
-      };
-    });
-
     const rewrittenAnimList = this.rewriteAnimationListSourceUrls(
       animationList,
       animAssets
@@ -537,44 +486,3 @@ export default {
     };
   }
 };
-
-// TODO: for expoMode, replace spaces in asset filenames or wait for this fix
-// to make it into Metro Bundler:
-// https://github.com/facebook/react-native/pull/10365
-function rewriteAssetUrls(appAssets, data) {
-  return appAssets.reduce(function(data, assetToDownload) {
-    const searchUrl = assetToDownload.searchUrl || assetToDownload.filename;
-    data = data.replace(
-      new RegExp(`["|']${assetToDownload.url}["|']`, 'g'),
-      `"${assetToDownload.rootRelativePath}"`
-    );
-    return data.replace(
-      new RegExp(`["|']${searchUrl}["|']`, 'g'),
-      `"${assetToDownload.rootRelativePath}"`
-    );
-  }, data);
-}
-
-function getEnvironmentPrefix() {
-  const {hostname} = window.location;
-  if (hostname.includes('adhoc')) {
-    // As adhoc hostnames may include other keywords, check it first.
-    return 'cdo-adhoc';
-  }
-  if (hostname.includes('test')) {
-    return 'cdo-test';
-  }
-  if (hostname.includes('levelbuilder')) {
-    return 'cdo-levelbuilder';
-  }
-  if (hostname.includes('staging')) {
-    return 'cdo-staging';
-  }
-  if (hostname.includes('localhost')) {
-    return 'cdo-development';
-  }
-  if (hostname.includes('code.org')) {
-    return 'cdo';
-  }
-  return 'cdo-unknown';
-}
