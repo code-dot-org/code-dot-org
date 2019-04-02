@@ -662,10 +662,6 @@ module LevelsHelper
     string_or_image(level.type.underscore, text, level)
   end
 
-  def match_t(text)
-    string_or_image('match', text)
-  end
-
   def level_title
     if @script_level
       script =
