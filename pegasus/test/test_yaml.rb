@@ -31,4 +31,17 @@ some long variable name: also works
     assert_equal({'a' => 'b', 'b' => 1, 'c' => true, 'some long variable name' => 'also works'}, head)
     assert_equal("# This is some markdown content\n", body)
   end
+
+  # Ensure YAML.* method works when called from CDO namespace.
+  module ::Cdo
+    module TestCdoYaml
+      def self.test
+        YAML.load_file('')
+      end
+    end
+  end
+
+  def test_cdo_yaml_load_file
+    assert_nil ::Cdo::TestCdoYaml.test
+  end
 end
