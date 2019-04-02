@@ -580,6 +580,8 @@ is:
         behaviors_edit: Smelltu hér til að sjá þessa hegðun.
       behaviors 4_callout:
         behaviors_edit: Smelltu hér til að sjá þessa hegðun.
+      behaviors 4a_callout:
+        behaviors_edit: Smelltu hér til að sjá þessa hegðun.
       behaviors 5_callout:
         behaviors_edit: Bættu kóða í þessa hegðun.
       course2_bee_conditionals_challenge2_callout:
