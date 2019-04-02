@@ -14,9 +14,18 @@ export const styles = {
 class SchoolInfoConfirmationDialog extends Component {
   static propTypes = {
     schoolName: PropTypes.string,
-    onUpdate: PropTypes.func,
-    onConfirm: PropTypes.func,
-    scriptData: PropTypes.object,
+    scriptData: PropTypes.shape({
+      formUrl: PropTypes.string.isRequired,
+      authTokenName: PropTypes.string.isRequired,
+      authTokenValue: PropTypes.string.isRequired,
+      existingSchoolInfo: PropTypes.shape({
+        school_id: PropTypes.string,
+        country: PropTypes.string,
+        school_type: PropTypes.string,
+        school_name: PropTypes.string,
+        full_address: PropTypes.string
+      }).isRequired
+    }).isRequired,
     onClose: PropTypes.func,
     isOpen: PropTypes.bool
   };
@@ -32,8 +41,6 @@ class SchoolInfoConfirmationDialog extends Component {
 
   static defaultProps = {
     schoolName: '',
-    onUpdate: () => {},
-    onConfirm: () => {},
     scriptData: {},
     onClose: () => {},
     isOpen: true
@@ -51,7 +58,7 @@ class SchoolInfoConfirmationDialog extends Component {
         })
         .catch(error => this.setState({error}));
     }
-  }
+  };
 
   handleClickYes = () => {
     fetch(
@@ -68,8 +75,6 @@ class SchoolInfoConfirmationDialog extends Component {
   };
 
   handleClickSave = () => {
-    this.props.onUpdate();
-
     fetch('/dashboardapi/v1/users/me/update_user_info', {
       method: 'PUT'
     }).then(() => {
@@ -79,7 +84,7 @@ class SchoolInfoConfirmationDialog extends Component {
     });
   };
 
-  renderInitialContent() {
+  renderInitialContent = () => {
     const {schoolName} = this.state;
     return (
       <Body>
@@ -101,7 +106,7 @@ class SchoolInfoConfirmationDialog extends Component {
         />
       </Body>
     );
-  }
+  };
 
   renderSchoolInformationForm() {
     return (
