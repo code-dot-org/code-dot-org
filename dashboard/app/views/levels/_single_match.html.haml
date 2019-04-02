@@ -17,7 +17,7 @@
     .column
       %ul#questions
         - level.questions.each do |question|
-          %li{style: "height: #{level.height}px"}!= level.localize_text(question['text'])
+          %li{style: "height: #{level.height}px"}!= match_t(question['text'])
     .column#answerdest
       %ul#slots.draggablecolumn
         - level.answers.each do |_|
@@ -37,7 +37,7 @@
     .column
       %ul#answers.draggablecolumn
         - level.shuffled_indexed_answers.each do |answer|
-          %li.answer.answerlist{style: "height: #{level.height}px", originalIndex: answer['index']}!= level.localize_text(answer['text'])
+          %li.answer.answerlist{style: "height: #{level.height}px", originalIndex: answer['index']}!= match_t(answer['text'])
 
     .clear
   - if standalone

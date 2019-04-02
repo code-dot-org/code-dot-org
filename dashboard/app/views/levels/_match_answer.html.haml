@@ -6,9 +6,9 @@
       .column
         %ul#questions
           - level.questions.each do |question|
-            %li{style: "height: #{level.height}px"}!= level.localize_text(question['text'])
+            %li{style: "height: #{level.height}px"}!= match_t(question['text'])
       .column#answerdest
         %ul#answers
           - level.answers.each do |answer|
-            %li.answer.answerlist{style: "height: #{level.height}px"}!= level.localize_text(answer['text'])
+            %li.answer.answerlist{style: "height: #{level.height}px"}!= match_t(answer['text'])
       .clear
