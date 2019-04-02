@@ -26,6 +26,8 @@
 require "csv"
 
 class Match < DSLDefined
+  include LevelsHelper
+
   def dsl_default
     <<ruby
 name 'unique level name here'
@@ -34,6 +36,43 @@ description 'description here'
 question 'Question'
 answer 'Answer 1'
 ruby
+  end
+
+  def questions
+    properties['questions'] || []
+  end
+
+  def answers
+    properties['answers'] || []
+  end
+
+  def height
+    properties['height'] || '40'
+  end
+
+  def question_content_class
+    question_content_blank = properties['content1'].blank? &&
+      properties['content2'].blank? &&
+      properties['content3'].blank? &&
+      properties['markdown'].blank?
+
+    return question_content_blank ? nil : "question"
+  end
+
+  # Shuffle the answers until they are different from the original answers (if
+  # possible), but retain the original indexes for validation.
+  def shuffled_indexed_answers
+    indexed_answers = answers.each_with_index.map do |answer, i|
+      answer.merge({'index' => i})
+    end
+    return indexed_answers if indexed_answers.length <= 1 # avoid infinite loop
+
+    shuffled_answers = indexed_answers.shuffle until shuffled_answers && shuffled_answers != indexed_answers
+    shuffled_answers
+  end
+
+  def localize_text(text)
+    string_or_image('match', text)
   end
 
   def supports_markdown?
