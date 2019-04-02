@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import _ from 'lodash';
 import {Row, Col, FormControl, Panel} from 'react-bootstrap';
-import MarkdownSpan from '../components/markdownSpan';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const styles = {
   lineItem: {
@@ -21,7 +21,7 @@ const styles = {
 const Question = props => {
   const suffix =
     '?:.'.indexOf(props.text[props.text.length - 1]) >= 0 ? '' : ':';
-  return <MarkdownSpan>{`${props.text}${suffix}`}</MarkdownSpan>;
+  return <UnsafeRenderedMarkdown markdown={`${props.text}${suffix}`} />;
 };
 Question.propTypes = {
   text: PropTypes.string.isRequired,

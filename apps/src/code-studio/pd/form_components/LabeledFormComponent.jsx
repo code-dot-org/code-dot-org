@@ -1,6 +1,6 @@
 import React from 'react';
 import FormComponent from './FormComponent';
-import MarkdownSpan from '../components/markdownSpan';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 export default class LabeledFormComponent extends FormComponent {
   /**
@@ -16,7 +16,11 @@ export default class LabeledFormComponent extends FormComponent {
       return name;
     }
 
-    return <MarkdownSpan>{this.constructor.labels[name]}</MarkdownSpan>;
+    return (
+      <div style={{display: 'inline-block'}}>
+        <UnsafeRenderedMarkdown markdown={this.constructor.labels[name]} />
+      </div>
+    );
   }
 
   indented(depth = 1) {
