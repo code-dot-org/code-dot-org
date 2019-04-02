@@ -1062,7 +1062,7 @@ it:
             Programming:
               name: Programmazione
             Unspotted Bugs:
-              name: Errori non riconosciuti
+              name: Fastidiosi insetti nascosti
             'Debugging: Unspotted Bugs':
               name: 'Correzione Errori (Debugging)'
             'Events Unplugged: The Big Event':
@@ -2500,7 +2500,7 @@ it:
           description_audience: 'Età: da 4 a 7 anni'
           stages:
             'Debugging: Unspotted Bugs':
-              name: Errori non riconosciuti
+              name: Fastidiosi insetti nascosti
               description_teacher: 'Questa lezione guiderà gli studenti attraverso le fasi di ricerca degli errori (debugging).  Gli studenti impareranno il mantra: "Cos''è successo? Che cosa sarebbe dovuto succedere? Questo cosa ti suggerisce?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie e il grande progetto
@@ -3045,7 +3045,7 @@ it:
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
           stages:
             'Debugging: Unspotted Bugs':
-              name: Errori non riconosciuti
+              name: Fastidiosi insetti nascosti
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie e il grande progetto
             'Real-life Algorithms: Plant a Seed':
@@ -3505,6 +3505,8 @@ it:
               name: 'I miei amici robotici'
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
+            Sticker Art with Loops:
+              name: Cicli con l'artista
         gamelab:
           title: Sviluppo Giochi
         coursea-2019:
@@ -3620,6 +3622,12 @@ it:
               name: 'Laboratorio: Eventi'
             Spelling Bee:
               name: Ape Sapiente
+            Learn to Drag and Drop:
+              name: Impara come Trascinare i Blocchi
+            Programming in Maze:
+              name: Programmazione nel labirinto
+            Ocean Scene with Loops:
+              name: Al mare con i cicli
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
