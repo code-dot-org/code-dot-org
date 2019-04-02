@@ -99,7 +99,7 @@ class Level < ActiveRecord::Base
   end
 
   def related_videos
-    ([game.intro_video, specified_autoplay_video] + concepts.map(&:video)).compact.uniq
+    ([game.intro_video, specified_autoplay_video] + concepts.map(&:related_video)).compact.uniq
   end
 
   def specified_autoplay_video
