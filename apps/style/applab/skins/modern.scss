@@ -61,6 +61,13 @@
   }
 }
 
+// IE 11 dropdown arrow position
+_:-ms-fullscreen, :root #divApplab.appModern, #designModeViz.appModern, .draggingParent {
+  select {
+    background-position-x: right -35px;
+  }
+}
+
 #divApplab.notRunning, #designModeViz.appModern, .draggingParent {
   img[data-canonical-image-url=''], canvas:not(#turtleCanvas), .chart {
     box-sizing: border-box;
