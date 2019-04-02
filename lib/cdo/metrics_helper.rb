@@ -1,14 +1,11 @@
 require_relative './db'
 
 module Metrics
-
-  def self.devinternal_db
-    raise "devinternal_db_writer not defined" unless CDO.devinternal_db_writer
-
-    # Connect to db. Third param sets frequency to check connection. Currently set
-    # to check before each request to db.
-    @@devinternal_db ||=
-      sequel_connect(CDO.devinternal_db_writer, CDO.devinternal_db_writer, validation_frequency: -1)
+  # Connect to db. Third param sets frequency to check connection. Currently set
+  # to check before each request to db.
+  unless rack_env == :production
+    DEVINTERNAL_DB = CDO.devinternal_db_writer ?
+                       sequel_connect(CDO.devinternal_db_writer, CDO.devinternal_db_writer, validation_frequency: -1) : nil
   end
 
   # Values for DTT metrics.
@@ -22,7 +19,11 @@ module Metrics
   # @param timestamp [Datetime] Only used if we want to explicitly set the created_at value for a particular metric, otherwise it is automatically populated.
   def self.write_metric(name, metadata, value, timestamp=nil)
     return if rack_env == :production
-    dataset = devinternal_db[:metrics]
+    if DEVINTERNAL_DB
+      dataset = DEVINTERNAL_DB[:metrics]
+    else
+      raise "devinternal_db_writer not defined"
+    end
     data = {name: name, metadata: metadata, value: value}
     data[:created_at] = timestamp if timestamp
     dataset.insert(data)
@@ -36,7 +37,11 @@ module Metrics
   # @param row[:timestamp] [Datetime] Only used if we want to explicitly set the created_at value for a particular metric, otherwise it is automatically populated.
   def self.write_batch_metric(rows)
     return if rack_env == :production
-    dataset = devinternal_db[:metrics]
+    if DEVINTERNAL_DB
+      dataset = DEVINTERNAL_DB[:metrics]
+    else
+      raise "devinternal_db_writer not defined"
+    end
     dataset.multi_insert(rows)
   end
 end
