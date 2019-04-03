@@ -15,10 +15,10 @@
 #
 
 class Census::ApSchoolCode < ApplicationRecord
-  self.primary_key = :school_code
+  self.primary_keys = :school_code, :school_year
 
   belongs_to :school, required: true
-  has_many :ap_cs_offering, foreign_key: :school_code, primary_key: :school_code
+  has_many :ap_cs_offering, foreign_key: [:school_code, :school_year], primary_key: [:school_code, :school_year]
 
   validates :school_code, presence: true, length: {is: 6}, format: {with: /\A[0-9]+\z/, message: "only allows numbers"}
 
