@@ -106,8 +106,8 @@ ChartApi.prototype.drawChart = async function(
   chartData,
   options
 ) {
-  var chart = this.createChart_(chartId, chartType);
-  var columns = ChartApi.inferColumnsFromRawData(chartData);
+  const chart = this.createChart_(chartId, chartType);
+  const columns = ChartApi.inferColumnsFromRawData(chartData);
   await chart.drawChart(chartData, columns, options);
   this.mergeWarnings_(chart.warnings);
 };
@@ -132,13 +132,13 @@ ChartApi.prototype.drawChartFromRecords = async function(
   columns,
   options
 ) {
-  var chart = this.createChart_(chartId, chartType);
+  const chart = this.createChart_(chartId, chartType);
   const results = await Promise.all([
     chart.loadDependencies(),
     this.fetchTableData_(tableName)
   ]);
-  var tableData = results[1];
-  var columnsInTable = ChartApi.inferColumnsFromRawData(tableData);
+  const tableData = results[1];
+  const columnsInTable = ChartApi.inferColumnsFromRawData(tableData);
   columns = this.guessColumnsIfNecessary(columns, columnsInTable, tableName);
   this.warnIfColumnsNotFound(columns, columnsInTable, tableName);
   await chart.drawChart(tableData, columns, options);
@@ -232,8 +232,8 @@ ChartApi.prototype.guessColumnsIfNecessary = function(
  * @private
  */
 ChartApi.prototype.createChart_ = function(elementId, typeName) {
-  var targetElement = this.getTargetElement_(elementId);
-  var FoundType = ChartApi.getChartTypeByName_(typeName);
+  const targetElement = this.getTargetElement_(elementId);
+  const FoundType = ChartApi.getChartTypeByName_(typeName);
   return new FoundType(targetElement);
 };
 
@@ -245,7 +245,7 @@ ChartApi.prototype.createChart_ = function(elementId, typeName) {
  * @private
  */
 ChartApi.prototype.getTargetElement_ = function(elementId) {
-  var targetElement = this.document_.getElementById(elementId);
+  const targetElement = this.document_.getElementById(elementId);
   if (!targetElement || 'div' !== targetElement.tagName.toLowerCase()) {
     throw new Error('Unable to render chart into element "' + elementId + '".');
   }
@@ -264,7 +264,7 @@ ChartApi.getChartTypeByName_ = function(typeName) {
     throw new Error('Unknown chart type.');
   }
 
-  var type = ChartApi.TypeNameToType[typeName.toLowerCase()];
+  const type = ChartApi.TypeNameToType[typeName.toLowerCase()];
   if (!type) {
     throw new Error('Unsupported chart type "' + typeName + '".');
   }
