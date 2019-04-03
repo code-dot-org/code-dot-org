@@ -10166,6 +10166,12 @@ en:
               name: Simon Says
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Conditionals in Minecraft: Voyage Aquatic'
+            Swimming Fish with Sprite Lab:
+              name: Swimming Fish with Sprite Lab
+            Designing for Accessibility:
+              name: Designing for Accessibility
+            Songwriting:
+              name: Songwriting
         express-2019:
           title: Express Course (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -10532,6 +10538,8 @@ en:
               name: Powerful Passwords
             Sticker Art with Loops:
               name: Sticker Art with Loops
+            Picturing Data:
+              name: Picturing Data
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
