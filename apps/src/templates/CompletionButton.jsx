@@ -60,6 +60,7 @@ class CompletionButton extends Component {
       <ProtectedStatefulDiv style={styles.main}>
         <div id="share-cell" className={divClass}>
           <button
+            type="button"
             id={id}
             className="share"
             style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}

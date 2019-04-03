@@ -124,6 +124,7 @@ export default class SendToPhone extends React.Component {
           }
         />
         <button
+          type="button"
           disabled={this.state.sendState === SendState.invalidVal}
           onClick={this.handleSubmit}
         >
