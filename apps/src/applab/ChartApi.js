@@ -296,9 +296,7 @@ ChartApi.prototype.fetchTableData_ = function(tableName) {
 ChartApi.inferColumnsFromRawData = function(rawData) {
   return Object.getOwnPropertyNames(
     rawData.reduce(function(memo, row) {
-      Object.getOwnPropertyNames(row).forEach(function(key) {
-        memo[key] = true;
-      });
+      Object.getOwnPropertyNames(row).forEach(key => (memo[key] = true));
       return memo;
     }, {})
   );
