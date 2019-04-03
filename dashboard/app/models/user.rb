@@ -157,7 +157,7 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
   PROVIDER_MIGRATED = 'migrated'.freeze
-  after_create :set_multi_auth_status
+  after_create_commit :migrate_to_multi_auth
 
   # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
   OAUTH_PROVIDERS = %w(
@@ -209,7 +209,6 @@ class User < ActiveRecord::Base
   has_many :authentication_options, dependent: :destroy
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
 
-  has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
   # model.
@@ -217,6 +216,10 @@ class User < ActiveRecord::Base
   # we are fully migrated to multi-auth, we may want to remove this code and
   # check that we handle validation errors from AuthenticationOption everywhere.
   validate if: :migrated? do |user|
+    if user.primary_contact_info && !user.primary_contact_info.valid?
+      user.primary_contact_info.errors.each {|k, v| user.errors.add k, v}
+    end
+
     user.authentication_options.each do |ao|
       unless ao.valid?
         ao.errors.each {|k, v| user.errors.add k, v}
@@ -224,9 +227,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
+
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
+
+  has_many :user_school_infos
+  after_save :update_and_add_users_school_infos, if: :school_info_id_changed?
 
   has_one :circuit_playground_discount_application
 
@@ -284,8 +292,26 @@ class User < ActiveRecord::Base
   # @param new_school_info a school_info object to compare to the user current school information.
   def update_school_info(new_school_info)
     if school_info.try(&:school).nil? || new_school_info.try(&:school)
-      update_column(:school_info_id, new_school_info.id)
+      self.school_info_id = new_school_info.id
+      save(validate: false)
     end
+  end
+
+  def update_and_add_users_school_infos
+    last_school = user_school_infos.find_by(end_date: nil)
+    current_time = Time.now.utc
+    if last_school
+      last_school.end_date = current_time
+      last_school.save!
+    end
+    UserSchoolInfo.create(
+      user: self,
+      school_info: school_info,
+      user_id: id,
+      start_date: current_time,
+      school_info_id: school_info_id,
+      last_confirmation_date: current_time
+    )
   end
 
   # Not deployed to everyone, so we don't require this for anybody, yet
@@ -844,9 +870,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  def update_primary_contact_info(user: {email: nil, hashed_email: nil})
-    new_email = user[:email]
-    new_hashed_email = new_email.present? ? User.hash_email(new_email) : user[:hashed_email]
+  def update_primary_contact_info(new_email: nil, new_hashed_email: nil)
+    new_hashed_email = new_email.present? ? User.hash_email(new_email) : new_hashed_email
 
     return false if new_email.nil? && new_hashed_email.nil?
     return false if teacher? && new_email.nil?
@@ -882,8 +907,8 @@ class User < ActiveRecord::Base
     success
   end
 
-  def update_primary_contact_info!(user: {email: nil, hashed_email: nil})
-    success = update_primary_contact_info(user: user)
+  def update_primary_contact_info!(new_email: nil, new_hashed_email: nil)
+    success = update_primary_contact_info(new_email: new_email, new_hashed_email: new_hashed_email)
     raise "User's primary contact info was not updated successfully" unless success
     success
   end
@@ -906,7 +931,7 @@ class User < ActiveRecord::Base
     hashed_email = params.delete(:hashed_email)
     should_update_contact_info = email.present? || hashed_email.present?
     transaction do
-      update_primary_contact_info!(user: {email: email, hashed_email: hashed_email}) if should_update_contact_info
+      update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email) if should_update_contact_info
       update!(params)
     end
   rescue
@@ -929,15 +954,22 @@ class User < ActiveRecord::Base
     update(user_type: TYPE_STUDENT)
   end
 
-  def upgrade_to_teacher(email, email_preference)
+  def upgrade_to_teacher(email, email_preference = nil)
     return true if teacher? # No-op if user is already a teacher
     return false unless email.present?
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
+
+    new_attributes = email_preference.nil? ? {} : email_preference
+
     transaction do
-      update_primary_contact_info!(user: {email: email, hashed_email: hashed_email})
-      update!(email_preference)
+      if migrated?
+        update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
+      else
+        new_attributes[:email] = email
+      end
+      update!(new_attributes)
     end
   rescue
     false # Relevant errors are set on the user model, so we rescue and return false here.
@@ -1510,6 +1542,12 @@ class User < ActiveRecord::Base
     most_recently_assigned_user_script.script
   end
 
+  def can_access_most_recently_assigned_script?
+    return false unless script = most_recently_assigned_user_script&.script
+
+    !script.pilot? || script.has_pilot_access?(self)
+  end
+
   def user_script_with_most_recent_progress
     user_scripts.
     where("last_progress_at").
@@ -1794,27 +1832,6 @@ class User < ActiveRecord::Base
           PairedUserLevel.find_or_create_by(
             navigator_user_level_id: navigator_user_level.id,
             driver_user_level_id: user_level.id
-          )
-        end
-      end
-    end
-
-    # Create peer reviews after submitting a peer_reviewable solution
-    if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable?)
-      learning_module = Level.cache_find(level_id).script_levels.find_by(script_id: script_id).try(:stage).try(:plc_learning_module)
-
-      if learning_module && Plc::EnrollmentModuleAssignment.exists?(user_id: user_id, plc_learning_module: learning_module)
-        PeerReview.create_for_submission(user_level, level_source_id)
-
-        # See if there are created peer reviews, if not, raise to honey badger
-        unless PeerReview.where(
-          submitter_id: user_level.user_id,
-          level: user_level.level,
-          level_source_id: level_source_id
-        ).size >= 2
-          Honeybadger.notify(
-            error_class: "Failed to create peer review objects for submission",
-            error_message: "Failed to create peer reviews for user_level #{user_level.id}"
           )
         end
       end

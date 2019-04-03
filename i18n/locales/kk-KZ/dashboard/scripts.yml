@@ -1420,6 +1420,10 @@ kk:
               name: Көңілді For циклі
             The Artist:
               name: Кейіпкер
+            Internet:
+              name: Ғаламтор
+            Crowdsourcing:
+              name: Кроудсорсинг
         coursed-2019:
           stages:
             Relay Programming:

@@ -198,6 +198,25 @@ class LevelTest < ActiveSupport::TestCase
     assert_includes(level.related_videos, video)
   end
 
+  test 'returns locale-specific video with related videos' do
+    level = create(:level)
+    en_video = create(:video)
+    es_video = create(:video)
+    es_video.locale = 'es-MX'
+    es_video.key = en_video.key
+    es_video.save!
+    level.update(properties: {video_key: en_video.key})
+
+    with_locale('es-MX') do
+      assert_includes(level.related_videos, es_video)
+      refute_includes(level.related_videos, en_video)
+    end
+    with_locale('en-US') do
+      assert_includes(level.related_videos, en_video)
+      refute_includes(level.related_videos, es_video)
+    end
+  end
+
   test 'returns concept videos with related videos' do
     level = create(:level)
     level.concepts = [create(:concept, :with_video), create(:concept, :with_video)]
@@ -345,6 +364,33 @@ EOS
     LevelLoader.load_custom_level_xml level_xml, level
 
     assert_nil level.embed
+  end
+
+  test 'encrypted level properties are preserved after export and import' do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    level = Level.create(name: 'test encrypted properties', short_instructions: 'test', type: 'Artist', encrypted: true, disable_sharing: true, notes: 'original notes')
+    assert level.disable_sharing
+    assert level.encrypted
+
+    level_xml = level.to_xml
+    n = Nokogiri::XML(level_xml, &:noblanks)
+    level_config = n.xpath('//../config').first.child
+    encrypted_hash = JSON.parse(level_config.text)
+    assert encrypted_hash['encrypted_properties']&.is_a? String
+    refute encrypted_hash['properties']
+    assert encrypted_hash['encrypted_notes']&.is_a? String
+    refute encrypted_hash['notes']
+
+    level.disable_sharing = false
+    level.notes = nil
+    decrypted_hash = level.load_level_xml(n)
+    refute decrypted_hash['encrypted_properties']
+    assert decrypted_hash['properties']
+    assert decrypted_hash['properties']['disable_sharing']
+    assert decrypted_hash['properties']['encrypted']
+    refute decrypted_hash['encrypted_notes']
+    assert_equal decrypted_hash['notes'], 'original notes'
   end
 
   test 'project template level' do
@@ -731,7 +777,7 @@ EOS
     assert_equal 1, new_level.properties['questions'].length
     assert_equal 3, new_level.properties['answers'].length
     assert_equal 'Blue', new_level.properties['answers'].last['text']
-    assert_equal false, new_level.encrypted
+    refute new_level.encrypted
 
     old_level.encrypted = true
     new_level = old_level.clone_with_name('encrypted level')
@@ -739,16 +785,12 @@ EOS
     assert_equal 1, new_level.properties['questions'].length
     assert_equal 3, new_level.properties['answers'].length
     assert_equal 'Blue', new_level.properties['answers'].last['text']
-    assert_equal(true, new_level.encrypted,
-      'clone_with_name preserves encrypted flag'
-    )
+    assert new_level.encrypted, 'clone_with_name preserves encrypted flag'
 
     new_level = old_level.clone_with_suffix(' copy')
     assert_equal 'old multi level copy', new_level.name
     assert_equal 3, new_level.properties['answers'].length
-    assert_equal(true, new_level.encrypted,
-      'clone_with_suffix preserves encrypted flag'
-    )
+    assert new_level.encrypted, 'clone_with_suffix preserves encrypted flag'
   end
 
   test 'can clone with suffix' do

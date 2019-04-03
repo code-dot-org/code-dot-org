@@ -26,7 +26,8 @@ class SharedBlocklyFunctionsController < ApplicationController
   private
 
   def load_block_pool
-    @block_pool = Block.for('GamelabJr', 'Dancelab', 'Vanilla')
+    @pools = Block.all_pool_names
+    @block_pool = Block.for(@pools)
   end
 
   def create_params

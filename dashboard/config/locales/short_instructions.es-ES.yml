@@ -113,9 +113,14 @@ es:
         movido los bloques para dibujar un cuadrado en la función llamada "dibuja
         un cuadrado". ¿Puedes utilizar la función "dibuja un cuadrado" para crear
         los lentes? Los cuadrados están separados por 75 píxeles.
+      2-3 Artist Functions 3 a: "Edita la función \"dibuja un cuadrado\" para dibujar
+        cristales con fotogramas de 115px por cada lado. \n\nLos cuadrados ahora están
+        separados 45 píxeles."
       2-3 Artist Functions 3: Editar la función para dibujar un cuadrado con una longitud
         lateral de 115 y dibuja los lentes más grandes. Los cuadrados están ahora
         separados 45 píxeles.
+      2-3 Artist Functions 4 a: Ahora, coloca la función dentro de un bucle y añade
+        un turno extra para dibujar estos tres cuadrados.
       2-3 Artist Functions 4: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
       2-3 Artist Functions 7: 'Utiliza la función "dibuja una casa" para dibujar dos
         casas utilizando dos parámetros diferentes. (Sugerencia: la primera casa es
@@ -838,6 +843,7 @@ es:
       Applab AllTheThings ResourcesTab ReferenceLinks: Dibuja un cuadrado de 1x1 arriba
         y a la izquierda de la posición inicial de la tortuga. Haz clic para ver las
         instrucciones completas.
+      Applab test: Este nivel esta disponible. Es solo para pruebas!
       Artist - Nested Loops 1: 'Completa el código para dibujar estos triángulos.
         El primero es hecho por ti. Sugerencia: 3 triángulos en una rotación de 360
         grados.'
@@ -872,6 +878,13 @@ es:
         usando el bloque “if”. "
       Bergeron Robot Maze1: "¿Me puedes ayudar a atrapar al cerdo malo? Apila un\npar
         de bloques \"avanzar\" juntos y presiona \"Ejecutar\". "
+      Big Game Collision 3: Usa la formula de distancia, para que la funcion de distancia
+        regrese la distancia entre las coordenadas del centro del jugardor (px, py)
+        y del centro de otro sprinte (cx, cy).
+      Big Game Vars 4: ¡Impresionante! Ahora puedes actualizar las variables de tu
+        Jugador, Objetivo, y Peligro. Juega con todas las variables libremente para
+        hacer que tu juego tenga el aspecto que deseas. Haz click en "Finalizar" cuando
+        acabes.
       Brad Spooky House Copy: 'Juego Libre: Aquí están las funciones que has escrito
         y algunas más para que juegues con ellas. ¡Dibuja algo impresionante!'
       Brad Spooky House: 'Juego Libre: Aquí están las funciones que has escrito y
@@ -904,6 +917,7 @@ es:
       CSPU5_U3 - Keys - Final Image Scroller: Actualice el desplazamiento de la imagen
         para responder a los botones y presionar las teclas. (Haga clic para ver instrucciones
         completas)
+      CoureE_HOC 2018 Level_7a: Explora las ruinas subacuáticas en busca de un cofre.
       Course 2 Bee Loops 1: "Hola, soy una abeja. ¿Puedes ayudarme a recolectar \nel
         néctar de estas flores? "
       Course 2 Maze Loops 1: "¿Puedes llevarme hasta el cerdo usando 5 bloques?"
@@ -1562,6 +1576,47 @@ es:
       Course E MC Conditionals1: Encontrarás los recursos más valiosos bajo tierra,
         pero puede estar oscuro. Coloca al menos dos antorchas y extrae al menos dos
         de carbón.
+      CourseD_Dance_Party_01: Arrastra el bloque «hacer uno nuevo» al espacio de trabajo
+        y conéctalo dentro del bloque «establecer».
+      CourseD_Dance_Party_02: "¡Haz que el alce inicie un movimiento nuevo después
+        de 4 compases!"
+      CourseD_Dance_Party_03: "¡Ahora haz que el bailarín inicie un movimiento nuevo
+        después de 6 compases!"
+      CourseD_Dance_Party_04: Añade un efecto de fondo a tu programa.
+      CourseD_Dance_Party_05: Utiliza otro bloque nuevo para que el bailarín cambie
+        de movimiento cada 2 compases.
+      CourseD_Dance_Party_06: Crea un bailarín de fondo llamado «bailarín_fondo1»
+        para bailar con el gato.
+      CourseD_Dance_Party_08: "¿Puedes hacer que ambos bailarines de fondo tengan
+        el mismo tamaño?"
+      CourseD_Dance_Party_09: Utiliza el bloque «establecer tonalidad» para cambiar
+        el color de un bailarín.
+      CourseD_Dance_Party_10: Haz que el otro bailarín también responda a la música
+        usando el bloque «comienza siguiente».
+      CourseD_Dance_Party_11: El bloque «cuando arriba pulsada» te permite ejecutar
+        código cuando la flecha hacia arriba se pulsa. Intenta que el bailarín haga
+        un movimiento rápido cuando pulsas arriba.
+      CourseD_Dance_Party_11_5: Utiliza los bloques «todos los patos» para que los
+        patos bailen juntos.
+      CourseD_Dance_Party_11b: Haz que el Robot haga «drop» una vez cuando pulsas
+        la tecla de flecha derecha y haga el baile «floss» una vez cuando pulsas la
+        tecla de flecha hacia arriba. ¡Haz los movimientos drop-floss tan rápido como
+        puedas!
+      CourseD_Dance_Party_12: |-
+        ¡Mueve el esqueleto! Crea un baile propio para compartirlo
+        con tus amigos.
+      CourseE_HOC 2018 Level_1: Consigue un barco en el cofre.
+      CourseE_HOC 2018 Level_10: Llega a la entrada de este monumento oceánico.
+      CourseE_HOC 2018 Level_11: Construye un conducto con prismarina dentro del monumento
+        oceánico.
+      CourseE_HOC 2018 Level_2: Ve hacia el final del muelle.
+      CourseE_HOC 2018 Level_3: Surca los mares en busca de bacalao.
+      CourseE_HOC 2018 Level_4: Utiliza un bucle para llegar al delfín.
+      CourseE_HOC 2018 Level_5: Explora el naufragio hasta llegar al cofre.
+      CourseE_HOC 2018 Level_6: Navega a través del hielo para llegar al salmón.
+      CourseE_HOC 2018 Level_7a: Explora las ruinas subacuáticas en busca de un cofre.
+      CourseE_HOC 2018 Level_9b: Utiliza el coral como punto de ruta para llegar hasta
+        el tesoro.
       CourseF_PlayLab_vars10: "¡Momento de un juego gratis! Aquí están todas las variables
         con las que hemos jugado hasta ahora en esta etapa, así como algunas más en
         caso de que las desees. \r\n\r\n¡Observa que ahora hay tantos bloques en nuestra
@@ -2688,6 +2743,34 @@ es:
         Pista: Los 3 lados tienen la misma longitud."
       courseC_maze_debugging10: Depura este nivel reorganizando y agregando bloques
         para llevarme al cerdo!
+      courseC_maze_debugging2: Usa tus habilidades de depuración para que Scrat consiga
+        la bellota.
+      courseC_maze_debugging2_2018: Usa tus habilidades de depuración para que Scrat
+        consiga la bellota.
+      courseC_maze_debugging2_2019: Usa tus habilidades de depuración para que Scrat
+        consiga la bellota.
+      courseC_maze_debugging4: Alguien ha confundido sus instrucciones. ¿Puedes ayudarle?
+      courseC_maze_debugging4_2018: Alguien ha confundido sus instrucciones. ¿Puedes
+        ayudarle?
+      courseC_maze_debugging4_2019: Alguien ha confundido sus instrucciones. ¿Puedes
+        ayudarle?
+      courseC_maze_debugging5: Depura este nivel reorganizando y cambiando bloques.
+      courseC_maze_debugging5_2018: Depura este nivel reorganizando y cambiando bloques.
+      courseC_maze_debugging5_2019: Depura este nivel reorganizando y cambiando bloques.
+      courseC_maze_debugging6: Averigua que es incorrecto y lleva a Scrat a la bellota.
+      courseC_maze_debugging6_2018: Averigua que es incorrecto y lleva a Scrat a la
+        bellota.
+      courseC_maze_debugging6_2019: Averigua que es incorrecto y lleva a Scrat a la
+        bellota.
+      courseC_maze_debugging7: "**Desafío:** Depura este nivel reorganizando, añadiendo
+        y eliminando bloques."
+      courseC_maze_debugging7_2018: "**Desafío:** Depura este nivel reorganizando,
+        añadiendo y eliminando bloques."
+      courseC_maze_debugging7_2019: "**Desafío:** Depura este nivel reorganizando,
+        añadiendo y eliminando bloques."
+      courseC_maze_debugging8: Depura este nivel para que Scrat consiga la bellota.
+      courseC_maze_debugging9: Depura este nivel para que Scrat consiga la bellota.
+      courseC_maze_debugging9_2018: Depura este nivel para que Scrat consiga la bellota.
       courseD_artist_binary1: "Binario es una forma de representar información mediante
         sólo dos opciones.  Aquí, vamos a usar las opciones \"apagado\" (representado
         por el número 0) y \"encendido\" (representado por el número 1).  \r \r Le

@@ -9,10 +9,18 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
+import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import BorderProperties from './BorderProperties';
 import color from '../../util/color';
-import {ICON_PREFIX_REGEX} from '../constants';
+import {
+  ICON_PREFIX_REGEX,
+  defaultFontSizeStyle,
+  fontFamilyStyles
+} from '../constants';
 import * as elementUtils from './elementUtils';
+import designMode from '../designMode';
+import elementLibrary from './library';
+import experiments from '../../util/experiments';
 
 class ButtonProperties extends React.Component {
   static propTypes = {
@@ -92,6 +100,12 @@ class ButtonProperties extends React.Component {
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
+        />
+        <FontFamilyPropertyRow
+          initialValue={designMode.fontFamilyOptionFromStyle(
+            element.style.fontFamily
+          )}
+          handleChange={this.props.handleChange.bind(this, 'fontFamily')}
         />
         <PropertyRow
           desc={'font size (px)'}
@@ -191,6 +205,31 @@ class ButtonEvents extends React.Component {
 export default {
   PropertyTab: ButtonProperties,
   EventTab: ButtonEvents,
+  themeValues: {
+    backgroundColor: {
+      type: 'color',
+      classic: color.applab_button_teal,
+      dark: color.yellow
+    },
+    borderRadius: {
+      classic: 0,
+      dark: 10
+    },
+    borderWidth: {
+      classic: 0,
+      dark: 0
+    },
+    borderColor: {
+      type: 'color',
+      classic: color.black,
+      dark: color.white
+    },
+    textColor: {
+      type: 'color',
+      classic: color.white,
+      dark: color.black
+    }
+  },
   create: function() {
     const element = document.createElement('button');
     element.appendChild(document.createTextNode('Button'));
@@ -198,10 +237,16 @@ export default {
     element.style.margin = '0px';
     element.style.height = '30px';
     element.style.width = '80px';
-    element.style.fontSize = '14px';
-    elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-    element.style.color = color.white;
-    element.style.backgroundColor = color.applab_button_teal;
+    element.style.fontFamily = fontFamilyStyles[0];
+    element.style.fontSize = defaultFontSizeStyle;
+    if (experiments.isEnabled('applabThemes')) {
+      element.style.borderStyle = 'solid';
+      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    } else {
+      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
+      element.style.color = color.white;
+      element.style.backgroundColor = color.applab_button_teal;
+    }
 
     return element;
   },
@@ -212,5 +257,7 @@ export default {
     }
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
+    // Set the font family for older projects that didn't set them on create:
+    elementUtils.setDefaultFontFamilyStyle(element);
   }
 };

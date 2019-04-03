@@ -192,7 +192,7 @@ export default class ProgressLegend extends Component {
             </TD>
             <TD style={styles.rightBorder}>
               <div style={styles.iconAndText}>
-                <FontAwesome icon="check-square-o" style={styles.icon} />
+                <FontAwesome icon="list-ul" style={styles.icon} />
                 {i18n.question()}
               </div>
             </TD>

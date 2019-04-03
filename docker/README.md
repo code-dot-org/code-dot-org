@@ -26,13 +26,13 @@ Run all docker-compose commands from this directory.
     export FIXUID=$(id -u)
     export FIXGID=$(id -g)
     ```
-2. This recreates most of the SETUP.md instructions, and will probably take a long time:
+2. Run the following command. This recreates most of the SETUP.md instructions, and will probably take a long time:
 
     ```
     docker-compose -f setup-compose.yml up
     ```
 
-3. Setup your locals.yml file as normal.
+3. Setup the rest of your locals.yml file as normal.
 
 ## Usage
 

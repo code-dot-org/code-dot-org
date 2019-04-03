@@ -100,6 +100,17 @@ ko:
         edit_add_parameter: 함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요.
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: 캐릭터를 움직이기 위해 방향키를 사용하세요.
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: 이 블록을 프로그램에 추가하세요!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: 이 블록을 프로그램에 추가하세요!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: 이 블록을 프로그램에 추가하세요!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: 여기에 새로운 댄서를 추가하세요
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: 새 블록!
+        dance_callout_11_b: 새 블록!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: 캐릭터를 움직이기 위해 방향키를 사용하세요.
       Dance_Party_01_callout:

@@ -172,6 +172,17 @@ et:
         edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Kasuta tegelaskuju liigutamiseks nooleklahve
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Lisa see plokk oma programmi!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Lisa see plokk oma programmi!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Lisa see plokk oma programmi!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Lisa oma uus tantsija siia
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Uus plokk!
+        dance_callout_11_b: Uus plokk!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Kasuta tegelaskuju liigutamiseks nooleklahve
       Dance_Party_01_callout:

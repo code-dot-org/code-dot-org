@@ -1537,6 +1537,8 @@ lt:
           stages:
             Artist:
               name: Menininkas
+        aquatic:
+          title: 'Minecraft: Kelionės vandeniu'
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1545,6 +1547,10 @@ lt:
               name: Sąlyginiai sakiniai su kortomis
             The Artist:
               name: Menininkas
+            Internet:
+              name: Internetas
+            Crowdsourcing:
+              name: Komandinis programavimas
         coursed-2019:
           stages:
             Relay Programming:

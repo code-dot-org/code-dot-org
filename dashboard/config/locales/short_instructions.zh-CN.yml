@@ -408,6 +408,7 @@ zh-CN:
       Applab AllTheThings ResourcesTab AllResources: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       Applab AllTheThings ResourcesTab MapReference: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       Applab AllTheThings ResourcesTab ReferenceLinks: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
+      Applab allthethings onRecordEvent: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
       Applab test: 这一关可提交。仅用于测试！
       Artist - Nested Loops 1: 完成代码来画出这些三角形。第一个三角形已经帮你画好了。提示：三个三角形一共旋转了360度。
       Artist - Nested Loops 10: 通过循环已有的模块来画出旗帜上最后一行星星。这些星星都是30像素宽，而且它们之间距离50像素。
@@ -549,10 +550,6 @@ zh-CN:
         这样做\r\n* 创建一个新函数`moveCloud(name)`（移动云朵 名称），它将移动任何云朵。\r\n* （提示: 代码几乎和`moveCloud0`函数相同）\r\n*
         在事件模块内调用新的`moveCloud(name)`函数, 每个云朵名称一次。\r\n* （提示: 这类似于 `loopCloud(name)`
         函数被多次调用的方式。）"
-      CSD U6 params modify clouds_2019: "# 云\r\n\r\n当你吹声音传感器的时候, 这个程序会让云朵移动。但它还没完成。\r\n\r\n#
-        这样做\r\n* 创建一个新函数`moveCloud(name)`（移动云朵 名称），它将移动任何云朵。\r\n* （提示: 代码几乎和`moveCloud0`函数相同）\r\n*
-        在事件模块内调用新的`moveCloud(name)`函数, 每个云朵名称一次。\r\n* （提示: 这类似于 `loopCloud(name)`
-        函数被多次调用的方式。）"
       CSD U6 params modify planes: "# 多飞机控制器\r\n\r\n此程序使用主板加速度计和屏幕上的复选框来移动三架飞机。现在只有红色的飞机起作用。\n\r\n\r\n#
         这样做\r\n* 创建一个新的`movePlane(name)`函数，它可以移动任何飞机。\r\n* 在事件模块内调用`movePlane(name)`函数,
         这样它只在选中复选框时移动。\r\n\r\n_挑战：现在飞机的移动速度太快了。 你能想出如何更改代码, 使它们移动得慢一些吗？_"
@@ -610,6 +607,7 @@ zh-CN:
       Calc Circles of Eval 9: 完成评估模块来匹配此声明。
       Choose Your Own Adventure: 你可以在游戏实验室做任何你想做的事! 下面是一个在游戏实验室中选择自己的冒险故事的例子。
       Choose Your Own Adventure_2018: 你可以在游戏实验室做任何你想做的事! 下面是一个在游戏实验室中选择自己的冒险故事的例子。
+      CoureE_HOC 2018 Level_7a: 搜索水下废墟，寻找箱子。
       Course 2 Bee Loops 1: '你好，我是蜜蜂。可以帮我从这些花里收集花蜜吗？ '
       Course 2 Maze Loops 1: 你能用5个模块来帮我到达猪那里吗？
       Course 4 2: 蜜蜂想在只想要花蜜。记住，不是所有目标都是花，所以检查一下，只从花上采集花蜜。
@@ -859,6 +857,29 @@ zh-CN:
       Course 4 Variables Assessment: 你能用一个“边数”变量来画出这幅图吗？每条边应该是50像素长。
       Course E MC Conditionals1: 你可以在地底下找到最宝贵的资源，但下面很暗。请至少放上 2 根火把，并开采至少 2 块煤炭。
       Course1BeePuzzle12: 获得3个花蜜，然后酿两个蜂蜜。
+      CourseD_Dance_Party_01: 将`新建`模块拖到工作区，并关联到`设置`模块。
+      CourseD_Dance_Party_02: 让驼鹿在 4 个小节后做新动作！
+      CourseD_Dance_Party_03: 现在让舞者在 6 个小节后开始做新动作！
+      CourseD_Dance_Party_04: 为程序添加背景效果。
+      CourseD_Dance_Party_05: 使用其他新模块让舞者每 2 个小节变换动作。
+      CourseD_Dance_Party_06: 创建名为“backup_dancer1”的伴舞，与猫一起跳舞。
+      CourseD_Dance_Party_08: 你能让两个伴舞的大小相同吗？
+      CourseD_Dance_Party_09: 使用`设置色彩`模块，更改一个舞者的颜色。
+      CourseD_Dance_Party_10: 使用`开始跟随`模块，让另一个舞者也对音乐做出响应。
+      CourseD_Dance_Party_11: "`当按下上方向键时`模块可以在按下上方向键时运行代码。尝试让舞者在按下上方向键时快速移动。"
+      CourseD_Dance_Party_11_5: 使用“所有鸭子”模块，让鸭子一起跳舞。
+      CourseD_Dance_Party_11b: 让机器人在按下右方向键时“掉落”，在按下上方向键时"鼓掌"。做掉落-鼓掌舞动作要尽可能快！
+      CourseD_Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
+      CourseE_HOC 2018 Level_1: 从箱子中拿出一艘船。
+      CourseE_HOC 2018 Level_10: 前往海底遗迹的入口。
+      CourseE_HOC 2018 Level_11: 在海底遗迹内使用海晶石制作一个导管。
+      CourseE_HOC 2018 Level_2: 前往船坞的尽头。
+      CourseE_HOC 2018 Level_3: 穿过开阔水域寻找鳕鱼。
+      CourseE_HOC 2018 Level_4: 用循环到达海豚。
+      CourseE_HOC 2018 Level_5: 探索沉船，找到箱子。
+      CourseE_HOC 2018 Level_6: 穿过海冰，找到鲑鱼。
+      CourseE_HOC 2018 Level_7a: 搜索水下废墟，寻找箱子。
+      CourseE_HOC 2018 Level_9b: 把珊瑚当做航标，找到宝藏。
       CourseF_PlayLab_vars1: '玩这个游戏不需要写任何代码, 只要点击 "运行"! '
       CourseF_PlayLab_vars10: "自由发挥时间! 下面是我们在这个阶段所玩过的所有变量, 以及一些你可能需要的额外变量。\r\n\r\n注意到我们的工具箱中现在有这么多的模块,
         它们需要整理! 在这里, 我们把每一块放到一个合适的类别中。花些时间去探索所有可用的东西。完成浏览后, 使用重复，变量和事件来制作游戏或故事。 \r\n\r\n提示:
@@ -1012,6 +1033,7 @@ zh-CN:
       Infinity_say: 使用“说”模块让安娜说“你好”。
       Infinity_shoot: 大白是“演员2”。让大白向阿宽扔一枚火箭。
       Infinity_shoot_directions: 阿宽是“演员3”。让阿宽向这4个演员都扔一枚火箭。每次扔火箭之间等1秒。
+      Infinity_test: 这是一个测试用的无尽关卡。
       Infinity_touch_faster: 接触更多的雪花！
       Infinity_touch_four: 让安娜上、下、左、右移动来碰到这4朵雪花。
       Infinity_touch_score: 当安娜碰到一片雪花时，就得一分。然后点击“运行”后控制她碰一下每片雪花。
@@ -1221,6 +1243,9 @@ zh-CN:
       Middle School Hackathon Pt 1: "（点击以查看完整的说明）"
       Middle School Hackathon Pt 2: "（点击以查看完整的说明）"
       Mike Test Bee Conditionals 1: 云朵挡住了我的视线！检查一下云下面是否有花，然后只从有花的地方收集花蜜。小心，它是能变化的！
+      MikeTest1: 你会做出什么？！
+      MikeTest2: 画点什么
+      MikeTest3: 造点什么
       NEW Course 4 Artist Functions 1: 你能用重复循环，来画一个边长100像素的正方形吗？
       NEW Course 4 Artist Functions 10.1: 用前一关的函数来画这个图形。
       NEW Course 4 Artist Functions 10: 点击编辑来填写函数定义中的模块，从而画出一个边长40像素的正方形。
@@ -1332,7 +1357,9 @@ zh-CN:
       PDK5 Conditionals 1: 紫色的花里可能会有一个花蜜，但也可能没有花蜜，而且你不知道哪些花有花蜜！请注意不要从没有花蜜的紫花里收集花蜜。你可以用“如果”模块来检查（花朵里的）花蜜是否等于1。
       PDK5 Functions 2: 函数能让你定义新的模块！我们将画正方形的模块挪到了一个叫做“画一个正方形”的函数里。你能用“画一个正方形”函数来画个眼镜吗？正方形间隔75像素。
       PS - test - pixelation: 通过键入0和1来完成图形X
+      PS Log test - Define and use turnAround: 定义一个名为 "周转" 的函数。调用该函数, 然后向前移动。(点击查看完整说明)
       PS copy 2-3 Bee Conditionals 5: "小心不要从没有花蜜的紫花里收集花蜜。\r\n你必须先用“如果”模块来检查是否花蜜等于1。"
+      PS predictive Applab level test: '这里有一些说明。 '
       Pixelation - AllTheThings 4: 这个像素级别演示了 "hide_encoding_controls" 选项的使用。 请注意,
         该级别以十六进制显示图像数据, 并且不允许您将其更改回二进制。
       Pixelation - AllTheThings 5: 此像素级别演示如何使用 "隐藏滑块" 选项。 请注意, "宽度" 和 "高度" 滑块不可用,
@@ -1350,7 +1377,9 @@ zh-CN:
       Pixelation - Lesson 15 - Complete 3-bit color_2018: 这是曼蒂创建的4x2的图像，但缺失了最后两个方块。请找出是哪两种颜色并编码完成该图形。
       Pixelation - Lesson 15 - Complete 3-bit color_2019: 这是曼蒂创建的4x2的图像，但缺失了最后两个方块。请找出是哪两种颜色并编码完成该图形。
       Pizza on a Plate: 项目想法：创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！
+      Planter Test: 帮我种田!
       Poorva copy U3L2 Using Simple Commands: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
+      Poorva-test: 这里是一个关卡的正常说明。这里没什么好看的。
       Project - Final Image Scroller: 更新图像滚动条以响应按钮和按键。(点击查看完整说明)
       Project - Final Image Scroller_2018: 更新图像滚动条以响应按钮和按键。(点击查看完整说明)
       Project - Final Image Scroller_2019: 更新图像滚动条以响应按钮和按键。(点击查看完整说明)
@@ -1380,6 +1409,7 @@ zh-CN:
       RyanTest3: 这个级别已打开了形状转换功能! 刷新来查看不同的变量。
       Ryan_Demo: 让驼鹿在 4 个小节后做新动作！
       SG Add Subgoals practice: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置, 保持原来的朝向。(点击查看完整说明)
+      SG U3L03 Define and use turnAround: 定义一个名为 "周转" 的函数。调用该函数, 然后向前移动。(点击查看完整说明)
       SG U3L03 Draw a T using turnAround: 使用提供的turnAround() 来画一个加号。 (点击查看完整说明)
       SG U3L03 Three Steps: 定义一个名为 drawSide () 的函数，来画三步，并移动乌龟来为下一篇做准备 (单击查看完整说明)
       SG U3L03 draw diamond: 创建一个名为 drawDiamond () 的函数, 它利用您以前的工作来绘制完整的菱形。(点击查看完整说明)
@@ -1481,6 +1511,9 @@ zh-CN:
       U3 Variables flower example: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       U3 Variables gray square: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       U3 Variables randomize your square: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
+      U3L03 Define and use turnAround: 定义一个名为 "周转" 的函数。调用该函数, 然后向前移动。(点击查看完整说明)
+      U3L03 Define and use turnAround_2018: 定义一个名为 "周转" 的函数。调用该函数, 然后向前移动。(点击查看完整说明)
+      U3L03 Define and use turnAround_2019: 定义一个名为 "周转" 的函数。调用该函数, 然后向前移动。(点击查看完整说明)
       U3L03 Draw a T using turnAround: 使用提供的turnAround() 来画一个加号。 (点击查看完整说明)
       U3L03 Draw a T using turnAround_2018: 使用提供的turnAround() 来画一个加号。 (点击查看完整说明)
       U3L03 Draw a T using turnAround_2019: 使用提供的turnAround() 来画一个加号。 (点击查看完整说明)
@@ -1611,7 +1644,6 @@ zh-CN:
       Virtual Pet 1 Predict_simple: '当点击这个外星人的时候, 你认为会发生什么？  '
       Virtual Pet 1 fix: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
       Virtual Pet 1: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
-      Virtual Pet 1_2019: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
       Virtual Pet 1_simple: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
       Virtual Pet 2 - Validated (Ram): 创建 **事件** 使杰拉尔丁掉到泥坑时，她的颜色变成褐色。
       Virtual Pet 2 - Validated: 创建 **事件** 使杰拉尔丁掉到泥坑时，她的颜色变成褐色。
@@ -1641,7 +1673,12 @@ zh-CN:
       aE7: "如果你创建一个和这个很像的循环，但是往左转，而不是往右转，会怎样呢？\r\n\r\n你能重复它来画出波浪吗？"
       aE8: "现在，让我们把所有东西重复4次来画出这个画框。小心转角 -- 你不能只转90度！\r\n\r\n如果转60次3度，就会创建出一个半圆，什么样的代码能创建出1/4圆的转角？"
       allHallows2017: 通过绘制一个正方形320像素的边, 在蜡笔框中框住 Code.org 员工!
+      allthethings data blocks test: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
+      allthethings design mode elements: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
+      allthethings level dataTables: 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
       allthethings_U3 - Simple Drawing - Rectangle Width and Height: 做这个
+      allthethings_template_backed1: '备份模板#1. 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。 '
+      allthethings_template_backed2: 备份模板#2. 测试应用实验室制作应用前请登录(应用实验室被设计为仅在登陆后可用。/*通常我们可以让人们自动登录，但是这个实现必须要让所有脚本都变成可强制执行的，显然对所有脚本都做一次这样的更改会很麻烦*/)。
       allthethings_ttscsf contained: 摘下所有的莴苣(只在有莴苣的时候)。
       artistDebugVideo1: 使用 "重复" 循环在水中添加波浪。
       artistFunctionsVideo1: 按照说明来做出你自己的函数
@@ -2070,8 +2107,8 @@ zh-CN:
       courseB_Scrat_ramp3b_2019: "将多余的块拖回工具箱即可将其删除。\n\n"
       courseB_Scrat_ramp4a_2018: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseB_Scrat_ramp4a_2019: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
-      courseB_Scrat_ramp5a_2018: 帮小鸟到达那只猪！
-      courseB_Scrat_ramp5a_2019: 帮小鸟到达那只猪！
+      courseB_Scrat_ramp5a_2018: 试试自己完成它！
+      courseB_Scrat_ramp5a_2019: 试试自己完成它！
       courseB_artist_loops1: 这是一种叫"小艺术家" 的新类型关卡。试试各关卡并画些有趣的东西。
       courseB_artist_loops10: 用你已经学到的画一副你想让艺术家回到家里看到的画。
       courseB_artist_loops10_2018: 用你已经学到的画一副你想让艺术家回到家里看到的画。
@@ -2361,7 +2398,6 @@ zh-CN:
       courseC_artist_loops2: 现在, 僵尸知道他的路线, 帮助他沿路挖洞种植更多的花朵!
       courseC_artist_loops2a: 现在, 用一个循环旋转你的鸟大约12次, 每次转30度。
       courseC_artist_loops2a_2018: 现在, 用一个循环旋转你的鸟大约12次, 每次转30度。
-      courseC_artist_loops2a_2019: 现在, 用一个循环旋转你的鸟大约12次, 每次转30度。
       courseC_artist_loops3: 非常好！ 现在, 花朵已经发芽, 帮助僵尸每隔50像素安置一个朋友来保护花朵, 直到他们长大。
       courseC_artist_loops3a: 现在添加一只蝙蝠!
       courseC_artist_loops3a_2018: 现在添加一只蝙蝠!
@@ -3893,6 +3929,7 @@ zh-CN:
       frozen line: 你好！我是艾伦代尔的艾莎公主。请你帮我画一条直线。
       frozen perpendicular: 现在让我们看看我们是否可以画两条直线，前提是彼此必须存着90度角的相位关系。您将需要使用“转向”块和“移动”块。
       frozen snowflake branch: 试试用“创建雪花分支”模块来创建三个分支，来让它看起来像一片雪花。
+      frozen snowflake branch_test: 尝试使用`创建雪花分支`块来创建雪花的三个末端。
       frozen snowflake full: 现在，让我们重复8次，做一个漂亮的雪花!
       frozen snowflower: 错综复杂的雪花模式可以用非常简单的形状来创建。 你可以重复5个大小为5的圆圈和5个大小为10的圆圈来做成一个模式吗?
       frozen square iterative: 我们好像已经成功地绘制了半个正方形。来，我们一起把四行条线组合起来绘制一个完整的正方形。
@@ -4239,6 +4276,7 @@ zh-CN:
       gradek_playlab_events5c: 当乔治被点击的时候，改变背景和播放随机声音来添加一些乐趣。
       gradek_playlab_eventsFP: 添加任何你想要的到此游戏中。你能否让恐龙在乔治碰上它时消失？
       gradek_playlab_eventsPre: 这是一个游戏实验室关卡。 把模块移到工作区看会发生什么!
+      group test: 制作游戏
       harvester_Kahoot: 现在帮农民采摘玉米，莴苣，**和** 南瓜。
       harvey_pixelation: 用二进制来编码任何你喜欢的图形。二进制语言只用'0'和'1'来代表。
       harvey_snowflake_artist1: 让你的雪花准备好可以进行3d 打印!
@@ -4278,6 +4316,10 @@ zh-CN:
       iceage_warn_ice_age_2018: 把场景切换到一个冰雪的背景，并且设定喜得 (演员1) 的速度为快速。
       k-1 maze 1: 你能将我移到西边到达那只猪吗？
       k1stickerfreeplay: 艺术家在远处看到了一些有趣的东西。 画出你认为他看到的东西。
+      kikiTesta: |-
+        我们的冒险家想要收集硬币。但她只能使用4个模块来获取它们。
+
+        你能在最多使用 4 个模块的情况下帮她收集到最多的硬币吗？
       level 'grade3_Loops_10: "忙碌的蜜蜂！\r\n\r\n帮助蜜蜂用尽可能少的模块来收集花蜜并酿蜂蜜。"
       level 'grade3_Loops_11: "这条路的形状和其它的不一样。\r\n\r\n你能用尽量少的模块来收集所有花蜜吗？"
       level 'grade3_Loops_12: 你能为蜜蜂找到最快的路，收集所有花蜜并酿造蜂蜜吗？
@@ -4338,6 +4380,10 @@ zh-CN:
       ramp_artist_loops9: 通过绘制正方形来解决这个关卡。
       ramp_artist_loops9_2018: 通过绘制正方形来解决这个关卡。
       ramp_artist_loops9_2019: 通过绘制正方形来解决这个关卡。
+      sample1: |-
+        我们的冒险家想要收集硬币。但她只能使用4个模块来获取它们。
+
+        你能在最多使用 4 个模块的情况下帮她收集到最多的硬币吗？
       scrat 16 (copy 1): 橡子！橡子！橡子！使用“如果”的代码块让我到哪里，最好用最少的代码块。
       scrat 16: 橡子！橡子！橡子！使用“如果”的代码块让我到哪里，最好用最少的代码块。
       scrat 17: 好吧，我们再做一遍吧-这个与上一个差不多，但是小心墙壁！
@@ -4350,5 +4396,6 @@ zh-CN:
       subgoal U3 L4 introducing subgoal labels: 介绍东方龟并移动龟。
       subgoal U3L2 Using Simple Commands: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       subgoalU3L2_TurtleSquare_right: 在起始位置的右前方绘制一个正方形。(单击以显示完整说明)
+      testArtistForTestK: 艺术家试图画一条线 五 次, 但还没画好。 你能帮忙吗？
       u3-old-drawing-view: 做这个
       valentine_artist_03: 现在尝试自己练习!

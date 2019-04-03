@@ -385,6 +385,8 @@ tr:
               name: Bağlantısız Dersler
             Writing computer programs:
               name: Bilgisayar programları yazma
+            new stage:
+              name: yeni kademe
         netsim:
           title: İnternet Simülatörü
           stages:
@@ -9897,6 +9899,12 @@ tr:
               name: yeni kademe
             The Artist:
               name: Sanatçı
+            Internet:
+              name: İnternet
+            Crowdsourcing:
+              name: Kalabalık Kaynaklandırma 'Crowdsourcing'
+            Digital Sharing:
+              name: Dijital Paylaşım
         dance-low:
           stages:
             Dance Party:
@@ -9937,6 +9945,8 @@ tr:
               name: Sanaçtı İkili Taban
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
+            Dance Party:
+              name: Dans Partisi
         coursee-2019:
           description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın
             ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız
@@ -10084,6 +10094,8 @@ tr:
               name: Frozen'da İç İçe Döngüler
             Conditionals in Minecraft:
               name: Minecraft' da Koşullar
+            Digital Sharing:
+              name: Dijital Paylaşım
         express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -10351,6 +10363,8 @@ tr:
               name: 'Programlama: Robot dostlarım'
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
+            Sticker Art with Loops:
+              name: Sanatçıların Döngüleri
         csp-mid-survey:
           description_audience: CSP Öğrencileri
         gamelab:
@@ -10428,6 +10442,8 @@ tr:
               name: Sanatçıların Döngüleri
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
+            Programming with Rey and BB-8:
+              name: Rey ve BB-8 ile programlama
         courseb-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -10454,6 +10470,8 @@ tr:
               name: Play Lab' da Olaylar
             'Loops: Getting Loopy':
               name: 'Döngüler: Loopy Başlarken'
+            Programming in Maze:
+              name: Labirentte Programlama
         pre-express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -10483,6 +10501,12 @@ tr:
               name: Play Lab' da Olaylar
             Spelling Bee:
               name: Heceleme Yarışması
+            Learn to Drag and Drop:
+              name: Sürükleyip Bırakmayı Öğrenin
+            Programming in Maze:
+              name: Labirentte Programlama
+            Ocean Scene with Loops:
+              name: Sanatçıların Döngüleri
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -11854,3 +11878,11 @@ tr:
               name: Örnek uygulamalar
             Final Project:
               name: Final projesi
+        csp1-pilot:
+          stages:
+            new stage:
+              name: yeni kademe
+        csd-videos:
+          stages:
+            new stage:
+              name: yeni kademe

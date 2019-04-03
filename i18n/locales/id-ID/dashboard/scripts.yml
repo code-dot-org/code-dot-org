@@ -323,8 +323,7 @@ id:
               name: Resep desain
         K5PD:
           title: Pengembangan profesional K5
-          description: Pengembangan profesional untuk kursus K5
-          description_short: Pengembangan profesional untuk kursus K5
+          description: 'Pengembangan profesional untuk kursus K5'
           stages:
             Computer Science Pedagogy:
               name: ilmu mendidik/pedagogi ilmu pengetahuan Komputer
@@ -4484,6 +4483,10 @@ id:
               description_student: Waktu untuk menunjukkan pekerjaan anda! Di sini anda akan menyajikan proyek mengagumkan untuk teman-teman anda.
             The Artist:
               name: Artis
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Sumber kerumunan
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':

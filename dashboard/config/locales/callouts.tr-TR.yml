@@ -333,6 +333,17 @@ tr:
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Bu blok rengi istediğin gibi ayarlamanı sağlar. Sayılarla
           oyna ve rengin nasıl değiştiğini gör!
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Bu bloğu programınıza ekleyin!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Bu bloğu programınıza ekleyin!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Bu bloğu programınıza ekleyin!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Buraya yeni dansçınızı ekleyin
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Yeni blok!
+        dance_callout_11_b: Yeni blok!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Karakteri hareket ettirmek için okları kullan
       CourseF_PlayLab_vars10_callout:

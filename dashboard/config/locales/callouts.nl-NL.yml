@@ -180,6 +180,17 @@ nl:
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Met dit blok kun je je kleur aanpassen aan bijna alles wat
           je wil zien!  Verander de getallen om te zien wat er gebeurt!
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Voeg dit blok toe aan je programma!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Voeg dit blok toe aan je programma!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Voeg dit blok toe aan je programma!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Voeg hier je nieuwe danser toe
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Nieuw blok!
+        dance_callout_11_b: Nieuw blok!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Gebruik de pijltjestoetsen om de acteur te bewegen
       CourseF_PlayLab_vars10_callout:

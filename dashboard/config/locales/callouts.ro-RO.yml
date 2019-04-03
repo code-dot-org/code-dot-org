@@ -60,8 +60,32 @@ ro:
         edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Utilizează săgețile pentru a muta actorul
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Adaugă acest bloc la programul tău!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Adaugă acest bloc la programul tău!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Adaugă acest bloc la programul tău!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Adaugă un nou dansator aici
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Bloc nou!
+        dance_callout_11_b: Bloc nou!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Utilizează săgețile pentru a muta actorul
+      Dance_Party_01_callout:
+        dance_callout_01: Adaugă acest bloc la programul tău!
+      Dance_Party_01_low_callout:
+        dance_callout_01: Adaugă acest bloc la programul tău!
+      Dance_Party_02_callout:
+        dance_callout_02: Adaugă acest bloc la programul tău!
+      Dance_Party_04_callout:
+        dance_callout_04: Adaugă acest bloc la programul tău!
+      Dance_Party_06_callout:
+        dance_callout_06: Adaugă un nou dansator aici
+      Dance_Party_11_callout:
+        dance_callout_11_a: Bloc nou!
+        dance_callout_11_b: Bloc nou!
       Eval Design Recipe .1_callout:
         edit_function: Click aici pentru a edita funcţia dumneavoastră.
       Frozen Project Test Toolbox_callout:
@@ -137,6 +161,8 @@ ro:
         craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
       Overworld Place Wall_2019_callout:
         craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
+      Ryan_Demo_callout:
+        dance_callout_02: Adaugă acest bloc la programul tău!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Acest cod va cauta lava, poti adauga o comanda
           pentru a inainta?

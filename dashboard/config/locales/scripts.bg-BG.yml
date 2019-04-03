@@ -357,7 +357,6 @@ bg:
         K5PD:
           title: K5 Професионално развитие
           description: K5 курсове за професионално развитие
-          description_short: K5 курсове за професионално развитие
           stages:
             Computer Science Pedagogy:
               name: Педагогика на Компютърните науки
@@ -2259,6 +2258,10 @@ bg:
               name: Повторения за забавление
             The Artist:
               name: Художникът
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing кампания
         coursed-2019:
           stages:
             Relay Programming:

@@ -1246,6 +1246,10 @@ sr:
               name: Услови са картама
             The Artist:
               name: Уметник
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing
         coursed-2019:
           stages:
             Relay Programming:

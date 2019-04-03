@@ -9,7 +9,7 @@ theme: responsive
 
 <h2>Find your local workshop and apply</h2>
 
-Find the professional learning workshops closest to you.
+Look up details of the Professional Learning Program in your region by submitting your zip code below. Or [apply directly now!](<%= CDO.studio_url("/pd/application/teacher") %>)
 
 <%= view :regional_partner_search, source_page_id: "program-information" %>
 

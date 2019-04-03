@@ -24,21 +24,22 @@ is:
       Picker: Veljari
       Comment: Athugasemd
       'Variables ': 'Breytur '
+      Default: Sjálfgefið
+      Behaviors: Hegðun
+      Locations: Staðir
       everythingelse: alltannað
+      World: Heimur
+      Sprites: Kvikar
+      Location: Staður
       numbers: tölur
       Numbers: Tölur
       Input: Inntak
-      Default: Sjálfgefið
-      World: Heimur
-      Sprites: Kvikar
-      Behaviors: Hegðun
-      Advanced: Ítarlegt
-      Start: Byrja
-      Locations: Staðir
-      Music: Tónlist
-      Dancing: Dans
       Dancers: Dansarar
       Groups: Hópar
+      Advanced: Ítarlegt
+      Start: Byrja
+      Music: Tónlist
+      Dancing: Dans
       Sprite: Kviki
       Brush: Pensill
       Make Sprite: Búa til kvika

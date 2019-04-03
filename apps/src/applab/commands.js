@@ -2,6 +2,7 @@ import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
 import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
+import experiments from '../util/experiments';
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import * as setPropertyDropdown from './setPropertyDropdown';
@@ -23,11 +24,18 @@ import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
+import {actions} from './redux/applab';
+import {getStore} from '../redux';
+import $ from 'jquery';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
-import {ICON_PREFIX_REGEX} from './constants';
+import {
+  ICON_PREFIX_REGEX,
+  defaultFontSizeStyle,
+  fontFamilyStyles
+} from './constants';
 
 var applabCommands = {};
 export default applabCommands;
@@ -191,9 +199,16 @@ applabCommands.button = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
-  newButton.style.color = color.white;
-  newButton.style.backgroundColor = color.applab_button_teal;
-  elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
+  newButton.style.fontSize = defaultFontSizeStyle;
+  newButton.style.fontFamily = fontFamilyStyles[0];
+  if (experiments.isEnabled('applabThemes')) {
+    newButton.style.borderStyle = 'solid';
+    elementLibrary.applyCurrentTheme(newButton, Applab.activeScreen());
+  } else {
+    newButton.style.color = color.white;
+    newButton.style.backgroundColor = color.applab_button_teal;
+    elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
+  }
 
   return Boolean(
     newButton.appendChild(textNode) &&
@@ -894,12 +909,19 @@ applabCommands.textInput = function(opts) {
   newInput.value = opts.text;
   newInput.id = opts.elementId;
   newInput.style.position = 'relative';
+  newInput.style.fontSize = defaultFontSizeStyle;
+  newInput.style.fontFamily = fontFamilyStyles[0];
   newInput.style.height = '30px';
   newInput.style.width = '200px';
-  elementUtils.setDefaultBorderStyles(newInput, {
-    forceDefaults: true,
-    textInput: true
-  });
+  if (experiments.isEnabled('applabThemes')) {
+    newInput.style.borderStyle = 'solid';
+    elementLibrary.applyCurrentTheme(newInput, Applab.activeScreen());
+  } else {
+    elementUtils.setDefaultBorderStyles(newInput, {
+      forceDefaults: true,
+      textInput: true
+    });
+  }
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
@@ -916,7 +938,14 @@ applabCommands.textLabel = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
-  elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
+  newLabel.style.fontSize = defaultFontSizeStyle;
+  newLabel.style.fontFamily = fontFamilyStyles[0];
+  if (experiments.isEnabled('applabThemes')) {
+    newLabel.style.borderStyle = 'solid';
+    elementLibrary.applyCurrentTheme(newLabel, Applab.activeScreen());
+  } else {
+    elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
+  }
   var forElement = document.getElementById(opts.forId);
   if (forElement && Applab.activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
@@ -979,9 +1008,21 @@ applabCommands.dropdown = function(opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
-  newSelect.style.color = color.white;
-  newSelect.style.backgroundColor = color.applab_button_teal;
-  elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});
+  newSelect.style.fontSize = defaultFontSizeStyle;
+  newSelect.style.fontFamily = fontFamilyStyles[0];
+  if (experiments.isEnabled('applabThemes')) {
+    newSelect.style.borderStyle = 'solid';
+    elementLibrary.applyCurrentTheme(newSelect, Applab.activeScreen());
+  } else {
+    newSelect.style.color = color.white;
+    elementLibrary.typeSpecificPropertyChange(
+      newSelect,
+      'textColor',
+      newSelect.style.color
+    );
+    newSelect.style.backgroundColor = color.applab_button_teal;
+    elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});
+  }
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
@@ -1554,6 +1595,51 @@ applabCommands.onEvent = function(opts) {
     return true;
   }
   return false;
+};
+
+function filterUrl(urlToCheck) {
+  $.ajax({
+    url: '/safe_browsing/',
+    method: 'POST',
+    contentType: 'application/json',
+    dataType: 'json',
+    data: JSON.stringify({url: urlToCheck})
+  })
+    .success(data => {
+      let approved = data['approved'];
+      getStore().dispatch(actions.addRedirectNotice(approved, urlToCheck));
+    })
+    .fail((jqXhr, status) => {
+      // When this query fails, default to the dialog that allows the user to choose
+      getStore().dispatch(actions.addRedirectNotice(true, urlToCheck));
+    });
+}
+
+applabCommands.openUrl = function(opts) {
+  if (apiValidateType(opts, 'openUrl', 'url', opts.url, 'string')) {
+    // Studio and code.org links are immediately opened, other links are filtered
+    // Remove protocol from url string if present
+    let hostname = opts.url;
+    let protocols = ['https://', 'http://', 'www.'];
+    protocols.forEach(protocol => {
+      if (hostname.startsWith(protocol)) {
+        hostname = hostname.slice(protocol.length);
+      }
+    });
+    if (
+      hostname.startsWith('studio.code.org') ||
+      hostname.startsWith('code.org')
+    ) {
+      if (opts.url.startsWith('http')) {
+        window.open(opts.url);
+      } else {
+        // If url doesn't have a protocol, add one
+        window.open('https://' + opts.url);
+      }
+    } else {
+      filterUrl(opts.url);
+    }
+  }
 };
 
 applabCommands.onHttpRequestEvent = function(opts) {

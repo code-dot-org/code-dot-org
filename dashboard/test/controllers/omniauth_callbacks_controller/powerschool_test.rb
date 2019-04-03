@@ -45,7 +45,7 @@ module OmniauthCallbacksControllerTests
     test "student sign-in" do
       auth_hash = mock_oauth user_type: User::TYPE_STUDENT
 
-      student = create(:student, :unmigrated_powerschool_sso, uid: auth_hash.uid)
+      student = create(:student, :powerschool_sso_provider, uid: auth_hash.uid)
 
       sign_in_through_powerschool
       assert_redirected_to '/'
@@ -61,7 +61,7 @@ module OmniauthCallbacksControllerTests
     test "teacher sign-in" do
       auth_hash = mock_oauth user_type: 'staff'
 
-      teacher = create(:teacher, :unmigrated_powerschool_sso, uid: auth_hash.uid)
+      teacher = create(:teacher, :powerschool_sso_provider, uid: auth_hash.uid)
 
       sign_in_through_powerschool
       assert_redirected_to '/home'

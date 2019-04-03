@@ -103,6 +103,17 @@ bs:
         edit_add_parameter: Klikni na Uredi da bi dodao parametar u svoju funkciju
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Koristi strelice za pomicanje lika
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Dodajte ovaj blok u svoj program!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Dodajte ovaj blok u svoj program!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Dodajte ovaj blok u svoj program!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Dodajte svog novog plesača ovdje
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Novi blok!
+        dance_callout_11_b: Novi blok!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Koristi strelice za pomicanje lika
       Dance_Party_01_callout:

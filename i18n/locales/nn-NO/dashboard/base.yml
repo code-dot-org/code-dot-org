@@ -140,7 +140,7 @@ nn:
     email_preference_privacy: "(Sjå våre retningslinjer for personvern)"
     email_preference_yes: "Ja"
     email_preference_no: "Nei"
-    email_preference_required: "Du må angi en e-post preferanse."
+    email_preference_required: "Du må angi en e-postpreferanse."
   school_info:
     title: 'Informasjon til skulen (valfritt)'
     school_country: 'Landet til skulen'
@@ -325,13 +325,34 @@ nn:
       driver: 'Sjåfør'
       navigator: 'Kartlesar'
       create: 'Opprett'
+      algebra_game: 'Algebra'
       applab: 'App-lab'
       artist: 'Kunstnar'
-      gamelab: 'Spel-lab'
-      playlab: 'Spel-lab'
-      minecraft: 'Minecraft'
-      flappy: 'Flakse'
+      artist_k1: 'Kunstnar (førskule)'
+      basketball: 'Basketball'
+      bounce: 'Sprett'
+      calc: 'Rekne ut'
       dance: 'Dansefest'
+      eval: 'Evaluer'
+      flappy: 'Flakse'
+      frozen: 'Frost'
+      gamelab: 'Spel-lab'
+      gamelab_jr: 'Spel-lab (beta)'
+      gumball: 'Gumballs fantastiske verd'
+      iceage: 'Istid'
+      infinity: 'Uendeleg'
+      minecraft_adventurer: 'Minecraft-eventyrar'
+      minecraft_aquatic: 'Akvatisk Minecraft'
+      minecraft_designer: 'Minecraft'
+      minecraft_hero: 'Minecraft Helt'
+      playlab: 'Spel-lab'
+      playlab_k1: 'Spel-lab (før ein kan lese)'
+      scratch: 'Scratch'
+      sports: 'Sport'
+      starwars: 'Star Wars'
+      starwarsblocks: 'Star Wars (blokker)'
+      starwarsblocks_hour: 'Star Wars (blokker)'
+      weblab: 'Nett-lab'
     popup:
       progress_for_user: "Framgangen til %{name}"
       progress: 'Framgangen din'
@@ -465,7 +486,6 @@ nn:
     announcement_csf_pilot: "<strong>Grunnskolelærere:</strong> Bli med og oppdater våre grunnleggende Informatikkurs! VI ser etter lærere til å lede arbeidet med å oppgradere læreplanen i Grunnleggende Informatikk i løpet av vinteren og våren 2017. Vi ser frem til å høre dine innspill før oppdateringene slippes i august 2017."
     announcement_student_privacy: "Hos Code.org tar vi studentenes personvern svært alvorlig. For å beskytte elevenes personvern har vi gjort endringer for din seksjons pålogginsside til ikke å vise fullt navn. Selv om denne oppdateringen forbedrer personvernet, oppfordrer vi likevel brukere til å <i>ikke bruke fullt navn på studentene</i>."
     announcement_apcsp_recruitment: "<strong>Informatikk lærere:</strong> Dine studenter kan delta i Code.org's neste virale video for å oppmuntre flere studenter til å ta Prinsipper i Informatikk eksamen i år. Vi inviterer alle Prinsipper i Informatikk studenter til å legge ut en 10-20 sekunders videoklipp på Twitter, Instagram eller Facebook hvor de sier \"I'm taking the #APCSP exam because...\" De beste videoene vil benyttes i vår video og vinneren vil motta Code.org produkter i premie!"
-    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
     announcement_applab_export: "App-lab, vårt web-baserte programmeringsmiljø, støtter nå eksport av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av JavaScript-blokker, eksporter så koden for å fortsette kodingen i ditt foretrukne utviklingsverktøy."
     announcement_navigation_redesign: "<b>Endringer i nettstednavigering</b> <br/>I sommer skal vi forbedre navigasjonen på siden Code.org, slik at du alltid har tilgang til de beste ressursene dine fra hvor som helst på nettstedet. Så snart du logger på din lærerkonto, vil hver side ha en ny navigasjonslinje med lenker til hjemmesiden din, kursene, prosjektgalleriet, seksjoner og profesjonell læring."
   move_students:
@@ -863,6 +883,17 @@ nn:
     csf_e_2: 'Kursinnhald E'
     csf_f_1: 'Oppgrader til Kurs F (Valgfritt)'
     csf_f_2: 'Kursinnhald F'
+    csf_digcit: 'Digitalt statsborgerskap'
+    csf_jigsaw: 'Puslespill'
+    csf_loops: 'Løkker'
+    csf_events: 'Hendingar'
+    csf_binary: 'Binær'
+    csf_conditionals: 'Betingelser'
+    csf_nested_loops: 'Løkker i løkke'
+    csf_functions: 'Funksjonar'
+    csf_variables: 'Variablar'
+    csf_for_loops: 'For-løkker'
+    csf_internet: 'Internett'
     csd1_1: 'Kapittel 1: Problemløsingsprosessen'
     csd1_2: 'Kapittel 2: Datamaskiner og problemløsning'
     csd2_1: 'Kapittel 1: Nettinnhold og HTML'
@@ -889,6 +920,9 @@ nn:
     csp_ap_2: 'Kapittel 2: AP utforske ytelsesoppgave'
     csp_ap_3: 'Kapittel 3: AP opprette ytelsesoppgave'
     csp2_1_2018: 'Eining 2: Digital informasjon'
+    csp_variables: 'Variablar'
+    csp_conditionals: 'Betingelser'
+    csp_functions: 'Funksjonar'
     dlp: 'Spørsmål til refleksjon'
   external_links:
     disclaimer: Fråskrive seg ansvar
@@ -962,7 +996,7 @@ nn:
       last_name: 'Etternavn'
       email: 'E-post'
       email_alternate: 'Alternativ e-post'
-      gender: 'Kjønns-identitet'
+      gender: 'Kjønnsidentitet'
       school_name: 'Namn på skule'
       school_city: 'Skulen sin poststad'
       school_country: 'Landet til skulen'
@@ -973,7 +1007,7 @@ nn:
         non_binary: 'Ikke-binær'
         none: 'Foretrekker å ikkje svare'
       school_country:
-        canada: 'Kanada'
+        canada: 'Canada'
         chile: 'Chile'
         israel: 'Israel'
         malaysia: 'Malaysia'
@@ -990,16 +1024,23 @@ nn:
         ages_19_over: '19+ år gammel'
       subjects:
         cs: 'Informatikk'
+        ict: 'IKT'
         math: 'Matematikk'
         science: 'Vitskap'
+        history: 'Historie / Samfunnsfag'
         la: 'Språkfag'
         music: 'Musikk'
+        art: 'Kunst'
+        other: "Annet:"
       resources:
         kodable: 'Kodable'
         scratch: 'Scratch'
+        other: "Annet:"
       robotics:
         kodable: 'Kodable'
         microbit: 'Microbit'
+        raspberry: 'Raspberry Pi'
+        other: "Annet:"
       workshop_course:
         csd: 'Oppdagingar i informatikk'
         csp: 'Prinsipp i datavitskap'

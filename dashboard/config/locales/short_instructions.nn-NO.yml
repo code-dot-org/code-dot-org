@@ -983,6 +983,7 @@ nn:
         å bli 100 pikslar lange. '
       Code Studio Puzzle Challenge 2 - Artist: No kan du legge til ein sving og ei
         anna linje. Linjene er 200 pikslar lange.
+      CoureE_HOC 2018 Level_7a: Let i undervassruinane for å finne ei kiste.
       Course 2 Bee Loops 1: 'Hei, eg er ei bie. Kan du hjelpe meg med å samle all
         nektaren frå desse blomane? '
       Course 2 Bee Loops 2: Kan du gjøre akkurat det samme på en enklere måte med
@@ -1603,6 +1604,39 @@ nn:
       Course E MC Conditionals1: Du vil finne dei mest verdfulle ressursane under
         jorda, men det kan bli mørkt. Sett ut minst 2 faklar og grav ut minst 2 kol.
       Course1BeePuzzle12: Hent tre nektar og lag to honning
+      CourseD_Dance_Party_01: Dra “lag ei ny blokk”-blokka inn i arbeidsområdet, og
+        koble den til inni oppsettblokka.
+      CourseD_Dance_Party_02: Få elgen til å gjere eit nytt dansetrinn etter 4 taktar!
+      CourseD_Dance_Party_03: Få dansaren til å gjere eit nytt dansetrinn etter 6
+        taktar!
+      CourseD_Dance_Party_04: Legg til ein bakgrunnseffekt i programmet.
+      CourseD_Dance_Party_05: Bruk ei ny blokk for å få dansaren til å bytte dansetrinn
+        kvar 2. takt.
+      CourseD_Dance_Party_06: Lag ein ny dansar som heiter ‘backup_dancer1’, som kan
+        danse med katten.
+      CourseD_Dance_Party_08: Kan du gjere begge bakgrunnsdansarane like store?
+      CourseD_Dance_Party_09: Bruk ei fargevalblokk til å skifte farge på dansaren.
+      CourseD_Dance_Party_10: Få den andre dansaren til å reagere på musikken ved
+        å bruke ‘startar å følge’-blokka.
+      CourseD_Dance_Party_11: Med ‘når du trykker opp’-blokka kan du køyre kode når
+        du trykker på oppoverpila. Prøv å få dansaren til å gjere ein kjapp dans når
+        du trykker opp.
+      CourseD_Dance_Party_11_5: Bruk ‘alle endene’-blokker til å få endene til å danse
+        saman.
+      CourseD_Dance_Party_11b: Få roboten til å “droppe” når du trykker på høgrepila,
+        og gjere ein “floss” når du trykker på oppoverpilen. Gjer en droppfloss så
+        fort du kan!
+      CourseD_Dance_Party_12: Groove i veg! Lag ein dans du kan dele med venene dine.
+      CourseE_HOC 2018 Level_1: Hent ein båt i kista.
+      CourseE_HOC 2018 Level_10: Kom deg til inngangen av havmonumentet.
+      CourseE_HOC 2018 Level_11: 'Bygg ein kanal med prismarin inne i havmonumentet.  '
+      CourseE_HOC 2018 Level_2: 'Gå til enden av bryggja.  '
+      CourseE_HOC 2018 Level_3: 'Dra over ope hav til torsken.  '
+      CourseE_HOC 2018 Level_4: Bruk ei løkke for å komme deg til delfinen.
+      CourseE_HOC 2018 Level_5: Utforsk skipsvraket for å finne kista.
+      CourseE_HOC 2018 Level_6: Naviger deg gjennom isen for å komme deg til laksen.
+      CourseE_HOC 2018 Level_7a: Let i undervassruinane for å finne ei kiste.
+      CourseE_HOC 2018 Level_9b: 'Bruk korallar som guide for å finne skatten.  '
       CourseF_PlayLab_vars10: "Tid for fritt spel! Her er alle variablane vi har brukt
         så langt, i tillegg til nokre ekstra om du vil bruke dei.\n\nLegg merke til
         at det er så mange brikker i verktøykassa vår at dei treng å bli organisert!
@@ -3175,8 +3209,6 @@ nn:
         skrive koden slik at venene mine kjem fram?
       courseA_toMakeLoopsVideo_Collector: Løkker lar deg gjere det som er inni igjen
         og igjen!
-      courseB_Scrat_ramp5a_2018: Få fuglen til grisen!
-      courseB_Scrat_ramp5a_2019: Få fuglen til grisen!
       courseB_artist_loops2: Kunstnaren prøver å teikne ei linje **6** gongar, men
         kan ikkje få det riktig. Kan du hjelpe?
       courseB_artist_loops2_2018: Kunstnaren prøver å teikne ei linje **6** gongar,
@@ -3430,8 +3462,6 @@ nn:
       courseC_artist_loops2a: No kan du bruke ei løkke for å spinne fuglen din rundt
         tolv gongar med ein 30 graders sving.
       courseC_artist_loops2a_2018: No kan du bruke ei løkke for å spinne fuglen din
-        rundt tolv gongar med ein 30 graders sving.
-      courseC_artist_loops2a_2019: No kan du bruke ei løkke for å spinne fuglen din
         rundt tolv gongar med ein 30 graders sving.
       courseC_artist_loops3: Nydeleg!  No som blomen spirer, hjelp zombien med å plassere
         ein ven for kvar 50 piksel for å vakte over dei til dei har vokst ut.

@@ -76,6 +76,8 @@ export function renderTextResponsesTable(section, validScripts) {
 }
 
 export function renderStatsTable(section) {
+  registerReducers({scriptSelection});
+  const store = getStore();
   const dataUrl = `/dashboardapi/sections/${
     section.id
   }/students/completed_levels_count`;
@@ -87,17 +89,25 @@ export function renderStatsTable(section) {
     dataType: 'json'
   }).done(studentsCompletedLevelCount => {
     ReactDOM.render(
-      <StatsTable
-        section={section}
-        studentsCompletedLevelCount={studentsCompletedLevelCount}
-      />,
+      <Provider store={store}>
+        <StatsTable
+          section={section}
+          studentsCompletedLevelCount={studentsCompletedLevelCount}
+        />
+      </Provider>,
       element
     );
   });
 }
 
 export function renderSectionTable(section, studioUrlPrefix) {
-  registerReducers({teacherSections, manageStudents, isRtl, sectionData});
+  registerReducers({
+    teacherSections,
+    manageStudents,
+    isRtl,
+    sectionData,
+    scriptSelection
+  });
   const store = getStore();
 
   store.dispatch(setLoginType(section.login_type));

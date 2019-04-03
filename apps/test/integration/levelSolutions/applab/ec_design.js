@@ -56,7 +56,7 @@ function assertPropertyRowExists(index, label, assert) {
 
   var propertyRow = $('#propertyRowContainer > div').eq(index);
   var msg = 'property row ' + index + " has label '" + label + "'";
-  assert.equal(propertyRow.children(0).text(), label, msg);
+  assert.equal($(propertyRow.children(0)[0]).text(), label, msg);
 }
 
 // We don't load our style sheets in integration tests, so we instead depend
@@ -672,7 +672,8 @@ module.exports = {
         assertPropertyRowValue(5, 'y position (px)', 0, assert);
         assertPropertyRowValue(6, 'text color', '#000000', assert);
         assertPropertyRowValue(7, 'background color', '#ffffff', assert);
-        assertPropertyRowValue(8, 'font size (px)', 14, assert);
+        assertPropertyRowValue(8, 'font family', 'Arial', assert);
+        assertPropertyRowValue(9, 'font size (px)', 14, assert);
 
         var textArea = designModeViz.find('.textArea');
         var manipulator = textArea.parent();
@@ -798,8 +799,8 @@ module.exports = {
         assertPropertyRowValue(2, 'height (px)', 100, assert);
         assertPropertyRowExists(3, 'x position (px)', assert);
         assertPropertyRowExists(4, 'y position (px)', assert);
-        assertPropertyRowExists(5, 'image Choose...', assert);
-        assertPropertyRowExists(6, 'fit imagefillcovercontainnone', assert);
+        assertPropertyRowExists(5, 'image', assert);
+        assertPropertyRowExists(6, 'fit image', assert);
         // Ignore BorderProperties
         assertPropertyRowExists(8, 'hidden', assert);
         assertPropertyRowExists(9, 'depth', assert);
@@ -1181,7 +1182,7 @@ module.exports = {
         $('#designModeButton').click();
         $('#design_image1').click();
 
-        assertPropertyRowExists(5, 'image Choose...', assert);
+        assertPropertyRowExists(5, 'image', assert);
 
         var input = $('.imagePickerInput')[0];
         var designImage = $('#design_image1')[0];

@@ -37,7 +37,7 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
 
     if regional_partner_id
       partner = RegionalPartner.find(regional_partner_id)
-      regional_partner_program_managers = RegionalPartnerProgramManager.where(regional_partner_id: partner)
+      regional_partner_program_managers = RegionalPartnerProgramManager.where(regional_partner: partner)
 
       if regional_partner_program_managers.empty?
         matched_but_no_pms = true
@@ -75,8 +75,7 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
   def update_regional_partner
     hash = sanitize_form_data_hash
     zipcode = hash[:zip]
-    state = nil
 
-    self.regional_partner = RegionalPartner.find_by_region(zipcode, state)
+    self.regional_partner, _ = RegionalPartner.find_by_zip(zipcode)
   end
 end

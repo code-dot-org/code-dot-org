@@ -8,8 +8,18 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
+import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import BorderProperties from './BorderProperties';
 import * as elementUtils from './elementUtils';
+import designMode from '../designMode';
+import {
+  defaultFontSizeStyle,
+  fontFamilyStyles,
+  themeOptions
+} from '../constants';
+import color from '../../util/color';
+import elementLibrary from './library';
+import experiments from '../../util/experiments';
 
 class TextInputProperties extends React.Component {
   static propTypes = {
@@ -67,6 +77,12 @@ class TextInputProperties extends React.Component {
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
+        />
+        <FontFamilyPropertyRow
+          initialValue={designMode.fontFamilyOptionFromStyle(
+            element.style.fontFamily
+          )}
+          handleChange={this.props.handleChange.bind(this, 'fontFamily')}
         />
         <PropertyRow
           desc={'font size (px)'}
@@ -192,18 +208,50 @@ class TextInputEvents extends React.Component {
 export default {
   PropertyTab: TextInputProperties,
   EventTab: TextInputEvents,
+  themeValues: {
+    backgroundColor: {
+      type: 'color',
+      classic: color.white,
+      dark: color.applab_dark_background
+    },
+    borderRadius: {
+      classic: 0,
+      dark: 10
+    },
+    borderWidth: {
+      classic: 1,
+      dark: 1
+    },
+    borderColor: {
+      type: 'color',
+      classic: color.text_input_default_border_color,
+      dark: color.applab_dark_border
+    },
+    textColor: {
+      type: 'color',
+      classic: color.black,
+      dark: color.white
+    }
+  },
 
   create: function() {
     const element = document.createElement('input');
     element.style.margin = '0px';
     element.style.width = '200px';
     element.style.height = '30px';
-    element.style.color = '#000000';
-    element.style.backgroundColor = '';
-    elementUtils.setDefaultBorderStyles(element, {
-      forceDefaults: true,
-      textInput: true
-    });
+    element.style.fontFamily = fontFamilyStyles[0];
+    element.style.fontSize = defaultFontSizeStyle;
+    if (experiments.isEnabled('applabThemes')) {
+      element.style.borderStyle = 'solid';
+      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    } else {
+      element.style.color = '#000000';
+      element.style.backgroundColor = '';
+      elementUtils.setDefaultBorderStyles(element, {
+        forceDefaults: true,
+        textInput: true
+      });
+    }
 
     return element;
   },
@@ -211,6 +259,16 @@ export default {
   onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element, {textInput: true});
+    // Set the font family for older projects that didn't set it on create:
+    elementUtils.setDefaultFontFamilyStyle(element);
+    if (experiments.isEnabled('applabThemes')) {
+      // Set the background color for older projects that didn't set it on create:
+      if (element.style.backgroundColor === '') {
+        element.style.backgroundColor = this.themeValues.backgroundColor[
+          themeOptions[0]
+        ];
+      }
+    }
 
     $(element).on('mousedown', function(e) {
       if (!Applab.isRunning()) {

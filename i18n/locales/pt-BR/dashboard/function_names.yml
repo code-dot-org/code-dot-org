@@ -69,8 +69,8 @@ pt-BR:
       draw bit: desenhar_bit
       draw a polygon: desenhar um polígono
       draw a shape: desenhar uma forma
-      get 2 and make 2: obter_2_e_fazer_2
-      draw a pinwheel: desenhar_um_catavento
+      get 2 and make 2: obter 2 e fazer 2
+      draw a pinwheel: desenhar um cata-vento
       drawTree: desnharArvore
       drawHouse: desenharCasa
       drawBranch: desenharGalho
@@ -86,6 +86,7 @@ pt-BR:
       do something: faça algo
       filter_pixel: filtrar_pixel
       draw_image: desenha_imagem
+      checkSimulationEnd: checaFimSimulacao
       witch ending: final da bruxa
       story: estória
       starting path: início

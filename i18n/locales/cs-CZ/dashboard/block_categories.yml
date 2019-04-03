@@ -11,11 +11,12 @@ cs:
       Conditionals: Podmínky
       Events: Události
       Text: text
+      Location: Místo
       numbers: čísla
       Numbers: Čísla
-      Start: Spustit
       Dancers: Tanečníci
       Groups: Skupiny
+      Start: Spustit
       Booleans: Logické hodnoty
       test: otestuj
       Name: Jméno

@@ -74,7 +74,7 @@
     "start_blocks": "var blueGear = createSprite(100, 220);\r\nblueGear.setAnimation(\"blue_gear\");\r\n\r\nvar greenGear = createSprite(183, 298);\r\ngreenGear.setAnimation(\"green_gear\");\r\n\r\nvar redGear = createSprite(185, 145);\r\nredGear.setAnimation(\"red_gear\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  \r\n  if (keyDown(\"space\")) {\r\n    blueGear.rotation = blueGear.rotation - 1;\r\n    greenGear.rotation = greenGear.rotation + 1;\r\n    redGear.rotation = redGear.rotation + 1;\r\n  }\r\n  \r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -112,11 +112,20 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "long_instructions": "# What If My Condition Isn't True?\r\n\r\n<img src=\"https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png\" width=\"125px\" style=\"float:right\">\r\n\r\nSometimes we want to tell our program what to do if a condition is `true`, but also what to do if it's `false`. Pressing the plus button at the bottom of your conditional block will give you another section called `else`. This `else` section will be run whenever the condition in the `if` before it is `false`.\r\n\r\n# Do This\r\nThe gears are back again. The last time you worked with them, you made them spin when the space bar is pressed. Instead of the gears only spinning when the space key is pressed, we want them to spin one way when the space key is pressed and spin the other way when it's not pressed.\r\n<img src=\"https://images.code.org/b074d47ca8dfa5ab3bfd08344b4f4e42-image-1464706389475.gif\" style=\"float:right\">\r\n\r\n* Click the _plus_ button at the bottom of the if block to add an else.\r\n* Add commands to make the gears spin opposite of the direction that they do when the space bar is pressed.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "reference_links": [
+      "/docs/concepts/javascript/if-statements/",
+      "/docs/concepts/javascript/booleans-and-comparison-operators/"
+    ],
+    "map_reference": "/docs/concepts/javascript/if-else-statements/",
+    "video_key": "csd_gamelab_if_else",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-22 17:38:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 22:59:37 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-10-23 18:56:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-22 17:38:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 22:59:37 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-10-23 18:56:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-26 00:59:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-26 01:10:48 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -1896,6 +1896,10 @@ nl:
               name: For Lus fun
             The Artist:
               name: De Artiest
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:
@@ -1912,6 +1916,8 @@ nl:
               name: 'Unplugged: binair'
             Artist Binary:
               name: Kunstenaar Binary
+            Dance Party:
+              name: Dansfeest
         coursee-2019:
           stages:
             Building a Foundation:

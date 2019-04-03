@@ -45,9 +45,11 @@ export default function reducer(state, action) {
   }
 
   if (action.type === SET_STEP_SPEED) {
-    return _.assign({}, state, {
-      stepSpeed: action.stepSpeed
-    });
+    if (typeof action.stepSpeed === 'number') {
+      return _.assign({}, state, {
+        stepSpeed: action.stepSpeed
+      });
+    }
   }
 
   if (action.type === SET_AWAITING_CONTAINED_RESPONSE) {

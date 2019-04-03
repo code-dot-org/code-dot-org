@@ -597,6 +597,7 @@ nn-NO:
   sports_athlete_Harrison: Harrison Barnes, OL-gullvinner og NBA-mester, Dallas Mavericks
   watch_inspirational_videos: Før du kjem i gong kan du sjå ein av desse inspirerande
     filmane
+  video_title_cs_is_everything: Informatikk Endrer Alt
   video_title_inspire_girl: Inspirér ei jente
   video_title_cs_intro: Intro til informatikk
   video_title_schools_dont_teach: Det skular flest ikkje lærer bort
@@ -2092,13 +2093,13 @@ nn-NO:
     foresattes tillatelse til å bruke tjenestene fra Code.org.
   hoc_overview_dance_title: Dansefest
   hoc_overview_partner_activities_title: Flere aktiviteter fra partnere
-  hoc_overview_partner_activities_body: Hour of Code-nettstedet har over 100 dataaktiviteter
-    for alle aldre og erfaringsnivåer, utviklet av Code.org og partnerne våre.
+  hoc_overview_partner_activities_body: Kodetime-nettstedet har over 100 dataaktiviteter
+    for alle aldre og erfaringsnivåer, utviklet av Code.org og partnere.
   hoc_overview_partner_activities_link: Sjekk aktiviteter
   hoc_overview_start_tutorial: Start
   hoc_overview_view_teacher_guide: Sjekk lærerveiledning
   hoc2018_creativity_create: Opprett
-  hoc2018_creativity_hoc_coming: Kodetimen kommer…
+  hoc2018_creativity_hoc_coming: Kodetimen kommer …
   hoc2018_creativity_what_will_you_create: Kva vil du skape?
   hoc2018_mc_page_title: Rettleiingar for Kodetimen i Minecraft
   hoc2018_mc_details: Mange språk | Moderne nettlesarar og nettbrett | 2. klasse og
@@ -2130,6 +2131,7 @@ nn-NO:
   hoc2018_mc_video_5min: 5 min
   hoc2018_mc_video_title_steph_curry: Kodetimen med Steph Curry
   hoc2018_mc_video_title_sports: Utfordre deg sjølv. Alle kan lære.
+  hoc2018_mc_video_title_cs_is_everything: Informatikk Endrer Alt
   hoc2018_mc_video_title_inspire_girl: Inspirér ei jente
   hoc2018_mc_video_title_cs_intro: Intro til informatikk
   hoc2018_mc_video_title_schools_dont_teach: Det skular flest ikkje lærer bort
@@ -2137,7 +2139,7 @@ nn-NO:
   hoc2018_mc_video_title_hoc_is_here: Kodetimen er her - Alle kan lære
   hoc2018_mc_video_title_anybody_can_learn: Alle kan lære
   hoc2018_mc_video_title_my_name_is_aracely: Eg heiter Aracely
-  hoc2018_mc_homepage_hoc_coming: Hour of Code er på vei ...
+  hoc2018_mc_homepage_hoc_coming: Kodetimen kommer ...
   hoc2018_mc_homepage_what_create: Kva vil du skape?
   hoc2018_mc_homepage_join_us: Bli med oss
   hoc2018_mc_homepage_try_it: Prøv sjølv
@@ -2149,6 +2151,8 @@ nn-NO:
   hoc2018_mc_continue_learning: Hald fram med å lære med Minecraft.
   hoc2018_mc_go_to_mc_education: Gå til Minecraft Education
   hoc2018_dance_party_main_heading: Dansefest
+  hoc2018_dance_party_landing_title: Dans
+  hoc2018_dance_party_subheading: Hjelp oversette Dansefest
   hoc2018_dance_create_your_own_dance_title: Lag din egen dansefest
   hoc2018_dance_party_box_title: Dansefest
   hoc2018_dance_party_box_description: Programmer en dansefest du kan dele med vennene
@@ -2223,3 +2227,4 @@ nn-NO:
   page_not_found_description: Sida du leiter etter finst ikkje på denne adressa. Sjekk
     nettadressa og send inn på nytt. Eller gå tilbake til heimesida vår.
   page_not_found_button: Gå heim
+  hoc2018_mc_with_microsoft: I samarbeid med

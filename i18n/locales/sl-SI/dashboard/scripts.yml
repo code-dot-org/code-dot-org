@@ -1047,6 +1047,10 @@ sl:
               name: Zabava s "for" zankami
             The Artist:
               name: Umetnik
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         coursed-2019:
           stages:
             Relay Programming:

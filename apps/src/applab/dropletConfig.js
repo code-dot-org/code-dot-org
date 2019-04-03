@@ -80,7 +80,7 @@ export var blocks = [
     parent: api,
     category: 'UI controls',
     paletteParams: ['id', 'type', 'callback'],
-    params: ['"id"', '"click"', 'function(event) {\n  \n}'],
+    params: ['"id"', '"click"', 'function( ) {\n  \n}'],
     allowFunctionDrop: {2: true},
     dropdown: {
       0: idDropdownWithSelector(),
@@ -336,6 +336,13 @@ export var blocks = [
     paletteParams: ['r', 'g', 'b', 'a'],
     params: ['250', '0', '75', '0.5'],
     type: 'value'
+  },
+  {
+    func: 'open',
+    parent: api,
+    category: 'UI controls',
+    paletteParams: ['url'],
+    params: ['"https://code.org"']
   },
 
   {

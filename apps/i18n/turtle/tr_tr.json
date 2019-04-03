@@ -38,6 +38,7 @@
   "drawUpperWave": "üst dalga çiz",
   "drawLowerWave": "alt dalga çiz",
   "drawSticker": "Etiket çiz",
+  "drawStickerWithSize": "belirtilen büyüklükte bir yapıştırma çiz",
   "heightParameter": "Yükseklik",
   "hideTurtle": "Sanatçı gizle",
   "jump": "zıpla",
@@ -73,6 +74,7 @@
   "penDown": "kalemi indir",
   "penTooltip": "Çizimi başlatmak veya durdurmak için kalemi kaldırır ya da indirir.",
   "penUp": "Kalemi kaldır",
+  "pointTo": "işaret et",
   "pixels": "pikseller",
   "reinfFeedbackMsg": "Çiziminiz burada! Çiziminiz üzerinde çalışmaya devam edin veya sonraki bulmacaya geçin.",
   "setAlpha": "alfa değerini ayarla",
@@ -92,5 +94,6 @@
   "turnTooltip": "Sanatçıyı sağa ya da sola belirtilen derecede döndürür.",
   "turtleVisibilityTooltip": "Sanatçıyı, görünür ya da görünmez yapar.",
   "widthTooltip": "Kalemin kalınlığını değiştirir.",
+  "withSize": "büyüklükte",
   "wrongColour": "Resiminin rengi yanlış.  Bu bulmaca için %1 olması gerekir."
 }

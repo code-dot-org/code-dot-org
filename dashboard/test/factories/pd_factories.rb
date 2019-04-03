@@ -780,6 +780,23 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_regional_partner_mini_contact, class: 'Pd::RegionalPartnerMiniContact' do
+    user nil
+    regional_partner nil
+    form_data {build(:pd_regional_partner_mini_contact_hash).to_json}
+  end
+
+  factory :pd_regional_partner_mini_contact_hash, class: 'Hash' do
+    initialize_with do
+      {
+        name: 'name',
+        email: 'foo@bar.com',
+        zip: '45242',
+        notes: 'Sample notes to regional partner'
+      }
+    end
+  end
+
   factory :pd_international_opt_in, class: 'Pd::InternationalOptIn' do
     user nil
     form_data nil
@@ -1125,7 +1142,7 @@ FactoryGirl.define do
     cs_total_course_hours 75
     cs_terms '1 quarter'
     replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
-    pay_fee 'Yes, my school or I will be able to pay the full program fee.'
+    pay_fee 'Yes, my school will be able to pay the full program fee.'
     plan_to_teach 'Yes, I plan to teach this course this year (2019-20)'
     interested_in_online_program 'Yes'
   end
@@ -1183,7 +1200,6 @@ FactoryGirl.define do
       committed_to_diversity 'Yes'
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]
-      how_heard Pd::Application::PrincipalApproval1920Application.options[:how_heard][0]
     end
 
     trait :replace_course_yes_csp do

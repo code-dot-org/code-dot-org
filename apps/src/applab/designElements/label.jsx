@@ -4,6 +4,7 @@ import React from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
+import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
@@ -12,6 +13,10 @@ import BorderProperties from './BorderProperties';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 import * as gridUtils from '../gridUtils';
+import designMode from '../designMode';
+import color from '../../util/color';
+import elementLibrary from './library';
+import experiments from '../../util/experiments';
 
 class LabelProperties extends React.Component {
   static propTypes = {
@@ -77,6 +82,12 @@ class LabelProperties extends React.Component {
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
+        />
+        <FontFamilyPropertyRow
+          initialValue={designMode.fontFamilyOptionFromStyle(
+            element.style.fontFamily
+          )}
+          handleChange={this.props.handleChange.bind(this, 'fontFamily')}
         />
         <PropertyRow
           desc={'font size (px)'}
@@ -183,20 +194,46 @@ const STILL_FITS = 5;
 export default {
   PropertyTab: LabelProperties,
   EventTab: LabelEvents,
+  themeValues: {
+    borderRadius: {
+      classic: 0,
+      dark: 10
+    },
+    borderWidth: {
+      classic: 0,
+      dark: 0
+    },
+    borderColor: {
+      type: 'color',
+      classic: color.text_input_default_border_color,
+      dark: color.applab_dark_border
+    },
+    textColor: {
+      type: 'color',
+      classic: color.default_text,
+      dark: color.white
+    }
+  },
 
   create: function() {
     const element = document.createElement('label');
     element.style.margin = '0px';
     element.style.padding = '2px';
     element.style.lineHeight = '1';
-    element.style.fontSize = '14px';
+    element.style.fontFamily = applabConstants.fontFamilyStyles[0];
+    element.style.fontSize = applabConstants.defaultFontSizeStyle;
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
-    element.style.color = '#333333';
     element.style.backgroundColor = '';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
-    elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
+    if (experiments.isEnabled('applabThemes')) {
+      element.style.borderStyle = 'solid';
+      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    } else {
+      element.style.color = '#333333';
+      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
+    }
 
     this.resizeToFitText(element);
     return element;
@@ -205,6 +242,8 @@ export default {
   onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
+    // Set the font family for older projects that didn't set them on create:
+    elementUtils.setDefaultFontFamilyStyle(element);
   },
 
   getCurrentSize: function(element) {

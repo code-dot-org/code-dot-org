@@ -58,7 +58,6 @@ class PegasusTest < Minitest::Test
       code.org/teacher-dashboard/section_assessments
       code.org/teacher-dashboard/nav
       code.org/teacher-dashboard/landing
-      code.org/teacher-dashboard/plan
       code.org/teacher-dashboard/student
       code.org/teacher-dashboard/section_responses
       code.org/teacher-dashboard/signin_cards

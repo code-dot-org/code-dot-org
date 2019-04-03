@@ -161,7 +161,20 @@ fil:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Nagkaroon nang kahirapan sa pagtukoy kung paano makuha ang mga bloke pababa? Subukang isipin ang mga pulang bulaklak eksaktong katulad nang lilang bulaklak!
         2-3_Bee_Conditionals_14_b: Kung ang pulang bulaklak ay lila, maaari mo bang matukung kung paano gamitin ang ekstrang `repeat` na loop para maputol sa code?
-        2-3_Bee_Conditionals_14_c: "Subukang paghiwalayin ito sa dalawang magkahiwalay na bahagi:  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Magtipon ng mga nektar nang 3 beses\n  - Gumalaw pasuong nang 5 beses\n  - Suriin para makita kung nektar, kung gayon: kunin ito\n  - Lumiko pakaliwa\n\n2. Gumawa ng pulot\n  - Gumalaw pasulong nang isang pagkakataon\n  - Gumawa nang dalawang pulot"
+        2-3_Bee_Conditionals_14_c: |-
+          Subukang paghiwalayin ito sa dalawang magkahiwalay na bahagi:  
+
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) Magtipon ng mga nektar nang 3 beses
+            - Gumalaw pasuong nang 5 beses
+            - Suriin para makita kung nektar, kung gayon: kunin ito
+            - Lumiko pakaliwa
+
+          2. Gumawa ng pulot
+            - Gumalaw pasulong nang isang pagkakataon
+            - Gumawa nang dalawang pulot
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Tandaan: Ang mga lilang bulaklak ay mayroong 0 o 1 na nektar at sila ay maaaring magbago sa bawat beses na ipapatakbo mo ang programa.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -331,7 +344,9 @@ fil:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Bawat inuulit na hugis ay kombinasyon ng **kalahati ng hexagon**, na sinusundan ng **2/3 ng tatsulok**. '
         Course_4_Artist_12_b: 'Ang hugis ng yunit ay halos kapareha ng huling palaisipan, maliban nalang na ang kalahating hexagon ay malaki nang kaunt. '
-        Course_4_Artist_12_c: "1. Ang unang tatong mga linya ay 60 pixels ang haba at ikaw kakailangan lumiko nang 60 degrees. \n 2, Ang susunod na dalawang mga linya ay 80 pixels ang haba at kakailanganin mong lumiko nang 120 degrees "
+        Course_4_Artist_12_c: |-
+          1. Ang unang tatong mga linya ay 60 pixels ang haba at ikaw kakailangan lumiko nang 60 degrees. 
+           2, Ang susunod na dalawang mga linya ay 80 pixels ang haba at kakailanganin mong lumiko nang 120 degrees 
         Course_4_Artist_12_d: |-
           **Solusyon:**
 
@@ -4271,10 +4286,7 @@ fil:
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern.
         courseA_artist_loops7_b: Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.
-        courseA_artist_loops7_c: |-
-          Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
-          </block></xml> na loop.
+        courseA_artist_loops7_c: "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type=\"controls_repeat\">\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern.
         courseA_artist_loops7_b: Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.
@@ -4314,7 +4326,10 @@ fil:
         courseA_artist_loops9_c: Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern.
       courseA_artist_loops9_2018_authored_hint:
         courseA_artist_loops9_a: Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.
-        courseA_artist_loops9_b: "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> na loop."
+        courseA_artist_loops9_b: |-
+          Ang bloke na idagdag mo ay dapay ilagay sa loob ng 
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml> na loop.
         courseA_artist_loops9_c: Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern.
       courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_a: Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.
@@ -4369,10 +4384,10 @@ fil:
           Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.
           <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops3_authored_hint:
-        courseA_collector_loops3_a: "Subukang gumamit ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!"
+        courseA_collector_loops3_a: Subukang gumamit ng <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop!
         courseA_collector_loops3_b: Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop.
       courseA_collector_loops3_2018_authored_hint:
-        courseA_collector_loops3_a: "Subukang gumamit ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!"
+        courseA_collector_loops3_a: Subukang gumamit ng <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop!
         courseA_collector_loops3_b: Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop.
       courseA_collector_loops3_2019_authored_hint:
         courseA_collector_loops3_a: "Subukang gumamit ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!"
@@ -4720,15 +4735,11 @@ fil:
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.
         courseA_maze_seq13_b: Huwag matakot na makagawa ng pagkakamali! Subukang magdagdag ng mga bloke at patakbuhin ang code para makita kung ano ang mangyayari.
-        courseA_maze_seq13_c: |-
-          Ang mga <xml><block type="maze_moveNorth"/></xml>
-          <xml><block type="maze_moveEast"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy.
+        courseA_maze_seq13_c: "Ang mga <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
       courseA_maze_seq13_2018_authored_hint:
         courseA_maze_seq13_a: Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.
         courseA_maze_seq13_b: Huwag matakot na makagawa ng pagkakamali! Subukang magdagdag ng mga bloke at patakbuhin ang code para makita kung ano ang mangyayari.
-        courseA_maze_seq13_c: |-
-          Ang mga <xml><block type="maze_moveNorth"/></xml>
-          <xml><block type="maze_moveEast"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy.
+        courseA_maze_seq13_c: "Ang mga <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
       courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_a: Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.
         courseA_maze_seq13_b: Huwag matakot na makagawa ng pagkakamali! Subukang magdagdag ng mga bloke at patakbuhin ang code para makita kung ano ang mangyayari.

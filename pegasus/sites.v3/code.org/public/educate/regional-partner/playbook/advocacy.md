@@ -17,12 +17,14 @@ Regional partners who are interested in advocacy can use the following resources
 - [Making CS Fundamental](https://code.org/files/Making_CS_Fundamental.pdf): Description of 9 policy ideas to expand computer science in a state
 - [Advocacy Slide Deck](https://code.org/files/computer_science_advocacy.pptx): Generic presentation to convince someone that computer science is important to teach in grades K-12. Also see this [master slide deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) with sample slides that you can remix into your own presentation
 - [Letter to elected official](https://code.org/files/policy_maker_letter.pdf): Sample text to explain the importance of computer science to governors, members of state legislature, or school board members
+- Interested in setting up a **Coding in the Capitol** or similar event? These resources help with event considerations, marketing, tracking, and so much more. Start with this [overview document](https://docs.google.com/document/d/1h1Owwx4J0E-o08YzY_OfoyXFpDoHJPi73dCCBqNapsk/edit#heading=h.i5l0dimqr6zg), which points to all the [resources and examples](https://drive.google.com/drive/u/0/folders/1p7xXx75cRHj2G5AWJ7_FCklh1OaR6pR1) for your coding event.  
 
 ## State-by-State Data
 - [2018 State of Computer Science Education](https://code.org/files/2018_state_of_cs.pdf): Annual report on computer science education policy and implementation across the U.S.
 - [Digging Deeper into AP Computer Science](http://code.org/promote/ap): Graphs and descriptions of AP CS A exam participation over the past decade, broken down by state, gender, and race/ethnicity
 - [State-by-state 9 policies](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml): Data on each state for each of the 9 policy ideas in spreadsheet format
 - [State Policy Landscape](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing): Provides a summary of state accomplishments in computer science policy in narrative format
+- <a href="https://public.tableau.com/profile/liz.gauthier#!/vizhome/9Policies-Public/PublicTracker"target=_blank>9 Policies Tracker:</a> Track the number of policies adopted per state.
 
 ## Policy Development Resources
 - [State Planning Toolkit](https://docs.google.com/document/d/13N843-BjK9JHXNWKFzJlxhpw7f6Y2pJF6tpV2aHM1HU/edit?usp=sharing): A guide for state teams creating strategic plans for implementing K-12 computer science 

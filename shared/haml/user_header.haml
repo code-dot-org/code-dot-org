@@ -7,10 +7,17 @@
     local_assigns[:level] :
     false
 
-  options = { limit_project_types: limit_project_types }
+  options = {
+    limit_project_types: limit_project_types,
+    project_type: params && params[:key]
+  }
   create_drop_down_items = CreateHeader.get_create_dropdown_contents(options)
 
-- if !level
+  # We want to show the Create button for all pages except when working on a
+  # course level. Specifically, for any page except non-project levels.
+  should_show_create_menu = !level || level.try(:is_project_level)
+
+- if should_show_create_menu
   .header_button.create_menu
     %span.create_button
       = I18n.t("#{loc_prefix}create")

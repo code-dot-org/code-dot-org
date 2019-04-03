@@ -486,18 +486,6 @@ fil:
         *
         Tawagin ang iyong bagong `moveCloud(name)` na function sa loob ng pangyayari na bloke, isang beses sa bawat pangalan ng ulap.\\\\r
         * (Hint: ito ay kapareho kung paano ang `loopCloud(name)` na function ay tinawag nang napakaraming beses.
-      CSD U6 params modify clouds_2019: |-
-        # Mga Ulap\r
-        \r
-        Ang programang ito ay nagpapagalaw sa mga ulap kapag nag-ihip ka nang tunog sa sensor, ngunit hindi pa ito tapos.\r
-        \r
-        #Gawin Ito\r
-        * Maglikha ng bagong function na `moveCloud(name)` na magpapagalaw sa kahit anong ulap.\r
-         *
-        (Hint: ikaw ay gagamit na halos kaparehong code nang `moveCloud()` na function\r
-        *
-        Tawagin ang iyong bagong `moveCloud(name)` na function sa loob ng pangyayari na bloke, isang beses sa bawat pangalan ng ulap.\\\\r
-        * (Hint: ito ay kapareho kung paano ang `loopCloud(name)` na function ay tinawag nang napakaraming beses.
       CSD U6 params modify planes: |-
         # Maraming Lapya na Controller\r
         \r
@@ -1641,8 +1629,6 @@ fil:
       courseA_video_events: Nangangailangan ng mas mahusay na playlab/pangyayari na combo
       courseA_video_events_2018: Nangangailangan ng mas mahusay na playlab/pangyayari na combo
       courseA_video_events_2019: Nangangailangan ng mas mahusay na playlab/pangyayari na combo
-      courseB_Scrat_ramp5a_2018: Dalhin ang ibon sa baboy!
-      courseB_Scrat_ramp5a_2019: Dalhin ang ibon sa baboy!
       courseB_artist_loops1: Ito ay isang bagong tipo ng palaisipan na tinatawag na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
       courseB_artist_loops10: Gamitin ang natutunan mo para maiguhit ang larawan kung ano ang naisip mo na makikita ng artist pag-uwi niya sa bahay.
       courseB_artist_loops10_2018: Gamitin ang natutunan mo para maiguhit ang larawan kung ano ang naisip mo na makikita ng artist pag-uwi niya sa bahay.
@@ -1891,7 +1877,6 @@ fil:
       courseC_artist_loops2: Ngayon na alam na ng zombie ang daan, tulungan siyang maghukay ng mga butas sa landas para makatanim pa ng mas maraming mga bulaklak!
       courseC_artist_loops2a: Ngayon, gumamit ng loop para paikutin ang iyong ibon sa paligid nang 12 beses gamit ang 30 degree na pagliko.
       courseC_artist_loops2a_2018: Ngayon, gumamit ng loop para paikutin ang iyong ibon sa paligid nang 12 beses gamit ang 30 degree na pagliko.
-      courseC_artist_loops2a_2019: Ngayon, gumamit ng loop para paikutin ang iyong ibon sa paligid nang 12 beses gamit ang 30 degree na pagliko.
       courseC_artist_loops3: Mahusay! Ngayon na ang mga bulaklak ay umusbong na, tulungan ang zombie na maglagay ng kaibigan sa bawat 50 pixel para magbantay sa kanila hanggang sa silay ay lumaki.
       courseC_artist_loops3a: Ngayon ay magdagdag ng paniki!
       courseC_artist_loops3a_2018: Ngayon ay magdagdag ng paniki!

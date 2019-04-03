@@ -92,7 +92,7 @@ module RegistrationsControllerTests
     end
 
     test "returns students in rostered sections without passwords that have no other teachers" do
-      student = create :student, :unmigrated_google_sso, encrypted_password: nil
+      student = create :student, :google_sso_provider, encrypted_password: nil
       section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
       section.students << student
       sign_in section.teacher

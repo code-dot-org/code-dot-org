@@ -1633,6 +1633,10 @@ ga:
               name: Spraoi le Lúba
             The Artist:
               name: An tEalaíontóir
+            Internet:
+              name: An tIdirlíon
+            Crowdsourcing:
+              name: Sluafhoinsiú
         coursed-2019:
           stages:
             Relay Programming:

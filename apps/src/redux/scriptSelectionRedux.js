@@ -5,7 +5,7 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 // Tab specific reducers can import actions from this file
 // if they need to respond to a script changing.
 
-const DEFAULT_SCRIPT_NAME = 'Express Course';
+const DEFAULT_SCRIPT_NAME = 'express-2017';
 
 // Action type constants
 export const SET_SCRIPT = 'scriptSelection/SET_SCRIPT';
@@ -53,6 +53,30 @@ export const loadValidScripts = (section, validScripts) => {
   };
 };
 
+// Selectors
+export const getSelectedScriptName = state => {
+  const scriptId = state.scriptSelection.scriptId;
+  if (!scriptId) {
+    return null;
+  }
+
+  const scripts = state.scriptSelection.validScripts;
+  const script = scripts.find(script => script.id === scriptId);
+  return script ? script.script_name : null;
+};
+
+/* Get the user friendly name of a script(the unit or course name) */
+export const getSelectedScriptFriendlyName = state => {
+  const scriptId = state.scriptSelection.scriptId;
+  if (!scriptId) {
+    return null;
+  }
+
+  const scripts = state.scriptSelection.validScripts;
+  const script = scripts.find(script => script.id === scriptId);
+  return script ? script.name : null;
+};
+
 /**
  * Shape for a validScript
  */
@@ -97,7 +121,7 @@ export default function scriptSelection(state = initialState, action) {
     let validScripts = action.validScripts;
     // Set defaultScript to Express Course to use if there are no validScripts
     const defaultScript = validScripts.find(
-      script => script.name === DEFAULT_SCRIPT_NAME
+      script => script.script_name === DEFAULT_SCRIPT_NAME
     );
 
     if (action.studentScriptIds && action.validCourses) {

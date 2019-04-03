@@ -208,6 +208,17 @@ zh-CN:
         Course_4_Playlab_For_Loops_4b_2: 在这道关卡中，你只允许修改“计数循环”中的“增量”。
       Course 4 SCV 6_callout:
         Course_4_SCV_6: 这个模块可以让你设置几乎任何你想看到的颜色！尝试调整参数，看看会发生什么！
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: 向程序里增加这个模块！
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: 向程序里增加这个模块！
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: 向程序里增加这个模块！
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: 在这里添加新的跳舞者
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: 新模块！
+        dance_callout_11_b: 新模块！
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: 使用箭头移动演员
       CourseF_PlayLab_vars10_callout:

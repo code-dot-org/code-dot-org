@@ -120,9 +120,7 @@ describe('StageLockDialog', () => {
 
       wrapper.instance().viewSection();
       expect(window.open).to.have.been.calledOnce.and.calledWith(
-        `${
-          window.dashboard.CODE_ORG_URL
-        }/teacher-dashboard#/sections/fakeSectionId/assessments`
+        '/teacher-dashboard#/sections/fakeSectionId/assessments'
       );
     });
   });

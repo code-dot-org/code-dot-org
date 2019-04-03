@@ -2,13 +2,21 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import Radium from 'radium';
+import {CheckedRadioButton} from '../../lib/ui/CheckedRadioButton';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
+import i18n from '@cdo/locale';
 
 const styles = {
-  detailsArea: {
+  rubricLevelHeaders: {
     width: '100%'
   },
+  detailsArea: {
+    width: '100%',
+    paddingTop: 2
+  },
   rubricHeader: {
-    fontSize: 13,
+    fontSize: 12,
     marginLeft: 10,
     color: color.black,
     fontFamily: '"Gotham 5r", sans-serif'
@@ -17,31 +25,44 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    padding: '4px 10px',
+    margin: '0px 8px',
+    padding: 4,
     ':hover': {
-      border: 'solid 1px ${color.light_cyan}',
-      borderRadius: 10
+      border: `solid 1px ${color.light_cyan}`,
+      borderRadius: 4
     }
   },
   performanceLevelHeaderSelected: {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
+    margin: '0px 8px',
+    padding: 4,
     backgroundColor: color.lightest_cyan,
-    borderRadius: 10,
-    padding: '4px 10px',
+    borderRadius: 4,
     ':hover': {
-      border: 'solid 1px ${color.light_cyan}',
-      borderRadius: 10
+      border: `solid 1px ${color.light_cyan}`,
+      borderRadius: 4
     }
+  },
+  tooltip: {
+    maxWidth: 200,
+    lineHeight: '20px',
+    whiteSpace: 'normal'
+  },
+  rubricDetails: {
+    paddingLeft: 23,
+    paddingTop: 5,
+    fontSize: 12,
+    margin: 0
   }
 };
 
 const rubricLevelHeaders = {
-  exceeds: 'Exceeds',
-  meets: 'Meets',
-  approaches: 'Approaches',
-  noEvidence: 'No Evidence'
+  exceeds: i18n.rubricExceedsHeader(),
+  meets: i18n.rubricMeetsHeader(),
+  approaches: i18n.rubricApproachesHeader(),
+  noEvidence: i18n.rubricNoEvidenceHeader()
 };
 
 class RubricField extends Component {
@@ -54,38 +75,47 @@ class RubricField extends Component {
     currentlyChecked: PropTypes.bool
   };
 
-  handleRubricChange = event => {
-    this.props.onChange(event.target.value);
-  };
-
   render() {
     const performanceHeaderStyle = this.props.currentlyChecked
       ? styles.performanceLevelHeaderSelected
       : styles.performanceLevelHeader;
+
+    const tooltipId = _.uniqueId();
     return (
-      <div style={performanceHeaderStyle}>
-        {this.props.showFeedbackInputAreas && (
-          <input
-            type={'checkbox'}
-            //Concatenate because injecting the string seems to result in all of
-            //the input elements having the name id
-            id={'rubric-input-' + this.props.rubricLevel}
-            name="rubric"
-            value={this.props.rubricLevel}
-            checked={this.props.currentlyChecked}
-            onChange={this.handleRubricChange}
-            disabled={this.props.disabledMode}
-          />
-        )}
-        <details style={styles.detailsArea}>
-          <summary style={styles.rubricHeader}>
-            {rubricLevelHeaders[this.props.rubricLevel]}
-          </summary>
-          <p>{this.props.rubricValue}</p>
-        </details>
+      <div style={styles.rubricLevelHeaders}>
+        <div
+          style={performanceHeaderStyle}
+          data-tip
+          data-for={tooltipId}
+          aria-describedby={tooltipId}
+        >
+          {this.props.showFeedbackInputAreas && (
+            <CheckedRadioButton
+              id={`rubric-input-${this.props.rubricLevel}`}
+              value={this.props.rubricLevel}
+              checked={this.props.currentlyChecked}
+              onRadioButtonChange={this.props.onChange}
+              disabledMode={this.props.disabledMode}
+            />
+          )}
+          <details style={styles.detailsArea}>
+            <summary style={styles.rubricHeader}>
+              {rubricLevelHeaders[this.props.rubricLevel]}
+            </summary>
+            <p style={styles.rubricDetails}>{this.props.rubricValue}</p>
+          </details>
+        </div>
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          wrapper="div"
+          effect="solid"
+        >
+          <div style={styles.tooltip}>{this.props.rubricValue}</div>
+        </ReactTooltip>
       </div>
     );
   }
 }
-
+export const UnwrappedRubricField = RubricField;
 export default Radium(RubricField);

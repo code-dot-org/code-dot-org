@@ -1490,6 +1490,10 @@ ja:
               name: カードと条件
             The Artist:
               name: アーティスト
+            Internet:
+              name: インターネット
+            Crowdsourcing:
+              name: クラウドソーシング
         dance-low:
           stages:
             Dance Party:
@@ -1506,6 +1510,8 @@ ja:
               name: 'アンプラグド: バイナリ'
             Artist Binary:
               name: アーティスト：バイナリ
+            Dance Party:
+              name: ダンスパーティー
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1567,6 +1573,8 @@ ja:
               name: プレイ ラボのイベント
             Binary Bracelets:
               name: バイナリブレスレット
+            Sticker Art with Loops:
+              name: アーティストくりかえし
         gamelab:
           title: ゲーム ラボ
         coursea-2019:
@@ -1611,6 +1619,8 @@ ja:
               name: 'イベント: おおきなイベント'
             Events in Play Lab:
               name: プレイ ラボのイベント
+            Programming in Maze:
+              name: めいろ のプログラミング
         pre-express-2019:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1629,6 +1639,12 @@ ja:
               name: プレイ ラボのイベント
             Spelling Bee:
               name: つづりみつばち
+            Learn to Drag and Drop:
+              name: ドラッグ＆ドロップ
+            Programming in Maze:
+              name: めいろ のプログラミング
+            Ocean Scene with Loops:
+              name: アーティストくりかえし
         removed19:
           stages:
             'Debugging: Unspotted Bugs':

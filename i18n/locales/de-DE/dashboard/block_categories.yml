@@ -23,17 +23,18 @@ de:
       Picker: Sammler
       Comment: Kommentar
       'Variables ': 'Variablen '
+      Default: Standard
+      Behaviors: Verhaltensweisen
       everythingelse: allesandere
+      World: Welt
+      Location: Standort
       numbers: nummern
       Numbers: Nummern
       Input: Eingabe
-      Default: Standard
-      World: Welt
-      Behaviors: Verhaltensweisen
-      Advanced: Erweitert
-      Start: Start
       Dancers: Tänzer
       Groups: Gruppen
+      Advanced: Erweitert
+      Start: Start
       Sprite: Sprite
       Brush: Bürste
       Make Sprite: Sprite erstellen

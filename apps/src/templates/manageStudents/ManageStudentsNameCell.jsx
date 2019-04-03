@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import {tableLayoutStyles} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
+import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   inputBox: {
@@ -23,8 +25,11 @@ class ManageStudentNameCell extends Component {
     email: PropTypes.string,
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
+
     //Provided by redux
-    editStudent: PropTypes.func.isRequired
+    editStudent: PropTypes.func.isRequired,
+    scriptId: PropTypes.number,
+    scriptName: PropTypes.string
   };
 
   onChangeName = e => {
@@ -32,16 +37,23 @@ class ManageStudentNameCell extends Component {
   };
 
   render() {
-    const {id, sectionId, name, username, email, editedValue} = this.props;
+    const {
+      id,
+      sectionId,
+      name,
+      username,
+      email,
+      editedValue,
+      scriptId,
+      scriptName
+    } = this.props;
+    const studentUrl = scriptUrlForStudent(sectionId, scriptId, scriptName, id);
+
     return (
       <div>
         {!this.props.isEditing && (
           <div>
-            <a
-              style={tableLayoutStyles.link}
-              href={`/teacher-dashboard#/sections/${sectionId}/student/${id}`}
-              target="_blank"
-            >
+            <a style={tableLayoutStyles.link} href={studentUrl} target="_blank">
               {name}
             </a>
             {username && (
@@ -71,7 +83,10 @@ class ManageStudentNameCell extends Component {
 }
 
 export default connect(
-  state => ({}),
+  state => ({
+    scriptId: state.scriptSelection.scriptId,
+    scriptName: getSelectedScriptName(state)
+  }),
   dispatch => ({
     editStudent(id, studentInfo) {
       dispatch(editStudent(id, studentInfo));

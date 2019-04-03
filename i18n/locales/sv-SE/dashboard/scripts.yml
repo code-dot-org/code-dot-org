@@ -323,8 +323,7 @@ sv:
               name: Design recept
         K5PD:
           title: K5 Professionell utveckling
-          description: Professionell utveckling för K5 kurser
-          description_short: Professionell utveckling för K5 kurser
+          description: 'Professionell utveckling för K5 kurser'
           stages:
             Computer Science Pedagogy:
               name: Datavetenskapens pedagogik
@@ -1812,6 +1811,10 @@ sv:
               name: '''För'' loop skoj'
             The Artist:
               name: Konstnären
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:
@@ -1828,6 +1831,8 @@ sv:
               name: 'Ouppkopplad: Binärt'
             Artist Binary:
               name: Artist binär
+            Dance Party:
+              name: Dansparty
         coursee-2019:
           stages:
             Building a Foundation:

@@ -5,6 +5,7 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {setSecretImage, setSecretWords} from './manageStudentsRedux';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   reset: {
@@ -90,7 +91,7 @@ class ShowSecret extends Component {
             )}
             {this.props.loginType === SectionLoginType.picture && (
               <img
-                src={'/images/' + this.props.secretPicture}
+                src={pegasus('/images/' + this.props.secretPicture)}
                 style={styles.image}
               />
             )}

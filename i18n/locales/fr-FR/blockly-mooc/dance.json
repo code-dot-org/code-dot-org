@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Vous devez utiliser une danse différente.",
   "danceFeedbackNeedEveryTwoMeasures": "Assurez-vous que vous utilisez le bloc « toutes les 2 mesures »",
   "danceFeedbackNeedMakeANewDancer": "Utilisez le bloc de « créer un nouveau » pour créer un second danseur.",
+  "danceFeedbackKeyEvent": "",
   "measure": "Mesure:"
 }

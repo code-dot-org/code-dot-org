@@ -21,7 +21,7 @@ Scenario: Basic teacher application submission
     And I press the first "button#next" element
 
 
-  # Section 3
+  # Section 2
   Then I wait until element "h3" contains text "Section 2: Teaching Background"
   And I press "input[name='subjectsTeaching']:first" using jQuery
   And I press the first "input[name='taughtInPast']" element
@@ -51,7 +51,7 @@ Scenario: Basic teacher application submission
   And I press the first "button#next" element
 
 
-  # Section 2
+  # Section 3
   Then I wait until element "h3" contains text "Section 3: Choose Your Program"
   And I press "input[name='program']:first" using jQuery
   And I press the first "input[name='csdWhichGrades']" element
@@ -71,23 +71,19 @@ Scenario: Basic teacher application submission
   # Section 4
   Then I wait until element "h3" contains text "Section 4: Professional Learning Program Requirements"
   And I press "input[name='committed']:first" using jQuery
-  And I press the first "input[name='payFee']" element
+  And I click selector "input[name='payFee']" if I see it
   And I press the first "input[name='willingToTravel']" element
   And I press the first "input[name='interestedInOnlineProgram']" element
   Then I see no difference for "Section 4: Summer Workshop"
   And I press the first "button#next" element
 
   # Section 5
-  Then I wait until element "h3" contains text "Section 5: Additional Demographic Information"
+  Then I wait until element "h3" contains text "Section 5: Additional Demographic Information and submission"
   And I press "input[name='genderIdentity']:first" using jQuery
   And I press the first "input[name='race']" element
   And I press the first "input[name='howHeard']" element
-  Then I see no difference for "Section 5: Submission"
-  And I press the first "button#next" element
-
-  # Section 6
-  Then I wait until element "h3" contains text "Section 6: Submission"
   And I press the first "input#agree" element
+  Then I see no difference for "Section 5: Submission"
   And I press the first "button[type='submit']" element
 
   # Confirmation page
@@ -101,7 +97,7 @@ Scenario: Basic teacher application submission
   Then I press the first "input[name='doYouApprove'][value='Yes']" element
   Then I press the first "input[name='planToTeach']" element
 
-  And I press keys "nonexistent" for element "#school input"
+  And I press keys "nonexistent" for element "#nces_school"
   Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
   And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
   Then I wait until element "input#schoolName" is visible
@@ -130,7 +126,6 @@ Scenario: Basic teacher application submission
   Then I press the first "input[name='committedToDiversity']" element
   Then I press the first "#understandFee" element
   Then I press the first "input[name='payFee']" element
-  Then I press the first "input[name='howHeard']" element
   Then I press the first "#confirmPrincipal" element
 
   Then I see no difference for "Principal approval form"

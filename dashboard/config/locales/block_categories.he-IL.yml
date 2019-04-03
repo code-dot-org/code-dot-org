@@ -24,19 +24,20 @@ he:
       Picker: בוחר
       Comment: תגובה
       'Variables ': 'משתנים '
+      Default: ברירת מחדל
+      Behaviors: התנהגויות
+      Locations: מיקומים
       everythingelse: כלהשאר
+      World: עולם
+      Location: מיקום
       numbers: מספרים
       Numbers: מספרים
-      Default: ברירת מחדל
-      World: עולם
-      Behaviors: התנהגויות
-      Advanced: מתקדם
-      Start: התחל
-      Locations: מיקומים
-      Music: מוסיקה
-      Dancing: ריקוד
       Dancers: רקדנים
       Groups: קבוצות
+      Advanced: מתקדם
+      Start: התחל
+      Music: מוסיקה
+      Dancing: ריקוד
       Sprite: ספרייט
       Brush: מברשת
       Make Sprite: צור ספרייט

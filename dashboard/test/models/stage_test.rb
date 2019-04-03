@@ -68,6 +68,17 @@ class StageTest < ActiveSupport::TestCase
     assert_nil stage2.summarize[:stage_extras_level_url]
   end
 
+  test "summary for stage with extras where include_bonus_levels is true" do
+    script = create :script
+    level = create :level
+    stage = create :stage, script: script
+    create :script_level, stage: stage, levels: [level], bonus: true
+
+    summary = stage.summarize(true)
+    assert_equal 1, summary[:levels].length
+    assert_equal [level.id], summary[:levels].first[:ids]
+  end
+
   test "last_progression_script_level" do
     stage = create :stage
     create :script_level, stage: stage

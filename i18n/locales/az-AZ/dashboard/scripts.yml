@@ -772,6 +772,8 @@ az:
           stages:
             The Artist:
               name: Rəssam
+            Internet:
+              name: İnternet
         coursed-2019:
           stages:
             Relay Programming:

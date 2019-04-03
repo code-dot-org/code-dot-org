@@ -7,6 +7,7 @@ import 'jquery-ui/ui/widgets/resizable';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+import RGBColor from 'rgbcolor';
 import DesignWorkspace from './DesignWorkspace';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import elementLibrary from './designElements/library';
@@ -174,6 +175,16 @@ function appendPx(input) {
 }
 designMode.appendPx = appendPx;
 
+designMode.fontFamilyStyleFromOption = function(option) {
+  const fontIndex = applabConstants.fontFamilyOptions.indexOf(option);
+  return applabConstants.fontFamilyStyles[fontIndex === -1 ? 0 : fontIndex];
+};
+
+designMode.fontFamilyOptionFromStyle = function(style) {
+  const fontIndex = applabConstants.fontFamilyStyles.indexOf(style);
+  return applabConstants.fontFamilyOptions[fontIndex === -1 ? 0 : fontIndex];
+};
+
 /**
  * Handle a change from our properties table.
  * @param element {Element}
@@ -265,6 +276,9 @@ designMode.updateProperty = function(element, name, value) {
       break;
     case 'borderRadius':
       element.style.borderRadius = appendPx(value);
+      break;
+    case 'fontFamily':
+      element.style.fontFamily = designMode.fontFamilyStyleFromOption(value);
       break;
     case 'fontSize':
       element.style.fontSize = appendPx(value);
@@ -502,6 +516,8 @@ designMode.readProperty = function(element, name) {
       return element.style.borderColor;
     case 'borderRadius':
       return parseFloat(element.style.borderRadius);
+    case 'fontFamily':
+      return designMode.fontFamilyOptionFromStyle(element.style.fontFamily);
     case 'fontSize':
       return parseFloat(element.style.fontSize);
     case 'textAlign':
@@ -570,6 +586,55 @@ designMode.onDuplicate = function(element, event) {
   designMode.editElementProperties(duplicateElement);
 
   return duplicateElement;
+};
+
+designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
+  const currentScreen = $(
+    elementUtils.getPrefixedElementById(
+      getStore().getState().screens.currentScreenId
+    )
+  );
+
+  // Unwrap the draggable wrappers around the elements in the source screen:
+  const madeUndraggable = makeUndraggable(currentScreen.children());
+
+  const screenAndChildren = [
+    currentScreen[0],
+    ...currentScreen.children().toArray()
+  ];
+
+  // Modify each element in the screen (including the screen itself):
+  screenAndChildren.forEach(element => {
+    const themeValues = elementLibrary.getThemeValues(element);
+    let modifiedProperty = false;
+    for (const propName in themeValues) {
+      const propTheme = themeValues[propName];
+      const prevDefault = propTheme[prevThemeValue];
+      const newDefault = propTheme[themeValue];
+      const currentPropValue = designMode.readProperty(element, propName);
+      const {type} = propTheme;
+      let propIsDefault = false;
+      if (type === 'color') {
+        propIsDefault =
+          new RGBColor(currentPropValue).toHex() ===
+          new RGBColor(prevDefault).toHex();
+      } else {
+        propIsDefault = currentPropValue === prevDefault;
+      }
+      if (propIsDefault) {
+        designMode.updateProperty(element, propName, newDefault);
+        modifiedProperty = true;
+      }
+    }
+    if (modifiedProperty) {
+      designMode.renderDesignWorkspace(element);
+    }
+  });
+
+  // Restore the draggable wrappers on the elements in the source screen:
+  if (madeUndraggable) {
+    makeDraggable(currentScreen.children());
+  }
 };
 
 function duplicateScreen(element) {

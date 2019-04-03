@@ -65,6 +65,17 @@ ja:
         edit_add_parameter: 編集をクリックして関数にパラメーターを追加します
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: やじるしをつかって、キャラをうごかそう。
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: プログラムにこのブロックを追加！
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: プログラムにこのブロックを追加！
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: プログラムにこのブロックを追加！
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: 新しいダンサーをここに追加
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: 新しいブロック！
+        dance_callout_11_b: 新しいブロック！
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: やじるしをつかって、キャラをうごかそう。
       Dance_Party_01_callout:

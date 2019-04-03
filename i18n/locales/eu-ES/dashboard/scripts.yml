@@ -1409,6 +1409,10 @@ eu:
               name: Begizta jostarirako
             The Artist:
               name: Artista
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         coursed-2019:
           stages:
             Relay Programming:

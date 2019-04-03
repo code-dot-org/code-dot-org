@@ -787,6 +787,18 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'foo-2017', versions[2][:name]
   end
 
+  test 'summarize includes bonus levels for stages if include_bonus_levels and include_stages are true' do
+    script = create :script
+    stage = create :stage, script: script
+    level = create :level
+    create :script_level, stage: stage, levels: [level], bonus: true
+
+    response = script.summarize(true, nil, true)
+    assert_equal 1, response[:stages].length
+    assert_equal 1, response[:stages].first[:levels].length
+    assert_equal [level.id], response[:stages].first[:levels].first[:ids]
+  end
+
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])
@@ -1437,18 +1449,18 @@ endvariants
   end
 
   test "self.valid_scripts: omits pilot scripts" do
+    student = create :student
     teacher = create :teacher
     levelbuilder = create :levelbuilder
-
-    pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment'
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    pilot_script = create :script, pilot_experiment: 'my-experiment'
     assert pilot_script.hidden
     assert Script.any?(&:pilot?)
 
-    teacher_scripts = Script.valid_scripts(teacher)
-    refute teacher_scripts.any?(&:pilot?)
-
-    levelbuilder_scripts = Script.valid_scripts(levelbuilder)
-    assert levelbuilder_scripts.any?(&:pilot?)
+    refute Script.valid_scripts(student).any?(&:pilot?)
+    refute Script.valid_scripts(teacher).any?(&:pilot?)
+    assert Script.valid_scripts(pilot_teacher).any?(&:pilot?)
+    assert Script.valid_scripts(levelbuilder).any?(&:pilot?)
   end
 
   test "get_assessment_script_levels returns an empty list if no level groups" do
@@ -1550,30 +1562,74 @@ endvariants
   end
 
   test 'has pilot access' do
+    script = create :script
+    pilot_script = create :script, pilot_experiment: 'my-experiment'
+
+    student = create :student
     teacher = create :teacher
+
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+
+    # student in a pilot teacher's section which is not assigned to any script
+    section = create :section, user: pilot_teacher
+    unassigned_student = create(:follower, section: section).student_user
+
+    # student in a pilot teacher's section which is assigned to a pilot script
+    pilot_section = create :section, user: pilot_teacher, script: pilot_script
+    pilot_student = create(:follower, section: pilot_section).student_user
+
+    # teacher in a pilot teacher's section
+    teacher_in_section = create :teacher
+    create(:follower, section: pilot_section, student_user: teacher_in_section)
+
+    # student in a section which was previously assigned to a pilot script
+    other_pilot_section = create :section, user: pilot_teacher, script: pilot_script
+    previous_student = create(:follower, section: other_pilot_section).student_user
+    other_pilot_section.script = nil
+    other_pilot_section.save!
+
+    # student of pilot teacher, student never assigned to pilot script
+    non_pilot_section = create :section, user: pilot_teacher
+    student_of_pilot_teacher = create(:follower, section: non_pilot_section).student_user
+
     levelbuilder = create :levelbuilder
 
-    script = create :script
     refute script.pilot?
     refute script.has_pilot_access?
+    refute script.has_pilot_access?(student)
     refute script.has_pilot_access?(teacher)
+    refute script.has_pilot_access?(pilot_teacher)
+    refute script.has_pilot_access?(unassigned_student)
+    refute script.has_pilot_access?(pilot_student)
+    refute script.has_pilot_access?(teacher_in_section)
+    refute script.has_pilot_access?(previous_student)
+    refute script.has_pilot_access?(student_of_pilot_teacher)
     refute script.has_pilot_access?(levelbuilder)
 
-    # for now, only levelbuilders have pilot script access.
-    script.pilot_experiment = 'my-experiment'
-    assert script.pilot?
-    refute script.has_pilot_access?
-    refute script.has_pilot_access?(teacher)
-    assert script.has_pilot_access?(levelbuilder)
+    assert pilot_script.pilot?
+    refute pilot_script.has_pilot_access?
+    refute pilot_script.has_pilot_access?(student)
+    refute pilot_script.has_pilot_access?(teacher)
+    assert pilot_script.has_pilot_access?(pilot_teacher)
+    refute pilot_script.has_pilot_access?(unassigned_student)
+    assert pilot_script.has_pilot_access?(pilot_student)
+    assert pilot_script.has_pilot_access?(teacher_in_section)
+    assert pilot_script.has_pilot_access?(previous_student)
+    refute script.has_pilot_access?(student_of_pilot_teacher)
+    assert pilot_script.has_pilot_access?(levelbuilder)
   end
 
   test 'has any pilot access' do
+    student = create :student
     teacher = create :teacher
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    create :script, pilot_experiment: 'my-experiment'
     levelbuilder = create :levelbuilder
 
-    # for now, only levelbuilders have any pilot access.
     refute Script.has_any_pilot_access?
+    refute Script.has_any_pilot_access?(student)
     refute Script.has_any_pilot_access?(teacher)
+    assert Script.has_any_pilot_access?(pilot_teacher)
     assert Script.has_any_pilot_access?(levelbuilder)
   end
 

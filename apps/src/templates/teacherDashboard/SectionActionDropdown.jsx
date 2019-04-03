@@ -4,7 +4,7 @@ import color from '../../util/color';
 import {sortableSectionShape, OAuthSectionTypes} from './shapes.jsx';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';
-import {pegasus} from '../../lib/util/urlHelpers';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {
   sectionCode,
   sectionName,
@@ -115,24 +115,19 @@ class SectionActionDropdown extends Component {
       <span>
         <QuickActionsCell>
           <PopUpMenu.Item
-            href={pegasus(`/teacher-dashboard#/sections/${sectionData.id}`)}
+            href={teacherDashboardUrl(sectionData.id, '/progress')}
           >
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
-          <PopUpMenu.Item
-            href={pegasus(
-              `/teacher-dashboard#/sections/${sectionData.id}/manage`
-            )}
-          >
+          <PopUpMenu.Item href={teacherDashboardUrl(sectionData.id, '/manage')}>
             {i18n.manageStudents()}
           </PopUpMenu.Item>
           {sectionData.loginType !== OAuthSectionTypes.google_classroom &&
             sectionData.loginType !== OAuthSectionTypes.clever && (
               <PopUpMenu.Item
-                href={pegasus(
-                  `/teacher-dashboard#/sections/${
-                    sectionData.id
-                  }/print_signin_cards`
+                href={teacherDashboardUrl(
+                  sectionData.id,
+                  '/print_signin_cards'
                 )}
               >
                 {sectionData.loginType === SectionLoginType.email

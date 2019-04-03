@@ -1585,6 +1585,7 @@
   hoc2018_mc_short_description_shorter: "Use su creatividad y habilidades en resolución de problemas para explorar y construir mundos acuáticos con código."
   hoc2018_mc_journey: "Viaje a través de Minecraft con código."
   hoc2018_dance_party_main_heading: "Fiesta para bailar"
+  hoc2018_dance_party_landing_title: "Bailar"
   hoc2018_dance_party_subheading: "Ayude a traducir Fiesta de Baile"
   hoc2018_dance_create_your_own_dance_title: "Crea tu propio baile"
   hoc2018_dance_party_box_title: "Fiesta para bailar"
@@ -1637,3 +1638,5 @@
   page_not_found_header: '404: Página no encontrada'
   page_not_found_description: "La página que busca no existe en esta dirección. Verifique la dirección web y vuelva a enviarla. O regrese nuestra página de inicio."
   page_not_found_button: "Volver a la página de inicio"
+  hoc2018_mc_with_microsoft: "En asociación con"
+  hoc2018_mc_thank_microsoft: "Agradecemos a Microsoft el apoyo a nuestra visión y misión para asegurar que cada niño tenga la oportunidad de aprender Ciencias de la Computación y las habilidades para tener éxito en el siglo XXI."

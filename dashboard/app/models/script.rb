@@ -70,7 +70,7 @@ class Script < ActiveRecord::Base
   before_validation :hide_pilot_scripts
 
   def hide_pilot_scripts
-    self.hidden = true if pilot_experiment
+    self.hidden = true unless pilot_experiment.blank?
   end
 
   # As we read and write to files with the script name, to prevent directory
@@ -1072,7 +1072,7 @@ class Script < ActiveRecord::Base
   # any other name), and the corresponding script row in the db will be renamed.
   def self.fetch_script(options)
     options.symbolize_keys!
-    options[:wrapup_video] = options[:wrapup_video].blank? ? nil : Video.find_by!(key: options[:wrapup_video])
+    options[:wrapup_video] = options[:wrapup_video].blank? ? nil : Video.current_locale.find_by!(key: options[:wrapup_video])
     id = options.delete(:id)
     name = options[:name]
     new_name = options[:new_name]
@@ -1203,7 +1203,7 @@ class Script < ActiveRecord::Base
     nil
   end
 
-  def summarize(include_stages = true, user = nil)
+  def summarize(include_stages = true, user = nil, include_bonus_levels = false)
     if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
@@ -1264,8 +1264,7 @@ class Script < ActiveRecord::Base
       pilot_experiment: pilot_experiment,
     }
 
-    summary[:stages] = stages.map(&:summarize) if include_stages
-
+    summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
@@ -1470,15 +1469,55 @@ class Script < ActiveRecord::Base
     end
   end
 
+  def get_feedback_for_section(section)
+    feedback = {}
+    script_levels.each do |script_level|
+      section.students.each do |student|
+        temp_feedback = TeacherFeedback.get_student_level_feedback(student.id, script_level.level.id, section.user_id)
+        next unless temp_feedback
+        feedback[temp_feedback.id] = {
+          studentName: student.name,
+          stageNum: script_level.stage.relative_position.to_s,
+          stageName: script_level.stage.localized_title,
+          levelNum: script_level.position.to_s,
+          keyConcept: (script_level.level.rubric_key_concept || ''),
+          performanceLevelDetails: (script_level.level.properties["rubric_#{temp_feedback.performance}"] || ''),
+          performance: temp_feedback.performance,
+          comment: temp_feedback.comment,
+          timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r")
+        }
+      end
+    end
+    return feedback
+  end
+
   def pilot?
     !!pilot_experiment
   end
 
   def has_pilot_access?(user = nil)
-    pilot? && !!user&.permission?(UserPermission::LEVELBUILDER)
+    return false unless pilot? && user
+    return true if user.permission?(UserPermission::LEVELBUILDER)
+    return true if has_pilot_experiment?(user)
+
+    # A user without the experiment has pilot script access if
+    # (1) they have been assigned to or have progress in the pilot script, and
+    # (2) one of their teachers has the pilot experiment enabled.
+    has_progress = !!UserScript.find_by(user: user, script: self)
+    has_progress && user.teachers.any? {|t| has_pilot_experiment?(t)}
   end
 
+  # Whether this particular user has the pilot experiment enabled.
+  def has_pilot_experiment?(user)
+    return false unless pilot_experiment
+    SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
+  end
+
+  # returns true if the user is a levelbuilder, or a teacher with any pilot
+  # script experiments enabled.
   def self.has_any_pilot_access?(user = nil)
-    !!user&.permission?(UserPermission::LEVELBUILDER)
+    return false unless user&.teacher?
+    return true if user.permission?(UserPermission::LEVELBUILDER)
+    all_scripts.any? {|script| script.has_pilot_experiment?(user)}
   end
 end

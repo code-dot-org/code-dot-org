@@ -723,7 +723,7 @@ ko:
             Hour of Code 2015:
               name: Hour of Code 2015
         mc:
-          title: Minecraft Hour of Code
+          title: 마인크래프트 Hour of Code
           description: 코드 블록을 사용해 스티브나 알렉스가 Minecraft 월드에서 모험을 펼치게 하세요
           description_short: 코드를 통해 Minecraft 월드를 탐험하세요
           stages:
@@ -1594,6 +1594,8 @@ ko:
           stages:
             Artist:
               name: 화가
+        aquatic:
+          description_short: 창의성, 문제해결 능력, 코드를 사용해 언더워터 월드를 탐험하고 만들어 보세요!
         dance--draft:
           stages:
             Dance Party:
@@ -1617,6 +1619,10 @@ ko:
               name: 재미있는 반복
             The Artist:
               name: 화가
+            Internet:
+              name: 인터넷
+            Crowdsourcing:
+              name: 클라우드소싱
         dance-low:
           stages:
             Dance Party:
@@ -1633,6 +1639,8 @@ ko:
               name: '언플러그드: 2진'
             Artist Binary:
               name: 화가 2진
+            Dance Party:
+              name: 댄스 파티
         coursee-2019:
           stages:
             Building a Foundation:

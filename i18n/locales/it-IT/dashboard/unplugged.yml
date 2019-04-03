@@ -35,7 +35,7 @@ it:
         title: Conclusione
         desc: La conclusione finale di questa serie di 20 lezioni aiuta gli studenti a rivivere i momenti migliori, mentre indica loro i prossimi passi da intraprendere se sono interessati a continuare la loro escursione nell'informatica.
       UnplugHappyMaps:
-        title: Mappe Felici
+        title: Mappe felici
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       MoveIt:
         title: Muovilo, Muovilo
@@ -57,10 +57,10 @@ it:
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
       BigEvent:
         title: Gli Eventi
-        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+        desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       GoingPlacesSafely:
-        title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
-        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.
+        title: Cittadinanza digitale - Visitare luoghi in modo sicuro
+        desc: "Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.<br>\nSul sito di Programma il Futuro è disponibile la <a href=\"https://programmailfuturo.it/come/cittadinanza-digitale/il-mio-quartiere-digitale\" target=\"_blank\">versione italiana del video e della relativa lezione</a>."
       GraphPaperProgramming:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno.
@@ -71,8 +71,8 @@ it:
         title: Braccialetti Binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto binario la prima lettera del loro nome. Imparano quindi che i dati possono essere rappresentati e memorizzati in più di un modo.
       DigitalFootprint:
-        title: La tua Impronta Digitale
-        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.
+        title: La tua impronta digitale
+        desc: "L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.<br>\nSul sito di Programma il Futuro è disponibile la <a href=\"https://programmailfuturo. it/come/cittadinanza-digitale/fermati-e-pensa-online\" target=\"_blank\">versione italiana della canzone</a> proposta nel seguente video."
       ComputationalThinking:
         title: Pensiero computazionale
         desc: Gli studenti usano i passi fondamentali del pensiero computazione (decomposizione, identificazione di schemi, astrazione, algoritmica) per capire come si svolge un gioco che non ha istruzioni.
@@ -146,7 +146,7 @@ it:
         title: Attività Tradizionale
         desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseE_unplugged_privateInformation:
-        title: 'Cittadinanza Digitale: Dati Personali'
+        title: 'Cittadinanza digitale: Dati personali '
         desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
         title: Attività Tradizionale
@@ -155,17 +155,17 @@ it:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando come esempio l'atto del piantare un seme. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale.
       courseA_unplugged_happyMaps:
-        title: Mappe Felici
+        title: Mappe felici
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       courseA_unplugged_goingPlacesSafely:
-        title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
-        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.
+        title: Cittadinanza digitale - Visitare luoghi in modo sicuro
+        desc: "Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.<br>\nSul sito di Programma il Futuro è disponibile la <a href=\"https://programmailfuturo.it/come/cittadinanza-digitale/il-mio-quartiere-digitale\" target=\"_blank\">versione italiana del video e della relativa lezione</a>."
       courseABC_unplugged_bigEvent:
         title: Gli Eventi
-        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+        desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       courseB_unplugged_digitalFootprint:
-        title: La tua Impronta Digitale
-        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.
+        title: La tua impronta digitale
+        desc: "L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.<br>\nSul sito di Programma il Futuro è disponibile la <a href=\"https://programmailfuturo. it/come/cittadinanza-digitale/fermati-e-pensa-online\" target=\"_blank\">versione italiana della canzone</a> proposta nel seguente video."
       courseC_unplugged_buildingAFoundation:
         title: Costruire le Fondamenta
         desc: Gli studenti costruiscono una struttura usando solo il materiale disponibile. Le strutture devono soddisfare alcuni requisiti (raggiungere una specifica altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza di insistere quando i problemi sono complicati.
@@ -218,23 +218,23 @@ it:
         title: Composizione di Canzoni - Parametri
         desc: 'Una delle strutture più belle nell''informatica è la funzione.  Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all''interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all''interno di funzioni è un''utile pratica.'
       courseB_unplugged_MRF_2018:
-        title: I Miei Amici Robotici
+        title: I miei amici robotici
         desc: Impara a programmare scrivendo codice per i tuoi amici robotici!
       PlantASeed_2018:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando come esempio l'atto del piantare un seme. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale.
       UnplugHappyMaps_2018:
-        title: Mappe Felici
+        title: Mappe felici
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       GoingPlacesSafely_2018:
-        title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
-        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.
+        title: Cittadinanza digitale - Visitare luoghi in modo sicuro
+        desc: "Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.<br>\nSul sito di Programma il Futuro è disponibile la <a href=\"https://programmailfuturo.it/come/cittadinanza-digitale/il-mio-quartiere-digitale\" target=\"_blank\">versione italiana del video e della relativa lezione</a>."
       courseA_unplugged_loops_2018:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
       BigEvent_2018:
         title: Gli Eventi
-        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+        desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       GraphPaperProgramming_2018:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno.
@@ -248,8 +248,8 @@ it:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
       DigitalFootprint_2018:
-        title: La tua Impronta Digitale
-        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.
+        title: La tua impronta digitale
+        desc: "L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.<br>\nSul sito di Programma il Futuro è disponibile la <a href=\"https://programmailfuturo. it/come/cittadinanza-digitale/fermati-e-pensa-online\" target=\"_blank\">versione italiana della canzone</a> proposta nel seguente video."
       BinaryImages_2018:
         title: Immagini binarie
         desc: Anche se molti pensano al sistema binario come costituito rigorosamente da zeri e uni, nelle precedenti lezioni gli studenti hanno visto che le informazioni possono essere rappresentate in una varietà di opzioni binarie.  Questa lezione sviluppa ulteriormente questo concetto illustrando come un computer possa memorizzare informazioni ancora più complesse (ad esempio immagini e colori) in formato binario.
@@ -265,7 +265,7 @@ it:
       MoveItMoveIt_2018:
         title: Muovilo, muovilo
       courseB_unplugged_CnC_2018:
-        title: È Fantastico Creare e Comportarsi Lealmente
+        title: È fantastico creare e comportarsi lealmente
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività di Code.org e serve per aiutare gli studenti a capire il processo di condivisione e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità di essere corretti con coloro che danno vita ai contenuti creativi.
       courseE_unplugged_CnC_2018:
         title: Condivisione Digitale
@@ -274,8 +274,10 @@ it:
         title: Programmazione a Staffetta
         desc: 'Questa attività inizierà con una breve lezione sulla correzione degli errori (debugging) e sulla persistenza, poi partirà una corsa contro il tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere un programma un''istruzione alla volta.'
       courseB_unplugged_MRF_2019:
-        title: I Miei Amici Robotici
+        title: I miei amici robotici
         desc: Impara a programmare scrivendo codice per i tuoi amici robotici!
+      courseB_unplugged_loopyMRF_2019:
+        title: 'Cicli: I miei ciclici amici robotici'
       Conditionals_2019:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
@@ -291,6 +293,8 @@ it:
       BinaryImages_2019:
         title: Immagini binarie
         desc: Anche se molti pensano al sistema binario come costituito rigorosamente da zeri e uni, nelle precedenti lezioni gli studenti hanno visto che le informazioni possono essere rappresentate in una varietà di opzioni binarie.  Questa lezione sviluppa ulteriormente questo concetto illustrando come un computer possa memorizzare informazioni ancora più complesse (ad esempio immagini e colori) in formato binario.
+      courseE_unplugged_privateInformation_2019:
+        title: Cittadinanza digitale - Dati personali
       courseE_unplugged_CnC_2019:
         title: Condivisione Digitale
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività di Code.org e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
@@ -302,7 +306,7 @@ it:
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
       BigEvent_2019:
         title: Gli Eventi
-        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+        desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       BinaryBracelets_2019:
         title: Braccialetti Binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto binario la prima lettera del loro nome. Imparano quindi che i dati possono essere rappresentati e memorizzati in più di un modo.
@@ -313,19 +317,19 @@ it:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando come esempio l'atto del piantare un seme. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale.
       UnplugHappyMaps_2019:
-        title: Mappe Felici
+        title: Mappe felici
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       GoingPlacesSafely_2019:
-        title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
-        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.
+        title: Cittadinanza digitale - Visitare luoghi in modo sicuro
+        desc: "Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.<br>\nSul sito di Programma il Futuro è disponibile la <a href=\"https://programmailfuturo.it/come/cittadinanza-digitale/il-mio-quartiere-digitale\" target=\"_blank\">versione italiana del video e della relativa lezione</a>."
       courseA_unplugged_loops_2019:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
       MoveItMoveIt_2019:
         title: Muovilo, muovilo
       DigitalFootprint_2019:
-        title: La tua Impronta Digitale
-        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.
+        title: La tua impronta digitale
+        desc: "L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.<br>\nSul sito di Programma il Futuro è disponibile la <a href=\"https://programmailfuturo. it/come/cittadinanza-digitale/fermati-e-pensa-online\" target=\"_blank\">versione italiana della canzone</a> proposta nel seguente video."
       courseB_unplugged_CnC_2019:
-        title: È Fantastico Creare e Comportarsi Lealmente
+        title: È fantastico creare e comportarsi lealmente
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività di Code.org e serve per aiutare gli studenti a capire il processo di condivisione e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità di essere corretti con coloro che danno vita ai contenuti creativi.

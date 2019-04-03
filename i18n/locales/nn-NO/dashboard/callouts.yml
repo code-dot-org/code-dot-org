@@ -208,6 +208,19 @@ nn:
         Course_4_Playlab_For_Loops_4b_2: I denne oppgåva kan du berre endre "tillveksten" av for-løkkene.
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Denne blokka lar deg tilpasse fargen til nesten kva du vil! Leik med tala for å sjå kva som skjer!
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Legg denne blokka til programmet ditt!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Legg denne blokka til programmet ditt!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Legg denne blokka til programmet ditt!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Legg til den nye dansaren din her
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Ny blokk!
+        dance_callout_11_b: Ny blokk!
+      CourseD_Dance_Party_11_5_callout:
+        dance_party_11_5_groups: Se her for "alle ender" blokker
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Bruk pilene til å flytte spelaren
       CourseF_PlayLab_vars10_callout:

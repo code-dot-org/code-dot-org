@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
+import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   table: {
@@ -21,7 +24,11 @@ class StatsTable extends Component {
       id: PropTypes.number,
       students: PropTypes.array
     }).isRequired,
-    studentsCompletedLevelCount: PropTypes.object
+    studentsCompletedLevelCount: PropTypes.object,
+
+    // Provided by redux.
+    scriptId: PropTypes.number,
+    scriptName: PropTypes.string
   };
 
   state = {};
@@ -35,12 +42,19 @@ class StatsTable extends Component {
   };
 
   nameFormatter = (name, {rowData}) => {
-    const sectionId = this.props.section.id;
+    const {section, scriptId, scriptName} = this.props;
+    const studentUrl = scriptUrlForStudent(
+      section.id,
+      scriptId,
+      scriptName,
+      rowData.id
+    );
+
     return (
       <a
         className="uitest-name-cell"
         style={tableLayoutStyles.link}
-        href={`/teacher-dashboard#/sections/${sectionId}/student/${rowData.id}`}
+        href={studentUrl}
         target="_blank"
       >
         {name}
@@ -165,4 +179,8 @@ class StatsTable extends Component {
   }
 }
 
-export default StatsTable;
+export const UnconnectedStatsTable = StatsTable;
+export default connect(state => ({
+  scriptId: state.scriptSelection.scriptId,
+  scriptName: getSelectedScriptName(state)
+}))(StatsTable);

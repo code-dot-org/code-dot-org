@@ -102,10 +102,11 @@ export default class App extends React.Component {
       <View onLayout={this.onLayout} style={styles.container}>
         {height && indexUri && <View style={this.webViewContainerStyle()}>
           <WebView
+            allowUniversalAccessFromFileURLs
             originWhitelist={['*']}
             allowFileAccess
             source={{uri: indexUri}}
-            style={styles.webView}
+            style={Platform.OS === 'ios' ? styles.webViewIOS : styles.webViewAndroid}
             javaScriptEnabled
             mediaPlaybackRequiresUserAction={false}
             scrollEnabled={false}
@@ -130,8 +131,12 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'black',
   },
-  webView: {
+  webViewIOS: {
     backgroundColor: 'black',
+    flex: 1,
+  },
+  webViewAndroid: {
+    backgroundColor: 'white',
     flex: 1,
   },
   webViewContainer: {

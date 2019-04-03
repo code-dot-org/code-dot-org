@@ -1430,6 +1430,10 @@ si:
               name: For ලුපයේ සතුට
             The Artist:
               name: කලාකරුවා
+            Internet:
+              name: අන්තර්ජාලය
+            Crowdsourcing:
+              name: Crowdsourcing වැඩසටහන
         coursed-2019:
           stages:
             Relay Programming:

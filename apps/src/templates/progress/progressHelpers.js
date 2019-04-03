@@ -89,6 +89,10 @@ export function getIconForLevel(level) {
     return 'scissors';
   }
 
+  if (level.bonus) {
+    return 'flag-checkered';
+  }
+
   // default to desktop
   return 'desktop';
 }
@@ -101,6 +105,9 @@ export function getIconForLevel(level) {
  * following buckets: total, completed, imperfect, incomplete, attempted.
  */
 export function summarizeProgressInStage(levelsWithStatus) {
+  // Filter any bonus levels as they do not count toward progress.
+  levelsWithStatus = levelsWithStatus.filter(level => !level.bonus);
+
   // Get counts of statuses
   let statusCounts = {
     total: levelsWithStatus.length,
@@ -148,6 +155,7 @@ export const processedLevel = level => {
     icon: level.icon,
     isUnplugged: level.kind === LevelKind.unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
-    isConceptLevel: level.is_concept_level
+    isConceptLevel: level.is_concept_level,
+    bonus: level.bonus
   };
 };

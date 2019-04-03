@@ -1531,6 +1531,28 @@ ro:
       Course E MC Conditionals1: Vei gasi cele mai valoroase resurse in subteran,
         dar se poate face intuneric. Plaseaza cel putin 2 torte si cauta cel putin
         2 carbuni.
+      CourseD_Dance_Party_01: Trage blocul `crează un nou` în spaţiul de lucru, şi
+        conectează-l în interiorul blocului `configurare`.
+      CourseD_Dance_Party_02: Fă elanul să înceapă o nouă mişcare după 4 măsuri!
+      CourseD_Dance_Party_03: Acum fă dansatorul să înceapă o nouă mişcare dup 6 măsuri!
+      CourseD_Dance_Party_04: Adaugă un efect de fundal pentru programul tău.
+      CourseD_Dance_Party_05: Utilizează un alt bloc nou pentru a face dansatorul
+        să îşi schimbe mişcările la fiecare 2 măsuri.
+      CourseD_Dance_Party_06: Creează un dansator de rezervă numit `dansator_rezervă1`
+        pentru a dansa cu pisica.
+      CourseD_Dance_Party_08: Poţi face ambii dansatori de aceeaşi mărime?
+      CourseD_Dance_Party_09: Utilizează blocul `setează nuanţă` pentru a schimba
+        culoarea dansatorului.
+      CourseD_Dance_Party_10: Fă ca şi celălalt dansator să reacţioneze la muzică
+        utilizând blocul `începe cu`.
+      CourseD_Dance_Party_11: Blocul "când sus este apăsat(ă)" te lasă să execuţi
+        cod atunci cînd tasta săgeată în sus este apăsată. Încearcă să faci dansatorul
+        să facă o mişcare rapidă cănd apeşi săgeata în sus.
+      CourseD_Dance_Party_11_5: Utilizează blocurile "toate raţele" pentru a face
+        raţele să danseze împreună.
+      CourseD_Dance_Party_11b: Fă robotul să facă o "cădere" atunci când apeşi tasta
+        săgeată în dreapta, şi să facă "bated din palme" atunci când apeşi tasta săgeată
+        în sus. Fă secvenţa "cădere"-"bate din palme" cât de repede poţi!
       CourseF_PlayLab_vars10: 'Joc liber! Aici avem toate variabilele cu care ne-am
         jucat în acest nivel şi chiar câteva în plus în caz că aveţi nevoie. Faceţi
         un joc sau o poveste utilizând oricare dintre aceste variabile. Indicaţie:
@@ -1574,6 +1596,43 @@ ro:
       Crack a Caesar Cipher: Instrucţiuni
       Crack a Caesar Cipher_2018: Instrucţiuni
       Crack a Caesar Cipher_2019: Instrucţiuni
+      Dance_Party_01: Trage blocul `crează un nou` în spaţiul de lucru, şi conectează-l
+        în interiorul blocului `configurare`.
+      Dance_Party_01_low: Trage blocul `crează un nou` în spaţiul de lucru, şi conectează-l
+        în interiorul blocului `configurare`.
+      Dance_Party_02: Fă elanul să înceapă o nouă mişcare după 4 măsuri!
+      Dance_Party_03: Acum fă dansatorul să înceapă o nouă mişcare dup 6 măsuri!
+      Dance_Party_04: Adaugă un efect de fundal pentru programul tău.
+      Dance_Party_05: Utilizează un alt bloc nou pentru a face dansatorul să îşi schimbe
+        mişcările la fiecare 2 măsuri.
+      Dance_Party_06: Creează un dansator de rezervă numit `dansator_rezervă1` pentru
+        a dansa cu pisica.
+      Dance_Party_08: Poţi face ambii dansatori de aceeaşi mărime?
+      Dance_Party_09: Utilizează blocul `setează nuanţă` pentru a schimba culoarea
+        dansatorului.
+      Dance_Party_10: Fă ca şi celălalt dansator să reacţioneze la muzică utilizând
+        blocul `începe cu`.
+      Dance_Party_11.5_test: Utilizează blocurile "toate raţele" pentru a face raţele
+        să danseze împreună.
+      Dance_Party_11: Blocul "când sus este apăsat(ă)" te lasă să execuţi cod atunci
+        cînd tasta săgeată în sus este apăsată. Încearcă să faci dansatorul să facă
+        o mişcare rapidă cănd apeşi săgeata în sus.
+      Dance_Party_11_5: Utilizează blocurile "toate raţele" pentru a face raţele să
+        danseze împreună.
+      Dance_Party_11b: Fă robotul să facă o "cădere" atunci când apeşi tasta săgeată
+        în dreapta, şi să facă "bated din palme" atunci când apeşi tasta săgeată în
+        sus. Fă secvenţa "cădere"-"bate din palme" cât de repede poţi!
+      Dance_Party_12: Stabileşte ritmul tău! Creează un dans al tău şi partajează-l
+        cu prietenii tăi.
+      Dance_Party_extras_battle: Dans pe echipe (apasă "Mai mult" pentru detalii)
+      Dance_Party_extras_every_beat: Sfert de note (apasă pe "Mai mult" pentru detalii)
+      Dance_Party_extras_layout: Hai să trecem în formaţie! (apasă pe "Mai mult" pentru
+        detalii)
+      Dance_Party_extras_on_beat: Sunete joase, medii şi înalte (apasă pe "Mai mult"
+        pentru detalii)
+      Dance_Party_extras_speed: Măreşte viteza, Micşorează viteza (apasă pe "Mai mult"
+        pentru detalii)
+      Dance_Party_extras_visible: Unde au dispărut? (apasă pe "Mai mult" pentru detalii)
       Food Fight!: "Am adăugat o ultimă funcţie pentru a o utiliza.\r\n\r\nFoloseste
         comanda \"if\" pentru a-ti programa jocul catre functie \"level_up\" dor cand
         \"player_score\" devine mai mare decat un numar.\n\r\nDe exemplu: \"player_score\"
@@ -2093,6 +2152,7 @@ ro:
       Ryan Test Locked Blocks: |-
         Aici este o funcţie numită "patrol."
         Editeaz-o pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli.
+      Ryan_Demo: Fă elanul să înceapă o nouă mişcare după 4 măsuri!
       SpecialFrozenLevel: Ai devenit oficial un artist maestru! Creează un paradis
         de iarnă.
       Standalone_Artist_1: Bine ai venit la Artist! În primul rând, să încercăm să
@@ -2289,6 +2349,8 @@ ro:
         bila să ricoșeze până ajunge la țintă.
       bounce_7_sports: Atașează blocuri la fiecare dintre blocurile "când". Fă bila
         să ricoșeze până ajunge la țintă.
+      course1_maze_seq_challenge1: "”Urmărește traseul şi condu-mă la porcul prostuț.
+        Evită dinamita (TNT) sau penele vor zbura!”"
       course2_maze_seq_challenge1: Trasează calea și du-mă la porcușorul nătâng. Evită
         TNT-ul sau penele-mi vor zbura!
       course2_playlab_stage17_1: Poți să îl faci pe Câinele Jorge (actor 1) să spună
@@ -2351,8 +2413,15 @@ ro:
       course4_artist_fwp_challenge1: Încearcă să rulezi acest program, şi fă modificări
         pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau
         şterge-l şi înlocuiește-l cu ceva total diferit)
+      courseA_maze_ramp4_2018: Evită dinamita (TNT) sau penele vor zbura!
       courseA_maze_seq2: Modifică secvenţa de cod pentru a mă duce la porc!
       courseA_maze_seq2_2018: Modifică secvenţa de cod pentru a mă duce la porc!
+      courseA_maze_seq_challenge2: Urmărește traseul şi condupasărea la porc. Evită
+        dinamita (TNT) sau penele vor zbura!
+      courseA_maze_seq_challenge2_2018: Urmărește traseul şi condupasărea la porc.
+        Evită dinamita (TNT) sau penele vor zbura!
+      courseA_maze_seq_challenge2_2019: Urmărește traseul şi condupasărea la porc.
+        Evită dinamita (TNT) sau penele vor zbura!
       courseC_PlayLab_events3: Poți scrie un program pentru a-l face pe Jorge (actor
         1) să se mute spre Pisica Olive?
       courseC_PlayLab_events3_2018: Poți scrie un program pentru a-l face pe Jorge
@@ -2367,6 +2436,9 @@ ro:
         triunghiul.  Sugestie: toate trei laturile au aceeaşi lungime.'
       courseC_maze_debugging10: Repară acest nivel prin rearanjarea şi adăugarea blocurilor
         de instrucţiuni pentru a mă duce la porc!
+      courseC_maze_programming4: Evită dinamita (TNT) sau penele vor zbura!
+      courseC_maze_programming4_2018: Evită dinamita (TNT) sau penele vor zbura!
+      courseC_maze_programming4_2019: Evită dinamita (TNT) sau penele vor zbura!
       courseD_artist_binary1: "Codul binar este un mod de a reprezenta informatia
         utilizand numai doua optiuni. Aici, vom folosi optiunile \"off\"(reprezentat
         de numarul zero) si \"on\" (reprezentat de numarul 1). \r\r V-am pus la dispozitie
@@ -2462,6 +2534,8 @@ ro:
       courseD_maze_nestedLoops6: Du-mă la floarea-soarelui!
       courseD_maze_nestedLoops6_2018: Du-mă la floarea-soarelui!
       courseD_maze_nestedLoops6_2019: Du-mă la floarea-soarelui!
+      courseD_maze_ramp4: Evită dinamita (TNT) sau penele vor zbura!
+      courseD_maze_ramp4_2018: Evită dinamita (TNT) sau penele vor zbura!
       courseE_artist_functions1: "Ajuta zombieul sa deseneze ochelarii folosind patrate
         cu laturi de 100 de pixeli. \r Spatiul dintre ochelari este de 75 de pixeli."
       courseE_artist_functions1_2018: "Ajuta zombieul sa deseneze ochelarii folosind
@@ -2490,6 +2564,8 @@ ro:
         să se întoarcă, să colecteze nectar şi apoi returnează albina la locul de
         unde a început. Folosește \nfuncţia pentru a colecta tot nectarul."
       courseE_farmer_concept4: Acum, hai să mergem încă un nivel în profunzimea problemei?
+      courseE_maze_ramp4: Evită dinamita (TNT) sau penele vor zbura!
+      courseE_maze_ramp4_2018: Evită dinamita (TNT) sau penele vor zbura!
       courseF_artist_for7: Fă trei modificări mici la codul de la ultimul nivel pentru
         a obţine aceast lucru!
       courseF_artist_for7_2018: Fă trei modificări mici la codul de la ultimul nivel
@@ -2527,6 +2603,8 @@ ro:
       courseF_bee_functions4_2018: "Funcţia \"mută şi obține nectar\" face albina
         să se întoarcă, să colecteze nectar şi apoi returnează albina la locul de
         unde a început. Folosește \nfuncţia pentru a colecta tot nectarul."
+      courseF_maze_ramp4: Evită dinamita (TNT) sau penele vor zbura!
+      courseF_maze_ramp4_2018: Evită dinamita (TNT) sau penele vor zbura!
       flappy_1: Atașează un bloc la blocul "când clic", apoi apasă "Rulează Programul".
         Fă clic sau bate ușor cu degetul pe ecran ca să îl muți pe Flappy la țintă.
       flappy_11: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele vizuale
@@ -2638,6 +2716,8 @@ ro:
         pentru a mă duce la porc!
       grade1_maze_sequence9: 'Ocolește dinamita pentru a mă duce la porc! '
       grade2_CaringForNewPet_10: Du-mă la porc!
+      grade2_CaringForNewPet_3: "”Urmărește traseul şi condu-mă la porcul prostuț.
+        Evită dinamita (TNT) sau penele vor zbura!”"
       grade2_CaringForNewPet_5: Du-mă la porc!
       grade2_MakeDogTag_10: Deseneaza ceva distractiv!
       grade2_MakeDogTag_3: Ajută-mă să termin casa pentru această pisică.
