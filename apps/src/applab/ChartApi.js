@@ -100,23 +100,16 @@ ChartApi.getChartTypeDropdown = function() {
  * @returns {Promise} which resolves when the chart has been rendered, or
  *          rejects if there are any problems along the way.
  */
-ChartApi.prototype.drawChart = function(
+ChartApi.prototype.drawChart = async function(
   chartId,
   chartType,
   chartData,
   options
 ) {
-  try {
-    var chart = this.createChart_(chartId, chartType);
-    var columns = ChartApi.inferColumnsFromRawData(chartData);
-    return chart.drawChart(chartData, columns, options).then(
-      function() {
-        this.mergeWarnings_(chart.warnings);
-      }.bind(this)
-    );
-  } catch (e) {
-    return Promise.reject(e);
-  }
+  var chart = this.createChart_(chartId, chartType);
+  var columns = ChartApi.inferColumnsFromRawData(chartData);
+  await chart.drawChart(chartData, columns, options);
+  this.mergeWarnings_(chart.warnings);
 };
 
 /**
@@ -132,40 +125,24 @@ ChartApi.prototype.drawChart = function(
  * @returns {Promise} resolves when the chart has been rendered, or rejects if
  *          there are any problems along the way.
  */
-ChartApi.prototype.drawChartFromRecords = function(
+ChartApi.prototype.drawChartFromRecords = async function(
   chartId,
   chartType,
   tableName,
   columns,
   options
 ) {
-  try {
-    var chart = this.createChart_(chartId, chartType);
-    return Promise.all([
-      chart.loadDependencies(),
-      this.fetchTableData_(tableName)
-    ])
-      .then(
-        function(results) {
-          var tableData = results[1];
-          var columnsInTable = ChartApi.inferColumnsFromRawData(tableData);
-          columns = this.guessColumnsIfNecessary(
-            columns,
-            columnsInTable,
-            tableName
-          );
-          this.warnIfColumnsNotFound(columns, columnsInTable, tableName);
-          return chart.drawChart(tableData, columns, options);
-        }.bind(this)
-      )
-      .then(
-        function() {
-          this.mergeWarnings_(chart.warnings);
-        }.bind(this)
-      );
-  } catch (e) {
-    return Promise.reject(e);
-  }
+  var chart = this.createChart_(chartId, chartType);
+  const results = await Promise.all([
+    chart.loadDependencies(),
+    this.fetchTableData_(tableName)
+  ]);
+  var tableData = results[1];
+  var columnsInTable = ChartApi.inferColumnsFromRawData(tableData);
+  columns = this.guessColumnsIfNecessary(columns, columnsInTable, tableName);
+  this.warnIfColumnsNotFound(columns, columnsInTable, tableName);
+  await chart.drawChart(tableData, columns, options);
+  this.mergeWarnings_(chart.warnings);
 };
 
 /**
