@@ -297,7 +297,6 @@ module Pd
           if placeholder.persisted? && placeholder.submission_id != submission_id
             CDO.log.warn "Ignoring duplicate placeholder. Original: #{placeholder.submission_id}, New: #{submission_id}"
           else
-
             placeholder.submission_id = submission_id
             placeholder.save!
           end
