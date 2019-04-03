@@ -300,7 +300,6 @@ module Pd
 
             placeholder.submission_id = submission_id
             placeholder.save!
-            p "New placeholder is saved, id = #{submission_id}"
           end
         end
       end
