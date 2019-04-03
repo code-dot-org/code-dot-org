@@ -633,9 +633,9 @@ tr:
         değiştirebilir!"
       4-5 Bee Conditionals 7: Mor çiçeklerde, 2, 3 veya 1 nektar olabilir. "mor çiçeği
         kontrol et" fonksiyonunu kullanarak nektarları toparla.
-      4-5 Bee Conditionals 8: "`check flower make honey` için fonksiyonu yaz. \r\n\r\nFonksiyonun,
-        mor çiçeğin 3,2 ve 1 nektara sahip olup olmadığını kontrol etmeli ve bütün
-        nektarları toplamalı.\r\nSonra ilerle ve bal yap."
+      4-5 Bee Conditionals 8: "'çiçeğe bak bal yap' için fonksiyonu yaz. \r\n\r\nYazdığın
+        fonksiyon, mor çiçeğin 1,2 veya 3 nektara sahip olup olmadığını kontrol etmeli
+        ve bütün nektarları toplamalı.\r\nSonra, ilerle ve bal yap."
       4-5 Bee Conditionals Assessment 1: "**Değerlendirme:** Bu bulut ya bir nektarı
         olan bir çiçek ya da bir bala ihtiyacı olan bir bal peteği saklıyor..  \r\n\r\n`nektar
         al veya bal yap` fonksiyonunu tamamla, sonra nektar ya da bal toplamak için
@@ -1606,9 +1606,15 @@ tr:
         hızlı drop-floss yapın!
       CourseD_Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla
         paylaşın.
+      CourseE_HOC 2018 Level_1: Sandıktan sandalı al.
       CourseE_HOC 2018 Level_10: Bu Okyanus Anıtının girişine git.
       CourseE_HOC 2018 Level_11: Okyanus Anıtının içinde Prizmarin ile su yolu inşa
         et.
+      CourseE_HOC 2018 Level_2: İskelenin sonuna git.
+      CourseE_HOC 2018 Level_3: Morina balığına doğru açık denizi geç.
+      CourseE_HOC 2018 Level_4: Yunusa varmak için döngü kullan.
+      CourseE_HOC 2018 Level_5: Sandığa ulaşmak için gemi enkazını incele.
+      CourseE_HOC 2018 Level_6: Somona ulaşmak için buz boyunca ilerle.
       CourseE_HOC 2018 Level_7a: Sandık bulmak için bu su altı harabelerini araştır.
       CourseE_HOC 2018 Level_9b: Hazineye ulaşmak için mercanı yol işaretleri olarak
         kullan.
@@ -5173,9 +5179,9 @@ tr:
         bulmacayı her çalıştırdığınızda değiştirebilir!"
       grade3_ConditionalsElse_7: Mor çiçeklerde, 2, 3 veya 1 nektar olabilir. "mor
         çiçeği kontrol et" fonksiyonunu kullanarak nektarları toparla.
-      grade3_ConditionalsElse_8: "`check flower make honey` için fonksiyonu yaz. \r\n\r\nFonksiyonun,
-        mor çiçeğin 3,2 ve 1 nektara sahip olup olmadığını kontrol etmeli ve bütün
-        nektarları toplamalı.\r\nSonra ilerle ve bal yap."
+      grade3_ConditionalsElse_8: "'çiçeğe bak bal yap' için fonksiyonu yaz. \r\n\r\nYazdığın
+        fonksiyon, mor çiçeğin 1,2 veya 3 nektara sahip olup olmadığını kontrol etmeli
+        ve bütün nektarları toplamalı.\r\nSonra, ilerle ve bal yap."
       grade3_ConditionalsElse_9: "**Değerlendirme:** Bu bulut ya bir nektarı olan
         bir çiçek ya da bir bala ihtiyacı olan bir bal peteği saklıyor..  \r\n\r\n`nektar
         al veya bal yap` fonksiyonunu tamamla, sonra nektar ya da bal toplamak için
@@ -5258,7 +5264,7 @@ tr:
       grade3_RunningFarm_11a: Mısır ve marulların hepsini topla sonra kabakları seç.
       grade3_bee_conditionals_new3a: Bütün nektarı topla veya hepsini bal yap. Nektarı
         sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek
-        ve petek var mı diye herhangi alanı bir kontrol et.
+        veya petek var mı diye herhangi alanı bir kontrol et.
       grade3_bee_conditionals_quantum1: Bulut altında çiçek olup olmadığını kontrol
         edin. eğer çiçek varsa, nektar alın.
       grade3_bee_conditionals_quantum2: 'Yine bulutlar. Bütün bulutlar çiçek içermez.
@@ -5372,7 +5378,7 @@ tr:
         pikseldir.'
       grade4_bee_conditionals_new3a: Bütün nektarı topla veya hepsini bal yap. Nektarı
         sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek
-        ve petek var mı diye herhangi alanı bir kontrol et.
+        veya petek var mı diye herhangi alanı bir kontrol et.
       grade4_bee_conditionals_quantum1: Bu bulutun altında ne var? Sadece çiçeklerden
         nektar topla, fakat önce bulutun altında çiçek var mı kontrol et.
       grade4_bee_conditionals_quantum2: 'Yine bulutlar. Bütün bulutlar çiçek içermez.

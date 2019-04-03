@@ -1225,8 +1225,35 @@ sk:
         _"Ty to dokážeš!"_'
       courseC19_playLab_EOC2: "Použi bloky ako udalosti a akcie, aby si hráčom mohol
         hýbať pomocou šípok. \n\n Úlohu dokončíš posunutím hráča ku všetkým terčom."
+      courseC19_playLab_EOC4: |-
+        Viacero postáv, ktoré sa hýbu je dobrý začiatok na vytvorenie hry. Potrebujeme ešte niečo pridať, aby sa to viac podobalo na ozajstnú hru. Pridajme skóre!
+
+        Použi bloky s udalosťami ako napríklad 'keď sa postava dotkne', aby si ovplyvnil skóre alebo vyhral. Nazbieraj 5 bodov alebo vyhraj, aby si vyriešil túto úlohu.
+      courseC19_playLab_EOC5: Skvelá práca! Máš všetky základné časti fungujúcej hry.
+        Teraz venuj nejaký čas tomu, aby si s uistil, že hra funguje tak ako chceš.
+        Keď budeš hotový, klikni na "Dokončiť"!
       courseC_PlayLab_events6_2019: Napíš program na pohyb tučniaka Waddles použitím
         kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele.
+      courseC_PlayLab_events7: "Blok \"opakuj donekonečna\" púšťa kód znova a znova
+        donekonečna. Použi tento blok, aby si donekonečna hýbal s Dinosaurom (postava
+        2) hore a dole o 400 pixelov. \n\n![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)"
+      courseC_PlayLab_events7_2018: "Blok \"opakuj donekonečna\" púšťa kód znova a
+        znova donekonečna. Použi tento blok, aby si donekonečna hýbal s Dinosaurom
+        (postava 2) hore a dole o 400 pixelov. \n\n![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)"
+      courseC_PlayLab_events7_2019: "Blok \"opakuj donekonečna\" púšťa kód znova a
+        znova donekonečna. Použi tento blok, aby si donekonečna hýbal s Dinosaurom
+        (postava 2) hore a dole o 400 pixelov. \n\n![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)"
+      courseC_PlayLab_events8: "Sprav to tak, aby Waddles (postava 1) povedal \"Au!\"
+        a prehral zvuk \"úderu\" ak narazí do dinosaura. \n\nKeď budeš mať hotovo,
+        zahraj sa a uvidíš či to funguje.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2018: "Sprav to tak, aby Waddles (postava 1) povedal
+        \"Au!\" a prehral zvuk \"úderu\" ak narazí do dinosaura. \n\nKeď budeš mať
+        hotovo, zahraj sa a uvidíš či to funguje.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2019: "Sprav to tak, aby Waddles (postava 1) povedal
+        \"Au!\" a prehral zvuk \"úderu\" ak narazí do dinosaura. \n\nKeď budeš mať
+        hotovo, zahraj sa a uvidíš či to funguje.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_eventsA_embed_2019: Poďme sa hrať. Získaj 5 bodov, narážím tučniaka
+        do chobotnice!
       courseC_PlayLab_events_challenge1: |-
         Použi nový blok na to, aby sa tučniak Waddles vrátil späť na začiatok vždy, keď narazí do dinosaura a keď získa bod. Tvoja hra tak bude náročnejšia a zábavnejšia.
 
@@ -1239,6 +1266,14 @@ sk:
         Použi nový blok na to, aby sa tučniak Waddles vrátil späť na začiatok vždy, keď narazí do dinosaura a keď získa bod. Tvoja hra tak bude náročnejšia a zábavnejšia.
 
         Zahraj si a posúvaj Waddlesa šípkami, až kým nezískaš 5 alebo viac bodov. Na ukončenie úlohy musíš tučniaka posunúť do `stredo-ľavej` časti obrazovky.
+      courseC_artist_loop1: "Skvelé! \n\nDodajme tomu viac štýlu! Použi blok 'nastav
+        vzor' predtým ako začne opakovanie."
+      courseC_artist_loop1_2018: "*\"Skvelé!\"* \n\nDodajme tomu viac štýlu! Zmeň
+        štetecpoužitím bloku <xml><block type=\"draw_line_style_pattern\"> <title
+        name=\"VALUE\">DEFAULT</title></block></xml> predtým ako začne opakovanie."
+      courseC_artist_loop1_2019: "*\"Skvelé!\"* \n\nDodajme tomu viac štýlu! Zmeň
+        štetecpoužitím bloku <xml><block type=\"draw_line_style_pattern\"> <title
+        name=\"VALUE\">DEFAULT</title></block></xml> predtým ako začne opakovanie."
       courseC_artist_loops1a: "**Voľná hra:** Postavme niečo väčšie, krok po kroku!
         \ Môžeš nakresliť, čo len chceš, ale my ti ukážeme, ako vytvoriť niečo takéto:\n\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)\n\nPouži
         blok  `jump to 200 over 200 down`, aby si Umelca dostal do stredu hracej plochy
@@ -1252,6 +1287,43 @@ sk:
         kroku!\n\nPouži blok  `jump to 200 over 200 down`, aby si Umelca dostal do
         stredu hracej plochy a potom použi blok `použi nálepku`.  \n\n---\n\nKeď budeš
         spokojný so svojím výtvorom, stlač \"Dokončiť\"."
+      courseC_artist_loops1b_2019: "Zmeň smer svojej nálepky pridaním bloku `otoč
+        sa` do tvojho kódu. \n\n---\n\nStlač \"Dokončiť\" keď budeš spokojný so svojím
+        výtvorom.\n\n\n![expandable](https://images.code.org/30fe9d37758abd27055d9a6e5a890680-image-1553097358155.png)\n![expandable](https://images.code.org/61feed00662019b99ac774322231f084-image-1553097362176.png)\n![expandable](https://images.code.org/fd123bb703ea4c630218a12eb5994053-image-1553097354066.png)"
+      courseC_artist_loops2: |-
+        Teraz keď už zombie pozná cestu, pomôž mu vykopať **25 pixelov dlhé** jamy pozdĺž cesty, aby mohol nasadiť viac kvetov!
+        - Každá jama by mala byť 25 pixelov dlhá
+        - Jamy majú medzi sebou medzeru 25 pixelov
+      courseC_artist_loops2a: Teraz použi opakovanie, aby sa tvoj vtáčik otočil dokola
+        12 krát pod 30 stupňovým uhlom.
+      courseC_artist_loops2a_2018: Teraz použi opakovanie, aby sa tvoj vtáčik otočil
+        dokola 12 krát pod 30 stupňovým uhlom.
+      courseC_artist_loops2a_2019: |-
+        Teraz, pomocou opakovania vytvor viac kópii tvojej nálepky. Skúste zmeniť čísla v blokoch `otoč sa` a `opakuj` , aby si vytvoril rôzne vzory.
+
+        ---
+
+        Stlač "Dokončiť" keď budeš spokojný s výsledkom.
+
+        ![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)
+        ![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)
+        ![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)
+      courseC_artist_loops3a: "Toľko zábavy!  \n\nTeraz pridaj nálepku netopiera hneď
+        po vtáčikovi, aby si vyrobil obrázok ako ten dole.\n___\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
+      courseC_artist_loops3a_2018: "Toľko zábavy!  \n\nTeraz pridaj nálepku netopiera
+        hneď po vtáčikovi, aby si vyrobil obrázok ako ten dole.\n___\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
+      courseC_artist_loops5a: |-
+        Čo sa stane ak nahradíš jednu alebo aj obe nálepky inými stvoreniami?
+        ___
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2018: |-
+        Čo sa stane ak nahradíš jednu alebo aj obe nálepky inými stvoreniami?
+        ___
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2019: |-
+        Čo sa stane ak nahradíš jednu alebo aj obe nálepky inými stvoreniami?
+        ___
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loops6: "Čo by mal dať zombie do záhrady? \n\nDo vnútra plotu,
         nakresli čokoľvek chceš. Chcel by si tam nejaké kvety alebo zopár chrobákov?
         \n*(Pozri si nápovedy pre viac nápadov.)*\n\n\n"
@@ -1526,6 +1598,45 @@ sk:
         zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu.\nKeď
         škončíš, klikni na \"Dokončiť\" a tvoju hru si na mobile budú môcť zahrať
         aj tvoji kamaráti."
+      courseC_flappy_events3: "Teraz sme pridali aj zem. \n\nUmiestni blok `ukonči
+        hru` pod blok `keď dopadne na zem`. \n\n---\n\nZahraj si hru a na jej konci
+        nechaj Flappyho spadnúť na zem."
+      courseC_flappy_events3_2018: "Teraz sme pridali aj zem. \n\nUmiestni blok `ukonči
+        hru` pod blok `keď dopadne na zem`. \n\n---\n\nZahraj si hru a na jej konci
+        nechaj Flappyho spadnúť na zem."
+      courseC_flappy_events3_2019: "Teraz sme pridali aj zem. \n\nUmiestni blok `ukonči
+        hru` pod blok `keď dopadne na zem`. \n\n---\n\nZahraj si hru a na jej konci
+        nechaj Flappyho spadnúť na zem."
+      courseC_flappy_events5: "Pridali sme počítadlo bodov, Flappy získa jeden zakaždým,
+        keď sa vyhne prekážke. \n\nPridaj blok `pridaj bod` pod udalosť `keď obíde
+        prekážku`, potom stlač \"Spustiť\" a dostaň Flappyho cez prvé prekážky."
+      courseC_flappy_events5_2018: "Pridali sme počítadlo bodov, Flappy získa jeden
+        zakaždým, keď sa vyhne prekážke. \n\nPridaj blok `pridaj bod` pod udalosť
+        `keď obíde prekážku`, potom stlač \"Spustiť\" a dostaň Flappyho cez prvé prekážky."
+      courseC_flappy_events5_2019: "Pridali sme počítadlo bodov, Flappy získa jeden
+        zakaždým, keď sa vyhne prekážke. \n\nPridaj blok `pridaj bod` pod udalosť
+        `keď obíde prekážku`, potom stlač \"Spustiť\" a dostaň Flappyho cez prvé prekážky."
+      courseC_flappy_events7: A teraz skús zmeniť pozadie pridaním nového bloku pod
+        blok `pri spustení`.
+      courseC_flappy_events7_2018: A teraz skús zmeniť pozadie pridaním nového bloku
+        pod blok `pri spustení`.
+      courseC_flappy_events7_2019: A teraz skús zmeniť pozadie pridaním nového bloku
+        pod blok `pri spustení`.
+      courseC_flappy_events8: "Prostredie môžeš nastaviť kedykoľvek, nie len pri začiatku
+        hry. \n\nSkús ho nastaviť na **náhodné** keď sa stane nejaká udalosť, napríklad
+        keď sa Flappy vyhne prekážke."
+      courseC_flappy_events8_2018: "Prostredie môžeš nastaviť kedykoľvek, nie len
+        pri začiatku hry. \n\nSkús ho nastaviť na **náhodné** keď sa stane nejaká
+        udalosť, napríklad keď sa Flappy vyhne prekážke."
+      courseC_flappy_events8_2019: "Prostredie môžeš nastaviť kedykoľvek, nie len
+        pri začiatku hry. \n\nSkús ho nastaviť na **náhodné** keď sa stane nejaká
+        udalosť, napríklad keď sa Flappy vyhne prekážke."
+      courseC_flappy_events9: Pre zmenu sa hra neskončí keď vtáčik narazí do prekážky,
+        ale len vynulujeme skóre.
+      courseC_flappy_events9_2018: Pre zmenu sa hra neskončí keď vtáčik narazí do
+        prekážky, ale len vynulujeme skóre.
+      courseC_flappy_events9_2019: Pre zmenu sa hra neskončí keď vtáčik narazí do
+        prekážky, ale len vynulujeme skóre.
       courseC_harvester_loops1: |-
         Opakovanie môžeš použiť aj na iné príkazy ako pohyb.
 
@@ -1544,6 +1655,27 @@ sk:
         Opakovanie môžeš použiť aj na iné príkazy ako pohyb.
 
         Použi opakovanie na pozbieranie všetkých tekvíc.
+      courseC_harvester_loops2: Dokážeš skombinovať dve rôzne opakovania tak, aby
+        si sa pohol smerom k tekviciam a všetky ich pozbieral?
+      courseC_harvester_loops2_2018: Dokážeš skombinovať dve rôzne opakovania tak,
+        aby si sa pohol smerom k tekviciam a všetky ich pozbieral?
+      courseC_harvester_loops2_2019: Dokážeš skombinovať dve rôzne opakovania tak,
+        aby si sa pohol smerom k tekviciam a všetky ich pozbieral?
+      courseC_harvester_loops3: Pozbieraj všetky tekvice.
+      courseC_harvester_loops3_2018: Pozbieraj všetky tekvice.
+      courseC_harvester_loops3_2019: Pozbieraj všetky tekvice.
+      courseC_harvester_loops4: |-
+        Teraz tu rastie už aj kukurica!
+
+        Pozbieraj všetky tekvice a kukurice.
+      courseC_harvester_loops4_2018: |-
+        Teraz tu rastie už aj kukurica!
+
+        Pozbieraj všetky tekvice a kukurice.
+      courseC_harvester_loops4_2019: |-
+        Teraz tu rastie už aj kukurica!
+
+        Pozbieraj všetky tekvice a kukurice.
       courseC_harvester_loops5: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops5_2018: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops5_2019: Pozbieraj všetky kukurice a tekvice.
@@ -1553,6 +1685,18 @@ sk:
       courseC_harvester_loops7: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops7_2018: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops7_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops8: |-
+        ** Výzva: ** Pozbieraj všetky tekvice a kukurice.
+
+        Túto úlohu môžeš splniť akýmkoľvek spôsobom chceš, ale buď bude treba veľa práce, alebo veľa myslenia!
+      courseC_harvester_loops8_2018: |-
+        ** Výzva: ** Pozbieraj všetky tekvice a kukurice.
+
+        Túto úlohu môžeš splniť akýmkoľvek spôsobom chceš, ale buď bude treba veľa práce, alebo veľa myslenia!
+      courseC_harvester_loops8_2019: |-
+        ** Výzva: ** Pozbieraj všetky tekvice a kukurice.
+
+        Túto úlohu môžeš splniť akýmkoľvek spôsobom chceš, ale buď bude treba veľa práce, alebo veľa myslenia!
       courseC_harvester_loops9: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops9_2018: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops9_2019: Pozbieraj všetky kukurice a tekvice.
@@ -1590,6 +1734,27 @@ sk:
       courseC_maze_debugging_challenge2_2019: Ak sa Scrat otáča príliš často, môže
         sa mu zakrútiť hlava! Pomôž mu dostať sa k žaluďu iba pomocou štyroch blokov
         `otoč sa`.
+      courseC_maze_loops2: "S blokom 'opakovať', môžeš kód opakovať dookola. \n\nDokážeš
+        dostať vtáčika k prasaťu? Vytvor opakovanie, v ktorom použiješ blok 'dopredu'
+        len jeden krát."
+      courseC_maze_loops2_predict1: "Zrazu sa objavil zázračný blok! \nS blokom 'opakovať',
+        môžeš kód opakovať dookola. \n\nDokážeš dostať vtáčika k prasaťu? Vytvor opakovanie,
+        v ktorom použiješ blok 'dopredu' len jeden krát."
+      courseC_maze_loops3: |-
+        *"Dostaň ma k prasaťu!"*
+
+        Vyrieš túto úlohu pomocou opakovania!
+      courseC_maze_loops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať vtáčika
+        k prasaťu, s najmenším možným počtom blokov!
+      courseC_maze_loops5: '*"Dostaň ma k prasaťu čo najrýchlejšie!"*'
+      courseC_maze_loops6: |-
+        * "To prasa mi strapatí perie!"
+
+        Cykly fungujú aj keď je vo vnútri viac ako jeden blok!  Vieš dať túto postupnosť do opakovania?
+      courseC_maze_loops7: |-
+        *"Dostaň ma k prasaťu!"*
+
+        Využi vedomosti z predchádzajúcich úloh!
       courseC_maze_loops8: "**Výzva:** Na vyriešenie tejto úlohy skombinuj nápady
         z predchádzajúcich levelov."
       courseC_maze_loops_challenge2: Poďme pátrať po poklade - pomocou cyklov! Pomôž
@@ -1741,6 +1906,18 @@ sk:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ideš BB-8!"_
 
         Ak chceš pozbierať všetky kusy šrotu, vytvor cyklus použitím len jedného bloku vo vnútri opakovania.
+      courseC_starWars_loops4: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Len tak ďalej, BB-8."_
+
+        V tejto úlohe použi dva bloky 'opakuj' aby sa BB-8 dostal ku všetkým kúskom šrotu s čo najmenej blokmi!
+      courseC_starWars_loops4_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Len tak ďalej, BB-8."_
+
+        V tejto úlohe použi dva bloky 'opakuj' aby sa BB-8 dostal ku všetkým kúskom šrotu s čo najmenej blokmi!
+      courseC_starWars_loops4_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Len tak ďalej, BB-8."_
+
+        V tejto úlohe použi dva bloky 'opakuj' aby sa BB-8 dostal ku všetkým kúskom šrotu s čo najmenej blokmi!
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"BB-8, ideš!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
@@ -2701,12 +2878,35 @@ sk:
       courseE_farmer_ramp11b: A teraz to skús znova ale s viacerými hromadami!
       courseE_farmer_ramp11b_2018: A teraz to skús znova ale s viacerými hromadami!
       courseE_farmer_ramp11b_2019: A teraz to skús znova ale s viacerými hromadami!
+      courseE_farmer_ramp12: Pozbieraj všetok šalát.
+      courseE_farmer_ramp12_2018: Pozbieraj všetok šalát.
+      courseE_farmer_ramp12_forswap: Pozbieraj všetok šalát.
+      courseE_farmer_ramp12_forswap_2018: Pozbieraj všetok šalát.
+      courseE_farmer_ramp12_forswap_2019: Pozbieraj všetok šalát.
       courseE_farmer_ramp12b: Teraz farmárka potrebuje pozbierať všetok šalát. Použi
         blok `pokiaľ tam je šalát` a daj ho do bloku pre cyklus `opakuj`!
       courseE_farmer_ramp12b_2018: Teraz farmárka potrebuje pozbierať všetok šalát.
         Použi blok `pokiaľ tam je šalát` a daj ho do bloku pre cyklus `opakuj`!
       courseE_farmer_ramp12b_2019: Teraz farmárka potrebuje pozbierať všetok šalát.
         Použi blok `pokiaľ tam je šalát` a daj ho do bloku pre cyklus `opakuj`!
+      courseE_farmer_ramp12d: "Šalát je rozptýlený po celej záhrade.  \nChoď po cestičke
+        **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj a zbieraj šalát
+        **pokiaľ** tam nejaký je.  "
+      courseE_farmer_ramp12d_2018: "Šalát je rozptýlený po celej záhrade.  \nChoď
+        po cestičke **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj
+        a zbieraj šalát **pokiaľ** tam nejaký je.  "
+      courseE_farmer_ramp12d_2019: "Šalát je rozptýlený po celej záhrade.  \nChoď
+        po cestičke **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj
+        a zbieraj šalát **pokiaľ** tam nejaký je.  "
+      courseE_farmer_ramp12e: "Šalát je rozptýlený po celej záhrade.  \nChoď po cestičke
+        **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj a zbieraj šalát
+        **pokiaľ** tam nejaký je.  "
+      courseE_farmer_ramp12e_2018: "Šalát je rozptýlený po celej záhrade.  \nChoď
+        po cestičke **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj
+        a zbieraj šalát **pokiaľ** tam nejaký je.  "
+      courseE_farmer_ramp12e_2019: "Šalát je rozptýlený po celej záhrade.  \nChoď
+        po cestičke **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj
+        a zbieraj šalát **pokiaľ** tam nejaký je.  "
       courseE_maze_ramp1: V tejto úlohe pospájaj všetky bloky, klikni na tlačítko
         "Spustiť" a sleduj, čo sa stane!
       courseE_maze_ramp1_2018: V tejto úlohe pospájaj všetky bloky, klikni na tlačítko
@@ -3045,8 +3245,24 @@ sk:
       grade2_collector_A_2018: Pomôž Laurel pozbierať všetky drahokamy.
       grade2_collector_A_2019: Pomôž Laurel pozbierať všetky drahokamy.
       grade2_maze_debuggingFP: '*"A teraz ma dostaň k prasaťu cestou, ktorou len chceš!"*'
+      grade2_playlab_project_3: "Sprav to tak, aby Waddles (postava 1) povedal \"Au!\"
+        a prehral zvuk \"úderu\" ak narazí do dinosaura. \n\nKeď budeš mať hotovo,
+        zahraj sa a uvidíš či to funguje.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      grade2_puppy_loops3: |-
+        *"Dostaň ma k prasaťu!"*
+
+        Vyrieš túto úlohu pomocou opakovania!
       grade2_puppy_loops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasa
         s najmenším možným počtom blokov!
+      grade2_puppy_loops5: '*"Dostaň ma k prasaťu čo najrýchlejšie!"*'
+      grade2_puppy_loops6: |-
+        * "To prasa mi strapatí perie!"
+
+        Cykly fungujú aj keď je vo vnútri viac ako jeden blok!  Vieš dať túto postupnosť do opakovania?
+      grade2_puppy_loops7: |-
+        *"Dostaň ma k prasaťu!"*
+
+        Využi vedomosti z predchádzajúcich úloh!
       grade3_ConditionalsElse_2: "Ďalšie oblaky!\n\nSkontroluj každý oblak, či sa
         pod ním neschováva kvetinka predtým, ako pozbieraš nektár.  \n\nPamätaj: Nie
         pod všetkými oblakmi sa skrýva rovnaká vec!"

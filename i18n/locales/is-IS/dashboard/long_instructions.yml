@@ -5772,7 +5772,19 @@ is:
 
         Þetta forrit notar styrkleika bassans (lágu hljóðanna) til að stjórna hæð eins dansara. Getur þú látið hinn dansarann líka breytast með tónlistinni?
       CourseD_Dance_Party_11: "Með kubbnum <xml><block type=\"Dancelab_whenKey\"></block></xml> getur þú keyrt kóða þegar ýtt er á upp örina. \n\nÞú gætir skipt um hreyfingu, breytt eiginleikum dansara eða bara gert einhverja hreyfingu. Notaðu ímyndunaraflið og fylgstu með nýjum kubbum!"
-      CourseD_Dance_Party_11_5: "Skoðaðu þennan kubb:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n  \nNú getur þú búið til heilan hóp dansara í einu!\n\nPrófaðu að nota \"allt endur\" kubbana til að skrifa kóða sem lætur allar endurnar dansa á sama tíma."
+      CourseD_Dance_Party_11_5: |-
+        Skoðaðu þennan kubb:
+
+        <xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+          
+        Nú getur þú búið til heilan hóp dansara í einu!
+
+        Prófaðu að nota "allt endur" kubbana til að skrifa kóða sem lætur allar endurnar dansa á sama tíma.
       CourseD_Dance_Party_11b: |-
         Nú höfum við danskeppni! Kötturinn "dabbar" þegar þú ýtir á vinstri örina. Láttu Vélmennið "droppa" einu sinni þegar þú ýtir á hægri örina og "klappa" einu sinni þegar þú ýtir á upp-örina.
 

@@ -203,8 +203,8 @@ zh-TW:
             '"seconds"': 秒
       Dancelab_ifDanceIs:
         text: |-
-          如果角色 {SPRITE} 正在跳 {DANCE}
-          {DO1} {DO2}
+          如果角色 {SPRITE} 目前動作為 {DANCE}
+          {DO1}否則 {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Clap High
@@ -358,9 +358,7 @@ zh-TW:
       Dancelab_setBackground:
         text: 背景顏色設為 {COLOR}
       Dancelab_setBackgroundEffect:
-        text: |-
-          背景效果設為
-          {EFFECT} {PALETTE}
+        text: 背景效果設為 {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': 無
@@ -382,7 +380,7 @@ zh-TW:
             '"disco"': 正方形
             '"stars"': 星星
           PALETTE:
-            '"rave"': 黑白
+            '"rave"': 黑與白
             '"cool"': 冷色系
             '"electronic"': 電子
             '"iceCream"': 冰淇淋
@@ -392,9 +390,7 @@ zh-TW:
             '"vintage"': 復古
             '"warm"': 暖色系
       Dancelab_setBackgroundEffectWithPalette:
-        text: |-
-          背景效果設為
-          {EFFECT} {PALETTE}
+        text: 背景效果設為 {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': 無
@@ -417,7 +413,7 @@ zh-TW:
             '"disco"': 正方形
             '"stars"': 星星
           PALETTE:
-            '"rave"': 黑白
+            '"rave"': 黑與白
             '"cool"': 冷色系
             '"electronic"': 電子
             '"iceCream"': 冰淇淋
@@ -530,7 +526,7 @@ zh-TW:
             '"y"': 垂直位置
             '"tint"': 色調
       Dancelab_setPropRandom:
-        text: 角色 {SPRITE} 改變 {PROPERTY} 隨機取數
+        text: 角色 {SPRITE} {PROPERTY} 改變 隨機取數
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -882,6 +878,8 @@ zh-TW:
             '"East"': 東
             '"South"': 南
             '"West"': 西
+      gamelab_printText:
+        text: 輸出 {TEXT}
       gamelab_randColor:
         text: 隨機顏色
       gamelab_randomColor:
@@ -906,6 +904,7 @@ zh-TW:
           IMG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': 舞台
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': 太陽和彩虹
             undefined: 無
       gamelab_setFrameDelay:
         text: 角色 {THIS} 圖格延遲 {VAL}
@@ -1186,8 +1185,8 @@ zh-TW:
         text: 當 {COSTUME} 被點著
       Mikelab_ifDanceIs:
         text: |-
-          如果角色 {SPRITE} 正在跳 {DANCE}
-          {DO1} {DO2}
+          如果角色 {SPRITE} 目前動作為 {DANCE}
+          {DO1}否則 {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Clap High
@@ -1220,6 +1219,7 @@ zh-TW:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': 舞台
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': 太陽和彩虹
       Mikelab_setProp:
         text: 角色 {SPRITE} {PROPERTY} 設為 {VAL}
         options:
@@ -1392,6 +1392,7 @@ zh-TW:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': 舞台
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': 太陽和彩虹
       aalab_setCollidable:
         options:
           VAL:
