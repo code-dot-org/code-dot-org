@@ -520,6 +520,8 @@ cs:
               name: Multi
             Studio:
               name: Studio
+            Web Lab:
+              name: Web Lab
         algebraPD2b:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'

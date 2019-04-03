@@ -1103,7 +1103,14 @@ pt-BR:
       CSPU5_U3 - Loops And Arrays - Printing Single True: Processe o array e exiba um único "verdadeiro" se o array contiver um 5 ou um único "falso" caso não tenha. (Clique para ver instruções completas)
       CSPU5_U3 - Loops And Arrays - Printing Single True_2018: Processe o array e exiba um único "verdadeiro" se o array contiver um 5 ou um único "falso" caso não tenha. (Clique para ver instruções completas)
       CSPU5_U3 - Loops And Arrays - Printing Single True_2019: Processe o array e exiba um único "verdadeiro" se o array contiver um 5 ou um único "falso" caso não tenha. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops And Arrays - Search with Boolean Var: Crie uma variável booleana para ser usada como uma flag para observar se há um 5 no array. (Clique para ver todas as instruções)
+      CSPU5_U3 - Loops And Arrays - Search with Boolean Var_2018: Crie uma variável booleana para ser usada como uma flag para observar se há um 5 no array. (Clique para ver todas as instruções)
+      CSPU5_U3 - Loops And Arrays - Search with Boolean Var_2019: Crie uma variável booleana para ser usada como uma flag para observar se há um 5 no array. (Clique para ver todas as instruções)
+      CSPU5_U3 - Movie Bot - Multiple If Sequences: Adicione outro conjunto de declarações se, senão se e senão dentro da questão de declaração se para verificar por palavras para classificações de filmes (G, PG, PG-13 e R). (Clique para ver todas as instruções)
       CSPU5_U3 - Movie Bot - Nested Motivation: Adicione um conjunto separado de declarações "se" para verificar por um "?" na entrada. (Clique para ver instruções completas)
+      CSPU5_U3 - Movie Bot - When Multiple If Statements: Adicione uma declaração se e senão-se que verifique por por favor e obrigado. (Clique para ver todas as instruções)
+      CSPU5_U3 - Movie Bot - toLowerCase: Use o comando toLowerCase para alterar todas as entradas do usuário em letras minúsculas depois que elas forem inseridas. (Clique para ver instruções completas)
+      CSPU5_U3 - Practice Create Performance Task: Projete e implemente sua prática Criar tarefa de desempenho. (Clique para ver instruções completas)
       CSPU5_U3 - Return Values - constrainTurtle: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
       CSPU5_U3 - Return Values - constrainTurtle_2018: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
       CSPU5_U3 - Return Values - constrainTurtle_2019: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
@@ -1642,8 +1649,14 @@ pt-BR:
       CourseD_Dance_Party_11_5: Use os blocos "todos os patos" para fazer os patos dançarem juntos.
       CourseD_Dance_Party_11b: Faça o robô dançar drop uma vez pressionando a tecla de seta para a direita e fazer a dança do fio dental uma vez pressionando a seta para cima. Faça o movimento dança drop-dança do fio dental o mais rápido que puder!
       CourseD_Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
+      CourseE_HOC 2018 Level_1: Colete um barco no baú.
       CourseE_HOC 2018 Level_10: Vá até a entrada do Monumento Oceânico.
       CourseE_HOC 2018 Level_11: 'Construa um canal usando Prismarinho dentro do Monumento Oceânico.'
+      CourseE_HOC 2018 Level_2: 'Vá até o final do cais.'
+      CourseE_HOC 2018 Level_3: 'Atravesse o mar aberto para conseguir o bacalhau.'
+      CourseE_HOC 2018 Level_4: Use um loop para chegar até o golfinho.
+      CourseE_HOC 2018 Level_5: Explore o naufrágio para chegar até o baú.
+      CourseE_HOC 2018 Level_6: Navegue no gelo para chegar até o salmão.
       CourseE_HOC 2018 Level_7a: Procure um baú nas ruínas subaquáticas.
       CourseE_HOC 2018 Level_9b: 'Use os corais como pontos passagem para alcançar o tesouro.'
       CourseF_PlayLab_vars1: 'Para jogar este jogo, você não precisa escrever nenhum código, apenas clicar "Executar"! '
@@ -2307,6 +2320,9 @@ pt-BR:
       Play Lab Rocket 5: "Muito melhor, mas vamos escrever mais uma função\ncom aceleração simples. Dessa vez o foguete deve estar a 15 metros em 1 segundo,\n45 metros em 2 segundos, 95 metros em 3 segundos e 165 metros em 4 segundos."
       Play Lab Rocket Free Play: "Atividade livre: faça uma experiência com sua função altura-foguete\npara fazer o foguete voar de formas diferentes. Clique em \"Concluir\" quando você\nterminar."
       Poorva copy U3L2 Using Simple Commands: "Desenhe um quadrado usando apenas avance\ne vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição\ninicial da tartaruga."
+      Practice Create Performance Task: Projete e implemente sua prática Criar tarefa de desempenho. (Clique para ver instruções completas)
+      Practice Create Performance Task_2018: Projete e implemente sua prática Criar tarefa de desempenho. (Clique para ver instruções completas)
+      Practice Create Performance Task_2019: Projete e implemente sua prática Criar tarefa de desempenho. (Clique para ver instruções completas)
       Project - Final Image Scroller: Atualize o scroller de imagem para responder a botões e a digitar de teclas. (Clique para ver as instruções completas)
       Project - Final Image Scroller_2018: Atualize o scroller de imagem para responder a botões e a digitar de teclas. (Clique para ver as instruções completas)
       Project - Final Image Scroller_2019: Atualize o scroller de imagem para responder a botões e a digitar de teclas. (Clique para ver as instruções completas)
@@ -2493,7 +2509,12 @@ pt-BR:
       U3 - Loops And Arrays - Print Array: Use um laço for para imprimir todos os valores em um array. (Clique para ver instruções completas)
       U3 - Loops And Arrays - Printing Single True: Processe o array e exiba um único "verdadeiro" se o array contiver um 5 ou um único "falso" caso não tenha. (Clique para ver instruções completas)
       U3 - Loops And Arrays - Return Value: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
+      U3 - Loops And Arrays - Search with Boolean Var: Crie uma variável booleana para ser usada como uma flag para observar se há um 5 no array. (Clique para ver todas as instruções)
+      U3 - Movie Bot - Multiple If Sequences: Adicione outro conjunto de declarações se, senão se e senão dentro da questão de declaração se para verificar por palavras para classificações de filmes (G, PG, PG-13 e R). (Clique para ver todas as instruções)
       U3 - Movie Bot - Nested Motivation: Adicione um conjunto separado de declarações "se" para verificar por um "?" na entrada. (Clique para ver instruções completas)
+      U3 - Movie Bot - When Multiple If Statements: Adicione uma declaração se e senão-se que verifique por por favor e obrigado. (Clique para ver todas as instruções)
+      U3 - Movie Bot - toLowerCase: Use o comando toLowerCase para alterar todas as entradas do usuário em letras minúsculas depois que elas forem inseridas. (Clique para ver instruções completas)
+      U3 - Practice Create Performance Task: Projete e implemente sua prática Criar tarefa de desempenho. (Clique para ver instruções completas)
       U3 - Return Values - constrainTurtle: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
       U3 - Return Values - debuggingConstrain: Corrija o erro na restrição para que ele retorne o valor apropriado. (Clique para ver instruções completas)
       U3 - Return Values - debuggingMaxVal: Corrija o erro no maxVal para que ele reporte corretamente o valor máximo. (Clique para ver instruções completas)
@@ -2639,6 +2660,7 @@ pt-BR:
       U3L2 Using Simple Commands_2018: "Desenhe um quadrado usando apenas avance\ne vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição\ninicial da tartaruga."
       U3L2 Using Simple Commands_2019: "Desenhe um quadrado usando apenas avance\ne vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição\ninicial da tartaruga."
       U3L24 Nested Conditionals Bugs 3: Conserte os erros que ainda existem neste programa. Prove que o programa funciona corretamente.
+      U3L24 Nested Conditionals Bugs: Exponha os erros neste problema digitando entradas na caixa-de-entrada do usuário. Rastreie quais entradas causam saídas inesperadas.
       U3L25 - drag out key event: Crie um manipulador de eventos para responder aos eventos de apertar tecla e exibir event.key no console. Aperte as teclas do teclado para ver o que acontece. (Clique para ver as instruções completas)
       U3L25 - play sound when up key: Modifique o código para que o som só seja tocado quando a seta para cima for pressionada (Clique aqui para ver todas as instruções)
       U3L2_Turtle3by3Grid: "Desenhe uma grade 3x3 acima e à direita da\ntartaruga. Tente fazer isso com o menor número de comandos possível. OBSERVAÇÃO:\nEsse problema é bastante desafiador. Você deve precisar passar um tempo resolvendo-o\ne ajustando-o.  Você também deve considerar usar lápis e papel para esboçar\nsuas ideias."

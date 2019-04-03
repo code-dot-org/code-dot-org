@@ -3708,6 +3708,8 @@ es:
 
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      K2.0 sequence 10_authored_hint:
+        K2.0_sequence_10_a: Si tienes problemas, primero intenta escribir los pasos en un papel.
       K2.0 sequence 3_authored_hint:
         K2.0_sequence_3_a: Si tienes problemas, intenta descifrar cuál es la ruta correcta y luego elimina el bloque que no encaja.
       K2.0 sequence 5_authored_hint:
@@ -3719,6 +3721,10 @@ es:
         K2.0_sequence_7_a: Si estas atascado/a, intenta dibujar la imagen en un papel para ver cómo se debería mover el pájaro.
       K2.0 sequence 8_authored_hint:
         K2.0_sequence_8_a: '¿Atascado? Intenta trazar la ruta del pájaro con tu dedo.'
+      K2.0 sequence 9_authored_hint:
+        K2.0_sequence_9_a: Si tienes problemas, primero intenta escribir los pasos en un papel.
+      K2.0 sequence FP_authored_hint:
+        K2.0_sequence_FP_a: Si el camino que necesitas no está claro, usa tu dedo para trazar una ruta desde el pájaro hasta el cerdo.
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Haz que el Agent construya varios puentes para que Alex o Steve puedan caminar más allá de los bordes del mapa.
       MC_HOC_2017_01_Cole_authored_hint:
@@ -4887,21 +4893,31 @@ es:
         courseA_harvester_loops4_b: '¿Cuánta cantidad de maíz hay? ¿Cuántas veces se repite tu código?'
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: Si te quedas atascado/a, intenta solucionar el puzzle en 2 partes, una antes de la esquina y otra después de la esquina.
+        courseA_harvester_loops5_b: |-
+          Tu código final debe tener ***1*** bucle de `repetir` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml>, ***1*** bloque de `mover al Sur`  <xml><block type="maze_moveSouth" limit="1"/></xml>, y ***1*** bloque de `mover al Este`  <xml><block type="maze_moveEast" limit="1"/></xml>.
         courseA_harvester_loops5_c: '¡Usa este camino para recoger todo el maíz!'
       courseA_harvester_loops5_2019_authored_hint:
         courseA_harvester_loops5_a: Si te quedas atascado/a, intenta solucionar el puzzle en 2 partes, una antes de la esquina y otra después de la esquina.
+        courseA_harvester_loops5_b: |-
+          Tu código final debe tener ***1*** bucle de `repetir` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml>, ***1*** bloque de `mover al Sur`  <xml><block type="maze_moveSouth" limit="1"/></xml>, y ***1*** bloque de `mover al Este`  <xml><block type="maze_moveEast" limit="1"/></xml>.
         courseA_harvester_loops5_c: '¡Usa este camino para recoger todo el maíz!'
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: |-
           Necesitarás usar un bucle `repetir` <xml> <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">6</title> 
           </block></xml> tras otro.
+        courseA_harvester_loops5a_b: Un bucle repetirá `mover al Sur` <xml><block type="maze_moveSouth" limit="1"/></xml>, y el otro repetirá `move al Este` <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Usa esta ruta para moverte en un sentido, y luego en el otro.
       courseA_harvester_loops5a_2019_authored_hint:
         courseA_harvester_loops5a_a: |-
           Necesitarás usar un bucle `repetir` <xml> <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">6</title> 
           </block></xml> tras otro.
+        courseA_harvester_loops5a_b: Un bucle repetirá `mover al Sur` <xml><block type="maze_moveSouth" limit="1"/></xml>, y el otro repetirá `move al Este` <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Usa esta ruta para moverte en un sentido, y luego en el otro.
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: '¡Pulsa `Ejecutar`para ver qué ocurre!'
@@ -4916,8 +4932,12 @@ es:
       courseA_harvester_loops6_2019_authored_hint:
         courseA_harvester_loops6_b: Éste es el camino que debes tomar para recoger todo el maíz.
       courseA_harvester_loops7_authored_hint:
+        courseA_harvester_loops7_a: |-
+          ¡Necesitarás dos bucles de `repetir` <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-10">5</title></block></xml>, uno tras otro!
         courseA_harvester_loops7_b: Usa dos bucles para seguir este camino.
       courseA_harvester_loops7_2019_authored_hint:
+        courseA_harvester_loops7_a: |-
+          ¡Necesitarás dos bucles de `repetir` <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-10">5</title></block></xml>, uno tras otro!
         courseA_harvester_loops7_b: Usa dos bucles para seguir este camino.
       courseA_harvester_loops9_authored_hint:
         courseA_harvester_loops9_a: Rompe este puzzle en tres partes diferentes. Una parte es la primera esquina, otra parte en la segunda esquina, y la tercera sería el final.
@@ -5008,22 +5028,38 @@ es:
       courseA_harvester_seq5_authored_hint:
         courseA_harvester_seq5_a: '¿Qué bloque mueve al cosechador en la dirección errónea?'
         courseA_harvester_seq5_b: Necesitas eliminar un bloque.
+        courseA_harvester_seq5_c: |-
+          ¡Descarta este bloque!
+
+          <xml><block type="maze_moveNorth"/></xml>
       courseA_harvester_seq5_2019_authored_hint:
         courseA_harvester_seq5_a: '¿Qué bloque mueve al cosechador en la dirección errónea?'
         courseA_harvester_seq5_b: Necesitas eliminar un bloque.
+        courseA_harvester_seq5_c: |-
+          ¡Descarta este bloque!
+
+          <xml><block type="maze_moveNorth"/></xml>
       courseA_harvester_seq6_authored_hint:
         courseA_harvester_seq6_a: Si estás atascado, intenta contar los pasos en voz alto. Podría ayudarte a encontrar el camino correcto.
       courseA_harvester_seq6_2019_authored_hint:
         courseA_harvester_seq6_a: Si estás atascado, intenta contar los pasos en voz alto. Podría ayudarte a encontrar el camino correcto.
+      courseA_harvester_seq7_authored_hint:
+        courseA_harvester_seq7_a: Intenta solucionar el puzzle en 2 partes, una antes de la esquina y otra a partir de la esquina.
+        courseA_harvester_seq7_b: '¿Tienes problemas? Éste es el camino que debe seguir el cosechador.'
+      courseA_harvester_seq7_2019_authored_hint:
+        courseA_harvester_seq7_a: Intenta solucionar el puzzle en 2 partes, una antes de la esquina y otra a partir de la esquina.
+        courseA_harvester_seq7_b: '¿Tienes problemas? Éste es el camino que debe seguir el cosechador.'
       courseA_harvester_seq8_authored_hint:
         courseA_harvester_seq8_a: Tu código final debería tener **4** bloques de movimiento y **2** bloques de recogida.
       courseA_harvester_seq8_2019_authored_hint:
         courseA_harvester_seq8_a: Tu código final debería tener **4** bloques de movimiento y **2** bloques de recogida.
       courseA_harvester_seq9_authored_hint:
         courseA_harvester_seq9_a: Ejecuta el código un par de veces para ver qué ocurre. ¿Dónde acaba el cosechador?
+        courseA_harvester_seq9_b: '¡No te olvides de recoger todo el maíz! Necesitarás ***3*** bloques de recoger maíz.'
         courseA_harvester_seq9_c: Deberías tomar este camino para recoger todo el maíz.
       courseA_harvester_seq9_2019_authored_hint:
         courseA_harvester_seq9_a: Ejecuta el código un par de veces para ver qué ocurre. ¿Dónde acaba el cosechador?
+        courseA_harvester_seq9_b: '¡No te olvides de recoger todo el maíz! Necesitarás ***3*** bloques de recoger maíz.'
         courseA_harvester_seq9_c: Deberías tomar este camino para recoger todo el maíz.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
@@ -5099,7 +5135,7 @@ es:
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5118,7 +5154,7 @@ es:
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
         '1': |
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5137,7 +5173,7 @@ es:
           </xml>
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5156,7 +5192,7 @@ es:
           </xml>
       courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5175,7 +5211,7 @@ es:
           </xml>
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5191,7 +5227,7 @@ es:
           </xml>
       courseA_maze_ramp5a_2019_authored_hint:
         '1': |-
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5205,6 +5241,55 @@ es:
           </next>
           </block>
           </xml>
+      courseA_maze_seq1_authored_hint:
+        courseA_maze_seq1_a: |-
+          Si tienes problemas para mover al pájaro, asegúrate de que los bloques están colocados en su lugar bajo la línea <xml>
+          <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          El pájaro necesita moverse 3 veces hacia el Oeste para llegar al cerdo. Usa este bloque:
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq10_authored_hint:
+        courseA_maze_seq10_a: Si tienes problemas, primero intenta escribir los pasos en un papel.
+        courseA_maze_seq10_b: Necesitarás moverte en 3 direcciones para solucionar este puzzle.
+      courseA_maze_seq10_2018_authored_hint:
+        courseA_maze_seq10_a: Si tienes problemas, primero intenta escribir los pasos en un papel.
+        courseA_maze_seq10_b: Necesitarás moverte en 3 direcciones para solucionar este puzzle.
+      courseA_maze_seq10_2019_authored_hint:
+        courseA_maze_seq10_a: Si tienes problemas, primero intenta escribir los pasos en un papel.
+        courseA_maze_seq10_b: Necesitarás moverte en 3 direcciones para solucionar este puzzle.
+      courseA_maze_seq13_authored_hint:
+        courseA_maze_seq13_a: Si el camino que necesitas no está claro, usa tu dedo para trazar una ruta desde el pájaro hasta el cerdo.
+        courseA_maze_seq13_b: '¡No tengas miedo a equivocarte! Añade bloques y ejecuta el código para ver qué ocurre.'
+        courseA_maze_seq13_c: Estos bloques de <xml><block type="maze_moveNorth"/></xml><xml><block type="maze_moveEast"/></xml> te ayudarán a acercarte al cerdo.
+      courseA_maze_seq13_2018_authored_hint:
+        courseA_maze_seq13_a: Si el camino que necesitas no está claro, usa tu dedo para trazar una ruta desde el pájaro hasta el cerdo.
+        courseA_maze_seq13_b: '¡No tengas miedo a equivocarte! Añade bloques y ejecuta el código para ver qué ocurre.'
+        courseA_maze_seq13_c: Estos bloques de <xml><block type="maze_moveNorth"/></xml><xml><block type="maze_moveEast"/></xml> te ayudarán a acercarte al cerdo.
+      courseA_maze_seq13_2019_authored_hint:
+        courseA_maze_seq13_a: Si el camino que necesitas no está claro, usa tu dedo para trazar una ruta desde el pájaro hasta el cerdo.
+        courseA_maze_seq13_b: '¡No tengas miedo a equivocarte! Añade bloques y ejecuta el código para ver qué ocurre.'
+        courseA_maze_seq13_c: |-
+          Estos bloques <xml><block type="maze_moveNorth"/></xml><xml><block type="maze_moveEast"/></xml> te acercarán al cerdo.
+      courseA_maze_seq1_2018_authored_hint:
+        courseA_maze_seq1_a: |-
+          Si tienes problemas para mover al pájaro, asegúrate de que los bloques están colocados en su lugar bajo la línea <xml>
+          <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          El pájaro necesita moverse 3 veces hacia el Oeste para llegar al cerdo. Usa este bloque:
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq1_2019_authored_hint:
+        courseA_maze_seq1_a: |-
+          Si tienes problemas para mover al pájaro, asegúrate de que los bloques están colocados en su lugar bajo la línea <xml>
+          <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          El pájaro necesita moverse 3 veces hacia el Oeste para llegar al cerdo. Usa este bloque:
+
+          <xml><block type="maze_moveWest"/></xml>
       courseA_maze_seq2_authored_hint:
         courseA_maze_seq2_a: A este programa le falta 1 bloque. ¿Puedes averiguar cuál es?
         courseA_maze_seq2_b: Intenta ejecutar el código primero para ver en donde termina el ave. ¿A dónde necesitas ir a partir de ahí?
@@ -5413,6 +5498,12 @@ es:
           <title name="SPRITE">1</title>
           <title name="DIR">2</title>
           </block></next></block></xml>
+      courseA_playLab_events5_authored_hint:
+        courseA_playLab_events5_a: "Aquí tienes los bloques del evento que necesitarás para mover a Jorge arriba y abajo:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">arriba</title>\n  </block></xml>\n\nand \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">abajo</title>\n  </block></xml>"
+      courseA_playLab_events5_2018_authored_hint:
+        courseA_playLab_events5_a: "Aquí tienes los bloques del evento que necesitarás para mover a Jorge arriba y abajo:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">arriba</title>\n  </block></xml>\n\nand \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">abajo</title>\n  </block></xml>"
+      courseA_playLab_events5_2019_authored_hint:
+        courseA_playLab_events5_a: "Aquí tienes los bloques del evento que necesitarás para mover a Jorge arriba y abajo:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">arriba</title>\n  </block></xml>\n\nand \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">abajo</title>\n  </block></xml>"
       courseA_playLab_events6_authored_hint:
         courseA_playLab_events6_b: |-
           Éste es el bloque que usarías para cambiar el fondo:
@@ -5594,7 +5685,7 @@ es:
           </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5613,7 +5704,7 @@ es:
           </xml>
       courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5632,7 +5723,7 @@ es:
           </xml>
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5648,7 +5739,7 @@ es:
           </xml>
       courseB_Scrat_ramp5a_2019_authored_hint:
         '1': |-
-          Your code should look like this:
+          Tu código debería tener este aspecto:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -6213,6 +6304,8 @@ es:
       courseB_maze_seqCold_authored_hint:
         courseB_maze_seqCold_a: '¿Atascado? Intenta trazar la ruta del pájaro con tu dedo.'
         courseB_maze_seqCold_b: '¡Los bloques añadidos necesitan colocarse antes del último ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )'
+      courseB_maze_seqOld_authored_hint:
+        courseB_maze_seqOld_a: Si tienes problemas, primero intenta escribir los pasos en un papel.
       courseB_maze_seq_challenge1_authored_hint:
         courseB_maze_seq_challenge1_a: El camino más corto puede que no funcione esta vez.
         courseB_maze_seq_challenge1_b: Intenta usar el bloque <xml><block type="maze_moveWest"/></xml> para empezar.
@@ -8073,6 +8166,8 @@ es:
         artistLoopsK9_c: "Los bucles deberían hacer lo siguiente:\n- Bucle 1\n  - Derecha\n  - Abajo\n  \n-Bucle 2\n  - Derecha\n  - Arriba\n\n-Bucle 3\n  - Izquierda\n  - Arriba\n\n- Bucle 4\n  - Izquierda\n  - Abajo"
       grade1_artist_loops7b_authored_hint:
         grade1_artist_loops7b_a: '¿Cuántas veces deberías repetir este patrón para construir la escalera?'
+      grade1_maze_sequence10_authored_hint:
+        grade1_maze_sequence10_a: Si tienes problemas, primero intenta escribir los pasos en un papel.
       grade1_maze_sequence3_authored_hint:
         grade1_maze_sequence3_a: Intenta añadir una instrucción cada vez hasta que llegues al cerdo.
       grade1_maze_sequence5_authored_hint:
@@ -8084,6 +8179,14 @@ es:
       grade1_maze_sequence8_authored_hint:
         grade1_maze_sequence8_a: '¿Atascado? Intenta trazar la ruta del pájaro con tu dedo.'
         grade1_maze_sequence8_b: '¡Los bloques añadidos necesitan colocarse antes del último ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )'
+      grade1_maze_sequence9_authored_hint:
+        grade1_maze_sequence9_a: Si tienes problemas, primero intenta escribir los pasos en un papel.
+      grade1_maze_sequenceA_authored_hint:
+        grade1_maze_sequence10_a: Si tienes problemas, primero intenta escribir los pasos en un papel.
+      grade1_maze_sequenceB_authored_hint:
+        grade1_maze_sequenceB_a: Si tienes problemas, primero intenta escribir los pasos en un papel.
+      grade1_maze_sequenceC_authored_hint:
+        grade1_maze_sequenceC_a: Si tienes problemas, primero intenta escribir los pasos en un papel.
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: '¡Aquí tienes dos caminos para resolver el puzzle!'
       grade2_MakeDogTag_1_authored_hint:

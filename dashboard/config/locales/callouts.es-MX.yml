@@ -132,23 +132,23 @@ es-MX:
       CSD U6 light show_2019_callout:
         CSDUDL03P09: "¿Qué hace esta línea?"
       CSD U6 tugowar variables 1_callout:
-        CSD_U6_startGame: Definir Inicio de Juego aqui
+        CSD_U6_startGame: Define iniciarJuego aquí
       CSD U6 tugowar variables 1_2018_callout:
-        CSD_U6_startGame: Definir Inicio de Juego aqui
+        CSD_U6_startGame: Define iniciarJuego aquí
       CSD U6 tugowar variables 1_2019_callout:
-        CSD_U6_startGame: Definir Inicio de Juego aqui
+        CSD_U6_startGame: Define iniciarJuego aquí
       CSD U6 tugowar variables 2_callout:
-        CSD_U6_movePlayer: Definir moverJugador () aquí
+        CSD_U6_movePlayer: Define moverJugador() aquí
       CSD U6 tugowar variables 2_2018_callout:
-        CSD_U6_movePlayer: Definir moverJugador () aquí
+        CSD_U6_movePlayer: Define moverJugador() aquí
       CSD U6 tugowar variables 2_2019_callout:
-        CSD_U6_movePlayer: Definir moverJugador () aquí
+        CSD_U6_movePlayer: Define moverJugador() aquí
       CSD U6 tugowar variables 3_callout:
-        CSD_U6_checkWin: Verificar si el jugador ha ganado
+        CSD_U6_checkWin: Verifica si el jugador ha ganado
       CSD U6 tugowar variables 3_2018_callout:
-        CSD_U6_checkWin: Verificar si el jugador ha ganado
+        CSD_U6_checkWin: Verifica si el jugador ha ganado
       CSD U6 tugowar variables 3_2019_callout:
-        CSD_U6_checkWin: Verificar si el jugador ha ganado
+        CSD_U6_checkWin: Verifica si el jugador ha ganado
       Counting_callout:
         New Play Lab Project_callout1: "¡Haz click en las categorías para ver los
           bloques en tu caja de herramientas! Arrastra los bloques al área de trabajo
@@ -174,10 +174,9 @@ es-MX:
       Course 4 Artist Functions 8_callout:
         edit_function: Haz clic aquí para editar tu función.
       Course 4 Artist Functions challenge_callout:
-        Course_4_Artist_Functions_challenge_1: Observar que hemos ordenado todos los
-          bloques y los hemos colocado detrás de las categorías para mantener las
-          cosas ordenadas. Haga clic aquí para encontrar todos los bloques que usted
-          necesita.
+        Course_4_Artist_Functions_challenge_1: Ten en cuenta que hemos organizado
+          los bloques en categorías para que todo esté ordenado. Haz clic aquí para
+          encontrar todos los bloques que necesitas.
       Course 4 Artist Params 2_callout:
         length_parameter: ¿Puedes actualizar esta función para que utilice el parámetro
           "longitud"?
@@ -200,17 +199,17 @@ es-MX:
         degrees_per_side: Divide 360 entre el número de lados para obtener el tamaño
           de cada ángulo en grados.
       Course 4 Artist Vars 8_callout:
-        Course_4_Artist_Vars_8_a: "¿Necesitas más espacio? Arrastre esta barra para
-          ampliar el área de codificación."
+        Course_4_Artist_Vars_8_a: "¿Necesitas más espacio? Arrastra esta barra para
+          ampliar el área de programación."
       Course 4 Artist Vars 9_callout:
         set_sides: Usa este bloque para dar a "lados" el valor necesario para completar
           el rompecabezas.
       Course 4 Bee 1_callout:
-        if_bee_nectar: Utilice el bloque "si" para decidir si la abeja debe obtener
-          néctar o hacer miel
+        if_bee_nectar: Usa el bloque "si" para decidir si la abeja debe recoger el
+          néctar o hacer la miel
       Course 4 Bee 3_callout:
-        if_else_bee: Use el bloque "si/si no" para que la abeja obtenga néctar de
-          una flor y haga miel si no es una flor
+        if_else_bee: Usa el bloque "si/si no" para que la abeja recoja el néctar de
+          una flor y haga la miel si no hay una flor
       Course 4 Bee For Loops 1_callout:
         get_nectar: Usa el bloque nuevo "obtener néctar".
       Course 4 Bee For Loops 6_callout:
@@ -220,18 +219,18 @@ es-MX:
         edit_get_nectar: Usa este botón para editar la función y cambiar la dirección
           hacia la que la abeja girará para obtener el néctar.
       Course 4 Bee Params 4 - Two WhenRun_callout:
-        Course_4_Bee_Params_4: Ajuste estas variables a "0" o "1" a esto le llamamos
-          establecer una "bandera". Esta bandera puede señalar a nuestra función hacia
-          cual dirección nuestra abeja tiene que ir.
+        Course_4_Bee_Params_4: Al configurar estas variables a "0" o "1", estamos
+          estableciendo una "bandera". Esta bandera puede indicar a la función hacia
+          qué dirección debe ir nuestra abeja.
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: Dale a "Ejecutar" para probar el programa.
-        Course 4 Maze 1_callout2: Arrastre el bloque "mover" y pégalo debajo de otros
-          bloques en el área de trabajo
+        Course 4 Maze 1_callout2: Arrastra el bloque "mover" y colócalo debajo de
+          los otros bloques en el área de trabajo
       Course 4 Maze 4_callout:
         repeat: Ponga bloques dentro del bucle para repetir comandos
       Course 4 Play Lab Params 2_callout:
-        Course_4 _Play_Lab_Params_2_1: Clica en "editar" para actualizar esta función
-          para que use el parámetro de altura.
+        Course_4 _Play_Lab_Params_2_1: Haz clic en "editar" para actualizar esta función
+          y que utilice el parámetro de altura.
       Course 4 Play Lab Params 3_callout:
         edit_function: Haz clic aquí para editar tu función.
       Course 4 Play Lab Params 6_callout:
@@ -242,14 +241,14 @@ es-MX:
         Course_4_Play_Lab_Vars_9_1: "¡Todos tus bloques están organizados en categorías!
           Haz click en la etiqueta para ver las piezas dentro."
       Course 4 Play Labs For Loops 5_callout:
-        Course_4_Play_Labs_For_Loops_5: "¡Buah! ¡Mi código explotó! ¿Puedes volver
-          a armarlo para resolver este puzzle?"
+        Course_4_Play_Labs_For_Loops_5: "¡Oh, no! ¡Mi código explotó! ¿Puedes volver
+          a armarlo para resolver este desafío?"
       Course 4 Playlab For Loops 4b_callout:
-        Course_4_Playlab_For_Loops_4b_1: Tenga en cuenta que la variable `contador`
-          tiene un nombre diferente para cada personaje? Eso es para que cada bucle
-          `para` pueda controlar su propio contador.
-        Course_4_Playlab_For_Loops_4b_2: En este puzzle, solo puedes cambiar el "incremento"
-          de los bucles `para`.
+        Course_4_Playlab_For_Loops_4b_1: "¿Has visto que la variable `contador` tiene
+          un nombre diferente para cada personaje? Eso es para que cada bucle `desde`
+          pueda controlar su propio contador."
+        Course_4_Playlab_For_Loops_4b_2: En este desafío, solo puedes cambiar el "incremento"
+          de los bucles `desde`.
       Course 4 SCV 6_callout:
         Course_4_SCV_6: "¡Este bloque te permite personalizar tu color para casi cualquier
           cosa que quieras ver! ¡Juega con los números para ver qué ocurre!"
@@ -265,7 +264,7 @@ es-MX:
         dance_callout_11_a: "¡Bloque nuevo!"
         dance_callout_11_b: "¡Bloque nuevo!"
       CourseD_Dance_Party_11_5_callout:
-        dance_party_11_5_groups: Mira aquí para los bloques "todos los patos"
+        dance_party_11_5_groups: Busca aquí los bloques de "todos los patos"
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Usa las flechas para mover al actor
       CourseF_PlayLab_vars10_callout:
@@ -282,12 +281,12 @@ es-MX:
       Dance_Party_06_callout:
         dance_callout_06: Añade tu nuevo bailarín aquí
       Dance_Party_11.5_test_callout:
-        dance_party_11.5_groups: Mira aquí para los bloques "todos los patos"
+        dance_party_11.5_groups: Busca aquí los bloques de "todos los patos"
       Dance_Party_11_callout:
         dance_callout_11_a: "¡Bloque nuevo!"
         dance_callout_11_b: "¡Bloque nuevo!"
       Dance_Party_11_5_callout:
-        dance_party_11_5_groups: Mira aquí para los bloques "todos los patos"
+        dance_party_11_5_groups: Busca aquí los bloques de "todos los patos"
       Eval Design Recipe .1_callout:
         edit_function: Haz clic aquí para editar tu función.
       Frozen Project Test Toolbox_callout:
@@ -326,19 +325,19 @@ es-MX:
       Infinity_repeat_callout:
         Infinity_repeat_callout: Lugar para mover bloques dentro de aquí
       InspirationalArtwork_callout:
-        InspirationalArtwork_1: "¡Intenta usar el nuevo bloque `comentario` debajo
-          de esta etiqueta para dejarte notas dentro de tu programa!"
+        InspirationalArtwork_1: "¡Prueba el nuevo bloque `comentario` debajo de esta
+          etiqueta para dejarte notas dentro de tu programa!"
       InspirationalArtwork_2018_callout:
-        InspirationalArtwork_1: "¡Intenta usar el nuevo bloque `comentario` debajo
-          de esta etiqueta para dejarte notas dentro de tu programa!"
+        InspirationalArtwork_1: "¡Prueba el bloque `comentario` debajo de esta etiqueta
+          para dejarte notas dentro de tu programa!"
       InspirationalArtwork_2019_callout:
-        InspirationalArtwork_1: "¡Intenta usar el nuevo bloque `comentario` debajo
-          de esta etiqueta para dejarte notas dentro de tu programa!"
+        InspirationalArtwork_1: "¡Prueba el bloque `comentario` debajo de esta etiqueta
+          para dejarte notas dentro de tu programa!"
       MC HOC 2016 Level 2-2_callout:
         craft2_run_button_callout: Cuando estés listo, presiona "Ejecutar" para probar
           tu programa.
       MC HOC 2016 New Walk_callout:
-        MC_HOC_2016_New_Walk_callout2: Pressiona "Ejecutar" para empezar a moverse.
+        MC_HOC_2016_New_Walk_callout2: Presiona "Ejecutar" para comenzar a moverte.
       MC_HOC_2017_01_Cole_callout:
         MC_HOC_2017_01_Cole_2: Usa las teclas de flecha o haz clic aquí para empezar
           a mover al jugador.
@@ -385,8 +384,8 @@ es-MX:
         sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
           para guardar este proyecto en tu cuenta!"
       NEW Course 4 Artist Functions 3_callout:
-        NEW_Course_4_Artist_Functions_3_1: Clica aquí para editar la nueva función
-          para crear un cuadrado.
+        NEW_Course_4_Artist_Functions_3_1: Haz clic aquí para editar la nueva función
+          y que pueda crear un cuadrado.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Haz clic aquí para editar tu función.
         function_editor_draw_square: Ésta es tu definición de función. Estos bloques
@@ -406,15 +405,15 @@ es-MX:
         place_length_variable: Arrastre aquí la variable longitud para reemplazar
           los signos de interrogación
       NEW Course 4 Bee For Loops 4_callout:
-        bee_for_loop: Introduce la mayor cantidad de néctar que quieras que la abeja
-          recolecte aquí
+        bee_for_loop: Introduce aquí la mayor cantidad de néctar que quieres que recoja
+          la abeja
       NEW Course 4 Bee For Loops 5_callout:
         actions_category: ¡La caja de herramientas tiene un nuevo aspecto! Ahora están
           aquí los bloques de "Acciones".
       New Artist Project_callout:
-        New Artist Project_callout1: "¡Haga clic en las categorías para ver los bloques
-          en su caja de herramientas! Arrastrar los bloques al área de trabajo a añadir
-          a su programa"
+        New Artist Project_callout1: "¡Haz clic en las categorías para ver los bloques
+          de tu caja de herramientas! Puedes arrastrar los bloques al área de trabajo
+          para añadirlos a tu programa"
         New Artist Project_callout2: Presiona "Ejecutar" para guardar y ejecutar tu
           programa
         sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
@@ -447,15 +446,15 @@ es-MX:
           acabarlo?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Dale a "Ejecutar" para probar el programa.
-        craft_drag_block_callout: Arrastra un bloque "avanzar" y ajústalo debajo del
+        craft_drag_block_callout: Arrastra un bloque "avanzar" y colócalo debajo del
           otro bloque
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Dale a "Ejecutar" para probar el programa.
-        craft_drag_block_callout: Arrastra un bloque "avanzar" y ajústalo debajo del
+        craft_drag_block_callout: Arrastra un bloque "avanzar" y colócalo debajo del
           otro bloque
       Overworld Move to Sheep_2019_callout:
         craft_run_button_callout: Dale a "Ejecutar" para probar el programa.
-        craft_drag_block_callout: Arrastra un bloque "avanzar" y ajústalo debajo del
+        craft_drag_block_callout: Arrastra un bloque "avanzar" y colócalo debajo del
           otro bloque
       Overworld Place Wall_callout:
         craft_inside_repeat: Coloca bloques aquí para repetir acciones.
@@ -476,31 +475,31 @@ es-MX:
         4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
           en categorías.  ¡Haz click sobre estas palabras para verlo todo!
       Play Lab Rocket 2_callout:
-        pass_function: Este bloque de inicio (función) te permite pasar tu función
+        pass_function: Este bloque de iniciar(función) te permite mover tu función
           (no el valor que devuelve tu función con alguna entrada) a la biblioteca
-          de animación del cohete. ¡La animación que ves en la pantalla está usando
-          tu función para mover el cohete!
-        play lab rocket 2: Define aquí la función altura del cohete
-      Play Lab Rocket 2B_callout:
-        pass_function: Este bloque negro te permite pasar tu función (no el valor
-          que devuelve su función con alguna ingresada) a la biblioteca de animación
-          del cohete. ¡La animación que ves en la pantalla está usando tu función
+          de animación del cohete. ¡La animación que ves en la pantalla usa tu función
           para mover el cohete!
+        play lab rocket 2: Define aquí la función de altura del cohete
+      Play Lab Rocket 2B_callout:
+        pass_function: Este bloque negro te permite mover tu función (no el valor
+          que devuelve tu función con alguna entrada) a la biblioteca de animación
+          del cohete. ¡La animación que ves en la pantalla usa tu función para mover
+          el cohete!
       Play Lab Rocket 3_callout:
-        Play Lab Rocket 3 1: Actualiza la declaración de propósito antes de pasar
-          a los ejemplos y la definición.
+        Play Lab Rocket 3 1: Actualiza la sentencia de propósito antes de pasar a
+          los ejemplos y la definición.
       Quantum Bee - Ryan_callout:
-        feeling_stuck_callout_test: " ¿Te sientes atascado? <br /> ¡Haz clic en la
-          bombilla para obtener una pista!"
+        feeling_stuck_callout_test: " ¿No puedes avanzar?<br />¡Haz clic en la bombilla
+          para obtener una pista!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_2: "¡Intenta usar el nuevo bloque `comentario`
-          debajo de esta etiqueta para dejarte notas dentro de tu programa!"
+        4-5_Artist_Patterns_Free_Play_2: "¡Prueba el nuevo bloque `comentario` debajo
+          de esta etiqueta para dejarte notas dentro de tu programa!"
       Robot Doodle_2018_callout:
-        4-5_Artist_Patterns_Free_Play_2: "¡Intenta usar el nuevo bloque `comentario`
-          debajo de esta etiqueta para dejarte notas dentro de tu programa!"
+        4-5_Artist_Patterns_Free_Play_2: "¡Prueba el nuevo bloque `comentario` debajo
+          de esta etiqueta para dejarte notas dentro de tu programa!"
       Robot Doodle_2019_callout:
-        4-5_Artist_Patterns_Free_Play_2: "¡Intenta usar el nuevo bloque `comentario`
-          debajo de esta etiqueta para dejarte notas dentro de tu programa!"
+        4-5_Artist_Patterns_Free_Play_2: "¡Prueba el nuevo bloque `comentario` debajo
+          de esta etiqueta para dejarte notas dentro de tu programa!"
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
           en categorías.  ¡Haz click sobre estas palabras para verlo todo!
@@ -516,10 +515,10 @@ es-MX:
         sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
           para guardar este proyecto en tu cuenta!"
       Rocket Height Course A_callout:
-        pass_function: Este bloque de inicio (función) te permite pasar tu función
+        pass_function: Este bloque de iniciar(función) te permite mover tu función
           (no el valor que devuelve tu función con alguna entrada) a la biblioteca
-          de animación del cohete. ¡La animación que ves en la pantalla está usando
-          tu función para mover el cohete!
+          de animación del cohete. ¡La animación que ves en la pantalla usa tu función
+          para mover el cohete!
       Ryan - 4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
           tienes que revisar las colmenas.
@@ -529,17 +528,16 @@ es-MX:
       Ryan_Demo_callout:
         dance_callout_02: "¡Añade este bloque a tu programa!"
       SG U3L08 how to add comments_callout:
-        comment_highlight: Arrastra un bloque de comentarios de aquí a tu código
+        comment_highlight: Arrastra un bloque de comentarios desde aquí hacia tu código
       SG U3L2_Turtle3by3Grid_callout:
-        pen_functions: subir lapiceroy Bajar lapicero están aquí ahora si quieres
-          usarlos.
+        pen_functions: Ya puedes usar lápizArriba y lápizAbajo.
         goals_tab: arrastra los objetivos desde aquí
       SGU3L2A Introducing Subgoals_callout:
-        goals_palette_show: Aquí hay una lista de subobjetivos
-        goals_workspace: Ejemplo de código con subobjetivos en él
+        goals_palette_show: Esta es una lista de objetivos secundarios
+        goals_workspace: Ejemplo de código con objetivos secundarios
       Sam the Butterfly 3_callout:
-        Sam the Butterfly 3 1: Edita esta función para evitar que Sam se salga del
-          lado derecho
+        Sam the Butterfly 3 1: Edita esta función para evitar que Sam se vaya por
+          el lado derecho
       Test Play Lab Project With Walls_callout:
         New Play Lab Project_callout1: "¡Haz click en las categorías para ver los
           bloques en tu caja de herramientas! Arrastra los bloques al área de trabajo
@@ -549,11 +547,11 @@ es-MX:
         sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
           para guardar este proyecto en tu cuenta!"
       U3L08 how to add comments_callout:
-        comment_highlight: Arrastra un bloque de comentarios de aquí a tu código
+        comment_highlight: Arrastra un bloque de comentarios desde aquí hacia tu código
       U3L08 how to add comments_2018_callout:
-        comment_highlight: Arrastra un bloque de comentarios de aquí a tu código
+        comment_highlight: Arrastra un bloque de comentarios desde aquí hacia tu código
       U3L08 how to add comments_2019_callout:
-        comment_highlight: Arrastra un bloque de comentarios de aquí a tu código
+        comment_highlight: Arrastra un bloque de comentarios desde aquí hacia tu código
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Este código comprobará si hay lava. ¿Puedes añadir
           un comando para avanzar?
@@ -570,27 +568,27 @@ es-MX:
       Underground Iron_2019_callout:
         craft_what_is_iron: "¡Extrae este hierro!"
       WebLab PS test - 1-12_callout:
-        version_history_button: Ver el historial de versiones
+        version_history_button: Mira el historial de versiones
       aE1_callout:
-        aE1_1: Sólo habrá dos de estos y dos vueltas
+        aE1_1: Solo habrá dos de estos y dos giros
       aE2_callout:
-        aE2_1: Sólo habrá dos de estos y dos vueltas
+        aE2_1: Aún sigue habiendo dos de estos y dos giros
       aE3_callout:
-        aE3_1: Sólo un puñado de estos
+        aE3_1: Solo hay un puñado de estos
       aE3alternate_callout:
-        aE3_1: Sólo un puñado de estos
+        aE3_1: Solo hay un puñado de estos
       aE3alternateB_callout:
-        aE3_1: Sólo un puñado de estos
+        aE3_1: Solo hay un puñado de estos
       aE4_callout:
-        aE3_1: Sólo un puñado de estos
+        aE3_1: Solo hay un puñado de estos
       aE5_callout:
-        aE3_1: Sólo un puñado de estos
+        aE3_1: Solo hay un puñado de estos
       aE6_callout:
-        aE6_1: Sólo 1 mover girar hacia adelante y 1 bloque
+        aE6_1: Solo 1 movimiento hacia adelante y 1 bloque de giro
       aEfreeplay_callout:
-        aEfreeplay_1: Tenga en cuenta que a partir de la artista en el medio puede
-          ser torpe.  Estamos buscando en agregar acciones que pueden mover al artista
-          a las posiciones absolutas.
+        aEfreeplay_1: Ten en cuenta que iniciar el artista en el centro puede ser
+          raro. El objetivo es añadir acciones que puedan mover al artista a posiciones
+          absolutas.
       artistLoopsK2_callout:
         artistLoopsK2_1: Este número indica cuántos de estos bloques se pueden utilizar
           en este desafío.
@@ -598,11 +596,13 @@ es-MX:
         artistLoopsK2_1: Este número indica cuántos de estos bloques se pueden utilizar
           en este desafío.
       behaviors 1_callout:
-        behaviors_edit: Hacer clic aquí para ver cómo funciona este comportamiento.
+        behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
       behaviors 4_callout:
-        behaviors_edit: Hacer clic aquí para ver cómo funciona este comportamiento.
+        behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
+      behaviors 4a_callout:
+        behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
       behaviors 5_callout:
-        behaviors_edit: Añadir código a este comportamiento.
+        behaviors_edit: Agrega código a este comportamiento.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Usa este loop para recolectar todo
           el néctar (o miel) de una flor (o panal).
@@ -871,8 +871,8 @@ es-MX:
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: "¡Los bloques grises no se pueden eliminar!"
       courseC_maze_debugging5_2018_callout:
-        courseC_maze_debugging5_1: "¡Estos bloques están bloqueados y no se pueden
-          eliminar!"
+        courseC_maze_debugging5_1: "¡Estos bloques grises están bloqueados y no se
+          pueden eliminar!"
       courseC_maze_debugging5_2019_callout:
         courseC_maze_debugging5_1: "¡Estos bloques están bloqueados y no se pueden
           eliminar!"
@@ -1530,7 +1530,7 @@ es-MX:
           Cambia el texto que va conectado a este bloque para cambiar lo que está
           siendo retenido en tu variable.
       course_playlab_variables3_callout:
-        course_playlab_variables3_1: Así es como se establece el valor de tu variable.
+        course_playlab_variables3_1: Así es cómo se establece el valor de tu variable.
       coursea_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Después de ajustar todos los bloques juntos, presiona
           "Ejecutar" para iniciar tu programa.
@@ -1550,10 +1550,10 @@ es-MX:
         frozen_circle_function_with_parameter_circle: Utiliza el bloque de "crear
           un círculo" y cambia su tamaño.
       frozen circle function with parameter_b_callout:
-        frozen_circle_function_with_parameter_circle: Usa el bloque 'crear un círculo'
+        frozen_circle_function_with_parameter_circle: Usa el bloque `crear un círculo`
           y cambia el tamaño.
       frozen circle function with parameter_test_callout:
-        frozen_circle_function_with_parameter_circle: Usa el bloque 'crear un círculo'
+        frozen_circle_function_with_parameter_circle: Usa el bloque `crear un círculo`
           y cambia el tamaño.
       frozen cross rotate_callout:
         replace_questions_degree: Usa el menú desplegable para reemplazar "???" con
@@ -1583,28 +1583,28 @@ es-MX:
         snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
           de nieve!"
       frozen line_callout:
-        run: Dale a "Ejecutar" para probar el programa.
+        run: ¡Presiona "Ejecutar" para probar tu programa!
         move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por
           debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
       frozen line_b_callout:
-        run: Dale a "Ejecutar" para probar el programa.
+        run: ¡Presiona "Ejecutar" para probar tu programa!
         move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por
           debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
       frozen line_test_callout:
-        run: Dale a "Ejecutar" para probar el programa.
+        run: ¡Presiona "Ejecutar" para probar tu programa!
         move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por
           debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
       frozen perpendicular_callout:
         turn_elsa: Usa el bloque de "Girar" para que Elsa gire. El número en el menú
           desplegable determina cuánto gira Elsa
       frozen perpendicular_b_callout:
-        turn_elsa: 'Usa el bloque ''girar'' para hacer que Elsa gire. '
+        turn_elsa: 'Usa el bloque `girar` para que Elsa dé un giro. '
       frozen perpendicular_test_callout:
-        turn_elsa: 'Usa el bloque ''girar'' para hacer que Elsa gire. '
+        turn_elsa: 'Usa el bloque `girar` para que Elsa dé un giro. '
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Utiliza el bloque de "crear una rama de copo de nieve"
       frozen snowflake branch_b_callout:
-        frozen_snowflake_branch: Usa la función "crear una rama de copos de nieve"
+        frozen_snowflake_branch: Usa la función "crear un brazo de copo de nieve"
       frozen snowflake branch_test_callout:
         frozen_snowflake_branch: Utiliza el bloque de "crear una rama de copo de nieve"
       frozen square iterative_callout:
@@ -1744,8 +1744,8 @@ es-MX:
         add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haz clic en
           agregar y luego arrastrarlo en la definición de la función
       grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: "¿Necesitas más espacio? Arrastre esta barra para
-          ampliar el área de codificación."
+        Course_4_Artist_Vars_8_a: "¿Necesitas más espacio? Arrastra esta barra para
+          ampliar el área de programación."
       grade5_artist_variables_pentagons1_callout:
         place_length_variable: Arrastre aquí la variable longitud para reemplazar
           los signos de interrogación
@@ -1812,10 +1812,10 @@ es-MX:
         sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
           para guardar este proyecto en tu cuenta!"
       subgoal-test-clone_callout:
-        move_subgoal: Esta es la etiqueta del subgrupo "mover la tortuga".  Arrastrarlo
+        move_subgoal: Esta es la etiqueta del subgrupo "mover la tortuga". Arrástrala
           hacia el espacio de trabajo.
       subgoal-test_callout:
-        move_subgoal: Esta es la etiqueta del subgrupo "mover la tortuga".  Arrastrarlo
+        move_subgoal: Esta es la etiqueta del subgrupo "mover la tortuga". Arrástrala
           hacia el espacio de trabajo.
         orient_subgoal: Esto significa que quieres girar a la tortuga
       testing code callout_callout:

@@ -11,9 +11,17 @@ Background:
   And I press "finishButton"
 
 Scenario: As student with dev experiment on, 'Feedback' tab is not visible if no feedback
-  #As student, see temporary text
+  #As student, with no feedback, can see Key Concept tab on rubric level
   And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?enableExperiments=2019-mini-rubric"
-  And element ".uitest-feedback" is not visible
+  And I wait to see ".uitest-feedback"
+  And element ".editor-column" contains text "Key Concept"
+  Then I click selector ".uitest-feedback"
+  And I wait to see ".editor-column"
+  And element ".editor-column" contains text "This is the key concept for this mini rubric."
+  And element "#rubric-input-exceeds" does not exist
+  And element "#ui-test-submit-feedback" does not exist
+  And element "#ui-test-feedback-time" does not exist
+  And element "ui-test-feedback-input" does not exist
   Then I sign out
 
 @no_ie
@@ -38,6 +46,14 @@ Otherwise don't show feedback tab
   And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
   And I wait for the page to fully load
   And I wait to see ".uitest-feedback"
+  And element ".editor-column" contains text "Key Concept"
+  Then I click selector ".uitest-feedback"
+  And I wait to see ".editor-column"
+  And element ".editor-column" contains text "This is the key concept for this mini rubric."
+  And element "#rubric-input-exceeds" does not exist
+  And element "#ui-test-submit-feedback" does not exist
+  And element "#ui-test-feedback-time" does not exist
+  And element "ui-test-feedback-input" does not exist
 
   #As teacher, reviewing work, submit feedback
   And I wait to see ".show-handle"
@@ -88,6 +104,7 @@ Otherwise don't show feedback tab
   Then I sign out
   And I sign in as "Lillian"
   And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?enableExperiments=2019-mini-rubric"
+  And I wait to see ".uitest-feedback"
   And I press the first ".uitest-feedback" element
   And I wait until ".editor-column" contains text "Nice!"
   And element "#rubric-input-exceeds" is checked

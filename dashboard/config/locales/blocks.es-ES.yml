@@ -697,6 +697,8 @@ es:
         text: 'comentario: {COMMENT}'
       gamelab_console.log:
         text: registro de mensaje {MESSAGE}
+      gamelab_countByCostume:
+        text: número de {COSTUME}
       gamelab_createNewSprite:
         text: "haz un gráfico nuevo \n llamado {NAME} \n con traje {COSTUME} \n en
           {LOCATION}"
@@ -801,6 +803,7 @@ es:
             '"y"': y
             '"z"': z
       gamelab_layoutSprites:
+        text: diseño {COSTUME} como {FORMAT}
         options:
           FORMAT:
             '"border"': frontera
@@ -905,6 +908,8 @@ es:
             '"West"': Oeste
       gamelab_pointToward:
         text: apuntar {SPRITE} hacia {LOCATION}
+      gamelab_printText:
+        text: imprimir {TEXT}
       gamelab_randColor:
         text: color aleatorio
       gamelab_randomColor:
@@ -917,6 +922,8 @@ es:
         text: gráfico {SPRITE} detiene {BEHAVIOR}
       gamelab_removeTint:
         text: eliminar color de {THIS}
+      gamelab_say:
+        text: "{THIS} dice {TEXT}"
       gamelab_secondTouched:
         text: segundo gráfico tocado
       gamelab_setAnimation:
@@ -924,9 +931,11 @@ es:
       gamelab_setBackground:
         text: establecer color de fondo {COLOR}
       gamelab_setBackgroundImage:
+        text: establecer fondo a {IMG}
         options:
           IMG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
+            undefined: ninguno
       gamelab_setDirection:
         text: definir {SPRITE} dirección de movimiento {DIRECTION}
       gamelab_setFrameDelay:
@@ -966,6 +975,13 @@ es:
         text: cambiar color de {THIS} a {COLOR}
       gamelab_setup:
         text: establecer
+      gamelab_setupSim:
+        text: |-
+          configurar simulación con
+          {SPRITE1N}{SPRITE1COSTUME}velocidad{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}velocidad{SPRITE2SPEED}
+          recolectando
+          {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: mostrar pantalla de título {BREAK} título {TITLE} texto {SUBTITLE}
       gamelab_spriteClicked:
@@ -1095,6 +1111,8 @@ es:
         text: mientras {SPRITE1} está tocando {SPRITE2}
       gamelab_whileUpArrow:
         text: mientras se presiona la flecha arriba
+      gamelab_worldSeconds:
+        text: segundos transcurridos
       gamelab_xLocationOf:
         text: coordenada x de {SPRITE}
       gamelab_yLocationOf:

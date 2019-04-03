@@ -156,22 +156,22 @@ es-MX:
         title: Bucles desconectados
         desc: '¡En esta lección aprenderás sobre bucles!'
       courseB_unplugged_MRF:
-        title: Actividad desconectada
+        title: Actividad sin conexión
         desc: '¡En esta lección ''programarás'' a tus amigos!'
       courseB_unplugged_loopyMRF:
-        title: Actividad desconectada
+        title: Actividad sin conexión
         desc: '"Programarás" a tus amigos como en "Mis amigos robóticos", ¡pero esta vez, con bucles!'
       courseC_Unplugged_ScreenOutTheMean:
         title: Actividad desconectada
         desc: Hoy aprenderás qué significa que alguien esté en linea.
       courseD_unplugged_digitalCitizenship:
-        title: Actividad desconectada
+        title: Actividad sin conexión
         desc: Hoy aprenderás qué significa ser un ciudadano digital.
       courseE_unplugged_privateInformation:
         title: 'Common Sense Education: Información privada y personal '
         desc: '¡Hoy aprenderás la diferencia entre información privada e información personal!'
       courseF_unplugged_powerOfWords:
-        title: Actividad desconectada
+        title: Actividad sin conexión
         desc: Hoy aprenderás qué significa que alguien esté en linea.
       deeper learning description:
         desc: 'falta la traducción: en-US.data.unplugged.desc'
@@ -272,10 +272,10 @@ es-MX:
         title: Programación con Papel Cuadriculado
         desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Actividad desconectada
+        title: Actividad sin conexión
         desc: Hoy aprenderás qué significa ser un ciudadano digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Actividad desconectada
+        title: Actividad sin conexión
         desc: Hoy aprenderás qué significa que alguien esté en linea.
       Conditionals_2018:
         title: Condicionales
@@ -334,7 +334,7 @@ es-MX:
         title: Programación de relevos
         desc: Esta actividad comenzará con una breve lección sobre debugging y persistencia, luego pasará rápidamente a una carrera contrarreloj a medida que los estudiantes se dividen en equipos y trabajan juntos para escribir un programa a la vez.
       courseD_unplugged_digitalCitizenship_2019:
-        title: Actividad desconectada
+        title: Actividad sin conexión
         desc: Hoy aprenderás qué significa ser un ciudadano digital.
       BinaryImages_2019:
         title: Imágenes binarias
@@ -358,7 +358,7 @@ es-MX:
         title: Girar y girar
         desc: Esta lección introduce el concepto de programación de los bucles (instrucciones repetidas) a través de una actividad de baile. Los estudiantes aprenderán una simple coreografía, después se les pedirá que la repitan.
       courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Actividad desconectada
+        title: Actividad sin conexión
         desc: Hoy aprenderás qué significa que alguien esté en linea.
       BigEvent_2019:
         title: El gran evento
@@ -400,3 +400,6 @@ es-MX:
       courseE_simon_says_2019:
         title: Simón dice
         desc: Juega y piensa qué comandos son necesarios para obtener los resultados adecuados.
+      courseB_unplugged_passwords_2019:
+        title: Contraseñas seguras
+        desc: Explora por qué las personas utilizan contraseñas, aprende los beneficios de usarlas y descubre estrategias que te ayudarán a crear y conservar contraseñas fuertes y seguras.
