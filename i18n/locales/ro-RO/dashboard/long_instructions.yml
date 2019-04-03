@@ -204,7 +204,19 @@ ro:
         Acest program utilizează volumul de bas (sunetele joase) din muzică pentru a controla înălţimea unui dansator.
         Poţi să faci ca celălalt dansator să răspundă la muzică de asemenea?
       CourseD_Dance_Party_11: "Blocul <xml><block type=\"Dancelab_whenKey\"></block></xml> te lasă să execuţi cod atunci cînd săgeata în sus este apăsată.\n\nPoţi schimba mişcarea dansatorului, proprietăţi ale dansatorului sau să faci o mişcare rapidă o singură dată.\nFi creativ şi caută alte blocuri noi!"
-      CourseD_Dance_Party_11_5: "Verifică acest bloc:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"RAŢĂ\"</title>\n<title name=\"LAYOUT\">\"cerc\"</title>\n</block></xml>\n\nAcum poţi creea mai mulţi dansatori în acelaşi timp!\n\nÎncearcă să foloseşti câteva dintre blocurile \"toate raţele\" să scri cod care va face ca toate raţele să danseze împreună."
+      CourseD_Dance_Party_11_5: |-
+        Verifică acest bloc:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"RAŢĂ"</title>
+        <title name="LAYOUT">"cerc"</title>
+        </block></xml>
+
+        Acum poţi creea mai mulţi dansatori în acelaşi timp!
+
+        Încearcă să foloseşti câteva dintre blocurile "toate raţele" să scri cod care va face ca toate raţele să danseze împreună.
       CourseD_Dance_Party_11b: |-
         Este timpul să dansăm! Pisica va face o mişcare "dab" când apeşi pe tasta săgeată în stânga. Fă robotul să facă o "cădere" când apeşi tasta săgeată în jos, şi să facă "bate din palme" atunci când este apăsată tasta săgeată în sus.
 

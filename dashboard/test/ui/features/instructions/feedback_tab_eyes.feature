@@ -10,7 +10,7 @@ Feature: Feedback Tab Visibility
     And I wait to see "#finishButton"
     And I press "finishButton"
 
-  Scenario: As student with dev experiment on, 'Feedback' tab is not visible if no feedback
+  Scenario: As student with dev experiment on, 'Feedback' tab is the 'Key Concept' tab if no feedback
     When I open my eyes to test "student with no feedback"
     And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?enableExperiments=2019-mini-rubric"
     And I wait for the page to fully load
@@ -58,8 +58,9 @@ Feature: Feedback Tab Visibility
     Then I sign out
     And I sign in as "Lillian"
     And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?enableExperiments=2019-mini-rubric"
-    And I press the first ".uitest-feedback" element
-    And I wait for the page to fully load
+    And I wait to see ".uitest-feedback"
+    Then I press the first ".uitest-feedback" element
+    And I wait to see "#ui-test-feedback-time"
     Then I see no difference for "student viewing teacher feedback"
 
     And I close my eyes

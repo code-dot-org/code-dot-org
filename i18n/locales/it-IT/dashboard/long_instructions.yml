@@ -550,14 +550,27 @@ it:
 
         Questo programma usa livello dei toni bassi delle canzoni per controllare l’altezza di un ballerino. Sei in grado di far reagire alla musica anche gli altri ballerini?
       CourseD_Dance_Party_11: "Il blocco <xml><block type=\"Dancelab_whenKey\"></block></xml> consente di eseguire il codice sottostante quando premi il tasto freccia in su (↑).\n\nPuoi modificare la mossa da eseguire, le proprietà di un ballerino oppure fare una mossa veloce una volta sola. Libera la tua creatività e cerca nuovi blocchi!"
-      CourseD_Dance_Party_11_5: "Dai un’occhiata a questo blocco:\n\n<xml>   <block type=\"Dancelab_makeNewDanceSpriteGroup\">     <title name=\"N\">6</title>     <title name=\"COSTUME\">\"DUCK\"</title>     <title name=\"LAYOUT\">\"circle\"</title>   </block></xml>\n\nOra sei in grado di creare un gruppo di ballerini in un colpo solo!\n\nProva ad usare alcuni blocchi `\"tutti i paperi\" eseguono la mossa ...` per scrivere del codice che faccia ballare i paperi tutti assieme."
+      CourseD_Dance_Party_11_5: |-
+        Dai un’occhiata a questo blocco:
+
+        <xml>   <block type="Dancelab_makeNewDanceSpriteGroup">     <title name="N">6</title>     <title name="COSTUME">"DUCK"</title>     <title name="LAYOUT">"circle"</title>   </block></xml>
+
+        Ora sei in grado di creare un gruppo di ballerini in un colpo solo!
+
+        Prova ad usare alcuni blocchi `"tutti i paperi" eseguono la mossa ...` per scrivere del codice che faccia ballare i paperi tutti assieme.
       CourseD_Dance_Party_11b: |-
         E ora una sfida all’ultima mossa! Quando premi la freccia a sinistra (←) il Gatto fa la "dab". Fai fare una “spaccata” al Robot premendo la freccia a destra (→) e fagli fare un "applauso" quando premi la freccia in giù (↓).
 
         **Usa i tasti per far fare al Robot il ballo spaccata-applauso-spaccata-applauso il più velocemente possibile!**
       CourseD_Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato da condividere con i tuoi amici.
+      CourseE_HOC 2018 Level_1: "Ti serviranno provviste per il viaggio che ti aspetta. Prendi una **barca** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) dalla **cassa** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
       CourseE_HOC 2018 Level_10: "C'è un **calamaro** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) nascosto da qualche parte in questo Monumento oceanico, riesci a trovarlo?\n\n"
       CourseE_HOC 2018 Level_11: Costruisci un muro di **prismarino** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) intorno al calcestruzzo nero. Così si attiverà il **condotto** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) e avrai completato la sfida!
+      CourseE_HOC 2018 Level_2: Con le barche si fa meno fatica che a nuotare in mare aperto! Dirigiti alla fine del molo per salire a bordo.
+      CourseE_HOC 2018 Level_3: Afferra i remi e naviga in mare aperto per catturare il **merluzzo** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_4: Diamo il merluzzo da mangiare al **delfino** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Usa il blocco `ripeti fino all'obiettivo` per attraversare l'oceano più rapidamente.
+      CourseE_HOC 2018 Level_5: C'è una **conchiglia di nautilo** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) nascosta da qualche parte! Esplora il relitto per raggiungere la **cassa** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_6: Fa freddo là fuori! Cattura un **salmone** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) mentre ti dirigi alle rovine sottomarine.
       CourseE_HOC 2018 Level_7a: "Hai scovato le rovine sottomarine. Cerca nell'arenaria, c'è una **cassa** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) che contiene un tesoro in **prismarino** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
       CourseE_HOC 2018 Level_8: "Prima gli iceberg, ora la lava? Attraversa quest'isola vulcanica e trova i **pesci tropicali** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) nella barriera corallina.\n\n"
       CourseE_HOC 2018 Level_9b: "Sei arrivato alla barriera corallina, ora cerca il **Cuore del mare** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Usa i coralli rossi e blu come punti di riferimento per raggiungere il **forziere** del tesoro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
@@ -1049,7 +1062,11 @@ it:
         Aggiungi una mela che riporti la giraffa alla sua dimensione originale quando i due personaggi si toccano.
 
       Virtual Pet Freeplay: "Tempo di giocare: Cos'altro puoi far fare alla tua giraffa? \n\n- Puoi aggiungere altri elementi caratteristici al tuo animaletto virtuale?\n- Puoi procurarle degli amici?  "
-      Virtual Pet Freeplay_2019: "Tempo di giocare: Cos'altro puoi far fare alla tua giraffa? \n\n- Puoi aggiungere altri elementi caratteristici al tuo animaletto virtuale?\n- Puoi procurarle degli amici?  "
+      Virtual Pet Freeplay_2019: |-
+        Tempo di giocare: Cos'altro puoi far fare alla tua giraffa? 
+
+        - Puoi aggiungere altri elementi caratteristici al tuo animaletto virtuale?
+        - Puoi procurarle degli amici?  
       Virtual Pet Predict: "**Fai una previsione:** Questa è Geraldine, la tua nuova giraffa domestica. Cosa pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai su di lei?"
       beeDebugVideo1: Raccogli tutto il nettare.
       comment_intro_maze_2018: "*\"Sono confuso. Ricordami come uscire da questo labirinto.\"* \n\n---\n\nPer risolvere questo esercizio, completa il codice usando anche il nuovo blocco  <xml><block type=\"comment\">\n<title name=\"TEXT\"> </title>\n</block></xml> per lasciarti qualche veloce promemoria. Questi possono aiutarti a ricordarti cosa hai fatto e perché!  \n  \n\nQuesti commenti sono solo per **te**, non influiscono in nessun modo sull'area di gioco."

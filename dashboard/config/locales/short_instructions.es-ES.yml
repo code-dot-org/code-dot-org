@@ -1605,9 +1605,15 @@ es:
       CourseD_Dance_Party_12: |-
         ¡Mueve el esqueleto! Crea un baile propio para compartirlo
         con tus amigos.
+      CourseE_HOC 2018 Level_1: Consigue un barco en el cofre.
       CourseE_HOC 2018 Level_10: Llega a la entrada de este monumento oceánico.
       CourseE_HOC 2018 Level_11: Construye un conducto con prismarina dentro del monumento
         oceánico.
+      CourseE_HOC 2018 Level_2: Ve hacia el final del muelle.
+      CourseE_HOC 2018 Level_3: Surca los mares en busca de bacalao.
+      CourseE_HOC 2018 Level_4: Utiliza un bucle para llegar al delfín.
+      CourseE_HOC 2018 Level_5: Explora el naufragio hasta llegar al cofre.
+      CourseE_HOC 2018 Level_6: Navega a través del hielo para llegar al salmón.
       CourseE_HOC 2018 Level_7a: Explora las ruinas subacuáticas en busca de un cofre.
       CourseE_HOC 2018 Level_9b: Utiliza el coral como punto de ruta para llegar hasta
         el tesoro.
@@ -2737,6 +2743,34 @@ es:
         Pista: Los 3 lados tienen la misma longitud."
       courseC_maze_debugging10: Depura este nivel reorganizando y agregando bloques
         para llevarme al cerdo!
+      courseC_maze_debugging2: Usa tus habilidades de depuración para que Scrat consiga
+        la bellota.
+      courseC_maze_debugging2_2018: Usa tus habilidades de depuración para que Scrat
+        consiga la bellota.
+      courseC_maze_debugging2_2019: Usa tus habilidades de depuración para que Scrat
+        consiga la bellota.
+      courseC_maze_debugging4: Alguien ha confundido sus instrucciones. ¿Puedes ayudarle?
+      courseC_maze_debugging4_2018: Alguien ha confundido sus instrucciones. ¿Puedes
+        ayudarle?
+      courseC_maze_debugging4_2019: Alguien ha confundido sus instrucciones. ¿Puedes
+        ayudarle?
+      courseC_maze_debugging5: Depura este nivel reorganizando y cambiando bloques.
+      courseC_maze_debugging5_2018: Depura este nivel reorganizando y cambiando bloques.
+      courseC_maze_debugging5_2019: Depura este nivel reorganizando y cambiando bloques.
+      courseC_maze_debugging6: Averigua que es incorrecto y lleva a Scrat a la bellota.
+      courseC_maze_debugging6_2018: Averigua que es incorrecto y lleva a Scrat a la
+        bellota.
+      courseC_maze_debugging6_2019: Averigua que es incorrecto y lleva a Scrat a la
+        bellota.
+      courseC_maze_debugging7: "**Desafío:** Depura este nivel reorganizando, añadiendo
+        y eliminando bloques."
+      courseC_maze_debugging7_2018: "**Desafío:** Depura este nivel reorganizando,
+        añadiendo y eliminando bloques."
+      courseC_maze_debugging7_2019: "**Desafío:** Depura este nivel reorganizando,
+        añadiendo y eliminando bloques."
+      courseC_maze_debugging8: Depura este nivel para que Scrat consiga la bellota.
+      courseC_maze_debugging9: Depura este nivel para que Scrat consiga la bellota.
+      courseC_maze_debugging9_2018: Depura este nivel para que Scrat consiga la bellota.
       courseD_artist_binary1: "Binario es una forma de representar información mediante
         sólo dos opciones.  Aquí, vamos a usar las opciones \"apagado\" (representado
         por el número 0) y \"encendido\" (representado por el número 1).  \r \r Le

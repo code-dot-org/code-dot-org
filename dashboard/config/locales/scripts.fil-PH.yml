@@ -11880,6 +11880,10 @@ fil:
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             Spelling Bee:
               name: Spelling Bee
+            Learn to Drag and Drop:
+              name: Matutong Mag-Drag at Mag-Drop
+            Programming in Maze:
+              name: Pag-Program sa Maze
         removed19:
           stages:
             'Debugging: Unspotted Bugs':

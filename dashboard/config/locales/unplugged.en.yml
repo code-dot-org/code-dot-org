@@ -444,7 +444,7 @@ en:
         title: It's Great to Create and Play Fair
         desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
       GraphingData_2019:
-        title: Graphing Data
+        title: Picturing Data
         desc: " In this lesson, students will collect data from a Play Lab project or real world scenario and use it to make predictions."
       courseE_unplugged_accessAbility_2019:
         title: Access Ability
@@ -458,3 +458,9 @@ en:
       timeforcs_demo_crowdsourcing:
         title: Crowdsourcing
         desc: '_Josh note: in contrast with the first lesson, I''ve formatted this one just like a typical unplugged lesson._'
+      timeforcs_demo_conditionals:
+        title: Conditionals
+        desc: To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."
+      TheRightApp_2019:
+        title: The Right App
+        desc: ''

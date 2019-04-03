@@ -461,6 +461,7 @@ ja:
         csd_gamelab_if_else: If/Else 文
         CSF_SpriteLabIntro_CDEF: スプライトラボ
         CSF_Spritelab_MakeSprite_CDEF: スプライトラボでスプライトを作成する方法
+        csd_pair_programming: ペアプログラミング
     callout:
       text:
         drag_blocks: "「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。"

@@ -62,6 +62,7 @@ class XhrProxyController < ApplicationController
     qrng.anu.edu.au
     quandl.com
     query.yahooapis.com
+    quizlet.com
     rejseplanen.dk
     noaa.gov
     nuevaschool.ngrok.io
