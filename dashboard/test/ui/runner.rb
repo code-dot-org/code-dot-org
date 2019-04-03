@@ -621,6 +621,11 @@ def cucumber_arguments_for_browser(browser, options)
         # tagged with @eyes.
         tag('@eyes')
       end
+  else
+    # Make sure eyes tests don't run when --eyes is not specified.
+    arguments += skip_tag('@eyes_mobile')
+    arguments += skip_tag('@eyes_ie')
+    arguments += skip_tag('@eyes')
   end
 
   arguments += skip_tag('@no_mobile') if browser['mobile']
