@@ -54,6 +54,19 @@ const styles = {
   iconAndText: {
     whiteSpace: 'nowrap'
   },
+  iconAndTextDiv: {
+    whiteSpace: 'nowrap',
+    paddingBottom: 16
+  },
+  iconAndTextDivTop: {
+    whiteSpace: 'nowrap',
+    paddingTop: 10,
+    paddingBottom: 16
+  },
+  iconAndTextDivBottom: {
+    whiteSpace: 'nowrap',
+    paddingBottom: 10
+  },
   icon: {
     marginRight: 5,
     size: 20
@@ -191,82 +204,46 @@ export default class ProgressLegend extends Component {
               {i18n.activity()}
             </TD>
             <TD>
-              <table>
-                <tbody>
-                  <tr>
-                    <TD>
-                      <div style={styles.iconAndText}>
-                        <FontAwesome icon="scissors" style={styles.icon} />
-                        {i18n.unplugged()}
-                      </div>
-                    </TD>
-                  </tr>
-                  {miniRubricExperiment && (
-                    <tr>
-                      <TD>
-                        <div style={styles.iconAndText}>
-                          <FontAwesome
-                            icon="flag-checkered"
-                            style={styles.icon}
-                          />
-                          {i18n.stageExtras()}
-                        </div>
-                      </TD>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
+              <div style={styles.iconAndTextDivTop}>
+                <FontAwesome icon="scissors" style={styles.icon} />
+                {i18n.unplugged()}
+              </div>
+              {miniRubricExperiment && (
+                <div style={styles.iconAndTextDivBottom}>
+                  <FontAwesome icon="flag-checkered" style={styles.icon} />
+                  {i18n.stageExtras()}
+                </div>
+              )}
             </TD>
             <TD>
-              <table>
-                <tbody>
-                  <tr>
-                    <TD>
-                      <div style={styles.iconAndText}>
-                        <FontAwesome icon="desktop" style={styles.icon} />
-                        {i18n.online()}
-                      </div>
-                    </TD>
-                  </tr>
-                  {miniRubricExperiment && (
-                    <tr>
-                      <TD>
-                        <div style={styles.iconAndText}>
-                          <FontAwesome
-                            icon="check-circle"
-                            style={styles.icon}
-                          />
-                          {i18n.progressLegendAssessment()}
-                        </div>
-                      </TD>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
+              <div style={styles.iconAndTextDivTop}>
+                <FontAwesome icon="desktop" style={styles.icon} />
+                {i18n.online()}
+              </div>
+              {miniRubricExperiment && (
+                <div style={styles.iconAndTextDivBottom}>
+                  <FontAwesome icon="check-circle" style={styles.icon} />
+                  {i18n.progressLegendAssessment()}
+                </div>
+              )}
             </TD>
             <TD style={styles.rightBorder}>
-              <table>
-                <tbody>
-                  <tr>
-                    <TD>
-                      <div style={styles.iconAndText}>
-                        <FontAwesome icon="list-ul" style={styles.icon} />
-                        {i18n.question()}
-                      </div>
-                    </TD>
-                  </tr>
-                  {miniRubricExperiment && (
-                    <tr>
-                      <TD>
-                        <div style={styles.iconAndText}>
-                          <FontAwesome icon="" style={styles.icon} />
-                          {''}
-                        </div>
-                      </TD>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
+              <div
+                style={
+                  miniRubricExperiment
+                    ? styles.iconAndTextDiv
+                    : styles.iconAndTextDivTop
+                }
+              >
+                <FontAwesome icon="list-ul" style={styles.icon} />
+                {i18n.question()}
+              </div>
+              {miniRubricExperiment && (
+                /* Blank space to keep spacing consistent */
+                <div style={styles.conAndTextDivBottom}>
+                  <FontAwesome icon="" style={styles.icon} />{' '}
+                </div>
+              )}
             </TD>
             <TD rowSpan={secondRowRowSpan}>
               <div style={styles.center}>
