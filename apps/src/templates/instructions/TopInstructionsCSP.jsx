@@ -324,6 +324,13 @@ class TopInstructionsCSP extends Component {
       this.state.feedbacks.length > 0 &&
       (this.state.feedbacks[0].comment || this.state.feedbacks[0].performance);
 
+    /*
+     * The feedback tab will be the Key Concept tab if there is a mini rubric and:
+     * 1) Teacher is viewing the level but not giving feedback to the student
+     * 2) Student does not have any feedback for that level
+     * The Key Concept tab shows the Key Concept and Rubric for the level in a view
+     * only form
+     */
     const displayKeyConcept =
       this.state.rubric &&
       ((this.props.viewAs === ViewType.Student && !studentHasFeedback) ||
@@ -336,6 +343,7 @@ class TopInstructionsCSP extends Component {
       this.state.teacherViewingStudentWork ||
       studentHasFeedback;
 
+    // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
       this.state.tabSelected === TabType.COMMENTS &&
       this.state.teacherViewingStudentWork;
