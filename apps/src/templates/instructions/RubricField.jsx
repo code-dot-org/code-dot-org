@@ -80,23 +80,14 @@ class RubricField extends Component {
     super(props);
 
     this.state = {
-      detailsOpen: false
+      detailsOpen: this.props.expandByDefault
     };
   }
 
-  componentDidMount = () => {
-    const details = document.querySelector(
-      `#rubric-details-${this.props.rubricLevel}`
-    );
-
-    details.addEventListener('toggle', () => {
-      this.setState({detailsOpen: !this.state.detailsOpen});
-    });
+  updateToggle = event => {
+    event.preventDefault();
+    this.setState({detailsOpen: !this.state.detailsOpen});
   };
-
-  componentWillUnmount() {
-    window.removeEventListener('toggle');
-  }
 
   render() {
     const performanceHeaderStyle = this.props.currentlyChecked
@@ -124,7 +115,8 @@ class RubricField extends Component {
           <details
             id={`rubric-details-${this.props.rubricLevel}`}
             style={styles.detailsArea}
-            open={this.props.expandByDefault}
+            open={this.state.detailsOpen}
+            onClick={this.updateToggle}
           >
             <summary style={styles.rubricHeader}>
               {rubricLevelHeaders[this.props.rubricLevel]}

@@ -98,7 +98,7 @@ export class TeacherFeedback extends Component {
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     serverLevelId: PropTypes.number,
     teacher: PropTypes.number,
-    displayKeyConcept: PropTypes.bool.isRequired
+    displayKeyConcept: PropTypes.bool
   };
 
   constructor(props) {
