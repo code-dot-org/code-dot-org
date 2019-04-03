@@ -630,6 +630,12 @@ module Pd
       assert_equal FAKE_ACADEMIC_YEAR_IDS[1], new_record.form_id
     end
 
+    test 'csf pre201 survey: unauthenticated teacher is redirected to sign-in' do
+      get '/pd/workshop_survey/csf/pre201'
+      assert_response :redirect
+      assert_redirected_to_sign_in
+    end
+
     test 'csf pre201 survey: unenrolled teacher gets not_enrolled msg' do
       sign_in @unenrolled_teacher
       get '/pd/workshop_survey/csf/pre201'
@@ -741,6 +747,12 @@ module Pd
       get '/pd/workshop_survey/csf/pre201'
 
       assert_redirected_to action: 'thanks'
+    end
+
+    test 'csf post201 survey: unauthenticated teacher is redirected to sign-in' do
+      get '/pd/workshop_survey/csf/post201'
+      assert_response :redirect
+      assert_redirected_to_sign_in
     end
 
     test 'csf post201 survey: unenrolled teacher gets not-enrolled msg' do
@@ -918,6 +930,10 @@ module Pd
       assert_select 'h1', text: 'No Attendance'
       assert_select 'p', text:
         'You need to be marked as attended for today’s session of your workshop before you can complete this survey.'
+    end
+
+    def assert_redirected_to_sign_in
+      assert_match %r{users/sign_in.*redirected}, response.body
     end
 
     def general_submit_redirect(day:, user: @enrolled_summer_teacher, workshop: @summer_workshop, enrollment_code: nil)
