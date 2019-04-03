@@ -289,7 +289,7 @@ export default class TutorialDetail extends React.Component {
                       target="_blank"
                       onClick={this.startTutorialClicked}
                     >
-                      <button style={{marginTop: 20}}>
+                      <button type="button" style={{marginTop: 20}}>
                         {i18n.startButton()}
                       </button>
                     </a>

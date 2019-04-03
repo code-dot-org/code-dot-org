@@ -21,6 +21,7 @@ class ToggleButton extends Component {
   render() {
     return (
       <button
+        type="button"
         id={this.props.id}
         style={this.getStyle()}
         className={'no-outline ' + (this.props.className || '')}

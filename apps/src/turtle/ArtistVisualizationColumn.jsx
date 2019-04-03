@@ -55,7 +55,7 @@ var ArtistVisualizationColumn = function(props) {
             width="15"
           />{' '}
           {props.showFinishButton && (
-            <button id="finishButton" className="share">
+            <button type="button" id="finishButton" className="share">
               <img src="/blockly/media/1x1.gif" />
               {msg.finish()}
             </button>

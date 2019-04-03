@@ -188,8 +188,12 @@ describe('VersionHistory', () => {
       expect(wrapper).to.containMatchingElement(
         <div>
           <p>Are you sure you want to clear all progress for this level&#63;</p>
-          <button id="confirm-button">Start Over</button>
-          <button id="again-button">Cancel</button>
+          <button type="button" id="confirm-button">
+            Start Over
+          </button>
+          <button type="button" id="again-button">
+            Cancel
+          </button>
         </div>
       );
     });
@@ -205,8 +209,12 @@ describe('VersionHistory', () => {
       expect(wrapper).to.containMatchingElement(
         <div>
           <p>Are you sure you want to clear all progress for this level&#63;</p>
-          <button id="confirm-button">Start Over</button>
-          <button id="again-button">Cancel</button>
+          <button type="button" id="confirm-button">
+            Start Over
+          </button>
+          <button type="button" id="again-button">
+            Cancel
+          </button>
         </div>
       );
 
