@@ -6,12 +6,10 @@ import Parser from '@code-dot-org/redactable-markdown';
 import expandableImages from './plugins/expandableImages';
 import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
 import stripStyles from './plugins/stripStyles';
-import externalLinks from 'remark-external-links';
+import externalLinks from './plugins/externalLinks';
 
 const remarkParser = Parser.create();
-remarkParser.parser
-  .use([xmlAsTopLevelBlock, expandableImages])
-  .use(externalLinks, {target: '_blank', rel: false});
+remarkParser.parser.use([xmlAsTopLevelBlock, expandableImages, externalLinks]);
 remarkParser.compilerPlugins.push(stripStyles);
 
 /**
