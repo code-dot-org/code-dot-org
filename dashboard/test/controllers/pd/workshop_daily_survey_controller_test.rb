@@ -653,20 +653,6 @@ module Pd
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
 
-      # key_params = @csf_pre201_params.merge(
-      #   userId: teacher.id,
-      #   workshopId: @csf201_not_started_workshop.id
-      # )
-      # form_params = key_params.merge(
-      #   userName: teacher.name,
-      #   userEmail: teacher.email,
-      #   submitRedirect: url_for(
-      #     controller: 'pd/workshop_daily_survey',
-      #     action: 'submit_general',
-      #     params: {key: key_params}
-      #   )
-      # )
-
       actual_form_id = nil
       actual_form_params = nil
       WorkshopDailySurveyController.view_context_class.any_instance.expects(:embed_jotform).
@@ -913,14 +899,10 @@ module Pd
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/thanks'
       assert_response :success
-      assert_thanks
+      assert_select 'h1', text: 'Thank you for submitting today’s survey.'
     end
 
     private
-
-    def assert_thanks
-      assert_select 'h1', text: 'Thank you for submitting today’s survey.'
-    end
 
     def assert_not_enrolled
       assert_select 'h1', text: 'Not Enrolled'

@@ -345,7 +345,7 @@ module Pd
         )
       end
 
-      render :new_csf
+      render :new_general
     end
 
     def key_params
