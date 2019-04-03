@@ -2,7 +2,7 @@
 @as_student
 Feature: Eyes Tests for Top Instructions
 
-Scenario: Top Instructions
+Scenario: CSF Top Instructions
   When I open my eyes to test "top instructions in CSF"
   And I am on "http://studio.code.org/s/course1/stage/4/puzzle/11?noautoplay=true"
   And I wait for the page to fully load

@@ -82,7 +82,7 @@ const ErrorType = {
   Save: 'Save'
 };
 
-class TeacherFeedback extends Component {
+export class TeacherFeedback extends Component {
   static propTypes = {
     user: PropTypes.number,
     disabledMode: PropTypes.bool,
@@ -93,9 +93,9 @@ class TeacherFeedback extends Component {
       approaches: PropTypes.string,
       noEvidence: PropTypes.string
     }),
-    visible: PropTypes.bool,
+    visible: PropTypes.bool.isRequired,
     //Provided by Redux
-    viewAs: PropTypes.oneOf(['Teacher', 'Student']),
+    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     serverLevelId: PropTypes.number,
     teacher: PropTypes.number
   };
@@ -345,7 +345,7 @@ class TeacherFeedback extends Component {
     );
   }
 }
-
+export const UnconnectedTeacherFeedback = TeacherFeedback;
 export default connect(state => ({
   viewAs: state.viewAs,
   serverLevelId: state.pageConstants.serverLevelId,
