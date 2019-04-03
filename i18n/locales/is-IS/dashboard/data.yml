@@ -508,7 +508,6 @@ is:
         hoc_dance_events: Danspartý - Atvik
         hoc_dance_properties: Danspartý - Eiginleikar
         hoc_dance_congrats: Danspartý - Meira fjör!
-        teaching_csf_how_it_works: 'Kennsla Grunnatriða tölvunarfræði - Hvernig námskeiðið virkar'
         elem_pd_2: Tölvunarfræði fyrir grunnskóla - Fagmenntunarmyndband 2/2
         what_is_cs: Hvað er tölvunarfræði?
         repeat_block: Notkun "Endurtaka" kubbsins
@@ -518,6 +517,7 @@ is:
         writing_first_program: Að skrifa fyrsta forritið
         conditionals_with_cards: Kennslustund án tölvu - Skilyrði með kortum
         what_is_an_event: Hvað er atvik?
+        csd_pair_programming: Félagaforritun
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn

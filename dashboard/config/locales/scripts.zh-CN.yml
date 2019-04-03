@@ -9250,6 +9250,8 @@ zh-CN:
               name: '编程: 我的机器人朋友'
             'Loops: My Loopy Robotic Friends':
               name: '循环: 我糊涂的机器人朋友'
+            Sticker Art with Loops:
+              name: 艺术家里的循环
         csp-mid-survey:
           description_audience: 计算机科学原理学生
         gamelab:
@@ -9369,6 +9371,12 @@ zh-CN:
               name: 游戏实验室中的事件
             Spelling Bee:
               name: 拼字比赛
+            Learn to Drag and Drop:
+              name: 学习拖放
+            Programming in Maze:
+              name: 迷宫编程
+            Ocean Scene with Loops:
+              name: 艺术家里的循环
         removed19:
           stages:
             'Debugging: Unspotted Bugs':

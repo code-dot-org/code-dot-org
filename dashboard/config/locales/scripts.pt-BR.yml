@@ -4484,6 +4484,12 @@ pt-BR:
               name: Repetições na Era do gelo
             Spelling Bee:
               name: Soletrando
+            Learn to Drag and Drop:
+              name: Aprenda a arrastar e soltar
+            Programming in Maze:
+              name: Programação no labirinto
+            Ocean Scene with Loops:
+              name: Cena do Oceano com Repetições
         removed19:
           stages:
             'Debugging: Unspotted Bugs':

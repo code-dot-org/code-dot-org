@@ -393,6 +393,7 @@ de:
         mc_2017_congratulations: Minecraft Hour of Code - Gratuliere
         csd_applab_arrays: Einführung in Arrays
         CSF_loops_AB: Schleifen
+        csd_pair_programming: Paarprogrammierung
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten

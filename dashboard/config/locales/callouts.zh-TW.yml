@@ -420,6 +420,8 @@ zh-TW:
         gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_collector_loops3_2019_callout:
         gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
+      courseA_collector_preLoops1_callout:
+        courseA_collector_preLoops1_1: 點擊此處觀看程式運行！
       courseA_collector_preLoops2_callout:
         courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_preLoops3_callout:
@@ -590,6 +592,8 @@ zh-TW:
         courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
       courseE_playLab_scaffold3_2018_callout:
         courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
+      courseF_IceAge_9_callout:
+        playlab_add_blocks_1: 添加積木到這兒
       courseF_artist_for1_callout:
         courseF_artist_for1_1: 工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。
       courseF_artist_for1_2018_callout:

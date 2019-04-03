@@ -66,6 +66,8 @@ en-GB:
       2-3 Maze 15: "In this puzzle, two `repeat` loops will help you\nget to the pig with the fewest number of blocks!"
       2-3 Maze Loops 18: "Get me to the sunflower using the fewest blocks\npossible!  \\r\n\\r\nTry using one `repeat` loop inside of another to cut down\non the amount of code you need."
       Artist Autorun Test: "Now, put the function inside of a loop\nto draw these three squares."
+      CourseE_HOC 2018 Level_4: Let's feed the cod to the **dolphin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Use a repeat block to get across the ocean quicker.
+      CourseE_HOC 2018 Level_6: It looks freezing out there! Catch a **salmon** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) on your way to the underwater ruins.
       Function intro Ryan: "A **function** named `build bridge` is in your workspace.  All the code you need to cross the river is built in! \\r\n \\r\nSnap the small, green block twice into your workspace to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch]."
       Function intro Ryan_2019: "A **function** named `build bridge` is in your workspace.  All the code you need to cross the river is built in! \\r\n \\r\nSnap the small, green block twice into your workspace to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch]."
       HOC 2018 Level_4: Let's feed the cod to the **dolphin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Use a repeat block to get across the ocean quicker.

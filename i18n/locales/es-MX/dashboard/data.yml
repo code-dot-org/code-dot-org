@@ -353,9 +353,9 @@ es-MX:
         C4_unplugged_binary: Binario
         CSF_a_b_artist_loops: Loops en Artista
         CSF_artist_angles: Ángulos en Artist
-        CSF_collector_k1_blocks: 'Fundamentos de Ciencias de la Computación: El recolector'
-        CSF_collector_repeat_loops: Bucles de repetición del recolector
-        CSF_collector_text_blocks: 'Fundamentos de Ciencias de la Computación: El recolector'
+        CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El Recolector'
+        CSF_collector_repeat_loops: Bucles de repetición del Recolector
+        CSF_collector_text_blocks: 'Fundamentos de las Ciencias de la Computación: El Recolector'
         CSF_create_functions: Crear funciones
         CSF_debugging_k1_blocks: Depuración
         CSF_debugging_text_blocks: Depuración
@@ -365,7 +365,7 @@ es-MX:
         CSF_my_robotic_friends: Mis amigos robóticos
         CSF_Power_of_Words: Poder de las palabras
         CSF_Super_Digital_Citizen: Super ciudadano digital
-        CSF_stevie_big_project: Stevie y el gran proyecto
+        CSF_stevie_big_project: Stevie y el Gran Proyecto
         CSF_unspotted_bugs: Errores no detectados
         CSF_zuck_loops_short: Bucles de repetición
         frozen_intro: Prueba la Hora del Código
@@ -510,7 +510,6 @@ es-MX:
         hoc_dance_congrats: Fiesta de Baile - ¡A la fiesta!
         c_and_c_great_to_create: Crear y jugar limpio es lo mejor
         c_and_c_digital_sharing: Colaboración digital
-        teaching_csf_how_it_works: 'Enseñando Fundamentos CS: Cómo funciona el curso'
         elem_pd_2: Informática de la Escuela Primaria - vídeo PD 2/2
         what_is_cs: '¿Qué son las Ciencias de la computación?'
         repeat_block: Usando el bloque de repetición
@@ -524,6 +523,7 @@ es-MX:
         teaching_cs_pair_programming: 'Enseñando Fundamentos CS: Programación de Pares'
         teaching_problem_solving: 'Enseñando Fundamentos CS: Enseñando resolución de problemas'
         csd_applab_designmode: 'Descubrimientos de CS: Laboratorio de aplicación - modo de diseño'
+        csd_pair_programming: Programación en parejas
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

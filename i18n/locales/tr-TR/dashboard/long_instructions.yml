@@ -192,7 +192,7 @@ tr:
         Bulutların altında çiçek yada petek olabilir. Eğer/değilse bloğu kullan. Eğer çiçek ise polen topla değilse bal yap (çünkü çiçek değilse petektir).
       4-5 Bee Conditionals 6: "Bu çiçekte ne kadar nektar var emin değilim ama 1, 2 veya 3 nektar olduğunu biliyorum. \\r \\r koşullu blok ('eğer' ve/veya ' Eğer/değilse') kullanarak olduğu kadar nektar al. \\r \\r, Nektar miktarı bulmacayı her çalıştırdığınızda değiştirebilir!"
       4-5 Bee Conditionals 7: "Mor çiçeklerde, 2, 3 veya 1 nektar olabilir. \"mor çiçeği kontrol et\" fonksiyonunu kullanarak nektarları toparla."
-      4-5 Bee Conditionals 8: "`check flower make honey` için fonksiyonu yaz. \\r\n\\r\nFonksiyonun, mor çiçeğin 3,2 ve 1 nektara sahip olup olmadığını kontrol etmeli ve bütün nektarları toplamalı.\\r\nSonra ilerle ve bal yap."
+      4-5 Bee Conditionals 8: "'çiçeğe bak bal yap' için fonksiyonu yaz. \\r\n\\r\nYazdığın fonksiyon, mor çiçeğin 1,2 veya 3 nektara sahip olup olmadığını kontrol etmeli ve bütün nektarları toplamalı.\\r\nSonra, ilerle ve bal yap."
       4-5 Bee Conditionals Assessment 1: "**Değerlendirme:** Bu bulut ya bir nektarı olan bir çiçek ya da bir bala ihtiyacı olan bir bal peteği saklıyor..  \\r\n\\r\n`nektar al veya bal yap` fonksiyonunu tamamla, sonra nektar ya da bal toplamak için bu fonksiyonu kullan.. \\r\n"
       4-5 Bee Debugging 1: "Bu bloklar kafamı karıştırıyor.  \\r\n\\r\nDüzeltmeme yardımcı olabilir misin?"
       4-5 Bee Debugging 6: "Mor çiçekteki nektarı miktarı bulmaca her çalıştırıldığında değişir. \\r \\r Tüm çiçeklerden tüm nektarı almak için blokları düzelt."
@@ -7483,12 +7483,30 @@ tr:
 
         Bu program bir dansçının boyunun kontrolü için müziğin "bas" (düşük) seslerini kullanır. Diğer dansçıların da müziğe tepki vermesini sağlayabilir misiniz?
       CourseD_Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> bloğu yukarı oka basıldığında kodu çalıştırmanızı sağlar.\n\nDans hareketini değiştirebilir, bir dansçının özelliklerini değiştirebilir ya da bir kereliğine hızlı bir hareket yapabilirsiniz. Yaratıcı olun ve yeni bloklar arayın!"
-      CourseD_Dance_Party_11_5: "Bu bloğa bir bakın:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nArtık tek seferde birden çok dansçı yaratabilirsiniz!\n\nTüm ördeklerin hep birlikte dans etmesini sağlayacak kodu yazmak için \"tüm ördekler\" bloklarının bazılarını kullanmayı deneyin."
+      CourseD_Dance_Party_11_5: |-
+        Bu bloğa bir bakın:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Artık tek seferde birden çok dansçı yaratabilirsiniz!
+
+        Tüm ördeklerin hep birlikte dans etmesini sağlayacak kodu yazmak için "tüm ördekler" bloklarının bazılarını kullanmayı deneyin.
       CourseD_Dance_Party_11b: |-
         Şimdi dans zamanı! Sol ok tuşuna bastığınızda Kedi dab dansı yapar. Sağ ok tuşuna bastığınızda Robota "drop" figürü yaptırırsınız.
       CourseD_Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
+      CourseE_HOC 2018 Level_1: "Seni bekleyen yolculuk için malzemelere ihtiyacın var. **Sandık**tan ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png) **sandalı** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) al."
       CourseE_HOC 2018 Level_10: "Bir **kalamar** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) bu Okyanus Anıtı içinde bir yerlerde saklanıyor, onu bulabilir misin?"
       CourseE_HOC 2018 Level_11: Siyah beton etrafına **prizmarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) duvarı ör. Bu **su yolunu** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) harekete geçirecek ve görevini tamamlayacak!
+      CourseE_HOC 2018 Level_2: Sandalla gitmek açık suda yüzmekten çok daha kolay! Binmek için iskelenin sonuna git.
+      CourseE_HOC 2018 Level_3: Kürekleri al ve **morinayı** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png) yakalamak için sandalını açık denize sür.
+      CourseE_HOC 2018 Level_4: Hadi morinayla **yunus** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png) besleyelim. Okyanusu daha hızlı geçmek için bir tekrarla bloku kullan.
+      CourseE_HOC 2018 Level_5: Orada bir yerlerde bir **notilus kabuğu** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) saklanıyor! **Sandığa** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png) ulaşmak için gemi enkazını araştır.
+      CourseE_HOC 2018 Level_6: Dışarısı buz gibi görünüyor! Su altı harabelerine giderken bir **somon** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) yakala.
       CourseE_HOC 2018 Level_7a: "Sualtı harabelerini buldun. **Prizmarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) hazinesi içeren **sandığı** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) bulmak için kumtaşını ara."
       CourseE_HOC 2018 Level_8: "Önce buz dağları, şimdi de lav mı? Bu volkanik adayı geç ve mercan resifi içinde **tropikal balığı** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) bul."
       CourseE_HOC 2018 Level_9b: "Resife geldin, şimdi de **Denizin Kalbini** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ara! Hazine **sandığına** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png) ulaşmak için mavi ve kırmızı mercanları kullan."
@@ -8210,7 +8228,7 @@ tr:
         - Üçüncü iç döngü bir kare oluşturmalı.
       course2_artist_prog_challenge1: Hayvanların her biri için odalar çiz. Bu bulmacayı çözmek için birçok farklı yol var, bol bol eğlen!
       course2_artist_prog_challenge2: "* Bana bu yoldaki sarı çizgileri boyamaya yardım et! *"
-      course2_bee_conditionals_challenge1: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek ve petek var mı diye herhangi alanı bir kontrol et.
+      course2_bee_conditionals_challenge1: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek veya petek var mı diye herhangi alanı bir kontrol et.
       course2_bee_conditionals_challenge2: Bütün nektarı topla veya hepsini bal yap. Bir çiçekteki bütün nektarı 'While nectar > 0' döngüsünü kullanarak tamamlayabilirsin.
       course2_collector_loops_challenge2: |-
         Döngüleri kullanarak hazine avı yapalım. Bu koddaki hatayı ayıklayarak toplayıcıya yardım et. Tüm hazineyi al!
@@ -9453,9 +9471,12 @@ tr:
       courseD_bee_conditionals7_predict2: "Bazen bulut çiçeği saklar bazende peteği. Eğer/değilse bloğu kullanarak çiçek ise nektar al değilse bal yap( bu durumda petektir)."
       courseD_bee_conditionals7_predict2_2018: "Bazen bulut çiçeği saklar bazende peteği. Eğer/değilse bloğu kullanarak çiçek ise nektar al değilse bal yap( bu durumda petektir)."
       courseD_bee_conditionals7_predict2_2019: "Bazen bulut çiçeği saklar bazende peteği. Eğer/değilse bloğu kullanarak çiçek ise nektar al değilse bal yap( bu durumda petektir)."
-      courseD_bee_conditionals_challenge1: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek ve petek var mı diye herhangi alanı bir kontrol et.
-      courseD_bee_conditionals_challenge1_2018: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek ve petek var mı diye herhangi alanı bir kontrol et.
-      courseD_bee_conditionals_challenge1_2019: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek ve petek var mı diye herhangi alanı bir kontrol et.
+      courseD_bee_conditionals9: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek veya petek var mı diye herhangi alanı bir kontrol et. Her bir bulutun altında sadece bir çiçek veya bir petek bulunur.
+      courseD_bee_conditionals9_2018: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek veya petek var mı diye herhangi alanı bir kontrol et. Her bir bulutun altında sadece bir çiçek veya bir petek bulunur.
+      courseD_bee_conditionals9_2019: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek veya petek var mı diye herhangi alanı bir kontrol et. Her bir bulutun altında sadece bir çiçek veya bir petek bulunur.
+      courseD_bee_conditionals_challenge1: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek veya petek var mı diye herhangi alanı bir kontrol et.
+      courseD_bee_conditionals_challenge1_2018: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek veya petek var mı diye herhangi alanı bir kontrol et.
+      courseD_bee_conditionals_challenge1_2019: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek veya petek var mı diye herhangi alanı bir kontrol et.
       courseD_bee_conditionals_challenge2: Bütün nektarı topla veya hepsini bal yap. Bir çiçekteki bütün nektarı 'While nectar > 0' döngüsünü kullanarak tamamlayabilirsin.
       courseD_bee_conditionals_challenge2_2018: Bütün nektarı topla veya hepsini bal yap. Bir çiçekteki bütün nektarı 'While nectar > 0' döngüsünü kullanarak tamamlayabilirsin.
       courseD_bee_conditionals_challenge2_2019: Bütün nektarı topla veya hepsini bal yap. Bir çiçekteki bütün nektarı 'While nectar > 0' döngüsünü kullanarak tamamlayabilirsin.
@@ -10512,7 +10533,7 @@ tr:
         Bulutların altında çiçek yada petek olabilir. Eğer/değilse bloğu kullan. Eğer çiçek ise polen topla değilse bal yap (çünkü çiçek değilse petektir).
       grade3_ConditionalsElse_6: "Bu çiçekte ne kadar nektar var emin değilim ama 1, 2 veya 3 nektar olduğunu biliyorum. \\r \\r koşullu blok ('eğer' ve/veya ' Eğer/değilse') kullanarak olduğu kadar nektar al. \\r \\r, Nektar miktarı bulmacayı her çalıştırdığınızda değiştirebilir!"
       grade3_ConditionalsElse_7: "Mor çiçeklerde, 2, 3 veya 1 nektar olabilir. \"mor çiçeği kontrol et\" fonksiyonunu kullanarak nektarları toparla."
-      grade3_ConditionalsElse_8: "`check flower make honey` için fonksiyonu yaz. \\r\n\\r\nFonksiyonun, mor çiçeğin 3,2 ve 1 nektara sahip olup olmadığını kontrol etmeli ve bütün nektarları toplamalı.\\r\nSonra ilerle ve bal yap."
+      grade3_ConditionalsElse_8: "'çiçeğe bak bal yap' için fonksiyonu yaz. \\r\n\\r\nYazdığın fonksiyon, mor çiçeğin 1,2 veya 3 nektara sahip olup olmadığını kontrol etmeli ve bütün nektarları toplamalı.\\r\nSonra, ilerle ve bal yap."
       grade3_ConditionalsElse_9: "**Değerlendirme:** Bu bulut ya bir nektarı olan bir çiçek ya da bir bala ihtiyacı olan bir bal peteği saklıyor..  \\r\n\\r\n`nektar al veya bal yap` fonksiyonunu tamamla, sonra nektar ya da bal toplamak için bu fonksiyonu kullan.. \\r\n"
       grade3_ConditionalsElse_TeacherIDo: |-
         Bulutların altında çiçek yada petek olabilir. Eğer/değilse bloğu kullan. Eğer çiçek ise polen topla değilse bal yap (çünkü çiçek değilse petektir).

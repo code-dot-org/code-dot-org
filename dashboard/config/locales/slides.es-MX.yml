@@ -3061,7 +3061,7 @@ es-MX:
       1:
         image: notes/applab_intro_designmode_1.png
         text: Para crear tus propias aplicaciones, necesitarás empezar a diseñar pantallas
-          y elementos desde cero. Puedes hacerlo fácilmente con el Modo Diseño del
+          y elementos desde cero. Puedes hacerlo fácilmente con el Modo Diseño de
           Laboratorio de aplicaciones.
       2:
         image: notes/applab_intro_designmode_2.png
@@ -3137,7 +3137,7 @@ es-MX:
         text: Estas son solo algunas de las cosas que el Laboratorio de aplicaciones
           puede hacer. El laboratorio completo cuenta con interacciones de usuario
           más avanzadas, nuevos elementos de pantalla y hasta una base de datos para
-          que puedas crear aplicaciones completas rápidamente. En "code.org/applab"
+          que puedas crear aplicaciones completas rápidamente. En "code.org/applab",
           encontrarás la herramienta completa y muchas ideas para seguir avanzando.
       7:
         image: notes/applab_intro_share_7.png

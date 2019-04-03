@@ -344,6 +344,7 @@ lv:
         csp_applab_functions_parameters: Funkcijas ar parametriem
         csp_applab_loops: Cikli
         CSF_loops_AB: Cikli
+        csd_pair_programming: Pāru Programmēšana
     callout:
       text:
         drag_blocks: Pārvieto "pārvietot" bloku un pielipini zem cita bloka

@@ -750,6 +750,7 @@ ga:
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_harvester_skinOverview_K-1: An Buainteoir
         CSF_loops_AB: Lúba
+        csd_pair_programming: Códáil Bheirte
     callout:
       text:
         drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile
