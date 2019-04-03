@@ -47,8 +47,9 @@ class Concept < ActiveRecord::Base
   end
 
   def self.setup_with_concepts(concepts_by_index)
+    videos_by_concept = Video.where(key: concepts_by_index).index_by(&:key)
     concepts = concepts_by_index.map.with_index(1) do |concept, id|
-      {id: id, name: concept, video_key: concept}
+      {id: id, name: concept, video_key: videos_by_concept[concept]&.key}
     end
     transaction do
       reset_db
