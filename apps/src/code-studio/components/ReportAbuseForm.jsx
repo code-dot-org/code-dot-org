@@ -176,7 +176,7 @@ export default class ReportAbuseForm extends React.Component {
             />
           </div>
           <button
-            type="button"
+            type="submit"
             onClick={this.handleSubmit}
             id="uitest-submit-report-abuse"
           >
