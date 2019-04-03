@@ -225,65 +225,36 @@ module Pd
       render :new_general
     end
 
-    # GET /pd/workshop_survey/csf/:survey_name/:enrollment_code
-    def new_csf
-      params[:survey_name] = params[:survey_name]&.downcase
-      return render_404 unless CSF_SURVEY_INDEXES.key? params[:survey_name]
+    # GET workshop_survey/csf/pre201
+    def new_csf_pre201
+      workshop = Pd::Workshop.
+        where(course: COURSE_CSF, subject: SUBJECT_CSF_201).
+        enrolled_in_by(current_user).nearest
 
-      if params[:survey_name] == PRE_DEEPDIVE_SURVEY
-        workshop = Workshop.
-          where(course: COURSE_CSF).
-          where(subject: SUBJECT_CSF_201).
-          enrolled_in_by(current_user).nearest
+      return render :not_enrolled unless workshop
+      return render :too_late unless workshop.state != STATE_ENDED
+      render_csf_survey(PRE_DEEPDIVE_SURVEY, workshop)
+    end
 
-        return render :not_enrolled unless workshop
-        return render :too_late unless workshop.state != STATE_ENDED
-      elsif params[:survey_name] == POST_DEEPDIVE_SURVEY
-        workshop =
-          if params[:enrollment_code].present?
-            Enrollment.find_by(code: params[:enrollment_code])&.workshop
-          else
-            Workshop.
-            where(course: COURSE_CSF).
-            where(subject: SUBJECT_CSF_201).
-            with_nearest_attendance_by(current_user)
-          end
+    # GET workshop_survey/csf/post201(/:enrollment_code)
+    def new_csf_post201
+      enrolled_workshops = nil
+      if params[:enrollment_code].present?
+        enrolled_workshops = Workshop.joins(:enrollments).
+          where(pd_enrollments: {code: params[:enrollment_code]})
 
-        return render :not_enrolled unless workshop
-        # TODO: add more to this condition, only available to workshop ended x days ago
-        return render_404 unless workshop.state != STATE_NOT_STARTED
+        return render_404 if enrolled_workshops.blank?
+      else
+        enrolled_workshops = Workshop.
+          where(course: COURSE_CSF, subject: SUBJECT_CSF_201).
+          enrolled_in_by(current_user)
+
+        return render :not_enrolled if enrolled_workshops.blank?
       end
 
-      @form_id = WorkshopDailySurvey.get_form_id CSF_CATEGORY, params[:survey_name]
-
-      key_params = {
-        environment: Rails.env,
-        userId: current_user.id,
-        workshopId: workshop.id,
-        day: CSF_SURVEY_INDEXES[params[:survey_name]],
-        formId: @form_id
-      }
-
-      @form_params = key_params.merge(
-        userName: current_user.name,
-        userEmail: current_user.email,
-        submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
-      )
-
-      return redirect_general(key_params) if response_exists_general?(key_params)
-
-      if CDO.newrelic_logging
-        NewRelic::Agent.record_custom_event(
-          "RenderJotFormView",
-          {
-            route: "GET /pd/workshop_survey/csf/#{params[:survey_name]}",
-            form_id: @form_id,
-            workshop_course: workshop.course,
-            workshop_subject: workshop.subject,
-            regional_partner_name: workshop.regional_partner&.name,
-          }
-        )
-      end
+      attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
+      return render :no_attendance unless attended_workshop
+      render_csf_survey(POST_DEEPDIVE_SURVEY, attended_workshop)
     end
 
     # GET /pd/workshop_survey/thanks
@@ -304,7 +275,6 @@ module Pd
     def redirect_general(key_params)
       session_id = key_params[:sessionId]
 
-      # TODO: redirect CSF to personalized thank you page.
       if session_id.present?
         redirect_to action: :new_facilitator, session_id: session_id, facilitator_index: 0
       else
@@ -341,6 +311,41 @@ module Pd
       else
         redirect_to action: :thanks
       end
+    end
+
+    def render_csf_survey(survey_name, workshop)
+      @form_id = WorkshopDailySurvey.get_form_id CSF_CATEGORY, survey_name
+
+      key_params = {
+        environment: Rails.env,
+        userId: current_user.id,
+        workshopId: workshop.id,
+        day: CSF_SURVEY_INDEXES[survey_name],
+        formId: @form_id
+      }
+
+      @form_params = key_params.merge(
+        userName: current_user.name,
+        userEmail: current_user.email,
+        submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
+      )
+
+      return redirect_general(key_params) if response_exists_general?(key_params)
+
+      if CDO.newrelic_logging
+        NewRelic::Agent.record_custom_event(
+          "RenderJotFormView",
+          {
+            route: "GET /pd/workshop_survey/csf/#{survey_name}",
+            form_id: @form_id,
+            workshop_course: workshop.course,
+            workshop_subject: workshop.subject,
+            regional_partner_name: workshop.regional_partner&.name,
+          }
+        )
+      end
+
+      render :new_csf
     end
 
     def key_params
