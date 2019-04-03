@@ -604,8 +604,25 @@ end
 def cucumber_arguments_for_browser(browser, options)
   arguments = ' -S' # strict mode, so that we fail on undefined steps
   arguments += skip_tag('@skip')
-  arguments += tag('@eyes', eyes? && !browser['mobile'])
-  arguments += tag('@eyes_mobile', eyes? && browser['mobile'])
+
+  # If --eyes is specified, only run scenarios with the corresponding eyes tag.
+  # Otherwise, do not call tag(), allowing any scenarios to run which are not
+  # skipped via skip_tag(). See `cucumber --help` for more info.
+  if eyes?
+    arguments +=
+      if browser['mobile']
+        # iOS browsers will only run eyes tests tagged with @eyes_mobile.
+        tag('@eyes_mobile')
+      elsif browser['browserName'] == 'Internet Explorer'
+        # IE will only run eyes tests tagged with @eyes_ie.
+        tag('@eyes_ie')
+      else
+        # All other desktop browsers, including Chrome, will run any eyes test
+        # tagged with @eyes.
+        tag('@eyes')
+      end
+  end
+
   arguments += skip_tag('@no_mobile') if browser['mobile']
   arguments += skip_tag('@only_mobile') unless browser['mobile']
   arguments += skip_tag('@no_circle') if options.is_circle
