@@ -46,7 +46,8 @@ Scenario: Teacher submits inline mini-contact form after adding zip and email
 Scenario: Signed-out user submits pop-up mini-contact form after adding zip and email
   # First pop up the mini-contact form for signed-out user, and submit it.
   And I am on "http://studio.code.org/pd/application/teacher"
-  And I click "#regional-partner-mini-contact-popup-link-container"
+  And I wait until element "#regional-partner-mini-contact-popup-link-container span span" is visible
+  And I press "#regional-partner-mini-contact-popup-link-container span" using jQuery
   And I wait until element "#regional-partner-mini-contact-form-teacher-application-logged-out" is visible
   And I press "#submit" using jQuery
 
