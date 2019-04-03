@@ -28,17 +28,18 @@ class Census::ApSchoolCode < ApplicationRecord
     format("%06d", raw_school_code.to_i)
   end
 
-  def self.seed_from_csv(filename)
+  def self.seed_from_csv(filename, school_year)
     ActiveRecord::Base.transaction do
       CSV.foreach(filename, {headers: true}) do |row|
         normalized_school_code = normalize_school_code(row.to_hash['school_code'])
         begin
           school_id = School.normalize_school_id(row.to_hash['school_id'])
-          school = School.find(school_id)
-          find_or_create_by!(school_code: normalized_school_code, school: school)
-        rescue ActiveRecord::RecordNotFound
-          # Skip the row if we don't have the school in the DB
-          puts "AP School Code seed: school not found - skipping row for school_code:#{normalized_school_code} school_id:#{school.id}"
+          school = School.find_by(id: school_id)
+          if school.nil?
+            puts "AP School Code seed: school not found - skipping row for school_code:#{normalized_school_code} school_id:#{school_id}"
+          else
+            find_or_create_by!(school_code: normalized_school_code, school: school, school_year: school_year)
+          end
         end
       end
     end
@@ -55,7 +56,7 @@ class Census::ApSchoolCode < ApplicationRecord
 
   def self.seed
     if CDO.stub_school_data
-      seed_from_csv("test/fixtures/census/ap_school_codes.csv")
+      seed_from_csv("test/fixtures/census/ap_school_codes.csv", 2016)
     else
       seed_from_s3
     end
