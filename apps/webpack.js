@@ -82,7 +82,14 @@ var baseConfig = {
   module: {
     rules: [
       {test: /\.exported_json$/, loader: 'raw-loader'},
-      {test: /\.ejs$/, loader: 'ejs-webpack-loader'},
+      {
+        test: /\.ejs$/,
+        include: [
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'test')
+        ],
+        loader: 'ejs-webpack-loader'
+      },
       {test: /\.css$/, loader: 'style-loader!css-loader'},
       {
         test: /\.scss$/,
