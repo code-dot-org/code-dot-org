@@ -72,7 +72,21 @@ class RubricField extends Component {
     rubricValue: PropTypes.string.isRequired,
     disabledMode: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
-    currentlyChecked: PropTypes.bool
+    currentlyChecked: PropTypes.bool,
+    expandByDefault: PropTypes.bool
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      detailsOpen: this.props.expandByDefault
+    };
+  }
+
+  updateToggle = event => {
+    event.preventDefault();
+    this.setState({detailsOpen: !this.state.detailsOpen});
   };
 
   render() {
@@ -98,7 +112,12 @@ class RubricField extends Component {
               disabledMode={this.props.disabledMode}
             />
           )}
-          <details style={styles.detailsArea}>
+          <details
+            id={`rubric-details-${this.props.rubricLevel}`}
+            style={styles.detailsArea}
+            open={this.state.detailsOpen}
+            onClick={this.updateToggle}
+          >
             <summary style={styles.rubricHeader}>
               {rubricLevelHeaders[this.props.rubricLevel]}
             </summary>
@@ -110,6 +129,7 @@ class RubricField extends Component {
           role="tooltip"
           wrapper="div"
           effect="solid"
+          disable={this.state.detailsOpen}
         >
           <div style={styles.tooltip}>{this.props.rubricValue}</div>
         </ReactTooltip>
