@@ -158,7 +158,7 @@ ChartApi.prototype.warnIfColumnsNotFound = function(
   tableName
 ) {
   // Check that specified columns exist in raw data
-  requestedColumns.forEach(function(columnName) {
+  requestedColumns.forEach(columnName => {
     if (columnsInTable.indexOf(columnName) === -1) {
       this.warn(
         'Column ' +
@@ -168,7 +168,7 @@ ChartApi.prototype.warnIfColumnsNotFound = function(
           '.'
       );
     }
-  }, this);
+  });
 };
 
 /**
@@ -280,13 +280,11 @@ ChartApi.getChartTypeByName_ = function(typeName) {
  * @private
  */
 ChartApi.prototype.fetchTableData_ = function(tableName) {
-  return new Promise(
-    function(resolve, reject) {
-      this.appStorage_.readRecords(tableName, {}, resolve, function(errorMsg) {
-        reject(new Error(errorMsg));
-      });
-    }.bind(this)
-  );
+  return new Promise((resolve, reject) => {
+    this.appStorage_.readRecords(tableName, {}, resolve, function(errorMsg) {
+      reject(new Error(errorMsg));
+    });
+  });
 };
 
 /**
