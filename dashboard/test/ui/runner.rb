@@ -633,6 +633,7 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
   arguments = ''
   arguments += " --format html --out #{html_output_filename(test_run_string, options)}" if options.html
   arguments += ' -f pretty' if options.html # include the default (-f pretty) formatter so it does both
+  arguments += " --fail-fast" if options.fail_fast
 
   # if autorertrying, output a rerun file so on retry we only run failed tests
   if max_reruns > 0
@@ -681,7 +682,6 @@ def run_feature(browser, feature, options)
   run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
-  run_environment['FAIL_FAST'] = options.fail_fast ? "true" : nil
   run_environment['TEST_RUN_NAME'] = test_run_string
   run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
 
