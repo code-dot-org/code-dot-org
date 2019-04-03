@@ -14,13 +14,18 @@ var urlMap = {
 };
 
 $(document).ready(function() {
+  // No-op if user is already on Code Studio teacher dashboard.
+  if (window.location.origin === studioUrlPrefix) {
+    return;
+  }
+
   // Our current path should look something like: #/sections/:sectionId/:path
   // where /:path is optional.
   var currentPath = window.location.href;
   var sectionId = (currentPath.match(/sections\/(\d+)/) || [])[1];
   var path = (currentPath.match(/sections\/\d+\/(\S+)/) || [])[1];
 
-  // Direct all users to Code Studio teacher dashboard.
+  // Redirect all users to Code Studio teacher dashboard.
   redirectToStudioTeacherDashboard(sectionId, path);
 });
 
