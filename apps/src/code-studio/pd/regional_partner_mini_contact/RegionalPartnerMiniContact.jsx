@@ -127,11 +127,17 @@ export class RegionalPartnerMiniContact extends React.Component {
             id="name"
             label="Name"
             type="text"
+            required={false}
             onChange={this.handleChange}
             defaultValue={this.state.name}
           />
           {this.state.errors.includes('email') && (
-            <div style={styles.error}>Please enter an email.</div>
+            <div
+              style={styles.error}
+              id="regional-partner-mini-contact-error-email"
+            >
+              Please enter an email.
+            </div>
           )}
           <FieldGroup
             id="email"
@@ -142,7 +148,12 @@ export class RegionalPartnerMiniContact extends React.Component {
             defaultValue={this.state.email}
           />
           {this.state.errors.includes('zip') && (
-            <div style={styles.error}>Please enter your school ZIP Code.</div>
+            <div
+              id="regional-partner-mini-contact-error-zip"
+              style={styles.error}
+            >
+              Please enter your school ZIP Code.
+            </div>
           )}
           <FieldGroup
             id="zip"
@@ -156,6 +167,7 @@ export class RegionalPartnerMiniContact extends React.Component {
             id="notes"
             label="Questions or notes for your local Regional Partner"
             type="text"
+            required={false}
             componentClass="textarea"
             onChange={this.handleChange}
             defaultValue={this.state.notes}
