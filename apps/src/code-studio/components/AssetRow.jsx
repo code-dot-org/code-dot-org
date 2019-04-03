@@ -173,7 +173,11 @@ export default class AssetRow extends React.Component {
     let actions, flex;
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
     if (this.props.onChoose) {
-      flex = <button onClick={this.chooseAsset}>{i18n.choose()}</button>;
+      flex = (
+        <button type="button" onClick={this.chooseAsset}>
+          {i18n.choose()}
+        </button>
+      );
     } else {
       const size = (this.props.size / 1000).toFixed(2);
       flex = size + ' kb';
@@ -184,7 +188,11 @@ export default class AssetRow extends React.Component {
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
-            <button className="btn-danger" onClick={this.confirmDelete}>
+            <button
+              type="button"
+              className="btn-danger"
+              onClick={this.confirmDelete}
+            >
               <i className="fa fa-trash-o" />
             </button>
           </td>
@@ -209,10 +217,16 @@ export default class AssetRow extends React.Component {
                 }
               />
             )}
-            <button className="btn-danger" onClick={this.handleDelete}>
+            <button
+              type="button"
+              className="btn-danger"
+              onClick={this.handleDelete}
+            >
               Delete File
             </button>
-            <button onClick={this.cancelDelete}>Cancel</button>
+            <button type="button" onClick={this.cancelDelete}>
+              Cancel
+            </button>
             <div style={styles.deleteWarning}>
               {i18n.confirmDeleteExplanation()}
             </div>
