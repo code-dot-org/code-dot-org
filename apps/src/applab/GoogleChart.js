@@ -29,9 +29,6 @@ export default function GoogleChart(targetDiv) {
   /** @private {Element} */
   this.targetDiv_ = targetDiv;
 
-  /** @private {google.visualization.DataTable} */
-  this.dataTable_ = null;
-
   /**
    * List of all warnings logged while performing operations with this chart
    * instance.
@@ -46,22 +43,18 @@ export default function GoogleChart(targetDiv) {
  * @returns {Promise} that resolves when dependencies have been loaded.
  */
 GoogleChart.prototype.loadDependencies = function() {
-  return new Promise(
-    function(resolve, reject) {
-      try {
-        GoogleChart.lib.load('visualization', '1', {
-          packages: this.getDependencies(),
-          callback: resolve
-        });
-      } catch (e) {
-        // We catch and return a different error so that we don't surface Google
-        // API errors to students.
-        reject(
-          new Error('Unable to load Charts API.  Please try again later.')
-        );
-      }
-    }.bind(this)
-  );
+  return new Promise((resolve, reject) => {
+    try {
+      GoogleChart.lib.load('visualization', '1', {
+        packages: this.getDependencies(),
+        callback: resolve
+      });
+    } catch (e) {
+      // We catch and return a different error so that we don't surface Google
+      // API errors to students.
+      reject(new Error('Unable to load Charts API.  Please try again later.'));
+    }
+  });
 };
 
 /**
@@ -77,17 +70,15 @@ GoogleChart.prototype.loadDependencies = function() {
  * @returns {Promise} that resolves when the chart has been rendered to the
  *          target container.
  */
-GoogleChart.prototype.drawChart = function(rawData, columnList, options) {
-  return this.loadDependencies().then(
-    function() {
-      this.verifyData_(rawData, columnList);
-      var dataTable = GoogleChart.dataTableFromRowsAndColumns(
-        rawData,
-        columnList
-      );
-      return this.render_(dataTable, options);
-    }.bind(this)
+GoogleChart.prototype.drawChart = async function(rawData, columnList, options) {
+  await this.loadDependencies();
+
+  this.verifyData_(rawData, columnList);
+  const dataTable = GoogleChart.dataTableFromRowsAndColumns(
+    rawData,
+    columnList
   );
+  this.render_(dataTable, options);
 };
 
 /**
@@ -125,16 +116,12 @@ GoogleChart.prototype.verifyData_ = function(data, columns) {
   }
 
   // Warn on empty columns?
-  columns.forEach(
-    function(colName) {
-      var exists = data.some(function(row) {
-        return row[colName] !== undefined;
-      });
-      if (!exists) {
-        this.warn('No data found for column "' + colName + '".');
-      }
-    }.bind(this)
-  );
+  columns.forEach(colName => {
+    const exists = data.some(row => row[colName] !== undefined);
+    if (!exists) {
+      this.warn('No data found for column "' + colName + '".');
+    }
+  });
 };
 
 /**
@@ -144,11 +131,7 @@ GoogleChart.prototype.verifyData_ = function(data, columns) {
  * @return {google.visualization.DataTable}
  */
 GoogleChart.dataTableFromRowsAndColumns = function(rows, columns) {
-  var dataArray = rows.map(function(row) {
-    return columns.map(function(key) {
-      return row[key];
-    });
-  });
+  const dataArray = rows.map(row => columns.map(key => row[key]));
   return GoogleChart.lib.visualization.arrayToDataTable(
     [columns].concat(dataArray)
   );
@@ -160,11 +143,10 @@ GoogleChart.dataTableFromRowsAndColumns = function(rows, columns) {
  *
  * @param {google.visualzation.DataTable} dataTable
  * @param {Object} options
- * @returns {Promise}
  * @private
  */
 GoogleChart.prototype.render_ = function(dataTable, options) {
-  return Promise.reject(new Error('Rendering unimplemented for chart type.'));
+  throw new Error('Rendering unimplemented for chart type.');
 };
 
 /**
@@ -183,9 +165,8 @@ PieChart.inherits(GoogleChart);
 GoogleChart.PieChart = PieChart;
 
 PieChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.visualization.PieChart(this.targetDiv_);
+  const apiChart = new GoogleChart.lib.visualization.PieChart(this.targetDiv_);
   apiChart.draw(dataTable, options);
-  return Promise.resolve();
 };
 
 /**
@@ -226,9 +207,8 @@ GoogleChart.BarChart = BarChart;
  * @override
  */
 BarChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.visualization.BarChart(this.targetDiv_);
+  const apiChart = new GoogleChart.lib.visualization.BarChart(this.targetDiv_);
   apiChart.draw(dataTable, options);
-  return Promise.resolve();
 };
 
 /**
@@ -255,11 +235,10 @@ GoogleChart.MaterialBarChart = MaterialBarChart;
  * @override
  */
 MaterialBarChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.charts.Bar(this.targetDiv_);
+  const apiChart = new GoogleChart.lib.charts.Bar(this.targetDiv_);
   // Material charts have a built-in options converter for now.
-  var convertedOptions = GoogleChart.lib.charts.Bar.convertOptions(options);
+  const convertedOptions = GoogleChart.lib.charts.Bar.convertOptions(options);
   apiChart.draw(dataTable, convertedOptions);
-  return Promise.resolve();
 };
 
 /**
@@ -294,9 +273,8 @@ GoogleChart.LineChart = LineChart;
  * @override
  */
 LineChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.visualization.LineChart(this.targetDiv_);
+  const apiChart = new GoogleChart.lib.visualization.LineChart(this.targetDiv_);
   apiChart.draw(dataTable, options);
-  return Promise.resolve();
 };
 
 /**
@@ -323,11 +301,10 @@ GoogleChart.MaterialLineChart = MaterialLineChart;
  * @override
  */
 MaterialLineChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.charts.Line(this.targetDiv_);
+  const apiChart = new GoogleChart.lib.charts.Line(this.targetDiv_);
   // Material charts have a built-in options converter for now.
-  var convertedOptions = GoogleChart.lib.charts.Line.convertOptions(options);
+  const convertedOptions = GoogleChart.lib.charts.Line.convertOptions(options);
   apiChart.draw(dataTable, convertedOptions);
-  return Promise.resolve();
 };
 
 /**
@@ -362,11 +339,10 @@ GoogleChart.ScatterChart = ScatterChart;
  * @override
  */
 ScatterChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.visualization.ScatterChart(
+  const apiChart = new GoogleChart.lib.visualization.ScatterChart(
     this.targetDiv_
   );
   apiChart.draw(dataTable, options);
-  return Promise.resolve();
 };
 
 /**
@@ -393,11 +369,12 @@ GoogleChart.MaterialScatterChart = MaterialScatterChart;
  * @override
  */
 MaterialScatterChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.charts.Scatter(this.targetDiv_);
+  const apiChart = new GoogleChart.lib.charts.Scatter(this.targetDiv_);
   // Material charts have a built-in options converter for now.
-  var convertedOptions = GoogleChart.lib.charts.Scatter.convertOptions(options);
+  const convertedOptions = GoogleChart.lib.charts.Scatter.convertOptions(
+    options
+  );
   apiChart.draw(dataTable, convertedOptions);
-  return Promise.resolve();
 };
 
 /**
