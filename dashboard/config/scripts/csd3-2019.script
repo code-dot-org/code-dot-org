@@ -258,6 +258,7 @@ bonus 'CSD U3 L18 Freeplay_2019'
 
 stage 'Functions', flex_category: 'csd3_2'
 named_level 'CSD U3L19 TFMD_2019'
+named_level 'CSD U3 function video'
 level 'CSD U3 Functions Call Function_2019', progression: 'Functions'
 level 'CSD U3 Functions Order Functions_2019', progression: 'Functions'
 level 'CSD U3 Functions Prediction Order of Create_2019', progression: 'Functions'
