@@ -1390,7 +1390,7 @@ es-MX:
     applab_intro_designmode:
       1:
         image: 'notes/applab_intro_designmode_1.png'
-        text: "Para crear tus propias aplicaciones, necesitarás empezar a diseñar pantallas y elementos desde cero. Puedes hacerlo fácilmente con el Modo Diseño del Laboratorio de aplicaciones."
+        text: "Para crear tus propias aplicaciones, necesitarás empezar a diseñar pantallas y elementos desde cero. Puedes hacerlo fácilmente con el Modo Diseño de Laboratorio de aplicaciones."
       2:
         image: 'notes/applab_intro_designmode_2.png'
         text: "Utilice el interruptor en la parte superior de su aplicación para entrar en Modo de Diseño."
@@ -1436,7 +1436,7 @@ es-MX:
         text: "También puedes compartir un enlace a tu app en los medios sociales o enviarla a la galería de code.org para que otras personas puedan jugar y compartir."
       6:
         image: 'notes/applab_intro_share_6.png'
-        text: "Estas son solo algunas de las cosas que el Laboratorio de aplicaciones puede hacer. El laboratorio completo cuenta con interacciones de usuario más avanzadas, nuevos elementos de pantalla y hasta una base de datos para que puedas crear aplicaciones completas rápidamente. En \"code.org/applab\" encontrarás la herramienta completa y muchas ideas para seguir avanzando."
+        text: "Estas son solo algunas de las cosas que el Laboratorio de aplicaciones puede hacer. El laboratorio completo cuenta con interacciones de usuario más avanzadas, nuevos elementos de pantalla y hasta una base de datos para que puedas crear aplicaciones completas rápidamente. En \"code.org/applab\", encontrarás la herramienta completa y muchas ideas para seguir avanzando."
       7:
         image: 'notes/applab_intro_share_7.png'
         text: "Gracias por acompañarnos en el recorrido. Ahora construye y comparte tu primera app. ¡Y no dejes de crear apps con App Lab!"

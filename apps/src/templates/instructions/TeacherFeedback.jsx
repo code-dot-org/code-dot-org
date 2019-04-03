@@ -82,10 +82,10 @@ const ErrorType = {
   Save: 'Save'
 };
 
-class TeacherFeedback extends Component {
+export class TeacherFeedback extends Component {
   static propTypes = {
     user: PropTypes.number,
-    disabledMode: PropTypes.bool,
+    disabledMode: PropTypes.bool.isRequired,
     rubric: PropTypes.shape({
       keyConcept: PropTypes.string,
       exceeds: PropTypes.string,
@@ -93,11 +93,12 @@ class TeacherFeedback extends Component {
       approaches: PropTypes.string,
       noEvidence: PropTypes.string
     }),
-    visible: PropTypes.bool,
+    visible: PropTypes.bool.isRequired,
     //Provided by Redux
-    viewAs: PropTypes.oneOf(['Teacher', 'Student']),
+    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     serverLevelId: PropTypes.number,
-    teacher: PropTypes.number
+    teacher: PropTypes.number,
+    displayKeyConcept: PropTypes.bool
   };
 
   constructor(props) {
@@ -242,17 +243,16 @@ class TeacherFeedback extends Component {
       this.state.errorState === ErrorType.Load;
     const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
 
-    const showFeedbackInputAreas = !(
-      this.props.disabledMode && this.props.viewAs === ViewType.Teacher
-    );
-    const placeholderText = latestFeedback
-      ? latestFeedback.comment
-      : i18n.feedbackPlaceholder();
+    const placeholderText =
+      latestFeedback && latestFeedback.comment
+        ? latestFeedback.comment
+        : i18n.feedbackPlaceholder();
     const dontShowStudentComment =
       !this.state.comment && this.props.viewAs === ViewType.Student;
 
-    const dontShowStudentRubric =
-      !this.state.performance && this.props.viewAs === ViewType.Student;
+    const showFeedbackInputAreas =
+      !this.props.displayKeyConcept &&
+      !(!this.state.performance && this.props.viewAs === ViewType.Student);
 
     const rubricLevels = ['exceeds', 'meets', 'approaches', 'noEvidence'];
 
@@ -275,7 +275,7 @@ class TeacherFeedback extends Component {
             {i18n.feedbackLoadError()}
           </span>
         )}
-        {this.props.rubric && !dontShowStudentRubric && (
+        {this.props.rubric && (
           <div style={styles.performanceArea}>
             <div style={styles.keyConceptArea}>
               <h1 style={styles.h1}> {i18n.rubricKeyConceptHeader()} </h1>
@@ -288,6 +288,7 @@ class TeacherFeedback extends Component {
                   <RubricField
                     key={level}
                     showFeedbackInputAreas={showFeedbackInputAreas}
+                    expandByDefault={this.props.displayKeyConcept}
                     rubricLevel={level}
                     rubricValue={this.props.rubric[level]}
                     disabledMode={this.props.disabledMode}
@@ -299,7 +300,7 @@ class TeacherFeedback extends Component {
             </div>
           </div>
         )}
-        {showFeedbackInputAreas && !dontShowStudentComment && (
+        {!this.props.displayKeyConcept && !dontShowStudentComment && (
           <div style={styles.commentAndFooter}>
             <CommentArea
               disabledMode={this.props.disabledMode}
@@ -345,7 +346,7 @@ class TeacherFeedback extends Component {
     );
   }
 }
-
+export const UnconnectedTeacherFeedback = TeacherFeedback;
 export default connect(state => ({
   viewAs: state.viewAs,
   serverLevelId: state.pageConstants.serverLevelId,

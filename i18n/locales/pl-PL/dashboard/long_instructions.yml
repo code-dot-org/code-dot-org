@@ -321,14 +321,32 @@ pl:
 
         Ten program wykorzystuje „basy” (niskie tony) w muzyce do sterowania wysokością tancerza. Czy możesz spowodować, aby drugi tancerz także reagował na muzykę?
       CourseD_Dance_Party_11: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> pozwoli Ci uruchomić kod po naciśnięciu strzałki w górę.\n\nMożesz zmienić ruchy w tańcu, właściwości tancerza lub spowodować szybki ruch dokładnie raz. Bądź twórczy i wypatruj nowych bloków!"
-      CourseD_Dance_Party_11_5: "Sprawdź ten blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nTeraz możesz utworzyć wielu tancerzy na raz!\n\nSpróbuj użyć kilku bloków „wszystkie kaczki\", aby napisać kod, który sprawi, że wszystkie kaczki będą tańczyć razem."
+      CourseD_Dance_Party_11_5: |-
+        Sprawdź ten blok:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Teraz możesz utworzyć wielu tancerzy na raz!
+
+        Spróbuj użyć kilku bloków „wszystkie kaczki", aby napisać kod, który sprawi, że wszystkie kaczki będą tańczyć razem.
       CourseD_Dance_Party_11b: |-
         Czas, by potańczyć! Po naciśnięciu strzałki w lewo, Kot podnosi ręce do góry (ruch "dab"). Gdy naciśniesz strzałkę w prawo, Robot robi szpagat (ruch "drop") a klaszcze (ruch "clap"), gdy naciśniesz strzałkę do góry. 
 
         **Użyj klawiszy, by Robot na przemian klaskał i robił szpagat tak szybko, jak potrafisz!**
       CourseD_Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
+      CourseE_HOC 2018 Level_1: "Potrzebujesz zapasów na czekającą Cię wyprawę. Weź**łódkę** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) z **kufra** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png)."
       CourseE_HOC 2018 Level_10: "Gdzieś w tym Monumencie oceanicznym ukrywa się **kałamarnica** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png), czy potrafisz ją znaleźć?\n\n"
       CourseE_HOC 2018 Level_11: Zbuduj mur z **pryzmarynu** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) wokół czarnego betonu. Spowoduje to uaktywnienie **kanału** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) i zakończy Twoje wyzwanie!
+      CourseE_HOC 2018 Level_2: Znacznie łatwiej pływać łodzią niż wpław! Przemieść się do końca doku, aby wskoczyć na pokład.
+      CourseE_HOC 2018 Level_3: Chwyć wiosła i kieruj się łodzią przez otwarte morza, aby złowić **dorsza** na na otwartym morzu! [](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_4: Nakarm **delfina** dorszem ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Aby szybciej przemieścić się przez ocean, używaj bloku "powtarzaj aż".
+      CourseE_HOC 2018 Level_5: Gdzieś jest ukryta **muszla łodzika** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)! Zbadaj wrak i postaraj się dostać do **komody** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_6: Wygląda na to, że marzną! Złów **łososia** ![](Https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) na swojej drodze do podwodnych ruin.
       CourseE_HOC 2018 Level_7a: "Znalazłeś podwodne ruiny. Przeszukaj piaskowiec, by odnaleźć **kufer** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) zawierający **pryzmaryn** skarb ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
       CourseE_HOC 2018 Level_8: "Najpierw góry lodowe, a teraz lawa? Przeszukaj tę wulkaniczną wyspę i znajdź w rafie koralowej **tropikalną rybę** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png).\n\n"
       CourseE_HOC 2018 Level_9b: "Zrobiłeś to na rafie, teraz przeszukaj **Serce morza** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Wykorzystaj niebieski i czerwony koral, aby dotrzeć do **kufra** ze skarbem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)."

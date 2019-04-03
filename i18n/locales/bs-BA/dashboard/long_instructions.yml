@@ -187,7 +187,17 @@ bs:
 
         Ovaj program koristi razinu "basova" (niski tonovi) da bi kontrolisao visinu plesača. Možete li učiniti da i drugi plesač reaguje na muziku takođe?
       CourseD_Dance_Party_11: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> omogućava vam da se kod pokrene kada kliknete strelicu gore. Možete mijenjati i pokrete, osobine plesača ili da ubrzate jedan pokret jednom. Budite kreativni i potražite i nove blokove!"
-      CourseD_Dance_Party_11_5: "Pogledajte ovaj blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"PATKA\"</title>\n<title name=\"LAYOUT\">\"krug\"</title>\n</block></xml>\n\nSada možete napraviti mnogo plesača odjednom! Pokušajte upotrijebiti neke od blokova \"sve patke\" kako bi napravili da sve patke plešu skupa."
+      CourseD_Dance_Party_11_5: |-
+        Pogledajte ovaj blok:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"PATKA"</title>
+        <title name="LAYOUT">"krug"</title>
+        </block></xml>
+
+        Sada možete napraviti mnogo plesača odjednom! Pokušajte upotrijebiti neke od blokova "sve patke" kako bi napravili da sve patke plešu skupa.
       CourseD_Dance_Party_11b: |-
         Vrijeme je za plesno natjecanje! Mačka podigne ruke kada pritisnete lijevu strelicu. Neka se robot "spusti" kada kliknete desnu stelicu i "klapne rukama" kada pritisnete strelicu gore.
 

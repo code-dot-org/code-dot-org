@@ -361,6 +361,7 @@ vi:
         MC_2018_loops: 'Minecraft: Chuyến thám hiểm đại dương - Lặp tới khi'
         mc_2018_conditionals: 'Minecraft: Chuyến thám hiểm đại dương - Điều kiện'
         mc_2018_closing: 'Minecraft: Chuyến thám hiểm đại dương - Chúc mừng'
+        csd_pair_programming: Lập trình đôi
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

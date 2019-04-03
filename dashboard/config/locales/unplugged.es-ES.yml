@@ -697,3 +697,16 @@ es:
         desc: " En esta lección, los estudiantes recopilarán datos de un proyecto
           de Laboratorio de Juegos o escenario real del mundo y lo utilizarán para
           hacer predicciones."
+      courseE_unplugged_accessAbility_2019:
+        title: Habilidad de acceso
+        desc: Aprende acerca de la accesibilidad y el valor de la empatía a través
+          de la búsqueda y diseño de soluciones accesibles para aplicaciones hipotéticas.
+      courseE_simon_says_2019:
+        title: Simón dice
+        desc: Juega un juego y piensa en qué comandos se necesitan para obtener el
+          resultado correcto.
+      courseB_unplugged_passwords_2019:
+        title: Contraseñas fuertes
+        desc: Explore por qué la gente utiliza contraseñas, aprende los beneficios
+          de usar contraseñas y descubre estrategias para crear y mantener contraseñas
+          seguras y fuertes.

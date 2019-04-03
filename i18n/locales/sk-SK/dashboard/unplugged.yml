@@ -291,7 +291,7 @@ sk:
         title: 'chýba preklad: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'chýba preklad: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       courseB_unplugged_loopyMRF_2019:
-        title: 'chýba preklad: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
+        title: Moji zacyklení robotickí kamaráti
         desc: 'chýba preklad: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
       Conditionals_2019:
         title: Podmienky
@@ -368,5 +368,5 @@ sk:
         title: Je skvelé tvoriť a hrať férovo
         desc: Táto lekcia, vytvorená pomocou tímu Autorských práv a Kreativity, pomôže študentom lepšie porozumieť kreatívnemu procesu zdieľania myšlienok a využitia inšpirácie. Okrem toho sa budeme venovať aj témam kreatívneho vyjadrovania a potrebe férovosti pri kreatívnej tvorbe.
       GraphingData_2019:
-        title: Dáta ku grafom
-        desc: " V tejto lekcii študenti zozbierajú dáta z Play Lab projektu alebo reálneho života a použijú ich na vyrátanie pravdepodobnosti."
+        title: Zobrazenie dát v grafoch
+        desc: " V tejto lekcii študenti zozbierajú dáta z Play Lab projektu alebo z reálneho života a použijú ich na formulovanie predpovedí."

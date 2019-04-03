@@ -1,7 +1,7 @@
 {
   "danceFeedbackNeedNewDancer": "Tienes que crear un bailarín.",
   "danceFeedbackNoDancers": "No tienes bailarines.",
-  "danceFeedbackNoBackground": "Tienes que agregar un efecto de fondo.",
+  "danceFeedbackNoBackground": "Tienes que añadir un efecto de fondo.",
   "danceFeedbackTooManyDancers": "¡Ten cuidado! Si pones el bloque `hacer uno nuevo` dentro de `cada 2 compases`, vas a crear un montón de bailarines.",
   "danceFeedbackUseSetSize": "Utiliza el bloque de 'definir tamaño backup_dancer2' para hacer al bailarín más pequeño.",
   "danceFeedbackUseSetTint": "Utiliza el bloque `definir tonalidad` para cambiar la tonalidad de un bailarín.",

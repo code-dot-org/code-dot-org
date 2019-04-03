@@ -334,14 +334,32 @@
 
         Dette programmet bruker musikkens bass (de lave lydene) til å kontrollere danserens høyde. Kan du få den andre danseren til å tilsvare musikken også?
       CourseD_Dance_Party_11: "<xml><block type=\"Dancelab_whenKey\"></block></xml> blokken lar deg bruke en kode når “pil opp tasten” blir trykket på.\n\nDu kan endre danserens bevegelse, endre en dansers egenskaper, eller gjør en rask bevegelse kun en gang. Vær kreativ og se ut etter nye blokker!"
-      CourseD_Dance_Party_11_5: "Sjekk ut denne blokken:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"AND\"</title>\n<title name=\"LAYOUT\">\"sirkel\"</title>\n</block></xml>\n  \nNå kan du lage mange dansere samtidig!\n\nPrøv å bruke en av “alle ender” blokkene for å skrive en kode som får alle endene til å danse sammen."
+      CourseD_Dance_Party_11_5: |-
+        Sjekk ut denne blokken:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"AND"</title>
+        <title name="LAYOUT">"sirkel"</title>
+        </block></xml>
+          
+        Nå kan du lage mange dansere samtidig!
+
+        Prøv å bruke en av “alle ender” blokkene for å skrive en kode som får alle endene til å danse sammen.
       CourseD_Dance_Party_11b: |-
         Det er på tide med en dansekonkurranse! Katten dabber når du trykker på “venstre pil tasten”. Få roboten til å “falle” en gang når du trykker på “pil høyre tasten”, og “klappe høyt” en gang når du trykker på “pil opp tasten”.
 
         **Bruk tastene til å få roboten til å gjøre fall-klapp-fall-klapp så fort som du kan!**
       CourseD_Dance_Party_12: Ta på deg danseskoene! Lag din egen dans og del den med vennene dine.
+      CourseE_HOC 2018 Level_1: "Du trenger forsyninger for reisen fremover. Hent en ** båt **! [] (https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) fra ** kisten **! [] (https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
       CourseE_HOC 2018 Level_10: "Det er en ** blekksprut **! [] (https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) gjemt et sted i dette havet-monumentet, finner du det?\n\n"
       CourseE_HOC 2018 Level_11: Bygge en vegg av ** prismarine **! [] (https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) rundt den svarte betongen. Dette vil aktivere den ** stolpen **! [] (https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) og fullføre din utfordring!
+      CourseE_HOC 2018 Level_2: Båter er mye enklere enn svømming i åpent vann! Gå til enden av bryggen for å hoppe om bord.
+      CourseE_HOC 2018 Level_3: Plukk opp årer og kjør båten over det åpne havet for å fange ** torsken **! [] (https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_4: La oss mate torske til ** delfinen **! [] (https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Bruk en gjenta til mål blokk for å komme over havet raskere.
+      CourseE_HOC 2018 Level_5: Det er et ** nautilus skall **! [] (https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) gjemt et sted! Utforsk forliset for å nå ** kisten **! [] (https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_6: Ser iskaldt ut der ute! Fang en ** laks **! [] (https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) på vei til undervannsruinene.
       CourseE_HOC 2018 Level_7a: "Fant du undervannsruinene. Søk sandsteinen for en ** kiste **! [] (https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) som inneholder ** prismarine **! [] (https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) skatt.\n\n"
       CourseE_HOC 2018 Level_8: "Første isfjell, nå lava? Kom deg gjennom denne vulkanske øya og finne den ** tropisk fisken **! [] (https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) i korallrevet.\n\n"
       CourseE_HOC 2018 Level_9b: "Du kom deg til korallrevet, let etter ** hjertet av havet **! [] (https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)! Blå og rød korall for å komme frem til ** skattekisten **! [] (https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
