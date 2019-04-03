@@ -15,8 +15,8 @@ Scenario: Table data in level definition appears in data browser
 Scenario: Level defaults to design mode, students see design mode and teachers see code mode when viewing student work
   #As student
   Given I create a teacher-associated student named "Lillian"
-  And I wait for the page to fully load
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/21"
+  And I wait for the page to fully load
   And I wait to see Applab design mode
   Then I rotate to landscape
   And I wait to see "#runButton"
