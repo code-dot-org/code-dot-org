@@ -12,20 +12,29 @@ var urlMap = {
   "/manage": "/manage_students"
 };
 
-// Our current location should look something like: #/sections/:sectionId/:path
-// where /:path is optional.
-var currentLocation = window.location.href;
-var sectionId = (currentLocation.match(/sections\/(\d+)/) || [])[1];
-var path = (currentLocation.match(/sections\/\d+\/(\S+)/) || [])[1];
+function redirectToDashboard() {
+  // Our current location should look something like: #/sections/:sectionId/:path
+  // where /:path is optional.
+  var currentLocation = window.location.href;
+  var sectionId = (currentLocation.match(/sections\/(\d+)/) || [])[1];
+  var path = (currentLocation.match(/sections\/\d+\/(\S+)/) || [])[1];
 
-var studioTeacherDashboardUrl =
-  studioUrlPrefix + "/teacher_dashboard/sections/" + sectionId;
-if (path) {
-  // Prepend a forward slash to our path, unless it already has one.
-  if (path.at(0) !== "/") {
-    path = "/" + path;
+  if (!sectionId) {
+    window.location = studioUrlPrefix;
+    return;
   }
-  studioTeacherDashboardUrl += urlMap[path] || path;
+
+  var studioTeacherDashboardUrl =
+    studioUrlPrefix + "/teacher_dashboard/sections/" + sectionId;
+  if (path) {
+    // Prepend a forward slash to our path, unless it already has one.
+    if (path.at(0) !== "/") {
+      path = "/" + path;
+    }
+    studioTeacherDashboardUrl += urlMap[path] || path;
+  }
+
+  window.location = studioTeacherDashboardUrl;
 }
 
-window.location = studioTeacherDashboardUrl;
+redirectToDashboard();
