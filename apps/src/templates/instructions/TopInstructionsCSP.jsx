@@ -139,7 +139,8 @@ class TopInstructionsCSP extends Component {
         : TabType.INSTRUCTIONS,
       feedbacks: [],
       rubric: null,
-      teacherViewingStudentWork: teacherViewingStudentWork
+      teacherViewingStudentWork: teacherViewingStudentWork,
+      fetchingData: true
     };
   }
 
@@ -155,31 +156,43 @@ class TopInstructionsCSP extends Component {
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
 
+    const promises = [];
+
     if (this.props.viewAs === ViewType.Student) {
-      $.ajax({
-        url:
-          '/api/v1/teacher_feedbacks/get_feedbacks?student_id=' +
-          this.props.user +
-          '&level_id=' +
-          this.props.serverLevelId,
-        method: 'GET',
-        contentType: 'application/json;charset=UTF-8'
-      }).done(data => {
-        this.setState({feedbacks: data}, this.forceTabResizeToMaxHeight);
-      });
+      promises.push(
+        $.ajax({
+          url:
+            '/api/v1/teacher_feedbacks/get_feedbacks?student_id=' +
+            this.props.user +
+            '&level_id=' +
+            this.props.serverLevelId,
+          method: 'GET',
+          contentType: 'application/json;charset=UTF-8'
+        }).done(data => {
+          this.setState({feedbacks: data});
+        })
+      );
     }
     //While this is behind an experiment flag we will only pull the rubric
     //if the experiment is enable. This should prevent us from showing the
     //rubric if not in the experiment.
     if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
-      $.ajax({
-        url: `/levels/${this.props.serverLevelId}/get_rubric/`,
-        method: 'GET',
-        contentType: 'application/json;charset=UTF-8'
-      }).done(data => {
-        this.setState({rubric: data}, this.forceTabResizeToMaxHeight);
-      });
+      promises.push(
+        $.ajax({
+          url: `/levels/${this.props.serverLevelId}/get_rubric/`,
+          method: 'GET',
+          contentType: 'application/json;charset=UTF-8'
+        }).done(data => {
+          this.setState({rubric: data});
+        })
+      );
     }
+
+    Promise.all(promises).then(
+      window.setTimeout(() => {
+        this.setState({fetchingData: false}, this.forceTabResizeToMaxHeight);
+      }, 5000)
+    );
   }
 
   componentWillUnmount() {
@@ -382,7 +395,7 @@ class TopInstructionsCSP extends Component {
                   teacherOnly={teacherOnly}
                 />
               )}
-              {displayFeedback && (
+              {displayFeedback && (!this.state.fetchingData || teacherOnly) && (
                 <InstructionsTab
                   className="uitest-feedback"
                   onClick={this.handleCommentTabClick}
@@ -431,7 +444,7 @@ class TopInstructionsCSP extends Component {
                 referenceLinks={this.props.referenceLinks}
               />
             )}
-            {displayFeedback && (
+            {displayFeedback && !this.state.fetchingData && (
               <TeacherFeedback
                 user={this.props.user}
                 visible={this.state.tabSelected === TabType.COMMENTS}
