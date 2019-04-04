@@ -274,10 +274,6 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
       store.dispatch(showTeacherInfo());
 
-      const viewAs =
-        queryString.parse(location.search).viewAs || ViewType.Teacher;
-      store.dispatch(setViewType(viewAs));
-
       renderTeacherPanel(store, scriptData.id, scriptData.section);
     }
 
