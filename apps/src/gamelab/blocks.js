@@ -4,8 +4,9 @@ import {SVG_NS} from '../constants';
 import {getStore} from '../redux';
 import {getLocation} from './locationPickerModule';
 import {GAME_HEIGHT} from './constants';
+import {animationSourceUrl} from './animationListModule';
 
-let sprites = () => {
+export function sprites() {
   const animationList = getStore().getState().animationList;
   if (!animationList || animationList.orderedKeys.length === 0) {
     console.warn('No sprites available');
@@ -13,9 +14,18 @@ let sprites = () => {
   }
   return animationList.orderedKeys.map(key => {
     const animation = animationList.propsByKey[key];
-    return [animation.sourceUrl, `"${animation.name}"`];
+    if (animation.sourceUrl) {
+      return [animation.sourceUrl, `"${animation.name}"`];
+    } else {
+      const url = animationSourceUrl(
+        key,
+        animation,
+        getStore().getState().pageConstants.channelId
+      );
+      return [url, `"${animation.name}"`];
+    }
   });
-};
+}
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -143,7 +153,7 @@ const customInputTypes = {
       currentInputRow
         .appendTitle(inputConfig.label)
         .appendTitle(
-          new Blockly.FieldImageDropdown(sprites(), 32, 32),
+          new Blockly.FieldImageDropdown(sprites, 32, 32),
           inputConfig.name
         );
     },
