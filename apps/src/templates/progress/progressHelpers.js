@@ -129,6 +129,7 @@ export function summarizeProgressInStage(levelsWithStatus) {
       case LevelStatus.perfect:
       case LevelStatus.submitted:
       case LevelStatus.free_play_complete:
+      case LevelStatus.completed_assessment:
         statusCounts.completed = statusCounts.completed + 1;
         break;
       case LevelStatus.not_tried:
