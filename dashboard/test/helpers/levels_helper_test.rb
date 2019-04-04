@@ -646,4 +646,90 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal new_toolbox, options[:level]["toolbox"]
     assert_equal new_start, options[:level]["startBlocks"]
   end
+
+  test 'string_or_image can retrieve plain text' do
+    assert_equal string_or_image('match', "test"), "test"
+  end
+
+  test 'string_or_image can retrieve translated text' do
+    @level = create :multi, name: "test string_or_image translation"
+    input = "test text"
+    expected = "translated test text"
+
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "multi" => {
+          @level.name => {
+            input => expected
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    assert_equal string_or_image('multi', input), expected
+  end
+
+  test 'string_or_image will prefer english translations over raw string even in english' do
+    # Note that this isn't necessarily functionality we care about preserving,
+    # but it is how our system currently works
+
+    @level = create :multi, name: "test string_or_image english"
+    input = "test text"
+    expected = "stored source test text"
+
+    custom_i18n = {
+      "data" => {
+        "multi" => {
+          @level.name => {
+            input => expected
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations I18n.default_locale, custom_i18n
+
+    assert_equal string_or_image('multi', input), expected
+  end
+
+  test 'string_or_image can generate images' do
+    assert_equal string_or_image('multi', "example.png"), "<img src='example.png' ></img>"
+  end
+
+  test 'string_or_image can generate embedded blockly' do
+    create :level,
+      name: "embedded blockly test",
+      start_blocks: "<xml><block type='embedded_block' /></xml>"
+
+    #request.env['cdo-locale'] is used to generate the js_locale, but isn't
+    #correctly set up in this test context, so we have to mock it.
+    mock_request = mock
+    mock_request.stubs(:env).returns({"cdo.locale" => I18n.default_locale})
+    stubs(:request).returns(mock_request)
+
+    assert_equal string_or_image('multi', "embedded blockly test.start_blocks"),
+      "<xml><xml><block type=\"embedded_block\"/></xml></xml>"\
+      "<div id=\"codeWorkspace\" style=\"display: none\"></div>"\
+      "<style>.blocklySvg { background: none; }</style>"\
+      "<script src=\"/js/blockly.js\"></script>"\
+      "<script src=\"/js/en_us/blockly_locale.js\"></script>"\
+      "<script src=\"/js/common.min.js\"></script>"\
+      "<script src=\"/js/en_us/maze_locale.js\"></script>"\
+      "<script src=\"/js/maze.min.js\" data-appoptions=\"{&quot;readonly&quot;:true,&quot;embedded&quot;:true,&quot;locale&quot;:&quot;en_us&quot;,&quot;baseUrl&quot;:&quot;/blockly/&quot;,&quot;blocks&quot;:&quot;\\u003cxml\\u003e\\u003c/xml\\u003e&quot;,&quot;dialog&quot;:{},&quot;nonGlobal&quot;:true}\"></script>"\
+      "<script src=\"/js/embedBlocks.min.js\"></script>"
+
+    unstub(:request)
+  end
+
+  test 'string_or_image can generate iframes' do
+    test_level = create :level,
+      name: "embedded iframe test"
+
+    assert_equal string_or_image('multi', "embedded iframe test.level"),
+      "<div class=\"aspect-ratio\">"\
+      "<iframe src=\"/levels/#{test_level.id}/embed_level\" width=\"100%\" scrolling=\"no\" seamless=\"seamless\" style=\"border: none;\"></iframe>"\
+      "</div>"
+  end
 end
