@@ -1,3 +1,5 @@
+hidden false
+
 stage 'Variables Explore', flex_category: 'csp_variables'
 level 'CSP U4 My Pet Rock Example App', progression: 'Sample Apps'
 level 'U4 L01 Poetry App', progression: 'Sample Apps'
@@ -126,6 +128,3 @@ level 'U4 L14 Practice PT 2', progression: 'Submit Your Decision Maker App'
 
 stage 'Unit 4 Assessment', lockable: true
 assessment 'CSP 20-21 Unit 4 Assessment'
-
-stage 'Lists Explore'
-level 'U5 L01 Introduction to Lists', progression: 'Introduction to Lists'
