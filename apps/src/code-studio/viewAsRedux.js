@@ -30,7 +30,7 @@ export default function reducer(state = ViewType.Student, action) {
 // Action creators
 
 // Exported for test purposes
-export const setViewTypeNonThunk = viewType => ({
+export const setViewType = viewType => ({
   type: SET_VIEW_TYPE,
   viewType
 });
@@ -47,6 +47,6 @@ export const changeViewType = viewType => {
       return;
     }
 
-    dispatch(setViewTypeNonThunk(viewType));
+    dispatch(setViewType(viewType));
   };
 };
