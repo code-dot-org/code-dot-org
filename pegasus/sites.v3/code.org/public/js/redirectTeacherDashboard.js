@@ -19,6 +19,7 @@ function redirectToDashboard() {
   var sectionId = (currentLocation.match(/sections\/(\d+)/) || [])[1];
   var path = (currentLocation.match(/sections\/\d+\/(\S+)/) || [])[1];
 
+  // Redirect to Code Studio root URL if no sectionId is found.
   if (!sectionId) {
     window.location = studioUrlPrefix;
     return;
