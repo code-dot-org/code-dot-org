@@ -243,10 +243,6 @@ When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
 
-When /^I submit$/ do
-  @element.submit
-end
-
 When /^I rotate to landscape$/ do
   if ENV['BS_ROTATABLE'] == "true"
     @browser.rotate(:landscape)
@@ -257,11 +253,6 @@ When /^I rotate to portrait$/ do
   if ENV['BS_ROTATABLE'] == "true"
     @browser.rotate(:portrait)
   end
-end
-
-When /^I inject simulation$/ do
-  #@browser.execute_script('$("body").css( "background-color", "black")')
-  @browser.execute_script("var fileref=document.createElement('script');  fileref.setAttribute('type','text/javascript'); fileref.setAttribute('src', '/assets/jquery.simulate.js'); document.getElementsByTagName('head')[0].appendChild(fileref)")
 end
 
 When /^I press "([^"]*)"( to load a new page)?$/ do |button, load|
@@ -1346,8 +1337,8 @@ def press_keys(element, key)
   end
 end
 
-# Known issue: ie does not register the key presses in this step.
-# Add @no_ie tag to your scenario to skip ie when using this step
+# Known issue: IE does not register the key presses in this step.
+# Add @no_ie tag to your scenario to skip IE when using this step.
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
@@ -1362,6 +1353,16 @@ end
 When /^I press keys "([^"]*)"$/ do |keys|
   # Note: Safari webdriver does not support actions API
   @browser.action.send_keys(make_symbol_if_colon(keys)).perform
+end
+
+# Press backspace repeatedly to clear an element.  Handy for React.
+# Known issue: IE does not register the key presses in this step.
+# Add @no_ie tag to your scenario to skip IE when using this step.
+When /^I press backspace to clear element "([^"]*)"$/ do |selector|
+  element = @browser.find_element(:css, selector)
+  while @browser.execute_script("return $('#{selector}').val()") != ""
+    press_keys(element, ":backspace")
+  end
 end
 
 When /^I press enter key$/ do

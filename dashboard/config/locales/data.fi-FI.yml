@@ -698,6 +698,7 @@ fi:
         applab_intro_designmode: Sovelluslabra - Suunnittelumoodi
         applab_intro_share: Sovelluslabra - Jaa Sovelluksesi
         CSF_loops_AB: Silmukat
+        csd_pair_programming: Pariohjelmointi
     callout:
       text:
         drag_blocks: Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan

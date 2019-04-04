@@ -41,6 +41,7 @@ export default class BootstrapButton extends React.Component {
 
     return (
       <button
+        type="button"
         className={this.buttonClasses()}
         style={{...styles.button, ...style}}
         onClick={onClick}

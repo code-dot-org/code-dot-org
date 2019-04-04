@@ -4,7 +4,7 @@ zh-TW:
       AppLab Intro 3 - onEvent mouseOver: 鼠標懸停的用法
       AppLab Intro 3 - playSound: 播放音效的用法
       AppLab Intro 3 - stopSound: 播放音效的用法
-      AppLab Intro 4 - Video setProperty: 開始步驟
+      AppLab Intro 4 - Video setProperty: 新手上路
       AppLab Intro 4 - onEvent mouseOver: 鼠標懸停的用法
       AppLab Intro 4 - playSound: 播放音效的用法
       AppLab Intro 4 - stopSound: 播放音效的用法
@@ -15,7 +15,7 @@ zh-TW:
       AppLab Intro 5 - setScreen: 播放音效的用法
       AppLab Intro 5 - share keep going: 播放音效的用法
       AppLab Intro 5 - socialTemplate: 播放音效的用法
-      AppLab Intro 6 - Video welcome: 開始步驟
+      AppLab Intro 6 - Video welcome: 新手上路
       AppLab Intro 6 - animalSoundBoard: 播放音效的用法
       AppLab Intro 6 - blankApp: 播放音效的用法
       AppLab Intro 6 - playSound Template: 播放音效的用法
@@ -54,6 +54,9 @@ zh-TW:
       CSD U2 Pair Programming Video: 小組編程
       CSD U2 Pair Programming Video_2018: 小組編程
       CSD U2 Pair Programming Video_2019: 小組編程
+      CSD U2 formatting map: 格式化 HTML
+      CSD U2 formatting map_2018: 格式化 HTML
+      CSD U2 formatting map_2019: 格式化 HTML
       CSD U2 images map: 在 HTML 中的圖像
       CSD U2 images map_2018: 在 HTML 中的圖像
       CSD U2 images map_2019: 在 HTML 中的圖像
@@ -85,6 +88,9 @@ zh-TW:
       CSD U2L13 TFMD_2019: 教學內容概覽
       CSD U2L14 TFMD_2018: 教學內容概覽
       CSD U2L14 TFMD_2019: 教學內容概覽
+      CSD U3 - Booleans Video: '影片：布林值'
+      CSD U3 - Booleans Video_2018: '影片：布林值'
+      CSD U3 - Booleans Video_2019: '影片：布林值'
       CSD U3 Animation Edit Map: 圖像的編輯
       CSD U3 Animation Edit Map_2018: 圖像的編輯
       CSD U3 Animation Edit Map_2019: 圖像的編輯
@@ -154,6 +160,9 @@ zh-TW:
       CSD U3 istouching map: 碰撞檢測
       CSD U3 istouching map_2018: 碰撞檢測
       CSD U3 istouching map_2019: 碰撞檢測
+      CSD U3 velocity map: 角色速度
+      CSD U3 velocity map_2018: 角色速度
+      CSD U3 velocity map_2019: 角色速度
       CSD U3L01 TFMD_2018: 教學內容概覽
       CSD U3L01 TFMD_2019: 教學內容概覽
       CSD U3L02 TFMD_2018: 教學內容概覽
@@ -246,6 +255,9 @@ zh-TW:
       CSD U4L16 SFLP_2018: 教學內容概覽
       CSD U4L16 autoSFLP_2018: 教學內容概覽
       CSD U4L16 autoSFLP_2019: 教學內容概覽
+      CSD U5 binary video: 二進位和資料
+      CSD U5 binary video_2018: 二進位和資料
+      CSD U5 binary video_2019: 二進位和資料
       CSD U5L01 autoSFLP_2018: 教學內容概覽
       CSD U5L01 autoSFLP_2019: 教學內容概覽
       CSD U5L02 autoSFLP_2018: 教學內容概覽
@@ -276,7 +288,12 @@ zh-TW:
       CSD U5L14 autoSFLP_2019: 教學內容概覽
       CSD U5L15 autoSFLP_2018: 教學內容概覽
       CSD U5L15 autoSFLP_2019: 教學內容概覽
+      CSD U6 arrays intro: 陣列（Arrays）的介紹
+      CSD U6 arrays intro_2018: 陣列（Arrays）的介紹
       CSD U6 arrays intro_2019: 陣列
+      CSD U6 circuit button map: 按鈕電路
+      CSD U6 circuit button map_2018: 按鈕電路
+      CSD U6 circuit button map_2019: 按鈕電路
       CSD U6 emoji race demo: 範例程式
       CSD U6 emoji race demo_2018: 範例程式
       CSD U6 emoji race demo_2019: 範例程式
@@ -286,6 +303,9 @@ zh-TW:
       CSD U6 functions paramters video: 函式帶參數
       CSD U6 functions paramters video_2018: 函式帶參數
       CSD U6 functions paramters video_2019: 函式帶參數
+      CSD U6 tugowar demo: 演示 - 錯誤抓取
+      CSD U6 tugowar demo_2018: 演示 - 錯誤抓取
+      CSD U6 tugowar demo_2019: 演示 - 錯誤抓取
       CSD U6L01 TFMD clone: 教學內容概覽
       CSD U6L01 TFMD: 教學內容概覽
       CSD U6L01 TFMD_2018: 教學內容概覽
@@ -340,6 +360,9 @@ zh-TW:
       'CSD: Animating Sprite Movement_2019': '影片：角色動作'
       'CSD: For Loop_2018': 計數迴圈（For Loops）
       'CSD: For Loop_2019': 計數迴圈（For Loops）
+      'CSD: Sprite Velocity': '影片：速度'
+      'CSD: Sprite Velocity_2018': '影片：速度'
+      'CSD: Sprite Velocity_2019': '影片：速度'
       CSP CreateL01 SFLP: 教學內容概覽
       CSP CreateL01 SFLP_2019: 教學內容概覽
       CSP CreateL02 SFLP_2018: 教學內容概覽
@@ -494,12 +517,25 @@ zh-TW:
       Dance_Party_extras_speed: 加速、減速
       Dance_Party_extras_visible: 他們要去哪？
       MC_HOC_2017_02: 認識代理 Agent
+      MC_HOC_2017_11_Cole: 冰凍的湖
+      MC_HOC_2017_11_Kiki: 冰凍的湖
       MC_HOC_2017_FP10x10: 自由發揮
       MC_HOC_2017_FP10x10_RE: 自由發揮
       MC_HOC_Kiki_02: 認識代理 Agent
       New Minecraft Hero Project: 自由發揮
       SG U3L07 More Subgoals: 說明文件
+      SG U3L08 comments: 程式的註解
+      SG U3L08 how to add comments: 程式的註解
+      Text Compression_2018: 文字壓縮
+      Text Compression_2019: 文字壓縮
+      U3L08 how to add comments: 程式的註解
+      U3L08 how to add comments_2018: 程式的註解
+      U3L08 how to add comments_2019: 程式的註解
       U4 L01 Thermostat App: 恆溫器 App
+      'Widget: Text Compression_2018': '小工具：文字壓縮'
+      'Widget: Text Compression_2019': '小工具：文字壓縮'
+      andrea_test1: 深度學習
+      courseA_bee_intro: 更換我的影片
       courseA_video_Stevie: Stevie 和 Big Project
       courseA_video_Stevie_2018: Stevie 和 Big Project
       courseA_video_Stevie_2019: Stevie 和 Big Project

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 884,
   "properties": {
-    "video_key": "Teaching CS Fundamentals: How the Course Works",
+    "video_key": "teaching_csf_how_it_works",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true

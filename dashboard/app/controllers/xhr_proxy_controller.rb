@@ -56,11 +56,13 @@ class XhrProxyController < ApplicationController
     googleapis.com
     hamlin.myschoolapp.com
     herokuapp.com
+    hubblesite.org
     isenseproject.org
     lakeside-cs.org
     qrng.anu.edu.au
     quandl.com
     query.yahooapis.com
+    quizlet.com
     rejseplanen.dk
     noaa.gov
     nuevaschool.ngrok.io

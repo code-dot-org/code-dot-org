@@ -522,6 +522,18 @@ describe('applab', () => {
     });
   });
 
+  describe("Turtle mode's speed in debugger", () => {
+    it('will slow the speed of how fast each block is run in the workspace when speed is set as turtle mode ', () => {
+      Applab.setStepSpeed(0);
+      assert.equal(Applab.scale.stepSpeed, 1500);
+    });
+
+    it('will not affect how fast each block is run in the workspace when speed is set as rabbit mode', () => {
+      Applab.setStepSpeed(1);
+      assert.equal(Applab.scale.stepSpeed, 0);
+    });
+  });
+
   describe('Applab.init()', () => {
     before(() => sinon.stub(Applab, 'render'));
     after(() => Applab.render.restore());

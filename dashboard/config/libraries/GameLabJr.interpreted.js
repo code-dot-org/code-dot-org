@@ -373,6 +373,21 @@ function moveForward(sprite, distance) {
   sprite.y += distance * Math.sin(direction * Math.PI / 180);
 }
 
+function moveToward(sprite,distance,target) {
+  if (!sprite || distance === undefined || !target) {
+    return;
+  }
+  var dx = target.x - sprite.x;
+  var dy = target.y - sprite.y;
+  if (dx * dx + dy * dy > distance * distance) {
+    var angleOfMovement=Math.atan2(dy, dx);
+    dx = distance*Math.cos(angleOfMovement);
+    dy = distance*Math.sin(angleOfMovement);
+  }
+  sprite.x += dx;
+  sprite.y += dy;
+}
+
 function jumpTo(sprite,location) {
   sprite.x = location.x;
   sprite.y = location.y;
@@ -453,6 +468,21 @@ function moveInDirection(sprite,distance,direction) {
     else {
       console.error("moveInDirection: invalid direction provided");
     }
+}
+
+function moveToward(sprite,distance,target) {
+  if (!sprite || distance === undefined || !target) {
+    return;
+  }
+  var dx = target.x - sprite.x;
+  var dy = target.y - sprite.y;
+  if (dx * dx + dy * dy > distance * distance) {
+    var angleOfMovement=Math.atan2(dy, dx);
+    dx = distance*Math.cos(angleOfMovement);
+    dy = distance*Math.sin(angleOfMovement);
+  }
+  sprite.x += dx;
+  sprite.y += dy;
 }
 
 function unitVectorTowards(from, to) {

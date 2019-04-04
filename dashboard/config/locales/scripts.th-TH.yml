@@ -1809,6 +1809,8 @@ th:
               name: อีเวนต์กับเพลย์แลป
             Spelling Bee:
               name: ผึ้งนักสะกดคำ
+            Ocean Scene with Loops:
+              name: ฉากมหาสมุทรกับลูป
         removed19:
           stages:
             'Debugging: Unspotted Bugs':

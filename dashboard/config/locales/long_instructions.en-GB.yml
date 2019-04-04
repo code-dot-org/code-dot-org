@@ -89,6 +89,10 @@ en-GB:
       Artist Autorun Test: |-
         Now, put the function inside of a loop
         to draw these three squares.
+      CourseE_HOC 2018 Level_4: Let's feed the cod to the **dolphin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Use a repeat block to get across the ocean quicker.
+      CourseE_HOC 2018 Level_6: It looks freezing out there! Catch a **salmon** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        on your way to the underwater ruins.
       Function intro Ryan: "A **function** named `build bridge` is in your workspace.
         \ All the code you need to cross the river is built in! \r\n \r\nSnap the
         small, green block twice into your workspace to fix the path and get {currentPlayerName}

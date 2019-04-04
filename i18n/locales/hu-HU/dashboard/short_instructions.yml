@@ -704,8 +704,14 @@ hu:
       CourseD_Dance_Party_11_5: Az „összes kacsa“ blokkokkal érd el, hogy a kacsák együtt táncoljanak.
       CourseD_Dance_Party_11b: Állítsd be, hogy a Robot egyszer „spárga“ mozdulatot tegyen, amikor megnyomod a jobbra nyilat, és egyszer „taps“ mozdulatot tegyen, amikor megnyomod a felfelé nyilat. Csináld a spárga-taps mozdulatokat olyan gyorsan, ahogyan csak tudod!
       CourseD_Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd meg az ismerőseiddel.
+      CourseE_HOC 2018 Level_1: Vegyél ki egy csónakot a ládából.
       CourseE_HOC 2018 Level_10: Menj a Víz alatti templom bejáratához.
       CourseE_HOC 2018 Level_11: 'Prizmarinnal építs csatornát a Víz alatti templom belsejében.'
+      CourseE_HOC 2018 Level_2: 'Menj a móló végére.'
+      CourseE_HOC 2018 Level_3: 'Hajózz ki a nyílt vízre a tőkehalhoz.'
+      CourseE_HOC 2018 Level_4: Hurokkal kapd el a delfint.
+      CourseE_HOC 2018 Level_5: Kutasd át az elsüllyedt hajót, és juss el a ládához.
+      CourseE_HOC 2018 Level_6: Navigálj át a jégmezőn, és találd meg a lazacot.
       CourseE_HOC 2018 Level_7a: Kutasd át ezeket a víz alatti romokat, és keresd meg a ládát.
       CourseE_HOC 2018 Level_9b: 'Kincskeresés közben használd a korallokat útjelzőként.'
       CourseF_PlayLab_vars10: "Szabad játék! Itt van minden olyan változó, amellyel a pályákon eddig találkoztál, és még egy pár, ha esetleg szeretnéd használni őket.\\r\n\\r\nFigyeld meg, hogy most már olyan sok blokk van az eszköztárunkban, hogy rendszerezésre volt szükség! Mindegyiket elhelyeztük egy megfelelő kategóriába. Szánj egy kis időt az összes felfedezésére. Miután végeztél a böngészéssel, készíts egy olyan játékot, amely felhasznál ismétléseket, változókat és eseményeket is. \\r\n\\r\nTipp: görgess lefelé, hogy lásd a munkaterület minden parancsát."

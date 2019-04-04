@@ -318,7 +318,7 @@
   "moveSpriteN": "mută actor {spriteIndex}",
   "moveDroid": "mută droidul",
   "moveDroidN": "mută droid {spriteIndex}",
-  "to": "să",
+  "to": "pentru a",
   "toXY": "la x,y",
   "moveDown": "mută în jos",
   "moveDownTooltip": "Mută un actor în jos.",
