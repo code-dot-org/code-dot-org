@@ -7,7 +7,7 @@ module Pd::Application
       @application = facilitator_application
 
       mail(
-        to: @application.user.email,
+        to: @application.formatted_applicant_email,
         from: from(@application),
         subject: "We've received your facilitator application!"
       )
@@ -17,7 +17,7 @@ module Pd::Application
       @application = facilitator_application
 
       mail(
-        to: @application.user.email,
+        to: @application.formatted_applicant_email,
         from: from(@application),
         cc: @application.formatted_partner_contact_email,
         subject: "Your Code.org facilitator application status"
@@ -28,7 +28,7 @@ module Pd::Application
       @application = facilitator_application
 
       mail(
-        to: @application.user.email,
+        to: @application.formatted_applicant_email,
         from: from(@application),
         cc: @application.formatted_partner_contact_email,
         subject: "Your Code.org facilitator application status"

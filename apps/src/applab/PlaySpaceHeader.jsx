@@ -38,14 +38,26 @@ class PlaySpaceHeader extends React.Component {
           selected={this.props.interfaceMode}
           onChange={this.props.onInterfaceModeChange}
         >
-          <button id="codeModeButton" value={ApplabInterfaceMode.CODE}>
+          <button
+            type="button"
+            id="codeModeButton"
+            value={ApplabInterfaceMode.CODE}
+          >
             {msg.codeMode()}
           </button>
-          <button id="designModeButton" value={ApplabInterfaceMode.DESIGN}>
+          <button
+            type="button"
+            id="designModeButton"
+            value={ApplabInterfaceMode.DESIGN}
+          >
             {msg.designMode()}
           </button>
           {this.props.hasDataMode && (
-            <button id="dataModeButton" value={ApplabInterfaceMode.DATA}>
+            <button
+              type="button"
+              id="dataModeButton"
+              value={ApplabInterfaceMode.DATA}
+            >
               {msg.dataMode()}
             </button>
           )}
