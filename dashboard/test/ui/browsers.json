@@ -14,8 +14,7 @@
     "version": "latest",
     "platform": "Windows 7",
     "screenResolution": "1280x1024",
-    "extendedDebugging": true,
-    "capturePerformance": false
+    "extendedDebugging": true
   },
   {
     "name": "Chrome44Win7",
