@@ -7,6 +7,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  video_id   :integer
+#  video_key  :string
 #
 # Indexes
 #
