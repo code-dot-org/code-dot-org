@@ -75,10 +75,15 @@ class SectionProgressToggle extends React.Component {
         activeColor={color.teal}
         onChange={this.onChange}
       >
-        <button value={ViewType.SUMMARY} style={styles.toggleButton}>
+        <button
+          type="button"
+          value={ViewType.SUMMARY}
+          style={styles.toggleButton}
+        >
           <FontAwesome icon="search-minus" />
         </button>
         <button
+          type="button"
           id={'uitest-toggle-detail-view'}
           value={ViewType.DETAIL}
           style={styles.toggleButton}

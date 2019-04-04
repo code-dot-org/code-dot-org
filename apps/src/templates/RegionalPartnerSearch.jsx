@@ -246,7 +246,9 @@ class RegionalPartnerSearch extends Component {
               We are unable to find this ZIP code. You can still apply directly:
             </div>
             <a href={applicationLink}>
-              <button style={styles.bigButton}>Start application</button>
+              <button type="button" style={styles.bigButton}>
+                Start application
+              </button>
             </a>
           </div>
         )}
@@ -298,7 +300,9 @@ class RegionalPartnerSearch extends Component {
                 for other Professional Development options in your area.
               </p>
               <a href={applicationLink}>
-                <button style={styles.bigButton}>Start application</button>
+                <button type="button" style={styles.bigButton}>
+                  Start application
+                </button>
               </a>
             </div>
           </div>
@@ -316,7 +320,9 @@ class RegionalPartnerSearch extends Component {
                     id={`id-${partnerInfo.id}`}
                     href={applicationLink}
                   >
-                    <button style={styles.bigButton}>Start application</button>
+                    <button type="button" style={styles.bigButton}>
+                      Start application
+                    </button>
                   </a>
                 )}
 
@@ -328,7 +334,7 @@ class RegionalPartnerSearch extends Component {
                     href={partnerInfo.link_to_partner_application}
                     target="_blank"
                   >
-                    <button style={styles.bigButton}>
+                    <button type="button" style={styles.bigButton}>
                       Apply on partner's site
                     </button>
                   </a>
@@ -396,7 +402,7 @@ class RegionalPartnerSearch extends Component {
                   notes={'Please notify me when I can apply!'}
                   sourcePageId="regional-partner-search-notify"
                 >
-                  <button style={styles.bigButton}>
+                  <button type="button" style={styles.bigButton}>
                     Notify me when I can apply
                   </button>
                 </RegionalPartnerMiniContactPopupLink>
@@ -462,7 +468,9 @@ class RegionalPartnerSearch extends Component {
                   id={`id-${partnerInfo.id}`}
                   href={applicationLink}
                 >
-                  <button style={styles.bigButton}>Start application</button>
+                  <button type="button" style={styles.bigButton}>
+                    Start application
+                  </button>
                 </a>
               )}
 
@@ -474,7 +482,7 @@ class RegionalPartnerSearch extends Component {
                   href={partnerInfo.link_to_partner_application}
                   target="_blank"
                 >
-                  <button style={styles.bigButton}>
+                  <button type="button" style={styles.bigButton}>
                     Apply on partner's site
                   </button>
                 </a>
