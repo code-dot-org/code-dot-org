@@ -6,7 +6,7 @@ import queryString from 'query-string';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
-import {getIconForLevel} from './progressHelpers';
+import {getIconForLevel, isLevelAssessment} from './progressHelpers';
 import {levelType} from './progressTypes';
 import {
   DOT_SIZE,
@@ -124,6 +124,8 @@ class ProgressBubble extends React.Component {
       pairingIconEnabled
     } = this.props;
 
+    const levelIsAssessment = isLevelAssessment(level);
+
     const number = level.levelNumber;
     const url = level.url;
     const levelName = level.name || level.progression;
@@ -176,6 +178,7 @@ class ProgressBubble extends React.Component {
         tooltipId={tooltipId}
         icon={levelIcon}
         text={tooltipText}
+        includeAssessmentIcon={levelIsAssessment}
       />
     );
 

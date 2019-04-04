@@ -98,6 +98,13 @@ export function getIconForLevel(level) {
 }
 
 /**
+ * @returns Whether a level is an assessment level.
+ */
+export function isLevelAssessment(level) {
+  return level.kind === 'assessment';
+}
+
+/**
  * Summarizes stage progress data.
  * @param {[]} levelsWithStatus An array of objects each representing
  * students progress in a level
