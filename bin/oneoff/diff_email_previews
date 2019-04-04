@@ -85,6 +85,26 @@ def clean_folder_name(name)
   name.sub(/\/*$/, '')
 end
 
+def clean_email_content(folder_name)
+  raise "Folder #{folder_name} does not exits" unless File.directory?('./' + folder_name)
+
+  folder_name = clean_folder_name folder_name
+  cleaned_folder = folder_name + "_cleaned"
+  create_sub_folder(cleaned_folder)
+
+  # Find all html files in folder_name.
+  # Replace "[A-Z]{10}" string in each file by "enrollment_code".
+  # Save result to cleaned_folder to file with the same name.
+  shell_command = "find #{folder_name} -type f -name '*.html' -exec sh -c 'base=$(basename {});\
+  sed -E \"s/[A-Z]\{10\}/enrollment_code/\" {} > \"#{cleaned_folder}/$base\"' \\;"
+
+  puts "Cleaning email content in folder #{folder_name} -> #{cleaned_folder}"
+  puts "Executing: #{shell_command}"
+  system(shell_command)
+
+  cleaned_folder
+end
+
 def download_workshop_emails(output_folder)
   base = 'http://localhost-studio.code.org:3000/rails/mailers/pd/workshop_mailer/'
   body = '?part=text%2Fhtml'
@@ -108,30 +128,11 @@ def download_workshop_emails(output_folder)
   puts
 end
 
-def clean_email_content(folder_name)
-  raise "Folder #{folder_name} does not exits" unless File.directory?('./' + folder_name)
-
-  folder_name = clean_folder_name folder_name
-  cleaned_folder = folder_name + "_cleaned"
-  create_sub_folder(cleaned_folder)
-
-  puts "Cleaning email content in folder #{folder_name} -> #{cleaned_folder}"
-  #shell_command = "find #{folder_name} -type f -name '*.html' -exec sh -c 'f=\"{}\"; base=$(basename \"{}\"); echo \"./#{cleaned_folder}/$base\"' \\;"
-  shell_command = "find #{folder_name} -type f -name '*.html' -exec sh -c 'f=\"{}\"; base=$(basename \"{}\"); sed -E \"s/[A-Z]\{10\}/enrollment_code/\" \"$f\" > \"#{cleaned_folder}/$base\"' \\;"
-  puts "Executing: #{shell_command}"
-  system(shell_command)
-
-  cleaned_folder
-end
-
 def compare_workshop_emails(folder1, folder2)
   folder1_cleaned = clean_email_content(folder1)
   folder2_cleaned = clean_email_content(folder2)
 
-  # diff 2 folders, ignoring blank lines (-B) and lines containing enrollment codes (which are all caps 10-char strings).
-  # GNU diffutils use basic version of regex so we have to escape meta-characters like ?, +, |, {, }, (, and ).
-  # Reference: https://stackoverflow.com/questions/2072167/diff-tools-flavor-of-regex-seems-lacking
-  # shell_command = "diff -u -B -I '\\(/\\|=\\)[A-Z]\\{10,\\}' #{folder1_cleaned} #{folder2_cleaned} > diffresult.txt"
+  # diff 2 folders, ignoring blank lines (-B)
   shell_command = "diff -u -B #{folder1_cleaned} #{folder2_cleaned} > diffresult.txt"
   puts "Executing: #{shell_command}"
   system(shell_command)
