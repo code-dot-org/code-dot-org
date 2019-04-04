@@ -15,20 +15,22 @@ describe('VersionRow', () => {
     const wrapper = shallow(<VersionRow {...MINIMUM_PROPS} isLatest={false} />);
     expect(wrapper).to.containMatchingElement(
       <a target="_blank">
-        <button className="version-preview">
+        <button type="button" className="version-preview">
           <i className="fa fa-eye" />
         </button>
       </a>
     );
     expect(wrapper).to.containMatchingElement(
-      <button className="btn-info">{msg.restoreThisVersion()}</button>
+      <button type="button" className="btn-info">
+        {msg.restoreThisVersion()}
+      </button>
     );
   });
 
   it('renders a disabled button for the current version', () => {
     const wrapper = shallow(<VersionRow {...MINIMUM_PROPS} isLatest={true} />);
     expect(wrapper).to.containMatchingElement(
-      <button className="btn-default" disabled="disabled">
+      <button type="button" className="btn-default" disabled="disabled">
         {msg.currentVersion()}
       </button>
     );
