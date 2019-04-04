@@ -76,7 +76,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           follow up if your responses below don't meet the requirements, or if
           they have additional questions.
         </p>
-        {this.inputFor('csHowManyMinutes', {
+        {this.numberInputFor('csHowManyMinutes', {
           style: {
             width: '100px'
           },
@@ -85,7 +85,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
             this.getNameForSelectedProgram()
           )
         })}
-        {this.inputFor('csHowManyDaysPerWeek', {
+        {this.numberInputFor('csHowManyDaysPerWeek', {
           style: {
             width: '100px'
           },
@@ -94,7 +94,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
             this.getNameForSelectedProgram()
           )
         })}
-        {this.inputFor('csHowManyWeeksPerYear', {
+        {this.numberInputFor('csHowManyWeeksPerYear', {
           style: {
             width: '100px'
           },

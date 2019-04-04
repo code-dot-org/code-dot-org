@@ -165,7 +165,9 @@ export default class WorkshopEnrollment extends React.Component {
             </p>
 
             <a href={this.state.signUpUrl}>
-              <button className="primary">Create account now</button>
+              <button type="button" className="primary">
+                Create account now
+              </button>
             </a>
           </div>
         )}
