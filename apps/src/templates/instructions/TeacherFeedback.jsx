@@ -130,6 +130,10 @@ export class TeacherFeedback extends Component {
       }
     });
 
+    /*
+     * TODO (dmcavoy) : This ajax is called both here and in TopInstructions
+     * we should be able to remove this one.
+     */
     if (this.props.viewAs === ViewType.Student) {
       $.ajax({
         url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${user}&level_id=${serverLevelId}`,
