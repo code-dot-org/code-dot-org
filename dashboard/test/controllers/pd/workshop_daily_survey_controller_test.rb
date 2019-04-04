@@ -4,6 +4,7 @@ require 'test_helper'
 module Pd
   class WorkshopDailySurveyControllerTest < ActionDispatch::IntegrationTest
     include WorkshopConstants
+    include WorkshopSurveyConstants
 
     self.use_transactional_test_case = true
     setup_all do
@@ -26,6 +27,14 @@ module Pd
         num_sessions: 2, regional_partner: @regional_partner, facilitators: @facilitators
       @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
         user: @enrolled_two_day_academic_year_teacher, workshop: @two_day_academic_year_workshop
+
+      @csf201_not_started_workshop = create :pd_workshop,
+        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner, num_sessions: 1
+      @csf201_in_progress_workshop = create :pd_workshop,
+        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
+        num_sessions: 1, started_at: DateTime.now
+      @csf201_ended_workshop = create :pd_ended_workshop,
+        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner, num_sessions: 1
     end
 
     # Array of ids for days 0 (pre) and 1 - 5
@@ -33,6 +42,7 @@ module Pd
     FAKE_FACILITATOR_FORM_ID = 123459
     FAKE_SUBMISSION_ID = 987654
     FAKE_ACADEMIC_YEAR_IDS = (54321...54324).to_a.freeze
+    FAKE_CSF_201_FORM_IDS = [201903, 201904].freeze
 
     setup do
       CDO.stubs(:jotform_forms).returns(
@@ -53,9 +63,25 @@ module Pd
             day_2: FAKE_ACADEMIC_YEAR_IDS[1],
             post_workshop: FAKE_ACADEMIC_YEAR_IDS[4],
             facilitator: FAKE_FACILITATOR_FORM_ID
+          },
+          csf: {
+            pre201: FAKE_CSF_201_FORM_IDS[0],
+            post201: FAKE_CSF_201_FORM_IDS[1]
           }
         }.deep_stringify_keys
       )
+
+      @csf_pre201_params = {
+        environment: Rails.env,
+        day: CSF_SURVEY_INDEXES[PRE_DEEPDIVE_SURVEY],
+        formId: CDO.jotform_forms[CSF_CATEGORY][PRE_DEEPDIVE_SURVEY]
+      }
+
+      @csf_post201_params = {
+        environment: Rails.env,
+        day: CSF_SURVEY_INDEXES[POST_DEEPDIVE_SURVEY],
+        formId: CDO.jotform_forms[CSF_CATEGORY][POST_DEEPDIVE_SURVEY]
+      }
     end
 
     test 'daily summer workshop survey returns 404 for days outside of range 0-4' do
@@ -604,6 +630,283 @@ module Pd
       assert_equal FAKE_ACADEMIC_YEAR_IDS[1], new_record.form_id
     end
 
+    test 'csf pre201 survey: unauthenticated teacher is redirected to sign-in' do
+      get '/pd/workshop_survey/csf/pre201'
+      assert_response :redirect
+      assert_redirected_to_sign_in
+    end
+
+    test 'csf pre201 survey: unenrolled teacher gets not_enrolled msg' do
+      sign_in @unenrolled_teacher
+      get '/pd/workshop_survey/csf/pre201'
+
+      assert_response :success
+      assert_not_enrolled
+    end
+
+    test 'csf pre201 survey: enrolled teacher in ended workshop gets too-late msg' do
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: @csf201_ended_workshop
+
+      sign_in teacher
+      get '/pd/workshop_survey/csf/pre201'
+
+      assert_response :success
+      assert_closed
+    end
+
+    test 'csf pre201 survey: enrolled teacher in unended workshop gets survey' do
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
+
+      actual_form_id = nil
+      actual_form_params = nil
+      WorkshopDailySurveyController.view_context_class.any_instance.expects(:embed_jotform).
+        with do |id, params|
+          actual_form_id = id
+          actual_form_params = params
+          true
+        end
+
+      sign_in teacher
+      get '/pd/workshop_survey/csf/pre201'
+
+      assert_response :success
+      assert_equal @csf_pre201_params[:formId], actual_form_id
+      assert_equal teacher.id, actual_form_params[:userId]
+      assert_equal @csf201_not_started_workshop.id, actual_form_params[:workshopId]
+      assert_equal @csf_pre201_params[:day], actual_form_params[:day]
+    end
+
+    test 'csf pre201 survey: reports survey render to New Relic' do
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
+
+      CDO.stubs(:newrelic_logging).returns(true)
+      NewRelic::Agent.expects(:record_custom_event).with(
+        'RenderJotFormView',
+        {
+          route: 'GET /pd/workshop_survey/csf/pre201',
+          form_id: @csf_pre201_params[:formId],
+          workshop_course: COURSE_CSF,
+          workshop_subject: SUBJECT_CSF_201,
+          regional_partner_name: @regional_partner.name
+        }
+      )
+
+      sign_in teacher
+      get '/pd/workshop_survey/csf/pre201'
+
+      assert_response :success
+    end
+
+    test 'csf pre201 survey: submission creates a placeholder record and redirects teacher to thanks' do
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
+
+      search_params = {
+        user_id: teacher.id,
+        pd_workshop_id: @csf201_not_started_workshop.id,
+        day: @csf_pre201_params[:day],
+        form_id: @csf_pre201_params[:formId],
+        submission_id: FAKE_SUBMISSION_ID
+      }
+
+      key_params = @csf_pre201_params.merge(
+        userId: teacher.id,
+        workshopId: @csf201_not_started_workshop.id
+      )
+
+      refute WorkshopDailySurvey.response_exists?(search_params)
+
+      sign_in teacher
+      post '/pd/workshop_survey/submit',
+        params: {key: key_params}.merge(submission_id: FAKE_SUBMISSION_ID)
+
+      assert WorkshopDailySurvey.response_exists?(
+        search_params.merge(submission_id: FAKE_SUBMISSION_ID)
+      )
+      assert_redirected_to action: 'thanks'
+    end
+
+    test 'csf pre201 survey: teacher already submitted survey does not gets survey again' do
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
+
+      WorkshopDailySurvey.create_placeholder!(
+        user_id: teacher.id,
+        pd_workshop_id: @csf201_not_started_workshop.id,
+        day: @csf_pre201_params[:day],
+        form_id: @csf_pre201_params[:formId],
+        submission_id: FAKE_SUBMISSION_ID
+      )
+
+      WorkshopDailySurveyController.view_context_class.any_instance.expects(:embed_jotform).never
+
+      sign_in teacher
+      get '/pd/workshop_survey/csf/pre201'
+
+      assert_redirected_to action: 'thanks'
+    end
+
+    test 'csf post201 survey: unauthenticated teacher is redirected to sign-in' do
+      get '/pd/workshop_survey/csf/post201'
+      assert_response :redirect
+      assert_redirected_to_sign_in
+    end
+
+    test 'csf post201 survey: unenrolled teacher gets not-enrolled msg' do
+      sign_in @unenrolled_teacher
+      get '/pd/workshop_survey/csf/post201'
+
+      assert_response :success
+      assert_not_enrolled
+    end
+
+    test 'csf post201 survey: unattended teacher gets no-attendance msg' do
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
+
+      sign_in teacher
+      get '/pd/workshop_survey/csf/post201'
+
+      assert_response :success
+      assert_no_attendance
+    end
+
+    test 'csf post201 survey: attended teacher with invalid enrollment code gets 404 msg' do
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
+      create :pd_attendance, session: @csf201_in_progress_workshop.sessions.first, teacher: teacher
+
+      invalid_enrollment_code = "HAS1DIGIT"  # has an digit and length less than 10
+      sign_in teacher
+      get "/pd/workshop_survey/csf/post201/#{invalid_enrollment_code}"
+
+      assert_response :not_found
+    end
+
+    test 'csf post201 survey: attended teacher with valid enrollment code gets survey' do
+      teacher = create :teacher
+      enrollment = create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
+      create :pd_attendance, session: @csf201_in_progress_workshop.sessions.first, teacher: teacher
+
+      actual_form_id = nil
+      actual_form_params = nil
+      WorkshopDailySurveyController.view_context_class.any_instance.expects(:embed_jotform).
+        with do |id, params|
+          actual_form_id = id
+          actual_form_params = params
+          true
+        end
+
+      sign_in teacher
+      get "/pd/workshop_survey/csf/post201/#{enrollment.code}"
+
+      assert_response :success
+      assert_equal @csf_post201_params[:formId], actual_form_id
+      assert_equal teacher.id, actual_form_params[:userId]
+      assert_equal @csf201_in_progress_workshop.id, actual_form_params[:workshopId]
+      assert_equal @csf_post201_params[:day], actual_form_params[:day]
+    end
+
+    test 'csf post201 survey: attended teacher without enrollment code gets survey' do
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
+      create :pd_attendance, session: @csf201_in_progress_workshop.sessions.first, teacher: teacher
+
+      actual_form_id = nil
+      actual_form_params = nil
+      WorkshopDailySurveyController.view_context_class.any_instance.expects(:embed_jotform).
+        with do |id, params|
+          actual_form_id = id
+          actual_form_params = params
+          true
+        end
+
+      sign_in teacher
+      get '/pd/workshop_survey/csf/post201'
+
+      assert_response :success
+      assert_equal @csf_post201_params[:formId], actual_form_id
+      assert_equal teacher.id, actual_form_params[:userId]
+      assert_equal @csf201_in_progress_workshop.id, actual_form_params[:workshopId]
+      assert_equal @csf_post201_params[:day], actual_form_params[:day]
+    end
+
+    test 'csf post201 survey: reports survey render to New Relic' do
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
+      create :pd_attendance, session: @csf201_in_progress_workshop.sessions.first, teacher: teacher
+
+      CDO.stubs(:newrelic_logging).returns(true)
+      NewRelic::Agent.expects(:record_custom_event).with(
+        'RenderJotFormView',
+        {
+          route: 'GET /pd/workshop_survey/csf/post201',
+          form_id: @csf_post201_params[:formId],
+          workshop_course: COURSE_CSF,
+          workshop_subject: SUBJECT_CSF_201,
+          regional_partner_name: @regional_partner.name
+        }
+      )
+
+      sign_in teacher
+      get '/pd/workshop_survey/csf/post201'
+
+      assert_response :success
+    end
+
+    test 'csf post201 survey: submission creates a placeholder record and redirects teacher to thanks' do
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
+      create :pd_attendance, session: @csf201_in_progress_workshop.sessions.first, teacher: teacher
+
+      search_params = {
+        user_id: teacher.id,
+        pd_workshop_id: @csf201_in_progress_workshop.id,
+        day: @csf_post201_params[:day],
+        form_id: @csf_post201_params[:formId]
+      }
+
+      key_params = @csf_post201_params.merge(
+        userId: teacher.id,
+        workshopId: @csf201_in_progress_workshop.id
+        )
+
+      refute WorkshopDailySurvey.response_exists?(search_params)
+
+      sign_in teacher
+      post '/pd/workshop_survey/submit',
+        params: {key: key_params}.merge(submission_id: FAKE_SUBMISSION_ID)
+
+      assert WorkshopDailySurvey.response_exists?(
+        search_params.merge(submission_id: FAKE_SUBMISSION_ID)
+      )
+      assert_redirected_to action: 'thanks'
+    end
+
+    test 'csf post201 survey: teacher already submitted survey does not gets survey again' do
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
+      create :pd_attendance, session: @csf201_in_progress_workshop.sessions.first, teacher: teacher
+
+      WorkshopDailySurvey.create_placeholder!(
+        user_id: teacher.id,
+        pd_workshop_id: @csf201_in_progress_workshop.id,
+        day: @csf_post201_params[:day],
+        form_id: @csf_post201_params[:formId],
+        submission_id: FAKE_SUBMISSION_ID
+      )
+
+      WorkshopDailySurveyController.view_context_class.any_instance.expects(:embed_jotform).never
+
+      sign_in teacher
+      get '/pd/workshop_survey/csf/post201'
+
+      assert_redirected_to action: 'thanks'
+    end
+
     test 'thanks displays thanks message' do
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/thanks'
@@ -627,6 +930,10 @@ module Pd
       assert_select 'h1', text: 'No Attendance'
       assert_select 'p', text:
         'You need to be marked as attended for today’s session of your workshop before you can complete this survey.'
+    end
+
+    def assert_redirected_to_sign_in
+      assert_match %r{users/sign_in.*redirected}, response.body
     end
 
     def general_submit_redirect(day:, user: @enrolled_summer_teacher, workshop: @summer_workshop, enrollment_code: nil)
