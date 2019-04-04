@@ -4,7 +4,7 @@ import {
   throwOnConsoleErrorsEverywhere,
   throwOnConsoleWarningsEverywhere
 } from './util/throwOnConsole';
-import {clearTimeoutsBetweenTests} from './util/testUtils';
+import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
 
 var integrationContext = require.context('./integration', false, /Tests?\.js$/);
 
