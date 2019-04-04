@@ -11,9 +11,6 @@ export const ViewType = makeEnum('Student', 'Teacher');
 // Action types
 export const SET_VIEW_TYPE = 'viewAs/SET_VIEW_TYPE';
 
-/**
- * Stage lock reducer
- */
 export default function reducer(state = ViewType.Student, action) {
   if (action.type === SET_VIEW_TYPE) {
     const viewType = action.viewType;
