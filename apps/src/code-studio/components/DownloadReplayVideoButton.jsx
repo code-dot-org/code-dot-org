@@ -210,6 +210,7 @@ class DownloadReplayVideoButton extends React.Component {
 
     return (
       <button
+        type="button"
         className="download-replay-video-button"
         style={style}
         disabled={!this.buttonEnabled()}

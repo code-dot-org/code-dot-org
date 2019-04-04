@@ -80,7 +80,11 @@ export default class Alert extends React.Component {
       setTimeout(this.props.onClose, this.props.closeDelayMillis);
     } else {
       closeButton = (
-        <button style={styles.closeButton} onClick={this.props.onClose}>
+        <button
+          type="button"
+          style={styles.closeButton}
+          onClick={this.props.onClose}
+        >
           <span>&times;</span>
         </button>
       );
