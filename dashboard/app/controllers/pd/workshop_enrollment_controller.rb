@@ -34,7 +34,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           workshop_enrollment_status: "full"
         }.to_json
       }
-    elsif (csd_or_csp_workshop || @workshop.subject == Pd::Workshop::SUBJECT_CSF_201) && !current_user
+    elsif csd_or_csp_workshop && !current_user
       render :logged_out
     elsif csd_or_csp_workshop && current_user && current_user.teacher? && !current_user.email.present?
       render '/pd/application/teacher_application/no_teacher_email'
