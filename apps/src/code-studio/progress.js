@@ -12,7 +12,7 @@ import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
 import {authorizeLockable} from './stageLockRedux';
-import {changeViewType, ViewType} from './viewAsRedux';
+import {setViewType, ViewType} from './viewAsRedux';
 import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
@@ -230,7 +230,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     const query = queryString.parse(location.search);
     initialViewAs = query.viewAs || ViewType.Teacher;
   }
-  store.dispatch(changeViewType(initialViewAs));
+  store.dispatch(setViewType(initialViewAs));
 
   $.ajax('/api/user_progress/' + scriptData.name, {
     data: {
@@ -277,7 +277,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
         // We don't want to redispatch if our viewAs is the same as the initial
         // one, since the user might have manually changed the view while making
         // our async call
-        store.dispatch(changeViewType(viewAs));
+        store.dispatch(setViewType(viewAs));
       }
 
       renderTeacherPanel(store, scriptData.id, scriptData.section);
