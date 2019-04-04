@@ -33,7 +33,9 @@ export default class ExampleDialogButton extends React.Component {
           isOpen: this.state.open,
           ...closeCallbacks
         })}
-        <button onClick={this.open}>Open the example dialog</button>
+        <button type="button" onClick={this.open}>
+          Open the example dialog
+        </button>
       </div>
     );
   }

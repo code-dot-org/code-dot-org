@@ -24,7 +24,7 @@ describe('DisabledBubblesModal', () => {
               </a>
             </div>
             <div>
-              <button onClick={wrapper.instance().handleClose}>
+              <button type="button" onClick={wrapper.instance().handleClose}>
                 {i18n.dialogOK()}
               </button>
             </div>
