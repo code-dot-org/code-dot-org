@@ -1,7 +1,7 @@
 /**
  * Open external links in a new tab.
  */
-module.exports = function externalLinks() {
+export default function externalLinks() {
   const Parser = this.Parser;
   const tokenizers = Parser.prototype.inlineTokenizers;
   const original = tokenizers.link;
@@ -19,9 +19,9 @@ module.exports = function externalLinks() {
     return link;
   };
   tokenizers.link.locator = original.locator;
-};
+}
 
-function isExternalLink(url) {
-  const hostname = new URL(url, location.href).hostname;
+export function isExternalLink(url) {
+  const hostname = new URL(url, 'https://code.org').hostname;
   return !/(^|\.)code\.org$/.test(hostname);
 }
