@@ -49,12 +49,17 @@ class DeleteElementButton extends React.Component {
         <div style={[styles.right, styles.confirming]}>
           Delete?
           <button
+            type="button"
             style={[commonStyles.button, styles.red]}
             onClick={this.finishDelete}
           >
             Yes
           </button>
-          <button style={commonStyles.button} onClick={this.abortDelete}>
+          <button
+            type="button"
+            style={commonStyles.button}
+            onClick={this.abortDelete}
+          >
             No
           </button>
         </div>
@@ -63,6 +68,7 @@ class DeleteElementButton extends React.Component {
     return (
       <div>
         <button
+          type="button"
           style={[commonStyles.button, styles.red, styles.right]}
           onClick={this.handleDeleteInternal}
         >

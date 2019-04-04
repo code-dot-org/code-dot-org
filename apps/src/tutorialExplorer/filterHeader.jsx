@@ -150,6 +150,7 @@ export default class FilterHeader extends React.Component {
                   {this.shouldShowOpenFiltersButton() && (
                     <span>
                       <button
+                        type="button"
                         onClick={this.props.showModalFilters}
                         style={styles.button}
                         className="noFocusButton"
@@ -162,6 +163,7 @@ export default class FilterHeader extends React.Component {
                   {this.shouldShowCloseFiltersButton() && (
                     <span>
                       <button
+                        type="button"
                         onClick={this.props.hideModalFilters}
                         style={styles.button}
                         className="noFocusButton"

@@ -10,7 +10,7 @@
     "start_blocks": "drawRed();\r\n\r\nfunction drawRed(){\r\n  fill(\"red\");\r\n  rect(100,100,50,50);\r\n}\r\n\r\nfunction drawGreen(){\r\n  fill(\"green\");\r\n  rect(300,300,50,50);\r\n}\r\n\r\ndrawGreen();",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -55,10 +55,22 @@
     "show_debug_watch": "true",
     "parent_level_id": 11377,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "start_in_animation_tab": "false",
+    "expand_debugger": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-04-03 07:14:23 +0000\",\"changed\":[\"never_autoplay_video\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:15:34 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>
