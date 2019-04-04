@@ -176,19 +176,23 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   def exit_survey_url
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
-      CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
-    elsif workshop.summer?
-      pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)
-    elsif [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(workshop.course) && workshop.workshop_starting_date > Date.new(2018, 8, 1)
-      CDO.studio_url "/pd/workshop_survey/day/#{workshop.sessions.size}?enrollmentCode=#{code}", CDO.default_scheme
-    else
-      CDO.code_org_url "/pd-workshop-survey/#{code}", CDO.default_scheme
-    end
+    return CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme if
+      [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
+
+    return pd_new_workshop_survey_url(code, protocol: CDO.default_scheme) if
+      workshop.summer?
+
+    return CDO.studio_url "/pd/workshop_survey/day/#{workshop.sessions.size}?enrollmentCode=#{code}", CDO.default_scheme if
+      [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(workshop.course) && workshop.workshop_starting_date > Date.new(2018, 8, 1)
+
+    return CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme if
+      workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
+
+    CDO.code_org_url "/pd-workshop-survey/#{code}", CDO.default_scheme
   end
 
   def should_send_exit_survey?
-    !workshop.fit_weekend? && workshop.subject != SUBJECT_CSF_201
+    !workshop.fit_weekend?
   end
 
   def send_exit_survey
