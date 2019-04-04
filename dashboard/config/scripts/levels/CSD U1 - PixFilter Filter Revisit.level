@@ -174,7 +174,7 @@
     "hide_view_data_button": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Combining Filters\r\nNow that you've played with filtering a single color channel, it's time to see what happens if we filter more than one color.\r\n\r\n# Do This\r\n\r\n* Using the color dropdowns in the filter section, build a filter that changes the value of more than one color channel\r\n* Click on the top row of lightbulbs in the Diagram section to see how the filter will convert the input (top bulbs) to the output (bottom bulbs)\r\n* Look at how the numbers in the Binary section reflect changes to the colors\r\n* Complete the Level 4 table in your Activity Guide\r\n\r\n",
+    "long_instructions": "# Combining Filters\r\nNow that you've played with filtering a single color channel, it's time to see what happens if we filter more than one color.\r\n\r\n# Do This\r\n\r\n* Using the color dropdowns in the filter section, build a filter that changes the value of more than one color channel\r\n* Click on the top row of lightbulbs in the Diagram section to see how the filter will convert the input (top bulbs) to the output (bottom bulbs)\r\n* Look at how the numbers in the Binary section reflect changes to the colors\r\n* Complete the Level 4 table in your Activity Guide\r\n\r\n",
     "contained_level_names": null
   },
   "published": true,

@@ -15,7 +15,7 @@
     ],
     "min_workspace_height": "800",
     "free_play": true,
-    "instructions": "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones.",
+    "short_instructions": "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones.",
     "maze": "[[1,1,2,2,2,2,1,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,16,0,0,0,0,1]]",
     "instructions_important": "false",
     "is_k1": "false",

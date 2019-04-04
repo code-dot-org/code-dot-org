@@ -14,7 +14,7 @@
     "ideal": "6",
     "slider_speed": ".8",
     "free_play": "false",
-    "instructions": "Use your new skills to quickly draw the last row of windows for this building.\r\n\r\nThe windows are 20 pixel squares, each 20 pixels apart.",
+    "short_instructions": "Use your new skills to quickly draw the last row of windows for this building.\r\n\r\nThe windows are 20 pixel squares, each 20 pixels apart.",
     "embed": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -42,12 +42,15 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-05-31 23:49:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
   }
 }]]></config>
   <blocks>

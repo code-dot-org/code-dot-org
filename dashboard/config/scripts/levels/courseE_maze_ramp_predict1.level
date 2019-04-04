@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,1,1,1,0,0],[0,0,0,4,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,2,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "This code includes a new block. What do you think would happen if you press the \"Run\" block?",
+    "short_instructions": "This code includes a new block. What do you think would happen if you press the \"Run\" block?",
     "start_direction": "0",
     "step_mode": "1",
     "is_k1": "false",
@@ -31,7 +31,7 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_instructions_override": "This puzzle uses a new block. What do you think will happen when you press the \"Run\" button?",
+    "tts_short_instructions_override": "This puzzle uses a new block. What do you think will happen when you press the \"Run\" button?",
     "contained_level_names": null
   },
   "published": true,

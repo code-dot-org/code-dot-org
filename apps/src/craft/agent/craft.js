@@ -4,25 +4,25 @@ import ReactDOM from 'react-dom';
 import Hammer from 'hammerjs';
 
 import trackEvent from '../../util/trackEvent';
-import { tryGetLocalStorage, trySetLocalStorage } from '../../utils';
-import { singleton as studioApp } from '../../StudioApp';
+import {tryGetLocalStorage, trySetLocalStorage} from '../../utils';
+import {singleton as studioApp} from '../../StudioApp';
 import craftMsg from './locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   GameController,
   FacingDirection,
   EventType,
-  utils as CraftUtils,
+  utils as CraftUtils
 } from '@code-dot-org/craft';
 import dom from '../../dom';
 import MusicController from '../../MusicController';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import AppView from '../../templates/AppView';
 import CraftVisualizationColumn from './CraftVisualizationColumn';
-import { getStore } from '../../redux';
+import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
 
-import { TestResults } from '../../constants';
+import {TestResults} from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '../../code-studio/progressRedux';
 
@@ -32,7 +32,7 @@ const ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
-  DOWN: 'downButton',
+  DOWN: 'downButton'
 };
 
 const interfaceImages = {
@@ -48,26 +48,26 @@ const interfaceImages = {
     MEDIA_URL + 'Sliced_Parts/Reset_Button_Up_Slice.png',
     MEDIA_URL + 'Sliced_Parts/MC_Reset_Arrow_Icon.png',
     MEDIA_URL + 'Sliced_Parts/Reset_Button_Down_Slice.png',
-    MEDIA_URL + 'Sliced_Parts/Callout_Tail.png',
+    MEDIA_URL + 'Sliced_Parts/Callout_Tail.png'
   ],
   1: [
     MEDIA_URL + 'Sliced_Parts/Steve_Character_Select.png',
     MEDIA_URL + 'Sliced_Parts/Alex_Character_Select.png',
     MEDIA_URL + 'Sliced_Parts/Agent_Fail.png',
     MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png',
-    MEDIA_URL + 'Sliced_Parts/Agent_Success.png',
-  ],
+    MEDIA_URL + 'Sliced_Parts/Agent_Success.png'
+  ]
 };
 
 const MUSIC_METADATA = [
-  { volume: 1, hasOgg: true, name: 'vignette1' },
-  { volume: 1, hasOgg: true, name: 'vignette2-quiet' },
-  { volume: 1, hasOgg: true, name: 'vignette3' },
-  { volume: 1, hasOgg: true, name: 'vignette4-intro' },
-  { volume: 1, hasOgg: true, name: 'vignette5-shortpiano' },
-  { volume: 1, hasOgg: true, name: 'vignette7-funky-chirps-short' },
-  { volume: 1, hasOgg: true, name: 'vignette8-free-play' },
-  { volume: 1, hasOgg: true, name: 'nether2' },
+  {volume: 1, hasOgg: true, name: 'vignette1'},
+  {volume: 1, hasOgg: true, name: 'vignette2-quiet'},
+  {volume: 1, hasOgg: true, name: 'vignette3'},
+  {volume: 1, hasOgg: true, name: 'vignette4-intro'},
+  {volume: 1, hasOgg: true, name: 'vignette5-shortpiano'},
+  {volume: 1, hasOgg: true, name: 'vignette7-funky-chirps-short'},
+  {volume: 1, hasOgg: true, name: 'vignette8-free-play'},
+  {volume: 1, hasOgg: true, name: 'nether2'}
 ];
 
 const CHARACTER_STEVE = 'Steve';
@@ -78,7 +78,7 @@ const directionToFacing = {
   upButton: FacingDirection.North,
   downButton: FacingDirection.South,
   leftButton: FacingDirection.West,
-  rightButton: FacingDirection.East,
+  rightButton: FacingDirection.East
 };
 
 export default class Craft {
@@ -101,7 +101,7 @@ export default class Craft {
     config.showInstructionsInTopPane = true;
 
     // Return the version of Internet Explorer (8+) or undefined if not IE.
-    const getIEVersion = function () {
+    const getIEVersion = function() {
       return document.documentMode;
     };
 
@@ -119,11 +119,11 @@ export default class Craft {
 
     // Always add a hook for after the video but before the level proper begins.
     // Use this to start music, and sometimes to show an extra dialog.
-    config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
+    config.level.afterVideoBeforeInstructionsFn = showInstructions => {
       Craft.beginBackgroundMusic();
       if (config.level.showPopupOnLoad) {
         if (config.level.showPopupOnLoad === 'playerSelection') {
-          Craft.showPlayerSelectionPopup(function (selectedPlayer) {
+          Craft.showPlayerSelectionPopup(function(selectedPlayer) {
             trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
             Craft.clearPlayerState();
             trySetLocalStorage('craftSelectedPlayer', selectedPlayer);
@@ -150,47 +150,47 @@ export default class Craft {
 
     let levelTracks = [];
     if (Craft.level.songs && MUSIC_METADATA) {
-      levelTracks = MUSIC_METADATA.filter(function (trackMetadata) {
+      levelTracks = MUSIC_METADATA.filter(function(trackMetadata) {
         return Craft.level.songs.indexOf(trackMetadata.name) !== -1;
       });
     }
 
     Craft.musicController = new MusicController(
       Sounds.getSingleton(),
-      function (filename) {
+      function(filename) {
         return config.skin.assetUrl(`music/${filename}`);
       },
       levelTracks,
-      levelTracks.length > 1 ? 7500 : null,
+      levelTracks.length > 1 ? 7500 : null
     );
 
     config.skin.staticAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
-    config.skin.smallStaticAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
+    config.skin.smallStaticAvatar =
+      MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
     config.skin.failureAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Fail.png';
     config.skin.winAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Success.png';
 
-    const onMount = function () {
+    const onMount = function() {
       studioApp().init(
         Object.assign({}, config, {
           forceInsertTopBlock: 'when_run',
           appStrings: {
-            generatedCodeDescription: craftMsg.generatedCodeDescription(),
+            generatedCodeDescription: craftMsg.generatedCodeDescription()
           },
-          loadAudio: function () {},
-          afterInject: function () {
+          loadAudio: function() {},
+          afterInject: function() {
             if (config.level.showMovementBanner) {
               studioApp().displayWorkspaceAlert(
                 'warning',
-                <div>
-                  {craftMsg.useArrowKeys()}
-                </div>,
+                <div>{craftMsg.useArrowKeys()}</div>
               );
             }
 
             // NaN if not set
             const slowMotionURLParam = parseFloat(
-              (location.search.split('customSlowMotion=')[1] || '')
-                .split('&')[0],
+              (location.search.split('customSlowMotion=')[1] || '').split(
+                '&'
+              )[0]
             );
             Craft.gameController = new GameController({
               Phaser: window.Phaser,
@@ -198,28 +198,28 @@ export default class Craft {
               assetRoot: Craft.skin.assetUrl(''),
               audioPlayer: {
                 register: studioApp().registerAudio.bind(studioApp()),
-                play: studioApp().playAudio.bind(studioApp()),
+                play: studioApp().playAudio.bind(studioApp())
               },
               debug: false,
               customSlowMotion: config.level.isTestLevel
                 ? 0.5
                 : slowMotionURLParam,
               /**
-             * First asset packs to load while video playing, etc.
-             * Won't matter for levels without delayed level initialization
-             * (due to e.g. character / house select popups).
-             */
+               * First asset packs to load while video playing, etc.
+               * Won't matter for levels without delayed level initialization
+               * (due to e.g. character / house select popups).
+               */
               earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(
-                config.level.puzzle_number,
+                config.level.puzzle_number
               ),
-              afterAssetsLoaded: function () {
+              afterAssetsLoaded: function() {
                 // Listen for hint events that draw a path in the game.
                 window.addEventListener('displayHintPath', e => {
                   Craft.gameController.levelView.drawHintPath(e.detail);
                 });
 
                 window.addEventListener('craftCollectibleCollected', e => {
-                  if (e.blockType === "diamondMiniblock") {
+                  if (e.blockType === 'diamondMiniblock') {
                     Craft.setSessionDiamondCollected();
                   }
                 });
@@ -228,8 +228,8 @@ export default class Craft {
                 Craft.musicController.preload();
               },
               earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(
-                config.level.puzzle_number,
-              ),
+                config.level.puzzle_number
+              )
             });
 
             if (!config.level.showPopupOnLoad) {
@@ -239,7 +239,7 @@ export default class Craft {
             if (studioApp().hideSource) {
               // Set visualizationColumn width in share mode so it can be centered
               const visualizationColumn = document.getElementById(
-                'visualizationColumn',
+                'visualizationColumn'
               );
               visualizationColumn.style.width = this.nativeVizWidth + 'px';
             }
@@ -247,19 +247,19 @@ export default class Craft {
             for (const btn in ArrowIds) {
               dom.addMouseUpTouchEvent(
                 document.getElementById(ArrowIds[btn]),
-                (function (btn) {
+                (function(btn) {
                   return () => {
                     Craft.onArrowButtonUp(ArrowIds[btn]);
                   };
-                })(btn),
+                })(btn)
               );
               dom.addMouseDownTouchEvent(
                 document.getElementById(ArrowIds[btn]),
-                (function (btn) {
+                (function(btn) {
                   return e => {
                     Craft.onArrowButtonDown(e, ArrowIds[btn]);
                   };
-                })(btn),
+                })(btn)
               );
             }
 
@@ -267,7 +267,7 @@ export default class Craft {
             $('#soft-buttons')
               .removeClass('soft-buttons-none')
               .addClass('soft-buttons-' + 4);
-            $('.arrow').prop("disabled", false);
+            $('.arrow').prop('disabled', false);
 
             const resetButton = document.getElementById('resetButton');
             dom.addClickTouchEvent(resetButton, Craft.resetButtonClick);
@@ -277,54 +277,54 @@ export default class Craft {
               [Hammer.DIRECTION_LEFT]: 'leftButton',
               [Hammer.DIRECTION_RIGHT]: 'rightButton',
               [Hammer.DIRECTION_UP]: 'upButton',
-              [Hammer.DIRECTION_DOWN]: 'downButton',
+              [Hammer.DIRECTION_DOWN]: 'downButton'
             };
 
-            const onDrag = function (e) {
+            const onDrag = function(e) {
               if (hammerToButton[e.direction]) {
                 Craft.gameController.codeOrgAPI.arrowDown(
-                  directionToFacing[hammerToButton[e.direction]],
+                  directionToFacing[hammerToButton[e.direction]]
                 );
               }
               e.preventDefault();
             };
 
-            const onDragEnd = function (e) {
+            const onDragEnd = function(e) {
               if (hammerToButton[e.direction]) {
                 Craft.gameController.codeOrgAPI.arrowUp(
-                  directionToFacing[hammerToButton[e.direction]],
+                  directionToFacing[hammerToButton[e.direction]]
                 );
               }
               e.preventDefault();
             };
 
             const mc = new Hammer.Manager(phaserGame);
-            mc.add(new Hammer.Pan({ direction: Hammer.DIRECTION_ALL }));
-            mc.add(new Hammer.Press({ time: 150 }));
+            mc.add(new Hammer.Pan({direction: Hammer.DIRECTION_ALL}));
+            mc.add(new Hammer.Press({time: 150}));
             mc.add(new Hammer.Tap());
             mc.on('pan', onDrag);
             mc.on('panend pancancel', onDragEnd);
             mc.on('press', () =>
-              Craft.gameController.codeOrgAPI.clickDown(() => {}),
+              Craft.gameController.codeOrgAPI.clickDown(() => {})
             );
             mc.on('tap', () => {
               Craft.gameController.codeOrgAPI.clickDown(() => {});
               Craft.gameController.codeOrgAPI.clickUp(() => {});
             });
             mc.on('pressup', () =>
-              Craft.gameController.codeOrgAPI.clickUp(() => {}),
+              Craft.gameController.codeOrgAPI.clickUp(() => {})
             );
           },
           twitter: {
             text: 'Share on Twitter',
-            hashtag: 'Craft',
-          },
-        }),
+            hashtag: 'Craft'
+          }
+        })
       );
 
       let interfaceImagesToLoad = [];
       interfaceImagesToLoad = interfaceImagesToLoad.concat(
-        interfaceImages.DEFAULT,
+        interfaceImages.DEFAULT
       );
 
       if (
@@ -332,18 +332,18 @@ export default class Craft {
         interfaceImages[config.level.puzzle_number]
       ) {
         interfaceImagesToLoad = interfaceImagesToLoad.concat(
-          interfaceImages[config.level.puzzle_number],
+          interfaceImages[config.level.puzzle_number]
         );
       }
 
-      interfaceImagesToLoad.forEach(function (url) {
+      interfaceImagesToLoad.forEach(function(url) {
         const img = new Image();
         img.src = url;
       });
 
       const shareButton = $('.mc-share-button');
       if (shareButton.length) {
-        dom.addClickTouchEvent(shareButton[0], function () {
+        dom.addClickTouchEvent(shareButton[0], function() {
           Craft.reportResult(true);
         });
       }
@@ -352,7 +352,7 @@ export default class Craft {
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
       isMinecraft: true,
-      hideRunButton: config.level.specialLevelType === 'agentSpawn',
+      hideRunButton: config.level.specialLevelType === 'agentSpawn'
     });
 
     ReactDOM.render(
@@ -366,7 +366,7 @@ export default class Craft {
           onMount={onMount}
         />
       </Provider>,
-      document.getElementById(config.containerId),
+      document.getElementById(config.containerId)
     );
   }
 
@@ -374,7 +374,7 @@ export default class Craft {
    * Play music when the instructions are shown
    */
   static beginBackgroundMusic() {
-    Sounds.getSingleton().whenAudioUnlocked(function () {
+    Sounds.getSingleton().whenAudioUnlocked(function() {
       const hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
       const songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
       Craft.musicController.play(songToPlayFirst);
@@ -417,7 +417,11 @@ export default class Craft {
    * @return {Number[]} collectedLevels
    */
   static getSessionDiamondCollectedLevels() {
-    return JSON.parse(tryGetLocalStorage('craftSessionDiamondCollectedLevels', '[]')) || [];
+    return (
+      JSON.parse(
+        tryGetLocalStorage('craftSessionDiamondCollectedLevels', '[]')
+      ) || []
+    );
   }
 
   /**
@@ -430,7 +434,10 @@ export default class Craft {
     const collectedLevels = Craft.getSessionDiamondCollectedLevels();
     if (!collectedLevels.includes(Craft.initialConfig.serverLevelId)) {
       collectedLevels.push(Craft.initialConfig.serverLevelId);
-      trySetLocalStorage('craftSessionDiamondCollectedLevels', JSON.stringify(collectedLevels));
+      trySetLocalStorage(
+        'craftSessionDiamondCollectedLevels',
+        JSON.stringify(collectedLevels)
+      );
       return true;
     }
 
@@ -441,15 +448,15 @@ export default class Craft {
     let selectedPlayer = DEFAULT_CHARACTER;
     const popupDiv = document.createElement('div');
     popupDiv.innerHTML = require('./dialogs/playerSelection.html.ejs')({
-      image: studioApp().assetUrl(),
+      image: studioApp().assetUrl()
     });
     const popupDialog = studioApp().createModalDialog({
       contentDiv: popupDiv,
       defaultBtnSelector: '#choose-steve',
-      onHidden: function () {
+      onHidden: function() {
         onSelectedCallback(selectedPlayer);
       },
-      id: 'craft-popup-player-selection',
+      id: 'craft-popup-player-selection'
     });
     dom.addClickTouchEvent($('#close-character-select')[0], () => {
       popupDialog.hide();
@@ -476,15 +483,19 @@ export default class Craft {
 
     const fluffPlane = [];
     // TODO(bjordan): remove configuration requirement in visualization
-    for (let i = 0; i < (levelConfig.gridWidth || 10) * (levelConfig.gridHeight || 10); i++) {
+    for (
+      let i = 0;
+      i < (levelConfig.gridWidth || 10) * (levelConfig.gridHeight || 10);
+      i++
+    ) {
       fluffPlane.push('');
     }
 
     const levelAssetPacks = {
       beforeLoad: Craft.minAssetsForLevelWithCharacter(
-        levelConfig.puzzle_number,
+        levelConfig.puzzle_number
       ),
-      afterLoad: Craft.afterLoadAssetsForLevel(levelConfig.puzzle_number),
+      afterLoad: Craft.afterLoadAssetsForLevel(levelConfig.puzzle_number)
     };
 
     Craft.gameController.loadLevel({
@@ -510,17 +521,26 @@ export default class Craft {
           : null,
       levelVerificationTimeout: levelConfig.levelVerificationTimeout,
       // eslint-disable-next-line no-eval
-      verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0], // TODO(bjordan): add to utils
+      verificationFunction: eval(
+        '[' + levelConfig.verificationFunction + ']'
+      )[0], // TODO(bjordan): add to utils
       // eslint-disable-next-line no-eval
-      failureCheckFunction: eval('[' + levelConfig.failureCheckFunction + ']')[0], // TODO(bjordan): add to utils
+      failureCheckFunction: eval(
+        '[' + levelConfig.failureCheckFunction + ']'
+      )[0], // TODO(bjordan): add to utils
       // eslint-disable-next-line no-eval
-      timeoutResult: eval('[' + (levelConfig.timeoutVerificationFunction || `function() { return false; }`) + ']')[0],
+      timeoutResult: eval(
+        '[' +
+          (levelConfig.timeoutVerificationFunction ||
+            `function() { return false; }`) +
+          ']'
+      )[0]
     });
   }
 
   static minAssetsForLevelWithCharacter(levelNumber) {
     return Craft.minAssetsForLevelNumber(levelNumber).concat([
-      Craft.characterAssetPackName(Craft.getCurrentCharacter()),
+      Craft.characterAssetPackName(Craft.getCurrentCharacter())
     ]);
   }
 
@@ -585,7 +605,7 @@ export default class Craft {
    * Base's `studioApp().resetButtonClick` will be called first.
    */
   static resetButtonClick() {
-    $('.arrow').prop("disabled", false);
+    $('.arrow').prop('disabled', false);
   }
 
   static isPreAnimationFailure(testResult) {
@@ -678,54 +698,80 @@ export default class Craft {
 
     code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
     CustomMarshalingInterpreter.evalWith(code, {
-      moveForward: function (blockID) {
-        appCodeOrgAPI.moveForward(studioApp().highlight.bind(studioApp(), blockID), 'PlayerAgent');
+      moveForward: function(blockID) {
+        appCodeOrgAPI.moveForward(
+          studioApp().highlight.bind(studioApp(), blockID),
+          'PlayerAgent'
+        );
       },
-      moveBackward: function (blockID) {
-        appCodeOrgAPI.moveBackward(studioApp().highlight.bind(studioApp(), blockID), 'PlayerAgent');
+      moveBackward: function(blockID) {
+        appCodeOrgAPI.moveBackward(
+          studioApp().highlight.bind(studioApp(), blockID),
+          'PlayerAgent'
+        );
       },
-      turnLeft: function (blockID) {
-        appCodeOrgAPI.turnLeft(studioApp().highlight.bind(studioApp(), blockID), 'PlayerAgent');
+      turnLeft: function(blockID) {
+        appCodeOrgAPI.turnLeft(
+          studioApp().highlight.bind(studioApp(), blockID),
+          'PlayerAgent'
+        );
       },
-      turnRight: function (blockID) {
-        appCodeOrgAPI.turnRight(studioApp().highlight.bind(studioApp(), blockID), 'PlayerAgent');
+      turnRight: function(blockID) {
+        appCodeOrgAPI.turnRight(
+          studioApp().highlight.bind(studioApp(), blockID),
+          'PlayerAgent'
+        );
       },
-      destroyBlock: function (blockID) {
-        appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID), 'PlayerAgent');
+      destroyBlock: function(blockID) {
+        appCodeOrgAPI.destroyBlock(
+          studioApp().highlight.bind(studioApp(), blockID),
+          'PlayerAgent'
+        );
       },
-      ifLavaAhead: function (callback, blockID) {
-        appCodeOrgAPI.ifBlockAhead(studioApp().highlight.bind(studioApp(), blockID),
-            "lava",
-            'PlayerAgent',
-            callback);
+      ifLavaAhead: function(callback, blockID) {
+        appCodeOrgAPI.ifBlockAhead(
+          studioApp().highlight.bind(studioApp(), blockID),
+          'lava',
+          'PlayerAgent',
+          callback
+        );
       },
-      ifBlockAhead: function (blockType, callback, blockID) {
-        appCodeOrgAPI.ifBlockAhead(studioApp().highlight.bind(studioApp(), blockID),
-            blockType,
-            'PlayerAgent',
-            callback);
-      },
-      placeBlock: function (blockType, blockID) {
-        appCodeOrgAPI.placeBlock(studioApp().highlight.bind(studioApp(), blockID),
-          blockType,
-          'PlayerAgent');
-      },
-      placeDirection: function (blockType, direction, blockID) {
-        appCodeOrgAPI.placeDirection(studioApp().highlight.bind(studioApp(), blockID),
+      ifBlockAhead: function(blockType, callback, blockID) {
+        appCodeOrgAPI.ifBlockAhead(
+          studioApp().highlight.bind(studioApp(), blockID),
           blockType,
           'PlayerAgent',
-          direction);
+          callback
+        );
       },
-      moveDirection: function (direction, targetEntity, blockID) {
+      placeBlock: function(blockType, blockID) {
+        appCodeOrgAPI.placeBlock(
+          studioApp().highlight.bind(studioApp(), blockID),
+          blockType,
+          'PlayerAgent'
+        );
+      },
+      placeDirection: function(blockType, direction, blockID) {
+        appCodeOrgAPI.placeDirection(
+          studioApp().highlight.bind(studioApp(), blockID),
+          blockType,
+          'PlayerAgent',
+          direction
+        );
+      },
+      moveDirection: function(direction, targetEntity, blockID) {
         const dirStringToDirection = {
           up: FacingDirection.North,
           down: FacingDirection.South,
           left: FacingDirection.West,
-          right: FacingDirection.East,
+          right: FacingDirection.East
         };
-        appCodeOrgAPI.moveDirection(studioApp().highlight.bind(studioApp(), blockID),
-            dirStringToDirection[direction], targetEntity);
-      },
+        appCodeOrgAPI.moveDirection(
+          studioApp().highlight.bind(studioApp(), blockID),
+          dirStringToDirection[direction],
+          targetEntity
+        );
+      }
     });
 
     Craft.gameController.codeOrgAPI.startAttempt(success => {
@@ -780,18 +826,19 @@ export default class Craft {
       image: encodedImage,
       program: encodeURIComponent(
         Blockly.Xml.domToText(
-          Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace),
-        ),
+          Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+        )
       ),
       // typically delay feedback until response back
       // for things like e.g. crowdsourced hints & hint blocks
-      onComplete: function (response) {
+      onComplete: function(response) {
         const sharing = Craft.initialConfig.level.freePlay;
         if (sharing && response.level_source) {
           trySetLocalStorage('craftHeroShareLink', response.level_source);
         }
 
-        const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
+        const isSignedIn =
+          getStore().getState().progress.signInState === SignInState.SignedIn;
         studioApp().displayFeedback({
           feedbackType: testResultType,
           response,
@@ -801,17 +848,17 @@ export default class Craft {
           appStrings: {
             reinfFeedbackMsg: craftMsg.reinfFeedbackMsg(),
             nextLevelMsg: craftMsg.nextLevelMsg({
-              puzzleNumber: Craft.initialConfig.level.puzzle_number,
+              puzzleNumber: Craft.initialConfig.level.puzzle_number
             }),
             tooManyBlocksFailMsgFunction: craftMsg.tooManyBlocksFail,
-            generatedCodeDescription: craftMsg.generatedCodeDescription(),
+            generatedCodeDescription: craftMsg.generatedCodeDescription()
           },
           feedbackImage: image,
           showingSharing: sharing,
           saveToProjectGallery: true,
-          disableSaveToGallery: !isSignedIn,
+          disableSaveToGallery: !isSignedIn
         });
-      },
+      }
     });
   }
 

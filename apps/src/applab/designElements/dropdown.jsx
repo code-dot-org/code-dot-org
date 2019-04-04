@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import OptionsSelectRow from './OptionsSelectRow';
@@ -7,9 +8,16 @@ import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import color from "../../util/color";
+import color from '../../util/color';
 import EnumPropertyRow from './EnumPropertyRow';
+import BorderProperties from './BorderProperties';
+import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import * as elementUtils from './elementUtils';
+import designMode from '../designMode';
+import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
+import elementLibrary from './library';
+import RGBColor from 'rgbcolor';
+import experiments from '../../util/experiments';
 
 class DropdownProperties extends React.Component {
   static propTypes = {
@@ -27,7 +35,7 @@ class DropdownProperties extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <OptionsSelectRow
           desc={'options'}
@@ -36,31 +44,31 @@ class DropdownProperties extends React.Component {
         />
         <PropertyRow
           desc={'index'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.selectedIndex, 10)}
           handleChange={this.props.handleChange.bind(this, 'index')}
         />
         <PropertyRow
           desc={'width (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
           desc={'height (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
           desc={'x position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
           desc={'y position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
@@ -74,17 +82,38 @@ class DropdownProperties extends React.Component {
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
+        <FontFamilyPropertyRow
+          initialValue={designMode.fontFamilyOptionFromStyle(
+            element.style.fontFamily
+          )}
+          handleChange={this.props.handleChange.bind(this, 'fontFamily')}
+        />
         <PropertyRow
           desc={'font size (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
         <EnumPropertyRow
           desc={'text alignment'}
           initialValue={element.style.textAlign || 'center'}
-          options={['left','right','center','justify']}
+          options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
+        />
+        <BorderProperties
+          element={element}
+          handleBorderWidthChange={this.props.handleChange.bind(
+            this,
+            'borderWidth'
+          )}
+          handleBorderColorChange={this.props.handleChange.bind(
+            this,
+            'borderColor'
+          )}
+          handleBorderRadiusChange={this.props.handleChange.bind(
+            this,
+            'borderRadius'
+          )}
         />
         <BooleanPropertyRow
           desc={'hidden'}
@@ -95,7 +124,8 @@ class DropdownProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-      </div>);
+      </div>
+    );
 
     // TODO:
     // bold/italics/underline (p2)
@@ -114,8 +144,12 @@ class DropdownEvents extends React.Component {
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("Selected option: " + getText("' + id + '"));\n' +
+      'onEvent("' +
+      id +
+      '", "change", function(event) {\n' +
+      '  console.log("Selected option: " + getText("' +
+      id +
+      '"));\n' +
       '});\n';
     return code;
   }
@@ -127,7 +161,8 @@ class DropdownEvents extends React.Component {
   render() {
     const element = this.props.element;
     const changeName = 'Change';
-    const changeDesc = 'Triggered every time an option is selected from the dropdown.';
+    const changeDesc =
+      'Triggered every time an option is selected from the dropdown.';
 
     return (
       <div id="eventRowContainer">
@@ -135,9 +170,9 @@ class DropdownEvents extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={changeName}
           desc={changeDesc}
@@ -148,18 +183,58 @@ class DropdownEvents extends React.Component {
   }
 }
 
+const svgArrowUrl = color =>
+  `url(data:image/svg+xml;charset=US-ASCII,${encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 448" enable-background="new 0 0 256 448"><style type="text/css">.arrow{fill:${color};}</style><path class="arrow" d="M255.9 168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2 0-7.9 1.6-11.2 4.8S0 163.8 0 168c0 4.4 1.6 8.2 4.8 11.4l112 112c3.1 3.1 6.8 4.6 11.2 4.6 4.4 0 8.2-1.5 11.4-4.6l112-112c3-3.2 4.5-7 4.5-11.4z"/></svg>`
+  )})`;
+
 export default {
   PropertyTab: DropdownProperties,
   EventTab: DropdownEvents,
+  themeValues: {
+    backgroundColor: {
+      type: 'color',
+      classic: color.applab_button_teal,
+      dark: color.yellow
+    },
+    borderRadius: {
+      classic: 0,
+      dark: 10
+    },
+    borderWidth: {
+      classic: 0,
+      dark: 0
+    },
+    borderColor: {
+      type: 'color',
+      classic: color.black,
+      dark: color.white
+    },
+    textColor: {
+      type: 'color',
+      classic: color.white,
+      dark: color.black
+    }
+  },
 
-  create: function () {
+  create: function() {
     const element = document.createElement('select');
     element.style.width = '200px';
     element.style.height = '30px';
-    element.style.fontSize = '14px';
+    element.style.fontFamily = fontFamilyStyles[0];
+    element.style.fontSize = defaultFontSizeStyle;
     element.style.margin = '0';
-    element.style.color = color.white;
-    element.style.backgroundColor = color.applab_button_teal;
+    if (experiments.isEnabled('applabThemes')) {
+      element.style.borderStyle = 'solid';
+      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    } else {
+      element.style.color = color.white;
+      element.style.backgroundImage = svgArrowUrl(
+        new RGBColor(element.style.color).toHex()
+      );
+      element.style.backgroundColor = color.applab_button_teal;
+      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
+    }
 
     const option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';
@@ -172,9 +247,20 @@ export default {
     return element;
   },
 
-  onDeserialize: function (element) {
+  onDeserialize: function(element) {
+    // Set border styles for older projects that didn't set them on create:
+    elementUtils.setDefaultBorderStyles(element);
+    // Set the font family for older projects that didn't set them on create:
+    elementUtils.setDefaultFontFamilyStyle(element);
+    // Set the dropdown SVG for older projects that didn't have them:
+    if (!element.style.backgroundImage) {
+      element.style.backgroundImage = svgArrowUrl(
+        new RGBColor(element.style.color).toHex()
+      );
+    }
+
     // In the future we may want to trigger this on focus events as well.
-    $(element).on('mousedown', function (e) {
+    $(element).on('mousedown', function(e) {
       if (!Applab.isRunning()) {
         // Disable dropdown menu unless running
         e.preventDefault();
@@ -184,7 +270,7 @@ export default {
     });
   },
 
-  onPropertyChange: function (element, name, value) {
+  onPropertyChange: function(element, name, value) {
     switch (name) {
       case 'value':
         element.value = value;
@@ -192,6 +278,11 @@ export default {
       case 'text':
         // Overrides generic text setter and sets from the dropdown options
         element.value = value;
+        break;
+      case 'textColor':
+        element.style.backgroundImage = svgArrowUrl(
+          new RGBColor(element.style.color).toHex()
+        );
         break;
       case 'index':
         element.selectedIndex = value;
@@ -202,7 +293,7 @@ export default {
     return true;
   },
 
-  readProperty: function (element, name) {
+  readProperty: function(element, name) {
     switch (name) {
       case 'value':
         return element.value;

@@ -1,0 +1,42 @@
+name 'AP_practice_Qs_rqb_118_CSP_4_2_4'
+wrong '30 minutes.'
+wrong '180 minutes'
+wrong '240 minutes'
+right '270 minutes
+'
+markdown <<MARKDOWN
+The program below prints report cards for Marymount High School. The procedure printRun(month, year) takes 30 minutes to run.  All other program steps can be assumed to happen nearly instantaneously.  Assume that `todayMonth` and `todayYear` are the current month and year.
+<pre>
+FOR EACH year IN [2017,2018]
+{
+  FOR EACH month IN ["January", "April", "July", "October"]
+  { 
+    printRun(month, year)
+  }
+}
+printRun(todayMonth, todayYear)
+</pre>
+Which of the following best approximates the amount of time it takes the program to execute?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **4.2.4** and Essential Knowledge statements: **4.2.4A**
+<hr>
+ (A) This option is incorrect. This approximation assumes that the
+printRun procedure is called only one time.
+
+<hr>
+ (B) This option is incorrect. This approximation assumes that the
+printRun procedure is called only six times.
+
+
+<hr>
+ (C) This option is incorrect. This approximation assumes that the
+printRun procedure is called only eight times.
+
+
+<hr>
+ (D) This option is correct. Each call to the printRun procedure
+requires 30 minutes of program execution time. The procedure runs eight times within the two loops - four times for 2017, and four times for 2018. Finally, it runs one more time at the end for the current month and year, for a total of nine times. Therefore, the program will take approximately 270 minutes to execute.
+
+
+MARKDOWN

@@ -63,7 +63,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Timed Loop Alternatives\r\n\r\nBlinking lights and playing notes are common enough activities that we've provided some helpers to do them more easily.\r\n\r\n# Do This\r\n\r\nRun this code to see how the helpers work, and then **discuss** with a neighbor how you might do this with a _timed loop_.",
+    "long_instructions": "# Timed Loop Alternatives\r\n\r\nBlinking lights and playing notes are common enough activities that we've provided some helpers to do them more easily.\r\n\r\n# Do This\r\n\r\nRun this code to see how the helpers work, and then **discuss** with a neighbor how you might do this with a _timed loop_.",
     "instructions_important": "false",
     "start_blocks": "var scale = [\r\n  \"C4\",\r\n  \"D4\",\r\n  \"E4\",\r\n  \"F4\",\r\n  \"G4\",\r\n  \"A4\",\r\n  \"B4\"\r\n  ];\r\n\r\nbuzzer.play(scale, 50);\r\n\r\ncolorLeds[0].blink(250);\r\ncolorLeds[2].blink(500);\r\ncolorLeds[4].blink(750);\r\ncolorLeds[6].blink(1000);\r\ncolorLeds[8].blink(1250);",
     "is_k1": "false",

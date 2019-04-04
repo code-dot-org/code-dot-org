@@ -1,21 +1,23 @@
 hidden false
 login_required true
 hideable_stages true
+exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/csp-create/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp-18/csp-create/standards/"]]
 has_verified_resources true
 has_lesson_plan true
+script_announcements [{"notice"=>"Are you signed up for the AP exam?", "details"=>"Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Click to learn more about six great reasons why you should.", "link"=>"https://code.org/educate/csp/ap-students", "type"=>"bullhorn", "visibility"=>"Student-only"}]
 family_name 'csp-create'
 version_year '2018'
 is_stable true
 
 stage 'Create PT Prep - Reviewing the Task', flex_category: 'csp_ap_3'
-level 'U6 Create PT Review - Student Links_2018', progression: 'Create PT -  Review - Student Links'
+named_level 'CSP CreateL01 SFLP'
 level 'csp-pt-tech-setup-and-tools_2018', progression: 'Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos'
 
 stage 'Create PT Prep - Making a Plan', flex_category: 'csp_ap_3'
-level 'U6 Create PT - Make a Plan - Student Links_2018', progression: 'Create PT - Make a Plan - Student Links'
+named_level 'CSP CreateL02 SFLP_2018'
 
 stage 'Create PT - Complete the Task', flex_category: 'csp_ap_3'
-level 'U6 Create PT - Complete the Task - Student Links_2018', progression: 'Create PT - Complete the Task - Student Links'
+named_level 'CSP CreateL03 SFLP'
 level 'Practice Create Performance Task_2018', progression: 'Create PT - Complete the Task'

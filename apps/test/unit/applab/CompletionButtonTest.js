@@ -1,64 +1,76 @@
-import {assert} from '../../util/configuredChai';
-var testUtils = require('../../util/testUtils');
-var CompletionButton = require('@cdo/apps/templates/CompletionButton').__TestInterface__.UnconnectedCompletionButton;
 import React from 'react';
-var ReactTestUtils = require('react-addons-test-utils');
+import {expect} from '../../util/configuredChai';
+import {mount} from 'enzyme';
+import {UnconnectedCompletionButton as CompletionButton} from '@cdo/apps/templates/CompletionButton';
 
-describe('CompletionButton', function () {
-  testUtils.setExternalGlobals();
-
-  it('non-project level, can submit, havent', function () {
-    var component = ReactTestUtils.renderIntoDocument(
+describe('CompletionButton', () => {
+  it('non-project level, can submit, havent', () => {
+    const completionButton = mount(
       <CompletionButton
         isProjectLevel={false}
         isSubmittable={true}
         isSubmitted={false}
       />
     );
-    var buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(component, 'button');
-    assert.equal(buttons.length, 1);
-    assert.equal(buttons[0].getAttribute('id'), 'submitButton');
-    assert.equal(buttons[0].textContent, 'Submit');
+    const button = completionButton.find('button');
+    expect(button).to.have.length(1);
+    expect(button.props().id).to.equal('submitButton');
+    expect(button.text()).to.equal('Submit');
   });
 
-  it('non-project level, can submit, have', function () {
-    var component = ReactTestUtils.renderIntoDocument(
+  it('non-project level, can submit, have', () => {
+    const completionButton = mount(
       <CompletionButton
         isProjectLevel={false}
         isSubmittable={true}
         isSubmitted={true}
       />
     );
-    var buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(component, 'button');
-    assert.equal(buttons.length, 1);
-    assert.equal(buttons[0].getAttribute('id'), 'unsubmitButton');
-    assert.equal(buttons[0].textContent, 'Unsubmit');
+    const button = completionButton.find('button');
+    expect(button).to.have.length(1);
+    expect(button.props().id).to.equal('unsubmitButton');
+    expect(button.text()).to.equal('Unsubmit');
   });
 
-  it('non-project level, cant submit', function () {
-    var component = ReactTestUtils.renderIntoDocument(
+  // It is possible for users to get into a state where the level is submitted
+  // but not submittable. Make sure we show the Unsubmit button in this case.
+  it('non-project level, is not submittable, but is submitted', () => {
+    const completionButton = mount(
+      <CompletionButton
+        isProjectLevel={false}
+        isSubmittable={false}
+        isSubmitted={true}
+      />
+    );
+    const button = completionButton.find('button');
+    expect(button).to.have.length(1);
+    expect(button.props().id).to.equal('unsubmitButton');
+    expect(button.text()).to.equal('Unsubmit');
+  });
+
+  it('non-project level, cant submit', () => {
+    const completionButton = mount(
       <CompletionButton
         isProjectLevel={false}
         isSubmittable={false}
         isSubmitted={false}
       />
     );
-    var buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(component, 'button');
-    assert.equal(buttons.length, 1);
-    assert.equal(buttons[0].getAttribute('id'), 'finishButton');
-    assert.equal(buttons[0].textContent, 'Finish');
+    const button = completionButton.find('button');
+    expect(button).to.have.length(1);
+    expect(button.props().id).to.equal('finishButton');
+    expect(button.text()).to.equal('Finish');
   });
 
-
-  it('project level (cant submit)', function () {
-    var component = ReactTestUtils.renderIntoDocument(
+  it('project level (cant submit)', () => {
+    const completionButton = mount(
       <CompletionButton
         isProjectLevel={true}
         isSubmittable={false}
         isSubmitted={false}
       />
     );
-    var buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(component, 'button');
-    assert.equal(buttons.length, 0);
+    const button = completionButton.find('button');
+    expect(button).to.have.length(0);
   });
 });

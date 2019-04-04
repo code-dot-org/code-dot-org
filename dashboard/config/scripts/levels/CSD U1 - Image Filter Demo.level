@@ -19,7 +19,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "# Oh Noes\r\nThis tree should be green, but it's blue instead. Can you use the filter blocks to change all of the blue pixels to green?",
+    "long_instructions": "# Oh Noes\r\nThis tree should be green, but it's blue instead. Can you use the filter blocks to change all of the blue pixels to green?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

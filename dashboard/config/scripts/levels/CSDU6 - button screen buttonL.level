@@ -175,7 +175,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Board Events\r\n\r\nThe `onBoardEvent()` command allows you to start taking input from your Circuit Playground. This app has two screens, \"red_screen\" and \"blue_screen\". Using the provided board event handler, write a program that switches to the blue screen when the left button on your board is pressed.",
+    "long_instructions": "# Board Events\r\n\r\nThe `onBoardEvent()` command allows you to start taking input from your Circuit Playground. This app has two screens, \"red_screen\" and \"blue_screen\". Using the provided board event handler, write a program that switches to the blue screen when the left button on your board is pressed.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

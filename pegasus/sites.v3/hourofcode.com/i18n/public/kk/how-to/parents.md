@@ -1,45 +1,46 @@
 ---
-title: <%= hoc_s(:title_how_to_parents) %>
+title: <%= hoc_s(:title_how_to_parents).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Кодтау Сағатын балаңызбен бірге қалай аяқтайсыз
+# How to do an Hour of Code with your child
 
-Кодтау Сағатын үйде аяқтаңыз немесе балаңыздың онлайн сыныбында оған ерікті көмек көрсете алады. Ол үшін:
+### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+
+---
 
 ## 1) Әдістеме үшін мына бейнероликті көріңіз <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Сабақ түрін таңдаңыз:
+## 2) Choose a tutorial
 
-Біз серіктестерімізбен бірігіп қызықты, сағаттарға созылған, әртүрлі жас шамасындағы оқушыларға арналған нұсқаулықтарды ұсынамыз. [Оларды сынап көріңіз!](<%= resolve_url('/learn') %>)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
-**Кодтау Сағатының барлық нұсқаулығы өзін-өзі басқаруға ыңғайлы - сіздің балаңыз өз бетінше жұмыс жасауға бейімделеді**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) Қажетті техниканы жоспарлаңыз
 
-Кодтау Сағатында алатын ең үздік тәжірибе, ол ғаламтор-ға жалғанған компьютерлерді қолдану. Бірақ сізге компьютердің **қажеті жоқ**. Қазіргі таңда ғаламтор жүйесін қажет етпей жұмыс жасайтын көптеген мобильді қосымшалар бар.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 
-- Нұсқаулықты компьютеріңізде немесе мобильді құрылғыңызда тексеріңіз. Браузердегі дыбыс пен видеоның дұрыс жұмыс істеп тұрғанына көз жеткізіңіз.
-- **Балаңызбен берге зерттегіңіз келеді ме?** Ендеше [жұптық бағдарламалау](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) сабақтарын өтіп көріңіз. Ақпарат ғылымдары əлеуметтік және бірігіп жұмыс жасауға ыңғайлы ғылым.
+**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
 
-## 4) "Кодтау Сағатын" жігерлендіруші бейнероликтен бастаңыз
+## 4) Start your Hour of Code with an inspiring video
 
 Оқушыларға ақпараттар технологиясы адам өмірінің әр кезеңінде қандай әсер тигізетінін айтып, оларды ынталандыра, "Кодтау Сағатын" бастаңыз.
 
 **Жігерлендіруші бейнероликті көрсетіңіз:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Компьютерлік салада қабілетіңіз мүлде жоқ болса да, уайымдамаңыз. Мына "Кодтау Сағатымен" таныстыратын бірнеше пікірлерге көз жүгіртіп шығыңыз:
 
-- Балаларға тән ұғымды мысалдар келтіріп, қазіргі таңдағы технологияның өмірімізге деген ықпалын түсінідіріңіз. (Кейбір адамдардың өмірлерін құтқарған, көмек көрсеткен, жақындастырған, т.б. қосымшалар туралы айтып берсеңіз болады).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - "Кодтауды" қажет ететін күнделікті қолданыстағы керек - жарақтар тізімін жасап көрсетіңіз.
 - See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
@@ -65,15 +66,13 @@ nav: how_to_nav
 
 Әлеуметтік жүйелерге "Кодтау Сағатынан" жиналған суреттер мен видеоларды салып, біз де сіздің табысыңызды жариялауымыз үшін #HourOfCode хэштэгін, және де @codeorg аккаунтын белгілеңіз!
 
-**Кодтау Сағатының басқа мәліметтері:**
+Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
 
-- ["Кодтау Сағаты" FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) қайтадан қарап шығыңыз.
+## "Кодтау Cағаты" - ол не?
 
-**"Кодтау Cағаты" - ол не?**
-
-Кодтау Сағаты - бұл технологиялар қалай жұмыс жасайтыны және мобильді қосымшалар қалай жасалатыны жайлы үйрену сапарына арналған алғашқы қадам. Осы сапарды жалғастыру үшін:
+The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
 - Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
-- Балаңыз оқитын мектепке ақпараттық ғылымдарын оқытуға алға қадам жасауға [жәрдемдесіңіз](<%= resolve_url('/promote') %>).
+- Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
 
 <%= view :signup_button %>

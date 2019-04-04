@@ -1,6 +1,6 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import i18n from '@cdo/locale';
-import {hashEmail} from '../../../code-studio/hashEmail';
 import BaseDialog from '../../../templates/BaseDialog';
 import color from '../../../util/color';
 import {isEmail} from '../../../util/formatValidation';
@@ -13,27 +13,26 @@ const STATE_UNKNOWN_ERROR = 'unknown-error';
 
 export default class ChangeUserTypeModal extends React.Component {
   static propTypes = {
-    currentHashedEmail: PropTypes.string,
     /**
-     * @type {function({currentEmail: string}):Promise}
+     * @type {function({email: string, emailOptIn: string}):Promise}
      */
     handleSubmit: PropTypes.func.isRequired,
     /**
      * @type {function()}
      */
-    handleCancel: PropTypes.func.isRequired,
+    handleCancel: PropTypes.func.isRequired
   };
 
   state = {
     saveState: STATE_INITIAL,
     values: {
-      currentEmail: '',
-      emailOptIn: '',
+      email: '',
+      emailOptIn: ''
     },
     serverErrors: {
-      currentEmail: undefined,
-      emailOptIn: undefined,
-    },
+      email: undefined,
+      emailOptIn: undefined
+    }
   };
 
   save = () => {
@@ -45,18 +44,20 @@ export default class ChangeUserTypeModal extends React.Component {
 
     const {values} = this.state;
     this.setState({saveState: STATE_SAVING});
-    this.props.handleSubmit(values)
-      .catch(this.onSubmitFailure);
+    this.props.handleSubmit(values).catch(this.onSubmitFailure);
   };
 
   cancel = () => this.props.handleCancel();
 
-  onSubmitFailure = (error) => {
+  onSubmitFailure = error => {
     if (error && error.hasOwnProperty('serverErrors')) {
-      this.setState({
-        saveState: STATE_INITIAL,
-        serverErrors: error.serverErrors,
-      }, () => this.changeUserTypeForm.focusOnAnError());
+      this.setState(
+        {
+          saveState: STATE_INITIAL,
+          serverErrors: error.serverErrors
+        },
+        () => this.changeUserTypeForm.focusOnAnError()
+      );
     } else {
       this.setState({saveState: STATE_UNKNOWN_ERROR});
     }
@@ -69,22 +70,18 @@ export default class ChangeUserTypeModal extends React.Component {
   getValidationErrors() {
     const {serverErrors} = this.state;
     return {
-      currentEmail: serverErrors.currentEmail || this.getCurrentEmailValidationError(),
-      emailOptIn: serverErrors.emailOptIn || this.getEmailOptInValidationError(),
+      email: serverErrors.email || this.getEmailValidationError(),
+      emailOptIn: serverErrors.emailOptIn || this.getEmailOptInValidationError()
     };
   }
 
-  getCurrentEmailValidationError = () => {
-    const {currentEmail} = this.state.values;
-    const {currentHashedEmail} = this.props;
-    if (currentEmail.trim().length === 0) {
-      return i18n.changeUserTypeModal_currentEmail_isRequired();
+  getEmailValidationError = () => {
+    const {email} = this.state.values;
+    if (email.trim().length === 0) {
+      return i18n.changeUserTypeModal_email_isRequired();
     }
-    if (!isEmail(currentEmail.trim())) {
-      return i18n.changeUserTypeModal_currentEmail_invalid();
-    }
-    if (currentHashedEmail !== hashEmail(currentEmail)) {
-      return i18n.changeUserTypeModal_currentEmail_mustMatch();
+    if (!isEmail(email.trim())) {
+      return i18n.changeUserTypeModal_email_invalid();
     }
     return null;
   };
@@ -97,10 +94,10 @@ export default class ChangeUserTypeModal extends React.Component {
     return null;
   };
 
-  onFormChange = (newValues) => {
+  onFormChange = newValues => {
     const {values: oldValues, serverErrors} = this.state;
     const newServerErrors = {...serverErrors};
-    ['currentEmail', 'emailOptIn'].forEach((fieldName) => {
+    ['email', 'emailOptIn'].forEach(fieldName => {
       if (newValues[fieldName] !== oldValues[fieldName]) {
         newServerErrors[fieldName] = undefined;
       }
@@ -123,9 +120,9 @@ export default class ChangeUserTypeModal extends React.Component {
         uncloseable={STATE_SAVING === saveState}
       >
         <div style={styles.container}>
-          <Header text={i18n.changeUserTypeModal_title()}/>
+          <Header text={i18n.changeUserTypeModal_title()} />
           <ChangeUserTypeForm
-            ref={x => this.changeUserTypeForm = x}
+            ref={x => (this.changeUserTypeForm = x)}
             values={values}
             validationErrors={validationErrors}
             disabled={STATE_SAVING === saveState}
@@ -140,10 +137,10 @@ export default class ChangeUserTypeModal extends React.Component {
             disableCancel={STATE_SAVING === saveState}
             tabIndex="2"
           >
-            {(STATE_SAVING === saveState) &&
-              <em>{i18n.saving()}</em>}
-            {(STATE_UNKNOWN_ERROR === saveState) &&
-              <em>{i18n.changeUserTypeModal_unexpectedError()}</em>}
+            {STATE_SAVING === saveState && <em>{i18n.saving()}</em>}
+            {STATE_UNKNOWN_ERROR === saveState && (
+              <em>{i18n.changeUserTypeModal_unexpectedError()}</em>
+            )}
           </ConfirmCancelFooter>
         </div>
       </BaseDialog>
@@ -154,6 +151,6 @@ export default class ChangeUserTypeModal extends React.Component {
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal,
+    color: color.charcoal
   }
 };

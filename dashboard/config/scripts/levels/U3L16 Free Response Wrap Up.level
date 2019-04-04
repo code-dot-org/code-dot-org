@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Beyond Buttons Wrap Up",
-    "markdown_instructions": "In the next lesson, you will enhance the clicker game to make it more interesting and more fun.\n\nWhat features would you like to add to your program?\n",
+    "long_instructions": "In the next lesson, you will enhance the clicker game to make it more interesting and more fun.\n\nWhat features would you like to add to your program?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

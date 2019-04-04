@@ -1,24 +1,21 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
-import ProjectCard from './ProjectCard';
+import PropTypes from 'prop-types';
+import React from 'react';
+import ProjectCardRow from './ProjectCardRow';
 import {MAX_PROJECTS_PER_CATEGORY, projectPropType} from './projectConstants';
-import color from "../../util/color";
+import color from '../../util/color';
 import styleConstants from '../../styleConstants';
-import Button from "../Button";
+import Button from '../Button';
 import {connect} from 'react-redux';
 import {appendProjects, setHasOlderProjects} from './projectsRedux';
+import i18n from '@cdo/locale';
 
 const styles = {
   grid: {
     width: styleConstants['content-width']
   },
-  card: {
-    display: "inline-block",
-    paddingTop: 10,
-    paddingBottom: 20
-  },
   labHeading: {
-    textAlign: "left",
+    textAlign: 'left',
     fontSize: 24,
     color: color.charcoal,
     marginBottom: 0,
@@ -33,10 +30,21 @@ const styles = {
     cursor: 'pointer',
     fontFamily: '"Gotham 5r", sans-serif'
   },
-  cardGrid: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap'
+  viewMoreButtons: {
+    float: 'right',
+    marginRight: 22
+  },
+  buttonRightMargin: {
+    marginRight: 20
+  },
+  iconPaddingLeft: {
+    paddingLeft: 6
+  },
+  iconPaddingRight: {
+    paddingRight: 6
+  },
+  clear: {
+    clear: 'both'
   }
 };
 
@@ -67,16 +75,18 @@ class ProjectAppTypeArea extends React.Component {
 
     // from redux dispatch
     appendProjects: PropTypes.func.isRequired,
-    setHasOlderProjects: PropTypes.func.isRequired,
+    setHasOlderProjects: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      maxNumProjects: this.props.projectList ? this.props.projectList.length : 0,
+      maxNumProjects: this.props.projectList
+        ? this.props.projectList.length
+        : 0,
       numProjects: this.props.numProjectsToShow,
       // Disables the View More button when a network request is pending.
-      disableViewMore: false,
+      disableViewMore: false
     };
   }
 
@@ -91,25 +101,24 @@ class ProjectAppTypeArea extends React.Component {
   };
 
   renderProjectCardList(projectList, max) {
-    let filteredList;
+    let filteredList = [];
     if (projectList) {
-      filteredList = this.props.hideWithoutThumbnails ?
-      projectList.filter(project => project.projectData.thumbnailUrl !== null) : projectList;
+      filteredList = this.props.hideWithoutThumbnails
+        ? projectList.filter(
+            project => project.projectData.thumbnailUrl !== null
+          )
+        : projectList;
     }
-    const { galleryType } = this.props;
-    return  (
-      <div style={styles.cardGrid}>
-        {
-          filteredList && filteredList.slice(0,max).map(project => (
-            <div key={project.projectData.channel} style={styles.card}>
-              <ProjectCard
-                projectData={project.projectData}
-                currentGallery={galleryType}
-              />
-            </div>
-          ))
-        }
-      </div>
+    filteredList = filteredList
+      .slice(0, max)
+      .map(project => project.projectData);
+
+    return (
+      <ProjectCardRow
+        projects={filteredList}
+        galleryType={this.props.galleryType}
+        isDetailView={this.props.isDetailView}
+      />
     );
   }
 
@@ -140,7 +149,8 @@ class ProjectAppTypeArea extends React.Component {
   fetchOlderProjects() {
     const {projectList, labKey: projectType} = this.props;
     const oldestProject = projectList[projectList.length - 1];
-    const oldestPublishedAt = oldestProject && oldestProject.projectData.publishedAt;
+    const oldestPublishedAt =
+      oldestProject && oldestProject.projectData.publishedAt;
 
     return $.ajax({
       method: 'GET',
@@ -171,22 +181,21 @@ class ProjectAppTypeArea extends React.Component {
     const showViewMore = maxNumProjects >= numProjects || hasOlderProjects;
 
     return (
-      <div style={{float: "right", marginRight: 22}}>
-        {
-          showViewMore &&
+      <div style={styles.viewMoreButtons}>
+        {showViewMore && (
           <Button
             onClick={this.loadMore}
             color={Button.ButtonColor.gray}
             icon="plus-circle"
-            text="View more"
-            style={{marginRight: 20}}
+            text={i18n.viewMore()}
+            style={styles.buttonRightMargin}
           />
-        }
+        )}
         <Button
           href="#top"
           color={Button.ButtonColor.gray}
           icon="chevron-circle-up"
-          text="Back to top"
+          text={i18n.backToTop()}
         />
       </div>
     );
@@ -194,27 +203,40 @@ class ProjectAppTypeArea extends React.Component {
 
   render() {
     return (
-      <div style={styles.grid}>
+      <div
+        style={styles.grid}
+        className={`ui-project-app-type-area ui-${this.props.labKey}`}
+      >
         <h2 style={styles.labHeading}> {this.props.labName} </h2>
-        {!this.props.hideViewMoreLink &&
+        {!this.props.hideViewMoreLink && (
           <span
             className="viewMoreLink"
             style={styles.viewMore}
             onClick={this.viewMore}
           >
-            {this.props.isDetailView && <i className="fa fa-angle-left" style={{paddingRight: 6}} ></i>}
+            {this.props.isDetailView && (
+              <i className="fa fa-angle-left" style={styles.iconPaddingRight} />
+            )}
             {this.props.labViewMoreString}
-            {!this.props.isDetailView && <i className="fa fa-angle-right" style={{paddingLeft: 6}} ></i>}
+            {!this.props.isDetailView && (
+              <i className="fa fa-angle-right" style={styles.iconPaddingLeft} />
+            )}
           </span>
-        }
-        <div style={{clear: 'both'}}></div>
-        {this.renderProjectCardList(this.props.projectList, this.state.numProjects)}
+        )}
+        <div style={styles.clear} />
+        {this.renderProjectCardList(
+          this.props.projectList,
+          this.state.numProjects
+        )}
         {this.props.isDetailView && this.renderViewMoreButtons()}
       </div>
     );
   }
 }
 
-export default connect((state, ownProps) => ({
-  hasOlderProjects: state.projects.hasOlderProjects[ownProps.labKey]
-}), { appendProjects, setHasOlderProjects })(ProjectAppTypeArea);
+export default connect(
+  (state, ownProps) => ({
+    hasOlderProjects: state.projects.hasOlderProjects[ownProps.labKey]
+  }),
+  {appendProjects, setHasOlderProjects}
+)(ProjectAppTypeArea);

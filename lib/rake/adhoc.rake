@@ -4,8 +4,7 @@ namespace :adhoc do
     ENV['TEMPLATE'] ||= 'cloud_formation_stack.yml.erb'
     CDO.chef_local_mode = !ENV['CHEF_SERVER']
     if CDO.chef_local_mode
-      ENV['RAILS_ENV'] = ENV['RACK_ENV'] = 'adhoc'
-      CDO.rack_env = :adhoc
+      raise "RAILS_ENV=adhoc required to deploy adhoc instance." unless rack_env?(:adhoc)
     end
     CDO.stack_name = 'adhoc'
     require 'cdo/aws/cloud_formation'

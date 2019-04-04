@@ -1,6 +1,6 @@
-import { PropTypes } from 'react';
-import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
-import { makeEnum } from '@cdo/apps/utils';
+import PropTypes from 'prop-types';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {makeEnum} from '@cdo/apps/utils';
 
 export const sectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -15,7 +15,34 @@ export const sectionShape = PropTypes.shape({
   courseId: PropTypes.number,
   scriptId: PropTypes.number,
   grade: PropTypes.string,
-  providerManaged: PropTypes.bool.isRequired,
+  providerManaged: PropTypes.bool.isRequired
+});
+
+// Used on the Teacher Dashboard for components that
+// require more specific information.
+export const summarizedSectionShape = PropTypes.shape({
+  assignedTitle: PropTypes.string.isRequired,
+  code: PropTypes.string.isRequired,
+  course_id: PropTypes.number,
+  currentUnitTitle: PropTypes.string,
+  grade: PropTypes.string,
+  hidden: PropTypes.bool,
+  id: PropTypes.number.isRequired,
+  linkToAssigned: PropTypes.string,
+  linkToCurrentUnit: PropTypes.string,
+  linkToProgress: PropTypes.string,
+  linkToStudents: PropTypes.string,
+  login_type: PropTypes.string,
+  name: PropTypes.string,
+  numberOfStudents: PropTypes.number,
+  pairing_allowed: PropTypes.bool,
+  providerManaged: PropTypes.bool,
+  script: PropTypes.object,
+  sharing_disabled: PropTypes.bool,
+  stage_extras: PropTypes.bool,
+  studentCount: PropTypes.number,
+  students: PropTypes.array,
+  teacherName: PropTypes.string
 });
 
 // An assignment is a course or script that a user can be assigned to.
@@ -34,6 +61,7 @@ export const assignmentShape = PropTypes.shape({
   version_year: PropTypes.string.isRequired,
   version_title: PropTypes.string.isRequired,
   is_stable: PropTypes.bool,
+  supported_locales: PropTypes.arrayOf(PropTypes.string)
 });
 
 // An assignment family is a collection of versions of a course or script like
@@ -49,22 +77,37 @@ export const assignmentFamilyShape = PropTypes.shape({
   category: PropTypes.string.isRequired,
   position: PropTypes.number,
   assignment_family_title: PropTypes.string.isRequired,
-  assignment_family_name: PropTypes.string.isRequired,
+  assignment_family_name: PropTypes.string.isRequired
+});
+
+// Represents a version of an assignment (script or course) as it
+// appears in the version menu in the assignment selector.
+export const assignmentVersionShape = PropTypes.shape({
+  year: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  isStable: PropTypes.bool.isRequired,
+  isRecommended: PropTypes.bool,
+  isSelected: PropTypes.bool,
+  locales: PropTypes.arrayOf(PropTypes.string).isRequired
 });
 
 export const classroomShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   section: PropTypes.string,
-  enrollment_code: PropTypes.string.isRequired,
+  enrollment_code: PropTypes.string.isRequired
 });
 
 export const loadErrorShape = PropTypes.shape({
   status: PropTypes.number.isRequired,
-  message: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired
 });
 
-export const OAuthSectionTypes = makeEnum('google_classroom', 'clever', 'microsoft_classroom');
+export const OAuthSectionTypes = makeEnum(
+  'google_classroom',
+  'clever',
+  'microsoft_classroom'
+);
 
 export const sortableSectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -76,5 +119,5 @@ export const sortableSectionShape = PropTypes.shape({
   providerManaged: PropTypes.bool.isRequired,
   hidden: PropTypes.bool.isRequired,
   assignmentName: PropTypes.arrayOf(PropTypes.string),
-  assignmentPath: PropTypes.arrayOf(PropTypes.string),
+  assignmentPath: PropTypes.arrayOf(PropTypes.string)
 });

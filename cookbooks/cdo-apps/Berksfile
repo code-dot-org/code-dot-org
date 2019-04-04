@@ -10,3 +10,4 @@ cookbook 'ixgbevf', github: 'wjordan/chef-ixgbevf', branch: 'cdo'
 cookbook 'chef_client_updater', github: 'wjordan/chef_client_updater', branch: 'update_rubygems_fix'
 
 cookbook 'cdo-github-access', path: '../cdo-github-access'
+cookbook 'cdo-awscli', path: '../cdo-awscli'

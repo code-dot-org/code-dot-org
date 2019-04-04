@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist_zombie",
     "embed": "false",
-    "instructions": "Draw only those three stars to finish this puzzle.",
+    "short_instructions": "Draw only those three stars to finish this puzzle.",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't give up!  Remember what you have been learning.\",\"hint_id\":\"courseD_artist_functions5_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5565ab5a03e2e30868c82267a0d63cdc/courseE_artist_functions5_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Functions make it easy to call saved code at any time, not just from inside a loop!\",\"hint_id\":\"courseD_artist_functions5_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/62fbc4434b6a63445243be3d9c05def0/courseE_artist_functions5_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Start by creating your `draw a star` function, then use this function to draw the three stars!\",\"hint_id\":\"courseD_artist_functions5_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0509cf572af0309118c60fff5c0e0a10/courseE_artist_functions5_2018.mp3\"}]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -32,7 +32,7 @@
     "x": "50",
     "y": "100",
     "ideal": "11",
-    "markdown_instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\r\n\r\nDraw only those three stars to finish this puzzle.\r\n\r\n---\r\n\r\n- The jump between the first and second star is **200** pixels\r\n- The jump between the second and third is **100** pixels",
+    "long_instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\r\n\r\nDraw only those three stars to finish this puzzle.\r\n\r\n---\r\n\r\n- The jump between the first and second star is **200** pixels\r\n- The jump between the second and third is **100** pixels",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -40,12 +40,17 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/aac2dae95cf01b265f8d45310f9c25bb=levelbuilder/37068.png",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-07-13 03:44:59 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-05-01 19:06:07 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:06:56 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:07:22 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:07:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:08:16 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:14:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:16:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:17:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 21:18:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 21:19:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 4,
+    "repeat_loops": 3,
+    "functions": 4
   }
 }]]></config>
   <blocks>

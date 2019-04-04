@@ -2,18 +2,20 @@ import {assert} from '../util/configuredChai';
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
-describe('functional_cond_number', function () {
+describe('functional_cond_number', function() {
   var studioApp;
 
   // create our environment
-  beforeEach(function () {
+  beforeEach(function() {
     setupTestBlockly();
     studioApp = getStudioAppSingleton();
 
     var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
     sharedFunctionalBlocks.install(Blockly, Blockly.JavaScript, null);
 
-    studioApp.loadBlocks('<xml><block type="functional_cond_number"></block></xml>');
+    studioApp.loadBlocks(
+      '<xml><block type="functional_cond_number"></block></xml>'
+    );
     assert(Blockly.mainBlockSpace.getAllBlocks().length === 1);
   });
 
@@ -36,13 +38,17 @@ describe('functional_cond_number', function () {
 
     // Ensure that our little rects that mark input type are properly up to
     // date (i.e. that we've removed any corresponding to removed rows).
-    var numRects = block.svg_.getRootElement().querySelectorAll('rect[width="30"]').length;
+    var numRects = block.svg_
+      .getRootElement()
+      .querySelectorAll('rect[width="30"]').length;
     var expectedNumRects = block.pairs_.length * 2 + 1;
-    assert(numRects === expectedNumRects,
-        '\nGot: ' + numRects + '\nExpected: ' + expectedNumRects);
+    assert(
+      numRects === expectedNumRects,
+      '\nGot: ' + numRects + '\nExpected: ' + expectedNumRects
+    );
   }
 
-  it('it can addConditionalRow multiple times', function () {
+  it('it can addConditionalRow multiple times', function() {
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond_number');
     validatePairs(block, [0]);
@@ -54,7 +60,7 @@ describe('functional_cond_number', function () {
     validatePairs(block, [0, 1, 2]);
   });
 
-  it('can remove a row at the end', function () {
+  it('can remove a row at the end', function() {
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond_number');
     block.addConditionalRow();
@@ -65,7 +71,7 @@ describe('functional_cond_number', function () {
     validatePairs(block, [0, 1]);
   });
 
-  it('can remove a row in the middle', function () {
+  it('can remove a row in the middle', function() {
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond_number');
     block.addConditionalRow();
@@ -76,7 +82,7 @@ describe('functional_cond_number', function () {
     validatePairs(block, [0, 2]);
   });
 
-  it('can add a row after removing one', function () {
+  it('can add a row after removing one', function() {
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond_number');
     block.addConditionalRow();
@@ -90,7 +96,7 @@ describe('functional_cond_number', function () {
     validatePairs(block, [0, 2, 3]);
   });
 
-  it("can't remove the last row", function () {
+  it("can't remove the last row", function() {
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond_number');
     validatePairs(block, [0]);
@@ -99,8 +105,7 @@ describe('functional_cond_number', function () {
     validatePairs(block, [0]);
   });
 
-
-  it('can copy/paste with sparse pairs', function () {
+  it('can copy/paste with sparse pairs', function() {
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond_number');
     block.addConditionalRow();
@@ -119,11 +124,13 @@ describe('functional_cond_number', function () {
     validatePairs(pasted, [0, 2]);
   });
 
-  it('generates valid code', function () {
+  it('generates valid code', function() {
     // Replace block with a more complex one
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     block.dispose();
-    studioApp.loadBlocks('<xml><block type="functional_cond_number" inline="false"><mutation pairs="0,3"></mutation><functional_input name="COND0"><block type="functional_less_than" inline="false"><functional_input name="ARG1"><block type="functional_math_number"><title name="NUM">3</title></block></functional_input><functional_input name="ARG2"><block type="functional_math_number"><title name="NUM">0</title></block></functional_input></block></functional_input><functional_input name="VALUE0"><block type="functional_math_number"><title name="NUM">1</title></block></functional_input><functional_input name="COND3"><block type="functional_logical_not" inline="false"><functional_input name="ARG1"><block type="functional_boolean"><title name="VAL">true</title></block></functional_input></block></functional_input><functional_input name="VALUE3"><block type="functional_math_number"><title name="NUM">2</title></block></functional_input><functional_input name="DEFAULT"><block type="functional_math_number"><title name="NUM">3</title></block></functional_input></block></xml>');
+    studioApp.loadBlocks(
+      '<xml><block type="functional_cond_number" inline="false"><mutation pairs="0,3"></mutation><functional_input name="COND0"><block type="functional_less_than" inline="false"><functional_input name="ARG1"><block type="functional_math_number"><title name="NUM">3</title></block></functional_input><functional_input name="ARG2"><block type="functional_math_number"><title name="NUM">0</title></block></functional_input></block></functional_input><functional_input name="VALUE0"><block type="functional_math_number"><title name="NUM">1</title></block></functional_input><functional_input name="COND3"><block type="functional_logical_not" inline="false"><functional_input name="ARG1"><block type="functional_boolean"><title name="VAL">true</title></block></functional_input></block></functional_input><functional_input name="VALUE3"><block type="functional_math_number"><title name="NUM">2</title></block></functional_input><functional_input name="DEFAULT"><block type="functional_math_number"><title name="NUM">3</title></block></functional_input></block></xml>'
+    );
     block = Blockly.mainBlockSpace.getAllBlocks()[0];
 
     var code = Blockly.JavaScript.blockToCode(block);
@@ -135,8 +142,11 @@ describe('functional_cond_number', function () {
     //   else { return   3; }
     // })()
 
-    var result = CustomMarshalingInterpreter.evalWith('return ' + code, {}, {legacy: true});
+    var result = CustomMarshalingInterpreter.evalWith(
+      'return ' + code,
+      {},
+      {legacy: true}
+    );
     assert(result === 3);
   });
-
 });

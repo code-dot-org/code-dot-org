@@ -1,13 +1,18 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import AssetManager from './AssetManager';
-import color from "../../util/color";
-import { SOUND_PREFIX, DEFAULT_SOUND_PATH_PREFIX } from '../../assetManagement/assetPrefix';
+import color from '../../util/color';
+import {
+  SOUND_PREFIX,
+  DEFAULT_SOUND_PATH_PREFIX
+} from '../../assetManagement/assetPrefix';
 import SoundLibrary from './SoundLibrary';
+import i18n from '@cdo/locale';
 
 const audioExtension = '.mp3';
 const styles = {
   root: {
-    margin: "0 0 0 5px"
+    margin: '0 0 0 5px'
   },
   divider: {
     borderColor: color.purple,
@@ -16,12 +21,12 @@ const styles = {
   warning: {
     color: color.red,
     fontSize: 13,
-    fontWeight: 'bold',
-  },
+    fontWeight: 'bold'
+  }
 };
 const MODE = {
-  files : 'files',
-  sounds : 'sounds'
+  files: 'files',
+  sounds: 'sounds'
 };
 
 /**
@@ -35,13 +40,15 @@ export default class SoundPicker extends React.Component {
     uploadsEnabled: PropTypes.bool.isRequired,
     showUnderageWarning: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool.isRequired,
+    libraryOnly: PropTypes.bool,
     //For logging upload failures
-    projectId: PropTypes.string
+    projectId: PropTypes.string,
+    soundPlayer: PropTypes.object
   };
 
   state = {mode: MODE.sounds};
 
-  getAssetNameWithPrefix = (sound) => {
+  getAssetNameWithPrefix = sound => {
     const soundName = sound.replace(DEFAULT_SOUND_PATH_PREFIX, SOUND_PREFIX);
     this.props.assetChosen(soundName);
   };
@@ -53,60 +60,67 @@ export default class SoundPicker extends React.Component {
   render() {
     const isFileMode = this.state.mode === MODE.files;
     const headerStyles = {
-      fileModeToggle: {
+      soundModeToggle: {
         float: 'left',
         margin: '0 20px 0 0',
-        fontFamily: isFileMode ? '"Gotham 5r"' : null,
-        color: isFileMode ? null : color.light_gray,
-        fontSize: 16,
-        cursor: 'pointer'
-      },
-      soundModeToggle: {
-        margin: 0,
-        fontSize: 16,
         fontFamily: isFileMode ? null : '"Gotham 5r"',
         color: isFileMode ? color.light_gray : null,
+        fontSize: 16,
         cursor: 'pointer'
       },
+      fileModeToggle: {
+        margin: 0,
+        fontSize: 16,
+        fontFamily: isFileMode ? '"Gotham 5r"' : null,
+        color: isFileMode ? null : color.light_gray,
+        cursor: 'pointer'
+      }
     };
 
     let modeSwitch;
-    let title = (
-      <p>
-        {this.props.assetChosen ? "Choose Sounds" : "Manage Sounds"}
-      </p>
+    let title = <p>{i18n.chooseSounds()}</p>;
+
+    modeSwitch = (
+      <div id="modeSwitch">
+        <p onClick={this.setSoundMode} style={headerStyles.soundModeToggle}>
+          {i18n.soundLibrary()}
+        </p>
+        <p onClick={this.setFileMode} style={headerStyles.fileModeToggle}>
+          {i18n.makeNewSounds()}
+        </p>
+      </div>
     );
 
-    if (this.props.assetChosen) {
-      modeSwitch = (
-        <div>
-          <p onClick={this.setFileMode} style={headerStyles.fileModeToggle}>My Files</p>
-          <p onClick={this.setSoundMode} style={headerStyles.soundModeToggle}>Sound Library</p>
-          <hr style={styles.divider}/>
-        </div>
+    const displaySoundLibraryTab = this.state.mode === MODE.sounds;
+    const body =
+      this.libraryOnly || displaySoundLibraryTab ? (
+        <SoundLibrary assetChosen={this.getAssetNameWithPrefix} />
+      ) : (
+        <AssetManager
+          assetChosen={this.props.assetChosen}
+          assetsChanged={this.props.assetsChanged}
+          allowedExtensions={audioExtension}
+          uploadsEnabled={this.props.uploadsEnabled}
+          useFilesApi={this.props.useFilesApi}
+          projectId={this.props.projectId}
+          soundPlayer={this.props.soundPlayer}
+        />
       );
-    }
-
-    const body = !this.props.assetChosen || this.state.mode === MODE.files ?
-      <AssetManager
-        assetChosen={this.props.assetChosen}
-        assetsChanged={this.props.assetsChanged}
-        allowedExtensions={audioExtension}
-        uploadsEnabled={this.props.uploadsEnabled}
-        useFilesApi={this.props.useFilesApi}
-        projectId={this.props.projectId}
-      /> :
-      <SoundLibrary assetChosen={this.getAssetNameWithPrefix}/>;
-
     return (
       <div className="modal-content" style={styles.root}>
         {title}
-        {this.props.showUnderageWarning && (
-          <p style={styles.warning}>
-            Warning: Do not upload anything that contains personal information.
-          </p>
+        {!this.props.libraryOnly && (
+          <div>
+            {this.props.showUnderageWarning && (
+              <p style={styles.warning}>
+                Warning: Do not upload anything that contains personal
+                information.
+              </p>
+            )}
+            {modeSwitch}
+          </div>
         )}
-        {modeSwitch}
+        <hr style={styles.divider} />
         {body}
       </div>
     );

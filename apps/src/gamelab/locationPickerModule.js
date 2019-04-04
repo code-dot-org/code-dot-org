@@ -2,34 +2,34 @@ import {
   REQUEST_LOCATION,
   CANCEL_LOCATION_SELECTION,
   SELECT_LOCATION,
-  UPDATE_LOCATION,
+  UPDATE_LOCATION
 } from './actions';
 import {LocationPickerMode} from './constants';
 import {getStore} from '../redux';
 
 export default function locationPicker(state, action) {
   state = state || {
-    mode: LocationPickerMode.IDLE,
+    mode: LocationPickerMode.IDLE
   };
   switch (action.type) {
     case REQUEST_LOCATION:
       return {
         mode: LocationPickerMode.SELECTING,
-        lastSelection: undefined,
+        lastSelection: undefined
       };
     case CANCEL_LOCATION_SELECTION:
       return {
-        mode: LocationPickerMode.IDLE,
+        mode: LocationPickerMode.IDLE
       };
     case SELECT_LOCATION:
       return {
         mode: LocationPickerMode.IDLE,
-        lastSelection: action.value,
+        lastSelection: action.value
       };
     case UPDATE_LOCATION:
       return {
         mode: LocationPickerMode.SELECTING,
-        lastSelection: action.value,
+        lastSelection: action.value
       };
     default:
       return state;
@@ -38,27 +38,27 @@ export default function locationPicker(state, action) {
 
 export function requestLocation() {
   return {
-    type: REQUEST_LOCATION,
+    type: REQUEST_LOCATION
   };
 }
 
 export function updateLocation(loc) {
   return {
     type: UPDATE_LOCATION,
-    value: loc,
+    value: loc
   };
 }
 
 export function selectLocation(loc) {
   return {
     type: SELECT_LOCATION,
-    value: loc,
+    value: loc
   };
 }
 
 export function cancelLocationSelection() {
   return {
-    type: CANCEL_LOCATION_SELECTION,
+    type: CANCEL_LOCATION_SELECTION
   };
 }
 

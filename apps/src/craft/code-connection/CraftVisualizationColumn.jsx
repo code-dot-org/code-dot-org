@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import GameButtons from '../../templates/GameButtons';
 import BelowVisualization from '../../templates/BelowVisualization';
@@ -14,12 +15,11 @@ export default class CraftVisualizationColumn extends React.Component {
       <span>
         <ProtectedVisualizationDiv>
           <div id="minecraft-frame">
-            <div id="code-connection-log">
-            </div>
+            <div id="code-connection-log" />
           </div>
         </ProtectedVisualizationDiv>
-        <GameButtons/>
-        <BelowVisualization/>
+        <GameButtons />
+        <BelowVisualization />
       </span>
     );
   }

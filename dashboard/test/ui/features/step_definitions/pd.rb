@@ -125,7 +125,10 @@ Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
   require_rails_env
 
   user = User.find_by_email @users[name][:email]
-  application = Pd::Application::Teacher1819Application.find_by(user: user)
+  application = Pd::Application::Teacher1920Application.find_by(user: user)
+
+  # TODO(Andrew) ensure regional partner in the original application, and remove this:
+  application.update!(regional_partner: RegionalPartner.first)
 
   steps %Q{
     And I am on "http://studio.code.org/pd/application/principal_approval/#{application.application_guid}"
@@ -157,8 +160,8 @@ Given(/^I am a teacher named "([^"]*)" going to TeacherCon and am on the Teacher
 
   teacher = FactoryGirl.create :teacher, name: name, password: teacher_password, email: teacher_email, school_info: SchoolInfo.first
   teachercon = FactoryGirl.create :pd_workshop, :teachercon, num_sessions: 5, organizer: (FactoryGirl.create :workshop_organizer, email: "organizer_#{SecureRandom.hex}@code.org"), processed_location: {city: 'Seattle'}.to_json
-  application_hash = FactoryGirl.build :pd_teacher1819_application_hash, school: School.first, preferred_first_name: 'Minerva', last_name: 'McGonagall'
-  application = FactoryGirl.create :pd_teacher1819_application, :locked, user: teacher, form_data: application_hash.to_json
+  application_hash = FactoryGirl.build :pd_teacher1920_application_hash, school: School.first, preferred_first_name: 'Minerva', last_name: 'McGonagall'
+  application = FactoryGirl.create :pd_teacher1920_application, :locked, user: teacher, form_data: application_hash.to_json
   application.update(pd_workshop_id: teachercon.id)
 
   steps %Q{
@@ -194,25 +197,25 @@ And(/^I create some fake applications of each type and status$/) do
   time_start = Time.now
 
   # There's no need to create more applications if a lot already exist in the system
-  if Pd::Application::Facilitator1819Application.count < 100
+  if Pd::Application::Facilitator1920Application.count < 100
     %w(csf csd csp).each do |course|
-      Pd::Application::ApplicationBase.statuses.values.each do |status|
+      Pd::Application::ApplicationBase.statuses.each do |status|
         10.times do
           teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
-          application = FactoryGirl.create(:pd_facilitator1819_application, course: course, user: teacher)
+          application = FactoryGirl.create(:pd_facilitator1920_application, course: course, user: teacher)
           application.update(status: status)
         end
       end
     end
   end
 
-  if Pd::Application::Teacher1819Application.count < 100
+  if Pd::Application::Teacher1920Application.count < 100
     %w(csd csp).each do |course|
-      (Pd::Application::ApplicationBase.statuses.values - ['interview']).each do |status|
+      (Pd::Application::ApplicationBase.statuses - ['interview']).each do |status|
         10.times do
           teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
-          application_hash = FactoryGirl.build(:pd_teacher1819_application_hash, course.to_sym, school: School.first)
-          application = FactoryGirl.create(:pd_teacher1819_application, form_data_hash: application_hash, course: course, user: teacher)
+          application_hash = FactoryGirl.build(:pd_teacher1920_application_hash, course.to_sym, school: School.first)
+          application = FactoryGirl.create(:pd_teacher1920_application, form_data_hash: application_hash, course: course, user: teacher)
           application.update(status: status)
         end
       end
@@ -236,12 +239,12 @@ And(/^I am viewing a workshop with fake survey results$/) do
   create_fake_daily_survey_results workshop
 
   steps %Q{
-    And I am on "http://studio.code.org/pd/workshop_dashboard/local_summer_workshop_daily_survey_results/#{workshop.id}"
+    And I am on "http://studio.code.org/pd/workshop_dashboard/daily_survey_results/#{workshop.id}"
   }
 end
 
 def create_fake_survey_questions(workshop)
-  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['day_0'],
+  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local_summer']['day_0'],
     questions: [
       {
         id: 1,
@@ -312,7 +315,7 @@ def create_fake_survey_questions(workshop)
     ].to_json
   )
 
-  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['day_1'],
+  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local_summer']['day_1'],
     questions: [
       {
         id: 1,
@@ -348,7 +351,7 @@ def create_fake_survey_questions(workshop)
     ].to_json
   )
 
-  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['facilitator'],
+  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local_summer']['facilitator'],
     questions: [
       {
         id: 1,
@@ -410,7 +413,7 @@ def create_fake_daily_survey_results(workshop)
     user = workshop.enrollments[x].user
 
     Pd::WorkshopDailySurvey.create!(
-      form_id: CDO.jotform_forms['local']['day_0'],
+      form_id: CDO.jotform_forms['local_summer']['day_0'],
       submission_id: (Pd::WorkshopDailySurvey.maximum(:submission_id) || 0) + 1,
       pd_session: nil, #No session for the first survey
       answers: {
@@ -428,7 +431,7 @@ def create_fake_daily_survey_results(workshop)
     )
 
     Pd::WorkshopDailySurvey.create!(
-      form_id: CDO.jotform_forms['local']['day_1'],
+      form_id: CDO.jotform_forms['local_summer']['day_1'],
       submission_id: (Pd::WorkshopDailySurvey.maximum(:submission_id) || 0) + 1,
       user: workshop.enrollments[x].user,
       pd_session: workshop.sessions.first,
@@ -442,7 +445,7 @@ def create_fake_daily_survey_results(workshop)
     )
 
     Pd::WorkshopFacilitatorDailySurvey.create!(
-      form_id: CDO.jotform_forms['local']['facilitator'],
+      form_id: CDO.jotform_forms['local_summer']['facilitator'],
       submission_id: (Pd::WorkshopFacilitatorDailySurvey.maximum(:submission_id) || 0) + 1,
       answers: {
         '1': %w(Helpful Hillarious Inspiring Brilliant)[x % 4],
@@ -536,7 +539,7 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     workshop.update!(ended_at: DateTime.new(2016, 3, 15))
 
     if post_create_actions.include?('and answer surveys')
-      responses = {}
+      responses = {'consent_b' => '1'}
 
       [
         Api::V1::Pd::WorkshopScoreSummarizer::FACILITATOR_EFFECTIVENESS_QUESTIONS,

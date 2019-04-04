@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "use_contract_editor": "true",
-    "instructions": "Free Play: Try using the Evaluation Blocks to write some equations of your own. How does nesting the blocks in different ways impact their evaluation?",
+    "short_instructions": "Free Play: Try using the Evaluation Blocks to write some equations of your own. How does nesting the blocks in different ways impact their evaluation?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -15,7 +15,7 @@
     "use_modal_function_editor": "false",
     "free_play": "true",
     "embed": "false",
-    "markdown_instructions": "Free Play: Try using the Evaluation Blocks to write some equations of your own. How does nesting the blocks in different ways impact their evaluation?",
+    "long_instructions": "Free Play: Try using the Evaluation Blocks to write some equations of your own. How does nesting the blocks in different ways impact their evaluation?",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

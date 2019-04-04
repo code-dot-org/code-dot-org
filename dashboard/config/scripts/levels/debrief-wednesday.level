@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "# Day 3: End of Day Debrief\r\n\r\n* What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?\r\n* Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?",
+    "long_instructions": "# Day 3: End of Day Debrief\r\n\r\n* What were the key takeaways the leads had today (e.g., teachers’ gots and needs, working together as facilitators, keeping a healthy cohort rapport, etc.)?\r\n* Did they decide to make any adjustments to their approach for the next day? If so, what do they plan to change and why?",
     "parent_level_id": 14304
   },
   "published": true,

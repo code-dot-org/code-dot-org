@@ -1,5 +1,6 @@
-import React, {PropTypes} from 'react';
-import color from "../util/color";
+import PropTypes from 'prop-types';
+import React from 'react';
+import color from '../util/color';
 import DesignToolbox from './DesignToolbox';
 import DesignProperties from './designProperties';
 
@@ -17,7 +18,7 @@ export default class DesignModeBox extends React.Component {
     onDepthChange: PropTypes.func.isRequired,
     onDuplicate: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired,
-    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   render() {
@@ -55,7 +56,7 @@ export default class DesignModeBox extends React.Component {
     // Slightly gray everything while running
     if (this.props.isDimmed) {
       transparencyLayer = (
-        <div id={"design-mode-dimmed"} style={styles.transparent}/>
+        <div id={'design-mode-dimmed'} style={styles.transparent} />
       );
     }
 

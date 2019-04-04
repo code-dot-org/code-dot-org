@@ -228,7 +228,7 @@ MARKDOWN
   test 'clone level group with suffix' do
     # DSL for the level_group.
     level_group_input_dsl = "
-  name 'long assessment'
+  name 'level_group_test long assessment'
   title 'Long Assessment'
   submittable 'true'
 
@@ -245,7 +245,7 @@ MARKDOWN
   level 'level7'
   "
 
-    level_group_copy_dsl = "name 'long assessment_copy'
+    level_group_copy_dsl = "name 'level_group_test long assessment_copy'
 title 'Long Assessment'
 submittable 'true'
 
@@ -265,15 +265,21 @@ level 'level7_copy'"
 
     # Create multis named level1-level7.
     levels = {}
+    multi_stubs = Multi.any_instance.stubs(:dsl_text)
     (1..7).each do |id|
-      levels["multi_#{id}"] = Multi.create_from_level_builder({}, {dsl_text: get_multi_dsl(id)})
+      dsl_text = get_multi_dsl(id)
+      levels["multi_#{id}"] = Multi.create_from_level_builder({}, {dsl_text: dsl_text})
+      multi_stubs.returns(dsl_text)
     end
 
     # Create the external level.
-    External.create_from_level_builder({}, {dsl_text: get_external_dsl(1)})
+    external_dsl = get_external_dsl(1)
+    External.create_from_level_builder({}, {dsl_text: external_dsl})
+    External.any_instance.stubs(:dsl_text).returns(external_dsl)
 
     # Create the level_group.
     level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
+    level_group.stubs(:dsl_text).returns(level_group_input_dsl)
 
     # Copy the level group and all its sub levels.
     level_group_copy = level_group.clone_with_suffix('_copy')
@@ -288,6 +294,66 @@ level 'level7_copy'"
 
     # clean up
     File.delete(level_group_copy.filename)
+  end
+
+  test 'clone previously cloned level group' do
+    level_group_input_dsl = "
+  name 'level_group_test assessment'
+  title 'Assessment'
+
+  page
+  text 'external1'
+  level 'level1'
+  "
+
+    level_group_copy1_dsl = "name 'level_group_test assessment copy1'
+title 'Assessment'
+
+page
+text 'external1 copy1'
+level 'level1 copy1'"
+
+    level_group_copy2_dsl = "name 'level_group_test assessment copy2'
+title 'Assessment'
+
+page
+text 'external1 copy2'
+level 'level1 copy2'"
+
+    # Create the multi level
+    multi_dsl = get_multi_dsl(1)
+    Multi.create_from_level_builder({}, {dsl_text: multi_dsl})
+    Multi.any_instance.stubs(:dsl_text).returns(multi_dsl)
+
+    # Create the external level.
+    external_dsl = get_external_dsl(1)
+    External.create_from_level_builder({}, {dsl_text: external_dsl})
+    External.any_instance.stubs(:dsl_text).returns(external_dsl)
+
+    # Create the level_group.
+    level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
+    level_group.stubs(:dsl_text).returns(level_group_input_dsl)
+
+    # Copy the level group and all its sub levels.
+    level_group_copy1 = level_group.clone_with_suffix(' copy1')
+    assert_equal level_group_copy1_dsl, level_group_copy1.dsl_text
+    assert_equal 'level_group_test assessment copy1', level_group_copy1.name
+    assert_equal 'level1 copy1', level_group_copy1.pages.first.levels.first.name
+    assert_equal 'external1 copy1', level_group_copy1.properties['texts'].first['level_name']
+    refute_nil Level.find_by_name('external1 copy1')
+
+    # Copy the level group again. copy2 suffix replaces copy1 suffix throughout,
+    # rather than being concatenated, due to name_suffix field.
+    level_group_copy2 = level_group.clone_with_suffix(' copy2')
+    assert_equal level_group_copy2_dsl, level_group_copy2.dsl_text
+    assert_equal 'level_group_test assessment copy2', level_group_copy2.name
+    assert_equal 'level1 copy2', level_group_copy2.pages.first.levels.first.name
+    assert_equal 'external1 copy2', level_group_copy2.properties['texts'].first['level_name']
+    refute_nil Level.find_by_name('external1 copy2')
+
+    # clean up
+    File.delete(level_group_copy1.filename)
+    File.delete(level_group_copy2.filename)
   end
 
   test 'get_summarized_survey_results returns a hash of results' do

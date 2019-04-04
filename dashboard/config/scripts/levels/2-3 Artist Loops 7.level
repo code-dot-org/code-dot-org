@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "We can use loops to make all kinds of polygons.  Can you create a rhombus inside this hexagon?",
+    "short_instructions": "We can use loops to make all kinds of polygons.  Can you create a rhombus inside this hexagon?",
     "x": "180",
     "y": "170",
     "start_direction": "90",

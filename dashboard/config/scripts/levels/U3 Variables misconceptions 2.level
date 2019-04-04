@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "What will Program 2 output?"
+    "long_instructions": "What will Program 2 output?"
   },
   "published": true,
   "notes": "",

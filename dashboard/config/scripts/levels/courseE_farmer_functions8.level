@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "**Challenge:**  Solve this puzzle with as few blocks as possible.",
+    "short_instructions": "**Challenge:**  Solve this puzzle with as few blocks as possible.",
     "instructions_important": "false",
     "ideal": "23",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.\",\"hint_id\":\"courseE_farmer_functions8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/081e9c791a71aac9e6a05c745d5ad8ee/courseE_farmer_functions8.mp3\"}]",

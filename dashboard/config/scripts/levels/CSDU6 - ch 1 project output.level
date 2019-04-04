@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Board Output\r\n\r\nAt this point you should have the structure of your app mostly fleshed out. Test your program as is to make sure that everything currently works as expected. Once you are confident in your program as-is, add the code to send output to your board.",
+    "long_instructions": "# Board Output\r\n\r\nAt this point you should have the structure of your app mostly fleshed out. Test your program as is to make sure that everything currently works as expected. Once you are confident in your program as-is, add the code to send output to your board.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -1,10 +1,11 @@
-import React, {Component, PropTypes} from 'react';
-import i18n from "@cdo/locale";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import i18n from '@cdo/locale';
 
 class SummaryText extends Component {
   static propTypes = {
     numStudentSubmissions: PropTypes.number.isRequired,
-    totalNumStudents: PropTypes.number.isRequired,
+    totalNumStudents: PropTypes.number.isRequired
   };
 
   render() {
@@ -12,7 +13,7 @@ class SummaryText extends Component {
     return (
       <div>
         <div>
-         {`${i18n.summaryAssessmentsOverview()} ${numStudentSubmissions} / ${totalNumStudents}`}
+          {`${i18n.summaryAssessmentsOverview()} ${numStudentSubmissions} / ${totalNumStudents}`}
         </div>
       </div>
     );
@@ -20,5 +21,3 @@ class SummaryText extends Component {
 }
 
 export default SummaryText;
-
-

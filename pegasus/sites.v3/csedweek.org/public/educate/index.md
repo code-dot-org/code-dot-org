@@ -13,7 +13,7 @@ The Hour of Code is an opportunity for every student to try computer science for
 ## Bring computer science to your school with Code.org
 [Code.org](http://code.org) offers district partnerships for entire school districts in the U.S. to add computer science classes to every school. [Learn more](http://code.org/educate/districts)
 
-For elementary schools and middle schools, [Code.org](http://code.org) offers a free 20-hour blended curriculum to provide an introduction to computer science. [Learn more](http://code.org/educate/20hr)
+For students ages 9-18, [Code.org](http://code.org) offers a free 30-hour blended curriculum to provide an introduction to computer science. [Learn more](https://code.org/educate/curriculum/express-course)
 
 [<button>Learn more</button>](http://code.org/educate/)
 

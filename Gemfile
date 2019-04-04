@@ -13,9 +13,11 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'rails-controller-testing'
 
-# Fork to support numeric keys in the Simple backend.
+# Add CacheFile backend module.
+# Ref: https://github.com/svenfuchs/i18n/pull/423
+# Support numeric keys in Simple backend.
 # Ref: https://github.com/svenfuchs/i18n/pull/422
-gem 'i18n', github: 'wjordan/i18n', branch: 'simple_numeric_keys'
+gem 'i18n', github: 'wjordan/i18n', branch: 'cdo'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
@@ -28,7 +30,7 @@ gem 'responders', '~> 2.0'
 
 gem 'sinatra', '~> 2.0.0.beta2', require: 'sinatra/base'
 
-gem 'mysql2', '~> 0.3.13'
+gem 'mysql2', '>= 0.4.1'
 # Ref: https://github.com/bdurand/seamless_database_pool/issues/38
 # Ref: https://github.com/bdurand/seamless_database_pool/pull/39
 gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
@@ -45,17 +47,22 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
 
-gem 'google-api-client'
-gem 'launchy' # Peer dependency of Google::APIClient::InstalledAppFlow
+gem 'aws-google' # use Google Accounts for AWS access
+gem 'google-api-client', '~> 0.23'
 
 # CSRF protection for Sinatra.
 gem 'rack_csrf'
 
+# Allow profiling in all environments (including production). It will only be enabled when
+# CDO.rack_mini_profiler_enabled is set. See dashboard/config/initializers/mini_profiler.rb
+gem 'memory_profiler'
+gem 'rack-mini-profiler'
+
 group :development do
   gem 'annotate'
-  gem 'rack-mini-profiler'
+  gem 'pry'
+  gem 'rb-readline'
   gem 'ruby-progressbar', require: false
-  gem 'thin'
   gem 'web-console'
 end
 
@@ -72,12 +79,14 @@ group :development, :test do
   gem 'ruby_dep', '~> 1.3.1'
 
   gem 'shotgun'
+  gem 'thin'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
 
   gem 'active_record_query_trace'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
@@ -124,6 +133,11 @@ gem 'open_uri_redirections', require: false, group: [:development, :staging, :te
 
 # Ref: https://github.com/tmm1/gctools/pull/17
 gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
+# Optimizes copy-on-write memory usage with GC before web-application fork.
+gem 'nakayoshi_fork'
+# Ref: https://github.com/puma/puma/pull/1646
+gem 'puma', github: 'wjordan/puma', ref: 'out_of_band'
+gem 'puma_worker_killer'
 gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
@@ -156,7 +170,8 @@ gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 # Ref: https://github.com/Clever/omniauth-clever/pull/7
 gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
 gem 'omniauth-facebook', '~> 4.0.0'
-gem 'omniauth-google-oauth2', '~> 0.3.1'
+gem 'omniauth-google-oauth2', '~> 0.6.0'
+gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # Ref: https://github.com/joel/omniauth-windowslive/pull/16
 # Ref: https://github.com/joel/omniauth-windowslive/pull/17
 gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive', ref: 'cdo'
@@ -217,7 +232,21 @@ gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
-gem 'aws-sdk', '~> 2'
+
+# AWS SDK and associated service APIs.
+gem 'aws-sdk-acm', '~> 1'
+gem 'aws-sdk-cloudformation', '~> 1'
+gem 'aws-sdk-cloudfront', '~> 1'
+gem 'aws-sdk-cloudwatch', '~> 1'
+gem 'aws-sdk-cloudwatchlogs', '~> 1'
+gem 'aws-sdk-core', '~> 3'
+gem 'aws-sdk-dynamodb', '~> 1'
+gem 'aws-sdk-ec2', '~> 1'
+gem 'aws-sdk-firehose', '~> 1.6'
+gem 'aws-sdk-rds', '~> 1'
+gem 'aws-sdk-route53', '~> 1'
+gem 'aws-sdk-s3', '~> 1'
+gem 'aws-sdk-sqs', '~> 1'
 
 # Lint tools
 group :development, :staging do
@@ -227,7 +256,8 @@ group :development, :staging do
 end
 
 # Reduce volume of production logs
-gem 'lograge'
+# Ref: https://github.com/roidrage/lograge/pull/252
+gem 'lograge', github: 'wjordan/lograge', ref: 'debug_exceptions'
 
 # Enforce SSL
 gem 'rack-ssl-enforcer'
@@ -246,7 +276,7 @@ gem 'oj'
 gem 'rest-client', '~> 2.0'
 
 # Generate SSL certificates.
-gem 'acmesmith'
+gem 'acmesmith', '~> 0'
 
 gem 'addressable'
 gem 'bcrypt'
@@ -302,3 +332,8 @@ end
 
 gem 'activerecord-import'
 gem 'colorize'
+
+gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
+gem 'hammerspace'
+
+gem 'require_all', require: false

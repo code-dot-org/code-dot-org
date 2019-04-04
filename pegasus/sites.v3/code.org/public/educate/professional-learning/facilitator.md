@@ -15,41 +15,35 @@ theme: responsive
 
 ## Change the face of computer science education - become a Code.org facilitator.
 
-Code.org recognizes the need for highly-qualified, flexible, and knowledgeable facilitators who can develop and support the next generation of computer science (CS) educators. 
+Code.org counts on engaging, committed, and knowledgeable facilitators to develop and support the next generation of computer science educators. 
 
-Applications for the 2018-19 cohort have closed. **If you are interested in joining the program in 2019-2020, please sign up below.**
+Applications for the Code.org Facilitator Development Program will open January 2020. **If you are interested in joining the program in 2020-2021, please sign up below to receive a reminder when applications open.**
 
-[<button>Tell me when applications open!</button>](https://goo.gl/forms/IPyERiuLCRG6jF0G3)
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfNgNC4As3Bf8lFaJCjIiClxVquTpLVvpxzJMW1YkC1gdV2Qw/viewform", target=_"blank"><button>Tell me when applications open!</button></a>
 
 [/col-50]
 
 <div style="clear: both;"></div>
 
-<hr/>
-
 <link href="/css/educate.css" rel="stylesheet">
 
 <div class="col-60", style="padding-right:20px;">
 
-Code.org partners with individuals interested in developing facilitation capacity in computer science (CS) education to deliver high-quality professional development to teachers in a format that's fun and accessible.
-
-<br>
-<br>
 Code.org's Facilitator Development Program is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on Code.org's curriculum. 
 
 <br>
 <br>
-The ideal facilitator is an enthusiastic supporter of CS education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through teaching experience.
+The Facilitator Development Program application is open to U.S.-based applicants interested in developing as leaders and facilitators for teachers bringing CS education to their students. Preference will be given to applicants who meet or exceed our qualifications (listed below) and priority will be given to applicants who live in a region where Code.org has a <a href="https://code.org/educate/professional-learning/about-partners">Regional Partner</a> or in areas where we are considering future partnerships.
 
 </div>
 
 [col-40]
 
 <div class="educate-callout-box">
-"My facilitator did an excellent job communicating complex ideas and supporting me during the session. She also had a lot of experience with the course so could provide very helpful tips. She built my confidence so much!"
+"The two facilitators were OUTSTANDING ... They kept us fully engaged and made sure our needs as learners always came first. I looked forward to their sessions every day."
 <br>
 <br>
--- 2017 CS Principles Teacher
+-- 2018 CS Discoveries Teacher
 <br>
 </div>
 
@@ -57,104 +51,177 @@ The ideal facilitator is an enthusiastic supporter of CS education, possesses a 
 
 <div style="clear:both"></div>
 
-<hr/>
+<a name="qualities"></a>
+## Qualities of a Code.org Facilitator
 
-## Learn more about the program
+We're seeking candidates who demonstrate the following qualities:
 
-<details>
- <summary>**What does a Code.org Facilitator do?**</summary>
-  <p>
+<div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
 
-  * Join a nationwide community of leaders and facilitators in the CS education space
-  * Participate in in-person and online facilitator development
-  * Collaborate with your local Code.org Regional Partner to deliver professional development to teachers on Code.org's courses, with on-going support from Code.org and the facilitator community
-  * Partner with Code.org to shape the future of professional learning for thousands of new CS educators across the US and beyond
-</p>
-</details>
+<img src="/images/fit-100/infographics/facilitator_champ.png">
 
-<details>
- <summary>**Who can participate?**</summary>
-  <p>
-  
-The Facilitator Development Program application is open to anyone who is interested in developing leadership and facilitation capacity in the CS education space. Preference will be given to applicants who meet or exceed our desired qualifications below, and priority will be given to applicants who live in a region where Code.org has a [Regional Partner](/educate/regional-partner/partners) or in areas where we are considering future partnerships.
-</p>
-</details>
+</div>
 
-<details>
- <summary>**What is Code.org looking for in a facilitator?**</summary>
-  <p>
-  <br>
-In order to be selected for this program, potential Code.org facilitators must demonstrate the following qualifications:
+[col-80]
 
-**CS Champion**
+<h3 style="font-family: 'Gotham 5r', sans-serif">Champion for CS Education</h3>
  
-  * Enthusiastic supporter of K-12 CS education and strong connection to an equity-focused mission
+  * Enthusiastic supporter of K-12 CS education
 
-**Equity-Focused**
+[/col-80]
+
+<div style="clear:both"></div>
+
+<div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
+
+<img src="/images/fit-100/infographics/facilitator_equity.png">
+
+</div>
+
+[col-80]
+
+<h3 style="font-family: 'Gotham 5r', sans-serif">Equity-Focused</h3>
 
   * Committed to supporting access to quality CS education for all students
   * Believes all teachers can teach CS
 
-**Growth-Minded**
+[/col-80]
 
-  * Strong desire to develop as a facilitator and leader within the CS education community
+<div style="clear:both"></div>
+
+<div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
+
+<img src="/images/fit-100/infographics/facilitator_growth.png">
+
+</div>
+
+[col-80]
+
+<h3 style="font-family: 'Gotham 5r', sans-serif">Growth-Minded</h3>
+
+  * Demonstrated self-awareness of skills and experiences in which they can improve as a facilitator
+  * Strong desire and commitment to develop as a facilitator and leader within the CS education community
   * Willingness to give and receive feedback in a collaborative working environment
 
-**Classroom Experience and Knowledgeable about Content**
+[/col-80]
+
+<div style="clear:both"></div>
+
+<div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
+
+<img src="/images/fit-100/infographics/facilitator_classroom.png">
+
+</div>
+
+[col-80]
+
+<h3 style="font-family: 'Gotham 5r', sans-serif">Classroom Experience and Knowledgeable about Content</h3>
 
   * Prior or current teaching experience
   * Strong background in curriculum focus area, preferably through past teaching experience with specific course
   * High level of comfort with technology, including virtual meeting tools and experience with Google suite
 
-**Engaging Leader**
+[/col-80]
 
-  * High level of emotional intelligence and empathy for learners at varying ability levels
+<div style="clear:both"></div>
+
+<div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
+
+<img src="/images/fit-100/infographics/facilitator_leader.png">
+
+</div>
+
+[col-80]
+
+<h3 style="font-family: 'Gotham 5r', sans-serif">Engaging Leader</h3>
+
+  * Demonstrated empathy for learners with a variety of backgrounds and levels of experience
   * Ability to "think on your feet" and make decisions that are in the best interest of the audience while maintaining fidelity to the program
   * Motivated self-starter
 
-**Additional Qualities (_preferred_)**
+[/col-80]
+
+<div style="clear:both"></div>
+
+<div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
+
+<img src="/images/fit-100/infographics/facilitator_additional.png">
+
+</div>
+
+[col-80]
+
+<h3 style="font-family: 'Gotham 5r', sans-serif">Additional Qualities (preferred)</h3>
 
   * Demonstrated ability to effectively engage and co-lead learning experiences for adults
-  * Experience in planning, leading, and assessing the effectiveness of K-12 teacher professional development
-  * Prior experience as a Code.org facilitator
-</p>
-</details>
+  * Prior experience as a Code.org facilitator for a different Code.org course
 
-<details>
- <summary>**What are the program-specific commitments?**</summary>
-  <p>
-  
-The <a href="https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing", target="_blank">2018-19 Code.org Facilitator Development Program Overview</a> contains additional details about program benefits, qualifications, and commitments by curriculum focus area.
-</p>
-</details>
+[/col-80]
 
-<br>
-Have a question? Let us know by writing to facilitators@code.org.
+<div style="clear:both"></div>
+
+## Learn more about the program
+
+### Overview
+Check out the <a href="https://code.org/files/facilitator/overview-2019-20.pdf", target=_"blank">Facilitator Development Program Overview</a> for details about the program.
+
+### Commitments
+When participants apply to the program, they must select a curriculum focus area. Program commitments, qualifications, and benefits vary by focus area. Check out the resources below to learn more:
+
+* <a href="https://code.org/files/facilitator/csf-commitments.pdf", target=_"blank">Computer Science Fundamentals Facilitator Development</a> - Grades K-5
+* <a href="https://code.org/files/facilitator/csd-commitments.pdf", target=_"blank">Computer Science Discoveries Facilitator Development</a> - Grades 6-10
+* <a href="https://code.org/files/facilitator/csp-commitments.pdf", target=_"blank">Computer Science Principles Facilitator Development</a> - Grades 9-12
+
+### FAQs
+
+Have questions? We have answers!
+
+Check out our <a href="https://docs.google.com/document/d/e/2PACX-1vQzx_dR5g68Zzg7atSIZ_y8_tlSXln8dqBrW0oh1dQkTb6M56cdk3N9ozxgci4vJCdm6h3uwZ4douK4/pub", target=_"blank">FAQs</a> or write to us at facilitators@code.org 
+
+## Interested in applying?
+
+Applications for the Code.org Facilitator Development Program will open January 2020. **If you are interested in joining the program in 2020-2021, please sign up below to receive a reminder when applications open.**
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfNgNC4As3Bf8lFaJCjIiClxVquTpLVvpxzJMW1YkC1gdV2Qw/viewform", target=_"blank"><button>Tell me when applications open!</button></a>
+
+In the meantime, be sure to visit our curriculum pages for additional information about our three courses.
+
+- [CS Fundamentals - Grades K-5](/educate/curriculum/elementary-school)
+- [CS Discoveries - Grades 6-10](/educate/csd)
+- [CS Principles - Grades 9-12](/educate/csp)
 
 
 <!--
 
-<div class="col-50" style="padding-right: 20px;">
+Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below to receive a reminder when applications open.**
 
-<img src="/images/fit-450/facilitator_laura.jpg">
+<a href="https://goo.gl/forms/IPyERiuLCRG6jF0G3", target=_"blank"><button>Tell me when applications open!</button></a>
 
-</div>
 
-<div class="col-50" style="padding-right: 20px;">
 
-<img src="/images/fit-450/facilitator_kevin.jpg">
+Ready to take your leadership to the next level?
 
-</div>
+[<button>Apply now!</button></a>](https://studio.code.org/pd/application/facilitator)
 
-<div style="clear: both;"></div>
+Our online applications take 25-30 minutes to complete, and are not optimized for mobile devices. The deadline to apply for the 2019-20 Facilitator Development Program is **January 31, 2019.**
 
-**Applications for the Code.org Facilitator Development Program will be available starting in early November, 2017.** The application will close in December, 2017. 
+## Apply now!
 
-If you would like to be contacted for the 2018-2019 application cycle please fill out [this interest form](https://goo.gl/forms/5r7Ft8PwkJ45fFmt1). 
+Ready to apply? Follow these steps:
 
-In the meantime, please check out the <a href="https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing", target="_blank">2018-19 Code.org Facilitator Development Program overview</a> and be sure to visit our curriculum pages for additional information on our three courses.
+1. Check out our program specific commitments:
+	* <a href="https://code.org/files/facilitator/csf-commitments.pdf", target=_"blank">Computer Science Fundamentals Facilitator Development</a> - Grades K-5
+	* <a href="https://code.org/files/facilitator/csd-commitments.pdf", target=_"blank">Computer Science Discoveries Facilitator Development</a> - Grades 6-10
+	* <a href="https://code.org/files/facilitator/csp-commitments.pdf", target=_"blank">Computer Science Principles Facilitator Development</a> - Grades 9-12
 
-- [CS Fundamentals (Grades K to 5)](/educate/curriculum/elementary-school)
-- [CS Discoveries (Grades 6 to 10)](/educate/curriculum/middle-school)
-- [CS Principles (Grades 9 to 12)](/educate/curriculum/high-school)
+1. Set aside 25-30 minutes to complete the online application. Note that our application is not optimized for mobile devices; we suggest completing it on a laptop or desktop.
+
+[<button>Apply now!</button></a>](https://studio.code.org/pd/application/facilitator)
+
+The deadline to apply for the 2019-20 Facilitator Development Program is **January 31, 2019.** Any appliaction submitted after January 31 will be considered if space is available.
+
+In addition, we recommend that you make sure you're able to receive emails from facilitators@code.org at the email address you will use for your application. If this address is blocked by your district's firewall, please contact the appropriate IT representative at your school district to whitelist the address.
+
+
 -->
+

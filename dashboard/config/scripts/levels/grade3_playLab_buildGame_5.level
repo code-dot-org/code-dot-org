@@ -35,7 +35,7 @@
     "sprites_hidden_to_start": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "We can just call the cards from 2 to 10 by their numbers, so add an if statement that checks whether the number generated is within those numbers, then sets the card value to the number generated.",
+    "short_instructions": "We can just call the cards from 2 to 10 by their numbers, so add an if statement that checks whether the number generated is within those numbers, then sets the card value to the number generated.",
     "contained_level_names": null
   },
   "published": true,

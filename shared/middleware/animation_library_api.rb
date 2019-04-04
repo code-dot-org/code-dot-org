@@ -1,4 +1,4 @@
-require 'aws-sdk'
+require 'aws-sdk-s3'
 require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'

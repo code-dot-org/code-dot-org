@@ -11,7 +11,7 @@ require('../utils'); // provide Function.prototype.inherits
  * @constructor
  * @extends Error
  */
-var NetSimApiError = module.exports = function (request) {
+var NetSimApiError = (module.exports = function(request) {
   /** @type {string} */
   this.name = 'NetSimApiError';
 
@@ -19,7 +19,7 @@ var NetSimApiError = module.exports = function (request) {
   this.message = 'Request failed';
 
   /** @type {string} */
-  this.stack = (new Error()).stack;
+  this.stack = new Error().stack;
 
   /**
    * Additional error information returned by the server, which can drive
@@ -30,7 +30,8 @@ var NetSimApiError = module.exports = function (request) {
 
   // Attempt to extract additional information from the request object
   if (request) {
-    this.message = 'status: ' + request.status + '; error: ' + request.statusText;
+    this.message =
+      'status: ' + request.status + '; error: ' + request.statusText;
     try {
       var response = JSON.parse(request.responseText);
       if (response.details) {
@@ -41,7 +42,7 @@ var NetSimApiError = module.exports = function (request) {
       this.details = null;
     }
   }
-};
+});
 NetSimApiError.inherits(Error);
 
 /**

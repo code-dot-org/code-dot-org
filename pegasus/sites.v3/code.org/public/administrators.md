@@ -6,7 +6,7 @@ video_player: true
 <link href='/shared/css/course-explorer.css', rel='stylesheet'></link>
 <script src="<%= minifiable_asset_path('js/code.org/public/educate/curriculum/courses.js') %>"></script>
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
-<script src="https://cdn.optimizely.com/js/400912536.js"></script>
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
 
 # Administrators: Computer science in your school or district
 
@@ -18,16 +18,16 @@ video_player: true
 
 <div class="col-60" style="background-color: #00adbc; color: white; padding: 20px; max-width: 95%; height: 207px; font-size: 14px;">
 
-Code.org has partnered with more than <a href="/educate/district/partners" style="color: white; text-decoration: underline;">120 School districts</a> and 700,000 teachers use our platform. Let Code.org's network of Regional Partners across the US help you bring Computer Science to your school or district. Or, use our international courses to start teaching anywhere in the world.
+Code.org has partnered with more than <a href="/educate/district/partners" style="color: white; text-decoration: underline;">120 School districts</a> and 1 million teachers use our platform. Let Code.org's network of Regional Partners across the US help you bring Computer Science to your school or district. Or, use our international courses to start teaching anywhere in the world.
 
 <br>
 <br>
 
 <div class="desktop-feature">
 <center>
-  <span style="font-size:40px; margin-right: 40px;">700K</span>
-  <span style="font-size:40px; margin-right: 100px;">22M</span>
-  <span style="font-size:40px; margin-right: 55px;">All 7</span>
+  <span style="font-size:40px; margin-right: 40px;">1M</span>
+  <span style="font-size:40px; margin-right: 40px;">34M</span>
+  <span style="font-size:40px; margin-right: 50px;">All 7</span>
   <br>
   <span style="font-size:24px; margin-right: 30px;">teachers</span>
   <span style="font-size:24px; margin-right: 30px;">students</span>
@@ -41,9 +41,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 ## Get started with curriculum and professional learning
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-12', description: "Code.org's professional development workshops support teachers with no background in computer science.  Code.org's <a href='/educate/curriculum/elementary-school'>Computer Science Fundamentals courses</a> are designed for elementary school teachers. <a href='/educate/csd'>CS Discoveries</a> and <a href='/educate/csp'>CS Principles</a> are stand alone computer science courses for middle and high school. These high quality, semester or full year courses (including daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings) are free to use anywhere in the world.
-In the US, Code.org's network of regional partners work directly with teachers to prepare them to successfully lead computer science classrooms.
-Internationally, try <a href='/educate/professional-development-online'>our online self-paced courses</a>." %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-12', description: "Code.org's professional development workshops support teachers with no background in computer science. We offer a high quality K-12 curriculum that can be used for a semester or full year. It includes daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings, all free to use. In the U.S., Code.org's network of Regional Partners prepare teachers to successfully lead computer science classrooms." %>
 <div style="clear:both"></div>
 
 ## Start Planning Now
@@ -94,7 +92,7 @@ Internationally, try <a href='/educate/professional-development-online'>our onli
 <h3 style="font-family: 'Gotham 5r', sans-serif">Make computer science courses count</h3>
 
 - How you credit computer science can dramatically impact [who enrolls in computer science courses](http://blog.code.org/post/121123281798/md).
-- 36 states allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
+- 43 states plus D.C. allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
 - If possible, we recommend allowing computer science courses to satisfy graduation requirements and exist as both an Academic and CTE course.
 
 [/col-80]
@@ -113,7 +111,7 @@ Internationally, try <a href='/educate/professional-development-online'>our onli
 
 - Identify teachers who will lead CS classes in your district next year.
 - Code.org's curriculum and professional development is designed for teachers from other subjects to become computer science teachers.  As you identify potential future computer science teachers in your district, it’s important to understand what, if any, requirements your state has in place for computer science teachers.
-- 31 states have some guidance around certification for computer science teachers, [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml#).
+- 34 states plus D.C. have a certification or licensure for computer science; [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml#).
 
 [/col-80]
 
@@ -149,7 +147,7 @@ Internationally, try <a href='/educate/professional-development-online'>our onli
 <h3 style="font-family: 'Gotham 5r', sans-serif">Allocate funding</h3>
 
 - Thanks to the generous support of our funders, all curricular resources from Code.org are free for anyone to use.  However, there are still costs to consider when starting a computer science program.  You should begin thinking about how you’ll support:
-  - **Professional development costs** - Code.org's courses are designed to be taught by teachers new to computer science. This means you do not have to increase your full-time employee budget or hire additional teachers to support computer science. In many cases, Code.org and our partners will cover a significant portion of the costs for professional development free of charge, or work together with you to identify funding options.
+  - **Professional development costs** - Code.org's courses are designed to be taught by teachers new to computer science. This means you do not have to increase your full-time employee budget or hire additional teachers to support computer science. 
   - **Computers and internet access** - In order to teach our 6-12 courses, students will need to be in a 1:1 computing environment every class period. For our K-5 courses, students can be on a computer, tablet, or do our unplugged activities which require no technology at all. If you don't have enough devices, we highly recommend [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). [Check here](/educate/it) to see if your school meets all the technical requirements for teaching Code.org.
   - **Classroom supplies** -  Code.org's courses include hands on excercises that use standard classroom materials.  We estimate these costs to be less than $100 per 30 students.
   - **Administrative support** - As your computer science program grows, there will need to be additional administrative support. We recommend dedicating at least 0.15 full-time employee to this initiative to start, and growing up to 1 full-time employee per 30 teachers offering computer science in the district.
@@ -162,7 +160,7 @@ Internationally, try <a href='/educate/professional-development-online'>our onli
 
 <%= view :three_circles, circles: [
 {img: '/images/fit-150/pair_students.jpg', text: 'Over 50k students in 3 years', subtext: 'Read Broward County\'s case study on how it increased computer science participation across the district.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.rf0l0zfkbqe4', link_text: 'Learn more'},
-{img: '/images/fit-150/sotm34.jpg', text: '51% females in intro course', subtext: 'See how graduation requirements affected diversity in Charles County\'s introductory computer science course.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.8xs8zt2iloy0', link_text: 'Learn more'},
+{img: '/images/fit-150/sotm34.jpg', text: '51% female students in intro course', subtext: 'See how graduation requirements affected diversity in Charles County\'s introductory computer science course.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.8xs8zt2iloy0', link_text: 'Learn more'},
 {img: '/images/fit-150/pd1.jpg', text: 'Professional learning for all', subtext: 'Read how Eufala City Schools, AL increased access to computer science to all students in their rural district.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.9ub4frvyuqiy', link_text: 'Learn more'}] %>
 
 <hr>

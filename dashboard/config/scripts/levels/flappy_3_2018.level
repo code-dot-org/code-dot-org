@@ -11,7 +11,7 @@
     "scale": "{\"snapRadius\":2}",
     "success_condition": "function successCondition() {\r\n\t        var avatarCenter = {\r\n\t          x: (Flappy.avatarX + 34) / 2,\r\n\t          y: (Flappy.avatarY + 24) / 2\r\n\t        };\r\n\t        var goalCenter = {\r\n\t          x: (Flappy.goalX + Flappy.GOAL_SIZE) / 2,\r\n\t          y: (Flappy.goalY + Flappy.GOAL_SIZE) / 2\r\n\t        };\r\n\t\r\n\t        var diff = {\r\n\t          x: Math.abs(avatarCenter.x - goalCenter.x),\r\n\t          y: Math.abs(avatarCenter.y - goalCenter.y)\r\n\t        };\r\n\t\r\n\t        return diff.x < 15 && diff.y < 15;\r\n\t      }",
     "failure_condition": "function failureCondition() {\r\n\t        return Flappy.activeTicks() >= 120 && Flappy.SPEED === 0;\r\n\t      }",
-    "instructions": "The \"when run\" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.",
+    "short_instructions": "The \"when run\" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.",
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",

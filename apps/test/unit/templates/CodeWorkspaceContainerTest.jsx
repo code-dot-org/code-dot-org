@@ -2,9 +2,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
-import {
-  TestableCodeWorkspaceContainer as CodeWorkspaceContainer
-} from "@cdo/apps/templates/CodeWorkspaceContainer";
+import {TestableCodeWorkspaceContainer as CodeWorkspaceContainer} from '@cdo/apps/templates/CodeWorkspaceContainer';
 import * as utils from '@cdo/apps/utils';
 
 describe('CodeWorkspaceContainer', () => {
@@ -14,7 +12,7 @@ describe('CodeWorkspaceContainer', () => {
     hidden: false,
     isRtl: false,
     noVisualization: false,
-    topMargin: 100,
+    topMargin: 100
   };
 
   beforeEach(() => {
@@ -32,10 +30,7 @@ describe('CodeWorkspaceContainer', () => {
 
   it('fires a resize event on update if topMargin changed', () => {
     wrapper = mount(
-      <CodeWorkspaceContainer
-        {...MINIMUM_PROPS}
-        topMargin={100}
-      />
+      <CodeWorkspaceContainer {...MINIMUM_PROPS} topMargin={100} />
     );
     expect(utils.fireResizeEvent).not.to.have.been.called;
 
@@ -45,10 +40,7 @@ describe('CodeWorkspaceContainer', () => {
 
   it('does not fire a resize event on update if topMargin is the same', () => {
     wrapper = mount(
-      <CodeWorkspaceContainer
-        {...MINIMUM_PROPS}
-        isRtl={false}
-      />
+      <CodeWorkspaceContainer {...MINIMUM_PROPS} isRtl={false} />
     );
     expect(utils.fireResizeEvent).not.to.have.been.called;
 
@@ -58,10 +50,7 @@ describe('CodeWorkspaceContainer', () => {
 
   it('hidden hides the outer div', () => {
     wrapper = mount(
-      <CodeWorkspaceContainer
-        {...MINIMUM_PROPS}
-        hidden={false}
-      />
+      <CodeWorkspaceContainer {...MINIMUM_PROPS} hidden={false} />
     );
     expect(wrapper).not.to.have.style('display', 'none');
 
@@ -71,10 +60,7 @@ describe('CodeWorkspaceContainer', () => {
 
   it('isRtl sets different margins', () => {
     wrapper = mount(
-      <CodeWorkspaceContainer
-        {...MINIMUM_PROPS}
-        isRtl={false}
-      />
+      <CodeWorkspaceContainer {...MINIMUM_PROPS} isRtl={false} />
     );
     expect(wrapper).not.to.have.style('left');
     expect(wrapper).to.have.style('right', '0px');
@@ -90,10 +76,7 @@ describe('CodeWorkspaceContainer', () => {
 
   it('noVisualization overrides left margin', () => {
     wrapper = mount(
-      <CodeWorkspaceContainer
-        {...MINIMUM_PROPS}
-        noVisualization={false}
-      />
+      <CodeWorkspaceContainer {...MINIMUM_PROPS} noVisualization={false} />
     );
     expect(wrapper).not.to.have.style('left');
     expect(wrapper).to.have.style('marginLeft', '15px');
@@ -116,7 +99,7 @@ describe('CodeWorkspaceContainer', () => {
     expect(wrapper).to.have.style('marginLeft', '0px');
 
     wrapper.setProps({
-      noVisualization: true,
+      noVisualization: true
     });
     expect(wrapper).to.have.style('left', '0px');
     expect(wrapper).to.have.style('right', '0px');
@@ -124,11 +107,7 @@ describe('CodeWorkspaceContainer', () => {
   });
 
   it('getRenderedHeight gives height of DOM node', () => {
-    wrapper = mount(
-      <CodeWorkspaceContainer
-        {...MINIMUM_PROPS}
-      />
-    );
+    wrapper = mount(<CodeWorkspaceContainer {...MINIMUM_PROPS} />);
     const height = wrapper.instance().getRenderedHeight();
     expect(height).to.be.a('number');
   });

@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw the teeth in the alligator's mouth!",
+    "short_instructions": "Draw the teeth in the alligator's mouth!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",

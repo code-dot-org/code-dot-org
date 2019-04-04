@@ -172,19 +172,6 @@ class Section < ActiveRecord::Base
     return ADD_STUDENT_SUCCESS
   end
 
-  # Enrolls student in this section (possibly restoring an existing deleted follower) and removes
-  # student from old section.
-  # @param student [User] The student to enroll in this section.
-  # @param old_section [Section] The section from which to remove the student.
-  # @return [boolean] Whether a new student was added.
-  def add_and_remove_student(student, old_section)
-    old_follower = old_section.followers.where(student_user: student).first
-    return false unless old_follower
-
-    old_follower.destroy
-    add_student student
-  end
-
   # Remove a student from the section.
   # Follower is determined by the controller so that it can authorize first.
   # Optionally email the teacher.
@@ -222,15 +209,33 @@ class Section < ActiveRecord::Base
 
     title = ''
     link_to_assigned = base_url
+    title_of_current_unit = ''
+    link_to_current_unit = ''
 
     if course
       title = course.localized_title
       link_to_assigned = course_path(course)
+      if script_id
+        title_of_current_unit = script.localized_title
+        link_to_current_unit = script_path(script)
+      end
     elsif script_id
       title = script.localized_title
       link_to_assigned = script_path(script)
     end
 
+    # Some scripts are associated with a course (e.g. csp1-2018 is the script for "CSP Unit 1 - The Internet ('18-'19)",
+    # which is part of the csp18-19 # course. Courses have different versions based on year; similar courses
+    # across years have a family_name (either CSD or CSP). We want to pass the family_name associated with a script, if there is one,
+    # so that we can determine whether to show the sharing column on the Manage Students Table of Teacher Dashboard.
+    course_family_name =
+      if course
+        course.family_name
+      elsif script
+        script.course&.family_name
+      end
+
+    unique_students = students.uniq(&:id)
     {
       id: id,
       name: name,
@@ -238,7 +243,9 @@ class Section < ActiveRecord::Base
       linkToProgress: "#{base_url}#{id}/progress",
       assignedTitle: title,
       linkToAssigned: link_to_assigned,
-      numberOfStudents: students.length,
+      currentUnitTitle: title_of_current_unit,
+      linkToCurrentUnit: link_to_current_unit,
+      numberOfStudents: unique_students.length,
       linkToStudents: "#{base_url}#{id}/manage",
       code: code,
       stage_extras: stage_extras,
@@ -249,12 +256,13 @@ class Section < ActiveRecord::Base
       script: {
         id: script_id,
         name: script.try(:name),
+        course_family_name: course_family_name
       },
-      studentCount: students.size,
+      studentCount: unique_students.size,
       grade: grade,
       providerManaged: provider_managed?,
       hidden: hidden,
-      students: students.map(&:summarize),
+      students: unique_students.map(&:summarize),
     }
   end
 
@@ -297,8 +305,8 @@ class Section < ActiveRecord::Base
   # once such a thing exists
   def has_sufficient_discount_code_progress?
     return false if students.length < 10
-    csd2 = Script.get_from_cache('csd2-2017')
-    csd3 = Script.get_from_cache('csd3-2017')
+    csd2 = Script.get_from_cache('csd2-2018')
+    csd3 = Script.get_from_cache('csd3-2018')
     raise 'Missing scripts' unless csd2 && csd3
 
     csd2_programming_level_ids = csd2.levels.select {|level| level.is_a?(Weblab)}.map(&:id)

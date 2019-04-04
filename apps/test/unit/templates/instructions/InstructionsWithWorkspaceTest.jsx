@@ -3,9 +3,7 @@ import React from 'react';
 import sinon from 'sinon';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {
-  UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace
-} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
 describe('InstructionsWithWorkspace', () => {
   it('renders instructions and code workspace', () => {
@@ -47,7 +45,10 @@ describe('InstructionsWithWorkspace', () => {
       $.fn.height.restore();
     });
 
-    function setupComponent({instructionsHeight = 400, codeWorkspaceHeight = 100} = {}) {
+    function setupComponent({
+      instructionsHeight = 400,
+      codeWorkspaceHeight = 100
+    } = {}) {
       const wrapper = shallow(
         <InstructionsWithWorkspace
           instructionsHeight={instructionsHeight}
@@ -84,32 +85,45 @@ describe('InstructionsWithWorkspace', () => {
     it('handles resize', () => {
       const wrapper = setupComponent();
       wrapper.instance().onResize();
-      expect(setInstructionsMaxHeightAvailable).to.have.been.calledOnce
-        .and.calledWith(230);
+      expect(
+        setInstructionsMaxHeightAvailable
+      ).to.have.been.calledOnce.and.calledWith(230);
     });
 
     it('breakpoint in behavior at total height of 420 (meets all reserves)', () => {
       let wrapper;
 
-      wrapper = setupComponent({instructionsHeight: 18, codeWorkspaceHeight: 400});
+      wrapper = setupComponent({
+        instructionsHeight: 18,
+        codeWorkspaceHeight: 400
+      });
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(139);
 
       setInstructionsMaxHeightAvailable.reset();
 
-      wrapper = setupComponent({instructionsHeight: 19, codeWorkspaceHeight: 400});
+      wrapper = setupComponent({
+        instructionsHeight: 19,
+        codeWorkspaceHeight: 400
+      });
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(140);
 
       setInstructionsMaxHeightAvailable.reset();
 
-      wrapper = setupComponent({instructionsHeight: 20, codeWorkspaceHeight: 400});
+      wrapper = setupComponent({
+        instructionsHeight: 20,
+        codeWorkspaceHeight: 400
+      });
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(150);
 
       setInstructionsMaxHeightAvailable.reset();
 
-      wrapper = setupComponent({instructionsHeight: 21, codeWorkspaceHeight: 400});
+      wrapper = setupComponent({
+        instructionsHeight: 21,
+        codeWorkspaceHeight: 400
+      });
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(151);
     });

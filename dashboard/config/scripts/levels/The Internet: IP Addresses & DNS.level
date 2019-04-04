@@ -8,7 +8,7 @@
     "video_key": "csp_concept_internet_ip_dns",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "[Video guide and questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)"
+    "long_instructions": "[Video guide and questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)"
   },
   "published": true,
   "notes": "",

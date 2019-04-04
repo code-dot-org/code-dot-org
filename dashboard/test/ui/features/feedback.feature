@@ -6,7 +6,6 @@ Scenario: Solve without recommended blocks
   Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/5?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
 
   When I press "runButton"
   And I wait to see ".congrats"

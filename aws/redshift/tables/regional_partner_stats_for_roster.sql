@@ -2,7 +2,7 @@ DROP TABLE if exists analysis_pii.regional_partner_stats_for_roster;
 
 CREATE TABLE analysis_pii.regional_partner_stats_for_roster
 AS
-WITH csf_courses
+WITH csf_courses -- creates a list of the CSF courses a person taught
 AS
 (SELECT studio_person_id,
        school_year_trained AS school_year,
@@ -12,12 +12,11 @@ FROM (SELECT DISTINCT studio_person_id,
              school_year_trained,
              school_year_taught,
              script_name
-      FROM analysis_pii.regional_partner_stats_csf
-      -- WARNING: this table does include teachers who were trained by facilitators prior to RP taking over, but it is not included in query
+      FROM analysis_pii.regional_partner_stats_csf -- WARNING: this table includes teachers who were trained by facilitators prior to a RP taking over, but they are not included in query   
       WHERE school_year_trained = school_year_taught
-      AND   trained_by_regional_partner = 1
+      AND   trained_by_regional_partner = 1 -- the roster will only show PII of teachers who are trained by the RP)
       AND   len(script_name) > 1)
--- the roster will only show PII of teachers who are trained by the RP)
+
 GROUP BY 1,
          2,
          3)
@@ -66,13 +65,11 @@ UNION ALL
        NULL::INTEGER AS q2,
        NULL::INTEGER AS q3,
        NULL::INTEGER AS q4
-FROM analysis_pii.regional_partner_stats_csf rps
--- this table does NOT include teachers who were trained by facilitators prior to RP taking over
-
+FROM analysis_pii.regional_partner_stats_csf rps -- this table DOES include teachers who were trained by facilitators prior to RP taking over
   LEFT JOIN csf_courses
          ON csf_courses.school_year = rps.school_year_trained
         AND csf_courses.studio_person_id = rps.studio_person_id
-WHERE rps.school_year_taught = rps.school_year_trained OR rps.school_year_taught is null
+WHERE (rps.school_year_taught = rps.school_year_trained OR rps.school_year_taught is null)
 AND trained_by_regional_partner = 1
 GROUP BY 1,
          2,

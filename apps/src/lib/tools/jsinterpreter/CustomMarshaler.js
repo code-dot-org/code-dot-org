@@ -1,12 +1,7 @@
-
 // we use module.exports instead of export default to make this compatible with
 // node.js
 module.exports = class CustomMarshaler {
-  constructor({
-    globalProperties,
-    blockedProperties,
-    objectList,
-  }) {
+  constructor({globalProperties, blockedProperties, objectList}) {
     this.globalProperties = globalProperties || {};
     this.blockedProperties = blockedProperties || [];
     this.objectList = objectList || [];
@@ -18,11 +13,13 @@ module.exports = class CustomMarshaler {
   getObjectListData(nativeVar, nativeParentObj) {
     for (var i = 0; i < this.objectList.length; i++) {
       var marshalObj = this.objectList[i];
-      if ((nativeVar instanceof marshalObj.instance &&
-           (typeof marshalObj.requiredMethod === 'undefined' ||
+      if (
+        (nativeVar instanceof marshalObj.instance &&
+          (typeof marshalObj.requiredMethod === 'undefined' ||
             nativeVar[marshalObj.requiredMethod] !== undefined)) ||
-          (typeof nativeVar !== 'function' &&
-           nativeParentObj instanceof marshalObj.instance)) {
+        (typeof nativeVar !== 'function' &&
+          nativeParentObj instanceof marshalObj.instance)
+      ) {
         return marshalObj;
       }
     }
@@ -41,9 +38,14 @@ module.exports = class CustomMarshaler {
   getCustomMarshalMethodOptions(nativeParentObj, nativeVar) {
     for (var i = 0; i < this.objectList.length; i++) {
       var marshalObj = this.objectList[i];
-      if (nativeParentObj instanceof marshalObj.instance || nativeVar === marshalObj.instance) {
-        if (typeof marshalObj.requiredMethod === 'undefined' ||
-            nativeParentObj[marshalObj.requiredMethod] !== undefined) {
+      if (
+        nativeParentObj instanceof marshalObj.instance ||
+        nativeVar === marshalObj.instance
+      ) {
+        if (
+          typeof marshalObj.requiredMethod === 'undefined' ||
+          nativeParentObj[marshalObj.requiredMethod] !== undefined
+        ) {
           return marshalObj.methodOpts || {};
         } else {
           return {};
@@ -70,12 +72,21 @@ module.exports = class CustomMarshaler {
     obj.data = nativeObj;
     obj.isCustomMarshal = true;
     obj.type = typeof nativeObj;
-    obj.toBoolean = function () {return Boolean(this.data);};
-    obj.toNumber = function () {return Number(this.data);};
-    obj.toString = function () {return String(this.data);};
-    obj.valueOf = function () {return this.data;};
+    obj.toBoolean = function() {
+      return Boolean(this.data);
+    };
+    obj.toNumber = function() {
+      return Number(this.data);
+    };
+    obj.toString = function() {
+      return String(this.data);
+    };
+    obj.valueOf = function() {
+      return this.data;
+    };
     if (typeof nativeObj === 'object') {
-      const objectListData = this.getObjectListData(nativeObj, nativeParentObj) || {};
+      const objectListData =
+        this.getObjectListData(nativeObj, nativeParentObj) || {};
       if (objectListData.ensureIdenticalMarshalInstances) {
         //
         // this.marshaledMap will retain the association between this nativeObj
@@ -87,5 +98,4 @@ module.exports = class CustomMarshaler {
     }
     return obj;
   }
-
 };

@@ -1,0 +1,24 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2019-02-14T01:24:16.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csd_weblab_intro_1",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Video: Intro to Web Lab - Part 1",
+    "parent_level_id": 11474,
+    "name_suffix": "_2019",
+    "long_instructions": "## Question to consider:\r\n* What are the different parts of Web Lab, and what are they used for?",
+    "encrypted_teacher_markdown": "WF6qIOgKILWdUJccbk2Gv+SLHfJGb4ek5kx59JLM7StsizyZYUk7nX4DhbL8\nrxo8SHxrjkPSSwUR2IOFS/KA9wLtDcwLvbL91ap9G0dT5Ydjm4Zh7qhDaWXo\nvDm+TlmFJnl3au2m2ui416rIf92pqA3pGt9yeLl6rHZNGFyVb5kbMCX78YWQ\n/FJIXVGTBAfgO+Brq3IL+s6WjtUuKcwRHDTcrpxCE5JG7BlTN9MtI0BG3DOJ\nXtORs41BggExx7ijEdNT/zsKj9iWVuLWT0rccWyC/Xi631XtlAJo2OBrdZK0\nU2qd6+A3S22nJHwSLLLp5+XzCipQqd3MtdE9YeySPDX9SL3mKSgX7NrPOhCX\neGOvbVGx+3GL6hT6Qf8vos50udxw26oCt/cN8+QG8xPsXQSNOQRm6uCA8khJ\nE3Vf3behvxRkHSQpNeKfTp7xM3VWJm257d9qC5HpgDzjO8fGrdXiVvK3nGgJ\nNDwXJotHnPUVsa0vP/YrMDbU/9R3Sn02YhkMJ5buzuEKx17S7oL7FhCHT+3x\n1JUj4urduL0m9MAW1ir3nOypBcexetws77maKd60Y7JYisg/LsIyao7mSLxf\nIdu7jVWYIqQisBf22VlNE+mNAui0urSbbIM5SkETGI3rANAPk1uP0WYcdagm\nSLxUf6+/CBiEULDxgijyPl6uWGNzQhimrGlwBwmjrmSny8+sYMCKM8CTwUF9\nIaJjUfmNaZAiUx7yBT9mX/cYICT6Uvze1mB8T4M6wk3KHxwAFTVFrKg4bLDg\nCH5b/72OYWXbKkfMMrE1Af56n2QqXxPxgjfkz2xvEGKY9IdVxGHNOwklfHGl\neaLmaC6wa3fuWIFaI3Nsfk90ybX04Yi9LgeoFTyVBb+ZtF/UIc+8BpD9SIEy\ne1etVn3GTrzgCKWoGsfNu9xwBbPve6RzpRfjpEeKHo52LPoBXU/WnWzY2d4m\nW8rvvoS4dCYSDTmggGaeWPtdgy/w/LbEc8q8YVLYlzbmaTxtQefewv1hXOh4\ndNHIjnxgnEppTMbT5WoOyp9/XyF/ba90fohwwuNEPKvYkiLCqZMhWgHA+5k0\nd/8wALF+TVNHhD4ljm7ulkYZgbhrfM91RKUkBoRTccQ1cyduOTh733jER3l/\nEIQhlNXh276UNOEdHogzd5lKUVtbok5hFAa9sA94YEkvKgC8Ed1QK8rx40NC\n0i+ockPqJ3OT4CE1HYUxKYtgYXRobgZR2tbMUT4t/IRk25ze+65pR7bgOdkC\nO+aSzKBJs5NLQ2St1dPuTeLhJ+wEeh+1XyMhGEqTEcqpLmMTdiUejwVWuhFD\nQ1ydZMrKyk767PLHfA+KuBaCR0rI87WOhvcc+UoyrnugQmHpf8FqX8cLOY3Z\nsxoSzNHlEo1zz4bPauXCr1w98q/0An0u+JQyYOrQa9I0wPOvpim91Y+klEDr\nXDd4jVN7TM8=\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-14 21:17:44 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

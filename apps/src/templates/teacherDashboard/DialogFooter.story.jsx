@@ -1,10 +1,9 @@
 import React from 'react';
-import DialogFooter from "./DialogFooter";
+import DialogFooter from './DialogFooter';
 import Button from '../Button';
 
-export default storybook => storybook
-  .storiesOf('DialogFooter', module)
-  .addStoryTable([
+export default storybook =>
+  storybook.storiesOf('DialogFooter', module).addStoryTable([
     {
       name: 'One button',
       description: 'By default, a single child is left-aligned',
@@ -17,7 +16,21 @@ export default storybook => storybook
             color={Button.ButtonColor.gray}
           />
         </DialogFooter>
-      ),
+      )
+    },
+    {
+      name: 'One button Right Aligned',
+      description: 'One child at the right of the footer',
+      story: () => (
+        <DialogFooter rightAlign>
+          <Button
+            href="#"
+            text="Cancel"
+            size={Button.ButtonSize.large}
+            color={Button.ButtonColor.gray}
+          />
+        </DialogFooter>
+      )
     },
     {
       name: 'Two buttons',
@@ -30,17 +43,14 @@ export default storybook => storybook
             size={Button.ButtonSize.large}
             color={Button.ButtonColor.gray}
           />
-          <Button
-            href="#"
-            text="Continue"
-            size={Button.ButtonSize.large}
-          />
+          <Button href="#" text="Continue" size={Button.ButtonSize.large} />
         </DialogFooter>
-      ),
+      )
     },
     {
       name: 'Button groups',
-      description: 'To group buttons on one side or the other, group them together with divs.',
+      description:
+        'To group buttons on one side or the other, group them together with divs.',
       story: () => (
         <DialogFooter>
           <div>
@@ -52,11 +62,7 @@ export default storybook => storybook
             />
           </div>
           <div>
-            <Button
-              href="#"
-              text="One Fish"
-              size={Button.ButtonSize.large}
-            />
+            <Button href="#" text="One Fish" size={Button.ButtonSize.large} />
             <Button
               href="#"
               text="Two Fish"
@@ -65,7 +71,7 @@ export default storybook => storybook
             />
           </div>
         </DialogFooter>
-      ),
+      )
     },
     {
       name: 'Other content',
@@ -74,6 +80,6 @@ export default storybook => storybook
         <DialogFooter>
           <em>The road to ruin is paved with good intentions.</em>
         </DialogFooter>
-      ),
-    },
+      )
+    }
   ]);

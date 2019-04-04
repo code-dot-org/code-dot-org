@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 106,
   "properties": {
-    "markdown_instructions": "# When to use lossy compression?\r\n\r\nIn general, what are reasons that someone would choose to use lossy compression? Write a brief response below including at least one example of a situation when lossy compression would be appropriate.",
+    "long_instructions": "# When to use lossy compression?\r\n\r\nIn general, what are reasons that someone would choose to use lossy compression? Write a brief response below including at least one example of a situation when lossy compression would be appropriate.",
     "instructions_important": "false",
     "display_name": "Free Response: Lossy vs Lossless Compression",
     "encrypted_solution": "oGWBlvrLzYf0m1mpoiKK88t6dxmWYUp882ZBOUjem6if2/dITzyNPLC83T/G\nS25Z3hLJvrN21qhGVKvWB8vHx/TrE3jAjU2KbA878BejRfNSCkJ44Jb31XK1\n1fDo+yRy+hLmjoyZjatuJ87sAq0zD1MlFmCBvcytULodyMVsm7NyCx/H2OSE\nkhVT0Ztj8jQR\n",

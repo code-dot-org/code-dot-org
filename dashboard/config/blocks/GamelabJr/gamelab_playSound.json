@@ -1,0 +1,13 @@
+{
+  "category": "World",
+  "config": {
+    "func": "playSound",
+    "blockText": "playSound {SOUND}",
+    "args": [
+      {
+        "name": "SOUND",
+        "customInput": "soundPicker"
+      }
+    ]
+  }
+}

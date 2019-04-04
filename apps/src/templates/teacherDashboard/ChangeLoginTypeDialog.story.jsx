@@ -1,5 +1,5 @@
 import React from 'react';
-import ChangeLoginTypeDialog from "./ChangeLoginTypeDialog";
+import ChangeLoginTypeDialog from './ChangeLoginTypeDialog';
 import {Provider} from 'react-redux';
 import {action} from '@storybook/addon-actions';
 import {combineReducers, createStore} from 'redux';
@@ -13,15 +13,15 @@ const {EDIT_SECTION_REQUEST} = __testInterface__;
 const unModalForStorybook = {
   onLoginTypeChanged: () => {},
   hideBackdrop: true,
-  style: {marginLeft: 0},
+  style: {marginLeft: 0}
 };
 
-export default storybook => storybook
-  .storiesOf('ChangeLoginTypeDialog', module)
-  .addStoryTable([
+export default storybook =>
+  storybook.storiesOf('ChangeLoginTypeDialog', module).addStoryTable([
     {
       name: 'Empty section',
-      description: 'When a section is empty, the teacher gets lots of options for changing the login type.',
+      description:
+        'When a section is empty, the teacher gets lots of options for changing the login type.',
       story: () => {
         const store = createStore(combineReducers({teacherSections}));
         store.dispatch(setSections(sections));
@@ -38,7 +38,8 @@ export default storybook => storybook
     },
     {
       name: 'Empty section (saving)',
-      description: 'When a section is empty, the teacher gets lots of options for changing the login type.',
+      description:
+        'When a section is empty, the teacher gets lots of options for changing the login type.',
       story: () => {
         const store = createStore(combineReducers({teacherSections}));
         store.dispatch(setSections(sections));
@@ -56,7 +57,8 @@ export default storybook => storybook
     },
     {
       name: 'Picture section',
-      description: 'When a picture section is not empty, it can only be changed to a word section.',
+      description:
+        'When a picture section is not empty, it can only be changed to a word section.',
       story: () => {
         const store = createStore(combineReducers({teacherSections}));
         store.dispatch(setSections(sections));
@@ -73,7 +75,8 @@ export default storybook => storybook
     },
     {
       name: 'Picture section (saving)',
-      description: 'When a picture section is not empty, it can only be changed to a word section.',
+      description:
+        'When a picture section is not empty, it can only be changed to a word section.',
       story: () => {
         const store = createStore(combineReducers({teacherSections}));
         store.dispatch(setSections(sections));
@@ -91,7 +94,8 @@ export default storybook => storybook
     },
     {
       name: 'Word section',
-      description: 'When a word section is not empty, it can only be changed to a picture section.',
+      description:
+        'When a word section is not empty, it can only be changed to a picture section.',
       story: () => {
         const store = createStore(combineReducers({teacherSections}));
         store.dispatch(setSections(sections));
@@ -108,7 +112,8 @@ export default storybook => storybook
     },
     {
       name: 'Word section (saving)',
-      description: 'When a word section is not empty, it can only be changed to a picture section.',
+      description:
+        'When a word section is not empty, it can only be changed to a picture section.',
       story: () => {
         const store = createStore(combineReducers({teacherSections}));
         store.dispatch(setSections(sections));
@@ -126,7 +131,8 @@ export default storybook => storybook
     },
     {
       name: 'Email section',
-      description: 'When an email section is not empty, it can only be changed to a picture or word section.',
+      description:
+        'When an email section is not empty, it can only be changed to a picture or word section.',
       story: () => {
         const store = createStore(combineReducers({teacherSections}));
         store.dispatch(setSections(sections));
@@ -143,7 +149,8 @@ export default storybook => storybook
     },
     {
       name: 'Email section (saving)',
-      description: 'When an email section is not empty, it can only be changed to a picture or word section.',
+      description:
+        'When an email section is not empty, it can only be changed to a picture or word section.',
       story: () => {
         const store = createStore(combineReducers({teacherSections}));
         store.dispatch(setSections(sections));
@@ -158,7 +165,7 @@ export default storybook => storybook
           </Provider>
         );
       }
-    },
+    }
   ]);
 
 function fakeSection(id, props = {}) {
@@ -174,28 +181,28 @@ function fakeSection(id, props = {}) {
     script: null,
     course_id: null,
     studentCount: 0,
-    ...props,
+    ...props
   };
 }
 
 const sections = [
   fakeSection(11, {
-    name: "Empty Section",
-    studentCount: 0,
+    name: 'Empty Section',
+    studentCount: 0
   }),
   fakeSection(12, {
-    name: "Picture Section",
-    login_type: "picture",
-    studentCount: 1,
+    name: 'Picture Section',
+    login_type: 'picture',
+    studentCount: 1
   }),
   fakeSection(307, {
-    name: "Word Section",
-    login_type: "word",
-    studentCount: 10,
+    name: 'Word Section',
+    login_type: 'word',
+    studentCount: 10
   }),
   fakeSection(14, {
-    name: "Email section",
-    login_type: "email",
-    studentCount: 30,
-  }),
+    name: 'Email section',
+    login_type: 'email',
+    studentCount: 30
+  })
 ];

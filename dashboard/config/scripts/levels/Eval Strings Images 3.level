@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Some functions can only take a specific set of Strings, such as the second argument of this circle function, which controls its style. Draw this orange outline circle using the special String block with a dropdown to make sure you only use valid styles.",
+    "short_instructions": "Some functions can only take a specific set of Strings, such as the second argument of this circle function, which controls its style. Draw this orange outline circle using the special String block with a dropdown to make sure you only use valid styles.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -23,7 +23,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "markdown_instructions": "Some functions can only take a specific set of Strings, such as the second argument of this `circle` function, which controls its style. Draw this orange outline circle using the special String block with a dropdown to make sure you only use valid styles.",
+    "long_instructions": "Some functions can only take a specific set of Strings, such as the second argument of this `circle` function, which controls its style. Draw this orange outline circle using the special String block with a dropdown to make sure you only use valid styles.",
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "examples_required": "false"

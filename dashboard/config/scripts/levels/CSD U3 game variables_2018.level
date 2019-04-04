@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Create your Variables\r\n\r\nFirst, you'll need to create all of your variables and put them in the variables area of your code.\r\n* [Show me the block](#triggercallout=callout1)\r\n* [Show me the area in the code](#triggercallout=callout2)\r\n\r\nDon't forget, each variable needs a label (name) and a starting value.  You can change the value of the variable later in your code.",
+    "long_instructions": "# Create your Variables\r\n\r\nFirst, you'll need to create all of your variables and put them in the variables area of your code.\r\n* [Show me the block](#triggercallout=callout1)\r\n* [Show me the area in the code](#triggercallout=callout2)\r\n\r\nDon't forget, each variable needs a label (name) and a starting value.  You can change the value of the variable later in your code.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

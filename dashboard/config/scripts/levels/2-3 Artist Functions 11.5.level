@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Here's that same `draw a hexagon` function. \r\n\r\nWhat happens if you loop the main program 6 times, turning 60 degrees each time you loop?",
+    "short_instructions": "Here's that same `draw a hexagon` function. \r\n\r\nWhat happens if you loop the main program 6 times, turning 60 degrees each time you loop?",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "ideal": "10",
     "slider_speed": "0.7",
     "embed": "false",
-    "markdown_instructions": "Here's that same `draw a hexagon` function. \r\n\r\nWhat happens if you loop the main program 6 times, turning 60 degrees each time you loop?",
+    "long_instructions": "Here's that same `draw a hexagon` function. \r\n\r\nWhat happens if you loop the main program 6 times, turning 60 degrees each time you loop?",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import * as storybook from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
 import Node from '@storybook/addon-info/dist/components/Node';

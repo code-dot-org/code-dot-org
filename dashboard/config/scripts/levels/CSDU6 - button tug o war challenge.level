@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Challenge\r\n\r\n_Check with your teacher before starting this challenge_\r\n\r\nAt this point your Tug o' War game should have basic functionality, but there are still a few things missing. Continue fleshing out your game. You can make the game your own in any way you like, but you might add some of the following features:\r\n\r\n* Switch to a \"Win\" screen when one player reaches their target\r\n* Add a \"Reset\" button to start the game over\r\n* Add different difficulty levels or \"handicaps\" (one user may move two on each click while the other only moves one)\r\n* Add visuals to make the game look more interesting\r\n* Use the color LEDs to show the score",
+    "long_instructions": "# Challenge\r\n\r\n_Check with your teacher before starting this challenge_\r\n\r\nAt this point your Tug o' War game should have basic functionality, but there are still a few things missing. Continue fleshing out your game. You can make the game your own in any way you like, but you might add some of the following features:\r\n\r\n* Switch to a \"Win\" screen when one player reaches their target\r\n* Add a \"Reset\" button to start the game over\r\n* Add different difficulty levels or \"handicaps\" (one user may move two on each click while the other only moves one)\r\n* Add visuals to make the game look more interesting\r\n* Use the color LEDs to show the score",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

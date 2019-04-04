@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "This house has a half-finished wall. Each side is 100, but the half-finished wall is only 50. Complete the wall. ",
+    "short_instructions": "This house has a half-finished wall. Each side is 100, but the half-finished wall is only 50. Complete the wall. ",
     "x": 250,
     "y": 250,
     "start_direction": 90

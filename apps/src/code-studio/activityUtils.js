@@ -2,8 +2,8 @@
  * A set of utility functions made for dealing with activities easier.
  */
 
-import { TestResults } from '@cdo/apps/constants';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import {TestResults} from '@cdo/apps/constants';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 /**
  * See ApplicationHelper#activity_css_class.
@@ -26,6 +26,9 @@ export const activityCssClass = result => {
   if (result === TestResults.LOCKED_RESULT) {
     return LevelStatus.locked;
   }
+  if (result === TestResults.READONLY_SUBMISSION_RESULT) {
+    return LevelStatus.readonly;
+  }
   if (result === TestResults.FREE_PLAY) {
     return LevelStatus.free_play_complete;
   }
@@ -37,7 +40,6 @@ export const activityCssClass = result => {
   }
   return LevelStatus.attempted;
 };
-
 
 /**
  * Returns the "best" of the two results, as defined in apps/src/constants.js.

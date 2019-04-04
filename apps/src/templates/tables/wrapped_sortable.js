@@ -18,15 +18,28 @@ function wrappedSortable(getSortingColumns, onSort, styles = {}) {
   const basicSortable = sort.sort({getSortingColumns, onSort});
 
   return (label, columnInfo) => {
-    const {className: newClassName, ...newProps} = basicSortable(label, columnInfo);
+    const {className: newClassName, ...newProps} = basicSortable(
+      label,
+      columnInfo
+    );
 
     // Detect new classes applied by sort transform: sort-none, sort-asc, sort-desc
     // Instead of applying those classes, add different FontAwesome icons
-    let sortIcon = <FontAwesome icon="sort" className="fa-fw" style={styles.default}/>;
+    let sortIcon = (
+      <FontAwesome icon="sort" className="fa-fw" style={styles.default} />
+    );
     if (/sort-asc/.test(newClassName)) {
-      sortIcon = <FontAwesome icon="sort-asc" className="fa-fw" style={styles.sortAsc}/>;
+      sortIcon = (
+        <FontAwesome icon="sort-asc" className="fa-fw" style={styles.sortAsc} />
+      );
     } else if (/sort-desc/.test(newClassName)) {
-      sortIcon = <FontAwesome icon="sort-desc" className="fa-fw" style={styles.sortDesc}/>;
+      sortIcon = (
+        <FontAwesome
+          icon="sort-desc"
+          className="fa-fw"
+          style={styles.sortDesc}
+        />
+      );
     }
 
     return {
@@ -34,12 +47,8 @@ function wrappedSortable(getSortingColumns, onSort, styles = {}) {
       style: Object.assign({}, {cursor: 'pointer'}),
       children: (
         <span style={styles.container}>
-          <span>
-            {sortIcon}
-          </span>
-          <span>
-            {label}
-          </span>
+          <span>{sortIcon}</span>
+          <span>{label}</span>
         </span>
       )
     };

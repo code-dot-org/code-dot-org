@@ -1,0 +1,343 @@
+<Dancelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2018-07-30T23:26:31.000Z",
+  "level_num": "custom",
+  "user_id": 53,
+  "properties": {
+    "skin": "gamelab",
+    "helper_libraries": [
+      "VectorLab"
+    ],
+    "hide_animation_mode": "true",
+    "show_type_hints": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "false",
+    "use_default_sprites": "false",
+    "block_pool": "Dancelab",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-07-30 23:26:44 +0000\",\"changed\":[\"notes\",\"helper_libraries\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-07-30 23:31:48 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-08-16 22:58:05 +0000\",\"changed\":[],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="controls_repeat_ext">
+              <value name="TIMES">
+                <block type="math_number">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="Vector_createSpriteWith">
+                  <statement name="STATEMENT">
+                    <block type="Vector_teleportTo">
+                      <value name="POSITION">
+                        <block type="Vector_randomLocation"/>
+                      </value>
+                      <next>
+                        <block type="Vector_setSize">
+                          <value name="WIDTH">
+                            <block type="math_number">
+                              <title name="NUM">20</title>
+                            </block>
+                          </value>
+                          <value name="HEIGHT">
+                            <block type="math_number">
+                              <title name="NUM">20</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="Vector_setColor">
+                              <value name="COLOR">
+                                <block type="colour_picker">
+                                  <title name="COLOUR">#999999</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+              <next>
+                <block type="Vector_createSpriteWith">
+                  <statement name="STATEMENT">
+                    <block type="Vector_teleportTo">
+                      <value name="POSITION">
+                        <block type="Vector_positionCenter"/>
+                      </value>
+                      <next>
+                        <block type="Vector_setSize">
+                          <value name="WIDTH">
+                            <block type="math_number">
+                              <title name="NUM">40</title>
+                            </block>
+                          </value>
+                          <value name="HEIGHT">
+                            <block type="math_number">
+                              <title name="NUM">40</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="Vector_setColor">
+                              <value name="COLOR">
+                                <block type="colour_picker">
+                                  <title name="COLOUR">#ff0000</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="Vector_where">
+                      <title name="PROPERTY">'shapeColor'</title>
+                      <value name="VALUE">
+                        <block type="colour_picker">
+                          <title name="COLOUR">#999999</title>
+                        </block>
+                      </value>
+                      <statement name="STATEMENT">
+                        <block type="Vector_push">
+                          <value name="VECTOR">
+                            <block type="Vector_vectorNorth"/>
+                          </value>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <arg name="range" type="String"/>
+            <description>Maps a sprite's x position to a given sound energy range</description>
+          </mutation>
+          <title name="NAME">mapping my x position to</title>
+          <statement name="STACK">
+            <block type="controls_if">
+              <mutation elseif="1" else="1"/>
+              <value name="IF0">
+                <block type="logic_compare">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="parameters_get">
+                      <mutation output="String"/>
+                      <title name="VAR">range</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="text">
+                      <title name="TEXT">low</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="Dancelab_setProp" editable="false">
+                  <title name="PROPERTY">"x"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="Dancelab_getEnergy" editable="false">
+                      <title name="RANGE">"low"</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <value name="IF1">
+                <block type="logic_compare">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="parameters_get">
+                      <mutation output="String"/>
+                      <title name="VAR">range</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="text">
+                      <title name="TEXT">med</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO1">
+                <block type="Dancelab_setProp" editable="false">
+                  <title name="PROPERTY">"x"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="Dancelab_getEnergy" editable="false">
+                      <title name="RANGE">"mid"</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="Dancelab_setProp" editable="false">
+                  <title name="PROPERTY">"x"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="Dancelab_getEnergy" editable="false">
+                      <title name="RANGE">"high"</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <arg name="range" type="String"/>
+            <description>Maps a sprite's y position to a given sound energy range</description>
+          </mutation>
+          <title name="NAME">mapping my y position to</title>
+          <statement name="STACK">
+            <block type="controls_if">
+              <mutation elseif="1" else="1"/>
+              <value name="IF0">
+                <block type="logic_compare">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="parameters_get">
+                      <mutation output="String"/>
+                      <title name="VAR">range</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="text">
+                      <title name="TEXT">low</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="Dancelab_setProp" editable="false">
+                  <title name="PROPERTY">"y"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="Dancelab_getEnergy" editable="false">
+                      <title name="RANGE">"low"</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <value name="IF1">
+                <block type="logic_compare">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="parameters_get">
+                      <mutation output="String"/>
+                      <title name="VAR">range</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="text">
+                      <title name="TEXT">med</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO1">
+                <block type="Dancelab_setProp" editable="false">
+                  <title name="PROPERTY">"y"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="Dancelab_getEnergy" editable="false">
+                      <title name="RANGE">"mid"</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="Dancelab_setProp" editable="false">
+                  <title name="PROPERTY">"y"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="Dancelab_getEnergy" editable="false">
+                      <title name="RANGE">"high"</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="Vector_log"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Dancelab>

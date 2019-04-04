@@ -1,8 +1,9 @@
-%h1
-  Your registration has been cancelled.
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
 
-- if @enroll_url
-  %p
-    If you need to re-enroll, click
-    %a{href: @enroll_url}
-      = @enroll_url
+%script{src: minifiable_asset_path('js/pd/workshop_enrollment/cancel.js'), data: @script_data}
+
+%h1 Cancel Registration
+
+#workshop-container
+  -# populated by React

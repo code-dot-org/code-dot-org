@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 
 export const videoDataShape = PropTypes.shape({
   src: PropTypes.string.isRequired,
@@ -7,5 +7,5 @@ export const videoDataShape = PropTypes.shape({
   download: PropTypes.string,
   thumbnail: PropTypes.string,
   enable_fallback: PropTypes.bool,
-  autoplay: PropTypes.bool,
+  autoplay: PropTypes.bool
 });

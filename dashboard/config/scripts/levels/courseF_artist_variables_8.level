@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.\r\n\r\n![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png)",
+    "long_instructions": "Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.\r\n\r\n![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png)",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",

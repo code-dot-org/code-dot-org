@@ -1,0 +1,22 @@
+- SignUpTracking.log_load_sign_up session
+
+#signup
+  .row
+    .span9
+      %h1= t('signup_form.title')
+      - if @already_hoc_registered
+        %p= t('signup_form.hoc_already_signed_up_content_post_hoc', studio_url: CDO.studio_url('/')).html_safe
+      - else
+        %p= t('signup_form.overview').html_safe
+        = t('auth.already_signedup')
+        = link_to t('nav.user.signin'), new_session_path(resource_name)
+
+  - if SignUpTracking.new_sign_up_experience?(session)
+    = render 'new_sign_up_form'
+  - else
+    = render 'old_sign_up_form'
+
+%div{style: "clear:both"}
+%br/
+%br/
+%br/

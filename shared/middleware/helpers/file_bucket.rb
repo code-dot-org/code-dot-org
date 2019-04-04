@@ -3,6 +3,7 @@
 #
 class FileBucket < BucketHelper
   MANIFEST_FILENAME = 'manifest.json'.freeze
+  MAXIMUM_FILENAME_LENGTH = 512
 
   def initialize
     super CDO.files_s3_bucket, CDO.files_s3_directory
@@ -52,14 +53,14 @@ class FileBucket < BucketHelper
   # expiration.
   #
   def make_temporary_public_url(encrypted_channel_id, filename, expires_in = 5.minutes)
-    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
-    key = s3_path owner_id, channel_id, filename
+    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, storage_app_id, filename
     Aws::S3::Presigner.new(client: s3).presigned_url(
       :get_object,
       {
         bucket: @bucket,
         key: key,
-        expires_in: expires_in
+        expires_in: expires_in.to_i
       }
     )
   end

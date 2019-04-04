@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:04:20.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -165,8 +161,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Create a global variable for the current index and use it to display the first item in the array. (Click to see full instructions)",
-    "markdown_instructions": "# Current Index\r\n\r\nThis app also allows a user to scroll through individual items in the array. In order to keep track of which index we are currently viewing, our application will need **a global variable that stores the current index**. In coming exercises we'll want our global index to change, so let's **make sure that your code references your global index** rather than fixed values.\r\n\r\n# Do This:\r\n\r\n<img src=\"https://images.code.org/d93b2abfec64ce67e8ccfecee14bae3d-image-1447346228581.36.43 AM.png\" style=\"width: 250px; float: right\">\r\n\r\n* Create a **global variable** that will be used to keep track of the current index in the array. Set this variable to 0.\r\n* Update `setText` which displays the words to show your first favorite thing using **the global index variable** instead of a hard-coded number. \r\n* Update `setText` which displays the current item number to use **the global index variable** instead of a hard-coded number.\r\n\t* **Hint:** since arrays are zero-indexed **you will have to add one to your index** to generate the correct value to display.\r\n* **Note:** neither of these outputs will be able to change yet. Don't worry, we'll be taking care of that in coming exercises!",
+    "short_instructions": "Create a global variable for the current index and use it to display the first item in the array. (Click to see full instructions)",
+    "long_instructions": "# Current Index\r\n\r\nThis app also allows a user to scroll through individual items in the array. In order to keep track of which index we are currently viewing, our application will need **a global variable that stores the current index**. In coming exercises we'll want our global index to change, so let's **make sure that your code references your global index** rather than fixed values.\r\n\r\n# Do This:\r\n\r\n<img src=\"https://images.code.org/d93b2abfec64ce67e8ccfecee14bae3d-image-1447346228581.36.43 AM.png\" style=\"width: 250px; float: right\">\r\n\r\n* Create a **global variable** that will be used to keep track of the current index in the array. Set this variable to 0.\r\n* Update `setText` which displays the words to show your first favorite thing using **the global index variable** instead of a hard-coded number. \r\n* Update `setText` which displays the current item number to use **the global index variable** instead of a hard-coded number.\r\n\t* **Hint:** since arrays are zero-indexed **you will have to add one to your index** to generate the correct value to display.\r\n* **Note:** neither of these outputs will be able to change yet. Don't worry, we'll be taking care of that in coming exercises!",
     "slider_speed": "1",
     "project_template_level_name": "U3 - Arrays - favThings template_2018",
     "encrypted_examples": "UzxwgQAN4d2FwSyScy5pxtuMs+x9ijdixn3RBHr0r/fGGyyKEQ1pUw04Qzz9\nNV5F\n",
@@ -175,14 +171,18 @@
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "parent_level_id": 6903,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:04:20.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-03-20 16:14:55 +0000\",\"changed\":[\"notes\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]"

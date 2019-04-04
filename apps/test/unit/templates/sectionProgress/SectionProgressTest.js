@@ -15,12 +15,12 @@ describe('SectionProgress', () => {
 
   beforeEach(() => {
     DEFAULT_PROPS = {
-      setLessonOfInterest: ()=>{},
-      loadScript: ()=>{},
-      setScriptId: ()=>{},
+      setLessonOfInterest: () => {},
+      loadScript: () => {},
+      setScriptId: () => {},
       scriptId: 1,
       section: {
-        id: 1,
+        id: 2,
         script: {id: 123},
         students: studentData
       },
@@ -28,45 +28,41 @@ describe('SectionProgress', () => {
       currentView: ViewType.SUMMARY,
       scriptData: {
         id: 123,
+        path: '/scripts/myscript',
         stages: [
           {
             id: 456,
-            levels: [
-              {id: 789}
-            ],
+            levels: [{id: 789}]
           }
         ],
-        excludeCsfColumnInLegend: true,
+        excludeCsfColumnInLegend: true
       },
-      isLoadingProgress: false,
+      isLoadingProgress: false
     };
   });
 
   it('loading data shows loading icon', () => {
     const wrapper = shallow(
-      <UnconnectedSectionProgress
-        {...DEFAULT_PROPS}
-        isLoadingProgress={true}
-      />
+      <UnconnectedSectionProgress {...DEFAULT_PROPS} isLoadingProgress={true} />
     );
     expect(wrapper.find('#uitest-spinner').exists()).to.be.true;
   });
 
   it('done loading data does not show loading icon', () => {
-    const wrapper = shallow(
-      <UnconnectedSectionProgress
-        {...DEFAULT_PROPS}
-      />
-    );
+    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
     expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
   });
 
-  it('summary view shows summary view and legend', () => {
-    const wrapper = shallow(
-      <UnconnectedSectionProgress
-        {...DEFAULT_PROPS}
-      />
+  it('shows viewCourse link with section id', () => {
+    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
+    const backLink = wrapper.find(
+      'SmallChevronLink[link="/scripts/myscript?section_id=2"]'
     );
+    expect(backLink.exists()).to.be.true;
+  });
+
+  it('summary view shows summary view and legend', () => {
+    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
     expect(wrapper.find('#uitest-summary-view').exists()).to.be.true;
   });
 

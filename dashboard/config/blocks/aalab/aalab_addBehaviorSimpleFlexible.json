@@ -1,0 +1,18 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "addBehaviorSimpleFlexible",
+    "blockText": "aalab sprite {SPRITE} begins {BEHAVIOR}",
+    "inline": false,
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "BEHAVIOR",
+        "type": "Behavior"
+      }
+    ]
+  }
+}

@@ -11,7 +11,7 @@
     "timeout_after_when_run": "false",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,16,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Figure out how to change this code so that Robin chooses a number between 1 and 20.  \r\n\r\nWhen you're ready, press \"Run\" and play until you guess Robin's number!",
+    "short_instructions": "Figure out how to change this code so that Robin chooses a number between 1 and 20.  \r\n\r\nWhen you're ready, press \"Run\" and play until you guess Robin's number!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -41,7 +41,7 @@
       "downButton",
       "upButton"
     ],
-    "markdown_instructions": "<b>The sun is shining, the birds are chirping, and now it's time to play!</b>  <br/><br/>\r\n\r\nRobin has chosen a number between 10 and 30.  \r\nUse the up and down arrows to make a guess about what it is.  \r\nClick Robin to submit your guess.\r\n\r\n- Robin will move up when your guess is too high\r\n- Robin will move down when your guess is too low\r\n- Where do you change how far Robin moves each time?\r\n- Where would you change the range of numbers to choose from?\r\n- Can you change the code so that Robin chooses a number between 1 & 20?\r\n\r\n<br/>\r\n<b>When you're ready, press \"Run\" and play until you guess Robin's number!</b>"
+    "long_instructions": "<b>The sun is shining, the birds are chirping, and now it's time to play!</b>  <br/><br/>\r\n\r\nRobin has chosen a number between 10 and 30.  \r\nUse the up and down arrows to make a guess about what it is.  \r\nClick Robin to submit your guess.\r\n\r\n- Robin will move up when your guess is too high\r\n- Robin will move down when your guess is too low\r\n- Where do you change how far Robin moves each time?\r\n- Where would you change the range of numbers to choose from?\r\n- Can you change the code so that Robin chooses a number between 1 & 20?\r\n\r\n<br/>\r\n<b>When you're ready, press \"Run\" and play until you guess Robin's number!</b>"
   },
   "published": true,
   "notes": ""

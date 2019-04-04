@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Have you drawn something like this star before? Practice making it one more time by adding a turn and a repeat block.",
+    "short_instructions": "Have you drawn something like this star before? Practice making it one more time by adding a turn and a repeat block.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "free_play": "false",
     "ideal": "7",
     "embed": "false",
-    "markdown_instructions": "Have you drawn something like this star before? Practice making it one more time by adding a `turn` and a `repeat` block.",
+    "long_instructions": "Have you drawn something like this star before? Practice making it one more time by adding a `turn` and a `repeat` block.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Match:  Help finish the Hexagon.",
+    "short_instructions": "Match:  Help finish the Hexagon.",
     "x": "125",
     "y": "275",
     "start_direction": "0",

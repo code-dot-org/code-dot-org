@@ -1,11 +1,22 @@
 %h3
-  What to Bring
+  What to bring
 
 %p
   Please bring the following with you on the day of your workshop to
   ensure you are able to participate fully.
 
 %ul
-  %li Laptop
-  %li Laptop Charger
-  %li Headphones or Earphones
+  %li
+    Laptop and charger, as well as any adapters. Review
+    = link_to 'this page', Pd::WorkshopMailer::SUPPORTED_TECH_URL
+    for more information regarding compatible operating systems and browsers. We
+    do not recommend bringing a tablet as your primary device.
+  %li Headphones or earphones.
+  - if @workshop.subject == Pd::Workshop::SUBJECT_CSF_201
+    %li
+      A physical copy of the 2019-2020 CS Fundamentals Curriculum Guide. If you
+      do not have one available, one will be provided for you at the workshop.
+  - if @workshop.csf? && @is_enrollment_receipt
+    %li Your curiosity and readiness to learn!
+  - unless @workshop.summer? || @workshop.fit_weekend? || @workshop.csf?
+    %li Code.org Curriculum Guide.

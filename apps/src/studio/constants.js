@@ -1,4 +1,3 @@
-
 export const SpriteSpeed = {
   VERY_SLOW: 2,
   SLOW: 3,
@@ -6,7 +5,7 @@ export const SpriteSpeed = {
   NORMAL: 5,
   LITTLE_FAST: 6,
   FAST: 8,
-  VERY_FAST: 12,
+  VERY_FAST: 12
 };
 
 export const SpriteSize = {
@@ -29,12 +28,12 @@ export const Direction = {
   NORTHWEST: 9
 };
 
-export const turnLeft90 = function (direction) {
+export const turnLeft90 = function(direction) {
   return direction >> 1 || Direction.WEST;
 };
 
-export const turnRight90 = function (direction) {
-  return (direction << 1) & 0xF || Direction.NORTH;
+export const turnRight90 = function(direction) {
+  return (direction << 1) & 0xf || Direction.NORTH;
 };
 
 const Dir = Direction;
@@ -57,12 +56,7 @@ export const ClockwiseDirectionsFromNorth = [
 /**
  * List of cardinal directions
  */
-export const CardinalDirections = [
-  Dir.NORTH,
-  Dir.SOUTH,
-  Dir.EAST,
-  Dir.WEST
-];
+export const CardinalDirections = [Dir.NORTH, Dir.SOUTH, Dir.EAST, Dir.WEST];
 
 /**
  * Given a 2D vector (x and y) provides the closest animation direction
@@ -71,7 +65,7 @@ export const CardinalDirections = [
  * @param {number} y
  * @returns {Direction}
  */
-export const getClosestDirection = function (x, y) {
+export const getClosestDirection = function(x, y) {
   // Y is inverted between our playlab coordinate space and what atan2 expects.
   const radiansFromNorth = Math.atan2(x, -y);
   const stepRadians = Math.PI / 4;
@@ -82,94 +76,92 @@ export const getClosestDirection = function (x, y) {
 };
 
 export const frameDirTable = {};
-frameDirTable[Dir.SOUTHEAST]  = 0;
-frameDirTable[Dir.EAST]       = 1;
-frameDirTable[Dir.NORTHEAST]  = 2;
-frameDirTable[Dir.NORTH]      = 3;
-frameDirTable[Dir.NORTHWEST]  = 4;
-frameDirTable[Dir.WEST]       = 5;
-frameDirTable[Dir.SOUTHWEST]  = 6;
+frameDirTable[Dir.SOUTHEAST] = 0;
+frameDirTable[Dir.EAST] = 1;
+frameDirTable[Dir.NORTHEAST] = 2;
+frameDirTable[Dir.NORTH] = 3;
+frameDirTable[Dir.NORTHWEST] = 4;
+frameDirTable[Dir.WEST] = 5;
+frameDirTable[Dir.SOUTHWEST] = 6;
 
 export const frameDirTableWalking = {};
-frameDirTableWalking[Dir.NONE]       = 0;
-frameDirTableWalking[Dir.SOUTH]      = 0;
-frameDirTableWalking[Dir.SOUTHEAST]  = 1;
-frameDirTableWalking[Dir.EAST]       = 2;
-frameDirTableWalking[Dir.NORTHEAST]  = 3;
-frameDirTableWalking[Dir.NORTH]      = 4;
-frameDirTableWalking[Dir.NORTHWEST]  = 5;
-frameDirTableWalking[Dir.WEST]       = 6;
-frameDirTableWalking[Dir.SOUTHWEST]  = 7;
-
+frameDirTableWalking[Dir.NONE] = 0;
+frameDirTableWalking[Dir.SOUTH] = 0;
+frameDirTableWalking[Dir.SOUTHEAST] = 1;
+frameDirTableWalking[Dir.EAST] = 2;
+frameDirTableWalking[Dir.NORTHEAST] = 3;
+frameDirTableWalking[Dir.NORTH] = 4;
+frameDirTableWalking[Dir.NORTHWEST] = 5;
+frameDirTableWalking[Dir.WEST] = 6;
+frameDirTableWalking[Dir.SOUTHWEST] = 7;
 
 // Forward-to-left (clockwise)
 export const frameDirTableWalkingWithIdleClockwise = {};
-frameDirTableWalkingWithIdleClockwise[Dir.NONE]       = 8;
-frameDirTableWalkingWithIdleClockwise[Dir.SOUTH]      = 0;
-frameDirTableWalkingWithIdleClockwise[Dir.SOUTHEAST]  = 1;
-frameDirTableWalkingWithIdleClockwise[Dir.EAST]       = 2;
-frameDirTableWalkingWithIdleClockwise[Dir.NORTHEAST]  = 3;
-frameDirTableWalkingWithIdleClockwise[Dir.NORTH]      = 4;
-frameDirTableWalkingWithIdleClockwise[Dir.NORTHWEST]  = 5;
-frameDirTableWalkingWithIdleClockwise[Dir.WEST]       = 6;
-frameDirTableWalkingWithIdleClockwise[Dir.SOUTHWEST]  = 7;
+frameDirTableWalkingWithIdleClockwise[Dir.NONE] = 8;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTH] = 0;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTHEAST] = 1;
+frameDirTableWalkingWithIdleClockwise[Dir.EAST] = 2;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTHEAST] = 3;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTH] = 4;
+frameDirTableWalkingWithIdleClockwise[Dir.NORTHWEST] = 5;
+frameDirTableWalkingWithIdleClockwise[Dir.WEST] = 6;
+frameDirTableWalkingWithIdleClockwise[Dir.SOUTHWEST] = 7;
 
 // Forward-to-right (counter-clockwise)
 export const frameDirTableWalkingWithIdleCounterclockwise = {};
-frameDirTableWalkingWithIdleCounterclockwise[Dir.NONE]       = 8;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTH]      = 0;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHEAST]  = 7;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.EAST]       = 6;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHEAST]  = 5;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTH]      = 4;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHWEST]  = 3;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.WEST]       = 2;
-frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHWEST]  = 1;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NONE] = 8;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTH] = 0;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHEAST] = 7;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.EAST] = 6;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHEAST] = 5;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTH] = 4;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.NORTHWEST] = 3;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.WEST] = 2;
+frameDirTableWalkingWithIdleCounterclockwise[Dir.SOUTHWEST] = 1;
 
 /**
  * Given a direction, returns the unit vector for it.
  */
 export const UNIT_VECTOR = {};
-UNIT_VECTOR[Dir.NONE] =  { x: 0, y: 0};
-UNIT_VECTOR[Dir.NORTH] = { x: 0, y:-1};
-UNIT_VECTOR[Dir.EAST]  = { x: 1, y: 0};
-UNIT_VECTOR[Dir.SOUTH] = { x: 0, y: 1};
-UNIT_VECTOR[Dir.WEST]  = { x:-1, y: 0};
-UNIT_VECTOR[Dir.NORTHEAST] = { x: 1, y:-1};
-UNIT_VECTOR[Dir.SOUTHEAST] = { x: 1, y: 1};
-UNIT_VECTOR[Dir.SOUTHWEST] = { x:-1, y: 1};
-UNIT_VECTOR[Dir.NORTHWEST] = { x:-1, y:-1};
-Dir.getUnitVector = function (dir) {
+UNIT_VECTOR[Dir.NONE] = {x: 0, y: 0};
+UNIT_VECTOR[Dir.NORTH] = {x: 0, y: -1};
+UNIT_VECTOR[Dir.EAST] = {x: 1, y: 0};
+UNIT_VECTOR[Dir.SOUTH] = {x: 0, y: 1};
+UNIT_VECTOR[Dir.WEST] = {x: -1, y: 0};
+UNIT_VECTOR[Dir.NORTHEAST] = {x: 1, y: -1};
+UNIT_VECTOR[Dir.SOUTHEAST] = {x: 1, y: 1};
+UNIT_VECTOR[Dir.SOUTHWEST] = {x: -1, y: 1};
+UNIT_VECTOR[Dir.NORTHWEST] = {x: -1, y: -1};
+Dir.getUnitVector = function(dir) {
   return UNIT_VECTOR[dir];
 };
 
-
 export const Position = {
-  OUTTOPOUTLEFT:    1,
-  OUTTOPLEFT:       2,
-  OUTTOPCENTER:     3,
-  OUTTOPRIGHT:      4,
-  OUTTOPOUTRIGHT:   5,
-  TOPOUTLEFT:       6,
-  TOPLEFT:          7,
-  TOPCENTER:        8,
-  TOPRIGHT:         9,
-  TOPOUTRIGHT:      10,
-  MIDDLEOUTLEFT:    11,
-  MIDDLELEFT:       12,
-  MIDDLECENTER:     13,
-  MIDDLERIGHT:      14,
-  MIDDLEOUTRIGHT:   15,
-  BOTTOMOUTLEFT:    16,
-  BOTTOMLEFT:       17,
-  BOTTOMCENTER:     18,
-  BOTTOMRIGHT:      19,
-  BOTTOMOUTRIGHT:   20,
+  OUTTOPOUTLEFT: 1,
+  OUTTOPLEFT: 2,
+  OUTTOPCENTER: 3,
+  OUTTOPRIGHT: 4,
+  OUTTOPOUTRIGHT: 5,
+  TOPOUTLEFT: 6,
+  TOPLEFT: 7,
+  TOPCENTER: 8,
+  TOPRIGHT: 9,
+  TOPOUTRIGHT: 10,
+  MIDDLEOUTLEFT: 11,
+  MIDDLELEFT: 12,
+  MIDDLECENTER: 13,
+  MIDDLERIGHT: 14,
+  MIDDLEOUTRIGHT: 15,
+  BOTTOMOUTLEFT: 16,
+  BOTTOMLEFT: 17,
+  BOTTOMCENTER: 18,
+  BOTTOMRIGHT: 19,
+  BOTTOMOUTRIGHT: 20,
   OUTBOTTOMOUTLEFT: 21,
-  OUTBOTTOMLEFT:    22,
-  OUTBOTTOMCENTER:  23,
-  OUTBOTTOMRIGHT:   24,
-  OUTBOTTOMOUTRIGHT:25
+  OUTBOTTOMLEFT: 22,
+  OUTBOTTOMCENTER: 23,
+  OUTBOTTOMRIGHT: 24,
+  OUTBOTTOMOUTRIGHT: 25
 };
 
 //
@@ -298,19 +290,18 @@ export const DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION = 1.5;
 export const DEFAULT_ITEM_SPEED = SpriteSpeed.SLOW;
 export const DEFAULT_ITEM_ANIMATION_FRAME_DURATION = 1.5;
 
-
 /**
  * The types of squares in the maze, which is represented
  * as a 2D array of SquareType values.
  * @enum {number}
  */
 export const SquareType = {
-  OPEN:         0,
+  OPEN: 0,
   SPRITEFINISH: 1,
-  NOT_USED_2:   2,
-  WALL:         4,  // random wall tile
-  NOT_USED_8:   8,
-  SPRITESTART:  16,
+  NOT_USED_2: 2,
+  WALL: 4, // random wall tile
+  NOT_USED_8: 8,
+  SPRITESTART: 16,
   ITEM_CLASS_0: 32, // Must stay in sync with SquareItemClassShift below
   ITEM_CLASS_1: 64,
   ITEM_CLASS_2: 128,
@@ -319,7 +310,7 @@ export const SquareType = {
   ITEM_CLASS_5: 1024,
   ITEM_CLASS_6: 2048,
   ITEM_CLASS_7: 4096,
-  NOT_USED_8K:  8192,
+  NOT_USED_8K: 8192,
   NOT_USED_16K: 16384,
   NOT_USED_32K: 32768
   // Walls specifically retrieved from an 16x16 grid are stored in bits 16-27.
@@ -353,16 +344,16 @@ export const WallType = {
   JUMBO_SIZE: 2
 };
 
-export const WallTypeMask     = 0x0F000000;
-export const WallCoordRowMask = 0x00F00000;
-export const WallCoordColMask = 0x000F0000;
+export const WallTypeMask = 0x0f000000;
+export const WallCoordRowMask = 0x00f00000;
+export const WallCoordColMask = 0x000f0000;
 
 export const WallCoordsMask =
   WallTypeMask | WallCoordRowMask | WallCoordColMask;
 export const WallCoordsShift = 16;
-export const WallCoordColShift  = WallCoordsShift;
-export const WallCoordRowShift  = WallCoordsShift + 4;
-export const WallTypeShift      = WallCoordsShift + 8;
+export const WallCoordColShift = WallCoordsShift;
+export const WallCoordRowShift = WallCoordsShift + 4;
+export const WallTypeShift = WallCoordsShift + 8;
 export const WallCoordMax = 16; // indicates a 16x16 grid, which requires 8 bits
 export const WallRandomCoordMax = 2; // how many rows/cols we randomly select tiles from
 

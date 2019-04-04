@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<div style=\"float:right\">\r\n\t<img src=\"https://images.code.org/1c2a02a2caebbda2be4e537ab5087dcd-image-1506613875548.50.54 AM.png\" style=\"height:150px\"> \r\n</div>\r\n\r\n**Goal:** Make the screen `\"red\"`. \r\n\r\n**How:** Drag in the block, change the color, then hit \"Run\"\r\n\r\n**Show Me:** ![expandable](https://images.code.org/8b1d99aa6bd6274e05b1844fab7e8b2a-image-1505870100643.gif)",
+    "long_instructions": "<div style=\"float:right\">\r\n\t<img src=\"https://images.code.org/1c2a02a2caebbda2be4e537ab5087dcd-image-1506613875548.50.54 AM.png\" style=\"height:150px\"> \r\n</div>\r\n\r\n**Goal:** Make the screen `\"red\"`. \r\n\r\n**How:** Drag in the block, change the color, then hit \"Run\"\r\n\r\n**Show Me:** ![expandable](https://images.code.org/8b1d99aa6bd6274e05b1844fab7e8b2a-image-1505870100643.gif)",
     "instructions_important": "true",
     "submittable": "false",
     "is_k1": "false",

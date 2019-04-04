@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Beyond Buttons Getting Started",
-    "markdown_instructions": "Until today, you have only learned how to add buttons to a program. \n\nWhat other elements, in addition to buttons, do you interact with in familiar applications? \n\nBesides clicking on buttons, in what other ways can you get information to the program or tell the computer to do things?\n\n\n",
+    "long_instructions": "Until today, you have only learned how to add buttons to a program. \n\nWhat other elements, in addition to buttons, do you interact with in familiar applications? \n\nBesides clicking on buttons, in what other ways can you get information to the program or tell the computer to do things?\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -1,6 +1,6 @@
 import React from 'react';
 import {APP_WIDTH, APP_HEIGHT} from '../../../../applab/constants';
-import {UnconnectedMakerStatusOverlay} from "./MakerStatusOverlay";
+import {UnconnectedMakerStatusOverlay} from './MakerStatusOverlay';
 import {action} from '@storybook/addon-actions';
 
 export default storybook => {
@@ -13,7 +13,7 @@ export default storybook => {
     handleTryAgain: action('Try Again'),
     useFakeBoardOnNextRun: action('Use fake board on next run'),
     handleDisableMaker: action('Disable Maker Toolkit'),
-    handleOpenSetupPage: action('Open setup page'),
+    handleOpenSetupPage: action('Open setup page')
   };
 
   storybook
@@ -21,31 +21,34 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'WaitingToConnect',
-        story: () => wrapOverlay(
-          <UnconnectedMakerStatusOverlay
-            {...commonProps}
-            isConnecting={true}
-          />
-        ),
+        story: () =>
+          wrapOverlay(
+            <UnconnectedMakerStatusOverlay
+              {...commonProps}
+              isConnecting={true}
+            />
+          )
       },
       {
         name: 'UnsupportedBrowser',
-        story: () => wrapOverlay(
-          <UnconnectedMakerStatusOverlay
-            {...commonProps}
-            isWrongBrowser={true}
-          />
-        ),
+        story: () =>
+          wrapOverlay(
+            <UnconnectedMakerStatusOverlay
+              {...commonProps}
+              isWrongBrowser={true}
+            />
+          )
       },
       {
         name: 'ConnectionError',
-        story: () => wrapOverlay(
-          <UnconnectedMakerStatusOverlay
-            {...commonProps}
-            hasConnectionError={true}
-          />
-        ),
-      },
+        story: () =>
+          wrapOverlay(
+            <UnconnectedMakerStatusOverlay
+              {...commonProps}
+              hasConnectionError={true}
+            />
+          )
+      }
     ]);
 };
 
@@ -53,7 +56,7 @@ function wrapOverlay(overlay) {
   const style = {
     position: 'relative',
     width: APP_WIDTH,
-    height: APP_HEIGHT,
+    height: APP_HEIGHT
   };
   return <div style={style}>{overlay}</div>;
 }

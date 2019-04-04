@@ -1,7 +1,13 @@
 /** @file Provides clients to AWS Firehose, whose data is imported into AWS Redshift. */
 
-import AWS from 'aws-sdk';
-import {createUuid, trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
+import AWS from 'aws-sdk/lib/core';
+import 'aws-sdk/lib/config';
+import Firehose from 'aws-sdk/clients/firehose';
+import {
+  createUuid,
+  trySetLocalStorage,
+  tryGetLocalStorage
+} from '@cdo/apps/utils';
 import {getStore} from '@cdo/apps/redux';
 
 /**
@@ -56,26 +62,26 @@ class FirehoseClient {
    */
   getEnvironment() {
     const hostname = window.location.hostname;
-    if (hostname.includes("adhoc")) {
+    if (hostname.includes('adhoc')) {
       // As adhoc hostnames may include other keywords, check it first.
-      return "adhoc";
+      return 'adhoc';
     }
-    if (hostname.includes("test")) {
-      return "test";
+    if (hostname.includes('test')) {
+      return 'test';
     }
-    if (hostname.includes("levelbuilder")) {
-      return "levelbuilder";
+    if (hostname.includes('levelbuilder')) {
+      return 'levelbuilder';
     }
-    if (hostname.includes("staging")) {
-      return "staging";
+    if (hostname.includes('staging')) {
+      return 'staging';
     }
-    if (hostname.includes("localhost")) {
-      return "development";
+    if (hostname.includes('localhost')) {
+      return 'development';
     }
-    if (hostname.includes("code.org")) {
-      return "production";
+    if (hostname.includes('code.org')) {
+      return 'production';
     }
-    return "unknown";
+    return 'unknown';
   }
 
   /**
@@ -83,7 +89,7 @@ class FirehoseClient {
    * @return {boolean} Whether the hostname includes "test".
    */
   isTestEnvironment() {
-    return this.getEnvironment() === "test";
+    return this.getEnvironment() === 'test';
   }
 
   /**
@@ -91,7 +97,7 @@ class FirehoseClient {
    * @return {boolean} Whether the hostname includes "localhost".
    */
   isDevelopmentEnvironment() {
-    return this.getEnvironment() === "development";
+    return this.getEnvironment() === 'development';
   }
 
   /**
@@ -117,11 +123,11 @@ class FirehoseClient {
    * @return {string} A unique user ID.
    */
   getAnalyticsUuid() {
-    let analytics_uuid = tryGetLocalStorage("analyticsID", null);
+    let analytics_uuid = tryGetLocalStorage('analyticsID', null);
     if (!analytics_uuid) {
       analytics_uuid = createUuid();
     }
-    trySetLocalStorage("analyticsID", analytics_uuid);
+    trySetLocalStorage('analyticsID', analytics_uuid);
     return analytics_uuid;
   }
 
@@ -146,6 +152,9 @@ class FirehoseClient {
    * @param {hash} data The data to add the key-value pairs to.
    * @option {boolean} includeUserId Include userId in records, if signed in
    * @return {hash} The data, including the newly added key-value pairs.
+   * NOTE: In scenarios where userId is not in pageConstants, such as in the
+   * project gallery, we can also directly pass user_id as a field on the data * object. In this case, includeUserId should be false to avoid overriding
+   * the manually set user_id.
    */
   addCommonValues(data, includeUserId) {
     data['created_at'] = new Date().toISOString();
@@ -178,12 +187,18 @@ class FirehoseClient {
    *   (default {alwaysPut: false})
    * @option options [boolean] alwaysPut Forces the record to be sent.
    * @option options [boolean] includeUserId Include userId in records, if signed in
+   * NOTE: In scenarios where userId is not in pageConstants, such as in the
+   * project gallery, we can also directly pass user_id as a field on the data * object. In this case, includeUserId should be false to avoid overriding
+   * the manually set user_id.
    * @option options [function(err, data)] callback Invoked upon completion with error or data
    */
-  putRecord(data, options = {alwaysPut: false, includeUserId: false, callback: null}) {
+  putRecord(
+    data,
+    options = {alwaysPut: false, includeUserId: false, callback: null}
+  ) {
     data = this.addCommonValues(data, options.includeUserId);
     if (!this.shouldPutRecord(options['alwaysPut'])) {
-      console.groupCollapsed("Skipped sending record to " + deliveryStreamName);
+      console.groupCollapsed('Skipped sending record to ' + deliveryStreamName);
       console.log(data);
       console.groupEnd();
       if (options.callback) {
@@ -196,10 +211,10 @@ class FirehoseClient {
       {
         DeliveryStreamName: deliveryStreamName,
         Record: {
-          Data: JSON.stringify(data),
-        },
+          Data: JSON.stringify(data)
+        }
       },
-      function (err, data) {
+      function(err, data) {
         if (options.callback) {
           options.callback(err, data);
         }
@@ -216,18 +231,22 @@ class FirehoseClient {
    * @option options [boolean] includeUserId Include userId in records, if signed in
    */
   putRecordBatch(data, options = {alwaysPut: false, includeUserId: false}) {
-    data.map(function (record) { return this.AddCommonValues(record, options.includeUserId); });
+    data.map(function(record) {
+      return this.AddCommonValues(record, options.includeUserId);
+    });
 
     if (!this.shouldPutRecord(options['alwaysPut'])) {
-      console.groupCollapsed("Skipped sending record batch to " + deliveryStreamName);
-      data.map(function (record) {
+      console.groupCollapsed(
+        'Skipped sending record batch to ' + deliveryStreamName
+      );
+      data.map(function(record) {
         console.log(record);
       });
       console.groupEnd();
       return;
     }
 
-    const batch = data.map(function (record) {
+    const batch = data.map(function(record) {
       return {
         Data: JSON.stringify(record)
       };
@@ -238,7 +257,7 @@ class FirehoseClient {
         DeliveryStreamName: deliveryStreamName,
         Records: batch
       },
-      function (err, data) {}
+      function(err, data) {}
     );
   }
 }
@@ -247,8 +266,31 @@ class FirehoseClient {
 // not a concern, we just don't want to make things super obvious. For the
 // plaintext, contact asher or eric.
 // eslint-disable-next-line
-const _0x12ed=['\x41\x4b\x49\x41\x4a\x41\x41\x4d\x42\x59\x4d\x36\x55\x53\x59\x54\x34\x35\x34\x51','\x78\x4e\x4e\x39\x4e\x79\x32\x61\x6d\x39\x78\x75\x4b\x79\x57\x39\x53\x2b\x4e\x76\x41\x77\x33\x67\x68\x68\x74\x68\x72\x6b\x37\x6b\x6e\x51\x59\x54\x77\x6d\x4d\x48','\x75\x73\x2d\x65\x61\x73\x74\x2d\x31','\x63\x6f\x6e\x66\x69\x67'];(function(_0xb54a92,_0x4e682a){var _0x44f3e8=function(_0x35c55a){while(--_0x35c55a){_0xb54a92['\x70\x75\x73\x68'](_0xb54a92['\x73\x68\x69\x66\x74']());}};_0x44f3e8(++_0x4e682a);}(_0x12ed,0x127));var _0xd12e=function(_0x2cedd5,_0x518781){_0x2cedd5=_0x2cedd5-0x0;var _0x4291ea=_0x12ed[_0x2cedd5];return _0x4291ea;};AWS[_0xd12e('0x0')]=new AWS['\x43\x6f\x6e\x66\x69\x67']({'\x61\x63\x63\x65\x73\x73\x4b\x65\x79\x49\x64':_0xd12e('0x1'),'\x73\x65\x63\x72\x65\x74\x41\x63\x63\x65\x73\x73\x4b\x65\x79':_0xd12e('0x2'),'\x72\x65\x67\x69\x6f\x6e':_0xd12e('0x3')});
+const _0x12ed = [
+  '\x41\x4b\x49\x41\x4a\x41\x41\x4d\x42\x59\x4d\x36\x55\x53\x59\x54\x34\x35\x34\x51',
+  '\x78\x4e\x4e\x39\x4e\x79\x32\x61\x6d\x39\x78\x75\x4b\x79\x57\x39\x53\x2b\x4e\x76\x41\x77\x33\x67\x68\x68\x74\x68\x72\x6b\x37\x6b\x6e\x51\x59\x54\x77\x6d\x4d\x48',
+  '\x75\x73\x2d\x65\x61\x73\x74\x2d\x31',
+  '\x63\x6f\x6e\x66\x69\x67'
+];
+(function(_0xb54a92, _0x4e682a) {
+  var _0x44f3e8 = function(_0x35c55a) {
+    while (--_0x35c55a) {
+      _0xb54a92['\x70\x75\x73\x68'](_0xb54a92['\x73\x68\x69\x66\x74']());
+    }
+  };
+  _0x44f3e8(++_0x4e682a);
+})(_0x12ed, 0x127);
+var _0xd12e = function(_0x2cedd5, _0x518781) {
+  _0x2cedd5 = _0x2cedd5 - 0x0;
+  var _0x4291ea = _0x12ed[_0x2cedd5];
+  return _0x4291ea;
+};
+AWS[_0xd12e('0x0')] = new AWS['\x43\x6f\x6e\x66\x69\x67']({
+  accessKeyId: _0xd12e('0x1'),
+  secretAccessKey: _0xd12e('0x2'),
+  region: _0xd12e('0x3')
+});
 
-const FIREHOSE = new AWS.Firehose({apiVersion: '2015-08-04'});
+const FIREHOSE = new Firehose({apiVersion: '2015-08-04'});
 const firehoseClient = new FirehoseClient();
 export default firehoseClient;

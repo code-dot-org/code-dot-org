@@ -27,7 +27,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Other Board Events with the Buttons\r\n\r\nInstead of using the right button, you can make the LED turn off when the left button comes back up.\r\n\r\n# Do this\r\n* Create an 'up' event for the left button.\r\n* Add code to turn the LED off when the button pops back up.",
+    "long_instructions": "# Other Board Events with the Buttons\r\n\r\nInstead of using the right button, you can make the LED turn off when the left button comes back up.\r\n\r\n# Do this\r\n* Create an 'up' event for the left button.\r\n* Add code to turn the LED off when the button pops back up.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

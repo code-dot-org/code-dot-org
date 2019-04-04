@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 324,
   "properties": {
-    "markdown_instructions": "# Fish Bubbles\r\n\r\nThis program uses the sound sensor in the same way as the clouds program.  How many bubbles will move when you blow on the board?",
+    "long_instructions": "# Fish Bubbles\r\n\r\nThis program uses the sound sensor in the same way as the clouds program.  How many bubbles will move when you blow on the board?",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

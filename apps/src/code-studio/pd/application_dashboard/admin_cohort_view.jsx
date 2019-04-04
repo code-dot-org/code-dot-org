@@ -1,19 +1,15 @@
 /**
  * Application Cohort View
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Spinner from '../components/spinner';
-import {
-  Row,
-  Col,
-  Button,
-  FormGroup,
-  ControlLabel
-} from 'react-bootstrap';
-import Select from "react-select";
+import {Row, Col, Button, FormGroup, ControlLabel} from 'react-bootstrap';
+import Select from 'react-select';
 import $ from 'jquery';
 import downloadCsv from '../downloadCsv';
 import AdminCohortViewTable from './admin_cohort_view_table';
+import _ from 'lodash';
 
 const styles = {
   downloadCsvButton: {
@@ -43,8 +39,11 @@ export default class AdminCohortView extends React.Component {
   static propTypes = {
     route: PropTypes.shape({
       cohortType: PropTypes.oneOf(['TeacherCon', 'FiT'])
-    })
+    }),
+    downloadCsv: PropTypes.func
   };
+
+  static defaultProps = {downloadCsv: downloadCsv};
 
   constructor(props) {
     super(props);
@@ -68,6 +67,16 @@ export default class AdminCohortView extends React.Component {
     }
   }
 
+  /**
+   * Clean a string, convert line breaker to dot and multiple spaces to single space.
+   */
+  static sanitizeString(str) {
+    return (str || '')
+      .replace(/(\n|\r)+/gm, '. ')
+      .replace(/\s+/gm, ' ')
+      .trim();
+  }
+
   handleDownloadCsv = () => {
     const headers = {
       date_accepted: 'Date Accepted',
@@ -77,9 +86,16 @@ export default class AdminCohortView extends React.Component {
       email: 'Email',
       assigned_workshop: 'Assigned Workshop',
       registered_workshop: 'Registered Workshop',
+      assigned_fit: 'Assigned FiT',
+      registered_fit_submission_time: 'Registered FiT Submission Time',
       accepted_seat: 'Accepted Seat?',
       course_name: 'Course',
-      regional_partner_name: 'Regional Partner'
+      regional_partner_name: 'Regional Partner',
+      notes: 'General Notes',
+      notes_2: 'Notes 2',
+      notes_3: 'Notes 3',
+      notes_4: 'Notes 4',
+      notes_5: 'Notes 5'
     };
 
     const filteredCohortWithFormData = this.state.filteredCohort.map(row => {
@@ -91,15 +107,25 @@ export default class AdminCohortView extends React.Component {
       // Make sure we include all form_data keys that appear on any row:
       Object.keys(row.form_data).forEach(formDataHeader => {
         if (!headers[formDataHeader]) {
-          // Use the raw formData key as the column header
-          headers[formDataHeader] = formDataHeader;
+          // Convert formData key to more readable format, use it as the column header
+          headers[formDataHeader] = _.startCase(formDataHeader);
         }
       });
 
       return {...row, ...row.form_data};
     });
 
-    downloadCsv({
+    // Clean string content of line breakers and whitespaces before exporting it to CSV.
+    // Separator (comma) will be escaped later in downloadCsv function.
+    filteredCohortWithFormData.forEach(row => {
+      Object.keys(row).forEach(key => {
+        if (_.isString(row[key])) {
+          row[key] = AdminCohortView.sanitizeString(row[key]);
+        }
+      });
+    });
+
+    this.props.downloadCsv({
       data: filteredCohortWithFormData,
       filename: `${this.props.route.cohortType.toLowerCase()}_cohort.csv`,
       headers
@@ -123,7 +149,9 @@ export default class AdminCohortView extends React.Component {
       filteredCohort = filteredCohort.filter(a => a.role === filter.role);
     }
     if (filter.date) {
-      filteredCohort = filteredCohort.filter(a => a.assigned_workshop.includes(filter.date));
+      filteredCohort = filteredCohort.filter(a =>
+        a.assigned_workshop.includes(filter.date)
+      );
     }
 
     this.setState({
@@ -132,7 +160,8 @@ export default class AdminCohortView extends React.Component {
     });
   }
 
-  getUrl = () => `/api/v1/pd/applications/${this.props.route.cohortType.toLowerCase()}_cohort`;
+  getUrl = () =>
+    `/api/v1/pd/applications/${this.props.route.cohortType.toLowerCase()}_cohort`;
 
   load() {
     this.loadRequest = $.ajax({
@@ -156,9 +185,7 @@ export default class AdminCohortView extends React.Component {
 
     return (
       <div>
-        <h2>
-          {this.props.route.cohortType} Cohort
-        </h2>
+        <h2>{this.props.route.cohortType} Cohort</h2>
         <Row>
           <Col sm={2}>
             <Button
@@ -169,11 +196,9 @@ export default class AdminCohortView extends React.Component {
             </Button>
           </Col>
           <Col sm={2} smOffset={6}>
-            {this.props.route.cohortType === 'TeacherCon' &&
+            {this.props.route.cohortType === 'TeacherCon' && (
               <FormGroup>
-                <ControlLabel>
-                  Filter by Role
-                </ControlLabel>
+                <ControlLabel>Filter by Role</ControlLabel>
                 <Select
                   value={this.state.filter.role}
                   options={roles.map(role => ({value: role, label: role}))}
@@ -181,27 +206,24 @@ export default class AdminCohortView extends React.Component {
                   onChange={this.handleRoleFilterChange}
                 />
               </FormGroup>
-            }
+            )}
           </Col>
           <Col sm={2}>
             <FormGroup>
-              <ControlLabel>
-                Filter by Date
-              </ControlLabel>
+              <ControlLabel>Filter by Date</ControlLabel>
               <Select
                 value={this.state.filter.date}
-                options={dates[this.props.route.cohortType].map(teachercon => (
-                  {value: teachercon.city, label: teachercon.display}
-                ))}
+                options={dates[this.props.route.cohortType].map(teachercon => ({
+                  value: teachercon.city,
+                  label: teachercon.display
+                }))}
                 placeholder="All Dates"
                 onChange={this.handleDateFilterChange}
               />
             </FormGroup>
           </Col>
         </Row>
-        <AdminCohortViewTable
-          data={this.state.filteredCohort}
-        />
+        <AdminCohortViewTable data={this.state.filteredCohort} />
       </div>
     );
   }

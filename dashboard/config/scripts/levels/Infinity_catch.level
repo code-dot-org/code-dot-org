@@ -11,7 +11,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Can you make Elsa (\"actor 2\") catch up with Anna by using the arrow keys?",
+    "short_instructions": "Can you make Elsa (\"actor 2\") catch up with Anna by using the arrow keys?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

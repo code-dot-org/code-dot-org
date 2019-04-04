@@ -5,7 +5,7 @@
       "user_id": 19,
       "properties": {
         "skin": "artist",
-        "instructions": "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture. (Each line is 100 pixels long)",
+        "short_instructions": "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture. (Each line is 100 pixels long)",
         "x": "200",
         "y": "200",
         "start_direction": "90",

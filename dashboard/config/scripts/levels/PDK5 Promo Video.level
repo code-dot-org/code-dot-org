@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Code Studio: Kid tested, Teacher approved",
-    "markdown_instructions": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/rNIM1fzJ8u0\" frameborder=\"0\" allowfullscreen></iframe>\n\n### What are your first impressions of Code Studio?\n",
+    "long_instructions": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/rNIM1fzJ8u0\" frameborder=\"0\" allowfullscreen></iframe>\n\n### What are your first impressions of Code Studio?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

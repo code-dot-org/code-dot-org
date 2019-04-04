@@ -13,7 +13,7 @@
     "player_start_position": "[4, 7]",
     "player_start_direction": "0",
     "verification_function": "function (verificationAPI) {\r\n      return verificationAPI.solutionMapMatchesResultMap(\r\n            [\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"cropWheat\", \"\", \"cropWheat\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"cropWheat\", \"\", \"cropWheat\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"cropWheat\", \"\", \"cropWheat\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"cropWheat\", \"\", \"cropWheat\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"cropWheat\", \"\", \"cropWheat\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"cropWheat\", \"\", \"cropWheat\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"\r\n            ]);\r\n}",
-    "instructions": "It’s good to plan ahead. Plant crops on both sides of the water so you don’t get hungry later on.",
+    "short_instructions": "It’s good to plan ahead. Plant crops on both sides of the water so you don’t get hungry later on.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -47,7 +47,8 @@
     "level_verification_timeout": "0",
     "use_player": "false",
     "hint_prompt_attempts_threshold": 7,
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

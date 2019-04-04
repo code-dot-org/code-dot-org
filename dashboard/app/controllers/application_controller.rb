@@ -24,6 +24,8 @@ class ApplicationController < ActionController::Base
 
   before_action :fix_crawlers_with_bad_accept_headers
 
+  before_action :clear_sign_up_session_vars
+
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
     if request.formats.include?("image/*") &&
@@ -32,18 +34,20 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # Configure development only filters.
-  if Rails.env.development?
-    # Enable or disable the rack mini-profiler if the 'pp' query string parameter is set.
-    # pp='disabled' will disable it; any other value will enable it.
-    before_action :maybe_enable_profiler
-    def maybe_enable_profiler
-      pp = params['pp']
-      if pp
-        ENV['RACK_MINI_PROFILER'] = (pp == 'disabled') ? 'off' : 'on'
+  if CDO.rack_mini_profiler_enabled
+    before_action :check_profiler
+    def check_profiler
+      # Authorize the mini profiler when the rack_mini_profiler_enabled setting is enabled and
+      # the ?pp query param is present, and this is development or a signed-in admin user
+      # in production (or another environment)
+      if CDO.rack_mini_profiler_enabled && params.key?(:pp) && (Rails.env.development? || current_user&.admin?)
+        Rack::MiniProfiler.authorize_request
       end
     end
+  end
 
+  # Configure development only filters.
+  if Rails.env.development?
     before_action :configure_web_console
     # Enable the Rails web console if params['dbg'] is set, or disable it
     # if params['dbg'] is 'off'.
@@ -173,9 +177,10 @@ class ApplicationController < ActionController::Base
       response[:message] = 'no script provided'
     end
 
+    response[:phone_share_url] = send_to_phone_url
+
     if options[:level_source].try(:id)
       response[:level_source] = level_source_url(id: options[:level_source].id)
-      response[:phone_share_url] = send_to_phone_url
       response[:level_source_id] = options[:level_source].id
     end
 
@@ -268,5 +273,13 @@ class ApplicationController < ActionController::Base
   def pairing_user_ids
     # TODO(asher): Determine whether we need to guard against it being nil.
     session[:pairings].nil? ? [] : session[:pairings]
+  end
+
+  def clear_sign_up_session_vars
+    if session[:sign_up_uid] || session[:sign_up_type] || session[:sign_up_tracking_expiration]
+      session.delete(:sign_up_uid)
+      session.delete(:sign_up_type)
+      session.delete(:sign_up_tracking_expiration)
+    end
   end
 end

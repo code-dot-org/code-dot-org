@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw the same squares but use a \"count with\" block to change the sizes. Place the \"counter\" block in the \"draw a square\" function. Hint: It's in the Variables category.",
+    "short_instructions": "Draw the same squares but use a \"count with\" block to change the sizes. Place the \"counter\" block in the \"draw a square\" function. Hint: It's in the Variables category.",
     "x": "165",
     "y": "235",
     "start_direction": "90",

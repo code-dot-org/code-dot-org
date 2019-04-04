@@ -15,7 +15,7 @@ const permissionTypes = [
   Partner
 ];
 
-describe("Permission class", () => {
+describe('Permission class', () => {
   let permission;
 
   /**
@@ -40,17 +40,17 @@ describe("Permission class", () => {
     });
   });
 
-  it("Detects multiple permissions for organizer-partners", () => {
+  it('Detects multiple permissions for organizer-partners', () => {
     permission = new Permission([Organizer, Partner]);
     expectExactPermissions(Organizer, Partner);
   });
 
-  it("Detects multiple permissions for CSF Facilitators", () => {
+  it('Detects multiple permissions for CSF Facilitators', () => {
     permission = new Permission([Facilitator, Organizer]);
     expectExactPermissions(Facilitator, Organizer);
   });
 
-  it("Detects multiple permissions for organizer-program_managers", () => {
+  it('Detects multiple permissions for organizer-program_managers', () => {
     permission = new Permission([ProgramManager, Organizer]);
     expectExactPermissions(ProgramManager, Organizer);
   });

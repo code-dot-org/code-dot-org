@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Draw this line by using the variable \"length\". Each line segment is 75 pixels long.",
+    "short_instructions": "Draw this line by using the variable \"length\". Each line segment is 75 pixels long.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".5",

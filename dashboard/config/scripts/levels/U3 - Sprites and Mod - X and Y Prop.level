@@ -39,8 +39,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "instructions": "Do This",
-    "markdown_instructions": "# Predict\r\n\r\nWhat do you think this program will do when we run it?",
+    "short_instructions": "Do This",
+    "long_instructions": "# Predict\r\n\r\nWhat do you think this program will do when we run it?",
     "start_blocks": "var sprite1 = createSprite(200, 200, 30, 30);\r\nframeRate(5);\r\n\r\nfunction draw() {\r\n  sprite1.width = randomNumber(0,100);\r\n  sprite1.height = randomNumber(0,100);\r\n  background('white');\r\n  drawSprites();\r\n}",
     "show_debug_watch": "true",
     "contained_level_names": null

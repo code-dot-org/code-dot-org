@@ -42,7 +42,7 @@ const fakeSectionData = {
             script_id: 3000
           },
           readonly_answers: true
-        },
+        }
       ]
     }
   },

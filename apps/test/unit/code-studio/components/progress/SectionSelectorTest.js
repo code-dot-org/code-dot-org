@@ -1,12 +1,11 @@
 import React from 'react';
-import { assert, expect } from 'chai';
+import {assert, expect} from 'chai';
 import sinon from 'sinon';
-import { UnconnectedSectionSelector as SectionSelector } from
-  '@cdo/apps/code-studio/components/progress/SectionSelector';
-import { mount } from 'enzyme';
+import {UnconnectedSectionSelector as SectionSelector} from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import {mount} from 'enzyme';
 import * as utils from '@cdo/apps/utils';
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
-import { NO_SECTION } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const fakeSection = {
   name: 'My Section',
@@ -84,10 +83,12 @@ describe('SectionSelector', () => {
           selectSection={() => {}}
         />
       );
-      wrapper.find('select').simulate('change', {target:{value:'testSectionId'}});
-      expect(codeStudioUtils.updateQueryParam)
-        .to.have.been.calledOnce
-        .and.calledWith('section_id', 'testSectionId');
+      wrapper
+        .find('select')
+        .simulate('change', {target: {value: 'testSectionId'}});
+      expect(
+        codeStudioUtils.updateQueryParam
+      ).to.have.been.calledOnce.and.calledWith('section_id', 'testSectionId');
     });
 
     it('removes the query param if a section is unselected', () => {
@@ -100,10 +101,10 @@ describe('SectionSelector', () => {
           selectSection={() => {}}
         />
       );
-      wrapper.find('select').simulate('change', {target:{value: NO_SECTION}});
-      expect(codeStudioUtils.updateQueryParam)
-        .to.have.been.calledOnce
-        .and.calledWith('section_id', undefined);
+      wrapper.find('select').simulate('change', {target: {value: NO_SECTION}});
+      expect(
+        codeStudioUtils.updateQueryParam
+      ).to.have.been.calledOnce.and.calledWith('section_id', undefined);
     });
 
     it('reloads on change if prop reloadOnChange is set', () => {
@@ -118,7 +119,9 @@ describe('SectionSelector', () => {
           reloadOnChange={true}
         />
       );
-      wrapper.find('select').simulate('change', {target:{value: 'testSectionId'}});
+      wrapper
+        .find('select')
+        .simulate('change', {target: {value: 'testSectionId'}});
       expect(utils.reload).to.have.been.calledOnce;
       expect(selectSection).not.to.have.been.called;
     });
@@ -135,8 +138,12 @@ describe('SectionSelector', () => {
           reloadOnChange={false}
         />
       );
-      wrapper.find('select').simulate('change', {target:{value: 'testSectionId'}});
-      expect(selectSection).to.have.been.calledOnce.and.calledWith('testSectionId');
+      wrapper
+        .find('select')
+        .simulate('change', {target: {value: 'testSectionId'}});
+      expect(selectSection).to.have.been.calledOnce.and.calledWith(
+        'testSectionId'
+      );
       expect(utils.reload).not.to.have.been.called;
     });
   });

@@ -10,7 +10,7 @@ var reqBlocks = require('./requiredBlocks');
 var wordsearchLevels = require('./wordsearchLevels');
 
 //TODO: Fix hacky level-number-dependent toolbox.
-var toolbox = function (page, level) {
+var toolbox = function(page, level) {
   return require('./toolboxes/maze.xml.ejs')({
     page: page,
     level: level
@@ -18,7 +18,7 @@ var toolbox = function (page, level) {
 };
 
 //TODO: Fix hacky level-number-dependent startBlocks.
-var startBlocks = function (page, level) {
+var startBlocks = function(page, level) {
   return require('./startBlocks.xml.ejs')({
     page: page,
     level: level
@@ -29,17 +29,14 @@ var startBlocks = function (page, level) {
  * Configuration for all levels.
  */
 module.exports = {
-
   // Formerly Page 2
 
   '2_1': {
-    'toolbox': toolbox(2, 1),
-    'ideal': 4,
-    'requiredBlocks': [
-      [reqBlocks.MOVE_FORWARD]
-    ],
-    'startDirection': Direction.EAST,
-    'map': [
+    toolbox: toolbox(2, 1),
+    ideal: 4,
+    requiredBlocks: [[reqBlocks.MOVE_FORWARD]],
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -49,22 +46,20 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0]
     ],
-    'startBlocks': startBlocks(2, 1)
+    startBlocks: startBlocks(2, 1)
   },
-  'k1_demo': {
-    'toolbox': blockUtils.createToolbox(
+  k1_demo: {
+    toolbox: blockUtils.createToolbox(
       blockUtils.blockOfType('maze_moveNorth') +
-      blockUtils.blockOfType('maze_moveSouth') +
-      blockUtils.blockOfType('maze_moveEast') +
-      blockUtils.blockOfType('maze_moveWest') +
-      blockUtils.blockOfType('controls_repeat_simplified')
+        blockUtils.blockOfType('maze_moveSouth') +
+        blockUtils.blockOfType('maze_moveEast') +
+        blockUtils.blockOfType('maze_moveWest') +
+        blockUtils.blockOfType('controls_repeat_simplified')
     ),
-    'ideal': 4,
-    'requiredBlocks': [
-      [reqBlocks.MOVE_FORWARD]
-    ],
-    'startDirection': Direction.EAST,
-    'map': [
+    ideal: 4,
+    requiredBlocks: [[reqBlocks.MOVE_FORWARD]],
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -74,17 +69,15 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0]
     ],
-    'startBlocks': startBlocks(2, 1)
+    startBlocks: startBlocks(2, 1)
   },
   '2_2': {
-    'instructionsImportant': true,
-    'toolbox': toolbox(2, 2),
-    'ideal': 3,
-    'requiredBlocks': [
-      [reqBlocks.MOVE_FORWARD]
-    ],
-    'startDirection': Direction.SOUTH,
-    'map': [
+    instructionsImportant: true,
+    toolbox: toolbox(2, 2),
+    ideal: 3,
+    requiredBlocks: [[reqBlocks.MOVE_FORWARD]],
+    startDirection: Direction.SOUTH,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 2, 0, 0, 0, 0],
@@ -94,17 +87,14 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0]
     ],
-    'startBlocks': startBlocks(2, 2)
+    startBlocks: startBlocks(2, 2)
   },
   '2_2_5': {
-    'toolbox': toolbox(2, 3),
-    'ideal': 5,
-    'requiredBlocks': [
-      [reqBlocks.MOVE_FORWARD],
-      [reqBlocks.TURN_RIGHT]
-    ],
-    'startDirection': Direction.EAST,
-    'map': [
+    toolbox: toolbox(2, 3),
+    ideal: 5,
+    requiredBlocks: [[reqBlocks.MOVE_FORWARD], [reqBlocks.TURN_RIGHT]],
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 4, 0, 0, 0],
@@ -114,18 +104,18 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0]
     ],
-    'startBlocks': startBlocks(2, 3)
+    startBlocks: startBlocks(2, 3)
   },
   '2_3': {
-    'toolbox': toolbox(2, 3),
-    'ideal': 6,
-    'requiredBlocks': [
+    toolbox: toolbox(2, 3),
+    ideal: 6,
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.TURN_LEFT],
       [reqBlocks.TURN_RIGHT]
     ],
-    'startDirection': Direction.EAST,
-    'map': [
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -135,18 +125,18 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0]
     ],
-    'startBlocks': startBlocks(2, 3)
+    startBlocks: startBlocks(2, 3)
   },
   '2_4': {
-    'toolbox': toolbox(2, 4),
-    'ideal': 9,
-    'requiredBlocks': [
+    toolbox: toolbox(2, 4),
+    ideal: 9,
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.TURN_LEFT],
       [reqBlocks.TURN_RIGHT]
     ],
-    'startDirection': Direction.EAST,
-    'map': [
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -158,14 +148,11 @@ module.exports = {
     ]
   },
   '2_5': {
-    'toolbox': toolbox(2, 5),
-    'ideal': 3,
-    'requiredBlocks': [
-      [reqBlocks.MOVE_FORWARD],
-      [reqBlocks.FOR_LOOP]
-    ],
-    'startDirection': Direction.EAST,
-    'map': [
+    toolbox: toolbox(2, 5),
+    ideal: 3,
+    requiredBlocks: [[reqBlocks.MOVE_FORWARD], [reqBlocks.FOR_LOOP]],
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -177,15 +164,15 @@ module.exports = {
     ]
   },
   '2_6': {
-    'toolbox': toolbox(2, 6),
-    'ideal': 4,
-    'requiredBlocks': [
+    toolbox: toolbox(2, 6),
+    ideal: 4,
+    requiredBlocks: [
       [reqBlocks.TURN_RIGHT],
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.FOR_LOOP]
     ],
-    'startDirection': Direction.EAST,
-    'map': [
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 2, 0, 0, 0],
@@ -197,15 +184,15 @@ module.exports = {
     ]
   },
   '2_7': {
-    'toolbox': toolbox(2, 7),
-    'ideal': 6,
-    'requiredBlocks': [
+    toolbox: toolbox(2, 7),
+    ideal: 6,
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.FOR_LOOP],
       [reqBlocks.TURN_LEFT]
     ],
-    'startDirection': Direction.EAST,
-    'map': [
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 3, 0],
       [0, 0, 0, 0, 0, 0, 1, 0],
@@ -217,15 +204,15 @@ module.exports = {
     ]
   },
   '2_8': {
-    'toolbox': toolbox(2, 8),
-    'ideal': 5,
-    'requiredBlocks': [
+    toolbox: toolbox(2, 8),
+    ideal: 5,
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.FOR_LOOP],
       [reqBlocks.TURN_RIGHT]
     ],
-    'startDirection': Direction.EAST,
-    'map': [
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -235,19 +222,16 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0]
     ],
-    'startBlocks': startBlocks(2, 8),
-    'levelIncompleteError': mazeMsg.repeatCarefullyError(),
-    'tooFewBlocksMsg': mazeMsg.repeatCarefullyError()
+    startBlocks: startBlocks(2, 8),
+    levelIncompleteError: mazeMsg.repeatCarefullyError(),
+    tooFewBlocksMsg: mazeMsg.repeatCarefullyError()
   },
   '2_9': {
-    'toolbox': toolbox(2, 9),
-    'ideal': 3,
-    'requiredBlocks': [
-      [reqBlocks.MOVE_FORWARD],
-      [reqBlocks.WHILE_LOOP]
-    ],
-    'startDirection': Direction.EAST,
-    'map': [
+    toolbox: toolbox(2, 9),
+    ideal: 3,
+    requiredBlocks: [[reqBlocks.MOVE_FORWARD], [reqBlocks.WHILE_LOOP]],
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -259,15 +243,15 @@ module.exports = {
     ]
   },
   '2_10': {
-    'toolbox': toolbox(2, 10),
-    'ideal': 5,
-    'requiredBlocks': [
+    toolbox: toolbox(2, 10),
+    ideal: 5,
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.TURN_LEFT],
       [reqBlocks.WHILE_LOOP]
     ],
-    'startDirection': Direction.EAST,
-    'map': [
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -279,19 +263,19 @@ module.exports = {
     ]
   },
   '2_11': {
-    'toolbox': toolbox(2, 11),
-    'ideal': 6,
-    'scale': {
-      'stepSpeed': 3
+    toolbox: toolbox(2, 11),
+    ideal: 6,
+    scale: {
+      stepSpeed: 3
     },
-    'requiredBlocks': [
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.WHILE_LOOP],
       [reqBlocks.TURN_LEFT],
       [reqBlocks.TURN_RIGHT]
     ],
-    'startDirection': Direction.EAST,
-    'map': [
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 1],
       [0, 0, 0, 0, 0, 0, 3, 1],
       [0, 0, 0, 0, 0, 1, 1, 0],
@@ -303,19 +287,19 @@ module.exports = {
     ]
   },
   '2_12': {
-    'toolbox': toolbox(2, 12),
-    'ideal': 6,
-    'scale': {
-      'stepSpeed': 3
+    toolbox: toolbox(2, 12),
+    ideal: 6,
+    scale: {
+      stepSpeed: 3
     },
-    'requiredBlocks': [
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.WHILE_LOOP],
       [reqBlocks.TURN_LEFT],
       [reqBlocks.TURN_RIGHT]
     ],
-    'startDirection': Direction.EAST,
-    'map': [
+    startDirection: Direction.EAST,
+    map: [
       [1, 0, 0, 0, 0, 0, 0, 0],
       [1, 2, 4, 0, 0, 0, 0, 0],
       [0, 1, 1, 0, 0, 0, 0, 0],
@@ -327,13 +311,11 @@ module.exports = {
     ]
   },
   '2_13': {
-    'toolbox': toolbox(2, 13),
-    'ideal': 5,
-    'requiredBlocks': [
-      [reqBlocks.TURN_LEFT]
-    ],
-    'startDirection': Direction.EAST,
-    'map': [
+    toolbox: toolbox(2, 13),
+    ideal: 5,
+    requiredBlocks: [[reqBlocks.TURN_LEFT]],
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 3, 0, 0],
       [0, 0, 0, 0, 0, 1, 0, 0],
@@ -343,22 +325,22 @@ module.exports = {
       [0, 0, 0, 2, 1, 1, 0, 0],
       [0, 0, 0, 0, 0, 4, 0, 0]
     ],
-    'startBlocks': startBlocks(2, 13)
+    startBlocks: startBlocks(2, 13)
   },
   '2_14': {
-    'toolbox': toolbox(2, 14),
-    'ideal': 5,
-    'scale': {
-      'stepSpeed': 2
+    toolbox: toolbox(2, 14),
+    ideal: 5,
+    scale: {
+      stepSpeed: 2
     },
-    'requiredBlocks': [
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.TURN_RIGHT],
       [reqBlocks.IS_PATH_RIGHT],
       [reqBlocks.WHILE_LOOP]
     ],
-    'startDirection': Direction.EAST,
-    'map': [
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 4, 0, 0, 0, 0],
       [0, 0, 0, 1, 0, 1, 0, 0],
       [0, 0, 2, 1, 1, 1, 0, 0],
@@ -368,22 +350,22 @@ module.exports = {
       [0, 3, 1, 1, 1, 1, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0]
     ],
-    'levelIncompleteError': mazeMsg.ifInRepeatError()
+    levelIncompleteError: mazeMsg.ifInRepeatError()
   },
   '2_15': {
-    'toolbox': toolbox(2, 15),
-    'ideal': 5,
-    'scale': {
-      'stepSpeed': 2
+    toolbox: toolbox(2, 15),
+    ideal: 5,
+    scale: {
+      stepSpeed: 2
     },
-    'requiredBlocks': [
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.TURN_LEFT],
       [reqBlocks.IS_PATH_LEFT],
       [reqBlocks.WHILE_LOOP]
     ],
-    'startDirection': Direction.NORTH,
-    'map': [
+    startDirection: Direction.NORTH,
+    map: [
       [0, 0, 0, 4, 0, 0, 0, 0],
       [0, 0, 0, 1, 0, 0, 0, 0],
       [0, 1, 1, 1, 1, 1, 0, 0],
@@ -395,19 +377,19 @@ module.exports = {
     ]
   },
   '2_16': {
-    'toolbox': toolbox(2, 16),
-    'ideal': 5,
-    'scale': {
-      'stepSpeed': 2
+    toolbox: toolbox(2, 16),
+    ideal: 5,
+    scale: {
+      stepSpeed: 2
     },
-    'requiredBlocks': [
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.TURN_RIGHT],
       [reqBlocks.IS_PATH_RIGHT],
       [reqBlocks.WHILE_LOOP]
     ],
-    'startDirection': Direction.SOUTH,
-    'map': [
+    startDirection: Direction.SOUTH,
+    map: [
       [0, 0, 0, 4, 0, 0, 0, 0],
       [0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 1, 1, 1, 2, 0, 0],
@@ -419,19 +401,19 @@ module.exports = {
     ]
   },
   '2_17': {
-    'toolbox': toolbox(2, 17),
-    'ideal': 5,
-    'scale': {
-      'stepSpeed': 2
+    toolbox: toolbox(2, 17),
+    ideal: 5,
+    scale: {
+      stepSpeed: 2
     },
-    'requiredBlocks': [
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.IS_PATH_FORWARD],
       [reqBlocks.TURN_LEFT],
       [reqBlocks.WHILE_LOOP]
     ],
-    'startDirection': Direction.EAST,
-    'map': [
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 1, 4, 1, 1, 1, 0, 0],
       [0, 0, 1, 0, 0, 0, 0, 0],
@@ -443,19 +425,19 @@ module.exports = {
     ]
   },
   '2_18': {
-    'toolbox': toolbox(2, 18),
-    'ideal': 5,
-    'scale': {
-      'stepSpeed': 2
+    toolbox: toolbox(2, 18),
+    ideal: 5,
+    scale: {
+      stepSpeed: 2
     },
-    'requiredBlocks': [
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.IS_PATH_FORWARD],
       [reqBlocks.TURN_RIGHT],
       [reqBlocks.WHILE_LOOP]
     ],
-    'startDirection': Direction.EAST,
-    'map': [
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 4, 0, 4, 0, 4, 0],
       [0, 0, 1, 0, 1, 0, 1, 0],
       [0, 2, 1, 1, 1, 1, 1, 0],
@@ -467,18 +449,18 @@ module.exports = {
     ]
   },
   '2_19': {
-    'toolbox': toolbox(2, 19),
-    'ideal': 7,
-    'scale': {
-      'stepSpeed': 2
+    toolbox: toolbox(2, 19),
+    ideal: 7,
+    scale: {
+      stepSpeed: 2
     },
-    'requiredBlocks': [
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.TURN_LEFT],
       [reqBlocks.TURN_RIGHT]
     ],
-    'startDirection': Direction.NORTH,
-    'map': [
+    startDirection: Direction.NORTH,
+    map: [
       [1, 1, 1, 1, 1, 1, 1, 1],
       [1, 0, 0, 0, 0, 0, 0, 1],
       [1, 0, 1, 1, 1, 1, 1, 1],
@@ -487,25 +469,23 @@ module.exports = {
       [1, 0, 1, 0, 3, 0, 0, 1],
       [1, 0, 1, 0, 0, 0, 0, 1],
       [2, 0, 1, 1, 1, 1, 1, 1]
-     ],
-    'startBlocks': startBlocks(2, 19)
-   },
+    ],
+    startBlocks: startBlocks(2, 19)
+  },
 
   // Copied levels with editCode enabled
   '3_1': {
-    'toolbox': toolbox(3, 1),
-    'ideal': 3,
-    'editCode': true,
-    'codeFunctions': {
-      'moveForward': null,
-      'turnLeft': null,
-      'turnRight': null,
+    toolbox: toolbox(3, 1),
+    ideal: 3,
+    editCode: true,
+    codeFunctions: {
+      moveForward: null,
+      turnLeft: null,
+      turnRight: null
     },
-    'requiredBlocks': [
-       [reqBlocks.MOVE_FORWARD]
-     ],
-    'startDirection': Direction.EAST,
-    'map': [
+    requiredBlocks: [[reqBlocks.MOVE_FORWARD]],
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -517,19 +497,17 @@ module.exports = {
     ]
   },
   '3_2': {
-    'toolbox': toolbox(3, 2),
-    'ideal': 4,
-    'editCode': true,
-    'codeFunctions': {
-      'moveForward': null,
-      'turnLeft': null,
-      'turnRight': null,
+    toolbox: toolbox(3, 2),
+    ideal: 4,
+    editCode: true,
+    codeFunctions: {
+      moveForward: null,
+      turnLeft: null,
+      turnRight: null
     },
-    'requiredBlocks': [
-       [reqBlocks.MOVE_FORWARD]
-     ],
-    'startDirection': Direction.SOUTH,
-    'map': [
+    requiredBlocks: [[reqBlocks.MOVE_FORWARD]],
+    startDirection: Direction.SOUTH,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 2, 0, 0, 0, 0],
@@ -541,21 +519,21 @@ module.exports = {
     ]
   },
   '3_3': {
-    'toolbox': toolbox(3, 3),
-    'ideal': 6,
-    'editCode': true,
-    'codeFunctions': {
-      'moveForward': null,
-      'turnLeft': null,
-      'turnRight': null,
+    toolbox: toolbox(3, 3),
+    ideal: 6,
+    editCode: true,
+    codeFunctions: {
+      moveForward: null,
+      turnLeft: null,
+      turnRight: null
     },
-    'requiredBlocks': [
+    requiredBlocks: [
       [reqBlocks.MOVE_FORWARD],
       [reqBlocks.TURN_LEFT],
       [reqBlocks.TURN_RIGHT]
     ],
-    'startDirection': Direction.EAST,
-    'map': [
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -567,20 +545,17 @@ module.exports = {
     ]
   },
   '3_4': {
-    'toolbox': toolbox(3, 4),
-    'ideal': 8,
-    'editCode': true,
-    'codeFunctions': {
-      'moveForward': null,
-      'turnLeft': null,
-      'turnRight': null,
+    toolbox: toolbox(3, 4),
+    ideal: 8,
+    editCode: true,
+    codeFunctions: {
+      moveForward: null,
+      turnLeft: null,
+      turnRight: null
     },
-    'requiredBlocks': [
-      [reqBlocks.MOVE_FORWARD],
-      [reqBlocks.TURN_LEFT]
-    ],
-    'startDirection': Direction.EAST,
-    'map': [
+    requiredBlocks: [[reqBlocks.MOVE_FORWARD], [reqBlocks.TURN_LEFT]],
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -591,11 +566,11 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0]
     ]
   },
-  'custom': {
-    'toolbox': toolbox(3, 4),
-    'requiredBlocks': [],
-    'startDirection': Direction.EAST,
-    'map': [
+  custom: {
+    toolbox: toolbox(3, 4),
+    requiredBlocks: [],
+    startDirection: Direction.EAST,
+    map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -607,7 +582,6 @@ module.exports = {
     ]
   }
 };
-
 
 // Merge in Karel levels.
 for (var levelId in karelLevels) {

@@ -1,19 +1,20 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {Table, sort} from 'reactabular';
-import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import {
   studentWithResponsesPropType,
-  multipleChoiceQuestionPropType,
+  multipleChoiceQuestionPropType
 } from './assessmentDataShapes';
 
 export const COLUMNS = {
   QUESTION: 0,
   STUDENT_ANSWER: 1,
-  CORRECT_ANSWER: 2,
+  CORRECT_ANSWER: 2
 };
 
 const ANSWER_COLUMN_WIDTH = 80;
@@ -21,16 +22,16 @@ const ANSWER_COLUMN_WIDTH = 80;
 const styles = {
   answerColumnHeader: {
     width: ANSWER_COLUMN_WIDTH,
-    textAlign: 'center',
+    textAlign: 'center'
   },
   answerColumnCell: {
-    width: ANSWER_COLUMN_WIDTH,
+    width: ANSWER_COLUMN_WIDTH
   },
   questionCell: {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    maxWidth: 470,
+    maxWidth: 470
   }
 };
 
@@ -39,7 +40,7 @@ const styles = {
 // the students response to that question, and whether the student got
 // the correct answer.
 class MultipleChoiceByStudentTable extends Component {
-  static propTypes= {
+  static propTypes = {
     questionAnswerData: PropTypes.arrayOf(multipleChoiceQuestionPropType),
     studentAnswerData: studentWithResponsesPropType
   };
@@ -55,7 +56,7 @@ class MultipleChoiceByStudentTable extends Component {
     return this.state.sortingColumns || {};
   };
 
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -71,9 +72,7 @@ class MultipleChoiceByStudentTable extends Component {
   };
 
   questionCellFormatter = (question, {rowData, rowIndex}) => {
-    return (
-      <div>{`${rowData.questionNumber}. ${question}`}</div>
-    );
+    return <div>{`${rowData.questionNumber}. ${question}`}</div>;
   };
 
   correctAnswerColumnFormatter = (responses, {rowData, columnIndex}) => {
@@ -95,22 +94,22 @@ class MultipleChoiceByStudentTable extends Component {
     );
   };
 
-  getColumns = (sortable) => {
+  getColumns = sortable => {
     let dataColumns = [
       {
         property: 'question',
         header: {
           label: i18n.question(),
-          props: {style: tableLayoutStyles.headerCell},
+          props: {style: tableLayoutStyles.headerCell}
         },
         cell: {
           format: this.questionCellFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.questionCell,
+              ...styles.questionCell
             }
-          },
+          }
         }
       },
       {
@@ -120,18 +119,18 @@ class MultipleChoiceByStudentTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.answerColumnHeader,
+              ...styles.answerColumnHeader
             }
-          },
+          }
         },
         cell: {
           format: this.studentAnswerColumnFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.answerColumnCell,
+              ...styles.answerColumnCell
             }
-          },
+          }
         }
       },
       {
@@ -141,48 +140,49 @@ class MultipleChoiceByStudentTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.answerColumnHeader,
+              ...styles.answerColumnHeader
             }
-          },
+          }
         },
         cell: {
           format: this.correctAnswerColumnFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.answerColumnCell,
+              ...styles.answerColumnCell
             }
-          },
+          }
         }
-      },
+      }
     ];
     return dataColumns;
   };
 
   render() {
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      sortableOptions
+    );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
     const rowData = this.props.questionAnswerData.map((question, index) => {
       return {
         ...question,
-        studentAnswer: this.props.studentAnswerData.studentResponses[index],
+        studentAnswer: this.props.studentAnswerData.studentResponses[index]
       };
     });
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy,
+      sort: orderBy
     })(rowData);
 
     return (
-      <Table.Provider
-        columns={columns}
-        style={tableLayoutStyles.table}
-      >
+      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="id" />
       </Table.Provider>

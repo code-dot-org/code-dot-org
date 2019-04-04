@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Edit the function 'draw a square' to find bugs.",
+    "short_instructions": "Edit the function 'draw a square' to find bugs.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Today, we're going to keep using the powerful function editor. See if you remember how to edit the `draw a square` function to find the bugs.",
+    "long_instructions": "Today, we're going to keep using the powerful function editor. See if you remember how to edit the `draw a square` function to find the bugs.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

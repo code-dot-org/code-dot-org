@@ -1,16 +1,17 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 import FontAwesome from '../FontAwesome';
-import { DOT_SIZE } from './progressStyles';
+import {DOT_SIZE} from './progressStyles';
 
 const styles = {
   tooltip: {
-    lineHeight: DOT_SIZE + 'px',
+    lineHeight: DOT_SIZE + 'px'
   },
   tooltipIcon: {
     paddingRight: 5,
     paddingLeft: 5
-  },
+  }
 };
 
 /**
@@ -22,19 +23,14 @@ export default class TooltipWithIcon extends Component {
   static propTypes = {
     tooltipId: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
   };
   render() {
-    const { tooltipId, icon, text } = this.props;
+    const {tooltipId, icon, text} = this.props;
     return (
-      <ReactTooltip
-        id={tooltipId}
-        role="tooltip"
-        wrapper="span"
-        effect="solid"
-      >
+      <ReactTooltip id={tooltipId} role="tooltip" wrapper="span" effect="solid">
         <div style={styles.tooltip}>
-          <FontAwesome icon={icon} style={styles.tooltipIcon}/>
+          <FontAwesome icon={icon} style={styles.tooltipIcon} />
           {text}
         </div>
       </ReactTooltip>

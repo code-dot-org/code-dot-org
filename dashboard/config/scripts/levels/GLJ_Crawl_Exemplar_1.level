@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-04-04T16:13:29.000Z",
   "level_num": "custom",
   "user_id": 182,
@@ -45,7 +45,8 @@
     "custom_blocks": "[\n  {\n    \"func\": \"setProperty\",\n    \"blockText\": \"set {SPRITE}'s {PROP} to {VALUE}\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      },\n      {\n        \"name\": \"PROP\",\n        \"options\": [\n          [\n            \"color\",\n            \"\\\"tint\\\"\"\n          ],\n          [\n            \"size\",\n            \"\\\"scale\\\"\"\n          ],\n          [\n            \"rotation\",\n            \"\\\"rotation\\\"\"\n          ]\n        ]\n      },\n      {\n        \"name\": \"VALUE\"\n      }\n    ]\n  },\n  {\n    \"func\": \"getTint\",\n    \"blockText\": \"{SPRITE}'s color\",\n    \"returnType\": \"Colour\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  },\n  {\n    \"func\": \"jitter\",\n    \"blockText\": \"jitter\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"wander\",\n    \"blockText\": \"wander\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"grow\",\n    \"blockText\": \"grow\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"shrink\",\n    \"blockText\": \"shrink\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"spin\",\n    \"blockText\": \"spin\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"danceParty\",\n    \"blockText\": \"dance party\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"runUp\",\n    \"blockText\": \"run up\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"runDown\",\n    \"blockText\": \"run down\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"runLeft\",\n    \"blockText\": \"run left\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"runRight\",\n    \"blockText\": \"run right\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  }\n]\n",
     "hide_custom_blocks": "false",
     "parent_level_id": 11950,
-    "markdown_instructions": "**Free Play**: Try using what you've learned to make something new. Make sure to explore some of the new blocks in the toolbox.",
+    "long_instructions": "**Free Play**: Try using what you've learned to make something new. Make sure to explore some of the new blocks in the toolbox.",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

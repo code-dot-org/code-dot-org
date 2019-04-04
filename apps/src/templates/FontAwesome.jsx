@@ -1,6 +1,7 @@
 /** @file font-awesome helper component. */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import _ from 'lodash';
 
 /**
@@ -17,5 +18,5 @@ export default function FontAwesome({icon, className, ...props}) {
 
 FontAwesome.propTypes = {
   icon: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.string
 };

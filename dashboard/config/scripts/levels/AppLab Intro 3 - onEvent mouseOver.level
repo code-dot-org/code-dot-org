@@ -18,7 +18,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "`\"click\"` is just one type of event. `\"mouseover\"` events run when your mouse is over a button, even if you don't click it. Add code to set the `\"background-color\"` of the screen to `\"black\"` when the mouse is over the `\"offButton\"`. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/756e2c5ee19fd94963ca364fd46bcbd8-image-1505935772425.gif)",
+    "long_instructions": "`\"click\"` is just one type of event. `\"mouseover\"` events run when your mouse is over a button, even if you don't click it. Add code to set the `\"background-color\"` of the screen to `\"black\"` when the mouse is over the `\"offButton\"`. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/756e2c5ee19fd94963ca364fd46bcbd8-image-1505935772425.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

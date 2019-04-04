@@ -27,6 +27,8 @@ class DslTest < ActiveSupport::TestCase
     family_name: nil,
     version_year: nil,
     is_stable: nil,
+    supported_locales: [],
+    pilot_experiment: nil,
   }
 
   test 'test Script DSL' do
@@ -440,6 +442,17 @@ DSL
     assert_equal [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}], output[:script_announcements]
   end
 
+  test 'can set pilot_experiment' do
+    input_dsl = <<DSL
+pilot_experiment 'science-experiment'
+
+stage 'Stage1'
+level 'Level 1'
+DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal 'science-experiment', output[:pilot_experiment]
+  end
+
   test 'Script DSL with level progressions' do
     input_dsl = <<DSL
 stage 'Stage1'
@@ -619,7 +632,6 @@ DSL
   end
 
   test 'serialize new_name, family_name, version_year and is_stable' do
-    puts 'test_serialize_new_name_and_family_name'
     script = create :script,
       {
         new_name: 'new name',

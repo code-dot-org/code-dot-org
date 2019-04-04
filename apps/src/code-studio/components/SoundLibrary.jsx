@@ -1,18 +1,47 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import SoundList from './SoundList';
 import SoundCategory from './SoundCategory';
-import * as color from "../../util/color";
+import * as color from '../../util/color';
 import Sounds from '../../Sounds';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const SOUND_CATEGORIES = {
+  category_accent: 'Accent',
+  category_achievements: 'Achievements',
+  category_alerts: 'Alerts',
   category_animals: 'Animals',
+  category_app: 'App',
   category_background: 'Background',
+  category_bell: 'Bell',
   category_board_games: 'Board games',
+  category_collect: 'Collect',
   category_digital: 'Digital',
+  category_explosion: 'Explosion',
   category_female_voiceover: 'Female voiceovers',
+  category_hits: 'Hits',
+  category_human: 'Human',
   category_instrumental: 'Instrumental',
+  category_jump: 'Jump',
+  category_loops: 'Loops',
   category_male_voiceover: 'Male voiceovers',
+  category_movement: 'Movement',
+  category_music: 'Music',
+  category_nature: 'Nature',
+  category_notifications: 'Notifications',
   category_objects: 'Objects',
+  category_points: 'Points',
+  category_poof: 'Poof',
+  category_pop: 'Pop',
+  category_projectile: 'Projectile',
+  category_puzzle: 'Puzzle',
+  category_retro: 'Retro',
+  category_slide: 'Slide',
+  category_swing: 'Swing',
+  category_swish: 'Swish',
+  category_tap: 'Tap',
+  category_transition: 'Transition',
+  category_whoosh: 'Whoosh',
   category_all: 'All'
 };
 
@@ -41,7 +70,9 @@ const styles = {
   },
   categoryArea: {
     float: 'left',
-    marginBottom: 20
+    marginBottom: 20,
+    overflowY: 'scroll',
+    height: 350
   },
   allCategoriesText: {
     fontSize: 16,
@@ -78,24 +109,33 @@ export default class SoundLibrary extends React.Component {
     this.sounds = Sounds.getSingleton();
   }
 
-  search = (e) => {
+  search = e => {
     this.setState({
       search: e.target.value
     });
   };
 
-  selectSound = (sound) => {
+  selectSound = sound => {
     this.setState({
       selectedSound: sound
     });
   };
 
   onClickChoose = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'sound-dialog-2',
+        study_group: 'library-tab',
+        event: 'choose-library-sound',
+        data_json: this.state.selectedSound.sourceUrl
+      },
+      {includeUserId: true}
+    );
     this.sounds.stopAllAudio();
     this.props.assetChosen(this.state.selectedSound.sourceUrl);
   };
 
-  onCategoryChange = (category) => {
+  onCategoryChange = category => {
     this.setState({category});
   };
 
@@ -107,29 +147,28 @@ export default class SoundLibrary extends React.Component {
   };
 
   animationCategoriesRendering() {
-    return Object.keys(SOUND_CATEGORIES).map(category =>
+    return Object.keys(SOUND_CATEGORIES).map(category => (
       <SoundCategory
         key={SOUND_CATEGORIES[category]}
         displayName={SOUND_CATEGORIES[category]}
         category={category}
         onSelect={this.onCategoryChange}
       />
-    );
+    ));
   }
 
   render() {
     return (
       <div>
         <div style={styles.breadcrumbs}>
-          <span
-            onClick={this.clearCategories}
-            style={styles.allCategoriesText}
-          >
+          <span onClick={this.clearCategories} style={styles.allCategoriesText}>
             All categories
           </span>
-          {this.state.category !== '' &&
-            <span style={styles.categoryText}>{'> ' + SOUND_CATEGORIES[this.state.category]}</span>
-          }
+          {this.state.category !== '' && (
+            <span style={styles.categoryText}>
+              {'> ' + SOUND_CATEGORIES[this.state.category]}
+            </span>
+          )}
         </div>
         <div style={styles.searchArea}>
           <input
@@ -137,14 +176,14 @@ export default class SoundLibrary extends React.Component {
             style={styles.input}
             placeholder={'Search for a sound...'}
           />
-          <i className="fa fa-search" style={styles.sound}/>
+          <i className="fa fa-search" style={styles.sound} />
         </div>
-        {(this.state.category === '' && this.state.search === '') &&
+        {this.state.category === '' && this.state.search === '' && (
           <div style={styles.categoryArea}>
             {this.animationCategoriesRendering()}
           </div>
-        }
-        {(this.state.category !== '' || this.state.search !== '') &&
+        )}
+        {(this.state.category !== '' || this.state.search !== '') && (
           <div>
             <SoundList
               assetChosen={this.selectSound}
@@ -154,14 +193,14 @@ export default class SoundLibrary extends React.Component {
               soundsRegistry={this.sounds}
             />
             <button
-              className={"primary"}
+              className={'primary'}
               onClick={this.onClickChoose}
               style={styles.button}
             >
               Choose
             </button>
           </div>
-        }
+        )}
       </div>
     );
   }

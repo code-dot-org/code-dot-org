@@ -1,11 +1,7 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import _ from 'lodash';
-import {
-  Row,
-  Col,
-  FormControl,
-  Panel
-} from 'react-bootstrap';
+import {Row, Col, FormControl, Panel} from 'react-bootstrap';
 import MarkdownSpan from '../components/markdownSpan';
 
 const styles = {
@@ -16,16 +12,17 @@ const styles = {
   },
   panel: {
     width: '66%',
-    minWidth: 500
+    minWidth: 500,
+    marginTop: '10px',
+    marginBottom: '10px'
   }
 };
 
-const Question = (props) => {
-  const suffix = '?:.'.indexOf(props.text[props.text.length - 1]) >= 0 ? '' : ':';
+const Question = props => {
+  const suffix =
+    '?:.'.indexOf(props.text[props.text.length - 1]) >= 0 ? '' : ':';
   return (
-    <MarkdownSpan style={props.style}>
-      {`${props.text}${suffix}`}
-    </MarkdownSpan>
+    <MarkdownSpan style={props.style}>{`${props.text}${suffix}`}</MarkdownSpan>
   );
 };
 Question.propTypes = {
@@ -35,12 +32,20 @@ Question.propTypes = {
 
 export default class DetailViewResponse extends React.Component {
   static propTypes = {
-    question: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+    question: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+      .isRequired,
     questionId: PropTypes.string,
-    answer: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.bool, PropTypes.element]),
+    answer: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.array,
+      PropTypes.bool,
+      PropTypes.element
+    ]),
     layout: PropTypes.oneOf(['lineItem', 'panel']).isRequired,
     score: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    possibleScores: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
+    possibleScores: PropTypes.arrayOf(
+      PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    ),
     editing: PropTypes.bool,
     handleScoreChange: PropTypes.func
   };
@@ -75,7 +80,7 @@ export default class DetailViewResponse extends React.Component {
         renderedValue = _.join(renderedValue, ', ');
       }
 
-      const scoredQuestion = !!(this.props.possibleScores);
+      const scoredQuestion = !!this.props.possibleScores;
 
       if (this.props.layout === 'lineItem') {
         return (
@@ -88,39 +93,29 @@ export default class DetailViewResponse extends React.Component {
         const heading = (
           <Row>
             <Col xs={scoredQuestion ? 9 : 12}>
-              <Question text={this.props.question}/>
+              <Question text={this.props.question} />
             </Col>
-            {
-              scoredQuestion && (
-                <Col xs={3}>
-                  {
-                    _.isEqual(this.props.possibleScores, ['Yes', 'No']) ? 'Meets requirements' : 'Score'
-                  }
-                </Col>
-              )
-            }
+            {scoredQuestion && (
+              <Col xs={3}>
+                {_.isEqual(this.props.possibleScores, ['Yes', 'No'])
+                  ? 'Meets requirements'
+                  : 'Score'}
+              </Col>
+            )}
           </Row>
         );
 
         return (
           <Panel header={heading} style={styles.panel}>
             <Row>
-              <Col xs={scoredQuestion ? 9 : 12}>
-                {renderedValue}
-              </Col>
-              {
-                scoredQuestion && (
-                  <Col xs={3}>
-                    {this.renderScore()}
-                  </Col>
-                )
-              }
+              <Col xs={scoredQuestion ? 9 : 12}>{renderedValue}</Col>
+              {scoredQuestion && <Col xs={3}>{this.renderScore()}</Col>}
             </Row>
           </Panel>
         );
       }
     } else {
-      return (null);
+      return null;
     }
   }
 }

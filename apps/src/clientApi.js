@@ -15,21 +15,20 @@ function apiPath(endpoint, channelId, path) {
 
 function ajaxInternal(method, path, success, error, data) {
   var xhr = new XMLHttpRequest();
-  xhr.addEventListener('load', function () {
+  xhr.addEventListener('load', function() {
     if (xhr.status >= 400) {
       error && error(xhr);
       return;
     }
     success(xhr);
   });
-  xhr.addEventListener('error', function () {
+  xhr.addEventListener('error', function() {
     error && error(xhr);
   });
 
   xhr.open(method, path, true);
   xhr.send(data);
 }
-
 
 class CollectionsApi {
   constructor(collectionType) {
@@ -48,7 +47,7 @@ class CollectionsApi {
     var encodedPath;
     if (path) {
       // encode all characters except forward slashes
-      encodedPath = encodeURIComponent(path).replace(/%2F/g,"/");
+      encodedPath = encodeURIComponent(path).replace(/%2F/g, '/');
     }
     return apiPath(
       this.collectionType,
@@ -58,18 +57,18 @@ class CollectionsApi {
   }
 
   ajax(method, file, success, error, data) {
-    error = error || function () {};
+    error = error || function() {};
     if (!window.dashboard && !this.projectId) {
-      error({status: "No dashboard"});
+      error({status: 'No dashboard'});
       return;
     }
     return ajaxInternal(method, this.basePath(file), success, error, data);
   }
 
   getFile(file, version, success, error, data) {
-    error = error || function () {};
+    error = error || function() {};
     if (!window.dashboard && !this.projectId) {
-      error({status: "No dashboard"});
+      error({status: 'No dashboard'});
       return;
     }
     let url = this.basePath(file);
@@ -88,10 +87,34 @@ class CollectionsApi {
    */
   restorePreviousFileVersion(file, versionId, success, error) {
     var path = this.basePath(`${file}/restore`);
-    path += '?' + queryString.stringify({
-      version: versionId
-    });
+    path +=
+      '?' +
+      queryString.stringify({
+        version: versionId
+      });
     return ajaxInternal('PUT', path, success, error);
+  }
+
+  _withBeforeFirstWriteHook(fn) {
+    if (this._beforeFirstWriteHook) {
+      this._beforeFirstWriteHook(err => {
+        // continuing regardless of error status from hook...
+        fn();
+      });
+      this._beforeFirstWriteHook = null;
+    } else {
+      fn();
+    }
+  }
+
+  /*
+   * Register a hook that will be called before the first write to the project
+   * using the files API. (This allows the starting project data to be written
+   * on a deferred basis, thereby preventing writes to user projects with
+   * default starting data)
+   */
+  registerBeforeFirstWriteHook(hook) {
+    this._beforeFirstWriteHook = hook;
   }
 }
 
@@ -101,10 +124,12 @@ class AssetsApi extends CollectionsApi {
       'copy-assets',
       this.projectId || project().getCurrentId()
     );
-    path += '?' + queryString.stringify({
-      src_channel: sourceProjectId,
-      src_files: JSON.stringify(assetFilenames)
-    });
+    path +=
+      '?' +
+      queryString.stringify({
+        src_channel: sourceProjectId,
+        src_files: JSON.stringify(assetFilenames)
+      });
     return ajaxInternal('POST', path, success, error);
   }
 
@@ -155,7 +180,10 @@ class AssetsApi extends CollectionsApi {
    * @param version {string} Ignored for this API, but matches other getFiles()
    */
   getFiles(success, error, version) {
-    return ajaxInternal('GET', this.basePath(''), xhr => {
+    return ajaxInternal(
+      'GET',
+      this.basePath(''),
+      xhr => {
         var parsedResponse;
         try {
           parsedResponse = JSON.parse(xhr.responseText);
@@ -169,22 +197,25 @@ class AssetsApi extends CollectionsApi {
           success({files: parsedResponse}, xhr);
         }
       },
-      error);
+      error
+    );
+  }
+
+  /*
+   * Create or update an asset
+   * @param filename {String} filename to be created or updated
+   * @param data {Blob} asset data
+   * @param success {Function} callback when successful (includes xhr parameter)
+   * @param error {Function} callback when failed
+   */
+  putAsset(filename, data, success = () => {}, error = () => {}) {
+    this._withBeforeFirstWriteHook(() => {
+      ajaxInternal('PUT', this.basePath(filename), success, error, data);
+    });
   }
 }
 
 class FilesApi extends CollectionsApi {
-  _withBeforeFirstWriteHook(fn) {
-    if (this._beforeFirstWriteHook) {
-      this._beforeFirstWriteHook(err => {
-        // continuing regardless of error status from hook...
-        fn();
-      });
-      this._beforeFirstWriteHook = null;
-    } else {
-      fn();
-    }
-  }
   /*
    * Get the version history for this project
    * @param success {Function} callback when successful (includes xhr parameter)
@@ -209,9 +240,11 @@ class FilesApi extends CollectionsApi {
       'files-version',
       this.projectId || project().getCurrentId()
     );
-    path += '?' + queryString.stringify({
-      version: versionId
-    });
+    path +=
+      '?' +
+      queryString.stringify({
+        version: versionId
+      });
     return ajaxInternal('PUT', path, success, error);
   }
 
@@ -225,14 +258,18 @@ class FilesApi extends CollectionsApi {
       params['files-version'] = project().filesVersionId;
     }
     path += '?' + queryString.stringify(params);
-    return ajaxInternal('PUT', path, xhr => {
+    return ajaxInternal(
+      'PUT',
+      path,
+      xhr => {
         var response = JSON.parse(xhr.response);
         project().filesVersionId = response.filesVersionId;
         if (success) {
           success(xhr, project().filesVersionId);
         }
       },
-      error);
+      error
+    );
   }
 
   /*
@@ -265,14 +302,18 @@ class FilesApi extends CollectionsApi {
   }
 
   _deleteFileInternal(filename, success, error) {
-    return ajaxInternal('DELETE', this.basePathWithFilesVersion(filename), xhr => {
+    return ajaxInternal(
+      'DELETE',
+      this.basePathWithFilesVersion(filename),
+      xhr => {
         var response = JSON.parse(xhr.response);
         project().filesVersionId = response.filesVersionId;
         if (success) {
           success(xhr, project().filesVersionId);
         }
       },
-      error);
+      error
+    );
   }
 
   /*
@@ -288,7 +329,10 @@ class FilesApi extends CollectionsApi {
   }
 
   _putFileInternal(filename, fileData, success, error) {
-    return ajaxInternal('PUT', this.basePathWithFilesVersion(filename), xhr => {
+    return ajaxInternal(
+      'PUT',
+      this.basePathWithFilesVersion(filename),
+      xhr => {
         var response = JSON.parse(xhr.response);
         project().filesVersionId = response.filesVersionId;
         if (success) {
@@ -296,7 +340,8 @@ class FilesApi extends CollectionsApi {
         }
       },
       error,
-      fileData);
+      fileData
+    );
   }
 
   /*
@@ -321,24 +366,18 @@ class FilesApi extends CollectionsApi {
     // Note: just reset the _beforeFirstWriteHook, but don't call it
     // since we're deleting everything:
     this._beforeFirstWriteHook = null;
-    return ajaxInternal('DELETE', this.basePath('*'), xhr => {
+    return ajaxInternal(
+      'DELETE',
+      this.basePath('*'),
+      xhr => {
         var response = JSON.parse(xhr.response);
         project().filesVersionId = response.filesVersionId;
         if (success) {
           success(xhr, project().filesVersionId);
         }
       },
-      error);
-  }
-
-  /*
-   * Register a hook that will be called before the first write to the project
-   * using the files API. (This allows the starting project data to be written
-   * on a deferred basis, thereby preventing writes to user projects with
-   * default starting data)
-   */
-  registerBeforeFirstWriteHook(hook) {
-    this._beforeFirstWriteHook = hook;
+      error
+    );
   }
 
   /*
@@ -382,7 +421,10 @@ class FilesApi extends CollectionsApi {
     if (version) {
       path = path + `?version=${version}`;
     }
-    return ajaxInternal('GET', path, xhr => {
+    return ajaxInternal(
+      'GET',
+      path,
+      xhr => {
         var parsedResponse;
         try {
           parsedResponse = JSON.parse(xhr.responseText);
@@ -396,7 +438,8 @@ class FilesApi extends CollectionsApi {
           success(parsedResponse, xhr);
         }
       },
-      error);
+      error
+    );
   }
 }
 module.exports = {
@@ -404,5 +447,5 @@ module.exports = {
   assets: new AssetsApi('assets'),
   files: new FilesApi('files'),
   sources: new CollectionsApi('sources'),
-  channels: new CollectionsApi('channels'),
+  channels: new CollectionsApi('channels')
 };

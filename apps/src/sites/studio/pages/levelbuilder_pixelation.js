@@ -45,7 +45,9 @@ function toggleFields(fields, motion, animate) {
     const easing = motion === 'slideDown' ? 'easeOutBack' : 'swing';
     const speed = motion === 'slideDown' ? 400 : 200;
     const delay = motion === 'slideDown' ? 200 : 100;
-    fields.forEach((field, index) => field.delay(index * delay)[motion](speed, easing));
+    fields.forEach((field, index) =>
+      field.delay(index * delay)[motion](speed, easing)
+    );
   } else {
     fields.forEach(field => field[motion](0));
   }

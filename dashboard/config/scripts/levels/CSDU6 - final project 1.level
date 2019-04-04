@@ -108,7 +108,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - final project template",
-    "markdown_instructions": "# Designing the User Interface\r\n\r\nBefore worrying about the code for your program, start by laying out the user interface. As you add elements in Design Mode, make sure to give everything a meaningful ID. Even if you don't plan on accessing an element with code, making sure that all of your IDs are descriptive will help make your program more readable and easier to program.",
+    "long_instructions": "# Designing the User Interface\r\n\r\nBefore worrying about the code for your program, start by laying out the user interface. As you add elements in Design Mode, make sure to give everything a meaningful ID. Even if you don't plan on accessing an element with code, making sure that all of your IDs are descriptive will help make your program more readable and easier to program.",
     "contained_level_names": null
   },
   "published": true,

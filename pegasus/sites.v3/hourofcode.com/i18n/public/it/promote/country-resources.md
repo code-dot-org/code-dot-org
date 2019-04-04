@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_country_resources) %>
+title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Richiedono un tempo di preparazione minimo per gli organizzatori
 - Sono auto-guidati — cioè permettono agli studenti di imparare secondo il proprio ritmo e livello di abilità
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Pianifica in anticipo l'hardware necessario - l'uso di computer è facoltativo
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **Prova le esercitazioni sui computer e sui dispositivi che intendi utilizzare.** Assicurati che (l'audio e il video) funzionino correttamente.
-- **Guarda la pagina delle congratulazioni** per vedere cosa vedranno gli studenti al termine. 
+- **Guarda la pagina delle congratulazioni** per vedere cosa vedranno gli studenti al termine.
 - **Fornisci cuffie o auricolari al tuo gruppo**, o chiedi agli studenti di portare le loro, se il tutorial che hai scelto funziona meglio con il sonoro.
 
 ## 3) Pianifica l'evento in anticipo in base alle tecnologie disponibili

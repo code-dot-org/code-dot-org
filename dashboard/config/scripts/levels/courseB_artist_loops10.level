@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
+    "short_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -32,11 +32,11 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[]",
-    "markdown_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.\r\n\r\n___\r\n### Ideas\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)",
+    "long_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.\r\n\r\n___\r\n### Ideas\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_markdown_instructions_override": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
+    "tts_long_instructions_override": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
     "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },

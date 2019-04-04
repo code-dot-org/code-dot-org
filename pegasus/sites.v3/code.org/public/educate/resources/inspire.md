@@ -40,32 +40,23 @@ Watch videos and read interviews with inspirational people working in a variety 
 <a id="posters"></a>
 ## 4. Put up these posters
 
-[![image](/images/fit-260/malala.png)](/files/malala-poster.pdf)
-[![image](/images/fit-260/obama-new.png)](/files/obama-poster-new.pdf)
-[![image](/images/fit-260/sheryl-sandberg.png)](/files/sheryl-poster.pdf)
-[![image](/images/fit-260/mark-poster.png)](/files/mark-poster.pdf)
-[![image](/images/fit-260/chris-poster.png)](/files/chris-poster.pdf)
-[![image](/images/fit-260/susan-poster.png)](/files/susan-poster.pdf)
-[![image](/images/fit-260/ashton-poster.png)](/files/ashton-poster.pdf)
-[![image](/images/fit-260/obama-poster.png)](/files/obama-poster.pdf)
+Looking for last year's posters? [Find them all here](/educate/resources/posters)!
 
-</br>
-</br>
+[![image](/images/fit-250/poster_steph.png)](/files/poster_steph.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/poster_malala.png)](/files/poster_malala.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/poster_hadi.png)](/files/poster_hadi.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/careers/poster_thumbnail_maddy_maxey.jpg)](/files/careers/maddy-maxey.pdf)
-[![image](/images/careers/poster_thumbnail_nidhi_erin.jpg)](/files/careers/nidhi-and-erin.pdf)
-
-[![image](/images/careers/poster_thumbnail_rory_kieran.jpg)](/files/careers/rory-and-kieran.pdf)
-[![image](/images/careers/poster_thumbnail_javier_aguera.jpg)](/files/careers/javier-aguera.pdf)
-
+[![image](/images/fit-250/poster_mary.png)](/files/poster_mary.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/poster_satya.png)](/files/poster_satya.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/poster_shakira.png)](/files/poster_shakira.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
 
 ## 5. Grow participation by women
 
 - [Top 4 Ways to Recruit Girls to Try Computer Science](/girls)
-- [NCWIT outreach guide for computer science](http://www.ncwit.org/resources/outreach-box-discovering-it)
-- [Outreach guide for Latinas](http://www.ncwit.org/latinas-information-technology)
-- [Fact-sheet for participation by women](http://www.ncwit.org/infographic/3435)
-- [Awards and recognition for girls engaged in coding](http://www.aspirations.org)
+- [NCWIT outreach guide for computer science](https://www.ncwit.org/resources/outreach-box-discovering-it)
+- [Outreach guide for Latinas](https://www.ncwit.org/latinas-information-technology)
+- [Fact-sheet for participation by women](https://www.ncwit.org/infographic/3435)
+- [Awards and recognition for girls engaged in coding](https://www.aspirations.org)
 
 ## 6. Other Materials
 

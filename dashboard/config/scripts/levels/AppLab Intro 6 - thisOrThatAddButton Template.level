@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "**Goal:** Add a second button to the screen that says \"Right!\"\r\n\r\n**How:** In Design Mode drag in a new button. Position and resize it. Then set its `\"text\"`, `\"background color\"`, and `\"font size\"`\r\n\r\n**Show Me:** ",
+    "long_instructions": "**Goal:** Add a second button to the screen that says \"Right!\"\r\n\r\n**How:** In Design Mode drag in a new button. Position and resize it. Then set its `\"text\"`, `\"background color\"`, and `\"font size\"`\r\n\r\n**Show Me:** ",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

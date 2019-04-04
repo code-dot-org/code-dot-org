@@ -6,10 +6,10 @@ let toolShowingIndex = -1;
 
 let courseShowingIndex = -1;
 
-module.exports.initCourseExplorer = function () {
-  $('.tool').click(function () {
-    const row = ($(this).data('row'));
-    const index = ($(this).data('index'));
+module.exports.initCourseExplorer = function() {
+  $('.tool').click(function() {
+    const row = $(this).data('row');
+    const index = $(this).data('index');
 
     if (toolShowingIndex === -1) {
       $('.detailrow-' + row).slideDown();
@@ -35,13 +35,13 @@ module.exports.initCourseExplorer = function () {
     }
   });
 
-  $('.tool_arrow_box_close').click(function () {
+  $('.tool_arrow_box_close').click(function() {
     $('.detailrow').slideUp();
     toolShowingIndex = -1;
   });
 
-  $('.course.breakable').click(function () {
-    const courseIndex = $(this).attr("data-courseindex");
+  $('.course.breakable').click(function() {
+    const courseIndex = $(this).attr('data-courseindex');
 
     // Show the arrows as inline-block instead of .show()'s default inline
     // so that we can apply margin to the top.
@@ -53,12 +53,18 @@ module.exports.initCourseExplorer = function () {
       courseShowingIndex = courseIndex;
     } else if (courseShowingIndex === courseIndex) {
       $('.courseextra-' + courseIndex).slideUp('slow');
-      $('.course-' + courseIndex + ' .arrow-down').css('display', 'inline-block');
+      $('.course-' + courseIndex + ' .arrow-down').css(
+        'display',
+        'inline-block'
+      );
       $('.course-' + courseIndex + ' .arrow-up').hide();
       courseShowingIndex = -1;
     } else {
       $('.courseextra-' + courseShowingIndex).slideUp('slow');
-      $('.course-' + courseShowingIndex + ' .arrow-down').css('display', 'inline-block');
+      $('.course-' + courseShowingIndex + ' .arrow-down').css(
+        'display',
+        'inline-block'
+      );
       $('.course-' + courseShowingIndex + ' .arrow-up').hide();
       $('.courseextra-' + courseIndex).slideDown('slow');
       $('.course-' + courseIndex + ' .arrow-down').hide();
@@ -67,8 +73,8 @@ module.exports.initCourseExplorer = function () {
     }
   });
 
-  $('.arrow_box_close').click(function () {
-    const courseIndex = $(this).attr("data-courseindex");
+  $('.arrow_box_close').click(function() {
+    const courseIndex = $(this).attr('data-courseindex');
     $('.courseextra-' + courseIndex).slideUp();
     $('.course-' + courseIndex + ' .arrow-down').css('display', 'inline-block');
     $('.course-' + courseIndex + ' .arrow-up').hide();

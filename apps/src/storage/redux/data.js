@@ -3,8 +3,8 @@
  * @see http://redux.js.org/docs/basics/Reducers.html
  */
 
-import { Record } from 'immutable';
-import { DataView } from '../constants';
+import {Record} from 'immutable';
+import {DataView} from '../constants';
 
 const ADD_TABLE_NAME = 'data/ADD_TABLE_NAME';
 const CHANGE_VIEW = 'data/CHANGE_VIEW';
@@ -24,17 +24,20 @@ const DataState = Record({
   keyValueData: {},
   warningTitle: '',
   warningMsg: '',
-  isWarningDialogOpen: false,
+  isWarningDialogOpen: false
 });
 
 const initialState = new DataState();
 
-export default function (state = initialState, action) {
+export default function(state = initialState, action) {
   switch (action.type) {
     case ADD_TABLE_NAME:
-      return state.set('tableListMap', Object.assign({}, state.tableListMap, {
-        [action.tableName]: true
-      }));
+      return state.set(
+        'tableListMap',
+        Object.assign({}, state.tableListMap, {
+          [action.tableName]: true
+        })
+      );
     case CHANGE_VIEW:
       // Discard table data when not viewing a table, so that we don't momentarily
       // show data for the wrong table when we return to the table view.
@@ -119,9 +122,9 @@ export const updateTableRecords = (tableName, tableRecords) => ({
 export const showWarning = (warningMsg, warningTitle) => ({
   type: SHOW_WARNING,
   warningMsg,
-  warningTitle,
+  warningTitle
 });
 
 export const clearWarning = () => ({
-  type: CLEAR_WARNING,
+  type: CLEAR_WARNING
 });

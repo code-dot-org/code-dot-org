@@ -16,7 +16,7 @@
 #
 # See also: The Sound Library Tech Spec (requires login):
 # https://docs.google.com/document/d/1Oj--H-xwrK3u4A0L5ML73n8XDutsH5n2i8caGRc3NL8/edit
-require 'aws-sdk'
+require 'aws-sdk-s3'
 require 'ruby-progressbar'
 require 'optparse'
 require 'parallel'

@@ -1,0 +1,39 @@
+- hide_keep_on_dancing_tile = DCDO.get('hide_dance_followup', nil)
+
+%link{href: "/css/tutorial-promo.css", type: "text/css", rel: "stylesheet"}
+
+.dance-clear-element
+.tutorial-promo-container.dance-party-container
+  .img-container
+    %img.background-img.desktop-only.tablet-only{src:"/images/dance-hoc/dance_party_tutorial_hero_400px.png"}
+    %img.img-dance-stars.desktop-only{src: "/images/fit-300x300/homepage/hoc2018_dance_stars_mobile.png"}
+    %img.img-dance-stars.tablet-only{src: "/images/fit-520/homepage/hoc2018_dance_stars.png"}
+    %img.img-dance-stars.mobile-only{src: "/images/fit-300x300/homepage/hoc2018_dance_stars_mobile.png"}
+  .col-25.specific-tutorial.right-tutorial.dance-tutorial
+    .tutorial-box
+      %h2.specific-tutorial-heading.dance-party-h2= I18n.t(:hoc2018_dance_party_box_title)
+      .tutorial-details
+        %p.tutorial-description= I18n.t(:hoc2018_dance_party_box_description)
+      %a{href: CDO.studio_url('/s/dance/reset'), target: '_self'}
+        %button.tutorial-button.dance-try-button= I18n.t(:hoc2018_dance_party_button)
+  .col-25.specific-tutorial.left-tutorial.dance-tutorial
+    - unless hide_keep_on_dancing_tile
+      .tutorial-box
+        %h2.specific-tutorial-heading.dance-party-h2= I18n.t(:hoc2018_dance_keep_on_dancing_box_title)
+        .tutorial-details
+          %p.tutorial-description= I18n.t(:hoc2018_dance_keep_on_dancing_description)
+        %a{href: CDO.studio_url('/s/dance-extras/reset'), target: '_self'}
+          %button.tutorial-button.dance-try-button= I18n.t(:hoc2018_dance_keep_on_dancing_button)
+  .dance-text-icon-container.tablet-only.mobile-only
+    %a.translate-link{href: "/translate/dance"}
+      .dance-translate-link-text
+        =I18n.t(:hoc2018_dance_party_subheading)
+      %i.fa.fa-chevron-right.dance-chevron-icon
+  .foot-note-text
+    .foot-note-heading= hoc_s(:codeorg_homepage_hoc2018_musician_before)
+    .artist-names
+      - Homepage.get_dance_stars.each do |star|
+        %span.artist-name= star
+        &nbsp; &nbsp;
+      %span.and-more= hoc_s(:codeorg_homepage_hoc2018_musician_after)
+.dance-clear-element

@@ -1,0 +1,131 @@
+#!/bin/sh
+###
+# Puma init script
+# Derived from unicorn init script, with changed signals.
+###
+
+set -e
+
+TIMEOUT=${TIMEOUT-600}
+APP_ROOT=<%= @app_root %>
+PID=<%= @pid_file %>
+CMD="cd $APP_ROOT; LANG=en_US.UTF-8 bundle exec puma -d -C <%= @src_file %> -e <%= @env %>"
+AS_USER=<%= @user %>
+<%= @export_env ? @export_env.map{|k,v|"export #{k}=#{v}"}.join("\n") : '' %>
+UPGRADE_DELAY=${UPGRADE_DELAY-30}
+SOCKET_PATH=<%= @socket_path %>
+
+action="$1"
+set -u
+
+cd $APP_ROOT || exit 1
+
+sig () {
+        test -s "$PID" && kill -$1 $(cat $PID)
+}
+
+run () {
+  if [ -n $SOCKET_PATH ] &&
+     [ ! -d $SOCKET_PATH ]
+  then
+      mkdir -p $SOCKET_PATH; chown ${AS_USER}: $SOCKET_PATH
+  fi
+
+  if [ "$(id -un)" = "$AS_USER" ]; then
+    eval $1
+  else
+    su -c "$1" $AS_USER
+  fi
+}
+
+get_workers () {
+  pgrep -P $(cat $PID 2>&-)
+}
+
+case $action in
+start)
+        sig 0 && echo >&2 "Already running" && exit 0
+        run "$CMD"
+        ;;
+stop)
+        if sig INT
+        then
+          while sig 0
+          do
+            echo "Stopping..."
+            sleep 2
+          done
+          exit 0
+        fi
+        echo >&2 "Not running"
+        ;;
+stop-with-status)
+        if sig INT
+        then
+          # give up with error status if the process doesn't stop within 20 seconds
+          for i in `seq 1 10`;
+          do
+            sig 0 || exit 0
+            echo "Stopping..."
+            sleep 2
+          done
+          echo >&2 "Failed to stop"
+          exit 1
+        fi
+        echo >&2 "Not running"
+        ;;
+force-stop)
+        sig QUIT && exit 0
+        echo >&2 "Not running"
+        ;;
+restart)
+        # Stop current process and wait for it to complete.
+        sig INT
+        while sig 0; do sleep 2; done
+        # Start a new process.
+        run "$CMD"
+        ;;
+reload|upgrade)
+        # Signal USR2 to current process.
+        if sig 0 &&
+          old_pid=$(cat $PID 2>&-) &&
+          sig USR2
+        then
+                # Wait $UPGRADE_DELAY seconds for all of the old workers to exit and/or the PID to change.
+                n=$UPGRADE_DELAY
+                while test $n -ge 0 &&
+                      test x"$(cat $PID 2>&-)" = x"$old_pid" &&
+                      test -n "$(get_workers)"
+                do
+                        printf '.' && sleep 1 && n=$(( $n - 1 ))
+                done
+                if test $n -lt 0; then
+                        echo >&2 "Old process still exists after $UPGRADE_DELAY seconds"
+                        exit 1
+                fi
+
+                # Wait $TIMEOUT seconds for new workers to spawn.
+                n=$TIMEOUT
+                while test $n -ge 0 &&
+                      test -z "$(get_workers)"
+                do
+                        printf '.' && sleep 1 && n=$(( $n - 1 ))
+                done
+
+                if test $n -lt 0; then
+                        echo >&2 "New workers don't exist after $TIMEOUT seconds"
+                        exit 1
+                fi
+                exit 0
+        fi
+        echo >&2 "Couldn't upgrade, starting '$CMD' instead"
+        run "$CMD"
+        ;;
+reopen-logs)
+        sig HUP
+        ;;
+*)
+        echo >&2 "Usage: $0 <start|stop|restart|upgrade|force-stop|reopen-logs>"
+        exit 1
+        ;;
+esac

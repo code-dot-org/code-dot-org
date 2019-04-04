@@ -1,9 +1,9 @@
-import { assert } from '../../../util/configuredChai';
+import {assert} from '../../../util/configuredChai';
 import React from 'react';
-import { shallow } from 'enzyme';
+import {shallow} from 'enzyme';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import color from "@cdo/apps/util/color";
-import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
+import color from '@cdo/apps/util/color';
+import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
   level: {
@@ -18,11 +18,7 @@ const defaultProps = {
 
 describe('ProgressBubble', () => {
   it('renders an anchor tag when we have a url', () => {
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-      />
-    );
+    const wrapper = shallow(<ProgressBubble {...defaultProps} />);
 
     assert(wrapper.is('a'));
   });
@@ -43,35 +39,27 @@ describe('ProgressBubble', () => {
 
   it('does not render an anchor tag if we are disabled', () => {
     const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        disabled={true}
-      />
+      <ProgressBubble {...defaultProps} disabled={true} />
     );
 
     assert(wrapper.is('div'));
   });
 
   it('has a green background when we have perfect status', () => {
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-      />
-    );
+    const wrapper = shallow(<ProgressBubble {...defaultProps} />);
 
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_perfect);
   });
 
   it('has a white background when we are disabled', () => {
     const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        disabled={true}
-      />
+      <ProgressBubble {...defaultProps} disabled={true} />
     );
 
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_not_tried);
   });
 
@@ -85,7 +73,8 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_not_tried);
     assert.equal(div.props().style.borderColor, color.level_perfect);
   });
@@ -100,7 +89,8 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_passed);
     assert.equal(div.props().style.borderColor, color.level_perfect);
   });
@@ -116,7 +106,8 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_submitted);
     assert.equal(div.props().style.borderColor, color.level_submitted);
     assert.equal(div.props().style.color, color.white);
@@ -133,8 +124,12 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
-    assert.equal(div.props().style.backgroundColor, color.level_review_rejected);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
+    assert.equal(
+      div.props().style.backgroundColor,
+      color.level_review_rejected
+    );
     assert.equal(div.props().style.borderColor, color.level_review_rejected);
     assert.equal(div.props().style.color, color.white);
   });
@@ -150,7 +145,8 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_perfect);
     assert.equal(div.props().style.borderColor, color.level_perfect);
     assert.equal(div.props().style.color, color.white);
@@ -166,7 +162,8 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.transform, 'rotate(45deg)');
   });
 
@@ -181,17 +178,14 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    const div = wrapper.find('div').at(1);
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.transform, 'rotate(45deg)');
     assert.equal(div.props().style.borderRadius, 2);
   });
 
   it('uses name when specified', () => {
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-      />
-    );
+    const wrapper = shallow(<ProgressBubble {...defaultProps} />);
     assert.equal(wrapper.find('TooltipWithIcon').props().text, '1. level_name');
   });
 
@@ -205,18 +199,24 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    assert.equal(wrapper.find('TooltipWithIcon').props().text, '1. progression_name');
+    assert.equal(
+      wrapper.find('TooltipWithIcon').props().text,
+      '1. progression_name'
+    );
   });
 
   it('renders a small bubble if smallBubble is true', () => {
     const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        smallBubble={true}
-      />
+      <ProgressBubble {...defaultProps} smallBubble={true} />
     );
-
-    assert.equal(wrapper.find('div').at(1).props().style.width, 9);
+    const tooltipDiv = wrapper.find('div').at(1);
+    assert.equal(
+      tooltipDiv
+        .find('div')
+        .at(1)
+        .props().style.width,
+      9
+    );
   });
 
   it('renders a progress pill for unplugged lessons', () => {
@@ -262,7 +262,7 @@ describe('ProgressBubble', () => {
     });
 
     it('links to the level url', () => {
-      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7";
+      fakeLocation.href = 'http://studio.code.org/s/csd3/stage/3/puzzle/7';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -277,7 +277,7 @@ describe('ProgressBubble', () => {
     });
 
     it('includes the section_id in the queryparams if selectedSectionId is present', () => {
-      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7";
+      fakeLocation.href = 'http://studio.code.org/s/csd3/stage/3/puzzle/7';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -289,7 +289,7 @@ describe('ProgressBubble', () => {
     });
 
     it('includes the user_id in the queryparams if selectedStudentId is present', () => {
-      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7";
+      fakeLocation.href = 'http://studio.code.org/s/csd3/stage/3/puzzle/7';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -302,12 +302,10 @@ describe('ProgressBubble', () => {
     });
 
     it('preserves the queryparams of the current location', () => {
-      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559";
+      fakeLocation.href =
+        'http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559';
       const wrapper = shallow(
-        <ProgressBubble
-          {...defaultProps}
-          currentLocation={fakeLocation}
-        />
+        <ProgressBubble {...defaultProps} currentLocation={fakeLocation} />
       );
       const href = wrapper.find('a').prop('href');
       assert.include(href, 'section_id=212');
@@ -315,7 +313,8 @@ describe('ProgressBubble', () => {
     });
 
     it('if queryParam section_id and selectedSectionId are present, selectedSectionId wins', () => {
-      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559";
+      fakeLocation.href =
+        'http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -335,22 +334,24 @@ describe('ProgressBubble', () => {
     // that depends on the window.location global.
     it('defaults to window.location if not provided', () => {
       assert.notProperty(defaultProps, 'currentLocation');
-      const wrapper = shallow(
-        <ProgressBubble {...defaultProps}/>
+      const wrapper = shallow(<ProgressBubble {...defaultProps} />);
+      assert.strictEqual(
+        wrapper.instance().props.currentLocation,
+        window.location
       );
-      assert.strictEqual(wrapper.instance().props.currentLocation, window.location);
     });
 
     it('can be explicitly set to an anchor object', () => {
       const fakeLocation = document.createElement('a');
-      fakeLocation.href = "http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559";
+      fakeLocation.href =
+        'http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559';
       const wrapper = shallow(
-        <ProgressBubble
-          {...defaultProps}
-          currentLocation={fakeLocation}
-        />
+        <ProgressBubble {...defaultProps} currentLocation={fakeLocation} />
       );
-      assert.strictEqual(wrapper.instance().props.currentLocation, fakeLocation);
+      assert.strictEqual(
+        wrapper.instance().props.currentLocation,
+        fakeLocation
+      );
     });
   });
 });

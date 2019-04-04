@@ -4,19 +4,20 @@ import {expect} from '../../util/configuredChai';
 import {allowConsoleErrors} from '../../util/testUtils';
 import designMode from '@cdo/apps/applab/designMode';
 import * as elementUtils from '@cdo/apps/applab/designElements/elementUtils';
+import {assets as assetsApi} from '@cdo/apps/clientApi';
+
 import {
-  assets as assetsApi,
-} from '@cdo/apps/clientApi';
+  getImportableProject,
+  importScreensAndAssets
+} from '@cdo/apps/applab/import';
 
-import {getImportableProject, importScreensAndAssets} from '@cdo/apps/applab/import';
-
-describe("The applab/import module", () => {
+describe('The applab/import module', () => {
   allowConsoleErrors();
   var designModeViz;
 
   beforeEach(() => {
     designModeViz = document.createElement('div');
-    designModeViz.id = "designModeViz";
+    designModeViz.id = 'designModeViz';
     document.body.appendChild(designModeViz);
     sinon.stub(designMode, 'changeScreen');
     sinon.stub(designMode, 'resetPropertyTab');
@@ -34,13 +35,13 @@ describe("The applab/import module", () => {
     return {
       channel: {
         name: 'Some Other Project!',
-        id: 'some-other-project',
+        id: 'some-other-project'
       },
       sources: {
-        html: `<div>${html}</div>`,
+        html: `<div>${html}</div>`
       },
       assets: [],
-      existingAssets: [],
+      existingAssets: []
     };
   }
 
@@ -49,7 +50,6 @@ describe("The applab/import module", () => {
   }
 
   describe('The getImportableProject function', () => {
-
     describe('When doing an import into an empty project, the importable project', () => {
       var importable;
       beforeEach(() => {
@@ -62,7 +62,7 @@ describe("The applab/import module", () => {
         );
       });
 
-      it("should have an id and name property pulled from the channel", () => {
+      it('should have an id and name property pulled from the channel', () => {
         expect(importable.id).to.equal('some-other-project');
         expect(importable.name).to.equal('Some Other Project!');
       });
@@ -86,27 +86,26 @@ describe("The applab/import module", () => {
       });
 
       it('should list all of the screens as having no assets to replace', () => {
-        importable.screens.forEach(
-          screen => expect(screen.assetsToReplace).to.deep.equal([])
+        importable.screens.forEach(screen =>
+          expect(screen.assetsToReplace).to.deep.equal([])
         );
       });
 
       it('should list all of the screens as having no assets to import', () => {
-        importable.screens.forEach(
-          screen => expect(screen.assetsToImport).to.deep.equal([])
+        importable.screens.forEach(screen =>
+          expect(screen.assetsToImport).to.deep.equal([])
         );
       });
 
       it('should list all of the screens as having no conflicting element ids', () => {
-        importable.screens.forEach(
-          screen => expect(screen.assetsToReplace).to.deep.equal([])
+        importable.screens.forEach(screen =>
+          expect(screen.assetsToReplace).to.deep.equal([])
         );
       });
 
       it('should have an empty otherAssets', () => {
         expect(importable.otherAssets).to.be.empty;
       });
-
     });
 
     describe('When doing an import into a project with conflicting screens, the importable project', () => {
@@ -142,7 +141,7 @@ describe("The applab/import module", () => {
         importable = getImportableProject({
           channel: {
             name: 'Some Other Project!',
-            id: 'some-other-project',
+            id: 'some-other-project'
           },
           sources: {
             html: `
@@ -160,30 +159,32 @@ describe("The applab/import module", () => {
                        id="img3">
                 </div>
                 <div class="screen" id="screen2"></div>
-              </div>`,
+              </div>`
           },
           assets: [
             {filename: 'asset1.png', category: 'image'},
             {filename: 'asset2.png', category: 'image'},
             {filename: 'asset3.png', category: 'image'},
             {filename: 'asset4.png', category: 'image'},
-            {filename: 'background-asset.png', category: 'image'},
+            {filename: 'background-asset.png', category: 'image'}
           ],
           existingAssets: [
             {filename: 'asset1.png', category: 'image'},
-            {filename: 'asset3.png', category: 'image'},
+            {filename: 'asset3.png', category: 'image'}
           ]
         });
       });
 
       it('should list the assets to replace', () => {
-        expect(importable.screens[0].assetsToReplace).to.deep.equal(['asset1.png']);
+        expect(importable.screens[0].assetsToReplace).to.deep.equal([
+          'asset1.png'
+        ]);
       });
 
       it('should list the assets to import without replacing', () => {
         expect(importable.screens[0].assetsToImport).to.deep.equal([
           'asset2.png',
-          'background-asset.png',
+          'background-asset.png'
         ]);
       });
 
@@ -237,11 +238,10 @@ describe("The applab/import module", () => {
         expect(importable.screens[2].conflictingIds).to.deep.equal([]);
       });
     });
-
   });
 
   describe('The importScreensAndAssets function', () => {
-    it("will add the specified screens", () => {
+    it('will add the specified screens', () => {
       setExistingHTML(``);
       var project = getImportableProject(
         getProjectWithHTML(`
@@ -253,10 +253,13 @@ describe("The applab/import module", () => {
       importScreensAndAssets(project.id, [project.screens[0]], []);
       expect(designMode.getAllScreenIds()).to.deep.equal(['screen1']);
       importScreensAndAssets(project.id, [project.screens[1]], []);
-      expect(designMode.getAllScreenIds()).to.deep.equal(['screen1', 'screen2']);
+      expect(designMode.getAllScreenIds()).to.deep.equal([
+        'screen1',
+        'screen2'
+      ]);
     });
 
-    it("will replace screens with the same screen id", () => {
+    it('will replace screens with the same screen id', () => {
       setExistingHTML(`
         <div class="screen" id="design_screen1">
           <input id="design_input1">
@@ -276,10 +279,11 @@ describe("The applab/import module", () => {
       importScreensAndAssets(project.id, [project.screens[0]], []);
       expect(designMode.getAllScreenIds()).to.deep.equal(['screen1']);
       expect(elementUtils.getPrefixedElementById('input1')).to.be.null;
-      expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be.null;
+      expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be
+        .null;
     });
 
-    it("can run through the same import twice without getting conflicts", () => {
+    it('can run through the same import twice without getting conflicts', () => {
       setExistingHTML(`
         <div class="screen" id="design_screen1">
           <input id="design_input1">
@@ -301,12 +305,22 @@ describe("The applab/import module", () => {
       expect(elementUtils.getPrefixedElementById('importedInput')).to.be.null;
       expect(elementUtils.getPrefixedElementById('importedInput2')).to.be.null;
       expect(elementUtils.getPrefixedElementById('importedInput3')).to.be.null;
-      importScreensAndAssets(project.id, [project.screens[0], project.screens[1]], []);
-      expect(designMode.getAllScreenIds()).to.deep.equal(['screen1', 'screen2']);
+      importScreensAndAssets(
+        project.id,
+        [project.screens[0], project.screens[1]],
+        []
+      );
+      expect(designMode.getAllScreenIds()).to.deep.equal([
+        'screen1',
+        'screen2'
+      ]);
       expect(elementUtils.getPrefixedElementById('input1')).to.be.null;
-      expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be.null;
-      expect(elementUtils.getPrefixedElementById('importedInput2')).not.to.be.null;
-      expect(elementUtils.getPrefixedElementById('importedInput3')).not.to.be.null;
+      expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be
+        .null;
+      expect(elementUtils.getPrefixedElementById('importedInput2')).not.to.be
+        .null;
+      expect(elementUtils.getPrefixedElementById('importedInput3')).not.to.be
+        .null;
 
       project = getImportableProject(
         getProjectWithHTML(`
@@ -358,25 +372,35 @@ describe("The applab/import module", () => {
       });
 
       it('will import the specified screens', () => {
-        var [,, success] = assetsApi.copyAssets.lastCall.args;
+        var [, , success] = assetsApi.copyAssets.lastCall.args;
         success();
-        expect(designMode.getAllScreenIds()).to.deep.equal(['screen1', 'screen2']);
+        expect(designMode.getAllScreenIds()).to.deep.equal([
+          'screen1',
+          'screen2'
+        ]);
         expect(elementUtils.getPrefixedElementById('input1')).to.be.null;
-        expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be.null;
+        expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be
+          .null;
         expect(elementUtils.getPrefixedElementById('img1')).not.to.be.null;
       });
 
-      it("will copy the assets that are going to be replaced", () => {
+      it('will copy the assets that are going to be replaced', () => {
         expect(assetsApi.copyAssets).to.have.been.called;
-        var [projectId, allAssetsToReplace] = assetsApi.copyAssets.firstCall.args;
+        var [
+          projectId,
+          allAssetsToReplace
+        ] = assetsApi.copyAssets.firstCall.args;
         expect(projectId).to.equal(project.id);
-        expect(allAssetsToReplace).to.have.members(
-          ['asset1.png', 'asset2.png', 'asset3.png', 'asset4.png']
-        );
+        expect(allAssetsToReplace).to.have.members([
+          'asset1.png',
+          'asset2.png',
+          'asset3.png',
+          'asset4.png'
+        ]);
       });
 
       it('will call resolve if the operation was successful', () => {
-        var [,, success] = assetsApi.copyAssets.lastCall.args;
+        var [, , success] = assetsApi.copyAssets.lastCall.args;
         expect(onResolve).not.to.have.been.called;
         success();
         return promise.then(() => {
@@ -386,7 +410,7 @@ describe("The applab/import module", () => {
       });
 
       it('will call reject if the operation was not successful', () => {
-        var [,,, failure] = assetsApi.copyAssets.lastCall.args;
+        var [, , , failure] = assetsApi.copyAssets.lastCall.args;
         expect(onReject).not.to.have.been.called;
         failure();
         return promise.then(() => {
@@ -394,9 +418,6 @@ describe("The applab/import module", () => {
           expect(onReject).to.have.been.called;
         });
       });
-
     });
-
   });
-
 });

@@ -1,0 +1,24 @@
+name 'AP_practice_Qs_rqb_41_CSP_2_2_2'
+wrong 'Creating a series of smaller programs rather than one large set of code.'
+right 'Giving meaningful names to a set of statements (function/procedure/method) that accomplish a particular task.'
+wrong 'Adding detailed comments to help a programmer read the code easily.'
+wrong 'Using global variables whenever possible to allow values to be easily accessed.'
+markdown <<MARKDOWN
+Which of the following is one way to describe abstraction in computer programming? 
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.2.2** and Essential Knowledge statements: **2.2.2A**
+<hr>
+ (A) This is not correct.  While breaking a large program into smaller ones may make it easier to manage it is necessarily reducing complexity. 
+
+<hr>
+ (B) This is correct.  The programmer can write the functions once, and then rely on them to do their job in the future. Using meaningful names is important for readability.   These combined allows the programmer to call the function, understand what it does, but doesn\'t need to know the details of how it is done.
+
+<hr>
+ (C) This is not correct. Comments are helpful but do not reduce complexity in the code. 
+
+<hr>
+ (D) This is not correct. Global variables are useful but can make it hard to trace in a program. They do not provide abstraction in the sense of not needing to understand them.
+
+MARKDOWN

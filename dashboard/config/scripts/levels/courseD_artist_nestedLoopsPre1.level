@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Create a triangle to kickstart this stage.",
+    "short_instructions": "Create a triangle to kickstart this stage.",
     "x": "150",
     "y": "200",
     "start_direction": "90",

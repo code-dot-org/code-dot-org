@@ -6,7 +6,7 @@
   "user_id": 63,
   "properties": {
     "video_key": "C1_playlab_storytelling",
-    "instructions": "Need a better playlab/events combo",
+    "short_instructions": "Need a better playlab/events combo",
     "skip_dialog": true,
     "skip_sound": true
   },

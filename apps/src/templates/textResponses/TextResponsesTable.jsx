@@ -1,11 +1,13 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
-import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
 import {textResponsePropType} from './textResponsesRedux';
+import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
@@ -21,18 +23,27 @@ class TextResponsesTable extends Component {
   static propTypes = {
     responses: PropTypes.arrayOf(textResponsePropType),
     sectionId: PropTypes.number.isRequired,
-    isLoading: PropTypes.bool
+    isLoading: PropTypes.bool,
+    scriptId: PropTypes.number,
+    scriptName: PropTypes.string
   };
 
   state = {};
 
   studentNameFormatter = (name, {rowData}) => {
-    const {sectionId} = this.props;
+    const {sectionId, scriptId, scriptName} = this.props;
+    const studentUrl = scriptUrlForStudent(
+      sectionId,
+      scriptId,
+      scriptName,
+      rowData.studentId
+    );
+
     return (
       <a
         className="uitest-name-cell"
         style={tableLayoutStyles.link}
-        href={`/teacher-dashboard#/sections/${sectionId}/student/${rowData.studentId}`}
+        href={studentUrl}
         target="_blank"
       >
         {name}
@@ -50,11 +61,7 @@ class TextResponsesTable extends Component {
     return (
       <div>
         {clippedResponse}
-        <a
-          style={tableLayoutStyles.link}
-          href={url}
-          target="_blank"
-        >
+        <a style={tableLayoutStyles.link} href={url} target="_blank">
           {i18n.seeFullResponse()}
         </a>
       </div>
@@ -65,7 +72,7 @@ class TextResponsesTable extends Component {
     return this.state.sortingColumns || {};
   };
 
-  getColumns = (sortable) => {
+  getColumns = sortable => {
     return [
       {
         property: 'studentName',
@@ -76,7 +83,8 @@ class TextResponsesTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.name}
-          }},
+            }
+          },
           transforms: [sortable]
         },
         cell: {
@@ -84,7 +92,8 @@ class TextResponsesTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.cell
-          }}
+            }
+          }
         }
       },
       {
@@ -95,14 +104,16 @@ class TextResponsesTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.stage}
-          }},
+            }
+          },
           transforms: [sortable]
         },
         cell: {
           props: {
             style: {
               ...tableLayoutStyles.cell
-          }}
+            }
+          }
         }
       },
       {
@@ -113,14 +124,16 @@ class TextResponsesTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.puzzle}
-          }},
+            }
+          },
           transforms: [sortable]
         },
         cell: {
           props: {
             style: {
               ...tableLayoutStyles.cell
-          }}
+            }
+          }
         }
       },
       {
@@ -131,14 +144,16 @@ class TextResponsesTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.question}
-          }},
+            }
+          },
           transforms: [sortable]
         },
         cell: {
           props: {
             style: {
               ...tableLayoutStyles.cell
-          }}
+            }
+          }
         }
       },
       {
@@ -149,21 +164,23 @@ class TextResponsesTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.response}
-          }}
+            }
+          }
         },
         cell: {
           format: this.responseFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell
-          }}
+            }
+          }
         }
-      },
+      }
     ];
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -182,33 +199,45 @@ class TextResponsesTable extends Component {
     const {responses, isLoading} = this.props;
 
     if (isLoading) {
-      return <FontAwesome id="uitest-spinner" icon="spinner" className="fa-pulse fa-3x"/>;
+      return (
+        <FontAwesome
+          id="uitest-spinner"
+          icon="spinner"
+          className="fa-pulse fa-3x"
+        />
+      );
     }
 
     if (!responses || !responses.length) {
-      return <div id="uitest-empty-responses">{i18n.emptyTextResponsesTable()}</div>;
+      return (
+        <div id="uitest-empty-responses">{i18n.emptyTextResponsesTable()}</div>
+      );
     }
 
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      sortableOptions
+    );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy,
+      sort: orderBy
     })(responses);
 
     /**
-      * Note: using rowIndex as rowKey as a last resort
-      * See more info: https://reactjs.org/docs/lists-and-keys.html#keys
-      * If this causes performance issues in the future, we can use something like:
-      * `${rowData.studentId}-${rowData.puzzle}-${hashedResponse}`
-      * where hashedResponse is a hash of rowData.response
-      */
+     * Note: using rowIndex as rowKey as a last resort
+     * See more info: https://reactjs.org/docs/lists-and-keys.html#keys
+     * If this causes performance issues in the future, we can use something like:
+     * `${rowData.studentId}-${rowData.puzzle}-${hashedResponse}`
+     * where hashedResponse is a hash of rowData.response
+     */
     return (
-      <Table.Provider columns={columns}>
+      <Table.Provider columns={columns} id="text-responses-table">
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey={({rowIndex}) => rowIndex} />
       </Table.Provider>

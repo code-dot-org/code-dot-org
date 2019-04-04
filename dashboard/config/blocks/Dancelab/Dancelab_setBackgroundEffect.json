@@ -1,0 +1,137 @@
+{
+  "category": "World",
+  "config": {
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "inline": false,
+    "func": "setBackgroundEffect",
+    "blockText": "set background effect\n{EFFECT} {PALETTE}",
+    "args": [
+      {
+        "name": "EFFECT",
+        "options": [
+          [
+            "None",
+            "\"none\""
+          ],
+          [
+            "(Random)",
+            "['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]"
+          ],
+          [
+            "Circles",
+            "\"circles\""
+          ],
+          [
+            "Colors",
+            "\"color_cycle\""
+          ],
+          [
+            "Diamonds",
+            "\"diamonds\""
+          ],
+          [
+            "Disco Ball",
+            "\"disco_ball\""
+          ],
+          [
+            "Fireworks",
+            "\"fireworks\""
+          ],
+          [
+            "Hypno",
+            "\"swirl\""
+          ],
+          [
+            "Kaleidoscope",
+            "\"kaleidoscope\""
+          ],
+          [
+            "Laser Dance Floor",
+            "\"lasers\""
+          ],
+          [
+            "Paint Splatter",
+            "\"splatter\""
+          ],
+          [
+            "Rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "Snow",
+            "\"snowflakes\""
+          ],
+          [
+            "Song Names",
+            "\"text\""
+          ],
+          [
+            "Space",
+            "\"galaxy\""
+          ],
+          [
+            "Sparkles",
+            "\"sparkles\""
+          ],
+          [
+            "Spiral",
+            "\"spiral\""
+          ],
+          [
+            "Squares",
+            "\"disco\""
+          ],
+          [
+            "Stars",
+            "\"stars\""
+          ]
+        ]
+      },
+      {
+        "name": "PALETTE",
+        "options": [
+          [
+            "Black and White",
+            "\"rave\""
+          ],
+          [
+            "Cool",
+            "\"cool\""
+          ],
+          [
+            "Electronic",
+            "\"electronic\""
+          ],
+          [
+            "Ice Cream",
+            "\"iceCream\""
+          ],
+          [
+            "Light",
+            "\"default\""
+          ],
+          [
+            "Neon",
+            "\"neon\""
+          ],
+          [
+            "Tropical",
+            "\"tropical\""
+          ],
+          [
+            "Vintage",
+            "\"vintage\""
+          ],
+          [
+            "Warm",
+            "\"warm\""
+          ]
+        ]
+      }
+    ]
+  }
+}

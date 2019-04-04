@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "instructions": "In this version of the simulator a DNS service is provided for you. Send a message in the form GET [hostname] to the DNS service at address 15 to get a student's address.",
+    "short_instructions": "In this version of the simulator a DNS service is provided for you. Send a message in the form GET [hostname] to the DNS service at address 15 to get a student's address.",
     "show_clients_in_lobby": "false",
     "show_routers_in_lobby": "true",
     "show_add_router_button": "true",

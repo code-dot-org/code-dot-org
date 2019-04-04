@@ -1,3 +1,4 @@
+require 'aws-sdk-sqs'
 require 'sqs/sqs_queue'
 
 # An SQS messages handler for asynchronous workshop jobs,

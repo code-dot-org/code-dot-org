@@ -1,13 +1,15 @@
-import React, {PropTypes} from 'react';
-import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
 import moment from 'moment';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
-import { WorkshopTypes } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {StatusColors} from './constants';
+import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {StatusColors, ApplicationStatuses} from './constants';
 import {
   UNMATCHED_PARTNER_VALUE,
   ALL_PARTNERS_VALUE,
@@ -15,13 +17,25 @@ import {
 } from '../components/regional_partner_dropdown';
 
 const styles = {
+  container: {
+    overflowX: 'auto'
+  },
   table: {
     width: '100%'
   },
   statusCellCommon: {
     padding: '5px'
   },
-  statusCell: StatusColors
+  statusCell: StatusColors,
+  notesCell: {
+    maxWidth: '200px'
+  },
+  notesCellContent: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: '2px'
+  }
 };
 
 export class CohortViewTable extends React.Component {
@@ -32,10 +46,12 @@ export class CohortViewTable extends React.Component {
     regionalPartnerGroup: PropTypes.number,
     isWorkshopAdmin: PropTypes.bool,
     regionalPartnerFilter: RegionalPartnerPropType,
-    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.number,
-      workshop_type: PropTypes.string
-    })),
+    regionalPartners: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number,
+        workshop_type: PropTypes.string
+      })
+    )
   };
 
   static contextTypes = {
@@ -64,29 +80,25 @@ export class CohortViewTable extends React.Component {
     this.constructColumns();
   }
 
-  showLocked = () => (
-    this.props.isWorkshopAdmin
-    || this.props.viewType === 'facilitator'
-    || (this.props.viewType ==='teacher' && this.props.regionalPartnerGroup === 3)
-  );
+  showLocked = () => this.props.viewType === 'facilitator';
 
   constructColumns() {
-    if ([UNMATCHED_PARTNER_VALUE, ALL_PARTNERS_VALUE].includes(this.props.regionalPartnerFilter.value)) {
-      this.workshopType = WorkshopTypes["both"];
+    if (
+      [UNMATCHED_PARTNER_VALUE, ALL_PARTNERS_VALUE].includes(
+        this.props.regionalPartnerFilter.value
+      )
+    ) {
+      this.workshopType = WorkshopTypes['both'];
     } else {
       this.workshopType = this.props.regionalPartners.find(
         partner => partner.id === this.props.regionalPartnerFilter.value
       ).workshop_type;
     }
 
-    const sortable = wrappedSortable(
-      this.getSortingColumns,
-      this.onSort,
-      {
-        container: {whiteSpace: 'nowrap'},
-        default: {color: color.light_gray}
-      }
-    );
+    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, {
+      container: {whiteSpace: 'nowrap'},
+      default: {color: color.light_gray}
+    });
 
     let columns = [
       {
@@ -98,48 +110,63 @@ export class CohortViewTable extends React.Component {
         cell: {
           format: this.formatDate
         }
-      }, {
+      },
+      {
         property: 'applicant_name',
         header: {
           label: 'Name',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'district_name',
         header: {
           label: 'School District',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'school_name',
         header: {
           label: 'School Name',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'email',
         header: {
           label: 'Email',
           transforms: [sortable]
         }
-      }, {
+      },
+      {
         property: 'status',
         header: {
           label: 'Status',
           transforms: [sortable]
         },
         cell: {
-          format: (status) => {
-            return _.upperFirst(status);
-          },
+          format: status =>
+            ApplicationStatuses[this.props.viewType][status] ||
+            _.upperFirst(status),
           transforms: [
-            (status) => ({
+            status => ({
               style: {...styles.statusCellCommon, ...styles.statusCell[status]}
             })
           ]
         }
       }
     ];
+
+    if (this.props.viewType === 'teacher') {
+      columns.push({
+        property: 'friendly_scholarship_status',
+        header: {
+          label: 'Scholarship Teacher?',
+          transforms: [sortable]
+        }
+      });
+    }
 
     if (this.showLocked()) {
       columns.push({
@@ -154,13 +181,15 @@ export class CohortViewTable extends React.Component {
     }
 
     if (this.props.viewType === 'facilitator') {
-      columns.push({
+      columns.push(
+        {
           property: 'assigned_fit',
           header: {
             label: 'Assigned FIT',
             transforms: [sortable]
           }
-        }, {
+        },
+        {
           property: 'registered_fit',
           header: {
             label: 'Registered FIT',
@@ -178,17 +207,11 @@ export class CohortViewTable extends React.Component {
       }
     });
 
-    if ([WorkshopTypes["teachercon"], WorkshopTypes["both"]].includes(this.workshopType)) {
-      columns.push({
-        property: 'accepted_teachercon',
-        header: {
-          label: 'Accepted Teachercon',
-          transforms: [sortable]
-        }
-      });
-    }
-
-    if ([WorkshopTypes["local_summer"], WorkshopTypes["both"]].includes(this.workshopType)) {
+    if (
+      [WorkshopTypes['local_summer'], WorkshopTypes['both']].includes(
+        this.workshopType
+      )
+    ) {
       columns.push({
         property: 'registered_workshop',
         header: {
@@ -197,6 +220,30 @@ export class CohortViewTable extends React.Component {
         }
       });
     }
+
+    [
+      {property: 'notes', label: 'General Notes'},
+      {property: 'notes_2', label: 'Notes 2'},
+      {property: 'notes_3', label: 'Notes 3'},
+      {property: 'notes_4', label: 'Notes 4'},
+      {property: 'notes_5', label: 'Notes 5'}
+    ].forEach(notesField => {
+      columns.push({
+        property: notesField.property,
+        header: {
+          label: notesField.label,
+          transforms: [sortable]
+        },
+        cell: {
+          format: this.formatNotesTooltip,
+          transforms: [
+            () => ({
+              style: {...styles.notesCell}
+            })
+          ]
+        }
+      });
+    });
 
     columns.push({
       property: 'id',
@@ -213,7 +260,7 @@ export class CohortViewTable extends React.Component {
 
   getSortingColumns = () => this.state.sortingColumns || {};
 
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     const sortingColumns = sort.byColumn({
       sortingColumns: this.state.sortingColumns,
       // Custom sortingOrder removes 'no-sort' from the cycle
@@ -229,17 +276,47 @@ export class CohortViewTable extends React.Component {
   };
 
   // Format dates as abbreviated month and day, e.g. "Mar 9"
-  formatDate = (iso8601Date) => moment(iso8601Date).format("MMM D");
+  formatDate = iso8601Date =>
+    iso8601Date ? moment(iso8601Date).format('MMM D') : '';
 
-  formatBoolean = (bool) => bool ? "Yes" : "No";
+  formatBoolean = bool => (bool ? 'Yes' : 'No');
 
-  formatViewButton = (id) => {
+  formatNotesTooltip = notes => {
+    let tooltipId = _.uniqueId();
+    return (
+      <div>
+        <div
+          data-tip
+          data-for={tooltipId}
+          aria-describedby={tooltipId}
+          style={styles.notesCellContent}
+        >
+          {notes}
+        </div>
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          wrapper="span"
+          effect="solid"
+        >
+          {notes}
+        </ReactTooltip>
+      </div>
+    );
+  };
+
+  formatViewButton = id => {
     return (
       <Button
         bsSize="xsmall"
         target="_blank"
         // TODO: (mehal) Build a wrapper for react stories that lets us pass in a context with router
-        href={this.context.router && this.context.router.createHref(`/${this.props.path.replace('_cohort', '')}/${id}`)}
+        href={
+          this.context.router &&
+          this.context.router.createHref(
+            `/${this.props.path.replace('_cohort', '')}/${id}`
+          )
+        }
       >
         View Application
       </Button>
@@ -257,15 +334,17 @@ export class CohortViewTable extends React.Component {
     })(rows);
 
     return (
-      <Table.Provider
-        id="cohort-view"
-        className="pure-table table-striped"
-        columns={this.columns}
-        style={styles.table}
-      >
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id"/>
-      </Table.Provider>
+      <div style={styles.container}>
+        <Table.Provider
+          id="cohort-view"
+          className="pure-table table-striped"
+          columns={this.columns}
+          style={styles.table}
+        >
+          <Table.Header />
+          <Table.Body rows={sortedRows} rowKey="id" />
+        </Table.Provider>
+      </div>
     );
   }
 }

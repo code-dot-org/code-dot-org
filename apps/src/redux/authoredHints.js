@@ -2,11 +2,11 @@ const ENQUEUE_HINTS = 'authoredHints/ENQUEUE_HINTS';
 const SHOW_NEXT_HINT = 'authoredHints/SHOW_NEXT_HINT';
 const DISPLAY_MISSING_BLOCK_HINTS = 'authoredHints/DISPLAY_MISSING_BLOCK_HINTS';
 
-import { bisect } from '../utils';
+import {bisect} from '../utils';
 
 /**
  * @typedef {Object} AuthoredHint
- * @property {string} content
+ * @property {string} markdown
  * @property {string} hintId
  * @property {string} hintClass
  * @property {string} hintType
@@ -26,12 +26,15 @@ const authoredHintsInitialState = {
   /**
    * @type {!AuthoredHint[]}
    */
-  unseenHints: [],
+  unseenHints: []
 };
 
 export default function reducer(state = authoredHintsInitialState, action) {
   if (action.type === ENQUEUE_HINTS) {
-    const [seen, unseen] = bisect(action.hints, hint => action.hintsUsedIds.indexOf(hint.hintId) !== -1);
+    const [seen, unseen] = bisect(
+      action.hints,
+      hint => action.hintsUsedIds.indexOf(hint.hintId) !== -1
+    );
     return Object.assign({}, state, {
       unseenHints: state.unseenHints.concat(unseen),
       seenHints: state.seenHints.concat(seen)
@@ -62,20 +65,24 @@ export default function reducer(state = authoredHintsInitialState, action) {
 
     // any hints we intend to enqueue that are already displayed should
     // not be enqueued to be displayed again.
-    const newHintsToEnqueue = action.hints.filter(newHint => (
+    const newHintsToEnqueue = action.hints.filter(newHint =>
       state.seenHints.every(seenHint => newHint.hintId !== seenHint.hintId)
-    ));
+    );
 
     // any currently-enqueued contextual hints should be removed
-    const unseenNonContextualHints = state.unseenHints.filter(hint => (
-      hint.hintType !== 'contextual'
-    ));
+    const unseenNonContextualHints = state.unseenHints.filter(
+      hint => hint.hintType !== 'contextual'
+    );
 
     // unseen contextual hints go to front of queue
-    const newUnseenHints = newHintsToEnqueue.filter(hint => !hint.alreadySeen).concat(unseenNonContextualHints);
+    const newUnseenHints = newHintsToEnqueue
+      .filter(hint => !hint.alreadySeen)
+      .concat(unseenNonContextualHints);
 
     // seen contextual hints go to back of queue
-    const newSeenHints = seenHints.concat(newHintsToEnqueue.filter(hint => hint.alreadySeen));
+    const newSeenHints = seenHints.concat(
+      newHintsToEnqueue.filter(hint => hint.alreadySeen)
+    );
 
     return Object.assign({}, state, {
       unseenHints: newUnseenHints,
@@ -93,10 +100,10 @@ export const enqueueHints = (hints, hintsUsedIds) => ({
 });
 
 export const showNextHint = () => ({
-  type: SHOW_NEXT_HINT,
+  type: SHOW_NEXT_HINT
 });
 
-export const displayMissingBlockHints = (hints) => ({
+export const displayMissingBlockHints = hints => ({
   type: DISPLAY_MISSING_BLOCK_HINTS,
   hints
 });

@@ -6,7 +6,7 @@
   "user_id": 7,
   "properties": {
     "skin": "artist",
-    "instructions": "Complete the third tower of the castle using short lines",
+    "short_instructions": "Complete the third tower of the castle using short lines",
     "x": 225,
     "y": 300,
     "is_k1": true

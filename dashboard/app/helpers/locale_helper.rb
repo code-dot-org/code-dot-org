@@ -34,6 +34,14 @@ module LocaleHelper
     options
   end
 
+  def options_for_locale_code_select
+    options = []
+    I18n.available_locales.each do |locale|
+      options << [locale, locale]
+    end
+    options
+  end
+
   # Parses and ranks locale code strings from the Accept-Language header.
   def accepted_locales
     header = request.env.fetch('HTTP_X_VARNISH_ACCEPT_LANGUAGE', '')

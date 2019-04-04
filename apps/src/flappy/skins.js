@@ -8,13 +8,10 @@
 var skinsBase = require('../skins');
 
 var CONFIGS = {
-
-  flappy: {
-  }
-
+  flappy: {}
 };
 
-exports.load = function (assetUrl, id) {
+exports.load = function(assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
   var config = CONFIGS[skin.id];
 
@@ -36,7 +33,9 @@ exports.load = function (assetUrl, id) {
     background: skin.assetUrl('background_underwater.png'),
     avatar: skin.assetUrl('avatar_underwater.png'),
     obstacle_bottom: skin.assetUrl('obstacle_bottom_underwater.png'),
-    obstacle_bottom_thumb: skin.assetUrl('obstacle_bottom_underwater_thumb.png'),
+    obstacle_bottom_thumb: skin.assetUrl(
+      'obstacle_bottom_underwater_thumb.png'
+    ),
     obstacle_top: skin.assetUrl('obstacle_top_underwater.png'),
     ground: skin.assetUrl('ground_underwater.png'),
     ground_thumb: skin.assetUrl('ground_underwater_thumb.png')
@@ -133,25 +132,39 @@ exports.load = function (assetUrl, id) {
   skin.goalSuccess = skin.assetUrl('goal_success.png');
   skin.obstacle = skin.assetUrl('obstacle.png');
   skin.obstacleScale = config.obstacleScale || 1.0;
-  skin.largerObstacleAnimationTiles =
-      skin.assetUrl(config.largerObstacleAnimationTiles);
-  skin.hittingWallAnimation =
-      skin.assetUrl(config.hittingWallAnimation);
-  skin.approachingGoalAnimation =
-      skin.assetUrl(config.approachingGoalAnimation);
+  skin.largerObstacleAnimationTiles = skin.assetUrl(
+    config.largerObstacleAnimationTiles
+  );
+  skin.hittingWallAnimation = skin.assetUrl(config.hittingWallAnimation);
+  skin.approachingGoalAnimation = skin.assetUrl(
+    config.approachingGoalAnimation
+  );
   // Sounds
-  skin.obstacleSound =
-      [skin.assetUrl('obstacle.mp3'), skin.assetUrl('obstacle.ogg')];
+  skin.obstacleSound = [
+    skin.assetUrl('obstacle.mp3'),
+    skin.assetUrl('obstacle.ogg')
+  ];
   skin.wallSound = [skin.assetUrl('wall.mp3'), skin.assetUrl('wall.ogg')];
-  skin.winGoalSound = [skin.assetUrl('win_goal.mp3'),
-                       skin.assetUrl('win_goal.ogg')];
+  skin.winGoalSound = [
+    skin.assetUrl('win_goal.mp3'),
+    skin.assetUrl('win_goal.ogg')
+  ];
   skin.wall0Sound = [skin.assetUrl('wall0.mp3'), skin.assetUrl('wall0.ogg')];
 
   skin.dieSound = [skin.assetUrl('sfx_die.mp3'), skin.assetUrl('sfx_die.ogg')];
   skin.hitSound = [skin.assetUrl('sfx_hit.mp3'), skin.assetUrl('sfx_hit.ogg')];
-  skin.pointSound = [skin.assetUrl('sfx_point.mp3'), skin.assetUrl('sfx_point.ogg')];
-  skin.swooshingSound = [skin.assetUrl('sfx_swooshing.mp3'), skin.assetUrl('sfx_swooshing.ogg')];
-  skin.wingSound = [skin.assetUrl('sfx_wing.mp3'), skin.assetUrl('sfx_wing.ogg')];
+  skin.pointSound = [
+    skin.assetUrl('sfx_point.mp3'),
+    skin.assetUrl('sfx_point.ogg')
+  ];
+  skin.swooshingSound = [
+    skin.assetUrl('sfx_swooshing.mp3'),
+    skin.assetUrl('sfx_swooshing.ogg')
+  ];
+  skin.wingSound = [
+    skin.assetUrl('sfx_wing.mp3'),
+    skin.assetUrl('sfx_wing.ogg')
+  ];
 
   skin.jetSound = [skin.assetUrl('jet.mp3'), skin.assetUrl('jet.ogg')];
   skin.crashSound = [skin.assetUrl('crash.mp3'), skin.assetUrl('crash.ogg')];

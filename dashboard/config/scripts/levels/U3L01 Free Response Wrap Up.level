@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Why Programming? Wrap Up",
-    "markdown_instructions": "* Describe the instructions you followed in the block sculpture algorithm that were the most helpful?\n* What do you think is the hardest part of writing a useful algorithm? \n* If you were to repeat this activity, how would you improve the algorithm you wrote? \n\n\n",
+    "long_instructions": "* Describe the instructions you followed in the block sculpture algorithm that were the most helpful?\n* What do you think is the hardest part of writing a useful algorithm? \n* If you were to repeat this activity, how would you improve the algorithm you wrote? \n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

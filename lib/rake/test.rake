@@ -5,7 +5,9 @@ require 'cdo/chat_client'
 require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'cdo/lighthouse'
 require 'parallel'
+require 'aws-sdk-s3'
 
 namespace :test do
   desc 'Runs apps tests.'
@@ -21,7 +23,16 @@ namespace :test do
   task :regular_ui do
     Dir.chdir(dashboard_dir('test/ui')) do
       ChatClient.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-d', CDO.site_host('studio.code.org'), '-p', CDO.site_host('code.org'), '--parallel', '120', '--magic_retry', '--with-status-page', '--fail_fast'
+      failed_browser_count = RakeUtils.system_with_chat_logging(
+        'bundle', 'exec', './runner.rb',
+        '-d', CDO.site_host('studio.code.org'),
+        '-p', CDO.site_host('code.org'),
+        '--db', # Ensure features that require database access are run even if the server name isn't "test"
+        '--parallel', '120',
+        '--magic_retry',
+        '--with-status-page',
+        '--fail_fast'
+      )
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         ChatClient.log message
@@ -39,7 +50,18 @@ namespace :test do
     Dir.chdir(dashboard_dir('test/ui')) do
       ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
       eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
-      failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', CDO.site_host('studio.code.org'), '-p', CDO.site_host('code.org'), '--eyes', '--magic_retry', '--with-status-page', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
+      failed_browser_count = RakeUtils.system_with_chat_logging(
+        'bundle', 'exec', './runner.rb',
+        '-c', 'ChromeLatestWin7,iPhone,IE11Win10',
+        '-d', CDO.site_host('studio.code.org'),
+        '-p', CDO.site_host('code.org'),
+        '--db', # Ensure features that require database access are run even if the server name isn't "test"
+        '--eyes',
+        '--magic_retry',
+        '--with-status-page',
+        '-f', eyes_features.join(","),
+        '--parallel', (eyes_features.count * 2).to_s
+      )
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         ChatClient.log message
@@ -53,10 +75,15 @@ namespace :test do
     end
   end
 
+  desc 'Run Lighthouse audits against key pages (currently Code Studio homepage).'
+  task :lighthouse do
+    Lighthouse.report CDO.studio_url('', CDO.default_scheme)
+  end
+
   # Run the eyes tests and ui test suites in parallel. If one of these suites
   # raises, allow the other suite to complete, then make sure this task raises.
   task :ui_all do
-    Parallel.each([:eyes_ui, :regular_ui], in_threads: 2) do |target|
+    Parallel.each([:eyes_ui, :regular_ui, :lighthouse], in_threads: 3) do |target|
       Rake::Task["test:#{target}"].invoke
     end
   end
@@ -93,6 +120,7 @@ namespace :test do
         fixture_hash = Digest::MD5.hexdigest(
           Dir["#{fixture_path}/{**,*}/*.yml"].
             push(dashboard_dir('db/schema.rb')).
+            push(dashboard_dir('config/videos.csv')).
             select(&File.method(:file?)).
             sort.
             map(&Digest::MD5.method(:file)).
@@ -194,7 +222,15 @@ namespace :test do
   namespace :changed do
     desc 'Runs apps tests if apps might have changed from staging.'
     task :apps do
-      run_tests_if_changed('apps', ['apps/**/*', 'shared/**/*.js', 'shared/**/*.css']) do
+      run_tests_if_changed(
+        'apps',
+        [
+          'apps/**/*',
+          'dashboard/config/libraries/*.interpreted.js',
+          'shared/**/*.js',
+          'shared/**/*.css',
+        ]
+      ) do
         TestRunUtils.run_apps_tests
       end
     end

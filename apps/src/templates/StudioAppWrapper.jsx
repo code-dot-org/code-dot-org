@@ -1,38 +1,39 @@
-
-import React, {PropTypes} from 'react';
-var RotateContainer = require('../templates/RotateContainer');
-var connect = require('react-redux').connect;
+import PropTypes from 'prop-types';
+import React from 'react';
+import RotateContainer from '../templates/RotateContainer';
+import {connect} from 'react-redux';
 
 /**
  * Wrapper component for all Code Studio app types, which provides rotate
  * container and clear-div but otherwise just renders children.
  */
-var StudioAppWrapper = React.createClass({
-  propTypes: {
+class StudioAppWrapper extends React.Component {
+  static propTypes = {
     assetUrl: PropTypes.func.isRequired,
     isEmbedView: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
-    children: PropTypes.node,
-  },
+    children: PropTypes.node
+  };
 
-  requiresLandscape: function () {
+  requiresLandscape() {
     return !(this.props.isEmbedView || this.props.isShareView);
-  },
+  }
 
-  render: function () {
+  render() {
     return (
       <div>
-        {this.requiresLandscape() && <RotateContainer assetUrl={this.props.assetUrl} />}
+        {this.requiresLandscape() && (
+          <RotateContainer assetUrl={this.props.assetUrl} />
+        )}
         {this.props.children}
-        <div className="clear"></div>
+        <div className="clear" />
       </div>
     );
   }
-});
-module.exports = connect(function propsFromStore(state) {
-  return {
-    assetUrl: state.pageConstants.assetUrl,
-    isEmbedView: state.pageConstants.isEmbedView,
-    isShareView: state.pageConstants.isShareView
-  };
-})(StudioAppWrapper);
+}
+
+export default connect(state => ({
+  assetUrl: state.pageConstants.assetUrl,
+  isEmbedView: state.pageConstants.isEmbedView,
+  isShareView: state.pageConstants.isShareView
+}))(StudioAppWrapper);

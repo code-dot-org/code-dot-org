@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "You can make this drawing by adding a repeat block.",
+    "short_instructions": "You can make this drawing by adding a repeat block.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "free_play": "false",
     "ideal": "5",
     "embed": "false",
-    "markdown_instructions": "We will come back to functions shortly. Let's take a break to practice making this star. \r\n\r\nYou can make this drawing by adding a repeat block.",
+    "long_instructions": "We will come back to functions shortly. Let's take a break to practice making this star. \r\n\r\nYou can make this drawing by adding a repeat block.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

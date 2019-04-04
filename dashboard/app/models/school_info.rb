@@ -1,4 +1,3 @@
-# coding: utf-8
 # == Schema Information
 #
 # Table name: school_infos
@@ -47,6 +46,8 @@ class SchoolInfo < ActiveRecord::Base
   belongs_to :school
 
   has_and_belongs_to_many :census_submissions, class_name: 'Census::CensusSubmission'
+
+  has_many :user_school_infos
 
   # Remap what the form has (e.g. school_zip) to what we write to (e.g. zip)
   def school_zip=(input)

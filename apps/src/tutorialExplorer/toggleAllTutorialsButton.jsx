@@ -2,14 +2,15 @@
  * to show/hide the set of all tutorials and filters for all languages.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
   toggleAllTutorialsBlock: {
-    width: "100%",
-    clear: "both",
-    textAlign: "center",
+    width: '100%',
+    clear: 'both',
+    textAlign: 'center',
     paddingTop: 30,
     paddingBottom: 30
   }
@@ -29,7 +30,7 @@ export default class ToggleAllTutorialsButton extends React.Component {
           <button onClick={this.props.showAllTutorials}>
             {i18n.showAllTutorialsButton()}
             &nbsp;
-            <i className="fa fa-caret-down" aria-hidden={true}/>
+            <i className="fa fa-caret-down" aria-hidden={true} />
           </button>
         )}
 
@@ -37,7 +38,7 @@ export default class ToggleAllTutorialsButton extends React.Component {
           <button onClick={this.props.hideAllTutorials}>
             {i18n.hideAllTutorialsButton()}
             &nbsp;
-            <i className="fa fa-caret-up" aria-hidden={true}/>
+            <i className="fa fa-caret-up" aria-hidden={true} />
           </button>
         )}
       </div>

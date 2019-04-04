@@ -81,7 +81,7 @@
 #   INNER JOIN level_concept_difficulties
 #     ON level_concept_difficulties.level_id = user_levels.level_id
 #   WHERE user_levels.best_result = 100
-#     AND user_levels.script_id IN (238, 239, 240, 241, 258)
+#     AND user_levels.script_id IN (297, 301, 307, 302, 309, 310, 303)
 #     AND user_levels.id > #{start_id}
 #     AND user_levels.id < #{end_id}
 #     AND user_levels.created_at > #{start_date}
@@ -106,16 +106,26 @@
 require 'csv'
 require_relative '../../../dashboard/config/environment'
 
+# Fields:
+# start_date, end_date, end_timestamp, already_recorded
+# end_timestamp is what will be written as the basic_proficiency_timestamp for that date range
+# already_recorded should be false for the date ranges of the backfill, and true for date ranges
+# that had the correct LCD data.
 DATE_RANGES = [
-  ['20170601', '20170701', '2017-06-30 23:59:59', false],
-  ['20170701', '20170801', '2017-07-31 23:59:59', false],
-  ['20170801', '20170901', '2017-08-31 23:59:59', false],
-  ['20170901', '20170913', '2017-09-12 23:59:59', false],
-  ['20170913', '20171001', '2017-09-30 23:59:59', true]
+  ['20180701', '20180801', '2018-07-31 23:59:59', false],
+  ['20180801', '20180901', '2018-08-31 23:59:59', false],
+  ['20180901', '20181001', '2018-09-30 23:59:59', false],
+  ['20181001', '20181004', '2018-10-03 23:59:59', false],
+  ['20181004', '20181101', '2018-10-31 23:59:59', true],
+  ['20181101', '20181201', '2018-11-30 23:59:59', true],
+  ['20181201', '20181214', '2018-12-13 23:59:59', true]
 ].freeze
 
-MONTHLY_FILENAME_PREFIX = '/tmp/proficiency/user_proficiencies'.freeze
-AGGREGATE_FILENAME = '/tmp/proficiency/aggregate_20170601_20171001'.freeze
+# This script wasn't written to take in arguments; instead it uses these hardcoded paths
+# (together with DATE_RANGES) above for input and output files.
+DATA_DIRECTORY = '/tmp'.freeze
+MONTHLY_FILENAME_PREFIX = (DATA_DIRECTORY + '/user_proficiencies').freeze
+AGGREGATE_FILENAME = (DATA_DIRECTORY + '/aggregate_20180701_20181214').freeze
 
 SLICE_SIZE = 5_000
 
@@ -345,7 +355,7 @@ def update_database
           db_proficiency.conditionals_d4_count += proficiency[49]
           db_proficiency.conditionals_d5_count += proficiency[50]
 
-          if db_proficiency.last_progress_at.nil? || db_proficiency.last_progress_at < proficiency[51]
+          if db_proficiency.last_progress_at.nil? || (proficiency[51] && db_proficiency.last_progress_at < proficiency[51])
             db_proficiency.last_progress_at = proficiency[51]
           end
 

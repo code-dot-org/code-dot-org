@@ -15,13 +15,16 @@ require_relative 'i18n_script_utils'
 
 def sync_in
   localize_level_content
+  localize_block_content
   run_bash_script "bin/i18n-codeorg/in.sh"
+  # disable redaction of level content until the switch to remark is complete
+  #redact_level_content
+  redact_block_content
 end
 
 def copy_to_yml(label, data)
   File.open("dashboard/config/locales/#{label}.en.yml", "w+") do |f|
-    data = ({"en" => {"data" => {label => data}}}).to_yaml(line_width: -1)
-    f.write(data)
+    f.write(to_crowdin_yaml({"en" => {"data" => {label => data}}}))
   end
 end
 
@@ -31,16 +34,70 @@ def sanitize(string)
   return string.gsub(/\r(\n)?/, "\n")
 end
 
+def redact_translated_data(path, plugins = nil)
+  source = "i18n/locales/source/#{path}"
+  backup = "i18n/locales/original/#{path}"
+  FileUtils.mkdir_p(File.dirname(backup))
+  FileUtils.cp(source, backup)
+  redact(source, source, plugins)
+end
+
+def redact_block_content
+  redact_translated_data('dashboard/blocks.yml', 'blockfield')
+end
+
+# Pull in various fields for custom blocks from .json files and save them to
+# blocks.en.yml.
+def localize_block_content
+  blocks = {}
+
+  Dir.glob('dashboard/config/blocks/**/*.json').sort.each do |file|
+    name = File.basename(file, '.*')
+    config = JSON.parse(File.read(file))['config']
+    blocks[name] = {
+      'text' => config['blockText'],
+    }
+
+    next unless config['args']
+
+    args_with_options = {}
+    config['args'].each do |arg|
+      next if !arg['options'] || arg['options'].empty?
+
+      options = args_with_options[arg['name']] = {}
+      arg['options'].each do |option_tuple|
+        options[option_tuple.last] = option_tuple.first
+      end
+    end
+    blocks[name]['options'] = args_with_options unless args_with_options.empty?
+  end
+
+  copy_to_yml('blocks', blocks)
+end
+
+def redact_level_content
+  %w(
+    authored_hints
+    short_instructions
+    long_instructions
+  ).each do |content_type|
+    redact_translated_data("dashboard/#{content_type}.yml")
+  end
+end
+
 # Pull in various fields for levelbuilder levels from .level files and
 # save them to [field_name].en.yml files to be translated. Fields included:
-#   instructions
-#   markdown instructions
+#   short instructions
+#   long instructions
 #   failure message override
 #   authored hints
 #   callouts
+#
+# See Blockly.get_localized_property in dashboard models for usage
 def localize_level_content
-  level_instructions = Hash.new
-  level_markdown_instructions = Hash.new
+  level_display_name = Hash.new
+  level_short_instructions = Hash.new
+  level_long_instructions = Hash.new
   level_failure_message_overrides = Hash.new
   level_authored_hints = Hash.new
   level_callouts = Hash.new
@@ -54,15 +111,21 @@ def localize_level_content
 
       # Properties
       config = JSON.parse(level_xml.xpath('//../config').first.text)
+      next unless config["properties"]
+
+      ## Display Name
+      if display_name = config["properties"]["display_name"]
+        level_display_name[level_name] = sanitize(display_name)
+      end
 
       ## Instructions
-      if instructions = config["properties"]["instructions"]
-        level_instructions["#{level_name}_instruction"] = sanitize(instructions)
+      if short_instructions = (config["properties"]["short_instructions"] || config["properties"]["instructions"])
+        level_short_instructions[level_name] = sanitize(short_instructions)
       end
 
       ## Markdown Instructions
-      if markdown_instructions = config["properties"]["markdown_instructions"]
-        level_markdown_instructions["#{level_name}_markdown_instruction"] = sanitize(markdown_instructions)
+      if long_instructions = (config["properties"]["long_instructions"] || config["properties"]["markdown_instructions"])
+        level_long_instructions[level_name] = sanitize(long_instructions)
       end
 
       ## Failure message overrides
@@ -87,16 +150,16 @@ def localize_level_content
       end
 
       # Blocks
-      blocks = level_xml.xpath('//../blocks').first
+      blocks = level_xml.xpath('//blocks').first
       if blocks
         ## Categories
-        blocks.xpath('//../category').each do |category|
+        blocks.xpath('//category').each do |category|
           name = category.attr('name')
           level_block_categories[name] = name if name
         end
 
         ## Function Names
-        blocks.xpath('//../block[@type="procedures_defnoreturn"]').each do |function|
+        blocks.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
           name = function.at_xpath('./title[@name="NAME"]')
           level_function_names[name.content] = name.content if name
         end
@@ -104,8 +167,9 @@ def localize_level_content
     end
   end
 
-  copy_to_yml("instructions", level_instructions)
-  copy_to_yml("markdown_instructions", level_markdown_instructions)
+  copy_to_yml("display_name", level_display_name)
+  copy_to_yml("short_instructions", level_short_instructions)
+  copy_to_yml("long_instructions", level_long_instructions)
   copy_to_yml("failure_message_overrides", level_failure_message_overrides)
   copy_to_yml("authored_hints", level_authored_hints)
   copy_to_yml("callouts", level_callouts)

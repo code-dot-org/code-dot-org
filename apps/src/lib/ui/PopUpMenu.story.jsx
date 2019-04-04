@@ -2,26 +2,26 @@ import React, {Component} from 'react';
 import PopUpMenu from './PopUpMenu';
 
 export default storybook => {
-  storybook
-      .storiesOf('PopUpMenu', module)
-      .add('overview', () => <Overview/>);
+  storybook.storiesOf('PopUpMenu', module).add('overview', () => <Overview />);
 };
 
 class Overview extends Component {
   state = {
     targetPoint: {
       top: 0,
-      left: 0,
-    },
+      left: 0
+    }
   };
 
   componentDidMount() {
     /* eslint-disable react/no-did-mount-set-state */
     const rect = this.target.getBoundingClientRect();
-    this.setState({targetPoint: {
-      top: rect.bottom,
-      left: rect.left + rect.width / 2,
-    }});
+    this.setState({
+      targetPoint: {
+        top: rect.bottom,
+        left: rect.left + rect.width / 2
+      }
+    });
     /* eslint-enable react/no-did-mount-set-state */
   }
 
@@ -33,9 +33,9 @@ class Overview extends Component {
           style={{
             border: 'solid black thin',
             margin: '1em',
-            width: '50%',
+            width: '50%'
           }}
-          ref={el => this.target = el}
+          ref={el => (this.target = el)}
         >
           It targets the bottom-center of this element.
         </div>

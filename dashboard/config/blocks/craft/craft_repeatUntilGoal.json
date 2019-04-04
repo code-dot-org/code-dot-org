@@ -1,0 +1,18 @@
+{
+  "category": "",
+  "config": {
+    "func": "repeatUntilGoal",
+    "color": [
+      322,
+      0.9,
+      0.95
+    ],
+    "blockText": "repeat until goal\n{STATEMENT}",
+    "args": [
+      {
+        "name": "STATEMENT",
+        "statement": true
+      }
+    ]
+  }
+}

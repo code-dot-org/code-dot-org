@@ -11,7 +11,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,16,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Hiro is \"actor 3\".  Make Hiro throw a projectile to each of the four characters.  Wait one second between each throw.",
+    "short_instructions": "Hiro is \"actor 3\".  Make Hiro throw a projectile to each of the four characters.  Wait one second between each throw.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-03-27T21:38:15.000Z",
   "level_num": "custom",
   "user_id": 156,
@@ -13,7 +13,7 @@
     "use_default_sprites": "true",
     "hide_animation_mode": "true",
     "embed": "false",
-    "instructions": "Use the \"make a new sprite\" block to make yourself a pet!",
+    "short_instructions": "Use the \"make a new sprite\" block to make yourself a pet!",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -43,6 +43,7 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

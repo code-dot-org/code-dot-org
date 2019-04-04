@@ -1,27 +1,27 @@
-import { TestResults } from '@cdo/apps/constants';
-import GameLabJr from '@cdo/apps/gamelab/GameLabJr.interpreted.js';
+import GameLabJr from '@cdo/interpreted/GameLabJr.interpreted.js';
+import ValidationSetup from '@cdo/interpreted/ValidationSetup.interpreted.js';
+import {TestResults} from '@cdo/apps/constants';
 
 const levelDef = {
-  customHelperLibrary: GameLabJr,
-  sharedBlocks: [{
-    name: "gamelab_setBackground",
-    config: {
-      color: [
-        240,
-        0.45,
-        0.65,
-      ],
-      func: "setBackground",
-      blockText: "set background color {COLOR}",
-      args: [
-        {
-          name: "COLOR",
-          type: "Colour",
-        }
-      ]
+  helperLibraries: ['GameLabJr'],
+  sharedBlocks: [
+    {
+      name: 'gamelab_setBackground',
+      config: {
+        color: [240, 0.45, 0.65],
+        func: 'setBackground',
+        blockText: 'set background color {COLOR}',
+        args: [
+          {
+            name: 'COLOR',
+            type: 'Colour'
+          }
+        ]
+      }
     }
-  }],
-  validationCode: 'if (World.background_color === "#ff0000") { levelSuccess(); } else { levelSuccess(3); }',
+  ],
+  validationCode:
+    'if (World.background_color === "#ff0000") { levelSuccess(); } else { levelSuccess(3); }'
 };
 
 export default {
@@ -30,6 +30,7 @@ export default {
   levelDefinition: levelDef,
   tests: [
     {
+      libraries: {GameLabJr, ValidationSetup},
       description: 'Sprite Lab fail',
       xml: `
         <xml>
@@ -37,10 +38,11 @@ export default {
         </xml>`,
       expected: {
         result: true,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
-      },
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+      }
     },
     {
+      libraries: {GameLabJr, ValidationSetup},
       description: 'Sprite Lab pass',
       xml: `
         <xml>
@@ -58,8 +60,8 @@ export default {
         </xml>`,
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS,
-      },
-    },
-  ],
+        testResult: TestResults.ALL_PASS
+      }
+    }
+  ]
 };

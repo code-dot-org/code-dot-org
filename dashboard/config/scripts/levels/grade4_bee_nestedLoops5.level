@@ -17,7 +17,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,-4,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "12",
-    "markdown_instructions": "**Challenge:** Collect all of the nectar from each flower and make honey at each honeycomb. \r\n",
+    "long_instructions": "**Challenge:** Collect all of the nectar from each flower and make honey at each honeycomb. \r\n",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",

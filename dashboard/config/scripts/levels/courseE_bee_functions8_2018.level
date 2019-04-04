@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Create a function that collects all of the nectar from each flower.",
+    "short_instructions": "Create a function that collects all of the nectar from each flower.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -34,7 +34,7 @@
     "fast_get_nectar_animation": "false",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":5,\"featureType\":1,\"flowerColor\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":5,\"range\":5,\"featureType\":1,\"flowerColor\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":2,\"range\":3,\"featureType\":1,\"flowerColor\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1,\"flowerColor\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":4,\"range\":5,\"featureType\":1,\"flowerColor\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "instructions_important": "true",
-    "markdown_instructions": "**Challenge:** These flowers can have a different amount of nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects all of the nectar from each flower.",
+    "long_instructions": "**Challenge:** These flowers can have a different amount of nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects all of the nectar from each flower.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your function will only need to collect nectar. Try using a while loop instead of a repeat loop.\",\"hint_id\":\"courseE_bee_functions8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/64d1ac6dab00fb1aecfe60899f20cdc0/courseE_bee_functions8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use `while nectar > 0` to make sure you get all of the nectar.\",\"hint_id\":\"courseE_bee_functions8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fe2af1dd2b179f75b89b1227331188a7/courseE_bee_functions8.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Your main program will need a stair step movement pattern. Remember, the main program is the code under the `when run` block.\",\"hint_id\":\"courseE_bee_functions8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d0fdf62de1e3416e53223a9d87413b4b/courseE_bee_functions8.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

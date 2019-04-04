@@ -9,11 +9,7 @@ export default storybook => {
       {
         name: 'course blocks - tools',
         description: `This is a set of course blocks listing tools`,
-        story: () => (
-            <CourseBlocksTools
-              isEnglish={true}
-            />
-        )
-      },
+        story: () => <CourseBlocksTools isEnglish={true} />
+      }
     ]);
 };

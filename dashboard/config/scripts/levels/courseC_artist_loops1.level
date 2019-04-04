@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist_zombie",
     "embed": "false",
-    "instructions": "*\"Zombie.  Draw!\"*\r\n\r\nThe zombie wants to draw a line from where he is to the garden of sunflowers.  Can you help him?  \r\n*(The garden is 250 pixels away)*  ",
+    "short_instructions": "*\"Zombie.  Draw!\"*\r\n\r\nThe zombie wants to draw a line from where he is to the garden of sunflowers.  Can you help him?  \r\n*(The garden is 250 pixels away)*  ",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

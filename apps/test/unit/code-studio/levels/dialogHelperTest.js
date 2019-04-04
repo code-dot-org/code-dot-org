@@ -1,9 +1,12 @@
-import { assert } from 'chai';
+import {assert} from 'chai';
 import React from 'react';
 import 'jquery-ui/ui/effects/effect-drop';
 import $ from 'jquery';
 import sinon from 'sinon';
-import { showDialog, getSuccessDialog } from '@cdo/apps/code-studio/levels/dialogHelper';
+import {
+  showDialog,
+  getSuccessDialog
+} from '@cdo/apps/code-studio/levels/dialogHelper';
 
 describe('dialogHelper', () => {
   let stashedWindowJquery;
@@ -47,27 +50,27 @@ describe('dialogHelper', () => {
     );
 
     it('can take a React component to generate DOM contents', () => {
-      const dialog = showDialog(<MyComponent/>);
+      const dialog = showDialog(<MyComponent />);
       dialog.hide();
     });
 
     it('calls callback when ok button is clicked', () => {
       const callback = sinon.spy();
-      showDialog(<MyComponent/>, callback);
+      showDialog(<MyComponent />, callback);
       $('#ok-button').click();
       assert(callback.calledOnce);
     });
 
     it('calls onHidden when ok button is clicked', () => {
       const onHidden = sinon.spy();
-      showDialog(<MyComponent/>, null, onHidden);
+      showDialog(<MyComponent />, null, onHidden);
       $('#ok-button').click();
       assert(onHidden.calledOnce);
     });
 
     it('calls onHidden when cancel button is clicked', () => {
       const onHidden = sinon.spy();
-      showDialog(<MyComponent/>, null, onHidden);
+      showDialog(<MyComponent />, null, onHidden);
       $('#cancel-button').click();
       assert(onHidden.calledOnce);
     });
@@ -79,19 +82,21 @@ describe('dialogHelper', () => {
         submittable: false,
         answers: [
           {
-            "text": "I feel like I could teach this right now",
-            "correct": true
+            text: 'I feel like I could teach this right now',
+            correct: true
           },
           {
-            "text": "I feel like I need to do SOME review of lessons, content, etc before I teach this",
-            "correct": true
+            text:
+              'I feel like I need to do SOME review of lessons, content, etc before I teach this',
+            correct: true
           },
           {
-            "text": "I feel like I need to do A LOT of review of lessons, content, etc before I teach this",
-            "correct": true
+            text:
+              'I feel like I need to do A LOT of review of lessons, content, etc before I teach this',
+            correct: true
           }
         ],
-        ...levelOptions,
+        ...levelOptions
       },
       dialog: {
         app
@@ -123,8 +128,8 @@ describe('dialogHelper', () => {
       // Also, this tests accurately reflects the fact that submittable is the
       // string "true" rather than boolean true here.
       const appOptions = fakeAppOptions('multi', {
-        submittable: "true",
-        answers: undefined,
+        submittable: 'true',
+        answers: undefined
       });
       const dialog = getSuccessDialog(appOptions);
       assert.equal(dialog.props.title, 'Thank you');
@@ -135,7 +140,7 @@ describe('dialogHelper', () => {
       // Worth noting that I only see 3 levels that meet this criteria and dont
       // have skip_dialog: true
       const appOptions = fakeAppOptions('text_match', {
-        answers: undefined,
+        answers: undefined
       });
       const dialog = getSuccessDialog(appOptions);
       assert.equal(dialog.props.title, 'Thank you');

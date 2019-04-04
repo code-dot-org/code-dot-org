@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Winning Buzzer\r\n\r\nThat last thing that that is missing from your project guide's description of this project is the buzzer. It should buzz a high tone if player 1 wins and a low tone if player 2 wins. \r\n\r\n# Do This\r\n\r\nSo far we've been able to just use the `player` parameter directly to report which player won, but that won't work for buzzing different sounds. Inside the conditional that checks if a player won, you'll need to add _another_ conditional that checks which player it was. If `player == \"red\"` the buzzer should play a high note, otherwise (else) it should play a low note.",
+    "long_instructions": "# Winning Buzzer\r\n\r\nThat last thing that that is missing from your project guide's description of this project is the buzzer. It should buzz a high tone if player 1 wins and a low tone if player 2 wins. \r\n\r\n# Do This\r\n\r\nSo far we've been able to just use the `player` parameter directly to report which player won, but that won't work for buzzing different sounds. Inside the conditional that checks if a player won, you'll need to add _another_ conditional that checks which player it was. If `player == \"red\"` the buzzer should play a high note, otherwise (else) it should play a low note.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

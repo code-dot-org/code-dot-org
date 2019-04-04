@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Now choose your own!  Pick one of the three drawings shown here and attempt to create it on your own, making smart decisions about how to break the problem down into re-usable functions.  You will review your work with a peer using \"procedures peer review rubric.\"  Check it for the requirements.  GIF: U3L3-ProceduresChooseOne.png",
+    "short_instructions": "Now choose your own!  Pick one of the three drawings shown here and attempt to create it on your own, making smart decisions about how to break the problem down into re-usable functions.  You will review your work with a peer using \"procedures peer review rubric.\"  Check it for the requirements.  GIF: U3L3-ProceduresChooseOne.png",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

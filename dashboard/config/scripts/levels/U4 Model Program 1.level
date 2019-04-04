@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Adding a New Screen\r\n\r\nTo complete your app, you're going to need more than than just a home screen. Each card that you created in your paper prototype is represented by a \"screen\" in App Lab. To create more screens, just click the dropdown at the top of the app display and select \"New Screen...\"\r\n\r\n<img src=\"https://images.code.org/2b49c36a57fb904d4fcf219ca498647d-image-1504714832027.png\" style=\"width: 200px\">\r\n\r\n# Do This\r\n\r\n* **Create a New Screen** and give it the ID \"about\".",
+    "long_instructions": "# Adding a New Screen\r\n\r\nTo complete your app, you're going to need more than than just a home screen. Each card that you created in your paper prototype is represented by a \"screen\" in App Lab. To create more screens, just click the dropdown at the top of the app display and select \"New Screen...\"\r\n\r\n<img src=\"https://images.code.org/2b49c36a57fb904d4fcf219ca498647d-image-1504714832027.png\" style=\"width: 200px\">\r\n\r\n# Do This\r\n\r\n* **Create a New Screen** and give it the ID \"about\".",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

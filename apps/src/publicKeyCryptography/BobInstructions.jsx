@@ -10,26 +10,26 @@ export default function BobInstructions() {
         <Step>
           <b>Wait for Alice to announce the public modulus</b>
           <ul>
-            <SubStep text="Enter the public modulus once Alice announces it"/>
+            <SubStep text="Enter the public modulus once Alice announces it" />
           </ul>
         </Step>
         <Step>
           <b>Wait for Alice to announce her public key</b>
           <ul>
-            <SubStep text="Enter Alice’s public key once she announces it"/>
+            <SubStep text="Enter Alice’s public key once she announces it" />
           </ul>
         </Step>
         <Step>
           <b>Choose a secret number to send to Alice</b>
           <ul>
-            <SubStep text="Keep it secret."/>
+            <SubStep text="Keep it secret." />
           </ul>
         </Step>
         <Step>
           <b>Calculate your public number</b>
           <ul>
-            <SubStep text="This is the encrypted version of the secret number"/>
-            <SubStep text="Announce this number out loud to Alice and Eve"/>
+            <SubStep text="This is the encrypted version of the secret number" />
+            <SubStep text="Announce this number out loud to Alice and Eve" />
           </ul>
         </Step>
       </NumberedSteps>

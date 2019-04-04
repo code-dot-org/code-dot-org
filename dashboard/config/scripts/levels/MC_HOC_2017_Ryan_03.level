@@ -45,8 +45,8 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "display_name": "A River...",
-    "instructions": "Now use loops to help The Agent build a bridge over the river by placing blocks in the water.",
-    "markdown_instructions": "Did you know that you can put more than one piece of code into a loop?  \r\n\r\nUse a `repeat` loop to help the Agent build a bridge over the river by placing blocks in the water.",
+    "short_instructions": "Now use loops to help The Agent build a bridge over the river by placing blocks in the water.",
+    "long_instructions": "Did you know that you can put more than one piece of code into a loop?  \r\n\r\nUse a `repeat` loop to help the Agent build a bridge over the river by placing blocks in the water.",
     "contained_level_names": null
   },
   "published": true,

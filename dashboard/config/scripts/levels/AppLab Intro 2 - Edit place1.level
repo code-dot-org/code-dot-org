@@ -14,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "On the last screen you gave your character a choice between to actions or places. Pick one of them and start making a screen for it!\r\n\r\n1. In the screen selector choose \"New screen...\" ([Show me where](#triggercallout=selector))\r\n2. Change the \"id\" of the screen to something clear, for example the name of the new location ([Show me where](#triggercallout=idChange))\r\n3. You can switch back and forth between your two screens from the screen selector. ([Show me where](#triggercallout=selector))\r\n4. You can select the \"background-color\" of your screen if you like.\r\n\r\nClick \"Run\" and then \"Finish\" to move on and start adding to your screen.",
+    "long_instructions": "On the last screen you gave your character a choice between to actions or places. Pick one of them and start making a screen for it!\r\n\r\n1. In the screen selector choose \"New screen...\" ([Show me where](#triggercallout=selector))\r\n2. Change the \"id\" of the screen to something clear, for example the name of the new location ([Show me where](#triggercallout=idChange))\r\n3. You can switch back and forth between your two screens from the screen selector. ([Show me where](#triggercallout=selector))\r\n4. You can select the \"background-color\" of your screen if you like.\r\n\r\nClick \"Run\" and then \"Finish\" to move on and start adding to your screen.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

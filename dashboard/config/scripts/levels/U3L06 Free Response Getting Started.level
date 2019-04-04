@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "APIs and Function Parameters",
-    "markdown_instructions": "Brainstorm a new command you would like to include in a turtle drawing program. \n\n* Would you choose to improve a commands you have already used or something entirely new? \n* How would it work? \n* Would the command need any additional information to successfully execute the instructions?\n",
+    "long_instructions": "Brainstorm a new command you would like to include in a turtle drawing program. \n\n* Would you choose to improve a commands you have already used or something entirely new? \n* How would it work? \n* Would the command need any additional information to successfully execute the instructions?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

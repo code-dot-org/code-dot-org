@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PairingDialog from './components/pairing/pairing_dialog.jsx';
+import PairingDialog from './components/pairing/PairingDialog.jsx';
 
 export default {
   init(pairingUrl, hideUserOptions, showPairingDialog) {
@@ -25,10 +25,12 @@ export default {
       lazyInitDialog();
     }
 
-    $('#pairing_link').show().click(function () {
-      lazyInitDialog();
-      hideUserOptions();
-      return false;
-    });
+    $('#pairing_link')
+      .show()
+      .click(function() {
+        lazyInitDialog();
+        hideUserOptions();
+        return false;
+      });
   }
 };

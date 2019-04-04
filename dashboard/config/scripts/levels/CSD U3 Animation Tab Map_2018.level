@@ -7,13 +7,13 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "The Animation Tab",
-    "reference": "/docs/csd/animation_tab/index.html",
+    "reference": "/docs/concepts/game-lab/animation-tab/index.html",
     "parent_level_id": 8755,
     "name_suffix": "_2018"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-07-23 21:10:07 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-07-23 21:10:07 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-12-20 00:06:42 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

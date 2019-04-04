@@ -1,6 +1,8 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import * as color from "../../util/color";
+import * as color from '../../util/color';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   root: {
@@ -54,7 +56,9 @@ class SoundListEntry extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (!nextProps.isSelected) {
-      this.props.soundsRegistry.stopPlayingURL(this.props.soundMetadata.sourceUrl);
+      this.props.soundsRegistry.stopPlayingURL(
+        this.props.soundMetadata.sourceUrl
+      );
       this.setState({isPlaying: false});
     }
   }
@@ -65,17 +69,32 @@ class SoundListEntry extends React.Component {
       this.setState({isPlaying: false});
     } else {
       this.setState({isPlaying: true});
-      this.props.soundsRegistry.playURL(
-        this.props.soundMetadata.sourceUrl, {
-          onEnded: () => this.setState({isPlaying: false})
-        }
+      firehoseClient.putRecord(
+        {
+          study: 'sound-dialog-2',
+          study_group: 'library-tab',
+          event: 'play-library-sound',
+          data_json: this.props.soundMetadata.sourceUrl
+        },
+        {includeUserId: true}
       );
+      this.props.soundsRegistry.unmuteURLs();
+      this.props.soundsRegistry.playURL(this.props.soundMetadata.sourceUrl, {
+        onEnded: () => {
+          this.setState({isPlaying: false});
+          this.props.soundsRegistry.muteURLs();
+        }
+      });
     }
   };
 
   render() {
-    const selectedColor = this.props.isSelected ? styles.selected : styles.notSelected;
-    const playIcon = this.state.isPlaying ? 'fa-pause-circle' : 'fa-play-circle';
+    const selectedColor = this.props.isSelected
+      ? styles.selected
+      : styles.notSelected;
+    const playIcon = this.state.isPlaying
+      ? 'fa-pause-circle'
+      : 'fa-play-circle';
 
     return (
       <div
@@ -84,7 +103,10 @@ class SoundListEntry extends React.Component {
         onClick={this.props.assetChosen.bind(null, this.props.soundMetadata)}
       >
         <div style={styles.icon}>
-          <i onClick={this.clickSoundControl} className={'fa ' + playIcon + ' fa-2x'} />
+          <i
+            onClick={this.clickSoundControl}
+            className={'fa ' + playIcon + ' fa-2x'}
+          />
         </div>
         <div style={styles.metadata}>
           <span style={styles.soundName}>
@@ -105,21 +127,21 @@ export default Radium(SoundListEntry);
 // Adapted from: http://stackoverflow.com/questions/6312993/javascript-seconds-to-time-string-with-format-hhmmss
 // Convert a number, numSeconds, into a string formatted as MM:SS or "Less than 1 second"
 // if the time is 0 seconds
-const getTimeString = function (numSeconds) {
+const getTimeString = function(numSeconds) {
   const sec_num = parseInt(numSeconds, 10);
-  const hours   = Math.floor(sec_num / 3600);
-  let minutes = Math.floor((sec_num - (hours * 3600)) / 60);
-  let seconds = sec_num - (hours * 3600) - (minutes * 60);
+  const hours = Math.floor(sec_num / 3600);
+  let minutes = Math.floor((sec_num - hours * 3600) / 60);
+  let seconds = sec_num - hours * 3600 - minutes * 60;
 
   if (seconds < 1) {
     return 'Less than 1 second';
   }
 
   if (minutes < 10) {
-    minutes = "0"+minutes;
+    minutes = '0' + minutes;
   }
   if (seconds < 10) {
-    seconds = "0"+seconds;
+    seconds = '0' + seconds;
   }
-  return minutes+':'+seconds;
+  return minutes + ':' + seconds;
 };

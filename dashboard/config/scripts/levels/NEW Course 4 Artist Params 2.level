@@ -7,7 +7,6 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Create a `draw triangle` function from scratch that makes a triangle with  50 pixel sides.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,7 +23,6 @@
     "ideal": "9",
     "callout_json": "[{\r\n  \"localization_key\": \"create_function\",\r\n  \"element_id\": \".blocklyTreeLabel:contains(Functions)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}, {\r\n  \"on\": \"function_editor_opened\",\r\n  \"localization_key\": \"name_function\",\r\n  \"element_id\": \"#functionNameText\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"right center\", \"at\": \"left center\"}\r\n  }\r\n}, {\r\n  \"on\": \"function_editor_opened\",\r\n  \"localization_key\": \"write_draw_triangle_function\",\r\n  \"element_id\": \"#modalContainer [block-id]:eq(0)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"top left\", \"adjust\": {\"x\": 44, \"y\": 37}}\r\n  }\r\n}]",
     "video_key": "C4_function_create",
-    "markdown_instructions": "Create a `draw triangle` function from scratch that makes a triangle with  50 pixel sides.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -37,10 +35,19 @@
     "discard_background": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": 8,
-    "contained_level_names": null
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "short_instructions": "Create a `draw triangle` function from scratch that makes a triangle with  50 pixel sides.",
+    "long_instructions": "Create a `draw triangle` function from scratch that makes a triangle with  50 pixel sides.",
+    "preload_asset_list": null,
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-01-21 17:54:30 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-03-06 17:25:17 +0000\",\"changed\":[\"recommended_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-03-06 17:29:13 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_loops": 4,
@@ -111,7 +118,7 @@
         <block type="procedures_callnoreturn">
           <mutation name="draw triangle"/>
         </block>
-        <block type="controls_repeat_ext" inline="true">
+        <block type="controls_repeat_ext">
           <value name="TIMES">
             <block type="math_number">
               <title name="NUM">3</title>
@@ -120,7 +127,7 @@
         </block>
         <block type="pick_one">
           <statement name="PICK">
-            <block type="draw_turn" inline="true">
+            <block type="draw_turn">
               <title name="DIR">turnRight</title>
               <value name="VALUE">
                 <block type="math_number">
@@ -128,7 +135,7 @@
                 </block>
               </value>
               <next>
-                <block type="draw_turn" inline="true">
+                <block type="draw_turn">
                   <title name="DIR">turnLeft</title>
                   <value name="VALUE">
                     <block type="math_number">
@@ -147,7 +154,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn">
-              <mutation name="draw triangle"/>
+              <mutation name="draw a triangle"/>
             </block>
           </next>
         </block>
@@ -155,7 +162,7 @@
           <mutation>
             <description>draw a triangle</description>
           </mutation>
-          <title name="NAME">draw triangle</title>
+          <title name="NAME">draw a triangle</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true" uservisible="false">
               <value name="TIMES">

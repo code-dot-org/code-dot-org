@@ -7,8 +7,8 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Now, drag the code for the last triangle into a new loop to spin it around and make a snowflake!",
-    "markdown_instructions": "Did you know you can put loops inside of other loops to make them more powerful?  That's called making a \"nested loop\".\r\n\r\n___\r\n\r\nDrag the code for the last triangle into a new loop to spin it around and make a snowflake!\r\n\r\n*(You will need to spin it 6 times at 60 degrees to get this pattern.)*",
+    "short_instructions": "Now, drag the code for the last triangle into a new loop to spin it around and make a snowflake!",
+    "long_instructions": "Did you know you can put loops inside of other loops to make them more powerful?  That's called making a \"nested loop\".\r\n\r\n___\r\n\r\nDrag the code for the last triangle into a new loop to spin it around and make a snowflake!\r\n\r\n*(You will need to spin it 6 times at 60 degrees to get this pattern.)*",
     "instructions_important": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -14,9 +14,9 @@
   courses_data[:signedout] = @is_signed_out
   courses_data[:initialtipsdismissed] = current_user ? current_user.ui_tip_dismissed_teacher_courses : nil
   courses_data[:userid] = current_user.try(:id)
+  courses_data[:modernelementarycoursesavailable] = @modern_elementary_courses_available
 
   @page_title = @is_teacher ? I18n.t('courses_page.title_teacher') : I18n.t('courses_page.title_student')
-
 
 %link{:href=>'/shared/css/course-explorer.css', :rel=>'stylesheet'}
 
@@ -33,16 +33,5 @@
 
   #flashes
     = show_flashes.html_safe
-
-  .standalone-tools
-    %br/
-    .row
-      = render partial: 'shared/course_wide_block', locals: { id: "applab" }
-      = render partial: 'shared/course_wide_block', locals: { id: "widgets" }
-    %br/
-    .row
-      = render partial: 'shared/course_wide_block', locals: { id: "gamelab" }
-      = render partial: 'shared/course_wide_block', locals: { id: "weblab" }
-    %br/
 
 #courses-container

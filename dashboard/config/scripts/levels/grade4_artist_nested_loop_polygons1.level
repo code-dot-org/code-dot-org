@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "anna",
-    "instructions": "Loop this design 10 times. \r\n\r\nHow much do you have to turn each time you loop?",
+    "short_instructions": "Loop this design 10 times. \r\n\r\nHow much do you have to turn each time you loop?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -29,7 +29,7 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Loop this design 10 times. \r\n\r\nHow much do you have to turn each time you loop?",
+    "long_instructions": "Loop this design 10 times. \r\n\r\nHow much do you have to turn each time you loop?",
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"This design will loop 10 times over 360 degrees.\\n\\n**360 / 10 = ?**\",\r\n  \"hint_id\": \"4-5_Nested_Loops_7_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",

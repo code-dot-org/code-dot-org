@@ -3,25 +3,33 @@ require 'cdo/geocoder'
 require 'cdo/properties'
 require 'json'
 require 'securerandom'
+require 'active_support/core_ext/enumerable'
+require 'active_support/core_ext/object/deep_dup'
 
 class Tutorials
-  # The Tutorials pages used to source data from the tutorials and beyond_tutorials tables, which were imported from
-  # the GoogleDrive://Pegasus/Data/ HocTutorials and HocBeyondTutorials Google Sheets
-  # Those sheets have been ported to the "v3" Google Sheet format in the GoogleDrive://Pegasus/v3 folder
-  # and use datatype suffixes on the column names and have new table names to match the v3 convention:
-  #      cdo_tutorials and cdo_beyond_tutorials
-  # Prefix "cdo_" on the table name to use the new tables sourced from the new v3 Google Sheets
-  # and alias the database columns with names that have the datatype suffixes stripped off so that existing
-  # tutorial pages do not need to be modified to reference the new column names
+  # This class uses data from two GSheets:
+  #   GoogleDrive://Pegasus/v3/cdo-tutorials
+  #   GoogleDrive://Pegasus/v3/cdo-beyond-tutorials
+  # These sheets are in the "v3" Google Sheet format and use datatype suffixes on the column names,
+  # and map to tables in the database to match the v3 convention:
+  #   cdo_tutorials
+  #   cdo_beyond_tutorials
+  # We alias the database columns with names that have the datatype suffixes stripped off for
+  # backwards-compatibility with some existing tutorial pages
+  # Note: A tutorial can be present in the sheet but hidden by giving it the "do-not-show" tag.
   def initialize(table)
     @table = "cdo_#{table}".to_sym
     # create an alias for each column without the datatype suffix (alias "amidala_jarjar_s" as "amidala_jarjar")
-    @column_aliases = DB.schema(@table).map do |column|
-      db_column_name = column[0].to_s
-      column_alias = db_column_name.rindex('_').nil? ? db_column_name : db_column_name.rpartition('_')[0]
-      "#{db_column_name}___#{column_alias}".to_sym
+    @column_aliases = CDO.cache.fetch("Tutorials/#{@table}/column_aliases") do
+      DB.schema(@table).map do |column|
+        db_column_name = column[0].to_s
+        column_alias = db_column_name.rindex('_').nil? ? db_column_name : db_column_name.rpartition('_')[0]
+        "#{db_column_name}___#{column_alias}".to_sym
+      end
     end
-    @contents = DB[@table].select(*@column_aliases).all
+    @contents = CDO.cache.fetch("Tutorials/#{@table}/contents") do
+      DB[@table].select(*@column_aliases).all
+    end.deep_dup
   end
 
   # Returns an array of the tutorials.  Includes launch_url for each.
@@ -65,16 +73,14 @@ class Tutorials
 
   # return the first tutorial with a matching code
   def find_with_code(code)
-    # We have to use the new column name (which has datatype suffix) in where clause
-    # while aliasing the columns in the result set to match the old naming convention (no datatype suffix).
-    DB[@table].select(*@column_aliases).where(code_s: code).first
+    by_code = CDO.cache.fetch("Tutorials/#{@table}/by_code") {@contents.index_by {|row| row[:code]}}
+    by_code[code]
   end
 
   # return the first tutorial with a matching short code
   def find_with_short_code(short_code)
-    # We have to use the new column name (which has datatype suffix) in where clause
-    # while aliasing the columns in the result set to match the old naming convention (no datatype suffix).
-    DB[@table].select(*@column_aliases).where(short_code_s: short_code).first
+    by_short_code = CDO.cache.fetch("Tutorials/#{@table}/by_short_code") {@contents.index_by {|row| row[:short_code]}}
+    by_short_code[short_code]
   end
 end
 

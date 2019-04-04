@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "# Test Your Predictions\r\n\r\nIf you haven't already, **make a prediction for the output of each of the 4 programs**.\r\n\r\n# Do This\r\n\r\n* Put your predictions in the answer box below.\r\n* Run this program and examine the results.\r\n* Compare the results to your predictions.\r\n\r\n**With a partner talk through:**\r\n\r\n* Whether your predictions matched the output\r\n* Why you think you see the output you do\r\n* Any misconceptions you might need to avoid in the future.",
+    "long_instructions": "# Test Your Predictions\r\n\r\nIf you haven't already, **make a prediction for the output of each of the 4 programs**.\r\n\r\n# Do This\r\n\r\n* Put your predictions in the answer box below.\r\n* Run this program and examine the results.\r\n* Compare the results to your predictions.\r\n\r\n**With a partner talk through:**\r\n\r\n* Whether your predictions matched the output\r\n* Why you think you see the output you do\r\n* Any misconceptions you might need to avoid in the future.",
     "placeholder": "Put all four predictions here."
   },
   "published": true,

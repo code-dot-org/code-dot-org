@@ -1,7 +1,11 @@
 /** @file Upload button wrapping a hidden uploader component. */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import HiddenUploader from './HiddenUploader.jsx';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
+import Button from '../../templates/Button';
+import {assetButtonStyles} from './AddAssetButtonRow';
+import i18n from '@cdo/locale';
 
 /**
  * A file upload component.
@@ -38,15 +42,16 @@ export default class AssetUploader extends React.Component {
           onUploadDone={uploadDone}
           onUploadError={this.props.onUploadError}
         />
-        <button
+        <Button
           onClick={this.fileUploadClicked}
           className="share"
           id="upload-asset"
           disabled={!this.props.uploadsEnabled}
-        >
-          <i className="fa fa-upload" />
-          &nbsp;Upload File
-        </button>
+          icon="upload"
+          text={i18n.uploadFile()}
+          style={assetButtonStyles.button}
+          size="large"
+        />
       </span>
     );
   }

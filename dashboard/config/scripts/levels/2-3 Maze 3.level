@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,2,1,1,4,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Trace the path and lead me to the silly pig. Avoid TNT or feathers will fly!",
+    "short_instructions": "Trace the path and lead me to the silly pig. Avoid TNT or feathers will fly!",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",

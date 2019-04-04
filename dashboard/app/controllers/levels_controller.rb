@@ -6,10 +6,10 @@ EMPTY_XML = '<xml></xml>'.freeze
 class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
-  before_action :authenticate_user!, except: [:show, :embed_level]
-  before_action :require_levelbuilder_mode, except: [:show, :index, :embed_level]
-  load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_level]
-  check_authorization
+  before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
+  before_action :require_levelbuilder_mode, except: [:show, :index, :embed_level, :get_rubric]
+  load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_level, :get_rubric]
+  check_authorization except: [:get_rubric]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
@@ -40,6 +40,20 @@ class LevelsController < ApplicationController
 
   # GET /levels/1/edit
   def edit
+  end
+
+  # GET all the information for the mini rubric
+  def get_rubric
+    @level = Level.find_by(id: params[:level_id])
+    if @level.mini_rubric&.to_bool
+      render json: {
+        keyConcept: @level.rubric_key_concept,
+        exceeds: @level.rubric_exceeds,
+        meets: @level.rubric_meets,
+        approaches: @level.rubric_approaches,
+        noEvidence: @level.rubric_no_evidence
+      }
+    end
   end
 
   # Action for using blockly workspace as a toolbox/startblock editor.
@@ -100,6 +114,21 @@ class LevelsController < ApplicationController
     @level.properties[type] = blocks_xml
     @level.log_changes(current_user)
     @level.save!
+    render json: {redirect: level_url(@level)}
+  end
+
+  def update_properties
+    @level = Level.find(params[:level_id])
+    authorize! :update, @level
+
+    changes = JSON.parse(request.body.read)
+    changes.each do |key, value|
+      @level.properties[key] = value
+    end
+
+    @level.log_changes(current_user)
+    @level.save!
+
     render json: {redirect: level_url(@level)}
   end
 
@@ -171,7 +200,8 @@ class LevelsController < ApplicationController
   def new
     authorize! :create, Level
     if params.key? :type
-      @type_class = params[:type].constantize
+      @type_class = Level.descendants.find {|klass| klass.name == params[:type]}
+      raise "Level type '#{params[:type]}' not permitted" unless @type_class
       if @type_class == Artist
         @game = Game.custom_artist
       elsif @type_class <= Studio
@@ -270,6 +300,9 @@ class LevelsController < ApplicationController
       {contained_level_names: []},
       {examples: []},
       {reference_links: []},
+      {helper_libraries: []},
+      {block_pools: []},
+      {preload_asset_list: []},
       :map_reference,
 
       # Minecraft-specific
@@ -288,13 +321,18 @@ class LevelsController < ApplicationController
       :if_block_options,
       :place_block_options,
       :play_sound_options,
+      :helper_libraries,
+      :block_pools,
     ]
     multiselect_params.each do |param|
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array
     end
 
-    # Removes empty reference links which are autosaved as "" by the form
-    params[:level][:reference_links].delete_if {|link| link == ""} if params[:level][:reference_links]
+    # Reference links should be stored as an array.
+    if params[:level][:reference_links].is_a? String
+      params[:level][:reference_links] = params[:level][:reference_links].split("\r\n")
+      params[:level][:reference_links].delete_if(&:blank?)
+    end
 
     permitted_params.concat(Level.permitted_params)
     params[:level].permit(permitted_params)

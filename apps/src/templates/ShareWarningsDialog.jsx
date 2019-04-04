@@ -1,5 +1,6 @@
-import React, {PropTypes} from 'react';
-import color from "../util/color";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import color from '../util/color';
 import ShareWarnings from './ShareWarnings';
 
 const styles = {
@@ -16,7 +17,7 @@ const styles = {
     borderRadius: '4px',
     outline: 'none',
     padding: '20px',
-    zIndex: 1050, // based off of behavior in dashboard's dialog.js
+    zIndex: 1050 // based off of behavior in dashboard's dialog.js
     // width handle in render
   },
   overlay: {
@@ -34,17 +35,20 @@ const styles = {
 /**
  * Modal for our SharingWarnings.
  */
-const ShareWarningsDialog = React.createClass({
-  propTypes: {
+class ShareWarningsDialog extends Component {
+  static propTypes = {
     promptForAge: PropTypes.bool.isRequired,
     showStoreDataAlert: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
     handleTooYoung: PropTypes.func.isRequired
-  },
+  };
 
-  getInitialState() {
-    return { modalIsOpen: this.props.promptForAge || this.props.showStoreDataAlert };
-  },
+  constructor(props) {
+    super(props);
+    this.state = {
+      modalIsOpen: this.props.promptForAge || this.props.showStoreDataAlert
+    };
+  }
 
   componentDidMount() {
     // We didn't need to show our modal. Go through the close process so that
@@ -52,21 +56,21 @@ const ShareWarningsDialog = React.createClass({
     if (!this.state.modalIsOpen) {
       this.handleClose();
     }
-  },
+  }
 
-  handleTooYoung() {
+  handleTooYoung = () => {
     this.setState({modalIsOpen: false});
     this.props.handleTooYoung();
-  },
+  };
 
-  handleClose() {
+  handleClose = () => {
     this.setState({modalIsOpen: false});
     this.props.handleClose();
-  },
+  };
 
   render() {
     if (!this.state.modalIsOpen) {
-      return <div/>;
+      return <div />;
     }
 
     const mainStyle = {
@@ -76,7 +80,7 @@ const ShareWarningsDialog = React.createClass({
 
     return (
       <div>
-        <div style={styles.overlay}/>
+        <div style={styles.overlay} />
         <div style={mainStyle}>
           <ShareWarnings
             promptForAge={this.props.promptForAge}
@@ -88,6 +92,6 @@ const ShareWarningsDialog = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default ShareWarningsDialog;

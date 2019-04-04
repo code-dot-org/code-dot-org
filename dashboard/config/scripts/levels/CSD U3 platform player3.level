@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Player Interactions\r\n\r\nThe last part of making your game is programming the player interactions with the other sprites.  First, your player needs to land on the platforms.\r\n\r\n# Do This\r\n\r\n* Create a `playerLands` function and add it to the \"functions\" area of your code.\r\n* Inside the function, use the `collide` block so that your player can land on both the platforms.\r\n* Call the function inside the draw loop.\r\n* Run the code to test your function.\r\n",
+    "long_instructions": "# Player Interactions\r\n\r\nThe last part of making your game is programming the player interactions with the other sprites.  First, your player needs to land on the platforms.\r\n\r\n# Do This\r\n\r\n* Create a `playerLands` function and add it to the \"functions\" area of your code.\r\n* Inside the function, use the `collide` block so that your player can land on both the platforms.\r\n* Call the function inside the draw loop.\r\n* Run the code to test your function.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

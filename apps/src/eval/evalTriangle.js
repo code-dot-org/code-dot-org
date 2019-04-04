@@ -2,7 +2,7 @@ var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 require('../utils'); // Provides Function.prototype.inherits
 
-var EvalTriangle = function (edge, style, color) {
+var EvalTriangle = function(edge, style, color) {
   evalUtils.ensureNumber(edge);
   evalUtils.ensureStyle(style);
   evalUtils.ensureColor(color);
@@ -16,7 +16,7 @@ var EvalTriangle = function (edge, style, color) {
 EvalTriangle.inherits(EvalImage);
 module.exports = EvalTriangle;
 
-EvalTriangle.prototype.draw = function (parent) {
+EvalTriangle.prototype.draw = function(parent) {
   if (!this.element_) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'polygon');
     parent.appendChild(this.element_);
@@ -24,7 +24,7 @@ EvalTriangle.prototype.draw = function (parent) {
 
   // center at 0, 0 (allowing transforms to move it around)
   // the center is halfway between width, and a third of the way up the height
-  var height = Math.sqrt(3) / 2 * this.edge_;
+  var height = (Math.sqrt(3) / 2) * this.edge_;
 
   var bottomLeft = {
     x: -this.edge_ / 2,
@@ -38,13 +38,23 @@ EvalTriangle.prototype.draw = function (parent) {
 
   var top = {
     x: 0,
-    y: -height * 2 / 3
+    y: (-height * 2) / 3
   };
 
-  this.element_.setAttribute('points',
-    bottomLeft.x +',' + bottomLeft.y + ' ' +
-    bottomRight.x + ',' + bottomRight.y + ' ' +
-    top.x + ',' + top.y);
+  this.element_.setAttribute(
+    'points',
+    bottomLeft.x +
+      ',' +
+      bottomLeft.y +
+      ' ' +
+      bottomRight.x +
+      ',' +
+      bottomRight.y +
+      ' ' +
+      top.x +
+      ',' +
+      top.y
+  );
 
   EvalImage.prototype.draw.apply(this, arguments);
 };

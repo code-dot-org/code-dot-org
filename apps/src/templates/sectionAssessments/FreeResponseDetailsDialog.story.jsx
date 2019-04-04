@@ -13,8 +13,9 @@ export default storybook => {
             isDialogOpen={true}
             closeDialog={() => {}}
             questionAndAnswers={{
-              question: "Hello world. I display *markdown* questions in a dialog.",
-              answers: [],
+              question:
+                'Hello world. I display *markdown* questions in a dialog.',
+              answers: []
             }}
           />
         )

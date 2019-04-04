@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Free Response: Encoding Text",
-    "markdown_instructions": "Respond to this prompt or to another as directed by your teacher.\n\nDescribe the steps involved in getting a text message from an idea in your head to your friend's computer screen.\n",
+    "long_instructions": "Respond to this prompt or to another as directed by your teacher.\n\nDescribe the steps involved in getting a text message from an idea in your head to your friend's computer screen.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

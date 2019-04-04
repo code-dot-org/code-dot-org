@@ -56,7 +56,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "**Goal:** This is a blank App Lab project. Build whatever you like here! You also have a few more blocks you can try out if you like. Don't forget to share your work!",
+    "long_instructions": "**Goal:** This is a blank App Lab project. Build whatever you like here! You also have a few more blocks you can try out if you like. Don't forget to share your work!",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

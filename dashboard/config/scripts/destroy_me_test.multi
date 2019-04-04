@@ -1,0 +1,10 @@
+name 'destroy me test'
+wrong 'wrong answer'
+right 'right answer'
+wrong 'wrong answer2'
+right 'right answer2'
+type 'multi2'
+
+markdown <<MARKDOWN
+#md stuff
+MARKDOWN

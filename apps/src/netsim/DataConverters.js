@@ -28,7 +28,7 @@ var NetSimUtils = require('./NetSimUtils');
  * @param {string} abString
  * @returns {string}
  */
-exports.minifyAB = function (abString) {
+exports.minifyAB = function(abString) {
   return abString.replace(/[^AB]/gi, '').toUpperCase();
 };
 
@@ -40,10 +40,11 @@ exports.minifyAB = function (abString) {
  * @param {number} [offset] bit-offset for formatting effect; default 0.
  * @returns {string} formatted version
  */
-exports.formatAB = function (abString, chunkSize, offset) {
-  return exports.formatBinary(exports.abToBinary(abString), chunkSize, offset)
-      .replace(/0/g, 'A')
-      .replace(/1/g, 'B');
+exports.formatAB = function(abString, chunkSize, offset) {
+  return exports
+    .formatBinary(exports.abToBinary(abString), chunkSize, offset)
+    .replace(/0/g, 'A')
+    .replace(/1/g, 'B');
 };
 
 /**
@@ -51,7 +52,7 @@ exports.formatAB = function (abString, chunkSize, offset) {
  * @param {string} binaryString that may contain whitespace
  * @returns {string} binary string with no whitespace
  */
-exports.minifyBinary = function (binaryString) {
+exports.minifyBinary = function(binaryString) {
   return binaryString.replace(/[^01]/g, '');
 };
 
@@ -63,10 +64,10 @@ exports.minifyBinary = function (binaryString) {
  * @param {number} [offset] bit-offset for formatting effect; default 0.
  * @returns {string} pretty formatted binary string
  */
-exports.formatBinary = function (binaryString, chunkSize, offset) {
+exports.formatBinary = function(binaryString, chunkSize, offset) {
   offset = utils.valueOr(offset, 0);
   if (chunkSize <= 0) {
-    throw new RangeError("Parameter chunkSize must be greater than zero");
+    throw new RangeError('Parameter chunkSize must be greater than zero');
   }
 
   var binary = exports.minifyBinary(binaryString);
@@ -90,7 +91,7 @@ exports.formatBinary = function (binaryString, chunkSize, offset) {
  * @param {string} hexString
  * @returns {string}
  */
-exports.minifyHex = function (hexString) {
+exports.minifyHex = function(hexString) {
   return hexString.replace(/[^0-9A-F]/gi, '').toUpperCase();
 };
 
@@ -98,8 +99,10 @@ exports.minifyHex = function (hexString) {
  * Reduces all whitespace to single characters and strips non-digits.
  * @param decimalString
  */
-exports.minifyDecimal = function (decimalString) {
-  return decimalString.replace(/(^\s+|\s+$|[^0-9\s])/g, '').replace(/\s+/g, ' ');
+exports.minifyDecimal = function(decimalString) {
+  return decimalString
+    .replace(/(^\s+|\s+$|[^0-9\s])/g, '')
+    .replace(/\s+/g, ' ');
 };
 
 /**
@@ -110,10 +113,10 @@ exports.minifyDecimal = function (decimalString) {
  * @param {number} [offset] hex-digit-offset for formatting effect; default 0.
  * @returns {string} formatted hex
  */
-exports.formatHex = function (hexString, chunkSize, offset) {
+exports.formatHex = function(hexString, chunkSize, offset) {
   offset = utils.valueOr(offset, 0);
   if (chunkSize <= 0) {
-    throw new RangeError("Parameter chunkSize must be greater than zero");
+    throw new RangeError('Parameter chunkSize must be greater than zero');
   }
 
   // Don't format hex when the chunkSize doesn't align with hex characters.
@@ -144,7 +147,7 @@ exports.formatHex = function (hexString, chunkSize, offset) {
  * @param {string} decimalString
  * @returns {string} aligned decimal string
  */
-exports.alignDecimal = function (decimalString) {
+exports.alignDecimal = function(decimalString) {
   if (decimalString.replace(/\D/g, '') === '') {
     return '';
   }
@@ -152,7 +155,7 @@ exports.alignDecimal = function (decimalString) {
   var numbers = exports.minifyDecimal(decimalString).split(/\s+/);
 
   // Find the length of the longest number
-  var mostDigits = numbers.reduce(function (prev, cur) {
+  var mostDigits = numbers.reduce(function(prev, cur) {
     if (cur.length > prev) {
       return cur.length;
     }
@@ -161,10 +164,12 @@ exports.alignDecimal = function (decimalString) {
 
   var zeroPadding = '0'.repeat(mostDigits);
 
-  return numbers.map(function (numString) {
-    // Left-pad each number with non-breaking spaces up to max width.
-    return (zeroPadding + numString).slice(-mostDigits);
-  }).join(' ');
+  return numbers
+    .map(function(numString) {
+      // Left-pad each number with non-breaking spaces up to max width.
+      return (zeroPadding + numString).slice(-mostDigits);
+    })
+    .join(' ');
 };
 
 /**
@@ -173,7 +178,7 @@ exports.alignDecimal = function (decimalString) {
  * @param {string} abString
  * @returns {number}
  */
-exports.abToInt = function (abString) {
+exports.abToInt = function(abString) {
   return exports.binaryToInt(exports.abToBinary(abString));
 };
 
@@ -183,7 +188,7 @@ exports.abToInt = function (abString) {
  * @param {number} width
  * @returns {string}
  */
-exports.intToAB = function (num, width) {
+exports.intToAB = function(num, width) {
   return exports.binaryToAB(exports.intToBinary(num, width));
 };
 
@@ -192,8 +197,11 @@ exports.intToAB = function (num, width) {
  * @param {string} abString
  * @returns {string}
  */
-exports.abToBinary = function (abString) {
-  return exports.minifyAB(abString).replace(/A/g, '0').replace(/B/g, '1');
+exports.abToBinary = function(abString) {
+  return exports
+    .minifyAB(abString)
+    .replace(/A/g, '0')
+    .replace(/B/g, '1');
 };
 
 /**
@@ -201,8 +209,11 @@ exports.abToBinary = function (abString) {
  * @param {string} binaryString
  * @returns {string}
  */
-exports.binaryToAB = function (binaryString) {
-  return exports.minifyBinary(binaryString).replace(/0/g, 'A').replace(/1/g, 'B');
+exports.binaryToAB = function(binaryString) {
+  return exports
+    .minifyBinary(binaryString)
+    .replace(/0/g, 'A')
+    .replace(/1/g, 'B');
 };
 
 /**
@@ -210,13 +221,13 @@ exports.binaryToAB = function (binaryString) {
  * @param {string} binaryString
  * @returns {number}
  */
-exports.binaryToInt = function (binaryString) {
+exports.binaryToInt = function(binaryString) {
   return parseInt(exports.minifyBinary(binaryString), 2);
 };
 
-var intToString = function (int, base, width) {
+var intToString = function(int, base, width) {
   if (width <= 0) {
-    throw new RangeError("Output width must be greater than zero");
+    throw new RangeError('Output width must be greater than zero');
   }
   return NetSimUtils.zeroPadLeft(int.toString(base), width);
 };
@@ -227,7 +238,7 @@ var intToString = function (int, base, width) {
  * @param {number} width - number of bits to use
  * @returns {string} - binary representation with length of "width"
  */
-exports.intToBinary = function (int, width) {
+exports.intToBinary = function(int, width) {
   return intToString(int, 2, width);
 };
 
@@ -236,7 +247,7 @@ exports.intToBinary = function (int, width) {
  * @param hexadecimalString
  * @returns {Number}
  */
-exports.hexToInt = function (hexadecimalString) {
+exports.hexToInt = function(hexadecimalString) {
   return parseInt(exports.minifyHex(hexadecimalString), 16);
 };
 
@@ -247,7 +258,7 @@ exports.hexToInt = function (hexadecimalString) {
  * @param {number} width - number of characters to use
  * @returns {string} - hex representation with length of "width"
  */
-exports.intToHex = function (int, width) {
+exports.intToHex = function(int, width) {
   return intToString(int, 16, width).toUpperCase();
 };
 
@@ -257,7 +268,7 @@ exports.intToHex = function (int, width) {
  * @param {string} hexadecimalString
  * @returns {string} binary representation.
  */
-exports.hexToBinary = function (hexadecimalString) {
+exports.hexToBinary = function(hexadecimalString) {
   var uglyHex = exports.minifyHex(hexadecimalString);
   var binary = '';
 
@@ -274,14 +285,16 @@ exports.hexToBinary = function (hexadecimalString) {
  * @param {string} binaryString
  * @returns {string}
  */
-exports.binaryToHex = function (binaryString) {
+exports.binaryToHex = function(binaryString) {
   var currentNibble;
   var nibbleWidth = 4;
   var chars = [];
   var uglyBinary = exports.minifyBinary(binaryString);
   for (var i = 0; i < uglyBinary.length; i += nibbleWidth) {
     currentNibble = NetSimUtils.zeroPadRight(
-        uglyBinary.substr(i, nibbleWidth), nibbleWidth);
+      uglyBinary.substr(i, nibbleWidth),
+      nibbleWidth
+    );
     chars.push(exports.intToHex(exports.binaryToInt(currentNibble), 1));
   }
   return chars.join('');
@@ -294,18 +307,19 @@ exports.binaryToHex = function (binaryString) {
  * @param {number} byteSize - How many bits to use to represent each number.
  * @returns {string} Binary representation.
  */
-exports.decimalToBinary = function (decimalString, byteSize) {
+exports.decimalToBinary = function(decimalString, byteSize) {
   // Special case: No numbers
   if (decimalString.replace(/\D/g, '') === '') {
     return '';
   }
 
-  return exports.minifyDecimal(decimalString)
-      .split(/\s+/)
-      .map(function (numString) {
-        return exports.intToBinary(parseInt(numString, 10), byteSize);
-      })
-      .join('');
+  return exports
+    .minifyDecimal(decimalString)
+    .split(/\s+/)
+    .map(function(numString) {
+      return exports.intToBinary(parseInt(numString, 10), byteSize);
+    })
+    .join('');
 };
 
 /**
@@ -314,12 +328,15 @@ exports.decimalToBinary = function (decimalString, byteSize) {
  * @param {number} byteSize - How many bits to read for each number
  * @returns {string} decimal numbers
  */
-exports.binaryToDecimal = function (binaryString, byteSize) {
+exports.binaryToDecimal = function(binaryString, byteSize) {
   var currentByte;
   var numbers = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    currentByte = NetSimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
+    currentByte = NetSimUtils.zeroPadRight(
+      binary.substr(i, byteSize),
+      byteSize
+    );
     numbers.push(exports.binaryToInt(currentByte));
   }
   return numbers.join(' ');
@@ -333,7 +350,7 @@ exports.binaryToDecimal = function (binaryString, byteSize) {
  * @param {number} byteSize
  * @returns {string}
  */
-exports.asciiToBinary = function (asciiString, byteSize) {
+exports.asciiToBinary = function(asciiString, byteSize) {
   var bytes = [];
   for (var i = 0; i < asciiString.length; i++) {
     bytes.push(exports.intToBinary(asciiString.charCodeAt(i), byteSize));
@@ -349,16 +366,19 @@ exports.asciiToBinary = function (asciiString, byteSize) {
  * @param {number} byteSize
  * @returns {string} ASCII string
  */
-exports.binaryToAscii = function (binaryString, byteSize) {
+exports.binaryToAscii = function(binaryString, byteSize) {
   if (byteSize <= 0) {
-    throw new RangeError("Parameter byteSize must be greater than zero");
+    throw new RangeError('Parameter byteSize must be greater than zero');
   }
 
   var currentByte;
   var chars = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    currentByte = NetSimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
+    currentByte = NetSimUtils.zeroPadRight(
+      binary.substr(i, byteSize),
+      byteSize
+    );
     chars.push(String.fromCharCode(exports.binaryToInt(currentByte)));
   }
   return chars.join('');
@@ -384,19 +404,21 @@ exports.binaryToAscii = function (binaryString, byteSize) {
  * // returns { string: "kg==", len: 7 }
  * DataConverters.binaryToBase64("1001001");
  */
-exports.binaryToBase64 = function (binaryString) {
-
+exports.binaryToBase64 = function(binaryString) {
   if (/^[01]*$/.test(binaryString) === false) {
-    throw new TypeError("argument binaryString to method binaryToBase64" +
-      "must be a binary string; received \"" + binaryString + "\" instead");
+    throw new TypeError(
+      'argument binaryString to method binaryToBase64' +
+        'must be a binary string; received "' +
+        binaryString +
+        '" instead'
+    );
   }
 
-  var byteLen = Math.ceil(binaryString.length/8.0) * 8;
+  var byteLen = Math.ceil(binaryString.length / 8.0) * 8;
   var paddedBinaryString = NetSimUtils.zeroPadRight(binaryString, byteLen);
   var payload = window.btoa(exports.binaryToAscii(paddedBinaryString, 8));
 
-  return { string: payload, len: binaryString.length };
-
+  return {string: payload, len: binaryString.length};
 };
 
 /**
@@ -411,13 +433,15 @@ exports.binaryToBase64 = function (binaryString) {
  * // returns "1001001"
  * DataConverters.base64ToBinary("kg==", 7);
  */
-exports.base64ToBinary = function (base64string, len) {
+exports.base64ToBinary = function(base64string, len) {
   var decodedData;
   try {
     decodedData = window.atob(base64string);
   } catch (e) {
-    throw new TypeError("argument base64string to method base64ToBinary" +
-        "must be a base64-encoded string");
+    throw new TypeError(
+      'argument base64string to method base64ToBinary' +
+        'must be a base64-encoded string'
+    );
   }
   return exports.asciiToBinary(decodedData, 8).substr(0, len);
 };
@@ -428,7 +452,7 @@ exports.base64ToBinary = function (base64string, len) {
  * @param {AddressHeaderFormat} addressFormat
  * @returns {string}
  */
-exports.binaryToAddressString = function (binaryString, addressFormat) {
+exports.binaryToAddressString = function(binaryString, addressFormat) {
   var binary = exports.minifyBinary(binaryString);
   if (binary.length === 0) {
     return '';
@@ -438,20 +462,23 @@ exports.binaryToAddressString = function (binaryString, addressFormat) {
 
   // Parentheses in the split() regex cause the dividing elements to be captured
   // and also included in the return value.
-  return addressFormat.split(/(\D+)/).map(function (formatPart) {
-    var bitWidth = parseInt(formatPart, 10);
-    if (isNaN(bitWidth)) {
-      // Pass non-number parts of the format through, so we use the original
-      // entered characters/layout for formatting.
-      return formatPart;
-    }
+  return addressFormat
+    .split(/(\D+)/)
+    .map(function(formatPart) {
+      var bitWidth = parseInt(formatPart, 10);
+      if (isNaN(bitWidth)) {
+        // Pass non-number parts of the format through, so we use the original
+        // entered characters/layout for formatting.
+        return formatPart;
+      }
 
-    var binarySlice = binary.substr(indexIntoBinary, bitWidth);
-    var intVal = binarySlice.length > 0 ?
-        exports.binaryToInt(binarySlice) : 0;
-    indexIntoBinary += bitWidth;
-    return intVal.toString();
-  }).join('');
+      var binarySlice = binary.substr(indexIntoBinary, bitWidth);
+      var intVal =
+        binarySlice.length > 0 ? exports.binaryToInt(binarySlice) : 0;
+      indexIntoBinary += bitWidth;
+      return intVal.toString();
+    })
+    .join('');
 };
 
 /**
@@ -461,24 +488,31 @@ exports.binaryToAddressString = function (binaryString, addressFormat) {
  * @param {AddressHeaderFormat} addressFormat
  * @returns {string}
  */
-exports.addressStringToBinary = function (addressString, addressFormat) {
+exports.addressStringToBinary = function(addressString, addressFormat) {
   if (addressString.length === 0) {
     return '';
   }
 
   // Actual user input, converted to a number[]
-  var addressParts = addressString.toString().split(/\D+/).map(function (stringPart) {
-    return parseInt(stringPart, 10);
-  }).filter(function (numberPart) {
-    return !isNaN(numberPart);
-  });
+  var addressParts = addressString
+    .toString()
+    .split(/\D+/)
+    .map(function(stringPart) {
+      return parseInt(stringPart, 10);
+    })
+    .filter(function(numberPart) {
+      return !isNaN(numberPart);
+    });
 
   // Format, converted to a number[] where the numbers are bit-widths
-  var partWidths = addressFormat.split(/\D+/).map(function (stringPart) {
-    return parseInt(stringPart, 10);
-  }).filter(function (numberPart) {
-    return !isNaN(numberPart);
-  });
+  var partWidths = addressFormat
+    .split(/\D+/)
+    .map(function(stringPart) {
+      return parseInt(stringPart, 10);
+    })
+    .filter(function(numberPart) {
+      return !isNaN(numberPart);
+    });
 
   var partValue;
   var binary = '';
@@ -495,18 +529,21 @@ exports.addressStringToBinary = function (addressString, addressFormat) {
  * @param {string} binaryString
  * @param {AddressHeaderFormat} addressFormat
  */
-exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
+exports.formatBinaryForAddressHeader = function(binaryString, addressFormat) {
   var binary = exports.minifyBinary(binaryString);
 
-  var partWidths = addressFormat.split(/\D+/).map(function (stringPart) {
-    return parseInt(stringPart, 10);
-  }).filter(function (numberPart) {
-    return !isNaN(numberPart);
-  });
+  var partWidths = addressFormat
+    .split(/\D+/)
+    .map(function(stringPart) {
+      return parseInt(stringPart, 10);
+    })
+    .filter(function(numberPart) {
+      return !isNaN(numberPart);
+    });
 
   var chunks = [];
   var index = 0;
-  partWidths.forEach(function (bitWidth) {
+  partWidths.forEach(function(bitWidth) {
     var next = binary.substr(index, bitWidth);
     if (next.length > 0) {
       chunks.push(next);

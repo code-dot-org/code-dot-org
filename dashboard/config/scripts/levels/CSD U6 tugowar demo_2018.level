@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "markdown_instructions": "# Grab that Bug!\r\n\r\nThis is an example of a tug o' war game that could be built in this lesson. To play, pair up with another student. The student on the left will the click the left button on the Circuit Playground as fast as they can, while the student on the right clicks the right button. Whoever can get the bug over to their side first wins.",
+    "long_instructions": "# Grab that Bug!\r\n\r\nThis is an example of a tug o' war game that could be built in this lesson. To play, pair up with another student. The student on the left will the click the left button on the Circuit Playground as fast as they can, while the student on the right clicks the right button. Whoever can get the bug over to their side first wins.",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "var score = 0;\r\nvar starting_position = getProperty(\"bug\", \"x\");\r\n\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  score = score - 10;\r\n  setProperty(\"bug\", \"x\", starting_position + score);\r\n  if (score < -100) {\r\n    setProperty(\"winner\", \"text\", \"Player 1\");\r\n    setScreen(\"win_screen\");\r\n    buzzer.frequency(900, 1000);\r\n  }\r\n});\r\n\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  score = score + 10;\r\n  setProperty(\"bug\", \"x\", starting_position + score);\r\n  if (score > 100) {\r\n    setProperty(\"winner\", \"text\", \"Player 2\");\r\n    setScreen(\"win_screen\");\r\n    buzzer.frequency(200, 1000);\r\n  }\r\n});",

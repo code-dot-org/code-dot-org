@@ -60,7 +60,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Decrementing Variables\r\n\r\nIn last level we increased the value of our variable. Now what if we want to decrease it. Well you probably guessed it. Its just subtraction instead of addition!\r\n\r\nHint: You may find it easier to edit the code in Text Mode instead of Block Mode. Text Mode allows you to type code instead of dragging blocks out. It is very helpful for changing certain parts of your code and you should feel free to use it whenever you feel it helps you. You can always switch back to Block Mode at any point! You can find Text Mode by clicking <img src=\"https://images.code.org/8020c9f5f3766a2d82c2376d6df1b896-image-1444966181885.04.50 PM.png\" width=\"100px\"> in the upper right corner of the Code Workspace.\r\n\r\n# Do This\r\n\r\n* Update the program to decrement the value of the variable instead of increment.\r\n\r\n* Use console.log statements to check your work.",
+    "long_instructions": "# Decrementing Variables\r\n\r\nIn last level we increased the value of our variable. Now what if we want to decrease it. Well you probably guessed it. Its just subtraction instead of addition!\r\n\r\nHint: You may find it easier to edit the code in Text Mode instead of Block Mode. Text Mode allows you to type code instead of dragging blocks out. It is very helpful for changing certain parts of your code and you should feel free to use it whenever you feel it helps you. You can always switch back to Block Mode at any point! You can find Text Mode by clicking <img src=\"https://images.code.org/8020c9f5f3766a2d82c2376d6df1b896-image-1444966181885.04.50 PM.png\" width=\"100px\"> in the upper right corner of the Code Workspace.\r\n\r\n# Do This\r\n\r\n* Update the program to decrement the value of the variable instead of increment.\r\n\r\n* Use console.log statements to check your work.",
     "start_blocks": "var foo = 10;\r\nfoo = foo + 8;",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -88,7 +88,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Decrement the value of the variable. (Click to see full instructions)"
+    "short_instructions": "Decrement the value of the variable. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

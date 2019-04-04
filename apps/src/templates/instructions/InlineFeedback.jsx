@@ -1,16 +1,17 @@
 /* eslint-disable react/no-danger */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ChatBubble from './ChatBubble';
-import { convertXmlToBlockly } from './utils';
+import {convertXmlToBlockly} from './utils';
 
 class InlineFeedback extends Component {
   static propTypes = {
     borderColor: PropTypes.string,
     extra: PropTypes.string,
     message: PropTypes.string.isRequired,
-    styles: PropTypes.object,
+    styles: PropTypes.object
   };
 
   componentDidMount() {

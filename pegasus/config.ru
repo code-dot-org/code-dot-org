@@ -1,5 +1,16 @@
 require File.expand_path('../router', __FILE__)
 
+unless rack_env?(:development)
+  require 'cdo/app_server_metrics'
+  listener = CDO.pegasus_sock || "0.0.0.0:#{CDO.pegasus_port}"
+  use Cdo::AppServerMetrics,
+    listeners: [listener],
+    dimensions: {
+      Environment: CDO.rack_env,
+      Host: CDO.pegasus_hostname
+    }
+end
+
 require 'rack/csrf'
 use Rack::Session::Cookie, secret: (CDO.sinatra_session_secret || 'dev_mode')
 use Rack::Csrf, check_only: ['POST:/v2/poste/send-message']
@@ -17,7 +28,9 @@ use Rack::SslEnforcer,
 require 'varnish_environment'
 use VarnishEnvironment
 
-if rack_env?(:development)
+unless CDO.chef_managed
+  # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
+  # For other environments (development / CI), run the HTTP cache from Rack middleware.
   require 'cdo/rack/whitelist'
   require File.expand_path('../../cookbooks/cdo-varnish/libraries/http_cache', __FILE__)
   use Rack::Whitelist::Downstream,
@@ -34,6 +47,10 @@ if CDO.image_optim
   require 'cdo/rack/optimize'
   use Rack::Optimize
 end
+
+# Disable Sinatra auto-initialization.
+# Add Honeybadger::Rack::ErrorNotifier to Rack middleware directly.
+use Honeybadger::Rack::ErrorNotifier
 
 require 'files_api'
 use FilesApi

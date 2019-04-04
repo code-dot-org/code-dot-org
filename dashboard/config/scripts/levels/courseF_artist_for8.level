@@ -18,7 +18,7 @@
     "slider_speed": ".7",
     "ideal": "13",
     "use_modal_function_editor": "false",
-    "instructions": "Take the angle down to 72 degrees to get a spiraled pentagon.",
+    "short_instructions": "Take the angle down to 72 degrees to get a spiraled pentagon.",
     "use_contract_editor": "false",
     "embed": "false",
     "contract_highlight": "false",

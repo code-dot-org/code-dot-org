@@ -29,11 +29,11 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Pick all of the lettuce (only while there is some to pick.)",
+    "short_instructions": "Pick all of the lettuce (only while there is some to pick.)",
     "ideal": "7",
     "step_speed": "2",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Feel free to go back to the last puzzle if you need a reminder of how to pick produce only **while** there is produce to pick.\",\"hint_id\":\"courseE_farmer_ramp12a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5528b2d6b0fb27398f6c0dbfd23a0381/courseE_farmer_predict1.mp3\"}]",
-    "markdown_instructions": "Help the farmer walk the path to find all of the lettuce\r\n\r\nIn this puzzle, lettuce is growing at the end of every path.  If there is a path in front of her, the farmer can keep moving forward.  Otherwise, she needs to pick all of the lettuce, then turn to stay on the path. \r\n\r\n\r\n\r\n",
+    "long_instructions": "Help the farmer walk the path to find all of the lettuce\r\n\r\nIn this puzzle, lettuce is growing at the end of every path.  If there is a path in front of her, the farmer can keep moving forward.  Otherwise, she needs to pick all of the lettuce, then turn to stay on the path. \r\n\r\n\r\n\r\n",
     "shape_shift": "false",
     "contained_level_names": [
       "courseE_multi_farmer_predict1_2018"

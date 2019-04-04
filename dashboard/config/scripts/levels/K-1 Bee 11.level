@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "bee",
-    "instructions": "Get three nectar and then make one honey",
+    "short_instructions": "Get three nectar and then make one honey",
     "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "true",

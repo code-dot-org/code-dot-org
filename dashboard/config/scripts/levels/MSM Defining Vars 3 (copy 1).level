@@ -14,7 +14,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "false",
-    "instructions": "Take your \"my-shape\" variable and use it with this provided code to draw two identical green triangles."
+    "short_instructions": "Take your \"my-shape\" variable and use it with this provided code to draw two identical green triangles."
   }
 }]]></config>
   <blocks>

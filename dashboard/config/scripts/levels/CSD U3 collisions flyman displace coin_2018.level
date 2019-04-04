@@ -67,7 +67,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Flyer Game - Coin Behind the Obstacle\r\n\r\nRight now your coin is moving to random locations. That means sometimes it even will appear behind your obstacle, so your character can't get to it. Using sprite interactions you can fix this problem.\r\n\r\n# Do This\r\n\r\n* Add code to your game that prevents the coin from moving behind the obstacle. Don't be afraid to try out ideas just to see how they work.\r\n* Discuss with a neighbor: Which sprite interaction did you decide to use? Is there more than one sprite interaction that works the way you'd expect?",
+    "long_instructions": "# Flyer Game - Coin Behind the Obstacle\r\n\r\nRight now your coin is moving to random locations. That means sometimes it even will appear behind your obstacle, so your character can't get to it. Using sprite interactions you can fix this problem.\r\n\r\n# Do This\r\n\r\n* Add code to your game that prevents the coin from moving behind the obstacle. Don't be afraid to try out ideas just to see how they work.\r\n* Discuss with a neighbor: Which sprite interaction did you decide to use? Is there more than one sprite interaction that works the way you'd expect?",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",

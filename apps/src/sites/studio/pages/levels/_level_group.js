@@ -10,7 +10,8 @@ import i18n from '@cdo/locale';
 
 window.Multi = require('@cdo/apps/code-studio/levels/multi.js');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
-var saveAnswers = require('@cdo/apps/code-studio/levels/saveAnswers.js').saveAnswers;
+var saveAnswers = require('@cdo/apps/code-studio/levels/saveAnswers.js')
+  .saveAnswers;
 
 $(document).ready(() => {
   const levelData = getScriptData('levelData');
@@ -27,7 +28,6 @@ $(document).ready(() => {
 });
 
 function initLevelGroup(levelCount, currentPage, lastAttempt) {
-
   // Whenever an embedded level notifies us that the user has made a change,
   // check for any changes in the response set, and if so, attempt to save
   // these answers.  Saving is throttled to not occur more than once every 20
@@ -52,7 +52,10 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
       }
     }
     for (var subLevelId of levelIds) {
-      if (typeof subLevelIdChanged !== 'undefined' && subLevelIdChanged !== parseInt(subLevelId)) {
+      if (
+        typeof subLevelIdChanged !== 'undefined' &&
+        subLevelIdChanged !== parseInt(subLevelId)
+      ) {
         // Only one sublevel changed and this is not the one, so skip the post and
         // call the completion function immediately
         handleSublevelComplete();
@@ -60,9 +63,15 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
       }
       const subLevel = codeStudioLevels.getLevel(subLevelId);
       var subLevelResult = subLevel.getResult(true);
-      var response = encodeURIComponent(replaceEmoji(subLevelResult.response.toString()));
+      var response = encodeURIComponent(
+        replaceEmoji(subLevelResult.response.toString())
+      );
       var result = subLevelResult.result;
-      var testResult = subLevelResult.testResult ? subLevelResult.testResult : (result ? 100 : 0);
+      var testResult = subLevelResult.testResult
+        ? subLevelResult.testResult
+        : result
+        ? 100
+        : 0;
       var submitted = subLevelResult.submitted || false;
 
       window.dashboard.reporting.sendReport({
@@ -81,26 +90,23 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
     }
   }
 
-  var throttledSaveAnswers = throttle(
-    subLevelId => {
-      submitSublevelResults(saveAnswers, subLevelId);
-    }, 20 * 1000);
+  var throttledSaveAnswers = throttle(subLevelId => {
+    submitSublevelResults(saveAnswers, subLevelId);
+  }, 20 * 1000);
 
   var lastResponse = getAggregatedResults().response;
 
-  codeStudioLevels.registerAnswerChangedFn(
-    (levelId, saveThisAnswer) => {
-      // LevelGroup is only interested in changes that should result in a save
-      if (!saveThisAnswer) {
-        return;
-      }
-      const currentResponse = getAggregatedResults().response;
-      if (lastResponse !== currentResponse) {
-        throttledSaveAnswers(levelId);
-      }
-      lastResponse = currentResponse;
+  codeStudioLevels.registerAnswerChangedFn((levelId, saveThisAnswer) => {
+    // LevelGroup is only interested in changes that should result in a save
+    if (!saveThisAnswer) {
+      return;
     }
-  );
+    const currentResponse = getAggregatedResults().response;
+    if (lastResponse !== currentResponse) {
+      throttledSaveAnswers(levelId);
+    }
+    lastResponse = currentResponse;
+  });
 
   /**
    * Construct an array of all the level results. When submitted it's something
@@ -113,41 +119,48 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
   function getAggregatedResults() {
     // Add any new results to the existing lastAttempt results.
     const levelIds = codeStudioLevels.getLevelIds();
-    levelIds.forEach(function (levelId) {
+    levelIds.forEach(function(levelId) {
       const subLevel = codeStudioLevels.getLevel(levelId);
       const currentAnswer = subLevel.getResult(true);
       const levelResult = replaceEmoji(currentAnswer.response.toString());
       const valid = currentAnswer.valid;
+      const optional = subLevel.getOptional && subLevel.getOptional();
       lastAttempt[levelId] = {
         result: levelResult,
-        valid: valid
+        valid,
+        optional
       };
     });
 
-    var validCount = 0;
-    for (var level in lastAttempt) {
-      if (lastAttempt[level].valid) {
-        validCount ++;
+    let validCount = 0;
+    let requiredCount = 0;
+    for (let level in lastAttempt) {
+      if (!lastAttempt[level].optional) {
+        requiredCount++;
+        if (lastAttempt[level].valid) {
+          validCount++;
+        }
       }
     }
 
     let id, title, body;
-    const isSurvey = appOptions.level.anonymous === true ||
+    const isSurvey =
+      appOptions.level.anonymous === true ||
       appOptions.level.anonymous === 'true';
     title = isSurvey ? i18n.submitSurvey() : i18n.submitAssessment();
-    if (validCount === levelCount) {
-      id = "levelgroup-submit-complete-dialogcontent";
-      body = isSurvey ? i18n.submittableSurveyComplete() : i18n.submittableComplete();
+    if (validCount === requiredCount) {
+      id = 'levelgroup-submit-complete-dialogcontent';
+      body = isSurvey
+        ? i18n.submittableSurveyComplete()
+        : i18n.submittableComplete();
     } else {
-      id = "levelgroup-submit-incomplete-dialogcontent";
-      body = isSurvey ? i18n.submittableSurveyIncomplete() : i18n.submittableIncomplete();
+      id = 'levelgroup-submit-incomplete-dialogcontent';
+      body = isSurvey
+        ? i18n.submittableSurveyIncomplete()
+        : i18n.submittableIncomplete();
     }
     const confirmationDialog = (
-      <SingleLevelGroupDialog
-        id={id}
-        title={title}
-        body={body}
-      />
+      <SingleLevelGroupDialog id={id} title={title} body={body} />
     );
 
     return {
@@ -161,7 +174,10 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
 
   // Called by gotoPage when it's ready to actually change the page.
   function changePage(targetPage) {
-    var newLocation = window.location.href.replace("/page/" + currentPage, "/page/" + targetPage);
+    var newLocation = window.location.href.replace(
+      '/page/' + currentPage,
+      '/page/' + targetPage
+    );
     window.location.href = newLocation;
   }
 
@@ -194,22 +210,29 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
   //     using a surrogate pair, which is what we use to detect such characters.
   //
   function replaceEmoji(source) {
-    const blankCharacter = "\u25A1";
+    const blankCharacter = '\u25A1';
 
     // Build the range for the supplementary pair in a way that works with Babel
     // (which currently handles \u encoding in a string incorrectly).
     var range =
-      '[' + String.fromCharCode(0xD800) + '-' + String.fromCharCode(0xDBFF) + '][' +
-            String.fromCharCode(0xDC00) + '-' + String.fromCharCode(0xDFFF) + ']';
+      '[' +
+      String.fromCharCode(0xd800) +
+      '-' +
+      String.fromCharCode(0xdbff) +
+      '][' +
+      String.fromCharCode(0xdc00) +
+      '-' +
+      String.fromCharCode(0xdfff) +
+      ']';
 
     return source.replace(new RegExp(range, 'g'), blankCharacter);
   }
 
-  $(".nextPageButton").click(function (event) {
-    gotoPage(currentPage+1);
+  $('.nextPageButton').click(function(event) {
+    gotoPage(currentPage + 1);
   });
 
-  $(".previousPageButton").click(function (event) {
-    gotoPage(currentPage-1);
+  $('.previousPageButton').click(function(event) {
+    gotoPage(currentPage - 1);
   });
 }

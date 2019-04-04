@@ -10,7 +10,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[1,0,0,1,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,0,0,1,0,0,1,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Make Anna score a point when she touches a snowflake.  Then click \"Run\" and steer her to touch each snowflake once.",
+    "short_instructions": "Make Anna score a point when she touches a snowflake.  Then click \"Run\" and steer her to touch each snowflake once.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

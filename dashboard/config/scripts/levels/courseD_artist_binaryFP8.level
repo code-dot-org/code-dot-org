@@ -19,7 +19,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "instructions": "**Free Play:**  Draw whatever you want in binary! ",
+    "short_instructions": "**Free Play:**  Draw whatever you want in binary! ",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

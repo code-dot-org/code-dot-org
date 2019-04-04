@@ -1,5 +1,6 @@
 /** @file Button that can be active or inactive, for use inside ToggleGroup */
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import styles from './ToggleButtonStyles';
 
@@ -14,7 +15,7 @@ class ToggleButton extends Component {
     title: PropTypes.string,
     style: PropTypes.object,
     onClick: PropTypes.func,
-    children: PropTypes.node,
+    children: PropTypes.node
   };
 
   render() {
@@ -22,7 +23,7 @@ class ToggleButton extends Component {
       <button
         id={this.props.id}
         style={this.getStyle()}
-        className={"no-outline " + (this.props.className || "")}
+        className={'no-outline ' + (this.props.className || '')}
         title={this.props.title}
         onClick={this.props.onClick}
       >
@@ -32,7 +33,8 @@ class ToggleButton extends Component {
   }
 
   getStyle() {
-    return Object.assign({},
+    return Object.assign(
+      {},
       {
         ':focus': {
           outline: 'none'
@@ -41,10 +43,11 @@ class ToggleButton extends Component {
       styles.buttonStyle,
       styles.toggleButtonStyle,
       this.props.active ? styles.activeStyle : styles.inactiveStyle,
-      this.props.active && this.props.activeColor && {
-        backgroundColor: this.props.activeColor
-      },
-      this.props.first ? styles.firstButtonStyle: null,
+      this.props.active &&
+        this.props.activeColor && {
+          backgroundColor: this.props.activeColor
+        },
+      this.props.first ? styles.firstButtonStyle : null,
       this.props.last ? styles.lastButtonStyle : null,
       // used to override any style properties
       this.props.style

@@ -15,7 +15,7 @@
 #
 # See also: The Animation Library Tech Spec (requires login):
 # https://docs.google.com/document/d/18-LVuvKd0jKTUiGo5GYReUWM5oFWCyKRyEQURJ5HCOM/edit
-require 'aws-sdk'
+require 'aws-sdk-s3'
 require 'ruby-progressbar'
 require 'optparse'
 require 'parallel'

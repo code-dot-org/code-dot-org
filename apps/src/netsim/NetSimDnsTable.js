@@ -12,7 +12,7 @@ var DnsMode = require('./NetSimConstants').DnsMode;
  * @param {jQuery} rootDiv
  * @constructor
  */
-var NetSimDnsTable = module.exports = function (rootDiv) {
+var NetSimDnsTable = (module.exports = function(rootDiv) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -33,23 +33,25 @@ var NetSimDnsTable = module.exports = function (rootDiv) {
   this.addressTableData_ = [];
 
   this.render();
-};
+});
 
 /**
  * Fill the root div with new elements reflecting the current state
  */
-NetSimDnsTable.prototype.render = function () {
-  var renderedMarkup = $(markup({
-    dnsMode: this.dnsMode_,
-    tableData: this.addressTableData_
-  }));
+NetSimDnsTable.prototype.render = function() {
+  var renderedMarkup = $(
+    markup({
+      dnsMode: this.dnsMode_,
+      tableData: this.addressTableData_
+    })
+  );
   this.rootDiv_.html(renderedMarkup);
 };
 
 /**
  * @param {DnsMode} newDnsMode
  */
-NetSimDnsTable.prototype.setDnsMode = function (newDnsMode) {
+NetSimDnsTable.prototype.setDnsMode = function(newDnsMode) {
   this.dnsMode_ = newDnsMode;
   this.render();
 };
@@ -57,7 +59,7 @@ NetSimDnsTable.prototype.setDnsMode = function (newDnsMode) {
 /**
  * @param {Array} tableContents
  */
-NetSimDnsTable.prototype.setDnsTableContents = function (tableContents) {
+NetSimDnsTable.prototype.setDnsTableContents = function(tableContents) {
   this.addressTableData_ = tableContents;
   this.render();
 };

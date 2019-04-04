@@ -7,13 +7,13 @@ import $ from 'jquery';
  */
 
 export default {
-  app: "applab",
-  skinId: "applab",
-  levelFile: "levels",
-  levelId: "ec_simple",
+  app: 'applab',
+  skinId: 'applab',
+  levelFile: 'levels',
+  levelId: 'ec_simple',
   tests: [
     {
-      description: "startHtml is visible when levelHtml is absent",
+      description: 'startHtml is visible when levelHtml is absent',
       editCode: true,
       xml: '',
       startHtml: `
@@ -26,8 +26,12 @@ export default {
               id="label1">start html</label>
             </div>
           </div>`,
-      runBeforeClick: function (assert) {
-        assert.equal($('#divApplab label').text(), 'start html', 'divApplab contains startHtml');
+      runBeforeClick: function(assert) {
+        assert.equal(
+          $('#divApplab label').text(),
+          'start html',
+          'divApplab contains startHtml'
+        );
 
         Applab.onPuzzleComplete();
       },
@@ -38,7 +42,7 @@ export default {
     },
 
     {
-      description: "levelHtml overrides startHtml for normal levels",
+      description: 'levelHtml overrides startHtml for normal levels',
       editCode: true,
       xml: '',
       startHtml: `
@@ -61,8 +65,12 @@ export default {
               id="label1">level html</label>
             </div>
           </div>`,
-      runBeforeClick: function (assert) {
-        assert.equal($('#divApplab label').text(), 'level html', 'divApplab contains levelHtml');
+      runBeforeClick: function(assert) {
+        assert.equal(
+          $('#divApplab label').text(),
+          'level html',
+          'divApplab contains levelHtml'
+        );
 
         Applab.onPuzzleComplete();
       },
@@ -73,7 +81,7 @@ export default {
     },
 
     {
-      description: "levelHtml does not override startHtml for embedded levels",
+      description: 'levelHtml does not override startHtml for embedded levels',
       editCode: true,
       xml: '',
       startHtml: `
@@ -97,8 +105,12 @@ export default {
             </div>
           </div>`,
       embed: true,
-      runBeforeClick: function (assert) {
-        assert.equal($('#divApplab label').text(), 'start html', 'divApplab contains startHtml');
+      runBeforeClick: function(assert) {
+        assert.equal(
+          $('#divApplab label').text(),
+          'start html',
+          'divApplab contains startHtml'
+        );
 
         Applab.onPuzzleComplete();
       },
@@ -109,13 +121,17 @@ export default {
     },
 
     {
-      description: "start code visible when user code is absent",
+      description: 'start code visible when user code is absent',
       editCode: true,
       xml: "textLabel('id', 'start code');",
-      runBeforeClick: function (assert) {
+      runBeforeClick: function(assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 5, () => {
-          assert.equal($('#divApplab label').text(), 'start code', 'start code is visible');
+          assert.equal(
+            $('#divApplab label').text(),
+            'start code',
+            'start code is visible'
+          );
 
           Applab.onPuzzleComplete();
         });
@@ -133,14 +149,18 @@ export default {
     },
 
     {
-      description: "user code overrides start code for normal levels",
+      description: 'user code overrides start code for normal levels',
       editCode: true,
       xml: "textLabel('id', 'start code');",
       lastAttempt: "textLabel('id', 'user code');",
-      runBeforeClick: function (assert) {
+      runBeforeClick: function(assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 5, () => {
-          assert.equal($('#divApplab label').text(), 'user code', 'user code is visible');
+          assert.equal(
+            $('#divApplab label').text(),
+            'user code',
+            'user code is visible'
+          );
 
           Applab.onPuzzleComplete();
         });
@@ -158,15 +178,19 @@ export default {
     },
 
     {
-      description: "user code does not override start code for embedded levels",
+      description: 'user code does not override start code for embedded levels',
       editCode: true,
       xml: "textLabel('id', 'start code');",
       lastAttempt: "textLabel('id', 'user code');",
       embed: true,
-      runBeforeClick: function (assert) {
+      runBeforeClick: function(assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 5, () => {
-          assert.equal($('#divApplab label').text(), 'start code', 'start code is visible');
+          assert.equal(
+            $('#divApplab label').text(),
+            'start code',
+            'start code is visible'
+          );
 
           Applab.onPuzzleComplete();
         });
@@ -181,6 +205,6 @@ export default {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
-    },
+    }
   ]
 };

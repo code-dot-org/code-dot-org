@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "What do *you* think will happen? "
+    "long_instructions": "What do *you* think will happen? "
   },
   "published": true,
   "notes": "",

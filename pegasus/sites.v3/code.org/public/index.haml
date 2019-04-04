@@ -1,4 +1,5 @@
 ---
+title: "<%= I18n.t(:hoc2018_creativity_what_will_you_create) %>"
 theme: responsive_wide
 banner: null
 layout: wide
@@ -10,7 +11,6 @@ critical_font: true
 jquery: defer
 style_min: true
 ---
-%script{src: "https://cdn.optimizely.com/js/400912536.js"}
 =inline_css 'homepage.css'
 
 - cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
@@ -23,7 +23,9 @@ style_min: true
   = view :homepage_hero
 
   - if request.language == "en"
+    = view :curriculum_banner
     = view :homepage_below_hero_announcement
+    = view :homepage_below_hero_plane_banner
     = view :stats_homepage
   - else
     = view :homepage_below_hero_announcement

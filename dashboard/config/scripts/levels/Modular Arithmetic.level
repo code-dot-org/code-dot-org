@@ -9,7 +9,7 @@
     "link_title": "Cornell University - Cryptography and Modular Arithmetic",
     "url": "https://www.math.cornell.edu/~mec/2003-2004/cryptography/diffiehellman/diffiehellman.html",
     "callout_json": "[]",
-    "markdown_instructions": "# Modular Arithmetic\r\n\r\n\r\nThe modulo operation (which gives you the remainder of dividing two integers) is important in computer science and it turns out to be useful in many contexts including encryption. It’s actually not computationally intensive to compute a single modulo on a computer; it’s as fast as dividing two numbers. The commutative properties of modulo and numbers with large exponents were discovered to be the key ingredients for modern day asymmetric encryption.\r\n\r\n\r\nThe link below introduces the concept of modular arithmetic, and explains the Diffie-Hellman key exchange (described in lesson 7 using an analogy with Alice, Eve, and Bob)."
+    "long_instructions": "# Modular Arithmetic\r\n\r\n\r\nThe modulo operation (which gives you the remainder of dividing two integers) is important in computer science and it turns out to be useful in many contexts including encryption. It’s actually not computationally intensive to compute a single modulo on a computer; it’s as fast as dividing two numbers. The commutative properties of modulo and numbers with large exponents were discovered to be the key ingredients for modern day asymmetric encryption.\r\n\r\n\r\nThe link below introduces the concept of modular arithmetic, and explains the Diffie-Hellman key exchange (described in lesson 7 using an analogy with Alice, Eve, and Bob)."
   },
   "published": true,
   "notes": "",

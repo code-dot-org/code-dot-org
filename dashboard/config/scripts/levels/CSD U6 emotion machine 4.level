@@ -183,7 +183,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Add Another Emotion\r\n\r\nIn the example app you saw earlier, you could set the emotion to happy, sad, or meh. Your app only has happy and sad, can you add a third emotion?\r\n\r\n# Do This\r\n\r\nUsing all of the same techniques you used for the happy and sad buttons, create a third emotion button. You could stick with meh, or you could pick an emotion of your own.\r\n\r\nWhen you're all done, feel free to add more emotions or features before submitting your final version.",
+    "long_instructions": "# Add Another Emotion\r\n\r\nIn the example app you saw earlier, you could set the emotion to happy, sad, or meh. Your app only has happy and sad, can you add a third emotion?\r\n\r\n# Do This\r\n\r\nUsing all of the same techniques you used for the happy and sad buttons, create a third emotion button. You could stick with meh, or you could pick an emotion of your own.\r\n\r\nWhen you're all done, feel free to add more emotions or features before submitting your final version.",
     "instructions_important": "false",
     "submittable": "true",
     "is_k1": "false",

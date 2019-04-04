@@ -1,6 +1,6 @@
 require 'active_support/cache'
 require 'active_support/core_ext/object/blank'
-require 'honeybadger'
+require 'honeybadger/ruby'
 require 'dalli/elasticache'
 
 # Provide a long-lived, cross-instance shared cache.

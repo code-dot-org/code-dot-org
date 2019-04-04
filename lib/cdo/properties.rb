@@ -1,4 +1,5 @@
 require 'cdo/db'
+require 'cdo/cache'
 DB = PEGASUS_DB
 
 # A wrapper class around the PEGASUS_DB[:properties] table.
@@ -8,7 +9,9 @@ class Properties
   # @param key [String] the key to retrieve the value of.
   # @return [JSON] the value associated with key, nil if key does not exist.
   def self.get(key)
-    i = @@table.where(key: key.to_s).first
+    i = CDO.cache.fetch("properties/#{key}", expires_in: 60) do
+      @@table.where(key: key.to_s).first
+    end
     return nil unless i
     JSON.load(StringIO.new(i[:value]))
   end
@@ -18,6 +21,7 @@ class Properties
   # @return [String] the value parameter
   def self.set(key, value)
     key = key.to_s
+    CDO.cache.delete("properties/#{key}")
 
     i = @@table.where(key: key).first
     if i.nil?
@@ -32,6 +36,7 @@ class Properties
   # @param key [String] the key to delete.
   # @return [Integer] the number of rows deleted.
   def self.delete(key)
+    CDO.cache.delete("properties/#{key}")
     @@table.where(key: key).delete
   end
 
@@ -49,13 +54,23 @@ class Properties
 end
 
 def fetch_metrics
-  # Include stale default values as of 2017-06-21 so we never show 0. These
-  # would be used, for example, if the DB is unavailable.
-  Properties.get(:metrics) || {
+  # Include stale default values as of 2017-06-21 (project count from 2019-1-20) so we never show 0.
+  # Note that project_count might be nil due to analyze_hoc_activity, and so we delete nil values prior to the merge,
+  # so that the merge doesn't overwrite our human-readable defaults with nil.
+  {
     'created_at' => '2017-06-21T14:46:25+00:00',
     'created_on' => 'created_on"=>"2017-06-21',
     'petition_signatures' => 1_774_817,
-    'lines_of_code' => 21_238_497_830
+    'lines_of_code' => 21_238_497_830,
+    'project_count' => 35_000_000
+  }.merge((Properties.get(:metrics) || {}).delete_if {|_, v| v.nil? || v == 0})
+end
+
+def fetch_project_count
+  current_project_count = fetch_metrics['project_count']
+  {
+    'total_projects' => current_project_count,
+    'rounded_down_millions' => (current_project_count / 1_000_000).floor
   }
 end
 

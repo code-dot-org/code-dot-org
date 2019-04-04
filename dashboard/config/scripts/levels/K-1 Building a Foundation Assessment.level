@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Build a three level pyramid, there are no other directions, so just play with the pieces until you get it!",
+    "short_instructions": "Build a three level pyramid, there are no other directions, so just play with the pieces until you get it!",
     "is_k1": "true",
     "skip_instructions_popup": "true",
     "x": "75",

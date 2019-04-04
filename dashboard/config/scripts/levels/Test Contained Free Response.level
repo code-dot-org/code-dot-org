@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 4,
   "properties": {
-    "markdown_instructions": "My free response markdown instructions",
+    "long_instructions": "My free response markdown instructions",
     "submittable": "false",
     "title": "Test Contained Free Response Title",
     "height": "50",

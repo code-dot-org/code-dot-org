@@ -76,6 +76,9 @@ class Blockly < Level
     show_type_hints
     thumbnail_url
     include_shared_functions
+    preload_asset_list
+    skip_autosave
+    skip_run_save
   )
 
   before_save :update_ideal_level_source
@@ -114,13 +117,22 @@ class Blockly < Level
     super(level_hash.tap {|hash| hash['properties'].except!(*xml_blocks)})
   end
 
-  before_save :update_contained_levels
+  before_validation :update_contained_levels
 
   def update_contained_levels
     contained_level_names = properties["contained_level_names"]
     contained_level_names.try(:delete_if, &:blank?)
     contained_level_names = nil unless contained_level_names.try(:present?)
     properties["contained_level_names"] = contained_level_names
+  end
+
+  before_save :update_preload_asset_list
+
+  def update_preload_asset_list
+    preload_asset_list = properties["preload_asset_list"]
+    preload_asset_list.try(:delete_if, &:blank?)
+    preload_asset_list = nil unless preload_asset_list.try(:present?)
+    properties["preload_asset_list"] = preload_asset_list
   end
 
   before_validation do
@@ -255,6 +267,58 @@ class Blockly < Level
     options.freeze
   end
 
+  # simple helper to set the given key and value on the given hash unless the
+  # value is nil, used to set localized versions of level options without
+  # calling the localization methods twice
+  def set_unless_nil(hash, key, value)
+    hash[key] = value unless value.nil?
+  end
+
+  def localized_blockly_level_options(script)
+    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options", force: !Script.should_cache?) do
+      level_options = blockly_level_options.dup
+
+      # For historical reasons, `localized_instructions` and
+      # `localized_authored_hints` should happen independent of `should_localize?`
+      set_unless_nil(level_options, 'shortInstructions', localized_short_instructions)
+      set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
+
+      if should_localize?
+        set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
+
+        if script && !script.localize_long_instructions?
+          level_options.delete('longInstructions')
+        else
+          set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
+        end
+        set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
+
+        # Unintuitively, it is completely possible for a Blockly level to use
+        # Droplet, so we need to confirm the editor style before assuming that
+        # these fields contain Blockly xml.
+        unless uses_droplet?
+          set_unless_nil(level_options, 'toolbox', Blockly.localize_toolbox_blocks(level_options['toolbox']))
+
+          %w(
+            initializationBlocks
+            startBlocks
+            toolbox
+            levelBuilderRequiredBlocks
+            levelBuilderRecommendedBlocks
+            solutionBlocks
+          ).each do |xml_block_prop|
+            next unless level_options.key? xml_block_prop
+            set_unless_nil(level_options, xml_block_prop, Blockly.localize_function_blocks(level_options[xml_block_prop]))
+          end
+        end
+      end
+
+      level_options
+    end
+
+    options.freeze
+  end
+
   # Return a Blockly-formatted 'appOptions' hash derived from the level contents
   def blockly_level_options
     options = Rails.cache.fetch("#{cache_key}/blockly_level_options/v2") do
@@ -292,7 +356,7 @@ class Blockly < Level
           default_toolbox_blocks
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
         level_prop['sharedBlocks'] = shared_blocks
-        level_prop['sharedFunctions'] = shared_functions if include_shared_functions
+        level_prop['sharedFunctions'] = shared_functions if JSONValue.value(include_shared_functions)
       end
 
       if is_a? Applab
@@ -344,13 +408,22 @@ class Blockly < Level
     options.freeze
   end
 
-  # @param resolve [Boolean] if true (default), localize property using I18n#t.
-  #   if false, just return computed property key directly.
-  def get_localized_property(property_name, resolve: true)
+  # @param extra_identifier [Boolean] we for some reason use the property name
+  #   twice in the internationalization key: once pluralized as a category name,
+  #   and once again singularized as an addition to the level name itself. This
+  #   is unnecessary, so we are gradually removing the extra key. If this is
+  #   true, keep the extra key in. If false, exclude it. TODO elijah: remove all
+  #   instances of this extra key and then this property.
+  def get_localized_property(property_name, extra_identifier: true)
     if should_localize? && try(property_name)
-      key = "data.#{property_name.pluralize}.#{name}_#{property_name.singularize}"
-      return key unless resolve
-      I18n.t(key, default: nil)
+      key = name
+      key += "_#{property_name.singularize}" if extra_identifier
+      I18n.t(
+        key,
+        scope: [:data, property_name.pluralize],
+        default: nil,
+        smart: true
+      )
     end
   end
 
@@ -358,23 +431,22 @@ class Blockly < Level
     get_localized_property("failure_message_overrides")
   end
 
-  def localized_markdown_instructions
-    get_localized_property("markdown_instructions")
+  def localized_long_instructions
+    get_localized_property("long_instructions", extra_identifier: false)
   end
 
   def localized_authored_hints
     return unless authored_hints
 
     if should_localize?
-      authored_hints_key = get_localized_property("authored_hints", resolve: false)
-
-      return unless authored_hints_key
+      scope = [:data, :authored_hints, "#{name}_authored_hint"]
 
       localized_hints = JSON.parse(authored_hints).map do |hint|
-        next if hint['hint_markdown'].nil? || hint['hint_id'].nil?
+        # Skip empty hints, or hints with videos (these aren't translated).
+        next if hint['hint_markdown'].nil? || hint['hint_id'].nil? || hint['hint_video'].present?
 
         translated_text = hint['hint_id'].empty? ? nil :
-          I18n.t(hint['hint_id'], scope: authored_hints_key, default: nil)
+          I18n.t(hint['hint_id'], scope: scope, default: nil, smart: true)
         original_text = hint['hint_markdown']
 
         if !translated_text.nil? && translated_text != original_text
@@ -384,11 +456,11 @@ class Blockly < Level
 
         hint
       end
-      JSON.generate(localized_hints)
+      JSON.generate(localized_hints.compact)
     else
       hints = JSON.parse(authored_hints).map do |hint|
         if hint['hint_video'].present?
-          hint['hint_video'] = Video.find_by_key(hint['hint_video']).summarize
+          hint['hint_video'] = Video.current_locale.find_by_key(hint['hint_video']).summarize
         end
         hint
       end
@@ -396,9 +468,9 @@ class Blockly < Level
     end
   end
 
-  def localized_instructions
+  def localized_short_instructions
     if custom?
-      loc_val = get_localized_property("instructions")
+      loc_val = get_localized_property("short_instructions", extra_identifier: false)
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
@@ -410,16 +482,35 @@ class Blockly < Level
     end
   end
 
-  def localized_toolbox_blocks
-    if should_localize? && toolbox_blocks
-      block_xml = Nokogiri::XML(toolbox_blocks, &:noblanks)
-      block_xml.xpath('//../category').each do |category|
-        name = category.attr('name')
-        localized_name = I18n.t("data.block_categories.#{name}", default: nil)
-        category.set_attribute('name', localized_name) if localized_name
-      end
-      return block_xml.serialize(save_with: XML_OPTIONS).strip
+  def self.localize_toolbox_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = Nokogiri::XML(localize_function_blocks(blocks), &:noblanks)
+    block_xml.xpath('//../category').each do |category|
+      name = category.attr('name')
+      localized_name = I18n.t("data.block_categories.#{name}", default: nil)
+      category.set_attribute('name', localized_name) if localized_name
     end
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  def self.localize_function_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    block_xml.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
+      name = function.at_xpath('./title[@name="NAME"]')
+      next unless name
+      localized_name = I18n.t("data.function_names.#{name.content}", default: nil)
+      name.content = localized_name if localized_name
+    end
+    block_xml.xpath("//block[@type=\"procedures_callnoreturn\"]").each do |function|
+      mutation = function.at_xpath('./mutation')
+      next unless mutation
+      localized_name = I18n.t("data.function_names.#{mutation.attr('name')}", default: nil)
+      mutation.set_attribute('name', localized_name) if localized_name
+    end
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
   def self.base_url
@@ -470,5 +561,48 @@ class Blockly < Level
     Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
       SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
     end.join
+  end
+
+  # Display translated custom block text and options
+  def localized_shared_blocks(level_objects)
+    return nil if level_objects.blank?
+
+    level_objects_copy = level_objects.deep_dup
+    level_objects_copy.each do |level_object|
+      next if level_object.blank?
+      block_text = level_object[:config]["blockText"]
+      next if block_text.blank?
+      block_text_translation = I18n.t(
+        "text",
+        scope: [:data, :blocks, level_object[:name]],
+        default: nil,
+        smart: true
+      )
+      level_object[:config]["blockText"] = block_text_translation unless block_text_translation.nil?
+      arguments = level_object[:config]["args"]
+      next if arguments.blank?
+      arguments.each do |argument|
+        next if argument["options"].blank?
+        argument["options"]&.each_with_index do |option, i|
+          # Options come in arrays representing key,value pairs, which will
+          # ultimately determine the display of the dropdown.
+          # When only one element is in the array, it represents both the key
+          # and the value.
+          option_value = option.length > 1 ? option[1] : option[0]
+
+          # Get the translation from the value
+          option_translation = I18n.t(
+            option_value,
+            scope: [:data, :blocks, level_object[:name], :options, argument['name']],
+            default: nil,
+            smart: true
+          )
+          # Update the key (the first element) with the new translated value
+          argument["options"][i][0] = option_translation unless option_translation.nil?
+        end
+      end
+      level_object[:config]["args"] = arguments
+    end
+    level_objects_copy
   end
 end

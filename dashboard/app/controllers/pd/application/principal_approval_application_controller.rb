@@ -1,5 +1,8 @@
 module Pd::Application
   class PrincipalApprovalApplicationController < ApplicationController
+    include ApplicationConstants
+    include ActiveApplicationModels
+
     def new
       # Temporary security settings
       # TODO: Mehal - remove this and associated Gatekeeper key after going to prod
@@ -7,7 +10,7 @@ module Pd::Application
         return render :not_available
       end
 
-      teacher_application = Pd::Application::Teacher1819Application.find_by(application_guid: params[:application_guid])
+      teacher_application = TEACHER_APPLICATION_CLASS.find_by(application_guid: params[:application_guid])
 
       return render :not_found unless teacher_application
 
@@ -20,19 +23,31 @@ module Pd::Application
         principal_first_name: application_hash[:principal_first_name],
         principal_last_name: application_hash[:principal_last_name],
         principal_title: application_hash[:principal_title],
-        principal_email: application_hash[:principal_email]
+        principal_email: application_hash[:principal_email],
+        school_id: teacher_application.school_id,
+        school_zip_code: School.find_by_id(teacher_application.school_id)&.zip
       }
 
-      if Pd::Application::PrincipalApproval1819Application.exists?(application_guid: params[:application_guid])
+      # Return submitted if the approval exists and is not a placeholder
+      # Rather annoyingly, we can't say "unless existing_approval&.placeholder?" because
+      # if there is no approval, (handling legacy case and proper fallback behavior
+      # in case we fail to create placeholders) we'd be rendering submitted
+      existing_approval = PRINCIPAL_APPROVAL_APPLICATION_CLASS.find_by(application_guid: params[:application_guid])
+      if existing_approval && !existing_approval.placeholder?
         return render :submitted
       end
 
+      @teacher_application_school_stats = Api::V1::Pd::ApplicationSerializer.new(
+        teacher_application
+      ).school_stats.transform_values {|v| v.to_i.to_s}
+
       @script_data = {
         props: {
-          options: PrincipalApproval1819Application.options.camelize_keys,
-          requiredFields: PrincipalApproval1819Application.camelize_required_fields,
+          options: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options.camelize_keys,
+          requiredFields: PRINCIPAL_APPROVAL_APPLICATION_CLASS.camelize_required_fields,
           apiEndpoint: '/api/v1/pd/application/principal_approval',
-          teacherApplication: @teacher_application
+          teacherApplication: @teacher_application,
+          teacherApplicationSchoolStats: @teacher_application_school_stats
         }.to_json
       }
     end

@@ -1,13 +1,15 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
+import MigrateToMultiAuth from '@cdo/apps/lib/ui/accounts/MigrateToMultiAuth';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
 import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLinkedAccountsController';
 import DeleteAccount from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import experiments from '@cdo/apps/util/experiments';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -20,10 +22,24 @@ const {
   isGoogleClassroomStudent,
   isCleverStudent,
   dependedUponForLogin,
-  studentCount,
+  dependentStudents,
+  studentCount
 } = scriptData;
 
 $(document).ready(() => {
+  const migrateMultiAuthMountPoint = document.getElementById(
+    'migrate-multi-auth'
+  );
+  if (migrateMultiAuthMountPoint) {
+    const store = getStore();
+    ReactDOM.render(
+      <Provider store={store}>
+        <MigrateToMultiAuth />
+      </Provider>,
+      migrateMultiAuthMountPoint
+    );
+  }
+
   new ChangeEmailController({
     form: $('#change-email-modal-form'),
     link: $('#edit-email-link'),
@@ -31,44 +47,41 @@ $(document).ready(() => {
     userAge,
     userType,
     isPasswordRequired,
-    emailChangedCallback: onEmailChanged,
+    emailChangedCallback: onEmailChanged
   });
 
-  new ChangeUserTypeController(
-    $('#change-user-type-modal-form'),
-    userType,
-  );
+  new ChangeUserTypeController($('#change-user-type-modal-form'), userType);
 
   const addPasswordMountPoint = document.getElementById('add-password-fields');
   if (addPasswordMountPoint) {
     new AddPasswordController($('#add-password-form'), addPasswordMountPoint);
   }
 
-  const manageLinkedAccountsMountPoint = document.getElementById('manage-linked-accounts');
+  const manageLinkedAccountsMountPoint = document.getElementById(
+    'manage-linked-accounts'
+  );
   if (manageLinkedAccountsMountPoint) {
     new ManageLinkedAccountsController(
       manageLinkedAccountsMountPoint,
       authenticationOptions,
       isPasswordRequired,
       isGoogleClassroomStudent,
-      isCleverStudent,
+      isCleverStudent
     );
   }
 
-  if (experiments.isEnabled(experiments.ACCOUNT_DELETION_NEW_FLOW)) {
-    const deleteAccountMountPoint = document.getElementById('delete-account');
-    // Replace deleteAccountMountPoint Rails contents with DeleteAccount component.
-    if (deleteAccountMountPoint) {
-      ReactDOM.render(
-        <DeleteAccount
-          isPasswordRequired={isPasswordRequired}
-          isTeacher={userType === 'teacher'}
-          dependedUponForLogin={dependedUponForLogin}
-          hasStudents={studentCount > 0}
-        />,
-        deleteAccountMountPoint
-      );
-    }
+  const deleteAccountMountPoint = document.getElementById('delete-account');
+  if (deleteAccountMountPoint) {
+    ReactDOM.render(
+      <DeleteAccount
+        isPasswordRequired={isPasswordRequired}
+        isTeacher={userType === 'teacher'}
+        dependedUponForLogin={dependedUponForLogin}
+        dependentStudents={dependentStudents}
+        hasStudents={studentCount > 0}
+      />,
+      deleteAccountMountPoint
+    );
   }
 
   initializeCreatePersonalAccountControls();
@@ -83,7 +96,7 @@ function onEmailChanged(newEmail, newHashedEmail) {
 }
 
 function initializeCreatePersonalAccountControls() {
-  $( "#edit_user_create_personal_account" ).on("submit", function (e) {
+  $('#edit_user_create_personal_account').on('submit', function(e) {
     if ($('#create_personal_user_email').length) {
       window.dashboard.hashEmail({
         email_selector: '#create_personal_user_email',

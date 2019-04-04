@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Climb the vine and see where it goes?",
+    "short_instructions": "Climb the vine and see where it goes?",
     "x": "375",
     "y": "375",
     "start_direction": "270",
@@ -35,7 +35,7 @@
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/bd4e1ddff37c5efbbbb00dff166948e2-image-1478588910222.png\", \"position\": [0,0]}\r\n]",
-    "markdown_instructions": "Behind the bushes there is a beautiful vine full of flowers.  Can you climb the vine and see where it goes?",
+    "long_instructions": "Behind the bushes there is a beautiful vine full of flowers.  Can you climb the vine and see where it goes?",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",

@@ -1,0 +1,28 @@
+name 'AP_practice_Qs_rqb_81_CSP_3_3_1'
+wrong 'I only'
+right 'I and II only'
+wrong 'II only'
+wrong 'I, II and III'
+markdown <<MARKDOWN
+Which of the following would be considered lossless compression of an image?
+
+I. compress the image in a zip file
+II. reducing the RGB values of every pixel in an image by 50%
+III. resize an image from 1000x800 pixels to 250x200 pixels
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **3.3.1** and Essential Knowledge statements: **3.3.1D**
+<hr>
+ (A) This is partially correct. Another one of the options is also correct.
+
+<hr>
+ (B) This is the correct answer.
+
+<hr>
+ (C) This is partially correct. Another one of the options is also correct.
+
+<hr>
+ (D) This includes an incorrect option: when an image is resized to a smaller number of pixels, some information is necessarily lost and there is no way to reconstruct the original image
+
+MARKDOWN

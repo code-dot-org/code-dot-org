@@ -1,6 +1,7 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import color from "../util/color";
+import color from '../util/color';
 import AgeDropdown from './AgeDropdown';
 import commonMsg from '@cdo/locale';
 
@@ -10,7 +11,7 @@ const styles = {
     width: 220,
     height: 30,
     lineHeight: '30px',
-    marginBottom: 10,
+    marginBottom: 10
   },
   dataMessage: {
     fontSize: 18,
@@ -18,7 +19,7 @@ const styles = {
     marginBottom: 30
   },
   dataMessageHighlight: {
-    backgroundColor: 'yellow',
+    backgroundColor: 'yellow'
   },
   ageMessage: {
     fontSize: 18,
@@ -37,19 +38,19 @@ const styles = {
 };
 
 /**
- * Dialog contents for when you visit a shred Applab page. If not signed in,
+ * Dialog contents for when you visit a shared Applab page. If not signed in,
  * it will ask your age. If the app stores data, it will also alert you to
  * that.
  */
-const ShareWarnings = React.createClass({
-  propTypes: {
+class ShareWarnings extends Component {
+  static propTypes = {
     promptForAge: PropTypes.bool.isRequired,
     showStoreDataAlert: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
     handleTooYoung: PropTypes.func.isRequired
-  },
+  };
 
-  handleOk() {
+  handleOk = () => {
     if (!this.props.promptForAge) {
       this.props.handleClose();
       return;
@@ -67,12 +68,12 @@ const ShareWarnings = React.createClass({
     } else {
       this.props.handleTooYoung();
     }
-  },
+  };
 
   render() {
     return (
       <div>
-        {this.props.showStoreDataAlert &&
+        {this.props.showStoreDataAlert && (
           <div style={styles.dataMessage}>
             {commonMsg.shareWarningsStoreDataBeforeHighlight()}
             <span style={styles.dataMessageHighlight}>
@@ -80,20 +81,28 @@ const ShareWarnings = React.createClass({
             </span>
             {commonMsg.shareWarningsStoreDataAfterHighlight()}
           </div>
-        }
-        {this.props.promptForAge &&
+        )}
+        {this.props.promptForAge && (
           <div>
             <div style={styles.ageMessage}>{commonMsg.shareWarningsAge()}</div>
-            <AgeDropdown style={styles.ageDropdown} ref="age"/>
+            <AgeDropdown style={styles.ageDropdown} ref="age" />
           </div>
-        }
+        )}
         <div>
-          <a style={styles.moreInfo} target="_blank" href="https://code.org/privacy">{commonMsg.shareWarningsMoreInfo()}</a>
-          <button style={styles.ok} onClick={this.handleOk}>{commonMsg.dialogOK()}</button>
+          <a
+            style={styles.moreInfo}
+            target="_blank"
+            href="https://code.org/privacy"
+          >
+            {commonMsg.shareWarningsMoreInfo()}
+          </a>
+          <button style={styles.ok} onClick={this.handleOk}>
+            {commonMsg.dialogOK()}
+          </button>
         </div>
       </div>
     );
   }
-});
+}
 
 export default ShareWarnings;

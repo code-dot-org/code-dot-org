@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 import color from '../../../util/color';
 import ChangeEmailModal from './ChangeEmailModal';
 import {hashEmail} from '../../../code-studio/hashEmail';
@@ -29,8 +29,15 @@ export default class ChangeEmailController {
    * @param {boolean} isPasswordRequired
    * @param {function(newEmail:string, newHashedEmail:string, emailOptIn:string)} emailChangedCallback
    */
-  constructor({form, link, displayedUserEmail, userAge, userType, isPasswordRequired,
-    emailChangedCallback}) {
+  constructor({
+    form,
+    link,
+    displayedUserEmail,
+    userAge,
+    userType,
+    isPasswordRequired,
+    emailChangedCallback
+  }) {
     this.form = form;
     this.displayedUserEmail = displayedUserEmail;
     this.userAge = userAge;
@@ -45,11 +52,11 @@ export default class ChangeEmailController {
       return; // Idempotent show
     }
 
-    const userHashedEmail = this.form.find('#change-email-modal_user_hashed_email').val();
-    const handleSubmit = (values) => (
-      this.submitEmailChange(values)
-        .then(this.onEmailChanged)
-    );
+    const userHashedEmail = this.form
+      .find('#change-email-modal_user_hashed_email')
+      .val();
+    const handleSubmit = values =>
+      this.submitEmailChange(values).then(this.onEmailChanged);
 
     this.mountPoint = document.createElement('div');
     document.body.appendChild(this.mountPoint);
@@ -73,14 +80,14 @@ export default class ChangeEmailController {
     }
   };
 
-  onEmailChanged = (newEmail) => {
+  onEmailChanged = newEmail => {
     if ('teacher' === this.userType) {
       this.displayedUserEmail.text(newEmail);
     }
     this.hideChangeEmailModal();
     this.displayedUserEmail.effect('highlight', {
       duration: 1500,
-      color: color.orange,
+      color: color.orange
     });
     this.emailChangedCallback(newEmail, hashEmail(newEmail));
   };
@@ -100,7 +107,9 @@ export default class ChangeEmailController {
           error = {
             serverErrors: {
               newEmail: validationErrors.email && validationErrors.email[0],
-              currentPassword: validationErrors.current_password && validationErrors.current_password[0],
+              currentPassword:
+                validationErrors.current_password &&
+                validationErrors.current_password[0]
             }
           };
         } else {
@@ -118,10 +127,18 @@ export default class ChangeEmailController {
       };
       this.form.on('ajax:success', onSuccess);
       this.form.on('ajax:error', onFailure);
-      this.form.find('#change-email-modal_user_email').val(this.userAge < 13 ? '' : newEmail);
-      this.form.find('#change-email-modal_user_hashed_email').val(newHashedEmail);
-      this.form.find('#change-email-modal_user_email_preference_opt_in').val(emailOptIn);
-      this.form.find('#change-email-modal_user_current_password').val(currentPassword);
+      this.form
+        .find('#change-email-modal_user_email')
+        .val(this.userAge < 13 ? '' : newEmail);
+      this.form
+        .find('#change-email-modal_user_hashed_email')
+        .val(newHashedEmail);
+      this.form
+        .find('#change-email-modal_user_email_preference_opt_in')
+        .val(emailOptIn);
+      this.form
+        .find('#change-email-modal_user_current_password')
+        .val(currentPassword);
       this.form.submit();
     });
   }

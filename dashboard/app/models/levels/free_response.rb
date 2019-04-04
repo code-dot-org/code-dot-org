@@ -34,6 +34,7 @@ class FreeResponse < Level
     skip_sound
     submittable
     peer_reviewable
+    optional
   )
 
   before_validation do
@@ -50,6 +51,6 @@ class FreeResponse < Level
   end
 
   def icon
-    'fa-check-square-o'
+    'fa fa-list-ul'
   end
 end

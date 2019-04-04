@@ -41,7 +41,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "Fun part - hide/show player highlight in app.\r\n\r\nDO THIS:\r\n\r\n* in nextTurn() hide both player highlights\r\n* in if statement show the correct one in \r\n\r\n[anigif showing functionality]\r\n\r\n",
+    "long_instructions": "Fun part - hide/show player highlight in app.\r\n\r\nDO THIS:\r\n\r\n* in nextTurn() hide both player highlights\r\n* in if statement show the correct one in \r\n\r\n[anigif showing functionality]\r\n\r\n",
     "contained_level_names": null
   },
   "published": true,

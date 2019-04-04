@@ -82,3 +82,144 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
     display: none;
   }
 }
+
+.legacy-share-view {
+  #studio-dpad-container {
+    margin-top: -24px;
+  }
+}
+
+$dpad-button: #FFFFFF;
+$dpad-border: #EFEFEF;
+$dpad-shadow: #7F7F7F;
+$dpad-active-border: #9F9F9F;
+$dpad-cone-active: #FFD080;
+$dpad-cone-inactive: #9C9C9C;
+$dpad-rim: #FFFFFF;
+
+#studio-dpad {
+  position: absolute;
+  height: 152px;
+  width: 390px;
+  vertical-align: top;
+  margin-left: 10px;
+  -webkit-touch-callout: none;
+}
+
+#studio-dpad-rim {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border: 76px solid $dpad-rim;
+  border-radius: 76px;
+  box-shadow: 1px 1px 1px 0 $dpad-shadow;
+}
+
+#studio-dpad-cone {
+  position: absolute;
+  margin: 2px;
+  width: 0px;
+  height: 0px;
+  border: 74px solid $dpad-cone-inactive;
+  border-radius: 74px;
+  &.left {
+    border-top-color: $dpad-cone-active;
+    transform: rotate(270deg);
+    &.down {
+      transform: rotate(220deg);
+    }
+    &.up {
+      transform: rotate(320deg);
+    }
+  }
+  &.right {
+    border-top-color: $dpad-cone-active;
+    transform: rotate(90deg);
+    &.down {
+      transform: rotate(140deg);
+    }
+    &.up {
+      transform: rotate(40deg);
+    }
+  }
+  &.up {
+    border-top-color: $dpad-cone-active;
+    transform: rotate(0deg);
+  }
+  &.down {
+    border-top-color: $dpad-cone-active;
+    transform: rotate(180deg);
+  }
+}
+
+#studio-dpad-button {
+  display: inline;
+  position: relative;
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  margin: 36px 5px 5px 36px;
+  border: 1px solid $dpad-border;
+  background-color: $dpad-button;
+  box-shadow: 1px 1px 1px 0 $dpad-shadow;
+  &.active {
+    border: 1px solid $dpad-active-border;
+    box-shadow: none;
+  }
+  &.left {
+    left: -17px;
+    &.up {
+      left: -12px;
+      top: -12px;
+    }
+    &.down {
+      left: -12px;
+      top: 12px;
+    }
+  }
+  &.right {
+    left: 17px;
+    &.up {
+      left: 12px;
+      top: -12px;
+    }
+    &.down {
+      left: 12px;
+      top: 12px;
+    }
+  }
+  &.up {
+    top: -17px;
+  }
+  &.down {
+    top: 17px;
+  }
+}
+
+$space-fill: #FFA000;
+$space-shadow: #FFD07F;
+$space-border: #666666;
+$space-active-border: #9F9F9F;
+
+#studio-space-button {
+  position: absolute;
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  right: 10px;
+  margin: 5px;
+  border-color: $space-border;
+  background-color: $space-fill;
+  box-shadow: inset 1px 1px 0px 0 $space-shadow;
+  &.active {
+    border-radius: 39px;
+    width: 78px;
+    height: 78px;
+    margin-right: 6px;
+    margin-top: 6px;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+

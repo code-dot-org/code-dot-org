@@ -34,8 +34,8 @@
     "fast_get_nectar_animation": "false",
     "step_speed": "1",
     "nectar_goal": "1",
-    "instructions": "Play with these blocks to help the bee get *one* nectar.",
-    "markdown_instructions": "Help the bee get one nectar!",
+    "short_instructions": "Play with these blocks to help the bee get *one* nectar.",
+    "long_instructions": "Help the bee get one nectar!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to get nectar once the bee finds a flower.\\n\\n<xml>\\n  <block type=\\\"maze_nectar\\\"/>\\n</xml>\",\"hint_id\":\"courseA_bee_seq1_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/639127fd8fe32db9e465fcf7b1c4605e/courseA_bee_seq1.mp3\"}]",
     "contained_level_names": null
   },

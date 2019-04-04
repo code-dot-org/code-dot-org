@@ -42,6 +42,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   # Action: Index
 
+  test_user_gets_response_for :index, user: nil, response: :forbidden
+
   test 'admins can list all workshops' do
     sign_in @admin
     assert_equal 3, Pd::Workshop.count
@@ -258,8 +260,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'filter by state' do
     sign_in @admin
-    workshop_in_progress = create :pd_workshop
-    workshop_in_progress.sessions << create(:pd_session)
+    workshop_in_progress = create :pd_workshop, num_sessions: 1
     workshop_in_progress.start!
     assert_equal Pd::Workshop::STATE_IN_PROGRESS, workshop_in_progress.state
 
@@ -332,7 +333,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     earlier_workshop = create :pd_workshop, organizer: organizer, num_sessions: 1, sessions_from: Time.now
     later_workshop = create :pd_workshop, organizer: organizer, num_sessions: 1, sessions_from: Time.now + 1.week
 
-    sign_in @admin
+    sign_in @workshop_admin
     filters = {organizer_id: organizer.id.to_s, order_by: 'date desc'}
     get :filter, params: filters
     response = JSON.parse(@response.body)
@@ -1081,6 +1082,41 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :success
     assert_equal 1, JSON.parse(@response.body).length
     assert_equal csp.id, JSON.parse(@response.body).first['id']
+  end
+
+  test 'workshop admins can unstart' do
+    @workshop.sessions << create(:pd_session)
+    @workshop.start!
+
+    sign_in @workshop_admin
+    post :unstart, params: {id: @workshop.id}
+    assert_response :success
+    @workshop.reload
+    assert_equal 'Not Started', @workshop.state
+  end
+
+  test 'workshop admins can reopen' do
+    @workshop.sessions << create(:pd_session)
+    @workshop.start!
+    @workshop.end!
+
+    sign_in @workshop_admin
+    post :reopen, params: {id: @workshop.id}
+    assert_response :success
+    @workshop.reload
+    assert_equal 'In Progress', @workshop.state
+  end
+
+  test 'program managers cannot unstart' do
+    sign_in @program_manager
+    post :unstart, params: {id: @workshop.id}
+    assert_response :forbidden
+  end
+
+  test 'program managers cannot reopen' do
+    sign_in @program_manager
+    post :reopen, params: {id: @workshop.id}
+    assert_response :forbidden
   end
 
   private

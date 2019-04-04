@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<div style=\"float:right\">\r\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19 AM.png\" style=\"height:200px\">\r\n</div>\r\n\r\n**Goal:** Make the buttons `\"red\"` and `\"blue\"`. Then change the text in the large orange label.\r\n\r\n**How:** \r\n* Remember you can hover over elements to see their `\"id\"`.\r\n* Set the `\"background-color\"` of the buttons to `\"red\"` and `\"blue\"`.\r\n* Set the `\"text\"` property of the label to anything you want, like `\"Welcome to my app!\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)",
+    "long_instructions": "<div style=\"float:right\">\r\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19 AM.png\" style=\"height:200px\">\r\n</div>\r\n\r\n**Goal:** Make the buttons `\"red\"` and `\"blue\"`. Then change the text in the large orange label.\r\n\r\n**How:** \r\n* Remember you can hover over elements to see their `\"id\"`.\r\n* Set the `\"background-color\"` of the buttons to `\"red\"` and `\"blue\"`.\r\n* Set the `\"text\"` property of the label to anything you want, like `\"Welcome to my app!\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

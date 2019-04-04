@@ -10,6 +10,7 @@
 # abuse and potentially add other abuse prevention measures.
 
 require 'set'
+require 'cdo/shared_constants'
 
 class XhrProxyController < ApplicationController
   include ProxyHelper
@@ -29,6 +30,7 @@ class XhrProxyController < ApplicationController
     apex.oracle.com
     api.coinmarketcap.com
     api.data.gov
+    api.datamuse.com
     api.football-data.org
     api.foursquare.com
     api.nasa.gov
@@ -39,6 +41,7 @@ class XhrProxyController < ApplicationController
     api.rebrandly.com
     api.spotify.com
     api.themoviedb.org
+    api.thingspeak.com
     api.zippopotam.us
     atlas.media.mit.edu
     bible-api.com
@@ -53,23 +56,29 @@ class XhrProxyController < ApplicationController
     googleapis.com
     hamlin.myschoolapp.com
     herokuapp.com
+    hubblesite.org
     isenseproject.org
     lakeside-cs.org
+    qrng.anu.edu.au
     quandl.com
     query.yahooapis.com
+    quizlet.com
     rejseplanen.dk
     noaa.gov
     nuevaschool.ngrok.io
     nuevaschool2.ngrok.io
     nuevaschool3.ngrok.io
     numbersapi.com
+    random.org
     rhcloud.com
     runescape.com
     sheets.googleapis.com
     spreadsheets.google.com
+    stats.minecraftservers.org
     swapi.co
     transitchicago.com
     translate.yandex.net
+    vpic.nhtsa.dot.gov
     wikipedia.org
   ).freeze
 
@@ -82,6 +91,12 @@ class XhrProxyController < ApplicationController
   def get
     channel_id = params[:c]
     url = params[:u]
+
+    headers = {}
+    ALLOWED_WEB_REQUEST_HEADERS.each do |header|
+      headers[header] = request.headers[header]
+    end
+    headers.compact!
 
     begin
       owner_storage_id, _ = storage_decrypt_channel_id(channel_id)
@@ -103,7 +118,8 @@ class XhrProxyController < ApplicationController
       allowed_content_types: ALLOWED_CONTENT_TYPES,
       allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
       expiry_time: EXPIRY_TIME,
-      infer_content_type: false
+      infer_content_type: false,
+      headers: headers,
     )
   end
 end

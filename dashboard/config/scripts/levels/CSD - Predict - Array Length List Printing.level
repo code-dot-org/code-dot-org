@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# For Loop - Using List Length in For Loop\r\n\r\nOne of the most common ways that for loops are used is with lists. In this example the condition is dependent on list. \r\n\r\nWhat will this print in the console?",
+    "long_instructions": "# For Loop - Using List Length in For Loop\r\n\r\nOne of the most common ways that for loops are used is with lists. In this example the condition is dependent on list. \r\n\r\nWhat will this print in the console?",
     "instructions_important": "false",
     "submittable": "false",
     "allow_user_uploads": "false",

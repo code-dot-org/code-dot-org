@@ -6,7 +6,7 @@
   "user_id": 34,
   "properties": {
     "skin": "artist",
-    "instructions": "Using this test level to grab xml for unit tests",
+    "short_instructions": "Using this test level to grab xml for unit tests",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

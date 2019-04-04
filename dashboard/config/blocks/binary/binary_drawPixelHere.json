@@ -1,0 +1,26 @@
+{
+  "category": "",
+  "config": {
+    "func": "drawPixelHere",
+    "blockText": "set pixel {VAL}",
+    "args": [
+      {
+        "name": "VAL",
+        "options": [
+          [
+            "on",
+            "1"
+          ],
+          [
+            "off",
+            "0"
+          ],
+          [
+            "toggle",
+            "\"toggle\""
+          ]
+        ]
+      }
+    ]
+  }
+}

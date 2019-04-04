@@ -227,9 +227,8 @@ module Pd
         raise KeyError, "Missing jotform form category #{category}" unless CDO.jotform_forms&.key? category
         forms = CDO.jotform_forms[category]
 
-        # Fail for no form_id value, even if the name key is present
         raise KeyError, "Mising jotform form: #{category}.#{name}" unless forms[name].present?
-        forms[name].to_i
+        forms[name]&.to_i
       end
 
       # Download answers from JotForm for any placeholders in the current scope
@@ -246,7 +245,7 @@ module Pd
             raise if synced_question_form_ids.include? placeholder.form_id
 
             # The first time a sync fails for a particular form id, try to re-sync the questions and try again.
-            synced_question_form_ids << form_id
+            synced_question_form_ids << placeholder.form_id
             placeholder.force_sync_questions
             placeholder.sync_from_jotform
           end
@@ -327,7 +326,7 @@ module Pd
     def map_answers_to_attributes
       hash = form_data_hash(show_hidden_questions: true)
       self.class.attribute_mapping.each do |attribute, question_name|
-        write_attribute attribute, hash[question_name.to_s]
+        write_attribute attribute, hash[question_name.to_s] if hash[question_name.to_s]
       end
     end
 

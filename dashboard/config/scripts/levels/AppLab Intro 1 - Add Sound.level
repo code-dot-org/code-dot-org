@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Getting Started - Add Sound\r\n\r\nApp Lab can play sound too. You'll need to use the `playSound()` block to do it.\r\n\r\n1. Drag a `playSound()` block into your `onEvent`. This will make the sound play when your user clicks the button. Then click \"Choose...\" from the menu.\r\n\r\n\t![](https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41 AM.png)\r\n\r\n2. Go through the \"Sound Library\" and find the sounds you want. There's tons!\r\n\r\n\t![](https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52 AM.png)\r\n\r\n3. Run your app to check out how your sounds work.",
+    "long_instructions": "# Getting Started - Add Sound\r\n\r\nApp Lab can play sound too. You'll need to use the `playSound()` block to do it.\r\n\r\n1. Drag a `playSound()` block into your `onEvent`. This will make the sound play when your user clicks the button. Then click \"Choose...\" from the menu.\r\n\r\n\t![](https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41 AM.png)\r\n\r\n2. Go through the \"Sound Library\" and find the sounds you want. There's tons!\r\n\r\n\t![](https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52 AM.png)\r\n\r\n3. Run your app to check out how your sounds work.",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "onEvent(\"dogButton\", \"click\", function() {\r\n  setScreen(\"dogScreen\");\r\n});",

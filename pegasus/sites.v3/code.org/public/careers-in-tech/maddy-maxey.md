@@ -17,7 +17,7 @@ My name is Madison Maxey...
 
 [col-50]
 
-**Madison (Maddy) Maxey** started learning about tech when she was in high school but got much more into creative code when she was 19. The first thing she made a computer do was generate a website with HTML. She has since made leaps and bounds in the fashion tech world. She founded <a href="http://thecrated.com" target="_blank">The Crated</a> in 2013, which started as a small studio with big ideas, and has grown into an innovative space in smart apparel!
+**Madison (Maddy) Maxey** started learning about tech when she was in high school but got much more into creative code when she was 19. The first thing she made a computer do was generate a website with HTML. She has since made leaps and bounds in the fashion tech world. She founded The Crated in 2013, which started as a small studio with big ideas, and has grown into an innovative space in smart apparel!
 
 **Maddy:** The Crated is a company focused on making it easier to merge electronics and fabric. We’re excited to be working on enabling technologies to make it easier to manufacture smart apparel products. This space of smart apparel and wearables doesn’t have a lot of design rules and regulation in place yet. It’s still the wild west in many ways! 
 
@@ -70,7 +70,7 @@ I also write code for computational design! Making patterns using code is quicke
 
 **Maddy:** I worked heavily with materials while doing an artist residency at <a href="http://www.autodesk.com/" target="_blank">Autodesk</a>. I built a CNC machine (using a computer to control and operate a machine tool) and creative formulas for making things like conductive “leather.” It was exciting to dive into materials and machinery!
 
-The creative coding community is a huge inspiration to me. I love watching videos from people like <a href="https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw" target="_blank">Dan Shiffman</a>, and I find work from folks like <a href="http://learn.francisbitonti.com/" target="_blank">Francis Bitonti</a> to be incredibly inspiring. I’m also so inspired by <a href="https://vimeo.com/127666944" target="_blank">Autodesk's Pier 9</a> and companies like Plethora and Othermill. The CEOs at each of those companies have been so kind and helpful to me. They inspire me to go over hard problems in the physical world. 
+The creative coding community is a huge inspiration to me. I love watching videos from people like <a href="https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw" target="_blank">Dan Shiffman</a>, and I find work from folks like Francis Bitonti to be incredibly inspiring. I’m also so inspired by <a href="https://vimeo.com/127666944" target="_blank">Autodesk's Pier 9</a> and companies like Plethora and Othermill. The CEOs at each of those companies have been so kind and helpful to me. They inspire me to go over hard problems in the physical world. 
 
 </br>
 </br>

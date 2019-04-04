@@ -19,7 +19,7 @@
   .row
     .span2
     .span8.infobox
-      = t('gallery.activity_count', days: @days, count: number_with_delimiter(GalleryActivity.pseudocount)).html_safe
+      = t('gallery.activity_count', days: @days, count: number_with_delimiter(brakeman_no_warn(GalleryActivity.pseudocount))).html_safe
     .span2
 
   .row
@@ -48,8 +48,8 @@
   %h4{style: 'text-align:center'}= t('gallery.how_to_save')
 .row
   .span3
-  = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
-  = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::PLAYLAB_NAME }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::ARTIST_NAME }
   .span3
 .row
   %a{href: CDO.code_org_url('/report-abuse')}

@@ -1,13 +1,17 @@
-import React, { Component, PropTypes } from 'react';
-import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {
+  announcementShape,
+  VisibilityType
+} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import ScriptAnnouncements from '@cdo/apps/code-studio/components/progress/ScriptAnnouncements';
-import { NotificationType } from '@cdo/apps/templates/Notification';
+import {NotificationType} from '@cdo/apps/templates/Notification';
 
 const styles = {
   announcement: {
     border: '1px solid #ccc',
     padding: 5,
-    marginBottom: 10,
+    marginBottom: 10
   },
   preview: {
     marginTop: 10
@@ -45,19 +49,35 @@ const Announce = ({announcement, inputStyle, index, onChange, onRemove}) => (
       Type
       <div>
         <select
+          className="uitest-announcement-type"
           value={announcement.type}
           onChange={event => onChange(index, 'type', event.target.value)}
         >
           {Object.values(NotificationType).map(type => (
-            <option key={type} value={type}>{type}</option>
+            <option key={type} value={type}>
+              {type}
+            </option>
           ))}
         </select>
       </div>
     </label>
-    <button
-      className="btn"
-      onClick={() => onRemove(index)}
-    >
+    <label>
+      Visibility
+      <div>
+        <select
+          className="uitest-announcement-visibility"
+          value={announcement.visibility}
+          onChange={event => onChange(index, 'visibility', event.target.value)}
+        >
+          {Object.values(VisibilityType).map(visibility => (
+            <option key={visibility} value={visibility}>
+              {visibility}
+            </option>
+          ))}
+        </select>
+      </div>
+    </label>
+    <button className="btn" type="button" onClick={() => onRemove(index)}>
       Remove
     </button>
   </div>
@@ -67,13 +87,13 @@ Announce.propTypes = {
   inputStyle: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired,
   onRemove: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired
 };
 
 export default class ScriptAnnouncementsEditor extends Component {
   static propTypes = {
     defaultAnnouncements: PropTypes.arrayOf(announcementShape),
-    inputStyle: PropTypes.object.isRequired,
+    inputStyle: PropTypes.object.isRequired
   };
 
   constructor(props) {
@@ -90,12 +110,13 @@ export default class ScriptAnnouncementsEditor extends Component {
         notice: '',
         details: '',
         link: '',
-        type: NotificationType.information
+        type: NotificationType.information,
+        visibility: VisibilityType.teacher
       })
     });
   };
 
-  remove = (index) => {
+  remove = index => {
     const newAnnouncements = [...this.state.announcements];
     newAnnouncements.splice(index, 1);
     this.setState({
@@ -112,8 +133,8 @@ export default class ScriptAnnouncementsEditor extends Component {
   };
 
   render() {
-    const { inputStyle } = this.props;
-    const { announcements } = this.state;
+    const {inputStyle} = this.props;
+    const {announcements} = this.state;
     return (
       <div>
         <input
@@ -124,7 +145,8 @@ export default class ScriptAnnouncementsEditor extends Component {
         <h4>Script Announcements</h4>
         <div>
           This can be used to provide one or more announcements that will show
-          up for signed in teachers on the script overview page.
+          up for signed in teachers, students, or teachers and students on the
+          script overview page.
         </div>
         {announcements.map((announce, index) => (
           <Announce
@@ -136,18 +158,15 @@ export default class ScriptAnnouncementsEditor extends Component {
             onRemove={this.remove}
           />
         ))}
-        <button
-          className="btn"
-          onClick={this.add}
-        >
+        <button className="btn" type="button" onClick={this.add}>
           Additional Announcement
         </button>
-        {announcements.length > 0 &&
+        {announcements.length > 0 && (
           <div style={styles.preview}>
             <div>Preview:</div>
-            <ScriptAnnouncements announcements={announcements}/>
+            <ScriptAnnouncements announcements={announcements} />
           </div>
-        }
+        )}
       </div>
     );
   }

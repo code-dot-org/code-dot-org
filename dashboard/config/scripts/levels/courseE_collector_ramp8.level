@@ -7,8 +7,8 @@
   "properties": {
     "skin": "collector",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1,\"value\":5,\"range\":5},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "instructions": "Help Laurel collect all of the treasure.",
-    "markdown_instructions": "This puzzle is a lot like the last one, but now it stars Laurel the Adventurer!\r\n<hr/>\r\n\r\nTake the same path as before, but this time, use a repeat loop to collect treasure when you get to it.\r\n",
+    "short_instructions": "Help Laurel collect all of the treasure.",
+    "long_instructions": "This puzzle is a lot like the last one, but now it stars Laurel the Adventurer!\r\n<hr/>\r\n\r\nTake the same path as before, but this time, use a repeat loop to collect treasure when you get to it.\r\n",
     "instructions_important": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",

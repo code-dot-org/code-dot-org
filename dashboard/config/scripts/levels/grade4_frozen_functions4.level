@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?",
+    "short_instructions": "Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?",
     "x": "200",
     "y": "200",
     "start_direction": "180",
@@ -23,7 +23,7 @@
     "disable_sharing": "false",
     "shapeways_url": "https://www.shapeways.com/model/2925862/",
     "permitted_errors": "0",
-    "markdown_instructions": "Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?",
+    "long_instructions": "Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

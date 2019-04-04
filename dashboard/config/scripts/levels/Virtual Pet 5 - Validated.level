@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-07-02T21:28:07.000Z",
   "level_num": "custom",
   "user_id": 9,
@@ -50,12 +50,13 @@
     "custom_helper_library": "var wanderTargetPoint={};\r\n\r\n\r\nfunction draggable() {\r\n  var behavior = function(sprite) {\r\n    if (mousePressedOver(sprite) && !sprite.dragging) {\r\n      sprite.dragging = true;\r\n      sprite.xOffset = sprite.x - World.mouseX;\r\n      sprite.yOffset = sprite.y - World.mouseY;\r\n    }\r\n    if (sprite.dragging) {\r\n      sprite.x = World.mouseX + sprite.xOffset;\r\n      sprite.y = World.mouseY + sprite.yOffset;\r\n    }\r\n    if (mouseWentUp()) {\r\n      sprite.dragging = false;\r\n    }\r\n  }\r\n  behavior.name='draggable';\r\n  return behavior;\r\n}\r\n\r\nfunction moveToward(sprite,distance,target) {\r\n  //The canvas coordinate system is different, hence the need to negate things\r\n  var angleOfMovement=Math.atan2((-1*target.y+sprite.y),(-1*target.x+sprite.x));\r\n  var dx = distance*Math.cos(angleOfMovement);\r\n  var dy = distance*Math.sin(angleOfMovement);\r\n  sprite.x-=dx;\r\n  sprite.y-=dy;\r\n}\r\nfunction followingSprite(target) {\r\n  var behavior = function(sprite) {\r\n    moveToward(sprite,5,target);\r\n  }\r\n  behavior.name = 'followingSprite';\r\n  return behavior;\r\n}",
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 14164,
-    "markdown_instructions": "All of this play takes energy!  \r\n\r\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  \r\n",
+    "long_instructions": "All of this play takes energy!  \r\n\r\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  \r\n",
     "show_type_hints": "true",
     "project_template_level_name": "Virtual Pet 2",
-    "instructions": "Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.",
+    "short_instructions": "Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.",
     "include_shared_functions": "false",
     "validation_code": "if (World.frameCount > 400) {\r\n  var status = 3;\r\n  // Check through all sprites in case student changed the sprite name\r\n  for (var i=0; i<World.allSprites.length; i++) {\r\n    var sprite = World.allSprites[i];\r\n    // ignore edge sprites\r\n    if (!edges.contains(sprite)) {\r\n      //check that the sprite is geraldine\r\n      if(sprite.getAnimationLabel() == \"giraffe\"){\r\n        if(sprite.scale != 1){\r\n         status = 0;\r\n        }\r\n        else\r\n        {\r\n           status = 3;\r\n        }\r\n      }\r\n    }\r\n  }\r\n  levelSuccess(status);\r\n}",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

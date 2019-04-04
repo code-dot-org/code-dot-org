@@ -7,7 +7,7 @@ import $ from 'jquery';
 var CodeMirror = require('codemirror');
 
 // On page load, specifically for this editor page.
-$(document).ready(function () {
+$(document).ready(function() {
   var jQuerySuccessConditionBox = $('#level_success_condition');
   if (jQuerySuccessConditionBox.length) {
     CodeMirror.fromTextArea(jQuerySuccessConditionBox.get(0), {

@@ -1,11 +1,12 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import * as rowStyle from './rowStyle';
 
 export default class OptionsSelectRow extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLSelectElement).isRequired,
     handleChange: PropTypes.func,
-    desc: PropTypes.node,
+    desc: PropTypes.node
   };
 
   constructor(props) {
@@ -20,10 +21,10 @@ export default class OptionsSelectRow extends React.Component {
     this.state = {value};
   }
 
-  handleChangeInternal = (event) => {
+  handleChangeInternal = event => {
     const value = event.target.value;
     // Extract an array of text values, 1 per line
-    const optionList = value.split('\n').filter(function (val) {
+    const optionList = value.split('\n').filter(function(val) {
       return val !== '';
     });
     this.props.handleChange(optionList);

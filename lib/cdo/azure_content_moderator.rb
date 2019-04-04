@@ -1,5 +1,6 @@
 require 'net/http'
 require 'cdo/firehose'
+require 'dynamic_config/dcdo'
 
 #
 # Use Microsoft Azure Content Moderator to check images for adult or racy content.
@@ -11,6 +12,12 @@ class AzureContentModerator
   class AzureError < StandardError; end
   class RequestFailed < AzureError; end
   class UnsupportedContentType < AzureError; end
+
+  # Keys for the response object
+  ADULT_SCORE = 'AdultClassificationScore'
+  RACY_SCORE = 'RacyClassificationScore'
+  IS_ADULT = 'IsImageAdultClassified'
+  IS_RACY = 'IsImageRacyClassified'
 
   def initialize(endpoint:, api_key:)
     @endpoint = endpoint
@@ -86,9 +93,9 @@ class AzureContentModerator
   # @returns [:everyone|:racy|:adult]
   #
   def rating_from_azure_result(result)
-    if result['IsImageAdultClassified']
+    if result[ADULT_SCORE] >= adult_threshold
       :adult
-    elsif result['IsImageRacyClassified']
+    elsif result[RACY_SCORE] >= racy_threshold
       :racy
     else
       :everyone
@@ -115,15 +122,12 @@ class AzureContentModerator
       event: 'moderation-result',
       data_string: rating.to_s,
       data_json: data.
-        slice(
-          'AdultClassificationScore',
-          'IsImageAdultClassified',
-          'RacyClassificationScore',
-          'IsImageRacyClassified'
-        ).
+        slice(ADULT_SCORE, IS_ADULT, RACY_SCORE, IS_RACY).
         merge(
           RequestDuration: request_duration,
-          ImageUrl: image_url
+          ImageUrl: image_url,
+          RacyThresholdUsed: racy_threshold,
+          AdultThresholdUsed: adult_threshold,
         ).
         to_json
     )
@@ -143,5 +147,35 @@ class AzureContentModerator
     ERROR
   rescue
     "Request to Azure failed with status #{response.try?(:code)}"
+  end
+
+  # DCDO variables allowing dynamic configuration of automated image
+  # moderation behaviors.  DCDO config is structured like this:
+  #
+  # image_moderation:
+  #   racy_threshold: 0.48
+  #   adult_threshold: 0.48
+  #   limited_project_gallery: true
+
+  # The minimum "racy" score that earns a :racy rating.
+  def racy_threshold
+    # 0.32 is Azure's default threshold for racy content.
+    dynamic_config['racy_threshold'] || 0.32
+  end
+
+  # The minimum "adult" score that earns an :adult rating.
+  def adult_threshold
+    # 0.48 is Azure's default threshold for adult content.
+    dynamic_config['adult_threshold'] || 0.48
+  end
+
+  # If true, we only show featured projects in the App Lab and Game Lab
+  # sections of the public project gallery.
+  def limited_project_gallery?
+    dynamic_config['limited_project_gallery'] || true
+  end
+
+  def dynamic_config
+    DCDO.get('image_moderation', {})
   end
 end

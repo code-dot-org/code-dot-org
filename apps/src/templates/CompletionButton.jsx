@@ -1,5 +1,6 @@
 import msg from '@cdo/locale';
-import React, {PropTypes, Component} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 
@@ -38,10 +39,10 @@ class CompletionButton extends Component {
     let divClass = 'share-cell-none';
 
     if (this.props.isProjectLevel) {
-      return <div/>;
+      return <div />;
     }
 
-    if (this.props.isSubmittable) {
+    if (this.props.isSubmittable || this.props.isSubmitted) {
       if (this.props.isSubmitted) {
         id = 'unsubmitButton';
         contents = msg.unsubmit();
@@ -63,7 +64,7 @@ class CompletionButton extends Component {
             className="share"
             style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
           >
-            <img src="/blockly/media/1x1.gif"/>
+            <img src="/blockly/media/1x1.gif" />
             {contents}
           </button>
         </div>
@@ -72,15 +73,13 @@ class CompletionButton extends Component {
   }
 }
 
+export const UnconnectedCompletionButton = CompletionButton;
+
 export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,
   isSubmittable: state.pageConstants.isSubmittable,
   isSubmitted: state.pageConstants.isSubmitted,
-  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
 }))(CompletionButton);
 
 export {styles};
-
-export var __TestInterface__ = {
-  UnconnectedCompletionButton: CompletionButton
-};

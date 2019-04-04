@@ -14,14 +14,18 @@
             = link_to '[E]dit', edit_level_path(@level), { accesskey: 'e', title: "Edit this level. Can use the browser-dependent accesskey shortcut for quick access." }
             - if @level.is_a? Blockly
               %ul
-                %li= link_to 's[o]lution', level_edit_blocks_path(@level, :solution_blocks), { accesskey: 'o' }
-                %li= link_to '[t]oolbox', level_edit_blocks_path(@level, :toolbox_blocks), { accesskey: 't' }
                 %li= link_to "[s]tart (#{Blockly.count_xml_blocks(@level.start_blocks)})", level_edit_blocks_path(@level, :start_blocks), { accesskey: 's' }
-                %li= link_to "required (#{Blockly.count_xml_blocks(@level.required_blocks)})", level_edit_blocks_path(@level, :required_blocks)
-                %li= link_to "recommended (#{Blockly.count_xml_blocks(@level.recommended_blocks)})", level_edit_blocks_path(@level, :recommended_blocks)
-                %li= link_to "initialization (#{Blockly.count_xml_blocks(@level.initialization_blocks)})", level_edit_blocks_path(@level, :initialization_blocks)
+                - unless @level.uses_droplet?
+                  %li= link_to 's[o]lution', level_edit_blocks_path(@level, :solution_blocks), { accesskey: 'o' }
+                  %li= link_to '[t]oolbox', level_edit_blocks_path(@level, :toolbox_blocks), { accesskey: 't' }
+                  %li= link_to "required (#{Blockly.count_xml_blocks(@level.required_blocks)})", level_edit_blocks_path(@level, :required_blocks)
+                  %li= link_to "recommended (#{Blockly.count_xml_blocks(@level.recommended_blocks)})", level_edit_blocks_path(@level, :recommended_blocks)
+                  %li= link_to "initialization (#{Blockly.count_xml_blocks(@level.initialization_blocks)})", level_edit_blocks_path(@level, :initialization_blocks)
                 - if @level.is_a? Artist
                   %li= link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
+              - unless @level.uses_droplet?
+                %button{type: 'button', onclick: 'window.levelbuilder.copyWorkspaceToClipboard()', class: 'btn btn-default btn-sm'}
+                  Copy workspace to clipboard
           %li= link_to 'delete', level_path(@level), method: :delete, data: { confirm: t('crud.confirm') }, style: 'color: red'
           %li
             = link_to 'clone', '', onclick: "$('#clone_#{@level.id}').toggle(); return false;"
@@ -83,6 +87,8 @@
         - if exists
           - project = FeaturedProject.find_by storage_app_id: storage_app_id
           - currently_featured = project.unfeatured_at == nil && project.featured_at != nil
+        - storage_apps = StorageApps.new(storage_id('user'))
+        - content_moderation_disabled = storage_apps.content_moderation_disabled?(params[:channel_id])
         %li
           S3 link:
           = link_to 'sources', sources_link, target: '_blank'
@@ -117,7 +123,7 @@
       .admin-report-abuse{ style: 'display: none;' }
         = link_to 'Report Abuse', '/report_abuse'
 
-      #disable-auto-moderation
+      #disable-auto-moderation{'style' => ('display: none;' if content_moderation_disabled)}
         %br
         %button{id: "disable-auto-moderation", class: "btn btn-default btn-sm"}
           Disable automated moderation
@@ -125,7 +131,7 @@
       #moderation-explanation{style: 'margin-top: 20px; width: 250px;'}
         Disabling automated moderation will prevent our content moderation service from flagging this project. Disable automated moderation if the service has inaccurately flagged this project before.
 
-      #enable-auto-moderation{style: 'display: none;'}
+      #enable-auto-moderation{'style' => ('display: none;' unless content_moderation_disabled)}
         %br
         %button{id: "enable-auto-moderation", class: "btn btn-default btn-sm"}
           Enable automated moderation

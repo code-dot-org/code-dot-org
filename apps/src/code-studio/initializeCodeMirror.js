@@ -19,13 +19,15 @@ import 'codemirror/mode/javascript/javascript';
 import './vendor/codemirror.inline-attach';
 import jsonic from 'jsonic';
 import {JSHINT} from 'jshint';
-import marked from 'marked';
-import stylelessRenderer from '@cdo/apps/util/StylelessRenderer';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import UnsafeRenderedMarkdown from '../templates/UnsafeRenderedMarkdown';
 
 window.JSHINT = JSHINT;
 
 CodeMirrorSpellChecker({
-  codeMirrorInstance: CodeMirror,
+  codeMirrorInstance: CodeMirror
 });
 
 const VALID_COLOR = 'black';
@@ -36,11 +38,17 @@ const INVALID_COLOR = '#d00';
  * CodeMirror editor.
  * @param {!string|!Element} target - element or id of element to replace.
  * @param {!string} mode - editor syntax mode
- * @param {function} [callback] - onChange callback for editor
- * @param {booblen} [attachments] - whether to enable attachment uploading in
- *        this editor.
+ * @param {Object} options - misc optional arguments
+ * @param {function} [options.callback] - onChange callback for editor
+ * @param {boolean} [options.attachments] - whether to enable attachment
+ *        uploading in this editor.
+ * @param {function} [options.onUpdateLinting]
+ * @param {(string|Element)} [options.preview] - element or id of element to
+ *        populate with a preview. If none specified, will look for an element
+ *        by appending "_preview" to the id of the target element.
  */
-function initializeCodeMirror(target, mode, callback, attachments, onUpdateLinting) {
+function initializeCodeMirror(target, mode, options = {}) {
+  let {callback, attachments, onUpdateLinting, preview} = options;
   let updatePreview;
 
   // Code mirror parses html using xml mode
@@ -60,12 +68,17 @@ function initializeCodeMirror(target, mode, callback, attachments, onUpdateLinti
     // In markdown mode, look for a preview element (found by just appending
     // _preview to the target id), if it exists extend our callback to update
     // the preview element with the markdown contents
-    const previewElement = $(`#${node.id}_preview`);
-    if (previewElement.length > 0) {
+    preview = preview || `#${node.id}_preview`;
+    const previewElement = preview.nodeType ? preview : $(preview).get(0);
+    if (previewElement) {
       const originalCallback = callback;
       updatePreview = editor => {
-        previewElement.html(marked(editor.getValue(), {renderer: stylelessRenderer}));
-        previewElement.children('details').details();
+        ReactDOM.render(
+          React.createElement(UnsafeRenderedMarkdown, {
+            markdown: editor.getValue()
+          }),
+          previewElement
+        );
       };
 
       callback = (editor, ...rest) => {
@@ -74,7 +87,6 @@ function initializeCodeMirror(target, mode, callback, attachments, onUpdateLinti
           originalCallback(editor, ...rest);
         }
       };
-
     }
   }
 
@@ -87,16 +99,16 @@ function initializeCodeMirror(target, mode, callback, attachments, onUpdateLinti
     autoCloseTags: true,
     showTrailingSpace: true,
     lineWrapping: true,
-    gutters: ["CodeMirror-lint-markers"],
+    gutters: ['CodeMirror-lint-markers'],
     lint: {
-      onUpdateLinting,
-    },
+      onUpdateLinting
+    }
   });
   if (callback) {
     editor.on('change', callback);
   }
   if (updatePreview) {
-     updatePreview(editor);
+    updatePreview(editor);
   }
   if (attachments) {
     // default options are for markdown mode
@@ -106,8 +118,8 @@ function initializeCodeMirror(target, mode, callback, attachments, onUpdateLinti
       downloadFieldName: 'newAssetUrl',
       allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'image/gif'],
       progressText: '![Uploading file...]()',
-      urlText: "![]({filename})", // `{filename}` tag gets replaced with URL
-      errorText: "Error uploading file; images must be no larger than 1MB",
+      urlText: '![]({filename})', // `{filename}` tag gets replaced with URL
+      errorText: 'Error uploading file; images must be no larger than 1MB',
       extraHeaders: {
         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       }
@@ -124,18 +136,22 @@ function initializeCodeMirror(target, mode, callback, attachments, onUpdateLinti
 }
 module.exports = initializeCodeMirror;
 
-module.exports.initializeCodeMirrorForJson = function (
-  textAreaId, {validationDivId, onBlur, onChange}) {
+module.exports.initializeCodeMirrorForJson = function(
+  textAreaId,
+  {validationDivId, onBlur, onChange}
+) {
   // Leniently validate and fix up custom block JSON using jsonic
   const textAreaEl = document.getElementById(textAreaId);
   if (textAreaEl) {
-    const jsonValidationDiv = validationDivId ?
-      $(`#${validationDivId}`) :
-      $(textAreaEl.parentNode.insertBefore(
-        document.createElement('div'),
-        textAreaEl.nextSibling
-      ));
-    const showErrors = (fn) => (arg) => {
+    const jsonValidationDiv = validationDivId
+      ? $(`#${validationDivId}`)
+      : $(
+          textAreaEl.parentNode.insertBefore(
+            document.createElement('div'),
+            textAreaEl.nextSibling
+          )
+        );
+    const showErrors = fn => arg => {
       try {
         if (fn) {
           fn(arg);
@@ -162,8 +178,11 @@ module.exports.initializeCodeMirrorForJson = function (
       }
     });
 
-    const jsonEditor =
-      initializeCodeMirror(textAreaId, 'application/json', showErrors(onChange));
+    const jsonEditor = initializeCodeMirror(
+      textAreaId,
+      'application/json',
+      showErrors(onChange)
+    );
     jsonEditor.on('blur', fixupJson);
     fixupJson();
     return fixupJson;

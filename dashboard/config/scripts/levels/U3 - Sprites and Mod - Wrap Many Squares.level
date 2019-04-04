@@ -39,8 +39,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "instructions": "Do This",
-    "markdown_instructions": "# Stuff",
+    "short_instructions": "Do This",
+    "long_instructions": "# Stuff",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

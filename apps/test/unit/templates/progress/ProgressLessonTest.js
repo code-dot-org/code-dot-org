@@ -1,11 +1,14 @@
-import { assert } from '../../../util/configuredChai';
+import {assert} from '../../../util/configuredChai';
 import React from 'react';
-import { shallow } from 'enzyme';
-import { UnconnectedProgressLesson as ProgressLesson } from '@cdo/apps/templates/progress/ProgressLesson';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import { fakeLesson, fakeLevels } from '@cdo/apps/templates/progress/progressTestHelpers';
-import color from "@cdo/apps/util/color";
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import {shallow} from 'enzyme';
+import {UnconnectedProgressLesson as ProgressLesson} from '@cdo/apps/templates/progress/ProgressLesson';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {
+  fakeLesson,
+  fakeLevels
+} from '@cdo/apps/templates/progress/progressTestHelpers';
+import color from '@cdo/apps/util/color';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 describe('ProgressLesson', () => {
   const defaultProps = {
@@ -25,11 +28,7 @@ describe('ProgressLesson', () => {
   };
 
   it('renders with gray background when not hidden', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-      />
-    );
+    const wrapper = shallow(<ProgressLesson {...defaultProps} />);
     assert.equal(wrapper.props().style.background, color.lightest_gray);
   });
 
@@ -88,7 +87,10 @@ describe('ProgressLesson', () => {
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
         lessonLockedForSection={() => false}
-        levels={defaultProps.levels.map(level => ({...level, status: LevelStatus.locked}))}
+        levels={defaultProps.levels.map(level => ({
+          ...level,
+          status: LevelStatus.locked
+        }))}
       />
     );
     assert.equal(wrapper.props().style.background, color.lightest_gray);
@@ -115,8 +117,20 @@ describe('ProgressLesson', () => {
         lessonLockedForSection={() => false}
       />
     );
-    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
-    assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'unlock');
+    assert.equal(
+      wrapper
+        .find('FontAwesome')
+        .at(0)
+        .props().icon,
+      'caret-down'
+    );
+    assert.equal(
+      wrapper
+        .find('FontAwesome')
+        .at(1)
+        .props().icon,
+      'unlock'
+    );
   });
 
   it('has a locked icon when section is lockable and locked', () => {
@@ -127,8 +141,20 @@ describe('ProgressLesson', () => {
         lessonLockedForSection={() => true}
       />
     );
-    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
-    assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'lock');
+    assert.equal(
+      wrapper
+        .find('FontAwesome')
+        .at(0)
+        .props().icon,
+      'caret-down'
+    );
+    assert.equal(
+      wrapper
+        .find('FontAwesome')
+        .at(1)
+        .props().icon,
+      'lock'
+    );
   });
 
   it('has both a hidden and a locked icon when section is lockable and locked and hidden', () => {
@@ -140,9 +166,27 @@ describe('ProgressLesson', () => {
         lessonLockedForSection={() => true}
       />
     );
-    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
-    assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'eye-slash');
-    assert.equal(wrapper.find('FontAwesome').at(2).props().icon, 'lock');
+    assert.equal(
+      wrapper
+        .find('FontAwesome')
+        .at(0)
+        .props().icon,
+      'caret-down'
+    );
+    assert.equal(
+      wrapper
+        .find('FontAwesome')
+        .at(1)
+        .props().icon,
+      'eye-slash'
+    );
+    assert.equal(
+      wrapper
+        .find('FontAwesome')
+        .at(2)
+        .props().icon,
+      'lock'
+    );
   });
 
   it('does not have an unlocked icon if showLockIcon=false', () => {
@@ -154,7 +198,13 @@ describe('ProgressLesson', () => {
       />
     );
     assert.equal(wrapper.find('FontAwesome').length, 1);
-    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
+    assert.equal(
+      wrapper
+        .find('FontAwesome')
+        .at(0)
+        .props().icon,
+      'caret-down'
+    );
   });
 
   it('starts collapsed for student if it is not the current stage', () => {
@@ -181,20 +231,14 @@ describe('ProgressLesson', () => {
 
   it('starts uncollapsed for student if it is the current stage', () => {
     const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        viewAs={ViewType.Student}
-      />
+      <ProgressLesson {...defaultProps} viewAs={ViewType.Student} />
     );
     assert.equal(wrapper.state('collapsed'), false);
   });
 
   it('starts uncollapsed for teacher if it is the current stage', () => {
     const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        viewAs={ViewType.Teacher}
-      />
+      <ProgressLesson {...defaultProps} viewAs={ViewType.Teacher} />
     );
     assert.equal(wrapper.state('collapsed'), false);
   });
@@ -229,22 +273,22 @@ describe('ProgressLesson', () => {
 
   it('shows student description when viewing as student', () => {
     const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        viewAs={ViewType.Student}
-      />
+      <ProgressLesson {...defaultProps} viewAs={ViewType.Student} />
     );
-    assert.equal(wrapper.find('ProgressLessonContent').props().description, 'Student description here');
+    assert.equal(
+      wrapper.find('ProgressLessonContent').props().description,
+      'Student description here'
+    );
   });
 
   it('shows teacher description when viewing as teacher', () => {
     const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        viewAs={ViewType.Teacher}
-      />
+      <ProgressLesson {...defaultProps} viewAs={ViewType.Teacher} />
     );
-    assert.equal(wrapper.find('ProgressLessonContent').props().description, 'Teacher description here');
+    assert.equal(
+      wrapper.find('ProgressLessonContent').props().description,
+      'Teacher description here'
+    );
   });
 
   it('does not lock non-lockable stages, such as peer reviews', () => {

@@ -14,17 +14,11 @@ describe('FilterGroupContainer', () => {
       </ul>
     );
     const wrapper = shallow(
-      <FilterGroupContainer
-        text={title}
-      >
-        {content}
-      </FilterGroupContainer>
+      <FilterGroupContainer text={title}>{content}</FilterGroupContainer>
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <div>
-          {title}
-        </div>
+        <div>{title}</div>
         {content}
       </div>
     );

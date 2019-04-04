@@ -11,7 +11,7 @@
     "timeout_after_when_run": "false",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75,\"sprite\":2},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75,\"sprite\":3},{\"tileType\":0},{\"tileType\":16,\"size\":0.75,\"sprite\":4},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "Create your own story. When you're done, click \"Finish\" to share with friends. See story ideas in the hints.",
+    "short_instructions": "Create your own story. When you're done, click \"Finish\" to share with friends. See story ideas in the hints.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -53,12 +53,16 @@
     "parent_level_id": 6388,
     "name_suffix": "_2018",
     "show_type_hints": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-02-06 19:29:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-29 19:45:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-29 19:49:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "events": 1
   }
 }]]></config>
   <blocks>

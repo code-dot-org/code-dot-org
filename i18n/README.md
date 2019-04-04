@@ -20,7 +20,6 @@ this is used as context for translators.
 -   Update the string in the [i18n Gsheet][0]
 -   `ssh staging.code.org` and check that your changes were synced to
     `staging/pegasus/cache/i18n/en-US.yml`
--   Commit and push `en-US.yml`
 
 #### Adding a new string
 
@@ -33,18 +32,6 @@ this is used as context for translators.
 
 -   ssh into staging and check that your changes were synced to
     `staging/pegasus/cache/i18n/en-US.yml`
-
--   Run the following script to sync your change to all locales.
-
-        bin/i18n/sync-pegasus
-
--   Add, commit, and push all the files in `i18n/locales` and `pegasus/cache/i18n`.
-
-        git add i18n/locales pegasus/cache/i18n
-
-        git commit -m "sync pegasus strings mm/dd -yourname"
-
-        git push
 
 ### Apps
 
@@ -79,8 +66,8 @@ and should not be edited directly. These include:
 -   `courses.en.yml`
 -   `dsls.en.yml`
 -   `failure_message_overrides.en.yml`
--   `instructions.en.yml`
--   `markdown_instructions.en.yml`
+-   `short_instructions.en.yml`
+-   `long_instructions.en.yml`
 
 
 ## Updating UI Tests

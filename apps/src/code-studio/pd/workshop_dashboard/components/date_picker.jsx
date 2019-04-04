@@ -3,18 +3,14 @@
  * It's basically a wrapper around react-datepicker (with limited props) that displays
  * as a React-Bootstrap select with a calendar icon Addon.
  */
-
-import React, {PropTypes} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ReactDatePicker from 'react-datepicker';
 import {DATE_FORMAT} from '../workshopConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {
-  InputGroup,
-  FormGroup,
-  FormControl
-} from 'react-bootstrap';
+import {InputGroup, FormGroup, FormControl} from 'react-bootstrap';
 import 'react-datepicker/dist/react-datepicker.css';
 
 const styles = {
@@ -24,7 +20,7 @@ const styles = {
     border: 'none'
   },
   clearElement: {
-    color:'#999',
+    color: '#999',
     fontSize: '18px',
     zIndex: 10,
     cursor: 'pointer',
@@ -56,7 +52,7 @@ class DateInputWithIconUnwrapped extends React.Component {
     }
   };
 
-  handleClear = (e) => {
+  handleClear = e => {
     e.stopPropagation();
     this.props.onClear();
   };
@@ -72,25 +68,22 @@ class DateInputWithIconUnwrapped extends React.Component {
             style={this.props.disabled ? styles.readOnlyInput : null}
             disabled={this.props.disabled}
             onBlur={this.props.onBlur}
-            ref={ref => this.inputControl = ReactDOM.findDOMNode(ref)}
+            ref={ref => (this.inputControl = ReactDOM.findDOMNode(ref))}
           />
-          {
-            !this.props.disabled && this.props.value && this.props.onClear &&
+          {!this.props.disabled && this.props.value && this.props.onClear && (
             <FormControl.Feedback>
-                <span
-                  style={styles.clearElement}
-                  onClick={this.handleClear}
-                  title="Clear value"
-                >
-                  &times;
-                </span>
+              <span
+                style={styles.clearElement}
+                onClick={this.handleClear}
+                title="Clear value"
+              >
+                &times;
+              </span>
             </FormControl.Feedback>
-          }
+          )}
         </FormGroup>
         {!this.props.disabled && (
-          <InputGroup.Addon>
-            {<FontAwesome icon="calendar"/>}
-          </InputGroup.Addon>
+          <InputGroup.Addon>{<FontAwesome icon="calendar" />}</InputGroup.Addon>
         )}
       </InputGroup>
     );
@@ -100,15 +93,16 @@ const DateInputWithIcon = Radium(DateInputWithIconUnwrapped);
 
 export default class DatePicker extends React.Component {
   static propTypes = {
-    date: PropTypes.object,
+    date: ReactDatePicker.propTypes.selected,
     onChange: PropTypes.func.isRequired,
-    minDate: PropTypes.object,
-    maxDate: PropTypes.object,
-    selectsStart: PropTypes.bool,
-    selectsEnd: PropTypes.bool,
-    startDate: PropTypes.object,
-    endDate: PropTypes.object,
-    readOnly: PropTypes.bool,
+    onBlur: ReactDatePicker.propTypes.onBlur,
+    minDate: ReactDatePicker.propTypes.minDate,
+    maxDate: ReactDatePicker.propTypes.maxDate,
+    selectsStart: ReactDatePicker.propTypes.selectsStart,
+    selectsEnd: ReactDatePicker.propTypes.selectsEnd,
+    startDate: ReactDatePicker.propTypes.startDate,
+    endDate: ReactDatePicker.propTypes.endDate,
+    readOnly: ReactDatePicker.propTypes.disabled,
     clearable: PropTypes.bool
   };
 
@@ -119,7 +113,7 @@ export default class DatePicker extends React.Component {
     endDate: null
   };
 
-  handleChange = (date) => this.props.onChange(date);
+  handleChange = date => this.props.onChange(date);
 
   handleClear = () => this.props.onChange(null);
 
@@ -134,6 +128,7 @@ export default class DatePicker extends React.Component {
         }
         selected={this.props.date}
         onChange={this.handleChange}
+        onBlur={this.props.onBlur}
         dateFormat={DATE_FORMAT}
         minDate={this.props.minDate}
         maxDate={this.props.maxDate}

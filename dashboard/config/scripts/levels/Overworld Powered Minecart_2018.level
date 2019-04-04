@@ -28,7 +28,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "player_start_direction": "2",
-    "instructions": "Great job! You’ve gathered lots of resources and built a modest home. Now lay rail from the edge of the map to the door of your house.",
+    "short_instructions": "Great job! You’ve gathered lots of resources and built a modest home. Now lay rail from the edge of the map to the door of your house.",
     "is_daytime": "true",
     "embed": "false",
     "free_play": "false",

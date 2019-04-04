@@ -34,8 +34,8 @@
     "x": "100",
     "y": "100",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/799aac4800866265c34aba5c6fc918fb=levelbuilder/28319.png",
-    "instructions": "Look for a pattern and make this code shorter using loops!",
-    "markdown_instructions": "Look for a pattern and make this code shorter using loops!",
+    "short_instructions": "Look for a pattern and make this code shorter using loops!",
+    "long_instructions": "Look for a pattern and make this code shorter using loops!",
     "ideal": "7",
     "hint_prompt_attempts_threshold": 7,
     "contained_level_names": null

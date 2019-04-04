@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 37,
   "properties": {
-    "markdown_instructions": "## Strategies for Managing a Computer Lab\r\n\r\n\r\nIf you're new to teaching a computer lab, consider implementing some of the 7 tips for establishing strong instructional routines, outlined in this article by Angela Watson. \r\n\r\n<br><br>",
+    "long_instructions": "## Strategies for Managing a Computer Lab\r\n\r\n\r\nIf you're new to teaching a computer lab, consider implementing some of the 7 tips for establishing strong instructional routines, outlined in this article by Angela Watson. \r\n\r\n<br><br>",
     "link_title": "Classroom Management Tips for School Computer Labs",
     "url": "http://thecornerstoneforteachers.com/managing-a-computer-lab"
   },

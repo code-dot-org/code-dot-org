@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'json'
 
 class BlocklyTest < ActiveSupport::TestCase
   setup do
@@ -117,7 +118,7 @@ XML
   end
 
   test 'block XML contains no blank nodes' do
-    level = Level.create(instructions: 'test', type: 'Artist', start_blocks: @xml)
+    level = Level.create(short_instructions: 'test', type: 'Artist', start_blocks: @xml)
     assert_equal Nokogiri::XML.parse(level.start_blocks).serialize(save_with: Blockly::XML_OPTIONS),
       Nokogiri::XML.parse(level.start_blocks, &:noblanks).serialize(save_with: Blockly::XML_OPTIONS)
   end
@@ -140,6 +141,333 @@ XML
     xml2 = LevelLoader.load_custom_level_xml(xml, Level.new(name: name.next)).to_xml
     level.destroy
     assert_equal xml, xml2
+  end
+
+  def create_custom_block(name, pool, block_text, args, category: 'Events')
+    [{
+      name: name,
+      pool: pool,
+      category: category,
+      config:
+      {
+        "blockText" => block_text,
+        "args" => args,
+      },
+      helperCode: nil
+    }]
+  end
+
+  test 'localized shared_blocks' do
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          "DanceLab_atSelectColor" => {
+            "text" => "kat {TIMESTAMP} {COLOR}",
+            "options" => {
+              "COLOR" => {
+                "red": "rood",
+                "blue": "blauw",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(:level, :blockly, level_num: 'level1_2_3')
+
+    custom_block =
+      [{
+        name: "DanceLab_atSelectColor",
+        pool: "SelectColor",
+        category: "Events",
+        config:
+        {
+          "color" => [140, 1, 0.74],
+          "func" => "atSelectColor",
+          "blockText" => "cat {TIMESTAMP} {COLOR}",
+          "args" => [
+            {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+            {"name" => "COLOR", "options" => [["red", "red"], ["blue", "blue"]]}
+          ],
+          "eventBlock" => true
+        },
+        helperCode: nil
+      }]
+
+    translated_block =
+      [{
+        name: "DanceLab_atSelectColor",
+        pool: "SelectColor",
+        category: "Events",
+        config:
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "atSelectColor",
+            "blockText" => "kat {TIMESTAMP} {COLOR}",
+            "args" => [
+              {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+              {"name" => "COLOR", "options" => [["rood", "red"], ["blauw", "blue"]]}
+            ],
+            "eventBlock" => true
+          },
+        helperCode: nil
+      }]
+
+    localized_custom_block = level.localized_shared_blocks(custom_block)
+
+    assert_equal localized_custom_block, translated_block
+  end
+
+  test 'original object is not mutated' do
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          "DanceLab_atSelectColor" => {
+            "text" => "kat {TIMESTAMP} {COLOR}",
+            "options" => {
+              "COLOR" => {
+                "red": "rood",
+                "blue": "blauw",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(:level, :blockly, level_num: 'level1_2_3')
+
+    custom_block =
+      [{
+        name: "DanceLab_atSelectColor",
+        pool: "SelectColor",
+        category: "Events",
+        config:
+        {
+          "color" => [140, 1, 0.74],
+          "func" => "atSelectColor",
+          "blockText" => "cat {TIMESTAMP} {COLOR}",
+          "args" => [
+            {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+            {"name" => "COLOR", "options" => [["red", "red"], ["blue", "blue"]]}
+          ],
+          "eventBlock" => true
+        },
+        helperCode: nil
+      }]
+
+    level.localized_shared_blocks(custom_block)
+    assert_equal custom_block[0][:config]["blockText"], "cat {TIMESTAMP} {COLOR}"
+  end
+
+  test 'nil is returned if level_objects is blank' do
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          "DanceLab_atSelectColor" => {
+            "text" => "kat {TIMESTAMP} {COLOR}",
+            "options" => {
+              "COLOR" => {
+                "red": "red",
+                "blue": "blue",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(:level, :blockly, level_num: 'level1_2_3')
+
+    custom_block = []
+
+    localized_custom_block = level.localized_shared_blocks(custom_block)
+
+    assert_nil localized_custom_block
+  end
+
+  test 'does not return a translated string if block text does not exist' do
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          "DanceLab_atSelectColor" => {
+            "text" => "kat {TIMESTAMP} {COLOR}",
+            "options" => {
+              "COLOR" => {
+                "red": "rood",
+                "blue": "blauw",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(:level, :blockly, level_num: 'level1_2_3')
+
+    custom_block =
+      [{
+        name: "DanceLab_atSelectColor",
+        pool: "SelectColor",
+        category: "Events",
+        config:
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "atSelectColor",
+            "eventBlock" => true
+          },
+        helperCode: nil
+      }]
+
+    translated_block =
+      [{
+        name: "DanceLab_atSelectColor",
+        pool: "SelectColor",
+        category: "Events",
+        config:
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "atSelectColor",
+            "blockText" => "kat {TIMESTAMP} {COLOR}",
+            "args" => [
+              {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+              {"name" => "COLOR", "options" => [["red", "red"], ["blue", "blue"]]}
+            ],
+            "eventBlock" => true
+          },
+        helperCode: nil
+      }]
+
+    localized_custom_block = level.localized_shared_blocks(custom_block)
+
+    assert_not_equal localized_custom_block, translated_block
+  end
+
+  test 'does not return translated strings when I18n translation does not exist' do
+    test_locale = :"es-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          "DanceLab_atSelectCostume" => {
+            "text" => "actor {TYPE} {COSTUME}",
+            "options" => {
+              "COSTUME" => {
+                "hat": "",
+                "shirt": "",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(:level, :blockly, level_num: 'level1_2_3')
+
+    custom_block =
+      [{
+        name: "DanceLab_atSelectColor",
+        pool: "SelectColor",
+        category: "Events",
+        config:
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "atSelectColor",
+            "blockText" => "actor {TIMESTAMP} {COLOR}",
+            "args" => [
+              {"name" => "TYPE", "type" => "Number", "field" => true},
+              {"name" => "COSTUME", "options" => [["hat", "hat"], ["shirt", "shirt"]]}
+            ],
+            "eventBlock" => true
+          },
+        helperCode: nil
+      }]
+
+    translated_block =
+      [{
+        name: "DanceLab_atSelectColor",
+        pool: "SelectColor",
+        category: "Events",
+        config:
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "atSelectColor",
+            "blockText" => "actor {TYPE} {COSTUME}",
+            "args" => [
+              {"name" => "TYPE", "type" => "Number", "field" => true},
+              {"name" => "COSTUME", "options" => [["hat", ""], ["shirt", ""]]}
+            ],
+            "eventBlock" => true
+          },
+        helperCode: nil
+      }]
+
+    localized_custom_block = level.localized_shared_blocks(custom_block)
+
+    assert_not_equal localized_custom_block, translated_block
+  end
+
+  test 'option that contains a period in the key is translated' do
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          "ThunderCats_atSelectStrengthLevel" => {
+            "text" => "vérifier la {LEVEL}",
+            "options" => {
+              "LEVEL" => {
+                "LEVELS.Whole": "Entier",
+                "LEVELS.Half": "Moitié",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(:level, :blockly, level_num: 'level1_2_3')
+
+    test_custom_block = create_custom_block(
+      "ThunderCats_atSelectStrengthLevel", "SelectStrengthLevel",
+      "check the {LEVEL}",
+      [
+        {"name" => "LEVEL", "options" => [["Whole", "LEVELS.Whole"], ["Half", "LEVELS.Half"]]}
+      ],
+    )
+
+    translated_block = create_custom_block(
+      "ThunderCats_atSelectStrengthLevel", "SelectStrengthLevel",
+      "vérifier la {LEVEL}",
+      [
+        {"name" => "LEVEL", "options" => [["Entier", "LEVELS.Whole"], ["Moitié", "LEVELS.Half"]]}
+      ]
+    )
+
+    localized_custom_block = level.localized_shared_blocks(test_custom_block)
+
+    assert_equal localized_custom_block, translated_block
   end
 
   test 'localizes authored hints' do

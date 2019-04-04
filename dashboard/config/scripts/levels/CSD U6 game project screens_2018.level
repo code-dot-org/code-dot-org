@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Create Your Screens\r\n\r\nThe first thing you'll need to do is create all of the screens that you've sketched in your planning guide.\r\n\r\n# Do This\r\n\r\nUse Design Mode to create all of the screens that your program will need. Don't forget to **pick sensible IDs** for all of your design elements.",
+    "long_instructions": "# Create Your Screens\r\n\r\nThe first thing you'll need to do is create all of the screens that you've sketched in your planning guide.\r\n\r\n# Do This\r\n\r\nUse Design Mode to create all of the screens that your program will need. Don't forget to **pick sensible IDs** for all of your design elements.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

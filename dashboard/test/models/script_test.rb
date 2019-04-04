@@ -388,6 +388,174 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
+  test 'redirect_to_script_url returns nil unless user can view script version' do
+    Script.any_instance.stubs(:can_view_version?).returns(false)
+    student = create :student
+    script = create :script, name: 'my-script'
+
+    assert_nil script.redirect_to_script_url(student)
+  end
+
+  test 'redirect_to_script_url returns nil if user is assigned to script' do
+    Script.any_instance.stubs(:can_view_version?).returns(true)
+    student = create :student
+    script = create :script, name: 'my-script'
+    section = create :section, script: script
+    section.students << student
+
+    assert_nil script.redirect_to_script_url(student)
+  end
+
+  test 'redirect_to_script_url returns nil if user is not assigned to any script in family' do
+    Script.any_instance.stubs(:can_view_version?).returns(true)
+    student = create :student
+    script = create :script, name: 'my-script'
+
+    assert_nil script.redirect_to_script_url(student)
+  end
+
+  test 'returns nil if latest assigned script is an older version than the current script' do
+    Script.any_instance.stubs(:can_view_version?).returns(true)
+    student = create :student
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
+    section = create :section, script: csp1_2017
+    section.students << student
+
+    assert_nil csp1_2018.redirect_to_script_url(student)
+  end
+
+  test 'redirect_to_script_url returns script url of latest assigned script version in family for script belonging to course family' do
+    Script.any_instance.stubs(:can_view_version?).returns(true)
+    student = create :student
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
+    create :course_script, course: csp_2017, script: csp1_2017, position: 1
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
+    create :course_script, course: csp_2018, script: csp1_2018, position: 1
+    section = create :section, course: csp_2018
+    section.students << student
+
+    assert_equal csp1_2018.link, csp1_2017.redirect_to_script_url(student)
+  end
+
+  test 'redirect_to_script_url returns script url of latest assigned script version in family for script not belonging to course family' do
+    Script.any_instance.stubs(:can_view_version?).returns(true)
+    student = create :student
+    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
+    courseg_2018 = create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018')
+    section = create :section, script: courseg_2018
+    section.students << student
+
+    assert_equal courseg_2018.link, courseg_2017.redirect_to_script_url(student)
+  end
+
+  test 'can_view_version? is true for teachers' do
+    script = create :script, name: 'my-script'
+    teacher = create :teacher
+    assert script.can_view_version?(teacher)
+  end
+
+  test 'can_view_version? is true if script is latest stable version in student locale or in English' do
+    latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', is_stable: true, supported_locales: []
+    latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', is_stable: true, supported_locales: ['it-it']
+    student = create :student
+
+    assert latest_in_english.can_view_version?(student, locale: 'it-it')
+    assert latest_in_locale.can_view_version?(student, locale: 'it-it')
+  end
+
+  test 'can_view_version? is true if student is assigned to script' do
+    script = create :script, name: 'my-script', family_name: 'script-fam'
+    student = create :student
+    student.expects(:assigned_script?).returns(true)
+
+    assert script.can_view_version?(student)
+  end
+
+  test 'can_view_version? is true if student has progress in script' do
+    script = create :script, name: 'my-script', family_name: 'script-fam'
+    student = create :student
+    student.scripts << script
+
+    assert script.can_view_version?(student)
+  end
+
+  test 'can_view_version? is true if student has progress in course script belongs to' do
+    course = create :course, family_name: 'script-fam'
+    script1 = create :script, name: 'script1', family_name: 'script-fam'
+    create :course_script, course: course, script: script1, position: 1
+    script2 = create :script, name: 'script2', family_name: 'script-fam'
+    create :course_script, course: course, script: script2, position: 2
+    student = create :student
+    student.scripts << script1
+
+    assert script2.can_view_version?(student)
+  end
+
+  test 'self.latest_stable_version is nil if no script versions in family are stable in locale' do
+    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true, supported_locales: ["it-it"]
+    create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true, supported_locales: ["it-it"]
+
+    assert_nil Script.latest_stable_version('fake-family', locale: 'es-mx')
+  end
+
+  test 'self.latest_stable_version returns latest stable version for user locale' do
+    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true, supported_locales: ["it-it"]
+    script_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true, supported_locales: ["it-it"]
+
+    assert_equal script_2018, Script.latest_stable_version('fake-family', locale: 'it-it')
+  end
+
+  test 'self.latest_stable_version returns latest stable version for English locales' do
+    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true
+    script_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true
+
+    assert_equal script_2018, Script.latest_stable_version('fake-family')
+    assert_equal script_2018, Script.latest_stable_version('fake-family', locale: 'en-ca')
+  end
+
+  test 'self.latest_stable_version returns correct script version in family if version_year is supplied' do
+    script_2017 = create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true
+    create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true
+
+    assert_equal script_2017, Script.latest_stable_version('fake-family', version_year: '2017')
+  end
+
+  test 'self.latest_assigned_version returns nil if no scripts in family are assigned to user' do
+    script1 = create :script, name: 's-1', family_name: 'family-1'
+    student = create :student
+    student.scripts << script1
+
+    assert_nil Script.latest_assigned_version('family-2', student)
+  end
+
+  test 'self.latest_assigned_version returns latest assigned script in family if script is in course family' do
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
+    create :course_script, course: csp_2017, script: csp1_2017, position: 1
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
+    create :course_script, course: csp_2018, script: csp1_2018, position: 1
+
+    student = create :student
+    section = create :section, course: csp_2017
+    section.students << student
+
+    assert_equal csp1_2017, Script.latest_assigned_version('csp', student)
+  end
+
+  test 'self.latest_assigned_version returns latest assigned script in family if script is not in course family' do
+    student = create :student
+    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
+    create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018')
+    section = create :section, script: courseg_2017
+    section.students << student
+
+    assert_equal courseg_2017, Script.latest_assigned_version('courseg', student)
+  end
+
   test 'banner image' do
     assert_nil Script.find_by_name('flappy').banner_image
     assert_equal 'banner_course1.jpg', Script.find_by_name('course1').banner_image
@@ -400,6 +568,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'hoc?' do
+    assert Script.find_by_name('dance').hoc?
     assert Script.find_by_name('flappy').hoc?
     assert Script.find_by_name('mc').hoc?
     assert Script.find_by_name('hourofcode').hoc?
@@ -592,6 +761,42 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'foo-2017', versions[1][:name]
     assert_equal '2017', versions[1][:version_year]
     assert_equal '2017', versions[1][:version_title]
+  end
+
+  test 'summarize excludes hidden versions' do
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017')
+    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018')
+    create(:script, name: 'foo-2019', family_name: 'foo', version_year: '2019', hidden: true)
+
+    versions = foo17.summarize[:versions]
+    assert_equal 2, versions.length
+    assert_equal 'foo-2018', versions[0][:name]
+    assert_equal 'foo-2017', versions[1][:name]
+
+    versions = foo17.summarize(true, create(:teacher))[:versions]
+    assert_equal 2, versions.length
+    assert_equal 'foo-2018', versions[0][:name]
+    assert_equal 'foo-2017', versions[1][:name]
+
+    teacher = create(:teacher)
+    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
+    versions = foo17.summarize(true, teacher)[:versions]
+    assert_equal 3, versions.length
+    assert_equal 'foo-2019', versions[0][:name]
+    assert_equal 'foo-2018', versions[1][:name]
+    assert_equal 'foo-2017', versions[2][:name]
+  end
+
+  test 'summarize includes bonus levels for stages if include_bonus_levels and include_stages are true' do
+    script = create :script
+    stage = create :stage, script: script
+    level = create :level
+    create :script_level, stage: stage, levels: [level], bonus: true
+
+    response = script.summarize(true, nil, true)
+    assert_equal 1, response[:stages].length
+    assert_equal 1, response[:stages].first[:levels].length
+    assert_equal [level.id], response[:stages].first[:levels].first[:ids]
   end
 
   test 'should generate PLC objects' do
@@ -1070,10 +1275,16 @@ class ScriptTest < ActiveSupport::TestCase
   test 'clone script with suffix' do
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]
+    assert_equal 1, script.script_announcements.count
 
     Script.stubs(:script_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-fixture-copy', script_copy.name
+    assert_nil script_copy.family_name
+    assert_nil script_copy.version_year
+    assert_equal false, !!script_copy.is_stable
+    assert_equal true, script_copy.hidden
+    assert_nil script_copy.script_announcements
 
     # Validate levels.
     assert_equal 5, script_copy.levels.count
@@ -1099,6 +1310,22 @@ class ScriptTest < ActiveSupport::TestCase
       'Level 4_copy,Level 5_copy',
       stage2.script_levels.map(&:levels).flatten.map(&:name).join(',')
     )
+  end
+
+  test 'clone versioned script with suffix' do
+    script_file = File.join(self.class.fixture_path, "test-fixture-versioned-1801.script")
+    scripts, _ = Script.setup([script_file])
+    script = scripts[0]
+
+    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    script_copy = script.clone_with_suffix('1802')
+
+    # make sure the old suffix is removed before the new one is added.
+    assert_equal 'test-fixture-versioned-1802', script_copy.name
+    assert_equal 'versioned', script_copy.family_name
+    assert_equal '1802', script_copy.version_year
+    assert_equal false, !!script_copy.is_stable
+    assert_equal true, script_copy.hidden
   end
 
   test 'clone script with inactive variant' do
@@ -1221,6 +1448,21 @@ endvariants
     assert_equal [script], scripts
   end
 
+  test "self.valid_scripts: omits pilot scripts" do
+    student = create :student
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    pilot_script = create :script, pilot_experiment: 'my-experiment'
+    assert pilot_script.hidden
+    assert Script.any?(&:pilot?)
+
+    refute Script.valid_scripts(student).any?(&:pilot?)
+    refute Script.valid_scripts(teacher).any?(&:pilot?)
+    assert Script.valid_scripts(pilot_teacher).any?(&:pilot?)
+    assert Script.valid_scripts(levelbuilder).any?(&:pilot?)
+  end
+
   test "get_assessment_script_levels returns an empty list if no level groups" do
     script = create(:script, name: 'test-no-levels')
     level_group_script_level = script.get_assessment_script_levels
@@ -1234,6 +1476,161 @@ endvariants
 
     assessment_script_levels = script.get_assessment_script_levels
     assert_equal assessment_script_levels[0], script_level
+  end
+
+  test "self.modern_elementary_courses_available?" do
+    course1_modern = create(:script, name: 'course1-modern', supported_locales: ["en-us", "it-it"])
+    course2_modern = create(:script, name: 'course2-modern', supported_locales: ["fr-fr", "en-us"])
+
+    Script.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
+
+    assert Script.modern_elementary_courses_available?("en-us")
+    assert_not Script.modern_elementary_courses_available?("ch-ch")
+    assert_not Script.modern_elementary_courses_available?("it-it")
+    assert_not Script.modern_elementary_courses_available?("fr-fr")
+  end
+
+  test 'supported_locale_names' do
+    script = create :script
+    assert_equal ['English'], script.supported_locale_names
+
+    script.supported_locales = ['en-US']
+    assert_equal ['English'], script.supported_locale_names
+
+    script.supported_locales = ['fr-FR']
+    assert_equal ['English', 'French'], script.supported_locale_names
+
+    script.supported_locales = ['fr-FR', 'ar-SA']
+    assert_equal ['Arabic', 'English', 'French'], script.supported_locale_names
+
+    script.supported_locales = ['en-US', 'fr-FR', 'ar-SA']
+    assert_equal ['Arabic', 'English', 'French'], script.supported_locale_names
+
+    script.supported_locales = ['fr-fr']
+    assert_equal ['English', 'fr-fr'], script.supported_locale_names
+  end
+
+  test 'section_hidden_unit_info' do
+    teacher = create :teacher
+    section1 = create :section, user: teacher
+    assert_equal({}, @script_in_course.section_hidden_unit_info(teacher))
+
+    create :section_hidden_script, section: section1, script: @script_in_course
+    assert_equal({section1.id => [@script_in_course.id]}, @script_in_course.section_hidden_unit_info(teacher))
+
+    # other script has no effect
+    other_script = create :script
+    create :section_hidden_script, section: section1, script: other_script
+    assert_equal({section1.id => [@script_in_course.id]}, @script_in_course.section_hidden_unit_info(teacher))
+
+    # other teacher's sections have no effect
+    other_teacher = create :teacher
+    other_teacher_section = create :section, user: other_teacher
+    create :section_hidden_script, section: other_teacher_section, script: @script_in_course
+    assert_equal({section1.id => [@script_in_course.id]}, @script_in_course.section_hidden_unit_info(teacher))
+
+    # other section for same teacher hidden for same script appears in list
+    section2 = create :section, user: teacher
+    assert_equal({section1.id => [@script_in_course.id]}, @script_in_course.section_hidden_unit_info(teacher))
+    create :section_hidden_script, section: section2, script: @script_in_course
+    assert_equal(
+      {
+        section1.id => [@script_in_course.id],
+        section2.id => [@script_in_course.id]
+      },
+      @script_in_course.section_hidden_unit_info(teacher)
+    )
+  end
+
+  test 'pilot scripts are always hidden during seed' do
+    l = create :level
+    dsl = <<-SCRIPT
+      hidden false
+      pilot_experiment 'pilot-experiment'
+
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+
+    File.stubs(:read).returns(dsl)
+    scripts, _ = Script.setup(['pilot-script.script'])
+    script = scripts.first
+
+    assert_equal 'pilot-script', script.name
+    assert_equal 'pilot-experiment', script.pilot_experiment
+    assert script.hidden
+  end
+
+  test 'has pilot access' do
+    script = create :script
+    pilot_script = create :script, pilot_experiment: 'my-experiment'
+
+    student = create :student
+    teacher = create :teacher
+
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+
+    # student in a pilot teacher's section which is not assigned to any script
+    section = create :section, user: pilot_teacher
+    unassigned_student = create(:follower, section: section).student_user
+
+    # student in a pilot teacher's section which is assigned to a pilot script
+    pilot_section = create :section, user: pilot_teacher, script: pilot_script
+    pilot_student = create(:follower, section: pilot_section).student_user
+
+    # teacher in a pilot teacher's section
+    teacher_in_section = create :teacher
+    create(:follower, section: pilot_section, student_user: teacher_in_section)
+
+    # student in a section which was previously assigned to a pilot script
+    other_pilot_section = create :section, user: pilot_teacher, script: pilot_script
+    previous_student = create(:follower, section: other_pilot_section).student_user
+    other_pilot_section.script = nil
+    other_pilot_section.save!
+
+    # student of pilot teacher, student never assigned to pilot script
+    non_pilot_section = create :section, user: pilot_teacher
+    student_of_pilot_teacher = create(:follower, section: non_pilot_section).student_user
+
+    levelbuilder = create :levelbuilder
+
+    refute script.pilot?
+    refute script.has_pilot_access?
+    refute script.has_pilot_access?(student)
+    refute script.has_pilot_access?(teacher)
+    refute script.has_pilot_access?(pilot_teacher)
+    refute script.has_pilot_access?(unassigned_student)
+    refute script.has_pilot_access?(pilot_student)
+    refute script.has_pilot_access?(teacher_in_section)
+    refute script.has_pilot_access?(previous_student)
+    refute script.has_pilot_access?(student_of_pilot_teacher)
+    refute script.has_pilot_access?(levelbuilder)
+
+    assert pilot_script.pilot?
+    refute pilot_script.has_pilot_access?
+    refute pilot_script.has_pilot_access?(student)
+    refute pilot_script.has_pilot_access?(teacher)
+    assert pilot_script.has_pilot_access?(pilot_teacher)
+    refute pilot_script.has_pilot_access?(unassigned_student)
+    assert pilot_script.has_pilot_access?(pilot_student)
+    assert pilot_script.has_pilot_access?(teacher_in_section)
+    assert pilot_script.has_pilot_access?(previous_student)
+    refute script.has_pilot_access?(student_of_pilot_teacher)
+    assert pilot_script.has_pilot_access?(levelbuilder)
+  end
+
+  test 'has any pilot access' do
+    student = create :student
+    teacher = create :teacher
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    create :script, pilot_experiment: 'my-experiment'
+    levelbuilder = create :levelbuilder
+
+    refute Script.has_any_pilot_access?
+    refute Script.has_any_pilot_access?(student)
+    refute Script.has_any_pilot_access?(teacher)
+    assert Script.has_any_pilot_access?(pilot_teacher)
+    assert Script.has_any_pilot_access?(levelbuilder)
   end
 
   private

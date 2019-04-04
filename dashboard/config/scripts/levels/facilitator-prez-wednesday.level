@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "# Day 3: Facilitator Presentation\r\n\r\nYou have now seen a bunch of facilitator presentation sessions (orange sessions). What common facilitator strategies were used in these sessions?\r\n\r\n* What are facilitators doing?\r\n* What are teachers doing?\r\n* What strategies did you see facilitators use to keep teachers engaged?",
+    "long_instructions": "# Day 3: Facilitator Presentation\r\n\r\nYou have now seen a bunch of facilitator presentation sessions (orange sessions). What common facilitator strategies were used in these sessions?\r\n\r\n* What are facilitators doing?\r\n* What are teachers doing?\r\n* What strategies did you see facilitators use to keep teachers engaged?",
     "parent_level_id": 14307
   },
   "published": true,

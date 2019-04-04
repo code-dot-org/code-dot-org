@@ -26,7 +26,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "The `\"playSound()\"` block plays sounds. The `\"horseButton\"` already plays a horse sound. Add code to make the `\"duckButton\"` play a duck sound. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/30e35a2c35ac309545d90af9330ba76d-image-1505939876315.gif)",
+    "long_instructions": "The `\"playSound()\"` block plays sounds. The `\"horseButton\"` already plays a horse sound. Add code to make the `\"duckButton\"` play a duck sound. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/30e35a2c35ac309545d90af9330ba76d-image-1505939876315.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

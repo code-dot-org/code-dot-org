@@ -13,8 +13,9 @@ Dashboard::Application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
-  # Show full error reports
-  config.consider_all_requests_local = true
+  # Disable full error reports for profiling/load-testing, due to memory leak:
+  # https://github.com/rails/rails/issues/27273
+  config.consider_all_requests_local = false
 
   # Use digests.
   config.assets.digest = true
@@ -32,10 +33,6 @@ Dashboard::Application.configure do
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
 
-  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
-  # the I18n.default_locale when a translation can not be found).
-  config.i18n.fallbacks = true
-
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = true
 
@@ -45,7 +42,11 @@ Dashboard::Application.configure do
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = false
 
+  # Log condensed lines to syslog for centralized logging.
   config.lograge.enabled = true
+  config.lograge.formatter = Lograge::Formatters::Cee.new
+  require 'syslog/logger'
+  config.logger = Syslog::Logger.new 'dashboard', Syslog::LOG_LOCAL0
 
   # Show mail previews (rails/mailers).
   # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails

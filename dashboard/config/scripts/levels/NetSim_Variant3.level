@@ -7,7 +7,7 @@
   "properties": {
     "skin": "netsim",
     "skip_instructions_popup": "true",
-    "instructions": "NetSim: Variant 3: Connects groups of 2-6 students with a router, and explores issues in routing and DNS",
+    "short_instructions": "NetSim: Variant 3: Connects groups of 2-6 students with a router, and explores issues in routing and DNS",
     "show_clients_in_lobby": "false",
     "show_routers_in_lobby": "true",
     "show_add_router_button": "true",

@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "This OR block returns true if either of its parameters is true. Otherwise, if both parameters are false it will return false. Set the y variable to a value that will cause this expression to return false.",
+    "short_instructions": "This OR block returns true if either of its parameters is true. Otherwise, if both parameters are false it will return false. Set the y variable to a value that will cause this expression to return false.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -23,7 +23,7 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "This `or` block returns *true* if either of its parameters is *true*. Otherwise, if both parameters are *false* it will return *false*. Set the y variable to a value that will cause this expression to return *false*.",
+    "long_instructions": "This `or` block returns *true* if either of its parameters is *true*. Otherwise, if both parameters are *false* it will return *false*. Set the y variable to a value that will cause this expression to return *false*.",
     "never_autoplay_video": "false",
     "examples_required": "false"
   }

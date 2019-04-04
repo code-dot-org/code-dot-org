@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Reflection\r\n\r\nQuestions:\r\n\r\n* What is the difference between getters and setters?\r\n* Why would you want to save the information from a getter in a variable?",
+    "long_instructions": "# Reflection\r\n\r\nQuestions:\r\n\r\n* What is the difference between getters and setters?\r\n* Why would you want to save the information from a getter in a variable?",
     "instructions_important": "false",
     "submittable": "false",
     "allow_user_uploads": "false",

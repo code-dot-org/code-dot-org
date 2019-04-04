@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Free Play: Suppose you want to own a car at 21, or have your own business by 30. Write a function called life-goals, which takes in an age and produces a string that describes your life goals by then. Don’t forget to add an “else” clause!\r\n",
+    "short_instructions": "Free Play: Suppose you want to own a car at 21, or have your own business by 30. Write a function called life-goals, which takes in an age and produces a string that describes your life goals by then. Don’t forget to add an “else” clause!\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

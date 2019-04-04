@@ -7,7 +7,7 @@
   "properties": {
     "title": "CSP curricular materials",
     "height": "100",
-    "markdown_instructions": "We just talked about the types of materials available through the Code.org CSP curriculum, including teacher lesson plans, widgets, widget tutorial videos, concept videos, teaching tips videos, and student-facing activities. Which of these materials are you most excited to have access to? Which are you most uncertain about? ",
+    "long_instructions": "We just talked about the types of materials available through the Code.org CSP curriculum, including teacher lesson plans, widgets, widget tutorial videos, concept videos, teaching tips videos, and student-facing activities. Which of these materials are you most excited to have access to? Which are you most uncertain about? ",
     "skip_dialog": true,
     "skip_sound": true
   },

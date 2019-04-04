@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<div style=\"float:right\">\r\n\t<img src=\"https://images.code.org/7435f9effd46381a1d7d0c9078d6db78-image-1506554154216.15.23 PM.png\" style=\"height:150px\">\r\n</div>\r\n\r\n**Goal:** Make the text bigger\r\n\r\n**How:** Drag in the block and then choose a bigger `\"font-size\"` of `\"label1\"`.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/6125888ad13353978132b19dfca8cc49-image-1505953367275.gif)",
+    "long_instructions": "<div style=\"float:right\">\r\n\t<img src=\"https://images.code.org/7435f9effd46381a1d7d0c9078d6db78-image-1506554154216.15.23 PM.png\" style=\"height:150px\">\r\n</div>\r\n\r\n**Goal:** Make the text bigger\r\n\r\n**How:** Drag in the block and then choose a bigger `\"font-size\"` of `\"label1\"`.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/6125888ad13353978132b19dfca8cc49-image-1505953367275.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

@@ -35,7 +35,7 @@
     "callout_json": "[]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "instructions": "Look at this level carefully. What kind of functions do you see a program needing in order to create a design like this. You'll soon make this on your own, so come back here if you need help.",
+    "short_instructions": "Look at this level carefully. What kind of functions do you see a program needing in order to create a design like this. You'll soon make this on your own, so come back here if you need help.",
     "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },

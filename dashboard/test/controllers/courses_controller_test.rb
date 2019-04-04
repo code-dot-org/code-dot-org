@@ -20,11 +20,11 @@ class CoursesControllerTest < ActionController::TestCase
 
   # Tests for index
 
-  test_user_gets_response_for :index, response: :success, user: :teacher, queries: 26
+  test_user_gets_response_for :index, response: :success, user: :teacher, queries: 4
 
-  test_user_gets_response_for :index, response: :success, user: :admin, queries: 26
+  test_user_gets_response_for :index, response: :success, user: :admin, queries: 4
 
-  test_user_gets_response_for :index, response: :success, user: :user, queries: 25
+  test_user_gets_response_for :index, response: :success, user: :user, queries: 3
 
   # Tests for show
 
@@ -57,7 +57,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @course_regular.name}}, queries: 7
 
-  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @course_regular.name}}, queries: 3
+  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @course_regular.name}}, queries: 2
 
   # For now, this test passes due to hard-coded logic in CoursesController#show.
   # This test ensures that hard-coded logic is not removed without being replaced
@@ -72,6 +72,60 @@ class CoursesControllerTest < ActionController::TestCase
     create :course, name: 'csd-2018', family_name: 'csd', version_year: '2018'
     get :show, params: {course_name: 'csd'}
     assert_redirected_to '/courses/csd-2018'
+  end
+
+  # Right now, all course versions are considered stable, but in the future, we will track an is_stable property for
+  # each course, and the following tests regarding "latest stable version" need be updated.
+  test "show: redirect to latest stable version in course family for logged out user" do
+    sign_out @teacher
+    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
+    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+
+    get :show, params: {course_name: 'csp-2017'}
+
+    assert_redirected_to '/courses/csp-2018/?redirect_warning=true'
+  end
+
+  test "show: redirect to latest stable version in course family for student" do
+    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
+    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+
+    sign_in create(:student)
+    get :show, params: {course_name: 'csp-2017'}
+
+    assert_redirected_to '/courses/csp-2018/?redirect_warning=true'
+  end
+
+  test "show: do not redirect student to latest stable version in course family if they have progress" do
+    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
+    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+
+    Course.any_instance.stubs(:has_progress?).returns(true)
+    sign_in create(:student)
+    get :show, params: {course_name: 'csp-2017'}
+
+    assert_response :ok
+  end
+
+  test "show: do not redirect student to latest stable version in course family if they are assigned" do
+    student = create :student
+    csp2017 = create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
+    create :follower, section: create(:section, course: csp2017), student_user: student
+    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+
+    sign_in student
+    get :show, params: {course_name: 'csp-2017'}
+
+    assert_response :ok
+  end
+
+  test "show: do not redirect teacher to latest stable version in course family" do
+    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
+    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+
+    get :show, params: {course_name: 'csp-2017'}
+
+    assert_response :ok
   end
 
   # Tests for create

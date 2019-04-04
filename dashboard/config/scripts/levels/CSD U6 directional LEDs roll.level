@@ -18,7 +18,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Roll\r\n\r\nThis program should display \"Left\" or \"Right\" on the screen, depending on which way the board is tilted.\r\n\r\n# Do this\r\n* Use the \"roll\" property of the accelerometer to determine whether the board is tilted to the left or right.\r\n* Use a conditional to change the text for the \"direction\" element to be either \"Left\" or \"Right\", depending on the board's orientation.",
+    "long_instructions": "# Roll\r\n\r\nThis program should display \"Left\" or \"Right\" on the screen, depending on which way the board is tilted.\r\n\r\n# Do this\r\n* Use the \"roll\" property of the accelerometer to determine whether the board is tilted to the left or right.\r\n* Use a conditional to change the text for the \"direction\" element to be either \"Left\" or \"Right\", depending on the board's orientation.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

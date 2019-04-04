@@ -17,7 +17,7 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "instructions": "Which binary string, repeated 10 times, will draw this image?",
+    "short_instructions": "Which binary string, repeated 10 times, will draw this image?",
     "use_modal_function_editor": "false"
   }
 }]]></config>

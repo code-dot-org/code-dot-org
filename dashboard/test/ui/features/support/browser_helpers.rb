@@ -14,7 +14,8 @@ module BrowserHelpers
   def element_has_i18n_text(selector, language, loc_key)
     require_rails_env
     loc_key.gsub!('\"', '"')
-    text = @browser.execute_script("return $(\"#{selector}\").text();")
+    # grab text from the browser, replacing non-breaking spaces with regular ones
+    text = @browser.execute_script("return $(\"#{selector}\").text().replace(/\u00a0/g, ' ');")
     text.should eq I18n.t loc_key, locale: language
   end
 
@@ -53,6 +54,14 @@ module BrowserHelpers
     expect(element_css_value(selector, property)).to eq(expected_value)
   end
 
+  def element_has_css_multiple_properties(selector, properties, expected_value)
+    expected = false
+    properties.each do |property|
+      expected ||= (element_css_value(selector, property) === (expected_value))
+    end
+    expected
+  end
+
   def element_css_value(selector, property)
     @browser.execute_script("return $(\"#{selector}\").css(\"#{property}\");")
   end
@@ -84,7 +93,7 @@ module BrowserHelpers
       if js_errors
         puts "DEBUG: [#{check_reason_description}] JS errors: #{CGI.escapeHTML js_errors.join(' | ')}"
       else
-        puts "DEBUG: [#{check_reason_description}] No JS errors found on current page."
+        puts "DEBUG: [#{check_reason_description}] No JS errors found on current page." if ENV['VERY_VERBOSE']
       end
     end
   rescue => err

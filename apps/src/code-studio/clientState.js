@@ -2,13 +2,13 @@
  * @file Helper functions for accessing client state. This state is stored in a
  *       combination of cookies and HTML5 web storage.
  */
-import { trySetSessionStorage } from '../utils';
+import {trySetSessionStorage} from '../utils';
 import cookies from 'js-cookie';
 var sessionStorage = window.sessionStorage;
 
-import { mergeActivityResult } from './activityUtils';
+import {mergeActivityResult} from './activityUtils';
 
-var clientState = module.exports = {};
+var clientState = (module.exports = {});
 
 clientState.queryParams = require('./utils').queryParams;
 
@@ -37,7 +37,7 @@ var COOKIE_OPTIONS = {
   path: '/'
 };
 
-clientState.reset = function () {
+clientState.reset = function() {
   try {
     cookies.remove('lines', {path: '/'});
     sessionStorage.clear();
@@ -53,7 +53,7 @@ clientState.reset = function () {
  * @returns {string|undefined} Cached copy of the level source, or undefined if
  *   the cached copy is missing/stale.
  */
-clientState.sourceForLevel = function (scriptName, levelId, timestamp) {
+clientState.sourceForLevel = function(scriptName, levelId, timestamp) {
   var data = sessionStorage.getItem(createKey(scriptName, levelId, 'source'));
   if (data) {
     var parsed;
@@ -77,11 +77,19 @@ clientState.sourceForLevel = function (scriptName, levelId, timestamp) {
  * @param {number} timestamp
  * @param {string} source
  */
-clientState.writeSourceForLevel = function (scriptName, levelId, timestamp, source) {
-  trySetSessionStorage(createKey(scriptName, levelId, 'source'), JSON.stringify({
-    source: source,
-    timestamp: timestamp
-  }));
+clientState.writeSourceForLevel = function(
+  scriptName,
+  levelId,
+  timestamp,
+  source
+) {
+  trySetSessionStorage(
+    createKey(scriptName, levelId, 'source'),
+    JSON.stringify({
+      source: source,
+      timestamp: timestamp
+    })
+  );
 };
 
 /**
@@ -90,7 +98,7 @@ clientState.writeSourceForLevel = function (scriptName, levelId, timestamp, sour
  * @param {number} levelId The level
  * @returns {number}
  */
-clientState.levelProgress = function (scriptName, levelId) {
+clientState.levelProgress = function(scriptName, levelId) {
   var progressMap = clientState.allLevelsProgress();
   return (progressMap[scriptName] || {})[levelId] || 0;
 };
@@ -104,14 +112,22 @@ clientState.levelProgress = function (scriptName, levelId) {
  * @param {string} scriptName - Which script this is for
  * @param {number} levelId - Which level this is for
  */
-clientState.trackProgress = function (result, lines, testResult, scriptName, levelId) {
+clientState.trackProgress = function(
+  result,
+  lines,
+  testResult,
+  scriptName,
+  levelId
+) {
   if (result && isFinite(lines)) {
     addLines(lines);
   }
 
   var savedResult = clientState.levelProgress(scriptName, levelId);
-  if (testResult <= clientState.MAXIMUM_CACHABLE_RESULT &&
-      savedResult !== mergeActivityResult(savedResult, testResult)) {
+  if (
+    testResult <= clientState.MAXIMUM_CACHABLE_RESULT &&
+    savedResult !== mergeActivityResult(savedResult, testResult)
+  ) {
     setLevelProgress(scriptName, levelId, testResult);
   }
 };
@@ -121,12 +137,15 @@ clientState.trackProgress = function (result, lines, testResult, scriptName, lev
  * @param {string} scriptName
  * @param {Object<String, number>} progress
  */
-clientState.batchTrackProgress = function (scriptName, progress) {
+clientState.batchTrackProgress = function(scriptName, progress) {
   var data = {};
   var keys = Object.keys(progress);
   for (let i = 0; i < keys.length; i++) {
     let level = keys[i];
-    if (progress[level] && progress[level] <= clientState.MAXIMUM_CACHABLE_RESULT) {
+    if (
+      progress[level] &&
+      progress[level] <= clientState.MAXIMUM_CACHABLE_RESULT
+    ) {
       data[level] = progress[level];
     }
   }
@@ -155,7 +174,7 @@ function setLevelProgress(scriptName, levelId, progress) {
  * Returns a map from (string) level id to progress value.
  * @return {Object<String, number>}
  */
-clientState.allLevelsProgress = function () {
+clientState.allLevelsProgress = function() {
   var progressJson = sessionStorage.getItem('progress');
   try {
     return progressJson ? JSON.parse(progressJson) : {};
@@ -172,19 +191,25 @@ clientState.allLevelsProgress = function () {
  * @param {Object=} progress A map from level id to progress values. Will be
  *  fetched from sessionStorage if not provided.
  */
-clientState.bestProgress = function (levelIds, scriptName, progress) {
+clientState.bestProgress = function(levelIds, scriptName, progress) {
   if (!progress) {
     progress = clientState.allLevelsProgress();
   }
-  return Math.max.apply(Math, levelIds.filter(id => progress[scriptName][id])
-      .map(id => progress[scriptName][id])) || 0;
+  return (
+    Math.max.apply(
+      Math,
+      levelIds
+        .filter(id => progress[scriptName][id])
+        .map(id => progress[scriptName][id])
+    ) || 0
+  );
 };
 
 /**
  * Returns the number of lines completed from the cookie.
  * @returns {number}
  */
-clientState.lines = function () {
+clientState.lines = function() {
   var linesStr = cookies.get('lines');
   return isFinite(linesStr) ? Number(linesStr) : 0;
 };
@@ -194,7 +219,10 @@ clientState.lines = function () {
  * @param {number} addedLines
  */
 function addLines(addedLines) {
-  var newLines = Math.min(clientState.lines() + Math.max(addedLines, 0), MAX_LINES_TO_SAVE);
+  var newLines = Math.min(
+    clientState.lines() + Math.max(addedLines, 0),
+    MAX_LINES_TO_SAVE
+  );
 
   cookies.set('lines', String(newLines), COOKIE_OPTIONS);
 }
@@ -204,7 +232,7 @@ function addLines(addedLines) {
  * @param videoId
  * @returns {*}
  */
-clientState.hasSeenVideo = function (videoId) {
+clientState.hasSeenVideo = function(videoId) {
   return hasSeenVisualElement('video', videoId);
 };
 
@@ -212,7 +240,7 @@ clientState.hasSeenVideo = function (videoId) {
  * Records that a user has seen a given video in local storage
  * @param videoId
  */
-clientState.recordVideoSeen = function (videoId) {
+clientState.recordVideoSeen = function(videoId) {
   recordVisualElementSeen('video', videoId);
 };
 
@@ -221,7 +249,7 @@ clientState.recordVideoSeen = function (videoId) {
  * @param calloutId
  * @returns {boolean}
  */
-clientState.hasSeenCallout = function (calloutId) {
+clientState.hasSeenCallout = function(calloutId) {
   return hasSeenVisualElement('callout', calloutId);
 };
 
@@ -229,7 +257,7 @@ clientState.hasSeenCallout = function (calloutId) {
  * Records that a user has seen a given callout in local storage
  * @param calloutId
  */
-clientState.recordCalloutSeen = function (calloutId) {
+clientState.recordCalloutSeen = function(calloutId) {
   recordVisualElementSeen('callout', calloutId);
 };
 
@@ -252,28 +280,6 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
     trySetSessionStorage(visualElementType, JSON.stringify(elementSeen));
   }
 }
-
-/**
- * Cache whether the user is a teacher, so that we can appropriately update the
- * UI on future pageloads without waiting on API
- * @param {boolean} isTeacher
- */
-clientState.cacheUserIsTeacher = function (isTeacher) {
-  trySetSessionStorage('isTeacher', isTeacher);
-};
-
-/**
- * Get the cached state of whether the user is a teacher.
- */
-clientState.getUserIsTeacher = function () {
-  let isTeacher = false;
-  try {
-    isTeacher = JSON.parse(sessionStorage.getItem('isTeacher'));
-  } catch (e) {
-    isTeacher = false;
-  }
-  return isTeacher;
-};
 
 /**
  * Private helper for videos and callouts - looks in local storage to see if the element has been seen

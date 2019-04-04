@@ -40,31 +40,32 @@ Scenario: Teacher in English should see 5 header links
   And I see "#header-teacher-professional-learning"
   And element "#header-teacher-professional-learning" contains text "Professional Learning"
 
-@skip
-Scenario: Signed out user in Spanish should see 2 header links
+Scenario: Signed out user in Spanish should see 3 header links
   Given I am on "http://code.org/lang/es"
   Then check that I am on "http://code.org/"
   And I dismiss the language selector
   Given I am on "http://studio.code.org/courses"
   And I wait to see ".headerlinks"
   And I see "#header-non-en-courses"
-  And element "#header-non-en-courses" has "es" text from key "nav.header.courses"
+  And element "#header-non-en-courses" has "es" text from key "nav.header.course_catalog"
   And I see "#header-non-en-projects"
   And element "#header-non-en-projects" has "es" text from key "nav.header.project_gallery"
+  And I see "#header-non-en-about"
+  And element "#header-non-en-about" has "es" text from key "nav.header.about"
 
-@skip
-Scenario: Student in Spanish should see 2 header links
-  Given I create a student named "Estrella Estudiante"
-  Then check that I am on "http://studio.code.org/courses"
+Scenario: Student in Spanish should see 3 header links
+  Given I create a student named "Eva Estudiante"
+  Then check that I am on "http://studio.code.org/home"
   Given I am on "http://studio.code.org/courses/lang/es"
   Then check that I am on "http://studio.code.org/courses"
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
-  And element "#header-student-courses" has "es" text from key "nav.header.courses"
+  And element "#header-student-courses" has "es" text from key "nav.header.course_catalog"
   And I see "#header-student-projects"
   And element "#header-student-projects" has "es" text from key "nav.header.project_gallery"
+  And I see "#header-non-en-about"
+  And element "#header-non-en-about" has "es" text from key "nav.header.about"
 
-@skip
 Scenario: Teacher in Spanish should see 5 header links
   Given I create a teacher named "Pabla Profesora"
   Then check that I am on "http://studio.code.org/home"
@@ -72,10 +73,10 @@ Scenario: Teacher in Spanish should see 5 header links
   Then check that I am on "http://studio.code.org/home"
   And I wait to see ".headerlinks"
   And I see "#header-teacher-home"
-  And element "#header-teacher-home" has "es" text from key "nav.header.home"
+  And element "#header-teacher-home" has "es" text from key "nav.header.my_dashboard"
   And I see "#header-teacher-courses"
-  And element "#header-teacher-courses" has "es" text from key "nav.header.courses"
+  And element "#header-teacher-courses" has "es" text from key "nav.header.course_catalog"
   And I see "#header-teacher-projects"
   And element "#header-teacher-projects" has "es" text from key "nav.header.project_gallery"
-  And I see "#header-teacher-professional-learning"
-  And element "#header-teacher-professional-learning" has "es" text from key "nav.header.professional_learning"
+  And I see "#header-non-en-about"
+  And element "#header-non-en-about" has "es" text from key "nav.header.about"

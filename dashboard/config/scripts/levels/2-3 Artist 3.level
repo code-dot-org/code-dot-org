@@ -6,7 +6,7 @@
   "user_id": 28,
   "properties": {
     "skin": "artist",
-    "instructions": "This hat is 100 pixels high. Draw a hat that is 70 pixels less.",
+    "short_instructions": "This hat is 100 pixels high. Draw a hat that is 70 pixels less.",
     "x": 175,
     "y": 200,
     "start_direction": 90

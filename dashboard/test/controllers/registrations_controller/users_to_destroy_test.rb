@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 
 module RegistrationsControllerTests
@@ -24,15 +23,15 @@ module RegistrationsControllerTests
     # Tests for student users
     #
 
-    test "returns name and id of student to be deleted" do
+    test "returns summarized student to be deleted" do
       student = create :student
-      expected_user = {"id" => student.id, "name" => student.name}
       sign_in student
 
       get '/users/to_destroy'
       assert_response :success
+      expected_users = [student.summarize].as_json
       returned_users = JSON.parse(@response.body)
-      assert_equal [expected_user], returned_users
+      assert_equal expected_users, returned_users
     end
 
     #
@@ -43,27 +42,25 @@ module RegistrationsControllerTests
       section = create :section
       another_teacher = create :teacher
       section.students << another_teacher
-
-      expected_user = {"id" => section.teacher.id, "name" => section.teacher.name}
       sign_in section.teacher
 
       get '/users/to_destroy'
       assert_response :success
+      expected_users = [section.teacher.summarize].as_json
       returned_users = JSON.parse(@response.body)
-      assert_equal [expected_user], returned_users
+      assert_equal expected_users, returned_users
     end
 
     test "does not return students with personal logins" do
       section = create :section
       create(:follower, section: section)
-
-      expected_user = {"id" => section.teacher.id, "name" => section.teacher.name}
       sign_in section.teacher
 
       get '/users/to_destroy'
       assert_response :success
+      expected_users = [section.teacher.summarize].as_json
       returned_users = JSON.parse(@response.body)
-      assert_equal [expected_user], returned_users
+      assert_equal expected_users, returned_users
     end
 
     test "does not return students without personal logins that have other teachers" do
@@ -71,28 +68,38 @@ module RegistrationsControllerTests
       teacher = student.teachers.first
       another_section = create :section
       another_section.students << student
-
-      expected_user = {"id" => teacher.id, "name" => teacher.name}
       sign_in teacher
 
       get '/users/to_destroy'
       assert_response :success
+      expected_users = [teacher.summarize].as_json
       returned_users = JSON.parse(@response.body)
-      assert_equal [expected_user], returned_users
+      assert_equal expected_users, returned_users
     end
 
     test "returns students without personal logins that have no other teachers" do
       student = create :student_in_word_section
       teacher = student.teachers.first
-
-      expected_users = [
-        {"id" => student.id, "name" => student.name},
-        {"id" => teacher.id, "name" => teacher.name}
-      ]
+      another_word_section = create :section, user: teacher, login_type: Section::LOGIN_TYPE_WORD
+      another_word_section.students << student
       sign_in teacher
 
       get '/users/to_destroy'
       assert_response :success
+      expected_users = [student.summarize, teacher.summarize].as_json
+      returned_users = JSON.parse(@response.body)
+      assert_equal expected_users, returned_users
+    end
+
+    test "returns students in rostered sections without passwords that have no other teachers" do
+      student = create :student, :google_sso_provider, encrypted_password: nil
+      section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+      section.students << student
+      sign_in section.teacher
+
+      get '/users/to_destroy'
+      assert_response :success
+      expected_users = [student.summarize, section.teacher.summarize].as_json
       returned_users = JSON.parse(@response.body)
       assert_equal expected_users, returned_users
     end

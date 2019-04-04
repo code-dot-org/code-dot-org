@@ -7,12 +7,10 @@ import {mount} from 'enzyme';
 import PopUpMenu, {MenuBubble} from '@cdo/apps/lib/ui/PopUpMenu';
 
 describe('PopUpMenu', () => {
-  const targetPoint = {left: 0, top:0};
+  const targetPoint = {left: 0, top: 0};
 
   it('renders placeholder text if no menu items are provided', () => {
-    const wrapper = mount(
-      <MenuBubble targetPoint={targetPoint}/>
-    );
+    const wrapper = mount(<MenuBubble targetPoint={targetPoint} />);
     expect(wrapper.text()).to.include(msg.noMenuItemsAvailable());
   });
 
@@ -25,9 +23,9 @@ describe('PopUpMenu', () => {
       </MenuBubble>
     );
     expect(wrapper.text())
-        .to.include('Item one')
-        .and.to.include('Item two')
-        .and.to.include('Item three');
+      .to.include('Item one')
+      .and.to.include('Item two')
+      .and.to.include('Item three');
   });
 
   it('has working click handlers for menu items', () => {
@@ -39,7 +37,12 @@ describe('PopUpMenu', () => {
         <PopUpMenu.Item onClick={spy2}>Item two</PopUpMenu.Item>
       </MenuBubble>
     );
-    wrapper.find(PopUpMenu.Item).first().children().first().simulate('click');
+    wrapper
+      .find(PopUpMenu.Item)
+      .first()
+      .children()
+      .first()
+      .simulate('click');
     expect(spy1).to.have.been.calledOnce;
     expect(spy2).not.to.have.been.called;
   });

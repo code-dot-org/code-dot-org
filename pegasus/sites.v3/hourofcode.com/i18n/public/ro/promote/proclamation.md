@@ -1,55 +1,59 @@
 ---
-title: <%= hoc_s(:title_proclamation) %>
+title: <%= hoc_s(:title_proclamation).inspect %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Mai jos este o rezoluţie de proba de susţinere a Saptamanii Mondiale a Educatiei si Stiintei calculatorului şi obiectivele sale, care ar putea fi utilizate de stat şi legiuitorii locali.
+# Sample Computer Science Education Week resolution
 
-  
-[Casa, Senatul, stat, JUDEŢ sau oraş rezoluţie sau PROCLAMARE ###] – întrucât Saptamana Mondiala a Educatiei si Stiintei Calculatorului scoate în evidenţă rolul crucial pe care stiinta calculatoarelor il joacă în transformarea societăţii noastre şi modul în care aceasta permite inovarea şi creează oportunităţi economice;
+### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
 
-[CASA SAU SENATUL REZOLUŢIE ###]
+---
 
-[DATA]
+#### **RESOLUTION**  
 
-Întrucât tehnologia este o parte integrantă a culturii şi se transformă in functie de modul în care oamenii interacţionează cu fiecare şi de lumea din jurul lor;
 
-Întrucât stiinta computerului si programarea transforma industria, creeaza noi domenii de comert, conduce inovaţia în toate domeniile ştiinţei, şi susţine productivitatea în sectorul economic stabilit;
+#### Supporting the goals and ideals of "Computer Science Education Week"
 
-Chiar daca acest câmpu de stiinta calculatorului stă la baza sectorului tehnologiei informaţiilor economiei noastre, care este o contribuţie considerabilă la datele economice ale Statelor Unite;
+Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-Întrucât câmpul de informatică este o stiinta fundamentala pentru era digitală;
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-Întrucât sectorul tehnologiei informaţiilor este poziţionat unic pentru a ajuta redresării economice prin cercetare şi dezvoltare de noi inovaţii;
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-Întrucât perspectivele pentru locurile de muncă in domeniul it sunt luminoase cu peste 500.000 de posturi de calcul deschise in intreaga tara;
+Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Întrucât furnizarea sansei elevilor de a participa la activităţi de inalta clasa privind stiinta calculatorului si programare ii expune la oportunităţile bogate pe care domeniul le oferă şi la abilităţile de gândire critică, care le va servi toată viaţa;
+Whereas the field of computer science is a foundational science for the digital age;
 
-Întrucât toţi studenţii merită o pregătire temeinică în stiinta calculatorului si programare, inclusiv accesul la cadrele didactice calificate, tehnologie, şi curriculum adecvat vârstei necesare pentru a invata informatica la nivelul primar şi secundar de educaţie;
+Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
-Intrucat stiinta calculatorului si programarea are provocarea de a se adresa, inclusiv claselor ce trebuie sa aiba cerinte de absolvire si sa ofere dezvoltarea profesorilor;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Întrucât participarea la un eveniment Hour of Code din timpul Saptamanii Educatiei poate servi la demitizarea domeniului şi poate sa încurajeze mai mulţi studenţi să aibă acces la studii suplimentare de stiinta computerului;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Întrucât câmpul de informatică are bariere semnificative de capital, inclusiv atragerea participarii mai multor fete şi a minorităţilor slab reprezentate la toate nivelurile;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-Întrucât Grace Murray Hopper, una dintre primele femei în domeniul It, a realizat noi limbaje de programare şi standardele pentru sisteme de calcul, care a pus bazele pentru multe progrese în informatică; şi
+Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
 
-Întrucât săptămâna <%= campaign_date('start-long') %>, în onoarea zilei de nastere a lui Grace Hopper, este desemnata ca "Saptamana educatiei in tehnologia computerelor si programare"
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-Rezolvat, ca [casa sau Senatului, stat, JUDEŢ, oraş sau şcoală bord]--
+Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
 
-(1) sustine desemnarea Saptamanii educatiei in tehnologia computerelor (<%= campaign_date('full') %>);
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-(2) încurajează şcoli, cadre didactice, părinţi şi factorii de decizie politică să participe la Saptamana Educatiei Mondiale permiţându-le elevilor să participe la Ore de Programare;
+Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-(3) încurajează scoli, profesori, cercetători, universităţi, liderii de afaceri şi factorii de decizie politică să identifice mecanismele pentru ca profesorii să primeasca oportunitati de dezvoltare profesională pentru a oferi experienţe de învăţare durabile în stiinta computerului la toate nivelurile şi să încurajeze elevii să fie expusi la conceptele acestei stiinte;
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(4) încurajează factorii de decizie politică să elimine barierele care împiedică clasele de informatica sa fie considerate egale cu cele de matematica sau ştiinţă in ceea ce priveste cerinţele de absolvire;
+(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
 
-(5) încurajează oportunităţi, inclusiv prin programele existente, pentru femei şi minorităţile slab reprezentate înstiinta calculatorului si programare.
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+
+(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+
+(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
 
 <%= view :signup_button %>

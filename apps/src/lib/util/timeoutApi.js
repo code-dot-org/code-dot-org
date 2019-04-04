@@ -3,10 +3,7 @@
  * interval commands (shared between App Lab and Game Lab).
  */
 import * as apiTimeoutList from './timeoutList';
-import {
-  apiValidateType,
-  OPTIONAL
-} from './javascriptMode';
+import {apiValidateType, OPTIONAL} from './javascriptMode';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both
@@ -27,18 +24,33 @@ function onTimerFired(opts) {
  * Must be mixed in ot the app's command list (see applab/commands.js)
  * @type {{}}
  */
-export const commands ={
+export const commands = {
   setTimeout(opts) {
     // PARAMNAME: setTimeout: callback vs. function
     // PARAMNAME: setTimeout: ms vs. milliseconds
     apiValidateType(opts, 'setTimeout', 'callback', opts.callback, 'function');
-    apiValidateType(opts, 'setTimeout', 'milliseconds', opts.milliseconds, 'number');
+    apiValidateType(
+      opts,
+      'setTimeout',
+      'milliseconds',
+      opts.milliseconds,
+      'number'
+    );
 
-    return apiTimeoutList.setTimeout(onTimerFired.bind(this, opts), opts.milliseconds);
+    return apiTimeoutList.setTimeout(
+      onTimerFired.bind(this, opts),
+      opts.milliseconds
+    );
   },
 
   clearTimeout(opts) {
-    apiValidateType(opts, 'clearTimeout', 'timeoutId', opts.timeoutId, 'number');
+    apiValidateType(
+      opts,
+      'clearTimeout',
+      'timeoutId',
+      opts.timeoutId,
+      'number'
+    );
     // NOTE: we do not currently check to see if this is a timer created by
     // our applabCommands.setTimeout() function
     apiTimeoutList.clearTimeout(opts.timeoutId);
@@ -48,13 +60,28 @@ export const commands ={
     // PARAMNAME: setInterval: callback vs. function
     // PARAMNAME: setInterval: ms vs. milliseconds
     apiValidateType(opts, 'setInterval', 'callback', opts.callback, 'function');
-    apiValidateType(opts, 'setInterval', 'milliseconds', opts.milliseconds, 'number');
+    apiValidateType(
+      opts,
+      'setInterval',
+      'milliseconds',
+      opts.milliseconds,
+      'number'
+    );
 
-    return apiTimeoutList.setInterval(onTimerFired.bind(this, opts), opts.milliseconds);
+    return apiTimeoutList.setInterval(
+      onTimerFired.bind(this, opts),
+      opts.milliseconds
+    );
   },
 
   clearInterval(opts) {
-    apiValidateType(opts, 'clearInterval', 'intervalId', opts.intervalId, 'number');
+    apiValidateType(
+      opts,
+      'clearInterval',
+      'intervalId',
+      opts.intervalId,
+      'number'
+    );
     // NOTE: we do not currently check to see if this is a timer created by
     // our applabCommands.setInterval() function
     apiTimeoutList.clearInterval(opts.intervalId);
@@ -82,7 +109,7 @@ export const commands ={
   stopTimedLoop(opts) {
     apiValidateType(opts, 'stopTimedLoop', 'key', opts.key, 'number', OPTIONAL);
     apiTimeoutList.stopTimedLoop(opts.key);
-  },
+  }
 };
 
 /**
@@ -90,12 +117,14 @@ export const commands ={
  * arguments converted to an options object.
  */
 export const executors = {
-  setTimeout: (callback, milliseconds) => executeCmd(null, 'setTimeout', {callback, milliseconds}),
-  clearTimeout: (timeoutId) => executeCmd(null, 'clearTimeout', {timeoutId}),
-  setInterval: (callback, milliseconds) => executeCmd(null, 'setInterval', {callback, milliseconds}),
-  clearInterval: (intervalId) => executeCmd(null, 'clearInterval', {intervalId}),
+  setTimeout: (callback, milliseconds) =>
+    executeCmd(null, 'setTimeout', {callback, milliseconds}),
+  clearTimeout: timeoutId => executeCmd(null, 'clearTimeout', {timeoutId}),
+  setInterval: (callback, milliseconds) =>
+    executeCmd(null, 'setInterval', {callback, milliseconds}),
+  clearInterval: intervalId => executeCmd(null, 'clearInterval', {intervalId}),
   timedLoop: (ms, callback) => executeCmd(null, 'timedLoop', {ms, callback}),
-  stopTimedLoop: (key) => executeCmd(null, 'stopTimedLoop', {key}),
+  stopTimedLoop: key => executeCmd(null, 'stopTimedLoop', {key})
 };
 
 /**
@@ -109,7 +138,7 @@ export const dropletConfig = {
     category: 'Control',
     type: 'either',
     paletteParams: ['callback', 'ms'],
-    params: ["function() {\n  \n}", "1000"],
+    params: ['function() {\n  \n}', '1000'],
     allowFunctionDrop: {0: true}
   },
   clearTimeout: {
@@ -117,7 +146,7 @@ export const dropletConfig = {
     parent: executors,
     category: 'Control',
     paletteParams: ['__'],
-    params: ["__"]
+    params: ['__']
   },
   setInterval: {
     func: 'setInterval',
@@ -125,7 +154,7 @@ export const dropletConfig = {
     category: 'Control',
     type: 'either',
     paletteParams: ['callback', 'ms'],
-    params: ["function() {\n  \n}", "1000"],
+    params: ['function() {\n  \n}', '1000'],
     allowFunctionDrop: {0: true}
   },
   clearInterval: {
@@ -133,7 +162,7 @@ export const dropletConfig = {
     parent: executors,
     category: 'Control',
     paletteParams: ['__'],
-    params: ["__"]
+    params: ['__']
   },
   timedLoop: {
     func: 'timedLoop',
@@ -148,5 +177,5 @@ export const dropletConfig = {
     parent: executors,
     category: 'Control',
     paramButtons: {minArgs: 0, maxArgs: 1}
-  },
+  }
 };

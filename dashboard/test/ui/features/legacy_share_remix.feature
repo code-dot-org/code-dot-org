@@ -6,7 +6,6 @@ Feature: Legacy Share Remix
     Given I am on "http://studio.code.org/s/artist/stage/1/puzzle/10?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
-    And I close the instructions overlay if it exists
     And element "#runButton" is visible
     And element "#resetButton" is hidden
 

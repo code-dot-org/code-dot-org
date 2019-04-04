@@ -112,6 +112,57 @@ module Pd
         assert_equal 'This is the summary for scale1', questions.first.text
       end
 
+      test 'get_questions uses question name as fallback when no text is available' do
+        JotFormRestClient.any_instance.expects(:get_questions).with(@form_id).returns(
+          {
+            content: {
+              1 => {
+                qid: 1,
+                type: 'control_scale',
+                name: 'intentionallyLeftBlank',
+                text: '',
+                order: 1
+              }
+            }
+          }.deep_stringify_keys
+        )
+
+        questions = Translation.new(@form_id).get_questions
+        assert_equal 1, questions.length
+        assert_equal 1, questions.first.id
+        assert_equal 'intentionallyLeftBlank', questions.first.name
+        assert_equal 'intentionallyLeftBlank', questions.first.text
+      end
+
+      test 'get_questions prefers -summary text to fallback when no text is available' do
+        JotFormRestClient.any_instance.expects(:get_questions).with(@form_id).returns(
+          {
+            content: {
+              1 => {
+                qid: 1,
+                type: 'control_scale',
+                name: 'intentionallyLeftBlank',
+                text: '',
+                order: 1
+              },
+              2 => {
+                qid: 2,
+                type: 'control_text',
+                name: 'intentionallyLeftBlank-summary',
+                text: 'A real description',
+                order: 2
+              }
+            }
+          }.deep_stringify_keys
+        )
+
+        questions = Translation.new(@form_id).get_questions
+        assert_equal 1, questions.length
+        assert_equal 1, questions.first.id
+        assert_equal 'intentionallyLeftBlank', questions.first.name
+        assert_equal 'A real description', questions.first.text
+      end
+
       test 'get_submission queries the client and transforms the submission data' do
         last_known_submission_id = 100
 

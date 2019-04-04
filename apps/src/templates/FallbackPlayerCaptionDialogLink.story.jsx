@@ -7,17 +7,15 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'below standalone video player',
-        description: "Link shown below standalone level's fallback video player, which pops a dialog explaining that captions are available on YouTube.",
-        story: () => (
-          <FallbackPlayerCaptionDialogLink/>
-        )
+        description:
+          "Link shown below standalone level's fallback video player, which pops a dialog explaining that captions are available on YouTube.",
+        story: () => <FallbackPlayerCaptionDialogLink />
       },
       {
         name: 'in header of dialog video player',
-        description: "Link shown below standalone level's fallback video player, which pops a dialog explaining that captions are available on YouTube.",
-        story: () => (
-          <FallbackPlayerCaptionDialogLink inDialog={true}/>
-        )
+        description:
+          "Link shown below standalone level's fallback video player, which pops a dialog explaining that captions are available on YouTube.",
+        story: () => <FallbackPlayerCaptionDialogLink inDialog={true} />
       }
     ]);
 };

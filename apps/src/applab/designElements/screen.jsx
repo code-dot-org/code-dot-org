@@ -1,23 +1,31 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ImagePickerPropertyRow from './ImagePickerPropertyRow';
+import ThemePropertyRow from './ThemePropertyRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import DefaultScreenButtonPropertyRow from './DefaultScreenButtonPropertyRow';
+import designMode from '../designMode';
+import elementLibrary from './library';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
+import color from '../../util/color';
+import experiments from '../../util/experiments';
 
 class ScreenProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: PropTypes.func.isRequired,
+    handleChange: PropTypes.func.isRequired
   };
 
-  handleIconColorChange = (value) => {
+  handleIconColorChange = value => {
     this.props.handleChange('icon-color', value);
-    this.props.handleChange('screen-image',
-      this.props.element.getAttribute('data-canonical-image-url'));
+    this.props.handleChange(
+      'screen-image',
+      this.props.element.getAttribute('data-canonical-image-url')
+    );
   };
 
   render() {
@@ -29,7 +37,9 @@ class ScreenProperties extends React.Component {
       iconColorPicker = (
         <ColorPickerPropertyRow
           desc={'icon color'}
-          initialValue={elementUtils.rgb2hex(element.getAttribute('data-icon-color') || '#000000')}
+          initialValue={elementUtils.rgb2hex(
+            element.getAttribute('data-icon-color') || '#000000'
+          )}
           handleChange={this.handleIconColorChange}
         />
       );
@@ -43,6 +53,12 @@ class ScreenProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
+        {experiments.isEnabled('applabThemes') && (
+          <ThemePropertyRow
+            initialValue={element.getAttribute('data-theme')}
+            handleChange={this.props.handleChange.bind(this, 'theme')}
+          />
+        )}
         <ColorPickerPropertyRow
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
@@ -52,13 +68,15 @@ class ScreenProperties extends React.Component {
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')}
+          elementId={elementUtils.getId(element)}
         />
         {iconColorPicker}
         <DefaultScreenButtonPropertyRow
           screenId={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'is-default')}
         />
-      </div>);
+      </div>
+    );
   }
 }
 
@@ -66,7 +84,7 @@ class ScreenEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired
   };
 
   // The screen click event handler code currently receives clicks to any
@@ -75,8 +93,12 @@ class ScreenEvents extends React.Component {
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "click", function(event) {\n' +
-      '  console.log("' + id + ' clicked!");\n' +
+      'onEvent("' +
+      id +
+      '", "click", function(event) {\n' +
+      '  console.log("' +
+      id +
+      ' clicked!");\n' +
       '});\n';
     return code;
   }
@@ -88,7 +110,9 @@ class ScreenEvents extends React.Component {
   getKeyEventCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'onEvent("' + id + '", "keydown", function(event) {\n' +
+      'onEvent("' +
+      id +
+      '", "keydown", function(event) {\n' +
       '  console.log("Key: " + event.key);\n' +
       '});\n';
     return code;
@@ -101,7 +125,8 @@ class ScreenEvents extends React.Component {
   render() {
     const element = this.props.element;
     const clickName = 'Click';
-    const clickDesc = 'Triggered when the screen is clicked with a mouse or tapped on a screen.';
+    const clickDesc =
+      'Triggered when the screen is clicked with a mouse or tapped on a screen.';
     const keyName = 'Key';
     const keyDesc = 'Triggered when a key is pressed.';
 
@@ -113,17 +138,13 @@ class ScreenEvents extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={clickName}
           desc={clickDesc}
           handleInsert={this.insertClick}
         />
-        <EventRow
-          name={keyName}
-          desc={keyDesc}
-          handleInsert={this.insertKey}
-        />
+        <EventRow name={keyName} desc={keyDesc} handleInsert={this.insertKey} />
       </div>
     );
   }
@@ -132,13 +153,21 @@ class ScreenEvents extends React.Component {
 export default {
   PropertyTab: ScreenProperties,
   EventTab: ScreenEvents,
+  themeValues: {
+    backgroundColor: {
+      type: 'color',
+      classic: color.white,
+      dark: color.black
+    }
+  },
 
-  create: function () {
+  create: function() {
     const element = document.createElement('div');
     element.setAttribute('class', 'screen');
     element.setAttribute('tabIndex', '1');
     element.style.display = 'block';
-    element.style.height = applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT + 'px';
+    element.style.height =
+      applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT + 'px';
     element.style.width = applabConstants.APP_WIDTH + 'px';
     element.style.left = '0px';
     element.style.top = '0px';
@@ -149,10 +178,14 @@ export default {
     // see http://philipwalton.com/articles/what-no-one-told-you-about-z-index/
     element.style.position = 'absolute';
     element.style.zIndex = 0;
+    if (experiments.isEnabled('applabThemes')) {
+      element.setAttribute('data-theme', applabConstants.themeOptions[0]);
+      elementLibrary.applyCurrentTheme(element, element);
+    }
 
     return element;
   },
-  onDeserialize: function (element, updateProperty) {
+  onDeserialize: function(element, updateProperty) {
     const url = element.getAttribute('data-canonical-image-url');
     if (url) {
       updateProperty(element, 'screen-image', url);
@@ -160,7 +193,47 @@ export default {
     // Properly position existing screens, so that canvases appear correctly.
     element.style.position = 'absolute';
     element.style.zIndex = 0;
-
     element.setAttribute('tabIndex', '1');
+
+    if (experiments.isEnabled('applabThemes')) {
+      if (!element.getAttribute('data-theme')) {
+        element.setAttribute('data-theme', applabConstants.themeOptions[0]);
+      }
+
+      if (element.style.backgroundColor === '') {
+        element.style.backgroundColor = this.themeValues.backgroundColor[
+          applabConstants.themeOptions[0]
+        ];
+      }
+    }
+  },
+  readProperty: function(element, name) {
+    switch (name) {
+      case 'theme':
+        if (experiments.isEnabled('applabThemes')) {
+          return element.getAttribute('data-theme');
+        } else {
+          throw `unknown property name ${name}`;
+        }
+      default:
+        throw `unknown property name ${name}`;
+    }
+  },
+  onPropertyChange: function(element, name, value) {
+    if (experiments.isEnabled('applabThemes')) {
+      switch (name) {
+        case 'theme': {
+          const prevValue =
+            element.getAttribute('data-theme') ||
+            applabConstants.themeOptions[0];
+          element.setAttribute('data-theme', value);
+          designMode.changeThemeForCurrentScreen(prevValue, value);
+          return true;
+        }
+        default:
+          break;
+      }
+    }
+    return false;
   }
 };

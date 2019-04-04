@@ -30,7 +30,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Study this solution to the drawDiamond problem.  Notice that the whole program starts by calling drawDiamond() at the top.  The program then follows a chain of function calls.  You can trace what's happening in the code to see the functions reused.  It's also easy to read because the function names describe the expected behavior.",
+    "short_instructions": "Study this solution to the drawDiamond problem.  Notice that the whole program starts by calling drawDiamond() at the top.  The program then follows a chain of function calls.  You can trace what's happening in the code to see the functions reused.  It's also easy to read because the function names describe the expected behavior.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

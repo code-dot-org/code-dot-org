@@ -1,6 +1,5 @@
 # Code.org
 
-[![Circle CI](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging.svg?style=svg)](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging)
 [![Coverage Status](https://codecov.io/gh/code-dot-org/code-dot-org/branch/staging/graph/badge.svg)](https://codecov.io/gh/code-dot-org/code-dot-org)
 
 Welcome! You've found the source code for [the Code.org website](https://code.org/) and [the Code Studio platform](https://studio.code.org/). Code.org is a non-profit dedicated to expanding access to computer science education. You can read more about our efforts at [code.org/about](https://code.org/about).
@@ -57,7 +56,7 @@ Start here if you are looking for:
 * There are many more topical guides in the [docs](./docs) folder.
 * In addition, several sections of the repository have their own documentation:
   * [apps/README](./apps/README.md)
-  * [blockly-core/README](./blockly-core/README.md)
+  * [blockly/README](https://github.com/code-dot-org/blockly/blob/master/README.md)
 
 ### Everything else
 

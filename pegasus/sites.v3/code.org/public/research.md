@@ -40,9 +40,8 @@ Other reports
 
 * Dr. Briana Morrison - University of Nebraska at Omaha - [Subgoal Labels Study in CSP Unit 3](/research/subgoal-labels-study)
 * Dr. Rene Kizilcec - Stanford University - Social Belonging in Computer Science Classrooms
-* Dr. Maya Israel - University of Illinois
 * Dr. Justin Reich & Kevin Robinson - MIT Teaching Systems Lab - Unconscious Bias in Computer Science classrooms
-* Dr. Chris Piech - Stanford University - Using machine learning to identify predictive problem solving pathways for students
+* Dr. Chris Piech - Stanford University - Zero Shot Learning for Code Education: Rubric Sampling with Deep Learning Inference
 
 ***
 

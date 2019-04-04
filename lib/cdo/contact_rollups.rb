@@ -6,23 +6,45 @@ require 'cdo/properties'
 require 'json'
 
 class ContactRollups
-  # Connection to read from Pegasus production database.
-  PEGASUS_DB_READER = sequel_connect(CDO.pegasus_db_reader, CDO.pegasus_db_reader)
   # Production database has a global max query execution timeout setting.  This 20 minute setting can be used
   # to override the timeout for a specific session or query.
   MAX_EXECUTION_TIME = 1_200_000
+  MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
+
+  # Connection to read from Pegasus production database.
+  PEGASUS_DB_READER = sequel_connect(
+    CDO.pegasus_db_reader,
+    CDO.pegasus_db_reader,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
 
   # Connection to write to Pegasus production database.
-  PEGASUS_DB_WRITER = sequel_connect(CDO.pegasus_db_writer, CDO.pegasus_db_reader)
+  PEGASUS_DB_WRITER = sequel_connect(
+    CDO.pegasus_db_writer,
+    CDO.pegasus_db_reader,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
 
   # Connection to read from Pegasus reporting database.
-  PEGASUS_REPORTING_DB_READER = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
+  PEGASUS_REPORTING_DB_READER = sequel_connect(
+    CDO.pegasus_reporting_db_reader,
+    CDO.pegasus_reporting_db_reader,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
 
   # Connection to write to Pegasus reporting database.
-  PEGASUS_REPORTING_DB_WRITER = sequel_connect(CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_writer)
+  PEGASUS_REPORTING_DB_WRITER = sequel_connect(
+    CDO.pegasus_reporting_db_writer,
+    CDO.pegasus_reporting_db_writer,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
 
   # Connection to read from Dashboard reporting database.
-  DASHBOARD_REPORTING_DB_READER = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
+  DASHBOARD_REPORTING_DB_READER = sequel_connect(
+    CDO.dashboard_reporting_db_reader,
+    CDO.dashboard_reporting_db_reader,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
 
   # Columns to disregard
   EXCLUDED_COLUMNS = %w(id pardot_id pardot_sync_at updated_at).freeze
@@ -278,7 +300,7 @@ class ContactRollups
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, dashboard_user_id, roles, city, state, postal_code, country)
     -- Use CONCAT+COALESCE to append 'Teacher' to any existing roles
     SELECT users.email COLLATE utf8_general_ci, users.name, users.id, CONCAT(COALESCE(CONCAT(src.roles, ','), ''), '#{ROLE_TEACHER}'),
-    user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country FROM #{DASHBOARD_DB_NAME}.users AS users
+    user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country FROM #{DASHBOARD_DB_NAME}.users_view AS users
     LEFT OUTER JOIN #{PEGASUS_DB_NAME}.contact_rollups_daily AS src ON src.email = users.email
     LEFT OUTER JOIN #{DASHBOARD_DB_NAME}.user_geos AS user_geos ON user_geos.user_id = users.id
     WHERE users.user_type = 'teacher' AND LENGTH(users.email) > 0
@@ -341,11 +363,10 @@ class ContactRollups
     # State for schools is stored in state abbreviation. We need to convert
     # to state name, so do this row-by-row using existing Ruby code for that
     # conversion.
-
     sql = "
-    SELECT users.email, schools.city, schools.state, schools.zip
-    FROM users
-    INNER JOIN school_infos ON school_infos.id = users.school_info_id
+    SELECT users_view.email, schools.city, schools.state, schools.zip
+    FROM users_view
+    INNER JOIN school_infos ON school_infos.id = users_view.school_info_id
     INNER JOIN schools ON schools.id = school_infos.school_id"
 
     dataset = DASHBOARD_REPORTING_DB_READER[sql]
@@ -471,7 +492,7 @@ class ContactRollups
   def self.append_to_role_list_from_permission(permission_name, dest_value)
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
-    INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
+    INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
     INNER JOIN #{DASHBOARD_DB_NAME}.user_permissions AS user_permissions ON user_permissions.user_id = users.id
     SET roles = CONCAT(COALESCE(CONCAT(roles, ','), ''), '#{dest_value}')
     WHERE LENGTH(users.email) > 0
@@ -497,14 +518,14 @@ class ContactRollups
       select distinct id from (
         select users.id from #{DASHBOARD_DB_NAME}.sections as sections
           inner join #{DASHBOARD_DB_NAME}.courses as courses on courses.id = sections.course_id
-            inner join #{DASHBOARD_DB_NAME}.users as users on users.id = sections.user_id
+            inner join #{DASHBOARD_DB_NAME}.users_view as users on users.id = sections.user_id
          where courses.name = '#{course_name}'
         union
         select users.id from #{DASHBOARD_DB_NAME}.sections
           inner join #{DASHBOARD_DB_NAME}.scripts as scripts on scripts.id = sections.script_id
           inner join #{DASHBOARD_DB_NAME}.course_scripts as course_scripts on course_scripts.script_id = scripts.id
           inner join #{DASHBOARD_DB_NAME}.courses as courses on courses.id = course_scripts.course_id
-          inner join #{DASHBOARD_DB_NAME}.users as users on users.id = sections.user_id
+          inner join #{DASHBOARD_DB_NAME}.users_view as users on users.id = sections.user_id
         where courses.name = '#{course_name}'
       ) q
     ) user_ids ON user_ids.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
@@ -527,7 +548,7 @@ class ContactRollups
   def self.append_regional_partner_to_role_list
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
-    INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
+    INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
     INNER JOIN #{DASHBOARD_DB_NAME}.regional_partners AS regional_partners ON regional_partners.contact_id = users.id
     SET roles = CONCAT(COALESCE(CONCAT(roles, ','), ''), 'Regional Partner')
     WHERE LENGTH(users.email) > 0 AND #{DEST_TABLE_NAME}.id > 0"
@@ -607,7 +628,6 @@ class ContactRollups
     start = Time.now
     COURSE_ARRAY.each do |course|
       update_professional_learning_attendance_for_course_from_pd_attendances course
-      update_professional_learning_attendance_for_course_from_workshop_attendance course
       update_professional_learning_attendance_for_course_from_sections course
     end
     log_completion(start)
@@ -622,7 +642,7 @@ class ContactRollups
           FROM #{DASHBOARD_DB_NAME}.pd_attendances AS pd_attendances
           INNER JOIN #{DASHBOARD_DB_NAME}.pd_sessions AS pd_sessions ON pd_sessions.id = pd_attendances.pd_session_id
           INNER JOIN #{DASHBOARD_DB_NAME}.pd_workshops AS pd_workshops ON pd_workshops.id = pd_sessions.pd_workshop_id
-          INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = pd_attendances.teacher_id
+          INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = pd_attendances.teacher_id
           WHERE course = '#{course}'
         ) src
       SET #{DEST_TABLE_NAME}.professional_learning_attended =
@@ -634,43 +654,15 @@ class ContactRollups
     WHERE #{DEST_TABLE_NAME}.email = src.email"
   end
 
-  # Updates professional learning attendance based on workshop_attendance table
-  # @param course [String] name of course to update for
-  def self.update_professional_learning_attendance_for_course_from_workshop_attendance(course)
-    PEGASUS_REPORTING_DB_WRITER.run "
-    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
-      (SELECT DISTINCT users.email
-        FROM #{DASHBOARD_DB_NAME}.workshop_attendance AS workshop_attendance
-          INNER JOIN #{DASHBOARD_DB_NAME}.segments AS segments ON segments.id = workshop_attendance.segment_id
-          INNER JOIN #{DASHBOARD_DB_NAME}.workshops AS workshops ON workshops.id = segments.workshop_id
-          INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = workshop_attendance.teacher_id
-        WHERE program_type =
-        CASE '#{course}'
-          WHEN 'CS in Science' THEN 1
-          WHEN 'CS in Algebra' THEN 2
-          WHEN 'Exploring Computer Science' THEN 3
-          WHEN 'CS Principles' THEN 4
-          WHEN 'CS Fundamentals' THEN 5
-        END
-      ) src
-    SET #{DEST_TABLE_NAME}.professional_learning_attended =
-    -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
-    CASE LOCATE('#{course}', COALESCE(#{DEST_TABLE_NAME}.professional_learning_attended,''))
-      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.professional_learning_attended, ','), ''), '#{course}'),4096)
-      ELSE #{DEST_TABLE_NAME}.professional_learning_attended
-    END
-    WHERE #{DEST_TABLE_NAME}.email = src.email"
-  end
-
   # Updates professional learning attendance based on sections table
   # @param course [String] name of course to update for
   def self.update_professional_learning_attendance_for_course_from_sections(course)
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
-      (SELECT DISTINCT users.email
+      (SELECT DISTINCT users_view.email
       FROM #{DASHBOARD_DB_NAME}.sections
         INNER JOIN #{DASHBOARD_DB_NAME}.followers ON followers.section_id = sections.id
-        INNER JOIN #{DASHBOARD_DB_NAME}.users ON users.id = followers.student_user_id
+        INNER JOIN #{DASHBOARD_DB_NAME}.users_view ON users_view.id = followers.student_user_id
       WHERE section_type =
       CASE '#{course}'
         WHEN 'CS in Science' THEN 'csins_workshop'
@@ -866,7 +858,7 @@ class ContactRollups
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}, (
     SELECT DISTINCT sections.user_id AS teacher_user_id
-    FROM #{DASHBOARD_DB_NAME}.users AS students
+    FROM #{DASHBOARD_DB_NAME}.users_view AS students
       INNER JOIN #{DASHBOARD_DB_NAME}.followers AS followers
         ON followers.student_user_id = students.id
       INNER JOIN #{DASHBOARD_DB_NAME}.sections AS sections
@@ -898,26 +890,29 @@ class ContactRollups
     start = Time.now
     log "Updating district information from users"
 
-    # note that user district information seems less good than dashboard.pd_enrollments. So
-    # far no user has had district info where dashboard.pd_enrollments did not. And user district info
-    # has district names like "open csp".
-    districts = District.all.index_by(&:id)
+    # Use optimizer hint to set a custom query execution timeout
+    users_query = <<-END_OF_STRING
+      SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */
+             email
+           , JSON_EXTRACT(properties, '$.ops_school') AS ops_school
+      FROM #{DASHBOARD_DB_NAME}.users_view
+      WHERE deleted_at IS NULL
+        AND (length(email) > 0)
+    END_OF_STRING
 
-    users = User.where("length(email) > 0")
-
-    users.find_each do |user|
-      unless user.ops_school.nil?
-        PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user.email).
-            update(school_name: user.ops_school)
+    users = DASHBOARD_REPORTING_DB_READER[users_query]
+    # Create iterator for query using the #stream method so we stream the results back rather than
+    # trying to load everything in memory
+    users_iterator = users.stream.to_enum
+    user = grab_next(users_iterator)
+    until user.nil?
+      unless user[:ops_school].nil?
+        PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user[:email]).
+            update(school_name: user[:ops_school])
       end
-
-      unless user.district_id.nil?
-        district = districts[user.district_id]
-        unless district.nil?
-          PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user.email).update(district_name: district.name)
-        end
-      end
+      user = grab_next(users_iterator)
     end
+
     log_completion(start)
 
     start = Time.now
@@ -950,5 +945,7 @@ class ContactRollups
     s.next
   rescue StopIteration
     nil
+  rescue StandardError => error
+    log "Error iterating over stream #{s} - #{error}"
   end
 end

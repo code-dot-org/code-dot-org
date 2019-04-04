@@ -8,8 +8,8 @@ import {
   appendCustomFrames,
   appendLibraryFrames
 } from '../animationListModule';
-import { makeEnum } from '../../utils';
-import { animations as animationsApi } from '../../clientApi';
+import {makeEnum} from '../../utils';
+import {animations as animationsApi} from '../../clientApi';
 import gamelabMsg from '@cdo/gamelab/locale';
 
 /**
@@ -75,7 +75,7 @@ export function show(goal) {
   if ([Goal.NEW_ANIMATION, Goal.NEW_FRAME].indexOf(goal) === -1) {
     throw new TypeError('Must provide a valid goal');
   }
-  return { type: SHOW, goal: goal };
+  return {type: SHOW, goal: goal};
 }
 
 /**
@@ -83,7 +83,7 @@ export function show(goal) {
  * @returns {{type: string}}
  */
 export function hide() {
-  return { type: HIDE };
+  return {type: HIDE};
 }
 
 /**
@@ -106,28 +106,34 @@ export function beginUpload(filename) {
  * @returns {function}
  */
 export function handleUploadComplete(result) {
-  return function (dispatch, getState) {
-    const { goal, uploadFilename } = getState().animationPicker;
+  return function(dispatch, getState) {
+    const {goal, uploadFilename} = getState().animationPicker;
     const key = result.filename.replace(/\.png$/i, '');
     const sourceUrl = animationsApi.basePath(key + '.png');
 
-    loadImageMetadata(sourceUrl, metadata => {
-      const animation = _.assign({}, metadata, {
-        name: uploadFilename,
-        sourceUrl: sourceUrl,
-        size: result.size,
-        version: result.versionId
-      });
+    loadImageMetadata(
+      sourceUrl,
+      metadata => {
+        const animation = _.assign({}, metadata, {
+          name: uploadFilename,
+          sourceUrl: sourceUrl,
+          size: result.size,
+          version: result.versionId
+        });
 
-      if (goal === Goal.NEW_ANIMATION) {
-        dispatch(addAnimation(key, animation));
-      } else if (goal === Goal.NEW_FRAME) {
-        dispatch(appendCustomFrames(animation));
+        if (goal === Goal.NEW_ANIMATION) {
+          dispatch(addAnimation(key, animation));
+        } else if (goal === Goal.NEW_FRAME) {
+          dispatch(appendCustomFrames(animation));
+        }
+        dispatch(hide());
+      },
+      () => {
+        dispatch(
+          handleUploadError(gamelabMsg.animationPicker_failedToParseImage())
+        );
       }
-      dispatch(hide());
-    }, () => {
-      dispatch(handleUploadError(gamelabMsg.animationPicker_failedToParseImage()));
-    });
+    );
   };
 }
 
@@ -139,8 +145,8 @@ export function handleUploadComplete(result) {
  * @param {!function} onError
  */
 function loadImageMetadata(sourceUrl, onComplete, onError) {
-  let image  = new Image();
-  image.addEventListener('load', function () {
+  let image = new Image();
+  image.addEventListener('load', function() {
     onComplete({
       sourceSize: {x: image.width, y: image.height},
       frameSize: {x: image.width, y: image.height},

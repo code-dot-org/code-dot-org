@@ -1,5 +1,5 @@
 /* global appOptions */
-import { getResult } from './codeStudioLevels';
+import {getResult} from './codeStudioLevels';
 
 // The external web page might tell us to save our progress and then navigate
 // to a new URL when that's done.  This is done when the level dots are
@@ -8,7 +8,7 @@ function saveAnswersAndNavigate(url) {
   if (window.appOptions.readonlyWorkspace) {
     window.location.href = url;
   } else {
-    saveAnswers(function () {
+    saveAnswers(function() {
       window.location.href = url;
     });
   }

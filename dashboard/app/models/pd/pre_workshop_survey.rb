@@ -36,29 +36,45 @@ class Pd::PreWorkshopSurvey < ActiveRecord::Base
     ].freeze
   end
 
-  def validate_required_fields
-    super
-    hash = sanitize_form_data_hash
-
-    add_key_error(:lesson) unless hash[:unit] == UNIT_NOT_STARTED || hash.key?(:lesson)
+  # @override
+  def dynamic_required_fields(sanitized_form_data_hash)
+    # Require lesson also when a unit is selected
+    unit_not_started? ? [] : [:lesson]
   end
 
   def self.units_and_lessons(workshop)
     workshop.pre_survey_units_and_lessons.unshift([UNIT_NOT_STARTED, nil])
   end
 
+  def unit
+    sanitize_form_data_hash[:unit]
+  end
+
+  def unit_not_started?
+    unit == UNIT_NOT_STARTED
+  end
+
+  def lesson
+    sanitize_form_data_hash[:lesson]
+  end
+
   def unit_lesson_short_name
-    hash = sanitize_form_data_hash
-    unit = hash[:unit]
-    lesson = hash[:lesson]
+    return nil if unit_not_started?
 
-    return nil unless unit && lesson
-    unit_index = units.find_index unit
-    lesson_index = lessons.find_index lesson
-    return nil unless unit_index && lesson_index
+    # Attempt to extract the number from "Unit {n}: unit name"
+    unit_number = unit.match(/Unit (\d+)/).try(:[], 1)
 
-    # Units have UNIT_NOT_STARTED in the zero slot, so they effectively start at 1
-    "U#{unit_index} L#{lesson_index + 1}"
+    # Attempt to extract the number from "Lesson {n}: lesson name"
+    lesson_number = lesson&.match(/^Lesson (\d+):/).try(:[], 1)
+
+    if unit_number
+      # Lesson should be required when a unit is selected, but we had a bug
+      # and some older data has unit but no lesson. In these cases, default to lesson 1
+      "U#{unit_number} L#{lesson_number || 1}"
+    else
+      # Unable to parse the numbers? Use the long names instead:
+      "#{unit}, #{lesson}"
+    end
   end
 
   private

@@ -53,8 +53,8 @@
             %ul
               - level.properties['code_functions'].each do |key, code_function|
                 %li= key
-          - if level.properties['markdown_instructions']
-            - markdown = level.properties['markdown_instructions']
+          - if level.properties['long_instructions']
+            - markdown = level.properties['long_instructions']
             =ActionView::Base.new.render(inline: markdown, type: :md) unless markdown.blank?
           - if level.properties['teacher_markdown']
             .teacher_markdown

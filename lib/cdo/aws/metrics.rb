@@ -1,7 +1,7 @@
-require 'aws-sdk'
+require 'aws-sdk-cloudwatch'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'concurrent/async'
-require 'honeybadger'
+require 'honeybadger/ruby'
 
 module Cdo
   # Singleton interface for asynchronously sending a collection of CloudWatch metrics in batches.
@@ -16,6 +16,20 @@ module Cdo
 
     # Ref: http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_limits.html
     BYTES_PER_REQUEST = 1024 * 40
+
+    # Convenience method to put a single metric to CloudWatch.
+    # Accepts a single '[namespace]/[metric_name]' name parameter
+    # and a standard Ruby hash.
+    def put(name, value, dimensions={})
+      namespace, metric_name = name.split('/', 2)
+      push(namespace,
+        [{
+          metric_name: metric_name,
+          dimensions: dimensions.map {|k, v| {name: k, value: v}},
+          value: value
+        }]
+      )
+    end
 
     # Asynchronously send a collection of CloudWatch metrics in batches.
     # @param namespace [String]

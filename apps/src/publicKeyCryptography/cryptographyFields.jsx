@@ -1,6 +1,7 @@
 /** @file Input fields specific to the cryptography widget */
 import _ from 'lodash';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import classNames from 'classnames';
 import IntegerDropdown from './IntegerDropdown';
 import {primesInRange, privateKeyList} from './cryptographyMath';
@@ -30,7 +31,8 @@ export function PrivateKeyDropdown(props) {
       options={privateKeyList(publicModulus)}
       style={{backgroundColor: COLORS.privateKey}}
       {...rest}
-    />);
+    />
+  );
 }
 PrivateKeyDropdown.propTypes = {
   publicModulus: PropTypes.number,
@@ -49,7 +51,8 @@ export function PublicModulusDropdown(props) {
       options={primesInRange(3, 10000)}
       style={{backgroundColor: COLORS.publicModulus}}
       {...props}
-    />);
+    />
+  );
 }
 PublicModulusDropdown.propTypes = {
   value: PropTypes.number,
@@ -69,7 +72,8 @@ export function SecretNumberDropdown(props) {
       options={_.range(0, publicModulus)}
       style={{backgroundColor: COLORS.secretNumber}}
       {...rest}
-    />);
+    />
+  );
 }
 SecretNumberDropdown.propTypes = {
   publicModulus: PropTypes.number,
@@ -90,7 +94,8 @@ export function GoButton(props) {
       {...rest}
     >
       Go
-    </button>);
+    </button>
+  );
 }
 GoButton.propTypes = {
   className: PropTypes.string,

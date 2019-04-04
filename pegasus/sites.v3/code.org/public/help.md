@@ -6,6 +6,11 @@ style_min: true
 
 # How to Help
 
+## Nominate a teacher for a computer science scholarship
+Help bring computer science education to all schools by nominating a favorite K-12 teacher for a scholarship to participate in Code.org’s professional learning program. Thanks to our [generous donors](/about/donors), eligible teachers can receive [**full scholarships**](/educate/professional-learning/middle-high) and all teachers will learn about free resources to support their students. We welcome teachers from all subject areas – no CS experience needed!
+
+[<button>Nominate a favorite teacher</button>](/nominate)
+
 ## Ask your school to teach computer science
 Encourage your local school to start teaching computer science. To make it easier, Code.org offers [courses for every grade level](https://studio.code.org/courses?view=teacher) from kindergarten through high school at no cost. And, teachers can enroll in our [hands-on professional learning workshops](/educate/professional-learning) offered locally across the United States.
 
@@ -17,6 +22,9 @@ Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twi
 Petition your state to allow computer science to count towards math or science high school graduation credits. And promote computer science in your area with these [stats, quotes and videos](/promote).
 
 [<button>Add your support</button>](/promote)
+
+## Learn about our advocacy efforts in your state
+Learn more about [Code.org's advocacy work](https://advocacy.code.org) across the U.S. and the nine policies we recommend states adopt to make computer science foundational for all students. And, find out how you can drive change in your state.
 
 ## Host an Hour of Code - at work, in your community, or local school
 Millions of people of all ages have learned an [Hour of Code](https://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Anybody, anywhere, anytime can learn an Hour of Code.

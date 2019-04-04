@@ -11,7 +11,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Baymax is \"actor 2\".  Add Move blocks and then move Baymax using the arrows.  Make him touch the two other characters.",
+    "short_instructions": "Baymax is \"actor 2\".  Add Move blocks and then move Baymax using the arrows.  Make him touch the two other characters.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

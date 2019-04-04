@@ -4,5 +4,6 @@ function createNewSprite(name,costume,location) {
   }
   var newSprite = makeNewSprite(costume,location.x,location.y);
   newSprite.maxSpeed = 0;
+  newSprite.name = name;
   return newSprite;
 }

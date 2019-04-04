@@ -1,12 +1,14 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import progressStyles from './progressStyles';
-import { LockStatus, saveLockDialog } from '../../stageLockRedux';
-import color from "../../../util/color";
+import {LockStatus, saveLockDialog} from '../../stageLockRedux';
+import color from '../../../util/color';
 import commonMsg from '@cdo/locale';
 import SectionSelector from './SectionSelector';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   main: {
@@ -99,9 +101,11 @@ class StageLockDialog extends React.Component {
 
   setAllLockStatus(lockStatus) {
     this.setState({
-      lockStatus: this.state.lockStatus.map(item => Object.assign({}, item, {
-        lockStatus
-      }))
+      lockStatus: this.state.lockStatus.map(item =>
+        Object.assign({}, item, {
+          lockStatus
+        })
+      )
     });
   }
 
@@ -112,10 +116,14 @@ class StageLockDialog extends React.Component {
   showAnswers = () => this.setAllLockStatus(LockStatus.ReadonlyAnswers);
 
   viewSection = () => {
-    window.open(`${window.dashboard.CODE_ORG_URL}/teacher-dashboard#/sections/${this.props.selectedSectionId}/assessments`, '_blank');
+    const assessmentsUrl = teacherDashboardUrl(
+      this.props.selectedSectionId,
+      '/assessments'
+    );
+    window.open(assessmentsUrl, '_blank');
   };
 
-  handleRadioChange = (event) => {
+  handleRadioChange = event => {
     const modifiedIndex = parseInt(event.target.name, 10);
     const value = event.target.value;
 
@@ -143,7 +151,7 @@ class StageLockDialog extends React.Component {
     const responsiveHeight = {
       maxHeight: window.innerHeight * 0.8 - 100
     };
-    const hasSelectedSection = this.props.selectedSectionId !== "";
+    const hasSelectedSection = this.props.selectedSectionId !== '';
     const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
     return (
       <BaseDialog
@@ -217,8 +225,12 @@ class StageLockDialog extends React.Component {
               </tr>
             </tbody>
           </table>
-          <div style={[styles.descriptionText, hiddenUnlessSelectedSection]}>{commonMsg.autolock()}</div>
-          <div style={[styles.title, hiddenUnlessSelectedSection]}>{commonMsg.studentControl()}</div>
+          <div style={[styles.descriptionText, hiddenUnlessSelectedSection]}>
+            {commonMsg.autolock()}
+          </div>
+          <div style={[styles.title, hiddenUnlessSelectedSection]}>
+            {commonMsg.studentControl()}
+          </div>
           <div style={[styles.descriptionText, hiddenUnlessSelectedSection]}>
             {commonMsg.studentLockStateInstructions()}
           </div>
@@ -269,7 +281,8 @@ class StageLockDialog extends React.Component {
                     style={[
                       styles.tableCell,
                       styles.radioCell,
-                      lockStatus === LockStatus.ReadonlyAnswers && styles.selectedCell
+                      lockStatus === LockStatus.ReadonlyAnswers &&
+                        styles.selectedCell
                     ]}
                   >
                     <input
@@ -306,13 +319,16 @@ class StageLockDialog extends React.Component {
 }
 
 export const UnconnectedStageLockDialog = Radium(StageLockDialog);
-export default connect(state => ({
-  initialLockStatus: state.stageLock.lockStatus,
-  isOpen: !!state.stageLock.lockDialogStageId,
-  saving: state.stageLock.saving,
-  selectedSectionId: state.teacherSections.selectedSectionId
-}), dispatch => ({
-  saveDialog(sectionId, lockStatus) {
-    dispatch(saveLockDialog(sectionId, lockStatus));
-  }
-}))(UnconnectedStageLockDialog);
+export default connect(
+  state => ({
+    initialLockStatus: state.stageLock.lockStatus,
+    isOpen: !!state.stageLock.lockDialogStageId,
+    saving: state.stageLock.saving,
+    selectedSectionId: state.teacherSections.selectedSectionId
+  }),
+  dispatch => ({
+    saveDialog(sectionId, lockStatus) {
+      dispatch(saveLockDialog(sectionId, lockStatus));
+    }
+  })
+)(UnconnectedStageLockDialog);

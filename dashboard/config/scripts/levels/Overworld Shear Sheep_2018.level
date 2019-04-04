@@ -13,7 +13,7 @@
     "player_start_position": "[2, 3]",
     "player_start_direction": "1",
     "verification_function": "function (verificationAPI) {\r\n      return verificationAPI.getInventoryAmount(\"wool\") >= 2;\r\n}",
-    "instructions": "Sheep-shearing time! Use the “shear” command to gather wool from both sheep.",
+    "short_instructions": "Sheep-shearing time! Use the “shear” command to gather wool from both sheep.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -46,7 +46,7 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
-    "markdown_instructions": "Sheep-shearing time! Use the `shear` command to gather wool from both sheep.",
+    "long_instructions": "Sheep-shearing time! Use the `shear` command to gather wool from both sheep.",
     "name_suffix": "_2018",
     "contained_level_names": null
   },

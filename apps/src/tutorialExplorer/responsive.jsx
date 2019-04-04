@@ -13,7 +13,7 @@ export function getResponsiveContainerWidth() {
   if (windowWidth >= 1200) {
     return 1170;
   } else {
-    return "97%";
+    return '97%';
   }
 }
 
@@ -82,23 +82,23 @@ export function getResponsiveValue(values) {
     if (values.lg) {
       value = values.lg;
     } else if (values.md) {
-       value = values.md;
+      value = values.md;
     } else if (values.sm) {
-       value = values.sm;
+      value = values.sm;
     } else {
       value = values.xs;
     }
   } else if (windowWidth >= responsiveWindowWidth[ResponsiveSize.md]) {
     if (values.md) {
-       value = values.md;
+      value = values.md;
     } else if (values.sm) {
-       value = values.sm;
+      value = values.sm;
     } else {
       value = values.xs;
     }
   } else if (windowWidth >= responsiveWindowWidth[ResponsiveSize.sm]) {
     if (values.sm) {
-       value = values.sm;
+      value = values.sm;
     } else {
       value = values.xs;
     }
@@ -107,11 +107,11 @@ export function getResponsiveValue(values) {
   }
 
   if (value) {
-    if (typeof(value) === "number") {
+    if (typeof value === 'number') {
       return `${value}%`;
-    } else if (typeof(value) === "string") {
+    } else if (typeof value === 'string') {
       return value;
-    } else if (typeof(value) === "object") {
+    } else if (typeof value === 'object') {
       return value;
     }
   }

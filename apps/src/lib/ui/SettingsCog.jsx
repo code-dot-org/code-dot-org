@@ -1,14 +1,17 @@
 /** @file Settings menu cog icon */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
 import msg from '@cdo/locale';
 import FontAwesome from '../../templates/FontAwesome';
 import color from '../../util/color';
 import * as assets from '../../code-studio/assets';
 import project from '../../code-studio/initApp/project';
-import * as maker from '../kits/maker/toolkit';
+import * as makerToolkitRedux from '../kits/maker/redux';
 import PopUpMenu from './PopUpMenu';
-import ConfirmEnableMakerDialog from "./ConfirmEnableMakerDialog";
+import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
+import {getStore} from '../../redux';
 
 const style = {
   iconContainer: {
@@ -19,13 +22,13 @@ const style = {
     cursor: 'pointer',
     color: color.lighter_purple,
     ':hover': {
-      color: color.white,
+      color: color.white
     }
   },
   assetsIcon: {
     fontSize: 18,
-    verticalAlign: 'middle',
-  },
+    verticalAlign: 'middle'
+  }
 };
 
 class SettingsCog extends Component {
@@ -39,7 +42,7 @@ class SettingsCog extends Component {
   static propTypes = {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
-    showMakerToggle: PropTypes.bool,
+    showMakerToggle: PropTypes.bool
   };
 
   // This ugly two-flag state is a workaround for an event-handling bug in
@@ -50,7 +53,7 @@ class SettingsCog extends Component {
   state = {
     open: false,
     canOpen: true,
-    confirmingEnableMaker: false,
+    confirmingEnableMaker: false
   };
 
   open = () => this.setState({open: true, canOpen: false});
@@ -69,7 +72,7 @@ class SettingsCog extends Component {
 
   toggleMakerToolkit = () => {
     this.close();
-    if (!maker.isEnabled()) {
+    if (!makerToolkitRedux.isEnabled(getStore().getState())) {
       // Pop a confirmation dialog when trying to enable maker,
       // because we've had several users do this accidentally.
       this.showConfirmation();
@@ -96,7 +99,7 @@ class SettingsCog extends Component {
     const offsetSoItLooksRight = {top: -6, left: -1};
     this.targetPoint = {
       top: rect.bottom + offsetSoItLooksRight.top,
-      left: rect.left + (rect.width / 2) + offsetSoItLooksRight.left,
+      left: rect.left + rect.width / 2 + offsetSoItLooksRight.left
     };
   }
 
@@ -110,10 +113,7 @@ class SettingsCog extends Component {
     }
 
     return (
-      <span
-        style={rootStyle}
-        ref={icon => this.setTargetPoint(icon)}
-      >
+      <span style={rootStyle} ref={icon => this.setTargetPoint(icon)}>
         <FontAwesome
           className="settings-cog"
           icon="cog"
@@ -128,10 +128,10 @@ class SettingsCog extends Component {
           beforeClose={this.beforeClose}
           showTail={true}
         >
-          <ManageAssets onClick={this.manageAssets}/>
-          {this.props.showMakerToggle &&
-            <ToggleMaker onClick={this.toggleMakerToolkit}/>
-          }
+          <ManageAssets onClick={this.manageAssets} />
+          {this.props.showMakerToggle && (
+            <ToggleMaker onClick={this.toggleMakerToolkit} />
+          )}
         </PopUpMenu>
         <ConfirmEnableMakerDialog
           isOpen={this.state.confirmingEnableMaker}
@@ -145,25 +145,24 @@ class SettingsCog extends Component {
 export default Radium(SettingsCog);
 
 export function ManageAssets(props) {
-  return (
-    <PopUpMenu.Item {...props}>
-      {msg.manageAssets()}
-    </PopUpMenu.Item>
-  );
+  return <PopUpMenu.Item {...props}>{msg.manageAssets()}</PopUpMenu.Item>;
 }
 ManageAssets.propTypes = {
   onClick: PropTypes.func,
   first: PropTypes.bool,
-  last: PropTypes.bool,
+  last: PropTypes.bool
 };
 
 export function ToggleMaker(props) {
-  if (!maker.isAvailable()) {
+  const reduxState = getStore().getState();
+  if (!makerToolkitRedux.isAvailable(reduxState)) {
     return null;
   }
   return (
     <PopUpMenu.Item {...props}>
-      {maker.isEnabled() ? msg.disableMaker() : msg.enableMaker()}
+      {makerToolkitRedux.isEnabled(reduxState)
+        ? msg.disableMaker()
+        : msg.enableMaker()}
     </PopUpMenu.Item>
   );
 }

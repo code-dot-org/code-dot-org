@@ -2,7 +2,7 @@
 #
 # Makes a change to every animation in the animation library on S3.
 
-require 'aws-sdk'
+require 'aws-sdk-s3'
 require 'ruby-progressbar'
 require_relative '../../deployment'
 require_relative '../../lib/cdo/cdo_cli'

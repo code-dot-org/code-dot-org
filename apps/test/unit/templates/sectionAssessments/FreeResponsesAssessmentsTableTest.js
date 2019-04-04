@@ -7,9 +7,7 @@ import {questionOne} from '@cdo/apps/templates/sectionAssessments/assessmentsTes
 describe('FreeResponsesAssessmentsTable', () => {
   it('renders a table', () => {
     const wrapper = mount(
-      <FreeResponsesAssessmentsTable
-        freeResponses={questionOne}
-      />
+      <FreeResponsesAssessmentsTable freeResponses={questionOne} />
     );
 
     expect(wrapper.find('table')).to.exist;
@@ -17,9 +15,7 @@ describe('FreeResponsesAssessmentsTable', () => {
 
   it('renders the correct number of rows and headers', () => {
     const wrapper = mount(
-      <FreeResponsesAssessmentsTable
-        freeResponses={questionOne}
-      />
+      <FreeResponsesAssessmentsTable freeResponses={questionOne} />
     );
 
     const tableHeaders = wrapper.find('th');

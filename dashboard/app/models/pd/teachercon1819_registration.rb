@@ -17,11 +17,9 @@
 #  index_pd_teachercon1819_registrations_on_user_id              (user_id)
 #
 
-require 'cdo/shared_constants/pd/teachercon1819_registration_constants'
-
 class Pd::Teachercon1819Registration < ActiveRecord::Base
   include Pd::Form
-  include Teachercon1819RegistrationConstants
+  include Pd::Teachercon1819RegistrationConstants
 
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
   belongs_to :regional_partner, class_name: 'RegionalPartner'
@@ -39,18 +37,6 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       pd_application.update!(status: "waitlisted")
     elsif declined?
       pd_application.update!(status: "withdrawn")
-    end
-  end
-
-  after_create :send_teachercon_confirmation_email
-  def send_teachercon_confirmation_email
-    if regional_partner_id?
-      Pd::Teachercon1819RegistrationMailer.regional_partner(self).deliver_now
-    elsif pd_application_id?
-      return unless pd_application.try(:workshop) && pd_application.workshop.teachercon?
-      Pd::Teachercon1819RegistrationMailer.send(pd_application.application_type.downcase, self).deliver_now
-    else
-      Pd::Teachercon1819RegistrationMailer.lead_facilitator(self).deliver_now
     end
   end
 

@@ -209,7 +209,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Paint by Numbers\r\n\r\nLook at the binary code below.  Use the patterns of ones and zeros to create the picture the code represents. To paint each square, click on the color you want to use, then click on the square.\r\n\r\n\r\n`011 011 011 011 011 011 011 011 110 110`\r\n\r\n`011 011 111 111 111 011 011 011 110 110`\r\n\r\n`011 111 111 111 111 111 011 011 011 011`\r\n\r\n`011 011 111 111 111 011 011 011 011 011`\r\n\r\n`011 011 011 011 011 011 011 010 011 011`\r\n\r\n`011 011 011 011 011 011 010 010 010 011`\r\n\r\n`011 011 011 011 011 011 010 010 010 011`\r\n\r\n`011 011 011 011 011 011 011 000 011 011`\r\n\r\n`001 001 001 010 010 010 010 000 010 010`\r\n\r\n`001 001 001 001 010 010 010 010 010 010`",
+    "long_instructions": "# Paint by Numbers\r\n\r\nLook at the binary code below.  Use the patterns of ones and zeros to create the picture the code represents. To paint each square, click on the color you want to use, then click on the square.\r\n\r\n\r\n`011 011 011 011 011 011 011 011 110 110`\r\n\r\n`011 011 111 111 111 011 011 011 110 110`\r\n\r\n`011 111 111 111 111 111 011 011 011 011`\r\n\r\n`011 011 111 111 111 011 011 011 011 011`\r\n\r\n`011 011 011 011 011 011 011 010 011 011`\r\n\r\n`011 011 011 011 011 011 010 010 010 011`\r\n\r\n`011 011 011 011 011 011 010 010 010 011`\r\n\r\n`011 011 011 011 011 011 011 000 011 011`\r\n\r\n`001 001 001 010 010 010 010 000 010 010`\r\n\r\n`001 001 001 001 010 010 010 010 010 010`",
     "contained_level_names": null
   },
   "published": true,

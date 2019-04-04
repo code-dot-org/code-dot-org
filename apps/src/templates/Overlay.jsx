@@ -1,9 +1,10 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
-import { hideOverlay } from '../redux/instructions';
+import {hideOverlay} from '../redux/instructions';
 
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 // 1020 puts this halfway between the small footer (at 1000) and the
 // video modal backdrop (at 1040)
@@ -28,32 +29,32 @@ class Overlay extends React.Component {
   static propTypes = {
     visible: PropTypes.bool,
     hide: PropTypes.func,
-    isMinecraft: PropTypes.bool,
+    isMinecraft: PropTypes.bool
   };
 
   render() {
-    return (this.props.visible ?
+    return this.props.visible ? (
       <div
         id="overlay"
         onClick={this.props.hide}
-        style={[
-          style,
-          this.props.isMinecraft && craftStyle
-        ]}
-      /> :
-      null);
+        style={[style, this.props.isMinecraft && craftStyle]}
+      />
+    ) : null;
   }
 }
 
-export default connect(function propsFromStore(state) {
-  return {
-    visible: state.instructions.overlayVisible,
-    isMinecraft: !!state.pageConstants.isMinecraft,
-  };
-}, function propsFromDispatch(dispatch) {
-  return {
-    hide: function ()  {
-      dispatch(hideOverlay());
-    },
-  };
-})(Radium(Overlay));
+export default connect(
+  function propsFromStore(state) {
+    return {
+      visible: state.instructions.overlayVisible,
+      isMinecraft: !!state.pageConstants.isMinecraft
+    };
+  },
+  function propsFromDispatch(dispatch) {
+    return {
+      hide: function() {
+        dispatch(hideOverlay());
+      }
+    };
+  }
+)(Radium(Overlay));

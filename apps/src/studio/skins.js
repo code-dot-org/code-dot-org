@@ -5,19 +5,16 @@
 // background: Number of 400x400 background images. Randomly select one if
 // specified, otherwise, use background.png.
 
-import {
-  HIDDEN_VALUE,
-  RANDOM_VALUE,
-} from './constants';
+import {HIDDEN_VALUE, RANDOM_VALUE} from './constants';
 import msg from './locale';
 import commonMsg from '@cdo/locale';
 import skinsBase from '../skins';
-import { loadStarWarsGrid, loadStarWarsEvents } from './starwars/skins.js';
+import {loadStarWarsGrid, loadStarWarsEvents} from './starwars/skins.js';
 
 // Standard Twitter options matching defaults in FeedbackUtils.createSharingDiv
 // Use to avoid "story" reference in share text for a given skin.
 var plainTwitterOptions = {
-  text: commonMsg.defaultTwitterText() + " @codeorg",
+  text: commonMsg.defaultTwitterText() + ' @codeorg',
   hashtag: 'HourOfCode'
 };
 
@@ -31,7 +28,7 @@ function loadGumball(skin) {
   skin.spriteWidth = 110;
 
   // Dimensions of a rectangle in sprite center in which item collisions occur.
-  skin.spriteCollisionRectWidth  = 60;
+  skin.spriteCollisionRectWidth = 60;
   skin.spriteCollisionRectHeight = 60;
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
@@ -44,7 +41,7 @@ function loadGumball(skin) {
     'projectile_hotdog',
     'projectile_pompom',
     'projectile_toaster',
-    'projectile_waterball',
+    'projectile_waterball'
   ];
   // TODO: proper item class names
   skin.ItemClassNames = [
@@ -55,7 +52,7 @@ function loadGumball(skin) {
     'item_projectile_hotdog',
     'item_projectile_pompom',
     'item_projectile_toaster',
-    'item_projectile_waterball',
+    'item_projectile_waterball'
   ];
 
   // Images
@@ -85,37 +82,46 @@ function loadGumball(skin) {
   skin.timePerExplosionFrame = 20;
 
   skin.characters = {
-    background: skin.assetUrl('background_characters.png'),
+    background: skin.assetUrl('background_characters.png')
   };
   skin.checkers = {
-    background: skin.assetUrl('background_checkers.png'),
+    background: skin.assetUrl('background_checkers.png')
   };
   skin.clouds = {
-    background: skin.assetUrl('background_clouds.png'),
+    background: skin.assetUrl('background_clouds.png')
   };
   skin.cornered = {
-    background: skin.assetUrl('background_cornered.png'),
+    background: skin.assetUrl('background_cornered.png')
   };
   skin.dots = {
-    background: skin.assetUrl('background_dots.png'),
+    background: skin.assetUrl('background_dots.png')
   };
   skin.graffiti = {
-    background: skin.assetUrl('background_graffiti.png'),
+    background: skin.assetUrl('background_graffiti.png')
   };
   skin.space = {
-    background: skin.assetUrl('background_space.png'),
+    background: skin.assetUrl('background_space.png')
   };
   skin.squares = {
-    background: skin.assetUrl('background_squares.png'),
+    background: skin.assetUrl('background_squares.png')
   };
   skin.stripes = {
-    background: skin.assetUrl('background_stripes.png'),
+    background: skin.assetUrl('background_stripes.png')
   };
   skin.wood = {
-    background: skin.assetUrl('background_wood.png'),
+    background: skin.assetUrl('background_wood.png')
   };
 
-  skin.avatarList = ["anais", "anton", "bananajoe", "darwin", "gumball", "nicole", "penny", "richard"];
+  skin.avatarList = [
+    'anais',
+    'anton',
+    'bananajoe',
+    'darwin',
+    'gumball',
+    'nicole',
+    'penny',
+    'richard'
+  ];
   skin.walkValues = [8, 8, 8, 12, 12, 8, 10, 12];
 
   /**
@@ -123,7 +129,7 @@ function loadGumball(skin) {
    * `brew install graphicsmagick`
    * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
    */
-  skin.avatarList.forEach(function (name, i) {
+  skin.avatarList.forEach(function(name, i) {
     skin[name] = {
       sprite: skin.assetUrl('idle_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
@@ -138,12 +144,11 @@ function loadGumball(skin) {
       },
       animations: {
         turns: 8,
-        walkingEmotions: 3,
+        walkingEmotions: 3
       },
       animationFrameDuration: 3
     };
   });
-
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
@@ -156,7 +161,8 @@ function loadGumball(skin) {
     [msg.setBackgroundSpace(), '"space"'],
     [msg.setBackgroundSquares(), '"squares"'],
     [msg.setBackgroundStripes(), '"stripes"'],
-    [msg.setBackgroundWood(), '"wood"']];
+    [msg.setBackgroundWood(), '"wood"']
+  ];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
@@ -171,7 +177,8 @@ function loadGumball(skin) {
     [skin.squares.background, '"squares"'],
     [skin.stripes.background, '"stripes"'],
     [skin.wood.background, '"wood"'],
-    [skin.randomPurpleIcon, RANDOM_VALUE]];
+    [skin.randomPurpleIcon, RANDOM_VALUE]
+  ];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
@@ -183,7 +190,8 @@ function loadGumball(skin) {
     [msg.setSpriteGumball(), '"gumball"'],
     [msg.setSpriteNicole(), '"nicole"'],
     [msg.setSpritePenny(), '"penny"'],
-    [msg.setSpriteRichard(), '"richard"']];
+    [msg.setSpriteRichard(), '"richard"']
+  ];
 
   skin.projectileChoices = [
     [msg.projectileBanana(), '"projectile_banana"'],
@@ -194,7 +202,8 @@ function loadGumball(skin) {
     [msg.projectilePompom(), '"projectile_pompom"'],
     [msg.projectileToaster(), '"projectile_toaster"'],
     [msg.projectileWaterball(), '"projectile_waterball"'],
-    [msg.projectileRandom(), RANDOM_VALUE]];
+    [msg.projectileRandom(), RANDOM_VALUE]
+  ];
 
   skin.makeProjectileChoices = [
     [msg.makeProjectileBanana(), '"projectile_banana"'],
@@ -204,7 +213,8 @@ function loadGumball(skin) {
     [msg.makeProjectileHotdog(), '"projectile_hotdog"'],
     [msg.makeProjectilePompom(), '"projectile_pompom"'],
     [msg.makeProjectileToaster(), '"projectile_toaster"'],
-    [msg.makeProjectileWaterball(), '"projectile_waterball"']];
+    [msg.makeProjectileWaterball(), '"projectile_waterball"']
+  ];
 
   skin.whenProjectileCollidedChoices = [
     [msg.whenSpriteCollidedWithProjectileBanana(), 'projectile_banana'],
@@ -214,7 +224,8 @@ function loadGumball(skin) {
     [msg.whenSpriteCollidedWithProjectileHotdog(), 'projectile_hotdog'],
     [msg.whenSpriteCollidedWithProjectilePompom(), 'projectile_pompom'],
     [msg.whenSpriteCollidedWithProjectileToaster(), 'projectile_toaster'],
-    [msg.whenSpriteCollidedWithProjectileWaterball(), 'projectile_waterball']];
+    [msg.whenSpriteCollidedWithProjectileWaterball(), 'projectile_waterball']
+  ];
 
   // TODO: Create actual item choices
   // NOTE: item names must have double quotes inside single quotes
@@ -228,7 +239,8 @@ function loadGumball(skin) {
     [msg.itemProjectilePompom(), '"item_projectile_pompom"'],
     [msg.itemProjectileToaster(), '"item_projectile_toaster"'],
     [msg.itemProjectileWaterball(), '"item_projectile_waterball"'],
-    [msg.itemRandom(), RANDOM_VALUE]];
+    [msg.itemRandom(), RANDOM_VALUE]
+  ];
 }
 
 function loadIceAge(skin) {
@@ -241,7 +253,7 @@ function loadIceAge(skin) {
   skin.spriteWidth = 130;
 
   // Dimensions of a rectangle in sprite center in which item collisions occur.
-  skin.spriteCollisionRectWidth  = 60;
+  skin.spriteCollisionRectWidth = 60;
   skin.spriteCollisionRectHeight = 60;
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
@@ -251,7 +263,7 @@ function loadIceAge(skin) {
     'ia_projectile_2',
     'ia_projectile_3',
     'ia_projectile_4',
-    'ia_projectile_5',
+    'ia_projectile_5'
   ];
   // TODO: proper item class names
   skin.ItemClassNames = [
@@ -259,7 +271,7 @@ function loadIceAge(skin) {
     'item_ia_projectile_2',
     'item_ia_projectile_3',
     'item_ia_projectile_4',
-    'item_ia_projectile_5',
+    'item_ia_projectile_5'
   ];
 
   // Images
@@ -283,32 +295,32 @@ function loadIceAge(skin) {
   skin.timePerExplosionFrame = 40;
 
   skin.icy1 = {
-    background: skin.assetUrl('background_icy1.jpg'),
+    background: skin.assetUrl('background_icy1.jpg')
   };
   skin.icy2 = {
-    background: skin.assetUrl('background_icy2.jpg'),
+    background: skin.assetUrl('background_icy2.jpg')
   };
   skin.icy3 = {
-    background: skin.assetUrl('background_icy3.jpg'),
+    background: skin.assetUrl('background_icy3.jpg')
   };
   skin.icy4 = {
-    background: skin.assetUrl('background_icy4.jpg'),
+    background: skin.assetUrl('background_icy4.jpg')
   };
   skin.icy5 = {
-    background: skin.assetUrl('background_icy5.jpg'),
+    background: skin.assetUrl('background_icy5.jpg')
   };
   skin.ground = {
-    background: skin.assetUrl('background_ground.jpg'),
+    background: skin.assetUrl('background_ground.jpg')
   };
 
-  skin.avatarList = ["manny", "sid", "scrat", "diego", "granny"];
+  skin.avatarList = ['manny', 'sid', 'scrat', 'diego', 'granny'];
 
   /**
    * Sprite thumbs generated with:
    * `brew install graphicsmagick`
    * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
    */
-  skin.avatarList.forEach(function (name) {
+  skin.avatarList.forEach(function(name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
@@ -323,12 +335,11 @@ function loadIceAge(skin) {
       },
       animations: {
         turns: 8,
-        walkingEmotions: 3,
+        walkingEmotions: 3
       },
       animationFrameDuration: 3
     };
   });
-
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
@@ -337,7 +348,8 @@ function loadIceAge(skin) {
     [msg.setBackgroundIcy3(), '"icy3"'],
     [msg.setBackgroundIcy4(), '"icy4"'],
     [msg.setBackgroundIcy5(), '"icy5"'],
-    [msg.setBackgroundGround(), '"ground"']];
+    [msg.setBackgroundGround(), '"ground"']
+  ];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
@@ -348,7 +360,8 @@ function loadIceAge(skin) {
     [skin.icy4.background, '"icy4"'],
     [skin.icy5.background, '"icy5"'],
     [skin.ground.background, '"ground"'],
-    [skin.randomPurpleIcon, RANDOM_VALUE]];
+    [skin.randomPurpleIcon, RANDOM_VALUE]
+  ];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
@@ -357,7 +370,8 @@ function loadIceAge(skin) {
     [msg.setSpriteSid(), '"sid"'],
     [msg.setSpriteScrat(), '"scrat"'],
     [msg.setSpriteDiego(), '"diego"'],
-    [msg.setSpriteGranny(), '"granny"']];
+    [msg.setSpriteGranny(), '"granny"']
+  ];
 
   skin.projectileChoices = [
     [msg.projectileIAProjectile1(), '"ia_projectile_1"'],
@@ -365,21 +379,24 @@ function loadIceAge(skin) {
     [msg.projectileIAProjectile3(), '"ia_projectile_3"'],
     [msg.projectileIAProjectile4(), '"ia_projectile_4"'],
     [msg.projectileIAProjectile5(), '"ia_projectile_5"'],
-    [msg.projectileRandom(), RANDOM_VALUE]];
+    [msg.projectileRandom(), RANDOM_VALUE]
+  ];
 
   skin.makeProjectileChoices = [
     [msg.makeProjectileIAProjectile1(), '"ia_projectile_1"'],
     [msg.makeProjectileIAProjectile2(), '"ia_projectile_2"'],
     [msg.makeProjectileIAProjectile3(), '"ia_projectile_3"'],
     [msg.makeProjectileIAProjectile4(), '"ia_projectile_4"'],
-    [msg.makeProjectileIAProjectile5(), '"ia_projectile_5"']];
+    [msg.makeProjectileIAProjectile5(), '"ia_projectile_5"']
+  ];
 
   skin.whenProjectileCollidedChoices = [
     [msg.whenSpriteCollidedWithIAProjectile1(), 'ia_projectile_1'],
     [msg.whenSpriteCollidedWithIAProjectile2(), 'ia_projectile_2'],
     [msg.whenSpriteCollidedWithIAProjectile3(), 'ia_projectile_3'],
     [msg.whenSpriteCollidedWithIAProjectile4(), 'ia_projectile_4'],
-    [msg.whenSpriteCollidedWithIAProjectile5(), 'ia_projectile_5']];
+    [msg.whenSpriteCollidedWithIAProjectile5(), 'ia_projectile_5']
+  ];
 
   // TODO: Create actual item choices
   // NOTE: item names must have double quotes inside single quotes
@@ -390,7 +407,8 @@ function loadIceAge(skin) {
     [msg.itemIAProjectile3(), '"item_ia_projectile_3"'],
     [msg.itemIAProjectile4(), '"item_ia_projectile_4"'],
     [msg.itemIAProjectile5(), '"item_ia_projectile_5"'],
-    [msg.itemRandom(), RANDOM_VALUE]];
+    [msg.itemRandom(), RANDOM_VALUE]
+  ];
 }
 
 function loadInfinity(skin) {
@@ -414,9 +432,9 @@ function loadInfinity(skin) {
   ];
 
   skin.specialProjectileProperties = {
-    'projectile_cherry': { frames: 13 },
-    'projectile_ice': { frames: 12 },
-    'projectile_duck': { frames: 12 }
+    projectile_cherry: {frames: 13},
+    projectile_ice: {frames: 12},
+    projectile_duck: {frames: 12}
   };
 
   // TODO: proper item class names
@@ -432,9 +450,9 @@ function loadInfinity(skin) {
   ];
 
   skin.specialItemProperties = {
-    'item_cherry': { frames: 13 },
-    'item_ice': { frames: 12 },
-    'item_duck': { frames: 12 }
+    item_cherry: {frames: 13},
+    item_ice: {frames: 12},
+    item_duck: {frames: 12}
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -443,11 +461,11 @@ function loadInfinity(skin) {
   skin.timePerExplosionFrame = 100;
 
   // Dimensions of a rectangle in collidable center from which projectiles begin.
-  skin.projectileSpriteWidth  = 70;
+  skin.projectileSpriteWidth = 70;
   skin.projectileSpriteHeight = 70;
 
   skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
-  skin.avatarList.forEach(function (name) {
+  skin.avatarList.forEach(function(name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
@@ -465,11 +483,11 @@ function loadInfinity(skin) {
     };
   });
 
-  skin.preventProjectileLoop = function (className) {
+  skin.preventProjectileLoop = function(className) {
     return className === 'projectile_hiro';
   };
 
-  skin.preventItemLoop = function (className) {
+  skin.preventItemLoop = function(className) {
     return className === 'item_hiro';
   };
 
@@ -519,8 +537,8 @@ function loadInfinity(skin) {
     [msg.setBackgroundFlower(), '"flower"'],
     [msg.setBackgroundTile(), '"tile"'],
     [msg.setBackgroundIcy(), '"icy"'],
-    [msg.setBackgroundSnowy(), '"snowy"'],
-    ];
+    [msg.setBackgroundSnowy(), '"snowy"']
+  ];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
@@ -531,8 +549,8 @@ function loadInfinity(skin) {
     [skin.tile.background, '"tile"'],
     [skin.icy.background, '"icy"'],
     [skin.snowy.background, '"snowy"'],
-    [skin.randomPurpleIcon, RANDOM_VALUE],
-    ];
+    [skin.randomPurpleIcon, RANDOM_VALUE]
+  ];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
@@ -541,7 +559,8 @@ function loadInfinity(skin) {
     [msg.setSpriteElsa(), '"elsa"'],
     [msg.setSpriteHiro(), '"hiro"'],
     [msg.setSpriteBaymax(), '"baymax"'],
-    [msg.setSpriteRapunzel(), '"rapunzel"']];
+    [msg.setSpriteRapunzel(), '"rapunzel"']
+  ];
 
   skin.projectileChoices = [
     [msg.projectileHiro(), '"projectile_hiro"'],
@@ -552,7 +571,8 @@ function loadInfinity(skin) {
     [msg.projectileCherry(), '"projectile_cherry"'],
     [msg.projectileIce(), '"projectile_ice"'],
     [msg.projectileDuck(), '"projectile_duck"'],
-    [msg.projectileRandom(), RANDOM_VALUE]];
+    [msg.projectileRandom(), RANDOM_VALUE]
+  ];
 
   // TODO: Create actual item choices
   // NOTE: item names must have double quotes inside single quotes
@@ -566,7 +586,8 @@ function loadInfinity(skin) {
     [msg.itemCherry(), '"item_cherry"'],
     [msg.itemIce(), '"item_ice"'],
     [msg.itemDuck(), '"item_duck"'],
-    [msg.itemRandom(), RANDOM_VALUE]];
+    [msg.itemRandom(), RANDOM_VALUE]
+  ];
 }
 
 function loadStudio(skin) {
@@ -581,46 +602,46 @@ function loadStudio(skin) {
   skin.timePerExplosionFrame = 40;
 
   skin.hardcourt = {
-    background: skin.assetUrl('background.png'),
+    background: skin.assetUrl('background.png')
   };
   skin.black = {
-    background: skin.assetUrl('retro_background.png'),
+    background: skin.assetUrl('retro_background.png')
   };
   skin.cave = {
-    background: skin.assetUrl('background_cave.png'),
+    background: skin.assetUrl('background_cave.png')
   };
   skin.night = {
-    background: skin.assetUrl('background_santa.png'),
+    background: skin.assetUrl('background_santa.png')
   };
   skin.cloudy = {
-    background: skin.assetUrl('background_scifi.png'),
+    background: skin.assetUrl('background_scifi.png')
   };
   skin.underwater = {
-    background: skin.assetUrl('background_underwater.png'),
+    background: skin.assetUrl('background_underwater.png')
   };
   skin.city = {
-    background: skin.assetUrl('background_city.png'),
+    background: skin.assetUrl('background_city.png')
   };
   skin.desert = {
-    background: skin.assetUrl('background_desert.png'),
+    background: skin.assetUrl('background_desert.png')
   };
   skin.rainbow = {
-    background: skin.assetUrl('background_rainbow.png'),
+    background: skin.assetUrl('background_rainbow.png')
   };
   skin.soccer = {
-    background: skin.assetUrl('background_soccer.png'),
+    background: skin.assetUrl('background_soccer.png')
   };
   skin.space = {
-    background: skin.assetUrl('background_space.png'),
+    background: skin.assetUrl('background_space.png')
   };
   skin.tennis = {
-    background: skin.assetUrl('background_tennis.png'),
+    background: skin.assetUrl('background_tennis.png')
   };
   skin.winter = {
-    background: skin.assetUrl('background_winter.png'),
+    background: skin.assetUrl('background_winter.png')
   };
   skin.grid = {
-    background: skin.assetUrl('background_grid.png'),
+    background: skin.assetUrl('background_grid.png')
   };
 
   // NOTE: first item must be RANDOM_VALUE
@@ -635,34 +656,59 @@ function loadStudio(skin) {
 
   skin.wallMaps = {
     blank: {
-      srcUrl: skin.assetUrl('obstacle_blank.png'),
+      srcUrl: skin.assetUrl('obstacle_blank.png')
     },
     circle: {
-      srcUrl: skin.assetUrl('obstacle_circle.png'),
+      srcUrl: skin.assetUrl('obstacle_circle.png')
     },
     horizontal: {
-      srcUrl: skin.assetUrl('obstacle_horizontal.png'),
+      srcUrl: skin.assetUrl('obstacle_horizontal.png')
     },
     grid: {
-      srcUrl: skin.assetUrl('obstacle_grid.png'),
+      srcUrl: skin.assetUrl('obstacle_grid.png')
     },
     blobs: {
-      srcUrl: skin.assetUrl('obstacle_blobs.png'),
-    },
+      srcUrl: skin.assetUrl('obstacle_blobs.png')
+    }
   };
 
-  skin.avatarList = ["dog", "cat", "penguin", "dinosaur", "octopus", "witch",
-    "bat", "bird", "dragon", "squirrel", "wizard", "alien", "ghost", "monster",
-    "robot", "unicorn", "zombie", "knight", "ninja", "pirate", "caveboy",
-    "cavegirl", "princess", "spacebot", "soccergirl", "soccerboy", "tennisgirl",
-    "tennisboy"];
+  skin.avatarList = [
+    'dog',
+    'cat',
+    'penguin',
+    'dinosaur',
+    'octopus',
+    'witch',
+    'bat',
+    'bird',
+    'dragon',
+    'squirrel',
+    'wizard',
+    'alien',
+    'ghost',
+    'monster',
+    'robot',
+    'unicorn',
+    'zombie',
+    'knight',
+    'ninja',
+    'pirate',
+    'caveboy',
+    'cavegirl',
+    'princess',
+    'spacebot',
+    'soccergirl',
+    'soccerboy',
+    'tennisgirl',
+    'tennisboy'
+  ];
 
   /**
    * Sprite thumbs generated with:
    * `brew install graphicsmagick`
    * `gm convert +adjoin -crop 200x200 -resize 100x100 *spritesheet* output%02d.png`
    */
-  skin.avatarList.forEach(function (name) {
+  skin.avatarList.forEach(function(name) {
     skin[name] = {
       sprite: skin.assetUrl(name + '_spritesheet_200px.png'),
       dropdownThumbnail: skin.assetUrl(name + '_thumb.png'),
@@ -675,7 +721,6 @@ function loadStudio(skin) {
       animationFrameDuration: 6
     };
   });
-
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
@@ -691,7 +736,8 @@ function loadStudio(skin) {
     [msg.setBackgroundSoccer(), '"soccer"'],
     [msg.setBackgroundSpace(), '"space"'],
     [msg.setBackgroundTennis(), '"tennis"'],
-    [msg.setBackgroundWinter(), '"winter"']];
+    [msg.setBackgroundWinter(), '"winter"']
+  ];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
@@ -709,7 +755,8 @@ function loadStudio(skin) {
     [skin.space.background, '"space"'],
     [skin.tennis.background, '"tennis"'],
     [skin.winter.background, '"winter"'],
-    [skin.randomPurpleIcon, RANDOM_VALUE]];
+    [skin.randomPurpleIcon, RANDOM_VALUE]
+  ];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
@@ -741,7 +788,8 @@ function loadStudio(skin) {
     [msg.setSpriteSoccerGirl(), '"soccergirl"'],
     [msg.setSpriteSoccerBoy(), '"soccerboy"'],
     [msg.setSpriteTennisGirl(), '"tennisgirl"'],
-    [msg.setSpriteTennisBoy(), '"tennisboy"']];
+    [msg.setSpriteTennisBoy(), '"tennisboy"']
+  ];
 
   skin.projectileChoices = [
     [msg.projectileAirplane(), '"airplane"'],
@@ -758,7 +806,8 @@ function loadStudio(skin) {
     [msg.projectileYellowHearts(), '"yellow_hearts"'],
     [msg.projectilePurpleHearts(), '"purple_hearts"'],
     [msg.projectileRedHearts(), '"red_hearts"'],
-    [msg.projectileRandom(), RANDOM_VALUE]];
+    [msg.projectileRandom(), RANDOM_VALUE]
+  ];
 
   skin.makeProjectileChoices = [
     [msg.makeProjectileAirplane(), '"airplane"'],
@@ -774,7 +823,8 @@ function loadStudio(skin) {
     [msg.makeProjectileRedFireball(), '"red_fireball"'],
     [msg.makeProjectileYellowHearts(), '"yellow_hearts"'],
     [msg.makeProjectilePurpleHearts(), '"purple_hearts"'],
-    [msg.makeProjectileRedHearts(), '"red_hearts"']];
+    [msg.makeProjectileRedHearts(), '"red_hearts"']
+  ];
 
   skin.whenProjectileCollidedChoices = [
     [msg.whenSpriteCollidedWithAirplane(), 'airplane'],
@@ -790,7 +840,8 @@ function loadStudio(skin) {
     [msg.whenSpriteCollidedWithRedFireball(), 'red_fireball'],
     [msg.whenSpriteCollidedWithYellowHearts(), 'yellow_hearts'],
     [msg.whenSpriteCollidedWithPurpleHearts(), 'purple_hearts'],
-    [msg.whenSpriteCollidedWithRedHearts(), 'red_hearts']];
+    [msg.whenSpriteCollidedWithRedHearts(), 'red_hearts']
+  ];
 
   // TODO: Create actual item choices
   // NOTE: item names must have double quotes inside single quotes
@@ -810,10 +861,11 @@ function loadStudio(skin) {
     [msg.itemYellowHearts(), '"item_yellow_hearts"'],
     [msg.itemPurpleHearts(), '"item_purple_hearts"'],
     [msg.itemRedHearts(), '"item_red_hearts"'],
-    [msg.itemRandom(), RANDOM_VALUE]];
+    [msg.itemRandom(), RANDOM_VALUE]
+  ];
 }
 
-exports.load = function (assetUrl, id) {
+exports.load = function(assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
@@ -836,14 +888,14 @@ exports.load = function (assetUrl, id) {
   ];
 
   skin.specialProjectileProperties = {
-    'airplane': { frames: 10 },
-    'basketball': { frames: 10 },
-    'disc': { frames: 10 },
-    'pie': { frames: 10 },
-    'pumpkin': { frames: 10 },
-    'star': { frames: 10 },
-    'sandwich': { frames: 10 },
-    'snowball': { frames: 10 },
+    airplane: {frames: 10},
+    basketball: {frames: 10},
+    disc: {frames: 10},
+    pie: {frames: 10},
+    pumpkin: {frames: 10},
+    star: {frames: 10},
+    sandwich: {frames: 10},
+    snowball: {frames: 10}
   };
 
   // TODO: proper item class names
@@ -912,8 +964,18 @@ exports.load = function (assetUrl, id) {
   // Sounds
   skin.builtinSounds = ['start', 'win', 'failure', 'flag'];
   skin.sounds = [
-    'rubber', 'crunch', 'goal1', 'goal2', 'wood', 'retro', 'slap', 'hit',
-    'winpoint', 'winpoint2', 'losepoint', 'losepoint2'
+    'rubber',
+    'crunch',
+    'goal1',
+    'goal2',
+    'wood',
+    'retro',
+    'slap',
+    'hit',
+    'winpoint',
+    'winpoint2',
+    'losepoint',
+    'losepoint2'
   ];
 
   skin.soundChoices = [
@@ -929,7 +991,8 @@ exports.load = function (assetUrl, id) {
     [msg.playSoundLosePoint(), 'losepoint'],
     [msg.playSoundLosePoint2(), 'losepoint2'],
     [msg.playSoundGoal1(), 'goal1'],
-    [msg.playSoundGoal2(), 'goal2']];
+    [msg.playSoundGoal2(), 'goal2']
+  ];
 
   skin.soundChoicesK1 = [
     [msg.soundRandom(), RANDOM_VALUE],
@@ -944,7 +1007,8 @@ exports.load = function (assetUrl, id) {
     [msg.soundLosePoint(), 'losepoint'],
     [msg.soundLosePoint2(), 'losepoint2'],
     [msg.soundGoal1(), 'goal1'],
-    [msg.soundGoal2(), 'goal2']];
+    [msg.soundGoal2(), 'goal2']
+  ];
 
   // Settings
   skin.background = skin.assetUrl('background.png');
@@ -966,8 +1030,8 @@ exports.load = function (assetUrl, id) {
     [msg.setActivityRoam(), '"roam"'],
     [msg.setActivityChase(), '"chase"'],
     [msg.setActivityFlee(), '"flee"'],
-    [msg.setActivityNone(), '"none"'],
-    ];
+    [msg.setActivityNone(), '"none"']
+  ];
 
   // take care of items specific to skins
   switch (skin.id) {

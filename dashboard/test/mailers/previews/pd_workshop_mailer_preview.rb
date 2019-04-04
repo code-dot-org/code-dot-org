@@ -14,8 +14,12 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     end
   end
 
-  def teacher_enrollment_receipt__csf
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSF
+  def teacher_enrollment_receipt__csf_intro
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101
+  end
+
+  def teacher_enrollment_receipt__csf_deepdive
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201
   end
 
   def teacher_enrollment_receipt__csd_summer_workshop
@@ -50,8 +54,24 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, workshop_params: {notes: notes}
   end
 
-  def teacher_enrollment_reminder__csf
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF
+  def teacher_enrollment_reminder__csf_intro_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder__csf_intro_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
+      options: {days_before: 3}
+  end
+
+  def teacher_enrollment_reminder__csf_deepdive_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder__csf_deepdive_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201,
+      options: {days_before: 3}
   end
 
   def teacher_enrollment_reminder__csd_summer_workshop_10_day
@@ -111,6 +131,14 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_COUNSELOR
   end
 
+  def teacher_survey_reminder__csf_deepdive
+    mail :teacher_survey_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201
+  end
+
+  def teacher_follow_up__csf_intro
+    mail :teacher_follow_up, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101
+  end
+
   def organizer_enrollment_receipt
     mail :organizer_enrollment_receipt
   end
@@ -140,16 +168,20 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :organizer_cancel_receipt
   end
 
-  def detail_change_notification__csf
-    mail :detail_change_notification, Pd::Workshop::COURSE_CSF
+  def detail_change_notification__csf_intro
+    mail :detail_change_notification, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101
+  end
+
+  def detail_change_notification__csf_deepdive
+    mail :detail_change_notification, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201
   end
 
   def organizer_detail_change_notification__csf
     mail :organizer_detail_change_notification, Pd::Workshop::COURSE_CSF, target: :workshop
   end
 
-  def facilitator_detail_change_notification__csf
-    mail :facilitator_detail_change_notification, Pd::Workshop::COURSE_CSF, target: :facilitator
+  def facilitator_detail_change_notification__csf_intro
+    mail :facilitator_detail_change_notification, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101, target: :facilitator
   end
 
   def detail_change_notification__admin
@@ -161,8 +193,12 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :exit_survey
   end
 
-  def exit_survey__csf
-    mail :exit_survey, Pd::Workshop::COURSE_CSF
+  def exit_survey__csf_intro
+    mail :exit_survey, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101
+  end
+
+  def exit_survey__csf_deepdive
+    mail :exit_survey, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201
   end
 
   def exit_survey__csp_summer_workshop

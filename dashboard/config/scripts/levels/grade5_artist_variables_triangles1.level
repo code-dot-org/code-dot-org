@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Let's draw an equilateral triangle. \r\n\r\nIt has to be exactly 50 pixels long on each side.\r\n\r\n",
+    "long_instructions": "Let's draw an equilateral triangle. \r\n\r\nIt has to be exactly 50 pixels long on each side.\r\n\r\n",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",

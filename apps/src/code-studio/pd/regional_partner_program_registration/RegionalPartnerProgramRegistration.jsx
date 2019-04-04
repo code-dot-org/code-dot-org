@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import FormController from '../form_components/FormController';
 import DateConfirm from './DateConfirm';
@@ -11,12 +12,7 @@ export default class RegionalPartnerProgramRegistration extends FormController {
    * @override
    */
   getPageComponents() {
-    return [
-      DateConfirm,
-      TravelInformation,
-      PhotoRelease,
-      LiabilityWaiver,
-    ];
+    return [DateConfirm, TravelInformation, PhotoRelease, LiabilityWaiver];
   }
 
   /**
@@ -53,8 +49,9 @@ export default class RegionalPartnerProgramRegistration extends FormController {
    * @override
    */
   shouldShowSubmit() {
-    return super.shouldShowSubmit() ||
-        this.state.data.confirmTeacherconDate === "No";
+    return (
+      super.shouldShowSubmit() || this.state.data.confirmTeacherconDate === 'No'
+    );
   }
 
   /**
@@ -64,9 +61,7 @@ export default class RegionalPartnerProgramRegistration extends FormController {
     if (this.state.successfulSubmit) {
       return (
         <div>
-          <p>
-            Thanks for registering.
-          </p>
+          <p>Thanks for registering.</p>
           <p>
             We're excited you're joining TeacherCon 2017! You will receive more
             information about travel approximately six weeks before TeacherCon.
@@ -88,5 +83,5 @@ RegionalPartnerProgramRegistration.propTypes = {
   ...FormController.propTypes,
   teachercon: PropTypes.number.isRequired,
   teacherconLocation: PropTypes.string.isRequired,
-  teacherconDates: PropTypes.string.isRequired,
+  teacherconDates: PropTypes.string.isRequired
 };

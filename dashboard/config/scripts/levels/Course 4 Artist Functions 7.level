@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw a line of squares using a Square function? Each square is 40 pixel's in length.",
+    "short_instructions": "Can you draw a line of squares using a Square function? Each square is 40 pixel's in length.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".5",

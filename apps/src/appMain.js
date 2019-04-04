@@ -7,22 +7,26 @@ import {addReadyListener} from './dom';
 import * as blocksCommon from './blocksCommon';
 import * as commonReducers from './redux/commonReducers';
 import codegen from './lib/tools/jsinterpreter/codegen';
-import {installCustomBlocks, appendBlocksByCategory} from '@cdo/apps/block_utils';
+import {
+  installCustomBlocks,
+  appendBlocksByCategory
+} from '@cdo/apps/block_utils';
 import logToCloud from './logToCloud';
+import defaultSkinModule from './skins.js';
 
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
+  getBlockXML: () =>
+    Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)),
   arrangeBlockPosition: (...args) => studioApp().arrangeBlockPosition(...args),
   getDropletContents: () => studioApp().editor.getValue(),
   getDroplet: () => studioApp().editor,
   // Set to true to ignore onBeforeUnload events
   ignoreOnBeforeUnload: false,
-  getStore,
+  getStore
 };
 
-
-export default function (app, levels, options) {
-
+export default function(app, levels, options) {
   // If a levelId is not provided, then options.level is specified in full.
   // Otherwise, options.level overrides resolved level on a per-property basis.
   //
@@ -42,11 +46,13 @@ export default function (app, levels, options) {
 
     if (options.level.levelBuilderRequiredBlocks) {
       level.requiredBlocks = makeTestsFromBuilderRequiredBlocks(
-          options.level.levelBuilderRequiredBlocks);
+        options.level.levelBuilderRequiredBlocks
+      );
     }
     if (options.level.levelBuilderRecommendedBlocks) {
       level.recommendedBlocks = makeTestsFromBuilderRequiredBlocks(
-          options.level.levelBuilderRecommendedBlocks);
+        options.level.levelBuilderRecommendedBlocks
+      );
     }
 
     if (options.level.authoredHints) {
@@ -63,7 +69,8 @@ export default function (app, levels, options) {
 
   studioApp().configure(options);
 
-  options.skin = options.skinsModule.load(studioApp().assetUrl, options.skinId);
+  const skinsModule = options.skinsModule || defaultSkinModule;
+  options.skin = skinsModule.load(studioApp().assetUrl, options.skinId);
 
   if (studioApp().isUsingBlockly()) {
     var blockInstallOptions = {
@@ -80,23 +87,32 @@ export default function (app, levels, options) {
     options.blocksModule.install(Blockly, blockInstallOptions);
 
     if (level) {
-      const levelCustomBlocksConfig = !level.customBlocks ? [] :
-        JSON.parse(level.customBlocks).map(blockConfig =>
-          ({ config: blockConfig, category: 'Custom' }));
+      const levelCustomBlocksConfig = !level.customBlocks
+        ? []
+        : JSON.parse(level.customBlocks).map(blockConfig => ({
+            config: blockConfig,
+            category: 'Custom'
+          }));
       const sharedBlocksConfig = level.sharedBlocks || [];
       const customBlocksConfig = [
         ...sharedBlocksConfig,
-        ...levelCustomBlocksConfig,
+        ...levelCustomBlocksConfig
       ];
       if (customBlocksConfig.length > 0) {
         const blocksByCategory = installCustomBlocks({
           blockly: Blockly,
           blockDefinitions: customBlocksConfig,
-          customInputTypes: options.blocksModule.customInputTypes,
+          customInputTypes: options.blocksModule.customInputTypes
         });
 
-        if (valueOr(level.hideCustomBlocks, true) && !options.level.edit_blocks) {
-          level.toolbox = appendBlocksByCategory(level.toolbox, blocksByCategory);
+        if (
+          !valueOr(level.hideCustomBlocks, true) ||
+          options.level.edit_blocks
+        ) {
+          level.toolbox = appendBlocksByCategory(
+            level.toolbox,
+            blocksByCategory
+          );
         }
       }
     }

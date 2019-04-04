@@ -1,6 +1,5 @@
 import React from 'react';
-import { AppLoading } from 'expo';
-import { AsyncStorage, Platform, StyleSheet, View, WebView } from 'react-native';
+import { Platform, StyleSheet, View, WebView } from 'react-native';
 
 import CustomAsset from './CustomAsset';
 import DataWarning from './DataWarning';
@@ -8,8 +7,8 @@ import packagedFiles from './packagedFiles';
 
 export default class App extends React.Component {
 
-  static APPLAB_HEIGHT = 450;
-  static APPLAB_WIDTH = 320;
+  static APP_HEIGHT = <%- appHeight %>;
+  static APP_WIDTH = <%- appWidth %>;
 
   constructor(props) {
     super(props);
@@ -56,25 +55,42 @@ export default class App extends React.Component {
     });
   };
 
+  onLoadEnd = () => {
+    //
+    // NOTE: wait for 2 frames after the WebView says it is loaded before we set our state to
+    // loaded and remove the "cover" View (without this delay, we see a white flash from the WebView)
+    //
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        this.setState({
+          loaded: true,
+        });
+      });
+    });
+  };
+
   webViewScale() {
     const { height, width } = this.state;
 
-    const heightScale = height / App.APPLAB_HEIGHT;
-    const widthScale = width / App.APPLAB_WIDTH;
+    const heightScale = height / App.APP_HEIGHT;
+    const widthScale = width / App.APP_WIDTH;
     return Math.min(heightScale, widthScale);
   }
 
   webViewContainerStyle() {
     const scale = this.webViewScale();
 
-    return {
-      height: App.APPLAB_HEIGHT * scale,
-      width: App.APPLAB_WIDTH * scale,
-    };
+    return [
+      styles.webViewContainer,
+      {
+        height: App.APP_HEIGHT * scale,
+        width: App.APP_WIDTH * scale,
+      }
+    ];
   }
 
   render() {
-    const { age, height, indexUri } = this.state;
+    const { age, height, indexUri, loaded } = this.state;
 
     if (!age || age < DataWarning.AGE_MINIMUM) {
       return (
@@ -82,23 +98,23 @@ export default class App extends React.Component {
       );
     }
 
-    if (!indexUri) {
-      return (
-        <AppLoading />
-      );
-    }
-
     return (
       <View onLayout={this.onLayout} style={styles.container}>
-        {height && <View style={this.webViewContainerStyle()}>
+        {height && indexUri && <View style={this.webViewContainerStyle()}>
           <WebView
+            allowUniversalAccessFromFileURLs
+            originWhitelist={['*']}
+            allowFileAccess
             source={{uri: indexUri}}
-            style={styles.webView}
-            javaScriptEnabled={true}
+            style={Platform.OS === 'ios' ? styles.webViewIOS : styles.webViewAndroid}
+            javaScriptEnabled
+            mediaPlaybackRequiresUserAction={false}
             scrollEnabled={false}
             bounces={false}
             scalesPageToFit={Platform.OS === 'ios'}
+            onLoadEnd={this.onLoadEnd}
           />
+          {!loaded && <View style={styles.cover} />}
         </View>}
       </View>
     );
@@ -111,8 +127,19 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     justifyContent: 'center',
   },
-  webView: {
+  cover: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'black',
+  },
+  webViewIOS: {
     backgroundColor: 'black',
     flex: 1,
+  },
+  webViewAndroid: {
+    backgroundColor: 'white',
+    flex: 1,
+  },
+  webViewContainer: {
+    backgroundColor: 'black',
   }
 });

@@ -5,14 +5,19 @@
 #
 module InternationalOptInPeople
   INTERNATIONAL_OPT_IN_FACILITATORS = [
-    "First facilitator",
-    "Second facilitator",
-    "Third facilitator"
+    "Eleanor Cheah",
+    "Rodrigo Fabrega",
+    "Justin Feller & Beth Zigmont",
+    "Weena Naowaprateep",
+    "My facilitator is not listed"
   ].freeze
 
   INTERNATIONAL_OPT_IN_PARTNERS = [
-    "First partner",
-    "Second partner",
-    "Third partner"
+    "Aksorn",
+    "Cuantrix",
+    "Fundacion Kodea",
+    "Malaysia Digital Economy Corporation",
+    "Wix.com",
+    "My organizer is not listed"
   ].freeze
 end

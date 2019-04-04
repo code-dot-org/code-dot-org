@@ -1,5 +1,9 @@
+require 'cdo/firehose'
+
 class Api::V1::RegionalPartnersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:find, :show]
+
+  include Pd::SharedWorkshopConstants
 
   # GET /api/v1/regional_partners
   def index
@@ -16,6 +20,45 @@ class Api::V1::RegionalPartnersController < ApplicationController
     render json: {capacity: get_partner_cohort_capacity(regional_partner_value, role)}
   end
 
+  # GET /api/v1/regional_partners/show/:id
+  def show
+    partner_id = params[:partner_id]
+    partner = RegionalPartner.find_by_id(partner_id)
+
+    if partner
+      render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
+    else
+      render json: {error: WORKSHOP_SEARCH_ERRORS[:no_partner]}
+    end
+  end
+
+  # GET /api/v1/regional_partners/find
+  def find
+    zip_code = params[:zip_code]
+
+    partner, state = RegionalPartner.find_by_zip(zip_code)
+
+    result = nil
+
+    if partner
+      render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
+      result = 'partner-found'
+    elsif state
+      render json: {error: WORKSHOP_SEARCH_ERRORS[:no_partner]}
+      result = 'no-partner'
+    else
+      render json: {error: WORKSHOP_SEARCH_ERRORS[:no_state]}
+      result = 'no-state'
+    end
+
+    FirehoseClient.instance.put_record(
+      study: 'regional-partner-search-log',
+      event: result,
+      data_string: zip_code,
+      source_page_id: params[:source_page_id]
+    )
+  end
+
   private
 
   # Get the regional partner's cohort capacity for a specific role
@@ -27,9 +70,9 @@ class Api::V1::RegionalPartnersController < ApplicationController
       partner_id = regional_partner_value ? regional_partner_value : current_user.regional_partners.first
       regional_partner = RegionalPartner.find_by(id: partner_id)
       if role == 'csd_teachers'
-        return regional_partner.cohort_capacity_csd
+        return regional_partner&.cohort_capacity_csd
       elsif role == 'csp_teachers'
-        return regional_partner.cohort_capacity_csp
+        return regional_partner&.cohort_capacity_csp
       end
     end
     nil

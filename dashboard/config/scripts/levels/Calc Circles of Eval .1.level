@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "use_contract_editor": "true",
-    "instructions": "You’ll be writing a kind of code called Evaluation Blocks, because each block of code evaluates to a single value. Change the ??? in this code so that the block evaluates to 5.",
+    "short_instructions": "You’ll be writing a kind of code called Evaluation Blocks, because each block of code evaluates to a single value. Change the ??? in this code so that the block evaluates to 5.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,7 +24,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "You’ll be writing a kind of code called Evaluation Blocks, because each block of code evaluates to a single value. Change the ??? in this code so that the block evaluates to 5.",
+    "long_instructions": "You’ll be writing a kind of code called Evaluation Blocks, because each block of code evaluates to a single value. Change the ??? in this code so that the block evaluates to 5.",
     "never_autoplay_video": "false",
     "examples_required": "false"
   }

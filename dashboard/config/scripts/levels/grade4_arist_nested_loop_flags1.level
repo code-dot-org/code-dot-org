@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Loop the given code to create a windmill.",
+    "short_instructions": "Loop the given code to create a windmill.",
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "x": "200",
@@ -29,7 +29,7 @@
     "permitted_errors": "0",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Loop the given code to create a windmill.",
+    "long_instructions": "Loop the given code to create a windmill.",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "contained_level_names": null

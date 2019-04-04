@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 37,
   "properties": {
-    "markdown_instructions": "Cats are the best. Dogs are pretty cool as well. What do you like more, and why?\r\n\r\nSome guidelines\r\n\r\n* Cats are awesome\r\n* Cats don't give a what\r\n* Cats make for better GIFs\r\n* Pictures are great",
+    "long_instructions": "Cats are the best. Dogs are pretty cool as well. What do you like more, and why?\r\n\r\nSome guidelines\r\n\r\n* Cats are awesome\r\n* Cats don't give a what\r\n* Cats make for better GIFs\r\n* Pictures are great",
     "submittable": "true",
     "title": "Wednesday Report: Group Work and Peer Learning in Unit 1 ",
     "height": "300",

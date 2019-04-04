@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "tts_markdown_instructions_override": "# Unit Reflection: Thursday\r\n\r\nAdd Question",
+    "tts_long_instructions_override": "# Unit Reflection: Thursday\r\n\r\nAdd Question",
     "instructions_important": "false",
     "display_name": "Unit Reflection",
     "allow_user_uploads": "false",
@@ -13,7 +13,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "# Thursday Unit Reflection Part 1 \r\n\r\n## Game Lab\r\n\r\nHow would you explain programming in Game Lab to a new teacher who is interested in using it? \r\n\r\n* In what ways is Game Lab an educational rather than professional tool? \r\n* What kind of supports exist for students using Game Lab?\r\n"
+    "long_instructions": "# Thursday Unit Reflection Part 1 \r\n\r\n## Game Lab\r\n\r\nHow would you explain programming in Game Lab to a new teacher who is interested in using it? \r\n\r\n* In what ways is Game Lab an educational rather than professional tool? \r\n* What kind of supports exist for students using Game Lab?\r\n"
   },
   "published": true,
   "notes": "",

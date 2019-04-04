@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "This time, you need 100 points to win!  Don't worry though, you can choose how many points you earn each time you score a hit!\r\nTry adding the `ask` block and changing the number 1 out for the variable `value`.",
+    "short_instructions": "This time, you need 100 points to win!  Don't worry though, you can choose how many points you earn each time you score a hit!\r\nTry adding the `ask` block and changing the number 1 out for the variable `value`.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -33,7 +33,7 @@
     "callout_json": "[]",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "This time, you need 100 points to win!  Don't worry though, you can choose how many points you earn each time you score a hit!\r\nTry adding the `ask` block and changing the number 1 out for the variable `value`.\r\n\r\n**Note:** Use the right arrow to throw pie!",
+    "long_instructions": "This time, you need 100 points to win!  Don't worry though, you can choose how many points you earn each time you score a hit!\r\nTry adding the `ask` block and changing the number 1 out for the variable `value`.\r\n\r\n**Note:** Use the right arrow to throw pie!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

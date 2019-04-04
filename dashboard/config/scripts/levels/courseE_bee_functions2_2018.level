@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Use the `get 2 nectar` function to collect the nectar from each flower.",
+    "short_instructions": "Use the `get 2 nectar` function to collect the nectar from each flower.",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",
@@ -18,7 +18,7 @@
     "skip_instructions_popup": "false",
     "ideal": "7",
     "video_key": "C3_bee_functions",
-    "markdown_instructions": "Functions are blocks of code that perform a task.  \r\n\r\nUse the `get 2 nectar` function to collect the nectar from each flower.",
+    "long_instructions": "Functions are blocks of code that perform a task.  \r\n\r\nUse the `get 2 nectar` function to collect the nectar from each flower.",
     "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

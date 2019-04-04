@@ -11,12 +11,11 @@ whenTouching
 */
 
 import _ from 'lodash';
-import GameLabJrLib from '@cdo/apps/gamelab/GameLabJr.interpreted';
 import GameLabP5 from '@cdo/apps/gamelab/GameLabP5';
 import {expect} from '../../util/configuredChai';
 import {stub} from 'sinon';
-import "script-loader!@code-dot-org/p5.play/examples/lib/p5";
-import "script-loader!@code-dot-org/p5.play/lib/p5.play";
+import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
+import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 
 describe('Game Lab Jr Helper Library', () => {
   const noop = () => {};
@@ -28,7 +27,7 @@ describe('Game Lab Jr Helper Library', () => {
       onPreload: noop,
       onSetup: noop,
       onDraw: noop,
-      scale: 1,
+      scale: 1
     });
     gameLabP5.startExecution();
     const oldKeys = Object.keys(window);
@@ -48,16 +47,7 @@ describe('Game Lab Jr Helper Library', () => {
       window[propName] = value;
     }
 
-    // Awful hack :(
-    // Declarations within eval() aren't applied to the calling scope in
-    // strict mode. Replace global variable/function declarations with explicit
-    // window property declarations.
-    const lib = GameLabJrLib
-        .replace(/}function (\w+)/gm, '};window.$1 = function ')
-        .replace(/\bfunction (\w+)/gm, 'window.$1 = function ')
-        .replace(/\bvar /gm, 'window.');
-
-    eval(lib); // eslint-disable-line no-eval
+    require('!!script-loader!@cdo/interpreted/GameLabJr.interpreted.js');
 
     const newKeys = Object.keys(window);
     extraKeys = _.difference(newKeys, oldKeys);
@@ -68,29 +58,28 @@ describe('Game Lab Jr Helper Library', () => {
     extraKeys.forEach(key => delete window[key]);
   });
 
-  it ('defines some globals', () => {
+  it('defines some globals', () => {
     expect(makeNewSprite).to.exist;
     expect(addBehavior).to.exist;
     expect(findBehavior).to.exist;
     expect(behaviorsEqual).to.exist;
   });
 
-
   describe('findBehavior', () => {
-    it ('returns -1 if behavior is not found', () => {
+    it('returns -1 if behavior is not found', () => {
       const sprite = makeNewSprite(null, 200, 200);
       const behavior = {
         func: noop,
-        extraArgs: [],
+        extraArgs: []
       };
       expect(findBehavior(sprite, behavior)).to.equal(-1);
     });
 
-    it ('returns behavior index if found', () => {
+    it('returns behavior index if found', () => {
       const sprite = makeNewSprite(null, 200, 200);
       const behavior = {
         func: noop,
-        extraArgs: [],
+        extraArgs: []
       };
       addBehavior(sprite, behavior);
       expect(findBehavior(sprite, behavior)).to.equal(0);
@@ -98,54 +87,58 @@ describe('Game Lab Jr Helper Library', () => {
   });
 
   describe('behaviorsEqual', () => {
-    it.skip ('says behaviors with different funcs are unequal', () => {
+    it.skip('says behaviors with different funcs are unequal', () => {
       // Skipped because function names are different inside and outside
       // JSInterpreter
       const b1 = {
-        func: () => { return 1; },
-        extraArgs: [],
+        func: () => {
+          return 1;
+        },
+        extraArgs: []
       };
       const b2 = {
-        func: () => { return 2; },
-        extraArgs: [],
+        func: () => {
+          return 2;
+        },
+        extraArgs: []
       };
       expect(behaviorsEqual(b1, b2)).to.be.false;
     });
-    it ('says behaviors without extra args are equal', () => {
+    it('says behaviors without extra args are equal', () => {
       const func = () => {};
       const b1 = {
         func,
-        extraArgs: [],
+        extraArgs: []
       };
       const b2 = {
         func,
-        extraArgs: [],
+        extraArgs: []
       };
       expect(behaviorsEqual(b1, b2)).to.be.true;
     });
-    it.skip ('says behaviors with different extra args are unequal', () => {
+    it.skip('says behaviors with different extra args are unequal', () => {
       // Skipped because function names are different inside and outside
       // JSInterpreter
       const func = () => {};
       const b1 = {
         func,
-        extraArgs: [1],
+        extraArgs: [1]
       };
       const b2 = {
         func,
-        extraArgs: [2],
+        extraArgs: [2]
       };
       expect(behaviorsEqual(b1, b2)).to.be.false;
     });
-    it ('says behaviors with the same extra args are equal', () => {
+    it('says behaviors with the same extra args are equal', () => {
       const func = () => {};
       const b1 = {
         func,
-        extraArgs: [1],
+        extraArgs: [1]
       };
       const b2 = {
         func,
-        extraArgs: [1],
+        extraArgs: [1]
       };
       expect(behaviorsEqual(b1, b2)).to.be.true;
     });
@@ -157,14 +150,21 @@ describe('Game Lab Jr Helper Library', () => {
     const keyWentDownStub = stub(window, 'keyWentDown').returns(true);
     const mouseWentDownStub = stub(window, 'mouseWentDown').returns(true);
     const shouldUpdateStub = stub(window, 'shouldUpdate').returns(true);
-    const overlapStub = stub(sprite, 'overlap').returns(true);
+    const overlapStub = stub(sprite, 'overlap').callsFake((other, callback) => {
+      callback(sprite, other);
+      return true;
+    });
 
     const eventLog = [];
     addBehavior(sprite, () => eventLog.push('behavior 1 ran'));
     addBehavior(sprite, () => eventLog.push('behavior 2 ran'));
     whenUpArrow(() => eventLog.push('key event ran'));
     whenMouseClicked(() => eventLog.push('touch event ran'));
-    whenTouching(() => sprite, () => otherSprite, () => eventLog.push('collision event ran'));
+    whenTouching(
+      () => sprite,
+      () => otherSprite,
+      () => eventLog.push('collision event ran')
+    );
 
     draw();
 
@@ -173,7 +173,7 @@ describe('Game Lab Jr Helper Library', () => {
       'behavior 2 ran',
       'key event ran',
       'touch event ran',
-      'collision event ran',
+      'collision event ran'
     ]);
 
     shouldUpdateStub.restore();

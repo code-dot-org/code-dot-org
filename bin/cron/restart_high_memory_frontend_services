@@ -2,7 +2,8 @@
 
 require_relative '../../dashboard/config/environment'
 require_relative '../../lib/cdo/only_one'
-require 'aws-sdk'
+require 'aws-sdk-ec2'
+require 'aws-sdk-cloudwatch'
 require 'cdo/chat_client'
 require 'fileutils'
 require 'sshkit'
@@ -64,9 +65,6 @@ def main
     delay_per_group = 10.minutes
     group_size = 1
     restart_command = 'sudo service dashboard upgrade && sudo service pegasus upgrade'
-
-    # Copy SSH configuration needed to "fanout" to each front end server.
-    FileUtils.cp('/home/ubuntu/.ssh/config_fanout', '/home/ubuntu/.ssh/config')
 
     SSHKit::Backend::Netssh.configure {|ssh| ssh.ssh_options = {paranoid: false}}
     SSHKit::Coordinator.new(frontend_servers_to_restart).each(in: :sequence, wait: delay_per_group, limit: group_size) do

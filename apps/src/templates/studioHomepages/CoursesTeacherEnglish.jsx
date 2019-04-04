@@ -1,14 +1,15 @@
 import $ from 'jquery';
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import {AdministratorResourcesActionBlock} from './TwoColumnActionBlock';
-import { CourseBlocksHoc } from './CourseBlocks';
+import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 /**
@@ -19,34 +20,34 @@ class CoursesTeacherEnglish extends Component {
   static propTypes = {
     isSignedOut: PropTypes.bool.isRequired,
     showInitialTips: PropTypes.bool.isRequired,
-    userId: PropTypes.number,
+    userId: PropTypes.number
   };
 
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
-    $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
+    $('.courseexplorer')
+      .appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer))
+      .show();
   }
 
   render() {
-    const { isSignedOut, showInitialTips, userId } = this.props;
+    const {isSignedOut, showInitialTips, userId} = this.props;
     return (
       <div>
-        {(!isSignedOut &&
+        {!isSignedOut && (
           <UiTips
             userId={userId}
-            tipId={"teacher_courses"}
+            tipId={'teacher_courses'}
             showInitialTips={showInitialTips}
-            tips={
-              [
-                {
-                  type: "initial",
-                  position: {top: 0, left: 0, position: "relative"},
-                  text: i18n.coursesUiTipsTeacherCourses(),
-                  arrowDirection: "down",
-                  scrollTo: ".courseexplorer"
-                }
-              ]
-            }
+            tips={[
+              {
+                type: 'initial',
+                position: {top: 0, left: 0, position: 'relative'},
+                text: i18n.coursesUiTipsTeacherCourses(),
+                arrowDirection: 'down',
+                scrollTo: '.courseexplorer'
+              }
+            ]}
           />
         )}
 
@@ -57,10 +58,10 @@ class CoursesTeacherEnglish extends Component {
             link={'/home/#recent-courses'}
             linkText={i18n.viewMyRecentCourses()}
           >
-            <ProtectedStatefulDiv ref="courseExplorer"/>
+            <ProtectedStatefulDiv ref="courseExplorer" />
           </ContentContainer>
 
-          <CourseBlocksTeacherGradeBands/>
+          <CourseBlocksTeacherGradeBands />
 
           <ContentContainer
             heading={i18n.teacherCourseHoc()}
@@ -69,14 +70,12 @@ class CoursesTeacherEnglish extends Component {
             link={pegasus('/hourofcode/overview')}
             showLink={true}
           >
-            <CourseBlocksHoc rowCount={1}/>
+            <CourseBlocksHoc />
           </ContentContainer>
 
-          <CourseBlocksTools
-            isEnglish={true}
-          />
+          <CourseBlocksTools isEnglish={true} />
 
-          <AdministratorResourcesActionBlock/>
+          <AdministratorResourcesActionBlock />
         </div>
       </div>
     );

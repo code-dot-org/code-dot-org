@@ -1,5 +1,5 @@
-import { assert } from '../../util/configuredChai';
-import sectionData, { setSection } from '@cdo/apps/redux/sectionDataRedux';
+import {assert} from '../../util/configuredChai';
+import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
 const fakeSectionData = {
   id: 123,
@@ -15,8 +15,9 @@ const fakeSectionData = {
   ],
   script: {
     id: 300,
-    name: 'csp2',
-  }
+    name: 'csp2'
+  },
+  stage_extras: false
 };
 
 const sortedFakeSectionData = {
@@ -29,12 +30,13 @@ const sortedFakeSectionData = {
     {
       id: 1,
       name: 'studentb'
-    },
+    }
   ],
   script: {
     id: 300,
-    name: 'csp2',
-  }
+    name: 'csp2'
+  },
+  stageExtras: false
 };
 
 describe('sectionDataRedux', () => {

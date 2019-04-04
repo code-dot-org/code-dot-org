@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "markdown_instructions": "# Design a program\r\n\r\nDescribe, using a top-down approach, how you would create a program to draw a white snowflake on a blue background that uses random numbers, so the snowflake will be unique every time you run the code. \r\n\r\nYou don’t need to write the exact code or blocks that you would use, but you should describe what functions you would need to create, where you would or would not use loops, and where you would or would not use random numbers.",
+    "long_instructions": "# Design a program\r\n\r\nDescribe, using a top-down approach, how you would create a program to draw a white snowflake on a blue background that uses random numbers, so the snowflake will be unique every time you run the code. \r\n\r\nYou don’t need to write the exact code or blocks that you would use, but you should describe what functions you would need to create, where you would or would not use loops, and where you would or would not use random numbers.",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

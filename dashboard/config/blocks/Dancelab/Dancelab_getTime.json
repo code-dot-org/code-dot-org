@@ -1,0 +1,23 @@
+{
+  "category": "Music",
+  "config": {
+    "func": "getTime",
+    "blockText": "current time in {UNIT}",
+    "args": [
+      {
+        "name": "UNIT",
+        "options": [
+          [
+            "measures",
+            "\"measures\""
+          ],
+          [
+            "seconds",
+            "\"seconds\""
+          ]
+        ]
+      }
+    ],
+    "returnType": "Number"
+  }
+}

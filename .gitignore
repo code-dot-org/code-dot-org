@@ -6,9 +6,11 @@
 *_temp.json
 *~
 **/.bundle
+**/.vscode
 .DS_Store
 .dropbox
 .tmputils
+.rakeTasks
 .idea/
 /bin/i18n/*_credentials.yml
 npm-debug.log
@@ -23,6 +25,7 @@ npm-debug.log
 /apps/log
 /apps/newrelic_agent.log
 /apps/node_modules/
+/bin/i18n/node_modules/
 /apps/npm-debug.log
 /apps/src/generated/*
 !/apps/src/generated/README.md

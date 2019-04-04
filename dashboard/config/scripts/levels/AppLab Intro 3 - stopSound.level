@@ -34,7 +34,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "The `stopSound()` block stops all sounds. The `\"playButton\"` plays a very long sound. Add code to make the `\"stopButton\"` stop all sounds. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/a5081cce1969c5a784b4440369706801-image-1505941723405.gif)",
+    "long_instructions": "The `stopSound()` block stops all sounds. The `\"playButton\"` plays a very long sound. Add code to make the `\"stopButton\"` stop all sounds. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/a5081cce1969c5a784b4440369706801-image-1505941723405.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

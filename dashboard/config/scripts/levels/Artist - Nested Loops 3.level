@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Create a sun by nesting the starter code in another loop. This is called a nested loop.\r\n",
+    "short_instructions": "Create a sun by nesting the starter code in another loop. This is called a nested loop.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "x": "175",

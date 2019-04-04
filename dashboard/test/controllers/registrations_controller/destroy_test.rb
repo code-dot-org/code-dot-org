@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 
 module RegistrationsControllerTests
@@ -18,29 +17,12 @@ module RegistrationsControllerTests
       create(:follower, student_user: @word_section_student, section: word_section)
     end
 
-    #
-    # Tests for old destroy flow
-    #
-
-    test "destroys the user" do
-      user = create :user
-      sign_in user
-      assert_destroys(User) do
-        delete '/users'
-      end
-      assert_redirected_to '/'
-    end
-
-    #
-    # Tests for new destroy flow
-    #
-
     test "returns bad request if user cannot delete own account" do
       user = create :user
       user.stubs(:can_delete_own_account?).returns(false)
       sign_in user
       assert_does_not_destroy(User) do
-        delete '/users', params: {new_destroy_flow: true}
+        delete '/users'
       end
       assert_response :bad_request
     end
@@ -49,7 +31,7 @@ module RegistrationsControllerTests
       user = create :user, password: 'password'
       sign_in user
       assert_does_not_destroy(User) do
-        delete '/users', params: {new_destroy_flow: true}
+        delete '/users'
       end
       assert_response :bad_request
     end
@@ -58,7 +40,7 @@ module RegistrationsControllerTests
       user = create :user, password: 'password'
       sign_in user
       assert_does_not_destroy(User) do
-        delete '/users', params: {new_destroy_flow: true, password_confirmation: 'notmypassword'}
+        delete '/users', params: {password_confirmation: 'notmypassword'}
       end
       assert_response :bad_request
     end
@@ -67,17 +49,20 @@ module RegistrationsControllerTests
       user = create :user, password: 'password'
       sign_in user
       assert_destroys(User) do
-        delete '/users', params: {new_destroy_flow: true, password_confirmation: 'password'}
+        delete '/users', params: {password_confirmation: 'password'}
       end
       assert_response :success
+      user.reload
+      assert user.deleted?
     end
 
     test "destroys the user if password is not required" do
-      user = create :user, :with_migrated_google_authentication_option
+      user = create :user, :with_google_authentication_option
       user.update_attribute(:encrypted_password, nil)
+      user.reload
       sign_in user
       assert_destroys(User) do
-        delete '/users', params: {new_destroy_flow: true}
+        delete '/users'
       end
       assert_response :success
     end
@@ -86,7 +71,7 @@ module RegistrationsControllerTests
       sign_in @word_section_teacher
 
       assert_difference('User.count', -2) do
-        delete '/users', params: {new_destroy_flow: true, password_confirmation: @password}
+        delete '/users', params: {password_confirmation: @password}
       end
       assert_response :success
       assert_raises(ActiveRecord::RecordNotFound) {User.find(@word_section_student.id)}
@@ -99,7 +84,7 @@ module RegistrationsControllerTests
       sign_in @teacher
 
       assert_destroys(User) do
-        delete '/users', params: {new_destroy_flow: true, password_confirmation: 'mypassword'}
+        delete '/users', params: {password_confirmation: 'mypassword'}
       end
       assert_response :success
       assert_raises(ActiveRecord::RecordNotFound) {User.find(@teacher.id)}
@@ -111,7 +96,7 @@ module RegistrationsControllerTests
       sign_in @teacher
 
       assert_destroys(User) do
-        delete '/users', params: {new_destroy_flow: true, password_confirmation: 'mypassword'}
+        delete '/users', params: {password_confirmation: 'mypassword'}
       end
       assert_response :success
       assert_raises(ActiveRecord::RecordNotFound) {User.find(@teacher.id)}
@@ -124,7 +109,7 @@ module RegistrationsControllerTests
       sign_in @word_section_teacher
 
       assert_destroys(User) do
-        delete '/users', params: {new_destroy_flow: true, password_confirmation: @password}
+        delete '/users', params: {password_confirmation: @password}
       end
       assert_response :success
       assert_raises(ActiveRecord::RecordNotFound) {User.find(@word_section_teacher.id)}
@@ -136,13 +121,13 @@ module RegistrationsControllerTests
       sign_in student
 
       assert_destroys(User) do
-        delete '/users', params: {new_destroy_flow: true, password_confirmation: 'mypassword'}
+        delete '/users', params: {password_confirmation: 'mypassword'}
       end
       assert_response :success
       assert_raises(ActiveRecord::RecordNotFound) {User.find(student.id)}
     end
 
-    test "sends email when teacher destroyed in new flow" do
+    test "sends email when teacher destroyed" do
       default_params = {
         name: 'A name',
         password: 'apassword',
@@ -159,7 +144,7 @@ module RegistrationsControllerTests
       user = User.last
       sign_in user
       assert_destroys(User) do
-        delete '/users', params: {new_destroy_flow: true, password_confirmation: 'apassword'}
+        delete '/users', params: {password_confirmation: 'apassword'}
       end
 
       assert_equal 2, ActionMailer::Base.deliveries.length
@@ -168,6 +153,18 @@ module RegistrationsControllerTests
       assert_equal [user.email], mail.to
       assert_equal ['noreply@code.org'], mail.from
       assert_match 'Your account has been deleted', mail.body.encoded
+    end
+
+    test "does not send email when teacher destroyed if teacher has no email" do
+      user = create :teacher, :without_email, password: 'apassword'
+      refute user.valid?
+      sign_in user
+
+      TeacherMailer.expects(:delete_teacher_email).never
+      assert_destroys(User) do
+        delete '/users', params: {password_confirmation: 'apassword'}
+      end
+      assert_equal 0, ActionMailer::Base.deliveries.length
     end
   end
 end

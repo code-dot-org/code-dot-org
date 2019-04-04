@@ -45,7 +45,7 @@
     "coordinate_grid_background": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "Text",
+    "short_instructions": "Text",
     "contained_level_names": null
   },
   "published": true,

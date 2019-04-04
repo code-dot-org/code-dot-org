@@ -43,12 +43,12 @@ def verify_bubble_type(selector, type)
   end
   steps %{
     And I wait until element "#{selector}" is in the DOM
-    And element "#{selector}" has css property "border-radius" equal to "#{border_radius}"
+    And element "#{selector}" has one of css properties "border-radius,-webkit-border-radius" equal to "#{border_radius}"
   }
 end
 
 def header_bubble_selector(level_num)
-  ".header_level_container .react_stage a:nth(#{level_num - 1}) :first-child :first-child"
+  ".header_level_container .react_stage a:nth(#{level_num - 1}) .uitest-bubble"
 end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
@@ -71,12 +71,12 @@ Then /^I open the progress drop down of the current page$/ do
 end
 
 Then /^I verify progress in the drop down of the current page is "([^"]*)" for stage (\d+) level (\d+)/ do |test_result, stage, level|
-  selector = "tbody tr:nth(#{stage.to_i - 1}) a:contains(#{level.to_i}) :first-child :first-child"
+  selector = "tbody tr:nth(#{stage.to_i - 1}) a:contains(#{level.to_i}) .uitest-bubble"
   verify_progress(selector, test_result)
 end
 
 Then /^I verify progress for stage (\d+) level (\d+) is "([^"]*)"/ do |stage, level, test_result|
-  selector = "tbody tr:nth(#{stage.to_i - 1}) a:contains(#{level.to_i}) :first-child :first-child"
+  selector = "tbody tr:nth(#{stage.to_i - 1}) a:contains(#{level.to_i}) .uitest-bubble"
   verify_progress(selector, test_result)
 end
 

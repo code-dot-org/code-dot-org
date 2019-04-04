@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Add blocks to this code to get all of the treasure.",
+    "short_instructions": "Add blocks to this code to get all of the treasure.",
     "ideal": "7",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out what's wrong? Try running the code a couple of times to see what happens.\",\"hint_id\":\"courseA_collector_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/788f7c187d8a4cb486a3616f73ced6c9/courseA_collector_loops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The shortest solution has 2 <xml><block type=\\\"controls_repeat_simplified_dropdown\\\"><title name=\\\"TIMES\\\" config=\\\"3-10\\\">???</title></block></xml> loops, one after the other.\",\"hint_id\":\"courseA_collector_loops6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/51d3c02f0395793be192d0f0fad613ea/courseA_collector_loops6.mp3\"}]",
     "instructions_important": "false",

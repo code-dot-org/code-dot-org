@@ -9,12 +9,12 @@ var utils = require('./utils');
  * @param {string[]} executionLog an array of function or statement names
  * @returns {!Object}
  */
-module.exports.getResultsFromLog = function (logConditions, executionLog) {
+module.exports.getResultsFromLog = function(logConditions, executionLog) {
   executionLog = executionLog || [];
   var results = {
-    testResult: TestResults.ALL_PASS,
+    testResult: TestResults.ALL_PASS
   };
-  logConditions.forEach(function (condition, index) {
+  logConditions.forEach(function(condition, index) {
     var testResult = TestResults.LOG_CONDITION_FAIL;
     var exact;
 
@@ -36,18 +36,21 @@ module.exports.getResultsFromLog = function (logConditions, executionLog) {
     switch (condition.matchType) {
       case 'exact':
         exact = true;
-        // Fall through
+      // Fall through
       case 'inexact':
-        var entryIndex = 0, matchedSequences = 0;
+        var entryIndex = 0,
+          matchedSequences = 0;
         for (var i = 0; i < executionLog.length; i++) {
           if (matchLogEntry(executionLog[i], condition.entries[entryIndex])) {
             entryIndex++;
             if (entryIndex >= condition.entries.length) {
               entryIndex = 0;
               matchedSequences++;
-              if ((matchedSequences >= condition.minTimes &&
+              if (
+                (matchedSequences >= condition.minTimes &&
                   condition.maxTimes === Infinity) ||
-                  matchedSequences > condition.maxTimes) {
+                matchedSequences > condition.maxTimes
+              ) {
                 // Stop checking if we know we've succeeded for minTimes without
                 // a maxTimes or we know we've failed for maxTimes
                 break;
@@ -58,8 +61,10 @@ module.exports.getResultsFromLog = function (logConditions, executionLog) {
             entryIndex = 0;
           }
         }
-        if (matchedSequences >= condition.minTimes &&
-            matchedSequences <= condition.maxTimes) {
+        if (
+          matchedSequences >= condition.minTimes &&
+          matchedSequences <= condition.maxTimes
+        ) {
           testResult = TestResults.ALL_PASS;
         }
         break;

@@ -32,9 +32,7 @@ var logger = require('./NetSimLogger').getSingleton();
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
-    netsim) {
-
+var NetSimSendPanel = (module.exports = function(rootDiv, levelConfig, netsim) {
   /**
    * @type {NetSimLevelConfiguration}
    * @private
@@ -121,8 +119,10 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
    */
   this.isPlayingSendAnimation_ = false;
 
-  var panelTitle = (levelConfig.messageGranularity === MessageGranularity.PACKETS) ?
-      i18n.sendAMessage() : i18n.sendBits();
+  var panelTitle =
+    levelConfig.messageGranularity === MessageGranularity.PACKETS
+      ? i18n.sendAMessage()
+      : i18n.sendBits();
 
   // TODO: Bad private member access
   this.netsim_.runLoop_.tick.register(this.tick.bind(this));
@@ -131,7 +131,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
     className: 'netsim-send-panel',
     panelTitle: panelTitle
   });
-};
+});
 NetSimSendPanel.inherits(NetSimPanel);
 
 /**
@@ -139,7 +139,7 @@ NetSimSendPanel.inherits(NetSimPanel);
  * sending packets to remote.
  * @private
  */
-NetSimSendPanel.prototype.beginSendingPackets_ = function () {
+NetSimSendPanel.prototype.beginSendingPackets_ = function() {
   if (0 === this.packets_.length) {
     return;
   }
@@ -158,7 +158,7 @@ NetSimSendPanel.prototype.beginSendingPackets_ = function () {
  * @param {NetSimPacketEditor} packet
  * @private
  */
-NetSimSendPanel.prototype.doneSendingPacket_ = function (packet) {
+NetSimSendPanel.prototype.doneSendingPacket_ = function(packet) {
   // If it's the last packet, we're done sending altogether.
   if (1 === this.packets_.length) {
     this.resetPackets_();
@@ -179,50 +179,56 @@ NetSimSendPanel.prototype.doneSendingPacket_ = function (packet) {
  * to storage as it completes.
  * @param {RunLoop.Clock} clock
  */
-NetSimSendPanel.prototype.tick = function (clock) {
+NetSimSendPanel.prototype.tick = function(clock) {
   if (this.isPlayingSendAnimation_ && this.packets_.length > 0) {
     this.packets_[0].tick(clock);
   }
 };
 
 /** Replace contents of our root element with our own markup. */
-NetSimSendPanel.prototype.render = function () {
+NetSimSendPanel.prototype.render = function() {
   // Render boilerplate panel stuff
   NetSimSendPanel.superPrototype.render.call(this);
 
   // Put our own content into the panel body
-  var newMarkup = $(markup({
-    level: this.levelConfig_
-  }));
+  var newMarkup = $(
+    markup({
+      level: this.levelConfig_
+    })
+  );
   this.getBody().html(newMarkup);
 
   // Add packet size slider control
   if (this.levelConfig_.showPacketSizeControl) {
     var level = NetSimGlobals.getLevelConfig();
-    var encoder = new Packet.Encoder(level.addressFormat,
-        level.packetCountBitWidth, this.packetSpec_);
+    var encoder = new Packet.Encoder(
+      level.addressFormat,
+      level.packetCountBitWidth,
+      this.packetSpec_
+    );
     this.packetSizeControl_ = new NetSimPacketSizeControl(
-        this.rootDiv_.find('.packet-size'),
-        this.packetSizeChangeCallback_.bind(this),
-        {
-          minimumPacketSize: encoder.getHeaderLength(),
-          sliderStepValue: 1
-        });
+      this.rootDiv_.find('.packet-size'),
+      this.packetSizeChangeCallback_.bind(this),
+      {
+        minimumPacketSize: encoder.getHeaderLength(),
+        sliderStepValue: 1
+      }
+    );
     this.packetSizeControl_.setValue(this.maxPacketSize_);
   }
 
   // Bind useful elements and add handlers
   this.packetsDiv_ = this.getBody().find('.send-panel-packets');
   this.getBody()
-      .find('#add-packet-button')
-      .click(this.onAddPacketButtonPress_.bind(this));
+    .find('#add-packet-button')
+    .click(this.onAddPacketButtonPress_.bind(this));
   // TODO: NetSim buttons in this panel need to do nothing if disabled!
   this.getBody()
-      .find('#send-button')
-      .click(this.onSendEventTriggered_.bind(this));
+    .find('#send-button')
+    .click(this.onSendEventTriggered_.bind(this));
   this.getBody()
-      .find('#set-wire-button')
-      .click(this.onSendEventTriggered_.bind(this));
+    .find('#set-wire-button')
+    .click(this.onSendEventTriggered_.bind(this));
 
   // Note: At some point, we might want to replace this with something
   // that nicely re-renders the contents of this.packets_... for now,
@@ -234,11 +240,11 @@ NetSimSendPanel.prototype.render = function () {
  * Add a new, blank packet to the set of packets being edited.
  * @private
  */
-NetSimSendPanel.prototype.addPacket_ = function () {
+NetSimSendPanel.prototype.addPacket_ = function() {
   var newPacketCount = this.packets_.length + 1;
 
   // Update the total packet count on all existing packets
-  this.packets_.forEach(function (packetEditor) {
+  this.packets_.forEach(function(packetEditor) {
     packetEditor.setPacketCount(newPacketCount);
   });
 
@@ -273,10 +279,13 @@ NetSimSendPanel.prototype.addPacket_ = function () {
   // Attach the new packet to this SendPanel
   var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   newPacket.getRoot().appendTo(this.packetsDiv_);
-  newPacket.getRoot().hide().slideDown('fast', function () {
-    newPacket.getFirstVisibleMessageBox().focus();
-    updateLayout();
-  });
+  newPacket
+    .getRoot()
+    .hide()
+    .slideDown('fast', function() {
+      newPacket.getFirstVisibleMessageBox().focus();
+      updateLayout();
+    });
   this.packets_.push(newPacket);
 };
 
@@ -286,17 +295,16 @@ NetSimSendPanel.prototype.addPacket_ = function () {
  * @param {NetSimPacketEditor} packet
  * @private
  */
-NetSimSendPanel.prototype.removePacket_ = function (packet) {
+NetSimSendPanel.prototype.removePacket_ = function(packet) {
   // Remove from DOM
   var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
-  packet.getRoot()
-      .slideUp('fast', function () {
-        $(this).remove();
-        updateLayout();
-      });
+  packet.getRoot().slideUp('fast', function() {
+    $(this).remove();
+    updateLayout();
+  });
 
   // Remove from internal collection
-  this.packets_ = this.packets_.filter(function (packetEditor) {
+  this.packets_ = this.packets_.filter(function(packetEditor) {
     return packetEditor !== packet;
   });
 
@@ -317,7 +325,7 @@ NetSimSendPanel.prototype.removePacket_ = function (packet) {
  * and reset the first packet to empty.
  * @private
  */
-NetSimSendPanel.prototype.resetPackets_ = function () {
+NetSimSendPanel.prototype.resetPackets_ = function() {
   if (this.packets_.length > 0) {
     this.packets_.slice(1).forEach(packet => packet.getRoot().remove());
     this.packets_.length = Math.min(1, this.packets_.length);
@@ -333,7 +341,7 @@ NetSimSendPanel.prototype.resetPackets_ = function () {
  * in response
  * @private
  */
-NetSimSendPanel.prototype.onContentChange_ = function () {
+NetSimSendPanel.prototype.onContentChange_ = function() {
   var nextBit = this.getNextBit_();
 
   if (nextBit === undefined) {
@@ -343,12 +351,14 @@ NetSimSendPanel.prototype.onContentChange_ = function () {
   } else {
     // Special case: If we have the "A/B" encoding enabled but _not_ "Binary",
     // format this button label using the "A/B" convention
-    if (this.isEncodingEnabled_(EncodingType.A_AND_B) &&
-        !this.isEncodingEnabled_(EncodingType.BINARY)) {
+    if (
+      this.isEncodingEnabled_(EncodingType.A_AND_B) &&
+      !this.isEncodingEnabled_(EncodingType.BINARY)
+    ) {
       nextBit = binaryToAB(nextBit);
     }
 
-    this.getSetWireButton().text(i18n.setWireToValue({ value: nextBit }));
+    this.getSetWireButton().text(i18n.setWireToValue({value: nextBit}));
     this.conditionallyToggleSetWireButton();
   }
 };
@@ -359,8 +369,8 @@ NetSimSendPanel.prototype.onContentChange_ = function () {
  * @returns {boolean}
  * @private
  */
-NetSimSendPanel.prototype.isEncodingEnabled_ = function (queryEncoding) {
-  return this.enabledEncodings_.some(function (enabledEncoding) {
+NetSimSendPanel.prototype.isEncodingEnabled_ = function(queryEncoding) {
+  return this.enabledEncodings_.some(function(enabledEncoding) {
     return enabledEncoding === queryEncoding;
   });
 };
@@ -369,21 +379,23 @@ NetSimSendPanel.prototype.isEncodingEnabled_ = function (queryEncoding) {
  * Update from address for the panel, update all the packets to reflect this.
  * @param {number} [fromAddress] default zero
  */
-NetSimSendPanel.prototype.setFromAddress = function (fromAddress) {
+NetSimSendPanel.prototype.setFromAddress = function(fromAddress) {
   // fromAddress can be undefined for other parts of the sim, but within
   // the send panel we just set it to zero.
   this.fromAddress_ = utils.valueOr(fromAddress, 0);
 
-  this.packets_.forEach(function (packetEditor) {
-    packetEditor.setFromAddress(this.fromAddress_);
-  }.bind(this));
+  this.packets_.forEach(
+    function(packetEditor) {
+      packetEditor.setFromAddress(this.fromAddress_);
+    }.bind(this)
+  );
 };
 
 /**
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimSendPanel.prototype.onAddPacketButtonPress_ = function (jQueryEvent) {
+NetSimSendPanel.prototype.onAddPacketButtonPress_ = function(jQueryEvent) {
   var thisButton = $(jQueryEvent.target);
   if (thisButton.is('[disabled]')) {
     return;
@@ -393,7 +405,7 @@ NetSimSendPanel.prototype.onAddPacketButtonPress_ = function (jQueryEvent) {
 
   // Scroll to end of packet area
   var scrollingArea = this.getBody().find('.send-panel-packets');
-  scrollingArea.animate({ scrollTop: scrollingArea[0].scrollHeight }, 'fast');
+  scrollingArea.animate({scrollTop: scrollingArea[0].scrollHeight}, 'fast');
 };
 
 /**
@@ -401,7 +413,7 @@ NetSimSendPanel.prototype.onAddPacketButtonPress_ = function (jQueryEvent) {
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimSendPanel.prototype.onSendEventTriggered_ = function (jQueryEvent) {
+NetSimSendPanel.prototype.onSendEventTriggered_ = function(jQueryEvent) {
   var triggeringTarget = $(jQueryEvent.target);
   if (triggeringTarget.is('[disabled]')) {
     return;
@@ -419,10 +431,12 @@ NetSimSendPanel.prototype.onSendEventTriggered_ = function (jQueryEvent) {
  * Send a single bit, manually 'setting the wire state'.
  * @private
  */
-NetSimSendPanel.prototype.sendOneBit_ = function () {
+NetSimSendPanel.prototype.sendOneBit_ = function() {
   let myNode = this.netsim_.myNode;
   if (!myNode) {
-    throw new Error("Tried to set wire state when no connection is established.");
+    throw new Error(
+      'Tried to set wire state when no connection is established.'
+    );
   }
 
   // Find the first bit of the first packet
@@ -453,14 +467,18 @@ NetSimSendPanel.prototype.sendOneBit_ = function () {
  * bits to be sent, or undefined otherwise
  * @private
  */
-NetSimSendPanel.prototype.getNextBit_ = function () {
+NetSimSendPanel.prototype.getNextBit_ = function() {
   return this.packets_.length > 0 ? this.packets_[0].getFirstBit() : undefined;
 };
 
 /** Disable all controls in this panel, usually during network activity. */
-NetSimSendPanel.prototype.disableEverything = function () {
-  this.getBody().find('input, textarea').prop('disabled', true);
-  this.getBody().find('.netsim-button').attr('disabled', 'disabled');
+NetSimSendPanel.prototype.disableEverything = function() {
+  this.getBody()
+    .find('input, textarea')
+    .prop('disabled', true);
+  this.getBody()
+    .find('.netsim-button')
+    .attr('disabled', 'disabled');
   if (this.packetSizeControl_) {
     this.packetSizeControl_.disable();
   }
@@ -470,7 +488,7 @@ NetSimSendPanel.prototype.disableEverything = function () {
  * Finds the button used to set the wire state
  * @returns {jQuery}
  */
-NetSimSendPanel.prototype.getSetWireButton = function () {
+NetSimSendPanel.prototype.getSetWireButton = function() {
   return this.getBody().find('#set-wire-button');
 };
 
@@ -478,7 +496,7 @@ NetSimSendPanel.prototype.getSetWireButton = function () {
  * disables it otherwise.
  * @returns {jQuery}
  */
-NetSimSendPanel.prototype.conditionallyToggleSetWireButton = function () {
+NetSimSendPanel.prototype.conditionallyToggleSetWireButton = function() {
   var setWireButton = this.getSetWireButton();
   if (this.getNextBit_() === undefined) {
     setWireButton.attr('disabled', 'disabled');
@@ -489,9 +507,13 @@ NetSimSendPanel.prototype.conditionallyToggleSetWireButton = function () {
 };
 
 /** Enable all controls in this panel, usually after network activity. */
-NetSimSendPanel.prototype.enableEverything = function () {
-  this.getBody().find('input, textarea').prop('disabled', false);
-  this.getBody().find('.netsim-button').removeAttr('disabled');
+NetSimSendPanel.prototype.enableEverything = function() {
+  this.getBody()
+    .find('input, textarea')
+    .prop('disabled', false);
+  this.getBody()
+    .find('.netsim-button')
+    .removeAttr('disabled');
   if (this.packetSizeControl_) {
     this.packetSizeControl_.enable();
   }
@@ -501,7 +523,7 @@ NetSimSendPanel.prototype.enableEverything = function () {
  * Remove the first bit of the first packet, usually because we just sent
  * a single bit in variant 1.
  */
-NetSimSendPanel.prototype.consumeFirstBit = function () {
+NetSimSendPanel.prototype.consumeFirstBit = function() {
   if (this.packets_.length > 0) {
     this.packets_[0].consumeFirstBit();
     if (this.packets_[0].getPacketBinary() === '' && this.packets_.length > 1) {
@@ -515,9 +537,9 @@ NetSimSendPanel.prototype.consumeFirstBit = function () {
  * mode.
  * @param {EncodingType[]} newEncodings
  */
-NetSimSendPanel.prototype.setEncodings = function (newEncodings) {
+NetSimSendPanel.prototype.setEncodings = function(newEncodings) {
   this.enabledEncodings_ = newEncodings;
-  this.packets_.forEach(function (packetEditor) {
+  this.packets_.forEach(function(packetEditor) {
     packetEditor.setEncodings(newEncodings);
   });
   this.onContentChange_();
@@ -528,9 +550,9 @@ NetSimSendPanel.prototype.setEncodings = function (newEncodings) {
  * an update of all input fields.
  * @param {number} newChunkSize
  */
-NetSimSendPanel.prototype.setChunkSize = function (newChunkSize) {
+NetSimSendPanel.prototype.setChunkSize = function(newChunkSize) {
   this.chunkSize_ = newChunkSize;
-  this.packets_.forEach(function (packetEditor) {
+  this.packets_.forEach(function(packetEditor) {
     packetEditor.setChunkSize(newChunkSize);
   });
 };
@@ -539,9 +561,9 @@ NetSimSendPanel.prototype.setChunkSize = function (newChunkSize) {
  * Change the local device bitrate which affects send animation speed.
  * @param {number} newBitRate in bits per second
  */
-NetSimSendPanel.prototype.setBitRate = function (newBitRate) {
+NetSimSendPanel.prototype.setBitRate = function(newBitRate) {
   this.bitRate_ = newBitRate;
-  this.packets_.forEach(function (packetEditor) {
+  this.packets_.forEach(function(packetEditor) {
     packetEditor.setBitRate(newBitRate);
   });
 };
@@ -552,9 +574,9 @@ NetSimSendPanel.prototype.setBitRate = function (newBitRate) {
  * @param {number} newPacketSize
  * @private
  */
-NetSimSendPanel.prototype.packetSizeChangeCallback_ = function (newPacketSize) {
+NetSimSendPanel.prototype.packetSizeChangeCallback_ = function(newPacketSize) {
   this.maxPacketSize_ = newPacketSize;
-  this.packets_.forEach(function (packetEditor) {
+  this.packets_.forEach(function(packetEditor) {
     packetEditor.setMaxPacketSize(newPacketSize);
   });
 };
@@ -565,7 +587,7 @@ NetSimSendPanel.prototype.packetSizeChangeCallback_ = function (newPacketSize) {
  * @private
  * @override
  */
-NetSimSendPanel.prototype.onMinimizerClick_ = function () {
+NetSimSendPanel.prototype.onMinimizerClick_ = function() {
   NetSimSendPanel.superPrototype.onMinimizerClick_.call(this);
   this.netsim_.updateLayout();
 };

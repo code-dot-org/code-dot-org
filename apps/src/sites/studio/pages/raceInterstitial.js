@@ -7,7 +7,7 @@ $(document).ready(() => {
   editUser.on('change', () => {
     var shouldEnableSubmit = false;
     var optOutSelected = false;
-    raceCheckboxes.each(function (i) {
+    raceCheckboxes.each(function(i) {
       if (this.checked) {
         shouldEnableSubmit = true;
         if (this.id === 'user_races_opt_out') {
@@ -28,9 +28,13 @@ $(document).ready(() => {
     }
 
     if (shouldEnableSubmit) {
-      $('#race-submit').prop('disabled', false).removeClass('disabled-button');
+      $('#race-submit')
+        .prop('disabled', false)
+        .removeClass('disabled-button');
     } else {
-      $('#race-submit').prop('disabled', true).addClass('disabled-button');
+      $('#race-submit')
+        .prop('disabled', true)
+        .addClass('disabled-button');
     }
   });
 
@@ -44,7 +48,7 @@ $(document).ready(() => {
     });
   }
 
-  editUser.submit((event) => {
+  editUser.submit(event => {
     event.preventDefault();
     submitCheckboxData(editUser);
   });

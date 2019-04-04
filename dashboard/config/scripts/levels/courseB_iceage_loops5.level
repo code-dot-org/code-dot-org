@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,4,4,4,4,0,0,0],[0,4,2,1,1,1,1,0],[0,0,1,1,4,4,1,0],[0,0,0,1,1,0,1,0],[0,0,0,0,0,0,1,0],[0,0,3,1,1,1,1,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Can you add one more loop to get to the acorn?",
+    "short_instructions": "Can you add one more loop to get to the acorn?",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",
@@ -33,7 +33,7 @@
     "parent_level_id": 12165,
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
-    "markdown_instructions": "Can you add one more loop to get to the acorn?",
+    "long_instructions": "Can you add one more loop to get to the acorn?",
     "ideal": "7",
     "contained_level_names": null
   },

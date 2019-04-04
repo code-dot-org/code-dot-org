@@ -1,5 +1,5 @@
 function isMobile() {
-  return ('ontouchstart' in document.documentElement);
+  return 'ontouchstart' in document.documentElement;
 }
 
 function isIE9() {
@@ -15,7 +15,15 @@ function isIE9() {
 
 /**
  * Initialize an individual sound
- * @param config available sound files for this audio
+ * @param {Object} config available sound files for this audio
+ * @property {boolean} allowHTML5Mobile
+ * @property {boolean} playAfterLoad
+ * @property {boolean} forceHTML5
+ * @property {Object} playAfterLoadOptions
+ * @property {string} mp3
+ * @property {string} ogg
+ * @property {string} wav
+ * @property {function} onPreloadError
  * @param audioContext context this sound can be played on, or null if none
  * @constructor
  */
@@ -32,6 +40,14 @@ export default function Sound(config, audioContext) {
    *          do it ourselves.
    */
   this.isPlaying_ = false;
+  /**
+   * @private {boolean} Whether the sound is loaded.
+   */
+  this.isLoaded_ = false;
+  /**
+   * @private {boolean} Whether the sound failed to load.
+   */
+  this.didLoadFail_ = false;
 }
 
 /**
@@ -39,18 +55,23 @@ export default function Sound(config, audioContext) {
  * @param {number} [options.volume] default 1.0, which is "no change"
  * @param {boolean} [options.loop] default false
  * @param {function} [options.onEnded]
+ * @param {function} [options.callback]
  */
-Sound.prototype.play = function (options) {
+Sound.prototype.play = function(options) {
   options = options || {};
   if (!this.audioElement && !this.reusableBuffer) {
+    this.handlePlayFailed(options);
     return;
   }
 
   if (this.reusableBuffer) {
-    this.playableBuffer = this.newPlayableBufferSource(this.reusableBuffer, options);
+    this.playableBuffer = this.newPlayableBufferSource(
+      this.reusableBuffer,
+      options
+    );
 
     // Hook up on-ended callback, although browser support may be limited.
-    this.playableBuffer.onended = function () {
+    this.playableBuffer.onended = function() {
       this.isPlaying_ = false;
       if (options.onEnded) {
         options.onEnded();
@@ -63,20 +84,23 @@ Sound.prototype.play = function (options) {
     } else {
       this.playableBuffer.noteOn(0);
     }
-    this.isPlaying_ = true;
+    this.handlePlayStarted(options);
     return;
   }
 
   if (!this.config.allowHTML5Mobile && isMobile()) {
     // Don't play HTML 5 audio on mobile
+    this.handlePlayFailed(options);
     return;
   }
 
-  var volume = (typeof options.volume === "undefined") ? 1 :
-      Math.max(0, Math.min(1, options.volume));
+  var volume =
+    typeof options.volume === 'undefined'
+      ? 1
+      : Math.max(0, Math.min(1, options.volume));
   this.audioElement.volume = volume;
   this.audioElement.loop = !!options.loop;
-  var unregisterAndCallback = function () {
+  var unregisterAndCallback = function() {
     this.audioElement.removeEventListener('abort', unregisterAndCallback);
     this.audioElement.removeEventListener('ended', unregisterAndCallback);
     this.audioElement.removeEventListener('pause', unregisterAndCallback);
@@ -89,20 +113,60 @@ Sound.prototype.play = function (options) {
   this.audioElement.addEventListener('ended', unregisterAndCallback);
   this.audioElement.addEventListener('pause', unregisterAndCallback);
   this.audioElement.play();
-  this.isPlaying_ = true;
+  this.handlePlayStarted(options);
 };
 
-Sound.prototype.stop = function () {
+Sound.prototype.playAfterLoad = function(options) {
+  if (this.isLoaded() || this.config.playAfterLoad) {
+    // If this sound is already loaded, or playAfterLoad has already been
+    // set on this sound, then we must fail this play request
+    this.handlePlayFailed(options);
+    return;
+  }
+  // Store the options and play the sound once the load has completed
+  this.config.playAfterLoad = true;
+  this.config.playAfterLoadOptions = options;
+};
+
+Sound.prototype.handlePlayFailed = function(options) {
+  if (options.callback) {
+    options.callback(false);
+  }
+};
+
+Sound.prototype.handleLoadFailed = function(status) {
+  this.didLoadFail_ = true;
+  const {onPreloadError, playAfterLoadOptions} = this.config;
+
+  // If the song was loaded via preload, notify the caller.
+  onPreloadError && onPreloadError(status);
+
+  // If the song was to be played upon load, notify the caller.
+  const callback = playAfterLoadOptions && playAfterLoadOptions.callback;
+  callback && callback(false);
+};
+
+Sound.prototype.handlePlayStarted = function(options) {
+  this.isPlaying_ = true;
+  if (options.callback) {
+    options.callback(true);
+  }
+};
+
+Sound.prototype.stop = function() {
   try {
     if (this.playableBuffer) {
-      if (this.playableBuffer.stop) {  // Newest web audio pseudo-standard.
+      if (this.playableBuffer.stop) {
+        // Newest web audio pseudo-standard.
         this.playableBuffer.stop(0);
-      } else if (this.playableBuffer.noteOff) {  // Older web audio.
+      } else if (this.playableBuffer.noteOff) {
+        // Older web audio.
         this.playableBuffer.noteOff(0);
       }
     } else if (this.audioElement) {
       // html 5 audio.
       this.audioElement.pause();
+      this.audioElement.currentTime = 0;
     }
   } catch (e) {
     if (e.name === 'InvalidStateError') {
@@ -117,11 +181,25 @@ Sound.prototype.stop = function () {
 /**
  * @returns {boolean} whether the sound is currently playing.
  */
-Sound.prototype.isPlaying = function () {
+Sound.prototype.isPlaying = function() {
   return this.isPlaying_;
 };
 
-Sound.prototype.newPlayableBufferSource = function (buffer, options) {
+/**
+ * @returns {boolean} whether the sound is currently loaded.
+ */
+Sound.prototype.isLoaded = function() {
+  return this.isLoaded_;
+};
+
+/**
+ * @returns {boolean} whether the sound failed to load.
+ */
+Sound.prototype.didLoadFail = function() {
+  return this.didLoadFail_;
+};
+
+Sound.prototype.newPlayableBufferSource = function(buffer, options) {
   var newSound = this.audioContext.createBufferSource();
 
   // Older versions of chrome call this createGainNode instead of createGain
@@ -137,7 +215,8 @@ Sound.prototype.newPlayableBufferSource = function (buffer, options) {
   newSound.loop = !!options.loop;
   newSound.connect(this.gainNode);
   this.gainNode.connect(this.audioContext.destination);
-  var startingVolume = typeof options.volume === "undefined" ? 1 : options.volume;
+  var startingVolume =
+    typeof options.volume === 'undefined' ? 1 : options.volume;
   this.gainNode.gain.value = startingVolume;
   return newSound;
 };
@@ -148,7 +227,7 @@ Sound.prototype.newPlayableBufferSource = function (buffer, options) {
  * @param {number} gain - desired final gain value
  * @param {number} durationSeconds
  */
-Sound.prototype.fadeToGain = function (gain, durationSeconds) {
+Sound.prototype.fadeToGain = function(gain, durationSeconds) {
   if (this.gainNode) {
     this.fadeToGainWebAudio_(gain, durationSeconds);
   } else if (this.audioElement) {
@@ -164,7 +243,7 @@ Sound.prototype.fadeToGain = function (gain, durationSeconds) {
  * @param {number} durationSeconds
  * @private
  */
-Sound.prototype.fadeToGainWebAudio_ = function (gain, durationSeconds) {
+Sound.prototype.fadeToGainWebAudio_ = function(gain, durationSeconds) {
   if (!this.gainNode) {
     return;
   }
@@ -176,7 +255,10 @@ Sound.prototype.fadeToGainWebAudio_ = function (gain, durationSeconds) {
 
   var currTime = this.audioContext.currentTime;
   this.gainNode.gain.setValueAtTime(this.gainNode.gain.value, currTime);
-  this.gainNode.gain.exponentialRampToValueAtTime(gain, currTime + durationSeconds);
+  this.gainNode.gain.exponentialRampToValueAtTime(
+    gain,
+    currTime + durationSeconds
+  );
 };
 
 /**
@@ -187,7 +269,7 @@ Sound.prototype.fadeToGainWebAudio_ = function (gain, durationSeconds) {
  * @param {number} durationSeconds
  * @private
  */
-Sound.prototype.fadeToGainHtml5Audio_ = function (gain, durationSeconds) {
+Sound.prototype.fadeToGainHtml5Audio_ = function(gain, durationSeconds) {
   if (!this.audioElement) {
     return;
   }
@@ -197,31 +279,35 @@ Sound.prototype.fadeToGainHtml5Audio_ = function (gain, durationSeconds) {
   var deltaVolume = finalVolume - startVolume;
   var durationMillis = durationSeconds * 1000;
   var t0 = new Date().getTime();
-  var fadeInterval = setInterval(function () {
-    var t = new Date().getTime() - t0;
+  var fadeInterval = setInterval(
+    function() {
+      var t = new Date().getTime() - t0;
 
-    // Base condition - after duration has elapsed, snap volume to final and
-    // clear interval
-    if (t >= durationMillis) {
-      this.audioElement.volume = finalVolume;
-      clearInterval(fadeInterval);
-      return;
-    }
+      // Base condition - after duration has elapsed, snap volume to final and
+      // clear interval
+      if (t >= durationMillis) {
+        this.audioElement.volume = finalVolume;
+        clearInterval(fadeInterval);
+        return;
+      }
 
-    // TODO: Probably ought to use ease out quad if delta is positive,
-    // TODO: so that cross-fades automatically work as expected.
-    // Ease in quad - the ear hears this as a "linear" fade
-    // y = c * (t/d)^2 + b
-    //   b: initial value
-    //   c: final delta
-    //   d: duration
-    //   t: time
-    var newVolume = deltaVolume * Math.pow(t / durationMillis, 2) + startVolume;
-    this.audioElement.volume = Math.max(0, Math.min(1, newVolume));
-  }.bind(this), 100);
+      // TODO: Probably ought to use ease out quad if delta is positive,
+      // TODO: so that cross-fades automatically work as expected.
+      // Ease in quad - the ear hears this as a "linear" fade
+      // y = c * (t/d)^2 + b
+      //   b: initial value
+      //   c: final delta
+      //   d: duration
+      //   t: time
+      var newVolume =
+        deltaVolume * Math.pow(t / durationMillis, 2) + startVolume;
+      this.audioElement.volume = Math.max(0, Math.min(1, newVolume));
+    }.bind(this),
+    100
+  );
 };
 
-Sound.prototype.getPlayableFile = function () {
+Sound.prototype.getPlayableFile = function() {
   // IE9 Running on Windows Server SKU can throw an exception on window.Audio
   try {
     if (!window.Audio) {
@@ -230,23 +316,30 @@ Sound.prototype.getPlayableFile = function () {
 
     var audioTest = new window.Audio();
 
-    if (this.config.hasOwnProperty('mp3') && audioTest.canPlayType('audio/mp3')) {
+    if (
+      this.config.hasOwnProperty('mp3') &&
+      audioTest.canPlayType('audio/mp3')
+    ) {
       return this.config.mp3;
     }
-    if (this.config.hasOwnProperty('ogg') && audioTest.canPlayType('audio/ogg')) {
+    if (
+      this.config.hasOwnProperty('ogg') &&
+      audioTest.canPlayType('audio/ogg')
+    ) {
       return this.config.ogg;
     }
-    if (this.config.hasOwnProperty('wav') && audioTest.canPlayType('audio/wav')) {
+    if (
+      this.config.hasOwnProperty('wav') &&
+      audioTest.canPlayType('audio/wav')
+    ) {
       return this.config.wav;
     }
-  } catch (e) {
-
-  }
+  } catch (e) {}
 
   return false;
 };
 
-Sound.prototype.preload = function () {
+Sound.prototype.preload = function() {
   var file = this.getPlayableFile();
   if (!file) {
     return;
@@ -254,7 +347,7 @@ Sound.prototype.preload = function () {
 
   if (!this.config.forceHTML5 && window.AudioContext && this.audioContext) {
     var self = this;
-    this.preloadViaWebAudio(file, function (buffer) {
+    this.preloadViaWebAudio(file, function(buffer) {
       self.reusableBuffer = buffer;
     });
     return;
@@ -276,15 +369,21 @@ Sound.prototype.preload = function () {
     // Fire onLoad as soon as enough of the sound is loaded to play it
     // all the way through.
     var loadEventName = 'canplaythrough';
-    var eventListener = function () {
+    var eventListener = function() {
       this.onSoundLoaded();
       audioElement.removeEventListener(loadEventName, eventListener);
     }.bind(this);
     audioElement.addEventListener(loadEventName, eventListener);
+    audioElement.addEventListener('error', () => {
+      // Indicate failure without the http status code since it is not
+      // available in this context.
+      this.handleLoadFailed();
+    });
   }
 };
 
-Sound.prototype.onSoundLoaded = function () {
+Sound.prototype.onSoundLoaded = function() {
+  this.isLoaded_ = true;
   if (this.config.playAfterLoad) {
     this.play(this.config.playAfterLoadOptions);
   }
@@ -293,16 +392,23 @@ Sound.prototype.onSoundLoaded = function () {
   }
 };
 
-Sound.prototype.preloadViaWebAudio = function (filename, onPreloadedCallback) {
+Sound.prototype.preloadViaWebAudio = function(filename, onPreloadedCallback) {
   var request = new XMLHttpRequest();
   request.open('GET', filename, true);
   request.responseType = 'arraybuffer';
   var self = this;
-  request.onload = function () {
-    self.audioContext.decodeAudioData(request.response, function (buffer) {
-      onPreloadedCallback(buffer);
-      self.onSoundLoaded();
-    });
+  request.onload = function() {
+    if (request.status === 200) {
+      self.audioContext.decodeAudioData(request.response, function(buffer) {
+        onPreloadedCallback(buffer);
+        self.onSoundLoaded();
+      });
+    } else {
+      self.handleLoadFailed(request.status);
+    }
+  };
+  request.onerror = function() {
+    self.handleLoadFailed(request.status);
   };
   request.send();
 };

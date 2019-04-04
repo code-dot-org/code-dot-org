@@ -1,16 +1,20 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {editStudent} from './manageStudentsRedux';
-import {Checkbox} from 'react-bootstrap';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
-import i18n from "@cdo/locale";
-import color from "../../util/color";
+import i18n from '@cdo/locale';
+import color from '../../util/color';
 
 const styles = {
-  checkmark: {
-    color: color.lighter_gray,
+  checkboxIcon: {
+    color: color.lighter_gray
   },
+  checkbox: {
+    height: 20,
+    width: 20
+  }
 };
 
 class ManageStudentsSharingCell extends Component {
@@ -21,19 +25,23 @@ class ManageStudentsSharingCell extends Component {
     checked: PropTypes.bool,
     editedValue: PropTypes.bool,
     //Provided by redux
-    editStudent: PropTypes.func,
+    editStudent: PropTypes.func
   };
 
-  changeSharing = (e) => {
-    this.props.editStudent(this.props.id, {sharingDisabled: this.props.editedValue});
+  changeSharing = e => {
+    this.props.editStudent(this.props.id, {
+      sharingDisabled: this.props.editedValue
+    });
   };
 
   renderCheckbox = () => {
     return (
-      <Checkbox
+      <input
+        type="checkbox"
         disabled={this.props.disabled}
         checked={this.props.editedValue}
         onChange={this.changeSharing}
+        style={styles.checkbox}
       />
     );
   };
@@ -44,20 +52,20 @@ class ManageStudentsSharingCell extends Component {
 
     return (
       <div>
-        {!isEditing &&
+        {!isEditing && (
           <div>
-            {checked &&
+            {checked && (
               <FontAwesome
                 icon="check"
                 className="fa-check"
-                style={styles.checkmark}
+                style={styles.checkboxIcon}
               />
-            }
+            )}
           </div>
-        }
-        {isEditing &&
+        )}
+        {isEditing && (
           <div>
-            {showToolTip &&
+            {showToolTip && (
               <div>
                 <span data-tip="" data-for="disabled-no-age">
                   {this.renderCheckbox()}
@@ -68,31 +76,28 @@ class ManageStudentsSharingCell extends Component {
                   role="tooltip"
                   effect="solid"
                   place="top"
-                  offset={{bottom: 10, right: 50}}
+                  offset={{bottom: 5}}
                   delayHide={1000}
                 >
-                  <div>
-                    {i18n.sharingAgePrompt()}
-                  </div>
+                  <div>{i18n.sharingAgePrompt()}</div>
                 </ReactTooltip>
               </div>
-            }
-            {!showToolTip &&
-              <span>
-                {this.renderCheckbox()}
-              </span>
-            }
+            )}
+            {!showToolTip && <span>{this.renderCheckbox()}</span>}
           </div>
-        }
+        )}
       </div>
-      );
+    );
   }
 }
 
 export const UnconnectedManageStudentsSharingCell = ManageStudentsSharingCell;
 
-export default connect(state => ({}), dispatch => ({
-  editStudent(id, studentInfo) {
-    dispatch(editStudent(id, studentInfo));
-  },
-}))(ManageStudentsSharingCell);
+export default connect(
+  state => ({}),
+  dispatch => ({
+    editStudent(id, studentInfo) {
+      dispatch(editStudent(id, studentInfo));
+    }
+  })
+)(ManageStudentsSharingCell);

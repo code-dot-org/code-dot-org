@@ -14,7 +14,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Add a second parameter to \"onscreen?\" for Sam's y coordinate and update the function so it keeps him safe on all four sides.",
+    "short_instructions": "Add a second parameter to \"onscreen?\" for Sam's y coordinate and update the function so it keeps him safe on all four sides.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -44,7 +44,7 @@
     "custom_game_type": "Sam the Bat",
     "callout_json": "[]",
     "disable_examples": "false",
-    "markdown_instructions": "Add a second parameter to `onscreen?` for Sam's y coordinate and update the function so it keeps him safe on all four sides.",
+    "long_instructions": "Add a second parameter to `onscreen?` for Sam's y coordinate and update the function so it keeps him safe on all four sides.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "maze_data": null

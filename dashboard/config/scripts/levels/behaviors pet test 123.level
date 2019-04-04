@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-04-17T00:28:57.000Z",
   "level_num": "custom",
   "user_id": 182,
@@ -45,8 +45,9 @@
     "custom_helper_library": "function whenMouseUp(callback) {\r\n  forever(function () {\r\n    if (mouseWentUp()) {\r\n      callback();\r\n    }\r\n  });\r\n}\r\n\r\nfunction addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction removeBehaviorSimple(sprite, behavior) {\r\n  removeBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction draggable() {\r\n  var behavior = function(sprite) {\r\n    var v = createVector(winMouseX - pwinMouseX, winMouseY - pwinMouseY);\r\n    sprite.position.add(v);\r\n  }\r\n  behavior.name = 'draggable';\r\n  return behavior;\r\n}",
     "custom_blocks": "[\n  {\n    \"func\": \"whenMouseUp\",\n    \"blockText\": \"when pointer up\",\n    \"eventBlock\": true,\n    \"color\": [\n      140,\n      \"1.00\",\n      \".74\"\n    ]\n  },\n  {\n    \"func\": \"draggable\",\n    \"blockText\": \"dragging\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  }\n]\n",
     "hide_custom_blocks": "false",
-    "instructions": "When Daisy gets a carrot, she gets excited. Use the **\"when touches\"** event and the \"add behavior\" block to make Daisy do something fun when she gets the carrot.",
+    "short_instructions": "When Daisy gets a carrot, she gets excited. Use the **\"when touches\"** event and the \"add behavior\" block to make Daisy do something fun when she gets the carrot.",
     "parent_level_id": 12163,
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

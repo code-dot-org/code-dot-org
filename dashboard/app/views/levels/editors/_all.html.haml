@@ -10,6 +10,11 @@
   - script_data = { editorall: { video_infos: video_infos }.to_json }
   %script{src: minifiable_asset_path('js/levels/editors/_all.js'), data: script_data}
 
+.field
+  = f.label 'Documentation'
+  Find documentation for levelbuilder and its processes
+  = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Welcome-to-Levelbuilder', target: '_blank'
+
 - unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
   .field
     = f.label :display_name
@@ -20,6 +25,13 @@
     %p
       Notes for yourself or other Levelbuilders. Viewable here and here alone.
     = f.text_area :notes, rows: 6, class: "input-block-level"
+
+.field
+  %legend.control-legend{data: {toggle: "collapse", target: "#audit_log_info"}}
+    Audit Log
+  %p A log of the people who most recently edited this level (up to the last 10 people)
+  #audit_log_info.collapse
+    = render partial: 'levels/editors/audit_log', locals: {f: f}
 
 .field
   = f.label 'concepts'
@@ -71,88 +83,27 @@
   = f.label :reference_link, 'Reference Links'
   %p Add links to pages on Curriculum Builder below. They will show up in the 'Help & Tips' tab below any videos and the map reference.
   %p These should be strings representing the URL on [docs|curriculum].code.org you want to embed, i.e. '/docs/csd/maker_leds/index.html' or '/curriculum/path/to/file'.
-  %p Click the + sign if you want to add multiple links
-  - @level.reference_links = [''] unless @level.reference_links.try(:present?)
-  - @level.reference_links.each do |ref_link|
-    = text_field_tag 'level[reference_links][]', ref_link, placeholder: 'Additional Reference Link'
-  #plusAnswerReference
-    %i.fa.fa-plus-circle
+  %p Put each link on a new line
+  .row
+    .span8
+      - @level.reference_links = [''] unless @level.reference_links.try(:present?)
+      = text_area_tag 'level[reference_links]', @level.reference_links.join("\r\n"), rows: 6, class: "input-block-level", placeholder: 'Additional Reference Link'
 
-#callout_editor.field
-  .json_editor
-    .json_template
-      .callout_space
-        %label Callout
-        %table
-          %tr
-            %td.required Element ID
-            %td.required{colspan: 2} Localization Key
-            %td.required{colspan: 5} Callout text
-          %tr
-            %td
-              %input.element_id{type: 'text', placeholder: '#runButton'}
-            %td{colspan: 2}
-              %input.localization_key{type: 'text', placeholder: 'level_name_callout1', style: 'width: 96%'}
-            %td{colspan: 5}
-              %input.callout_text{type: 'text', placeholder: 'Text of callout', style: 'width: 97%'}
-          %tr
-            %td Qtip on callout
-            %td Qtip points to
-            %td Show when
-            %td X dist
-            %td Y dist
-            %td Classes
-            %td Reappear
-            %td Palette Category
-          %tr
-            %td
-              %select.my
-                %option{value: 'top left'} Top left
-                %option{value: 'top center'} Top center
-                %option{value: 'top right'} Top right
-                %option{value: 'right top'} Right top
-                %option{value: 'right center'} Right center
-                %option{value: 'right bottom'} Right bottom
-                %option{value: 'bottom right'} Bottom right
-                %option{value: 'bottom center'} Bottom center
-                %option{value: 'bottom left'} Bottom left
-                %option{value: 'left bottom'} Left bottom
-                %option{value: 'left center'} Left center
-                %option{value: 'left top'} Left top
-            %td
-              %select.at{style: 'width: 140px;'}
-                %option{value: 'top left'} Top left
-                %option{value: 'top center'} Top center
-                %option{value: 'top right'} Top right
-                %option{value: 'right top'} Right top
-                %option{value: 'right center'} Right center
-                %option{value: 'right bottom'} Right bottom
-                %option{value: 'bottom right'} Bottom right
-                %option{value: 'bottom center'} Bottom center
-                %option{value: 'bottom left'} Bottom left
-                %option{value: 'left bottom'} Left bottom
-                %option{value: 'left center'} Left center
-                %option{value: 'left top'} Left top
-            %td
-              %input.on{type: 'text', style: 'width: 160px;', placeholder: 'function_editor_opened'}
-            %td
-              %input.x{type: 'number', style: 'width: 40px;'}
-            %td
-              %input.y{type: 'number', style: 'width: 40px;'}
-            %td
-              %input.classes{type: 'text', placeholder: 'no-tip', style: 'width: 80px;'}
-            %td
-              %input.canReappear{type: 'checkbox', placeholder: 'false', style: 'width: 50px;'}
-            %td
-              %input.dropletPaletteCategory{type: 'text', placeholder: 'math', style: 'width: 100px;'}
-          %tr
-        %button.remove_callout{type: 'button'}
-          %i.icon-trash
-        %hr
-    #all_callouts_editor
-    %button#add_callout{type: 'button'} Add a callout
-
+=render partial: 'levels/editors/callouts', locals: {f: f}
+- if @level.respond_to? :free_play
   .field
-    = f.label :callout_json
-    %div{style: '-webkit-user-select: text'}
-    ~ f.text_area :callout_json, rows: 4
+    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :free_play, description: "Free Play"}
+    %p Free Play levels are not checked for correctness (any solution is accepted), can be shared, and can be saved to the public and private gallery
+
+    .field
+      = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :embed, description: "Embed"}
+      %p Embedded levels hide the Blockly workspace, only showing the visualization area (and the 'finish' button, if 'freeplay' is also set).
+
+- if @level.respond_to? :disable_sharing
+  .field
+    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_sharing, description: "Disable sharing"}
+    %p If set, this level cannot be shared or saved to galleries even if it's free play.
+
+- if @level.respond_to? :coordinate_grid_background
+  .field
+    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}

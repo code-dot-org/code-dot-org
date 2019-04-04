@@ -1,8 +1,8 @@
 /** @file An animated image, which handles frame counts, rates and offsets
  * internally and exposes simple methods for rendering at the desired position. */
 
-import { valueOr } from '../utils';
-import { SVG_NS } from '../constants';
+import {valueOr} from '../utils';
+import {SVG_NS} from '../constants';
 
 // Unique element ID that increments by 1 each time an element is created
 var uniqueId = 0;
@@ -86,28 +86,40 @@ export default class StudioAnimation {
    * Create an image element with a clip path
    */
   createElement(parentElement) {
-
-    this.animId = (uniqueId++);
+    this.animId = uniqueId++;
 
     // create our clipping path/rect
     this.clipPath_ = document.createElementNS(SVG_NS, 'clipPath');
     var clipId = 'studioanimation_clippath_' + this.animId;
     this.clipPath_.setAttribute('id', clipId);
     var rect = document.createElementNS(SVG_NS, 'rect');
-    rect.setAttribute('width', this.spriteSheet_.frameWidth * this.renderScale_);
-    rect.setAttribute('height', this.spriteSheet_.frameHeight * this.renderScale_);
+    rect.setAttribute(
+      'width',
+      this.spriteSheet_.frameWidth * this.renderScale_
+    );
+    rect.setAttribute(
+      'height',
+      this.spriteSheet_.frameHeight * this.renderScale_
+    );
     this.clipPath_.appendChild(rect);
     parentElement.appendChild(this.clipPath_);
 
     var itemId = 'studioanimation_' + this.animId;
     this.element_ = document.createElementNS(SVG_NS, 'image');
-    this.element_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-       this.spriteSheet_.assetPath);
+    this.element_.setAttributeNS(
+      'http://www.w3.org/1999/xlink',
+      'xlink:href',
+      this.spriteSheet_.assetPath
+    );
     this.element_.setAttribute('id', itemId);
-    this.element_.setAttribute('height',
-        this.spriteSheet_.assetHeight() * this.renderScale_);
-    this.element_.setAttribute('width',
-        this.spriteSheet_.assetWidth() * this.renderScale_);
+    this.element_.setAttribute(
+      'height',
+      this.spriteSheet_.assetHeight() * this.renderScale_
+    );
+    this.element_.setAttribute(
+      'width',
+      this.spriteSheet_.assetWidth() * this.renderScale_
+    );
     parentElement.appendChild(this.element_);
 
     this.element_.setAttribute('clip-path', 'url(#' + clipId + ')');
@@ -117,7 +129,6 @@ export default class StudioAnimation {
    * Remove our element/clipPath/animator
    */
   removeElement() {
-
     if (this.element_) {
       this.element_.parentNode.removeChild(this.element_);
       this.element_ = null;
@@ -128,13 +139,14 @@ export default class StudioAnimation {
       this.clipPath_.parentNode.removeChild(this.clipPath_);
       this.clipPath_ = null;
     }
-
   }
 
   /** @returns {boolean} whether the type of animation has been created */
   hasType(type) {
-    return !!this.specialAnimations_[type] ||
-        !!this.spriteSheet_.animationFrameCounts[type];
+    return (
+      !!this.specialAnimations_[type] ||
+      !!this.spriteSheet_.animationFrameCounts[type]
+    );
   }
 
   /** @returns {number} the count of frames for the current animation */
@@ -143,7 +155,9 @@ export default class StudioAnimation {
     if (specialFrames) {
       return specialFrames[this.currentAnimationIndex_].length;
     } else {
-      return this.spriteSheet_.getAnimationFrameCount(this.currentAnimationType_);
+      return this.spriteSheet_.getAnimationFrameCount(
+        this.currentAnimationType_
+      );
     }
   }
 
@@ -153,9 +167,11 @@ export default class StudioAnimation {
     if (specialFrames) {
       return specialFrames[this.currentAnimationIndex_][frameIndex];
     } else {
-      return this.spriteSheet_.getFrame(this.currentAnimationType_,
-          this.currentAnimationIndex_,
-          frameIndex);
+      return this.spriteSheet_.getFrame(
+        this.currentAnimationType_,
+        this.currentAnimationIndex_,
+        frameIndex
+      );
     }
   }
 
@@ -244,9 +260,12 @@ export default class StudioAnimation {
     var frames = [];
     for (var i = 0; i < animationList.length; i++) {
       frames.push(
-          this.spriteSheet_.getFrame(animationList[i].type,
-              animationList[i].index,
-              animationList[i].frame));
+        this.spriteSheet_.getFrame(
+          animationList[i].type,
+          animationList[i].index,
+          animationList[i].frame
+        )
+      );
     }
     this.specialAnimations_[type][index] = frames;
   }

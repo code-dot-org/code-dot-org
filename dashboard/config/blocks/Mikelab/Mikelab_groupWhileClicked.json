@@ -1,0 +1,19 @@
+{
+  "category": "Group Events",
+  "config": {
+    "color": [
+      322,
+      0.9,
+      0.95
+    ],
+    "func": "groupWhileClicked",
+    "blockText": "while clicking on {COSTUME}\n",
+    "args": [
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      }
+    ],
+    "eventLoopBlock": true
+  }
+}

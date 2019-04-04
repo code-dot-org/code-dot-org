@@ -10,7 +10,6 @@ nav: regional_partner_playbook_nav
 As a Code.org Partner, you’ve agreed to:
 
 - Be the regional hub of a nationwide CS education movement
-- Plan and host an event for your teachers at TeacherCon in Year 1 of the partnership ([details](#teachercon))
 - Organize at least 4 community meetups per year ([details](#comm))
 - Host a computer science fair in Year 2 of the partnership ([details](#csfair))
 
@@ -24,16 +23,12 @@ As a Code.org Partner, you’ve agreed to:
 The following are a list of resources and ideas you can use to build your local community. Feel free to share more community ideas in the Google+ community!
 
 - Start a virtual community using Facebook, LinkedIn, Google+, Edmodo, etc
-- Have classrooms participate in the [Congressional App Challenge](http://www.congressionalappchallenge.us/compete-2016/)
 - Create a regional competition alongside the [Hour of Code](https://hourofcode.com/us) in December
 - Plan monthly school visits to support the teachers in your programs
 - Join other tech meetups in your area. Check out [Meetup](http://www.meetup.com/) to locate Tech or Education events near you!
 - Go to a local [Computer Science Teacher Association (CSTA)](https://csta.acm.org/) chapter meeting
 - Have an open house for parents and other community members to participate in an Hour of Code and find out more about computer science learning opportunities
 
-<a name="teachercon"></a>
-## TeacherCon Community Event
-See <a href="https://docs.google.com/document/d/1EZW13Z4LU60emIEsoygIo5y4eqqf_QzoaiiukOTGhLU/edit" target=_blank>these guidelines</a> for planning a successful event at TeacherCon 2018! 
 
 <a name="comm"></a>
 ## Community Events for Teachers
@@ -43,8 +38,14 @@ Teachers should feel supported as members of a teacher community. Use community 
 **Who’s included?**<br/>
 Incorporate the diverse and varied computer science community in your events! Anyone who is interested in supporting computer science in the classroom should feel like they can attend.
 
+**When to hold them?**<br/>
+Hold at least 4 community events for teachers through the year.  Please ensure at least 3 of these events are spread out during the academic year.  We recommend 2 events during the "fall term" before December 31 and 2 events between January 1 and the end of the school year. 
+
+**What's expected?**<br/>
+All events should include teachers from your professional learning programs across CS Fundamentals, Discoveries, and Principles.  We also encourage you to open up these events to CS teachers outside your cohorts. Consider partnering with other organizations to host these events.
+
 **How to get reimbursed:**<br/>
-Code.org reimburses up to $500 per event that serves a minimum of 10 teacher attendees.  <br/>
+Code.org reimburses up to $500 for venue and catering per event that serves a minimum of 10 teacher attendees.  <br/>
 
 Once you've held your event, please email invoices@code.org, cc'ing your regional manager with the following attachments: <br/>
 1) Signup sheet with an accurate attendance count; <br/>
@@ -59,4 +60,4 @@ Here are a few **examples of events** you can host to build teacher community.
 
 <a name="csfair"></a>
 ## Computer Science Fair
-In Year 2 of your partnership, hold a computer science fair showcasing students and student projects in your region.  See [this overview](https://docs.google.com/document/d/1zdolbbIN8hQzfdivqHWTzNR-WdYQ8U3U19UTpYb20Wk/edit?ts=59c53f15) for more information and sample agenda. See the [CS Fair - Allowable Expenses](https://docs.google.com/document/d/1YXIUGohlNNZKiGjHcywuyBV9e_c3UDE6CcgAfShOWuI/edit?ts=59ef9992) for additional guidelines on expenses. 
+In Year 2 of your partnership, hold a computer science fair showcasing students and student projects in your region.  See <a href="https://docs.google.com/document/d/1zdolbbIN8hQzfdivqHWTzNR-WdYQ8U3U19UTpYb20Wk/edit?ts=59c53f15" target=_blank>this overview</a> for more information and sample agenda. See the <a href="https://docs.google.com/document/d/1YXIUGohlNNZKiGjHcywuyBV9e_c3UDE6CcgAfShOWuI/edit?ts=59ef9992" target=_blank>CS Fair - Allowable Expenses</a> for additional guidelines on expenses.

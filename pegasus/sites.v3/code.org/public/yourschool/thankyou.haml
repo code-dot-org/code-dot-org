@@ -8,6 +8,10 @@ social:
 - facebook = {:u=>'https://code.org/yourschool'}
 - twitter = {:url=>'https://code.org/yourschool', :related=>'codeorg', :text=>'Does your school teach computer science? Expand computer science at your school or district. @codeorg'}
 
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: minifiable_asset_path('js/code.org/public/yourschool/thankyou.js')}
+
 %h1 Thank you for telling us about your school
 You should see your school
 %a{href: '/yourschool'}
@@ -20,5 +24,4 @@ Tell your friends and coworkers and encourage them to join too!
 = view :share_buttons, facebook:facebook, twitter:twitter
 
 %h2 Here is what you can do to help expand computer science in your school or district.
-= view :pledge_boxes
-
+#thankyou

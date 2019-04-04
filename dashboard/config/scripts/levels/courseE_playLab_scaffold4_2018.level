@@ -35,10 +35,10 @@
     "disable_sharing": "true",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "Find some interesting ways to change the score in your game. Get the score to show something other than 0 to continue.",
+    "short_instructions": "Find some interesting ways to change the score in your game. Get the score to show something other than 0 to continue.",
     "project_template_level_name": "grade4_scaffolded_template_2018",
     "first_sprite_index": "0",
-    "markdown_instructions": "Multiple characters and getting the actors moving is a great start to a game, but we need to do more to make this feel like a real game. Let's add a score!\r\n\r\nUse event blocks like the `when actor touches` to change the score. Score 10 points to complete this puzzle.",
+    "long_instructions": "Multiple characters and getting the actors moving is a great start to a game, but we need to do more to make this feel like a real game. Let's add a score!\r\n\r\nUse event blocks like the `when actor touches` to change the score. Score 10 points to complete this puzzle.",
     "soft_buttons": [
       "leftButton",
       "rightButton",

@@ -4,9 +4,8 @@ import {
   restoreRedux,
   registerReducers,
   hasReducer,
-  getStore,
+  getStore
 } from '@cdo/apps/redux';
-
 
 function incrementor(state, action) {
   if (state === undefined) {
@@ -29,7 +28,6 @@ describe('global redux store', () => {
   });
 
   describe('the registerReducers function', () => {
-
     beforeEach(() => {
       registerReducers({incrementor});
     });
@@ -55,7 +53,7 @@ describe('global redux store', () => {
       registerReducers({incrementor});
     });
 
-    it("does not clobber previously registered reducers or state", () => {
+    it('does not clobber previously registered reducers or state', () => {
       getStore().dispatch({type: 'INCREMENT'});
       getStore().dispatch({type: 'INCREMENT'});
       getStore().dispatch({type: 'INCREMENT'});
@@ -64,14 +62,16 @@ describe('global redux store', () => {
       registerReducers({otherIncrementor: incrementor});
       getStore().dispatch({type: 'INCREMENT'});
       getStore().dispatch({type: 'INCREMENT'});
-      expect(getStore().getState()).to.deep.equal({incrementor: 5, otherIncrementor: 2});
+      expect(getStore().getState()).to.deep.equal({
+        incrementor: 5,
+        otherIncrementor: 2
+      });
     });
 
-    it("allows you to register multiple reducers at once", () => {
+    it('allows you to register multiple reducers at once', () => {
       registerReducers({a: incrementor, b: () => 'hello'});
       expect(hasReducer('a')).to.be.true;
       expect(hasReducer('b')).to.be.true;
     });
-
   });
 });

@@ -8,36 +8,111 @@ class MakerControllerTest < ActionController::TestCase
     @teacher = create :teacher
     @admin = create :admin
     @school = create :school
+
+    @csd_2017 = ensure_course Script::CSD_2017
+    @csd_2018 = ensure_course Script::CSD_2018
+    @csd6_2017 = ensure_script Script::CSD6_NAME
+    @csd6_2018 = ensure_script Script::CSD6_2018_NAME
   end
 
   test_redirect_to_sign_in_for :home
 
   test "home loads for student" do
-    # Fake CSD6 script for progress info
-    csd6_script = create :script, name: Script::CSD6_NAME
-    create :script_level, script: csd6_script
     sign_in @student
 
-    assert_queries 12 do
-      get :home
-    end
+    get :home
 
     assert_response :success
     assert_select '#maker-home'
   end
 
   test "home loads for teacher" do
-    # Fake CSD6 script for progress info
-    csd6_script = create :script, name: Script::CSD6_NAME
-    create :script_level, script: csd6_script
     sign_in @teacher
 
-    assert_queries 13 do
-      get :home
-    end
+    get :home
 
     assert_response :success
     assert_select '#maker-home'
+  end
+
+  test "shows CSD6-2018 when there are no relevant assignments" do
+    assert_empty @student.scripts
+    assert_empty @student.section_courses
+    assert_nil @student.user_script_with_most_recent_progress
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2018 if CSD6-2018 is assigned" do
+    create :user_script, user: @student, script: @csd6_2018, assigned_at: Time.now
+    refute_includes @student.scripts, @csd6_2017
+    assert_includes @student.scripts, @csd6_2018
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2017 if CSD6-2017 is assigned" do
+    create :user_script, user: @student, script: @csd6_2017, assigned_at: Time.now
+    assert_includes @student.scripts, @csd6_2017
+    refute_includes @student.scripts, @csd6_2018
+
+    assert_equal @csd6_2017, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2018 if both CSD6-2017 and CSD6-2018 are assigned" do
+    create :user_script, user: @student, script: @csd6_2017, assigned_at: Time.now
+    create :user_script, user: @student, script: @csd6_2018, assigned_at: Time.now
+    assert_includes @student.scripts, @csd6_2017
+    assert_includes @student.scripts, @csd6_2018
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2018 if CSD-2018 is assigned" do
+    create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    refute_includes @student.section_courses, @csd_2017
+    assert_includes @student.section_courses, @csd_2018
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2017 if CSD-2017 is assigned" do
+    create :follower, section: create(:section, course: @csd_2017), student_user: @student
+    assert_includes @student.section_courses, @csd_2017
+    refute_includes @student.section_courses, @csd_2018
+
+    assert_equal @csd6_2017, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2018 if both CSD-2017 and CSD-2018 are assigned" do
+    create :follower, section: create(:section, course: @csd_2017), student_user: @student
+    create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    assert_includes @student.section_courses, @csd_2017
+    assert_includes @student.section_courses, @csd_2018
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2018 if both CSD6-2017 and CSD-2018 are assigned" do
+    create :user_script, user: @student, script: @csd6_2017, assigned_at: Time.now
+    create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    assert_includes @student.scripts, @csd6_2017
+    refute_includes @student.section_courses, @csd_2017
+    refute_includes @student.scripts, @csd6_2018
+    assert_includes @student.section_courses, @csd_2018
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2018 if both CSD-2017 and CSD6-2018 are assigned" do
+    create :follower, section: create(:section, course: @csd_2017), student_user: @student
+    create :user_script, user: @student, script: @csd6_2018, assigned_at: Time.now
+    refute_includes @student.scripts, @csd6_2017
+    assert_includes @student.section_courses, @csd_2017
+    assert_includes @student.scripts, @csd6_2018
+    refute_includes @student.section_courses, @csd_2018
+
+    assert_equal @csd6_2018, MakerController.maker_script(@student)
   end
 
   test "apply: fails if unit_6_intention not provided" do
@@ -47,8 +122,47 @@ class MakerControllerTest < ActionController::TestCase
     end
   end
 
+  test "apply: fails if user doesn't have an application" do
+    sign_in @teacher
+    post :apply, params: {unit_6_intention: 'no'}
+    assert_response :not_found
+  end
+
+  test "apply: fails if school doesn't meet eligibility requirements" do
+    sign_in @teacher
+    create :circuit_playground_discount_application,
+      user: @teacher,
+      school: @school,
+      full_discount: false # This should be true before submitting a unit 6 intention
+
+    CircuitPlaygroundDiscountApplication.stubs(:studio_person_pd_eligible?).returns(true)
+    CircuitPlaygroundDiscountApplication.stubs(:student_progress_eligible?).returns(true)
+
+    post :apply, params: {unit_6_intention: 'no'}
+    assert_response :forbidden
+  end
+
+  test "apply: fails if teacher doesn't meet eligibility requirements" do
+    sign_in @teacher
+    create :circuit_playground_discount_application,
+      user: @teacher,
+      school: @school,
+      full_discount: true
+
+    # These should be true before submitting a unit 6 intention
+    CircuitPlaygroundDiscountApplication.stubs(:studio_person_pd_eligible?).returns(false)
+    CircuitPlaygroundDiscountApplication.stubs(:student_progress_eligible?).returns(false)
+
+    post :apply, params: {unit_6_intention: 'no'}
+    assert_response :forbidden
+  end
+
   test "apply: fails if nonsense unit_6_intention provided" do
     sign_in @teacher
+    create :circuit_playground_discount_application,
+      user: @teacher,
+      school: @school,
+      full_discount: true
 
     CircuitPlaygroundDiscountApplication.stubs(:studio_person_pd_eligible?).returns(true)
     CircuitPlaygroundDiscountApplication.stubs(:student_progress_eligible?).returns(true)
@@ -58,23 +172,14 @@ class MakerControllerTest < ActionController::TestCase
     end
   end
 
-  test "apply: fails if application already exists" do
+  test "apply: updates the application with the intention" do
     sign_in @teacher
-    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'unsure')
+    application = create :circuit_playground_discount_application,
+      user: @teacher,
+      school: @school,
+      full_discount: true
 
-    post :apply, params: {unit_6_intention: 'no'}
-    assert_response :forbidden
-  end
-
-  test "apply: fails if teacher doesn't meet eligibility requirements" do
-    sign_in @teacher
-
-    post :apply, params: {unit_6_intention: 'no'}
-    assert_response :forbidden
-  end
-
-  test "apply: creates a new CircuitPlaygroundDiscountApplication" do
-    sign_in @teacher
+    assert_nil application.unit_6_intention
 
     CircuitPlaygroundDiscountApplication.stubs(:studio_person_pd_eligible?).returns(true)
     CircuitPlaygroundDiscountApplication.stubs(:student_progress_eligible?).returns(true)
@@ -82,8 +187,8 @@ class MakerControllerTest < ActionController::TestCase
     post :apply, params: {unit_6_intention: 'no'}
     assert_response :success
 
-    application = CircuitPlaygroundDiscountApplication.find_by_user_id(@teacher.id)
-    assert application
+    application.reload
+    assert_equal 'no', application.unit_6_intention
   end
 
   test "schoolchoice: fails if no school id provided" do
@@ -102,39 +207,30 @@ class MakerControllerTest < ActionController::TestCase
     end
   end
 
-  test "schoolchoice: fails if user doesnt have application" do
+  test "schoolchoice: fails if user already has an application with a selected school" do
     sign_in @teacher
-    post :schoolchoice, params: {nces: @school.id}
-    assert_response :not_found
-  end
-
-  test "schoolchoice: fails if user not teaching unit 6" do
-    sign_in @teacher
-    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'unsure')
+    create :circuit_playground_discount_application,
+      user: @teacher,
+      school: @school,
+      full_discount: true
 
     post :schoolchoice, params: {nces: @school.id}
     assert_response :forbidden
   end
 
-  test "schoolchoice: fails if already confirmed school" do
+  test "schoolchoice: Creates an application" do
     sign_in @teacher
-    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'yes1718', school_id: @school.id)
 
-    post :schoolchoice, params: {nces: @school.id}
-    assert_response :forbidden
-  end
-
-  test "schoolchoice: succeeds if user is teaching unit 6" do
-    sign_in @teacher
-    CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'yes1718')
-
-    post :schoolchoice, params: {nces: @school.id}
-    assert_response :success
-    expected = {"full_discount" => false}
-    assert_equal expected, JSON.parse(@response.body)
+    assert_creates CircuitPlaygroundDiscountApplication do
+      post :schoolchoice, params: {nces: @school.id}
+      assert_response :success
+      expected = {"full_discount" => false}
+      assert_equal expected, JSON.parse(@response.body)
+    end
   end
 
   test "complete: fails if not given a signature" do
+    DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
     sign_in @teacher
 
     assert_raises ActionController::ParameterMissing do
@@ -143,21 +239,25 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "complete: fails if user doesnt have application" do
+    DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
     sign_in @teacher
     post :complete, params: {signature: "My Name"}
     assert_response :not_found
   end
 
   test "complete: fails if application not in the right state" do
+    DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
     sign_in @teacher
 
     # no intention to teach unit 6
-    application = CircuitPlaygroundDiscountApplication.create!(user_id: @teacher.id, unit_6_intention: 'no')
+    application = create :circuit_playground_discount_application,
+      user_id: @teacher.id,
+      unit_6_intention: 'no'
     post :complete, params: {signature: "My Name"}
     assert_response :forbidden
 
     # intend to teach unit 6, but has not confirmed school
-    application.update!(unit_6_intention: 'yes1718')
+    application.update!(unit_6_intention: 'yes1819')
     post :complete, params: {signature: "My Name"}
     assert_response :forbidden
 
@@ -168,20 +268,15 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "complete: returns a new code" do
+    DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
     sign_in @teacher
 
-    expiration = Time.now + 30.days
-    CircuitPlaygroundDiscountApplication.create!(
-      user_id: @teacher.id,
-      unit_6_intention: 'yes1718',
-      school_id: @school.id,
+    create :circuit_playground_discount_application,
+      user: @teacher,
+      school: @school,
+      unit_6_intention: 'yes1819',
       full_discount: true
-    )
-    code = CircuitPlaygroundDiscountCode.create!(
-      code: 'FAKE100_asdf123',
-      full_discount: true,
-      expiration: expiration
-    )
+    code = create :circuit_playground_discount_code
 
     post :complete, params: {signature: "My name"}
     assert_response :success
@@ -190,17 +285,15 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "complete: works after admin override" do
+    DCDO.stubs(:get).with('facilitator_ids_eligible_for_maker_discount', []).returns([])
+    DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
     sign_in @admin
 
     post :override, params: {user: @teacher.id, full_discount: true}
     assert_response :success
     sign_out @admin
 
-    CircuitPlaygroundDiscountCode.create!(
-      code: 'FAKE100_asdf123',
-      full_discount: true,
-      expiration: Time.now + 30.days
-    )
+    create :circuit_playground_discount_code
 
     sign_in @teacher
     post :complete, params: {signature: "My name"}
@@ -226,12 +319,11 @@ class MakerControllerTest < ActionController::TestCase
   test "application_status: works for user with in progress application" do
     sign_in @admin
 
-    CircuitPlaygroundDiscountApplication.create!(
+    create :circuit_playground_discount_application,
       user_id: @teacher.id,
-      unit_6_intention: 'yes1718',
+      unit_6_intention: 'yes1819',
       school_id: @school.id,
       full_discount: true
-    )
 
     get :application_status, params: {user: @teacher.id}
     assert_response :success
@@ -283,10 +375,9 @@ class MakerControllerTest < ActionController::TestCase
 
     # Application in which user has answered question about unit6 intentions, but
     # has not yet confirmed school
-    CircuitPlaygroundDiscountApplication.create!(
+    create :circuit_playground_discount_application,
       user_id: @teacher.id,
-      unit_6_intention: 'yes1718',
-    )
+      unit_6_intention: 'yes1819'
     post :override, params: {user: @teacher.id, full_discount: true}
     assert_response :success
     expected = {
@@ -303,7 +394,7 @@ class MakerControllerTest < ActionController::TestCase
           "name" => nil,
           "high_needs" => nil,
         },
-        "unit_6_intention" => "yes1718",
+        "unit_6_intention" => "yes1819",
         "full_discount" => true,
         "admin_set_status" => true,
         "discount_code" => nil,
@@ -312,5 +403,19 @@ class MakerControllerTest < ActionController::TestCase
     assert_equal expected, JSON.parse(@response.body)
 
     assert_equal 1, CircuitPlaygroundDiscountApplication.where(user_id: @teacher.id).length
+  end
+
+  private
+
+  def ensure_script(script_name)
+    Script.find_by_name(script_name) ||
+      create(:script, name: script_name).tap do |script|
+        create :script_level, script: script
+      end
+  end
+
+  def ensure_course(course_name)
+    Course.find_by_name(course_name) ||
+      create(:course, name: course_name)
   end
 end

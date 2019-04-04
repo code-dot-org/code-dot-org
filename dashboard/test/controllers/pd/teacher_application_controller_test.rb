@@ -12,14 +12,6 @@ class Pd::TeacherApplicationControllerTest < ::ActionController::TestCase
     Pd::TeacherApplication.any_instance.stubs(:regional_partner_name)
   end
 
-  test_redirect_to_sign_in_for :new
-  test 'redirects to new teacher application' do
-    sign_in @teacher
-    get :new
-    assert_response :redirect
-    assert_redirected_to '/pd/application/teacher'
-  end
-
   def self.test_workshop_admin_only(method, action, success_response, params = nil)
     test_user_gets_response_for action, user: -> {@teacher}, method: method, params: params, response: :forbidden
     test_user_gets_response_for action, user: -> {@workshop_admin}, method: method, params: params, response: success_response

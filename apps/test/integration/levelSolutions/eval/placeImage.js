@@ -2,17 +2,17 @@ import {TestResults} from '@cdo/apps/constants';
 var blockUtils = require('@cdo/apps/block_utils');
 
 var solutionXml = blockUtils.mathBlockXml('place_image', {
-  'IMAGE': blockUtils.mathBlockXml('functional_circle', {
-    'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
-    'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' }),
-    'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
+  IMAGE: blockUtils.mathBlockXml('functional_circle', {
+    COLOR: blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'}),
+    STYLE: blockUtils.mathBlockXml('functional_string', null, {VAL: 'outline'}),
+    SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50})
   }),
-  'X': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 25 } ),
-  'Y': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
+  X: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 25}),
+  Y: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50})
 });
 
 module.exports = {
-  app: "eval",
+  app: 'eval',
   skinId: 'eval',
   levelDefinition: {
     solutionBlocks: solutionXml,
@@ -21,12 +21,12 @@ module.exports = {
   },
   tests: [
     {
-      description: "correct answer",
+      description: 'correct answer',
       expected: {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      customValidator: function (assert) {
+      customValidator: function(assert) {
         var user = document.getElementById('user');
         var circle = user.querySelector('circle');
         var fill = circle.getAttribute('fill');
@@ -37,7 +37,7 @@ module.exports = {
         assert(circle.getAttribute('cy') === '0');
         // origin at center and mapping from cartesian to pixel space means
         // (25, 50) becomes (225, 150)
-        assert(circle.getAttribute('transform'), ' translate(225, 150)')  ;
+        assert(circle.getAttribute('transform'), ' translate(225, 150)');
         return true;
       },
       xml: '<xml>' + solutionXml + '</xml>'

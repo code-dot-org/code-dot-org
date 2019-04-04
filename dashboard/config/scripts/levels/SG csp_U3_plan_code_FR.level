@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "markdown_instructions": "<img src=\"https://images.code.org/01d3b0664443216b4363ec31914e592a-image-1506460763004.png\" style=\"float: right\">\r\n\r\n<br>\r\n\r\nIn this lesson we talked about top-down design for building up solutions to larger programming problems.  Plan the code that you would use to draw this image (shown at right). Describe each of the functions that you would create. You should not write all the code, only the names of the functions that you would create with a brief description of what each function would do. \r\n\r\nWrite your plan following the format:\r\n\r\n<div style=\"clear: both\"> </div>\r\n\r\n    Name of function - description of what it does\r\n\r\n    Name of function 2 - description of what it does\r\n    ...",
+    "long_instructions": "<img src=\"https://images.code.org/01d3b0664443216b4363ec31914e592a-image-1506460763004.png\" style=\"float: right\">\r\n\r\n<br>\r\n\r\nIn this lesson we talked about top-down design for building up solutions to larger programming problems.  Plan the code that you would use to draw this image (shown at right). Describe each of the functions that you would create. You should not write all the code, only the names of the functions that you would create with a brief description of what each function would do. \r\n\r\nWrite your plan following the format:\r\n\r\n<div style=\"clear: both\"> </div>\r\n\r\n    Name of function - description of what it does\r\n\r\n    Name of function 2 - description of what it does\r\n    ...",
     "instructions_important": "false",
     "placeholder": "Write your plan here",
     "allow_user_uploads": "false",

@@ -11,7 +11,7 @@ social:
 - require 'country_codes'
 - require 'state_abbr'
 - require 'census_helper'
-%script{src: "https://cdn.optimizely.com/js/400912536.js"}
+
 - census_announcement = DCDO.get('census_announcement', nil)
 - census_announcement ||= {}
 - census_announcement['user_name'] = request.params["name"] if request.params["name"]
@@ -26,12 +26,14 @@ social:
 - census_announcement['table-id'] = CDO.census_map_table_id
 - census_announcement['school_year'] = current_census_year
 
+= inline_css 'trophy_announcement_sparkle.css'
+
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: minifiable_asset_path('js/code.org/public/yourschool.js')}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}
 %script{type: "text/javascript", src: "/shared/js/helpers.js"}
-%link{rel: "stylesheet", type: "text/css", href: "/css/census_map.css"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/census-map.css"}
 
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
@@ -50,7 +52,7 @@ social:
   %center
     %h3{style: 'margin: 40px 0 50px 0; font-size: 16px;'} Your pledge and information about your school helps expand computer science education across the United States.
     %span{style: "font-family: 'Gotham 7r', sans-serif; font-size: 20px; margin: 0 25px 0 25px;"} In partnership with
-    %img{src: '/images/fit-300/avatars/computer_science_teachers_association.png'}
+    %img{src: '/images/fit-200/avatars/computer_science_teachers_association.png'}
 
 %br
 %br

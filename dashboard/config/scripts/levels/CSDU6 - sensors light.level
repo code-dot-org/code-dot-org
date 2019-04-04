@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Light Sensor Updates\r\n\r\nThis app is very similar to the last, but we've added a button with the ID \"update_button\". Write a program that displays the current value of the light sensor every time the update button is clicked.",
+    "long_instructions": "# Light Sensor Updates\r\n\r\nThis app is very similar to the last, but we've added a button with the ID \"update_button\". Write a program that displays the current value of the light sensor every time the update button is clicked.",
     "instructions_important": "false",
     "start_blocks": "// Show the current value of the light sensor\r\n// every time the button \"update_button\" is clicked\r\n",
     "is_k1": "false",

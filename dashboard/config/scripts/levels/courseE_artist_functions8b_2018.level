@@ -12,9 +12,9 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "Call the `draw a square` function from inside your `draw a line of squares` function to make this even easier!",
+    "short_instructions": "Call the `draw a square` function from inside your `draw a line of squares` function to make this even easier!",
     "embed": "false",
-    "markdown_instructions": "*\"Zombie get dizzy.\"*\r\n\r\nCall the `draw a square` function from inside your `draw a line of squares` function to make this even easier!\r\n\r\n---\r\n\r\n- The squares are *50* pixels apart.",
+    "long_instructions": "*\"Zombie get dizzy.\"*\r\n\r\nCall the `draw a square` function from inside your `draw a line of squares` function to make this even easier!\r\n\r\n---\r\n\r\n- The squares are *50* pixels apart.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -31,7 +31,7 @@
     "impressive": "false",
     "never_autoplay_video": "false",
     "permitted_errors": "0",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You only need one `move forward` block if you're doing this correctly!\",\"hint_id\":\"courseD_artist_functions8_f\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b36847b63cc2e0d6e926d12eb2570f5c/courseE_artist_functions8b_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Start by making a function for a square, then try making a function for a line of squares.\",\"hint_id\":\"courseD_artist_functions8_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b4225968610b7b7235e682a5462b94e4/courseE_artist_functions8b_2018.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"To make a line of squares,\\n  - repeat 3 times\\n    - draw a square\\n    - jump forward **100 pixels**\",\"hint_id\":\"courseD_artist_functions8_d\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fc9c49982d6517f533a16c28890ef5df/courseE_artist_functions8b_2018.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You only need one `move forward` block if you're doing this correctly!\",\"hint_id\":\"courseD_artist_functions8_f\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b36847b63cc2e0d6e926d12eb2570f5c/courseE_artist_functions8b_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Start by making a function for a square, then try making a function for a line of squares.\",\"hint_id\":\"courseD_artist_functions8_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b4225968610b7b7235e682a5462b94e4/courseE_artist_functions8b_2018.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"To make a line of squares,\\n  - repeat 3 times\\n    - draw a square\\n    - jump forward **100 pixels**\",\"hint_id\":\"courseD_artist_functions8_d\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d5eea6e14c2239206cf163f7041c89a9/courseE_artist_functions8b_2018.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
     "callout_json": "[]",
@@ -43,12 +43,17 @@
     "top_level_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/537b81e3e5798d447d7353c0f1cdb7f9=levelbuilder/37077.png",
     "show_type_hints": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-07-26 00:48:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:28:00 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:30:19 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:30:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"x\",\"y\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:36:50 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:47:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:48:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 16:50:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:19:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:30:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"impressive\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 21:25:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 4,
+    "repeat_loops": 3,
+    "functions": 5
   }
 }]]></config>
   <blocks>

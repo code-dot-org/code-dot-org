@@ -26,8 +26,8 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Reorder the blocks to collect all of the treasure.",
-    "markdown_instructions": "*\"Help me collect all of the treasure!\"*\r\n\r\nThese blocks are in the wrong order. Reorder them to collect all of the treasure.",
+    "short_instructions": "Reorder the blocks to collect all of the treasure.",
+    "long_instructions": "*\"Help me collect all of the treasure!\"*\r\n\r\nThese blocks are in the wrong order. Reorder them to collect all of the treasure.",
     "ideal": "11",
     "instructions_important": "false",
     "min_collected": "3",
@@ -38,11 +38,17 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 6478,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "All blocks already attached, but some in wrong order. How do you fix?",
-  "audit_log": "[{\"changed_at\":\"2017-07-07 17:14:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-11-09 03:21:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-07 17:14:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-11-09 03:21:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

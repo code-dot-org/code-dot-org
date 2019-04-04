@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 
 module RegistrationsControllerTests
@@ -20,8 +19,8 @@ module RegistrationsControllerTests
     end
 
     test "set email with utf8mb4 in email fails" do
-      student = create :student
-      sign_in student
+      user = create :teacher
+      sign_in user
 
       # don't ask the db for existing panda emails
       User.expects(:find_by_email_or_hashed_email).never
@@ -33,8 +32,11 @@ module RegistrationsControllerTests
       end
 
       assert_response :unprocessable_entity
-      assert_equal ['Email is invalid'], assigns(:user).errors.full_messages
-      assert_equal response.body, {email: ['Email is invalid']}.to_json
+      assert_equal ['Authentication options is invalid', 'Email is invalid'], assigns(:user).errors.full_messages
+      assert_equal response.body, {
+        authentication_options: ['Authentication options is invalid'],
+        email: ['Email is invalid']
+      }.to_json
     end
 
     test "update student with client side hashed email" do
@@ -84,14 +86,24 @@ module RegistrationsControllerTests
     # passwords.  Examples of users without passwords are users that authenticate
     # via oauth (a third-party account), or students with a picture password.
 
-    test "editing email of student-without-password is not allowed" do
+    test "editing email of unmigrated student-without-password is not allowed" do
+      unmigrated_student_without_password = create :student, :demigrated
+      unmigrated_student_without_password.update_attribute(:encrypted_password, '')
+      assert unmigrated_student_without_password.encrypted_password.blank?
+
+      refute can_edit_email_without_password unmigrated_student_without_password
+      refute can_edit_email_with_password unmigrated_student_without_password, 'wrongpassword'
+      refute can_edit_email_with_password unmigrated_student_without_password, ''
+    end
+
+    test "editing email of migrated student-without-password is allowed" do
       student_without_password = create :student
       student_without_password.update_attribute(:encrypted_password, '')
       assert student_without_password.encrypted_password.blank?
 
-      refute can_edit_email_without_password student_without_password
-      refute can_edit_email_with_password student_without_password, 'wrongpassword'
-      refute can_edit_email_with_password student_without_password, ''
+      assert can_edit_email_without_password student_without_password
+      assert can_edit_email_with_password student_without_password, 'wrongpassword'
+      assert can_edit_email_with_password student_without_password, ''
     end
 
     test "editing email of student-with-password requires current password" do
@@ -101,14 +113,24 @@ module RegistrationsControllerTests
       assert can_edit_email_with_password student_with_password, 'oldpassword'
     end
 
-    test "editing email of teacher-without-password is not allowed" do
+    test "editing email of demigrated teacher-without-password is not allowed" do
+      unmigrated_teacher_without_password = create :teacher, :demigrated
+      unmigrated_teacher_without_password.update_attribute(:encrypted_password, '')
+      assert unmigrated_teacher_without_password.encrypted_password.blank?
+
+      refute can_edit_email_without_password unmigrated_teacher_without_password
+      refute can_edit_email_with_password unmigrated_teacher_without_password, 'wrongpassword'
+      refute can_edit_email_with_password unmigrated_teacher_without_password, ''
+    end
+
+    test "editing email of migrated teacher-without-password is allowed" do
       teacher_without_password = create :teacher
       teacher_without_password.update_attribute(:encrypted_password, '')
       assert teacher_without_password.encrypted_password.blank?
 
-      refute can_edit_email_without_password teacher_without_password
-      refute can_edit_email_with_password teacher_without_password, 'wrongpassword'
-      refute can_edit_email_with_password teacher_without_password, ''
+      assert can_edit_email_without_password teacher_without_password
+      assert can_edit_email_with_password teacher_without_password, 'wrongpassword'
+      assert can_edit_email_with_password teacher_without_password, ''
     end
 
     test "editing email of teacher-with-password requires current password" do
@@ -118,14 +140,24 @@ module RegistrationsControllerTests
       assert can_edit_email_with_password teacher_with_password, 'oldpassword'
     end
 
-    test "editing hashed_email of student-without-password is not allowed" do
+    test "editing hashed_email of unmigrated student-without-password is not allowed" do
+      unmigrated_student_without_password = create :student, :demigrated
+      unmigrated_student_without_password.update_attribute(:encrypted_password, '')
+      assert unmigrated_student_without_password.encrypted_password.blank?
+
+      refute can_edit_hashed_email_without_password unmigrated_student_without_password
+      refute can_edit_hashed_email_with_password unmigrated_student_without_password, 'wrongpassword'
+      refute can_edit_hashed_email_with_password unmigrated_student_without_password, ''
+    end
+
+    test "editing hashed_email of migrated student-without-password is allowed" do
       student_without_password = create :student
       student_without_password.update_attribute(:encrypted_password, '')
       assert student_without_password.encrypted_password.blank?
 
-      refute can_edit_hashed_email_without_password student_without_password
-      refute can_edit_hashed_email_with_password student_without_password, 'wrongpassword'
-      refute can_edit_hashed_email_with_password student_without_password, ''
+      assert can_edit_hashed_email_without_password student_without_password
+      assert can_edit_hashed_email_with_password student_without_password, 'wrongpassword'
+      assert can_edit_hashed_email_with_password student_without_password, ''
     end
 
     test "editing hashed_email of student-with-password requires current password" do
@@ -151,6 +183,30 @@ module RegistrationsControllerTests
       refute can_edit_hashed_email_with_password teacher_with_password, 'wrongpassword'
       # Can't even do this, because cleartext email is required for teachers
       refute can_edit_hashed_email_with_password teacher_with_password, 'oldpassword'
+    end
+
+    test "updating migrated teacher email with positive email opt-in" do
+      new_email = 'new_email@example.com'
+      teacher = create :teacher, password: 'password'
+      teacher.migrate_to_multi_auth
+      teacher.reload
+
+      sign_in teacher
+      patch '/users/email', as: :json, params: {
+        user: {
+          email: new_email,
+          current_password: 'password',
+          email_preference_opt_in: 'yes',
+        }
+      }
+      assert_response :success
+
+      preference = EmailPreference.find_by_email(new_email)
+      refute_nil preference
+      assert_equal true, preference.opt_in
+      assert_equal request.ip, preference.ip_address
+      assert_equal EmailPreference::ACCOUNT_EMAIL_CHANGE, preference.source
+      assert_equal "0", preference.form_kind
     end
 
     test "updating teacher email with positive email opt-in" do
@@ -309,7 +365,7 @@ module RegistrationsControllerTests
     #
 
     test "multi-auth: returns bad_request if user param is nil" do
-      student = create(:student, :with_migrated_email_authentication_option)
+      student = create(:student)
       sign_in student
 
       patch '/users/email', params: {}
@@ -317,7 +373,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for migrated user with password if user cannot edit password" do
-      teacher = create(:teacher, :with_migrated_email_authentication_option)
+      teacher = create(:teacher)
       sign_in teacher
 
       User.any_instance.stubs(:can_edit_password?).returns(false)
@@ -327,7 +383,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for migrated user with email if user cannot edit email" do
-      teacher = create(:teacher, :with_migrated_email_authentication_option)
+      teacher = create(:teacher)
       sign_in teacher
 
       User.any_instance.stubs(:can_edit_email?).returns(false)
@@ -337,7 +393,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for migrated user with hashed email if user cannot edit email" do
-      teacher = create(:teacher, :with_migrated_email_authentication_option)
+      teacher = create(:teacher)
       sign_in teacher
 
       User.any_instance.stubs(:can_edit_email?).returns(false)
@@ -347,7 +403,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for migrated user if password is incorrect" do
-      teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+      teacher = create(:teacher, password: 'mypassword')
       sign_in teacher
 
       patch '/users/email', params: {user: {email: 'example@email.com', current_password: 'notmypassword'}}
@@ -357,7 +413,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: updates email for migrated teacher if password is correct" do
-      teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+      teacher = create(:teacher, password: 'mypassword')
       sign_in teacher
 
       patch '/users/email', params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
@@ -367,7 +423,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: updates email for migrated student if password is correct" do
-      student = create(:student, :with_migrated_email_authentication_option, password: 'mypassword')
+      student = create(:student, password: 'mypassword')
       sign_in student
 
       patch '/users/email', params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
@@ -377,7 +433,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: updates email for migrated teacher without password if password is not required" do
-      teacher = create(:teacher, :with_migrated_email_authentication_option, encrypted_password: '')
+      teacher = create(:teacher, encrypted_password: '')
       sign_in teacher
 
       patch '/users/email', params: {user: {email: 'new@email.com'}}
@@ -387,7 +443,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: updates email for migrated student without password if password is not required" do
-      student = create(:student, :with_migrated_email_authentication_option, encrypted_password: '')
+      student = create(:student, encrypted_password: '')
       sign_in student
 
       hashed_new_email = User.hash_email('new@email.com')
@@ -398,7 +454,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: updates email for migrated student with plaintext email param if provided" do
-      student = create(:student, :with_migrated_email_authentication_option, encrypted_password: '')
+      student = create(:student, encrypted_password: '')
       sign_in student
 
       hashed_other_email = User.hash_email('second@email.com')
@@ -409,7 +465,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for non-migrated user with password if user cannot edit password" do
-      teacher = create(:teacher, :with_email_authentication_option)
+      teacher = create(:teacher)
       sign_in teacher
 
       User.any_instance.stubs(:can_edit_password?).returns(false)
@@ -419,7 +475,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for non-migrated user with email if user cannot edit email" do
-      teacher = create(:teacher, :with_email_authentication_option)
+      teacher = create(:teacher)
       sign_in teacher
 
       User.any_instance.stubs(:can_edit_email?).returns(false)
@@ -429,7 +485,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for non-migrated user with hashed email if user cannot edit email" do
-      teacher = create(:teacher, :with_email_authentication_option)
+      teacher = create(:teacher)
       sign_in teacher
 
       User.any_instance.stubs(:can_edit_email?).returns(false)
@@ -439,7 +495,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for non-migrated user if password is incorrect" do
-      teacher = create(:teacher, :with_email_authentication_option, password: 'mypassword')
+      teacher = create(:teacher, password: 'mypassword')
       sign_in teacher
 
       patch '/users/email', params: {user: {email: 'example@email.com', current_password: 'notmypassword'}}
@@ -447,7 +503,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: updates email for non-migrated user if password is correct" do
-      teacher = create :teacher, :with_email_authentication_option, password: 'mypassword'
+      teacher = create :teacher, password: 'mypassword'
       sign_in teacher
 
       patch '/users/email', params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
@@ -459,8 +515,8 @@ module RegistrationsControllerTests
     test "multi-auth: cannot set an email that is already taken" do
       taken_email = 'taken@example.org'
       password = 'password'
-      create :student, :with_migrated_email_authentication_option, email: taken_email
-      teacher = create :teacher, :with_migrated_email_authentication_option, password: password
+      create :student, email: taken_email
+      teacher = create :teacher, password: password
 
       sign_in teacher
       patch '/users/email', params: {

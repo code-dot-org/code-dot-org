@@ -15,7 +15,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Try out console.log.  Do this: replace the statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run the program and you should see the output show up in the console area below the workspace.  Then try adding a few more console.log statements.  Display some text.  Make another variable and display that.  \r\nThe app screen will be blank -- that's the point.  With console.log you can test output behind the scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif",
+    "short_instructions": "Try out console.log.  Do this: replace the statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).  Run the program and you should see the output show up in the console area below the workspace.  Then try adding a few more console.log statements.  Display some text.  Make another variable and display that.  \r\nThe app screen will be blank -- that's the point.  With console.log you can test output behind the scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

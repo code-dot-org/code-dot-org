@@ -14,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Congrats on finishing your Hour of Code! You can share your work with friends! Click \"Share\" to get a link or even text it to them.\r\n\r\nYou can keep working on your project here. Whenever your friends go to the link you shared they'll get the latest version you made. How far will you build your adventure?",
+    "long_instructions": "Congrats on finishing your Hour of Code! You can share your work with friends! Click \"Share\" to get a link or even text it to them.\r\n\r\nYou can keep working on your project here. Whenever your friends go to the link you shared they'll get the latest version you made. How far will you build your adventure?",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

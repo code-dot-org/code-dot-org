@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "This design got started without a \"for\" loop and is taking too many blocks!  Use a \"for\" block to complete the spiral.  Hint: the last line length is 250 pixels.",
+    "short_instructions": "This design got started without a \"for\" loop and is taking too many blocks!  Use a \"for\" block to complete the spiral.  Hint: the last line length is 250 pixels.",
     "x": "200",
     "y": "100",
     "start_direction": "180",

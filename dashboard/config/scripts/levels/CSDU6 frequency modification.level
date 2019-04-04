@@ -49,7 +49,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Making the Buzzer Buzz\r\n\r\nThe frequency of the buzzer determines how high or how low the buzzer will sound when it plays. The higher the number you give frequency, the higher the buzzer will sound.\r\n\r\n# Do this\r\n* Right now the buzzer plays a high note when the left button is pressed. Make the buzzer play a low note instead.\r\n",
+    "long_instructions": "# Making the Buzzer Buzz\r\n\r\nThe frequency of the buzzer determines how high or how low the buzzer will sound when it plays. The higher the number you give frequency, the higher the buzzer will sound.\r\n\r\n# Do this\r\n* Right now the buzzer plays a high note when the left button is pressed. Make the buzzer play a low note instead.\r\n",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

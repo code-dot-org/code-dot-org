@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://maps.googleapis.com/maps/api/geocode/json?address=1%20Embarcadero%20Blvd%20SF%20CA&language=en&sensor=false
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=1%20Embarcadero%20Blvd%20SF%20CA&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
@@ -722,7 +722,7 @@ http_interactions:
   recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
 - request:
     method: get
-    uri: http://maps.googleapis.com/maps/api/geocode/json?address=123%20Post%20Road%20Westport%20CT&language=en&sensor=false
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=123%20Post%20Road%20Westport%20CT&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
@@ -836,7 +836,7 @@ http_interactions:
   recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
 - request:
     method: get
-    uri: http://maps.googleapis.com/maps/api/geocode/json?address=123,%20Post%20Road,%20Westport,%20CT&language=en&sensor=false
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=123,%20Post%20Road,%20Westport,%20CT&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
@@ -950,7 +950,7 @@ http_interactions:
   recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
 - request:
     method: get
-    uri: http://maps.googleapis.com/maps/api/geocode/json?address=123,%20Post%20Road,%20Westport,%20CT%20and%20other%20stuff&language=en&sensor=false
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=123,%20Post%20Road,%20Westport,%20CT%20and%20other%20stuff&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
@@ -1065,7 +1065,7 @@ http_interactions:
   recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
 - request:
     method: get
-    uri: http://maps.googleapis.com/maps/api/geocode/json?address=1st%202%20and%203rd%20person%20in%20California&language=en&sensor=false
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=1st%202%20and%203rd%20person%20in%20California&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
@@ -1150,7 +1150,7 @@ http_interactions:
   recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
 - request:
     method: get
-    uri: http://maps.googleapis.com/maps/api/geocode/json?address=3%20Rover%20Road%20in%20Christmasville%20MA%2012346&language=en&sensor=false
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=3%20Rover%20Road%20in%20Christmasville%20MA%2012346&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
@@ -1189,7 +1189,7 @@ http_interactions:
   recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
 - request:
     method: get
-    uri: http://maps.googleapis.com/maps/api/geocode/json?address=1500000001230b&language=en&sensor=false
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=1500000001230b&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''

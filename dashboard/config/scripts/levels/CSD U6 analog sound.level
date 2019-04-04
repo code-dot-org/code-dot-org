@@ -12,7 +12,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Reading the Sound Sensor\r\n\r\nThe `soundSensor.value` block allows you to get the current sound sensor reading\r\n\r\n# Do This\r\n\r\nIn this app we've already added a text label with the id \"sound_value\". Using the `soundSensor.value` block, display the value of the sound sensor.\r\n\r\n_Tip: You can drag the `soundSensor.value` block directly into any other block where you could type a value instead._\r\n\r\n![](https://images.code.org/3bd9ac3f869e42f48aaf190944fe1c22-image-1511293198110.png)",
+    "long_instructions": "# Reading the Sound Sensor\r\n\r\nThe `soundSensor.value` block allows you to get the current sound sensor reading\r\n\r\n# Do This\r\n\r\nIn this app we've already added a text label with the id \"sound_value\". Using the `soundSensor.value` block, display the value of the sound sensor.\r\n\r\n_Tip: You can drag the `soundSensor.value` block directly into any other block where you could type a value instead._\r\n\r\n![](https://images.code.org/3bd9ac3f869e42f48aaf190944fe1c22-image-1511293198110.png)",
     "instructions_important": "false",
     "start_blocks": "// Set the text of \"sound_value\"\r\n// to the current sound sensor value\r\n",
     "is_k1": "false",

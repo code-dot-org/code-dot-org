@@ -31,7 +31,7 @@ export default class Walls {
       height = this.wallCollisionRectHeight || height;
     }
 
-    this.drawDebugRect("avatarCollision", xCenter, yCenter, width, height);
+    this.drawDebugRect('avatarCollision', xCenter, yCenter, width, height);
     return this.willRectTouchWall(xCenter, yCenter, width, height);
   }
 
@@ -43,7 +43,7 @@ export default class Walls {
   }
 
   overlappingTest(x1, x2, xVariance, y1, y2, yVariance) {
-    return (Math.abs(x1 - x2) < xVariance) && (Math.abs(y1 - y2) < yVariance);
+    return Math.abs(x1 - x2) < xVariance && Math.abs(y1 - y2) < yVariance;
   }
 
   /**

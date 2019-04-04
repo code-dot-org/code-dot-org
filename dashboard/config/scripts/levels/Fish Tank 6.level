@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-04-23T16:42:45.000Z",
   "level_num": "custom",
   "user_id": 182,
@@ -45,10 +45,11 @@
     "hide_custom_blocks": "true",
     "custom_helper_library": "function tumbling(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotation-=6;\r\n    sprite.x-=3;\r\n  }\r\n  behavior.name = 'tumbling';\r\n  return behavior;\r\n}\r\nfunction swimming(sprite) {\r\n  var behavior = function(sprite) {\r\n    if (sprite.mirrorX() == 1) {\r\n     \tsprite.x+=6; \r\n    }\r\n    if (sprite.mirrorX() == -1) {\r\n     \tsprite.x-=6; \r\n    }\r\n\tif (sprite.x<=40) {\r\n\t    sprite.mirrorX(1);\r\n    } if (sprite.x>=360) {\r\n      sprite.mirrorX(-1);\r\n    }\r\n  }\r\n  behavior.name = 'swimming';\r\n  return behavior;\r\n}\r\n",
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"tumbling\",\r\n    \"blockText\": \"tumbling\",\r\n    \"returnType\": \"Behavior\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"swimming\",\r\n    \"blockText\": \"swimming side to side\",\r\n    \"returnType\": \"Behavior\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  }\r\n]",
-    "markdown_instructions": "What do you want your fish’s friend to do? Add a behavior and watch them go!",
+    "long_instructions": "What do you want your fish’s friend to do? Add a behavior and watch them go!",
     "parent_level_id": 12609,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

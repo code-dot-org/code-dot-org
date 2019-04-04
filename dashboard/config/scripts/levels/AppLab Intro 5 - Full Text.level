@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<div style=\"float:right\">\r\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19 AM.png\" style=\"height:200px\">\r\n</div>\r\n\r\n**Goal:** Change the words on the screen and the colors of the buttons.\r\n\r\n**How:** Set the `\"text\"` of the label to anything you want, like `\"Welcome to my app!\"`. Then set the `\"background-color\"` of the buttons.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/709ff200e5b5f553b24d1d0a769db6ed-image-1507565545993.gif)",
+    "long_instructions": "<div style=\"float:right\">\r\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19 AM.png\" style=\"height:200px\">\r\n</div>\r\n\r\n**Goal:** Change the words on the screen and the colors of the buttons.\r\n\r\n**How:** Set the `\"text\"` of the label to anything you want, like `\"Welcome to my app!\"`. Then set the `\"background-color\"` of the buttons.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/709ff200e5b5f553b24d1d0a769db6ed-image-1507565545993.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

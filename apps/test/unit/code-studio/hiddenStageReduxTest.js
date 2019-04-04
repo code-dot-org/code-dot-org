@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import {assert} from 'chai';
 import sinon from 'sinon';
 
 import reducer, {
@@ -12,7 +12,12 @@ import reducer, {
   initializeHiddenScripts,
   STUDENT_SECTION_ID
 } from '@cdo/apps/code-studio/hiddenStageRedux';
-import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
+import {
+  stubRedux,
+  restoreRedux,
+  registerReducers,
+  getStore
+} from '@cdo/apps/redux';
 
 function fakeStageLockReducer(state, action) {
   return {
@@ -62,8 +67,11 @@ describe('hiddenStageRedux', () => {
       const action = getHiddenStages('scriptName', true);
       store.dispatch(action);
 
-      lastRequest.respond(200, { "Content-Type": "application/json" },
-        JSON.stringify([123, 456]));
+      lastRequest.respond(
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify([123, 456])
+      );
 
       const nextState = store.getState().hiddenStage;
       assert.deepEqual(nextState.toJS(), {
@@ -91,7 +99,9 @@ describe('hiddenStageRedux', () => {
       const action = getHiddenStages('scriptName', true);
       store.dispatch(action);
 
-      lastRequest.respond(200, { "Content-Type": "application/json" },
+      lastRequest.respond(
+        200,
+        {'Content-Type': 'application/json'},
         JSON.stringify({
           10: [123, 456],
           11: [123]
@@ -127,7 +137,9 @@ describe('hiddenStageRedux', () => {
       const action = getHiddenStages('scriptName', true);
       store.dispatch(action);
 
-      lastRequest.respond(200, { "Content-Type": "application/json" },
+      lastRequest.respond(
+        200,
+        {'Content-Type': 'application/json'},
         JSON.stringify({})
       );
 
@@ -227,11 +239,17 @@ describe('hiddenStageRedux', () => {
         const dispatch = sinon.spy();
         toggleHiddenScript('somescript', '123', '45', true)(dispatch);
 
-        assert(dispatch.firstCall.calledWithExactly(updateHiddenScript('123', '45', true)));
+        assert(
+          dispatch.firstCall.calledWithExactly(
+            updateHiddenScript('123', '45', true)
+          )
+        );
 
         assert.strictEqual(lastRequest.url, '/s/somescript/toggle_hidden');
-        assert.strictEqual(lastRequest.requestBody,
-          JSON.stringify({section_id: '123', hidden: true}));
+        assert.strictEqual(
+          lastRequest.requestBody,
+          JSON.stringify({section_id: '123', hidden: true})
+        );
       });
     });
 
@@ -239,22 +257,46 @@ describe('hiddenStageRedux', () => {
       const sectionId = '123';
       const stageId = '45';
 
-      const state = reducer(initialState, updateHiddenStage(sectionId, stageId, true));
-      assert.strictEqual(state.getIn(['stagesBySection', sectionId, stageId]), true);
+      const state = reducer(
+        initialState,
+        updateHiddenStage(sectionId, stageId, true)
+      );
+      assert.strictEqual(
+        state.getIn(['stagesBySection', sectionId, stageId]),
+        true
+      );
 
-      const nexstate = reducer(state, updateHiddenStage(sectionId, stageId, false));
-      assert.strictEqual(nexstate.getIn(['stagesBySection', sectionId, stageId]), false);
+      const nexstate = reducer(
+        state,
+        updateHiddenStage(sectionId, stageId, false)
+      );
+      assert.strictEqual(
+        nexstate.getIn(['stagesBySection', sectionId, stageId]),
+        false
+      );
     });
 
     it('updateHiddenScript', () => {
       const sectionId = '123';
       const scriptId = '10';
 
-      const state = reducer(initialState, updateHiddenScript(sectionId, scriptId, true));
-      assert.strictEqual(state.getIn(['scriptsBySection', sectionId, scriptId]), true);
+      const state = reducer(
+        initialState,
+        updateHiddenScript(sectionId, scriptId, true)
+      );
+      assert.strictEqual(
+        state.getIn(['scriptsBySection', sectionId, scriptId]),
+        true
+      );
 
-      const nexstate = reducer(state, updateHiddenScript(sectionId, scriptId, false));
-      assert.strictEqual(nexstate.getIn(['scriptsBySection', sectionId, scriptId]), false);
+      const nexstate = reducer(
+        state,
+        updateHiddenScript(sectionId, scriptId, false)
+      );
+      assert.strictEqual(
+        nexstate.getIn(['scriptsBySection', sectionId, scriptId]),
+        false
+      );
     });
 
     describe('initializeHiddenScripts', () => {
@@ -270,24 +312,36 @@ describe('hiddenStageRedux', () => {
           '456': ['3']
         };
         initializeHiddenScripts(data)(dispatch);
-        assert.deepEqual(dispatch.getCall(0).args[0],
-          updateHiddenScript('123', '1', true));
-        assert.deepEqual(dispatch.getCall(1).args[0],
-          updateHiddenScript('123', '2', true));
-        assert.deepEqual(dispatch.getCall(2).args[0],
-          updateHiddenScript('456', '3', true));
+        assert.deepEqual(
+          dispatch.getCall(0).args[0],
+          updateHiddenScript('123', '1', true)
+        );
+        assert.deepEqual(
+          dispatch.getCall(1).args[0],
+          updateHiddenScript('123', '2', true)
+        );
+        assert.deepEqual(
+          dispatch.getCall(2).args[0],
+          updateHiddenScript('456', '3', true)
+        );
       });
 
       it('dispatches for each script for students', () => {
         const data = ['1', '2', '3'];
         initializeHiddenScripts(data)(dispatch);
 
-        assert.deepEqual(dispatch.getCall(0).args[0],
-          updateHiddenScript(STUDENT_SECTION_ID, '1', true));
-        assert.deepEqual(dispatch.getCall(1).args[0],
-          updateHiddenScript(STUDENT_SECTION_ID, '2', true));
-        assert.deepEqual(dispatch.getCall(2).args[0],
-          updateHiddenScript(STUDENT_SECTION_ID, '3', true));
+        assert.deepEqual(
+          dispatch.getCall(0).args[0],
+          updateHiddenScript(STUDENT_SECTION_ID, '1', true)
+        );
+        assert.deepEqual(
+          dispatch.getCall(1).args[0],
+          updateHiddenScript(STUDENT_SECTION_ID, '2', true)
+        );
+        assert.deepEqual(
+          dispatch.getCall(2).args[0],
+          updateHiddenScript(STUDENT_SECTION_ID, '3', true)
+        );
       });
     });
   });
@@ -296,26 +350,46 @@ describe('hiddenStageRedux', () => {
     const sectionId = '123';
     const hiddenStageId = '45';
     const unhiddenStageId = '67';
-    const state = reducer(initialState, updateHiddenStage(sectionId, hiddenStageId, true));
+    const state = reducer(
+      initialState,
+      updateHiddenStage(sectionId, hiddenStageId, true)
+    );
 
     it('returns false if not given a stageId', () => {
-      assert.strictEqual(isStageHiddenForSection(state, sectionId, null), false);
+      assert.strictEqual(
+        isStageHiddenForSection(state, sectionId, null),
+        false
+      );
     });
 
     it('returns false if given an stageId not hidden for the given sectionId', () => {
-      assert.strictEqual(isStageHiddenForSection(state, sectionId, unhiddenStageId), false);
+      assert.strictEqual(
+        isStageHiddenForSection(state, sectionId, unhiddenStageId),
+        false
+      );
     });
 
     it('returns true if given an stageId that is hidden for the given sectionId', () => {
-      assert.strictEqual(isStageHiddenForSection(state, sectionId, hiddenStageId), true);
+      assert.strictEqual(
+        isStageHiddenForSection(state, sectionId, hiddenStageId),
+        true
+      );
     });
 
     it('uses STUDENT_SECTION_ID if none is provided', () => {
       const studentHiddenStage = '35';
-      const state = reducer(initialState,
-        updateHiddenStage(STUDENT_SECTION_ID, studentHiddenStage, true));
-      assert.strictEqual(isStageHiddenForSection(state, null, studentHiddenStage), true);
-      assert.strictEqual(isStageHiddenForSection(state, null, unhiddenStageId), false);
+      const state = reducer(
+        initialState,
+        updateHiddenStage(STUDENT_SECTION_ID, studentHiddenStage, true)
+      );
+      assert.strictEqual(
+        isStageHiddenForSection(state, null, studentHiddenStage),
+        true
+      );
+      assert.strictEqual(
+        isStageHiddenForSection(state, null, unhiddenStageId),
+        false
+      );
     });
   });
 
@@ -324,26 +398,46 @@ describe('hiddenStageRedux', () => {
     const hiddenScriptId = '45';
     const unhiddenScriptId = '67';
     const initialState = reducer(undefined, {});
-    const state = reducer(initialState, updateHiddenScript(sectionId, hiddenScriptId, true));
+    const state = reducer(
+      initialState,
+      updateHiddenScript(sectionId, hiddenScriptId, true)
+    );
 
     it('returns false if not given a stageId', () => {
-      assert.strictEqual(isScriptHiddenForSection(state, sectionId, null), false);
+      assert.strictEqual(
+        isScriptHiddenForSection(state, sectionId, null),
+        false
+      );
     });
 
     it('returns false if given an stageId not hidden for the given sectionId', () => {
-      assert.strictEqual(isScriptHiddenForSection(state, sectionId, unhiddenScriptId), false);
+      assert.strictEqual(
+        isScriptHiddenForSection(state, sectionId, unhiddenScriptId),
+        false
+      );
     });
 
     it('returns true if given an stageId that is hidden for the given sectionId', () => {
-      assert.strictEqual(isScriptHiddenForSection(state, sectionId, hiddenScriptId), true);
+      assert.strictEqual(
+        isScriptHiddenForSection(state, sectionId, hiddenScriptId),
+        true
+      );
     });
 
     it('uses STUDENT_SECTION_ID if none is provided', () => {
       const studentHiddenScript = '35';
-      const state = reducer(initialState,
-        updateHiddenScript(STUDENT_SECTION_ID, studentHiddenScript, true));
-      assert.strictEqual(isScriptHiddenForSection(state, null, studentHiddenScript), true);
-      assert.strictEqual(isScriptHiddenForSection(state, null, unhiddenScriptId), false);
+      const state = reducer(
+        initialState,
+        updateHiddenScript(STUDENT_SECTION_ID, studentHiddenScript, true)
+      );
+      assert.strictEqual(
+        isScriptHiddenForSection(state, null, studentHiddenScript),
+        true
+      );
+      assert.strictEqual(
+        isScriptHiddenForSection(state, null, unhiddenScriptId),
+        false
+      );
     });
   });
 });

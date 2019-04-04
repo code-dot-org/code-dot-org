@@ -21,10 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   ReactDOM.render(
-    <SchoolInfoInterstitial
-      scriptData={scriptData}
-      onClose={unmount}
-    />,
+    <SchoolInfoInterstitial scriptData={scriptData} onClose={unmount} />,
     mountPoint
   );
 });

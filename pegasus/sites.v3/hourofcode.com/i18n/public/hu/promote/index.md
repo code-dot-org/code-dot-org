@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_promote) %>
+title: <%= hoc_s(:title_how_to_promote).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -12,17 +12,17 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Get your community involved in the Hour of Code
+# Vond be a közösségedet a "Hour of Code" kezdeményezésbe
 
 ## 1. Mondd el másoknak
 
-Tell your friends about the **#HourOfCode**!
+Mesélj a barátaidnak a **#HourOfCode** kezdeményezésről!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Javasold, hogy az egész iskola tartsa meg a Kódolás Óráját
+## 2. Javasold, hogy az egész iskola tartsa meg a "Hour of Code" eseményt
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
+Küldd el [ezt az emailt](<%= resolve_url('/promote/resources#sample-emails') %>) az intézményvezetőnek és hívd fel minden osztály figyelmét az eseményen való részvételi lehetőségre.
 
 ## 3. Kérd meg a munkáltatódat, hogy vegyetek részt
 
@@ -30,10 +30,10 @@ Küldd el [ezt az emailt](<%= resolve_url('/promote/resources#sample-emails') %>
 
 ## 4. Népszerűsítsd a Kódolás Óráját a közösségben
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[Szervezz egy helyi csapatot](<%= resolve_url('/promote/resources#sample-emails') %>) - fiú/lány klubból, templomból, egyetemről, veterán klubból vagy néhány jó barátból. Nem kell az iskolába járnod ahhoz, hogy új készségeket sajátíts el. Használd ezeket a [posztereket, hírdetéssket, matricákat, videókat stb.](<%= resolve_url('/promote/resources') %>) a saját rendezvényeden.
 
 ## 5. Kérj meg egy helyi választott vezetőt, hogy támogassa a Kód Órája kezdeményezést
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+Küldd el [ezt az emailt](<%= resolve_url('/promote/resources#sample-emails') %>) a helyi képviselőknek, városi követeknek, iskolaszéknek és kérd meg őket, hogy az "Hour of Code" esemény keretében látogassák meg az iskolát. Ez az egy óra képes növelni a számítástechnika oktatás támogatását a saját térségedben.
 
 <%= view :signup_button %>

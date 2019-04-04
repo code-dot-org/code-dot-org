@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw a rectangle to complete the bridge.",
+    "short_instructions": "Draw a rectangle to complete the bridge.",
     "x": "150",
     "y": "200",
     "start_direction": "90",

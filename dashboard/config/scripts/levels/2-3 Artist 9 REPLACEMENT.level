@@ -7,8 +7,8 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Finish drawing these stairs!",
-    "markdown_instructions": "Finish drawing these stairs!",
+    "short_instructions": "Finish drawing these stairs!",
+    "long_instructions": "Finish drawing these stairs!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

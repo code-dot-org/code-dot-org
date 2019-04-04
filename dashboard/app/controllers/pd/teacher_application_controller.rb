@@ -13,18 +13,6 @@ class Pd::TeacherApplicationController < ApplicationController
   # GET /pd/teacher_application
   def new
     redirect_to pd_application_teacher_path
-
-    # TODO: remove
-    # authorize! :create, Pd::TeacherApplication
-    #
-    # @application_data = {
-    #   accountEmail: current_user.email,
-    #   hashedAccountEmail: current_user.hashed_email
-    # }
-    #
-    # if Pd::TeacherApplication.exists?(user: current_user)
-    #   render :submitted
-    # end
   end
 
   # GET /pd/teacher_application/manage
@@ -73,7 +61,7 @@ class Pd::TeacherApplicationController < ApplicationController
 
   # POST /pd/teacher_application/manage/:teacher_application_id/upgrade_to_teacher
   def upgrade_to_teacher
-    @teacher_application.user.update(user_type: User::TYPE_TEACHER, email: @teacher_application.primary_email)
+    @teacher_application.user.upgrade_to_teacher(@teacher_application.primary_email)
     redirect_to action: :edit
   end
 

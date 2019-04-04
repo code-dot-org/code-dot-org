@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Only one last direction to worry about! Create a \"safe-down?\" function and update the \"on-screen?\" function so that it checks up, down, left, and right.",
+    "short_instructions": "Only one last direction to worry about! Create a \"safe-down?\" function and update the \"on-screen?\" function so that it checks up, down, left, and right.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

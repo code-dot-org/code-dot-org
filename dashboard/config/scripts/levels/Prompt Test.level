@@ -41,7 +41,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Build whatever you want. This is an example of a number-guessing game!",
+    "short_instructions": "Build whatever you want. This is an example of a number-guessing game!",
     "first_sprite_index": "0",
     "contained_level_names": null
   },

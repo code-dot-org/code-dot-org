@@ -12,6 +12,7 @@ class CoursesController < ApplicationController
         @is_signed_out = current_user.nil?
         @force_race_interstitial = params[:forceRaceInterstitial]
         @header_banner_image_filename = !@is_teacher ? "courses-hero-student" : "courses-hero-teacher"
+        @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
       end
       format.json do
         courses = Course.valid_courses(user: current_user)
@@ -38,6 +39,11 @@ class CoursesController < ApplicationController
       return
     end
 
+    if !params[:section_id] && current_user&.last_section_id
+      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+      return
+    end
+
     course = Course.get_from_cache(params[:course_name])
     unless course
       # PLC courses have different ways of getting to name. ideally this goes
@@ -55,7 +61,13 @@ class CoursesController < ApplicationController
       return
     end
 
-    render 'show', locals: {course: course}
+    # Attempt to redirect user if we think they ended up on the wrong course overview page.
+    if redirect_course = redirect_course(course)
+      redirect_to "/courses/#{redirect_course.name}/?redirect_warning=true"
+      return
+    end
+
+    render 'show', locals: {course: course, redirect_warning: params[:redirect_warning] == 'true'}
   end
 
   def new
@@ -93,5 +105,22 @@ class CoursesController < ApplicationController
       :description_student,
       :description_teacher
     ).to_h
+  end
+
+  private
+
+  def redirect_course(course)
+    # Return nil if course is nil or we know the user can view the version requested.
+    return nil if !course || course.can_view_version?(current_user)
+
+    # Redirect the user to the latest assigned course in this family, or to the latest course in this family if none
+    # are assigned.
+    redirect_course = Course.latest_assigned_version(course.family_name, current_user)
+    redirect_course ||= Course.latest_version(course.family_name)
+
+    # Do not redirect if we are already on the correct course.
+    return nil if redirect_course == course
+
+    redirect_course
   end
 end

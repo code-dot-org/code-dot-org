@@ -46,7 +46,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Introducing the setPosition command!  Replace the moveTo in the button-click event handler to use setPosition to move the button itself to a random location when it's clicked.",
+    "short_instructions": "Introducing the setPosition command!  Replace the moveTo in the button-click event handler to use setPosition to move the button itself to a random location when it's clicked.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

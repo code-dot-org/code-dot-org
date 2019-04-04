@@ -1,23 +1,27 @@
 ---
-title: <%= hoc_s(:title_how_to) %>
+title: <%= hoc_s(:title_how_to).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Bagaimana untuk mengajar sebuah Hour of Code</h1>
+# How to teach one Hour of Code with your class
 
-Sertai gerakan ini dan perkenalkan sekumpulan pelajar kepada jam pertama mereka dalam sains komputer dengan langkah-langkah ini. Hour of Code mudah untuk dilaksanakan - walaupun untuk pemula! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Sertai gerakan ini dan perkenalkan sekumpulan pelajar kepada jam pertama mereka dalam sains komputer dengan langkah-langkah ini. Hour of Code mudah untuk dilaksanakan - walaupun untuk pemula! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. Menonton video bagaimana untuk melaksanakannya ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Memilih sebuah tutorial untuk dilakukan dalam sejam anda
 
-Kita menyediakan pelbagai [tutorial yang berpandukan pelajar](<%= resolve_url('/learn') %>) yang menyeronokkan bagi setiap peringkat umur dan tahap pengalaman. Pelajar-pelajar akan melakukan aktiviti-aktiviti mereka sendiri, walaubagaimanapun banyak aktiviti turut mempunyai rancangan pengajaran untuk guru-guru (anda akan dapat melihat pautan apabila anda klik pada aktiviti) untuk membimbing perbincangan atau melanjutkan waktu aktiviti. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Mempromosikan Hour of Code anda
 
-Mempromosikan Hour of Code anda [dengan alat-alat ini](<%= resolve_url('/promote/resources') %>) dan manggalakkan orang lain untuk menjadi tuan rumah kepada acara-acara mereka sendiri.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
 ## 4. Rancangkan keperluan teknologi anda - komputer adalah tidak diwajibkan
 
@@ -40,7 +44,7 @@ Sediakan fon kepala untuk kelas anda, atau meminta pelajar untuk menyediakan sen
 - Video asal pelancaran Code.org, bersama dengan Bill Gates, Mark Zuckerberg, dan bintang NBA Chris Bosh. (Terdapat versi [1 minit](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minit](https://www.youtube.com/watch?v=nKIu9yen5nc), dan [9 minit](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Tidak mengapa jika anda masih lagi baru kepada sains komputer. Di sini terdapat beberapa idea untuk memperkenalkan aktiviti Hour of Code anda:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Terangkan cara-cara teknologi memberi impak kepada kehidupan kita, dengan contoh-contoh di mana kanak-kanak lelaki dan perempuan akan mengambil berat tentangnya (bercakap tentang menyelamatkan nyawa, membantu orang ramai, menghubungkan orang ramai dan sebagainya).
 - Dalam kelas, senaraikan perkara-perkara yang menggunakan kod dalam kehidupan seharian.
@@ -48,17 +52,17 @@ Sediakan fon kepala untuk kelas anda, atau meminta pelajar untuk menyediakan sen
 
 ## 6. Kod!
 
-**Memberi panduan kepada pelajar mengenai aktiviti**
+**Direct students to the activity**
 
 - Tulis pautan tutorial di sebuah papan putih. Cari pautan yang disenaraikan pada [maklumat untuk tutorial yang terpilih](<%= resolve_url('/learn')%>) di bawah jumlah peserta.
 
-**Tidak mengapa jika kita menjawab sebegini apabila pelajar anda menghadapi kesukaran:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Saya tak tahu. Jom kita cuba selesaikan bersama-sama."
 - "Teknologi tidak selalunya akan menjadi apa yang kita mahukan."
 - "Belajar untuk memprogram adalah sama seperti belajar suatu bahasa yang baru; anda tidak akan fasih secara serta merta."
 
-**Macam mana sekiranya terdapat pelajar yang selesai awal?**
+**What if a student finishes early?**
 
 - Pelajar boleh lihat kesemua tutorial dan [cuba aktiviti Hour of Code yang lain](<%= resolve_url('/learn')%>).
 - Atau, meminta pelajar yang selesai awal untuk membantu rakan sekelas yang menghadapi masalah dengan aktiviti.

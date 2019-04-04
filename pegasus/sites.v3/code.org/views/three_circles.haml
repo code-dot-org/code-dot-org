@@ -1,10 +1,10 @@
-%link{href: "/css/three_circles.css", type: "text/css", rel: "stylesheet"}
+%link{href: "/css/three-circles.css", type: "text/css", rel: "stylesheet"}
 
 .row#infobottom
   - circles.each_with_index do |circle, index|
     .col-33
       %img.quote-image{src: circle[:img]}
-      - if circle[:subtext].nil? 
+      - if circle[:subtext].nil?
         %p.quote-title= circle[:text]
       - else
         %p.testimonial-title= circle[:text]

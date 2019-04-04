@@ -1,7 +1,8 @@
-import React, { PropTypes, Component } from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import { connect } from 'react-redux';
-import color from "../util/color";
+import {connect} from 'react-redux';
+import color from '../util/color';
 import Button from './Button';
 
 const styles = {
@@ -10,7 +11,6 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    position: 'relative',
     height: 440,
     width: 308,
     backgroundColor: color.white
@@ -20,7 +20,6 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    position: 'relative',
     height: 440,
     width: 473,
     marginBottom: 20,
@@ -28,27 +27,25 @@ const styles = {
   },
   image: {
     width: 310,
-    height: 220,
-    position: 'absolute',
+    height: 220
   },
   jumboImage: {
     width: 473,
-    height: 220,
-    position: 'absolute',
+    height: 220
   },
   text: {
     fontFamily: '"Gotham 4r", sans-serif',
-    color: color.charcoal,
+    color: color.charcoal
   },
   title: {
     paddingTop: 20,
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 15,
-    fontSize: 20,
+    fontSize: 20
   },
   button: {
-    margin: 20,
+    margin: 20
   },
   description: {
     paddingLeft: 20,
@@ -64,15 +61,15 @@ const styles = {
     fontSize: 14,
     marginTop: 5,
     padding: 5,
-    width: 258,
+    width: 258
   },
   ltr: {
-    float: 'left',
+    float: 'left'
   },
   rtl: {
     float: 'right',
     textAlign: 'right'
-  },
+  }
 };
 
 /**
@@ -96,51 +93,61 @@ class VerticalImageResourceCard extends Component {
   };
 
   render() {
-    const { title, description, link, buttonText, isRtl, jumbo, MCShareLink, image } = this.props;
+    const {
+      title,
+      description,
+      link,
+      buttonText,
+      isRtl,
+      jumbo,
+      MCShareLink,
+      image
+    } = this.props;
     const cardStyle = jumbo ? styles.jumboCard : styles.card;
     const imageStyle = jumbo ? styles.jumboImage : styles.image;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
 
     const filenameToImgUrl = {
-      "another-hoc": require('@cdo/static/resource_cards/anotherhoc.png'),
-      "applab-marketing": require('@cdo/static/resource_cards/applabmarketing.png'),
-      "applab-project": require('@cdo/static/resource_cards/applabcreateproject.png'),
-      "applab-tutorial": require('@cdo/static/resource_cards/applabtutorial.png'),
-      "create-account": require('@cdo/static/resource_cards/createaccount.png'),
-      "csf-express": require('@cdo/static/resource_cards/csfexpress.png'),
-      "course-catalog": require('@cdo/static/resource_cards/coursecatalog.png'),
-      "new-minecraft": require('@cdo/static/resource_cards/newminecraft.png'),
-      "old-minecraft": require('@cdo/static/resource_cards/oldminecraft.png'),
-      "minecraft-marketing": require('@cdo/static/resource_cards/minecraftmarketing.png'),
-      "codeorg-teacher":
-      require('@cdo/static/resource_cards/codeorgteacher.png'),
-      "third-party-teacher":
-      require('@cdo/static/resource_cards/thirdpartyteacher.png'),
-      "third-party-teacher-small":
-      require('@cdo/static/resource_cards/thirdpartyteachersmall.png'),
-      "maker": require('@cdo/static/resource_cards/maker.png')
+      'another-hoc': require('@cdo/static/resource_cards/anotherhoc.png'),
+      'applab-marketing': require('@cdo/static/resource_cards/applabmarketing.png'),
+      'applab-project': require('@cdo/static/resource_cards/applabcreateproject.png'),
+      'applab-tutorial': require('@cdo/static/resource_cards/applabtutorial.png'),
+      'create-account': require('@cdo/static/resource_cards/createaccount.png'),
+      'csf-express': require('@cdo/static/resource_cards/csfexpress.png'),
+      'course-catalog': require('@cdo/static/resource_cards/coursecatalog.png'),
+      'hero-minecraft': require('@cdo/static/resource_cards/herominecraft.png'),
+      'old-minecraft': require('@cdo/static/resource_cards/oldminecraft.png'),
+      'minecraft-marketing': require('@cdo/static/resource_cards/minecraftmarketing.png'),
+      'aquatic-minecraft': require('@cdo/static/resource_cards/aquaticminecraft.png'),
+      'codeorg-teacher': require('@cdo/static/resource_cards/codeorgteacher.png'),
+      'third-party-teacher': require('@cdo/static/resource_cards/thirdpartyteacher.png'),
+      'third-party-teacher-small': require('@cdo/static/resource_cards/thirdpartyteachersmall.png'),
+      maker: require('@cdo/static/resource_cards/maker.png'),
+      'dance-party': require('@cdo/static/resource_cards/danceparty.png'),
+      'dance-party-2': require('@cdo/static/resource_cards/danceparty2.png')
     };
     const imgSrc = filenameToImgUrl[image];
 
     return (
       <div style={[cardStyle, localeStyle]}>
-        <div style={imageStyle}/>
-          <img src={imgSrc}/>
+        <div style={imageStyle}>
+          <a href={link}>
+            <img src={imgSrc} />
+          </a>
+        </div>
         <div>
-          <div style={[styles.text, styles.title, localeStyle]}>
-            {title}
-          </div>
+          <div style={[styles.text, styles.title, localeStyle]}>{title}</div>
           <div style={[styles.text, styles.description, localeStyle]}>
-           {description}
-           {MCShareLink && (
-             <input
-               type="text"
-               style={[styles.text, styles.shareLink, localeStyle]}
-               value={MCShareLink}
-               onChange={() => {}}
-               onClick={e => e.target.select()}
-             />
-           )}
+            {description}
+            {MCShareLink && (
+              <input
+                type="text"
+                style={[styles.text, styles.shareLink, localeStyle]}
+                value={MCShareLink}
+                onChange={() => {}}
+                onClick={e => e.target.select()}
+              />
+            )}
           </div>
           <Button
             href={link}
@@ -155,5 +162,5 @@ class VerticalImageResourceCard extends Component {
 }
 
 export default connect(state => ({
-  isRtl: state.isRtl,
+  isRtl: state.isRtl
 }))(Radium(VerticalImageResourceCard));

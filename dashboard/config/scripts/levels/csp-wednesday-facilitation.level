@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Wednesday Facilitation Reflection\r\n\r\n## Facilitator Presentations\r\n\r\nYou have now seen 3 morning kick off sessions and 3 afternoon wrap up sessions. What common facilitator strategies were used in these sessions?\r\n\r\n* What are facilitators doing?\r\n* What are teachers doing?\r\n* What strategies did you see facilitators use to keep teachers engaged?\r\n",
+    "long_instructions": "# Wednesday Facilitation Reflection\r\n\r\n## Facilitator Presentations\r\n\r\nYou have now seen 3 morning kick off sessions and 3 afternoon wrap up sessions. What common facilitator strategies were used in these sessions?\r\n\r\n* What are facilitators doing?\r\n* What are teachers doing?\r\n* What strategies did you see facilitators use to keep teachers engaged?\r\n",
     "instructions_important": "false",
     "display_name": "Facilitation Reflection",
     "allow_user_uploads": "false",

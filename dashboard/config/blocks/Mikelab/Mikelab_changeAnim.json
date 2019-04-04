@@ -1,0 +1,19 @@
+{
+  "category": "Actions",
+  "config": {
+    "func": "changeAnim",
+    "inline": false,
+    "blockText": "set {SPRITE}'s to costume to {COSTUME}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "assignment": true,
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}

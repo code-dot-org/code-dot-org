@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ZOrderRow from './ZOrderRow';
@@ -73,7 +74,9 @@ class ChartEvents extends React.Component {
   getDrawChartCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'drawChart("' + id + '", "bar", ' +
+      'drawChart("' +
+      id +
+      '", "bar", ' +
       '[\n\t{ label: "Row 1", value: 1 },\n\t{ label: "Row 2", value: 2 }\n]);\n';
     return code;
   }
@@ -81,7 +84,9 @@ class ChartEvents extends React.Component {
   getDrawChartFromRecordsCode() {
     const id = elementUtils.getId(this.props.element);
     const code =
-      'drawChartFromRecords("' + id + '", "bar", "tableName", ' +
+      'drawChartFromRecords("' +
+      id +
+      '", "bar", "tableName", ' +
       '["columnOne", "columnTwo"]);\n';
     return code;
   }
@@ -97,11 +102,10 @@ class ChartEvents extends React.Component {
   render() {
     const element = this.props.element;
     const drawChartName = 'drawChart';
-    const drawChartDesc =
-        "Draws the chart using data you provide.";
+    const drawChartDesc = 'Draws the chart using data you provide.';
     const drawChartFromRecordsName = 'drawChartFromRecords';
     const drawChartFromRecordsDesc =
-        "Draws the chart using App Lab's table data storage.";
+      "Draws the chart using App Lab's table data storage.";
 
     return (
       <div id="eventRowContainer">
@@ -111,7 +115,7 @@ class ChartEvents extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        <EventHeaderRow/>
+        <EventHeaderRow />
         <EventRow
           name={drawChartName}
           desc={drawChartDesc}
@@ -127,12 +131,11 @@ class ChartEvents extends React.Component {
   }
 }
 
-
 export default {
   PropertyTab: ChartProperties,
   EventTab: ChartEvents,
 
-  create: function () {
+  create: function() {
     const element = document.createElement('div');
     element.setAttribute('class', 'chart');
     element.style.height = '100px';

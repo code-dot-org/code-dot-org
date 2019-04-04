@@ -14,28 +14,39 @@ const defaultData = {
 };
 
 export default storybook => {
-  storybook
-    .storiesOf('Cards/ProjectCard', module)
-    .addStoryTable([
-      {
-        name: 'Project card - public',
-        description: 'Project Gallery card used in the public gallery',
-        story: () => (
-          <ProjectCard
-            projectData={defaultData}
-            currentGallery="public"
-          />
-        )
-      },
-      {
-        name: 'Project card - personal',
-        description: 'Project Gallery card used in the personl project widget',
-        story: () => (
-          <ProjectCard
-            projectData={defaultData}
-            currentGallery="personal"
-          />
-        )
-      },
-    ]);
+  storybook.storiesOf('Cards/ProjectCard', module).addStoryTable([
+    {
+      name: 'Project card - public - all app types view',
+      description: 'Project Gallery card used in the public gallery',
+      story: () => (
+        <ProjectCard
+          projectData={defaultData}
+          currentGallery="public"
+          isDetailView={false}
+        />
+      )
+    },
+    {
+      name: 'Project card - public - view more of one app type',
+      description: 'Project Gallery card used in the public gallery',
+      story: () => (
+        <ProjectCard
+          projectData={defaultData}
+          currentGallery="public"
+          isDetailView={true}
+        />
+      )
+    },
+    {
+      name: 'Project card - personal',
+      description: 'Project Gallery card used in the personal project widget',
+      story: () => (
+        <ProjectCard
+          projectData={defaultData}
+          currentGallery="personal"
+          isDetailView={true}
+        />
+      )
+    }
+  ]);
 };

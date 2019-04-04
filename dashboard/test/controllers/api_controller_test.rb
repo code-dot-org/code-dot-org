@@ -8,11 +8,6 @@ class ApiControllerTest < ActionController::TestCase
   setup_all do
     @teacher = create(:teacher)
 
-    # make them an authorized_Teacher
-    cohort = create(:cohort)
-    cohort.teachers << @teacher
-    cohort.save!
-
     @teacher_other = create(:teacher)
 
     @section = create(:section, user: @teacher, login_type: 'word')
@@ -420,74 +415,89 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should update lockable state for existing levels" do
-    script, level, _ = create_script_with_lockable_stage
+    Timecop.freeze do
+      script, level, _ = create_script_with_lockable_stage
 
-    user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
-    user_level = create :user_level, user_level_data
+      user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
+      user_level = create :user_level, user_level_data
 
-    # update from editable to locked
-    user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
-    updates = [
-      {
-        user_level_data: user_level_data,
-        locked: true,
-        readonly_answers: false
-      }
-    ]
+      # update from editable to locked
+      user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
+      expected_updated_at = user_level.updated_at
+      Timecop.travel 1
+      updates = [
+        {
+          user_level_data: user_level_data,
+          locked: true,
+          readonly_answers: false
+        }
+      ]
 
-    post :update_lockable_state, params: {updates: updates}
-    user_level = UserLevel.find_by(user_level_data)
-    assert_equal true, user_level.submitted?
-    assert_equal false, user_level.readonly_answers?
-    assert_nil user_level.unlocked_at
+      post :update_lockable_state, params: {updates: updates}
+      user_level = UserLevel.find_by(user_level_data)
+      assert_equal true, user_level.submitted?
+      assert_equal false, user_level.readonly_answers?
+      assert_nil user_level.unlocked_at
+      # update_lockable_state does not modify updated_at
+      assert_equal expected_updated_at, user_level.updated_at
 
-    # update from editable to readonly_answers
-    user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
-    updates = [
-      {
-        user_level_data: user_level_data,
-        locked: false,
-        readonly_answers: true
-      }
-    ]
+      # update from editable to readonly_answers
+      user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
+      expected_updated_at = user_level.updated_at
+      Timecop.travel 1
+      updates = [
+        {
+          user_level_data: user_level_data,
+          locked: false,
+          readonly_answers: true
+        }
+      ]
 
-    post :update_lockable_state, params: {updates: updates}
-    user_level = UserLevel.find_by(user_level_data)
-    assert_equal true, user_level.submitted?
-    assert_equal true, user_level.readonly_answers?
-    assert_not_nil user_level.unlocked_at
+      post :update_lockable_state, params: {updates: updates}
+      user_level = UserLevel.find_by(user_level_data)
+      assert_equal true, user_level.submitted?
+      assert_equal true, user_level.readonly_answers?
+      assert_not_nil user_level.unlocked_at
+      assert_equal expected_updated_at, user_level.updated_at
 
-    # update from readonly_answers to locked
-    user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
-    updates = [
-      {
-        user_level_data: user_level_data,
-        locked: true,
-        readonly_answers: false
-      }
-    ]
+      # update from readonly_answers to locked
+      user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
+      expected_updated_at = user_level.updated_at
+      Timecop.travel 1
+      updates = [
+        {
+          user_level_data: user_level_data,
+          locked: true,
+          readonly_answers: false
+        }
+      ]
 
-    post :update_lockable_state, params: {updates: updates}
-    user_level = UserLevel.find_by(user_level_data)
-    assert_equal true, user_level.submitted?
-    assert_equal false, user_level.readonly_answers?
-    assert_nil user_level.unlocked_at
+      post :update_lockable_state, params: {updates: updates}
+      user_level = UserLevel.find_by(user_level_data)
+      assert_equal true, user_level.submitted?
+      assert_equal false, user_level.readonly_answers?
+      assert_nil user_level.unlocked_at
+      assert_equal expected_updated_at, user_level.updated_at
 
-    # update from readonly_answers to editable
-    user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
-    updates = [
-      {
-        user_level_data: user_level_data,
-        locked: false,
-        readonly_answers: false
-      }
-    ]
+      # update from readonly_answers to editable
+      user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
+      expected_updated_at = user_level.updated_at
+      Timecop.travel 1
+      updates = [
+        {
+          user_level_data: user_level_data,
+          locked: false,
+          readonly_answers: false
+        }
+      ]
 
-    post :update_lockable_state, params: {updates: updates}
-    user_level = UserLevel.find_by(user_level_data)
-    assert_equal false, user_level.submitted?
-    assert_equal false, user_level.readonly_answers?
-    assert_not_nil user_level.unlocked_at
+      post :update_lockable_state, params: {updates: updates}
+      user_level = UserLevel.find_by(user_level_data)
+      assert_equal false, user_level.submitted?
+      assert_equal false, user_level.readonly_answers?
+      assert_not_nil user_level.unlocked_at
+      assert_equal expected_updated_at, user_level.updated_at
+    end
   end
 
   test "should fail to update lockable state if given bad data" do
@@ -736,7 +746,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Script.stubs(:should_cache?).returns true
 
-    assert_queries 8 do
+    assert_queries 7 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
@@ -975,6 +985,18 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal expected_script, response["script"]
   end
 
+  test "script_structure returns summarized script" do
+    overview_path = 'http://script.overview/path'
+    CDO.stubs(:studio_url).returns(overview_path)
+    script = Script.find_by_name('algebra')
+
+    get :script_structure, params: {script: script.id}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    expected_response = script.summarize(true, nil, true).merge({path: overview_path}).with_indifferent_access
+    assert_equal expected_response, response
+  end
+
   test "user menu should open pairing dialog if asked to in the session" do
     sign_in create(:student)
 
@@ -1081,6 +1103,42 @@ class ApiControllerTest < ActionController::TestCase
     )
   end
 
+  test 'clever_classrooms is Forbidden when not signed in' do
+    sign_out :user
+    get :clever_classrooms
+    assert_response :forbidden
+  end
+
+  test 'clever_classrooms queries clever with user uid for unmigrated user' do
+    teacher = create :teacher, :sso_provider, :demigrated, provider: AuthenticationOption::CLEVER
+    sign_in teacher
+
+    expected_uri = "https://api.clever.com/v1.1/teachers/#{teacher.uid}/sections"
+    auth = {authorization: "Bearer #{teacher.oauth_token}"}
+    mock_response = {data: []}.to_json
+    RestClient.expects(:get).with(expected_uri, auth).returns(mock_response)
+    get :clever_classrooms
+  end
+
+  test 'clever_classrooms queries clever with clever authentication_id for migrated user' do
+    teacher = create :teacher, :with_clever_authentication_option
+    auth_option = teacher.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+    sign_in teacher
+    assert_nil teacher.uid
+
+    expected_uri = "https://api.clever.com/v1.1/teachers/#{auth_option.authentication_id}/sections"
+    auth = {authorization: "Bearer #{auth_option.data_hash[:oauth_token]}"}
+    mock_response = {data: []}.to_json
+    RestClient.expects(:get).with(expected_uri, auth).returns(mock_response)
+    get :clever_classrooms
+  end
+
+  test 'import_clever_classroom is Forbidden when not signed in' do
+    sign_out :user
+    get :import_clever_classroom
+    assert_response :forbidden
+  end
+
   #
   # Given two arrays, checks that they represent equivalent bags (or multisets)
   # of elements.
@@ -1143,5 +1201,20 @@ Actual:
 #{actual_results.join("\n")}
 
 MESSAGE
+  end
+
+  test 'sign_cookies' do
+    sign_out :user
+    get :sign_cookies
+    assert_response :success
+
+    refute_nil @response.cookies['CloudFront-Key-Pair-Id']
+    refute_nil @response.cookies['CloudFront-Signature']
+    # indicates a custom policy
+    refute_nil @response.cookies['CloudFront-Policy']
+    # only used for canned policies
+    assert_nil @response.cookies['CloudFront-Expires']
+
+    assert_equal "max-age=3600, private", @response.headers["Cache-Control"]
   end
 end

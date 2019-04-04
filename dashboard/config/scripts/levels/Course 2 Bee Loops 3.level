@@ -6,7 +6,7 @@
   "user_id": 5,
   "properties": {
     "skin": "bee",
-    "instructions": "Now use the new repeat block to collect all of the nectar and make all of the honey.",
+    "short_instructions": "Now use the new repeat block to collect all of the nectar and make all of the honey.",
     "step_mode": 1,
     "is_k1": "false",
     "skip_instructions_popup": "false",

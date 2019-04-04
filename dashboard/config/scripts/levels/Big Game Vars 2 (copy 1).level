@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "The first step to making this game your own is to give it a good Title. Click edit on the 'title' and 'subtitle' variables and change them to something new.",
+    "short_instructions": "The first step to making this game your own is to give it a good Title. Click edit on the 'title' and 'subtitle' variables and change them to something new.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

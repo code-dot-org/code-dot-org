@@ -1,0 +1,51 @@
+-statistics = DB[:cdo_promote_impact_statistics].all.to_a
+
+#stats-impact-carousel-wrapper.carousel-wrapper
+  #stats-impact-carousel.carousel
+    .slides
+      -statistics.each do |statistic|
+        .slide
+          .slide-img<
+            %img{:src=>"#{statistic[:share_url_s]}"}
+    %a.slide-prev{:href=>'#'}<
+      %span<
+        %span.label Previous
+    %a.slide-next{:href=>'#'}<
+      %span<
+        %span.label Next
+  .pagination
+    %div{:id => "stats-impact-carousel-pagination"}
+
+.impact-stats-link
+  .left
+    %p.title
+      Want to see more data?
+    %p.details
+      View more data on Code.org's impact on schools
+  .right
+    %a{:href=>'https://code.org/statistics', target: "_blank"}
+      %button
+        View Code.org Stats
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+:javascript
+  $(document).ready(function() {
+
+    var statistics = #{JSON.pretty_generate(statistics)};
+
+    var id = '#stats-impact-carousel';
+    // Define the carousel using the ID.
+    $(id + ' .slides').carouFredSel({
+      items : 1,
+      auto  : false,
+      responsive : true,
+      prev  : id + ' .slide-prev',
+      next  : id + ' .slide-next',
+      pagination : '#stats-impact-carousel-pagination',
+      swipe	: {
+        onTouch : true,
+        onMouse : false
+      },
+    });
+  });

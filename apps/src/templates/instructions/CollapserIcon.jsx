@@ -1,6 +1,7 @@
-import React, {PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import color from "../../util/color";
+import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 
 const styles = {
@@ -22,34 +23,37 @@ const styles = {
       cursor: 'pointer',
       color: color.default_text
     }
-  },
+  }
 };
 
 /**
  * Simple icon that either points up or down, and supports onClick
  */
-const CollapserIcon = function (props) {
-  const iconClass = props.collapsed ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up';
-
-  const combinedStyle = {
-    ...styles.showHideButton,
-    ...(props.teacherOnly && styles.teacherOnlyColor)
+class CollapserIcon extends Component {
+  static propTypes = {
+    onClick: PropTypes.func.isRequired,
+    collapsed: PropTypes.bool.isRequired,
+    teacherOnly: PropTypes.bool
   };
 
-  return (
-    <i
-      id="ui-test-collapser"
-      style={combinedStyle}
-      onClick={props.onClick}
-      className={iconClass + " fa"}
-    />
-  );
-};
+  render() {
+    const iconClass = this.props.collapsed
+      ? 'fa-chevron-circle-down'
+      : 'fa-chevron-circle-up';
 
-CollapserIcon.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  collapsed: PropTypes.bool.isRequired,
-  teacherOnly: PropTypes.bool
-};
+    const combinedStyle = {
+      ...styles.showHideButton,
+      ...(this.props.teacherOnly && styles.teacherOnlyColor)
+    };
+    return (
+      <i
+        id="ui-test-collapser"
+        style={combinedStyle}
+        onClick={this.props.onClick}
+        className={iconClass + ' fa'}
+      />
+    );
+  }
+}
 
-module.exports = Radium(CollapserIcon);
+export default Radium(CollapserIcon);

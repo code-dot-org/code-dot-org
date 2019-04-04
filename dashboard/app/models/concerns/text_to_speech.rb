@@ -7,34 +7,6 @@ require 'redcarpet/render_strip'
 
 TTS_BUCKET = 'cdo-tts'.freeze
 
-VOICES = {
-  'en-US': {
-    VOICE: 'sharon22k',
-    SPEED: 180,
-    SHAPE: 100
-  },
-  'es-ES': {
-    VOICE: 'ines22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  'es-MX': {
-    VOICE: 'rosa22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  'it-IT': {
-    VOICE: 'vittorio22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  'pt-BR': {
-    VOICE: 'marcia22k',
-    SPEED: 180,
-    SHAPE: 100,
-  }
-}.freeze
-
 class TTSSafe < Redcarpet::Render::StripDown
   def block_code(code, language)
     ''
@@ -65,6 +37,34 @@ TTSSafeScrubber.tags = ['xml']
 module TextToSpeech
   extend ActiveSupport::Concern
 
+  VOICES = {
+    'en-US': {
+      VOICE: 'sharon22k',
+      SPEED: 180,
+      SHAPE: 100
+    },
+    'es-ES': {
+      VOICE: 'ines22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    'es-MX': {
+      VOICE: 'rosa22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    'it-IT': {
+      VOICE: 'vittorio22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    'pt-BR': {
+      VOICE: 'marcia22k',
+      SPEED: 180,
+      SHAPE: 100,
+    }
+  }.freeze
+
   # TODO: this concern actually depends on the SerializedProperties
   # concern ... I'm not sure how best to deal with that.
 
@@ -72,8 +72,8 @@ module TextToSpeech
     before_save :tts_update
 
     serialized_attrs %w(
-      tts_instructions_override
-      tts_markdown_instructions_override
+      tts_short_instructions_override
+      tts_long_instructions_override
     )
   end
 
@@ -138,27 +138,63 @@ module TextToSpeech
     changed && write_to_file? && published
   end
 
-  def tts_instructions_text
+  def tts_short_instructions_text
     if I18n.locale == I18n.default_locale
       # We still have to try localized instructions here for the
       # levels.js-defined levels
-      tts_instructions_override || instructions || try(:localized_instructions) || ""
+      tts_short_instructions_override || short_instructions || try(:localized_short_instructions) || ""
     else
-      TextToSpeech.sanitize(try(:localized_instructions) || "")
+      TextToSpeech.sanitize(try(:localized_short_instructions) || "")
     end
   end
 
-  def tts_should_update_instructions?
-    relevant_property = tts_instructions_override ? 'tts_instructions_override' : 'instructions'
+  def tts_should_update_short_instructions?
+    relevant_property = tts_short_instructions_override ? 'tts_short_instructions_override' : 'short_instructions'
     return tts_should_update(relevant_property)
   end
 
-  def tts_markdown_instructions_text
-    tts_markdown_instructions_override || TextToSpeech.sanitize(markdown_instructions || "")
+  def tts_long_instructions_text
+    if I18n.locale == I18n.default_locale
+      # Instructions in contained levels are used as TTS instead of the
+      # instructions of the containing level
+      return tts_long_instructions_override ||
+        TextToSpeech.sanitize(tts_for_contained_level || long_instructions || "")
+    else
+      TextToSpeech.sanitize(try(:localized_long_instructions) || "")
+    end
   end
 
-  def tts_should_update_markdown_instructions?
-    relevant_property = tts_markdown_instructions_override ? 'tts_markdown_instructions_override' : 'markdown_instructions'
+  def tts_for_contained_level
+    all_instructions = []
+
+    contained_levels.each {|contained| all_instructions.push(contained_level_text(contained))}
+    all_instructions.empty? ? nil : all_instructions * "\n"
+  end
+
+  def contained_level_text(contained)
+    # For multi questions, create a string for TTS of the markdown, question, and answers
+    if contained.long_instructions.nil?
+      combined_text = contained.properties["markdown"].nil? ? "" : contained.properties["markdown"] + "\n"
+      if contained.properties["questions"]
+        contained.properties["questions"].each do |question|
+          combined_text += question["text"] + "\n"
+        end
+      end
+      if contained.properties["answers"]
+        contained.properties["answers"].each do |answer|
+          combined_text += answer["text"] + "\n"
+        end
+      end
+      combined_text
+    else
+      #For free response, create a string for TTS of the instructions
+      contained.long_instructions
+
+    end
+  end
+
+  def tts_should_update_long_instructions?
+    relevant_property = tts_long_instructions_override ? 'tts_long_instructions_override' : 'long_instructions'
     return tts_should_update(relevant_property)
   end
 
@@ -169,9 +205,9 @@ module TextToSpeech
   end
 
   def tts_update
-    tts_upload_to_s3(tts_instructions_text) if tts_should_update_instructions?
+    tts_upload_to_s3(tts_short_instructions_text) if tts_should_update_short_instructions?
 
-    tts_upload_to_s3(tts_markdown_instructions_text) if tts_should_update_markdown_instructions?
+    tts_upload_to_s3(tts_long_instructions_text) if tts_should_update_long_instructions?
 
     if authored_hints && tts_should_update('authored_hints')
       hints = JSON.parse(authored_hints)

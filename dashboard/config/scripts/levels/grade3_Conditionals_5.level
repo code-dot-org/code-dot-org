@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Collect nectar from each flower only if it has any.",
+    "short_instructions": "Collect nectar from each flower only if it has any.",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "2",

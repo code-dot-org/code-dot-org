@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Create your own project! This creation will be saved to your Projects dashboard so that you can easily edit it any time!",
+    "short_instructions": "Create your own project! This creation will be saved to your Projects dashboard so that you can easily edit it any time!",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -15,7 +15,7 @@
     "slider_speed": ".6",
     "free_play": "true",
     "embed": "false",
-    "markdown_instructions": "Create your own project! This creation will be saved to your Projects dashboard so that you can easily edit it any time!",
+    "long_instructions": "Create your own project! This creation will be saved to your Projects dashboard so that you can easily edit it any time!",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

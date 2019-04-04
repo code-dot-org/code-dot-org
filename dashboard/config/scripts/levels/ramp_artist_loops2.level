@@ -35,8 +35,8 @@
     "y": "200",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/d318287a2c315e31da71ec0616c0669f=levelbuilder/28292.png",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/52f011e151520abda4cc3fd33df72689-image-1505967648443.png\", \"position\": [0, 0]}\r\n]\r\n",
-    "instructions": "Move forward five times and make this colored line.",
-    "markdown_instructions": "Add some beauty by repeating that step five times, changing to a random color between each move.",
+    "short_instructions": "Move forward five times and make this colored line.",
+    "long_instructions": "Add some beauty by repeating that step five times, changing to a random color between each move.",
     "ideal": "7",
     "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null

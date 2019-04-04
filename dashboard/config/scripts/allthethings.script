@@ -22,6 +22,7 @@ level 'NEW Course 4 Artist Functions 3'
 level 'Auto Open Function Editor'
 level 'Angle Helper Test'
 level 'allthethings-artist-project-backed'
+level 'Artist Autorun Test'
 
 stage 'Bee'
 level 'K-1 Bee 1'
@@ -45,6 +46,7 @@ level 'blockly:Studio:c2_1'
 level 'Course 4 Play Labs For Loops 1'
 level 'Course 4 Play Lab Params 2'
 level 'allthethings-playlab-project-backed'
+level 'Allthethings Encrypted Play Lab Level'
 
 stage 'Farmer'
 level '4-5 While Loops 4'
@@ -161,6 +163,7 @@ level 'blockly:Studio:hoc2015_blockly_5'
 stage 'Minecraft'
 level 'Overworld Chop Tree - allthethings'
 level 'MC Agent Freeplay'
+level 'Craft Aquatic - allthethings'
 
 stage 'Rich long assessment'
 assessment 'PS U3 Assessment1 new'
@@ -238,3 +241,15 @@ level 'allthethings_map'
 
 stage 'Sprite Lab'
 level 'allthethings_fish_tank'
+
+stage 'Dance Lab'
+level 'allthethings HOC Dance 1'
+level 'allthethings HOC Dance 10 Measures'
+
+stage 'Mini Rubric'
+assessment 'allthethings-mini-rubric'
+assessment 'allthethings-mini-rubric-weblab'
+assessment 'allthethings-mini-rubric-gamelab'
+
+stage 'Pluralsight Test', lockable: true
+assessment 'Pluralsight LevelGroup Test'

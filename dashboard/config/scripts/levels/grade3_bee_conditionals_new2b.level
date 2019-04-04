@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Collect all of the nectar. You can only collect nectar from flowers, but you can check any space to see if there is a flower.",
+    "short_instructions": "Collect all of the nectar. You can only collect nectar from flowers, but you can check any space to see if there is a flower.",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",

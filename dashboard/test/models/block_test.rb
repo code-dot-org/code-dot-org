@@ -1,9 +1,14 @@
 require 'test_helper'
 
 class BlockTest < ActiveSupport::TestCase
+  setup do
+    create :block, pool: Block::DEFAULT_POOL
+  end
+
   teardown do
     FileUtils.rm_rf "config/blocks/fakeLevelType"
     FileUtils.rm_rf "config/blocks/otherFakeLevelType"
+    FileUtils.rm_rf "config/blocks/#{Block::DEFAULT_POOL}"
   end
 
   test 'Block writes to and loads back from file' do
@@ -69,8 +74,27 @@ class BlockTest < ActiveSupport::TestCase
     block.name = block.name + '_the_great'
     block.save
 
+    assert Block.for(block.pool).any? {|b| b[:name] == block.name}
     refute File.exist? old_file_path
     refute File.exist? old_js_path
+  end
+
+  test 'Removing helper code deletes the helper code file' do
+    block = create :block, helper_code: '// Comment comment comment'
+    old_file_path = block.file_path
+    old_js_path = block.js_path
+    assert File.exist? old_file_path
+    assert File.exist? old_js_path
+
+    block.helper_code = ''
+    block.save
+
+    assert File.exist? old_file_path
+    refute File.exist? old_js_path
+  end
+
+  test 'always includes blocks from the default pool' do
+    assert Block.for.any? {|b| b[:pool] == Block::DEFAULT_POOL}
   end
 
   test 'file_path works for unmodified and modified blocks' do

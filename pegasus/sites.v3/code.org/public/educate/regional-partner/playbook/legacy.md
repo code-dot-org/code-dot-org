@@ -1,8 +1,10 @@
+<meta name="robots" content="noindex">
+
 ---
 title: Legacy Programs
 nav: regional_partner_playbook_nav
 ---
-<meta name="robots" content="noindex">
+
 <a id="top"></a>
 
 # Legacy Programs

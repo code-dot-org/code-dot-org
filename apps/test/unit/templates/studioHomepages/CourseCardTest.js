@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import { courses } from './homepagesTestData';
+import {courses} from './homepagesTestData';
 import {combineReducers, createStore} from 'redux';
 import isRtl, {setRtl} from '@cdo/apps/code-studio/isRtlRedux';
 
@@ -16,21 +16,18 @@ describe('CourseCard', () => {
         title={courses[0].title}
         description={courses[0].description}
         link={courses[0].link}
-      />, {context: {store}},
+      />,
+      {context: {store}}
     ).dive();
     expect(wrapper).to.containMatchingElement(
       <a href={courses[0].link}>
-        <img/>
-        <div>
-          {courses[0].title}
-        </div>
+        <img />
+        <div>{courses[0].title}</div>
         <div>
           {courses[0].description}
           <div>
-            <h3>
-              View course
-            </h3>
-            <FontAwesome icon="chevron-right"/>
+            <h3>View course</h3>
+            <FontAwesome icon="chevron-right" />
           </div>
         </div>
       </a>
@@ -44,21 +41,18 @@ describe('CourseCard', () => {
         title={courses[0].title}
         description={courses[0].description}
         link={courses[0].link}
-      />, {context: {store}},
+      />,
+      {context: {store}}
     ).dive();
     expect(wrapper).to.containMatchingElement(
       <a href={courses[0].link}>
-        <img/>
-        <div>
-          {courses[0].title}
-        </div>
+        <img />
+        <div>{courses[0].title}</div>
         <div>
           {courses[0].description}
           <div>
-            <h3>
-              View course
-            </h3>
-            <FontAwesome icon="chevron-left"/>
+            <h3>View course</h3>
+            <FontAwesome icon="chevron-left" />
           </div>
         </div>
       </a>

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "elsa",
     "embed": "true",
-    "instructions": "Press Run to see a snowflake design!",
+    "short_instructions": "Press Run to see a snowflake design!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

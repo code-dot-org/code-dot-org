@@ -49,7 +49,7 @@
     "is_agent_level": "true",
     "agent_start_position": "[9,9]",
     "place_block_options": "[\"ice\",  \"oreCoal\",  \"oreIron\", \"oreRedstone\", \"pistonDown\", \"pistonLeft\", \"pistonRight\", \"pistonUp\", \"pressurePlateUp\", \"quartzOre\", \"rails\", \"railsRedstoneTorch\", \"redstoneWire\",  \"snow\", \"stone\", \"topSnow\", \"water\"]",
-    "markdown_instructions": "Now it's up to you! See what you can create around this frozen lake.",
+    "long_instructions": "Now it's up to you! See what you can create around this frozen lake.",
     "contained_level_names": null
   },
   "published": true,

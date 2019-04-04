@@ -11,7 +11,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Hiro is \"actor 1\".  Use the Move block to move Hiro right to touch Baymax.",
+    "short_instructions": "Hiro is \"actor 1\".  Use the Move block to move Hiro right to touch Baymax.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

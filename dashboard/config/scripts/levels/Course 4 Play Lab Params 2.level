@@ -19,7 +19,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "use_modal_function_editor": "true",
-    "instructions": "Now we've got flags that are too high for our current jump! Let's use both the \"up\" and \"down\" arrows so that we can have multiple jump heights.  \r\n\r\nWe need to add a parameter to our jump function called \"height\".  The up arrow should cause the dog to jump 200 pixels and the down arrow should make it jump only 100 pixels. ",
+    "short_instructions": "Now we've got flags that are too high for our current jump! Let's use both the \"up\" and \"down\" arrows so that we can have multiple jump heights.  \r\n\r\nWe need to add a parameter to our jump function called \"height\".  The up arrow should cause the dog to jump 200 pixels and the down arrow should make it jump only 100 pixels. ",
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -39,7 +39,7 @@
     "definition_collapse": "false",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Now we've got flags that are too high for our current jump! Let's use both the \"up\" and \"down\" arrows so that we can have multiple jump heights.  \r\n\r\nWe need to add a parameter to our jump function called `height`.  \r\n- The up arrow should cause the dog to jump 200 pixels \r\n- The down arrow should make it jump only 100 pixels. \r\n",
+    "long_instructions": "Now we've got flags that are too high for our current jump! Let's use both the \"up\" and \"down\" arrows so that we can have multiple jump heights.  \r\n\r\nWe need to add a parameter to our jump function called `height`.  \r\n- The up arrow should cause the dog to jump 200 pixels \r\n- The down arrow should make it jump only 100 pixels. \r\n",
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "examples_required": "false",

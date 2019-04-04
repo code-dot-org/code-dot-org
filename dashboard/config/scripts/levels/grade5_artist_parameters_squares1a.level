@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "This program looks okay from here, but something isn't working right. See if you can figure out how to edit the function 'draw a square' to find the bug.",
+    "short_instructions": "This program looks okay from here, but something isn't working right. See if you can figure out how to edit the function 'draw a square' to find the bug.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Today, we're going to try out a different, more powerful function editor. See if you can figure out how to edit the `draw a square` function to find the bugs.",
+    "long_instructions": "Today, we're going to try out a different, more powerful function editor. See if you can figure out how to edit the `draw a square` function to find the bugs.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

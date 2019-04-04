@@ -5,14 +5,14 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "markdown_instructions": "**Make a prediction:** Here’s a sprite called `alien1`!   \r\n\r\nWhat do you think will happen when you click on it?  ",
+    "long_instructions": "**Make a prediction:** Here’s a sprite called `alien1`!   \r\n\r\nWhat do you think will happen when you click on it?  ",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "instructions": "What do you think will happen when you click on the alien?  "
+    "short_instructions": "What do you think will happen when you click on the alien?  "
   },
   "published": true,
   "notes": "",

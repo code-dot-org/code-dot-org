@@ -5,19 +5,20 @@
  * off of those actions.
  */
 
-import experiments from '@cdo/apps/util/experiments';
-import { trySetLocalStorage, tryGetLocalStorage } from '../utils';
+import {trySetLocalStorage, tryGetLocalStorage} from '../utils';
 
 const SET_CONSTANTS = 'instructions/SET_CONSTANTS';
-const TOGGLE_INSTRUCTIONS_COLLAPSED = 'instructions/TOGGLE_INSTRUCTIONS_COLLAPSED';
-const SET_INSTRUCTIONS_RENDERED_HEIGHT = 'instructions/SET_INSTRUCTIONS_RENDERED_HEIGHT';
-const SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED';
-const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE = 'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE';
+const TOGGLE_INSTRUCTIONS_COLLAPSED =
+  'instructions/TOGGLE_INSTRUCTIONS_COLLAPSED';
+const SET_INSTRUCTIONS_RENDERED_HEIGHT =
+  'instructions/SET_INSTRUCTIONS_RENDERED_HEIGHT';
+const SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED =
+  'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED';
+const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE =
+  'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE';
 const SET_HAS_AUTHORED_HINTS = 'instructions/SET_HAS_AUTHORED_HINTS';
 const SET_FEEDBACK = 'instructions/SET_FEEDBACK';
 const HIDE_OVERLAY = 'instructions/HIDE_OVERLAY';
-
-const ENGLISH_LOCALE = 'en_us';
 
 const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
 
@@ -106,15 +107,19 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
-  if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED &&
-      action.maxNeededHeight !== state.maxNeededHeight) {
+  if (
+    action.type === SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED &&
+    action.maxNeededHeight !== state.maxNeededHeight
+  ) {
     return Object.assign({}, state, {
       maxNeededHeight: action.maxNeededHeight
     });
   }
 
-  if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE &&
-      action.maxAvailableHeight !== state.maxAvailableHeight) {
+  if (
+    action.type === SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE &&
+    action.maxAvailableHeight !== state.maxAvailableHeight
+  ) {
     return Object.assign({}, state, {
       maxAvailableHeight: action.maxAvailableHeight,
       renderedHeight: Math.min(action.maxAvailableHeight, state.renderedHeight),
@@ -143,10 +148,18 @@ export default function reducer(state = {...instructionsInitialState}, action) {
   return state;
 }
 
-export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
-    shortInstructions, shortInstructions2, longInstructions,
-    hasContainedLevels, overlayVisible, teacherMarkdown, levelVideos,
-    mapReference, referenceLinks}) => ({
+export const setInstructionsConstants = ({
+  noInstructionsWhenCollapsed,
+  shortInstructions,
+  shortInstructions2,
+  longInstructions,
+  hasContainedLevels,
+  overlayVisible,
+  teacherMarkdown,
+  levelVideos,
+  mapReference,
+  referenceLinks
+}) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   shortInstructions,
@@ -180,7 +193,6 @@ export const setInstructionsMaxHeightNeeded = height => ({
   type: SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED,
   maxNeededHeight: height
 });
-
 
 /**
  * Set the max height of the instructions panel
@@ -225,11 +237,10 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
 
   for (let prop in substitutions) {
     const imageUrl = substitutions[prop];
-    const substitutionHtml = (
+    const substitutionHtml =
       '<span class="instructionsImageContainer">' +
-        `<img src="${imageUrl}" class="instructionsImage"/>` +
-      '</span>'
-    );
+      `<img src="${imageUrl}" class="instructionsImage"/>` +
+      '</span>';
     const re = new RegExp('\\[' + prop + '\\]', 'g');
     htmlText = htmlText.replace(re, substitutionHtml);
   }
@@ -237,14 +248,13 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
   return htmlText;
 };
 
-
 /**
  * Given a particular set of config options, determines what our instructions
  * constants should be
  * @param {AppOptionsConfig} config
- * @param {string} config.level.instructions
+ * @param {string} config.level.shortInstructions
  * @param {string} config.level.instructions2
- * @param {string} config.level.markdownInstructions
+ * @param {string} config.level.longInstructions
  * @param {array} config.level.inputOutputTable
  * @param {array} config.level.levelVideos
  * @param {stirng} config.level.mapReference,
@@ -258,25 +268,25 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
 export const determineInstructionsConstants = config => {
   const {
     level,
-    locale,
     noInstructionsWhenCollapsed,
     hasContainedLevels,
-    teacherMarkdown} = config;
+    teacherMarkdown
+  } = config;
+
   const {
-    instructions,
     instructions2,
-    markdownInstructions,
     inputOutputTable,
     levelVideos,
     mapReference,
-    referenceLinks,
+    referenceLinks
   } = level;
 
-  let longInstructions, shortInstructions, shortInstructions2;
+  let {longInstructions, shortInstructions} = level;
+
+  let shortInstructions2;
+
   if (noInstructionsWhenCollapsed) {
     // CSP mode - We dont care about locale, and always want to show English
-    longInstructions = markdownInstructions;
-    shortInstructions = instructions;
 
     // Never use short instructions in CSP. If that's all we have, make them
     // our longInstructions instead
@@ -285,13 +295,6 @@ export const determineInstructionsConstants = config => {
     }
     shortInstructions = undefined;
   } else {
-    if (experiments.isEnabled('i18nMarkdownInstructions')) {
-      longInstructions = markdownInstructions;
-    } else {
-      // CSF mode - For non-English folks, only use the non-markdown instructions
-      longInstructions = (!locale || locale === ENGLISH_LOCALE) ? markdownInstructions : undefined;
-    }
-    shortInstructions = instructions;
     shortInstructions2 = instructions2;
 
     // if the two sets of instructions are identical, only use the short
@@ -309,12 +312,18 @@ export const determineInstructionsConstants = config => {
     }
 
     if (config.skin.instructions2ImageSubstitutions) {
-      longInstructions = substituteInstructionImages(longInstructions,
-        config.skin.instructions2ImageSubstitutions);
-      shortInstructions = substituteInstructionImages(shortInstructions,
-        config.skin.instructions2ImageSubstitutions);
-      shortInstructions2 = substituteInstructionImages(shortInstructions2,
-        config.skin.instructions2ImageSubstitutions);
+      longInstructions = substituteInstructionImages(
+        longInstructions,
+        config.skin.instructions2ImageSubstitutions
+      );
+      shortInstructions = substituteInstructionImages(
+        shortInstructions,
+        config.skin.instructions2ImageSubstitutions
+      );
+      shortInstructions2 = substituteInstructionImages(
+        shortInstructions2,
+        config.skin.instructions2ImageSubstitutions
+      );
     }
 
     if (config.skin.replaceInstructions) {
@@ -331,8 +340,12 @@ export const determineInstructionsConstants = config => {
   // the overlay. Otherwise, show it exactly once on the very first
   // level a user looks at.
   let overlaySeen = tryGetLocalStorage(LOCALSTORAGE_OVERLAY_SEEN_FLAG, false);
-  let shouldShowOverlay = hasInstructionsToShow && !hasContainedLevels &&
-      (config.level.instructionsImportant || config.levelPosition === 1 || !overlaySeen);
+  let shouldShowOverlay =
+    hasInstructionsToShow &&
+    !hasContainedLevels &&
+    (config.level.instructionsImportant ||
+      config.levelPosition === 1 ||
+      !overlaySeen);
   if (shouldShowOverlay) {
     trySetLocalStorage(LOCALSTORAGE_OVERLAY_SEEN_FLAG, true);
   }

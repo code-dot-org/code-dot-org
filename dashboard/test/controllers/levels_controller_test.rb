@@ -24,6 +24,25 @@ class LevelsControllerTest < ActionController::TestCase
     }
   end
 
+  test "should get rubric" do
+    level = create(:level,
+      mini_rubric: 'true',
+      rubric_key_concept: 'This is the key concept',
+      rubric_exceeds: 'This is great',
+      rubric_meets: 'This is good',
+      rubric_approaches: 'This is okay',
+      rubric_no_evidence: 'This is bad'
+    )
+    get :get_rubric, params: {level_id: level.id}
+    assert_equal JSON.parse(@response.body), {
+      "keyConcept" => "This is the key concept",
+      "exceeds" => "This is great",
+      "meets" => "This is good",
+      "approaches" => "This is okay",
+      "noEvidence" => "This is bad"
+    }
+  end
+
   test "should get index" do
     get :index, params: {game_id: @level.game}
     assert_response :success
@@ -85,7 +104,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           type: 'Maze'
         },
         game_id: game.id,
@@ -108,7 +127,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           step_mode: 1,
           type: 'Maze'
         },
@@ -131,7 +150,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           type: 'Maze',
           is_k1: true
         },
@@ -154,7 +173,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           step_mode: 1,
           type: 'Maze',
           is_k1: false
@@ -178,7 +197,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           type: 'Maze'
         },
         game_id: game.id,
@@ -199,7 +218,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           type: 'Karel'
         },
         game_id: game.id,
@@ -224,7 +243,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :create, params: {
         level: {
           name: "NewCustomLevel",
-          instructions: "Some Instructions",
+          short_instructions: "Some Instructions",
           type: 'Karel'
         },
         game_id: game.id,
@@ -275,12 +294,12 @@ class LevelsControllerTest < ActionController::TestCase
         program: @program
       }
       level = Level.find_by(name: level_name)
-      file_path = LevelLoader.level_file_path(level.name)
+      file_path = Level.level_file_path(level.name)
       assert_equal true, file_path && File.exist?(file_path)
       delete :destroy, params: {id: level}
       assert_equal false, file_path && File.exist?(file_path)
     ensure
-      file_path = LevelLoader.level_file_path(level_name)
+      file_path = Level.level_file_path(level_name)
       File.delete(file_path) if file_path && File.exist?(file_path)
     end
   end
@@ -303,6 +322,20 @@ class LevelsControllerTest < ActionController::TestCase
     level = assigns(:level)
     assert_equal @program, level.properties['toolbox_blocks']
     assert_nil level.properties['solution_image_url']
+  end
+
+  test "should update App Lab starter code and starter HTML" do
+    post :update_properties, params: {
+      level_id: create(:applab).id,
+    }, body: {
+      start_html: '<h1>foo</h1>',
+      start_blocks: 'console.log("hello world");',
+    }.to_json
+
+    assert_response :success
+    level = assigns(:level)
+    assert_equal '<h1>foo</h1>', level.properties['start_html']
+    assert_equal 'console.log("hello world");', level.properties['start_blocks']
   end
 
   test "should update solution image when updating solution blocks" do
@@ -476,7 +509,7 @@ class LevelsControllerTest < ActionController::TestCase
     post :create, params: {
       level: {
         name: "NewCustomLevel",
-        instructions: "Some Instructions",
+        short_instructions: "Some Instructions",
         type: 'Maze'
       },
       game_id: game.id,
@@ -495,7 +528,7 @@ class LevelsControllerTest < ActionController::TestCase
       level: {
         skin: Maze.skins.last,
         name: "NewCustomLevel",
-        instructions: "Some Instructions",
+        short_instructions: "Some Instructions",
         type: 'Maze'
       },
       game_id: game.id,
@@ -543,7 +576,7 @@ class LevelsControllerTest < ActionController::TestCase
     post :create, params: {
       level: {
         name: "NewCustomLevel",
-        instructions: "Some Instructions",
+        short_instructions: "Some Instructions",
         type: 'Maze'
       },
       game_id: game.id,
@@ -582,7 +615,7 @@ class LevelsControllerTest < ActionController::TestCase
     post :create, params: {
       level: {
         name: "NewCustomLevel",
-        instructions: "Some Instructions",
+        short_instructions: "Some Instructions",
         type: 'Karel'
       },
       game_id: game.id,

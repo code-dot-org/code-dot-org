@@ -10,11 +10,7 @@ const TEST_ORG_NAME = 'Code Studio';
 const ORG_1 = 'Hogwarts School';
 const ORG_2 = 'Miskatonic University';
 const ORG_3 = 'Starfleet Academy';
-const TEST_UNIQUE_ORG_NAMES = [
-  ORG_1,
-  ORG_2,
-  ORG_3
-];
+const TEST_UNIQUE_ORG_NAMES = [ORG_1, ORG_2, ORG_3];
 const TEST_CALLBACK = () => {};
 const DEFAULT_PROPS = {
   orgName: TEST_ORG_NAME,
@@ -24,15 +20,10 @@ const DEFAULT_PROPS = {
 
 describe('FilterGroupOrgNames', () => {
   it('renders', () => {
-    const wrapper = shallow(
-      <FilterGroupOrgNames {...DEFAULT_PROPS}/>
-    );
+    const wrapper = shallow(<FilterGroupOrgNames {...DEFAULT_PROPS} />);
     expect(wrapper).to.containMatchingElement(
       <FilterGroupContainer text={i18n.filterOrgNames()}>
-        <select
-          value={TEST_ORG_NAME}
-          className="noFocusButton"
-        >
+        <select value={TEST_ORG_NAME} className="noFocusButton">
           <option key="all" value="all">
             {i18n.filterOrgNamesAll()}
           </option>
@@ -78,10 +69,7 @@ describe('FilterGroupOrgNames', () => {
   it('reports to callback on change', () => {
     const spy = sinon.spy();
     const wrapper = shallow(
-      <FilterGroupOrgNames
-        {...DEFAULT_PROPS}
-        onUserInput={spy}
-      />
+      <FilterGroupOrgNames {...DEFAULT_PROPS} onUserInput={spy} />
     );
     wrapper.find('select').simulate('change', {target: {value: ORG_1}});
     expect(spy).to.have.been.calledOnce.and.calledWith(ORG_1);

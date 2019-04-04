@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Gather nectar from the rows of flowers! Use a nested loop.",
+    "short_instructions": "Gather nectar from the rows of flowers! Use a nested loop.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",

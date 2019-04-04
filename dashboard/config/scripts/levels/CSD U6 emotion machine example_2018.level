@@ -183,7 +183,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "markdown_instructions": "# The Emotion Machine\r\n\r\nCheck out this Emotion Machine app that you'll be building next. Try clicking on the buttons to see how it works.\r\n\r\n# Do This\r\n\r\nTry out the app, and then with a neighbor discuss:\r\n\r\n* What events handlers does this app use?\r\n* Which elements are being changed with code?\r\n* Which properties are being changed when you click a button?",
+    "long_instructions": "# The Emotion Machine\r\n\r\nCheck out this Emotion Machine app that you'll be building next. Try clicking on the buttons to see how it works.\r\n\r\n# Do This\r\n\r\nTry out the app, and then with a neighbor discuss:\r\n\r\n* What events handlers does this app use?\r\n* Which elements are being changed with code?\r\n* Which properties are being changed when you click a button?",
     "instructions_important": "false",
     "display_name": "Emotion Machine Example",
     "submittable": "false",

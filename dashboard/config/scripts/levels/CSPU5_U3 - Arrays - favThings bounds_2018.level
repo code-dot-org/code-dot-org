@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:04:20.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -166,8 +162,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Add if statements to your event handlers that prevent the global index from going out of bounds. (Click to see full instructions)",
-    "markdown_instructions": "# *if* Statements: Staying in Bounds\r\n\r\nCurrently the user can increase or decrease the value in the global index **past the bounds of your array**. As a result you've probably already seen that errors are generated.\r\n\r\nTo prevent this from happening, we're going to **add `if` statements** to the event handlers on the \"Next\" and \"Last\" buttons. They should check the value of the global index variable before changing it. If the user is about to step out of the bounds of your array they should either:\r\n\r\n* **Block:** Do not change the index if it will result in a value that is out of bounds.\r\n* **Wrap:** Set the index to be the other end of the array. In other words, going past the end of the array moves the index back to 0 and going past the beginning of the array sets the index to the last in the array (`list.length` will be helpful here).\r\n\r\n# Do This:\r\n\r\n* **Add `if` statements** to the event handlers on the \"Next\" and \"Last\" buttons that **prevent the global index from going out of bounds** using one of the two strategies described above.\r\n* Run your program to confirm that the user **cannot go out of bounds** and that the output displayed is correct.",
+    "short_instructions": "Add if statements to your event handlers that prevent the global index from going out of bounds. (Click to see full instructions)",
+    "long_instructions": "# *if* Statements: Staying in Bounds\r\n\r\nCurrently the user can increase or decrease the value in the global index **past the bounds of your array**. As a result you've probably already seen that errors are generated.\r\n\r\nTo prevent this from happening, we're going to **add `if` statements** to the event handlers on the \"Next\" and \"Last\" buttons. They should check the value of the global index variable before changing it. If the user is about to step out of the bounds of your array they should either:\r\n\r\n* **Block:** Do not change the index if it will result in a value that is out of bounds.\r\n* **Wrap:** Set the index to be the other end of the array. In other words, going past the end of the array moves the index back to 0 and going past the beginning of the array sets the index to the last in the array (`list.length` will be helpful here).\r\n\r\n# Do This:\r\n\r\n* **Add `if` statements** to the event handlers on the \"Next\" and \"Last\" buttons that **prevent the global index from going out of bounds** using one of the two strategies described above.\r\n* Run your program to confirm that the user **cannot go out of bounds** and that the output displayed is correct.",
     "slider_speed": "1",
     "project_template_level_name": "U3 - Arrays - favThings template_2018",
     "encrypted_examples": "ZNx+CGSoRjxxAAN7w5SruKWSvjpbAIVLM5oNqSZia3zXqNGh4qpP1tqQYlSE\nMBo7\n",
@@ -176,14 +172,18 @@
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "parent_level_id": 6907,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:04:20.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-03-20 16:12:11 +0000\",\"changed\":[\"notes\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]"

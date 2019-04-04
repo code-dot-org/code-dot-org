@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Now I want to make a rectangle that is twice as tall as it is wide. We've got a variable called \"width\" that needs to be set to 100. Can you use the math blocks to complete the code?",
+    "short_instructions": "Now I want to make a rectangle that is twice as tall as it is wide. We've got a variable called \"width\" that needs to be set to 100. Can you use the math blocks to complete the code?",
     "x": "150",
     "y": "300",
     "start_direction": "90",
@@ -23,7 +23,7 @@
     "embed": "false",
     "video_key": "C4_math_artist",
     "disable_sharing": "false",
-    "markdown_instructions": "Now I want to make a rectangle that is twice as tall as it is wide. We've got a variable called `width` that needs to be set to 100. Can you use the math blocks to complete the code?",
+    "long_instructions": "Now I want to make a rectangle that is twice as tall as it is wide. We've got a variable called `width` that needs to be set to 100. Can you use the math blocks to complete the code?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

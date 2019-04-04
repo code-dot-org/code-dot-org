@@ -1,0 +1,8 @@
+{
+  "category": "",
+  "config": {
+    "func": "randomLocation",
+    "blockText": "random location",
+    "returnType": "Location"
+  }
+}

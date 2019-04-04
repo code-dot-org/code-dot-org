@@ -35,7 +35,7 @@
     "sprites_hidden_to_start": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "You already know what color your card is, but what suit is it? Add code to the conditional statement \"if card is Red\" to choose hearts or diamonds.",
+    "short_instructions": "You already know what color your card is, but what suit is it? Add code to the conditional statement \"if card is Red\" to choose hearts or diamonds.",
     "contained_level_names": null
   },
   "published": true,

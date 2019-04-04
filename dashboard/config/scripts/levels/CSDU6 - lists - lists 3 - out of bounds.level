@@ -79,7 +79,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Accessing Items in a List\r\n\r\n**Starter Code:** There is a list of days of the week provided as well as well as a console.log statement to access the spot that holds \"Friday\" in the list. \r\n\r\n**Do This:** Can you add three more console.log statements that access the spots that hold:\r\n\r\n* Thursday\r\n* Monday\r\n* Sunday",
+    "long_instructions": "# Accessing Items in a List\r\n\r\n**Starter Code:** There is a list of days of the week provided as well as well as a console.log statement to access the spot that holds \"Friday\" in the list. \r\n\r\n**Do This:** Can you add three more console.log statements that access the spots that hold:\r\n\r\n* Thursday\r\n* Monday\r\n* Sunday",
     "start_blocks": "var dayOfWeek = [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", \"Sunday\"];\r\nconsole.log(daysOfWeek[4]);",
     "hide_share_and_remix": "false",
     "contained_level_names": null

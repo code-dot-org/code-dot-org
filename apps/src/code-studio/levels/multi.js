@@ -1,12 +1,21 @@
 import $ from 'jquery';
 import React from 'react';
-import { registerGetResult, onAnswerChanged } from './codeStudioLevels';
-import { sourceForLevel } from '../clientState';
+import {registerGetResult, onAnswerChanged} from './codeStudioLevels';
+import {sourceForLevel} from '../clientState';
 import Sounds from '../../Sounds';
-import { TooFewDialog } from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {TooFewDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 
-var Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString, containedMode) {
-
+var Multi = function(
+  levelId,
+  id,
+  app,
+  standalone,
+  numAnswers,
+  answers,
+  answersFeedback,
+  lastAttemptString,
+  containedMode
+) {
   // The dashboard levelId.
   this.levelId = levelId;
 
@@ -48,12 +57,11 @@ var Multi = function (levelId, id, app, standalone, numAnswers, answers, answers
   $(document).ready(() => this.ready());
 };
 
-
-Multi.prototype.enableButton = function (enable) {
-  $("#" + this.id + ' .submitButton').attr('disabled', !enable);
+Multi.prototype.enableButton = function(enable) {
+  $('#' + this.id + ' .submitButton').attr('disabled', !enable);
 };
 
-Multi.prototype.choiceClicked = function (button) {
+Multi.prototype.choiceClicked = function(button) {
   if (!this.submitAllowed) {
     return;
   }
@@ -66,8 +74,7 @@ Multi.prototype.choiceClicked = function (button) {
   onAnswerChanged(this.levelId, true);
 };
 
-
-Multi.prototype.clickItem = function (index) {
+Multi.prototype.clickItem = function(index) {
   // If this button is already crossed, do nothing more.
   if (this.crossedAnswers.indexOf(index) !== -1) {
     return;
@@ -89,8 +96,8 @@ Multi.prototype.clickItem = function (index) {
   this.lastSelectionIndex = index;
 
   // Unchecked->checked.
-  $("#" + this.id + " #unchecked_" + index).hide();
-  $("#" + this.id + " #checked_" + index).show();
+  $('#' + this.id + ' #unchecked_' + index).hide();
+  $('#' + this.id + ' #checked_' + index).show();
 
   // Add this answer to the list of selected answers.
   this.selectedAnswers.unshift(index);
@@ -100,26 +107,26 @@ Multi.prototype.clickItem = function (index) {
     var unselectIndex = this.selectedAnswers.pop();
 
     // Although don't uncheck it if it's already crossed out.
-    if (this.crossedAnswers.indexOf(unselectIndex) === -1 ) {
-      $("#" + this.id + " #unchecked_" + unselectIndex).show();
-      $("#" + this.id + " #checked_" + unselectIndex).hide();
+    if (this.crossedAnswers.indexOf(unselectIndex) === -1) {
+      $('#' + this.id + ' #unchecked_' + unselectIndex).show();
+      $('#' + this.id + ' #checked_' + unselectIndex).hide();
     }
   }
 
   return true;
 };
 
-Multi.prototype.unclickItem = function (index) {
+Multi.prototype.unclickItem = function(index) {
   var selectedItemIndex = this.selectedAnswers.indexOf(index);
   this.selectedAnswers.splice(selectedItemIndex, 1);
 
   // Checked->unchecked.
-  $("#" + this.id + " #unchecked_" + index).show();
-  $("#" + this.id + " #checked_" + index).hide();
+  $('#' + this.id + ' #unchecked_' + index).show();
+  $('#' + this.id + ' #checked_' + index).hide();
 };
 
 // called on $.ready
-Multi.prototype.ready = function () {
+Multi.prototype.ready = function() {
   // Are we read-only?  This can be because we're a teacher OR because an answer
   // has been previously submitted.
   if (window.appOptions.readonlyWorkspace && !this.containedMode) {
@@ -127,29 +134,37 @@ Multi.prototype.ready = function () {
     $('.submitButton').hide();
 
     // grey out the marks
-    $("#" + this.id +'.item-mark').css('opacity', 0.5);
+    $('#' + this.id + '.item-mark').css('opacity', 0.5);
 
     this.submitAllowed = false;
 
     // Are we a student viewing their own previously-submitted work?
     if (window.appOptions.submitted) {
       // show the Unsubmit button.
-      $("#" + this.id +' .unsubmitButton').show();
+      $('#' + this.id + ' .unsubmitButton').show();
     }
   }
 
-  $("#" + this.id + " .answerbutton").click($.proxy(function (event) {
-    //console.log("answerbutton clicked", this.id);
-    this.choiceClicked($(event.currentTarget));
-  }, this));
+  $('#' + this.id + ' .answerbutton').click(
+    $.proxy(function(event) {
+      //console.log("answerbutton clicked", this.id);
+      this.choiceClicked($(event.currentTarget));
+    }, this)
+  );
 
-  $("#" + this.id + ' #voteform img').on('dragstart', $.proxy(function (event) {
-    // Prevent button images from being dragged, click the button instead.
-    var button = $(event.currentTarget).parent().parent().parent();
-    this.choiceClicked(button);
-    event.preventDefault();
-    event.stopPropagation();
-  }, this));
+  $('#' + this.id + ' #voteform img').on(
+    'dragstart',
+    $.proxy(function(event) {
+      // Prevent button images from being dragged, click the button instead.
+      var button = $(event.currentTarget)
+        .parent()
+        .parent()
+        .parent();
+      this.choiceClicked(button);
+      event.preventDefault();
+      event.stopPropagation();
+    }, this)
+  );
 
   this.enableButton(false);
 
@@ -160,7 +175,8 @@ Multi.prototype.ready = function () {
   }
 
   // Pre-select previously submitted response if available.
-  var lastAttempt = this.lastAttemptString ||
+  var lastAttempt =
+    this.lastAttemptString ||
     sourceForLevel(window.appOptions.scriptName, this.levelId);
   if (lastAttempt) {
     var previousResult = lastAttempt.split(',');
@@ -175,22 +191,22 @@ Multi.prototype.ready = function () {
   }
 };
 
-Multi.prototype.lockAnswers = function () {
-  $("#" + this.id + " .answerbutton").addClass('lock-answers');
+Multi.prototype.lockAnswers = function() {
+  $('#' + this.id + ' .answerbutton').addClass('lock-answers');
 };
 
-Multi.prototype.getAppName = function () {
+Multi.prototype.getAppName = function() {
   return this.app;
 };
 
 // called by external result-posting code
-Multi.prototype.getResult = function (dontAllowSubmit) {
+Multi.prototype.getResult = function(dontAllowSubmit) {
   let answer;
   let errorDialog;
   let valid;
 
   if (this.numAnswers > 1 && this.selectedAnswers.length !== this.numAnswers) {
-    errorDialog = <TooFewDialog/>;
+    errorDialog = <TooFewDialog />;
   }
 
   if (this.numAnswers === 1) {
@@ -201,11 +217,13 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
     valid = this.selectedAnswers.length === this.numAnswers;
   }
 
-
   var result;
   var submitted;
 
-  if (!dontAllowSubmit && (window.appOptions.level.submittable || this.forceSubmittable)) {
+  if (
+    !dontAllowSubmit &&
+    (window.appOptions.level.submittable || this.forceSubmittable)
+  ) {
     result = true;
     submitted = true;
   } else {
@@ -223,7 +241,7 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
 };
 
 // called by external code that will display answer feedback
-Multi.prototype.getCurrentAnswerFeedback = function () {
+Multi.prototype.getCurrentAnswerFeedback = function() {
   if (!this.answersFeedback) {
     return;
   }
@@ -238,7 +256,7 @@ Multi.prototype.getCurrentAnswerFeedback = function () {
 };
 
 // This behavior should only be available when this is a standalone Multi.
-Multi.prototype.submitButtonClick = function () {
+Multi.prototype.submitButtonClick = function() {
   // Don't show right/wrong answers for submittable.
   if (window.appOptions.level.submittable || this.forceSubmittable) {
     return;
@@ -246,11 +264,13 @@ Multi.prototype.submitButtonClick = function () {
 
   // If the solution only takes one answer, and it's wrong, and it's not
   // already crossed out, then mark it as answered wrong.
-  if (this.numAnswers === 1 &&
-      this.crossedAnswers.indexOf(this.lastSelectionIndex) === -1 &&
-      !this.validateAnswers()) {
-    $("#" + this.id + " #checked_" + this.lastSelectionIndex).hide();
-    $("#" + this.id + " #cross_" + this.lastSelectionIndex).show();
+  if (
+    this.numAnswers === 1 &&
+    this.crossedAnswers.indexOf(this.lastSelectionIndex) === -1 &&
+    !this.validateAnswers()
+  ) {
+    $('#' + this.id + ' #checked_' + this.lastSelectionIndex).hide();
+    $('#' + this.id + ' #cross_' + this.lastSelectionIndex).show();
     this.crossedAnswers.unshift(this.lastSelectionIndex);
   }
 };
@@ -259,7 +279,7 @@ Multi.prototype.submitButtonClick = function () {
  * @returns {boolean} True if this Multi has been provided with answers, and the
  *   selected answer(s) are the correct one(s).
  */
-Multi.prototype.validateAnswers = function () {
+Multi.prototype.validateAnswers = function() {
   if (!this.answers) {
     return false;
   }

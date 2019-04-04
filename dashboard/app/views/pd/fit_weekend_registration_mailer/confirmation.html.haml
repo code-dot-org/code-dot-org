@@ -1,0 +1,27 @@
+%p
+  Hi
+  = @registration.pd_application.first_name + ','
+
+%p
+  Thank you for submitting your FiT Workshop registration form!
+
+- if @registration.accepted?
+  We look forward to meeting you this summer! You will receive more information about
+  travel approximately six weeks before the workshop. In the meantime, please contact
+  = link_to("facilitators@code.org", "mailto:facilitators@code.org")
+  with any questions.
+- else
+  We noticed you responded that you’re not able to attend your assigned FiT Workshop.
+  Please contact us at
+  = link_to("facilitators@code.org", "mailto:facilitators@code.org")
+  so that we can assist you.
+
+%p
+  Thank you,
+
+%p
+  Sarah Fairweather
+  %br
+  Education Program Manager
+  %br
+  Code.org

@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-03-28T04:00:15.000Z",
   "level_num": "custom",
   "user_id": 182,
@@ -45,8 +45,9 @@
     "custom_blocks": "[\n  {\n    \"func\": \"jitter\",\n    \"blockText\": \"{SPRITE} jitter\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  },\n  {\n    \"func\": \"wander\",\n    \"blockText\": \"{SPRITE} wander\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  },\n  {\n    \"func\": \"forever\",\n    \"color\": [\n      322,\n      0.9,\n      0.95\n    ],\n    \"blockText\": \"repeat forever\",\n    \"args\": [],\n    \"eventLoopBlock\": true\n  }\n]\n",
     "hide_custom_blocks": "true",
     "parent_level_id": 11952,
-    "markdown_instructions": "Check out this new \"if-else\" block - it lets you run one set of code _if_ a condition is true, and a different set of code if it's false. Inside it we're using another new block that tells you _if_ two sprites are touching.\r\n\r\nSee if you can make both the dog and cat stop moving when they run into each other.",
+    "long_instructions": "Check out this new \"if-else\" block - it lets you run one set of code _if_ a condition is true, and a different set of code if it's false. Inside it we're using another new block that tells you _if_ two sprites are touching.\r\n\r\nSee if you can make both the dog and cat stop moving when they run into each other.",
     "show_type_hints": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-04-12T17:50:35.000Z",
   "level_num": "custom",
   "user_id": 182,
@@ -45,10 +45,11 @@
     "hide_custom_blocks": "true",
     "custom_helper_library": "function tumbling(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotation-=6;\r\n    sprite.x-=3;\r\n  }\r\n  behavior.name = 'tumbling';\r\n  return behavior;\r\n}\r\nfunction addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}",
     "custom_blocks": "[\n  {\n    \"func\": \"tumbling\",\n    \"blockText\": \"tumbling\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      136,\n      \".84\",\n      \".80\"\n    ]\n  }\n]\n",
-    "markdown_instructions": "We're going to make a fish tank. Change the Dusty the tumbleweed to a fish.",
+    "long_instructions": "We're going to make a fish tank. Change the Dusty the tumbleweed to a fish.",
     "parent_level_id": 12279,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

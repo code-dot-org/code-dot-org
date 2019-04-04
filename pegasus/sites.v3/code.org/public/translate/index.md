@@ -12,8 +12,19 @@ By translating Code.org content to other languages, you are directly impacting s
 
 # Help Translate
 1. Sign up [here](http://go.pardot.com/l/153401/2018-05-09/kyjslf) to stay up to date on what we need translated.
+1. Translate the top pages on our site.
+  * [Homepage](/translate/homepage)
+  * [Course Catalog](/translate/course-catalog)
+  * [About Page](https://crowdin.com/translate/codeorg-markdown/672/en-)
+  * [Hour of Code Overview Page](/translate/hoc-overview)
+  * [Hour of Code Activities Page](/translate/hoc-activities)
+  * [Projects Gallery](/translate/projects)
+  * [Dance Party Landing Page](/translate/dance-landing)
+  * [Minecraft Landing Page](/translate/minecraft-landing)
 1. Translate hourofcode.com [here](https://crowdin.com/project/hour-of-code).
-1. Translate our newest tutorials.
+1. Translate our tutorials.
+  * [Dance Party](/translate/dance)
+  * [Minecraft: Voyage Aquatic](/translate/aquatic)
   * [Minecraft: Hero's Journey](/translate/hero)
   * [Minecraft Designer](/translate/minecraft)
   * [Minecraft Adventurer](/translate/mc)

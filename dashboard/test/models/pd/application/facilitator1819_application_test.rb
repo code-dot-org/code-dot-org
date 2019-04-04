@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'state_abbr'
 
 module Pd::Application
   class Facilitator1819ApplicationTest < ActiveSupport::TestCase
@@ -133,9 +132,9 @@ module Pd::Application
       csv_row = @application.to_csv_row(nil)
       csv_answers = csv_row.split(',')
       assert_equal "#{@regional_partner.name}\n", csv_answers[-1]
-      assert_equal 'notes', csv_answers[-2]
-      assert_equal 'false', csv_answers[-3]
-      assert_equal 'accepted', csv_answers[-4]
+      assert_equal 'notes', csv_answers[-6]
+      assert_equal 'false', csv_answers[-7]
+      assert_equal 'accepted', csv_answers[-8]
     end
 
     test 'csv_header and row return same number of columns' do
@@ -155,103 +154,13 @@ module Pd::Application
         "Expected header and row to have the same number of columns"
     end
 
-    test 'send_decision_notification_email only sends to waitlisted and declined' do
-      mock_mail = mock
-      mock_mail.stubs(:deliver_now).returns(nil)
-
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:accepted).times(0)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:interview).times(0)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:pending).times(0)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:unreviewed).times(0)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:withdrawn).times(0)
-
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:declined).times(1).returns(mock_mail)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:waitlisted).times(1).returns(mock_mail)
-
-      Pd::Application::Facilitator1819Application.statuses.values.each do |status|
-        @application.update(status: status)
-        @application.send_decision_notification_email
-      end
-    end
-
-    test 'locking an application with fit_workshop_id automatically enrolls user' do
+    test 'locking an application with fit_workshop_id does not automatically enroll user' do
       @application.fit_workshop_id = @fit_workshop.id
       @application.status = "accepted"
 
-      assert_creates(Pd::Enrollment) do
+      refute_creates(Pd::Enrollment) do
         @application.lock!
       end
-      assert_equal Pd::Enrollment.last.workshop, @fit_workshop
-      assert_equal Pd::Enrollment.last.id, @application.auto_assigned_fit_enrollment_id
-    end
-
-    test 'updating and re-locking an application with an auto-assigned FIT enrollment will delete old enrollment' do
-      first_workshop = @fit_workshop
-      second_workshop = create :pd_workshop, :fit
-
-      @application.fit_workshop_id = first_workshop.id
-      @application.status = "accepted"
-      @application.lock!
-
-      first_enrollment = Pd::Enrollment.find(@application.auto_assigned_fit_enrollment_id)
-
-      @application.unlock!
-      @application.fit_workshop_id = second_workshop.id
-      @application.lock!
-
-      assert first_enrollment.reload.deleted?
-      assert_not_equal first_enrollment.id, @application.auto_assigned_fit_enrollment_id
-    end
-
-    test 'upading the application to unaccepted will also delete the autoenrollment' do
-      @application.fit_workshop_id = @fit_workshop.id
-      @application.status = "accepted"
-      @application.lock!
-      first_enrollment = Pd::Enrollment.find(@application.auto_assigned_fit_enrollment_id)
-
-      @application.unlock!
-      @application.status = "waitlisted"
-      @application.lock!
-
-      assert first_enrollment.reload.deleted?
-
-      @application.unlock!
-      @application.status = "accepted"
-
-      assert_creates(Pd::Enrollment) do
-        @application.lock!
-      end
-
-      assert_not_equal first_enrollment.id, @application.auto_assigned_fit_enrollment_id
-    end
-
-    test 'assign_default_workshop! saves the default workshop' do
-      @application.expects(:find_default_workshop).returns(@fit_workshop)
-
-      @application.assign_default_workshop!
-      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
-    end
-
-    test 'assign_default_workshop! does nothing when a workshop is already assigned' do
-      @application.update! pd_workshop_id: @fit_workshop.id
-      @application.expects(:find_default_workshop).never
-
-      @application.assign_default_workshop!
-      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
-    end
-
-    test 'assign_default_fit_workshop! saves the default fit workshop' do
-      @application.expects(:find_default_fit_workshop).returns(@fit_workshop)
-
-      @application.assign_default_fit_workshop!
-      assert_equal @fit_workshop.id, @application.reload.fit_workshop_id
-    end
-
-    test 'assign_default_fit_workshop! does nothing when a fit workshop is already assigned' do
-      @application_with_fit_workshop.expects(:find_default_fit_workshop).never
-
-      @application_with_fit_workshop.assign_default_fit_workshop!
-      assert_equal @fit_workshop.id, @application_with_fit_workshop.reload.fit_workshop_id
     end
 
     test 'fit_workshop returns the workshop associated with the assigned fit workshop id' do

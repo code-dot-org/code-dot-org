@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Time to head back to land. Help me put down stones so I don't fall in!",
+    "short_instructions": "Time to head back to land. Help me put down stones so I don't fall in!",
     "x": "25",
     "y": "200",
     "start_direction": "90",
@@ -32,7 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use the jump block to move forward without drawing a line.\",\"hint_id\":\"artistLoopsKA_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dfcbfcaa369407545fde976aa32aa85d/gradek_artist_loops9.mp3\"}]",
-    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nTime to head back to land. Help me put down stones so I don't fall in!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif\" width=\"300\"/>\r\n",
+    "long_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nTime to head back to land. Help me put down stones so I don't fall in!<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif\" width=\"300\"/>\r\n",
     "ideal": "5",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/8f2d53f6af78736e988572edf5a0bd6b-image-1477124396077.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",

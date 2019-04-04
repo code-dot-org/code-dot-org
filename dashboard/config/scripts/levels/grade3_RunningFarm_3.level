@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "*\"Corn, lettuce, AND pumpkins! Help me harvest them all.\"*",
+    "short_instructions": "*\"Corn, lettuce, AND pumpkins! Help me harvest them all.\"*",
     "step_speed": "2",
     "ideal": "9",
     "instructions_important": "false",

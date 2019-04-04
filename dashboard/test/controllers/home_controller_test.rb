@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 require 'time'
 
@@ -13,6 +12,8 @@ class HomeControllerTest < ActionController::TestCase
   test "teacher without progress or assigned course/script redirected to index" do
     teacher = create :teacher
     sign_in teacher
+    assert_nil teacher.user_script_with_most_recent_progress
+    assert_nil teacher.most_recently_assigned_user_script
     get :index
 
     assert_redirected_to '/home'
@@ -23,35 +24,85 @@ class HomeControllerTest < ActionController::TestCase
     script = create :script
     sign_in teacher
     teacher.assign_script(script)
+    assert_equal script, teacher.most_recently_assigned_script
     get :index
 
     assert_redirected_to '/home'
   end
 
   test "student without progress or assigned course/script redirected to index" do
-    user = create(:user)
-    sign_in user
-    assert_queries 4 do
-      get :index
-      assert_redirected_to '/home'
-    end
-  end
-
-  test "student with progress but not an assigned course/script will go to index" do
     student = create :student
-    script = create :script
     sign_in student
-    User.any_instance.stubs(:primary_script).returns(script)
+    assert_nil student.user_script_with_most_recent_progress
+    assert_nil student.most_recently_assigned_user_script
     get :index
 
     assert_redirected_to '/home'
   end
 
-  test "student with assigned course or script is redirected to course overview" do
+  test "student with progress but not an assigned script will go to index" do
+    student = create :student
+    script = create :script
+    sign_in student
+    User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
+    assert_equal script, student.script_with_most_recent_progress
+    assert_nil student.most_recently_assigned_user_script
+    get :index
+
+    assert_redirected_to '/home'
+  end
+
+  test "student with assigned script and no progress is redirected to course overview" do
     student = create :student
     script = create :script
     sign_in student
     student.assign_script(script)
+    assert_equal script, student.most_recently_assigned_script
+    assert_nil student.user_script_with_most_recent_progress
+    get :index
+
+    assert_redirected_to script_path(script)
+  end
+
+  test "student with assigned script then recent progress in a different script will go to index" do
+    student = create :student
+    sign_in student
+    assigned_user_script = create :user_script, user: student, assigned_at: 2.days.ago
+    user_script_with_progress = create :user_script, user: student, last_progress_at: 1.day.ago
+    User.any_instance.stubs(:user_script_with_most_recent_progress).returns(user_script_with_progress)
+    User.any_instance.stubs(:most_recently_assigned_user_script).returns(assigned_user_script)
+    assert_equal assigned_user_script, student.most_recently_assigned_user_script
+    assert_equal user_script_with_progress, student.user_script_with_most_recent_progress
+
+    get :index
+
+    assert_redirected_to '/home'
+  end
+
+  test "student with recent progress then an assigned script should go to the assigned script overview" do
+    student = create :student
+    sign_in student
+    assigned_user_script = create :user_script, user: student, assigned_at: 1.day.ago
+    user_script_with_progress = create :user_script, user: student, last_progress_at: 2.days.ago
+    User.any_instance.stubs(:user_script_with_most_recent_progress).returns(user_script_with_progress)
+    User.any_instance.stubs(:most_recently_assigned_user_script).returns(assigned_user_script)
+    student.most_recently_assigned_user_script
+    assert_equal user_script_with_progress, student.user_script_with_most_recent_progress
+
+    get :index
+
+    assert_redirected_to script_path(assigned_user_script.script)
+  end
+
+  test "student with assigned script then recent progress in that script will go to script overview" do
+    student = create :student
+    script = create :script
+    sign_in student
+    student.assign_script(script)
+    User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
+    assert_equal script, student.most_recently_assigned_script
+    assert_equal script, student.script_with_most_recent_progress
+
     get :index
 
     assert_redirected_to script_path(script)
@@ -68,6 +119,42 @@ class HomeControllerTest < ActionController::TestCase
     get :index
 
     assert_redirected_to script_path(script)
+  end
+
+  test "student without pilot access will go to index" do
+    pilot_script = create :script, pilot_experiment: 'pilot-experiment'
+    section = create :section, script: pilot_script
+    student = create(:follower, section: section).student_user
+    sign_in student
+    get :index
+
+    assert_redirected_to '/home'
+  end
+
+  test "student with pilot access will go to pilot script" do
+    pilot_script = create :script, pilot_experiment: 'pilot-experiment'
+    pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
+    section = create :section, script: pilot_script, user: pilot_teacher
+    student = create(:follower, section: section).student_user
+    sign_in student
+    get :index
+
+    assert_redirected_to script_path(pilot_script)
+  end
+
+  test "student with assigned course or script during account takeover will go to index" do
+    student = create :student
+    script = create :script
+    sign_in student
+    student.assign_script(script)
+    begin_fake_account_takeover
+    get :index
+
+    assert_redirected_to '/home'
+  end
+
+  def begin_fake_account_takeover
+    @request.session[HomeController::ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
   end
 
   test "redirect index when signed out" do
@@ -267,7 +354,9 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers see dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    assert_queries 12 do
+    query_count = 12
+    query_count += 1 if SurveyResultsHelper::NPS_SURVEY_ENABLED
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -275,7 +364,9 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    assert_queries 14 do
+    query_count = 14
+    query_count += 1 if SurveyResultsHelper::NPS_SURVEY_ENABLED
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -283,7 +374,9 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop admins see dashboard links' do
     sign_in create(:workshop_admin, :with_terms_of_service)
-    assert_queries 10 do
+    query_count = 10
+    query_count += 1 if SurveyResultsHelper::NPS_SURVEY_ENABLED
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -292,7 +385,9 @@ class HomeControllerTest < ActionController::TestCase
   test 'facilitators see dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
-    assert_queries 11 do
+    query_count = 11
+    query_count += 1 if SurveyResultsHelper::NPS_SURVEY_ENABLED
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -300,7 +395,9 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'teachers cannot see dashboard links' do
     sign_in create(:terms_of_service_teacher)
-    assert_queries 10 do
+    query_count = 10
+    query_count += 1 if SurveyResultsHelper::NPS_SURVEY_ENABLED
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 0, text: 'Workshop Dashboard'
@@ -308,7 +405,9 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop admins see application dashboard links' do
     sign_in create(:workshop_admin, :with_terms_of_service)
-    assert_queries 10 do
+    query_count = 10
+    query_count += 1 if SurveyResultsHelper::NPS_SURVEY_ENABLED
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'
@@ -318,7 +417,9 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are regional partner program managers see application dashboard links' do
     sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service)
-    assert_queries 14 do
+    query_count = 14
+    query_count += 1 if SurveyResultsHelper::NPS_SURVEY_ENABLED
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'
@@ -327,7 +428,9 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see application dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    assert_queries 14 do
+    query_count = 14
+    query_count += 1 if SurveyResultsHelper::NPS_SURVEY_ENABLED
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'
@@ -337,7 +440,9 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    assert_queries 12 do
+    query_count = 12
+    query_count += 1 if SurveyResultsHelper::NPS_SURVEY_ENABLED
+    assert_queries query_count do
       get :home
     end
     assert_select 'h1', count: 0, text: 'Application Dashboard'

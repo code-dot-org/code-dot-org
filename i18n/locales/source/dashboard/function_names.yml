@@ -87,6 +87,7 @@ en:
       do something: do something
       filter_pixel: filter_pixel
       draw_image: draw_image
+      checkSimulationEnd: checkSimulationEnd
       witch ending: witch ending
       story: story
       starting path: starting path
@@ -160,7 +161,6 @@ en:
       move: move
       function 1: function 1
       function 2: function 2
-      turn corner: turn corner
       destroy and move: destroy and move
       clear path: clear path
       clear cacti: clear cacti
@@ -173,6 +173,7 @@ en:
       fix right corner: fix right corner
       fix left corner: fix left corner
       make segment: make segment
+      turn corner: turn corner
       fix long path: fix long path
       fix short path: fix short path
       place 3 tracks: place 3 tracks
@@ -225,6 +226,7 @@ en:
       draw line of triangles: draw line of triangles
       draw a window: draw a window
       stop_everything: stop_everything
+      lose: lose
       draw a plane of squares: draw a plane of squares
       draw hexagon: draw hexagon
       draw line of hexagons: draw line of hexagons

@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "video_key": "csp_applab_conditionals_2B",
-    "markdown_instructions": "### Points to pay attention to:\r\n\r\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\r\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\r\n\r\n",
+    "long_instructions": "### Points to pay attention to:\r\n\r\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\r\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\r\n\r\n",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,

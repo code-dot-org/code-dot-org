@@ -1,15 +1,22 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import Button from '../Button';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import _ from 'lodash';
 import $ from 'jquery';
-import {howManyStudents, roleOptions, courseTopics, frequencyOptions, pledge} from './censusQuestions';
+import {
+  howManyStudents,
+  roleOptions,
+  courseTopics,
+  frequencyOptions,
+  pledge
+} from './censusQuestions';
 import SchoolAutocompleteDropdownWithLabel from './SchoolAutocompleteDropdownWithLabel';
 import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
 import SchoolNotFound from '../SchoolNotFound';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
-import { styles } from './censusFormStyles';
+import {styles} from './censusFormStyles';
 
 export const censusFormPrefillDataShape = PropTypes.shape({
   userName: PropTypes.string,
@@ -80,17 +87,22 @@ class CensusForm extends Component {
     this.setState({showSchoolYearDropdown: true});
   };
 
-  handleSchoolYearChange = (event) => {
-    this.setState({schoolYear: event ? event.value : this.props.initialSchoolYear});
+  handleSchoolYearChange = event => {
+    this.setState({
+      schoolYear: event ? event.value : this.props.initialSchoolYear
+    });
   };
 
   handleChange = (field, event) => {
-    this.setState({
-      submission: {
-        ...this.state.submission,
-        [field]: event.target.value
-      }
-    }, this.checkShowFollowUp);
+    this.setState(
+      {
+        submission: {
+          ...this.state.submission,
+          [field]: event.target.value
+        }
+      },
+      this.checkShowFollowUp
+    );
   };
 
   handleSchoolDropdownChange = (field, event) => {
@@ -108,15 +120,18 @@ class CensusForm extends Component {
 
   checkShowFollowUp() {
     const twentyHours = this.state.submission.twentyHours;
-    this.setState({
-      showFollowUp: (twentyHours === 'SOME' || twentyHours === 'ALL')
-    }, this.checkShowPledge);
+    this.setState(
+      {
+        showFollowUp: twentyHours === 'SOME' || twentyHours === 'ALL'
+      },
+      this.checkShowPledge
+    );
   }
 
   checkShowPledge() {
     const role = this.state.submission.role;
     this.setState({
-      showPledge: (role === 'TEACHER' || role === 'ADMINISTRATOR')
+      showPledge: role === 'TEACHER' || role === 'ADMINISTRATOR'
     });
   }
 
@@ -160,22 +175,22 @@ class CensusForm extends Component {
 
   updateOtherTopicsDesc(event) {
     const description = event.target.value;
-    const emptyDescription = ("" === description);
+    const emptyDescription = '' === description;
 
     // Clear the "other topics" checkbox when there is no description.
     if (emptyDescription) {
-      this.clearOption("topic_other_b");
+      this.clearOption('topic_other_b');
     }
     // Mark the "other topics" checkbox when there is a description.
     if (!emptyDescription) {
-      this.selectOption("topic_other_b");
+      this.selectOption('topic_other_b');
     }
 
-    this.setState({ otherTopicsDesc: description });
+    this.setState({otherTopicsDesc: description});
   }
 
   processResponse() {
-    window.location.href = "/yourschool/thankyou";
+    window.location.href = '/yourschool/thankyou';
   }
 
   // The response in the error case is JSON with an entry for
@@ -200,7 +215,7 @@ class CensusForm extends Component {
     };
 
     const errorJSON = error.responseJSON;
-    Object.keys(errorJSON).map((key) =>  {
+    Object.keys(errorJSON).map(key => {
       const errorKey = errorMap[key];
       let newErrors = this.state.errors;
       newErrors[errorKey] = true;
@@ -221,7 +236,7 @@ class CensusForm extends Component {
   }
 
   validateSchoolDropdown() {
-    if (this.state.submission.country === "United States") {
+    if (this.state.submission.country === 'United States') {
       if (this.schoolId()) {
         return false;
       } else {
@@ -234,9 +249,14 @@ class CensusForm extends Component {
 
   validateSchool() {
     const {submission} = this.state;
-    if (submission.country === "United States" && this.schoolId() === "-1") {
-      return (this.validateNotBlank(submission.schoolName) || this.validateNotBlank(submission.schoolState) || this.validateNotBlank(submission.schoolCity)
-      || this.validateNotBlank(submission.schoolType) || this.validateNotBlank(submission.schoolZip));
+    if (submission.country === 'United States' && this.schoolId() === '-1') {
+      return (
+        this.validateNotBlank(submission.schoolName) ||
+        this.validateNotBlank(submission.schoolState) ||
+        this.validateNotBlank(submission.schoolCity) ||
+        this.validateNotBlank(submission.schoolType) ||
+        this.validateNotBlank(submission.schoolZip)
+      );
     } else {
       return false;
     }
@@ -251,112 +271,124 @@ class CensusForm extends Component {
   }
 
   validateFrequency() {
-    return this.state.showFollowUp && this.state.submission.followUpFrequency === '';
+    return (
+      this.state.showFollowUp && this.state.submission.followUpFrequency === ''
+    );
   }
 
   validateExistingInaccuracyReason() {
-    return this.props.existingInaccuracy &&
-      this.validateNotBlank(this.state.submission.existingInaccuracyReason);
+    return (
+      this.props.existingInaccuracy &&
+      this.validateNotBlank(this.state.submission.existingInaccuracyReason)
+    );
   }
 
   validateSubmission() {
-    this.setState({
-      errors: {
-        ...this.state.errors,
-        email: this.validateNotBlank(this.state.submission.email),
-        topics: this.validateTopics(),
-        frequency: this.validateFrequency(),
-        country: this.validateNotBlank(this.state.submission.country),
-        nces: this.validateSchoolDropdown(),
-        school: this.validateSchool(),
-        role: this.validateNotBlank(this.state.submission.role),
-        hoc: this.validateNotBlank(this.state.submission.hoc),
-        afterSchool: this.validateNotBlank(this.state.submission.afterSchool),
-        tenHours: this.validateNotBlank(this.state.submission.tenHours),
-        twentyHours: this.validateNotBlank(this.state.submission.twentyHours),
-        share: this.validateNotBlank(this.state.submission.share),
-        optIn: this.validateNotBlank(this.state.submission.optIn),
-        existingInaccuracyReason: this.validateExistingInaccuracyReason()
-      }
-    }, this.censusFormSubmit);
+    this.setState(
+      {
+        errors: {
+          ...this.state.errors,
+          email: this.validateNotBlank(this.state.submission.email),
+          topics: this.validateTopics(),
+          frequency: this.validateFrequency(),
+          country: this.validateNotBlank(this.state.submission.country),
+          nces: this.validateSchoolDropdown(),
+          school: this.validateSchool(),
+          role: this.validateNotBlank(this.state.submission.role),
+          hoc: this.validateNotBlank(this.state.submission.hoc),
+          afterSchool: this.validateNotBlank(this.state.submission.afterSchool),
+          tenHours: this.validateNotBlank(this.state.submission.tenHours),
+          twentyHours: this.validateNotBlank(this.state.submission.twentyHours),
+          share: this.validateNotBlank(this.state.submission.share),
+          optIn: this.validateNotBlank(this.state.submission.optIn),
+          existingInaccuracyReason: this.validateExistingInaccuracyReason()
+        }
+      },
+      this.censusFormSubmit
+    );
   }
 
   censusFormSubmit() {
-    const { errors } = this.state;
-    if (!errors.email &&
-        !errors.topics &&
-        !errors.frequency &&
-        !errors.school &&
-        !errors.nces &&
-        !errors.role &&
-        !errors.hoc &&
-        !errors.afterSchool &&
-        !errors.tenHours &&
-        !errors.twentyHours &&
-        !errors.country &&
-        !errors.share &&
-        !errors.optIn &&
-        !errors.existingInaccuracyReason) {
+    const {errors} = this.state;
+    if (
+      !errors.email &&
+      !errors.topics &&
+      !errors.frequency &&
+      !errors.school &&
+      !errors.nces &&
+      !errors.role &&
+      !errors.hoc &&
+      !errors.afterSchool &&
+      !errors.tenHours &&
+      !errors.twentyHours &&
+      !errors.country &&
+      !errors.share &&
+      !errors.optIn &&
+      !errors.existingInaccuracyReason
+    ) {
       $.ajax({
-        url: "/dashboardapi/v1/census/CensusYourSchool2017v7",
-        type: "post",
-        dataType: "json",
+        url: '/dashboardapi/v1/census/CensusYourSchool2017v7',
+        type: 'post',
+        dataType: 'json',
         data: $('#census-form').serialize()
-      }).done(this.processResponse).fail(this.processError.bind(this));
+      })
+        .done(this.processResponse)
+        .fail(this.processError.bind(this));
       event.preventDefault();
     }
   }
 
   topicCheckbox(name, label) {
     return (
-    <label>
-      <input
-        type="checkbox"
-        name={name}
-        checked={this.state.selectedTopics.includes(name)}
-        onChange={() => this.toggleTopics(name)}
-      />
-      <span style={styles.checkboxOption}>
-        {label}
-      </span>
-    </label>
+      <label>
+        <input
+          type="checkbox"
+          name={name}
+          checked={this.state.selectedTopics.includes(name)}
+          onChange={() => this.toggleTopics(name)}
+        />
+        <span style={styles.checkboxOption}>{label}</span>
+      </label>
     );
   }
 
   render() {
-    const { showFollowUp, showPledge, submission, errors } = this.state;
-    const showErrorMsg = !!(errors.email ||
-                            errors.topics ||
-                            errors.frequency ||
-                            errors.school ||
-                            errors.role ||
-                            errors.hoc ||
-                            errors.afterSchool ||
-                            errors.tenHours ||
-                            errors.twentyHours ||
-                            errors.country ||
-                            errors.nces ||
-                            errors.share ||
-                            errors.optIn ||
-                            errors.existingInaccuracyReason);
-    const US = submission.country === "United States";
+    const {showFollowUp, showPledge, submission, errors} = this.state;
+    const showErrorMsg = !!(
+      errors.email ||
+      errors.topics ||
+      errors.frequency ||
+      errors.school ||
+      errors.role ||
+      errors.hoc ||
+      errors.afterSchool ||
+      errors.tenHours ||
+      errors.twentyHours ||
+      errors.country ||
+      errors.nces ||
+      errors.share ||
+      errors.optIn ||
+      errors.existingInaccuracyReason
+    );
+    const US = submission.country === 'United States';
     const prefillData = this.props.prefillData || {};
     let schoolId = prefillData['schoolId'] || '';
     const schoolDropdownOption = this.props.schoolDropdownOption;
     if (schoolDropdownOption) {
       schoolId = undefined;
     }
-    const showSchoolNotFound = US && (schoolId === '-1' || (schoolDropdownOption && schoolDropdownOption.value === "-1"));
+    const showSchoolNotFound =
+      US &&
+      (schoolId === '-1' ||
+        (schoolDropdownOption && schoolDropdownOption.value === '-1'));
     const showExistingInaccuracy = this.props.showExistingInaccuracy;
 
     return (
       <div id="form">
-        <h2 style={styles.formHeading}>
-          {i18n.yourSchoolTellUs()}
-        </h2>
+        <h2 style={styles.formHeading}>{i18n.yourSchoolTellUs()}</h2>
         <form id="census-form">
           <CountryAutocompleteDropdown
-            onChange={this.handleDropdownChange.bind("country")}
+            onChange={this.handleDropdownChange.bind('country')}
             value={submission.country}
             showRequiredIndicator
             showErrorMsg={errors.country}
@@ -398,30 +430,39 @@ class CensusForm extends Component {
             </div>
           )}
           {!this.state.showSchoolYearDropdown && (
-             <div>
-               <div style={styles.question}>
-                 Please answer the questions below about the {this.props.initialSchoolYear}-{this.props.initialSchoolYear+1} school year.
-                 (<a onClick={this.showSchoolYearDropdown}>Answer for a different school year.</a>)
-               </div>
-             <input type="hidden" id="school_year" name="school_year" value={this.props.initialSchoolYear}/>
-             </div>
+            <div>
+              <div style={styles.question}>
+                Please answer the questions below about the{' '}
+                {this.props.initialSchoolYear}-
+                {this.props.initialSchoolYear + 1} school year. (
+                <a onClick={this.showSchoolYearDropdown}>
+                  Answer for a different school year.
+                </a>
+                )
+              </div>
+              <input
+                type="hidden"
+                id="school_year"
+                name="school_year"
+                value={this.props.initialSchoolYear}
+              />
+            </div>
           )}
           {this.state.showSchoolYearDropdown && (
             <label style={styles.dropdownBox}>
-              <span style={styles.question}>
-                Choose a school year:
-              </span>
+              <span style={styles.question}>Choose a school year:</span>
               <select
                 name="school_year"
                 value={this.state.schoolYear}
                 onChange={this.handleSchoolYearChange}
                 style={styles.dropdown}
               >
-                {[this.props.initialSchoolYear - 1, this.props.initialSchoolYear, this.props.initialSchoolYear + 1].map((schoolYear) => (
-                  <option
-                    value={schoolYear}
-                    key={schoolYear}
-                  >
+                {[
+                  this.props.initialSchoolYear - 1,
+                  this.props.initialSchoolYear,
+                  this.props.initialSchoolYear + 1
+                ].map(schoolYear => (
+                  <option value={schoolYear} key={schoolYear}>
                     {schoolYear} - {schoolYear + 1}
                   </option>
                 ))}
@@ -429,7 +470,13 @@ class CensusForm extends Component {
             </label>
           )}
           <div style={styles.question}>
-            How much <span style={{fontWeight: 'bold'}}> coding/computer programming </span> is taught at this school? (assume for the purposes of this question that this does not include HTML/CSS, Web design, or how to use apps)
+            How much{' '}
+            <span style={{fontWeight: 'bold'}}>
+              {' '}
+              coding/computer programming{' '}
+            </span>{' '}
+            is taught at this school? (assume for the purposes of this question
+            that this does not include HTML/CSS, Web design, or how to use apps)
             <span style={styles.asterisk}> *</span>
           </div>
           <div style={styles.firstQuestion}>
@@ -437,9 +484,7 @@ class CensusForm extends Component {
               <div style={styles.option}>
                 {i18n.censusHowManyHoC()}
                 {errors.hoc && (
-                  <div style={styles.errors}>
-                    {i18n.censusRequiredSelect()}
-                  </div>
+                  <div style={styles.errors}>{i18n.censusRequiredSelect()}</div>
                 )}
               </div>
               <select
@@ -448,14 +493,11 @@ class CensusForm extends Component {
                 onChange={this.handleChange.bind(this, 'hoc')}
                 style={styles.dropdown}
               >
-                {howManyStudents.map((role, index) =>
-                  <option
-                    value={role.value}
-                    key={index}
-                  >
+                {howManyStudents.map((role, index) => (
+                  <option value={role.value} key={index}>
                     {role.display}
                   </option>
-                )}
+                ))}
               </select>
             </label>
           </div>
@@ -464,9 +506,7 @@ class CensusForm extends Component {
               <div style={styles.option}>
                 {i18n.censusHowManyAfterSchool()}
                 {errors.afterSchool && (
-                  <div style={styles.errors}>
-                    {i18n.censusRequiredSelect()}
-                  </div>
+                  <div style={styles.errors}>{i18n.censusRequiredSelect()}</div>
                 )}
               </div>
               <select
@@ -475,14 +515,11 @@ class CensusForm extends Component {
                 onChange={this.handleChange.bind(this, 'afterSchool')}
                 style={styles.dropdown}
               >
-                {howManyStudents.map((role, index) =>
-                  <option
-                    value={role.value}
-                    key={index}
-                  >
+                {howManyStudents.map((role, index) => (
+                  <option value={role.value} key={index}>
                     {role.display}
                   </option>
-                )}
+                ))}
               </select>
             </label>
           </div>
@@ -491,9 +528,7 @@ class CensusForm extends Component {
               <div style={styles.option}>
                 {i18n.censusHowManyTenHours()}
                 {errors.tenHours && (
-                  <div style={styles.errors}>
-                    {i18n.censusRequiredSelect()}
-                  </div>
+                  <div style={styles.errors}>{i18n.censusRequiredSelect()}</div>
                 )}
               </div>
               <select
@@ -502,14 +537,11 @@ class CensusForm extends Component {
                 onChange={this.handleChange.bind(this, 'tenHours')}
                 style={styles.dropdown}
               >
-                {howManyStudents.map((role, index) =>
-                  <option
-                    value={role.value}
-                    key={index}
-                  >
+                {howManyStudents.map((role, index) => (
+                  <option value={role.value} key={index}>
                     {role.display}
                   </option>
-                )}
+                ))}
               </select>
             </label>
           </div>
@@ -518,9 +550,7 @@ class CensusForm extends Component {
               <div style={styles.option}>
                 {i18n.censusHowManyTwentyHours()}
                 {errors.twentyHours && (
-                  <div style={styles.errors}>
-                    {i18n.censusRequiredSelect()}
-                  </div>
+                  <div style={styles.errors}>{i18n.censusRequiredSelect()}</div>
                 )}
               </div>
               <select
@@ -529,14 +559,11 @@ class CensusForm extends Component {
                 onChange={this.handleChange.bind(this, 'twentyHours')}
                 style={styles.dropdown}
               >
-                {howManyStudents.map((role, index) =>
-                  <option
-                    value={role.value}
-                    key={index}
-                  >
+                {howManyStudents.map((role, index) => (
+                  <option value={role.value} key={index}>
                     {role.display}
                   </option>
-                )}
+                ))}
               </select>
             </label>
           </div>
@@ -548,9 +575,7 @@ class CensusForm extends Component {
                 checked={submission.otherCS}
                 onChange={() => this.toggleOtherCS()}
               />
-              <span style={styles.otherCS}>
-                {i18n.censusOtherCourse()}
-              </span>
+              <span style={styles.otherCS}>{i18n.censusOtherCourse()}</span>
             </label>
           </div>
 
@@ -562,14 +587,18 @@ class CensusForm extends Component {
                     type="checkbox"
                     name="inaccuracy_reported"
                     checked={this.props.existingInaccuracy}
-                    onChange={(event) => this.props.onExistingInaccuracyChange(event.target.checked)}
+                    onChange={event =>
+                      this.props.onExistingInaccuracyChange(
+                        event.target.checked
+                      )
+                    }
                   />
                   <span style={styles.existingInaccuracy}>
                     {i18n.censusExistingInaccuracy()}
                   </span>
                 </label>
                 <span data-tip data-for="existing-inaccuracy">
-                  <FontAwesome icon="question-circle"/>
+                  <FontAwesome icon="question-circle" />
                 </span>
               </div>
 
@@ -585,10 +614,7 @@ class CensusForm extends Component {
                 <div style={styles.existingInaccuracyTooltip}>
                   {i18n.censusExistingInaccuracyTip()}
                   &nbsp;
-                  <a
-                    href="/yourschool/about"
-                    target="_blank"
-                  >
+                  <a href="/yourschool/about" target="_blank">
                     {i18n.censusExistingInaccuracyTipLink()}
                   </a>
                 </div>
@@ -611,7 +637,10 @@ class CensusForm extends Component {
                   type="text"
                   name="inaccuracy_comment"
                   value={this.state.submission.existingInaccuracyReason}
-                  onChange={this.handleChange.bind(this, 'existingInaccuracyReason')}
+                  onChange={this.handleChange.bind(
+                    this,
+                    'existingInaccuracyReason'
+                  )}
                   style={styles.textArea}
                 />
               </label>
@@ -625,21 +654,19 @@ class CensusForm extends Component {
                 <span style={styles.asterisk}> *</span>
               </div>
               {errors.topics && (
-                <div style={styles.errors}>
-                  {i18n.censusRequiredSelect()}
-                </div>
+                <div style={styles.errors}>{i18n.censusRequiredSelect()}</div>
               )}
               <div style={styles.options}>
-                {courseTopics.map((courseTopic, index) =>
-                  <div
-                    key={index}
-                    style={styles.leftMargin}
-                  >
+                {courseTopics.map((courseTopic, index) => (
+                  <div key={index} style={styles.leftMargin}>
                     {this.topicCheckbox(courseTopic.name, courseTopic.label)}
                   </div>
-                )}
+                ))}
                 <div style={styles.leftMargin}>
-                  {this.topicCheckbox("topic_other_b", `${i18n.censusOtherDescribeHere()}`)}
+                  {this.topicCheckbox(
+                    'topic_other_b',
+                    `${i18n.censusOtherDescribeHere()}`
+                  )}
                   &nbsp;
                   <input
                     type="text"
@@ -650,7 +677,7 @@ class CensusForm extends Component {
                   />
                 </div>
                 <div style={styles.leftMargin}>
-                  {this.topicCheckbox("topic_do_not_know", i18n.iDontKnow())}
+                  {this.topicCheckbox('topic_do_not_know', i18n.iDontKnow())}
                 </div>
               </div>
               <label>
@@ -659,9 +686,7 @@ class CensusForm extends Component {
                   <span style={styles.asterisk}> *</span>
                 </div>
                 {errors.frequency && (
-                  <div style={styles.errors}>
-                    {i18n.censusRequiredSelect()}
-                  </div>
+                  <div style={styles.errors}>{i18n.censusRequiredSelect()}</div>
                 )}
                 <select
                   name="class_frequency"
@@ -669,14 +694,11 @@ class CensusForm extends Component {
                   onChange={this.handleChange.bind(this, 'followUpFrequency')}
                   style={styles.wideDropdown}
                 >
-                  {frequencyOptions.map((role, index) =>
-                    <option
-                      value={role.value}
-                      key={index}
-                    >
+                  {frequencyOptions.map((role, index) => (
+                    <option value={role.value} key={index}>
                       {role.display}
                     </option>
-                  )}
+                  ))}
                 </select>
               </label>
               <label>
@@ -699,9 +721,7 @@ class CensusForm extends Component {
               <span style={styles.asterisk}> *</span>
             </div>
             {errors.role && (
-              <div style={styles.errors}>
-                {i18n.censusRequiredSelect()}
-              </div>
+              <div style={styles.errors}>{i18n.censusRequiredSelect()}</div>
             )}
             <select
               name="submitter_role"
@@ -709,14 +729,11 @@ class CensusForm extends Component {
               onChange={this.handleChange.bind(this, 'role')}
               style={styles.wideDropdown}
             >
-              {roleOptions.map((role, index) =>
-                <option
-                  value={role.value}
-                  key={index}
-                >
+              {roleOptions.map((role, index) => (
+                <option value={role.value} key={index}>
                   {role.display}
                 </option>
-              )}
+              ))}
             </select>
           </label>
           <div>
@@ -726,14 +743,10 @@ class CensusForm extends Component {
                 <span style={styles.asterisk}> *</span>
               </div>
               {errors.email && (
-                <div style={styles.errors}>
-                  {i18n.censusRequiredEmail()}
-                </div>
+                <div style={styles.errors}>{i18n.censusRequiredEmail()}</div>
               )}
               {errors.invalidEmail && (
-                <div style={styles.errors}>
-                  {i18n.censusInvalidEmail()}
-                </div>
+                <div style={styles.errors}>{i18n.censusInvalidEmail()}</div>
               )}
               <input
                 type="text"
@@ -746,12 +759,13 @@ class CensusForm extends Component {
             </label>
             <label>
               {errors.share && (
-                 <div style={styles.errors}>
-                   {i18n.censusRequiredShare()}
-                 </div>
+                <div style={styles.errors}>{i18n.censusRequiredShare()}</div>
               )}
               <span style={styles.share}>
-                Share my contact information with the Code.org <a href="educate/regional-partner">regional partner</a> in my state so I can be contacted about local professional learning, resources and events.
+                Share my contact information with the Code.org{' '}
+                <a href="educate/regional-partner">regional partner</a> in my
+                state so I can be contacted about local professional learning,
+                resources and events.
               </span>
               <select
                 name="share_with_regional_partners"
@@ -759,7 +773,9 @@ class CensusForm extends Component {
                 onChange={this.handleChange.bind(this, 'share')}
                 style={styles.dropdown}
               >
-                <option value="" disabled>{i18n.yesNo()}</option>
+                <option value="" disabled>
+                  {i18n.yesNo()}
+                </option>
                 <option value="true">{i18n.yes()}</option>
                 <option value="false">{i18n.no()}</option>
               </select>
@@ -769,17 +785,14 @@ class CensusForm extends Component {
 
           <div>
             {errors.optIn && (
-               <div style={styles.errors}>
-                 Required. Please let us know if we can email you.
-               </div>
+              <div style={styles.errors}>
+                Required. Please let us know if we can email you.
+              </div>
             )}
             <span style={styles.share}>
-              Can we email you about updates to our courses, local opportunities, or other computer science news?
-              &nbsp;
-              <a
-                href="/privacy"
-                target="_blank"
-              >
+              Can we email you about updates to our courses, local
+              opportunities, or other computer science news? &nbsp;
+              <a href="/privacy" target="_blank">
                 (See our privacy policy)
               </a>
             </span>
@@ -790,7 +803,9 @@ class CensusForm extends Component {
               onChange={this.handleChange.bind(this, 'optIn')}
               style={styles.dropdown}
             >
-              <option value="" disabled>{i18n.yesNo()}</option>
+              <option value="" disabled>
+                {i18n.yesNo()}
+              </option>
               <option value="true">{i18n.yes()}</option>
               <option value="false">{i18n.no()}</option>
             </select>
@@ -799,9 +814,7 @@ class CensusForm extends Component {
 
           <div>
             <label>
-              <div style={styles.question}>
-                {i18n.yourName()}
-              </div>
+              <div style={styles.question}>{i18n.yourName()}</div>
               <input
                 type="text"
                 name="submitter_name"
@@ -821,17 +834,13 @@ class CensusForm extends Component {
                   checked={submission.acceptedPledge}
                   onChange={() => this.togglePledge()}
                 />
-                <span style={styles.pledge}>
-                  {pledge}
-                </span>
+                <span style={styles.pledge}>{pledge}</span>
               </label>
             </div>
           )}
 
           {showErrorMsg && (
-            <div style={styles.errors}>
-              {i18n.censusRequired()}
-            </div>
+            <div style={styles.errors}>{i18n.censusRequired()}</div>
           )}
           <Button
             id="submit-button"
