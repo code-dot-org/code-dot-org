@@ -64,7 +64,11 @@ export default class StudentSelector extends React.Component {
         {studentDivs}
         <div className="clear" />
         {this.state.selectedStudentIds.length !== 0 && (
-          <button onClick={this.handleSubmit} className="addPartners">
+          <button
+            type="button"
+            onClick={this.handleSubmit}
+            className="addPartners"
+          >
             {i18n.addPartners()}
           </button>
         )}

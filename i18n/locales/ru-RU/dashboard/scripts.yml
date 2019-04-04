@@ -2665,6 +2665,8 @@ ru:
               name: Циклы в исполнителе Художник
             Binary Bracelets:
               name: Двоичные браслеты
+            Sticker Art with Loops:
+              name: Циклы в исполнителе Художник
         gamelab:
           title: Игровая лаборатория
         coursea-2019:
@@ -2711,6 +2713,8 @@ ru:
               name: Циклы в исполнителе Художник
             Spelling Bee:
               name: Пчела
+            Ocean Scene with Loops:
+              name: Циклы в исполнителе Художник
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':

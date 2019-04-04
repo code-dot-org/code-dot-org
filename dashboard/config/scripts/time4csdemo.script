@@ -1,0 +1,56 @@
+stage_extras_available true
+has_lesson_plan true
+
+stage 'Introduction to the Problem', flex_category: 'time4cs_c1'
+named_level 'timeforcs_demo_c1_1'
+named_level 'timeforcs_demo_c1_2'
+named_level 'timeforcs_demo_c1_3'
+named_level 'timeforcs_demo_c1_4'
+named_level 'timeforcs_demo_c1_5_journal'
+
+stage 'Crowdsourcing', flex_category: 'time4cs_c1'
+level 'timeforcs_demo_crowdsourcing', progression: 'Crowdsourcing'
+
+stage 'Everglades Habitats', flex_category: 'time4cs_c1'
+named_level 'timeforcs_demo_c2_1'
+named_level 'timeforcs_demo_c2_2'
+named_level 'timeforcs_demo_c2_3'
+named_level 'timeforcs_demo_c2_4'
+named_level 'timeforcs_demo_c2_5'
+
+stage 'Reviewing Projects', flex_category: 'time4cs_c1'
+named_level 'timeforcs_demo_c3_1'
+level 'timeforcs_demo_spritelab_1', progression: 'Projects'
+level 'timeforcs_demo_spritelab_1', progression: 'Projects'
+level 'timeforcs_demo_spritelab_1', progression: 'Projects'
+level 'timeforcs_demo_spritelab_1', progression: 'Projects'
+level 'timeforcs_demo_spritelab_1', progression: 'Projects'
+level 'timeforcs_demo_c2_1', progression: 'Rubric'
+
+stage 'Food Chains', flex_category: 'time4cs_c2'
+named_level 'timeforcs_demo_c2_1'
+named_level 'timeforcs_demo_c2_2'
+named_level 'timeforcs_demo_c2_3'
+named_level 'timeforcs_demo_c2_4'
+named_level 'timeforcs_demo_c2_5'
+
+stage 'Conditionals with Cards', flex_category: 'time4cs_c2'
+level 'timeforcs_demo_conditionals', progression: 'Conditionals'
+
+stage 'Alligator Holes', flex_category: 'time4cs_c2'
+named_level 'timeforcs_demo_c2_1'
+named_level 'timeforcs_demo_c2_2'
+named_level 'timeforcs_demo_c2_3'
+named_level 'timeforcs_demo_c2_4'
+named_level 'timeforcs_demo_c2_5'
+
+stage 'Conditionals in Sprite Lab', flex_category: 'time4cs_c2'
+level 'timeforcs_demo_sl_1', progression: 'Engage'
+level 'timeforcs_demo_sl_2', progression: 'Explore'
+level 'timeforcs_demo_sl_3', progression: 'Explore'
+level 'timeforcs_demo_sl_4', progression: 'Explain'
+level 'timeforcs_demo_sl_5', progression: 'Explain'
+level 'timeforcs_demo_sl_6', progression: 'Elaborate/Extend'
+level 'timeforcs_demo_sl_7', progression: 'Elaborate/Extend'
+level 'timeforcs_demo_sl_8', progression: 'Evaluate'
+level 'timeforcs_demo_sl_9', progression: 'Evaluate'

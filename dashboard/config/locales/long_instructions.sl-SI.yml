@@ -302,12 +302,25 @@ sl:
         Kako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke "points" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo "ko igralec 2 se dotakne česarkoli" tudi za večanje vrednosti spremenljivke "points".
         Vrednost spremenljivke lahko večaš tako, da nastaviš "points = points + 1."
         Zberi 10 točk (vsako posebej...) da končaš to nalogo.
+      CourseE_HOC 2018 Level_1: "Potrebuješ pripomočke za potovanje, ki te čaka. Poberi
+        **čoln** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        iz **zaboja** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+        \n\n"
       CourseE_HOC 2018 Level_10: 'Nekje v tem morskem svetu se skriva  **velika hobotnica**
         ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png).
         Ali jo lahko najdeš? '
       CourseE_HOC 2018 Level_11: Zgradi zid iz **prizmarina** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         okoli črnega betona. Tako boš odprl  **strugo** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         in končal svojo nalogo!
+      CourseE_HOC 2018 Level_2: Čolni so bolj primerni kot plavanje po morju. Odpravi
+        se na koneec pomola in se vkrcaj.
+      CourseE_HOC 2018 Level_3: Zgrabi vesla in odveslaj proti ribi ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_4: Z ribo nahranimo **delfina** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Uporabi "repeat until" blok (ponavljaj dokler) da prečkaš morje hitreje.
+      CourseE_HOC 2018 Level_5: Tu nekje se skriva **školjka** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        ! Razišči razbitino ladje, da jo najdeš v **zaboju** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_6: Tu je precej mrzlo! Ujemi **lososa** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        na poti do podvodnih ruševin.
       CourseE_HOC 2018 Level_7a: Našel si podvodne ruševine. Preišči ruševine in najdi
         **zaboj** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
         ki vsebuje **dragulj** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)

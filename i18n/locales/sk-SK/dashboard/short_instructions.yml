@@ -681,7 +681,7 @@ sk:
       Mike Pair Programming: Tu sú inštrukcie
       Mike Test Bee Conditionals 1: Tento oblak blokuje môj výhľad! Skontrolujte, či pod oblakom nie je kvetinka a pozbierajte nektár iba ak tam kvetinka je. Pozor, kvetinka môže meniť svoju polohu!
       NEW Course 4 Bee For Loops 1: Použite slučku pre pozbieranie nektáru z každej kvetinky.
-      New Basketball Project: Vytvor si svoj vlastný basketbalový zápas! Môžeš zmeniť pravidlá ako len chceš. Keď budeš hotový, klikni na "Dokončiť", aby si tvoj zápas mohli zahrať aj kamaráti na svojich mobiloch.
+      New Basketball Project: Vytvor si vlastný basketbalový zápas! Môžeš zmeniť všetky pravidlá. Keď skončíš, klikni na "Dokončiť", aby si ho mohli zahrať aj kamaráti na svojich mobiloch.
       New Gumball Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
       New Ice Age Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
       New Infinity Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
@@ -1071,6 +1071,7 @@ sk:
         Pridaj bloky `nastav pozadie` a `nastav rýchlosť` tučniaka pod blok `pri spustení`.
 
         Zahraj si hru a pomocou šípok pohybuj tučniakom.
+      courseC_PlayLab_eventsA_embed_2019: Poďme sa hrať. Získaj 5 bodov, narážím tučniaka do chobotnice!
       courseC_PlayLab_eventsFP: Vytvor si svoju vlastnú hru. Keď budeš hotový, stlač "Dokončiť" a zdieľaj ju s priateľmi. Nejaké nápady nájdeš aj v nápovedách.
       courseC_PlayLab_eventsFP_2018: Vytvor si svoju vlastnú hru. Keď budeš hotový, stlač "Dokončiť" a zdieľaj ju s priateľmi. Nejaké nápady nájdeš aj v nápovedách.
       courseC_PlayLab_eventsFP_2019: Vytvor si svoju vlastnú hru. Keď budeš hotový, stlač "Dokončiť" a zdieľaj ju s priateľmi. Nejaké nápady nájdeš aj v nápovedách.
@@ -1081,19 +1082,21 @@ sk:
         Máme tu nový blok, ktorý je trošku komplikovaný. Použi ho tak, aby sa tučniak Waddles vrátil späť na začiatok vždy, keď narazí do dinosaura a keď získa bod. Tvoja hra tak bude náročnejšia a zábavnejšia.
 
         Zahraj si a posúvaj Waddlesa šípkami, až kým nezískaš dostatok bodov.
-      courseC_artist_loop1: Poďme tomu pridať trochu štýlu!
-      courseC_artist_loop1_2018: Poďme tomu pridať trochu štýlu s blokom 'nastav vzor'.
-      courseC_artist_loop1_2019: Poďme tomu pridať trochu štýlu s blokom 'nastav vzor'.
+      courseC_artist_loop1: Pridajme tomu trochu štýlu!
+      courseC_artist_loop1_2018: Pridajte tomu trochu štýlu s blokom 'nastav vzor'.
+      courseC_artist_loop1_2019: Pridajte tomu trochu štýlu s blokom 'nastav vzor'.
       courseC_artist_loops1: "*\"Zombie. Kresliť!\"*\n\nZombie chce nakresliť čiaru z miesta, na ktorom stojí, až po záhradu so slnečnicami. Pomôžeš mu?\n*(Záhrada je od neho vzdialená 250 pixelov)*  "
       courseC_artist_loops1a: 'Premiestni umelca do stredu hracej plochy a potom pomocou nálepky nakresli vtáčika. '
       courseC_artist_loops1a_2018: 'Premiestni umelca do stredu hracej plochy a potom pomocou nálepky nakresli vtáčika. '
       courseC_artist_loops1a_2019: 'Premiestni umelca do stredu hracej plochy a potom pomocou nálepky nakresli vtáčika. '
-      courseC_artist_loops2: Teraz keď už Zombie pozná cestu, pomôž mu popri ceste vykopať jamy, aby mohol zasadiť viac rastliniek!
+      courseC_artist_loops2: Teraz, keď už zombík pozná cestu, pomôž mu popri ceste vykopať jamy, aby mohol zasadiť viac kvetiniek!
+      courseC_artist_loops2a: Teraz použi opakovanie, aby sa tvoj vtáčik otočil dokola 12 krát pod 30 stupňovým uhlom.
+      courseC_artist_loops2a_2018: Teraz použi opakovanie, aby sa tvoj vtáčik otočil dokola 12 krát pod 30 stupňovým uhlom.
       courseC_artist_loops3: Výborne! Teraz keď kvety vyklíčili, pomôž Zombiemu umiestniť priateľov každých 50 pixelov, aby ich strážili, až kým úplne nevyrastú.
       courseC_artist_loops3a: Teraz pridaj netopiera!
       courseC_artist_loops3a_2018: Teraz pridaj netopiera!
       courseC_artist_loops3a_2019: Teraz pridaj netopiera!
-      courseC_artist_loops4: Zombie objavil opustenú farmu. Pomôž mu ju oživiť pomocou zvieratiek, ktoré opečiatkuješ každých 100 pixelov po obvode plochy.
+      courseC_artist_loops4: Zombík objavil opustenú farmu. Pomôž mu ju oživiť pomocou zvieratiek, ktoré opečiatkuješ každých 100 pixelov po obvode plochy.
       courseC_artist_loops4a: Skús skočiť dopredu o 75 pixelov.
       courseC_artist_loops4a_2018: Skús skočiť dopredu o 75 pixelov.
       courseC_artist_loops4a_2019: Skús skočiť dopredu o 75 pixelov.
@@ -1188,9 +1191,9 @@ sk:
       courseC_collector_prog6: Zmeň poradie blokov tak, aby si pozbieral všetky drahokamy.
       courseC_collector_prog6_2018: Zmeň poradie blokov tak, aby si pozbieral všetky drahokamy.
       courseC_collector_prog6_2019: Zmeň poradie blokov tak, aby si pozbieral všetky drahokamy.
-      courseC_collector_prog7: Použi bloky z panela nástrojov tak, aby si pozbieral všetky drahokamy.
-      courseC_collector_prog7_2018: Použi bloky z panela nástrojov tak, aby si pozbieral všetky drahokamy.
-      courseC_collector_prog7_2019: Použi bloky z panela nástrojov tak, aby si pozbieral všetky drahokamy.
+      courseC_collector_prog7: Použi bloky z panela nástrojov a pozbieraj všetky drahokamy.
+      courseC_collector_prog7_2018: Použi bloky z panela nástrojov a pozbieraj všetky drahokamy.
+      courseC_collector_prog7_2019: Použi bloky z panela nástrojov a pozbieraj všetky drahokamy.
       courseC_collector_prog8: '*"Pokračuj v dobrej práci! Pomôž mi pozbierať všetky drahokamy."*'
       courseC_collector_prog8_2018: '*"Pokračuj v dobrej práci! Pomôž mi pozbierať všetky drahokamy."*'
       courseC_collector_prog8_2019: '*"Pokračuj v dobrej práci! Pomôž mi pozbierať všetky drahokamy."*'
@@ -1198,7 +1201,7 @@ sk:
       courseC_collector_prog9_2018: '*"Pozbierajme všetky drahokamy!"*'
       courseC_collector_prog9_2019: '*"Pozbierajme všetky drahokamy!"*'
       courseC_collector_progA: Pomôž Laurel pozbierať všetky drahokamy.
-      courseC_collector_progB: Musíš pozbierať čo najviac mincí, aby si dokončil túto úroveň!
+      courseC_collector_progB: Na dokončenie úrovne musíš pozbierať čo najviac mincí!
       courseC_collector_prog_challenge2: Pozbieraj aspoň **10** drahokamov, aby si dokončil túto výzvu!
       courseC_collector_prog_challenge2_2018: Pozbieraj aspoň **10** drahokamov, aby si dokončil túto výzvu!
       courseC_collector_prog_challenge2_2019: Pozbieraj aspoň **10** drahokamov, aby si dokončil túto výzvu!
@@ -1224,9 +1227,15 @@ sk:
       courseC_flappy_events6: Vyskúšaj, či sa ti patrí získať bod aj po tom, ako zmeníš Flappyho intenzitu mávania krídlami. Môžeš vyskúšať silnejšie aj slabšie mávanie.
       courseC_flappy_events6_2018: Vyskúšaj, či sa ti patrí získať bod aj po tom, ako zmeníš Flappyho intenzitu mávania krídlami. Môžeš vyskúšať silnejšie aj slabšie mávanie.
       courseC_flappy_events6_2019: Vyskúšaj, či sa ti patrí získať bod aj po tom, ako zmeníš Flappyho intenzitu mávania krídlami. Môžeš vyskúšať silnejšie aj slabšie mávanie.
+      courseC_flappy_events7: A teraz skús zmeniť pozadie pridaním nového bloku pod blok `pri spustení`.
+      courseC_flappy_events7_2018: A teraz skús zmeniť pozadie pridaním nového bloku pod blok `pri spustení`.
+      courseC_flappy_events7_2019: A teraz skús zmeniť pozadie pridaním nového bloku pod blok `pri spustení`.
       courseC_flappy_events8: Skús nastaviť prostredie na **náhodné** keď sa udeje nejaká udalosť, napríklad keď Flappy obíde prekážku.
       courseC_flappy_events8_2018: Skús nastaviť prostredie na **náhodné** keď sa udeje nejaká udalosť, napríklad keď Flappy obíde prekážku.
       courseC_flappy_events8_2019: Skús nastaviť prostredie na **náhodné** keď sa udeje nejaká udalosť, napríklad keď Flappy obíde prekážku.
+      courseC_flappy_events9: Pre zmenu sa hra neskončí keď vtáčik narazí do prekážky, ale len vynulujeme skóre.
+      courseC_flappy_events9_2018: Pre zmenu sa hra neskončí keď vtáčik narazí do prekážky, ale len vynulujeme skóre.
+      courseC_flappy_events9_2019: Pre zmenu sa hra neskončí keď vtáčik narazí do prekážky, ale len vynulujeme skóre.
       courseC_harvester_loops1: Pomocou bloku opakovania pozbieraj všetky tekvice.
       courseC_harvester_loops10: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops10_2018: Pozbieraj všetky kukurice a tekvice.
@@ -1236,6 +1245,12 @@ sk:
       courseC_harvester_loops11_2019: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops1_2018: Pomocou bloku opakovania pozbieraj všetky tekvice.
       courseC_harvester_loops1_2019: Pomocou bloku opakovania pozbieraj všetky tekvice.
+      courseC_harvester_loops2: Dokážeš skombinovať dve rôzne opakovania tak, aby si sa pohol smerom k tekviciam a všetky ich pozbieral?
+      courseC_harvester_loops2_2018: Dokážeš skombinovať dve rôzne opakovania tak, aby si sa pohol smerom k tekviciam a všetky ich pozbieral?
+      courseC_harvester_loops2_2019: Dokážeš skombinovať dve rôzne opakovania tak, aby si sa pohol smerom k tekviciam a všetky ich pozbieral?
+      courseC_harvester_loops3: Pozbieraj všetky tekvice.
+      courseC_harvester_loops3_2018: Pozbieraj všetky tekvice.
+      courseC_harvester_loops3_2019: Pozbieraj všetky tekvice.
       courseC_harvester_loops4: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops4_2018: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops4_2019: Pozbieraj všetky kukurice a tekvice.
@@ -1291,6 +1306,8 @@ sk:
       courseC_maze_loops11: Už si skoro tam! Tentoraz si môžeš vybrať akúkoľvek cestu chceš!
       courseC_maze_loops2: Dostaň vtáka k prasaťu! Vytvor opakovanie, v ktorom použiješ len jeden blok `posuň sa dopredu`.
       courseC_maze_loops3: Vyrieš túto úlohu pomocou opakovacieho cyklu!
+      courseC_maze_loops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať vtáčika k prasaťu, s najmenším možným počtom blokov!
+      courseC_maze_loops5: '*"Dostaň ma k prasaťu čo najrýchlejšie!"*'
       courseC_maze_loops6: Opakovania fungujú aj keď dnu vložíš viac ako jeden blok! Vieš zopakovať celú  túto sekvenciu?
       courseC_maze_loops7: Použi, čo si sa naučil pri riešení predchádzajúcich úloh!
       courseC_maze_loops8: 'Výzva: Na vyriešenie tejto úlohy skombinuj nápady z predchádzajúcich levelov.'
@@ -1362,9 +1379,9 @@ sk:
       courseC_starWars_loops6: Opakovania fungujú aj keď dnu vložíš viac ako jeden blok! Vieš zopakovať celú  túto sekvenciu?
       courseC_starWars_loops6_2018: Opakovania fungujú aj keď dnu vložíš viac ako jeden blok! Vieš zopakovať celú  túto sekvenciu?
       courseC_starWars_loops6_2019: Opakovania fungujú aj keď dnu vložíš viac ako jeden blok! Vieš zopakovať celú  túto sekvenciu?
-      courseC_starWars_loops7: Pokús sa pozbierať všetok kov s použitím len jedného cyklu "opakovať". Najprv to naprogramuj krok po kroku, až potom nájdi opakujúce sa skupiny blokov.
-      courseC_starWars_loops7_2018: Pokús sa pozbierať všetok kov s použitím len jedného cyklu "opakovať". Najprv to naprogramuj krok po kroku, až potom nájdi opakujúce sa skupiny blokov.
-      courseC_starWars_loops7_2019: Pokús sa pozbierať všetok kov s použitím len jedného cyklu "opakovať". Najprv to naprogramuj krok po kroku, až potom nájdi opakujúce sa skupiny blokov.
+      courseC_starWars_loops7: Pokús sa pozbierať všetok kov s použitím len jedného cyklu "opakuj". Najprv to naprogramuj krok po kroku, až potom nájdi opakujúce sa skupiny blokov.
+      courseC_starWars_loops7_2018: Pokús sa pozbierať všetok kov s použitím len jedného cyklu "opakuj". Najprv to naprogramuj krok po kroku, až potom nájdi opakujúce sa skupiny blokov.
+      courseC_starWars_loops7_2019: Pokús sa pozbierať všetok kov s použitím len jedného cyklu "opakuj". Najprv to naprogramuj krok po kroku, až potom nájdi opakujúce sa skupiny blokov.
       courseC_starWars_loops9: Využi všetko, čo si sa doteraz naučil a pozbieraj všetok šrot!
       courseC_starWars_loops9_2018: Využi všetko, čo si sa doteraz naučil a pozbieraj všetok šrot!
       courseC_starWars_loops9_2019: Využi všetko, čo si sa doteraz naučil a pozbieraj všetok šrot!
@@ -1857,6 +1874,9 @@ sk:
       courseE_collector_ramp10: Pomôž Laurel pozbierať všetky drahokamy.
       courseE_collector_ramp8: Pomôž Laurel pozbierať všetky drahokamy.
       courseE_collector_ramp9: Pomôž Laurel pozbierať všetky drahokamy.
+      courseE_farmer_concept2: Pozbieraj všetky tekvice.
+      courseE_farmer_concept2_2018: Pozbieraj všetky tekvice.
+      courseE_farmer_concept2_2019: Pozbieraj všetky tekvice.
       courseE_farmer_concept3: Vyplň dieru na konci každej z týchto ciest.
       courseE_farmer_concept3_2018: Vyplň dieru na konci každej z týchto ciest.
       courseE_farmer_concept3_2019: Vyplň dieru na konci každej z týchto ciest.

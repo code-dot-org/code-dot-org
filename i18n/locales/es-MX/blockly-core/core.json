@@ -27,7 +27,7 @@
     "COLOUR_RGB_TOOLTIP": "Crea un color con la cantidad especificada de rojo, verde y azul. Todos los valores deben estar entre 0 y 100.",
     "CONFIRM_CREATE_VARIABLE": "Crear",
     "CONFIRM_DELETE_FUNCTION_MESSAGE": "¡Advertencia! ¿Está seguro que desea eliminar %1?",
-    "CONFIRM_RENAME_VARIABLE": "Renombrar",
+    "CONFIRM_RENAME_VARIABLE": "Cambiar el nombre",
     "CONTRACT_EDITOR_HEADER": "Receta de diseño",
     "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
     "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "termina la interación",

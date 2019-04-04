@@ -342,8 +342,10 @@ es:
       gumball: 'Gumball'
       iceage: 'La Era de Hielo'
       infinity: 'Infinito'
+      makerlab: 'Herramientas de Maker'
       minecraft_adventurer: 'Aventurero de Minecraft'
       minecraft_aquatic: 'Minecraft acuático'
+      minecraft_codebuilder: 'Minecraft: Conexión de código'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Laboratorio de juegos'
@@ -899,8 +901,10 @@ es:
     csf_f_2: 'Contenido del Curso F'
     csf_digcit: 'Ciudadanía Digital'
     csf_jigsaw: 'Rompecabezas'
+    csf_sequencing: 'Secuenciando'
     csf_loops: 'vuelta'
     csf_events: 'Eventos'
+    csf_online_safety: 'Seguridad en línea'
     csf_binary: 'Binario'
     csf_data: 'Datos'
     csf_conditionals: 'Condicionales'
@@ -942,6 +946,7 @@ es:
     csp_variables: 'variables'
     csp_conditionals: 'Condicionales'
     csp_functions: 'funciones'
+    csp_project: 'Proyecto'
     dlp: 'Preguntas para Reflexionar'
   external_links:
     disclaimer: Descargo de responsabilidad
@@ -1005,6 +1010,8 @@ es:
   locked_stage: 'Los contenidos de esta etapa no son visibles ya que se encuentra actualmente bloqueada. Tu maestro puede desbloquear esta etapa cuando sea tiempo de trabajar en ella o para revisar tus respuestas.'
   hidden_stage: "Tu maestro no espera que estés aquí. Por favor pregúntale a tu maestro en cual lección deberías estar."
   hidden_script: "Tu maestro no esparaba que estuvieras aquí. Por favor pregúntale a tu maestro en cual unidad deberías estar."
+  no_script_access_student: "No tienes acceso a esta unidad. Por favor, pregunta a tu profesor qué unidad debe estar."
+  no_script_access_teacher: "No tienes acceso a esta unidad. Si crees que debes tener acceso a esta unidad, por favor escribe a support@code.org para que podamos solucionar la situación."
   return_unit_overview: 'Ir al resumen de la unidad'
   return_course_overview: 'Ir al resumen de la unidad'
   view_all_units: 'Ver todas las unidades'

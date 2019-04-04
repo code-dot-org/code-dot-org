@@ -287,8 +287,6 @@ sk:
               name: Veľká hra - booleovské výrazy
             'Play Lab: Booleans':
               name: Netopier Sam
-            'Play Lab: Collision Detection (Big Game)':
-              name: Veľká hra - vyhľadávanie rozporov
             'Play Lab: Defining Functions':
               name: Raketová výška
             'Play Lab: Defining Variables (Big Game)':
@@ -327,7 +325,7 @@ sk:
         K5PD:
           stages:
             Computer Science Pedagogy:
-              name: Vyučovanie informatiky
+              name: Pedagogika informatiky
             Introduction to PD:
               name: Úvod do PD
             Next Steps:
@@ -374,13 +372,13 @@ sk:
         pixelation:
           stages:
             Black & White Pixelation Freeplay:
-              name: Bezplatné čiernobiele rozpixelovanie
+              name: Čiernobiele rozpixelovanie - voľná hra
             Black & White Pixelation Tutorial:
               name: Návod na čiernobiele rozpixelovanie
             Color Pixelation Examples:
               name: Príklady farebného rozpixelovania
             Color Pixelation Freeplay:
-              name: Bezplatné farebné rozpixelovanie
+              name: Farebné rozpixelovanie - voľná hra
             Color Pixelation Tutorial:
               name: Návod na farebné rozpixelovanie
         20-hour:
@@ -616,7 +614,7 @@ sk:
         algebraPD3:
           stages:
             Computer Science Pedagogy:
-              name: Vyučovanie informatiky
+              name: Pedagogika informatiky
             Course Overview:
               name: Prehľad kurzu
             Evaluation Blocks:
@@ -3859,7 +3857,9 @@ sk:
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Graphing Data:
-              name: Dáta ku grafom
+              name: Zobrazenie dát v grafoch
+            Sticker Art with Loops:
+              name: Pečiatkovanie v cykloch
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
@@ -3975,6 +3975,10 @@ sk:
               name: 'Udalosti: Veľká udalosť'
             Spelling Bee:
               name: Včela Hláskovanie
+            Programming in Maze:
+              name: Programovanie v bludisku
+            Ocean Scene with Loops:
+              name: Na mori s cyklami
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
