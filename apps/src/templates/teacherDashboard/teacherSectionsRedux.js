@@ -668,12 +668,15 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
-    // Selecting Course 1-4 or A-F should auto-enable Stage Extras.
+    // Selecting the following courses should auto-enable Stage Extras:
+    //  Course 1-4, A-F, Express, and Pre-reader Express
     if (action.props.scriptId) {
       const script =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       stageExtraSettings.stageExtras = !!(
-        script && /course[1-4a-f]/.test(script.script_name)
+        script &&
+        (/course[1-4a-f]/.test(script.script_name) ||
+          /express/.test(script.script_name))
       );
     }
 
