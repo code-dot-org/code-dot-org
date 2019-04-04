@@ -210,6 +210,14 @@ const validScripts = [
     assignment_family_name: 'coursea',
     version_year: '2017',
     is_stable: true
+  },
+  {
+    id: 37,
+    name: 'Express Course',
+    script_name: 'express-2018',
+    category: 'other',
+    position: null,
+    category_priority: 3
   }
 ];
 
@@ -636,6 +644,9 @@ describe('teacherSectionsRedux', () => {
       expect(state.sectionBeingEdited.stageExtras).to.equal(false);
 
       state = reducer(state, editSectionProperties({scriptId: 36}));
+      expect(state.sectionBeingEdited.stageExtras).to.equal(true);
+
+      state = reducer(state, editSectionProperties({scriptId: 37}));
       expect(state.sectionBeingEdited.stageExtras).to.equal(true);
     });
   });
