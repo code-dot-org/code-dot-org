@@ -246,6 +246,7 @@ ActiveRecord::Schema.define(version: 20190401232317) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "video_key"
+    t.index ["video_key"], name: "index_concepts_on_video_key", using: :btree
   end
 
   create_table "concepts_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
