@@ -73,56 +73,94 @@ PREVIEWS = %w(
   teacher_follow_up__csf_intro
 ).freeze
 
+def create_sub_folder(folder_name)
+  folder_path = './' + folder_name
+  unless File.directory?(folder_path)
+    FileUtils.mkdir_p(folder_path)
+  end
+end
+
+def clean_folder_name(name)
+  # remove trailing '/'
+  name.sub(/\/*$/, '')
+end
+
 def download_workshop_emails(output_folder)
   base = 'http://localhost-studio.code.org:3000/rails/mailers/pd/workshop_mailer/'
   body = '?part=text%2Fhtml'
 
-  output_folder_path = './' + output_folder
-  unless File.directory?(output_folder_path)
-    FileUtils.mkdir_p(output_folder_path)
-  end
+  output_folder = clean_folder_name(output_folder)
+  create_sub_folder output_folder
 
   PREVIEWS.each do |preview|
     print '.'
-    IO.copy_stream(open(base + preview + body), "#{output_folder_path}/#{preview}_body.html")
+    IO.copy_stream(open(base + preview + body), "#{output_folder}/#{preview}_body.html")
 
     # This file contains email header like From/To/CC and a few more things.
     # However it has DateTime field that changes, so we exclude it from the comparison.
     # If we really want to compare headers, we will have to update diff command to ignore DateTime regex.
-    # IO.copy_stream(open(base + preview), "#{output_folder_path}/#{preview}.html")
+    # IO.copy_stream(open(base + preview), "#{output_folder}/#{preview}.html")
   rescue => e
     puts "\nFailed to download #{preview}"
     puts "Error class: #{e.class.name}"
     puts "Error msg: #{e.message}"
   end
+  puts
+end
+
+def clean_email_content(folder_name)
+  raise "Folder #{folder_name} does not exits" unless File.directory?('./' + folder_name)
+
+  folder_name = clean_folder_name folder_name
+  cleaned_folder = folder_name + "_cleaned"
+  create_sub_folder(cleaned_folder)
+
+  puts "Cleaning email content in folder #{folder_name} -> #{cleaned_folder}"
+  #shell_command = "find #{folder_name} -type f -name '*.html' -exec sh -c 'f=\"{}\"; base=$(basename \"{}\"); echo \"./#{cleaned_folder}/$base\"' \\;"
+  shell_command = "find #{folder_name} -type f -name '*.html' -exec sh -c 'f=\"{}\"; base=$(basename \"{}\"); sed -E \"s/[A-Z]\{10\}/enrollment_code/\" \"$f\" > \"#{cleaned_folder}/$base\"' \\;"
+  puts "Executing: #{shell_command}"
+  system(shell_command)
+
+  cleaned_folder
 end
 
 def compare_workshop_emails(folder1, folder2)
+  folder1_cleaned = clean_email_content(folder1)
+  folder2_cleaned = clean_email_content(folder2)
+
   # diff 2 folders, ignoring blank lines (-B) and lines containing enrollment codes (which are all caps 10-char strings).
   # GNU diffutils use basic version of regex so we have to escape meta-characters like ?, +, |, {, }, (, and ).
   # Reference: https://stackoverflow.com/questions/2072167/diff-tools-flavor-of-regex-seems-lacking
-  `diff -u -B -I '\\(/\\|=\\)[A-Z]\\{10,\\}' #{folder1} #{folder2} > diffresult.txt`
-  puts "Comparision result saved to diffresult.txt"
-end
+  # shell_command = "diff -u -B -I '\\(/\\|=\\)[A-Z]\\{10,\\}' #{folder1_cleaned} #{folder2_cleaned} > diffresult.txt"
+  shell_command = "diff -u -B #{folder1_cleaned} #{folder2_cleaned} > diffresult.txt"
+  puts "Executing: #{shell_command}"
+  system(shell_command)
 
-def print_instruction
-  puts @instruction
+  puts "Comparision result saved to diffresult.txt"
+rescue => e
+  puts "Error class: #{e.class.name}"
+  puts "Error message: #{e.message}"
 end
 
 def main
   if ARGV.count == 2 && ARGV[0].downcase == 'download'
     puts "Downloading emails to folder #{ARGV[1]}"
-    download_workshop_emails(ARGV[1])
+    download_workshop_emails ARGV[1]
+  elsif ARGV.count == 2 && ARGV[0].downcase == 'clean'
+    puts "Cleaning emails in folder #{ARGV[1]}"
+    clean_email_content ARGV[1]
   elsif ARGV.count == 3 && ARGV[0].downcase == 'diff'
     puts "Comparing emails in folders #{ARGV[1]} and #{ARGV[2]}"
-    compare_workshop_emails(ARGV[1], ARGV[2])
+    compare_workshop_emails ARGV[1], ARGV[2]
   else
-    print_instruction
+    puts @instruction
 
     ARGV.each do |a|
       puts "Argument: #{a}"
     end
   end
+
+  puts 'Done'
 end
 
 main
