@@ -75,7 +75,7 @@ class DSLDefined < Level
       # Save updated level data to external files
       if Rails.application.config.levelbuilder_mode
         level.rewrite_dsl_file(text)
-        rewrite_i18n_file(i18n) if level.script_levels.any? {|sl| ScriptConstants.i18n? sl.script}
+        rewrite_i18n_file(i18n) if level.script_levels.any? {|sl| ScriptConstants.i18n? sl.script.name}
       end
 
       level
