@@ -27,5 +27,6 @@ Scenario: Level defaults to design mode, students see design mode and teachers s
   And I wait for the page to fully load
   And I wait to see ".show-handle"
   Then I click selector ".show-handle .fa-chevron-left"
-  Then I click selector ".section-student .name a"
+  Then I click selector ".section-student .name a" to load a new page
+  And I wait for the page to fully load
   And I wait to see Applab code mode

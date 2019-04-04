@@ -139,7 +139,7 @@ export default class StageDescriptions extends React.Component {
         <h4>Stage Descriptions</h4>
         <div style={styles.main}>
           {this.state.collapsed && (
-            <button className="btn" onClick={this.expand}>
+            <button type="button" className="btn" onClick={this.expand}>
               Click to Expand
             </button>
           )}
@@ -206,6 +206,7 @@ export default class StageDescriptions extends React.Component {
                 />
               )}
               <button
+                type="button"
                 className="btn"
                 disabled={!!this.state.buttonText}
                 onClick={this.importDescriptions}
