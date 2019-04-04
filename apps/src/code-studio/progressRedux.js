@@ -560,9 +560,13 @@ export function statusForLevel(level, levelProgress) {
     status = LevelStatus.locked;
   }
 
+  // If complete a level that is marked as assessment
+  // then mark as completed assessment
   if (
-    status === LevelStatus.free_play_complete &&
-    level.kind === LevelKind.assessment
+    level.kind === LevelKind.assessment &&
+    (status === LevelStatus.free_play_complete ||
+      status === LevelStatus.perfect ||
+      status === LevelStatus.passed)
   ) {
     return LevelStatus.completed_assessment;
   }
