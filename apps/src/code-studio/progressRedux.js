@@ -559,6 +559,14 @@ export function statusForLevel(level, levelProgress) {
   ) {
     status = LevelStatus.locked;
   }
+
+  if (
+    status === LevelStatus.free_play_complete &&
+    level.kind === LevelKind.assessment
+  ) {
+    return LevelStatus.completed_assessment;
+  }
+
   return status;
 }
 
