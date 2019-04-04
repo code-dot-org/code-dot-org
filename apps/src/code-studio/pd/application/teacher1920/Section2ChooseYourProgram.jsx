@@ -28,10 +28,14 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
   render() {
     // This should be kept consistent with the calculation logic in
     // dashboard/app/models/pd/application/teacher1920_application.rb.
-    const csHowManyMinutes = parseInt(this.props.data.csHowManyMinutes);
-    const csHowManyDaysPerWeek = parseInt(this.props.data.csHowManyDaysPerWeek);
+    const csHowManyMinutes = parseInt(this.props.data.csHowManyMinutes, 10);
+    const csHowManyDaysPerWeek = parseInt(
+      this.props.data.csHowManyDaysPerWeek,
+      10
+    );
     const csHowManyWeeksPerYear = parseInt(
-      this.props.data.csHowManyWeeksPerYear
+      this.props.data.csHowManyWeeksPerYear,
+      10
     );
     let courseHours = null;
     if (
