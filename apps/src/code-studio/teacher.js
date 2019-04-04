@@ -13,7 +13,7 @@ import SectionSelector from './components/progress/SectionSelector';
 import ViewAsToggle from './components/progress/ViewAsToggle';
 import TeacherContentToggle from './components/TeacherContentToggle';
 import {setSectionLockStatus} from './stageLockRedux';
-import {ViewType, setViewType} from './viewAsRedux';
+import {ViewType, changeViewType} from './viewAsRedux';
 import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
 import {
   setSections,
@@ -190,7 +190,7 @@ function renderViewAsToggle(element) {
   // Start viewing as teacher
   const query = queryString.parse(location.search);
   const viewAs = query.viewAs || ViewType.Teacher;
-  store.dispatch(setViewType(viewAs));
+  store.dispatch(changeViewType(viewAs));
 
   ReactDOM.render(
     <Provider store={store}>

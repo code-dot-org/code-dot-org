@@ -12,7 +12,7 @@ import {
   authorizeLockable,
   setSectionLockStatus
 } from '@cdo/apps/code-studio/stageLockRedux';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {changeViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {setHiddenStages} from '@cdo/apps/code-studio/hiddenStageRedux';
 import teacherSections, {
   setSections
@@ -67,7 +67,7 @@ const createStore = ({preload = false, allowHidden = true} = {}) => {
   );
   store.dispatch(authorizeLockable());
   store.dispatch(showTeacherInfo());
-  store.dispatch(setViewType(ViewType.Teacher));
+  store.dispatch(changeViewType(ViewType.Teacher));
   store.dispatch(
     setHiddenStages(
       {

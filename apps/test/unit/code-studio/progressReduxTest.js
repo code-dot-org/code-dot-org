@@ -348,7 +348,7 @@ describe('progressReduxTest', () => {
     });
 
     describe('setViewType', () => {
-      // The setViewType exported by viewAsRedux is a thunk that handles some
+      // The changeViewType exported by viewAsRedux is a thunk that handles some
       // stuff like updating query param. We just want the core action it ultimately
       // dispatches
       const setViewType = setViewTypeNonThunk;
