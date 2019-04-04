@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {changeViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {
   setSections,
@@ -37,7 +37,7 @@ function showCourseOverview() {
   store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
 
   if (isTeacher) {
-    store.dispatch(setViewType(ViewType.Teacher));
+    store.dispatch(changeViewType(ViewType.Teacher));
     store.dispatch(setSections(scriptData.sections));
 
     if (scriptData.is_verified_teacher) {

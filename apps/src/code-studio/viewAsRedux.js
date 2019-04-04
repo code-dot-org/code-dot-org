@@ -35,7 +35,7 @@ export const setViewTypeNonThunk = viewType => ({
   viewType
 });
 
-export const setViewType = viewType => {
+export const changeViewType = viewType => {
   return dispatch => {
     // If changing to viewAs student while we are a particular student, remove
     // the user_id and do a reload so that we're instead viewing as a generic
