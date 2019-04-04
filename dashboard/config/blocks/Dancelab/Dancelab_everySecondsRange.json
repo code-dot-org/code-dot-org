@@ -1,0 +1,43 @@
+{
+  "category": "Events",
+  "config": {
+    "func": "everySecondsRange",
+    "blockText": "every {N} {UNIT} from {START} to {STOP} ",
+    "args": [
+      {
+        "name": "N",
+        "type": "ClampedNumber(0.1,)",
+        "field": true
+      },
+      {
+        "name": "UNIT",
+        "options": [
+          [
+            "Measures",
+            "measures"
+          ],
+          [
+            "Seconds",
+            "seconds"
+          ]
+        ]
+      },
+      {
+        "name": "START",
+        "type": "Number",
+        "field": true
+      },
+      {
+        "name": "STOP",
+        "type": "Number",
+        "field": true
+      }
+    ],
+    "eventLoopBlock": true,
+    "color": [
+      322,
+      0.9,
+      0.95
+    ]
+  }
+}

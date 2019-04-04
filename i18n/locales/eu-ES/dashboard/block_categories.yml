@@ -5,47 +5,50 @@ eu:
       Loops: Itzuliak
       Functions: Funtzioak
       Color: Kolorea
-      Brushes: Brushes
+      Brushes: Pintzelak
       Math: Matematika
       Logic: Logika
       Variables: Aldagaiak
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Number: Zenbakia
+      String: Testua
+      Image: Irudia
+      Boolean: Boolearra
       Conditionals: Baldintzak
       Events: Gertaerak
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Jokoak/Puntuak
+      Comments: Iruzkinak
+      Category: Kategoria
+      Prebuilt: Aurrekonpilatua
       Text: Testua
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Picker: Hautatzailea
+      Comment: Iruzkina
+      'Variables ': 'Aldagaiak '
+      Default: Lehenetsia
+      Behaviors: Jokabideak
+      Locations: Kokalekuak
+      everythingelse: besteguztia
+      World: Mundua
+      Location: Kokalekua
+      numbers: zenbakiak
+      Numbers: Zenbakiak
+      Dancers: Dantzariak
+      Groups: Taldeak
+      Advanced: Aurreratua
       Start: Hasiera
-      Groups: Groups
+      Dancing: Dantzan
+      Sprite: Sprite
+      Brush: Pintzela
+      Make Sprite: Pribatu egin
+      Movement: Mugimentua
       Booleans: Boolearrak
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Funtzioak
+      While Events: While ebentuak
+      Sprite Properties: Sprite-n Propietateak
+      Predefined: Aurredefinitua
       test: proba
       test2: test2
-      Foo: Foo
       Name: Izena
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: BLOKE BERRIAK
+      'Functions ': 'Funtzioak '
+      Game/Score: Jokoa/Puntuak
       Function: Funtzioa

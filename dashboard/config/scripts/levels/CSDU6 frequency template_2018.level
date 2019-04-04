@@ -59,7 +59,7 @@
       },
       "buzzer.frequency": null
     },
-    "markdown_instructions": "Do a thing!",
+    "long_instructions": "Do a thing!",
     "parent_level_id": 10556,
     "name_suffix": "_2018",
     "contained_level_names": null

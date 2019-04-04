@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you modify the \"draw a triangle\" function into a \"draw a square\" function to change the drawing?",
+    "short_instructions": "Can you modify the \"draw a triangle\" function into a \"draw a square\" function to change the drawing?",
     "x": "62",
     "y": "200",
     "start_direction": "90",

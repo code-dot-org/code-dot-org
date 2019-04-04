@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_65_CSP_7_3_1'
+right 'Protects copyright owners from liability for the misuse of their intellectual property.'
+wrong 'Makes it a crime to create or use digital tools designed to bypass copy protection.'
+wrong 'Allows players to break authentication on games that they own if access to an external authentication server is no longer supported.'
+wrong 'Protects online service providers that store copyright infringing material if they are unaware of it and aren\'t making money from it.'
+markdown <<MARKDOWN
+The Digital Millennium Copyright Act (DMCA) does all of the following EXCEPT:
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **7.3.1** and Essential Knowledge statements: **7.3.1P**
+<hr>
+ (A) This answer is correct. The DMCA does not address liability for misuse of owners\' intellectual property.
+
+<hr>
+ (B) This answer is incorrect. The DMCA specifically gives copyright owners the right to digitally protect their intellectual property and criminalizes creating or using tools designed to bypass those protections.
+
+<hr>
+ (C) This answer is incorrect. A 2015 update to the DMCA specifically allows owners of legally acquired games to create and use ways to bypass authentication if the original game server used to facilitate local network play is no longer available.
+
+<hr>
+ (D) This answer is incorrect. The "safe harbor" provision of the DMCA exempts online service providers from the responsibility of monitoring user-posted content for legality as long as they are not charging money for their service and they comply with "takedown" notices when infringing material is brought to their attention by the copyright owner.
+
+MARKDOWN

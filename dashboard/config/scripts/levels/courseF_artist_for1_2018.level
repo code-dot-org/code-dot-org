@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Experiment with the `for` loop and play with the `counter` variable.",
+    "short_instructions": "Experiment with the `for` loop and play with the `counter` variable.",
     "x": "175",
     "y": "225",
     "start_direction": "90",
@@ -21,7 +21,7 @@
     "embed": "false",
     "use_contract_editor": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "**Free Play:** Experiment with the `for` loop and the `counter` variable.  \r\n\r\nDrag out a few blocks and see what happens.  \r\n",
+    "long_instructions": "**Free Play:** Experiment with the `for` loop and the `counter` variable.  \r\n\r\nDrag out a few blocks and see what happens.  \r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -43,12 +43,17 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "include_shared_functions": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-07-28 22:43:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-06-05 00:43:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-27 20:38:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "for_loops": 1,
+    "variables": 1
   }
 }]]></config>
   <blocks>

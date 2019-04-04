@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Using the \"draw a square\" function block, can you draw this picture? Hint: each square is 120 pixels apart.\r\n",
+    "short_instructions": "Using the \"draw a square\" function block, can you draw this picture? Hint: each square is 120 pixels apart.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

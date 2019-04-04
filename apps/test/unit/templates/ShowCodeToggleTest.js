@@ -5,7 +5,11 @@ import {mount} from 'enzyme';
 import {expect} from '../../util/configuredChai';
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
-import {singleton as studioApp, stubStudioApp, restoreStudioApp} from '@cdo/apps/StudioApp';
+import {
+  singleton as studioApp,
+  stubStudioApp,
+  restoreStudioApp
+} from '@cdo/apps/StudioApp';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
@@ -40,17 +44,17 @@ describe('The ShowCodeToggle component', () => {
   beforeEach(() => {
     editor = {
       session: {
-        currentlyUsingBlocks: true,
+        currentlyUsingBlocks: true
       },
       getValue: () => '',
       toggleBlocks() {
         this.session.currentlyUsingBlocks = !this.session.currentlyUsingBlocks;
       },
       aceEditor: {
-        focus() {},
-      },
+        focus() {}
+      }
     };
-    sinon.stub(studioApp(), 'handleEditCode_').callsFake(function () {
+    sinon.stub(studioApp(), 'handleEditCode_').callsFake(function() {
       this.editor = editor;
     });
   });
@@ -62,12 +66,12 @@ describe('The ShowCodeToggle component', () => {
       level: {
         id: 'some-level-id',
         editCode: true,
-        codeFunctions: {},
+        codeFunctions: {}
       },
       dropletConfig: {
-        blocks: [],
+        blocks: []
       },
-      skin: {},
+      skin: {}
     };
 
     codeWorkspaceDiv = document.createElement('div');
@@ -97,54 +101,16 @@ describe('The ShowCodeToggle component', () => {
 
   beforeEach(() => sinon.stub(studioApp(), 'showGeneratedCode'));
 
-  describe("when the studioApp editor has currentlyUsingBlocks=false", () => {
+  describe('when the studioApp editor has currentlyUsingBlocks=false', () => {
     beforeEach(() => {
-      toggle = mount(
-        <ShowCodeToggle onToggle={sinon.spy()}/>
-      );
+      toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
       editor.session.currentlyUsingBlocks = false;
       studioApp().init(config);
     });
 
     it("will render with the 'Show Blocks' label", () => {
-      expect(toggle.containsMatchingElement(
-        <PaneButton
-          id="show-code-header"
-          headerHasFocus={false}
-          isRtl={false}
-          iconClass=""
-          label="Show Blocks"
-          style={{display: 'inline-block'}}
-        />
-      )).to.be.true;
-    });
-  });
-
-  describe("when initially mounted", () => {
-    beforeEach(() => {
-      toggle = mount(
-        <ShowCodeToggle onToggle={sinon.spy()}/>
-      );
-    });
-
-    it("renders a PaneButton with a 'Show Text' label", () => {
-      expect(toggle.containsMatchingElement(
-        <PaneButton
-          id="show-code-header"
-          headerHasFocus={false}
-          isRtl={false}
-          iconClass="fa fa-code"
-          label="Show Text"
-          style={{display: 'inline-block'}}
-        />
-      )).to.be.true;
-    });
-
-    describe("after being clicked", () => {
-      beforeEach(() => toggle.simulate('click'));
-
-      it("renders a 'Show Blocks' label", () => {
-        expect(toggle.containsMatchingElement(
+      expect(
+        toggle.containsMatchingElement(
           <PaneButton
             id="show-code-header"
             headerHasFocus={false}
@@ -153,10 +119,50 @@ describe('The ShowCodeToggle component', () => {
             label="Show Blocks"
             style={{display: 'inline-block'}}
           />
-        )).to.be.true;
+        )
+      ).to.be.true;
+    });
+  });
+
+  describe('when initially mounted', () => {
+    beforeEach(() => {
+      toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
+    });
+
+    it("renders a PaneButton with a 'Show Text' label", () => {
+      expect(
+        toggle.containsMatchingElement(
+          <PaneButton
+            id="show-code-header"
+            headerHasFocus={false}
+            isRtl={false}
+            iconClass="fa fa-code"
+            label="Show Text"
+            style={{display: 'inline-block'}}
+          />
+        )
+      ).to.be.true;
+    });
+
+    describe('after being clicked', () => {
+      beforeEach(() => toggle.simulate('click'));
+
+      it("renders a 'Show Blocks' label", () => {
+        expect(
+          toggle.containsMatchingElement(
+            <PaneButton
+              id="show-code-header"
+              headerHasFocus={false}
+              isRtl={false}
+              iconClass=""
+              label="Show Blocks"
+              style={{display: 'inline-block'}}
+            />
+          )
+        ).to.be.true;
       });
 
-      it("makes the editor stop using blocks", () => {
+      it('makes the editor stop using blocks', () => {
         expect(studioApp().editor.session.currentlyUsingBlocks).to.be.false;
       });
 
@@ -171,23 +177,25 @@ describe('The ShowCodeToggle component', () => {
         );
       });
 
-      describe("and after being clicked again", () => {
+      describe('and after being clicked again', () => {
         beforeEach(() => toggle.simulate('click'));
 
-        it("will switch back to the way it was", () => {
-          expect(toggle.containsMatchingElement(
-            <PaneButton
-              id="show-code-header"
-              headerHasFocus={false}
-              isRtl={false}
-              iconClass="fa fa-code"
-              label="Show Text"
-              style={{display: 'inline-block'}}
-            />
-          )).to.be.true;
+        it('will switch back to the way it was', () => {
+          expect(
+            toggle.containsMatchingElement(
+              <PaneButton
+                id="show-code-header"
+                headerHasFocus={false}
+                isRtl={false}
+                iconClass="fa fa-code"
+                label="Show Text"
+                style={{display: 'inline-block'}}
+              />
+            )
+          ).to.be.true;
         });
 
-        it("will make the editor start using blocks", () => {
+        it('will make the editor start using blocks', () => {
           expect(studioApp().editor.session.currentlyUsingBlocks).to.be.true;
         });
 
@@ -205,17 +213,14 @@ describe('The ShowCodeToggle component', () => {
     });
   });
 
-
-  describe("when passed in an onToggle prop", () => {
+  describe('when passed in an onToggle prop', () => {
     let onToggle;
     beforeEach(() => {
       onToggle = sinon.spy();
-      toggle = mount(
-        <ShowCodeToggle onToggle={onToggle}/>
-      );
+      toggle = mount(<ShowCodeToggle onToggle={onToggle} />);
     });
 
-    it("will call onToggle with whether or not it is using blocks when it gets clicked", () => {
+    it('will call onToggle with whether or not it is using blocks when it gets clicked', () => {
       toggle.simulate('click');
       expect(onToggle).to.have.been.calledOnce;
       expect(onToggle).to.have.been.calledWith(false);
@@ -225,100 +230,101 @@ describe('The ShowCodeToggle component', () => {
     });
   });
 
-  describe("When studioApp() has been configured with editCode turned off", () => {
+  describe('When studioApp() has been configured with editCode turned off', () => {
     beforeEach(() => {
       studioApp().editCode = false;
-      toggle = mount(
-        <ShowCodeToggle onToggle={sinon.spy()}/>
-      );
+      toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
     });
 
     it("will render the button with 'Show Code' instead of 'Show Text'", () => {
-      expect(toggle.containsMatchingElement(
-        <PaneButton
-          id="show-code-header"
-          headerHasFocus={false}
-          isRtl={false}
-          iconClass="fa fa-code"
-          label="Show Code"
-          style={{display: 'inline-block'}}
-        />
-      )).to.be.true;
-    });
-
-    describe("and the show code button is pressed", () => {
-      beforeEach(() => toggle.simulate('click'));
-      it("will not call onDropletToggle", () => {
-        expect(studioApp().onDropletToggle).not.to.have.been.called;
-      });
-      it("will instead show the generated code", () => {
-        expect(studioApp().showGeneratedCode).to.have.been.called;
-      });
-    });
-
-    describe("And studioApp() is subsequently initialized with enableShowCode turned off", () => {
-      beforeEach(() => {
-        config.enableShowCode = false;
-        studioApp().init(config);
-      });
-      it("will reflect the most recent config passed to studioApp().init()", () => {
-        expect(toggle.containsMatchingElement(
+      expect(
+        toggle.containsMatchingElement(
           <PaneButton
             id="show-code-header"
             headerHasFocus={false}
             isRtl={false}
             iconClass="fa fa-code"
             label="Show Code"
-            style={{display: 'none'}}
+            style={{display: 'inline-block'}}
           />
-        )).to.be.true;
+        )
+      ).to.be.true;
+    });
+
+    describe('and the show code button is pressed', () => {
+      beforeEach(() => toggle.simulate('click'));
+      it('will not call onDropletToggle', () => {
+        expect(studioApp().onDropletToggle).not.to.have.been.called;
+      });
+      it('will instead show the generated code', () => {
+        expect(studioApp().showGeneratedCode).to.have.been.called;
+      });
+    });
+
+    describe('And studioApp() is subsequently initialized with enableShowCode turned off', () => {
+      beforeEach(() => {
+        config.enableShowCode = false;
+        studioApp().init(config);
+      });
+      it('will reflect the most recent config passed to studioApp().init()', () => {
+        expect(
+          toggle.containsMatchingElement(
+            <PaneButton
+              id="show-code-header"
+              headerHasFocus={false}
+              isRtl={false}
+              iconClass="fa fa-code"
+              label="Show Code"
+              style={{display: 'none'}}
+            />
+          )
+        ).to.be.true;
       });
     });
   });
 
-  describe("when studioApp() is configured with enableShowCode turned off", () => {
+  describe('when studioApp() is configured with enableShowCode turned off', () => {
     beforeEach(() => {
       studioApp().enableShowCode = false;
-      toggle = mount(
-        <ShowCodeToggle onToggle={sinon.spy()}/>
-      );
+      toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
     });
 
-    it("will appear hidden", () => {
-      expect(toggle.containsMatchingElement(
-        <PaneButton
-          id="show-code-header"
-          headerHasFocus={false}
-          isRtl={false}
-          iconClass="fa fa-code"
-          label="Show Text"
-          style={{display: 'none'}}
-        />
-      )).to.be.true;
+    it('will appear hidden', () => {
+      expect(
+        toggle.containsMatchingElement(
+          <PaneButton
+            id="show-code-header"
+            headerHasFocus={false}
+            isRtl={false}
+            iconClass="fa fa-code"
+            label="Show Text"
+            style={{display: 'none'}}
+          />
+        )
+      ).to.be.true;
     });
   });
 
-  describe("when studioApp() is initialized with enableShowCode=false, after the component has been mounted", () => {
+  describe('when studioApp() is initialized with enableShowCode=false, after the component has been mounted', () => {
     beforeEach(() => {
-      toggle = mount(
-        <ShowCodeToggle onToggle={sinon.spy()}/>
-      );
+      toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
       config.enableShowCode = false;
       studioApp().init(config);
     });
 
-    it("will reflect the most recent config passed to studioApp().init(). i.e. it will be hidden", () => {
-      expect(toggle.containsMatchingElement(
-        <PaneButton
-          id="show-code-header"
-          headerHasFocus={false}
-          isRtl={false}
-          iconClass="fa fa-code"
-          label="Show Text"
-          style={{display: 'none'}}
-        />
-      )).to.be.true;
+    it('will reflect the most recent config passed to studioApp().init(). i.e. it will be hidden', () => {
+      expect(
+        toggle.containsMatchingElement(
+          <PaneButton
+            id="show-code-header"
+            headerHasFocus={false}
+            isRtl={false}
+            iconClass="fa fa-code"
+            label="Show Text"
+            style={{display: 'none'}}
+          />
+        )
+      ).to.be.true;
     });
   });
-
 });

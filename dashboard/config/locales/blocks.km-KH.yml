@@ -1,0 +1,517 @@
+---
+km:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          MOVE:
+            MOVES.Rest: គ្មាន
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: គ្មាន
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          MOVE:
+            MOVES.Rest: គ្មាន
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: គ្មាន
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: គ្មាន
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ឆ្វេង
+            "{x: 300, y: 200}": ស្តាំ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ព្រាវ
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          FORMAT:
+            '"random"': ព្រាវ
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ឆ្វេង
+            "{x: 300, y: 200}": ស្តាំ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ព្រាវ
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': ព្រាវ
+      Dancelab_randomColor:
+        text: ពណ៌​ព្រាវ
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': គ្មាន
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': គ្មាន
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': ធម្មតា
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          SPEED:
+            '1': ធម្មតា
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': គ្មាន
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': គ្មាន
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: ទាំងអស់
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: ទាំងអស់
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': ឡើង
+            '"left"': ឆ្វេង
+            '"down"': ចុះ
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+            '"x"': x
+            '"y"': y
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': នៅ​ពេល
+            '"while"': នៅ​ពេល
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': ពិត
+            'false': មិន​ពិត
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': នៅ​ពេល
+            '"while"': នៅ​ពេល
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+            '"x"': x
+            '"y"': y
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': ព្រាវ
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": ព្រាវ
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ស្តាំ
+            '"left"': ឆ្វេង
+      gamelab_randColor:
+        text: ពណ៌​ព្រាវ
+      gamelab_randomColor:
+        text: ពណ៌​ព្រាវ
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ទីក្រុង
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': ព្រាវ
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': នៅ​ពេល
+            '"while"': នៅ​ពេល
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': ស្តាំ
+            '"left"': ឆ្វេង
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": ឡើង
+            "'down'": ចុះ
+            "'left'": ឆ្វេង
+            "'right'": ស្តាំ
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ឆ្វេង
+            "{x: 300, y: 200}": ស្តាំ
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': ទាំងអស់
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': ទាំងអស់
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ឆ្វេង
+            "{x: 300, y: 200}": ស្តាំ
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': ទាំងអស់
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': ទាំងអស់
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': ទាំងអស់
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': ទាំងអស់
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': ទាំងអស់
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': ទាំងអស់
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: គ្មាន
+      Mikelab_randomColor:
+        text: ពណ៌​ព្រាវ
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ទីក្រុង
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': ស្តាំ
+            '"left"': ឆ្វេង
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ឆ្វេង
+            "{x: 300, y: 200}": ស្តាំ
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': ព្រួញឡើងលើ
+            '"down"': ព្រួញចុះក្រោម
+            '"left"': ព្រួញខាងឆ្វេង
+            '"right"': ព្រួញខាងស្តាំ
+            '"w"': ខាងលិច
+            '"a"': A
+            '"s"': ខាងត្បូង
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': ព្រួញឡើងលើ
+            '"down"': ព្រួញចុះក្រោម
+            '"left"': ព្រួញខាងឆ្វេង
+            '"right"': ព្រួញខាងស្តាំ
+            '"w"': ខាងលិច
+            '"a"': A
+            '"s"': ខាងត្បូង
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': ព្រួញឡើងលើ
+            '"down"': ព្រួញចុះក្រោម
+            '"left"': ព្រួញខាងឆ្វេង
+            '"right"': ព្រួញខាងស្តាំ
+      RyanLab_moveForward:
+        text: រំកិល​ទៅមុខ
+      RyanLab_turnLeft:
+        text: បត់​ឆ្វេង
+      RyanLab_turnRight:
+        text: បត់​ស្ដាំ
+      aalab_changePropByFlexible:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': នៅ​ពេល
+            '"while"': នៅ​ពេល
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': នៅ​ពេល
+            '"while"': នៅ​ពេល
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': នៅ​ពេល
+            '"while"': នៅ​ពេល
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ទីក្រុង
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': ពិត
+            '"false"': មិន​ពិត
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': ជារៀងរហូត
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': បង្ហាញ
+            '"hide"': លាក់
+      binary_move:
+        options:
+          DIR:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": នៅខាងមុខ
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": ខ្សាច់
+            "'planksOak'": ក្តារឈើសែន
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": ខ្សាច់
+      craft_moveForward:
+        text: រំកិល​ទៅមុខ
+      craft_placeTorch:
+        text: ដាក់ភ្លើងគប់

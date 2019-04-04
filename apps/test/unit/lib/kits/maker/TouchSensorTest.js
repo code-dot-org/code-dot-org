@@ -8,16 +8,16 @@ const DOWN = 'down';
 const HOLD = 'hold';
 const UP = 'up';
 
-describe('TouchSensor', function () {
+describe('TouchSensor', function() {
   let fakeTouchPad, touchSensor, spy;
 
-  beforeEach(function () {
+  beforeEach(function() {
     fakeTouchPad = new FakeTouchPad();
     touchSensor = new TouchSensor(0, fakeTouchPad);
     spy = sinon.spy();
   });
 
-  it('forwards events for its assigned pin', function () {
+  it('forwards events for its assigned pin', function() {
     touchSensor.on(DOWN, spy);
     expect(spy).not.to.have.been.called;
 
@@ -25,7 +25,7 @@ describe('TouchSensor', function () {
     expect(spy).to.have.been.calledOnce;
   });
 
-  it('does not forward events from other pins', function () {
+  it('does not forward events from other pins', function() {
     touchSensor.on(DOWN, spy);
     expect(spy).not.to.have.been.called;
 
@@ -33,7 +33,7 @@ describe('TouchSensor', function () {
     expect(spy).not.to.have.been.called;
   });
 
-  it('forwards down events', function () {
+  it('forwards down events', function() {
     touchSensor.on(DOWN, spy);
     expect(spy).not.to.have.been.called;
 
@@ -41,7 +41,7 @@ describe('TouchSensor', function () {
     expect(spy).to.have.been.calledOnce;
   });
 
-  it('forwards up events', function () {
+  it('forwards up events', function() {
     touchSensor.on(UP, spy);
     expect(spy).not.to.have.been.called;
 
@@ -49,7 +49,7 @@ describe('TouchSensor', function () {
     expect(spy).to.have.been.calledOnce;
   });
 
-  it('does not forward hold events', function () {
+  it('does not forward hold events', function() {
     touchSensor.on(HOLD, spy);
     expect(spy).not.to.have.been.called;
 
@@ -57,7 +57,7 @@ describe('TouchSensor', function () {
     expect(spy).not.to.have.been.called;
   });
 
-  it('removes listeners on stop() (e.g. reset)', function () {
+  it('removes listeners on stop() (e.g. reset)', function() {
     // Add an initial listener
     touchSensor.on(DOWN, spy);
     expect(spy).not.to.have.been.called;
@@ -65,7 +65,6 @@ describe('TouchSensor', function () {
     // Check that the listener is working
     fakeTouchPad.down(0);
     expect(spy).to.have.been.calledOnce;
-
 
     // Reset component
     touchSensor.stop();

@@ -7,7 +7,7 @@ id:
     failure:
       already_authenticated: "Anda telah masuk."
       inactive: "Akun anda belum diaktifkan."
-      invalid: "Email atau password tidak valid."
+      invalid: "Email atau kata sandi tidak valid."
       invalid_token: "Token otentikasi tidak valid."
       locked: "Akun anda terkunci."
       not_found_in_database: "Email atau kata sandi tidak valid."
@@ -39,7 +39,6 @@ id:
       update_needs_confirmation: "Anda telah berhasil memperbarui akun anda, tetapi kita perlu memverifikasi alamat email baru Anda. Silakan periksa email Anda dan klik pada link konfirmasi untuk menyelesaikan konfirmasi alamat email baru anda."
       updated: "Anda telah berhasil memperbarui akun Anda."
     sessions:
-      signed_in: ""
       signed_out: "Berhasil Keluar."
     unlocks:
       send_instructions: "Anda akan menerima sebuah email dalam beberapa menit dengan instruksi cara konfirmasi akun anda."

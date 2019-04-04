@@ -1,0 +1,75 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "setVisibleEach",
+    "blockText": "set {THIS} visibility to {VISIBILITY}",
+    "args": [
+      {
+        "name": "THIS",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "all aliens",
+            "\"ALIEN\""
+          ],
+          [
+            "all bears",
+            "\"BEAR\""
+          ],
+          [
+            "all cats",
+            "\"CAT\""
+          ],
+          [
+            "all dogs",
+            "\"DOG\""
+          ],
+          [
+            "all ducks",
+            "\"DUCK\""
+          ],
+          [
+            "all frogs",
+            "\"FROG\""
+          ],
+          [
+            "all moose",
+            "\"MOOSE\""
+          ],
+          [
+            "all pineapples",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "all robots",
+            "\"ROBOT\""
+          ],
+          [
+            "all sharks",
+            "\"SHARK\""
+          ],
+          [
+            "all unicorns",
+            "\"UNICORN\""
+          ]
+        ]
+      },
+      {
+        "name": "VISIBILITY",
+        "options": [
+          [
+            "visible",
+            "true"
+          ],
+          [
+            "invisible",
+            "false"
+          ]
+        ]
+      }
+    ]
+  }
+}

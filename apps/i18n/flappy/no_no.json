@@ -43,7 +43,7 @@
   "setBackgroundUnderwater": "sett undervann scene",
   "setBackgroundCave": "sett Hule scene",
   "setBackgroundSanta": "sett Julenissen scene",
-  "setBackgroundTooltip": "Setter bakgrunnsbildet",
+  "setBackgroundTooltip": "Angir bakgrunnsbilde",
   "setGapRandom": "Angi et tilfeldig mellomrom",
   "setGapVerySmall": "Angi en svært liten åpning",
   "setGapSmall": "Angi en liten åpning",
@@ -127,7 +127,7 @@
   "whenCollideObstacleTooltip": "Utfør handlingene nedenfor når Flappy treffer en hindring.",
   "whenEnterObstacle": "når passert hindring",
   "whenEnterObstacleTooltip": "Utfør handlingene nedenfor når Flappy møter en hindring.",
-  "whenRunButtonClick": "når spillet starter",
+  "whenRunButtonClick": "Når spillet starter",
   "whenRunButtonClickTooltip": "Utfør handlingene nedenfor når spillet starter.",
   "yes": "Ja"
 }

@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Making New Arrays\r\n\r\nYou know how to change arrays, now it's time for you to make your own.\r\n\r\n# Do this\r\n\r\n* Make a new array with whatever notes you want. They can be in different octaves, arranged in a certain key, etc. Anything you want!\r\n* Have the buzzer play a random note from your array when the **right** button is pressed.",
+    "long_instructions": "# Making New Arrays\r\n\r\nYou know how to change arrays, now it's time for you to make your own.\r\n\r\n# Do this\r\n\r\n* Make a new array with whatever notes you want. They can be in different octaves, arranged in a certain key, etc. Anything you want!\r\n* Have the buzzer play a random note from your array when the **right** button is pressed.",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "//Add your array here\r\n\r\n//Play a random note from your array inside here\r\nonBoardEvent(buttonL, \"down\", function(event) {\r\n  var i = randomNumber(0, yourArrayNameHere.length - 1);\r\n});",

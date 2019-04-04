@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "artist",
-    "instructions": "Here's another puzzle to practice loops. What happens if you use the repeat block to run the code already provided on the workspace 4 times?",
+    "short_instructions": "Here's another puzzle to practice loops. What happens if you use the repeat block to run the code already provided on the workspace 4 times?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",

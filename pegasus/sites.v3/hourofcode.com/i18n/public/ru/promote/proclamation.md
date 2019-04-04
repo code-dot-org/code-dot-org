@@ -1,26 +1,30 @@
 ---
-title: <%= hoc_s(:title_proclamation) %>
+title: <%= hoc_s(:title_proclamation).inspect %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Ниже приведен пример разрешения поддержку Недели Компьютерные науки, образования и ее цели, которые могут быть использованы государственными и местными законодателями.
+# Sample Computer Science Education Week resolution
 
-  
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
 
-[HOUSE OR SENATE RESOLUTION ###]
+---
 
-[ДАТА]
+#### **RESOLUTION**  
 
-Компьютерные технологии стали неотъемлимой частью нашей жизни, они меняют взаимоотношения между людьми и трансформирую мир вокруг нас;
 
-Информационные технологии преобразовывают существующие отрасли промышленности, создают новые направления коммерции, открывают неизведанные горизонты на всех направлениях развития науки, а также являются мощным толчком для повышения производительности труда во всех отраслях экономики;
+#### Supporting the goals and ideals of "Computer Science Education Week"
+
+Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
 Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-В нашу цифровую эпоху информационные технологии являются основополагающим фундаментом развития науки и технологий;
+Whereas the field of computer science is a foundational science for the digital age;
 
 Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
@@ -38,15 +42,15 @@ Whereas the field of computer science has significant equity barriers to address
 
 Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
 (1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
 
 (2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
 (4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 

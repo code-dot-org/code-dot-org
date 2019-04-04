@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-06-15T23:14:55.000Z",
   "level_num": "custom",
   "user_id": 9,
@@ -48,11 +48,12 @@
     "use_default_sprites": "false",
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 14105,
-    "markdown_instructions": "These aliens are running wild!  \r\n\r\nUse the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\r\n      <value name=\"SPRITE\"/>\r\n    </block></xml> block to make each alien stop moving when it is clicked.  \r\n    \r\n---\r\n",
+    "long_instructions": "These aliens are running wild!  \r\n\r\nUse the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\r\n      <value name=\"SPRITE\"/>\r\n    </block></xml> block to make each alien stop moving when it is clicked.",
     "show_type_hints": "true",
-    "instructions": "Use the `stops everything` block to make each alien stop moving when it is clicked.",
+    "short_instructions": "Use the `stops everything` block to make each alien stop moving when it is clicked.",
     "validation_code": "if (World.frameCount > 250) {\r\n  var status = 3;\r\n  var clickCounter = 0;\r\n  \r\n  // Check through all sprites in case student changed the sprite name\r\n  for (var i=0; i<World.allSprites.length; i++) {\r\n    var sprite = World.allSprites[i];\r\n    // ignore edge sprites\r\n    if (!edges.contains(sprite)) {\r\n      if (sprite.behaviors.length == 0) {\r\n          clickCounter += 1;\r\n      }\r\n    }\r\n  }\r\n  if(clickCounter >= 3){\r\n    status = 0;\r\n  }\r\n  levelSuccess(status);\r\n}",
     "include_shared_functions": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

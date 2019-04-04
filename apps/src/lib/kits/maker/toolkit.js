@@ -11,7 +11,7 @@ import * as dropletConfig from './dropletConfig';
 import MakerError, {
   ConnectionCanceledError,
   UnsupportedBrowserError,
-  wrapKnownMakerErrors,
+  wrapKnownMakerErrors
 } from './MakerError';
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
@@ -30,25 +30,12 @@ let currentBoard = null;
  * Enable Maker Toolkit for the current level.
  */
 export function enable() {
-  if (!isAvailable()) {
-    throw new MakerError('Maker cannot be enabled: Its reducer was not registered.');
+  if (!redux.isAvailable(getStore().getState())) {
+    throw new MakerError(
+      'Maker cannot be enabled: Its reducer was not registered.'
+    );
   }
   getStore().dispatch(redux.enable());
-}
-
-/**
- * @returns {boolean} whether Maker Toolkit is enabled for the current level
- */
-export function isEnabled() {
-  return redux.isEnabled(getStore().getState());
-}
-
-/**
- * @returns {boolean} whether Maker Toolkit is usable with the current app at all
- */
-export function isAvailable() {
-  const state = getStore().getState();
-  return !!(state && state.maker);
 }
 
 /**
@@ -66,14 +53,22 @@ export function isAvailable() {
  *   Rejects with another error type if something unexpected happens.
  */
 export function connect({interpreter, onDisconnect}) {
-  if (!isEnabled()) {
-    return Promise.reject(new Error('Attempted to connect to a maker board, ' +
-        'but Maker Toolkit is not enabled.'));
+  if (!redux.isEnabled(getStore().getState())) {
+    return Promise.reject(
+      new Error(
+        'Attempted to connect to a maker board, ' +
+          'but Maker Toolkit is not enabled.'
+      )
+    );
   }
 
   if (currentBoard) {
-    return Promise.reject(new Error('Attempted to connect Maker Toolkit when ' +
-        'an existing board is already connected.'));
+    return Promise.reject(
+      new Error(
+        'Attempted to connect Maker Toolkit when ' +
+          'an existing board is already connected.'
+      )
+    );
   }
 
   const store = getStore();
@@ -81,40 +76,40 @@ export function connect({interpreter, onDisconnect}) {
   dispatch(redux.startConnecting());
 
   return confirmSupportedBrowser()
-      .then(getBoard)
-      .then(board => {
-        if (!isConnecting()) {
-          // Must've called reset() - exit the promise chain.
-          return Promise.reject(new ConnectionCanceledError());
-        }
-        currentBoard = board;
-        return currentBoard.connect();
-      })
-      .then(() => {
-        if (!isConnecting()) {
-          // Must've called reset() - exit the promise chain.
-          return Promise.reject(new ConnectionCanceledError());
-        }
-        commands.injectBoardController(currentBoard);
-        currentBoard.installOnInterpreter(interpreter);
-        if (typeof onDisconnect === 'function') {
-          currentBoard.once('disconnect', onDisconnect);
-        }
-        dispatch(redux.reportConnected());
-        trackEvent('Maker', 'ConnectionSuccess');
-      })
-      .catch(error => {
-        if (error instanceof ConnectionCanceledError) {
-          // This was intentional, and we don't need an error screen.
-          return Promise.reject(error);
-        } else {
-          // Something went wrong, so show the error screen.
-          error = wrapKnownMakerErrors(error);
-          dispatch(redux.reportConnectionError(error));
-          trackEvent('Maker', 'ConnectionError');
-          return Promise.reject(error);
-        }
-      });
+    .then(getBoard)
+    .then(board => {
+      if (!isConnecting()) {
+        // Must've called reset() - exit the promise chain.
+        return Promise.reject(new ConnectionCanceledError());
+      }
+      currentBoard = board;
+      return currentBoard.connect();
+    })
+    .then(() => {
+      if (!isConnecting()) {
+        // Must've called reset() - exit the promise chain.
+        return Promise.reject(new ConnectionCanceledError());
+      }
+      commands.injectBoardController(currentBoard);
+      currentBoard.installOnInterpreter(interpreter);
+      if (typeof onDisconnect === 'function') {
+        currentBoard.once('disconnect', onDisconnect);
+      }
+      dispatch(redux.reportConnected());
+      trackEvent('Maker', 'ConnectionSuccess');
+    })
+    .catch(error => {
+      if (error instanceof ConnectionCanceledError) {
+        // This was intentional, and we don't need an error screen.
+        return Promise.reject(error);
+      } else {
+        // Something went wrong, so show the error screen.
+        error = wrapKnownMakerErrors(error);
+        dispatch(redux.reportConnectionError(error));
+        trackEvent('Maker', 'ConnectionError');
+        return Promise.reject(error);
+      }
+    });
 }
 
 /**
@@ -138,8 +133,9 @@ function getBoard() {
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
   } else {
-    return findPortWithViableDevice()
-        .then(port => new CircuitPlaygroundBoard(port));
+    return findPortWithViableDevice().then(
+      port => new CircuitPlaygroundBoard(port)
+    );
   }
 }
 
@@ -157,7 +153,7 @@ function shouldRunWithFakeBoard() {
  * and puts maker UI back in a default state.
  */
 export function reset() {
-  if (!isEnabled()) {
+  if (!redux.isEnabled(getStore().getState())) {
     return;
   }
 

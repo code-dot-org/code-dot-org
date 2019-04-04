@@ -1,10 +1,11 @@
-import React, { PropTypes } from 'react';
-import { connect } from 'react-redux';
-import { categorizedLessons } from '@cdo/apps/code-studio/progressRedux';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+import {categorizedLessons} from '@cdo/apps/code-studio/progressRedux';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
 import ProgressGroup from './ProgressGroup';
-import { levelType, lessonType } from './progressTypes';
+import {levelType, lessonType} from './progressTypes';
 
 export const styles = {
   hidden: {
@@ -20,11 +21,9 @@ class ProgressTable extends React.Component {
       PropTypes.shape({
         category: PropTypes.string.isRequired,
         lessons: PropTypes.arrayOf(lessonType).isRequired,
-        levels: PropTypes.arrayOf(
-          PropTypes.arrayOf(levelType)
-        ).isRequired
+        levels: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired
       })
-    ).isRequired,
+    ).isRequired
   };
 
   componentDidMount() {
@@ -34,16 +33,16 @@ class ProgressTable extends React.Component {
     // Now that we're not behind an experiment for progressRedesign, we should make
     // these changes elsewhere.
     const padding = 80;
-    $(".container.main").css({
+    $('.container.main').css({
       width: 'initial',
       maxWidth: 940 + 2 * padding,
       paddingLeft: padding,
-      paddingRight:padding
+      paddingRight: padding
     });
   }
 
   render() {
-    const { isSummaryView, isPlc, categorizedLessons } = this.props;
+    const {isSummaryView, isPlc, categorizedLessons} = this.props;
 
     if (categorizedLessons.length === 1) {
       // Render both tables, and toggle hidden state via CSS as this has better

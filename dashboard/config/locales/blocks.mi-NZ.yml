@@ -1,0 +1,510 @@
+---
+mi:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': ngā hēkona
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: katoa
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: katoa
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': ngā hēkona
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': ngā hēkona
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': ngā hēkona
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: katoa
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+      Dancelab_randomColor:
+        text: tae matapōkere
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': noa
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: katoa
+          SPEED:
+            '1': noa
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: katoa
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: katoa
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: katoa
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': runga
+            '"left"': mauī
+            '"down"': raro
+            '"right"': matau
+            '"space"': tuarangi
+            '"x"': x
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': pono
+            'false': hē
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
+          KEY:
+            '"up"': runga
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
+            '"space"': tuarangi
+            '"x"': x
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': matau
+            '"left"': mauī
+      gamelab_randColor:
+        text: tae matapōkere
+      gamelab_randomColor:
+        text: tae matapōkere
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': tāone
+              nui
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': matau
+            '"left"': mauī
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': runga
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
+            '"space"': tuarangi
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": runga
+            "'down'": raro
+            "'left'": mauī
+            "'right'": matau
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': runga
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
+            '"space"': tuarangi
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': katoa
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': katoa
+          PROPERTY:
+            '"scale"': rahinga
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': katoa
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': katoa
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': katoa
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': katoa
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': katoa
+          PROPERTY:
+            '"scale"': rahinga
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': katoa
+      Mikelab_randomColor:
+        text: tae matapōkere
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': tāone
+              nui
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': matau
+            '"left"': mauī
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": mauī
+            "{x: 300, y: 200}": matau
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': tohu runga
+            '"down"': tohu raro
+            '"left"': tohu maui
+            '"right"': tohu katau
+            '"w"': W
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': tohu runga
+            '"down"': tohu raro
+            '"left"': tohu maui
+            '"right"': tohu katau
+            '"w"': W
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': tohu runga
+            '"down"': tohu raro
+            '"left"': tohu maui
+            '"right"': tohu katau
+      RyanLab_moveForward:
+        text: neke ki mua
+      RyanLab_turnLeft:
+        text: huri whakatemauī
+      RyanLab_turnRight:
+        text: huri whakatematau
+      aalab_changePropByFlexible:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
+          KEY:
+            '"up"': runga
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
+            '"space"': tuarangi
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': tāone
+              nui
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': pono
+            '"false"': hē
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': āke, āke
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': whakaaturia
+            '"hide"': hunaia
+      binary_move:
+        options:
+          DIR:
+            '"up"': runga
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': runga
+            '"down"': raro
+            '"left"': mauī
+            '"right"': matau
+            '"space"': tuarangi
+      craft_ifPath:
+        text: |-
+          mena he ara  {DIR}
+          {STATEMENT}
+        options:
+          DIR:
+            "'ahead'": ki mua
+            "'right'": ki te taha matau
+            "'left'": ki te taha maui
+      craft_ifStandingOn:
+        text: |-
+          mena e tu ana ki runga {TYPE}
+          {STATEMENT}
+        options:
+          TYPE:
+            "'blueCoralBlock'": punga moana kikorangi
+            "'redCoralBlock'": punga moana whero
+            "'sand'": oneone
+            "'wool_blue'": wai hōhonu
+            "'planksOak'": papa oke
+            "'seaLantern'": rama moana
+      craft_ifStandingOnLimit:
+        text: |-
+          mena e tu ana ki runga {TYPE}
+          {STATEMENT}
+        options:
+          TYPE:
+            "'sand'": oneone
+            "'darkPrismarine'": poromoana uriuri
+            "'seaLantern'": rama moana
+      craft_log:
+        text: kārere takiputa {MESSAGE}
+      craft_moveForward:
+        text: neke ki mua
+      craft_placeBlock:
+        text: waiho {blockType}
+        options:
+          blockType:
+            '"strippedOak"': ōki horea
+            '"strippedDarkOak"': ōki horea uriuri
+            '"stoneBricks"': periki kowhatu
+            '"mossyStoneBricks"': periki kowhatu kohukohu
+            '"crackedStoneBricks"': periki kowhatu pakaru
+            '"decorativeStoneBricks"': periki kowhatu whakapaipai
+            '"blueCoralBlock"': paraka punga moana kikorangi
+            '"pinkCoralBlock"': paraka punga moana māwhero
+            '"magentaCoralBlock"': paraka punga moana mākurakura
+            '"redCoralBlock"': paraka punga moana whero
+            '"yellowCoralBlock"': paraka pungamoana kowhai
+            '"blueDeadCoralBlock"': paraka punga moana kikorangi hūmate
+            '"pinkDeadCoralBlock"': paraka punga moana māwhero hūmate
+            '"magentaDeadCoralBlock"': paraka punga moana mākurakura hūmate
+            '"readDeadCoralBlock"': paraka punga moana whero hūmate
+            '"yellowDeadCoralBlock"': paraka punga moana kowhai hūmate
+            '"prismarine"': poromoana
+            '"darkPrismarine"': poromoana uriuri
+            '"seaLantern"': rama moana
+            '"packedIce"': tio whāiti
+            '"blueIce"': tio kikorangi
+            '"blackConcrete"': raima pango
+            '"seaGrass"': pātītī moana
+            '"kelp"': tāngāngā
+            '"polishedGranite"': toka pīataata
+      craft_placePrismarine:
+        text: waiho te poromoana
+      craft_placeTorch:
+        text: hoatu rama
+      craft_repeatUntilConduit:
+        text: "mahia tonu kia mutu ai te roma \n{STATEMENT}"
+      craft_repeatUntilGoal:
+        text: |-
+          mahia tonu kia whiwhi whāinga
+          {STATEMENT}
+      craft_spawnEntity:
+        text: whakawhānau {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': pātutuki
+            '"dolphin"': aihe
+            '"salmon"': tāmana
+            '"seaTurtle"': honu
+            '"squid"': wheke
+            '"tropicalFish"': ika pārūrū
+      craft_turn:
+        text: hurihia {DIR}
+        options:
+          DIR:
+            right: matau ↻
+            left: maui ↺

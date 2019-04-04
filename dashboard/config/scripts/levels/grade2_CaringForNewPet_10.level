@@ -11,7 +11,7 @@
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",
-    "instructions": "Get me to the pig!",
+    "short_instructions": "Get me to the pig!",
     "ideal": "10",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",

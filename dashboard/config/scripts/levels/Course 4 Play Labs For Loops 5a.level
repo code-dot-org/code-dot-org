@@ -18,7 +18,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "instructions": "In this puzzle, Dog will be your time keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\" variable will begin with a value of 1.\r\n\r\nCan you make it so that each time you click Dog, the increment increases by 2?  Click the forward arrow to run the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before each one.",
+    "short_instructions": "In this puzzle, Dog will be your time keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\" variable will begin with a value of 1.\r\n\r\nCan you make it so that each time you click Dog, the increment increases by 2?  Click the forward arrow to run the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before each one.",
     "ideal": "26",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -35,7 +35,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "In this puzzle, Dog will be your time keeper.\r\n\r\nDog will count from **0** to **30** by `increment`.  The `increment` variable will begin with a value of **1**.\r\n\r\nCan you make it so that each time you click Dog, `increment` increases by **2**?  Click the forward arrow to run the `for loop`.  \r\n\r\n**Note:** Run the loop a couple of times, clicking Dog before each one.",
+    "long_instructions": "In this puzzle, Dog will be your time keeper.\r\n\r\nDog will count from **0** to **30** by `increment`.  The `increment` variable will begin with a value of **1**.\r\n\r\nCan you make it so that each time you click Dog, `increment` increases by **2**?  Click the forward arrow to run the `for loop`.  \r\n\r\n**Note:** Run the loop a couple of times, clicking Dog before each one.",
     "soft_buttons": [
       "rightButton"
     ],

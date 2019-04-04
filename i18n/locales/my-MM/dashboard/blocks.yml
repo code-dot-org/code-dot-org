@@ -1,0 +1,215 @@
+---
+my:
+  data:
+    blocks:
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: အားလုံး
+          MOVE:
+            MOVES.Rest: ဘာမှမရှိ
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: ဘာမှမရှိ
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: အားလုံး
+          MOVE:
+            MOVES.Rest: ဘာမှမရှိ
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: ဘာမှမရှိ
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: ဘာမှမရှိ
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: အားလုံး
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+      Dancelab_randomColor:
+        text: ကျဘန်းအရောင်
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': ပုံမှန်
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
+          SPEED:
+            '1': ပုံမှန်
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: အားလုံး
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: အားလုံး
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"x"': "×"
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': အချိန်
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'true'
+            'false': 'false'
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': အချိန်
+          KEY:
+            '"x"': "×"
+      gamelab_randColor:
+        text: ကျဘန်းအရောင်
+      gamelab_randomColor:
+        text: ကျဘန်းအရောင်
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': အချိန်
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': အားလုံး
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: ဘာမှမရှိ
+      Mikelab_randomColor:
+        text: ကျဘန်းအရောင်
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': အချိန်
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': အချိန်
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': အချိန်
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': 'true'
+            '"false"': 'false'
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': အမြဲတမ်​း
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": ရှေ့သို့
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": သဲ
+            "'planksOak'": ၀က်သစ်ချပင်ကြမ်းခင်းပျဉ်ချပ်များ
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": သဲ
+      craft_placeTorch:
+        text: မီးတိုင်ကိုထားပါ

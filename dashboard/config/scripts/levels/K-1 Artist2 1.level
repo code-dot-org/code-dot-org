@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw a square below the triangle.",
+    "short_instructions": "Draw a square below the triangle.",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "start_direction": "90",

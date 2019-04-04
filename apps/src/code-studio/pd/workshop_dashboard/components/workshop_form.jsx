@@ -3,11 +3,11 @@
 /**
  * Form for creating / editing workshop details.
  */
-
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import Select from "react-select";
+import Select from 'react-select';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import moment from 'moment';
@@ -28,11 +28,7 @@ import {
   Radio,
   Alert
 } from 'react-bootstrap';
-import {
-  TIME_FORMAT,
-  DATE_FORMAT,
-  DATETIME_FORMAT
-} from '../workshopConstants';
+import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
 import {
   PermissionPropType,
   WorkshopAdmin,
@@ -41,7 +37,7 @@ import {
   ProgramManager,
   Partner,
   CsfFacilitator
-} from "../permission";
+} from '../permission';
 import {
   Courses,
   Subjects
@@ -90,7 +86,7 @@ export class WorkshopForm extends React.Component {
     }),
     onSaved: PropTypes.func,
     readOnly: PropTypes.bool,
-    children: PropTypes.node,
+    children: PropTypes.node
   };
 
   constructor(props) {
@@ -112,7 +108,7 @@ export class WorkshopForm extends React.Component {
       funding_type: null,
       course: '',
       subject: '',
-      notes:'',
+      notes: '',
       sessions: [placeholderSession],
       destroyedSessions: [],
       availableFacilitators: [],
@@ -122,7 +118,8 @@ export class WorkshopForm extends React.Component {
     };
 
     if (props.workshop) {
-      initialState = _.merge(initialState,
+      initialState = _.merge(
+        initialState,
         _.pick(props.workshop, [
           'facilitators',
           'location_name',
@@ -137,7 +134,9 @@ export class WorkshopForm extends React.Component {
           'regional_partner_id'
         ])
       );
-      initialState.sessions = this.prepareSessionsForForm(props.workshop.sessions);
+      initialState.sessions = this.prepareSessionsForForm(
+        props.workshop.sessions
+      );
       this.loadAvailableFacilitators(props.workshop.course);
     }
 
@@ -183,9 +182,9 @@ export class WorkshopForm extends React.Component {
 
   loadAvailableFacilitators(course) {
     this.loadWorkshopRequest = $.ajax({
-      method: "GET",
+      method: 'GET',
       url: `/api/v1/pd/course_facilitators?course=${course}`,
-      dataType: "json"
+      dataType: 'json'
     }).done(data => {
       this.setState({availableFacilitators: data});
     });
@@ -193,9 +192,9 @@ export class WorkshopForm extends React.Component {
 
   loadRegionalPartners() {
     this.loadRegionalPartnersRequest = $.ajax({
-      method: "GET",
+      method: 'GET',
       url: '/api/v1/regional_partners',
-      dataType: "json"
+      dataType: 'json'
     }).done(data => {
       this.setState({
         regionalPartners: data
@@ -204,7 +203,7 @@ export class WorkshopForm extends React.Component {
   }
 
   isGoogleMapsLoaded() {
-    return (typeof google === 'object' && typeof google.maps === 'object');
+    return typeof google === 'object' && typeof google.maps === 'object';
   }
 
   enableAutocompleteLocation() {
@@ -226,8 +225,14 @@ export class WorkshopForm extends React.Component {
       };
     }
 
-    if (!this.autocomplete && this.locationAddressControl && this.isGoogleMapsLoaded()) {
-      this.autocomplete = new google.maps.places.Autocomplete(this.locationAddressControl);
+    if (
+      !this.autocomplete &&
+      this.locationAddressControl &&
+      this.isGoogleMapsLoaded()
+    ) {
+      this.autocomplete = new google.maps.places.Autocomplete(
+        this.locationAddressControl
+      );
       google.maps.event.addListener(this.autocomplete, 'place_changed', () => {
         const place = this.autocomplete.getPlace();
         this.setState({location_address: place.formatted_address});
@@ -249,18 +254,26 @@ export class WorkshopForm extends React.Component {
 
   // Convert from [date, startTime, endTime] to [start, end] and merge destroyedSessions
   prepareSessionsForApi(sessions, destroyedSessions) {
-    return sessions.map(session => {
-      return {
-        id: session.id,
-        start: moment.utc(session.date + ' ' + session.startTime, DATETIME_FORMAT).format(),
-        end: moment.utc(session.date + ' ' + session.endTime, DATETIME_FORMAT).format()
-      };
-    }).concat(destroyedSessions.map(destroyedSession => {
-      return {
-        id: destroyedSession.id,
-        _destroy: true
-      };
-    }));
+    return sessions
+      .map(session => {
+        return {
+          id: session.id,
+          start: moment
+            .utc(session.date + ' ' + session.startTime, DATETIME_FORMAT)
+            .format(),
+          end: moment
+            .utc(session.date + ' ' + session.endTime, DATETIME_FORMAT)
+            .format()
+        };
+      })
+      .concat(
+        destroyedSessions.map(destroyedSession => {
+          return {
+            id: destroyedSession.id,
+            _destroy: true
+          };
+        })
+      );
   }
 
   // Convert from [id, name, email] to an array of ids.
@@ -280,23 +293,31 @@ export class WorkshopForm extends React.Component {
       destroyedSessions
     });
   };
-  handleFacilitatorsChange = (facilitators) => {
+  handleFacilitatorsChange = facilitators => {
     this.setState({facilitators: facilitators});
   };
 
   renderCourseSelect(validation) {
     let allowedCourses;
-    if (this.props.permission.hasAny(Organizer, ProgramManager, WorkshopAdmin)) {
+    if (
+      this.props.permission.hasAny(Organizer, ProgramManager, WorkshopAdmin)
+    ) {
       allowedCourses = Courses;
     } else if (this.props.permission.has(Facilitator)) {
       allowedCourses = this.props.facilitatorCourses;
     } else {
-      console.error("Insufficient permissions, expected one one of: Organizer, ProgramManager, WorkshopAdmin, or Facilitator");
+      console.error(
+        'Insufficient permissions, expected one one of: Organizer, ProgramManager, WorkshopAdmin, or Facilitator'
+      );
       allowedCourses = [];
     }
 
     const options = allowedCourses.map((course, i) => {
-      return (<option key={i} value={course}>{course}</option>);
+      return (
+        <option key={i} value={course}>
+          {course}
+        </option>
+      );
     });
     const placeHolder = this.state.course ? null : <option />;
     return (
@@ -322,9 +343,7 @@ export class WorkshopForm extends React.Component {
   renderOnMapRadios(validation) {
     return (
       <FormGroup validationState={validation.style.on_map}>
-        <ControlLabel>
-          Should this appear on the K-5 workshop map?
-        </ControlLabel>
+        <ControlLabel>Should this appear on the K-5 workshop map?</ControlLabel>
         <FormGroup>
           <Radio
             checked={this.state.on_map}
@@ -357,32 +376,35 @@ export class WorkshopForm extends React.Component {
   renderFundedSelect(validation) {
     const options = [];
     if (this.state.course === 'CS Fundamentals') {
-      options.push({
-        value: {funded: true, funding_type: 'partner'},
-        text: "Yes, it is funded. Please pay the Regional Partner."
-      }, {
-        value: {funded: true, funding_type: 'facilitator'},
-        text: "Yes, it is funded. Please pay the Facilitator directly."
-      });
+      options.push(
+        {
+          value: {funded: true, funding_type: 'partner'},
+          text: 'Yes, it is funded. Please pay the Regional Partner.'
+        },
+        {
+          value: {funded: true, funding_type: 'facilitator'},
+          text: 'Yes, it is funded. Please pay the Facilitator directly.'
+        }
+      );
     } else {
       options.push({
         value: {funded: true, funding_type: null},
-        text: "Yes, it is funded."
+        text: 'Yes, it is funded.'
       });
     }
     options.push({
       value: {funded: false, funding_type: null},
-      text: "No, it is not funded."
+      text: 'No, it is not funded.'
     });
-    const value = JSON.stringify(_.pick(this.state, ['funded', 'funding_type']));
+    const value = JSON.stringify(
+      _.pick(this.state, ['funded', 'funding_type'])
+    );
 
     return (
       <Row>
         <Col sm={6}>
           <FormGroup validationState={validation.style.funded}>
-            <ControlLabel>
-              Is this a Code.org paid workshop?
-            </ControlLabel>
+            <ControlLabel>Is this a Code.org paid workshop?</ControlLabel>
             <FormControl
               componentClass="select"
               id="funded"
@@ -412,29 +434,32 @@ export class WorkshopForm extends React.Component {
 
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
+    const isDeepDive = this.state.subject === 'Deep Dive';
+    const showMapChoice = isCsf && !isDeepDive;
+
     return (
       <FormGroup>
         <ControlLabel>
           Workshop Type Options&nbsp;
-          {isCsf &&
-            <a onClick={this.toggleTypeOptionsHelpDisplay}>(help)</a>
-          }
+          {isCsf && <a onClick={this.toggleTypeOptionsHelpDisplay}>(help)</a>}
         </ControlLabel>
-        {this.state.showTypeOptionsHelpDisplay && isCsf &&
-        <FormGroup>
-          <p>
-            If you’d like to make your workshop open to the public, select Yes to show it on the K-5 workshop map.
-          </p>
-          <p>
-            Next, please specify if this is a Code.org paid workshop.
-            If it is a Code.org paid workshop, select whether payment should be made directly to the Facilitator or
-            if the Regional Partner selected is responsible for payments to the Facilitator.
-          </p>
-        </FormGroup>
-        }
+        {this.state.showTypeOptionsHelpDisplay && isCsf && (
+          <FormGroup>
+            <p>
+              If you’d like to make your workshop open to the public, select Yes
+              to show it on the K-5 workshop map.
+            </p>
+            <p>
+              Next, please specify if this is a Code.org paid workshop. If it is
+              a Code.org paid workshop, select whether payment should be made
+              directly to the Facilitator or if the Regional Partner selected is
+              responsible for payments to the Facilitator.
+            </p>
+          </FormGroup>
+        )}
         <Row>
           <Col smOffset={1}>
-            {isCsf && this.renderOnMapRadios(validation)}
+            {showMapChoice && this.renderOnMapRadios(validation)}
             {this.renderFundedSelect(validation)}
           </Col>
         </Row>
@@ -443,26 +468,37 @@ export class WorkshopForm extends React.Component {
   }
 
   renderRegionalPartnerSelect() {
-    const editDisabled = this.props.readOnly ||
-    (
+    const editDisabled =
+      this.props.readOnly ||
       // Enabled for these permissions
-      !this.props.permission.hasAny(WorkshopAdmin, Organizer, ProgramManager, Partner) &&
-
-      // Enabled for CSF facilitators when they are creating a new workshop
-      !(this.props.permission.has(CsfFacilitator) && !this.props.workshop)
-    );
+      (!this.props.permission.hasAny(
+        WorkshopAdmin,
+        Organizer,
+        ProgramManager,
+        Partner
+      ) &&
+        // Enabled for CSF facilitators when they are creating a new workshop
+        !(this.props.permission.has(CsfFacilitator) && !this.props.workshop));
 
     const options = [];
-    if (this.props.permission.has(CsfFacilitator) || this.props.permission.has(WorkshopAdmin)) {
+    if (
+      this.props.permission.has(CsfFacilitator) ||
+      this.props.permission.has(WorkshopAdmin)
+    ) {
       options.push({value: '', label: 'None'});
     }
 
     if (this.state.regionalPartners) {
-      const sortedPartners = _.sortBy(this.state.regionalPartners, partner => partner.name);
-      options.push(...sortedPartners.map(partner => ({
-        value: partner.id,
-        label: partner.name
-      })));
+      const sortedPartners = _.sortBy(
+        this.state.regionalPartners,
+        partner => partner.name
+      );
+      options.push(
+        ...sortedPartners.map(partner => ({
+          value: partner.id,
+          label: partner.name
+        }))
+      );
     } else if (this.props.workshop) {
       // Display the currently selected partner name, even if the list hasn't yet loaded.
       options.push({
@@ -473,11 +509,8 @@ export class WorkshopForm extends React.Component {
 
     return (
       <FormGroup>
-        <ControlLabel>
-          Regional Partner
-        </ControlLabel>
-        {
-          options.length > 1 &&
+        <ControlLabel>Regional Partner</ControlLabel>
+        {options.length > 1 && (
           <Select
             id="regional-partner-select"
             name="regional_partner_id"
@@ -485,32 +518,25 @@ export class WorkshopForm extends React.Component {
             style={this.getInputStyle()}
             value={this.state.regional_partner_id || ''}
             options={options}
-
             // Facilitators (who are not organizers, partners, nor admins) cannot edit this field
             disabled={editDisabled}
           />
-        }
-        {
-          options.length === 1 &&
-          <p
-            id="regional-partner-name"
-          >
-            {options[0].label}
-          </p>
-        }
+        )}
+        {options.length === 1 && (
+          <p id="regional-partner-name">{options[0].label}</p>
+        )}
       </FormGroup>
     );
   }
 
   renderSubjectSelect(validation) {
     if (this.shouldRenderSubject()) {
-      // TODO(tanya): Show 201 subject in workshop dashboard UI
-      // Temporarily hiding CSF 201 subject from the workshop dashboard
-      // until the pilot is over in winter 2018
-      const included_subjects = Subjects[this.state.course]
-        .filter(subject => subject !== "Deep Dive");
-      const options = included_subjects.map((subject, i) => {
-        return (<option key={i} value={subject}>{subject}</option>);
+      const options = Subjects[this.state.course].map((subject, i) => {
+        return (
+          <option key={i} value={subject}>
+            {subject}
+          </option>
+        );
       });
       const placeHolder = this.state.subject ? null : <option />;
       return (
@@ -538,9 +564,9 @@ export class WorkshopForm extends React.Component {
     return this.props.readOnly && styles.readOnlyInput;
   }
 
-  handleErrorClick = (i) => {
+  handleErrorClick = i => {
     const errors = _.cloneDeep(this.state.errors);
-    errors.splice(i,1);
+    errors.splice(i, 1);
     this.setState({errors: errors});
   };
 
@@ -600,10 +626,10 @@ export class WorkshopForm extends React.Component {
   };
 
   // Determines which field to update based on the target's name attribute. Returns new value.
-  handleFieldChange = (event) => {
+  handleFieldChange = event => {
     const fieldName = $(event.target).attr('name');
     if (!fieldName) {
-      console.error("Expected name attribute on handleFieldChange target.");
+      console.error('Expected name attribute on handleFieldChange target.');
       return null;
     }
 
@@ -612,28 +638,28 @@ export class WorkshopForm extends React.Component {
     return value;
   };
 
-  handleRegionalPartnerSelect = (selection) => {
+  handleRegionalPartnerSelect = selection => {
     this.setState({regional_partner_id: selection ? selection.value : null});
   };
 
-  handleRadioChange = (event) => {
+  handleRadioChange = event => {
     const fieldName = $(event.target).attr('name');
     if (!fieldName) {
-      console.error("Expected name attribute on handleRadioChange target.");
+      console.error('Expected name attribute on handleRadioChange target.');
       return null;
     }
 
-    const enabled = event.target.value === "yes";
+    const enabled = event.target.value === 'yes';
     this.setState({[fieldName]: enabled});
     return enabled;
   };
 
-  handleFundingChange = (event) => {
+  handleFundingChange = event => {
     const {funded, funding_type} = JSON.parse(event.target.value);
     this.setState({funded, funding_type});
   };
 
-  handleCourseChange = (event) => {
+  handleCourseChange = event => {
     const course = this.handleFieldChange(event);
 
     // clear facilitators, subject, and funding
@@ -658,7 +684,10 @@ export class WorkshopForm extends React.Component {
       course: this.state.course,
       subject: this.state.subject,
       notes: this.state.notes,
-      sessions_attributes: this.prepareSessionsForApi(this.state.sessions, this.state.destroyedSessions),
+      sessions_attributes: this.prepareSessionsForApi(
+        this.state.sessions,
+        this.state.destroyedSessions
+      ),
       regional_partner_id: this.state.regional_partner_id
     };
 
@@ -677,18 +706,20 @@ export class WorkshopForm extends React.Component {
       dataType: 'json',
       contentType: 'application/json',
       data: JSON.stringify({pd_workshop: workshop_data, notify})
-    }).done(data => {
-      if (this.props.onSaved) {
-        this.props.onSaved(data);
-      }
-    }).fail(data => {
-      if (data.responseJSON.errors) {
-        this.setState({
-          errors: data.responseJSON.errors,
-          showSaveConfirmation: false
-        });
-      }
-    });
+    })
+      .done(data => {
+        if (this.props.onSaved) {
+          this.props.onSaved(data);
+        }
+      })
+      .fail(data => {
+        if (data.responseJSON.errors) {
+          this.setState({
+            errors: data.responseJSON.errors,
+            showSaveConfirmation: false
+          });
+        }
+      });
   }
 
   handleCancelClick = () => {
@@ -711,23 +742,33 @@ export class WorkshopForm extends React.Component {
         <Col sm={12}>
           {this.renderErrors()}
           <ButtonToolbar>
-            <Button bsStyle="primary" id="workshop-form-save-btn" onClick={this.handleSaveClick}>
+            <Button
+              bsStyle="primary"
+              id="workshop-form-save-btn"
+              onClick={this.handleSaveClick}
+            >
               {saveText}
             </Button>
-            <Button onClick={this.handleCancelClick}>
-              Cancel
-            </Button>
+            <Button onClick={this.handleCancelClick}>Cancel</Button>
           </ButtonToolbar>
-          <Modal show={this.state.showSaveConfirmation} onHide={this.handleAbortSave}>
+          <Modal
+            show={this.state.showSaveConfirmation}
+            onHide={this.handleAbortSave}
+          >
             <Modal.Header closeButton>
               <Modal.Title>Workshop Updated.</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              You updated important information regarding your workshop. Do you want to email an update?
+              You updated important information regarding your workshop. Do you
+              want to email an update?
             </Modal.Body>
             <Modal.Footer>
-              <Button bsStyle="primary" onClick={this.handleSaveAndNotifyClick}>Email</Button>
-              <Button onClick={this.handleSaveNoNotifyClick}>Don't Email</Button>
+              <Button bsStyle="primary" onClick={this.handleSaveAndNotifyClick}>
+                Email
+              </Button>
+              <Button onClick={this.handleSaveNoNotifyClick}>
+                Don't Email
+              </Button>
             </Modal.Footer>
           </Modal>
         </Col>
@@ -743,7 +784,7 @@ export class WorkshopForm extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return <Spinner/>;
+      return <Spinner />;
     }
     return this.renderForm();
   }
@@ -753,45 +794,50 @@ export class WorkshopForm extends React.Component {
     if (shouldValidate) {
       for (let i = 0; i < this.state.sessions.length; i++) {
         const session = this.state.sessions[i];
-        if (!session.date || !moment(session.date, DATE_FORMAT).isValid() ||
-          !session.startTime || !moment(session.startTime, TIME_FORMAT).isValid() ||
-          !session.endTime || !moment(session.endTime, TIME_FORMAT).isValid()) {
+        if (
+          !session.date ||
+          !moment(session.date, DATE_FORMAT).isValid() ||
+          !session.startTime ||
+          !moment(session.startTime, TIME_FORMAT).isValid() ||
+          !session.endTime ||
+          !moment(session.endTime, TIME_FORMAT).isValid()
+        ) {
           validation.isValid = false;
         }
       }
       if (!this.state.location_name) {
         validation.isValid = false;
-        validation.style.location_name = "error";
-        validation.help.location_name = "Required.";
+        validation.style.location_name = 'error';
+        validation.help.location_name = 'Required.';
       }
       if (!this.state.location_address) {
         validation.isValid = false;
-        validation.style.location_address = "error";
-        validation.help.location_address = "Required.";
+        validation.style.location_address = 'error';
+        validation.help.location_address = 'Required.';
       }
       if (!this.state.capacity) {
         validation.isValid = false;
-        validation.style.capacity = "error";
-        validation.help.capacity = "Required.";
+        validation.style.capacity = 'error';
+        validation.help.capacity = 'Required.';
       } else if (!/^[1-9]\d*$/.test(this.state.capacity)) {
         validation.isValid = false;
-        validation.style.capacity = "error";
-        validation.help.capacity = "Must be a positive integer.";
+        validation.style.capacity = 'error';
+        validation.help.capacity = 'Must be a positive integer.';
       }
       if (!this.state.course) {
         validation.isValid = false;
-        validation.style.course = "error";
-        validation.help.course = "Required.";
+        validation.style.course = 'error';
+        validation.help.course = 'Required.';
       }
       if (this.shouldRenderSubject() && !this.state.subject) {
         validation.isValid = false;
-        validation.style.subject = "error";
-        validation.help.subject = "Required.";
+        validation.style.subject = 'error';
+        validation.help.subject = 'Required.';
       }
-      if (this.state.funded === "") {
+      if (this.state.funded === '') {
         validation.isValid = false;
-        validation.style.funded = "error";
-        validation.help.funded = "Required";
+        validation.style.funded = 'error';
+        validation.help.funded = 'Required';
       }
     }
     return validation;
@@ -804,9 +850,7 @@ export class WorkshopForm extends React.Component {
       <Grid>
         <form>
           <Row>
-            <Col sm={4}>
-              All workshop times are local:
-            </Col>
+            <Col sm={4}>All workshop times are local:</Col>
           </Row>
           <SessionListFormPart
             sessions={this.state.sessions}
@@ -814,7 +858,7 @@ export class WorkshopForm extends React.Component {
             shouldValidate={this.state.shouldValidate}
             readOnly={this.props.readOnly}
           />
-          <br/>
+          <br />
           <Row>
             <Col sm={4}>
               <FormGroup validationState={validation.style.location_name}>
@@ -838,7 +882,9 @@ export class WorkshopForm extends React.Component {
                 <FormControl
                   type="text"
                   key={this.state.useAutocomplete} // Change key to force re-draw
-                  ref={ref => this.locationAddressControl = ReactDOM.findDOMNode(ref)}
+                  ref={ref =>
+                    (this.locationAddressControl = ReactDOM.findDOMNode(ref))
+                  }
                   value={this.state.location_address || ''}
                   placeholder="Enter a location"
                   id="location_address"
@@ -869,12 +915,8 @@ export class WorkshopForm extends React.Component {
                 <HelpBlock>{validation.help.capacity}</HelpBlock>
               </FormGroup>
             </Col>
-            <Col sm={3}>
-              {this.renderCourseSelect(validation)}
-            </Col>
-            <Col sm={3}>
-              {this.renderSubjectSelect(validation)}
-            </Col>
+            <Col sm={3}>{this.renderCourseSelect(validation)}</Col>
+            <Col sm={3}>{this.renderSubjectSelect(validation)}</Col>
           </Row>
           <Row>
             <Col sm={10}>
@@ -882,9 +924,7 @@ export class WorkshopForm extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col sm={10}>
-              {this.renderRegionalPartnerSelect()}
-            </Col>
+            <Col sm={10}>{this.renderRegionalPartnerSelect()}</Col>
           </Row>
           <Row>
             <Col sm={10}>
@@ -899,24 +939,25 @@ export class WorkshopForm extends React.Component {
                   name="notes"
                   onChange={this.handleFieldChange}
                   maxLength={65535}
-                  rows={Math.max(5, this.state.notes.split("\n").length + 1)}
+                  rows={Math.max(
+                    5,
+                    this.state.notes && this.state.notes.split('\n').length + 1
+                  )}
                   style={this.getInputStyle()}
                   disabled={this.props.readOnly}
                 />
               </FormGroup>
             </Col>
           </Row>
-          {
-            this.shouldShowFacilitators() && (
-              <FacilitatorListFormPart
-                availableFacilitators={this.state.availableFacilitators}
-                facilitators={this.state.facilitators}
-                course={this.state.course}
-                onChange={this.handleFacilitatorsChange}
-                readOnly={this.props.readOnly}
-              />
-            )
-          }
+          {this.shouldShowFacilitators() && (
+            <FacilitatorListFormPart
+              availableFacilitators={this.state.availableFacilitators}
+              facilitators={this.state.facilitators}
+              course={this.state.course}
+              onChange={this.handleFacilitatorsChange}
+              readOnly={this.props.readOnly}
+            />
+          )}
           {this.renderFormButtons()}
           {this.props.children}
         </form>

@@ -204,7 +204,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "markdown_instructions": "# Click the link!\r\n[Show me where the sprite moves](#triggercallout=code_triggered)\r\n",
+    "long_instructions": "# Click the link!\r\n[Show me where the sprite moves](#triggercallout=code_triggered)\r\n",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

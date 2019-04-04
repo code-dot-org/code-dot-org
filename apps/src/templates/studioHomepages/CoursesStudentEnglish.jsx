@@ -3,7 +3,7 @@ import ContentContainer from '../ContentContainer';
 import {LocalClassActionBlock} from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksStudentGradeBands from './CourseBlocksStudentGradeBands';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 /**
@@ -25,12 +25,10 @@ class CoursesStudentEnglish extends Component {
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
         >
-          <CourseBlocksHoc rowCount={1}/>
+          <CourseBlocksHoc />
         </ContentContainer>
 
-        <LocalClassActionBlock
-          showHeading={true}
-        />
+        <LocalClassActionBlock showHeading={true} />
       </div>
     );
   }

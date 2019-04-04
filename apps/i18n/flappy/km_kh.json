@@ -34,7 +34,7 @@
   "playSoundLaser": "សំលេងឡេសឺ",
   "playSoundTooltip": "លេងសំលេងជ្រើសរើស",
   "reinfFeedbackMsg": "អ្នក​អាច​ចុច​ប៊ូតុង \"ព្យាយាម​ម្ដង​ទៀត\" ដើម្បី​ត្រឡប់​ទៅ​ការ​លេង​ហ្គេម​របស់​អ្នក។",
-  "scoreText": "Score: {playerScore}",
+  "scoreText": "ពិន្ទុ: {playerScore}",
   "setBackground": "សារ៉េប្លង់ទេសភាព",
   "setBackgroundRandom": "សារ៉េប្លង់ទេសភាពអោយឆ្លាស់",
   "setBackgroundFlappy": "សារ៉េទេសភាពទីក្រុងពេលថ្ងៃ",

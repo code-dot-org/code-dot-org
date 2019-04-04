@@ -2,50 +2,54 @@ bg:
   data:
     block_categories:
       Actions: Действия
-      Loops: Цикли
+      Loops: Повторения
       Functions: Функции
       Color: Цвят
-      Brushes: Brushes
+      Brushes: Четки
       Math: Математика
       Logic: Логика
       Variables: Променливи
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Number: Число
+      String: Низ
+      Image: Изображение
+      Boolean: Булеви стойности
       Conditionals: Условия
       Events: Събития
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Игри/резултат
+      Comments: Коментари
+      Category: Категория
+      Prebuilt: Предварително създаден
       Text: Текст
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Picker: Избор
+      Comment: Коментар
+      'Variables ': 'Променливи '
+      Default: По подразбиране
+      Behaviors: Поведения
+      Locations: Места
+      everythingelse: всичко останало
+      Sprites: Спрайт
+      Location: Адрес
+      numbers: числа
+      Numbers: Числа
+      Input: Поле за въвеждане
+      Dancers: Танцьори
+      Groups: Групи
+      Advanced: Разширено
       Start: Старт
-      Groups: Groups
+      Music: Музика
+      Dancing: Танци
+      Sprite: Спрайт
+      Brush: Четка
+      Make Sprite: Направи Спрайт
+      Movement: Движение
       Booleans: Booleans
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Функционалност
+      Sprite Properties: Свойства на Спрайта
+      Predefined: Предварително-дефинирани
       test: тест
-      test2: test2
-      Foo: Foo
+      test2: тест 2
       Name: Име
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: НОВИ БЛОКОВЕ
+      'Functions ': 'Функции '
+      Game/Score: Игра/резултат
       Function: Функция

@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw the foot of the man with one line",
+    "short_instructions": "Draw the foot of the man with one line",
     "x": "250",
     "y": "350",
     "start_direction": "90",

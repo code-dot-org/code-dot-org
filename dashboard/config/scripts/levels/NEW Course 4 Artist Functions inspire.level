@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Click here to see the inspiration picture again.",
+    "short_instructions": "Click here to see the inspiration picture again.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/5e50e6ef0cafb40a8b697ea158047412-image-1441260841174.11.12.png\" width=\"250px\"/>\r\n\r\n**Free-Play Inspiration:** You've now learned everything you need to know to make a pattern like this! \r\n\r\nIf this picture inspires you, try to make something similar. Otherwise, create something all your own. \r\n\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/5e50e6ef0cafb40a8b697ea158047412-image-1441260841174.11.12.png\" width=\"250px\"/>\r\n\r\n**Free-Play Inspiration:** You've now learned everything you need to know to make a pattern like this! \r\n\r\nIf this picture inspires you, try to make something similar. Otherwise, create something all your own. \r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

@@ -9,7 +9,7 @@ class MakerController < ApplicationController
     # Redirect to login if not signed in
     authenticate_user!
 
-    csd_unit_6_script = Script.find_by_name(Script::CSD6_NAME)
+    csd_unit_6_script = MakerController.maker_script current_user
     current_level = current_user.next_unpassed_progression_level(csd_unit_6_script)
     @csd_unit_6 = {
       assignableName: data_t_suffix('script.name', csd_unit_6_script[:name], 'title'),
@@ -19,48 +19,87 @@ class MakerController < ApplicationController
     }
   end
 
+  def self.maker_script(for_user)
+    if any_csd_2017?(for_user) && !any_csd_2018?(for_user)
+      Script.get_from_cache(Script::CSD6_NAME)
+    else
+      Script.get_from_cache(Script::CSD6_2018_NAME)
+    end
+  end
+
+  def self.any_csd_2017?(for_user)
+    !for_user.user_scripts.joins(:script).
+      where(scripts: {name: ScriptConstants::CATEGORIES[:csd]}).empty? ||
+      for_user.section_courses.include?(Course.get_from_cache(ScriptConstants::CSD_2017))
+  end
+
+  def self.any_csd_2018?(for_user)
+    !for_user.user_scripts.joins(:script).
+      where(scripts: {name: ScriptConstants::CATEGORIES[:csd_2018]}).empty? ||
+      for_user.section_courses.include?(Course.get_from_cache(ScriptConstants::CSD_2018))
+  end
+
   def setup
   end
 
+  # GET /maker/discountcode
   def discountcode
     application_status = CircuitPlaygroundDiscountApplication.application_status(current_user)
-    render 'discountcode', locals: {script_data: {application: application_status, is_admin: current_user.admin?}}
+    render 'discountcode', locals: {
+      script_data: {
+        application: application_status,
+        is_admin: current_user.admin?,
+        currently_distributing_discount_codes: true
+      }
+    }
   end
 
-  # begins a discount code application
+  # POST /maker/apply
+  # Sets the teacher's intention to teach unit 6 and sends back eligibility information.
   def apply
     intention = params.require(:unit_6_intention)
 
-    # check to see if we have an existing application for any users associated with
-    # this studio_person_id (in which case we can't start another)
+    # Ensure we have an existing application and the school is eligible
     application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(current_user.studio_person_id)
-    return head :forbidden if application
+    return head :not_found unless application
+    return head :forbidden unless application.full_discount?
 
-    # validate that we're eligible
+    # validate that we're eligible (this should be visible already, but we should
+    # never have submitted this request if not eligible in these ways
     application_status = CircuitPlaygroundDiscountApplication.application_status(current_user)
     return head :forbidden unless application_status[:is_pd_eligible] && application_status[:is_progress_eligible]
 
-    # finally, create our application
-    application = CircuitPlaygroundDiscountApplication.create!(user: current_user, unit_6_intention: intention)
+    # finally, update our application
+    application.update!(unit_6_intention: intention)
 
     render json: {eligible: application.eligible_unit_6_intention?}
   end
 
+  # POST /maker/schoolchoice
+  # begins a discount code application
+  # Sets the teacher's chosen school and sends back eligibility information.
   def schoolchoice
     school_id = params.require(:nces)
-
     school = School.find(school_id)
 
-    # Must have started an application, and have said they were teaching unit 6
+    # check to see if we have an existing application for any users associated with
+    # this studio_person_id (in which case we can't start another)
     application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(current_user.studio_person_id)
-    return head :not_found unless application
-    return head :forbidden unless application.eligible_unit_6_intention? && !application.has_confirmed_school?
+    return head :forbidden if application && application.has_confirmed_school?
 
-    application.update!(school_id: school_id, full_discount: school.high_needs?)
+    # Create our application
+    application = CircuitPlaygroundDiscountApplication.create!(
+      user: current_user,
+      school_id: school_id,
+      full_discount: school.maker_high_needs?
+    )
 
     render json: {full_discount: application.full_discount?}
   end
 
+  # POST /maker/complete
+  # Called when eligible teacher clicks "Get Code."
+  # Assigns a discount code and sends it back.
   def complete
     signature = params.require(:signature)
 
@@ -82,6 +121,7 @@ class MakerController < ApplicationController
   def application_status
     return head :forbidden unless current_user.admin?
     user = User.from_identifier(params.require(:user))
+    return head :not_found unless user
 
     render json: {application: CircuitPlaygroundDiscountApplication.admin_application_status(user)}
   end

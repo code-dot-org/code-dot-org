@@ -2,7 +2,7 @@ import * as constants from './constants';
 import Item from './Item';
 import StudioAnimation from './StudioAnimation';
 import StudioSpriteSheet from './StudioSpriteSheet';
-import { valueOr } from '../utils';
+import {valueOr} from '../utils';
 
 const Direction = constants.Direction;
 const Emotions = constants.Emotions;
@@ -22,7 +22,7 @@ export default class Sprite extends Item {
      * late as possible.
      * @type {{x: number, y: number}}
      */
-    this.renderOffset = options.renderOffset || { x: 0, y: 0 };
+    this.renderOffset = options.renderOffset || {x: 0, y: 0};
 
     this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED;
     this.setNormalFrameDuration(options.animationFrameDuration);
@@ -38,9 +38,8 @@ export default class Sprite extends Item {
 
     this.useLegacyIdleEmotionAnimations = false;
 
-    this.lastDrawPosition = { x: 0, y: 0 };
+    this.lastDrawPosition = {x: 0, y: 0};
   }
-
 
   /**
    * FrameCounts objects are used in setImage and setLegacyImage:
@@ -92,7 +91,8 @@ export default class Sprite extends Item {
         },
         {
           type: 'idle',
-          count: (frameCounts.idleNormal || 0) + (frameCounts.idleEmotions || 0),
+          count:
+            (frameCounts.idleNormal || 0) + (frameCounts.idleEmotions || 0),
           frames: frameCounts.idleFrames || frameCounts.walk
         },
         {
@@ -115,10 +115,12 @@ export default class Sprite extends Item {
       return;
     }
 
-    this.animation_ = new StudioAnimation(Object.assign({}, options, {
-      spriteSheet: new StudioSpriteSheet(options),
-      animationFrameDuration: this.getAnimationFrameDuration()
-    }));
+    this.animation_ = new StudioAnimation(
+      Object.assign({}, options, {
+        spriteSheet: new StudioSpriteSheet(options),
+        animationFrameDuration: this.getAnimationFrameDuration()
+      })
+    );
   }
 
   /**
@@ -151,7 +153,8 @@ export default class Sprite extends Item {
     this.legacyImage = image;
 
     var rowCount = 1 + valueOr(frameCounts.extraEmotions, 0);
-    var frameCount = frameCounts.normal + frameCounts.turns + frameCounts.emotions;
+    var frameCount =
+      frameCounts.normal + frameCounts.turns + frameCounts.emotions;
 
     var options = {
       renderScale: this.renderScale,
@@ -182,10 +185,12 @@ export default class Sprite extends Item {
       return;
     }
 
-    this.legacyAnimation_ = new StudioAnimation(Object.assign({}, options, {
-      spriteSheet: new StudioSpriteSheet(options),
-      animationFrameDuration: this.getAnimationFrameDuration()
-    }));
+    this.legacyAnimation_ = new StudioAnimation(
+      Object.assign({}, options, {
+        spriteSheet: new StudioSpriteSheet(options),
+        animationFrameDuration: this.getAnimationFrameDuration()
+      })
+    );
 
     var turnCount = valueOr(frameCounts.turns, 0);
     var frame0Count = valueOr(frameCounts.holdIdleFrame0Count, 1);
@@ -218,18 +223,19 @@ export default class Sprite extends Item {
         if (turnCount === 7) {
           // If turnCount is only 7, create the first animation from 'normal'
           // frame 0.
-          this.legacyAnimation_.createSpecialAnimation('direction',
-              turnIndex,
-              [{ type: 'legacyEmotionRow', index: row, frame: 0 }]);
+          this.legacyAnimation_.createSpecialAnimation('direction', turnIndex, [
+            {type: 'legacyEmotionRow', index: row, frame: 0}
+          ]);
           turnIndex++;
         }
-        for (;turnIndex < 8; turnIndex++, frameIndex++) {
-          this.legacyAnimation_.createSpecialAnimation('direction',
-              turnIndex,
-              [{ type: 'legacyEmotionRow',
-                  index: row,
-                  frame: this.frameCounts.normal + frameIndex
-              }]);
+        for (; turnIndex < 8; turnIndex++, frameIndex++) {
+          this.legacyAnimation_.createSpecialAnimation('direction', turnIndex, [
+            {
+              type: 'legacyEmotionRow',
+              index: row,
+              frame: this.frameCounts.normal + frameIndex
+            }
+          ]);
         }
       }
     }
@@ -239,7 +245,7 @@ export default class Sprite extends Item {
       // special idle animations for each emotion from single emotion frames:
 
       for (i = 0; i < frameCounts.emotions; i++) {
-      // Create a new special animation called "idle" with emotion as index:
+        // Create a new special animation called "idle" with emotion as index:
         animationList = [];
         for (var j = 0; j < frame0Count; j++) {
           animationList.push({
@@ -255,7 +261,11 @@ export default class Sprite extends Item {
             frame: k
           });
         }
-        this.legacyAnimation_.createSpecialAnimation('idle', i + 1, animationList);
+        this.legacyAnimation_.createSpecialAnimation(
+          'idle',
+          i + 1,
+          animationList
+        );
         this.useLegacyIdleEmotionAnimations = true;
       }
     }
@@ -281,9 +291,9 @@ export default class Sprite extends Item {
    * @override
    */
   getDirectionFrame() {
-    var frameDirTable = this.frameCounts.counterClockwise ?
-      constants.frameDirTableWalkingWithIdleCounterclockwise :
-      constants.frameDirTableWalkingWithIdleClockwise;
+    var frameDirTable = this.frameCounts.counterClockwise
+      ? constants.frameDirTableWalkingWithIdleCounterclockwise
+      : constants.frameDirTableWalkingWithIdleClockwise;
 
     return frameDirTable[this.displayDir];
   }
@@ -318,7 +328,7 @@ export default class Sprite extends Item {
     super.update();
 
     // Draw the sprite's current location.
-    Studio.drawDebugRect("spriteCenter", this.x, this.y, 3, 3);
+    Studio.drawDebugRect('spriteCenter', this.x, this.y, 3, 3);
   }
 
   /**
@@ -351,7 +361,9 @@ export default class Sprite extends Item {
     if (this.dir === Direction.NONE) {
       return this.normalFrameDuration;
     } else {
-      return this.normalFrameDuration * constants.DEFAULT_SPRITE_SPEED / this.speed;
+      return (
+        (this.normalFrameDuration * constants.DEFAULT_SPRITE_SPEED) / this.speed
+      );
     }
   }
 
@@ -378,7 +390,7 @@ export default class Sprite extends Item {
     var animationIndex;
     var standingStill = this.displayDir === Direction.NONE;
     var facingSouthWithEmotion =
-        this.displayDir === Direction.SOUTH && this.emotion !== Emotions.NORMAL;
+      this.displayDir === Direction.SOUTH && this.emotion !== Emotions.NORMAL;
 
     if (standingStill || (!this.animation_ && facingSouthWithEmotion)) {
       // Show idle animation while standing still
@@ -395,8 +407,11 @@ export default class Sprite extends Item {
         // (emotion - 1) instead of (emotion)
         animationIndex -= 1;
       }
-    } else if (facingSouthWithEmotion &&
-        this.animation_ && this.animation_.hasType('walkingEmotions')) {
+    } else if (
+      facingSouthWithEmotion &&
+      this.animation_ &&
+      this.animation_.hasType('walkingEmotions')
+    ) {
       animationIndex = this.emotion - 1;
       animationType = 'walkingEmotions';
     } else {
@@ -415,7 +430,10 @@ export default class Sprite extends Item {
         this.animation_.hide();
       }
       if (this.legacyAnimation_) {
-        this.legacyAnimation_.setCurrentAnimation(animationType, animationIndex);
+        this.legacyAnimation_.setCurrentAnimation(
+          animationType,
+          animationIndex
+        );
         this.legacyAnimation_.redrawCenteredAt(drawPosition, Studio.tickCount);
         if (this.visible) {
           this.legacyAnimation_.show();
@@ -439,23 +457,23 @@ export default class Sprite extends Item {
     this.lastDrawPosition = drawPosition;
   }
 
-  // TODO(ram): make x and y props consistent with Item. In sprites they
-  // represent the top left corner, in items they're the center.
   /**
+   * x and y props are not consistent with Item. In sprites they represent the
+   * top left corner, in items they're the center.
    * @override
    */
   getCenterPos() {
     return {
       x: this.x + this.width / 2,
-      y: this.y + this.height / 2,
+      y: this.y + this.height / 2
     };
   }
 
   /** @returns {object} the center x, y coordinates for the next draw */
   getCurrentDrawPosition() {
     return {
-      x: this.displayX + (this.drawWidth / 2) + this.renderOffset.x,
-      y: this.displayY + (this.drawHeight / 2) + this.renderOffset.y
+      x: this.displayX + this.drawWidth / 2 + this.renderOffset.x,
+      y: this.displayY + this.drawHeight / 2 + this.renderOffset.y
     };
   }
 
@@ -464,11 +482,14 @@ export default class Sprite extends Item {
    */
   updateAnimationFrameDuration_() {
     if (this.animation_) {
-      this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
+      this.animation_.setAnimationFrameDuration(
+        this.getAnimationFrameDuration()
+      );
     }
     if (this.legacyAnimation_) {
       this.legacyAnimation_.setAnimationFrameDuration(
-          this.getAnimationFrameDuration());
+        this.getAnimationFrameDuration()
+      );
     }
   }
 
@@ -478,8 +499,8 @@ export default class Sprite extends Item {
    * @param {number} duration Number of ticks per frame
    */
   setNormalFrameDuration(duration) {
-    this.normalFrameDuration = duration ||
-        constants.DEFAULT_SPRITE_ANIMATION_FRAME_DURATION;
+    this.normalFrameDuration =
+      duration || constants.DEFAULT_SPRITE_ANIMATION_FRAME_DURATION;
     this.updateAnimationFrameDuration_();
   }
 
@@ -501,10 +522,12 @@ export default class Sprite extends Item {
    * @override
    */
   atEdge(candidate) {
-    return candidate.gridX < 0 ||
-        (candidate.gridX * Studio.SQUARE_SIZE + this.width) > Studio.MAZE_WIDTH ||
-        candidate.gridY < 0 ||
-        (candidate.gridY * Studio.SQUARE_SIZE + this.height) > Studio.MAZE_HEIGHT;
+    return (
+      candidate.gridX < 0 ||
+      candidate.gridX * Studio.SQUARE_SIZE + this.width > Studio.MAZE_WIDTH ||
+      candidate.gridY < 0 ||
+      candidate.gridY * Studio.SQUARE_SIZE + this.height > Studio.MAZE_HEIGHT
+    );
   }
 
   /**
@@ -512,8 +535,9 @@ export default class Sprite extends Item {
    */
   hasWall(candidate) {
     return Studio.willSpriteTouchWall(
-        this,
-        candidate.gridX * Studio.SQUARE_SIZE,
-        candidate.gridY * Studio.SQUARE_SIZE);
+      this,
+      candidate.gridX * Studio.SQUARE_SIZE,
+      candidate.gridY * Studio.SQUARE_SIZE
+    );
   }
 }

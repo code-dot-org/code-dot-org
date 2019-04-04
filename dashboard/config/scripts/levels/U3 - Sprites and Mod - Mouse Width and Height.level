@@ -45,8 +45,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "instructions": "Do this",
-    "markdown_instructions": "# Random Around Point",
+    "short_instructions": "Do this",
+    "long_instructions": "# Random Around Point",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

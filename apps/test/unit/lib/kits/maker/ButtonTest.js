@@ -6,11 +6,11 @@ import makeStubBoard from './makeStubBoard';
 import Button from '@cdo/apps/lib/kits/maker/Button';
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 
-describe('Button', function () {
-  it('is a johnny-five Button component', function () {
+describe('Button', function() {
+  it('is a johnny-five Button component', function() {
     const button = new Button({
       board: makeStubBoard(),
-      pin: 0,
+      pin: 0
     });
     expect(button).to.be.an.instanceOf(five.Button);
   });
@@ -21,7 +21,7 @@ describe('Button', function () {
     beforeEach(() => {
       button = new Button({
         board: makeStubBoard(),
-        pin: 0,
+        pin: 0
       });
     });
 
@@ -36,7 +36,7 @@ describe('Button', function () {
   });
 
   it('becomes a pullup when assigned to an external pin', () => {
-    EXTERNAL_PINS.forEach((pin) => {
+    EXTERNAL_PINS.forEach(pin => {
       const button = new Button({
         board: makeStubBoard(),
         pin
@@ -48,7 +48,7 @@ describe('Button', function () {
   it('does not become a pullup when assigned to a non-external pin', () => {
     _.range(21)
       .filter(pin => !EXTERNAL_PINS.includes(pin))
-      .forEach((pin) => {
+      .forEach(pin => {
         const button = new Button({
           board: makeStubBoard(),
           pin
@@ -57,4 +57,3 @@ describe('Button', function () {
       });
   });
 });
-

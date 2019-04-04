@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-03-27T18:36:08.000Z",
   "level_num": "custom",
   "user_id": 182,
@@ -45,8 +45,9 @@
     "custom_blocks": "[\n  {\n    \"func\": \"jitter\",\n    \"blockText\": \"jitter\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"wander\",\n    \"blockText\": \"wander\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"danceParty\",\n    \"blockText\": \"dance party\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"runUp\",\n    \"blockText\": \"run up\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"runDown\",\n    \"blockText\": \"run down\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"runLeft\",\n    \"blockText\": \"run left\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  },\n  {\n    \"func\": \"runRight\",\n    \"blockText\": \"run right\",\n    \"returnType\": \"Behavior\",\n    \"color\": [\n      56,\n      \".98\",\n      \".82\"\n    ]\n  }\n]\n",
     "hide_custom_blocks": "true",
     "parent_level_id": 11928,
-    "markdown_instructions": "The cat and dog are so excited to see each other that they want to have a dance party. In addition to removing their move behaviors when the two sprites touch, add the \"dance party\" behavior so they celebrate!",
+    "long_instructions": "The cat and dog are so excited to see each other that they want to have a dance party. In addition to removing their move behaviors when the two sprites touch, add the \"dance party\" behavior so they celebrate!",
     "show_type_hints": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

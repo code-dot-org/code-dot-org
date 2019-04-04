@@ -6,7 +6,8 @@
     "returnType": "Location",
     "args": [
       {
-        "name": "DISTANCE"
+        "name": "DISTANCE",
+        "type": "Number"
       },
       {
         "name": "DIR",

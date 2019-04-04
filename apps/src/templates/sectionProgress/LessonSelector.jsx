@@ -1,6 +1,7 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import { h3Style } from "../../lib/ui/Headings";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {h3Style} from '../../lib/ui/Headings';
 import i18n from '@cdo/locale';
 
 const styles = {
@@ -10,39 +11,36 @@ const styles = {
     fontSize: 'medium',
     height: 34,
     paddingLeft: 5,
-    paddingRight: 5
+    paddingRight: 5,
+    width: 300
   },
   heading: {
-    marginBottom: 0,
-  },
+    marginBottom: 0
+  }
 };
 
 class LessonSelector extends Component {
   static propTypes = {
     lessons: PropTypes.arrayOf(PropTypes.object).isRequired,
     onChange: PropTypes.func.isRequired,
-    lessonOfInterest: PropTypes.number.isRequired,
+    lessonOfInterest: PropTypes.number.isRequired
   };
 
   render() {
-    const { onChange, lessons } = this.props;
+    const {onChange, lessons} = this.props;
 
     return (
       <div>
-        <div style={{...h3Style, ...styles.heading}}>
-          {i18n.jumpToLesson()}
-        </div>
+        <div style={{...h3Style, ...styles.heading}}>{i18n.jumpToLesson()}</div>
         <select
           onChange={event => onChange(parseInt(event.target.value))}
           style={styles.dropdown}
           value={this.props.lessonOfInterest}
         >
-          {lessons.map((lesson) => (
-            <option
-              value={lesson.position}
-              key={lesson.id}
-            >
-              {lesson.position}: {lesson.name}
+          {lessons.map(lesson => (
+            <option value={lesson.position} key={lesson.id}>
+              {lesson.lockable ? '--' : `${lesson.relative_position}:`}{' '}
+              {lesson.name}
             </option>
           ))}
         </select>

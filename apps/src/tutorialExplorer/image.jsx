@@ -3,7 +3,8 @@
  * Based on http://buildwithreact.com/article/fade-in-image-recipe
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 export default class Image extends React.Component {
@@ -15,7 +16,7 @@ export default class Image extends React.Component {
     loaded: false
   };
 
-  onImageLoad = () => this.setState({ loaded: true });
+  onImageLoad = () => this.setState({loaded: true});
 
   componentDidMount() {
     const imgTag = ReactDOM.findDOMNode(this.refs.img);
@@ -29,7 +30,7 @@ export default class Image extends React.Component {
     if (this.state.loaded) {
       style = {
         opacity: 1,
-        transition: "opacity 200ms ease-in"
+        transition: 'opacity 200ms ease-in'
       };
     } else {
       style = {

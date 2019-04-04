@@ -1,9 +1,9 @@
 import React from 'react';
-import { assert } from '../../../../util/configuredChai';
-import { shallow } from 'enzyme';
-import { UnconnectedScriptOverview as ScriptOverview } from
-  '@cdo/apps/code-studio/components/progress/ScriptOverview';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import {assert, expect} from '../../../../util/reconfiguredChai';
+import {shallow} from 'enzyme';
+import {UnconnectedScriptOverview as ScriptOverview} from '@cdo/apps/code-studio/components/progress/ScriptOverview';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import LabeledSectionSelector from '@cdo/apps/code-studio/components/progress/LabeledSectionSelector';
 
 const defaultProps = {
   onOverviewPage: true,
@@ -23,28 +23,37 @@ const defaultProps = {
   sectionsInfo: [],
   scriptHasLockableStages: false,
   scriptAllowsHiddenStages: false,
-  versions: [],
+  versions: []
 };
 
 describe('ScriptOverview', () => {
   it('includes a ScriptOverviewTopRow/ProgressLegend on overview page', () => {
-    const wrapper = shallow(
-      <ScriptOverview
-        {...defaultProps}
-      />
-    );
+    const wrapper = shallow(<ScriptOverview {...defaultProps} />);
     assert.equal(wrapper.find('ScriptOverviewTopRow').length, 1);
     assert.equal(wrapper.find('ProgressLegend').length, 1);
   });
 
   it('includes no ScriptOverviewTopRow/ProgressLegend if not on overview page', () => {
     const wrapper = shallow(
-      <ScriptOverview
-        {...defaultProps}
-        onOverviewPage={false}
-      />
+      <ScriptOverview {...defaultProps} onOverviewPage={false} />
     );
     assert.equal(wrapper.find('ScriptOverviewTopRow').length, 0);
     assert.equal(wrapper.find('ProgressLegend').length, 0);
+  });
+
+  it('renders section selector if script has lockable stages', () => {
+    const wrapper = shallow(
+      <ScriptOverview {...defaultProps} scriptHasLockableStages={true} />
+    );
+    expect(wrapper.containsMatchingElement(<LabeledSectionSelector />)).to.be
+      .true;
+  });
+
+  it('renders section selector if script allows hidden stages', () => {
+    const wrapper = shallow(
+      <ScriptOverview {...defaultProps} scriptAllowsHiddenStages={true} />
+    );
+    expect(wrapper.containsMatchingElement(<LabeledSectionSelector />)).to.be
+      .true;
   });
 });

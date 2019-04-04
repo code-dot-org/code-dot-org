@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Musisz utworzyć tancerza.",
+  "danceFeedbackNoDancers": "Nie masz tancerzy.",
+  "danceFeedbackNoBackground": "Musisz dodać efekt tła.",
+  "danceFeedbackTooManyDancers": "Ostrożnie! Jeśli umieścisz blok „utwórz nowego” wewnątrz bloku „co 2 takty”, utworzysz wielu tancerzy.",
+  "danceFeedbackUseSetSize": "Aby zmniejszyć tego tancerza, użyj bloku „ustaw wielkość kopia_tancerza2”.",
+  "danceFeedbackUseSetTint": "Do zmiany zabarwienia tancerza użyj bloku „ustaw odcień”.",
+  "danceFeedbackUseStartMapping": "Spróbuj dodać do swojego programu blok <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml>.",
+  "danceFeedbackStartNewMove": "Twój tancerz nie wykonał nowego ruchu po czwartym takcie.",
+  "danceFeedbackNeedDifferentDance": "Należy użyć innego tańca.",
+  "danceFeedbackNeedEveryTwoMeasures": "Upewnij się, że używasz bloku „co 2 takty”",
+  "danceFeedbackNeedMakeANewDancer": "Użyj bloku „utwórz nowego” do utworzenia drugiego tancerza.",
+  "measure": "Takt:"
+}

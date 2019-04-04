@@ -28,7 +28,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "player_start_direction": "1",
-    "instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an \"If\" command to place cobblestone over any lava you uncover.",
+    "short_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an \"If\" command to place cobblestone over any lava you uncover.",
     "is_daytime": "false",
     "embed": "false",
     "free_play": "false",
@@ -46,7 +46,7 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
-    "markdown_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place cobblestone over any lava you uncover.",
+    "long_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place cobblestone over any lava you uncover.",
     "name_suffix": "_2018",
     "contained_level_names": null
   },

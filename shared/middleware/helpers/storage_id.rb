@@ -17,6 +17,16 @@ def create_storage_id_cookie
   storage_id
 end
 
+def destroy_storage_id_cookie
+  response.delete_cookie(
+    storage_id_cookie_name,
+    {
+      domain: ".#{request.shared_cookie_domain}",
+      path: '/',
+    }
+  )
+end
+
 def storage_decrypt(encrypted)
   decrypter = OpenSSL::Cipher.new 'AES-128-CBC'
   decrypter.decrypt
@@ -40,10 +50,10 @@ def storage_decrypt_channel_id(encrypted)
   raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
   # pad to a multiple of 4 characters to make a valid base64 string.
   encrypted += '=' * ((4 - encrypted.length % 4) % 4)
-  storage_id, channel_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
+  storage_id, storage_app_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
-  raise ArgumentError, "`channel_id` must be an integer > 0" unless channel_id > 0
-  [storage_id, channel_id]
+  raise ArgumentError, "`storage_app_id` must be an integer > 0" unless storage_app_id > 0
+  [storage_id, storage_app_id]
 end
 
 def valid_encrypted_channel_id(encrypted)
@@ -69,12 +79,12 @@ def storage_encrypt_id(id)
   storage_encrypt("#{SecureRandom.random_number(65536)}:#{id}:#{SecureRandom.random_number(65536)}")
 end
 
-def storage_encrypt_channel_id(storage_id, channel_id)
+def storage_encrypt_channel_id(storage_id, storage_app_id)
   storage_id = storage_id.to_i
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
-  channel_id = channel_id.to_i
-  raise ArgumentError, "`channel_id` must be an integer > 0" unless channel_id > 0
-  Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{channel_id}")).tr('=', '')
+  storage_app_id = storage_app_id.to_i
+  raise ArgumentError, "`storage_app_id` must be an integer > 0" unless storage_app_id > 0
+  Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{storage_app_id}")).tr('=', '')
 end
 
 def storage_id(endpoint)

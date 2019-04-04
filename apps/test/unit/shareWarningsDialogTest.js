@@ -1,223 +1,198 @@
-import {assert} from '../util/configuredChai';
-var testUtils = require('./../util/testUtils');
-var React = require('react');
-var ReactTestUtils = require('react-addons-test-utils');
-var ShareWarningsDialog = require('@cdo/apps/templates/ShareWarningsDialog');
-var ShareWarnings = require('@cdo/apps/templates/ShareWarnings');
-import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
+import React from 'react';
+import {expect} from '../util/configuredChai';
+import {mount} from 'enzyme';
+import sinon from 'sinon';
+import ShareWarningsDialog from '@cdo/apps/templates/ShareWarningsDialog';
+import commonMsg from '@cdo/locale';
 
-var msg = require('@cdo/locale');
-
-describe('ShareWarningsDialog', function () {
-
-  testUtils.setExternalGlobals();
-
-  function isTagWithText(childComponent, tagName, text) {
-    if (!ReactTestUtils.isDOMComponent(childComponent)) {
-      return false;
-    }
-    var dom = childComponent;
-    return dom.tagName === tagName && dom.innerHTML === text;
-  }
-
-  function isDataPromptHighlightSpan(childComponent) {
-    return isTagWithText(childComponent, 'SPAN', msg.shareWarningsStoreDataHighlight());
-  }
-
-  function isAgeDiv(childComponent) {
-    return isTagWithText(childComponent, 'DIV', msg.shareWarningsAge());
-  }
-
-  it('only shows age prompt if promptForAge and app doesnt store data', function () {
-    var reactElement = React.createElement(ShareWarningsDialog, {
-      showStoreDataAlert: false,
-      promptForAge: true,
-      handleClose: function () {},
-      handleTooYoung: function () {}
-    });
-    var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
-
-    // Get the inner ShareWarnings component
-    var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
-      componentInstance, ShareWarnings)[0];
-
-    var dataPromptSpans = ReactTestUtils.findAllInRenderedTree(shareWarnings,
-      isDataPromptHighlightSpan);
-    var ageDivs = ReactTestUtils.findAllInRenderedTree(shareWarnings, isAgeDiv);
-    var ageDropdowns = ReactTestUtils.scryRenderedComponentsWithType(shareWarnings,
-      AgeDropdown);
-
-    assert.strictEqual(dataPromptSpans.length, 0, 'zero data prompt highlight spans');
-    assert.strictEqual(ageDivs.length, 1, 'one age div');
-    assert.strictEqual(ageDropdowns.length, 1, 'one age dropdown div');
+describe('ShareWarningsDialog', () => {
+  it('renders ShareWarnings with age prompt', () => {
+    const closeSpy = sinon.spy();
+    const tooYoungSpy = sinon.spy();
+    const dialog = mount(
+      <ShareWarningsDialog
+        showStoreDataAlert={false}
+        promptForAge={true}
+        handleClose={closeSpy}
+        handleTooYoung={tooYoungSpy}
+      />
+    );
+    expect(dialog.state('modalIsOpen')).to.be.true;
+    const shareWarnings = dialog.find('ShareWarnings');
+    expect(shareWarnings).to.have.length(1);
+    expect(shareWarnings.props().promptForAge).to.be.true;
+    expect(shareWarnings.props().showStoreDataAlert).to.be.false;
+    const ageDropdown = shareWarnings.find('AgeDropdown');
+    expect(ageDropdown).to.have.length(1);
+    expect(shareWarnings).to.containMatchingElement(
+      <div>{commonMsg.shareWarningsAge()}</div>
+    );
   });
 
-  it('only shows data prompt if not promptForAge and app stores data', function () {
-    var reactElement = React.createElement(ShareWarningsDialog, {
-      showStoreDataAlert: true,
-      promptForAge: false,
-      handleClose: function () {},
-      handleTooYoung: function () {}
-    });
-    var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
-
-    // Get the inner ShareWarnings component
-    var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
-      componentInstance, ShareWarnings)[0];
-
-    var dataPromptSpans = ReactTestUtils.findAllInRenderedTree(shareWarnings,
-      isDataPromptHighlightSpan);
-    var ageDivs = ReactTestUtils.findAllInRenderedTree(shareWarnings, isAgeDiv);
-    var ageDropdowns = ReactTestUtils.scryRenderedComponentsWithType(shareWarnings,
-      AgeDropdown);
-
-    assert.strictEqual(dataPromptSpans.length, 1);
-    assert.strictEqual(ageDivs.length, 0);
-    assert.strictEqual(ageDropdowns.length, 0);
+  it('renders ShareWarnings with data alert', () => {
+    const closeSpy = sinon.spy();
+    const tooYoungSpy = sinon.spy();
+    const dialog = mount(
+      <ShareWarningsDialog
+        showStoreDataAlert={true}
+        promptForAge={false}
+        handleClose={closeSpy}
+        handleTooYoung={tooYoungSpy}
+      />
+    );
+    expect(dialog.state('modalIsOpen')).to.be.true;
+    const shareWarnings = dialog.find('ShareWarnings');
+    expect(shareWarnings).to.have.length(1);
+    expect(shareWarnings.props().showStoreDataAlert).to.be.true;
+    expect(shareWarnings.props().promptForAge).to.be.false;
+    expect(shareWarnings).to.containMatchingElement(
+      <div>
+        {commonMsg.shareWarningsStoreDataBeforeHighlight()}
+        <span>{commonMsg.shareWarningsStoreDataHighlight()}</span>
+        {commonMsg.shareWarningsStoreDataAfterHighlight()}
+      </div>
+    );
+    expect(shareWarnings.find('AgeDropdown')).to.have.length(0);
   });
 
-  it('shows both age and data if promptForAge and app stores data', function () {
-    var reactElement = React.createElement(ShareWarningsDialog, {
-      showStoreDataAlert: true,
-      promptForAge: true,
-      handleClose: function () {},
-      handleTooYoung: function () {}
-    });
-    var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
-
-    // Get the inner ShareWarnings component
-    var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
-      componentInstance, ShareWarnings)[0];
-
-    var dataPromptSpans = ReactTestUtils.findAllInRenderedTree(shareWarnings,
-      isDataPromptHighlightSpan);
-    var ageDivs = ReactTestUtils.findAllInRenderedTree(shareWarnings, isAgeDiv);
-    var ageDropdowns = ReactTestUtils.scryRenderedComponentsWithType(shareWarnings,
-      AgeDropdown);
-
-    assert.strictEqual(dataPromptSpans.length, 1);
-    assert.strictEqual(ageDivs.length, 1);
-    assert.strictEqual(ageDropdowns.length, 1);
+  it('renders ShareWarnings with both data alert and age prompt', () => {
+    const closeSpy = sinon.spy();
+    const tooYoungSpy = sinon.spy();
+    const dialog = mount(
+      <ShareWarningsDialog
+        showStoreDataAlert={true}
+        promptForAge={true}
+        handleClose={closeSpy}
+        handleTooYoung={tooYoungSpy}
+      />
+    );
+    expect(dialog.state('modalIsOpen')).to.be.true;
+    const shareWarnings = dialog.find('ShareWarnings');
+    expect(shareWarnings).to.have.length(1);
+    expect(shareWarnings.props().showStoreDataAlert).to.be.true;
+    expect(shareWarnings.props().promptForAge).to.be.true;
+    const ageDropdown = shareWarnings.find('AgeDropdown');
+    expect(ageDropdown).to.have.length(1);
+    expect(shareWarnings).to.containMatchingElement(
+      <div>{commonMsg.shareWarningsAge()}</div>
+    );
+    expect(shareWarnings).to.containMatchingElement(
+      <div>
+        {commonMsg.shareWarningsStoreDataBeforeHighlight()}
+        <span>{commonMsg.shareWarningsStoreDataHighlight()}</span>
+        {commonMsg.shareWarningsStoreDataAfterHighlight()}
+      </div>
+    );
   });
 
-  it('doesnt show a dialog when not promptForAge and app doesnt store data', function () {
-    var reactElement = React.createElement(ShareWarningsDialog, {
-      showStoreDataAlert: false,
-      promptForAge: false,
-      handleClose: function () {},
-      handleTooYoung: function () {}
-    });
-    var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
-    assert.equal(componentInstance.state.modalIsOpen, false);
+  it('does not show the dialog if not needed', () => {
+    const closeSpy = sinon.spy();
+    const tooYoungSpy = sinon.spy();
+    const dialog = mount(
+      <ShareWarningsDialog
+        showStoreDataAlert={false}
+        promptForAge={false}
+        handleClose={closeSpy}
+        handleTooYoung={tooYoungSpy}
+      />
+    );
+    expect(dialog.state('modalIsOpen')).to.be.false;
   });
 
-  it('calls handleClose if we click OK when signed in', function () {
-    var handleCloseCalled = false;
-    var reactElement = React.createElement(ShareWarningsDialog, {
-      showStoreDataAlert: true,
-      promptForAge: false,
-      handleClose: function () {
-        handleCloseCalled = true;
-      },
-      handleTooYoung: function () {}
-    });
-    var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
-    assert.equal(!!componentInstance.isMounted(), true, 'component is mounted');
-
-    var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
-      componentInstance, ShareWarnings)[0];
-
-    var okButton = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
-      'button')[0];
-    assert(okButton, 'have an ok button');
-
-    ReactTestUtils.Simulate.click(okButton);
-    assert(handleCloseCalled, 'closed dialog');
-
-    assert.equal(componentInstance.state.modalIsOpen, false);
+  it('calls handleClose if we click OK when age is known', () => {
+    const closeSpy = sinon.spy();
+    const tooYoungSpy = sinon.spy();
+    const dialog = mount(
+      <ShareWarningsDialog
+        showStoreDataAlert={true}
+        promptForAge={false}
+        handleClose={closeSpy}
+        handleTooYoung={tooYoungSpy}
+      />
+    );
+    expect(dialog.state('modalIsOpen')).to.be.true;
+    expect(dialog).to.containMatchingElement(
+      <button>{commonMsg.dialogOK()}</button>
+    );
+    expect(closeSpy).not.to.have.been.called;
+    dialog.find('button').simulate('click');
+    expect(closeSpy).to.have.been.called;
+    expect(dialog.state('modalIsOpen')).to.be.false;
   });
 
-  it('does not close if we click OK when signed out and didnt specify age', function () {
-    var handleCloseCalled = false;
-    var reactElement = React.createElement(ShareWarningsDialog, {
-      showStoreDataAlert: true,
-      promptForAge: true,
-      handleClose: function () {
-        handleCloseCalled = true;
-      },
-      handleTooYoung: function () {}
-    });
-    var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
-    assert.equal(!!componentInstance.isMounted(), true, 'component is mounted');
-
-    var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
-      componentInstance, ShareWarnings)[0];
-
-    var okButton = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
-      'button')[0];
-    assert(okButton, 'have an ok button');
-
-    ReactTestUtils.Simulate.click(okButton);
-    assert(!handleCloseCalled, 'closed dialog');
-
-    assert.equal(componentInstance.state.modalIsOpen, true);
+  it('does not calls handleClose if we click OK when age is unknown', () => {
+    const closeSpy = sinon.spy();
+    const tooYoungSpy = sinon.spy();
+    const dialog = mount(
+      <ShareWarningsDialog
+        showStoreDataAlert={true}
+        promptForAge={true}
+        handleClose={closeSpy}
+        handleTooYoung={tooYoungSpy}
+      />
+    );
+    expect(dialog.state('modalIsOpen')).to.be.true;
+    expect(dialog).to.containMatchingElement(
+      <button>{commonMsg.dialogOK()}</button>
+    );
+    expect(closeSpy).not.to.have.been.called;
+    dialog.find('button').simulate('click');
+    expect(closeSpy).not.to.have.been.called;
+    expect(dialog.state('modalIsOpen')).to.be.true;
   });
 
-  it('calls handleClose if we click OK when signed out and specified an age', function () {
-    var handleCloseCalled = false;
-    var reactElement = React.createElement(ShareWarningsDialog, {
-      showStoreDataAlert: true,
-      promptForAge: true,
-      handleClose: function () {
-        handleCloseCalled = true;
-      },
-      handleTooYoung: function () {}
-    });
-    var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
-    assert.equal(!!componentInstance.isMounted(), true, 'component is mounted');
-
-    var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
-      componentInstance, ShareWarnings)[0];
-
-    var select = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
-      'select')[0];
-    select.value = "13";
-
-    var okButton = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
-      'button')[0];
-    assert(okButton, 'have an ok button');
-
-    ReactTestUtils.Simulate.click(okButton);
-    assert(handleCloseCalled, 'closed dialog');
-
-    assert.equal(componentInstance.state.modalIsOpen, false);
+  it('calls handleClose if we specify age >=13, then click OK', () => {
+    const closeSpy = sinon.spy();
+    const tooYoungSpy = sinon.spy();
+    const dialog = mount(
+      <ShareWarningsDialog
+        showStoreDataAlert={true}
+        promptForAge={true}
+        handleClose={closeSpy}
+        handleTooYoung={tooYoungSpy}
+      />
+    );
+    expect(dialog.state('modalIsOpen')).to.be.true;
+    expect(dialog).to.containMatchingElement(
+      <button>{commonMsg.dialogOK()}</button>
+    );
+    expect(closeSpy).not.to.have.been.called;
+    const ageDropdown = dialog.find('AgeDropdown');
+    const select = ageDropdown.find('select');
+    const selectDOMNode = select.getDOMNode();
+    selectDOMNode.value = '15';
+    select.simulate('change', {target: selectDOMNode});
+    dialog.find('button').simulate('click');
+    expect(closeSpy).to.have.been.called;
+    expect(tooYoungSpy).not.to.have.been.called;
+    expect(dialog.state('modalIsOpen')).to.be.false;
   });
 
-  it('calls handleTooYoung if we enter an age < 13', function () {
-    var handleTooYoungCalled = false;
-    var reactElement = React.createElement(ShareWarningsDialog, {
-      showStoreDataAlert: true,
-      promptForAge: true,
-      handleClose: function () { },
-      handleTooYoung: function () {
-        handleTooYoungCalled = true;
-      }
-    });
-    var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
-    assert.equal(!!componentInstance.isMounted(), true, 'component is mounted');
-
-    var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
-      componentInstance, ShareWarnings)[0];
-
-    var select = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
-      'select')[0];
-    select.value = "12";
-
-    var okButton = ReactTestUtils.scryRenderedDOMComponentsWithTag(shareWarnings,
-      'button')[0];
-    assert(okButton, 'have an ok button');
-
-    ReactTestUtils.Simulate.click(okButton);
-    assert(handleTooYoungCalled, 'closed dialog');
+  it('calls handleTooYoung if we specify age < 13, then click OK', () => {
+    const closeSpy = sinon.spy();
+    const tooYoungSpy = sinon.spy();
+    const dialog = mount(
+      <ShareWarningsDialog
+        showStoreDataAlert={true}
+        promptForAge={true}
+        handleClose={closeSpy}
+        handleTooYoung={tooYoungSpy}
+      />
+    );
+    expect(dialog.state('modalIsOpen')).to.be.true;
+    expect(dialog).to.containMatchingElement(
+      <button>{commonMsg.dialogOK()}</button>
+    );
+    expect(closeSpy).not.to.have.been.called;
+    expect(tooYoungSpy).not.to.have.been.called;
+    const ageDropdown = dialog.find('AgeDropdown');
+    const select = ageDropdown.find('select');
+    const selectDOMNode = select.getDOMNode();
+    selectDOMNode.value = '10';
+    select.simulate('change', {target: selectDOMNode});
+    dialog.find('button').simulate('click');
+    expect(tooYoungSpy).to.have.been.called;
+    expect(closeSpy).not.to.have.been.called;
+    expect(dialog.state('modalIsOpen')).to.be.false;
   });
 });

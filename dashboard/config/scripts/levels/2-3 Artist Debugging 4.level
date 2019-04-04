@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "What is the image that we're trying to draw? Finish connecting the dots using the proper lines and angles.",
+    "short_instructions": "What is the image that we're trying to draw? Finish connecting the dots using the proper lines and angles.",
     "x": 275,
     "y": 175,
     "start_direction": 0,

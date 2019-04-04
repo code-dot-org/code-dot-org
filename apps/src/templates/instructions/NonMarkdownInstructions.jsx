@@ -1,5 +1,6 @@
-/* eslint-disable react/no-danger */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
+import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
 
 var styles = {
   main: {
@@ -11,24 +12,30 @@ var styles = {
 /**
  * Non-markdown version of our instructions, displayed in a dialog when our top
  * pane instructions are not enabled.
+ *
+ * Currently only used by NetSim levels
  */
-var NonMarkdownInstructions = function (props) {
+var NonMarkdownInstructions = function(props) {
   return (
     <div style={styles.main}>
       <p className="dialog-title">{props.puzzleTitle}</p>
-      {props.instructions &&
-        <p className="instructions" dangerouslySetInnerHTML={{ __html: props.instructions }}/>
-      }
-      {props.instructions2 &&
-        <p className="instructions2" dangerouslySetInnerHTML={{ __html: props.instructions2 }}/>
-      }
+      {props.shortInstructions && (
+        <div className="instructions">
+          <UnsafeRenderedMarkdown markdown={props.shortInstructions} />
+        </div>
+      )}
+      {props.instructions2 && (
+        <div className="instructions2">
+          <UnsafeRenderedMarkdown markdown={props.instructions2} />
+        </div>
+      )}
     </div>
   );
 };
 
 NonMarkdownInstructions.propTypes = {
   puzzleTitle: PropTypes.string.isRequired,
-  instructions: PropTypes.string,
+  shortInstructions: PropTypes.string,
   instructions2: PropTypes.string
 };
 

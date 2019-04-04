@@ -6,7 +6,7 @@
   "user_id": 20,
   "properties": {
     "skin": "artist",
-    "instructions": "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long.",
+    "short_instructions": "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long.",
     "x": "150",
     "y": "150",
     "start_direction": "90",

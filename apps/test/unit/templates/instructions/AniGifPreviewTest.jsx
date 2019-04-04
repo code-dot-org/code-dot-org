@@ -18,7 +18,7 @@ describe('ImagePreview', () => {
         id="ani-gif-preview-wrapper"
         style={{
           display: 'inline-block',
-          position: 'relative',
+          position: 'relative'
         }}
       >
         <div
@@ -47,7 +47,7 @@ describe('ImagePreview', () => {
         id="ani-gif-preview-wrapper"
         style={{
           display: 'inline-block',
-          position: 'relative',
+          position: 'relative'
         }}
       >
         <div

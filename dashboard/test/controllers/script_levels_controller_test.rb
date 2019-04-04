@@ -43,6 +43,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     @script = @custom_script
     @script_level = @custom_s1_l1
+
+    pilot_script = create(:script, pilot_experiment: 'pilot-experiment')
+    @pilot_script_level = create :script_level, script: pilot_script
+    @pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
+    pilot_section = create :section, user: @pilot_teacher, script: pilot_script
+    @pilot_student = create(:follower, section: pilot_section).student_user
   end
 
   setup do
@@ -92,38 +98,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   def get_show_script_level_page(script_level)
-    get :show, params: {
+    get :show, params: script_level_params(script_level)
+  end
+
+  def script_level_params(script_level)
+    {
       script_id: script_level.script,
       stage_position: script_level.stage.absolute_position,
       id: script_level.position
     }
-  end
-
-  # Asserts that each expected directive is contained in the cache-control header,
-  # delimited by commas and optional whitespace
-  def assert_cache_control_match(expected_directives, cache_control_header)
-    expected_directives.each do |directive|
-      assert_match(/(^|,)\s*#{directive}\s*(,|$)/, cache_control_header)
-    end
-  end
-
-  def assert_caching_disabled(cache_control_header)
-    expected_directives = [
-      'no-cache',
-      'no-store',
-      'must-revalidate',
-      'max-age=0'
-    ]
-    assert_cache_control_match expected_directives, cache_control_header
-  end
-
-  def assert_caching_enabled(cache_control_header, max_age, proxy_max_age)
-    expected_directives = [
-      'public',
-      "max-age=#{max_age}",
-      "s-maxage=#{proxy_max_age}"
-    ]
-    assert_cache_control_match expected_directives, cache_control_header
   end
 
   test 'should not log an activity monitor start for netsim' do
@@ -398,6 +381,42 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     end
   end
 
+  test "show: redirect to latest stable script version in family for logged out user if one exists" do
+    courseg_2018 = create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018'
+    Script.stubs(:latest_stable_version).returns(courseg_2018)
+
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017'
+    courseg_2017_stage_1 = create :stage, script: courseg_2017, name: 'Course G Stage 1', absolute_position: 1, relative_position: '1'
+    courseg_2017_stage_1_script_level = create :script_level, script: courseg_2017, stage: courseg_2017_stage_1, position: 1
+
+    get :show, params: {
+      script_id: courseg_2017.id,
+      stage_position: courseg_2017_stage_1.relative_position,
+      id: courseg_2017_stage_1_script_level.position,
+    }
+
+    assert_redirected_to '/s/courseg-2018?redirect_warning=true'
+  end
+
+  test "show: redirect to latest assigned script version in family for student if one exists" do
+    sign_in @student
+
+    courseg_2018 = create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018'
+    Script.stubs(:latest_assigned_version).returns(courseg_2018)
+
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017'
+    courseg_2017_stage_1 = create :stage, script: courseg_2017, name: 'Course G Stage 1', absolute_position: 1, relative_position: '1'
+    courseg_2017_stage_1_script_level = create :script_level, script: courseg_2017, stage: courseg_2017_stage_1, position: 1
+
+    get :show, params: {
+      script_id: courseg_2017.id,
+      stage_position: courseg_2017_stage_1.relative_position,
+      id: courseg_2017_stage_1_script_level.position,
+    }
+
+    assert_redirected_to '/s/courseg-2018?redirect_warning=true'
+  end
+
   test "updated routing for 20 hour script" do
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
     assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)
@@ -598,6 +617,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert client_state.level_progress_is_empty_for_test
     refute session['warden.user.user.key']
+  end
+
+  test "show with the reset param should destroy the storage_id cookie when not logged in" do
+    get :reset, params: {script_id: Script::HOC_NAME}
+    assert_response 200
+    # Ensure storage_id is set to empty value and domain is correct
+    cookie_header = response.header['Set-Cookie']
+    assert cookie_header.include?("#{storage_id_cookie_name}=;")
+    assert cookie_header.include?("domain=.test.host;")
+  end
+
+  test "show with the reset param should not create a new storage_id cookie when logged in" do
+    sign_in(create(:user))
+
+    get :reset, params: {script_id: Script::HOC_NAME}
+    assert_response 302
+    # Ensure storage_id is not being set
+    cookie_header = response.header['Set-Cookie']
+    refute cookie_header.include?("#{storage_id_cookie_name}=")
   end
 
   test "show with the reset param should not reset session when logged in" do
@@ -850,6 +888,72 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select '#codeApp'
     assert_select '#notStarted', 0
     assert_includes response.body, fake_last_attempt
+  end
+
+  test 'shows submitted time if you are a teacher viewing your student and they have submitted the level' do
+    sign_in @teacher
+
+    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
+    User.any_instance.
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: @student,
+          level_source: create(:level_source, data: fake_last_attempt),
+          submitted: true,
+          updated_at: DateTime.new(2017, 12, 15, 18, 5, 8)
+        )
+      )
+
+    user_storage_id = storage_id_for_user_id(@student.id)
+
+    level = create :applab
+    script_level = create :script_level, levels: [level]
+
+    create :channel_token, level: level, storage_id: user_storage_id
+
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: script_level.stage,
+      id: script_level.position,
+      user_id: @student.id,
+      section_id: @section.id
+    }
+
+    assert_includes response.body, "<div>Submitted on:</div>\n<div class='timestamp' data-timestamp='2017-12-15 18:05:08 UTC'></div>"
+  end
+
+  test 'shows last update time if you are a teacher viewing your student and they have a best result' do
+    sign_in @teacher
+
+    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
+    User.any_instance.
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: @student,
+          level_source: create(:level_source, data: fake_last_attempt),
+          best_result: 1,
+          updated_at: DateTime.new(2000, 1, 5, 8, 30, 45)
+        )
+      )
+
+    user_storage_id = storage_id_for_user_id(@student.id)
+
+    level = create :applab
+    script_level = create :script_level, levels: [level]
+
+    create :channel_token, level: level, storage_id: user_storage_id
+
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: script_level.stage,
+      id: script_level.position,
+      user_id: @student.id,
+      section_id: @section.id
+    }
+
+    assert_includes response.body, "<div>Last updated:</div>\n<div class='timestamp' data-timestamp='2000-01-05 08:30:45 UTC'></div>"
   end
 
   test 'loads applab if you are a project validator viewing a student and they have a channel id' do
@@ -1574,7 +1678,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/#{new_script.name}/stage/1/puzzle/2"
   end
 
-  test 'should redirect to latest version in script family' do
+  test 'should redirect to 2017 version in script family' do
     cats1 = create :script, name: 'cats1', family_name: 'cats', version_year: '2017'
 
     assert_raises ActiveRecord::RecordNotFound do
@@ -1587,7 +1691,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     create :script, name: 'cats2', family_name: 'cats', version_year: '2018', is_stable: true
     get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
-    assert_redirected_to "/s/cats2/stage/1/puzzle/1"
+    assert_redirected_to "/s/cats1/stage/1/puzzle/1"
+
+    # next redirects to latest version in a script family
+    get :next, params: {script_id: 'cats'}
+    assert_redirected_to "/s/cats2/next"
 
     # do not redirect within script family if the requested script exists
     cats = create :script, name: 'cats'
@@ -1618,4 +1726,28 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
     assert_nil assigns(:view_options)[:is_challenge_level]
   end
+
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'signed out user cannot view pilot script level'
+
+  test_user_gets_response_for :show, response: :forbidden, user: :student,
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'student cannot view pilot script level'
+
+  test_user_gets_response_for :show, response: :forbidden, user: :teacher,
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'teacher without pilot access cannot view pilot script level'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_teacher},
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'pilot teacher can view pilot script level'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_student},
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'pilot student can view pilot script level'
+
+  test_user_gets_response_for :show, response: :success, user: :levelbuilder,
+    params: -> {script_level_params(@pilot_script_level)},
+    name: 'levelbuilder can view pilot script level'
 end

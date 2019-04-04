@@ -17,10 +17,10 @@
     "use_contract_editor": "false",
     "free_play": "false",
     "impressive": "false",
-    "instructions": "Run this code to see how the artist uses binary to draw this pattern.",
+    "short_instructions": "Run this code to see how the artist uses binary to draw this pattern.",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  \r\n___\r\nThe artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \r\n___\r\n**Run this code to see how the artist uses binary to draw this pattern.**",
+    "long_instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  \r\n___\r\nThe artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \r\n___\r\n**Run this code to see how the artist uses binary to draw this pattern.**",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -38,11 +38,16 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Just click `Run` to see this program in action!\",\"hint_id\":\"courseD_artist_binary2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/77cdae1ba79061009e611c10d805e53e/courseD_artist_binary2.mp3\"}]",
     "parent_level_id": 7916,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 21:14:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-12 19:07:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-06-01 02:47:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-20 21:14:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-12 19:07:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-06-01 02:47:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

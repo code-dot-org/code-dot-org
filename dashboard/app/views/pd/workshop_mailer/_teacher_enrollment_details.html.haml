@@ -8,28 +8,13 @@
     vertical-align: top;
   }
 
-= render partial: 'workshop_details'
-
 = render partial: 'workshop_logistics'
-
-= render partial: 'workshop_notes'
 
 = render partial: 'supply_list'
 
-- if @workshop.local_summer?
-  %p
-    Check with your workshop organizer to see if breakfast or lunch is provided. If you
-    have any food allergies please let us know as soon as possible by emailing
-    = mail_to @workshop.organizer.email, "#{@workshop.organizer.email},"
-    and be sure to eat responsibly.
-- else
-  %p
-    If your workshop organizer plans to provide lunch and you have any food allergies,
-    please bring your own meal or eat responsibly.
+= render partial: 'workshop_notes'
 
-%p
-  Other workshop attendees may post photos from the workshop to social media.
-  If you don't want your photo taken, make sure the facilitator knows before the workshop begins.
+= render partial: 'workshop_details'
 
 = render partial: 'how_to_cancel'
 
@@ -55,12 +40,22 @@
     = render partial: 'csd_pre_course_reading'
   - elsif @workshop.course == Pd::Workshop::COURSE_CSP
     = render partial: 'csp_pre_course_reading'
+
+%p
+  If you have any accessibility needs or food allergies, please let the workshop organizer know so they can make appropriate accommodation plans and answer any of your questions. You can reach them at
+  = mail_to(@workshop.organizer.email) + '.'
+
 %p
   Thank you,
   %br
-  = @workshop.organizer.name
+  - if @workshop.course == Pd::Workshop::COURSE_CSF
+    Megan Hochstatter
+    %br
+    K-5 Education Program Manager, Code.org
+  - else
+    = @workshop.organizer.name
 
 %p
   P.S. Connect with other computer science teachers on Twitter
   = link_to '@TeachCode', 'https://twitter.com/teachcode', target: "_blank"
-  for inspiration and great tips on bringing computer science to every school.
+  for inspiration and great tips on bringing computer science to every school. Speaking of social media, if you don't want your photo taken or posted at the workshop, make sure the facilitator knows before the workshop begins.

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "This equilateral triangle has angles of 60, 60, and 60 degrees. Each side is 200 pixels. Complete the drawing.",
+    "short_instructions": "This equilateral triangle has angles of 60, 60, and 60 degrees. Each side is 200 pixels. Complete the drawing.",
     "x": "75",
     "y": "300",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "ideal": "3",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "This equilateral triangle has angles of 60, 60, and 60 degrees. Each side is 200 pixels. Complete the drawing.",
+    "long_instructions": "This equilateral triangle has angles of 60, 60, and 60 degrees. Each side is 200 pixels. Complete the drawing.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

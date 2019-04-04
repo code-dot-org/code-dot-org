@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "This new \"draw a triangle\" function has a parameter and can do the work of all three functions before. Draw the same triangles using this new function.",
+    "short_instructions": "This new \"draw a triangle\" function has a parameter and can do the work of all three functions before. Draw the same triangles using this new function.",
     "x": "25",
     "y": "200",
     "start_direction": "90",

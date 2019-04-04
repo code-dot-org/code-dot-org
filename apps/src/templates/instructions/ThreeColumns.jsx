@@ -1,6 +1,7 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 /**
  * A component that lays out children in three columns (left, center, right),
@@ -8,13 +9,13 @@ import { connect } from 'react-redux';
  * done largely to separate some of the semi-complicated styling.
  */
 
-const ThreeColumns = (props) => {
-  const { isRtl, styles, leftColWidth, rightColWidth, height, children } = props;
+const ThreeColumns = props => {
+  const {isRtl, styles, leftColWidth, rightColWidth, height, children} = props;
 
   const defaultStyles = {
     container: {
       paddingLeft: isRtl ? rightColWidth : leftColWidth,
-      paddingRight: isRtl ? leftColWidth: rightColWidth,
+      paddingRight: isRtl ? leftColWidth : rightColWidth,
       float: isRtl ? 'right' : 'left',
       width: '100%',
       boxSizing: 'border-box'
@@ -28,7 +29,7 @@ const ThreeColumns = (props) => {
       paddingRight: isRtl ? undefined : 300,
       marginLeft: isRtl ? -300 : undefined,
       paddingLeft: isRtl ? 300 : undefined,
-      overflowY: 'scroll',
+      overflowY: 'scroll'
     },
     left: {
       position: 'relative',
@@ -36,14 +37,14 @@ const ThreeColumns = (props) => {
       width: leftColWidth,
       right: leftColWidth,
       marginLeft: isRtl ? 0 : '-100%',
-      marginRight: isRtl ? '-100%' : 0,
+      marginRight: isRtl ? '-100%' : 0
     },
     right: {
       position: 'relative',
       float: isRtl ? 'right' : 'left',
       width: rightColWidth,
       marginRight: isRtl ? 0 : -rightColWidth,
-      marginLeft: isRtl ? -rightColWidth : 0,
+      marginLeft: isRtl ? -rightColWidth : 0
     }
   };
 
@@ -63,16 +64,17 @@ ThreeColumns.propTypes = {
   height: PropTypes.number,
   isRtl: PropTypes.bool.isRequired,
   children: PropTypes.node,
-  customProp: (props) => {
+  customProp: props => {
     if (props.children.length !== 3) {
-      throw new Error('ThreeColumns expects exactly 3 children, got ' +
-        props.children.length);
+      throw new Error(
+        'ThreeColumns expects exactly 3 children, got ' + props.children.length
+      );
     }
   }
 };
 
 export default connect(state => {
   return {
-    isRtl: state.isRtl,
+    isRtl: state.isRtl
   };
 })(Radium(ThreeColumns));

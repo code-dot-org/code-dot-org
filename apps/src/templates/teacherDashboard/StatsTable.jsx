@@ -1,9 +1,13 @@
-import React, {Component, PropTypes} from 'react';
-import i18n from "@cdo/locale";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
-import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
+import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   table: {
@@ -19,27 +23,38 @@ class StatsTable extends Component {
     section: PropTypes.shape({
       id: PropTypes.number,
       students: PropTypes.array
-    }),
-    studentsCompletedLevelCount: PropTypes.object
+    }).isRequired,
+    studentsCompletedLevelCount: PropTypes.object,
+
+    // Provided by redux.
+    scriptId: PropTypes.number,
+    scriptName: PropTypes.string
   };
 
   state = {};
 
   studentsWithCompletedLevelCount = () => {
     const {section, studentsCompletedLevelCount} = this.props;
-    return section.students.map(student => ({
+    return (section.students || []).map(student => ({
       ...student,
       completed_levels_count: studentsCompletedLevelCount[student.id] || 0
     }));
   };
 
   nameFormatter = (name, {rowData}) => {
-    const sectionId = this.props.section.id;
+    const {section, scriptId, scriptName} = this.props;
+    const studentUrl = scriptUrlForStudent(
+      section.id,
+      scriptId,
+      scriptName,
+      rowData.id
+    );
+
     return (
       <a
         className="uitest-name-cell"
         style={tableLayoutStyles.link}
-        href={`/teacher-dashboard#/sections/${sectionId}/student/${rowData.id}`}
+        href={studentUrl}
         target="_blank"
       >
         {name}
@@ -51,7 +66,7 @@ class StatsTable extends Component {
     return this.state.sortingColumns || {};
   };
 
-  getColumns = (sortable) => {
+  getColumns = sortable => {
     return [
       {
         property: 'name',
@@ -61,7 +76,8 @@ class StatsTable extends Component {
             className: 'uitest-name-header',
             style: {
               ...tableLayoutStyles.headerCell
-          }},
+            }
+          },
           transforms: [sortable]
         },
         cell: {
@@ -69,7 +85,8 @@ class StatsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.cell
-          }}
+            }
+          }
         }
       },
       {
@@ -80,7 +97,8 @@ class StatsTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...styles.rightAlignText
-          }},
+            }
+          },
           transforms: [sortable]
         },
         cell: {
@@ -88,7 +106,8 @@ class StatsTable extends Component {
             style: {
               ...tableLayoutStyles.cell,
               ...styles.rightAlignText
-          }}
+            }
+          }
         }
       },
       {
@@ -99,7 +118,8 @@ class StatsTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...styles.rightAlignText
-          }},
+            }
+          },
           transforms: [sortable]
         },
         cell: {
@@ -107,14 +127,15 @@ class StatsTable extends Component {
             style: {
               ...tableLayoutStyles.cell,
               ...styles.rightAlignText
-          }}
+            }
+          }
         }
       }
     ];
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -131,14 +152,18 @@ class StatsTable extends Component {
 
   render() {
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      sortableOptions
+    );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy,
+      sort: orderBy
     })(this.studentsWithCompletedLevelCount());
 
     return (
@@ -154,4 +179,8 @@ class StatsTable extends Component {
   }
 }
 
-export default StatsTable;
+export const UnconnectedStatsTable = StatsTable;
+export default connect(state => ({
+  scriptId: state.scriptSelection.scriptId,
+  scriptName: getSelectedScriptName(state)
+}))(StatsTable);

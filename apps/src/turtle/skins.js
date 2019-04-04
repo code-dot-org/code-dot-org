@@ -1,6 +1,6 @@
 var skinBase = require('../skins');
 
-exports.load = function (assetUrl, id) {
+exports.load = function(assetUrl, id) {
   var skin = skinBase.load(assetUrl, id);
 
   skin.linePatterns = {
@@ -12,7 +12,7 @@ exports.load = function (assetUrl, id) {
     rainbowLine: assetUrl('media/common_images/rainbow.png'),
     ropeLine: assetUrl('media/common_images/rope.png'),
     squigglyLine: assetUrl('media/common_images/squiggly.png'),
-    swirlyLine: assetUrl('media/common_images/swirlyline.png'),
+    swirlyLine: assetUrl('media/common_images/swirlyline.png')
   };
 
   var CONFIGS = {
@@ -24,19 +24,21 @@ exports.load = function (assetUrl, id) {
         height: 100,
         numHeadings: 36,
         numFrames: 10,
-        visible: true,
+        visible: true
       },
       smoothAnimate: true,
       consolidateTurnAndMove: true,
       linePatterns: {
         annaLine: skin.assetUrl('annaline.png'),
-        annaLine_2x: skin.assetUrl('annaline_2x.png'),
+        annaLine_2x: skin.assetUrl('annaline_2x.png')
       },
       // Used to populate the Set Pattern block
-      lineStylePatternOptions: [[skin.assetUrl('annaline-menuicon.png'), 'annaLine']],
+      lineStylePatternOptions: [
+        [skin.assetUrl('annaline-menuicon.png'), 'annaLine']
+      ],
       artistOptions: ['anna', 'elsa'],
       avatarAllowedScripts: ['frozen'],
-      blankAvatar: skin.assetUrl('blank.png'),
+      blankAvatar: skin.assetUrl('blank.png')
     },
 
     elsa: {
@@ -46,28 +48,30 @@ exports.load = function (assetUrl, id) {
         height: 100,
         numHeadings: 18,
         numFrames: 20,
-        visible: true,
+        visible: true
       },
       smoothAnimate: true,
       consolidateTurnAndMove: true,
       linePatterns: {
         elsaLine: skin.assetUrl('elsaline.png'),
-        elsaLine_2x: skin.assetUrl('elsaline_2x.png'),
+        elsaLine_2x: skin.assetUrl('elsaline_2x.png')
       },
       // Used to populate the Set Pattern block
-      lineStylePatternOptions: [[skin.assetUrl('elsaline-menuicon.png'), 'elsaLine']],
+      lineStylePatternOptions: [
+        [skin.assetUrl('elsaline-menuicon.png'), 'elsaLine']
+      ],
       artistOptions: ['anna', 'elsa'],
       avatarAllowedScripts: ['frozen'],
-      blankAvatar: skin.assetUrl('blank.png'),
+      blankAvatar: skin.assetUrl('blank.png')
     },
 
     artist: {
       // Used to populate the Set Pattern block
       lineStylePatternOptions: [
-          [skin.linePatterns.rainbowMenu, 'rainbowLine'],
-          [skin.linePatterns.ropeMenu, 'ropeLine'],
-          [skin.linePatterns.squigglyMenu, 'squigglyLine'],
-          [skin.linePatterns.swirlyMenu, 'swirlyLine'],
+        [skin.linePatterns.rainbowMenu, 'rainbowLine'],
+        [skin.linePatterns.ropeMenu, 'ropeLine'],
+        [skin.linePatterns.squigglyMenu, 'squigglyLine'],
+        [skin.linePatterns.swirlyMenu, 'swirlyLine']
       ]
     }
   };
@@ -77,33 +81,77 @@ exports.load = function (assetUrl, id) {
    *
    * @return the mapping of names to urls
    */
-  var stickers = function () {
-
+  var stickers = function() {
     // Playlab characters
-    var playlab = ['Alien'   , 'Bat'     , 'Bird'     , 'Cat'       , 'Caveboy'   ,
-                   'Cavegirl', 'Dinosaur', 'Dog'      , 'Dragon'    , 'Ghost'     ,
-                   'Knight'  , 'Monster' , 'Ninja'    , 'Octopus'   , 'Penguin'   ,
-                   'Pirate'  , 'Princess', 'Robot'    , 'Soccerboy' , 'Soccergirl',
-                   'Spacebot', 'Squirrel', 'Tennisboy', 'Tennisgirl', 'Unicorn'   ,
-                   'Witch'   , 'Wizard'  , 'Zombie'];
+    var playlab = [
+      'Alien',
+      'Bat',
+      'Bird',
+      'Cat',
+      'Caveboy',
+      'Cavegirl',
+      'Dinosaur',
+      'Dog',
+      'Dragon',
+      'Ghost',
+      'Knight',
+      'Monster',
+      'Ninja',
+      'Octopus',
+      'Penguin',
+      'Pirate',
+      'Princess',
+      'Robot',
+      'Soccerboy',
+      'Soccergirl',
+      'Spacebot',
+      'Squirrel',
+      'Tennisboy',
+      'Tennisgirl',
+      'Unicorn',
+      'Witch',
+      'Wizard',
+      'Zombie'
+    ];
 
     // Miscellaneous stickers
-    var misc = ['Beaver', 'Bunny'      , 'Chicken', 'Elephant', 'Giraffe',
-                'Goat'  , 'Grasshopper', 'Hippo'  , 'Lion'    , 'Llama'  ,
-                'Monkey', 'Moose'      , 'Mouse'  , 'Owl'     , 'Peacock',
-                'Rocket', 'Triceratops', 'Turtle' , 'Zebra'];
+    var misc = [
+      'Beaver',
+      'Bunny',
+      'Chicken',
+      'Elephant',
+      'Giraffe',
+      'Goat',
+      'Grasshopper',
+      'Hippo',
+      'Lion',
+      'Llama',
+      'Monkey',
+      'Moose',
+      'Mouse',
+      'Owl',
+      'Peacock',
+      'Rocket',
+      'Triceratops',
+      'Turtle',
+      'Zebra'
+    ];
 
     var mapping = {};
 
     var i, name;
     for (i = 0; i < playlab.length; i++) {
       name = playlab[i];
-      mapping[name] =  assetUrl('media/skins/studio/' + name.toLowerCase() + '_thumb.png');
+      mapping[name] = assetUrl(
+        'media/skins/studio/' + name.toLowerCase() + '_thumb.png'
+      );
     }
 
     for (i = 0; i < misc.length; i++) {
       name = misc[i];
-      mapping[name] = assetUrl('media/common_images/stickers/' + name.toLowerCase() + '.png');
+      mapping[name] = assetUrl(
+        'media/common_images/stickers/' + name.toLowerCase() + '.png'
+      );
     }
 
     return mapping;
@@ -120,7 +168,7 @@ exports.load = function (assetUrl, id) {
     height: 51,
     numHeadings: 180,
     numFrames: 1,
-    visible: true,
+    visible: true
   };
 
   // Get properties from config
@@ -132,11 +180,13 @@ exports.load = function (assetUrl, id) {
   // to populate the image dropdown in the Set Pattern block.
 
   // All skins have the default line style (solid coloured line)
-  var lineStylePatternOptions =  [[skin.linePatterns.patternDefault, 'DEFAULT']];
+  var lineStylePatternOptions = [[skin.linePatterns.patternDefault, 'DEFAULT']];
 
   // If the skin provided line patterns, add them to the pattern set
   if (config && config.lineStylePatternOptions) {
-    lineStylePatternOptions = lineStylePatternOptions.concat(config.lineStylePatternOptions);
+    lineStylePatternOptions = lineStylePatternOptions.concat(
+      config.lineStylePatternOptions
+    );
   }
 
   skin.lineStylePatternOptions = lineStylePatternOptions;

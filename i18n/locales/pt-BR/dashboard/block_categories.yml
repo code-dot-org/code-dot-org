@@ -2,13 +2,13 @@ pt-BR:
   data:
     block_categories:
       Actions: Ações
-      Loops: Laços
-      Functions: Funções
+      Loops: laços
+      Functions: funções
       Color: Cor
       Brushes: Pincéis
       Math: Matemática
       Logic: Lógica
-      Variables: Variáveis
+      Variables: variáveis
       Number: Número
       String: String
       Image: Imagem
@@ -23,26 +23,35 @@ pt-BR:
       Picker: Seletor
       Comment: Comentário
       'Variables ': 'Variáveis '
-      everythingelse: variados
+      Default: Padrão
+      Behaviors: Comportamentos
+      Locations: Localizações
+      everythingelse: todoresto
+      World: Mundo
+      Sprites: Sprite
+      Location: Localização
       numbers: números
       Numbers: Números
       Input: Entrada
-      Default: Padrão
-      World: Mundo
-      Sprites: Sprite
-      Behaviors: Comportamentos
+      Dancers: Bailarinos
+      Groups: Grupos
       Advanced: Avançado
+      Start: Começar
+      Music: Música
+      Dancing: Dança
       Sprite: Sprite
       Brush: Pincel
       Make Sprite: Fazer Sprite
       Movement: Movimento
-      Start: Começar
-      Groups: Grupos
       Booleans: Booleanos
       Functional: Funcional
+      While Events: Eventos Enquanto
+      Sprite Properties: Propriedades do Sprite
       Predefined: Predefinido
       test: teste
       test2: teste2
+      Use These Blocks: Use estes blocos
+      Do Not Use: Não use
       Foo: Foo
       Name: Nome
       NEW BLOCKS: NOVOS BLOCOS

@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Photo Album: Getting Started",
-    "markdown_instructions": "List three reasons why you think that electronic photo albums are so popular.\n",
+    "long_instructions": "List three reasons why you think that electronic photo albums are so popular.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

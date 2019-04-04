@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require_relative '../../deployment'
 require 'cdo/db'
-require 'aws-sdk'
+require 'aws-sdk-cloudwatch'
 
 # Report details MySQL metrics to CloudWatch.
 # Intended to be run at 1-minute intervals.

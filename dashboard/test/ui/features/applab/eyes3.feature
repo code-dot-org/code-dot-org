@@ -19,7 +19,7 @@ Scenario: Data Browser
 
   When I press enter key
   And I wait until element "th .test-tableNameDiv:contains(column1)" is visible
-  And I click selector "#addColumnButton"
+  And I press "addColumnButton"
   And I press enter key
   And I press keys "foo" for element "#addDataTableRow :nth-child(2) input"
   And I press keys "bar" for element "#addDataTableRow :nth-child(3) input"
@@ -34,10 +34,10 @@ Scenario: Data Browser
 
   When element ".modal-body button:contains(Cancel)" is visible
   And I click selector ".modal-body button:contains(Cancel)"
-  And I click selector "#uitest-tableDebugLink"
+  And I press "uitest-tableDebugLink"
   Then I see no difference for "data table debug view"
 
-  And I click selector "#tableBackToOverview"
+  And I press "tableBackToOverview"
   And I wait until element "#dataOverview" is visible
   And element "#dataOverview a:contains(Key/value pairs)" is visible
   And I click selector "#dataOverview a:contains(Key/value pairs)"
@@ -52,7 +52,7 @@ Scenario: Data Browser
   Then I see no difference for "data properties with one row"
 
   When element "#uitest-propertiesDebugLink" is visible
-  And I click selector "#uitest-propertiesDebugLink"
+  And I press "uitest-propertiesDebugLink"
   Then I see no difference for "data properties debug view"
 
   And I close my eyes

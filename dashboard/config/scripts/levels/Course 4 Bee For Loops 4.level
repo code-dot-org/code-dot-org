@@ -18,7 +18,7 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "15",
     "ideal": "15",
-    "instructions": "Collect all of the nectar from these flowers. I wonder if there's an easier way to do this..."
+    "short_instructions": "Collect all of the nectar from these flowers. I wonder if there's an easier way to do this..."
   }
 }]]></config>
   <blocks>

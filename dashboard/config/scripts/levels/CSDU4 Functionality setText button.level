@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "embed": "false",
-    "markdown_instructions": "# setText on More than Just Labels\r\n\r\nYou can use `setText()` to change the text of labels, obviously, but it can also be used to change the text on _any_ element that has text, including buttons, text input, and text areas.\r\n\r\n# Do This\r\n\r\nThe starter program has an event handler already set up for the red button, can you write event handlers for the other three buttons so they behave in the same way?",
+    "long_instructions": "# setText on More than Just Labels\r\n\r\nYou can use `setText()` to change the text of labels, obviously, but it can also be used to change the text on _any_ element that has text, including buttons, text input, and text areas.\r\n\r\n# Do This\r\n\r\nThe starter program has an event handler already set up for the red button, can you write event handlers for the other three buttons so they behave in the same way?",
     "instructions_important": "false",
     "start_blocks": "// Change the text of all buttons to \"Red\" when the red button is clicked\r\nonEvent(\"redButton\", \"click\", function(event) {\r\n  setText(\"redButton\", \"Red\")\r\n  setText(\"greenButton\", \"Red\")\r\n  setText(\"blueButton\", \"Red\")\r\n  setText(\"purpleButton\", \"Red\")\r\n});\r\n\r\n// Change the text of all buttons to \"Green\" when the green button is clicked\r\n\r\n// Change the text of all buttons to \"Blue\" when the blue button is clicked\r\n\r\n// Change the text of all buttons to \"Purple\" when the purple button is clicked\r\n",
     "is_k1": "false",

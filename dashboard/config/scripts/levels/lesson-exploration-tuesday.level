@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "# Day 2: Lesson Exploration\r\n\r\nYou have seen 2 Model Lessons (taught by facilitators) and today you will see 1 more Model Lesson and  2 Participant TLOs (taught by teachers). What patterns do you notice about what facilitators do during these sessions (consider the lessons themselves and the debriefs)?\r\n\r\n* What are facilitators doing during lesson?\r\n* What are facilitators doing during debrief?\r\n* What are teachers doing throughout the session?\r\n* What is the key takeaway from the session?\r\n",
+    "long_instructions": "# Day 2: Lesson Exploration\r\n\r\nYou have seen 2 Model Lessons (taught by facilitators) and today you will see 1 more Model Lesson and  2 Participant TLOs (taught by teachers). What patterns do you notice about what facilitators do during these sessions (consider the lessons themselves and the debriefs)?\r\n\r\n* What are facilitators doing during lesson?\r\n* What are facilitators doing during debrief?\r\n* What are teachers doing throughout the session?\r\n* What is the key takeaway from the session?\r\n",
     "parent_level_id": 14291
   },
   "published": true,

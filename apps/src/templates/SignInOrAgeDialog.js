@@ -1,15 +1,16 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import cookies from 'js-cookie';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
-import { SignInState } from '@cdo/apps/code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/code-studio/progressRedux';
 import i18n from '@cdo/locale';
-import { reload } from '@cdo/apps/utils';
-import { environmentSpecificCookieName } from '@cdo/apps/code-studio/utils';
-import { pegasus } from '@cdo/apps/lib/util/urlHelpers';
+import {reload} from '@cdo/apps/utils';
+import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   container: {
@@ -18,7 +19,7 @@ const styles = {
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif",
+    fontFamily: "'Gotham 5r', sans-serif"
   },
   middle: {
     marginTop: 20,
@@ -31,24 +32,23 @@ const styles = {
     borderLeftWidth: 0,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    display: 'flex',
-
+    display: 'flex'
   },
   middleCell: {
     display: 'inline-block',
     verticalAlign: 'top',
-    maxWidth: '50%',
+    maxWidth: '50%'
   },
   center: {
     paddingLeft: 20,
     paddingRight: 20,
     flexDirection: 'column',
-    display: 'flex',
+    display: 'flex'
   },
   centerLine: {
     borderLeft: `1px solid ${color.lighter_gray}`,
     marginLeft: '50%',
-    height: '100%',
+    height: '100%'
   },
   centerText: {
     padding: 3
@@ -57,7 +57,7 @@ const styles = {
     paddingTop: 15
   },
   age: {
-    paddingTop: 15,
+    paddingTop: 15
   },
   dropdown: {
     verticalAlign: 'top',
@@ -75,12 +75,12 @@ const sessionStorageKey = 'anon_over13';
 class SignInOrAgeDialog extends Component {
   state = {
     open: true,
-    tooYoung: false,
+    tooYoung: false
   };
 
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
-    age13Required: PropTypes.bool.isRequired,
+    age13Required: PropTypes.bool.isRequired
   };
 
   onClickAgeOk = () => {
@@ -95,7 +95,8 @@ class SignInOrAgeDialog extends Component {
       return;
     }
 
-    sessionStorage.setItem(sessionStorageKey, true);
+    // Sets cookie to true when anon user is 13+. False otherwise.
+    sessionStorage.setItem(sessionStorageKey, parseInt(value, 10) >= 13);
 
     // When opening a new tab, we'll have a new session (and thus show this dialog),
     // but may still be using a storage_id for a previous user. Clear that cookie
@@ -110,24 +111,40 @@ class SignInOrAgeDialog extends Component {
   };
 
   render() {
-    const { signedIn, age13Required } = this.props;
+    const {signedIn, age13Required} = this.props;
     // Don't show dialog unless script requires 13+, we're not signed in, and
-    // we haven't already given this dialog our age
-    if (!age13Required || signedIn || sessionStorage.getItem(sessionStorageKey)) {
+    // we haven't already given this dialog our age or we do not require sign-in
+    if (
+      !age13Required ||
+      signedIn ||
+      sessionStorage.getItem(sessionStorageKey)
+    ) {
       return null;
     }
 
+    const provideAge = (
+      <div style={styles.middleCell}>
+        {i18n.provideAge()}
+        <div style={styles.age}>
+          <AgeDropdown
+            style={styles.dropdown}
+            ref={element => (this.ageDropdown = element)}
+          />
+          <Button
+            id="uitest-submit-age"
+            onClick={this.onClickAgeOk}
+            text={i18n.ok()}
+            color={Button.ButtonColor.gray}
+          />
+        </div>
+      </div>
+    );
+
     if (this.state.tooYoung) {
       return (
-        <BaseDialog
-          useUpdatedStyles
-          isOpen={true}
-          uncloseable
-        >
+        <BaseDialog useUpdatedStyles isOpen={true} uncloseable>
           <div style={styles.container}>
-            <div style={styles.heading}>
-              {i18n.tutorialUnavailable()}
-            </div>
+            <div style={styles.heading}>{i18n.tutorialUnavailable()}</div>
             <div style={styles.middle}>
               {i18n.tutorialUnavailableExplanation()}
             </div>
@@ -144,15 +161,9 @@ class SignInOrAgeDialog extends Component {
     }
 
     return (
-      <BaseDialog
-        useUpdatedStyles
-        isOpen={this.state.open}
-        uncloseable
-      >
-        <div style={styles.container}>
-          <div style={styles.heading}>
-            {i18n.signinOrAge()}
-          </div>
+      <BaseDialog useUpdatedStyles isOpen={this.state.open} uncloseable>
+        <div style={styles.container} className="signInOrAgeDialog">
+          <div style={styles.heading}>{i18n.signinOrAge()}</div>
           <div style={styles.middle}>
             <div style={styles.middleCell}>
               {i18n.signinForProgress()}
@@ -165,26 +176,11 @@ class SignInOrAgeDialog extends Component {
               </div>
             </div>
             <div style={styles.center}>
-              <div style={styles.centerLine}/>
-              <div style={styles.centerText}>
-                {i18n.or()}
-              </div>
-              <div style={styles.centerLine}/>
+              <div style={styles.centerLine} />
+              <div style={styles.centerText}>{i18n.or()}</div>
+              <div style={styles.centerLine} />
             </div>
-            <div style={styles.middleCell}>
-              {i18n.provideAge()}
-              <div style={styles.age}>
-                <AgeDropdown
-                  style={styles.dropdown}
-                  ref={element => this.ageDropdown = element}
-                />
-                <Button
-                  onClick={this.onClickAgeOk}
-                  text={i18n.ok()}
-                  color={Button.ButtonColor.gray}
-                />
-              </div>
-            </div>
+            {provideAge}
           </div>
           <div>
             <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>

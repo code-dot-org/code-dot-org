@@ -11,7 +11,7 @@ export default class AddPasswordController {
 
   renderAddPasswordForm = () => {
     ReactDOM.render(
-      <AddPasswordForm handleSubmit={this.submitAddPassword}/>,
+      <AddPasswordForm handleSubmit={this.submitAddPassword} />,
       this.mountPoint
     );
   };
@@ -44,7 +44,9 @@ export default class AddPasswordController {
       this.form.on('ajax:success', onSuccess);
       this.form.on('ajax:error', onFailure);
       this.form.find('#add-password_user_password').val(password);
-      this.form.find('#add-password_user_password_confirmation').val(passwordConfirmation);
+      this.form
+        .find('#add-password_user_password_confirmation')
+        .val(passwordConfirmation);
       this.form.submit();
     });
   };

@@ -7,11 +7,14 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "The Body Element",
-    "reference": "/docs/csd/css_body/index.html",
+    "reference": "/docs/concepts/css/body-styling/index.html",
     "parent_level_id": 9094,
     "name_suffix": "_2018"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-12-19 23:59:35 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Map>

@@ -12,7 +12,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Reading the Sound Sensor\r\n\r\nIn this app we've already added a text label with the id \"sound_value\". Using the `soundSensor.value` block. display the value of the sound sensor.",
+    "long_instructions": "# Reading the Sound Sensor\r\n\r\nIn this app we've already added a text label with the id \"sound_value\". Using the `soundSensor.value` block. display the value of the sound sensor.",
     "instructions_important": "false",
     "start_blocks": "// Set the content of \"sound_value\"\r\n// to the current sound sensor value\r\n",
     "is_k1": "false",

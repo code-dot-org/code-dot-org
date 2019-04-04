@@ -6,11 +6,16 @@
  */
 
 import _ from 'lodash';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
-import { createStore } from 'redux';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {createStore} from 'redux';
 import Immutable from 'immutable';
 
-export const fakeLesson = (name, id, lockable=false, stageNumber=undefined) => ({
+export const fakeLesson = (
+  name,
+  id,
+  lockable = false,
+  stageNumber = undefined
+) => ({
   name,
   id,
   lockable,
@@ -39,7 +44,6 @@ export const fakeLevels = (numLevels, {startLevel = 1, named = true} = {}) =>
     return fakeLevel(overrideData);
   });
 
-
 /**
  * Creates the shell of a redux store with the provided lessonId being hidden
  * @param {ViewType} viewAs
@@ -50,7 +54,7 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     stageLock: {
       stagesBySectionId: {
         '11': {}
-      },
+      }
     },
     viewAs: viewAs,
     teacherSections: {
@@ -58,7 +62,7 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     },
     hiddenStage: Immutable.fromJS({
       stagesBySection: {
-        '11': { [lessonId]: true }
+        '11': {[lessonId]: true}
       }
     }),
     progress: {

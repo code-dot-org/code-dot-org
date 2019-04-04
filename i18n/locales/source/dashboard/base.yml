@@ -31,6 +31,7 @@ en:
       messages:
         blank: "is required"
         blank_plural: "are required"
+        invalid: "is invalid"
         invalid_plural: "are invalid"
     attributes:
       user:
@@ -47,6 +48,9 @@ en:
         age: 'Age'
         gender: 'Gender'
         edit_header: 'Edit Account Details'
+        finish_sign_up_header: 'Finish creating your account'
+        finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         error:
           future: can't be in the future
 
@@ -62,6 +66,7 @@ en:
   done_with_module: Done with this Learning Module
   cancel: "Cancel"
   okay: "Okay"
+  or: "or"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
@@ -96,25 +101,32 @@ en:
   prize: 'prize'
   more_info: 'More info'
   auth:
+    continue_with: 'Continue with %{provider}'
     sign_in_with: 'Sign in with %{provider}'
     signed_in: 'Signed in!'
     signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
     sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
     already_signedup: 'Already signed up?'
     notyet_signedup: "Haven't joined yet?"
-    google_oauth2: 'Google Account'
+    google_oauth2: 'Google'
     twitter: 'Twitter'
     facebook: 'Facebook'
-    windowslive: 'Microsoft Account'
-    clever: 'Clever Account'
-    powerschool: 'Powerschool Account'
+    windowslive: 'Microsoft'
+    microsoft_v2_auth: 'Microsoft'
+    clever: 'Clever'
+    powerschool: 'Powerschool'
     forgot_password: 'Forgot your password?'
+    migration_success: 'Success! You have updated to our new account experience.'
+    demigration_success: 'The new account experience is now disabled on your account.'
     need_confirmation: "Didn't receive confirmation instructions?"
     need_unlock: "Didn't receive unlock instructions?"
-    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
-    unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider}. Please try again."
+    not_linked: "Sorry, your Code.org account is not linked to %{provider}. You'll have to sign in by typing your password below."
+    use_clever: "Sorry, your Code.org account is not linked to %{provider}. Please sign in through your Clever Portal instead."
+    unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider} account. Please try again."
+    already_in_use: "Your %{provider} account is already connected to another Code.org account."
+    already_linked: "Your %{provider} account is already linked to your Code.org account."
   signup_form:
+    email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
@@ -131,6 +143,7 @@ en:
     age: 'Age'
     user_type: 'Are you a student or teacher?'
     submit: 'Sign up'
+    go_to_account: 'Go to my account'
     teacher: 'Are you a teacher?'
     valid_username: "Available!"
     invalid_username: "Username must be at least 5 characters"
@@ -140,9 +153,10 @@ en:
     mismatch_password: "The two passwords you entered do not match"
     agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
     under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    student_consent: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
     agree_us_website: "I agree to using a website based in the United States."
     my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
-    student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: "We need some additional information to continue signing you up."
     user_type_button: "Update Account Type"
@@ -150,9 +164,9 @@ en:
     user_type_teacher: "Teacher"
     user_type_student: "Student"
     field_is_required: "is required"
-    accept_terms: "You must agree to create an account"
+    accept_terms: "You must agree to create an account."
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)"
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Yes"
     email_preference_no: "No"
@@ -186,7 +200,7 @@ en:
     remember: 'Remember me'
     submit: 'Sign in'
   signin:
-    try_heading: 'Want to try coding without signing up?'
+    try_heading: 'Want to try coding without signing in?'
     try_hoc: 'Try one Hour of Code first'
     try_20hours: 'Try our 20 hour Intro to Computer Science'
   signinsection:
@@ -226,6 +240,7 @@ en:
     student_associated_subject: 'Login information for Code.org'
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
+    delete_teacher_subject: 'Code.org notification: Your account has been deleted'
   section:
     your_section:
       one: 'Your section:'
@@ -233,6 +248,7 @@ en:
     code_with_teacher: '%{section_code} with %{teacher_name}'
     confirm:
       remove: 'Are you sure you want to leave this section?'
+    default_name: 'Untitled Section'
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
@@ -281,7 +297,7 @@ en:
         personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
-      finished_hoc: "I've finished my Hour of Code"
+      finished_hoc: "I finished!"
       sign_in_to_save: 'Sign in to save progress'
       free_play:
         playlab: 'Make a Play Lab app'
@@ -290,9 +306,7 @@ en:
         applab: 'Make an App Lab app'
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
-      home: "Home"
       my_dashboard: "My Dashboard"
-      courses: "Courses"
       course_catalog: "Course Catalog"
       project_gallery: "Projects"
       sections: "Sections"
@@ -338,10 +352,44 @@ en:
       signin: 'Sign in'
       signup: 'Create an account'
       already_registered: 'Already registered?'
-      pair_programming: 'Pair Programming'
+      pair_programming: 'Pair programming'
       team: 'Team'
       driver: 'Logged in'
       navigator: 'Partner'
+      create: 'Create'
+      algebra_game: 'Algebra'
+      applab: 'App Lab'
+      artist: 'Artist'
+      artist_k1: 'Artist (Pre-reader)'
+      basketball: 'Basketball'
+      bounce: 'Bounce'
+      calc: 'Calc'
+      dance: 'Dance Party'
+      eval: 'Eval'
+      flappy: 'Flappy'
+      frozen: 'Frozen'
+      gamelab: 'Game Lab'
+      gamelab_jr: 'Game Lab (beta)'
+      gumball: 'The Amazing World of Gumball'
+      iceage: 'Ice Age'
+      infinity: 'Infinity'
+      makerlab: 'Maker Toolkit'
+      minecraft_adventurer: 'Minecraft Adventurer'
+      minecraft_aquatic: 'Minecraft Aquatic'
+      minecraft_codebuilder: 'Minecraft: Code Connection'
+      minecraft_designer: 'Minecraft'
+      minecraft_hero: 'Minecraft Hero'
+      playlab: 'Play Lab'
+      playlab_k1: 'Play Lab (Pre-reader)'
+      scratch: 'Scratch'
+      sports: 'Sports'
+      spritelab: 'Sprite Lab'
+      starwars: 'Star Wars'
+      starwarsblocks: 'Star Wars (Blocks)'
+      starwarsblocks_hour: 'Star Wars (Blocks)'
+      weblab: 'Web Lab'
+      view_all: 'View all projects...'
+
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'Your progress'
@@ -375,6 +423,7 @@ en:
       example: 'Example Solution'
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: 'Submitted on:'
+      last_updated: 'Last updated:'
       unsubmit: 'Unsubmit'
       worked_with: 'Worked With'
       update_lock_settings: 'Update lock settings here.'
@@ -395,15 +444,18 @@ en:
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
     no_password_because_sponsored: 'See your teacher to manage your password.'
-    create_personal_login: 'Create a personal login'
+    create_personal_login: 'Create a personal password login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
     create_personal_login_under_13_username: "Username (don't use your real name!)"
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
-    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_link_account: 'You can also instead choose to connect to a personal account under the “Manage Linked Accounts” section.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    parent_email_label: "Parent/guardian email (optional)"
+    parent_email_hint: "(this can be used for password recovery)"
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
     update: "Update Account"
     account_successfully_updated: "Account successfully updated."
@@ -504,8 +556,8 @@ en:
     teacher: 'Teacher'
   footer:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
-    help_from_html: 'We especially want to recognize the engineers from Google, Microsoft, Facebook, Twitter, and many others who helped create these materials.'
-    help_from_html_old: 'Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.'
+    help_from_html: 'We especially want to recognize the engineers from Amazon, Google, and Microsoft who helped create these materials.'
+    help_from_html_old: 'Engineers from Amazon, Google, and Microsoft helped create these materials.'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
@@ -589,6 +641,8 @@ en:
       body_short: "Design an app, code with blocks or JavaScript to make it work, then share your app in seconds."
       audience: 'Ages 13+'
       cta: 'Learn how'
+    dance:
+      title: 'Dance Party'
     hoc:
       title: 'Classic Maze'
       body: 'Try the basics of computer science. Millions have given it a shot.'
@@ -631,6 +685,8 @@ en:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
       body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
@@ -764,14 +820,14 @@ en:
     title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
-      - white: "White"
-      - black: "Black or African American"
-      - hispanic: "Hispanic or Latino"
-      - asian: "Asian"
-      - hawaiian: "Native Hawaiian or other Pacific Islander"
-      - american_indian: "American Indian/Alaska Native"
-      - other: "Other"
-      - opt_out: "Prefer not to say"
+      white: "White"
+      black: "Black or African American"
+      hispanic: "Hispanic or Latino"
+      asian: "Asian"
+      hawaiian: "Native Hawaiian or other Pacific Islander"
+      american_indian: "American Indian/Alaska Native"
+      other: "Other"
+      opt_out: "Prefer not to say"
     submit: "Submit"
     decline: "Close"
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
@@ -883,6 +939,7 @@ en:
     peer_review: 'Peer Review'
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
+    optional: 'Optional'
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
@@ -890,6 +947,23 @@ en:
     csf_e_2: 'Course E Content'
     csf_f_1: 'Ramp Up to Course F (Optional)'
     csf_f_2: 'Course F Content'
+    csf_digcit: 'Digital Citizenship'
+    csf_jigsaw: 'Jigsaw'
+    csf_sequencing: 'Sequencing'
+    csf_loops: 'Loops'
+    csf_events: 'Events'
+    csf_online_safety: 'Online Safety'
+    csf_binary: 'Binary'
+    csf_data: 'Data'
+    csf_conditionals: 'Conditionals'
+    csf_sprites: 'Sprites'
+    csf_spritelab: 'Sprite Lab'
+    csf_nested_loops: 'Nested Loops'
+    csf_functions: 'Functions'
+    csf_variables: 'Variables'
+    csf_for_loops: 'For Loops'
+    csf_internet: 'Internet'
+    csf_impacts: 'Impacts of Computing'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'
@@ -906,7 +980,7 @@ en:
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
+    csp2_2: 'Chapter 2: Manipulating and Visualizing Data'
     csp3_1: 'Chapter 1: Programming Languages and Algorithms'
     csp4_1: 'Chapter 1: The World of Big Data and Encryption'
     csp5_1: 'Chapter 1: Event-Driven Programming'
@@ -921,6 +995,10 @@ en:
     csp2_1_2018: 'Unit 2: Digital Information'
     csp3_1_2018: 'Unit 3: Intro to Programming'
     csp4_1_2018: 'Unit 4: Big Data and Privacy'
+    csp_variables: 'Variables'
+    csp_conditionals: 'Conditionals'
+    csp_functions: 'Functions'
+    csp_project: 'Project'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
@@ -993,9 +1071,12 @@ en:
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  no_script_access_student: "You don't have access to this unit. Please ask your teacher which unit you should be on."
+  no_script_access_teacher: "You don't have access to this unit. If you believe you should have access to this unit, please write to support@code.org so that we can fix the situation."
   return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Go to course overview'
   view_all_units: 'View all units'
+  view_teacher_guide: 'View teacher guide'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'

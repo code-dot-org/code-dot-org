@@ -54,7 +54,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Limiting Turn\r\n\r\nYou might have noticed that it was really hard to steer the car unless your hands were moving slowly and carefully. This is because the number that `roll` returns can be a really big number depending on how much the accelerometer is being turned. Remember, `roll` has a range from -90 to 90.\r\n\r\n# Do This\r\n\r\nFind a way to make `roll` a smaller number while still using it to steer the car. You have all of the math operators available to you for this.\r\n\r\n_Challenge_: Can you keep the car from going off the side of the screen?",
+    "long_instructions": "# Limiting Turn\r\n\r\nYou might have noticed that it was really hard to steer the car unless your hands were moving slowly and carefully. This is because the number that `roll` returns can be a really big number depending on how much the accelerometer is being turned. Remember, `roll` has a range from -90 to 90.\r\n\r\n# Do This\r\n\r\nFind a way to make `roll` a smaller number while still using it to steer the car. You have all of the math operators available to you for this.\r\n\r\n_Challenge_: Can you keep the car from going off the side of the screen?",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

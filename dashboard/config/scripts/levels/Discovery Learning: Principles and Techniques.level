@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 37,
   "properties": {
-    "markdown_instructions": "The following link is a resource that shows the principles and techniques of discovery learning: ",
+    "long_instructions": "The following link is a resource that shows the principles and techniques of discovery learning: ",
     "link_title": "Discovery learning techniques",
     "url": "https://elearningindustry.com/discovery-learning-model"
   },

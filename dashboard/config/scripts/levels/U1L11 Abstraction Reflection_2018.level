@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Reflection: Sending Formatted Text",
-    "markdown_instructions": "An abstraction is a simplified representation of something that is more complex. Decimal numbers were a useful abstraction in the context of today's lesson. Write a short response to both questions below.\r\n\r\n* What is the underlying complexity decimal numbers were used to represent.\r\n* How were decimal numbers helpful in designing a system to represent text in bits?",
+    "long_instructions": "An abstraction is a simplified representation of something that is more complex. Decimal numbers were a useful abstraction in the context of today's lesson. Write a short response to both questions below.\r\n\r\n* What is the underlying complexity decimal numbers were used to represent.\r\n* How were decimal numbers helpful in designing a system to represent text in bits?",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 2408,

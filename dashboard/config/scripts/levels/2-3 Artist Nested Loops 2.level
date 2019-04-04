@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Now loop the triangle 6 times. \r\n\r\nAfter each triangle, you'll need to turn 60 degrees before drawing the next.",
+    "short_instructions": "Now loop the triangle 6 times. \r\n\r\nAfter each triangle, you'll need to turn 60 degrees before drawing the next.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -29,7 +29,7 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Now loop the triangle 6 times. \r\n\r\nAfter each triangle, you'll need to turn 60 degrees before drawing the next.",
+    "long_instructions": "Now loop the triangle 6 times. \r\n\r\nAfter each triangle, you'll need to turn 60 degrees before drawing the next.",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",

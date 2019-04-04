@@ -27,7 +27,10 @@ const UPDATE_VALUE = 'watchedExpressions/UPDATE_VALUE';
  */
 const watchedExpressionsInitialState = Immutable.List();
 
-export default function reducer(state = watchedExpressionsInitialState, action) {
+export default function reducer(
+  state = watchedExpressionsInitialState,
+  action
+) {
   if (action.type === ADD_EXPRESSION) {
     const {expression} = action;
     const uuid = createUuid();
@@ -36,11 +39,15 @@ export default function reducer(state = watchedExpressionsInitialState, action) 
 
   if (action.type === UPDATE_VALUE) {
     const {value, expression} = action;
-    return state.map(e => e.get('expression') === expression ? Immutable.Map({
-      lastValue: value,
-      expression,
-      uuid: e.get('uuid')
-    }) : e);
+    return state.map(e =>
+      e.get('expression') === expression
+        ? Immutable.Map({
+            lastValue: value,
+            expression,
+            uuid: e.get('uuid')
+          })
+        : e
+    );
   }
 
   if (action.type === REMOVE_EXPRESSION) {
@@ -55,12 +62,12 @@ export default function reducer(state = watchedExpressionsInitialState, action) 
  *  (e.g. function doAThing(n) { return {type: DO_A_THING, arg: n}; })
  */
 
-export const add = (expression) => ({
+export const add = expression => ({
   type: ADD_EXPRESSION,
   expression
 });
 
-export const remove = (expression) => ({
+export const remove = expression => ({
   type: REMOVE_EXPRESSION,
   expression
 });

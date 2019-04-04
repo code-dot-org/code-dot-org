@@ -1,0 +1,37 @@
+name 'AP_practice_Qs_rqb_33_CSP_2_1_1'
+wrong 'Binary 11010
+Hexadecimal FF
+Decimal 32
+'
+wrong 'Binary 1010
+Hexadecimal A
+Decimal 11'
+wrong 'Binary 1101
+Hexadecimal BB
+Decimal 13'
+right 'Binary 1110
+Hexadecimal E
+Decimal 14 
+'
+markdown <<MARKDOWN
+Which of the following are equivalent representations of the same number?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.1** and Essential Knowledge statements: **2.1.1G**
+<hr>
+ (A) This answer is incorrect because Binary 11010 is equivalent to Decimal 26 and Hexadecimal FF is equivalent to Decimal 255, which are not equivalent. 
+
+
+<hr>
+ (B) This answer is incorrect because Binary 1010 is equivalent to Decimal 10 and Hexadecimal E is equivalent to Decimal 14, which are not equivalent. 
+
+
+<hr>
+ (C) This answer is incorrect because Binary 1101 is equivalent to Decimal 13 and Hexadecimal BB is equivalent to Decimal 187, which are not equivalent.
+
+
+<hr>
+ (D) This answer is correct because Binary 1110 is equivalent to Decimal 14 and Hexadecimal E is also equivalent to Decimal 14. 
+
+
+MARKDOWN

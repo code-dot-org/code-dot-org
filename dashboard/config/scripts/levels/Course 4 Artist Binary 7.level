@@ -19,7 +19,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "instructions": "Finish this drawing.",
+    "short_instructions": "Finish this drawing.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

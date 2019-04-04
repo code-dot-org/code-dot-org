@@ -40,7 +40,6 @@ class Level < ActiveRecord::Base
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
 
   after_save :write_custom_level_file
-  after_save :update_key_list
   after_destroy :delete_custom_level_file
 
   accepts_nested_attributes_for :level_concept_difficulty, update_only: true
@@ -53,8 +52,6 @@ class Level < ActiveRecord::Base
     video_key
     embed
     callout_json
-    instructions
-    markdown_instructions
     authored_hints
     instructions_important
     display_name
@@ -63,6 +60,15 @@ class Level < ActiveRecord::Base
     name_suffix
     parent_level_id
     hint_prompt_attempts_threshold
+    short_instructions
+    long_instructions
+    rubric_key_concept
+    rubric_exceeds
+    rubric_meets
+    rubric_approaches
+    rubric_no_evidence
+    mini_rubric
+    encrypted
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -81,6 +87,7 @@ class Level < ActiveRecord::Base
   # So, we must do it manually.
   def assign_attributes(new_attributes)
     attributes = new_attributes.stringify_keys
+
     concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
     if concept_difficulty_attributes
       assign_nested_attributes_for_one_to_one_association(
@@ -97,17 +104,7 @@ class Level < ActiveRecord::Base
 
   def specified_autoplay_video
     @@specified_autoplay_video ||= {}
-    @@specified_autoplay_video[video_key] ||= Video.find_by_key(video_key) unless video_key.nil?
-  end
-
-  def self.key_list
-    @@all_level_keys ||= Level.all.map {|l| [l.id, l.key]}.to_h
-    @@all_level_keys
-  end
-
-  def update_key_list
-    @@all_level_keys ||= nil
-    @@all_level_keys[id] = key if @@all_level_keys
+    @@specified_autoplay_video[video_key + ":" + I18n.locale.to_s] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
   end
 
   def summarize_concepts
@@ -208,7 +205,22 @@ class Level < ActiveRecord::Base
   # Input: xml level file definition
   # Output: Hash of level properties
   def load_level_xml(xml_node)
-    JSON.parse(xml_node.xpath('//../config').first.text)
+    hash = JSON.parse(xml_node.xpath('//../config').first.text)
+    begin
+      encrypted_properties = hash.delete('encrypted_properties')
+      encrypted_notes = hash.delete('encrypted_notes')
+      if encrypted_properties
+        hash['properties'] =  Encryption.decrypt_object(encrypted_properties)
+      end
+      if encrypted_notes
+        hash['notes'] = Encryption.decrypt_object(encrypted_notes)
+      end
+    rescue Encryption::KeyMissingError
+      # developers and adhoc environments must be able to seed levels without properties_encryption_key
+      raise unless rack_env?(:development) || rack_env?(:adhoc)
+      puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
+    end
+    hash
   end
 
   def self.write_custom_levels
@@ -224,10 +236,16 @@ class Level < ActiveRecord::Base
 
   def write_custom_level_file
     if should_write_custom_level_file?
-      file_path = LevelLoader.level_file_path(name)
+      file_path = Level.level_file_path(name)
       File.write(file_path, to_xml)
       file_path
     end
+  end
+
+  def self.level_file_path(level_name)
+    level_paths = Dir.glob(Rails.root.join("config/scripts/**/#{level_name}.level"))
+    raise("Multiple .level files for '#{name}' found: #{level_paths}") if level_paths.many?
+    level_paths.first || Rails.root.join("config/scripts/levels/#{level_name}.level")
   end
 
   def to_xml(options = {})
@@ -235,8 +253,12 @@ class Level < ActiveRecord::Base
       xml.send(type) do
         xml.config do
           hash = serializable_hash(include: :level_concept_difficulty).deep_dup
-          config_attributes = filter_level_attributes(hash)
-          xml.cdata(JSON.pretty_generate(config_attributes.as_json))
+          hash = filter_level_attributes(hash)
+          if encrypted?
+            hash['encrypted_properties'] = Encryption.encrypt_object(hash.delete('properties'))
+            hash['encrypted_notes'] = Encryption.encrypt_object(hash.delete('notes'))
+          end
+          xml.cdata(JSON.pretty_generate(hash.as_json))
         end
       end
     end
@@ -279,6 +301,7 @@ class Level < ActiveRecord::Base
     'Bounce', # no ideal solution
     'ContractMatch', # dsl defined, covered in dsl
     'CurriculumReference', # no user submitted content
+    'Dancelab', # no ideal solution
     'DSLDefined', # dsl defined, covered in dsl
     'EvaluationMulti', # unknown
     'External', # dsl defined, covered in dsl
@@ -361,7 +384,8 @@ class Level < ActiveRecord::Base
   def channel_backed?
     return false if try(:is_project_level)
     free_response_upload = is_a?(FreeResponse) && allow_user_uploads
-    project_template_level || free_response_upload || game.channel_backed?
+    dance_party_free_play = is_a?(Dancelab) && try(:free_play?)
+    project_template_level || free_response_upload || game.channel_backed? || dance_party_free_play
   end
 
   def key
@@ -466,7 +490,8 @@ class Level < ActiveRecord::Base
   def summary_for_lesson_plans
     summary = summarize
 
-    %w(title questions answers instructions markdown_instructions markdown teacher_markdown pages reference).each do |key|
+    %w(title questions answers short_instructions long_instructions markdown teacher_markdown pages reference
+       rubric_key_concept rubric_exceeds rubric_meets rubric_approaches rubric_no_evidence mini_rubric).each do |key|
       value = properties[key] || try(key)
       summary[key] = value if value
     end
@@ -484,7 +509,7 @@ class Level < ActiveRecord::Base
 
   # Overriden by some child classes
   def get_question_text
-    properties['markdown_instructions']
+    long_instructions
   end
 
   # Used for individual levels in assessments
@@ -511,7 +536,8 @@ class Level < ActiveRecord::Base
   # @raise [ActiveRecord::RecordInvalid] if the new name already is taken.
   def clone_with_name(new_name)
     level = dup
-    level.update!(name: new_name, parent_level_id: id)
+    # specify :published to make should_write_custom_level_file? return true
+    level.update!(name: new_name, parent_level_id: id, published: true)
     level
   end
 

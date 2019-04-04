@@ -1,0 +1,70 @@
+hr:
+  data:
+    long_instructions:
+      2-3 Artist 3.4: "Blok Skoči pomiče umjetnika bez crtanja. \nNacrtaj isprekidanu liniju koristeći i blokove za skakanje i blokove za crtanje."
+      2-3 Artist 4: Pomozi mi dovršiti kuću za ovu mačku.
+      2-3 Artist 9 NEW: Dovrši ovog zmaja
+      2-3 Artist 9 REPLACEMENT: Dovrši crtanje ovih stuba!
+      2-3 Artist 9: Dovrši ovog zmaja
+      2-3 Artist Debugging 10: "Tipke smjera na mojoj igraćoj konzoli su preuske. Savjet: Napravi da budu 10 piksela šire"
+      2-3 Artist Debugging 11: |-
+        Pomozi mi dovršiti moju prekrasnu pahuljicu. Koliko puta moram "ponoviti" da je završim?
+      2-3 Artist Debugging 2: "Kod tri brka koja vidiš je pogrešan. Savjet: svaki brk je dugačak 75 piksela. Popravi ovaj kod da nacrtaš brkove."
+      2-3 Artist Debugging 3: "Moj čamac ima rupu. \\r \n\\r\nŠto treba ispraviti da bi se crte spojile?"
+      2-3 Artist Debugging 5: "Kod za nogu i stopalo koji vidiš je pogrešan. Savjet: Noga je predugačka, trebaš izbrisati jedan korak (namjerna igra riječima)"
+      2-3 Artist Debugging 6: |-
+        Izgleda da sjedim na stolici kojoj nedostaje noga. Popravi blokove da nacrtaš drugu nogu.
+      2-3 Artist Debugging 7: |-
+        Izgleda da se C u riječi Code crta naopačke. Možeš li napraviti da izgleda kao C?
+      2-3 Artist Debugging 8: |-
+        Moja zvjezdica nije dovršena. Koliko puta trebam ponoviti da je dovršim?
+      2-3 Artist Debugging 9: |-
+        Kod za crtanje stabljike ne neispravan. Savjet: Kut je premalen za 60 stupnjeva
+      2-3 Artist Free Play: Besplatna igra! Nacrtaj što god želiš.
+      2-3 Artist Functions 11.5: "Ovdje je ta ista \"Nacrtati šesterokut\" funkcija. Što ako samo okrenete za 60 stupnjeva kod svakog ponavljanja?"
+      2-3 Artist Functions 12 Mike: "Funkcije su odlične za crtanje složenih stvari više puta. Možeš li koristeći naredbu \"nacrtaj cvijet\" ispuniti ostatak cvjetnjaka? (Pomoć: biljke su udaljene 100 piksela)  "
+      2-3 Artist Functions 12 a: "Funkcije su odlične za crtanje složenih stvari više puta. Možeš li koristeći naredbu \"nacrtaj cvijet\" ispuniti ostatak cvjetnjaka? (Pomoć: biljke su udaljene 100 piksela)  "
+      2-3 Artist Functions 12: "Funkcije su odlične za crtanje složenih stvari više puta. Možeš li koristeći naredbu \"nacrtaj cvijet\" ispuniti ostatak cvjetnjaka? (Pomoć: biljke su udaljene 100 piksela)  "
+      2-3 Artist Functions 2: "Funkcije nam omogućuju definiranje novih blokova! Premjestili smo blokove za crtanje kvadrata u funkciju pod nazivom \"Crtanje kvadrata\". Možeš li nacrtati naočale koristeći funkciju \"Crtanje kvadrata\"? Kvadrati su udaljeni 75 piksela."
+      2-3 Artist Functions 3: "Uredi funkciju tako da duljine stranica kvadrata iznose 115 piksela i nacrtaj veće naočale. Kvadrati su sada udaljeni 45 piksela."
+      2-3 Artist Functions 4: Koristi blok "Ponovi" za crtanje ova 3 kvadrata.
+      2-3 Artist Loops 1: Možeš li nacrtati šesterokut duljine stranica 100 piksela kako bi dovršio ćeliju? Zapamti, to znači da se trebaš zakrenuti za 60 stupnjeva!
+      2-3 Artist Loops New 10: Sada povežimo nekoliko V-ova zajedno u petlju.
+      2-3 Artist Loops New 12: "Nacrtaj dijamant sa stranicama od 100 piksela.\n"
+      2-3 Artist Loops New 2: |-
+        Evo istog pitanja koje si već riješio/la, no ovaj put trebamo upotrijebiti petlje. Možeš li staviti 'Ponovi' oko početnog koda kako bi dovršio/la robotu glavu?
+      2-3 Artist Loops New 9: Nacrtaj jednostavan V (obje strane duge 50 piksela) da dovršiš strelicu.
+      2-3 Artist Nested Loops 10: Ponovi ovak kod 12 puta kako bi dovršio uzorak.
+      2-3 Artist Nested Loops 11: Ponovi ovaj kod 4 puta kako bi dovršio uzorak; okreni 90 stupnjeva nakon svakog kruga.
+      2-3 Artist Nested Loops 12: Ponovi ovaj kod 12 puta kako bi dovršio kovrče.
+      2-3 Artist Nested Loops 2: "Sada ponovi ovaj trokut 6 puta. \\r \n\\r\nNakon svakog trokuta morat ćeš zaokrenuti 60 stupnjeva, prije nego kreneš crtati sljedeći."
+      2-3 Artist Nested Loops 4: "Ponovi ovaj dijamant 12 puta da nacrtaš cvijet!\\r\n\\r\nPazi: Upotrijebit ćemo isti kut da ponovimo 12 dijamanata kao što smo učinili za 12 trokuta. \\r \nKoliko okret trebaš načiniti nakon svakog oblika?"
+      2-3 Artist Nested Loops 5: "Popuni prozore zgrade koristeći ugniježđene petlje. \\r\n\\r \nProzori su dugi 20 piksela te udaljeni jedan od drugoga 20 piksela."
+      2-3 Artist Nested Loops 7: "Ponovi trokut u petlji 10 puta da bi nacrtao sunce. Trebat ćeš se pomaknuti i okrenuti nakon svakog trokuta. Koliko se trebaš okrenuti izračunaj tako da podijeliš broj stupnjeva za puni krug s brojem likova koji ti trebaju."
+      2-3 Bee Conditionals 11: "Pitam se što se ondje nalazi!\\r\n\\r\nPomozi\nmi letjeti po dvorištu i prikupiti nektar samo iz onih cvjetova koji ga\nimaju. "
+      2-3 Bee Conditionals 3: "Pogledaj sav taj nektar! \\r \\r Pomozi mi skupiti nektar i proizvesti med koristeći čim manje blokova.  "
+      2-3 Bee Loops 4A: "Koliko ti puta mogu petlje pomoći u ovom zadatku? \\r\n\\r Petlje su ti prijatelji! Upotrijebi nekoliko njih da dovršiš ovaj zadatak koristeći što manje blokova."
+      2-3 Maze Loops 18: "Odvedi me do suncokreta!"
+      4-5 Maze Conditionals 9: |-
+        Još jedna vježba s "ako-inače" blokom, možeš li je riješiti iz prvog pokušaja?
+      Artist Autorun Test: Koristi blok "Ponovi" za crtanje ova 3 kvadrata.
+      Overworld Move to Sheep: Dodajte drugu 'pomakni desno' naredbu u svoj kod kako biste došli do ovce.
+      Overworld Move to Sheep_2018: Dodajte drugu 'pomakni desno' naredbu u svoj kod kako biste došli do ovce.
+      Overworld Move to Sheep_2019: Dodajte drugu 'pomakni desno' naredbu u svoj kod kako biste došli do ovce.
+      course4_artist_fwp_challenge1: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
+      courseD_maze_nestedLoops4: 'Odvedi me do suncokreta!'
+      courseD_maze_nestedLoops4_2018: 'Odvedi me do suncokreta!'
+      courseD_maze_nestedLoops4_2019: 'Odvedi me do suncokreta!'
+      grade2_MakeDogTag_8: Sada povežimo nekoliko V-ova zajedno u petlju.
+      grade2_PuppyLoops_10: |-
+        Moja zvjezdica nije dovršena. Koliko puta trebam ponoviti da je dovršim?
+      grade2_PuppyLoops_8: "Kod tri brka koja vidiš je pogrešan. Savjet: svaki brk je dugačak 75 piksela. Popravi ovaj kod da nacrtaš brkove."
+      grade2_PuppyLoops_9: |-
+        Izgleda da se C u riječi Code crta naopačke. Možeš li napraviti da izgleda kao C?
+      grade3_Conditionals_2: "Pogledaj sav taj nektar! \\r \\r Pomozi mi skupiti nektar i proizvesti med koristeći čim manje blokova.  "
+      grade3_Conditionals_8: "Pitam se što se ondje nalazi!\\r\n\\r\nPomozi\nmi letjeti po dvorištu i prikupiti nektar samo iz onih cvjetova koji ga\nimaju. "
+      grade3_Loops_6: "Koliko ti puta mogu petlje pomoći u ovom zadatku? \\r\n\\r Petlje su ti prijatelji! Upotrijebi nekoliko njih da dovršiš ovaj zadatak koristeći što manje blokova."
+      grade3_maze_loops2: 'Odvedi me do suncokreta!'
+      grade4_artist_functions2: "Funkcije nam omogućuju definiranje novih blokova! Premjestili smo blokove za crtanje kvadrata u funkciju pod nazivom \"Crtanje kvadrata\". Možeš li nacrtati naočale koristeći funkciju \"Crtanje kvadrata\"? Kvadrati su udaljeni 75 piksela."
+      grade4_review_artist3: "Blok Skoči pomiče umjetnika bez crtanja. \nNacrtaj isprekidanu liniju koristeći i blokove za skakanje i blokove za crtanje."
+      level 'grade3_Loops_6: "Koliko ti puta mogu petlje pomoći u ovom zadatku? \\r\n\\r Petlje su ti prijatelji! Upotrijebi nekoliko njih da dovršiš ovaj zadatak koristeći što manje blokova."

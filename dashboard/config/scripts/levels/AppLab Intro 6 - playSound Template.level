@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/2bb21cff40cc9823a4ae370895de2953-image-1508294971111.49.16 PM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Add an animal to the sound board. If you don't want to find a picture of your animal then change the color of the speaker icon to one you like.\r\n\r\n**How:** Add an `onEvent()` and use `playSound()` inside of it. Find an animal sound you like in the sound library. For the picture you can either upload an image you find online and change the button's `\"image\"` property, or just change the `\"icon-color\"`. \r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/b0f254d319f788f832553648db6fb13c-image-1507566138094.gif)",
+    "long_instructions": "<img src=\"https://images.code.org/2bb21cff40cc9823a4ae370895de2953-image-1508294971111.49.16 PM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Add an animal to the sound board. If you don't want to find a picture of your animal then change the color of the speaker icon to one you like.\r\n\r\n**How:** Add an `onEvent()` and use `playSound()` inside of it. Find an animal sound you like in the sound library. For the picture you can either upload an image you find online and change the button's `\"image\"` property, or just change the `\"icon-color\"`. \r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/b0f254d319f788f832553648db6fb13c-image-1507566138094.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Complete the 'draw waves' function.  Each wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue waves.",
+    "short_instructions": "Complete the 'draw waves' function.  Each wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue waves.",
     "x": "50",
     "y": "300",
     "start_direction": "0",

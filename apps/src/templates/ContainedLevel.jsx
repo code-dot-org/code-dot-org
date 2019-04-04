@@ -1,17 +1,18 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 
 const styles = {
   main: {
-    marginBottom: '10px',
+    marginBottom: '10px'
   },
   hidden: {
     display: 'none'
   }
 };
 
-class ContainedLevel extends  Component {
+class ContainedLevel extends Component {
   // Note: This component modifies portions of the DOM outside of itself upon
   // mounting. This is generally considered a bad practice, and should not be
   // copied elsewhere.
@@ -30,9 +31,7 @@ class ContainedLevel extends  Component {
   render() {
     return (
       <div style={this.props.hidden ? styles.hidden : null}>
-        <ProtectedStatefulDiv
-          style={styles.main}
-        />
+        <ProtectedStatefulDiv style={styles.main} />
       </div>
     );
   }

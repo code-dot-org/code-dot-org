@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "Logic",
   "config": {
     "func": "keyDown",
     "name": "keyDown",

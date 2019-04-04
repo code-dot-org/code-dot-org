@@ -39,7 +39,6 @@ sl:
       update_needs_confirmation: "Vaš račun ste uspešno posodobili, vendar moramo preveriti vaš novi e-poštni naslov. Prosim poglejte svojo e-pošto in kliknite na povezavo, da dokončate potrditev vašega novega e-poštnega naslova."
       updated: "Uspešno ste posodobili vaš račun."
     sessions:
-      signed_in: ""
       signed_out: "Uspešen izpis."
     unlocks:
       send_instructions: "V naslednjih minutah boste prejeli e-pošto z navodilom kako odkleniti vaš račun."

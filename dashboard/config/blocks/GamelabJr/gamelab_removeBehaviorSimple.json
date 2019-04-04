@@ -1,5 +1,5 @@
 {
-  "category": "Behaviors",
+  "category": "Sprites",
   "config": {
     "func": "removeBehaviorSimple",
     "blockText": "sprite {SPRITE} stops {BEHAVIOR}",

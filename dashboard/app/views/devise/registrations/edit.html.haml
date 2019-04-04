@@ -7,6 +7,10 @@
 
 %h2= @page_title
 
+- unless current_user.migrated?
+  -# Mount point for React MigrateToMultiAuth component.
+  %div#migrate-multi-auth
+
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   - email_mismatch = current_user.errors.delete(:email_mismatch)
   - current_user.reload if email_mismatch.present?
@@ -22,9 +26,11 @@
     -# Temporary: Allow single-auth students with no email to add a parent email
     - if current_user.parent_managed_account? || current_user.can_add_parent_email?
       .field
-        = f.label :parent_email, class: "label-bold"
+        = f.label t('user.parent_email_label'), class: "label-bold"
+        %em= t('user.parent_email_hint')
+        %br/
         = f.email_field :parent_email, autocomplete: 'off', maxlength: 255
-    - else
+    - if !current_user.parent_managed_account?
       .field
         = f.label :email, class: "label-bold"
         - if current_user.migrated? && !current_user.student?
@@ -76,7 +82,7 @@
 
   %div#submit-update= f.submit t('user.update'), class: 'btn btn-primary'
 
-- if current_user.can_edit_password? && current_user.encrypted_password.blank?
+- if current_user.should_see_add_password_form?
   -# Mount point for React AddPasswordForm component.
   %div#add-password-fields
 
@@ -100,7 +106,9 @@
 - if current_user.can_create_personal_login?
   %hr
   %h2= t('user.create_personal_login')
-  %p= no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
+  %p
+    = no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
+    = t('user.create_personal_login_link_account') if current_user.migrated?
   = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account'}, namespace: 'create_personal') do |form|
     = form.hidden_field :hashed_email
     %h3= t('user.enter_new_login_info')
@@ -148,7 +156,6 @@
       namespace: 'change-user-type',
     ) do |f|
     = f.hidden_field :email
-    = f.hidden_field :hashed_email
     = f.hidden_field :email_preference_opt_in
     %hr.account-page-section-break
     %h2= t('signup_form.user_type_label')
@@ -161,18 +168,7 @@
 
 - if current_user.can_delete_own_account?
   -# Mount point for React DeleteAccount component.
-  -# If the ACCOUNT_DELETION_NEW_FLOW experiment is enabled, DeleteAccount will replace the Rails
-  -# confirmation dialog below.
   %div#delete-account
-    %hr.danger.account-page-section-break
-    %h2.danger= t('user.delete')
-    %p
-      = t('user.delete_text')
-      - if current_user.teacher?
-        = t('user.delete_text_teacher_note')
-      .farSide
-        - data_hash = { confirm: t('user.delete_confirm') }
-        = button_to t('user.delete'), registration_path(resource_name), data: data_hash, method: :delete, class: 'btn btn-danger'
 - else
   %hr.danger.account-page-section-break
   %h2.danger= t('user.delete')
@@ -203,7 +199,7 @@
       authenticationOptions: current_user.authentication_options.map(&:summarize),
       isGoogleClassroomStudent: current_user.google_classroom_student?,
       isCleverStudent: current_user.clever_student?,
-      dependedUponForLogin: current_user.depended_upon_for_login?,
+      dependentStudents: current_user.dependent_students,
       studentCount: current_user.students.count,
     }.to_json
   }

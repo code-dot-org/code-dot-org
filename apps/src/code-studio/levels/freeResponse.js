@@ -1,27 +1,36 @@
 import $ from 'jquery';
-import { TestResults } from '../../constants';
-import { onAnswerChanged } from './codeStudioLevels';
-import { sourceForLevel } from '../clientState';
+import {TestResults} from '../../constants';
+import {onAnswerChanged} from './codeStudioLevels';
+import {sourceForLevel} from '../clientState';
 
 export default class FreeResponse {
-  constructor(levelId) {
+  constructor(levelId, optional) {
     this.levelId = levelId;
+    // Levelbuilder booleans are undefined, 'true', or 'false'.
+    this.optional = [true, 'true'].includes(optional);
 
-    $(document).ready(function () {
+    $(document).ready(function() {
       var textarea = $(`textarea#level_${levelId}.response`);
       if (!textarea.val()) {
-        const lastAttempt = sourceForLevel(window.appOptions.scriptName, levelId);
+        const lastAttempt = sourceForLevel(
+          window.appOptions.scriptName,
+          levelId
+        );
         if (lastAttempt) {
           textarea.val(lastAttempt);
         }
       }
-      textarea.blur(function () {
+      textarea.blur(function() {
         onAnswerChanged(levelId, true);
       });
-      textarea.on('input', null, null, function () {
+      textarea.on('input', null, null, function() {
         onAnswerChanged(levelId, false);
       });
     });
+  }
+
+  getOptional() {
+    return this.optional;
   }
 
   getResult() {
@@ -30,7 +39,7 @@ export default class FreeResponse {
       response: response,
       valid: response.length > 0,
       result: true,
-      testResult: TestResults.FREE_PLAY,
+      testResult: TestResults.FREE_PLAY
     };
   }
 

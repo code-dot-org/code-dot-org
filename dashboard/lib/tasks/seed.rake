@@ -31,6 +31,13 @@ namespace :seed do
     'course3',
     'course4',
     'coursea-2017',
+    'courseb-2017',
+    'coursec-2017',
+    'coursed-2017',
+    'coursee-2017',
+    'coursef-2017',
+    'express-2017',
+    'pre-express-2017',
     'coursea-2018',
     'csp1-2017',
     'csp2-2017',
@@ -52,7 +59,9 @@ namespace :seed do
     'csp-explore-2018',
     'csp-create-2018',
     'csppostap-2018',
+    'dance',
     'events',
+    'express-2017',
     'flappy',
     'frozen',
     'hero',
@@ -100,6 +109,7 @@ namespace :seed do
     :dsls,
     :blocks,
     :shared_blockly_functions,
+    :libraries,
   ].freeze
 
   task scripts: SCRIPTS_DEPENDENCIES do
@@ -158,10 +168,6 @@ namespace :seed do
     end
   end
 
-  task import_custom_levels: :environment do
-    LevelLoader.load_custom_levels
-  end
-
   task blocks: :environment do
     Block.load_records
   end
@@ -217,6 +223,11 @@ namespace :seed do
 
   task state_cs_offerings: :environment do
     Census::StateCsOffering.seed
+  end
+
+  # Seed school course offering data where the courses are taught by outside curriculum providers, such as TEALS.
+  task other_curriculum_offerings: :environment do
+    Census::OtherCurriculumOffering.seed
   end
 
   task sample_data: :environment do

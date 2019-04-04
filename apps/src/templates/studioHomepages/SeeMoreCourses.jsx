@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import i18n from "@cdo/locale";
+import React, {Component} from 'react';
+import i18n from '@cdo/locale';
 import CourseCard from './CourseCard';
 import ContentContainer from '../ContentContainer';
-import Button from "../Button";
+import Button from '../Button';
 import shapes from './shapes';
-import color from "../../util/color";
+import color from '../../util/color';
 
 const styles = {
   spacer: {
@@ -22,7 +22,7 @@ const styles = {
 
 export default class SeeMoreCourses extends Component {
   static propTypes = {
-    courses: shapes.courses,
+    courses: shapes.courses
   };
 
   state = {
@@ -30,31 +30,26 @@ export default class SeeMoreCourses extends Component {
   };
 
   showMoreCourses() {
-    this.setState({ open: true });
+    this.setState({open: true});
   }
 
   render() {
-    const { courses } = this.props;
+    const {courses} = this.props;
 
     return (
       <div>
         {this.state.open && courses && (
-          <ContentContainer
-            heading=""
-            linkText=""
-            link=""
-            showLink={false}
-          >
-            {courses.map((course, index) =>
+          <ContentContainer heading="" linkText="" link="" showLink={false}>
+            {courses.map((course, index) => (
               <div key={index}>
                 <CourseCard
                   title={course.title}
                   description={course.description}
                   link={course.link}
                 />
-                {(index % 2 === 0) && <div style={styles.spacer}>.</div>}
+                {index % 2 === 0 && <div style={styles.spacer}>.</div>}
               </div>
-            )}
+            ))}
           </ContentContainer>
         )}
         {!this.state.open && (

@@ -29,29 +29,21 @@ export default class DisabledBubblesModal extends React.Component {
 
   render() {
     return (
-      <BaseDialog
-        isOpen={this.state.open}
-        uncloseable={true}
-      >
+      <BaseDialog isOpen={this.state.open} uncloseable={true}>
         <div style={styles.main}>
+          <div style={styles.paragraph}>{i18n.disabledProgress1()}</div>
+          <div style={styles.paragraph}>{i18n.disabledProgress2()}</div>
+          <div style={styles.paragraph}>{i18n.disabledProgress3()}</div>
           <div style={styles.paragraph}>
-            {i18n.disabledProgress1()}
-          </div>
-          <div style={styles.paragraph}>
-            {i18n.disabledProgress2()}
-          </div>
-          <div style={styles.paragraph}>
-            {i18n.disabledProgress3()}
-          </div>
-          <div style={styles.paragraph}>
-            <a target="_blank" href="https://support.code.org/hc/en-us/articles/115002660852">
+            <a
+              target="_blank"
+              href="https://support.code.org/hc/en-us/articles/115002660852"
+            >
               {i18n.learnMore()}
             </a>
           </div>
           <div style={styles.button}>
-            <button onClick={this.handleClose}>
-              {i18n.dialogOK()}
-            </button>
+            <button onClick={this.handleClose}>{i18n.dialogOK()}</button>
           </div>
         </div>
       </BaseDialog>

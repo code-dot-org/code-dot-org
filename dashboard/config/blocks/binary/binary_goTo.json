@@ -1,0 +1,14 @@
+{
+  "category": "",
+  "config": {
+    "func": "goTo",
+    "blockText": "jump to {LOC}",
+    "args": [
+      {
+        "name": "LOC",
+        "type": "Number",
+        "field": true
+      }
+    ]
+  }
+}

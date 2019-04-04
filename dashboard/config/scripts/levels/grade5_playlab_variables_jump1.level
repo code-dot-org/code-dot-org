@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "This puzzle uses a hidden function that makes the dog jump when the 'up' arrow is pressed. The height of the jumps can be set at the start of the game using the 'jumpPower' variable. Try to touch all of the flags!",
+    "short_instructions": "This puzzle uses a hidden function that makes the dog jump when the 'up' arrow is pressed. The height of the jumps can be set at the start of the game using the 'jumpPower' variable. Try to touch all of the flags!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -32,7 +32,7 @@
     "scrollbars": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "This puzzle uses a hidden function that makes the dog jump when the `up` arrow is pressed. The height of the jumps can be set at the start of the game using the `jumpPower` variable. Try to touch all of the flags!",
+    "long_instructions": "This puzzle uses a hidden function that makes the dog jump when the `up` arrow is pressed. The height of the jumps can be set at the start of the game using the `jumpPower` variable. Try to touch all of the flags!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

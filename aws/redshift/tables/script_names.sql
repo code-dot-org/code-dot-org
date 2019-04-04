@@ -23,8 +23,8 @@ INSERT INTO analysis.script_names values
 (302,'coursed-2018','coursed','Course D'),
 (309,'coursee-2018','coursee','Course E'),
 (310,'coursef-2018','coursef','Course F'),
-(303,'express-2017','express','Express'),
-(341,'pre-express-2017','pre-express','Pre-Express');
+(303,'express-2018','express','Express'),
+(341,'pre-express-2018','pre-express','Pre-Express');
 
 GRANT SELECT ON analysis.script_names TO group reader;
 GRANT SELECT, INSERT, DELETE, RULE, TRIGGER, REFERENCES, UPDATE ON analysis.script_names TO group admin;

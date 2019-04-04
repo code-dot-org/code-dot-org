@@ -4,23 +4,19 @@ import {expect} from '../../../util/configuredChai';
 import {sections} from './fakeSectionUtils';
 import i18n from '@cdo/locale';
 import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections';
-import ContentContainer from "@cdo/apps/templates/ContentContainer";
-import JoinSection from "@cdo/apps/templates/studioHomepages/JoinSection";
-import JoinSectionNotifications from "@cdo/apps/templates/studioHomepages/JoinSectionNotifications";
-import SectionsAsStudentTable from "@cdo/apps/templates/studioHomepages/SectionsAsStudentTable";
+import ContentContainer from '@cdo/apps/templates/ContentContainer';
+import JoinSection from '@cdo/apps/templates/studioHomepages/JoinSection';
+import JoinSectionNotifications from '@cdo/apps/templates/studioHomepages/JoinSectionNotifications';
+import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
 
 describe('StudentSections', () => {
   const defaultProps = {
-    initialSections: [],
-    canLeave: false,
+    initialSections: []
   };
 
   it('does not render a SectionsAsStudentTable when not enrolled in any sections', () => {
     const wrapper = shallow(
-      <StudentSections
-        {...defaultProps}
-        initialSections={[]}
-      />
+      <StudentSections {...defaultProps} initialSections={[]} />
     );
     const instance = wrapper.instance();
     expect(wrapper).to.containMatchingElement(
@@ -28,7 +24,7 @@ describe('StudentSections', () => {
         heading="Classroom Sections"
         description={i18n.enrollmentDescription()}
       >
-        <JoinSectionNotifications/>
+        <JoinSectionNotifications />
         <JoinSection
           enrolledInASection={false}
           updateSections={instance.updateSections}
@@ -40,10 +36,7 @@ describe('StudentSections', () => {
 
   it('renders a SectionsAsStudentTable when enrolled in one or more sections', () => {
     const wrapper = shallow(
-      <StudentSections
-        {...defaultProps}
-        initialSections={sections}
-      />
+      <StudentSections {...defaultProps} initialSections={sections} />
     );
     const instance = wrapper.instance();
     expect(wrapper).to.containMatchingElement(
@@ -51,11 +44,10 @@ describe('StudentSections', () => {
         heading="Classroom Sections"
         description={i18n.enrollmentDescription()}
       >
-        <JoinSectionNotifications/>
+        <JoinSectionNotifications />
         <SectionsAsStudentTable
           sections={sections}
-          isTeacher={false}
-          canLeave={defaultProps.canLeave}
+          canLeave={false}
           updateSections={instance.updateSections}
           updateSectionsResult={instance.updateSectionsResult}
         />

@@ -39,7 +39,6 @@ et:
       update_needs_confirmation: "Kasutajakonto andmed edukalt uuendatud, kuid meil on vaja, et kinnitaksid oma uue meiliaadressi. Palun kontrolli oma meili ja vajuta kinnituslinki, et meili uuendamine lõpule viia."
       updated: "Kasutajakonto andmed edukalt uuendatud."
     sessions:
-      signed_in: ""
       signed_out: "Väljalogimine õnnestus."
     unlocks:
       send_instructions: "Mõne minuti jooksul saadetakse sulle meil juhistega, kuidas oma kasutajakonto lahti lukustada."

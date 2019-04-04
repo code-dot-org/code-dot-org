@@ -189,7 +189,7 @@
       "CSD U6 Catch the Mouse prediction_2018"
     ],
     "embed": "false",
-    "markdown_instructions": "Embedded Prediction",
+    "long_instructions": "Embedded Prediction",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "var score = 0;\r\nled.off();\r\n\r\nonEvent(\"mouse\", \"click\", function(event) {\r\n  setProperty(\"mouse\",\"x\",randomNumber(0,200));\r\n  setProperty(\"mouse\",\"y\",randomNumber(50,350));\r\n  score = score + 1;\r\n  if (score > 10) {\r\n    setProperty(\"message\", \"text\", \"You win!!!!!!!!!!!\")\r\n    led.on();\r\n  } else if (score > 5){\r\n    led.blink(200);\r\n  }\r\n});",

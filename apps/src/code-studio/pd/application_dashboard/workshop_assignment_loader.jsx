@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
 import _ from 'lodash';
@@ -24,6 +25,7 @@ export default class WorkshopAssignmentLoader extends React.Component {
     courseName: PropTypes.string.isRequired,
     subjectType: PropTypes.oneOf(SUBJECT_TYPES).isRequired,
     assignedWorkshopId: PropTypes.number,
+    year: PropTypes.number,
     onChange: PropTypes.func.isRequired
   };
 
@@ -48,16 +50,17 @@ export default class WorkshopAssignmentLoader extends React.Component {
       state: 'Not Started',
       course: this.props.courseName,
       subject: SUBJECT_NAME_MAP[this.props.subjectType],
-      start: `${new Date().getFullYear()}-1-1`,
-      end: `${new Date().getFullYear()}-12-31`,
+      start: `${this.props.year || new Date().getFullYear()}-1-1`,
+      end: `${this.props.year || new Date().getFullYear()}-12-31`
     };
     const url = `/api/v1/pd/workshops/filter?${$.param(params)}`;
     return _.tap(
       $.ajax({
         method: 'GET',
-        dataType: "json",
+        dataType: 'json',
         url
-      }), this.storePendingRequest
+      }),
+      this.storePendingRequest
     ).then(response => {
       return response.workshops;
     });
@@ -69,49 +72,55 @@ export default class WorkshopAssignmentLoader extends React.Component {
     };
     let url = `/api/v1/pd/workshops/upcoming_teachercons?${$.param(params)}`;
 
-    return _.tap($.ajax({
-      method: 'GET',
-      dataType: "json",
-      url: url
-    }), this.storePendingRequest);
+    return _.tap(
+      $.ajax({
+        method: 'GET',
+        dataType: 'json',
+        url: url
+      }),
+      this.storePendingRequest
+    );
   }
 
   load() {
     this.pendingRequests = [];
 
-    let queries = [
-      this.getMyWorkshops()
-    ];
+    let queries = [this.getMyWorkshops()];
     if (this.props.subjectType === 'summer') {
       queries.push(this.getTeacherconWorkshops());
     }
 
-    Promise.all(queries).then(responses => {
-      this.pendingRequests = [];
+    Promise.all(queries)
+      .then(responses => {
+        this.pendingRequests = [];
 
-      const workshops = responses.reduce((flattened, subset) => flattened.concat(subset), []);
-      this.setState({
-        loading: false,
-        workshops: workshops.map(workshop => {
-          return {
-            value: workshop.id,
-            label: workshop.date_and_location_name
-          };
-        })
-      });
-    }).catch((error) => {
-      if (error.statusText !== "abort") {
+        const workshops = responses.reduce(
+          (flattened, subset) => flattened.concat(subset),
+          []
+        );
         this.setState({
           loading: false,
-          error: true
+          workshops: workshops.map(workshop => {
+            return {
+              value: workshop.id,
+              label: workshop.date_and_location_name
+            };
+          })
         });
-      }
-    });
+      })
+      .catch(error => {
+        if (error.statusText !== 'abort') {
+          this.setState({
+            loading: false,
+            error: true
+          });
+        }
+      });
   }
 
   render() {
     if (this.state.loading) {
-      return (<Spinner />);
+      return <Spinner />;
     } else if (this.state.error) {
       return (
         <div className="workshop-load-error" style={styles.error}>

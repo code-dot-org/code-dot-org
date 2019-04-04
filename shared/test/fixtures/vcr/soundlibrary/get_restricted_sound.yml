@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://cdo-restricted.s3.amazonaws.com/restricted/test.mp3
+    body:
+      encoding: UTF-8
+      string: RESTRICTED_CONTENT
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - Rh04imee0MqezkAXNPAWYw==
+      Content-Length:
+      - '18'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 06 Nov 2018 00:48:32 GMT
+      Etag:
+      - '"461d388a679ed0ca9ece401734f01663"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 06 Nov 2018 00:48:31 GMT
+- request:
+    method: get
+    uri: https://cdo-restricted.s3.amazonaws.com/restricted/test.mp3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 06 Nov 2018 00:48:32 GMT
+      Last-Modified:
+      - Tue, 06 Nov 2018 00:48:32 GMT
+      Etag:
+      - '"461d388a679ed0ca9ece401734f01663"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - audio/mp3
+      Content-Length:
+      - '18'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: RESTRICTED_CONTENT
+    http_version: 
+  recorded_at: Tue, 06 Nov 2018 00:48:31 GMT
+- request:
+    method: delete
+    uri: https://cdo-restricted.s3.amazonaws.com/restricted/test.mp3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Tue, 06 Nov 2018 00:48:33 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 06 Nov 2018 00:48:33 GMT
+recorded_with: VCR 3.0.3

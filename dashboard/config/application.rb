@@ -15,6 +15,7 @@ require 'animation_library_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
+require 'cdo/i18n_backend'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -22,7 +23,9 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
-    if Rails.env.development?
+    unless CDO.chef_managed
+      # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
+      # For other environments (development / CI), run the HTTP cache from Rack middleware.
       require 'cdo/rack/whitelist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
       config.middleware.insert_before ActionDispatch::Cookies, Rack::Whitelist::Downstream,
@@ -33,7 +36,9 @@ module Dashboard
 
       config.middleware.insert_after Rack::Cache, Rack::Whitelist::Upstream,
         HttpCache.config(rack_env)[:dashboard]
+    end
 
+    if Rails.env.development?
       Rails.application.routes.default_url_options[:port] = CDO.dashboard_port
 
       # Autoload mailer previews in development mode so changes are picked up without restarting the server.
@@ -80,9 +85,10 @@ module Dashboard
 
     # By default, config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = ['en-US']
-    config.i18n.fallbacks = {}
+    config.i18n.fallbacks[:defaults] = ['en-US']
     config.i18n.default_locale = 'en-US'
     LOCALES = YAML.load_file("#{Rails.root}/config/locales.yml")
     LOCALES.each do |locale, data|
@@ -117,6 +123,7 @@ module Dashboard
     config.autoload_paths << Rails.root.join('app', 'models', 'experiments')
     config.autoload_paths << Rails.root.join('app', 'models', 'levels')
     config.autoload_paths << Rails.root.join('app', 'models', 'sections')
+    config.autoload_paths << Rails.root.join('../lib/cdo/shared_constants')
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
@@ -125,6 +132,9 @@ module Dashboard
     config.cache_store = :memory_store, {
       size: 256.megabytes # max size of entire store
     }
+
+    # Sprockets file cache limit must be greater than precompiled-asset total to prevent thrashing.
+    config.assets.cache_limit = 1.gigabyte
 
     # turn off ActionMailer logging to avoid logging email addresses
     ActionMailer::Base.logger = nil

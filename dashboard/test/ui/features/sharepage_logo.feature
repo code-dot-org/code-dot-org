@@ -1,3 +1,5 @@
+# Brad (2018-11-14) Skip on IE due to inconsistent failures clicking the share link, maybe timing?
+@no_ie
 @as_student
 Feature: Lab share page logo
 

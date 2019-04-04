@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_country_resources) %>
+title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -105,14 +105,14 @@ Będziemy gościć wiele zabawnych, godzinnych samouczków, utworzonych przez r�
 - Wymagają od organizatorów niewielkiego czasu na przygotowanie
 - Nie wymagają nadzoru, dzięki czemu uczniowie pracują we własnym tempie i na własnym poziomie przygotowania
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Zaplanuj potrzebny sprzęt - komputery nie są niezbędne
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **Przetestuj samouczki na szkolnych komputerach lub urządzeniach.** Upewnij się, że działają prawidłowo (z dźwiękiem i obrazem).
-- **Przeglądnij strony końcowe z gratulacjami**, aby sprawdzić, co uczniowie zobaczą, kiedy skończą. 
+- **Przeglądnij strony końcowe z gratulacjami**, aby sprawdzić, co uczniowie zobaczą, kiedy skończą.
 - **Zapewnij słuchawki dla swojej grupy** lub poproś uczniów, by przynieśli swoje własne, jeśli samouczek, który wybrałeś, działa najlepiej z dźwiękiem.
 
 ## 3) Planuj bazując na urządzeniach, do jakich masz dostęp

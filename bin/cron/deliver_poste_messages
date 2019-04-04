@@ -150,9 +150,20 @@ class Deliverer
     from_address = parse_address(header['from'], {email: 'help@code.org', name: 'Code.org'})
     message.puts 'From: ' + format_address(from_address)
 
+    # List of the email part of all destination addresses, including To, Cc, and Bcc
+    # Note if any of these are omitted it won't be delivered to them even though they still appear in the headers.
+    # See https://ruby-doc.org/stdlib-2.0.0/libdoc/net/smtp/rdoc/Net/SMTP.html#method-i-send_message
+    # and https://stackoverflow.com/questions/2530142/ruby-netsmtp-send-email-with-bcc-recipients
+    to_addresses = [to_address[:email]]
+    ['Cc', 'Bcc'].each do |field|
+      next unless address = parse_address(header[field.downcase])
+      message.puts "#{field}: #{format_address(address)}"
+      to_addresses << address[:email]
+    end
+
     ['Reply-To', 'Sender'].each do |field|
       next unless address = parse_address(header[field.downcase])
-      message.puts "#{field}: " + format_address(address)
+      message.puts "#{field}: #{format_address(address)}"
     end
 
     subject = header['subject'].to_s.strip
@@ -197,7 +208,7 @@ class Deliverer
     message.puts "--#{marker}--"
 
     if !rack_env?(:development)
-      @smtp.send_message message.string, from_address[:email], to_address[:email]
+      @smtp.send_message message.string, from_address[:email], *to_addresses
     else
       puts(message.string)
     end

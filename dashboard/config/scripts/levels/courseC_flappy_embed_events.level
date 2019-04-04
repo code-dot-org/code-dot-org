@@ -12,7 +12,7 @@
     "score": "true",
     "free_play": "false",
     "scale": "{\"snapRadius\":2}",
-    "instructions": "Here's an example of a game that you're about to create yourself! Play through it one or two times to get an idea of what you are about to make.",
+    "short_instructions": "Here's an example of a game that you're about to create yourself! Play through it one or two times to get an idea of what you are about to make.",
     "embed": "true",
     "instructions_important": "false",
     "is_k1": "false",

@@ -57,7 +57,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Introducing textInput, getText and write.  First run the starter code several times.  Try to change what's written to the screen when the button is clicked. Then use getText to write to the screen what the user entered in the text box. GIF: U3L16 - useGetText.gif",
+    "short_instructions": "Introducing textInput, getText and write.  First run the starter code several times.  Try to change what's written to the screen when the button is clicked. Then use getText to write to the screen what the user entered in the text box. GIF: U3L16 - useGetText.gif",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

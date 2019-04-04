@@ -1,12 +1,46 @@
--# Locals: current_user, loc_prefix, [session_pairings]
+-# Locals: current_user, loc_prefix, [session_pairings], level
+:ruby
+  require 'cdo/create_header'
+  limit_project_types = request.cookies["_limit_project_types_#{rack_env}"]
+
+  level = defined?(local_assigns) ?
+    local_assigns[:level] :
+    false
+
+  options = {
+    limit_project_types: limit_project_types,
+    project_type: params && params[:key]
+  }
+  create_drop_down_items = CreateHeader.get_create_dropdown_contents(options)
+
+  # We want to show the Create button for all pages except when working on a
+  # course level. Specifically, for any page except non-project levels.
+  should_show_create_menu = !level || level.try(:is_project_level)
+
+- if should_show_create_menu
+  .header_button.create_menu
+    %span.create_button
+      = I18n.t("#{loc_prefix}create")
+    &nbsp;
+    %i.create_menu_arrow_down{class: "fa fa-caret-down"}
+    %i.create_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
+    .create_options{style: 'display: none'}
+      - create_drop_down_items.each do |entry|
+        %a.project_link_box{href: entry[:url]}
+          %img{src: "/shared/images/fill-70x70/courses/#{entry[:image]}"}
+          .project_link{ id: entry[:id]}
+            .text= I18n.t("#{loc_prefix}#{entry[:title]}")
+      %a.project_link_box{href: CDO.studio_url('projects')}
+        .project_link#view_all_projects
+          = I18n.t("#{loc_prefix}view_all")
 - if current_user
   .header_button.header_user.user_menu
     - if current_user.can_pair? && session_pairings.present?
-      %i.fa.fa-users
-      %span= I18n.t("#{loc_prefix}label", username: I18n.t("#{loc_prefix}team"))
+      %i.fa.fa-users.pairing_icon
+      %span.pairing_name= I18n.t("#{loc_prefix}team")
     - else
       - short_name = ERB::Util.h(current_user.short_name)
-      %span.user_name{'data-id': current_user.id, 'data-shortname': short_name}= I18n.t("#{loc_prefix}label", username: short_name)
+      %span.display_name{'data-id': current_user.id, 'data-shortname': short_name}= short_name
     &nbsp;
     %i.user_menu_arrow_down{class: "fa fa-caret-down"}
     %i.user_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
@@ -14,7 +48,6 @@
       - if current_user.can_pair?
         - if session_pairings.present?
           = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-            %i.fa.fa-user-plus
             = I18n.t("#{loc_prefix}pair_programming")
             .pairing_summary
               #{I18n.t("#{loc_prefix}driver")}:
@@ -25,7 +58,6 @@
                 = h(User.find(id).short_name)
         - else
           = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-            %i.fa.fa-user-plus
             = I18n.t("#{loc_prefix}pair_programming")
       %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
       %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
@@ -33,6 +65,7 @@
   %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button'}
     .header_button.header_user
       %span= I18n.t("#{loc_prefix}signin")
+
 :javascript
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';
   // Use function closure to avoid cluttering global namespace.
@@ -42,21 +75,26 @@
     var cookieKey = '_shortName' + window.cookieEnvSuffix;
     // Share cookie with top-level domain.
     var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
-    var cookieMeta = "path=/;domain=" + topLevelDomain;
 
     // Provide current_user.short_name to cached pages via session cookie.
     // There is apps code that also depends on this query-selector, so if changes are made
     // here we should be sure to also update other locations.
-    var nameSpan = document.querySelector('.header_button.header_user.user_menu .user_name');
-    if (nameSpan) {
-      var dataName = nameSpan.dataset.shortname;
-      var id = nameSpan.dataset.id;
-      var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
-      var storedName = cookieMatch && cookieMatch[2];
-      if (storedName && !id) {
-        nameSpan.innerHTML = nameSpan.innerHTML.replace(dataName, storedName);
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
       }
     }
+
+    retrieveUserShortName(displayNameSpan);
 
     function hideUserOptions() {
       $('.user_options').slideUp();
@@ -72,7 +110,7 @@
           $('.user_menu_arrow_down').hide();
           $('.user_menu_arrow_up').show();
           $(document).on('click', hideUserOptions);
-
+          hideCreateOptions()
           $("#hamburger-icon").removeClass('active');
           $('#hamburger #hamburger-contents').slideUp();
         }
@@ -92,6 +130,31 @@
         }
       });
     });
+
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+
 
     if (typeof dashboard !== 'undefined') {
       dashboard.pairing.init('#{CDO.studio_url('pairing')}', hideUserOptions, #{show_pairing_dialog});

@@ -2,11 +2,17 @@
 
 [
   {
+    "name": "Chrome72Win7",
+    "browserName": "chrome",
+    "version": "72",
+    "platform": "Windows 7",
+    "screenResolution": "1280x1024"
+  },
+  {
     "name": "ChromeLatestWin7",
     "browserName": "chrome",
     "version": "latest",
     "platform": "Windows 7",
-    "extendedDebugging": false,
     "screenResolution": "1280x1024"
   },
   {

@@ -1,11 +1,17 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import FeaturedProjectsTable from './FeaturedProjectsTable';
-import {featuredProjectDataPropType, featuredProjectTableTypes} from './projectConstants';
+import {
+  featuredProjectDataPropType,
+  featuredProjectTableTypes
+} from './projectConstants';
 
 export default class FeaturedProjects extends React.Component {
   static propTypes = {
-    currentFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
-    archivedUnfeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
+    currentFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
+      .isRequired,
+    archivedUnfeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
+      .isRequired
   };
 
   render() {

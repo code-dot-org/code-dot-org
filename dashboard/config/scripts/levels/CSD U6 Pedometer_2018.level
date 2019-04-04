@@ -104,7 +104,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "start_blocks": "var steps = 0;\r\nonBoardEvent(__, __, function() {\r\n  setProperty(\"stepsTaken\", \"text\", steps);\r\n  setProperty(\"person\", \"x\", 5 * steps);\r\n  if (getProperty(\"person\", \"x\") >=  230) {\r\n   setScreen(\"congrats_screen\");\r\n  }\r\n});\r\n",
-    "markdown_instructions": "# Jogger\r\n\r\nThis program should use the `shake` event, which is triggered when the board is shaken.  It should add a step to the jogger's total every time the user shakes the board.\r\n\r\n# Do This\r\n\r\n* Change the event so it triggers every time the board is shaken.\r\n* Add code inside the event so that `steps` increases every time the board is shaken.",
+    "long_instructions": "# Jogger\r\n\r\nThis program should use the `shake` event, which is triggered when the board is shaken.  It should add a step to the jogger's total every time the user shakes the board.\r\n\r\n# Do This\r\n\r\n* Change the event so it triggers every time the board is shaken.\r\n* Add code inside the event so that `steps` increases every time the board is shaken.",
     "encrypted_examples": "znxpxiUDWsCU3CH2ttFhXmuL0BMqSEAO/2c2mp82rHX9oXupDKB8P6fn4Sps\nc7r7VUoOB31XDpmrcdDwyOmGGw==\n",
     "parent_level_id": 10731,
     "name_suffix": "_2018",

@@ -26,12 +26,12 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "*\"Corn, lettuce, AND pumpkins! Help me harvest them all.\"*",
+    "short_instructions": "*\"Corn, lettuce, AND pumpkins! Help me harvest them all.\"*",
     "step_speed": "2",
     "ideal": "9",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To get all of the items, try nesting `if` statements three deep.\\n\\nThis means you should put one `if` statement inside of another, then put a third `if` statement inside the second one.\",\"hint_id\":\"courseD_farmer_condLoops3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/022291bd14265e51f2ac41d351415130/courseD_farmer_condLoops3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"For this puzzle, you should have two `if/else` statements and one plain `if` statement.\",\"hint_id\":\"courseD_farmer_condLoops3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a37652c6c140190d69bc9b38d1b58001/courseD_farmer_condLoops3.mp3\"}]",
-    "markdown_instructions": "*\"Corn, lettuce, AND pumpkins! Help me harvest them all.\"*\r\n\r\nEach plant will have either one piece of corn, one head of lettuce, or one pumpkin.",
+    "long_instructions": "*\"Corn, lettuce, AND pumpkins! Help me harvest them all.\"*\r\n\r\nEach plant will have either one piece of corn, one head of lettuce, or one pumpkin.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
@@ -40,12 +40,17 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "Collect can be our Harvest, but we also need a Plant block as well as an if statement checking to see if there is already a crop planted in the location (right now I am using Fill and If there is a hole to represent the needed blocks)\r\nWe will need to make a drop down menu on the crop blocks to specify which crop (wheat, potatoes, or carrots)\r\nWe will also need the crops to be able to grow to ripeness and only show a 1 when they are ripe\r\n",
   "audit_log": "[{\"changed_at\":\"2017-06-29 23:57:59 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-29 23:58:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-01 02:16:59 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 2,
+    "repeat_until_while": 1,
+    "conditionals": 3
   }
 }]]></config>
   <blocks>

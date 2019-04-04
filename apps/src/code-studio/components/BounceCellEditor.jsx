@@ -5,18 +5,13 @@
 
 import React from 'react';
 import CellEditor from './CellEditor';
-import { SquareType } from '@cdo/apps/bounce/tiles';
+import {SquareType} from '@cdo/apps/bounce/tiles';
 
-export default class BounceCellEditor extends CellEditor  {
-
+export default class BounceCellEditor extends CellEditor {
   /**
    * @override
    */
   renderFields(values) {
-    return (
-      <div>
-        {super.renderTileTypes(values, SquareType)}
-      </div>
-    );
+    return <div>{super.renderTileTypes(values, SquareType)}</div>;
   }
 }

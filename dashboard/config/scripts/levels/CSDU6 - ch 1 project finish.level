@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Add the Finishing Touches\r\n\r\nGo back to your project guide and check to see that your app is addressing the goals you set out. This is your chance to add finishing touches, improve functionality, and get your app ready to be used by other people. When you're are finished, and have thoroughly tested it, use the share button to share your app out with others.",
+    "long_instructions": "# Add the Finishing Touches\r\n\r\nGo back to your project guide and check to see that your app is addressing the goals you set out. This is your chance to add finishing touches, improve functionality, and get your app ready to be used by other people. When you're are finished, and have thoroughly tested it, use the share button to share your app out with others.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

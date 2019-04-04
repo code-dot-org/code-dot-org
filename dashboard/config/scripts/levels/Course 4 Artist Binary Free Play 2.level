@@ -19,7 +19,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "instructions": "Free Play: Here's a blank canvas for you to draw on.  Have fun!",
+    "short_instructions": "Free Play: Here's a blank canvas for you to draw on.  Have fun!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

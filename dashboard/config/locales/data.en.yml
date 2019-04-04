@@ -40,6 +40,7 @@ en:
         Custom: Artist
         CustomStudio: Play Lab
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Bronze
@@ -540,6 +541,33 @@ en:
         CDEF_Video_SpritesInAction: Sprites in Action
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
         CSF_StarWars_ProjectIntro: Intro to Star Wars Project
+        mc_2018_intro: 'Minecraft: Voyage Aquatic Introduction'
+        MC_2018_loops: 'Minecraft: Voyage Aquatic Repeat Until'
+        mc_2018_conditionals: 'Minecraft: Voyage Aquatic Conditionals'
+        mc_2018_closing: 'Minecraft: Voyage Aquatic Congratulations'
+        hoc_dance_warmup: Dance Party - Warm Up
+        hoc_dance_events: Dance Party - Events
+        hoc_dance_properties: Dance Party - Properties
+        hoc_dance_congrats: Dance Party - Party On!
+        c_and_c_great_to_create: It's Great to Create and Play Fair
+        c_and_c_digital_sharing: Digital Sharing
+        teaching_csf_how_it_works: 'Teaching CS Fundamentals: How the Course Works'
+        elem_pd_2: Elementary School Computer Science - PD video 2/2
+        what_is_cs: What is computer science?
+        repeat_block: Using the Repeat Block
+        lesson_planning: Lesson Planning
+        opd_closing: 'Teaching CS Fundamentals: Closing & Next Steps'
+        why_unplugged_lessons: Getting "unplugged"
+        writing_first_program: Writing your first computer program
+        conditionals_with_cards: Unplugged Lesson in Action - Conditionals with Cards
+        songwriting_with_functions: Unplugged Lesson in Action - Songwriting with Functions
+        what_is_an_event: What is an event?
+        teaching_cs_pair_programming: 'Teaching CS Fundamentals: Pair Programming'
+        teaching_problem_solving: 'Teaching CS Fundamentals: Teaching Problem Solving'
+        csd_applab_designmode: 'CS Discoveries: App Lab - Design Mode'
+        csd_pair_programming: Pair Programming
+        csd_gamelab_functions: Calling and Defining Functions
+        csd_applab_parameters: Functions with Parameters
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

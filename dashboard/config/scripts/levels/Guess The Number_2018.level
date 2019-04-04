@@ -41,7 +41,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Build whatever you want. This is an example of a number-guessing game!",
+    "short_instructions": "Build whatever you want. This is an example of a number-guessing game!",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "true",

@@ -2,8 +2,8 @@
  * Entry point to build a bundle containing a set of globals used when displaying
  * tutorialExplorer.  Includes the TutorialExplorer React class.
  */
-
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
@@ -28,14 +28,14 @@ import {
 import i18n from '@cdo/tutorialExplorer/locale';
 import _ from 'lodash';
 import queryString from 'query-string';
-import { StickyContainer } from 'react-sticky';
+import {StickyContainer} from 'react-sticky';
 
 const styles = {
   bottomLinksContainer: {
     padding: '10px 7px 40px 7px',
     fontSize: 13,
-    lineHeight: "17px",
-    clear: "both"
+    lineHeight: '17px',
+    clear: 'both'
   },
   bottomLinksLink: {
     fontFamily: '"Gotham 5r", sans-serif'
@@ -49,14 +49,16 @@ export default class TutorialExplorer extends React.Component {
   static propTypes = {
     tutorials: PropTypes.array.isRequired,
     filterGroups: PropTypes.array.isRequired,
-    initialFilters: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+    initialFilters: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string))
+      .isRequired,
     hideFilters: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)),
     locale: PropTypes.string.isRequired,
     backButton: PropTypes.bool,
     roboticsButtonUrl: PropTypes.string,
     showSortDropdown: PropTypes.bool.isRequired,
     disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired,
-    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions)).isRequired
+    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions))
+      .isRequired
   };
 
   constructor(props) {
@@ -108,15 +110,22 @@ export default class TutorialExplorer extends React.Component {
 
     let newState = {};
 
-    if (this.props.filterGroups.find(item => item.name === filterGroup).singleEntry) {
+    if (
+      this.props.filterGroups.find(item => item.name === filterGroup)
+        .singleEntry
+    ) {
       newState = state.updateIn(['filters', filterGroup], arr => [filterEntry]);
     } else if (value) {
       // Add value to end of array.
-      newState = state.updateIn(['filters', filterGroup], arr => arr.push(filterEntry));
+      newState = state.updateIn(['filters', filterGroup], arr =>
+        arr.push(filterEntry)
+      );
     } else {
       // Find and remove specific value from array.
       const itemIndex = this.state.filters[filterGroup].indexOf(filterEntry);
-      newState = state.updateIn(['filters', filterGroup], arr => arr.splice(itemIndex, 1));
+      newState = state.updateIn(['filters', filterGroup], arr =>
+        arr.splice(itemIndex, 1)
+      );
     }
 
     newState = newState.toJS();
@@ -124,7 +133,8 @@ export default class TutorialExplorer extends React.Component {
     const filteredTutorials = this.filterTutorialSet(
       newState.filters,
       this.state.sortBy,
-      this.state.orgName);
+      this.state.orgName
+    );
 
     this.setState({
       ...newState,
@@ -138,8 +148,12 @@ export default class TutorialExplorer extends React.Component {
    *
    * @param {SortBy} value - The new sort order.
    */
-  handleUserInputSortBy = (value) => {
-    const filteredTutorials = this.filterTutorialSet(this.state.filters, value, this.state.orgName);
+  handleUserInputSortBy = value => {
+    const filteredTutorials = this.filterTutorialSet(
+      this.state.filters,
+      value,
+      this.state.orgName
+    );
     this.setState({
       filteredTutorials,
       filteredTutorialsCount: filteredTutorials.length,
@@ -152,8 +166,12 @@ export default class TutorialExplorer extends React.Component {
   /**
    * Called when the org name is changed via dropdown.
    */
-  handleUserInputOrgName = (value) => {
-    const filteredTutorials = this.filterTutorialSet(this.state.filters, this.state.sortBy, value);
+  handleUserInputOrgName = value => {
+    const filteredTutorials = this.filterTutorialSet(
+      this.state.filters,
+      this.state.sortBy,
+      value
+    );
     this.setState({
       filteredTutorials,
       filteredTutorialsCount: filteredTutorials.length,
@@ -186,7 +204,7 @@ export default class TutorialExplorer extends React.Component {
    * on iOS devices.
    */
   scrollToTop() {
-    if (window.location.search.indexOf("scrolltotop") !== -1) {
+    if (window.location.search.indexOf('scrolltotop') !== -1) {
       this.shouldScrollToTop = true;
     }
   }
@@ -199,19 +217,19 @@ export default class TutorialExplorer extends React.Component {
     let sortByFieldName;
 
     const gradeToDisplayWeightSortByFieldName = {
-      "all": TutorialsSortByFieldNames.displayweight,
-      "pre": TutorialsSortByFieldNames.displayweight_pre,
-      "2-5": TutorialsSortByFieldNames.displayweight_25,
-      "6-8": TutorialsSortByFieldNames.displayweight_middle,
-      "9+": TutorialsSortByFieldNames.displayweight_high
+      all: TutorialsSortByFieldNames.displayweight,
+      pre: TutorialsSortByFieldNames.displayweight_pre,
+      '2-5': TutorialsSortByFieldNames.displayweight_25,
+      '6-8': TutorialsSortByFieldNames.displayweight_middle,
+      '9+': TutorialsSortByFieldNames.displayweight_high
     };
 
     const gradeToPopularityRankSortByFieldName = {
-      "all": TutorialsSortByFieldNames.popularityrank,
-      "pre": TutorialsSortByFieldNames.popularityrank_pre,
-      "2-5": TutorialsSortByFieldNames.popularityrank_25,
-      "6-8": TutorialsSortByFieldNames.popularityrank_middle,
-      "9+": TutorialsSortByFieldNames.popularityrank_high
+      all: TutorialsSortByFieldNames.popularityrank,
+      pre: TutorialsSortByFieldNames.popularityrank_pre,
+      '2-5': TutorialsSortByFieldNames.popularityrank_25,
+      '6-8': TutorialsSortByFieldNames.popularityrank_middle,
+      '9+': TutorialsSortByFieldNames.popularityrank_high
     };
 
     // If we're sorting by recommendation (a.k.a. displayweight) then find the
@@ -236,11 +254,10 @@ export default class TutorialExplorer extends React.Component {
     const filterProps = {
       filters: filters,
       hideFilters: this.props.hideFilters,
-      locale: "en-US",
+      locale: 'en-US',
       orgName: orgName,
       sortByFieldName: this.getSortByFieldName(sortBy, grade)
     };
-
 
     return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
   }
@@ -258,7 +275,7 @@ export default class TutorialExplorer extends React.Component {
 
     if (this.isRobotics()) {
       filterProps.filters = {
-        activity_type: ["robotics"]
+        activity_type: ['robotics']
       };
     }
 
@@ -268,7 +285,10 @@ export default class TutorialExplorer extends React.Component {
   }
 
   getUniqueOrgNames() {
-    return TutorialExplorer.getUniqueOrgNamesFromTutorials(this.props.tutorials, this.isRobotics());
+    return TutorialExplorer.getUniqueOrgNamesFromTutorials(
+      this.props.tutorials,
+      this.isRobotics()
+    );
   }
 
   componentDidMount() {
@@ -316,7 +336,7 @@ export default class TutorialExplorer extends React.Component {
   }
 
   isLocaleEnglish() {
-    return this.props.locale.substring(0,2) === "en";
+    return this.props.locale.substring(0, 2) === 'en';
   }
 
   isRobotics() {
@@ -334,8 +354,10 @@ export default class TutorialExplorer extends React.Component {
     // We fire window resize events when the grippy is dragged so that non-React
     // controlled components are able to rerender the editor. If width/height
     // didn't change, we don't need to do anything else here
-    if (windowWidth === this.state.windowWidth &&
-        windowHeight === this.state.windowHeight) {
+    if (
+      windowWidth === this.state.windowWidth &&
+      windowHeight === this.state.windowHeight
+    ) {
       return;
     }
 
@@ -375,79 +397,96 @@ export default class TutorialExplorer extends React.Component {
    *   the currently active filters.  Each array is named for its filter group.
    */
   static filterTutorials(tutorials, filterProps) {
-    const { locale, specificLocale, orgName, filters, hideFilters, sortByFieldName } = filterProps;
+    const {
+      locale,
+      specificLocale,
+      orgName,
+      filters,
+      hideFilters,
+      sortByFieldName
+    } = filterProps;
 
-    const filteredTutorials = tutorials.filter(tutorial => {
-      // Check that the tutorial isn't marked as DoNotShow.  If it does,
-      // it's hidden.
-      if (tutorial.tags.split(',').indexOf(DoNotShow) !== -1) {
-        return false;
-      }
-
-      // First check that the tutorial language doesn't exclude it immediately.
-      // If the tags contain some languages, and we don't have a match, then
-      // hide the tutorial.
-      if (locale && tutorial.languages_supported) {
-        const languageTags = tutorial.languages_supported.split(',');
-        if (languageTags.length > 0 &&
-          languageTags.indexOf(locale) === -1 &&
-          languageTags.indexOf(locale.substring(0,2)) === -1) {
+    const filteredTutorials = tutorials
+      .filter(tutorial => {
+        // Check that the tutorial isn't marked as DoNotShow.  If it does,
+        // it's hidden.
+        if (tutorial.tags.split(',').indexOf(DoNotShow) !== -1) {
           return false;
         }
-      } else if (specificLocale) {
-        // If the tutorial doesn't have language tags, but we're only looking
-        // for specific matches to our current locale, then don't show this
-        // tutorial.  i.e. don't let non-locale-specific tutorials through.
-        return false;
-      }
 
-      // If we are showing an explicit orgname, then filter if it doesn't
-      // match.  Make an exception for Minecraft so that it shows when
-      // Code.org is selected.
-      if (orgName &&
-        orgName !== TutorialsOrgName.all &&
-        tutorial.orgname !== orgName &&
-        !(orgName === orgNameCodeOrg && tutorial.orgname === orgNameMinecraft)) {
-        return false;
-      }
-
-      // If we are explicitly hiding a matching filter, then don't show the
-      // tutorial.
-      for (const filterGroupName in hideFilters) {
-        const tutorialTags = tutorial["tags_" + filterGroupName];
-        const filterGroup = hideFilters[filterGroupName];
-
-        if (filterGroup.length !== 0 &&
-            tutorialTags &&
-            tutorialTags.length > 0 &&
-            TutorialExplorer.findMatchingTag(filterGroup, tutorialTags)) {
+        // First check that the tutorial language doesn't exclude it immediately.
+        // If the tags contain some languages, and we don't have a match, then
+        // hide the tutorial.
+        if (locale && tutorial.languages_supported) {
+          const languageTags = tutorial.languages_supported.split(',');
+          if (
+            languageTags.length > 0 &&
+            languageTags.indexOf(locale) === -1 &&
+            languageTags.indexOf(locale.substring(0, 2)) === -1
+          ) {
+            return false;
+          }
+        } else if (specificLocale) {
+          // If the tutorial doesn't have language tags, but we're only looking
+          // for specific matches to our current locale, then don't show this
+          // tutorial.  i.e. don't let non-locale-specific tutorials through.
           return false;
         }
-      }
 
-      // If we miss any active filter group, then we don't show the tutorial.
-      let filterGroupsSatisfied = true;
+        // If we are showing an explicit orgname, then filter if it doesn't
+        // match.  Make an exception for Minecraft so that it shows when
+        // Code.org is selected.
+        if (
+          orgName &&
+          orgName !== TutorialsOrgName.all &&
+          tutorial.orgname !== orgName &&
+          !(orgName === orgNameCodeOrg && tutorial.orgname === orgNameMinecraft)
+        ) {
+          return false;
+        }
 
-      for (const filterGroupName in filters) {
-        const tutorialTags = tutorial["tags_" + filterGroupName];
-        const filterGroup = filters[filterGroupName];
+        // If we are explicitly hiding a matching filter, then don't show the
+        // tutorial.
+        for (const filterGroupName in hideFilters) {
+          const tutorialTags = tutorial['tags_' + filterGroupName];
+          const filterGroup = hideFilters[filterGroupName];
 
-        if (filterGroup.length !== 0 &&
+          if (
+            filterGroup.length !== 0 &&
             tutorialTags &&
             tutorialTags.length > 0 &&
-            !TutorialExplorer.findMatchingTag(filterGroup, tutorialTags)) {
-          filterGroupsSatisfied = false;
+            TutorialExplorer.findMatchingTag(filterGroup, tutorialTags)
+          ) {
+            return false;
+          }
         }
-      }
 
-      return filterGroupsSatisfied;
-    }).sort((tutorial1, tutorial2) => {
-      if (isTutorialSortByFieldNamePopularity(sortByFieldName)) {
-        return tutorial1[sortByFieldName] - tutorial2[sortByFieldName];
-      } else {
-        return tutorial2[sortByFieldName] - tutorial1[sortByFieldName];
-      }
-    });
+        // If we miss any active filter group, then we don't show the tutorial.
+        let filterGroupsSatisfied = true;
+
+        for (const filterGroupName in filters) {
+          const tutorialTags = tutorial['tags_' + filterGroupName];
+          const filterGroup = filters[filterGroupName];
+
+          if (
+            filterGroup.length !== 0 &&
+            tutorialTags &&
+            tutorialTags.length > 0 &&
+            !TutorialExplorer.findMatchingTag(filterGroup, tutorialTags)
+          ) {
+            filterGroupsSatisfied = false;
+          }
+        }
+
+        return filterGroupsSatisfied;
+      })
+      .sort((tutorial1, tutorial2) => {
+        if (isTutorialSortByFieldNamePopularity(sortByFieldName)) {
+          return tutorial1[sortByFieldName] - tutorial2[sortByFieldName];
+        } else {
+          return tutorial2[sortByFieldName] - tutorial1[sortByFieldName];
+        }
+      });
 
     return filteredTutorials;
   }
@@ -462,7 +501,9 @@ export default class TutorialExplorer extends React.Component {
    *   one of the filterGroup's values.
    */
   static findMatchingTag(filterGroup, tutorialTags) {
-    return filterGroup.some(filterName => tutorialTags.split(',').indexOf(filterName) !== -1);
+    return filterGroup.some(
+      filterName => tutorialTags.split(',').indexOf(filterName) !== -1
+    );
   }
 
   /* Returns an array of unique organization names from the set of tutorials,
@@ -475,16 +516,18 @@ export default class TutorialExplorer extends React.Component {
   static getUniqueOrgNamesFromTutorials(tutorials, robotics) {
     // Filter out tutorials with DoNotShow as either tag or organization name.
     let availableTutorials = tutorials.filter(t => {
-      return t.tags.split(',').indexOf(DoNotShow) === -1 && t.orgname !== DoNotShow;
+      return (
+        t.tags.split(',').indexOf(DoNotShow) === -1 && t.orgname !== DoNotShow
+      );
     });
 
     // Ensure robotics tag is either present or absent, depending whether we
     // are on robotics variant of the page or not.
     availableTutorials = availableTutorials.filter(t => {
       if (robotics) {
-        return t.tags_activity_type.split(',').indexOf("robotics") !== -1;
+        return t.tags_activity_type.split(',').indexOf('robotics') !== -1;
       } else {
-        return t.tags_activity_type.split(',').indexOf("robotics") === -1;
+        return t.tags_activity_type.split(',').indexOf('robotics') === -1;
       }
     });
 
@@ -492,7 +535,9 @@ export default class TutorialExplorer extends React.Component {
     let uniqueOrgNames = _.uniq(availableTutorials.map(t => t.orgname));
 
     // Sort the unique org names alphabetically, case-insensitive.
-    uniqueOrgNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+    uniqueOrgNames.sort((a, b) =>
+      a.toLowerCase().localeCompare(b.toLowerCase())
+    );
 
     return uniqueOrgNames;
   }
@@ -500,22 +545,26 @@ export default class TutorialExplorer extends React.Component {
   render() {
     const bottomLinksContainerStyle = {
       ...styles.bottomLinksContainer,
-      textAlign: getResponsiveValue({xs: "left", md: "right"}),
-      visibility: this.shouldShowTutorials() ? "visible" : "hidden"
+      textAlign: getResponsiveValue({xs: 'left', md: 'right'}),
+      visibility: this.shouldShowTutorials() ? 'visible' : 'hidden'
     };
 
     const grade = this.state.filters.grade[0];
 
     return (
       <StickyContainer>
-        <div style={{width: getResponsiveContainerWidth(), margin: "0 auto", paddingBottom: 0}}>
-
+        <div
+          style={{
+            width: getResponsiveContainerWidth(),
+            margin: '0 auto',
+            paddingBottom: 0
+          }}
+        >
           {this.shouldShowTutorialsForLocale() && (
             <div>
               <h1>{i18n.headingTutorialsYourLanguage()}</h1>
               {this.state.filteredTutorialsForLocale.length === 0 &&
-                i18n.noTutorialsYourLanguage()
-              }
+                i18n.noTutorialsYourLanguage()}
 
               {this.state.filteredTutorialsForLocale.length > 0 && (
                 <TutorialSet
@@ -540,7 +589,7 @@ export default class TutorialExplorer extends React.Component {
           )}
 
           {this.state.showingAllTutorials && (
-            <div ref={allTutorials => this.allTutorials = allTutorials}>
+            <div ref={allTutorials => (this.allTutorials = allTutorials)}>
               <FilterHeader
                 mobileLayout={this.state.mobileLayout}
                 filterGroups={this.props.filterGroups}
@@ -552,10 +601,15 @@ export default class TutorialExplorer extends React.Component {
                 showModalFilters={this.showModalFilters}
                 hideModalFilters={this.hideModalFilters}
               />
-              <div style={{clear: "both"}}/>
+              <div style={{clear: 'both'}} />
 
               {this.shouldShowFilters() && (
-                <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
+                <div
+                  style={{
+                    float: 'left',
+                    width: getResponsiveValue({xs: 100, md: 20})
+                  }}
+                >
                   <FilterSet
                     mobileLayout={this.state.mobileLayout}
                     uniqueOrgNames={this.getUniqueOrgNames()}
@@ -573,7 +627,12 @@ export default class TutorialExplorer extends React.Component {
                 </div>
               )}
 
-              <div style={{float: 'left', width: getResponsiveValue({xs: 100, md: 80})}}>
+              <div
+                style={{
+                  float: 'left',
+                  width: getResponsiveValue({xs: 100, md: 80})
+                }}
+              >
                 {this.shouldShowTutorials() && (
                   <TutorialSet
                     tutorials={this.state.filteredTutorials}
@@ -588,12 +647,18 @@ export default class TutorialExplorer extends React.Component {
 
               <div style={bottomLinksContainerStyle}>
                 <div style={styles.bottomLinksLinkFirst}>
-                  <a style={styles.bottomLinksLink} href="https://hourofcode.com/activity-guidelines">
+                  <a
+                    style={styles.bottomLinksLink}
+                    href="https://hourofcode.com/activity-guidelines"
+                  >
                     {i18n.bottomGuidelinesLink()}
                   </a>
                 </div>
                 <div>
-                  <a style={styles.bottomLinksLink} href="https://hourofcode.com/supporting-special-needs-students">
+                  <a
+                    style={styles.bottomLinksLink}
+                    href="https://support.code.org/hc/en-us/articles/115001306531-How-can-students-with-special-needs-or-disabilities-participate-"
+                  >
                     {i18n.bottomSpecialNeedsLink()}
                   </a>
                 </div>
@@ -608,82 +673,109 @@ export default class TutorialExplorer extends React.Component {
 
 function getFilters({robotics, mobile}) {
   const filters = [
-    { name: "grade",
+    {
+      name: 'grade',
       text: i18n.filterGrades(),
       headerOnDesktop: true,
       singleEntry: true,
       entries: [
-        {name: "all",             text: i18n.filterGradesAll()},
-        {name: "pre",             text: i18n.filterGradesPre()},
-        {name: "2-5",             text: i18n.filterGrades25()},
-        {name: "6-8",             text: i18n.filterGrades68()},
-        {name: "9+",              text: i18n.filterGrades9()}]},
-    { name: "student_experience",
+        {name: 'all', text: i18n.filterGradesAll()},
+        {name: 'pre', text: i18n.filterGradesPre()},
+        {name: '2-5', text: i18n.filterGrades25()},
+        {name: '6-8', text: i18n.filterGrades68()},
+        {name: '9+', text: i18n.filterGrades9()}
+      ]
+    },
+    {
+      name: 'student_experience',
       text: i18n.filterStudentExperience(),
       headerOnDesktop: true,
       singleEntry: true,
       entries: [
-        {name: "beginner",        text: i18n.filterStudentExperienceBeginner()},
-        {name: "comfortable",     text: i18n.filterStudentExperienceComfortable()}]},
-    { name: "platform",
+        {name: 'beginner', text: i18n.filterStudentExperienceBeginner()},
+        {name: 'comfortable', text: i18n.filterStudentExperienceComfortable()}
+      ]
+    },
+    {
+      name: 'platform',
       text: i18n.filterPlatform(),
       entries: [
-        {name: "computers",       text: i18n.filterPlatformComputers()},
-        {name: "android",         text: i18n.filterPlatformAndroid()},
-        {name: "ios",             text: i18n.filterPlatformIos()},
-        {name: "no-internet",     text: i18n.filterPlatformNoInternet()},
-        {name: "no-computers",    text: i18n.filterPlatformNoComputers()}]},
-    { name: "subject",
+        {name: 'computers', text: i18n.filterPlatformComputers()},
+        {name: 'android', text: i18n.filterPlatformAndroid()},
+        {name: 'ios', text: i18n.filterPlatformIos()},
+        {name: 'no-internet', text: i18n.filterPlatformNoInternet()},
+        {name: 'no-computers', text: i18n.filterPlatformNoComputers()}
+      ]
+    },
+    {
+      name: 'subject',
       text: i18n.filterTopics(),
       entries: [
-        {name: "science",         text: i18n.filterTopicsScience()},
-        {name: "math",            text: i18n.filterTopicsMath()},
-        {name: "history",         text: i18n.filterTopicsHistory()},
-        {name: "la",              text: i18n.filterTopicsLa()},
-        {name: "art",             text: i18n.filterTopicsArt()},
-        {name: "cs-only",         text: i18n.filterTopicsCsOnly()}]},
-    { name: "activity_type",
+        {name: 'science', text: i18n.filterTopicsScience()},
+        {name: 'math', text: i18n.filterTopicsMath()},
+        {name: 'history', text: i18n.filterTopicsHistory()},
+        {name: 'la', text: i18n.filterTopicsLa()},
+        {name: 'art', text: i18n.filterTopicsArt()},
+        {name: 'cs-only', text: i18n.filterTopicsCsOnly()}
+      ]
+    },
+    {
+      name: 'activity_type',
       text: i18n.filterActivityType(),
       entries: [
-        {name: "online-tutorial", text: i18n.filterActivityTypeOnlineTutorial()},
-        {name: "lesson-plan",     text: i18n.filterActivityTypeLessonPlan()}]},
-    { name: "length",
+        {
+          name: 'online-tutorial',
+          text: i18n.filterActivityTypeOnlineTutorial()
+        },
+        {name: 'lesson-plan', text: i18n.filterActivityTypeLessonPlan()}
+      ]
+    },
+    {
+      name: 'length',
       text: i18n.filterLength(),
       entries: [
-        {name: "1hour",           text: i18n.filterLength1Hour()},
-        {name: "1hour-follow",    text: i18n.filterLength1HourFollow()},
-        {name: "few-hours",       text: i18n.filterLengthFewHours()}]},
-    { name: "programming_language",
+        {name: '1hour', text: i18n.filterLength1Hour()},
+        {name: '1hour-follow', text: i18n.filterLength1HourFollow()},
+        {name: 'few-hours', text: i18n.filterLengthFewHours()}
+      ]
+    },
+    {
+      name: 'programming_language',
       text: i18n.filterProgrammingLanguage(),
       entries: [
-        {name: "blocks",          text: i18n.filterProgrammingLanguageBlocks()},
-        {name: "typing",          text: i18n.filterProgrammingLanguageTyping()},
-        {name: "other",           text: i18n.filterProgrammingLanguageOther()}]}];
+        {name: 'blocks', text: i18n.filterProgrammingLanguageBlocks()},
+        {name: 'typing', text: i18n.filterProgrammingLanguageTyping()},
+        {name: 'other', text: i18n.filterProgrammingLanguageOther()}
+      ]
+    }
+  ];
 
   const initialFilters = {
-    student_experience: ["beginner"],
-    grade: ["all"]
+    student_experience: ['beginner'],
+    grade: ['all']
   };
 
   const hideFilters = {
-    activity_type: ["robotics"]
+    activity_type: ['robotics']
   };
 
   if (robotics) {
     filters.forEach(filterGroup => {
-      if (filterGroup.name === "activity_type") {
-        filterGroup.entries = [{name: "robotics", text: i18n.filterActivityTypeRobotics()}];
+      if (filterGroup.name === 'activity_type') {
+        filterGroup.entries = [
+          {name: 'robotics', text: i18n.filterActivityTypeRobotics()}
+        ];
         filterGroup.display = false;
       }
     });
 
-    initialFilters.activity_type = ["robotics"];
+    initialFilters.activity_type = ['robotics'];
 
     hideFilters.activity_type = [];
   }
 
   if (mobile) {
-    initialFilters.platform = ["android", "ios"];
+    initialFilters.platform = ['android', 'ios'];
   }
 
   return {filters, initialFilters, hideFilters};
@@ -713,7 +805,7 @@ function getUrlParameters(filters, robotics) {
     // Validate filterGroup name.
     if (filterGroup) {
       let entryNames = [];
-      if (typeof parameters[name] === "string") {
+      if (typeof parameters[name] === 'string') {
         // Convert item with single filter entry into array containing the string.
         entryNames = [parameters[name]];
       } else {
@@ -736,15 +828,15 @@ function getUrlParameters(filters, robotics) {
 
   if (robotics) {
     // The robotics page remains dedicated to robotics activities.
-    parametersObject.activity_type = ["robotics"];
-    parametersObject.student_experience = ["beginner"];
-    parametersObject.grade = ["all"];
+    parametersObject.activity_type = ['robotics'];
+    parametersObject.student_experience = ['beginner'];
+    parametersObject.grade = ['all'];
   }
 
   return parametersObject;
 }
 
-window.TutorialExplorerManager = function (options) {
+window.TutorialExplorerManager = function(options) {
   options.mobile = mobileCheck();
   let {filters, initialFilters, hideFilters} = getFilters(options);
   const robotics = !options.roboticsButtonUrl;
@@ -757,11 +849,11 @@ window.TutorialExplorerManager = function (options) {
 
   // The caller can provide defaultSortByPopularity, and when true, the default sort will
   // be by popularity.  Otherwise, the default sort will be by display weight.
-  const defaultSortBy =
-    options.defaultSortByPopularity ? TutorialsSortByOptions.popularityrank :
-    TutorialsSortByOptions.displayweight;
+  const defaultSortBy = options.defaultSortByPopularity
+    ? TutorialsSortByOptions.popularityrank
+    : TutorialsSortByOptions.displayweight;
 
-  this.renderToElement = function (element) {
+  this.renderToElement = function(element) {
     ReactDOM.render(
       <TutorialExplorer
         tutorials={options.tutorials}
@@ -771,7 +863,7 @@ window.TutorialExplorerManager = function (options) {
         locale={options.locale}
         backButton={options.backButton}
         roboticsButtonUrl={options.roboticsButtonUrl}
-        showSortDropdown={true}
+        showSortDropdown={options.showSortDropdown}
         disabledTutorials={options.disabledTutorials}
         defaultSortBy={defaultSortBy}
       />,

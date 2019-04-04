@@ -144,7 +144,7 @@
   "whenPlayerCollidedTooltip": "Exekutatu ekintza hauek pilota batek jokalaria jotzen duenean.",
   "whenRight": "eskuinerako gezia sakatzean",
   "whenRightTooltip": "Exekutatu behekaldeko ekintzak eskubiko gezidun tekla sakatzean.",
-  "whenUp": "goiko gezia denean",
+  "whenUp": "gorako gezia sakatzean",
   "whenUpTooltip": "Exekutatu behekaldeko ekintzak gora gezidun tekla sakatzean.",
   "whenWallCollided": "baloiak horma jotzean",
   "whenWallCollidedTooltip": "Exekutatu ekintza hauek pilota batek hormaren bat jotzean.",

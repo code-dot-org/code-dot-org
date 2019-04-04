@@ -32,7 +32,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "0",
-    "instructions": "Now you can fill the world with what you want! Place`spawn` blocks under `when run` to spawn things when the game starts.",
+    "short_instructions": "Now you can fill the world with what you want! Place`spawn` blocks under `when run` to spawn things when the game starts.",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",

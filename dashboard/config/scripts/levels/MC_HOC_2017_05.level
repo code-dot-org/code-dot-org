@@ -45,8 +45,8 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "display_name": "Desert Temple",
-    "instructions": "Use a function to help the Agent get to the pressure plate.",
-    "markdown_instructions": "Loops are not always helpful.\r\n\r\nThese cacti are not growing in an obvious pattern, so a loop would not clear them correctly.  Instead, we've given you a function called `destroy and move` that will do the hard work for you each time the Agent gets to an obstacle.",
+    "short_instructions": "Use a function to help the Agent get to the pressure plate.",
+    "long_instructions": "Loops are not always helpful.\r\n\r\nThese cacti are not growing in an obvious pattern, so a loop would not clear them correctly.  Instead, we've given you a function called `destroy and move` that will do the hard work for you each time the Agent gets to an obstacle.",
     "contained_level_names": null
   },
   "published": true,

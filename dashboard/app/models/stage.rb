@@ -118,8 +118,10 @@ class Stage < ActiveRecord::Base
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
 
-  def summarize
-    stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}") do
+  def summarize(include_bonus_levels = false)
+    stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}/#{include_bonus_levels}") do
+      cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
+
       stage_data = {
         script_id: script.id,
         script_name: script.name,
@@ -127,11 +129,12 @@ class Stage < ActiveRecord::Base
         freeplay_links: script.freeplay_links,
         id: id,
         position: absolute_position,
+        relative_position: relative_position,
         name: localized_name,
         title: localized_title,
         flex_category: localized_category,
         lockable: !!lockable,
-        levels: cached_script_levels.reject(&:bonus).map {|l| l.summarize(false)},
+        levels: cached_levels.map {|l| l.summarize(false)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: ''))
       }
@@ -184,6 +187,7 @@ class Stage < ActiveRecord::Base
           position: script_level.position,
           named_level: script_level.named_level?,
           bonus_level: !!script_level.bonus,
+          assessment: script_level.assessment,
           progression: script_level.progression,
           path: script_level.path,
         }

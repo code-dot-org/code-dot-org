@@ -18,34 +18,28 @@ it:
       Games/Score: Gioco/Punteggio
       Comments: Commenti
       Category: Categoria
-      Prebuilt: Prebuilt
       Text: Testo
       Picker: Selezione
       Comment: Commento
       'Variables ': 'Variabili '
+      Default: Impostazione predefinita
+      Behaviors: Comportamenti
       everythingelse: qualunque altra cosa
+      World: Ambiente
+      Sprites: Personaggi
+      Location: Luogo
       numbers: numeri
       Numbers: Numeri
-      Input: Input
-      Default: Impostazione predefinita
-      World: Mondo
-      Sprites: Sprites
-      Behaviors: Comportamenti
-      Advanced: Advanced
+      Dancers: Ballerini
+      Groups: Gruppi
+      Start: Inizia
+      Music: Musica
+      Dancing: Danza
       Sprite: Personaggio
       Brush: Pennello
-      Make Sprite: Make Sprite
-      Movement: Movement
-      Start: Inizia
-      Groups: Groups
       Booleans: Valori Booleani
-      Functional: Functional
-      Predefined: Predefined
       test: test
-      test2: test2
-      Foo: Foo
+      Do Not Use: Non usare
       Name: Nome
-      NEW BLOCKS: NEW BLOCKS
       'Functions ': 'Funzioni '
-      Game/Score: Game/Score
       Function: Funzione

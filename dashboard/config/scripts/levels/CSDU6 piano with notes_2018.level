@@ -46,7 +46,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Piano Notes\r\n\r\nThis is the same piano that you saw at the beginning of the lesson, but there are some bugs!\r\n\r\n# Do this\r\n\r\n* Edit the code so that all keys are using a `buzzer.note()` block to play the corresponding note.\r\n* Make sure that all the values passed in to `buzzer.note()` are notes, and not frequencies.\r\n\r\n_Hint: Remember to put quotes around the notes! e.g `buzzer.note(\"A4\", 100);`_",
+    "long_instructions": "# Piano Notes\r\n\r\nThis is the same piano that you saw at the beginning of the lesson, but there are some bugs!\r\n\r\n# Do this\r\n\r\n* Edit the code so that all keys are using a `buzzer.note()` block to play the corresponding note.\r\n* Make sure that all the values passed in to `buzzer.note()` are notes, and not frequencies.\r\n\r\n_Hint: Remember to put quotes around the notes! e.g `buzzer.note(\"A4\", 100);`_",
     "code_functions": {
       "onEvent": null,
       "buzzer.frequency": null,

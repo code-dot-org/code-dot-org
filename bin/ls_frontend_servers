@@ -12,7 +12,6 @@
 require 'optparse'
 ENV['RAILS_ENV'] = 'production'
 require_relative '../deployment'
-require 'aws-sdk'
 CDO.chef_managed = true
 CDO.log.level = Logger::WARN
 

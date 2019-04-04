@@ -1,6 +1,6 @@
 /** @file Redux reducer functions for WebLab.
  *  @see http://redux.js.org/docs/basics/Reducers.html */
-import { ActionType } from './actions';
+import {ActionType} from './actions';
 
 function fullScreenPreviewOn(state, action) {
   state = state || false;

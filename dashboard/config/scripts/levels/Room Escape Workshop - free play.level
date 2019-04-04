@@ -59,7 +59,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# You've done it!\r\n\r\nYou made a room escape! Now its time to customize it. \r\n\r\nConsider:\r\n\r\n* Adding more rooms\r\n* Adding more things users can interact with in the rooms\r\n* Add more style to the rooms",
+    "long_instructions": "# You've done it!\r\n\r\nYou made a room escape! Now its time to customize it. \r\n\r\nConsider:\r\n\r\n* Adding more rooms\r\n* Adding more things users can interact with in the rooms\r\n* Add more style to the rooms",
     "contained_level_names": null
   },
   "published": true,

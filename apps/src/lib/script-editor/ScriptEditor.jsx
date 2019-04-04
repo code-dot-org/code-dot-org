@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import FlexGroup from './FlexGroup';
+import PropTypes from 'prop-types';
+import React from 'react';
 import StageDescriptions from './StageDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
 import LegendSelector from './LegendSelector';
@@ -7,8 +7,11 @@ import $ from 'jquery';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import Button from '@cdo/apps/templates/Button';
-import ResourceType, { resourceShape, stringForType } from '@cdo/apps/templates/courseOverview/resourceType';
-import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import ResourceType, {
+  resourceShape,
+  stringForType
+} from '@cdo/apps/templates/courseOverview/resourceType';
+import {announcementShape} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 
 const styles = {
   input: {
@@ -29,16 +32,15 @@ const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 /**
  * Component for editing course scripts.
  */
-const ScriptEditor = React.createClass({
-  propTypes: {
-    beta: PropTypes.bool,
+export default class ScriptEditor extends React.Component {
+  static propTypes = {
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
     hidden: PropTypes.bool,
     loginRequired: PropTypes.bool,
     hideableStages: PropTypes.bool,
     studentDetailProgressView: PropTypes.bool,
-    professionalLearningCourse: PropTypes.bool,
+    professionalLearningCourse: PropTypes.string,
     peerReviewsRequired: PropTypes.number,
     wrapupVideo: PropTypes.string,
     excludeCsfColumnInLegend: PropTypes.bool,
@@ -50,29 +52,48 @@ const ScriptEditor = React.createClass({
     hasVerifiedResources: PropTypes.bool,
     hasLessonPlan: PropTypes.bool,
     curriculumPath: PropTypes.string,
+    pilotExperiment: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
-  },
+    supportedLocales: PropTypes.arrayOf(PropTypes.string),
+    locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired
+  };
 
-  handleClearProjectWidgetSelectClick() {
-    $(this.projectWidgetSelect).children('option')['removeAttr']('selected', true);
-  },
+  handleClearProjectWidgetSelectClick = () => {
+    $(this.projectWidgetSelect)
+      .children('option')
+      .removeAttr('selected', true);
+  };
 
-  presubmit(e) {
-    const videoKeysBefore = (this.props.stageLevelData.match(VIDEO_KEY_REGEX) || []).length;
-    const videoKeysAfter = (this.scriptTextArea.value.match(VIDEO_KEY_REGEX) || []).length;
+  handleClearSupportedLocalesSelectClick = () => {
+    $(this.supportedLocaleSelect)
+      .children('option')
+      .removeAttr('selected', true);
+  };
+
+  presubmit = e => {
+    const videoKeysBefore = (
+      this.props.stageLevelData.match(VIDEO_KEY_REGEX) || []
+    ).length;
+    const videoKeysAfter = (
+      this.scriptTextArea.value.match(VIDEO_KEY_REGEX) || []
+    ).length;
     if (videoKeysBefore !== videoKeysAfter) {
-      if (!confirm("WARNING: adding or removing video keys will also affect " +
-          "uses of this level in other scripts. Are you sure you want to " +
-          "continue?")) {
+      if (
+        !confirm(
+          'WARNING: adding or removing video keys will also affect ' +
+            'uses of this level in other scripts. Are you sure you want to ' +
+            'continue?'
+        )
+      ) {
         e.preventDefault();
       }
     }
-  },
+  };
 
   render() {
-    const textAreaRows = this.props.stageLevelData ?
-      this.props.stageLevelData.split('\n').length + 5 :
-      10;
+    const textAreaRows = this.props.stageLevelData
+      ? this.props.stageLevelData.split('\n').length + 5
+      : 10;
     return (
       <div>
         <h2>I18n Strings</h2>
@@ -139,9 +160,7 @@ const ScriptEditor = React.createClass({
             defaultChecked={this.props.loginRequired}
             style={styles.checkbox}
           />
-          <p>
-            Require users to log in before viewing this script.
-          </p>
+          <p>Require users to log in before viewing this script.</p>
         </label>
         <label>
           Hideable Stages
@@ -179,8 +198,8 @@ const ScriptEditor = React.createClass({
             style={styles.checkbox}
           />
           <p>
-            If also enabled by the teacher, show the lesson extras page at the end
-            of each stage.
+            If also enabled by the teacher, show the lesson extras page at the
+            end of each stage.
           </p>
         </label>
         <label>
@@ -210,6 +229,16 @@ const ScriptEditor = React.createClass({
           </p>
         </label>
         <label>
+          Pilot Experiment. If specified, this script will only be accessible to
+          levelbuilders, or to classrooms whose teacher has this user experiment
+          enabled.
+          <input
+            name="pilot_experiment"
+            defaultValue={this.props.pilotExperiment}
+            style={styles.input}
+          />
+        </label>
+        <label>
           Curriculum Path
           <input
             name="curriculum_path"
@@ -218,9 +247,10 @@ const ScriptEditor = React.createClass({
           />
         </label>
         <label>
-          Professional Learning Course. When filled out, the course unit associated with
-          this script will be associated with the course named in this box. If the course
-          unit does not exist, and if the course does not exist it will be created.
+          Professional Learning Course. When filled out, the course unit
+          associated with this script will be associated with the course named
+          in this box. If the course unit does not exist, and if the course does
+          not exist it will be created.
           <input
             name="professional_learning_course"
             defaultValue={this.props.professionalLearningCourse}
@@ -228,8 +258,8 @@ const ScriptEditor = React.createClass({
           />
         </label>
         <label>
-          Peer Reviews to Complete. Currently only supported for professional learning
-          courses
+          Peer Reviews to Complete. Currently only supported for professional
+          learning courses
           <input
             name="peer_reviews_to_complete"
             defaultValue={this.props.peerReviewsRequired}
@@ -258,14 +288,15 @@ const ScriptEditor = React.createClass({
             style={styles.checkbox}
           />
           <p>
-            If checked this script will have the projects widget (recent projects and new
-            project buttons) visible in stage extras.
+            If checked this script will have the projects widget (recent
+            projects and new project buttons) visible in stage extras.
           </p>
         </label>
         <label>
           Project widget new project types
           <p>
-            Select up to 4 project type options to appear in the 'Start a new project' section. Select
+            Select up to 4 project type options to appear in the 'Start a new
+            project' section. Select
             <a onClick={this.handleClearProjectWidgetSelectClick}> none </a>
             or shift-click or cmd-click to select multiple.
           </p>
@@ -273,7 +304,7 @@ const ScriptEditor = React.createClass({
             name="project_widget_types[]"
             multiple
             defaultValue={this.props.projectWidgetTypes}
-            ref={select => this.projectWidgetSelect = select}
+            ref={select => (this.projectWidgetSelect = select)}
           >
             <option value="playlab">Play Lab</option>
             <option value="playlab_k1">Play Lab K1</option>
@@ -299,6 +330,30 @@ const ScriptEditor = React.createClass({
             <option value="gumball">Gumball</option>
           </select>
         </label>
+
+        <label>
+          Supported locales
+          <p>
+            Select additional locales supported by this script. Select
+            <a onClick={this.handleClearSupportedLocalesSelectClick}> none </a>
+            or shift-click or cmd-click to select multiple.
+          </p>
+          <select
+            name="supported_locales[]"
+            multiple
+            defaultValue={this.props.supportedLocales}
+            ref={select => (this.supportedLocaleSelect = select)}
+          >
+            {this.props.locales
+              .filter(locale => !locale[1].startsWith('en'))
+              .map(locale => (
+                <option key={locale[1]} value={locale[1]}>
+                  {locale[1]}
+                </option>
+              ))}
+          </select>
+        </label>
+
         <div>
           <h4>Teacher Resources</h4>
           <div>
@@ -314,28 +369,26 @@ const ScriptEditor = React.createClass({
                 text="Teacher resources"
                 color={Button.ButtonColor.blue}
               >
-              {resources.map(({type, link}, index) =>
-                <a key={index} href={link}>{stringForType[type]}</a>
-              )}
+                {resources.map(({type, link}, index) => (
+                  <a key={index} href={link}>
+                    {stringForType[type]}
+                  </a>
+                ))}
               </DropdownButton>
             )}
           />
         </div>
         <h2>Stages and Levels</h2>
-        {this.props.beta ?
-          <FlexGroup /> :
-          <div>
-            <a href="?beta=true">Try the beta Script Editor (will reload the page without saving)</a>
-            <textarea
-              id="script_text"
-              name="script_text"
-              rows={textAreaRows}
-              style={{width: 700}}
-              defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
-              ref={textArea => this.scriptTextArea = textArea}
-            />
-          </div>
-        }
+        <div>
+          <textarea
+            id="script_text"
+            name="script_text"
+            rows={textAreaRows}
+            style={styles.input}
+            defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
+            ref={textArea => (this.scriptTextArea = textArea)}
+          />
+        </div>
         <button
           className="btn btn-primary"
           type="submit"
@@ -347,6 +400,4 @@ const ScriptEditor = React.createClass({
       </div>
     );
   }
-});
-
-export default ScriptEditor;
+}

@@ -62,7 +62,8 @@ function validateConfig(configData) {
     configData.maxRecordSize > 0 &&
     configData.maxPropertySize > 0 &&
     configData.limits &&
-    Object.keys(configData.limits).length > 0);
+    Object.keys(configData.limits).length > 0
+  );
 }
 
 export function resetConfigForTesting() {
@@ -79,7 +80,9 @@ export function getRecordsRef(tableName) {
 }
 
 export function getDatabase() {
-  const path = `v3/channels/${config.channelId}${config.firebaseChannelIdSuffix}`;
+  const path = `v3/channels/${config.channelId}${
+    config.firebaseChannelIdSuffix
+  }`;
   return getFirebase().child(path);
 }
 
@@ -87,12 +90,16 @@ function getFirebase() {
   let fb = firebaseCache;
   if (!fb) {
     if (!config.firebaseName) {
-      throw new Error("Error connecting to Firebase: Firebase name not specified");
+      throw new Error(
+        'Error connecting to Firebase: Firebase name not specified'
+      );
     }
     if (!config.firebaseAuthToken) {
-      let msg = "Error connecting to Firebase: Firebase auth token not specified. ";
+      let msg =
+        'Error connecting to Firebase: Firebase auth token not specified. ';
       if (config.firebaseName === 'cdo-v3-dev') {
-        msg += 'To use data blocks or data browser in development, you must ' +
+        msg +=
+          'To use data blocks or data browser in development, you must ' +
           'set "firebase_secret" in locals.yml to the value at ' +
           'https://manage.chef.io/organizations/code-dot-org/environments/development/attributes ' +
           '-> cdo-secrets';
@@ -144,11 +151,17 @@ export function validateFirebaseKey(key) {
   }
   for (let i = 0; i < key.length; i++) {
     if (ILLEGAL_CHARACTERS_REGEX.test(key.charAt(i))) {
-      throw new Error(`The name "${key}" contains an illegal character "${key.charAt(i)}".` +
-      ' The characters ".", "$", "#", "[", "]", and "/" are not allowed.');
+      throw new Error(
+        `The name "${key}" contains an illegal character "${key.charAt(i)}".` +
+          ' The characters ".", "$", "#", "[", "]", and "/" are not allowed.'
+      );
     }
     if (key.charCodeAt(i) < 32 || key.charCodeAt(i) === 127) {
-      throw new Error(`The name ${key} contains an illegal character code ${key.charCodeAt(i)}`);
+      throw new Error(
+        `The name ${key} contains an illegal character code ${key.charCodeAt(
+          i
+        )}`
+      );
     }
   }
 }

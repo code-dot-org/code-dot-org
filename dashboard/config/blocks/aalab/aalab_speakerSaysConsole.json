@@ -1,0 +1,18 @@
+{
+  "category": "Text",
+  "config": {
+    "func": "speakerSaysConsole",
+    "blockText": "{SPRITE} says {MESSAGE}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "MESSAGE",
+        "type": "String",
+        "field": true
+      }
+    ]
+  }
+}

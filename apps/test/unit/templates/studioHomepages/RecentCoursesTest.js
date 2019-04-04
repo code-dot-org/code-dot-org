@@ -4,30 +4,20 @@ import {expect} from '../../../util/configuredChai';
 import RecentCourses from '@cdo/apps/templates/studioHomepages/RecentCourses';
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
-import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
-import { courses, moreCourses, topCourse } from './homepagesTestData';
+import {courses, moreCourses, topCourse} from './homepagesTestData';
 
 describe('RecentCourses', () => {
-
   it('shows SetUpCourses when there are no courses', () => {
     const wrapper = shallow(
-      <RecentCourses
-        courses={[]}
-        topCourse={null}
-        isTeacher
-      />
+      <RecentCourses courses={[]} topCourse={null} isTeacher />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <ContentContainer
-          heading="My Courses"
-        >
-          <SetUpCourses
-            isTeacher
-          />
+        <ContentContainer heading="My Courses">
+          <SetUpCourses isTeacher />
         </ContentContainer>
       </div>
     );
@@ -38,54 +28,32 @@ describe('RecentCourses', () => {
 
   it('shows a TopCourse if there is one course', () => {
     const wrapper = shallow(
-      <RecentCourses
-        courses={[]}
-        topCourse={topCourse}
-        isTeacher
-      />
+      <RecentCourses courses={[]} topCourse={topCourse} isTeacher />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <ContentContainer
-          heading="My Courses"
-        >
+        <ContentContainer heading="My Courses">
           <TopCourse
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
             linkToOverview={topCourse.linkToOverview}
             linkToLesson={topCourse.linkToLesson}
           />
-          <div>
-            <Notification
-              type={NotificationType.course}
-              notice="Find a course"
-              details="Try new courses to add them to your homepage."
-              buttonText="Find a course"
-              buttonLink="/courses"
-              dismissible={false}
-            />
-          </div>
+          <SetUpCourses isTeacher hasCourse />
         </ContentContainer>
       </div>
     );
-    expect(wrapper.find('SetUpCourses').exists()).to.be.false;
     expect(wrapper.find('CourseCard').exists()).to.be.false;
     expect(wrapper.find('SeeMoreCourses').exists()).to.be.false;
   });
 
   it('shows TopCourse and 2 CourseCards when there are 3 courses', () => {
     const wrapper = shallow(
-      <RecentCourses
-        courses={courses}
-        topCourse={topCourse}
-        isTeacher
-      />
+      <RecentCourses courses={courses} topCourse={topCourse} isTeacher />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <ContentContainer
-          heading="My Courses"
-        >
+        <ContentContainer heading="My Courses">
           <TopCourse
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
@@ -108,16 +76,7 @@ describe('RecentCourses', () => {
               />
             </div>
           </div>
-          <div>
-            <Notification
-              type={NotificationType.course}
-              notice="Find a course"
-              details="Try new courses to add them to your homepage."
-              buttonText="Find a course"
-              buttonLink="/courses"
-              dismissible={false}
-            />
-          </div>
+          <SetUpCourses isTeacher hasCourse />
         </ContentContainer>
       </div>
     );
@@ -125,17 +84,11 @@ describe('RecentCourses', () => {
 
   it('shows TopCourse, 4 CourseCards and a SeeMoreCourses component when there are more than 4 courses', () => {
     const wrapper = shallow(
-      <RecentCourses
-        courses={moreCourses}
-        topCourse={topCourse}
-        isTeacher
-      />
+      <RecentCourses courses={moreCourses} topCourse={topCourse} isTeacher />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <ContentContainer
-          heading="My Courses"
-        >
+        <ContentContainer heading="My Courses">
           <TopCourse
             assignableName={topCourse.assignableName}
             lessonName={topCourse.lessonName}
@@ -172,22 +125,10 @@ describe('RecentCourses', () => {
               />
             </div>
           </div>
-          <SeeMoreCourses
-            courses={moreCourses.slice(4)}
-          />
-          <div>
-            <Notification
-              type={NotificationType.course}
-              notice="Find a course"
-              details="Try new courses to add them to your homepage."
-              buttonText="Find a course"
-              buttonLink="/courses"
-              dismissible={false}
-            />
-          </div>
+          <SeeMoreCourses courses={moreCourses.slice(4)} />
+          <SetUpCourses isTeacher hasCourse />
         </ContentContainer>
       </div>
     );
-    expect(wrapper.find('SetUpCourses').exists()).to.be.false;
   });
 });

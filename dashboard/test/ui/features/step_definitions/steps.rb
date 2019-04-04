@@ -1,7 +1,5 @@
-# coding: utf-8
 require 'cdo/url_converter'
 
-# coding: utf-8
 DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
 SHORT_WAIT_TIMEOUT = 30 # 30 seconds
 MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
@@ -42,7 +40,8 @@ def replace_hostname(url)
     dashboard_host: ENV['DASHBOARD_TEST_DOMAIN'],
     pegasus_host: ENV['PEGASUS_TEST_DOMAIN'],
     hourofcode_host: ENV['HOUROFCODE_TEST_DOMAIN'],
-    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN']
+    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN'],
+    advocacy_host: ENV['ADVOCACY_TEST_DOMAIN']
   ).replace_origin(url)
 end
 
@@ -67,7 +66,7 @@ end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
-  wait_until {@browser.find_element(selection_criteria)}
+  wait_until {!@browser.find_elements(selection_criteria).empty?}
 end
 
 When /^I go to the newly opened tab$/ do
@@ -109,8 +108,8 @@ end
 When /^I wait for the page to fully load$/ do
   steps <<-STEPS
     When I wait to see "#runButton"
-    And I close the instructions overlay if it exists
     And I wait to see ".header_user"
+    And I close the instructions overlay if it exists
   STEPS
 end
 
@@ -142,6 +141,11 @@ When /^I reset the puzzle to the starting version$/ do
     And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
   STEPS
+end
+
+When /^I reset the puzzle$/ do
+  @browser.find_element(:css, '#clear-puzzle-header').click
+  @browser.find_element(:css, '#confirm-button').click
 end
 
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -221,6 +225,10 @@ Then /^I wait until current URL contains "([^"]*)"$/ do |url|
   wait_until {@browser.current_url.include? url}
 end
 
+And /^check that the URL matches "([^"]*)"$/ do |regex_text|
+  expect(@browser.current_url.match(regex_text).nil?).to eq(false)
+end
+
 Then /^I wait until I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   wait_until {@browser.current_url == url}
@@ -235,10 +243,6 @@ When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
 
-When /^I submit$/ do
-  @element.submit
-end
-
 When /^I rotate to landscape$/ do
   if ENV['BS_ROTATABLE'] == "true"
     @browser.rotate(:landscape)
@@ -249,11 +253,6 @@ When /^I rotate to portrait$/ do
   if ENV['BS_ROTATABLE'] == "true"
     @browser.rotate(:portrait)
   end
-end
-
-When /^I inject simulation$/ do
-  #@browser.execute_script('$("body").css( "background-color", "black")')
-  @browser.execute_script("var fileref=document.createElement('script');  fileref.setAttribute('type','text/javascript'); fileref.setAttribute('src', '/assets/jquery.simulate.js'); document.getElementsByTagName('head')[0].appendChild(fileref)")
 end
 
 When /^I press "([^"]*)"( to load a new page)?$/ do |button, load|
@@ -420,6 +419,14 @@ When /^I press a button with xpath "([^"]*)"$/ do |xpath|
   @button.click
 end
 
+# Prefer clicking with selenium over jquery, since selenium clicks will fail
+# if the target element is obscured by another element.
+When /^I click "([^"]*)"( to load a new page)?$/ do |selector, load|
+  page_load(load) do
+    @browser.find_element(:css, selector).click
+  end
+end
+
 When /^I click selector "([^"]*)"( to load a new page)?$/ do |jquery_selector, load|
   # normal a href links can only be clicked this way
   page_load(load) do
@@ -530,6 +537,12 @@ Then /^element "([^"]*)" has css property "([^"]*)" equal to "([^"]*)"$/ do |sel
   element_has_css(selector, property, expected_value)
 end
 
+# Example use case: checking webkit and moz overrides for css properties
+Then /^element "([^"]*)" has one of css properties "([^"]*)" equal to "([^"]*)"$/ do |selectors, properties, expected_value|
+  properties = properties.split(',')
+  element_has_css_multiple_properties(selectors, properties, expected_value)
+end
+
 Then /^I wait up to ([\d\.]+) seconds for element "([^"]*)" to have css property "([^"]*)" equal to "([^"]*)"$/ do |seconds, selector, property, expected_value|
   Selenium::WebDriver::Wait.new(timeout: seconds.to_f).until do
     element_css_value(selector, property) == expected_value
@@ -633,6 +646,10 @@ Then /^element "([^"]*)" is (not )?checked$/ do |selector, negation|
   expect(value).to eq(negation.nil?)
 end
 
+Then /^I use jquery to set the text of "([^"]*)" to "([^"]*)"$/ do |selector, value|
+  @browser.execute_script("$(\"#{selector}\").text(\"#{value}\");")
+end
+
 Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expected_text|
   element_has_attribute(selector, attribute, replace_hostname(expected_text))
 end
@@ -674,6 +691,29 @@ end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
   expect(element_visible?(selector)).to eq(false)
+end
+
+And (/^I select age (\d+) in the age dialog/) do |age|
+  steps %Q{
+    And element ".age-dialog" is visible
+    And I select the "#{age}" option in dropdown "uitest-age-selector"
+    And I click selector "#uitest-submit-age"
+  }
+end
+
+And (/^I do not see "([^"]*)" option in the dropdown "([^"]*)"/) do |option, selector|
+  select_options_text = @browser.execute_script("return $('#{selector} option').val()")
+  expect((select_options_text.include? option)).to eq(false)
+end
+
+And (/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option_alpha, option_beta, selector|
+  select_options_text = @browser.execute_script("return $('#{selector} option').text()")
+  expect((select_options_text.include? option_alpha) || (select_options_text.include? option_beta)).to eq(true)
+end
+
+And (/^I wait for the song selector to load/) do
+  wait_for_jquery
+  wait_until {@browser.execute_script("return !!$('#song_selector').val();")}
 end
 
 def has_class?(selector, class_name)
@@ -830,8 +870,20 @@ And(/^I set the language cookie$/) do
   end
 
   @browser.manage.add_cookie params
+end
 
-  debug_cookies(@browser.manage.all_cookies)
+And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
+  params = {
+    name: "pm",
+    value: cookie_value
+  }
+
+  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
+      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
+    params[:domain] = '.code.org' # top level domain cookie
+  end
+
+  @browser.manage.add_cookie params
 end
 
 Given(/^I sign in as "([^"]*)"$/) do |name|
@@ -839,10 +891,24 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
-    Then I click selector "#signin_button"
-    And I wait to see ".new_user"
+    Then I click ".header_user"
+    And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I click "#signin-button"
+    And I wait to see ".header_user"
+  }
+end
+
+Given(/^I sign out and sign in as "([^"]*)"$/) do |name|
+  individual_steps %Q{
+    Given I am on "http://studio.code.org/reset_session"
+    And I wait for 5 seconds
+    Then I am on "http://studio.code.org/"
+    And I wait to see "#signin_button"
+    Then I click ".header_user"
+    And I wait to see "#signin"
+    And I fill in username and password for "#{name}"
+    And I click "#signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -850,9 +916,9 @@ end
 Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
   steps %Q{
     And check that the url contains "/users/sign_in"
-    And I wait to see ".new_user"
+    And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click selector "#signin-button"
+    And I click "#signin-button"
     And I wait to see ".header_user"
   }
 end
@@ -874,6 +940,32 @@ end
 
 Given(/^I am enrolled in a plc course$/) do
   enroll_in_plc_course(@users.first[1][:email])
+end
+
+def create_user(**args)
+  name = "Fake User"
+  email, password = generate_user(name)
+  attributes = {
+    name: name,
+    email: email,
+    password: password,
+    user_type: "teacher",
+    age: "21+"
+  }.merge!(args)
+  user = User.new(attributes)
+  user.save ? user : nil
+end
+
+def assign_script_as_student(user_email, script_name)
+  require_rails_env
+  script = Script.find_by_name(script_name)
+  section = Section.create(name: "New Section", user: create_user, script: script)
+  user = User.find_by_email_or_hashed_email(user_email)
+  section.students << user
+end
+
+Given(/^I am assigned to script "([^"]*)"$/) do |script_name|
+  assign_script_as_student(@users.first[1][:email], script_name)
 end
 
 Then(/^I fake completion of the assessment$/) do
@@ -898,16 +990,8 @@ def generate_user(name)
   return email, password
 end
 
-def generate_teacher_student(name, teacher_authorized)
-  email, password = generate_user(name)
-
-  steps %Q{
-    Given I create a teacher named "Teacher_#{name}"
-  }
-
-  # enroll in a plc course as a way of becoming an authorized teacher
-  enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
-
+def create_section_and_join_as_student(name, email, password, u13 = false)
+  age = u13 ? 10 : 16
   individual_steps %Q{
     Then I am on "http://studio.code.org/home"
     And I dismiss the language selector
@@ -918,13 +1002,62 @@ def generate_teacher_student(name, teacher_authorized)
 
     Then I sign out
     And I navigate to the section url
+    And I wait until I am on the join page
     And I wait to see "#user_name"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
-    And I select the "16" option in dropdown "user_age"
+    And I select the "#{age}" option in dropdown "user_age"
     And I click selector "input[type=submit]" once I see it
+    And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+def generate_teacher_student(name, teacher_authorized, student_u13 = false)
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I create a teacher named "Teacher_#{name}"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
+
+  create_section_and_join_as_student(name, email, password, student_u13)
+end
+
+def generate_two_teachers_per_student(name, teacher_authorized)
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I create a teacher named "First_Teacher"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["First_Teacher"][:email]) if teacher_authorized
+
+  create_section_and_join_as_student(name, email, password)
+
+  steps %Q{
+    Given I create a teacher named "Second_Teacher"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["Second_Teacher"][:email]) if teacher_authorized
+
+  individual_steps %Q{
+    Then I am on "http://studio.code.org/home"
+    And I dismiss the language selector
+
+    Then I see the section set up box
+    And I create a new section
+    And I save the section url
+  }
+  individual_steps %Q{
+    Then I sign out
+    And I sign in as "#{name}"
+    And I am on "#{@section_url}"
     And I wait until I am on "http://studio.code.org/home"
   }
 end
@@ -936,6 +1069,7 @@ end
 
 And /^I create a new section$/ do
   individual_steps %Q{
+    When I see the section set up box
     When I press the new section button
     Then I should see the new section dialog
 
@@ -948,6 +1082,7 @@ end
 
 And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
   individual_steps %Q{
+    When I see the section set up box
     When I press the new section button
     Then I should see the new section dialog
 
@@ -955,7 +1090,9 @@ And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and uni
     Then I wait to see "#uitest-assignment-family"
 
     When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
-    And I select the "#{version_year}" option in dropdown "assignment-version-year"
+
+    And I click selector "#assignment-version-year" once I see it
+    And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
   }
 
   if secondary
@@ -981,6 +1118,14 @@ end
 
 And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
   generate_teacher_student(name, false)
+end
+
+And(/^I create a teacher-associated under-13 student named "([^"]*)"$/) do |name|
+  generate_teacher_student(name, false, true)
+end
+
+And(/^I create two teachers associated with a student named "([^"]*)"$/) do |name|
+  generate_two_teachers_per_student(name, false)
 end
 
 And(/^I create an authorized teacher-associated student named "([^"]*)"$/) do |name|
@@ -1062,6 +1207,16 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   }
 end
 
+And(/^I submit this level$/) do
+  steps %Q{
+    And I press "runButton"
+    And I wait to see "#submitButton"
+    And I press "submitButton"
+    And I wait to see ".modal"
+    And I press "confirm-button" to load a new page
+  }
+end
+
 And(/^I give user "([^"]*)" hidden script access$/) do |name|
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users[name][:email])
@@ -1082,6 +1237,9 @@ And(/^I navigate to the section url$/) do
   steps %Q{
     Given I am on "#{@section_url}"
   }
+end
+
+And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end
 
@@ -1179,6 +1337,8 @@ def press_keys(element, key)
   end
 end
 
+# Known issue: IE does not register the key presses in this step.
+# Add @no_ie tag to your scenario to skip IE when using this step.
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
@@ -1193,6 +1353,16 @@ end
 When /^I press keys "([^"]*)"$/ do |keys|
   # Note: Safari webdriver does not support actions API
   @browser.action.send_keys(make_symbol_if_colon(keys)).perform
+end
+
+# Press backspace repeatedly to clear an element.  Handy for React.
+# Known issue: IE does not register the key presses in this step.
+# Add @no_ie tag to your scenario to skip IE when using this step.
+When /^I press backspace to clear element "([^"]*)"$/ do |selector|
+  element = @browser.find_element(:css, selector)
+  while @browser.execute_script("return $('#{selector}').val()") != ""
+    press_keys(element, ":backspace")
+  end
 end
 
 When /^I press enter key$/ do
@@ -1241,6 +1411,22 @@ Then /^I save the share URL$/ do
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
 end
 
+When /^I open the share dialog$/ do
+  Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
+    steps <<-STEPS
+      When I click selector ".project_share"
+      And I wait to see a dialog titled "Share your project"
+    STEPS
+  end
+end
+
+When /^I navigate to the shared version of my project$/ do
+  steps <<-STEPS
+    When I open the share dialog
+    And I navigate to the share URL
+  STEPS
+end
+
 Then /^I navigate to the share URL$/ do
   steps <<-STEPS
     Then I save the share URL
@@ -1250,6 +1436,11 @@ end
 
 Then /^I navigate to the last shared URL$/ do
   @browser.navigate.to last_shared_url
+  wait_for_jquery
+end
+
+Then /^I navigate to the last shared URL with a queryparam$/ do
+  @browser.navigate.to last_shared_url + '?testid=99999999'
   wait_for_jquery
 end
 
@@ -1331,6 +1522,11 @@ Then /^I unlock the stage for students$/ do
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end
 
+Then /^I show stage answers for students$/ do
+  @browser.execute_script("$('.modal-body button:contains(Show answers)').click()")
+  @browser.execute_script('$(".modal-body button:contains(Save)").click()')
+end
+
 Then /^I select the first section$/ do
   steps %{
     And I wait to see ".uitest-sectionselect"
@@ -1373,22 +1569,15 @@ When /^I switch to text mode$/ do
   STEPS
 end
 
-Then /^the project list contains ([\d]+) (?:entry|entries)$/ do |expected_num|
-  actual_num = @browser.execute_script("return $('table.projects td.name').length;")
-  expect(actual_num).to eq(expected_num.to_i)
-end
-
-Then /^the project at index ([\d]+) is named "([^"]+)"$/ do |index, expected_name|
-  actual_name = @browser.execute_script("return $('table.projects td.name').eq(#{index}).text().trim();")
-  expect(actual_name).to eq(expected_name)
-end
-
 When /^I see the section set up box$/ do
   steps 'When I wait to see ".uitest-set-up-sections"'
 end
 
 When /^I press the new section button$/ do
-  steps 'When I press the first ".uitest-newsection" element'
+  steps <<-STEPS
+    Given I scroll the ".uitest-newsection" element into view
+    When I press the first ".uitest-newsection" element
+  STEPS
 end
 
 Then /^I should see the new section dialog$/ do
@@ -1396,7 +1585,7 @@ Then /^I should see the new section dialog$/ do
 end
 
 When /^I select (picture|word|email) login$/ do |login_type|
-  steps %Q{When I press the first ".uitest-#{login_type}Login .uitest-button" element}
+  steps %Q{When I press the first ".uitest-#{login_type}Login" element}
 end
 
 When /^I press the save button to create a new section$/ do
@@ -1445,15 +1634,53 @@ Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
   expect(href.split('#')[0]).to include("?section_id=#{@section_id}")
 end
 
+Then /^the href of selector "([^"]*)" contains "([^"]*)"$/ do |selector, matcher|
+  href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
+  expect(href).to include(matcher)
+end
+
+Then /^I navigate to teacher dashboard for the section I saved$/ do
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}"
+  }
+end
+
+Then /^I navigate to the script "([^"]*)" stage (\d+) lesson extras page for the section I saved$/ do |script_name, stage_num|
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/s/#{script_name}/stage/#{stage_num}/extras?section_id=#{@section_id}"
+  }
+end
+
+Then /^I hide unit "([^"]+)"$/ do |unit_name|
+  selector = ".uitest-CourseScript:contains(#{unit_name}) .fa-eye-slash"
+  @browser.execute_script("$(#{selector.inspect}).click();")
+  wait_short_until do
+    @browser.execute_script("return window.__TestInterface.toggleHiddenUnitComplete;")
+  end
+end
+
+Then /^unit "([^"]+)" is marked as (not )?visible$/ do |unit_name, negation|
+  selector = ".uitest-CourseScript:contains(#{unit_name})"
+  visibility = @browser.execute_script("return $(#{selector.inspect}).attr('data-visibility');")
+  expect(visibility).to eq(negation ? 'hidden' : 'visible')
+end
+
 # @return [Number] the section id for the corresponding row in the sections table
 def get_section_id_from_table(row_index)
-  # e.g. https://code.org/teacher-dashboard#/sections/54
+  # e.g. https://studio-code.org/teacher_dashboard/sections/54
   href = @browser.execute_script(
     "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(1) a').attr('href')"
   )
   section_id = href.split('/').last.to_i
   expect(section_id).to be > 0
   section_id
+end
+
+And /^element "([^"]*)" contains text matching "([^"]*)"$/ do |selector, regex_text|
+  contents = @browser.execute_script("return $(#{selector.dump}).text();")
+  expect(contents.match(regex_text).nil?).to eq(false)
 end
 
 Then /^I scroll the "([^"]*)" element into view$/ do |selector|
@@ -1487,4 +1714,16 @@ Then /^I sign out using jquery$/ do
   JAVASCRIPT
   @browser.execute_script(code)
   wait_short_until {@browser.execute_script('return window.signOutComplete;')}
+end
+
+Then /^I open the Manage Assets dialog$/ do
+  steps <<-STEPS
+    Then I click selector ".settings-cog"
+    And I click selector ".pop-up-menu-item"
+  STEPS
+end
+
+Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
+  body_text = @browser.execute_script('return document.body.textContent;')
+  expect(body_text.include?(text)).to eq(negation.nil?)
 end

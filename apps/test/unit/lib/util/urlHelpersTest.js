@@ -1,5 +1,9 @@
 import {expect} from '../../../util/configuredChai';
-import {pegasus, metaTagDescription} from '@cdo/apps/lib/util/urlHelpers';
+import {
+  pegasus,
+  studio,
+  metaTagDescription
+} from '@cdo/apps/lib/util/urlHelpers';
 import sinon from 'sinon';
 
 describe('pegasus()', () => {
@@ -9,24 +13,48 @@ describe('pegasus()', () => {
     });
 
     it('gives an absolute pegasus url', () => {
-      expect(pegasus('/relative-path')).to.equal('//test.code.org/relative-path');
+      expect(pegasus('/relative-path')).to.equal(
+        '//test.code.org/relative-path'
+      );
     });
   });
 
   describe('from pegasus', () => {
     stubWindowDashboard(undefined);
 
-    it('returns the relative URL if not', () => {
+    it('returns a relative URL', () => {
       expect(window.dashboard).to.be.undefined;
       expect(pegasus('/relative-path')).to.equal('/relative-path');
     });
   });
 });
 
+describe('studio()', () => {
+  describe('from pegasus', () => {
+    stubWindowPegasus({
+      STUDIO_URL: '//test-studio.code.org'
+    });
+
+    it('gives an absolute studio url', () => {
+      expect(studio('/relative-path')).to.equal(
+        '//test-studio.code.org/relative-path'
+      );
+    });
+  });
+
+  describe('from studio', () => {
+    stubWindowPegasus(undefined);
+
+    it('returns a relative URL', () => {
+      expect(window.pegasus).to.be.undefined;
+      expect(studio('/relative-path')).to.equal('/relative-path');
+    });
+  });
+});
+
 describe('metaTagDescription() for valid urls', () => {
   let sandbox;
-  const bodyText =
-  `<html lang="en">
+  const bodyText = `<html lang="en">
     <head>
       <meta name="keywords" content="">
       <meta name="description" content="Valid Description Here">
@@ -38,8 +66,7 @@ describe('metaTagDescription() for valid urls', () => {
     </body>
   </html>`;
 
-  const bodyTextWithoutTag =
-  `<html lang="en">
+  const bodyTextWithoutTag = `<html lang="en">
     <head>
       <meta name="keywords" content="">
       <title>Code.org Documentation</title>
@@ -60,11 +87,11 @@ describe('metaTagDescription() for valid urls', () => {
 
   it('retrieves the content from the description meta tag', () => {
     const res = new window.Response(bodyText, {
-        status: 200,
-        headers: {
-          'Content-type': 'text/html'
-        }
-      });
+      status: 200,
+      headers: {
+        'Content-type': 'text/html'
+      }
+    });
     sandbox.stub(window, 'fetch').returns(Promise.resolve(res));
 
     const promise = metaTagDescription('/valid/url/');
@@ -73,11 +100,11 @@ describe('metaTagDescription() for valid urls', () => {
 
   it('returns the relative url for valid urls when the description meta tag is missing', () => {
     const res = new window.Response(bodyTextWithoutTag, {
-        status: 200,
-        headers: {
-          'Content-type': 'text/html'
-        }
-      });
+      status: 200,
+      headers: {
+        'Content-type': 'text/html'
+      }
+    });
     sandbox.stub(window, 'fetch').returns(Promise.resolve(res));
 
     const promise = metaTagDescription('/valid/url/wo/tag');
@@ -94,7 +121,14 @@ describe('metaTagDescription() for invalid url', () => {
 
 function stubWindowDashboard(value) {
   let originalDashboard;
-  before(() => originalDashboard = window.dashboard);
-  after(() => window.dashboard = originalDashboard);
-  beforeEach(() => window.dashboard = value);
+  before(() => (originalDashboard = window.dashboard));
+  after(() => (window.dashboard = originalDashboard));
+  beforeEach(() => (window.dashboard = value));
+}
+
+function stubWindowPegasus(value) {
+  let originalPegasus;
+  before(() => (originalPegasus = window.pegasus));
+  after(() => (window.pegasus = originalPegasus));
+  beforeEach(() => (window.pegasus = value));
 }

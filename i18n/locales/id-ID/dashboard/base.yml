@@ -10,6 +10,7 @@ id:
       messages:
         blank: "diperlukan"
         blank_plural: "diperlukan"
+        invalid: " tidak valid"
         invalid_plural: "tidak benar"
     attributes:
       user:
@@ -19,13 +20,16 @@ id:
         parent_email: 'Email orang tua/wali'
         personal_email: "Alamat email pribadi <a href=\"%{url}\">(klik di sini jika Anda tidak memiliki sebuah alamat email)</a>"
         username: 'nama pengguna'
-        password: 'kata sandi'
+        password: 'Kata sandi'
         password_confirmation: 'Konfirmasi sandi'
         current_password: 'Sandi saat ini'
         locale: 'Bahasa'
         age: 'Umur'
         gender: 'Jenis kelamin'
         edit_header: 'Edit rincian akun'
+        finish_sign_up_header: 'Profil Anda selesai dibuat'
+        finish_sign_up_subheader: 'Mengisi informasi berikut untuk menyelesaikan membuat akun Code.org untuk <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Mengisi informasi berikut untuk menyelesaikan membuat akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.'
         error:
           future: tidak mungkin di masa depan
   hello: "Halo dunia"
@@ -37,9 +41,9 @@ id:
   previous_page: Halaman sebelumnya
   next_page: Halamat berikutnya
   next_resource: Sumber selanjutnya
-  done_with_module: Done with this Learning Module
   cancel: "Batal"
   okay: "Oke"
+  or: "atau"
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
   add_teacher_form:
     code:
@@ -74,6 +78,7 @@ id:
   prize: 'hadiah'
   more_info: 'Info lebih lanjut'
   auth:
+    continue_with: 'Lanjutkan dengan %{provider}'
     sign_in_with: 'Masuk pakai akun %{provider}'
     signed_in: 'Masuk!'
     signed_out: 'Anda telah sign out dari <a href="%{url}">Code.org</a>.'
@@ -84,15 +89,21 @@ id:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Akun Microsoft'
+    microsoft_v2_auth: 'Akun Microsoft'
     clever: 'Akun pintar'
-    powerschool: 'Powerschool Account'
+    powerschool: 'Powerschool'
     forgot_password: 'Lupa kata sandi?'
+    migration_success: 'Sukses! Anda telah diperbarui untuk pengalaman akun baru.'
+    demigration_success: 'Pengalaman akun baru sekarang dinonaktifkan pada account Anda.'
     need_confirmation: "Tidak menerima instruksi konfirmasi?"
     need_unlock: "Tidak menerima instruksi untuk membuka?"
     not_linked: "Maaf, akun Code.org Anda tidak ditautkan ke %{provider} Anda. Anda harus masuk dengan mengetikkan kata sandi Anda di bawah ini."
     use_clever: "Maaf, akun Code.org Anda tidak ditautkan ke%{provider} Anda. Silahkan masuk melalui Portal pintar anda."
-    unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider}. Please try again."
+    unable_to_connect_provider: "Tidak dapat menghubungkan account Code.org Anda ke akun %{provider}. Silakan coba lagi."
+    already_in_use: "Akun %{provider} sudah terhubung ke akun Code.org yang lain."
+    already_linked: "%{provider} akun Anda sudah ditautkan ke akun Code.org."
   signup_form:
+    email_signup: 'Mendaftar dengan alamat email Anda'
     student_count: '%{count} Pelajar telah mendaftar.'
     teacher_count: '%{count} Pengajar telah mendaftar.'
     overview: 'Mendaftar akun untuk melacak kemajuan Anda atau mengelola kelas Anda. <a href="/">Anda dapat menelusuri berbagai tahap dan teka-teki</a> tanpa akun, namun Anda perlu mendaftar untuk menyimpan kemajuan dan proyek Anda.'
@@ -109,6 +120,7 @@ id:
     age: 'Umur'
     user_type: 'Anda Pelajar atau Pengajar?'
     submit: 'Daftar'
+    go_to_account: 'Pergi ke account saya'
     teacher: 'Apakah anda seorang guru?'
     valid_username: "Tersedia!"
     invalid_username: "Nama pengguna harus minimal 5 karakter"
@@ -116,25 +128,26 @@ id:
     valid_password: "Kata sandi valid!"
     invalid_password: "Kata sandi harus minimal 6 karakter"
     mismatch_password: "kedua password yang anda masukkan tidak sama"
-    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
-    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-    agree_us_website: "I agree to using a website based in the United States."
-    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    agree_tos_privacy: "Saya setuju untuk <a href='http://code.org/tos'>Ketentuan Layanan</a> dan <a href='http://code.org/privacy'>kebijakan privasi</a>."
+    under_13_consent: "Jika saya di bawah usia 13 tahun, saya mengkonfirmasi bahwa saya telah saya orang tua atau wali hukum izin untuk menggunakan layanan Code.org."
+    student_consent: "Saya mengkonfirmasi bahwa saya telah saya orang tua atau wali hukum izin untuk menggunakan layanan Code.org."
+    agree_us_website: "Saya setuju untuk menggunakan sebuah situs web yang berbasis di Amerika Serikat."
+    my_data_to_us: "Data dari penggunaan situs ini saya dapat dikirimkan ke dan disimpan atau diproses di Amerika Serikat."
     student_terms: "Saya setuju untuk terikat oleh Code.org <a href='http://code.org/tos'> persyaratan layanan </a>. apabila saya berusia di bawah 13 tahun, saya mengonfirmasi dengan mengirimkan formulir ini bahwa saya memiliki izin orang tua atau wali sah untuk menggunakan layanan Code.org. <br/> <br/> Alamat email tidak disimpan dalam formulir yang memungkinkan kami untuk menghubungi siswa. Siswa tidak akan pernah menerima email dari Code.org kecuali untuk pemulihan kata sandi. Lihat <a href='http://code.org/privacy'> kebijakan privasi </a> kami untuk informasi lebih lanjut."
     teacher_terms: "Saya setuju untuk terikat dengan persyaratan layanan Code.org. Untuk informasi yang lebih lanjut tentang privasi, lihat <a href='http://code.org/privacy'> kebijakan privasi </a> kami."
     additional_information: "Kami membutuhkan informasi tambahan untuk melanjutkan pendaftaran anda"
-    user_type_button: "Update Account Type"
+    user_type_button: "Perbarui tipe akun"
     user_type_label: "Jenis akun"
-    user_type_teacher: "Guru"
+    user_type_teacher: "Pelajar"
     user_type_student: "siswa"
     field_is_required: "diperlukan"
     accept_terms: "Anda menyetujui untuk membuat akun"
     error: "Sebuah kesalahan terjadi."
-    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
-    email_preference_privacy: "(See our privacy policy)"
+    email_preference_question: "Dapat kami email Anda tentang pembaruan kursus kami, peluang lokal atau berita Sains komputer lain? (kira-kira sekali sebulan)"
+    email_preference_privacy: "(Lihat kebijakan privasi)"
     email_preference_yes: "Ya"
     email_preference_no: "Tidak"
-    email_preference_required: "You must specify an email preference."
+    email_preference_required: "Anda harus menentukan preferensi email."
   school_info:
     title: 'Informasi sekolah (pilihan)'
     school_country: 'Negara Sekolah'
@@ -194,14 +207,15 @@ id:
     subject: 'Gabung dengan kelas saya (di Code.org)'
     body: |
       Klik link dibawah untuk masuk bergabung dengan ilmu komputer tutorial di Code.org (saya akan menjadi "guru"mu): %{link}
-      
+
       Kursus ini menyenangkan, menarik untuk dilihat, dan mengajar konsep dasar ilmu informatika menggunakan latihan  yang sederhana, teratur, dan dalam bentuk permainan. Belajarlah cara memprogram dari Bill Gates, Mark Zuckerberg, Angry Birds, dan Plants vs. Zombies! :-)
       %{name}
-      
+
   parent_mailer:
     student_associated_subject: 'Masukkan code informasi Code.org'
   teacher_mailer:
     new_teacher_subject: 'Selamat datang di Code.org!'
+    delete_teacher_subject: 'Code.org pemberitahuan: Akun anda telah dihapus'
   section:
     your_section:
       one: 'Sesi Anda:'
@@ -209,6 +223,7 @@ id:
     code_with_teacher: '%{section_code} dengan %{teacher_name}'
     confirm:
       remove: 'Anda yakin untuk meninggalkan sesi ini?'
+    default_name: 'Bagian tanpa judul'
     remove: '(hapus sesi)'
     type:
       picture: 'Gambar Sandi'
@@ -262,13 +277,10 @@ id:
       free_play:
         playlab: 'Buat sebuah aplikasi Lab Bermain'
         artist: 'Gambarlah Sesuatu'
-        calculate: 'Calculate something'
         applab: 'Buat sebuah aplikasi Lab Aplikasi'
         gamelab: 'Buat sebuah proyek Lab Permainan'
         weblab: 'Membuat proyek Lab Web (beta)'
-      home: "Beranda"
       my_dashboard: "Dasbor saya"
-      courses: "Kursus"
       course_catalog: "Katalog kursus"
       project_gallery: "Proyek"
       sections: "Sesi"
@@ -307,7 +319,7 @@ id:
       classroom: 'Beranda guru'
       district_dashboard: 'Wilayah Dashboard'
       label: 'Halo %{username}'
-      stats: 'Kemajuan saya'
+      stats: 'Kode Studio'
       settings: 'Akun saya'
       logout: 'Keluar'
       signin: 'Masuk'
@@ -317,6 +329,29 @@ id:
       team: 'Tim'
       driver: 'Masuk'
       navigator: 'Mitra'
+      create: 'Buat'
+      algebra_game: 'Aljabar'
+      applab: 'Laboratorium Aplikasi'
+      artist: 'Artis'
+      artist_k1: 'Artis (pra-pembaca)'
+      basketball: 'Bola basket'
+      bounce: 'Terpental'
+      calc: 'Calc'
+      eval: 'Eval'
+      flappy: 'Flappy'
+      frozen: 'Frozen'
+      gamelab: 'Laboratorium Game'
+      gamelab_jr: 'Lab permainan (beta)'
+      gumball: 'Dunia Gumball yang menakjubkan'
+      iceage: 'Zaman Es'
+      infinity: '∞'
+      minecraft_adventurer: 'Petualang Minecraft'
+      minecraft_designer: 'Minecraft'
+      minecraft_hero: 'Pahlawan Minecraft'
+      playlab: 'Play Lab/Lab Permainan'
+      playlab_k1: 'Lab bermain (pra-pembaca)'
+      starwars: 'Perang Bintang'
+      weblab: 'Web lab'
     popup:
       progress_for_user: "%{name} kemajuan"
       progress: 'Kemajuan Anda'
@@ -350,6 +385,7 @@ id:
       example: 'Contoh solusi'
       example_with_number: 'Contoh solusi %{solution_number}'
       submitted_on: 'Dikirimkan pada %{date}'
+      last_updated: 'Terakhir Diperbarui:'
       unsubmit: 'Unsubmit'
       worked_with: 'Bekerja bersama'
       update_lock_settings: 'Perbarui pengaturan kunci di sini.'
@@ -359,12 +395,12 @@ id:
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'
     email_confirm_wrong_email: '(Alamat email salah?)'
     email_resend_confirm: 'Kirim ulang petunjuk konfirmasi'
-    new_email_hint: '(make sure you can receive emails to this email address)'
+    new_email_hint: '(Pastikan Anda dapat menerima email ke alamat email ini.)'
     new_password_hint: "(Kosongkan jika Anda tidak ingin mengubahnya)"
     current_password_hint: '(kita perlu password Anda saat ini untuk mengkonfirmasi perubahan Anda)'
     delete: 'Hapuslah akun anda'
     delete_text: "Klik tombol di bawah ini akan menghapus akun Anda."
-    delete_text_teacher_managed_note: "You do not have permission to delete this account because it is managed by your teacher. Your teacher(s) will need to remove you from their sections before you can delete your account."
+    delete_text_teacher_managed_note: "Anda tidak memiliki izin untuk menghapus akun ini karena dikelola oleh guru Anda. Teacher(s) Anda akan perlu untuk menghapus Anda dari bagian mereka sebelum Anda dapat menghapus account Anda."
     delete_text_teacher_note: "Catatan : menghapus Akun Anda tidak akan menghapus akun murid-murid Anda."
     delete_confirm: 'Apakah Anda yakin ingin menghapus akun Anda?'
     deleted_user: 'hapus pengguna'
@@ -375,13 +411,16 @@ id:
     create_personal_login_under_13_username: "Nama pengguna (jangan gunakan nama asli anda!)"
     create_personal_login_under_13_parent_email: 'Alamat email orang tua / wali'
     create_personal_login_info: 'Jika anda tetap ingin menggunakan akun Code.org anda meskipun setelah selesai masa sekolah, anda bisa membuat login anda sendiri dibawah.'
+    create_personal_login_link_account: 'Anda dapat juga memilih untuk tersambung ke akun pribadi di bawah bagian "Mengelola akun terkait".'
     create_personal_login_terms: "Dengan membuat login pribadi, Saya setuju untuk terikat dengan<a href='%{terms_of_service_url}', target='_blank'>syarat-syarat layanan Code.org</a>. Jika saya berusia dibawah 13 tahun, Saya mengkonfirmasi bahwa saya sudah mendapatkan persetujuan dari orang tua atau wali sah saya untuk menggunakan layanan-layanan Code.org meskipun tanpa kehadiran seorang guru-pembimbing."
     create_personal_login_email_note: "Catatan: Alamat surel tidak disimpan didalam bentuk yang memungkinkan kami untuk menghubungi pelajar-pelajar tersebut. Pelajar-pelajar tersebut tidak akan pernah menerima surel dari Code.org kecuali hanya untuk pemulihan sandi. Lihat <a href='%{privacy_policy_url}', target='_blank'>kebijakan kerahasian kami</a> untuk informasi lebih lanjut."
     enter_new_login_info: 'Masukkan informasi login baru anda'
     confirm_secret_words: 'Konfirmasi bahwa ini adalah anda dengan memasukkan kata-kata rahasia yang anda miliki sekarang'
+    parent_email_label: "Orang tua/wali email (opsional)"
+    parent_email_hint: "(ini dapat digunakan untuk pemulihan password)"
     enter_parent_email: "Masukkan alamat surel orang tua atau wali anda (untuk pemulihan sandi)"
-    update: "Update Account"
-    account_successfully_updated: "Account successfully updated."
+    update: "Perbarui Akun"
+    account_successfully_updated: "Akun sukses diperbarui."
   user_level:
     completed: 'Selesai'
     tried: 'Telah mencoba'
@@ -463,7 +502,7 @@ id:
     student_not_found: "Satu atau lebih dari siswa tersebut tidak dapat ditemukan."
     all_students_must_be_in_current_section: "Seluruh siswa saat ini harus terdaftar di bagian Anda."
     already_enrolled_in_new_section: "Anda tidak dapat memindahkan siswa ini karena mereka sudah dalam bagian baru."
-    third_party_login: "You cannot move students to a section that is synced with a third party tool."
+    third_party_login: "Anda tidak bisa pindahkan siswa ke bagian yang disinkronisasikan dengan alat pihak ketiga."
   share:
     title: "Belajar di Code Studio"
     description: "Siapa pun bisa belajar ilmu komputer. Membuat permainan, aplikasi dan seni dengan kode."
@@ -471,8 +510,8 @@ id:
   gender:
     male: 'Laki-laki'
     female: 'Wanita'
-    non_binary: 'Non-binary'
-    not_listed: 'Preferred term not listed'
+    non_binary: 'Non-biner'
+    not_listed: 'Istilah yang disukai tidak terdaftar'
     none: 'Memilih untuk tidak menjawab'
   user_type:
     student: 'siswa'
@@ -490,7 +529,7 @@ id:
     more: 'Lebih'
     feedback: 'Berikan pendapat'
     translate: 'Bantu kami menerjemahkan ke bahasa anda'
-    support: 'Dukungan'
+    support: 'Bantuan dan komunitas'
     support_url: 'http://support.code.org'
     tos_short: 'Ketentuan'
     tos: 'Syarat'
@@ -586,7 +625,6 @@ id:
       audience: "Usia 13+"
       cta: "Pelajari caranya"
     hoc-encryption:
-      title: "Simple Encryption"
       body: "Pelajar akan belajar cara untuk membuat dan memecahkan pesan terenkripsi."
     weblab:
       title: "Web Lab (beta)"
@@ -602,15 +640,15 @@ id:
       body: "Gunakan Play Lab untuk membuat sebuah cerita atau permainan yang dibintangi karakter Disney tak terbatas."
     minecraft:
       title: "Minecraft"
-      body: "Jelajahi dunia Minecraft melalui kode."
+      body: "Jelajahi dunia Minecraft melalui kode"
     minecraft2016:
       title: "Minecraft"
       body: "Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft Anda sendiri."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
-      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
-      title: "Sports"
       body: "Membuat sebuah pertandingan basket atau mencampur dan mencocokkan di cabang olahraga."
     text-compression:
       title: "kompresi Teks"
@@ -657,15 +695,11 @@ id:
     wrong_body: "Jawaban yang anda masukkan salah. Silakan coba lagi!"
     correct_title: "Benar"
     correct_body: "Itu jawaban yang benar."
-    toofew_title: "Too few answers."
-    toofew_body: "Please select two answers before submitting."
   multi-submittable:
     wrong_title: "Terima kasih"
     wrong_body: "Terima kasih telah memberikan jawabannya."
     correct_title: "Terima kasih"
     correct_body: "Terima kasih telah memberikan jawabannya."
-    toofew_title: "Too few answers."
-    toofew_body: "Please select two answers before submitting."
   level_group:
     wrong_title: "Terima kasih"
     wrong_body: "Terima kasih telah memberikan jawaban"
@@ -739,22 +773,14 @@ id:
     title: "Opsional: Bantu kami melacak kemajuan untuk meningkatkan keragaman dalam ilmu komputer"
     message: "Silakan beritahu kami ras (periksa semua yang berlaku)"
     races:
-      - 
-        white: "Kaukasia"
-      - 
-        black: "Hitam atau Afrika Amerika"
-      - 
-        hispanic: "Hispanik atau Latino"
-      - 
-        asian: "Orang Asia"
-      - 
-        hawaiian: "Penduduk asli Hawaii atau Kepulauan Pasifik"
-      - 
-        american_indian: "Orang Indian Amerika/Penduduk Asli Alaska"
-      - 
-        other: "Lain"
-      - 
-        opt_out: "Memilih untuk tidak menjawab"
+      white: "Kaukasia"
+      black: "Hitam atau Afrika Amerika"
+      hispanic: "Hispanik atau Latino"
+      asian: "Orang Asia"
+      hawaiian: "Penduduk asli Hawaii atau Kepulauan Pasifik"
+      american_indian: "Orang Indian Amerika/Penduduk Asli Alaska"
+      other: "Lain"
+      opt_out: "Memilih untuk tidak menjawab"
     submit: "Kirim"
     decline: "Tutup"
   zendesk_too_young_message: 'Maaf Pengguna lebih muda tidak bisa masuk ke dalam situs pendukung kami. Anda dapat mengakses  <a href="http://support.code.org">support.code.org</a> tanpa masuk atau minta orang tua anda  atau guru anda untuk menghubungi kami. u.'
@@ -851,28 +877,28 @@ id:
     instructor_feedback: 'Umpan balik instruktur'
     peer_feedback: 'Peer Feedback'
     outdated: 'Umpan balik ini telah ditambahkan sebelumnya diserahkan versi'
-    review_in_progress: 'Ready to review'
-    link_to_submitted_review: 'Link to submitted review'
-    reviews_unavailable: 'Reviews unavailable at this time'
-    review_count: 'You must complete %{review_count} reviews for this unit'
-    must_be_enrolled: 'You must be enrolled in this course to review peers'
-    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
-    review_submitted: 'Your peer review was submitted'
-    review_new_submission: 'Review a new submission'
   flex_category:
     required: 'Tinjauan'
     content: 'Konten'
-    practice: 'Teaching Practices'
-    peer_review: 'Peer Review'
-    ramp_up: 'Ramp-Up'
-    end_of_course_project: 'End of Course Project'
-    optional_stages: 'Optional Stages'
+    ramp_up: 'Jalan-Naik'
     main_course: 'Kursus Utama'
     extra_course_content: 'Isi Kursus Tambahan'
     csf_e_1: 'Jalur naik tujuan E (opsional)'
     csf_e_2: 'Isi kursus E'
     csf_f_1: 'Jalur naik tujuan F (opsional)'
     csf_f_2: 'Isi kursus F'
+    csf_digcit: 'Kewarganegaraaan Digital'
+    csf_jigsaw: 'Teka-teki'
+    csf_loops: 'Loop'
+    csf_events: 'kegiatan'
+    csf_binary: 'Biner'
+    csf_conditionals: 'Kondisi'
+    csf_nested_loops: 'Perulangan bercabang'
+    csf_functions: 'fungsi'
+    csf_variables: 'variabel'
+    csf_for_loops: 'Untuk Pengulangan'
+    csf_internet: 'Internet'
+    csf_impacts: 'Dampak dari Komputasi'
     csd1_1: 'Bab 1: Proses Pemecahan Masalah'
     csd1_2: 'Bab 2: Komputer dan Pemecahan Masalah'
     csd2_1: 'Bab 1: Konten Web dan HTML'
@@ -885,7 +911,7 @@ id:
     csd5_2: 'Bab 2: Memecahkan Masalah Data'
     csd6_1: 'Bab 1: Pemrograman dengan Hardware'
     csd6_2: 'Bab 2: Membangun Prototipe Fisik'
-    csd_survey: 'Post-Course Survey'
+    csd_survey: 'Survei Pasca Kursus'
     csp1_1: 'Bab 1: Mewakili dan Transmisi Informasi'
     csp1_2: 'Bab 2: Menciptakan Internet'
     csp2_1: 'Bab 1: Encoding dan Mengompresi Informasi yang Kompleks'
@@ -896,14 +922,15 @@ id:
     csp5_2: 'Bab 2: Pemrograman dengan Struktur Data'
     cspSurvey: 'Survei'
     cspAssessment: 'Bab Penilaian'
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
+    csp_ap_1: 'Bab 1: Pengaturan Teknologi AP'
     csp_ap_2: 'Bab 2: AP Tepat Kinerja Tugas'
     csp_ap_3: 'Bab 3: AP Membuat Kinerja Tugas'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
-    csp2_1_2018: 'Unit 2: Digital Information'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
+    csp_postap_1: 'Bab 1: Memanipulasi dan memvisualisasikan Data'
+    csp_postap_2: 'Bab 2: Aplikasi dan Basis data'
+    csp3_1_2018: 'Unit 3: Pengenalan Pemrograman'
+    csp_variables: 'variabel'
+    csp_conditionals: 'Kondisi'
+    csp_functions: 'fungsi'
     dlp: 'Anjuran Refleksi'
   external_links:
     disclaimer: Disclaimer
@@ -963,16 +990,7 @@ id:
     download_in_Vietnamese: 'Unduh dalam bahasa Vietnam:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
-  plc:
-    preview_assignments:
-      content_focus_header: 'Content Focus Area'
-      practice_focus_header: 'Practice Focus Area'
-      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
-      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
-      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
-      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
-      confirm_focus_areas: 'Confirm Focus Areas'
-  stage_extras_teacher_message: "You have Lesson Extras turned off for some of your sections. Your students won’t see this page unless you turn them on. You can turn Lesson Extras on by visiting your <a href='http://code.org/teacher-dashboard'>Teacher Dashboard</a>."
+  stage_extras_teacher_message: "Anda memiliki pelajaran tambahan dimatikan untuk beberapa bagian Anda. Siswa Anda tidak akan melihat Halaman ini kecuali Anda hidupkan keduanya. Anda dapat mengaktifkan pelajaran tambahan dengan mengunjungi Anda <a href='http://code.org/teacher-dashboard'>Dashboard guru</a>."
   locked_stage: 'Isi dari tahap ini tidak terlihat karena tahap ini saat ini terkunci. Guru anda dapat membuka tahap ini saat ketika tiba waktu mengerjakannya atau meninjau kembali jawaban anda.'
   hidden_stage: "Guru anda tidak mengharapkan anda berada di sini. Silahkan tanyakan pada guru anda pelajaran mana yang harus anda ikuti."
   hidden_script: "Guru anda tidak mengharapkan anda berada di sini. Silahkan tanyakan pada guru anda ke unit mana anda harus ikuti."
@@ -980,137 +998,45 @@ id:
   return_course_overview: 'Pergi ke ikhtisar kursus'
   view_all_units: 'Melihat semua satuan'
   pd:
-    survey:
-      number_teachers: 'Number of attending teachers'
-      response_count: 'Number of survey responses'
-      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
-      teacher_engagement: 'Teacher Engagement (out of 5)'
-      overall_success: 'Overall Success Score (out of 6)'
-      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
-      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
-      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
-      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
-      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
-      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
-      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
-      how_much_participated_s: 'During your workshop, how much did you participate?'
-      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
-      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
-      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
-      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
-      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
-      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
-      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
-      would_recommend_s: 'I would recommend this professional development to others.'
-      part_of_community_s: 'I feel like I am a part of a community of teachers.'
-      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
-      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
-      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
-      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
-      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
     form_labels:
-      first_name: 'First Name'
-      first_name_preferred: 'Preferred First Name'
-      last_name: 'Last Name'
+      first_name: 'Nama Depan'
+      first_name_preferred: 'Pilihan nama pertama'
+      last_name: 'Nama Belakang'
       email: 'email'
-      email_alternate: 'Alternate Email'
-      gender: 'Gender Identity'
+      email_alternate: 'Email alternatif'
+      gender: 'Identitas gender'
       school_name: 'Nama Sekolah'
       school_city: 'Kota sekolah'
       school_country: 'Negara Sekolah'
-      ages: 'Which age(s) do you teach this year?'
-      subjects: 'Which subject(s) do you teach this year?'
-      resources: 'Which of the following CS education resources do you use?'
-      robotics: 'Which of the following robotics resources do you use?'
-      workshop_organizer: 'Workshop Organizer'
-      workshop_facilitator: 'Workshop Facilitator'
-      workshop_course: 'Workshop Course'
-      email_opt_in: 'Can we email you about Code.org’s international program, updates to our courses, or other computer science news?'
-      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner in your country, school district, and facilitators. We will share your contact information, which courses/units you are using and aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school and district. We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.'
+      ages: 'Umur berapa kamu mengajar tahun ini?'
+      subjects: 'Subjek mana kamu mengajar tahun ini?'
+      resources: 'Sumber daya pendidikan CS mana yang Anda gunakan?'
+      robotics: 'Sumber daya Robotika mana yang Anda gunakan?'
+      workshop_organizer: 'Penyelenggara lokakarya'
+      workshop_facilitator: 'Fasilitator Lokakarya'
+      workshop_course: 'Kursus Lokakarya'
+      email_opt_in: 'Bisa kami email Anda tentang Code.org''s program internasional, update ke kursus kami, atau Berita Sains komputer lainnya?'
     form_entries:
       gender:
         male: 'Laki-laki'
         female: 'Wanita'
-        non_binary: 'Non-binary'
-        not_listed: 'Preferred term not listed'
+        non_binary: 'Non-biner'
+        not_listed: 'Istilah yang disukai tidak terdaftar'
         none: 'Memilih untuk tidak menjawab'
-      school_country:
-        canada: 'Canada'
-        chile: 'Chile'
-        israel: 'Israel'
-        malaysia: 'Malaysia'
-        mexico: 'Mexico'
-        thailand: 'Thailand'
-      ages:
-        ages_under_6: '< 6 years old'
-        ages_7_8: '7-8 years old'
-        ages_9_10: '9-10 years old'
-        ages_11_12: '11-12 years old'
-        ages_13_14: '13-14 years old'
-        ages_15_16: '15-16 years old'
-        ages_17_18: '17-18 years old'
-        ages_19_over: '19+ years old'
       subjects:
         cs: 'Ilmu komputer'
-        ict: 'ICT'
         math: 'Matematika'
         science: 'Ilmu pengetahuan'
-        history: 'History / Social Studies'
         la: 'Seni Bahasa'
-        efl: 'English as a Foreign Language'
-        music: 'Music'
-        art: 'Art'
-        other: "Other:"
       resources:
-        bootstrap: 'Bootstrap'
-        codecademy: 'CodeCademy'
-        csfirst: 'Google CS First'
-        khan: 'Khan Academy'
         kodable: 'Kodable'
         lightbot: 'Lightbot'
-        scratch: 'Scratch'
-        tynker: 'Tynker'
-        other: "Other:"
       robotics:
-        grok: 'Grok Learning'
         kodable: 'Kodable'
-        lego: 'LEGO Education'
-        microbit: 'Microbit'
-        ozobot: 'Ozobot'
-        sphero: 'Sphero'
-        raspberry: 'Raspberry Pi'
-        wonder: 'Wonder Workshop'
-        other: "Other:"
-      workshop_course:
-        csf_af: 'CS Fundamentals (Courses A-F)'
-        csf_express: 'CS Fundamentals (Pre-Express or Express)'
-        csd: 'CS Discoveries'
-        csp: 'CS Principles'
       email_opt_in:
         opt_in_yes: 'Ya'
         opt_in_no: 'Tidak'
-    international_opt_in:
-      title: 'Workshop Attendance'
-      intro: "Thank you for taking time to receive training on Code.org’s curriculum. Our mission to bring computer science education opportunities to all children in all schools around the world would not be possible without you."
-      instructions: "Please fill out the form below to indicate that 1) you attended a training workshop run by one of Code.org’s international partners, and 2) you agree to share your information with our international partner in your country so that they can help to support your journey as a computer science teacher."
-      thanks: "Thank you for submitting! We look forward to supporting you as you get to know Code.org’s curriculum and tools. Please keep sharing your questions and feedback with us by writing to us at <a href='%{support_email_url}'>support@code.org</a> or by posting on the <a href='%{teacher_forum_url}' target='_blank'>teacher forum</a>!"
-    logged_out:
-      heading: 'Thanks for your interest in the Professional Learning Program!'
-      body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
-    not_teacher:
-      body: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either create a teacher account or <a href="%{user_settings}">go to your user settings</a> to upgrade your account from student to teacher.'
-      more: 'If you’d like more information about the program before you start your application, please check out the <a href="%{pl_overview}">Professional Learning Program overview</a>.'
-    no_teacher_email:
-      body: 'Your account doesn’t have an email address. Please <a href="%{user_registration}">visit your account settings</a> to add your email address before completing this form.'
-  courses_category: 'Full Courses'
   cookie_banner:
-    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
-    more_information: "See Code.org's Privacy Policy."
     accept: 'Saya setuju'
   gdpr_dialog:
-    heading: 'Do you agree to using a web site based in the United States?'
-    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
-    link_intro: 'For details see our'
-    privacy_policy: 'privacy policy'
-    logout: 'Logout'
     yes: 'Ya'

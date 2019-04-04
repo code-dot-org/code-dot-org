@@ -3,7 +3,7 @@
   "config": {
     "inline": false,
     "func": "moveToward",
-    "blockText": "move {SPRITE} distance {DISTANCE} toward {TARGET}",
+    "blockText": "move {SPRITE} pixels {DISTANCE} toward {TARGET}",
     "args": [
       {
         "name": "SPRITE",

@@ -11,7 +11,7 @@ family_name 'express'
 version_year '2018'
 is_stable true
 
-stage 'Algorithms: Graph Paper Programming'
+stage 'Graph Paper Programming'
 level 'GraphPaperProgramming_2018'
 
 stage 'Programming in Maze'
@@ -412,20 +412,18 @@ level 'Virtual Pet Freeplay'
 stage 'Explore Project Ideas'
 named_level 'courseF_video_csMatters_2018'
 named_level 'InspirationalArtwork_2018'
-named_level 'FoodFight_2018'
-named_level 'Guess The Number_2018'
-named_level 'Choose Your Own Adventure_2018'
+named_level 'courseF_project_1'
 
 stage 'The Design Process'
 named_level 'Begin planning your project_2018'
 
 stage 'Build Your Project'
 named_level 'Course F: Artist Project_2018'
-named_level 'Course F: Play Lab Project_2018'
+named_level 'CourseF_Project_SpriteLab'
 
 stage 'Revise Your Project'
 named_level 'Course F: Artist Project - Revise_2018'
-named_level 'Course F: Play Lab Project - Revise_2018'
+named_level 'CourseF_Project_Revise_SpriteLab'
 
 stage 'Present Your Project'
 named_level 'Prepare for your presentation_2018'

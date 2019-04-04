@@ -69,4 +69,20 @@ class RouterTest < Minitest::Test
   def test_all_documents
     assert_includes app.helpers.all_documents, {site: 'code.org', uri: '/div_brackets'}
   end
+
+  def test_localized_markdown
+    env 'cdo.locale', 'fr-FR'
+    path = '/test_md'
+    resp = get(path)
+    assert_equal 200, resp.status, path
+    assert_match "Bonjour", resp.body
+  end
+
+  def test_localized_markdown_fallback
+    env 'cdo.locale', 'es-ES'
+    path = '/test_md'
+    resp = get(path)
+    assert_equal 200, resp.status, path
+    assert_match "Hello", resp.body
+  end
 end

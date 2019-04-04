@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Using the Toggle Switch\r\n\r\nThe toggle switch can flip in one of two positions: `open` and `close`.  This program uses it to make a light switch.  Right now it can only turn the light on.\r\n\r\n# Do this\r\n\r\n* Create a new toggle switch event that is triggered when the switch is flipped to `close`.\r\n* Add code so that when the toggle switch is flipped to `close` the light turns off.",
+    "long_instructions": "# Using the Toggle Switch\r\n\r\nThe toggle switch can flip in one of two positions: `open` and `close`.  This program uses it to make a light switch.  Right now it can only turn the light on.\r\n\r\n# Do this\r\n\r\n* Create a new toggle switch event that is triggered when the switch is flipped to `close`.\r\n* Add code so that when the toggle switch is flipped to `close` the light turns off.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

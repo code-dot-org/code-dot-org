@@ -2,13 +2,9 @@
 # To load all locales for testing, add "load_locales: true" to locals.yml config
 
 if (CDO.skip_locales || Rails.env.development?) && (!CDO.load_locales)
-  dev_locales = ["es-ES", "en"]
-  suffixes = dev_locales.map {|x| "#{x}.yml"}
-  paths = Dashboard::Application.paths
-  locales_paths = paths['config/locales'].to_a.select {|x| x.end_with?(*suffixes)}.map do |p|
-    Rails::Paths::Path.new(paths, 'config/locales', [p])
+  Dashboard::Application.config.i18n.railties_load_path.each do |path|
+    path.glob = "*{es-ES,en}.yml"
   end
-  Dashboard::Application.config.i18n.railties_load_path = locales_paths
 end
 
 # Preload translations (before application fork, after i18n_railtie initializer)

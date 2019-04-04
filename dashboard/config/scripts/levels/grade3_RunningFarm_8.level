@@ -26,10 +26,10 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Have wheat and potatoes planted randomly at various growth stages. Now we introduce multiple while loops (stacked) nested inside a loop. The two while loops in the solution represent different while loops (while there is potato and while there is wheat)",
+    "short_instructions": "Have wheat and potatoes planted randomly at various growth stages. Now we introduce multiple while loops (stacked) nested inside a loop. The two while loops in the solution represent different while loops (while there is potato and while there is wheat)",
     "step_speed": "2",
     "ideal": "16",
-    "markdown_instructions": "Harvesting one type of crop at a time takes too long. Can you help me harvest both wheat and potatoes in one run? I wonder if you can stack another While There is... loop on top of another one?",
+    "long_instructions": "Harvesting one type of crop at a time takes too long. Can you help me harvest both wheat and potatoes in one run? I wonder if you can stack another While There is... loop on top of another one?",
     "contained_level_names": null
   },
   "published": true,

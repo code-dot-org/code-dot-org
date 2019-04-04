@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's try to use our two functions to draw a house - what needs to be fixed in this code to draw the house properly?",
+    "short_instructions": "Let's try to use our two functions to draw a house - what needs to be fixed in this code to draw the house properly?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

@@ -1,42 +1,31 @@
-import {assert} from '../../util/configuredChai';
-var testUtils = require('./../../util/testUtils');
-var React = require('react');
-var ReactTestUtils = require('react-addons-test-utils');
+import React from 'react';
+import {expect} from '../../util/configuredChai';
+import {mount} from 'enzyme';
+import ToggleButton from '@cdo/apps/templates/ToggleButton';
 
-describe('ToggleButton', function () {
-
-  testUtils.setExternalGlobals();
-
-  var ToggleButton = require('@cdo/apps/templates/ToggleButton');
-  var renderer;
-
-  beforeEach(function () {
-    renderer = ReactTestUtils.createRenderer();
+describe('ToggleButton', () => {
+  it('renders a "button" element', () => {
+    const toggleButton = mount(
+      <ToggleButton active={true} first={true} last={false} onClick={() => {}}>
+        <div>click me!</div>
+      </ToggleButton>
+    );
+    expect(toggleButton.find('button')).to.have.length(1);
   });
 
-  it('generates a "button" element', function () {
-    var button = React.createElement(ToggleButton, {
-      active: true,
-      onClick: function () {}
-    }, 'buttonText');
-
-    renderer.render(button);
-    var result = renderer.getRenderOutput();
-
-    assert.equal(result.type, 'button');
-    assert.equal(result.props.children, 'buttonText');
-  });
-
-  it('applies id to the element if provided', function () {
-    var button = React.createElement(ToggleButton, {
-      id: 'buttonElementId',
-      active: true,
-      onClick: function () {}
-    }, 'buttonText');
-
-    renderer.render(button);
-    var result = renderer.getRenderOutput();
-
-    assert.equal(result.props.id, 'buttonElementId');
+  it('applies id to the element if provided', () => {
+    const id = 'ButtonId';
+    const toggleButton = mount(
+      <ToggleButton
+        id={id}
+        active={true}
+        first={true}
+        last={false}
+        onClick={() => {}}
+      >
+        <div>click me!</div>
+      </ToggleButton>
+    );
+    expect(toggleButton.props().id).to.equal(id);
   });
 });

@@ -108,7 +108,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - final project template_2018",
-    "markdown_instructions": "# Functions\r\n\r\nAs you continue to work through your program, look for patterns that can be abstracted into functions. Can you find code that is repeated multiple places, or chunks of code that could be better understood of given a name? Don't forget that you can use parameters to write functions for repeated code that is _mostly_ the same, but varies a bit (such as setting color on multiple LEDs).",
+    "long_instructions": "# Functions\r\n\r\nAs you continue to work through your program, look for patterns that can be abstracted into functions. Can you find code that is repeated multiple places, or chunks of code that could be better understood of given a name? Don't forget that you can use parameters to write functions for repeated code that is _mostly_ the same, but varies a bit (such as setting color on multiple LEDs).",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 8683,

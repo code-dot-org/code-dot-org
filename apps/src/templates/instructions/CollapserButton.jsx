@@ -1,9 +1,10 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import color from "../../util/color";
+import color from '../../util/color';
 import FontAwesome from '../FontAwesome';
 import msg from '@cdo/locale';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 const styles = {
   collapseButton: {
@@ -31,15 +32,19 @@ const CollapserButton = props => (
     id="toggleButton"
     onClick={props.onClick}
   >
-    {props.isMinecraft ?
+    {props.isMinecraft ? (
       <img
         src="/blockly/media/1x1.gif"
-        className={[(props.collapsed ? 'more-btn' : 'less-btn'), 'toggle26'].join(' ')}
-      /> :
+        className={[props.collapsed ? 'more-btn' : 'less-btn', 'toggle26'].join(
+          ' '
+        )}
+      />
+    ) : (
       <FontAwesome
         icon={props.collapsed ? 'chevron-circle-down' : 'chevron-circle-up'}
         style={props.isRtl ? styles.collapseIconRtl : styles.collapseIcon}
-      />}
+      />
+    )}
     {props.collapsed ? msg.more() : msg.less()}
   </button>
 );
@@ -49,12 +54,12 @@ CollapserButton.propTypes = {
   isRtl: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
   collapsed: PropTypes.bool.isRequired,
-  isMinecraft: PropTypes.bool.isRequired,
+  isMinecraft: PropTypes.bool.isRequired
 };
 
 export default connect(state => {
   return {
     isRtl: state.isRtl,
-    isMinecraft: !!state.pageConstants.isMinecraft,
+    isMinecraft: !!state.pageConstants.isMinecraft
   };
 })(Radium(CollapserButton));

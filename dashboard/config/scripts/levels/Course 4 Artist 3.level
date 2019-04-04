@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Try to figure out what happens if you run this code (or press \"Run\" to test it). Then, repeat it enough times to complete the drawing.",
+    "short_instructions": "Try to figure out what happens if you run this code (or press \"Run\" to test it). Then, repeat it enough times to complete the drawing.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Try to figure out what happens if you run this code (or press \"Run\" to test it).  \r\n\r\nThen, repeat it enough times to complete the drawing.",
+    "long_instructions": "Try to figure out what happens if you run this code (or press \"Run\" to test it).  \r\n\r\nThen, repeat it enough times to complete the drawing.",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "hint_prompt_attempts_threshold": 4,

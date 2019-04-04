@@ -1,16 +1,99 @@
-@no_ie
 @no_mobile
 @dashboard_db_access
 @pegasus_db_access
 Feature: Using the teacher dashboard
 
-  Scenario: Loading the teacher dashboard
-    Given I am on "http://code.org/"
-    And I am a teacher
-    And I am on "http://code.org/teacher-dashboard?no_home_redirect=1"
-    Then I wait to see ".outerblock"
-    Then I click selector "div.title:contains('Student Accounts and Progress')"
-    Then I wait until I am on "http://studio.code.org/home"
+  Scenario: Visiting student name URLs in old and new teacher dashboard
+    Given I create an authorized teacher-associated student named "Sally"
+    And I give user "Teacher_Sally" hidden script access
+    And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
+    And I sign out
+
+    When I sign in as "Teacher_Sally"
+    When I click selector "a:contains(Untitled Section)" once I see it
+    And I wait until element "#learn-tabs" is visible
+    And check that the URL contains "/teacher-dashboard#/sections/"
+    When I click selector "a:contains(Sally)" once I see it
+    And I wait until element "#course-dropdown" is visible
+    And check that the URL contains "/teacher-dashboard#/sections/"
+    And check that the URL contains "/student/"
+
+    # teacher_dashboard_split_test is set to 0, so user will always be redirected
+    # to the old teacher dashboard, even if experiment is enabled.
+    Then I am on "http://studio.code.org/home?enableExperiments=teacher-dashboard-react"
+    When I click selector "a:contains(Untitled Section)" once I see it
+    And I wait until element "#learn-tabs" is visible
+    And check that the URL contains "/teacher-dashboard#/sections/"
+
+    # TODO: (madelynkasula) Re-enable once all teachers are on new teacher dashboard.
+    # When I click selector "a:contains(Untitled Section)" once I see it
+    # And I wait until element "#uitest-teacher-dashboard-nav" is visible
+    # And check that the URL contains "/teacher_dashboard/sections/"
+    # And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    # When I click selector "a:contains(Sally)" once I see it
+    # And I wait until element "#teacher-panel-container" is visible
+    # And check that the URL contains "/s/allthethings"
+    # And check that the URL contains "viewAs=Teacher"
+
+  Scenario: Viewing a student
+    Given I create an authorized teacher-associated student named "Sally"
+    And I give user "Teacher_Sally" hidden script access
+    And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
+    And I complete the free response on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
+    And I submit the assessment on "http://studio.code.org/s/allthethings/stage/33/puzzle/1"
+    And I sign out
+
+    # Progress tab
+    When I sign in as "Teacher_Sally"
+    And I am on "http://studio.code.org/home"
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
+    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+
+    # Stats tab
+    # Old teacher dashboard
+    And I click selector "#learn-tabs a:contains(Stats)" once I see it
+    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
+    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it
+    And I wait until element "#uitest-stats-table" is visible
+    And element "#uitest-stats-table tr:eq(1)" contains text "Sally"
+
+    # Manage students tab
+    # Old teacher dashboard
+    And I click selector "#learn-tabs a:contains(Manage Students)" once I see it
+    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
+    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
+    And I wait until element "#uitest-manage-students-table" is visible
+    And element "#uitest-manage-students-table tr:eq(1)" contains text "Sally"
+    And I wait until element "#uitest-privacy-link" is visible
+    And element "#uitest-privacy-link" contains text "privacy document"
+
+    # Text responses tab
+    # Old teacher dashboard
+    And I click selector "#learn-tabs a:contains(Text Responses)" once I see it
+    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
+    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Text Responses)" once I see it
+    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    And I wait until element "#text-responses-table" is visible
+    And element "#text-responses-table tr:contains(Sally)" contains text "hello world"
+
+    # Assessments/Surveys tab: anonymous survey
+    # Old teacher dashboard
+    And I click selector "#learn-tabs a:contains(Assessments/Surveys)" once I see it
+    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
+    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
+    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    And I wait until element "div:contains(no submissions for this assessment)" is visible
+    And I wait until element "div:contains(this survey is anonymous)" is not visible
+    And I select the "Lesson 30: Anonymous student survey" option in dropdown "assessment-selector"
+    And I wait until element "div:contains(this survey is anonymous)" is visible
+    And I wait until element "div:contains(no submissions for this assessment)" is not visible
+
+    # Assessments/Surveys tab: assessment
+    And I select the "Lesson 33: Single page assessment" option in dropdown "assessment-selector"
+    And I wait until element "#uitest-submission-status-table" is visible
+    And element "#uitest-submission-status-table tr:eq(1)" contains text "Sally"
 
   Scenario: Loading section projects
     Given I create a teacher-associated student named "Sally"
@@ -30,12 +113,35 @@ Feature: Using the teacher dashboard
     And I sign out
 
     When I sign in as "Teacher_Sally"
-    And I click selector "a:contains('New Section')" once I see it
-    And I click selector "#learn-tabs a:contains('Projects')" once I see it
-    And I wait until element "#projects-list" is visible
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
+    # Old teacher dashboard
+    And I click selector "#learn-tabs a:contains(Projects)" once I see it
+    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
+    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
+    And I wait until element "#uitest-projects-table" is visible
     And I click selector "a:contains('thumb wars')" once I see it
     And I go to the newly opened tab
     And I wait until element ".project_name.header_text:contains('thumb wars')" is visible
+
+  Scenario: Toggling student progress
+    Given I create an authorized teacher-associated student named "Sally"
+    And I give user "Teacher_Sally" hidden script access
+    And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
+    And I complete the free response on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
+    And I submit the assessment on "http://studio.code.org/s/allthethings/stage/33/puzzle/1"
+    And I sign out
+
+    # Progress tab
+    When I sign in as "Teacher_Sally"
+    And I am on "http://studio.code.org/home"
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
+    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    And I press the first ".uitest-summary-cell" element
+    And I see ".uitest-detail-cell"
 
   @eyes
   Scenario: Eyes tests for section projects with thumbnails
@@ -107,21 +213,46 @@ Feature: Using the teacher dashboard
     # Wait for the thumbnail URL to be sent to the server.
     And I wait until element ".project_updated_at" contains text "Saved"
 
+    # Create a dance party project level and generate a thumbnail.
+
+    # We don't want to have to write the code by dragging blocks, so just remix
+    # an existing project-backed level, and then run the project.
+
+    When I am on "http://studio.code.org/s/dance/stage/1/puzzle/13"
+    And I wait for the page to fully load
+    And I wait for 3 seconds
+    And I wait until I don't see selector "#p5_loading"
+    And I click selector "#x-close" once I see it
+    And I close the instructions overlay if it exists
+    And I press the first ".project_remix" element to load a new page
+    And I wait for the page to fully load
+    And I press "runButton"
+    And I wait until element ".project_updated_at" contains text "Saved"
+    And I wait until initial thumbnail capture is complete
+    And I press "resetButton"
+    And I click selector "#runButton" once I see it
+    # Wait for the thumbnail URL to be sent to the server.
+    And I wait until element ".project_updated_at" contains text "Saved"
+
     And I sign out
 
     # Load the section projects page
 
     When I sign in as "Teacher_Sally"
-    # Enable the showProjectThumbnails experiment on Pegasus for this test.
-    Given I am on "http://code.org/teacher-dashboard?no_home_redirect=1&enableExperiments=showProjectThumbnails"
     Then I am on "http://studio.code.org/home"
-    And I click selector "a:contains('New Section')" once I see it
-    And I click selector "#learn-tabs a:contains('Projects')" once I see it
-    And I wait until element "#projects-list" is visible
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
+    # Old teacher dashboard
+    And I click selector "#learn-tabs a:contains(Projects)" once I see it
+    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
+    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
+    And I wait until element "#uitest-projects-table" is visible
     And I wait until the image within element "tr:eq(1)" has loaded
     And I wait until the image within element "tr:eq(2)" has loaded
     And I wait until the image within element "tr:eq(3)" has loaded
     And I wait until the image within element "tr:eq(4)" has loaded
+    And I wait until the image within element "tr:eq(5)" has loaded
 
     Then I see no difference for "projects list view"
     And I close my eyes

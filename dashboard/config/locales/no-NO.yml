@@ -18,6 +18,7 @@
       messages:
         blank: må fylles ut
         blank_plural: må fylles ut
+        invalid: er ugyldig
         invalid_plural: er ugyldig
     attributes:
       user:
@@ -28,13 +29,17 @@
         personal_email: Personlig e-post adresse <a href="%{url}"> (Klikk her hvis
           du ikke har en e-postadresse)</a>
         username: brukernavn
-        password: passord
+        password: Passord
         password_confirmation: Bekreftelse på passord
         current_password: Nåværende passord
         locale: Språk
         age: Alder
         gender: Kjønn
         edit_header: Rediger kontodetaljer
+        finish_sign_up_header: Fullfør oppretting av kontoen
+        finish_sign_up_subheader: Fyll ut for å gjøre ferdig Code.org-konto for <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider: Fyll ut følgende informasjon for å fullføre
+          opprettelsen av en Code.org konto med <strong>%{provider}</strong> for <strong>%{email}</strong>.
         error:
           future: ikke mulig å være i framtiden
   hello: Hei, verden
@@ -46,9 +51,9 @@
   previous_page: Forrige side
   next_page: Neste side
   next_resource: Neste ressurs
-  done_with_module: Done with this Learning Module
   cancel: Avbryt
   okay: OK
+  or: eller
   heading_x_of_y: "%{heading} (side %{x} av %{y})"
   add_teacher_form:
     code:
@@ -70,7 +75,7 @@
   courses_page:
     title_student: Lære i Code Studio
     title_teacher: Undervis med Code Studio
-  unplugged_activity: Frakoblet Aktivitet
+  unplugged_activity: Aktivitet uten datamaskin
   of: av
   more: MER
   less: MINDRE
@@ -85,6 +90,7 @@
   prize: premie
   more_info: Mer info
   auth:
+    continue_with: Fortsett med %{provider}
     sign_in_with: Logg inn med %{provider}
     signed_in: Logget inn!
     signed_out: Du har logget ut av <a href="%{url}">Code.org</a>.
@@ -96,8 +102,8 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft-konto
-    clever: Smartkonto
-    powerschool: Powerschool Account
+    microsoft_v2_auth: Microsoft-konto
+    clever: Smart
     forgot_password: Har du glemt passordet ditt?
     need_confirmation: Mottok du ikke instruksjoner om hvordan du bekrefter?
     need_unlock: Mottok du ingen instruksjoner om hvordan du låser opp?
@@ -105,9 +111,8 @@
       logge inn ved å angi ditt passord under.
     use_clever: Beklager, din Code.org konto er ikke koblet til %{provider}. Vennligs
       logg inn gjennom din Clever Portal.
-    unable_to_connect_provider: Unable to connect your Code.org account to your %{provider}.
-      Please try again.
   signup_form:
+    email_signup: Registrer deg med din e-postadresse
     student_count: "%{count} elever har allerede registrert seg."
     teacher_count: "%{count} lærere har allerede registrert seg."
     overview: Registrer deg for å følge fremdriften din eller administrere klasserommet.
@@ -136,6 +141,7 @@
     age: Alder
     user_type: Er du elev eller lærer?
     submit: Meld deg på
+    go_to_account: Gå til kontoen min
     teacher: Er du en lærer?
     valid_username: Tilgjengelig!
     invalid_username: Brukernavnet må bestå av minimum fem tegn
@@ -143,25 +149,22 @@
     valid_password: Gyldig passord!
     invalid_password: Passordet må bestå av minimum seks tegn
     mismatch_password: De to passordene du skrev inn samsvarer ikke
-    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
-      and <a href='http://code.org/privacy'>Privacy Policy</a>.
     under_13_consent: Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine
       foreldre eller verge til å bruke tjenestene til Code.org.
+    student_consent: Jeg bekrefter at jeg har mine foreldre eller foresattes tillatelse
+      til å bruke tjenestene fra Code.org.
     agree_us_website: Jeg aksepterer å bruke et nettsted som er basert i USA.
     my_data_to_us: Mine data fra bruken av dette nettstedet kan sendes til, lagres
       eller behandles i USA.
-    student_terms: Jeg aksepterer <a href='http://code.org/tos'>brukerbetingelsene</a>  til
-      Code.org. Hvis jeg er under 13 år, bekrefter jeg ved å sende inn dette skjemaet
-      at jeg har tillatelse fra mine foreldre eller verge til å bruke tjenestene til
-      Code.org.<br/><br/>Epost-adresser lagres ikke i en form som gjør at vi kan kontakte
-      elever. Code.org vil aldri sende epost til elever, unntatt for passordpåminnelser.
-      Se våre <a href='http://code.org/privacy'>personvernbetingelser</a> for mer
-      informasjon.
+    student_terms: Epost-adresser lagres ikke i en form som gjør at vi kan kontakte
+      elever. Elever vil aldr motta epost fra Code.org bortsett fra oppretting av
+      nytt passord. Se våre <a href='http://code.org/privacy'>retningslinjer for personvern</a>
+      for mer informasjon.
     teacher_terms: Jeg aksepterer brukerbetingelsene til Code.org. Se våre <a href='http://code.org/privacy'>personvernbetingelser</a>
       for mer informasjon om personvern.
     additional_information: Vi trenger noen flere opplysninger for å fortsette registreringen
       din.
-    user_type_button: Update Account Type
+    user_type_button: Oppdater kontotype
     user_type_label: Kontotype
     user_type_teacher: Lærer
     user_type_student: elev
@@ -170,10 +173,10 @@
     error: En feil har oppstått.
     email_preference_question: Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter
       eller andre IT-relaterte nyheter?
-    email_preference_privacy: "(See our privacy policy)"
+    email_preference_privacy: "(Se våre retningslinjer for personvern)"
     email_preference_yes: Ja
     email_preference_no: Nei
-    email_preference_required: You must specify an email preference.
+    email_preference_required: Du må angi en e-postpreferanse.
   school_info:
     title: Informasjon til skolen (valgfritt)
     school_country: Landet til skolen
@@ -247,6 +250,7 @@
     student_associated_subject: Logg inn informasjon for Code.org
   teacher_mailer:
     new_teacher_subject: Velkommen til Code.org!
+    delete_teacher_subject: 'Code.org melding: Din konto er slettet'
   section:
     your_section:
       one: 'Din seksjon:'
@@ -254,6 +258,7 @@
     code_with_teacher: "%{section_code} med %{teacher_name}"
     confirm:
       remove: Er du sikker på at du vil forlate denne seksjonen?
+    default_name: Inndeling uten tittel
     remove: "(fjern seksjonen)"
     type:
       picture: Bilde passord
@@ -309,18 +314,15 @@
           nå logge på kontoen med ditt brukernavn (%{username}) og passord
   nav:
     header:
-      finished_hoc: Jeg har fullført min Kodetime
+      finished_hoc: Jeg har fullført Kodetimen min
       sign_in_to_save: Logg inn for å lagre fremdrift
       free_play:
         playlab: Lag en app
         artist: Tegn noe
-        calculate: Calculate something
         applab: Lag en app
         gamelab: Opprett et Spill-lab prosjekt
         weblab: Opprett et Web-lab (beta) prosjekt
-      home: Hjem
       my_dashboard: Mitt Kontrollpanel
-      courses: kurs
       course_catalog: Kurskatalog
       project_gallery: Prosjekter
       sections: Seksjoner
@@ -356,7 +358,7 @@
       teach: Undervis
       about: Om
     user:
-      classroom: Hjemmeside for lærere
+      classroom: Lærerens startside
       district_dashboard: Distrikt skrivebord
       label: Hei %{username}
       stats: Min fremdrift
@@ -365,10 +367,38 @@
       signin: Logg inn
       signup: Opprett en konto
       already_registered: Allerede registrert?
-      pair_programming: Par Programmering
+      pair_programming: Parprogrammering
       team: Team
       driver: Logget inn som
       navigator: Kartleser
+      create: Opprett
+      algebra_game: Algebra
+      applab: App Lab
+      artist: Kunstner
+      artist_k1: Kunstner (førskole)
+      basketball: Basketball
+      bounce: sprett
+      calc: Regn ut
+      dance: Dansefest
+      eval: Evaluer
+      flappy: Flakse
+      frozen: Frost
+      gamelab: Spill-lab
+      gamelab_jr: Spillaboratoriet (beta)
+      gumball: Gumballs fantastiske verden
+      iceage: Istid
+      infinity: Uendelig
+      minecraft_adventurer: Minecraft-eventyrer
+      minecraft_designer: Minecraft
+      minecraft_hero: Minecraft Helt
+      playlab: Spill-lab
+      playlab_k1: Spill lab(førskole)
+      scratch: Scratch
+      sports: Sport
+      starwars: Star Wars
+      starwarsblocks: Star Wars (blokker)
+      starwarsblocks_hour: Star Wars (blokker)
+      weblab: Weblaboratoriet
     popup:
       progress_for_user: "%{name}s fremgang"
       progress: Din fremdrift
@@ -402,6 +432,7 @@
       example: Løsnigsforslag
       example_with_number: Løsningsforslag nr %{solution_number}
       submitted_on: Sendt inn %{date}
+      last_updated: 'Sist oppdatert:'
       unsubmit: Trekk tilbake
       worked_with: Jobbet Med
       update_lock_settings: Oppdater låsestatus her.
@@ -411,15 +442,11 @@
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'
     email_confirm_wrong_email: "(Feil e-postadresse?)"
     email_resend_confirm: Send bekreftelse på nytt
-    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(la stå tomt hvis du ikke vil endre det)"
     current_password_hint: "(vi trenger ditt gjeldende passord for å bekrefte dine
       endringer)"
     delete: Slett kontoen
     delete_text: Klikk på knappen under for å slette kontoen din.
-    delete_text_teacher_managed_note: You do not have permission to delete this account
-      because it is managed by your teacher. Your teacher(s) will need to remove you
-      from their sections before you can delete your account.
     delete_text_teacher_note: 'NB: Hvis du sletter din konto, slettes ikke dine elevers
       kontoer.'
     delete_confirm: Er du sikker på at du vil slette denne kontoen?
@@ -427,9 +454,9 @@
     no_password_because_oauth: Ingen passord fordi du logger inn med en tredjepartsleverandør.
     no_password_because_sponsored: Din lærer administrerer ditt passord.
     create_personal_login: Opprett en personlig pålogging
-    create_personal_login_under_13_info: Hvis du vil fortsette å bruke din Code.org
-      konto, selv etter slutten av skoleåret, kan du be dine foreldre/foresatte om
-      å opprette din egen personlige pålogging nedenfor.
+    create_personal_login_under_13_info: Hvis du vil fortsette å bruke din Code.org-konto,
+      selv etter slutten av skoleåret, kan du be dine foreldre/foresatte om å opprette
+      din egen personlige pålogging nedenfor.
     create_personal_login_under_13_username: Brukernavn (ikke bruk ditt virkelige
       navn!)
     create_personal_login_under_13_parent_email: Foreldre/foresatt epost
@@ -440,15 +467,17 @@
       Code.org <a href='%{terms_of_service_url}', target='_blank'> sine vilkår for
       bruk</a>. Hvis jeg er under 13 år, bekrefter jeg at jeg har mine foreldre eller
       verges tillatelse til å bruke Code.org tjenestene selv uten en lærer.
-    create_personal_login_email_note: 'Merk: E-postadresser er ikke lagret i et format
-      som tillater oss å kontakte studentene. Studenter vil aldri få epost fra Code.org,
+    create_personal_login_email_note: 'Merk: Epostadresser er ikke lagret i et format
+      som tillater oss å kontakte elevene. Elevene vil aldri få epost fra Code.org,
       unntatt ved passordgjenoppretting. Se våre <a href=''%{privacy_policy_url}'',
       target=''_blank''> retningslinjer for personvern</a> for mer informasjon.'
     enter_new_login_info: Angi ny påloggingsinformasjon
     confirm_secret_words: Bekreft at det er deg ved å angi gjeldende hemmelige ord
+    parent_email_label: Foreldre/foresatte e-post (valgfritt)
+    parent_email_hint: "(dette kan brukes for passordgjenoppretting)"
     enter_parent_email: Angi dine foreldre eller foresattes epostadresse (for passordgjenoppretting)
     update: Oppdater konto
-    account_successfully_updated: Account successfully updated.
+    account_successfully_updated: Kontoen er oppdatert.
   user_level:
     completed: Fullført
     tried: Forsøkt
@@ -540,12 +569,12 @@
       Helt nye Minecraft Hour of Code Designer lar elevene bestemme reglene i Minecraft.
       De kan skape sin helt unike Minecraft-verden, og dele den med vennene sine eller
       spille det på telefonen sin. Gjennomfør opplegget med klassen din i årets Kodetime.
-    announcement_how_code_studio: Du trenger ingen erfaring for å lære bort datateknikk
+    announcement_how_code_studio: Du trenger ingen erfaring for å lære bort datavitenskap
       i klasserommet ditt. Code.org og LKK tilbyr pensum, timeplaner, høykvalitets
       læreplaner og tonnevis av verktøy for alle klassenivåer&mdash;alt du trenger,
       helt gratis. Lurer du på hvordan du kan komme i gang? Last ned <a href='%{video_download_url}'>denne
       videoen</a>!
-    announcement_go_beyond: Fortsette videre fra Kodetimen og utforsk konsepter fra
+    announcement_go_beyond: Fortsett videre fra Kodetimen og utforsk konsepter fra
       datateknikk med dine elever hver uke. Code.org og LKK tilbyr pensum, timeplaner,
       profesjonelle høykvalitets læreplaner og tilby tonnevis av gode verktøy for
       alle klassenivåer&mdash;og alt er gratis. :) Du behøver ikke noen erfaring for
@@ -556,15 +585,15 @@
       kvalitet <strong> uten kostnad for deg eller din skole </strong>. Ta ledelsen
       innen datavitenskap på din skolen, og søk om profesjonell opplæring.
     announcement_teacher_recruitment2: Lærere som deg leder den informasjonsvitenskapelige
-      utdannelsesbevegelsen. Du kan delta i profesjonelle læringsprogrammer av høy
+      utdanningsbevegelsen. Du kan delta i profesjonelle læringsprogrammer av høy
       kvalitet <strong> uten kostnad for deg eller din skole </strong>. Ta ledelsen
-      innen datavitenskap på din skolen, og søk om profesjonell opplæring. Ungdomskule
-      og videregående lærere må søke innen 17 mars.
-    announcement_csf_pilot: "<strong>Grunnskole lærere:</strong> Bli med og oppdater
-      våre grunnleggende Informatikk kurs! VI ser etter lærere til å lede arbeidet
-      med å oppgradere læreplanen i Grunnleggende Informatikk i løpet av vinteren
-      og våren 2017. Vi ser frem til å høre dine innspill før oppdateringene slippes
-      i august 2017."
+      innen IT på din skole, og søk om profesjonell opplæring. Lærere i ungdomskole
+      og videregående skole må søke innen 17. mars.
+    announcement_csf_pilot: "<strong>Grunnskolelærere:</strong> Bli med og oppdater
+      våre grunnleggende Informatikkurs! VI ser etter lærere til å lede arbeidet med
+      å oppgradere læreplanen i Grunnleggende Informatikk i løpet av vinteren og våren
+      2017. Vi ser frem til å høre dine innspill før oppdateringene slippes i august
+      2017."
     announcement_student_privacy: Hos Code.org tar vi studentenes personvern svært
       alvorlig. For å beskytte elevenes personvern har vi gjort endringer for din
       seksjons pålogginsside til ikke å vise fullt navn. Selv om denne oppdateringen
@@ -577,34 +606,12 @@
       eller Facebook hvor de sier "I''m taking the #APCSP exam because..." De beste
       videoene vil benyttes i vår video og vinneren vil motta Code.org produkter i
       premie!'
-    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
-      break records. Student participation in the exam could dramatically shift diversity
-      in AP Computer Science, but we need your help. Encourage every CS Principles
-      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
-      you a gift</a>. Students can also encourage peers across the country in our
-      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
-    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
-      break records. Student participation in the exam could dramatically shift diversity
-      in AP Computer Science, but we need your help. Encourage every CS Principles
-      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
-      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
-      video</a> so your students can hear from their peers around the country who
-      are taking the exam.
-    announcement_csp_deadline: Final call for high school teachers! Take the lead
-      on computer science in your school and apply for our high-quality professional
-      learning programs <strong>at absolutely no cost to you or your school</strong>.
-      Applications close on April 14th.
-    announcement_applab_export: App Lab, vårt web-baserte programmeringsmiljø, støtter
-      nå export av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av JavaScript
-      blokker, eksporter så koden for å fortsette kodingen i ditt favoritt utviklingsverktøy.
-    announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your
-      CS Principles students taking the AP CS Exam will join over 50,000 other students
-      in the largest AP Exam launch in history. Now, let the voices of your students
-      be heard – remind them to complete the end-of-course survey! You'll be able
-      to review your students' responses and we'll also share an aggregate national
-      report with you."
-    announcement_navigation_redesign: "<b> Endringer i nettstednavigering </b> <br/>Kommer
-      i sommer, vi forbedrer navigasjonen på siden Code.org, slik at du alltid har
+    announcement_applab_export: App-lab, vårt web-baserte programmeringsmiljø, støtter
+      nå eksport av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av
+      JavaScript-blokker, eksporter så koden for å fortsette kodingen i ditt foretrukne
+      utviklingsverktøy.
+    announcement_navigation_redesign: "<b>Endringer i nettstednavigering</b> <br/>I
+      sommer skal vi forbedre navigasjonen på siden Code.org, slik at du alltid har
       tilgang til de beste ressursene dine fra hvor som helst på nettstedet. Så snart
       du logger på din lærerkonto, vil hver side ha en ny navigasjonslinje med lenker
       til hjemmesiden din, kursene, prosjektgalleriet, seksjoner og profesjonell læring."
@@ -621,8 +628,6 @@
       avdeling.
     already_enrolled_in_new_section: Du kan ikke flytte disse elevene fordi de allerede
       er i den nye seksjonen.
-    third_party_login: You cannot move students to a section that is synced with a
-      third party tool.
   share:
     title: Lære i Code Studio
     description: Alle kan lære programmering. Lag egne spill, programmer og tegninger
@@ -631,8 +636,7 @@
   gender:
     male: Mann
     female: Kvinne
-    non_binary: Non-binary
-    not_listed: Preferred term not listed
+    non_binary: Ikke-binær
     none: Foretrekker å ikke svare
   user_type:
     student: elev
@@ -694,7 +698,7 @@
   video:
     tab: Video.
     notes: Ingen video? Vis notater.
-    notes_coming_soon: Tekst til denne videoen kommer snart.
+    notes_coming_soon: Kommentarer for denne videoen kommer snart.
     autoplay_option: Autovisning av videoer
     download: Last ned video
     show_notes: Vis notat
@@ -706,18 +710,18 @@
         Du må gjerne forsøke å se siden, men det kan være at noe ikke vil virke slik
         det er ment.
       link: Lær mer
-      applab_unsupported_tablet: App Lab fungerer best på en stasjonær eller bærbar
+      applab_unsupported_tablet: App-lab fungerer best på en stasjonær eller bærbar
         datamaskin med mus og tastatur. Det kan oppstå problemer med dette verktøyet
-        på enne enheten.
-      gamelab_unsupported_tablet: Spill Lab fungerer best på en stasjonær eller bærbar
+        på denne enheten.
+      gamelab_unsupported_tablet: Spill-lab fungerer best på en stasjonær eller bærbar
         datamaskin med mus og tastatur. Det kan oppstå problemer med dette verktøyet
-        på gjeldende enheten.
+        på den gjeldende enheten.
       weblab_unsupported_browser: Dessverre opplever vi problemer med lasting av Web
         Lab på denne nettleseren. Prøv en annen nettleser inntil problemet er løst.
         Beklager ulempen dette medfører.
-      weblab_unsupported_locale_storage: Du kan oppleve problemer med å bruke Web
-        Lab i nettleserens Privat modus. Vennligst last prosjektet på nytt i Normal
-        modus. Beklager ulempen dette medfører.
+      weblab_unsupported_locale_storage: Du kan oppleve problemer med å bruke Nett-lab
+        i nettleserens private modus. Vennligst last prosjektet på nytt i normal modus.
+        Beklager ulempen dette medfører.
   slow_loading: Dette tar lengre tid enn vanlig...
   try_reloading: Last siden på nytt
   next_stage: Ferdig! Fortsett til neste nivå
@@ -761,6 +765,8 @@
         fungere, deretter kan du dele din app i løpet av sekunder.
       audience: Minstealder 13 år
       cta: Lær hvordan
+    dance:
+      title: Dansefest
     hoc:
       title: Klassisk labyrint
       body: Prøv de grunnleggende konseptene i datavitenskap. Mange millioner har
@@ -811,6 +817,8 @@
     minecraft2016:
       title: Minecraft
       body: Programmer dyr og andre Minecraft-vesener i din egen versjon av Minecraft.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
       body: Minecraft er tilbake for Kodetimen med en helt ny aktivitet! Reis gjennom
@@ -820,22 +828,21 @@
       body: Velg mellom å lage et basketballspill eller miks og match på tvers av
         ulike sporter.
     text-compression:
-      title: Text Compression
       body: I denne leksjonen vil studentene bruke tekst comprimerings modulen til
         å komprimere tekst ved å estatte mønstre med symboler.
     unplugged:
-      title: Analoge leksjoner
-      audience: Passer for de som er 6 år og eldre
-      body: Vi har satt sammen en liste med "analoge" leksjoner som du kan prøve ut
-        i klasserommet. Nå kan du undervise i grunnkonseptene for dataprogrammering
+      title: Leksjoner uten datamaskin
+      audience: Alder 4+
+      body: Vi har satt sammen en liste med leksjoner uten datamaskin som du kan prøve
+        ut i klasserommet. Nå kan du undervise i grunnkonseptene for dataprogrammering
         uavhengig av om du har datamaskiner i klasserommet. Prøv disse leksjonene
         som frittstående kurs eller sammen med et hvilket som helst kurs i datakunnskap.
-      body_short: Hvis du ikke har datamaskiner, kan du prøve disse "analoge" leksjonene
-        i ditt klasserom.
+      body_short: Hvis du ikke har datamaskiner, kan du prøve disse leksjonene uten
+        datamaskin i ditt klasserom.
     unplugged_conditionals:
       title: Betingelser
-      body: Lær om algoritmer og betingede instruksjoner i denne "løsrevede" aktiviteten
-        ved å bruke en kortstokk.
+      body: Lær om algoritmer og betingede instruksjoner i denne aktiviteten uten
+        datamaskin ved å bruke en kortstokk.
     widgets:
       title: Moduler
       body: Studenter kan utforske konsepter fra informatikk-prinsipper-kurset vårt
@@ -846,9 +853,9 @@
   gallery:
     students_drew_these_with_code: Elever tegnet disse ved å kode.
     students_made_these_with_code: Elever laget disse ved å kode.
-    picture_count: I løpet av de siste <b>%{days}</b> dager har elvever tegnet  <b>%{count}</b>
+    picture_count: I løpet av de siste <b>%{days}</b> dager har elever tegnet <b>%{count}</b>
       bilder ved å skrive sine egne dataprogram. Klikk på bildene for å se hvert program
-      kjøre!
+      kjøre.
     activity_count: De siste <b>%{days}</b> dagene har elever laget <b>%{count}</b>
       apps og bilder ved å skrive sine egne programmer. Klikk på bildene og skjermbilder
       for å se hvert program i aksjon.
@@ -880,15 +887,11 @@
     wrong_body: Svaret du har angitt er ikke riktig.  Prøv på nytt!
     correct_title: Riktig
     correct_body: Det er riktig svar.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Tusen takk
     wrong_body: Tusen takk for svar.
     correct_title: Tusen takk
     correct_body: Tusen takk for svar.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Tusen takk
     wrong_body: Takk for dine svar.
@@ -897,9 +900,6 @@
     hide_survey_last_answer: Undersøkelsen er anonym. Besøk gjerne læreroversikten
       for samlede resultater. Merk at resultater kun er synlige dersom minst fem elever
       har besvart undersøkelsen.
-    survey_submission_thankyou: Thank you for submitting this survey! The survey has
-      been cleared so that your responses stay anonymous. Note that your teacher will
-      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Tusen takk
     wrong_body: Takk for dine svar.
@@ -922,11 +922,12 @@
   contract_match:
     wrong_title: Feil svar
     badname: Kontrakten har feil navn.
-    badname_case: Funksjonsnavn er tegn sensitiv. Prøv å endre tegnet på din kontraknavn.
+    badname_case: I funksjonsnavn er det forskjell mellom store og små bokstaver.
+      Prøv å endre ditt kontraktnavn.
     badrange: Din kontrakt har feil område.
     baddomainsize: Kontrakten har ikke riktig antall elementer i domenet.
     baddomainname: En eller flere av domene elementene har feil navn.
-    baddomaintype: En eller flere av domene elementene er feil type, eller de er i
+    baddomaintype: En eller flere av domeneelementene har feil type, eller de er i
       feil rekkefølge.
   text_match:
     placeholder: Angi svaret her
@@ -968,14 +969,14 @@
     tos: Vilkår
     privacy: Personvern
     privacy_notice: Personvernerklæring
-    accept_label: Jeg aksepterer de oppdaterte <a href="%{tos_url}" target="_blank">tjenestebetingelsene</a>
-      og<a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>
+    accept_label: Jeg aksepterer de oppdaterte <a href="%{tos_url}" target="_blank">tjenestevilkårene</a>
+      og<a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>.
     accept: Godta
     print: Skriv ut
-    reminder_desc: Vi har oppdatert våre <a href="%{tos_url}" target="_blank">tjenestebetingelser</a>
+    reminder_desc: Vi har oppdatert våre <a href="%{tos_url}" target="_blank">tjenestevilkår</a>
       og <a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>.
-      Vær snill å les disse nøye før du aksepterer dem. Merk at våre verktøy for å
-      undervise i JavaScript kan være utilgjengelig for dine elever før de oppdaterte
+      Vær s. nill å les disse nøye før du aksepterer dem. Merk at våre verktøy for
+      å undervise i JavaScript kan være utilgjengelig for dine elever før de oppdaterte
       betingelsene aksepteres.
     review_terms: Les våre oppdaterte betingelser
   school_info_interstitial:
@@ -990,14 +991,14 @@
       innen programmering'
     message: Oppgi din etnisitet (kryss av alle som passer)
     races:
-    - white: Hvit
-    - black: Afrikansk
-    - hispanic: Latinamerikansk
-    - asian: Asiatisk
-    - hawaiian: Hawaii eller stillehavsøyene
-    - american_indian: Amerikansk urbefolkning
-    - other: Andre
-    - opt_out: Ønsker ikke å si
+      white: Hvit
+      black: Afrikansk
+      hispanic: Latinamerikansk
+      asian: Asiatisk
+      hawaiian: Fra Hawaii eller Stillehavsøyene
+      american_indian: Amerikansk urbefolkning
+      other: Andre
+      opt_out: Ønsker ikke å si
     submit: Send
     decline: Lukk
   zendesk_too_young_message: Beklager, yngre brukere kan ikke logge på nettstedet
@@ -1070,7 +1071,7 @@
       prosjekter. De du har delt lenken med vil ikke lenger kunne se prosjektet.
     view_all: Vis mine prosjekter
     remix: Remix
-    click_to_remix: Klikk "Remix" til spin-off din egen versjon!
+    click_to_remix: Klikk på "Remiks" for å lage din egen versjon!
     edit_project: Rediger prosjekt
     sharing_disabled: Beklager, dette prosjektet er ikke tilgjengelig for deling.
       Hvis dette er ditt eller en av dine elevers prosjekt, vennligst <a href='https://studio.code.org/users/sign_in'>logg
@@ -1097,14 +1098,14 @@
         abusive_url: URL til innholdet blir rapportert
         abuse_type:
           question: Hvordan krenker dette innholdet %{link_start}Villkår for bruk%{link_end}?
-          harassment: Trusler, nettmobbing, trakkasering
+          harassment: Trusler, nettmobbing, trakassering
           offensive: Krenkende innhold
           infringement: Opphavsrettskrenkelse
           other: Andre
         detail: Vennligst oppgi så mange detaljer som mulig om innholdet du rapporterer.
         acknowledge: Ved å sende inn denne informasjonen aksepterer vil det bli håndtert
           i henhold til vilkårene for%{link_start_privacy}Personvernerklæring%{link_end}
-          og %{link_start_tos}Bruksvillkår%{link_end}
+          og %{link_start_tos}Tjenestevilkår%{link_end}.
   peer_review:
     accepted:
       name: Godkjent
@@ -1120,60 +1121,57 @@
     instructor_feedback: Tilbakemelding fra instruktør
     peer_feedback: Gi tilbakemelding
     outdated: Denne tilbakemeldingen ble gitt på en tidligere versjon av bidraget
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
-    review_count: You must complete %{review_count} reviews for this unit
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this
-      moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
   flex_category:
     required: Oversikt
     content: Innhold
     practice: Undervisningspraksis
     peer_review: Tilbakemelding
-    ramp_up: Ramp-Up
-    end_of_course_project: End of Course Project
-    optional_stages: Optional Stages
     main_course: Hovedkurs
     extra_course_content: Ekstra kursinnhold
     csf_e_1: Oppgrader til Kurs E (Valgfritt)
-    csf_e_2: Kurs E innhold
+    csf_e_2: 'Kurs E: innhold'
     csf_f_1: Oppgrader til Kurs F (Valgfritt)
-    csf_f_2: Kurs F innhold
+    csf_f_2: 'Kurs F: innhold'
+    csf_digcit: Digitalt statsborgerskap
+    csf_jigsaw: Puslespill
+    csf_loops: Løkker
+    csf_events: Hendelser
+    csf_binary: Binær
+    csf_conditionals: Betingelser
+    csf_nested_loops: Løkker i løkker
+    csf_functions: Funksjoner
+    csf_variables: Variabler
+    csf_for_loops: For-løkker
+    csf_internet: Internett
     csd1_1: 'Kapittel 1: Problemløsingsprosessen'
     csd1_2: 'Kapittel 2: Datamaskiner og problemløsning'
-    csd2_1: 'Kapittel 1: Webinnhold og HTML'
+    csd2_1: 'Kapittel 1: Nettinnhold og HTML'
     csd2_2: 'Kapittel 2: Styling og CSS'
     csd3_1: 'Kapittel 1: Bilder og animasjoner'
     csd3_2: 'Kapittel 2: Bygge spill'
     csd4_1: 'Kapittel 1: Bruke sentrert design'
-    csd4_2: 'Kapittel 2: App Prototyping'
+    csd4_2: 'Kapittel 2: Prototyping av app'
     csd5_1: 'Kapittel 1: Representerer informasjon'
     csd5_2: 'Kapittel 2: Problemløsing med data'
-    csd6_1: 'Kapittel 1: Maskinvare utganger'
-    csd6_2: 'Kapittel 2: Maskinvareinnganger'
-    csd_survey: Post-Course Survey
+    csd6_1: 'Kapittel 1: Programmere hardware'
+    csd6_2: 'Kapittel 2: Bygge fysiske prototyper'
     csp1_1: 'Kapittel 1: Representerer og formidle informasjon'
     csp1_2: 'Kapittel 2: Finne opp Internett'
     csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
-    csp2_2: 'Kapittel 2: Manipulere og Visualisere data'
+    csp2_2: 'Kapittel 2: Manipulere og visualisere data'
     csp3_1: 'Kapittel 1: Programmeringsspråk og algoritmer'
     csp4_1: 'Kapittel 1: Verden av Big Data og kryptering'
-    csp5_1: 'Kapittel 1: Event-drevet programmering'
+    csp5_1: 'Kapittel 1: Hendelsesdrevet programmering'
     csp5_2: 'Kapittel 2: Programmering med datastrukturer'
     cspSurvey: Undersøkelse
     cspAssessment: Vurdering av kapittel
-    csp_ap_1: 'Kapittel 1: AP Tech oppsett'
-    csp_ap_2: 'Kapittel 2: AP utforske ytelse oppgave'
-    csp_ap_3: 'Kapittel 3: AP opprette ytelse oppgave'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp_ap_1: 'Kapittel 1: AP Tech-oppsett'
+    csp_ap_2: 'Kapittel 2: AP utforske ytelsesoppgave'
+    csp_ap_3: 'Kapittel 3: AP opprette ytelsesoppgave'
     csp2_1_2018: 'Enhet 2: Digital informasjon'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
+    csp_variables: Variabler
+    csp_conditionals: Betingelser
+    csp_functions: Funksjoner
     dlp: Spørsmål til refleksjon
   external_links:
     disclaimer: Ansvarsfraskrivelse
@@ -1185,12 +1183,12 @@
       dette nettstedet, men vær så snill å <a href='%{support_url}'>kontakte brukerstøtte</a>
       hvis innholdet virker upassende eller nettstedet ikke lenger er tilgjengelig.
   hoc_download:
-    title: Kodetimen nedlastninger
+    title: Nedlastninger av Kodetimen
     capsule_title: Har du internett?
     capsule_desc: Bruk online, web-basert <a href="%{url}">%{app_name}</a>.
-    instructions_headline: Ingen internett?
+    instructions_headline: Ingen internettforbindelse?
     instructions: 'Instruksjon for lærere: hvis du har lav internetthastighet kan
-      du laste ned disse opplæringsprogrammene til kodetime og installere dem for
+      du laste ned disse opplæringsprogrammene til Kodetimen og installere dem for
       å bruke dem i frakoblet modus. Velg språk og plattform, last ned og installer
       det på alle datamaskinene i klasserommet. Det kan være lurt å laste ned til
       en USB-pinne og så installere det derfra over på maskinene. Merk: elevene vil
@@ -1244,23 +1242,6 @@
     download_in_Vietnamese: 'Last ned på vietnamesisk:'
     windows: Windows
     mac: Mac OS X
-  plc:
-    preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content
-        focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
-        practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think
-        that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other
-        resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
-  stage_extras_teacher_message: You have Lesson Extras turned off for some of your
-    sections. Your students won’t see this page unless you turn them on. You can turn
-    Lesson Extras on by visiting your <a href='http://code.org/teacher-dashboard'>Teacher
-    Dashboard</a>.
   locked_stage: Innholdet i dette nivået er ikke synlig fordi det er låst. Læreren
     din kan låse opp nivået når det er på tide å arbeide med det eller se over svarene
     dine.
@@ -1271,90 +1252,23 @@
   return_unit_overview: Gå til kursoversikten
   return_course_overview: Gå til kursoversikten
   view_all_units: Vis alle enheter
+  view_teacher_guide: Sjekk lærerveiledning
   pd:
-    survey:
-      number_teachers: Number of attending teachers
-      response_count: Number of survey responses
-      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
-      teacher_engagement: Teacher Engagement (out of 5)
-      overall_success: Overall Success Score (out of 6)
-      how_much_learned_s: Overall, how much have you learned from your workshop about
-        computer science?
-      how_motivating_s: During your workshop, how motivating were the activities that
-        this program had you do?
-      how_clearly_presented_s: For this workshop, how clearly did your facilitator
-        present the information that you needed to learn?
-      how_interesting_s: How interesting did your facilitator make what you learned
-        in the workshop?
-      how_often_given_feedback_s: How often did your facilitator give you feedback
-        that helped you learn?
-      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
-        questions about what you were learning in his or her workshop?
-      how_often_taught_new_things_s: How often did your facilitator teach you things
-        that you didn't know before taking this workshop?
-      how_much_participated_s: During your workshop, how much did you participate?
-      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
-        how often do you talk about the ideas from the workshops?
-      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
-        workshop activities that you lost track of time?
-      how_excited_before_s: Before the workshop, how excited were you about going
-        to your Code.org workshop?
-      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
-        workshop?
-      more_prepared_than_before_s: I feel more prepared to teach the material covered
-        in this workshop than before I came.
-      know_where_to_go_for_help_s: I know where to go if I need help preparing to
-        teach this material.
-      suitable_for_my_experience_s: This professional development was suitable for
-        my level of experience with teaching CS.
-      would_recommend_s: I would recommend this professional development to others.
-      part_of_community_s: I feel like I am a part of a community of teachers.
-      things_facilitator_did_well_s: What were two things your facilitator(s) did
-        well?
-      things_facilitator_could_improve_s: What were two things your facilitator(s)
-        could do better?
-      things_you_liked_s: What were the two things you liked most about the activities
-        you did in this workshop and why?
-      things_you_would_change_s: What are the two things you would change about the
-        activities you did in this workshop?
-      anything_else_s: Is there anything else you’d like to tell us about your experience
-        at this workshop?
     form_labels:
-      first_name: First Name
-      first_name_preferred: Preferred First Name
-      last_name: Last Name
+      first_name: Fornavn
+      first_name_preferred: Foretrukket fornavn
+      last_name: Etternavn
       email: E-post
-      email_alternate: Alternate Email
-      gender: Gender Identity
+      email_alternate: Alternativ e-post
+      gender: Kjønnsidentitet
       school_name: Skolens navn
       school_city: Skolens poststed
       school_country: Landet til skolen
-      ages: Which age(s) do you teach this year?
-      subjects: Which subject(s) do you teach this year?
-      resources: Which of the following CS education resources do you use?
-      robotics: Which of the following robotics resources do you use?
-      workshop_organizer: Workshop Organizer
-      workshop_facilitator: Workshop Facilitator
-      workshop_course: Workshop Course
-      email_opt_in: Can we email you about Code.org’s international program, updates
-        to our courses, or other computer science news?
-      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
-        share information on how you use Code.org and the Professional Learning resources
-        with the Code.org International Partner in your country, school district,
-        and facilitators. We will share your contact information, which courses/units
-        you are using and aggregate data about your classes with these partners. This
-        includes the number of students in your classes, the demographic breakdown
-        of your classroom, and the name of your school and district. We will not share
-        any information about individual students with our partners: all student information
-        will be de-identified and aggregated. Our International Partners and facilitators
-        are contractually obliged to treat this information with the same level of
-        confidentiality as Code.org.'
     form_entries:
       gender:
         male: Mann
         female: Kvinne
-        non_binary: Non-binary
-        not_listed: Preferred term not listed
+        non_binary: Ikke-binær
         none: Foretrekker å ikke svare
       school_country:
         canada: Canada
@@ -1364,96 +1278,43 @@
         mexico: Mexico
         thailand: Thailand
       ages:
-        ages_under_6: "< 6 years old"
-        ages_7_8: 7-8 years old
-        ages_9_10: 9-10 years old
-        ages_11_12: 11-12 years old
-        ages_13_14: 13-14 years old
-        ages_15_16: 15-16 years old
-        ages_17_18: 17-18 years old
-        ages_19_over: 19+ years old
+        ages_under_6: "< 6 år gammel"
+        ages_7_8: 7-8 år gammel
+        ages_9_10: 9-10 år gammel
+        ages_11_12: 11-12 år gammel
+        ages_13_14: 13-14 år gammel
+        ages_15_16: 15-16 år gammel
+        ages_17_18: 17-18 år gammel
+        ages_19_over: 19+ år gammel
       subjects:
         cs: Datavitenskap
-        ict: ICT
+        ict: IKT
         math: Matematikk
         science: Vitenskap
-        history: History / Social Studies
+        history: Historie / Samfunnsfag
         la: Språkfag
-        efl: English as a Foreign Language
-        music: Music
-        art: Art
-        other: 'Other:'
+        music: Musikk
+        art: Kunst
+        other: 'Annet:'
       resources:
-        bootstrap: Bootstrap
-        codecademy: CodeCademy
-        csfirst: Google CS First
-        khan: Khan Academy
-        kodable: Kodable
-        lightbot: Lightbot
+        kodable: Kodbart
         scratch: Scratch
-        tynker: Tynker
-        other: 'Other:'
+        other: 'Annet:'
       robotics:
-        grok: Grok Learning
-        kodable: Kodable
-        lego: LEGO Education
+        kodable: Kodbart
         microbit: Microbit
-        ozobot: Ozobot
-        sphero: Sphero
         raspberry: Raspberry Pi
-        wonder: Wonder Workshop
-        other: 'Other:'
+        other: 'Annet:'
       workshop_course:
-        csf_af: CS Fundamentals (Courses A-F)
-        csf_express: CS Fundamentals (Pre-Express or Express)
-        csd: CS Discoveries
-        csp: "'16-'17 Prinsipper i informatikk"
+        csp: Prinsipper i informatikk
       email_opt_in:
         opt_in_yes: Ja
         opt_in_no: Nei
-    international_opt_in:
-      title: Workshop Attendance
-      intro: Thank you for taking time to receive training on Code.org’s curriculum.
-        Our mission to bring computer science education opportunities to all children
-        in all schools around the world would not be possible without you.
-      instructions: Please fill out the form below to indicate that 1) you attended
-        a training workshop run by one of Code.org’s international partners, and 2)
-        you agree to share your information with our international partner in your
-        country so that they can help to support your journey as a computer science
-        teacher.
-      thanks: Thank you for submitting! We look forward to supporting you as you get
-        to know Code.org’s curriculum and tools. Please keep sharing your questions
-        and feedback with us by writing to us at <a href='%{support_email_url}'>support@code.org</a>
-        or by posting on the <a href='%{teacher_forum_url}' target='_blank'>teacher
-        forum</a>!
-    logged_out:
-      heading: Thanks for your interest in the Professional Learning Program!
-      body: To get started, you first need to be logged into your Code.org account.
-        If you’d like more information about the program before you start your application,
-        please check out the <a href="%{url}">Professional Learning Program overview</a>.
-    not_teacher:
-      body: Thanks for your interest in Code.org’s Professional Learning Program!
-        You’re currently signed into a student account. Please either create a teacher
-        account or <a href="%{user_settings}">go to your user settings</a> to upgrade
-        your account from student to teacher.
-      more: If you’d like more information about the program before you start your
-        application, please check out the <a href="%{pl_overview}">Professional Learning
-        Program overview</a>.
-    no_teacher_email:
-      body: Your account doesn’t have an email address. Please <a href="%{user_registration}">visit
-        your account settings</a> to add your email address before completing this
-        form.
   courses_category: Alle kurs
   cookie_banner:
-    message: By continuing to browse our site or clicking "I agree," you agree to
-      the storing of cookies on your computer or device.
-    more_information: See Code.org's Privacy Policy.
     accept: Jeg samtykker
   gdpr_dialog:
-    heading: Do you agree to using a web site based in the United States?
-    message: Data from your use of this site may be sent to and stored or processed
-      in the United States.
-    link_intro: For details see our
-    privacy_policy: privacy policy
-    logout: Logout
+    message: Dine data fra bruken av dette nettstedet kan sendes til, lagres eller
+      behandles i USA.
+    logout: Logg ut
     true: Ja

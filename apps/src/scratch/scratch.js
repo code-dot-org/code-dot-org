@@ -6,13 +6,13 @@ import Blockly from 'scratch-blocks';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 
-import { getStore, registerReducers } from '@cdo/apps/redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
-import { singleton as studioApp } from '@cdo/apps/StudioApp';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import ScratchView from './ScratchView';
-import { scratchDefaultProject } from './scratchDefaultProject';
+import {scratchDefaultProject} from './scratchDefaultProject';
 
 export const __TestInterface = {};
 
@@ -33,7 +33,7 @@ export default function init(options) {
     <Provider store={getStore()}>
       <ScratchView onMount={() => studioApp().init(options)} />
     </Provider>,
-    document.getElementById(options.containerId),
+    document.getElementById(options.containerId)
   );
 
   /**
@@ -41,7 +41,9 @@ export default function init(options) {
    * @returns {string} a URL to download a project asset (PNG, WAV, etc.)
    */
   function getAssetUrl(asset) {
-    return studioApp().assetUrl(`media/scratch/${asset.assetId}.${asset.dataFormat}`);
+    return studioApp().assetUrl(
+      `media/scratch/${asset.assetId}.${asset.dataFormat}`
+    );
   }
 
   // Instantiate the VM.
@@ -51,7 +53,10 @@ export default function init(options) {
 
   const storage = new Storage();
   const AssetType = storage.AssetType;
-  storage.addWebSource([AssetType.ImageVector, AssetType.ImageBitmap, AssetType.Sound], getAssetUrl);
+  storage.addWebSource(
+    [AssetType.ImageVector, AssetType.ImageBitmap, AssetType.Sound],
+    getAssetUrl
+  );
   vm.attachStorage(storage);
 
   // Instantiate the renderer and connect it to the VM.
@@ -78,12 +83,12 @@ export default function init(options) {
     zoom: {
       controls: true,
       wheel: true,
-      startScale: 0.75,
+      startScale: 0.75
     },
     colours: {
       workspace: '#fff',
       flyout: '#ddd',
-      insertionMarkerOpacity: 0.1,
+      insertionMarkerOpacity: 0.1
     }
   });
 
@@ -102,7 +107,9 @@ export default function init(options) {
 function registerBlockEvents(vm, workspace) {
   workspace.addChangeListener(vm.blockListener);
   workspace.addChangeListener(vm.variableListener);
-  workspace.addChangeListener(() => dispatchEvent(new Event('workspaceChange')));
+  workspace.addChangeListener(() =>
+    dispatchEvent(new Event('workspaceChange'))
+  );
   const flyoutWorkspace = workspace.getFlyout().getWorkspace();
   flyoutWorkspace.addChangeListener(vm.flyoutBlockListener);
   flyoutWorkspace.addChangeListener(vm.monitorBlockListener);
@@ -128,7 +135,7 @@ function getCanvasCoordinates(canvas, event) {
     x: event.clientX - rect.left,
     y: event.clientY - rect.top,
     canvasWidth: rect.width,
-    canvasHeight: rect.height,
+    canvasHeight: rect.height
   };
 }
 
@@ -148,7 +155,7 @@ function registerInputEvents(vm, canvas) {
   canvas.addEventListener('mousedown', e => {
     const data = {
       isDown: true,
-      ...getCanvasCoordinates(canvas, e),
+      ...getCanvasCoordinates(canvas, e)
     };
     vm.postIOData('mouse', data);
     e.preventDefault();
@@ -157,7 +164,7 @@ function registerInputEvents(vm, canvas) {
   canvas.addEventListener('mouseup', e => {
     const data = {
       isDown: false,
-      ...getCanvasCoordinates(canvas, e),
+      ...getCanvasCoordinates(canvas, e)
     };
     vm.postIOData('mouse', data);
     e.preventDefault();
@@ -168,7 +175,7 @@ function registerInputEvents(vm, canvas) {
     if ([document, document.body, greenFlag, stopAll].includes(e.target)) {
       vm.postIOData('keyboard', {
         keyCode: e.keyCode,
-        isDown: true,
+        isDown: true
       });
       e.preventDefault();
     }
@@ -178,7 +185,7 @@ function registerInputEvents(vm, canvas) {
     // Always capture up events, even those that have switched to other targets.
     vm.postIOData('keyboard', {
       keyCode: e.keyCode,
-      isDown: false,
+      isDown: false
     });
   });
 

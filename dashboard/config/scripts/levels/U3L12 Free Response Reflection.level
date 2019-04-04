@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Reflection: Mission Unsortable",
-    "markdown_instructions": "How did your personal mission contribute and/or detract from the overall goal of sorting the cards? \n\nHow could your group have sorted the cards more efficiently, assuming that everyone still needed to execute the actions as prescribed in their missions? \n\nIf your group was not the first to finish, what slowed your progress?\n\n\n",
+    "long_instructions": "How did your personal mission contribute and/or detract from the overall goal of sorting the cards? \n\nHow could your group have sorted the cards more efficiently, assuming that everyone still needed to execute the actions as prescribed in their missions? \n\nIf your group was not the first to finish, what slowed your progress?\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "See contained level for markdown",
+    "long_instructions": "See contained level for markdown",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

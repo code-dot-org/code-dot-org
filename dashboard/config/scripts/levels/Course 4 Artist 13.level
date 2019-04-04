@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Still playing?  Here is a blank canvas where you can design anything you want!",
+    "short_instructions": "Still playing?  Here is a blank canvas where you can design anything you want!",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -29,7 +29,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "scrollbars": "false",
-    "markdown_instructions": "Still playing?  Here is a blank canvas where you can design anything you want!",
+    "long_instructions": "Still playing?  Here is a blank canvas where you can design anything you want!",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "hint_prompt_attempts_threshold": 4,

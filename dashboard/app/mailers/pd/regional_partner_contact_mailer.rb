@@ -1,16 +1,22 @@
 class Pd::RegionalPartnerContactMailer < ActionMailer::Base
-  default from: 'Tanya Parker <tanya_parker@code.org>'
+  NO_REPLY = 'Code.org <noreply@code.org>'
+  default from: 'Anthonette Peña <partner@code.org>'
 
   def matched(form, rp_pm)
     @form = form
-    role = form[:role].downcase
 
     pm = User.find(rp_pm.program_manager_id)
     @name = pm.name
 
+    subject = if form[:mini]
+                "Question about Code.org program"
+              else
+                "A teacher and/or administrator would like to connect with you"
+              end
+
     mail(
       to: pm.email,
-      subject: "A " + role + " would like to connect with you"
+      subject: subject
     )
   end
 
@@ -26,13 +32,15 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
     )
   end
 
-  def receipt(form)
+  # @param [Hash] form
+  # @param [RegionalPartner] regional_partner (can be nil if unmatched)
+  def receipt(form, regional_partner)
     @form = form
-    @interest = form[:role] == "Teacher" ? "professional learning program" : "administrator support"
-
+    @regional_partner = regional_partner
     mail(
+      from: NO_REPLY,
       to: form[:email],
-      subject: "Thank you for contacting us"
+      subject: "Thank you for contacting your Code.org Regional Partner",
     )
   end
 end

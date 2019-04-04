@@ -2,12 +2,12 @@ he:
   data:
     block_categories:
       Actions: פעולות
-      Loops: לולאות
+      Loops: חזרות
       Functions: פונקציות
       Color: צבע
       Brushes: מברשות
       Math: מתמטיקה
-      Logic: הגיון
+      Logic: לוגיקה
       Variables: משתנים
       Number: מספר
       String: מחרוזת
@@ -15,35 +15,38 @@ he:
       Boolean: ערך בוליאני
       Conditionals: תנאים
       Events: אירועים
-      Games/Score: משחק/נקודות
+      Games/Score: משחקים/נקודות
       Comments: תגובות
-      Category: קטגוריות
+      Category: קטגוריה
       Prebuilt: טרום בניה
       Text: טקסט
       Picker: בוחר
       Comment: תגובה
       'Variables ': 'משתנים '
+      Default: ברירת מחדל
+      Behaviors: התנהגויות
+      Locations: מיקומים
       everythingelse: כלהשאר
+      World: עולם
+      Location: מיקום
       numbers: מספרים
       Numbers: מספרים
-      Input: Input
-      Default: ברירת מחדל
-      World: עולם
-      Sprites: Sprites
-      Behaviors: התנהגויות
-      Advanced: מתקדם
-      Sprite: מסך
-      Brush: מברשת
-      Make Sprite: צור מסך
-      Movement: תנועה
-      Start: התחל
+      Dancers: רקדנים
       Groups: קבוצות
-      Booleans: Booleans
+      Advanced: מתקדם
+      Start: התחל
+      Music: מוסיקה
+      Dancing: ריקוד
+      Sprite: ספרייט
+      Brush: מברשת
+      Make Sprite: צור ספרייט
+      Movement: תנועה
       Functional: תפקוד
+      While Events: מאורעות כל עוד
+      Sprite Properties: מאפייני ספרייט
       Predefined: מוגדרים מראש
       test: בדיקה
       test2: בדיקה2
-      Foo: Foo
       Name: שם
       NEW BLOCKS: בלוקים חדשים
       'Functions ': 'פונקציות '

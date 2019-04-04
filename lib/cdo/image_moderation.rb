@@ -1,5 +1,5 @@
 require 'cdo/azure_content_moderator'
-require 'honeybadger'
+require 'honeybadger/ruby'
 
 module ImageModeration
   # Returns a content rating from an external service.

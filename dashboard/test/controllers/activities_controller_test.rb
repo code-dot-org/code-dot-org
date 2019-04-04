@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 
 class ActivitiesControllerTest < ActionController::TestCase
@@ -1227,11 +1226,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "milestone fails to update locked/readonly level" do
     teacher = create(:teacher)
-
-    # make them an authorized_teacher
-    cohort = create(:cohort)
-    cohort.teachers << teacher
-    cohort.save!
 
     section = create(:section, user: teacher, login_type: 'word')
     student_1 = create(:follower, section: section).student_user

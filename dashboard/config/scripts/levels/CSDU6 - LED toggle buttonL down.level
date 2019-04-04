@@ -26,7 +26,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Other Board Events with the Buttons\r\n\r\nThe left and right buttons have three event types:`press`, `down`, and `up`\r\n\r\nSo far you've just been using the `press` event. Now, we're going to use the `up` and `down` events to make the LED turn on and off with just **one** button.\r\n\r\n## Do this\r\n* Drag out an `onBoardEvent` block for one of the buttons and set the event type to `down`.\r\n* Add code to turn the LED on when the button goes down.",
+    "long_instructions": "# Other Board Events with the Buttons\r\n\r\nThe left and right buttons have three event types:`press`, `down`, and `up`\r\n\r\nSo far you've just been using the `press` event. Now, we're going to use the `up` and `down` events to make the LED turn on and off with just **one** button.\r\n\r\n## Do this\r\n* Drag out an `onBoardEvent` block for one of the buttons and set the event type to `down`.\r\n* Add code to turn the LED on when the button goes down.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

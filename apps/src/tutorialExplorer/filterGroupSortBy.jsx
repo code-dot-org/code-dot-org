@@ -1,9 +1,10 @@
 /* SortBy: The sort order of tutorials.
  */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import FilterGroupContainer from './filterGroupContainer';
-import { TutorialsSortByOptions } from './util';
+import {TutorialsSortByOptions} from './util';
 import i18n from '@cdo/tutorialExplorer/locale';
 
 const styles = {
@@ -17,15 +18,14 @@ const styles = {
 
 export default class FilterGroupSortBy extends React.Component {
   static propTypes = {
-    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions)).isRequired,
+    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions))
+      .isRequired,
     sortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions)).isRequired,
     onUserInput: PropTypes.func.isRequired
   };
 
-  handleChangeSort = (event) => {
-    this.props.onUserInput(
-      event.target.value
-    );
+  handleChangeSort = event => {
+    this.props.onUserInput(event.target.value);
   };
 
   render() {
@@ -36,13 +36,13 @@ export default class FilterGroupSortBy extends React.Component {
     let sortOptions;
     if (this.props.defaultSortBy === TutorialsSortByOptions.popularityrank) {
       sortOptions = [
-        {value: "popularityrank", text: i18n.filterSortByPopularityRank()},
-        {value: "displayweight", text: i18n.filterSortByDisplayWeight()}
+        {value: 'popularityrank', text: i18n.filterSortByPopularityRank()},
+        {value: 'displayweight', text: i18n.filterSortByDisplayWeight()}
       ];
     } else {
       sortOptions = [
-        {value: "displayweight", text: i18n.filterSortByDisplayWeight()},
-        {value: "popularityrank", text: i18n.filterSortByPopularityRank()}
+        {value: 'displayweight', text: i18n.filterSortByDisplayWeight()},
+        {value: 'popularityrank', text: i18n.filterSortByPopularityRank()}
       ];
     }
 
@@ -61,4 +61,3 @@ export default class FilterGroupSortBy extends React.Component {
     );
   }
 }
-

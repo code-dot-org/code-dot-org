@@ -25,8 +25,8 @@
     "disable_examples": "false",
     "start_direction": "1",
     "step_mode": "0",
-    "instructions": "This time, try something a bit more challenging.",
-    "markdown_instructions": "This time, try something a bit more challenging.",
+    "short_instructions": "This time, try something a bit more challenging.",
+    "long_instructions": "This time, try something a bit more challenging.",
     "ideal": "9",
     "contained_level_names": null
   },

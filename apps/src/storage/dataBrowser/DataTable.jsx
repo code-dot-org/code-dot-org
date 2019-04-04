@@ -1,40 +1,43 @@
 /**
  * @overview Component for editing a data table.
  */
-
 import TableControls from './TableControls';
 import AddTableRow from './AddTableRow';
-import { DataView } from '../constants';
+import {DataView} from '../constants';
 import EditTableRow from './EditTableRow';
 import ColumnHeader from './ColumnHeader';
 import FirebaseStorage from '../firebaseStorage';
 import FontAwesome from '../../templates/FontAwesome';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
-import { changeView, showWarning } from '../redux/data';
+import React from 'react';
+import {changeView, showWarning} from '../redux/data';
 import * as dataStyles from './dataStyles';
-import color from "../../util/color";
-import { connect } from 'react-redux';
-import { getColumnNamesFromRecords } from '../firebaseMetadata';
+import color from '../../util/color';
+import {connect} from 'react-redux';
+import {getColumnNamesFromRecords} from '../firebaseMetadata';
 
 const MIN_TABLE_WIDTH = 600;
 
 const styles = {
-  addColumnHeader: [dataStyles.headerCell, {
-    width: 19,
-  }],
+  addColumnHeader: [
+    dataStyles.headerCell,
+    {
+      width: 19
+    }
+  ],
   container: {
     flexDirection: 'column',
     height: '100%',
     minWidth: MIN_TABLE_WIDTH,
-    maxWidth: '100%',
+    maxWidth: '100%'
   },
   table: {
-    minWidth: MIN_TABLE_WIDTH,
+    minWidth: MIN_TABLE_WIDTH
   },
   tableWrapper: {
     flexGrow: 1,
-    overflow: 'scroll',
+    overflow: 'scroll'
   },
   plusIcon: {
     alignItems: 'center',
@@ -45,7 +48,7 @@ const styles = {
     display: 'inline-flex',
     height: 18,
     justifyContent: 'center',
-    width: 18,
+    width: 18
   }
 };
 
@@ -54,7 +57,7 @@ const INITIAL_STATE = {
   pendingAdd: false,
   // The old name of the column currently being renamed or deleted.
   pendingColumn: null,
-  showDebugView: false,
+  showDebugView: false
 };
 
 class DataTable extends React.Component {
@@ -66,10 +69,8 @@ class DataTable extends React.Component {
     // the maximum key in the object have non-empty values, then Firebase will render
     // it as an array."
     // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
-    tableRecords: PropTypes.oneOfType([
-      PropTypes.object,
-      PropTypes.array
-    ]).isRequired,
+    tableRecords: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
+      .isRequired,
     view: PropTypes.oneOf(Object.keys(DataView)),
 
     // from redux dispatch
@@ -97,7 +98,7 @@ class DataTable extends React.Component {
         () => {
           this.setState({
             editingColumn: columnName,
-            pendingAdd: false,
+            pendingAdd: false
           });
         },
         msg => {
@@ -108,9 +109,9 @@ class DataTable extends React.Component {
     }, 0);
   };
 
-  deleteColumn = (columnToRemove) => {
+  deleteColumn = columnToRemove => {
     this.setState({
-      pendingColumn: columnToRemove,
+      pendingColumn: columnToRemove
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
@@ -129,12 +130,12 @@ class DataTable extends React.Component {
   /**
    * @param {string|null} columnName Column to edit, or null to not edit any column.
    */
-  editColumn = (columnName) => this.setState({editingColumn: columnName});
+  editColumn = columnName => this.setState({editingColumn: columnName});
 
   renameColumn = (oldName, newName) => {
     this.setState({
       editingColumn: null,
-      pendingColumn: oldName,
+      pendingColumn: oldName
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
@@ -160,7 +161,7 @@ class DataTable extends React.Component {
     this.setState({
       editingColumn: null,
       pendingAdd: false,
-      pendingColumn: null,
+      pendingColumn: null
     });
   };
 
@@ -182,7 +183,10 @@ class DataTable extends React.Component {
   }
 
   getNextColumnName() {
-    const names = this.getColumnNames(this.props.tableRecords, this.props.tableColumns);
+    const names = this.getColumnNames(
+      this.props.tableRecords,
+      this.props.tableColumns
+    );
     let i = names.length;
     while (names.includes(`column${i}`)) {
       i++;
@@ -205,12 +209,15 @@ class DataTable extends React.Component {
           console.warn(msg);
         }
         onComplete();
-      });
+      }
+    );
   };
 
   exportCsv = () => {
     const tableName = encodeURIComponent(this.props.tableName);
-    location.href = `/v3/export-firebase-tables/${Applab.channelId}/${tableName}`;
+    location.href = `/v3/export-firebase-tables/${
+      Applab.channelId
+    }/${tableName}`;
   };
 
   /** Delete all rows, but preserve the columns. */
@@ -218,7 +225,8 @@ class DataTable extends React.Component {
     FirebaseStorage.clearTable(
       this.props.tableName,
       () => {},
-      msg => console.warn(msg));
+      msg => console.warn(msg)
+    );
   };
 
   toggleDebugView = () => {
@@ -229,7 +237,7 @@ class DataTable extends React.Component {
   coerceColumn = (columnName, columnType) => {
     this.setState({
       editingColumn: null,
-      pendingColumn: columnName,
+      pendingColumn: columnName
     });
     // Show the spinner icon before updating the data.
     setTimeout(() => {
@@ -260,7 +268,10 @@ class DataTable extends React.Component {
   }
 
   render() {
-    let columnNames = this.getColumnNames(this.props.tableRecords, this.props.tableColumns);
+    let columnNames = this.getColumnNames(
+      this.props.tableRecords,
+      this.props.tableColumns
+    );
     let editingColumn = this.state.editingColumn;
 
     // Always show at least one column.
@@ -269,16 +280,25 @@ class DataTable extends React.Component {
       columnNames.push(editingColumn);
     }
 
-    const visible = (DataView.TABLE === this.props.view);
-    const containerStyle = [styles.container, {
-      display: visible ? '' : 'none',
-    }];
-    const tableDataStyle = [styles.table, {
-      display: this.state.showDebugView ? 'none' : ''
-    }];
-    const debugDataStyle = [dataStyles.debugData, {
-      display: this.state.showDebugView ? '' : 'none',
-  }];
+    const visible = DataView.TABLE === this.props.view;
+    const containerStyle = [
+      styles.container,
+      {
+        display: visible ? '' : 'none'
+      }
+    ];
+    const tableDataStyle = [
+      styles.table,
+      {
+        display: this.state.showDebugView ? 'none' : ''
+      }
+    ];
+    const debugDataStyle = [
+      dataStyles.debugData,
+      {
+        display: this.state.showDebugView ? '' : 'none'
+      }
+    ];
     return (
       <div id="dataTable" style={containerStyle} className="inline-flex">
         <div style={dataStyles.viewHeader}>
@@ -288,7 +308,8 @@ class DataTable extends React.Component {
               style={dataStyles.link}
               onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
             >
-              <FontAwesome icon="arrow-circle-left"/>&nbsp;Back to data
+              <FontAwesome icon="arrow-circle-left" />
+              &nbsp;Back to data
             </a>
           </span>
           <span style={dataStyles.debugLink}>
@@ -310,16 +331,13 @@ class DataTable extends React.Component {
           tableName={this.props.tableName}
         />
 
-        <div style={debugDataStyle}>
-          {this.getTableJson()}
-        </div>
+        <div style={debugDataStyle}>{this.getTableJson()}</div>
 
         <div style={styles.tableWrapper}>
           <table style={tableDataStyle}>
             <tbody>
-            <tr>
-              {
-                columnNames.map(columnName => (
+              <tr>
+                {columnNames.map(columnName => (
                   <ColumnHeader
                     key={columnName}
                     coerceColumn={this.coerceColumn}
@@ -330,44 +348,45 @@ class DataTable extends React.Component {
                     /* hide gear icon if an operation is pending on another column */
                     isEditable={
                       columnName !== 'id' &&
-                      !(this.state.pendingColumn && this.state.pendingColumn !== columnName) &&
+                      !(
+                        this.state.pendingColumn &&
+                        this.state.pendingColumn !== columnName
+                      ) &&
                       !this.state.pendingAdd
                     }
                     isEditing={editingColumn === columnName}
                     isPending={this.state.pendingColumn === columnName}
                     renameColumn={this.renameColumn}
                   />
-                ))
-              }
-              <th style={styles.addColumnHeader}>
-                {
-                  this.state.pendingAdd ?
-                    <FontAwesome icon="spinner" className="fa-spin"/> :
+                ))}
+                <th style={styles.addColumnHeader}>
+                  {this.state.pendingAdd ? (
+                    <FontAwesome icon="spinner" className="fa-spin" />
+                  ) : (
                     <FontAwesome
                       id="addColumnButton"
                       icon="plus"
                       style={styles.plusIcon}
                       onClick={this.addColumn}
                     />
-                }
-              </th>
-              <th style={dataStyles.headerCell}>
-                Actions
-              </th>
-            </tr>
+                  )}
+                </th>
+                <th style={dataStyles.headerCell}>Actions</th>
+              </tr>
 
-            <AddTableRow tableName={this.props.tableName} columnNames={columnNames}/>
+              <AddTableRow
+                tableName={this.props.tableName}
+                columnNames={columnNames}
+              />
 
-            {
-              Object.keys(this.props.tableRecords).map(id => (
+              {Object.keys(this.props.tableRecords).map(id => (
                 <EditTableRow
                   columnNames={columnNames}
                   tableName={this.props.tableName}
                   record={JSON.parse(this.props.tableRecords[id])}
                   key={id}
                 />
-              ))
-            }
+              ))}
             </tbody>
           </table>
         </div>
@@ -376,16 +395,19 @@ class DataTable extends React.Component {
   }
 }
 
-export default connect(state => ({
-  view: state.data.view,
-  tableColumns: state.data.tableColumns || [],
-  tableRecords: state.data.tableRecords || {},
-  tableName: state.data.tableName || ''
-}), dispatch => ({
-  onShowWarning(warningMsg, warningTitle) {
-    dispatch(showWarning(warningMsg, warningTitle));
-  },
-  onViewChange(view) {
-    dispatch(changeView(view));
-  }
-}))(Radium(DataTable));
+export default connect(
+  state => ({
+    view: state.data.view,
+    tableColumns: state.data.tableColumns || [],
+    tableRecords: state.data.tableRecords || {},
+    tableName: state.data.tableName || ''
+  }),
+  dispatch => ({
+    onShowWarning(warningMsg, warningTitle) {
+      dispatch(showWarning(warningMsg, warningTitle));
+    },
+    onViewChange(view) {
+      dispatch(changeView(view));
+    }
+  })
+)(Radium(DataTable));

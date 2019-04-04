@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {expect} from 'chai';
 import {mount, shallow} from 'enzyme';
 
-describe("WorkshopTableLoader", () => {
+describe('WorkshopTableLoader', () => {
   let server;
   let debounceStub;
 
@@ -27,18 +27,13 @@ describe("WorkshopTableLoader", () => {
   });
 
   const getFakeWorkshopsData = () => {
-    return [
-      {id: 1},
-      {id: 2}
-    ];
+    return [{id: 1}, {id: 2}];
   };
 
-  it("Initially displays a spinner", () => {
+  it('Initially displays a spinner', () => {
     const Child = sinon.stub().returns(null);
     const loader = shallow(
-      <WorkshopTableLoader
-        queryUrl = "fake-query-url"
-      >
+      <WorkshopTableLoader queryUrl="fake-query-url">
         <Child />
       </WorkshopTableLoader>
     );
@@ -47,25 +42,25 @@ describe("WorkshopTableLoader", () => {
     expect(loader.find('Spinner')).to.have.length(1);
   });
 
-  it("Loads workshops over ajax and passes them to the child component", () => {
+  it('Loads workshops over ajax and passes them to the child component', () => {
     const fakeWorkshopsData = getFakeWorkshopsData();
     const responseJson = JSON.stringify(fakeWorkshopsData);
-    server.respondWith("GET", "fake-query-url",
-      [200, { "Content-Type": "application/json" }, responseJson]
-    );
+    server.respondWith('GET', 'fake-query-url', [
+      200,
+      {'Content-Type': 'application/json'},
+      responseJson
+    ]);
 
     const Child = sinon.stub().returns(null);
     mount(
-      <WorkshopTableLoader
-        queryUrl = "fake-query-url"
-      >
+      <WorkshopTableLoader queryUrl="fake-query-url">
         <Child />
       </WorkshopTableLoader>
     );
 
     server.respond();
     expect(server.requests.length).to.equal(1);
-    expect(server.requests[0].url).to.equal("fake-query-url");
+    expect(server.requests[0].url).to.equal('fake-query-url');
 
     expect(Child.calledOnce).to.be.true;
     expect(Child.getCall(0).args[0]).to.eql({
@@ -74,14 +69,14 @@ describe("WorkshopTableLoader", () => {
     });
   });
 
-  it("Applies queryParams to the queryURL", () => {
+  it('Applies queryParams to the queryURL', () => {
     const Child = sinon.stub().returns(null);
     mount(
       <WorkshopTableLoader
         queryUrl="https://studio.code.org/api/v1/pd/workshops/filter"
         queryParams={{
-          date_order: "desc",
-          state: "In Progress",
+          date_order: 'desc',
+          state: 'In Progress',
           empty: null // Empty params are filtered out / not added to the url
         }}
       >
@@ -89,19 +84,17 @@ describe("WorkshopTableLoader", () => {
       </WorkshopTableLoader>
     );
 
-    const expectedUrlWithParams = "https://studio.code.org/api/v1/pd/workshops/filter?date_order=desc&state=In+Progress";
+    const expectedUrlWithParams =
+      'https://studio.code.org/api/v1/pd/workshops/filter?date_order=desc&state=In+Progress';
     expect(server.requests.length).to.equal(1);
     expect(server.requests[0].url).to.equal(expectedUrlWithParams);
   });
 
-  it("Passes delete function to child when canDelete is true", () => {
+  it('Passes delete function to child when canDelete is true', () => {
     const fakeWorkshopsData = getFakeWorkshopsData();
     const Child = sinon.stub().returns(null);
     const loader = mount(
-      <WorkshopTableLoader
-        queryUrl="fake-query-url"
-        canDelete
-      >
+      <WorkshopTableLoader queryUrl="fake-query-url" canDelete>
         <Child />
       </WorkshopTableLoader>
     );
@@ -118,12 +111,10 @@ describe("WorkshopTableLoader", () => {
     });
   });
 
-  it("Displays no workshops found message when no workshops are found", () => {
+  it('Displays no workshops found message when no workshops are found', () => {
     const Child = sinon.stub().returns(null);
     const loader = mount(
-      <WorkshopTableLoader
-        queryUrl="fake-query-url"
-      >
+      <WorkshopTableLoader queryUrl="fake-query-url">
         <Child />
       </WorkshopTableLoader>
     );
@@ -134,17 +125,14 @@ describe("WorkshopTableLoader", () => {
     });
 
     expect(Child.called).to.be.false;
-    expect(loader.find("p")).to.have.length(1);
-    expect(loader.find("p").text()).to.eql("No workshops found");
+    expect(loader.find('p')).to.have.length(1);
+    expect(loader.find('p').text()).to.eql('No workshops found');
   });
 
-  it("Renders null when hideNoWorkshopsMessage is specified and no workshops are found", () => {
+  it('Renders null when hideNoWorkshopsMessage is specified and no workshops are found', () => {
     const Child = sinon.stub().returns(null);
     const loader = mount(
-      <WorkshopTableLoader
-        queryUrl="fake-query-url"
-        hideNoWorkshopsMessage
-      >
+      <WorkshopTableLoader queryUrl="fake-query-url" hideNoWorkshopsMessage>
         <Child />
       </WorkshopTableLoader>
     );

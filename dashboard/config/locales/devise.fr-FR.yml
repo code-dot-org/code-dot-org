@@ -11,7 +11,7 @@ fr:
     failure:
       already_authenticated: Tu es déjà connecté.
       inactive: Ton compte n'a pas encore été activé.
-      invalid: Adresse e-mail ou mot de passe non valides.
+      invalid: Adresse de messagerie ou mot de passe non valide.
       invalid_token: Jeton d'authentification invalide.
       locked: Ton compte est verrouillé.
       not_found_in_database: Adresse de messagerie ou mot de passe non valide.
@@ -56,7 +56,6 @@ fr:
         adresse e-mail.
       updated: Tu as réussi à mettre à jour ton compte.
     sessions:
-      signed_in: ''
       signed_out: Déconnecté avec succès.
     unlocks:
       send_instructions: Dans quelques minutes, tu vas recevoir un e-mail contenant

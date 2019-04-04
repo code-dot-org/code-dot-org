@@ -13,19 +13,16 @@ he:
       jump to middle: קפוץ לאמצע
       draw a button: צייר כפתור
       draw cord: צייר מיתר
-      draw R pad: draw R pad
       draw left leg: צייר רגל שמאל
       draw right leg: צייר רגל ימין
       draw body and arms: צייר גוף וזרועות
       draw a head: צייר ראש
-      draw sitting stick figure: draw sitting stick figure
       draw head: צייר ראש
       draw arms: צייר זרועות
       jump to neck: קפוץ לצוואר
       draw O: צייר O
       draw D: צייר D
       draw E: צייר E
-      draw ear stems: draw ear stems
       big gear: מנוע גדול
       small gear: מנוע קטן
       draw a hexagon: צייר משושה
@@ -35,15 +32,15 @@ he:
       draw 3 hexagons: צייר 3 משושים
       draw 4 hexagons: צייר 4 משושים
       draw 5 hexagons: צייר 5 משושים
-      get 2 nectar: הבא 2 צוף
+      get 2 nectar: אסוף 2 צופים
       collect purple nectar: אסוף צוף סגול
       get 5: הבא 5
-      move and get nectar: זוז והבא צוף
+      move and get nectar: זוז ואסוף צוף
       move and get 4: זוז והבא 4
-      get 7 nectar make 7 honey: הבא 7 צוף ו7 דבש
-      get 7 make 7: הבא 7 וצור 7
-      get 7: הבא 7
-      move and get 3: זוז והבא 3
+      get 7 nectar make 7 honey: אסוף 7 צופים ויצר 7 דבשים
+      get 7 make 7: אסוף 7 וצור 7
+      get 7: אסוף 7
+      move and get 3: זוז ואסוף 3
       draw a tree: צייר עץ
       draw triangle: צייר משולש
       draw circle: צייר עיגול
@@ -59,14 +56,13 @@ he:
       draw a house: צייר בית
       check purple flower: צייר פרח סגול
       check flower make honey: בדוק פרח צור דבש
-      get nectar or make honey: הבא צוף או צור דבש
+      get nectar or make honey: אסוף צוף או צור דבש
       make 3 honey: צור 3 דבש
-      get 5 nectar: הבא 5 צוף
+      get 5 nectar: אסוף 5 צופים
       make all honey: צור את כל הדבש
       draw a star: צייר כוכב
       game has been won: המשחק הסתיים בניצחון
       draw: צייר
-      draw bit: draw bit
       draw a polygon: צייר מצולע
       draw a shape: צייר צורה
       get 2 and make 2: הבא 2 וצור 2
@@ -78,15 +74,10 @@ he:
       fillScreen: מלא מסך
       drawHouseLayer: צור שכבת בית
       swap: החלף
-      dropR: dropR
-      grabL: grabL
-      dropL: dropL
       init: אתחל
-      grabR: grabR
       do something: עשה משהו
       filter_pixel: סנן פיקסל
       draw_image: צייר תמונה
-      witch ending: witch ending
       story: סיפור
       starting path: תחילת הדרך
       jump: קפוץ
@@ -118,9 +109,9 @@ he:
       draw a sqaure: צייר ריבוע
       triangle: משולש
       draw a spiral shape: צייר צורה ספירלית
-      get 3 nectar: הבא 3 צוף
-      get many nectar: הבא הרבה צוף
-      get nectar make honey: הבא צוף וייצר דבש
+      get 3 nectar: אסוף 3 צופים
+      get many nectar: אסוף כמה צופים
+      get nectar make honey: אסוף צופים וצור דבש
       draw an octagon: צייר מתומן
       draw octagons: צייר מתומנים
       shift down: הזז מטה
@@ -159,22 +150,21 @@ he:
       move: זוז
       function 1: פונקציה 1
       function 2: פונקציה 2
-      turn corner: סובב פינה
       destroy and move: השמד וזוז
       clear path: פנה דרך
-      clear cacti: clear cacti
-      place and move: מקם וזוז
-      cover lava: cover lava
+      clear cacti: הסר קקטוסים
+      place and move: הנח וזוז
       build short bridge: בנה גשר קצר
       build long bridge: בנה גשר ארוך
-      create trail: צור מסילה
+      create trail: צור שביל
       move and fill: זוז ומלאה
       fix right corner: תקן פינה ימנית
       fix left corner: תקן פינה שמאלית
       make segment: צור רווח
+      turn corner: סובב פינה
       fix long path: תקן דרך ארוכה
       fix short path: תקן דרך קצרה
-      place 3 tracks: מקם 3 מסילות
+      place 3 tracks: הנח 3 מסילות
       clear right corner: נקה פינה ימנית
       clear left corner: נקה פינה שמאלית
       draw a spiral edge: צייר פינה ספירלית
@@ -204,7 +194,7 @@ he:
       '"simple" solution': 'פתרון "פשוט"'
       potential solution: פוטנציאל לפתרון
       my design: העיצוב שלי
-      get 3 nectar or honey: הבא 3 צוף או דבש
+      get 3 nectar or honey: אסוף 3 צופים או דבש
       move and collect: זוז ואסוף
       check nectar or honey: בדוק צוף או דבש
       row of nectar: שורה של צוף
@@ -216,7 +206,7 @@ he:
       Ask a question: שאל שאלה
       draw pinwheel: צייר גלגל רוח
       draw background: צייר רקע
-      move and get nectar with counter: זוז והבא צוף עם מונה
+      move and get nectar with counter: זוז ואסוף צוף עם מונה
       pick row: בחר שורה
       draw flame: צייר להבה
       draw fire: צייר אש
@@ -233,7 +223,7 @@ he:
       honey nectar: דבש מצוף
       move and make honey: זוז וייצר דבש
       collect all nectar: אסוף את כל הצוף
-      get all nectar: הבא את כל הצוף
+      get all nectar: אסוף את כל הצוף
       get pumpkin: הבא דלעת
       harvest: קציר
       get corn and come back: הבא תירס וחזור חזרה
@@ -257,9 +247,7 @@ he:
       get corn come back: אסוף תירס וחזור
       checker: בודק
       Make gingham: ייצר בגד
-      black outline: black outline
       draw a square2: צור ריבוע2
-      filled square: filled square
       get only nectar: אסוף רק צוף
       only make honey: רק ייצר דבש
       collect row: אסוף שורה
@@ -268,11 +256,9 @@ he:
       collect: אסוף
       move and increment: זוז והוסף
       do something3: עשה משהו3
-      Robin Fly: Robin Fly
       Robot Jump: רובוט קופץ
       Center Dragon: מרכז דרקון
       Dragon Fly: דרקון עף
-      Knight Surge: Knight Surge
       Stop Dragon: עצור דרקון
       Knight Jump: אביר קופץ
       robotThinking: רובוט חושב
@@ -288,7 +274,7 @@ he:
       Choose Number: בחר מספר
       Move Bird: הזז ציפור
       turn left: פנה שמאלה
-      move forward: לזוז קדימה
+      move forward: זוז קדימה
       turn right: פנה ימינה
       drawDot: צייר נקודה
       draw a rectangle: צייר מלבן

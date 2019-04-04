@@ -59,7 +59,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Debug the program by properly ordering your button commands and event handlers. (Click to see full instructions)",
+    "short_instructions": "Debug the program by properly ordering your button commands and event handlers. (Click to see full instructions)",
     "start_blocks": "onEvent(\"fwdBtn\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\nonEvent(\"leftBtn\", \"click\", function(){\r\n  turnLeft(90);\r\n});\r\n\r\nbutton(\"fwdBtn\",\"Go Forth!\");\r\nbutton(\"leftBtn\",\"Turn Left!\");",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -4,7 +4,8 @@ const Provider = require('react-redux').Provider;
 
 const timeoutList = require('../lib/util/timeoutList');
 import AppView from '../templates/AppView';
-const CustomMarshalingInterpreter = require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter');
+const CustomMarshalingInterpreter = require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter')
+  .default;
 const codegen = require('../lib/tools/jsinterpreter/codegen');
 const dom = require('../dom');
 const utils = require('../utils');
@@ -27,7 +28,8 @@ const maze = require('@code-dot-org/maze');
 const MazeController = maze.MazeController;
 const tiles = maze.tiles;
 
-const createResultsHandlerForSubtype = require('./results/utils').createResultsHandlerForSubtype;
+const createResultsHandlerForSubtype = require('./results/utils')
+  .createResultsHandlerForSubtype;
 
 module.exports = class Maze {
   constructor() {
@@ -38,8 +40,6 @@ module.exports = class Maze {
 
     this.stepSpeed = 100;
     this.animating_ = false;
-
-    this.cachedBlockStates = [];
 
     this.resultsHandler = undefined;
     this.response = undefined;
@@ -90,11 +90,14 @@ module.exports = class Maze {
         playAudio: studioApp().playAudio.bind(studioApp()),
         playAudioOnFailure: studioApp().playAudioOnFailure.bind(studioApp()),
         loadAudio: studioApp().loadAudio.bind(studioApp()),
-        getTestResults: studioApp().getTestResults.bind(studioApp()),
-      },
+        getTestResults: studioApp().getTestResults.bind(studioApp())
+      }
     });
 
-    this.resultsHandler = createResultsHandlerForSubtype(this.controller, config);
+    this.resultsHandler = createResultsHandlerForSubtype(
+      this.controller,
+      config
+    );
 
     if (this.controller.subtype.overrideStepSpeed) {
       this.scale.stepSpeed = this.controller.subtype.overrideStepSpeed;
@@ -177,10 +180,10 @@ module.exports = class Maze {
 
     if (
       config.embed &&
-      config.level.markdownInstructions &&
-      !config.level.instructions
+      config.level.longInstructions &&
+      !config.level.shortInstructions
     ) {
-      // if we are an embedded level with markdown instructions but no regular
+      // if we are an embedded level with long instructions but no short
       // instructions, we want to display CSP-style instructions and not be
       // centered
       config.noInstructionsWhenCollapsed = true;
@@ -189,15 +192,22 @@ module.exports = class Maze {
 
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
-      hideRunButton: !!(this.controller.level.stepOnly && !this.controller.level.edit_blocks)
+      hideRunButton: !!(
+        this.controller.level.stepOnly && !this.controller.level.edit_blocks
+      )
     });
 
     var visualizationColumn = (
       <MazeVisualizationColumn
         searchWord={this.controller.level.searchWord}
         showCollectorGemCounter={this.controller.subtype.isCollector()}
-        showFinishButton={this.controller.subtype.isCollector() && !studioApp().hasContainedLevels}
-        showStepButton={!!(this.controller.level.step && !this.controller.level.edit_blocks)}
+        showFinishButton={
+          this.controller.subtype.isCollector() &&
+          !studioApp().hasContainedLevels
+        }
+        showStepButton={
+          !!(this.controller.level.step && !this.controller.level.edit_blocks)
+        }
       />
     );
 
@@ -248,8 +258,6 @@ module.exports = class Maze {
   resetButtonClick_ = () => {
     var stepButton = document.getElementById('stepButton');
     stepButton.removeAttribute('disabled');
-
-    this.reenableCachedBlockStates_();
   };
 
   /**
@@ -287,12 +295,14 @@ module.exports = class Maze {
   }
 
   isPreAnimationFailure(testResult) {
-    return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
+    return (
+      testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
       testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
       testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
       testResult === TestResults.EXAMPLE_FAILED ||
       testResult === TestResults.EMPTY_BLOCK_FAIL ||
-      testResult === TestResults.EMPTY_FUNCTION_NAME;
+      testResult === TestResults.EMPTY_FUNCTION_NAME
+    );
   }
 
   /**
@@ -333,7 +343,9 @@ module.exports = class Maze {
       // don't bother running code if we're just editting required blocks. all
       // we care about is the contents of report.
       var initialTestResults = studioApp().getTestResults(false);
-      var runCode = !this.isPreAnimationFailure(initialTestResults) && !this.controller.level.edit_blocks;
+      var runCode =
+        !this.isPreAnimationFailure(initialTestResults) &&
+        !this.controller.level.edit_blocks;
 
       if (runCode) {
         if (this.controller.map.hasMultiplePossibleGrids()) {
@@ -372,9 +384,10 @@ module.exports = class Maze {
           // failures, randomly select one of the failing grids to be the
           // "real" state of the map. If all grids are successful,
           // randomly select any one of them.
-          var i = (failures.length > 0) ?
-              utils.randomValue(failures) :
-              utils.randomValue(successes);
+          var i =
+            failures.length > 0
+              ? utils.randomValue(failures)
+              : utils.randomValue(successes);
 
           this.controller.map.useGridWithId(i);
           this.controller.subtype.reset();
@@ -413,7 +426,8 @@ module.exports = class Maze {
         default:
           // App-specific failure.
           this.testResults = this.resultsHandler.getTestResults(
-            this.executionInfo.terminationValue());
+            this.executionInfo.terminationValue()
+          );
           this.result =
             this.testResults >= TestResults.MINIMUM_PASS_RESULT
               ? ResultType.SUCCESS
@@ -424,18 +438,18 @@ module.exports = class Maze {
     } catch (e) {
       // Syntax error, can't happen.
       this.result = ResultType.ERROR;
-      console.error("Unexpected exception: " + e + "\n" + e.stack);
+      console.error('Unexpected exception: ' + e + '\n' + e.stack);
       // call window.onerror so that we get new relic collection.  prepend with
       // UserCode so that it's clear this is in eval'ed code.
       if (window.onerror) {
-        window.onerror("UserCode:" + e.message, document.URL, 0);
+        window.onerror('UserCode:' + e.message, document.URL, 0);
       }
       return;
     }
 
     // If we know they succeeded, mark levelComplete true
     // Note that we have not yet animated the successful run
-    var levelComplete = (this.result === ResultType.SUCCESS);
+    var levelComplete = this.result === ResultType.SUCCESS;
 
     // Set testResults unless app-specific results were set in the default
     // branch of the above switch statement.
@@ -493,31 +507,15 @@ module.exports = class Maze {
     if (studioApp().isUsingBlockly()) {
       // Disable toolbox while running
       Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
-
-      if (stepMode) {
-        if (this.cachedBlockStates.length !== 0) {
-          throw new Error('Unexpected cachedBlockStates');
-        }
-        // Disable all blocks, caching their state first
-        Blockly.mainBlockSpace.getAllBlocks().forEach((block) => {
-          this.cachedBlockStates.push({
-            block: block,
-            movable: block.isMovable(),
-            deletable: block.isDeletable(),
-            editable: block.isEditable()
-          });
-          block.setMovable(false);
-          block.setDeletable(false);
-          block.setEditable(false);
-        });
-      }
     }
 
     this.controller.animationsController.stopIdling();
 
     // Speeding up specific levels
-    var scaledStepSpeed = this.stepSpeed * this.scale.stepSpeed *
-    this.controller.skin.movePegmanAnimationSpeedScale;
+    var scaledStepSpeed =
+      this.stepSpeed *
+      this.scale.stepSpeed *
+      this.controller.skin.movePegmanAnimationSpeedScale;
     timeoutList.setTimeout(() => {
       this.scheduleAnimations_(stepMode);
     }, scaledStepSpeed);
@@ -526,24 +524,14 @@ module.exports = class Maze {
   scheduleAnimations_(singleStep) {
     timeoutList.clearTimeouts();
 
-    var timePerAction = this.stepSpeed * this.scale.stepSpeed *
+    var timePerAction =
+      this.stepSpeed *
+      this.scale.stepSpeed *
       this.controller.skin.movePegmanAnimationSpeedScale;
     // get a flat list of actions we want to schedule
     var actions = this.executionInfo.getActions(singleStep);
 
     this.scheduleSingleAnimation_(0, actions, singleStep, timePerAction);
-  }
-
-  reenableCachedBlockStates_() {
-    if (this.cachedBlockStates) {
-      // restore moveable/deletable/editable state from before we started stepping
-      this.cachedBlockStates.forEach(function (cached) {
-        cached.block.setMovable(cached.movable);
-        cached.block.setDeletable(cached.deletable);
-        cached.block.setEditable(cached.editable);
-      });
-      this.cachedBlockStates = [];
-    }
   }
 
   /**
@@ -580,7 +568,9 @@ module.exports = class Maze {
     } else if (this.resultsHandler.hasMessage(this.testResults)) {
       // If there was an app-specific error
       // add it to the options passed to studioApp().displayFeedback().
-      message = this.resultsHandler.getMessage(this.executionInfo.terminationValue());
+      message = this.resultsHandler.getMessage(
+        this.executionInfo.terminationValue()
+      );
     }
 
     if (message) {
@@ -593,7 +583,7 @@ module.exports = class Maze {
     // the "final" feedback display triggered by the Finish Button
     if (!finalFeedback) {
       options.preventDialog = this.resultsHandler.shouldPreventFeedbackDialog(
-        options.feedbackType,
+        options.feedbackType
       );
     }
 
@@ -604,7 +594,7 @@ module.exports = class Maze {
    * Function to be called when the service report call is complete
    * @param {MilestoneResponse} response - JSON response (if available)
    */
-  onReportComplete_ = (response) => {
+  onReportComplete_ = response => {
     this.response = response;
     this.waitingForReport = false;
     studioApp().onReportComplete(response);
@@ -631,12 +621,11 @@ module.exports = class Maze {
   /**
    * Animates a single action
    * @param {string} action The action to animate
-   * @param {boolean} spotlightBlocks Whether or not we should highlight entire blocks
    * @param {integer} timePerStep How much time we have allocated before the next step
    */
-  animateAction_(action, spotlightBlocks, timePerStep) {
+  animateAction_(action, timePerStep) {
     if (action.blockId) {
-      studioApp().highlight(String(action.blockId), spotlightBlocks);
+      studioApp().highlight(String(action.blockId));
     }
 
     switch (action.command) {
@@ -712,7 +701,6 @@ module.exports = class Maze {
   finish_(timePerStep) {
     // Only schedule victory animation for certain conditions:
     if (this.testResults >= TestResults.MINIMUM_PASS_RESULT) {
-
       var finishButton = document.getElementById('finishButton');
       if (finishButton) {
         finishButton.removeAttribute('disabled');
@@ -724,7 +712,7 @@ module.exports = class Maze {
       studioApp().playAudioOnWin();
       this.controller.animatedFinish(timePerStep);
     } else {
-      timeoutList.setTimeout(function () {
+      timeoutList.setTimeout(function() {
         studioApp().playAudioOnFailure();
       }, this.stepSpeed);
     }
@@ -742,14 +730,22 @@ module.exports = class Maze {
       return;
     }
 
-    this.animateAction_(actions[index], singleStep, timePerAction);
+    this.animateAction_(actions[index], timePerAction);
 
     var command = actions[index] && actions[index].command;
-    var timeModifier = (this.controller.skin.actionSpeedScale && this.controller.skin.actionSpeedScale[command]) || 1;
+    var timeModifier =
+      (this.controller.skin.actionSpeedScale &&
+        this.controller.skin.actionSpeedScale[command]) ||
+      1;
     var timeForThisAction = Math.round(timePerAction * timeModifier);
 
     timeoutList.setTimeout(() => {
-      this.scheduleSingleAnimation_(index + 1, actions, singleStep, timePerAction);
+      this.scheduleSingleAnimation_(
+        index + 1,
+        actions,
+        singleStep,
+        timePerAction
+      );
     }, timeForThisAction);
   }
 
@@ -762,7 +758,7 @@ module.exports = class Maze {
     var stepButton = document.getElementById('stepButton');
 
     // allow time for  additional pause if we're completely done
-    var waitTime = (stepsRemaining ? 0 : 1000);
+    var waitTime = stepsRemaining ? 0 : 1000;
 
     // run after all animations
     timeoutList.setTimeout(() => {
@@ -778,7 +774,6 @@ module.exports = class Maze {
         // clicking reset.  Otherwise we can clear highlighting/disabled
         // blocks now
         if (!singleStep || this.result === ResultType.SUCCESS) {
-          this.reenableCachedBlockStates_();
           studioApp().clearHighlighting();
         }
         this.displayFeedback_();

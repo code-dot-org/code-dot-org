@@ -4,40 +4,23 @@ it:
     course:
       name:
         csp-2017:
-          assignment_family_title: Computer Science Principles
-          title: Computer Science Principles ('17-'18)
-          version_title: "'17-'18"
-          description_student: In fall 2016, the College Board launched its newest
-            AP® course, AP Computer Science Principles. The course introduces students
-            to the foundational concepts of computer science and challenges them to
-            explore how computing and technology can impact the world. The AP Program
-            designed AP Computer Science Principles with the goal of creating leaders
-            in computer science fields and attracting and engaging those who are traditionally
-            underrepresented with essential computing tools and multidisciplinary
-            opportunities.
-          description_teacher: In fall 2016, the College Board launched its newest
-            AP® course, AP Computer Science Principles. The course introduces students
-            to the foundational concepts of computer science and challenges them to
-            explore how computing and technology can impact the world. The AP Program
-            designed AP Computer Science Principles with the goal of creating leaders
-            in computer science fields and attracting and engaging those who are traditionally
-            underrepresented with essential computing tools and multidisciplinary
-            opportunities.
+          assignment_family_title: Princìpi dell'Informatica
+          title: Princìpi dell'Informatica (scuole superiori)
+          version_title: Superiori
           description_short: Impara i concetti fondamentali dell'informatica.
         csd-2017:
-          assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries ('17-'18)
-          version_title: "'17-'18"
-          description_student: Computer Science Discoveries (CS Discoveries) is an
-            introductory computer science course that empowers students to create
-            authentic artifacts and engage with computer science as a medium for creativity,
-            communication, problem solving, and fun.
-          description_teacher: Computer Science Discoveries (CS Discoveries) is an
-            introductory computer science course that empowers students to create
-            authentic artifacts and engage with computer science as a medium for creativity,
-            communication, problem solving, and fun.
-          description_short: An introductory computer science course that empowers
-            students to create authentic artifacts.
+          assignment_family_title: Alla scoperta dell'Informatica
+          version_title: Superiori
+          description_student: Alla Scoperta dell'Informatica è un corso introduttivo
+            all'informatica che conduce gli studenti alla realizzazione di autentiche
+            creazioni e che introduce l'uso dell'informatica come strumento per la
+            creatività, la comunicazione, il problem-solving ed il divertimento.
+          description_teacher: Alla Scoperta dell'Informatica è un corso introduttivo
+            all'informatica che conduce gli studenti alla realizzazione di autentiche
+            creazioni e che introduce l'uso dell'informatica come strumento per la
+            creatività, la comunicazione, il problem-solving ed il divertimento.
+          description_short: Corso introduttivo all'informatica che conduce gli studenti
+            alla realizzazione di autentiche creazioni.
         allthethingscourse:
           title: allthethingscourse
           description_short: Si tratta di un corso globale
@@ -46,37 +29,17 @@ it:
           description_teacher: Questo è un corso per globale e ha una corposa descrizione
             per gli insegnanti
         csd-2018:
-          assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries ('18-'19)
-          version_title: "'18-'19"
-          description_short: An introductory computer science course that empowers
-            students to create authentic artifacts.
-          description_student: Computer Science Discoveries (CS Discoveries) is an
-            introductory computer science course that empowers students to create
-            authentic artifacts and engage with computer science as a medium for creativity,
-            communication, problem solving, and fun.
-          description_teacher: Computer Science Discoveries (CS Discoveries) is an
-            introductory computer science course that empowers students to create
-            authentic artifacts and engage with computer science as a medium for creativity,
-            communication, problem solving, and fun.
+          assignment_family_title: Alla scoperta dell'Informatica
+          description_short: Corso introduttivo all'informatica che conduce gli studenti
+            alla realizzazione di autentiche creazioni.
+          description_student: Alla Scoperta dell'Informatica è un corso introduttivo
+            all'informatica che conduce gli studenti alla realizzazione di autentiche
+            creazioni e che introduce l'uso dell'informatica come strumento per la
+            creatività, la comunicazione, il problem-solving ed il divertimento.
+          description_teacher: Alla Scoperta dell'Informatica è un corso introduttivo
+            all'informatica che conduce gli studenti alla realizzazione di autentiche
+            creazioni e che introduce l'uso dell'informatica come strumento per la
+            creatività, la comunicazione, il problem-solving ed il divertimento.
         csp-2018:
-          assignment_family_title: Computer Science Principles
-          title: Computer Science Principles ('18-'19)
-          version_title: "'18-'19"
+          assignment_family_title: Princìpi dell'Informatica
           description_short: Impara i concetti fondamentali dell'informatica.
-          description_student: In fall 2016, the College Board launched its newest
-            AP® course, AP Computer Science Principles. The course introduces students
-            to the foundational concepts of computer science and challenges them to
-            explore how computing and technology can impact the world. The AP Program
-            designed AP Computer Science Principles with the goal of creating leaders
-            in computer science fields and attracting and engaging those who are traditionally
-            underrepresented with essential computing tools and multidisciplinary
-            opportunities.
-          description_teacher: In fall 2016, the College Board launched its newest
-            AP® course, AP Computer Science Principles. The course introduces students
-            to the foundational concepts of computer science and challenges them to
-            explore how computing and technology can impact the world. The AP Program
-            designed AP Computer Science Principles with the goal of creating leaders
-            in computer science fields and attracting and engaging those who are traditionally
-            underrepresented with essential computing tools and multidisciplinary
-            opportunities.

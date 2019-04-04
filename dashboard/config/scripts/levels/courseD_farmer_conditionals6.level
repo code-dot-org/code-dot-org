@@ -7,7 +7,7 @@
   "properties": {
     "skin": "farmer",
     "serialized_maze": "[[{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":-3,\"range\":-3},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":-1,\"range\":-1},{\"tileType\":1,\"value\":-2,\"range\":-2},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":-5,\"range\":-5},{\"tileType\":1,\"value\":-4,\"range\":-4},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":-6,\"range\":-8},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1}]]",
-    "instructions": "Use the `while` loop to easily fill all of the holes.",
+    "short_instructions": "Use the `while` loop to easily fill all of the holes.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -30,7 +30,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure you're using the `while` loop to figure out how many times to fill each hole.\",\"hint_id\":\"courseD_farmer_conditionals6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3c44e00dc533b0ae359d374e23dc345a/courseD_farmer_conditionals6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Notice that the farmer needs to move forward and down several times in a stair-step pattern.\",\"hint_id\":\"courseD_farmer_conditionals6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7d6430ae7dff887a4cb06283eb1707d8/courseD_farmer_conditionals6.mp3\"}]",
     "instructions_important": "false",
     "ideal": "10",
-    "markdown_instructions": "Look at all of those holes!  Each one needs a different amount of dirt.   \r\n\r\nYou can use the `while` loop to easily fill them all!",
+    "long_instructions": "Look at all of those holes!  Each one needs a different amount of dirt.   \r\n\r\nYou can use the `while` loop to easily fill them all!",
     "contained_level_names": null
   },
   "published": true,

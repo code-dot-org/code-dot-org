@@ -13,7 +13,7 @@
     "maze": "[[1,1,1,1,1,1,1,1],[1,0,0,0,0,0,0,1],[1,0,1,1,1,1,1,1],[1,0,1,0,0,0,0,0],[1,0,1,0,1,1,1,1],[1,0,1,0,3,0,0,1],[1,0,1,0,0,0,0,1],[2,0,1,1,1,1,1,1]]",
     "ideal": "7",
     "step_speed": "1",
-    "markdown_instructions": "Can you add just 3 blocks to help the zombie solve a more complex maze? \r\n\r\nIf you do it right, he can walk any curvy path no matter the length!",
+    "long_instructions": "Can you add just 3 blocks to help the zombie solve a more complex maze? \r\n\r\nIf you do it right, he can walk any curvy path no matter the length!",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -27,7 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "instructions": "Can you add just 3 blocks to help the zombie solve a more complex maze? \r\n\r\nIf you do it right, he can walk any curvy path no matter the length!",
+    "short_instructions": "Can you add just 3 blocks to help the zombie solve a more complex maze? \r\n\r\nIf you do it right, he can walk any curvy path no matter the length!",
     "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },

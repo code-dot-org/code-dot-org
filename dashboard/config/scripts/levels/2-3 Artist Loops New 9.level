@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw a simple V (where both sides are 50 pixels) to complete the arrow.",
+    "short_instructions": "Draw a simple V (where both sides are 50 pixels) to complete the arrow.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "ideal": "5",
     "slider_speed": "0.7",
     "embed": "false",
-    "markdown_instructions": "Draw a simple V (where both sides are 50 pixels) to complete the arrow.",
+    "long_instructions": "Draw a simple V (where both sides are 50 pixels) to complete the arrow.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

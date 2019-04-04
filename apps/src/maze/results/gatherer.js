@@ -1,14 +1,13 @@
 import ResultsHandler from './resultsHandler';
-import { TestResults } from '../../constants.js';
+import {TestResults} from '../../constants.js';
 
 export default class GathererHandler extends ResultsHandler {
-
   /**
    * @return {boolean}
    */
   collectedEverything() {
-    const missedSomething = this.maze_.map.currentStaticGrid.some(
-      row => row.some(cell => cell.isDirt() && cell.getCurrentValue() > 0)
+    const missedSomething = this.maze_.map.currentStaticGrid.some(row =>
+      row.some(cell => cell.isDirt() && cell.getCurrentValue() > 0)
     );
 
     return !missedSomething;

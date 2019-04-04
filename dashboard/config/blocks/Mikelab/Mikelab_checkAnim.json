@@ -1,0 +1,19 @@
+{
+  "category": "Booleans",
+  "config": {
+    "func": "checkAnim",
+    "blockText": "{SPRITE} is a {COSTUME}",
+    "returnType": "Boolean",
+    "args": [
+      {
+        "name": "SPRITE",
+        "assignment": true,
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}

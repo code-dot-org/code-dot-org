@@ -38,7 +38,6 @@
   "drawUpperWave": "nupiešk viršutinę bangą",
   "drawLowerWave": "nupiešk apatinę bangą",
   "drawSticker": "nupiešk lipduką",
-  "drawStickerWithSize": "draw sticker with size",
   "heightParameter": "aukštis",
   "hideTurtle": "slėpti menininką",
   "jump": "šok",
@@ -74,7 +73,6 @@
   "penDown": "nuleisk pieštuką",
   "penTooltip": "Pakelia arba nuleidžia pieštuką, kad pradėtų arba sustotų piešti.",
   "penUp": "pakelk pieštuką",
-  "pointTo": "point to",
   "pixels": "pikselių",
   "reinfFeedbackMsg": "Štai tavo piešinys! Gali ir toliau piešti arba eik toliau prie kito galvosūkio.",
   "setAlpha": "nustatyti permatomumą",
@@ -94,6 +92,5 @@
   "turnTooltip": "Pasuka menininką į kairę pasirinktu kampu laipsniais.",
   "turtleVisibilityTooltip": "Padaro menininką matomą arba nematomą.",
   "widthTooltip": "Pakeičia pieštuko plotį.",
-  "withSize": "with size",
   "wrongColour": "Tavo piešinys yra ne tokios spalvos. Šiai užduočiai atlikti, ji turi būti %1."
 }

@@ -11,10 +11,10 @@ export default storybook => {
         description: `This is an example tool card.`,
         story: () => (
           <ResourceCard
-            title= "Teacher Community"
+            title="Teacher Community"
             description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
-            buttonText= "Connect Today"
-            link= "link to teacher community"
+            buttonText="Connect Today"
+            link="link to teacher community"
           />
         )
       },
@@ -23,13 +23,13 @@ export default storybook => {
         description: `This is an example tool card that allows the title to wrap.`,
         story: () => (
           <ResourceCard
-            title= "Teacher Community"
+            title="Teacher Community"
             description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
-            buttonText= "Connect Today"
-            link= "link to teacher community"
+            buttonText="Connect Today"
+            link="link to teacher community"
             allowWrap={true}
           />
         )
-      },
+      }
     ]);
 };

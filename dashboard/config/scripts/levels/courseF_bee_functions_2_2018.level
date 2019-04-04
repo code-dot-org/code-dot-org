@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Edit your solution in one place so that the bee can collect all of the honey and nectar.",
+    "short_instructions": "Edit your solution in one place so that the bee can collect all of the honey and nectar.",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "3",

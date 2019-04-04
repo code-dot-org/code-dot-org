@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist_zombie",
     "embed": "false",
-    "instructions": "Now that the zombie knows his way, help him dig holes along the path to plant more flowers!",
+    "short_instructions": "Now that the zombie knows his way, help him dig holes along the path to plant more flowers!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -34,7 +34,7 @@
     "x": "70",
     "y": "200",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/c0c0483873c40ac42113b8601b950502-image-1495571108745.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
-    "markdown_instructions": "Now that the zombie knows his way, help him dig **25 pixel long** holes along the path to plant more flowers!\r\n- Each hole should be 25 pixels long\r\n- Each hole has 25 pixels of space before the next hole",
+    "long_instructions": "Now that the zombie knows his way, help him dig **25 pixel long** holes along the path to plant more flowers!\r\n- Each hole should be 25 pixels long\r\n- Each hole has 25 pixels of space before the next hole",
     "contained_level_names": null
   },
   "published": true,

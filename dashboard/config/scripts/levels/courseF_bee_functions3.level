@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Click \"edit\" to put code inside the `only make honey` function, then use it to solve this puzzle.",
+    "short_instructions": "Click \"edit\" to put code inside the `only make honey` function, then use it to solve this puzzle.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -29,7 +29,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "honey_goal": "3",
-    "markdown_instructions": "Now it's your turn to make a function to get some honey **only** if there is a honeycomb!  Click \"edit\" to build the `only make honey` function, then use it to solve this puzzle.",
+    "long_instructions": "Now it's your turn to make a function to get some honey **only** if there is a honeycomb!  Click \"edit\" to build the `only make honey` function, then use it to solve this puzzle.",
     "never_autoplay_video": "true",
     "examples_required": "false",
     "fast_get_nectar_animation": "true",

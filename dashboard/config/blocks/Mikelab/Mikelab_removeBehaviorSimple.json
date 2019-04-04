@@ -1,0 +1,24 @@
+{
+  "category": "Behaviors",
+  "config": {
+    "func": "removeBehaviorSimple",
+    "blockText": "sprite {SPRITE} stops {BEHAVIOR}",
+    "inline": false,
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "SPRITE",
+        "assignment": true,
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "BEHAVIOR",
+        "type": "Behavior"
+      }
+    ]
+  }
+}

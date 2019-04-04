@@ -30,7 +30,7 @@
     "fast_get_nectar_animation": "true",
     "maze_data": null,
     "nectar_goal": "196",
-    "instructions": "This bee has a lot of work to do! Do you notice any patterns that you can use to simplify your code?"
+    "short_instructions": "This bee has a lot of work to do! Do you notice any patterns that you can use to simplify your code?"
   }
 }]]></config>
   <blocks>

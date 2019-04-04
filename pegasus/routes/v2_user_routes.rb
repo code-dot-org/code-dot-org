@@ -1,4 +1,4 @@
-require 'honeybadger'
+require 'honeybadger/ruby'
 
 get '/v2/user' do
   only_for 'code.org'

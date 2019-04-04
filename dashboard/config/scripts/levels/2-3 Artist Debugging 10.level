@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "The direction pad on my game controller is too narrow. \r\n\r\nCan you make it wider by 10 pixels?\r\n\r\nTry running the code first to see what's wrong.",
+    "short_instructions": "The direction pad on my game controller is too narrow. \r\n\r\nCan you make it wider by 10 pixels?\r\n\r\nTry running the code first to see what's wrong.",
     "x": "65",
     "y": "200",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "slider_speed": "0.4",
     "free_play": "false",
     "embed": "false",
-    "markdown_instructions": "The direction pad on my game controller is too narrow. \r\n\r\nCan you make it wider by 10 pixels?\r\n\r\nTry running the code first to see what's wrong.",
+    "long_instructions": "The direction pad on my game controller is too narrow. \r\n\r\nCan you make it wider by 10 pixels?\r\n\r\nTry running the code first to see what's wrong.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

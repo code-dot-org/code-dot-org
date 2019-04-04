@@ -14,10 +14,13 @@ const ALICE_EVE_BOB_VIEW = 2;
 function initialize(options) {
   registerGetResult(); // a default getResult function.
   ReactDOM.render(
-      parseInt(options.cryptographyWidgetView, 10) === ALICE_EVE_BOB_VIEW ?
-          <PublicKeyCryptographyWidget/> :
-          <ModuloClockWidget/>,
-      document.getElementById('public-key-cryptography-mount'));
+    parseInt(options.cryptographyWidgetView, 10) === ALICE_EVE_BOB_VIEW ? (
+      <PublicKeyCryptographyWidget />
+    ) : (
+      <ModuloClockWidget />
+    ),
+    document.getElementById('public-key-cryptography-mount')
+  );
 }
 
 // Start initialization when DOM is ready.

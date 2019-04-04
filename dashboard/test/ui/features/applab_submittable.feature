@@ -9,11 +9,7 @@ Background:
 
 Scenario: Submit anything, unsubmit, be able to resubmit.
   # First, submit something.
-  When I press "runButton"
-  And I wait to see "#submitButton"
-  And I press "submitButton"
-  And I wait to see ".modal"
-  And I press "confirm-button" to load a new page
+  When I submit this level
 
   # Reload the page to see that unsubmit is the option.
   Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?noautoplay=true"
@@ -31,11 +27,7 @@ Scenario: Submit anything, unsubmit, be able to resubmit.
 
 Scenario: Submit anything, teacher is able to unsubmit
   # First, submit something.
-  When I press "runButton"
-  And I wait to see "#submitButton"
-  And I press "submitButton"
-  And I wait to see ".modal"
-  And I press "confirm-button" to load a new page
+  When I submit this level
 
   # Reload the page to see that unsubmit is the option.
   Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?noautoplay=true"

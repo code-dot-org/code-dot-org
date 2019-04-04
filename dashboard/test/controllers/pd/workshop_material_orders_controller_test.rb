@@ -11,6 +11,7 @@ class Pd::WorkshopMaterialOrdersControllerTest < ::ActionController::TestCase
     Pd::Enrollment.any_instance.stubs(completed_survey?: true)
     Geocoder.stubs(:search).returns(
       [OpenStruct.new(
+        city: 'Seattle',
         postal_code: '98101',
         state_code: 'WA',
         street_number: '1501'

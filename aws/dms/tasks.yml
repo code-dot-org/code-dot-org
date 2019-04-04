@@ -8,6 +8,11 @@ cron-pii:
 - dashboard.regional_partners_school_districts
 - dashboard.pd_%
 - dashboard.email_preferences
+- dashboard.teacher_feedbacks
+- dashboard.authentication_options
+- dashboard.peer_reviews
+- dashboard.circuit_playground_discount_applications
+- dashboard.circuit_playground_discount_codes
 cron:
 - dashboard.experiments
 - dashboard.authored_hint_view_requests
@@ -46,6 +51,7 @@ cron:
 - dashboard.followers
 - dashboard.section_hidden_stages
 - dashboard.user_proficiencies
+- dashboard.user_permissions
 - dashboard.level_concept_difficulties
 - dashboard.user_scripts
 - dashboard.ap_cs_offerings
@@ -100,6 +106,7 @@ cron-user-hierarchy-pii:
 - dashboard.teacher_profiles
 - dashboard.users
 - dashboard.user_geos
+- dashboard.user_school_infos
 cron-user-levels:
 - dashboard.user_levels
 cron-level-sources-pii:

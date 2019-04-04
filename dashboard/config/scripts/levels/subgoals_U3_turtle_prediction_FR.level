@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "markdown_instructions": "## Code Trace\r\n\r\nIn 1-2 sentences, explain what you think the following code does.\r\n\r\n![](https://images.code.org/5bc66acc4712cf1c835daac0c45422a8-image-1506532056958.png)",
+    "long_instructions": "## Code Trace\r\n\r\nIn 1-2 sentences, explain what you think the following code does.\r\n\r\n![](https://images.code.org/5bc66acc4712cf1c835daac0c45422a8-image-1506532056958.png)",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

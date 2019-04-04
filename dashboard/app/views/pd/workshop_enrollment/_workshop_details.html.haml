@@ -24,8 +24,8 @@
     %strong
       Course:
   %div.span2
-    - if @workshop.course_target
-      = link_to @workshop.course, @workshop.course_target
+    - if @workshop.course_url
+      = link_to @workshop.course, @workshop.course_url
     - else
       = @workshop.course
 

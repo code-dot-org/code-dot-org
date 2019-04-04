@@ -92,7 +92,6 @@ OFFSET_CENTER[Direction.NORTHWEST] = {
   y: -25
 };
 
-
 /**
  * A Projectile is a type of Collidable.
  * Note: x/y represent x/y of center in gridspace
@@ -108,10 +107,14 @@ export default class Projectile extends Collidable {
     this.speed = options.speed || DEFAULT_PROJECTILE_SPEED;
 
     // origin is at an offset from sprite location
-    this.x = options.spriteX + OFFSET_CENTER[options.dir].x +
-              (options.spriteWidth * OFFSET_FROM_SPRITE[options.dir].x);
-    this.y = options.spriteY + OFFSET_CENTER[options.dir].y +
-              (options.spriteHeight * OFFSET_FROM_SPRITE[options.dir].y);
+    this.x =
+      options.spriteX +
+      OFFSET_CENTER[options.dir].x +
+      options.spriteWidth * OFFSET_FROM_SPRITE[options.dir].x;
+    this.y =
+      options.spriteY +
+      OFFSET_CENTER[options.dir].y +
+      options.spriteHeight * OFFSET_FROM_SPRITE[options.dir].y;
 
     /** @private {StudioSpriteSheet} */
     this.spriteSheet_ = new StudioSpriteSheet({
@@ -124,10 +127,12 @@ export default class Projectile extends Collidable {
     });
 
     /** @private {StudioAnimation} */
-    this.animation_ = new StudioAnimation(Object.assign({}, options, {
-      spriteSheet: this.spriteSheet_,
-      animationFrameDuration: this.getAnimationFrameDuration()
-    }));
+    this.animation_ = new StudioAnimation(
+      Object.assign({}, options, {
+        spriteSheet: this.spriteSheet_,
+        animationFrameDuration: this.getAnimationFrameDuration()
+      })
+    );
   }
 
   /** @returns {SVGImageElement} */
@@ -146,8 +151,10 @@ export default class Projectile extends Collidable {
    * Retrieve animation speed (frames per tick)
    */
   getAnimationFrameDuration() {
-    return DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION *
-        DEFAULT_PROJECTILE_SPEED / this.speed;
+    return (
+      (DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION * DEFAULT_PROJECTILE_SPEED) /
+      this.speed
+    );
   }
 
   /**
@@ -193,15 +200,25 @@ export default class Projectile extends Collidable {
    * Display our projectile at it's current location, rotating as necessary
    */
   display() {
-    this.animation_.redrawCenteredAt({
-          x: this.x,
-          y: this.y
-        },
-        Studio.tickCount);
+    this.animation_.redrawCenteredAt(
+      {
+        x: this.x,
+        y: this.y
+      },
+      Studio.tickCount
+    );
 
     if (this.spriteSheet_.defaultFramesPerAnimation > 1) {
-      this.getElement().setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
-       ', ' + this.x + ', ' + this.y + ')');
+      this.getElement().setAttribute(
+        'transform',
+        'rotate(' +
+          DIR_TO_ROTATION[this.dir] +
+          ', ' +
+          this.x +
+          ', ' +
+          this.y +
+          ')'
+      );
     }
   }
 

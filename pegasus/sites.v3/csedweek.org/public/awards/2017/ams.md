@@ -13,7 +13,7 @@ theme: responsive
 The Hour of Code exploded schoolwide at Anacapa STEAM. The first year had 60 participants, and Kristie Steinlicht taught her students about computer science using a borrowed set of Chromebooks. 
 
 <figure style="margin:10px">
-  <img src="/images/awards/ams_students.jpg" style="display:block;margin:0 auto" width="500" alt="Students at Anacapa Middle School" />
+  <img src="/images/awards/fit-500/ams_students.jpg" style="display:block;margin:0 auto" width="500" alt="Students at Anacapa Middle School" />
   <figcaption style="text-align:center;font-style:italic;font-size:12px">
     Students at Anacapa Middle School
   </figcaption>
@@ -24,7 +24,7 @@ In year two, students were eager to expand Hour of Code into a week-long experie
 Anacapa is a Title I suburban school which serves a socioeconomically, culturally, and linguistically diverse population. The first middle school to be recognized with the California Association for Bilingual Education Seal of Excellence, Anacapa has a Spanish/English Two-Way Immersion program which integrates STEAM to provide opportunities for traditionally underserved students. 
 
 <figure style="margin:10px">
-  <img src="/images/awards/ams_rep_kristie_steinlicht.jpg" style="display:block;margin:0 auto" width=150 alt="Kristie Steinlicht" />
+  <img src="/images/awards/fit-150/ams_rep_kristie_steinlicht.jpg" style="display:block;margin:0 auto" width="150" alt="Kristie Steinlicht" />
   <figcaption style="text-align:center;font-style:italic;font-size:12px">Kristie Steinlicht</figcaption>
 </figure>
 

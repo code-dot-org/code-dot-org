@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Use the draw a square and triangle functions along with other blocks to create a house by adding them to the 'draw a house\" function and calling it.",
+    "short_instructions": "Use the draw a square and triangle functions along with other blocks to create a house by adding them to the 'draw a house\" function and calling it.",
     "x": "150",
     "y": "200",
     "start_direction": "90",

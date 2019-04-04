@@ -1,18 +1,18 @@
 /* global dashboard */
-
-import React, { PropTypes, Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
 import color from '../util/color';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import SocialShare from './SocialShare';
 import LargeChevronLink from './LargeChevronLink';
-import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
+import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
 const styles = {
   heading: {
-    width: '100%',
+    width: '100%'
   },
   container: {
     marginBottom: 50,
@@ -20,24 +20,24 @@ const styles = {
   },
   mobileHeading: {
     fontSize: 24,
-    lineHeight: 1.5,
+    lineHeight: 1.5
   },
   desktopHalf: {
     width: '50%',
-    float: 'left',
+    float: 'left'
   },
   mobileFull: {
     width: '100%',
-    float: 'left',
+    float: 'left'
   },
   nameInput: {
     height: 32,
-    margin: 0,
+    margin: 0
   },
   submit: {
     background: color.orange,
-    color: color.white,
-  },
+    color: color.white
+  }
 };
 
 const blankCertificates = {
@@ -45,13 +45,14 @@ const blankCertificates = {
   mc: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
+  aquatic: require('@cdo/static/MC_Hour_Of_Code_Certificate_Aquatic.png')
 };
 
 class Certificate extends Component {
   constructor() {
     super();
     this.state = {
-      personalized: false,
+      personalized: false
     };
   }
 
@@ -60,17 +61,19 @@ class Certificate extends Component {
     certificateId: PropTypes.string,
     randomDonorTwitter: PropTypes.string,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    userAge: PropTypes.number,
+    under13: PropTypes.bool,
+    isMinecraft: PropTypes.bool.isRequired,
+    children: PropTypes.node
   };
 
   personalizeCertificate(session) {
     $.ajax({
       url: '/v2/certificate',
-      type: "post",
-      dataType: "json",
+      type: 'post',
+      dataType: 'json',
       data: {
         session_s: session,
-        name_s: this.nameInput.value,
+        name_s: this.nameInput.value
       }
     }).done(response => {
       if (response.certificate_sent) {
@@ -80,29 +83,44 @@ class Certificate extends Component {
   }
 
   render() {
-    const {responsiveSize, tutorial, certificateId, randomDonorTwitter, userAge} = this.props;
+    const {
+      responsiveSize,
+      tutorial,
+      certificateId,
+      randomDonorTwitter,
+      under13,
+      isMinecraft,
+      children
+    } = this.props;
     const certificate = certificateId || 'blank';
-    const personalizedCertificate = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
-    const blankCertificate = blankCertificates[tutorial] || blankCertificates.hourOfCode;
-    const imgSrc = this.state.personalized ? personalizedCertificate : blankCertificate;
-    const certificateLink = `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
-    const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
+    const personalizedCertificate = `${
+      dashboard.CODE_ORG_URL
+    }/api/hour/certificate/${certificate}.jpg`;
+    const blankCertificate =
+      blankCertificates[tutorial] || blankCertificates.hourOfCode;
+    const imgSrc = this.state.personalized
+      ? personalizedCertificate
+      : blankCertificate;
+    const certificateLink = `https:${
+      dashboard.CODE_ORG_URL
+    }/certificates/${certificate}`;
+    const desktop =
+      responsiveSize === ResponsiveSize.lg ||
+      responsiveSize === ResponsiveSize.md;
     const headingStyle = desktop ? styles.heading : styles.mobileHeading;
     const certificateStyle = desktop ? styles.desktopHalf : styles.mobileFull;
 
     const facebook = queryString.stringify({
-      u: certificateLink,
+      u: certificateLink
     });
 
     const twitter = queryString.stringify({
       url: certificateLink,
       related: 'codeorg',
-      text: randomDonorTwitter ?
-        i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter}) :
-        i18n.justDidHourOfCode(),
+      text: randomDonorTwitter
+        ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter})
+        : i18n.justDidHourOfCode()
     });
-
-    const isMinecraft = /mc|minecraft|hero/.test(tutorial);
 
     let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
     if (isMinecraft && !this.state.personalized) {
@@ -112,9 +130,7 @@ class Certificate extends Component {
 
     return (
       <div style={styles.container}>
-        <h1 style={headingStyle}>
-          {i18n.congratsCertificateHeading()}
-        </h1>
+        <h1 style={headingStyle}>{i18n.congratsCertificateHeading()}</h1>
         {tutorial && (
           <LargeChevronLink
             link={`/s/${tutorial}`}
@@ -135,7 +151,7 @@ class Certificate extends Component {
                 type="text"
                 style={styles.nameInput}
                 placeholder={i18n.yourName()}
-                ref={input => this.nameInput = input}
+                ref={input => (this.nameInput = input)}
               />
               <button
                 style={styles.submit}
@@ -156,14 +172,15 @@ class Certificate extends Component {
             facebook={facebook}
             twitter={twitter}
             print={print}
-            userAge={userAge}
+            under13={under13}
           />
         </div>
+        {children}
       </div>
     );
   }
 }
 
 export default connect(state => ({
-  responsiveSize: state.responsive.responsiveSize,
+  responsiveSize: state.responsive.responsiveSize
 }))(Certificate);

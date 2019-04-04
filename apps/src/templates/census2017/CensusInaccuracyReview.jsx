@@ -1,23 +1,24 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import CensusInaccuracyReviewTable from './CensusInaccuracyReviewTable';
 import CensusInaccuracyReviewDetails from './CensusInaccuracyReviewDetails';
 
 export default class CensusInaccuracyReview extends Component {
   static propTypes = {
     authenticityToken: PropTypes.string,
-    reportsToReview: PropTypes.array,
+    reportsToReview: PropTypes.array
   };
 
   state = {
     toReview: undefined,
-    resolvedReports: [],
+    resolvedReports: []
   };
 
   scrollToHeader = () => {
     $('#report-header')[0].scrollIntoView();
   };
 
-  handleStartReview = (reviewData) => {
+  handleStartReview = reviewData => {
     this.setState({toReview: reviewData});
     this.scrollToHeader();
   };
@@ -27,10 +28,10 @@ export default class CensusInaccuracyReview extends Component {
     this.scrollToHeader();
   };
 
-  handleSuccessfulSubmittion = (reportId) => {
-    this.setState((prevState) => ({
+  handleSuccessfulSubmittion = reportId => {
+    this.setState(prevState => ({
       resolvedReports: prevState.resolvedReports.concat([reportId]),
-      toReview: undefined,
+      toReview: undefined
     }));
     this.scrollToHeader();
   };
@@ -58,9 +59,7 @@ export default class CensusInaccuracyReview extends Component {
 
     return (
       <div>
-        <h1 id="report-header">
-          Reported Access Report Inaccuracies
-        </h1>
+        <h1 id="report-header">Reported Access Report Inaccuracies</h1>
         {display}
       </div>
     );

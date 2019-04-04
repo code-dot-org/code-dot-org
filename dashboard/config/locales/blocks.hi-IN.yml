@@ -1,0 +1,262 @@
+---
+hi:
+  data:
+    blocks:
+      Dancelab_changeMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"height"': ऊँचाई
+      Dancelab_doMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"height"': ऊँचाई
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": यादृच्छिक
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': यादृच्छिक
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": यादृच्छिक
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': यादृच्छिक
+      Dancelab_randomColor:
+        text: यादृच्छिक रंग
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': ऊँचाई
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"height"': ऊँचाई
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"height"': ऊँचाई
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': ऊँचाई
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"height"': ऊँचाई
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"space"': अंतरिक्ष
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'सही '
+            'false': 'गलत '
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
+          KEY:
+            '"space"': अंतरिक्ष
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': यादृच्छिक
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": यादृच्छिक
+      gamelab_randColor:
+        text: यादृच्छिक रंग
+      gamelab_randomColor:
+        text: यादृच्छिक रंग
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': यादृच्छिक
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': ऊँचाई
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"space"': अंतरिक्ष
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"space"': अंतरिक्ष
+      Mikelab_randomColor:
+        text: यादृच्छिक रंग
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': ऊपर तीर
+            '"down"': नीचे तीर
+            '"left"': बायाँ तीर
+            '"right"': दायाँ तीर
+            '"w"': W
+            '"a"': अ
+            '"s"': |-
+              S
+              S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': ऊपर तीर
+            '"down"': नीचे तीर
+            '"left"': बायाँ तीर
+            '"right"': दायाँ तीर
+            '"w"': W
+            '"a"': अ
+            '"s"': |-
+              S
+              S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': ऊपर तीर
+            '"down"': नीचे तीर
+            '"left"': बायाँ तीर
+            '"right"': दायाँ तीर
+      RyanLab_moveForward:
+        text: आगे जाएं
+      RyanLab_turnLeft:
+        text: बाएँ मुड़ें
+      RyanLab_turnRight:
+        text: दाएँ मुड़ें
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
+          KEY:
+            '"space"': अंतरिक्ष
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': 'सही '
+            '"false"': 'गलत '
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': हमेशा के लिए
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"hide"': छुपाएँ
+      binary_whenKey:
+        options:
+          KEY:
+            '"space"': अंतरिक्ष
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": आगे
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": रेत
+            "'planksOak'": शाहबलूत के तख्ते
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": रेत
+      craft_moveForward:
+        text: आगे जाएं
+      craft_placeTorch:
+        text: टॉर्च रखें

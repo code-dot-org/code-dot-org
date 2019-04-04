@@ -58,8 +58,9 @@ Once you've linted and tested your changes, send us a pull request!  Contributor
 4. For your submission to be reviewed
     - Click on the "Pull Request" link, look over and confirm your diff
     - Submit a pull request for your branch to be merged into staging
-    - For bonus points, include screenshots in the description. Command + Ctrl + Shift + 4 in OS X lets you copy a screen selection to your clipboard, which GitHub will let you paste right into the description
-5. After your pull request is merged into staging, you can review your changes on the following sites:
+    - For bonus points, include before and after screenshots in the description. Command + Ctrl + Shift + 4 in OS X lets you copy a screen selection to your clipboard, which GitHub will let you paste right into the description
+5. A Code.org [developer will ensure our test suite runs on your changes](https://github.com/code-dot-org/code-dot-org/wiki/How-to-run-Circle--tests-on-a-contributor-PR) and will merge your PR to staging for you.
+6. After your pull request is merged into staging, you can review your changes on the following sites:
   * [https://staging.code.org/](https://staging.code.org/)
   * [https://staging-studio.code.org/](https://staging-studio.studio.code.org/)
   * [https://staging.csedweek.org/](https://staging.csedweek.org/)

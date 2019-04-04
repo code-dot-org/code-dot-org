@@ -6,16 +6,16 @@ import {
   REDBOARD_PORTS,
   FLORA_PORTS,
   OSX_DEFAULT_PORTS,
-  OTHER_BAD_SERIALPORTS,
+  OTHER_BAD_SERIALPORTS
 } from './sampleSerialPorts';
 import ChromeSerialPort from 'chrome-serialport'; // Actually StubChromeSerialPort
 import {ConnectionFailedError} from '@cdo/apps/lib/kits/maker/MakerError';
 import {
   findPortWithViableDevice,
-  getPreferredPort,
+  getPreferredPort
 } from '@cdo/apps/lib/kits/maker/portScanning';
 
-describe("maker/portScanning.js", function () {
+describe('maker/portScanning.js', function() {
   describe(`findPortWithViableDevice()`, () => {
     // Testing against StubChromeSerialPort.js
     afterEach(() => {
@@ -24,34 +24,38 @@ describe("maker/portScanning.js", function () {
 
     it('resolves with a port if a viable device is found', () => {
       ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
-      return findPortWithViableDevice()
-          .then(port => {
-            expect(port).to.equal('COM5');
-          });
+      return findPortWithViableDevice().then(port => {
+        expect(port).to.equal('COM5');
+      });
     });
 
     it('rejects if no viable device is found', done => {
       ChromeSerialPort.stub.setDeviceList(OTHER_BAD_SERIALPORTS);
       findPortWithViableDevice()
-          .then(port => {
-            done(new Error('Expected promise to reject, but it resolved to ' + port));
-          })
-          .catch(err => {
-            expect(err).to.be.an.instanceOf(ConnectionFailedError);
-            expect(err.message).to.equal('Failed to establish a board connection.');
-            expect(err.reason).to.include('Did not find a usable device on a serial port.');
-            expect(err.reason).to.include(JSON.stringify(OTHER_BAD_SERIALPORTS));
-            done();
-          })
-          .catch(done);
+        .then(port => {
+          done(
+            new Error('Expected promise to reject, but it resolved to ' + port)
+          );
+        })
+        .catch(err => {
+          expect(err).to.be.an.instanceOf(ConnectionFailedError);
+          expect(err.message).to.equal(
+            'Failed to establish a board connection.'
+          );
+          expect(err.reason).to.include(
+            'Did not find a usable device on a serial port.'
+          );
+          expect(err.reason).to.include(JSON.stringify(OTHER_BAD_SERIALPORTS));
+          done();
+        })
+        .catch(done);
     });
 
     it(`allows the Circuit Playground Express`, () => {
       ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_EXPRESS_PORTS);
-      return findPortWithViableDevice()
-        .then(port => {
-          expect(port).to.equal('COM5');
-        });
+      return findPortWithViableDevice().then(port => {
+        expect(port).to.equal('COM5');
+      });
     });
   });
 
@@ -78,7 +82,7 @@ describe("maker/portScanning.js", function () {
           ...FLORA_PORTS,
           ...REDBOARD_PORTS,
           ...OSX_DEFAULT_PORTS,
-          ...OTHER_BAD_SERIALPORTS,
+          ...OTHER_BAD_SERIALPORTS
         ]);
         expect(getPreferredPort(ports)).to.equal(expressPort);
       });
@@ -108,10 +112,7 @@ describe("maker/portScanning.js", function () {
     });
 
     it('will not pick a known bad port', () => {
-      const ports = [
-        ...OSX_DEFAULT_PORTS,
-        ...OTHER_BAD_SERIALPORTS
-      ];
+      const ports = [...OSX_DEFAULT_PORTS, ...OTHER_BAD_SERIALPORTS];
       expect(getPreferredPort(ports)).to.be.undefined;
     });
   });

@@ -1,12 +1,14 @@
-/* eslint-disable react/no-danger */
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import { ImagePreview } from './AniGifPreview';
-import { connect } from 'react-redux';
-import { convertXmlToBlockly } from './utils';
-import { openDialog } from '@cdo/apps/redux/instructionsDialog';
+import {ImagePreview} from './AniGifPreview';
+import {connect} from 'react-redux';
+import {convertXmlToBlockly} from './utils';
+import {openDialog} from '@cdo/apps/redux/instructionsDialog';
+
+import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
 
 const styles = {
   standard: {
@@ -20,22 +22,22 @@ const styles = {
   },
   inTopPaneCanCollapse: {
     marginTop: 0,
-    marginBottom: 0,
-  },
+    marginBottom: 0
+  }
 };
 
 class MarkdownInstructions extends React.Component {
   static propTypes = {
-    renderedMarkdown: PropTypes.string.isRequired,
+    markdown: PropTypes.string.isRequired,
     noInstructionsWhenCollapsed: PropTypes.bool,
     onResize: PropTypes.func,
     inTopPane: PropTypes.bool,
     isBlockly: PropTypes.bool,
-    showImageDialog: PropTypes.func,
+    showImageDialog: PropTypes.func
   };
 
   static defaultProps = {
-    noInstructionsWhenCollapsed: false,
+    noInstructionsWhenCollapsed: false
   };
 
   componentDidMount() {
@@ -43,7 +45,7 @@ class MarkdownInstructions extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.renderedMarkdown !== this.props.renderedMarkdown) {
+    if (prevProps.markdown !== this.props.markdown) {
       this.configureMarkdown_();
     }
   }
@@ -88,7 +90,9 @@ class MarkdownInstructions extends React.Component {
     }
 
     // Parent needs to readjust some sizing after images have loaded
-    $(thisNode).find('img').load(this.props.onResize);
+    $(thisNode)
+      .find('img')
+      .load(this.props.onResize);
 
     const expandableImages = thisNode.querySelectorAll('.expandable-image');
     for (let i = 0; i < expandableImages.length; i++) {
@@ -97,16 +101,17 @@ class MarkdownInstructions extends React.Component {
         <ImagePreview
           url={expandableImg.dataset.url}
           noVisualization={false}
-          showInstructionsDialog={() => this.props.showImageDialog(expandableImg.dataset.url)}
-        />, expandableImg);
+          showInstructionsDialog={() =>
+            this.props.showImageDialog(expandableImg.dataset.url)
+          }
+        />,
+        expandableImg
+      );
     }
   }
 
   render() {
-    const {
-      inTopPane,
-      renderedMarkdown,
-    } = this.props;
+    const {inTopPane, markdown} = this.props;
 
     const canCollapse = !this.props.noInstructionsWhenCollapsed;
     return (
@@ -115,25 +120,31 @@ class MarkdownInstructions extends React.Component {
         style={[
           styles.standard,
           inTopPane && styles.inTopPane,
-          inTopPane && canCollapse && styles.inTopPaneCanCollapse,
+          inTopPane && canCollapse && styles.inTopPaneCanCollapse
         ]}
-        dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
-      />
+      >
+        <UnsafeRenderedMarkdown markdown={markdown} />
+      </div>
     );
   }
 }
 
 export const StatelessMarkdownInstructions = Radium(MarkdownInstructions);
-export default connect(state => ({
-  isBlockly: state.pageConstants.isBlockly,
-  noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
-}), dispatch => ({
-  showImageDialog(imgUrl) {
-    dispatch(openDialog({
-      autoClose: false,
-      imgOnly: true,
-      hintsOnly: false,
-      imgUrl,
-    }));
-  },
-}))(Radium(MarkdownInstructions));
+export default connect(
+  state => ({
+    isBlockly: state.pageConstants.isBlockly,
+    noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed
+  }),
+  dispatch => ({
+    showImageDialog(imgUrl) {
+      dispatch(
+        openDialog({
+          autoClose: false,
+          imgOnly: true,
+          hintsOnly: false,
+          imgUrl
+        })
+      );
+    }
+  })
+)(Radium(MarkdownInstructions));

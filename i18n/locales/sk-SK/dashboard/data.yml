@@ -4,40 +4,40 @@ sk:
       name:
         Unplug1: Úvod do vedy o počítačoch (informatiky)
         Maze: Bludisko
-        Multi: Viacnásobný výber
+        Multi: Vyber správnu odpoveď
         Unplug2: Algoritmické myslenie
-        Unplug3: Programovanie na milimetrovom papieri
-        Artist: Postava
+        Unplug3: Programovanie na štvorčekový papier
+        Artist: Umelec
         Unplug4: Algoritmy
-        Artist2: Postava 2
+        Artist2: Umelec 2
         Unplug5: Funkcie
-        Farmer: Farmár
+        Farmer: Farmárka
         Unplug6: Podmienky
-        Artist3: Postava 3
+        Artist3: Umelec 3
         Unplug7: Napísanie piesne
-        Farmer2: Farmár 2
+        Farmer2: Farmárka 2
         Unplug8: Abstrakcia
-        Artist4: Postava 4
+        Artist4: Umelec 4
         Unplug9: Štafetové programovanie
-        Farmer3: Farmár 3
+        Farmer3: Farmárka 3
         Unplug10: Internet
-        Artist5: Postava 5
+        Artist5: Umelec 5
         Unplug11: Zhrnutie
         MazeEC: Bludisko
-        Bounce: Odraziť
+        Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Skladačka
         MazeStep: Krokový režim bludiska
         Wordsearch: Osemsmerovka
-        Webapp: Laboratórium aplikácií
-        ArtistEC: Postava
+        Webapp: App Lab
+        ArtistEC: Umelec
         TextMatch: Priraďovačka textu
         StudioEC: Play Lab
-        Applab: Laboratórium aplikácií
+        Applab: App Lab
         NetSim: Simulátor Internetu
         Custom: Umelec
         CustomStudio: Play Lab
-        Gamelab: Herné laboratórium
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: Bronzová
@@ -49,34 +49,34 @@ sk:
         if: Blok - Ak
         if_else: Blok Ak- tak
         loop_times: Blok Opakuj niekoľko krát
-        loop_until: Blok Opakuj kým
+        loop_until: Blok "Opakuj dovtedy kým"
         loop_while: Blok Kým
         loop_for: Blok Počítadlo
         function: Funkcie
         parameters: Funkcie s parametrami
     level:
       instructions:
-        maze_2_2: 'Pomôžeš mi chytiť neposlušné prasa? Daj dohromady niekoľko blokov "posunúť vpred" a stlač "Spustiť", aby som sa tam dostal. '
+        maze_2_2: 'Pomôžeš mi chytiť to neposlušné prasa? Spoj niekoľko blokov "posuň sa dopredu" a stlač "Spustiť", aby som sa k nemu dostal. '
         maze_2_1: To prasa mi pije krv. Pomôž mi ho nájsť!
-        maze_2_2_5: Nájdi cestu a veď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie!
-        maze_2_3: Naviguj ma k zelenému zlu! (Pozor na TNT)
-        maze_2_4: Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Ináč sa rozhnevám!
-        maze_2_5: K zelenému prasiatku sa možno dostať použitím len 2 blokov. Prídeš na to?
+        maze_2_2_5: Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie!
+        maze_2_3: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
+        maze_2_4: Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Ináč sa rozhnevám!
+        maze_2_5: K zelenému prasaťu sa dá dostať použitím len 2 blokov. Zistíš ktorých?
         maze_2_6: Dostaň ma k zelenému votrelcovi použitím troch blokov.
-        maze_2_7: Pomôž sa mi zbaviť toho zlého prasiatka pomocou čo najmenšieho počtu blokov. Skus použiť viac ako jeden blok "opakovať n-krát".
-        maze_2_8: 'Šedý blok nemôžeš zmazať. Vyrieš túto hádanku použitím bloku "opakuj", ktorý sa zopakuje 3 krát. Vlož do neho 3 bloky: posunúť vpred, posunúť vpred a otoč a nastav blok "opakuj", aby to zopakoval trikrát.'
-        maze_2_9: V poriadku, skús nový "opakuj dovtedy" blok - bude akciu opakovať až kým neprídem k tomu otravnému prasaťu.
+        maze_2_7: Pomôž sa mi zbaviť toho zlého prasaťa pomocou čo najmenšieho počtu blokov. Skús použiť niekoľko blokov "opakuj".
+        maze_2_8: 'Šedý blok nemôžeš zmazať. Vyrieš túto hádanku použitím bloku "opakuj", ktorý akciu zopakuje 3 krát. Vlož do neho 3 bloky: "posuň sa dopredu", "posuň sa dopredu", a "otoč sa" a nastav blok "opakuj", aby to zopakoval trikrát.'
+        maze_2_9: V poriadku, skús nový blok "opakuj dovtedy (kým)" - tento blok bude akciu opakovať až dovtedy, kým neprídem k tomu otravnému prasaťu.
         maze_2_10: Ok, posledný krát - vyriešiš toto použitím iba 4 blokov?
         maze_2_11: Drahá osoba. Ja zombie. Ja hladný. Musieť... dostať... k slnečnica... Dostaneš ma tam pomocou 5 blokov?
-        maze_2_12: Ok, toto je podobné, ale mierne rozdielne. Spravíš to použitím len 5 blokov?
-        maze_2_13: 'Použi nový "pokiaľ!" blok aby si mňa nechal rozhodnúť kedy sa otočiť. Tip: potrebuješ už len jeden blok, ale nauč sa ako sme ho nastavili aby si to zvládol nabudúce sám.'
-        maze_2_14: V poriadku, toto je naozaj posledná hádanka, ale musíš si zapamätať ako si použil bloky "pokiaľ" a "opakovať" spolu.
+        maze_2_12: Ok, toto je podobné, len trošku iné. Zvládneš to len s 5 blokmi?
+        maze_2_13: 'Použi nový blok "ak", aby som sa sám mohol rozhodnúť, kedy sa otočiť. Tip: Pre splnenie úlohy ti stačí pridať jediný blok, ale zapamätaj si, ako sme ho nastavili, aby si to nabudúce zvládol aj sám.'
+        maze_2_14: Ok, táto úloha je podobná ako tá predchádzajúca, len si musíš spomenúť, ako si použil bloky "ak" a "opakuj" spolu.
         maze_2_15: Chcem slnečnicu! Použi blok "pokiaľ" aby som sa tam dostal čo s najmenším počtom použitých blokov.
         maze_2_16: Dobre, precvičme si to ešte raz - nie je to veľmi odlišné, ale dávaj pozor na mäsožravky!
         maze_2_17: Blok "ak-inak" overuje podmienku a potom vykoná jednu ALEBO druhú vec. Skús využiť tento nový blok, aby si ma dostal k slnečnici.
         maze_2_18: Ďalšie precvičenie bloku "ak-inak". Zvládneš to na prvý pokus?
         maze_2_19: Dokážeš pridať len 3 bloky a vyriešiť zložitejšie bludisko? Ak to urobíš správne, môžem prejsť všetky krivé cesty bez ohľadu na ich dĺžku.
-        turtle_1_1: Ahoj, som umelec. Možeš napísať kód aby som nakreslil skoro čokoľvek. Použi pár blokov aby som nakreslil nad šedé čiary v obrázku.
+        turtle_1_1: Ahoj, som umelec. Možeš napísať kód, ktorým nakreslím takmer čokoľvek. Použi pár blokov, aby som niečo nakreslil nad šedé čiary na obrázku.
         turtle_1_2: 'Teraz nakresli štvorec. Poznámka: použi svoju obľúbenú farbu výberom z nového bloku "nastavenie farby".'
         turtle_1_3: Urobte štvorec použitím 3 blokov.
         turtle_1_4: 'Nakresli trojuholník, ktorého každá strana je inou farbou, použitím nastavenia "náhodná farba", ktoré vždy vyberie inú farbu. Poznámka: budeš musieť zistiť ako ďaleko otočiť kliknutím na číslo v bloku otoč.'
@@ -89,15 +89,15 @@ sk:
         turtle_4_1: 'Dokážeš nakresliť trojuholník (s hranami 100 pixelov) len pomocou 3 blokov? Poznámka: použi blok "opakuj".'
         turtle_4_2: Pridaj blok "otoč vpravo o 90 stupňov" niekde do stredu programu ale von z pracovného prostredia aby si nakreslil tieto trojuholníky.
         turtle_4_3: Okej, to je kód, ktorý si napísal aby si nakreslil jeden trojuholník. Dokážeš pridať bloky "opakuj" a "otoč" aby si spravil peknú kvetinu?
-        turtle_4_4: 'Tu je rovnaký kód z predchádzajúceho rébusu, ale po nakreslení trojuholníku otáča len o 36 stupňov. Koľko krát sa to potrebuje zopakovať? (Poznámka: po otočení kresby o 360 stupňov sa vytvorí kruh)'
+        turtle_4_4: 'Tu je rovnaký kód ako v predchádzajúcej úlohe,, ale po nakreslení trojuholníku je otočka len o 36 stupňov. Koľko krát ho musíme zopakovať? (Nápoveda: potrebujeme 360 stupňov na otočenie okolo celého kruhu)'
         turtle_4_5: 'Tu je ten istý kód z predchádzajúceho rébusu, ale opakuje otočenia 36 krát. O koľko stupňov bude jedno otočenie? (Poznámka: po otočení kresby o 360 stupňov sa vytvorí kruh)'
         turtle_4_6: Dokážeš nakresliť štvorec s hranami 20 pixelov s použitím len 3 blokov?
-        turtle_4_7: 'Toto je kód na nakreslenie štvorca z posledného rébusu. Dokážeš to opakovať aby si nakreslil 10 priľahlých štvorcov na vytvorenie rebríka? Poznámka: potrebuješ navyše len 2 bloky.'
+        turtle_4_7: 'Toto je kód na nakreslenie štvorca z poslednej úlohy. Dokážeš ho zopakovať tak, aby si nakreslil 10 spojených štvorcov, ktoré vytvoria rebrík? Nápoveda: potrebuješ pridať len 2 bloky.'
         turtle_4_8: Tu je riešenie predchádzajúceho rébusu. Dokážeš pridať len 2 bloky naviac aby si dokončil kresbu?
         turtle_4_9: Tu je riešenie na predchádzajúce puzzle. O koľko stupňov sa musíte obrátiť na dokončenie výkresu? (Pravdepodobne musíte háadať niekoľko krát)
-        turtle_4_10: Tu je riešenie predchádzajúceho rébusu. Koľko krát by si to mal opakovať aby si dokončil kresbu?
+        turtle_4_10: Tu je riešenie predchádzajúcej úlohy. Koľko krát by si to mal opakovať aby si dokončil kresbu?
         turtle_4_11: Skús zmeniť čísla v "otoč" a "zopakuj" blokoch aby si spravil iné vzory, alebo experimentuj zmenením zvyšku kódu aby si nakreslil čo chceš.
-        maze_karel_1_1: Ahoj, ja som farmár. Potrebujem vašu pomoc zploštit pole na mojej farme, tak aby bolo pripravené pre výsadbu. Presuňte ma na hromadu hliny a použite blok "odstrániť" na jeho odstránenie.
+        maze_karel_1_1: Ahoj, ja som farmárka. Potrebujem tvoju pomoc s vyrovnaním poľa na mojej farme tak, aby bolo pripravené pre výsadbu. Presuň ma na hromadu hliny a použi blok "odstráň", aby si ju odstránil.
         maze_karel_1_2: Ďalej ma posuň do diery a vyplň ju dvoma plnými lopatami hliny, použitím bloku "vyplň".
         maze_karel_1_3: Posuň ma na hromadu hliny a povedz mi koľko plných lopát treba odstrániť s použitím tak málo blokov ako sa len dá.
         maze_karel_1_4: 'Dokázal by si mi pomôcť odstrániť všetky štyri hromady hliny? Poznámka: použi blok opakuj ak môžeš.'
@@ -107,27 +107,27 @@ sk:
         maze_karel_1_8: Pomôž mi vyplniť dieru na konci poľa použitím toľko blokov ako je len možné.
         maze_karel_1_9: 'Nechaj ma odstrániť všetky hromady hliny. Skús použiť tak málo blokov ako je len možné. Poznámka: skús použiť blok "pokiaľ".'
         maze_karel_1_10: Keďže už pracujem neskoro, je tma a nedokážem povedať aké sú veľké hromady. Teraz nemám všetky možnosti, ktoré som mával v bloku pokiaľ. Posúvaj ma po poli a ak sú tam hromady, tak ich odstráň.
-        maze_karel_1_11: 'Ešte stále je vonku tma. Posúvaj ma po poli. Ak tu je hromada, odstráň ju a ak tam je diera, vyplň ju. Poznámka: použi možnosti z rozbaľovacieho menu v bloku "if".'
-        turtle_2_1: 'Ahoj. Ja som zombie, ktorý je zároveň aj umelec. Milujem kreslenie! Pomôž mi nakresliť štvorec v špeciálnej farbe. Dôležitá poznámka: máš všetky rovnaké bloky, ale teraz boli usporiadané do kategórií.'
+        maze_karel_1_11: 'Ešte stále je vonku tma. Posúvaj ma po poli. Ak tam je hromada, odstráň ju a ak tam je diera, vyplň ju. Poznámka: použi možnosti z rozbaľovacieho menu v bloku "ak".'
+        turtle_2_1: 'Ahoj. Ja zombie umelec. Ja milovať kresliť! Pomôž mi nakresliť štvorec v špeciálnej farbe. Dôležitá poznámka: zostali ti rovnaké bloky ako predtým, len sme ich usporiadali do kategórií.'
         turtle_2_2: Vitaj v používaní funkcií, ktoré ti dovolia definovať nové bloky! Vyskúšaj nový blok "kresli štvorec", nájdeš ho v kategórii "Funkcie" a nakresli malý zelený štvorec 50x50.
-        turtle_2_3: Použi blok "opakuj" (je v kategórii "Slučky") aby si nakreslil 3 štvorce o veľkosti 100, každý je 120 stupňov od seba. A sprav to v 3 rôznych, náhodných farbách.
+        turtle_2_3: Použi blok "opakuj" (je v kategórii "Cykly") aby si nakreslil 3 štvorce o veľkosti 100, každý je 120 stupňov od seba. A sprav to v 3 rôznych, náhodných farbách.
         turtle_2_4: 'Teraz sa ideme zabaviť. Zmeň kód tak, aby si nakreslil 36 štvorcov, ktoré sú 100 pixelov široké a sú od seba 10 stupňov. Poznámka: možno budeš chcieť použiť posuvník, aby si šiel rýchlejšie.'
         turtle_2_5: Nakresli štvorce so stranami 50, 60, 70, 80 a 90 pixelov. Budeš potrebovať päť krát funkciu "kresli štvorec".
         turtle_2_6: 'Okej, tento program bude používať počítadlo na nakreslenie rovnakých štvorcov ako naposledy. Chceš, aby štvorec bol rovnakej veľkosti ako počítadlo, tak použi blok "počítadlo". Poznámka: je to v kategórii Premenné.'
-        turtle_2_7: Toto je program na kreslenie špirály, ale keď bloky sú schované, tak nebudú fungovať. Vytvor nový program pomocou bloku "počítaj s" (v kategórii slučky) a blok "počítadlo" (v kategórii Premenné), aby si nakreslil rovnakú špirálu.
+        turtle_2_7: Toto je program na kreslenie špirály, ale bloky sú deaktivované, tak nebudú fungovať. Vytvor nový program pomocou bloku "počítaj s" (v kategórii "Cykly") a blok "počítadlo" (v kategórii "Premenné"), aby si nakreslil takú istú špirálu.
         turtle_2_7_5: Je tu nová funkcia "nakresli snehuliaka" (v kategórii Funkcie). Nakresli dvoch snehuliakov s výškou 250 a 100.
         turtle_2_8: Tu je to trocha zložitejšie. Použi funkciu "nakresli snehuliaka" a nový blok "skoč vpred" (v kategórii Akcie). Nakresli 3 snehuliakov rôznych farbách a 100 pixelov od seba.
-        turtle_2_9: Použi slučku "počítaj s" pre nakreslenie celej rodiny snehuliakov s výškami 110, 100, 90, 80 a 70. Snehuliaci by mali byť 60 pixelov od seba.
-        turtle_2_10: Tu je kód na experimentovanie s rôznymi špirálami. Čo sa stane ak zmeníš hodnotu otoč? Alebo ak nastavíš náhodnú farbu v slučke? Nakresli čokoľvek chceš.
-        maze_karel_2_1: 'Skús použiť bloky na odstránenie hromád a vyplň všetky diery v zemi. Skús použiť slučky miesto použitia množstva blokov. Poznámka: môžeš použiť slučku vo vnútri inej slučky.'
-        maze_karel_2_2: Definovali sme si náš vlastný blok nazvaný "vyplň 5", ktorý teraz je v kategórii Funkcie. Použi to, aby si mi pomohol vyplniť tieto diery.
+        turtle_2_9: Použi cyklus "počítaj s", aby si nakreslil celú rodinu snehuliakov s výškami 110, 100, 90, 80 a 70. Snehuliaci by mali byť 60 pixelov od seba.
+        turtle_2_10: Tu je kód na experimentovanie s rôznymi špirálami. Čo sa stane ak zmeníš hodnotu otoč? Alebo ak v opakovaní nastavíš náhodnú farbu? Nakresli čokoľvek chceš.
+        maze_karel_2_1: 'Skús použiť bloky na odstránenie hromád a vyplň všetky diery v zemi. Skús namiesto použitia množstva blokov použiť cyklus. Nápoveda: môžeš vložiť opakovanie do vnútra iného opakovania.'
+        maze_karel_2_2: Definovali sme si náš vlastný blok nazvaný "vyplň 5", ktorý teraz nájdeš v kategórii Funkcie. Použi ho, aby si mi pomohol vyplniť tieto diery.
         maze_karel_2_3: Použi nový blok funkcie "vyplň 5", aby si mi pomohol vyplniť všetky diery. Budeš musieť potiahnuť blok "vyplň 5" z kategórie Funkcie.
         maze_karel_2_4: Definuj novú funkciu, ktorá odstraňuje 7 plných lopát. Potom to použi na napísanie programu, ktorý mi pomôže odstrániť všetky hromady.
         maze_karel_2_5: Vytvor novú funkciu, ktorá odstraňuje 6 plných lopát z hromady a použi ju, aby si mi pomohol zarovnať všetky hromady.
         maze_karel_2_6: Použi 2 nové funkcie "vyplň 8" a "odstráň 8", aby si mi pomohol zarovnať hromadu a vyplniť dieru.
         maze_karel_2_7: Je tu krava na mojom poli! Napíš novú funkciu, ktorá mi pomôže sa vyhnúť krave a odstrániť hromadu. Vlož všetky svoje bloky do novej funkcie.
         maze_karel_2_8: Použi túto novú funkciu "vyhni sa krave a odstráň 1", aby si mi pomohol odstrániť všetky hromady.
-        maze_karel_2_9: Ok, tu je funkcia, ktorá odstraňuje 4 rôzne hromady špiny v zvislom stĺpci. Skús vložiť túto funkciu do vnútra slučky, aby si tak odstránil/a všetky hromady špiny použitím len pár nových blokov.
+        maze_karel_2_9: Ok, tu je funkcia, ktorá odstraňuje 4 rôzne hromady špiny v zvislom stĺpci. Skús vložiť túto funkciu do vnútra opakovania, vďaka čomu môžeš odstrániť všetky hromady špiny použitím len pár nových blokov.
         maze_karel_2_10: Presuň ma cez polia a použi tieto dve funkcie na odstránenie všetkých hromád a na vyplnenie všetkých dier.
         turtle_3_1: Táto úloha ti ukazuje ako sú funkcie "nakresli štvorec" a "nakresli kruh" definované. Definovanie funkcie neznamená, že sa aj spustí. Aby sa ti štvorec nakreslil musíš použiť blok "nakresli štvorec" na ploche.
         turtle_3_2: Použitím funkcie "nakresli štvorec" ako predlohy, vytvor funkciu "nakresli trojuholník" a použi ju.
@@ -169,9 +169,9 @@ sk:
         jigsaw_8: Usporiadaj bloky tak, aby sa vytvoril obrázok
         jigsaw_9: Usporiadaj bloky tak, aby sa vytvoril obrázok
         jigsaw_10: Usporiadaj bloky tak, aby sa vytvoril obrázok
-        jigsaw_11: Usporiadaj bloky tak, aby sa vytvoril obrázok
-        jigsaw_12: Usporiadaj bloky tak, aby sa vytvoril obrázok
-        jigsaw_13: Opravte hru!
+        jigsaw_11: Usporiadaj čísla do správneho poradia
+        jigsaw_12: Usporiadaj čísla do správneho poradia
+        jigsaw_13: Oprav túto skladačku!
         mazestep_1: Popis kroku v bludisku sem
         mazestep_2: Popis kroku v bludisku sem
         mazestep_3: Popis kroku v bludisku sem
@@ -183,8 +183,8 @@ sk:
         studio_c2_4: Dokážeš napísať program, ktorý posunie psa k mačke, a nech mačka povie "ahoj", keď k nej pes príde?
         studio_c2_5: Dokážeš napísať program vďaka ktorému povie chobotnica "ahoj", keď na ňu klikneš?
         studio_c2_6: Viete napísať program na pohyb tučniaka použitím kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele?
-        studio_c2_7: Blok "opakovať dookola" umožňuje nekonečný beh kódu. Viete pridať tieto bloky, aby sa dinosaurus opakovane pohyboval hore a dole?
-        studio_c2_8: Viete nechať Waddlesa povedať "Au!" a prehrať zvuk "bum" po tom, čo narazí do dinosaura a potom ho presunúť šípkami, aby sa tak stalo?
+        studio_c2_7: Blok "opakuj donekonečna" umožňuje nekonečný beh kódu. Vieš pridať správne bloky, ktoré umožnia, aby sa dinosaurus opakovane pohyboval hore a dole?
+        studio_c2_8: Nastav tučniaka tak, aby povedal "Au!" a prehral zvuk "úderu" keď narazí do dinosaura. Posúvaj ho šípkami a vyskúšaj to.
         studio_c2_9: Viete pridať blok pre získanie bodu, keď Waddles narazí do chobotnice a potom ho presunúť šípkami až kým neskóruje?
         studio_c2_10: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla a potom ho presunúť pomocou šípok až kým neskóruje?
         studio_c2_11: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni na Skončiť, nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
@@ -196,44 +196,44 @@ sk:
         studio_c3_story_6: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni na Skončiť, nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
         studio_c3_game_1: Dokážeš napísať program vďaka ktorému povie chobotnica "ahoj", keď na ňu klikneš?
         studio_c3_game_2: Viete napísať program na pohyb tučniaka použitím kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele?
-        studio_c3_game_3: Blok "opakovať dookola" umožňuje nekonečný beh kódu. Viete pridať tieto bloky, aby sa dinosaurus opakovane pohyboval hore a dole?
-        studio_c3_game_4: Viete nechať Waddlesa povedať "Au!" a prehrať zvuk "bum" po tom, čo narazí do dinosaura a potom ho presunúť šípkami, aby sa tak stalo?
+        studio_c3_game_3: Blok "opakuj donekonečna" umožňuje nekonečný beh kódu. Vieš pridať správne bloky, ktoré umožnia, aby sa dinosaurus opakovane pohyboval hore a dole?
+        studio_c3_game_4: Nastav tučniaka tak, aby povedal "Au!" a prehral zvuk "úderu" keď narazí do dinosaura. Posúvaj ho šípkami a vyskúšaj to.
         studio_c3_game_5: Viete pridať blok pre získanie bodu, keď Waddles narazí do chobotnice a potom ho presunúť šípkami až kým neskóruje?
         studio_c3_game_6: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla a potom ho presunúť pomocou šípok až kým neskóruje?
-        studio_c3_game_7: Vytvor si svoju vlastnú hru. Keď budeš hotový, klikni na Skončiť, nech tvoju hru môžu vyskúšať kamaráti na svojich telefónoch.
+        studio_c3_game_7: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť", nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_playlab_1: Tučniačik chce povedať "ahoj" - môžeš mu s tým pomôcť?
-        studio_playlab_2: Jaskynný muž (postavička č. 1) a Jasmína (postavička č. 2) by sa chceli navzájom pozdraviť slovom "ahoj". Vieš im k tomu pomôcť použitím bloku "povedať" dvakrát?
+        studio_playlab_2: Jaskynný muž (postava 1) a jaskynná žena (postava 2) by sa chceli navzájom pozdraviť slovom "ahoj". Pomôž im k tomu tak, že dvakrát použiješ blok "povedz".
         studio_playlab_3: Dokážeš pomôcť tenistke dostať sa k vlajke?
-        studio_playlab_4: Dokážeš pomôcť tenistovi (postava 1) dostať sa k tenistke (postava 2) a prehrať zvuk, keď k nej príde?
-        studio_playlab_5: Viete pomôcť Spacebotovi povedať "vitajte pozemšťania", keď sa naňho klikne? Nezabudnite po stlačení Spustiť kliknúť naňho
-        studio_playlab_6: Viete pomôcť Bosorke presúvať sa po okolí používaním šípiek hore/dole/vpravo/vľavo pre pozbieranie všetkých čarovných ohnivých gulí?
-        studio_playlab_7: Blok "opakovať dookola" umožňuje nekonečný beh kódu. Viete pridať tieto bloky a pomôcť čarodejníkovi opakovane sa pohybovať doprava a doľava?
-        studio_playlab_8: Viete pridať blok pre získanie bodu a blok pre prehranie zvuku, ak jednorožec narazí do čarodejníka a potom ho presunúť šípkami až kým neskóruje?
-        studio_playlab_9: Nastavte pozadie pre túto inváziu mimozemšťanov a pomôžte Spacebotovi dostať sa k mimozemštanovi rýchlejšie zmenou jeho rýchlosti. Potom ho presuňte pomocou šípiek, aby ste sa dostali k Spacebotovi a upozornili ostatných
-        studio_playlab_10: Vytvor si svoju vlastnú hru. Keď budeš hotový, klikni na Skončiť, nech tvoju hru môžu vyskúšať kamaráti na svojich telefónoch.
+        studio_playlab_4: Pomôžeš tenistovi (postava 1) dostať sa k tenistke (postava 2)? Prehraj ľubovoľný zvuk, keď ku nej príde.
+        studio_playlab_5: Pomôžeš Spacebotovi, aby povedal "vitajte pozemšťania", keď sa naňho klikne? Nezabudni na neho po stlačení tlačidla "Spustiť" aj kliknúť
+        studio_playlab_6: Pomôžeš Bosorke presúvať sa po okolí pomocou šípiek hore/dole/vpravo/vľavo, aby mohla pozbierať všetky čarovné ohnivé gule?
+        studio_playlab_7: Blok "opakuj donekonečna" umožňuje nekonečný beh kódu. Vieš pridať tieto bloky a pomôcť čarodejníkovi opakovane sa pohybovať doprava a doľava?
+        studio_playlab_8: Vieš pridať blok, ktorým získaš body a blok, ktorým prehráš zvuk v momente, keď jednorožec narazí do čarodejníka? Po naprogramovaní posúvaj jednorožcom až kým neskóruješ.
+        studio_playlab_9: Nastav pozadie pre túto inváziu mimozemšťanov a pomôž Spacebotovi čo najrýchlejšie sa dostať k mimozemštanovi tým, že zmeníš jeho rýchlosť. Potom ho presuň pomocou šípiek a upozorni na inváziu aj ostatných
+        studio_playlab_10: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť", nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_iceage_hello1: Sid chce dať všetkých dokopy pre nové dobrodružstvo. Viete mu pomôcť povedať "ahoj" presunutím bloku "povedať" na pracovnú plochu a napísaním "ahoj" doňho?
         studio_iceage_hello2: Manny (postavička č. 1) našla Sida (postavička č. 2) a chce ho zobrať na dobrodružný výlet. Pomôž im pozdraviť sa nazvájom použitím bloku "postavička povie" dvakrát.
         studio_iceage_move_to_flag: Scrat hľadá svoj žaluď! Pomôžte mu prejsť posledných 200 pixelov pomocou bloku "posunúť".
         studio_iceage_move_to_actor: Diego (postavička č. 1) hľadá Mannyho (postavička č. 2). Pomôž Diegovi posunúť sa o 200 pixelov nadol k Darwinovi použitím bloku "posunúť postavičku". Potom pripoj blok k akcií "po dotknutí sa postavičkou" pre prehratie zvuku, keď sa obidvaja stretnú.
-        studio_iceage_repeat: Blok "opakovať dookola" umožňuje nekonečný beh kódu. Viete pridať tieto bloky a pomôcť Babičke trochu si zacvičiť opakovaným pohybom doľava a doprava?
+        studio_iceage_repeat: Blok "opakuj donekonečna" umožňuje nekonečný beh kódu. Vieš pridať správne bloky a pomôcť babičkeGranny trochu si zacvičiť opakovaným pohybom doľava a doprava?
         studio_iceage_click_hello: Viete pomôcť Sidovi naposledy zavolať kamarátov po kliknutí naňho? Nezabudnite kliknúť naňho po stlačení Spustiť.
         studio_iceage_move_events: Skrat stále hľadá svoje žaluďe! Pomôžte mu hľadať aj v širšom okolí pripojením bloku "posúnúť sa" ku každej akcií a zmenou smeru po každom stlačení ktorejkoľvek šípky. Keď budete hotový, stlačte Spustiť a skúste pozbierať všetky žaluďe.
         studio_iceage_sound_and_points: Napísali sme za Vás skoro všetok kód, ktorý hýbe Babičkou doľava a doprava, ako aj kód, ktorý hýbe Sida po obrazovke. Viete dokončiť kód a pridať bloky k akcií "keď sa postavička dotkne" tak, že zaznie zvuk keď hocikto z nich získa bod a keď sa Sid a Granny stretnú? Stlačte Spustiť pre začiatok hry.
-        studio_iceage_warn_ice_age: Každý sa musí pohybovať rýchlejšie, keďže sa blíži Doba Ľadová! Zmeňte pozadie na ľadová a nastavte Sidovú rýchlosť na rýchlu, potom stlačte Spustiť a posuňte ho k Diegovi, aby ho varoval.
+        studio_iceage_warn_ice_age: Každý sa musí pohybovať rýchlejšie, lebo sa blíži Doba Ľadová! Zmeň pozadie na ľadové a nastav Sidovu rýchlosť na rýchlu. Potom stlač "Spustiť" a posuň Sida k Diegovi, aby ho varoval.
         studio_iceage_throw_hearts: Sid chce dať vedieť svojej babke, Babičke, že ju ľúbi. Použite príkaz "postavička hodí", aby Sid (postavička č. 1) hodil Babičke (postavička č. 2) srdiečka! Nastavte Babičkinu náladu na šťastnú akonáhle dostane srdiečka.
         studio_iceage_free_play: Je čas vytvoriť si svoju vlastnú hru, alebo príbeh. Keď budeš hotový, klikni na Skončiť, aby si mohli zahrať tvoju hru kamaráti na svojich telefónoch, tabletoch, alebo na počítačoch!
-        studio_gumball_hello1: Anais si chce nájsť nových kamarátov. Viete jej pomôcť povedať "ahoj" presunutím bloku "povedať" na pracovnej ploche a napísaním "ahoj" doňho?
-        studio_gumball_hello2: Darwin (postavička č. 1) a jeho brat Gumball (postavička č. 2) idú do školy. Pomôž im navzájom sa pozdraviť použitím bloku "postavička povie" dvakrát.
-        studio_gumball_move_to_flag: Banánový Joe sa chystá vyhrať preteky! Pomôžte mu prejsť posledných 200 pixelov pomocou bloku "posunúť".
-        studio_gumball_move_to_actor: Gumball (postavička č. 1) a Darwin (postavička č. 2) meškajú na športový deň! Pomôž Gumballovi posunúť sa o 200 pixelov nadol k Darwinovi použitím bloku "posunúť postavičku". Potom pripoj blok k akcií "po dotknutí sa postavičkou" pre prehratie zvuku, keď sa obidvaja stretnú.
-        studio_gumball_repeat: Blok "opakovať dookola" umožňuje nekonečný beh kódu.  Viete pridať tieto bloky a pomôcť Gumballovi rozcvičiť sa opakovaným pohybom doľava a doprava?
-        studio_gumball_click_hello: Viete pomôcť Antonovi oznámiť začiatok preteku zakríčaním "Pripraviť sa, pozor, štart!"? Pre otestovanie programu nezabudnite kliknúť na Antona potom, ako stlačíte Spustiť!
-        studio_gumball_move_events: Darwin je v súťaži zbierania vlajok! Pomôžte mu v zbieraní pridaním bloku "posunúť" ku každej z akcií. Keď budete hotový, stlačte Spustiť a skúste pozbierať všetky vlajky.
-        studio_gumball_sound_and_points: Napísali sme za Vás skoro všetok kód, ktorý hýbe Antonom (postavička 2) doľava a doprava, ako aj kód, ktorý hýbe Banánoveho Joa (postavička č. 1) po obrazovke. Viete dokončiť kód a pridať bloky k akcií "keď sa postavička dotkne" tak, že zaznie zvuk keď hocikto z nich získa bod a keď sa Banánový Joe a Anton stretnú? Stlačte Spustiť pre začiatok hry.
-        studio_gumball_warn_food_fight: Darwin práve utiekol z boja o jedlo! Zmeňte pozadie na "postavy" a zmeňte Darwinovu rýchlosť na rýchlu, potom stlačte Spustiť a dostaňte ho k Penny, aby ju varoval.
-        studio_gumball_join_food_fight: Pridajte sa do boja o jedlo! Použite príkaz "postava odhodí predmet doprava", aby Banánový Joe (postava č. 1) odhodil jedlo na Antona (postava č. 2)! Nastavte Antonovu náladu na nahnevanú, ak ho zasiahnu.
+        studio_gumball_hello1: Anais si chce nájsť nových kamarátov. Pomôžeš jej povedať "ahoj" tým, že presunieš blok "povedz" na pracovnú plochu a napíšeš do neho "ahoj"?
+        studio_gumball_hello2: Darwin (postava 1) a jeho brat Gumball (postava 2) idú do školy. Pomôž im pozdraviť sa tak, že dvakrát použiješ blok "postava povedz".
+        studio_gumball_move_to_flag: Banánový Joe sa chystá vyhrať preteky! Pomôž mu prejsť posledných 200 pixelov pomocou bloku "posuň sa".
+        studio_gumball_move_to_actor: Gumball (postava 1) a Darwin (postava 2) meškajú na športový deň! Pomôž Gumballovi posunúť sa o 200 pixelov nadol k Darwinovi použitím bloku "posuň postavu". Potom pripoj blok pre prehratie zvuku ku bloku "keď sa postava dotkne", aby sa pri ich stretnutí prehral zvuk.
+        studio_gumball_repeat: Blok "opakuj donekonečna" umožňuje nekonečný beh kódu. Vieš pridať správne bloky a pomôcť Gumballovi rozcvičiť sa opakovaným pohybom doľava a doprava?
+        studio_gumball_click_hello: Pomôžeš Antonovi odštartovať preteky zakríčaním "Pripraviť sa, pozor, štart!"? Nezabudni po tom, ako stlačíš "Spustiť" kliknúť na Antona, aby si si svoj program otestoval!
+        studio_gumball_move_events: Darwin súťaží v zbieraní vlajok! Pomôž mu v zbieraní pridaním bloku "posuň sa" ku každej z akcií. Keď budeš hotový, stlač "Spustiť" a skús pozbierať všetky vlajky.
+        studio_gumball_sound_and_points: Napísali sme za teba skoro všetok kód, ktorý hýbe Antonom (postava 2) doľava a doprava, ako aj kód, ktorý umožní hýbať sa Banánovému Joe (postava 1) po obrazovke. Dokonči kód a pridaj k udalosti "keď sa postava dotkne" bloky, ktoré zahrajú zvuk vždy, keď niekto z nich získa bod, alebo keď sa Banánový Joe a Anton stretnú. Stlač "Spustiť" a hru si zahraj.
+        studio_gumball_warn_food_fight: Darwin práve utiekol z bitky s jedlom! Zmeň pozadie na "postavy" a zmeň Darwinovu rýchlosť na rýchlu, potom stlač "Spustiť" a presuň Darwina ku Penny, aby ju mohol varovať.
+        studio_gumball_join_food_fight: Pridaj sa ku bitke s jedlom! Použi príkaz "postava hoď predmet vpravo", aby Banánový Joe (postava č. 1) odhodil jedlo na Antona (postava č. 2)! Ak Antona zasiahne, nastav Antonovu náladu na nahnevanú.
         studio_gumball_free_play: Vytvor si svoju vlastnú hru, alebo príbeh. Keď budeš hotový klikni na Skončiť, aby si mohli kamaráti zahrať tvoju hru na svojich telefónoch, tabletoch, alebo na počítačoch!
-        studio_full_sandbox: Vytvor si svoju vlastnú hru. Keď budeš hotový, klikni na Skončiť, nech tvoju hru môžu vyskúšať kamaráti na svojich telefónoch.
+        studio_full_sandbox: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť", nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_k1_1: Dokážeš naučiť tohto psa povedať "ahoj svet"?
         studio_k1_2: Viete nechať psa niečo povedať a potom nechať mačku takisto niečo povedať?
         studio_k1_3: Viete napísať program, ktorý posunie tohto psa k mačke?
@@ -245,101 +245,101 @@ sk:
         maze_wordsearch_k_3: Presuň ma pre vyhláskovanie slova WEST (západ)
         maze_wordsearch_k_4: Presuň ma pre vyhláskovanie slova NORTH (sever)
         maze_wordsearch_k_6: Presuň ma na východ a potom na juh pre vyhláskovanie slova JUMP (skok)
-        maze_wordsearch_k_9: Presuňte ma jedným smerom, potom druhým pre vyhláskovanie slova CODE (kód)
-        maze_wordsearch_k_13: Presuňte ma jedným smerom, potom druhým pre vyhláskovanie slova DEBUG (ladenie)
-        maze_wordsearch_k_15: Presuňte ma jedným smerom, potom druhým pre vyhláskovanie slova ABOVE (nad)
-        maze_wordsearch_k_16: Presuňte ma jedným smerom, potom druhým pre vyhláskovanie slova BELOW (pod)
-        maze_wordsearch_k_20: Toto je test! Presuňte ma jedným smerom, potom druhým pre vyhláskovanie slova STORY (príbeh)
-        applab_ec_simple: Vytvorte si Vašu aplikáciu použitím blokov v nástrojovom paneli.
-        turtle_ec_1_2: 'Teraz nakreslite štvorec. POZNÁMKA: použite svoju obľúbenú farbu výberom z nového bloku "farbaPera".'
-        turtle_ec_1_10: 'Dokázali ste to! Teraz môžete nakresliť čo len chcete. Niektoré vtipné nápady: postavička z čiar, snehová vločka alebo špirála. Skúste aj blok "šírkaPera". Prajeme veľa zábavy!'
-        studio_ec_sandbox: Vytvor si svoju vlastnú hru. Keď budeš hotový, klikni na Skončiť, nech tvoju hru môžu vyskúšať kamaráti na svojich telefónoch.
+        maze_wordsearch_k_9: Presuň ma jedným smerom, potom druhým pre vyhláskovanie slova CODE (kód)
+        maze_wordsearch_k_13: Presuň ma jedným smerom, potom druhým pre vyhláskovanie slova DEBUG (vyhľadať chyby)
+        maze_wordsearch_k_15: Presuň ma jedným smerom, potom druhým pre vyhláskovanie slova ABOVE (nad)
+        maze_wordsearch_k_16: Presuň ma jedným smerom, potom druhým pre vyhláskovanie slova BELOW (pod)
+        maze_wordsearch_k_20: Toto je test! Presuň ma jedným smerom, potom druhým pre vyhláskovanie slova STORY (príbeh)
+        applab_ec_simple: Vytvor si aplikáciu použitím blokov v paneli nástrojov.
+        turtle_ec_1_2: 'Teraz nakresli štvorec. POZNÁMKA: použi svoju obľúbenú farbu výberom na novom bloku "farbaPera".'
+        turtle_ec_1_10: 'Dokázal si to! Teraz môžeš nakresliť čo len chceš. Pár vtipných nápadov: postavička z čiar, snehová vločka alebo špirála. Skús použiť aj blok "šírkaPera". Prajeme veľa zábavy!'
+        studio_ec_sandbox: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť", nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
     video:
       name:
         maze_intro: Úvod do bludiska
-        artist_intro: Úvod do Umelca
-        farmer_intro: Úvod k Farmárovi
+        artist_intro: Umelec - Úvod
+        farmer_intro: Úvod k Farmárke
         flappy_intro: Úvod do Flappy
-        loop_times: Blok Opakovať x-krát
-        loop_until: Opakuj až po blok
-        if: Ak blok
-        if_else: Ak/inak blok
-        if_else_scrat: Ak/inak blok
+        loop_times: Blok Opakuj
+        loop_until: Blok "opakuj dovtedy kým"
+        if: Blok "Ak"
+        if_else: Blok "Ak/inak"
+        if_else_scrat: Blok "Ak/inak"
         function: Funkcie
-        loop_while: Pokiaľ blok
-        loop_for: Blok Počítadlo
+        loop_while: Blok "Kým"
+        loop_for: Blok "Počítadlo"
         parameters: Funkcie s parametrami
         hoc_wrapup: Zhrnutie Hodiny Kódu
         Unplug1: Čo je to CS?
         Unplug2: Algoritmické myslenie
-        Unplug3: Programovanie na milimetrovom papieri
+        Unplug3: Programovanie na štvorčekový papier
         Unplug4: Algoritmy
         Unplug5: Funkcie
         Unplug6: Podmienky
-        Unplug7: Písanie pesničiek s parametrami
+        Unplug7: Písanie pesničiek
         Unplug8: Abstrakcia
         Unplug9: Štafetové programovanie
         Unplug10: Internet
         Unplug11: Zhrnutie
         C1_happy_maps_unplugged: Veselé mapy
-        C1_moveitmoveit_unplugged: Posuň to, Posuň to
+        C1_moveitmoveit_unplugged: Pohni sa, pohni sa
         C1_bigevent_unplugged: Veľká udalosť
-        C1_getting_loopy: Neustále opakovanie
+        C1_getting_loopy: Cykly sa zacykľujú
         C1_pair_programming: Programovanie v páre
-        C1_maze_intro_sequencing: Úvod do sekvencovania bludiska
-        C1_maze_debugging: Ladenie bludiska
-        C1_bee_level_intro: Level s včelami - Úvod
-        C1_artist_intro: Úvod do Umelca
+        C1_maze_intro_sequencing: Úvod do bludiska
+        C1_maze_debugging: 'Bludisko: Hľadanie a odstraňovanie chýb'
+        C1_bee_level_intro: Úlohy s včelami - Úvod
+        C1_artist_intro: Umelec - Úvod
         C1_spelling_bee_intro: Úvod do hláskovania
-        C1_zuck_repeat_loop: Slučky v bludisku
-        C1_bee_loops: Slučky s včelami
-        C1_maze_loops: Slučky v bludisku
-        C1_playlab_storytelling: 'Hravé laboratórium: Vytvor príbeh'
-        C1_planting_seed: Sadenie semiačka
-        C1_building_foundation: Stavanie základov
-        C1_going_places_safely: Bezpečné premiestňovanie
+        C1_zuck_repeat_loop: Cykly v Bludisku
+        C1_bee_loops: 'Včela: Cykly'
+        C1_maze_loops: Cykly v Bludisku
+        C1_playlab_storytelling: Play Lab - Vytvor príbeh
+        C1_planting_seed: Zasaď semienko
+        C1_building_foundation: Budovanie základov
+        C1_going_places_safely: Bezpečný pohyb na internete
         C2_maze_intro: Úvod do bludiska
-        C2_artist_intro: Úvod do Umelca
-        C2_zuck_repeat_loop: Slučky v bludisku
-        C2_artist_loops: Slučky s umelcom
-        C2_artist_debugging: Ladenie umelca
-        C2_bee_loops: Slučky s včelami
-        C2_bee_debugging: Ladenie včely
+        C2_artist_intro: Umelec - Úvod
+        C2_zuck_repeat_loop: Cykly v Bludisku
+        C2_artist_loops: Umelec - Cykly
+        C2_artist_debugging: 'Umelec: Hľadanie a odstraňovanie chýb'
+        C2_bee_loops: 'Včela: Cykly'
+        C2_bee_debugging: 'Včela: Hľadanie a odstraňovanie chýb'
         C2_bee_conditionals: Podmienky s včelou
-        C2_playlab_createstory: 'Hravé laboratórium: Vytvor príbeh'
-        C2_graph_paper: Programovanie na milimetrovom papieri
+        C2_playlab_createstory: Play Lab - Vytvor príbeh
+        C2_graph_paper: Programovanie na štvorčekový papier
         C2_conditionals_with_cards: Podmienky
         C2_binary_bracelets: Binárne náramky
         C2_relay_programming: Štafetové programovanie
         C2_paper_airplanes: Papierové lietadielká
-        C2_digital_footprint: Tvoj digitálny otlačok
-        C2_digital_footprint_v2: Tvoj digitálny otlačok
-        C3_maze_level_4: Slučky v bludisku
-        C3_artist_intro: Úvod do Umelca
-        C3_artist_functions: Funkcie umelca
-        C3_bee_functions: Funkcie včely
+        C2_digital_footprint: Tvoja digitálna stopa
+        C2_digital_footprint_v2: Tvoja digitálna stopa
+        C3_maze_level_4: Cykly v Bludisku
+        C3_artist_intro: Umelec - Úvod
+        C3_artist_functions: Umelec - Funkcie
+        C3_bee_functions: Funkcie s včelou
         C3_bee_conditionals: Podmienky s včelou
         C3_maze_conditionals: Podmienky v bludisku
-        C3_artist_nested_loops: Vnorené slučky
-        C3_farmer_while: Podmieňovacie slučky While
-        C3_bee_nested_loops: Vnorené slučky
-        C3_bee_debugging: Ladenie včely
-        C3_bounce: Odraziť
-        C3_playlab_create_game: Herné laboratórium - Vytvor hru
+        C3_artist_nested_loops: Vnorené cykly
+        C3_farmer_while: Cykly "pokiaľ"
+        C3_bee_nested_loops: Vnorené cykly
+        C3_bee_debugging: 'Včela: Hľadanie a odstraňovanie chýb'
+        C3_bounce: Bounce
+        C3_playlab_create_game: Play Lab - Vytvor hru
         C3_computational_thinking: Algoritmické myslenie
         C3_dice_race: Preteky s kockami
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Dekorácie
+        C3_functional_suncatchers: Dekorácie s funkciami
         C3_songwriting_with_parameters: Písanie pesničiek s parametrami
         C4_intro: Úvod
         C4_loops_zombie: Cykly
         C4_bee_conditional: Podmienky s včelou
-        C4_variables_artist: Premenné - Umelec
-        C4_variables_playlab: Premenné - Herné laboratórium
-        C4_for_loops: Slučky For
-        C4_for_loops_bee: Slučky For
-        C4_for_loops_no_bee: Slučky For
+        C4_variables_artist: Umelec - Premenné
+        C4_variables_playlab: Premenné - Play Lab
+        C4_for_loops: Cykly "For"
+        C4_for_loops_bee: Cykly "For"
+        C4_for_loops_no_bee: Cykly "For"
         C4_math_artist: Programovanie Umelca s matematikou
         C4_function_edit: Úprava funkcií
         C4_function_create: Tvorba funkcií
@@ -348,36 +348,35 @@ sk:
         C4_unplugged_algorithms: Algoritmy s tangrammi
         C4_unplugged_madlibs: Slovné halušky
         C4_unplugged_variables: Premenné v obálkach
-        C4_unplugged_forloops: Slučky For
+        C4_unplugged_forloops: Cykly "For"
         C4_unplugged_parameters: Písanie pesničiek s parametrami
         C4_unplugged_binary: Binárny
-        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Uhly v Umelcovi
-        CSF_collector_k1_blocks: 'Základy informatiky: Zberateľ'
-        CSF_collector_repeat_loops: Slučky opakovania zberateľa
-        CSF_collector_text_blocks: 'Základy informatiky: Zberateľ'
-        CSF_create_functions: Vytvorte funkcie
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
+        CSF_collector_k1_blocks: 'Základy informatiky: Zberateľka'
+        CSF_collector_repeat_loops: Použitie bloku "Opakuj"
+        CSF_collector_text_blocks: 'Základy informatiky: Zberateľka'
+        CSF_create_functions: Vytváranie funkcií
+        CSF_debugging_k1_blocks: Hľadanie a odstraňovanie chýb
+        CSF_debugging_text_blocks: Hľadanie a odstraňovanie chýb
         CSF_EF_cs_matters: Na informatike záleží
-        CSF_maze_intro_k1_blocks: Úvod do Študia kódu
-        CSF_maze_intro_text_blocks: Úvod do Študia kódu
-        CSF_my_robotic_friends: Moji robotickí priatelia
+        CSF_maze_intro_k1_blocks: Úvod do Code štúdia
+        CSF_maze_intro_text_blocks: Úvod do Code štúdia
+        CSF_my_robotic_friends: Moji robotickí kamaráti
         CSF_Power_of_Words: Sila slov
         CSF_Super_Digital_Citizen: Super digitálny občan
-        CSF_stevie_big_project: Števko a Veľký projekt
-        CSF_unspotted_bugs: Nenájdené chyby
-        CSF_zuck_loops_short: Slučky s opakovaním
-        frozen_intro: Úvod do Hodiny kódu
+        CSF_stevie_big_project: Stevie a jej veľký projekt
+        CSF_unspotted_bugs: Príbeh o hľadaní chrobákov a chýb
+        CSF_zuck_loops_short: Cykly (príkaz "Opakuj")
+        frozen_intro: Úvod do Hodiny Kódu
         frozen_loops: Úvod do cyklov
         frozen_functions: Úvod do funkcií
         playlab_intro: Úvod do Play Lab
         playlab_events: Play Lab Udalosti
-        playlab_repeat_forever: Play Lab Doživotné opakovanie
+        playlab_repeat_forever: Play Lab Nekonečné opakovanie
         tutorial_puzzle_challenge: Tutoriál - Puzzle výzva
         infinity_playlab_intro: Play Lab - Úvod
         infinity_playlab_events: Play Lab - Udalosti
-        infinity_playlab_repeat_forever: Play Lab - Doživotné opakovanie
+        infinity_playlab_repeat_forever: Play Lab - Nekonečné opakovanie
         csd_concept_how_computers_work: Úvádzame Ako pracujú počítače
         csd_concept_computer: 'Ako pracujú počítače: Čo robí počítač počítačom?'
         csd_concept_binary_data: 'Ako pracujú počítače: Binárne a všeobecné dáta'
@@ -386,118 +385,54 @@ sk:
         csd_concept_hardware_software: 'Ako pracujú počítače: Hardvér a softvér'
         csd_concept_search: Ako funguje vyhľadávanie
         csd_external_amazon_data: Ako sa Big Data používajú v odporúčacom systéme Amazonu a menia naše životy
-        csd_external_netflix_data: Ako fungujú navrhovania seriálov a filmov v Netflixe?
+        csd_external_netflix_data: Ako fungujú odporúčania seriálov a filmov v Netflixe?
         csd_external_waze_data: Prečo je tak veľa ľudí posadnutých Waze-om?
         csd_gamelab_animation_tab: Záložka s animáciami
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Rýchlosť
-        csd_weblab_intro_1: Úvod do webového laboratória - časť 1
-        csd_weblab_intro_2: Úvod do webového laboratória - časť 2
+        csd_weblab_intro_1: Úvod do Web Labu - časť 1
+        csd_weblab_intro_2: Úvod do Web Labu - časť 2
         csd_weblab_css_1: Úvod do CSS - časť 1
         csd_weblab_css_2: Úvod do CSS - časť 2
-        csd_weblab_intro_3: Úvod do webového laboratória - časť š
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
+        csd_weblab_intro_3: Úvod do Web Labu - časť 3
         csp_applab_functions: Úvod do funkcií
         csp_applab_functions_parameters: Funkcie s parametrami
         csp_applab_loops: Cykly
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
-        csp_textcompression: Text compression widget
-        csp_textcompression_new: Text compression widget
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        starwars_intro: 'Star Wars: Budovanie Galaxie s kódom - Úvod'
-        starwars_typing: 'Star Wars: Budovanie Galaxie s kódom - JavaScript'
-        starwars_events: 'Star Wars: Budovanie Galaxie s kódom - Udalosti'
-        starwars_congrats: 'Star Wars: Budovanie Galaxie s kódom - Gratulujeme'
-        starwars_blocks_intro: 'Star Wars: Budovanie Galaxie s kódom - Úvod'
-        starwars_blocks_events: 'Star Wars: Budovanie Galaxie s kódom - Udalosti'
-        starwars_blocks_congrats: 'Star Wars: Budovanie Galaxie s kódom - Gratulujeme'
+        csp_cs_is_changing_everything: Informatika mení svet okolo nás
+        starwars_intro: 'Star Wars: Budovanie Galaxie pomocou kódu - Úvod'
+        starwars_typing: 'Star Wars: Budovanie Galaxie pomocou kódu - JavaScript'
+        starwars_events: 'Star Wars: Budovanie Galaxie pomocou kódu - Udalosti'
+        starwars_congrats: 'Star Wars: Budovanie Galaxie pomocou kódu - Gratulujeme'
+        starwars_blocks_intro: 'Star Wars: Budovanie Galaxie pomocou kódu - Úvod'
+        starwars_blocks_events: 'Star Wars: Budovanie Galaxie pomocou kódu - Udalosti'
+        starwars_blocks_congrats: 'Star Wars: Budovanie Galaxie pomocou kódu - Gratulujeme'
         mc_intro: Minecraft - Úvod
         mc_repeat: Minecraft - Opakovanie
         mc_if_statements: Minecraft - Príkazy Ak
         mc_congrats_share: Minecraft - Gratulujeme
         mc_congrats_no_share: Minecraft - Gratulujeme
-        gumball_intro: Hodina Kódu s Gumball - úvod
+        gumball_intro: Hodina Kódu s Gumball - Úvod
         gumball_events: Hodina Kódu s Gumball - Udalosti
         gumball_repeat: Hodina Kódu s Gumball - Výrazy s opakovaniami
-        iceage_intro: Doba ľadová Hodina Kódu - Úvod
+        iceage_intro: Hodina Kódu s dobou ľadovou - Úvod
         iceage_events: Hodina Kódu s Dobou ľadovou - Udalosti
         iceage_repeat: Hodina Kódu s Dobou ľadovou - Výrazy s opakovaniami
-        mc_2016_intro: Hodina kódu Minecraft - Úvod
-        mc_2016_loops: Hodina kódu Minecraft - Cykly
-        mc_2016_events: Hodina kódu Minecraft - Udalosti
-        mc_2016_spawn: Hodina kódu Minecraft - Vytváranie postáv
-        mc_2016_congrats: Hodina kódu Minecraft - Gratulujeme
-        applab_hoc_welcome: Aplikačné laboratórium Hodiny Kódu - Vitajte
-        applab_hoc_setproperty: Aplikačné laboratórium Hodiny Kódu - setProperty
-        applab_hoc_onevent: Aplikačné laboratórium Hodiny Kódu - onEvent
-        applab_hoc_designmode: Aplikačné laboratórium Hodiny Kódu - Dizajnovací mód
-        applab_hoc_share: Aplikačné laboratórium Hodiny Kódu - Zdieľanie
-        mc_2017_agent_intro: Hodina kódu Minecraft - Agent
-        mc_2017_repeat: Hodina kódu Minecraft - Zopakuj Cykly
-        mc_2017_functions: Hodina kódu Minecraft - Funkcie
-        mc_2017_congratulations: Hodina kódu Minecraft - Gratulujeme
-        mc_2017_puzzle_1: Hodina kódu Minecraft - Agent
-        mc_2017_puzzle_3: Hodina kódu Minecraft - Zopakuj Cykly
-        mc_2017_puzzle_8: Hodina kódu Minecraft - Funkcie
-        mc_2017_puzzle_12: Hodina kódu Minecraft - Voľná hra
+        mc_2016_intro: Minecraft Hodina Kódu - Úvod
+        mc_2016_loops: Minecraft Hodina Kódu - Cykly
+        mc_2016_events: Minecraft Hodina Kódu - Udalosti
+        mc_2016_spawn: Minecraft Hodina Kódu - Vytváranie postáv
+        mc_2016_congrats: Minecraft Hodina Kódu - Gratulujeme
+        applab_hoc_welcome: App Lab Hodina Kódu - Vitajte
+        applab_hoc_setproperty: App Lab Hodina Kódu - setProperty
+        applab_hoc_onevent: App Lab Hodina Kódu - onEvent
+        applab_hoc_designmode: App Lab Hodina Kódu - Dizajnovací mód
+        applab_hoc_share: App Lab Hodina Kódu - Zdieľanie
+        mc_2017_agent_intro: Minecraft Hodina Kódu - Agent
+        mc_2017_repeat: Minecraft Hodina Kódu - Cykly (príkaz "Opakuj")
+        mc_2017_functions: Minecraft Hodina Kódu - Funkcie
+        mc_2017_congratulations: Minecraft Hodina Kódu - Gratulujeme
+        mc_2017_puzzle_1: Minecraft Hodina Kódu - Agent
+        mc_2017_puzzle_3: Minecraft Hodina Kódu - Cykly (príkaz "Opakuj")
+        mc_2017_puzzle_8: Minecraft Hodina Kódu - Funkcie
+        mc_2017_puzzle_12: Minecraft Hodina Kódu - Voľná hra
         hint_videos_d_11_3_first: 'Videonápoveda: D.11.3 Prvé'
         hint_videos_d_11_3_last: 'Videonápoveda: D.11.3 Posledné'
         hint_videos_d_11_4_first: 'Videonápoveda: D.11.4 Prvé'
@@ -512,90 +447,106 @@ sk:
         hint_videos_d_11_9_last: 'Videonápoveda: D.11.9 Posledné'
         hint_videos_d_11_11_first: 'Videonápoveda: D.11.11 Prvé'
         hint_videos_d_11_11_last: 'Videonápoveda: D.11.11 Posledné'
-        applab_intro_welcome: Aplikačné laboratórium - Začíname
-        applab_intro_events: Aplikačné laboratórium - Spravme to interaktívne
-        applab_intro_sounds: Aplikačné laboratórium - Obrázky a zvuky
-        applab_intro_designmode: Aplikačné laboratórium - Dizajnovací mód
-        applab_intro_share: Aplikačné laboratórium - Zdieľajte Vašu aplikáciu
-        csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: Kombajn
+        applab_intro_welcome: App Lab - Začíname
+        applab_intro_events: App Lab - Spravme to interaktívne
+        applab_intro_sounds: App Lab - Obrázky a zvuky
+        applab_intro_designmode: App Lab - Dizajnovací mód
+        applab_intro_share: App Lab - Zdieľanie Appky
+        CSF_skinOverview_Harvester: Pestovateľka
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: Kombajn
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Slučky v Dobe Ľadovej
-        CSF_scrat_loops_CF: Slučky v Dobe Ľadovej
-        CSF_if_allskins: Blok "If"
-        CSF_ifelse_allskins: Používanie blokov If/Else
-        CSF_ifelseifelse_allskins: Používanie blokov If/Elseif/Else
+        CSF_bb8_loops_C-F: Cykly s BB-8
+        CSF_harvester_skinOverview_K-1: Pestovateľka
+        CSF_harvester_loops_K1: Cykly s Pestovateľkou
+        CSF_scrat_loops_K1: Cykly v Dobe ľadovej
+        CSF_scrat_loops_CF: Cykly v Dobe ľadovej
+        CSF_if_allskins: Blok "Ak"
+        CSF_ifelse_allskins: Používanie blokov If/Else (Ak/Inak)
+        CSF_ifelseifelse_allskins: Používanie blokov Ak/Inak ak/Inak
         CSF_loops_AB: Cykly
         csd_gamelab_booleans: Logické výrazy
-        csd_gamelab_conditional_statements: Podmieňovacie výroky
-        csd_gamelab_if_else: Výroky If/Else
-        CSF_SpriteLabIntro_CDEF: Toto je Laboratórium objektov
-        CSF_Spritelab_MakeSprite_CDEF: Ako spraviť objekt v Laboratóriu objektov
-        CDEF_Video_SpritesInAction: Objekty v akcií
-        CSF_SpriteLab_SpritesInAction_CDEF: Objekty v akcií
+        csd_gamelab_conditional_statements: Podmienkové výroky
+        csd_gamelab_if_else: Výroky Ak/Inak
+        CSF_SpriteLabIntro_CDEF: Toto je Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: Ako vytvoriť postavu v Sprite Labe
+        CDEF_Video_SpritesInAction: Postavy v akcii
+        CSF_SpriteLab_SpritesInAction_CDEF: Postavy v akcii
+        CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
+        mc_2018_intro: 'Minecraft: Vodné Dobrodružstvo - Úvod'
+        MC_2018_loops: 'Minecraft: Vodné Dobrodružstvo - Cyklus "Opakuj dovtedy (kým)"'
+        mc_2018_conditionals: 'Minecraft: Vodné Dobrodružstvo - Podmienky'
+        mc_2018_closing: 'Minecraft: Vodné Dobrodružstvo - Gratulujeme'
+        hoc_dance_warmup: Tanečná párty - Zahrej sa
+        hoc_dance_events: Tanečná Párty - Udalosti
+        hoc_dance_properties: Tanečná Párty - Vlastnosti
+        hoc_dance_congrats: Tanečná párty - Párty pokračuje!
+        c_and_c_great_to_create: Je skvelé tvoriť a hrať férovo
+        c_and_c_digital_sharing: Digitálne zdieľanie
+        what_is_cs: Čo je informatika?
+        conditionals_with_cards: Bez počítača - Podmienky s kartami
+        songwriting_with_functions: 'Lekcia bez počítača v akcii: Písanie pesničiek s funkciami'
+        teaching_cs_pair_programming: 'Vyučujeme Základy informatiky: Párové programovanie'
+        teaching_problem_solving: 'Vyučujeme Základy informatiky: Riešenie problémov'
+        csd_pair_programming: Programovanie v páre
     callout:
       text:
-        drag_blocks: Presuňte blok "Posunúť" a pripojte ho pod druhý blok
-        run: Stlač "Spustiť" pre vyskúšanie svojho programu
+        drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok
+        run: Vyskúšaj svoj program stlačením "Spustiť"
         watch_again: Pre opätovné prezretie videa klikni sem
-        gray_block_explanation: Sivé bloky sa nedajú vymazať. Viete napriek tomu vyriešiť úlohu?
+        gray_block_explanation: Sivé bloky sa nedajú vymazať. Vieš napriek tomu vyriešiť túto úlohu?
         show_code_explanation: Klikni sem, aby si videl kód programu, ktorý tvoríš
         instructions_repeat_explanation: Inštrukcie pre každú úlohu sú zopakované tu
-        category_explanation: Bloky ostali rovnaké, ale odteraz sú zoradené v kategóriách
-        set_sprite_image: Pripojte blok "priradiť herca k obrázku" k bloku "po začatí príbehu" pre povolenie herca pre tento príbeh
-        studio_say_text: Sem medzi tieto úvodzovky zadajte text, ktorý má Váš herec povedať
+        category_explanation: Bloky zostali rovnaké, ale odteraz sú zoradené v kategóriách
+        set_sprite_image: Pripoj blok "priraď postavu k obrázku" k bloku "po začatí príbehu", aby si pre tento príbeh definoval postavu
+        studio_say_text: Medzi tieto úvodzovky zadaj text, ktorý má tvoja postava povedať
         jigsaw_click: Klikni na tento blok!
-        move_elsa_forward: Presuňte blok "Posunúť dopredu" a pripojte ho pod blok "Po spustení", aby sa Elsa pohla dopredu
+        move_elsa_forward: Presuň blok "Posuň sa dopredu" a pripoj ho pod blok "Po spustení", aby sa Elsa pohla dopredu
         turn_elsa: Použite blok "Otočiť" pre otočenie Elsy. Číslo vo vyberacom poli určí, koľkokrát sa Elsa otočí
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
         replace_questions_degree: Použite rozbaľovacie pole pre nahradenie "???" správnym uhlom otočenia
-        repeat_blocks: Použite blok "Zopakovať" a pridaj ho okolo blokov na pracovnej ploche
+        repeat_blocks: Použi blok "Opakuj" a vlož do neho bloky z pracovnej plochy
         repeat_blocks_1: "(1) Použite tento blok a pridajte ho okolo šedých blokov na pracovnej ploche"
-        repeat_blocks_2: (2) Presuňte sem blok "Zopakovať" a umiestnite šedé bloky do jeho vnútra
+        repeat_blocks_2: (2) Presuň sem blok "Opakuj" a šedé bloky umiestni do jeho vnútra
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
         degrees_per_side: Vydeľte 360 počtom strán pre získanie každého uhla v stupňoch.
         set_sides: Použite tento blok pre nastavenie počtu "strán" potrebných pre dokončenie tejto úlohy.
         set_length: Použite tento blok pre nastavenie správnej hodnoty "dĺžky".
         which_equation: Aká rovnica zmenší každu stranu viacstranného útvaru?
-        get_nectar: Použite nový blok "Získať nektár".
+        get_nectar: Použi nový blok "Získaj nektár".
         actions_category: Panel s nástrojmi má nový vzhľad! Bloky s "akciami" sú odteraz tu.
-        draw_square_hint: 'Nápoveda: Použite slučku s štvorcom, ktorú ste práve vytvorili v predošlej úlohe.'
-        edit_function: Kliknite sem pre úpravu Vašej funkcie.
-        create_function: Kliknite sem pre otvorenie panelu "Funkcie" a potom kliknite na tlačidlo "Vytvoriť funkciu".
+        draw_square_hint: 'Nápoveda: Použi opakovací cyklus na vytvorenie štvorca z predošlej úlohy.'
+        edit_function: Klikni sem pre úpravu tvojej funkcie.
+        create_function: Klikni sem, aby si otvoril panel "Funkcie" a potom klikni na tlačidlo "Vytvoriť funkciu".
         house_hint: Je v poriadku, ak obrázok ešte nevyzerá ako dom. Opravíme to v ďaľšej úlohe.
-        edit_draw_square: Použite toto tlačidlo pre úpravu funkcie a pridanie slučky.
-        edit_get_nectar: Použite toto tlačidlo pre úpravu funkcie a zmenu smeru, ktorým pôjde včela pre nektár.
-        logic_category: Otvorte panel "Logické" pre bloky "if/else".
+        edit_draw_square: Použi toto tlačidlo, aby si upravil funkciu a pridal opakovací cyklus.
+        edit_get_nectar: Použi toto tlačidlo na úpravu funkcie a zmenu smeru, ktorým pôjde včela pre nektár.
+        logic_category: Otvorte panel "Logické" pre bloky "If/Else".
         length_parameter: Viete aktualizovať túto funkciu, aby sa v nej použil parameter "dĺžka"?
-        frozen_diamond_repeat: Použite blok s opakovaním pre vytvorenie tohto tvaru.
-        frozen_circle_function_in_circle_turn: Nezabudnite po vytvorení každého kruhu zabočiť.
-        frozen_circle_function_with_parameter_circle: Použite blok "Vytvoriť kruh" a zmeňte veľkost.
-        frozen_snowflake_branch: Použite blok "Vytvoriť časť snehovej vločky"
-        frozen_create_square: Pridajte sem viac blokov pre vytvorenie štvorca
-        playlab_drag_say: Presuňte sem blok "Povedz" a napíšte "ahoj"
-        playlab_use_twice: Použite tento blok dvakrát a nezabudnte zmeniť počet umelcov
-        playlab_move_girl: Použite blok "posuň doprava" pre posunutie Dievčatka tenistky
-        playlab_play_sound: Pridajte se blok "Prehraj zvuk"
-        playlab_arrow_keys: Nezabudnite použiť tieto pre posunutie bosorky po stlačení "Spustiť"
-        playlab_add_move: Pridajte bloky "Presunúť" do tohto bloku s opakovaním
-        playlab_add_score: Tu pridaj blok skóre
-        playlab_add_blocks: Tu pridaj svoje bloky
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakuj".
+        frozen_circle_function_in_circle_turn: Nezabudni sa po vytvorení každej kružnice otočiť.
+        frozen_circle_function_with_parameter_circle: Použi blok "Vytvor kružnicu" a zmeň veľkost.
+        frozen_snowflake_branch: Použi blok "Vytvor rameno vločky"
+        frozen_create_square: Pripoj viac blokov, aby si vytvoril štvorec
+        playlab_drag_say: Presuň sem blok "povedz" a napíš "ahoj"
+        playlab_use_twice: Použi tento blok dvakrát a nezabudni zmeniť číslo postavy
+        playlab_move_girl: Použi blok "posuň sa vpravo", ktorý tenistku posunie správnym smerom
+        playlab_play_sound: Sem pridaj blok "Prehraj zvuk"
+        playlab_arrow_keys: Nezabudni po stlačení "Spustiť" použiť tieto tlačidlá
+        playlab_add_move: Pridaj bloky "posuň sa" do tohoto bloku s opakovaním
+        playlab_add_score: Sem pridaj blok pre počítanie skóre
+        playlab_add_blocks: Bloky pridaj sem
         set_variable: Aby si mohol nastaviť svoju premennú, blok čísel potiahni sem
         place_variable: Presuňte do tohto bloku Vašu premennú
         bee_for_loop: Presuňte sem najväčší počet nektárov, ktorý má včela pozbierať
         place_counter_variable: Presuňte do tohto bloku Vašu premennú počítadla
-        function_editor_draw_square: Toto je definícia Vašej funkcie. Tieto bloky sa spustia vždy pri použití bloku "Nakresli štvorec"
+        function_editor_draw_square: Toto je definícia tvojej funkcie. Tieto bloky sa spustia vždy keď použiješ blok "Nakresli štvorec"
         change_here: Tu urob zmenu
-        write_draw_square_function: Presuňte sem bloky z panelu nástrojov pre nakreslenie štvorca
-        write_draw_triangle_function: Presuňte sem bloky z panelu nástrojov pre nakreslenie trojuholníka
+        write_draw_square_function: Presuň sem tie bloky z panelu nástrojov, ktoré nakreslia štvorec
+        write_draw_triangle_function: Presuň sem tie bloky z panelu nástrojov, ktoré nakreslia trojuholník
         edit_add_parameter: Klikni na položku upraviť, aby si mohol do svojej funkcie pridať parameter
-        add_and_drag_parameter: Napíšte sem meno Vášho parametr, kliknite na Pridať a potom ho presuňte do definície Vašej funkcie
+        add_and_drag_parameter: Napíšte sem meno vášho parametr, kliknite na Pridať a potom ho presuňte do definície Vašej funkcie
         fill_in_actor: Vyplň ??? číslami, ktoré zodpovedajú každej postave (1, 2, a 3)
-        repeat: Pre opakovanie príkazov, vlož bloky do cyklu
+        repeat: Pre opakovanie príkazov, vlož bloky do cyklu "opakuj"
         if_bee_nectar: Použite blok "if" pre voľbu, či včela pôjde pre nektár
         if_else_bee: Použite blok "if/else", aby včela išla zozbierať nektár z kvetiny a spravila med, ak sa nejedná o kvetinu
         repeat_full_circle: Zadaj číslo, koľkokrát sa má zombie posunúť tak, aby spravil celý kruh
@@ -603,13 +554,13 @@ sk:
         arrows_move_actor: Pre pohyb postavy použi šípky
         right_arrow_fireball: Na streľbu ohnivých gulí použi pravú šípku
         name_function: Tu napíš meno svojej funkcie
-        Infinity_move_right_runbutton: Tu pridaj blok posunúť
-        Infinity_move_directions_callout: Ktorý blok presunie Baymaxa postlačení šípky hore smerom nahor?
+        Infinity_move_right_runbutton: Sem pridaj blok posuň sa
+        Infinity_move_directions_callout: Ktorý blok presunie Baymaxa po stlačení šípky hore smerom nahor?
         Infinity_move_directions_callout_arrow: Tieto šípky použi na riadenie
         Infinity_move_collide_callout: Keď nastane táto udalosť prehraj zvuk.
-        Infinity_repeat_callout: Sem umiestni bloky Posunúť
-        craft_run_button_callout: Stlačte "Spustiť" pre vyskúšanie programu
-        craft_drag_block_callout: Potiahni "posunúť vpred()" blok a zapoj ho pod iný blok
+        Infinity_repeat_callout: Sem umiestni bloky "posuň"
+        craft_run_button_callout: Vyskúšaj svoj program stlačením "Spustiť"
+        craft_drag_block_callout: Potiahni blok "moveForward()" a pripoj ho pod iný blok
         craft_callout_preplaced: Umiestnili sme sem nejaké bloky aby si mohol začať
         craft_inside_repeat: Opakuj akcie umiestnením blokov tu
         craft_callout_preplaced_house: Tento kód začne stavať tvoj dom. Dokážeš to dokončiť?

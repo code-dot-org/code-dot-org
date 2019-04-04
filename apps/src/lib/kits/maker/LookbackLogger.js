@@ -14,9 +14,12 @@ export default class LookbackLogger {
 
   getLast(ms) {
     var now = new Date();
-    return this.dataCollection.query().filter({
-      date__lte: now,
-      date__gte: new Date(now.getTime() - ms)
-    }).avg('value');
+    return this.dataCollection
+      .query()
+      .filter({
+        date__lte: now,
+        date__gte: new Date(now.getTime() - ms)
+      })
+      .avg('value');
   }
 }

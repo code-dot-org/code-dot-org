@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "bee",
-    "instructions": "Why isn't the bee making enough honey?",
+    "short_instructions": "Why isn't the bee making enough honey?",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

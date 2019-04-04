@@ -1,27 +1,27 @@
 /**
  * @overview Component for editing key/value pairs.
  */
-
 import _ from 'lodash';
 import AddKeyRow from './AddKeyRow';
-import { DataView } from '../constants';
+import {DataView} from '../constants';
 import EditKeyRow from './EditKeyRow';
 import FontAwesome from '../../templates/FontAwesome';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
-import { changeView, showWarning } from '../redux/data';
-import { connect } from 'react-redux';
+import React from 'react';
+import {changeView, showWarning} from '../redux/data';
+import {connect} from 'react-redux';
 import * as dataStyles from './dataStyles';
 
 const styles = {
   container: {
     height: '100%',
-    overflowY: 'scroll',
+    overflowY: 'scroll'
   },
   tableName: {
     fontSize: 18,
     marginBottom: 10,
-    marginTop: 20,
+    marginTop: 20
   }
 };
 
@@ -33,10 +33,8 @@ class DataProperties extends React.Component {
     // the maximum key in the object have non-empty values, then Firebase will render
     // it as an array."
     // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
-    keyValueData: PropTypes.oneOfType([
-      PropTypes.object,
-      PropTypes.array
-    ]).isRequired,
+    keyValueData: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
+      .isRequired,
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
@@ -44,7 +42,7 @@ class DataProperties extends React.Component {
   };
 
   state = {
-    showDebugView: false,
+    showDebugView: false
   };
 
   toggleDebugView = () => {
@@ -58,16 +56,22 @@ class DataProperties extends React.Component {
   }
 
   render() {
-    const visible = (DataView.PROPERTIES === this.props.view);
-    const containerStyle = [styles.container, {
-      display: visible ? 'block' : 'none'
-    }];
+    const visible = DataView.PROPERTIES === this.props.view;
+    const containerStyle = [
+      styles.container,
+      {
+        display: visible ? 'block' : 'none'
+      }
+    ];
     const keyValueDataStyle = {
       display: this.state.showDebugView ? 'none' : ''
     };
-    const debugDataStyle = [dataStyles.debugData, {
-      display: this.state.showDebugView ? '' : 'none',
-    }];
+    const debugDataStyle = [
+      dataStyles.debugData,
+      {
+        display: this.state.showDebugView ? '' : 'none'
+      }
+    ];
     return (
       <div id="dataProperties" style={containerStyle}>
         <div style={dataStyles.viewHeader}>
@@ -77,7 +81,8 @@ class DataProperties extends React.Component {
               style={dataStyles.link}
               onClick={() => this.props.onViewChange(DataView.OVERVIEW)}
             >
-              <FontAwesome icon="arrow-circle-left"/>&nbsp;Back to data
+              <FontAwesome icon="arrow-circle-left" />
+              &nbsp;Back to data
             </a>
           </span>
 
@@ -89,17 +94,12 @@ class DataProperties extends React.Component {
             >
               {this.state.showDebugView ? 'Key/value view' : 'Debug view'}
             </a>
-
           </span>
         </div>
 
-        <div style={styles.tableName}>
-          Key/value pairs
-        </div>
+        <div style={styles.tableName}>Key/value pairs</div>
 
-        <div style={debugDataStyle}>
-          {this.getKeyValueJson()}
-        </div>
+        <div style={debugDataStyle}>{this.getKeyValueJson()}</div>
 
         <table style={keyValueDataStyle}>
           <tbody>
@@ -109,17 +109,15 @@ class DataProperties extends React.Component {
               <th style={dataStyles.headerCell}>Actions</th>
             </tr>
 
-            <AddKeyRow onShowWarning={this.props.onShowWarning}/>
+            <AddKeyRow onShowWarning={this.props.onShowWarning} />
 
-            {
-              Object.keys(this.props.keyValueData).map(key => (
-                <EditKeyRow
-                  key={key}
-                  keyName={key}
-                  value={JSON.parse(this.props.keyValueData[key])}
-                />
-              ))
-            }
+            {Object.keys(this.props.keyValueData).map(key => (
+              <EditKeyRow
+                key={key}
+                keyName={key}
+                value={JSON.parse(this.props.keyValueData[key])}
+              />
+            ))}
           </tbody>
         </table>
       </div>
@@ -127,14 +125,17 @@ class DataProperties extends React.Component {
   }
 }
 
-export default connect(state => ({
-  view: state.data.view,
-  keyValueData: state.data.keyValueData || {}
-}), dispatch => ({
-  onShowWarning(warningMsg, warningTitle) {
-    dispatch(showWarning(warningMsg, warningTitle));
-  },
-  onViewChange(view) {
-    dispatch(changeView(view));
-  }
-}))(Radium(DataProperties));
+export default connect(
+  state => ({
+    view: state.data.view,
+    keyValueData: state.data.keyValueData || {}
+  }),
+  dispatch => ({
+    onShowWarning(warningMsg, warningTitle) {
+      dispatch(showWarning(warningMsg, warningTitle));
+    },
+    onViewChange(view) {
+      dispatch(changeView(view));
+    }
+  })
+)(Radium(DataProperties));

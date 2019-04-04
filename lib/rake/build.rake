@@ -7,11 +7,11 @@ namespace :build do
   desc 'Builds apps.'
   task :apps do
     Dir.chdir(apps_dir) do
-      # Only rebuild if apps contents have changed since last build.
+      # Only rebuild if any of the apps_build_trigger_paths have changed since last build.
       commit_hash = apps_dir('build/commit_hash')
-      if !RakeUtils.git_staged_changes?(apps_dir) &&
+      if !RakeUtils.git_staged_changes?(*apps_build_trigger_paths) &&
         File.exist?(commit_hash) &&
-        File.read(commit_hash) == RakeUtils.git_folder_hash(apps_dir)
+        File.read(commit_hash) == calculate_apps_commit_hash
 
         ChatClient.log '<b>apps</b> unchanged since last build, skipping.'
         next
@@ -26,7 +26,7 @@ namespace :build do
       ChatClient.log 'Building <b>apps</b>...'
       npm_target = (rack_env?(:development) || ENV['CI']) ? 'build' : 'build:dist'
       RakeUtils.system "npm run #{npm_target}"
-      File.write(commit_hash, RakeUtils.git_folder_hash(apps_dir))
+      File.write(commit_hash, calculate_apps_commit_hash)
     end
   end
 
@@ -96,8 +96,8 @@ namespace :build do
       end
 
       # Skip asset precompile in development where `config.assets.digest = false`.
-      # Also skip on Circle CI where we will precompile assets later, right before UI tests.
-      unless rack_env?(:development) || ENV['CIRCLECI']
+      # Also skip on CI services (e.g. Circle) where we will precompile assets later, right before UI tests.
+      unless rack_env?(:development) || ENV['CI']
         ChatClient.log 'Cleaning <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:clean'
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
@@ -150,4 +150,19 @@ end
 desc 'Builds everything.'
 task :build do
   ChatClient.wrap('build') {Rake::Task['build:all'].invoke}
+end
+
+# List of paths that, if changed, should trigger an apps build.
+# This contains the apps source itself and any other dependency that affects the apps build,
+# e.g. shared constants (which generate js apps code during apps/script/generateSharedConstants)
+def apps_build_trigger_paths
+  [
+    apps_dir,
+    shared_constants_file,
+    shared_constants_dir
+  ]
+end
+
+def calculate_apps_commit_hash
+  RakeUtils.git_folder_hash(*apps_build_trigger_paths)
 end

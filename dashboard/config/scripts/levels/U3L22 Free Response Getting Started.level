@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Permanent Data Storage: Getting Started",
-    "markdown_instructions": "In the previous lesson, you added a \"best score\" feature to your clicker game. It worked fine for multiple plays in one game-playing session. \n\nWhy doesn't it save your best score from one session to the next?\"\n",
+    "long_instructions": "In the previous lesson, you added a \"best score\" feature to your clicker game. It worked fine for multiple plays in one game-playing session. \n\nWhy doesn't it save your best score from one session to the next?\"\n",
     "skip_dialog": true,
     "skip_sound": true
   },

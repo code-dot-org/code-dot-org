@@ -6,47 +6,56 @@ ga:
       Loops: Lúba
       Functions: Feidhmeanna
       Color: Dath
-      Brushes: Brushes
+      Brushes: Scuaba
       Math: Matamaitic
       Logic: Loighic
       Variables: Athróga
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Number: Uimhir
+      String: Teaghrán
+      Image: Íomhá
+      Boolean: Luach Boole
       Conditionals: Coinníollacha
       Events: Teagmhais
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Cluichí/Scór
+      Comments: Nótaí
+      Category: Catagóir
+      Prebuilt: Réamhdhéanta
       Text: Téacs
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Picker: Roghnóir
+      Comment: Nóta
+      'Variables ': 'Athróga '
+      Default: Réamhshocrú
+      Behaviors: Iompar
+      Locations: Áiteanna
+      everythingelse: gachrudeile
+      World: Domhan
+      Sprites: Sprideanna
+      Location: Áit
+      numbers: uimhreacha
+      Numbers: Uimhreacha
+      Input: Ionchur
+      Dancers: Damhsóirí
+      Groups: Grúpaí
+      Advanced: Ardroghanna
       Start: Tosaigh
-      Groups: Groups
+      Music: Ceol
+      Dancing: Damhsa
+      Sprite: Sprid
+      Brush: Scuab
+      Make Sprite: Déan Sprid
+      Movement: Gluaiseacht
       Booleans: Luachanna Boole
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Feidhmeach
+      While Events: Teagmhais "chomh fada is"
+      Sprite Properties: Airíonna na Spride
+      Predefined: Réamhshainithe
       test: tástáil
-      test2: test2
-      Foo: Foo
+      test2: tástáil2
+      Use These Blocks: Úsáid na Blocanna seo
+      Do Not Use: Ná hÚsáid
+      Foo: Fú
       Name: Ainm
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: BLOCANNA NUA
+      'Functions ': 'Feidhmeanna '
+      Game/Score: Cluiche/Scór
       Function: Feidhm

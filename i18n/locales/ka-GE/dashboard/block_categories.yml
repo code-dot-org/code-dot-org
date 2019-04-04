@@ -5,47 +5,51 @@ ka:
       Loops: ციკლები
       Functions: ფუნქციები
       Color: ფერი
-      Brushes: Brushes
+      Brushes: ფუნჯები
       Math: მათემატიკა
       Logic: ლოგიკა
       Variables: ცვლადები
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Number: რიცხვი
+      String: სტრიქონი
+      Image: სურათი
+      Boolean: ბულის ცვლადი
       Conditionals: პირობითი ბრძანებები
       Events: მოვლენები
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: თამაშები/ქულა
+      Comments: კომენტარები
+      Category: კატეგორია
+      Prebuilt: წინასწარ ჩაშენებული
       Text: ტექსტი
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: შემომავალი ინფორმაცია
-      Default: Default
-      World: World
+      Picker: ამომრჩევი
+      Comment: კომენტარი
+      'Variables ': 'ცვლადები '
+      Default: ნაგულისხმევი
+      Behaviors: ქცევა
+      Locations: მდებარეობები
+      everythingelse: ყველაფერი სხვა
+      World: სამყარო
       Sprites: სპრაიტები
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Location: ადგილმდებარეობა
+      numbers: რიცხვები
+      Numbers: რიცხვები
+      Input: შემომავალი ინფორმაცია
+      Groups: ჯგუფები
+      Advanced: დამატებით
       Start: დაწყება
-      Groups: Groups
+      Music: მუსიკა
+      Dancing: ცეკვა
+      Sprite: სპრაიტი
+      Brush: ფუნჯი
+      Make Sprite: სპრაიტის შექმნა
+      Movement: მოძრაობა
       Booleans: ბულის ტიპის მონაცემები (ლოგიკური ოპერატორები)
-      Functional: Functional
-      Predefined: Predefined
+      Functional: ფუნქციები
+      Predefined: წინასწარ განსაზღვრული
       test: ტესტი
-      test2: test2
+      test2: ტესტი2
       Foo: Foo
       Name: სახელი
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: ახალი ბლოკები
+      'Functions ': 'ფუნქციები '
+      Game/Score: თამაში/ქულა
       Function: ფუნქცია

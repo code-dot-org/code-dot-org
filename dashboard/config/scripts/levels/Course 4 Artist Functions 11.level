@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Check out this code that draws a cube - can you move it into a function called \"Draw a Cube\"",
+    "short_instructions": "Check out this code that draws a cube - can you move it into a function called \"Draw a Cube\"",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

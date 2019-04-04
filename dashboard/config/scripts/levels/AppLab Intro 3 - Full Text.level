@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Set the `\"text\"` of this label to anything you want (for example `\"Hi there!\"`). Make sure you include the double-quotes `\"`. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/4e8549acbca3449cb336fe0ed495f8f3-image-1505878779849.gif)",
+    "long_instructions": "Set the `\"text\"` of this label to anything you want (for example `\"Hi there!\"`). Make sure you include the double-quotes `\"`. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/4e8549acbca3449cb336fe0ed495f8f3-image-1505878779849.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

@@ -74,15 +74,15 @@ module Pd::Payment
 
     def generate_organizer_report_line_item(with_payment = false)
       line_item = {
-        organizer_name: workshop.organizer.name,
-        organizer_id: workshop.organizer.id,
-        organizer_email: workshop.organizer.email,
+        organizer_name: workshop.organizer&.name,
+        organizer_id: workshop.organizer&.id,
+        organizer_email: workshop.organizer&.email,
         regional_partner_name: workshop.regional_partner.try(:name),
         workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
         on_map: workshop.on_map,
         funded: workshop.funding_summary,
         attendance_url: attendance_url,
-        facilitators: workshop.facilitators.map(&:name).join(', '),
+        facilitators: workshop.facilitators.pluck(:name).join(', '),
         num_facilitators: workshop.facilitators.count,
         workshop_id: workshop.id,
         workshop_name: workshop.friendly_name,

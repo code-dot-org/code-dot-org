@@ -84,6 +84,7 @@
   "blockTypeGlowstone": "glowstone",
   "blockTypeGrass": "damo",
   "blockTypeGravel": "graba",
+  "blockTypeIce": "ice",
   "blockTypeLava": "lava",
   "blockTypeLogAcacia": "trosong akasya",
   "blockTypeLogBirch": "trosong birch",

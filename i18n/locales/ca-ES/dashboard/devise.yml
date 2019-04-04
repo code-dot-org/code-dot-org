@@ -39,7 +39,6 @@ ca:
       update_needs_confirmation: "Has actualitzat el teu compte amb èxit, però tenim que verificar la teva nova adreça de correu electrònic. Si us plau, revisa el teu correu i clica en l'enllaç de confirmació per finalitzar la confirmació de la teva nova adreça de correu electrònic."
       updated: "Has actualitzat el teu compte correctament."
     sessions:
-      signed_in: ""
       signed_out: "Has tancat la teva sessió amb èxit."
     unlocks:
       send_instructions: "D'aquí uns minuts rebràs un email amb instruccions per desbloquejar el teu compte."
@@ -55,21 +54,8 @@ ca:
       not_saved:
         one: "1 error ha impedit que aquest %{resource} es guardàs:"
         other: "%{count} errors impedeixen aquest %{resource} sigui desat:"
-    invitations:
-      send_instructions: 'An invitation email has been sent to %{email}.'
-      invitation_token_invalid: 'The invitation token provided is not valid!'
-      updated: 'Your password was set successfully. You are now signed in.'
-      no_invitations_remaining: "No invitations remaining"
-      invitation_removed: 'Your invitation was removed.'
-      new:
-        header: "Send invitation"
-        submit_button: "Send an invitation"
-      edit:
-        header: "Set your password"
-        submit_button: "Set my password"
     mailer:
       invitation_instructions:
-        subject: 'Invitation instructions'
         hello: 'Hola %{email}'
         someone_invited_you: 'Algú t''ha convidat a %{url}, pots acceptar mitjançant el següent enllaç.'
         accept: 'Acceptar l'' invitació'

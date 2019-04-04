@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Вам потрібно створити танцюриста.",
+  "danceFeedbackNoDancers": "У вас немає танцюристів.",
+  "danceFeedbackNoBackground": "Вам потрібно додати фоновий ефект.",
+  "danceFeedbackTooManyDancers": "Обережно! Якщо ти внесеш блок `створити новий` всередину блоку `кожні два кроки`, можна створити багато танцюристів.",
+  "danceFeedbackUseSetSize": "Використай блок `set backup_dancer2 size`, щоб зробити цього танцівника меншим.",
+  "danceFeedbackUseSetTint": "Використай блок `set tint`, щоб змінити відтінок танцівника.",
+  "danceFeedbackUseStartMapping": "Спробуй додати блок<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> у свою програму.",
+  "danceFeedbackStartNewMove": "Ваш танцівник не зробив нового руху після четвертого кроку.",
+  "danceFeedbackNeedDifferentDance": "Потрібно використати інший танець.",
+  "danceFeedbackNeedEveryTwoMeasures": "Переконайся, що використовується блок `every two measures`",
+  "danceFeedbackNeedMakeANewDancer": "Використай блок `make new` для створення другого танцюриста.",
+  "measure": "Крок:"
+}

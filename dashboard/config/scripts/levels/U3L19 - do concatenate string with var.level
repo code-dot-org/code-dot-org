@@ -14,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "We've given you a piece of code from the previous screen.  Try changing the value assigned to foo to see the string change. \r\nDo this: \r\n1. Try changing the value assigned to foo to see the string change. \r\n2. By only modifying the lines of code that were given to you, try to get the output to say: “The value of foo is: 9.  And isn’t that fine.” \r\n",
+    "short_instructions": "We've given you a piece of code from the previous screen.  Try changing the value assigned to foo to see the string change. \r\nDo this: \r\n1. Try changing the value assigned to foo to see the string change. \r\n2. By only modifying the lines of code that were given to you, try to get the output to say: “The value of foo is: 9.  And isn’t that fine.” \r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

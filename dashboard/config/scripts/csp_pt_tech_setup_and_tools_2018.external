@@ -154,7 +154,7 @@ Students are required to make at least one video that is a "Screen capture" of t
 #### How To Make a Screencast
 
 If you have not made any screencapture videos in class to this point students may ask how to do it.
-You will need to use screen capture software.  Here are two good options.
+You will need to use 3rd party screen capture software. We recommend investigating options that will work for your school's software requirements. Here are two options:
     
   * Online/Web: [Screencast-o-matic](https://screencast-o-matic.com) (may require download depending on browser/plugins)
   * Windows / Mac: [Jing from Techsmith](https://www.techsmith.com/jing.html) (requires download)
@@ -167,4 +167,6 @@ teacher_markdown <<MARKDOWN
 
 * Here is the [AP Digital Portfolio: Teacher User Guide for AP Computer Science Principles](https://apcentral.collegeboard.org/pdf/computer-science-principles-digital-portfolio-teacher-guide.pdf)
 * You will need to follow these instructions to setup your class and to approve students
+
+* The Video screen capture requires using 3rd party software. We recommend investigating options that will work for your school's software requirements. 
 MARKDOWN

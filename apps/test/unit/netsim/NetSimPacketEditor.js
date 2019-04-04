@@ -6,7 +6,7 @@ var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var EncodingType = require('@cdo/apps/netsim/NetSimConstants').EncodingType;
 
-describe("NetSimPacketEditor", function () {
+describe('NetSimPacketEditor', function() {
   var editor, rootDiv;
 
   var alignDecimal = DataConverters.alignDecimal;
@@ -17,17 +17,17 @@ describe("NetSimPacketEditor", function () {
   var formatBinary = DataConverters.formatBinary;
   var formatHex = DataConverters.formatHex;
 
-  beforeEach(function () {
+  beforeEach(function() {
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     editor = new NetSimPacketEditor({
       packetSpec: NetSimGlobals.getLevelConfig().clientInitialPacketHeader,
-      contentChangeCallback: function () {}
+      contentChangeCallback: function() {}
     });
     rootDiv = editor.getRoot();
   });
 
-  it("only renders enabled encodings", function () {
-    var message = "test message";
+  it('only renders enabled encodings', function() {
+    var message = 'test message';
     var binaryMessage = DataConverters.asciiToBinary(message, 8);
     editor.message = binaryMessage;
 
@@ -48,12 +48,12 @@ describe("NetSimPacketEditor", function () {
     assert.equal(0, rootDiv.find('tr.a_and_b').length);
 
     editor.setEncodings([
-        EncodingType.ASCII,
-        EncodingType.DECIMAL,
-        EncodingType.HEXADECIMAL,
-        EncodingType.BINARY,
-        EncodingType.A_AND_B,
-      ]);
+      EncodingType.ASCII,
+      EncodingType.DECIMAL,
+      EncodingType.HEXADECIMAL,
+      EncodingType.BINARY,
+      EncodingType.A_AND_B
+    ]);
 
     assert.equal(1, rootDiv.find('tr.ascii').length);
     assert.equal(1, rootDiv.find('tr.decimal').length);
@@ -62,10 +62,21 @@ describe("NetSimPacketEditor", function () {
     assert.equal(1, rootDiv.find('tr.a_and_b').length);
 
     assert.equal(message, rootDiv.find('tr.ascii textarea.message').val());
-    assert.equal(formatBinary(binaryMessage, 8), rootDiv.find('tr.binary textarea.message').val());
-    assert.equal(alignDecimal(binaryToDecimal(binaryMessage, 8)), rootDiv.find('tr.decimal textarea.message').val());
-    assert.equal(formatHex(binaryToHex(binaryMessage), 8), rootDiv.find('tr.hexadecimal textarea.message').val());
-    assert.equal(formatAB(binaryToAB(binaryMessage), 8), rootDiv.find('tr.a_and_b textarea.message').val());
+    assert.equal(
+      formatBinary(binaryMessage, 8),
+      rootDiv.find('tr.binary textarea.message').val()
+    );
+    assert.equal(
+      alignDecimal(binaryToDecimal(binaryMessage, 8)),
+      rootDiv.find('tr.decimal textarea.message').val()
+    );
+    assert.equal(
+      formatHex(binaryToHex(binaryMessage), 8),
+      rootDiv.find('tr.hexadecimal textarea.message').val()
+    );
+    assert.equal(
+      formatAB(binaryToAB(binaryMessage), 8),
+      rootDiv.find('tr.a_and_b textarea.message').val()
+    );
   });
-
 });

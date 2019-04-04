@@ -10,7 +10,7 @@ class MediaProxyControllerTest < ActionController::TestCase
     content_types = [
       'image/bmp', 'image/x-windows-bmp', 'image/gif', 'image/jpeg',
       'image/png', 'image/svg+xml', 'audio/basic', 'audio/mid', 'audio/mpeg',
-      'audio/mp4', 'audio/ogg', 'audio/vnd.wav'
+      'audio/mp3', 'audio/mp4', 'audio/ogg', 'audio/vnd.wav'
     ]
 
     content_types.each do |content_type|

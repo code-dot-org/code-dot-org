@@ -1,0 +1,73 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "stopMapping",
+    "blockText": "{SPRITE} stops {PROPERTY} following {RANGE}",
+    "color": [
+      136,
+      0.84,
+      0.8
+    ],
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite",
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "size",
+            "\"scale\""
+          ],
+          [
+            "width",
+            "\"width\""
+          ],
+          [
+            "height",
+            "\"height\""
+          ],
+          [
+            "rotation",
+            "\"rotation\""
+          ],
+          [
+            "horizontal position",
+            "\"x\""
+          ],
+          [
+            "vertical position",
+            "\"y\""
+          ],
+          [
+            "movement direction",
+            "\"direction\""
+          ],
+          [
+            "tint",
+            "\"tint\""
+          ]
+        ]
+      },
+      {
+        "name": "RANGE",
+        "options": [
+          [
+            "bass",
+            "\"bass\""
+          ],
+          [
+            "mid",
+            "\"mid\""
+          ],
+          [
+            "treble",
+            "\"treble\""
+          ]
+        ]
+      }
+    ]
+  }
+}

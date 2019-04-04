@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Final writing prompt",
-    "markdown_instructions": "Respond to your teacher's prompt below",
+    "long_instructions": "Respond to your teacher's prompt below",
     "skip_dialog": true,
     "skip_sound": true
   },

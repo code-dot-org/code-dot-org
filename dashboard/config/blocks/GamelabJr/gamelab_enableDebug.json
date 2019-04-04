@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "Advanced",
   "config": {
     "func": "enableDebug",
     "blockText": "enable debugging"

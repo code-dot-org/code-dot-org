@@ -9,7 +9,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     @organizer_workshop = create :pd_workshop, organizer: @organizer, facilitators: [@facilitator]
     @organizer_workshop_enrollment = create :pd_enrollment, workshop: @organizer_workshop
 
-    @workshop = create :pd_workshop, organizer: @program_manager, facilitators: [@facilitator]
+    @workshop = create :pd_workshop, :with_codes_assigned, organizer: @program_manager, facilitators: [@facilitator], num_sessions: 1
     @enrollment = create :pd_enrollment, workshop: @workshop
 
     @unrelated_workshop = create :pd_workshop
@@ -18,6 +18,8 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
 
   CONTROLLER_PATH = 'api/v1/pd/workshop_enrollments'
 
+  RESPONSE_MESSAGES = Api::V1::Pd::WorkshopEnrollmentsController::RESPONSE_MESSAGES
+
   test 'routes' do
     assert_routing(
       {method: :get, path: "/api/v1/pd/workshops/#{@workshop.id}/enrollments"},
@@ -25,8 +27,23 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     )
 
     assert_routing(
+      {path: "/api/v1/pd/workshops/#{@workshop.id}/enrollments", method: :post},
+      {controller: CONTROLLER_PATH, action: 'create', workshop_id: @workshop.id.to_s}
+    )
+
+    assert_routing(
       {method: :delete, path: "/api/v1/pd/workshops/#{@workshop.id}/enrollments/#{@enrollment.id}"},
       {controller: CONTROLLER_PATH, action: 'destroy', workshop_id: @workshop.id.to_s, id: @enrollment.id.to_s}
+    )
+
+    assert_routing(
+      {method: :delete, path: "/api/v1/pd/enrollments/#{@enrollment.code}"},
+      {controller: CONTROLLER_PATH, action: 'cancel', enrollment_code: @enrollment.code.to_s}
+    )
+
+    assert_routing(
+      {method: :post, path: "/api/v1/pd/enrollment/#{@enrollment.id}/scholarship_info"},
+      {controller: CONTROLLER_PATH, action: 'update_scholarship_info', enrollment_id: @enrollment.id.to_s}
     )
   end
 
@@ -175,5 +192,179 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
       id: @unrelated_enrollment.id
     }
     assert_response :success
+  end
+
+  test 'cancelling an active enrollment deletes it and sends email' do
+    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).returns(stub(:deliver_now))
+    Pd::WorkshopMailer.expects(:organizer_cancel_receipt).returns(stub(:deliver_now))
+
+    assert_destroys Pd::Enrollment do
+      delete :cancel, params: {enrollment_code: @enrollment.code}
+      assert_response :success
+    end
+
+    assert @enrollment.reload.deleted?
+  end
+
+  test 'cancelling a deleted enrollment does nothing' do
+    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).never
+    Pd::WorkshopMailer.expects(:organizer_cancel_receipt).never
+
+    @enrollment.destroy
+    assert_does_not_destroy Pd::Enrollment do
+      delete :cancel, params: {enrollment_code: @enrollment.code}
+      assert_response :success
+    end
+  end
+
+  test 'enrollments can be created' do
+    assert_creates(Pd::Enrollment) do
+      post :create, params: {
+        workshop_id: @workshop.id,
+        school_info: school_info_params
+      }.merge(enrollment_test_params)
+      assert_response :success
+      assert_equal RESPONSE_MESSAGES[:SUCCESS], JSON.parse(@response.body)["workshop_enrollment_status"]
+    end
+    enrollment = Pd::Enrollment.last
+    refute_nil enrollment.code
+  end
+
+  test 'creating a duplicate enrollment sends \'duplicate\' workshop enrollment status' do
+    params = enrollment_test_params.merge(
+      {
+        first_name: @enrollment.first_name,
+        last_name: @enrollment.last_name,
+        email: @enrollment.email,
+        confirmation_email: @enrollment.email,
+      }
+    )
+    post :create, params: params.merge({workshop_id: @workshop.id})
+    assert_response 400
+    assert_equal RESPONSE_MESSAGES[:DUPLICATE], JSON.parse(@response.body)["workshop_enrollment_status"]
+  end
+
+  # TODO: remove this test when workshop_organizer is deprecated
+  test 'creating an enrollment with email match from organizer sends \'own\' workshop enrollment status' do
+    params = enrollment_test_params.merge(
+      {
+        full_name: @organizer.name,
+        email: @organizer.email,
+        confirmation_email: @organizer.email,
+      }
+    )
+    post :create, params: params.merge({workshop_id: @organizer_workshop.id})
+    assert_response 400
+    assert_equal RESPONSE_MESSAGES[:OWN], JSON.parse(@response.body)["workshop_enrollment_status"]
+  end
+
+  test 'creating an enrollment with email match from program manager organizer sends \'own\' workshop enrollment status' do
+    params = enrollment_test_params.merge(
+      {
+        full_name: @program_manager.name,
+        email: @program_manager.email,
+        confirmation_email: @program_manager.email,
+      }
+    )
+    post :create, params: params.merge({workshop_id: @workshop.id})
+    assert_response 400
+    assert_equal RESPONSE_MESSAGES[:OWN], JSON.parse(@response.body)["workshop_enrollment_status"]
+  end
+
+  test 'creating an enrollment with email match from facilitator sends \'own\' workshop enrollment status' do
+    params = enrollment_test_params.merge(
+      {
+        full_name: @facilitator.name,
+        email: @facilitator.email,
+        confirmation_email: @facilitator.email,
+      }
+    )
+    post :create, params: params.merge({workshop_id: @workshop.id})
+    assert_response 400
+    assert_equal RESPONSE_MESSAGES[:OWN], JSON.parse(@response.body)["workshop_enrollment_status"]
+  end
+
+  test 'creating an enrollment with errors sends \'error\' workshop enrollment status' do
+    params = enrollment_test_params.merge(
+      {
+        first_name: '',
+        confirmation_email: nil
+      }
+    )
+    post :create, params: {
+      workshop_id: @workshop.id,
+      pd_enrollment: params,
+      school_info: school_info_params
+    }
+    assert_response 400
+    assert_equal RESPONSE_MESSAGES[:ERROR], JSON.parse(@response.body)["workshop_enrollment_status"]
+  end
+
+  test 'creating an enrollment on an unknown workshop id returns 404' do
+    post :create, params: enrollment_test_params.merge({workshop_id: 'nonsense'})
+    assert_response 404
+  end
+
+  test 'admin can update scholarship info' do
+    workshop = create :pd_workshop, :local_summer_workshop_upcoming, organizer: @program_manager, facilitators: [@facilitator]
+    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    sign_in create(:admin)
+
+    assert_nil enrollment.scholarship_status
+    post :update_scholarship_info, params: {enrollment_id: enrollment.id, scholarship_status: Pd::ScholarshipInfoConstants::YES_OTHER}
+    assert_response 200
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, JSON.parse(@response.body)["scholarship_status"]
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
+  end
+
+  test 'program managers can update scholarship info' do
+    workshop = create :pd_workshop, :local_summer_workshop_upcoming, organizer: @program_manager, facilitators: [@facilitator]
+    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    sign_in @program_manager
+
+    assert_nil enrollment.scholarship_status
+    post :update_scholarship_info, params: {enrollment_id: enrollment.id, scholarship_status: Pd::ScholarshipInfoConstants::YES_OTHER}
+    assert_response 200
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, JSON.parse(@response.body)["scholarship_status"]
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
+  end
+
+  test 'facilitators cannot update scholarship info' do
+    workshop = create :pd_workshop, :local_summer_workshop_upcoming, facilitators: [@facilitator]
+    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    sign_in @facilitator
+
+    assert_nil enrollment.scholarship_status
+    post :update_scholarship_info, params: {enrollment_id: enrollment.id, scholarship_status: Pd::ScholarshipInfoConstants::YES_OTHER}
+    assert_response 403
+    assert_nil enrollment.scholarship_status
+  end
+
+  private
+
+  def enrollment_test_params(teacher = nil)
+    if teacher
+      first_name, last_name = teacher.name.split(' ', 2)
+      email = teacher.email
+    else
+      first_name = "Teacher#{SecureRandom.hex(4)}"
+      last_name = 'Codeberg'
+      email = "#{first_name}@example.net".downcase
+    end
+    {
+      first_name: first_name,
+      last_name: last_name,
+      email: email,
+      email_confirmation: email
+    }
+  end
+
+  def school_info_params
+    {
+      school_type: 'private',
+      school_state: 'WA',
+      school_name: 'A Seattle private school',
+      school_zip: '98102'
+    }
   end
 end

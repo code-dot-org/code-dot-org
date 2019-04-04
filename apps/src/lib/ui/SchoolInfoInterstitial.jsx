@@ -1,10 +1,13 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
 import BaseDialog from '../../templates/BaseDialog';
 import Button from '../../templates/Button';
-import SchoolInfoInputs, {SCHOOL_TYPES_HAVING_NCES_SEARCH} from '../../templates/SchoolInfoInputs';
+import SchoolInfoInputs, {
+  SCHOOL_TYPES_HAVING_NCES_SEARCH
+} from '../../templates/SchoolInfoInputs';
 import firehoseClient from '../util/firehose';
 
 const styles = {
@@ -14,7 +17,7 @@ const styles = {
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif",
+    fontFamily: "'Gotham 5r', sans-serif"
   },
   middle: {
     marginTop: 20,
@@ -26,15 +29,15 @@ const styles = {
     borderRightWidth: 0,
     borderLeftWidth: 0,
     borderStyle: 'solid',
-    borderColor: color.lighter_gray,
+    borderColor: color.lighter_gray
   },
   bottom: {
     display: 'flex',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   error: {
-    color: color.red,
-  },
+    color: color.red
+  }
 };
 
 const FIREHOSE_EVENTS = {
@@ -45,7 +48,7 @@ const FIREHOSE_EVENTS = {
   // School information saved successfully
   SAVE_SUCCESS: 'save_success',
   // School information failed to save
-  SAVE_FAILURE: 'save_failure',
+  SAVE_FAILURE: 'save_failure'
 };
 
 export default class SchoolInfoInterstitial extends React.Component {
@@ -65,10 +68,10 @@ export default class SchoolInfoInterstitial extends React.Component {
         country: PropTypes.string,
         school_type: PropTypes.string,
         school_name: PropTypes.string,
-        full_address: PropTypes.string,
-      }).isRequired,
+        full_address: PropTypes.string
+      }).isRequired
     }).isRequired,
-    onClose: PropTypes.func.isRequired,
+    onClose: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -81,15 +84,15 @@ export default class SchoolInfoInterstitial extends React.Component {
       initialCountry = 'United States';
     }
 
-    const initialNcesSchoolId = existingSchoolInfo.school_id ?
-      existingSchoolInfo.school_id :
-      (
-        existingSchoolInfo.country === 'United States'
-        &&
-        SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(existingSchoolInfo.school_type)
-        &&
+    const initialNcesSchoolId = existingSchoolInfo.school_id
+      ? existingSchoolInfo.school_id
+      : existingSchoolInfo.country === 'United States' &&
+        SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(
+          existingSchoolInfo.school_type
+        ) &&
         (existingSchoolInfo.school_name || existingSchoolInfo.full_address)
-      ) ? '-1' : '';
+      ? '-1'
+      : '';
 
     this.state = {
       country: initialCountry,
@@ -97,7 +100,7 @@ export default class SchoolInfoInterstitial extends React.Component {
       schoolName: existingSchoolInfo.school_name || '',
       schoolLocation: existingSchoolInfo.full_address || '',
       ncesSchoolId: initialNcesSchoolId,
-      showSchoolInfoUnknownError: false,
+      showSchoolInfoUnknownError: false
     };
   }
 
@@ -107,11 +110,12 @@ export default class SchoolInfoInterstitial extends React.Component {
       study_group: 'control',
       event: eventName,
       // Send "has NCES id" as data_int
-      data_int: (this.state.ncesSchoolId && this.state.ncesSchoolId !== '-1' ? 1 : 0),
+      data_int:
+        this.state.ncesSchoolId && this.state.ncesSchoolId !== '-1' ? 1 : 0,
       data_json: JSON.stringify({
         isComplete: SchoolInfoInterstitial.isSchoolInfoComplete(this.state),
         ...data
-      }),
+      })
     });
   }
 
@@ -124,7 +128,11 @@ export default class SchoolInfoInterstitial extends React.Component {
       return true;
     }
 
-    if (['homeschool', 'after school', 'organization', 'other'].includes(state.schoolType)) {
+    if (
+      ['homeschool', 'after school', 'organization', 'other'].includes(
+        state.schoolType
+      )
+    ) {
       return true;
     }
 
@@ -145,35 +153,36 @@ export default class SchoolInfoInterstitial extends React.Component {
     // backfilled by records on the server.
     if (ncesSchoolId && ncesSchoolId !== '-1') {
       return {
-        "user[school_info_attributes][school_id]": ncesSchoolId,
+        'user[school_info_attributes][school_id]': ncesSchoolId
       };
     }
 
     // If we don't know enough to pick other metadata, only send these.
     if (!country || !schoolType) {
       return {
-        "user[school_info_attributes][country]": country,
-        "user[school_info_attributes][school_type]": schoolType,
+        'user[school_info_attributes][country]': country,
+        'user[school_info_attributes][school_type]': schoolType
       };
     }
 
     // If an NCES type is selected but we don't know anything else, send a
     // blank NCES id to ensure we save the current input state.
     const isUS = country === 'United States';
-    const isNcesSchoolType = isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(schoolType);
+    const isNcesSchoolType =
+      isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(schoolType);
     if (isNcesSchoolType && ncesSchoolId === '') {
       return {
-        "user[school_info_attributes][country]": country,
-        "user[school_info_attributes][school_type]": schoolType,
-        "user[school_info_attributes][school_id]": ncesSchoolId,
+        'user[school_info_attributes][country]': country,
+        'user[school_info_attributes][school_type]': schoolType,
+        'user[school_info_attributes][school_id]': ncesSchoolId
       };
     }
 
     return {
-      "user[school_info_attributes][country]": country,
-      "user[school_info_attributes][school_type]": schoolType,
-      "user[school_info_attributes][school_name]": this.state.schoolName,
-      "user[school_info_attributes][full_address]": this.state.schoolLocation,
+      'user[school_info_attributes][country]': country,
+      'user[school_info_attributes][school_type]': schoolType,
+      'user[school_info_attributes][school_name]': this.state.schoolName,
+      'user[school_info_attributes][full_address]': this.state.schoolLocation
     };
   }
 
@@ -186,32 +195,34 @@ export default class SchoolInfoInterstitial extends React.Component {
     const {formUrl, authTokenName, authTokenValue} = this.props.scriptData;
     $.post({
       url: formUrl + '.json',
-      dataType: "json",
+      dataType: 'json',
       data: {
-        '_method': 'patch',
+        _method: 'patch',
         [authTokenName]: authTokenValue,
-        ...schoolData,
-      },
-    }).done(() => {
-      this.logEvent(FIREHOSE_EVENTS.SAVE_SUCCESS, {
-        attempt: this.state.showSchoolInfoUnknownError ? 2 : 1
-      });
-
-      this.props.onClose();
-    }).fail(() => {
-      this.logEvent(FIREHOSE_EVENTS.SAVE_FAILURE, {
-        attempt: this.state.showSchoolInfoUnknownError ? 2 : 1
-      });
-
-      if (!this.state.showSchoolInfoUnknownError) {
-        // First failure, display error message and give the teacher a chance
-        // to try again.
-        this.setState({showSchoolInfoUnknownError: true});
-      } else {
-        // We already failed once, let's not block the teacher any longer.
-        this.props.onClose();
+        ...schoolData
       }
-    });
+    })
+      .done(() => {
+        this.logEvent(FIREHOSE_EVENTS.SAVE_SUCCESS, {
+          attempt: this.state.showSchoolInfoUnknownError ? 2 : 1
+        });
+
+        this.props.onClose();
+      })
+      .fail(() => {
+        this.logEvent(FIREHOSE_EVENTS.SAVE_FAILURE, {
+          attempt: this.state.showSchoolInfoUnknownError ? 2 : 1
+        });
+
+        if (!this.state.showSchoolInfoUnknownError) {
+          // First failure, display error message and give the teacher a chance
+          // to try again.
+          this.setState({showSchoolInfoUnknownError: true});
+        } else {
+          // We already failed once, let's not block the teacher any longer.
+          this.props.onClose();
+        }
+      });
   };
 
   onCountryChange = (_, event) => {
@@ -219,7 +230,7 @@ export default class SchoolInfoInterstitial extends React.Component {
     this.setState({country: newCountry});
   };
 
-  onSchoolTypeChange = (event) => {
+  onSchoolTypeChange = event => {
     const newType = event ? event.target.value : '';
     this.setState({schoolType: newType});
   };
@@ -245,20 +256,16 @@ export default class SchoolInfoInterstitial extends React.Component {
         uncloseable
       >
         <div style={styles.container}>
-          <div style={styles.heading}>
-            {i18n.schoolInfoInterstitialTitle()}
-          </div>
+          <div style={styles.heading}>{i18n.schoolInfoInterstitialTitle()}</div>
           {this.state.showSchoolInfoUnknownError && (
             <p style={styles.error}>
               {i18n.schoolInfoInterstitialUnknownError()}
             </p>
           )}
           <div style={styles.middle}>
-            <p>
-              {i18n.schoolInfoInterstitialDescription()}
-            </p>
+            <p>{i18n.schoolInfoInterstitialDescription()}</p>
             <SchoolInfoInputs
-              ref={ref => this.schoolInfoInputs = ref}
+              ref={ref => (this.schoolInfoInputs = ref)}
               onCountryChange={this.onCountryChange}
               onSchoolTypeChange={this.onSchoolTypeChange}
               onSchoolChange={this.onSchoolChange}

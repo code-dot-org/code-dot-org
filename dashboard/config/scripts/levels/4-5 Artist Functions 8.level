@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "The \"draw a flower\" function has a parameter that allows you to set the stem height.  Set it to 200 and see what happens.",
+    "short_instructions": "The \"draw a flower\" function has a parameter that allows you to set the stem height.  Set it to 200 and see what happens.",
     "x": "200",
     "y": "350",
     "start_direction": "0",

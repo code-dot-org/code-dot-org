@@ -27,7 +27,7 @@
 // doesn't conflict with the footer and header that are still using
 // Bootstrap 2.2.3
 // TODO: Remove this once Dashboard is upgraded to Bootstrap 3
-#workshop-container,#application-container,#application-header {
+#workshop-container,#application-container,#application-header,#enroll-form {
   @import "bootstrap-sass/assets/stylesheets/bootstrap";
   @include buttons();
   @include user-selects(auto);
@@ -127,5 +127,23 @@ form .form-required-field {
     input[type="checkbox"] {
       margin: 0;
     }
+  }
+}
+
+.teacher-application-logged-out {
+  font-size: 14px;
+  width: 70%;
+  line-height: 1.5;
+
+  .paragraph {
+    margin-bottom: 15px;
+  }
+
+  #regional-partner-mini-contact-popup-link-container {
+    display: inline-block;
+    font-family: "Gotham 7r", sans-serif;
+    font-weight: normal;
+    color: #0094ca;
+    cursor: pointer;
   }
 }

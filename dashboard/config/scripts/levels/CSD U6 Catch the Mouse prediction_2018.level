@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 324,
   "properties": {
-    "markdown_instructions": "# Catch the Mouse\r\n\r\nThis is a clicker game, similar to the one that you built in the last lesson.\r\n\r\nLook at the code with your partner and answer the following question:\r\n\r\n* How many times do you need to click the mouse before the LED starts to blink?\r\n\r\nWrite your answer in the box below, then run the code and see what happens.",
+    "long_instructions": "# Catch the Mouse\r\n\r\nThis is a clicker game, similar to the one that you built in the last lesson.\r\n\r\nLook at the code with your partner and answer the following question:\r\n\r\n* How many times do you need to click the mouse before the LED starts to blink?\r\n\r\nWrite your answer in the box below, then run the code and see what happens.",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

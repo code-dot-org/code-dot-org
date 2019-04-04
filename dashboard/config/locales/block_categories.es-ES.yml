@@ -3,50 +3,57 @@ es:
   data:
     block_categories:
       Actions: Acciones
-      Loops: Bucles
-      Functions: Funciones
+      Loops: vuelta
+      Functions: funciones
       Color: Color
-      Brushes: Brushes
+      Brushes: Pinceles
       Math: Matemáticas
       Logic: Lógica
-      Variables: Variables
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Variables: variables
+      Number: Número
+      String: Cadena
+      Image: Imagen
+      Boolean: Booleano
       Conditionals: Condicionales
       Events: Eventos
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Juegos/Puntaje
+      Comments: Comentario
+      Category: Categoría
+      Prebuilt: Precompilado
       Text: Texto
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Picker: Seleccionador
+      Comment: Comentario
+      'Variables ': Variables
+      Default: Por defecto
+      Behaviors: Comportamientos
+      Locations: Ubicaciones
+      Bunny Game: Juego del conejo
+      everythingelse: todolodemás
+      World: Mundo
+      Location: Ubicación
+      numbers: Numeros
+      Numbers: Numeros
+      Dancers: Bailarines
+      Groups: Grupos
+      Advanced: Avanzado
       Start: Inicio
-      Groups: Groups
+      Music: Musica
+      Dancing: Bailando
+      Sprite: Sprite
+      Brush: Pincel
+      Make Sprite: Hacer sprite
+      Movement: Movimiento
       Booleans: Valores booleanos
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Funcional
+      While Events: Cuando Eventos
+      Sprite Properties: Propiedades de Sprites
+      Predefined: Predefinido
       test: prueba
       test2: test2
-      Foo: Foo
+      Use These Blocks: Use estos bloques
+      Do Not Use: No use
       Name: Nombre
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: NUEVOS BLOQUES
+      'Functions ': Funciones
+      Game/Score: Juego/Puntaje
       Function: Función

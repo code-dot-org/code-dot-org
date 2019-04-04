@@ -73,10 +73,10 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
       beforeEach(() => {
         jsInterpreter = {
           globalProperties: {},
-          createGlobalProperty: function (key, value) {
+          createGlobalProperty: function(key, value) {
             jsInterpreter.globalProperties[key] = value;
           },
-          addCustomMarshalObject: sinon.spy(),
+          addCustomMarshalObject: sinon.spy()
         };
 
         return board.connect();
@@ -109,13 +109,21 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
           'Accelerometer',
           'Animation',
           'Servo',
-          'TouchSensor',
+          'TouchSensor'
         ].forEach(constructor => {
           it(constructor, () => {
-            expect(jsInterpreter.globalProperties).to.have.ownProperty(constructor);
-            expect(jsInterpreter.globalProperties[constructor]).to.be.a('function');
-            const passedObjects = jsInterpreter.addCustomMarshalObject.args.map(call => call[0].instance);
-            expect(passedObjects).to.include(jsInterpreter.globalProperties[constructor]);
+            expect(jsInterpreter.globalProperties).to.have.ownProperty(
+              constructor
+            );
+            expect(jsInterpreter.globalProperties[constructor]).to.be.a(
+              'function'
+            );
+            const passedObjects = jsInterpreter.addCustomMarshalObject.args.map(
+              call => call[0].instance
+            );
+            expect(passedObjects).to.include(
+              jsInterpreter.globalProperties[constructor]
+            );
           });
         });
       });
@@ -126,13 +134,16 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
         });
 
         it(`${COMPONENT_COUNT} of them`, () => {
-          expect(Object.keys(jsInterpreter.globalProperties))
-              .to.have.length(CONSTRUCTOR_COUNT + COMPONENT_COUNT);
+          expect(Object.keys(jsInterpreter.globalProperties)).to.have.length(
+            CONSTRUCTOR_COUNT + COMPONENT_COUNT
+          );
         });
 
         describe('led', () => {
           function expectLedToHaveFunction(fnName) {
-            expect(jsInterpreter.globalProperties.led[fnName]).to.be.a('function');
+            expect(jsInterpreter.globalProperties.led[fnName]).to.be.a(
+              'function'
+            );
           }
 
           // Set of required functions derived from our dropletConfig
@@ -149,19 +160,32 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
           }
 
           it(`is an array of ${N_COLOR_LEDS} color led components`, () => {
-            expect(Array.isArray(jsInterpreter.globalProperties.colorLeds)).to.be.true;
-            expect(jsInterpreter.globalProperties.colorLeds).to.have.length(N_COLOR_LEDS);
+            expect(Array.isArray(jsInterpreter.globalProperties.colorLeds)).to
+              .be.true;
+            expect(jsInterpreter.globalProperties.colorLeds).to.have.length(
+              N_COLOR_LEDS
+            );
           });
 
           // Set of required functions derived from our dropletConfig
-          ['on', 'off', 'toggle', 'blink', 'stop', 'intensity', 'color'].forEach(fnName => {
+          [
+            'on',
+            'off',
+            'toggle',
+            'blink',
+            'stop',
+            'intensity',
+            'color'
+          ].forEach(fnName => {
             it(`${fnName}()`, () => expectEachColorLedToHaveFunction(fnName));
           });
         });
 
         describe('buzzer', () => {
           function expectBuzzerToHaveFunction(fnName) {
-            expect(jsInterpreter.globalProperties.buzzer[fnName]).to.be.a('function');
+            expect(jsInterpreter.globalProperties.buzzer[fnName]).to.be.a(
+              'function'
+            );
           }
 
           // Set of required functions derived from our dropletConfig
@@ -172,7 +196,9 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
 
         describe('toggleSwitch', () => {
           it('isOpen', () => {
-            expect(jsInterpreter.globalProperties.toggleSwitch.isOpen).to.be.a('boolean');
+            expect(jsInterpreter.globalProperties.toggleSwitch.isOpen).to.be.a(
+              'boolean'
+            );
           });
         });
 
@@ -231,8 +257,10 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
           });
 
           it('start()', () => expect(component.start).to.be.a('function'));
-          it('getOrientation()', () => expect(component.getOrientation).to.be.a('function'));
-          it('getAcceleration()', () => expect(component.getAcceleration).to.be.a('function'));
+          it('getOrientation()', () =>
+            expect(component.getOrientation).to.be.a('function'));
+          it('getAcceleration()', () =>
+            expect(component.getAcceleration).to.be.a('function'));
         });
 
         ['buttonL', 'buttonR'].forEach(button => {
@@ -243,7 +271,8 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
               component = jsInterpreter.globalProperties[button];
             });
 
-            it('isPressed', () => expect(component.isPressed).to.be.a('boolean'));
+            it('isPressed', () =>
+              expect(component.isPressed).to.be.a('boolean'));
             it('holdtime', () => expect(component.holdtime).to.be.a('number'));
           });
         });

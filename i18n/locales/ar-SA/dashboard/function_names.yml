@@ -2,295 +2,201 @@ ar:
   data:
     function_names:
       x: x
-      details: details
-      draw eyebrow: draw eyebrow
-      draw pupil: draw pupil
+      details: تفاصيل
+      draw eyebrow: ارسم حاجب العين
+      draw pupil: ارسم التلميذ
       draw a circle: رسم دائرة
-      draw a car: draw a car
-      draw_rect: draw_rect
-      draw square: draw square
-      jump to controller top left: jump to controller top left
-      jump to middle: jump to middle
-      draw a button: draw a button
-      draw cord: draw cord
-      draw R pad: draw R pad
-      draw left leg: draw left leg
-      draw right leg: draw right leg
-      draw body and arms: draw body and arms
-      draw a head: draw a head
-      draw sitting stick figure: draw sitting stick figure
-      draw head: draw head
-      draw arms: draw arms
-      jump to neck: jump to neck
-      draw O: draw O
-      draw D: draw D
-      draw E: draw E
-      draw ear stems: draw ear stems
-      big gear: big gear
-      small gear: small gear
+      draw a car: ارسم سيارة
+      draw_rect: ارسم_مستطيل
+      draw square: ارسم مربع
+      jump to controller top left: الانتقال إلى وحدة التحكم لأعلى اليسار
+      jump to middle: اقفز إلى الوسط
+      draw a button: ارسم زر
+      draw cord: ارسم حبل
+      draw left leg: ارسم الرجل اليسرى
+      draw right leg: ارسم الرجل اليمنى
+      draw body and arms: ارسم جسم وذراعين
+      draw a head: ارسم رأس
+      draw sitting stick figure: ارسم شكل عصا جالسة
+      draw head: ارسم رأس
+      draw arms: ارسم ذراعين
+      jump to neck: اقفز إلى الرقبة
+      draw O: ارسم حرف O
+      draw D: ارسم حرف D
+      draw E: ارسم حرف E
+      big gear: معدات كبيرة
+      small gear: معدات صغيرة
       draw a hexagon: رسم شكل سداسي
       draw a flower: رسم زهرة
       draw a square: رسم مربع
       draw a snowflake: رسم ندفة الثلج
-      draw 3 hexagons: draw 3 hexagons
-      draw 4 hexagons: draw 4 hexagons
-      draw 5 hexagons: draw 5 hexagons
-      get 2 nectar: get 2 nectar
-      collect purple nectar: collect purple nectar
-      get 5: get 5
-      move and get nectar: move and get nectar
-      move and get 4: move and get 4
-      get 7 nectar make 7 honey: get 7 nectar make 7 honey
-      get 7 make 7: get 7 make 7
-      get 7: get 7
-      move and get 3: move and get 3
+      draw 3 hexagons: ارسم ٣ أشكال سداسية
+      draw 4 hexagons: ارسم ٤ أشكال سداسية
+      draw 5 hexagons: ارسم ٥ أشكال سداسية
+      get 2 nectar: احصل على ٢ من الرحيق
+      collect purple nectar: اجمع الرحيق الأرجواني
+      get 5: احصل على ٥
+      move and get nectar: انتقل واحصل على رحيق
+      move and get 4: تحرك واحصل على ٤
+      get 7 nectar make 7 honey: احصل على ٧ من الرحيق واصنع ٧ من العسل
+      get 7 make 7: احصل على ٧ اصنع ٧
+      get 7: احصل على ٧
+      move and get 3: تحرك واحصل على ٣
       draw a tree: رسم شجرة
-      draw triangle: draw triangle
-      draw circle: draw circle
-      draw goal: draw goal
-      graph: graph
-      draw waves: draw waves
-      draw a wave: draw a wave
-      draw a small triangle: draw a small triangle
-      draw a medium triangle: draw a medium triangle
-      draw a large triangle: draw a large triangle
-      draw a big triangle: draw a big triangle
+      draw triangle: ارسم مثلث
+      draw circle: ارسم دائرة
+      draw goal: ارسم هدف
+      graph: رسم بياني
+      draw waves: ارسم موجات
+      draw a wave: ارسم موجة
+      draw a small triangle: ارسم مثلث صغير
+      draw a medium triangle: ارسم مثلث متوسط
+      draw a large triangle: ارسم مثلث كبير
+      draw a big triangle: ارسم مثلث كبير
       draw a triangle: رسم مثلث
       draw a house: رسم منزل
-      check purple flower: check purple flower
-      check flower make honey: check flower make honey
-      get nectar or make honey: get nectar or make honey
-      make 3 honey: make 3 honey
-      get 5 nectar: get 5 nectar
-      make all honey: make all honey
+      check purple flower: تحقق من الزهور الأرجوانية
+      check flower make honey: تحقق من الزهرة واصنع العسل
+      get nectar or make honey: احصل على الرحيق أو اصنع العسل
+      make 3 honey: اصنع ٣ من العسل
+      get 5 nectar: احصل على ٥ من الرحيق
+      make all honey: اصنع كل العسل
       draw a star: رسم نجمة
-      game has been won: game has been won
-      draw: draw
-      draw bit: draw bit
-      draw a polygon: draw a polygon
-      draw a shape: draw a shape
-      get 2 and make 2: get 2 and make 2
-      draw a pinwheel: draw a pinwheel
-      drawTree: drawTree
-      drawHouse: drawHouse
-      drawBranch: drawBranch
-      drawSky: drawSky
-      fillScreen: fillScreen
-      drawHouseLayer: drawHouseLayer
-      swap: swap
-      dropR: dropR
-      grabL: grabL
-      dropL: dropL
-      init: init
-      grabR: grabR
+      game has been won: قد فاز أحد باللعبة
+      draw: تعادل
+      draw bit: ارسم بت
+      draw a polygon: ارسم مضلع
+      draw a shape: ارسم شكل
+      get 2 and make 2: احصل على ٢ واصنع ٢
+      draw a pinwheel: ارسم دولاب الهواء
+      drawTree: ارسم_شجرة
+      drawHouse: ارسم_منزل
+      drawBranch: ارسم_فرع
+      drawSky: ارسم_سماء
+      fillScreen: املأ_الشاشة
+      drawHouseLayer: ارسم_طبقة_منزل
+      swap: تبديل
+      dropR: اترك_R
+      grabL: امسك_L
+      dropL: اترك_L
+      init: التهيئة
+      grabR: امسك_R
       do something: القيام بشيء ما
-      filter_pixel: filter_pixel
-      draw_image: draw_image
-      witch ending: witch ending
-      story: story
-      starting path: starting path
-      jump: إقفز
-      patrol: patrol
-      fill in bg: fill in bg
-      draw grid1: draw grid1
-      draw lines: draw lines
-      Draw a Square Line: Draw a Square Line
-      Draw a triangle: Draw a triangle
-      Draw a Cube: Draw a Cube
-      draw a cube: draw a cube
-      draw an octagon 20: draw an octagon 20
-      Draw a square: Draw a square
-      cube: cube
-      do something2: do something2
-      jump upper right: jump upper right
-      draw a line of  squares: draw a line of  squares
-      draw a line of squares: draw a line of squares
-      Draw Square Line: Draw Square Line
-      jump upper left: jump upper left
-      draw a line of octagons: draw a line of octagons
-      draw a square line: draw a square line
-      Draw a Square: Draw a Square
-      draw a square 20: draw a square 20
-      draw a square 40: draw a square 40
-      draw a triangle with length: draw a triangle with length
-      Draw a Triangle with length: Draw a Triangle with length
-      draw a triangle wioth length: draw a triangle wioth length
-      draw a sqaure: draw a sqaure
-      triangle: triangle
-      draw a spiral shape: draw a spiral shape
-      get 3 nectar: get 3 nectar
-      get many nectar: get many nectar
-      get nectar make honey: get nectar make honey
-      draw an octagon: draw an octagon
-      draw octagons: draw octagons
-      shift down: shift down
-      level_up: level_up
-      score_points: score_points
+      draw_image: ارسم_صورة
+      story: قصة
+      starting path: طريق البداية
+      jump: قفز
+      patrol: دورية
+      draw grid1: ارسم شبكة١
+      draw lines: ارسم خطوط
+      Draw a Square Line: ارسم خط مربع
+      Draw a triangle: ارسم مثلث
+      Draw a Cube: ارسم مكعب
+      draw a cube: ارسم مكعب
+      draw an octagon 20: ارسم ثماني ٢٠
+      Draw a square: ارسم مربع
+      cube: مكعب
+      do something2: افعل شيئاً٢
+      jump upper right: القفز أعلى اليمين
+      draw a line of  squares: ارسم خط من المربعات
+      draw a line of squares: ارسم خط من المربعات
+      Draw Square Line: ارسم خط مربع
+      jump upper left: القفز أعلى اليسار
+      draw a line of octagons: ارسم خط من الأشكال الثمانية
+      draw a square line: ارسم خط مربع
+      Draw a Square: ارسم مربع
+      draw a square 20: ارسم مربع ٢٠
+      draw a square 40: ارسم مربع ٤٠
+      draw a triangle with length: ارسم مثلث بطول
+      Draw a Triangle with length: ارسم مثلث بطول
+      draw a sqaure: ارسم مربع
+      triangle: مثلث
+      draw a spiral shape: ارسم شكل حلزوني
+      get 3 nectar: احصل على ٣ من الرحيق
+      get many nectar: احصل على العديد من الرحيق
+      get nectar make honey: احصل على الرحيق اصنع العسل
+      draw an octagon: ارسم شكل ثماني
+      draw octagons: ارسم أشكال ثمانية
+      shift down: إزاحة إلى الأسفل
+      score_points: سجل_نقاط
       set score: تعيين النتيجة
-      draw a line of hexagons: draw a line of hexagons
-      shift down/forward: shift down/forward
-      shift down/backward: shift down/backward
+      draw a line of hexagons: ارسم خط من الأشكال السداسية
+      shift down/forward: الانتقال إلى الأسفل/إلى الأمام
+      shift down/backward: الانتقال إلى الأسفل/إلى الخلف
       get nectar: الحصول على الرحيق
-      make honey up and over: make honey up and over
-      setActors: setActors
-      popCharacter: popCharacter
-      patrol left right: patrol left right
-      empty function: empty function
-      check guess: check guess
-      Jump: Jump
+      setActors: ضع_ممثلين
+      check guess: تحقق من تخمين
+      Jump: اقفز
       test: اختبار
-      build bridge: build bridge
-      run right: run right
-      spin right: spin right
-      grow forever: grow forever
-      draw grass: draw grass
-      sun: sun
-      draw windows: draw windows
-      square: square
-      draw a door: draw a door
-      rectangle: rectangle
+      build bridge: ابن جسراً
+      run right: اركض إلى اليمين
+      grow forever: النمو للأبد
+      draw grass: ارسم عشب
+      sun: شمس
+      draw windows: ارسم نوافذ
+      square: مربع
+      draw a door: ارسم باب
+      rectangle: مستطيل
       diamond: ماسة
-      window: window
-      n-sided shape: n-sided shape
-      draw a loop: draw a loop
-      draw spiral circle: draw spiral circle
-      draw roof: draw roof
-      draw rectangle: draw rectangle
+      window: نافذة
       move: تحريك
-      function 1: function 1
-      function 2: function 2
-      turn corner: turn corner
-      destroy and move: destroy and move
-      clear path: clear path
-      clear cacti: clear cacti
-      place and move: place and move
-      cover lava: cover lava
-      build short bridge: build short bridge
-      build long bridge: build long bridge
-      create trail: create trail
-      move and fill: move and fill
-      fix right corner: fix right corner
-      fix left corner: fix left corner
-      make segment: make segment
-      fix long path: fix long path
-      fix short path: fix short path
-      place 3 tracks: place 3 tracks
-      clear right corner: clear right corner
-      clear left corner: clear left corner
-      draw a spiral edge: draw a spiral edge
-      draw a pentagon: draw a pentagon
-      artist jump around: artist jump around
-      Draw lenses: Draw lenses
-      25 pixel square: 25 pixel square
-      draw eye: draw eye
-      Make a Dot: Make a Dot
-      bubble sort: bubble sort
-      move right: تحريك إلى اليمين
-      say number: say number
+      bubble sort: الترتيب الفقاعي
+      move right: تحريك لليمين
+      say number: افرض رقم
       move up: تحريك لأعلى
       move down: تحريك لأسفل
-      move left: تحريك إلى اليسار
-      kill alien: kill alien
-      click: click
-      Send Actor 1 to opposite: Send Actor 1 to opposite
-      blink actor 1: blink actor 1
-      my function: my function
-      Squares row: Squares row
-      draw first part of heart: draw first part of heart
-      check win: check win
-      curvy corner: curvy corner
-      make triangle: make triangle
-      my behavior: my behavior
-      '"simple" solution': '"simple" solution'
-      potential solution: potential solution
-      my design: my design
-      get 3 nectar or honey: get 3 nectar or honey
-      move and collect: move and collect
-      check nectar or honey: check nectar or honey
-      row of nectar: row of nectar
-      rowOfNectar: rowOfNectar
-      move and check: move and check
-      win game: win game
-      lose game: lose game
-      keep playing: keep playing
-      Ask a question: Ask a question
-      draw pinwheel: draw pinwheel
-      draw background: draw background
-      move and get nectar with counter: move and get nectar with counter
-      pick row: pick row
-      draw flame: draw flame
-      draw fire: draw fire
-      booster: booster
-      draw line of triangles: draw line of triangles
-      draw a window: draw a window
-      stop_everything: stop_everything
-      draw a plane of squares: draw a plane of squares
-      draw hexagon: draw hexagon
-      draw line of hexagons: draw line of hexagons
-      staggered squares: staggered squares
-      draw line of polygons: draw line of polygons
-      draw polygon: draw polygon
-      honey nectar: honey nectar
-      move and make honey: move and make honey
-      collect all nectar: collect all nectar
-      get all nectar: get all nectar
-      get pumpkin: get pumpkin
-      harvest: harvest
-      get corn and come back: get corn and come back
-      pick along path: pick along path
-      check square for corn: check square for corn
-      get all pumpkins: get all pumpkins
-      pumpkin square: pumpkin square
-      navigate: navigate
-      check and pick: check and pick
-      find pumpkin: find pumpkin
-      wander path: wander path
-      get produce: get produce
-      check for corn: check for corn
-      corn rectangle: corn rectangle
-      lettuce stairs: lettuce stairs
-      pick veggie: pick veggie
-      corn and pumpkin: corn and pumpkin
-      go get pumpkins: go get pumpkins
-      go get lettuce: go get lettuce
-      garden square: garden square
-      get corn come back: get corn come back
-      checker: checker
-      Make gingham: Make gingham
-      black outline: black outline
-      draw a square2: draw a square2
-      filled square: filled square
-      get only nectar: get only nectar
-      only make honey: only make honey
-      collect row: collect row
-      rowOfNectarOrHoney: rowOfNectarOrHoney
-      collect stairs: collect stairs
-      collect: جمع
-      move and increment: move and increment
-      do something3: do something3
-      Robin Fly: Robin Fly
-      Robot Jump: Robot Jump
-      Center Dragon: Center Dragon
-      Dragon Fly: Dragon Fly
-      Knight Surge: Knight Surge
-      Stop Dragon: Stop Dragon
-      Knight Jump: Knight Jump
-      robotThinking: robotThinking
-      fill area with color: fill area with color
-      draw a line of triangles: draw a line of triangles
-      check flower: check flower
-      get next row: get next row
-      check space: check space
-      follow path: follow path
-      physics: physics
-      initialization: initialization
-      Make Actor 1 Jump: Make Actor 1 Jump
-      Choose Number: Choose Number
-      Move Bird: Move Bird
+      move left: تحرك لليسار
+      click: اضغط
+      draw first part of heart: ارسم أول جزء من القلب
+      check win: التحقق من الفوز
+      make triangle: اصنع مثلث
+      my behavior: تصرفي
+      '"simple" solution': 'حل "بسيط"'
+      potential solution: حل محتمل
+      my design: تصميمي
+      get 3 nectar or honey: احصل على ٣ من الرحيق أو عسل
+      move and collect: تحرك واجمع
+      check nectar or honey: تحقق من الرحيق أو العسل
+      row of nectar: صف من الرحيق
+      rowOfNectar: سطر_من_الرحيق
+      move and check: تحرك وتأكد
+      win game: الفوز باللعبة
+      lose game: الخسارة باللعبة
+      keep playing: استمر باللعب
+      Ask a question: اسأل سؤال
+      draw pinwheel: ارسم دولاب الهواء
+      draw background: ارسم خلفية
+      move and get nectar with counter: انتقل واحصل على الرحيق مع العداد
+      pick row: اختر سطر
+      draw flame: ارسم شعلة
+      draw fire: ارسم نار
+      booster: الداعم
+      draw line of triangles: ارسم سطر من المثلثات
+      draw a window: ارسم نافذة
+      stop_everything: توقف_كل_شيء
+      lose: اخسر
+      draw a plane of squares: ارسم سطح من المربعات
+      draw hexagon: ارسم شكل سداسي
+      draw line of hexagons: ارسم خط من الأشكال السداسية
+      draw line of polygons: ارسم خط من المضلعات
+      draw polygon: ارسم مضلع
+      honey nectar: رحيق العسل
+      move and make honey: تحرك واصنع عسل
+      collect all nectar: اجمع كل الرحيق
+      get all nectar: احصل على كل الرحيق
+      get pumpkin: احصل على يقطين
+      harvest: المحصول
+      get corn and come back: احصل على ذرة وارجع
+      check square for corn: تفقد المربع من الذرة
+      get all pumpkins: احصل على كل اليقطين
+      collect: اجمع
+      Make Actor 1 Jump: اجعل ممثل ١ يقفز
+      Choose Number: اختر رقم
+      Move Bird: حرك الطائر
       turn left: اتجه إلى اليسار
       move forward: تحريك إلى الأمام
       turn right: اتجه إلى اليمين
-      drawDot: drawDot
-      draw a rectangle: draw a rectangle
-      Which Course for My Students?: Which Course for My Students?
-      draw a heart: draw a heart
+      drawDot: ارسم_نقطة
+      draw a rectangle: ارسم مستطيلاً
+      Which Course for My Students?: أي دورة لطلابي؟
+      draw a heart: ارسم قلباً

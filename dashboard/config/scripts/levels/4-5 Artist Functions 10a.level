@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Put this code into the 'draw a snowflake' function and replace the 50 with the parameter 'size'. The function is already called on to make a snowflake that is 100 pixels.",
+    "short_instructions": "Put this code into the 'draw a snowflake' function and replace the 50 with the parameter 'size'. The function is already called on to make a snowflake that is 100 pixels.",
     "x": "200",
     "y": "200",
     "start_direction": "0",

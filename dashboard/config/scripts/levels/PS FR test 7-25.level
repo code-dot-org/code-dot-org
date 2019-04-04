@@ -5,14 +5,14 @@
   "level_num": "custom",
   "user_id": 225,
   "properties": {
-    "instructions": "Here are your instructions for this free response.  ",
+    "short_instructions": "Here are your instructions for this free response.  ",
     "submittable": "false",
     "title": "Here is a title",
     "allow_user_uploads": "false",
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "Here is *some* **markdown**"
+    "long_instructions": "Here is *some* **markdown**"
   },
   "published": true,
   "notes": "",

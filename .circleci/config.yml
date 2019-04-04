@@ -8,9 +8,18 @@ experimental:
 version: 2
 jobs:
   build:
+    # No Circle builds on pipeline branches because we depend on
+    # our own infrastructure for these parts of our deploy process.
+    branches:
+      ignore:
+        - production
+        - test
+        - levelbuilder
+        - /dtp_candidate_.*/
+        - /dtl_candidate_.*/
     parallelism: 2
     docker:
-      - image: wjordan/code-dot-org:0.5
+      - image: jmkulwik/code-dot-org:0.7
         environment:
           RAILS_ENV: test
           RACK_ENV: test
@@ -90,6 +99,8 @@ jobs:
             bundler_use_sudo: false
             properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
             applitools_eyes_api_key: $APPLITOOLS_KEY
+            cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
+            cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
             saucelabs_username: $SAUCE_USERNAME
             saucelabs_authkey: $SAUCE_ACCESS_KEY
             ignore_eyes_mismatches: true
@@ -107,6 +118,7 @@ jobs:
             dashboard_enable_pegasus: true
             dashboard_workers: 5
             skip_seed_all: true
+            google_maps_api_key: boguskey
             " >> locals.yml
 
       - run:
@@ -200,10 +212,6 @@ jobs:
       - store_artifacts:
           path: /home/circleci/project/artifacts
           destination: artifacts
-
-      - store_artifacts:
-          path: /home/circleci/project/apps/coverage
-          destination: coverage
 
       - store_artifacts:
           path: /home/circleci/project/apps/log

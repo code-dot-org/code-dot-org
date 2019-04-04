@@ -1,9 +1,9 @@
-import { expect } from '../../../util/configuredChai';
-import { parseElement } from '@cdo/apps/xml';
-import { convertBlocksXml } from '@cdo/apps/craft/code-connection/utils';
+import {expect} from '../../../util/configuredChai';
+import {parseElement} from '@cdo/apps/xml';
+import {convertBlocksXml} from '@cdo/apps/craft/code-connection/utils';
 
-const normalizeWhitespace = function (xmlString) {
-  return xmlString.replace(/\n\s*/g, "\n");
+const normalizeWhitespace = function(xmlString) {
+  return xmlString.replace(/\n\s*/g, '\n');
 };
 
 describe('convertBlocksXml', () => {
@@ -20,7 +20,7 @@ describe('convertBlocksXml', () => {
       `<xml>
         <block type="craft_destroyBlock">
         </block>
-      </xml>`,
+      </xml>`
     ];
 
     const expected = [
@@ -38,11 +38,13 @@ describe('convertBlocksXml', () => {
         <block type="craft_destroy">
           <title name="DIR">forward</title>
         </block>
-      </xml>`,
+      </xml>`
     ];
 
     sources.forEach((source, i) => {
-      expect(normalizeWhitespace(convertBlocksXml(source))).to.equal(normalizeWhitespace(expected[i]));
+      expect(normalizeWhitespace(convertBlocksXml(source))).to.equal(
+        normalizeWhitespace(expected[i])
+      );
     });
   });
 
@@ -51,15 +53,10 @@ describe('convertBlocksXml', () => {
       'dirt', // unconverted
       'oreCoal', // coal_ore
       'logAcacia', // log2,0
-      'farmlandWet', // no code connection block, defaults to "dirt"
+      'farmlandWet' // no code connection block, defaults to "dirt"
     ];
 
-    const expected = [
-      'dirt',
-      'coal_ore',
-      'log2,0',
-      'dirt',
-    ];
+    const expected = ['dirt', 'coal_ore', 'log2,0', 'dirt'];
 
     blocks.forEach((block, i) => {
       const xml = `
@@ -75,7 +72,7 @@ describe('convertBlocksXml', () => {
       const titles = result.getElementsByTagName('title');
       let resultingBlock;
       for (let i = 0; i < titles.length; i++) {
-        if (titles[i].getAttribute("name") === "BLOCK") {
+        if (titles[i].getAttribute('name') === 'BLOCK') {
           resultingBlock = titles[i];
         }
       }
@@ -86,13 +83,13 @@ describe('convertBlocksXml', () => {
 
   it('can convert placeBlock blockTypes to numeric slot ids', () => {
     const blocksToExpected = {
-      "bricks": "1",
-      "logAcacia": "7",
-      "wool_blue": "22",
-      "nonExistantBlock": "1" // default
+      bricks: '1',
+      logAcacia: '7',
+      wool_blue: '22',
+      nonExistantBlock: '1' // default
     };
 
-    Object.keys(blocksToExpected).forEach((block) => {
+    Object.keys(blocksToExpected).forEach(block => {
       const expected = blocksToExpected[block];
       const xml = `
         <xml>
@@ -107,7 +104,7 @@ describe('convertBlocksXml', () => {
       const titles = result.getElementsByTagName('title');
       let resultingBlock;
       for (let i = 0; i < titles.length; i++) {
-        if (titles[i].getAttribute("name") === "NUM") {
+        if (titles[i].getAttribute('name') === 'NUM') {
           resultingBlock = titles[i];
         }
       }
@@ -133,7 +130,7 @@ describe('convertBlocksXml', () => {
       const titles = result.getElementsByTagName('title');
       let resultingBlock;
       for (let i = 0; i < titles.length; i++) {
-        if (titles[i].getAttribute("name") === "DIR") {
+        if (titles[i].getAttribute('name') === 'DIR') {
           resultingBlock = titles[i];
         }
       }

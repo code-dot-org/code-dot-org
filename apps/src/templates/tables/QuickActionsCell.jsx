@@ -1,9 +1,11 @@
-import React, {Component, PropTypes} from 'react';
-import color from "../../util/color";
-import PopUpMenu from "@cdo/apps/lib/ui/PopUpMenu";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import color from '../../util/color';
+import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import styleConstants from '../../styleConstants';
 import throttle from 'lodash/debounce';
 import FontAwesome from '../FontAwesome';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 export const QuickActionsCellType = {
   header: 'header',
@@ -16,19 +18,19 @@ const styles = {
     paddingRight: 5,
     paddingTop: 4,
     paddingBottom: 4,
-    cursor: 'pointer',
+    cursor: 'pointer'
   },
   actionButton: {
     [QuickActionsCellType.body]: {
       border: '1px solid ' + color.white,
       borderRadius: 5,
       color: color.darker_gray,
-      margin: 3,
+      margin: 3
     },
     [QuickActionsCellType.header]: {
       fontSize: 20,
       lineHeight: '15px',
-      color: color.darker_gray,
+      color: color.darker_gray
     }
   },
   hoverFocus: {
@@ -36,18 +38,22 @@ const styles = {
       backgroundColor: color.lighter_gray,
       border: '1px solid ' + color.light_gray,
       borderRadius: 5,
-      color: color.white,
-    },
-  },
+      color: color.white
+    }
+  }
 };
 
 export default class QuickActionsCell extends Component {
   static propTypes = {
-    children: PropTypes.oneOfType([
-      PropTypes.node,
-      PropTypes.array
-    ]).isRequired,
-    type: PropTypes.oneOf(Object.keys(QuickActionsCellType))
+    children: PropTypes.oneOfType([PropTypes.node, PropTypes.array]).isRequired,
+    type: PropTypes.oneOf(Object.keys(QuickActionsCellType)),
+    experimentDetails: PropTypes.shape({
+      study: PropTypes.string,
+      study_group: PropTypes.string,
+      event: PropTypes.string,
+      user_id: PropTypes.number,
+      data_json: PropTypes.string
+    })
   };
 
   static defaultProps = {
@@ -59,19 +65,22 @@ export default class QuickActionsCell extends Component {
     canOpen: true,
     menuTop: 0, // location of dropdown menu
     menuLeft: 0,
-    currWindowWidth: window.innerWidth, // used to calculate location of menu on resize
+    currWindowWidth: window.innerWidth // used to calculate location of menu on resize
   };
 
   // Menu open
   open = () => {
     this.updateMenuLocation();
-    window.addEventListener("resize", throttle(this.updateMenuLocation, 50));
+    window.addEventListener('resize', throttle(this.updateMenuLocation, 50));
     this.setState({open: true, canOpen: false});
+    if (this.props.experimentDetails) {
+      firehoseClient.putRecord(this.props.experimentDetails);
+    }
   };
 
   // Menu closed
   close = () => {
-    window.removeEventListener("resize", throttle(this.updateMenuLocation, 50));
+    window.removeEventListener('resize', throttle(this.updateMenuLocation, 50));
     this.setState({open: false});
   };
 
@@ -80,21 +89,29 @@ export default class QuickActionsCell extends Component {
     resetPortalState();
     this.setState({
       open: false,
-      canOpen: true});
+      canOpen: true
+    });
   };
 
   updateMenuLocation = () => {
     const rect = this.icon.getBoundingClientRect();
     const windowWidth = window.innerWidth;
-    if (windowWidth > styleConstants['content-width']) { // Accounts for resizing when page is not scrollable
+    if (windowWidth > styleConstants['content-width']) {
+      // Accounts for resizing when page is not scrollable
       this.setState({
         menuTop: rect.bottom + window.pageYOffset,
-        menuLeft: rect.left - rect.width - (windowWidth - this.state.currWindowWidth)/2,
-        currWindowWidth : window.innerWidth});
-    } else { // Accounts for scrolling or resizing when scrollable
+        menuLeft:
+          rect.left -
+          rect.width -
+          (windowWidth - this.state.currWindowWidth) / 2,
+        currWindowWidth: window.innerWidth
+      });
+    } else {
+      // Accounts for scrolling or resizing when scrollable
       this.setState({
         menuTop: rect.bottom + window.pageYOffset,
-        menuLeft: rect.left - rect.width + window.pageXOffset});
+        menuLeft: rect.left - rect.width + window.pageXOffset
+      });
     }
   };
 
@@ -107,11 +124,12 @@ export default class QuickActionsCell extends Component {
       body: 'chevron-down'
     };
 
-    const styleByType = type === QuickActionsCellType.header ?
-      styles.actionButton["header"] :
-      this.state.open ?
-        styles.hoverFocus["body"] :
-        styles.actionButton["body"];
+    const styleByType =
+      type === QuickActionsCellType.header
+        ? styles.actionButton['header']
+        : this.state.open
+        ? styles.hoverFocus['body']
+        : styles.actionButton['body'];
 
     const iconStyle = {
       ...styles.icon,
@@ -119,12 +137,12 @@ export default class QuickActionsCell extends Component {
     };
 
     return (
-      <span ref={span => this.icon = span}>
+      <span ref={span => (this.icon = span)}>
         <FontAwesome
           icon={icons[type]}
           style={iconStyle}
           onClick={this.state.canOpen ? this.open : undefined}
-          className="ui-test-section-dropdown"
+          className="ui-test-section-dropdown ui-projects-table-dropdown"
         />
         <PopUpMenu
           targetPoint={targetPoint}

@@ -7,7 +7,7 @@ theme: responsive
 In addition to our in-person [professional development programs](/educate/professional-development) for Elementary, Middle and High School teachers, Code.org is pleased to offer free, self-paced online courses for teachers who wish to implement computer science curriculum in their classrooms. Below is a list of our current course offerings, which are available free of charge to any educator with a Code Studio account world wide.
 
 ## Teaching Computer Science Fundamentals
-[Teaching Computer Science Fundamentals](https://studio.code.org/s/K5-OnlinePD) is intended as an introduction to computer science fundamentals and the [Code.org K-5 resources](/educate/k5) for teachers. Through reading, viewing videos, completing interactive puzzles and reflecting on your learning, you'll develop your own understanding while preparing to teach computer science in your classroom.
+[Teaching Computer Science Fundamentals](<%= CDO.studio_url('/s/K5-OnlinePD') %>) is intended as an introduction to computer science fundamentals and the [Code.org K-5 resources](/educate/k5) for teachers. Through reading, viewing videos, completing interactive puzzles and reflecting on your learning, you'll develop your own understanding while preparing to teach computer science in your classroom.
 
 
 **Learning Objectives**
@@ -25,8 +25,7 @@ Through completing this online course, participants will:
 <br/>
 No previous experience with coding or computer science education is assumed. This is a beginner's course.
 
-[<button class="teacher-button">Try now</button>](https://studio.code.org/s/K5-OnlinePD)
+[<button class="teacher-button">Try now</button>](<%= CDO.studio_url('/s/K5-OnlinePD') %>)
 
 ## More online courses coming soon!
 In the meantime, check out [all of our professional development offerings](/educate/professional-development).
-

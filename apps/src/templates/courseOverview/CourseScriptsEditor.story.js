@@ -9,40 +9,32 @@ const styles = {
     color: '#555',
     border: '1px solid #ccc',
     borderRadius: 4
-  },
+  }
 };
 
-const scriptNames = [
-  'Hour of Code',
-  'course1',
-  'course2',
-  'csp1',
-  'csp2'
-];
+const scriptNames = ['Hour of Code', 'course1', 'course2', 'csp1', 'csp2'];
 
 export default storybook => {
-  storybook
-    .storiesOf('CourseScriptsEditor', module)
-    .addStoryTable([
-      {
-        name: 'no selected scripts',
-        story: () => (
-          <CourseScriptsEditor
-            inputStyle={styles.input}
-            scriptsInCourse={[]}
-            scriptNames={scriptNames}
-          />
-        )
-      },
-      {
-        name: 'one selected script',
-        story: () => (
-          <CourseScriptsEditor
-            inputStyle={styles.input}
-            scriptsInCourse={[scriptNames[1]]}
-            scriptNames={scriptNames}
-          />
-        )
-      }
-    ]);
+  storybook.storiesOf('CourseScriptsEditor', module).addStoryTable([
+    {
+      name: 'no selected scripts',
+      story: () => (
+        <CourseScriptsEditor
+          inputStyle={styles.input}
+          scriptsInCourse={[]}
+          scriptNames={scriptNames}
+        />
+      )
+    },
+    {
+      name: 'one selected script',
+      story: () => (
+        <CourseScriptsEditor
+          inputStyle={styles.input}
+          scriptsInCourse={[scriptNames[1]]}
+          scriptNames={scriptNames}
+        />
+      )
+    }
+  ]);
 };

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "This \"draw a hexagon\" function uses the \"draw a triangle\" function. Complete the hexagon function. (Hint: A hexagon has 6 sides, each 100 pixels long)",
+    "short_instructions": "This \"draw a hexagon\" function uses the \"draw a triangle\" function. Complete the hexagon function. (Hint: A hexagon has 6 sides, each 100 pixels long)",
     "x": "200",
     "y": "200",
     "start_direction": "180",

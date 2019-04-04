@@ -1,0 +1,431 @@
+---
+gl:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      Dancelab_changeMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_doMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': aleatorio
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': aleatorio
+      Dancelab_randomColor:
+        text: cor aleatoria
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': arriba
+            '"left"': esquerda
+            '"down"': abaixo
+            '"right"': dereita
+            '"space"': espazo
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': cando
+            '"while"': mentras
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': verdadeiro
+            'false': falso
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': cando
+            '"while"': mentras
+          KEY:
+            '"up"': arriba
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': aleatorio
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": aleatorio
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': dereita
+            '"left"': esquerda
+      gamelab_randColor:
+        text: cor aleatoria
+      gamelab_randomColor:
+        text: cor aleatoria
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': aleatorio
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': cando
+            '"while"': mentras
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': dereita
+            '"left"': esquerda
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": arriba
+            "'down'": abaixo
+            "'left'": esquerda
+            "'right'": dereita
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_randomColor:
+        text: cor aleatoria
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': dereita
+            '"left"': esquerda
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': frecha cara arriba
+            '"down"': frecha cara abaixo
+            '"left"': frecha esquerda
+            '"right"': frecha dereita
+            '"w"': O
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': frecha cara arriba
+            '"down"': frecha cara abaixo
+            '"left"': frecha esquerda
+            '"right"': frecha dereita
+            '"w"': O
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': frecha cara arriba
+            '"down"': frecha cara abaixo
+            '"left"': frecha esquerda
+            '"right"': frecha dereita
+      RyanLab_moveForward:
+        text: avance
+      RyanLab_turnLeft:
+        text: vire á esquerda
+      RyanLab_turnRight:
+        text: vire á dereita
+      aalab_changePropByFlexible:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': cando
+            '"while"': mentras
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': cando
+            '"while"': mentras
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': cando
+            '"while"': mentras
+          KEY:
+            '"up"': arriba
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': verdadeiro
+            '"false"': falso
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': mostrar
+            '"hide"': ocultar
+      binary_move:
+        options:
+          DIR:
+            '"up"': arriba
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": diante
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": area
+            "'planksOak'": táboas de carballo
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": area
+      craft_moveForward:
+        text: avance
+      craft_placeTorch:
+        text: coloque a antorcha

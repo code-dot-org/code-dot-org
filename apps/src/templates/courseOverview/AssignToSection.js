@@ -1,16 +1,22 @@
-import React, { Component, PropTypes } from 'react';
+import React, {Component} from 'react';
 import Radium from 'radium';
+import {connect} from 'react-redux';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ConfirmAssignment from './ConfirmAssignment';
+import {
+  isScriptHiddenForSection,
+  updateHiddenScript
+} from '@cdo/apps/code-studio/hiddenStageRedux';
 
 const styles = {
   main: {
-    display: 'inline-block',
+    display: 'inline-block'
   }
 };
 
@@ -24,10 +30,14 @@ class AssignToSection extends Component {
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
     assignmentName: PropTypes.string.isRequired,
-    sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-    })).isRequired,
+    sectionsInfo: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired
+      })
+    ).isRequired,
+    hiddenStageState: PropTypes.object,
+    updateHiddenScript: PropTypes.func.isRequired
   };
 
   state = {
@@ -47,26 +57,30 @@ class AssignToSection extends Component {
   };
 
   updateCourse = () => {
-    const section = this.props.sectionsInfo[this.state.sectionIndexToAssign];
+    const {sectionsInfo, updateHiddenScript, scriptId} = this.props;
+    const section = sectionsInfo[this.state.sectionIndexToAssign];
     $.ajax({
       url: `/dashboardapi/sections/${section.id}`,
       method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({
         course_id: this.props.courseId,
-        script_id: this.props.scriptId,
-      }),
-    }).done(result => {
-      this.setState({
-        sectionIndexToAssign: null
+        script_id: this.props.scriptId
+      })
+    })
+      .done(result => {
+        updateHiddenScript(section.id, scriptId, false);
+        this.setState({
+          sectionIndexToAssign: null
+        });
+      })
+      .fail((jqXhr, status) => {
+        this.collapseDropdown();
+        this.setState({
+          sectionIndexToAssign: null,
+          errorString: i18n.unexpectedError()
+        });
       });
-    }).fail((jqXhr, status) => {
-      this.collapseDropdown();
-      this.setState({
-        sectionIndexToAssign: null,
-        errorString: i18n.unexpectedError()
-      });
-    });
   };
 
   acknowledgeError = () => {
@@ -74,33 +88,44 @@ class AssignToSection extends Component {
   };
 
   render() {
-    const { courseId, scriptId, assignmentName, sectionsInfo } = this.props;
-    const { sectionIndexToAssign, errorString } = this.state;
+    const {
+      courseId,
+      scriptId,
+      assignmentName,
+      sectionsInfo,
+      hiddenStageState
+    } = this.props;
+    const {sectionIndexToAssign, errorString} = this.state;
     const section = sectionsInfo[sectionIndexToAssign];
     const queryParams = queryString.stringify({courseId, scriptId});
+    const isHiddenFromSection =
+      section &&
+      hiddenStageState &&
+      isScriptHiddenForSection(hiddenStageState, section.id, scriptId);
 
     return (
       <div style={styles.main}>
         <DropdownButton
-          text={(courseId && scriptId) ? i18n.assignUnit() : i18n.assignCourse()}
+          text={courseId && scriptId ? i18n.assignUnit() : i18n.assignCourse()}
           color={Button.ButtonColor.orange}
         >
-          {[].concat(
-            <a
-              key={-1}
-              href={`/home?${queryParams}`}
-            >
-              {i18n.newSectionEllipsis()}
-            </a>
-          ).concat(sectionsInfo.map((section, index) => (
-            <a
-              key={index}
-              data-section-index={index}
-              onClick={this.onClickCourse}
-            >
-              {section.name}
-            </a>
-          )))}
+          {[]
+            .concat(
+              <a key={-1} href={`/home?${queryParams}`}>
+                {i18n.newSectionEllipsis()}
+              </a>
+            )
+            .concat(
+              sectionsInfo.map((section, index) => (
+                <a
+                  key={index}
+                  data-section-index={index}
+                  onClick={this.onClickCourse}
+                >
+                  {section.name}
+                </a>
+              ))
+            )}
         </DropdownButton>
         {sectionIndexToAssign !== null && (
           <ConfirmAssignment
@@ -108,13 +133,11 @@ class AssignToSection extends Component {
             assignmentName={assignmentName}
             onClose={this.onCloseDialog}
             onConfirm={this.updateCourse}
+            isHiddenFromSection={isHiddenFromSection}
           />
         )}
         {errorString && (
-          <BaseDialog
-            isOpen={true}
-            handleClose={this.acknowledgeError}
-          >
+          <BaseDialog isOpen={true} handleClose={this.acknowledgeError}>
             {errorString}
           </BaseDialog>
         )}
@@ -123,4 +146,13 @@ class AssignToSection extends Component {
   }
 }
 
-export default Radium(AssignToSection);
+export const UnconnectedAssignToSection = Radium(AssignToSection);
+
+export default connect(
+  state => ({
+    hiddenStageState: state.hiddenStage
+  }),
+  {
+    updateHiddenScript
+  }
+)(UnconnectedAssignToSection);

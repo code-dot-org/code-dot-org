@@ -1,47 +1,31 @@
 name 'OPD-K5 Stage6Go'
 skip_dialog true
 markdown <<MARKDOWN
-# Functions > Reflection
+# Functions > Unplugged lessons
 
-In this stage, we explored how functions can make you a faster and better programmer by allowing you to reuse segments of your code. In the next stage, we’ll look at the core concept of **events** and put your coding skills to the test.  
+Programmers are always looking for ways to make their code more efficient. One way that they do that is through **functions**, which allow them to reuse segments of code
 
-**Take a moment now to review how functions are introduced in the Code.org curriculum.** As you explore the resources below, consider how you might implement the suggested activities in your classroom.
+**1. Review "[Functions: Songwriting](https://curriculum.code.org/csf-18/coursee/14/)" Lesson Plan from Course E.**
+<br/>
+Course E is meant for students in Grade 4. Functions are not covered in Courses A-D. 
 
----
+<br/>
 
-## Unplugged Lesson Plans
-
-**1. Review "Functions:Songwriting" Lesson Plan:** [Course D](https://levelbuilder.code.org/curriculum/coursee/6/Teacher)
-<br/><br/>
-
-**2. Watch the student video: Functions:Songwriting**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5iDCKkI6y2Y?ecver=1" frameborder="0" allowfullscreen></iframe>
-
+**2. Watch the student video: Functions: Songwriting**
+<br/>
+This is a video that you would show your students to help introduce the concept of functions and kick off the unplugged lesson.  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5iDCKkI6y2Y?ecver=1" frameborder="0" allowfullscreen></iframe><br/>
 [Can't see the video? Click here](http://videos.code.org/2014/C3-songwriting-with-parameters.mp4)
 
-<br/><br/>
+<br/>
 
-**3. Watch a teacher model this lesson: "Functions:Songwriting"**
+**3. Watch a teacher model this lesson: "Functions: Songwriting"**
+<br/>
+This video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QuIMLel1mmw?ecver=1" frameborder="0" allowfullscreen></iframe>
-
-<br/><br/>
-
-**4. Review other unplugged activities for teaching functions:** [Unplugged Activities](https://code.org/curriculum/unplugged)
-
-## Code Studio Activities
-
-Explore more online stages from Course E:
-
-- [Lesson 2](https://studio.code.org/s/courseE/stage/2/puzzle/1)
-- [Lesson 3](https://studio.code.org/s/courseE/stage/3/puzzle/1)
-- [Lesson 5](https://studio.code.org/s/courseE/stage/5/puzzle/1)
-- [Lesson 7](https://studio.code.org/s/courseE/stage/7/puzzle/1)
-- [Lesson 8](https://studio.code.org/s/courseE/stage/8/puzzle/1)
-- [Lesson 9](https://studio.code.org/s/courseE/stage/9/puzzle/1)
-- [Lesson 10](https://studio.code.org/s/courseE/stage/10/puzzle/1)
-- [Lesson 11](https://studio.code.org/s/courseE/stage/11/puzzle/1)
+[Can't see the video? Click here](https://videos.code.org/levelbuilder/unplugged-lessoninaction-songwritingwithfunctions-mp4.mp4)
+<br/>
 
 ---
 

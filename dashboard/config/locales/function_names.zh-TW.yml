@@ -3,11 +3,11 @@ zh-TW:
   data:
     function_names:
       x: x
-      details: 詳細資訊
-      draw eyebrow: 畫睫毛
+      details: details
+      draw eyebrow: draw eyebrow
       draw pupil: draw pupil
       draw a circle: 畫個圓形
-      draw a car: 畫一輛車
+      draw a car: draw a car
       draw_rect: draw_rect
       draw square: draw square
       jump to controller top left: jump to controller top left
@@ -29,10 +29,10 @@ zh-TW:
       draw ear stems: draw ear stems
       big gear: big gear
       small gear: small gear
-      draw a hexagon: 畫個六邊形
-      draw a flower: 畫個花朵
-      draw a square: 畫個正方形
-      draw a snowflake: 畫個雪花
+      draw a hexagon: draw a hexagon
+      draw a flower: draw a flower
+      draw a square: 畫個方形
+      draw a snowflake: draw a snowflake
       draw 3 hexagons: draw 3 hexagons
       draw 4 hexagons: draw 4 hexagons
       draw 5 hexagons: draw 5 hexagons
@@ -45,7 +45,7 @@ zh-TW:
       get 7 make 7: get 7 make 7
       get 7: get 7
       move and get 3: move and get 3
-      draw a tree: 畫棵樹木
+      draw a tree: draw a tree
       draw triangle: draw triangle
       draw circle: draw circle
       draw goal: draw goal
@@ -64,14 +64,14 @@ zh-TW:
       make 3 honey: make 3 honey
       get 5 nectar: get 5 nectar
       make all honey: make all honey
-      draw a star: 畫顆星星
+      draw a star: 畫個星形
       game has been won: game has been won
       draw: draw
       draw bit: draw bit
       draw a polygon: draw a polygon
-      draw a shape: draw a shape
+      draw a shape: 畫個形狀
       get 2 and make 2: get 2 and make 2
-      draw a pinwheel: draw a pinwheel
+      draw a pinwheel: 畫個風車
       drawTree: drawTree
       drawHouse: drawHouse
       drawBranch: drawBranch
@@ -84,13 +84,14 @@ zh-TW:
       dropL: dropL
       init: init
       grabR: grabR
-      do something: 函式名稱
+      do something: do something
       filter_pixel: filter_pixel
       draw_image: draw_image
+      checkSimulationEnd: checkSimulationEnd
       witch ending: witch ending
       story: story
       starting path: starting path
-      jump: 跳躍
+      jump: jump
       patrol: patrol
       fill in bg: fill in bg
       draw grid1: draw grid1
@@ -127,11 +128,11 @@ zh-TW:
       shift down: shift down
       level_up: level_up
       score_points: score_points
-      set score: 設置得分
+      set score: 得分 文字設為
       draw a line of hexagons: draw a line of hexagons
       shift down/forward: shift down/forward
       shift down/backward: shift down/backward
-      get nectar: 採集花蜜
+      get nectar: get nectar
       make honey up and over: make honey up and over
       setActors: setActors
       popCharacter: popCharacter
@@ -139,7 +140,7 @@ zh-TW:
       empty function: empty function
       check guess: check guess
       Jump: Jump
-      test: 測試
+      test: test
       build bridge: build bridge
       run right: run right
       spin right: spin right
@@ -150,17 +151,16 @@ zh-TW:
       square: square
       draw a door: draw a door
       rectangle: rectangle
-      diamond: 鑽石
+      diamond: diamond
       window: window
-      n-sided shape: n-sided shape
+      n-sided shape: window
       draw a loop: draw a loop
       draw spiral circle: draw spiral circle
       draw roof: draw roof
-      draw rectangle: draw rectangle
-      move: 移動
+      draw rectangle: draw roof
+      move: move
       function 1: function 1
       function 2: function 2
-      turn corner: turn corner
       destroy and move: destroy and move
       clear path: clear path
       clear cacti: clear cacti
@@ -173,6 +173,7 @@ zh-TW:
       fix right corner: fix right corner
       fix left corner: fix left corner
       make segment: make segment
+      turn corner: turn corner
       fix long path: fix long path
       fix short path: fix short path
       place 3 tracks: place 3 tracks
@@ -186,11 +187,11 @@ zh-TW:
       draw eye: draw eye
       Make a Dot: Make a Dot
       bubble sort: bubble sort
-      move right: 移動-向右
+      move right: move right
       say number: say number
-      move up: 移動-向上
-      move down: 移動-向下
-      move left: 移動-向左
+      move up: move up
+      move down: move down
+      move left: move left
       kill alien: kill alien
       click: click
       Send Actor 1 to opposite: Send Actor 1 to opposite
@@ -202,8 +203,8 @@ zh-TW:
       curvy corner: curvy corner
       make triangle: make triangle
       my behavior: my behavior
-      '"simple" solution': '"simple" solution'
-      potential solution: potential solution
+      '"simple" solution': my behavior
+      potential solution: '"simple" solution'
       my design: my design
       get 3 nectar or honey: get 3 nectar or honey
       move and collect: move and collect
@@ -225,6 +226,7 @@ zh-TW:
       draw line of triangles: draw line of triangles
       draw a window: draw a window
       stop_everything: stop_everything
+      lose: lose
       draw a plane of squares: draw a plane of squares
       draw hexagon: draw hexagon
       draw line of hexagons: draw line of hexagons
@@ -252,11 +254,11 @@ zh-TW:
       lettuce stairs: lettuce stairs
       pick veggie: pick veggie
       corn and pumpkin: corn and pumpkin
-      go get pumpkins: go get pumpkins
-      go get lettuce: go get lettuce
+      go get pumpkins: corn and pumpkin
+      go get lettuce: go get pumpkins
       garden square: garden square
       get corn come back: get corn come back
-      checker: checker
+      checker: get corn come back
       Make gingham: Make gingham
       black outline: black outline
       draw a square2: draw a square2
@@ -266,7 +268,7 @@ zh-TW:
       collect row: collect row
       rowOfNectarOrHoney: rowOfNectarOrHoney
       collect stairs: collect stairs
-      collect: 收集
+      collect: collect
       move and increment: move and increment
       do something3: do something3
       Robin Fly: Robin Fly
@@ -288,9 +290,9 @@ zh-TW:
       Make Actor 1 Jump: Make Actor 1 Jump
       Choose Number: Choose Number
       Move Bird: Move Bird
-      turn left: 轉向-左方
-      move forward: 移動-向前
-      turn right: 轉向-右方
+      turn left: turn left
+      move forward: move forward
+      turn right: turn right
       drawDot: drawDot
       draw a rectangle: draw a rectangle
       Which Course for My Students?: Which Course for My Students?

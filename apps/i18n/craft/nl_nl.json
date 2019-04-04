@@ -84,6 +84,7 @@
   "blockTypeGlowstone": "gloeisteen",
   "blockTypeGrass": "gras",
   "blockTypeGravel": "grind",
+  "blockTypeIce": "ijs",
   "blockTypeLava": "lava",
   "blockTypeLogAcacia": "acaciahout",
   "blockTypeLogBirch": "berkenhout",

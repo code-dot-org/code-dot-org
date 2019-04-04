@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Free-Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n\r\nNeed a hint? Click here.",
+    "short_instructions": "Free-Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n\r\nNeed a hint? Click here.",
     "x": "30",
     "y": "50",
     "start_direction": "345",
@@ -20,7 +20,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "<br/><br/>\r\n<img src=\"https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png\" width=\"250px\"/>  \r\n<br/><br/>\r\n**Free-Play Inspiration:** You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.",
+    "long_instructions": "<br/><br/>\r\n<img src=\"https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png\" width=\"250px\"/>  \r\n<br/><br/>\r\n**Free-Play Inspiration:** You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

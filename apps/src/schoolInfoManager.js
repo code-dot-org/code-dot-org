@@ -1,7 +1,6 @@
 import $ from 'jquery';
 
 export default function SchoolInfoManager(existingOptions) {
-
   var districtListFirstLoad = true;
 
   var districtElement = $('#school-district-id');
@@ -14,7 +13,9 @@ export default function SchoolInfoManager(existingOptions) {
 
   function setupDistrictDropdown(stateCode) {
     show('#school-district');
-    $('#school-district-other').prop('checked', false).change();
+    $('#school-district-other')
+      .prop('checked', false)
+      .change();
     var selectize = districtElement[0].selectize;
     if (selectize) {
       selectize.clear();
@@ -24,27 +25,27 @@ export default function SchoolInfoManager(existingOptions) {
     selectize = districtElement.selectize({
       maxItems: 1,
       sortField: [{field: 'text', direction: 'asc'}],
-      onChange: function () {
+      onChange: function() {
         var districtId = districtElement[0].selectize.getValue();
         if (districtId) {
           setupSchoolDropdown(districtId, $('#school-type').val());
         }
       },
-      onDropdownOpen: scrollToBottom,
+      onDropdownOpen: scrollToBottom
     });
 
-    districtElement[0].selectize.load(function (callback) {
+    districtElement[0].selectize.load(function(callback) {
       // Scroll down to show the loading spinner at just the right time.
       // onInitialize is too early, and onLoad is too late.
       scrollToBottom();
       $.ajax({
-        url: "/dashboardapi/v1/school-districts/" + stateCode,
+        url: '/dashboardapi/v1/school-districts/' + stateCode,
         type: 'GET',
-        error: function () {
+        error: function() {
           callback();
           districtListFirstLoad = false;
         },
-        success: function (response) {
+        success: function(response) {
           var districts = [];
           for (var i = 0; i < response.length; i++) {
             var entry = response[i];
@@ -55,8 +56,14 @@ export default function SchoolInfoManager(existingOptions) {
           // Only do this first time we do a load of this dropdown content.
           // The assumption is that if we had a valid school_district_id then
           // we would hit this codepath immediately after page load.
-          if (districtListFirstLoad && existingOptions && existingOptions.school_district_id) {
-            $('#school-district-id')[0].selectize.setValue(existingOptions.school_district_id);
+          if (
+            districtListFirstLoad &&
+            existingOptions &&
+            existingOptions.school_district_id
+          ) {
+            $('#school-district-id')[0].selectize.setValue(
+              existingOptions.school_district_id
+            );
           }
           districtListFirstLoad = false;
         }
@@ -83,7 +90,9 @@ export default function SchoolInfoManager(existingOptions) {
   function setupSchoolDropdown(districtCode, schoolType) {
     show('#school');
     // hides school name and zip
-    $('#school-other').prop('checked', false).change();
+    $('#school-other')
+      .prop('checked', false)
+      .change();
     var selectize = schoolElement[0].selectize;
     if (selectize) {
       selectize.clear();
@@ -93,21 +102,21 @@ export default function SchoolInfoManager(existingOptions) {
     selectize = schoolElement.selectize({
       maxItems: 1,
       sortField: [{field: 'text', direction: 'asc'}],
-      onDropdownOpen: scrollToBottom,
+      onDropdownOpen: scrollToBottom
     });
 
-    schoolElement[0].selectize.load(function (callback) {
+    schoolElement[0].selectize.load(function(callback) {
       // Scroll down to show the loading spinner at just the right time.
       // onInitialize is too early, and onLoad is too late.
       scrollToBottom();
       $.ajax({
-        url: "/dashboardapi/v1/schools/" + districtCode + "/" + schoolType,
+        url: '/dashboardapi/v1/schools/' + districtCode + '/' + schoolType,
         type: 'GET',
-        error: function () {
+        error: function() {
           callback();
           schoolListFirstLoad = false;
         },
-        success: function (response) {
+        success: function(response) {
           var schools = [];
           for (var i = 0; i < response.length; i++) {
             var entry = response[i];
@@ -126,15 +135,21 @@ export default function SchoolInfoManager(existingOptions) {
             // Try to set these fields again in case they only recently became visible.
 
             if (existingOptions.school_other) {
-              $('#school-other').prop('checked', true).change();
+              $('#school-other')
+                .prop('checked', true)
+                .change();
             }
 
             if (existingOptions.school_name) {
-              $('#school-name').val(existingOptions.school_name).change();
+              $('#school-name')
+                .val(existingOptions.school_name)
+                .change();
             }
 
             if (existingOptions.zip) {
-              $('#school-zipcode').val(existingOptions.zip).change();
+              $('#school-zipcode')
+                .val(existingOptions.zip)
+                .change();
             }
           }
           schoolListFirstLoad = false;
@@ -142,7 +157,9 @@ export default function SchoolInfoManager(existingOptions) {
           // Some districts have only charter or only public schools in them. Hide the
           // dropdown and show a warning if there are no schools of the selected type.
           if (schools.length === 0) {
-            $('#school-other').prop('checked', true).change();
+            $('#school-other')
+              .prop('checked', true)
+              .change();
             closestFormGroupOrItemBlock('#school').hide();
             $('#no-schools-warning').show();
           }
@@ -165,16 +182,16 @@ export default function SchoolInfoManager(existingOptions) {
 
   function clearAndHideDistrict() {
     enableDistrictDropdown(false);
-    $("#school-district-other").prop('checked', false);
-    $("#school-district-name").val("");
+    $('#school-district-other').prop('checked', false);
+    $('#school-district-name').val('');
     closestFormGroupOrItemBlock('#school-district').hide();
     closestFormGroupOrItemBlock('#school-district-name').hide();
   }
 
   function clearAndHideSchool() {
     enableSchoolDropdown(false);
-    $("#school-other").prop('checked', false);
-    $("#school-name").val("");
+    $('#school-other').prop('checked', false);
+    $('#school-name').val('');
     closestFormGroupOrItemBlock('#school').hide();
     $('#no-schools-warning').hide();
     closestFormGroupOrItemBlock('#school-name').hide();
@@ -221,8 +238,8 @@ export default function SchoolInfoManager(existingOptions) {
     closestFormGroupOrItemBlock(selector).hide();
   }
 
-  $('#school-country').change(function () {
-    $("input[type=submit]").prop("disabled", false);
+  $('#school-country').change(function() {
+    $('input[type=submit]').prop('disabled', false);
     if ($(this).val() === 'US') {
       clearAndHide('#school-name');
       clearAndHide('#school-address');
@@ -231,7 +248,7 @@ export default function SchoolInfoManager(existingOptions) {
   });
 
   // Show fields corresponding to the current contents of the type dropdown.
-  $('#school-type').change(function () {
+  $('#school-type').change(function() {
     if (isUs() && isPublicOrCharter()) {
       show('#school-state');
       // Trigger the district dropdown if state is already set.
@@ -288,26 +305,26 @@ export default function SchoolInfoManager(existingOptions) {
       }
     }
     if (isAfterSchool() || isOther()) {
-      $("#school-name-title").hide();
-      $("#school-organization-name-title").show();
-      $("#school-zip-title").hide();
-      $("#school-organization-zip-title").show();
+      $('#school-name-title').hide();
+      $('#school-organization-name-title').show();
+      $('#school-zip-title').hide();
+      $('#school-organization-zip-title').show();
     } else {
-      $("#school-name-title").show();
-      $("#school-organization-name-title").hide();
-      $("#school-zip-title").show();
-      $("#school-organization-zip-title").hide();
+      $('#school-name-title').show();
+      $('#school-organization-name-title').hide();
+      $('#school-zip-title').show();
+      $('#school-organization-zip-title').hide();
     }
   });
 
-  $('#school-state').change(function () {
+  $('#school-state').change(function() {
     if (isPublicOrCharter()) {
       setupDistrictDropdown($('#school-state').val());
       clearAndHideSchool();
     }
   });
 
-  $('#school-district-other').change(function () {
+  $('#school-district-other').change(function() {
     if ($(this).prop('checked')) {
       // Disable districts.
       enableDistrictDropdown(false);
@@ -325,7 +342,7 @@ export default function SchoolInfoManager(existingOptions) {
     }
   });
 
-  $('#school-other').change(function () {
+  $('#school-other').change(function() {
     if ($(this).prop('checked')) {
       enableSchoolDropdown(false);
       show('#school-zipcode');
@@ -342,40 +359,57 @@ export default function SchoolInfoManager(existingOptions) {
 
   if (existingOptions) {
     if (existingOptions.country) {
-      $('#school-country').val(existingOptions.country).change();
+      $('#school-country')
+        .val(existingOptions.country)
+        .change();
     }
 
     if (existingOptions.school_type) {
-      $('#school-type').val(existingOptions.school_type).change();
+      $('#school-type')
+        .val(existingOptions.school_type)
+        .change();
     }
 
     if (existingOptions.state) {
-      $('#school-state').val(existingOptions.state).change();
+      $('#school-state')
+        .val(existingOptions.state)
+        .change();
     }
 
     if (existingOptions.school_district_other) {
-      $('#school-district-other').prop('checked', true).change();
+      $('#school-district-other')
+        .prop('checked', true)
+        .change();
     }
 
     if (existingOptions.school_district_name) {
-      $('#school-district-name').val(existingOptions.school_district_name).change();
+      $('#school-district-name')
+        .val(existingOptions.school_district_name)
+        .change();
     }
 
     if (existingOptions.school_other) {
-      $('#school-other').prop('checked', true).change();
+      $('#school-other')
+        .prop('checked', true)
+        .change();
     }
 
     if (existingOptions.school_name) {
-      $('#school-name').val(existingOptions.school_name).change();
+      $('#school-name')
+        .val(existingOptions.school_name)
+        .change();
     }
 
     if (existingOptions.zip) {
-      $('#school-zipcode').val(existingOptions.zip).change();
+      $('#school-zipcode')
+        .val(existingOptions.zip)
+        .change();
     }
 
     if (existingOptions.full_address) {
-      $('#school-address').val(existingOptions.full_address).change();
+      $('#school-address')
+        .val(existingOptions.full_address)
+        .change();
     }
   }
 }
-

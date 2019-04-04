@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,4,0],[0,0,0,0,0,0,1,0],[0,0,0,0,1,2,1,4],[0,0,0,0,1,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Move one way, then another to get me to the pig!",
+    "short_instructions": "Move one way, then another to get me to the pig!",
     "start_direction": "3",
     "step_mode": "0",
     "is_k1": "true",

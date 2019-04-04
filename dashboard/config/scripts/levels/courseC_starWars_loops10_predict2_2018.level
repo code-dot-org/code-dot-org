@@ -42,7 +42,7 @@
     "callout_json": "[]",
     "authored_hints": "[]",
     "step_speed": "5",
-    "instructions": "You are doing great! Keep it up!",
+    "short_instructions": "You are doing great! Keep it up!",
     "contained_level_names": [
       "courseC_multi_starWars_predict2_2018"
     ],

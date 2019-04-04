@@ -11,7 +11,7 @@ sq:
     failure:
       already_authenticated: Ju jeni të loguar tashmë.
       inactive: Llogaria juaj nuk është aktivizuar akoma.
-      invalid: Email-i ose fjalëkalimi është i pavlefshëm.
+      invalid: Email ose fjalëkalim jo i vlefshëm.
       invalid_token: Shenjë e pasaktë identifikimi.
       locked: Llogaria juaj është bllokuar.
       not_found_in_database: Email ose fjalëkalim jo i vlefshëm.
@@ -56,7 +56,6 @@ sq:
         konfirmimin e adresës tuaj të re të emailit.
       updated: Ju përditësuat llogarinë tuaj me sukses.
     sessions:
-      signed_in: ''
       signed_out: Ju dolët me sukses.
     unlocks:
       send_instructions: Ju do të merrni një email me udhëzime se si të zhbllokoni

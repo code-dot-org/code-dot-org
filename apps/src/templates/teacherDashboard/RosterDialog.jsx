@@ -1,13 +1,14 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
-import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
+import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
 import color from '../../util/color';
 import locale from '@cdo/locale';
 import {
   cancelImportRosterFlow,
   importOrUpdateRoster,
-  isRosterDialogOpen,
+  isRosterDialogOpen
 } from './teacherSectionsRedux';
 
 const styles = {
@@ -15,7 +16,7 @@ const styles = {
     position: 'absolute',
     left: 20,
     color: color.dark_charcoal,
-    margin: '15px 0',
+    margin: '15px 0'
   },
   content: {
     position: 'absolute',
@@ -23,21 +24,21 @@ const styles = {
     top: 50,
     right: 20,
     bottom: 70,
-    overflowY: 'scroll',
+    overflowY: 'scroll'
   },
   classroomRow: {
     padding: 10,
-    cursor: 'pointer',
+    cursor: 'pointer'
   },
   highlightRow: {
     backgroundColor: color.default_blue,
-    color: color.white,
+    color: color.white
   },
   footer: {
     position: 'absolute',
     bottom: 15,
     right: 20,
-    left: 20,
+    left: 20
   },
   buttonPrimary: {
     float: 'right',
@@ -47,96 +48,113 @@ const styles = {
     borderRadius: 3,
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.63)',
     fontSize: 14,
-    padding: '8px 20px',
+    padding: '8px 20px'
   },
   buttonSecondary: {
     float: 'left',
     background: '#eee',
     color: '#5b6770',
-    border: '1px solid #c5c5c5',
-  },
-  error: {
-    fontSize: 10,
-    color: color.light_gray,
-    display: 'none',
-  },
+    border: '1px solid #c5c5c5'
+  }
 };
 
-const ClassroomList = ({classrooms, onSelect, selectedId, provider}) => classrooms.length ?
-  <div>
-    {classrooms.map(classroom => (
-      <div
-        style={Object.assign({},
-          styles.classroomRow,
-          selectedId === classroom.id && styles.highlightRow
-        )}
-        key={classroom.id}
-        onClick={onSelect.bind(null, classroom.id)}
-      >
-        {classroom.name}
-        {classroom.section &&
-          <span style={{color: '#aaa'}}> ({classroom.section})</span>
-        }
-        <span style={{float: 'right'}}>
-          {locale.code()}
-          <span style={{fontFamily: 'monospace'}}> {classroom.enrollment_code}</span>
-        </span>
-      </div>
-    ))}
-  </div> :
-  <NoClassroomsFound provider={provider}/>
-;
+const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) =>
+  classrooms.length ? (
+    <div>
+      {classrooms.map(classroom => (
+        <div
+          style={Object.assign(
+            {},
+            styles.classroomRow,
+            selectedId === classroom.id && styles.highlightRow
+          )}
+          key={classroom.id}
+          onClick={onSelect.bind(null, classroom.id)}
+        >
+          {classroom.name}
+          {classroom.section && (
+            <span style={{color: '#aaa'}}> ({classroom.section})</span>
+          )}
+          <span style={{float: 'right'}}>
+            {locale.code()}
+            <span style={{fontFamily: 'monospace'}}>
+              {' '}
+              {classroom.enrollment_code}
+            </span>
+          </span>
+        </div>
+      ))}
+    </div>
+  ) : (
+    <NoClassroomsFound rosterProvider={rosterProvider} />
+  );
 ClassroomList.propTypes = {
   classrooms: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
   selectedId: PropTypes.string,
-  provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+  rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes))
 };
 
-const NoClassroomsFound = ({provider}) => {
-  switch (provider) {
+const NoClassroomsFound = ({rosterProvider}) => {
+  switch (rosterProvider) {
     case OAuthSectionTypes.google_classroom:
       return (
         <div>
-          <p>
-            {locale.noClassroomsFound()}
-          </p>
+          <p>{locale.noClassroomsFound()}</p>
           <a href="https://classroom.google.com/">
-              {locale.addRemoveGoogleClassrooms()}
+            {locale.addRemoveGoogleClassrooms()}
           </a>
         </div>
       );
     case OAuthSectionTypes.clever:
       return (
         <div>
-          <p>
-            {locale.noClassroomsFound()}
-          </p>
-          <a href="https://classroom.google.com/">
-            {locale.addRemoveCleverClassrooms()}
-          </a>
+          <p>{locale.noClassroomsFound()}</p>
+          <a href="https://clever.com/">{locale.addRemoveCleverClassrooms()}</a>
         </div>
       );
   }
 };
 NoClassroomsFound.propTypes = {
-  provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+  rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes))
 };
 
-const LoadError = ({error}) =>
-  <div>
-    <p>
-      {locale.authorizeGoogleClassroomsText()}
-    </p>
-    <a href={`/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
-      {locale.authorizeGoogleClassrooms()}
-    </a>
-    <p style={styles.error}>
-      {error.status} {error.message}
-    </p>
-  </div>;
+const ROSTERED_SECTIONS_SUPPORT_URL =
+  'https://support.code.org/hc/en-us/articles/115001319312';
+const LoadError = ({rosterProvider, loginType}) => {
+  switch (rosterProvider) {
+    case OAuthSectionTypes.google_classroom:
+      return (
+        <div>
+          <p>
+            {locale.authorizeGoogleClassroomsText()}{' '}
+            <a
+              href={`/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}
+            >
+              {locale.authorizeGoogleClassrooms()}
+            </a>
+          </p>
+          <p>
+            <a href={ROSTERED_SECTIONS_SUPPORT_URL} target="_blank">
+              {locale.errorLoadingRosteredSectionsSupport()}
+            </a>
+          </p>
+        </div>
+      );
+    default:
+      return (
+        <p>
+          {locale.errorLoadingRosteredSections({type: loginType})}{' '}
+          <a href={ROSTERED_SECTIONS_SUPPORT_URL} target="_blank">
+            {locale.errorLoadingRosteredSectionsSupport()}
+          </a>
+        </p>
+      );
+  }
+};
 LoadError.propTypes = {
-  error: loadErrorShape,
+  rosterProvider: PropTypes.string,
+  loginType: PropTypes.string
 };
 
 class RosterDialog extends React.Component {
@@ -147,16 +165,18 @@ class RosterDialog extends React.Component {
     isOpen: PropTypes.bool,
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
-    provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+    rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes))
   };
 
   state = {selectedId: null};
 
   importClassroom = () => {
     const classrooms = this.props.classrooms;
-    const selectedName = classrooms && classrooms.find(classroom => {
-      return classroom.id === this.state.selectedId;
-    }).name;
+    const selectedName =
+      classrooms &&
+      classrooms.find(classroom => {
+        return classroom.id === this.state.selectedId;
+      }).name;
 
     this.props.handleImport(this.state.selectedId, selectedName);
     this.setState({selectedId: null});
@@ -172,12 +192,15 @@ class RosterDialog extends React.Component {
 
   render() {
     let title = '';
-    switch (this.props.provider) {
+    let loginType = '';
+    switch (this.props.rosterProvider) {
       case OAuthSectionTypes.google_classroom:
         title = locale.selectGoogleClassroom();
+        loginType = locale.loginTypeGoogleClassroom();
         break;
       case OAuthSectionTypes.clever:
         title = locale.selectCleverSection();
+        loginType = locale.loginTypeClever();
         break;
     }
 
@@ -189,21 +212,23 @@ class RosterDialog extends React.Component {
         handleClose={this.cancel}
         {...this.props}
       >
-        <h2 style={styles.title}>
-          {title}
-        </h2>
+        <h2 style={styles.title}>{title}</h2>
         <div style={styles.content}>
-          {this.props.loadError ?
-            <LoadError error={this.props.loadError}/> :
-            this.props.classrooms ?
-              <ClassroomList
-                classrooms={this.props.classrooms}
-                onSelect={this.onClassroomSelected}
-                selectedId={this.state.selectedId}
-                provider={this.props.provider}
-              /> :
-              locale.loading()
-          }
+          {this.props.loadError ? (
+            <LoadError
+              rosterProvider={this.props.rosterProvider}
+              loginType={loginType}
+            />
+          ) : this.props.classrooms ? (
+            <ClassroomList
+              classrooms={this.props.classrooms}
+              onSelect={this.onClassroomSelected}
+              selectedId={this.state.selectedId}
+              rosterProvider={this.props.rosterProvider}
+            />
+          ) : (
+            locale.loading()
+          )}
         </div>
         <div style={styles.footer}>
           <button
@@ -214,7 +239,8 @@ class RosterDialog extends React.Component {
           </button>
           <button
             onClick={this.importClassroom}
-            style={Object.assign({},
+            style={Object.assign(
+              {},
               styles.buttonPrimary,
               !this.state.selectedId && {opacity: 0.5}
             )}
@@ -228,12 +254,15 @@ class RosterDialog extends React.Component {
   }
 }
 export const UnconnectedRosterDialog = RosterDialog;
-export default connect(state => ({
-  isOpen: isRosterDialogOpen(state),
-  classrooms: state.teacherSections.classrooms,
-  loadError: state.teacherSections.loadError,
-  provider: state.teacherSections.provider,
-}), {
-  handleImport: importOrUpdateRoster,
-  handleCancel: cancelImportRosterFlow,
-})(RosterDialog);
+export default connect(
+  state => ({
+    isOpen: isRosterDialogOpen(state),
+    classrooms: state.teacherSections.classrooms,
+    loadError: state.teacherSections.loadError,
+    rosterProvider: state.teacherSections.rosterProvider
+  }),
+  {
+    handleImport: importOrUpdateRoster,
+    handleCancel: cancelImportRosterFlow
+  }
+)(RosterDialog);

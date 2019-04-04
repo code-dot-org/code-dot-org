@@ -6,47 +6,54 @@ ro:
       Loops: Bucle
       Functions: Funcţii
       Color: Culoare
-      Brushes: Brushes
+      Brushes: Pensule
       Math: Matematică
       Logic: Logică
       Variables: Variabile
-      Number: Number
-      String: String
-      Image: Image
+      Number: Număr
+      String: Șir de carcatere
+      Image: Imagine
       Boolean: Boolean
       Conditionals: Condiţionale
       Events: Evenimente
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Jocuri/Scor
+      Comments: Comentarii
+      Category: Categorie
+      Prebuilt: Precompilate
       Text: Text
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Picker: Selector
+      Comment: Comentariu
+      'Variables ': 'Variabile '
+      Default: Predefinit
+      Behaviors: Comportamente
+      Locations: Locaţii
+      Bunny Game: Joc cu iepuraș
+      everythingelse: toate celelalte
+      World: Lume
+      Location: Locatie
+      numbers: numere
+      Numbers: Numere
+      Dancers: Dansatori
+      Groups: Grupuri
+      Advanced: Avansat
       Start: Începe
-      Groups: Groups
+      Music: Muzică
+      Dancing: Dans
+      Sprite: Spiriduș
+      Brush: Periază
+      Make Sprite: Fă un spiriduș
+      Movement: Mișcare
       Booleans: Booleene
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Funcţionale
+      While Events: Evenimente `atâta timp` (while)
+      Sprite Properties: Proprietăți spiriduș
+      Predefined: Predefinite
       test: test
       test2: test2
-      Foo: Foo
+      Use These Blocks: Utilizează aceste blocuri
+      Do Not Use: Nu utilizaţi
       Name: Nume
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: BLOCURI NOI
+      'Functions ': 'Funcţii '
+      Game/Score: Joc/Scor
       Function: Funcţie

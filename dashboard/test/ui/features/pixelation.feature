@@ -1,7 +1,8 @@
 @dashboard_db_access
 @no_mobile
-@no_safari
 Feature: Pixelation levels
+  # Brad (2018-11-14) Skip on IE due to blocked pop-ups
+  @no_ie
   @no_circle
   @as_student
   Scenario: Pixelation version 2 in black and white with no sliders
@@ -19,6 +20,8 @@ Feature: Pixelation levels
     And I save pixelation data and reload
     Then pixelation data has text "0000 0011 0000 0010 0 1 0 1 1 1 1 1"
 
+  # Brad (2018-11-14) Skip on IE due to blocked pop-ups
+  @no_ie
   @no_circle
   @as_student
   Scenario: Pixelation version 3 in color with sliders
@@ -36,6 +39,8 @@ Feature: Pixelation levels
     And I save pixelation data and reload
     Then pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110 111 000 111 000 01"
 
+  # Brad (2018-11-14) Skip on IE due to blocked pop-ups
+  @no_ie
   @no_circle
   @as_student
   Scenario: Pixelation version 3 in color with sliders starting in hex mode

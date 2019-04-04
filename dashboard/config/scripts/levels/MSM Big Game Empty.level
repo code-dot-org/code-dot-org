@@ -10,7 +10,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "All variables and functions are currently empty stubs. Each puzzle progression will be focused on defining and handful of them, and therefore adding functionality.",
+    "short_instructions": "All variables and functions are currently empty stubs. Each puzzle progression will be focused on defining and handful of them, and therefore adding functionality.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

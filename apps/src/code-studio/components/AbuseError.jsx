@@ -1,5 +1,6 @@
 /* eslint-disable react/no-danger */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -26,13 +27,11 @@ export default class AbuseError extends React.Component {
         <p
           style={this.props.textStyle}
           dangerouslySetInnerHTML={{__html: this.props.i18n.tos}}
-        >
-        </p>
+        />
         <p
           style={this.props.textStyle}
           dangerouslySetInnerHTML={{__html: this.props.i18n.contact_us}}
-        >
-        </p>
+        />
       </div>
     );
   }

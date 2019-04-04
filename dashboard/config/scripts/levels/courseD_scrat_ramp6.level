@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,4,0,0,0],[0,0,1,1,1,1,0,0],[2,1,1,1,1,3,4,0],[0,0,1,1,1,1,0,0],[0,0,0,4,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Help Scrat get to the acorn using a loop!",
+    "short_instructions": "Help Scrat get to the acorn using a loop!",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use a `repeat` loop to get Scrat moving!\",\"hint_id\":\"courseC_maze_programming6a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c408678a578ad1222732009552dfcee3/courseD_scrat_ramp6.mp3\"}]",
-    "markdown_instructions": "Help Scrat get to the acorn using a loop!",
+    "long_instructions": "Help Scrat get to the acorn using a loop!",
     "instructions_important": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_maze_ramp6_1\",\r\n  \"callout_text\": \"Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "hide_share_and_remix": "false",

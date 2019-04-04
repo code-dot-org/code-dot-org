@@ -1,0 +1,10 @@
+---
+uz:
+  data:
+    long_instructions:
+      2-3 Artist 4: Ushbu mushukka uy qurishda yordam bering.
+      2-3 Artist 9 NEW: Bu varrakni yasang
+      2-3 Artist 9: Bu varrakni yasang
+      2-3 Artist Debugging 11: |-
+        Chiroyli qor parchamni yasashda yordam bering.
+        Buni tugatish uchun yana nechi marta "takrorlash"im kerak?

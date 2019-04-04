@@ -1,14 +1,10 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import {ButtonList} from '../form_components/ButtonList';
 import FieldGroup from '../form_components/FieldGroup';
 
-import {
-  FormGroup,
-  FormControl,
-  ControlLabel,
-  Table
-} from 'react-bootstrap';
+import {FormGroup, FormControl, ControlLabel, Table} from 'react-bootstrap';
 
 const SINGLE_SELECT = 'single_select';
 const MULTI_SELECT = 'multi_select';
@@ -21,16 +17,20 @@ const questionPropType = PropTypes.shape({
   name: PropTypes.string.isRequired,
   required: PropTypes.bool,
   type: PropTypes.oneOf([
-    SINGLE_SELECT, MULTI_SELECT, FREE_RESPONSE, RADIO, CHECK
+    SINGLE_SELECT,
+    MULTI_SELECT,
+    FREE_RESPONSE,
+    RADIO,
+    CHECK
   ]).isRequired,
-  values: PropTypes.arrayOf(PropTypes.string),
+  values: PropTypes.arrayOf(PropTypes.string)
 });
 
 const styles = {
   tdLabel: {
     padding: 15,
     verticalAlign: 'inherit'
-  },
+  }
 };
 
 class ColumnVariableQuestion extends React.Component {
@@ -39,10 +39,10 @@ class ColumnVariableQuestion extends React.Component {
     question: questionPropType,
     onChange: PropTypes.func,
     data: PropTypes.object,
-    errors: PropTypes.arrayOf(PropTypes.string),
+    errors: PropTypes.arrayOf(PropTypes.string)
   };
 
-  buildColumn = (selectedValue) => {
+  buildColumn = selectedValue => {
     const key = `${this.props.question.name}[${selectedValue}]`;
 
     // Support referring to checkboxes as either "single_select" or "check", and
@@ -68,14 +68,11 @@ class ColumnVariableQuestion extends React.Component {
 
     return (
       <td key={key}>
-        <FormGroup
-          controlId={key}
-          validationState={validationState}
-        >
+        <FormGroup controlId={key} validationState={validationState}>
           <ButtonList
             answers={this.props.question.values}
             groupName={key}
-            label={""}
+            label={''}
             type={type}
             selectedItems={selected}
             onChange={this.props.onChange}
@@ -91,7 +88,9 @@ class ColumnVariableQuestion extends React.Component {
         <td style={styles.tdLabel}>
           <ControlLabel>
             {this.props.question.label}
-            {this.props.question.required && <span className="form-required-field"> *</span>}
+            {this.props.question.required && (
+              <span className="form-required-field"> *</span>
+            )}
           </ControlLabel>
         </td>
         {this.props.selectedValues.map(this.buildColumn)}
@@ -106,11 +105,11 @@ class RowVariableQuestion extends React.Component {
     question: questionPropType,
     onChange: PropTypes.func,
     data: PropTypes.object,
-    errors: PropTypes.arrayOf(PropTypes.string),
+    errors: PropTypes.arrayOf(PropTypes.string)
   };
 
-  buildRow = (selectedValue) => {
-    const label = this.props.question.label.replace("{value}", selectedValue);
+  buildRow = selectedValue => {
+    const label = this.props.question.label.replace('{value}', selectedValue);
     const key = `${this.props.question.name}[${selectedValue}]`;
 
     let validationState;
@@ -135,11 +134,7 @@ class RowVariableQuestion extends React.Component {
   };
 
   render() {
-    return (
-      <div>
-        {this.props.selectedValues.map(this.buildRow)}
-      </div>
-    );
+    return <div>{this.props.selectedValues.map(this.buildRow)}</div>;
   }
 }
 
@@ -152,7 +147,7 @@ export default class VariableFormGroup extends React.Component {
     rowVariableQuestions: PropTypes.arrayOf(questionPropType),
     onChange: PropTypes.func,
     data: PropTypes.object,
-    errors: PropTypes.arrayOf(PropTypes.string),
+    errors: PropTypes.arrayOf(PropTypes.string)
   };
 
   static defaultProps = {
@@ -174,7 +169,7 @@ export default class VariableFormGroup extends React.Component {
       selected = props.data[props.sourceName];
     }
 
-    this.state = { selected };
+    this.state = {selected};
   }
 
   componentWillMount() {
@@ -196,7 +191,7 @@ export default class VariableFormGroup extends React.Component {
     return this.props.sourceValues.length === 1;
   }
 
-  setSelected = (values) => {
+  setSelected = values => {
     if (this.props.onChange) {
       this.props.onChange(values);
     }
@@ -210,7 +205,7 @@ export default class VariableFormGroup extends React.Component {
     if (this.hasNoSourceValues()) {
       // If we have no source values, we have nothing to render. Return an empty
       // form group
-      return (<FormGroup />);
+      return <FormGroup />;
     }
 
     let columnQuestions;
@@ -253,12 +248,15 @@ export default class VariableFormGroup extends React.Component {
 
     const thStyle = {
       width: `${100 / (this.state.selected.length + 1)}%`,
-      backgroundColor: "#00b2c0",
-      color: "white"
+      backgroundColor: '#00b2c0',
+      color: 'white'
     };
 
     let validationState;
-    if (this.props.errors && this.props.errors.includes(this.props.sourceName)) {
+    if (
+      this.props.errors &&
+      this.props.errors.includes(this.props.sourceName)
+    ) {
       validationState = 'error';
     }
 
@@ -267,8 +265,13 @@ export default class VariableFormGroup extends React.Component {
         validationState={validationState}
         controlId={this.props.sourceName}
       >
-        {this.hasSingleSourceValue() ?
-          <input type="hidden" name={this.props.sourceName} value={this.props.sourceValues[0]} /> :
+        {this.hasSingleSourceValue() ? (
+          <input
+            type="hidden"
+            name={this.props.sourceName}
+            value={this.props.sourceValues[0]}
+          />
+        ) : (
           <ButtonList
             answers={this.props.sourceValues}
             groupName={this.props.sourceName}
@@ -278,18 +281,22 @@ export default class VariableFormGroup extends React.Component {
             required
             type={'check'}
           />
-        }
-        {(columnQuestions.length > 0) && <Table striped bordered>
-          <thead>
-            <tr>
-              <th style={thStyle}></th>
-              {this.state.selected.map(value => <th key={value} style={thStyle}><label>{value}</label></th>)}
-            </tr>
-          </thead>
-          <tbody>
-            {columnQuestions}
-          </tbody>
-        </Table>}
+        )}
+        {columnQuestions.length > 0 && (
+          <Table striped bordered>
+            <thead>
+              <tr>
+                <th style={thStyle} />
+                {this.state.selected.map(value => (
+                  <th key={value} style={thStyle}>
+                    <label>{value}</label>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>{columnQuestions}</tbody>
+          </Table>
+        )}
         {rowQuestions}
       </FormGroup>
     );

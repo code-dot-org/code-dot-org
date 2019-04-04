@@ -7,28 +7,28 @@ function initPage() {
   const script = document.querySelector('script[data-editorall]');
   const config = JSON.parse(script.dataset.editorall);
 
-  levelbuilder.jsonEditor("#callout_editor", {
+  levelbuilder.jsonEditor('#callout_editor', {
     json_textarea: '#level_callout_json',
     add_button: '#add_callout',
-    remove_button: ".remove_callout",
-    value_space: ".callout_space",
-    template: ".json_template",
-    form_container: "#all_callouts_editor",
-    wrapper: ".json_editor",
+    remove_button: '.remove_callout',
+    value_space: '.callout_space',
+    template: '.json_template',
+    form_container: '#all_callouts_editor',
+    wrapper: '.json_editor',
     model: {
-      localization_key: "",
-      callout_text: "",
-      element_id: "",
-      on: "",
+      localization_key: '',
+      callout_text: '',
+      element_id: '',
+      on: '',
       qtip_config: {
         codeStudio: {
           canReappear: false,
-          dropletPaletteCategory: ""
+          dropletPaletteCategory: ''
         },
-        style: {classes: ""},
+        style: {classes: ''},
         position: {
-          my: "",
-          at: "",
+          my: '',
+          at: '',
           adjust: {x: 0, y: 0}
         }
       }
@@ -36,9 +36,13 @@ function initPage() {
   });
 
   function make_selection_handler(flag) {
-    return function (e) {
+    return function(e) {
       e.preventDefault();
-      $(this).parent().siblings('select').children('option')[flag ? 'attr' : 'removeAttr']('selected', true);
+      const options = $(this)
+        .parent()
+        .siblings('select')
+        .children('option');
+      options[flag ? 'attr' : 'removeAttr']('selected', true);
     };
   }
 
@@ -46,8 +50,25 @@ function initPage() {
   $('.select_none').click(make_selection_handler(false));
 
   // This click handler enables adding multiple text inputs for reference links.
-  $("#plusAnswerReference").on("click", () => {
-    $("#plusAnswerReference").prev().clone().insertBefore("#plusAnswerReference");
+  $('#plusAnswerReference').on('click', () => {
+    $('#plusAnswerReference')
+      .prev()
+      .clone()
+      .insertBefore('#plusAnswerReference');
+  });
+
+  $('#plusAnswerContainedLevel').on('click', () => {
+    $('#plusAnswerContainedLevel')
+      .prev()
+      .clone()
+      .insertBefore('#plusAnswerContainedLevel');
+  });
+
+  $('#plusPreloadAssetList').on('click', () => {
+    $('#plusPreloadAssetList')
+      .prev()
+      .clone()
+      .insertBefore('#plusPreloadAssetList');
   });
 
   var videoInfos = config.video_infos;
@@ -56,7 +77,14 @@ function initPage() {
     var selectionValue = $('.video-dropdown')[0].value;
     if (selectionValue) {
       var videoInfo = videoInfos[selectionValue];
-      $('.video-preview').html(window.dashboard.videos.createVideoWithFallback(null, videoInfo, 400, 400));
+      $('.video-preview').html(
+        window.dashboard.videos.createVideoWithFallback(
+          null,
+          videoInfo,
+          400,
+          400
+        )
+      );
       $('.video-preview').show();
     } else {
       $('.video-preview').hide();

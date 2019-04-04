@@ -6,7 +6,7 @@
   "user_id": 24,
   "properties": {
     "skin": "artist",
-    "instructions": "Free-play time! ",
+    "short_instructions": "Free-play time! ",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -28,7 +28,7 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "markdown_instructions": "It's free-play time! Draw anything you like!",
+    "long_instructions": "It's free-play time! Draw anything you like!",
     "examples_required": "false",
     "disable_examples": "false",
     "never_autoplay_video": "false",

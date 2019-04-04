@@ -6,7 +6,7 @@ cs:
         Maze: Bludiště
         Multi: Více voleb
         Unplug2: Aritmetické Myšlení
-        Unplug3: Programování na milimetrovém papíru
+        Unplug3: Programování Na Milimetrovém Papíru
         Artist: Umělec
         Unplug4: Algoritmy
         Artist2: Umělec 2
@@ -18,7 +18,7 @@ cs:
         Farmer2: Farmářka 2
         Unplug8: Abstrakce
         Artist4: Malíř 4
-        Unplug9: Štafetové programování
+        Unplug9: Relay programování
         Farmer3: Farmář 3
         Unplug10: Internet
         Artist5: Umělec 5
@@ -37,7 +37,6 @@ cs:
         NetSim: Simulátor Internetu
         Custom: Umělec
         CustomStudio: Play Lab
-        Gamelab: Game Lab
     trophy:
       name:
         Bronze: Bronz
@@ -56,30 +55,30 @@ cs:
         parameters: Funkce s Parametry
     level:
       instructions:
-        maze_2_2: 'Pomůžeš mi chytit zlobivé prase? Poskládej dohromady několik bloků "vpřed" a stiskni tlačítko "Run", abys mě dostal tam. '
+        maze_2_2: 'Pomůžeš mi chytit zlobivé prase? Poskládej dohromady několik bloků "posunout vpřed" a stiskni tlačítko "Spustit", abys mě tam dostal. '
         maze_2_1: To prase mi pije krev. Pomoz mi ho najít!
         maze_2_2_5: Najdi cestu a veď mě k tomu pošetilému praseti. Vyhni se TNT, nebo bude peří létat!
         maze_2_3: Naveď mě k zelenému zlu! (Pozor na TNT)
-        maze_2_4: Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohlo rozzlobit!
+        maze_2_4: Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohl rozzlobit!
         maze_2_5: Existuje způsob, jak se mohu dostat k zelenému prasátku za použití pouze 2 bloků. Přijdeš na něj?
         maze_2_6: Pokus se mě dostat k zelenému vetřelci za použití třech bloků.
-        maze_2_7: Pomoz mi zbavit se toho zlobivého prasátka pomocí nejmenšího počtu bloků. Zkus použít více jak jeden blok "opakovat n-krát".
-        maze_2_8: 'Když je blok šedý, tak to znamená, že ho nemůžeš smazat. Vyřeš tuto hádanku použitím šedého bloku "opakuj". Zkus do něj vložit 3 bloky: posun vpřed, posun vpřed a otoč a nastavit blok "opakuj", aby to zopakoval třikrát.'
-        maze_2_9: Dobře, zkus nový blok "opakovat dokud" - bude se opakovat, dokud nechytím to otravné prase.
+        maze_2_7: Pomoz mi zbavit se toho zlobivého prasátka pomocí co nejmenšího počtu bloků. Zkus použít více než jeden blok "opakuj n-krát".
+        maze_2_8: 'Když je blok šedý, tak to znamená, že ho nemůžeš smazat. Vyřeš tuto hádanku použitím šedého bloku "opakuj", který opakuje třikrát. Zkus do něj vložit další 3 bloky: posunout vpřed, posunout vpřed, otočit.'
+        maze_2_9: Dobře, zkus nový blok "opakovat do" - bude se opakovat, dokud nechytím to otravné prase.
         maze_2_10: Dobře, ještě jednou pro procvičení - dokážeš vyřešit tento úkol za použití pouze 4 bloků?
         maze_2_11: Drahý živý. Já zombie. Já hladový. Muset...se dostat...k té slunečnici... Dostaneš mě tam za použití jen 5 bloků?
         maze_2_12: Dobře, toto je podobné, jen trošičku odlišné. Zvládneš to vyřešit jen s 5-ti bloky?
-        maze_2_13: 'Použij nový blok "pokud" abych se rozhodoval, kdy se otočit. Tip: stačí ti pouze jeden další blok, ale naučit se, jak jsme to nachystali, aby jsi to příště dokázal sám.'
+        maze_2_13: 'Použij nový typ bloku "pokud", abych se rozhodl, kdy se otočit. Tip: stačí ti pouze jeden další blok, ale nauč se, jak jsme to nachystali, aby jsi to příště dokázal sám.'
         maze_2_14: Dobře, tohle je stejné jako předchozí hádanka, ale musíš si pamatovat, jak jsi použil blok "pokud" a blok "opakovat" dohromady.
         maze_2_15: Já chtít slunečnici! Použij blok "pokud" a dostaň mě tam s co nejmenším počtem bloků.
         maze_2_16: Dobře, pojďme to udělat znovu pro procvičení - není to příliš jiné, ale dávej pozor na masožravky!
         maze_2_17: Blok "pokud-jinak" ověřuje podmínku a poté udělá jednu NEBO druhou věc. Zkus použít tento blok, aby jsi mě dostal ke slunečnici.
         maze_2_18: Další cvičení pro blok "pokud-jinak". Zvládneš to na první pokus?
         maze_2_19: Dokážeš přidat jen 3 bloky a vyřešit složitější bludiště? Pokud to uděláš správně, mohu jít všemi křivolakými cestami bez ohledu na délku.
-        turtle_1_1: Ahoj já jsem umělec. Můžete napsat kód, abych vám nakreslil téměř cokoliv. Použijte pár bloků, abych kreslil nad šedé čáry v obrázku.
-        turtle_1_2: 'Teď nakresli čtverec. Poznámka: použij svou oblíbenou barvu vybranou v novém bloku "nastavení barev".'
+        turtle_1_1: Ahoj já jsem umělec. Můžete napsat kód, abych vám nakreslil téměř cokoliv. Použijte pár bloků, abych obkreslil šedé čáry v obrázku.
+        turtle_1_2: 'Teď nakresli čtverec. Poznámka: použij svou oblíbenou barvu vybranou v novém bloku "nastav barvu".'
         turtle_1_3: Udělej čtverec použitím pouze 3 bloků.
-        turtle_1_4: 'Namaluj trojúhelník, jehož strany mají každá jinou barvu. Použij možnost "náhodná barva", která vybere pokaždé jinou barvu. Tip: budeš muset přijít na to jak moc se otočit tím, že klikneš na číslo v bloku otočit.'
+        turtle_1_4: 'Namaluj trojúhelník, jehož strany mají každá jinou barvu. Použij možnost "náhodná barva", která vybere pokaždé jinou barvu. Tip: budeš muset přijít na to, jak moc se otočit tím, že klikneš na číslo v bloku otočit.'
         turtle_1_5: Teď pro procvičení, nakresli trojúhelník a čtverec tak aby vznikla poštovní obálka.
         turtle_1_6: 'Přijdeš na to, jak nakreslit tento trojúhelník a čtverec? Tip: Nejdříve udělej trojúhelník, poté zjisti, o kolik se musíš otočit, než namaluješ čtverec.'
         turtle_1_7: Dobře, pojďme na něco složitějšího - zjisti, jestli dokážeš nakreslit tyto zelené brýle. Čtverce na obou stranách mají po 100 pixelech a jsou od sebe vzdáleny 50 pixelů. Nezapomeň kreslit zelenou!
@@ -115,7 +114,7 @@ cs:
         turtle_2_5: Nakresli čtverce o stranách 50, 60, 70, 80 a 90 pixelů. Budeš potřebovat použít funkci "nakreslit čtverec" pětkrát.
         turtle_2_6: 'Dobře, tento program použije čítač, aby nakreslil stejné čtverce jako minule. Chceš, aby měl čtverec tu samou velikost jako čítač, takže použij blok "čítač". Tip: Je v kategorii Proměnné.'
         turtle_2_7: Zde je program k nakreslení spirály, ale bloky jsou neaktivní, takže se neprovedou. Udělej nový program za použití bloku "počítat s" (v kategorii Cykly) a bloku "čítač" (v kategorii Proměnné) k nakreslení té samé spirály.
-        turtle_2_7_5: Upravit Kód
+        turtle_2_7_5: Máme novou funkci "nakreslit sněhuláka" (v kategorii Funkce). Nakresli dva sněhuláky s výškou 250 a 100.
         turtle_2_8: Tohle bude záludné. Použij funkci "nakreslit sněhuláka" a nový blok "skočit vpřed" (v kategorii Akce). Nakresli 3 sněhuláky v různých barvách, 100 pixelů od sebe.
         turtle_2_9: Použij cyklus "počítat s" k nakreslení rodinky sněhuláků o výšce 110, 100, 90, 80 a 70. Všichni sněhuláci by měli být 60 pixelů od sebe.
         turtle_2_10: V tomto kódu můžeš experimentovat s různými spirálami. Co se stane, když změníš hodnotu otočení? Nebo nastavíš náhodnou barvu v cyklu? Nakresli cokoliv chceš.
@@ -310,7 +309,7 @@ cs:
         C2_graph_paper: Programování Na Milimetrovém Papíru
         C2_conditionals_with_cards: Podmínky
         C2_binary_bracelets: Binární náramky
-        C2_relay_programming: Štafetové programování
+        C2_relay_programming: Relay programování
         C2_paper_airplanes: Papírová letadla
         C2_digital_footprint: Tvé digitální stopy
         C2_digital_footprint_v2: Tvé digitální stopy
@@ -351,23 +350,17 @@ cs:
         C4_unplugged_forloops: For cykly
         C4_unplugged_parameters: Psaní písniček s parametry
         C4_unplugged_binary: Binární
-        CSF_a_b_artist_loops: Loops in Artist
-        CSF_artist_angles: Angles in Artist
-        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
-        CSF_collector_repeat_loops: Collector Repeat Loops
-        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
-        CSF_create_functions: Create Functions
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
-        CSF_EF_cs_matters: Computer Science Matters
-        CSF_maze_intro_k1_blocks: Intro to Code Studio
-        CSF_maze_intro_text_blocks: Intro to Code Studio
+        CSF_artist_angles: Úhly s Malířem
+        CSF_collector_k1_blocks: 'CS Fundamentals: Sběrač'
+        CSF_collector_repeat_loops: Sběrač opakuje smyčku
+        CSF_collector_text_blocks: 'CS Fundamentals: Sběrač'
+        CSF_create_functions: Vytváření funkcí
         CSF_my_robotic_friends: Mí robotičtí přátelé
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
-        CSF_stevie_big_project: Stevie and the Big Project
-        CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
+        CSF_Power_of_Words: Síla slov
+        CSF_Super_Digital_Citizen: Super digitální občan
+        CSF_stevie_big_project: Stevie a Velký projekt
+        CSF_unspotted_bugs: Nezachycené chyby
+        CSF_zuck_loops_short: Opakování smyček
         frozen_intro: Úvod do Hodiny kódu
         frozen_loops: Úvod do cyklů
         frozen_functions: Úvod do funkcí
@@ -378,90 +371,15 @@ cs:
         infinity_playlab_intro: Play Lab - Úvod
         infinity_playlab_events: Play Lab - události
         infinity_playlab_repeat_forever: Play Lab trvalé opakování
-        csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: 'How Computers Work: What Makes a Computer, a Computer?'
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input, & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
-        csd_concept_search: How Search Works
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
-        csd_gamelab_animation_tab: The Animation Tab
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_css_1: Intro to CSS - Part 1
-        csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
+        csd_concept_how_computers_work: Úvod do fungování počítačů
+        csd_concept_computer: 'Jak fungují počítače: Co dělá počítač, počítačem?'
+        csd_concept_circuits_logic: 'Jak fungují počítače: Obvody a logika'
+        csd_concept_memory_cpu_input_output: 'Jak fungují počítače: Paměť, procesor, vstup a výstup'
+        csd_concept_hardware_software: 'Jak fungují počítače: Hardware a software'
+        csd_concept_search: Jak funguje vyhledávání
         csp_applab_functions: Úvod do funkcí
         csp_applab_functions_parameters: Funkce s Parametry
         csp_applab_loops: Smyčky
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
-        csp_textcompression: Text compression widget
-        csp_textcompression_new: Text compression widget
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
         starwars_intro: 'Hvězdné války: Budování Galaxy s kódem - úvod'
         starwars_typing: 'Hvězdné války: Budování Galaxy s kódem - JavaScript'
         starwars_events: 'Hvězdné války: Budování Galaxy s kódem - události'
@@ -485,62 +403,20 @@ cs:
         mc_2016_events: Hodina kódu s Minecraftem - Události
         mc_2016_spawn: Hodina kódu s Minecraftem - Tvoření
         mc_2016_congrats: Hodina kódu s Minecraftem - Gratulujeme
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
+        mc_2017_agent_intro: Hodina kódu s Minecraftem - Agent
+        mc_2017_repeat: Hodina kódu s Minecraftem - Cykly
+        mc_2017_functions: Hodina kódu s Minecraftem - Funkce
         mc_2017_congratulations: Hodina kódu s Minecraftem - Gratulujeme
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
-        csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        mc_2017_puzzle_1: Hodina kódu s Minecraftem - Agent
+        mc_2017_puzzle_3: Hodina kódu s Minecraftem - Cykly
+        mc_2017_puzzle_8: Hodina kódu s Minecraftem - Funkce
+        mc_2017_puzzle_12: Hodina kódu s Minecraftem - Volná hra
         CSF_loops_AB: Smyčky
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
-        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
-        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
-        CDEF_Video_SpritesInAction: Sprites in Action
-        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
+        csd_pair_programming: Párové programování
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok
-        run: Stisknutím tlačítka "Spustit" vyzkoušíš svůj program
+        run: Stisknutím tlačítka "Spustit" si vyzkoušíš program
         watch_again: Klikněte sem, pokud chcete vidět video znova
         gray_block_explanation: Bloky, které jsou šedé, nejde smazat, ani je přesunout nikam jinam. Dokážeš vyřešit hádanku i tak?
         show_code_explanation: Klikněte sem, pokud chcete vidět kód programu, který tvoříte

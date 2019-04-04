@@ -1,5 +1,6 @@
 /** @file Modal dialog for browsing any logs in the simulation. */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Dialog, {Title, Body} from '../templates/Dialog';
 import NetSimLogBrowserFilters from './NetSimLogBrowserFilters';
 import NetSimLogBrowserTable from './NetSimLogBrowserTable';
@@ -37,13 +38,19 @@ export default class NetSimLogBrowser extends React.Component {
   };
 
   dialogTitle() {
-    const {i18n, teacherView, isAllRouterLogMode, currentTrafficFilter} = this.props;
+    const {
+      i18n,
+      teacherView,
+      isAllRouterLogMode,
+      currentTrafficFilter
+    } = this.props;
     if (teacherView) {
       return i18n.logBrowserHeader_teacherView();
     }
 
-    let header = isAllRouterLogMode ?
-      i18n.logBrowserHeader_all() : i18n.logBrowserHeader_mine();
+    let header = isAllRouterLogMode
+      ? i18n.logBrowserHeader_all()
+      : i18n.logBrowserHeader_mine();
 
     const match = /^(from|to|with) ([\d\.]+)/.exec(currentTrafficFilter);
     if (match) {
@@ -66,7 +73,7 @@ export default class NetSimLogBrowser extends React.Component {
 
   state = {currentSentByFilter: 'none'};
 
-  setSentByFilter = (currentSentByFilter) => this.setState({currentSentByFilter});
+  setSentByFilter = currentSentByFilter => this.setState({currentSentByFilter});
 
   render() {
     return (

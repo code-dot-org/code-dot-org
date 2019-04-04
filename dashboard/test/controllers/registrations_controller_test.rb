@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 
 ################################################################################
@@ -27,11 +26,6 @@ class RegistrationsControllerTest < ActionController::TestCase
       age: '13',
       user_type: 'student'
     }
-  end
-
-  test "new" do
-    get :new
-    assert_response :success
   end
 
   test "update: returns bad_request if user param is nil" do
@@ -67,7 +61,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: does not update user password if user cannot edit password" do
-    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    teacher = create(:teacher, password: 'mypassword')
     sign_in teacher
 
     User.any_instance.stubs(:can_edit_password?).returns(false)
@@ -80,7 +74,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: does not update user password if password is incorrect" do
-    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    teacher = create(:teacher, password: 'mypassword')
     sign_in teacher
 
     put :update, params: {user: {current_password: 'notmypassword', password: 'newpassword', password_confirmation: 'newpassword'}}
@@ -102,7 +96,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: updates user password if password is correct" do
-    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    teacher = create(:teacher, password: 'mypassword')
     sign_in teacher
 
     put :update, params: {user: {current_password: 'mypassword', password: 'newpassword', password_confirmation: 'newpassword'}}
@@ -112,7 +106,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: teacher without a password can add a password" do
-    teacher = create :teacher, :with_migrated_google_authentication_option, encrypted_password: nil
+    teacher = create :teacher, :with_google_authentication_option, encrypted_password: nil
     teacher.update_attribute(:password, nil)
     sign_in teacher
 
@@ -123,7 +117,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: student without a password can add a password" do
-    student = create :student, :with_migrated_google_authentication_option, encrypted_password: nil
+    student = create :student, :with_google_authentication_option, encrypted_password: nil
     student.update_attribute(:password, nil)
     sign_in student
 
@@ -192,7 +186,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
-      assert_nil assigns(:user).provider
+      assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email
       assert_equal User.hash_email('an@email.address'), assigns(:user).hashed_email
@@ -215,7 +209,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
-      assert_nil assigns(:user).provider
+      assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email
       assert_equal User.hash_email('an@email.address'), assigns(:user).hashed_email
@@ -407,34 +401,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert sign_in
     assert_equal 1, sign_in.sign_in_count
     assert_equal frozen_time, sign_in.sign_in_at
-  end
-
-  test "sign up with devise.user_attributes in session" do
-    # when someone logs in with oauth and we need additional
-    # information, devise saves the user attributes in the session and
-    # redirects to the sign up page
-
-    session['devise.user_attributes'] =
-      User.new(provider: 'facebook', email: 'email@facebook.xx', user_type: 'student').attributes
-
-    get :new
-
-    assert_equal 'email@facebook.xx', assigns(:user).email
-    assert_nil assigns(:user).username
-    assert_nil assigns(:user).age
-
-    assert_equal ['Display Name is required', "Age is required"],
-      assigns(:user).errors.full_messages
-  end
-
-  test 'deleting sets deleted at on a user' do
-    user = create :user
-    sign_in user
-
-    delete :destroy
-
-    user = user.reload
-    assert user.deleted?
   end
 
   test "display name edit field absent for picture account" do

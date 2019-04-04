@@ -174,7 +174,7 @@
     "hide_view_data_button": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Combining Filters\r\n\r\nSometimes you'll need to filter more than one pixel to get the color change that you want.\r\n\r\n# Do This\r\nCheck out Mario, he's lookin' pretty good in his red hat and overalls. Your job it to set up the filter so he looks like Luigi, with a green hat and overalls.\r\n\r\n* First, determine which bit(s) needs to change in order to the change you want\r\n* Once you've figured out which bit needs changing, set the filter dropdown appropriately\r\n* After you've got the filter working so that, try to come up with other filters that change *only* his hat and overalls - how many different clothing colors can you come up with?\r\n\r\n_How many tries did it take you to find the right filter?_\r\n\r\n\r\n\r\n",
+    "long_instructions": "# Combining Filters\r\n\r\nSometimes you'll need to filter more than one pixel to get the color change that you want.\r\n\r\n# Do This\r\nCheck out Mario, he's lookin' pretty good in his red hat and overalls. Your job it to set up the filter so he looks like Luigi, with a green hat and overalls.\r\n\r\n* First, determine which bit(s) needs to change in order to the change you want\r\n* Once you've figured out which bit needs changing, set the filter dropdown appropriately\r\n* After you've got the filter working so that, try to come up with other filters that change *only* his hat and overalls - how many different clothing colors can you come up with?\r\n\r\n_How many tries did it take you to find the right filter?_\r\n\r\n\r\n\r\n",
     "contained_level_names": null
   },
   "published": true,

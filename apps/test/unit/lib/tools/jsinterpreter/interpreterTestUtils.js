@@ -1,13 +1,12 @@
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
-
 export function attachAssertToInterpreter(interpreter, scope, assertion) {
   interpreter.setProperty(
     scope,
     'assert',
     interpreter.createNativeFunction((truthy, message) => {
       if (truthy !== interpreter.TRUE) {
-        throw new Error("failed assertion: " + assertion);
+        throw new Error('failed assertion: ' + assertion);
       }
     })
   );
@@ -27,7 +26,13 @@ export function attachAssertToInterpreter(interpreter, scope, assertion) {
  * @param maxDepth - same as maxDepth param of marshalNativeToInterpreter
  * @returns void
  */
-export function makeAssertion(interpreter, assertion, nativeVar, nativeParentObj, maxDepth) {
+export function makeAssertion(
+  interpreter,
+  assertion,
+  nativeVar,
+  nativeParentObj,
+  maxDepth
+) {
   const assertingInterpreter = new CustomMarshalingInterpreter(
     assertion,
     interpreter.customMarshaler,
@@ -44,17 +49,29 @@ export function makeAssertion(interpreter, assertion, nativeVar, nativeParentObj
   assertingInterpreter.run();
 }
 
-export function makeAssertableObj(interpreter, nativeVar, nativeParentObj, maxDepth) {
+export function makeAssertableObj(
+  interpreter,
+  nativeVar,
+  nativeParentObj,
+  maxDepth
+) {
   const interpreterValue = interpreter.marshalNativeToInterpreter(
     nativeVar,
     nativeParentObj,
     maxDepth
   );
   return {
-    assert: assertion => makeAssertion(interpreter, assertion, nativeVar, nativeParentObj, maxDepth),
+    assert: assertion =>
+      makeAssertion(
+        interpreter,
+        assertion,
+        nativeVar,
+        nativeParentObj,
+        maxDepth
+      ),
     interpreterValue,
     nativeValue: nativeVar,
     nativeParentObj,
-    maxDepth,
+    maxDepth
   };
 }

@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Assessment Question 3",
-    "markdown_instructions": "Why do multiple websites at your school and the computers in your classroom all have IP addresses that start with the same two sets of numbers?\n",
+    "long_instructions": "Why do multiple websites at your school and the computers in your classroom all have IP addresses that start with the same two sets of numbers?\n",
     "encrypted_solution": "ziUXJs2dh7UJWNnn06Tgv/7Kdh7UiRw6LlCf6M34O8vpiWcQbuy2WLL5lBR7\nPdrKIZylyqTKaa3wD6yR2JNyQplZ8dR3lrQWKrhoK6QpsSFrAFTvJouZSPTI\nmSZC4AqS\n",
     "skip_dialog": true,
     "skip_sound": true

@@ -90,6 +90,10 @@ html, body, #map-canvas {
   white-space: pre-line;
 }
 
+.entry-detail {
+  max-width: 300px;
+}
+
 .contact-trigger, .scroll-to-top {
   cursor: pointer;
 }

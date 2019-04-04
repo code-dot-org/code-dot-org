@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_28_CSP_2_2_3'
+wrong 'Higher level languages utilize abstraction to hide details of the CPU instructions from the programmer.'
+wrong 'A computer chip is often an abstraction of many lower level logic gates and memory combined to perform a specific function.'
+right 'Binary sequences are abstractions which are used to represent colors in an image.'
+wrong 'Smaller programs and apps can be combined into large programs to create higher level abstractions.'
+markdown <<MARKDOWN
+Which of the following statements is NOT correct regarding abstraction as applied to computer science:
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.2.3** and Essential Knowledge statements: **2.2.3G**
+<hr>
+ (A) This option is incorrect. Higher level languages DO hide the details of lower level languages from the programmer.  A CPU instruction set is considered a low-level language.
+
+<hr>
+ (B) This option is incorrect. Many computer chips combiner thousands of logic gates and memory to perform functions.
+
+<hr>
+ (C) This option is correct. Pixels are abstractions of RGB data which are in turn abstractions of binary sequences which are one of the lowest levels of abstraction.
+
+<hr>
+ (D) This option is incorrect. Smaller programs, apps, functions, and procedures are often combined to make larger programs making this statement true.
+
+MARKDOWN

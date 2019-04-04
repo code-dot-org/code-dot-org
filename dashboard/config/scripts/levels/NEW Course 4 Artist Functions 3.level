@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Here is a new type of Block. It is called a `function` block. Click \"edit\" then fill it with the code for drawing a square with 100 pixel sides. \r\n\r\nWhen you're done editing the function, click \"Close\" to go back to your program.",
+    "short_instructions": "Here is a new type of Block. It is called a `function` block. Click \"edit\" then fill it with the code for drawing a square with 100 pixel sides. \r\n\r\nWhen you're done editing the function, click \"Close\" to go back to your program.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -21,7 +21,7 @@
     "free_play": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Here is a new type of Block. It is called a `function` block. Click \"edit\" then fill it with the code for drawing a square with 100 pixel sides. \r\n\r\nWhen you're done editing the function, click \"Close\" to go back to your program.",
+    "long_instructions": "Here is a new type of Block. It is called a `function` block. Click \"edit\" then fill it with the code for drawing a square with 100 pixel sides. \r\n\r\nWhen you're done editing the function, click \"Close\" to go back to your program.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

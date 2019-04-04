@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "You've officially become a master artist! Create a winter wonderland.",
+    "short_instructions": "You've officially become a master artist! Create a winter wonderland.",
     "x": "200",
     "y": "200",
     "start_direction": "180",
@@ -21,7 +21,7 @@
     "callout_json": "[\r\n  {\"localization_key\":\"snowflake_dropdown\",\"callout_text\":\"Use this drop-down to create different snowflakes!\",\"element_id\":\"#create_snowflake_qtip > .blocklyEditableText\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "embed": "false",
     "min_workspace_height": "1200",
-    "markdown_instructions": "You've officially become a master artist! Create a winter wonderland.",
+    "long_instructions": "You've officially become a master artist! Create a winter wonderland.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

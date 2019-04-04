@@ -52,7 +52,6 @@ nl:
         bevestigingslink om je nieuwe e-mailadres te bevestigen.
       updated: Je account is met succes bijgewerkt.
     sessions:
-      signed_in: ''
       signed_out: Je bent uitgelogd.
     unlocks:
       send_instructions: Binnen een paar minuten krijg je een email met uitleg over

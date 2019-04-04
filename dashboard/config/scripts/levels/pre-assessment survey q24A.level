@@ -10,7 +10,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "What computer science skills do you use in your everyday life? "
+    "long_instructions": "What computer science skills do you use in your everyday life? "
   },
   "published": true,
   "notes": "",

@@ -134,7 +134,9 @@ describe('ChangeUserTypeController', () => {
 
       expect(dropdown.prop('disabled')).to.be.false;
       expect(button.prop('disabled')).to.be.false;
-      expect(status.text()).to.equal(i18n.changeUserTypeModal_unexpectedError());
+      expect(status.text()).to.equal(
+        i18n.changeUserTypeModal_unexpectedError()
+      );
     });
   });
 
@@ -142,7 +144,6 @@ describe('ChangeUserTypeController', () => {
     form = $(`
       <form>
         <input type="hidden" id="change-user-type_user_email"/>
-        <input type="hidden" id="change-user-type_user_hashed_email"/>
         <input type="hidden" id="change-user-type_user_email_preference_opt_in"/>
         <select id="change-user-type_user_user_type">
           <option value="student">Student</option>

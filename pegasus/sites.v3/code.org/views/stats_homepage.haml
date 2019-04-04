@@ -1,9 +1,10 @@
 :ruby
-  student_accounts_percent = "25%"
-  female_students = "13M"
-  teacher_users = "800K"
-  world_students_hoc_percent = "10%"
-  states_policy_change = "44"
+  student_accounts_percent = "30%"
+  female_students = "15M"
+  project_count = fetch_project_count['rounded_down_millions']
+  project_count = project_count.to_s + "M"
+  teacher_users = "1M"
+  states_policy_change = "48"
 
   top_statistic_number = student_accounts_percent
   top_statistic_phrase = "of U.S. students have accounts on Code.org"
@@ -11,18 +12,18 @@
   statistics = [
     {
       number: female_students,
-      phrase: "of our students identify as female",
+      phrase: "of our students are young women",
       link: '/diversity'
+    },
+    {
+      number: project_count,
+      phrase: "projects created on Code.org",
+      link: CDO.studio_url('/projects/public')
     },
     {
       number: teacher_users,
       phrase: "teachers use Code.org",
       link: CDO.studio_url('/courses?view=teacher')
-    },
-    {
-      number: world_students_hoc_percent,
-      phrase: "of the world's students have tried the Hour of Code",
-      link: 'https://hourofcode.com'
     },
     {
       number: states_policy_change,

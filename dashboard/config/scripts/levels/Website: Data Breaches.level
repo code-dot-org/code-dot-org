@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 37,
   "properties": {
-    "markdown_instructions": "## Website: Data Breaches\r\n\r\nIn lesson 3 students begin to explore the types of security breakdowns that have happened over time, and consider what information is actually out there about them. The lessons starts with an exploration of an interactive data visualization website, linked below: ",
+    "long_instructions": "## Website: Data Breaches\r\n\r\nIn lesson 3 students begin to explore the types of security breakdowns that have happened over time, and consider what information is actually out there about them. The lessons starts with an exploration of an interactive data visualization website, linked below: ",
     "instructions_important": "false",
     "link_title": "World's Biggest Data Breaches",
     "url": "http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/"

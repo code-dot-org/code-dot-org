@@ -1,0 +1,245 @@
+---
+ur:
+  data:
+    blocks:
+      Dancelab_changeMoveEachLR:
+        options:
+          MOVE:
+            MOVES.Rest: کوئی بھی نہیں
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: کوئی بھی نہیں
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveEachLR:
+        options:
+          MOVE:
+            MOVES.Rest: کوئی بھی نہیں
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: کوئی بھی نہیں
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: کوئی بھی نہیں
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': بےترتیب
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': بےترتیب
+      Dancelab_randomColor:
+        text: بے ترتیب رنگ
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': کوئی بھی نہیں
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': کوئی بھی نہیں
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': عام
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': عام
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': کوئی بھی نہیں
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': کوئی بھی نہیں
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"space"': خلاء
+            '"x"': x
+            '"y"': وائے
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': کب
+            '"while"': جب تک
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'True'
+            'false': غلط
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': کب
+            '"while"': جب تک
+          KEY:
+            '"space"': خلاء
+            '"x"': x
+            '"y"': وائے
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': بےترتیب
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": بےترتیب
+      gamelab_randColor:
+        text: بے ترتیب رنگ
+      gamelab_randomColor:
+        text: بے ترتیب رنگ
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شہر
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': بےترتیب
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': کب
+            '"while"': جب تک
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"space"': خلاء
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"space"': خلاء
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: کوئی بھی نہیں
+      Mikelab_randomColor:
+        text: بے ترتیب رنگ
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شہر
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"w"': مغرب
+            '"a"': ایے
+            '"s"': جنوب
+            '"d"': ڈی
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"w"': مغرب
+            '"a"': ایے
+            '"s"': جنوب
+            '"d"': ڈی
+      RyanLab_moveForward:
+        text: آگے چلیں
+      RyanLab_turnLeft:
+        text: بائیں طرف مڑیں
+      RyanLab_turnRight:
+        text: دائیں طرف مڑیں
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': کب
+            '"while"': جب تک
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': کب
+            '"while"': جب تک
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': کب
+            '"while"': جب تک
+          KEY:
+            '"space"': خلاء
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شہر
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': 'True'
+            '"false"': غلط
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': ہمیشہ کے لئے
+      binary_whenKey:
+        options:
+          KEY:
+            '"space"': خلاء
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": آگے
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": ریت
+            "'planksOak'": شاہ بلوط planks
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": ریت
+      craft_moveForward:
+        text: آگے چلیں
+      craft_placeTorch:
+        text: مشعل یہاں رکہیں

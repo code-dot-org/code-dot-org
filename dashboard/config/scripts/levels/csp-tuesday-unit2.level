@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Tuesday Unit Reflection\r\n\r\n## Technology Issues\r\n\r\nMany classes have technology issues at the start of the year (computers are not ready yet, etc). How would you recommend a teacher approaches the first unit if they are having issues with technology access?\r\n",
+    "long_instructions": "# Tuesday Unit Reflection\r\n\r\n## Technology Issues\r\n\r\nMany classes have technology issues at the start of the year (computers are not ready yet, etc). How would you recommend a teacher approaches the first unit if they are having issues with technology access?\r\n",
     "instructions_important": "false",
     "display_name": "Unit Reflection",
     "allow_user_uploads": "false",

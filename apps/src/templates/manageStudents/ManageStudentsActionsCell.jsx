@@ -1,25 +1,29 @@
-import React, {Component, PropTypes} from 'react';
-import QuickActionsCell from "../tables/QuickActionsCell";
-import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
-import color from "../../util/color";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import QuickActionsCell from '../tables/QuickActionsCell';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import color from '../../util/color';
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
-import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudents, RowType} from './manageStudentsRedux';
+import {
+  startEditingStudent,
+  cancelEditingStudent,
+  removeStudent,
+  saveStudent,
+  addStudents,
+  RowType
+} from './manageStudentsRedux';
 import {connect} from 'react-redux';
-import BaseDialog from '../BaseDialog';
-import DialogFooter from "../teacherDashboard/DialogFooter";
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
 import i18n from '@cdo/locale';
-import experiments from '../../util/experiments';
-import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '../../lib/util/urlHelpers';
 
 const styles = {
   xIcon: {
-    paddingRight: 5,
+    paddingRight: 5
   },
   saveButton: {
-    marginRight: 5,
+    marginRight: 5
   }
 };
 
@@ -40,28 +44,30 @@ class ManageStudentActionsCell extends Component {
     cancelEditingStudent: PropTypes.func,
     removeStudent: PropTypes.func,
     saveStudent: PropTypes.func,
-    addStudent: PropTypes.func,
+    addStudent: PropTypes.func
   };
 
   state = {
     deleting: false,
-    requestInProgress: false,
+    requestInProgress: false
   };
 
   onConfirmDelete = () => {
     const {removeStudent, id, sectionId} = this.props;
     this.setState({requestInProgress: true});
     $.ajax({
-        url: `/dashboardapi/sections/${sectionId}/students/${id}/remove`,
-        method: 'POST',
-    }).done(() => {
+      url: `/dashboardapi/sections/${sectionId}/students/${id}/remove`,
+      method: 'POST'
+    })
+      .done(() => {
         removeStudent(id);
-    }).fail((jqXhr, status) => {
+      })
+      .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
         // matches the experience we got in angular
         alert(i18n.unexpectedError());
         console.error(status);
-    });
+      });
   };
 
   onRequestDelete = () => {
@@ -98,32 +104,26 @@ class ManageStudentActionsCell extends Component {
 
   render() {
     const {rowType, isEditing, loginType} = this.props;
-    const canDelete = [SectionLoginType.word, SectionLoginType.picture, SectionLoginType.email].includes(loginType);
-    const accountDeletionNewFlow = experiments.isEnabled(experiments.ACCOUNT_DELETION_NEW_FLOW);
+    const canDelete = [
+      SectionLoginType.word,
+      SectionLoginType.picture,
+      SectionLoginType.email
+    ].includes(loginType);
     return (
       <div>
-        {!isEditing &&
+        {!isEditing && (
           <QuickActionsCell>
-            <PopUpMenu.Item
-              onClick={this.onEdit}
-            >
-              {i18n.edit()}
-            </PopUpMenu.Item>
-            {canDelete &&
-              <MenuBreak/>
-            }
-            {canDelete &&
-              <PopUpMenu.Item
-                onClick={this.onRequestDelete}
-                color={color.red}
-              >
-                <FontAwesome icon="times-circle" style={styles.xIcon}/>
+            <PopUpMenu.Item onClick={this.onEdit}>{i18n.edit()}</PopUpMenu.Item>
+            {canDelete && <MenuBreak />}
+            {canDelete && (
+              <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
+                <FontAwesome icon="times-circle" style={styles.xIcon} />
                 {i18n.removeStudent()}
               </PopUpMenu.Item>
-            }
+            )}
           </QuickActionsCell>
-        }
-        {(isEditing && (rowType !== RowType.ADD)) &&
+        )}
+        {isEditing && rowType !== RowType.ADD && (
           <div>
             <Button
               onClick={this.onSave}
@@ -138,8 +138,8 @@ class ManageStudentActionsCell extends Component {
               text={i18n.cancel()}
             />
           </div>
-        }
-        {(rowType === RowType.ADD) &&
+        )}
+        {rowType === RowType.ADD && (
           <div>
             <Button
               onClick={this.onAdd}
@@ -148,48 +148,16 @@ class ManageStudentActionsCell extends Component {
               disabled={this.props.isSaving || this.props.disableSaving}
             />
           </div>
-        }
-        {accountDeletionNewFlow &&
-          <ConfirmRemoveStudentDialog
-            isOpen={this.state.deleting}
-            disabled={this.state.requestInProgress}
-            studentName={this.props.studentName}
-            hasEverSignedIn={this.props.hasEverSignedIn}
-            dependsOnThisSectionForLogin={this.props.dependsOnThisSectionForLogin}
-            onConfirm={this.onConfirmDelete}
-            onCancel={this.onCancelDelete}
-          />
-        }
-        {!accountDeletionNewFlow &&
-          <BaseDialog
-            useUpdatedStyles
-            uncloseable
-            isOpen={this.state.deleting}
-            style={{paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}
-          >
-            <h2 style={styles.heading}>{i18n.removeStudentHeader()}</h2>
-            <div>
-              {i18n.removeStudentConfirm1() + ' '}
-              <a target="_blank" href={ADD_A_PERSONAL_LOGIN_HELP_URL}>
-                {i18n.removeStudentConfirm2()}
-              </a>
-              {' ' + i18n.removeStudentConfirm3()}
-            </div>
-            <DialogFooter>
-              <Button
-                text={i18n.dialogCancel()}
-                onClick={this.onCancelDelete}
-                color={Button.ButtonColor.gray}
-              />
-              <Button
-                text={i18n.removeStudent()}
-                onClick={this.onConfirmDelete}
-                color={Button.ButtonColor.red}
-                disabled={this.state.requestInProgress}
-              />
-            </DialogFooter>
-          </BaseDialog>
-        }
+        )}
+        <ConfirmRemoveStudentDialog
+          isOpen={this.state.deleting}
+          disabled={this.state.requestInProgress}
+          studentName={this.props.studentName}
+          hasEverSignedIn={this.props.hasEverSignedIn}
+          dependsOnThisSectionForLogin={this.props.dependsOnThisSectionForLogin}
+          onConfirm={this.onConfirmDelete}
+          onCancel={this.onCancelDelete}
+        />
       </div>
     );
   }
@@ -197,20 +165,23 @@ class ManageStudentActionsCell extends Component {
 
 export const UnconnectedManageStudentActionsCell = ManageStudentActionsCell;
 
-export default connect(state => ({}), dispatch => ({
-  startEditingStudent(id) {
-    dispatch(startEditingStudent(id));
-  },
-  cancelEditingStudent(id) {
-    dispatch(cancelEditingStudent(id));
-  },
-  removeStudent(id) {
-    dispatch(removeStudent(id));
-  },
-  saveStudent(id) {
-    dispatch(saveStudent(id));
-  },
-  addStudent(id) {
-    dispatch(addStudents([id]));
-  },
-}))(ManageStudentActionsCell);
+export default connect(
+  state => ({}),
+  dispatch => ({
+    startEditingStudent(id) {
+      dispatch(startEditingStudent(id));
+    },
+    cancelEditingStudent(id) {
+      dispatch(cancelEditingStudent(id));
+    },
+    removeStudent(id) {
+      dispatch(removeStudent(id));
+    },
+    saveStudent(id) {
+      dispatch(saveStudent(id));
+    },
+    addStudent(id) {
+      dispatch(addStudents([id]));
+    }
+  })
+)(ManageStudentActionsCell);

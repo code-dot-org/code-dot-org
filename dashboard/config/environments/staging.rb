@@ -71,10 +71,6 @@ Dashboard::Application.configure do
   # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails
   config.action_mailer.show_previews = true
 
-  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
-  # the I18n.default_locale when a translation can not be found).
-  config.i18n.fallbacks = true
-
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
@@ -86,6 +82,12 @@ Dashboard::Application.configure do
 
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = true
+
+  # Log condensed lines to syslog for centralized logging.
+  config.lograge.enabled = true
+  config.lograge.formatter = Lograge::Formatters::Cee.new
+  require 'syslog/logger'
+  config.logger = Syslog::Logger.new 'dashboard', Syslog::LOG_LOCAL0
 
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "You're doing great! Let's use your new \"Draw a line of squares\" function to draw a Square shape. Remember each square is 40 pixels in length.",
+    "short_instructions": "You're doing great! Let's use your new \"Draw a line of squares\" function to draw a Square shape. Remember each square is 40 pixels in length.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".8",

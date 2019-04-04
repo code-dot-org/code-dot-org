@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Putting Color on the Screen\r\n\r\nNow that your sensor data is in a scale that works for RGB, you can go about setting the screen color.\r\n\r\n# Do This\r\n\r\n* Add a `setProperty()` block and set it to change the \"background-color\" property of \"screen1\".\r\n* Add an `rgb()` block to the last parameter of `setProperty()`.\r\n* Use the three color variables you created as inputs to the `rgb()` block.",
+    "long_instructions": "# Putting Color on the Screen\r\n\r\nNow that your sensor data is in a scale that works for RGB, you can go about setting the screen color.\r\n\r\n# Do This\r\n\r\n* Add a `setProperty()` block and set it to change the \"background-color\" property of \"screen1\".\r\n* Add an `rgb()` block to the last parameter of `setProperty()`.\r\n* Use the three color variables you created as inputs to the `rgb()` block.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

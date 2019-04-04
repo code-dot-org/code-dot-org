@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-02-21T20:03:08.000Z",
   "level_num": "custom",
   "user_id": 1,
@@ -41,6 +41,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

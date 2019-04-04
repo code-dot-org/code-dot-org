@@ -32,4 +32,4 @@ Take the lead to expand computer science education in your country! As a Code.or
 
 ## Application Process
 
-Fill out the International Partner Program Application using [this form](https://goo.gl/forms/0WD9AJpCZr8roK5L2). We will review the first round of applications on January 8th, 2018. Please submit your application before this date.
+Fill out the International Partner Program Application using [this form](https://goo.gl/forms/0WD9AJpCZr8roK5L2). We will review the new applications in February of each year. Please submit your application before then.

@@ -1,0 +1,40 @@
+{
+  "category": "While Events",
+  "config": {
+    "color": [
+      322,
+      0.9,
+      0.95
+    ],
+    "func": "whileKeyPressed",
+    "blockText": "while {KEY} stays pressed",
+    "args": [
+      {
+        "name": "KEY",
+        "options": [
+          [
+            "up arrow",
+            "\"up\""
+          ],
+          [
+            "down arrow",
+            "\"down\""
+          ],
+          [
+            "left arrow",
+            "\"left\""
+          ],
+          [
+            "right arrow",
+            "\"right\""
+          ],
+          [
+            "spacebar",
+            "\"space\""
+          ]
+        ]
+      }
+    ],
+    "eventLoopBlock": true
+  }
+}

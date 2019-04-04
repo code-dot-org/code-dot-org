@@ -1,6 +1,7 @@
-import React, {PropTypes} from 'react';
-import color from "../../util/color";
-import i18n from "@cdo/locale";
+import PropTypes from 'prop-types';
+import React from 'react';
+import color from '../../util/color';
+import i18n from '@cdo/locale';
 import $ from 'jquery';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
@@ -23,7 +24,8 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    height: 18
+    height: 18,
+    boxSizing: 'content-box'
   },
   titleLink: {
     color: color.charcoal
@@ -58,20 +60,28 @@ const styles = {
     alignItems: 'center',
     overflow: 'hidden'
   },
-  image:{
+  fullThumbnail: {
+    height: 214
+  },
+  image: {
     flexShrink: 0,
-    minWidth: '100%',
-    minHeight: '100%'
+    width: '100%',
+    weight: '100%'
   },
   bold: {
     fontFamily: '"Gotham 5r", sans-serif'
   },
+  noTime: {
+    paddingBottom: 10
+  }
 };
 
 export default class ProjectCard extends React.Component {
   static propTypes = {
     projectData: PropTypes.object.isRequired,
     currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
+    showFullThumbnail: PropTypes.bool,
+    isDetailView: PropTypes.bool
   };
 
   getLastModifiedTimestamp(timestamp) {
@@ -88,16 +98,27 @@ export default class ProjectCard extends React.Component {
   }
 
   render() {
-    const { projectData, currentGallery } = this.props;
-    const { type, channel } = this.props.projectData;
+    const {projectData, currentGallery, isDetailView} = this.props;
+    const {type, channel} = this.props.projectData;
     const isPersonalGallery = currentGallery === 'personal';
     const isPublicGallery = currentGallery === 'public';
-    const url = isPersonalGallery ? `/projects/${type}/${channel}/edit` : `/projects/${type}/${channel}`;
+    const url = isPersonalGallery
+      ? `/projects/${type}/${channel}/edit`
+      : `/projects/${type}/${channel}`;
+
+    const thumbnailStyle = styles.thumbnail;
+    if (this.props.showFullThumbnail) {
+      Object.assign(thumbnailStyle, styles.fullThumbnail);
+    }
+
+    const shouldShowPublishedAt =
+      isPublicGallery && isDetailView && projectData.publishedAt;
+    const noTimeOnCardStyle = shouldShowPublishedAt ? {} : styles.noTime;
 
     return (
       <div className="project_card">
         <div style={styles.card}>
-          <div style={styles.thumbnail} >
+          <div style={thumbnailStyle}>
             <a
               href={url}
               style={{width: '100%'}}
@@ -116,12 +137,12 @@ export default class ProjectCard extends React.Component {
           >
             <div
               style={styles.title}
-              className="ui-project-name"
+              className={`ui-project-name-${projectData.type}`}
             >
               {projectData.name}
             </div>
           </a>
-          <span>
+          <div style={noTimeOnCardStyle}>
             {isPublicGallery && projectData.studentName && (
               <span style={styles.firstInitial}>
                 {i18n.by()}:&nbsp;
@@ -134,8 +155,8 @@ export default class ProjectCard extends React.Component {
                 <span style={styles.bold}>{projectData.studentAgeRange}</span>
               </span>
             )}
-          </span>
-          {isPublicGallery && (
+          </div>
+          {shouldShowPublishedAt && (
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
               <time
@@ -147,7 +168,7 @@ export default class ProjectCard extends React.Component {
               </time>
             </div>
           )}
-          {isPersonalGallery && (
+          {isPersonalGallery && projectData.updatedAt && (
             <div style={styles.lastEdit}>
               {i18n.projectLastUpdated()}:&nbsp;
               <time

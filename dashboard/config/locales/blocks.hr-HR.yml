@@ -1,0 +1,437 @@
+---
+hr:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekunde
+      Dancelab_changeMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_doMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekunde
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': slučajno odabran
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': slučajno odabran
+      Dancelab_randomColor:
+        text: nasumično odabrana boja
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': gore
+            '"left"': lijevo
+            '"down"': dolje
+            '"right"': desno
+            '"space"': svemir
+            '"x"': x
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': dok
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': točno
+            'false': netočno
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': dok
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+            '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': slučajno odabran
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": slučajno odabran
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': desno
+            '"left"': lijevo
+      gamelab_randColor:
+        text: nasumično odabrana boja
+      gamelab_randomColor:
+        text: nasumično odabrana boja
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': grad
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': slučajno odabran
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': dok
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': desno
+            '"left"': lijevo
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": gore
+            "'down'": dolje
+            "'left'": lijevo
+            "'right'": desno
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Mikelab_randomColor:
+        text: nasumično odabrana boja
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': grad
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': desno
+            '"left"': lijevo
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': strelica gore
+            '"down"': strelica dolje
+            '"left"': strelica lijevo
+            '"right"': strelica desno
+            '"w"': Zapad
+            '"a"': A
+            '"s"': Jug
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': strelica gore
+            '"down"': strelica dolje
+            '"left"': strelica lijevo
+            '"right"': strelica desno
+            '"w"': Zapad
+            '"a"': A
+            '"s"': Jug
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': strelica gore
+            '"down"': strelica dolje
+            '"left"': strelica lijevo
+            '"right"': strelica desno
+      RyanLab_moveForward:
+        text: idi naprijed
+      RyanLab_turnLeft:
+        text: okreni ulijevo
+      RyanLab_turnRight:
+        text: okreni udesno
+      aalab_changePropByFlexible:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': dok
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': dok
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': dok
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': grad
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': točno
+            '"false"': netočno
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': zauvijek
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': prikaži
+            '"hide"': sakrij
+      binary_move:
+        options:
+          DIR:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": naprijed
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": pijesak
+            "'planksOak'": daska hrasta
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": pijesak
+      craft_moveForward:
+        text: idi naprijed
+      craft_placeTorch:
+        text: postavi baklju

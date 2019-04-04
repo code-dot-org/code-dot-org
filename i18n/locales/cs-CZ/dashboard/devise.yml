@@ -39,7 +39,6 @@ cs:
       update_needs_confirmation: "Účet jsi úspěšně aktualizoval, ale potřebujeme ověřit tvou novou emailovou adresu., Zkontroluj svůj email a klepni na potvrzovací odkaz, prosím, aby jsi dokončil změnu své nové emailové adresy."
       updated: "Tvůj účet byl úspěšně aktualizován."
     sessions:
-      signed_in: ""
       signed_out: "Úspěšně odhlášen."
     unlocks:
       send_instructions: "Obdržíš do několika minut email s pokyny, jak odemknout svůj účet."

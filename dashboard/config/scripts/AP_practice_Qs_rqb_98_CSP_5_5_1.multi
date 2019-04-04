@@ -1,0 +1,27 @@
+name 'AP_practice_Qs_rqb_98_CSP_5_5_1'
+wrong 'I only'
+wrong 'II only'
+right 'II and III'
+wrong 'I and II'
+markdown <<MARKDOWN
+Which of the following statements are true about using a low-level programming language instead of a high-level programming language?
+
+   I. Programs written in a low-level language are generally easier for people to read than programs written in a high-level language.
+  II. A low-level language provides programmers with less abstractions than a high level language.
+ III. Programs written in a low-level language are generally harder to debug than programs written in a high-level program.
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **5.5.1** and Essential Knowledge statements: **5.5.1D**
+<hr>
+ (A) I is False. Low level languages are close to machine language and are harder for people to read.
+
+<hr>
+ (B) II is True. Low level language provides less or no abstraction from the hardware. High level language provides a high level of abstraction from the hardware
+
+<hr>
+ (C) Both II & III are True.
+
+<hr>
+ (D) I is False. Low level languages are close to machine language and are harder for people to read.
+
+MARKDOWN

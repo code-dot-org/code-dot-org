@@ -20,7 +20,11 @@ var NetSimGlobals = require('./NetSimGlobals');
  * @param {function} callbacks.encodingChangeCallback
  * @constructor
  */
-var NetSimMyDeviceTab = module.exports = function (rootDiv, runLoop, callbacks) {
+var NetSimMyDeviceTab = (module.exports = function(
+  rootDiv,
+  runLoop,
+  callbacks
+) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -90,40 +94,45 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, runLoop, callbacks) 
   this.encodingControl_ = null;
 
   this.render();
-};
+});
 
 /**
  * Fill the root div with new elements reflecting the current state
  */
-NetSimMyDeviceTab.prototype.render = function () {
+NetSimMyDeviceTab.prototype.render = function() {
   var levelConfig = NetSimGlobals.getLevelConfig();
 
-  var renderedMarkup = $(markup({
-    level: levelConfig
-  }));
+  var renderedMarkup = $(
+    markup({
+      level: levelConfig
+    })
+  );
   this.rootDiv_.html(renderedMarkup);
 
   if (levelConfig.showMetronome) {
     this.metronome_ = new NetSimMetronome(
-        this.rootDiv_.find('.metronome'),
-        this.runLoop_);
+      this.rootDiv_.find('.metronome'),
+      this.runLoop_
+    );
     this.metronome_.setFrequency(this.bitsPerSecond_);
   }
 
   if (levelConfig.showPulseRateSlider) {
     this.pulseRateControl_ = new NetSimPulseRateControl(
-        this.rootDiv_.find('.pulse-rate'),
-        1 / this.bitsPerSecond_,
-        function (secondsPerBit) {
-          this.bitRateChangeCallback_(1 / secondsPerBit);
-        }.bind(this));
+      this.rootDiv_.find('.pulse-rate'),
+      1 / this.bitsPerSecond_,
+      function(secondsPerBit) {
+        this.bitRateChangeCallback_(1 / secondsPerBit);
+      }.bind(this)
+    );
   }
 
   if (levelConfig.showBitRateControl) {
     this.bitRateControl_ = new NetSimBitRateControl(
-        this.rootDiv_.find('.bitrate'),
-        this.bitsPerSecond_,
-        this.bitRateChangeCallback_);
+      this.rootDiv_.find('.bitrate'),
+      this.bitsPerSecond_,
+      this.bitRateChangeCallback_
+    );
     if (levelConfig.lockBitRateControl) {
       this.bitRateControl_.disable();
     }
@@ -131,8 +140,9 @@ NetSimMyDeviceTab.prototype.render = function () {
 
   if (levelConfig.showChunkSizeControl) {
     this.chunkSizeControl_ = new NetSimChunkSizeControl(
-        this.rootDiv_.find('.chunk-size'),
-        this.chunkSizeSliderChangeCallback_);
+      this.rootDiv_.find('.chunk-size'),
+      this.chunkSizeSliderChangeCallback_
+    );
     if (levelConfig.lockChunkSizeControl) {
       this.chunkSizeControl_.disable();
     }
@@ -140,9 +150,10 @@ NetSimMyDeviceTab.prototype.render = function () {
 
   if (levelConfig.showEncodingControls.length > 0) {
     this.encodingControl_ = new NetSimEncodingControl(
-        this.rootDiv_.find('.encoding'),
-        levelConfig,
-        this.encodingChangeCallback_);
+      this.rootDiv_.find('.encoding'),
+      levelConfig,
+      this.encodingChangeCallback_
+    );
   }
 };
 
@@ -151,14 +162,14 @@ NetSimMyDeviceTab.prototype.render = function () {
  * @param {number} secondsPerPulse in seconds per pulse
  * @private
  */
-NetSimMyDeviceTab.prototype.pulseRateSliderChange_ = function (secondsPerPulse) {
+NetSimMyDeviceTab.prototype.pulseRateSliderChange_ = function(secondsPerPulse) {
   this.setBitRate(1 / secondsPerPulse);
 };
 
 /**
  * @param {number} bitsPerSecond
  */
-NetSimMyDeviceTab.prototype.setBitRate = function (bitsPerSecond) {
+NetSimMyDeviceTab.prototype.setBitRate = function(bitsPerSecond) {
   this.bitsPerSecond_ = bitsPerSecond;
 
   if (this.metronome_) {
@@ -178,7 +189,7 @@ NetSimMyDeviceTab.prototype.setBitRate = function (bitsPerSecond) {
  * Update the slider and its label to display the provided value.
  * @param {number} newChunkSize
  */
-NetSimMyDeviceTab.prototype.setChunkSize = function (newChunkSize) {
+NetSimMyDeviceTab.prototype.setChunkSize = function(newChunkSize) {
   if (this.chunkSizeControl_) {
     this.chunkSizeControl_.setValue(newChunkSize);
   }
@@ -187,7 +198,7 @@ NetSimMyDeviceTab.prototype.setChunkSize = function (newChunkSize) {
 /**
  * @param {EncodingType[]} newEncodings
  */
-NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
+NetSimMyDeviceTab.prototype.setEncodings = function(newEncodings) {
   if (this.encodingControl_) {
     this.encodingControl_.setEncodings(newEncodings);
   }

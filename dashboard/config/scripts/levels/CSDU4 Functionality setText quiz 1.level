@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "embed": "false",
-    "markdown_instructions": "# Making The Quiz App\r\n<img src=\"https://images.code.org/b87aef1a1fcd238590b2b866f11f47c7-image-1478035551794.15.03.png\" style=\"float:right; max-width: 200px;\">\r\nLet's look back at the quiz app example that we talked about earlier in this lesson. Recall that we proposed a single page that could serve three purposes:\r\n\r\n1. Display the question\r\n2. Show if the question was answered correctly\r\n3. Show if the question was answered incorrectly\r\n\r\n# Do This\r\n\r\nWe've already provided the screen for a single question. Before worrying about any code, you just need to set this up to ask a question.\r\n\r\n* Change the title to a question that you want to ask\r\n* Change the text of the two buttons to two potential answers to your question",
+    "long_instructions": "# Making The Quiz App\r\n<img src=\"https://images.code.org/b87aef1a1fcd238590b2b866f11f47c7-image-1478035551794.15.03.png\" style=\"float:right; max-width: 200px;\">\r\nLet's look back at the quiz app example that we talked about earlier in this lesson. Recall that we proposed a single page that could serve three purposes:\r\n\r\n1. Display the question\r\n2. Show if the question was answered correctly\r\n3. Show if the question was answered incorrectly\r\n\r\n# Do This\r\n\r\nWe've already provided the screen for a single question. Before worrying about any code, you just need to set this up to ask a question.\r\n\r\n* Change the title to a question that you want to ask\r\n* Change the text of the two buttons to two potential answers to your question",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

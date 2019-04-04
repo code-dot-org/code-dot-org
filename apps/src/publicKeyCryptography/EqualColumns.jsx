@@ -1,5 +1,6 @@
 /** @file Arranges child components as columns of equal width, filling available space */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Radium from 'radium';
 import {AnyChildren} from './types';
 
@@ -17,23 +18,22 @@ class EqualColumns extends React.Component {
     const childCount = React.Children.count(children);
     const outerColumnStyle = {
       float: 'left',
-      width: (100 / childCount) + '%',
+      width: 100 / childCount + '%'
     };
     return (
       <div>
         {React.Children.map(this.props.children, (child, index) => {
           const innerColumnStyle = {
-            marginLeft: (index > 0) && (intercolumnarDistance / 2),
-            marginRight: (index < childCount - 1) && (intercolumnarDistance / 2)
+            marginLeft: index > 0 && intercolumnarDistance / 2,
+            marginRight: index < childCount - 1 && intercolumnarDistance / 2
           };
           return (
             <div style={outerColumnStyle}>
-              <div style={innerColumnStyle}>
-                {child}
-              </div>
-            </div>);
+              <div style={innerColumnStyle}>{child}</div>
+            </div>
+          );
         })}
-        <div style={{clear:'both'}}/>
+        <div style={{clear: 'both'}} />
       </div>
     );
   }

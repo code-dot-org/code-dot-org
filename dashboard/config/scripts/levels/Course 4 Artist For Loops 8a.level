@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Just one little change to the code from the last image can create this image. Can you figure out what that change is?",
+    "short_instructions": "Just one little change to the code from the last image can create this image. Can you figure out what that change is?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Just one little change to the code from the last image can create this image. Can you figure out what that change is?",
+    "long_instructions": "Just one little change to the code from the last image can create this image. Can you figure out what that change is?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "I still need a story for this puzzle",
+    "short_instructions": "I still need a story for this puzzle",
     "x": "325",
     "y": "220",
     "start_direction": "270",

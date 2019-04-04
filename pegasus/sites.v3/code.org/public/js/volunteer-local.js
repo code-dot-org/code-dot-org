@@ -1,8 +1,11 @@
-/* global google, Maplace */
+/* global Maplace */
+/* exported sendEmail */
 
 var gmap;
 var gmap_loc;
 var selectize;
+
+var firstRetrievalDone = false;
 
 $(document).ready(function () {
   initializeMap();
@@ -10,10 +13,10 @@ $(document).ready(function () {
 });
 
 $(function () {
-  selectize = $('#volunteer-search-facets select').selectize();
+  selectize = $('#volunteer-search-facets select').selectize({plugins: ["remove_button"]});
 
   $("#location").geocomplete()
-    .bind("geocode:result", function (event, result){
+    .bind("geocode:result", function (event, result) {
       var loc = result.geometry.location;
       gmap_loc = loc.lat() + ',' + loc.lng();
       resetFacets();
@@ -34,20 +37,6 @@ function initializeMap() {
 
   var params = getParams(form_data);
   sendQuery(params);
-}
-
-function getLatLng(address) {
-  var geocoder = new google.maps.Geocoder();
-
-  geocoder.geocode({'address': address}, function (results, status) {
-    if (status === google.maps.GeocoderStatus.OK) {
-      var loc;
-      loc = results[0].geometry.location;
-      gmap_loc = loc.d + ',' + loc.e;
-    } else {
-      displayQueryError();
-    }
-  });
 }
 
 function getParams(form_data) {
@@ -103,10 +92,8 @@ function getParams(form_data) {
 
 function sendQuery(params) {
   $.post('/forms/VolunteerEngineerSubmission2015/query', $.param(params), function (response) {
-    var results = JSON.parse(response); // Convert the JSON string to a JavaScript object.
-    var locations = getLocations(results);
+    var locations = getLocations(response);
     updateResults(locations);
-    updateFacets(results);
   }).fail(displayQueryError);
 }
 
@@ -115,6 +102,16 @@ function updateResults(locations) {
     $('#controls').html('');
   } else {
     displayNoResults();
+  }
+
+  // First retrieval shows pins across the entire US.  Subsequent retrievals
+  // show pins much closer to a specified location.  For this reason, we don't
+  // want to show the filter options at first, but only after a location has
+  // been specified by the user.
+  if (firstRetrievalDone) {
+    $('.filter-options').fadeIn();
+  } else {
+    firstRetrievalDone = true;
   }
 
   loadMap(locations);
@@ -160,10 +157,6 @@ function resetFacets() {
     select.selectize.clear();
     select.selectize.refreshOptions(false);
   });
-}
-
-function updateFacets(results) {
-  var facet_fields = results.facet_counts.facet_fields;
 }
 
 function displayNoResults() {
@@ -216,7 +209,7 @@ function compileHTML(index, location) {
   var line;
 
   // Compile HTML.
-  var html = '<h3>' + location.name_s + '</h3>';
+  var html = '<h3 class="entry-detail">' + location.name_s + '</h3>';
 
   if (location.company_s) {
     line = location.company_s;
@@ -261,7 +254,7 @@ function compileHTML(index, location) {
   }
 
   $.each(lines, function (key, field) {
-    html += '<div class="profile-detail">' + field + '</div>';
+    html += '<div class="profile-detail entry-detail">' + field + '</div>';
   });
 
   return html;
@@ -283,6 +276,7 @@ function setContactTrigger(index, location, marker) {
   });
 }
 
+/* eslint-disable no-unused-vars */
 function contactVolunteer() {
   $('#name').show();
   $('#volunteer-contact').show();
@@ -331,6 +325,7 @@ function sendEmail(data) {
 
   return false;
 }
+/* eslint-enable no-unused-vars */
 
 function adjustScroll(destination) {
   $('html, body').animate({

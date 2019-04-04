@@ -7,7 +7,7 @@
   "properties": {
     "title": "Impact of Computing",
     "height": "100",
-    "markdown_instructions": "\n#### What connections do you think might exist between the ideas covered in the videos you just watched and the units of CSP that you learned about earlier?\n",
+    "long_instructions": "\n#### What connections do you think might exist between the ideas covered in the videos you just watched and the units of CSP that you learned about earlier?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

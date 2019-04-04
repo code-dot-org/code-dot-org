@@ -3,295 +3,165 @@ is:
   data:
     function_names:
       x: x
-      details: details
-      draw eyebrow: draw eyebrow
-      draw pupil: draw pupil
+      details: nánar
+      draw eyebrow: teikna augabrún
+      draw pupil: teikna sjáaldur
       draw a circle: teikna hring
-      draw a car: draw a car
-      draw_rect: draw_rect
-      draw square: draw square
-      jump to controller top left: jump to controller top left
-      jump to middle: jump to middle
-      draw a button: draw a button
-      draw cord: draw cord
-      draw R pad: draw R pad
-      draw left leg: draw left leg
-      draw right leg: draw right leg
-      draw body and arms: draw body and arms
-      draw a head: draw a head
-      draw sitting stick figure: draw sitting stick figure
-      draw head: draw head
-      draw arms: draw arms
-      jump to neck: jump to neck
-      draw O: draw O
-      draw D: draw D
-      draw E: draw E
-      draw ear stems: draw ear stems
-      big gear: big gear
-      small gear: small gear
+      draw a car: teikna bíl
+      draw_rect: teikna_rétth
+      draw square: teikna ferning
+      jump to middle: hoppa að miðju
+      draw a button: teikna hnapp
+      draw cord: teikna streng
+      draw left leg: teikna vinstri fót
+      draw right leg: teikna hægri fót
+      draw body and arms: teikna búk og handleggi
+      draw a head: teikna höfuð
+      draw sitting stick figure: teikna sitjandi Óla prik
+      draw head: teikna höfuð
+      draw arms: teikna handleggi
+      jump to neck: hoppa að hálsi
+      draw O: teikna O
+      draw D: teikna D
+      draw E: teikna E
+      big gear: stórt tannhjól
+      small gear: lítið tannhjól
       draw a hexagon: teikna sexkant
       draw a flower: teikna blóm
       draw a square: teikna ferning
       draw a snowflake: teikna snjókorn
-      draw 3 hexagons: draw 3 hexagons
-      draw 4 hexagons: draw 4 hexagons
-      draw 5 hexagons: draw 5 hexagons
-      get 2 nectar: get 2 nectar
-      collect purple nectar: collect purple nectar
-      get 5: get 5
-      move and get nectar: move and get nectar
-      move and get 4: move and get 4
-      get 7 nectar make 7 honey: get 7 nectar make 7 honey
-      get 7 make 7: get 7 make 7
-      get 7: get 7
-      move and get 3: move and get 3
+      draw 3 hexagons: teikna 3 sexkanta
+      draw 4 hexagons: teikna 4 sexkanta
+      draw 5 hexagons: teikna 5 sexkanta
+      get 2 nectar: sækja 2 blómasafa
+      collect purple nectar: safna fjólubláum safa
+      get 5: sækja 5
+      move and get nectar: færa og sækja safa
+      move and get 4: færa og sækja 4
+      get 7 nectar make 7 honey: sækja 7 safa búa til 7 hunang
+      get 7 make 7: sækja 7 búa til 7
+      get 7: sækja 7
+      move and get 3: færa og sækja 3
       draw a tree: teikna tré
-      draw triangle: draw triangle
-      draw circle: draw circle
-      draw goal: draw goal
-      graph: graph
-      draw waves: draw waves
-      draw a wave: draw a wave
-      draw a small triangle: draw a small triangle
-      draw a medium triangle: draw a medium triangle
-      draw a large triangle: draw a large triangle
-      draw a big triangle: draw a big triangle
+      draw triangle: teikna þríhyrning
+      draw circle: teikna hring
+      draw goal: teikna mark
+      graph: graf
+      draw waves: teikna bylgjur
+      draw a wave: teikna bylgju
+      draw a small triangle: teikna lítinn þríhyrning
+      draw a medium triangle: teikna miðlungs þríhyrning
+      draw a large triangle: teikna stóran þríhyrning
+      draw a big triangle: teikna stóran þríhyrning
       draw a triangle: teikna þríhyrning
       draw a house: teikna hús
-      check purple flower: check purple flower
-      check flower make honey: check flower make honey
-      get nectar or make honey: get nectar or make honey
-      make 3 honey: make 3 honey
-      get 5 nectar: get 5 nectar
-      make all honey: make all honey
+      check purple flower: athuga fjólublátt blóm
+      check flower make honey: athuga blóm búa til hunang
+      get nectar or make honey: safna blómasafa eða búa til hunang
+      make 3 honey: búa til 3 hunang
+      get 5 nectar: sækja 5 blómasafa
+      make all honey: búa til allt hunang
       draw a star: teikna stjörnu
-      game has been won: game has been won
-      draw: draw
-      draw bit: draw bit
-      draw a polygon: draw a polygon
-      draw a shape: draw a shape
-      get 2 and make 2: get 2 and make 2
-      draw a pinwheel: draw a pinwheel
-      drawTree: drawTree
-      drawHouse: drawHouse
-      drawBranch: drawBranch
-      drawSky: drawSky
-      fillScreen: fillScreen
-      drawHouseLayer: drawHouseLayer
-      swap: swap
-      dropR: dropR
-      grabL: grabL
-      dropL: dropL
-      init: init
-      grabR: grabR
+      game has been won: leikurinn hefur unnist
+      draw: teikna
+      draw bit: teikna bita
+      draw a polygon: teikna marghyrning
+      draw a shape: teikna form
+      get 2 and make 2: sækja 2 og búa til 2
+      draw a pinwheel: teikna rellu
+      drawTree: teiknaTré
+      drawHouse: teiknaHús
+      drawBranch: teiknaGrein
+      drawSky: teiknaHiminn
+      fillScreen: fyllaSkjá
+      drawHouseLayer: teiknaHúsLag
+      swap: víxla
       do something: gera eitthvað
-      filter_pixel: filter_pixel
-      draw_image: draw_image
-      witch ending: witch ending
-      story: story
-      starting path: starting path
-      jump: stökkva
-      patrol: patrol
-      fill in bg: fill in bg
-      draw grid1: draw grid1
-      draw lines: draw lines
-      Draw a Square Line: Draw a Square Line
-      Draw a triangle: Draw a triangle
-      Draw a Cube: Draw a Cube
-      draw a cube: draw a cube
-      draw an octagon 20: draw an octagon 20
-      Draw a square: Draw a square
-      cube: cube
-      do something2: do something2
-      jump upper right: jump upper right
-      draw a line of  squares: draw a line of  squares
-      draw a line of squares: draw a line of squares
-      Draw Square Line: Draw Square Line
-      jump upper left: jump upper left
-      draw a line of octagons: draw a line of octagons
-      draw a square line: draw a square line
-      Draw a Square: Draw a Square
-      draw a square 20: draw a square 20
-      draw a square 40: draw a square 40
-      draw a triangle with length: draw a triangle with length
-      Draw a Triangle with length: Draw a Triangle with length
-      draw a triangle wioth length: draw a triangle wioth length
-      draw a sqaure: draw a sqaure
-      triangle: triangle
-      draw a spiral shape: draw a spiral shape
-      get 3 nectar: get 3 nectar
-      get many nectar: get many nectar
-      get nectar make honey: get nectar make honey
-      draw an octagon: draw an octagon
-      draw octagons: draw octagons
-      shift down: shift down
-      level_up: level_up
-      score_points: score_points
+      draw_image: teikna_mynd
+      story: saga
+      starting path: upphafsslóð
+      jump: hoppa
+      patrol: rása
+      fill in bg: fylla bakgr
+      draw grid1: teikna hnit1
+      draw lines: teikna strik
+      Draw a triangle: Teikna þríhyrning
+      Draw a Cube: Teikna tening
+      draw a cube: teikna tening
+      draw an octagon 20: teikna átthyrning 20
+      Draw a square: Teikna ferning
+      cube: teningur
+      do something2: gera eitthvað2
+      jump upper right: hoppa efst hægri
+      jump upper left: hoppa efst vinstri
       set score: setja stig á
-      draw a line of hexagons: draw a line of hexagons
-      shift down/forward: shift down/forward
-      shift down/backward: shift down/backward
       get nectar: sækja blómasafa
-      make honey up and over: make honey up and over
-      setActors: setActors
-      popCharacter: popCharacter
-      patrol left right: patrol left right
-      empty function: empty function
-      check guess: check guess
-      Jump: Jump
+      Jump: Hoppa
       test: prófun
-      build bridge: build bridge
-      run right: run right
-      spin right: spin right
-      grow forever: grow forever
-      draw grass: draw grass
-      sun: sun
-      draw windows: draw windows
-      square: square
-      draw a door: draw a door
-      rectangle: rectangle
+      square: ferningur
+      draw a door: teikna dyr
+      rectangle: rétthyrningur
       diamond: demant
-      window: window
-      n-sided shape: n-sided shape
-      draw a loop: draw a loop
-      draw spiral circle: draw spiral circle
-      draw roof: draw roof
-      draw rectangle: draw rectangle
+      window: gluggi
+      n-sided shape: n-hliða form
+      draw a loop: teikna lykkju
+      draw spiral circle: teikna spíral
+      draw roof: teikna þak
+      draw rectangle: teikna rétthyrning
       move: færa
-      function 1: function 1
-      function 2: function 2
-      turn corner: turn corner
-      destroy and move: destroy and move
-      clear path: clear path
-      clear cacti: clear cacti
-      place and move: place and move
-      cover lava: cover lava
-      build short bridge: build short bridge
-      build long bridge: build long bridge
-      create trail: create trail
-      move and fill: move and fill
-      fix right corner: fix right corner
-      fix left corner: fix left corner
-      make segment: make segment
-      fix long path: fix long path
-      fix short path: fix short path
-      place 3 tracks: place 3 tracks
-      clear right corner: clear right corner
-      clear left corner: clear left corner
-      draw a spiral edge: draw a spiral edge
-      draw a pentagon: draw a pentagon
-      artist jump around: artist jump around
-      Draw lenses: Draw lenses
-      25 pixel square: 25 pixel square
-      draw eye: draw eye
-      Make a Dot: Make a Dot
-      bubble sort: bubble sort
+      function 1: fall 1
+      function 2: fall 2
+      destroy and move: eyða og færa
+      clear path: hreinsa slóð
+      clear cacti: hreinsa kaktusa
+      place and move: setja og færa
+      cover lava: hylja hraun
+      build short bridge: byggja stutta brú
+      build long bridge: byggja langa brú
+      create trail: búa til slóð
+      move and fill: færa og fylla
+      fix right corner: laga hægra horn
+      fix left corner: laga vinstra horn
+      make segment: búa til bút
+      turn corner: snúa fyrir horn
+      fix long path: laga langa slóð
+      fix short path: laga stutta slóð
+      place 3 tracks: setja 3 slóðir
+      clear right corner: hreinsa hægra horn
+      clear left corner: hreinsa vinstra horn
+      draw a pentagon: teikna fimmhyrning
+      artist jump around: listamaður hoppa um
       move right: færa til hægri
-      say number: say number
       move up: færa upp
       move down: færa niður
       move left: færa til vinstri
-      kill alien: kill alien
-      click: click
-      Send Actor 1 to opposite: Send Actor 1 to opposite
-      blink actor 1: blink actor 1
-      my function: my function
-      Squares row: Squares row
-      draw first part of heart: draw first part of heart
-      check win: check win
-      curvy corner: curvy corner
-      make triangle: make triangle
-      my behavior: my behavior
-      '"simple" solution': '"simple" solution'
-      potential solution: potential solution
-      my design: my design
-      get 3 nectar or honey: get 3 nectar or honey
-      move and collect: move and collect
-      check nectar or honey: check nectar or honey
-      row of nectar: row of nectar
-      rowOfNectar: rowOfNectar
-      move and check: move and check
-      win game: win game
-      lose game: lose game
-      keep playing: keep playing
-      Ask a question: Ask a question
-      draw pinwheel: draw pinwheel
-      draw background: draw background
-      move and get nectar with counter: move and get nectar with counter
-      pick row: pick row
-      draw flame: draw flame
-      draw fire: draw fire
-      booster: booster
-      draw line of triangles: draw line of triangles
-      draw a window: draw a window
-      stop_everything: stop_everything
-      draw a plane of squares: draw a plane of squares
-      draw hexagon: draw hexagon
-      draw line of hexagons: draw line of hexagons
-      staggered squares: staggered squares
-      draw line of polygons: draw line of polygons
-      draw polygon: draw polygon
-      honey nectar: honey nectar
-      move and make honey: move and make honey
-      collect all nectar: collect all nectar
-      get all nectar: get all nectar
-      get pumpkin: get pumpkin
-      harvest: harvest
-      get corn and come back: get corn and come back
-      pick along path: pick along path
-      check square for corn: check square for corn
-      get all pumpkins: get all pumpkins
-      pumpkin square: pumpkin square
-      navigate: navigate
-      check and pick: check and pick
-      find pumpkin: find pumpkin
-      wander path: wander path
-      get produce: get produce
-      check for corn: check for corn
-      corn rectangle: corn rectangle
-      lettuce stairs: lettuce stairs
-      pick veggie: pick veggie
-      corn and pumpkin: corn and pumpkin
-      go get pumpkins: go get pumpkins
-      go get lettuce: go get lettuce
-      garden square: garden square
-      get corn come back: get corn come back
-      checker: checker
-      Make gingham: Make gingham
-      black outline: black outline
-      draw a square2: draw a square2
-      filled square: filled square
-      get only nectar: get only nectar
-      only make honey: only make honey
-      collect row: collect row
-      rowOfNectarOrHoney: rowOfNectarOrHoney
-      collect stairs: collect stairs
+      click: smella
+      collect all nectar: safna öllum blómasafa
+      get all nectar: sækja allan blómasafa
+      get pumpkin: tína grasker
+      harvest: uppskera
+      get corn and come back: sækja maís og koma aftur
+      pick along path: tína á slóð
+      check square for corn: athuga maís á reit
+      get all pumpkins: safna graskerum
+      pumpkin square: graskersferningur
+      navigate: ferðast
+      check and pick: athuga og tína
+      find pumpkin: finna grasker
+      wander path: ráfa slóð
+      get produce: sækja afurð
+      check for corn: athuga með maís
+      corn rectangle: maísrétthyrningur
+      lettuce stairs: káltröppur
+      pick veggie: tína grænmeti
+      corn and pumpkin: maís og grasker
+      go get pumpkins: fara sækja grasker
+      go get lettuce: fara sækja kál
+      get corn come back: sækja maís og koma aftur
       collect: safna
-      move and increment: move and increment
-      do something3: do something3
-      Robin Fly: Robin Fly
-      Robot Jump: Robot Jump
-      Center Dragon: Center Dragon
-      Dragon Fly: Dragon Fly
-      Knight Surge: Knight Surge
-      Stop Dragon: Stop Dragon
-      Knight Jump: Knight Jump
-      robotThinking: robotThinking
-      fill area with color: fill area with color
-      draw a line of triangles: draw a line of triangles
-      check flower: check flower
-      get next row: get next row
-      check space: check space
-      follow path: follow path
-      physics: physics
-      initialization: initialization
-      Make Actor 1 Jump: Make Actor 1 Jump
-      Choose Number: Choose Number
-      Move Bird: Move Bird
+      Robot Jump: Vélmenni hoppar
+      Knight Jump: Riddari hoppar
+      Make Actor 1 Jump: Láta leikmann 1 hoppa
       turn left: snúa til vinstri
       move forward: færa áfram
       turn right: snúa til hægri
-      drawDot: drawDot
-      draw a rectangle: draw a rectangle
-      Which Course for My Students?: Which Course for My Students?
-      draw a heart: draw a heart

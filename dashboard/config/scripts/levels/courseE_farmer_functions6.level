@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "*\"Lettuce try something new!\"*\r\n\r\nHere's some code to collect all of the lettuce.  Move it into a function so we can use it later.",
+    "short_instructions": "*\"Lettuce try something new!\"*\r\n\r\nHere's some code to collect all of the lettuce.  Move it into a function so we can use it later.",
     "instructions_important": "false",
     "ideal": "9",
     "authored_hints": "[]",

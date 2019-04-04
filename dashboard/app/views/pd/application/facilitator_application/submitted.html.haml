@@ -5,21 +5,20 @@
   %h1 Thank you for your application.
 
   %h2
-    Code.org and our Regional Partners will review applications in December and January.
-    We will provide a status update to all applicants by the end of January 2018.
+    Code.org and our Regional Partners, where applicable, will review all applications after the application deadline.
+    We will provide a status update to all applicants by the end of February 2019.
 
   %p
-    - if @application.regional_partner
-      Your Code.org Regional Partner is:
+    - if @display_regional_partner_reminder
+      As a reminder, your Code.org Regional Partner is:
       = @application.regional_partner.name
     - else
-      Your application is not yet matched to a Code.org Regional Partner.
+      As a reminder, your application is not yet matched to a Code.org Regional Partner.
       If there is a partner in your area, we will send your application to the partner for review.
-      If there isn’t yet a partner in your area, we will consider your application as space becomes
-      available in the Facilitator Development Program.
+      If there isn't yet a partner in your area, we will consider your application if we develop a need for facilitators in your region.
 
   %p
-    Due to the volume of applications we will receive, we are not able to respond to individual requests for status updates.
+    Due to the volume of applications we receive, we are not able to respond to individual requests for status updates.
     Please contact
     =link_to('facilitators@code.org', 'mailto:facilitators@code.org')
     with all other questions.

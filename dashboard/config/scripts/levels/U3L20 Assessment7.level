@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Conditional Basics Question 7",
-    "markdown_instructions": "How do you know if the conditionals in your code are working correctly?\n",
+    "long_instructions": "How do you know if the conditionals in your code are working correctly?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "The halfway line on a soccer field is perpendicular to the sidelines.   \r\nThis rectangle has a perimeter of 800 pixels total, and it is 240 pixels long. How tall is it?   \r\n\r\nDraw the bounds and the halfway line.",
+    "short_instructions": "The halfway line on a soccer field is perpendicular to the sidelines.   \r\nThis rectangle has a perimeter of 800 pixels total, and it is 240 pixels long. How tall is it?   \r\n\r\nDraw the bounds and the halfway line.",
     "x": "80",
     "y": "280",
     "start_direction": "90",
@@ -17,7 +17,7 @@
     "slider_speed": "0.4",
     "disable_param_editing": "true",
     "embed": "false",
-    "markdown_instructions": "The halfway line on a soccer field is *perpendicular* to the sidelines.   \r\nThis rectangle has a perimeter of 800 pixels total, and it is 240 pixels long. How tall is it?   \r\n\r\nDraw the bounds and the halfway line.",
+    "long_instructions": "The halfway line on a soccer field is *perpendicular* to the sidelines.   \r\nThis rectangle has a perimeter of 800 pixels total, and it is 240 pixels long. How tall is it?   \r\n\r\nDraw the bounds and the halfway line.",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",

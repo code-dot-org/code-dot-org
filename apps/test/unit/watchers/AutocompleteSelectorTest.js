@@ -2,7 +2,6 @@ import {expect} from '../../util/configuredChai';
 import sinon from 'sinon';
 import React from 'react';
 import {mount} from 'enzyme';
-import ReactTestUtils from 'react-addons-test-utils';
 import AutocompleteSelector from '@cdo/apps/templates/watchers/AutocompleteSelector';
 
 describe('AutocompleteSelector', () => {
@@ -28,34 +27,33 @@ describe('AutocompleteSelector', () => {
       />
     );
 
-    componentInstance = ReactTestUtils.renderIntoDocument(component);
+    componentInstance = mount(component);
   });
 
   describe('handling option interaction', () => {
     let options;
 
     beforeEach(() => {
-      options = ReactTestUtils.scryRenderedDOMComponentsWithClass(
-        componentInstance, 'autocomplete-option');
+      options = componentInstance.find('.autocomplete-option');
       expect(options.length).to.equal(2);
     });
 
     it('handles clicks', () => {
-      ReactTestUtils.Simulate.click(options[0]);
+      options.first().simulate('click');
       expect(clicked).to.have.been.calledOnce;
       expect(clicked).to.have.been.calledWithExactly(FIRST_OPTION_TEXT);
       clicked.reset();
-      ReactTestUtils.Simulate.click(options[1]);
+      options.last().simulate('click');
       expect(clicked).to.have.been.calledOnce;
       expect(clicked).to.have.been.calledWithExactly(SECOND_OPTION_TEXT);
     });
 
     it('handles mouseovers', () => {
-      ReactTestUtils.Simulate.mouseOver(options[0]);
+      options.first().simulate('mouseOver');
       expect(mousedOver).to.have.been.calledOnce;
       expect(mousedOver).to.have.been.calledWithExactly(0);
       mousedOver.reset();
-      ReactTestUtils.Simulate.mouseOver(options[1]);
+      options.last().simulate('mouseOver');
       expect(mousedOver).to.have.been.calledOnce;
       expect(mousedOver).to.have.been.calledWithExactly(1);
     });

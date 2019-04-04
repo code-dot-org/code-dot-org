@@ -27,7 +27,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
-    "markdown_instructions": "Figure out which function to use and which one to delete, then solve this puzzle!",
+    "long_instructions": "Figure out which function to use and which one to delete, then solve this puzzle!",
     "authored_hints": "[]",
     "callout_json": "[]",
     "step_speed": "1",

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Get the artist to the center of the play area, then draw a bird using a sticker. ",
+    "short_instructions": "Get the artist to the center of the play area, then draw a bird using a sticker. ",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -33,7 +33,7 @@
     "start_direction": "90",
     "x": "70",
     "y": "70",
-    "markdown_instructions": "Use the `jump to 200 over 200 down` to get the artist to the center of the play area, then use the `draw a sticker` block to make a bird appear. ",
+    "long_instructions": "Use the `jump to 200 over 200 down` to get the artist to the center of the play area, then use the `draw a sticker` block to make a bird appear. ",
     "contained_level_names": null
   },
   "published": true,

@@ -39,7 +39,6 @@ gl:
       update_needs_confirmation: "Atualizaches a túa conta con éxito, pero precisamos verificar de novo o teu enderezo de e-mail. Por favor verifica o teu e-mail e clica no link para finalizar a confirmación do teu novo enderezo de e-mail."
       updated: "Actualizaches a túa conta con éxito."
     sessions:
-      signed_in: ""
       signed_out: "Terminaches sesión con éxito."
     unlocks:
       send_instructions: "Vas reciber un e-mail coas instrucións de confirmación de como desbloquear a túa conta dentro de algúns minutos."

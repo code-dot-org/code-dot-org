@@ -15,7 +15,7 @@ def slow_browser?
   ['iPhone', 'iPad'].include? ENV['BROWSER_CONFIG']
 end
 
-def saucelabs_browser
+def saucelabs_browser(test_run_name)
   if CDO.saucelabs_username.blank?
     raise "Please define CDO.saucelabs_username"
   end
@@ -36,11 +36,12 @@ def saucelabs_browser
 
   capabilities[:javascript_enabled] = 'true'
   capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
-  capabilities[:name] = ENV['TEST_RUN_NAME']
+  capabilities[:name] = test_run_name
+  capabilities[:tags] = [ENV['GIT_BRANCH']]
   capabilities[:build] = CDO.circle_run_identifier || ENV['BUILD']
   capabilities[:idleTimeout] = 600
 
-  puts "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
+  very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
   browser = nil
   Time.now.to_i.tap do |start_time|
@@ -57,6 +58,9 @@ def saucelabs_browser
         http_client: http_client
       )
 
+      # Maximum time a single execute_script or execute_async_script command may take
+      browser.manage.timeouts.script_timeout = 30.seconds
+
       # Shorter idle_timeout to avoid "too many connection resets" error
       # and generally increases stability, reduces re-runs.
       # https://docs.omniref.com/ruby/gems/net-http-persistent/2.9.4/symbols/Net::HTTP::Persistent::Error#line=108
@@ -67,10 +71,10 @@ def saucelabs_browser
       retries += 1
       retry
     end
-    puts "DEBUG: Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
+    very_verbose "DEBUG: Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
   end
 
-  puts "DEBUG: Browser: #{CGI.escapeHTML browser.inspect}"
+  very_verbose "DEBUG: Browser: #{CGI.escapeHTML browser.inspect}"
 
   # Maximize the window on desktop, as some tests require 1280px width.
   unless ENV['MOBILE']
@@ -81,31 +85,32 @@ def saucelabs_browser
   browser
 end
 
-def get_browser
+def get_browser(test_run_name)
   if ENV['TEST_LOCAL'] == 'true'
+    headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     # This drives a local installation of ChromeDriver running on port 9515, instead of Saucelabs.
-    SeleniumBrowser.local_browser
+    SeleniumBrowser.local_browser(headless)
   else
-    saucelabs_browser
+    saucelabs_browser test_run_name
   end
 end
 
 browser = nil
 
-Before do
-  puts "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
+Before do |scenario|
+  very_verbose "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
 
   if slow_browser?
-    browser ||= get_browser
-    p 'slow browser, using existing'
+    browser ||= get_browser ENV['TEST_RUN_NAME']
+    very_verbose 'slow browser, using existing'
     @browser ||= browser
   else
-    p 'fast browser, getting a new one'
-    @browser = get_browser
+    very_verbose 'fast browser, getting a new one'
+    @browser = get_browser "#{ENV['TEST_RUN_NAME']}_#{scenario.name}"
   end
   @browser.manage.delete_all_cookies
 
-  debug_cookies(@browser.manage.all_cookies) if @browser
+  debug_cookies(@browser.manage.all_cookies) if @browser && ENV['VERY_VERBOSE']
 
   unless ENV['TEST_LOCAL'] == 'true'
     unless @sauce_session_id
@@ -150,13 +155,10 @@ After do |_s|
   end
 end
 
-After do |scenario|
-  if ENV['FAIL_FAST'] == 'true'
-    # Tell Cucumber to quit after this scenario is done - if it failed.
-    Cucumber.wants_to_quit = true if scenario.failed?
-  end
-end
-
 at_exit do
   browser.quit unless browser.nil?
+end
+
+def very_verbose(msg)
+  puts msg if ENV['VERY_VERBOSE']
 end

@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "The flowers down here are so pretty.  Let's take a closer look.",
+    "short_instructions": "The flowers down here are so pretty.  Let's take a closer look.",
     "x": "75",
     "y": "75",
     "start_direction": "180",

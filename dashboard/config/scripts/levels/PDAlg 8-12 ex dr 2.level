@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "This student has created two examples for the function \"apples\" but something's not quite right. How would you direct this student to correct their mistake?",
+    "short_instructions": "This student has created two examples for the function \"apples\" but something's not quite right. How would you direct this student to correct their mistake?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,7 +24,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "false",
-    "markdown_instructions": "This student has created two examples for the function `apples` but something's not quite right. How would you direct this student to correct their mistake?",
+    "long_instructions": "This student has created two examples for the function `apples` but something's not quite right. How would you direct this student to correct their mistake?",
     "never_autoplay_video": "false"
   }
 }]]></config>

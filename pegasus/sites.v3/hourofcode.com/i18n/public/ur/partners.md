@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 کوڈ کا قیام کوڈ آفس اور کمپیوٹر سائنس تعلیم ہفتہ مشاورتی اور جائزہ لینے والے کمیٹیوں کے ذریعہ چلایا جاتا ہے.
 
@@ -119,25 +119,19 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-# بڑے پروموشنل شراکت دار
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
----
-
-# بین الاقوامی شراکت دار
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# سرگرمی شراکت دار
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# انفراسٹرکچر شراکت داروں اور اوزار
+# Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

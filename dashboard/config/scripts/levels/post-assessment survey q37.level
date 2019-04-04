@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "(Optional) If you did not take the AP exam, what, if anything, would have made the difference for you to take it?"
+    "long_instructions": "(Optional) If you did not take the AP exam, what, if anything, would have made the difference for you to take it?"
   },
   "published": true,
   "notes": "",

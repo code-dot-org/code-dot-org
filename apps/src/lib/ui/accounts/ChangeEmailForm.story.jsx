@@ -6,12 +6,12 @@ const DEFAULT_PROPS = {
   values: {
     newEmail: '',
     currentPassword: '',
-    emailOptIn: '',
+    emailOptIn: ''
   },
   validationErrors: {
     newEmail: undefined,
     currentPassword: undefined,
-    emailOptIn: undefined,
+    emailOptIn: undefined
   },
   userType: 'student',
   isPasswordRequired: true,
@@ -20,9 +20,8 @@ const DEFAULT_PROPS = {
   onSubmit: action('onSubmit')
 };
 
-export default storybook => storybook
-  .storiesOf('ChangeEmailForm', module)
-  .addStoryTable([
+export default storybook =>
+  storybook.storiesOf('ChangeEmailForm', module).addStoryTable([
     {
       name: 'student view, with valid content',
       story: () => (
@@ -30,7 +29,7 @@ export default storybook => storybook
           {...DEFAULT_PROPS}
           values={{
             newEmail: 'batman@bat.cave',
-            currentPassword: 'imsorich',
+            currentPassword: 'imsorich'
           }}
           userType="student"
         />
@@ -43,7 +42,7 @@ export default storybook => storybook
           {...DEFAULT_PROPS}
           values={{
             newEmail: 'batman@bat.cave',
-            currentPassword: 'imsorich',
+            currentPassword: 'imsorich'
           }}
           userType="student"
           isPasswordRequired={false}
@@ -57,10 +56,10 @@ export default storybook => storybook
           {...DEFAULT_PROPS}
           values={{
             newEmail: 'robin@bat.cave',
-            currentPassword: 'no1fan',
+            currentPassword: 'no1fan'
           }}
           validationErrors={{
-            newEmail: "Robin, get out of here!",
+            newEmail: 'Robin, get out of here!',
             currentPassword: "That's totally the wrong password."
           }}
           userType="student"
@@ -74,7 +73,7 @@ export default storybook => storybook
           {...DEFAULT_PROPS}
           values={{
             newEmail: 'currently-saving@bat.cave',
-            currentPassword: 'currently-saving',
+            currentPassword: 'currently-saving'
           }}
           userType="student"
           disabled={true}
@@ -89,7 +88,7 @@ export default storybook => storybook
           values={{
             newEmail: 'batman@bat.cave',
             currentPassword: 'imsorich',
-            emailOptIn: 'yes',
+            emailOptIn: 'yes'
           }}
           userType="teacher"
         />
@@ -103,7 +102,7 @@ export default storybook => storybook
           values={{
             newEmail: 'batman@bat.cave',
             currentPassword: 'imsorich',
-            emailOptIn: 'yes',
+            emailOptIn: 'yes'
           }}
           userType="teacher"
           isPasswordRequired={false}
@@ -118,12 +117,12 @@ export default storybook => storybook
           values={{
             newEmail: 'robin@bat.cave',
             currentPassword: 'no1fan',
-            emailOptIn: 'no',
+            emailOptIn: 'no'
           }}
           validationErrors={{
-            newEmail: "Robin, get out of here!",
+            newEmail: 'Robin, get out of here!',
             currentPassword: "That's totally the wrong password.",
-            emailOptIn: 'We are requiring you to opt in! (Not really)',
+            emailOptIn: 'We are requiring you to opt in! (Not really)'
           }}
           userType="teacher"
         />
@@ -137,7 +136,7 @@ export default storybook => storybook
           values={{
             newEmail: 'currently-saving@bat.cave',
             currentPassword: 'currently-saving',
-            emailOptIn: 'yes',
+            emailOptIn: 'yes'
           }}
           userType="teacher"
           disabled={true}

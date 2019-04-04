@@ -15,13 +15,12 @@ var Provider = require('react-redux').Provider;
 import AppView from '../templates/AppView';
 var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var dom = require('../dom');
-var Hammer = require("../third-party/hammer");
+var Hammer = require('../third-party/hammer');
 import {getStore} from '../redux';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {KeyCodes, TestResults, ResultType} from '../constants';
 
 var SquareType = tiles.SquareType;
-
 
 import '../util/svgelement-polyfill';
 import {SignInState} from '../code-studio/progressRedux';
@@ -63,16 +62,16 @@ studioApp().setCheckForEmptyBlocks(true);
 
 // Default Scalings
 Bounce.scale = {
-  'snapRadius': 1,
-  'stepSpeed': 33
+  snapRadius: 1,
+  stepSpeed: 33
 };
 
 var twitterOptions = {
   text: bounceMsg.shareBounceTwitterDonor({donor: getRandomDonorTwitter()}),
-  hashtag: "BounceCode"
+  hashtag: 'BounceCode'
 };
 
-var loadLevel = function () {
+var loadLevel = function() {
   // Load maps.
   Bounce.map = level.map;
   Bounce.timeoutFailureTick = level.timeoutFailureTick || Infinity;
@@ -81,7 +80,9 @@ var loadLevel = function () {
   Bounce.respawnBalls = level.respawnBalls || false;
   Bounce.failOnBallExit = level.failOnBallExit || false;
   Bounce.goal = level.useFlagGoal ? skin.flagGoal : skin.goal;
-  Bounce.goalSuccess = level.useFlagGoal ? skin.flagGoalSuccess : skin.goalSuccess;
+  Bounce.goalSuccess = level.useFlagGoal
+    ? skin.flagGoalSuccess
+    : skin.goalSuccess;
 
   // Override scalars.
   for (var key in level.scale) {
@@ -112,8 +113,7 @@ var loadLevel = function () {
   Bounce.PATH_WIDTH = Bounce.SQUARE_SIZE / 3;
 };
 
-
-var initWallMap = function () {
+var initWallMap = function() {
   Bounce.wallMap = new Array(Bounce.ROWS);
   for (var y = 0; y < Bounce.ROWS; y++) {
     Bounce.wallMap[y] = new Array(Bounce.COLS);
@@ -129,45 +129,49 @@ import * as timeoutList from '../lib/util/timeoutList';
 // Input: Binary string representing Centre/North/East/South/West squares.
 // Output: [x, y] coordinates of each tile's sprite in tiles.png.
 var WALL_TILE_SHAPES = {
-  '1X101': [1, 0],  // Horiz top
-  '11X10': [2, 1],  // Vert right
-  '11XX0': [2, 1],  // Bottom right corner
-  '1XX11': [2, 0],  // Top right corner
-  '1X001': [1, 0],  // Top horiz right end
-  '1X100': [1, 0],  // Top horiz left end
-  '1101X': [0, 1],  // Vert left
-  '110XX': [0, 1],  // Bottom left corner
-  '1X11X': [0, 0],  // Top left corner
-  'null0': [1, 1]   // Empty
+  '1X101': [1, 0], // Horiz top
+  '11X10': [2, 1], // Vert right
+  '11XX0': [2, 1], // Bottom right corner
+  '1XX11': [2, 0], // Top right corner
+  '1X001': [1, 0], // Top horiz right end
+  '1X100': [1, 0], // Top horiz left end
+  '1101X': [0, 1], // Vert left
+  '110XX': [0, 1], // Bottom left corner
+  '1X11X': [0, 0], // Top left corner
+  null0: [1, 1] // Empty
 };
 
 var GOAL_TILE_SHAPES = {
-  '1X101': [2, 3],  // Horiz top
-  '1XX11': [3, 3],  // Top right corner
-  '1X001': [3, 3],  // Top horiz right end
-  '1X11X': [0, 2],  // Top left corner
-  '1X100': [0, 2],  // Top horiz left end
-  'null0': [1, 1]   // Empty
+  '1X101': [2, 3], // Horiz top
+  '1XX11': [3, 3], // Top right corner
+  '1X001': [3, 3], // Top horiz right end
+  '1X11X': [0, 2], // Top left corner
+  '1X100': [0, 2], // Top horiz left end
+  null0: [1, 1] // Empty
 };
 
 // Return a value of '0' if the specified square is not a wall, '1' for
 // a wall, 'X' for out of bounds
-var wallNormalize = function (x, y) {
-  return ((Bounce.map[y] === undefined) ||
-          (Bounce.map[y][x] === undefined)) ? 'X' :
-            (Bounce.map[y][x] & SquareType.WALL) ? '1' : '0';
+var wallNormalize = function(x, y) {
+  return Bounce.map[y] === undefined || Bounce.map[y][x] === undefined
+    ? 'X'
+    : Bounce.map[y][x] & SquareType.WALL
+    ? '1'
+    : '0';
 };
 
 // Return a value of '0' if the specified square is not a wall, '1' for
 // a wall, 'X' for out of bounds
-var goalNormalize = function (x, y) {
-  return ((Bounce.map[y] === undefined) ||
-          (Bounce.map[y][x] === undefined)) ? 'X' :
-            (Bounce.map[y][x] & SquareType.GOAL) ? '1' : '0';
+var goalNormalize = function(x, y) {
+  return Bounce.map[y] === undefined || Bounce.map[y][x] === undefined
+    ? 'X'
+    : Bounce.map[y][x] & SquareType.GOAL
+    ? '1'
+    : '0';
 };
 
 // Create ball elements
-Bounce.createBallElements = function (i) {
+Bounce.createBallElements = function(i) {
   var svg = document.getElementById('svgBounce');
   // Ball's clipPath element, whose (x, y) is reset by Bounce.displayBall
   var ballClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
@@ -182,8 +186,11 @@ Bounce.createBallElements = function (i) {
   // Add ball.
   var ballIcon = document.createElementNS(Blockly.SVG_NS, 'image');
   ballIcon.setAttribute('id', 'ball' + i);
-  ballIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                          Bounce.ballImage);
+  ballIcon.setAttributeNS(
+    'http://www.w3.org/1999/xlink',
+    'xlink:href',
+    Bounce.ballImage
+  );
   ballIcon.setAttribute('height', Bounce.PEGMAN_HEIGHT);
   ballIcon.setAttribute('width', Bounce.PEGMAN_WIDTH);
   ballIcon.setAttribute('clip-path', 'url(#ballClipPath' + i + ')');
@@ -191,7 +198,7 @@ Bounce.createBallElements = function (i) {
 };
 
 // Delete ball elements
-Bounce.deleteBallElements = function (i) {
+Bounce.deleteBallElements = function(i) {
   var ballClipPath = document.getElementById('ballClipPath' + i);
   ballClipPath.parentNode.removeChild(ballClipPath);
 
@@ -199,7 +206,7 @@ Bounce.deleteBallElements = function (i) {
   ballIcon.parentNode.removeChild(ballIcon);
 };
 
-var drawMap = function () {
+var drawMap = function() {
   var svg = document.getElementById('svgBounce');
   var i, x, y, tile;
 
@@ -209,7 +216,7 @@ var drawMap = function () {
 
   // Attach drag handler.
   var hammerSvg = new Hammer(svg);
-  hammerSvg.on("drag", Bounce.onSvgDrag);
+  hammerSvg.on('drag', Bounce.onSvgDrag);
 
   // Adjust visualizationColumn width.
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -217,8 +224,11 @@ var drawMap = function () {
 
   if (skin.background) {
     tile = document.createElementNS(Blockly.SVG_NS, 'image');
-    tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                        skin.background);
+    tile.setAttributeNS(
+      'http://www.w3.org/1999/xlink',
+      'xlink:href',
+      skin.background
+    );
     tile.setAttribute('id', 'background');
     tile.setAttribute('height', Bounce.MAZE_HEIGHT);
     tile.setAttribute('width', Bounce.MAZE_WIDTH);
@@ -237,11 +247,12 @@ var drawMap = function () {
       var top;
       var image;
       // Compute the tile index.
-      tile = wallNormalize(x, y) +
-          wallNormalize(x, y - 1) +  // North.
-          wallNormalize(x + 1, y) +  // East.
-          wallNormalize(x, y + 1) +  // South.
-          wallNormalize(x - 1, y);   // West.
+      tile =
+        wallNormalize(x, y) +
+        wallNormalize(x, y - 1) + // North.
+        wallNormalize(x + 1, y) + // East.
+        wallNormalize(x, y + 1) + // South.
+        wallNormalize(x - 1, y); // West.
 
       // Draw the tile.
       if (WALL_TILE_SHAPES[tile]) {
@@ -250,11 +261,12 @@ var drawMap = function () {
         image = skin.tiles;
       } else {
         // Compute the tile index.
-        tile = goalNormalize(x, y) +
-            goalNormalize(x, y - 1) +  // North.
-            goalNormalize(x + 1, y) +  // East.
-            goalNormalize(x, y + 1) +  // South.
-            goalNormalize(x - 1, y);   // West.
+        tile =
+          goalNormalize(x, y) +
+          goalNormalize(x, y - 1) + // North.
+          goalNormalize(x + 1, y) + // East.
+          goalNormalize(x, y + 1) + // South.
+          goalNormalize(x - 1, y); // West.
 
         if (!GOAL_TILE_SHAPES[tile]) {
           // Empty square.  Use null0.
@@ -280,19 +292,22 @@ var drawMap = function () {
         // Tile sprite.
         var tileElement = document.createElementNS(Blockly.SVG_NS, 'image');
         tileElement.setAttribute('id', 'tileElement' + tileId);
-        tileElement.setAttributeNS('http://www.w3.org/1999/xlink',
-                                   'xlink:href',
-                                   image);
+        tileElement.setAttributeNS(
+          'http://www.w3.org/1999/xlink',
+          'xlink:href',
+          image
+        );
         tileElement.setAttribute('height', Bounce.SQUARE_SIZE * 4);
         tileElement.setAttribute('width', Bounce.SQUARE_SIZE * 5);
-        tileElement.setAttribute('clip-path',
-                                 'url(#tileClipPath' + tileId + ')');
+        tileElement.setAttribute(
+          'clip-path',
+          'url(#tileClipPath' + tileId + ')'
+        );
         tileElement.setAttribute('x', (x - left) * Bounce.SQUARE_SIZE);
         tileElement.setAttribute('y', (y - top) * Bounce.SQUARE_SIZE);
         svg.appendChild(tileElement);
         // Tile animation
-        var tileAnimation = document.createElementNS(Blockly.SVG_NS,
-                                                     'animate');
+        var tileAnimation = document.createElementNS(Blockly.SVG_NS, 'animate');
         tileAnimation.setAttribute('id', 'tileAnimation' + tileId);
         tileAnimation.setAttribute('attributeType', 'CSS');
         tileAnimation.setAttribute('attributeName', 'opacity');
@@ -326,8 +341,11 @@ var drawMap = function () {
     // Add paddle.
     var paddleIcon = document.createElementNS(Blockly.SVG_NS, 'image');
     paddleIcon.setAttribute('id', 'paddle');
-    paddleIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                              skin.paddle);
+    paddleIcon.setAttributeNS(
+      'http://www.w3.org/1999/xlink',
+      'xlink:href',
+      skin.paddle
+    );
     paddleIcon.setAttribute('height', Bounce.PEGMAN_HEIGHT);
     paddleIcon.setAttribute('width', Bounce.PEGMAN_WIDTH);
     paddleIcon.setAttribute('clip-path', 'url(#paddleClipPath)');
@@ -337,11 +355,16 @@ var drawMap = function () {
   if (Bounce.paddleFinish_) {
     for (i = 0; i < Bounce.paddleFinishCount; i++) {
       // Add finish markers.
-      var paddleFinishMarker = document.createElementNS(Blockly.SVG_NS, 'image');
+      var paddleFinishMarker = document.createElementNS(
+        Blockly.SVG_NS,
+        'image'
+      );
       paddleFinishMarker.setAttribute('id', 'paddlefinish' + i);
-      paddleFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
-                                        'xlink:href',
-                                        Bounce.goal);
+      paddleFinishMarker.setAttributeNS(
+        'http://www.w3.org/1999/xlink',
+        'xlink:href',
+        Bounce.goal
+      );
       paddleFinishMarker.setAttribute('height', Bounce.GOAL_HEIGHT);
       paddleFinishMarker.setAttribute('width', Bounce.GOAL_WIDTH);
       svg.appendChild(paddleFinishMarker);
@@ -352,9 +375,11 @@ var drawMap = function () {
     // Add ball finish marker.
     var ballFinishMarker = document.createElementNS(Blockly.SVG_NS, 'image');
     ballFinishMarker.setAttribute('id', 'ballfinish');
-    ballFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
-                                    'xlink:href',
-                                    Bounce.goal);
+    ballFinishMarker.setAttributeNS(
+      'http://www.w3.org/1999/xlink',
+      'xlink:href',
+      Bounce.goal
+    );
     ballFinishMarker.setAttribute('height', Bounce.GOAL_HEIGHT);
     ballFinishMarker.setAttribute('width', Bounce.GOAL_WIDTH);
     svg.appendChild(ballFinishMarker);
@@ -386,16 +411,24 @@ var drawMap = function () {
       if (Bounce.map[y][x] === SquareType.OBSTACLE) {
         var obsIcon = document.createElementNS(Blockly.SVG_NS, 'image');
         obsIcon.setAttribute('id', 'obstacle' + obsId);
-        obsIcon.setAttribute('height', Bounce.MARKER_HEIGHT * skin.obstacleScale);
+        obsIcon.setAttribute(
+          'height',
+          Bounce.MARKER_HEIGHT * skin.obstacleScale
+        );
         obsIcon.setAttribute('width', Bounce.MARKER_WIDTH * skin.obstacleScale);
         obsIcon.setAttributeNS(
-          'http://www.w3.org/1999/xlink', 'xlink:href', skin.obstacle);
-        obsIcon.setAttribute('x',
-                             Bounce.SQUARE_SIZE * (x + 0.5) -
-                             obsIcon.getAttribute('width') / 2);
-        obsIcon.setAttribute('y',
-                             Bounce.SQUARE_SIZE * (y + 0.9) -
-                             obsIcon.getAttribute('height'));
+          'http://www.w3.org/1999/xlink',
+          'xlink:href',
+          skin.obstacle
+        );
+        obsIcon.setAttribute(
+          'x',
+          Bounce.SQUARE_SIZE * (x + 0.5) - obsIcon.getAttribute('width') / 2
+        );
+        obsIcon.setAttribute(
+          'y',
+          Bounce.SQUARE_SIZE * (y + 0.9) - obsIcon.getAttribute('height')
+        );
         svg.appendChild(obsIcon);
       }
       ++obsId;
@@ -403,16 +436,16 @@ var drawMap = function () {
   }
 };
 
-Bounce.calcDistance = function (xDist, yDist) {
+Bounce.calcDistance = function(xDist, yDist) {
   return Math.sqrt(xDist * xDist + yDist * yDist);
 };
 
-var essentiallyEqual = function (float1, float2, opt_variance) {
+var essentiallyEqual = function(float1, float2, opt_variance) {
   var variance = opt_variance || 0.01;
-  return (Math.abs(float1 - float2) < variance);
+  return Math.abs(float1 - float2) < variance;
 };
 
-Bounce.isBallOutOfBounds = function (i) {
+Bounce.isBallOutOfBounds = function(i) {
   if (Bounce.ballX[i] < 0) {
     return true;
   }
@@ -433,8 +466,8 @@ Bounce.isBallOutOfBounds = function (i) {
  * @param func Function : The function to execute
  * @param data Object or Array : The data to pass to the function. If the function is also passed arguments, the data is appended to the arguments list. If the data is an Array, each item is appended as a new argument.
  */
-var delegate = function (scope, func, data) {
-  return function () {
+var delegate = function(scope, func, data) {
+  return function() {
     var args = Array.prototype.slice.apply(arguments).concat(data);
     func.apply(scope, args);
   };
@@ -444,7 +477,7 @@ var delegate = function (scope, func, data) {
  * We want to swallow exceptions when executing user generated code. This provides
  * a single place to do so.
  */
-Bounce.callUserGeneratedCode = function (fn) {
+Bounce.callUserGeneratedCode = function(fn) {
   try {
     fn.call(Bounce, api);
   } catch (e) {
@@ -455,8 +488,7 @@ Bounce.callUserGeneratedCode = function (fn) {
   }
 };
 
-
-Bounce.onTick = function () {
+Bounce.onTick = function() {
   Bounce.tickCount++;
 
   if (Bounce.tickCount === 1) {
@@ -465,8 +497,10 @@ Bounce.onTick = function () {
 
   // Run key event handlers for any keys that are down:
   for (var key in KeyCodes) {
-    if (Bounce.keyState[KeyCodes[key]] &&
-        Bounce.keyState[KeyCodes[key]] === "keydown") {
+    if (
+      Bounce.keyState[KeyCodes[key]] &&
+      Bounce.keyState[KeyCodes[key]] === 'keydown'
+    ) {
       switch (KeyCodes[key]) {
         case KeyCodes.LEFT:
           Bounce.callUserGeneratedCode(Bounce.whenLeft);
@@ -485,8 +519,10 @@ Bounce.onTick = function () {
   }
 
   for (var btn in ArrowIds) {
-    if (Bounce.btnState[ArrowIds[btn]] &&
-        Bounce.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
+    if (
+      Bounce.btnState[ArrowIds[btn]] &&
+      Bounce.btnState[ArrowIds[btn]] === ButtonState.DOWN
+    ) {
       switch (ArrowIds[btn]) {
         case ArrowIds.LEFT:
           Bounce.callUserGeneratedCode(Bounce.whenLeft);
@@ -536,8 +572,11 @@ Bounce.onTick = function () {
     Bounce.ballY[i] += deltaY;
     Bounce.ballRotation[i] += Bounce.ballRotationSpeed;
 
-    if (0 === (Bounce.ballFlags[i] &
-               (Bounce.BallFlags.MISSED_PADDLE | Bounce.BallFlags.IN_GOAL))) {
+    if (
+      0 ===
+      (Bounce.ballFlags[i] &
+        (Bounce.BallFlags.MISSED_PADDLE | Bounce.BallFlags.IN_GOAL))
+    ) {
       var nowXOK = Bounce.ballX[i] >= 0 && Bounce.ballX[i] <= Bounce.COLS - 1;
       var nowYOK = Bounce.ballY[i] >= tiles.Y_TOP_BOUNDARY;
       var nowYAboveBottom = Bounce.ballY[i] <= Bounce.ROWS - 1;
@@ -553,8 +592,9 @@ Bounce.onTick = function () {
           Bounce.callUserGeneratedCode(Bounce.whenBallInGoal);
           Bounce.ballFlags[i] |= Bounce.BallFlags.IN_GOAL;
           timeoutList.setTimeout(
-              delegate(this, Bounce.moveBallOffscreen, i),
-              1000);
+            delegate(this, Bounce.moveBallOffscreen, i),
+            1000
+          );
           if (Bounce.respawnBalls) {
             Bounce.launchBall(i);
           }
@@ -578,8 +618,9 @@ Bounce.onTick = function () {
         Bounce.callUserGeneratedCode(Bounce.whenBallMissesPaddle);
         Bounce.ballFlags[i] |= Bounce.BallFlags.MISSED_PADDLE;
         timeoutList.setTimeout(
-            delegate(this, Bounce.moveBallOffscreen, i),
-            1000);
+          delegate(this, Bounce.moveBallOffscreen, i),
+          1000
+        );
         if (Bounce.respawnBalls) {
           Bounce.launchBall(i);
         } else if (Bounce.failOnBallExit) {
@@ -589,7 +630,12 @@ Bounce.onTick = function () {
       }
     }
 
-    Bounce.displayBall(i, Bounce.ballX[i], Bounce.ballY[i], Bounce.ballRotation[i]);
+    Bounce.displayBall(
+      i,
+      Bounce.ballX[i],
+      Bounce.ballY[i],
+      Bounce.ballRotation[i]
+    );
   }
 
   Bounce.displayPaddle(Bounce.paddleX, Bounce.paddleY);
@@ -599,37 +645,41 @@ Bounce.onTick = function () {
   }
 };
 
-Bounce.onSvgDrag = function (e) {
+Bounce.onSvgDrag = function(e) {
   if (Bounce.intervalId) {
-    Bounce.gesturesObserved[e.gesture.direction] =
-      Math.round(e.gesture.distance / DRAG_DISTANCE_TO_MOVE_RATIO);
+    Bounce.gesturesObserved[e.gesture.direction] = Math.round(
+      e.gesture.distance / DRAG_DISTANCE_TO_MOVE_RATIO
+    );
     e.gesture.preventDefault();
   }
 };
 
-Bounce.onKey = function (e) {
+Bounce.onKey = function(e) {
   // Store the most recent event type per-key
   Bounce.keyState[e.keyCode] = e.type;
 
   // If we are actively running our tick loop, suppress default event handling
-  if (Bounce.intervalId &&
-      e.keyCode >= KeyCodes.LEFT && e.keyCode <= KeyCodes.DOWN) {
+  if (
+    Bounce.intervalId &&
+    e.keyCode >= KeyCodes.LEFT &&
+    e.keyCode <= KeyCodes.DOWN
+  ) {
     e.preventDefault();
   }
 };
 
-Bounce.onArrowButtonDown = function (e, idBtn) {
+Bounce.onArrowButtonDown = function(e, idBtn) {
   // Store the most recent event type per-button
   Bounce.btnState[idBtn] = ButtonState.DOWN;
-  e.preventDefault();  // Stop normal events so we see mouseup later.
+  e.preventDefault(); // Stop normal events so we see mouseup later.
 };
 
-Bounce.onArrowButtonUp = function (e, idBtn) {
+Bounce.onArrowButtonUp = function(e, idBtn) {
   // Store the most recent event type per-button
   Bounce.btnState[idBtn] = ButtonState.UP;
 };
 
-Bounce.onMouseUp = function (e) {
+Bounce.onMouseUp = function(e) {
   // Reset btnState on mouse up
   Bounce.btnState = {};
 };
@@ -637,7 +687,7 @@ Bounce.onMouseUp = function (e) {
 /**
  * Initialize Blockly and the Bounce app.  Called on page load.
  */
-Bounce.init = function (config) {
+Bounce.init = function(config) {
   // replace studioApp() methods with our own
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
@@ -647,10 +697,10 @@ Bounce.init = function (config) {
   level = config.level;
   loadLevel();
 
-  window.addEventListener("keydown", Bounce.onKey, false);
-  window.addEventListener("keyup", Bounce.onKey, false);
+  window.addEventListener('keydown', Bounce.onKey, false);
+  window.addEventListener('keyup', Bounce.onKey, false);
 
-  config.loadAudio = function () {
+  config.loadAudio = function() {
     studioApp().loadAudio(skin.winSound, 'win');
     studioApp().loadAudio(skin.startSound, 'start');
     studioApp().loadAudio(skin.failureSound, 'failure');
@@ -660,17 +710,17 @@ Bounce.init = function (config) {
     }
   };
 
-  config.afterInject = function () {
+  config.afterInject = function() {
     // Connect up arrow button event handlers
     for (var btn in ArrowIds) {
-      dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
-                               delegate(this,
-                                        Bounce.onArrowButtonUp,
-                                        ArrowIds[btn]));
-      dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
-                                 delegate(this,
-                                          Bounce.onArrowButtonDown,
-                                          ArrowIds[btn]));
+      dom.addMouseUpTouchEvent(
+        document.getElementById(ArrowIds[btn]),
+        delegate(this, Bounce.onArrowButtonUp, ArrowIds[btn])
+      );
+      dom.addMouseDownTouchEvent(
+        document.getElementById(ArrowIds[btn]),
+        delegate(this, Bounce.onArrowButtonDown, ArrowIds[btn])
+      );
     }
     document.addEventListener('mouseup', Bounce.onMouseUp, false);
 
@@ -697,7 +747,9 @@ Bounce.init = function (config) {
     Bounce.ballRotationSpeed = 0;
     Bounce.defaultBallSpeed = level.ballSpeed || tiles.DEFAULT_BALL_SPEED;
     Bounce.defaultBallDir = level.ballDirection || tiles.DEFAULT_BALL_DIRECTION;
-    Bounce.drawTiles = level.theme ? skin[level.theme].drawTiles : skin.drawTiles;
+    Bounce.drawTiles = level.theme
+      ? skin[level.theme].drawTiles
+      : skin.drawTiles;
 
     // Locate the start and finish squares.
     for (var y = 0; y < Bounce.ROWS; y++) {
@@ -709,7 +761,7 @@ Bounce.init = function (config) {
           Bounce.paddleFinish_[Bounce.paddleFinishCount] = {x: x, y: y};
           Bounce.paddleFinishCount++;
         } else if (Bounce.map[y][x] & SquareType.BALLSTART) {
-          Bounce.ballStart_[Bounce.ballCount] = { x: x, y: y};
+          Bounce.ballStart_[Bounce.ballCount] = {x: x, y: y};
           Bounce.ballCount++;
         } else if (Bounce.map[y][x] & SquareType.PADDLESTART) {
           Bounce.paddleStart_ = {x: x, y: y};
@@ -728,13 +780,13 @@ Bounce.init = function (config) {
 
   // Block placement default (used as fallback in the share levels)
   config.blockArrangement = {
-    'when_run': { x: 20, y: 20},
-    'bounce_whenLeft': { x: 20, y: 220},
-    'bounce_whenRight': { x: 180, y: 220},
-    'bounce_whenPaddleCollided': { x: 20, y: 310},
-    'bounce_whenWallCollided': { x: 20, y: 410},
-    'bounce_whenBallInGoal': { x: 20, y: 510},
-    'bounce_whenBallMissesPaddle': { x: 20, y: 630}
+    when_run: {x: 20, y: 20},
+    bounce_whenLeft: {x: 20, y: 220},
+    bounce_whenRight: {x: 180, y: 220},
+    bounce_whenPaddleCollided: {x: 20, y: 310},
+    bounce_whenWallCollided: {x: 20, y: 410},
+    bounce_whenBallInGoal: {x: 20, y: 510},
+    bounce_whenBallMissesPaddle: {x: 20, y: 630}
   };
 
   config.twitter = twitterOptions;
@@ -743,7 +795,7 @@ Bounce.init = function (config) {
   config.makeYourOwn = config.share;
 
   config.makeString = bounceMsg.makeYourOwn();
-  config.makeUrl = "http://code.org/bounce";
+  config.makeUrl = 'http://code.org/bounce';
   config.makeImage = studioApp().assetUrl('media/promo.png');
 
   config.enableShowCode = false;
@@ -751,17 +803,17 @@ Bounce.init = function (config) {
 
   if (
     config.embed &&
-    config.level.markdownInstructions &&
-    !config.level.instructions
+    config.level.longInstructions &&
+    !config.level.shortInstructions
   ) {
-    // if we are an embedded level with markdown instructions but no regular
+    // if we are an embedded level with long instructions but no short
     // instructions, we want to display CSP-style instructions and not be
     // centered
     config.noInstructionsWhenCollapsed = true;
     config.centerEmbedded = false;
   }
 
-  var onMount = function () {
+  var onMount = function() {
     studioApp().init(config);
 
     var finishButton = document.getElementById('finishButton');
@@ -773,7 +825,7 @@ Bounce.init = function (config) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <AppView
-        visualizationColumn={<BounceVisualizationColumn/>}
+        visualizationColumn={<BounceVisualizationColumn />}
         onMount={onMount}
       />
     </Provider>,
@@ -784,7 +836,7 @@ Bounce.init = function (config) {
 /**
  * Clear the event handlers and stop the onTick timer.
  */
-Bounce.clearEventHandlersKillTickLoop = function () {
+Bounce.clearEventHandlersKillTickLoop = function() {
   Bounce.whenWallCollided = null;
   Bounce.whenBallInGoal = null;
   Bounce.whenBallMissesPaddle = null;
@@ -806,7 +858,7 @@ Bounce.clearEventHandlersKillTickLoop = function () {
  * Move ball to a safe place off of the screen.
  * @param {int} i Index of ball to be moved.
  */
-Bounce.moveBallOffscreen = function (i) {
+Bounce.moveBallOffscreen = function(i) {
   Bounce.ballX[i] = 100;
   Bounce.ballY[i] = 100;
   Bounce.ballDir[i] = 0;
@@ -819,8 +871,8 @@ Bounce.moveBallOffscreen = function (i) {
  * Play a start sound and reset the ball at index i and redraw it.
  * @param {int} i Index of ball to be reset.
  */
-Bounce.playSoundAndResetBall = function (i) {
-  Bounce.resetBall(i, { randomPosition: true } );
+Bounce.playSoundAndResetBall = function(i) {
+  Bounce.resetBall(i, {randomPosition: true});
   studioApp().playAudio('ballstart');
 };
 
@@ -828,7 +880,7 @@ Bounce.playSoundAndResetBall = function (i) {
  * Launch the ball from index i from a start position and launch it.
  * @param {int} i Index of ball to be launched.
  */
-Bounce.launchBall = function (i) {
+Bounce.launchBall = function(i) {
   Bounce.ballFlags[i] |= Bounce.BallFlags.LAUNCHING;
   timeoutList.setTimeout(delegate(this, Bounce.playSoundAndResetBall, i), 3000);
 };
@@ -838,28 +890,35 @@ Bounce.launchBall = function (i) {
  * @param {int} i Index of ball to be reset.
  * @param {options} randomPosition: random start
  */
-Bounce.resetBall = function (i, options) {
-  var randStart = options.randomPosition ||
-                  typeof Bounce.ballStart_[i] === 'undefined';
-  Bounce.ballX[i] =  randStart ? Math.floor(Math.random() * Bounce.COLS) :
-                                 Bounce.ballStart_[i].x;
-  Bounce.ballY[i] =  randStart ? tiles.DEFAULT_BALL_START_Y :
-                                 Bounce.ballStart_[i].y;
+Bounce.resetBall = function(i, options) {
+  var randStart =
+    options.randomPosition || typeof Bounce.ballStart_[i] === 'undefined';
+  Bounce.ballX[i] = randStart
+    ? Math.floor(Math.random() * Bounce.COLS)
+    : Bounce.ballStart_[i].x;
+  Bounce.ballY[i] = randStart
+    ? tiles.DEFAULT_BALL_START_Y
+    : Bounce.ballStart_[i].y;
   Bounce.ballRotation[i] = 0;
-  Bounce.ballDir[i] = randStart ?
-                        (Math.random() * Math.PI / 2) + Math.PI * 0.75 :
-                        Bounce.defaultBallDir;
+  Bounce.ballDir[i] = randStart
+    ? (Math.random() * Math.PI) / 2 + Math.PI * 0.75
+    : Bounce.defaultBallDir;
   Bounce.ballSpeed[i] = Bounce.currentBallSpeed;
   Bounce.ballFlags[i] = 0;
 
-  Bounce.displayBall(i, Bounce.ballX[i], Bounce.ballY[i], Bounce.ballRotation[i]);
+  Bounce.displayBall(
+    i,
+    Bounce.ballX[i],
+    Bounce.ballY[i],
+    Bounce.ballRotation[i]
+  );
 };
 
 /**
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Bounce.reset = function (first) {
+Bounce.reset = function(first) {
   var i;
   Bounce.clearEventHandlersKillTickLoop();
 
@@ -914,17 +973,20 @@ Bounce.reset = function (first) {
       // Move the finish icons into position.
       var paddleFinishIcon = document.getElementById('paddlefinish' + i);
       paddleFinishIcon.setAttribute(
-          'x',
-          Bounce.SQUARE_SIZE * (Bounce.paddleFinish_[i].x + 0.5) -
-          paddleFinishIcon.getAttribute('width') / 2);
+        'x',
+        Bounce.SQUARE_SIZE * (Bounce.paddleFinish_[i].x + 0.5) -
+          paddleFinishIcon.getAttribute('width') / 2
+      );
       paddleFinishIcon.setAttribute(
-          'y',
-          Bounce.SQUARE_SIZE * (Bounce.paddleFinish_[i].y + 0.9) -
-          paddleFinishIcon.getAttribute('height'));
+        'y',
+        Bounce.SQUARE_SIZE * (Bounce.paddleFinish_[i].y + 0.9) -
+          paddleFinishIcon.getAttribute('height')
+      );
       paddleFinishIcon.setAttributeNS(
-          'http://www.w3.org/1999/xlink',
-          'xlink:href',
-          Bounce.goal);
+        'http://www.w3.org/1999/xlink',
+        'xlink:href',
+        Bounce.goal
+      );
     }
   }
 
@@ -932,17 +994,20 @@ Bounce.reset = function (first) {
     // Move the finish icon into position.
     var ballFinishIcon = document.getElementById('ballfinish');
     ballFinishIcon.setAttribute(
-        'x',
-        Bounce.SQUARE_SIZE * (Bounce.ballFinish_.x + 0.5) -
-        ballFinishIcon.getAttribute('width') / 2);
+      'x',
+      Bounce.SQUARE_SIZE * (Bounce.ballFinish_.x + 0.5) -
+        ballFinishIcon.getAttribute('width') / 2
+    );
     ballFinishIcon.setAttribute(
-        'y',
-        Bounce.SQUARE_SIZE * (Bounce.ballFinish_.y + 0.9) -
-        ballFinishIcon.getAttribute('height'));
+      'y',
+      Bounce.SQUARE_SIZE * (Bounce.ballFinish_.y + 0.9) -
+        ballFinishIcon.getAttribute('height')
+    );
     ballFinishIcon.setAttributeNS(
-        'http://www.w3.org/1999/xlink',
-        'xlink:href',
-        Bounce.goal);
+      'http://www.w3.org/1999/xlink',
+      'xlink:href',
+      Bounce.goal
+    );
   }
 
   // Reset the obstacle image.
@@ -952,8 +1017,11 @@ Bounce.reset = function (first) {
     for (x = 0; x < Bounce.COLS; x++) {
       var obsIcon = document.getElementById('obstacle' + obsId);
       if (obsIcon) {
-        obsIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                               skin.obstacle);
+        obsIcon.setAttributeNS(
+          'http://www.w3.org/1999/xlink',
+          'xlink:href',
+          skin.obstacle
+        );
       }
       ++obsId;
     }
@@ -982,7 +1050,7 @@ Bounce.reset = function (first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-Bounce.runButtonClick = function () {
+Bounce.runButtonClick = function() {
   if (level.edit_blocks) {
     Bounce.onPuzzleComplete();
   }
@@ -1012,8 +1080,9 @@ Bounce.runButtonClick = function () {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-var displayFeedback = function () {
-  const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
+var displayFeedback = function() {
+  const isSignedIn =
+    getStore().getState().progress.signInState === SignInState.SignedIn;
   if (!Bounce.waitingForReport) {
     studioApp().displayFeedback({
       feedbackType: Bounce.testResults,
@@ -1027,7 +1096,7 @@ var displayFeedback = function () {
         sharingText: bounceMsg.shareGame()
       },
       saveToProjectGallery: true,
-      disableSaveToGallery: !isSignedIn,
+      disableSaveToGallery: !isSignedIn
     });
   }
 };
@@ -1036,7 +1105,7 @@ var displayFeedback = function () {
  * Function to be called when the service report call is complete
  * @param {MilestoneResponse} response - JSON response (if available)
  */
-Bounce.onReportComplete = function (response) {
+Bounce.onReportComplete = function(response) {
   Bounce.response = response;
   Bounce.waitingForReport = false;
   studioApp().onReportComplete(response);
@@ -1046,14 +1115,17 @@ Bounce.onReportComplete = function (response) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-Bounce.execute = function () {
+Bounce.execute = function() {
   Bounce.result = ResultType.UNSET;
   Bounce.testResults = TestResults.NO_TESTS_RUN;
   Bounce.waitingForReport = false;
   Bounce.response = null;
 
   // Map event handler hooks (e.g. Bounce.whenLeft) to the generated code.
-  const generator = Blockly.Generator.blockSpaceToCode.bind(Blockly.Generator, 'JavaScript');
+  const generator = Blockly.Generator.blockSpaceToCode.bind(
+    Blockly.Generator,
+    'JavaScript'
+  );
   const events = {
     whenWallCollided: {code: generator('bounce_whenWallCollided')},
     whenBallInGoal: {code: generator('bounce_whenBallInGoal')},
@@ -1069,7 +1141,10 @@ Bounce.execute = function () {
   studioApp().playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
   studioApp().reset(false);
 
-  CustomMarshalingInterpreter.evalWithEvents({Bounce: api}, events).hooks.forEach(hook => {
+  CustomMarshalingInterpreter.evalWithEvents(
+    {Bounce: api},
+    events
+  ).hooks.forEach(hook => {
     Bounce[hook.name] = hook.func;
   });
 
@@ -1077,7 +1152,7 @@ Bounce.execute = function () {
   Bounce.intervalId = window.setInterval(Bounce.onTick, Bounce.scale.stepSpeed);
 };
 
-Bounce.onPuzzleComplete = function () {
+Bounce.onPuzzleComplete = function() {
   if (level.freePlay) {
     Bounce.result = ResultType.SUCCESS;
   }
@@ -1087,7 +1162,7 @@ Bounce.onPuzzleComplete = function () {
 
   // If we know they succeeded, mark levelComplete true
   // Note that we have not yet animated the succesful run
-  var levelComplete = (Bounce.result === ResultType.SUCCESS);
+  var levelComplete = Bounce.result === ResultType.SUCCESS;
 
   // If the current level is a free play, always return the free play
   // result type
@@ -1104,9 +1179,9 @@ Bounce.onPuzzleComplete = function () {
   }
 
   if (level.editCode) {
-    Bounce.testResults = levelComplete ?
-      TestResults.ALL_PASS :
-      TestResults.TOO_FEW_BLOCKS_FAIL;
+    Bounce.testResults = levelComplete
+      ? TestResults.ALL_PASS
+      : TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -1114,7 +1189,7 @@ Bounce.onPuzzleComplete = function () {
 
   Bounce.waitingForReport = true;
 
-  const sendReport = function () {
+  const sendReport = function() {
     // Report result to server.
     studioApp().report({
       app: 'bounce',
@@ -1130,10 +1205,12 @@ Bounce.onPuzzleComplete = function () {
   if (typeof document.getElementById('svgBounce').toDataURL === 'undefined') {
     sendReport();
   } else {
-    document.getElementById('svgBounce').toDataURL("image/jpeg", {
-      callback: function (imageDataUrl) {
+    document.getElementById('svgBounce').toDataURL('image/jpeg', {
+      callback: function(imageDataUrl) {
         Bounce.feedbackImage = imageDataUrl;
-        Bounce.encodedFeedbackImage = encodeURIComponent(Bounce.feedbackImage.split(',')[1]);
+        Bounce.encodedFeedbackImage = encodeURIComponent(
+          Bounce.feedbackImage.split(',')[1]
+        );
 
         sendReport();
       }
@@ -1144,7 +1221,7 @@ Bounce.onPuzzleComplete = function () {
 /**
  * Set the tiles to be transparent gradually.
  */
-Bounce.setTileTransparent = function () {
+Bounce.setTileTransparent = function() {
   var tileId = 0;
   for (var y = 0; y < Bounce.ROWS; y++) {
     for (var x = 0; x < Bounce.COLS; x++) {
@@ -1168,16 +1245,18 @@ Bounce.setTileTransparent = function () {
  * @param {number} x Horizontal grid (or fraction thereof).
  * @param {number} y Vertical grid (or fraction thereof).
  */
-Bounce.displayBall = function (i, x, y, rotation) {
+Bounce.displayBall = function(i, x, y, rotation) {
   var ballIcon = document.getElementById('ball' + i);
-  ballIcon.setAttribute('x',
-                        x * Bounce.SQUARE_SIZE);
-  ballIcon.setAttribute('y',
-                        y * Bounce.SQUARE_SIZE + Bounce.BALL_Y_OFFSET);
+  ballIcon.setAttribute('x', x * Bounce.SQUARE_SIZE);
+  ballIcon.setAttribute('y', y * Bounce.SQUARE_SIZE + Bounce.BALL_Y_OFFSET);
 
-  var xCenter = (x * Bounce.SQUARE_SIZE) + (Bounce.PEGMAN_WIDTH / 2);
-  var yCenter = (y * Bounce.SQUARE_SIZE) + Bounce.BALL_Y_OFFSET + (Bounce.PEGMAN_HEIGHT / 2);
-  ballIcon.setAttribute('transform', `rotate(${rotation} ${xCenter} ${yCenter})`);
+  var xCenter = x * Bounce.SQUARE_SIZE + Bounce.PEGMAN_WIDTH / 2;
+  var yCenter =
+    y * Bounce.SQUARE_SIZE + Bounce.BALL_Y_OFFSET + Bounce.PEGMAN_HEIGHT / 2;
+  ballIcon.setAttribute(
+    'transform',
+    `rotate(${rotation} ${xCenter} ${yCenter})`
+  );
 
   var ballClipRect = document.getElementById('ballClipRect' + i);
   ballClipRect.setAttribute('x', x * Bounce.SQUARE_SIZE);
@@ -1189,19 +1268,17 @@ Bounce.displayBall = function (i, x, y, rotation) {
  * @param {number} x Horizontal grid (or fraction thereof).
  * @param {number} y Vertical grid (or fraction thereof).
  */
-Bounce.displayPaddle = function (x, y) {
+Bounce.displayPaddle = function(x, y) {
   var paddleIcon = document.getElementById('paddle');
-  paddleIcon.setAttribute('x',
-                          x * Bounce.SQUARE_SIZE);
-  paddleIcon.setAttribute('y',
-                          y * Bounce.SQUARE_SIZE + Bounce.PADDLE_Y_OFFSET);
+  paddleIcon.setAttribute('x', x * Bounce.SQUARE_SIZE);
+  paddleIcon.setAttribute('y', y * Bounce.SQUARE_SIZE + Bounce.PADDLE_Y_OFFSET);
 
   var paddleClipRect = document.getElementById('paddleClipRect');
   paddleClipRect.setAttribute('x', x * Bounce.SQUARE_SIZE);
   paddleClipRect.setAttribute('y', paddleIcon.getAttribute('y'));
 };
 
-Bounce.displayScore = function () {
+Bounce.displayScore = function() {
   var score = document.getElementById('score');
   score.textContent = bounceMsg.scoreText({
     playerScore: Bounce.playerScore,
@@ -1209,21 +1286,22 @@ Bounce.displayScore = function () {
   });
 };
 
-var skinTheme = function (value) {
+var skinTheme = function(value) {
   if (value === 'hardcourt' || value === 'basketball') {
     return skin;
   }
   return skin[value];
 };
 
-Bounce.setTeam = function (value) {
+Bounce.setTeam = function(value) {
   Bounce.setBackgroundImage(skin.teamBackgrounds[value]);
   Bounce.loadTiles(skin.tiles, skin.goalTiles);
 };
 
-Bounce.setBackground = function (value) {
+Bounce.setBackground = function(value) {
   var theme = skinTheme(value);
-  Bounce.drawTiles = theme.drawTiles === undefined ? skin.drawTiles : theme.drawTiles;
+  Bounce.drawTiles =
+    theme.drawTiles === undefined ? skin.drawTiles : theme.drawTiles;
   if (level.maps) {
     Bounce.map = level.maps[value === 'hardcourt' ? 'basketball' : value];
   }
@@ -1231,13 +1309,16 @@ Bounce.setBackground = function (value) {
   Bounce.loadTiles(theme.tiles, theme.goalTiles);
 };
 
-Bounce.setBackgroundImage = function (backgroundUrl) {
+Bounce.setBackgroundImage = function(backgroundUrl) {
   var element = document.getElementById('background');
-  element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    backgroundUrl);
+  element.setAttributeNS(
+    'http://www.w3.org/1999/xlink',
+    'xlink:href',
+    backgroundUrl
+  );
 };
 
-Bounce.loadTiles = function (tiles, goalTiles) {
+Bounce.loadTiles = function(tiles, goalTiles) {
   // Recompute all of the tiles to determine if they are walls, goals, or empty
   // TODO: do this once during init and cache the result
   var tileId = 0;
@@ -1246,22 +1327,24 @@ Bounce.loadTiles = function (tiles, goalTiles) {
       var empty = false;
       var image;
       // Compute the tile index.
-      var tile = wallNormalize(x, y) +
-          wallNormalize(x, y - 1) +  // North.
-          wallNormalize(x + 1, y) +  // East.
-          wallNormalize(x, y + 1) +  // South.
-          wallNormalize(x - 1, y);   // West.
+      var tile =
+        wallNormalize(x, y) +
+        wallNormalize(x, y - 1) + // North.
+        wallNormalize(x + 1, y) + // East.
+        wallNormalize(x, y + 1) + // South.
+        wallNormalize(x - 1, y); // West.
 
       // Draw the tile.
       if (WALL_TILE_SHAPES[tile]) {
         image = tiles;
       } else {
         // Compute the tile index.
-        tile = goalNormalize(x, y) +
-            goalNormalize(x, y - 1) +  // North.
-            goalNormalize(x + 1, y) +  // East.
-            goalNormalize(x, y + 1) +  // South.
-            goalNormalize(x - 1, y);   // West.
+        tile =
+          goalNormalize(x, y) +
+          goalNormalize(x, y - 1) + // North.
+          goalNormalize(x + 1, y) + // East.
+          goalNormalize(x, y + 1) + // South.
+          goalNormalize(x - 1, y); // West.
 
         if (!GOAL_TILE_SHAPES[tile]) {
           empty = true;
@@ -1271,7 +1354,10 @@ Bounce.loadTiles = function (tiles, goalTiles) {
       var element = document.getElementById('tileElement' + tileId);
       if (!empty && Bounce.drawTiles) {
         element.setAttributeNS(
-            'http://www.w3.org/1999/xlink', 'xlink:href', image);
+          'http://www.w3.org/1999/xlink',
+          'xlink:href',
+          image
+        );
         element.setAttribute('visibility', 'visible');
       } else if (element) {
         element.setAttribute('visibility', 'hidden');
@@ -1281,42 +1367,54 @@ Bounce.loadTiles = function (tiles, goalTiles) {
   }
 };
 
-Bounce.setBall = function (value) {
+Bounce.setBall = function(value) {
   var theme = skinTheme(value);
   Bounce.ballImage = theme.ball;
   Bounce.ballRotationSpeed = theme.rotateBall ? 10 : 0;
   for (var i = 0; i < Bounce.ballCount; i++) {
     var element = document.getElementById('ball' + i);
-    element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      Bounce.ballImage);
+    element.setAttributeNS(
+      'http://www.w3.org/1999/xlink',
+      'xlink:href',
+      Bounce.ballImage
+    );
     if (!theme.rotateBall) {
       Bounce.ballRotation[i] = 0;
     }
   }
 };
 
-Bounce.setPaddle = function (value) {
+Bounce.setPaddle = function(value) {
   var element = document.getElementById('paddle');
-  element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    skinTheme(value).paddle);
+  element.setAttributeNS(
+    'http://www.w3.org/1999/xlink',
+    'xlink:href',
+    skinTheme(value).paddle
+  );
 };
 
-Bounce.timedOut = function () {
+Bounce.timedOut = function() {
   return Bounce.tickCount > Bounce.timeoutFailureTick;
 };
 
-Bounce.allFinishesComplete = function () {
+Bounce.allFinishesComplete = function() {
   var i;
   if (Bounce.paddleFinish_) {
     var finished, playSound;
     for (i = 0, finished = 0; i < Bounce.paddleFinishCount; i++) {
       if (!Bounce.paddleFinish_[i].finished) {
-        if (essentiallyEqual(Bounce.paddleX,
-                             Bounce.paddleFinish_[i].x,
-                             tiles.FINISH_COLLIDE_DISTANCE) &&
-            essentiallyEqual(Bounce.paddleY,
-                             Bounce.paddleFinish_[i].y,
-                             tiles.FINISH_COLLIDE_DISTANCE)) {
+        if (
+          essentiallyEqual(
+            Bounce.paddleX,
+            Bounce.paddleFinish_[i].x,
+            tiles.FINISH_COLLIDE_DISTANCE
+          ) &&
+          essentiallyEqual(
+            Bounce.paddleY,
+            Bounce.paddleFinish_[i].y,
+            tiles.FINISH_COLLIDE_DISTANCE
+          )
+        ) {
           Bounce.paddleFinish_[i].finished = true;
           finished++;
           playSound = true;
@@ -1324,9 +1422,10 @@ Bounce.allFinishesComplete = function () {
           // Change the finish icon to goalSuccess.
           var paddleFinishIcon = document.getElementById('paddlefinish' + i);
           paddleFinishIcon.setAttributeNS(
-              'http://www.w3.org/1999/xlink',
-              'xlink:href',
-              Bounce.goalSuccess);
+            'http://www.w3.org/1999/xlink',
+            'xlink:href',
+            Bounce.goalSuccess
+          );
         }
       } else {
         finished++;
@@ -1336,22 +1435,29 @@ Bounce.allFinishesComplete = function () {
       // Play a sound unless we've hit the last flag
       studioApp().playAudio('flag');
     }
-    return (finished === Bounce.paddleFinishCount);
+    return finished === Bounce.paddleFinishCount;
   }
   if (Bounce.ballFinish_) {
     for (i = 0; i < Bounce.ballCount; i++) {
-      if (essentiallyEqual(Bounce.ballX[i],
-                           Bounce.ballFinish_.x,
-                           tiles.FINISH_COLLIDE_DISTANCE) &&
-          essentiallyEqual(Bounce.ballY[i],
-                           Bounce.ballFinish_.y,
-                           tiles.FINISH_COLLIDE_DISTANCE)) {
+      if (
+        essentiallyEqual(
+          Bounce.ballX[i],
+          Bounce.ballFinish_.x,
+          tiles.FINISH_COLLIDE_DISTANCE
+        ) &&
+        essentiallyEqual(
+          Bounce.ballY[i],
+          Bounce.ballFinish_.y,
+          tiles.FINISH_COLLIDE_DISTANCE
+        )
+      ) {
         // Change the finish icon to goalSuccess.
         var ballFinishIcon = document.getElementById('ballfinish');
         ballFinishIcon.setAttributeNS(
-            'http://www.w3.org/1999/xlink',
-            'xlink:href',
-            Bounce.goalSuccess);
+          'http://www.w3.org/1999/xlink',
+          'xlink:href',
+          Bounce.goalSuccess
+        );
         return true;
       }
     }
@@ -1359,15 +1465,23 @@ Bounce.allFinishesComplete = function () {
   return false;
 };
 
-var checkFinished = function () {
+var checkFinished = function() {
   // if we have a succcess condition and have accomplished it, we're done and successful
-  if (level.goal && level.goal.successCondition && level.goal.successCondition()) {
+  if (
+    level.goal &&
+    level.goal.successCondition &&
+    level.goal.successCondition()
+  ) {
     Bounce.result = ResultType.SUCCESS;
     return true;
   }
 
   // if we have a failure condition, and it's been reached, we're done and failed
-  if (level.goal && level.goal.failureCondition && level.goal.failureCondition()) {
+  if (
+    level.goal &&
+    level.goal.failureCondition &&
+    level.goal.failureCondition()
+  ) {
     Bounce.result = ResultType.FAILURE;
     return true;
   }

@@ -24,29 +24,36 @@ es-MX:
       Picker: Rocolector/a
       Comment: Comentario
       'Variables ': 'Variables '
+      Default: Incumplimiento
+      Behaviors: Comportamientos
+      Locations: Ubicaciones
+      Bunny Game: Juego del conejo
       everythingelse: detodolodemás
+      World: Mundo
+      Location: Ubicación
       numbers: números
       Numbers: Números
-      Input: Input
-      Default: Incumplimiento
-      World: Mundo
-      Sprites: Sprites
-      Behaviors: Comportamientos
-      Advanced: Advanced
+      Dancers: Bailarines
+      Groups: Grupos
+      Advanced: Avanzado
+      Start: Inicio
+      Music: Música
+      Dancing: Baile
       Sprite: Sprite
       Brush: Pincel
       Make Sprite: Hacer un Sprite
       Movement: Movimiento
-      Start: Inicio
-      Groups: Grupos
       Booleans: Valores booleanos
       Functional: Funcional
+      While Events: Eventos mientra
+      Sprite Properties: Propiedades de Sprite
       Predefined: Predefinido
       test: prueba
       test2: prueba2
-      Foo: Foo
+      Use These Blocks: Utilize estos bloques
+      Do Not Use: No usar
       Name: Nombre
       NEW BLOCKS: BLOQUES NUEVOS
-      'Functions ': 'Functions '
+      'Functions ': 'Funciones '
       Game/Score: Juego/Puntaje
       Function: Función

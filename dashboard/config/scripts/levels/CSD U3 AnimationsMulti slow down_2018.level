@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Slow Down\r\n\r\nNice work! Time to start learning how to control these multiframe animations.\r\n\r\n# Do This\r\n\r\nYour sprites should be animated but they're moving really quickly. \r\n\r\n* Head back to the Animation Tab. Underneath each animation you should see a slider. ![](https://images.code.org/169e11c1f6f55b607937fe9cb7e5e390-image-1476209267457.07.26 AM.png)\r\n* Use these sliders to slow down your animations so they look more realistic.\r\n\r\n",
+    "long_instructions": "# Slow Down\r\n\r\nNice work! Time to start learning how to control these multiframe animations.\r\n\r\n# Do This\r\n\r\nYour sprites should be animated but they're moving really quickly. \r\n\r\n* Head back to the Animation Tab. Underneath each animation you should see a slider. ![](https://images.code.org/169e11c1f6f55b607937fe9cb7e5e390-image-1476209267457.07.26 AM.png)\r\n* Use these sliders to slow down your animations so they look more realistic.\r\n\r\n",
     "submittable": "false",
     "start_blocks": "var sprite1, sprite2;\r\n\r\nsprite1 = createSprite(100,100);\r\nsprite2 = createSprite(300,300);\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  drawSprites();\r\n}",
     "is_k1": "false",

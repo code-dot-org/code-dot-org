@@ -1,0 +1,696 @@
+---
+sq:
+  data:
+    long_instructions:
+      2-3 Artist 3.4: "Blloku kërcimit lëviz artistin pa vizatuar.\nVizato vizën bosh
+        duke përdorur të dyja blloqet ehidhu përpara dhe lëviz përpara.\nSecila vizë
+        është 50 piksela e gjate "
+      2-3 Artist 4: Më ndihmo të përfundoj shtëpinë për këtë macen.
+      2-3 Artist 9 NEW: Përfundo këtë balonë
+      2-3 Artist 9 REPLACEMENT: Përfundoni duke vizatuar këto shkallë!
+      2-3 Artist 9: Përfundo këtë balonë
+      2-3 Artist Debugging 10: "Vatra e drejtimit në kontrolluesin e lojës time është
+        shumë e ngushtë.\r\n\r\n Mund ta zgjeroni me 10 piksel?\r\n\r\nProvoni të
+        ekzekutoni\nkodin e parë për të parë se çfarë është e gabuar."
+      2-3 Artist Debugging 11: "Flokët e dëborës po copëtohen!\r\n\r\nMund\ntë kuptoni
+        se çfarë është duke shkuar  gabim?"
+      2-3 Artist Debugging 2: "Ky Kodi për mustaqet e maces është i gabuar. \n\r\n\r\n
+        Rregullo këtë kod për të vizatuar mustaqet që të jenë në të njëjtën gjatësi."
+      2-3 Artist Debugging 3: |-
+        Varka ime ka një vrimë! A mund ta rregullosh atë
+        duke ndryshuar këndin e vijës? Ndihmë: këndi i fundit është jashtë me 15 gradë.
+      2-3 Artist Debugging 5: |-
+        Kodi për këmbën dhe shputën që ti
+        shikon është i gabuar. Ndihmë: Këmba është shumë e gjatë, ne mund të fshijmë një hap (synohet lojë fjalësh)
+      2-3 Artist Debugging 6: |-
+        Duket sikur jam ulur në një karrike që
+        i mungon një këmbë. modifiko blloqet për të vizatuar këmbën.
+      2-3 Artist Debugging 7: |-
+        Duket sikur C në kod është vizatuar mbrapsht.
+        A mund ta bësh të duket si C?
+      2-3 Artist Debugging 8: Helika ime e letrës e ngulur në shkop nuk ka përfunduar
+        ende. Sa herë duhet t'a përsëris që të përfundojë?
+      2-3 Artist Debugging 9: |-
+        Kodi për këtë trung është i pasaktë. Ndihmë:
+        Këndi është jashtë 60 gradë
+      2-3 Artist Free Play: Lojë-falas! Vizato çfarëdo që dëshiron.
+      2-3 Artist Functions 11.5: |-
+        këtu kemi të njëjtin funksion "Vizato një gjashtëkëndësh".
+        Çfarë ndodh nëse ti kthehesh vetëm me 60 gradë çdo herë që e bën ciklin?
+      2-3 Artist Functions 12 Mike: "Funskionet janë vërtet të mrekulleshme për të
+        vizatuar\ngjëra komplekse disa herë. A mund ta përdorësh funksionin \"vizato
+        një lule\"\npër të mbushur pjesën e mbetur të kutisë së ujitjes? (Ndihmë:
+        Lulet janë të gjitha të ndara me nga\n100 piksela gjatësi)  "
+      2-3 Artist Functions 12 a: "Funskionet janë vërtet të mrekulleshme për të vizatuar\ngjëra
+        komplekse disa herë. A mund ta përdorësh funksionin \"vizato një lule\"\npër
+        të mbushur pjesën e mbetur të kutisë së ujitjes? (Ndihmë: Lulet janë të gjitha
+        të ndara me nga\n100 piksela gjatësi)  "
+      2-3 Artist Functions 12: "Funskionet janë vërtet të mrekulleshme për të vizatuar\ngjëra
+        komplekse disa herë. A mund ta përdorësh funksionin \"vizato një lule\"\npër
+        të mbushur pjesën e mbetur të kutisë së ujitjes? (Ndihmë: Lulet janë të gjitha
+        të ndara me nga\n100 piksela gjatësi)  "
+      2-3 Artist Functions 2: |-
+        Funksionet të lejojnë ty të përcaktosh blloqe të reja! Ne kemi
+        lëvizur blloqet për të vizatuar një katror brenda një funksioni të quajtur "vizato një katror".
+        A mund ta përdorësh funksionin "vizato një katror" për të krijuar xhamat? Katrorët
+        janë 75 piksela të veçuar.
+      2-3 Artist Functions 3: "Modifiko funksionin për të vizatuar një katror me\ngjatësi
+        brinje 115 dhe vizato xhama më të mëdhenj. Katrorët janë tani 45 piksela \ntë
+        veçuar."
+      2-3 Artist Functions 4: |-
+        Përdor bllokun "repeat" për të vizatuar këto
+        3 katrorë.
+      2-3 Artist Loops 1: |-
+        A mund të bësh një gjashtëkëndësh me brinjë që janë
+        100 piksela të gjatë për të përfunduar qelinë? Kujto, që ti do të duhet të kthehesh
+        vetëm 60 gradë!
+      2-3 Artist Loops 2: |-
+        Tani përdor një bllok përsëritës për të bërë elementin
+        guaskë.
+      2-3 Artist Loops New 10: |-
+        Tani le të bashkojmë një grup me V së bashku,
+        duke i vizatuar ato në një cikël.
+      2-3 Artist Loops New 12: 'Vizato një diamant me brinjë 100 piksela.
+
+'
+      2-3 Artist Loops New 13: Tani vizato diamantin 3 herë në një cikël.
+      2-3 Artist Loops New 2: |-
+        Këtu është një pjesë kodi që ti përdore për të vizatuar
+        atë katror. Çfarë ndodh nëse ti përdor bllokun repeat për të ekzekutuar këtë kod 4 herë?
+      2-3 Artist Loops New 9: "Vizato një V të thjeshtë ku të dyja brinjët janë 50
+        \npiksela për të përfunduar shigjetën."
+      2-3 Artist Nested Loops 10: |-
+        Ciklo këtë kod 12 herë për të përfunduar
+        modelin.
+      2-3 Artist Nested Loops 11: "Ciklo këtë kod 4 herë për të përfunduar \nmodelin,
+        kthehu 90 gradë pas çdo rrethi."
+      2-3 Artist Nested Loops 12: |-
+        Ciklo këtë kod 12 herë për të përfunduar
+        dredhjet.
+      2-3 Artist Nested Loops 2: "Tani ciklo këtë trekëndësh 6 herë. Pas \nçdo trekëndëshi,
+        ti do të kesh nevojë të kthehesh 60 gradë përpara se të vizatosh tjetrin."
+      2-3 Artist Nested Loops 4: |-
+        Ciklo këtë diamant 12 herë për të vizatuar
+        një lule. Ndihmë: 12 diamantët janë si 12 trekëndëshat që bëre - sa do të duhet
+        të kthehesh pas çdo forme?
+      2-3 Artist Nested Loops 5: |-
+        Mbush këtë dritare ndërtese me
+        një cikël të mbivendosur. Dritaret janë 20 piksela të gjatë dhe 20 piksela të veçuar.
+      2-3 Artist Nested Loops 7: "Ciklo këtë trekëndësh 10 herë për të vizatuar\ndiellin.
+        Ti do të kesh nevojë të lëvizësh dhe të kthehesh pas çdo trekëndëshi. Ti mund
+        të \nzbulosh sa duhet të kthehesh duke pjestuar numrin e gradëve në një rreth
+        \nme numrin e formave që ti krijon."
+      2-3 Artist Nested Loops 8: |-
+        Tani le të shtojmë pak bar tek figura jonë.
+        Çdo tufë bari është 50 piksela veç e veç.
+      2-3 Artist Nested Loops 9: |-
+        Ne do ta mbarojmë këtë figurë duke shtuar
+        një lule. Ciklo diamantin 12 herë për të vizatuar lulen tënde.
+      2-3 Artist Nested Loops Free Play: |-
+        Lojë e lirë, vizato diçka të hatashme
+        me ciklet e mbivendosura.
+      2-3 Bee Conditionals 11: Mblidh nektar tek lulet që kanë nektar.
+      2-3 Bee Conditionals 13: |-
+        Mblidh nektar dhe bëj mjaltë. Ndihmë:
+        çfarë ndodh nëse ti përdor kushtin "if nectar" në një lule të kuqe? Mund
+        ta përfundosh këtë me një cikël?
+      2-3 Bee Conditionals 15: Mblidh nektar nga të katërta lulet.
+      2-3 Bee Conditionals 3: |-
+        Më ndihmo të mbledh gjithë nektarin
+        nga lulet dhe bëj mjaltë. Përdor një cikël.
+      2-3 Bee Debugging 3: |-
+        Këto blloqet janë duke më bezdisur vërtet. Rregullo
+        gabimin (et) për të mbledhur gjithë nektarin dhe bëj gjithë mjaltin.
+      2-3 Bee Debugging 6: "Këto blloqet janë duke më bezdisur vërtet. Rregullo\ngabimin
+        (et) për të mbledhur gjithë nektarin dhe bëj gjithë mjaltin. "
+      2-3 Bee Debugging 9: |-
+        Këto blloqet janë duke më bezdisur vërtet. Rregullo
+        gabimin (et) për të mbledhur gjithë nektarin dhe bëj gjithë mjaltin.
+      2-3 Bee Functions 10: "Lulet lejla mund të kenë secila ose 1 ose 0 nektar. Krijo
+        \nnjë funksion që mbledh nektar vetëm nga lulet lejla që kanë nektar."
+      2-3 Bee Functions 2: |-
+        Funksionet janë blloqe kodi që performojnë
+        një detyrë. Përdor funksionin "merr 5" për të marrë 5 nektarë në një kohë. Sigurohu të
+        përdorësh një cikël për të arritur një numërim blloku ideal, gjithashtu.
+      2-3 Bee Functions 4: |-
+        Funksioni "lëviz dhe merr nektar" kthen
+        bletën, mbledh nektarin, dhe rikthen bletën ku filloi. Përdor
+        funksionin për të mbledhur gjithë nektarin.
+      2-3 Bee Loops 1: "Çdo lule mban një njësi nektari. Mblidh\nnektar nga çdo lule. "
+      2-3 Bee Loops 3A: |-
+        A mund të përdorësh një cikël për të mbledhur gjithë
+        nektarin?
+      2-3 Bee Loops 3B: Tani përdor bllokun e ri të përsëritjes për të mbledhur të
+        gjithë nektarin dhe për të përgatitur të gjithë mjaltin.
+      2-3 Bee Loops 4A: Cfare ndodh nëse e lidhni këtë pjesë 3 herë? Mos harroni të
+        përgatisni në fund mjaltin!
+      2-3 Bee Loops 8: "Këto lulet lejla kanë një sasi të panjohur\nnektari. Përdor
+        ciklin \"while nectar\" për të mbledhur gjithë nektarin. Ky cikël \ndo të
+        veprojë për aq kohë sa kushti është i vërtetë, në këtë rast Nectar > 0."
+      2-3 Maze 15: Përdor dy ciklet për të arritur tek derrkuci duke përdorur më pak
+        blloqe.
+      2-3 Maze Loops 18: Më ço tek luledielli!
+      4-5 Artist 10: |-
+        Shtyp "Lësho" për të provuar kodin. Më pas, përsërite atë
+        aq herë sa duhet për të përfunduar vizatimin. Ngjyrat do jenë ndryshe çdo herë.
+      4-5 Artist 2: |-
+        A mund ta ciklosh këtë kod për të përfunduar
+        katrorin?
+      4-5 Artist 5: Çfarë këndi përdor ti?
+      4-5 Artist 6: |-
+        Trekëndëshi barabrinjës ka kënde 60, 60,
+        dhe 60 gradë. Çdo brinjë është 200 piksela. Përfundo vizatimin.
+      4-5 Artist Free Draw 1: |-
+        Vizatim çfarë të duash! Vizato çfarëdo që ti je inspiruar
+        për të krijuar.
+      4-5 Artist Patterns 1: |-
+        A mund ta vizatosh këtë katror duke përdorur një cikël?
+        Secila brinjë është 20 piksela e gjatë.
+      4-5 Artist Patterns 12: "Nëse ti e kopjon këtë cikël dhe kthen majtas në vënd
+        \nta kthesh djathtas, çfarë ndodh? A mund ta përsërisësh atë për të vizatuar
+        këtë dallgë?"
+      4-5 Artist Patterns 13: "Tani le të ciklojmë të gjithën katër\nherë për të krijuar
+        këtë kornizë figure. Kujdes me cepat - ti nuk mund \ntë kthehesh 90 gradë!
+        Nëse të ciklosh një kthesë 3 gradë 60 herë bën një gjysëm rreth, \ncili nga
+        këto blloqe kodi do të bëjë një çerek rrethi për cepat?"
+      4-5 Artist Patterns 3: "Tani le të shkojmë një nivel më thellë! Ne kemi\nmbivendosur
+        gjithë bllokun e kodit në një cikël tjetër, por ti ke nevojë të arrish \nartistin
+        mbrapsht për të vizatuar rreshtin tjetër. Cilin nga këto blloqe kodi mund
+        \ntë vendosësh në fund të pozicionit për të vizatuar gjithë rrejtën?"
+      4-5 Artist Patterns 8: "Përodrni një cikël për të vizatuar këtë gjashtëkëndësh
+        me 40 \npiksela brinjët dhe 60 gradë këndet."
+      4-5 Artist Patterns 9: Tani përsërisni atë kod 3 herë për të vizatuar rreshtin.
+        Shënjestro, secili gjashtëkëndësh është 80 piksel i gjerë nga e majta në të
+        djathtë, i matur nga pikat më të largëta.
+      4-5 Artist Patterns Free Play: "Lojë e lirë - provo dorën tënde për të bërë
+        \nmodelin tuaj!"
+      4-5 Bee Conditionals 2: "Bleta dëshiron vetëm nektar \ntani. Kujto, jo të gjithë
+        objektet janë lule, kështu që kontrollo për të mblehdur nektar vetëm\ntek
+        lulet."
+      4-5 Bee Conditionals 5: |-
+        Mund të jetë një lule ose një koshere
+        nën ato re. Përdor bllokun if/else për të mbledhur nektar nëse ka
+        lule, përndryshe të bëjë mjaltë (sepse është një koshere).
+      4-5 Bee Conditionals 6: |-
+        Kjo lule lejla mund të ketë secila
+        3, 2 ose 1 nektar. Këtu një bllok if-else kombinohet me një tjetër bllok
+        if-else për të krijuar një bllok if, else-if, else. Përfundo zgjidhjen për të mbledhur
+        sasinë e panjohur të nektarit.
+      4-5 Bee Conditionals 7: |-
+        Kjo lule lejla mund të ketë secila
+        3, 2 ose 1 nektar. Përfundo funksionin "kontrollo lulen lejla" dhe përdore
+        atë të mbledhësh gjithë nektarin te lulet.
+      4-5 Bee Conditionals 8: "Shkruaj një funksion brenda bllokut të quajtur\n\"kontrollo
+        lulen bëj mjaltë.\" Funksioni jot duhet të kontrollojë sa nektar \nka lulja
+        lejla dhe mblidhe atë, ec përpara. dhe më pas bëj mjaltë."
+      4-5 Bee Conditionals Assessment 1: |-
+        Vlerësim: Ky kod është i gabuar.
+        Përfundo funksionin "merr nektarin ose bejë mjaltin", më pas thirre atë për të mbedhur
+        gjithë nektarin dhe mjaltin. Kujto që lulet lejla mund të kenë 3, 2, ose 1 nektarë.
+      4-5 Bee Debugging 1: |-
+        Këto blloqet po më bezdisin vërtet. A mund ti
+        rregullosh ato?
+      4-5 Bee Debugging 6: |-
+        Lulj lejla ka një sasi të panjohur
+        nektari. Rregullo blloqet për të gjetur gjithë nektarin nga lulja.
+      4-5 Bee Nested Loops 4: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë
+        tek çdo koshere. Përdor një cikël të mbivendosur. "
+      4-5 Bee Nested Loops Assessment 1: |-
+        Vlerësim - Mblidh gjithë
+        nektarin dhe bëj gjithë mjaltin duke përdorur ciklet.
+      4-5 Maze 9: Krijo një cikël me bllokun "repeat until".
+      4-5 Maze Conditionals 1: |-
+        Përdor bllokun repeat until për të
+        çuar zombien tek luledielli.
+      4-5 Maze Conditionals 10: "A mund të shtoni vetëm 3 blloqe që të ndihmojnë mumjen
+        të zgjidh një labirint më komplekse?\r\n\r\n Nëse e bën si duhet, ai mund
+        të ec në çdo rrugë të dredhuar pa marrë parasysh gjatësinë."
+      4-5 Maze Conditionals 2: |-
+        Përdor bllokun repeat until për të
+        çuar zombien tek luledielli.
+      4-5 Maze Conditionals 3: |-
+        Përdor bllokun "if" për të më lejuar mua të vendos
+        kur të kthehem. Ndihmë: ty të duhet vetëm një bllok më shumë, por mëso si do ta ndërtojmë ne
+        atë  që ti ta bësh vetë herës tjetër.
+      4-5 Maze Conditionals 4: |-
+        Ok, kjo është si puzzle i fundit,
+        por ti duhet të kujtosh se si përdore bllokun "if" dhe "repeat"
+        bashkë.
+      4-5 Maze Conditionals 5: |-
+        Unë dua një luledielli! Përdor një bllok "if"
+        për të më çuar mua atje me numrin më të pakët të blloqeve.
+      4-5 Maze Conditionals 6: |-
+        Unë dua një luledielli! Përdor një bllok "if"
+        për të më çuar mua atje me numrin më të pakët të blloqeve.
+      4-5 Maze Conditionals 7: |-
+        Ok, le ta bëjmë përsëri për tu praktikuar
+        - kjo nuk është shumë ndryshe, por kujdes për përtypësit!
+      4-5 Maze Conditionals 8: |-
+        Blloqet "if-alese" kërkojnë një kush,
+        dhe më pas bëjnë një gjë OSE një tjetër. Për të më çuar tek luledielli përpiqu të përdorësh
+        këtë bllokun e ri.
+      4-5 Maze Conditionals 9: |-
+        Një praktikë më shumë për bllokun
+        "if-else", a mund ta bësh si duhet me përpjekjen e parë?
+      4-5 Maze Conditionals Assessment 1: |-
+        Përdor një bllok "repeat until" dhe
+        një "if-else" për të më çuar tek luledielli në sa më pak blloqe që ka mundësi.
+      4-5 Nested Loops 12: Mund të vizatosh 36 trekëndësha duke përdorur një cikël
+        të mbivendosur?
+      4-5 Nested Loops 3: "Formo një diell duke mbivendosur kodin e fillimit me një
+        tjeter cikël. Ky quhet cikël i mbivendosur.\r"
+      4-5 Nested Loops 5: Ciklo kodin e dhënë për të krijuar një mulli ere.
+      4-5 Nested Loops 6: Mund te vizatosh një gjashtëkëndesh duke cikluar kodin e
+        trekëndëshit?
+      4-5 Nested Loops 7: 'Ciklo këtë dizenjo 10 herë. Sa herë duhet të kthehesh për
+        çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 10-she?)'
+      4-5 Nested Loops 8: 'Ciklo këtë dizenjo 6 herë. Sa herë duhet të kthehesh për
+        çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 6-she?)'
+      4-5 Nested Loops 9: Vizato dhëmbët në gojën e krokodilit!
+      4-5 While Loops 1: |-
+        Më lëviz për të gropa dhe mbushe atë me
+        dy lopata me dhe, duke përdorur bllokun "fill".
+      4-5 While Loops 2: |-
+        Më lëviz mua për te grumbulli me dhe dhe hiqe
+        atë me 5 lopata të mëdha, duke përdorur bllokun 'remove'.
+      4-5 While Loops 3: |-
+        Më lëviz mua për te grumbulli dhe hiqe
+        të gjithën, më pas lëvize te gropa dhe mbushe atë komplet. Ndihmë: Përdor sa më pak blloqe
+        të jetë e mundur.
+      4-5 While Loops 4: 'Wow, gjeta nje grope shume te thelle! Nuk e di sa lopata
+        balte nevojiten. Mund te shkruash nje program qe e mbush derisa toka te jete
+        e sheshte? Shenim: Provo te perdoresh nje litar tek kesaj here.'
+      Artist Autorun Test: |-
+        Përdor bllokun "repeat" për të vizatuar këto
+        3 katrorë.
+      Big Game Booleans 1: |-
+        Kur ti punove për herë të fundit me lojën tënde
+        ne pamë targetin tonë dhe zanën e rrezikut që fluturonin në ekran, por ato kurrë
+        nuk u kthyen. Kliko run për të parë se si loja jote është duke punuar për momentin, dhe më pas kliko
+        mbyll dhe ne do punojmë që ti bëjmë ato zana të rishfaqen në ekran pasi kanë ikur.
+      Big Game Vars 1: |-
+        Le të fillojmë me Lojën tënde të Madhe!
+        Këtu do të shohësh një tufë me kod placeholder që ti përfundimisht
+        do ta zëvendësosh me tënden, por tani për tani ne do të shqetëohemi për
+        përcaktimin e variablave. Kliko "Run" për të parë se si duket loja me vlerat
+        default.
+      Calc Circles of Eval .2: |-
+        Ky Bllok Vlerësimi është një funksion
+        shumëzimi i cili merr 2 numra dhe kthen prodhimin e atyre numrave.
+        Redakto kët bllok që të shumëzojë 2*5
+      Calc Circles of Eval .4: |-
+        Këtu kemi mbivendosur një Bllok Mbledhjeje
+        brenda një Blloku Shumëzimi. Përfundo këtë kod që të shumëzojë 3 me (4 +
+        1)
+      Calc Circles of Eval 3: |-
+        Përfundo Blloqet e Vlerësimit për ta lidhur
+        me këtë formulim.
+      Calc Circles of Eval 4: |-
+        Këtij blloku i mungojnë një grup Blloqesh
+        Vlerësimi - sigurohu të vendosësh gjithçka në rendin e duhur.
+      Calc Circles of Eval 7: |-
+        Përfundo Blloqet e Vlerësimit për ta lidhur
+        me këtë formulim.
+      Calc Circles of Eval 8: |-
+        Përfundo Blloqet e Vlerësimit për ta lidhur
+        me këtë formulim.
+      Calc Circles of Eval 9: |-
+        Përfundo Blloqet e Vlerësimit për ta lidhur
+        me këtë formulim.
+      Calc Circles of Eval Free Play: |-
+        Lojë Falas: Përpiqu të përdorësh Blloqet
+        e Vlerësimit për të shkruar disa ekuacione nga vetja jote. Si ndikon mbivendosja blloqeve në
+        mënyra të ndryshme në vlerësimin e tyre?
+      Course 4 Artist 13: Ende po luani? Ja një pikturë bosh ku mund të dizenjoni
+        çdo gjë që dëshironi!
+      Course 4 Artist 6: |-
+        Ploteso kodin për të vizatuar këta trekëndesha.
+        Udhëzim: Në një rrotullim prej 360 gradësh janë 3 trekëndesha... Po për 3 herë në 360 gradë sa do jetë?
+      Course 4 Artist 8: Vizato këtë diell duke cikluar gjithë këto grupe kodesh disa
+        herë.
+      Course 4 Artist 8a: "E mban mend këtë formë? Tani ne do të lëmë ty t'a ndërtosh
+        pa të të dhënë asnjë bllok\r\nUdhëzim: Aty janë\n3 trekëndësha brenda një
+        rrotudhimi 360 gradë...sa herë 3-shi hynë në 360?"
+      Course 4 Artist Binary 1a: "Këtu është një funksion që ka vargun\nbinar të njishave
+        dhe të zerove dhe drejton artistin që ti ndjeki ato nga e majta në \ntë djathtë,
+        nga lartë poshtë. Artisti do mbushi katrorin kur të shikoj \n1 dhe injoroj
+        katrorin kur te shikoj 0. \r\nLësho kodin për të parë se si artisti \npërdor
+        binarët për të vizatuar modelin."
+      Course 4 Artist For Loops 13: Hmmm, format po rriten perherë e më shumë! A nuk
+        e zgjidhëm këtë problem me variablet? Si mund t'a perdorim variablën e numërimit
+        për të zvogeluar faqet kur ka me shumë të tilla? Ne vend qe te ecësh përpara
+        me një shumë të caktuar, përpiqu të ecësh (100/ numërues) piksel.
+      Course 4 Artist For Loops 4: Përdor një "për litar" për të vizatuar rrethat.
+        Fillojnë me një gjatësi prej 50 piksel, më i madhi fillon me 300 piksel, dhe
+        secili katror është 25 piksel më i madh sesa i fundit. Të kam dhënë thuajse
+        të gjithë kodet që të nevojiten, të mungon një pjesë, cila është?
+      Course 4 Artist For Loops 6: Lojë e Lirë! Provo të përdorësh një "cikël for"
+        për të vizatuar një model me formë në zmadhim për dezajnin tënd.
+      Course 4 Artist For Loops 6a: |-
+        Bëjë tre ndryshime të vogla në
+        kod nga niveli i fundit për të marrë këtë!
+         !
+      Course 4 Artist For Loops 8a: "Vetëm një ndryshim i vogël në kod nga figura
+        e fundit mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është \nai
+        ndryshim?"
+      Course 4 Artist For Loops Challenge_a: "Mund ta zbulosh se si të përdorësh të
+        gjitha gjërat që ke mësuar për të krijuar këtë figurë?\r\n\r\nTë nevojitet
+        një udhezim? Kliko këtu."
+      Course 4 Artist Vars 3: Ja litari qe viazaton nje katror, por dicka mungon.
+        Arrin dot t'a ndreqesh ne menyre qe te perdori "gjatesine" e ndryshueshme
+        per t'a ditur sa e gjate duhet te jete?
+      Course 4 Bee 7: Përdorni gjithçka keni mësuar deri më tani për të mbledhur të
+        gjithë nektarin. Lule manushaqja mund të ketë 3, 2 ose 1 nektarë.
+      Course 4 Bee For Loops 11: Çfarë ka që nuk shkon me ciklin? Shikoni nëse mund
+        t'a rregulloni dhe të bëni bletën të mbledhi të gjithë nektarin.
+      Course 4 Bee Params 1: Perdor komanden "merr 3 nektare" e cila kthehet, levizen
+        per te mbledhur nektarin dhe me pas kthehet ne destinacionin fillestar. Bej
+        nje radhe per te mbledhur te gjithe nektarin duke perdorur "merr 3 nektar".
+      Course 4 Play Lab Params 4: |-
+        Këtu është një funksion që quhet "patrol".
+        Ndryshoje atë që të lëvizësh macen 400 piksela lart dhe 400 piksela posht.
+      Course 4 Play Lab Params 8: Përdor një bllok "kur preket" për të dërguar Qenin
+        pas në pjesën e sipërme-majtas VETËM NËSE Qeni prek ndonjë nga aktorët.
+      Course 4 Play Lab Vars 2: "Gara ne formuesen e fundit nuk ishte \nshumë e drejtë!
+        Ndrysho variablin \"shpejtesia_e_qenit\" që të sigurohesh që mund të mbledhesh\nmë
+        shumë flamuj se sa Macja. I pari qe mbledh 10 flamuj fiton!"
+      Course 4 Play Labs For Loops 1: Le të bëjmë që qeni të flasi çdo numër nga 1
+        deri te 100. Përdor një cikël for dhe një bllok numërues që të flasi variablën
+        e numëruesit sa herë cikli është procesuar.
+      Course 4 Playlab For Loops 5b: |-
+        Rregullo intervalin në këto cikle `for`
+        në mënyrë që të dy personazhet të përfundojnë në të njëjtin vend të saktë.
+         .
+      CourseF_PlayLab_vars2: "Gara ne formuesen e fundit nuk ishte \nshumë e drejtë!
+        Ndrysho variablin \"shpejtesia_e_qenit\" që të sigurohesh që mund të mbledhesh\nmë
+        shumë flamuj se sa Macja. I pari qe mbledh 10 flamuj fiton!"
+      K-1 Bee Loops 2: Përdor një cikël për të lëvizur dhe pastaj merr nektarin dhe
+        bëj mjaltin!
+      K-1 Bee Loops 3: Përdor ciklet për të marr nektar dhe për të bërë mjaltë!
+      K-1 Bee Loops 4: Përdor ciklet për të marr nektarin, bërë mjaltë dhe për të
+        lëvizur!
+      K-1 Bee Loops 5: Përdor ciklet për të marr nektarin dhe mjaltin!
+      K-1 Bee Loops 6: Përdor ciklet për të marr nektar, mjaltë dhe për të lëvizur!
+      K-1 Maze Loops 11: Më co tek derrkuci! Përdor bllokun përsërit.
+      K-1 Maze Loops 12: Më co tek derrkuci! Përdor bllokun përsërit.
+      K-1 Maze Loops 2: Përdor bllokun Përsërit për të më çuar tek derrkuci!
+      K-1 Maze Loops 8: Më co tek derrkuci! Përdor bllokun përsërit.
+      NEW Course 4 Artist Functions 12: Përdor funksionin "vizato vizat e katrorëve"
+        nga formuesja e kaluar për të vizatuar këtë model."
+      NEW Course 4 Artist Functions 3: "Këtu kemi një lloj të ri Blloku. Quhet\n\"Function
+        block. Kliko \"edit\" dhe më pas mbushe atë me kod për të vizatuar një katror
+        me 100 piksel në anë\" Kliko \"Lësho\" për të parë çfarë mund të bëjë. "
+      NEW Course 4 Artist Functions 9: A mund ta zgjidhesh kete duke shtuar vetem
+        nje bllok ?
+      NEW Course 4 Artist Params 4: A vure re diçka ndryshe te keto blloqe funksionesh?
+        Kliko "Lësho" për të parë se çfarë ndodh.
+      NEW Course 4 Artist Vars 12: Tani, modifiko kodin nga niveli i fundit për të
+        krijuar një pentagon me brinjët nga 100.
+      NEW Course 4 Artist Vars 4: 'Le ta provojme serish. A mundeni të vendosni një
+        gjatësi variabël për ta bërë këtë dizanj të mrekullueshëm me gjashtëkëndësha?
+        Udhëzim: Eshte shumëfishi i 10-tës.'
+      NEW Course 4 Artist Vars 6: "Vizato këtë model duke zhvendosur variablin e gjatësisë
+        në vendin e duhur dhe pastaj vendos vlerën e sakt për gjatësinë. (Udhëzim:
+        Është shumfish i 10). \r\n\r\nE patë se si e vendosët vlerën për gjatësinë
+        dhe kodi përdori vlerën e duhur kudo?\r\n\r\n\r\n"
+      Overworld Move to Sheep: |-
+        Shto një komandë të dytë "ec përpara" për të
+        arritur delet.
+      Overworld Move to Sheep_2018: |-
+        Shto një komandë të dytë "ec përpara" për të
+        arritur delet.
+      Overworld Move to Sheep_2019: |-
+        Shto një komandë të dytë "ec përpara" për të
+        arritur delet.
+      Testing Quantum Farmer: 'Wow, gjeta nje grope shume te thelle! Nuk e di sa lopata
+        balte nevojiten. Mund te shkruash nje program qe e mbush derisa toka te jete
+        e sheshte? Shenim: Provo te perdoresh nje litar tek kesaj here.'
+      course4_artist_fwp_challenge1: Provo ta ekzekutosh këtë program dhe bëj ndryshime
+        për të parë se çfarë ndodh. A mund ta kuptosh se si punon? (Ose fshije atë
+        dhe zëvëndësoje me diçka komplet ndryshe)
+      courseD_bee_nestedLoops5: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë
+        tek çdo koshere. Përdor një cikël të mbivendosur. "
+      courseD_bee_nestedLoops8: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë
+        tek çdo koshere. Përdor një cikël të mbivendosur. "
+      courseD_bee_nestedLoops8_2018: "Mblidh gjithë nektarin nga secila lule\ndhe
+        bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
+      courseD_bee_nestedLoops8_2019: "Mblidh gjithë nektarin nga secila lule\ndhe
+        bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
+      courseD_bounce_events1: Shko te flamuri! Bashkangjit një bllok te blloku "kur
+        shigjeta majtas" dhe shtypni "Run" për të lëvizur lojtarin te flamuri.
+      courseD_maze_nestedLoops4: Më ço tek luledielli!
+      courseD_maze_nestedLoops4_2018: Më ço tek luledielli!
+      courseD_maze_nestedLoops4_2019: Më ço tek luledielli!
+      courseE_bee_functions3: |-
+        Funksionet janë blloqe kodi që performojnë
+        një detyrë. Përdor funksionin "merr 5" për të marrë 5 nektarë në një kohë. Sigurohu të
+        përdorësh një cikël për të arritur një numërim blloku ideal, gjithashtu.
+      courseE_bee_functions3_2018: |-
+        Funksionet janë blloqe kodi që performojnë
+        një detyrë. Përdor funksionin "merr 5" për të marrë 5 nektarë në një kohë. Sigurohu të
+        përdorësh një cikël për të arritur një numërim blloku ideal, gjithashtu.
+      courseE_farmer_concept4: "Tani le të shkojmë një nivel më thellë! Ne kemi\nmbivendosur
+        gjithë bllokun e kodit në një cikël tjetër, por ti ke nevojë të arrish \nartistin
+        mbrapsht për të vizatuar rreshtin tjetër. Cilin nga këto blloqe kodi mund
+        \ntë vendosësh në fund të pozicionit për të vizatuar gjithë rrejtën?"
+      courseF_bee_for_challenge2: |-
+        Zgjidhe këtë puzzle duke përdorur numrin
+        më të pakët të mundshëm të blloqeve.
+      courseF_bee_for_challenge2_2018: |-
+        Zgjidhe këtë puzzle duke përdorur numrin
+        më të pakët të mundshëm të blloqeve.
+      courseF_bee_for_challenge2_2019: |-
+        Zgjidhe këtë puzzle duke përdorur numrin
+        më të pakët të mundshëm të blloqeve.
+      frozen circle function in circle: Tani le të krijojmë 20 rrathë të mbivendosur,
+        duke kthyer 18 gradë ndërmjet çdo rrethi.
+      frozen circle function with parameter: "Këtu kemi një bllok \"Krijo një rreth\"
+        \nqë bën rrathët me madhësi të ndryshme. A mund ta përdorësh këtë për të krijuar
+        \nnjë rreth të vogël me masë 5 dhe një rreth më të madh me masën 10?"
+      frozen circle function: Përdor bllokun e ri "Create a circle" për të krijuar
+        10 rrathë të mbivendosur. Mos harro të hidhesh përpara ndërmjet rrathëve.
+      frozen circle: "Një rreth është një formë e veçantë. A mund të gjesh \nse me
+        çfarë numri të zëvendësosh pikëpyetjet për të vizatuar një rreth?"
+      frozen cross rotate dense: 'Le ta përsërisim atë 90 herë! Sa herë hyn 90 tek
+        360? Ndihmë: Është një numër vërtet i vogël.'
+      frozen cross rotate: Tani përpiqu të përsërisësh atë 10 herë. Sa gradë duhet
+        të kthehesh midis çdo vije?
+      frozen cross: Përdor bllokun "Repeat" për të krijuar një shenjë plusi. A e vure
+        re që Elsa mund të lëvizë para dhe mbrapa?
+      frozen diamond mini snowflake: A e dije që çdo flok dëbore ka formë të ndryshme
+        nga njëra-tjetra? Le të krijojmë një flok dëbore të ri duke përdorur bllokun
+        "Repeat" për të përsëritur një paralelogram 4 herë, duke u kthyer djathtas
+        me 90 gradë ndërmjet çdo paralelogrami.
+      frozen diamond snowflake: Tani le të krijojmë një flok dëbore të ri duke përodrur
+        bllokun repeat për të përsëritur një paralelogram 10 herë, duke u kthyer djathtas
+        me 36 gradë ndërmjet secilit.
+      frozen diamond: |-
+        Përdorni një përsëritje rreth këtyre blloqeve për të krijuar një paralelogram.
+        Është si një drejtkëndësh por ka kënde të ndryshme. Kjo i ka këndet 60 gradë
+        dhe 120 gradë në vend të të gjitha këndeve 90 gradë.
+      frozen freeplay: Ti zyrtarisht je bërë një mjeshtër! Krijo një dimër në një
+        botë çudirash.
+      frozen perpendicular: Tani le të shohim nëse ne mund të krijojmë dy rreshta
+        që janë në një kënd 90 gradë nga njëri tjetri. Ti duhet të përdorësh bllokun
+        "Kthehu" ashtu si edhe bllokun "Leviz".
+      frozen snowflake branch: Provo të përdorësh bllokun "Create a snowflake branch"
+        për të krijuar tre degë, të cilat fillojnë të duken si një flok dëbore.
+      frozen snowflake full: Tani le të përsërisim atë 8 herë për të bërë një flok
+        dëbore të mrekullueshëm!
+      frozen snowflower: Modelet e ndërlikuara të flokëve të dëborës mund të krijohen
+        me forma shumë të thjeshta. A mund të bësh një model duke përsëritur 5 rrathë
+        të masës 5 dhe 5 rrathë të masës 10?
+      frozen square iterative: Duket sikur jemi në gjysëm të rrugës për të bërë një
+        katror. Le të vendosim 4 vija bashkë për të krijuar një katror.
+      frozen square loop 3x: Le të krijojmë tre katrorë, që kthehen pas çdo katrori.
+        Sigurohu të kthehesh me 120 gradë përpara çdo katrori të ri.
+      frozen square loop: Përshendetje, quhem Ana nga Arendelle! Le të bëjmë një katror
+        me bllokun "Perserit", që përdor pak blloqe. Sa herë (???) duhet të përseritet
+        cikli i bllokut "Përserit" për të bërë një katror?
+      frozen square snowflake: Mund të krijosh një flokë dëbore duke përdorur bllokun
+        "Përserit" duke bërë një katror 10 herë, dhe bllokun "Kthehu" për t'u kthyer
+        36 gradë midis çdo katrori?
+      grade2_MakeDogTag_8: |-
+        Tani le të bashkojmë një grup me V së bashku,
+        duke i vizatuar ato në një cikël.
+      grade2_PuppyLoops_10: Helika ime e letrës e ngulur në shkop nuk ka përfunduar
+        ende. Sa herë duhet t'a përsëris që të përfundojë?
+      grade2_PuppyLoops_4: Përdor dy ciklet për të arritur tek derrkuci duke përdorur
+        më pak blloqe.
+      grade2_PuppyLoops_8: "Ky Kodi për mustaqet e maces është i gabuar. \n\r\n\r\n
+        Rregullo këtë kod për të vizatuar mustaqet që të jenë në të njëjtën gjatësi."
+      grade2_PuppyLoops_9: |-
+        Duket sikur C në kod është vizatuar mbrapsht.
+        A mund ta bësh të duket si C?
+      grade2_puppy_loops4: Përdor dy ciklet për të arritur tek derrkuci duke përdorur
+        më pak blloqe.
+      grade3_ConditionalsElse_2: "Bleta dëshiron vetëm nektar \ntani. Kujto, jo të
+        gjithë objektet janë lule, kështu që kontrollo për të mblehdur nektar vetëm\ntek
+        lulet."
+      grade3_ConditionalsElse_5: |-
+        Mund të jetë një lule ose një koshere
+        nën ato re. Përdor bllokun if/else për të mbledhur nektar nëse ka
+        lule, përndryshe të bëjë mjaltë (sepse është një koshere).
+      grade3_ConditionalsElse_6: |-
+        Kjo lule lejla mund të ketë secila
+        3, 2 ose 1 nektar. Këtu një bllok if-else kombinohet me një tjetër bllok
+        if-else për të krijuar një bllok if, else-if, else. Përfundo zgjidhjen për të mbledhur
+        sasinë e panjohur të nektarit.
+      grade3_ConditionalsElse_7: |-
+        Kjo lule lejla mund të ketë secila
+        3, 2 ose 1 nektar. Përfundo funksionin "kontrollo lulen lejla" dhe përdore
+        atë të mbledhësh gjithë nektarin te lulet.
+      grade3_ConditionalsElse_8: "Shkruaj një funksion brenda bllokut të quajtur\n\"kontrollo
+        lulen bëj mjaltë.\" Funksioni jot duhet të kontrollojë sa nektar \nka lulja
+        lejla dhe mblidhe atë, ec përpara. dhe më pas bëj mjaltë."
+      grade3_ConditionalsElse_9: |-
+        Vlerësim: Ky kod është i gabuar.
+        Përfundo funksionin "merr nektarin ose bejë mjaltin", më pas thirre atë për të mbedhur
+        gjithë nektarin dhe mjaltin. Kujto që lulet lejla mund të kenë 3, 2, ose 1 nektarë.
+      grade3_ConditionalsElse_TeacherIDo: |-
+        Mund të jetë një lule ose një koshere
+        nën ato re. Përdor bllokun if/else për të mbledhur nektar nëse ka
+        lule, përndryshe të bëjë mjaltë (sepse është një koshere).
+      grade3_Conditionals_10: |-
+        Mblidh nektar dhe bëj mjaltë. Ndihmë:
+        çfarë ndodh nëse ti përdor kushtin "if nectar" në një lule të kuqe? Mund
+        ta përfundosh këtë me një cikël?
+      grade3_Conditionals_12: Mblidh nektar nga të katërta lulet.
+      grade3_Conditionals_2: |-
+        Më ndihmo të mbledh gjithë nektarin
+        nga lulet dhe bëj mjaltë. Përdor një cikël.
+      grade3_Conditionals_8: Mblidh nektar tek lulet që kanë nektar.
+      grade3_Debugging_6: "Këto blloqet janë duke më bezdisur vërtet. Rregullo\ngabimin
+        (et) për të mbledhur gjithë nektarin dhe bëj gjithë mjaltin. "
+      grade3_Debugging_9: |-
+        Këto blloqet janë duke më bezdisur vërtet. Rregullo
+        gabimin (et) për të mbledhur gjithë nektarin dhe bëj gjithë mjaltin.
+      grade3_Loops_3: |-
+        A mund të përdorësh një cikël për të mbledhur gjithë
+        nektarin?
+      grade3_Loops_4: Tani përdor bllokun e ri të përsëritjes për të mbledhur të gjithë
+        nektarin dhe për të përgatitur të gjithë mjaltin.
+      grade3_Loops_6: Cfare ndodh nëse e lidhni këtë pjesë 3 herë? Mos harroni të
+        përgatisni në fund mjaltin!
+      grade3_Loops_7: "Çdo lule mban një njësi nektari. Mblidh\nnektar nga çdo lule. "
+      grade3_Loops_TeacherIDo: "Çdo lule mban një njësi nektari. Mblidh\nnektar nga
+        çdo lule. "
+      grade3_bee_conditionals_quantum2: "Bleta dëshiron vetëm nektar \ntani. Kujto,
+        jo të gjithë objektet janë lule, kështu që kontrollo për të mblehdur nektar
+        vetëm\ntek lulet."
+      grade3_maze_loops2: Më ço tek luledielli!
+      grade3_maze_nestedLoops4: Përdor dy ciklet për të arritur tek derrkuci duke
+        përdorur më pak blloqe.
+      grade4_arist_nested_loop_flags1: Ciklo kodin e dhënë për të krijuar një mulli
+        ere.
+      grade4_arist_nested_loop_polygons1: 'Ciklo këtë dizenjo 10 herë. Sa herë duhet
+        të kthehesh për çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 10-she?)'
+      grade4_arist_nested_loop_polygons2: 'Ciklo këtë dizenjo 6 herë. Sa herë duhet
+        të kthehesh për çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 6-she?)'
+      grade4_arist_nested_loop_triangles3: Mund te vizatosh një gjashtëkëndesh duke
+        cikluar kodin e trekëndëshit?
+      grade4_arist_nested_loop_triangles4: Vizato dhëmbët në gojën e krokodilit!
+      grade4_arist_nested_loop_triangles5: "Formo një diell duke mbivendosur kodin
+        e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r"
+      grade4_arist_nested_loop_triangles6: Mund të vizatosh 36 trekëndësha duke përdorur
+        një cikël të mbivendosur?
+      grade4_artist_functions2: |-
+        Funksionet të lejojnë ty të përcaktosh blloqe të reja! Ne kemi
+        lëvizur blloqet për të vizatuar një katror brenda një funksioni të quajtur "vizato një katror".
+        A mund ta përdorësh funksionin "vizato një katror" për të krijuar xhamat? Katrorët
+        janë 75 piksela të veçuar.
+      grade4_artist_nested_loop_flags1: Ciklo kodin e dhënë për të krijuar një mulli
+        ere.
+      grade4_artist_nested_loop_polygons1: 'Ciklo këtë dizenjo 10 herë. Sa herë duhet
+        të kthehesh për çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 10-she?)'
+      grade4_artist_nested_loop_triangles5: "Formo një diell duke mbivendosur kodin
+        e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r"
+      grade4_artist_nested_loop_triangles6: Mund të vizatosh 36 trekëndësha duke përdorur
+        një cikël të mbivendosur?
+      grade4_artist_parameters_triangles2: A vure re diçka ndryshe te keto blloqe
+        funksionesh? Kliko "Lësho" për të parë se çfarë ndodh.
+      grade4_bee_conditionals_quantum2: "Bleta dëshiron vetëm nektar \ntani. Kujto,
+        jo të gjithë objektet janë lule, kështu që kontrollo për të mblehdur nektar
+        vetëm\ntek lulet."
+      grade4_bee_conditionals_quantum5: |-
+        Mund të jetë një lule ose një koshere
+        nën ato re. Përdor bllokun if/else për të mbledhur nektar nëse ka
+        lule, përndryshe të bëjë mjaltë (sepse është një koshere).
+      grade4_bee_functions3: |-
+        Funksionet janë blloqe kodi që performojnë
+        një detyrë. Përdor funksionin "merr 5" për të marrë 5 nektarë në një kohë. Sigurohu të
+        përdorësh një cikël për të arritur një numërim blloku ideal, gjithashtu.
+      grade4_bee_nestedLoops4: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë
+        tek çdo koshere. Përdor një cikël të mbivendosur. "
+      grade4_frozen_freeplay: Ti zyrtarisht je bërë një mjeshtër! Krijo një dimër
+        në një botë çudirash.
+      grade4_frozen_functions0: "Një rreth është një formë e veçantë. A mund të gjesh
+        \nse me çfarë numri të zëvendësosh pikëpyetjet për të vizatuar një rreth?"
+      grade4_frozen_functions1a: Përdor bllokun e ri "Create a circle" për të krijuar
+        10 rrathë të mbivendosur. Mos harro të hidhesh përpara ndërmjet rrathëve.
+      grade4_frozen_functions2: Tani le të krijojmë 20 rrathë të mbivendosur, duke
+        kthyer 18 gradë ndërmjet çdo rrethi.
+      grade4_frozen_functions3: "Këtu kemi një bllok \"Krijo një rreth\" \nqë bën
+        rrathët me madhësi të ndryshme. A mund ta përdorësh këtë për të krijuar \nnjë
+        rreth të vogël me masë 5 dhe një rreth më të madh me masën 10?"
+      grade4_frozen_functions4: Modelet e ndërlikuara të flokëve të dëborës mund të
+        krijohen me forma shumë të thjeshta. A mund të bësh një model duke përsëritur
+        5 rrathë të masës 5 dhe 5 rrathë të masës 10?
+      grade4_frozen_nested_loop_diamonds2: A e dije që çdo flok dëbore ka formë të
+        ndryshme nga njëra-tjetra? Le të krijojmë një flok dëbore të ri duke përdorur
+        bllokun "Repeat" për të përsëritur një paralelogram 4 herë, duke u kthyer
+        djathtas me 90 gradë ndërmjet çdo paralelogrami.
+      grade4_frozen_nested_loop_diamonds3: Tani le të krijojmë një flok dëbore të
+        ri duke përodrur bllokun repeat për të përsëritur një paralelogram 10 herë,
+        duke u kthyer djathtas me 36 gradë ndërmjet secilit.
+      grade4_frozen_square: Përshendetje, quhem Ana nga Arendelle! Le të bëjmë një
+        katror me bllokun "Perserit", që përdor pak blloqe. Sa herë (???) duhet të
+        përseritet cikli i bllokut "Përserit" për të bërë një katror?
+      grade4_frozen_square_loop1: Përshendetje, quhem Ana nga Arendelle! Le të bëjmë
+        një katror me bllokun "Perserit", që përdor pak blloqe. Sa herë (???) duhet
+        të përseritet cikli i bllokut "Përserit" për të bërë një katror?
+      grade4_frozen_square_loop2: Le të krijojmë tre katrorë, që kthehen pas çdo katrori.
+        Sigurohu të kthehesh me 120 gradë përpara çdo katrori të ri.
+      grade4_frozen_square_loop3: Mund të krijosh një flokë dëbore duke përdorur bllokun
+        "Përserit" duke bërë një katror 10 herë, dhe bllokun "Kthehu" për t'u kthyer
+        36 gradë midis çdo katrori?
+      grade4_review_artist3: "Blloku kërcimit lëviz artistin pa vizatuar.\nVizato
+        vizën bosh duke përdorur të dyja blloqet ehidhu përpara dhe lëviz përpara.\nSecila
+        vizë është 50 piksela e gjate "
+      grade4_review_bee1: Tani përdor bllokun e ri të përsëritjes për të mbledhur
+        të gjithë nektarin dhe për të përgatitur të gjithë mjaltin.
+      grade5_artist_for_loops1: Vizato këtë trekëndësh që është në masë 50 piksel.
+      grade5_artist_for_loops10: "Mund ta zbulosh se si të përdorësh të gjitha gjërat
+        që ke mësuar për të krijuar këtë figurë?\r\n\r\nTë nevojitet një udhezim?
+        Kliko këtu."
+      grade5_artist_for_loops5: "Vetëm një ndryshim i vogël në kod nga figura e fundit
+        mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është \nai ndryshim?
+        \r\n \r\nUdhëzim: Duhet të heqësh diçka!"
+      grade5_artist_parameters_triangles2a: A vure re diçka ndryshe te keto blloqe
+        funksionesh? Kliko "Lësho" për të parë se çfarë ndodh.
+      grade5_artist_variables_hexagons1: 'Le ta provojme serish. A mundeni të vendosni
+        një gjatësi variabël për ta bërë këtë dizanj të mrekullueshëm me gjashtëkëndësha?
+        Udhëzim: Eshte shumëfishi i 10-tës.'
+      grade5_artist_variables_pentagon9: Tani, modifiko kodin nga niveli i fundit
+        për të krijuar një pentagon me brinjët nga 100.
+      grade5_artist_variables_pentagons1: "Vizato këtë model duke zhvendosur variablin
+        e gjatësisë në vendin e duhur dhe pastaj vendos vlerën e sakt për gjatësinë.
+        (Udhëzim: Është shumfish i 10). \r\n\r\nE patë se si e vendosët vlerën për
+        gjatësinë dhe kodi përdori vlerën e duhur kudo?\r\n\r\n\r\n"
+      grade5_playlab_variables13: Përdor një bllok "kur preket" për të dërguar Qenin
+        pas në pjesën e sipërme-majtas VETËM NËSE Qeni prek ndonjë nga aktorët.
+      grade5_playlab_variables2: "Gara ne formuesen e fundit nuk ishte \nshumë e drejtë!
+        Ndrysho variablin \"shpejtesia_e_qenit\" që të sigurohesh që mund të mbledhesh\nmë
+        shumë flamuj se sa Macja. I pari qe mbledh 10 flamuj fiton!"
+      grade5_playlab_variables9: |-
+        Këtu është një funksion që quhet "patrol".
+        Ndryshoje atë që të lëvizësh macen 400 piksela lart dhe 400 piksela posht.
+      level 'grade3_Loops_3: |-
+        A mund të përdorësh një cikël për të mbledhur gjithë
+        nektarin?
+      level 'grade3_Loops_4: Tani përdor bllokun e ri të përsëritjes për të mbledhur
+        të gjithë nektarin dhe për të përgatitur të gjithë mjaltin.
+      level 'grade3_Loops_6: Cfare ndodh nëse e lidhni këtë pjesë 3 herë? Mos harroni
+        të përgatisni në fund mjaltin!
+      level 'grade3_Loops_7: "Çdo lule mban një njësi nektari. Mblidh\nnektar nga
+        çdo lule. "

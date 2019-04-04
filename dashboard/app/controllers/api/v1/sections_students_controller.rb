@@ -7,10 +7,10 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   # GET /sections/<section_id>/students
   def index
     summaries = @section.students.map do |student|
-      # Student depends on this section for login if student can still create
-      # a personal login and only belongs to the one section.
+      # Student depends on this section for login if student's account is
+      # teacher managed and only belongs to the one section.
       student.summarize.merge(depends_on_this_section_for_login:
-        student.can_create_personal_login? &&
+        student.teacher_managed_account? &&
           student.sections_as_student.size == 1
       )
     end

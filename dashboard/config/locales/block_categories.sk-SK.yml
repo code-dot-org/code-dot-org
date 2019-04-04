@@ -6,8 +6,8 @@ sk:
       Loops: Cykly
       Functions: Funkcie
       Color: Farba
-      Brushes: Štetky
-      Math: Matematika
+      Brushes: Štetce
+      Math: Matematické
       Logic: Logické
       Variables: Premenné
       Number: Číslo
@@ -24,27 +24,36 @@ sk:
       Picker: Nástroj výberu
       Comment: Komentár
       'Variables ': 'Premenné '
+      Default: Predvolené
+      Behaviors: Správanie
+      Locations: Miesta
+      Bunny Game: Hra so zajačikmi
       everythingelse: všetko ostatné
+      World: Prostredie
+      Sprites: Postavy
+      Location: Miesto
       numbers: čisla
       Numbers: Čísla
-      Input: Input
-      Default: Predvolené
-      World: Svet
-      Sprites: Sprites
-      Behaviors: Správanie
-      Advanced: Pokročilé
-      Sprite: Objekt
-      Brush: Štetka
-      Make Sprite: Vytvoriť objekt
-      Movement: Pohyb
-      Start: Spustiť
+      Input: Vstup
+      Dancers: Tanečníci
       Groups: Skupiny
-      Booleans: Booleans
+      Advanced: Pokročilé
+      Start: Spustiť
+      Music: Hudba
+      Dancing: Tancovanie
+      Sprite: Postavy
+      Brush: Štetec
+      Make Sprite: Vytvoriť postavu
+      Movement: Pohyb
+      Booleans: Logické hodnoty
       Functional: Funkcie
+      While Events: Udalosti "pokiaľ"
+      Sprite Properties: Vlastnosti postáv
       Predefined: Preddefinované
       test: test
       test2: test2
-      Foo: Foo
+      Use These Blocks: Použi tieto bloky
+      Do Not Use: Nepoužívaj
       Name: Meno
       NEW BLOCKS: NOVÉ BLOKY
       'Functions ': 'Funkcie '

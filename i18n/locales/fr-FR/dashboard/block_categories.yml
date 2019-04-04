@@ -2,13 +2,13 @@ fr:
   data:
     block_categories:
       Actions: Actions
-      Loops: Boucles
-      Functions: Fonctions
+      Loops: boucles
+      Functions: fonctions
       Color: Couleur
       Brushes: Pinceaux
-      Math: Calculs
+      Math: Math
       Logic: Logique
-      Variables: Variables
+      Variables: variables
       Number: Nombre
       String: Chaîne
       Image: Image
@@ -19,31 +19,38 @@ fr:
       Comments: Commentaires
       Category: Catégorie
       Prebuilt: Préconstruit
-      Text: texte
+      Text: Texte
       Picker: Sélecteur
       Comment: Commentaire
       'Variables ': 'Variables '
+      Default: Par défaut
+      Behaviors: Comportements
+      Locations: Emplacements
       everythingelse: toutlereste
+      World: Monde
+      Location: Localisation
       numbers: nombres
       Numbers: Nombres
       Input: Entrée
-      Default: Par défaut
-      World: Monde
-      Sprites: Sprites
-      Behaviors: Comportements
+      Dancers: Danseurs
+      Groups: Groupes
       Advanced: Avancé
+      Start: Commencer
+      Music: Musique
+      Dancing: Danse
       Sprite: Lutin
       Brush: Pinceau
       Make Sprite: Créer un lutin
       Movement: Mouvement
-      Start: Commencer
-      Groups: Groupes
       Booleans: Booléens
       Functional: Fonctionnel
+      While Events: Événements de boucle
+      Sprite Properties: Propriétés du sprite
       Predefined: Prédéfini
       test: test
       test2: test2
-      Foo: Foo
+      Use These Blocks: Utiliser ces blocs
+      Do Not Use: Ne pas utiliser
       Name: Nom
       NEW BLOCKS: NOUVEAUX BLOCS
       'Functions ': 'Fonctions '

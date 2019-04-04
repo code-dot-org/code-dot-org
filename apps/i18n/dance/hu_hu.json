@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "Létre kell hoznod egy táncost.",
+  "danceFeedbackNoDancers": "Nincsenek táncosaid.",
+  "danceFeedbackNoBackground": "Hozzá kell adnod egy háttéreffektet.",
+  "danceFeedbackTooManyDancers": "Légy óvatos! Ha az „új készítése“ blokkot egy „2 ütemenként“ blokkon belülre rakod, akkor nagyon sok táncos fog létrejönni.",
+  "danceFeedbackUseSetSize": "A „háttértáncos2 méretének beállítása“ blokkal állítsd kisebbre azt a táncost.",
+  "danceFeedbackUseSetTint": "Az „árnyalat beállítása“ blokkal módosítsd egy táncos árnyalatát.",
+  "danceFeedbackUseStartMapping": "Próbáld meg hozzáadni a programodhoz a <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> blokkot.",
+  "danceFeedbackStartNewMove": "A táncosod a negyedik ütem után nem csinált új mozdulatot.",
+  "danceFeedbackNeedDifferentDance": "Másik táncot kell használnod.",
+  "danceFeedbackNeedEveryTwoMeasures": "Ügyelj rá, hogy használd a „2 ütemenként“ blokkot",
+  "danceFeedbackNeedMakeANewDancer": "Második táncos létrehozásához használd az „új készítése“ blokkot.",
+  "measure": "Ütem:"
+}

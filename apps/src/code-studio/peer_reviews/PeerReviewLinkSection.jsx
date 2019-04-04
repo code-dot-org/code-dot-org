@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import moment from 'moment';
 
 class PeerReviewLinkSection extends React.Component {
   static propTypes = {
@@ -24,18 +25,18 @@ class PeerReviewLinkSection extends React.Component {
   render() {
     return (
       <ul className="fa-ul">
-        {
-          this.props.reviews.map((submission, i) => {
-            return (
-              <li key={i}>
-                <FontAwesome icon={`${this.getIconForStatus(submission[1])} fa-li`}/>
-                <a key={i} href={`/peer_reviews/${submission[0]}`}>
-                  Submission
-                </a>
-              </li>
-            );
-          })
-        }
+        {this.props.reviews.map((submission, i) => {
+          return (
+            <li key={i} style={{whiteSpace: 'nowrap'}}>
+              <FontAwesome
+                icon={`${this.getIconForStatus(submission[1])} fa-li`}
+              />
+              <a key={i} href={`/peer_reviews/${submission[0]}`}>
+                {moment(submission[2]).fromNow()}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     );
   }

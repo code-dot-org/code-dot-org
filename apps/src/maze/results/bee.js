@@ -45,7 +45,10 @@ export default class BeeHandler extends GathererHandler {
       return false;
     }
 
-    if (!this.maze_.subtype.checkedAllClouded() || !this.maze_.subtype.checkedAllPurple()) {
+    if (
+      !this.maze_.subtype.checkedAllClouded() ||
+      !this.maze_.subtype.checkedAllPurple()
+    ) {
       return false;
     }
 
@@ -80,7 +83,9 @@ export default class BeeHandler extends GathererHandler {
     } else if (!this.maze_.subtype.checkedAllPurple()) {
       executionInfo.terminateWithValue(TerminationValue.UNCHECKED_PURPLE);
     } else if (!this.collectedEverything()) {
-      executionInfo.terminateWithValue(TerminationValue.DID_NOT_COLLECT_EVERYTHING);
+      executionInfo.terminateWithValue(
+        TerminationValue.DID_NOT_COLLECT_EVERYTHING
+      );
     }
   }
 
@@ -105,7 +110,10 @@ export default class BeeHandler extends GathererHandler {
         // Values over TOO_MANY_BLOCKS_FAIL are not true failures, but indicate
         // a suboptimal solution, so in those cases we want to return our
         // app specific fail. Same goes for BLOCK_LIMIT_FAIL.
-        if (testResults >= TestResults.TOO_MANY_BLOCKS_FAIL || testResults === TestResults.BLOCK_LIMIT_FAIL) {
+        if (
+          testResults >= TestResults.TOO_MANY_BLOCKS_FAIL ||
+          testResults === TestResults.BLOCK_LIMIT_FAIL
+        ) {
           testResults = TestResults.APP_SPECIFIC_FAIL;
         }
         return testResults;

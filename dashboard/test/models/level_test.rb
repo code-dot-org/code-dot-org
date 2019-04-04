@@ -6,9 +6,9 @@ class LevelTest < ActiveSupport::TestCase
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
   setup do
-    @turtle_data = {game_id: 23, name: "__bob4", level_num: "custom", skin: "artist", instructions: "sdfdfs", type: 'Artist'}
+    @turtle_data = {game_id: 23, name: "__bob4", level_num: "custom", skin: "artist", short_instructions: "sdfdfs", type: 'Artist'}
     @custom_turtle_data = {user_id: 1}
-    @maze_data = {game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze'}
+    @maze_data = {game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", short_instructions: "sdfdfs", type: 'Maze'}
     @custom_maze_data = @maze_data.merge(user_id: 1)
     @gamelab_data = {game_id: 48, name: 'some gamelab level', level_num: 'custom', type: 'Gamelab'}
     @custom_level = Level.create(@custom_maze_data.dup)
@@ -34,7 +34,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'create level' do
-    Level.create(game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze')
+    Level.create(game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", short_instructions: "sdfdfs", type: 'Maze')
   end
 
   test "throws argument error on bad data" do
@@ -112,7 +112,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "get_question_text returns question text for free response level" do
-    free_response_level = create :level, name: 'A question', markdown_instructions: 'Answer this question.',
+    free_response_level = create :level, name: 'A question', long_instructions: 'Answer this question.',
       type: 'FreeResponse'
     assert_equal free_response_level.get_question_text, 'Answer this question.'
   end
@@ -157,27 +157,27 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'serialize properties' do
     level = Blockly.new
-    level.instructions = 'test!'
-    assert_equal 'test!', level.properties['instructions']
-    assert_equal level.instructions, level.properties['instructions']
+    level.short_instructions = 'test!'
+    assert_equal 'test!', level.properties['short_instructions']
+    assert_equal level.short_instructions, level.properties['short_instructions']
   end
 
   test 'create with serialized properties' do
-    level = Blockly.create(instructions: 'test')
-    assert_equal 'test', level.instructions
-    level.instructions = 'test2'
-    assert_equal 'test2', level.instructions
+    level = Blockly.create(short_instructions: 'test')
+    assert_equal 'test', level.short_instructions
+    level.short_instructions = 'test2'
+    assert_equal 'test2', level.short_instructions
   end
 
   test 'update serialized column with properties hash' do
-    level = Blockly.create(instructions: 'test')
-    level.update(instructions: 'test2', properties: {skin: 'skin'})
-    assert_equal 'test2', level.instructions
+    level = Blockly.create(short_instructions: 'test')
+    level.update(short_instructions: 'test2', properties: {skin: 'skin'})
+    assert_equal 'test2', level.short_instructions
     assert_equal 'skin', level.skin
   end
 
   test 'cannot have non-existent properties' do
-    level = Blockly.create(instructions: 'test')
+    level = Blockly.create(short_instructions: 'test')
     level.update(properties: {property_that_does_not_exist: 'impossible value storage'})
     assert_raises(NoMethodError) do
       level.property_that_does_not_exist
@@ -185,7 +185,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'can have video key' do
-    level = Blockly.create(instructions: 'test')
+    level = Blockly.create(short_instructions: 'test')
     video = create(:video)
     level.update(properties: {video_key: video.key})
     assert_equal video.key, level.video_key
@@ -198,6 +198,25 @@ class LevelTest < ActiveSupport::TestCase
     assert_includes(level.related_videos, video)
   end
 
+  test 'returns locale-specific video with related videos' do
+    level = create(:level)
+    en_video = create(:video)
+    es_video = create(:video)
+    es_video.locale = 'es-MX'
+    es_video.key = en_video.key
+    es_video.save!
+    level.update(properties: {video_key: en_video.key})
+
+    with_locale('es-MX') do
+      assert_includes(level.related_videos, es_video)
+      refute_includes(level.related_videos, en_video)
+    end
+    with_locale('en-US') do
+      assert_includes(level.related_videos, en_video)
+      refute_includes(level.related_videos, es_video)
+    end
+  end
+
   test 'returns concept videos with related videos' do
     level = create(:level)
     level.concepts = [create(:concept, :with_video), create(:concept, :with_video)]
@@ -206,20 +225,25 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'update custom level from file' do
-    level = LevelLoader.load_custom_level(LevelLoader.level_file_path('K-1 Bee 2'))
+    LevelLoader.import_levels 'config/scripts/levels/K-1 Bee 2.level'
+    level = Level.find_by_name('K-1 Bee 2')
     assert_equal 'bee', level.skin
     assert_equal '[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,-1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]',
       level.properties['initial_dirt']
   end
 
-  test 'debugging info for exceptions in load_custom_level' do
-    LevelLoader.load_custom_level('xxxxx')
-  rescue Exception => e
-    assert_includes e.message, "in level"
+  test 'creating custom level from file sets level_concept_difficulty' do
+    Level.find_by_name('K-1 Bee 2')&.destroy
+    assert_nil Level.find_by_name('K-1 Bee 2')
+    LevelLoader.import_levels 'config/scripts/levels/K-1 Bee 2.level'
+    level = Level.find_by_name('K-1 Bee 2')
+    refute_nil level
+
+    assert_equal 3, level.level_concept_difficulty.sequencing
   end
 
   test 'prioritize property over column data in merged update' do
-    level = Level.create(instructions: 'test', type: 'Maze')
+    level = Level.create(short_instructions: 'test', type: 'Maze')
     level.update(maze: '', properties: {maze: 'maze'})
     assert_equal 'maze', level.maze
   end
@@ -323,7 +347,7 @@ EOS
   end
 
   test 'delete removed level properties on import' do
-    level = Level.create(name: 'test delete properties', instructions: 'test', type: 'Studio', embed: true)
+    level = Level.create(name: 'test delete properties', short_instructions: 'test', type: 'Studio', embed: true)
 
     assert_equal true, level.embed
 
@@ -340,6 +364,33 @@ EOS
     LevelLoader.load_custom_level_xml level_xml, level
 
     assert_nil level.embed
+  end
+
+  test 'encrypted level properties are preserved after export and import' do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    level = Level.create(name: 'test encrypted properties', short_instructions: 'test', type: 'Artist', encrypted: true, disable_sharing: true, notes: 'original notes')
+    assert level.disable_sharing
+    assert level.encrypted
+
+    level_xml = level.to_xml
+    n = Nokogiri::XML(level_xml, &:noblanks)
+    level_config = n.xpath('//../config').first.child
+    encrypted_hash = JSON.parse(level_config.text)
+    assert encrypted_hash['encrypted_properties']&.is_a? String
+    refute encrypted_hash['properties']
+    assert encrypted_hash['encrypted_notes']&.is_a? String
+    refute encrypted_hash['notes']
+
+    level.disable_sharing = false
+    level.notes = nil
+    decrypted_hash = level.load_level_xml(n)
+    refute decrypted_hash['encrypted_properties']
+    assert decrypted_hash['properties']
+    assert decrypted_hash['properties']['disable_sharing']
+    assert decrypted_hash['properties']['encrypted']
+    refute decrypted_hash['encrypted_notes']
+    assert_equal decrypted_hash['notes'], 'original notes'
   end
 
   test 'project template level' do
@@ -654,14 +705,14 @@ EOS
     assert_equal 9360, JSON.parse(level.audit_log).length
 
     # add a new entry that will put us over the limit
-    level.instructions = "new actual instructions"
+    level.short_instructions = "new actual instructions"
     level.log_changes
 
     # audit log should have dropped off several entries in order get back under
     # the limit, since the test entries are individually much smaller than the
     # new actual entry
-    assert_equal 65533, level.audit_log.length
-    assert_equal 9351, JSON.parse(level.audit_log).length
+    assert_equal 65532, level.audit_log.length
+    assert_equal 9350, JSON.parse(level.audit_log).length
   end
 
   test "can validate XML field with valid XML" do
@@ -706,6 +757,40 @@ EOS
     new_level = old_level.clone_with_name('new level')
     assert_equal 'new level', new_level.name
     assert_equal '<xml>foo</xml>', new_level.start_blocks
+  end
+
+  test 'can clone multi level and preserve encrypted flag' do
+    dsl_text = <<EOS
+name 'old multi level'
+title 'Multiple Choice'
+question 'What is your favorite color?'
+wrong 'Red'
+wrong 'Green'
+right 'Blue'
+EOS
+
+    old_level = create :multi, name: 'old multi level'
+    old_level.stubs(:dsl_text).returns(dsl_text)
+
+    new_level = old_level.clone_with_name('new multi level')
+    assert_equal 'new multi level', new_level.name
+    assert_equal 1, new_level.properties['questions'].length
+    assert_equal 3, new_level.properties['answers'].length
+    assert_equal 'Blue', new_level.properties['answers'].last['text']
+    refute new_level.encrypted
+
+    old_level.encrypted = true
+    new_level = old_level.clone_with_name('encrypted level')
+    assert_equal 'encrypted level', new_level.name
+    assert_equal 1, new_level.properties['questions'].length
+    assert_equal 3, new_level.properties['answers'].length
+    assert_equal 'Blue', new_level.properties['answers'].last['text']
+    assert new_level.encrypted, 'clone_with_name preserves encrypted flag'
+
+    new_level = old_level.clone_with_suffix(' copy')
+    assert_equal 'old multi level copy', new_level.name
+    assert_equal 3, new_level.properties['answers'].length
+    assert new_level.encrypted, 'clone_with_suffix preserves encrypted flag'
   end
 
   test 'can clone with suffix' do
@@ -800,5 +885,13 @@ EOS
     assert_equal 2, level_2_copy.contained_levels.size
     assert_equal contained_level_1_copy, level_2_copy.contained_levels.first
     assert_equal contained_level_2_copy, level_2_copy.contained_levels.last
+  end
+
+  test 'contained_level_names filters blank names before validation' do
+    level = build :level
+    level.contained_level_names = ['', 'real_name']
+    assert_equal level.contained_level_names, ['', 'real_name']
+    level.valid?
+    assert_equal level.contained_level_names, ['real_name']
   end
 end

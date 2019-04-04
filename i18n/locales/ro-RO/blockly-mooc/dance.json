@@ -1,0 +1,15 @@
+{
+  "danceFeedbackNeedNewDancer": "Trebuie să creezi un dansator.",
+  "danceFeedbackNoDancers": "Nu ai nici un dansator.",
+  "danceFeedbackNoBackground": "Trebuie să adaugi un efect la fundal.",
+  "danceFeedbackTooManyDancers": "Fi atent! Dacă pui blocul `crează un nou` în interiorul blocului `la fiecare 2 măsuri`, vei creea o mulţime de dansatori.",
+  "danceFeedbackUseSetSize": "Utilizează blocul \"setare dimensiune dansator_rezervă2\" pentru a face dansatorul mai mic.",
+  "danceFeedbackUseSetTint": "Utilizează `setare nuanță` pentru a schimba nuanța unui dansator.",
+  "danceFeedbackUseStartMapping": "Încercă să adaugi blocul <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">unicorn_în_dreapta</title><title name=\"PROPERTY\">''gamă''</title><title name=\"RANGE\">''sunet jos''</title></block></xml> la programul tău.",
+  "danceFeedbackStartNewMove": "Dansatorul tău nu realizează o mișcare nouă după a patra măsură a melodiei.",
+  "danceFeedbackNeedDifferentDance": "Trebuie să utilizezi un dans diferit.",
+  "danceFeedbackNeedEveryTwoMeasures": "Asigură-te că utilizezi blocul `la fiecare 2 măsuri`",
+  "danceFeedbackNeedMakeANewDancer": "Foloseşte blocul `crează un nou` pentru a crea un al doilea dansator.",
+  "danceFeedbackKeyEvent": "",
+  "measure": "Măsură:"
+}

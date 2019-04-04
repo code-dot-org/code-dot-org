@@ -8,7 +8,7 @@ export const studentOverviewData = [
     numMultipleChoiceCorrect: 7,
     numMultipleChoice: 10,
     isSubmitted: true,
-    submissionTimeStamp: '2/16/18 - 7:41 AM',
+    submissionTimeStamp: '2/16/18 - 7:41 AM'
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const studentOverviewData = [
     numMultipleChoiceCorrect: 3,
     numMultipleChoice: 10,
     isSubmitted: false,
-    submissionTimeStamp: '',
+    submissionTimeStamp: ''
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const studentOverviewData = [
     numMultipleChoiceCorrect: 8,
     numMultipleChoice: 10,
     isSubmitted: true,
-    submissionTimeStamp: '5/29/18 - 7:41 AM',
+    submissionTimeStamp: '5/29/18 - 7:41 AM'
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ export const studentOverviewData = [
     numMultipleChoiceCorrect: 10,
     numMultipleChoice: 10,
     isSubmitted: true,
-    submissionTimeStamp: '5/29/18 - 8:00 AM',
+    submissionTimeStamp: '5/29/18 - 8:00 AM'
   },
   {
     id: 5,
@@ -40,7 +40,7 @@ export const studentOverviewData = [
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
     isSubmitted: false,
-    submissionTimeStamp: '',
+    submissionTimeStamp: ''
   },
   {
     id: 6,
@@ -48,8 +48,8 @@ export const studentOverviewData = [
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
     isSubmitted: true,
-    submissionTimeStamp: '5/29/18 - 8:05 AM',
-  },
+    submissionTimeStamp: '5/29/18 - 8:05 AM'
+  }
 ];
 
 // Data for single student assessments table
@@ -62,8 +62,8 @@ export const studentData = {
     {isCorrect: false, responses: 'B D'},
     {isCorrect: false, responses: 'E'},
     {isCorrect: false, responses: 'C'},
-    {isCorrect: true, responses: 'A'},
-  ],
+    {isCorrect: true, responses: 'A'}
+  ]
 };
 
 // Data for multiple choice overview table
@@ -71,77 +71,189 @@ export const multipleChoiceData = [
   {
     id: 1,
     question: 'What is a variable?',
-    answers:  [
-      {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 40, isCorrectAnswer: true},
-      {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 20, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 20, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 20, isCorrectAnswer: false},
+    answers: [
+      {
+        multipleChoiceOption: i18n.answerOptionA(),
+        percentAnswered: 40,
+        isCorrectAnswer: true
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionB(),
+        percentAnswered: 20,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionC(),
+        percentAnswered: 20,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionD(),
+        percentAnswered: 20,
+        isCorrectAnswer: false
+      }
     ],
-    notAnswered: 10,
+    notAnswered: 10
   },
   {
     id: 2,
     question: 'What is a 4-bit number for the decimal number Ten(10)?',
-    answers:  [
-      {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 30, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 10, isCorrectAnswer: true},
-      {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 10, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 10, isCorrectAnswer: true},
-      {multipleChoiceOption: i18n.answerOptionE(), percentAnswered: 20, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionF(), percentAnswered: 10, isCorrectAnswer: false},
+    answers: [
+      {
+        multipleChoiceOption: i18n.answerOptionA(),
+        percentAnswered: 30,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionB(),
+        percentAnswered: 10,
+        isCorrectAnswer: true
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionC(),
+        percentAnswered: 10,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionD(),
+        percentAnswered: 10,
+        isCorrectAnswer: true
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionE(),
+        percentAnswered: 20,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionF(),
+        percentAnswered: 10,
+        isCorrectAnswer: false
+      }
     ],
-    notAnswered: 30,
+    notAnswered: 30
   },
   {
     id: 3,
-    question: 'What is the minimum number of bits you will need to encode the 26 letters of the alphabet plus a space?',
-    answers:  [
-      {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 50, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 15, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 20, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 5, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionE(), percentAnswered: 5, isCorrectAnswer: true},
+    question:
+      'What is the minimum number of bits you will need to encode the 26 letters of the alphabet plus a space?',
+    answers: [
+      {
+        multipleChoiceOption: i18n.answerOptionA(),
+        percentAnswered: 50,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionB(),
+        percentAnswered: 15,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionC(),
+        percentAnswered: 20,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionD(),
+        percentAnswered: 5,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionE(),
+        percentAnswered: 5,
+        isCorrectAnswer: true
+      }
     ],
-    notAnswered: 5,
+    notAnswered: 5
   },
   {
     id: 4,
-    question: 'What is the best explanation for why digital data is represented in computers in binary?',
-    answers:  [
-      {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 15, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 18, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 10, isCorrectAnswer: true},
-      {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 9, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionE(), percentAnswered: 5, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionF(), percentAnswered: 32, isCorrectAnswer: true},
-      {multipleChoiceOption: i18n.answerOptionG(), percentAnswered: 5, isCorrectAnswer: false},
+    question:
+      'What is the best explanation for why digital data is represented in computers in binary?',
+    answers: [
+      {
+        multipleChoiceOption: i18n.answerOptionA(),
+        percentAnswered: 15,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionB(),
+        percentAnswered: 18,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionC(),
+        percentAnswered: 10,
+        isCorrectAnswer: true
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionD(),
+        percentAnswered: 9,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionE(),
+        percentAnswered: 5,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionF(),
+        percentAnswered: 32,
+        isCorrectAnswer: true
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionG(),
+        percentAnswered: 5,
+        isCorrectAnswer: false
+      }
     ],
-    notAnswered: 33,
+    notAnswered: 33
   },
   {
     id: 5,
     question: 'What is a function?',
-    answers:  [
-      {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 15, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 18, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 10, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 9, isCorrectAnswer: false},
-      {multipleChoiceOption: i18n.answerOptionE(), percentAnswered: 5, isCorrectAnswer: true},
+    answers: [
+      {
+        multipleChoiceOption: i18n.answerOptionA(),
+        percentAnswered: 15,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionB(),
+        percentAnswered: 18,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionC(),
+        percentAnswered: 10,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionD(),
+        percentAnswered: 9,
+        isCorrectAnswer: false
+      },
+      {
+        multipleChoiceOption: i18n.answerOptionE(),
+        percentAnswered: 5,
+        isCorrectAnswer: true
+      }
     ],
-    notAnswered: 25,
-  },
+    notAnswered: 25
+  }
 ];
 
 // Data for single student table.
 // Array of questionStructurePropType from SingleStudendAssesmentsMCTable
-export const multipleChoiceDataForSingleStudent = multipleChoiceData.map((question, index) => {
-  return {
-    id: question.id,
-    question: question.question,
-    questionNumber: index + 1,
-    correctAnswer: ['C', 'C B', 'D', 'B', 'A'][index],
-  };
-});
+export const multipleChoiceDataForSingleStudent = multipleChoiceData.map(
+  (question, index) => {
+    return {
+      id: question.id,
+      question: question.question,
+      questionNumber: index + 1,
+      correctAnswer: ['C', 'C B', 'D', 'B', 'A'][index]
+    };
+  }
+);
 
 // Data for free responses assessments table.
 export const questionOne = [
@@ -149,7 +261,7 @@ export const questionOne = [
     id: 1,
     studentId: '210',
     name: 'Caley',
-    response: ' ',
+    response: ' '
   },
   {
     id: 2,
@@ -162,7 +274,7 @@ export const questionOne = [
     id: 3,
     studentId: '212',
     name: 'Erin',
-    response: 'Go out on a limb - that is where the fruit is.',
+    response: 'Go out on a limb - that is where the fruit is.'
   },
   {
     id: 4,
@@ -170,7 +282,7 @@ export const questionOne = [
     name: 'BrendanBrendanBrendanBrendan',
     response: `We do not make mistakes we just have happy little accidents. Once you learn the technique,
         ohhh! Turn you loose on the world; you become a tiger.,`
-  },
+  }
 ];
 
 // Data for free responses assessments table.
@@ -179,8 +291,8 @@ export const questionTwo = [
     id: 1,
     studentId: '210',
     name: 'Caley',
-    response: 'In every walk with nature, one receives far more than one seeks',
-  },
+    response: 'In every walk with nature, one receives far more than one seeks'
+  }
 ];
 
 // Data for free responses assessments table.
@@ -189,22 +301,51 @@ export const questionThree = [
     id: 1,
     studentId: '210',
     name: 'Maddie',
-    response: ' ',
-  },
+    response: ' '
+  }
 ];
 
 // Data for free responses survey table.
 export const surveyOne = [
-  {index: 0, response: 'Sea lettuce gumbo grape kale kombu cauliflower salsify kohlrabi okra sea lettuce broccoli celery lotus root carrot winter purslane turnip greens garlic.',},
-  {index: 1, response: 'Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.',},
-  {index: 2, response: 'Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea.',},
-  {index: 3, response: 'Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori.',},
-  {index: 4, response: 'Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale.',},
+  {
+    index: 0,
+    response:
+      'Sea lettuce gumbo grape kale kombu cauliflower salsify kohlrabi okra sea lettuce broccoli celery lotus root carrot winter purslane turnip greens garlic.'
+  },
+  {
+    index: 1,
+    response:
+      'Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.'
+  },
+  {
+    index: 2,
+    response:
+      'Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea.'
+  },
+  {
+    index: 3,
+    response:
+      'Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori.'
+  },
+  {
+    index: 4,
+    response:
+      'Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale.'
+  }
 ];
 
 // Data for free reponses for survey table
 export const surveyTwo = [
-  {index: 0, response: 'In every walk with nature, one receives far more than one seeks',},
-  {index: 1, response: 'In every walk with nature, one receives far more than one seeks',},
-  {index: 2, response: 'In every walk with nature, one receives far more than one seeks',},
+  {
+    index: 0,
+    response: 'In every walk with nature, one receives far more than one seeks'
+  },
+  {
+    index: 1,
+    response: 'In every walk with nature, one receives far more than one seeks'
+  },
+  {
+    index: 2,
+    response: 'In every walk with nature, one receives far more than one seeks'
+  }
 ];

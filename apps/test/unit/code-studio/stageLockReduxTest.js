@@ -1,9 +1,17 @@
-import { assert } from 'chai';
+import {assert} from 'chai';
 import _ from 'lodash';
 import sinon from 'sinon';
 import fakeSectionData from './fakeSectionData';
-import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
-import { NO_SECTION, selectSection } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  stubRedux,
+  restoreRedux,
+  registerReducers,
+  getStore
+} from '@cdo/apps/redux';
+import {
+  NO_SECTION,
+  selectSection
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import reducer, {
   LockStatus,
   beginSave,
@@ -16,7 +24,7 @@ import reducer, {
   FINISH_SAVE,
   CLOSE_LOCK_DIALOG,
   fullyLockedStageMapping,
-  setSectionLockStatus,
+  setSectionLockStatus
 } from '@cdo/apps/code-studio/stageLockRedux';
 
 // some arbitrary data in a form we expect to receive from the server
@@ -40,7 +48,10 @@ describe('stageLockRedux reducer tests', () => {
   describe('selectSection', () => {
     it('updates lock status', () => {
       let action, nextState;
-      const sectionState = reducer(undefined, setSectionLockStatus(fakeSectionData));
+      const sectionState = reducer(
+        undefined,
+        setSectionLockStatus(fakeSectionData)
+      );
 
       // Open dialog, such that lockStatus represents section1
       action = openLockDialog(section1Id, stage1Id);
@@ -50,16 +61,22 @@ describe('stageLockRedux reducer tests', () => {
       // Now switch sections
       action = selectSection(section2Id);
       nextState = reducer(nextState, action);
-      assert.deepEqual(nextState.lockStatus, [{
-        name: 'student4',
-        lockStatus: LockStatus.Locked,
-        userLevelData: fakeSectionData[section2Id].stages[stage1Id][0].user_level_data
-      }]);
+      assert.deepEqual(nextState.lockStatus, [
+        {
+          name: 'student4',
+          lockStatus: LockStatus.Locked,
+          userLevelData:
+            fakeSectionData[section2Id].stages[stage1Id][0].user_level_data
+        }
+      ]);
     });
 
     it('clears lockStatus when selecting NO_SECTION', () => {
       let action, nextState;
-      const sectionState = reducer(undefined, setSectionLockStatus(fakeSectionData));
+      const sectionState = reducer(
+        undefined,
+        setSectionLockStatus(fakeSectionData)
+      );
 
       // Open dialog, such that lockStatus represents section1
       action = openLockDialog(section1Id, stage1Id);
@@ -236,7 +253,11 @@ describe('saveLockDialog', () => {
       }
     ]);
 
-    lastRequest.respond(200, { 'Content-Type': 'application/json' }, JSON.stringify({}));
+    lastRequest.respond(
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify({})
+    );
 
     assert.equal(reducerSpy.callCount, 3);
 
@@ -247,7 +268,6 @@ describe('saveLockDialog', () => {
     assert.equal(firstAction.type, BEGIN_SAVE);
     assert.equal(secondAction.type, FINISH_SAVE);
     assert.equal(thirdAction.type, CLOSE_LOCK_DIALOG);
-
   });
 
   it('successfully lockStage without dialog', () => {
@@ -281,7 +301,11 @@ describe('saveLockDialog', () => {
       }
     ]);
 
-    lastRequest.respond(200, { 'Content-Type': 'application/json' }, JSON.stringify({}));
+    lastRequest.respond(
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify({})
+    );
 
     assert.equal(reducerSpy.callCount, 2);
 
@@ -296,85 +320,103 @@ describe('saveLockDialog', () => {
 describe('fullyLockedStageMapping', () => {
   const sections = {
     // all stages fully locked
-    "11": {
-      "1360": [{
-        // Note: Actual state has more fields, I've filtered to just those
-        // that we care about, for simplicity
-        name: 'student1',
-        locked: true
-      }, {
-        name: 'student2',
-        locked: true
-      }],
-      "1361": [{
-        name: 'student1',
-        locked: true
-      }, {
-        name: 'student2',
-        locked: true
-      }],
+    '11': {
+      '1360': [
+        {
+          // Note: Actual state has more fields, I've filtered to just those
+          // that we care about, for simplicity
+          name: 'student1',
+          locked: true
+        },
+        {
+          name: 'student2',
+          locked: true
+        }
+      ],
+      '1361': [
+        {
+          name: 'student1',
+          locked: true
+        },
+        {
+          name: 'student2',
+          locked: true
+        }
+      ]
     },
     // no stages fully locked
-    "12": {
+    '12': {
       // some students are locked, others arent
-      "1360": [{
-        name: 'student1',
-        locked: false
-      }, {
-        name: 'student2',
-        locked: true
-      }],
+      '1360': [
+        {
+          name: 'student1',
+          locked: false
+        },
+        {
+          name: 'student2',
+          locked: true
+        }
+      ],
       // entirely unlocked
-      "1361": [{
-        name: 'student1',
-        locked: false
-      }, {
-        name: 'student2',
-        locked: false
-      }]
+      '1361': [
+        {
+          name: 'student1',
+          locked: false
+        },
+        {
+          name: 'student2',
+          locked: false
+        }
+      ]
     },
     // mix of fully locked stages and not
-    "13": {
-      "1360": [{
-        name: 'student1',
-        locked: true
-      }, {
-        name: 'student2',
-        locked: true
-      }],
+    '13': {
+      '1360': [
+        {
+          name: 'student1',
+          locked: true
+        },
+        {
+          name: 'student2',
+          locked: true
+        }
+      ],
       // entirely unlocked
-      "1361": [{
-        name: 'student1',
-        locked: true
-      }, {
-        name: 'student2',
-        locked: false
-      }]
+      '1361': [
+        {
+          name: 'student1',
+          locked: true
+        },
+        {
+          name: 'student2',
+          locked: false
+        }
+      ]
     }
   };
 
   it('maps to true for fully locked stages', () => {
-    assert.deepEqual(fullyLockedStageMapping(sections["11"]), {
-      "1360": true,
-      "1361": true
+    assert.deepEqual(fullyLockedStageMapping(sections['11']), {
+      '1360': true,
+      '1361': true
     });
   });
 
   it('maps to false for non-fully locked stages', () => {
-    assert.deepEqual(fullyLockedStageMapping(sections["12"]), {
-      "1360": false,
-      "1361": false
+    assert.deepEqual(fullyLockedStageMapping(sections['12']), {
+      '1360': false,
+      '1361': false
     });
   });
 
   it('works when some of our stages are locked and others arent', () => {
-    assert.deepEqual(fullyLockedStageMapping(sections["13"]), {
-      "1360": true,
-      "1361": false
+    assert.deepEqual(fullyLockedStageMapping(sections['13']), {
+      '1360': true,
+      '1361': false
     });
   });
 
   it('returns an empty object if no selectedSection', () => {
-    assert.deepEqual(fullyLockedStageMapping(sections["9999"]), {});
+    assert.deepEqual(fullyLockedStageMapping(sections['9999']), {});
   });
 });

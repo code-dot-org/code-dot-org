@@ -1,0 +1,519 @@
+---
+fil:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': segundo
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: lahat
+          MOVE:
+            MOVES.Rest: Wala
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: Wala
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: lahat
+          MOVE:
+            MOVES.Rest: Wala
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: Wala
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': segundo
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundo
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Wala
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': segundo
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: lahat
+          FORMAT:
+            '"random"': nang hindi pinipili
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': nang hindi pinipili
+      Dancelab_randomColor:
+        text: iba-ibang kulay
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Wala
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Wala
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: lahat
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Wala
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': Wala
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: lahat
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: lahat
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: lahat
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': taas
+            '"left"': kaliwa
+            '"down"': baba
+            '"right"': kanan
+            '"space"': space
+            '"x"': x
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kelan
+            '"while"': habang
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': tama
+            'false': mali
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': iba
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kelan
+            '"while"': habang
+          KEY:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': space
+            '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': nang hindi pinipili
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": nang hindi pinipili
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': kanan
+            '"left"': kaliwa
+      gamelab_randColor:
+        text: iba-ibang kulay
+      gamelab_randomColor:
+        text: iba-ibang kulay
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': siyudad
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': nang hindi pinipili
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kelan
+            '"while"': habang
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': kanan
+            '"left"': kaliwa
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': space
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": taas
+            "'down'": baba
+            "'left'": kaliwa
+            "'right'": kanan
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': space
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': lahat
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': lahat
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': lahat
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': lahat
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': lahat
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': lahat
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': lahat
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': lahat
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Wala
+      Mikelab_randomColor:
+        text: iba-ibang kulay
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': siyudad
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': kanan
+            '"left"': kaliwa
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': pataas na arrow
+            '"down"': pababa na arrow
+            '"left"': kaliwang arrow
+            '"right"': kanang arrow
+            '"w"': W
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': pataas na arrow
+            '"down"': pababa na arrow
+            '"left"': kaliwang arrow
+            '"right"': kanang arrow
+            '"w"': W
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': pataas na arrow
+            '"down"': pababa na arrow
+            '"left"': kaliwang arrow
+            '"right"': kanang arrow
+      RyanLab_moveForward:
+        text: umabante
+      RyanLab_turnLeft:
+        text: kumaliwa
+      RyanLab_turnRight:
+        text: kumanan
+      aalab_changePropByFlexible:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kelan
+            '"while"': habang
+      aalab_clickedOn:
+        options:
+          CONDITION:
+            '"when"': kelan
+            '"while"': habang
+      aalab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': iba
+      aalab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kelan
+            '"while"': habang
+          KEY:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': space
+      aalab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': siyudad
+      aalab_setCollidable:
+        options:
+          VAL:
+            '"true"': tama
+            '"false"': mali
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': magpakailanman
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': ipakita
+            '"hide"': itago
+      binary_move:
+        options:
+          DIR:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': space
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": unahan
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": buhangin
+            "'planksOak'": tablang oak
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": buhangin
+      craft_moveForward:
+        text: umabante
+      craft_placeTorch:
+        text: lagay ng tanglaw

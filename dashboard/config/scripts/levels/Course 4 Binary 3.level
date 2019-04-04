@@ -17,7 +17,7 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "instructions": "Can you draw this pattern by looping a single binary string?"
+    "short_instructions": "Can you draw this pattern by looping a single binary string?"
   }
 }]]></config>
   <blocks>

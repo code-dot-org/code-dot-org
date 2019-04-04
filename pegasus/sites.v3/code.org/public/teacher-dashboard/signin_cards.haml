@@ -31,16 +31,19 @@ content-type: text/ng-template
 
   %div.all_cards
     -# Inline style is necessary in order to capture styling when grabbing this area to print
-    %div.signin_card{"ng-repeat" => "student in section.students | orderBy:name", :style=>'border:1px dashed #5b6770; padding:10px; margin:10px; float:left; page-break-inside:avoid; font-size:14px; font-family: "Gotham 4r", sans-serif; color: dimgray;'}
-      %dl
+    %div.signin_card{"ng-repeat" => "student in section.students | orderBy:name", :style=>'border:1px dashed #5b6770; padding:10px; margin:8px; float:left; page-break-inside:avoid; font-size:14px; font-family: "Gotham 4r", sans-serif; color: dimgray;'}
+      %dl{:style=> 'margin-bottom: 10px;'}
         %dd{:style=> 'margin: 0px'}= I18n.t 'dashboard_students_signin_card', section_code: '{{section.code}}', join_url: CDO.code_org_url('/join', 'http:')
-      %dl
+      %dl{:style=> 'margin-bottom: 10px;'}
         %dt{:style=>'font-weight:bold'}= I18n.t('dashboard_students_url')
         %dd{:style=>'margin:0px'}
           https:#{CDO.studio_url('/sections/{{section.code}}')}
-      %dl
-        %dt{:style=>'font-weight:bold'}= I18n.t('dashboard_students_name')
-        %dd{:style=>'margin:0px'} {{student.name}}
+      %dl{:style=> 'margin-bottom: 10px;'}
+        %dt{:style=>'font-weight:bold; display: inline-block;'}= I18n.t('dashboard_sections_name')
+        %dd{:style=>'margin:0px; display: inline-block;'} {{section.name}}
+      %dl{:style=> 'margin-bottom: 10px;'}
+        %dt{:style=>'font-weight:bold; display: inline-block;'}= I18n.t('dashboard_students_name')
+        %dd{:style=>'margin:0px; display: inline-block;'} {{student.name}}
       %dl{"ng-if" => "section.login_type === 'picture'"}
         %dt{:style=>'font-weight:bold'}= I18n.t('dashboard_students_secret_picture_title')
         %dd{:style=>'margin:0px'}

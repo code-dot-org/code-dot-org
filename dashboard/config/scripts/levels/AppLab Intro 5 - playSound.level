@@ -26,7 +26,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/cdc81e79687693db50383a41894d6679-image-1507566452258.26.22 AM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Add two more animals to the sound board.\r\n\r\n**How:** You'll need to add two `onEvent()` blocks to the program. Then use `playSound()` inside them.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/b0f254d319f788f832553648db6fb13c-image-1507566138094.gif)",
+    "long_instructions": "<img src=\"https://images.code.org/cdc81e79687693db50383a41894d6679-image-1507566452258.26.22 AM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Add two more animals to the sound board.\r\n\r\n**How:** You'll need to add two `onEvent()` blocks to the program. Then use `playSound()` inside them.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/b0f254d319f788f832553648db6fb13c-image-1507566138094.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

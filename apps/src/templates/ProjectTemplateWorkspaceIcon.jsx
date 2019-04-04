@@ -7,37 +7,34 @@ const IMAGE_BASE_URL = '/blockly/media/';
 
 const styles = {
   container: {
-    display: 'inline',
+    display: 'inline'
   },
   tooltip: {
     maxWidth: 200,
     lineHeight: '20px',
-    whiteSpace: 'normal',
+    whiteSpace: 'normal'
   },
   projectTemplateIcon: {
     marginRight: 5,
-    marginTop: -1,
-  },
+    marginTop: -1
+  }
 };
 
 export default class ProjectTemplateWorkspaceIcon extends React.Component {
-
   constructor(props) {
     super(props);
     this.tooltipId = _.uniqueId();
   }
 
   render() {
-
     return (
-      <div
-        style={styles.container}
-      >
+      <div style={styles.container}>
         <img
           style={styles.projectTemplateIcon}
           className="projectTemplateWorkspaceIcon"
           src={IMAGE_BASE_URL + 'connect.svg'}
-          data-tip data-for={this.tooltipId}
+          data-tip
+          data-for={this.tooltipId}
           aria-describedby={this.tooltipId}
         />
         <ReactTooltip

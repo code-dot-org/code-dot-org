@@ -185,7 +185,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Star Chaser\r\n\r\nNow that you have a working game, you can challenge yourself with some different features.\r\n\r\n# Do This\r\n* Start the user with 5 \"lives\", and take one away every time the user touches the **wrong** star.\r\n* Make an end screen, and change to that screen when the user runs out of lives.",
+    "long_instructions": "# Star Chaser\r\n\r\nNow that you have a working game, you can challenge yourself with some different features.\r\n\r\n# Do This\r\n* Start the user with 5 \"lives\", and take one away every time the user touches the **wrong** star.\r\n* Make an end screen, and change to that screen when the user runs out of lives.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

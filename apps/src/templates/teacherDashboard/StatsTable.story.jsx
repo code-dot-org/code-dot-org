@@ -1,5 +1,5 @@
 import React from 'react';
-import StatsTable from "./StatsTable";
+import {UnconnectedStatsTable as StatsTable} from './StatsTable';
 
 const section = {
   id: 1,
@@ -18,7 +18,7 @@ const section = {
       id: 3,
       name: 'Student A',
       total_lines: 3
-    },
+    }
   ]
 };
 
@@ -28,9 +28,8 @@ const studentsCompletedLevelCount = {
   3: 1
 };
 
-export default storybook => storybook
-  .storiesOf('StatsTable', module)
-  .addStoryTable([
+export default storybook =>
+  storybook.storiesOf('StatsTable', module).addStoryTable([
     {
       name: 'Teacher dashboard students stats table',
       description: 'By default, a single child is left-aligned',

@@ -15,6 +15,6 @@ export default storybook => {
             statusStudentCount={Status.FAILED}
           />
         )
-      },
+      }
     ]);
 };

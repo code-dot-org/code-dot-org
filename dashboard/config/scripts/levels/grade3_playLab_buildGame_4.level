@@ -35,7 +35,7 @@
     "sprites_hidden_to_start": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "In a deck of cards, a card with value 1 isn't actually called a \"1\", there's a special name. Write an if statement that checks if the random number is a 1, then tell the computer that the value of that card is \"Ace\".",
+    "short_instructions": "In a deck of cards, a card with value 1 isn't actually called a \"1\", there's a special name. Write an if statement that checks if the random number is a 1, then tell the computer that the value of that card is \"Ace\".",
     "contained_level_names": null
   },
   "published": true,

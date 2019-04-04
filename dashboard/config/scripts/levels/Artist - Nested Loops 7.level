@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Loop this design 10 times. How much do you have to turn each time you loop? (Hint: What is 360 divided by 10?)",
+    "short_instructions": "Loop this design 10 times. How much do you have to turn each time you loop? (Hint: What is 360 divided by 10?)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",

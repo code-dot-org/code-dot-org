@@ -1,6 +1,7 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import i18n from '@cdo/locale';
-import color from "../../util/color";
+import color from '../../util/color';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {selectGallery} from './projectsRedux.js';
 import {connect} from 'react-redux';
@@ -32,7 +33,7 @@ const styles = {
     outline: 'none',
     padding: '8px 18px',
     float: 'left',
-    cursor: 'pointer',
+    cursor: 'pointer'
   },
   selectedPill: {
     ':hover': {
@@ -58,10 +59,12 @@ class GallerySwitcher extends Component {
   }
 
   toggleToGallery() {
+    window.history.pushState(null, null, '/projects/public');
     this.props.selectGallery(Galleries.PUBLIC);
   }
 
   toggleToMyProjects() {
+    window.history.pushState(null, null, '/projects');
     this.props.selectGallery(Galleries.PRIVATE);
   }
 
@@ -72,7 +75,8 @@ class GallerySwitcher extends Component {
           key={'private'}
           style={[
             styles.pill,
-            this.props.selectedGallery === Galleries.PRIVATE && styles.selectedPill
+            this.props.selectedGallery === Galleries.PRIVATE &&
+              styles.selectedPill
           ]}
           onClick={this.toggleToMyProjects}
         >
@@ -82,7 +86,8 @@ class GallerySwitcher extends Component {
           key={'public'}
           style={[
             styles.pill,
-            this.props.selectedGallery === Galleries.PUBLIC && styles.selectedPill
+            this.props.selectedGallery === Galleries.PUBLIC &&
+              styles.selectedPill
           ]}
           onClick={this.toggleToGallery}
         >
@@ -93,10 +98,13 @@ class GallerySwitcher extends Component {
   }
 }
 
-export default connect(state => ({
-  selectedGallery: state.projects.selectedGallery
-}), dispatch => ({
-  selectGallery(gallery) {
-    dispatch(selectGallery(gallery));
-  }
-}))(Radium(GallerySwitcher));
+export default connect(
+  state => ({
+    selectedGallery: state.projects.selectedGallery
+  }),
+  dispatch => ({
+    selectGallery(gallery) {
+      dispatch(selectGallery(gallery));
+    }
+  })
+)(Radium(GallerySwitcher));

@@ -1,4 +1,5 @@
 require 'json'
+require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
@@ -28,6 +29,7 @@ module SharedConstants
       not_tried: "not_tried",
       submitted: "submitted",
       locked: "locked",
+      readonly: "readonly",
       perfect: "perfect",
       passed: "passed",
       attempted: "attempted",
@@ -48,6 +50,14 @@ module SharedConstants
       clever: 'clever',
     }
   )
+
+  # The set of artist autorun options
+  ARTIST_AUTORUN_OPTIONS = OpenStruct.new(
+    {
+      limited_auto_run: 'LIMITED_AUTO_RUN',
+      full_auto_run: 'FULL_AUTO_RUN',
+    }
+  ).freeze
 
   # The set of gamelab autorun options
   GAMELAB_AUTORUN_OPTIONS = OpenStruct.new(
@@ -78,6 +88,7 @@ module SharedConstants
     minecraft_adventurer
     minecraft_designer
     minecraft_hero
+    minecraft_aquatic
     starwars
     starwarsblocks
     starwarsblocks_hour
@@ -87,6 +98,8 @@ module SharedConstants
     basketball
     artist_k1
     playlab_k1
+    dance
+    spritelab
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.
@@ -95,8 +108,21 @@ module SharedConstants
     gamelab
   ).freeze
 
+  UNPUBLISHABLE_PROJECT_TYPES = %w(
+    algebra_game
+    calc
+    eval
+    minecraft_codebuilder
+    scratch
+    spritelab
+    weblab
+  )
+
   ALL_PUBLISHABLE_PROJECT_TYPES =
     ALWAYS_PUBLISHABLE_PROJECT_TYPES + CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
+
+  ALL_PROJECT_TYPES = ALL_PUBLISHABLE_PROJECT_TYPES + UNPUBLISHABLE_PROJECT_TYPES
+
   # This is a set of Applab blocks. It is used by dashboard to initialize the
   # default palette when creating a level. It is used by apps to determine
   # what the full set of blocks available is.
@@ -133,6 +159,7 @@ module SharedConstants
       "getYPosition": null,
       "setScreen": null,
       "rgb": null,
+      "open": null,
 
       // Canvas
       "createCanvas": null,
@@ -525,4 +552,6 @@ module SharedConstants
       "comment": null
     }
   JSON
+
+  ALLOWED_WEB_REQUEST_HEADERS = HttpCache::ALLOWED_WEB_REQUEST_HEADERS
 end

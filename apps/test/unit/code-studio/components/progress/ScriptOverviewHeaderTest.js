@@ -1,10 +1,10 @@
 import React from 'react';
-import { assert } from '../../../../util/configuredChai';
-import { shallow } from 'enzyme';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import { NotificationType } from '@cdo/apps/templates/Notification';
-import { UnconnectedScriptOverviewHeader as ScriptOverviewHeader } from
-  '@cdo/apps/code-studio/components/progress/ScriptOverviewHeader';
+import {assert, expect} from '../../../../util/configuredChai';
+import {shallow} from 'enzyme';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {NotificationType} from '@cdo/apps/templates/Notification';
+import {VisibilityType} from '../../../../../src/code-studio/scriptAnnouncementsRedux';
+import {UnconnectedScriptOverviewHeader as ScriptOverviewHeader} from '@cdo/apps/code-studio/components/progress/ScriptOverviewHeader';
 
 const defaultProps = {
   plcHeaderProps: undefined,
@@ -17,23 +17,40 @@ const defaultProps = {
   scriptName: 'course1',
   scriptTitle: 'Course One',
   scriptDescription: 'The first course',
-  versions: [],
+  versions: []
 };
 
-const fakeAnnouncement = {
-  notice: 'Notice',
-  details: 'More detail here',
-  link: '/foo/bar',
+const fakeTeacherAnnouncement = {
+  notice: 'Notice - Teacher',
+  details: 'Teachers are the best',
+  link: '/foo/bar/teacher',
+  type: NotificationType.information,
+  visibility: VisibilityType.teacher
+};
+const fakeOldTeacherAnnouncement = {
+  notice: 'Notice - Teacher',
+  details: 'Teachers are the best',
+  link: '/foo/bar/teacher',
   type: NotificationType.information
+};
+const fakeStudentAnnouncement = {
+  notice: 'Notice - Student',
+  details: 'Students are the best',
+  link: '/foo/bar/student',
+  type: NotificationType.information,
+  visibility: VisibilityType.student
+};
+const fakeTeacherAndStudentAnnouncement = {
+  notice: 'Notice - Teacher And Student',
+  details: 'More detail here',
+  link: '/foo/bar/teacherAndStudent',
+  type: NotificationType.information,
+  visibility: VisibilityType.teacherAndStudent
 };
 
 describe('ScriptOverviewHeader', () => {
   it('renders', () => {
-    shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-      />
-    );
+    shallow(<ScriptOverviewHeader {...defaultProps} />);
   });
 
   it('includes a PlcHeader if it has plcHeaderProps', () => {
@@ -50,56 +67,161 @@ describe('ScriptOverviewHeader', () => {
   });
 
   it('does not have a PlcHeader if we have no plcHeaderProps', () => {
-    const wrapper = shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-      />
-    );
+    const wrapper = shallow(<ScriptOverviewHeader {...defaultProps} />);
     assert.equal(wrapper.find('PlcHeader').length, 0);
   });
 
   it('has no notifications by default', () => {
-    const wrapper = shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-      />
+    const wrapper = shallow(<ScriptOverviewHeader {...defaultProps} />);
+    assert.equal(
+      wrapper.find('ScriptAnnouncements').props().announcements.length,
+      0
     );
-    assert.equal(wrapper.find('Notification').length, 0);
   });
 
-  it('includes a single notification default for non-verfied teachers', () => {
-    const wrapper = shallow(
-      <ScriptOverviewHeader
-        {...defaultProps}
-        hasVerifiedResources={true}
-        isVerifiedTeacher={false}
-      />
-    );
-    assert.equal(wrapper.find('ScriptAnnouncements').props().announcements.length, 1);
-  });
-
-  it('has non-verified and provided announcements if necessary', () => {
+  it('includes a single notification default for non-verified teachers', () => {
     const wrapper = shallow(
       <ScriptOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
-        announcements={[fakeAnnouncement]}
       />
     );
-    assert.equal(wrapper.find('ScriptAnnouncements').props().announcements.length, 2);
+    assert.equal(
+      wrapper.find('ScriptAnnouncements').props().announcements.length,
+      1
+    );
   });
 
-  it('does not show announcements to students', () => {
+  it('displays old teacher announcement for teacher', () => {
+    const wrapper = shallow(
+      <ScriptOverviewHeader
+        {...defaultProps}
+        announcements={[fakeOldTeacherAnnouncement]}
+      />
+    );
+    assert.equal(
+      wrapper.find('ScriptAnnouncements').props().announcements.length,
+      1
+    );
+  });
+
+  it('does not display old teacher announcement for student', () => {
+    const wrapper = shallow(
+      <ScriptOverviewHeader
+        {...defaultProps}
+        viewAs={ViewType.Student}
+        announcements={[fakeOldTeacherAnnouncement]}
+      />
+    );
+    assert.equal(
+      wrapper.find('ScriptAnnouncements').props().announcements.length,
+      0
+    );
+  });
+
+  it('has non-verified and provided teacher announcement if necessary', () => {
+    const wrapper = shallow(
+      <ScriptOverviewHeader
+        {...defaultProps}
+        S
+        hasVerifiedResources={true}
+        isVerifiedTeacher={false}
+        announcements={[fakeTeacherAnnouncement]}
+      />
+    );
+    assert.equal(
+      wrapper.find('ScriptAnnouncements').props().announcements.length,
+      2
+    );
+  });
+
+  it('has non-verified and provided teacher announcements if necessary', () => {
+    const wrapper = shallow(
+      <ScriptOverviewHeader
+        {...defaultProps}
+        hasVerifiedResources={true}
+        isVerifiedTeacher={false}
+        announcements={[
+          fakeTeacherAnnouncement,
+          fakeTeacherAndStudentAnnouncement
+        ]}
+      />
+    );
+    assert.equal(
+      wrapper.find('ScriptAnnouncements').props().announcements.length,
+      3
+    );
+  });
+
+  it('has only teacher announcements', () => {
+    const wrapper = shallow(
+      <ScriptOverviewHeader
+        {...defaultProps}
+        announcements={[
+          fakeStudentAnnouncement,
+          fakeTeacherAndStudentAnnouncement,
+          fakeTeacherAnnouncement
+        ]}
+      />
+    );
+    assert.equal(
+      wrapper.find('ScriptAnnouncements').props().announcements.length,
+      2
+    );
+    wrapper
+      .find('ScriptAnnouncements')
+      .props()
+      .announcements.forEach(node => {
+        expect(
+          node.visibility === NotificationType.teacher ||
+            node.visibility === NotificationType.teacherAndStudent
+        );
+      });
+  });
+
+  it('has student announcement if necessary', () => {
     const wrapper = shallow(
       <ScriptOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
         viewAs={ViewType.Student}
-        announcements={[fakeAnnouncement]}
+        announcements={[fakeStudentAnnouncement]}
       />
     );
-    assert.equal(wrapper.find('ScriptAnnouncements').length, 0);
+    assert.equal(
+      wrapper.find('ScriptAnnouncements').props().announcements.length,
+      1
+    );
+  });
+
+  it('has all student announcements but no teacher announcements if necessary', () => {
+    const wrapper = shallow(
+      <ScriptOverviewHeader
+        {...defaultProps}
+        hasVerifiedResources={true}
+        isVerifiedTeacher={false}
+        viewAs={ViewType.Student}
+        announcements={[
+          fakeStudentAnnouncement,
+          fakeTeacherAndStudentAnnouncement,
+          fakeTeacherAnnouncement
+        ]}
+      />
+    );
+    assert.equal(
+      wrapper.find('ScriptAnnouncements').props().announcements.length,
+      2
+    );
+    wrapper
+      .find('ScriptAnnouncements')
+      .props()
+      .announcements.forEach(node => {
+        expect(
+          node.visibility === NotificationType.student ||
+            node.visibility === NotificationType.teacherAndStudent
+        );
+      });
   });
 });

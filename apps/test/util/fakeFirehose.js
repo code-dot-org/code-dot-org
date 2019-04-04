@@ -1,7 +1,7 @@
 /** A fake Firehose client to simplify dependencies in storybook */
 class FakeFirehoseClient {
   getEnvironment() {
-    return "unknown";
+    return 'unknown';
   }
 
   isTestEnvironment() {
@@ -28,9 +28,9 @@ class FakeFirehoseClient {
     return {};
   }
 
-  putRecord() { }
+  putRecord() {}
 
-  putRecordBatch() { }
+  putRecordBatch() {}
 }
 
 const firehoseClient = new FakeFirehoseClient();

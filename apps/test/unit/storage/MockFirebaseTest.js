@@ -1,6 +1,6 @@
-import { expect } from '../../util/configuredChai';
+import {expect} from '../../util/configuredChai';
 import MockFirebase from '../../util/MockFirebase';
-import { init, getDatabase } from '@cdo/apps/storage/firebaseUtils';
+import {init, getDatabase} from '@cdo/apps/storage/firebaseUtils';
 
 describe('MockFirebase', () => {
   describe('initialization', () => {
@@ -31,12 +31,16 @@ describe('MockFirebase', () => {
     describe('once', () => {
       it('calls callbacks', done => {
         firebase.set('foo');
-        firebase.once('value',
+        firebase.once(
+          'value',
           snapshot => {
             expect(snapshot.val()).to.equal('foo');
             done();
           },
-          error => {throw error;});
+          error => {
+            throw error;
+          }
+        );
       });
 
       it('resolves promises', done => {
@@ -46,7 +50,10 @@ describe('MockFirebase', () => {
             expect(snapshot.val()).to.equal('bar');
             done();
           },
-          error => {throw error;});
+          error => {
+            throw error;
+          }
+        );
       });
     });
 
@@ -70,24 +77,26 @@ describe('MockFirebase', () => {
       });
 
       it('preserves existing data', done => {
-        firebase.set({foo: 1})
+        firebase
+          .set({foo: 1})
           .then(() => firebase.update({bar: 2}))
           .then(() => firebase.once('value'))
           .then(snapshot => {
-            expect(snapshot.val()).to.deep.equal({foo:1, bar:2});
+            expect(snapshot.val()).to.deep.equal({foo: 1, bar: 2});
             done();
           });
       });
 
       it('incorrectly redundantly adds deeply nested keys', done => {
-        firebase.update({'foo/bar': 1})
+        firebase
+          .update({'foo/bar': 1})
           .then(() => firebase.once('value'))
           .then(snapshot => {
             expect(snapshot.val()).to.deep.equal({
               foo: {bar: 1},
               // This key's presence is incorrect, and makes it hard to test
               // features which do sparse updates to deeply nested keys.
-              'foo/bar': 1,
+              'foo/bar': 1
             });
             done();
           });
@@ -97,38 +106,49 @@ describe('MockFirebase', () => {
     describe('transaction', () => {
       it('calls callbacks', done => {
         firebase.set('foo', () => {
-          firebase.transaction(data => {
-            return 'bar';
-          }, (error, committed, snapshot) => {
-            expect(committed).to.equal(true);
-            expect(snapshot.val()).to.equal('bar');
-            done();
-          });
+          firebase.transaction(
+            data => {
+              return 'bar';
+            },
+            (error, committed, snapshot) => {
+              expect(committed).to.equal(true);
+              expect(snapshot.val()).to.equal('bar');
+              done();
+            }
+          );
         });
       });
 
       it('resolves promises', done => {
         firebase.set('foo').then(() => {
-          firebase.transaction(data => {
-            return 'bar';
-          }).then(txnData => {
-            expect(txnData.committed).to.equal(true);
-            expect(txnData.snapshot.val()).to.equal('bar');
-            done();
-          });
+          firebase
+            .transaction(data => {
+              return 'bar';
+            })
+            .then(txnData => {
+              expect(txnData.committed).to.equal(true);
+              expect(txnData.snapshot.val()).to.equal('bar');
+              done();
+            });
         });
       });
     });
 
     describe('push', () => {
       it('adds ordered references', done => {
-        firebase.push().set("foo")
-          .then(() => firebase.push().set("bar"))
-          .then(() => firebase.push().set("baz"))
+        firebase
+          .push()
+          .set('foo')
+          .then(() => firebase.push().set('bar'))
+          .then(() => firebase.push().set('baz'))
           .then(() => firebase.once('value'))
           .then(snapshot => {
             const data = snapshot.val();
-            expect(Object.keys(data).map(key => data[key]).join(',')).to.equal('foo,bar,baz');
+            expect(
+              Object.keys(data)
+                .map(key => data[key])
+                .join(',')
+            ).to.equal('foo,bar,baz');
             done();
           });
       });
@@ -140,10 +160,10 @@ describe('MockFirebase', () => {
 
     beforeEach(() => {
       init({
-        channelId: "test-firebase-channel-id",
+        channelId: 'test-firebase-channel-id',
         firebaseName: 'test-firebase-name',
         firebaseAuthToken: 'test-firebase-auth-token',
-        showRateLimitAlert: () => {},
+        showRateLimitAlert: () => {}
       });
       channelRef = getDatabase();
       channelRef.autoFlush();
@@ -156,17 +176,26 @@ describe('MockFirebase', () => {
           expect(snapshot.val()).to.equal('foo');
           done();
         },
-        error => {throw error;});
+        error => {
+          throw error;
+        }
+      );
     });
 
     it('shares state between children', done => {
       channelRef.child('foo').set('bar');
-      channelRef.child('foo').once('value').then(
-        snapshot => {
-          expect(snapshot.val()).to.equal('bar');
-          done();
-        },
-        error => {throw error;});
+      channelRef
+        .child('foo')
+        .once('value')
+        .then(
+          snapshot => {
+            expect(snapshot.val()).to.equal('bar');
+            done();
+          },
+          error => {
+            throw error;
+          }
+        );
     });
   });
 });

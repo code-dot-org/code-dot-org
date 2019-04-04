@@ -1,4 +1,52 @@
 module UserMultiAuthHelper
+  def oauth_tokens_for_provider(provider)
+    if migrated?
+      authentication_option = AuthenticationOption.find_by(
+        credential_type: provider,
+        user_id: id
+      )
+      authentication_option_data = authentication_option&.data_hash || {}
+      {
+        oauth_token: authentication_option_data[:oauth_token],
+        oauth_token_expiration: authentication_option_data[:oauth_token_expiration],
+        oauth_refresh_token: authentication_option_data[:oauth_refresh_token]
+      }
+    else
+      {
+        oauth_token: oauth_token,
+        oauth_token_expiration: oauth_token_expiration,
+        oauth_refresh_token: oauth_refresh_token
+      }
+    end
+  end
+
+  def uid_for_provider(provider)
+    if migrated?
+      authentication_options.find_by(
+        credential_type: provider
+      )&.authentication_id
+    else
+      uid
+    end
+  end
+
+  def update_oauth_credential_tokens(auth_hash)
+    # No-op if auth_hash does not contain credentials
+    return unless auth_hash.key?(:credentials)
+
+    credentials_hash = auth_hash[:credentials]
+    if migrated?
+      auth_option = authentication_options.find_by(credential_type: auth_hash[:provider], authentication_id: auth_hash[:uid])
+      auth_option&.update_oauth_credential_tokens(credentials_hash)
+    else
+      self.oauth_refresh_token = credentials_hash[:refresh_token] if credentials_hash[:refresh_token].present?
+      self.oauth_token = credentials_hash[:token]
+      self.oauth_token_expiration = credentials_hash[:expires_at]
+
+      save if changed?
+    end
+  end
+
   def migrate_to_multi_auth
     raise "Migration not implemented for provider #{provider}" unless
       provider.nil? ||
@@ -36,18 +84,12 @@ module UserMultiAuthHelper
         end
     end
     self.provider = 'migrated'
-    save
-  end
-
-  def clear_single_auth_fields
-    raise "Single auth fields may not be cleared on an unmigrated user" unless migrated?
-    self.email = ''
-    self.hashed_email = nil
     self.uid = nil
     self.oauth_token = nil
     self.oauth_token_expiration = nil
     self.oauth_refresh_token = nil
     save
+    reload
   end
 
   def demigrate_from_multi_auth
@@ -74,5 +116,6 @@ module UserMultiAuthHelper
 
     authentication_options.delete_all
     save
+    reload
   end
 end

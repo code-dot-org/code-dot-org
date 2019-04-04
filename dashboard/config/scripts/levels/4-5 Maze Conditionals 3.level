@@ -13,7 +13,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,2,1,1,0,0],[0,0,0,0,0,4,0,0]]",
     "ideal": "5",
     "video_key": "C3_maze_conditionals",
-    "markdown_instructions": "Use the `if` block to help me decide when to turn. \r\n",
+    "long_instructions": "Use the `if` block to help me decide when to turn. \r\n",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",
@@ -28,7 +28,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "instructions": "Use the `if` block to help me decide when to turn. \r\n",
+    "short_instructions": "Use the `if` block to help me decide when to turn. \r\n",
     "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },

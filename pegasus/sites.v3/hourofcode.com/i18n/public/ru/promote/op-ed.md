@@ -1,38 +1,39 @@
 ---
-title: <%= hoc_s(:title_op_ed) %>
+title: <%= hoc_s(:title_op_ed).inspect %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Ниже приведен пример обзорных поддержку Недели Образование Компьютерные науки и ее цели, которые могут быть использованы штатом, местные законодатели, лидерами бизнеса и т. д.
+# Write an op-ed in support of Computer Science Education Week
 
-  
+### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
 
+### Visit [advocacy.code.org](<%= resolve_url('https://advocacy.code.org') %>) to find state specific information about computer science.
 
-Go to [code.org/promote](<%= codeorg_url('/promote') %>) to find state specific information about computer science.
+---
 
-**Заголовок: Вычисление... Где находятся рабочие места**
+#### Title: Computing…Where the Jobs Are
 
-**[ИМЯ] и [Рассмотреть вопрос о СОАВТОРСТВЕ с преподавателем, инспектором или бизнес лидером]**
+#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
 
-Компьютеры есть везде. Они в наших карманах. Они на наших стенах. Они в наших автомобилях. Они являются важной частью нашей инфраструктуры, от электросетей до светофоров, до внутренней работы наших финансовых рынков. И все эти компьютеры имеют однно общее свойство. Требуется программное обеспечение, чтобы сказать им, что делать.
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
-Но кто именно будет писать это программное обеспечение?
+But who exactly is going to write this software?
 
-Учитывая, как быстро наш мир преобразовывается технологиями вы могли бы ожидать несколько студентов, изучающих информатику в K-12 образование сегодня на небывалом высоком уровне. Вы ошибаетесь. В самом деле изучением информатики стало заниматься меньше студентов, стало меньше школ информатики, чем десять лет назад.
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-В то время, когда спрос на квалифицированных программистов достиг пика, мы стали выпускать меньше компьютерщиков. Даже в это время высокой безработицы, тысячи рабочих мест, многие из них прямо здесь, в **[INSERT STATE/CITY]**, будут незаполнены изза отсутствия достаточного количества людей с нужным навыком.
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
 
-Почему это? И как можно исправить?
+Why is this? And how can we address it?
 
-Проблема начинается в наших школах. Девять из десяти из наших школ, не предлагают классы компьютерного программирования. **[SCHOOL DISTRICT]** в последний год, только **[NUMBER]** студентов взяли расширенное размещение на уровне колледжа Компьютерной Науки Экзамен, только **[%]** из всех студентов кто взял расширенное размещения на уровне колледжа в нашем штате. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-Почти все основные вычислительные новшества были изобретены здесь, в этой стране, но мы находимся в опасности потерять это лидерство, если мы не сделаем что-то сейчас.
+Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-Нам нужно внести некоторые изменения.
+We need to make some changes.
 
-**[НЕОБЕЗАТЕЛЬНО ДЛЯ ШТАТОВ ГОСУДАРСТВ, ГДЕ ЭТО ОТНОСИТЬСЯ]**
+**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
 One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 

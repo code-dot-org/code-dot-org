@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Some of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud!",
+    "short_instructions": "Some of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud!",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -32,7 +32,7 @@
     "fast_get_nectar_animation": "false",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":0,\"value\":1,\"cloudType\":3,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":3,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "video_key": "C3_bee_debugging",
-    "markdown_instructions": "*\"Now I just want to make honey.\"*\r\n\r\nSome of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud!",
+    "long_instructions": "*\"Now I just want to make honey.\"*\r\n\r\nSome of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure to use an `if` statement to check for honeycomb beneath each cloud.\",\"hint_id\":\"grade3_bee_conditionals_quantum3\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a1c63dbb2fde09a7b1db2eae1cc2733e/grade3_bee_conditionals_quantum3.mp3\"}]",
     "instructions_important": "false",
     "contained_level_names": null

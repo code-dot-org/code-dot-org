@@ -2,295 +2,182 @@ ka:
   data:
     function_names:
       x: x
-      details: details
-      draw eyebrow: draw eyebrow
-      draw pupil: draw pupil
+      details: დეტალები
+      draw eyebrow: წარბის დახატვა
+      draw pupil: მოსწავლის დახატვა
       draw a circle: წრის დახატვა
-      draw a car: draw a car
-      draw_rect: draw_rect
-      draw square: draw square
-      jump to controller top left: jump to controller top left
-      jump to middle: jump to middle
-      draw a button: draw a button
-      draw cord: draw cord
-      draw R pad: draw R pad
-      draw left leg: draw left leg
-      draw right leg: draw right leg
-      draw body and arms: draw body and arms
-      draw a head: draw a head
-      draw sitting stick figure: draw sitting stick figure
-      draw head: draw head
-      draw arms: draw arms
-      jump to neck: jump to neck
-      draw O: draw O
-      draw D: draw D
-      draw E: draw E
-      draw ear stems: draw ear stems
-      big gear: big gear
-      small gear: small gear
+      draw a car: მანქანის დახატვა
+      draw_rect: მართკუთხედის_დახატვა
+      draw square: კვადრატის დახატვა
+      jump to middle: შუაში გადახტომა
+      draw a button: ღილაკის დახატვა
+      draw left leg: მარცხენა ფეხის დახატვა
+      draw right leg: მარჯვენა ფეხის დახატვა
+      draw body and arms: სხეულისა და ხელების დახატვა
+      draw a head: თავის დახატვა
+      draw head: თავის დახატვა
+      draw arms: ხელების დახატვა
+      draw O: O-ს დახატვა
+      draw D: D-ს დახატვა
+      draw E: E-ს დახატვა
+      big gear: დიდი კბილანა
+      small gear: პატარა კბილანა
       draw a hexagon: ექვსკუთხედის დახატვა
       draw a flower: ყვავილის დახატვა
       draw a square: კვადრატის დახატვა
       draw a snowflake: ფიფქის დახატვა
-      draw 3 hexagons: draw 3 hexagons
-      draw 4 hexagons: draw 4 hexagons
-      draw 5 hexagons: draw 5 hexagons
-      get 2 nectar: get 2 nectar
-      collect purple nectar: collect purple nectar
-      get 5: get 5
-      move and get nectar: move and get nectar
-      move and get 4: move and get 4
-      get 7 nectar make 7 honey: get 7 nectar make 7 honey
-      get 7 make 7: get 7 make 7
-      get 7: get 7
-      move and get 3: move and get 3
+      draw 3 hexagons: 3 ექვსკუთხედის დახატვა
+      draw 4 hexagons: 4 ექვსკუთხედის დახატვა
+      draw 5 hexagons: 5 ექვსკუთხედის დახატვა
+      get 2 nectar: 2 ნექტარის აღება
+      collect purple nectar: მეწამული ნექტარის შეგროვება
+      move and get nectar: გადაადგილება და ნექტარის აღება
       draw a tree: ხის დახატვა
-      draw triangle: draw triangle
-      draw circle: draw circle
-      draw goal: draw goal
-      graph: graph
-      draw waves: draw waves
-      draw a wave: draw a wave
-      draw a small triangle: draw a small triangle
-      draw a medium triangle: draw a medium triangle
-      draw a large triangle: draw a large triangle
-      draw a big triangle: draw a big triangle
+      draw triangle: სამკუთხედის დახატვა
+      draw circle: წრის დახატვა
+      draw waves: ტალღების დახატვა
+      draw a wave: ტალღის დახატვა
+      draw a small triangle: პატარა სამკუთხედის დახატვა
+      draw a medium triangle: საშუალო სამკუთხედის დახატვა
+      draw a large triangle: დიდი სამკუთხედის დახატვა
+      draw a big triangle: დიდი სამკუთხედის დახატვა
       draw a triangle: სამკუთხედის დახატვა
       draw a house: სახლის დახატვა
-      check purple flower: check purple flower
-      check flower make honey: check flower make honey
-      get nectar or make honey: get nectar or make honey
-      make 3 honey: make 3 honey
-      get 5 nectar: get 5 nectar
-      make all honey: make all honey
+      check purple flower: მეწამული ყვავილის შემოწმება
+      check flower make honey: ყვავილის შემოწმება თაფლის დამზადება
+      get nectar or make honey: ნექარის აღება ან თაფლის დამზადება
+      make 3 honey: 3 თაფლის დამზადება
+      get 5 nectar: 5 ნექტარის აღება
       draw a star: ვარსკვლავის დახატვა
-      game has been won: game has been won
-      draw: draw
-      draw bit: draw bit
-      draw a polygon: draw a polygon
-      draw a shape: draw a shape
-      get 2 and make 2: get 2 and make 2
-      draw a pinwheel: draw a pinwheel
-      drawTree: drawTree
-      drawHouse: drawHouse
-      drawBranch: drawBranch
-      drawSky: drawSky
-      fillScreen: fillScreen
-      drawHouseLayer: drawHouseLayer
-      swap: swap
-      dropR: dropR
-      grabL: grabL
-      dropL: dropL
-      init: init
-      grabR: grabR
+      draw: დახატვა
+      draw a polygon: მრავალკუთხედის დახატვა
+      draw a shape: ფორმის დახატვა
+      draw a pinwheel: ბზრიალას დახატვა
+      swap: გადაცვლა
       do something: გააკეთეთ რამე
-      filter_pixel: filter_pixel
-      draw_image: draw_image
-      witch ending: witch ending
-      story: story
-      starting path: starting path
+      story: ამბავი
       jump: ახტომა
-      patrol: patrol
-      fill in bg: fill in bg
-      draw grid1: draw grid1
-      draw lines: draw lines
-      Draw a Square Line: Draw a Square Line
-      Draw a triangle: Draw a triangle
-      Draw a Cube: Draw a Cube
-      draw a cube: draw a cube
-      draw an octagon 20: draw an octagon 20
-      Draw a square: Draw a square
-      cube: cube
-      do something2: do something2
-      jump upper right: jump upper right
-      draw a line of  squares: draw a line of  squares
-      draw a line of squares: draw a line of squares
-      Draw Square Line: Draw Square Line
-      jump upper left: jump upper left
-      draw a line of octagons: draw a line of octagons
-      draw a square line: draw a square line
-      Draw a Square: Draw a Square
-      draw a square 20: draw a square 20
-      draw a square 40: draw a square 40
-      draw a triangle with length: draw a triangle with length
-      Draw a Triangle with length: Draw a Triangle with length
-      draw a triangle wioth length: draw a triangle wioth length
-      draw a sqaure: draw a sqaure
-      triangle: triangle
-      draw a spiral shape: draw a spiral shape
-      get 3 nectar: get 3 nectar
-      get many nectar: get many nectar
-      get nectar make honey: get nectar make honey
-      draw an octagon: draw an octagon
-      draw octagons: draw octagons
-      shift down: shift down
-      level_up: level_up
-      score_points: score_points
+      Draw a triangle: სამკუთხედის დახატვა
+      Draw a Cube: კუბის დახატვა
+      draw a cube: კუბის დახატვა
+      Draw a square: კვადრატის დახატვა
+      cube: კუბი
+      draw a line of  squares: კვადრატების ხაზის დახატვა
+      draw a line of squares: კვადრატების ხაზის დახატვა
+      draw a line of octagons: რვაკუთხედების ხაზის დახატვა
+      draw a square line: კვადრატის ხაზის დახატვა
+      Draw a Square: კვადრატის დახატვა
+      draw a sqaure: კვადრატის დახატვა
+      triangle: სამკუთხედი
+      draw a spiral shape: სპირალური ფორმის დახატვა
+      get 3 nectar: 3 ნექტარის აღება
+      get many nectar: ბევრი ნექტარის აღება
+      get nectar make honey: ნექტარის აღება თაფლის გაკეთება
+      draw an octagon: რვაკუთხედის დახატვა
+      draw octagons: რვაკუთხედების დახატვა
       set score: ქულის განსაზღვრა
-      draw a line of hexagons: draw a line of hexagons
-      shift down/forward: shift down/forward
-      shift down/backward: shift down/backward
+      draw a line of hexagons: ექვსკუთხედების ხაზის დახატვა
       get nectar: ნექტარის აღება
-      make honey up and over: make honey up and over
-      setActors: setActors
-      popCharacter: popCharacter
-      patrol left right: patrol left right
-      empty function: empty function
-      check guess: check guess
-      Jump: Jump
+      empty function: ცარიელი ფუნქცია
+      Jump: ახტომა
       test: ტესტი
-      build bridge: build bridge
-      run right: run right
-      spin right: spin right
-      grow forever: grow forever
-      draw grass: draw grass
-      sun: sun
-      draw windows: draw windows
-      square: square
-      draw a door: draw a door
-      rectangle: rectangle
+      build bridge: ხიდის აგება
+      run right: მარჯვნივ გაქცევა
+      spin right: მარჯვნივ დატრიალება
+      draw grass: ბალახის დახატვა
+      sun: მზე
+      draw windows: ფანჯრების დახატვა
+      square: კვადრატი
+      draw a door: კარის დახატვა
+      rectangle: მართკუთხედი
       diamond: ბრილიანტი
-      window: window
-      n-sided shape: n-sided shape
-      draw a loop: draw a loop
-      draw spiral circle: draw spiral circle
-      draw roof: draw roof
-      draw rectangle: draw rectangle
+      window: ფანჯარა
+      draw roof: სახურავის დახატვა
+      draw rectangle: მართკუთხედის დახატვა
       move: გადაადგილება
-      function 1: function 1
-      function 2: function 2
-      turn corner: turn corner
-      destroy and move: destroy and move
-      clear path: clear path
-      clear cacti: clear cacti
-      place and move: place and move
-      cover lava: cover lava
-      build short bridge: build short bridge
-      build long bridge: build long bridge
-      create trail: create trail
-      move and fill: move and fill
-      fix right corner: fix right corner
-      fix left corner: fix left corner
-      make segment: make segment
-      fix long path: fix long path
-      fix short path: fix short path
-      place 3 tracks: place 3 tracks
-      clear right corner: clear right corner
-      clear left corner: clear left corner
-      draw a spiral edge: draw a spiral edge
-      draw a pentagon: draw a pentagon
-      artist jump around: artist jump around
-      Draw lenses: Draw lenses
-      25 pixel square: 25 pixel square
-      draw eye: draw eye
-      Make a Dot: Make a Dot
-      bubble sort: bubble sort
+      function 1: ფუნქცია 1
+      function 2: ფუნქცია 2
+      destroy and move: განადგურება და გადაადგილება
+      clear path: გზის გასუფთავება
+      place and move: დადება და გადაადგილება
+      cover lava: ლავით დაფარვა
+      build short bridge: მოკლე ხიდის აგება
+      build long bridge: გრძელი ხიდის აგება
+      create trail: ბილიკის შექმნა
+      move and fill: გადაადგილება და შევსება
+      fix right corner: მარჯვენა კუთხის შეკეთება
+      fix left corner: მარცხენა კუთხის შეკეთება
+      make segment: სეგმენტის შექმნა
+      clear right corner: მარჯვენა კუთხის გასუფთავება
+      clear left corner: მარცხენა კუთხის გასუფთავება
+      draw a pentagon: ხუთკუთხედის დახატვა
+      Draw lenses: ლინზების დახატვა
+      draw eye: თვალის დახატვა
+      Make a Dot: წერტილის შექმნა
       move right: მარჯვნივ გადაადგილება
-      say number: say number
+      say number: რიცხვის თქმა
       move up: გადაადგილება ზემოთ
       move down: გადაადგილება ქვემოთ
       move left: გადაადგილება მარცხნივ
-      kill alien: kill alien
-      click: click
-      Send Actor 1 to opposite: Send Actor 1 to opposite
-      blink actor 1: blink actor 1
-      my function: my function
-      Squares row: Squares row
-      draw first part of heart: draw first part of heart
-      check win: check win
-      curvy corner: curvy corner
-      make triangle: make triangle
-      my behavior: my behavior
-      '"simple" solution': '"simple" solution'
-      potential solution: potential solution
-      my design: my design
-      get 3 nectar or honey: get 3 nectar or honey
-      move and collect: move and collect
-      check nectar or honey: check nectar or honey
-      row of nectar: row of nectar
-      rowOfNectar: rowOfNectar
-      move and check: move and check
-      win game: win game
-      lose game: lose game
-      keep playing: keep playing
-      Ask a question: Ask a question
-      draw pinwheel: draw pinwheel
-      draw background: draw background
-      move and get nectar with counter: move and get nectar with counter
-      pick row: pick row
-      draw flame: draw flame
-      draw fire: draw fire
-      booster: booster
-      draw line of triangles: draw line of triangles
-      draw a window: draw a window
-      stop_everything: stop_everything
-      draw a plane of squares: draw a plane of squares
-      draw hexagon: draw hexagon
-      draw line of hexagons: draw line of hexagons
-      staggered squares: staggered squares
-      draw line of polygons: draw line of polygons
-      draw polygon: draw polygon
-      honey nectar: honey nectar
-      move and make honey: move and make honey
-      collect all nectar: collect all nectar
-      get all nectar: get all nectar
-      get pumpkin: get pumpkin
-      harvest: harvest
-      get corn and come back: get corn and come back
-      pick along path: pick along path
-      check square for corn: check square for corn
-      get all pumpkins: get all pumpkins
-      pumpkin square: pumpkin square
-      navigate: navigate
-      check and pick: check and pick
-      find pumpkin: find pumpkin
-      wander path: wander path
-      get produce: get produce
-      check for corn: check for corn
-      corn rectangle: corn rectangle
-      lettuce stairs: lettuce stairs
-      pick veggie: pick veggie
-      corn and pumpkin: corn and pumpkin
-      go get pumpkins: go get pumpkins
-      go get lettuce: go get lettuce
-      garden square: garden square
-      get corn come back: get corn come back
-      checker: checker
-      Make gingham: Make gingham
-      black outline: black outline
-      draw a square2: draw a square2
-      filled square: filled square
-      get only nectar: get only nectar
-      only make honey: only make honey
-      collect row: collect row
-      rowOfNectarOrHoney: rowOfNectarOrHoney
-      collect stairs: collect stairs
+      kill alien: უცხოს მოკვლა
+      click: დაწკაპუნება
+      my function: ჩემი ფუნქცია
+      draw first part of heart: გულის პირველი ნაწილის დახატვა
+      curvy corner: მრუდე კუთხე
+      make triangle: სამკუთხედის შექმნა
+      '"simple" solution': '"მარტივი" გადაწყვეტა'
+      potential solution: მოსალოდნელი გადაწყვეტა
+      my design: ჩემი დიზაინი
+      get 3 nectar or honey: 3 ნექტარის ან თაფლის აღება
+      move and collect: გადაადგილება და შეგროვება
+      check nectar or honey: ნექტარის ან თაფლის შემოწმება
+      row of nectar: ნექტარის მწკრივი
+      move and check: გადაადგილება და შემოწმება
+      win game: თამაშის მოგება
+      lose game: თამაშის წაგება
+      keep playing: თამაშის გაგრძელება
+      Ask a question: კითხვის დასმა
+      draw pinwheel: ბზრიალას დახატვა
+      draw background: ფონის დახატვა
+      pick row: მწკრივის არჩევა
+      draw flame: ალის დახატვა
+      draw fire: ცეცხლის დახატვა
+      draw line of triangles: სამკუთხედების ხაზის დახატვა
+      draw a window: ფანჯრის დახატვა
+      draw hexagon: ექვსკუთხედის დახატვა
+      draw line of hexagons: ექვსკუთხედების ხაზის დახატვა
+      draw line of polygons: მრავალკუთხედების ხაზის დახატვა
+      draw polygon: მრავალკუთხედის დახატვა
+      honey nectar: თაფლის ნექტარი
+      move and make honey: გადაადგილება და თაფლის გაკეთება
+      collect all nectar: ყველა ნექტარის შეგროვება
+      get all nectar: ყველა ნექტარის აღება
+      get pumpkin: გოგრის აღება
+      harvest: მოსავალი
+      get corn and come back: ხობლის აღება და დაბრუნება
+      check square for corn: კვადრატის ხორბალზე შემოწმება
+      get all pumpkins: ყველა გოგრის აღება
+      pumpkin square: გოგრის კვადრატი
+      check and pick: შემოწმება და აღება
+      find pumpkin: გოგრის პოვნა
+      check for corn: ხორბალზე შემოწმება
+      corn rectangle: ხორბლის მართკუთხედი
+      lettuce stairs: სალათის კიბე
+      corn and pumpkin: ხორბალი და გოგრა
+      garden square: ბაღის კვადრატი
+      get corn come back: ხორბლის აღება დაბრუნება
+      filled square: შევსებული კვადრატი
+      get only nectar: მხოლოდ ნექტრის აღება
+      only make honey: მხოლოდ თაფლის გაკეთება
+      collect stairs: კიბეების შეგროვება
       collect: შეგროვება
-      move and increment: move and increment
-      do something3: do something3
-      Robin Fly: Robin Fly
-      Robot Jump: Robot Jump
-      Center Dragon: Center Dragon
-      Dragon Fly: Dragon Fly
-      Knight Surge: Knight Surge
-      Stop Dragon: Stop Dragon
-      Knight Jump: Knight Jump
-      robotThinking: robotThinking
-      fill area with color: fill area with color
-      draw a line of triangles: draw a line of triangles
-      check flower: check flower
-      get next row: get next row
-      check space: check space
-      follow path: follow path
-      physics: physics
-      initialization: initialization
-      Make Actor 1 Jump: Make Actor 1 Jump
-      Choose Number: Choose Number
-      Move Bird: Move Bird
+      fill area with color: ფართობის ფერით შევსება
+      draw a line of triangles: სამკუთხედების ხაზის დახატვა
+      check flower: ყვავილის შემოწმება
+      check space: სივრცის შემოწმება
+      physics: ფიზიკა
       turn left: მარცხნივ მობრუნება
       move forward: წინ გადაადგილება
       turn right: მარჯვნივ მობრუნება
-      drawDot: drawDot
-      draw a rectangle: draw a rectangle
-      Which Course for My Students?: Which Course for My Students?
-      draw a heart: draw a heart
+      draw a rectangle: მართკუთხედის დახატვა
+      draw a heart: გულის დახატვა

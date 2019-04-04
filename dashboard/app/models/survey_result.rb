@@ -57,14 +57,8 @@ class SurveyResult < ActiveRecord::Base
     DIVERSITY_2017 = 'Diversity2017'.freeze,
     DIVERSITY_2018 = 'Diversity2018'.freeze,
     NET_PROMOTER_SCORE_2015 = 'NetPromoterScore2015'.freeze,
-    NET_PROMOTER_SCORE_2017 = 'NetPromoterScore2017'.freeze
+    NET_PROMOTER_SCORE_2017 = 'NetPromoterScore2017'.freeze,
+    NET_PROMOTER_SCORE_2019 = 'NetPromoterScore2019'.freeze
   ].freeze
   validates :kind, inclusion: {in: KINDS}, allow_nil: false
-
-  def clear_open_ended_responses
-    FREE_RESPONSE_ATTRS.each do |free_response_attr|
-      send("#{free_response_attr}=", SYSTEM_DELETED)
-    end
-    save! if changed?
-  end
 end

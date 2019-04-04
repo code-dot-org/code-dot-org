@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
@@ -21,7 +22,7 @@ export function isResponsiveFromState(state) {
 class ProtectedVisualizationDiv extends React.Component {
   static propTypes = {
     isResponsive: PropTypes.bool.isRequired,
-    children: PropTypes.node,
+    children: PropTypes.node
   };
 
   render() {

@@ -4,7 +4,7 @@ import {
   commands,
   executors,
   dropletConfig,
-  injectExecuteCmd,
+  injectExecuteCmd
 } from '@cdo/apps/lib/util/timeoutApi';
 import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
@@ -65,7 +65,10 @@ describe('Timeout API', () => {
 
     it('has two arguments, "callback" and "milliseconds"', () => {
       // Check droplet config
-      expect(dropletConfig[funcName].paletteParams).to.deep.equal(['callback', 'ms']);
+      expect(dropletConfig[funcName].paletteParams).to.deep.equal([
+        'callback',
+        'ms'
+      ]);
       expect(dropletConfig[funcName].params).to.have.length(2);
 
       // Check executors map arguments to object correctly
@@ -73,17 +76,20 @@ describe('Timeout API', () => {
       injectExecuteCmd(spy);
       executors[funcName]('one', 'two', 'three');
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({callback: 'one', milliseconds: 'two'});
+      expect(spy.firstCall.args[2]).to.deep.equal({
+        callback: 'one',
+        milliseconds: 'two'
+      });
     });
 
     itComplainsIfArgumentIsNotAFunction(funcName, 'callback', {
       callback: () => {},
-      milliseconds: 0,
+      milliseconds: 0
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'milliseconds', {
       callback: () => {},
-      milliseconds: 0,
+      milliseconds: 0
     });
 
     it('sets a timeout', () => {
@@ -115,7 +121,7 @@ describe('Timeout API', () => {
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'timeoutId', {
-      timeoutId: 0,
+      timeoutId: 0
     });
 
     it('clears a timeout', () => {
@@ -136,7 +142,10 @@ describe('Timeout API', () => {
 
     it('has two arguments, "callback" and "milliseconds"', () => {
       // Check droplet config
-      expect(dropletConfig[funcName].paletteParams).to.deep.equal(['callback', 'ms']);
+      expect(dropletConfig[funcName].paletteParams).to.deep.equal([
+        'callback',
+        'ms'
+      ]);
       expect(dropletConfig[funcName].params).to.have.length(2);
 
       // Check executors map arguments to object correctly
@@ -144,17 +153,20 @@ describe('Timeout API', () => {
       injectExecuteCmd(spy);
       executors[funcName]('one', 'two', 'three');
       expect(spy).to.have.been.calledOnce;
-      expect(spy.firstCall.args[2]).to.deep.equal({callback: 'one', milliseconds: 'two'});
+      expect(spy.firstCall.args[2]).to.deep.equal({
+        callback: 'one',
+        milliseconds: 'two'
+      });
     });
 
     itComplainsIfArgumentIsNotAFunction(funcName, 'callback', {
       callback: () => {},
-      milliseconds: 0,
+      milliseconds: 0
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'milliseconds', {
       callback: () => {},
-      milliseconds: 0,
+      milliseconds: 0
     });
 
     it('sets an interval', () => {
@@ -190,7 +202,7 @@ describe('Timeout API', () => {
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'intervalId', {
-      intervalId: 0,
+      intervalId: 0
     });
 
     it('clears an interval', () => {
@@ -216,7 +228,10 @@ describe('Timeout API', () => {
 
     it('has two arguments, "ms" and "callback"', () => {
       // Check droplet config
-      expect(dropletConfig[funcName].paletteParams).to.deep.equal(['ms', 'callback']);
+      expect(dropletConfig[funcName].paletteParams).to.deep.equal([
+        'ms',
+        'callback'
+      ]);
       expect(dropletConfig[funcName].params).to.have.length(2);
 
       // Check executors map arguments to object correctly
@@ -229,12 +244,12 @@ describe('Timeout API', () => {
 
     itComplainsIfArgumentIsNotAFunction(funcName, 'callback', {
       callback: () => {},
-      ms: 0,
+      ms: 0
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'ms', {
       callback: () => {},
-      ms: 0,
+      ms: 0
     });
 
     it('sets an interval', () => {
@@ -260,7 +275,10 @@ describe('Timeout API', () => {
       // Check droplet config
       expect(dropletConfig[funcName].paletteParams).to.be.undefined;
       expect(dropletConfig[funcName].params).to.be.undefined;
-      expect(dropletConfig[funcName].paramButtons).to.deep.equal({minArgs: 0, maxArgs: 1});
+      expect(dropletConfig[funcName].paramButtons).to.deep.equal({
+        minArgs: 0,
+        maxArgs: 1
+      });
 
       // Check executors map arguments to object correctly
       let spy = sinon.spy();
@@ -277,7 +295,7 @@ describe('Timeout API', () => {
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'key', {
-      key: 0,
+      key: 0
     });
 
     it('clears an interval started by setTimedLoop', () => {
@@ -343,7 +361,12 @@ describe('Timeout API', () => {
    *   where the argument under test is invalid in different ways, to check that
    *   validation is functioning as expected.
    */
-  function itComplainsIfArgumentIsNotOfType(funcName, argName, expectedType, validArgs) {
+  function itComplainsIfArgumentIsNotOfType(
+    funcName,
+    argName,
+    expectedType,
+    validArgs
+  ) {
     function callFuncWithArgValue(badValue) {
       commands[funcName]({
         ...validArgs,

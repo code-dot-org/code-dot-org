@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 
 import FormController from '../form_components/FormController';
 import PreWorkshopQuestions from './PreWorkshopQuestions';
@@ -8,9 +8,7 @@ export default class PreWorkshopSurvey extends FormController {
    * @override
    */
   getPageComponents() {
-    return [
-      PreWorkshopQuestions
-    ];
+    return [PreWorkshopQuestions];
   }
 
   /**
@@ -30,7 +28,7 @@ export default class PreWorkshopSurvey extends FormController {
   serializeFormData() {
     return {
       ...super.serializeFormData(),
-      pd_enrollment_code: this.props.pdEnrollmentCode,
+      pd_enrollment_code: this.props.pdEnrollmentCode
     };
   }
 

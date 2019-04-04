@@ -12,7 +12,6 @@ module ViewOptionsHelper
     :channel,
     :readonly_workspace,
     :is_external_project_level,
-    :is_channel_backed,
     :is_legacy_share,
     :legacy_share_style,
     :is_challenge_level,
@@ -33,7 +32,8 @@ module ViewOptionsHelper
     :has_contained_levels,
     :next_level_url,
     :responsive_content,
-    :answerdash
+    :answerdash,
+    :signed_replay_log_url,
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

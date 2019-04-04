@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Free Play: Make art with code!",
+    "short_instructions": "Free Play: Make art with code!",
     "is_k1": "false",
     "is_project_level": "true",
     "skip_instructions_popup": "false",

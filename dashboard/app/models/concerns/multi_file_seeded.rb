@@ -65,7 +65,7 @@ module MultiFileSeeded
   module ClassMethods
     def load_records(blob="config/#{self::CONFIG_DIRECTORY}/**/*.#{self::EXTENSION}")
       removed_records = all.pluck(:name)
-      LevelLoader.for_each_file(blob) do |path|
+      Dir.glob(Rails.root.join(blob)).each do |path|
         removed_records -= [load_record(path)]
       end
       where(name: removed_records).destroy_all

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Assessment:  Use the \"draw a square\" function to create the squares.  The squares are 50, 100, and 150 pixels.",
+    "short_instructions": "Assessment:  Use the \"draw a square\" function to create the squares.  The squares are 50, 100, and 150 pixels.",
     "x": "50",
     "y": "100",
     "start_direction": "90",

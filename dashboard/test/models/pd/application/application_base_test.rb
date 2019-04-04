@@ -3,6 +3,9 @@ require 'test_helper'
 module Pd::Application
   class ApplicationBaseTest < ActiveSupport::TestCase
     include ApplicationConstants
+    include Pd::Application::ActiveApplicationModels
+
+    freeze_time
 
     test 'required fields' do
       application = ApplicationBase.new
@@ -20,9 +23,9 @@ module Pd::Application
     end
 
     test 'derived classes override type and year' do
-      application = Teacher1819Application.new
+      application = TEACHER_APPLICATION_CLASS.new
       assert_equal TEACHER_APPLICATION, application.application_type
-      assert_equal YEAR_18_19, application.application_year
+      assert_equal APPLICATION_CURRENT_YEAR, application.application_year
     end
 
     test 'default status is unreviewed' do
@@ -33,7 +36,7 @@ module Pd::Application
     end
 
     test 'can update status' do
-      application = create :pd_facilitator1819_application
+      application = create FACILITATOR_APPLICATION_FACTORY
       assert application.unreviewed?
 
       application.update(status: 'pending')
@@ -45,7 +48,7 @@ module Pd::Application
 
     test 'regional partner name' do
       partner = build :regional_partner
-      application = build :pd_facilitator1819_application, regional_partner: partner
+      application = build FACILITATOR_APPLICATION_FACTORY, regional_partner: partner
 
       assert_equal partner.name, application.regional_partner_name
     end
@@ -53,7 +56,7 @@ module Pd::Application
     test 'school name' do
       school_info = build :school_info
       teacher = build :teacher, school_info: school_info
-      application = build :pd_facilitator1819_application, user: teacher
+      application = build FACILITATOR_APPLICATION_FACTORY, user: teacher
 
       assert_equal school_info.effective_school_name.titleize, application.school_name
     end
@@ -61,22 +64,9 @@ module Pd::Application
     test 'district name' do
       school_info = create :school_info
       teacher = build :teacher, school_info: school_info
-      application = build :pd_facilitator1819_application, user: teacher
+      application = build FACILITATOR_APPLICATION_FACTORY, user: teacher
 
       assert_equal school_info.effective_school_district_name.titleize, application.district_name
-    end
-
-    test 'send_all_decision_notification_emails only sends once per application' do
-      application = create :pd_facilitator1819_application
-      application.update(status: 'declined')
-      application.lock!
-
-      mock_mail = stub
-      mock_mail.stubs(:deliver_now).returns(nil)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:declined).times(1).returns(mock_mail)
-
-      Pd::Application::ApplicationBase.send_all_decision_notification_emails
-      Pd::Application::ApplicationBase.send_all_decision_notification_emails
     end
 
     test 'total score' do
@@ -239,6 +229,113 @@ module Pd::Application
 
       application.form_data = nil
       assert_nil application.instance_variable_get(:@full_answers)
+    end
+
+    test 'queue_email creates an associated unsent Email record' do
+      application = create TEACHER_APPLICATION_FACTORY
+
+      application.expects(:deliver_email).never
+      assert_creates Email do
+        application.queue_email :test_email
+      end
+      email = Email.last
+      assert_equal application, email.application
+      assert_equal 'test_email', email.email_type
+      assert_equal application.status, email.application_status
+      assert_nil email.sent_at
+    end
+
+    test 'queue_email with deliver_now sends email and creates an associated sent Email record' do
+      application = create TEACHER_APPLICATION_FACTORY
+
+      application.expects(:deliver_email)
+      assert_creates Email do
+        application.queue_email :test_email, deliver_now: true
+      end
+      email = Email.last
+      assert_equal application, email.application
+      assert_equal 'test_email', email.email_type
+      assert_equal application.status, email.application_status
+      assert_not_nil email.sent_at
+    end
+
+    test 'record status change with user' do
+      application = create TEACHER_APPLICATION_FACTORY
+      workshop_admin = create :workshop_admin
+
+      application.update(status: 'pending')
+      application.update_status_timestamp_change_log(workshop_admin)
+      expected_entry = {
+        title: 'pending',
+        changing_user_id: workshop_admin.id,
+        changing_user_name: workshop_admin.name,
+        time: Time.now
+      }
+
+      assert_equal(
+        [expected_entry],
+        (application.sanitize_status_timestamp_change_log)
+      )
+
+      application.update(status: 'approved')
+      application.update_status_timestamp_change_log(workshop_admin)
+      assert_equal(
+        [
+          expected_entry,
+          expected_entry.dup.update({title: 'approved'})
+        ], application.sanitize_status_timestamp_change_log
+      )
+    end
+
+    test 'record status change without user' do
+      application = create TEACHER_APPLICATION_FACTORY
+
+      application.update(status: 'accepted')
+      application.update_status_timestamp_change_log(nil)
+      assert_equal(
+        [{
+          title: 'accepted',
+          changing_user_id: nil,
+          changing_user_name: nil,
+          time: Time.now
+        }],
+        application.sanitize_status_timestamp_change_log
+      )
+    end
+
+    test 'formatted_partner_contact_email' do
+      application = create :pd_facilitator1920_application
+
+      partner = create :regional_partner, contact: nil
+      contact = create :teacher
+
+      # no partner
+      assert_nil application.formatted_partner_contact_email
+
+      # partner w no contact info
+      application.regional_partner = partner
+      assert_nil application.formatted_partner_contact_email
+
+      # name only? still nil
+      partner.contact_name = 'We Teach Code'
+      assert_nil application.formatted_partner_contact_email
+
+      # email only? still nil
+      partner.contact_name = nil
+      assert_nil application.formatted_partner_contact_email
+
+      # old contact field
+      partner.contact = contact
+      assert_equal "\"#{contact.name}\" <#{contact.email}>", application.formatted_partner_contact_email
+
+      # program manager but no contact_name or contact_email
+      program_manager = (create :regional_partner_program_manager, regional_partner: partner).program_manager
+      assert_equal "\"#{program_manager.name}\" <#{program_manager.email}>", application.formatted_partner_contact_email
+
+      # name and email
+      partner.contact_name = 'We Teach Code'
+      partner.contact_email = 'we_teach_code@ex.net'
+      assert_equal "\"We Teach Code\" <we_teach_code@ex.net>", application.formatted_partner_contact_email
     end
   end
 end

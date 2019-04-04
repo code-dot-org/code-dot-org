@@ -10,11 +10,6 @@ h1 {
   margin-top:  0px;
 }
 
-.promote-tools-resources {
-  height: 260px;
-  margin: 1%;
-}
-
 .left {
   float: left
 }
@@ -64,8 +59,6 @@ a.whitefooterlink {
 
 @media screen and (min-width: 971px)
 {
-  .promote-tools-resources { width: 31%; float:left; }
-
    #block a:first-of-type {
     font-size: 70px;
    }
@@ -73,25 +66,9 @@ a.whitefooterlink {
 
 @media screen and (min-width: 0px) and (max-width: 970px)
 {
-  .promote-tools-resources { width: 31%; float:left; }
-
   #block a:first-of-type {
     font-size: 50px;
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 512px)
-{
-   .promote-tools-resources {
-    width: 48%;
-    float:left;
-   }
 
-   #tools-section .promote-tools-resources {
-     height: 285px;
-   }
-
-   #resources-section .promote-tools-resources {
-     height: 225px;
-   }
-}

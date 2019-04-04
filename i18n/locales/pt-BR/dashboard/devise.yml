@@ -39,7 +39,6 @@ pt-BR:
       update_needs_confirmation: "Você atualizou sua conta com sucesso, mas precisamos verificar seu novo endereço de email. Verifique seu email e clique no link para confirmar seu novo endereço."
       updated: "Você atualizou sua conta com sucesso."
     sessions:
-      signed_in: ""
       signed_out: "Desconectado com sucesso."
     unlocks:
       send_instructions: "Você receberá um email, em poucos minutos, com instruções sobre como desbloquear sua conta."

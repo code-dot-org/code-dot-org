@@ -3,50 +3,55 @@ hu:
   data:
     block_categories:
       Actions: Műveletek
-      Loops: Ciklusok
-      Functions: Függvények
+      Loops: hurkok
+      Functions: funkciók
       Color: Szín
-      Brushes: Brushes
+      Brushes: Ecsetek
       Math: Matematika
       Logic: Logika
-      Variables: Változók
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Variables: változók
+      Number: Szám
+      String: Karakterlánc
+      Image: Kép
+      Boolean: Logikai
       Conditionals: Feltételek
       Events: Események
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Játék/pontszám
+      Comments: Megjegyzések
+      Category: Kategória
+      Prebuilt: Előre elkészített
       Text: szöveg
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Picker: Választó
+      Comment: Megjegyzés
+      'Variables ': 'Változók '
+      Default: Alapértelmezett
+      Behaviors: Viselkedések
+      Locations: Helyek
+      everythingelse: minden más
+      World: Világ
+      Sprites: Sprite-ok
+      Location: Helyszín
+      numbers: számok
+      Numbers: Számok
+      Dancers: Táncosok
+      Groups: Csoportok
+      Advanced: Haladó
       Start: Kezdés
-      Groups: Groups
+      Dancing: Tánc
+      Sprite: Sprite
+      Brush: Ecset
+      Make Sprite: Sprite készítése
+      Movement: Mozgás
       Booleans: Logikai adattípus
-      Functional: Functional
-      Predefined: Predefined
+      While Events: Amíg események
+      Sprite Properties: Sprite tulajdonságok
+      Predefined: Előre meghatározott
       test: 'kifejezés:'
-      test2: test2
-      Foo: Foo
+      test2: teszt2
+      Use These Blocks: Használd ezeket a blokkokat
+      Do Not Use: Nem használható
       Name: Név
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: ÚJ BLOKKOK
+      'Functions ': 'Függvények '
+      Game/Score: Játék/pontszám
       Function: Függvény

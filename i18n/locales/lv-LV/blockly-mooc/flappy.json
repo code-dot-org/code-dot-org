@@ -98,7 +98,7 @@
   "setSpeed": "iestatīt ātrumu",
   "setSpeedTooltip": "Iestata līmeņa ātrumu",
   "shareFlappyTwitter": "Aplūko Flappy spēli, kuru izveidoju. Es uzrakstīju to pats kopā ar @codeorg",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
+  "shareFlappyTwitterDonor": "",
   "shareGame": "Iesaki savu speli:",
   "soundRandom": "nejaušs",
   "soundBounce": "atlekt",

@@ -3,7 +3,7 @@ hidden false
 stage 'Debugging for AB Educators'
 level 'AB_debug_Laurel1'
 level 'AB_Debug_Artist1'
-level 'AB_Debug_PlayLab2'
+level 'AB_Debug_PlayLab3'
 
 stage 'Debugging for CDEF Educators'
 level 'CDEF_debugging_farmer1'

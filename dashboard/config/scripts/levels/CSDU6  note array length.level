@@ -15,7 +15,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Adding to Arrays\r\n\r\nArrays don't have to be a fixed length, you can add or delete as many items in the array as you'd like. The left and right arrows to the side of the array block let you add or delete an item at the end of the array.\r\n\r\n![](https://images.code.org/a9a72527b700740382cae5017f8fa16d-image-1511913249739.jpg)\r\n\r\n# Do this\r\n\r\n* Add at least two more unique notes to the existing array.\r\n* Run the code to see what happens.",
+    "long_instructions": "# Adding to Arrays\r\n\r\nArrays don't have to be a fixed length, you can add or delete as many items in the array as you'd like. The left and right arrows to the side of the array block let you add or delete an item at the end of the array.\r\n\r\n![](https://images.code.org/a9a72527b700740382cae5017f8fa16d-image-1511913249739.jpg)\r\n\r\n# Do this\r\n\r\n* Add at least two more unique notes to the existing array.\r\n* Run the code to see what happens.",
     "instructions_important": "false",
     "start_blocks": "var notes = [\"C#4\", \"C#4\", \"C#4\"];\r\nonBoardEvent(buttonL, \"down\", function(event) {\r\n  var i = randomNumber(0, 2);\r\n  buzzer.note(notes[i], 100);\r\n});\r\n",
     "is_k1": "false",

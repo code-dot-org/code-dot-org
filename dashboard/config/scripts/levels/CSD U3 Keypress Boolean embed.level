@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 324,
   "properties": {
-    "markdown_instructions": "# Prediction - keyDown()\r\n\r\nThe `keyDown()` block is the first of a new set of blocks that will let us get input from the user. This is the first step on our road to actually making games! See if you can predict how the `keyDown()` block works. You will **not write any code**.\r\n\r\n# Do This\r\n* Read the program carefully.\r\n* **Make a prediction about how the code will run** and write it in the box below. Be specific!\r\n* Run the program.\r\n* While the program is running, press the up arrow on your keyboard.\r\n* Were you correct? Were you surprised? Discuss with a classmate.",
+    "long_instructions": "# Prediction - keyDown()\r\n\r\nThe `keyDown()` block is the first of a new set of blocks that will let us get input from the user. This is the first step on our road to actually making games! See if you can predict how the `keyDown()` block works. You will **not write any code**.\r\n\r\n# Do This\r\n* Read the program carefully.\r\n* **Make a prediction about how the code will run** and write it in the box below. Be specific!\r\n* Run the program.\r\n* While the program is running, press the up arrow on your keyboard.\r\n* Were you correct? Were you surprised? Discuss with a classmate.",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

@@ -5,8 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "instructions": "We start you with the 4x2 image Maddie was creating, but we've left out the last few pixels. Finish off the image by figuring out which colors are missing and encoding them.",
-    "markdown_instructions": "# 3-Bit Color\r\n**Directions:**\r\n\r\n* We start you with the 4x2 image Maddie was creating, but we've left out the last few pixels. \r\n* Finish off the image by figuring out which colors are missing and encoding them.\r\n",
+    "short_instructions": "We start you with the 4x2 image Maddie was creating, but we've left out the last few pixels. Finish off the image by figuring out which colors are missing and encoding them.",
+    "long_instructions": "# 3-Bit Color\r\n**Directions:**\r\n\r\n* We start you with the 4x2 image Maddie was creating, but we've left out the last few pixels. \r\n* Finish off the image by figuring out which colors are missing and encoding them.\r\n",
     "version": "3",
     "data": "000001000000001000000011000111100010001",
     "href": "pixelation/pixelation.html",

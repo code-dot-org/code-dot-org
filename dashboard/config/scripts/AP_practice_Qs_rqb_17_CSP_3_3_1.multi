@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_17_CSP_3_3_1'
+wrong 'Data compression is only useful for files being transmitted over the Internet.'
+wrong 'Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.'
+wrong 'Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.'
+right 'There are trade-offs involved in choosing a compression techniques for storing and transmitting data.'
+markdown <<MARKDOWN
+Which of the following is a true statement about data compression?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **3.3.1** and Essential Knowledge statements: **3.3.1C, 3.3.1D, 3.3.1E**
+<hr>
+ (A) 
+
+<hr>
+ (B) 
+
+<hr>
+ (C) 
+
+<hr>
+ (D) 
+
+MARKDOWN

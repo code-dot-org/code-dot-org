@@ -27,7 +27,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Create a new screen called `\"rightScreen\"`. Add a text label that says \"You went right!\".\r\n\r\n**How:** In Design Mode drag in a new screen element. Change its `\"id\"` to `\"rightScreen\"`. Then drag a label onto the screen and change the text to \"You went right!\".\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)",
+    "long_instructions": "<img src=\"https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Create a new screen called `\"rightScreen\"`. Add a text label that says \"You went right!\".\r\n\r\n**How:** In Design Mode drag in a new screen element. Change its `\"id\"` to `\"rightScreen\"`. Then drag a label onto the screen and change the text to \"You went right!\".\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

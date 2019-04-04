@@ -9,7 +9,7 @@
     "success_condition": "function () {\r\n  var seconds = Studio.customLogic.seconds;\r\n  var height = Studio.customLogic.height;\r\n  // Note: Using different number than customLogic.SECONDS_TO_RUN here\r\n  var SECONDS_TO_RUN = 6;\r\n  var targetHeight = 6 * 6 * 10;\r\n\r\n  // If at target time, make sure we have the right height for this time and\r\n  // the next time.\r\n  return seconds === SECONDS_TO_RUN && height === targetHeight &&\r\n    Studio.customLogic.rocket_height(3) === 3 * 3* 10;\r\n}",
     "failure_condition": "function () {\r\n  return Studio.customLogic.seconds > Studio.customLogic.SECONDS_TO_RUN;\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Real rockets start off slowly and gain speed over time - so let's add some simple acceleration to ours! Can you write a function that describes a rocket that is at 10 meters at 1 second, 40 meters at 2 seconds, 90 meters at 3 seconds, 160 at 4 seconds and so on?",
+    "short_instructions": "Real rockets start off slowly and gain speed over time - so let's add some simple acceleration to ours! Can you write a function that describes a rocket that is at 10 meters at 1 second, 40 meters at 2 seconds, 90 meters at 3 seconds, 160 at 4 seconds and so on?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

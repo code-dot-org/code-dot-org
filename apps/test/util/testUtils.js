@@ -6,14 +6,14 @@ const project = require('@cdo/apps/code-studio/initApp/project');
 const assets = require('@cdo/apps/code-studio/assets');
 import i18n from '@cdo/apps/code-studio/i18n';
 
-export function setExternalGlobals(beforeFunc=before, afterFunc=after) {
+export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
   // Temporary: Provide React on window while we still have a direct dependency
   // on the global due to a bad code-studio/apps interaction.
   window.React = React;
   window.dashboard = {...window.dashboard, i18n, assets, project};
 
   beforeFunc(() => {
-    sinon.stub(i18n, 't').callsFake((selector) => selector);
+    sinon.stub(i18n, 't').callsFake(selector => selector);
 
     sinon.stub(project, 'clearHtml');
     sinon.stub(project, 'exceedsAbuseThreshold').returns(false);
@@ -43,7 +43,7 @@ export function setExternalGlobals(beforeFunc=before, afterFunc=after) {
     assets.listStore.list.restore();
   });
 
-  window.marked = function (str) {
+  window.marked = function(str) {
     return str;
   };
   window.trackEvent = () => {};
@@ -71,7 +71,12 @@ export function generateArtistAnswer(generatedCode) {
  * @returns {boolean} True if mochify was launched with debug flag
  */
 export function debugMode() {
-  return location.search.substring(1).split('&').indexOf('debug') !== -1;
+  return (
+    location.search
+      .substring(1)
+      .split('&')
+      .indexOf('debug') !== -1
+  );
 }
 
 /**
@@ -86,31 +91,31 @@ export function dragToVisualization(type, left, top) {
   var element = $("[data-element-type='" + type + "']");
 
   var screenOffset = element.offset();
-  var mousedown = $.Event("mousedown", {
+  var mousedown = $.Event('mousedown', {
     which: 1,
     pageX: screenOffset.left,
     pageY: screenOffset.top
   });
   element.trigger(mousedown);
 
-  var drag = $.Event("mousemove", {
-    pageX: $("#visualization").offset().left + left,
-    pageY: $("#visualization").offset().top + top
+  var drag = $.Event('mousemove', {
+    pageX: $('#visualization').offset().left + left,
+    pageY: $('#visualization').offset().top + top
   });
   $(document).trigger(drag);
 
   // when we start our drag, it positions the dragged element to be centered
   // on our cursor. adjust the target drop location accordingly
   var halfWidth = $('.draggingParent').width() / 2;
-  var drag2 = $.Event("mousemove", {
-    pageX: $("#visualization").offset().left + left + halfWidth,
-    pageY: $("#visualization").offset().top + top
+  var drag2 = $.Event('mousemove', {
+    pageX: $('#visualization').offset().left + left + halfWidth,
+    pageY: $('#visualization').offset().top + top
   });
   $(document).trigger(drag2);
 
   var mouseup = $.Event('mouseup', {
-    pageX: $("#visualization").offset().left + left + halfWidth,
-    pageY: $("#visualization").offset().top + top
+    pageX: $('#visualization').offset().left + left + halfWidth,
+    pageY: $('#visualization').offset().top + top
   });
   $(document).trigger(mouseup);
 }
@@ -126,7 +131,7 @@ export function createMouseEvent(type, clientX, clientY) {
   var evt;
   var e = {
     bubbles: true,
-    cancelable: (type !== "mousemove"),
+    cancelable: type !== 'mousemove',
     view: window,
     detail: 0,
     screenX: undefined,
@@ -140,19 +145,31 @@ export function createMouseEvent(type, clientX, clientY) {
     button: 0,
     relatedTarget: undefined
   };
-  if (typeof( document.createEvent ) === "function") {
-    evt = document.createEvent("MouseEvents");
-    evt.initMouseEvent(type,
-      e.bubbles, e.cancelable, e.view, e.detail,
-      e.screenX, e.screenY, e.clientX, e.clientY,
-      e.ctrlKey, e.altKey, e.shiftKey, e.metaKey,
-      e.button, document.body.parentNode);
+  if (typeof document.createEvent === 'function') {
+    evt = document.createEvent('MouseEvents');
+    evt.initMouseEvent(
+      type,
+      e.bubbles,
+      e.cancelable,
+      e.view,
+      e.detail,
+      e.screenX,
+      e.screenY,
+      e.clientX,
+      e.clientY,
+      e.ctrlKey,
+      e.altKey,
+      e.shiftKey,
+      e.metaKey,
+      e.button,
+      document.body.parentNode
+    );
   } else if (document.createEventObject) {
     evt = document.createEventObject();
     for (var prop in e) {
       evt[prop] = e[prop];
     }
-    evt.button = { 0:1, 1:4, 2:2 }[evt.button] || evt.button;
+    evt.button = {0: 1, 1: 4, 2: 2}[evt.button] || evt.button;
   }
   return evt;
 }
@@ -219,8 +236,8 @@ export function forEveryBooleanPermutation(fn) {
 
 function getBooleanPermutation(n, numberOfBooleans) {
   return zeroPadLeft(n.toString(2), numberOfBooleans) // Padded binary string
-      .split('') // to array of '0' and '1'
-      .map(x => x === '1'); // to array of booleans
+    .split('') // to array of '0' and '1'
+    .map(x => x === '1'); // to array of booleans
 }
 
 function zeroPadLeft(string, desiredWidth) {
@@ -257,7 +274,7 @@ function throwOnConsoleEverywhere(methodName) {
     // Method that will stub console[methodName] during each test and throw after
     // the test completes if it was called.
     throwEverywhere() {
-      beforeEach(function () {
+      beforeEach(function() {
         // Stash test title so that we can include it in any errors
         let testTitle;
         if (this.currentTest) {
@@ -275,13 +292,17 @@ function throwOnConsoleEverywhere(methodName) {
             // Unstub so that those dont go through our stubbed console.error
             console[methodName].restore();
 
-            firstInstance = new Error(`Call to console.${methodName} from "${testTitle}": ${format(msg)}\n${getStack()}`);
+            firstInstance = new Error(
+              `Call to console.${methodName} from "${testTitle}": ${format(
+                msg
+              )}\n${getStack()}`
+            );
           }
         });
       });
 
       // After the test, throw an error if we called the console method.
-      afterEach(function () {
+      afterEach(function() {
         if (console[methodName].restore) {
           console[methodName].restore();
         }
@@ -295,25 +316,29 @@ function throwOnConsoleEverywhere(methodName) {
     // Method to be called in tests that want console[methodName] to be called without
     // failure
     allow() {
-      beforeEach(() => throwing = false);
-      afterEach(() => throwing = true);
+      beforeEach(() => (throwing = false));
+      afterEach(() => (throwing = true));
     }
   };
 }
 
 // Create/export methods for both console.error and console.warn
 const consoleErrorFunctions = throwOnConsoleEverywhere('error');
-export const throwOnConsoleErrorsEverywhere = consoleErrorFunctions.throwEverywhere;
+export const throwOnConsoleErrorsEverywhere =
+  consoleErrorFunctions.throwEverywhere;
 export const allowConsoleErrors = consoleErrorFunctions.allow;
 
 const consoleWarningFunctions = throwOnConsoleEverywhere('warn');
-export const throwOnConsoleWarningsEverywhere = consoleWarningFunctions.throwEverywhere;
+export const throwOnConsoleWarningsEverywhere =
+  consoleWarningFunctions.throwEverywhere;
 export const allowConsoleWarnings = consoleWarningFunctions.allow;
 
 const originalWindowValues = {};
 export function replaceOnWindow(key, newValue) {
   if (originalWindowValues.hasOwnProperty(key)) {
-    throw new Error(`Can't replace 'window.${key}' - it's already been replaced.`);
+    throw new Error(
+      `Can't replace 'window.${key}' - it's already been replaced.`
+    );
   }
   originalWindowValues[key] = window[key];
   window[key] = newValue;
@@ -344,8 +369,8 @@ export function restoreOnWindow(key) {
  */
 export function sandboxDocumentBody() {
   let originalDocumentBody;
-  beforeEach(() => originalDocumentBody = document.body.innerHTML);
-  afterEach(() => document.body.innerHTML = originalDocumentBody);
+  beforeEach(() => (originalDocumentBody = document.body.innerHTML));
+  afterEach(() => (document.body.innerHTML = originalDocumentBody));
 }
 
 /**
@@ -390,7 +415,7 @@ export function clearTimeoutsBetweenTests() {
     return clearIntervalNative(id);
   };
 
-  afterEach(function () {
+  afterEach(function() {
     // Guard carefully here, because arrow functions can steal our test context
     // and prevent us from grabbing the test name.
     const testName = this && this.currentTest && this.currentTest.fullTitle();
@@ -450,7 +475,10 @@ export function clearTimeoutsBetweenTests() {
  * @param {function} runTestCases callback function containing the tests to run
  *   with the body cleanup check in place.
  */
-export function enforceDocumentBodyCleanup({checkEveryTest = false}, runTestCases) {
+export function enforceDocumentBodyCleanup(
+  {checkEveryTest = false},
+  runTestCases
+) {
   let initialInnerHTML;
   const beforeFn = checkEveryTest ? beforeEach : before;
   const afterFn = checkEveryTest ? afterEach : after;
@@ -470,17 +498,24 @@ export function enforceDocumentBodyCleanup({checkEveryTest = false}, runTestCase
       if (initialInnerHTML !== document.body.innerHTML) {
         throw new Error(
           'Test modified document.body.innerHTML:' +
-          '\n\nInitial:\n' +
-          initialInnerHTML +
-          '\n\nAfter:\n' +
-          document.body.innerHTML
+            '\n\nInitial:\n' +
+            initialInnerHTML +
+            '\n\nAfter:\n' +
+            document.body.innerHTML
         );
       }
 
-      if (document.body.addEventListener.callCount !== document.body.removeEventListener.callCount) {
+      if (
+        document.body.addEventListener.callCount !==
+        document.body.removeEventListener.callCount
+      ) {
         throw new Error(
-          'Added ' + document.body.addEventListener.callCount + ' event listener(s)' +
-          ' to document.body, but only removed ' + document.body.removeEventListener.callCount + ' listeners'
+          'Added ' +
+            document.body.addEventListener.callCount +
+            ' event listener(s)' +
+            ' to document.body, but only removed ' +
+            document.body.removeEventListener.callCount +
+            ' listeners'
         );
       }
       document.body.addEventListener.restore();

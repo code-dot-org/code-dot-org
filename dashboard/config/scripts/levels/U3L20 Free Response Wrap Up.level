@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Wrap Up: Conditional Basics",
-    "markdown_instructions": "Share your game with a partner. \nExamine the conditional and help each other resolve any problems.\n\nWhat help or suggestions did you provide to your partner? \n\nWhat suggestions did your partner offer to you that improved the decision making in your game?\n\n\n",
+    "long_instructions": "Share your game with a partner. \nExamine the conditional and help each other resolve any problems.\n\nWhat help or suggestions did you provide to your partner? \n\nWhat suggestions did your partner offer to you that improved the decision making in your game?\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Boolean operators (like >, <, =) allow us to compare different values, returning either true or false. Click \"Run\" to see how this expression evaluates.",
+    "short_instructions": "Boolean operators (like >, <, =) allow us to compare different values, returning either true or false. Click \"Run\" to see how this expression evaluates.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,7 +24,7 @@
     "coordinate_grid_background": "false",
     "video_key": "alg_9_booleans",
     "disable_examples": "false",
-    "markdown_instructions": "Boolean operators (like >, <, =) allow us to compare different values, returning either *true* or *false*. Click \"Run\" to see how this expression evaluates.",
+    "long_instructions": "Boolean operators (like >, <, =) allow us to compare different values, returning either *true* or *false*. Click \"Run\" to see how this expression evaluates.",
     "never_autoplay_video": "false",
     "examples_required": "false"
   }

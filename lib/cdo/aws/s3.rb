@@ -1,8 +1,8 @@
-require 'aws-sdk'
+require 'aws-sdk-s3'
 require 'tempfile'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'active_support/core_ext/hash/slice'
-require 'honeybadger'
+require 'honeybadger/ruby'
 require 'dynamic_config/dcdo'
 
 module AWS
@@ -182,6 +182,35 @@ module AWS
           end
         end
       end
+    end
+
+    # Generate and return a presigned URL that allows a file upload.
+    # @raise [ArgumentError] Raised if `:expires_in` exceeds one week (604800 seconds).
+    # @return [String]
+    def self.presigned_upload_url(bucket, key, params = {})
+      presigned_url(:put_object, bucket, key, params)
+    end
+
+    # Generate and return a presigned URL that allows a file download.
+    # @raise [ArgumentError] Raised if `:expires_in` exceeds one week (604800 seconds).
+    # @return [String]
+    def self.presigned_download_url(bucket, key, params = {})
+      presigned_url(:get_object, bucket, key, params)
+    end
+
+    # Generate and return a presigned URL that allows a file to be deleted.
+    # @raise [ArgumentError] Raised if `:expires_in` exceeds one week (604800 seconds).
+    # @return [String]
+    def self.presigned_delete_url(bucket, key, params = {})
+      presigned_url(:delete_object, bucket, key, params)
+    end
+
+    def self.presigned_url(method, bucket, key, params = {})
+      params = params.merge(
+        bucket: bucket,
+        key: key
+      )
+      Aws::S3::Presigner.new(client: create_client).presigned_url(method, params)
     end
 
     class LogUploader

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Now create the functions \"draw a medium triangle\" and \"draw a large triangle\". The \"draw a small triangle\" function is done for you. The triangles have side lengths of 50 (small), 100 (medium), and 150 (large). ",
+    "short_instructions": "Now create the functions \"draw a medium triangle\" and \"draw a large triangle\". The \"draw a small triangle\" function is done for you. The triangles have side lengths of 50 (small), 100 (medium), and 150 (large). ",
     "x": "25",
     "y": "200",
     "start_direction": "90",

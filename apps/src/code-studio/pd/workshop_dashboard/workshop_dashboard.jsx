@@ -3,15 +3,11 @@
 /**
  * Main landing page and router for the workshop dashboard.
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-import {
-  Router,
-  Route,
-  IndexRedirect,
-  useRouterHistory
-} from 'react-router';
+import {Router, Route, IndexRedirect, useRouterHistory} from 'react-router';
 import {createHistory} from 'history';
 import NewWorkshop from './new_workshop';
 import Workshop from './workshop';
@@ -19,7 +15,7 @@ import Header from '../components/header';
 import SurveyResults from './survey_results.jsx';
 import OrganizerSurveyResults from './organizer_survey_results.jsx';
 import LocalSummerWorkshopSurveyResults from './local_summer_workshop_survey_results';
-import {ResultsLoader as LocalSummerWorkshopDailySurveyResultsLoader} from './reports/local_summer_workshop_daily_survey/results_loader';
+import {ResultsLoader as DailySurveyResultsLoader} from './reports/local_summer_workshop_daily_survey/results_loader';
 import WorkshopIndex from './workshop_index';
 import WorkshopFilter from './workshop_filter';
 import WorkshopAttendance from './attendance/workshop_attendance';
@@ -34,22 +30,24 @@ import regionalPartnerReducers, {
   getInitialRegionalPartnerFilter
 } from '../components/regional_partners_reducers';
 import {WorkshopAdmin} from './permission';
-import {RegionalPartnerShape} from "../components/regional_partner_dropdown";
+import {
+  RegionalPartnerShape,
+  ALL_PARTNERS_OPTION
+} from '../components/regional_partner_dropdown';
 
 const ROOT_PATH = '/pd/workshop_dashboard';
 const browserHistory = useRouterHistory(createHistory)({
   basename: ROOT_PATH
 });
-const store = createStore(combineReducers({
-  workshopDashboard: workshopDashboardReducers,
-  regionalPartners: regionalPartnerReducers
-}));
+const store = createStore(
+  combineReducers({
+    workshopDashboard: workshopDashboardReducers,
+    regionalPartners: regionalPartnerReducers
+  })
+);
 
-const WorkshopDashboardHeader = (props) => (
-  <Header
-    baseName="Workshop Dashboard"
-    {...props}
-  />
+const WorkshopDashboardHeader = props => (
+  <Header baseName="Workshop Dashboard" {...props} />
 );
 
 export default class WorkshopDashboard extends React.Component {
@@ -71,7 +69,15 @@ export default class WorkshopDashboard extends React.Component {
     }
 
     store.dispatch(setRegionalPartners(this.props.regionalPartners));
-    store.dispatch(setRegionalPartnerFilter(getInitialRegionalPartnerFilter(props.permissionList.includes(WorkshopAdmin), this.props.regionalPartners)));
+    store.dispatch(
+      setRegionalPartnerFilter(
+        getInitialRegionalPartnerFilter(
+          props.permissionList.includes(WorkshopAdmin),
+          this.props.regionalPartners,
+          ALL_PARTNERS_OPTION
+        )
+      )
+    );
   }
 
   render() {
@@ -79,7 +85,7 @@ export default class WorkshopDashboard extends React.Component {
       <Provider store={store}>
         <Router history={browserHistory}>
           <Route path="/" component={WorkshopDashboardHeader}>
-            <IndexRedirect to="/workshops"/>
+            <IndexRedirect to="/workshops" />
             <Route
               path="reports"
               breadcrumbs="Reports"
@@ -111,9 +117,9 @@ export default class WorkshopDashboard extends React.Component {
               component={LocalSummerWorkshopSurveyResults}
             />
             <Route
-              path="local_summer_workshop_daily_survey_results(/:workshopId)"
-              breadcrumbs="Local Summer Workshop Daily Survey Results"
-              component={LocalSummerWorkshopDailySurveyResultsLoader}
+              path="daily_survey_results(/:workshopId)"
+              breadcrumbs="Survey Results"
+              component={DailySurveyResultsLoader}
             />
             <Route
               path="workshops/new"

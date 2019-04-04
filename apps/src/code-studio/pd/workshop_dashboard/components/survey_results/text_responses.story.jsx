@@ -22,8 +22,20 @@ export default storybook => {
           <TextResponses
             question="What snacks do you want your facilitator to bring?"
             answers={{
-              'Facilitator 1': ['Chips', 'Apples', 'Nachos', 'Nachos', 'Cookies'],
-              'Facilitator 2': ['Fries', 'Carrots', 'Carrots', 'Peppers', 'Donuts']
+              'Facilitator 1': [
+                'Chips',
+                'Apples',
+                'Nachos',
+                'Nachos',
+                'Cookies'
+              ],
+              'Facilitator 2': [
+                'Fries',
+                'Carrots',
+                'Carrots',
+                'Peppers',
+                'Donuts'
+              ]
             }}
           />
         )

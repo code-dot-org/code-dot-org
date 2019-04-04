@@ -43,8 +43,8 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Get Pegleg to the flags to solve this puzzle.",
-    "markdown_instructions": "To start our game, Pirate Pegleg (actor 1) needs to be able to get around in all directions.   Connect the blocks to the correct events to get Pegleg moving.  \r\n\r\n---\r\nHelp Pegleg gather the flags to solve this puzzle.",
+    "short_instructions": "Get Pegleg to the flags to solve this puzzle.",
+    "long_instructions": "To start our game, Pirate Pegleg (actor 1) needs to be able to get around in all directions.   Connect the blocks to the correct events to get Pegleg moving.  \r\n\r\n---\r\nHelp Pegleg gather the flags to solve this puzzle.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To solve this challenge, attach the `move actor 1 up` block to the `when up arrow` event, then do the same for every other direction.\",\"hint_id\":\"courseD_playLab_cond1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2b6a359a9e13414bd11eab24f3de6393/courseD_playLab_cond1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use the drop down menus on the `when arrow` and `move actor` blocks to change which direction they go.\",\"hint_id\":\"courseD_playLab_cond1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bbcb4e184cc689d6fd007c3294fc8eda/courseD_playLab_cond1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember to move Pegleg to both of the flags once you click \\\"Run\\\"!\",\"hint_id\":\"courseD_playLab_cond1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/16c73ee919f9c78d4591dd9f73f17d81/courseD_playLab_cond1.mp3\"}]",
     "project_template_level_name": "courseD_playLab_condTemplate",
     "hide_share_and_remix": "false",

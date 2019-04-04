@@ -44,6 +44,35 @@ module LevelsHelper
     view_options(callouts: [])
   end
 
+  # Provide a presigned URL that can upload the video log to S3 for processing
+  # in to a video. Currently only used by Dance, in both project mode and for
+  # the last level of the progression.
+  # NOTE: any client that has this value set will be able to upload a log and
+  # regenerate the share video. Make sure this is only provided to views with
+  # edit permission (ie, the project creator, but not the sharing view)
+  def replay_video_view_options(channel = nil)
+    return unless DCDO.get('share_video_generation_enabled', true)
+
+    signed_url = AWS::S3.presigned_upload_url(
+      "cdo-p5-replay-source.s3.amazonaws.com",
+      "source/#{channel || @view_options['channel']}",
+      virtual_host: true
+    )
+
+    # manually force https since the AWS SDK assumes all virtual hosts are
+    # http-only
+    signed_url.sub!('http:', 'https:')
+
+    # manually point to our custom CloudFront domain so we don't have to worry
+    # about whitelists. Note that we _should_ be able to do this by just
+    # passing the custom domain as the first argument to presigned_upload_url,
+    # but the Ruby AWS SDK appears to mess that up.
+    # TODO: elijah: explore other options for doing this
+    signed_url.sub!('cdo-p5-replay-source.s3.amazonaws.com', 'dance-api.code.org')
+
+    view_options(signed_replay_log_url: signed_url)
+  end
+
   # If given a user, find the channel associated with the given level/user.
   # Otherwise, gets the storage_id associated with the (potentially signed out)
   # current user, and either finds or creates a channel for the level
@@ -66,7 +95,7 @@ module LevelsHelper
       )
     end
 
-    channel_token.try :channel
+    channel_token&.channel
   end
 
   def select_and_track_autoplay_video
@@ -123,8 +152,11 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    if @level.channel_backed?
-      view_options(channel: get_channel_for(@level, @user))
+    if @level.channel_backed? && params[:action] != 'edit_blocks'
+      view_options(
+        channel: get_channel_for(@level, @user),
+        server_project_level_id: @level.project_template_level.try(:id),
+      )
       # readonly if viewing another user's channel
       readonly_view_options if @user
     end
@@ -158,11 +190,6 @@ module LevelsHelper
     # External project levels are any levels of type 'external' which use
     # the projects code to save and load the user's progress on that level.
     view_options(is_external_project_level: true) if @level.is_a? Pixelation
-
-    if @level.channel_backed?
-      view_options(is_channel_backed: true)
-      view_options(server_project_level_id: @level.project_template_level.try(:id))
-    end
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     post_failed_run_milestone = @script ? Gatekeeper.allows('postFailedRunMilestone', where: {script_name: @script.name}, default: true) : true
@@ -220,7 +247,7 @@ module LevelsHelper
       end
 
     # Blockly caches level properties, whereas this field depends on the user
-    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?)
+    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?) && I18n.en?
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
@@ -267,10 +294,11 @@ module LevelsHelper
     use_droplet = @level.uses_droplet?
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
-    use_gamelab = @level.game.app == Game::GAMELAB
+    use_gamelab = @level.is_a?(Gamelab)
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim && !use_weblab
+    use_dance = @level.is_a?(Gamelab) && @level.helper_libraries.try(:include?, 'DanceLab')
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
       locals: {
@@ -282,7 +310,9 @@ module LevelsHelper
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
         use_phaser: use_phaser,
+        use_dance: use_dance,
         hide_source: hide_source,
+        preload_asset_list: @level.try(:preload_asset_list),
         static_asset_base_path: app_options[:baseUrl]
       }
   end
@@ -313,8 +343,8 @@ module LevelsHelper
   def set_tts_options(level_options, app_options)
     # Text to speech - set url to empty string if the instructions are empty
     if @script && @script.text_to_speech_enabled?
-      level_options['ttsInstructionsUrl'] = @level.tts_instructions_text.empty? ? "" : @level.tts_url(@level.tts_instructions_text)
-      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_markdown_instructions_text.empty? ? "" : @level.tts_url(@level.tts_markdown_instructions_text)
+      level_options['ttsShortInstructionsUrl'] = @level.tts_short_instructions_text.empty? ? "" : @level.tts_url(@level.tts_short_instructions_text)
+      level_options['ttsLongInstructionsUrl'] = @level.tts_long_instructions_text.empty? ? "" : @level.tts_url(@level.tts_long_instructions_text)
     end
 
     app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
@@ -432,38 +462,14 @@ module LevelsHelper
     fb_options
   end
 
-  # simple helper to set the given key and value on the given hash unless the
-  # value is nil, used to set localized versions of level options without
-  # calling the localization methods twice
-  def set_unless_nil(hash, key, value)
-    hash[key] = value unless value.nil?
-  end
-
   # Options hash for Blockly
   def blockly_options
     l = @level
     raise ArgumentError.new("#{l} is not a Blockly object") unless l.is_a? Blockly
     # Level-dependent options
     app_options = l.blockly_app_options(l.game, l.skin).dup
-    level_options = l.blockly_level_options.dup
+    level_options = l.localized_blockly_level_options(@script).dup
     app_options[:level] = level_options
-
-    # Locale-depdendent option
-    # For historical reasons, `localized_instructions` and
-    # `localized_authored_hints` should happen independent of `should_localize?`
-    set_unless_nil(level_options, 'instructions', l.localized_instructions)
-    set_unless_nil(level_options, 'authoredHints', l.localized_authored_hints)
-    if l.should_localize?
-      # Don't ever show non-English markdown instructions for Course 1 - 4 or
-      # the 20-hour course. We're prioritizing translation of Course A - F.
-      if @script && (@script.csf_international? || @script.twenty_hour?)
-        level_options.delete('markdownInstructions')
-      else
-        set_unless_nil(level_options, 'markdownInstructions', l.localized_markdown_instructions)
-      end
-      set_unless_nil(level_options, 'failureMessageOverride', l.localized_failure_message_override)
-      set_unless_nil(level_options, 'toolbox', l.localized_toolbox_blocks)
-    end
 
     # Script-dependent option
     script = @script
@@ -521,6 +527,11 @@ module LevelsHelper
       end
     end
 
+    # Expo-specific options (only needed for Applab and Gamelab)
+    if (@level.is_a? Gamelab) || (@level.is_a? Applab)
+      app_options[:expoSession] = CDO.expo_session_secret.to_json unless CDO.expo_session_secret.blank?
+    end
+
     # User/session-dependent options
     app_options[:disableSocialShare] = true if (current_user && current_user.under_13?) || app_options[:embed]
     app_options[:legacyShareStyle] = true if @legacy_share_style
@@ -538,9 +549,13 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
+    dev_with_credentials = rack_env?(:development) && (!!CDO.aws_access_key || !!CDO.aws_role) && !!CDO.cloudfront_key_pair_id
+    use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
+    app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
 
     if params[:blocks]
       level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
+      level_options[:sharedFunctions] = nil # TODO: handle non-standard pools
     end
 
     unless params[:no_last_attempt]
@@ -757,8 +772,7 @@ module LevelsHelper
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
-    return false unless level.game == Game.applab || level.game == Game.gamelab
-    return false if level.is_a? GamelabJr
+    return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
       error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")

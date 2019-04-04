@@ -2,12 +2,14 @@
  * Teacher Landing Page
  */
 
-import React, {PropTypes, Component} from 'react';
+import PropTypes from 'prop-types';
+
+import React, {Component} from 'react';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
 import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import {EnrolledWorkshops} from './enrolledWorkshops';
+import {EnrolledWorkshops} from './EnrolledWorkshops';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 
 const styles = {
   headerImage: {
@@ -27,7 +29,7 @@ const styles = {
     padding: '30px',
     fontSize: '40px',
     color: 'white'
-  },
+  }
 };
 
 export default class LandingPage extends Component {
@@ -38,29 +40,25 @@ export default class LandingPage extends Component {
   };
 
   render() {
-    const CSF = this.props.lastWorkshopSurveyCourse === 'CS Fundamentals';
-    const subHeading = CSF ?
-      i18n.plLandingSubheadingCSF() :
-      i18n.plLandingSubheading();
-    const description = CSF ?
-      i18n.plLandingDescriptionCSF() :
-      i18n.plLandingDescription();
-
     return (
       <div>
-        <HeaderImage/>
-        <br/>
+        <HeaderImage />
+        <br />
         {this.props.lastWorkshopSurveyUrl && (
           <LastWorkshopSurveyBanner
-            subHeading={subHeading}
-            description={description}
+            subHeading={i18n.plLandingSubheading()}
+            description={i18n.plLandingDescription({
+              course: this.props.lastWorkshopSurveyCourse
+            })}
             surveyUrl={this.props.lastWorkshopSurveyUrl}
           />
-       )}
-        <EnrolledWorkshops/>
+        )}
+        <EnrolledWorkshops />
         {this.props.professionalLearningCourseData && (
           <ProfessionalLearningCourseProgress
-            professionalLearningCourseData={this.props.professionalLearningCourseData}
+            professionalLearningCourseData={
+              this.props.professionalLearningCourseData
+            }
           />
         )}
       </div>
@@ -70,13 +68,15 @@ export default class LandingPage extends Component {
 
 const HeaderImage = () => (
   <div style={styles.headerImage}>
-    <div style={styles.headerText}>
-      {i18n.plLandingHeading()}
-    </div>
+    <div style={styles.headerText}>{i18n.plLandingHeading()}</div>
   </div>
 );
 
-export const LastWorkshopSurveyBanner = ({subHeading, description, surveyUrl}) => (
+export const LastWorkshopSurveyBanner = ({
+  subHeading,
+  description,
+  surveyUrl
+}) => (
   <TwoColumnActionBlock
     isRtl={false}
     responsiveSize="lg"
@@ -95,5 +95,5 @@ export const LastWorkshopSurveyBanner = ({subHeading, description, surveyUrl}) =
 LastWorkshopSurveyBanner.propTypes = {
   subHeading: PropTypes.string,
   description: PropTypes.string,
-  surveyUrl: PropTypes.string,
+  surveyUrl: PropTypes.string
 };

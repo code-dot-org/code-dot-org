@@ -6,47 +6,52 @@
       Loops: Løkker
       Functions: Funksjoner
       Color: Farge
-      Brushes: Brushes
+      Brushes: Pensler
       Math: Matematikk
       Logic: Logikk
       Variables: Variabler
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Number: Tall
+      String: Streng
+      Image: Bilde
+      Boolean: Boolsk
       Conditionals: Betingelser
       Events: Hendelser
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
-      Text: Tekst
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Games/Score: Spill/poengsum
+      Comments: Kommentarer
+      Category: Kategori
+      Prebuilt: Forhåndsbygde
+      Text: tekst
+      Picker: Velger
+      Comment: Kommentar
+      'Variables ': 'Variabler '
+      Default: Standard
+      Behaviors: Oppførsler
+      Locations: Steder
+      everythingelse: resten
+      World: Verden
+      Location: Sted
+      numbers: tall
+      Numbers: Tall
+      Dancers: Dansere
+      Groups: Grupper
+      Advanced: Avansert
       Start: Start
-      Groups: Groups
+      Music: Musikk
+      Dancing: Dansing
+      Sprite: Figur
+      Brush: Pensel
+      Make Sprite: Lag figur
+      Movement: Bevegelse
       Booleans: Boolske verdier
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Funksjonell
+      Sprite Properties: Figuregenskaper
+      Predefined: Forhåndsdefinert
       test: test
       test2: test2
-      Foo: Foo
+      Use These Blocks: Bruk disse blokkene
+      Do Not Use: Ikke bruk
       Name: Navn
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: NYE BLOKKER
+      'Functions ': 'Funksjoner '
+      Game/Score: Spill/poengsum
       Function: Funksjon

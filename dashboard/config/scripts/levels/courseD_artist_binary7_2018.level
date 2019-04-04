@@ -18,7 +18,7 @@
     "free_play": "false",
     "impressive": "false",
     "embed": "false",
-    "instructions": "What is the shortest binary string that you can repeat to draw this image?",
+    "short_instructions": "What is the shortest binary string that you can repeat to draw this image?",
     "disable_sharing": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -37,11 +37,17 @@
     "disable_if_else_editing": "false",
     "parent_level_id": 7921,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-12 19:21:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-06-01 03:26:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-12 19:21:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-06-01 03:26:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-09-04 15:01:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-04 15:02:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 2,
+    "repeat_loops": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -262,7 +268,7 @@
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
-        <block type="procedures_callnoreturn" inline="true">
+        <block type="procedures_callnoreturn">
           <mutation name="draw">
             <arg name="binary"/>
           </mutation>

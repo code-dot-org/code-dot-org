@@ -34,7 +34,7 @@
     "step_speed": "1",
     "honey_goal": "0",
     "instructions_important": "false",
-    "markdown_instructions": "Use your new function to solve this spiral.",
+    "long_instructions": "Use your new function to solve this spiral.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This spiral can be simplified with a `for` loop.\",\"hint_id\":\"grade5_bee_parameters_new8a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/27f8c39abf929f99f43676888c64f459/grade5_bee_parameters_new8a.mp3\"}]",
     "contained_level_names": null
   },

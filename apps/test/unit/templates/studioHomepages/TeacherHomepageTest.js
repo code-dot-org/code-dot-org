@@ -4,14 +4,14 @@ import sinon from 'sinon';
 import {assert, expect} from '../../../util/configuredChai';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
-import { courses, topCourse } from './homepagesTestData';
+import {courses, topCourse} from './homepagesTestData';
 
 describe('TeacherHomepage', () => {
   let server;
 
   const successResponse = () => [
     200,
-    {"Content-Type": "application/json"},
+    {'Content-Type': 'application/json'},
     JSON.stringify({})
   ];
   beforeEach(() => {
@@ -34,7 +34,7 @@ describe('TeacherHomepage', () => {
     );
     const headerBanner = wrapper.find('Connect(HeaderBanner)');
     assert.deepEqual(headerBanner.props(), {
-      headingText: "My Dashboard",
+      headingText: 'My Dashboard',
       short: true
     });
   });
@@ -64,9 +64,7 @@ describe('TeacherHomepage', () => {
         showCensusBanner={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <TeacherSections/>
-    );
+    expect(wrapper).to.containMatchingElement(<TeacherSections />);
   });
 
   it('renders a StudentSections component', () => {
@@ -99,7 +97,7 @@ describe('TeacherHomepage', () => {
       showAllCoursesLink: true,
       isTeacher: true,
       courses: courses,
-      topCourse: topCourse,
+      topCourse: topCourse
     });
   });
 

@@ -33,7 +33,7 @@
   "playSoundSplash": "mängi plärsatuse heli",
   "playSoundLaser": "mängi laseri heli",
   "playSoundTooltip": "Lase valitud heli.",
-  "reinfFeedbackMsg": "Te võite vajutada \"Proovi uuesti\" nuppu, et minna tagasi oma mängu mängima.",
+  "reinfFeedbackMsg": "Te võite vajutada \"Proovi uuesti\" nuppu, et minna tagasi mängu mängima.",
   "scoreText": "Tulemus: {playerScore}",
   "setBackground": "vali taust",
   "setBackgroundRandom": "vali suvaline taust",
@@ -128,6 +128,6 @@
   "whenEnterObstacle": "kui möödub takistusest",
   "whenEnterObstacleTooltip": "Kui Flappy väljub takistusest, teosta järgmised toimingud.",
   "whenRunButtonClick": "kui mäng algab",
-  "whenRunButtonClickTooltip": "Kui mäng algab, teosta järgmised toimingud.",
+  "whenRunButtonClickTooltip": "Täidab allolevad käsud, kui mäng algab.",
   "yes": "Jah"
 }

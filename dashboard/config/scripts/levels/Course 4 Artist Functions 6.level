@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Which block do you need to add to get the triangle to sit on top of the square?",
+    "short_instructions": "Which block do you need to add to get the triangle to sit on top of the square?",
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "disable_param_editing": "true",

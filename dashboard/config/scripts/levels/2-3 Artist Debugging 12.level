@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "I'm supposed to add an ocean wave to this scene.  Can you help me?",
+    "short_instructions": "I'm supposed to add an ocean wave to this scene.  Can you help me?",
     "x": "75",
     "y": "275",
     "start_direction": "0",

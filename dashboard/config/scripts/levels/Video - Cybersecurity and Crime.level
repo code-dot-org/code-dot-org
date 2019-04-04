@@ -8,7 +8,7 @@
     "video_key": "csp_concept_cybercrime",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "[Video guide and questions](https://drive.google.com/open?id=1Qv4lgMMtP42sRlofUmGtElViD1AJ7yETvQ4pCh0rDjw)"
+    "long_instructions": "[Video guide and questions](https://drive.google.com/open?id=1Qv4lgMMtP42sRlofUmGtElViD1AJ7yETvQ4pCh0rDjw)"
   },
   "published": true,
   "notes": "",

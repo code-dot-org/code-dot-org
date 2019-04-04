@@ -10,8 +10,10 @@ var markup = require('./NetSimDnsManualControl.html.ejs');
  * @param {function} becomeDnsCallback
  * @constructor
  */
-var NetSimDnsManualControl = module.exports = function (rootDiv,
-    becomeDnsCallback) {
+var NetSimDnsManualControl = (module.exports = function(
+  rootDiv,
+  becomeDnsCallback
+) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -26,29 +28,30 @@ var NetSimDnsManualControl = module.exports = function (rootDiv,
   this.becomeDnsCallback_ = becomeDnsCallback;
 
   this.render();
-};
+});
 
 /**
  * Fill the root div with new elements reflecting the current state
  */
-NetSimDnsManualControl.prototype.render = function () {
+NetSimDnsManualControl.prototype.render = function() {
   var renderedMarkup = $(markup({}));
   this.rootDiv_.html(renderedMarkup);
-  this.rootDiv_.find('input[type="button"]').click(
-      this.onBecomeDnsButtonClick_.bind(this));
+  this.rootDiv_
+    .find('input[type="button"]')
+    .click(this.onBecomeDnsButtonClick_.bind(this));
 };
 
 /**
  * Handler for button click.
  * @private
  */
-NetSimDnsManualControl.prototype.onBecomeDnsButtonClick_ = function () {
+NetSimDnsManualControl.prototype.onBecomeDnsButtonClick_ = function() {
   this.becomeDnsCallback_();
 };
 
 /**
  * @param {boolean} isDnsNode
  */
-NetSimDnsManualControl.prototype.setIsDnsNode = function (isDnsNode) {
+NetSimDnsManualControl.prototype.setIsDnsNode = function(isDnsNode) {
   this.rootDiv_.find('input[type="button"]').attr('disabled', isDnsNode);
 };

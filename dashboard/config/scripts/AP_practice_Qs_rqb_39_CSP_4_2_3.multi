@@ -1,0 +1,26 @@
+name 'AP_practice_Qs_rqb_39_CSP_4_2_3'
+wrong 'Some problems cannot be solved using any algorithm.'
+right 'Every decidable problem can be solved by an algorithm in a reasonable (polynomial) time.
+'
+wrong 'Every algorithm can be constructed using only sequencing, selection, and iteration.
+'
+wrong 'The language used to express an algorithm does not affect whether an algorithmic solution exists.'
+markdown <<MARKDOWN
+Which of the following is NOT true of algorithms?
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **4.2.3** and Essential Knowledge statements: **4.2.3B**
+<hr>
+ (A) <strong>This answer is not the correct choice.</strong>  There are some problems which cannot be solved using any algorithm.
+
+<hr>
+ (B) <strong>This answer is the correct choice.</strong> Decidable problems are ones which have a yes or no answer.  However, they do not necessarily run in polynomial time.
+
+<hr>
+ (C) <strong>This answer is not the correct choice.</strong>  Any algorithm can be constructed using only sequencing, iteration, and selection.
+
+<hr>
+ (D) <strong>This answer is not the correct choice.</strong>  Any algorithm can be constructed using only sequencing, iteration, and selection.
+
+MARKDOWN

@@ -6,8 +6,8 @@ require File.expand_path('../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'cdo/properties'
 
-DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
-PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
+DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader, query_timeout: 1200)
+PEGASUS_REPORTING_DB_READONLY = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader, query_timeout: 1200)
 
 WEIGHTED_COUNT = "SUM(" \
   " IF(session REGEXP '^_.*_'," +

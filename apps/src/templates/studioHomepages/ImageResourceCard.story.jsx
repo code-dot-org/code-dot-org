@@ -11,13 +11,13 @@ export default storybook => {
         description: `This is an example resource card.`,
         story: () => (
           <ImageResourceCard
-            title= "Teacher Community"
+            title="Teacher Community"
             description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
             image="teacher-community"
-            buttonText= "Connect Today"
-            link= "link to teacher community"
+            buttonText="Connect Today"
+            link="link to teacher community"
           />
         )
-      },
+      }
     ]);
 };

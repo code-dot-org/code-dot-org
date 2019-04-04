@@ -1,6 +1,8 @@
 /** @file Hidden file input with interface for handling uploads. */
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * A hidden file input providing upload functionality with event hooks.
@@ -23,14 +25,28 @@ export default class HiddenUploader extends React.Component {
       // prevent fileupload from replacing the input DOM element, which
       // React does not like
       replaceFileInput: false,
-      add: function (e, data) {
+      add: function(e, data) {
         // onUploadStart method must call data.submit()
         props.onUploadStart(data);
+        const audioFileName = data.files[0].name.includes('mp3')
+          ? data.files[0].name
+          : null;
+        if (audioFileName) {
+          firehoseClient.putRecord(
+            {
+              study: 'sound-dialog-2',
+              study_group: 'library-file',
+              event: 'upload-file',
+              data_json: audioFileName
+            },
+            {includeUserId: true}
+          );
+        }
       },
-      done: function (e, data) {
+      done: function(e, data) {
         props.onUploadDone(data.result);
       },
-      error: function (e, data) {
+      error: function(e, data) {
         if (props.onUploadError) {
           props.onUploadError(e.status);
         }
@@ -54,7 +70,7 @@ export default class HiddenUploader extends React.Component {
         className="uitest-hidden-uploader"
         type="file"
         style={{display: 'none'}}
-        accept={(this.props.allowedExtensions || '*')}
+        accept={this.props.allowedExtensions || '*'}
       />
     );
   }

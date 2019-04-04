@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import FieldGroup from './FieldGroup';
 import {action} from '@storybook/addon-actions';
 
@@ -6,7 +7,7 @@ class TestWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: '',
+      data: ''
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -21,7 +22,7 @@ class TestWrapper extends React.Component {
   render() {
     let valid;
     if (this.state.data) {
-      valid = /^[a-zA-Z]*$/.test(this.state.data) ? "success" : "error";
+      valid = /^[a-zA-Z]*$/.test(this.state.data) ? 'success' : 'error';
     }
     return (
       <FieldGroup
@@ -42,9 +43,8 @@ TestWrapper.propTypes = {
 };
 
 export default storybook => {
-  storybook
-    .storiesOf('FormComponents/FieldGroup', module)
-    .addStoryTable([{
+  storybook.storiesOf('FormComponents/FieldGroup', module).addStoryTable([
+    {
       name: 'basic example',
       story: () => (
         <FieldGroup
@@ -54,7 +54,8 @@ export default storybook => {
           onChange={action('onChange')}
         />
       )
-    }, {
+    },
+    {
       name: 'dropdown with children',
       story: () => (
         <FieldGroup
@@ -69,10 +70,10 @@ export default storybook => {
           <option value="third">Three</option>
         </FieldGroup>
       )
-    }, {
+    },
+    {
       name: 'full-featured example',
-      story: () => (
-        <TestWrapper onChange={action('onChange')} />
-      )
-    }]);
+      story: () => <TestWrapper onChange={action('onChange')} />
+    }
+  ]);
 };

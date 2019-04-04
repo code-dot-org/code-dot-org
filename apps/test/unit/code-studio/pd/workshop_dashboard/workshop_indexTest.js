@@ -11,7 +11,7 @@ import Permission, {
   WorkshopAdmin
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 
-describe("WorkshopIndex", () => {
+describe('WorkshopIndex', () => {
   const fakeRouter = {
     createHref() {}
   };
@@ -23,63 +23,39 @@ describe("WorkshopIndex", () => {
     sinon.mock(fakeRouter);
   });
 
-  describe("Button counts", () => {
+  describe('Button counts', () => {
     // map each user permission that utilizes the Workshop Dashboard
     // to the list of buttons to which it has access
     let permissionButtonMap = new Map([
-      [
-        Facilitator,
-        [
-          "Facilitator Survey Results",
-          "Filter View"
-        ]
-      ],
+      [Facilitator, ['Facilitator Survey Results', 'Filter View']],
       [
         CsfFacilitator,
-        [
-          "New Workshop",
-          "Facilitator Survey Results",
-          "Filter View"
-        ]
+        ['New Workshop', 'Facilitator Survey Results', 'Filter View']
       ],
-      [
-        Organizer,
-        [
-          "New Workshop",
-          "Attendance Reports",
-          "Filter View"
-        ]
-      ],
-      [
-        ProgramManager,
-        [
-          "New Workshop",
-          "Attendance Reports",
-          "Filter View"
-        ]
-      ],
-      [
-        WorkshopAdmin,
-        [
-          "New Workshop",
-          "Attendance Reports",
-          "Filter View"
-        ]
-      ]
+      [Organizer, ['New Workshop', 'Attendance Reports', 'Filter View']],
+      [ProgramManager, ['New Workshop', 'Attendance Reports', 'Filter View']],
+      [WorkshopAdmin, ['New Workshop', 'Attendance Reports', 'Filter View']]
     ]);
 
-    permissionButtonMap.forEach(function (buttons, permissionName) {
-      it(permissionName + " has " + buttons.length + " buttons", () => {
+    permissionButtonMap.forEach(function(buttons, permissionName) {
+      it(permissionName + ' has ' + buttons.length + ' buttons', () => {
         const permission = new Permission([permissionName]);
 
-        let workshopIndex = shallow(
-            <WorkshopIndex permission={permission}/>, {context}
-        );
+        let workshopIndex = shallow(<WorkshopIndex permission={permission} />, {
+          context
+        });
 
-        expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(buttons.length);
-        expect(workshopIndex.find('ButtonToolbar Button').map((button) => {
-            return button.children().first().text();
-        })).to.deep.equal(buttons);
+        expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(
+          buttons.length
+        );
+        expect(
+          workshopIndex.find('ButtonToolbar Button').map(button => {
+            return button
+              .children()
+              .first()
+              .text();
+          })
+        ).to.deep.equal(buttons);
       });
     });
   });

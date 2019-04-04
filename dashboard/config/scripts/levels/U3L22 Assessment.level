@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Permanent Data Storage Assessment",
-    "markdown_instructions": "Why is an inline function used in your clicker game to get or set a key/value pair?\n",
+    "long_instructions": "Why is an inline function used in your clicker game to get or set a key/value pair?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

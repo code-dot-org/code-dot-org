@@ -4,18 +4,18 @@ import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
 import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
 
-describe('Piezo', function () {
-  beforeEach(function () {
+describe('Piezo', function() {
+  beforeEach(function() {
     // We stub five.Piezo's superclass to avoid calling any johnny-five
     // logic that requires a board.
     sinon.stub(five.Board, 'Component');
   });
 
-  afterEach(function () {
+  afterEach(function() {
     five.Board.Component.restore();
   });
 
-  it('is a johnny-five Piezo component', function () {
+  it('is a johnny-five Piezo component', function() {
     const piezo = new Piezo({
       controller: makeStubPiezoController()
     });
@@ -26,40 +26,39 @@ describe('Piezo', function () {
     describe(`${methodUnderTest}()`, () => {
       let piezo;
 
-      beforeEach(function () {
+      beforeEach(function() {
         sinon.stub(five.Piezo.prototype, 'play');
         piezo = new Piezo({
           controller: makeStubPiezoController()
         });
       });
 
-      afterEach(function () {
+      afterEach(function() {
         five.Piezo.prototype.play.restore();
       });
 
-      it(`converts a song and tempo to the 'tune' format expected by five.Piezo`, function () {
-        const song = [['C4', 1/2], ['D4', 1/2], ['E4', 1]];
-        const tempo = 100;
-        piezo[methodUnderTest](song, tempo);
-        expect(five.Piezo.prototype.play).to.have.been.calledWith({song, tempo});
-      });
-
-      it(`assumes quarter notes if given a 1D note array`, function () {
-        const song = ['C4', 'D4', 'E4'];
+      it(`converts a song and tempo to the 'tune' format expected by five.Piezo`, function() {
+        const song = [['C4', 1 / 2], ['D4', 1 / 2], ['E4', 1]];
         const tempo = 100;
         piezo[methodUnderTest](song, tempo);
         expect(five.Piezo.prototype.play).to.have.been.calledWith({
-          song: [
-            ['C4', 1/4],
-            ['D4', 1/4],
-            ['E4', 1/4]
-          ],
+          song,
           tempo
         });
       });
 
-      it(`passes a default tempo of 120bpm`, function () {
-        const song = [['C4', 1/2], ['D4', 1/2], ['E4', 1]];
+      it(`assumes quarter notes if given a 1D note array`, function() {
+        const song = ['C4', 'D4', 'E4'];
+        const tempo = 100;
+        piezo[methodUnderTest](song, tempo);
+        expect(five.Piezo.prototype.play).to.have.been.calledWith({
+          song: [['C4', 1 / 4], ['D4', 1 / 4], ['E4', 1 / 4]],
+          tempo
+        });
+      });
+
+      it(`passes a default tempo of 120bpm`, function() {
+        const song = [['C4', 1 / 2], ['D4', 1 / 2], ['E4', 1]];
         piezo[methodUnderTest](song);
         expect(five.Piezo.prototype.play).to.have.been.calledWith({
           song,
@@ -110,7 +109,6 @@ describe('Piezo', function () {
   // These two methods should be identical in our implementation, so run them
   // through the same set of tests.
   ['stop', 'off'].forEach(methodUnderTest => {
-
     describe(`${methodUnderTest}()`, () => {
       let clock, controller, piezo;
 

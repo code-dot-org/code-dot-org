@@ -1,43 +1,65 @@
 ---
-title: <%= hoc_s(:title_how_to_officials) %>
+title: <%= hoc_s(:title_how_to_officials).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Hogyan hozd el a Kódolás Óráját a saját közösségedbe?
+# Hogyan vond be az egész közösséget?
 
-[col-33]
+### Mutasd meg a számítástechnika iránti elköteleződésedet a megyédnek, a járásodnak vagy a városodnak
 
-![](/images/fit-275/highlight-obama.png)&nbsp;&nbsp;&nbsp;![](/images/fit-246/dan.jpg)
+---
 
-[/col-33]
+</br>
 
-<p style="clear:both">&nbsp;</p>
+## Egy hivatalos személy is részt vesz a "Hour of Code" rendezvényeden?
+
+Tekintsd meg [ezt a segédletet](/files/elected-official.pdf), melyben további hasznos információkat találsz, hogy hogyan teheted még eredményesebbé a látogatását!
+
+![](/images/fit-800/hoc_govs.png)
+
+Balról jobbra: *Arkansas, Észak-Karolina, és Arizona kormányzói egy "Hour of Code" rendezvényen.*
 
 ## Vegyen részt minden iskola, tanuljon minden tanuló!
 
-1. **Olvassa el a rövid leírást**, hogy miért fontos a számítástechnika oktatása és hogyan segítheti a Kódolás Óra támogatásával. [Get the one-pager here.](/files/hoc-one-pager.pdf)
+### 1. Olvasd el rövid tájékoztatónkat
 
-2. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts.
+[Olvasd el a rövid leírást<](/files/hoc-one-pager.pdf), hogy miért fontos a számítástechnika és milyen hatásai lehetnek annak, ha támogatod a "Hour of Code" kezdeményezést.
 
-3. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/events') %>) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+### 2. Toborozz helyi iskolákat vagy megyei tankerületeket
 
-4. **Attend an event during Computer Science Education Week (<%= campaign_date('short') %>).** [Find classrooms and schools](<%= resolve_url('/events') %>) participating in your district, city or state.
+Kezdésnek használd [ezt a levelet](<%= resolve_url('/promote/resources#sample-emails') %>) vagy [ezt a rövid leírást](<%= resolve_url('/promote/stats') %>), majd vess egy pillantást az alábbi, iskoláknak és tankerületeknek készült [útmutatónkra](<%= resolve_url('/how-to') %>).
 
-5. **Issue a proclamation or resolution.** See this [sample resolution](<%= resolve_url('resources/proclamation') %>) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### 3. Rendezz egy "Hour of Code" eseményt
 
-6. **Draft an op-ed**. Consider publishing an opinion piece in your local paper. See this [sample op-ed](<%= resolve_url('/promote/op-ed') %>) supporting comupter supportive of Computer Science Education Week and its goals.
+Tekintsd meg [szervezési útmutatónkat](<%= resolve_url('/how-to/events') %>), [média figyelmét felhívó anyagainkat](<%= resolve_url('/promote/press-kit') %>), valamint további tervezési segédleteinket. Egy esemény szervezése remek alkalmat ad arra, hogy népszerűsítsük a "Hour of Code" kezdeményezést, valamint ezáltal növeljük a kezdeményezésben résztvevők számát.
 
-7. **Spread the word.** [Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
-    
-    - Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)
-    - Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)   
-          
-        
+### 4. Vegyen részt egy eseményen a Számítástechnika Oktatás Hetén (<%= campaign_date('short') %>)
 
-8. **Issue a press release.** [Use this sample](<%= resolve_url('/promote/official-press-release') %>) as a guide.
+[Találj egy osztályt vagy egy iskolát](<%= resolve_url('/events') %>) a tankerületből, városból vagy megyéből.
 
-9. **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
+### 5. Hívd fel rá a figyelmet egy kiáltványban vagy egy határozatban
+
+[Tekintsd meg ezt az összefoglalót](<%= resolve_url('resources/proclamation') %>) a Számítástechnikai Tudományos Hét támogatásának fontosságáról és céljairól, mely érdekes lehet a helyi és állami döntéshozóknak.
+
+### 6. Vázold fel meglátásaidat
+
+Ennek egy részét akár publikálhatod is a helyi újságban. Tekintsd meg a [mi összefoglalónkat](<%= resolve_url('/promote/op-ed') %>) a Számítástechnikai Tudományos Hét támogatásáról és céljairól.
+
+### 7. Terjeszd az igét
+
+Oszd meg az eseményt [ Facebookon](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) vagy [ Twiteren](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Oszd meg azokat a képeket és videókat, melyeken te és más felnőtt is részt vesz az "Hour of Code" eseményen. Használd az **#HourofCode** hashtaget, így a Code.org (@code.org) is láthatja azt, és köszönetét fejezheti ki a támogatásért. Vagy használd az alábbi minta üzeneteket (tweeteket):
+
+- *Minden tanulónak, legyen az lány vagy fiú, meg kell adni az informatika tanulás lehetőségét. Csatlakozz hozzánk egy saját #HourOfCode esemény indításával a [https://hourofcode.com](<%= resolve_url('/') %>) weboldalon!*
+- *Mai napon büszkék vagyunk arra, hogy csatlakoztunk a "Hour of Code" mozgalomhoz. Te is benne lennél? #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)*
+
+### 8. Írj egy sajtóközleményt
+
+Használd [ezt a mintát](<%= resolve_url('/promote/official-press-release') %>) segítségnek.
+
+### 9. Vegyél részt a helyi szervezésben
+
+[Tudj meg többet a régióban zajló számítástechnika oktatásról.](<%= codeorg_url('/advocacy') %>) Írd alá itt az indítványt, hogy értesítést kapj a Code.org helyi, regionális és szövetségi érdekképviseleti erőfeszítéseinek sikereiről.
 
 <%= view :signup_button %>

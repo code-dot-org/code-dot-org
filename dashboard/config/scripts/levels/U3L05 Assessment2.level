@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Programming Efficiency Question 2",
-    "markdown_instructions": "Describe the trade-offs of writing highly efficient code. Give an example.\n",
+    "long_instructions": "Describe the trade-offs of writing highly efficient code. Give an example.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -9,7 +9,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,-10,0,0,0],[0,0,0,0,-10,0,0,0],[0,0,0,0,10,0,0,0],[0,0,0,0,10,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "bee",
-    "instructions": "Get all of the nectar and make all of the honey.",
+    "short_instructions": "Get all of the nectar and make all of the honey.",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",

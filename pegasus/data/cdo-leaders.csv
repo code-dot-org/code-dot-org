@@ -2,20 +2,22 @@ name_s,url_s,description_t,role_s,kind_s
 Bobby Schnabel,leadership/bobby_schnabel,"Professor of Computer Science, University of Colorado Boulder",,director
 Brad Smith,leadership/brad_smith,"President, Chief Legal Officer, Microsoft",,director
 Hadi Partovi,leadership/hadi_partovi,"Founder and CEO, Code.org",,director
-Jeff Wilke,leadership/jeff_wilke,"CEO, Worldwide Consumer Business, Amazon",,director
+Hanna Skandera,leadership/hanna_skandera,"CEO, Mile High Strategies",,director
+Jeff Wilke,leadership/jeff_wilke,"CEO, Worldwide Consumer, Amazon",,director
 Maggie Johnson,leadership/maggie_johnson,"VP, Education & University Programs, Google",,director
-Palvi Mehta,leadership/palvi_mehta,"CFO, Extrahop - Code.org Treasurer",,director
-Ranganath Mavinakere,leadership/ranganath_mavinakere,"Executive Vice President and Chief Financial Officer, Infosys",,director
+Palvi Mehta,leadership/palvi_mehta,"CFO, Pioneer Square Labs - Code.org Treasurer",,director
 Robert Runcie,leadership/robert_runcie,Superintendent of Broward County Public Schools,,director
+Salil Parekh,leadership/salil_parekh,"CEO and Managing Director, Infosys",,director
+Susan Enfield,leadership/susan_enfield,Superintendent of Highline Public Schools,,director
 Vandana Sikka,leadership/vandana_sikka,"Founder and CEO, Learnee, Inc.",,director
 Anthony Suarez,leadership/anthony_suarez,Chief Technology Officer,,LT
 Alex Brenner,leadership/alex_brenner,Director of Accounting and Finance,,LT
 Alice Steinglass,leadership/alice_steinglass,President,,LT
 Carina Box,leadership/carina_box,Director of Outreach,,LT
 Cameron Wilson,leadership/cameron_wilson,"Chief Operating Officer and President of <a href=""/advocacy"">Code.org Advocacy Coalition</a>",,LT
-Jeremy Stone,leadership/jeremy_stone,Chief Technology Officer (outgoing),,LT
 Marina Taylor,leadership/marina_taylor,Director of Product,,LT
-Min Yoo,leadership/min_yoo,Director of Marketing,,LT
+Megan Godwin,,Director of People Ops,,LT
+Min Yoo,leadership/min_yoo,Director of Marketing & Development,,LT
 Pat Yongpradit,leadership/pat_yongpradit,Chief Academic Officer,,LT
 Sarah Filman,leadership/sarah_filman,VP of Education,,LT
 Alfred Thompson,http://blog.acthompson.net/,"Computer Science Teacher, Bishop Guertin High School",,education
@@ -31,7 +33,7 @@ Emmanuel Schanzer,https://www.linkedin.com/in/emmanuelschanzer,"Director, Bootst
 Gail Chapman,http://www.exploringcs.org/about/team,"Director of Outreach, Exploring Computer Science",,education
 Gregg Fleisher,http://www.nms.org/About-Us/Our-Team.aspx,"Chief Academic Officer, National Math & Science Initiative",,education
 Harry Lewis,https://www.linkedin.com/in/harry-lewis-b0841610/,"Professor, Harvard",,education
-Irene Lee,http://education.mit.edu/about/our-team/,"Research Scientist, Massachusetts Institute of Technology",,education
+Irene Lee,https://education.mit.edu/team/,"Research Scientist, Massachusetts Institute of Technology",,education
 Jan Cuny,http://www.ncwit.org/profile/jan-cuny,"Program Officer, National Science Foundation",,education
 Jane Margolis,http://gseis.ucla.edu/people/margolis/,"Senior Researcher, UCLA. Author, <a href=""http://www.amazon.com/Stuck-Shallow-End-Education-Computing/dp/0262514044"">Stuck in the Shallow End</a>",,education
 Jeanne Century,http://outlier.uchicago.edu/outlier/team/?data-target-rollout-thumb-id=jeanne,"Director of Outlier Research And Evaluation, CEMSE | University of Chicago",,education
@@ -53,7 +55,7 @@ Ali Partovi,https://www.linkedin.com/in/apartovi,"Co-founder, Code.org. Tech ent
 Bill Gates,https://www.linkedin.com/in/williamhgates/,"Co-founder, Microsoft",,advisor
 Chris Ovitz,https://www.linkedin.com/in/christopherovitz/,Co-founder of Viddy,,advisor
 Clara Shih,http://en.wikipedia.org/wiki/Clara_Shih,"CEO, Hearsay Social",,advisor
-Dara Khosrowshahi,https://www.linkedin.com/in/dara-khosrowshahi-70949862/,"CEO, Expedia",,advisor
+Dara Khosrowshahi,https://www.linkedin.com/in/dara-khosrowshahi-70949862/,"CEO, Uber",,advisor
 Drew Houston,http://en.wikipedia.org/wiki/Drew_Houston,Dropbox CEO,,advisor
 Jack Dorsey,http://en.wikipedia.org/wiki/Jack_Dorsey,"Creator of Twitter, Founder and CEO of Square",,advisor
 James Gwertzman,https://www.linkedin.com/pub/james-gwertzman/0/9/362,Playfab CEO,,advisor

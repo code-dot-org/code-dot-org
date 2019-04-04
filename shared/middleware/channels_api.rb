@@ -156,8 +156,12 @@ class ChannelsApi < Sinatra::Base
     bad_request unless value.is_a? Hash
     value = value.merge('updatedAt' => Time.now)
 
+    # Channels for project-backed levels are created without a project_type. The
+    # type is then determined by client-side logic when the project is updated.
+    project_type = value.delete('projectType')
+
     begin
-      value = StorageApps.new(storage_id('user')).update(id, value, request.ip)
+      value = StorageApps.new(storage_id('user')).update(id, value, request.ip, project_type: project_type)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end

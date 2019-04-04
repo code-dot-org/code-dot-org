@@ -23,22 +23,22 @@ ________________
 <br/>
 ### [CS Principles](/educate/csp#lessons) (9-12)
 
-- [AP CS Principles One-Pager](https://code.org/files/CSPrinciples_1-pager.pdf)<br/>
-- [AP CS Principles Curriculum Guide](https://code.org/files/CSP_CurriculumGuide_2017_forWeb.pdf)
+- <a href="https://code.org/files/CSPrinciples_1-pager.pdf", target=_"blank">AP CS Principles One-Pager</a><br/>
+- <a href="https://code.org/files/CSP_CurriculumGuide_2017_forWeb.pdf", target=_"blank">AP CS Principles Curriculum Guide</a>
 
 
 ### [CS Discoveries](https://code.org/educate/csd) (6-10)
 
-- [CS Discoveries One-Pager](https://code.org/files/CSDiscoveries_1-pager.pdf)
-- [CS Discoveries Curriculum Guide](https://code.org/files/CSDiscoveries-Curriculum-Guide.pdf)<br/>
+- <a href="https://code.org/files/CSDiscoveries_1-pager.pdf", target=_"blank">CS Discoveries One-Pager</a>
+- <a href="https://code.org/files/CSDiscoveries-Curriculum-Guide.pdf", target=_"blank">CS Discoveries Curriculum Guide</a><br/>
 
 
 ### [CS Fundamentals](https://code.org/educate/curriculum/elementary-school) (K-5)
 
-- [CS Fundamentals One-Pager](https://code.org/files/csf-one-pager.pdf)<br/>
-- [CS Fundamentals Curriculum Guide (NEW Courses A-F)](https://code.org/files/CSF_CoursesA-F_Curriculum_Guide.pdf)<br/>
-- [Transitioning from Courses 1-4 to A-F Guide](https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit)<br/>
-- [Find a K-5 Professional Development Workshop](https://code.org/professional-development-workshops)
+- <a href="https://docs.google.com/presentation/d/1OLTNWSOM5TvCvuWY4IcSJNBr3iUOQZrBy4cqN20P3LM/edit#slide=id.g49797dc5ad_0_15", target=_"blank">CS Fundamentals One-Pager</a><br/>
+- <a href="https://code.org/files/CSF_CoursesA-F_Curriculum_Guide.pdf", target=_"blank">CS Fundamentals Curriculum Guide (NEW Courses A-F)</a><br/>
+- <a href="https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit", target=_"blank">Transitioning from Courses 1-4 to A-F Guide</a><br/>
+- <a href="https://code.org/professional-development-workshops", target=_"blank">Find a K-5 Professional Development Workshop</a>
 
 
 [**Back to the top**](#top)
@@ -53,7 +53,7 @@ Click on the links below to see a list of classroom supplies your teacher will n
 
 - [CS Principles](https://code.org/educate/csp#materials)
 - [CS Discoveries](https://code.org/educate/csd#supplies)
-- [CS Fundamentals]()
+- <a href="https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", target=_"blank">CS Fundamentals</a> - See page 31 of the curriculum guide.
 
 [**Back to the top**](#top)
 <br/>

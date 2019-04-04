@@ -1,17 +1,19 @@
 ---
-title: <%= hoc_s(:title_how_to) %>
+title: <%= hoc_s(:title_how_to).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school classes and clubs
+# نحوه تدریس ساعت کدنویسی در کلاس های فوق برنامه مدارس و باشگاه ها
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### به این جنبش بپیوندید و با این مراحل، گروهی از دانش آموزان را با اولین ساعتشان با علوم کامپیوتر آشنا کنید. اجرای ساعت کدنویسی خیلی آسان است - حتی برای مبتدیان! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your after-school class or club.
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+---
 
-## 2. Choose a tutorial
+## 1. این فیلم آموزشی را ببینید <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+## 2. یکی از برنامه های آموزشی را انتخاب کنید
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [امتحان کنید](<%= resolve_url('/learn') %>)
 
@@ -21,36 +23,34 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>)
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. Promote your Hour of Code
+## 3. برنامه ساعت کدنویسی خود را اطلاع رسانی کنید
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
-## 4. Plan your technology needs - computers are optional
+## 4. برای تکنولوژی های مورد نیاز خود برنامه ریزی کنید - داشتن رایانه اختیاری است
 
-بهترین ساعتهای یکساعت کدنویسی زمانهایی است که به اینترنت وصل هستند. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+بهترین ساعتهای یکساعت کدنویسی زمانهایی است که به اینترنت وصل هستند. اما برای هر دانش آموز به یک کامپیوتر **نیاز ندارید**، و حتی این امکان وجود دارد که ساعت کدنویسی را بدون کامپیوتر برگزار کنید.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+برنامه های آموزشی را بر روی کامپیوتر یا دستگاه های دیگر دانش آموزان امتحان کنید تا مطمئن شوید که مرورگرها، ویدئوها را به درستی با صدا و تصویر نمایش می دهند. **پهناي باند كمي داريد؟** ويدئوها را خودتان براي كل كلاس نمايش دهيد تا هر دانش آموز مجبور نشود ويدئوها را جداگانه دانلود كند. یا از آموزش های آفلاین استفاده کنید.
 
-Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+اگر برنامه آموزشی مورد نظرتان با صدا بهتر کار می کند، براي كلاس تان هدفون تهيه كنيد، يا از دانش آموزان بخواهيد که هدفون های خودشان را به کلاس بياورند.
 
 **رایانه به اندازه کافی ندارید؟** از [برنامه نویسی جفتی](https://www.youtube.com/watch?v=vgkahOzFH2Q) استفاده کنید. هنگامي كه دانش آموزان همكاري مي‌كنند، به هم كمك كرده و تكيه‌شان بر معلم كمتر مي‌شود. همچنين متوجه مي شوند كه دانش كامپيوتر يك فعاليت اجتماعي و مبتني بر همكاري است.
 
-<img src="/images/fit-350/group_ipad.jpg" />
-
-## 5. Start your Hour of Code off with an inspiring video
+## ۵. ساعت کد نویسی را با یک ویدئوی الهام بخش شروع کنید
 
 یکساعت کدتان را،با الهام بخشی شرکت کنندگان و اینکه علوم رایانه چه تاثیری بر همه ابعاد زندگیمان دارد، شروع کنید.
 
 **ویدئوهای الهام بخش را نمایش دهید:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- سایت Code.org ویدیویی از بیل گیتز ، مارک زوکربرگ ، و ستاره بسکتبال، کریس بوش آماده کرده است - نسخه های [1 دقیقه ای](https://www.youtube.com/watch?v=qYZF6oIZtfc) ، [5 دقیقه ای](https://www.youtube.com/watch?v=nKIu9yen5nc)، و [9 دقیقه ای](https://www.youtube.com/watch?v=dU1xS07N-FA) این ویدئو موجود می باشند.
+- ویدئو [ساعت کدنویسی در سرتاسر جهان](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- ویدئوهای الهام بخش دیگر را از [اینجا](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) پیدا کنید.
 
 **It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- در مورد روش هایی که فناوری بر زندگی ما اثر گذاشته، به همراه مثال هایی که هم برای دختران و هم برای پسران مهم باشند توضیح دهید (در مورد برنامه ها و فناوری هایی که زندگی انسانها را نجات می دهند، به مردم کمک می کنند، بین مردم ارتباط برقرار می کنند و غیره صحبت کنید).
 - چیزهایی که در زندگی روزمره از کد استفاده میکنند را لیست کنید.
 - در [اینجا](<%= resolve_url('https://code.org/girls') %>) روشهایی را برای علاقمند کردن دختران به علوم کامپیوتر ببینید.
 
@@ -58,57 +58,20 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 ## 6. Code!
 
-**دانش آموزان را به فعالیت هدایت کنید**
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**When someone comes across difficulties it's okay to respond:**
-
-- "نمیدانم. بگذار با هم حلش کنیم."
-- "فناوری همیشه همانطور که ما میخواهیم نیست."
-- "یادگیری برنامه نویسی مانند یادگیری زبان است؛ لزومی ندارد از اول روان صحبت کنی."
-
-**چه كار كنيم اگر دانش آموزی زودتر تمام كرد؟**
-
-- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-- Or, ask those who finish early to help others who are having trouble.
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. Celebrate
 
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
-
 - [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
 - عکسها و ویدیوهای کلاسهای یکساعت کدنویسی را در فضای مجازی به اشتراک بگذارید. از #HourOfCode و @codeorg استفاده کنید تا ما بتوانیم موفقیتهایتان را منعکس کنیم!
 
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
-
-## Other Hour of Code resources for educators
+## سایر منابع ساعت کدنویسی برای مدرسان
 
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
@@ -117,9 +80,6 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 ## مرحله بعد از ساعت كدنويسي چيست؟
 
-ساعت کد تنها اولین گام در سفری برای کسب اطلاعات بیشتر در مورد چگونگی کارکرد فن آوری و نحوه ایجاد نرم افزارهای کاربردی است. برای ادامه این سفر:
-
-- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
-- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](<%= codeorg_url('/learn/beyond') %>)!
 
 <%= view :signup_button %>

@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".7",
     "free_play": "false",
-    "instructions": "Edit blocks within your existing code to make this image.",
+    "short_instructions": "Edit blocks within your existing code to make this image.",
     "embed": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

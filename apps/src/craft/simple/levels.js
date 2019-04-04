@@ -1,4 +1,4 @@
-import { createToolbox } from '../../block_utils';
+import {createToolbox} from '../../block_utils';
 
 const moveForwardBlock = '<block type="craft_moveForward"></block>';
 
@@ -16,6 +16,6 @@ module.exports = {
   custom: {
     requiredBlocks: [],
     freePlay: false,
-    toolbox: createToolbox(moveForwardBlock + turnLeftBlock + turnRightBlock),
+    toolbox: createToolbox(moveForwardBlock + turnLeftBlock + turnRightBlock)
   }
 };

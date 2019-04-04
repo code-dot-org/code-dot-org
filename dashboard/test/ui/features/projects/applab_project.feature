@@ -13,9 +13,8 @@ Scenario: Applab Flow
   And I rotate to landscape
   And I wait for the page to fully load
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
-  # TODO  ideally we should probably create some code and/or design elements here
-  # looks like we have add_code_to_editor
-  And element "#runButton" is visible
+  And I switch to text mode
+  And I add code "image('id', 'https://code.org/images/logo.png')" to ace editor
   And element ".project_updated_at" eventually contains text "Saved"
   And I click selector ".project_edit"
   And I type "Code Ninja" into "input.project_name"
@@ -86,11 +85,11 @@ Scenario: Applab Flow
 
   Then I am on "http://studio.code.org/users/sign_out"
   And I am on "http://studio.code.org/"
-
   # TODO - maybe we do a remix and/or create new as well
 
-  @no_mobile
-  Scenario: Save Project After Signing Out
+
+@no_mobile
+Scenario: Save Project After Signing Out
   Given I create a student named "Sally Student"
   And I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
@@ -118,6 +117,7 @@ Scenario: Applab Flow
 @no_mobile
 Scenario: Save Script Level After Signing Out
   Given I create a student named "Sally Student"
+  Given I am assigned to script "csp3-2017"
   And I am on "http://studio.code.org/s/csp3-2017/stage/5/puzzle/3"
   And I wait for the page to fully load
   And I wait for initial project save to complete
@@ -164,4 +164,4 @@ Scenario: Remix project creates and redirects to new channel
   And check that the URL contains "http://studio.code.org/projects/applab"
   And current URL is different from the last saved URL
   And element "#runButton" is visible
-  And I click selector "#runButton"
+  And I press "runButton"

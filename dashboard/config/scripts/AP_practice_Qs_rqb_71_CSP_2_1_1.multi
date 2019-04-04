@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_71_CSP_2_1_1'
+right 'ASCII'
+wrong 'Decimal'
+wrong 'Hexadecimal'
+wrong 'All of the above'
+markdown <<MARKDOWN
+Which system represents characters using 8 bits or 1 byte?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.1** and Essential Knowledge statements: **2.1.1D**
+<hr>
+ (A) CORRECT!  All ASCII characters are represented by 8 bit (1 byte) characters. For example  the character "A" is converts to 0100 0001 in binary, 065 in decimal and 041 in hexadecimal from ASCII. This is 8 bits or 1 byte.
+
+<hr>
+ (B) INCORRECT. Decimal is a number system using 10 numbers: 0 through 9. Though you can convert to and from ASCII, decimal is a number system used for counting from 0 to infinity. Making it an infinite number of bits.
+
+<hr>
+ (C) INCORRECT. Hexadecimal is a number system using 16 characters: 0 through F. Though you can convert to and from ASCII, hexadecimal is a number system used for counting from 0 to infinity. Making it an infinite number of bits.
+
+<hr>
+ (D) INCORRECT. ASCII represents each character in 1 byte.
+
+MARKDOWN

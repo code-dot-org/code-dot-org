@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "There is now more nectar at the flowers. Edit the given function so that it collects 4 nectars and use it to collect all of the nectar from the flowers.",
+    "short_instructions": "There is now more nectar at the flowers. Edit the given function so that it collects 4 nectars and use it to collect all of the nectar from the flowers.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",

@@ -1,0 +1,13 @@
+{
+  "danceFeedbackNeedNewDancer": "Sinun täytyy tehdä tanssija.",
+  "danceFeedbackNoDancers": "Sinulla ei ole tanssijoita.",
+  "danceFeedbackNoBackground": "Lisää taustaefekti.",
+  "danceFeedbackTooManyDancers": "Ole varovainen! Jos laitat `tee uusi`-blokin `joka toisella tahdilla`-blokin sisään, luot paljon uusia tanssijoita.",
+  "danceFeedbackUseSetSize": "Käytä `säädä backup_dancer2 kokoa`-blokkia tehdäksesi tanssijasta pienemmän.",
+  "danceFeedbackUseSetTint": "Käytä `aseta sävy`-blokkia muuttaaksesi tanssijan väriä.",
+  "danceFeedbackUseStartMapping": "Kokeile lisätä <xml> <block type=\"Dancelab_startMapping\"> <title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">”asteikko”</title><title name=\"RANGE\">”basso”</title> </block> </xml> -blokki ohjelmaasi.",
+  "danceFeedbackStartNewMove": "Tanssijasi ei aloittanut uutta liikettä neljännen tahdin jälkeen.",
+  "danceFeedbackNeedDifferentDance": "Sinun täytyy käyttää eri tanssia.",
+  "danceFeedbackNeedEveryTwoMeasures": "Varmista, että käytät `joka toisella tahdilla`-blokkia.",
+  "danceFeedbackNeedMakeANewDancer": "Käytä `tee uusi`-blokkia luodaksesi toisen tanssijan."
+}

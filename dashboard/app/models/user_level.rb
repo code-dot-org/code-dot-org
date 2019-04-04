@@ -2,7 +2,7 @@
 #
 # Table name: user_levels
 #
-#  id               :integer          not null, primary key
+#  id               :integer          unsigned, not null, primary key
 #  user_id          :integer          not null
 #  level_id         :integer          not null
 #  attempts         :integer          default(0), not null
@@ -32,7 +32,8 @@ class UserLevel < ActiveRecord::Base
   belongs_to :script
   belongs_to :level_source
 
-  before_save :handle_unsubmit
+  after_save :after_submit, if: :submitted_or_resubmitted?
+  before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
 
   validate :readonly_requires_submitted
 
@@ -46,6 +47,10 @@ class UserLevel < ActiveRecord::Base
     if readonly_answers? && !submitted?
       errors.add(:readonly_answers, 'readonly_answers only valid on submitted UserLevel')
     end
+  end
+
+  def attempted?
+    !best_result.nil?
   end
 
   def perfect?
@@ -90,12 +95,31 @@ class UserLevel < ActiveRecord::Base
     driver? || navigator?
   end
 
-  def handle_unsubmit
-    if submitted_changed? from: true, to: false
-      self.best_result = ActivityConstants::UNSUBMITTED_RESULT
-    end
+  def submitted_or_resubmitted?
+    submitted_changed?(to: true) || (submitted? && level_source_id_changed?)
+  end
 
-    # Destroy any existing peer reviews
+  def after_submit
+    submitted_level = Level.cache_find(level_id)
+
+    # Create peer reviews after submitting a peer_reviewable solution
+    if submitted_level.try(:peer_reviewable?)
+      submitted_script_level = submitted_level.script_levels.find_by(script_id: script_id)
+      learning_module = submitted_script_level&.stage&.plc_learning_module
+      assignment_exists = learning_module && Plc::EnrollmentModuleAssignment.exists?(
+        user_id: user_id,
+        plc_learning_module: learning_module
+      )
+      if assignment_exists
+        PeerReview.create_for_submission(self, level_source_id)
+      end
+    end
+  end
+
+  def before_unsubmit
+    self.best_result = ActivityConstants::UNSUBMITTED_RESULT
+
+    # Destroy any existing, unassigned peer reviews
     if Script.cache_find_level(level_id).try(:peer_reviewable?)
       PeerReview.where(submitter: user.id, reviewer: nil, level: level).destroy_all
     end
@@ -129,13 +153,16 @@ class UserLevel < ActiveRecord::Base
     # no need to create a level if it's just going to be locked
     return if !user_level.persisted? && locked
 
-    user_level.update!(
+    user_level.assign_attributes(
       submitted: locked || readonly_answers,
       readonly_answers: !locked && readonly_answers,
       unlocked_at: locked ? nil : Time.now,
       # level_group, which is the only levels that we lock, always sets best_result to 100 when complete
       best_result: (locked || readonly_answers) ? ActivityConstants::BEST_PASS_RESULT : user_level.best_result
     )
+
+    # preserve updated_at, which represents the user's submission timestamp.
+    user_level.save!(touch: false)
   end
 
   # Get number of passed levels per user for the given set of user IDs

@@ -17,12 +17,12 @@ exports.BallSpeed = {
   VERY_FAST: 0.23
 };
 
-exports.random = function (values) {
+exports.random = function(values) {
   var key = Math.floor(Math.random() * values.length);
   return values[key];
 };
 
-exports.setBallSpeed = function (id, value) {
+exports.setBallSpeed = function(id, value) {
   studioApp().highlight(id);
   Bounce.currentBallSpeed = value;
   for (var i = 0; i < Bounce.ballCount; i++) {
@@ -30,42 +30,42 @@ exports.setBallSpeed = function (id, value) {
   }
 };
 
-exports.setBackground = function (id, value) {
+exports.setBackground = function(id, value) {
   studioApp().highlight(id);
   Bounce.setBackground(value);
 };
 
-exports.setTeam = function (id, value) {
+exports.setTeam = function(id, value) {
   studioApp().highlight(id);
   Bounce.setTeam(value);
 };
 
-exports.setBall = function (id, value) {
+exports.setBall = function(id, value) {
   studioApp().highlight(id);
   Bounce.setBall(value);
 };
 
-exports.setPaddle = function (id, value) {
+exports.setPaddle = function(id, value) {
   studioApp().highlight(id);
   Bounce.setPaddle(value);
 };
 
-exports.setBackground = function (id, value) {
+exports.setBackground = function(id, value) {
   studioApp().highlight(id);
   Bounce.setBackground(value);
 };
 
-exports.setPaddleSpeed = function (id, value) {
+exports.setPaddleSpeed = function(id, value) {
   studioApp().highlight(id);
   Bounce.paddleSpeed = value;
 };
 
-exports.playSound = function (id, soundName) {
+exports.playSound = function(id, soundName) {
   studioApp().highlight(id);
   studioApp().playAudio(soundName);
 };
 
-exports.moveLeft = function (id) {
+exports.moveLeft = function(id) {
   studioApp().highlight(id);
   Bounce.paddleX -= Bounce.paddleSpeed;
   if (Bounce.paddleX < 0) {
@@ -73,15 +73,15 @@ exports.moveLeft = function (id) {
   }
 };
 
-exports.moveRight = function (id) {
+exports.moveRight = function(id) {
   studioApp().highlight(id);
   Bounce.paddleX += Bounce.paddleSpeed;
-  if (Bounce.paddleX > (Bounce.COLS - 1)) {
+  if (Bounce.paddleX > Bounce.COLS - 1) {
     Bounce.paddleX = Bounce.COLS - 1;
   }
 };
 
-exports.moveUp = function (id) {
+exports.moveUp = function(id) {
   studioApp().highlight(id);
   Bounce.paddleY -= Bounce.paddleSpeed;
   if (Bounce.paddleY < 0) {
@@ -89,33 +89,35 @@ exports.moveUp = function (id) {
   }
 };
 
-exports.moveDown = function (id) {
+exports.moveDown = function(id) {
   studioApp().highlight(id);
   Bounce.paddleY += Bounce.paddleSpeed;
-  if (Bounce.paddleY > (Bounce.ROWS - 1)) {
+  if (Bounce.paddleY > Bounce.ROWS - 1) {
     Bounce.paddleY = Bounce.ROWS - 1;
   }
 };
 
-exports.incrementOpponentScore = function (id) {
+exports.incrementOpponentScore = function(id) {
   studioApp().highlight(id);
   Bounce.opponentScore++;
   Bounce.displayScore();
 };
 
-exports.incrementPlayerScore = function (id) {
+exports.incrementPlayerScore = function(id) {
   studioApp().highlight(id);
   Bounce.playerScore++;
   Bounce.displayScore();
 };
 
-exports.launchBall = function (id) {
+exports.launchBall = function(id) {
   studioApp().highlight(id);
 
   // look for an "out of play" ball to re-launch:
   for (var i = 0; i < Bounce.ballCount; i++) {
-    if (Bounce.isBallOutOfBounds(i) &&
-        (0 === (Bounce.ballFlags[i] & Bounce.BallFlags.LAUNCHING))) {
+    if (
+      Bounce.isBallOutOfBounds(i) &&
+      0 === (Bounce.ballFlags[i] & Bounce.BallFlags.LAUNCHING)
+    ) {
       // found an out-of-bounds ball that is not already launching...
       Bounce.launchBall(i);
       return;
@@ -129,17 +131,20 @@ exports.launchBall = function (id) {
   Bounce.playSoundAndResetBall(i);
 };
 
-exports.bounceBall = function (id) {
+exports.bounceBall = function(id) {
   studioApp().highlight(id);
 
   var i;
   for (i = 0; i < Bounce.ballCount; i++) {
-    if (0 === (Bounce.ballFlags[i] &
-               (Bounce.BallFlags.MISSED_PADDLE | Bounce.BallFlags.IN_GOAL))) {
+    if (
+      0 ===
+      (Bounce.ballFlags[i] &
+        (Bounce.BallFlags.MISSED_PADDLE | Bounce.BallFlags.IN_GOAL))
+    ) {
       if (Bounce.ballX[i] < 0) {
         Bounce.ballX[i] = 0;
         Bounce.ballDir[i] = 2 * Math.PI - Bounce.ballDir[i];
-      } else if (Bounce.ballX[i] > (Bounce.COLS - 1)) {
+      } else if (Bounce.ballX[i] > Bounce.COLS - 1) {
         Bounce.ballX[i] = Bounce.COLS - 1;
         Bounce.ballDir[i] = 2 * Math.PI - Bounce.ballDir[i];
       }
@@ -160,16 +165,17 @@ exports.bounceBall = function (id) {
           // angle after collision based on whether you hit the left or right
           // side of the paddle.  And then we cap the resulting angle to be in a
           // certain range of radians so the resulting angle isn't too flat
-          var paddleAngleBias = (3 * Math.PI / 8) *
-              (xPaddleBall / tiles.PADDLE_BALL_COLLIDE_DISTANCE);
+          var paddleAngleBias =
+            ((3 * Math.PI) / 8) *
+            (xPaddleBall / tiles.PADDLE_BALL_COLLIDE_DISTANCE);
           // Add 5 PI instead of PI to ensure that the resulting angle is
           // positive to simplify the ternary operation in the next statement
           Bounce.ballDir[i] =
-              ((Math.PI * 5) + paddleAngleBias - Bounce.ballDir[i]) %
-               (Math.PI * 2);
-          Bounce.ballDir[i] = (Bounce.ballDir[i] < Math.PI) ?
-              Math.min((Math.PI / 2) - 0.2, Bounce.ballDir[i]) :
-              Math.max((3 * Math.PI / 2) + 0.2, Bounce.ballDir[i]);
+            (Math.PI * 5 + paddleAngleBias - Bounce.ballDir[i]) % (Math.PI * 2);
+          Bounce.ballDir[i] =
+            Bounce.ballDir[i] < Math.PI
+              ? Math.min(Math.PI / 2 - 0.2, Bounce.ballDir[i])
+              : Math.max((3 * Math.PI) / 2 + 0.2, Bounce.ballDir[i]);
         }
       }
     }

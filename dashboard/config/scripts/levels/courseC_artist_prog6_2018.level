@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw this diamond with 200 pixel sides.",
+    "short_instructions": "Draw this diamond with 200 pixel sides.",
     "x": "63",
     "y": "209",
     "start_direction": "135",
@@ -22,7 +22,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "markdown_instructions": "*\"Now a tag for Belle!\"*\r\n\r\nDraw this diamond with 200 pixel sides.",
+    "long_instructions": "*\"Now a tag for Belle!\"*\r\n\r\nDraw this square with 200 pixel sides.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -38,11 +38,23 @@
     "ideal": "8",
     "instructions_important": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-09-28 06:14:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-09-28 06:14:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-24 20:32:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-03-19 00:59:53 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -79,7 +91,7 @@
           </value>
         </block>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">???</title>
+          <title name="TIMES" config="2-10">???</title>
         </block>
       </xml>
     </toolbox_blocks>

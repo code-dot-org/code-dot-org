@@ -2,8 +2,6 @@ require 'test_helper'
 
 module Api::V1::Pd
   class RegionalPartnerWorkshopsControllerTest < ::ActionController::TestCase
-    include Pd::Application::RegionalPartnerTeacherconMapping
-
     freeze_time Time.new(2018, 2, 1)
 
     self.use_transactional_test_case = true
@@ -34,11 +32,6 @@ module Api::V1::Pd
       @school = create :school, zip: '99999'
       @regional_partner = @program_manager.regional_partners.first
       @regional_partner.mappings << Pd::RegionalPartnerMapping.create!(regional_partner: @regional_partner, zip_code: '99999')
-
-      @regional_partner_teachercon = create :regional_partner, group: 3, name: REGIONAL_PARTNER_TC_MAPPING.keys.first
-      @regional_partner_teachercon.mappings << Pd::RegionalPartnerMapping.create!(
-        regional_partner: @regional_partner_teachercon, zip_code: '88888'
-      )
 
       @teacher = create :teacher
       @student = create :student
@@ -140,18 +133,6 @@ module Api::V1::Pd
       assert_equal expected_partner_no_workshops, data
     end
 
-    test 'find with teachercon' do
-      sign_in @teacher
-      get :find, params: {
-        zip_code: '88888',
-        state: 'WA'
-      }
-      assert_response :success
-      data = JSON.parse(response.body).deep_symbolize_keys
-
-      assert_equal expected_partner_teachercon, data
-    end
-
     test 'find converts full state name into 2 letter code' do
       sign_in @teacher
       RegionalPartner.expects(:find_by_region).with('98101', 'WA').at_least_once
@@ -184,6 +165,7 @@ module Api::V1::Pd
       {
         id: @regional_partner.id,
         name: @regional_partner.name,
+        has_csf: nil,
         group: @regional_partner.group,
         workshops: [{
           id: @program_manager_csd_workshop.id,
@@ -201,8 +183,7 @@ module Api::V1::Pd
           id: @partner_organizer_csp_workshop.id,
           dates: 'March 15-19, 2018',
           location: 'Code.org, Seattle, WA'
-        }],
-        teachercon: nil
+        }]
       }
     end
 
@@ -211,6 +192,7 @@ module Api::V1::Pd
         id: @regional_partner.id,
         name: @regional_partner.name,
         group: @regional_partner.group,
+        has_csf: nil,
         workshops: [{
           id: @program_manager_csd_workshop.id,
           dates: 'March 15-19, 2018',
@@ -219,8 +201,7 @@ module Api::V1::Pd
           id: @partner_organizer_csd_workshop.id,
           dates: 'March 15-19, 2018',
           location: 'Code.org, Seattle, WA'
-        }],
-        teachercon: nil
+        }]
       }
     end
 
@@ -229,18 +210,8 @@ module Api::V1::Pd
         id: @regional_partner.id,
         name: @regional_partner.name,
         group: @regional_partner.group,
-        workshops: [],
-        teachercon: nil
-      }
-    end
-
-    def expected_partner_teachercon
-      {
-        id: @regional_partner_teachercon.id,
-        name: @regional_partner_teachercon.name,
-        group: @regional_partner_teachercon.group,
-        workshops: [],
-        teachercon: TC_PHOENIX
+        has_csf: nil,
+        workshops: []
       }
     end
   end

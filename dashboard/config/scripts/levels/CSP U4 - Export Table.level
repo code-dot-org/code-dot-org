@@ -127,7 +127,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# You can export the table too!\r\n\r\nMake a table and then export it to share it with a friend!",
+    "long_instructions": "# You can export the table too!\r\n\r\nMake a table and then export it to share it with a friend!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

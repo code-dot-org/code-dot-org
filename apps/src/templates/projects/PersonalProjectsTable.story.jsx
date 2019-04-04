@@ -5,6 +5,7 @@ import {stubFakePersonalProjectData} from './generateFakeProjects';
 export default storybook => {
   storybook
     .storiesOf('Projects/PersonalProjectsTable', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'Personal Project Table',
@@ -12,6 +13,7 @@ export default storybook => {
         story: () => (
           <PersonalProjectsTable
             personalProjectsList={stubFakePersonalProjectData}
+            canShare={true}
           />
         )
       },
@@ -19,10 +21,8 @@ export default storybook => {
         name: 'Empty Personal Project Table',
         description: 'Table when there are 0 personal projects',
         story: () => (
-          <PersonalProjectsTable
-            personalProjectsList={[]}
-          />
+          <PersonalProjectsTable personalProjectsList={[]} canShare={true} />
         )
-      },
+      }
     ]);
 };

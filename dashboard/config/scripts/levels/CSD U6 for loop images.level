@@ -81,7 +81,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Constructing a for loop from scratch\r\n\r\nNow that you've had some practice modifying for loops to process arrays, let's see if you can do it yourself.\r\n\r\n# Do This\r\n\r\nWe've provided the design elements and an array to start with, but the rest is on you.\r\n\r\n* Add an event handler to respond to the \"thumbsup_button\" being clicked\r\n* Place a _for loop_ inside the event handler\r\n* Modify the exit condition of the _for loop_ so that it will run until it gets to the end of the array `images`\r\n* Inside your _for loop_ change the current image to \"icon://fa-thumbs-o-up\"\r\n\r\n_Challenge: Can you add a second button that turns all of the images back to thumbs down?_",
+    "long_instructions": "# Constructing a for loop from scratch\r\n\r\nNow that you've had some practice modifying for loops to process arrays, let's see if you can do it yourself.\r\n\r\n# Do This\r\n\r\nWe've provided the design elements and an array to start with, but the rest is on you.\r\n\r\n* Add an event handler to respond to the \"thumbsup_button\" being clicked\r\n* Place a _for loop_ inside the event handler\r\n* Modify the exit condition of the _for loop_ so that it will run until it gets to the end of the array `images`\r\n* Inside your _for loop_ change the current image to \"icon://fa-thumbs-o-up\"\r\n\r\n_Challenge: Can you add a second button that turns all of the images back to thumbs down?_",
     "encrypted_examples": "pwYBFjZF2t97sGRgCajpmyhpytx9PNGq7dnQlbBf7iBJLGK/vfXNp/1ilMSL\nVRLGW8b9Q/z33pTT0p+DkqZqkw==\n",
     "contained_level_names": null
   },

@@ -2,6 +2,10 @@ class BlocksController < ApplicationController
   before_action :require_levelbuilder_mode, except: :index
   load_and_authorize_resource find_by: :name
 
+  def index
+    @blocks = Block.load_and_cache_by_pool(params[:pool])
+  end
+
   def new
     @block.pool = params[:pool]
     render 'edit'
@@ -11,10 +15,20 @@ class BlocksController < ApplicationController
     update
   end
 
+  def edit
+    if @block.pool != params[:pool]
+      redirect_to(edit_block_path(pool: @block.pool, id: @block.name))
+    end
+  end
+
   def update
+    if params[:commit] == 'Save as Clone'
+      @block = @block.dup
+    end
+
     @block.update! update_params
     redirect_to(
-      edit_block_path(id: @block.name),
+      edit_block_path(pool: @block.pool, id: @block.name),
       notice: 'Block saved',
     )
   rescue => e

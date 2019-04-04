@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Use the `get only nectar` function to collect the nectar from each flower.",
+    "short_instructions": "Use the `get only nectar` function to collect the nectar from each flower.",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",
@@ -18,7 +18,7 @@
     "skip_instructions_popup": "false",
     "ideal": "7",
     "video_key": "C3_bee_functions",
-    "markdown_instructions": "To make things easier, it's time to learn about functions!\r\n\r\nFrom here on out, you will be using a new *function editor*.  This editor is a separate window that will appear when you go to edit a function.  You won't see all of the code from your function while you're coding in the workspace, but don't worry...it's still there!  \r\n___\r\n\r\nLet's practice with this function that gets nectar only if the bee is at a flower.  To see the code inside, click the blue \"edit\" button!\r\n\r\nUse the `get only nectar` function to collect the nectar from each flower.",
+    "long_instructions": "To make things easier, it's time to learn about functions!\r\n\r\nFrom here on out, you will be using a new *function editor*.  This editor is a separate window that will appear when you go to edit a function.  You won't see all of the code from your function while you're coding in the workspace, but don't worry...it's still there!  \r\n___\r\n\r\nLet's practice with this function that gets nectar only if the bee is at a flower.  To see the code inside, click the blue \"edit\" button!\r\n\r\nUse the `get only nectar` function to collect the nectar from each flower.",
     "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

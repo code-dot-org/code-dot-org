@@ -53,7 +53,6 @@ hr:
         kako bi u potpunosti potvrdili vašu novu e-mail adresu.
       updated: Uspješno ste ažurirali svoj račun.
     sessions:
-      signed_in: ''
       signed_out: Uspješno ste odjavljeni.
     unlocks:
       send_instructions: Za nekoliko minuta zaprimit ćete email poruku sa uputama

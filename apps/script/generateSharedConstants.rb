@@ -8,20 +8,20 @@ require 'json'
 require 'active_support/inflector'
 require 'active_support/core_ext/hash'
 require 'fileutils'
+require 'require_all'
+
 require_relative '../../lib/cdo/shared_constants'
-require_relative '../../lib/cdo/shared_constants/pd/facilitator1819_application_constants'
-require_relative '../../lib/cdo/shared_constants/pd/teacher1819_application_constants'
-require_relative '../../lib/cdo/shared_constants/pd/principal_approval1819_application_constants'
-require_relative '../../lib/cdo/shared_constants/pd/teachercon1819_registration_constants'
-require_relative '../../lib/cdo/shared_constants/pd/shared_workshop_constants'
+autoload_all File.expand_path('../../lib/cdo/shared_constants/pd', File.dirname(__FILE__))
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
 
 def generate_shared_js_file(content, path)
   output = <<CONTENT
-// This is a generated file and SHOULD NOT BE EDITTED MANUALLY!!
+/* eslint-disable */
+
+// This is a generated file and SHOULD NOT BE EDITED MANUALLY!!
 // Contents are generated as part of grunt build
-// Source of truth is lib/cdo/shared_constants.rb
+// Source of truth is lib/cdo/shared_constants.rb and files in lib/cdo/shared_constants/
 
 #{content}
 CONTENT
@@ -68,6 +68,7 @@ end
 
 def main
   shared_content = generate_multiple_constants %w(
+    ARTIST_AUTORUN_OPTIONS
     GAMELAB_AUTORUN_OPTIONS
     LEVEL_KIND
     LEVEL_STATUS
@@ -75,6 +76,8 @@ def main
     POST_MILESTONE_MODE
     ALWAYS_PUBLISHABLE_PROJECT_TYPES
     ALL_PUBLISHABLE_PROJECT_TYPES
+    CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
+    ALLOWED_WEB_REQUEST_HEADERS
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
@@ -84,7 +87,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(COURSES SUBJECTS STATES WORKSHOP_TYPES),
+      %w(COURSES SUBJECTS STATES WORKSHOP_APPLICATION_STATES WORKSHOP_SEARCH_ERRORS WORKSHOP_TYPES),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false
     ),
@@ -93,37 +96,47 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS),
-      source_module: Facilitator1819ApplicationConstants,
+      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS INTERVIEW_QUESTIONS SCOREABLE_QUESTIONS),
+      source_module: Pd::Facilitator1920ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/facilitator1819ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/facilitator1920ApplicationConstants.js"
   )
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS),
-      source_module: Teacher1819ApplicationConstants,
+      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
+      source_module: Pd::Teacher1920ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/teacher1819ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/teacher1920ApplicationConstants.js"
   )
 
   generate_shared_js_file(
     generate_multiple_constants(
       %w(PAGE_LABELS TEXT_FIELDS),
-      source_module: PrincipalApproval1819ApplicationConstants,
+      source_module: Pd::PrincipalApproval1920ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/principalApproval1819ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/principalApproval1920ApplicationConstants.js"
   )
+
   generate_shared_js_file(
     generate_multiple_constants(
       %w(TEACHER_SEAT_ACCEPTANCE_OPTIONS TEXT_FIELDS),
-      source_module: Teachercon1819RegistrationConstants,
+      source_module: Pd::Teachercon1819RegistrationConstants,
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/teachercon1819RegistrationConstants.js"
+  )
+
+  generate_shared_js_file(
+    generate_constants(
+      'SCHOLARSHIP_DROPDOWN_OPTIONS',
+      source_module: Pd::ScholarshipInfoConstants,
+      transform_keys: true
+    ),
+    "#{REPO_DIR}/apps/src/generated/pd/scholarshipInfoConstants.js"
   )
 end
 

@@ -4,7 +4,7 @@ import 'whatwg-fetch';
 import {
   throwOnConsoleErrorsEverywhere,
   throwOnConsoleWarningsEverywhere,
-  clearTimeoutsBetweenTests,
+  clearTimeoutsBetweenTests
 } from './util/testUtils';
 
 var __karmaWebpackManifest__ = [];
@@ -13,7 +13,7 @@ function inManifest(path) {
   return __karmaWebpackManifest__.indexOf(path) >= 0;
 }
 
-var testsContext = require.context("./unit", true, /\.jsx?$/);
+var testsContext = require.context('./unit', true, /\.jsx?$/);
 
 var runnable = testsContext.keys().filter(inManifest);
 
@@ -22,7 +22,7 @@ if (!runnable.length) {
   runnable = testsContext.keys();
 }
 
-describe('unit tests', function () {
+describe('unit tests', function() {
   throwOnConsoleErrorsEverywhere();
   throwOnConsoleWarningsEverywhere();
   clearTimeoutsBetweenTests();

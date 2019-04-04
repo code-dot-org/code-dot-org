@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw two lines east and two lines north to finish the house!",
+    "short_instructions": "Draw two lines east and two lines north to finish the house!",
     "x": "150",
     "y": "350",
     "start_direction": "90",

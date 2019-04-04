@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const styles = {
   main: {
@@ -18,12 +19,6 @@ export default class PromptIcon extends React.Component {
   };
 
   render() {
-    return (
-      <img
-        src={this.props.src}
-        id="prompt-icon"
-        style={styles.main}
-      />
-    );
+    return <img src={this.props.src} id="prompt-icon" style={styles.main} />;
   }
 }

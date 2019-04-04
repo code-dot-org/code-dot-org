@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 
 module RegistrationsControllerTests
@@ -140,13 +139,13 @@ module RegistrationsControllerTests
       refute user.hashed_email == new_hashed_email
     end
 
-    test "single-auth student with no email or parent email can add a parent email" do
+    test "single-auth student without a password can set parent_email without a password" do
       # so it's possible to add a recovery option to their account.  Once they are
       # on multi-auth they can just add an email or another SSO, so this is no
       # longer needed.
-      student = create :student, :unmigrated_clever_sso
-      assert_nil student.hashed_email
+      student = create :student, :clever_sso_provider
       assert_nil student.parent_email
+      assert_nil student.encrypted_password
 
       sign_in student
       put '/users', params: {
@@ -157,6 +156,70 @@ module RegistrationsControllerTests
 
       student.reload
       assert_equal 'parent@example.com', student.parent_email
+    end
+
+    test "single-auth student with a password can set parent_email with a password" do
+      # so it's possible to add a recovery option to their account.  Once they are
+      # on multi-auth they can just add an email or another SSO, so this is no
+      # longer needed.
+      password = 'drowssap'
+      student = create :student, password: password
+      assert_nil student.parent_email
+      refute_nil student.encrypted_password
+
+      sign_in student
+      put '/users', params: {
+        format: 'json',
+        user: {
+          parent_email: 'parent@example.com',
+          current_password: password
+        }
+      }
+      assert_response :no_content
+
+      student.reload
+      assert_equal 'parent@example.com', student.parent_email
+    end
+
+    test "single-auth student with a password cannot set parent_email without a password" do
+      # so it's possible to add a recovery option to their account.  Once they are
+      # on multi-auth they can just add an email or another SSO, so this is no
+      # longer needed.
+      student = create :student, password: 'drowssap'
+      assert_nil student.parent_email
+      refute_nil student.encrypted_password
+
+      sign_in student
+      put '/users', params: {
+        format: 'json',
+        user: {parent_email: 'parent@example.com'}
+      }
+      assert_response :unprocessable_entity
+
+      student.reload
+      assert_nil student.parent_email
+    end
+
+    test "single-auth student with a password cannot set parent_email with the wrong password" do
+      # so it's possible to add a recovery option to their account.  Once they are
+      # on multi-auth they can just add an email or another SSO, so this is no
+      # longer needed.
+      student = create :student, password: 'drowssap'
+      assert_nil student.parent_email
+      refute_nil student.encrypted_password
+
+      sign_in student
+      put '/users', params: {
+        format: 'json',
+        user: {
+          parent_email: 'parent@example.com',
+          current_password: 'wrong-password'
+        }
+      }
+      assert_response :unprocessable_entity
+
+      student.reload
+      assert_nil student.parent_email
     end
 
     # The next several tests explore profile changes for users with or without

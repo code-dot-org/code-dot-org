@@ -8,7 +8,7 @@
     "skin": "gamelab",
     "edit_code": true,
     "embed": "false",
-    "instructions": "What do you think this code will do when it is run? Predict what each console.log() command will print, then run the program to check your predictions.",
+    "short_instructions": "What do you think this code will do when it is run? Predict what each console.log() command will print, then run the program to check your predictions.",
     "start_blocks": "var sprite1 = createSprite(100, 200);\r\nvar sprite2 = createSprite(300, 200);\r\n\r\n// Predict what each command will print\r\nconsole.log(sprite1.y == sprite2.y);\r\nconsole.log(sprite1.x > sprite2.x);\r\nconsole.log(sprite1.x < sprite2.y);\r\n\r\ndrawSprites();",
     "is_k1": "false",
     "skip_instructions_popup": "false",

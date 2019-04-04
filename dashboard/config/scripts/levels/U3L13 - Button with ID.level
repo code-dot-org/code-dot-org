@@ -39,7 +39,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Drag a button out onto the screen and set its text to \"Go forth!\".  Run the program to make sure you can see the button.",
+    "short_instructions": "Drag a button out onto the screen and set its text to \"Go forth!\".  Run the program to make sure you can see the button.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

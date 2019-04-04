@@ -6,7 +6,7 @@
   "user_id": 155,
   "properties": {
     "video_key": "csd_gamelab_conditionals_1",
-    "markdown_instructions": "# Boolean Expressions Video",
+    "long_instructions": "# Boolean Expressions Video",
     "skip_dialog": true,
     "skip_sound": true,
     "instructions_important": "false",

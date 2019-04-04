@@ -1,0 +1,40 @@
+name 'AP_practice_Qs_rqb_7_CSP_4_2_4'
+wrong 'Algorithm A always calculates the correct average, but Algorithm B does not.'
+wrong 'Algorithm B always calculates the correct average, but Algorithm A does not.'
+right 'Both Algorithm A and Algorithm B always calculate the correct average.'
+wrong 'Neither Algorithm A nor Algorithm B calculates the correct average'
+markdown <<MARKDOWN
+There are 32 students in a classroom. Two different algorithms are given for finding the average height of the students.
+
+**Algorithm A**
+Step 1: All students stand. 
+Step 2: A randomly selected student writes his or her height on a card and is seated.
+Step 3: A randomly selected standing student adds his or her height to the value on the card, records the new value on the card, and is seated. The previous value on the card is erased.
+Step 4: Repeat step 3 until no students remain standing.
+Step 5: The sum on the card is divided by 32. The result is given to the teacher.
+
+**Algorithm B**
+Step 1: All students stand. 
+Step 2: Each student is given a card. Each student writes his or her height on the card.
+Step 3: Standing students form random pairs at the same time. Each pair adds the number written on their cards and writes the result on one student\'s card; the other student is seated. The previous value on the card is erased.
+Step 4: Repeat step 3 until one student remains standing.
+Step 5: The sum on the last student\'s card is divided by 32. The result is given to the teacher.
+
+Which of the following statements is true?
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **4.2.4** and Essential Knowledge statements: **4.2.4C**
+<hr>
+ (A) 
+
+<hr>
+ (B) 
+
+<hr>
+ (C) 
+
+<hr>
+ (D) 
+
+MARKDOWN

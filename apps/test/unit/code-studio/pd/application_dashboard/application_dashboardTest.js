@@ -7,7 +7,7 @@ import {
   ALL_PARTNERS_LABEL
 } from '@cdo/apps/code-studio/pd/components/regional_partner_dropdown';
 
-describe("ApplicationDashboard", () => {
+describe('ApplicationDashboard', () => {
   const getReduxStateFor = ({regionalPartners, isWorkshopAdmin}) => {
     const applicationDashboard = mount(
       <ApplicationDashboard
@@ -16,10 +16,13 @@ describe("ApplicationDashboard", () => {
         canLockApplications={false}
       />
     );
-    return applicationDashboard.find('Provider').prop('store').getState();
+    return applicationDashboard
+      .find('Provider')
+      .prop('store')
+      .getState();
   };
 
-  describe("heading/title initially", () => {
+  describe('heading/title initially', () => {
     afterEach(() => {
       sessionStorage.removeItem('regionalPartnerFilter');
     });
@@ -29,23 +32,32 @@ describe("ApplicationDashboard", () => {
         regionalPartners: [{id: 1, name: 'A+ College Ready', group: 1}],
         isWorkshopAdmin: true
       });
-      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql(UNMATCHED_PARTNER_LABEL);
+      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql(
+        UNMATCHED_PARTNER_LABEL
+      );
     });
 
     it("displays 'all' for non-admins with multiple partners", () => {
       const state = getReduxStateFor({
-        regionalPartners: [{id: 1, name: 'A+ College Ready', group: 1}, {id: 2, name: 'WNY Stem Hub', group: 1}],
+        regionalPartners: [
+          {id: 1, name: 'A+ College Ready', group: 1},
+          {id: 2, name: 'WNY Stem Hub', group: 1}
+        ],
         isWorkshopAdmin: false
       });
-      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql(ALL_PARTNERS_LABEL);
+      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql(
+        ALL_PARTNERS_LABEL
+      );
     });
 
-    it("displays partner name for non-admins with one partner", () => {
+    it('displays partner name for non-admins with one partner', () => {
       const state = getReduxStateFor({
         regionalPartners: [{id: 1, name: 'A+ College Ready', group: 1}],
         isWorkshopAdmin: false
       });
-      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql('A+ College Ready');
+      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql(
+        'A+ College Ready'
+      );
     });
   });
 });

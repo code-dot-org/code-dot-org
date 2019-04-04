@@ -6,7 +6,7 @@
   "user_id": 63,
   "properties": {
     "video_key": "C4_function_create",
-    "instructions": "We don't have a video for creating functions, yet. This is a placeholder.",
+    "short_instructions": "We don't have a video for creating functions, yet. This is a placeholder.",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,

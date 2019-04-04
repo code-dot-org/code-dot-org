@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Now use another loop to draw three of those triangles right next to each other.   \r\nYou can nest the code from your last puzzle inside.\r\n",
+    "short_instructions": "Now use another loop to draw three of those triangles right next to each other.   \r\nYou can nest the code from your last puzzle inside.\r\n",
     "x": "125",
     "y": "225",
     "start_direction": "90",
@@ -30,7 +30,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Now use another loop to draw three of those triangles right next to each other.   \r\n\r\nYou can nest the code from your last puzzle inside.",
+    "long_instructions": "Now use another loop to draw three of those triangles right next to each other.   \r\n\r\nYou can nest the code from your last puzzle inside.",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",

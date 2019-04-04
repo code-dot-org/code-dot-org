@@ -7,7 +7,7 @@ sq:
     failure:
       already_authenticated: "Ju jeni të loguar tashmë."
       inactive: "Llogaria juaj nuk është aktivizuar akoma."
-      invalid: "Email-i ose fjalëkalimi është i pavlefshëm."
+      invalid: "Email ose fjalëkalim jo i vlefshëm."
       invalid_token: "Shenjë e pasaktë identifikimi."
       locked: "Llogaria juaj është bllokuar."
       not_found_in_database: "Email ose fjalëkalim jo i vlefshëm."
@@ -39,7 +39,6 @@ sq:
       update_needs_confirmation: "Ju përditësuat llogarinë tuaj në mënyrë të suksesshme, por ne kemi nevojë të verifikojmë adresën tuaj të re të email-it. Ju lutem kontrolloni email-in tuaj dhe klikoni tek link-u i konfirmimit për të përfunduar konfirmimin e adresës tuaj të re të emailit."
       updated: "Ju përditësuat llogarinë tuaj me sukses."
     sessions:
-      signed_in: ""
       signed_out: "Ju dolët me sukses."
     unlocks:
       send_instructions: "Ju do të merrni një email me udhëzime se si të zhbllokoni llogarinë tuaj në pak minuta."

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?",
+    "short_instructions": "A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?",
     "x": "200",
     "y": "150",
     "start_direction": "90",
@@ -23,7 +23,7 @@
     "embed": "false",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?",
+    "long_instructions": "A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

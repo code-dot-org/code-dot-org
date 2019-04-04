@@ -28,7 +28,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "**Challenge:** *\"This puzzle is making me loopy!\"*\r\n\r\nAll of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.",
+    "long_instructions": "**Challenge:** *\"This puzzle is making me loopy!\"*\r\n\r\nAll of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "false",

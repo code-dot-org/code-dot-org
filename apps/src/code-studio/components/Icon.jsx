@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 /**
  * A single icon.
@@ -18,9 +19,7 @@ export default class Icon extends React.Component {
       }
     };
 
-    return (
-      <i className={'fa fa-' + this.props.iconId} style={styles.root}/>
-    );
+    return <i className={'fa fa-' + this.props.iconId} style={styles.root} />;
   }
 }
 

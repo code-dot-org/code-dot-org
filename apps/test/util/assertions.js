@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import {assert} from "./configuredChai";
+import {assert} from './configuredChai';
 
 /**
  * Uses jQuery to locate an element matching the given selector and check that
@@ -7,8 +7,10 @@ import {assert} from "./configuredChai";
  * @param {string} selector
  */
 export function assertVisible(selector) {
-  assert.isTrue($(selector).is(':visible'),
-    `Expected $('${selector}') to be visible but it was not`);
+  assert.isTrue(
+    $(selector).is(':visible'),
+    `Expected $('${selector}') to be visible but it was not`
+  );
 }
 
 /**
@@ -17,8 +19,10 @@ export function assertVisible(selector) {
  * @param {string} selector
  */
 export function assertHidden(selector) {
-  assert.isFalse($(selector).is(':visible'),
-    `Expected $('${selector}') to be hidden but it was visible`);
+  assert.isFalse(
+    $(selector).is(':visible'),
+    `Expected $('${selector}') to be hidden but it was visible`
+  );
 }
 
 /**
@@ -30,7 +34,12 @@ export function assertHidden(selector) {
  *        contain at own depth.
  */
 export function assertOwnProperty(obj, propertyName) {
-  assert(obj.hasOwnProperty(propertyName), "Expected " +
-    obj.constructor.name + " to have a property '" +
-    propertyName + "' but no such property was found.");
+  assert(
+    obj.hasOwnProperty(propertyName),
+    'Expected ' +
+      obj.constructor.name +
+      " to have a property '" +
+      propertyName +
+      "' but no such property was found."
+  );
 }

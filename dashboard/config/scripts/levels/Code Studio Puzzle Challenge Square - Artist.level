@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Draw a square by using the variable length provided.",
+    "short_instructions": "Draw a square by using the variable length provided.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".5",

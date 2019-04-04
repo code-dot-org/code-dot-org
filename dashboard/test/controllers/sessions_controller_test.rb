@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 require 'timecop'
 
@@ -190,31 +189,31 @@ class SessionsControllerTest < ActionController::TestCase
     assert_redirected_to '//test.code.org'
   end
 
-  test "facebook users go to oauth sign out page after logging out" do
+  test "facebook users go to generic oauth sign out page after logging out" do
     student = create(:student, provider: :facebook)
     sign_in student
 
     delete :destroy
 
-    assert_redirected_to '/oauth_sign_out/facebook'
+    assert_redirected_to '/oauth_sign_out/migrated'
   end
 
-  test "google account users go to oauth sign out page after logging out" do
+  test "google account users go to generic oauth sign out page after logging out" do
     student = create(:student, provider: :google_oauth2)
     sign_in student
 
     delete :destroy
 
-    assert_redirected_to '/oauth_sign_out/google_oauth2'
+    assert_redirected_to '/oauth_sign_out/migrated'
   end
 
-  test "microsoft account users go to oauth sign out page after logging out" do
+  test "microsoft account users go to generic oauth sign out page after logging out" do
     student = create(:student, provider: :windowslive)
     sign_in student
 
     delete :destroy
 
-    assert_redirected_to '/oauth_sign_out/windowslive'
+    assert_redirected_to '/oauth_sign_out/migrated'
   end
 
   test "oauth sign out page for facebook" do
@@ -226,13 +225,13 @@ class SessionsControllerTest < ActionController::TestCase
   test "oauth sign out page for google account" do
     get :oauth_sign_out, params: {provider: 'google_oauth2'}
     assert_select 'a[href="https://accounts.google.com/logout"]'
-    assert_select 'h4', 'You used Google Account to sign in. Click here to sign out of Google Account.'
+    assert_select 'h4', 'You used Google to sign in. Click here to sign out of Google.'
   end
 
   test "oauth sign out page for microsoft account" do
     get :oauth_sign_out, params: {provider: 'windowslive'}
     assert_select 'a[href="http://login.live.com/logout.srf"]'
-    assert_select 'h4', 'You used Microsoft Account to sign in. Click here to sign out of Microsoft Account.'
+    assert_select 'h4', 'You used Microsoft to sign in. Click here to sign out of Microsoft.'
   end
 
   test "deleted user cannot sign in" do

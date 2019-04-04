@@ -6,47 +6,55 @@ pl:
       Loops: Pętle
       Functions: Funkcje
       Color: Kolor
-      Brushes: Brushes
+      Brushes: Pędzle
       Math: Matematyka
       Logic: Logika
       Variables: Zmienne
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
-      Conditionals: Warunkowe
+      Number: Liczba
+      String: Łańcuch
+      Image: Obraz
+      Boolean: Wartość logiczna
+      Conditionals: Zdania z warunkami
       Events: Zdarzenia
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Gry/Punkty
+      Comments: Komentarze
+      Category: Kategoria
+      Prebuilt: Wcześniej zbudowany
       Text: Tekst
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
-      Start: Start
-      Groups: Groups
+      Picker: Selektor
+      Comment: Komentarz
+      'Variables ': 'Zmienne '
+      Default: Domyślne
+      Behaviors: Zachowanie
+      Locations: Położenie
+      everythingelse: pozostałe
+      World: Świat
+      Location: Miejsce
+      numbers: liczby
+      Numbers: Liczby
+      Input: Wejście
+      Dancers: Tancerze
+      Groups: Grupy
+      Advanced: Zaawansowane
+      Start: Rozpocznij
+      Music: Muzyka
+      Dancing: Taniec
+      Sprite: Duszek
+      Brush: Pędzel
+      Make Sprite: Utwórz duszka
+      Movement: Ruch
       Booleans: Wartości logiczne
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Funkcjonalny
+      While Events: Podczas zdarzeń
+      Sprite Properties: Właściwości duszka
+      Predefined: Wstępnie zdefiniowane
       test: test
       test2: test2
+      Use These Blocks: Użyj tych bloków
+      Do Not Use: Nie używaj
       Foo: Foo
       Name: Imię/Nazwisko
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: NOWE BLOKI
+      'Functions ': 'Funkcje '
+      Game/Score: Gra/Punkty
       Function: Funkcja

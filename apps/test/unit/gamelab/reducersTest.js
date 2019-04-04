@@ -3,14 +3,15 @@ var createStore = require('../../util/redux').createStore;
 var combineReducers = require('redux').combineReducers;
 import {expect} from '../../util/configuredChai';
 var _ = require('lodash');
-var GameLabInterfaceMode = require('@cdo/apps/gamelab/constants').GameLabInterfaceMode;
+var GameLabInterfaceMode = require('@cdo/apps/gamelab/constants')
+  .GameLabInterfaceMode;
 var gamelabReducers = require('@cdo/apps/gamelab/reducers');
 var commonReducers = require('@cdo/apps/redux/commonReducers');
 var pageConstants = require('@cdo/apps/redux/pageConstants');
 
 var testUtils = require('../../util/testUtils');
 
-describe('gamelabReducer', function () {
+describe('gamelabReducer', function() {
   var store;
   var initialState;
   var CODE = GameLabInterfaceMode.CODE;
@@ -18,12 +19,14 @@ describe('gamelabReducer', function () {
 
   testUtils.setExternalGlobals();
 
-  beforeEach(function () {
-    store = createStore(combineReducers(_.assign({}, commonReducers, gamelabReducers)));
+  beforeEach(function() {
+    store = createStore(
+      combineReducers(_.assign({}, commonReducers, gamelabReducers))
+    );
     initialState = store.getState();
   });
 
-  it('has expected default state', function () {
+  it('has expected default state', function() {
     expect(initialState.interfaceMode).to.equal(CODE);
     expect(initialState.pageConstants).to.be.an.object;
     expect(initialState.pageConstants.assetUrl).to.be.a.function;
@@ -31,10 +34,10 @@ describe('gamelabReducer', function () {
     expect(initialState.pageConstants.isShareView).to.be.undefined;
   });
 
-  describe('action: changeInterfaceMode', function () {
+  describe('action: changeInterfaceMode', function() {
     var changeInterfaceMode = actions.changeInterfaceMode;
 
-    it('returns original object when already in given mode', function () {
+    it('returns original object when already in given mode', function() {
       expect(initialState.interfaceMode).to.equal(CODE);
       store.dispatch(changeInterfaceMode(CODE));
       var newState = store.getState();
@@ -42,7 +45,7 @@ describe('gamelabReducer', function () {
       expect(newState.interfaceMode).to.equal(CODE);
     });
 
-    it('returns a new object when in a new mode', function () {
+    it('returns a new object when in a new mode', function() {
       expect(initialState.interfaceMode).to.equal(CODE);
       store.dispatch(changeInterfaceMode(ANIMATION));
       var newState = store.getState();
@@ -51,71 +54,55 @@ describe('gamelabReducer', function () {
     });
   });
 
-  describe('action: mobileControlsConfig', function () {
-    const { setMobileControlsConfig } = actions;
-    const { defaultMobileControlsConfigState } = gamelabReducers;
-
-    it('returns original object when given the default state', function () {
-      expect(initialState.mobileControlsConfig)
-          .to.equal(defaultMobileControlsConfigState);
-      store.dispatch(setMobileControlsConfig(defaultMobileControlsConfigState));
-      const newState = store.getState();
-      expect(newState).to.equal(initialState);
-      expect(newState.mobileControlsConfig)
-          .to.equal(defaultMobileControlsConfigState);
-    });
-
-    it('returns a new object when the state has changed', function () {
-      const newConfig = {
-        spaceButtonVisible: false,
-        dpadVisible: true,
-        dpadFourWay: false,
-        mobileOnly: false,
-      };
-      expect(initialState.mobileControlsConfig)
-          .to.equal(defaultMobileControlsConfigState);
-      store.dispatch(setMobileControlsConfig(newConfig));
-      const newState = store.getState();
-      expect(newState.mobileControlsConfig).to.equal(newConfig);
-      expect(newState).to.not.equal(initialState);
-    });
-  });
-
-  describe('action: setPageConstants', function () {
+  describe('action: setPageConstants', function() {
     var setPageConstants = pageConstants.setPageConstants;
 
-    it('allows setting assetUrl', function () {
-      var newAssetUrlFunction = function () {};
-      expect(initialState.pageConstants.assetUrl).to.not.equal(newAssetUrlFunction);
-      store.dispatch(setPageConstants({
-        assetUrl: newAssetUrlFunction
-      }));
-      expect(store.getState().pageConstants.assetUrl).to.equal(newAssetUrlFunction);
+    it('allows setting assetUrl', function() {
+      var newAssetUrlFunction = function() {};
+      expect(initialState.pageConstants.assetUrl).to.not.equal(
+        newAssetUrlFunction
+      );
+      store.dispatch(
+        setPageConstants({
+          assetUrl: newAssetUrlFunction
+        })
+      );
+      expect(store.getState().pageConstants.assetUrl).to.equal(
+        newAssetUrlFunction
+      );
     });
 
-    it('allows setting isEmbedView', function () {
+    it('allows setting isEmbedView', function() {
       expect(initialState.pageConstants.isEmbedView).to.be.undefined;
-      store.dispatch(setPageConstants({
-        isEmbedView: false
-      }));
+      store.dispatch(
+        setPageConstants({
+          isEmbedView: false
+        })
+      );
       expect(store.getState().pageConstants.isEmbedView).to.be.false;
     });
 
-    it('allows setting isShareView', function () {
+    it('allows setting isShareView', function() {
       expect(initialState.pageConstants.isShareView).to.be.undefined;
-      store.dispatch(setPageConstants({
-        isShareView: true
-      }));
+      store.dispatch(
+        setPageConstants({
+          isShareView: true
+        })
+      );
       expect(store.getState().pageConstants.isShareView).to.be.true;
     });
 
-    it('does not allow setting other properties', function () {
-      expect(function () {
-        store.dispatch(setPageConstants({
-          theAnswer: 42
-        }));
-      }).to.throw(Error, /Property "theAnswer" may not be set using the pageConstants\/SET_PAGE_CONSTANTS action./);
+    it('does not allow setting other properties', function() {
+      expect(function() {
+        store.dispatch(
+          setPageConstants({
+            theAnswer: 42
+          })
+        );
+      }).to.throw(
+        Error,
+        /Property "theAnswer" may not be set using the pageConstants\/SET_PAGE_CONSTANTS action./
+      );
     });
-
   });
 });

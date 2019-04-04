@@ -17,7 +17,7 @@
     "use_contract_editor": "false",
     "free_play": "false",
     "impressive": "false",
-    "instructions": "Each binary string below represents one row of this picture. \r\n\r\nCan you rearrange them so it draws a smiley face instead of a frown?",
+    "short_instructions": "Each binary string below represents one row of this picture. \r\n\r\nCan you rearrange them so it draws a smiley face instead of a frown?",
     "embed": "false",
     "disable_sharing": "false",
     "contract_highlight": "false",

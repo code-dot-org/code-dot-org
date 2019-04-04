@@ -26,26 +26,26 @@
  */
 
 import Immutable from 'immutable';
-import experiments from "./util/experiments";
+import experiments from './util/experiments';
 import * as redux from 'redux';
 import reduxThunk from 'redux-thunk';
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV !== 'production') {
   var createLogger = require('redux-logger');
 }
 
-
 let reduxStore;
 let globalReducers = {};
-
 
 if (IN_UNIT_TEST) {
   let __oldReduxStore;
   let __oldGlobalReducers;
 
-  module.exports.stubRedux = function () {
+  module.exports.stubRedux = function() {
     if (__oldReduxStore) {
-      throw new Error("Redux store has already been stubbed. Did you forget to call restore?");
+      throw new Error(
+        'Redux store has already been stubbed. Did you forget to call restore?'
+      );
     }
     __oldReduxStore = reduxStore;
     __oldGlobalReducers = globalReducers;
@@ -53,7 +53,7 @@ if (IN_UNIT_TEST) {
     globalReducers = {};
   };
 
-  module.exports.restoreRedux = function () {
+  module.exports.restoreRedux = function() {
     reduxStore = __oldReduxStore;
     globalReducers = __oldGlobalReducers;
     __oldReduxStore = null;
@@ -86,8 +86,11 @@ export function getStore() {
  * Create our store
  */
 function createStoreWithReducers() {
-  return createStore(Object.keys(globalReducers).length > 0 ?
-    redux.combineReducers(globalReducers) : s => s);
+  return createStore(
+    Object.keys(globalReducers).length > 0
+      ? redux.combineReducers(globalReducers)
+      : s => s
+  );
 }
 
 /**
@@ -125,18 +128,17 @@ export function hasReducer(key) {
  * @return {Store} Configured Redux store, ready for use.
  */
 function createStore(reducer, initialState) {
-
   // You have to manually enable debugging, both to keep the logger out
   // of production bundles, and because it causes a lot of console noise and
   // makes our unit tests fail. To enable, append ?enableExperiments=reduxLogging
   // to your url
   var enableReduxDebugging = experiments.isEnabled(experiments.REDUX_LOGGING);
-  if (process.env.NODE_ENV !== "production" && enableReduxDebugging) {
+  if (process.env.NODE_ENV !== 'production' && enableReduxDebugging) {
     var reduxLogger = createLogger({
       collapsed: true,
       // convert immutable.js objects to JS for logging (code copied from
       // redux-logger readme)
-      stateTransformer: (state) => {
+      stateTransformer: state => {
         let newState = {};
 
         for (var i of Object.keys(state)) {
@@ -156,15 +158,25 @@ function createStore(reducer, initialState) {
     // If it's not present then the extension isn't available, and we use
     //   a no-op identity function instead.
     // see https://github.com/zalmoxisus/redux-devtools-extension
-    var devTools = window.devToolsExtension ?
-        window.devToolsExtension() :
-        function (f) { return f; };
+    var devTools = window.devToolsExtension
+      ? window.devToolsExtension()
+      : function(f) {
+          return f;
+        };
 
-    return redux.createStore(reducer, initialState, redux.compose(
+    return redux.createStore(
+      reducer,
+      initialState,
+      redux.compose(
         redux.applyMiddleware(reduxThunk, reduxLogger),
         devTools
-    ));
+      )
+    );
   }
 
-  return redux.createStore(reducer, initialState, redux.applyMiddleware(reduxThunk));
+  return redux.createStore(
+    reducer,
+    initialState,
+    redux.applyMiddleware(reduxThunk)
+  );
 }

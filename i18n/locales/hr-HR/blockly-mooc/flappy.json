@@ -43,7 +43,7 @@
   "setBackgroundUnderwater": "postavi podvodnu scenu",
   "setBackgroundCave": "postavi scenu pećine",
   "setBackgroundSanta": "postavi scenu Djeda Mraza",
-  "setBackgroundTooltip": "Postavi sliku za pozadinu",
+  "setBackgroundTooltip": "Postavlja sliku pozadine",
   "setGapRandom": "postavi nasumični razmak",
   "setGapVerySmall": "postavi veoma mali razmak",
   "setGapSmall": "postavi mali razmak",
@@ -98,7 +98,7 @@
   "setSpeed": "postavi brzinu",
   "setSpeedTooltip": "postavi brzinu nivoa",
   "shareFlappyTwitter": "Pogledaj Flappy igru koju sam osobno napravio uz pomoć @codeorg",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
+  "shareFlappyTwitterDonor": "",
   "shareGame": "Podijeli svoju igru:",
   "soundRandom": "slučajno odabran",
   "soundBounce": "odskočiti",
@@ -128,6 +128,6 @@
   "whenEnterObstacle": "kada prođe prepreku",
   "whenEnterObstacleTooltip": "Izvršava dolje navedene akcije kada Flappy uđe u prepreku.",
   "whenRunButtonClick": "na početku igre",
-  "whenRunButtonClickTooltip": "Izvršava dolje navedene radnje kada igra započne.",
+  "whenRunButtonClickTooltip": "Izvršava dolje navedene radnje na početku igre.",
   "yes": "Da"
 }

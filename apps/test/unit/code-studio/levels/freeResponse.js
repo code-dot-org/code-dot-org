@@ -1,7 +1,7 @@
-import { expect } from 'chai';
+import {expect} from 'chai';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 import FreeResponse from '@cdo/apps/code-studio/levels/freeResponse';
-import { writeSourceForLevel } from '@cdo/apps/code-studio/clientState';
+import {writeSourceForLevel} from '@cdo/apps/code-studio/clientState';
 
 describe('Free Response', () => {
   const levelId = 1047;
@@ -35,7 +35,12 @@ describe('Free Response', () => {
 
     it('shows client-side last attempt when available', () => {
       window.appOptions.scriptName = scriptName;
-      writeSourceForLevel(scriptName, levelId, +new Date(2017, 1, 19), lastAttemptString);
+      writeSourceForLevel(
+        scriptName,
+        levelId,
+        +new Date(2017, 1, 19),
+        lastAttemptString
+      );
 
       const freeResponse = new FreeResponse(levelId);
       expect(freeResponse.getResult().response).to.equal(lastAttemptString);
@@ -43,11 +48,18 @@ describe('Free Response', () => {
 
     it('shows the server-side last attempt when both are available', () => {
       window.appOptions.scriptName = scriptName;
-      writeSourceForLevel(scriptName, levelId, +new Date(2017, 1, 19), lastAttemptString);
+      writeSourceForLevel(
+        scriptName,
+        levelId,
+        +new Date(2017, 1, 19),
+        lastAttemptString
+      );
       textarea.value = otherLastAttemptString;
 
       const freeResponse = new FreeResponse(levelId);
-      expect(freeResponse.getResult().response).to.equal(otherLastAttemptString);
+      expect(freeResponse.getResult().response).to.equal(
+        otherLastAttemptString
+      );
     });
   });
 });

@@ -98,8 +98,8 @@
   native: "Español (España)"
 
 "es-MX":
-  english: "Spanish (Mexico)"
-  native: "Español (México)"
+  english: "Spanish (Latin America)"
+  native: "Español (Latinoamérica)"
 
 "et": "et-EE"
 "et-EE":
@@ -244,7 +244,6 @@
   english: "Kyrgyz"
   native: "Кыргызча"
   webfonts: false
-  debug: true
 
 "lt": "lt-LT"
 "lt-LT":
@@ -366,7 +365,6 @@
 "sk-SK":
   english: "Slovak"
   native: "Slovenčina"
-  debug: true
 
 "sl": "sl-SI"
 "sl-SI":

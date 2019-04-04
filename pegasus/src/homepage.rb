@@ -105,26 +105,86 @@ class Homepage
   end
 
   def self.get_actions
-    [
-      {
-        text: "homepage_action_text_learn",
-        type: "cta_button",
-        url: CDO.studio_url("/courses")
-      },
-      {
-        text: "homepage_action_text_codevideo",
-        type: "video",
-        youtube_id: "nKIu9yen5nc",
-        download_path: "//videos.code.org/social/what-most-schools-dont-teach.mp4",
-        facebook: "https://www.facebook.com/Code.org/videos/10100689712053311/",
-        twitter: "Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321"
-      }
-    ]
+    # Show a Latin American specific video to users browsing in Spanish or
+    # Portuguese to promote LATAM HOC.
+    latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
+    if latam_language_codes.include?(I18n.locale)
+      youtube_id = "EGgdCryC8Uo"
+      download_path = "//videos.code.org/social/latam-hour-of-code-2018.mp4"
+      facebook = "https://www.facebook.com/Code.org/videos/173765420214608/"
+      twitter = "Aprender las ciencias de la computación es fundamental para trabajar en el siglo XXI. Si aprendan crear la tecnología del futuro, podrán controlar sus futuros. ¿Qué vas a crear? #HoraDelCodigo #QueVasACrear https://twitter.com/codeorg/status/1047063784949460995"
+    else
+      youtube_id = "nKIu9yen5nc"
+      download_path = "//videos.code.org/social/what-most-schools-dont-teach.mp4"
+      facebook = "https://www.facebook.com/Code.org/videos/10100689712053311/"
+      twitter = "Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321"
+    end
+
+    hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
+    if hoc_mode == "actual-hoc"
+      [
+        {
+          text: "get_started",
+          type: "cta_button_solid_white",
+          url: "/hourofcode/overview"
+        }
+      ]
+    elsif hoc_mode == "soon-hoc"
+      [
+        {
+          text: "homepage_action_text_join_us",
+          type: "cta_button_solid_white",
+          url: CDO.hourofcode_url("#join")
+        },
+        {
+          text: "homepage_action_text_try_it",
+          type: "cta_button_hollow_white",
+          url: "/hourofcode/overview"
+        }
+      ]
+    elsif hoc_mode == "post-hoc"
+      [
+        {
+          text: "homepage_action_text_learn",
+          type: "cta_button",
+          url: CDO.studio_url("/courses"),
+        },
+        {
+          text: "homepage_action_text_codevideo",
+          type: "video",
+          youtube_id: youtube_id,
+          download_path: download_path,
+          facebook: facebook,
+          twitter: twitter
+        }
+      ]
+    else
+      [
+        {
+          text: "homepage_action_text_join_us",
+          type: "cta_button_solid_white",
+          url: CDO.hourofcode_url("#join")
+        },
+        {
+          text: "homepage_action_text_try_it",
+          type: "cta_button_hollow_white",
+          url: "/learn"
+        },
+        {
+          text: "homepage_action_text_codevideo",
+          type: "video",
+          youtube_id: youtube_id,
+          download_path: download_path,
+          facebook: facebook,
+          twitter: twitter
+        }
+      ]
+    end
   end
 
   def self.get_blocks(request)
     if request.language == "en"
-      @en_blocks_entries ||= [
+      [
         {
           id: "students-en",
           type: "block",
@@ -159,7 +219,7 @@ class Homepage
           color1: "0, 148, 202",
           color2: "89, 185, 220",
           url: "/educate",
-          image: "/images/homepage/ap-feature-2017.jpg",
+          image: "/shared/images/courses/logo_tall_teacher2.jpg",
           links:
             [
               {
@@ -184,7 +244,7 @@ class Homepage
           text: "homepage_slot_text_blurb_hoc",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
-          url: "/learn",
+          url: "/hourofcode/overview",
           image: "/images/mc/2016_homepage_hocblock.jpg",
           links:
             [
@@ -230,7 +290,7 @@ class Homepage
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     else
-      @non_en_blocks_entries ||= [
+      [
         {
           id: "students-nonen",
           type: "blockshort",
@@ -249,7 +309,7 @@ class Homepage
           color1: "0, 148, 202",
           color2: "89, 185, 220",
           url: CDO.studio_url("/courses?view=teacher"),
-          image: "/images/homepage/ap-feature-2017.jpg"
+          image: "/shared/images/courses/logo_tall_teacher2.jpg"
         },
         {
           id: "hoc-nonen",
@@ -258,18 +318,18 @@ class Homepage
           text: "homepage_slot_text_blurb_hoc",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
-          url: "/learn",
+          url: "/hourofcode/overview",
           image: "/images/mc/2016_homepage_hocblock.jpg"
         },
         {
-          id: "flappy-nonen",
+          id: 'dance-nonen',
           type: "blockshort",
-          title: "studiobar_flappy_title",
-          text: "studiobar_flappy_body",
+          title: 'studiobar_dance_title',
+          text: 'studiobar_dance_body',
           color1: "185, 191, 21",
           color2: "209, 213, 103",
-          url: CDO.studio_url("/s/flappy/reset"),
-          image: "/shared/images/courses/logo_tall_flappy.jpg"
+          url: '/dance',
+          image: '/shared/images/courses/logo_tall_dance.jpg'
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     end
@@ -278,38 +338,31 @@ class Homepage
   def self.get_video
     video = get_actions.find {|a| a[:type] == "video"}
 
-    {
-      video_code: video[:youtube_id],
-      download_path: video[:download_path],
-      facebook: {u: video[:facebook]},
-      twitter: {related: 'codeorg', text: video[:twitter]}
-    }
+    if video
+      {
+        video_code: video[:youtube_id],
+        download_path: video[:download_path],
+        facebook: {u: video[:facebook]},
+        twitter: {related: 'codeorg', text: video[:twitter]}
+      }
+    else
+      nil
+    end
   end
 
-  def self.get_census(request)
-    # While showing the professional-learning-2018 banner in "en", use the
-    # census layout (no cycling through hero images) but don't show the census
-    # announcement itself.
-    return request.language == "en", false, nil
+  def self.show_single_hero
+    "create"
   end
 
   def self.get_heroes_arranged(request)
-    show_census_layout, _, _ = Homepage.get_census(request)
-    census_announcement_hero = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/announcement.jpg"}]
+    hero_create = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/announcement.jpg"}]
 
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
     hero_display_time = 13 * 1000
 
-    if rack_env != :production && request.params["preview"]
-      # On non-production, special "?preview=true" flag shows all heroes, and more quickly, for easier previewing
-      heroes_arranged = heroes
-      hero_display_time = 6 * 1000
-    elsif rack_env != :production && request.params["lock-hero"]
-      # For UI tests just lock to the first hero image
-      heroes_arranged = heroes[0, 1]
-    elsif show_census_layout
-      heroes_arranged = census_announcement_hero
+    if show_single_hero == "create"
+      heroes_arranged = hero_create
     else
       # The order alternates person & stat.  Person alternates non-celeb and
       # celeb.  Non-celeb is student or teacher. We open with a celeb, i.e.,
@@ -333,6 +386,16 @@ class Homepage
       end
     end
 
+    if rack_env != :production
+      if request.params["preview"]
+        # On non-production, special "?preview=true" flag shows all heroes, and more quickly, for easier previewing
+        hero_display_time = 6 * 1000
+      elsif request.params["lock-hero"]
+        # For UI tests just lock to the first hero image
+        heroes_arranged = heroes_arranged[0, 1]
+      end
+    end
+
     return heroes_arranged, hero_display_time
   end
 
@@ -343,5 +406,25 @@ class Homepage
       link: "/privacy-may2018",
       link_text: "homepage_below_hero_announcement_link_text"
     }
+  end
+
+  def self.show_curriculum_banner(request)
+    false
+  end
+
+  def self.show_professional_learning_banner(request)
+    request.language == "en"
+  end
+
+  def self.get_dance_stars
+    stars = [
+      "Ace of Base", "A-ha", "Ariana Grande", "Avicii and Aloe Blacc", "Bruce Springsteen", "Calvin Harris",
+      "Carly Rae Jepsen", "Ciara", "Coldplay", "Ed Sheeran", "Imagine Dragons",
+      "J Balvin and Willy William", "Justin Bieber", "Katy Perry", "Keith Urban", "Lady Antebellum", "Lady Gaga",
+      "Los del Río", "Luke Bryan", "Macklemore and Ryan Lewis", "Madonna", "Mark Ronson (ft. Bruno Mars)",
+      "MC Hammer", "Miley Cyrus", "OutKast", "Selena Gomez", "Sia", "Village People", "The Weeknd", "will.i.am",
+      "Yolanda Be Cool"
+    ]
+    DCDO.get("hoc2018_dance_stars", stars)
   end
 end

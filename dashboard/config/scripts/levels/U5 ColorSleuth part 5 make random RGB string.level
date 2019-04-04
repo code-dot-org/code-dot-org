@@ -51,7 +51,7 @@
         "message": "There should be at least 5 calls to setProperty - one for each of the 4 buttons to set the background color initially, then a final call that sets the background-color of one of the buttons to something else."
       }
     ],
-    "markdown_instructions": "We can use the *same technique* to generate a random color.\r\n\r\nall colors are defined as strings with only difference being the numbers that are used.\r\n\r\nWe just learned how to do this for ids.  Same principle for colors it just gets nasty looking.\r\n\r\n\"rgb(\"+random=\", \"+random...",
+    "long_instructions": "We can use the *same technique* to generate a random color.\r\n\r\nall colors are defined as strings with only difference being the numbers that are used.\r\n\r\nWe just learned how to do this for ids.  Same principle for colors it just gets nasty looking.\r\n\r\n\"rgb(\"+random=\", \"+random...",
     "contained_level_names": null
   },
   "published": true,

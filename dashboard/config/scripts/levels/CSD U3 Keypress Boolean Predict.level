@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "markdown_instructions": "# Make a Prediction: keyDown()\r\nThe `keyDown()` block is the first of a new set of blocks that will let us get input from the user. This is the first step on our road to actually making games! See if you can figure out how the `keyDown()` block works.\r\n\r\nWhat do you think will happen when you run the program and press the \"up\" arrow? Write your prediction below and then run the program to see if your prediction was accurate.",
+    "long_instructions": "# Make a Prediction: keyDown()\r\nThe `keyDown()` block is the first of a new set of blocks that will let us get input from the user. This is the first step on our road to actually making games! See if you can figure out how the `keyDown()` block works.\r\n\r\nWhat do you think will happen when you run the program and press the \"up\" arrow? Write your prediction below and then run the program to see if your prediction was accurate.",
     "instructions_important": "false",
     "submittable": "false",
     "allow_user_uploads": "false",

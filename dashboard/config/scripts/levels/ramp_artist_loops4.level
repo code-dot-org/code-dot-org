@@ -34,8 +34,8 @@
     "x": "175",
     "y": "175",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/9304edcb046ee05b1e472df1b5029519=levelbuilder/28300.png",
-    "instructions": "What happens when you add a 72 degree right turn after everything else inside your loop?",
-    "markdown_instructions": "What happens when you add a 72 degree right turn after everything else inside your loop?",
+    "short_instructions": "What happens when you add a 72 degree right turn after everything else inside your loop?",
+    "long_instructions": "What happens when you add a 72 degree right turn after everything else inside your loop?",
     "ideal": "5",
     "hint_prompt_attempts_threshold": 15,
     "contained_level_names": null

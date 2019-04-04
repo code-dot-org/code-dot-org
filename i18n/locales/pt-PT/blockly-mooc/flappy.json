@@ -1,10 +1,10 @@
 {
   "continue": "Continuar",
-  "doCode": "fazer",
+  "doCode": "isto:",
   "elseCode": "se não",
   "endGame": "terminar jogo",
   "endGameTooltip": "Termina o jogo.",
-  "finalLevel": "Parabéns! Resolveste o desafio final.",
+  "finalLevel": "Parabéns! Resolveste o enigma final.",
   "flap": "bater as assas",
   "flapRandom": "bater as assas por vezes aleatórias",
   "flapVerySmall": "bater as assas muito poucas vezes",
@@ -98,7 +98,7 @@
   "setSpeed": "definir velocidade",
   "setSpeedTooltip": "Define a velocidade do nível",
   "shareFlappyTwitter": "Vê o Flappy Bird que eu criei. Eu escrevi isto sozinho no @codeorg",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
+  "shareFlappyTwitterDonor": "",
   "shareGame": "Partilha o teu jogo:",
   "soundRandom": "aleatório",
   "soundBounce": "saltar",
@@ -128,6 +128,6 @@
   "whenEnterObstacle": "quando passar por um obstáculo",
   "whenEnterObstacleTooltip": "Executar as seguintes ações quando o passarinho entrar num obstáculo.",
   "whenRunButtonClick": "quando o jogo começa",
-  "whenRunButtonClickTooltip": "Executar as seguintes ações quando o jogo começar.",
+  "whenRunButtonClickTooltip": "Executa as ações abaixo quando o jogo começar.",
   "yes": "Sim"
 }

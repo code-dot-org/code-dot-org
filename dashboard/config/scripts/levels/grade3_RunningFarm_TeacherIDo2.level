@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Teacher I Do: Show students how to use loops to harvest many crops.",
+    "short_instructions": "Teacher I Do: Show students how to use loops to harvest many crops.",
     "step_speed": "2",
     "ideal": "12",
     "contained_level_names": null

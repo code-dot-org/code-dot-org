@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 37,
   "properties": {
-    "markdown_instructions": "The following link is a resource that presents the process of designing and using classroom assessment techniques:",
+    "long_instructions": "The following link is a resource that presents the process of designing and using classroom assessment techniques:",
     "link_title": "Classroom Assessment Techniques",
     "url": "https://www.cmu.edu/teaching/assessment/assesslearning/CATs.html"
   },

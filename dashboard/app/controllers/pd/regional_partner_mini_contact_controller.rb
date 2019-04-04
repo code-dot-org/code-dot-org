@@ -1,0 +1,25 @@
+class Pd::RegionalPartnerMiniContactController < ApplicationController
+  load_resource :regional_partner_mini_contact, class: 'Pd::RegionalPartnerMiniContact', id_param: :contact_id, only: [:thanks]
+
+  # GET /pd/regional_partner_mini_contacts/new
+  def new
+    view_options(full_width: true, responsive_content: true)
+
+    options = Pd::RegionalPartnerMiniContact.options.camelize_keys
+    options.merge!(
+      {
+        user_name: current_user&.name,
+        email: current_user&.email,
+        zip: current_user&.school_info&.school&.zip || current_user&.school_info&.zip,
+        notes: "I'm interested in Professional Learning!"
+      }
+    )
+
+    @script_data = {
+      props: {
+        options: options,
+        apiEndpoint: "/api/v1/pd/regional_partner_mini_contacts"
+      }.to_json
+    }
+  end
+end

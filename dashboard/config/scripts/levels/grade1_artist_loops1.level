@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "The Artist is trying to draw a line six times, but can't get it right.  Can you help?",
+    "short_instructions": "The Artist is trying to draw a line six times, but can't get it right.  Can you help?",
     "x": "200",
     "y": "50",
     "start_direction": "180",

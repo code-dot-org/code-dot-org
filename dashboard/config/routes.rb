@@ -1,6 +1,10 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  # React-router will handle sub-routes on the client.
+  get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
+  get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#show'
+
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
   resource :pairing, only: [:show, :update]
@@ -14,7 +18,7 @@ Dashboard::Application.routes.draw do
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
   get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
-  get '/dashboardapi/hoc-courses-narrow', to: "home#hoc_courses_narrow"
+  get '/dashboardapi/hoc-courses-teacher-guides', to: "home#hoc_courses_teacher_guides"
   get '/dashboardapi/hoc-courses-challenge', to: "home#hoc_courses_challenge"
 
   get "/home", to: "home#home"
@@ -98,6 +102,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'section_responses'
         get 'section_surveys'
+        get 'section_feedback'
       end
     end
   end
@@ -133,11 +138,13 @@ Dashboard::Application.routes.draw do
 
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
+    post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
     patch '/dashboardapi/users', to: 'registrations#update'
     patch '/users/upgrade', to: 'registrations#upgrade'
     patch '/users/set_age', to: 'registrations#set_age'
     patch '/users/email', to: 'registrations#set_email'
     patch '/users/user_type', to: 'registrations#set_user_type'
+    get '/users/cancel', to: 'registrations#cancel'
     get '/users/clever_takeover', to: 'sessions#clever_takeover'
     get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
     get '/users/auth/:provider/connect', to: 'authentication_options#connect'
@@ -207,14 +214,19 @@ Dashboard::Application.routes.draw do
   get '/lang/:locale', to: 'home#set_locale', user_return_to: '/'
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
-  resources :blocks, constraints: {id: /[^\/]+/}
+  get 'pools', to: 'pools#index', as: 'pools'
+  scope 'pools/:pool' do
+    resources :blocks, constraints: {id: /[^\/]+/}
+  end
   resources :shared_blockly_functions, path: '/functions'
   resources :libraries
 
   resources :levels do
+    get 'get_rubric', to: 'levels#get_rubric'
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
     get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
+    post 'update_properties'
     post 'clone', to: 'levels#clone'
   end
 
@@ -371,10 +383,12 @@ Dashboard::Application.routes.draw do
         end
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
+          post :unstart
           post :end
+          post :reopen
           get  :summary
         end
-        resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
+        resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy, :create]
 
         get :attendance, action: 'index', controller: 'workshop_attendance'
         get 'attendance/:session_id', action: 'show', controller: 'workshop_attendance'
@@ -394,15 +408,14 @@ Dashboard::Application.routes.draw do
       resources :course_facilitators, only: :index
       resources :workshop_organizers, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
+      delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
+      post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
 
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
 
-      # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-      post 'teachercon_registrations', to: 'teachercon1819_registrations#create'
-      post 'teachercon_partner_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
-      post 'teachercon_lead_facilitator_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
-      post 'fit_weekend_registrations', to: 'fit_weekend1819_registrations#create'
+      # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
+      post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
 
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
@@ -411,13 +424,21 @@ Dashboard::Application.routes.draw do
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
       post :regional_partner_contacts, to: 'regional_partner_contacts#create'
+      post :regional_partner_mini_contacts, to: 'regional_partner_mini_contacts#create'
       post :international_opt_ins, to: 'international_opt_ins#create'
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
       get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
+      get 'regional_partners/find', to: 'regional_partners#find'
 
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
-        post :teacher, to: 'teacher_applications#create'
+
+        resources :teacher, controller: 'teacher_applications', only: :create do
+          member do
+            post :send_principal_approval
+            post :principal_approval_not_required
+          end
+        end
         post :principal_approval, to: 'principal_approval_applications#create'
       end
 
@@ -426,12 +447,15 @@ Dashboard::Application.routes.draw do
           get :quick_view
           get :cohort_view
           get :search
-          get :teachercon_cohort
           get :fit_cohort
         end
       end
     end
   end
+
+  get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
+  get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
+  post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
 
   get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
@@ -468,13 +492,9 @@ Dashboard::Application.routes.draw do
     end
 
     # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-    get 'teachercon_registration/partner(/:city)', to: 'teachercon1819_registration#partner'
-    get 'teachercon_registration/lead_facilitator(/:city)', to: 'teachercon1819_registration#lead_facilitator'
-    get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
-    get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
+    get 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#new'
 
-    delete 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#destroy'
-    delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#destroy'
+    delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
@@ -510,6 +530,9 @@ Dashboard::Application.routes.draw do
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
+
+    get 'regional_partner_mini_contact/new', to: 'regional_partner_mini_contact#new'
+    get 'regional_partner_mini_contact/:contact_id/thanks', to: 'regional_partner_mini_contact#thanks'
 
     get 'international_workshop', to: 'international_opt_in#new'
     get 'international_workshop/:contact_id/thanks', to: 'international_opt_in#thanks'
@@ -564,6 +587,7 @@ Dashboard::Application.routes.draw do
       concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
+      get 'users/:user_id/contact_details', to: 'users#get_contact_details'
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
@@ -598,6 +622,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
   post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
@@ -615,4 +640,6 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
+
+  post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 end

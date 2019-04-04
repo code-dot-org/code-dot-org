@@ -8,26 +8,26 @@ class DemigrateFromMultiAuthTest < ActionDispatch::IntegrationTest
   end
 
   test "demigrate_from_multi_auth demigrates a migrated user" do
-    teacher = create :teacher, :with_migrated_email_authentication_option
+    teacher = create :teacher
     assert teacher.migrated?
 
     sign_in teacher
     get '/users/demigrate_from_multi_auth'
-    assert_redirected_to '/home'
-    assert_equal 'Multi-auth is now disabled on your account.', flash[:notice]
+    assert_redirected_to '/users/edit'
+    assert_equal 'The new account experience is now disabled on your account.', flash[:notice]
 
     teacher.reload
     refute teacher.migrated?
   end
 
   test "demigrate_from_multi_auth is a no-op for an unmigrated user" do
-    teacher = create :teacher
+    teacher = create :teacher, :demigrated
     refute teacher.migrated?
 
     sign_in teacher
     get '/users/demigrate_from_multi_auth'
-    assert_redirected_to '/home'
-    assert_equal 'Multi-auth is still disabled on your account.', flash[:notice]
+    assert_redirected_to '/users/edit'
+    assert_equal 'The new account experience is now disabled on your account.', flash[:notice]
 
     teacher.reload
     refute teacher.migrated?

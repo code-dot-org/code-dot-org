@@ -1,5 +1,5 @@
 /* eslint no-unused-vars: "error" */
-import { getStore, registerReducers } from '@cdo/apps/redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import progress from './progressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import stageLock from './stageLockRedux';
@@ -21,7 +21,7 @@ registerReducers({
   isRtl,
   responsive,
   publishDialog,
-  verifiedTeacher,
+  verifiedTeacher
 });
 
 export {getStore};

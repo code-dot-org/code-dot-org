@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Lesson 16 - Assessment 2",
-    "markdown_instructions": "What do people do who need solutions to large computationally-hard problems?",
+    "long_instructions": "What do people do who need solutions to large computationally-hard problems?",
     "encrypted_solution": "xWp0fdJiLHYgKy9RwCm3hBlVG8IifoNspYJ83zTpXh43dOKtovvpSuS4DvQ6\nz2IaRo37ozjgfDqo9ERga1QpGCWPrfoe+x/K361e5AUstmY+lQI+uW86O4rG\nSnOKUdiZ\n",
     "skip_dialog": true,
     "skip_sound": true

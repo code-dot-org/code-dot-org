@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "We have given you most of the code to create a function. However there seems to be something missing. Can you make this function block complete?",
+    "short_instructions": "We have given you most of the code to create a function. However there seems to be something missing. Can you make this function block complete?",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

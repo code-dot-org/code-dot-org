@@ -17,7 +17,7 @@
     "impressive": "false",
     "x": "200",
     "y": "200",
-    "instructions": "Can you figure out how to draw this shape? Here's a hint create a new function with 6 sides called a hexagon. ",
+    "short_instructions": "Can you figure out how to draw this shape? Here's a hint create a new function with 6 sides called a hexagon. ",
     "use_contract_editor": "false"
   }
 }]]></config>

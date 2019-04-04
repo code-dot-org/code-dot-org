@@ -1,20 +1,19 @@
 import sinon from 'sinon';
 import {assertVisible, assertHidden} from '../../util/assertions';
 import showProjectAdmin from '@cdo/apps/code-studio/showProjectAdmin';
-import {enforceDocumentBodyCleanup, replaceOnWindow, restoreOnWindow} from "../../util/testUtils";
+import {enforceDocumentBodyCleanup} from '../../util/testUtils';
 
 describe('showProjectAdmin', () => {
   enforceDocumentBodyCleanup({checkEveryTest: true}, () => {
-    let rootElement, dashboard;
+    let rootElement, project;
 
     beforeEach(() => {
-      dashboard = {};
-      dashboard.project = {};
-      dashboard.project.isPublished = sinon.spy();
-      dashboard.project.isProjectLevel = sinon.stub();
-      dashboard.project.shouldHideShareAndRemix = sinon.stub();
-      dashboard.project.getAbuseScore = sinon.stub();
-      replaceOnWindow('dashboard', dashboard);
+      project = {
+        isPublished: sinon.spy(),
+        isProjectLevel: sinon.stub(),
+        shouldHideShareAndRemix: sinon.stub(),
+        getAbuseScore: sinon.stub()
+      };
 
       rootElement = document.createElement('div');
       rootElement.innerHTML = `
@@ -34,35 +33,33 @@ describe('showProjectAdmin', () => {
 
     afterEach(() => {
       document.body.removeChild(rootElement);
-      restoreOnWindow('dashboard');
     });
-
 
     describe('abuse controls', () => {
       describe('on a project level', () => {
         beforeEach(() => {
-          dashboard.project.isProjectLevel.returns(true);
-          dashboard.project.shouldHideShareAndRemix.returns(true);
+          project.isProjectLevel.returns(true);
+          project.shouldHideShareAndRemix.returns(true);
         });
         testAbuseControlBehaviors();
       });
 
       describe('on a level with a share button', () => {
         beforeEach(() => {
-          dashboard.project.isProjectLevel.returns(false);
-          dashboard.project.shouldHideShareAndRemix.returns(false);
+          project.isProjectLevel.returns(false);
+          project.shouldHideShareAndRemix.returns(false);
         });
         testAbuseControlBehaviors();
       });
 
       describe('on a non-project level with no share button', () => {
         beforeEach(() => {
-          dashboard.project.isProjectLevel.returns(false);
-          dashboard.project.shouldHideShareAndRemix.returns(true);
+          project.isProjectLevel.returns(false);
+          project.shouldHideShareAndRemix.returns(true);
         });
 
         it('shows no abuse controls', () => {
-          showProjectAdmin();
+          showProjectAdmin(project);
           assertHidden('.admin-report-abuse');
           assertHidden('.admin-abuse');
           assertHidden('.admin-abuse-score');
@@ -72,15 +69,15 @@ describe('showProjectAdmin', () => {
 
       function testAbuseControlBehaviors() {
         describe('with zero abuse score', () => {
-          beforeEach(() => dashboard.project.getAbuseScore.returns(0));
+          beforeEach(() => project.getAbuseScore.returns(0));
 
           it('shows report abuse link', () => {
-            showProjectAdmin();
+            showProjectAdmin(project);
             assertVisible('.admin-report-abuse');
           });
 
           it('does not show reset abuse control', () => {
-            showProjectAdmin();
+            showProjectAdmin(project);
             assertHidden('.admin-abuse');
             assertHidden('.admin-abuse-score');
             assertHidden('.admin-abuse-reset');
@@ -88,15 +85,15 @@ describe('showProjectAdmin', () => {
         });
 
         describe('with a positive abuse score', () => {
-          beforeEach(() => dashboard.project.getAbuseScore.returns(10));
+          beforeEach(() => project.getAbuseScore.returns(10));
 
           it('does not show report abuse link', () => {
-            showProjectAdmin();
+            showProjectAdmin(project);
             assertHidden('.admin-report-abuse');
           });
 
           it('shows reset abuse control', () => {
-            showProjectAdmin();
+            showProjectAdmin(project);
             assertVisible('.admin-abuse');
             assertVisible('.admin-abuse-score');
             assertVisible('.admin-abuse-reset');

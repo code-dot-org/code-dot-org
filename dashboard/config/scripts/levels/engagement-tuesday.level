@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "# Day 2: Engagement\r\n\r\nThink of one participant engagement challenge the lead facilitators faced today.\r\n\r\n* What was the challenge?\r\n* How did the lead facilitator(s) manage that challenge?\r\n* How would you approach this challenge in a session you lead?\r\n\r\n",
+    "long_instructions": "# Day 2: Engagement\r\n\r\nThink of one participant engagement challenge the lead facilitators faced today.\r\n\r\n* What was the challenge?\r\n* How did the lead facilitator(s) manage that challenge?\r\n* How would you approach this challenge in a session you lead?\r\n\r\n",
     "parent_level_id": 14299
   },
   "published": true,

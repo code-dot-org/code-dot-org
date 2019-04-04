@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "Can you add to this code so that it calculates how many hours there are in \"age\" years?",
+    "short_instructions": "Can you add to this code so that it calculates how many hours there are in \"age\" years?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

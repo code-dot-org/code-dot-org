@@ -2,48 +2,50 @@ name 'OPD-K5 Stage3aGo'
 title 'title'
 description 'description here'
 markdown <<MARKDOWN
-# Resources
+# Sequencing > Unplugged Lessons
 
-**1. Review "Happy Maps" Lesson Plan:** [Course A](https://levelbuilder.code.org/curriculum/coursea/5/Teacher)  
+As we mentioned, we like to introduce computer science topics with unplugged lessons. Then, we use bridging activities to transition into the online lessons later. Beginning with these unplugged lessons introduces concepts in a fun and friendly way. Then, students already feel familiar with the concept by the time that they get to the online lessons, and can relate the online lessons back to the unplugged activity.
+
+For these programming stages that you will be going through, we will also start with examples of unplugged lessons. Read through the following lesson plan and watch the accompanying videos, thinking about how you would implement this in your classroom with your students.
+<br/>
+***
+<br/>
+We will start with sequencing. At its base, this style of computer science is about **sequences**. A sequence is a special ordering that something follows. In these puzzles, we want to find the right sequence of instructions to tell the computer what to do. This list of instructions is called an **algorithm**.  Once that algorithm gets coded up into a language that can be read by a machine, it becomes a **program**.
+<br/>
+<br/>
+
+**1. Review the "[Happy Maps](https://curriculum.code.org/csf/coursea/5/)" Lesson Plan from Course A.**
+<br/>
+Remember that Course A is meant for Kindergarten students. Sequencing comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.
+
 <br/>
 
 **2. Watch the student video: Happy Maps**
+<br/>
+This is a video that you would show your students to help introduce the concept of sequencing and kick off the unplugged lesson.
 
 <iframe width="640" height="390" src="https://www.youtube.com/embed/hrnhiKAQ1_k" frameborder="0" allowfullscreen></iframe>
 
 [Can't see the video? Click here](http://videos.code.org/2014/C1-happy-maps-unplugged.mp4)  
 
-<br/><br/>
-
+<br/>
 
 **3. Watch the teacher video: How to facilitate "Happy Maps"**
+<br/>
+This video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson. 
 <iframe width="640" height="390" src="https://www.youtube.com/embed/En6Bshuqljg" frameborder="0" allowfullscreen></iframe>  
 
-<br/><br/>
+<br/>
 
 
 **4. Review other unplugged lessons that introduce sequencing:**
 
-- Course A: [Real-Life Algorithms: Plant a Seed](https://levelbuilder.code.org/curriculum/coursea/3/Teacher)
-- Course B: [My Robotic Friends](https://levelbuilder.code.org/curriculum/courseb/6/Teacher)  
+- Course A (Kindergarten): [Real-Life Algorithms: Plant a Seed](https://curriculum.code.org/csf-18/coursea/3/)
+- Course B (Grade 1): [My Robotic Friends Jr.](https://curriculum.code.org/csf-18/coursea/3/), [Move It, Move It](https://curriculum.code.org/csf-18/courseb/1/)
+- Course C (Grade 2): [Paper Planes](https://curriculum.code.org/csf-18/coursec/4/)
+- Course D (Grade 3): [Graph Paper Programming](https://curriculum.code.org/csf-18/coursed/1/)
+- Course E, Course F (Grades 4, 5): [My Robotic Friends](https://curriculum.code.org/csf-18/coursee/1/)
 
-
-## Online Activities
-
-Explore more of Course A online:
-
-- [Lesson 4](https://studio.code.org/s/courseA/stage/4/puzzle/1)
-- [Lesson 6](https://studio.code.org/s/courseA/stage/6/puzzle/1)
-- [Lesson 9](https://studio.code.org/s/courseA/stage/9/puzzle/1)
-- [Lesson 10](https://studio.code.org/s/courseA/stage/10/puzzle/1)
-- [Lesson 12](https://studio.code.org/s/courseA/stage/12/puzzle/1)
-
-Explore Course C sequencing stages (for readers):
-
-- [Lesson 2](https://studio.code.org/s/courseC/stage/2/puzzle/1)
-- [Lesson 3](https://studio.code.org/s/courseC/stage/3/puzzle/1)
-- [Lesson 5](https://studio.code.org/s/courseC/stage/5/puzzle/1)
-- [Lesson 6](https://studio.code.org/s/courseC/stage/6/puzzle/1)
 
 ---
 
@@ -56,4 +58,8 @@ Explore Course C sequencing stages (for readers):
 After commenting in the forum, return here and click below to move on.
 
 In the next stage, we'll add some complexity to our programs through the addition of loops.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
 MARKDOWN

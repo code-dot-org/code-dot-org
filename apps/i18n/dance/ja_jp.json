@@ -1,0 +1,14 @@
+{
+  "danceFeedbackNeedNewDancer": "ダンサーを作りましょう。",
+  "danceFeedbackNoDancers": "ダンサーがいません。",
+  "danceFeedbackNoBackground": "背景エフェクトを追加しましょう。",
+  "danceFeedbackTooManyDancers": "注意して！`新しくつくる`ブロックを`2小節ごとに`の中に置けば、たくさんのダンサーを作れます。",
+  "danceFeedbackUseSetSize": "左のダンサーを小さくするのに 'backup_dancer2 おおきさをセット' ブロックを使いましょう。",
+  "danceFeedbackUseSetTint": "ダンサーの色合いを変更するには`色合いをセット`ブロックを使いましょう。",
+  "danceFeedbackUseStartMapping": "<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"スケール\"</title><title name=\"RANGE\">\"ベース\"</title></block></xml> ブロックをプログラムに追加してみましょう。",
+  "danceFeedbackStartNewMove": "4小節たっても、ムースは新しいダンスをしませんでした。",
+  "danceFeedbackNeedDifferentDance": "違うダンスを使いましょう。",
+  "danceFeedbackNeedEveryTwoMeasures": "'すべての2小節'ブロックを使いましょう。",
+  "danceFeedbackNeedMakeANewDancer": "`新しくつくる`ブロックを使って2番目のダンサーを作りましょう。",
+  "measure": "小節:"
+}

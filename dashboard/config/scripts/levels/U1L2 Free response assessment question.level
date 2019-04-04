@@ -7,7 +7,7 @@
   "properties": {
     "title": "Assessment: Sending Binary Messages",
     "placeholder": "Enter your response here.",
-    "markdown_instructions": "Provide an example of a question that could NOT be answered with a single binary message. Explain why this is the case, making reference to the definition of a binary message. \r\n\r\n",
+    "long_instructions": "Provide an example of a question that could NOT be answered with a single binary message. Explain why this is the case, making reference to the definition of a binary message. \r\n\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "instructions_important": "false",

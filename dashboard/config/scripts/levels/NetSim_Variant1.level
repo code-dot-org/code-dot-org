@@ -7,7 +7,7 @@
   "properties": {
     "skin": "netsim",
     "skip_instructions_popup": "true",
-    "instructions": "NetSim: Variant 1 allows students to manually work out the timing of sending bits back and forth.",
+    "short_instructions": "NetSim: Variant 1 allows students to manually work out the timing of sending bits back and forth.",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
     "show_add_router_button": "false",

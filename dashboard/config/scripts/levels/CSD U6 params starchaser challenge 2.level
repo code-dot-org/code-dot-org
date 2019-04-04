@@ -185,7 +185,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Star Chaser\r\n\r\nNow that you have a working game, you can challenge yourself with some different features.\r\n\r\n# Do This\r\n* Make the player go back to the middle of the screen when the left button is pressed.",
+    "long_instructions": "# Star Chaser\r\n\r\nNow that you have a working game, you can challenge yourself with some different features.\r\n\r\n# Do This\r\n* Make the player go back to the middle of the screen when the left button is pressed.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

@@ -9,9 +9,10 @@ Scenario: My Projects
   And I wait until element "#uitest-view-full-list" is visible
   And element "a[href='/projects/artist/new']" is visible
   And element "a[href='/projects/gumball/new']" is not visible
+  And I wait until element "#react-personal-projects" contains text "You currently have no projects."
   Then I see no difference for "page load"
 
-  When I click selector "#uitest-view-full-list"
+  When I press "uitest-view-full-list"
   And I wait until element "a[href='/projects/gumball/new']" is visible
   Then I see no difference for "view full list of new project types"
   And I close my eyes

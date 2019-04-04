@@ -1,0 +1,15 @@
+{
+  "danceFeedbackNeedNewDancer": "Musíš vytvoriť tanečníka.",
+  "danceFeedbackNoDancers": "Nemáš žiadnych tanečníkov.",
+  "danceFeedbackNoBackground": "Potrebuješ pridať efekt v pozadí.",
+  "danceFeedbackTooManyDancers": "Buď opatrný! Ak vložíš blok `vytvor` dovnútra bloku `každé 2 takty`, tak vytvoriš veľa tanečníkov.",
+  "danceFeedbackUseSetSize": "Použi blok `nastav backup_dancer2 veľkosť na...`, aby si toho tanečníka zmenšil.",
+  "danceFeedbackUseSetTint": "Použi blok `nastav sfarbenie` na zmenu farby tanečníka.",
+  "danceFeedbackUseStartMapping": "Vyskúšaj pridať blok <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> do tvojho programu.",
+  "danceFeedbackStartNewMove": "Tvoj tanečník po štvrtom takte neurobil nový pohyb.",
+  "danceFeedbackNeedDifferentDance": "Musíš použiť iný tanec.",
+  "danceFeedbackNeedEveryTwoMeasures": "Uisti sa, že používaš blok \"každé dva takty\"",
+  "danceFeedbackNeedMakeANewDancer": "Použi blok `vytvor`, aby si vytvoril druhého tanečníka.",
+  "danceFeedbackKeyEvent": "",
+  "measure": "Takt:"
+}

@@ -3,11 +3,11 @@ es-MX:
   data:
     game:
       name:
-        Unplug1: Introducción al Arte de las Ciencias de la Computación
+        Unplug1: Introducción a Ciencias de la Computación
         Maze: El laberinto
         Multi: Materias de elección múltiple
         Unplug2: Pensamiento computacional
-        Unplug3: Programación de hoja cuadriculada
+        Unplug3: Programación con Papel Cuadriculado
         Artist: El artista
         Unplug4: Algoritmos
         Artist2: El artista 2
@@ -19,7 +19,7 @@ es-MX:
         Farmer2: El granjero 2
         Unplug8: Liberación abstracta
         Artist4: El artista 4
-        Unplug9: Programación bajo presión
+        Unplug9: Programación de relevos
         Farmer3: El granjero 3
         Unplug10: Internet
         Artist5: El artista 5
@@ -38,7 +38,7 @@ es-MX:
         NetSim: Simulador de Internet
         Custom: Artista
         CustomStudio: Laboratorio de juegos
-        Gamelab: Game Lab
+        Gamelab: Laboratorio de juegos
     trophy:
       name:
         Bronze: Bronce
@@ -320,17 +320,17 @@ es-MX:
           estés listo.
         jigsaw_1: Haz clic en el bloque
         jigsaw_2: Arrastra el bloque al objetivo
-        jigsaw_3: Acomoda los bloques para formar una imagen
-        jigsaw_4: Acomoda los bloques para formar una imagen
-        jigsaw_5: Acomoda los bloques para formar una imagen
-        jigsaw_6: Acomoda los bloques para formar una imagen
-        jigsaw_7: Acomoda los bloques para formar una imagen
-        jigsaw_8: Acomoda los bloques para formar una imagen
-        jigsaw_9: Acomoda los bloques para formar una imagen
-        jigsaw_10: Acomoda los bloques para formar una imagen
-        jigsaw_11: Acomoda los bloques para formar una imagen
-        jigsaw_12: Acomoda los bloques para formar una imagen
-        jigsaw_13: "¡Arregla el puzzle!"
+        jigsaw_3: Acomoda los bloques para formar la imagen
+        jigsaw_4: Acomoda los bloques para formar la imagen
+        jigsaw_5: Acomoda los bloques para formar la imagen
+        jigsaw_6: Acomoda los bloques para formar la imagen
+        jigsaw_7: Acomoda los bloques para formar la imagen
+        jigsaw_8: Acomoda los bloques para formar la imagen
+        jigsaw_9: Acomoda los bloques para formar la imagen
+        jigsaw_10: Acomoda los bloques para formar la imagen
+        jigsaw_11: Pon estos bloques en orden de número
+        jigsaw_12: Pon estos bloques en orden de número
+        jigsaw_13: "¡Arregla el desafío!"
         mazestep_1: Aquí va la descripción del paso del laberinto
         mazestep_2: Aquí va la descripción del paso del laberinto
         mazestep_3: Aquí va la descripción del paso del laberinto
@@ -546,7 +546,7 @@ es-MX:
         hoc_wrapup: Repaso de la Hora del Código
         Unplug1: "¿Qué son las CC?"
         Unplug2: Pensamiento computacional
-        Unplug3: Programación de hoja cuadriculada
+        Unplug3: Programación con Papel Cuadriculado
         Unplug4: Algoritmos
         Unplug5: Funciones
         Unplug6: Condicionales
@@ -559,7 +559,7 @@ es-MX:
         C1_moveitmoveit_unplugged: Muévelo, Muévelo
         C1_bigevent_unplugged: El gran evento
         C1_getting_loopy: Girar y girar
-        C1_pair_programming: Programación de pares
+        C1_pair_programming: Programación en parejas
         C1_maze_intro_sequencing: Introducción a Secuenciamiento del Laberinto
         C1_maze_debugging: Depuración del Laberinto
         C1_bee_level_intro: Nivel de Abeja - Introducción
@@ -581,10 +581,10 @@ es-MX:
         C2_bee_debugging: Depuración abeja
         C2_bee_conditionals: Condiciones de la abeja
         C2_playlab_createstory: Laboratorio de Juego - Crear una Historia
-        C2_graph_paper: Programación de hoja cuadriculada
+        C2_graph_paper: Programación con Papel Cuadriculado
         C2_conditionals_with_cards: Condicionales
         C2_binary_bracelets: Pulseras binarias
-        C2_relay_programming: Programación bajo presión
+        C2_relay_programming: Programación de relevos
         C2_paper_airplanes: Aviones de Papel
         C2_digital_footprint: Tu huella dactilar
         C2_digital_footprint_v2: Tu huella dactilar
@@ -625,24 +625,24 @@ es-MX:
         C4_unplugged_forloops: Bucles Para
         C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
-        CSF_a_b_artist_loops: Loops in Artist
+        CSF_a_b_artist_loops: Loops en Artista
         CSF_artist_angles: Ángulos en Artist
         CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El
-          recolector'
-        CSF_collector_repeat_loops: Bucles de repetición de colector
+          Recolector'
+        CSF_collector_repeat_loops: Bucles de repetición del Recolector
         CSF_collector_text_blocks: 'Fundamentos de las Ciencias de la Computación:
-          El recolector'
+          El Recolector'
         CSF_create_functions: Crear funciones
         CSF_debugging_k1_blocks: Depuración
         CSF_debugging_text_blocks: Depuración
-        CSF_EF_cs_matters: Importancia de las Ciencias de la Computación
+        CSF_EF_cs_matters: Asuntos de las Ciencias de la Computación
         CSF_maze_intro_k1_blocks: Introducción a Code Studio
         CSF_maze_intro_text_blocks: Introducción a Code Studio
         CSF_my_robotic_friends: Mis amigos robóticos
         CSF_Power_of_Words: Poder de las palabras
         CSF_Super_Digital_Citizen: Super ciudadano digital
-        CSF_stevie_big_project: Stevie y el gran proyecto
-        CSF_unspotted_bugs: Errores desapercibidos
+        CSF_stevie_big_project: Stevie y el Gran Proyecto
+        CSF_unspotted_bugs: Errores no detectados
         CSF_zuck_loops_short: Bucles de repetición
         frozen_intro: Prueba la Hora del Código
         frozen_loops: Introducción a los bucles
@@ -671,53 +671,18 @@ es-MX:
           televisión y películas?"
         csd_external_waze_data: "¿Por qué hay tantos usuarios obsesionados con Waze?"
         csd_gamelab_animation_tab: La pestaña de animación
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Velocidad
         csd_weblab_intro_1: Introducción a Web Lab - Parte 1
         csd_weblab_intro_2: Introducción a Web Lab - Parte 2
         csd_weblab_css_1: Introducción a CSS - Parte 1
         csd_weblab_css_2: Introducción a CSS - Parte 2
         csd_weblab_intro_3: Introducción a Web Lab - Parte 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introducción a las Funciones
         csp_applab_functions_parameters: Funciones con parámetros
         csp_applab_loops: Bucles
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
-          & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Un poco más de píxeles
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
+        csp_cs_is_changing_everything: Las Ciencias de la Computación están cambiando
+          todo
         csp_pixelation_color_1: Reproductor Color pixelación - parte 1
         csp_pixelation_color_2: Reproductor Color pixelación - parte 2
         csp_pixelation_color_3: Reproductor Color pixelación - parte 3
@@ -725,9 +690,6 @@ es-MX:
         csp_U1L14_tipstricks: Unidad 1 lección 14 consejos para profesor & trucos
         csp_textcompression: Widget de compresión de texto
         csp_textcompression_new: Widget de compresión de texto
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS en álgebra - introducción
         alg_2_eval_block: CS en álgebra - bloques de evaluación
         alg_3_pemdas: CS en álgebra - orden de operaciones
@@ -807,26 +769,55 @@ es-MX:
         CSF_skinOverview_Harvester: El recolector
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_bb8_loops_C-F: Loops con BB-8
         CSF_harvester_skinOverview_K-1: El recolector
-        CSF_harvester_loops_K1: Ciclos en Harvester
-        CSF_scrat_loops_K1: Ciclos en Ice Age
-        CSF_scrat_loops_CF: Ciclos en Ice Age
-        CSF_if_allskins: El Bloque If
-        CSF_ifelse_allskins: Usando Bloques "If/Else"
-        CSF_ifelseifelse_allskins: Usando Bloques "If/ElseIf/Else"
+        CSF_harvester_loops_K1: Bucles en la cosechadora
+        CSF_scrat_loops_K1: Bucles de la Era de Hielo
+        CSF_scrat_loops_CF: Bucles de la Era de Hielo
+        CSF_if_allskins: El Bloque si
+        CSF_ifelse_allskins: Usando Bloques "Si/Más"
+        CSF_ifelseifelse_allskins: Usando Bloques Si/El mismo/Más
         CSF_loops_AB: Bucles
         csd_gamelab_booleans: Expresiones Booleanas
         csd_gamelab_conditional_statements: Sentencias Condicionales
-        csd_gamelab_if_else: Sentencias If/Else
-        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
-        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
-        CDEF_Video_SpritesInAction: Sprites in Action
-        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
+        csd_gamelab_if_else: Sentencias Si/Más
+        CSF_SpriteLabIntro_CDEF: Esto es Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: Cómo hacer un sprite en Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites en acción
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acción
+        CSF_StarWars_ProjectIntro: Introducción al Proyecto de Star Wars
+        mc_2018_intro: 'Minecraft: Viaje Acuático Introducción'
+        MC_2018_loops: 'Minecraft: Viaje Acuático Repetir Hasta'
+        mc_2018_conditionals: 'Minecraft: Viaje Acuático Condicionales'
+        mc_2018_closing: 'Minecraft: Viaje Acuático Felicitaciones'
+        hoc_dance_warmup: Fiesta de Baile - Calentamiento
+        hoc_dance_events: Fiesta de Baile - Eventos
+        hoc_dance_properties: Fiesta de Baile - Propiedades
+        hoc_dance_congrats: Fiesta de Baile - ¡A la fiesta!
+        c_and_c_great_to_create: Crear y jugar limpio es lo mejor
+        c_and_c_digital_sharing: Colaboración digital
+        elem_pd_2: Informática de la Escuela Primaria - vídeo PD 2/2
+        what_is_cs: "¿Qué son las Ciencias de la computación?"
+        repeat_block: Usando el bloque de repetición
+        lesson_planning: Plan de clases
+        opd_closing: 'Enseñando Fundamentos CS: Cerrar y Siguiente pasos'
+        why_unplugged_lessons: Obteniendo "desconectado"
+        writing_first_program: Creando tu primer programa informático
+        conditionals_with_cards: Lección sin conexión en acción - Condicionales con
+          tarjetas
+        songwriting_with_functions: Lección sin conexión en Acción - Songwriting con
+          funciones
+        what_is_an_event: "¿Qué es un evento?"
+        teaching_cs_pair_programming: 'Enseñando Fundamentos CS: Programación de Pares'
+        teaching_problem_solving: 'Enseñando Fundamentos CS: Enseñando resolución
+          de problemas'
+        csd_applab_designmode: 'Descubrimientos de CS: Laboratorio de aplicación -
+          modo de diseño'
+        csd_pair_programming: Programación en parejas
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
-        run: Haz clic en "Ejecutar" para probar tu programa
+        run: Dale a "Ejecutar" para probar el programa.
         watch_again: Haz clic aquí para ver el video otra vez
         gray_block_explanation: Los bloques que están de color gris no se pueden eliminar.
           ¿Puedes resolver el rompecabezas de todas formas?

@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Icon from './Icon';
 
 /**
@@ -62,10 +63,12 @@ export default class IconListEntry extends React.Component {
         highlightedName = this.highlightSearch(this.props.iconId);
       }
 
-      iconLabel = (<div>
-        <p style={styles.iconLabel}>{highlightedName}</p>
-        {altMatchText}
-      </div>);
+      iconLabel = (
+        <div>
+          <p style={styles.iconLabel}>{highlightedName}</p>
+          {altMatchText}
+        </div>
+      );
     }
 
     const rootStyles = {
@@ -83,7 +86,7 @@ export default class IconListEntry extends React.Component {
         title={this.props.iconId}
         onClick={this.props.assetChosen.bind(null, asset)}
       >
-        <Icon iconId={this.props.iconId}/>
+        <Icon iconId={this.props.iconId} />
         {iconLabel}
       </div>
     );

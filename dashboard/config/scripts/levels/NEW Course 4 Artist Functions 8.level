@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "We have created a new function for you called \"draw a triangle\".  Can you edit the function definition to draw a triangle with 100 pixel sides?",
+    "short_instructions": "We have created a new function for you called \"draw a triangle\".  Can you edit the function definition to draw a triangle with 100 pixel sides?",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -30,7 +30,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "We have created a new function for you called `draw a triangle`.  Can you edit the function definition to draw a triangle with 100 pixel sides?",
+    "long_instructions": "We have created a new function for you called `draw a triangle`.  Can you edit the function definition to draw a triangle with 100 pixel sides?",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",

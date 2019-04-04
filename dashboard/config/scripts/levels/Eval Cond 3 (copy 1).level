@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Can you write a conditional that checks the variable \"age\" and returns \"Old enough to vote and drive\" if age > 17, \"Old enough to drive\" if age is > 15, and \"Can't drive or vote\" if neither conditions is true. Hint: The first condition to return \"true\" wins - make sure you put your conditions in the right order.",
+    "short_instructions": "Can you write a conditional that checks the variable \"age\" and returns \"Old enough to vote and drive\" if age > 17, \"Old enough to drive\" if age is > 15, and \"Can't drive or vote\" if neither conditions is true. Hint: The first condition to return \"true\" wins - make sure you put your conditions in the right order.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

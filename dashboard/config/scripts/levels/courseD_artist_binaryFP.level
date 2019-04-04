@@ -19,7 +19,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "instructions": "Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we start to get creative with the bits!",
+    "short_instructions": "Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we start to get creative with the bits!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

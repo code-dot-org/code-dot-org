@@ -53,7 +53,6 @@ da:
         endeligt at bekræfte din nye e-mailadresse.
       updated: Du har nu opdateret din konto.
     sessions:
-      signed_in: ''
       signed_out: Logget ud.
     unlocks:
       send_instructions: Du vil modtage en e-mail med instruktioner om, hvordan du

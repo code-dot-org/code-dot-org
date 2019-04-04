@@ -7,13 +7,21 @@ Scenario: Version warning announcement on course and unit overview pages
 
   When I am on "http://studio.code.org/courses/csp-2018"
   And I wait to see ".uitest-CourseScript"
-  And element "#version-selector" is visible
+  And element "#version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" does not exist
+
+  # students must be assigned or have progress to view older script versions
+
+  Given I am assigned to script "csp3-2017"
+  When I am on "http://studio.code.org/courses/csp-2018"
+  And I wait to see ".uitest-CourseScript"
+  And element "#version-selector" is visible
+  Then element ".announcement-notification:contains(newer version)" is visible
 
   When I am on "http://studio.code.org/s/csp2-2018"
   And I wait until element "#script-title" is visible
   And element "#version-selector" is not visible
-  Then element ".announcement-notification:contains(newer version)" does not exist
+  Then element ".announcement-notification:contains(newer version)" is visible
 
   # generate some progress in csp-2017
 
@@ -46,14 +54,21 @@ Scenario: Version warning announcement on course and unit overview pages
   And element "#version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is not visible
 
+  # The course overview warning banner also stays closed
+  When I am on "http://studio.code.org/courses/csp-2018"
+  And I wait to see ".uitest-CourseScript"
+  And element "#version-selector" is visible
+  Then element ".announcement-notification:contains(newer version)" does not exist
+
 @as_student
 @no_mobile
 Scenario: Versions warning announcement on script overview page
   When I am on "http://studio.code.org/s/coursea-2018"
   And I wait until element "#script-title" is visible
-  And element "#version-selector" is visible
+  And element "#version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" does not exist
 
+  Given I am assigned to script "coursea-2017"
   When I am on "http://studio.code.org/s/coursea-2017/next"
   And I wait until current URL contains "/s/coursea-2017/stage/1/puzzle/1"
 
@@ -86,6 +101,13 @@ Scenario: Versions warning announcement on script overview page
 @as_student
 @no_mobile
 Scenario: Switch versions using dropdown on script overview page
+  # Older script versions are not visible to students who are not assigned to them
+  When I am on "http://studio.code.org/s/coursea-2017"
+  And I get redirected to "s/coursea-2018" via "dashboard"
+  And I wait until element "#script-title" is visible
+  And element "#version-selector" is not visible
+
+  Given I am assigned to script "coursea-2017"
   When I am on "http://studio.code.org/s/coursea-2017"
   And I wait until element "#script-title" is visible
   And element "#version-selector" is visible
@@ -105,6 +127,10 @@ Scenario: Course unit family names redirect to their latest stable version
 
 @as_student
 @no_mobile
-Scenario: Script levels in renamed scripts redirect to latest stable version
+Scenario: Script levels in renamed scripts redirect to their original version
+  Given I am assigned to script "csp3-2017"
   When I am on "http://studio.code.org/s/csp3/stage/9/puzzle/11"
-  And I get redirected to "/s/csp3-2018/stage/9/puzzle/11" via "dashboard"
+  # Keep redirecting to the original version of a script level after a later
+  # script version becomes stable, because a user with a deep link to a specific
+  # level will most likely expect to see their previous progress there.
+  And I get redirected to "/s/csp3-2017/stage/9/puzzle/11" via "dashboard"

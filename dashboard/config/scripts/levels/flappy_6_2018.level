@@ -13,7 +13,7 @@
     "scale": "{\"snapRadius\":2}",
     "success_condition": "function successCondition() {\r\n\t        var insideObstacle = false;\r\n\t        Flappy.obstacles.forEach(function (obstacle) {\r\n\t          if (obstacle.containsAvatar()) {\r\n\t            insideObstacle = true;\r\n\t          }\r\n\t        });\r\n\t        return insideObstacle && Flappy.playerScore > 0;\r\n\t      }",
     "failure_condition": "function failureCondition() {\r\n\t        var insideObstacle = false;\r\n\t        Flappy.obstacles.forEach(function (obstacle) {\r\n\t          if (obstacle.containsAvatar()) {\r\n\t            insideObstacle = true;\r\n\t          }\r\n\t        });\r\n\t        return insideObstacle && Flappy.playerScore === 0;\r\n\t      }",
-    "instructions": "See if you can still score a point after making Flappy flap either a smaller or larger amount.",
+    "short_instructions": "See if you can still score a point after making Flappy flap either a smaller or larger amount.",
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",

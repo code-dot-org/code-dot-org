@@ -108,7 +108,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - final project template",
-    "markdown_instructions": "# Wiring Up the UI\r\n\r\nWith your user interface in place, you can now add event handlers for your interface elements. At this point you may want to just include `console.log()` commands to make sure that your events are working as expected - you can add the functional code later one.",
+    "long_instructions": "# Wiring Up the UI\r\n\r\nWith your user interface in place, you can now add event handlers for your interface elements. At this point you may want to just include `console.log()` commands to make sure that your events are working as expected - you can add the functional code later one.",
     "contained_level_names": null
   },
   "published": true,

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw these 3 flowers. The first one's height is 100 and the next flower is always 50 pixels more than the height of the previous one. The flowers are also 100 pixels apart.",
+    "short_instructions": "Draw these 3 flowers. The first one's height is 100 and the next flower is always 50 pixels more than the height of the previous one. The flowers are also 100 pixels apart.",
     "x": "75",
     "y": "390",
     "start_direction": "0",

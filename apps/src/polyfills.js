@@ -2,6 +2,7 @@
  * "Pointer Events Polyfill" to support pointer events on Safari
  */
 import 'pepjs';
+import wickedGoodXpath from 'wgxpath';
 
 /**
  * A low-performance polyfill for toBlob based on toDataURL. Adapted from:
@@ -9,7 +10,7 @@ import 'pepjs';
  */
 if (!HTMLCanvasElement.prototype.toBlob) {
   Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
-    value: function (callback, type, quality) {
+    value: function(callback, type, quality) {
       const binStr = atob(this.toDataURL(type, quality).split(',')[1]);
       const arr = new Uint8Array(binStr.length);
 
@@ -28,7 +29,14 @@ if (!HTMLCanvasElement.prototype.toBlob) {
  * From https://github.com/clientIO/joint/issues/117#issuecomment-194699222
  */
 if (SVGElement.prototype.getElementsByClassName === undefined) {
-    SVGElement.prototype.getElementsByClassName = function (className) {
-        return this.querySelectorAll('.' + className);
-    };
+  SVGElement.prototype.getElementsByClassName = function(className) {
+    return this.querySelectorAll('.' + className);
+  };
+}
+
+/**
+ * Polyfill for document.evaluate for IE
+ */
+if (!document.evaluate) {
+  wickedGoodXpath.install(window);
 }

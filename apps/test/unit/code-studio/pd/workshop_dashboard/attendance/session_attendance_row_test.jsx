@@ -19,20 +19,18 @@ const DEFAULT_PROPS = {
     user_id: 101,
     verified_teacher_account: false,
     attended: false,
-    puzzles_completed: 42,
+    puzzles_completed: 42
   },
   onSaving: () => {},
   onSaved: () => {},
   accountRequiredForAttendance: false,
   showPuzzlesCompleted: false,
-  displayYesNoAttendance: false,
+  displayYesNoAttendance: false
 };
 
 describe('SessionAttendanceRow', () => {
   it('renders default (unattended) row', () => {
-    const wrapper = shallow(
-      <SessionAttendanceRow {...DEFAULT_PROPS}/>
-    );
+    const wrapper = shallow(<SessionAttendanceRow {...DEFAULT_PROPS} />);
     expect(wrapper).to.containMatchingElement(
       <tr className={null}>
         <td>{FAKE_FIRST_NAME}</td>
@@ -41,7 +39,7 @@ describe('SessionAttendanceRow', () => {
         <td>No</td>
         <td>
           <div>
-            <i className="fa fa-square-o"/>
+            <i className="fa fa-square-o" />
           </div>
         </td>
       </tr>
@@ -66,7 +64,7 @@ describe('SessionAttendanceRow', () => {
         <td>No</td>
         <td>
           <div>
-            <i className="fa fa-check-square-o"/>
+            <i className="fa fa-check-square-o" />
           </div>
         </td>
       </tr>
@@ -89,7 +87,7 @@ describe('SessionAttendanceRow', () => {
         <td>No</td>
         <td>
           <div>
-            <i className="fa fa-square-o"/>
+            <i className="fa fa-square-o" />
           </div>
         </td>
       </tr>
@@ -98,10 +96,7 @@ describe('SessionAttendanceRow', () => {
 
   it('renders extra column to show completed puzzles', () => {
     const wrapper = shallow(
-      <SessionAttendanceRow
-        {...DEFAULT_PROPS}
-        showPuzzlesCompleted={true}
-      />
+      <SessionAttendanceRow {...DEFAULT_PROPS} showPuzzlesCompleted={true} />
     );
     expect(wrapper).to.containMatchingElement(
       <tr>
@@ -109,10 +104,10 @@ describe('SessionAttendanceRow', () => {
         <td>{FAKE_LAST_NAME}</td>
         <td>{FAKE_EMAIL}</td>
         <td>No</td>
-        <td/>
+        <td />
         <td>
           <div>
-            <i className="fa fa-square-o"/>
+            <i className="fa fa-square-o" />
           </div>
         </td>
       </tr>
@@ -139,7 +134,7 @@ describe('SessionAttendanceRow', () => {
         <td>{42}</td>
         <td>
           <div>
-            <i className="fa fa-check-square-o"/>
+            <i className="fa fa-check-square-o" />
           </div>
         </td>
       </tr>

@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_90_CSP_3_2_1'
+wrong 'Metadata is unnecessary data that is kept as a backup, just in case the user ever needs to access it at a later point in time.'
+wrong 'Metadata is data relating to the data that has been collected, and it always changes with the passage of time'
+right 'Metadata is mostly information that describes the data that has been collected.'
+wrong 'Metadata is not useful in analysis of the data collected.'
+markdown <<MARKDOWN
+Which ONE of the following is true about MetaData? 
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **3.2.1** and Essential Knowledge statements: **3.2.1G, 3.2.1H, 3.2.1I**
+<hr>
+ (A) This is incorrect. Metadata is not back-up data. 
+
+<hr>
+ (B) This is incorrect. Metadata does not always change with time.
+
+<hr>
+ (C) This is correct. metadata is data about the data that has been collected.
+
+<hr>
+ (D) This is incorrect. Metadata may or may not be used in analysis of data.
+
+MARKDOWN

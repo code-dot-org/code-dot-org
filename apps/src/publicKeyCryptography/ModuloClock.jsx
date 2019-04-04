@@ -1,7 +1,8 @@
 /** @file Centered animated Modulo Clock component for the Crypto widget levels */
 import _ from 'lodash';
-import React, {PropTypes} from 'react';
-import color from "../util/color";
+import PropTypes from 'prop-types';
+import React from 'react';
+import color from '../util/color';
 
 // Defines the coordinate scale for SVG elements
 const VIEWBOX_SIDE = 100;
@@ -68,8 +69,8 @@ export default class ModuloClock extends React.Component {
 
     this.targetDividend = dividend;
     this.interval = setInterval(this.tick, 33);
-    this.onStep = onStep || function () {};
-    this.onComplete = onComplete || function () {};
+    this.onStep = onStep || function() {};
+    this.onComplete = onComplete || function() {};
     this.duration = Math.min(maximumDuration, dividend * maximumTimePerSegment);
     this.setState({startTime: Date.now(), currentDividend: 0});
   }
@@ -78,7 +79,9 @@ export default class ModuloClock extends React.Component {
     const elapsedTime = Date.now() - this.state.startTime;
     if (elapsedTime < this.duration - FINALIZATION_DELAY) {
       // What dividend should we render on this frame? Ask the easing function.
-      const currentDividend = Math.floor(easeOutCircular(elapsedTime, 0, this.targetDividend, this.duration));
+      const currentDividend = Math.floor(
+        easeOutCircular(elapsedTime, 0, this.targetDividend, this.duration)
+      );
       this.onStep(currentDividend);
       this.setState({currentDividend});
     } else if (this.state.currentDividend !== this.targetDividend) {
@@ -97,30 +100,24 @@ export default class ModuloClock extends React.Component {
 
   renderSegments(dividend, modulus, isRunning) {
     const segmentGapInDegrees = modulus > SMALL_GAPS_OVER_MODULUS ? 0.5 : 1;
-    const segmentGapRadians = segmentGapInDegrees * 2 * Math.PI / 360;
+    const segmentGapRadians = (segmentGapInDegrees * 2 * Math.PI) / 360;
     const result = dividend % modulus;
 
     if (modulus > CONTINUOUS_METER_OVER_MODULUS) {
       // Render a continuous meter
       const fullCircle = 2 * Math.PI - segmentGapRadians;
       const emptyPath = createWedgePath(fullCircle);
-      const fullPath = createWedgePath(fullCircle * result / modulus);
+      const fullPath = createWedgePath((fullCircle * result) / modulus);
       return [
-        <path
-          key="emptyPart"
-          d={emptyPath}
-          fill={COLOR.emptyWedge}
-        />,
-        <path
-          key="fullPart"
-          d={fullPath}
-          fill={COLOR.fullWedge}
-        />
+        <path key="emptyPart" d={emptyPath} fill={COLOR.emptyWedge} />,
+        <path key="fullPart" d={fullPath} fill={COLOR.fullWedge} />
       ];
     } else {
       // Render distinct segments
       const segmentCount = modulus;
-      const wedgePath = createWedgePath((2 * Math.PI / segmentCount) - segmentGapRadians);
+      const wedgePath = createWedgePath(
+        (2 * Math.PI) / segmentCount - segmentGapRadians
+      );
       return _.range(0, segmentCount).map(n => {
         // When running we want R=0 to be a full pie, for a nice smooth
         // animation (that doesn't skip a pie slice).
@@ -134,7 +131,7 @@ export default class ModuloClock extends React.Component {
           <path
             key={n}
             d={wedgePath}
-            transform={`rotate(${n  * 360 / segmentCount} 50 50)`}
+            transform={`rotate(${(n * 360) / segmentCount} 50 50)`}
             fill={isSegmentFull ? COLOR.fullWedge : COLOR.emptyWedge}
             style={!isRunning ? style.fadeFill : {}}
           />
@@ -154,7 +151,11 @@ export default class ModuloClock extends React.Component {
             cx={HALF_VIEWBOX_SIDE}
             cy={HALF_VIEWBOX_SIDE}
             r={HALF_VIEWBOX_SIDE}
-            fill={isRunning && currentDividend === this.targetDividend ? COLOR.fullWedge : COLOR.clockFace}
+            fill={
+              isRunning && currentDividend === this.targetDividend
+                ? COLOR.fullWedge
+                : COLOR.clockFace
+            }
             style={!isRunning ? style.fadeFill : {}}
           />
           <circle
@@ -175,7 +176,8 @@ export default class ModuloClock extends React.Component {
             {currentDividend % modulus}
           </text>
         </svg>
-      </div>);
+      </div>
+    );
   }
 }
 
@@ -191,12 +193,13 @@ function createWedgePath(arcRadians) {
   const r1 = WEDGE_OUTER_RADIUS;
   const r2 = WEDGE_INNER_RADIUS;
   const x1 = HALF_VIEWBOX_SIDE;
-  const y1 = (HALF_VIEWBOX_SIDE) - r1;
-  const y2 = (HALF_VIEWBOX_SIDE) - r2;
+  const y1 = HALF_VIEWBOX_SIDE - r1;
+  const y2 = HALF_VIEWBOX_SIDE - r2;
   const largeArc = arcRadians > Math.PI ? 1 : 0;
   return `
       M ${x1} ${y1}
-      A ${r1} ${r1}, 0, ${largeArc}, 1, ${x1 + r1 * Math.sin(t)} ${y1 + r1 * (1 - Math.cos(t))}
+      A ${r1} ${r1}, 0, ${largeArc}, 1, ${x1 + r1 * Math.sin(t)} ${y1 +
+    r1 * (1 - Math.cos(t))}
       L ${x1 + r2 * Math.sin(t)} ${y2 + r2 * (1 - Math.cos(t))}
       A ${r2} ${r2}, 0, ${largeArc}, 0, ${x1} ${y2}
       Z`;
@@ -205,5 +208,5 @@ function createWedgePath(arcRadians) {
 function easeOutCircular(time, startValue, delta, duration) {
   time /= duration;
   time--;
-  return delta * Math.sqrt(1 - time*time) + startValue;
+  return delta * Math.sqrt(1 - time * time) + startValue;
 }

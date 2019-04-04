@@ -7,7 +7,7 @@ theme: responsive
 # Code.org's Impact on Computer Science Education: June 2014 - June 2015 Program Report
 <img src="/images/summary-2014-15.png" width="100%"/>
 
-Code.org is is a nonprofit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. 
+Code.org is is a nonprofit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
 
 Code.org partners with [Outlier Research & Evaluation at the University of Chicago](http://outlier.uchicago.edu/), a third-party evaluator, to understand our impact and progress towards meeting our mission. This report summarizes our program evaluation work for June 2014 through June 2015, which focused on answering the following key questions:
 
@@ -19,7 +19,7 @@ Code.org partners with [Outlier Research & Evaluation at the University of Chica
 - [What next steps can Code.org take to improve our programs?](#nextsteps)
 
 ## Evaluation Design
-We have gathered data from a number of sources -- internal data collected via Code Studio as well as external data collected by third parties -- in order to evaluate our impact and make decisions about future program direction. A [full summary](http://outlier.uchicago.edu/evaluation_codeorg/) of Outlier's findings is available [on their website](http://outlier.uchicago.edu/evaluation_codeorg/). All other data cited in this summary are available [upon request](mailto:info@code.org). 
+We have gathered data from a number of sources -- internal data collected via Code Studio as well as external data collected by third parties -- in order to evaluate our impact and make decisions about future program direction. A [full summary](http://outlier.uchicago.edu/evaluation_codeorg/) of Outlier's findings is available [on their website](http://outlier.uchicago.edu/evaluation_codeorg/). All other data cited in this summary are available [upon request](mailto:info@code.org).
 
 ---
 
@@ -30,7 +30,7 @@ From June 2014 through June 2015, over 11,000* teachers across K-12 attended Cod
 - a day-long, face-to-face workshop delivered to K-5 teachers via our [Affiliate Program](/educate/k5-affiliates) or via our [District Partnership Program](/educate/k5-district-partnership)
 - a multi-phase, year-long blended PD experience delivered to Middle and High School teachers via our [District Partnership Program](/educate/districts)
 
-## Key Finding: 
+## Key Finding:
 Through our professional development efforts, we are helping a large, diverse audience of K-12 educators feel more prepared to teach Computer Science using [Code.org](/educate) resources. <br /><br/>
 
 ### Table: Overall Participation and Satisfaction in Code.org Professional Development, June 1 2014 - June 15 2015
@@ -55,7 +55,7 @@ Through our professional development efforts, we are helping a large, diverse au
 
 In 2014-15, Code.org [partnered with 35 districts](/educate/districts) across the United States to bring curriculum, professional development and support to over 500 new CS teachers.
 
-## Key Finding: 
+## Key Finding:
 Through our district partnerships, we are helping districts increase the priority of computer science locally in the face of some big challenges. <br /><br/>
 
 Additionally, Code.org studied the attitudes of administrators and counselors in an effort to understand the relationship between school leadership and program sustainability. Further study is warranted.
@@ -66,7 +66,7 @@ Additionally, Code.org studied the attitudes of administrators and counselors in
 
 ## <a name="outcomes" href="#outcomes">What learning outcomes have Code.org students achieved?</a>
 
-## Key Finding: 
+## Key Finding:
 Students across thousands of Code.org classrooms have demonstrated the ability to use computer science and computer programming concepts, starting as early as elementary school. <br /><br/>
 
 [Code Studio](http://studio.code.org), our online learning platform, is designed to host our interactive CS courses. All online courses  are complemented by lesson plans teachers can deliver in the classroom. We saw phenomenal growth in the 2014-15 school year for both student and teacher account creation.
@@ -81,11 +81,11 @@ Students across thousands of Code.org classrooms have demonstrated the ability t
 *Source: Code Studio database*
 <br><br>
 
-The diversity of the audience we are reaching is also interesting to note. Across all student accounts that reported demographic data, **43% self-identified as female** and **37% were identified as African-American or Hispanic** by their teacher. 
+The diversity of the audience we are reaching is also interesting to note. Across all student accounts that reported demographic data, **43% self-identified as female** and **37% were identified as African-American or Hispanic** by their teacher.
 
-By comparison, the [demographic breakdown](/files/APCS-2014.pdf) of students taking the most recent AP Computer Science exam in high school was **20% females** and **17% African American, Hispanic, or other historically underrepresented students**.
+By comparison, the [demographic breakdown](/files/APCS-2014.pdf) of students taking the most recent AP Computer Science exam in high school was **20% female students** and **17% African American, Hispanic, or other historically underrepresented students**.
 
-Overall, Code Studio course participation is high, and basic measures of learning are encouraging. Students who are learning with the support of their teacher in a classroom setting complete courses more than those learning on their own, supporting Code.org’s focus on a mix of teacher development and self-guided material. 
+Overall, Code Studio course participation is high, and basic measures of learning are encouraging. Students who are learning with the support of their teacher in a classroom setting complete courses more than those learning on their own, supporting Code.org’s focus on a mix of teacher development and self-guided material.
 <br><br>
 
 [<button>Learn more</button>](/about/evaluation/outcomes)<br /><br/>
@@ -113,7 +113,7 @@ Although we are still early in terms of making a direct link between computer sc
 Our 2015-16 evaluation plan, developed in concert with [Outlier](http://outlier.uchicago.edu/), covers:
 
 - Student outcomes on curricular (part of the course materials) and extra-curricular assessments (general CS concepts test).
-- Changes in student attitudes about the value and relevance of computer science, sense of belonging, and self-efficacy, using pre/post survey data. 
+- Changes in student attitudes about the value and relevance of computer science, sense of belonging, and self-efficacy, using pre/post survey data.
 - Program improvement based on classroom implementation studies and teacher feedback.
 - Teacher pre/post attitudinal and pedagogical outcomes.
 - Effect of CS in Algebra and K-5 courses on Math/Science/Reading scores.

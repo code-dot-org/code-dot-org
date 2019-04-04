@@ -80,7 +80,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Star Chaser\r\n\r\nNow you'll need to make all the stars loop around the screen.\r\n\r\n# Do This\r\n* Use a `for` loop inside your `loopStars()` function to make every star in \"starArray\" loop around the screen.",
+    "long_instructions": "# Star Chaser\r\n\r\nNow you'll need to make all the stars loop around the screen.\r\n\r\n# Do This\r\n* Use a `for` loop inside your `loopStars()` function to make every star in \"starArray\" loop around the screen.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

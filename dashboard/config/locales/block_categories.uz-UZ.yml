@@ -6,47 +6,49 @@ uz:
       Loops: Sikllar
       Functions: Funksiyalar
       Color: Rang
-      Brushes: Brushes
+      Brushes: Cho'tka
       Math: Matematik
       Logic: Mantiq
       Variables: O‘zgaruvchilar
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Number: Raqam
+      String: Satr
+      Image: Tasvir
+      Boolean: Mantiqiy
       Conditionals: Shart buyruqlari
-      Events: Events
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: O'yin/Hisob
+      Comments: Izohlar
+      Category: Turkum
+      Prebuilt: Oldindan qurilgan
       Text: Matn
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Picker: Yig'uvchi
+      Comment: Izoh
+      'Variables ': 'O''zgaruvchilar '
+      Behaviors: Hatti-harakatlar
+      Locations: Manzil
+      everythingelse: hamma narsa
+      World: Dunyo
+      Location: Manzil
+      numbers: raqamlar
+      Numbers: Raqamlar
+      Dancers: Raqqoslar
+      Groups: Guruhlar
+      Advanced: Rivojlangan
       Start: Boshlash
-      Groups: Groups
-      Booleans: Booleans
-      Functional: Functional
-      Predefined: Predefined
+      Dancing: Raqsga tushayotgan
+      Sprite: Sprait
+      Brush: Cho'tka
+      Make Sprite: Sprait yasash
+      Movement: Harakat
+      Functional: Vazifali
+      While Events: Voqealar paytida
+      Sprite Properties: Sprait hususiyatlari
+      Predefined: Oldindan belgilangan
       test: test
       test2: test2
-      Foo: Foo
+      Use These Blocks: Bu bloklardan foydalaning
+      Do Not Use: Foydalanmang
       Name: Ismi
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: YANGI BLOKLAR
+      'Functions ': 'Vazifalar '
+      Game/Score: O'yin/Hisob
       Function: Funksiya

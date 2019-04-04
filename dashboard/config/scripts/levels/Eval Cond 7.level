@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Free Play: Write a function called green-shape, which takes in the name of a shape and produces a solid green shape. Your function should work with at least “circle”, “star” and “rectangle”, but you can add other shapes if you like. You can choose the size of each shape. Don’t forget to add an “else” clause!\r\nOne example - and part of the definition -  has already been done for you!\r\n",
+    "short_instructions": "Free Play: Write a function called green-shape, which takes in the name of a shape and produces a solid green shape. Your function should work with at least “circle”, “star” and “rectangle”, but you can add other shapes if you like. You can choose the size of each shape. Don’t forget to add an “else” clause!\r\nOne example - and part of the definition -  has already been done for you!\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

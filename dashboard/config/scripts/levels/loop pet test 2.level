@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-04-12T19:34:12.000Z",
   "level_num": "custom",
   "user_id": 182,
@@ -46,7 +46,8 @@
     "custom_blocks": "[\n  {\n    \"func\": \"drag\",\n    \"blockText\": \"drag and drop {SPRITE}\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  },\n  {\n    \"func\": \"grow\",\n    \"blockText\": \"make {SPRITE} bigger\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  },\n  {\n    \"func\": \"shrink\",\n    \"blockText\": \"make {SPRITE} smaller\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  },\n  {\n    \"func\": \"spin\",\n    \"blockText\": \"rotate {SPRITE} right\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  },\n  {\n    \"func\": \"jitter\",\n    \"blockText\": \"{SPRITE} jitter\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  },\n  {\n    \"func\": \"wander\",\n    \"blockText\": \"{SPRITE} wander\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  },\n  {\n    \"func\": \"danceParty\",\n    \"blockText\": \"{SPRITE} dance party\",\n    \"args\": [\n      {\n        \"name\": \"SPRITE\",\n        \"type\": \"Sprite\"\n      }\n    ]\n  },\n  {\n    \"func\": \"forever\",\n    \"color\": [\n      322,\n      0.9,\n      0.95\n    ],\n    \"blockText\": \"repeat forever\",\n    \"args\": [],\n    \"eventLoopBlock\": true\n  }\n]\n",
     "hide_custom_blocks": "true",
     "parent_level_id": 12285,
-    "markdown_instructions": "**CHALLENGE!** When Daisy gets a carrot, she gets excited. Can you make Daisy start doing a dance party? She should never stop, even after you take the carrot away.\r\n\r\nYou will have to use all these blocks:\r\n![](https://images.code.org/83c295bd00536dffed3c93a40bba75ae-image-1523562330282.41.06 PM.png)",
+    "long_instructions": "**CHALLENGE!** When Daisy gets a carrot, she gets excited. Can you make Daisy start doing a dance party? She should never stop, even after you take the carrot away.\r\n\r\nYou will have to use all these blocks:\r\n![](https://images.code.org/83c295bd00536dffed3c93a40bba75ae-image-1523562330282.41.06 PM.png)",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,
