@@ -44,7 +44,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
     }
 
     let courseNotes = null;
-    if (this.props.data.program) {
+    if (this.props.data.program && courseHours !== null) {
       if (this.props.data.program.includes('Discoveries')) {
         if (courseHours < 50) {
           courseNotes = 'csd';

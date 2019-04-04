@@ -130,6 +130,18 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   }
 
   renderSchoolInfoSection() {
+    let showPayFeeNote = false;
+    if (
+      this.props.data.committedToMasterSchedule &&
+      !this.props.data.committedToMasterSchedule.includes(
+        'Yes, I plan to include this course in the 2019-20 master schedule'
+      ) &&
+      this.props.data.payFee &&
+      this.props.data.payFee.includes('No, ')
+    ) {
+      showPayFeeNote = true;
+    }
+
     const planToTeachOther =
       'I don’t know if they will teach this course (Please Explain):';
     return (
@@ -222,6 +234,20 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         <div>
           {this.singleCheckboxFor('understandFee')}
           {this.radioButtonsFor('payFee')}
+
+          {showPayFeeNote && (
+            <div>
+              <p style={styles.red}>
+                Note: To be eligible for scholarship support, your school must
+                commit to including this course in the 2019-20 master schedule.
+                If you are able to commit to offering this course in 2019-20,
+                please update your answer above before submitting in order to
+                retain scholarship eligibility.
+              </p>
+              <br />
+            </div>
+          )}
+
           {this.inputFor('contactInvoicing', {required: false})}
           {this.inputFor('contactInvoicingDetail', {required: false})}
         </div>
