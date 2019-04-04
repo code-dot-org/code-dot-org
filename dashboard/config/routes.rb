@@ -479,6 +479,8 @@ Dashboard::Application.routes.draw do
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
     post 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator'
+    get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
+    get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
 
     get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
