@@ -7,6 +7,7 @@ module Api::V1::Pd
     # Api::CsvDownload must be included after load_and_authorize_resource so the auth callback runs first
     include Api::CsvDownload
     include Pd::Application::ApplicationConstants
+    include Pd::SharedApplicationConstants
 
     REGIONAL_PARTNERS_ALL = "all"
     REGIONAL_PARTNERS_NONE = "none"
@@ -75,16 +76,6 @@ module Api::V1::Pd
         end
       end
     end
-
-    COHORT_VIEW_STATUSES = %w(
-      accepted
-      accepted_not_notified
-      accepted_notified_by_partner
-      accepted_no_cost_registration
-      registration_sent
-      paid
-      withdrawn
-    )
 
     # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_value=:regional_partner
     def cohort_view
