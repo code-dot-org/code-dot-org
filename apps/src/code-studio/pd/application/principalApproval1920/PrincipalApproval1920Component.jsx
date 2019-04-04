@@ -130,17 +130,13 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   }
 
   renderSchoolInfoSection() {
-    let showPayFeeNote = false;
-    if (
+    let showPayFeeNote =
       this.props.data.committedToMasterSchedule &&
       !this.props.data.committedToMasterSchedule.includes(
         'Yes, I plan to include this course in the 2019-20 master schedule'
       ) &&
       this.props.data.payFee &&
-      this.props.data.payFee.includes('No, ')
-    ) {
-      showPayFeeNote = true;
-    }
+      this.props.data.payFee.includes('No, ');
 
     const planToTeachOther =
       'I don’t know if they will teach this course (Please Explain):';
