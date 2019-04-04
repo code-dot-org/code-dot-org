@@ -5,7 +5,7 @@ import {
   SectionHeaders,
   TextFields
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup, Row, Col} from 'react-bootstrap';
 import {PROGRAM_CSD, PROGRAM_CSP} from './TeacherApplicationConstants';
 
 export default class Section2ChooseYourProgram extends LabeledFormComponent {
@@ -110,6 +110,7 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           follow up if your responses below don't meet the requirements, or if
           they have additional questions.
         </p>
+        <br />
         {this.numberInputFor('csHowManyMinutes', {
           style: {
             width: '100px'
@@ -117,7 +118,10 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           label: PageLabels.section2ChooseYourProgram.csHowManyMinutes.replace(
             'program',
             this.getNameForSelectedProgram()
-          )
+          ),
+          labelWidth: {md: 8},
+          controlWidth: {md: 4},
+          inlineControl: true
         })}
         {this.numberInputFor('csHowManyDaysPerWeek', {
           style: {
@@ -126,7 +130,10 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           label: PageLabels.section2ChooseYourProgram.csHowManyDaysPerWeek.replace(
             'program',
             this.getNameForSelectedProgram()
-          )
+          ),
+          labelWidth: {md: 8},
+          controlWidth: {md: 4},
+          inlineControl: true
         })}
         {this.numberInputFor('csHowManyWeeksPerYear', {
           style: {
@@ -135,15 +142,24 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           label: PageLabels.section2ChooseYourProgram.csHowManyWeeksPerYear.replace(
             'program',
             this.getNameForSelectedProgram()
-          )
+          ),
+          labelWidth: {md: 8},
+          controlWidth: {md: 4},
+          inlineControl: true
         })}
         {courseHours && (
-          <p>
-            <strong>
-              Course hours = &nbsp;
-              {courseHours.toFixed(2)}
-            </strong>
-          </p>
+          <div style={{marginBottom: 30}}>
+            <Row>
+              <Col md={8}>
+                <div style={{textAlign: 'right'}}>
+                  <strong>Course hours</strong>
+                </div>
+              </Col>
+              <Col md={4}>
+                <strong>{courseHours.toFixed(2)}</strong>
+              </Col>
+            </Row>
+          </div>
         )}
         {courseNotes === 'csd' && (
           <p style={{color: 'red'}}>
