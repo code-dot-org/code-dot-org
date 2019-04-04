@@ -110,7 +110,9 @@ export default class AssetRow extends React.Component {
    * Confirm the user actually wants to delete this asset.
    */
   confirmDelete = () => {
-    let places = $('#designModeViz').find(`[src$=\'${this.props.name}']`);
+    let places = $('#designModeViz').find(
+      `[src$=\'${encodeURIComponent(this.props.name)}']`
+    );
     this.setState({action: 'confirming delete', actionText: ''});
     if (places.length > 0) {
       this.setState({usage: places.length});
