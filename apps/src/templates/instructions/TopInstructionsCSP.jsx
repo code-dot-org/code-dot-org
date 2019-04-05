@@ -26,6 +26,7 @@ import HeightResizer from './HeightResizer';
 import msg from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import experiments from '@cdo/apps/util/experiments';
+import queryString from 'query-string';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -127,6 +128,8 @@ class TopInstructionsCSP extends Component {
 
   constructor(props) {
     super(props);
+    //Pull the student id from the url
+    const studentId = queryString.parse(window.location.search).user_id;
 
     const teacherViewingStudentWork =
       this.props.viewAs === ViewType.Teacher &&
@@ -139,8 +142,10 @@ class TopInstructionsCSP extends Component {
         : TabType.INSTRUCTIONS,
       feedbacks: [],
       rubric: null,
+      studentId: studentId,
       teacherViewingStudentWork: teacherViewingStudentWork,
-      fetchingData: true
+      fetchingData: true,
+      token: null
     };
   }
 
@@ -148,6 +153,9 @@ class TopInstructionsCSP extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
+    const {user, serverLevelId} = this.props;
+    const {studentId} = this.state;
+
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
     const maxNeededHeight = this.adjustMaxNeededHeight();
@@ -161,11 +169,7 @@ class TopInstructionsCSP extends Component {
     if (this.props.viewAs === ViewType.Student) {
       promises.push(
         $.ajax({
-          url:
-            '/api/v1/teacher_feedbacks/get_feedbacks?student_id=' +
-            this.props.user +
-            '&level_id=' +
-            this.props.serverLevelId,
+          url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${user}&level_id=${serverLevelId}`,
           method: 'GET',
           contentType: 'application/json;charset=UTF-8'
         }).done(data => {
@@ -179,7 +183,7 @@ class TopInstructionsCSP extends Component {
     if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
       promises.push(
         $.ajax({
-          url: `/levels/${this.props.serverLevelId}/get_rubric/`,
+          url: `/levels/${serverLevelId}/get_rubric/`,
           method: 'GET',
           contentType: 'application/json;charset=UTF-8'
         }).done(data => {
@@ -188,11 +192,24 @@ class TopInstructionsCSP extends Component {
       );
     }
 
-    Promise.all(promises).then(
-      window.setTimeout(() => {
-        this.setState({fetchingData: false}, this.forceTabResizeToMaxHeight);
-      }, 5000)
-    );
+    if (this.state.teacherViewingStudentWork) {
+      promises.push(
+        $.ajax({
+          url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${studentId}&level_id=${serverLevelId}&teacher_id=${user}`,
+          method: 'GET',
+          contentType: 'application/json;charset=UTF-8'
+        }).done((data, textStatus, request) => {
+          this.setState({
+            feedbacks: request.status === 204 ? [] : [data],
+            token: request.getResponseHeader('csrf-token')
+          });
+        })
+      );
+    }
+
+    Promise.all(promises).then(() => {
+      this.setState({fetchingData: false}, this.forceTabResizeToMaxHeight);
+    });
   }
 
   componentWillUnmount() {
@@ -455,6 +472,8 @@ class TopInstructionsCSP extends Component {
                 }
                 rubric={this.state.rubric}
                 ref="commentTab"
+                latestFeedback={this.state.feedbacks}
+                token={this.state.token}
               />
             )}
           </div>
