@@ -55,7 +55,7 @@
     }
 
     #right {
-      right: 16px;
+      right: 56px;
       position: absolute;
     }
 
@@ -118,6 +118,32 @@
     }
   }
 
+  .header_help {
+    margin-left: 5px;
+    margin-top: 6px;
+    height: 38px;
+    border: 0px;
+  }
+
+  .header_help_button {
+    &.header_button_light {
+      background-color: $teal;
+    }
+    display: inline-block;
+    color: $white;
+    background-color: transparent;
+    padding: 7px 14px;
+    float: left;
+    cursor: pointer;
+    a:hover {
+      text-decoration: none;
+      background-color: $orange;
+    }
+    color: $white;
+    height: 38px;
+    user-select: none;
+  }
+
   .user_menu, .create_menu {
     color: $white;
     background-color: transparent;
@@ -134,7 +160,7 @@
       white-space: nowrap;
       float: left;
     }
-
+  
     .user_options, .create_options {
       position: absolute;
       font-size: 14px;
@@ -145,7 +171,8 @@
     .user_menu_arrow_down,
     .user_menu_arrow_up,
     .create_menu_arrow_up,
-    .create_menu_arrow_down
+    .create_menu_arrow_down,
+    .question_mark
     {
       font-size: 25px;
     }
