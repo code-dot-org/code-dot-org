@@ -13,27 +13,33 @@ describe('VersionRow', () => {
 
   it('renders preview and restore buttons for a non-current version', () => {
     const wrapper = shallow(<VersionRow {...MINIMUM_PROPS} isLatest={false} />);
-    expect(wrapper).to.containMatchingElement(
-      <a target="_blank">
-        <button type="button" className="version-preview">
-          <i className="fa fa-eye" />
+    expect(
+      wrapper.containsMatchingElement(
+        <a target="_blank">
+          <button type="button" className="version-preview">
+            <i className="fa fa-eye" />
+          </button>
+        </a>
+      )
+    ).to.be.ok;
+    expect(
+      wrapper.containsMatchingElement(
+        <button type="button" className="btn-info">
+          {msg.restoreThisVersion()}
         </button>
-      </a>
-    );
-    expect(wrapper).to.containMatchingElement(
-      <button type="button" className="btn-info">
-        {msg.restoreThisVersion()}
-      </button>
-    );
+      )
+    ).to.be.ok;
   });
 
   it('renders a disabled button for the current version', () => {
     const wrapper = shallow(<VersionRow {...MINIMUM_PROPS} isLatest={true} />);
-    expect(wrapper).to.containMatchingElement(
-      <button type="button" className="btn-default" disabled="disabled">
-        {msg.currentVersion()}
-      </button>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <button type="button" className="btn-default" disabled="disabled">
+          {msg.currentVersion()}
+        </button>
+      )
+    ).to.be.ok;
   });
 
   it('calls onChoose when restore button is clicked', () => {

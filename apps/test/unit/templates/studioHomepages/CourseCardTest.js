@@ -19,19 +19,21 @@ describe('CourseCard', () => {
       />,
       {context: {store}}
     ).dive();
-    expect(wrapper).to.containMatchingElement(
-      <a href={courses[0].link}>
-        <img />
-        <div>{courses[0].title}</div>
-        <div>
-          {courses[0].description}
+    expect(
+      wrapper.containsMatchingElement(
+        <a href={courses[0].link}>
+          <img />
+          <div>{courses[0].title}</div>
           <div>
-            <h3>View course</h3>
-            <FontAwesome icon="chevron-right" />
+            {courses[0].description}
+            <div>
+              <h3>View course</h3>
+              <FontAwesome icon="chevron-right" />
+            </div>
           </div>
-        </div>
-      </a>
-    );
+        </a>
+      )
+    ).to.be.ok;
   });
 
   it('can render in RTL mode', () => {
@@ -44,18 +46,20 @@ describe('CourseCard', () => {
       />,
       {context: {store}}
     ).dive();
-    expect(wrapper).to.containMatchingElement(
-      <a href={courses[0].link}>
-        <img />
-        <div>{courses[0].title}</div>
-        <div>
-          {courses[0].description}
+    expect(
+      wrapper.containsMatchingElement(
+        <a href={courses[0].link}>
+          <img />
+          <div>{courses[0].title}</div>
           <div>
-            <h3>View course</h3>
-            <FontAwesome icon="chevron-left" />
+            {courses[0].description}
+            <div>
+              <h3>View course</h3>
+              <FontAwesome icon="chevron-left" />
+            </div>
           </div>
-        </div>
-      </a>
-    );
+        </a>
+      )
+    ).to.be.ok;
   });
 });

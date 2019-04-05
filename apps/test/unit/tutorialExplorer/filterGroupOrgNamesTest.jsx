@@ -21,24 +21,26 @@ const DEFAULT_PROPS = {
 describe('FilterGroupOrgNames', () => {
   it('renders', () => {
     const wrapper = shallow(<FilterGroupOrgNames {...DEFAULT_PROPS} />);
-    expect(wrapper).to.containMatchingElement(
-      <FilterGroupContainer text={i18n.filterOrgNames()}>
-        <select value={TEST_ORG_NAME} className="noFocusButton">
-          <option key="all" value="all">
-            {i18n.filterOrgNamesAll()}
-          </option>
-          <option key={ORG_1} value={ORG_1}>
-            {ORG_1}
-          </option>
-          <option key={ORG_2} value={ORG_2}>
-            {ORG_2}
-          </option>
-          <option key={ORG_3} value={ORG_3}>
-            {ORG_3}
-          </option>
-        </select>
-      </FilterGroupContainer>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <FilterGroupContainer text={i18n.filterOrgNames()}>
+          <select value={TEST_ORG_NAME} className="noFocusButton">
+            <option key="all" value="all">
+              {i18n.filterOrgNamesAll()}
+            </option>
+            <option key={ORG_1} value={ORG_1}>
+              {ORG_1}
+            </option>
+            <option key={ORG_2} value={ORG_2}>
+              {ORG_2}
+            </option>
+            <option key={ORG_3} value={ORG_3}>
+              {ORG_3}
+            </option>
+          </select>
+        </FilterGroupContainer>
+      )
+    ).to.be.ok;
   });
 
   it('truncates org names longer than 25 characters', () => {
@@ -52,18 +54,22 @@ describe('FilterGroupOrgNames', () => {
     );
 
     // 25-char name is unchanged
-    expect(wrapper).to.containMatchingElement(
-      <option key={LEN_25} value={LEN_25}>
-        ABCDEFGHIJKLMNOPQRSTUVWXY
-      </option>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <option key={LEN_25} value={LEN_25}>
+          ABCDEFGHIJKLMNOPQRSTUVWXY
+        </option>
+      )
+    ).to.be.ok;
 
     // 26-char name is truncated
-    expect(wrapper).to.containMatchingElement(
-      <option key={LEN_26} value={LEN_26}>
-        ABCDEFGHIJKLMNOPQRSTUVWXY...
-      </option>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <option key={LEN_26} value={LEN_26}>
+          ABCDEFGHIJKLMNOPQRSTUVWXY...
+        </option>
+      )
+    ).to.be.ok;
   });
 
   it('reports to callback on change', () => {

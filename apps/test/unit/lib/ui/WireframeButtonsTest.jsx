@@ -49,22 +49,26 @@ describe('WireframeButtons', () => {
       );
 
       wrapper.setProps({isLegacyShare: true});
-      expect(wrapper).to.containMatchingElement(
-        <span>
-          <a className="WireframeButtons_button" href="/s/artist">
-            <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
-          </a>
-        </span>
-      );
+      expect(
+        wrapper.containsMatchingElement(
+          <span>
+            <a className="WireframeButtons_button" href="/s/artist">
+              <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
+            </a>
+          </span>
+        )
+      ).to.be.ok;
 
       wrapper.setProps({isLegacyShare: false});
-      expect(wrapper).to.containMatchingElement(
-        <span>
-          <a className="WireframeButtons_button" href="/p/artist">
-            <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
-          </a>
-        </span>
-      );
+      expect(
+        wrapper.containsMatchingElement(
+          <span>
+            <a className="WireframeButtons_button" href="/p/artist">
+              <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
+            </a>
+          </span>
+        )
+      ).to.be.ok;
     });
   });
 
@@ -90,16 +94,16 @@ describe('WireframeButtons', () => {
     ['applab', 'gamelab', 'makerlab'].forEach(appType => {
       it(`appears for ${appType}`, () => {
         wrapper = mountForAppType(appType);
-        expect(wrapper).to.containMatchingElement(VIEW_CODE_BUTTON_TEMPLATE);
+        expect(wrapper.containsMatchingElement(VIEW_CODE_BUTTON_TEMPLATE)).to.be
+          .ok;
       });
     });
 
     ['artist', 'playlab', 'weblab'].forEach(appType => {
       it(`does not appear for ${appType}`, () => {
         wrapper = mountForAppType(appType);
-        expect(wrapper).not.to.containMatchingElement(
-          VIEW_CODE_BUTTON_TEMPLATE
-        );
+        expect(wrapper.containsMatchingElement(VIEW_CODE_BUTTON_TEMPLATE)).to
+          .not.be.ok;
       });
     });
   });

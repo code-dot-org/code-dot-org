@@ -33,20 +33,22 @@ describe('ConfirmRemoveStudentDialog', () => {
         hasEverSignedIn={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <Header text={i18n.removeUnusedStudentHeader({studentName})} />
-        <ConfirmCancelFooter
-          confirmText={i18n.removeStudent()}
-          confirmColor={Button.ButtonColor.red}
-          onConfirm={MINIMUM_TEST_PROPS.onConfirm}
-          onCancel={MINIMUM_TEST_PROPS.onCancel}
-          disableConfirm={false}
-          disableCancel={false}
-          tabIndex="1"
-        />
-      </div>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <Header text={i18n.removeUnusedStudentHeader({studentName})} />
+          <ConfirmCancelFooter
+            confirmText={i18n.removeStudent()}
+            confirmColor={Button.ButtonColor.red}
+            onConfirm={MINIMUM_TEST_PROPS.onConfirm}
+            onCancel={MINIMUM_TEST_PROPS.onCancel}
+            disableConfirm={false}
+            disableCancel={false}
+            tabIndex="1"
+          />
+        </div>
+      )
+    ).to.be.ok;
   });
 
   it('renders warning text if student has ever signed in', () => {
@@ -56,28 +58,30 @@ describe('ConfirmRemoveStudentDialog', () => {
         hasEverSignedIn={true}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
+    expect(
+      wrapper.containsMatchingElement(
         <div>
-          <UnsafeRenderedMarkdown markdown={i18n.removeStudentBody1()} />
-          <p>
-            <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
-              {i18n.learnMore()}
-            </a>
-          </p>
+          <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
+          <div>
+            <UnsafeRenderedMarkdown markdown={i18n.removeStudentBody1()} />
+            <p>
+              <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
+                {i18n.learnMore()}
+              </a>
+            </p>
+          </div>
+          <ConfirmCancelFooter
+            confirmText={i18n.removeStudent()}
+            confirmColor={Button.ButtonColor.red}
+            onConfirm={MINIMUM_TEST_PROPS.onConfirm}
+            onCancel={MINIMUM_TEST_PROPS.onCancel}
+            disableConfirm={false}
+            disableCancel={false}
+            tabIndex="1"
+          />
         </div>
-        <ConfirmCancelFooter
-          confirmText={i18n.removeStudent()}
-          confirmColor={Button.ButtonColor.red}
-          onConfirm={MINIMUM_TEST_PROPS.onConfirm}
-          onCancel={MINIMUM_TEST_PROPS.onCancel}
-          disableConfirm={false}
-          disableCancel={false}
-          tabIndex="1"
-        />
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
 
   it('renders personal login help if student depends on this section for login', () => {
@@ -88,38 +92,40 @@ describe('ConfirmRemoveStudentDialog', () => {
         dependsOnThisSectionForLogin={true}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
+    expect(
+      wrapper.containsMatchingElement(
         <div>
-          <UnsafeRenderedMarkdown markdown={i18n.removeStudentBody1()} />
-          <p>
-            <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
-              {i18n.learnMore()}
-            </a>
-          </p>
+          <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
           <div>
-            <p>{i18n.removeStudentBody2()}</p>
-            <Button
-              text={i18n.removeStudentSendHomeInstructions()}
-              target="_blank"
-              href={ADD_A_PERSONAL_LOGIN_HELP_URL}
-              color={Button.ButtonColor.blue}
-              size={Button.ButtonSize.large}
-              tabIndex="1"
-            />
+            <UnsafeRenderedMarkdown markdown={i18n.removeStudentBody1()} />
+            <p>
+              <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
+                {i18n.learnMore()}
+              </a>
+            </p>
+            <div>
+              <p>{i18n.removeStudentBody2()}</p>
+              <Button
+                text={i18n.removeStudentSendHomeInstructions()}
+                target="_blank"
+                href={ADD_A_PERSONAL_LOGIN_HELP_URL}
+                color={Button.ButtonColor.blue}
+                size={Button.ButtonSize.large}
+                tabIndex="1"
+              />
+            </div>
           </div>
+          <ConfirmCancelFooter
+            confirmText={i18n.removeStudent()}
+            confirmColor={Button.ButtonColor.red}
+            onConfirm={MINIMUM_TEST_PROPS.onConfirm}
+            onCancel={MINIMUM_TEST_PROPS.onCancel}
+            disableConfirm={false}
+            disableCancel={false}
+            tabIndex="1"
+          />
         </div>
-        <ConfirmCancelFooter
-          confirmText={i18n.removeStudent()}
-          confirmColor={Button.ButtonColor.red}
-          onConfirm={MINIMUM_TEST_PROPS.onConfirm}
-          onCancel={MINIMUM_TEST_PROPS.onCancel}
-          disableConfirm={false}
-          disableCancel={false}
-          tabIndex="1"
-        />
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
 });

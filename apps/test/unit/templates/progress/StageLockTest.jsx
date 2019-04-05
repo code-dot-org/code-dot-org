@@ -26,34 +26,39 @@ const DEFAULT_PROPS = {
 describe('StageLock', () => {
   it('renders a loading message before sections are loaded', () => {
     const wrapper = shallow(<StageLock {...DEFAULT_PROPS} />);
-    expect(wrapper).to.containMatchingElement(<div>{i18n.loading()}</div>);
+    expect(wrapper.containsMatchingElement(<div>{i18n.loading()}</div>)).to.be
+      .ok;
   });
 
   it('renders a button and dialog after sections are loaded', () => {
     const wrapper = shallow(
       <StageLock {...DEFAULT_PROPS} sectionsAreLoaded={true} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
+    expect(
+      wrapper.containsMatchingElement(
         <div>
-          <Button
-            color={Button.ButtonColor.gray}
-            text={i18n.lockSettings()}
-            icon="lock"
-          />
+          <div>
+            <Button
+              color={Button.ButtonColor.gray}
+              text={i18n.lockSettings()}
+              icon="lock"
+            />
+          </div>
+          <StageLockDialog />
         </div>
-        <StageLockDialog />
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
 
   it('changes button text while saving', () => {
     const wrapper = shallow(
       <StageLock {...DEFAULT_PROPS} sectionsAreLoaded={true} saving={true} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <Button text={i18n.saving()} icon="lock" />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <Button text={i18n.saving()} icon="lock" />
+      )
+    ).to.be.ok;
   });
 
   it('hooks up callbacks correctly', () => {
@@ -69,9 +74,11 @@ describe('StageLock', () => {
     );
 
     // Close callback gets passed through to the dialog unchanged.
-    expect(wrapper).to.containMatchingElement(
-      <StageLockDialog handleClose={closeSpy} />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <StageLockDialog handleClose={closeSpy} />
+      )
+    ).to.be.ok;
 
     // Open callback gets called when button is clicked.
     wrapper

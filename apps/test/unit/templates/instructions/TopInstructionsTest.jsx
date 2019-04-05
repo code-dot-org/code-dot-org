@@ -16,19 +16,19 @@ describe('TopInstructions', () => {
     const wrapper = shallow(
       <TopInstructions {...DEFAULT_PROPS} noInstructionsWhenCollapsed={true} />
     );
-    expect(wrapper).to.containMatchingElement(<TopInstructionsCSP />);
+    expect(wrapper.containsMatchingElement(<TopInstructionsCSP />)).to.be.ok;
   });
 
   it('is a TopInstructionsCSF if not passed the "noInstructionsWhenCollapsed" property', () => {
     const wrapper = shallow(
       <TopInstructions {...DEFAULT_PROPS} noInstructionsWhenCollapsed={false} />
     );
-    expect(wrapper).to.containMatchingElement(<TopInstructionsCSF />);
+    expect(wrapper.containsMatchingElement(<TopInstructionsCSF />)).to.be.ok;
   });
 
   it('is an empty div if passed the "hidden" property', () => {
     const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} hidden />);
-    expect(wrapper).to.containMatchingElement(<div />);
+    expect(wrapper.containsMatchingElement(<div />)).to.be.ok;
   });
 
   it('is an empty div if there are no instructions to display', () => {
@@ -40,6 +40,6 @@ describe('TopInstructions', () => {
         hasContainedLevels={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(<div />);
+    expect(wrapper.containsMatchingElement(<div />)).to.be.ok;
   });
 });

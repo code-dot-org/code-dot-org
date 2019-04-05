@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../util/reconfiguredChai';
+import {assert, expect} from '../../util/reconfiguredChai';
 import Alert from '@cdo/apps/templates/alert';
 
 describe('Alert', () => {
@@ -15,12 +15,14 @@ describe('Alert', () => {
         </div>
       </Alert>
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <div>Arbitrary</div>
-        <a href="#">Children</a>
-        <i>Are Allowed</i>
-      </div>
+    assert(
+      wrapper.containsMatchingElement(
+        <div>
+          <div>Arbitrary</div>
+          <a href="#">Children</a>
+          <i>Are Allowed</i>
+        </div>
+      )
     );
   });
 

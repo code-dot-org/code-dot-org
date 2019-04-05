@@ -13,24 +13,26 @@ describe('ImagePreview', () => {
         noVisualization={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div
-        id="ani-gif-preview-wrapper"
-        style={{
-          display: 'inline-block',
-          position: 'relative'
-        }}
-      >
+    expect(
+      wrapper.containsMatchingElement(
         <div
-          id="ani-gif-preview"
-          onClick={onClickCallback}
+          id="ani-gif-preview-wrapper"
           style={{
-            cursor: 'pointer',
-            backgroundImage: "url('example.gif')"
+            display: 'inline-block',
+            position: 'relative'
           }}
-        />
-      </div>
-    );
+        >
+          <div
+            id="ani-gif-preview"
+            onClick={onClickCallback}
+            style={{
+              cursor: 'pointer',
+              backgroundImage: "url('example.gif')"
+            }}
+          />
+        </div>
+      )
+    ).to.be.ok;
   });
 
   it('renders large size if noVisualization is true', () => {
@@ -42,26 +44,28 @@ describe('ImagePreview', () => {
         noVisualization={true}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div
-        id="ani-gif-preview-wrapper"
-        style={{
-          display: 'inline-block',
-          position: 'relative'
-        }}
-      >
+    expect(
+      wrapper.containsMatchingElement(
         <div
-          id="ani-gif-preview"
-          onClick={onClickCallback}
+          id="ani-gif-preview-wrapper"
           style={{
-            cursor: 'pointer',
-            backgroundImage: "url('example2.gif')",
-            width: 240,
-            height: 180,
-            backgroundSize: '240px 180px'
+            display: 'inline-block',
+            position: 'relative'
           }}
-        />
-      </div>
-    );
+        >
+          <div
+            id="ani-gif-preview"
+            onClick={onClickCallback}
+            style={{
+              cursor: 'pointer',
+              backgroundImage: "url('example2.gif')",
+              width: 240,
+              height: 180,
+              backgroundSize: '240px 180px'
+            }}
+          />
+        </div>
+      )
+    ).to.be.ok;
   });
 });

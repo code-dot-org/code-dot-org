@@ -31,15 +31,17 @@ const DEFAULT_PROPS = {
 describe('DialogInstructions', () => {
   it('renders instructions and image into Instructions component', () => {
     const wrapper = shallow(<DialogInstructions {...DEFAULT_PROPS} />);
-    expect(wrapper).to.containMatchingElement(
-      <Instructions
-        puzzleTitle={EXPECTED_PUZZLE_TITLE}
-        shortInstructions={TEST_INSTRUCTIONS_1}
-        instructions2={TEST_INSTRUCTIONS_2}
-        longInstructions={undefined}
-        imgURL={SAMPLE_IMAGE_URL}
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <Instructions
+          puzzleTitle={EXPECTED_PUZZLE_TITLE}
+          shortInstructions={TEST_INSTRUCTIONS_1}
+          instructions2={TEST_INSTRUCTIONS_2}
+          longInstructions={undefined}
+          imgURL={SAMPLE_IMAGE_URL}
+        />
+      )
+    ).to.be.ok;
   });
 
   it('renders long instructions as markdown if provided', () => {
@@ -49,15 +51,17 @@ describe('DialogInstructions', () => {
         longInstructions={SAMPLE_MARKDOWN}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <Instructions
-        puzzleTitle={EXPECTED_PUZZLE_TITLE}
-        shortInstructions={TEST_INSTRUCTIONS_1}
-        instructions2={TEST_INSTRUCTIONS_2}
-        longInstructions={SAMPLE_MARKDOWN}
-        imgURL={SAMPLE_IMAGE_URL}
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <Instructions
+          puzzleTitle={EXPECTED_PUZZLE_TITLE}
+          shortInstructions={TEST_INSTRUCTIONS_1}
+          instructions2={TEST_INSTRUCTIONS_2}
+          longInstructions={SAMPLE_MARKDOWN}
+          imgURL={SAMPLE_IMAGE_URL}
+        />
+      )
+    ).to.be.ok;
   });
 
   it('can be configured to only show the image', () => {
@@ -68,15 +72,17 @@ describe('DialogInstructions', () => {
         imgOnly
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <Instructions
-        puzzleTitle={EXPECTED_PUZZLE_TITLE}
-        shortInstructions={undefined}
-        instructions2={undefined}
-        longInstructions={undefined}
-        imgURL={SAMPLE_IMAGE_URL}
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <Instructions
+          puzzleTitle={EXPECTED_PUZZLE_TITLE}
+          shortInstructions={undefined}
+          instructions2={undefined}
+          longInstructions={undefined}
+          imgURL={SAMPLE_IMAGE_URL}
+        />
+      )
+    ).to.be.ok;
   });
 
   it('can be configured to only show hints', () => {
@@ -87,14 +93,16 @@ describe('DialogInstructions', () => {
         hintsOnly
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <Instructions
-        puzzleTitle={EXPECTED_PUZZLE_TITLE}
-        shortInstructions={undefined}
-        instructions2={undefined}
-        longInstructions={undefined}
-        imgURL={undefined}
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <Instructions
+          puzzleTitle={EXPECTED_PUZZLE_TITLE}
+          shortInstructions={undefined}
+          instructions2={undefined}
+          longInstructions={undefined}
+          imgURL={undefined}
+        />
+      )
+    ).to.be.ok;
   });
 });

@@ -10,12 +10,15 @@ describe('GeneratedCode', () => {
   );
 
   it('renders code explicitly in ltr', () => {
-    expect(wrapper).to.containMatchingElement(<pre dir="ltr">Test code</pre>);
+    expect(wrapper.containsMatchingElement(<pre dir="ltr">Test code</pre>)).to
+      .be.ok;
   });
 
   it('renders message with markdown support', () => {
-    expect(wrapper).to.containMatchingElement(
-      <UnsafeRenderedMarkdown markdown="Test message" />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <UnsafeRenderedMarkdown markdown="Test message" />
+      )
+    ).to.be.ok;
   });
 });

@@ -97,11 +97,12 @@ describe('StudentHomepage', () => {
       .find(SectionsAsStudentTable)
       .dive({context: {store}})
       .dive();
-    expect(wrapper).to.containMatchingElement(<td>ClassOneCode</td>);
-    expect(wrapper).to.containMatchingElement(<td>ClassTwoCode</td>);
-    expect(wrapper).to.containMatchingElement(<td>Google Classroom</td>);
-    expect(wrapper).to.not.containMatchingElement(<td>DoNotShowThis</td>);
-    expect(wrapper).to.containMatchingElement(<td>Clever</td>);
-    expect(wrapper).to.not.containMatchingElement(<td>OrThisEither</td>);
+    expect(wrapper.containsMatchingElement(<td>ClassOneCode</td>)).to.be.ok;
+    expect(wrapper.containsMatchingElement(<td>ClassTwoCode</td>)).to.be.ok;
+    expect(wrapper.containsMatchingElement(<td>Google Classroom</td>)).to.be.ok;
+    expect(wrapper.containsMatchingElement(<td>DoNotShowThis</td>)).to.not.be
+      .ok;
+    expect(wrapper.containsMatchingElement(<td>Clever</td>)).to.be.ok;
+    expect(wrapper.containsMatchingElement(<td>OrThisEither</td>)).to.not.be.ok;
   });
 });

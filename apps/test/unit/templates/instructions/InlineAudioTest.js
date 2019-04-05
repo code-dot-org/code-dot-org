@@ -85,16 +85,18 @@ describe('InlineAudio', function() {
       <StatelessInlineAudio {...DEFAULT_PROPS} textToSpeechEnabled />
     );
 
-    expect(component).to.containMatchingElement(
-      <div className="inline-audio">
-        <div id="volume">
-          <i className="fa fa-volume-up" />
+    expect(
+      component.containsMatchingElement(
+        <div className="inline-audio">
+          <div id="volume">
+            <i className="fa fa-volume-up" />
+          </div>
+          <div className="playPause">
+            <i className="fa fa-play" />
+          </div>
         </div>
-        <div className="playPause">
-          <i className="fa fa-play" />
-        </div>
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
 
   it('can toggle audio', function() {

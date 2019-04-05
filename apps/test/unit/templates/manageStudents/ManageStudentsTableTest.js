@@ -128,19 +128,21 @@ describe('ManageStudentsTable', () => {
           <ManageStudentsTable />
         </Provider>
       );
-      expect(wrapper).to.containMatchingElement(
-        <ManageStudentsActionsCell
-          id={fakeStudent.id}
-          sectionId={fakeStudent.sectionId}
-          rowType={RowType.STUDENT}
-          loginType={fakeStudent.loginType}
-          studentName={fakeStudent.name}
-          hasEverSignedIn={fakeStudent.hasEverSignedIn}
-          dependsOnThisSectionForLogin={
-            fakeStudent.dependsOnThisSectionForLogin
-          }
-        />
-      );
+      expect(
+        wrapper.containsMatchingElement(
+          <ManageStudentsActionsCell
+            id={fakeStudent.id}
+            sectionId={fakeStudent.sectionId}
+            rowType={RowType.STUDENT}
+            loginType={fakeStudent.loginType}
+            studentName={fakeStudent.name}
+            hasEverSignedIn={fakeStudent.hasEverSignedIn}
+            dependsOnThisSectionForLogin={
+              fakeStudent.dependsOnThisSectionForLogin
+            }
+          />
+        )
+      ).to.be.ok;
     });
   });
 });

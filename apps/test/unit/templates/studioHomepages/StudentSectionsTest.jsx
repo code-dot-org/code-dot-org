@@ -19,19 +19,21 @@ describe('StudentSections', () => {
       <StudentSections {...defaultProps} initialSections={[]} />
     );
     const instance = wrapper.instance();
-    expect(wrapper).to.containMatchingElement(
-      <ContentContainer
-        heading="Classroom Sections"
-        description={i18n.enrollmentDescription()}
-      >
-        <JoinSectionNotifications />
-        <JoinSection
-          enrolledInASection={false}
-          updateSections={instance.updateSections}
-          updateSectionsResult={instance.updateSectionsResult}
-        />
-      </ContentContainer>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <ContentContainer
+          heading="Classroom Sections"
+          description={i18n.enrollmentDescription()}
+        >
+          <JoinSectionNotifications />
+          <JoinSection
+            enrolledInASection={false}
+            updateSections={instance.updateSections}
+            updateSectionsResult={instance.updateSectionsResult}
+          />
+        </ContentContainer>
+      )
+    ).to.be.ok;
   });
 
   it('renders a SectionsAsStudentTable when enrolled in one or more sections', () => {
@@ -39,24 +41,26 @@ describe('StudentSections', () => {
       <StudentSections {...defaultProps} initialSections={sections} />
     );
     const instance = wrapper.instance();
-    expect(wrapper).to.containMatchingElement(
-      <ContentContainer
-        heading="Classroom Sections"
-        description={i18n.enrollmentDescription()}
-      >
-        <JoinSectionNotifications />
-        <SectionsAsStudentTable
-          sections={sections}
-          canLeave={false}
-          updateSections={instance.updateSections}
-          updateSectionsResult={instance.updateSectionsResult}
-        />
-        <JoinSection
-          enrolledInASection={true}
-          updateSections={instance.updateSections}
-          updateSectionsResult={instance.updateSectionsResult}
-        />
-      </ContentContainer>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <ContentContainer
+          heading="Classroom Sections"
+          description={i18n.enrollmentDescription()}
+        >
+          <JoinSectionNotifications />
+          <SectionsAsStudentTable
+            sections={sections}
+            canLeave={false}
+            updateSections={instance.updateSections}
+            updateSectionsResult={instance.updateSectionsResult}
+          />
+          <JoinSection
+            enrolledInASection={true}
+            updateSections={instance.updateSections}
+            updateSectionsResult={instance.updateSectionsResult}
+          />
+        </ContentContainer>
+      )
+    ).to.be.ok;
   });
 });

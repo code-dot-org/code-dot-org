@@ -7,26 +7,28 @@ import i18n from '@cdo/tutorialExplorer/locale';
 describe('RoboticsButton', () => {
   it('renders with given url', () => {
     const wrapper = shallow(<RoboticsButton url="/i/robot" />);
-    expect(wrapper).to.containMatchingElement(
-      <div>
+    expect(
+      wrapper.containsMatchingElement(
         <div>
           <div>
-            <a href="/i/robot">
-              <div>
-                <img src="/images/learn/robotics-link.png" />
+            <div>
+              <a href="/i/robot">
                 <div>
-                  {i18n.roboticsButtonText()}
-                  &nbsp;
-                  <i className="fa fa-arrow-right" />
+                  <img src="/images/learn/robotics-link.png" />
+                  <div>
+                    {i18n.roboticsButtonText()}
+                    &nbsp;
+                    <i className="fa fa-arrow-right" />
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
+          </div>
+          <div>
+            <a href="/i/robot">{i18n.roboticsText()}</a>
           </div>
         </div>
-        <div>
-          <a href="/i/robot">{i18n.roboticsText()}</a>
-        </div>
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
 });

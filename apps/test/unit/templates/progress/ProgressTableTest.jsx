@@ -32,44 +32,48 @@ describe('ProgressTable', () => {
     const wrapper = shallow(
       <ProgressTable {...DEFAULT_PROPS} isSummaryView={false} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <div style={styles.hidden}>
-          <SummaryProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <div style={styles.hidden}>
+            <SummaryProgressTable
+              lessons={FAKE_LESSONS}
+              levelsByLesson={FAKE_LEVELS}
+            />
+          </div>
+          <div style={{}}>
+            <DetailProgressTable
+              lessons={FAKE_LESSONS}
+              levelsByLesson={FAKE_LEVELS}
+            />
+          </div>
         </div>
-        <div style={{}}>
-          <DetailProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
-        </div>
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
 
   it('renders a single lesson in summary view', () => {
     const wrapper = shallow(
       <ProgressTable {...DEFAULT_PROPS} isSummaryView={true} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <div style={{}}>
-          <SummaryProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <div style={{}}>
+            <SummaryProgressTable
+              lessons={FAKE_LESSONS}
+              levelsByLesson={FAKE_LEVELS}
+            />
+          </div>
+          <div style={styles.hidden}>
+            <DetailProgressTable
+              lessons={FAKE_LESSONS}
+              levelsByLesson={FAKE_LEVELS}
+            />
+          </div>
         </div>
-        <div style={styles.hidden}>
-          <DetailProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
-        </div>
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
 
   it('renders multiple lessons as ProgressGroups', () => {
@@ -79,25 +83,27 @@ describe('ProgressTable', () => {
         categorizedLessons={[FAKE_LESSON_1, FAKE_LESSON_2]}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <ProgressGroup
-          key={FAKE_LESSON_1.category}
-          isPlc={DEFAULT_PROPS.isPlc}
-          groupName={FAKE_LESSON_1.category}
-          isSummaryView={DEFAULT_PROPS.isSummaryView}
-          lessons={FAKE_LESSON_1.lessons}
-          levelsByLesson={FAKE_LESSON_1.levels}
-        />
-        <ProgressGroup
-          key={FAKE_LESSON_2.category}
-          isPlc={DEFAULT_PROPS.isPlc}
-          groupName={FAKE_LESSON_2.category}
-          isSummaryView={DEFAULT_PROPS.isSummaryView}
-          lessons={FAKE_LESSON_2.lessons}
-          levelsByLesson={FAKE_LESSON_2.levels}
-        />
-      </div>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <ProgressGroup
+            key={FAKE_LESSON_1.category}
+            isPlc={DEFAULT_PROPS.isPlc}
+            groupName={FAKE_LESSON_1.category}
+            isSummaryView={DEFAULT_PROPS.isSummaryView}
+            lessons={FAKE_LESSON_1.lessons}
+            levelsByLesson={FAKE_LESSON_1.levels}
+          />
+          <ProgressGroup
+            key={FAKE_LESSON_2.category}
+            isPlc={DEFAULT_PROPS.isPlc}
+            groupName={FAKE_LESSON_2.category}
+            isSummaryView={DEFAULT_PROPS.isSummaryView}
+            lessons={FAKE_LESSON_2.lessons}
+            levelsByLesson={FAKE_LESSON_2.levels}
+          />
+        </div>
+      )
+    ).to.be.ok;
   });
 });

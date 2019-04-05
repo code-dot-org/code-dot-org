@@ -22,14 +22,16 @@ describe('OwnedSections', () => {
     const wrapper = shallow(
       <OwnedSections {...defaultProps} sectionIds={[]} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <SetUpSections />
-        <RosterDialog />
-        <AddSectionDialog />
-        <EditSectionDialog />
-      </div>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <SetUpSections />
+          <RosterDialog />
+          <AddSectionDialog />
+          <EditSectionDialog />
+        </div>
+      )
+    ).to.be.ok;
   });
 
   it('renders a OwnedSectionsTable with no extra button if no archived sections', () => {

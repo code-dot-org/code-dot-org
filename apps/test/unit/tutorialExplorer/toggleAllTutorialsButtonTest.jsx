@@ -16,15 +16,17 @@ describe('ToggleAllTutorialsButton', () => {
     const wrapper = shallow(
       <ToggleAllTutorialsButton {...DEFAULT_PROPS} showingAllTutorials={true} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <button type="button" onClick={FAKE_HIDE_ALL}>
-          {i18n.hideAllTutorialsButton()}
-          &nbsp;
-          <i className="fa fa-caret-up" />
-        </button>
-      </div>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <button type="button" onClick={FAKE_HIDE_ALL}>
+            {i18n.hideAllTutorialsButton()}
+            &nbsp;
+            <i className="fa fa-caret-up" />
+          </button>
+        </div>
+      )
+    ).to.be.ok;
   });
 
   it('renders while not showing all tutorials', () => {
@@ -34,14 +36,16 @@ describe('ToggleAllTutorialsButton', () => {
         showingAllTutorials={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <button type="button" onClick={FAKE_SHOW_ALL}>
-          {i18n.showAllTutorialsButton()}
-          &nbsp;
-          <i className="fa fa-caret-down" />
-        </button>
-      </div>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <button type="button" onClick={FAKE_SHOW_ALL}>
+            {i18n.showAllTutorialsButton()}
+            &nbsp;
+            <i className="fa fa-caret-down" />
+          </button>
+        </div>
+      )
+    ).to.be.ok;
   });
 });

@@ -64,7 +64,7 @@ describe('TeacherHomepage', () => {
         showCensusBanner={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(<TeacherSections />);
+    expect(wrapper.containsMatchingElement(<TeacherSections />)).to.be.ok;
   });
 
   it('renders a StudentSections component', () => {

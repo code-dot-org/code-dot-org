@@ -15,9 +15,9 @@ describe('ManageStudentsSharingCell', () => {
         editedValue={true}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <input type="checkbox" checked={true} />
-    );
+    expect(
+      wrapper.containsMatchingElement(<input type="checkbox" checked={true} />)
+    ).to.be.ok;
   });
 
   it('renders an unchecked Checkbox if editing and can not share', () => {
@@ -29,9 +29,9 @@ describe('ManageStudentsSharingCell', () => {
         editedValue={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <input type="checkbox" checked={false} />
-    );
+    expect(
+      wrapper.containsMatchingElement(<input type="checkbox" checked={false} />)
+    ).to.be.ok;
   });
 
   it('renders nothing if not editing and can not share', () => {
@@ -58,6 +58,7 @@ describe('ManageStudentsSharingCell', () => {
         editedValue={true}
       />
     );
-    expect(wrapper).to.containMatchingElement(<FontAwesome icon="check" />);
+    expect(wrapper.containsMatchingElement(<FontAwesome icon="check" />)).to.be
+      .ok;
   });
 });

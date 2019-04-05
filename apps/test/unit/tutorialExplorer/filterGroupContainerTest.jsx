@@ -16,11 +16,13 @@ describe('FilterGroupContainer', () => {
     const wrapper = shallow(
       <FilterGroupContainer text={title}>{content}</FilterGroupContainer>
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <div>{title}</div>
-        {content}
-      </div>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <div>{title}</div>
+          {content}
+        </div>
+      )
+    ).to.be.ok;
   });
 });

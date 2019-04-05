@@ -21,19 +21,21 @@ describe('TopCourse', () => {
       />,
       {context: {store}}
     ).dive();
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <img />
-        <div>{topCourse.assignableName}</div>
+    expect(
+      wrapper.containsMatchingElement(
         <div>
-          <div>You are currently working on {topCourse.lessonName}.</div>
-          <div>{i18n.topCourseExplanation()}</div>
+          <img />
+          <div>{topCourse.assignableName}</div>
+          <div>
+            <div>You are currently working on {topCourse.lessonName}.</div>
+            <div>{i18n.topCourseExplanation()}</div>
+          </div>
+          <div>
+            <Button href={topCourse.linkToOverview} text="View course" />
+            <Button href={topCourse.linkToLesson} text="Continue lesson" />
+          </div>
         </div>
-        <div>
-          <Button href={topCourse.linkToOverview} text="View course" />
-          <Button href={topCourse.linkToLesson} text="Continue lesson" />
-        </div>
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
 });

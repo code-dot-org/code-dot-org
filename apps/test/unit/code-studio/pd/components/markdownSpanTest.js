@@ -29,8 +29,10 @@ describe('MarkdownSpan', () => {
       <MarkdownSpan style={{fontFamily: 'Gotham 7r'}}>text</MarkdownSpan>
     );
 
-    expect(markdownSpan).to.containMatchingElement(
-      <span style={{fontFamily: 'Gotham 7r'}} />
-    );
+    expect(
+      markdownSpan.containsMatchingElement(
+        <span style={{fontFamily: 'Gotham 7r'}} />
+      )
+    ).to.be.ok;
   });
 });

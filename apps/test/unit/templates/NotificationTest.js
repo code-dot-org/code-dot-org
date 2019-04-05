@@ -76,29 +76,31 @@ describe('Notification', () => {
       />,
       {context: {store}}
     ).dive();
-    expect(wrapper).to.containMatchingElement(
-      <div>
+    expect(
+      wrapper.containsMatchingElement(
         <div>
           <div>
-            <FontAwesome icon="bullhorn" />
-          </div>
-          <div>
             <div>
-              <div>{announcement.heading}</div>
-              <div>{announcement.description}</div>
+              <FontAwesome icon="bullhorn" />
             </div>
             <div>
-              <Button
-                href={announcement.link}
-                text={announcement.buttonText}
-                target="_blank"
-              />
+              <div>
+                <div>{announcement.heading}</div>
+                <div>{announcement.description}</div>
+              </div>
+              <div>
+                <Button
+                  href={announcement.link}
+                  text={announcement.buttonText}
+                  target="_blank"
+                />
+              </div>
             </div>
           </div>
+          <div />
         </div>
-        <div />
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
   it('renders an announcement notification with no button because no link provided', () => {
     const wrapper = shallow(
@@ -114,23 +116,25 @@ describe('Notification', () => {
       />,
       {context: {store}}
     ).dive();
-    expect(wrapper).to.containMatchingElement(
-      <div>
+    expect(
+      wrapper.containsMatchingElement(
         <div>
           <div>
-            <FontAwesome icon="bullhorn" />
-          </div>
-          <div>
             <div>
-              <div>{announcementNoLink.heading}</div>
-              <div>{announcementNoLink.description}</div>
+              <FontAwesome icon="bullhorn" />
             </div>
-            <div />
+            <div>
+              <div>
+                <div>{announcementNoLink.heading}</div>
+                <div>{announcementNoLink.description}</div>
+              </div>
+              <div />
+            </div>
           </div>
+          <div />
         </div>
-        <div />
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
   it('renders an information notification', () => {
     const wrapper = shallow(
@@ -142,23 +146,25 @@ describe('Notification', () => {
       />,
       {context: {store}}
     ).dive();
-    expect(wrapper).to.containMatchingElement(
-      <div>
+    expect(
+      wrapper.containsMatchingElement(
         <div>
           <div>
-            <FontAwesome icon="info-circle" />
-          </div>
-          <div>
             <div>
-              <div>{information.notice}</div>
-              <div>{information.details}</div>
+              <FontAwesome icon="info-circle" />
             </div>
-            <div />
+            <div>
+              <div>
+                <div>{information.notice}</div>
+                <div>{information.details}</div>
+              </div>
+              <div />
+            </div>
           </div>
+          <div />
         </div>
-        <div />
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
   it('renders a success notification', () => {
     const wrapper = shallow(
@@ -170,23 +176,25 @@ describe('Notification', () => {
       />,
       {context: {store}}
     ).dive();
-    expect(wrapper).to.containMatchingElement(
-      <div>
+    expect(
+      wrapper.containsMatchingElement(
         <div>
           <div>
-            <FontAwesome icon="check-circle" />
-          </div>
-          <div>
             <div>
-              <div>{success.notice}</div>
-              <div>{success.details}</div>
+              <FontAwesome icon="check-circle" />
             </div>
-            <div />
+            <div>
+              <div>
+                <div>{success.notice}</div>
+                <div>{success.details}</div>
+              </div>
+              <div />
+            </div>
           </div>
+          <div />
         </div>
-        <div />
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
   it('renders a failure notification', () => {
     const wrapper = shallow(
@@ -198,23 +206,25 @@ describe('Notification', () => {
       />,
       {context: {store}}
     ).dive();
-    expect(wrapper).to.containMatchingElement(
-      <div>
+    expect(
+      wrapper.containsMatchingElement(
         <div>
           <div>
-            <FontAwesome icon="exclamation-triangle" />
-          </div>
-          <div>
             <div>
-              <div>{failure.notice}</div>
-              <div>{failure.details}</div>
+              <FontAwesome icon="exclamation-triangle" />
             </div>
-            <div />
+            <div>
+              <div>
+                <div>{failure.notice}</div>
+                <div>{failure.details}</div>
+              </div>
+              <div />
+            </div>
           </div>
+          <div />
         </div>
-        <div />
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
   it('renders a warning notification', () => {
     const wrapper = shallow(
@@ -226,23 +236,25 @@ describe('Notification', () => {
       />,
       {context: {store}}
     ).dive();
-    expect(wrapper).to.containMatchingElement(
-      <div>
+    expect(
+      wrapper.containsMatchingElement(
         <div>
           <div>
-            <FontAwesome icon="exclamation-triangle" />
-          </div>
-          <div>
             <div>
-              <div>{warning.notice}</div>
-              <div>{warning.details}</div>
+              <FontAwesome icon="exclamation-triangle" />
             </div>
-            <div />
+            <div>
+              <div>
+                <div>{warning.notice}</div>
+                <div>{warning.details}</div>
+              </div>
+              <div />
+            </div>
           </div>
+          <div />
         </div>
-        <div />
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
   it('renders a find a course notification', () => {
     const wrapper = shallow(
@@ -257,26 +269,28 @@ describe('Notification', () => {
       />,
       {context: {store}}
     ).dive();
-    expect(wrapper).to.containMatchingElement(
-      <div>
+    expect(
+      wrapper.containsMatchingElement(
         <div>
           <div>
             <div>
-              <div>{findCourse.notice}</div>
-              <div>{findCourse.details}</div>
-            </div>
-            <div>
-              <Button
-                href={findCourse.link}
-                text={findCourse.buttonText}
-                target="_blank"
-              />
+              <div>
+                <div>{findCourse.notice}</div>
+                <div>{findCourse.details}</div>
+              </div>
+              <div>
+                <Button
+                  href={findCourse.link}
+                  text={findCourse.buttonText}
+                  target="_blank"
+                />
+              </div>
             </div>
           </div>
+          <div />
         </div>
-        <div />
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
   it('renders a dismissible notification', () => {
     const wrapper = shallow(

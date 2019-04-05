@@ -7,14 +7,16 @@ import i18n from '@cdo/tutorialExplorer/locale';
 describe('BackButton', () => {
   it('renders a left-arrow back button', () => {
     const wrapper = shallow(<BackButton />);
-    expect(wrapper).to.containMatchingElement(
-      <a href="/learn">
-        <button type="button">
-          <i className="fa fa-arrow-left" />
-          &nbsp;
-          {i18n.backButtonBack()}
-        </button>
-      </a>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <a href="/learn">
+          <button type="button">
+            <i className="fa fa-arrow-left" />
+            &nbsp;
+            {i18n.backButtonBack()}
+          </button>
+        </a>
+      )
+    ).to.be.ok;
   });
 });

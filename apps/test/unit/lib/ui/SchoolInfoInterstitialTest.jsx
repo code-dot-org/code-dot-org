@@ -25,39 +25,43 @@ describe('SchoolInfoInterstitial', () => {
 
   it('renders an uncloseable dialog with school info inputs and a save button', () => {
     const wrapper = shallow(<SchoolInfoInterstitial {...MINIMUM_PROPS} />);
-    expect(wrapper).to.containMatchingElement(
-      <BaseDialog>
-        <div>
+    expect(
+      wrapper.containsMatchingElement(
+        <BaseDialog>
           <div>
-            We want to bring Computer Science to every student - help us track
-            our progress!
+            <div>
+              We want to bring Computer Science to every student - help us track
+              our progress!
+            </div>
+            <div>
+              <p>Please enter your school information below.</p>
+              <SchoolInfoInputs
+                country={''}
+                schoolType={''}
+                ncesSchoolId={''}
+                schoolName={''}
+                schoolLocation={''}
+                useGoogleLocationSearch={true}
+                showErrors={false}
+                showRequiredIndicator={false}
+                onCountryChange={wrapper.instance().onCountryChange}
+                onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
+                onSchoolChange={wrapper.instance().onSchoolChange}
+                onSchoolNotFoundChange={
+                  wrapper.instance().onSchoolNotFoundChange
+                }
+              />
+            </div>
+            <div>
+              <Button
+                text={i18n.save()}
+                onClick={wrapper.find(Button).prop('onClick')}
+              />
+            </div>
           </div>
-          <div>
-            <p>Please enter your school information below.</p>
-            <SchoolInfoInputs
-              country={''}
-              schoolType={''}
-              ncesSchoolId={''}
-              schoolName={''}
-              schoolLocation={''}
-              useGoogleLocationSearch={true}
-              showErrors={false}
-              showRequiredIndicator={false}
-              onCountryChange={wrapper.instance().onCountryChange}
-              onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
-              onSchoolChange={wrapper.instance().onSchoolChange}
-              onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
-            />
-          </div>
-          <div>
-            <Button
-              text={i18n.save()}
-              onClick={wrapper.find(Button).prop('onClick')}
-            />
-          </div>
-        </div>
-      </BaseDialog>
-    );
+        </BaseDialog>
+      )
+    ).to.be.ok;
   });
 
   it('passes empty school info if created with no existing school info', () => {
@@ -70,20 +74,22 @@ describe('SchoolInfoInterstitial', () => {
         }}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <SchoolInfoInputs
-        country={''}
-        schoolType={''}
-        ncesSchoolId={''}
-        schoolName={''}
-        schoolLocation={''}
-        useGoogleLocationSearch={true}
-        onCountryChange={wrapper.instance().onCountryChange}
-        onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
-        onSchoolChange={wrapper.instance().onSchoolChange}
-        onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <SchoolInfoInputs
+          country={''}
+          schoolType={''}
+          ncesSchoolId={''}
+          schoolName={''}
+          schoolLocation={''}
+          useGoogleLocationSearch={true}
+          onCountryChange={wrapper.instance().onCountryChange}
+          onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
+          onSchoolChange={wrapper.instance().onSchoolChange}
+          onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
+        />
+      )
+    ).to.be.ok;
   });
 
   it('passes existing school info if it is provided', () => {
@@ -102,20 +108,22 @@ describe('SchoolInfoInterstitial', () => {
         }}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <SchoolInfoInputs
-        country={'United States'}
-        schoolType={'public'}
-        ncesSchoolId={'123'}
-        schoolName={'Test School'}
-        schoolLocation={'Seattle'}
-        useGoogleLocationSearch={true}
-        onCountryChange={wrapper.instance().onCountryChange}
-        onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
-        onSchoolChange={wrapper.instance().onSchoolChange}
-        onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <SchoolInfoInputs
+          country={'United States'}
+          schoolType={'public'}
+          ncesSchoolId={'123'}
+          schoolName={'Test School'}
+          schoolLocation={'Seattle'}
+          useGoogleLocationSearch={true}
+          onCountryChange={wrapper.instance().onCountryChange}
+          onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
+          onSchoolChange={wrapper.instance().onSchoolChange}
+          onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
+        />
+      )
+    ).to.be.ok;
   });
 
   it('interprets initial country "US" as "United States"', () => {
@@ -585,9 +593,11 @@ describe('SchoolInfoInterstitial', () => {
       wrapper.find(Button).simulate('click');
       server.requests[0].respond(404, {}, '');
       expect(onClose).not.to.have.been.called;
-      expect(wrapper).to.containMatchingElement(
-        <p>We encountered an error with your submission. Please try again.</p>
-      );
+      expect(
+        wrapper.containsMatchingElement(
+          <p>We encountered an error with your submission. Please try again.</p>
+        )
+      ).to.be.ok;
     });
 
     it('closes the dialog on a second failed submission', () => {

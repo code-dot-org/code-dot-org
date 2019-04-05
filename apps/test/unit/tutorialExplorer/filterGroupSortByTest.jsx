@@ -21,16 +21,18 @@ describe('FilterGroupSortBy', () => {
         defaultSortBy={TutorialsSortByOptions.displayweight}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <select>
-        <option value="displayweight">
-          {i18n.filterSortByDisplayWeight()}
-        </option>
-        <option value="popularityrank">
-          {i18n.filterSortByPopularityRank()}
-        </option>
-      </select>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <select>
+          <option value="displayweight">
+            {i18n.filterSortByDisplayWeight()}
+          </option>
+          <option value="popularityrank">
+            {i18n.filterSortByPopularityRank()}
+          </option>
+        </select>
+      )
+    ).to.be.ok;
   });
 
   it('hits a callback when sort settings change', () => {

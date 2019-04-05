@@ -16,14 +16,16 @@ describe('HeaderBanner', () => {
     const wrapper = shallow(<HeaderBanner headingText="Home" short={true} />, {
       context: {store}
     });
-    expect(wrapper.dive()).to.containMatchingElement(
-      <div style={{height: 140, maxWidth: '60%', marginTop: 25}}>
-        <div>Home</div>
-        <div>
-          <span>&nbsp;</span>
+    expect(
+      wrapper.dive().containsMatchingElement(
+        <div style={{height: 140, maxWidth: '60%', marginTop: 25}}>
+          <div>Home</div>
+          <div>
+            <span>&nbsp;</span>
+          </div>
         </div>
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
 
   it('renders a short HeaderBanner with a subheading', () => {
@@ -35,12 +37,14 @@ describe('HeaderBanner', () => {
       />,
       {context: {store}}
     );
-    expect(wrapper.dive()).to.containMatchingElement(
-      <div style={{height: 140, maxWidth: '60%', marginTop: 25}}>
-        <div>Home</div>
-        <div>This is where you can find useful information.</div>
-      </div>
-    );
+    expect(
+      wrapper.dive().containsMatchingElement(
+        <div style={{height: 140, maxWidth: '60%', marginTop: 25}}>
+          <div>Home</div>
+          <div>This is where you can find useful information.</div>
+        </div>
+      )
+    ).to.be.ok;
   });
 
   it('renders an extended HeaderBanner with a subheading and description', () => {
@@ -53,12 +57,16 @@ describe('HeaderBanner', () => {
       />,
       {context: {store}}
     );
-    expect(wrapper.dive()).to.containMatchingElement(
-      <div style={{height: 260, maxWidth: '60%', marginTop: 25}}>
-        <div>Home</div>
-        <div>This is where you can find useful information.</div>
-        <div>Everything on the page is customized to you and easy to find.</div>
-      </div>
-    );
+    expect(
+      wrapper.dive().containsMatchingElement(
+        <div style={{height: 260, maxWidth: '60%', marginTop: 25}}>
+          <div>Home</div>
+          <div>This is where you can find useful information.</div>
+          <div>
+            Everything on the page is customized to you and easy to find.
+          </div>
+        </div>
+      )
+    ).to.be.ok;
   });
 });

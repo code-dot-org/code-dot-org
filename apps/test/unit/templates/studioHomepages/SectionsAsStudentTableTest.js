@@ -17,11 +17,13 @@ describe('SectionsAsStudentTable', () => {
     ).dive();
     [i18n.section(), i18n.course(), i18n.teacher(), i18n.sectionCode()].forEach(
       headerText => {
-        expect(wrapper).to.containMatchingElement(
-          <td>
-            <div>{headerText}</div>
-          </td>
-        );
+        expect(
+          wrapper.containsMatchingElement(
+            <td>
+              <div>{headerText}</div>
+            </td>
+          )
+        ).to.be.ok;
       }
     );
   });
@@ -48,31 +50,40 @@ describe('SectionsAsStudentTable', () => {
       {context: {store}}
     ).dive();
     expect(wrapper.find('.test-row')).to.have.length(4);
-    expect(wrapper).to.containMatchingElement(<div>Current unit:</div>);
+    expect(wrapper.containsMatchingElement(<div>Current unit:</div>)).to.be.ok;
     joinedSections.forEach(section => {
-      expect(wrapper).to.containMatchingElement(
-        <td>
-          <div>{section.name}</div>
-        </td>
-      );
+      expect(
+        wrapper.containsMatchingElement(
+          <td>
+            <div>{section.name}</div>
+          </td>
+        )
+      ).to.be.ok;
       if (section.currentUnitTitle) {
-        expect(wrapper).to.containMatchingElement(
-          <td>
-            <a href={section.linkToAssigned}>{section.assignedTitle}</a>
-            <div>
-              <div>Current unit:</div>
-              <a href={section.linkToCurrentUnit}>{section.currentUnitTitle}</a>
-            </div>
-          </td>
-        );
+        expect(
+          wrapper.containsMatchingElement(
+            <td>
+              <a href={section.linkToAssigned}>{section.assignedTitle}</a>
+              <div>
+                <div>Current unit:</div>
+                <a href={section.linkToCurrentUnit}>
+                  {section.currentUnitTitle}
+                </a>
+              </div>
+            </td>
+          )
+        ).to.be.ok;
       } else {
-        expect(wrapper).to.containMatchingElement(
-          <td>
-            <a href={section.linkToAssigned}>{section.assignedTitle}</a>
-          </td>
-        );
+        expect(
+          wrapper.containsMatchingElement(
+            <td>
+              <a href={section.linkToAssigned}>{section.assignedTitle}</a>
+            </td>
+          )
+        ).to.be.ok;
       }
-      expect(wrapper).to.containMatchingElement(<td>{section.teacherName}</td>);
+      expect(wrapper.containsMatchingElement(<td>{section.teacherName}</td>)).to
+        .be.ok;
     });
   });
 });

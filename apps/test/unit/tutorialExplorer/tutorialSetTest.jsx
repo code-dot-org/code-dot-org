@@ -28,20 +28,22 @@ describe('TutorialSet', () => {
   it('renders empty set of tutorials', () => {
     const wrapper = shallow(<TutorialSet {...DEFAULT_PROPS} />);
     const instance = wrapper.instance();
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <TutorialDetail
-          showing={false}
-          item={null}
-          closeClicked={instance.tutorialDetailClosed}
-          localeEnglish={true}
-          disabledTutorial={false}
-          changeTutorial={instance.changeTutorial}
-          grade="all"
-        />
-        <div>{i18n.tutorialSetNoTutorials()}</div>
-      </div>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <TutorialDetail
+            showing={false}
+            item={null}
+            closeClicked={instance.tutorialDetailClosed}
+            localeEnglish={true}
+            disabledTutorial={false}
+            changeTutorial={instance.changeTutorial}
+            grade="all"
+          />
+          <div>{i18n.tutorialSetNoTutorials()}</div>
+        </div>
+      )
+    ).to.be.ok;
   });
 
   it('renders non-empty set of tutorials', () => {
@@ -49,41 +51,43 @@ describe('TutorialSet', () => {
       <TutorialSet {...DEFAULT_PROPS} tutorials={[TUTORIAL_1, TUTORIAL_2]} />
     );
     const instance = wrapper.instance();
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <TutorialDetail
-          showing={false}
-          item={null}
-          closeClicked={instance.tutorialDetailClosed}
-          localeEnglish={true}
-          disabledTutorial={false}
-          changeTutorial={instance.changeTutorial}
-          grade="all"
-        />
-        <Tutorial
-          item={TUTORIAL_1}
-          filters={{}}
-          key={TUTORIAL_1.code}
-          tutorialClicked={
-            wrapper
-              .find(Tutorial)
-              .at(0)
-              .props().tutorialClicked
-          }
-        />
-        <Tutorial
-          item={TUTORIAL_2}
-          filters={{}}
-          key={TUTORIAL_2.code}
-          tutorialClicked={
-            wrapper
-              .find(Tutorial)
-              .at(1)
-              .props().tutorialClicked
-          }
-        />
-      </div>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <TutorialDetail
+            showing={false}
+            item={null}
+            closeClicked={instance.tutorialDetailClosed}
+            localeEnglish={true}
+            disabledTutorial={false}
+            changeTutorial={instance.changeTutorial}
+            grade="all"
+          />
+          <Tutorial
+            item={TUTORIAL_1}
+            filters={{}}
+            key={TUTORIAL_1.code}
+            tutorialClicked={
+              wrapper
+                .find(Tutorial)
+                .at(0)
+                .props().tutorialClicked
+            }
+          />
+          <Tutorial
+            item={TUTORIAL_2}
+            filters={{}}
+            key={TUTORIAL_2.code}
+            tutorialClicked={
+              wrapper
+                .find(Tutorial)
+                .at(1)
+                .props().tutorialClicked
+            }
+          />
+        </div>
+      )
+    ).to.be.ok;
   });
 
   it('shows tutorial details when tutorial is clicked', () => {
@@ -99,17 +103,19 @@ describe('TutorialSet', () => {
       .tutorialClicked();
 
     const instance = wrapper.instance();
-    expect(wrapper).to.containMatchingElement(
-      <TutorialDetail
-        showing={true}
-        item={TUTORIAL_1}
-        closeClicked={instance.tutorialDetailClosed}
-        localeEnglish={true}
-        disabledTutorial={false}
-        changeTutorial={instance.changeTutorial}
-        grade="all"
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <TutorialDetail
+          showing={true}
+          item={TUTORIAL_1}
+          closeClicked={instance.tutorialDetailClosed}
+          localeEnglish={true}
+          disabledTutorial={false}
+          changeTutorial={instance.changeTutorial}
+          grade="all"
+        />
+      )
+    ).to.be.ok;
   });
 
   it('closes tutorial details', () => {
@@ -120,31 +126,35 @@ describe('TutorialSet', () => {
     // First get into an open details state
     wrapper.setState({showingDetail: true, chosenItem: TUTORIAL_1});
     const instance = wrapper.instance();
-    expect(wrapper).to.containMatchingElement(
-      <TutorialDetail
-        showing={true}
-        item={TUTORIAL_1}
-        closeClicked={instance.tutorialDetailClosed}
-        localeEnglish={true}
-        disabledTutorial={false}
-        changeTutorial={instance.changeTutorial}
-        grade="all"
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <TutorialDetail
+          showing={true}
+          item={TUTORIAL_1}
+          closeClicked={instance.tutorialDetailClosed}
+          localeEnglish={true}
+          disabledTutorial={false}
+          changeTutorial={instance.changeTutorial}
+          grade="all"
+        />
+      )
+    ).to.be.ok;
 
     // Close details and make sure the component updates
     instance.tutorialDetailClosed();
-    expect(wrapper).to.containMatchingElement(
-      <TutorialDetail
-        showing={false}
-        item={null}
-        closeClicked={instance.tutorialDetailClosed}
-        localeEnglish={true}
-        disabledTutorial={false}
-        changeTutorial={instance.changeTutorial}
-        grade="all"
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <TutorialDetail
+          showing={false}
+          item={null}
+          closeClicked={instance.tutorialDetailClosed}
+          localeEnglish={true}
+          disabledTutorial={false}
+          changeTutorial={instance.changeTutorial}
+          grade="all"
+        />
+      )
+    ).to.be.ok;
   });
 
   it('can advance through tutorials', () => {
@@ -155,45 +165,51 @@ describe('TutorialSet', () => {
     // First get into an open details state
     wrapper.setState({showingDetail: true, chosenItem: TUTORIAL_1});
     const instance = wrapper.instance();
-    expect(wrapper).to.containMatchingElement(
-      <TutorialDetail
-        showing={true}
-        item={TUTORIAL_1}
-        closeClicked={instance.tutorialDetailClosed}
-        localeEnglish={true}
-        disabledTutorial={false}
-        changeTutorial={instance.changeTutorial}
-        grade="all"
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <TutorialDetail
+          showing={true}
+          item={TUTORIAL_1}
+          closeClicked={instance.tutorialDetailClosed}
+          localeEnglish={true}
+          disabledTutorial={false}
+          changeTutorial={instance.changeTutorial}
+          grade="all"
+        />
+      )
+    ).to.be.ok;
 
     // Advance to the next tutorial
     instance.changeTutorial(1);
-    expect(wrapper).to.containMatchingElement(
-      <TutorialDetail
-        showing={true}
-        item={TUTORIAL_2}
-        closeClicked={instance.tutorialDetailClosed}
-        localeEnglish={true}
-        disabledTutorial={false}
-        changeTutorial={instance.changeTutorial}
-        grade="all"
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <TutorialDetail
+          showing={true}
+          item={TUTORIAL_2}
+          closeClicked={instance.tutorialDetailClosed}
+          localeEnglish={true}
+          disabledTutorial={false}
+          changeTutorial={instance.changeTutorial}
+          grade="all"
+        />
+      )
+    ).to.be.ok;
 
     // Does not advance if there's no next tutorial
     instance.changeTutorial(1);
-    expect(wrapper).to.containMatchingElement(
-      <TutorialDetail
-        showing={true}
-        item={TUTORIAL_2}
-        closeClicked={instance.tutorialDetailClosed}
-        localeEnglish={true}
-        disabledTutorial={false}
-        changeTutorial={instance.changeTutorial}
-        grade="all"
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <TutorialDetail
+          showing={true}
+          item={TUTORIAL_2}
+          closeClicked={instance.tutorialDetailClosed}
+          localeEnglish={true}
+          disabledTutorial={false}
+          changeTutorial={instance.changeTutorial}
+          grade="all"
+        />
+      )
+    ).to.be.ok;
   });
 
   it('handles disabled tutorials', () => {
@@ -208,16 +224,18 @@ describe('TutorialSet', () => {
     // First get into an open details state
     wrapper.setState({showingDetail: true, chosenItem: TUTORIAL_1});
     const instance = wrapper.instance();
-    expect(wrapper).to.containMatchingElement(
-      <TutorialDetail
-        showing={true}
-        item={TUTORIAL_1}
-        closeClicked={instance.tutorialDetailClosed}
-        localeEnglish={true}
-        disabledTutorial={true}
-        changeTutorial={instance.changeTutorial}
-        grade="all"
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <TutorialDetail
+          showing={true}
+          item={TUTORIAL_1}
+          closeClicked={instance.tutorialDetailClosed}
+          localeEnglish={true}
+          disabledTutorial={true}
+          changeTutorial={instance.changeTutorial}
+          grade="all"
+        />
+      )
+    ).to.be.ok;
   });
 });

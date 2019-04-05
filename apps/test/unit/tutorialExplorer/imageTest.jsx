@@ -6,19 +6,22 @@ import Image from '@cdo/apps/tutorialExplorer/image';
 describe('Image', () => {
   it('renders with minimum opacity at first', () => {
     const wrapper = shallow(<Image style={{}} />);
-    expect(wrapper).to.containMatchingElement(<img style={{opacity: 0.1}} />);
+    expect(wrapper.containsMatchingElement(<img style={{opacity: 0.1}} />)).to
+      .be.ok;
   });
 
   it('renders with a transition to full opacity after image loads', () => {
     const wrapper = shallow(<Image style={{}} />);
     wrapper.instance().onImageLoad();
-    expect(wrapper).to.containMatchingElement(
-      <img
-        style={{
-          opacity: 1,
-          transition: 'opacity 200ms ease-in'
-        }}
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <img
+          style={{
+            opacity: 1,
+            transition: 'opacity 200ms ease-in'
+          }}
+        />
+      )
+    ).to.be.ok;
   });
 });

@@ -55,12 +55,14 @@ describe('SyncOmniAuthSectionControl', () => {
 
   it('initially renders in ready state', () => {
     const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
-    expect(wrapper).to.containMatchingElement(
-      <SyncOmniAuthSectionButton
-        provider={defaultProps.sectionProvider}
-        buttonState={READY}
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <SyncOmniAuthSectionButton
+          provider={defaultProps.sectionProvider}
+          buttonState={READY}
+        />
+      )
+    ).to.be.ok;
   });
 
   it('renders nothing if provider is not recognized', () => {
@@ -115,12 +117,14 @@ describe('SyncOmniAuthSectionControl', () => {
   it('goes into an in-progress state when clicked', () => {
     const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
     wrapper.simulate('click');
-    expect(wrapper).to.containMatchingElement(
-      <SyncOmniAuthSectionButton
-        provider={defaultProps.sectionProvider}
-        buttonState={IN_PROGRESS}
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <SyncOmniAuthSectionButton
+          provider={defaultProps.sectionProvider}
+          buttonState={IN_PROGRESS}
+        />
+      )
+    ).to.be.ok;
   });
 
   it('does not respond to clicks in the in-progress state', () => {
@@ -142,12 +146,14 @@ describe('SyncOmniAuthSectionControl', () => {
     const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
     wrapper.simulate('click');
     return expect(testSyncSucceeds()).to.be.fulfilled.then(() => {
-      expect(wrapper).to.containMatchingElement(
-        <SyncOmniAuthSectionButton
-          provider={defaultProps.sectionProvider}
-          buttonState={SUCCESS}
-        />
-      );
+      expect(
+        wrapper.containsMatchingElement(
+          <SyncOmniAuthSectionButton
+            provider={defaultProps.sectionProvider}
+            buttonState={SUCCESS}
+          />
+        )
+      ).to.be.ok;
     });
   });
 
@@ -182,12 +188,14 @@ describe('SyncOmniAuthSectionControl', () => {
     const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
     wrapper.simulate('click');
     return expect(testSyncFails()).to.be.rejected.then(() => {
-      expect(wrapper).to.containMatchingElement(
-        <SyncOmniAuthSectionButton
-          provider={defaultProps.sectionProvider}
-          buttonState={FAILURE}
-        />
-      );
+      expect(
+        wrapper.containsMatchingElement(
+          <SyncOmniAuthSectionButton
+            provider={defaultProps.sectionProvider}
+            buttonState={FAILURE}
+          />
+        )
+      ).to.be.ok;
     });
   });
 

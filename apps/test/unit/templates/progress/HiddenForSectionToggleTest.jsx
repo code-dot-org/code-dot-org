@@ -11,31 +11,35 @@ describe('HiddenForSectionToggle', () => {
     const wrapper = shallow(
       <HiddenForSectionToggle hidden={false} onChange={() => {}} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <Button
-          text={i18n.visible()}
-          color={Button.ButtonColor.gray}
-          disabled={true}
-          icon="eye"
-        />
-        <Button
-          text={i18n.hidden()}
-          color={Button.ButtonColor.gray}
-          disabled={false}
-          icon="eye-slash"
-        />
-      </div>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <Button
+            text={i18n.visible()}
+            color={Button.ButtonColor.gray}
+            disabled={true}
+            icon="eye"
+          />
+          <Button
+            text={i18n.hidden()}
+            color={Button.ButtonColor.gray}
+            disabled={false}
+            icon="eye-slash"
+          />
+        </div>
+      )
+    ).to.be.ok;
 
     // Changing the 'hidden' prop reverses which button is enabled:
     wrapper.setProps({hidden: true});
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <Button text={i18n.visible()} disabled={false} />
-        <Button text={i18n.hidden()} disabled={true} />
-      </div>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <Button text={i18n.visible()} disabled={false} />
+          <Button text={i18n.hidden()} disabled={true} />
+        </div>
+      )
+    ).to.be.ok;
   });
 
   it('calls onChange handler when buttons are clicked', () => {

@@ -15,15 +15,17 @@ describe('SetUpSections', () => {
     );
     const instance = wrapper.instance();
 
-    expect(wrapper).to.containMatchingElement(
-      <SetUpMessage
-        type="sections"
-        headingText="Set up your classroom"
-        descriptionText="Create a new classroom section to start assigning courses and seeing your student progress."
-        buttonText="Create a section"
-        onClick={instance.beginEditingNewSection}
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <SetUpMessage
+          type="sections"
+          headingText="Set up your classroom"
+          descriptionText="Create a new classroom section to start assigning courses and seeing your student progress."
+          buttonText="Create a section"
+          onClick={instance.beginEditingNewSection}
+        />
+      )
+    ).to.be.ok;
   });
 
   it('calls beginEditingNewSection with no arguments when button is clicked', () => {

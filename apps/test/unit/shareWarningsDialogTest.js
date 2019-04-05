@@ -24,9 +24,11 @@ describe('ShareWarningsDialog', () => {
     expect(shareWarnings.props().showStoreDataAlert).to.be.false;
     const ageDropdown = shareWarnings.find('AgeDropdown');
     expect(ageDropdown).to.have.length(1);
-    expect(shareWarnings).to.containMatchingElement(
-      <div>{commonMsg.shareWarningsAge()}</div>
-    );
+    expect(
+      shareWarnings.containsMatchingElement(
+        <div>{commonMsg.shareWarningsAge()}</div>
+      )
+    ).to.be.ok;
   });
 
   it('renders ShareWarnings with data alert', () => {
@@ -45,13 +47,15 @@ describe('ShareWarningsDialog', () => {
     expect(shareWarnings).to.have.length(1);
     expect(shareWarnings.props().showStoreDataAlert).to.be.true;
     expect(shareWarnings.props().promptForAge).to.be.false;
-    expect(shareWarnings).to.containMatchingElement(
-      <div>
-        {commonMsg.shareWarningsStoreDataBeforeHighlight()}
-        <span>{commonMsg.shareWarningsStoreDataHighlight()}</span>
-        {commonMsg.shareWarningsStoreDataAfterHighlight()}
-      </div>
-    );
+    expect(
+      shareWarnings.containsMatchingElement(
+        <div>
+          {commonMsg.shareWarningsStoreDataBeforeHighlight()}
+          <span>{commonMsg.shareWarningsStoreDataHighlight()}</span>
+          {commonMsg.shareWarningsStoreDataAfterHighlight()}
+        </div>
+      )
+    ).to.be.ok;
     expect(shareWarnings.find('AgeDropdown')).to.have.length(0);
   });
 
@@ -73,16 +77,20 @@ describe('ShareWarningsDialog', () => {
     expect(shareWarnings.props().promptForAge).to.be.true;
     const ageDropdown = shareWarnings.find('AgeDropdown');
     expect(ageDropdown).to.have.length(1);
-    expect(shareWarnings).to.containMatchingElement(
-      <div>{commonMsg.shareWarningsAge()}</div>
-    );
-    expect(shareWarnings).to.containMatchingElement(
-      <div>
-        {commonMsg.shareWarningsStoreDataBeforeHighlight()}
-        <span>{commonMsg.shareWarningsStoreDataHighlight()}</span>
-        {commonMsg.shareWarningsStoreDataAfterHighlight()}
-      </div>
-    );
+    expect(
+      shareWarnings.containsMatchingElement(
+        <div>{commonMsg.shareWarningsAge()}</div>
+      )
+    ).to.be.ok;
+    expect(
+      shareWarnings.containsMatchingElement(
+        <div>
+          {commonMsg.shareWarningsStoreDataBeforeHighlight()}
+          <span>{commonMsg.shareWarningsStoreDataHighlight()}</span>
+          {commonMsg.shareWarningsStoreDataAfterHighlight()}
+        </div>
+      )
+    ).to.be.ok;
   });
 
   it('does not show the dialog if not needed', () => {
@@ -111,9 +119,11 @@ describe('ShareWarningsDialog', () => {
       />
     );
     expect(dialog.state('modalIsOpen')).to.be.true;
-    expect(dialog).to.containMatchingElement(
-      <button type="button">{commonMsg.dialogOK()}</button>
-    );
+    expect(
+      dialog.containsMatchingElement(
+        <button type="button">{commonMsg.dialogOK()}</button>
+      )
+    ).to.be.ok;
     expect(closeSpy).not.to.have.been.called;
     dialog.find('button').simulate('click');
     expect(closeSpy).to.have.been.called;
@@ -132,9 +142,11 @@ describe('ShareWarningsDialog', () => {
       />
     );
     expect(dialog.state('modalIsOpen')).to.be.true;
-    expect(dialog).to.containMatchingElement(
-      <button type="button">{commonMsg.dialogOK()}</button>
-    );
+    expect(
+      dialog.containsMatchingElement(
+        <button type="button">{commonMsg.dialogOK()}</button>
+      )
+    ).to.be.ok;
     expect(closeSpy).not.to.have.been.called;
     dialog.find('button').simulate('click');
     expect(closeSpy).not.to.have.been.called;
@@ -153,9 +165,11 @@ describe('ShareWarningsDialog', () => {
       />
     );
     expect(dialog.state('modalIsOpen')).to.be.true;
-    expect(dialog).to.containMatchingElement(
-      <button type="button">{commonMsg.dialogOK()}</button>
-    );
+    expect(
+      dialog.containsMatchingElement(
+        <button type="button">{commonMsg.dialogOK()}</button>
+      )
+    ).to.be.ok;
     expect(closeSpy).not.to.have.been.called;
     const ageDropdown = dialog.find('AgeDropdown');
     const select = ageDropdown.find('select');
@@ -180,9 +194,11 @@ describe('ShareWarningsDialog', () => {
       />
     );
     expect(dialog.state('modalIsOpen')).to.be.true;
-    expect(dialog).to.containMatchingElement(
-      <button type="button">{commonMsg.dialogOK()}</button>
-    );
+    expect(
+      dialog.containsMatchingElement(
+        <button type="button">{commonMsg.dialogOK()}</button>
+      )
+    ).to.be.ok;
     expect(closeSpy).not.to.have.been.called;
     expect(tooYoungSpy).not.to.have.been.called;
     const ageDropdown = dialog.find('AgeDropdown');

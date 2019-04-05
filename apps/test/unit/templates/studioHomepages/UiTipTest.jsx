@@ -17,22 +17,24 @@ describe('UiTip', () => {
         closeClicked={() => {}}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <div
-          className="arrow_box_up"
-          style={{
-            left: 10,
-            top: 20
-          }}
-        >
-          <div>
-            <i className="fa fa-times" />
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <div
+            className="arrow_box_up"
+            style={{
+              left: 10,
+              top: 20
+            }}
+          >
+            <div>
+              <i className="fa fa-times" />
+            </div>
+            <div>{'Foobar'}</div>
           </div>
-          <div>{'Foobar'}</div>
         </div>
-      </div>
-    );
+      )
+    ).to.be.ok;
   });
 
   it('calls close callback when clicked', () => {

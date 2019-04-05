@@ -61,7 +61,7 @@ describe('UiTips', () => {
       <UiTips {...DEFAULT_PROPS} tips={[INITIAL_TIP]} showInitialTips />
     );
     expect(wrapper.find(UiTip)).not.to.exist;
-    expect(wrapper).to.containMatchingElement(<div />);
+    expect(wrapper.containsMatchingElement(<div />)).to.be.ok;
   });
 
   describe('initial state', () => {

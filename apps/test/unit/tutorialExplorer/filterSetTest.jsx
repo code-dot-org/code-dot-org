@@ -45,44 +45,52 @@ const DEFAULT_PROPS = {
 describe('FilterSet', () => {
   it('renders the provided filter groups', () => {
     const wrapper = shallow(<FilterSet {...DEFAULT_PROPS} />);
-    expect(wrapper).to.containMatchingElement(
-      <FilterGroupOrgNames
-        orgName={FAKE_ORG_NAME}
-        uniqueOrgNames={FAKE_UNIQUE_ORG_NAMES}
-        onUserInput={FAKE_ON_ORG_NAME}
-      />
-    );
-    expect(wrapper).to.containMatchingElement(
-      <FilterGroup
-        key="group-1"
-        name="group-1"
-        text="Group 1"
-        filterEntries={[]}
-        onUserInput={FAKE_ON_USER_INPUT}
-        selection={[]}
-        singleEntry={false}
-      />
-    );
-    expect(wrapper).to.containMatchingElement(
-      <FilterGroup
-        key="group-2"
-        name="group-2"
-        text="Group 2"
-        filterEntries={[{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}]}
-        onUserInput={FAKE_ON_USER_INPUT}
-        selection={['xyzzy']}
-        singleEntry={false}
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <FilterGroupOrgNames
+          orgName={FAKE_ORG_NAME}
+          uniqueOrgNames={FAKE_UNIQUE_ORG_NAMES}
+          onUserInput={FAKE_ON_ORG_NAME}
+        />
+      )
+    ).to.be.ok;
+    expect(
+      wrapper.containsMatchingElement(
+        <FilterGroup
+          key="group-1"
+          name="group-1"
+          text="Group 1"
+          filterEntries={[]}
+          onUserInput={FAKE_ON_USER_INPUT}
+          selection={[]}
+          singleEntry={false}
+        />
+      )
+    ).to.be.ok;
+    expect(
+      wrapper.containsMatchingElement(
+        <FilterGroup
+          key="group-2"
+          name="group-2"
+          text="Group 2"
+          filterEntries={[{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}]}
+          onUserInput={FAKE_ON_USER_INPUT}
+          selection={['xyzzy']}
+          singleEntry={false}
+        />
+      )
+    ).to.be.ok;
   });
 
   it('adds a robotics button if a URL is provided', () => {
     const wrapper = shallow(
       <FilterSet {...DEFAULT_PROPS} roboticsButtonUrl="https://example.com" />
     );
-    expect(wrapper).to.containMatchingElement(
-      <RoboticsButton url="https://example.com" />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <RoboticsButton url="https://example.com" />
+      )
+    ).to.be.ok;
   });
 
   it('hides items when they should not be displayed', () => {

@@ -12,10 +12,12 @@ describe('TeacherSections', () => {
 
   it('renders an OwnedSections component', () => {
     const wrapper = shallow(<TeacherSections {...defaultProps} />);
-    expect(wrapper).to.containMatchingElement(
-      <ContentContainer heading="Classroom Sections">
-        <OwnedSections />
-      </ContentContainer>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <ContentContainer heading="Classroom Sections">
+          <OwnedSections />
+        </ContentContainer>
+      )
+    ).to.be.ok;
   });
 });

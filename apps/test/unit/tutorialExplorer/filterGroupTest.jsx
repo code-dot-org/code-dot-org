@@ -34,28 +34,30 @@ describe('FilterGroup', () => {
         ]}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <FilterGroupContainer text={TEST_TEXT}>
-        <FilterChoice
-          groupName={TEST_GROUP_NAME}
-          name="Martin the Warrior"
-          text="The Bellmaker"
-          selected={false}
-          onUserInput={TEST_CALLBACK}
-          key="Martin the Warrior"
-          singleEntry={false}
-        />
-        <FilterChoice
-          groupName={TEST_GROUP_NAME}
-          name="The Legend of Luke"
-          text="The Long Patrol"
-          selected={false}
-          onUserInput={TEST_CALLBACK}
-          key="The Legend of Luke"
-          singleEntry={false}
-        />
-      </FilterGroupContainer>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <FilterGroupContainer text={TEST_TEXT}>
+          <FilterChoice
+            groupName={TEST_GROUP_NAME}
+            name="Martin the Warrior"
+            text="The Bellmaker"
+            selected={false}
+            onUserInput={TEST_CALLBACK}
+            key="Martin the Warrior"
+            singleEntry={false}
+          />
+          <FilterChoice
+            groupName={TEST_GROUP_NAME}
+            name="The Legend of Luke"
+            text="The Long Patrol"
+            selected={false}
+            onUserInput={TEST_CALLBACK}
+            key="The Legend of Luke"
+            singleEntry={false}
+          />
+        </FilterGroupContainer>
+      )
+    ).to.be.ok;
   });
 
   it('renders radio buttons', () => {
@@ -71,19 +73,21 @@ describe('FilterGroup', () => {
         singleEntry={true}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <FilterGroupContainer text={TEST_TEXT}>
-        <FilterChoice
-          groupName={TEST_GROUP_NAME}
-          name="Martin the Warrior"
-          text="The Bellmaker"
-          selected={false}
-          onUserInput={TEST_CALLBACK}
-          key="Martin the Warrior"
-          singleEntry={true}
-        />
-      </FilterGroupContainer>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <FilterGroupContainer text={TEST_TEXT}>
+          <FilterChoice
+            groupName={TEST_GROUP_NAME}
+            name="Martin the Warrior"
+            text="The Bellmaker"
+            selected={false}
+            onUserInput={TEST_CALLBACK}
+            key="Martin the Warrior"
+            singleEntry={true}
+          />
+        </FilterGroupContainer>
+      )
+    ).to.be.ok;
   });
 
   it('selects choices by name', () => {
@@ -107,36 +111,38 @@ describe('FilterGroup', () => {
         selection={['Mariel of Redwall', 'Triss']}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <FilterGroupContainer text={TEST_TEXT}>
-        <FilterChoice
-          groupName={TEST_GROUP_NAME}
-          name="Mariel of Redwall"
-          text=""
-          selected={true}
-          onUserInput={TEST_CALLBACK}
-          key="Mariel of Redwall"
-          singleEntry={false}
-        />
-        <FilterChoice
-          groupName={TEST_GROUP_NAME}
-          name="Mattimeo"
-          text=""
-          selected={false}
-          onUserInput={TEST_CALLBACK}
-          key="Mattimeo"
-          singleEntry={false}
-        />
-        <FilterChoice
-          groupName={TEST_GROUP_NAME}
-          name="Triss"
-          text=""
-          selected={true}
-          onUserInput={TEST_CALLBACK}
-          key="Triss"
-          singleEntry={false}
-        />
-      </FilterGroupContainer>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <FilterGroupContainer text={TEST_TEXT}>
+          <FilterChoice
+            groupName={TEST_GROUP_NAME}
+            name="Mariel of Redwall"
+            text=""
+            selected={true}
+            onUserInput={TEST_CALLBACK}
+            key="Mariel of Redwall"
+            singleEntry={false}
+          />
+          <FilterChoice
+            groupName={TEST_GROUP_NAME}
+            name="Mattimeo"
+            text=""
+            selected={false}
+            onUserInput={TEST_CALLBACK}
+            key="Mattimeo"
+            singleEntry={false}
+          />
+          <FilterChoice
+            groupName={TEST_GROUP_NAME}
+            name="Triss"
+            text=""
+            selected={true}
+            onUserInput={TEST_CALLBACK}
+            key="Triss"
+            singleEntry={false}
+          />
+        </FilterGroupContainer>
+      )
+    ).to.be.ok;
   });
 });
