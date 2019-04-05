@@ -80,7 +80,7 @@ def run_bash_script(location)
 end
 
 def plugins_to_arg(plugins)
-  plugins.map {|name| "bin/i18n/plugins/#{name}.js"}.join(',')
+  plugins.map {|name| "bin/i18n/plugins/#{name}.js" if name}.join(',')
 end
 
 def redact(source, dest, *plugins)
@@ -89,12 +89,12 @@ def redact(source, dest, *plugins)
 
   plugins = plugins_to_arg(plugins)
   data = YAML.load_file(source)
+  args = ['bin/i18n/node_modules/.bin/redact',
+          '-c bin/i18n/plugins/nonCommonmarkLinebreak.js']
+  args.push('-p ' + plugins) unless plugins.empty?
+
   stdout, _status = Open3.capture2(
-    [
-      'bin/i18n/node_modules/.bin/redact',
-      '-c bin/i18n/plugins/nonCommonmarkLinebreak.js',
-      '-p ' + plugins,
-    ].join(" "),
+    args.join(" "),
     stdin_data: JSON.generate(data)
   )
   data = JSON.parse(stdout)
@@ -119,14 +119,14 @@ def restore(source, redacted, dest, *plugins)
   source_json.flush
   redacted_json.flush
 
+  args = ['bin/i18n/node_modules/.bin/restore',
+          '-c bin/i18n/plugins/nonCommonmarkLinebreak.js']
+  args.push('-p ' + plugins) unless plugins.empty?
+
+  args.push("-s #{source_json.path}")
+  args.push("-r #{redacted_json.path}")
   stdout, _status = Open3.capture2(
-    [
-      'bin/i18n/node_modules/.bin/restore',
-      '-c bin/i18n/plugins/nonCommonmarkLinebreak.js',
-      '-p ' + plugins,
-      "-s #{source_json.path}",
-      "-r #{redacted_json.path}",
-    ].join(" ")
+    args.join(" ")
   )
   redacted_key = redacted_data.keys.first
   restored_data = {}
