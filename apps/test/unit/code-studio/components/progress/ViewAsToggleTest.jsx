@@ -6,10 +6,10 @@ import {UnconnectedViewAsToggle as ViewAsToggle} from '@cdo/apps/code-studio/com
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 describe('ViewAsToggle', () => {
-  it('calls setViewType when ToggleGroup changes', () => {
+  it('calls changeViewType when ToggleGroup changes', () => {
     const spy = sinon.spy();
     const wrapper = shallow(
-      <ViewAsToggle viewAs={ViewType.Student} setViewType={spy} />
+      <ViewAsToggle viewAs={ViewType.Student} changeViewType={spy} />
     );
     expect(spy).not.to.have.been.called;
 
