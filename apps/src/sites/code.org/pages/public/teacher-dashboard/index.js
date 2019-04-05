@@ -1,4 +1,4 @@
-var script = document.querySelector("script[data-teacherdashboard]");
+var script = document.querySelector('script[data-teacherdashboard]');
 var scriptData = JSON.parse(script.dataset.teacherdashboard);
 var studioUrlPrefix = scriptData.studio_url;
 
@@ -8,8 +8,8 @@ var studioUrlPrefix = scriptData.studio_url;
  * should be the corresponding path in dashboard.
  */
 var urlMap = {
-  "/print_signin_cards": "/login_info",
-  "/manage": "/manage_students"
+  '/print_signin_cards': '/login_info',
+  '/manage': '/manage_students'
 };
 
 function redirectToDashboard() {
@@ -26,11 +26,11 @@ function redirectToDashboard() {
   }
 
   var studioTeacherDashboardUrl =
-    studioUrlPrefix + "/teacher_dashboard/sections/" + sectionId;
+    studioUrlPrefix + '/teacher_dashboard/sections/' + sectionId;
   if (path) {
     // Prepend a forward slash to our path, unless it already has one.
-    if (path.at(0) !== "/") {
-      path = "/" + path;
+    if (path.at(0) !== '/') {
+      path = '/' + path;
     }
     studioTeacherDashboardUrl += urlMap[path] || path;
   }
