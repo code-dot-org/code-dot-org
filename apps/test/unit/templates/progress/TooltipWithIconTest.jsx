@@ -26,6 +26,7 @@ describe('TooltipWithIcon', () => {
     ).to.equal('check-circle');
     experiments.isEnabled.restore();
   });
+
   it('does not include the check-circle icon if level is not an assessment - in experiment', () => {
     sinon.stub(experiments, 'isEnabled').returns(true);
     const wrapper = shallow(<TooltipWithIcon {...DEFAULT_PROPS} />);
@@ -37,6 +38,7 @@ describe('TooltipWithIcon', () => {
     ).not.to.equal('check-circle');
     experiments.isEnabled.restore();
   });
+
   it('does not include the check-circle icon if NOT in experiment', () => {
     sinon.stub(experiments, 'isEnabled').returns(false);
     const wrapper = shallow(<TooltipWithIcon {...DEFAULT_PROPS} />);

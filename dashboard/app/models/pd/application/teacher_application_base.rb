@@ -459,10 +459,6 @@ module Pd::Application
       sanitize_form_data_hash[:last_name]
     end
 
-    def teacher_full_name
-      "#{first_name} #{last_name}"
-    end
-
     def state_code
       STATE_ABBR_WITH_DC_HASH.key(state_name).try(:to_s)
     end
