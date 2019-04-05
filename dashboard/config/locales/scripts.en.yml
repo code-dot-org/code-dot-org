@@ -9759,6 +9759,8 @@ en:
               name: Practice PT Part 3
             Unit 4 Assessment:
               name: Unit 4 Assessment
+            Lists Explore:
+              name: Lists Explore
           title: CSP Playground
           description_audience: ''
           description_short: ''
@@ -11211,6 +11213,24 @@ en:
               name: Student Survey (Conditionals)
             Teacher Surveys (Conditionals):
               name: Teacher Surveys (Conditionals)
+            Student Survey (Variables):
+              name: Student Survey (Variables)
+            Teacher Surveys (Variables):
+              name: Teacher Surveys (Variables)
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
+            Practice PT Part 1:
+              name: Practice PT Part 1
+            Practice PT Part 2:
+              name: Practice PT Part 2
+            Practice PT Part 3:
+              name: Practice PT Part 3
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
           title: 'Unit 4: Variables, Conditionals, Functions'
           description_audience: ''
           description_short: ''
@@ -11707,3 +11727,447 @@ en:
           description_audience: 4th grade
           description_short: This module focuses on the 4th grade's science and social study standards. In science, they view life standards that encompass habitats, ecosystems, native species, and invasive species. In social studies, students contemplate the branches of Florida's government and how everyday citizens can impact local and state policies.
           description: This module focuses on the 4th grade's science and social study standards. In science, they view life standards that encompass habitats, ecosystems, native species, and invasive species. In social studies, students contemplate the branches of Florida's government and how everyday citizens can impact local and state policies.
+        csp1-pilot-staging:
+          stages:
+            Variables Explore:
+              name: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
+            Student Survey (Variables):
+              name: Student Survey (Variables)
+            Teacher Surveys (Variables):
+              name: Teacher Surveys (Variables)
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
+            Practice PT Part 1:
+              name: Practice PT Part 1
+            Practice PT Part 2:
+              name: Practice PT Part 2
+            Practice PT Part 3:
+              name: Practice PT Part 3
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
+          title: 'Unit 1: Bits & Bytes'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp2-pilot-staging:
+          stages:
+            Variables Explore:
+              name: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
+            Student Survey (Variables):
+              name: Student Survey (Variables)
+            Teacher Surveys (Variables):
+              name: Teacher Surveys (Variables)
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
+            Practice PT Part 1:
+              name: Practice PT Part 1
+            Practice PT Part 2:
+              name: Practice PT Part 2
+            Practice PT Part 3:
+              name: Practice PT Part 3
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
+          title: 'Unit 2: The Internet'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-pilot-staging:
+          stages:
+            Variables Explore:
+              name: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
+            Student Survey (Variables):
+              name: Student Survey (Variables)
+            Teacher Surveys (Variables):
+              name: Teacher Surveys (Variables)
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
+            Practice PT Part 1:
+              name: Practice PT Part 1
+            Practice PT Part 2:
+              name: Practice PT Part 2
+            Practice PT Part 3:
+              name: Practice PT Part 3
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
+          title: 'Unit 3: Intro to App Development'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp4-pilot-staging:
+          stages:
+            Variables Explore:
+              name: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
+            Student Survey (Variables):
+              name: Student Survey (Variables)
+            Teacher Surveys (Variables):
+              name: Teacher Surveys (Variables)
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
+            Practice PT Part 1:
+              name: Practice PT Part 1
+            Practice PT Part 2:
+              name: Practice PT Part 2
+            Practice PT Part 3:
+              name: Practice PT Part 3
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
+          title: 'Unit 4: Variables, Conditionals, and Functions'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp5-pilot-staging:
+          stages:
+            Variables Explore:
+              name: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
+            Student Survey (Variables):
+              name: Student Survey (Variables)
+            Teacher Surveys (Variables):
+              name: Teacher Surveys (Variables)
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
+            Practice PT Part 1:
+              name: Practice PT Part 1
+            Practice PT Part 2:
+              name: Practice PT Part 2
+            Practice PT Part 3:
+              name: Practice PT Part 3
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
+            Lists Explore:
+              name: Lists Explore
+          title: 'Unit 5: Lists, Loops, and Traversals'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp6-pilot-staging:
+          stages:
+            Variables Explore:
+              name: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
+            Student Survey (Variables):
+              name: Student Survey (Variables)
+            Teacher Surveys (Variables):
+              name: Teacher Surveys (Variables)
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
+            Practice PT Part 1:
+              name: Practice PT Part 1
+            Practice PT Part 2:
+              name: Practice PT Part 2
+            Practice PT Part 3:
+              name: Practice PT Part 3
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
+          title: 'Unit 6: Algorithms'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp7-pilot-staging:
+          stages:
+            new stage:
+              name: new stage
+            Variables Explore:
+              name: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
+            Student Survey (Variables):
+              name: Student Survey (Variables)
+            Teacher Surveys (Variables):
+              name: Teacher Surveys (Variables)
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
+            Practice PT Part 1:
+              name: Practice PT Part 1
+            Practice PT Part 2:
+              name: Practice PT Part 2
+            Practice PT Part 3:
+              name: Practice PT Part 3
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
+          title: 'Unit 7: Functions and Libraries'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp8-pilot-staging:
+          stages:
+            Variables Explore:
+              name: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
+            Student Survey (Variables):
+              name: Student Survey (Variables)
+            Teacher Surveys (Variables):
+              name: Teacher Surveys (Variables)
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
+            Practice PT Part 1:
+              name: Practice PT Part 1
+            Practice PT Part 2:
+              name: Practice PT Part 2
+            Practice PT Part 3:
+              name: Practice PT Part 3
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
+          title: 'Unit 8: Create PT'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp9-pilot-staging:
+          stages:
+            Variables Explore:
+              name: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
+            Student Survey (Variables):
+              name: Student Survey (Variables)
+            Teacher Surveys (Variables):
+              name: Teacher Surveys (Variables)
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
+            Practice PT Part 1:
+              name: Practice PT Part 1
+            Practice PT Part 2:
+              name: Practice PT Part 2
+            Practice PT Part 3:
+              name: Practice PT Part 3
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
+          title: 'Unit 9: Data'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp10-pilot-staging:
+          stages:
+            Variables Explore:
+              name: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
+            Student Survey (Variables):
+              name: Student Survey (Variables)
+            Teacher Surveys (Variables):
+              name: Teacher Surveys (Variables)
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Student Survey (Conditionals):
+              name: Student Survey (Conditionals)
+            Teacher Surveys (Conditionals):
+              name: Teacher Surveys (Conditionals)
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
+            Practice PT Part 1:
+              name: Practice PT Part 1
+            Practice PT Part 2:
+              name: Practice PT Part 2
+            Practice PT Part 3:
+              name: Practice PT Part 3
+            Unit 4 Assessment:
+              name: Unit 4 Assessment
+          title: 'Unit 10: Global Impact'
+          description_audience: ''
+          description_short: ''
+          description: ''
