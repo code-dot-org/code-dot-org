@@ -152,21 +152,29 @@ const customInputTypes = {
   },
   costumePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      let button;
+      let buttons;
       if (experiments.isEnabled('sprite-costumes')) {
-        button = {
-          text: 'Draw',
-          action: () => {
-            getStore().dispatch(
-              changeInterfaceMode(GameLabInterfaceMode.ANIMATION)
-            );
+        buttons = [
+          {
+            text: 'Draw',
+            action: () => {
+              getStore().dispatch(
+                changeInterfaceMode(GameLabInterfaceMode.ANIMATION)
+              );
+            }
+          },
+          {
+            text: 'More',
+            action: () => {
+              console.log('Add a new animation');
+            }
           }
-        };
+        ];
       }
       currentInputRow
         .appendTitle(inputConfig.label)
         .appendTitle(
-          new Blockly.FieldImageDropdown(sprites, 32, 32, button),
+          new Blockly.FieldImageDropdown(sprites, 32, 32, buttons),
           inputConfig.name
         );
     },
