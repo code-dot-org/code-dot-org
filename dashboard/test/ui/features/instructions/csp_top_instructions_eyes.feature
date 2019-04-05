@@ -8,10 +8,8 @@ Scenario: CSD and CSP Top Instructions
   And I wait for the page to fully load
   Then I see no difference for "teacher in applab level with rubric"
   Then I click selector ".uitest-feedback"
-  And I wait for the page to fully load
   Then I see no difference for "teacher in applab level viewing rubric"
   Then I click selector ".uitest-instructionsTab"
-  And I wait for the page to fully load
   Then I see no difference for "teacher in applab level with rubric after viewing rubric"
 
   And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/2?enableExperiments=2019-mini-rubric"
@@ -19,6 +17,7 @@ Scenario: CSD and CSP Top Instructions
   And I wait until element "iframe" is visible
   And I switch to the first iframe
   And I wait to see "#bramble"
+  And I wait until element "iframe" is visible
   And I switch to the first iframe
   And I wait to see "#editor-holder"
   And I switch to the default content
