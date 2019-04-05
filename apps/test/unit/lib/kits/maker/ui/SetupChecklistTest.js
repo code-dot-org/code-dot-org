@@ -22,10 +22,12 @@ describe('SetupChecklist', () => {
 
   beforeEach(() => {
     sinon.stub(utils, 'reload');
+    sinon.stub(window.console, 'error');
     checker = new StubSetupChecker();
   });
 
   afterEach(() => {
+    window.console.error.restore();
     utils.reload.restore();
   });
 
@@ -49,9 +51,6 @@ describe('SetupChecklist', () => {
     });
 
     describe('test with expected console.error', () => {
-      // Allow console.error calls and squelch actual logging
-      beforeEach(() => console.error.reset());
-
       it('reloads the page on re-detect if plugin not installed', () => {
         checker.detectChromeAppInstalled.rejects(new Error('not installed'));
         const wrapper = mount(
@@ -105,9 +104,6 @@ describe('SetupChecklist', () => {
     });
 
     describe('test with expected console.error', () => {
-      // Allow console.error calls and squelch actual logging
-      beforeEach(() => console.error.reset());
-
       it('fails if Code.org browser version is wrong', () => {
         const error = new Error('test error');
         checker.detectSupportedBrowser.rejects(error);
