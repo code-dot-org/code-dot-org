@@ -5,7 +5,7 @@ import {
   COLUMNS_WITHOUT_THUMBNAILS
 } from '@cdo/apps/templates/projects/ProjectsList';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 
 const CAT_IMAGE_URL = '/base/static/common_images/stickers/cat.png';
 

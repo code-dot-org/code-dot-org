@@ -1,4 +1,4 @@
-import {expect} from '../../../../../util/configuredChai';
+import {expect} from '../../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';

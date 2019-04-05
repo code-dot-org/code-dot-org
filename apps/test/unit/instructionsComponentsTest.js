@@ -1,4 +1,4 @@
-import {expect} from '../util/configuredChai';
+import {expect} from '../util/reconfiguredChai';
 var testUtils = require('./../util/testUtils');
 import React from 'react';
 import {mount} from 'enzyme';

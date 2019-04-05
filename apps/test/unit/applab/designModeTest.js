@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import designMode from '@cdo/apps/applab/designMode';
 
 describe('appendPx', () => {

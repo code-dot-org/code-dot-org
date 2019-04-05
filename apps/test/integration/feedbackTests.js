@@ -1,4 +1,4 @@
-import {assert} from '../util/configuredChai';
+import {assert} from '../util/reconfiguredChai';
 var testUtils = require('../util/testUtils');
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 

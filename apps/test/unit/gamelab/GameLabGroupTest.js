@@ -1,6 +1,6 @@
 /** @file Tests for GameLabGroup, our extension of p5.play Group */
 import {spy} from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import {createStatefulGameLabP5} from '../../util/gamelab/TestableGameLabP5';
 import {sandboxDocumentBody} from '../../util/testUtils';
 

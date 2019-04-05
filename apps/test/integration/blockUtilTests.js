@@ -1,4 +1,4 @@
-import {assert} from '../util/configuredChai';
+import {assert} from '../util/reconfiguredChai';
 import {setupTestBlockly} from './util/testBlockly';
 import {parseElement} from '@cdo/apps/xml';
 

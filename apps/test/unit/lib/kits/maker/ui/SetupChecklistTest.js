@@ -1,7 +1,7 @@
 /** @file Test SetupChecklist component */
 import React from 'react';
 import sinon from 'sinon';
-import {expect} from '../../../../../util/configuredChai';
+import {expect} from '../../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import * as utils from '@cdo/apps/utils';
 import * as browserChecks from '@cdo/apps/lib/kits/maker/util/browserChecks';

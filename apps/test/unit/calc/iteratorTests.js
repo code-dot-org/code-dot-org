@@ -1,4 +1,4 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/reconfiguredChai';
 
 var InputIterator = require('@cdo/apps/calc/inputIterator');
 

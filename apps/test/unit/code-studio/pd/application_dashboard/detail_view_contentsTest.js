@@ -7,7 +7,7 @@ import {
 import React from 'react';
 import _ from 'lodash';
 import sinon from 'sinon';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 
 describe('DetailViewContents', () => {

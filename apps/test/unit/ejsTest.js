@@ -1,4 +1,4 @@
-import {assert} from '../util/configuredChai';
+import {assert} from '../util/reconfiguredChai';
 // nonstandard EJS behavior we rely upon in our templates
 describe('ejs test', function() {
   it('renders empty string on undefined object property access', function() {

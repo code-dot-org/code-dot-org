@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/gamelab/shapes';
 
 var testUtils = require('../../util/testUtils');

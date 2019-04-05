@@ -1,5 +1,5 @@
 /** @file Tests for App Lab redux module */
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {
   getStore,
   registerReducers,

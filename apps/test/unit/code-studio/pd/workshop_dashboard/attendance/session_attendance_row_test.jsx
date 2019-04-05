@@ -1,4 +1,4 @@
-import {expect} from '../../../../../util/configuredChai';
+import {expect} from '../../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import React from 'react';
 import SessionAttendanceRow from '@cdo/apps/code-studio/pd/workshop_dashboard/attendance/session_attendance_row';

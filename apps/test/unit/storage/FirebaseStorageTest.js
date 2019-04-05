@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {getDatabase, getConfigRef} from '@cdo/apps/storage/firebaseUtils';
 

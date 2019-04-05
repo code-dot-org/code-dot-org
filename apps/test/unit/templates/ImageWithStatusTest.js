@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import {ImageWithStatus} from '@cdo/apps/templates/ImageWithStatus';
 

@@ -6,7 +6,7 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {shallow, mount} from 'enzyme';
 import ManageStudentsTable, {
   UnconnectedManageStudentsTable,

@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import VersionHistory from '@cdo/apps/templates/VersionHistory';
 import VersionRow from '@cdo/apps/templates/VersionRow';
 import {sources as sourcesApi, files as filesApi} from '@cdo/apps/clientApi';

@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import i18n from '@cdo/locale';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import LandingPage, {
   LastWorkshopSurveyBanner
 } from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';

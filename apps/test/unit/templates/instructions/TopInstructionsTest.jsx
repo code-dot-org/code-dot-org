@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedTopInstructions as TopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
 import TopInstructionsCSF from '@cdo/apps/templates/instructions/TopInstructionsCSF';
 import TopInstructionsCSP from '@cdo/apps/templates/instructions/TopInstructionsCSP';

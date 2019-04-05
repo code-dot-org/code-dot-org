@@ -1,5 +1,5 @@
 import reducer, * as animationPickerModule from '@cdo/apps/gamelab/AnimationPicker/animationPickerModule';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 var Goal = animationPickerModule.Goal;
 
 describe('animationPickerModule', function() {

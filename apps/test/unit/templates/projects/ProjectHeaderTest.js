@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/reconfiguredChai';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader.jsx';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import {Provider} from 'react-redux';

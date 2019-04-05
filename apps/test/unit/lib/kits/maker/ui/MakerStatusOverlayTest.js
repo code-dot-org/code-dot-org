@@ -1,6 +1,6 @@
 /** @file Test maker overlay */
 import React from 'react';
-import {expect} from '../../../../../util/configuredChai';
+import {expect} from '../../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {UnconnectedMakerStatusOverlay} from '@cdo/apps/lib/kits/maker/ui/MakerStatusOverlay';

@@ -18,7 +18,7 @@ import reducer, {
 import animationTab from '@cdo/apps/gamelab/AnimationTab/animationTabModule';
 import {EMPTY_IMAGE} from '@cdo/apps/gamelab/constants';
 import {createStore} from '../../util/redux';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../util/testUtils';
 const project = require('@cdo/apps/code-studio/initApp/project');
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 
 const TEST_UNIT_NAME = 'Test Unit';

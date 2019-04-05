@@ -1,4 +1,4 @@
-import {assert} from '../util/configuredChai';
+import {assert} from '../util/reconfiguredChai';
 import {setExternalGlobals} from './../util/testUtils';
 import React from 'react';
 import {mount} from 'enzyme';

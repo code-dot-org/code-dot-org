@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import i18n from '@cdo/locale';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import ConfirmRemoveStudentDialog, {
   MINIMUM_TEST_PROPS
 } from '@cdo/apps/templates/manageStudents/ConfirmRemoveStudentDialog';

@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import sinon from 'sinon';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
 describe('InstructionsWithWorkspace', () => {

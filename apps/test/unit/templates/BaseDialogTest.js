@@ -1,7 +1,7 @@
 /** @file Tests for BaseDialog component */
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 describe('BaseDialog', function() {

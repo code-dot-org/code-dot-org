@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import SubmissionStatusAssessmentsTable from '@cdo/apps/templates/sectionAssessments/SubmissionStatusAssessmentsTable';
 import {studentOverviewData} from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 

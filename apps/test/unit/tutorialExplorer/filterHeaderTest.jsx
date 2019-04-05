@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import FilterHeader from '@cdo/apps/tutorialExplorer/filterHeader';
 import BackButton from '@cdo/apps/tutorialExplorer/backButton';
 import i18n from '@cdo/tutorialExplorer/locale';

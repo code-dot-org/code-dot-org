@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {assert, expect} from '../../../../util/configuredChai';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import manageLinkedAccounts, {
   initialState,
   initializeState,

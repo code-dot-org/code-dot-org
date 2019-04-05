@@ -12,7 +12,7 @@ whenTouching
 
 import _ from 'lodash';
 import GameLabP5 from '@cdo/apps/gamelab/GameLabP5';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import {stub} from 'sinon';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';

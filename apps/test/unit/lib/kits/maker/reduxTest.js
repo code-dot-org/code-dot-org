@@ -1,5 +1,5 @@
 /** @file Tests for Maker Toolkit redux module */
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import {createStore, combineReducers} from 'redux';
 import {
   reducer,

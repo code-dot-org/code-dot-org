@@ -3,7 +3,7 @@ import Portal from 'react-portal';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import msg from '@cdo/locale';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import SettingsCog, {ToggleMaker} from '@cdo/apps/lib/ui/SettingsCog';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';

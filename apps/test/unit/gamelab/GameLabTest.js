@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import GameLab from '@cdo/apps/gamelab/GameLab';
 import Sounds from '@cdo/apps/Sounds';
 import {

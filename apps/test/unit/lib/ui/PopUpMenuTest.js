@@ -2,7 +2,7 @@
 import React from 'react';
 import sinon from 'sinon';
 import msg from '@cdo/locale';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import PopUpMenu, {MenuBubble} from '@cdo/apps/lib/ui/PopUpMenu';
 
