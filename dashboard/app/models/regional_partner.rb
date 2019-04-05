@@ -55,6 +55,7 @@ class RegionalPartner < ActiveRecord::Base
     apps_close_date_csd_facilitator
     apps_close_date_csp_teacher
     apps_close_date_csp_facilitator
+    apps_priority_deadline_date
     applications_principal_approval
     applications_decision_emails
     link_to_partner_application
