@@ -10,9 +10,6 @@ class VideoTest < ActiveSupport::TestCase
   end
 
   test "cannot create a video key with a name that contains a colon(s)" do
-    # does not raise exception ..
-    Video.check_i18n_names
-
     video = Video.new(key: 'Tech:Hub sea:tac', download: 'no_download_link')
     refute video.valid?
     assert video.errors.include?(:key)
