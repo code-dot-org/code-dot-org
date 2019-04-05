@@ -3,8 +3,9 @@
 import {SVG_NS} from '../constants';
 import {getStore} from '../redux';
 import {getLocation} from './locationPickerModule';
-import {GAME_HEIGHT} from './constants';
+import {GAME_HEIGHT, GameLabInterfaceMode} from './constants';
 import {animationSourceUrl} from './animationListModule';
+import {changeInterfaceMode} from './actions';
 
 export function sprites() {
   const animationList = getStore().getState().animationList;
@@ -150,10 +151,18 @@ const customInputTypes = {
   },
   costumePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
+      let button = {
+        text: 'Draw',
+        action: () => {
+          getStore().dispatch(
+            changeInterfaceMode(GameLabInterfaceMode.ANIMATION)
+          );
+        }
+      };
       currentInputRow
         .appendTitle(inputConfig.label)
         .appendTitle(
-          new Blockly.FieldImageDropdown(sprites, 32, 32),
+          new Blockly.FieldImageDropdown(sprites, 32, 32, button),
           inputConfig.name
         );
     },
