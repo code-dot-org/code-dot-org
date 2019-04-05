@@ -193,6 +193,7 @@ export default class SoundLibrary extends React.Component {
               soundsRegistry={this.sounds}
             />
             <button
+              type="button"
               className={'primary'}
               onClick={this.onClickChoose}
               style={styles.button}

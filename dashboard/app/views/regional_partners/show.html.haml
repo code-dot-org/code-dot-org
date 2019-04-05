@@ -30,6 +30,9 @@
         %strong
           = "Apps #{state} date for #{course.upcase} #{role.pluralize}"
         = @regional_partner.send("apps_#{state}_date_#{course}_#{role}".to_sym)
+%p
+  %strong Apps Priority Deadline Date
+  = @regional_partner.apps_priority_deadline_date
 - %w(csd csp).each do |course|
   %p
     %strong
