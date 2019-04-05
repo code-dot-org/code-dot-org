@@ -13,7 +13,14 @@ Scenario: CSD and CSP Top Instructions
   Then I see no difference for "teacher in applab level with rubric after viewing rubric"
 
   And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/2?enableExperiments=2019-mini-rubric"
-  And I wait to see ".uitest-feedback"
+  And I wait until element ".user_menu" is visible
+  And I wait until element "iframe" is visible
+  And I switch to the first iframe
+  And I wait to see "#bramble"
+  And I wait until element "iframe" is visible
+  And I switch to the first iframe
+  And I wait to see "#editor-holder"
+  And I switch to the default content
   Then I see no difference for "teacher in weblab level with rubric"
   Then I click selector ".uitest-feedback"
   Then I see no difference for "teacher in weblab level viewing rubric"
