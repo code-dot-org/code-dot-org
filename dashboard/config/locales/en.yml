@@ -347,6 +347,7 @@ en:
       district_dashboard: 'District Dashboard'
       label: 'Hi %{username}'
       stats: 'Code Studio'
+      my_projects: 'My projects'
       settings: 'Account settings'
       logout: 'Sign out'
       signin: 'Sign in'
