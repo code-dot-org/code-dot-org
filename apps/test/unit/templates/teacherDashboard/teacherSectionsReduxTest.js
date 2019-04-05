@@ -954,9 +954,11 @@ describe('teacherSectionsRedux', () => {
     beforeEach(function() {
       // Stub server responses
       server = sinon.fakeServer.create();
+      sinon.stub(console, 'error');
     });
 
     afterEach(function() {
+      console.error.restore();
       server.restore();
     });
 
@@ -989,7 +991,6 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('sets asyncLoadComplete to true after first failure response', () => {
-      console.error.reset(); // Already stubbed in tests
       const promise = store.dispatch(asyncLoadSectionData());
 
       server.respondWith('GET', '/dashboardapi/sections', failureResponse);
