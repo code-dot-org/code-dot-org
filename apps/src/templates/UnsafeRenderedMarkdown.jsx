@@ -21,14 +21,20 @@ remarkParser.compilerPlugins.push(stripStyles);
  */
 export default class UnsafeRenderedMarkdown extends React.Component {
   static propTypes = {
-    markdown: PropTypes.string.isRequired
+    markdown: PropTypes.string.isRequired,
+    style: PropTypes.objectOf(PropTypes.string)
   };
 
   render() {
     const processedMarkdown = remarkParser.sourceToHtml(this.props.markdown);
 
     /* eslint-disable react/no-danger */
-    return <div dangerouslySetInnerHTML={{__html: processedMarkdown}} />;
+    return (
+      <div
+        dangerouslySetInnerHTML={{__html: processedMarkdown}}
+        style={this.props.style}
+      />
+    );
     /* eslint-enable react/no-danger */
   }
 }

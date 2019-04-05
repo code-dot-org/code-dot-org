@@ -25,8 +25,14 @@ export default class AbuseError extends React.Component {
     // our i18n strings
     return (
       <div className={this.props.className} style={this.props.style}>
-        <UnsafeRenderedMarkdown markdown={this.props.i18n.tos} />
-        <UnsafeRenderedMarkdown markdown={this.props.i18n.contact_us} />
+        <UnsafeRenderedMarkdown
+          markdown={this.props.i18n.tos}
+          style={this.props.textStyle}
+        />
+        <UnsafeRenderedMarkdown
+          markdown={this.props.i18n.contact_us}
+          style={this.props.textStyle}
+        />
       </div>
     );
   }
