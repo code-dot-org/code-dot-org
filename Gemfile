@@ -104,14 +104,14 @@ group :development, :test do
   # For UI testing.
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'cucumber'
-  gem 'eyes_selenium', '3.14.2'
+  gem 'eyes_selenium'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver', '3.8.0'
+  gem 'selenium-webdriver'
   gem 'spring'
   gem 'spring-commands-testunit'
 
