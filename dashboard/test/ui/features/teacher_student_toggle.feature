@@ -17,7 +17,6 @@ Scenario: Toggle on Multi Level
   Then I open the progress drop down of the current page
   And I see no difference for "progress dropdown for teacher"
 
-  And I select the first section
   And I click selector ".section-student .name a" to load a new page
   And I wait to see ".header_popup_link"
   Then I open the progress drop down of the current page
