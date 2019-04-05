@@ -674,6 +674,7 @@
   "justDidHourOfCode": "我刚刚完成了 #HourOfCode —— 来看看吧！ @codeorg",
   "justDidHourOfCodeDonor": "我刚刚参加了#HourOfCode - 来看看吧！（感谢 %{donor_twitter} 支持 @codeorg)",
   "keepPlaying": "继续玩",
+  "keyConcept": "主要理念",
   "keyValueCaption": "用键值对来存储一组唯一的键，每个键映射到了一个值。",
   "keyValuePairLink": "键/值对",
   "languages": "语言",

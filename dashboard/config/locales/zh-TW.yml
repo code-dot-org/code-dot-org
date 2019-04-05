@@ -30,7 +30,7 @@ zh-TW:
         gender: 性別
         edit_header: 編輯帳戶資料
         finish_sign_up_header: 已成功創建你的帳戶
-        finish_sign_up_subheader: 填妥下面的資料以完成帳戶申請。
+        finish_sign_up_subheader: 填妥下面的資料以完成 <strong>%{email}</strong> 的帳戶申請。
         error:
           future: 不能選擇將來的時間
   hello: Hello world
@@ -65,7 +65,7 @@ zh-TW:
   courses_page:
     title_student: 在 Code Studio 上學習
     title_teacher: 教授計算機科學
-  unplugged_activity: 不插電的活動
+  unplugged_activity: 不插電活動
   of: "／"
   more: 更多
   less: 更少
@@ -79,6 +79,7 @@ zh-TW:
   prize: 獎品
   more_info: 更多的資訊
   auth:
+    continue_with: 用 %{provider} 登入
     sign_in_with: 用 %{provider} 登入
     signed_in: 已成功登入！
     signed_out: 您已登出 <a href="%{url}"> Code.org</a>。
@@ -87,12 +88,12 @@ zh-TW:
     notyet_signedup: 還沒加入？
     google_oauth2: Google 帳戶
     twitter: Twitter
-    facebook: Facebook
-    windowslive: 微軟帳戶
-    microsoft_v2_auth: 微軟帳戶
-    clever: Clever 帳號
+    facebook: Facebook 帳戶
+    windowslive: Microsoft 帳戶
+    microsoft_v2_auth: Microsoft 帳戶
+    clever: Clever 帳戶
     powerschool: Powerschool 帳戶
-    forgot_password: 忘記了您的密碼嗎？
+    forgot_password: 忘了密碼？
     migration_success: 成功！你已更新為我們的新用戶體驗。
     demigration_success: 你的帳戶目前停用新的用戶體驗功能。
     need_confirmation: 沒有收到確認說明嗎？
@@ -144,9 +145,9 @@ zh-TW:
     user_type_teacher: 教師
     user_type_student: 學生
     field_is_required: 必填
-    accept_terms: 你必須同意以建立一個帳戶
+    accept_terms: 你必須同意才能建立帳戶。
     error: 發生錯誤。
-    email_preference_question: 我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？
+    email_preference_question: 我們是否可以透過電子郵件向你發送有關我們的課程、當地志工或其它計算機科學資訊的訊息？（大概一個月一次）
     email_preference_privacy: "（請參閱我們的隱私政策）"
     email_preference_yes: 是
     email_preference_no: 否
@@ -194,7 +195,7 @@ zh-TW:
     student_privacy: 若要進一步瞭解為何你無法看到你的全名，請<a href='%{student_privacy_blog}' target='_blank'>點擊此處</a>。
   password:
     reset_form:
-      title: 忘記了您的密碼嗎？
+      title: 忘了密碼？
       instructions: 請在下方輸入您的電子郵件，我們發送重設密碼的指引給您
       email: 電子信箱
       submit: 提交
@@ -330,6 +331,7 @@ zh-TW:
       signin: 登入
       signup: 建立一個帳戶
       already_registered: 已經註冊過了？
+      pair_programming: 小組編程
       team: 團隊
       driver: 已登入
       navigator: 夥伴
@@ -450,8 +452,8 @@ zh-TW:
     teacher_student_count_one: 您有 %{count} 個學生。
     teacher_student_count: 您有 %{count} 個學生。
     teacher_averages: 你的學生平均下來獲得了 %{trophy_average} / %{trophy_max} 的概念通（Concept Mastery）獎盃。
-    teacher_print_certificates: 為完成此課程的學生列印證書
-    teacher_read_blog: 在Educator Blog閱讀我們的最新資訊
+    teacher_print_certificates: 為完成此課程的所有學生列印證書
+    teacher_read_blog: 在 Educator Blog 上閱讀關於我們的新消息和教材更新訊息
     classroom: 你的教室
     student_progress: 你的學習進度
     student_stats: 你已經獲得了 %{trophy_count}/%{trophy_max} 的「概念通」獎盃了。
@@ -622,7 +624,7 @@ zh-TW:
     bounce_og_title: 看看我的彈跳遊戲
     flappy_og_title: 看看我的像素鳥遊戲
     studio_og_title: 看看我的 Play Lab App
-    check_out_what_i_made: 看看我做的
+    check_out_what_i_made: 看看我的作品
     og_description: 我在 Code.org 自己寫了個程式
     phone_number_not_allowed: 看起來裡面有一組電話號碼。請試著改變文字。
     address_not_allowed: 看起來裡面有一組地址。請試著改變文字。
@@ -659,7 +661,7 @@ zh-TW:
       body: 這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。
       body_short: 在速成課程的課程 2-4 中學習基本的計算機科學。
     hoc2014:
-      try_new_tutorial: 試試我們新的、測試的一小時玩程式課程
+      try_new_tutorial: 試試我們新的一小時玩程式教程（測試版）
       try_frozen: 來自冰雪奇緣的安娜及艾莎。
     gallery:
       title: 藝廊
@@ -680,8 +682,8 @@ zh-TW:
     starwars:
       title: 星際大戰
     infinity:
-      title: Infinity Play Lab
-      body: 用 Play Lab 來創造一個由《迪士尼無限世界》中的角色所主演的故事或遊戲。
+      title: 迪士尼無限 Play Lab
+      body: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
     minecraft:
       title: Minecraft
       body: 透過程式碼探索 Minecraft 世界。
@@ -696,6 +698,8 @@ zh-TW:
     sports:
       title: 運動
       body: 製作一個籃球遊戲或是混合搭配多種不同的運動的遊戲。
+    text-compression:
+      title: 文字壓縮
     unplugged:
       title: 不插電的教學活動
       audience: 年齡 4+
@@ -928,6 +932,7 @@ zh-TW:
     content: 內容
     practice: 老師的做法
     peer_review: 同儕審查
+    optional_stages: 可選階段
     main_course: 主要課程
     extra_course_content: 額外的課程內容
     csf_e_1: 提升至課程 E（可選）
@@ -959,6 +964,7 @@ zh-TW:
     csd5_2: 第 2 章：解決數據問題
     csd6_1: 第 1 章：硬體輸出
     csd6_2: 第 2 章：硬體輸入
+    csp5_2: 第 2 章：資料結構程式設計
     cspSurvey: 問卷
     cspAssessment: 章節測驗
     csp2_1_2018: 單元 2：數位資訊

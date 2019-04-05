@@ -444,6 +444,7 @@ bg:
         applab_intro_designmode: App Lab - режим на проектиране
         applab_intro_share: App Lab - Споделяне на вашето приложение
         CSF_loops_AB: Повторения
+        csd_pair_programming: Програмиране по двойки
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

@@ -515,7 +515,7 @@ es-MX:
         flappy:
           title: Código Flappy
           description: "¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba
-            nuestro tutorial de Código Flappy!"
+            el tutorial de nuestro Código Flappy!"
           description_short: "¡Escribe tu propio juego Flappy en menos de 10 minutos!"
           stages:
             Flappy Code:
@@ -1661,7 +1661,7 @@ es-MX:
             Participate in a longitudinal study!:
               name: "¡Participe en un estudio longitudinal!"
             Post-Course Survey:
-              name: Encuesta de final de curso
+              name: Encuesta posterior al curso
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1679,7 +1679,7 @@ es-MX:
             Participate in a longitudinal study!:
               name: "¡Participe en un estudio longitudinal!"
             Post-Course Survey:
-              name: Encuesta de final de curso
+              name: Encuesta posterior al curso
         csp3-2017:
           description: "Esta unidad presenta los conceptos fundamentales de la programación
             informática, que desbloquea la capacidad de crear aplicaciones ricas e
@@ -1712,7 +1712,7 @@ es-MX:
             Creating Functions with Parameters:
               name: Originando funciones con los parámetros
             Post-Course Survey:
-              name: Encuesta de final de curso
+              name: Encuesta posterior al curso
         csp4-2017:
           stages:
             Cracking the Code:
@@ -1724,7 +1724,7 @@ es-MX:
             Participate in a longitudinal study!:
               name: "¡Participe en un estudio longitudinal!"
             Post-Course Survey:
-              name: Encuesta de final de curso
+              name: Encuesta posterior al curso
             Student Post-Course Survey:
               name: Encuesta de fin de curso
         csp5-2017:
@@ -1774,7 +1774,7 @@ es-MX:
             Participate in a longitudinal study!:
               name: "¡Participe en un estudio longitudinal!"
             Post-Course Survey:
-              name: Encuesta de final de curso
+              name: Encuesta posterior al curso
         csp6:
           stages:
             Participate in a longitudinal study!:
@@ -2444,7 +2444,7 @@ es-MX:
             Programming in Maze:
               name: Programación en Laberinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Collector:
               name: Loops en Recolectora
             Loops in Artist:
@@ -2726,7 +2726,7 @@ es-MX:
             Sample Apps:
               name: Aplicaciones de ejemplo
             Post-Course Survey:
-              name: Encuesta de final de curso
+              name: Encuesta posterior al curso
         csd6-draft:
           stages:
             Lists:
@@ -2953,9 +2953,8 @@ es-MX:
             'Events: The Big Event':
               name: 'Eventos: El Gran Evento'
               description_teacher: Los eventos son una excelente manera de agregar
-                variedad a un algoritmo ya escrito. ¿Hay veces en que quieres que
-                el programa responda al usuario exactamente cuando éste quiere? Para
-                eso son los eventos.
+                variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo
+                es que el programa responda al usuario exactamente cuando éste quiere.
             Events in Play Lab:
               name: Eventos en Play Lab
               description_teacher: En esta actividad en línea, los estudiantes tendrán
@@ -2969,8 +2968,8 @@ es-MX:
           description_short: Una introducción a las ciencias de la computación para
             prelectores.
           description: Aprende los fundamentos de las ciencias de la computación y
-            de Internet. Al final del curso, crea tu propio juego o historia para
-            compartir.
+            la seguridad en Internet. Al final del curso, crea tu propio juego o historia
+            para compartir.
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -2988,7 +2987,7 @@ es-MX:
             Programming in Maze:
               name: Programación en Laberinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Collector:
               name: Loops en Recolectora
             Loops in Artist:
@@ -3008,8 +3007,8 @@ es-MX:
             prelectores (similar al Curso A, pero con más variedad para estudiantes
             más avanzados).
           description: Aprende los fundamentos de las ciencias de la computación y
-            de Internet. Al final del curso, crea tu propio juego o historia para
-            compartir.
+            la seguridad en Internet. Al final del curso, crea tu propio juego o historia
+            para compartir.
         coursec-2017:
           stages:
             Building a Foundation:
@@ -3295,23 +3294,23 @@ es-MX:
               description_student: Los proyectos de este tamaño llevan tiempo y mucha
                 planificación. Aquí aprenderás sobre el proceso de diseño que usarás
                 para crear algo propio.
-              description_teacher: Durante cuatro lecciones, los estudiantes crearán
-                un proyecto diseñado por ellos mismos con el Laboratorio de juegos
-                o el Artista como su ambiente de programación. En esta parte del proyecto,
-                los estudiantes aprenderán sobre el proceso de diseño y cómo implementarlo
-                en sus propios proyectos. En la primera etapa del proceso podrán encontrar
+              description_teacher: Durante cuatro lecciones, los alumnos crearán un
+                proyecto diseñado por ellos mismos con Laboratorio de juegos o Artista
+                como su entorno de programación. En esta parte del proyecto, los alumnos
+                aprenderán sobre el proceso de diseño y cómo implementarlo en sus
+                propios proyectos. En la primera etapa del proceso, podrán encontrar
                 la guía de lecciones que cubre las cuatro etapas, [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: Crea tu proyecto
               description_student: "¡Prepara las manos para mucha programación! Llegó
                 el momento de comenzar a crear tu proyecto."
-              description_teacher: Durante cuatro lecciones, los estudiantes crearán
-                un proyecto diseñado por ellos mismos con el Laboratorio de juegos
-                o el Artista como su ambiente de programación. Ahora los estudiantes
-                tendrán su propio espacio para crear sus proyectos con el Artista
-                o el Laboratorio de juegos. Esta será la parte más grande del proyecto.
-                En la primera etapa del proceso podrán encontrar la guía de lecciones
-                que cubre las cuatro etapas [here] (https://curriculum.code.org/csf/coursee/12/).
+              description_teacher: Durante cuatro lecciones, los alumnos crearán un
+                proyecto diseñado por ellos mismos con Laboratorio de juegos o Artista
+                como su ambiente de programación. Ahora los alumnos tendrán su propio
+                espacio para crear sus proyectos con Artista o Laboratorio de juegos.
+                Esta será la parte más grande del proyecto. En la primera etapa del
+                proceso, podrán encontrar la guía de lecciones que cubre las cuatro
+                etapas [here] (https://curriculum.code.org/csf/coursee/12/).
             Revise Your Project:
               name: Revisa tu proyecto
             Presentation Your Project:
@@ -3415,13 +3414,13 @@ es-MX:
               name: Presenta tu proyecto
               description_student: "¡Prepárate para lucirte! Llegó el momento de presentar
                 tu proyecto terminado a tus compañeros."
-              description_teacher: Durante cuatro lecciones, los estudiantes crearán
-                un proyecto diseñado por ellos mismos con el Laboratorio de juegos
-                o el Artista como su ambiente de programación. Finalmente, los estudiantes
-                podrán presentar su trabajo terminado a sus compañeros o compartirlo
-                con sus seres queridos a través de un enlace especial. En la primera
-                etapa del proceso podrán encontrar la guía de lecciones que cubre
-                las cuatro etapas [here](https://curriculum.code.org/csf/coursee/12/).
+              description_teacher: Durante cuatro lecciones, los alumnos crearán un
+                proyecto diseñado por ellos mismos con Laboratorio de juegos o Artista
+                como su entorno de programación. Finalmente, los alumnos podrán presentar
+                su trabajo terminado a sus compañeros o compartirlo con sus seres
+                queridos a través de un enlace especial. En la primera etapa del proceso,
+                podrán encontrar la guía de lecciones que cubre las cuatro etapas
+                [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
               name: 'Más allá de la programación: Internet'
               description_student: "¿Alguna vez te preguntaste cómo viaja la información
@@ -3452,7 +3451,7 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Artist:
               name: Loops en Artista
             Nested Loops in Bee/Zombie:
@@ -3685,7 +3684,7 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Artist:
               name: Loops en Artista
             Nested Loops in Bee/Zombie:
@@ -3719,7 +3718,7 @@ es-MX:
             Debugging in Collector:
               name: Introducción a la Depuración
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Artist:
               name: Loops en Artista
             Nested Loops Project in Artist:
@@ -3806,8 +3805,8 @@ es-MX:
           description_short: 'Una introducción a la ciencia de la computación: combina
             lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
           description: Aprende los fundamentos de las ciencias de la computación y
-            de Internet. Al final del curso, crea tu propio juego o historia para
-            compartir.
+            la seguridad en Internet. Al final del curso, crea tu propio juego o historia
+            para compartir.
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -3827,7 +3826,7 @@ es-MX:
             'Programming: Star Wars':
               name: 'Programando: La Guerra de las Galaxias'
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Collector:
               name: Loops en Recolectora
             Loops in Artist:
@@ -3844,8 +3843,8 @@ es-MX:
             preescolar: combina lo mejor de nuestros cursos de jardín de niños y primer
             grado.'
           description: Aprende los fundamentos de las ciencias de la computación y
-            de Internet. Al final del curso, crea tu propio juego o historia para
-            compartir.
+            la seguridad en Internet. Al final del curso, crea tu propio juego o historia
+            para compartir.
         subgoal-labels-opt-in:
           stages:
             Thanks:
@@ -3915,7 +3914,7 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Artist:
               name: Loops en Artista
             Nested Loops:
@@ -4013,7 +4012,7 @@ es-MX:
             Debugging in Collector:
               name: Depuración en Recolector
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Artist:
               name: Loops en Artista
             'Events: The Big Event':
@@ -4081,7 +4080,7 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Artist:
               name: Loops en Artista
             Nested Loops in Bee/Zombie:
@@ -4133,7 +4132,7 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Artist:
               name: Loops en Artista
             Nested Loops in Bee/Zombie:
@@ -4248,11 +4247,11 @@ es-MX:
         csp-explore-2017:
           stages:
             Post-Course Survey:
-              name: Encuesta de final de curso
+              name: Encuesta posterior al curso
         csp-create-2017:
           stages:
             Post-Course Survey:
-              name: Encuesta de final de curso
+              name: Encuesta posterior al curso
         valentine:
           stages:
             special valentine:
@@ -4272,7 +4271,7 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Artist:
               name: Loops en Artista
             Nested Loops:
@@ -4328,7 +4327,7 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Artist:
               name: Loops en Artista
             Nested Loops in Bee/Zombie:
@@ -4568,8 +4567,8 @@ es-MX:
           title: Curso A (2018)
           assignment_family_title: Curso A
           description: Aprende los fundamentos de las ciencias de la computación y
-            de Internet. Al final del curso, crea tu propio juego o historia para
-            compartir.
+            la seguridad en Internet. Al final del curso, crea tu propio juego o historia
+            para compartir.
           description_short: Una introducción a las ciencias de la computación para
             prelectores.
           description_audience: De 4 a 7 años
@@ -4580,7 +4579,7 @@ es-MX:
                 de los pasos de depuración. Los estudiantes aprenderán el mantra:
                 "¿Qué ocurrió? ¿Qué se suponía que pasaría? ¿Eso qué quiere decir?".'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: Stevie y el gran proyecto
+              name: Stevie y el Gran Proyecto
               description_teacher: "Cuando los estudiantes tienen dificultades para
                 responder una pregunta o trabajar en un proyecto, suelen sentirse
                 frustrados y se dan por vencidos. Esta lección presentará a los estudiantes
@@ -4639,7 +4638,7 @@ es-MX:
                 instrucciones repetidas de "Bucles felices", para que los estudiantes
                 puedan usar bucles y recoger tesoros de manera más eficiente en Code.org.
             Loops in Artist:
-              name: Escena marina con bucles
+              name: Escena del océano con bucles
               description_teacher: En cuanto a los bucles, los estudiantes aprenden
                 a dibujar imágenes mediante bucles de secuencias simples de instrucciones.
                 En la actividad conectada anterior, los bucles se utilizaron para
@@ -4649,9 +4648,8 @@ es-MX:
             'Events: The Big Event':
               name: El Gran Evento Jr.
               description_teacher: Los eventos son una excelente manera de agregar
-                variedad a un algoritmo ya escrito. ¿Hay veces en que quieres que
-                el programa responda al usuario exactamente cuando éste quiere? Para
-                eso son los eventos.
+                variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo
+                es que el programa responda al usuario exactamente cuando éste quiere.
             Events in Play Lab:
               name: En movimiento con eventos
               description_teacher: En esta actividad en línea, los estudiantes tendrán
@@ -4668,12 +4666,12 @@ es-MX:
             Sequencing in Maze:
               name: Secuencias con Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
-              name: Stevie y el gran proyecto
+              name: Stevie y el Gran Proyecto
         express-2018:
           assignment_family_title: Curso Express
           description: Aprende los fundamentos de las ciencias de la computación y
-            de Internet. Al final del curso, crea tu propio juego o historia para
-            compartir.
+            la seguridad en Internet. Al final del curso, crea tu propio juego o historia
+            para compartir.
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programación con Papel Cuadriculado
@@ -4684,7 +4682,7 @@ es-MX:
             Debugging in Collector:
               name: Depuración en Recolector
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Nested Loops:
               name: Bucles anidados
             'Events: The Big Event':
@@ -4803,8 +4801,8 @@ es-MX:
           title: Curso B (2018)
           assignment_family_title: Curso B
           description: Aprende los fundamentos de las ciencias de la computación y
-            de Internet. Al final del curso, crea tu propio juego o historia para
-            compartir.
+            la seguridad en Internet. Al final del curso, crea tu propio juego o historia
+            para compartir.
           description_short: Una introducción a las ciencias de la computación para
             prelectores. Es similar al Curso A, pero con conceptos más avanzados.
           description_audience: De 5 a 8 años
@@ -4826,7 +4824,7 @@ es-MX:
             Programming with Rey and BB-8:
               name: Programación con Rey y BB-8
             'Loops: My Loopy Robotic Friends':
-              name: Mis amigos robóticos Loopy Jr.
+              name: Mis amigos robóticos y repetitivos Jr.
             Loops in Collector:
               name: Bucles con Laurel
             Loops in Artist:
@@ -4976,7 +4974,7 @@ es-MX:
             Programming in Artist:
               name: Crear arte con código
             'Loops: My Loopy Robotic Friends':
-              name: Mis amigos robóticos Loopy
+              name: Mis amigos robóticos y repetitivos
             Loops in Artist:
               name: Dibujar formas con bucles
             Nested Loops:
@@ -5096,34 +5094,34 @@ es-MX:
               description_student: Los proyectos de este tamaño llevan tiempo y mucha
                 planificación. Aquí aprenderás sobre el proceso de diseño que usarás
                 para crear algo propio.
-              description_teacher: Durante cuatro lecciones, los estudiantes crearán
-                un proyecto diseñado por ellos mismos con el Laboratorio de juegos
-                o el Artista como su ambiente de programación. En esta parte del proyecto,
-                los estudiantes aprenderán sobre el proceso de diseño y cómo implementarlo
-                en sus propios proyectos. En la primera etapa del proceso podrán encontrar
+              description_teacher: Durante cuatro lecciones, los alumnos crearán un
+                proyecto diseñado por ellos mismos con Laboratorio de juegos o Artista
+                como su entorno de programación. En esta parte del proyecto, los alumnos
+                aprenderán sobre el proceso de diseño y cómo implementarlo en sus
+                propios proyectos. En la primera etapa del proceso, podrán encontrar
                 la guía de lecciones que cubre las cuatro etapas, [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: Crea tu proyecto
               description_student: "¡Prepara las manos para mucha programación! Llegó
                 el momento de comenzar a crear tu proyecto."
-              description_teacher: Durante cuatro lecciones, los estudiantes crearán
-                un proyecto diseñado por ellos mismos con el Laboratorio de juegos
-                o el Artista como su ambiente de programación. Ahora los estudiantes
-                tendrán su propio espacio para crear sus proyectos con el Artista
-                o el Laboratorio de juegos. Esta será la parte más grande del proyecto.
-                En la primera etapa del proceso podrán encontrar la guía de lecciones
-                que cubre las cuatro etapas [here] (https://curriculum.code.org/csf/coursee/12/).
+              description_teacher: Durante cuatro lecciones, los alumnos crearán un
+                proyecto diseñado por ellos mismos con Laboratorio de juegos o Artista
+                como su ambiente de programación. Ahora los alumnos tendrán su propio
+                espacio para crear sus proyectos con Artista o Laboratorio de juegos.
+                Esta será la parte más grande del proyecto. En la primera etapa del
+                proceso, podrán encontrar la guía de lecciones que cubre las cuatro
+                etapas [here] (https://curriculum.code.org/csf/coursee/12/).
             Present Your Project:
               name: Presenta tu proyecto
               description_student: "¡Prepárate para lucirte! Llegó el momento de presentar
                 tu proyecto terminado a tus compañeros."
-              description_teacher: Durante cuatro lecciones, los estudiantes crearán
-                un proyecto diseñado por ellos mismos con el Laboratorio de juegos
-                o el Artista como su ambiente de programación. Finalmente, los estudiantes
-                podrán presentar su trabajo terminado a sus compañeros o compartirlo
-                con sus seres queridos a través de un enlace especial. En la primera
-                etapa del proceso podrán encontrar la guía de lecciones que cubre
-                las cuatro etapas [here](https://curriculum.code.org/csf/coursee/12/).
+              description_teacher: Durante cuatro lecciones, los alumnos crearán un
+                proyecto diseñado por ellos mismos con Laboratorio de juegos o Artista
+                como su entorno de programación. Finalmente, los alumnos podrán presentar
+                su trabajo terminado a sus compañeros o compartirlo con sus seres
+                queridos a través de un enlace especial. En la primera etapa del proceso,
+                podrán encontrar la guía de lecciones que cubre las cuatro etapas
+                [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
               name: Internet
               description_student: "¿Alguna vez te preguntaste cómo viaja la información
@@ -5180,7 +5178,7 @@ es-MX:
             Programming in Artist:
               name: Crear arte con código
             'Loops: My Loopy Robotic Friends':
-              name: Mis amigos robóticos Loopy
+              name: Mis amigos robóticos y repetitivos
             Loops in Artist:
               name: Dibujar formas con bucles
             Nested Loops in Bee/Zombie:
@@ -5608,15 +5606,15 @@ es-MX:
               name: Verifica tus suposiciones
         pre-express-2018:
           description: Aprende los fundamentos de las ciencias de la computación y
-            de Internet. Al final del curso, crea tu propio juego o historia para
-            compartir.
+            la seguridad en Internet. Al final del curso, crea tu propio juego o historia
+            para compartir.
           description_short: 'Introducción a las ciencias de la computación para preescolar:
             combina lo mejor de nuestros cursos de jardín de infantes y primer grado.'
           stages:
             'Debugging: Unspotted Bugs':
               name: Errores no detectados
             'Persistence & Frustration: Stevie and the Marbles':
-              name: Stevie y el gran proyecto
+              name: Stevie y el Gran Proyecto
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la vida real: plantar una semilla'
             Learn to Drag and Drop:
@@ -5628,7 +5626,7 @@ es-MX:
             'Programming: Star Wars':
               name: 'Programando: La Guerra de las Galaxias'
             'Loops: My Loopy Robotic Friends':
-              name: Mis amigos robóticos Loopy Jr.
+              name: Mis amigos robóticos y repetitivos Jr.
             Loops in Collector:
               name: Bucles con Laurel
             Loops in Artist:
@@ -5654,7 +5652,7 @@ es-MX:
             Loops in Ice Age:
               name: Bucles con Scrat
             'Persistence & Frustration: Stevie and the Big Project':
-              name: Stevie y el gran proyecto
+              name: Stevie y el Gran Proyecto
         frozen-2018:
           stages:
             Artist:
@@ -5712,7 +5710,7 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Artist:
               name: Loops en Artista
             Nested Loops in Bee/Zombie:
@@ -5753,9 +5751,9 @@ es-MX:
             Variables as Constant in Artist:
               name: Variables como constante en Artista
             Variables that Change in Bee:
-              name: Variables que cambian en la Abeja
+              name: Variables que cambian en Abeja
             Variables that Change in Artist:
-              name: Variables que cambian en el Artista
+              name: Variables que cambian en Artista
             For Loop Fun:
               name: Diversión con bucles Para
               description_student: "¡Te vas a divertir mucho mientras aprendes sobre
@@ -5783,9 +5781,9 @@ es-MX:
                 Al final, tendrán la oportunidad de crear su propio arte en un nivel
                 de juego libre.
             Learning Sprites with Sprite Lab:
-              name: Aprender sprites con Sprite Lab
+              name: Aprender sprites con Laboratorio de Sprite
             Alien Dance Party with Sprite Lab:
-              name: Fiesta de baile extraterrestre con Sprite Lab
+              name: Fiesta de baile extraterrestre con Laboratorio de Sprite
             Pet Giraffe with Sprite Lab:
               name: Jirafa mascota con Sprite Lab
             Explore Project Ideas:
@@ -5842,23 +5840,23 @@ es-MX:
             The Artist:
               name: El artista
             Nested Loops in the Maze:
-              name: Bucles anidados en el Laberinto
+              name: Bucles anidados en Laberinto
             Sequencing in the Maze:
               name: Secuencias en el Laberinto
             Programming and Loops with the Artist:
               name: Programación y bucles con el Artista
             Events with Sprite Lab:
-              name: Eventos con Sprite Lab
+              name: Eventos con Laboratorio de Sprite
             Loops with the Artist:
-              name: Bucles con el Artista
+              name: Bucles con Artista
             Sprite Lab Behaviors:
-              name: Comportamientos de Sprite Lab
+              name: Comportamientos de Laboratorio de Sprite
             Editing Behaviors:
               name: Editar comportamientos
             Virtual Pet:
               name: Mascota virtual
             Data from Sprite Lab:
-              name: Datos de Sprite Lab
+              name: Datos de Laboratorio de Sprite
             Copyright and Creativity:
               name: Derechos de Autor y Creatividad
             Internet:
@@ -5869,6 +5867,8 @@ es-MX:
               name: Colaboración digital
             Running Simulations:
               name: Ejecutar simulaciones
+            Simulating Experiments:
+              name: Simulación de experimentos
         dance-low:
           stages:
             Dance Party:
@@ -5943,7 +5943,7 @@ es-MX:
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Artist:
               name: Loops en Artista
             Nested Loops:
@@ -6018,9 +6018,9 @@ es-MX:
                 Los estudiantes revisarán algoritmos básicos, depurar, bucles `repetir`,
                 condicionales, bucles `mientras` y funciones.
             Learning Sprites with Sprite Lab:
-              name: Aprender sprites con Sprite Lab
+              name: Aprender sprites con Laboratorio de Sprite
             Alien Dance Party with Sprite Lab:
-              name: Fiesta de baile extraterrestre con Sprite Lab
+              name: Fiesta de baile extraterrestre con Laboratorio de Sprite
             Pet Giraffe with Sprite Lab:
               name: Jirafa mascota con Sprite Lab
             Explore Project Ideas:
@@ -6036,34 +6036,34 @@ es-MX:
               description_student: Los proyectos de este tamaño llevan tiempo y mucha
                 planificación. Aquí aprenderás sobre el proceso de diseño que usarás
                 para crear algo propio.
-              description_teacher: Durante cuatro lecciones, los estudiantes crearán
-                un proyecto diseñado por ellos mismos con el Laboratorio de juegos
-                o el Artista como su ambiente de programación. En esta parte del proyecto,
-                los estudiantes aprenderán sobre el proceso de diseño y cómo implementarlo
-                en sus propios proyectos. En la primera etapa del proceso podrán encontrar
+              description_teacher: Durante cuatro lecciones, los alumnos crearán un
+                proyecto diseñado por ellos mismos con Laboratorio de juegos o Artista
+                como su entorno de programación. En esta parte del proyecto, los alumnos
+                aprenderán sobre el proceso de diseño y cómo implementarlo en sus
+                propios proyectos. En la primera etapa del proceso, podrán encontrar
                 la guía de lecciones que cubre las cuatro etapas, [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: Crea tu proyecto
               description_student: "¡Prepara las manos para mucha programación! Llegó
                 el momento de comenzar a crear tu proyecto."
-              description_teacher: Durante cuatro lecciones, los estudiantes crearán
-                un proyecto diseñado por ellos mismos con el Laboratorio de juegos
-                o el Artista como su ambiente de programación. Ahora los estudiantes
-                tendrán su propio espacio para crear sus proyectos con el Artista
-                o el Laboratorio de juegos. Esta será la parte más grande del proyecto.
-                En la primera etapa del proceso podrán encontrar la guía de lecciones
-                que cubre las cuatro etapas [here] (https://curriculum.code.org/csf/coursee/12/).
+              description_teacher: Durante cuatro lecciones, los alumnos crearán un
+                proyecto diseñado por ellos mismos con Laboratorio de juegos o Artista
+                como su ambiente de programación. Ahora los alumnos tendrán su propio
+                espacio para crear sus proyectos con Artista o Laboratorio de juegos.
+                Esta será la parte más grande del proyecto. En la primera etapa del
+                proceso, podrán encontrar la guía de lecciones que cubre las cuatro
+                etapas [here] (https://curriculum.code.org/csf/coursee/12/).
             Present Your Project:
               name: Presenta tu proyecto
               description_student: "¡Prepárate para lucirte! Llegó el momento de presentar
                 tu proyecto terminado a tus compañeros."
-              description_teacher: Durante cuatro lecciones, los estudiantes crearán
-                un proyecto diseñado por ellos mismos con el Laboratorio de juegos
-                o el Artista como su ambiente de programación. Finalmente, los estudiantes
-                podrán presentar su trabajo terminado a sus compañeros o compartirlo
-                con sus seres queridos a través de un enlace especial. En la primera
-                etapa del proceso podrán encontrar la guía de lecciones que cubre
-                las cuatro etapas [here](https://curriculum.code.org/csf/coursee/12/).
+              description_teacher: Durante cuatro lecciones, los alumnos crearán un
+                proyecto diseñado por ellos mismos con Laboratorio de juegos o Artista
+                como su entorno de programación. Finalmente, los alumnos podrán presentar
+                su trabajo terminado a sus compañeros o compartirlo con sus seres
+                queridos a través de un enlace especial. En la primera etapa del proceso,
+                podrán encontrar la guía de lecciones que cubre las cuatro etapas
+                [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
               name: Internet
               description_student: "¿Alguna vez te preguntaste cómo viaja la información
@@ -6107,8 +6107,8 @@ es-MX:
               name: Simón dice
         express-2019:
           description: Aprende los fundamentos de las ciencias de la computación y
-            de Internet. Al final del curso, crea tu propio juego o historia para
-            compartir.
+            la seguridad en Internet. Al final del curso, crea tu propio juego o historia
+            para compartir.
           stages:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmos: programación en papel cuadriculado'
@@ -6165,9 +6165,9 @@ es-MX:
             Variables as Constant in Artist:
               name: Variables como constante en Artista
             Variables that Change in Bee:
-              name: Variables que cambian en la Abeja
+              name: Variables que cambian en Abeja
             Variables that Change in Artist:
-              name: Variables que cambian en el Artista
+              name: Variables que cambian en Artista
             For Loop Fun:
               name: Diversión con bucles Para
             For Loops in Bee:
@@ -6175,9 +6175,9 @@ es-MX:
             For Loops in Artist:
               name: Bucles `desde` en Artista
             Learning Sprites with Sprite Lab:
-              name: Aprender sprites con Sprite Lab
+              name: Aprender sprites con Laboratorio de Sprite
             Alien Dance Party with Sprite Lab:
-              name: Fiesta de baile extraterrestre con Sprite Lab
+              name: Fiesta de baile extraterrestre con Laboratorio de Sprite
             Pet Giraffe with Sprite Lab:
               name: Jirafa mascota con Sprite Lab
             Explore Project Ideas:
@@ -6315,16 +6315,18 @@ es-MX:
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Graphing Data:
               name: Datos de gráfico
+            Powerful Passwords:
+              name: Contraseñas seguras
         gamelab:
           title: Laboratorio de juegos
         coursea-2019:
           title: Curso A (2019)
           description: Aprende los fundamentos de las ciencias de la computación y
-            de Internet. Al final del curso, crea tu propio juego o historia para
-            compartir.
+            la seguridad en Internet. Al final del curso, crea tu propio juego o historia
+            para compartir.
           description_short: Una introducción a las ciencias de la computación para
             prelectores.
           description_audience: De 4 a 7 años
@@ -6395,9 +6397,8 @@ es-MX:
             'Events: The Big Event':
               name: 'Eventos: El Gran Evento'
               description_teacher: Los eventos son una excelente manera de agregar
-                variedad a un algoritmo ya escrito. ¿Hay veces en que quieres que
-                el programa responda al usuario exactamente cuando éste quiere? Para
-                eso son los eventos.
+                variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo
+                es que el programa responda al usuario exactamente cuando éste quiere.
             Events in Play Lab:
               name: Eventos en Play Lab
               description_teacher: En esta actividad en línea, los estudiantes tendrán
@@ -6406,7 +6407,7 @@ es-MX:
                 crear un juego animado. ¡Es tiempo de ponerse creativos y crear una
                 historia en el Laboratorio de juegos!
             Ocean Scene with Loops:
-              name: Escena marina con bucles
+              name: Escena del océano con bucles
             Learn to Drag and Drop:
               name: Aprende a arrastrar y soltar
             Loops in Ice Age:
@@ -6420,8 +6421,8 @@ es-MX:
         courseb-2019:
           title: Curso B (2019)
           description: Aprende los fundamentos de las ciencias de la computación y
-            de Internet. Al final del curso, crea tu propio juego o historia para
-            compartir.
+            la seguridad en Internet. Al final del curso, crea tu propio juego o historia
+            para compartir.
           description_short: Una introducción a las ciencias de la computación para
             prelectores. Es similar al Curso A, pero con conceptos más avanzados.
           description_audience: De 5 a 8 años
@@ -6441,7 +6442,7 @@ es-MX:
             Programming with Rey and BB-8:
               name: Programación con Rey y BB-8
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Ice Age:
               name: Bucles de la Era de Hielo
             Loops in Collector:
@@ -6466,8 +6467,8 @@ es-MX:
               name: Secuencias en Laberinto
         pre-express-2019:
           description: Aprende los fundamentos de las ciencias de la computación y
-            de Internet. Al final del curso, crea tu propio juego o historia para
-            compartir.
+            la seguridad en Internet. Al final del curso, crea tu propio juego o historia
+            para compartir.
           description_short: 'Introducción a las ciencias de la computación para preescolar:
             combina lo mejor de nuestros cursos de jardín de infantes y primer grado.'
           stages:
@@ -6490,7 +6491,7 @@ es-MX:
             Programming with Rey and BB-8:
               name: Programación con Rey y BB-8
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos Loopy'
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Ice Age:
               name: Bucles de la Era de Hielo
             Loops in Collector:
@@ -6503,6 +6504,14 @@ es-MX:
               name: Eventos en Play Lab
             Spelling Bee:
               name: Concurso de ortografía
+            Learn to Drag and Drop:
+              name: Aprende a arrastrar y soltar
+            Programming in Maze:
+              name: Programación en Laberinto
+            Programming in Harvester:
+              name: Programación con la cosechadora
+            Ocean Scene with Loops:
+              name: Escena del océano con bucles
         removed19:
           stages:
             'Debugging: Unspotted Bugs':

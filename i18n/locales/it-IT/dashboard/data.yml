@@ -367,7 +367,7 @@ it:
         CSF_Power_of_Words: Cittadinanza digitale - Il potere delle parole
         CSF_Super_Digital_Citizen: Cittadinanza digitale - Super cittadino digitale
         CSF_stevie_big_project: Stevie e il grande progetto
-        CSF_unspotted_bugs: Errori non riconosciuti
+        CSF_unspotted_bugs: Fastidiosi insetti nascosti
         CSF_zuck_loops_short: Cicli (istruzioni di ripetizione)
         frozen_intro: Introduzione all'Ora del Codice
         frozen_loops: Introduzione ai Cicli
@@ -514,6 +514,7 @@ it:
         repeat_block: Uso del blocco Ripeti
         writing_first_program: Scrivi il tuo primo programma per computer
         what_is_an_event: Cos'è un evento?
+        csd_pair_programming: Programmazione in coppia
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

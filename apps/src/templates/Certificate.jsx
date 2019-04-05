@@ -154,6 +154,7 @@ class Certificate extends Component {
                 ref={input => (this.nameInput = input)}
               />
               <button
+                type="button"
                 style={styles.submit}
                 onClick={this.personalizeCertificate.bind(this, certificate)}
               >

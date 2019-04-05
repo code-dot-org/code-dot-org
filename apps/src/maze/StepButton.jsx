@@ -8,7 +8,7 @@ var StepButton = function(props) {
     classes += ' hide';
   }
   return (
-    <button id="stepButton" className={classes}>
+    <button type="button" id="stepButton" className={classes}>
       <img src="/blockly/media/1x1.gif" />
       {msg.step()}
     </button>

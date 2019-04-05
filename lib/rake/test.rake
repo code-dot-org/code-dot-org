@@ -52,7 +52,7 @@ namespace :test do
       eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
       failed_browser_count = RakeUtils.system_with_chat_logging(
         'bundle', 'exec', './runner.rb',
-        '-c', 'ChromeLatestWin7,iPhone',
+        '-c', 'ChromeLatestWin7,iPhone,IE11Win10',
         '-d', CDO.site_host('studio.code.org'),
         '-p', CDO.site_host('code.org'),
         '--db', # Ensure features that require database access are run even if the server name isn't "test"
