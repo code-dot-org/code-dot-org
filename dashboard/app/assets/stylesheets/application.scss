@@ -331,7 +331,24 @@ img.video_thumbnail {
     }
   }
 
-  .user_menu, .create_menu {
+  .header_help_button {
+    &.header_button_light {
+      background-color: $teal;
+    }
+    display: inline-block;
+    color: $white;
+    background-color: transparent;
+    padding: 7px 14px;
+    float: left;
+    cursor: pointer;
+    a:hover {
+      text-decoration: none;
+      background-color: $orange;
+    }
+  }
+
+
+  .user_menu, .create_menu, .help_button {
     margin-top: 6px;
     height: 38px;
     user-select: none;
@@ -360,6 +377,10 @@ img.video_thumbnail {
     .user_menu_arrow_up,
     .create_menu_arrow_down,
     .create_menu_arrow_up, {
+      font-size: 30px;
+    }
+
+    .question_mark {
       font-size: 30px;
     }
 
@@ -1046,6 +1067,12 @@ input.header_input {
 
 .header_user {
   text-align: right;
+  margin-left: 5px;
+  margin-top: 6px;
+  height: 38px;
+}
+
+.header_help {
   margin-left: 5px;
   margin-top: 6px;
   height: 38px;

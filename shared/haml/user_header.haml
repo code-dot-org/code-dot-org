@@ -1,6 +1,7 @@
 -# Locals: current_user, loc_prefix, [session_pairings], level
 :ruby
   require 'cdo/create_header'
+  require 'cdo/help_header'
   limit_project_types = request.cookies["_limit_project_types_#{rack_env}"]
 
   level = defined?(local_assigns) ?
@@ -12,6 +13,7 @@
     project_type: params && params[:key]
   }
   create_drop_down_items = CreateHeader.get_create_dropdown_contents(options)
+  help_items = HelpHeader.get_help_contents(options)
 
   # We want to show the Create button for all pages except when working on a
   # course level. Specifically, for any page except non-project levels.
@@ -65,6 +67,26 @@
   %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button'}
     .header_button.header_user
       %span= I18n.t("#{loc_prefix}signin")
+.header_help_button.header_help.help_button
+  %span.question_mark{class: "fa fa-question-circle"}
+    - help_items.each do |entry|
+      - if entry[:type] == "divider"
+        .divider{id: entry[:id], class: entry[:class]}
+      - elsif entry[:type] == "expander"
+        .hamburger-expandable-item.item{id: entry[:id]}
+          .text= entry[:title]
+          %i.arrow-down{class: "fa fa-caret-down"}
+          %i.arrow-up{class: "fa fa-caret-up"}
+        .hamburger-expandable-items{id: "#{entry[:id]}-items"}
+          - entry[:subentries].each do |subentry|
+            .item
+              %a{id: subentry[:id], href: subentry[:url]}= subentry[:title]
+      - else
+        %div{class: entry[:class]}
+          .item
+            - target = entry[:target] ? entry[:target] : "_self"
+            %a{id: entry[:id], href: entry[:url], target: target}= entry[:title]
+
 
 :javascript
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';
