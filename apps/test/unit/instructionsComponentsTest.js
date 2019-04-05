@@ -54,12 +54,8 @@ describe('instructions components', () => {
       );
       var elements = dom.childAt(0).children();
       expect(elements.length).to.equal(2);
-      expect(elements.first())
-        .text()
-        .to.equal('title');
-      expect(elements.last())
-        .text()
-        .to.equal('instructions\n');
+      expect(elements.first().text()).to.equal('title');
+      expect(elements.last().text()).to.equal('instructions\n');
     });
 
     it('can have both instructions and instructions2', function() {
