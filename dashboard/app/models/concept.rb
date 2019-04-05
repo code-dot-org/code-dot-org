@@ -12,6 +12,7 @@
 # Indexes
 #
 #  index_concepts_on_video_id  (video_id)
+#  index_concepts_on_video_key  (video_key)
 #
 
 # A Concept contains a set of Levels
