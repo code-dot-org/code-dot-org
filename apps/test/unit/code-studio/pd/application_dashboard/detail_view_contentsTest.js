@@ -166,7 +166,7 @@ describe('DetailViewContents', () => {
         .find('#DetailViewHeader Button')
         .first()
         .simulate('click');
-      expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be
+      expect(detailView.find('#DetailViewHeader select').prop('disabled')).to.be
         .true;
       expect(
         detailView
@@ -180,7 +180,7 @@ describe('DetailViewContents', () => {
         .find('#DetailViewHeader Button')
         .first()
         .simulate('click');
-      expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be
+      expect(detailView.find('#DetailViewHeader select').prop('disabled')).to.be
         .false;
       expect(
         detailView
