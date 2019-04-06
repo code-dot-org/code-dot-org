@@ -22,12 +22,9 @@ describe('AppView', () => {
       />
     );
     expect(wrapper).not.to.be.null;
-    expect(wrapper.find('#visualizationColumn')).not.to.have.className(
-      'responsive'
-    );
-    expect(wrapper.find('#visualizationColumn')).not.to.have.className(
-      'pin_bottom'
-    );
+    const column = wrapper.find('#visualizationColumn');
+    expect(column.hasClass('responsive')).is.false;
+    expect(column.hasClass('pin_bottom')).is.false;
   });
 
   it('sets `responsive` class on visualization column when `isResponsive` is set', () => {
@@ -40,12 +37,9 @@ describe('AppView', () => {
       />
     );
     expect(wrapper).not.to.be.null;
-    expect(wrapper.find('#visualizationColumn')).to.have.className(
-      'responsive'
-    );
-    expect(wrapper.find('#visualizationColumn')).not.to.have.className(
-      'pin_bottom'
-    );
+    const column = wrapper.find('#visualizationColumn');
+    expect(column.hasClass('responsive')).is.true;
+    expect(column.hasClass('pin_bottom')).is.false;
   });
 
   it('sets `pin_bottom` class on visualization column when `pinWorkspaceToBottom` is set', () => {
@@ -58,11 +52,8 @@ describe('AppView', () => {
       />
     );
     expect(wrapper).not.to.be.null;
-    expect(wrapper.find('#visualizationColumn')).not.to.have.className(
-      'responsive'
-    );
-    expect(wrapper.find('#visualizationColumn')).to.have.className(
-      'pin_bottom'
-    );
+    const column = wrapper.find('#visualizationColumn');
+    expect(column.hasClass('responsive')).is.false;
+    expect(column.hasClass('pin_bottom')).is.true;
   });
 });

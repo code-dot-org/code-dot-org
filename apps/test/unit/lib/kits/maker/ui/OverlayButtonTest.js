@@ -20,7 +20,7 @@ describe('OverlayButton', () => {
     const wrapper = mount(
       <OverlayButton className="guncho" text="xyzzy" onClick={() => {}} />
     );
-    expect(wrapper).to.have.className('guncho');
+    expect(wrapper.hasClass('guncho')).to.be.ok;
   });
 
   it('calls onClick when clicked', () => {
