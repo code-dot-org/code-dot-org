@@ -1203,7 +1203,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'blocked workshops do not get exit email' do
-    # Open issue: could accidentally block ws in other test with the same id
     Pd::Workshop::BLOCKED_CSF_201_WORKSHOPS.each do |id|
       workshop = create :pd_ended_workshop
       workshop.update(id: id)
@@ -1227,9 +1226,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     Pd::Workshop.send_reminder_for_upcoming_in_days(0)
   end
-
-  #test 'not-blocked ws get reminder email' is covered by other test
-  #test 'not-blocked ws get exit email' is covered by other test
 
   private
 
