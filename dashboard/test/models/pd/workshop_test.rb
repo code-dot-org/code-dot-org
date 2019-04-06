@@ -1202,6 +1202,35 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
   end
 
+  test 'blocked workshops do not get exit email' do
+    # Open issue: could accidentally block ws in other test with the same id
+    Pd::Workshop::BLOCKED_CSF_201_WORKSHOPS.each do |id|
+      workshop = create :pd_ended_workshop
+      workshop.update(id: id)
+    end
+
+    Pd::Workshop.expects(:send_exit_surveys).never
+
+    Pd::Workshop::BLOCKED_CSF_201_WORKSHOPS.each {|id| Pd::Workshop.process_ended_workshop_async id}
+  end
+
+  test 'blocked workshops do not get reminder email' do
+    Pd::Workshop::BLOCKED_CSF_201_WORKSHOPS.each do |id|
+      workshop = create :pd_workshop, num_sessions: 1, sessions_from: Time.now
+      workshop.update(id: id)
+      workshop.sessions.first.update(pd_workshop_id: id)
+    end
+
+    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).never
+    Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).never
+    Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).never
+
+    Pd::Workshop.send_reminder_for_upcoming_in_days(0)
+  end
+
+  #test 'not-blocked ws get reminder email' is covered by other test
+  #test 'not-blocked ws get exit email' is covered by other test
+
   private
 
   def session_on_day(day_offset)

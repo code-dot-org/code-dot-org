@@ -335,6 +335,13 @@ class Pd::Workshop < ActiveRecord::Base
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
     scheduled_start_in_days(days).each do |workshop|
+      # TODO: remove print
+      if BLOCKED_CSF_201_WORKSHOPS.include? workshop.id
+        puts "Skip remindres for ws #{workshop.id}"
+        next
+      end
+      puts "Send reminders for ws #{workshop.id}"
+
       workshop.enrollments.each do |enrollment|
         email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
         email.deliver_now
@@ -407,6 +414,13 @@ class Pd::Workshop < ActiveRecord::Base
 
   def self.process_ended_workshop_async(id)
     workshop = Pd::Workshop.find(id)
+    # TODO: remove print
+    if BLOCKED_CSF_201_WORKSHOPS.include? workshop.id
+      puts "Skip exit emails for ws #{workshop.id}"
+      return
+    end
+    puts "Send exit emails for ws #{workshop.id}"
+
     raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
 
     workshop.send_exit_surveys
