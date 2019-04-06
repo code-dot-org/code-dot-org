@@ -87,5 +87,9 @@ module Pd
       COURSE_CSD => {course_name: 'csd-2018'},
       COURSE_CSP => {course_name: 'csp-2018'}
     }.freeze
+
+    # Pilot CSF 201 workshops from 4/24/19 to 5/6/19
+    # that we want to block reminders and exit emails
+    BLOCKED_CSF_201_WORKSHOPS = [6545, 6410, 6543]
   end
 end
