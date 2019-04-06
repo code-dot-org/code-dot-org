@@ -226,7 +226,9 @@ describe('DeleteAccount', () => {
         ]);
         confirmButton.simulate('click');
         server.respond();
-        expect(wrapper.find('FieldError')).to.have.text('Incorrect password!');
+        expect(wrapper.find('FieldError').text()).to.equal(
+          'Incorrect password!'
+        );
       });
 
       it('renders a generic error if server does not return a validation error', () => {
@@ -237,7 +239,7 @@ describe('DeleteAccount', () => {
         ]);
         confirmButton.simulate('click');
         server.respond();
-        expect(wrapper.find('#uitest-delete-error')).to.have.text(
+        expect(wrapper.find('#uitest-delete-error').text()).to.equal(
           'Unexpected error: 400'
         );
       });

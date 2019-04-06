@@ -63,8 +63,8 @@ describe('AddPasswordForm', () => {
     });
     const fieldErrors = wrapper.find('FieldError');
     expect(fieldErrors).to.have.length(2);
-    expect(fieldErrors.at(0)).to.have.text(PASSWORD_TOO_SHORT);
-    expect(fieldErrors.at(1)).to.have.text(PASSWORD_TOO_SHORT);
+    expect(fieldErrors.at(0).text()).to.equal(PASSWORD_TOO_SHORT);
+    expect(fieldErrors.at(1).text()).to.equal(PASSWORD_TOO_SHORT);
   });
 
   it('renders a password mismatch validation error if passwords do not match', () => {
@@ -72,14 +72,14 @@ describe('AddPasswordForm', () => {
       password: 'newpassword',
       passwordConfirmation: 'notnewpassword'
     });
-    expect(wrapper.find('FieldError')).to.have.text(PASSWORDS_MUST_MATCH);
+    expect(wrapper.find('FieldError').text()).to.equal(PASSWORDS_MUST_MATCH);
   });
 
   it('renders the form submission state', () => {
     wrapper.setState({
       submissionState: {message: SAVING_STATE}
     });
-    expect(wrapper.find('#uitest-add-password-status')).to.have.text(
+    expect(wrapper.find('#uitest-add-password-status').text()).to.equal(
       SAVING_STATE
     );
   });
@@ -108,7 +108,7 @@ describe('AddPasswordForm', () => {
     });
 
     it('renders the success state', async () => {
-      expect(wrapper.find('#uitest-add-password-status')).to.have.text(
+      expect(wrapper.find('#uitest-add-password-status').text()).to.equal(
         SUCCESS_STATE
       );
     });
@@ -138,7 +138,7 @@ describe('AddPasswordForm', () => {
     });
 
     it('renders the error state', () => {
-      expect(wrapper.find('#uitest-add-password-status')).to.have.text(
+      expect(wrapper.find('#uitest-add-password-status').text()).to.equal(
         'Oh no!'
       );
     });

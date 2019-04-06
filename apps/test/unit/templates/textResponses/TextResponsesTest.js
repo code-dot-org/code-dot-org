@@ -125,9 +125,9 @@ describe('TextResponses', () => {
       const filterOptions = filterDropdown.find('option');
       expect(filterDropdown.exists()).to.be.true;
       expect(filterOptions).to.have.length(3);
-      expect(filterOptions.at(0)).to.have.text('All');
-      expect(filterOptions.at(1)).to.have.text('Lesson 1');
-      expect(filterOptions.at(2)).to.have.text('Lesson 2');
+      expect(filterOptions.at(0).text()).to.equal('All');
+      expect(filterOptions.at(1).text()).to.equal('Lesson 1');
+      expect(filterOptions.at(2).text()).to.equal('Lesson 2');
     });
   });
 });

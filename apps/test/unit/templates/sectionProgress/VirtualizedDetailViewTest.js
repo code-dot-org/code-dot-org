@@ -66,9 +66,9 @@ describe('VirtualizedSummaryView', () => {
       </Provider>
     );
     const studentNames = wrapper.find('SectionProgressNameCell');
-    expect(studentNames.at(0)).to.have.text(studentData[0].name);
-    expect(studentNames.at(1)).to.have.text(studentData[1].name);
-    expect(studentNames.at(2)).to.have.text(studentData[2].name);
+    expect(studentNames.at(0).text()).to.equal(studentData[0].name);
+    expect(studentNames.at(1).text()).to.equal(studentData[1].name);
+    expect(studentNames.at(2).text()).to.equal(studentData[2].name);
   });
 
   it('renders a detail progress cell for each stage for each student', () => {

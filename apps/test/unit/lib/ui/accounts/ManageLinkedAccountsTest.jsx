@@ -42,7 +42,7 @@ describe('ManageLinkedAccounts', () => {
       .at(0)
       .find('td')
       .at(1);
-    expect(googleEmailCell).to.have.text('Not Connected');
+    expect(googleEmailCell.text()).to.equal('Not Connected');
   });
 
   it('renders "encrypted" for authentication options with no recorded email', () => {
@@ -64,7 +64,7 @@ describe('ManageLinkedAccounts', () => {
       .at(0)
       .find('td')
       .at(1);
-    expect(googleEmailCell).to.have.text(ENCRYPTED);
+    expect(googleEmailCell.text()).to.equal(ENCRYPTED);
   });
 
   it('renders teacher email for authentication options', () => {
@@ -102,28 +102,60 @@ describe('ManageLinkedAccounts', () => {
     const oauthConnections = wrapper.find('OauthConnection');
 
     const googleConnection = oauthConnections.at(0);
-    expect(googleConnection.find('td').at(1)).to.have.text(
-      'teacher@google.com'
-    );
-    expect(googleConnection.find('td').at(2)).to.have.text('Disconnect');
+    expect(
+      googleConnection
+        .find('td')
+        .at(1)
+        .text()
+    ).to.equal('teacher@google.com');
+    expect(
+      googleConnection
+        .find('td')
+        .at(2)
+        .text()
+    ).to.equal('Disconnect');
 
     const microsoftConnection = oauthConnections.at(1);
-    expect(microsoftConnection.find('td').at(1)).to.have.text(
-      'teacher@microsoft.com'
-    );
-    expect(microsoftConnection.find('td').at(2)).to.have.text('Disconnect');
+    expect(
+      microsoftConnection
+        .find('td')
+        .at(1)
+        .text()
+    ).to.equal('teacher@microsoft.com');
+    expect(
+      microsoftConnection
+        .find('td')
+        .at(2)
+        .text()
+    ).to.equal('Disconnect');
 
     const cleverConnection = oauthConnections.at(2);
-    expect(cleverConnection.find('td').at(1)).to.have.text(
-      'teacher@clever.com'
-    );
-    expect(cleverConnection.find('td').at(2)).to.have.text('Disconnect');
+    expect(
+      cleverConnection
+        .find('td')
+        .at(1)
+        .text()
+    ).to.equal('teacher@clever.com');
+    expect(
+      cleverConnection
+        .find('td')
+        .at(2)
+        .text()
+    ).to.equal('Disconnect');
 
     const facebookConnection = oauthConnections.at(3);
-    expect(facebookConnection.find('td').at(1)).to.have.text(
-      'teacher@facebook.com'
-    );
-    expect(facebookConnection.find('td').at(2)).to.have.text('Disconnect');
+    expect(
+      facebookConnection
+        .find('td')
+        .at(1)
+        .text()
+    ).to.equal('teacher@facebook.com');
+    expect(
+      facebookConnection
+        .find('td')
+        .at(2)
+        .text()
+    ).to.equal('Disconnect');
   });
 
   it('renders authentication option error', () => {
