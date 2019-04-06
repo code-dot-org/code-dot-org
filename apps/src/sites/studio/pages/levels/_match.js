@@ -16,7 +16,8 @@ $(function() {
     window.setTimeout(() => showDialog(<MatchAngiGifDialog />), 1000);
   }
 
-  initMatch(true);
+  const container = $('#level-body').first();
+  initMatch(container, true);
 });
 
 registerGetResult(() => {
