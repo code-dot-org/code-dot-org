@@ -25,6 +25,18 @@ describe('RegionalPartnerContactTest', () => {
     optIn: {type: 'ButtonList', expectRequired: true}
   };
 
+  let windowDashboard;
+  before(() => {
+    windowDashboard = window.dashboard;
+    window.dashboard = {
+      CODE_ORG_URL: '//test.code.org'
+    };
+  });
+
+  after(() => {
+    window.dashboard = windowDashboard;
+  });
+
   describe('Required fields', () => {
     Object.keys(FIELD_EXPECTATIONS).forEach(fieldName => {
       const expectRequired = FIELD_EXPECTATIONS[fieldName].expectRequired;
