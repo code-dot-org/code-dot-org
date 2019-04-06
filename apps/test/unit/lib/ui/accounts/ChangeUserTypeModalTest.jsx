@@ -141,7 +141,7 @@ describe('ChangeUserTypeModal', () => {
         }
       });
 
-      expect(submitButton(wrapper)).to.have.prop('disabled', true);
+      expect(submitButton(wrapper).prop('disabled')).to.equal(true);
     });
 
     it('enables the submit button when form passes validation', () => {
@@ -152,7 +152,7 @@ describe('ChangeUserTypeModal', () => {
         }
       });
 
-      expect(submitButton(wrapper)).to.have.prop('disabled', false);
+      expect(submitButton(wrapper).prop('disabled')).to.equal(false);
     });
   });
 

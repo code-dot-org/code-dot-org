@@ -38,7 +38,7 @@ describe('RegionalPartnerContactTest', () => {
         );
 
         const field = findField(wrapper, fieldName);
-        expect(field).to.have.prop('required', expectRequired);
+        expect(field.prop('required')).to.equal(expectRequired);
       });
     });
   });

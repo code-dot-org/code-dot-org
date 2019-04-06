@@ -344,7 +344,11 @@ describe('DetailViewContents', () => {
           .filterWhere(row => row.text().includes('Scholarship Teacher?'));
 
       // Dropdown is disabled
-      expect(getLastRow().find('Select')).to.have.prop('disabled', true);
+      expect(
+        getLastRow()
+          .find('Select')
+          .prop('disabled')
+      ).to.equal(true);
 
       // Click "Edit"
       detailView
@@ -353,7 +357,11 @@ describe('DetailViewContents', () => {
         .simulate('click');
 
       // Dropdown is enabled
-      expect(getLastRow().find('Select')).to.have.prop('disabled', false);
+      expect(
+        getLastRow()
+          .find('Select')
+          .prop('disabled')
+      ).to.equal(false);
 
       // Click "Save"
       detailView
@@ -362,7 +370,11 @@ describe('DetailViewContents', () => {
         .simulate('click');
 
       // Dropdown is disabled
-      expect(getLastRow().find('Select')).to.have.prop('disabled', true);
+      expect(
+        getLastRow()
+          .find('Select')
+          .prop('disabled')
+      ).to.equal(true);
     });
   });
 

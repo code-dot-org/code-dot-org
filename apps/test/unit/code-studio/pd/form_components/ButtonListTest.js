@@ -220,7 +220,7 @@ describe('ButtonList', () => {
     });
 
     it('Displays supplied input value', () => {
-      expect(dogBreedInput).to.have.prop('value', '--enter dog breed--');
+      expect(dogBreedInput.prop('value')).to.equal('--enter dog breed--');
     });
 
     it('Calls the onInputChange callback when text is entered', () => {

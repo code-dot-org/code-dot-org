@@ -221,7 +221,7 @@ describe('ChangeEmailModal', () => {
             }
           });
 
-          expect(submitButton(wrapper)).to.have.prop('disabled', true);
+          expect(submitButton(wrapper).prop('disabled')).to.equal(true);
         });
 
         it('enables the submit button form passes validation', () => {
@@ -233,7 +233,7 @@ describe('ChangeEmailModal', () => {
             }
           });
 
-          expect(submitButton(wrapper)).to.have.prop('disabled', false);
+          expect(submitButton(wrapper).prop('disabled')).to.equal(false);
         });
       });
 

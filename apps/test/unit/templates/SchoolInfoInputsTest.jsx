@@ -28,18 +28,16 @@ describe('SchoolInfoInputs', () => {
     );
     const schoolNotFound = wrapper.find(SchoolNotFound);
     expect(schoolNotFound).to.exist;
-    expect(schoolNotFound).to.have.prop('schoolName', '');
-    expect(schoolNotFound).to.have.prop(
-      'schoolType',
+    expect(schoolNotFound.prop('schoolName')).to.equal('');
+    expect(schoolNotFound.prop('schoolType')).to.equal(
       SchoolNotFound.OMIT_FIELD
     );
-    expect(schoolNotFound).to.have.prop(
-      'schoolCity',
+    expect(schoolNotFound.prop('schoolCity')).to.equal(
       SchoolNotFound.OMIT_FIELD
     );
-    expect(schoolNotFound).to.have.prop('schoolState', '');
-    expect(schoolNotFound).to.have.prop('schoolZip', '');
-    expect(schoolNotFound).to.have.prop('schoolLocation', '');
+    expect(schoolNotFound.prop('schoolState')).to.equal('');
+    expect(schoolNotFound.prop('schoolZip')).to.equal('');
+    expect(schoolNotFound.prop('schoolLocation')).to.equal('');
   });
 
   it('Shows SchoolNotFound to gather state, zip, and location when country US and school type does not have a name', () => {
@@ -52,21 +50,18 @@ describe('SchoolInfoInputs', () => {
     );
     const schoolNotFound = wrapper.find(SchoolNotFound);
     expect(schoolNotFound).to.exist;
-    expect(schoolNotFound).to.have.prop(
-      'schoolName',
+    expect(schoolNotFound.prop('schoolName')).to.equal(
       SchoolNotFound.OMIT_FIELD
     );
-    expect(schoolNotFound).to.have.prop(
-      'schoolType',
+    expect(schoolNotFound.prop('schoolType')).to.equal(
       SchoolNotFound.OMIT_FIELD
     );
-    expect(schoolNotFound).to.have.prop(
-      'schoolCity',
+    expect(schoolNotFound.prop('schoolCity')).to.equal(
       SchoolNotFound.OMIT_FIELD
     );
-    expect(schoolNotFound).to.have.prop('schoolState', '');
-    expect(schoolNotFound).to.have.prop('schoolZip', '');
-    expect(schoolNotFound).to.have.prop('schoolLocation', '');
+    expect(schoolNotFound.prop('schoolState')).to.equal('');
+    expect(schoolNotFound.prop('schoolZip')).to.equal('');
+    expect(schoolNotFound.prop('schoolLocation')).to.equal('');
   });
 
   it('Shows SchoolNotFound to gather name and location when country is not US and school type has a name', () => {
@@ -79,21 +74,20 @@ describe('SchoolInfoInputs', () => {
     );
     const schoolNotFound = wrapper.find(SchoolNotFound);
     expect(schoolNotFound).to.exist;
-    expect(schoolNotFound).to.have.prop('schoolName', '');
-    expect(schoolNotFound).to.have.prop(
-      'schoolType',
+    expect(schoolNotFound.prop('schoolName')).to.equal('');
+    expect(schoolNotFound.prop('schoolType')).to.equal(
       SchoolNotFound.OMIT_FIELD
     );
-    expect(schoolNotFound).to.have.prop(
-      'schoolCity',
+    expect(schoolNotFound.prop('schoolCity')).to.equal(
       SchoolNotFound.OMIT_FIELD
     );
-    expect(schoolNotFound).to.have.prop(
-      'schoolState',
+    expect(schoolNotFound.prop('schoolState')).to.equal(
       SchoolNotFound.OMIT_FIELD
     );
-    expect(schoolNotFound).to.have.prop('schoolZip', SchoolNotFound.OMIT_FIELD);
-    expect(schoolNotFound).to.have.prop('schoolLocation', '');
+    expect(schoolNotFound.prop('schoolZip')).to.equal(
+      SchoolNotFound.OMIT_FIELD
+    );
+    expect(schoolNotFound.prop('schoolLocation')).to.equal('');
   });
 
   it('Shows SchoolNotFound to gather location when country is not US and school type does not have a name', () => {
@@ -106,23 +100,21 @@ describe('SchoolInfoInputs', () => {
     );
     const schoolNotFound = wrapper.find(SchoolNotFound);
     expect(schoolNotFound).to.exist;
-    expect(schoolNotFound).to.have.prop(
-      'schoolName',
+    expect(schoolNotFound.prop('schoolName')).to.equal(
       SchoolNotFound.OMIT_FIELD
     );
-    expect(schoolNotFound).to.have.prop(
-      'schoolType',
+    expect(schoolNotFound.prop('schoolType')).to.equal(
       SchoolNotFound.OMIT_FIELD
     );
-    expect(schoolNotFound).to.have.prop(
-      'schoolCity',
+    expect(schoolNotFound.prop('schoolCity')).to.equal(
       SchoolNotFound.OMIT_FIELD
     );
-    expect(schoolNotFound).to.have.prop(
-      'schoolState',
+    expect(schoolNotFound.prop('schoolState')).to.equal(
       SchoolNotFound.OMIT_FIELD
     );
-    expect(schoolNotFound).to.have.prop('schoolZip', SchoolNotFound.OMIT_FIELD);
-    expect(schoolNotFound).to.have.prop('schoolLocation', '');
+    expect(schoolNotFound.prop('schoolZip')).to.equal(
+      SchoolNotFound.OMIT_FIELD
+    );
+    expect(schoolNotFound.prop('schoolLocation')).to.equal('');
   });
 });

@@ -70,7 +70,7 @@ describe('UiTips', () => {
         <UiTips {...DEFAULT_PROPS} tips={[INITIAL_TIP]} showInitialTips />
       );
       expect(wrapper.find(UiTip)).to.exist;
-      expect(wrapper.find(UiTip)).to.have.prop('text', INITIAL_TIP.text);
+      expect(wrapper.find(UiTip).prop('text')).to.equal(INITIAL_TIP.text);
     });
 
     it('does not render initial tips if showInitialTips is false', () => {
@@ -100,11 +100,10 @@ describe('UiTips', () => {
         />
       );
       expect(wrapper.find(Dialog)).to.exist;
-      expect(wrapper.find(Dialog)).to.have.prop(
-        'title',
+      expect(wrapper.find(Dialog).prop('title')).to.equal(
         TEST_BEFORE_DIALOG.title
       );
-      expect(wrapper.find(Dialog)).to.have.prop('isOpen', true);
+      expect(wrapper.find(Dialog).prop('isOpen')).to.equal(true);
     });
 
     it('beforeDialog is not showing if showInitialTips is false', () => {
@@ -116,11 +115,10 @@ describe('UiTips', () => {
         />
       );
       expect(wrapper.find(Dialog)).to.exist;
-      expect(wrapper.find(Dialog)).to.have.prop(
-        'title',
+      expect(wrapper.find(Dialog).prop('title')).to.equal(
         TEST_BEFORE_DIALOG.title
       );
-      expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
+      expect(wrapper.find(Dialog).prop('isOpen')).to.equal(false);
     });
 
     it('afterDialog is hidden', () => {
@@ -132,11 +130,10 @@ describe('UiTips', () => {
         />
       );
       expect(wrapper.find(Dialog)).to.exist;
-      expect(wrapper.find(Dialog)).to.have.prop(
-        'title',
+      expect(wrapper.find(Dialog).prop('title')).to.equal(
         TEST_AFTER_DIALOG.title
       );
-      expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
+      expect(wrapper.find(Dialog).prop('isOpen')).to.equal(false);
     });
   });
 
@@ -163,7 +160,7 @@ describe('UiTips', () => {
       // Click the target element
       $(targetElement).click();
       expect(wrapper.find(UiTip)).to.exist;
-      expect(wrapper.find(UiTip)).to.have.prop('text', TRIGGERED_TIP.text);
+      expect(wrapper.find(UiTip).prop('text')).to.equal(TRIGGERED_TIP.text);
     });
 
     it('unless showInitialTips is true', () => {
@@ -192,7 +189,7 @@ describe('UiTips', () => {
       expect(wrapper.find(UiTip)).to.have.length(2);
       wrapper
         .find(UiTip)
-        .forEach(tip => expect(tip).to.have.prop('text', INITIAL_TIP.text));
+        .forEach(tip => expect(tip.prop('text')).to.equal(INITIAL_TIP.text));
 
       // Click the target element
       // Expect nothing to happen, initial tips are still open
@@ -200,19 +197,19 @@ describe('UiTips', () => {
       expect(wrapper.find(UiTip)).to.have.length(2);
       wrapper
         .find(UiTip)
-        .forEach(tip => expect(tip).to.have.prop('text', INITIAL_TIP.text));
+        .forEach(tip => expect(tip.prop('text')).to.equal(INITIAL_TIP.text));
 
       // Close one of the initial tips
       const firstTip = wrapper.find(UiTip).first();
       firstTip.prop('closeClicked')(firstTip.prop('index'));
       expect(wrapper.find(UiTip)).to.have.length(1);
-      expect(wrapper.find(UiTip)).to.have.prop('text', INITIAL_TIP.text);
+      expect(wrapper.find(UiTip).prop('text')).to.equal(INITIAL_TIP.text);
 
       // Click the target element
       // Still nothing happens, one initial tip is still open
       $(targetElement).click();
       expect(wrapper.find(UiTip)).to.have.length(1);
-      expect(wrapper.find(UiTip)).to.have.prop('text', INITIAL_TIP.text);
+      expect(wrapper.find(UiTip).prop('text')).to.equal(INITIAL_TIP.text);
 
       // Close the other initial tip
       const secondTip = wrapper.find(UiTip).first();
@@ -222,7 +219,7 @@ describe('UiTips', () => {
       // This time when we click the target element, the triggered tip opens
       $(targetElement).click();
       expect(wrapper.find(UiTip)).to.have.length(1);
-      expect(wrapper.find(UiTip)).to.have.prop('text', TRIGGERED_TIP.text);
+      expect(wrapper.find(UiTip).prop('text')).to.equal(TRIGGERED_TIP.text);
 
       // Close the triggered tip
       const triggeredTip = wrapper.find(UiTip).first();
@@ -239,7 +236,7 @@ describe('UiTips', () => {
       // Click the target element
       $(targetElement).click();
       expect(wrapper.find(UiTip)).to.exist;
-      expect(wrapper.find(UiTip)).to.have.prop('text', TRIGGERED_TIP.text);
+      expect(wrapper.find(UiTip).prop('text')).to.equal(TRIGGERED_TIP.text);
 
       // Close the triggered tip
       const triggeredTip = wrapper.find(UiTip).first();
@@ -249,7 +246,7 @@ describe('UiTips', () => {
       // Click the target element again
       $(targetElement).click();
       expect(wrapper.find(UiTip)).to.exist;
-      expect(wrapper.find(UiTip)).to.have.prop('text', TRIGGERED_TIP.text);
+      expect(wrapper.find(UiTip).prop('text')).to.equal(TRIGGERED_TIP.text);
     });
   });
 
@@ -274,7 +271,7 @@ describe('UiTips', () => {
 
     it('only initial tips appear when beforeDialog is confirmed', () => {
       wrapper.instance().beforeDialogConfirm();
-      expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
+      expect(wrapper.find(Dialog).prop('isOpen')).to.equal(false);
       expect(wrapper.find(UiTip))
         .to.exist.and.to.have.length(1)
         .and.to.have.prop('text', INITIAL_TIP.text);
@@ -282,7 +279,7 @@ describe('UiTips', () => {
 
     it('initial tips are skipped when beforeDialog is canceled', () => {
       wrapper.instance().beforeDialogCancel();
-      expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
+      expect(wrapper.find(Dialog).prop('isOpen')).to.equal(false);
       expect(wrapper.find(UiTip)).not.to.exist;
     });
   });
@@ -311,7 +308,7 @@ describe('UiTips', () => {
       const firstTip = wrapper.find(UiTip).first();
       firstTip.prop('closeClicked')(firstTip.prop('index'));
 
-      expect(wrapper.find(Dialog)).to.have.prop('isOpen', true);
+      expect(wrapper.find(Dialog).prop('isOpen')).to.equal(true);
       expect(wrapper.find(UiTip)).not.to.exist;
     });
 
@@ -321,7 +318,7 @@ describe('UiTips', () => {
       firstTip.prop('closeClicked')(firstTip.prop('index'));
 
       wrapper.instance().afterDialogConfirm();
-      expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
+      expect(wrapper.find(Dialog).prop('isOpen')).to.equal(false);
     });
 
     it('closes on cancel', () => {
@@ -330,7 +327,7 @@ describe('UiTips', () => {
       firstTip.prop('closeClicked')(firstTip.prop('index'));
 
       wrapper.instance().afterDialogCancel();
-      expect(wrapper.find(Dialog)).to.have.prop('isOpen', false);
+      expect(wrapper.find(Dialog).prop('isOpen')).to.equal(false);
     });
   });
 });

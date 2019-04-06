@@ -22,11 +22,11 @@ describe('VisualizationResizeBar', function() {
   });
 
   it('has the id "visualizationResizeBar"', () => {
-    expect(wrapper.find('div')).to.have.prop('id', 'visualizationResizeBar');
+    expect(wrapper.find('div').prop('id')).to.equal('visualizationResizeBar');
   });
 
   it('is configured to display a font-awesome vertical ellipsis', () => {
-    expect(wrapper.find('div')).to.have.prop('className', 'fa fa-ellipsis-v');
+    expect(wrapper.find('div').prop('className')).to.equal('fa fa-ellipsis-v');
   });
 
   it('responds to and reports drag events', () => {

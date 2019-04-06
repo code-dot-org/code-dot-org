@@ -138,8 +138,7 @@ describe('SchoolInfoInterstitial', () => {
         }}
       />
     );
-    expect(wrapper.find(SchoolInfoInputs)).to.have.prop(
-      'country',
+    expect(wrapper.find(SchoolInfoInputs).prop('country')).to.equal(
       'United States'
     );
   });
@@ -164,8 +163,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      expect(wrapper.find(SchoolInfoInputs)).to.have.prop(
-        'ncesSchoolId',
+      expect(wrapper.find(SchoolInfoInputs).prop('ncesSchoolId')).to.equal(
         '123'
       );
     });
@@ -184,7 +182,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      expect(wrapper.find(SchoolInfoInputs)).to.have.prop('ncesSchoolId', '');
+      expect(wrapper.find(SchoolInfoInputs).prop('ncesSchoolId')).to.equal('');
     });
 
     it('is blank if school type is not public/private/charter', () => {
@@ -201,7 +199,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      expect(wrapper.find(SchoolInfoInputs)).to.have.prop('ncesSchoolId', '');
+      expect(wrapper.find(SchoolInfoInputs).prop('ncesSchoolId')).to.equal('');
     });
 
     it('is blank if none of school name/address have been entered', () => {
@@ -219,7 +217,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      expect(wrapper.find(SchoolInfoInputs)).to.have.prop('ncesSchoolId', '');
+      expect(wrapper.find(SchoolInfoInputs).prop('ncesSchoolId')).to.equal('');
     });
 
     // Matrix of conditions where NCES ID initializes to "-1":
@@ -240,8 +238,7 @@ describe('SchoolInfoInterstitial', () => {
               }}
             />
           );
-          expect(wrapper.find(SchoolInfoInputs)).to.have.prop(
-            'ncesSchoolId',
+          expect(wrapper.find(SchoolInfoInputs).prop('ncesSchoolId')).to.equal(
             '-1'
           );
         });

@@ -21,9 +21,9 @@ describe('SettingsCog', () => {
     const wrapper = mount(<SettingsCog />);
     const cog = wrapper.find(FontAwesome).first();
     const portal = wrapper.find(Portal).first();
-    expect(portal).to.have.prop('isOpened', false);
+    expect(portal.prop('isOpened')).to.equal(false);
     cog.simulate('click');
-    expect(portal).to.have.prop('isOpened', true);
+    expect(portal.prop('isOpened')).to.equal(true);
   });
 
   it('can close the menu', () => {
@@ -32,9 +32,9 @@ describe('SettingsCog', () => {
     const cog = wrapper.find(FontAwesome).first();
     const menu = wrapper.find(Portal).first();
     cog.simulate('click');
-    expect(menu).to.have.prop('isOpened', true);
+    expect(menu.prop('isOpened')).to.equal(true);
     wrapper.instance().close();
-    expect(menu).to.have.prop('isOpened', false);
+    expect(menu.prop('isOpened')).to.equal(false);
   });
 
   it('works around buggy portal behavior', done => {
@@ -59,7 +59,7 @@ describe('SettingsCog', () => {
     wrapper.instance().close();
     // This doesn't happen right away - that's our workaround, so we don't
     // re-open the menu in the same moment.
-    expect(menu).to.have.prop('isOpened', false);
+    expect(menu.prop('isOpened')).to.equal(false);
     expect(cog.prop('onClick')).to.be.undefined;
     setTimeout(() => {
       expect(wrapper).to.have.state('canOpen', true);
@@ -84,9 +84,9 @@ describe('SettingsCog', () => {
       wrapper = mount(<SettingsCog showMakerToggle={true} />);
       const cog = wrapper.find(FontAwesome).first();
       portal = wrapper.find(Portal).first();
-      expect(portal).to.have.prop('isOpened', false);
+      expect(portal.prop('isOpened')).to.equal(false);
       cog.simulate('click');
-      expect(portal).to.have.prop('isOpened', true);
+      expect(portal.prop('isOpened')).to.equal(true);
       menuWrapper = getPortalContent(wrapper);
     });
 
@@ -122,7 +122,7 @@ describe('SettingsCog', () => {
           .children()
           .first();
         firstMenuItem.simulate('click');
-        expect(portal).to.have.prop('isOpened', false);
+        expect(portal.prop('isOpened')).to.equal(false);
       });
     });
 

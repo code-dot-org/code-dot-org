@@ -431,7 +431,7 @@ describe('AssignmentSelector', () => {
 
     it('disables the primary dropdown', () => {
       const firstDropdown = wrapper.find('select').at(0);
-      expect(firstDropdown).to.have.prop('disabled', true);
+      expect(firstDropdown.prop('disabled')).to.equal(true);
     });
 
     it('disables the secondary dropdown', () => {
@@ -440,7 +440,7 @@ describe('AssignmentSelector', () => {
         .at(0)
         .simulate('change', {target: {value: 'csd'}});
       const secondDropdown = wrapper.find('select').at(1);
-      expect(secondDropdown).to.have.prop('disabled', true);
+      expect(secondDropdown.prop('disabled')).to.equal(true);
     });
   });
 });

@@ -130,16 +130,14 @@ describe('SyncOmniAuthSectionControl', () => {
   it('does not respond to clicks in the in-progress state', () => {
     const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
     wrapper.simulate('click');
-    expect(wrapper.find(SyncOmniAuthSectionButton)).to.have.prop(
-      'buttonState',
-      IN_PROGRESS
-    );
+    expect(
+      wrapper.find(SyncOmniAuthSectionButton).prop('buttonState')
+    ).to.equal(IN_PROGRESS);
 
     wrapper.simulate('click');
-    expect(wrapper.find(SyncOmniAuthSectionButton)).to.have.prop(
-      'buttonState',
-      IN_PROGRESS
-    );
+    expect(
+      wrapper.find(SyncOmniAuthSectionButton).prop('buttonState')
+    ).to.equal(IN_PROGRESS);
   });
 
   it('goes into a success state when sync succeeds', () => {
@@ -169,18 +167,16 @@ describe('SyncOmniAuthSectionControl', () => {
     const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
     wrapper.simulate('click');
     return expect(testSyncSucceeds()).to.be.fulfilled.then(() => {
-      expect(wrapper.find(SyncOmniAuthSectionButton)).to.have.prop(
-        'buttonState',
-        SUCCESS
-      );
+      expect(
+        wrapper.find(SyncOmniAuthSectionButton).prop('buttonState')
+      ).to.equal(SUCCESS);
 
       // Now that we're in a success state, test that we stay
       // in it on click!
       wrapper.simulate('click');
-      expect(wrapper.find(SyncOmniAuthSectionButton)).to.have.prop(
-        'buttonState',
-        SUCCESS
-      );
+      expect(
+        wrapper.find(SyncOmniAuthSectionButton).prop('buttonState')
+      ).to.equal(SUCCESS);
     });
   });
 
@@ -203,18 +199,16 @@ describe('SyncOmniAuthSectionControl', () => {
     const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps} />);
     wrapper.simulate('click');
     return expect(testSyncFails()).to.be.rejected.then(() => {
-      expect(wrapper.find(SyncOmniAuthSectionButton)).to.have.prop(
-        'buttonState',
-        FAILURE
-      );
+      expect(
+        wrapper.find(SyncOmniAuthSectionButton).prop('buttonState')
+      ).to.equal(FAILURE);
 
       // Now that we're in a failure state, test that we stay
       // in it on click!
       wrapper.simulate('click');
-      expect(wrapper.find(SyncOmniAuthSectionButton)).to.have.prop(
-        'buttonState',
-        READY
-      );
+      expect(
+        wrapper.find(SyncOmniAuthSectionButton).prop('buttonState')
+      ).to.equal(READY);
     });
   });
 });

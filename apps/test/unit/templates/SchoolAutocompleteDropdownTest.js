@@ -24,11 +24,11 @@ describe('SchoolAutocompleteDropdown', () => {
   });
 
   it('Passes supplied value to the select control', () => {
-    expect(select).to.have.prop('value', '12345');
+    expect(select.prop('value')).to.equal('12345');
   });
 
   it('Disables cache on the select control', () => {
-    expect(select).to.have.prop('cache', false);
+    expect(select.prop('cache')).to.equal(false);
   });
 
   it('Calls props.onChange when the selection changes', () => {
