@@ -27,7 +27,7 @@ $(document).ready(() => {
     );
   }
 
-  initMatch();
+  $('.level-group-content').each((i, element) => initMatch(element));
 });
 
 function initLevelGroup(levelCount, currentPage, lastAttempt) {
