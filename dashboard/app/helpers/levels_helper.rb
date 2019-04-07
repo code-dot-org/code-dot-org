@@ -662,8 +662,8 @@ module LevelsHelper
     string_or_image(level.type.underscore, text, level)
   end
 
-  def match_t(text)
-    string_or_image('match', text)
+  def match_t(text, source_level = nil)
+    string_or_image('match', text, source_level)
   end
 
   def level_title
