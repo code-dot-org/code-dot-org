@@ -185,7 +185,7 @@ gem 'haml', github: 'wjordan/haml', ref: 'cdo'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
 
-gem 'nokogiri', '~> 1.8.2'
+gem 'nokogiri', '>= 1.10.0'
 
 gem 'highline', '~> 1.6.21'
 
