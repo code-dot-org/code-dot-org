@@ -537,7 +537,7 @@ GEM
     mime-types-data (3.2018.0812)
     mini_magick (4.5.1)
     mini_mime (1.0.0)
-    mini_portile2 (2.3.0)
+    mini_portile2 (2.4.0)
     minitest (5.11.3)
     minitest-around (0.4.1)
       minitest (~> 5.0)
@@ -564,8 +564,8 @@ GEM
     netrc (0.11.0)
     newrelic_rpm (4.8.0.341)
     nio4r (2.3.1)
-    nokogiri (1.8.4)
-      mini_portile2 (~> 2.3.0)
+    nokogiri (1.10.2)
+      mini_portile2 (~> 2.4.0)
     oauth (0.5.1)
     oauth2 (1.4.1)
       faraday (>= 0.8, < 0.16.0)
@@ -961,7 +961,7 @@ DEPENDENCIES
   net-scp
   net-ssh
   newrelic_rpm (~> 4.8.0)
-  nokogiri (~> 1.8.2)
+  nokogiri (>= 1.10.0)
   octokit
   oj
   omniauth-clever (~> 1.2.1)!
