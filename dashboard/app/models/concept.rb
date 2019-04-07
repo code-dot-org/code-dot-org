@@ -7,10 +7,12 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  video_id   :integer
+#  video_key  :string
 #
 # Indexes
 #
 #  index_concepts_on_video_id  (video_id)
+#  index_concepts_on_video_key  (video_key)
 #
 
 # A Concept contains a set of Levels
