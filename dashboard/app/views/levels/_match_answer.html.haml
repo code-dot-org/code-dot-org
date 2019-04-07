@@ -6,9 +6,9 @@
       .column
         %ul#questions
           - level.questions.each do |question|
-            %li{style: "height: #{level.height}px"}!= match_t(question['text'])
+            %li{style: "height: #{level.height}px"}!= match_t(question['text'], level)
       .column#answerdest
         %ul#answers
           - level.answers.each do |answer|
-            %li.answer.answerlist{style: "height: #{level.height}px"}!= match_t(answer['text'])
+            %li.answer.answerlist{style: "height: #{level.height}px"}!= match_t(answer['text'], level)
       .clear
