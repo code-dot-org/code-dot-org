@@ -1214,11 +1214,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'blocked workshops do not get reminder email' do
+    return true if Pd::Workshop::BLOCKED_CSF_201_WORKSHOPS.blank?
+
     Pd::Workshop::BLOCKED_CSF_201_WORKSHOPS.each do |id|
       workshop = create :pd_workshop, num_sessions: 1, sessions_from: Time.now
       workshop.update(id: id)
       workshop.sessions.first.update(pd_workshop_id: id)
     end
+    assert Pd::Workshop.scheduled_start_in_days(0).present?
 
     Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).never
     Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).never
