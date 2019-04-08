@@ -451,7 +451,7 @@ en:
         desc: Learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.
       courseE_simon_says_2019:
         title: Simon Says
-        desc: Play a game and think about what commands are needed to get the right result.
+        desc: "Play a game and think about what commands are needed to get the right result.\r\n\r\n![test image](https://code.org/images/logo.png)"
       courseB_unplugged_passwords_2019:
         title: Powerful Passwords
         desc: Explore why people use passwords, learn the benefits of using passwords, and discover strategies for creating and keeping strong, secure passwords.
