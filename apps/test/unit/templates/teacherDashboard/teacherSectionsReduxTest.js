@@ -170,7 +170,8 @@ const validScripts = [
     script_name: 'course3',
     category: 'other',
     position: null,
-    category_priority: 3
+    category_priority: 3,
+    stage_extras_available: true
   },
   {
     id: 112,
@@ -217,7 +218,8 @@ const validScripts = [
     script_name: 'express-2018',
     category: 'other',
     position: null,
-    category_priority: 3
+    category_priority: 3,
+    stage_extras_available: true
   }
 ];
 
@@ -635,7 +637,7 @@ describe('teacherSectionsRedux', () => {
       ).to.throw();
     });
 
-    it('switching to non-CSF course assignment turns off stage extras', () => {
+    it('switching script assignment updates stage extras value from script', () => {
       let state = reducer(
         editingNewSectionState,
         setValidAssignments(validCourses, validScripts)
