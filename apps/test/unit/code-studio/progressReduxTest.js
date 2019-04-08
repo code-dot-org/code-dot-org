@@ -1,7 +1,7 @@
 import {assert} from 'chai';
 import {TestResults} from '@cdo/apps/constants';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
-import {ViewType, setViewTypeNonThunk} from '@cdo/apps/code-studio/viewAsRedux';
+import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import reducer, {
   initProgress,
   isPerfect,
@@ -347,12 +347,10 @@ describe('progressReduxTest', () => {
       assert.strictEqual(nextState.stageExtrasEnabled, true);
     });
 
+    // The changeViewType exported by viewAsRedux is a thunk that handles some
+    // stuff like updating query param. We just want to test the core action
+    // it ultimately dispatches.
     describe('setViewType', () => {
-      // The setViewType exported by viewAsRedux is a thunk that handles some
-      // stuff like updating query param. We just want the core action it ultimately
-      // dispatches
-      const setViewType = setViewTypeNonThunk;
-
       it('toggles to detail view when setting viewAs to Teacher', () => {
         const state = {
           ...initialState,
