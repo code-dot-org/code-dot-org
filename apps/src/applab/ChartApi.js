@@ -70,7 +70,7 @@ ChartApi.TypeNameToType = {
  * @returns {string[]}
  */
 ChartApi.getChartTypeNames = function() {
-  return Object.getOwnPropertyNames(ChartApi.TypeNameToType);
+  return Object.keys(ChartApi.TypeNameToType);
 };
 
 /**
