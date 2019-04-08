@@ -250,7 +250,6 @@ end
 
 def select_browser_configs(options)
   if options.local
-    SeleniumBrowser.ensure_chromedriver_running
     return [{
       'browser': 'local',
       'name': 'ChromeDriver',
