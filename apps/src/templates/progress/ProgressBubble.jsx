@@ -18,6 +18,7 @@ import {
 } from './progressStyles';
 import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 import TooltipWithIcon from './TooltipWithIcon';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -115,7 +116,8 @@ class ProgressBubble extends React.Component {
     stageTrophyEnabled: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
-    stageExtrasEnabled: PropTypes.bool
+    stageExtrasEnabled: PropTypes.bool,
+    progressView: PropTypes.bool
   };
 
   static defaultProps = {
@@ -130,7 +132,8 @@ class ProgressBubble extends React.Component {
       selectedStudentId,
       currentLocation,
       stageTrophyEnabled,
-      pairingIconEnabled
+      pairingIconEnabled,
+      progressView
     } = this.props;
 
     const levelIsAssessment = isLevelAssessment(level);
@@ -239,9 +242,15 @@ class ProgressBubble extends React.Component {
                 </span>
               )}
             </div>
-            {levelIsAssessment && !hideNumber && (
-              <FontAwesome icon="check-circle" style={styles.assessmentIcon} />
-            )}
+            {experiments.isEnabled(experiments.MINI_RUBRIC_2019) &&
+              levelIsAssessment &&
+              !smallBubble &&
+              !progressView && (
+                <FontAwesome
+                  icon="check-circle"
+                  style={styles.assessmentIcon}
+                />
+              )}
           </div>
           {!this.props.hideToolTips && tooltip}
         </div>
