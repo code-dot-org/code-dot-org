@@ -188,7 +188,7 @@ class VirtualizedDetailView extends Component {
   };
 
   studentCellRenderer = (studentStartIndex, stageIdIndex, key, style) => {
-    const {section, scriptData, getLevels, stageExtrasEnabled} = this.props;
+    const {section, getLevels, stageExtrasEnabled} = this.props;
 
     // Alternate background colour of each row
     if (studentStartIndex % 2 === 1) {
@@ -207,7 +207,6 @@ class VirtualizedDetailView extends Component {
             name={student.name}
             studentId={student.id}
             sectionId={section.id}
-            scriptId={scriptData.id}
           />
         )}
         {stageIdIndex >= 0 && (
