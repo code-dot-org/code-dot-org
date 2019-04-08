@@ -22,6 +22,12 @@ export default function externalLinks() {
 }
 
 export function isExternalLink(url) {
-  const hostname = new URL(url, 'https://code.org').hostname;
-  return !/(^|\.)code\.org$/.test(hostname);
+  return !/https?:\/\/([^.]+\.)*code.org(:[0-9]+)?\//.test(fullyQualified(url));
+}
+
+let a;
+function fullyQualified(path) {
+  a = a || document.createElement('a');
+  a.href = path;
+  return a.href;
 }
