@@ -170,9 +170,9 @@ In the Course 2 Bee Conditionals, we only looked at simple conditionals called "
 
 [/standards]
 
-[<img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0" />](http://creativecommons.org/)
+[<img src="https://curriculum.code.org/static/img/creativeCommons.png" border="0" />](http://creativecommons.org/)
 
-[<img src="http://www.thinkersmith.org/images/thinker.png" border="0" />](http://thinkersmith.org/)  
+[<img src="https://web.archive.org/web/20170104072040if_/http://www.thinkersmith.org/images/thinker.png" border="0" />](http://thinkersmith.org/)  
 
 
 [/content]

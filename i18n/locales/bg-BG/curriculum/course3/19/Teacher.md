@@ -300,9 +300,9 @@ It can be challenging for students to figure out how to break apart large tasks 
 
 [/standards]
 
-[<img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0" />](http://creativecommons.org/)
+[<img src="https://curriculum.code.org/static/img/creativeCommons.png" border="0" />](http://creativecommons.org/)
 
-[<img src="http://www.thinkersmith.org/images/thinker.png" border="0" />](http://thinkersmith.org/)  
+[<img src="https://web.archive.org/web/20170104072040if_/http://www.thinkersmith.org/images/thinker.png" border="0" />](http://thinkersmith.org/)  
 
 
 [<img src="http://www.thinkersmith.org/images/commonSense.png" border="0" />](https://www.commonsensemedia.org/)  

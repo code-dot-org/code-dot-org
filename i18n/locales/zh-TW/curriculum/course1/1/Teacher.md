@@ -280,9 +280,9 @@ Flash 聊天問題旨在引發大圖片思考如何課涉及到更多的世界�
 
 [/standards]
 
-[<img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0" />](http://creativecommons.org/)
+[<img src="https://curriculum.code.org/static/img/creativeCommons.png" border="0" />](http://creativecommons.org/)
 
-[<img src="http://www.thinkersmith.org/images/thinker.png" border="0" />](http://thinkersmith.org/)  
+[<img src="https://web.archive.org/web/20170104072040if_/http://www.thinkersmith.org/images/thinker.png" border="0" />](http://thinkersmith.org/)  
 
 
 [/content]
