@@ -11,6 +11,28 @@ class HelpHeader
 
     # Help-related.
 
+    if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.gamelab
+      entries << {
+        title: I18n.t("#{loc_prefix}game_lab_documentation"),
+        url: "https://docs.code.org/gamelab/",
+        id: "gamelab-docs"
+      }
+    end
+
+    if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.applab
+      entries << {
+        title: I18n.t("#{loc_prefix}app_lab_documentation"),
+        url: "https://docs.code.org/applab/",
+        id: "applab-docs"
+      }
+
+      entries << {
+        title: I18n.t("#{loc_prefix}app_lab_tutorials"),
+        url: CDO.code_org_url('/educate/applab'),
+        id: "applab-tutorials"
+      }
+    end
+
     if options[:level] || options[:script_level]
       report_url = options[:script_level] ?
         options[:script_level].report_bug_url(options[:request]) :
@@ -46,28 +68,6 @@ class HelpHeader
       }
     end
 
-    if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.gamelab
-      entries << {
-        title: I18n.t("#{loc_prefix}documentation"),
-        url: "https://docs.code.org/gamelab/",
-        id: "gamelab-docs"
-      }
-    end
-
-    if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.applab
-      entries << {
-        title: I18n.t("#{loc_prefix}documentation"),
-        url: "https://docs.code.org/applab/",
-        id: "applab-docs"
-      }
-
-      entries << {
-        title: I18n.t("#{loc_prefix}tutorials"),
-        url: CDO.code_org_url('/educate/applab'),
-        id: "applab-tutorials"
-      }
-    end
-    puts(entries)
     entries
   end
 end

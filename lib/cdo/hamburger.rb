@@ -190,74 +190,6 @@ class Hamburger
       entries << {type: "divider", class: visibility[:show_signed_out_options], id: "after-signed-out"}
     end
 
-    # Help-related.
-
-    if options[:level] || options[:script_level]
-      report_url = options[:script_level] ?
-        options[:script_level].report_bug_url(options[:request]) :
-        options[:level].report_bug_url(options[:request])
-      entries << {
-        title: I18n.t("#{loc_prefix}report_bug"),
-        url: report_url,
-        class: visibility[:show_help_options],
-        id: "report-bug",
-        target: "_blank"
-      }
-    else
-      entries << {
-        title: I18n.t("#{loc_prefix}report_bug"),
-        url: "https://support.code.org/hc/en-us/requests/new",
-        class: visibility[:show_help_options],
-        id: "report-bug",
-        target: "_blank"
-      }
-    end
-
-    entries << {
-      title: I18n.t("#{loc_prefix}help_support"),
-      url: "https://support.code.org",
-      class: visibility[:show_help_options],
-      id: "support",
-      target: "_blank"
-    }
-
-    if options[:user_type] == "teacher"
-      entries << {
-        title: I18n.t("#{loc_prefix}teacher_community"),
-        url: "http://forum.code.org/",
-        class: visibility[:show_help_options],
-        target: "_blank",
-        id: "teacher-community"
-      }
-    end
-
-    if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.gamelab
-      entries << {
-        title: I18n.t("#{loc_prefix}documentation"),
-        url: "https://docs.code.org/gamelab/",
-        class: visibility[:show_help_options],
-        id: "gamelab-docs"
-      }
-    end
-
-    if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.applab
-      entries << {
-        title: I18n.t("#{loc_prefix}documentation"),
-        url: "https://docs.code.org/applab/",
-        class: visibility[:show_help_options],
-        id: "applab-docs"
-      }
-
-      entries << {
-        title: I18n.t("#{loc_prefix}tutorials"),
-        url: CDO.code_org_url('/educate/applab'),
-        class: visibility[:show_help_options],
-        id: "applab-tutorials"
-      }
-    end
-
-    entries << {type: "divider", class: visibility[:show_pegasus_options], id: "before-pegasus"}
-
     # Pegasus options.
 
     entries << {
@@ -300,9 +232,6 @@ class Hamburger
         class: visibility[:show_pegasus_options]
       }
     end
-
-    puts(entries)
-    puts(visibility[:hamburger_class])
 
     {entries: entries, visibility: visibility[:hamburger_class]}
   end
