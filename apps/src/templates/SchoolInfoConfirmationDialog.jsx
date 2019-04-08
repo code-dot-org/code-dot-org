@@ -19,6 +19,7 @@ class SchoolInfoConfirmationDialog extends Component {
       authTokenName: PropTypes.string.isRequired,
       authTokenValue: PropTypes.string.isRequired,
       existingSchoolInfo: PropTypes.shape({
+        id: PropTypes.number,
         school_id: PropTypes.string,
         country: PropTypes.string,
         school_type: PropTypes.string,
@@ -27,7 +28,7 @@ class SchoolInfoConfirmationDialog extends Component {
       }).isRequired
     }).isRequired,
     onClose: PropTypes.func,
-    isOpen: PropTypes.bool
+    isOpen: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -58,7 +59,7 @@ class SchoolInfoConfirmationDialog extends Component {
         })
         .catch(error => this.setState({error}));
     }
-  };
+  }
 
   handleClickYes = () => {
     fetch(
@@ -89,9 +90,7 @@ class SchoolInfoConfirmationDialog extends Component {
     return (
       <Body>
         <div>
-          <p>
-            {i18n.schoolInfoDialogDescription()} {schoolName}
-          </p>
+          <p>{i18n.schoolInfoDialogDescription({schoolName})}</p>
         </div>
         <Button
           text={i18n.schoolInfoDialogUpdate()}
