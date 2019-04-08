@@ -301,6 +301,9 @@ class Hamburger
       }
     end
 
+    puts(entries)
+    puts(visibility[:hamburger_class])
+
     {entries: entries, visibility: visibility[:hamburger_class]}
   end
 

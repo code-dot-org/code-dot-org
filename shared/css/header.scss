@@ -118,32 +118,6 @@
     }
   }
 
-  .header_help {
-    margin-left: 5px;
-    margin-top: 6px;
-    height: 38px;
-    border: 0px;
-  }
-
-  .header_help_button {
-    &.header_button_light {
-      background-color: $teal;
-    }
-    display: inline-block;
-    color: $white;
-    background-color: transparent;
-    padding: 7px 14px;
-    float: left;
-    cursor: pointer;
-    a:hover {
-      text-decoration: none;
-      background-color: $orange;
-    }
-    color: $white;
-    height: 38px;
-    user-select: none;
-  }
-
   .user_menu, .create_menu {
     color: $white;
     background-color: transparent;
@@ -171,8 +145,7 @@
     .user_menu_arrow_down,
     .user_menu_arrow_up,
     .create_menu_arrow_up,
-    .create_menu_arrow_down,
-    .question_mark
+    .create_menu_arrow_down
     {
       font-size: 25px;
     }
