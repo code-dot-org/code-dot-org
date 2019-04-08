@@ -10,6 +10,12 @@ jQuery.fn.swap = function(b) {
   return this;
 };
 
+// Initialize drag and drop for all match elements (answers and slots) within
+// the container. Answers are made draggable and slots are made droppable. The
+// container limits this as follows:
+//   * only elements within the container are marked draggable / droppable
+//   * answers are only droppable on slots within the same container
+//   * answers cannot be dragged outside of the container.
 export function initMatch(container, enableSounds = false) {
   $(container)
     .find('.mainblock #answers li')
