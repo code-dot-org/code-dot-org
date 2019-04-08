@@ -313,7 +313,7 @@ class RegionalPartnerSearch extends Component {
               {appState === WorkshopApplicationStates.currently_open &&
                 !partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
-                    class="professional_learning_link"
+                    className="professional_learning_link"
                     id={`id-${partnerInfo.id}`}
                     nominated={this.state.nominated}
                     priorityDeadlineDate={appsPriorityDeadlineDate}
@@ -323,7 +323,7 @@ class RegionalPartnerSearch extends Component {
               {appState === WorkshopApplicationStates.currently_open &&
                 partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
-                    class="professional_learning_link"
+                    className="professional_learning_link"
                     id={`id-${partnerInfo.id}`}
                     link={partnerInfo.link_to_partner_application}
                     partnerSite={true}
@@ -456,7 +456,7 @@ class RegionalPartnerSearch extends Component {
             {appState === WorkshopApplicationStates.currently_open &&
               !partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
-                  class="professional_learning_link"
+                  className="professional_learning_link"
                   id={`id-${partnerInfo.id}`}
                   nominated={this.state.nominated}
                   priorityDeadlineDate={appsPriorityDeadlineDate}
@@ -466,7 +466,7 @@ class RegionalPartnerSearch extends Component {
             {appState === WorkshopApplicationStates.currently_open &&
               partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
-                  class="professional_learning_link"
+                  className="professional_learning_link"
                   id={`id-${partnerInfo.id}`}
                   link={partnerInfo.link_to_partner_application}
                   partnerSite={true}

@@ -262,6 +262,8 @@ class RegionalPartnerTest < ActiveSupport::TestCase
       assert_equal WORKSHOP_APPLICATION_STATES[:currently_open], regional_partner.summer_workshops_application_state
       assert_equal "September 25, 2018", regional_partner.summer_workshops_earliest_apps_open_date
       assert_nil regional_partner.link_to_partner_application
+
+      assert_equal "October  2, 2018", regional_partner.upcoming_priority_deadline_date
     end
   end
 
@@ -276,6 +278,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     regional_partner = create :regional_partner_kentucky
 
     assert_equal WORKSHOP_APPLICATION_STATES[:now_closed], regional_partner.summer_workshops_application_state
+    assert_nil regional_partner.upcoming_priority_deadline_date
   end
 
   test 'regional_partner_summer_workshop_missing_information' do
