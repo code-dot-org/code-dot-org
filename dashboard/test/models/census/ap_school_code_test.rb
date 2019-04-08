@@ -40,4 +40,14 @@ class Census::ApSchoolCodeTest < ActiveSupport::TestCase
     school_code = Census::ApSchoolCode.normalize_school_code("0123")
     assert_equal "000123", school_code
   end
+
+  test "AP school code year is missing fails" do
+    school_code = build :ap_school_code, :without_school_year
+    refute school_code.valid?
+  end
+
+  test "AP school code year is invalid fails" do
+    school_code = build :ap_school_code, :with_invalid_school_year
+    refute school_code.valid?
+  end
 end
