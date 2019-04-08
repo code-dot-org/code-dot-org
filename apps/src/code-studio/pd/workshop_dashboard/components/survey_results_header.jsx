@@ -206,16 +206,20 @@ export default class SurveyResultsHeader extends React.Component {
       }
 
       if (preselectedWorkshop) {
-        this.filterWorkshops(preselectedWorkshop.course, preselectedWorkshop);
+        this.filterWorkshops(
+          preselectedWorkshop.course,
+          preselectedWorkshop.school_year,
+          preselectedWorkshop
+        );
       } else {
         this.filterWorkshops(courses[0]);
       }
     }
   }
 
-  filterWorkshops(course, preselectedWorkshop = undefined) {
+  filterWorkshops(course, year = '2018-2019', preselectedWorkshop = undefined) {
     let filteredWorkshops = _.filter(this.props.workshops, function(workshop) {
-      return workshop.course === course;
+      return workshop.course === course && workshop.school_year === year;
     });
 
     filteredWorkshops = _.sortBy(filteredWorkshops, workshop => {
@@ -239,7 +243,8 @@ export default class SurveyResultsHeader extends React.Component {
     this.setState({
       selectedCourse: course,
       filteredWorkshops: filteredWorkshops,
-      selectedWorkshopId: selectedWorkshopId
+      selectedWorkshopId: selectedWorkshopId,
+      selectedYear: year
     });
 
     this.setSurveyPanel(
@@ -248,17 +253,19 @@ export default class SurveyResultsHeader extends React.Component {
       selectedWorkshopId &&
         this.getWorkshopFriendlyName(
           preselectedWorkshop || filteredWorkshops[0]
-        )
+        ),
+      year
     );
   }
 
-  setSurveyPanel(course, workshopId, workshopName) {
+  setSurveyPanel(course, workshopId, workshopName, workshopYear) {
     if (!this.props.organizerView && !workshopId) {
       this.setState({
         workshopSurveyData: undefined,
         workshopName: undefined
       });
     } else {
+      // organizer view with workshop id
       if (!this.props.organizerView || workshopId) {
         $.ajax({
           method: 'GET',
@@ -271,12 +278,12 @@ export default class SurveyResultsHeader extends React.Component {
             selectedWorkshopId: workshopId,
             workshopSurveyData: data,
             workshopName: workshopName,
-            selectedYear: this.state.filteredWorkshops.find(w => {
-              return w.id.toString() === workshopId.toString();
-            }).school_year
+            selectedYear: workshopYear
           });
         });
       } else {
+        // organizer view w/o workshop id
+        // wherever this is being called, we need to PASS IN THE YEAR - default to current year
         $.ajax({
           method: 'GET',
           url: `${organizerViewApiRoot}${course}${
@@ -294,22 +301,22 @@ export default class SurveyResultsHeader extends React.Component {
   }
 
   handleCourseChange = event => {
-    this.filterWorkshops(event.target.value);
+    this.filterWorkshops(event.target.value, this.state.selectedYear);
   };
 
   handleWorkshopIdChange = event => {
     this.setSurveyPanel(
       this.state.selectedCourse,
       event.target.value,
-      event.target.selectedOptions[0].innerHTML
+      event.target.selectedOptions[0].innerHTML,
+      this.state.filteredWorkshops.find(w => {
+        return w.id.toString() === event.target.value.toString();
+      }).school_year
     );
   };
 
   handleYearChange = event => {
-    // eventually call
-    // setSurveyPanel with year, have that set the year in state
-    // for now:
-    this.setState({selectedYear: event.target.value});
+    this.filterWorkshops(this.state.course, event.target.value);
   };
 
   handleOnClickDownloadCsv = () => {
