@@ -339,6 +339,7 @@ FactoryGirl.define do
 
   factory :ap_school_code, class: 'Census::ApSchoolCode' do
     sequence(:school_code) {|n| Census::ApSchoolCode.normalize_school_code(n)}
+    school_year 2017
     school {create :school}
 
     trait :without_school_code do
@@ -355,6 +356,14 @@ FactoryGirl.define do
 
     trait :with_invalid_school_code do
       school_code "ABCDEF"
+    end
+
+    trait :without_school_year do
+      school_year nil
+    end
+
+    trait :with_invalid_school_year do
+      school_year "FISH"
     end
 
     trait :with_ap_cs_offering do

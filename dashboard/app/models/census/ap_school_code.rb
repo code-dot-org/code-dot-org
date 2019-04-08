@@ -22,6 +22,8 @@ class Census::ApSchoolCode < ApplicationRecord
 
   validates :school_code, presence: true, length: {is: 6}, format: {with: /\A[0-9]+\z/, message: "only allows numbers"}
 
+  validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2016, less_than_or_equal_to: 2030}
+
   # school_code is a 6-character string but in the input files we may have treated
   # them as integers and cut off leading zeros. Add them back if necessary.
   def self.normalize_school_code(raw_school_code)
