@@ -9,3 +9,6 @@ Scenario: Web Lab iframe contents loads
   And I wait until element "iframe" is visible
   And I switch to the first iframe
   Then I wait to see "#bramble"
+  And I wait until element "iframe" is visible
+  And I switch to the first iframe
+  Then I wait to see "#editor-holder"

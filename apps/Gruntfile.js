@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 // Auto-generated from Gruntfile.js
 import 'babel-polyfill';
 import 'whatwg-fetch';
-import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/testUtils';
+import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/throwOnConsole';
 ${loadContext}
 describe('entry tests', () => {
   throwOnConsoleErrorsEverywhere();

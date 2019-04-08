@@ -99,7 +99,7 @@ class VirtualizedSummaryView extends Component {
     style,
     position
   ) => {
-    const {section, scriptData, getLevels} = this.props;
+    const {section, getLevels} = this.props;
 
     // Alternate background colour of each row
     if (studentStartIndex % 2 === 1) {
@@ -118,7 +118,6 @@ class VirtualizedSummaryView extends Component {
             name={student.name}
             studentId={student.id}
             sectionId={section.id}
-            scriptId={scriptData.id}
           />
         )}
         {stageIdIndex >= 0 && (
