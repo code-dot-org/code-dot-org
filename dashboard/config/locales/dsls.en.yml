@@ -5840,6 +5840,25 @@ en:
         an ordered sequence of characters: an ordered sequence of characters
         joins together two or more strings end-to-end to make a new string: joins together two or more strings end-to-end to make a new string
         stores a value: stores a value
+      csp-20-21-u5-assess-lists:
+        '0': '0'
+        '15': '15'
+        '32': '32'
+        '64': '64'
+        Concatenation: Concatenation
+        Conditional Statement: Conditional Statement
+        Match the index with the value: Match the index with the value
+        Match the vocabulary: Match the vocabulary
+        String: String
+        Variable: Variable
+        affects the sequential flow of control by executing different statements based on the value of a Boolean expression: affects the sequential flow of control by executing different statements based on the value of a Boolean expression
+        an ordered sequence of characters: an ordered sequence of characters
+        joins together two or more strings end-to-end to make a new string: joins together two or more strings end-to-end to make a new string
+        myNumbers[0]: myNumbers[0]
+        myNumbers[1]: myNumbers[1]
+        myNumbers[3]: myNumbers[3]
+        myNumbers[4]: myNumbers[4]
+        stores a value: stores a value
       parts of contract:
         (yearbook-picture "Sally" 1992): (yearbook-picture "Sally" 1992)
         Here is a contract for a new function. Match each item with the word that describes it.: Here is a contract for a new function. Match each item with the word that describes it.
