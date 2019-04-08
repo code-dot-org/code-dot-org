@@ -12,7 +12,10 @@ import {
   setLessonOfInterest
 } from './sectionProgressRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
-import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  getIconForLevel,
+  isLevelAssessment
+} from '@cdo/apps/templates/progress/progressHelpers';
 import color from '../../util/color';
 import {
   progressStyles,
@@ -172,7 +175,11 @@ class VirtualizedDetailView extends Component {
           <span style={styles.bubbleSet}>
             {scriptData.stages[stageIdIndex].levels.map((level, i) => (
               <FontAwesome
-                icon={getIconForLevel(level)}
+                icon={
+                  isLevelAssessment(level)
+                    ? 'check-circle'
+                    : getIconForLevel(level)
+                }
                 style={
                   level.isUnplugged
                     ? progressStyles.unpluggedIcon
