@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
@@ -56,5 +56,17 @@ describe('ProgressBubbleSet', () => {
     assert.equal(wrapper.find('ProgressBubble').length, 1);
     const progressBubble = wrapper.find('ProgressBubble').at(0);
     assert.equal(progressBubble.prop('disabled'), true);
+  });
+  it('render ProgressBubble that have progressView true if progressView prop is true', () => {
+    const wrapper = shallow(
+      <ProgressBubbleSet {...defaultProps} progressView={true} />
+    );
+    assert.equal(
+      wrapper
+        .find('ProgressBubble')
+        .first()
+        .props().progressView,
+      true
+    );
   });
 });
