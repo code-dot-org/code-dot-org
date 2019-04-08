@@ -39,10 +39,11 @@
     "test262-compiler": "github:pcardune/test262-compiler#ffa0dff"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.0",
     "@cdo/apps": "file:src",
     "@cdo/interpreted": "link:../dashboard/config/libraries",
     "@code-dot-org/artist": "0.2.1",
-    "@code-dot-org/blockly": "3.4.2",
+    "@code-dot-org/blockly": "3.4.3",
     "@code-dot-org/bramble": "0.1.26",
     "@code-dot-org/craft": "0.2.2",
     "@code-dot-org/dance-party": "0.0.42",
@@ -57,7 +58,6 @@
     "@storybook/addon-options": "^3.3.15",
     "@storybook/react": "3.2.11",
     "aws-sdk": "2.28.0",
-    "babel-core": "6.9.0",
     "babel-eslint": "^7.1.1",
     "babel-istanbul-loader": "^0.1.0",
     "babel-loader": "7.1.5",
