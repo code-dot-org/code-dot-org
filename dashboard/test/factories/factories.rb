@@ -1017,10 +1017,10 @@ FactoryGirl.define do
     contact_name "Contact Name"
     contact_email "contact@code.org"
     group 1
-    apps_open_date_csp_teacher {Date.today - 1.day}
-    apps_open_date_csd_teacher {Date.today - 2.days}
-    apps_close_date_csp_teacher {Date.today + 3.days}
-    apps_close_date_csd_teacher {Date.today + 4.days}
+    apps_open_date_csp_teacher {Date.current - 1.day}
+    apps_open_date_csd_teacher {Date.current - 2.days}
+    apps_close_date_csp_teacher {Date.current + 3.days}
+    apps_close_date_csd_teacher {Date.current + 4.days}
     csd_cost 10
     csp_cost 12
     cost_scholarship_information "Additional scholarship information will be here."
