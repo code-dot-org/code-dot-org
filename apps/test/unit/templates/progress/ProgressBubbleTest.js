@@ -1,9 +1,11 @@
-import {assert} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import color from '@cdo/apps/util/color';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import sinon from 'sinon';
+import experiments from '@cdo/apps/util/experiments';
 
 const defaultProps = {
   level: {
@@ -45,12 +47,31 @@ describe('ProgressBubble', () => {
     assert(wrapper.is('div'));
   });
 
-  it('has a green background when we have perfect status', () => {
+  it('has a green background when we have perfect status and not assessment', () => {
     const wrapper = shallow(<ProgressBubble {...defaultProps} />);
 
     const tooltipDiv = wrapper.find('div').at(1);
     const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_perfect);
+  });
+
+  it('has a purple background when level status is LevelStatus.completed_assessment, is an assessment level, and in experiment', () => {
+    sinon.stub(experiments, 'isEnabled').returns(true);
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        level={{
+          ...defaultProps.level,
+          kind: LevelKind.assessment,
+          status: LevelStatus.completed_assessment
+        }}
+      />
+    );
+
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
+    assert.equal(div.props().style.backgroundColor, color.level_submitted);
+    experiments.isEnabled.restore();
   });
 
   it('has a white background when we are disabled', () => {
@@ -217,6 +238,58 @@ describe('ProgressBubble', () => {
         .props().style.width,
       9
     );
+  });
+
+  it('shows assessment icon on assessment level, in experiment', () => {
+    sinon.stub(experiments, 'isEnabled').returns(true);
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        level={{
+          ...defaultProps.level,
+          kind: LevelKind.assessment
+        }}
+      />
+    );
+
+    const assessmentIcon = wrapper.find('FontAwesome').at(1);
+    assert.equal(assessmentIcon.props().icon, 'check-circle');
+
+    experiments.isEnabled.restore();
+  });
+
+  it('does not show assessment icon on bubble on assessment level, in experiment, if smallBubble is true', () => {
+    sinon.stub(experiments, 'isEnabled').returns(true);
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        smallBubble={true}
+        level={{
+          ...defaultProps.level,
+          kind: LevelKind.assessment
+        }}
+      />
+    );
+
+    expect(wrapper.find('FontAwesome')).to.have.lengthOf(0);
+    experiments.isEnabled.restore();
+  });
+
+  it('does not show assessment icon on bubble on assessment level, in experiment, if progressView is true', () => {
+    sinon.stub(experiments, 'isEnabled').returns(true);
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        progressView={true}
+        level={{
+          ...defaultProps.level,
+          kind: LevelKind.assessment
+        }}
+      />
+    );
+
+    expect(wrapper.find('FontAwesome')).to.have.lengthOf(0);
+    experiments.isEnabled.restore();
   });
 
   it('renders a progress pill for unplugged lessons', () => {
