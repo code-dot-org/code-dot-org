@@ -7,6 +7,8 @@ class HelpHeader
   def self.get_help_contents(options)
     loc_prefix = options[:loc_prefix]
 
+    entries = []
+
     # Help-related.
 
     if options[:level] || options[:script_level]
@@ -65,7 +67,7 @@ class HelpHeader
         id: "applab-tutorials"
       }
     end
-
+    puts(entries)
     entries
   end
 end

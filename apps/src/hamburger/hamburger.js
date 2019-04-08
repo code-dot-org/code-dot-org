@@ -18,6 +18,15 @@ export const initHamburger = function() {
         hamburger.children('#hamburger-contents').slideUp();
         $('#hamburger-icon').removeClass('active');
       }
+
+      var helpbutton = $('#help-button');
+
+      // If we didn't click the hamburger itself, and also nothing inside it,
+      // then hide it.
+      if (!helpbutton.is(e.target) && helpbutton.has(e.target).length === 0) {
+        helpbutton.children('#help-contents').slideUp();
+        $('#help-icon').removeClass('active');
+      }
     });
 
     $('.hamburger-expandable-item').each(function() {
@@ -31,6 +40,12 @@ export const initHamburger = function() {
           .toggle();
         e.preventDefault();
       });
+    });
+
+    $('#help-icon').click(function(e) {
+      $(this).toggleClass('active');
+      $('#help-button #help-contents').slideToggle();
+      e.preventDefault();
     });
 
     $('#hamburger #report-bug').click(function() {
