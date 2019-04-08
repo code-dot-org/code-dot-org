@@ -1070,6 +1070,7 @@ export class DetailViewContents extends React.Component {
                   {Object.keys(this.pageLabels[header]).map((key, j) => {
                     return (
                       (this.props.applicationData.form_data[key] ||
+                        key === 'csTotalCourseHours' ||
                         header ===
                           'schoolStatsAndPrincipalApprovalSection') && (
                         <tr key={j}>

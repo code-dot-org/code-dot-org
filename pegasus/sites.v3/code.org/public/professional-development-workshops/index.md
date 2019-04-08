@@ -17,7 +17,9 @@ Look at the map below to find the next upcoming CS Fundamentals workshop in your
 
 If you can’t find a workshop above, and you’re in the U.S., contact your Regional Partner. They may already have a private workshop set up near your area that you can join, or can set up a workshop if they see enough demand.
 
-<a href="<%= CDO.studio_url('/pd/regional_partner_contact/new') %>"><button>Contact my Regional Partner</button></a>
+<%= view :professional_development_workshops_regional_partner_search %>
+
+<br/>
 
 Regional Partners are organizations across the country who advocate for access to computer science education, act as a K-12 computer science hub for their region, and create a strong local community of computer science educators. Our [Regional Partners](/educate/regional-partner/partners) are happy to work with you to organize a training at your school or district.
 
