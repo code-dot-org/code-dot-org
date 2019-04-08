@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/reconfiguredChai';
 import Immutable from 'immutable';
 import {
   fakeLesson,
@@ -10,7 +10,8 @@ import {
   lessonIsLockedForAllStudents,
   getIconForLevel,
   stageLocked,
-  summarizeProgressInStage
+  summarizeProgressInStage,
+  isLevelAssessment
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
@@ -183,6 +184,22 @@ describe('progressHelpers', () => {
       it('returns false when level group is not locked', () => {
         assert.strictEqual(false, stageLocked(baseLevels));
       });
+    });
+  });
+
+  describe('isLevelAssessment', () => {
+    it('returns true if level kind is assessment', () => {
+      const level = {
+        kind: LevelKind.assessment
+      };
+      assert.equal(isLevelAssessment(level), true);
+    });
+
+    it('returns false if level kind is something other than assessment', () => {
+      const level = {
+        kind: LevelKind.puzzle
+      };
+      assert.equal(isLevelAssessment(level), false);
     });
   });
 
