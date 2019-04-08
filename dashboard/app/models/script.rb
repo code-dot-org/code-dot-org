@@ -1472,6 +1472,8 @@ class Script < ActiveRecord::Base
   def get_feedback_for_section(section)
     feedback = {}
     script_levels.each do |script_level|
+      # Filter down to only the levels a teacher can give feedback on
+      next unless ["Applab", "Gamelab", "Weblab"].include?(script_level.level.type)
       section.students.each do |student|
         temp_feedback = TeacherFeedback.get_student_level_feedback(student.id, script_level.level.id, section.user_id)
         next unless temp_feedback
