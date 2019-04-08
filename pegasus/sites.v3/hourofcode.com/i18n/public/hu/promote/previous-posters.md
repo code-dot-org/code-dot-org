@@ -7,7 +7,7 @@ nav: promote_nav
 
 # Régebbi "Hour of Code" poszterek
 
-### Keress egy előző évi posztert, melyet kinyomtatva kitehetsz az osztályterembe! Újabb posztereket keresel? <a href="<%= resolve_url('/promote/resources#posters') %>Kattints ide!</a>
+### Keress egy előző évi posztert, melyet kinyomtatva kitehetsz az osztályterembe! Újabb posztereket keresel? [Kattints ide!](<%= resolve_url('/promote/resources#posters') %>)
 
 ---
 

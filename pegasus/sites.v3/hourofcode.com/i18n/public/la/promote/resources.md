@@ -9,7 +9,7 @@ nav: promote_nav
 
 # Promueve la "Hora del Código"
 
-### Encuentra todos los recursos que necesitas para llamar la atención hacia tu "Hora del Código". ¿No sabes donde empezar? Inicia con nuestra <a href="<%= resolve_url('/how-to') %>guía para ser anfitrión de la "Hora del Código"</a>!
+### Encuentra todos los recursos que necesitas para llamar la atención hacia tu "Hora del Código". ¿No sabes donde empezar? Inicia con nuestra [guía para ser anfitrión de la "Hora del Código"](<%= resolve_url('/how-to') %>)!
 
 ---
 
@@ -63,7 +63,7 @@ Looking for our posters from previous years? [Find them here](<%= resolve_url('/
 
 ## Invita a personas de tu comunidad a tu Hora del Código y promueve tu evento vía correo electrónico
 
-### Encuentra <a href="<%= resolve_url('/promote/stats') %>más información y mensajes que puedes utilizar</a> cuando hables sobre la Hora del Código.
+### Encuentra [más información y mensajes que puedes utilizar](<%= resolve_url('/promote/stats') %>) cuando hables sobre la Hora del Código.
 
 ---
 
@@ -89,7 +89,7 @@ Get started at http://hourofcode.com/<%= @country %> <br />
 
 ### Voluntario en una escuela:
 
-#### <a href="<%= resolve_url('/how-to/volunteers') %>Encuentra más recursos e información sobre el voluntareado en escuelas en este vínculo</a>.
+#### [Encuentra más recursos e información sobre el voluntareado en escuelas en este vínculo](<%= resolve_url('/how-to/volunteers') %>).
 
 **Subject line:** Can we help you host an Hour of Code?
 
@@ -153,7 +153,7 @@ Estoy deseando estar en contacto.<br />
 
 ### Invitar a un político local al evento de tu escuela:
 
-#### <a href="<%= resolve_url('/how-to/public-officials') %>¿Necesitas más información? Hecha un vistazo a nuestros recursos para invitar a politicos a asistir a tu evento</a>.
+#### [¿Necesitas más información? Hecha un vistazo a nuestros recursos para invitar a politicos a asistir a tu evento](<%= resolve_url('/how-to/public-officials') %>).
 
 **Subject line**: Join our school as we change the future with an Hour of Code
 

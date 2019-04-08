@@ -7,7 +7,7 @@ nav: promote_nav
 
 # Eelmised KoodiTund plakatid
 
-### Kasuta meie eelmiste aastate plakateid ning kaunista nendega oma klassiruum! Otsid uusi plakateid?<a href="<%= resolve_url('/promote/resources#posters') %> Kliki siia</a>.
+### Kasuta meie eelmiste aastate plakateid ning kaunista nendega oma klassiruum! Otsid uusi plakateid? [Kliki siia](<%= resolve_url('/promote/resources#posters') %>).
 
 ---
 
