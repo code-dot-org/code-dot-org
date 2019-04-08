@@ -28,6 +28,7 @@ import {
 } from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
+import experiments from '@cdo/apps/util/experiments';
 
 const ARROW_PADDING = 60;
 // Only show arrow next to lesson numbers if column is larger than a single small bubble and it's margin.
@@ -176,7 +177,8 @@ class VirtualizedDetailView extends Component {
             {scriptData.stages[stageIdIndex].levels.map((level, i) => (
               <FontAwesome
                 icon={
-                  isLevelAssessment(level)
+                  isLevelAssessment(level) &&
+                  experiments.isEnabled(experiments.MINI_RUBRIC_2019)
                     ? 'check-circle'
                     : getIconForLevel(level)
                 }
