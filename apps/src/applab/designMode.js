@@ -191,8 +191,8 @@ designMode.fontFamilyOptionFromStyle = function(style) {
  * @param name {string}
  * @param value {string}
  */
-designMode.onPropertyChange = function(element, name, value) {
-  designMode.updateProperty(element, name, value);
+designMode.onPropertyChange = function(element, name, value, timestamp) {
+  designMode.updateProperty(element, name, value, timestamp);
   designMode.editElementProperties(element);
 };
 
@@ -203,7 +203,7 @@ designMode.onPropertyChange = function(element, name, value) {
  * @param name
  * @param value
  */
-designMode.updateProperty = function(element, name, value) {
+designMode.updateProperty = function(element, name, value, timestamp) {
   // For labels, we need to remember before we change the value if the element was "fitted" around the text or if it was
   // resized by the user. If it was previously fitted, then we will keep it fitted in the typeSpecificPropertyChange
   // method at the end. If it is not a label, then the return value from getPreChangeData will be null and will be
@@ -359,12 +359,18 @@ designMode.updateProperty = function(element, name, value) {
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
+      var cacheBustSuffix = '';
+      if (timestamp) {
+        cacheBustSuffix = `?t=${new Date(timestamp).valueOf()}`;
+      }
 
       if (ICON_PREFIX_REGEX.test(value)) {
         element.src = assetPrefix.renderIconToString(value, element);
       } else {
         element.src =
-          value === '' ? '/blockly/media/1x1.gif' : assetPrefix.fixPath(value);
+          value === ''
+            ? '/blockly/media/1x1.gif'
+            : `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
       }
       break;
     case 'hidden':
