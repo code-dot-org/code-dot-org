@@ -2738,6 +2738,8 @@ es:
           stages:
             Introduction:
               name: Introducción
+            Debugging in Collector:
+              name: Introducción a la depuración
             Internet:
               name: Internet
             Digital Citizenship:
@@ -3642,8 +3644,12 @@ es:
               name: Internet
             Crowdsourcing:
               name: Colaboración Abierta
+            Access Ability:
+              name: Habilidad de acceso
             Digital Sharing:
               name: Compartir digital
+            Simon Says:
+              name: Simón dice
         express-2019:
           stages:
             Relay Programming:
@@ -3743,6 +3749,8 @@ es:
               name: Pulseras Binarias
             Graphing Data:
               name: Datos de gráfico
+            Powerful Passwords:
+              name: Contraseñas fuertes
         gamelab:
           title: Laboratorio de juego
         coursea-2019:

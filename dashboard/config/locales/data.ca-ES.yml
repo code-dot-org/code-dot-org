@@ -565,6 +565,7 @@ ca:
         mc_congrats_share: Minecraft - Enhorabona
         mc_congrats_no_share: Minecraft - Enhorabona
         CSF_loops_AB: Bucles
+        csd_pair_programming: Programació per parelles
     callout:
       text:
         drag_blocks: Arrossegueu un bloc "mou" i enganxeu-lo sota l'altre bloc

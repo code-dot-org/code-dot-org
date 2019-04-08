@@ -461,6 +461,7 @@ et:
         mc_2018_closing: 'Minecraft: Voyage Aquatic palju õnne'
         hoc_dance_events: Tantsuõhtu - sündmused
         hoc_dance_properties: Tantsuõhtu - omadused
+        csd_pair_programming: Paarisprogrammeerimine
     callout:
       text:
         drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla

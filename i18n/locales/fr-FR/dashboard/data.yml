@@ -479,6 +479,7 @@ fr:
         hoc_dance_congrats: Fête dansante - C'est la fête !
         c_and_c_great_to_create: C'est bien de créer et de jouer équitablement
         c_and_c_digital_sharing: Partage numérique
+        csd_pair_programming: Programmation en Binôme
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

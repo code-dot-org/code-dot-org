@@ -349,7 +349,7 @@ tr:
       4-5 Bee Conditionals 6 (copy 1): Bu mor cicek belki 3, 2, veya bir nektara sahip. Burada if, else-if, else bloklarini olusturmak icin bir biri ile iliskili iki if else bloklari var.
       4-5 Bee Conditionals 6: "Bu çiçekte ne kadar nektar var emin değilim ama 1, 2 veya 3 nektar olduğunu biliyorum. \\r \\r koşullu blok ('eğer' ve/veya ' Eğer/değilse') kullanarak olduğu kadar nektar al. \\r \\r, Nektar miktarı bulmacayı her çalıştırdığınızda değiştirebilir!"
       4-5 Bee Conditionals 7: "Mor çiçeklerde, 2, 3 veya 1 nektar olabilir. \"mor çiçeği kontrol et\" fonksiyonunu kullanarak nektarları toparla."
-      4-5 Bee Conditionals 8: "`check flower make honey` için fonksiyonu yaz. \\r\n\\r\nFonksiyonun, mor çiçeğin 3,2 ve 1 nektara sahip olup olmadığını kontrol etmeli ve bütün nektarları toplamalı.\\r\nSonra ilerle ve bal yap."
+      4-5 Bee Conditionals 8: "'çiçeğe bak bal yap' için fonksiyonu yaz. \\r\n\\r\nYazdığın fonksiyon, mor çiçeğin 1,2 veya 3 nektara sahip olup olmadığını kontrol etmeli ve bütün nektarları toplamalı.\\r\nSonra, ilerle ve bal yap."
       4-5 Bee Conditionals Assessment 1: "**Değerlendirme:** Bu bulut ya bir nektarı olan bir çiçek ya da bir bala ihtiyacı olan bir bal peteği saklıyor..  \\r\n\\r\n`nektar al veya bal yap` fonksiyonunu tamamla, sonra nektar ya da bal toplamak için bu fonksiyonu kullan.. \\r\n"
       4-5 Bee Debugging 1: "Bu bloklar kafamı karıştırıyor.  \\r\n\\r\nDüzeltmeme yardımcı olabilir misin?"
       4-5 Bee Debugging 10: Hataları bul ve düzelt.
@@ -889,8 +889,14 @@ tr:
       CourseD_Dance_Party_11_5: Ördekleri birlikte dans ettirmek için "tüm ördekler" bloğunu kullanın.
       CourseD_Dance_Party_11b: Robota sağ ok tuşuna basarak bir kere "drop" ve yukarı ok tuşuna basarak bir kere "floss" hareketi yaptırın. Elinizden geldiğince hızlı drop-floss yapın!
       CourseD_Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
+      CourseE_HOC 2018 Level_1: Sandıktan sandalı al.
       CourseE_HOC 2018 Level_10: Bu Okyanus Anıtının girişine git.
       CourseE_HOC 2018 Level_11: 'Okyanus Anıtının içinde Prizmarin ile su yolu inşa et.'
+      CourseE_HOC 2018 Level_2: 'İskelenin sonuna git.'
+      CourseE_HOC 2018 Level_3: 'Morina balığına doğru açık denizi geç.'
+      CourseE_HOC 2018 Level_4: Yunusa varmak için döngü kullan.
+      CourseE_HOC 2018 Level_5: Sandığa ulaşmak için gemi enkazını incele.
+      CourseE_HOC 2018 Level_6: Somona ulaşmak için buz boyunca ilerle.
       CourseE_HOC 2018 Level_7a: Sandık bulmak için bu su altı harabelerini araştır.
       CourseE_HOC 2018 Level_9b: 'Hazineye ulaşmak için mercanı yol işaretleri olarak kullan.'
       CourseF_PlayLab_vars1: 'Bu oyunu oynamak için, hiç kod yazmana gerek yok, sadece ''çalıştır''a bas! '
@@ -2863,7 +2869,7 @@ tr:
         Bulutların altında çiçek yada petek olabilir. Eğer/değilse bloğu kullan. Eğer çiçek ise polen topla değilse bal yap (çünkü çiçek değilse petektir).
       grade3_ConditionalsElse_6: "Bu çiçekte ne kadar nektar var emin değilim ama 1, 2 veya 3 nektar olduğunu biliyorum. \\r \\r koşullu blok ('eğer' ve/veya ' Eğer/değilse') kullanarak olduğu kadar nektar al. \\r \\r, Nektar miktarı bulmacayı her çalıştırdığınızda değiştirebilir!"
       grade3_ConditionalsElse_7: "Mor çiçeklerde, 2, 3 veya 1 nektar olabilir. \"mor çiçeği kontrol et\" fonksiyonunu kullanarak nektarları toparla."
-      grade3_ConditionalsElse_8: "`check flower make honey` için fonksiyonu yaz. \\r\n\\r\nFonksiyonun, mor çiçeğin 3,2 ve 1 nektara sahip olup olmadığını kontrol etmeli ve bütün nektarları toplamalı.\\r\nSonra ilerle ve bal yap."
+      grade3_ConditionalsElse_8: "'çiçeğe bak bal yap' için fonksiyonu yaz. \\r\n\\r\nYazdığın fonksiyon, mor çiçeğin 1,2 veya 3 nektara sahip olup olmadığını kontrol etmeli ve bütün nektarları toplamalı.\\r\nSonra, ilerle ve bal yap."
       grade3_ConditionalsElse_9: "**Değerlendirme:** Bu bulut ya bir nektarı olan bir çiçek ya da bir bala ihtiyacı olan bir bal peteği saklıyor..  \\r\n\\r\n`nektar al veya bal yap` fonksiyonunu tamamla, sonra nektar ya da bal toplamak için bu fonksiyonu kullan.. \\r\n"
       grade3_ConditionalsElse_TeacherIDo: |-
         Bulutların altında çiçek yada petek olabilir. Eğer/değilse bloğu kullan. Eğer çiçek ise polen topla değilse bal yap (çünkü çiçek değilse petektir).
@@ -2923,7 +2929,7 @@ tr:
         En az blokla her çiçekten nektar toplayın.
       grade3_RunningFarm_10: Mısır ve marulların hepsini topla sonra kabakları seç.
       grade3_RunningFarm_11a: Mısır ve marulların hepsini topla sonra kabakları seç.
-      grade3_bee_conditionals_new3a: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek ve petek var mı diye herhangi alanı bir kontrol et.
+      grade3_bee_conditionals_new3a: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek veya petek var mı diye herhangi alanı bir kontrol et.
       grade3_bee_conditionals_quantum1: Bulut altında çiçek olup olmadığını kontrol edin. eğer çiçek varsa, nektar alın.
       grade3_bee_conditionals_quantum2: "Yine bulutlar. Bütün bulutlar çiçek içermez. Nektar almadan önce çiçekmi diye kontrol et. "
       grade3_bee_conditionals_quantum4: ''' Eğer Değilse'' bloğu, kullanarak çiçekten nektarı topla ve Peteklere Bal yap.'
@@ -2977,7 +2983,7 @@ tr:
       grade4_artist_parameters_triangles3: 'Bu çizimi tamalayabilirmisin? İpucu: Üçgenin kenarları bir öncekinden 25 piksel daha uzundur. İlk üçgenin kanarları 25 pikseldir.'
       grade4_artist_parameters_triangles4: Bu üçgen çizme fonksiyonu hatalıdır. Bu fonksiyonu düzenleyerek düzeltebilir misin? Sonra kenar uzunluğu 25, 50 ve 75 olan üçgen çizebilir misin?
       grade4_artist_parameters_trianglesx: 'Bu çizimi tamalayabilirmisin? İpucu: Üçgenin kenarları bir öncekinden 25 piksel daha uzundur. İlk üçgenin kanarları 25 pikseldir.'
-      grade4_bee_conditionals_new3a: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek ve petek var mı diye herhangi alanı bir kontrol et.
+      grade4_bee_conditionals_new3a: Bütün nektarı topla veya hepsini bal yap. Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek veya petek var mı diye herhangi alanı bir kontrol et.
       grade4_bee_conditionals_quantum1: Bu bulutun altında ne var? Sadece çiçeklerden nektar topla, fakat önce bulutun altında çiçek var mı kontrol et.
       grade4_bee_conditionals_quantum2: "Yine bulutlar. Bütün bulutlar çiçek içermez. Nektar almadan önce çiçekmi diye kontrol et. "
       grade4_bee_conditionals_quantum4: Bazen bulut çiçeği saklar bazende peteği. Eğer/değilse bloğu kullanarak çiçek ise nektar al değilse bal yap( bu durumda petektir).

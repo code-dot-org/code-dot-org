@@ -669,6 +669,7 @@ hu:
         CSF_Spritelab_MakeSprite_CDEF: Hogyan készíts sprite-ot a Sprite laborban
         hoc_dance_warmup: Táncos buli - Bemelegítés
         hoc_dance_congrats: Táncos buli - Indul a party!
+        csd_pair_programming: Páros programozás
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá

@@ -220,6 +220,18 @@ Don't be intimidated; almost half the teachers in our Professional Learning prog
 
 <div style="clear: both;"></div>
 
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/codeorg/status/1114173393715302400" target="_blank"><img src="/images/statistics/fit-250/teachers-enjoy-PD.png"></a>
+
+<br>
+
+Teachers shouldn’t have to teach computer science alone—professional learning is critical to creating teacher communities and support networks. <a href="https://code.org/educate/professional-learning">Apply for a workshop in your area here.</a>
+
+</div>
+
+<div style="clear: both;"></div>
+
 <br>
 
 ## Statistics at a glance

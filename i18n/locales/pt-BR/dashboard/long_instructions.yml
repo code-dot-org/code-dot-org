@@ -3127,6 +3127,418 @@ pt-BR:
         * Encontre um conjunto de regras CSS vazio na folha de estilos que possui as regras e estilos para as as palavras.
         * Adicione duas regas, uma para dar a cor ao texto primavera, mostrado anteriormente nessa aula e outra para dar ao texto uma nova fonte, tamanho da fonte ou. decoração
         * Adicione a classe primavera aos elementos de mesmo nome na página HTML.
+      CSD U2 classes spring_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como funciona o código?</strong>
+        </summary>
+        Para que o código funcione, você precisa criar uma classe primavera e adicionar elementos à classe.
+
+        A classe primavera já foi criada na folha de estilos, mas não tem nenhuma regra.
+
+        <pre>.spring {
+        color: rgb(195,230,255);
+        }</pre>
+
+        Veja as regras da classe `inverno` para ter ideias de como fazer as regras para a classe verão.
+
+        Você também precisará adicionar alguns elementos para sua classe primavera dentro do arquivo HTML.
+
+        O código no arquivo HTML que adicionar um elemento `h5` na classe inverno é `<h5 class="winter">`.  Use este padrão para adicionar elementos na classe primavera, também.
+        </details>
+        <details>
+        <summary>
+        <strong>Quais regras podem ser adicionadas ao conjunto de regras da classe?</strong>
+        </summary>
+
+        Um conjuto de regras de classe pode ter as mesmas regras de outros tipos de seletores. Se uma regra não se aplica ao conteúdo da classe (por exemplo, usar `font-size` em um elemento sem texto), então o computador ignorará aquela regra, mas ainda utilizará as aplicáveis.
+        </details>
+        <details>
+        <summary>
+        <strong>Por que o seletor tem um ponto à sua frente?</strong>
+        </summary>
+        Em CSS, um ponto na frente do seletor significa que o seletor é pelo nome da classe. Se não tiver ponto, significa que o seletor é pelo nome da tag HTML.
+        </details>
+        <details>
+        <summary>
+        <strong>Por que um desenvolvedor web usaria classes?</strong>
+        </summary>
+
+        Um desenvolvedor web usa classes quando alguns elementos devem ser estilizados de forma diferente dos outros, mesmo que eles utilizem a mesma tag. Classes também podem ser usadas para atribuir o mesmo estilo à elementos com tags diferentes.
+
+
+        </details>
+        </div>
+
+        # Class Primavera
+
+        Agora que sua classe inverno está pronta, você pode começar as outras estações.
+
+        * Encontre o conjunto de regras CSS vazio na folha de estilos que atribui as palavras da primavera seus estilos.
+        * Adicione duas regras, uma para atribuir ao texto a cor da primavera de sua lição anterior, e outra para dar ao texto uma fonte, tamanho de fonte, ou decoração diferente.
+        * Adicione a classe primavera para os elementos de primavera na página HTML.
+      CSD U2 classes spring_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como funciona o código?</strong>
+        </summary>
+        Para que o código funcione, você precisa criar uma classe primavera e adicionar elementos à classe.
+
+        A classe primavera já foi criada na folha de estilos, mas não tem nenhuma regra.
+
+        <pre>.spring {
+        color: rgb(195,230,255);
+        }</pre>
+
+        Veja as regras da classe `inverno` para ter ideias de como fazer as regras para a classe verão.
+
+        Você também precisará adicionar alguns elementos para sua classe primavera dentro do arquivo HTML.
+
+        O código no arquivo HTML que adicionar um elemento `h5` na classe inverno é `<h5 class="winter">`.  Use este padrão para adicionar elementos na classe primavera, também.
+        </details>
+        <details>
+        <summary>
+        <strong>Quais regras podem ser adicionadas ao conjunto de regras da classe?</strong>
+        </summary>
+
+        Um conjuto de regras de classe pode ter as mesmas regras de outros tipos de seletores. Se uma regra não se aplica ao conteúdo da classe (por exemplo, usar `font-size` em um elemento sem texto), então o computador ignorará aquela regra, mas ainda utilizará as aplicáveis.
+        </details>
+        <details>
+        <summary>
+        <strong>Por que o seletor tem um ponto à sua frente?</strong>
+        </summary>
+        Em CSS, um ponto na frente do seletor significa que o seletor é pelo nome da classe. Se não tiver ponto, significa que o seletor é pelo nome da tag HTML.
+        </details>
+        <details>
+        <summary>
+        <strong>Por que um desenvolvedor web usaria classes?</strong>
+        </summary>
+
+        Um desenvolvedor web usa classes quando alguns elementos devem ser estilizados de forma diferente dos outros, mesmo que eles utilizem a mesma tag. Classes também podem ser usadas para atribuir o mesmo estilo à elementos com tags diferentes.
+
+
+        </details>
+        </div>
+
+        # Class Primavera
+
+        Agora que sua classe inverno está pronta, você pode começar as outras estações.
+
+        * Encontre o conjunto de regras CSS vazio na folha de estilos que atribui as palavras da primavera seus estilos.
+        * Adicione duas regras, uma para atribuir ao texto a cor da primavera de sua lição anterior, e outra para dar ao texto uma fonte, tamanho de fonte, ou decoração diferente.
+        * Adicione a classe primavera para os elementos de primavera na página HTML.
+      CSD U2 classes summer: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como funciona o código?</strong>
+
+        </summary>
+        Para que o código na classe inverno funcione, você precisa criar uma classe inverno e adicionar elementos à classe.
+
+        A classe já foi criada na folha de estilos, com o seguinte código.
+
+        <pre>.winter {
+        color: rgb(195,230,255);
+        }</pre>
+
+        Este código cria uma classe chamada `winter` e faz tudo na class ficar azul inverno, que tem os valores RGB (195,230,255).
+
+        O código que adiciona um elemento `h5` na classe inverno é `<h5 class="winter">`.  Um atributo `class=winter` dentro da tag início adiciona tudo dentro da tag à classe.
+        </details>
+        <details>
+        <summary>
+        <strong>Como criar um novo conjunto de regras?</strong>
+
+        </summary>
+        Você pode criar um novo conjunto de regras seguindo os padrões que as classes `winter` e `spring` usaram na folha de estilos.
+        <pre>.winter {
+        color: rgb(195,230,255);
+        }</pre>
+
+        O nome do seletor e os valores das cores serão diferentes, mas o seguinte padrão será sempre o mesmo.
+
+        <pre>.classname {
+        property1: value1;
+        property2: value2;
+        }</pre>
+        </details>
+        <details>
+        <summary>
+        <strong>Por que o seletor tem um ponto à sua frente?</strong>
+
+        </summary>
+        Em CSS, um ponto na frente do seletor significa que o seletor é pelo nome da classe. Se não tiver ponto, significa que o seletor é pelo nome da tag HTML.
+        </details>
+        <details>
+        <summary>
+        <strong>Por que um desenvolvedor web usaria classes?</strong>
+
+        </summary>
+
+        Um desenvolvedor web usa classes quando alguns elementos devem ser estilizados de forma diferente dos outros, mesmo que eles utilizem a mesma tag. Classes também podem ser usadas para atribuir o mesmo estilo à elementos com tags diferentes.
+
+
+        </details>
+        </div>
+
+        # Classes Verão e Outono
+
+        * Dentro da folha de estilos, crie um novo conjunto de regras para a classe "verão".
+        * Adicione uma regra para colocar o texto da classe verão na cor RGB de verão.
+        * Adicione a classe verão para os elementos verão na página HTML.
+        * Faça o mesmo para a classe outono.
+      CSD U2 classes summer_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como funciona o código?</strong>
+        </summary>
+        Para que o código funcione, você precisa criar uma classe inverno e adicionar elementos à classe.
+
+        A classe já foi criada na folha de estilos, com o seguinte código.
+
+        <pre>.winter {
+        color: rgb(195,230,255);
+        }</pre>
+
+        Este código cria uma classe chamada `winter` e faz tudo na class ficar azul inverno, que tem os valores RGB (195,230,255).
+
+        O código que adiciona um elemento `h5` na classe inverno é `<h5 class="winter">`.  Um atributo `class=winter` dentro da tag início adiciona tudo dentro da tag à classe.
+        </details>
+        <details>
+        <summary>
+        <strong>Como criar um novo conjunto de regras?</strong>
+        </summary>
+
+        Você pode criar um novo conjunto de regras seguindo os padrões que as classes `winter` e `spring` usaram na folha de estilos.
+        <pre>.winter {
+        color: rgb(195,230,255);
+        }</pre>
+
+        O nome do seletor e os valores das cores serão diferentes, mas o seguinte padrão será sempre o mesmo.
+
+        <pre>.classname {
+        property1: value1;
+        property2: value2;
+        }</pre>
+        </details>
+        <details>
+        <summary>
+        <strong>Por que o seletor tem um ponto à sua frente?</strong>
+        </summary>
+        Em CSS, um ponto na frente do seletor significa que o seletor é pelo nome da classe. Se não tiver ponto, significa que o seletor é pelo nome da tag HTML.
+        </details>
+        <details>
+        <summary>
+        <strong>Por que um desenvolvedor web usaria classes?</strong>
+        </summary>
+
+        Um desenvolvedor web usa classes quando alguns elementos devem ser estilizados de forma diferente dos outros, mesmo que eles utilizem a mesma tag. Classes também podem ser usadas para atribuir o mesmo estilo à elementos com tags diferentes.
+
+
+        </details>
+        </div>
+
+        # Classes Verão e Outono
+
+        * Dentro da folha de estilos, crie um novo conjunto de regras para a classe "verão".
+        * Adicione uma regra para colocar o texto da classe verão na cor RGB de verão.
+        * Adicione a classe verão para os elementos verão na página HTML.
+        * Faça o mesmo para a classe outono.	
+      CSD U2 classes summer_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como funciona o código?</strong>
+        </summary>
+        Para que o código funcione, você precisa criar uma classe inverno e adicionar elementos à classe.
+
+        A classe já foi criada na folha de estilos, com o seguinte código.
+
+        <pre>.winter {
+        color: rgb(195,230,255);
+        }</pre>
+
+        Este código cria uma classe chamada `winter` e faz tudo na class ficar azul inverno, que tem os valores RGB (195,230,255).
+
+        O código que adiciona um elemento `h5` na classe inverno é `<h5 class="winter">`.  Um atributo `class=winter` dentro da tag início adiciona tudo dentro da tag à classe.
+        </details>
+        <details>
+        <summary>
+        <strong>Como criar um novo conjunto de regras?</strong>
+        </summary>
+
+        Você pode criar um novo conjunto de regras seguindo os padrões que as classes `winter` e `spring` usaram na folha de estilos.
+        <pre>.winter {
+        color: rgb(195,230,255);
+        }</pre>
+
+        O nome do seletor e os valores das cores serão diferentes, mas o seguinte padrão será sempre o mesmo.
+
+        <pre>.classname {
+        property1: value1;
+        property2: value2;
+        }</pre>
+        </details>
+        <details>
+        <summary>
+        <strong>Por que o seletor tem um ponto à sua frente?</strong>
+        </summary>
+        Em CSS, um ponto na frente do seletor significa que o seletor é pelo nome da classe. Se não tiver ponto, significa que o seletor é pelo nome da tag HTML.
+        </details>
+        <details>
+        <summary>
+        <strong>Por que um desenvolvedor web usaria classes?</strong>
+        </summary>
+
+        Um desenvolvedor web usa classes quando alguns elementos devem ser estilizados de forma diferente dos outros, mesmo que eles utilizem a mesma tag. Classes também podem ser usadas para atribuir o mesmo estilo à elementos com tags diferentes.
+
+
+        </details>
+        </div>
+
+        # Classes Verão e Outono
+
+        * Dentro da folha de estilos, crie um novo conjunto de regras para a classe "verão".
+        * Adicione uma regra para colocar o texto da classe verão na cor RGB de verão.
+        * Adicione a classe verão para os elementos verão na página HTML.
+        * Faça o mesmo para a classe outono.	
+      CSD U2 commenting: |-
+        # Comentários
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>O que é um espaço em branco?</strong></summary>
+
+        Espaço em branco se refere aos caracteres que aparecem como um espaço vazio na tela, tais quais um espaço, uma tabulação, ou uma nova linha. Espaço em branco ajuda a separar diferentes partes do documento tornando este fácil de ler. Por exemplo, no código HTML novos elementos são geralmente colocados em uma nova linha, mesmo que isto não faça diferença na forma como a página será mostrada.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é identação?</strong>
+        </summary>
+        Identação é o posicionamento do texto mais para a direita, ou esquerda, para separar ele do texto que o envolve. A identação ajuda na convenção da estrutura do programa. Em HTML, elementos que estão dentro de outros elementos são geralmente identados. Aqui está um exemplo:
+        <pre>
+        &lt;body&gt;
+        &lt;p&gt;Este parágrafo está dentro do elemento "body".&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+        </details>
+        <details>
+        <summary>
+        <strong>O que é formatação?</strong>
+        </summary>
+
+        Formatação é o arranjo do texto de forma que o torne fácil de entender. o HTML é geralmente formatado usando-se identação. Isto significa que os elementos que estão dentro de outros elementos são posicionados mais para a direita no código. Veja um exemplo:
+        <pre>
+        &lt;body&gt;
+        &lt;p&gtEste parágrafo está dentro do elemento "body".&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+
+
+        </details>
+        </div>
+
+        Você pode adicionar **comentários** ao seu código para explicar as diferentes partes do código e o que ele deveria criar. Comentários podem ajudar com a depuraração, e também para que outras pessoas entendam seu código.
+
+        <pre>
+        &lt;!-- este é um comentário --&gt;
+        </pre>
+
+        # Faça Isto
+
+        * Veja o código do seu parceiro e encontre os comentários.
+        * Use comentários para ajudar a corrigir bugs no HTML.
+      CSD U2 commenting_2018: |-
+        # Comments
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>O que é um espaço em branco?</strong></summary>
+        Espaço em branco se refere aos caracteres que aparecem como um espaço vazio na tela, tais quais um espaço, uma tabulação, ou uma nova linha. Espaço em branco ajuda a separar diferentes partes do documento tornando este fácil de ler. Por exemplo, no código HTML novos elementos são geralmente colocados em uma nova linha, mesmo que isto não faça diferença na forma como a página será mostrada.
+        </details>
+        <details>
+        <summary><strong>O que é identação?</strong></summary>
+        Identação é o posicionamento do texto mais para a direita, ou esquerda, para separar ele do texto que o envolve. A identação ajuda na convenção da estrutura do programa. Em HTML, elementos que estão dentro de outros elementos são geralmente identados. Aqui está um exemplo:
+        <pre>
+        &lt;body&gt;
+        &lt;p&gt;Este parágrafo está dentro do elemento "body".&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+        </details>
+        <details>
+        <summary><strong>O que é formatação?</strong></summary>
+
+        Formatação é o arranjo do texto de forma que o torne fácil de entender. o HTML é geralmente formatado usando-se identação. Isto significa que os elementos que estão dentro de outros elementos são posicionados mais para a direita no código. Veja um exemplo:
+        <pre>
+        &lt;body&gt;
+        &lt;p&gt;Este parágrafo está dentro do elemento "body".&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+
+
+        </details>
+        </div>
+
+        Você pode adicionar **comentários** ao seu código para explicar as diferentes partes do código e o que ele deveria criar. Comentários podem ajudar com a depuraração, e também para que outras pessoas entendam seu código.
+
+        <pre>
+        &lt;!-- este é um comentário --&gt;
+        </pre>
+
+        # Faça Isto
+
+        * Veja o código do seu parceiro e encontre os comentários.
+        * Use comentários para ajudar a corrigir bugs no HTML.
+      CSD U2 commenting_2019: |-
+        # Comments
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>O que é um espaço em branco?</strong></summary>
+        Espaço em branco se refere aos caracteres que aparecem como um espaço vazio na tela, tais quais um espaço, uma tabulação, ou uma nova linha. Espaço em branco ajuda a separar diferentes partes do documento tornando este fácil de ler. Por exemplo, no código HTML novos elementos são geralmente colocados em uma nova linha, mesmo que isto não faça diferença na forma como a página será mostrada.
+        </details>
+        <details>
+        <summary><strong>O que é identação?</strong></summary>
+        Identação é o posicionamento do texto mais para a direita, ou esquerda, para separar ele do texto que o envolve. A identação ajuda na convenção da estrutura do programa. Em HTML, elementos que estão dentro de outros elementos são geralmente identados. Aqui está um exemplo:
+        <pre>
+        &lt;body&gt;
+        &lt;p&gt;Este parágrafo está dentro do elemento "body".&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+        </details>
+        <details>
+        <summary><strong>O que é formatação?</strong></summary>
+
+        Formatação é o arranjo do texto de forma que o torne fácil de entender. o HTML é geralmente formatado usando-se identação. Isto significa que os elementos que estão dentro de outros elementos são posicionados mais para a direita no código. Veja um exemplo:
+        <pre>
+        &lt;body&gt;
+        &lt;p&gt;Este parágrafo está dentro do elemento "body".&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+
+
+        </details>
+        </div>
+
+        Você pode adicionar **comentários** ao seu código para explicar as diferentes partes do código e o que ele deveria criar. Comentários podem ajudar com a depuraração, e também para que outras pessoas entendam seu código.
+
+        <pre>
+        &lt;!-- este é um comentário --&gt;
+        </pre>
+
+        # Faça Isto
+
+        * Veja o código do seu parceiro e encontre os comentários.
+        * Use comentários para ajudar a corrigir bugs no HTML.
       CSD U2 create page: |+
         Crie e Nomeie sua Nova Página
 
@@ -3135,6 +3547,22 @@ pt-BR:
         # Faça Isso
         * Crie uma nova página HTML a renomeie. (Look at <a href="/s/csd2/stage/6/puzzle/8" target="_new">Lição 6 Nível 8</a> caso você tenha se esquecido como fazer isso.)
         * Repita este processo para quaisquer outras páginas que você queira adicionar.
+      CSD U2 create page_2018: |+
+        # Crie e Nomeie Sua Nova Página
+
+        Antes de começar a codificar, você deve ter certeza que tem todas as páginas necessárias no seu projeto.
+
+        # Faça Isto
+        * Crie uma nova página HTML e renomeie ela. (Veja <a href="../../../stage/6/puzzle/8" target="_new">Lição 6 Nível 8</a> se você esqueceu como.)
+        * Repita este processo para quaisquer outras páginas que você deseja adicionar.
+      CSD U2 create page_2019: |+
+        # Crie e Nomeie Sua Nova Página
+
+        Antes de começar a codificar, você deve ter certeza que tem todas as páginas necessárias no seu projeto.
+
+        # Faça Isto
+        * Crie uma nova página HTML e renomeie ela. (Veja <a href="../../../stage/6/puzzle/8" target="_new">Lição 6 Nível 8</a> se você esqueceu como.)
+        * Repita este processo para quaisquer outras páginas que você deseja adicionar.
       CSD U2 debug comments: |-
         # Depuração
 
@@ -3151,6 +3579,741 @@ pt-BR:
 
         * Localize e corrija todos os bugs no HTML inicial
         * Você saberá que todos os problemas foram encontrados quando sua pãgina estiver equivalente à <a href="https://thimbleprojects.org/danimcavoy/103295/" target="_blank"> Página Alvo</a>.
+      CSD U2 header footer: |-
+        # Barra de Navegação e Rodapé
+
+        Cada uma das suas páginas precisa de uma barra de navegação e um rodapé.
+
+        # Faça isso
+        * Para cada página, certifique-se de que tem uma barra de navegação que se liga a outras páginas no seu site. Para uma revisão da barra de navegação, vá para <a href="/s/csd2/stage/9/puzzle/4" target="_new">Lições no nível 9</a>.
+        * Para cada página, certifique-se de que tem um rodapé no final que explica as informações de direitos autorais da sua página. (Vá para <a href="https://creativecommons.org/choose/" target="_new">Creative Commons</a> para ajudar na criação deste HTML.)
+      CSD U2 header footer_2018: |-
+        # Navegação barra e rodapé
+
+        cada uma das suas páginas precisa de uma barra de navegação e um rodapé.
+
+        # Faça isso
+        * Para cada página, certifique-se que tem uma barra de navegação que ligue outras páginas do seu site.  Para uma revisão da barra de navegação, vá para <a href="4" target="_new">Lição 9 Nível 4</a>.
+        * para cada página, certifique-se de que tem um rodapé na parte inferior que explica as informações de direitos autorais para sua página. (Vá para <a href="https://creativecommons.org/choose/" target="_new">Creative Commons</a> para ter ajuda na criação deste HTML.)
+      CSD U2 header footer_2019: |-
+        # Navegação barra e rodapé
+
+        cada uma das suas páginas precisa de uma barra de navegação e um rodapé.
+
+        # Faça isso
+        * Para cada página, certifique-se que tem uma barra de navegação que ligue outras páginas do seu site.  Para uma revisão da barra de navegação, vá para <a href="4" target="_new">Lição 9 Nível 4</a>.
+        * para cada página, certifique-se de que tem um rodapé na parte inferior que explica as informações de direitos autorais para sua página. (Vá para <a href="https://creativecommons.org/choose/" target="_new">Creative Commons</a> para ter ajuda na criação deste HTML.)
+      CSD U2 image tag: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary>\n\n**Como faço para adicionar imagens?**\n\n</summary>\na tag '<img>' permite visualizar imagens em sua página web.  exemplo de <br><br>\n\n:\n<pre>&lt;img src=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\n\nPara dizer ao browser qual arquivo usar, informações extras, um **atributo** é adicionado na tag &lt;img&gt; dentro dos colchetes. O atributo 'src' significa **s**ou**rc**e (fonte) e define o nome da imagem. Nomes de arquivos de imagem incluem extensões que dizem ao computador qual o tipo de imagem está sendo usada. Extensões comuns são. jpg,. jpeg,. png. <br><br>\n\nAlém do atributo src, elementos de imagem também tem o atributo 'alt' que descreva a imagem. Isto é importante, no caso a imagem não carregar ou para pessoas que têm problemas com de visão. <br><br>\n\nA tag '<img>' é um exemplo de um **elemento void** porque ele inicia e fecha em uma tag. Para fazer isso colocamos o '/' que normalmente vai no fim da tag de imagem.\n</details>\n<details>\n<summary>\n\n**O que é uma tag void?**\n\n</summary>\n'A tag <img>' é um exemplo de um **elementos void** porque ele inicia e fecha em uma tag . Para fazer isso colocamos o '/' que normalmente vai no fim da tag de imagem. Tags void não precisa de uma tag de fechamento porque não há nenhum conteúdo de texto que pode ser colocado dentro delas. O conteúdo que aparece na tela é definido através dos atributos desse tipo de tags.\n</details>\n<details>\n<summary>\n\n**Por uma tag de imagem não tem fechamento?**\n\n</summary>\nUma tag de imagem é uma tag void e tags void não precisa de fechamento porque não há nenhum conteúdo de texto que deve ser colocado nessas tags. O conteúdo que aparece na tela é definido através dos atributos das tags.\n</details>\n<details>\n<summary>\n\n**O que é um atributo?**\n\n</summary>\n\nAtributos são informações extras incluídas em uma tag. Atributos têm nomes e valores. O nome diz que tipo de informação está sendo fornecido e em seguida, o valor para o atributo em questão.\n\nPor exemplo, tags &lt;img&gt; tem dois atributos, src e alt. src especifica o nome do arquivo de imagem e alt informa ao navegador em texto legível o que é a imagem.\n\n\n</details>\n</div>\n\n# imagens\n\nComeçamos uma página web Cachorro vs Gato para você. A imagem do cão já foi adicionada em baixo a página da web. Use uma tag de imagem para adicionar a imagem de cat.jpeg na página embaixo do cabeçalho do gato."
+      CSD U2 images intro: "# Imagens\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary>\n\n**Como faço para adicionar imagens?**\n\n</summary>\nA tag '<img>' te permite visualizar imagens na sua página web. <br><br>\n\nExemplo:\n<pre>&lt;img src=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\n\nPara dizer ao browser qual arquivo para usar, adicionamos informações extras em algo chamado de **atributo**, é adicionado na tag &lt;img&gt; dentro dos colchetes. O atributo 'src' significa **s**ou**rc**e e identifica o nome da imagem. Nomes de arquivos de imagem incluem extensões que dizer ao computador qual o tipo de imagem está sendo usada. Extensões comuns são. jpg,. jpeg,. png. <br><br>\n\nAlém do atributo src, elementos de imagem também tem o atributo 'alt' que descreva a imagem. Isto é importante, no caso a imagem não carregar ou para pessoas que têm problemas com a visão. <br><br>\n\nA tag '<img>' é um exemplo de um **elemento void** porque ele inicia e fecha em uma tag. Para fechar colocamos o '/' que normalmente vai perto do fechamento da tag imagem.\n</details>\n<details>\n<summary>\n\n**O que é uma tag void?**\n\n</summary>\nA tag '<img>' é um exemplo de um **elemento void** porque ela inicia e fecha em uma tag . Para marcar este colocamos o '/' que normalmente vai perto do fechamento da tag imagem. Tags void não precisam de uma marca de fechamento porque não há nenhum conteúdo de texto que pode ser colocado dentro O conteúdo que aparece na tela é especificado através de atributos de tags.\n</details>\n<details>\n<summary>\n\n**Por uma tag de imagem não tem uma tag de fechamento?**\n\n</summary>\nUma tag de imagem é uma tag void e tag void não precisam de uma tag de fechamento porque não há nenhum conteúdo de texto dentro delas. O conteúdo que aparece na tela é definido através de atributos de tags.\n</details>\n<details>\n<summary>\n\n**O que é um atributo?**\n\n</summary>\n\nAtributos são informações extras incluídas em um tag. Atributos têm nomes e valores. O nome diz que tipo de informação está sendo fornecido e em seguida, o valor daquele atributo.\n\nPor exemplo, etiquetas de &lt;img&gt; tem dois atributos, src e alt. src especifica o nome do arquivo de imagem e alt informa ao navegador em texto legível o que é a imagem.\n\n\n</details>\n</div>\n\nA página da receita ficaria muito melhor com uma foto do scotcheroos , então nós adicionamos uma nessa página.  Mas talvez ficasse melhor em outro lugar da página.\n\n# Faça isso\n* Olha para a lista de arquivos no lado esquerdo do seu espaço de trabalho e encontre o arquivo chamado \"scotcheroos.jpeg\"\n* Use a ferramenta do inspecionar para encontrar o código que fez com que a imagem aparecesse na página.\n* Certifique-se de que você e seu parceiro concordam em como funciona a tag de imagem.\n* Tente mover as imagens para o topo da página."
+      CSD U2 layout style bgcolor: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Como o código funciona?</strong></summary>
+
+        Aqui está o código que está deixando o fundo da página azul
+
+        <pre>body {
+        background-color: lightblue;
+        }</pre>
+
+        * 'body' é o _selector_.  Especifica quais os elementos que terá que seguir as regras dentro das chaves, neste caso, o elemento de corpo é a página inteira.
+        * 'background-color: lightblue;' é o que faz a página inteira ficar azul claro.
+        * 'background-color' é o _property_.  Explica qual é a regra, neste caso a cor de fundo.
+        * 'lightblue' é o _value_.  Explica como deve ser aplicada a regra, neste caso, fazendo com que a luz de fundo seja azul.
+        </details>
+        <details>
+        <summary><strong>Quais as cores que posso usar no CSS?</strong></summary>
+
+        CSS inclui nomes mais comuns de cor (red, blue, green, etc.) e muitos outros incomuns.  Você pode ver uma lista completa dos nomes de cor CSS em <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - Nomes de Cores HTML</a>.  Você ainda pode usar as cores que não estão incluídas na lista, mas você vai precisar usar seus valores RGB.  Você pode ler mais sobre como usar as cores no CSS em <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - Valores de Cor CSS</a>
+        </details>
+        <details>
+        <summary><strong>O que a propriedade 'background-color' faz?</strong></summary>
+
+        A propriedade 'background-color' determina a cor de fundo de um elemento.  Você pode ler mais sobre a propriedade em <a href="http://www.w3schools.com/cssref/pr_background-color.asp">W3Schools - CSS 
+        propriedade background-color</a>
+        </details>
+        <details>
+        <summary><strong>E se um elemento dentro da página tem uma cor de fundo diferente da o corpo?</strong></summary>
+
+        Você pode ver a resposta a esta pergunta, adicionando uma regra de 'background-color' para a tag 'p'.  Os parágrafos terão a cor de fundo na regra para a tag 'p', e o resto da página vai seguir a regra para a tag 'body'.
+        </details>
+        <details>
+        <summary><strong>O que é uma folha de estilos?</strong></summary>
+
+        uma folha de estilos é um documento que controla como uma página da web será exibida.  Folhas de estilo externas são arquivos separados que estão vinculados à página HTML.
+        </details>
+        <details>
+        <summary><strong>O que é CSS?</strong></summary>
+
+        CSS é uma linguagem que controla a maneira como o conteúdo em um site da web aparece.  Ele usa conjuntos de regras para alterar a aparência de uma página.  Cada conjunto de regras tem um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e um valor para essa propriedade.
+
+
+        Aqui está um exemplo de um conjunto de regras que torna o texto em uma tag 'h2' azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        </pre>
+
+        Neste exemplo, 'h2' é o seletor de 'color' e 'font-family' são propriedades e 'blue' e 'cursive' são os valores para essas propriedades.
+
+
+        </details>
+        </div>
+
+        # Background Color
+
+        * Encontre o código na folha de estilo que está fazendo o plano de fundo ficar todo azul claro.
+        * Altera o código para mudar a página para uma cor diferente.
+        * Tente mudar apenas a cor de fundo dos parágrafos.
+      CSD U2 layout style bgcolor_2018: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como o código funciona?</strong>\n</summary>\n\nEsse é o código que faz o fundo da página ficar azul:\n\n<pre>\nbody {\n  background-color: lightblue;\n}\n</pre>\n\n* 'body' é o _selector_.  Especifica quais os elementos teram que seguir as regras dentro das chaves, neste caso, o elemento de corpo é a página inteira.\n* ' background-color: lightblue;' é o que faz a página inteira ficar azul claro.\n  * 'background-color' é o _property_.  Ele explica qual é a regra, neste caso a cor de fundo.\n  * 'lightblue' é o _value_.  Explica como deve ser aplicada a regra, neste caso, fazendo com que a luz de fundo fique azul.\n  \n</details>\n<details>\n<summary>\n<strong>Quais as cores que podemos usar no CSS?</strong>\n</summary>\n\nCSS inclui nomes mais comuns de cor (red, blue, green, etc.) e muitos outros incomuns.  Você pode ver uma lista completa dos nomes de cor CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\" target=\"_new\">W3Schools - Nomes de Cores HTML</a>.  Você ainda pode usar as cores que não estão incluídas nessa lista, mas você vai precisar usar seus valores RGB.  Você pode ler mais sobre como usar as cores através de RGB no CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\" target=\"_new\">W3Schools - Valores de Cor CSS RGB</a>\n\n</details>\n<details>\n<summary>\n<strong>O que a propriedade background-color faz?</strong>\n</summary>\n\nA propriedade 'background-color' determina a cor de fundo de um elemento.  Você pode ler mais sobre a propriedade em <a href=\"http://www.w3schools.com/cssref/pr_background-color.asp\" target=\"_new\">W3Schools - CSS propriedade background-color</a>\n\n</details>\n<details>\n<summary>\n<strong>E se um elemento dentro do página tem uma cor de fundo diferente do corpo?</strong>\n</summary>\n\nVocê pode ver a resposta a esta pergunta, adicionando uma regra de 'background-color' para a tag 'p'.  Os parágrafos terão a cor de fundo na tag 'p', e o resto da página vai seguir a regra para a tag 'corpo'.\n\n</details>\n<details>\n<summary>\n<strong>O que é uma folha de estilos?</strong>\n</summary>\n\nUma folha de estilos é um documento que controla como uma página da web será exibida.  Folhas de estilo externas são arquivos separados que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O que é CSS?</strong>\n</summary>\n\nCSS é uma linguagem que controla a maneira como o conteúdo em um website aparece.  Ele usa conjuntos de regras para alterar a aparência de uma página.  Cada conjunto de regras tem um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e um valor para essa propriedade.\n\n\nAqui está um exemplo de um conjunto de regras que torna o texto em uma tag 'h2' azul e cursivo:\n\n<pre>\nh2 {\n  color: blue;\n  font-family: cursive;\n}\n</pre>\n\nNeste exemplo, 'h2' é o seletor, 'color' e 'font-family' são propriedades e 'blue' e 'cursive' são os valores para essas propriedades.\n\n\n</details>\n</div>\n\n# Background Color\n\n* Encontre o código na folha de estilo que está fazendo o plano de fundo da luz página inteira azul.\n* Altere o código para tornar a página uma cor diferente.\n* Tente mudar a cor de fundo apenas dos parágrafos."
+      CSD U2 layout style bgcolor_2019: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como o código funciona?</strong>\n</summary>\n\nEsse é o código que faz o fundo da página ficar azul:\n\n<pre>\nbody {\n  background-color: lightblue;\n}\n</pre>\n\n* 'body' é o _selector_.  Especifica quais os elementos teram que seguir as regras dentro das chaves, neste caso, o elemento de corpo é a página inteira.\n* ' background-color: lightblue;' é o que faz a página inteira ficar azul claro.\n  * 'background-color' é o _property_.  Ele explica qual é a regra, neste caso a cor de fundo.\n  * 'lightblue' é o _value_.  Explica como deve ser aplicada a regra, neste caso, fazendo com que a luz de fundo fique azul.\n  \n</details>\n<details>\n<summary>\n<strong>Quais as cores que podemos usar no CSS?</strong>\n</summary>\n\nCSS inclui nomes mais comuns de cor (red, blue, green, etc.) e muitos outros incomuns.  Você pode ver uma lista completa dos nomes de cor CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\" target=\"_new\">W3Schools - Nomes de Cores HTML</a>.  Você ainda pode usar as cores que não estão incluídas nessa lista, mas você vai precisar usar seus valores RGB.  Você pode ler mais sobre como usar as cores através de RGB no CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\" target=\"_new\">W3Schools - Valores de Cor CSS RGB</a>\n\n</details>\n<details>\n<summary>\n<strong>O que a propriedade background-color faz?</strong>\n</summary>\n\nA propriedade 'background-color' determina a cor de fundo de um elemento.  Você pode ler mais sobre a propriedade em <a href=\"http://www.w3schools.com/cssref/pr_background-color.asp\" target=\"_new\">W3Schools - CSS propriedade background-color</a>\n\n</details>\n<details>\n<summary>\n<strong>E se um elemento dentro do página tem uma cor de fundo diferente do corpo?</strong>\n</summary>\n\nVocê pode ver a resposta a esta pergunta, adicionando uma regra de 'background-color' para a tag 'p'.  Os parágrafos terão a cor de fundo na tag 'p', e o resto da página vai seguir a regra para a tag 'corpo'.\n\n</details>\n<details>\n<summary>\n<strong>O que é uma folha de estilos?</strong>\n</summary>\n\nUma folha de estilos é um documento que controla como uma página da web será exibida.  Folhas de estilo externas são arquivos separados que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O que é CSS?</strong>\n</summary>\n\nCSS é uma linguagem que controla a maneira como o conteúdo em um website aparece.  Ele usa conjuntos de regras para alterar a aparência de uma página.  Cada conjunto de regras tem um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e um valor para essa propriedade.\n\n\nAqui está um exemplo de um conjunto de regras que torna o texto em uma tag 'h2' azul e cursivo:\n\n<pre>\nh2 {\n  color: blue;\n  font-family: cursive;\n}\n</pre>\n\nNeste exemplo, 'h2' é o seletor, 'color' e 'font-family' são propriedades e 'blue' e 'cursive' são os valores para essas propriedades.\n\n\n</details>\n</div>\n\n# Background Color\n\n* Encontre o código na folha de estilo que está fazendo o plano de fundo da luz página inteira azul.\n* Altere o código para tornar a página uma cor diferente.\n* Tente mudar a cor de fundo apenas dos parágrafos."
+      CSD U2 layout style body: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary><strong>O que o seletor `body` faz?</strong></summary>
+
+        Como o conteúdo da página web está completamente inserido dentro da tag `body`, o seletor body provê as regras de estivo para tudo o que estiver na página.
+        </details>
+        <details>
+        <summary><strong>O que a propriedade `color` faz?</strong></summary>
+
+        A propriedade `color` define a cor do texto. Se não houver texto, então ela não fará nada. Leia mais em <a href="http://www.w3schools.com/cssref/pr_text_color.asp">W3Schools - CSS color Property</a>
+        </details>
+        <details>
+        <summary><strong>O que faz a propriedade `text-align`?</strong></summary>
+
+        A propriedade `text-align` alinha o texto à esquerda, à direita, ou ao centro. Você pode ler mais em <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align Property</a>
+        </details>
+        <details>
+        <summary><strong>O que faz a propriedade `text-decoration`?</strong></summary>
+
+        A propriedade `text-decoration` coloca uma linha sobre, abaixo, ou ao meio de um trecho de texto. Você pode ler sobre esta propriedade em <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration Property</a>
+        </details>
+        <details>
+        <summary><strong>O que faz a propriedade `font-family`?</strong></summary>
+
+        A propriedade `font-family` altera a fonte tipográfica do texto. Ela fornece uma descrição geral do tipo de fonte que deve ser usado, mas cada browser poderá exibir a fonte de um modo um pouco diferente. Leia mais em <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp">W3Schools - CSS font-family Property</a>
+        </details>
+        <details>
+        <summary><strong>O que faz a propriedade `font-size`?</strong></summary>
+
+        A propriedade `font-size` altera o tamanho do texto. Você pode usar termos genéricos, como `small` (pequeno), `medium` (médio), e `large` (grande), ou você pode especificar o tamanho exato em pixels, como em `20px`. Leia mais em <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp">W3Schools - CSS font-size Property</a>
+        </details>
+        <details>
+        <summary><strong>O que é uma folha de estilos?</strong></summary>
+
+        Uma folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados que são vinculados à página HTML.
+        </details>
+        <details>
+        <summary><strong>O que é CSS?</strong></summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo é exibido em uma página web. Ele utiliza conjuntos de regras para alterar a aparência da página. Cada conjunto de regras possui um seletor, que especifica quais os elementos na página que serão afetados, e as regras, que explicam como os elementos devem ser exibidos. Cada regra consiste em uma propriedade e um valor para a propriedade.
+
+
+        Aqui está um exemplo de um conjunto de regras que torna um tag `h2` azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        </pre>
+
+        Neste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores destas propriedades.
+
+
+        </details>
+        </div>
+
+        # O Elemento Body
+
+        * Localize na folha de estilos o conjunto de regras para o elemento `body`.
+        * Discuta com um parceiro o que você acha que irá acontecer se você adicionar `text-align`, `color`, ou outras propriedades de texto ao conjunto de regras do `body`.
+        * Experimente com algumas propriedades para verificar suas suposições.
+      CSD U2 layout style body_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>O que o seletor `body` faz?</strong>
+        </summary>
+
+        Como o conteúdo da página web está completamente inserido dentro da tag `body`, o seletor body provê as regras de estivo para tudo o que estiver na página.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que a propriedade `color` faz?</strong>
+        </summary>
+
+        A propriedade `color` define a cor do texto. Se não houver texto, então ela não fará nada. Leia mais em <a href="http://www.w3schools.com/cssref/pr_text_color.asp">W3Schools - CSS color Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que faz a propriedade `text-align`?</strong>
+        </summary>
+
+        A propriedade `text-align` alinha o texto à esquerda, à direita, ou ao centro. Você pode ler mais em <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que faz a propriedade `text-decoration`?</strong>
+        </summary>
+
+        A propriedade `text-decoration` coloca uma linha sobre, abaixo, ou ao meio de um trecho de texto. Você pode ler sobre esta propriedade em <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que faz a propriedade `font-family`?</strong>
+        </summary>
+
+        A propriedade `font-family` altera a fonte tipográfica do texto. Ela fornece uma descrição geral do tipo de fonte que deve ser usado, mas cada browser poderá exibir a fonte de um modo um pouco diferente. Leia mais em <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp">W3Schools - CSS font-family Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que faz a propriedade `font-size`?</strong>
+        </summary>
+
+        A propriedade `font-size` altera o tamanho do texto. Você pode usar termos genéricos, como `small` (pequeno), `medium` (médio), e `large` (grande), ou você pode especificar o tamanho exato em pixels, como em `20px`. Leia mais em <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp">W3Schools - CSS font-size Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma folha de estilos?</strong>
+        </summary>
+
+        Uma folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados que são vinculados à página HTML.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é CSS?</strong>
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo é exibido em uma página web. Ele utiliza conjuntos de regras para alterar a aparência da página. Cada conjunto de regras possui um seletor, que especifica quais os elementos na página que serão afetados, e as regras, que explicam como os elementos devem ser exibidos. Cada regra consiste em uma propriedade e um valor para a propriedade.
+
+
+        Aqui está um exemplo de um conjunto de regras que torna um tag `h2` azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        </pre>
+
+        Neste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores destas propriedades.
+
+
+        </details>
+        </div>
+
+        # O Elemento Body
+
+        * Localize na folha de estilos o conjunto de regras para o elemento `body`.
+        * Discuta com um parceiro o que você acha que irá acontecer se você adicionar `text-align`, `color`, ou outras propriedades de texto ao conjunto de regras do `body`.
+        * Experimente com algumas propriedades para verificar suas suposições.
+      CSD U2 layout style body_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>O que o seletor `body` faz?</strong>
+        </summary>
+
+        Como o conteúdo da página web está completamente inserido dentro da tag `body`, o seletor body provê as regras de estivo para tudo o que estiver na página.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que a propriedade `color` faz?</strong>
+        </summary>
+
+        A propriedade `color` define a cor do texto. Se não houver texto, então ela não fará nada. Leia mais em <a href="http://www.w3schools.com/cssref/pr_text_color.asp">W3Schools - CSS color Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que faz a propriedade `text-align`?</strong>
+        </summary>
+
+        A propriedade `text-align` alinha o texto à esquerda, à direita, ou ao centro. Você pode ler mais em <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que faz a propriedade `text-decoration`?</strong>
+        </summary>
+
+        A propriedade `text-decoration` coloca uma linha sobre, abaixo, ou ao meio de um trecho de texto. Você pode ler sobre esta propriedade em <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que faz a propriedade `font-family`?</strong>
+        </summary>
+
+        A propriedade `font-family` altera a fonte tipográfica do texto. Ela fornece uma descrição geral do tipo de fonte que deve ser usado, mas cada browser poderá exibir a fonte de um modo um pouco diferente. Leia mais em <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp">W3Schools - CSS font-family Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que faz a propriedade `font-size`?</strong>
+        </summary>
+
+        A propriedade `font-size` altera o tamanho do texto. Você pode usar termos genéricos, como `small` (pequeno), `medium` (médio), e `large` (grande), ou você pode especificar o tamanho exato em pixels, como em `20px`. Leia mais em <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp">W3Schools - CSS font-size Property</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma folha de estilos?</strong>
+        </summary>
+
+        Uma folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados que são vinculados à página HTML.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é CSS?</strong>
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo é exibido em uma página web. Ele utiliza conjuntos de regras para alterar a aparência da página. Cada conjunto de regras possui um seletor, que especifica quais os elementos na página que serão afetados, e as regras, que explicam como os elementos devem ser exibidos. Cada regra consiste em uma propriedade e um valor para a propriedade.
+
+
+        Aqui está um exemplo de um conjunto de regras que torna um tag `h2` azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        </pre>
+
+        Neste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores destas propriedades.
+
+
+        </details>
+        </div>
+
+        # O Elemento Body
+
+        * Localize na folha de estilos o conjunto de regras para o elemento `body`.
+        * Discuta com um parceiro o que você acha que irá acontecer se você adicionar `text-align`, `color`, ou outras propriedades de texto ao conjunto de regras do `body`.
+        * Experimente com algumas propriedades para verificar suas suposições.
+      CSD U2 layout style border: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Quais cores posso usar em CSS?</strong></summary>
+
+        CSS inclui nomes mais comuns de cor (red, blue, green, etc.) e muitos outros incomuns. Você pode ver uma lista completa dos nomes de cor CSS em <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - Nomes de cores HTML</a>. Você ainda pode usar as cores que não estão incluídas na lista de nomeados, mas você vai precisar usar seus valores RGB. Você pode ler mais sobre como usar as cores no CSS em <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - Valores de Cores CSS</a>
+        </details>
+        <details>
+        <summary><strong>Como o código funciona?</strong></summary>
+
+        Aqui está o código que está fazendo as bordas da imagem:
+
+        <pre>img {
+        border-color: saddlebrown;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 10px;
+        }</pre>
+
+        * 'img' é o _selector_.  Especifica quais os elementos que terá que seguir as regras dentro das chaves, neste caso, as imagens.
+        * `border-color: saddlebrown;`,`border-width: 4px;`,`border-style: solid;`, and `border-radius: 10px;` são as regras que fazem a borda.
+        </details>
+        <details>
+        <summary><strong>O que a propriedade <code>border-style</code> faz?</strong></summary>
+
+        A propriedade 'border-style' determina que tipo de borda (solid, dotted, etc.) o elemento tem. Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS propriedade border-style</a>
+        </details>
+        <details>
+        <summary><strong>O que a propriedade <code>border-radius</code> faz?</strong></summary>
+
+        A propriedade 'border-radius' determina o raio das curvas nos cantos do elemento.  Um raio maior faz uma curva maior, mais suave, e um menor raio faz uma curva menor, mais nítida.  Um raio de zero faz com que um canto regular. Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 propriedade border-radius</a>
+        </details>
+        <details>
+        <summary><strong>O que a propridade <code>float</code> faz?</strong></summary>
+
+        A propriedade 'float' faz com que um elemento "flutue", que significa que os elementos que vêm depois de tudo fluir em torno dele.  Se o valor de 'float' é 'esquerdo', o elemento flutuará para a esquerda e os elementos depois apareceram à sua direita.  Se o valor de 'float' é 'right', o elemento irá flutuar para a direita e os elementos depois apareceram à sua esquerda.  Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS propriedade float</a>
+
+
+        </details>
+        </div>
+
+        # Bordas
+
+        * Localize as regras na folha de estilo a parte que define a cor da borda da imagem e a largura.
+        * Mude a cor e a largura das suas bordas.
+        * Experimente alguns estilos de borda diferente.
+        * Escolha entre `dotted`, `dashed`, `solid`, and `double`
+        * Coloque uma borda em outro tipo de elemento de página, como dentre os títulos ou parágrafos.
+      CSD U2 layout style border_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Quais cores posso usar em CSS?</strong></summary>
+
+        CSS inclui nomes mais comuns de cor (red, blue, green, etc.) e muitos outros incomuns. Você pode ver uma lista completa dos nomes de cor CSS em <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - Nomes de cores HTML</a>. Você ainda pode usar as cores que não estão incluídas na lista de nomeados, mas você vai precisar usar seus valores RGB. Você pode ler mais sobre como usar as cores no CSS em <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - Valores de Cores CSS</a>
+        </details>
+        <details>
+        <summary><strong>Como o código funciona?</strong></summary>
+
+        Aqui está o código que está fazendo as bordas da imagem:
+
+        <pre>img {
+        border-color: saddlebrown;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 10px;
+        }</pre>
+
+        * 'img' é o _selector_.  Especifica quais os elementos que terá que seguir as regras dentro das chaves, neste caso, as imagens.
+        * `border-color: saddlebrown;`,`border-width: 4px;`,`border-style: solid;`, and `border-radius: 10px;` são as regras que fazem a borda.
+        </details>
+        <details>
+        <summary><strong>O que a propriedade <code>border-style</code> faz?</strong></summary>
+
+        A propriedade 'border-style' determina que tipo de borda (solid, dotted, etc.) o elemento tem. Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS propriedade border-style</a>
+        </details>
+        <details>
+        <summary><strong>O que a propriedade <code>border-radius</code> faz?</strong></summary>
+
+        A propriedade 'border-radius' determina o raio das curvas nos cantos do elemento.  Um raio maior faz uma curva maior, mais suave, e um menor raio faz uma curva menor, mais nítida.  Um raio de zero faz com que um canto regular. Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 propriedade border-radius</a>
+        </details>
+        <details>
+        <summary><strong>O que a propriedade <code>float</code> faz?</strong></summary>
+
+        A propriedade 'float' faz com que um elemento "flutue", que significa que os elementos que vêm depois de tudo fluir em torno dele.  Se o valor de 'float' é 'esquerdo', o elemento flutuará para a esquerda e os elementos depois apareceram à sua direita.  Se o valor de 'float' é 'right', o elemento irá flutuar para a direita e os elementos depois apareceram à sua esquerda.  Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS propriedade float</a>
+
+
+        </details>
+        </div>
+
+        # Bordas
+
+        * Localize as regras na folha de estilo a parte que define a cor da borda da imagem e a largura.
+        * Mude a cor e a largura das suas bordas.
+        * Experimente alguns estilos de borda diferente.
+        * Escolha entre `dotted`, `dashed`, `solid`, and `double`
+        * Coloque uma borda em outro tipo de elemento de página, como dentre os títulos ou parágrafos.
+      CSD U2 layout style border_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Quais cores posso usar em CSS?</strong></summary>
+
+        CSS inclui nomes mais comuns de cor (red, blue, green, etc.) e muitos outros incomuns. Você pode ver uma lista completa dos nomes de cor CSS em <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - Nomes de cores HTML</a>. Você ainda pode usar as cores que não estão incluídas na lista de nomeados, mas você vai precisar usar seus valores RGB. Você pode ler mais sobre como usar as cores no CSS em <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - Valores de Cores CSS</a>
+        </details>
+        <details>
+        <summary><strong>Como o código funciona?</strong></summary>
+
+        Aqui está o código que está fazendo as bordas da imagem:
+
+        <pre>img {
+        border-color: saddlebrown;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 10px;
+        }</pre>
+
+        * 'img' é o _selector_.  Especifica quais os elementos que terá que seguir as regras dentro das chaves, neste caso, as imagens.
+        * `border-color: saddlebrown;`,`border-width: 4px;`,`border-style: solid;`, and `border-radius: 10px;` são as regras que fazem a borda.
+        </details>
+        <details>
+        <summary><strong>O que a propriedade <code>border-style</code> faz?</strong></summary>
+
+        A propriedade 'border-style' determina que tipo de borda (solid, dotted, etc.) o elemento tem. Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS propriedade border-style</a>
+        </details>
+        <details>
+        <summary><strong>O que a propriedade <code>border-radius</code> faz?</strong></summary>
+
+        A propriedade 'border-radius' determina o raio das curvas nos cantos do elemento.  Um raio maior faz uma curva maior, mais suave, e um menor raio faz uma curva menor, mais nítida.  Um raio de zero faz com que um canto regular. Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 propriedade border-radius</a>
+        </details>
+        <details>
+        <summary><strong>O que a propriedade <code>float</code> faz?</strong></summary>
+
+        A propriedade 'float' faz com que um elemento "flutue", que significa que os elementos que vêm depois de tudo fluir em torno dele.  Se o valor de 'float' é 'esquerdo', o elemento flutuará para a esquerda e os elementos depois apareceram à sua direita.  Se o valor de 'float' é 'right', o elemento irá flutuar para a direita e os elementos depois apareceram à sua esquerda.  Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS propriedade float</a>
+
+
+        </details>
+        </div>
+
+        # Bordas
+
+        * Localize as regras na folha de estilo a parte que define a cor da borda da imagem e a largura.
+        * Mude a cor e a largura das suas bordas.
+        * Experimente alguns estilos de borda diferente.
+        * Escolha entre `dotted`, `dashed`, `solid`, and `double`
+        * Coloque uma borda em outro tipo de elemento de página, como dentre os títulos ou parágrafos.
+      CSD U2 layout style borderradius: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Como o código funciona?</strong></summary>
+
+        Aqui está o código que está fazendo as bordas da imagem:
+
+        <pre>img {
+        border-color: saddlebrown;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 10px;
+        }</pre>
+
+        * 'img' é o _selector_.  Especifica quais os elementos que terá que seguir as regras dentro das chaves, neste caso, as imagens.
+        * `border-color: saddlebrown;`,`border-width: 4px;`,`border-style: solid;`, and `border-radius: 10px;` são as regras que fazem a borda.
+        </details>
+        <details>
+        <summary><strong>O que a propriedade <code>border-style</code> faz?</strong>
+        </summary>
+
+        A propriedade 'border-style' determina que tipo de borda (solid, dotted, etc.) o elemento tem. Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS propriedade border-style</a>
+        </details>
+        <details>
+        <summary><strong>O que a propriedade <code>border-radius</code> faz?</strong>
+
+        </summary>
+
+        A propriedade 'border-radius' determina o raio das curvas nos cantos do elemento.  Um raio maior faz uma curva maior, mais suave, e um menor raio faz uma curva menor, mais nítida.  Um raio de zero faz com que um canto regular. Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 propriedade border-radius</a>
+        </details>
+        <details>
+        <summary><strong>O que a propriedade <code>float</code> faz?</strong>
+        </summary>
+
+        A propriedade 'float' faz com que um elemento "flutue", que significa que os elementos que vêm depois de tudo fluir em torno dele.  Se o valor de 'float' é 'esquerdo', o elemento flutuará para a esquerda e os elementos depois apareceram à sua direita.  Se o valor de 'float' é 'right', o elemento irá flutuar para a direita e os elementos depois apareceram à sua esquerda.  Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS propriedade float</a>
+
+
+        </details>
+        </div>
+
+        # Border Radius
+
+        * Veja para a propriedade 'border-radius' dentro do seu conjunto de regras dentro de `img`
+        * Discuta com o seu parceiro o que você acha que a propriedade faz.
+        * Experimente valores diferentes para o border-radius e decida qual deles você mais gosta.
+      CSD U2 layout style borderradius_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como o código funciona?</strong>
+        </summary>
+        Esse o código que está fazendo as bordas da imagem:
+
+        <pre>img {
+        border-color: saddlebrown;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 10px;
+        }</pre>
+
+        * 'img' é o _selector_.  Especifica quais os elementos que terá que seguir as regras dentro das chaves, neste caso, as imagens.
+        * `border-color: saddlebrown;`,`border-width: 4px;`,`border-style: solid;`, and `border-radius: 10px;` são as regras que fazem a borda.
+        </details>
+        <details>
+        <summary>
+        <strong>O que a propriedade <code>border-style</code> faz?</strong>
+        </summary>
+        A propriedade 'border-style' determina que tipo de borda (solid, dotted, etc.) o elemento tem. Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS propriedade border-style</a>
+        </details>
+        <details>
+        <summary>
+        <summary><strong>O que a propriedade <code>border-radius</code> faz?</strong>
+
+        </summary>
+
+        A propriedade 'border-radius' determina o raio das curvas nos cantos do elemento.  Um raio maior faz uma curva maior, mais suave, e um menor raio faz uma curva menor, mais nítida.  Um raio de zero faz com que um canto regular. Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 propriedade border-radius</a>
+        </details>
+        <details>
+        <summary>
+        <summary><strong>O que a propriedade <code>float</code> faz?</strong>
+        </summary>
+
+        A propriedade 'float' faz com que um elemento "flutue", que significa que os elementos que vêm depois de tudo fluir em torno dele.  Se o valor de 'float' é 'esquerdo', o elemento flutuará para a esquerda e os elementos depois apareceram à sua direita.  Se o valor de 'float' é 'right', o elemento irá flutuar para a direita e os elementos depois apareceram à sua esquerda.  Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS propriedade float</a>
+
+
+        </details>
+        </div>
+
+        # Border Radius
+
+        * Veja para a propriedade 'border-radius' dentro do seu conjunto de regras dentro de `img`
+        * Discuta com o seu parceiro o que você acha que a propriedade faz.
+        * Experimente valores diferentes para o border-radius e decida qual deles você mais gosta.
+      CSD U2 layout style borderradius_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como o código funciona?</strong>
+        </summary>
+        Esse o código que está fazendo as bordas da imagem:
+
+        <pre>img {
+        border-color: saddlebrown;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 10px;
+        }</pre>
+
+        * 'img' é o _selector_.  Especifica quais os elementos que terá que seguir as regras dentro das chaves, neste caso, as imagens.
+        * `border-color: saddlebrown;`,`border-width: 4px;`,`border-style: solid;`, and `border-radius: 10px;` são as regras que fazem a borda.
+        </details>
+        <details>
+        <summary>
+        <strong>O que a propriedade <code>border-style</code> faz?</strong>
+        </summary>
+        A propriedade 'border-style' determina que tipo de borda (solid, dotted, etc.) o elemento tem. Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS propriedade border-style</a>
+        </details>
+        <details>
+        <summary>
+        <summary><strong>O que a propriedade <code>border-radius</code> faz?</strong>
+
+        </summary>
+
+        A propriedade 'border-radius' determina o raio das curvas nos cantos do elemento.  Um raio maior faz uma curva maior, mais suave, e um menor raio faz uma curva menor, mais nítida.  Um raio de zero faz com que um canto regular. Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 propriedade border-radius</a>
+        </details>
+        <details>
+        <summary>
+        <summary><strong>O que a propriedade <code>float</code> faz?</strong>
+        </summary>
+
+        A propriedade 'float' faz com que um elemento "flutue", que significa que os elementos que vêm depois de tudo fluir em torno dele.  Se o valor de 'float' é 'esquerdo', o elemento flutuará para a esquerda e os elementos depois apareceram à sua direita.  Se o valor de 'float' é 'right', o elemento irá flutuar para a direita e os elementos depois apareceram à sua esquerda.  Você pode ler mais sobre essa propriedade em <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS propriedade float</a>
+
+
+        </details>
+        </div>
+
+        # Border Radius
+
+        * Veja para a propriedade 'border-radius' dentro do seu conjunto de regras dentro de `img`
+        * Discuta com o seu parceiro o que você acha que a propriedade faz.
+        * Experimente valores diferentes para o border-radius e decida qual deles você mais gosta.
+      CSD U2 layout style float: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+
+        <details>
+
+        <summary><strong>Como o código funciona?</strong></summary>
+
+        Aqui está o código que está fazendo a imagem flutuar ao lado esquerdo da página:
+
+        <pre>img {
+        float: left;
+        }</pre>
+
+        * `img` é o _seletor_. Ele define quais elementos terão que seguir as regras que estão dentro das chaves, neste caso, as imagens.
+        * `float: left;` é a regra que faz a imagem flutuar à esquerda.
+        </details>
+        <details>
+        <summary><strong>O que faz a propriedade <code>float</code>?</strong></summary>
+
+        A propriedade `float` faz um elemento flutuar, o que significa que todos os elementos que vem depois irão fluir ao redor dele. Se o valor de `float` for `left` (esquerda), o elemento irá flutuar à esquerda, e os próximos elementos serão mostrados à sua direita. Se o valor de `float` for `right` (direita), o elemento irá flutuar à direita, e os elementos que vem depois serão mostrados à sua esquerda. Você pode ler mais sobre esta propriedade em <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+
+
+        </details>
+        </div>
+
+        # Float
+
+        * Repare na propriedade `float` dentro do seu conjunto de regras `img`
+        * Discuta com seu parceiro o que você acha que esta propriedade faz.
+        * Troque o valor de `left` para `right`.
+      CSD U2 layout style float_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+
+        <details>
+
+        <summary>
+        <strong>Como o código funciona?</strong>
+        </summary>
+        Aqui está o código que está fazendo a imagem flutuar ao lado esquerdo da página:
+
+        <pre>img {
+        float: left;
+        }</pre>
+
+        * `img` é o _seletor_. Ele define quais elementos terão que seguir as regras que estão dentro das chaves, neste caso, as imagens.
+        * `float: left;` é a regra que faz a imagem flutuar à esquerda.
+        </details>
+        <details>
+        <summary>
+        <strong>O que faz a propriedade <code>float</code>?
+
+        </strong>
+        </summary>
+
+        A propriedade `float` faz um elemento flutuar, o que significa que todos os elementos que vem depois irão fluir ao redor dele. Se o valor de `float` for `left` (esquerda), o elemento irá flutuar à esquerda, e os próximos elementos serão mostrados à sua direita. Se o valor de `float` for `right` (direita), o elemento irá flutuar à direita, e os elementos que vem depois serão mostrados à sua esquerda. Você pode ler mais sobre esta propriedade em <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+
+
+        </details>
+        </div>
+
+        # Float
+
+        * Repare na propriedade `float` dentro do seu conjunto de regras `img`
+        * Discuta com seu parceiro o que você acha que esta propriedade faz.
+        * Troque o valor de `left` para `right`.
+      CSD U2 layout style float_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+
+        <details>
+
+        <summary>
+        <strong>Como o código funciona?</strong>
+        </summary>
+        Aqui está o código que está fazendo a imagem flutuar ao lado esquerdo da página:
+
+        <pre>img {
+        float: left;
+        }</pre>
+
+        * `img` é o _seletor_. Ele define quais elementos terão que seguir as regras que estão dentro das chaves, neste caso, as imagens.
+        * `float: left;` é a regra que faz a imagem flutuar à esquerda.
+        </details>
+        <details>
+        <summary>
+        <strong>O que faz a propriedade <code>float</code>?
+
+        </strong>
+        </summary>
+
+        A propriedade `float` faz um elemento flutuar, o que significa que todos os elementos que vem depois irão fluir ao redor dele. Se o valor de `float` for `left` (esquerda), o elemento irá flutuar à esquerda, e os próximos elementos serão mostrados à sua direita. Se o valor de `float` for `right` (direita), o elemento irá flutuar à direita, e os elementos que vem depois serão mostrados à sua esquerda. Você pode ler mais sobre esta propriedade em <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+
+
+        </details>
+        </div>
+
+        # Float
+
+        * Repare na propriedade `float` dentro do seu conjunto de regras `img`
+        * Discuta com seu parceiro o que você acha que esta propriedade faz.
+        * Troque o valor de `left` para `right`.
+      CSD U2 layout style freeplay - OLD: |-
+        # Web Site Pessoal
+
+        Experimente algumas destas novas propriedades CSS no seu web site pessoal.
+
+        * Acrescente estilos de sua escolha ao seu site pessoal. Tenha certeza que ao menos 3 novas propriedades CSS são usadas.
+
+        # Lista de Verificação
+
+        * Ao menos 3 das seguintes propriedades CSS são usadas:
+
+        * `background-color`
+        * `height`
+        * `width`
+        * `border-style`
+        * `border-radius`
+        * `border-width`
+        * `float`
+        * `margin`
+
+
+        Se você usou ao menos 3 propriedades da lista, você pode explorar algumas propriedades CSS adicionais para acrescentá-las à sua página Sobre Mim.
       CSD U2 layout style freeplay: |-
         # Web Site Pessoal
 
@@ -3214,6 +4377,9 @@ pt-BR:
         * `margem`
 
         Entretanto, nós o encorajamos que você use mais que três!  Explore propriedades CSS adicionais e inclua elas em sua página.
+      CSD U2 layout style margin: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como o código funciona?</strong></summary>\n\nAqui está o código que está inserindo espaço adicional ao redor das imagens:\n\n<pre>img {\n\\tmargin: 10px;\n}</pre>\n\n* `img` é o _seletor_. Ele especifica quais elementos deverão seguir as regras no interior das chaves, neste caso, as imagens.\n* `margin: 10px;` é a regra que insere 10 pixels de espaçamento ao redor da imagem.\n</details>\n<details>\n<summary><strong>O que faz a propriedade `margin`?</strong></summary>\n\nA propriedade `margin` determina quanto haverá de espaçamento ao redor da imagem. Na maioria das vezes, você irá definir o espaço em pixels. Você pode ler mais sobre esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\">W3Schools - CSS margin Property</a>\n</details>\n<details>\n<summary><strong>O que significa `px` /  O que é um pixel?</strong></summary>\n\nPixel, que é abreviado como `px`, é como os elementos são mensurados em CSS. É o tamanho de um único ponto de luz na tela.\n\n\n</details>\n</div>\n\n# Margin\n\nMargens definem a quantidade de espaçamento que deve estar ao redor de um elemento.\n\n* Localize a propriedade `margin` no conjunto de regras `img`.\n* Altere a margem para que seja maior, e discuta o efeito com um parceiro.\n* Escolha um outro tipo de elemento e dê uma margem a ele, também."
+      CSD U2 layout style margin_2018: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como o código funciona?</strong>\n</summary>\nAqui está o código que está inserindo espaço adicional ao redor das imagens:\n\n<pre>img {\n\\tmargin: 10px;\n}</pre>\n\n* `img` é o _seletor_. Ele especifica quais elementos deverão seguir as regras no interior das chaves, neste caso, as imagens.\n\n* `margin: 10px;` é a regra que insere 10 pixels de espaçamento ao redor da imagem.\n</details>\n<details>\n<summary>\n<strong>O que faz a propriedade `margin`?</strong>\n</summary>\n\nA propriedade `margin` determina quanto haverá de espaçamento ao redor da imagem. Na maioria das vezes, você irá definir o espaço em pixels. Você pode ler mais sobre esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\">W3Schools - CSS margin Property</a>\n</details>\n<details>\n<summary>\n<strong>O que significa `px` /  O que é um pixel?</strong>\n</summary>\n\nPixel, que é abreviado como `px`, é como os elementos são mensurados em CSS. É o tamanho de um único ponto de luz na tela.\n\n\n</details>\n</div>\n\n# Margin\n\nMargens definem a quantidade de espaçamento que deve estar ao redor de um elemento.\n\n* Localize a propriedade `margin` no conjunto de regras `img`.\n* Altere a margem para que seja maior, e discuta o efeito com um parceiro.\n* Escolha um outro tipo de elemento e dê uma margem a ele, também."
+      CSD U2 layout style margin_2019: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como o código funciona?</strong>\n</summary>\nAqui está o código que está inserindo espaço adicional ao redor das imagens:\n\n<pre>img {\n\\tmargin: 10px;\n}</pre>\n\n* `img` é o _seletor_. Ele especifica quais elementos deverão seguir as regras no interior das chaves, neste caso, as imagens.\n\n* `margin: 10px;` é a regra que insere 10 pixels de espaçamento ao redor da imagem.\n</details>\n<details>\n<summary>\n<strong>O que faz a propriedade `margin`?</strong>\n</summary>\n\nA propriedade `margin` determina quanto haverá de espaçamento ao redor da imagem. Na maioria das vezes, você irá definir o espaço em pixels. Você pode ler mais sobre esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\">W3Schools - CSS margin Property</a>\n</details>\n<details>\n<summary>\n<strong>O que significa `px` /  O que é um pixel?</strong>\n</summary>\n\nPixel, que é abreviado como `px`, é como os elementos são mensurados em CSS. É o tamanho de um único ponto de luz na tela.\n\n\n</details>\n</div>\n\n# Margin\n\nMargens definem a quantidade de espaçamento que deve estar ao redor de um elemento.\n\n* Localize a propriedade `margin` no conjunto de regras `img`.\n* Altere a margem para que seja maior, e discuta o efeito com um parceiro.\n* Escolha um outro tipo de elemento e dê uma margem a ele, também."
       CSD U2 link demo: |-
         # Criando um site de várias páginas
 
@@ -3400,6 +4566,30 @@ pt-BR:
         * Verifique se o seu projeto inclui tudo incluído na avaliação do projeto.
         * Use comentários e espaço em branco para tornar seu site legível.
         * Peça ao seu parceiro para ajudá-lo a encontrar possíveis problemas com seu site.
+      CSD U2 project share: |+
+        # Compartilhe seu projeto
+
+        É hora de compartilhar seu projeto com o mundo!
+
+        # Faça isso
+        * Clique no botão ![](https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27 AM.png) no topo da página.
+        * Copie a URL dada a você, e mande por email para as pessoas que você quer que veja sua página.
+      CSD U2 project share_2018: |+
+        # Compartilhe seu projeto
+
+        É hora de compartilhar seu projeto com o mundo!
+
+        # Faça isso
+        * Clique no botão ![](https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27 AM.png) no topo da página.
+        * Copie a URL dada a você, e mande por email para as pessoas que você quer que veja sua página.
+      CSD U2 project share_2019: |+
+        # Compartilhe seu projeto
+
+        É hora de compartilhar seu projeto com o mundo!
+
+        # Faça isso
+        * Clique no botão ![](https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27 AM.png) no topo da página.
+        * Copie a URL dada a você, e mande por email para as pessoas que você quer que veja sua página.
       CSD U2 text style freeplay - OLD: |-
         # Adicionando Estilos
 
@@ -3485,7 +4675,155 @@ pt-BR:
         * Você consegue ver a diferença?
       CSD U3 - images - Embed Project: Exemplo do Projeto Final
       CSD U3 - images - animations: "# Animações\n\nVocês viram através desta Unidade que, quando você monta um conjunto de imagens e as reproduz juntas de volta para trás, ela se parece um movimento! Bem, sprites fazem essa animação mais fácil! Você pode montar um conjunto de imagens para criar uma animação. Existem animações pré-carregadas para você no gerenciador de animações.\n\nDefinir a animação com setAnimation.\n\n# Faça isso\n\n* Crie um sprite\n* Adicione a animação."
+      CSD U3 Random random ellipse-2018: |-
+        # Números aleatórios
+
+        `numeroAleatorio ()` escolhe um número aleatório entre um valor mínimo e máximo. Você pode usar este código em vez de escrever no número específico. Se você fizer seus desenhos com números aleatórios, ele parecerá um pouco diferente toda vez que você executar seu programa.
+
+        # Faça isso
+
+        * Execute o programa várias vezes para ver como funciona.
+        * Altere os números dentro de `numeroAleatorio` e execute o código novamente algumas vezes para ver o que muda.
+      CSD U3 Random random ellipse: |-
+        # Números aleatórios
+
+        `numeroAleatorio ()` escolhe um número aleatório entre um valor mínimo e máximo. Você pode usar este código em vez de escrever no número específico. Se você fizer seus desenhos com números aleatórios, ele parecerá um pouco diferente toda vez que você executar seu programa.
+
+        # Faça isso
+
+        * Execute o programa várias vezes para ver como funciona.
+        * Altere os números dentro de `numeroAleatorio` e execute o código novamente algumas vezes para ver o que muda.
+      CSD U3 Random random ellipse_2018: |-
+        # Números aleatórios
+
+        `numeroAleatorio ()` escolhe um número aleatório entre um valor mínimo e máximo. Você pode usar este código em vez de escrever no número específico. Se você fizer seus desenhos com números aleatórios, ele parecerá um pouco diferente toda vez que você executar seu programa.
+
+        # Faça isso
+
+        * Execute o programa várias vezes para ver como funciona.
+        * Altere os números dentro de `numeroAleatorio` e execute o código novamente algumas vezes para ver o que muda.
+      CSD U3 Random random ellipse_2018_2019: |-
+        # Números aleatórios
+
+        `numeroAleatorio ()` escolhe um número aleatório entre um valor mínimo e máximo. Você pode usar este código em vez de escrever no número específico. Se você fizer seus desenhos com números aleatórios, ele parecerá um pouco diferente toda vez que você executar seu programa.
+
+        # Faça isso
+
+        * Execute o programa várias vezes para ver como funciona.
+        * Altere os números dentro de `numeroAleatorio` e execute o código novamente algumas vezes para ver o que muda.
+      CSD U3 Scene Example-2018: |
+        # Cenas Sprite
+
+        Ao combinar formas, sprites e texto, você pode criar cenas simples, histórias ou histórias em quadrinhos. Embora esse exemplo seja bastante simples, você pode combinar quantos sprites e formas desejar para criar cenas tão complexas ou detalhadas quanto desejar.
+
+        ## Esboce-o
+
+        Antes de prosseguir, tire um segundo para esboçar uma cena que você gostaria de fazer no final desta lição. Considere as formas simples que você usou no passado, sprites para seus personagens e qualquer texto que você gostaria na tela. Depois de esboçar uma ideia, você aprenderá sobre `texto` e como compor uma cena.
+      CSD U3 Scene Example: |
+        # Cenas Sprite
+
+        Combinando formas, sprites e um novo bloco chamado `texto`, você pode criar cenas simples, histórias ou quadrinhos. Embora esse exemplo seja bastante simples, você pode combinar quantos sprites e formas desejar para criar cenas tão complexas ou detalhadas quanto desejar.
+
+        ## Esboce-o
+
+        Antes de prosseguir, tire um segundo para esboçar uma cena que você gostaria de fazer no final desta lição. Considere as formas simples que você usou no passado, sprites para seus personagens e qualquer texto que você gostaria na tela. Depois de esboçar uma ideia, você aprenderá sobre `texto` e como compor uma cena.
+      CSD U3 Scene Example_2018: |
+        # Cenas Sprite
+
+        Ao combinar formas, sprites e texto, você pode criar cenas simples, histórias ou histórias em quadrinhos. Embora esse exemplo seja bastante simples, você pode combinar quantos sprites e formas desejar para criar cenas tão complexas ou detalhadas quanto desejar.
+
+        ## Esboce-o
+
+        Antes de prosseguir, tire um segundo para esboçar uma cena que você gostaria de fazer no final desta lição. Considere as formas simples que você usou no passado, sprites para seus personagens e qualquer texto que você gostaria na tela. Depois de esboçar uma ideia, você aprenderá sobre `texto` e como compor uma cena.
+      CSD U3 Scene Example_2018_2019: |
+        # Cenas Sprite
+
+        Ao combinar formas, sprites e texto, você pode criar cenas simples, histórias ou histórias em quadrinhos. Embora esse exemplo seja bastante simples, você pode combinar quantos sprites e formas desejar para criar cenas tão complexas ou detalhadas quanto desejar.
+
+        ## Esboce-o
+
+        Antes de prosseguir, tire um segundo para esboçar uma cena que você gostaria de fazer no final desta lição. Considere as formas simples que você usou no passado, sprites para seus personagens e qualquer texto que você gostaria na tela. Depois de esboçar uma ideia, você aprenderá sobre `texto` e como compor uma cena.
+      CSD U3 Simple Drawing - Personal Animation: |
+        # Sua própria animação
+
+        Aqui está o desenho que você planejou e começou na última lição - vamos animá-lo!
+
+        # Faça isso
+
+        * Mova todo o seu código para um laço `desenhar()`
+        * Use `numeroAleatorio ()` nas entradas de algumas das suas formas
+        * Defina a velocidade da sua animação usando o bloco `Mundo.frameRate`
+      CSD U3 Sprites text: |-
+        # Adicionando texto
+
+        Você pode colocar o texto em qualquer lugar que quiser na tela usando `texto`. Altere o texto exibido no código fornecido e adicione um segundo `texto` para escrever em uma parte diferente da tela.
+
+        _Dica: O tamanho do texto padrão é bem pequeno, mas você pode usar o bloco `tamanhoDoTexto` para mudar isso. Você também pode usar `preencher` para mudar a cor do seu texto._
+      CSD U3 Test collaboration FR: Como você e seu parceiro decidiram dividir o trabalho para fazer este programa?
       CSD U3 Test debug FR: Pense em um bug difícil que você precisava corrigir em seu programa. Qual foi o seu processo para encontrar e corrigir o bug?
+      CSD U3 Test parameter FR: Blocos como `rect` e` velocityX` possuem parâmetros que permitem dar informações específicas sobre o que eles podem fazer. Escolha uma função do seu programa que possa ser melhorada com um parâmetro e explique como.
+      CSD U3 Variables Square: |-
+        # Variáveis e Desenho
+
+        Variáveis permitem que você **use o mesmo valor várias vezes em seu programa**. Se um valor sempre será usado muitas vezes em um programa, é realmente útil colocar esse valor em uma variável. Isso permite que você **mude rapidamente o mesmo valor em muitos lugares em seu programa**. Também pode tornar o movimento óbvio **como esse valor é usado**.
+
+        # Faça isso
+
+        * Altere o valor que `tamanho` é inicializado para que o programa desenhe um **quadrado maior**
+      CSD U3 abstraction make it your own: |-
+        # Faça o seu próprio
+
+        Agora você tem a mecânica básica do seu jogo no lugar, então é hora de torná-lo seu. O que você quer que aconteça? O personagem ganha pontos toda vez que recebe uma moeda? Você pode adicionar um placar como aprendeu na última lição? Você quer fazer outra moeda? Que tal uma "moeda ruim" que tira pontos?
+
+        # Faça isso
+
+        Faça pelo menos uma melhoria no jogo que o torne seu. Esteja preparado para compartilhar suas alterações e melhorias com seu colega de classe.
+      CSD U3 abstraction make it your own_2018: |-
+        # Faça o seu próprio
+
+        Agora você tem a mecânica básica do seu jogo no lugar, então é hora de torná-lo seu. O que você quer que aconteça? O personagem ganha pontos toda vez que recebe uma moeda? Você pode adicionar um placar como aprendeu na última lição? Você quer fazer outra moeda? Que tal uma "moeda ruim" que tira pontos?
+
+        # Faça isso
+
+        Faça pelo menos uma melhoria no jogo que o torne seu. Esteja preparado para compartilhar suas alterações e melhorias com seu colega de classe.
+      CSD U3 abstraction make it your own_2019: |-
+        # Faça o seu próprio
+
+        Agora você tem a mecânica básica do seu jogo no lugar, então é hora de torná-lo seu. O que você quer que aconteça? O personagem ganha pontos toda vez que recebe uma moeda? Você pode adicionar um placar como aprendeu na última lição? Você quer fazer outra moeda? Que tal uma "moeda ruim" que tira pontos?
+
+        # Faça isso
+
+        Faça pelo menos uma melhoria no jogo que o torne seu. Esteja preparado para compartilhar suas alterações e melhorias com seu colega de classe.
+      CSD U3 collisions displace intro: |-
+        # Deslocar
+
+        A interação que você está programando é tão comum que existe um bloco projetado para fazer a interação para você. `sprite.deslocar()` que fará um sprite empurrar o outro quando se tocarem. O código que está implícito a este bloco pode parecer muito com o que você acabou de escrever, mas agora você não precisa mais se preocupar em escrever esses detalhes.
+
+        # Faça isso
+
+        Alguém tentou usar o bloco `sprite.deslocar()` para fazer o **elefante empurra o hipopótamo**, mas existe um bug. Você pode mudar o código para que o elefante empurre o hipopótamo para fora da tela?
+
+        * Encontre a linha de código onde o bloco `sprite.deslocar()` é usado e corrija o erro.
+      CSD U3 collisions displace intro_2018: |-
+        # Deslocar
+
+        A interação que você está programando é tão comum que existe um bloco projetado para fazer a interação para você. `sprite.deslocar()` que fará um sprite empurrar o outro quando se tocarem. O código que está implícito a este bloco pode parecer muito com o que você acabou de escrever, mas agora você não precisa mais se preocupar em escrever esses detalhes.
+
+        # Faça isso
+
+        Alguém tentou usar o bloco `sprite.deslocar()` para fazer o **elefante empurra o hipopótamo**, mas existe um bug. Você pode mudar o código para que o elefante empurre o hipopótamo para fora da tela?
+
+        * Encontre a linha de código onde o bloco `sprite.deslocar()` é usado e corrija o erro.
+      CSD U3 collisions displace intro_2019: |-
+        # Deslocar
+
+        A interação que você está programando é tão comum que existe um bloco projetado para fazer a interação para você. `sprite.deslocar()` que fará um sprite empurrar o outro quando se tocarem. O código que está implícito a este bloco pode parecer muito com o que você acabou de escrever, mas agora você não precisa mais se preocupar em escrever esses detalhes.
+
+        # Faça isso
+
+        Alguém tentou usar o bloco `sprite.deslocar()` para fazer o **elefante empurra o hipopótamo**, mas existe um bug. Você pode mudar o código para que o elefante empurre o hipopótamo para fora da tela?
+
+        * Encontre a linha de código onde o bloco `sprite.deslocar()` é usado e corrija o erro.
       CSD U5 Waze Data Video: Assista este vídeo para aprender como esse problema é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo coletados e de onde eles estão vindo.
       CSD U5 Waze Data Video_2018: Assista este vídeo para aprender como esse problema é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo coletados e de onde eles estão vindo.
       CSD U5 Waze Data Video_2019: Assista este vídeo para aprender como esse problema é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo coletados e de onde eles estão vindo.
@@ -3551,6 +4889,7 @@ pt-BR:
         * Não se esqueça de clicar em <img src="https://images.code.org/6a35d13b10ed2029a9323c9cb555e39e-image-1477681291001.01.12 PM.png" style="width:100px">
         * **O que você notou sobre a estrutura do seu conteúdo?**
       CSDU2 - Headers: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary>\n\n**O que são cabeçalhos?**\n\n</summary>\nCabeçalhos são os títulos de seções de tamanhos diferentes em uma página web. Os cabeçalhos adicionam estrutura à sua página através da divisão da mesma facilitando a leitura do usuário.\n</details>\n<details>\n<summary>\n\n**Como eu crio um cabeçalho?**\n\n</summary>\nVocê pode fazer algo se tornar um elemento de cabeçalho ao cercá-lo com tags de cabeçalho. Por exemplo:\n<pre> &lt;h1&gt; Texto de Cabeçalho &lt;/h1&gt; </pre> <br> <br>\n\nNote que há uma tag inicial (&lt;h1&gt;) e uma tag fim (&lt;/h1&gt;). A tag fim é a mesma que a início exceto que esta tem `/` depois do sinal de maior. O texto que você quer mostrar como cabeçalho vai entre as tags.\n</details>\n<details>\n<summary>\n\n**O que é HTML?**\n\n</summary>\nHTML significa Hypertext Markup Language (Linguagem de Marcação de Hipertexto, em tradução livre). o HTML é usado para adicionar estratura ao conteúdo de uma página web. O HTML usa tags para especificar onde certas estruturas começam e terminam. Estas tags são conjuntos de caracteres não encontrados no idioma Inglês para que o conteúdo e a estrutura possam ser diferenciados.\n</details>\n<details>\n<summary>\n\n**O que é um elemento HTML?**\n\n</summary>\nUm elemento HTML é uma peça do website que é marcado por uma tag inicial e algumas vezes encerrado por uma tag final. O elemento também inclui o conteúdo entre as tags. Por exemplo:\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\" style=\"width:500px\">\n</details>\n<details>\n<summary>\n\n**O que é uma tag HTML?**\n\n</summary>\nUma tag HTML é um conjunto especial de caracteres que instrui a máquina onde está o começo e fim de um elemento HTML e de que tipo ele é.\n</details>\n<details>\n<summary>\n\n**Por que você precisa tags início e fim?**\n\n</summary>\n\nVocê precisa das tags início e fim para muitos elements HTML porque elas marcam onde a estrutura começar e termina. Você não precisa que todo o texto na sua página web seja um título.\n\n\n</details>\n</div>\n\n# Cabeçalhos\n\nVocê deve ter notado no último nível que tudo que você digita no editor é colocado junto. Para diferenciar entre estas diferentes partes nós usamos elementos HTML para marcar as variadas partes de uma página web. Na sua investigação com o inspetor você se deparou com algo que criou cabeçalhos?\n\n# Faça Isto\n\n* Faça seu cabeçalho \"Animais\" se destacar usando o elemento cabeçalho `<h1>`."
+      CSDU2 - Local Images: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary>\n\n**Como faço para adicionar imagens?**\n\n</summary>\na tag '<img>' permite visualizar imagens em sua página web.  exemplo de <br><br>\n\n:\n<pre>&lt;img src=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\n\nPara dizer ao browser qual arquivo usar, informações extras, um **atributo** é adicionado na tag &lt;img&gt; dentro dos colchetes. O atributo 'src' significa **s**ou**rc**e (fonte) e define o nome da imagem. Nomes de arquivos de imagem incluem extensões que dizem ao computador qual o tipo de imagem está sendo usada. Extensões comuns são. jpg,. jpeg,. png. <br><br>\n\nAlém do atributo src, elementos de imagem também tem o atributo 'alt' que descreva a imagem. Isto é importante, no caso a imagem não carregar ou para pessoas que têm problemas com de visão. <br><br>\n\nA tag '<img>' é um exemplo de um **elemento void** porque ele inicia e fecha em uma tag. Para fazer isso colocamos o '/' que normalmente vai no fim da tag de imagem.\n</details>\n<details>\n<summary>\n\n**O que é uma tag void?**\n\n</summary>\n'A tag <img>' é um exemplo de um **elementos void** porque ele inicia e fecha em uma tag . Para fazer isso colocamos o '/' que normalmente vai no fim da tag de imagem. Tags void não precisa de uma tag de fechamento porque não há nenhum conteúdo de texto que pode ser colocado dentro delas. O conteúdo que aparece na tela é definido através dos atributos desse tipo de tags.\n</details>\n<details>\n<summary>\n\n**Por uma tag de imagem não tem fechamento?**\n\n</summary>\nUma tag de imagem é uma tag void e tags void não precisa de fechamento porque não há nenhum conteúdo de texto que deve ser colocado nessas tags. O conteúdo que aparece na tela é definido através dos atributos das tags.\n</details>\n<details>\n<summary>\n\n**O que é um atributo?**\n\n</summary>\n\nAtributos são informações extras incluídas em uma tag. Atributos têm nomes e valores. O nome diz que tipo de informação está sendo fornecido e em seguida, o valor para o atributo em questão.\n\nPor exemplo, tags &lt;img&gt; tem dois atributos, src e alt. src especifica o nome do arquivo de imagem e alt informa ao navegador em texto legível o que é a imagem.\n\n\n</details>\n</div>\n\n# imagens\n\nComeçamos uma página web Cachorro vs Gato para você. A imagem do cão já foi adicionada em baixo a página da web. Use uma tag de imagem para adicionar a imagem de cat.jpeg na página embaixo do cabeçalho do gato."
       CSDU2 - Missing Home Link: |-
         # Link Inicial ausente
 
@@ -3644,12 +4983,30 @@ pt-BR:
 
         Este programa utiliza o volume do "baixo" da música (os sons graves) para controlar a altura de um dançarino. Você pode fazer o outro dançarino responder à música também?
       CourseD_Dance_Party_11: "O bloco <xml><block type=\"Dancelab_whenKey\"></block></xml> permite executar o código quando a seta para cima for selecionada.\n\nVocê pode mudar o passo de dança, alterar as propriedades de um(a) dançarino(a) ou fazer um movimento rápido apenas uma vez. Use a criatividade e procure novos blocos!"
-      CourseD_Dance_Party_11_5: "Veja este bloco:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nAgora você pode criar um grupo de dançarinos de uma só vez!\n\nTente usar alguns dos blocos \"todos os patos\" para escrever o código que fará todos os patos dançarem juntos."
+      CourseD_Dance_Party_11_5: |-
+        Veja este bloco:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Agora você pode criar um grupo de dançarinos de uma só vez!
+
+        Tente usar alguns dos blocos "todos os patos" para escrever o código que fará todos os patos dançarem juntos.
       CourseD_Dance_Party_11b: |-
         É hora do concurso de dança! O gato dança dab quando você pressiona a tecla de seta para a esquerda. Faça o robô dançar drop pressionando a tecla da seta para a direita.
       CourseD_Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com seus amigos.
+      CourseE_HOC 2018 Level_1: "Você precisa de suprimentos para a viagem adiante. Colete um **barco** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) de um **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
       CourseE_HOC 2018 Level_10: "Há uma **lula** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) escondida em algum lugar deste Monumento Oceânico. Você consegue encontrá-la?\n\n"
       CourseE_HOC 2018 Level_11: Construa uma parede de **prismarinho** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) em volta do concreto preto. Isso ativará o **canal** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) e concluirá seu desafio.
+      CourseE_HOC 2018 Level_2: Usar um barco é bem melhor do que nadar no mar aberto. Vá até o final do cais e suba a bordo.
+      CourseE_HOC 2018 Level_3: Pegue os remos e controle o barco pelo mar aberto para pegar o **bacalhau** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_4: Use o bacalhau para alimentar o **golfinho** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Use um bloco de repetição para atravessar o oceano mais rápido.
+      CourseE_HOC 2018 Level_5: Há uma **concha de náutilo** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) escondida em algum lugar. Explore o naufrágio para encontrar o **baú** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_6: Aqui está congelando! Pegue um **salmão** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) no caminho até as ruínas subaquáticas.
       CourseE_HOC 2018 Level_7a: "Você encontrou as ruínas subaquáticas. No arenito, procure um **baú** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) que contém tesouro de **prismarinho** (https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
       CourseE_HOC 2018 Level_8: "Primeiro icebergs, e agora lava? Sobreviva nesta ilha vulcânica e encontre o **salmão** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) no recife de coral.\n\n"
       CourseE_HOC 2018 Level_9b: "Você conseguiu chegar ao recife de corais. Agora, procure o **Coração do Mar** [](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png). Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png) do tesouro.\n\n"

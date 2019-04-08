@@ -98,7 +98,7 @@ const audioStyle = {
   }
 };
 
-class TopInstructions extends Component {
+class TopInstructionsCSP extends Component {
   static propTypes = {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
@@ -139,7 +139,7 @@ class TopInstructions extends Component {
         : TabType.INSTRUCTIONS,
       feedbacks: [],
       rubric: null,
-      displayFeedbackTeacherFacing: teacherViewingStudentWork
+      teacherViewingStudentWork: teacherViewingStudentWork
     };
   }
 
@@ -318,19 +318,35 @@ class TopInstructions extends Component {
       (this.props.referenceLinks && this.props.referenceLinks.length > 0);
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
-    const displayFeedbackStudent =
+
+    const studentHasFeedback =
       this.props.viewAs === ViewType.Student &&
       this.state.feedbacks.length > 0 &&
       (this.state.feedbacks[0].comment || this.state.feedbacks[0].performance);
-    const displayFeedbackTeacher =
-      this.state.displayFeedbackTeacherFacing ||
-      (!this.state.displayFeedbackTeacherFacing &&
-        this.props.viewAs === ViewType.Teacher &&
-        this.state.rubric);
-    const displayFeedback = displayFeedbackStudent || displayFeedbackTeacher;
+
+    /*
+     * The feedback tab will be the Key Concept tab if there is a mini rubric and:
+     * 1) Teacher is viewing the level but not giving feedback to the student
+     * 2) Student does not have any feedback for that level
+     * The Key Concept tab shows the Key Concept and Rubric for the level in a view
+     * only form
+     */
+    const displayKeyConcept =
+      this.state.rubric &&
+      ((this.props.viewAs === ViewType.Student && !studentHasFeedback) ||
+        (this.props.viewAs === ViewType.Teacher &&
+          !this.state.teacherViewingStudentWork));
+    const feedbackTabText = displayKeyConcept ? 'Key Concept' : msg.feedback();
+
+    const displayFeedback =
+      displayKeyConcept ||
+      this.state.teacherViewingStudentWork ||
+      studentHasFeedback;
+
+    // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
       this.state.tabSelected === TabType.COMMENTS &&
-      this.state.displayFeedbackTeacherFacing;
+      this.state.teacherViewingStudentWork;
 
     return (
       <div style={mainStyle} className="editor-column">
@@ -371,7 +387,7 @@ class TopInstructions extends Component {
                   className="uitest-feedback"
                   onClick={this.handleCommentTabClick}
                   selected={this.state.tabSelected === TabType.COMMENTS}
-                  text={msg.feedback()}
+                  text={feedbackTabText}
                   teacherOnly={teacherOnly}
                 />
               )}
@@ -419,9 +435,10 @@ class TopInstructions extends Component {
               <TeacherFeedback
                 user={this.props.user}
                 visible={this.state.tabSelected === TabType.COMMENTS}
+                displayKeyConcept={displayKeyConcept}
                 disabledMode={
                   this.props.viewAs === ViewType.Student ||
-                  !this.state.displayFeedbackTeacherFacing
+                  !this.state.teacherViewingStudentWork
                 }
                 rubric={this.state.rubric}
                 ref="commentTab"
@@ -439,6 +456,7 @@ class TopInstructions extends Component {
     );
   }
 }
+export const UnconnectedTopInstructionsCSP = TopInstructionsCSP;
 export default connect(
   state => ({
     isEmbedView: state.pageConstants.isEmbedView,
@@ -480,4 +498,4 @@ export default connect(
   }),
   null,
   {withRef: true}
-)(Radium(TopInstructions));
+)(Radium(TopInstructionsCSP));

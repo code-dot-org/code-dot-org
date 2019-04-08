@@ -1573,6 +1573,8 @@ ja:
               name: プレイ ラボのイベント
             Binary Bracelets:
               name: バイナリブレスレット
+            Sticker Art with Loops:
+              name: アーティストくりかえし
         gamelab:
           title: ゲーム ラボ
         coursea-2019:
@@ -1637,6 +1639,12 @@ ja:
               name: プレイ ラボのイベント
             Spelling Bee:
               name: つづりみつばち
+            Learn to Drag and Drop:
+              name: ドラッグ＆ドロップ
+            Programming in Maze:
+              name: めいろ のプログラミング
+            Ocean Scene with Loops:
+              name: アーティストくりかえし
         removed19:
           stages:
             'Debugging: Unspotted Bugs':

@@ -379,14 +379,32 @@ he:
 
         התוכנה הזו משתמשת בצלילים הנמוכים (ווליום הבָּאס) כדי לשלוט בגובה של אחד מהרקדנים. תוכלו לגרום לרקדן השני להגיב למוזיקה גם כן?
       CourseD_Dance_Party_11: "בלוק ה-\n\n<xml><block type=\"Dancelab_whenKey\"></block></xml> \n\nמאפשר לכם לכתוב קוד שפועל כאשר לוחצים על מקש החץ העליון.\n\nבאפשרותכם לשנות את צעד הריקוד, לשנות את מאפייני הרקדן, או לבצע צעד מהיר פעם אחת בלבד. היו יצירתיים ושימו לב לבלוקים חדשים!"
-      CourseD_Dance_Party_11_5: "שימו לב לבלוק הזה:\n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n  \nכעת תוכלו ליצור חבורה של רקדנים בבת אחת!\n\nנסו להשתמש בחלק מהבלוקים של \"כל הברווזים\" כדי לכתוב קוד שיגרום לכל הברווזים לרקוד ביחד."
+      CourseD_Dance_Party_11_5: |-
+        שימו לב לבלוק הזה:
+
+        <xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+          
+        כעת תוכלו ליצור חבורה של רקדנים בבת אחת!
+
+        נסו להשתמש בחלק מהבלוקים של "כל הברווזים" כדי לכתוב קוד שיגרום לכל הברווזים לרקוד ביחד.
       CourseD_Dance_Party_11b: |-
         הגיע הזמן לתחרות ריקודים! החתול רוקד "דֶאבּ" כשאתם לוחצים על מקש החץ השמאלי. גרמו לרובוט לעשות "דְרוֹפּ" כאשר תלחצו על מקש החץ הימני, או "היי קְלאפּ" כאשר תלחצו על מקש החץ העליון.
 
         **השתמשו בחצים כדי לגרום לרובוט לעשות "דרופ"-"פלוס"-"דרופ"-"פלוס" מהר ככל שתוכלו!**
       CourseD_Dance_Party_12: התחילו להיכנס לגרוּב! צרו ריקוד משלכם, ושתפו אותו עם החברים שלכם.
+      CourseE_HOC 2018 Level_1: "אתם זקוקים לאספקה לקראת המסע שלפניכם. איספו סירה ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) מהתיבה ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
       CourseE_HOC 2018 Level_10: "יש ** דיונון ** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) שמתחבא איפשהו באנדרטה הימית הזו, חושבים שאתם יכולים למצוא אותו?\n\n"
       CourseE_HOC 2018 Level_11: בנו חומה עשויה **מפריזמרינה** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) סביב הבטון השחור. פעולה זו תפעיל את ה **מגדלור התת-ימי** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) ותשלים את האתגר שלך!
+      CourseE_HOC 2018 Level_2: יותר קל לנוע במים בסירה מאשר בשחייה! גשו לקצה הרציף על מנת לעלות לסיפון.
+      CourseE_HOC 2018 Level_3: תפסו את המשוטים ונווטו את הסירה על פני המים הפתוחים כדי לתפוס את **דג הבקלה**![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_4: בואו נאכיל את **הדולפין** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png) בקצת דג בקלה. השתמשו בבלוק "חזור עד" על מנת לחלוף על פני האוקיינוס מהר יותר.
+      CourseE_HOC 2018 Level_5: תראו! יש *צדפת נאוטילוס** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) חבויה איפשהו! חיקרו את הספינה הטרופה כדי להגיע **לתיבה** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_6: נראה שדי קפוא שם בחוץ! תיפסו **סלמון** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) בדרככם אל החורבות התת-ימיות.
       CourseE_HOC 2018 Level_7a: "מצאתם את החורבות התת-ימיות. חפשו בתוך אבן החול כדי למצוא את **התיבה** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) המכילה אוצר של **פריזמרינה** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
       CourseE_HOC 2018 Level_8: "קודם קרחונים, ועכשיו לבה? נסו לעבור את האי הגעשי הזה ולמצוא את **הדג הטרופי** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) בשונית האלמוגים.\n\n"
       CourseE_HOC 2018 Level_9b: "הגעתם לשונית, עכשיו חפשו אחר **לב הים** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! השתמשו באלמוגים הכחולים והאדומים כדי להגיע לתיבת **האוצר** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"

@@ -7490,6 +7490,8 @@ tr:
               name: 'Programlama: Robot dostlarım'
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
+            Sticker Art with Loops:
+              name: Sanatçıların Döngüleri
         csp-mid-survey:
           description_audience: CSP Öğrencileri
         gamelab:
@@ -7586,6 +7588,12 @@ tr:
               name: Play Lab' da Olaylar
             Spelling Bee:
               name: Heceleme Yarışması
+            Learn to Drag and Drop:
+              name: Sürükleyip Bırakmayı Öğrenin
+            Programming in Maze:
+              name: Labirentte Programlama
+            Ocean Scene with Loops:
+              name: Sanatçıların Döngüleri
         removed19:
           stages:
             'Debugging: Unspotted Bugs':

@@ -274,7 +274,11 @@ class AdvancedShareOptions extends React.Component {
           Export your project as a zipped file, which will contain the
           HTML/CSS/JS files, as well as any assets, for your project.
         </p>
-        <button onClick={this.downloadExport} style={{marginLeft: 0}}>
+        <button
+          type="button"
+          onClick={this.downloadExport}
+          style={{marginLeft: 0}}
+        >
           {spinner}
           Export
         </button>
@@ -331,11 +335,16 @@ class AdvancedShareOptions extends React.Component {
         </p>
         <div style={style.expoContainer}>
           <div style={[style.expoExportRow, style.expoExportButtonRow]}>
-            <button onClick={this.publishExpoExport} style={style.expoButton}>
+            <button
+              type="button"
+              onClick={this.publishExpoExport}
+              style={style.expoButton}
+            >
               {publishSpinner}
               Test in Expo App
             </button>
             <button
+              type="button"
               onClick={this.downloadExpoExport}
               style={[style.expoButton, style.expoButtonLast]}
             >
@@ -371,6 +380,7 @@ class AdvancedShareOptions extends React.Component {
                     style={style.expoInput}
                   />
                   <button
+                    type="button"
                     onClick={this.generateExpoApk}
                     style={[style.expoButton, style.expoButtonApk]}
                   >
@@ -378,6 +388,7 @@ class AdvancedShareOptions extends React.Component {
                     Create Android App
                   </button>
                   <button
+                    type="button"
                     onClick={this.visitExpoSite}
                     style={[style.expoButton, style.expoButtonApk]}
                   >
