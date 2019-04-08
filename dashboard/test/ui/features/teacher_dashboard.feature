@@ -11,29 +11,13 @@ Feature: Using the teacher dashboard
 
     When I sign in as "Teacher_Sally"
     When I click selector "a:contains(Untitled Section)" once I see it
-    And I wait until element "#learn-tabs" is visible
-    And check that the URL contains "/teacher-dashboard#/sections/"
+    And I wait until element "#uitest-teacher-dashboard-nav" is visible
+    And check that the URL contains "/teacher_dashboard/sections/"
+    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
     When I click selector "a:contains(Sally)" once I see it
-    And I wait until element "#course-dropdown" is visible
-    And check that the URL contains "/teacher-dashboard#/sections/"
-    And check that the URL contains "/student/"
-
-    # teacher_dashboard_split_test is set to 0, so user will always be redirected
-    # to the old teacher dashboard, even if experiment is enabled.
-    Then I am on "http://studio.code.org/home?enableExperiments=teacher-dashboard-react"
-    When I click selector "a:contains(Untitled Section)" once I see it
-    And I wait until element "#learn-tabs" is visible
-    And check that the URL contains "/teacher-dashboard#/sections/"
-
-    # TODO: (madelynkasula) Re-enable once all teachers are on new teacher dashboard.
-    # When I click selector "a:contains(Untitled Section)" once I see it
-    # And I wait until element "#uitest-teacher-dashboard-nav" is visible
-    # And check that the URL contains "/teacher_dashboard/sections/"
-    # And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
-    # When I click selector "a:contains(Sally)" once I see it
-    # And I wait until element "#teacher-panel-container" is visible
-    # And check that the URL contains "/s/allthethings"
-    # And check that the URL contains "viewAs=Teacher"
+    And I wait until element "#teacher-panel-container" is visible
+    And check that the URL contains "/s/allthethings"
+    And check that the URL contains "viewAs=Teacher"
 
   Scenario: Viewing a student
     Given I create an authorized teacher-associated student named "Sally"
@@ -52,37 +36,25 @@ Feature: Using the teacher dashboard
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
 
     # Stats tab
-    # Old teacher dashboard
-    And I click selector "#learn-tabs a:contains(Stats)" once I see it
-    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
-    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it
+    And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it
     And I wait until element "#uitest-stats-table" is visible
     And element "#uitest-stats-table tr:eq(1)" contains text "Sally"
 
     # Manage students tab
-    # Old teacher dashboard
-    And I click selector "#learn-tabs a:contains(Manage Students)" once I see it
-    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
-    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
+    And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
     And I wait until element "#uitest-manage-students-table" is visible
     And element "#uitest-manage-students-table tr:eq(1)" contains text "Sally"
     And I wait until element "#uitest-privacy-link" is visible
     And element "#uitest-privacy-link" contains text "privacy document"
 
     # Text responses tab
-    # Old teacher dashboard
-    And I click selector "#learn-tabs a:contains(Text Responses)" once I see it
-    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
-    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Text Responses)" once I see it
+    And I click selector "#uitest-teacher-dashboard-nav a:contains(Text Responses)" once I see it
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
     And I wait until element "#text-responses-table" is visible
     And element "#text-responses-table tr:contains(Sally)" contains text "hello world"
 
     # Assessments/Surveys tab: anonymous survey
-    # Old teacher dashboard
-    And I click selector "#learn-tabs a:contains(Assessments/Surveys)" once I see it
-    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
-    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
+    And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
     And I wait until element "div:contains(no submissions for this assessment)" is visible
     And I wait until element "div:contains(this survey is anonymous)" is not visible
@@ -116,10 +88,7 @@ Feature: Using the teacher dashboard
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    # Old teacher dashboard
-    And I click selector "#learn-tabs a:contains(Projects)" once I see it
-    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
-    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
+    And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
     And I wait until element "#uitest-projects-table" is visible
     And I click selector "a:contains('thumb wars')" once I see it
     And I go to the newly opened tab
@@ -243,10 +212,7 @@ Feature: Using the teacher dashboard
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    # Old teacher dashboard
-    And I click selector "#learn-tabs a:contains(Projects)" once I see it
-    # New teacher dashboard. TODO: (madelynkasula) re-enable once all users are on new teacher dashboard
-    # And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
+    And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
     And I wait until element "#uitest-projects-table" is visible
     And I wait until the image within element "tr:eq(1)" has loaded
     And I wait until the image within element "tr:eq(2)" has loaded
