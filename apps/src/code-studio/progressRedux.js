@@ -8,6 +8,7 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import experiments from '@cdo/apps/util/experiments';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -563,10 +564,11 @@ export function statusForLevel(level, levelProgress) {
   // If complete a level that is marked as assessment
   // then mark as completed assessment
   if (
-    level.kind === LevelKind.assessment &&
-    (status === LevelStatus.free_play_complete ||
-      status === LevelStatus.perfect ||
-      status === LevelStatus.passed)
+    experiments.isEnabled(experiments.MINI_RUBRIC_2019) &&
+    (level.kind === LevelKind.assessment &&
+      (status === LevelStatus.free_play_complete ||
+        status === LevelStatus.perfect ||
+        status === LevelStatus.passed))
   ) {
     return LevelStatus.completed_assessment;
   }
