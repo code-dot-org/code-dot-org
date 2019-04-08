@@ -11945,6 +11945,12 @@ en:
               name: Unit 4 Assessment
             Lists Explore:
               name: Lists Explore
+            Lists Investigate:
+              name: Lists Investigate
+            Loops Explore:
+              name: Loops Explore
+            Traversals Explore:
+              name: Traversals Explore
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
