@@ -81,7 +81,8 @@ const styles = {
   },
   bigButton: {
     padding: '10px 20px 10px 20px',
-    height: 'initial'
+    height: 'initial',
+    marginTop: 22
   },
   clear: {
     clear: 'both'
@@ -500,24 +501,29 @@ const StartApplicationButton = ({
     ? "Apply on partner's site"
     : 'Start application';
 
-  const notificationText = priorityDeadlineDate
-    ? `Priority deadline for your region is ${priorityDeadlineDate}. Sign up now to reserve your space!`
-    : 'We still have spaces at your local workshop! It’s not too late to sign up.';
+  let notificationHeading, notificationText;
+  if (priorityDeadlineDate) {
+    notificationHeading = `Priority deadline for your region is ${priorityDeadlineDate}`;
+    notificationText = 'Sign up now to reserve your space!';
+  } else {
+    notificationHeading = 'We still have spaces at your local workshop!';
+    notificationText = 'It’s not too late to sign up.';
+  }
 
   return (
     <div>
       <Notification
         type="information"
-        notice=""
+        notice={notificationHeading}
         details={notificationText}
         dismissible={false}
-      />
-
-      <a className={className} id={id} target={target} href={link}>
-        <button type="button" style={styles.bigButton}>
-          {buttonText}
-        </button>
-      </a>
+      >
+        <a className={className} id={id} target={target} href={link}>
+          <button type="button" style={styles.bigButton}>
+            {buttonText}
+          </button>
+        </a>
+      </Notification>
     </div>
   );
 };
