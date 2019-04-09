@@ -17,6 +17,12 @@ class HelpHeader
         url: "https://docs.code.org/gamelab/",
         id: "gamelab-docs"
       }
+
+      entries << {
+        title: I18n.t("#{loc_prefix}game_lab_tutorials"),
+        url: CDO.code_org_url('/educate/gamelab'),
+        id: "gamelab-tutorials"
+      }
     end
 
     if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.applab

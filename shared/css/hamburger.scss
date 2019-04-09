@@ -281,13 +281,12 @@
 
   #help-icon {
     cursor: pointer;
-    padding: 10px 35px 16px 0;
+    padding: 10px 0 16px 0;
     height: 20px;
+    font-size: 25px;
     vertical-align: middle;
     text-decoration: none;
     float: left;
-    margin-top: 8px;
-    display: inline-block;
    
     %extend_help {
       cursor: pointer;
