@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
+import experiments from "@cdo/apps/util/experiments";
 
 const styles = {
   box: {
@@ -21,21 +22,33 @@ export default class ProgressBox extends Component {
     incomplete: PropTypes.number,
     imperfect: PropTypes.number,
     perfect: PropTypes.number,
-    style: PropTypes.object
+    style: PropTypes.object,
+    assessment: PropTypes.bool
   };
 
   render() {
-    const {started, incomplete, imperfect, perfect} = this.props;
+    const {started, incomplete, imperfect, perfect, assessment} = this.props;
 
     const boxWithBorderStyle = {
       ...styles.box,
-      borderColor: started ? color.level_perfect : color.light_gray,
+      borderColor: started ?
+        (assessment && experiments.isEnabled(experiments.MINI_RUBRIC_2019)
+          ? color.level_submitted
+          : color.level_perfect
+        )
+        : color.light_gray,
       ...this.props.style
     };
 
     const perfectLevels = {
       ...styles.filler,
       backgroundColor: color.level_perfect,
+      height: perfect
+    };
+
+    const assessmentLevels = {
+      ...styles.filler,
+      backgroundColor: color.level_submitted,
       height: perfect
     };
 
@@ -55,7 +68,14 @@ export default class ProgressBox extends Component {
       <div style={boxWithBorderStyle}>
         <div style={incompleteLevels} />
         <div style={imperfectLevels} />
-        <div className={'uitest-perfect-bar'} style={perfectLevels} />
+        <div
+          className={'uitest-perfect-bar'}
+          style={
+            assessment && experiments.isEnabled(experiments.MINI_RUBRIC_2019)
+              ? assessmentLevels
+              : perfectLevels
+          }
+        />
       </div>
     );
   }
