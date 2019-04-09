@@ -97,7 +97,6 @@ FactoryGirl.define do
     mappings {[create(:pd_regional_partner_mapping, state: "AL")]}
     cost_scholarship_information "Some **important** information about scholarships."
     additional_program_information "And some _additional_ program information."
-    apps_priority_deadline_date {(Date.current + 5.days).strftime("%Y-%m-%d")}
   end
 
   factory :regional_partner_illinois, parent: :regional_partner_with_summer_workshops do
