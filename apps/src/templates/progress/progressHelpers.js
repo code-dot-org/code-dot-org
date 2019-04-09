@@ -110,12 +110,7 @@ export function isLevelAssessment(level) {
  * @returns {bool} If all the levels in a stage are assessment levels
  */
 export function stageIsAllAssessment(levels) {
-  for (let i = 0; i < levels.length; i++) {
-    if (levels[i].kind !== LevelKind.assessment) {
-      return false;
-    }
-  }
-  return true;
+  return levels.every(level => level.kind === LevelKind.assessment);
 }
 
 /**
