@@ -743,8 +743,14 @@ it:
       CourseD_Dance_Party_11_5: Usa alcuni blocchi `"tutti i paperi" eseguono la mossa ...` per scrivere del codice che faccia ballare i paperi tutti assieme.
       CourseD_Dance_Party_11b: Fai fare una “spaccata” al Robot premendo la freccia a destra (→) e fagli fare un "applauso" quando premi la freccia in giù (↓). Alterna le due mosse più velocemente che puoi!
       CourseD_Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato da condividere con i tuoi amici.
+      CourseE_HOC 2018 Level_1: Prendi una barca dalla cassa.
       CourseE_HOC 2018 Level_10: Raggiungi l'entrata di questo Monumento oceanico.
       CourseE_HOC 2018 Level_11: 'Costruisci un condotto di prismarino all''interno del Monumento oceanico.'
+      CourseE_HOC 2018 Level_2: 'Dirigiti alla fine del molo.  '
+      CourseE_HOC 2018 Level_3: 'Naviga in mare aperto verso il merluzzo.  '
+      CourseE_HOC 2018 Level_4: Usa il ciclo (blocco rosa) per raggiungere il delfino.
+      CourseE_HOC 2018 Level_5: Esplora il relitto per raggiungere la cassa.
+      CourseE_HOC 2018 Level_6: Naviga tra i ghiacci per raggiungere il salmone.
       CourseE_HOC 2018 Level_7a: Cerca una cassa tra le rovine sottomarine.
       CourseE_HOC 2018 Level_9b: 'Usa i coralli rossi e blu come punti di riferimento per raggiungere il tesoro.'
       CourseF_PlayLab_vars10: "Tempo di giocare: qui ci sono tutte le variabili con cui abbiamo giocato finora, e anche qualcuna in più in caso ti serva.<br>\n<b>Attenzione</b>: se vuoi, puoi cambiare nome alle variabili esistenti o introdurne di nuove. Clicca sul triangolino con la punta verso il basso accanto al nome della variabile.<br>\nOra ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Prenditi un po' di tempo per esaminare tutto ciò che è a tua disposizione. Scorri verso il basso per vedere tutti i comandi nell'area di lavoro.<br>\n<i>Scorri verso il basso per vedere tutti i comandi presenti nell'area di lavoro.</i><br>\nQuando hai finito la tua esplorazione, prova a creare un gioco oppure una storia usando i cicli, le variabili e gli eventi. "
@@ -1276,7 +1282,7 @@ it:
       Virtual Pet 6_2019: Aggiungi una mela che riporti la giraffa alla sua dimensione originale quando si toccano.
       Virtual Pet 6_simple: Aggiungi una mela che riporti la giraffa alla sua dimensione originale quando si toccano.
       Virtual Pet Freeplay: 'Tempo di giocare: Cos''altro puoi far fare alla tua giraffa? '
-      Virtual Pet Freeplay_2019: 'Tempo di giocare: Cos''altro puoi far fare alla tua giraffa? '
+      Virtual Pet Freeplay_2019: "Tempo di giocare: Cos'altro puoi far fare alla tua giraffa? "
       Virtual Pet Freeplay_simple: 'Tempo di giocare: Cos''altro puoi far fare alla tua giraffa? '
       aE7: "Che cosa succede se aggiungi un ciclo uguale a quello che trovi già pronto, ma fai girare l'artista a sinistra invece che a destra?<br>\nRiesci a disegnare quest'onda ripetendo il tutto?"
       aE8: "Per creare questa cornice devi ripetere 4 volte tutto il codice che trovi già pronto. Attento agli spigoli, non basta girare di 90 gradi! <br>\n<br>\nSe, girando di 3 gradi per ciclo, hai bisogno di 60 ripetizioni per disegnare mezzo cerchio, quale di questi blocchi di codice ti permette di disegnare un quarto di cerchio per gli spigoli?"

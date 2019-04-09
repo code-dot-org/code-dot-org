@@ -14022,7 +14022,7 @@ it:
           mascherato di inseguire il personaggio ...` che terrà il ninja sulle tracce
           del pirata!
         courseD_playLab_cond4_c: Metti il blocco `fine del gioco con una sconfitta`
-          sotto l'evento `quando il personaggio 1 tocca il personaggio 2`.
+          sotto l'evento `quando il personaggio 1 tocca il personaggio 3`.
       courseD_playLab_cond4_2018_authored_hint:
         courseD_playLab_cond4_a: Avrai bisogno di usare l'evento `quando si clicca
           su "Esegui"` per fare in modo che il ninja insegua il pirata dall'inizio
@@ -14031,7 +14031,7 @@ it:
           mascherato di inseguire il personaggio ...` che terrà il ninja sulle tracce
           del pirata!
         courseD_playLab_cond4_c: Metti il blocco `fine del gioco con una sconfitta`
-          sotto l'evento `quando il personaggio 1 tocca il personaggio 2`.
+          sotto l'evento `quando il personaggio 1 tocca il personaggio 3`.
       courseD_playLab_cond4_2019_authored_hint:
         courseD_playLab_cond4_a: Avrai bisogno di usare l'evento `quando si clicca
           su "Esegui"` per fare in modo che il ninja insegua il pirata dall'inizio
@@ -14040,7 +14040,7 @@ it:
           mascherato di inseguire il personaggio ...` che terrà il ninja sulle tracce
           del pirata!
         courseD_playLab_cond4_c: Metti il blocco `fine del gioco con una sconfitta`
-          sotto l'evento `quando il personaggio 1 tocca il personaggio 2`.
+          sotto l'evento `quando il personaggio 1 tocca il personaggio 3`.
       courseD_playLab_cond5_authored_hint:
         courseD_playLab_cond5_a: Per portare a termine questa sfida, usa un'istruzione
           `se` che controlli se il `punteggio > 5`.
