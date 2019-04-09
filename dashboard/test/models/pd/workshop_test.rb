@@ -1202,26 +1202,20 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
   end
 
-  test 'pilot csf201 workshops do not get exit email' do
-    skip "Skip this test when runs after #{CSF_201_PILOT_END_DATE}" unless
-      DateTime.now < CSF_201_PILOT_END_DATE + 3.days
+  test 'pilot csf201 workshop does not get exit email' do
+    skip "Skip this test from #{CSF_201_PILOT_END_DATE}" unless
+      DateTime.now < CSF_201_PILOT_END_DATE
 
-    ended_pilot_workshop = create :pd_ended_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
+    ended_pilot_workshop = create :pd_ended_workshop,
+      course: COURSE_CSF, subject: SUBJECT_CSF_201,
       num_sessions: 1, sessions_from: CSF_201_PILOT_END_DATE - 1.day
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys).never
     Pd::Workshop.process_ended_workshop_async ended_pilot_workshop.id
-
-    # TODO: remove
-    ended_workshop = create :pd_ended_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
-      num_sessions: 1, sessions_from: CSF_201_PILOT_END_DATE
-
-    Pd::Workshop.any_instance.expects(:send_exit_surveys)
-    Pd::Workshop.process_ended_workshop_async ended_workshop.id
   end
 
-  test 'pilot csf201 workshops do not get reminder email' do
-    skip "Skip this test when runs after #{CSF_201_PILOT_END_DATE}" unless
+  test 'pilot csf201 workshop does not get reminder email' do
+    skip "Skip this test from #{CSF_201_PILOT_END_DATE}" unless
       DateTime.now < CSF_201_PILOT_END_DATE
 
     create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,

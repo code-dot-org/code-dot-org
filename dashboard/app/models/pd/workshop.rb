@@ -332,15 +332,10 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def self.csf_201_pilot?(workshop)
-    p workshop.inspect
-    p workshop.state
-
-    result = workshop.csf? &&
+    workshop.csf? &&
       workshop.subject == SUBJECT_CSF_201 &&
       workshop.sessions.present? &&
       workshop.sessions.first.start < CSF_201_PILOT_END_DATE
-    p result
-    return result
   end
 
   def self.send_reminder_for_upcoming_in_days(days)
@@ -426,7 +421,6 @@ class Pd::Workshop < ActiveRecord::Base
     raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
 
     workshop.send_exit_surveys
-    p 'exit survey sent'
 
     workshop.update!(processed_at: Time.zone.now)
   end
