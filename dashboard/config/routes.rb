@@ -613,9 +613,9 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
-      patch 'user_school_infos/:id', to: 'user_school_infos#update'
+      patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
-      patch 'users/:id/update_user_info', to: 'users#update_user_info'
+      patch 'user_school_infos/:id/update_end_date_last_seen_school_info_interstitial', to: 'user_school_infos#update_end_date_last_seen_school_info_interstitial'
 
       resources :teacher_feedbacks, only: [:create] do
         collection do
