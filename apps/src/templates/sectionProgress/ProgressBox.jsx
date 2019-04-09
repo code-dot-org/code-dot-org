@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
-import experiments from "@cdo/apps/util/experiments";
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   box: {
@@ -31,11 +31,10 @@ export default class ProgressBox extends Component {
 
     const boxWithBorderStyle = {
       ...styles.box,
-      borderColor: started ?
-        (assessment && experiments.isEnabled(experiments.MINI_RUBRIC_2019)
+      borderColor: started
+        ? assessment && experiments.isEnabled(experiments.MINI_RUBRIC_2019)
           ? color.level_submitted
           : color.level_perfect
-        )
         : color.light_gray,
       ...this.props.style
     };
