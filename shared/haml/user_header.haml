@@ -66,7 +66,6 @@
     .header_button.header_user
       %span= I18n.t("#{loc_prefix}signin")
 
-
 :javascript
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';
   // Use function closure to avoid cluttering global namespace.
