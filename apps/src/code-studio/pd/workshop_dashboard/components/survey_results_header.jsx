@@ -175,6 +175,15 @@ const freeResponseQuestions = [
   }
 ];
 
+const years = [
+  '2013-2014',
+  '2014-2015',
+  '2015-2016',
+  '2016-2017',
+  '2017-2018',
+  '2018-2019'
+];
+
 export default class SurveyResultsHeader extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired
@@ -217,7 +226,11 @@ export default class SurveyResultsHeader extends React.Component {
     }
   }
 
-  filterWorkshops(course, year = '2018-2019', preselectedWorkshop = undefined) {
+  filterWorkshops(
+    course,
+    year = years[years.length - 1],
+    preselectedWorkshop = undefined
+  ) {
     let filteredWorkshops = _.filter(this.props.workshops, function(workshop) {
       return workshop.course === course && workshop.school_year === year;
     });
@@ -544,14 +557,7 @@ export default class SurveyResultsHeader extends React.Component {
       );
     }
 
-    const yearOptions = [
-      '2013-2014',
-      '2014-2015',
-      '2015-2016',
-      '2016-2017',
-      '2017-2018',
-      '2018-2019'
-    ].map((year, i) => {
+    const yearOptions = years.map((year, i) => {
       return (
         <option key={i} value={year}>
           {year}
