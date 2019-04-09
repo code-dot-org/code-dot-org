@@ -21,12 +21,30 @@ class SchoolInfoConfirmationDialog extends Component {
 
   constructor(props) {
     super(props);
-
     this.state = {
       showSchoolInterstitial: false,
       schoolName: props.schoolName,
       isOpen: true
     };
+  }
+
+  static defaultProps = {
+    onUpdate: () => {},
+    schoolName: ''
+  };
+
+  componentDidMount() {
+    const {schoolName} = this.state;
+    if (!schoolName && schoolName.length > 0) {
+      fetch('/dashboardapi/v1/users/me/school_name')
+        .then(response => response.json())
+        .then(data => {
+          this.setState({
+            schoolName: data.school_name
+          });
+        })
+        .catch(error => this.setState({error}));
+    }
   }
 
   handleUpdateClick = () => {
@@ -35,10 +53,13 @@ class SchoolInfoConfirmationDialog extends Component {
 
   renderInitialContent() {
     const {onConfirm} = this.props;
+    const {schoolName} = this.state;
     return (
       <Body>
         <div>
-          <p>{i18n.schoolInfoDialogDescription()} Lincoln Elementary School?</p>
+          <p>
+            {i18n.schoolInfoDialogDescription()} {schoolName}
+          </p>
         </div>
         <Button
           text={i18n.schoolInfoDialogUpdate()}
