@@ -32,6 +32,7 @@ export default class TeacherHomepage extends Component {
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
     isEnglish: PropTypes.bool.isRequired,
+    locale: PropTypes.string,
     showCensusBanner: PropTypes.bool.isRequired,
     ncesSchoolId: PropTypes.string,
     censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
@@ -154,7 +155,12 @@ export default class TeacherHomepage extends Component {
     } = this.props;
     const {ncesSchoolId, censusQuestion, schoolYear} = this.props;
     const {teacherId, teacherName, teacherEmail} = this.props;
-    const {canViewAdvancedTools, queryStringOpen, isEnglish} = this.props;
+    const {
+      canViewAdvancedTools,
+      queryStringOpen,
+      isEnglish,
+      locale
+    } = this.props;
 
     // Show the special announcement for now.
     const showSpecialAnnouncement = true;
@@ -218,7 +224,7 @@ export default class TeacherHomepage extends Component {
             <br />
           </div>
         )}
-        <TeacherSections queryStringOpen={queryStringOpen} />
+        <TeacherSections queryStringOpen={queryStringOpen} locale={locale} />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}

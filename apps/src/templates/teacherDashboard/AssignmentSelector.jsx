@@ -67,7 +67,8 @@ export default class AssignmentSelector extends Component {
     chooseLaterOption: PropTypes.bool,
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    locale: PropTypes.string
   };
 
   /**
