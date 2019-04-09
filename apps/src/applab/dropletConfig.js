@@ -590,7 +590,7 @@ export var blocks = [
     params: [
       '"mytable"',
       '{}',
-      "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"
+      "function(records) {\n  for (var i =0; i < records.length; i++) {\n    console.log(records[i].id + ': ' + records[i].name);\n  }\n}"
     ],
     allowFunctionDrop: {2: true, 3: true}
   },

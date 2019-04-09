@@ -99,6 +99,15 @@ class RegionalPartner < ActiveRecord::Base
     end
   end
 
+  # If there is a priority deadline date and it is still upcoming, then return it.  Otherwise return nil.
+  def upcoming_priority_deadline_date
+    if apps_priority_deadline_date && apps_priority_deadline_date > Time.zone.now
+      Date.parse(apps_priority_deadline_date).strftime('%B %e, %Y')
+    else
+      nil
+    end
+  end
+
   def summer_workshops_earliest_apps_open_date
     if apps_open_date_csd_teacher || apps_open_date_csp_teacher
       Date.parse([apps_open_date_csd_teacher, apps_open_date_csp_teacher].compact.min).strftime('%B %e, %Y')
