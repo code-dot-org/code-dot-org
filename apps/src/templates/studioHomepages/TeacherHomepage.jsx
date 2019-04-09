@@ -151,11 +151,13 @@ export default class TeacherHomepage extends Component {
       courses,
       topCourse,
       announcement,
-      joinedSections
-    } = this.props;
-    const {ncesSchoolId, censusQuestion, schoolYear} = this.props;
-    const {teacherId, teacherName, teacherEmail} = this.props;
-    const {
+      joinedSections,
+      ncesSchoolId,
+      censusQuestion,
+      schoolYear,
+      teacherId,
+      teacherName,
+      teacherEmail,
       canViewAdvancedTools,
       queryStringOpen,
       isEnglish,
