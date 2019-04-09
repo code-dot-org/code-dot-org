@@ -1202,25 +1202,31 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
   end
 
-  test 'blocked workshops do not get exit email' do
-    Pd::Workshop::BLOCKED_CSF_201_WORKSHOPS.each do |id|
-      workshop = create :pd_ended_workshop
-      workshop.update(id: id)
-    end
+  test 'pilot csf201 workshops do not get exit email' do
+    skip "Skip this test when runs after #{CSF_201_PILOT_END_DATE}" unless
+      DateTime.now < CSF_201_PILOT_END_DATE + 3.days
 
-    Pd::Workshop.expects(:send_exit_surveys).never
+    ended_pilot_workshop = create :pd_ended_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
+      num_sessions: 1, sessions_from: CSF_201_PILOT_END_DATE - 1.day
 
-    Pd::Workshop::BLOCKED_CSF_201_WORKSHOPS.each {|id| Pd::Workshop.process_ended_workshop_async id}
+    Pd::Workshop.any_instance.expects(:send_exit_surveys).never
+    Pd::Workshop.process_ended_workshop_async ended_pilot_workshop.id
+
+    # TODO: remove
+    ended_workshop = create :pd_ended_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
+      num_sessions: 1, sessions_from: CSF_201_PILOT_END_DATE
+
+    Pd::Workshop.any_instance.expects(:send_exit_surveys)
+    Pd::Workshop.process_ended_workshop_async ended_workshop.id
   end
 
-  test 'blocked workshops do not get reminder email' do
-    return true if Pd::Workshop::BLOCKED_CSF_201_WORKSHOPS.blank?
+  test 'pilot csf201 workshops do not get reminder email' do
+    skip "Skip this test when runs after #{CSF_201_PILOT_END_DATE}" unless
+      DateTime.now < CSF_201_PILOT_END_DATE
 
-    Pd::Workshop::BLOCKED_CSF_201_WORKSHOPS.each do |id|
-      workshop = create :pd_workshop, num_sessions: 1, sessions_from: Time.now
-      workshop.update(id: id)
-      workshop.sessions.first.update(pd_workshop_id: id)
-    end
+    create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
+      num_sessions: 1, sessions_from: DateTime.now
+
     assert Pd::Workshop.scheduled_start_in_days(0).present?
 
     Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).never

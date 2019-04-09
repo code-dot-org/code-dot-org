@@ -88,8 +88,6 @@ module Pd
       COURSE_CSP => {course_name: 'csp-2018'}
     }.freeze
 
-    # Pilot CSF 201 workshops from 4/24/19 to 5/6/19
-    # that we want to block reminders and exit emails
-    BLOCKED_CSF_201_WORKSHOPS = [6545, 6410, 6543]
+    CSF_201_PILOT_END_DATE = Date.new(2019, 5, 20)
   end
 end
