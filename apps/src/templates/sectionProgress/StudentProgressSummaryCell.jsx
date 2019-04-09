@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import ProgressBox from '../sectionProgress/ProgressBox';
-import {summarizeProgressInStage, stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  summarizeProgressInStage,
+  stageIsAllAssessment
+} from '@cdo/apps/templates/progress/progressHelpers';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
