@@ -96,12 +96,21 @@ export default class AssignmentSelector extends Component {
       .reverse()
       .value();
 
-    // Because the versions are sorted most recent first, we can just look for
-    // the first stable version.
-    const recommendedVersion = versions.find(v => v.isStable);
+    // We recommend the user use the latest stable version that is supported in their
+    // locale. If no versions support their locale, we recommend the latest stable version.
+    // Versions are sorted from most to least recent, so the first stable version will be the latest.
+    let recommendedVersion = versions.find(v => {
+      const localeSupported =
+        (v.locales || []).includes(this.props.locale) ||
+        this.props.locale === 'English';
+
+      return v.isStable && localeSupported;
+    });
+    recommendedVersion = recommendedVersion || versions.find(v => v.isStable);
     if (recommendedVersion) {
       recommendedVersion.isRecommended = true;
     }
+
     const selectedVersion =
       versions.find(v => v.year === selectedVersionYear) ||
       recommendedVersion ||
