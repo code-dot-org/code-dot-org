@@ -4,14 +4,46 @@ import {expect} from '../../util/configuredChai';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 describe('UnsafeRenderedMarkdown', () => {
+  it('supports commonmark', () => {
+    const wrapper = shallow(
+      <UnsafeRenderedMarkdown markdown={'1) test\n2) list'} />
+    );
+
+    expect(wrapper.html()).to.equal(
+      '<div><ol>\n<li>test</li>\n<li>list</li>\n</ol></div>'
+    );
+  });
+
+  it('wraps the output in a div regardless of the number of children', () => {
+    const doubleParagraphWrapper = shallow(
+      <UnsafeRenderedMarkdown markdown={'one paragraph\n\nanother paragraph'} />
+    );
+
+    expect(doubleParagraphWrapper.html()).to.equal(
+      '<div><p>one paragraph</p>\n<p>another paragraph</p></div>'
+    );
+
+    const singleParagraphWrapper = shallow(
+      <UnsafeRenderedMarkdown markdown="one paragraph" />
+    );
+
+    expect(singleParagraphWrapper.html()).to.equal(
+      '<div><p>one paragraph</p></div>'
+    );
+  });
+
   it('will render basic markdown', () => {
     const wrapper = shallow(
       <UnsafeRenderedMarkdown markdown="**some** _basic_ [inline](markdown)" />
     );
 
     expect(wrapper.html()).to.equal(
-      '<div><p><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></p>\n</div>'
+      '<div><p><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></p></div>'
     );
+  });
+
+  it('does not render fragments', () => {
+    // Note this is a feature we may want to conditionally enable in the future
   });
 
   it('will render raw html', () => {
@@ -102,4 +134,6 @@ describe('UnsafeRenderedMarkdown', () => {
       '<div><iframe src="javascript:alert(\'hello\')"></iframe>\n</div>'
     );
   });
+
+  it('supports pendantic', () => {});
 });
