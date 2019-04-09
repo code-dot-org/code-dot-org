@@ -90,6 +90,9 @@ level 'Dance Party 6_2019', progression: 'Mini-Project: Alien Dance Party'
 level 'Dance Party 7_2019', progression: 'Mini-Project: Alien Dance Party'
 level 'Dance Party Freeplay_2019', progression: 'Free Play'
 
+stage 'Private and Personal Information', flex_category: 'csf_digcit'
+level 'courseE_unplugged_privateInformation_2019'
+
 stage 'About Me', flex_category: 'csf_digcit'
 level 'courseE_aboutme_1', progression: 'Free Play'
 level 'courseE_aboutme_2', progression: 'Mini-project: Interactive Poster'
@@ -100,9 +103,6 @@ level 'courseE_aboutme_6', progression: 'Mini-project: Interactive Poster'
 
 stage 'Access Ability', flex_category: 'csf_impacts'
 level 'courseE_unplugged_accessAbility_2019'
-
-stage 'Private and Personal Information', flex_category: 'csf_digcit'
-level 'courseE_unplugged_privateInformation_2019'
 
 stage 'Nested Loops in Artist', flex_category: 'csf_nested_loops'
 level 'courseD_artist_nestedLoops1_2019', progression: 'Practice'
