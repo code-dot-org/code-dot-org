@@ -275,12 +275,12 @@ describe('ProgressBubble', () => {
     experiments.isEnabled.restore();
   });
 
-  it('does not show assessment icon on bubble on assessment level, in experiment, if progressView is true', () => {
+  it('does not show assessment icon on bubble on assessment level, in experiment, if dontShowAssessmentIcon is true', () => {
     sinon.stub(experiments, 'isEnabled').returns(true);
     const wrapper = shallow(
       <ProgressBubble
         {...defaultProps}
-        progressView={true}
+        dontShowAssessmentIcon={true}
         level={{
           ...defaultProps.level,
           kind: LevelKind.assessment

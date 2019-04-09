@@ -122,7 +122,7 @@ class ProgressBubble extends React.Component {
     pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
-    progressView: PropTypes.bool
+    dontShowAssessmentIcon: PropTypes.bool
   };
 
   static defaultProps = {
@@ -138,7 +138,7 @@ class ProgressBubble extends React.Component {
       currentLocation,
       stageTrophyEnabled,
       pairingIconEnabled,
-      progressView
+      dontShowAssessmentIcon
     } = this.props;
 
     const levelIsAssessment = isLevelAssessment(level);
@@ -250,7 +250,7 @@ class ProgressBubble extends React.Component {
             {experiments.isEnabled(experiments.MINI_RUBRIC_2019) &&
               levelIsAssessment &&
               !smallBubble &&
-              !progressView && (
+              !dontShowAssessmentIcon && (
                 <span className="fa-stack" style={styles.assessmentIcon}>
                   <FontAwesome
                     icon="circle"
