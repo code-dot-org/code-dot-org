@@ -98,7 +98,9 @@ export class TeacherFeedback extends Component {
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     serverLevelId: PropTypes.number,
     teacher: PropTypes.number,
-    displayKeyConcept: PropTypes.bool
+    displayKeyConcept: PropTypes.bool,
+    latestFeedback: PropTypes.array,
+    token: PropTypes.string
   };
 
   constructor(props) {
@@ -109,57 +111,30 @@ export class TeacherFeedback extends Component {
     this.onRubricChange = this.onRubricChange.bind(this);
 
     this.state = {
-      comment: '',
-      performance: null,
+      comment:
+        this.props.latestFeedback[0] && this.props.latestFeedback[0].comment
+          ? this.props.latestFeedback[0].comment
+          : '',
+      performance:
+        this.props.latestFeedback[0] && this.props.latestFeedback[0].performance
+          ? this.props.latestFeedback[0].performance
+          : null,
       studentId: studentId,
-      latestFeedback: [],
+      latestFeedback: this.props.latestFeedback
+        ? this.props.latestFeedback
+        : [],
       submitting: false,
-      errorState: ErrorType.NoError,
-      token: null
+      errorState: ErrorType.NoError
     };
   }
 
   componentDidMount = () => {
-    const {user, serverLevelId, teacher} = this.props;
-    const {studentId} = this.state;
-
     window.addEventListener('beforeunload', event => {
       if (!this.feedbackIsUnchanged()) {
         event.preventDefault();
         event.returnValue = i18n.feedbackNotSavedWarning();
       }
     });
-
-    if (this.props.viewAs === ViewType.Student) {
-      $.ajax({
-        url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${user}&level_id=${serverLevelId}`,
-        method: 'GET',
-        contentType: 'application/json;charset=UTF-8'
-      }).done(data => {
-        this.setState({
-          latestFeedback: data,
-          comment: data[0].comment,
-          performance: data[0].performance
-        });
-      });
-    } else if (!this.props.disabledMode) {
-      $.ajax({
-        url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${studentId}&level_id=${serverLevelId}&teacher_id=${teacher}`,
-        method: 'GET',
-        contentType: 'application/json;charset=UTF-8'
-      })
-        .done((data, textStatus, request) => {
-          this.setState({
-            latestFeedback: request.status === 204 ? [] : [data],
-            token: request.getResponseHeader('csrf-token'),
-            comment: request.status === 204 ? '' : data.comment,
-            performance: request.status === 204 ? null : data.performance
-          });
-        })
-        .fail((jqXhr, status) => {
-          this.setState({errorState: ErrorType.Load});
-        });
-    }
   };
 
   componentWillUnmount() {
@@ -195,7 +170,7 @@ export class TeacherFeedback extends Component {
       contentType: 'application/json;charset=UTF-8',
       dataType: 'json',
       data: JSON.stringify({teacher_feedback: payload}),
-      headers: {'X-CSRF-Token': this.state.token}
+      headers: {'X-CSRF-Token': this.props.token}
     })
       .done(data => {
         this.setState({
