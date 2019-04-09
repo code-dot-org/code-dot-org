@@ -1,5 +1,4 @@
 @eyes
-@skip
 Feature: Feedback Tab Visibility
 
   Background:

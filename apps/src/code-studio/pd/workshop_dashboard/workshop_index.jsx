@@ -135,7 +135,7 @@ export class WorkshopIndex extends React.Component {
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('In Progress')}
         />
-        <h2>Upcoming</h2>
+        <h2>Not Started</h2>
         <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}
           queryParams={filterParams.notStarted}

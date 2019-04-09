@@ -102,7 +102,6 @@ group :development, :test do
   gem 'timecop'
 
   # For UI testing.
-  gem 'chromedriver-helper', '~> 0.0.7'
   gem 'cucumber'
   gem 'eyes_selenium'
   gem 'minitest', '~> 5.5'
@@ -114,6 +113,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'spring'
   gem 'spring-commands-testunit'
+  gem 'webdrivers', '~> 3.0'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
