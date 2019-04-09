@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import remark2react from 'remark-react';
 
 import Parser from '@code-dot-org/redactable-markdown';
 
@@ -25,10 +26,19 @@ export default class UnsafeRenderedMarkdown extends React.Component {
   };
 
   render() {
-    const processedMarkdown = remarkParser.sourceToHtml(this.props.markdown);
+    const processedMarkdown = remarkParser
+      .getParser()
+      .use(remark2react, {
+        toHast: {
+          allowDangerousHTML: true
+        }
+      })
+      .processSync(this.props.markdown).contents;
 
-    /* eslint-disable react/no-danger */
-    return <div dangerouslySetInnerHTML={{__html: processedMarkdown}} />;
-    /* eslint-enable react/no-danger */
+    if (processedMarkdown.type === 'div') {
+      return processedMarkdown;
+    } else {
+      return <div>{processedMarkdown}</div>;
+    }
   }
 }
