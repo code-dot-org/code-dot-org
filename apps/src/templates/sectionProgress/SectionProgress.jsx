@@ -95,9 +95,10 @@ class SectionProgress extends Component {
         wrapper="span"
         effect="solid"
       >
-        {stageIsAllAssessment(stage.levels) && experiments.isEnabled(experiments.MINI_RUBRIC_2019) && (
-          <FontAwesome icon="check-circle" style={styles.icon}/>
-        )}
+        {stageIsAllAssessment(stage.levels) &&
+          experiments.isEnabled(experiments.MINI_RUBRIC_2019) && (
+            <FontAwesome icon="check-circle" style={styles.icon} />
+          )}
         {stage.name}
       </ReactTooltip>
     ));
