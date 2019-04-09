@@ -41,7 +41,7 @@ class StudentProgressSummaryCell extends Component {
           incomplete={incompletePixels}
           imperfect={imperfectPixels}
           perfect={perfectPixels}
-          assessment={assessmentStage}
+          stageIsAllAssessment={assessmentStage}
         />
       </div>
     );
