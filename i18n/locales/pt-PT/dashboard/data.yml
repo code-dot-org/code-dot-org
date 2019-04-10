@@ -390,6 +390,7 @@ pt:
         mc_2017_congratulations: Minecraft Hora de Código - Parabéns
         CSF_loops_AB: ciclos
         csd_pair_programming: Programação em duplas
+        csd_applab_parameters: Funções com parâmetros
     callout:
       text:
         drag_blocks: Arrasta um bloco "mover" e encaixa-o debaixo de outro bloco
