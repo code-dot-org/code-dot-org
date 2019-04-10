@@ -468,6 +468,11 @@ class Level < ActiveRecord::Base
     false
   end
 
+  # Currently only Web Lab, Game Lab and App Lab levels can have teacher feedback
+  def can_have_feedback?
+    ["Applab", "Gamelab", "Weblab"].include?(type)
+  end
+
   # Returns an array of all the contained levels
   # (based on the contained_level_names property)
   def contained_levels
