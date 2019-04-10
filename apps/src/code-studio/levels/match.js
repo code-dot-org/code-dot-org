@@ -1,4 +1,9 @@
 /* global jQuery, CDOSounds */
+
+import React from 'react';
+import {MatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {registerGetResult} from './codeStudioLevels';
+
 jQuery.fn.swap = function(b) {
   // method from: http://blog.pengoworks.com/index.cfm/2008/9/24/A-quick-and-dirty-swap-method-for-jQuery
   b = jQuery(b)[0];
@@ -20,10 +25,46 @@ export default class Match {
 
     // Whether this is the only puzzle on a page, or part of a group of them.
     this.standalone = standalone;
+
+    $(document).ready(() => this.ready());
+  }
+
+  ready() {
+    if (this.standalone) {
+      registerGetResult(this.getResult.bind(this));
+    }
   }
 
   getResult() {
-    throw 'getResult not implemented';
+    let wrongAnswer = false;
+
+    const elements = $('#slots li');
+
+    const response = [];
+
+    for (let index = 0; index < elements.length; index++) {
+      const originalIndex = elements[index].getAttribute('originalIndex');
+      response.push(originalIndex);
+      if (originalIndex === null) {
+        // nothing dragged in this slot yet
+        wrongAnswer = true;
+
+        $('#xmark_' + index).hide();
+      } else if (originalIndex !== String(index)) {
+        // wrong answer
+        wrongAnswer = true;
+
+        $('#xmark_' + index).show();
+      } else {
+        // correct answer
+        $('#xmark_' + index).hide();
+      }
+    }
+    return {
+      response: response,
+      result: !wrongAnswer,
+      errorDialog: wrongAnswer ? <MatchErrorDialog /> : null
+    };
   }
   getAppName() {
     return 'match';
