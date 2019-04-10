@@ -1186,6 +1186,8 @@ tr:
     csp_variables: Değişkenler
     csp_conditionals: Koşullar
     csp_functions: Fonksiyonlar
+    csp_lists: Listeler
+    csp_loops: Döngüler
     dlp: Yansıma İstemleri
   external_links:
     disclaimer: Yasal uyarı
