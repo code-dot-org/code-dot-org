@@ -437,8 +437,8 @@ class Script < ActiveRecord::Base
   end
 
   # Given a script family name, return a dummy Script with redirect_to field
-  # pointing toward the latest stable script in that family, or to a specific
-  # version_year if one is specified.
+  # pointing toward the latest stable script assigned to the user in that family, or to a specific
+  # version_year and locale if specified.
   # @param family_name [String] The name of the script family to search in.
   # @param version_year [String] Optional. Version year to return.
   # @param user [User] Optional. If provided, will attempt to retrieve latest stable script
