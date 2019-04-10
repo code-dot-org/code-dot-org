@@ -33,6 +33,9 @@ export default class Match {
     if (this.standalone) {
       registerGetResult(this.getResult.bind(this));
     }
+
+    const container = document.getElementById(this.id);
+    initMatch(container, this.standalone);
   }
 
   getResult() {
@@ -83,7 +86,7 @@ export default class Match {
 //   * only elements within the container are marked draggable / droppable
 //   * answers are only droppable on slots within the same container
 //   * answers cannot be dragged outside of the container.
-export function initMatch(container, enableSounds = false) {
+function initMatch(container, enableSounds = false) {
   $(container)
     .find('.mainblock #answers li')
     .draggable({revert: 'invalid', stack: '.answer', containment: container});
