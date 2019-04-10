@@ -27,15 +27,19 @@ class Concept < ActiveRecord::Base
 
   def self.by_name(name)
     (@@name_cache ||= Concept.all.index_by(&:name))[name].try(:id)
+    Rails.cache.fetch('concepts/names/{name}') do
+      Concept.find_by_name(name).try(:id)
+    end
   end
 
   def self.cached
-    @@all_cache ||= Concept.all
+    Rails.cache.fetch('concepts/all') do
+      Script.all
+    end
   end
 
   def self.expire_cache
-    @@all_cache = nil
-    @@name_cache = nil
+    Rails.cache.delete_if {|key, _| key.start_with?("concepts/")}
   end
 
   CONCEPT_NAMES_BY_INDEX = %w(
