@@ -40,7 +40,7 @@ export default class Match {
   getResult() {
     let wrongAnswer = false;
 
-    const elements = $('#slots li');
+    const elements = $('.match_slots li');
 
     const response = [];
 
@@ -90,12 +90,12 @@ export default class Match {
     const enableSounds = this.standalone;
 
     $(container)
-      .find('.mainblock #answers li')
+      .find('.mainblock .match_answers li')
       .draggable({revert: 'invalid', stack: '.answer', containment: container});
 
     // set up the central list of empty slots.
     $(container)
-      .find('.mainblock #slots li')
+      .find('.mainblock .match_slots li')
       .droppable({
         activeClass: 'active',
         hoverClass: 'hover',
