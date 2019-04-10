@@ -7,8 +7,8 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {SingleLevelGroupDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import i18n from '@cdo/locale';
-import {initMatch} from '@cdo/apps/code-studio/levels/match';
-
+import Match, {initMatch} from '@cdo/apps/code-studio/levels/match';
+window.Match = Match;
 window.Multi = require('@cdo/apps/code-studio/levels/multi.js');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
 var saveAnswers = require('@cdo/apps/code-studio/levels/saveAnswers.js')
