@@ -1,18 +1,12 @@
 name 'courseE_project_exemplars_2019'
-title 'Test Markdown Textbook Page'
-description 'Test Markdown Textbook Page'
-markdown <<MARKDOWN
-# **In this lesson...**
-
-### Have you ever wondered what would happen if you put a loop *inside another loop*? 
-
-### It might just make you go loopy!
-
-### If a normal loop is good at repeating patterns, think about what a loop inside another loop could do! Let's explore!
-
----
-
-## **Blocks to Know**
-
-![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)
-MARKDOWN
+encrypted 'EXNLGFmQ0+sKoXyVtmbAI9dLij28kdGkL4vXjDBVM9qAdO+WKwZdplEUcrDt
+7keT2cvdG6l0iiN+aF0aC3Zkb7DuvtlilUJNItnjwSKJTphbp2hVZnk0AQrR
+/n38DFAXKS560IujDY1AUzlQGYdPNFNp/OTKHW48UNf+/DG5dPIEAp5IXtJn
+gVZSDApqJjJPjJynyIhWPMclubXDki/rggzWOn03eP6ej2EV48Dmz3K7mQ6X
+eVDqs4NaKPoCH30mWQhbbaU3358kzhXq26P0wc2MHy2usdcvqUgqAkRWh3IG
+NDGTLTwHHg3I+YovhvvWEIWn4/qkJqlczcyaX+9QaFRFRH9Z8CEbVGVMG+7Q
+VWKV5rLZmAftHnuQqT53dVrqKmvVSK9h9kuRiOm5Xy/ztaPTXIrgHtNBg73q
+muUDErlDcGfVDj++7E3ovlwTf4o8MqkS2w0WDYX6up/W0gFLb7vduQJpYku4
+ga8X6uT2vX+4BwnYmquOtirKYHLhizEpQnCZIBfPY/V1JCHF5i9UsV+GUy9N
+6l4j9YuVizxAvDHbN9bEFoC6VX6rpKpGrhGw
+'
