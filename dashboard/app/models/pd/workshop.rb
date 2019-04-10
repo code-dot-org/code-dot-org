@@ -331,10 +331,20 @@ class Pd::Workshop < ActiveRecord::Base
     ].include? subject
   end
 
+  def self.csf_201_pilot?(workshop)
+    workshop.csf? &&
+      workshop.subject == SUBJECT_CSF_201 &&
+      workshop.sessions.present? &&
+      workshop.sessions.first.start < CSF_201_PILOT_END_DATE
+  end
+
   def self.send_reminder_for_upcoming_in_days(days)
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
     scheduled_start_in_days(days).each do |workshop|
+      # Don't send emails to CSF 201 pilot workshops
+      next if csf_201_pilot?(workshop)
+
       workshop.enrollments.each do |enrollment|
         email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
         email.deliver_now
@@ -407,6 +417,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   def self.process_ended_workshop_async(id)
     workshop = Pd::Workshop.find(id)
+    return if csf_201_pilot?(workshop)
     raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
 
     workshop.send_exit_surveys
