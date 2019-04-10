@@ -11,7 +11,8 @@ import {
   getIconForLevel,
   stageLocked,
   summarizeProgressInStage,
-  isLevelAssessment
+  isLevelAssessment,
+  stageIsAllAssessment
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
@@ -236,7 +237,24 @@ describe('progressHelpers', () => {
     });
   });
 
-  describe('summarizeProgressInState', () => {
+  describe('stageIsAllAssessment', () => {
+    it('returns true if all the levels are of kind assessment', () => {
+      const levels = fakeLevels(3);
+      levels[0].kind = LevelKind.assessment;
+      levels[1].kind = LevelKind.assessment;
+      levels[2].kind = LevelKind.assessment;
+      assert.equal(stageIsAllAssessment(levels), true);
+    });
+    it('returns false if not all the levels are of kind assessment', () => {
+      const levels = fakeLevels(3);
+      levels[0].kind = LevelKind.unplugged;
+      levels[1].kind = LevelKind.puzzle;
+      levels[2].kind = LevelKind.assessment;
+      assert.equal(stageIsAllAssessment(levels), false);
+    });
+  });
+
+  describe('summarizeProgressInStage', () => {
     it('summarizes all untried levels', () => {
       const levels = fakeLevels(3);
       const summarizedStage = summarizeProgressInStage(levels);
