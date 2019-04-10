@@ -3565,6 +3565,8 @@ en:
         Binary Drawing: Binary Drawing
       courseE_external_ramp14:
         Good Job!: Good Job!
+      courseE_project_exemplars_2019:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_external_ramp14: {}
       courseF_external_variableConstant: {}
       courseF_external_variableConstant_2018: {}
@@ -4286,6 +4288,17 @@ en:
       test123: {}
       text compression intro: {}
       text compression lesson plan: {}
+      timeforcs_demo_c1_1: {}
+      timeforcs_demo_c1_2: {}
+      timeforcs_demo_c1_3: {}
+      timeforcs_demo_c1_4: {}
+      timeforcs_demo_c1_5: {}
+      timeforcs_demo_c2_1: {}
+      timeforcs_demo_c2_2: {}
+      timeforcs_demo_c2_3: {}
+      timeforcs_demo_c2_4: {}
+      timeforcs_demo_c2_5: {}
+      timeforcs_demo_c3_1: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
       unique level name here:
@@ -5827,6 +5840,16 @@ en:
         an ordered sequence of characters: an ordered sequence of characters
         joins together two or more strings end-to-end to make a new string: joins together two or more strings end-to-end to make a new string
         stores a value: stores a value
+      csp-20-21-u5-assess-lists:
+        '0': '0'
+        '15': '15'
+        '32': '32'
+        '64': '64'
+        Match the index with the value: Match the index with the value
+        myNumbers[0]: myNumbers[0]
+        myNumbers[1]: myNumbers[1]
+        myNumbers[3]: myNumbers[3]
+        myNumbers[4]: myNumbers[4]
       parts of contract:
         (yearbook-picture "Sally" 1992): (yearbook-picture "Sally" 1992)
         Here is a contract for a new function. Match each item with the word that describes it.: Here is a contract for a new function. Match each item with the word that describes it.

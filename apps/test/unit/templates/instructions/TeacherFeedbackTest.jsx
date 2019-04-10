@@ -11,7 +11,8 @@ const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   viewAs: 'Teacher',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: false
+  displayKeyConcept: false,
+  latestFeedback: []
 };
 const TEACHER_NOT_FEEDBACK_RUBRIC_PROPS = {
   user: 5,
@@ -27,7 +28,8 @@ const TEACHER_NOT_FEEDBACK_RUBRIC_PROPS = {
   viewAs: 'Teacher',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: true
+  displayKeyConcept: true,
+  latestFeedback: []
 };
 
 const TEACHER_FEEDBACK_RUBRIC_PROPS = {
@@ -44,7 +46,8 @@ const TEACHER_FEEDBACK_RUBRIC_PROPS = {
   viewAs: 'Teacher',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: false
+  displayKeyConcept: false,
+  latestFeedback: []
 };
 
 const STUDENT_FEEDBACK_NO_RUBRIC_PROPS = {
@@ -55,7 +58,8 @@ const STUDENT_FEEDBACK_NO_RUBRIC_PROPS = {
   viewAs: 'Student',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: false
+  displayKeyConcept: false,
+  latestFeedback: []
 };
 const STUDENT_NO_FEEDBACK_RUBRIC_PROPS = {
   user: 1,
@@ -71,7 +75,8 @@ const STUDENT_NO_FEEDBACK_RUBRIC_PROPS = {
   viewAs: 'Student',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: true
+  displayKeyConcept: true,
+  latestFeedback: []
 };
 
 const STUDENT_FEEDBACK_RUBRIC_PROPS = {
@@ -88,7 +93,8 @@ const STUDENT_FEEDBACK_RUBRIC_PROPS = {
   viewAs: 'Student',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: false
+  displayKeyConcept: false,
+  latestFeedback: []
 };
 
 describe('TeacherFeedback', () => {
@@ -110,12 +116,8 @@ describe('TeacherFeedback', () => {
         <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} />
       );
 
-      // No past feedback
       wrapper.setState({
-        comment: '',
-        performance: null,
         studentId: 1,
-        latestFeedback: [],
         submitting: false
       });
 
@@ -153,25 +155,24 @@ describe('TeacherFeedback', () => {
 
     it('shows the correct components if teacher is giving feedback, on a level with a rubric, with previous feedback', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} />
+        <TeacherFeedback
+          {...TEACHER_FEEDBACK_RUBRIC_PROPS}
+          latestFeedback={[
+            {
+              comment: 'Good work!',
+              created_at: '2019-03-26T19:56:53.000Z',
+              id: 5,
+              level_id: 123,
+              performance: 'meets',
+              student_id: 1,
+              teacher_name: 'Tim The Teacher'
+            }
+          ]}
+        />
       );
 
-      // Previous Feedback
       wrapper.setState({
-        comment: 'Good work!',
-        performance: 'meets',
         studentId: 1,
-        latestFeedback: [
-          {
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: 'meets',
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }
-        ],
         submitting: false
       });
 
@@ -210,12 +211,8 @@ describe('TeacherFeedback', () => {
         <TeacherFeedback {...TEACHER_NOT_FEEDBACK_RUBRIC_PROPS} />
       );
 
-      // No past feedback
       wrapper.setState({
-        comment: '',
-        performance: null,
         studentId: 1,
-        latestFeedback: [],
         submitting: false
       });
 
@@ -248,12 +245,8 @@ describe('TeacherFeedback', () => {
         <TeacherFeedback {...TEACHER_FEEDBACK_NO_RUBRIC_PROPS} />
       );
 
-      // No past feedback
       wrapper.setState({
-        comment: '',
-        performance: null,
         studentId: 1,
-        latestFeedback: [],
         submitting: false
       });
 
@@ -283,12 +276,8 @@ describe('TeacherFeedback', () => {
         <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />
       );
 
-      // Student Has Feedback
       wrapper.setState({
-        comment: '',
-        performance: null,
         studentId: 1,
-        latestFeedback: [],
         submitting: false
       });
 
@@ -317,25 +306,24 @@ describe('TeacherFeedback', () => {
     });
     it('shows the correct components if student is on a level with no rubric, where a comment was given by the teacher', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...STUDENT_FEEDBACK_NO_RUBRIC_PROPS} />
+        <TeacherFeedback
+          {...STUDENT_FEEDBACK_NO_RUBRIC_PROPS}
+          latestFeedback={[
+            {
+              comment: 'Good work!',
+              created_at: '2019-03-26T19:56:53.000Z',
+              id: 5,
+              level_id: 123,
+              performance: null,
+              student_id: 1,
+              teacher_name: 'Tim The Teacher'
+            }
+          ]}
+        />
       );
 
-      // Student Has Feedback
       wrapper.setState({
-        comment: 'Good work!',
-        performance: null,
         studentId: 1,
-        latestFeedback: [
-          {
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: 'meets',
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }
-        ],
         submitting: false
       });
 
@@ -358,25 +346,24 @@ describe('TeacherFeedback', () => {
 
     it('shows the correct components if student is on a level with a rubric, where a comment was given by the teacher', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...STUDENT_FEEDBACK_RUBRIC_PROPS} />
+        <TeacherFeedback
+          {...STUDENT_FEEDBACK_RUBRIC_PROPS}
+          latestFeedback={[
+            {
+              comment: 'Good work!',
+              created_at: '2019-03-26T19:56:53.000Z',
+              id: 5,
+              level_id: 123,
+              performance: null,
+              student_id: 1,
+              teacher_name: 'Tim The Teacher'
+            }
+          ]}
+        />
       );
 
-      // Student Has Feedback
       wrapper.setState({
-        comment: 'Good work!',
-        performance: null,
         studentId: 1,
-        latestFeedback: [
-          {
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: 'meets',
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }
-        ],
         submitting: false
       });
 
@@ -409,25 +396,24 @@ describe('TeacherFeedback', () => {
 
     it('shows the correct components if student is on a level with a rubric, where a comment and performance level was given by the teacher', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...STUDENT_FEEDBACK_RUBRIC_PROPS} />
+        <TeacherFeedback
+          {...STUDENT_FEEDBACK_RUBRIC_PROPS}
+          latestFeedback={[
+            {
+              comment: 'Good work!',
+              created_at: '2019-03-26T19:56:53.000Z',
+              id: 5,
+              level_id: 123,
+              performance: 'meets',
+              student_id: 1,
+              teacher_name: 'Tim The Teacher'
+            }
+          ]}
+        />
       );
 
-      // Student Has Feedback
       wrapper.setState({
-        comment: 'Good work!',
-        performance: 'meets',
         studentId: 1,
-        latestFeedback: [
-          {
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: 'meets',
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }
-        ],
         submitting: false
       });
 
@@ -461,25 +447,24 @@ describe('TeacherFeedback', () => {
 
     it('shows the correct components if student is on a level with a rubric, where a performance level was given by the teacher', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...STUDENT_FEEDBACK_RUBRIC_PROPS} />
+        <TeacherFeedback
+          {...STUDENT_FEEDBACK_RUBRIC_PROPS}
+          latestFeedback={[
+            {
+              comment: '',
+              created_at: '2019-03-26T19:56:53.000Z',
+              id: 5,
+              level_id: 123,
+              performance: 'meets',
+              student_id: 1,
+              teacher_name: 'Tim The Teacher'
+            }
+          ]}
+        />
       );
 
-      // Student Has Feedback
       wrapper.setState({
-        comment: '',
-        performance: 'meets',
         studentId: 1,
-        latestFeedback: [
-          {
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: 'meets',
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }
-        ],
         submitting: false
       });
 
