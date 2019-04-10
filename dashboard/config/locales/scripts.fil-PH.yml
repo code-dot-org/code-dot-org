@@ -11455,6 +11455,8 @@ fil:
               name: Naka-nest na mga Loop sa Frozen
             Conditionals in Minecraft:
               name: Mga Kondisyonal sa Minecraft
+            Songwriting:
+              name: Pagsusulat ng Awit
         express-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
@@ -13534,6 +13536,16 @@ fil:
             new stage:
               name: bagong yugto
         csd-videos:
+          stages:
+            new stage:
+              name: bagong yugto
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Pag-crowdsourcing
+            Conditionals with Cards:
+              name: Mga Conditional gamit ang mga Card
+        csp7-pilot-staging:
           stages:
             new stage:
               name: bagong yugto
