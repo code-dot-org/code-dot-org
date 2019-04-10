@@ -215,16 +215,6 @@ class ProjectsController < ApplicationController
     render layout: nil
   end
 
-  GALLERY_PER_PAGE = 5
-
-  def angular
-    if current_user
-      @gallery_activities =
-        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
-    end
-    render template: "projects/projects", layout: nil
-  end
-
   def load
     if current_user.try(:admin)
       redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}

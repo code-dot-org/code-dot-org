@@ -31,7 +31,7 @@ Feature: Using the SectionActionDropdown
     And I create a new section
     And I open the section action dropdown
     And I press the child number 2 of class ".pop-up-menu-item"
-    And I wait until current URL contains "/print_signin_cards"
+    And I wait until current URL contains "/login_info"
 
   # * Add a section and then opens the edit dialog.
   #     * If the save button can be pressed, we are in the right dialog.
