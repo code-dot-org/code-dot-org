@@ -2,6 +2,34 @@
 hi:
   data:
     authored_hints:
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **मैं यह स्तर कैसे पास करूं?**
+
+          -   दो डांसर 100 के अलावा किसी और आकार में होने चाहिएं।
+
+          _यह स्तर 6 संगीत प्रविधियों के बाद समाप्त होता है।_
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **मैं यह स्तर कैसे पास करूं?**
+
+          -   कम से कम एक डांसर की रंगत बदलें।
+
+          _यह स्तर 8 संगीत प्रविधियों के बाद समाप्त होता है।_
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **मैं यह स्तर कैसे पास करूं?**
+
+          -   दो डांसर 100 के अलावा किसी और आकार में होने चाहिएं।
+
+          _यह स्तर 6 संगीत प्रविधियों के बाद समाप्त होता है।_
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **मैं यह स्तर कैसे पास करूं?**
+
+          -   कम से कम एक डांसर की रंगत बदलें।
+
+          _यह स्तर 8 संगीत प्रविधियों के बाद समाप्त होता है।_
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -37,7 +65,7 @@ hi:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -56,7 +84,7 @@ hi:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -75,7 +103,7 @@ hi:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -94,7 +122,7 @@ hi:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -241,7 +269,7 @@ hi:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -260,7 +288,7 @@ hi:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -279,7 +307,7 @@ hi:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -298,7 +326,7 @@ hi:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
