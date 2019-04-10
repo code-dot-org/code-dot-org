@@ -2,7 +2,7 @@ sk:
   data:
     game:
       name:
-        Unplug1: Úvod do vedy o počítačoch (informatiky)
+        Unplug1: Úvod do informatiky
         Maze: Bludisko
         Multi: Vyber správnu odpoveď
         Unplug2: Algoritmické myslenie
@@ -49,23 +49,23 @@ sk:
         if: Blok - Ak
         if_else: Blok Ak- tak
         loop_times: Blok Opakuj niekoľko krát
-        loop_until: Blok "Opakuj dovtedy kým"
+        loop_until: Blok "opakuj pokiaľ neplatí"
         loop_while: Blok Kým
         loop_for: Blok Počítadlo
         function: Funkcie
         parameters: Funkcie s parametrami
     level:
       instructions:
-        maze_2_2: 'Pomôžeš mi chytiť to neposlušné prasa? Spoj niekoľko blokov "posuň sa dopredu" a stlač "Spustiť", aby som sa k nemu dostal. '
-        maze_2_1: To prasa mi pije krv. Pomôž mi ho nájsť!
-        maze_2_2_5: Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie!
+        maze_2_2: 'Pomôžeš mi chytiť to neposlušné prasiatko? Spoj niekoľko blokov "posuň sa dopredu" a stlač "Spustiť", aby som sa k nemu dostal. '
+        maze_2_1: To prasiatko mi pije krv. Pomôž mi ho nájsť!
+        maze_2_2_5: Nájdi cestu a priveď ma k tomu nezbednému prasiatku. Vyhni sa TNT, lebo bude lietať perie!
         maze_2_3: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
-        maze_2_4: Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Ináč sa rozhnevám!
-        maze_2_5: K zelenému prasaťu sa dá dostať použitím len 2 blokov. Zistíš ktorých?
+        maze_2_4: Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Ináč sa rozhnevám!
+        maze_2_5: K zelenému prasiatku sa dá dostať použitím len 2 blokov. Zistíš ktorých?
         maze_2_6: Dostaň ma k zelenému votrelcovi použitím troch blokov.
-        maze_2_7: Pomôž sa mi zbaviť toho zlého prasaťa pomocou čo najmenšieho počtu blokov. Skús použiť niekoľko blokov "opakuj".
+        maze_2_7: Pomôž sa mi zbaviť toho zlého prasiatka pomocou čo najmenšieho počtu blokov. Skús použiť niekoľko blokov "opakuj".
         maze_2_8: 'Šedý blok nemôžeš zmazať. Vyrieš túto hádanku použitím bloku "opakuj", ktorý akciu zopakuje 3 krát. Vlož do neho 3 bloky: "posuň sa dopredu", "posuň sa dopredu", a "otoč sa" a nastav blok "opakuj", aby to zopakoval trikrát.'
-        maze_2_9: V poriadku, skús nový blok "opakuj dovtedy (kým)" - tento blok bude akciu opakovať až dovtedy, kým neprídem k tomu otravnému prasaťu.
+        maze_2_9: V poriadku, vyskúšaj nový blok "opakuj pokiaľ neplatí" - tento blok bude akciu opakovať až dovtedy, kým neprídem k tomu mrzutému prasiatku.
         maze_2_10: Ok, posledný krát - vyriešiš toto použitím iba 4 blokov?
         maze_2_11: Drahá osoba. Ja zombie. Ja hladný. Musieť... dostať... k slnečnica... Dostaneš ma tam pomocou 5 blokov?
         maze_2_12: Ok, toto je podobné, len trošku iné. Zvládneš to len s 5 blokmi?
@@ -154,10 +154,10 @@ sk:
         turtle_5_4: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim úplne iným)
         turtle_5_5: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim úplne iným)
         turtle_5_6: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim úplne iným)
-        maze_3_1: Potrebujem sa dostať k tomu prasaťu! Napíš niekoľko volaní pohybu - move(); - aby som získal svoje vajíčka späť.
-        maze_3_2: Napíš pre mňa program, aby som sa dostal až k tomu prasaťu.
-        maze_3_3: Ako by som sa len dostal k tomu prasaťu? Dávaj pozor aby som neskočil na škatuľu s TNT!
-        maze_3_4: Grr! Napíš mi program, ktorý ma dostane okolo TNT k tomu prasaťu.
+        maze_3_1: Potrebujem sa dostať k tomu prasiatku! Napíš niekoľko volaní pohybu - move(); - aby som získal svoje vajíčka späť.
+        maze_3_2: Napíš pre mňa program, ktorý ma dostane až k tomu prasiatku.
+        maze_3_3: Ako by som sa len dostal k tomu prasiatku? Dávaj pozor aby som neskočil na škatuľu s TNT!
+        maze_3_4: Grr! Napíš mi program, ktorý ma dostane okolo TNT k tomu prasiatku.
         Custom_builder: Presuňte bloky v panela nástrojov na pracovnú plochu pre nakresleie levelu, ktorý chcete vytvoriť. Stlačte "Spustiť", ked budete hotoví.
         jigsaw_1: Klikni na blok
         jigsaw_2: Presuň blok do cieľa
@@ -261,7 +261,7 @@ sk:
         farmer_intro: Úvod k Farmárke
         flappy_intro: Úvod do Flappy
         loop_times: Blok Opakuj
-        loop_until: Blok "opakuj dovtedy kým"
+        loop_until: Blok "opakuj pokiaľ neplatí"
         if: Blok "Ak"
         if_else: Blok "Ak/inak"
         if_else_scrat: Blok "Ak/inak"
@@ -452,12 +452,12 @@ sk:
         applab_intro_sounds: App Lab - Obrázky a zvuky
         applab_intro_designmode: App Lab - Dizajnovací mód
         applab_intro_share: App Lab - Zdieľanie Appky
-        CSF_skinOverview_Harvester: Pestovateľka
+        CSF_skinOverview_Harvester: Záhradníčka
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Cykly s BB-8
-        CSF_harvester_skinOverview_K-1: Pestovateľka
-        CSF_harvester_loops_K1: Cykly s Pestovateľkou
+        CSF_harvester_skinOverview_K-1: Záhradníčka
+        CSF_harvester_loops_K1: Cykly so Záhradníčkou
         CSF_scrat_loops_K1: Cykly v Dobe ľadovej
         CSF_scrat_loops_CF: Cykly v Dobe ľadovej
         CSF_if_allskins: Blok "Ak"
@@ -473,7 +473,7 @@ sk:
         CSF_SpriteLab_SpritesInAction_CDEF: Postavy v akcii
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
         mc_2018_intro: 'Minecraft: Vodné Dobrodružstvo - Úvod'
-        MC_2018_loops: 'Minecraft: Vodné Dobrodružstvo - Cyklus "Opakuj dovtedy (kým)"'
+        MC_2018_loops: 'Minecraft: Vodné Dobrodružstvo - Cyklus "Opakuj pokiaľ neplatí"'
         mc_2018_conditionals: 'Minecraft: Vodné Dobrodružstvo - Podmienky'
         mc_2018_closing: 'Minecraft: Vodné Dobrodružstvo - Gratulujeme'
         hoc_dance_warmup: Tanečná párty - Zahrej sa
@@ -488,6 +488,7 @@ sk:
         teaching_cs_pair_programming: 'Vyučujeme Základy informatiky: Párové programovanie'
         teaching_problem_solving: 'Vyučujeme Základy informatiky: Riešenie problémov'
         csd_pair_programming: Programovanie v páre
+        csd_applab_parameters: Funkcie s parametrami
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok
