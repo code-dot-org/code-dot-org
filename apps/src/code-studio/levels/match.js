@@ -45,21 +45,22 @@ export default class Match {
     const response = [];
 
     for (let index = 0; index < elements.length; index++) {
+      const xmark = $(`#xmark_${this.levelId}_${index}`);
       const originalIndex = elements[index].getAttribute('originalIndex');
       response.push(originalIndex);
       if (originalIndex === null) {
         // nothing dragged in this slot yet
         wrongAnswer = true;
 
-        $('#xmark_' + index).hide();
+        xmark.hide();
       } else if (originalIndex !== String(index)) {
         // wrong answer
         wrongAnswer = true;
 
-        $('#xmark_' + index).show();
+        xmark.show();
       } else {
         // correct answer
-        $('#xmark_' + index).hide();
+        xmark.hide();
       }
     }
     return {
