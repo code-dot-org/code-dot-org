@@ -1215,8 +1215,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'pilot csf201 workshop does not get reminder email' do
-    skip "Skip this test from #{CSF_201_PILOT_END_DATE}" unless
-      DateTime.now < CSF_201_PILOT_END_DATE
+    skip "Skip this test from #{CSF_201_PILOT_END_DATE + 7.days}" unless
+      DateTime.now < CSF_201_PILOT_END_DATE + 7.days
 
     create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
       num_sessions: 1, sessions_from: DateTime.now
