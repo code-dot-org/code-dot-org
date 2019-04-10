@@ -24,17 +24,15 @@ class TextResponsesTable extends Component {
     responses: PropTypes.arrayOf(textResponsePropType),
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool,
-    scriptId: PropTypes.number,
     scriptName: PropTypes.string
   };
 
   state = {};
 
   studentNameFormatter = (name, {rowData}) => {
-    const {sectionId, scriptId, scriptName} = this.props;
+    const {sectionId, scriptName} = this.props;
     const studentUrl = scriptUrlForStudent(
       sectionId,
-      scriptId,
       scriptName,
       rowData.studentId
     );

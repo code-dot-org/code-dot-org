@@ -53,6 +53,7 @@ class OverlayButton extends Component {
 
     return (
       <button
+        type="button"
         className={this.props.className}
         style={composedStyle}
         onClick={this.props.onClick}

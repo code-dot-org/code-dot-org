@@ -999,7 +999,16 @@ en:
     csp_conditionals: 'Conditionals'
     csp_functions: 'Functions'
     csp_project: 'Project'
+    csp_lists: 'Lists'
+    csp_loops: 'Loops'
+    csp_traversals: 'Traversals'
+    csp_libraries: 'Libraries'
     dlp: 'Reflection Prompts'
+    time4cs_c1: 'Everglades and Its Ecosystems'
+    time4cs_c2: 'Food Chains in the Everglades'
+    time4cs_c3: 'Living in the Everglades'
+    time4cs_c4: 'Invasive Impacts on the Everglades'
+    time4cs_c5: 'Citizens Affect Change in the Everglades'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
