@@ -15,7 +15,8 @@ remarkParser.parser.use(commonPlugins);
 remarkParser.compilerPlugins.push(stripStyles);
 
 const extendedParser = Parser.create();
-extendedParser.parser.use([...commonPlugins, externalLinks]);
+extendedParser.parser.use(commonPlugins);
+extendedParser.parser.use(externalLinks, {links: 'all'});
 extendedParser.compilerPlugins.push(stripStyles);
 
 /**

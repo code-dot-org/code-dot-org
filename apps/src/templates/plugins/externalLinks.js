@@ -1,13 +1,15 @@
 /**
  * Open external links in a new tab.
  */
-export default function externalLinks() {
+export default function externalLinks(options = {}) {
   const Parser = this.Parser;
   const tokenizers = Parser.prototype.inlineTokenizers;
   const original = tokenizers.link;
+  const all = options.links === 'all';
+
   tokenizers.link = function(eat, value, silent) {
     const link = original.call(this, eat, value, silent);
-    if (link && link.type === 'link' && isExternalLink(link.url)) {
+    if (link && link.type === 'link' && (all || isExternalLink(link.url))) {
       link.data = link.data || {};
       link.data.hProperties = link.data.hProperties || {};
 
