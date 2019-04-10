@@ -210,6 +210,10 @@ designMode.updateProperty = function(element, name, value, timestamp) {
   // ignored.
   var preChangeData = elementLibrary.getPreChangeData(element, name);
   var handled = true;
+  var cacheBustSuffix = '';
+  if (timestamp) {
+    cacheBustSuffix = `?t=${new Date(timestamp).valueOf()}`;
+  }
   switch (name) {
     case 'id':
       value = value.trim();
@@ -326,7 +330,7 @@ designMode.updateProperty = function(element, name, value, timestamp) {
       }
 
       var backgroundImage = new Image();
-      backgroundImage.src = assetPrefix.fixPath(value);
+      backgroundImage.src = `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
       element.style.backgroundImage = 'url("' + backgroundImage.src + '")';
 
       // do not resize if only the asset path has changed (e.g. on remix).
@@ -348,7 +352,7 @@ designMode.updateProperty = function(element, name, value, timestamp) {
         url = assetPrefix.renderIconToString(value, element);
       } else {
         const screenImage = new Image();
-        screenImage.src = assetPrefix.fixPath(value);
+        screenImage.src = `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
         url = screenImage.src;
       }
       element.style.backgroundImage = 'url("' + url + '")';
@@ -359,10 +363,6 @@ designMode.updateProperty = function(element, name, value, timestamp) {
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
-      var cacheBustSuffix = '';
-      if (timestamp) {
-        cacheBustSuffix = `?t=${new Date(timestamp).valueOf()}`;
-      }
 
       if (ICON_PREFIX_REGEX.test(value)) {
         element.src = assetPrefix.renderIconToString(value, element);
