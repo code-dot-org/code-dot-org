@@ -446,7 +446,7 @@ class Script < ActiveRecord::Base
   # @param locale [String] Optional. Locale of the request.
   # @return [Script|nil] A dummy script object, not persisted to the database,
   #   with only the redirect_to field set.
-  def self.get_script_family_redirect(family_name, version_year: nil, user: nil, locale: nil)
+  def self.get_script_family_redirect(family_name, version_year: nil, user: nil, locale: 'en-US')
     script_name = Script.latest_assigned_version(family_name, user).try(:name)
     script_name ||= Script.latest_stable_version(family_name, version_year: version_year, locale: locale, fallback: true).try(:name)
 
@@ -512,7 +512,7 @@ class Script < ActiveRecord::Base
   # @param fallback [Boolean] If no latest stable version is found in provided locale,
   # fallback to latest stable version in default locale.
   # @return [Script|nil] Returns the latest version in a script family.
-  def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us', fallback: false)
+  def self.latest_stable_version(family_name, version_year: nil, locale: 'en-US', fallback: false)
     return nil unless family_name.present?
 
     script_versions = Script.
