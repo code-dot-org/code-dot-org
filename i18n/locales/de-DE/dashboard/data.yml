@@ -353,6 +353,11 @@ de:
         C4_unplugged_binary: Binärdatei
         CSF_EF_cs_matters: Informatik ist wichtig
         CSF_my_robotic_friends: Meine Roboterfreunde
+        CSF_Power_of_Words: Macht der Worte
+        CSF_Super_Digital_Citizen: Super digitale Bürger
+        CSF_stevie_big_project: Stevie und das große Projekt
+        CSF_unspotted_bugs: Unentdeckte Bugs
+        CSF_zuck_loops_short: Schleifen
         frozen_intro: Hour of Code Einführung
         frozen_loops: Einführung in Schleifen
         frozen_functions: Einführung in Funktionen
@@ -363,7 +368,18 @@ de:
         infinity_playlab_intro: Spielelabor - Einführung
         infinity_playlab_events: Spielelabor - Ereignisse
         infinity_playlab_repeat_forever: Spielelabor - Wiederhole ohne Ende
+        csd_concept_how_computers_work: Einführung Wie Computer funktionieren
+        csd_concept_computer: 'Wie Computer funktionieren: Was macht einen Computer, einen Computer?'
+        csd_concept_binary_data: 'Wie Computer funktionieren: Binärsystem & Daten'
+        csd_concept_circuits_logic: 'Wie Computer funktionieren: Schaltkreise und Logik'
+        csd_concept_memory_cpu_input_output: 'Wie Computer funktionieren: Speicher, CPU, Eingabe & Ausgabe'
+        csd_concept_hardware_software: 'Wie Computer funktionieren: Hardware & Software'
+        csd_concept_search: Wie Suche funktioniert
+        csd_external_amazon_data: Wie Big Data in Amazon-Empfehlungen verwendet wird, um unsere Leben zu ändern
+        csd_external_netflix_data: Wie macht Netflix Serien- und Filmvorschläge?
+        csd_external_waze_data: Warum sind So viele Nutzer von Waze besessen?
         csd_gamelab_animation_tab: Der Animations Tab
+        csd_gamelab_velocity: Geschwindigkeit
         csp_applab_functions: Einführung in Funktionen
         csp_applab_functions_parameters: Funktionen mit Parametern
         csp_applab_loops: Schleifen
@@ -393,7 +409,16 @@ de:
         mc_2017_congratulations: Minecraft Hour of Code - Gratuliere
         csd_applab_arrays: Einführung in Arrays
         CSF_loops_AB: Schleifen
+        CDEF_Video_SpritesInAction: Sprites in Aktion
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Aktion
+        CSF_StarWars_ProjectIntro: Einführung in das Star Wars Projekt
+        hoc_dance_warmup: Tanzparty - Warm Up
+        hoc_dance_congrats: Tanzparty -Party On!
+        teaching_csf_how_it_works: 'Informatik Grundlagen: Wie der Kurs funktioniert'
+        what_is_cs: Was ist Informatik?
+        repeat_block: Benutze den Wiederholungsblock
         csd_pair_programming: Paarprogrammierung
+        csd_applab_parameters: Funktionen mit Parametern
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten
