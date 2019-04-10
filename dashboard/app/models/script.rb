@@ -447,11 +447,7 @@ class Script < ActiveRecord::Base
   # @return [Script|nil] A dummy script object, not persisted to the database,
   #   with only the redirect_to field set.
   def self.get_script_family_redirect(family_name, version_year: nil, user: nil, locale: nil)
-    script_name = nil
-    if user
-      # TODO: try to get latest version assigned/progress
-    end
-
+    script_name = Script.latest_assigned_version(family_name, user).try(:name)
     script_name ||= Script.latest_stable_version(family_name, version_year: version_year, locale: locale, fallback: true).try(:name)
 
     script_name ? Script.new(redirect_to: script_name) : nil
