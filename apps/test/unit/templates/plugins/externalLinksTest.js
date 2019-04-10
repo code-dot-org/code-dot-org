@@ -18,7 +18,7 @@ describe('external links remark plugin', () => {
     assert.equal(isExternalLink('//localhost-studio.code.org:3000/s/1'), false);
   });
 
-  it('treats other domain links as internal', () => {
+  it('treats other domain links as external', () => {
     assert.equal(isExternalLink('//example.com'), true);
     assert.equal(isExternalLink('http://scratch.org'), true);
     assert.equal(isExternalLink('https://www.google.com/'), true);
