@@ -516,18 +516,20 @@ class Script < ActiveRecord::Base
   # @param family_name [String] The family name for a script family.
   # @param version_year [String] Version year to return. Optional.
   # @param locale [String] User or request locale. Optional.
+  # @param fallback [Boolean] If no latest stable version is found in provided locale,
+  # fallback to latest stable version in default locale.
   # @return [Script|nil] Returns the latest version in a script family.
-  def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
+  def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us', fallback: false)
     return nil unless family_name.present?
 
     script_versions = Script.
       where(family_name: family_name).
       order("properties -> '$.version_year' DESC")
 
-    # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale).
+    # Find latest stable, supported script (ignore supported locales if locale is an English-speaking locale).
     # Match on version year if one is supplied.
     locale_str = locale&.to_s
-    supported_stable_scripts = script_versions.select do |script|
+    supported_stable_script = script_versions.find do |script|
       is_supported = script.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
       if version_year
         script.is_stable && is_supported && script.version_year == version_year
@@ -536,7 +538,15 @@ class Script < ActiveRecord::Base
       end
     end
 
-    supported_stable_scripts&.first
+    # If there are no supported stable scripts in the given locale (and fallback is true), fallback
+    # to latest stable script in the default locale.
+    if !supported_stable_script && fallback && locale_str&.present?
+      supported_stable_script = script_versions.find do |script|
+        version_year.present? ? (script.is_stable && script.version_year == version_year) : script.is_stable
+      end
+    end
+
+    supported_stable_script
   end
 
   # @param family_name [String] The family name for a script family.

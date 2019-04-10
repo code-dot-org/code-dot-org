@@ -501,6 +501,13 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil Script.latest_stable_version('fake-family', locale: 'es-mx')
   end
 
+  test 'self.latest_stable_version returns latest stable in default locale if no script versions in family are stable in locale and fallback is true' do
+    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true, supported_locales: []
+    script_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true, supported_locales: []
+
+    assert_equal script_2018, Script.latest_stable_version('fake-family', locale: 'es-mx', fallback: true)
+  end
+
   test 'self.latest_stable_version returns latest stable version for user locale' do
     create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true, supported_locales: ["it-it"]
     script_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true, supported_locales: ["it-it"]
