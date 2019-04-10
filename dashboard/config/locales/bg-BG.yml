@@ -1035,6 +1035,8 @@ bg:
     csp_variables: Променливи
     csp_conditionals: Условия
     csp_functions: Функции
+    csp_lists: Списъци
+    csp_loops: Повторения
   external_links:
     disclaimer: Отказ от отговорност
     leaving_domain: Сега напускате този домейн, преминавайки към сайт, който не се
