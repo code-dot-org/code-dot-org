@@ -121,11 +121,11 @@ da:
           i et loop?  Prøv at placere en planke **og** gå fremad i et gentagelsesloop
           for at løse opgaven.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: Hvor mange gange kører loopet?  Hvor mange gange *synes
-          du*, det skal køre?
+        MC_HOC_2017_06_Cole_a: Hvor mange gange kører loopet?  Hvor mange gange _synes
+          du_, det skal køre?
       MC_HOC_2017_06_Cole_2019_authored_hint:
-        MC_HOC_2017_06_Cole_a: Hvor mange gange kører loopet?  Hvor mange gange *synes
-          du*, det skal køre?
+        MC_HOC_2017_06_Cole_a: Hvor mange gange kører loopet?  Hvor mange gange _synes
+          du_, det skal køre?
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Prøv at sætte mere end én instruktion ind i et gentagelsesloop!
       MC_HOC_2017_07_Cole_authored_hint:
@@ -220,7 +220,7 @@ da:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -239,7 +239,7 @@ da:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -258,7 +258,7 @@ da:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -277,7 +277,7 @@ da:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -424,7 +424,7 @@ da:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -443,7 +443,7 @@ da:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -462,7 +462,7 @@ da:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -481,7 +481,7 @@ da:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
