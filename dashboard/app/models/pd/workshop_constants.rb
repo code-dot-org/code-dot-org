@@ -87,5 +87,7 @@ module Pd
       COURSE_CSD => {course_name: 'csd-2018'},
       COURSE_CSP => {course_name: 'csp-2018'}
     }.freeze
+
+    CSF_201_PILOT_END_DATE = Date.new(2019, 5, 20)
   end
 end
