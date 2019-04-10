@@ -575,6 +575,8 @@ hr:
     csp_variables: 'Varijable'
     csp_conditionals: 'Uvjeti'
     csp_functions: 'Funkcije'
+    csp_lists: 'Liste'
+    csp_loops: 'Petlje'
   pd:
     form_labels:
       email: 'E-mail'
