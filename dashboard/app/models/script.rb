@@ -452,10 +452,7 @@ class Script < ActiveRecord::Base
       # TODO: try to get latest version assigned/progress
     end
 
-    script_name ||= Script.latest_stable_version(family_name, version_year: version_year, locale: locale).try(:name)
-
-    # A stable version of the script may not be available in given locale, so fallback to default locale (en-US).
-    script_name ||= Script.latest_stable_version(family_name, version_year: version_year).try(:name)
+    script_name ||= Script.latest_stable_version(family_name, version_year: version_year, locale: locale, fallback: true).try(:name)
 
     script_name ? Script.new(redirect_to: script_name) : nil
   end
