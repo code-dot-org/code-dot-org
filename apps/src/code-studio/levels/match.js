@@ -10,6 +10,32 @@ jQuery.fn.swap = function(b) {
   return this;
 };
 
+export default class Match {
+  constructor(levelId, id, standalone) {
+    // The dashboard levelId.
+    this.levelId = levelId;
+
+    // The DOM id.
+    this.id = id;
+
+    // Whether this is the only puzzle on a page, or part of a group of them.
+    this.standalone = standalone;
+  }
+
+  getResult() {
+    throw 'getResult not implemented';
+  }
+  getAppName() {
+    return 'match';
+  }
+  lockAnswers() {
+    throw 'lockAnswers not implemented';
+  }
+  getCurrentAnswerFeedback() {
+    throw 'getCurrentAnswerFeedback not implemented';
+  }
+}
+
 // Initialize drag and drop for all match elements (answers and slots) within
 // the container. Answers are made draggable and slots are made droppable. The
 // container limits this as follows:

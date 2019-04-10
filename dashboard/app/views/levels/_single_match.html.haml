@@ -1,4 +1,4 @@
-.unplugged.match
+.unplugged.match{id: "level_#{level.id}"}
   = render partial: 'levels/content', locals: {app: 'match', data: level.properties, content_class: level.question_content_class, source_level: level, hide_header: !standalone}
 
   - if standalone && !(level.properties['options'].try(:[], 'hide_submit'))
@@ -44,3 +44,10 @@
     = render partial: 'levels/dialog', locals: {app: 'match'}
   = render partial: 'levels/match_answer', locals: {level: level}
   = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
+
+  :javascript
+    window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new Match(
+      #{level.id},
+      "level_#{level.id}",
+      #{standalone},
+    ));

@@ -7,7 +7,8 @@ import {
   MatchErrorDialog
 } from '@cdo/apps/lib/ui/LegacyDialogContents';
 
-import {initMatch} from '@cdo/apps/code-studio/levels/match';
+import Match, {initMatch} from '@cdo/apps/code-studio/levels/match';
+window.Match = Match;
 
 $(function() {
   // This setting (pre_title) is used by only 3 levels in our application.
