@@ -56,9 +56,7 @@ ca:
         una closca.
       2-3 Artist Loops New 10: Ara connectem un grapat de Vs totes juntes, dibuixant-les
         amb un bucle.
-      2-3 Artist Loops New 12: 'Dibuixa un diamant amb costats de 100 píxels.
-
-'
+      2-3 Artist Loops New 12: Dibuixa un diamant amb costats de 100 píxels.
       2-3 Artist Loops New 13: Ara dibuixa el diamant tres cops amb un bucle.
       2-3 Artist Loops New 2: Aquest és part del codi que has usat per dibuixar el
         quadrat. Què passa si uses el bloc de repetició per executar aquest codi quatre
@@ -151,32 +149,31 @@ ca:
       Course 4 Artist 8a: Recordes aquesta forma? Ara et deixarem que la facis tu
         sense donar-te cap bloc per començar!
       CourseD_Dance_Party_01: |-
-        *Anem a fer una festa de ball!*
+        _Anem a fer una festa de ball!_
 
         Arrossega el bloc `fés-ne un de nou` al teu espai de treball, i connecta'l dins del bloc de `configuració` per crear el teu primer dansaire.
 
-        * *També pots clicar a la bombeta de l'esquerra si vols més informació o reptes extra.*
+        -   _També pots clicar a la bombeta de l'esquerra si vols més informació o reptes extra._
       CourseD_Dance_Party_02: |-
         Anem a fer ballar aquest ant!
 
-        Arrossega fora del <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">nou&#95;dansaire</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Bloc de provocació</title><title name="DIR">-1</title></block></xml> a l'espai de treball. Connecta'l per sota del bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"mesures"</title></block></xml>. El teu dansaire hauria de començar un nou moviment després de la quarta mesura.
-
+        Arrossega fora del <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">nou\_dansaire</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Bloc de provocació</title><title name="DIR">-1</title></block></xml> a l'espai de treball. Connecta'l per sota del bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"mesures"</title></block></xml>. El teu dansaire hauria de començar un nou moviment després de la quarta mesura.
 
         Les **mesures** es fan servir per comptar el temps en la música. A aquest tutorial, una mesura té quatre temps de llarg.
       CourseD_Dance_Party_03: |-
-        *Ara sí que marquem el ritme!*
+        _Ara sí que marquem el ritme!_
 
         Afegeix un bloc de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"mesures"</title></block></xml> al teu espai de treball. Fés que el dansaire comenci un nou moviment després de 6 mesures.
       CourseD_Dance_Party_04: |-
-        *Aquesta dansa necessita enlluernar més!*
+        _Aquesta dansa necessita enlluernar més!_
 
         Busca un nou bloc a la teva caixa d'eines que afegeixi un efecte de fons darrere del teu dansaire. Mira com canvien els efectes en el temps amb la música!
       CourseD_Dance_Party_05: |-
         Fés servir un nou bloc per fer que el dansaire canviï els moviments **cada 2 mesures**!
 
-        * Si esculls `(següent)`, `(anterior)`, o `(aleatori)` li dius al dansaire que faci un moviment diferent cada cop que s'executa el codi.
+        -   Si esculls `(següent)`, `(anterior)`, o `(aleatori)` li dius al dansaire que faci un moviment diferent cada cop que s'executa el codi.
       CourseD_Dance_Party_06: |-
-        *Necessitem més ballarins!*
+        _Necessitem més ballarins!_
 
         Crea un dansaire de reserva anomenat `backup_dancer1` que balli amb el gat.
       CourseD_Dance_Party_08: |-
@@ -185,11 +182,13 @@ ca:
         Pots fer que sembli que un dansaire sigui al fons de la pantalla si en fas la _mida_ petita. Pots aconseguir que tots dos ballarins de reserva siguin de la mateixa mida?
       CourseD_Dance_Party_09: |-
         Els ballarins tenen una propietat de "tinta" que pot afegir una capa de color. Prova a canviar la tinta d'un dels teus dansaires.
-        * Les tintes barrejaran el color que triïs amb els colors dels dansaires.
+
+        -   Les tintes barrejaran el color que triïs amb els colors dels dansaires.
       CourseD_Dance_Party_10: |-
         Ara ja sabem com canviar les propietats d'un ballarí. També podem fer que les mateixes propietats responguin automàticament a la música utilitzant aquest bloc:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">pinya_dreta</title>
         <title name="PROPERTY">"balança"</title>
         <title name="RANGE">"baix"</title>
@@ -248,38 +247,37 @@ ca:
         ! Fés servir el corall blau i vermell per arribar al **cofre** del tresor
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       Dance_Party_01: |-
-        *Anem a fer una festa de ball!*
+        _Anem a fer una festa de ball!_
 
         Arrossega el bloc `fés-ne un de nou` al teu espai de treball, i connecta'l dins del bloc de `configuració` per crear el teu primer dansaire.
 
-        * *També pots clicar a la bombeta de l'esquerra si vols més informació o reptes extra.*
+        -   _També pots clicar a la bombeta de l'esquerra si vols més informació o reptes extra._
       Dance_Party_01_low: |-
-        *Anem a fer una festa de ball!*
+        _Anem a fer una festa de ball!_
 
         Arrossega el bloc `fés-ne un de nou` al teu espai de treball, i connecta'l dins del bloc de `configuració` per crear el teu primer dansaire.
 
-        * *També pots clicar a la bombeta de l'esquerra si vols més informació o reptes extra.*
+        -   _També pots clicar a la bombeta de l'esquerra si vols més informació o reptes extra._
       Dance_Party_02: |-
         Anem a fer ballar aquest ant!
 
-        Arrossega fora del <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">nou&#95;dansaire</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Bloc de provocació</title><title name="DIR">-1</title></block></xml> a l'espai de treball. Connecta'l per sota del bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"mesures"</title></block></xml>. El teu dansaire hauria de començar un nou moviment després de la quarta mesura.
-
+        Arrossega fora del <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">nou\_dansaire</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Bloc de provocació</title><title name="DIR">-1</title></block></xml> a l'espai de treball. Connecta'l per sota del bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"mesures"</title></block></xml>. El teu dansaire hauria de començar un nou moviment després de la quarta mesura.
 
         Les **mesures** es fan servir per comptar el temps en la música. A aquest tutorial, una mesura té quatre temps de llarg.
       Dance_Party_03: |-
-        *Ara sí que marquem el ritme!*
+        _Ara sí que marquem el ritme!_
 
         Afegeix un bloc de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"mesures"</title></block></xml> al teu espai de treball. Fés que el dansaire comenci un nou moviment després de 6 mesures.
       Dance_Party_04: |-
-        *Aquesta dansa necessita enlluernar més!*
+        _Aquesta dansa necessita enlluernar més!_
 
         Busca un nou bloc a la teva caixa d'eines que afegeixi un efecte de fons darrere del teu dansaire. Mira com canvien els efectes en el temps amb la música!
       Dance_Party_05: |-
         Fés servir un nou bloc per fer que el dansaire canviï els moviments **cada 2 mesures**!
 
-        * Si esculls `(següent)`, `(anterior)`, o `(aleatori)` li dius al dansaire que faci un moviment diferent cada cop que s'executa el codi.
+        -   Si esculls `(següent)`, `(anterior)`, o `(aleatori)` li dius al dansaire que faci un moviment diferent cada cop que s'executa el codi.
       Dance_Party_06: |-
-        *Necessitem més ballarins!*
+        _Necessitem més ballarins!_
 
         Crea un dansaire de reserva anomenat `backup_dancer1` que balli amb el gat.
       Dance_Party_08: |-
@@ -288,11 +286,13 @@ ca:
         Pots fer que sembli que un dansaire sigui al fons de la pantalla si en fas la _mida_ petita. Pots aconseguir que tots dos ballarins de reserva siguin de la mateixa mida?
       Dance_Party_09: |-
         Els ballarins tenen una propietat de "tinta" que pot afegir una capa de color. Prova a canviar la tinta d'un dels teus dansaires.
-        * Les tintes barrejaran el color que triïs amb els colors dels dansaires.
+
+        -   Les tintes barrejaran el color que triïs amb els colors dels dansaires.
       Dance_Party_10: |-
         Ara ja sabem com canviar les propietats d'un ballarí. També podem fer que les mateixes propietats responguin automàticament a la música utilitzant aquest bloc:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">pinya_dreta</title>
         <title name="PROPERTY">"balança"</title>
         <title name="RANGE">"baix"</title>
@@ -338,9 +338,9 @@ ca:
 
         Aquí tens una dansa entre dos equips. Les tecles de fletxes controlen un dels ballarins i les tecles "w, a, s, d" controlen l'altre. Balleu amb un amic i després intenteu millorar aquesta dansa poc a poc.
 
-        * Afegir més tecles per controlar les danses
-        * Fer que els ballarins de reserva també responguin quan es premin les tecles
-        * Canvia el ballarí cada quatre mesures tot configurant-ne la visibilitat
+        -   Afegir més tecles per controlar les danses
+        -   Fer que els ballarins de reserva també responguin quan es premin les tecles
+        -   Canvia el ballarí cada quatre mesures tot configurant-ne la visibilitat
       Dance_Party_extras_every_beat: |-
         # Notes negres
 
@@ -348,17 +348,17 @@ ca:
 
         Aquesta dansa també fa servir un_bloc_condicional per controlar quan el bloc de «cada 0,25 mesures» pot canviar la dansa. Proveu de canviar els nombres del bloc condicional per veure com canvia la dansa.
 
-        * Experimenta amb d'altres durades de notes (com ara 0,5 per una nota blanca o 0,125 per una vuitena).
-        * Afegir alguns esdeveniments `després de la mesura`.
-        * Intercanvia "mesures" amb "segons" i intenta fer quadrar el temps dels teus balls així.
+        -   Experimenta amb d'altres durades de notes (com ara 0,5 per una nota blanca o 0,125 per una vuitena).
+        -   Afegir alguns esdeveniments `després de la mesura`.
+        -   Intercanvia "mesures" amb "segons" i intenta fer quadrar el temps dels teus balls així.
       Dance_Party_extras_layout: |-
         # Posem-nos en formació!
 
         Mira't aquesta dansa que fa servir el bloc `disposició` per canviar la formació dels ballarins de reserva a través de tota la dansa. Prova una d'aquestes idees per allargar-la:
 
-        * Crea un segon grup de dansaires amb una disposició diferent
-        * Canvia la disposició quan premis una tecla
-        * Canvia una propietat quan els ballarins canviïn la formació
+        -   Crea un segon grup de dansaires amb una disposició diferent
+        -   Canvia la disposició quan premis una tecla
+        -   Canvia una propietat quan els ballarins canviïn la formació
       Dance_Party_extras_on_beat: |-
         # Greus, mitjans i aguts
 
@@ -372,9 +372,9 @@ ca:
 
         Aquesta dansa mostra i amaga dos grups diferents de ballarins. Mira-t'ho i després prova a afegir-hi el teu estil propi.
 
-        * Afegir un altre grup de ballarins
-        * Mostrar i amagar els dansaires amb les tecles de fletxes
-        * Amagar tots els ballarins i canviar a un emocionant efecte de fons
+        -   Afegir un altre grup de ballarins
+        -   Mostrar i amagar els dansaires amb les tecles de fletxes
+        -   Amagar tots els ballarins i canviar a un emocionant efecte de fons
       HOC 2018 Level_1: Necessites queviures pel viatge que t'espera. Troba una **barca**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         dins del **cofre** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -410,9 +410,9 @@ ca:
       HOC Dance 4_draft: |-
         Fés servir un nou bloc per fer que el dansaire canviï els moviments **cada 2 mesures**!
 
-        * Si esculls `(següent)`, `(anterior)`, o `(aleatori)` li dius al dansaire que faci un moviment diferent cada cop que s'executa el codi.
+        -   Si esculls `(següent)`, `(anterior)`, o `(aleatori)` li dius al dansaire que faci un moviment diferent cada cop que s'executa el codi.
       HOC Dance 5_draft: |-
-        *Necessitem més ballarins!*
+        _Necessitem més ballarins!_
 
         Crea un dansaire de reserva anomenat `backup_dancer1` que balli amb el gat.
       HOC Dance 9_draft: |-
@@ -434,8 +434,7 @@ ca:
       Ryan_Demo: |-
         Anem a fer ballar aquest ant!
 
-        Arrossega fora del <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">nou&#95;dansaire</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Bloc de provocació</title><title name="DIR">-1</title></block></xml> a l'espai de treball. Connecta'l per sota del bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"mesures"</title></block></xml>. El teu dansaire hauria de començar un nou moviment després de la quarta mesura.
-
+        Arrossega fora del <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">nou\_dansaire</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Bloc de provocació</title><title name="DIR">-1</title></block></xml> a l'espai de treball. Connecta'l per sota del bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"mesures"</title></block></xml>. El teu dansaire hauria de començar un nou moviment després de la quarta mesura.
 
         Les **mesures** es fan servir per comptar el temps en la música. A aquest tutorial, una mesura té quatre temps de llarg.
       course4_artist_fwp_challenge1: Intenta executar aquest programa, i fer canvis
