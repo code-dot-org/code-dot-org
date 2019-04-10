@@ -315,3 +315,8 @@ id:
       DigitalFootprint_2019:
         title: Digital Footprint Kamu
         desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang memiliki konsekuensi.
+      timeforcs_demo_crowdsourcing:
+        title: Sumber kerumunan
+      timeforcs_demo_conditionals:
+        title: Kondisi
+        desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
