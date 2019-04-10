@@ -894,7 +894,7 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
     Then I click ".header_user"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click "#signin-button"
+    And I click "#signin-button" to load a new page
     And I wait to see ".header_user"
   }
 end
