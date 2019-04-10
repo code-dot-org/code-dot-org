@@ -299,6 +299,7 @@ class RegionalPartnerSearch extends Component {
                 for other Professional Development options in your area.
               </p>
               <StartApplicationButton
+                buttonOnly={true}
                 nominated={this.state.nominated}
                 priorityDeadlineDate={appsPriorityDeadlineDate}
               />
@@ -483,6 +484,7 @@ class RegionalPartnerSearch extends Component {
 }
 
 const StartApplicationButton = ({
+  buttonOnly,
   className,
   id,
   link,
@@ -510,25 +512,34 @@ const StartApplicationButton = ({
     notificationText = 'It’s not too late to sign up.';
   }
 
-  return (
-    <div>
-      <Notification
-        type="information"
-        notice={notificationHeading}
-        details={notificationText}
-        dismissible={false}
-      >
-        <a className={className} id={id} target={target} href={link}>
-          <button type="button" style={styles.bigButton}>
-            {buttonText}
-          </button>
-        </a>
-      </Notification>
-    </div>
+  const button = (
+    <a className={className} id={id} target={target} href={link}>
+      <button type="button" style={styles.bigButton}>
+        {buttonText}
+      </button>
+    </a>
   );
+
+  if (buttonOnly) {
+    return button;
+  } else {
+    return (
+      <div>
+        <Notification
+          type="information"
+          notice={notificationHeading}
+          details={notificationText}
+          dismissible={false}
+        >
+          {button}
+        </Notification>
+      </div>
+    );
+  }
 };
 
 StartApplicationButton.propTypes = {
+  buttonOnly: PropTypes.bool,
   className: PropTypes.string,
   id: PropTypes.string,
   link: PropTypes.string,
