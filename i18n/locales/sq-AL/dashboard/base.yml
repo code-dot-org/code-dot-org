@@ -745,6 +745,8 @@ sq:
     csp_variables: 'variabla'
     csp_conditionals: 'Kushtet'
     csp_functions: 'funksione'
+    csp_lists: 'Listat'
+    csp_loops: 'cikle '
   external_links:
     disclaimer: Mohim
     leaving_domain: Ju tani jeni duke e lënë këtë domain, në një vend që nuk është i operuar nga Code.org.
