@@ -392,7 +392,7 @@ class Script < ActiveRecord::Base
     self.class.get_from_cache(id)
   end
 
-  def self.get_without_cache(id_or_name, version_year: nil)
+  def self.get_without_cache(id_or_name, version_year: nil, user: nil, locale: nil)
     # Also serve any script by its new_name, if it has one.
     script = id_or_name && Script.find_by(new_name: id_or_name)
     return script if script
@@ -407,7 +407,7 @@ class Script < ActiveRecord::Base
     unless is_id
       # We didn't find a script matching id_or_name. Next, look for a script
       # in the id_or_name script family to redirect to, e.g. csp1 --> csp1-2017.
-      script_with_redirect = Script.get_script_family_redirect(id_or_name, version_year: version_year)
+      script_with_redirect = Script.get_script_family_redirect(id_or_name, version_year: version_year, user: user, locale: locale)
       return script_with_redirect if script_with_redirect
     end
 
@@ -426,13 +426,13 @@ class Script < ActiveRecord::Base
   # @param id_or_name [String|Integer] script id, script name, or script family name.
   # @param version_year [String] If specified, when looking for a script to redirect
   #   to within a script family, redirect to this version rather than the latest.
-  def self.get_from_cache(id_or_name, version_year: nil)
-    return get_without_cache(id_or_name, version_year: version_year) unless should_cache?
+  def self.get_from_cache(id_or_name, version_year: nil, user: nil, locale: nil)
+    return get_without_cache(id_or_name, version_year: version_year, user: user, locale: locale) unless should_cache?
     cache_key_suffix = version_year ? "/#{version_year}" : ''
     cache_key = "#{id_or_name}#{cache_key_suffix}"
     script_cache.fetch(cache_key) do
       # Populate cache on miss.
-      script_cache[cache_key] = get_without_cache(id_or_name, version_year: version_year)
+      script_cache[cache_key] = get_without_cache(id_or_name, version_year: version_year, user: user, locale: locale)
     end
   end
 
@@ -440,11 +440,23 @@ class Script < ActiveRecord::Base
   # pointing toward the latest stable script in that family, or to a specific
   # version_year if one is specified.
   # @param family_name [String] The name of the script family to search in.
-  # @param version_year [String] Version year to return. Optional.
+  # @param version_year [String] Optional. Version year to return.
+  # @param user [User] Optional. If provided, will attempt to retrieve latest stable script
+  # that the user is assigned to or has progress in.
+  # @param locale [String] Optional. Locale of the request.
   # @return [Script|nil] A dummy script object, not persisted to the database,
   #   with only the redirect_to field set.
-  def self.get_script_family_redirect(family_name, version_year: nil)
-    script_name = Script.latest_stable_version(family_name, version_year: version_year).try(:name)
+  def self.get_script_family_redirect(family_name, version_year: nil, user: nil, locale: nil)
+    script_name = nil
+    if user
+      # TODO: try to get latest version assigned/progress
+    end
+
+    script_name ||= Script.latest_stable_version(family_name, version_year: version_year, locale: locale).try(:name)
+
+    # A stable version of the script may not be available in given locale, so fallback to default locale (en-US).
+    script_name ||= Script.latest_stable_version(family_name, version_year: version_year).try(:name)
+
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 

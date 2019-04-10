@@ -115,7 +115,7 @@ class ScriptsController < ApplicationController
   end
 
   def set_script
-    @script = Script.get_from_cache(params[:id])
+    @script = Script.get_from_cache(params[:id], user: current_user, locale: request.locale)
     if current_user && @script&.pilot? && !@script.has_pilot_access?(current_user)
       render :no_access
     end
