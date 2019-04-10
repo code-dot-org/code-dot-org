@@ -1,3 +1,4 @@
+---
 eu:
   data:
     authored_hints:
@@ -16,7 +17,7 @@ eu:
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Etxea amaitzeko, egin behar dugun guztia da karratu bat marraztea!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'Angelu txiki horiek egiteko, aldi bakoitzean *hurrunago* joan beharko duzu karratuarekin egin zenuen bezala.   '
+        2-3_Artist_6_a: 'Angelu txiki horiek egiteko, aldi bakoitzean _hurrunago_ joan beharko duzu karratuarekin egin zenuen bezala.   '
         2-3_Artist_6_b: Dagoeneko eskuin aldera begira ari naizenez, errazena da aurrera hastea, eta gero ezker aldera bira egitea triangelua sortzeko.
         2-3_Artist_6_c: Triangeluaren alde bakoitzaren luzera karratuaren aldeen luzera berekoa da... 100 pixel!
       2-3 Artist 7_authored_hint:
@@ -60,7 +61,7 @@ eu:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -79,7 +80,7 @@ eu:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -98,7 +99,7 @@ eu:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -117,7 +118,7 @@ eu:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -260,7 +261,7 @@ eu:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -279,7 +280,7 @@ eu:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -298,7 +299,7 @@ eu:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -317,7 +318,7 @@ eu:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -406,13 +407,13 @@ eu:
           </block>
           </xml>
       courseC_artist_prog2_authored_hint:
-        courseC_artist_prog2_a: 'Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko, lerro bat marraztuko dut automatikoki.'
+        courseC_artist_prog2_a: Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko, lerro bat marraztuko dut automatikoki.
         courseC_artist_prog2_b: Arazoak bihurgunea hartzean? Erabili `eskuinera biratu 90 gradu` blokea.
       courseC_artist_prog2_2018_authored_hint:
-        courseC_artist_prog2_a: 'Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko, lerro bat marraztuko dut automatikoki.'
+        courseC_artist_prog2_a: Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko, lerro bat marraztuko dut automatikoki.
         courseC_artist_prog2_b: Arazoak bihurgunea hartzean? Erabili `eskuinera biratu 90 gradu` blokea.
       courseC_artist_prog2_2019_authored_hint:
-        courseC_artist_prog2_a: 'Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko, lerro bat marraztuko dut automatikoki.'
+        courseC_artist_prog2_a: Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko, lerro bat marraztuko dut automatikoki.
         courseC_artist_prog2_b: Arazoak bihurgunea hartzean? Erabili `eskuinera biratu 90 gradu` blokea.
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
@@ -425,6 +426,6 @@ eu:
         2-3_Artist_1_new_a: Blokea erabiltzen baduzun ni `aurrera 100 pixel` eginarazteko, lerro bat marraztuko dut automatikoki.
         2-3_Artist_1_new_b: Arazoak bihurgunea hartzean? Erabili `eskuinera biratu 90 gradu` blokea.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'Angelu txiki horiek egiteko, aldi bakoitzean *hurrunago* joan beharko duzu karratuarekin egin zenuen bezala.   '
+        2-3_Artist_6_a: 'Angelu txiki horiek egiteko, aldi bakoitzean _hurrunago_ joan beharko duzu karratuarekin egin zenuen bezala.   '
         2-3_Artist_6_b: Dagoeneko eskuin aldera begira ari naizenez, errazena da aurrera hastea, eta gero ezker aldera bira egitea triangelua sortzeko.
         2-3_Artist_6_c: Triangeluaren alde bakoitzaren luzera karratuaren aldeen luzera berekoa da... 100 pixel!
