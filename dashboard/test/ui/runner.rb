@@ -251,10 +251,10 @@ end
 def select_browser_configs(options)
   if options.local
     return [{
-      'browser': 'local',
-      'name': 'ChromeDriver',
-      'browserName': 'chrome',
-      'version': 'latest'
+      'browser' => options.browser || 'local',
+      'name' => 'LocalBrowser',
+      'browserName' => options.browser || 'chrome',
+      'version' => options.browser_version || 'latest'
     }]
   end
 
@@ -655,7 +655,7 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
   arguments += ' -f pretty' if options.html # include the default (-f pretty) formatter so it does both
   arguments += " --fail-fast" if options.fail_fast
 
-  # if autorertrying, output a rerun file so on retry we only run failed tests
+  # if auto-retrying, output a rerun file so on retry we only run failed tests
   if max_reruns > 0
     arguments += " --format rerun --out #{rerun_filename test_run_string}"
   end
@@ -690,7 +690,7 @@ def run_feature(browser, feature, options)
   puts "#{log_prefix}Starting UI tests for #{test_run_string}"
 
   run_environment = {}
-  run_environment['BROWSER_CONFIG'] = browser_name
+  run_environment['BROWSER_CONFIG'] = options.local ? browser['browser'] : browser_name
 
   run_environment['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
   run_environment['PEGASUS_TEST_DOMAIN'] = options.pegasus_domain if options.pegasus_domain
