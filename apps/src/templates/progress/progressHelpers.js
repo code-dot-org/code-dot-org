@@ -2,6 +2,7 @@ import {fullyLockedStageMapping} from '@cdo/apps/code-studio/stageLockRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -74,7 +75,14 @@ export function stageLocked(levels) {
  * @returns A friendly name for the icon name (that can be passed to FontAwesome)
  *   for the given level.
  */
-export function getIconForLevel(level) {
+export function getIconForLevel(level, inDetailedProgressView = false) {
+  if (
+    experiments.isEnabled(experiments.MINI_RUBRIC_2019) &&
+    inDetailedProgressView &&
+    isLevelAssessment(level)
+  ) {
+    return 'check-circle';
+  }
   if (level.icon) {
     // Eventually I'd like to have dashboard return an icon type. For now, I'm just
     // going to treat the css class it sends as a type, and map it to an icon name.
@@ -129,6 +137,7 @@ export function summarizeProgressInStage(levelsWithStatus) {
       case LevelStatus.perfect:
       case LevelStatus.submitted:
       case LevelStatus.free_play_complete:
+      case LevelStatus.completed_assessment:
         statusCounts.completed = statusCounts.completed + 1;
         break;
       case LevelStatus.not_tried:
