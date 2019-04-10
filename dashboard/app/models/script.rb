@@ -1472,7 +1472,7 @@ class Script < ActiveRecord::Base
   def get_feedback_for_section(section)
     feedback = {}
 
-    level_ids = script_levels.map {|script_level| script_level.oldest_active_level.id}
+    level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
     student_ids = section.students.map(&:id)
     all_feedback = TeacherFeedback.get_all_feedback_for_section(student_ids, level_ids, section.user_id)
 
@@ -1483,6 +1483,7 @@ class Script < ActiveRecord::Base
     end
 
     script_levels.each do |script_level|
+      next unless script_level.oldest_active_level.can_have_feedback?
       section.students.each do |student|
         current_level = script_level.oldest_active_level
         next unless feedback_hash[student.id]
