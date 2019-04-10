@@ -1,15 +1,15 @@
+---
 sl:
   data:
     short_instructions:
       2-3 Artist 1 new: Živio, jaz sem umetnik. Lahko sestaviš kodo, s pomočjo katere bom narisal skoraj vse. Uporabi nekaj blokov, da bom risal preko sivih črt v sliki. (Vsaka črta je dolga 100 pixlov)
-      2-3 Artist 11: "Obrobi Stop znak, tako da narišeš osmerokotnik, torej lik z 8 stranicami, katera vsaka je dolga 100 pixlov. Koliko kotnih stopinj se moraš obrniti po vsaki stranici? (Namig: Koliko je 360 deljeno 8?) "
-      2-3 Artist 12: |-
-        Uredi bloke za ponavljanje, tako da s krogom narišeš oko. Če se po vsakem premiku obrneš za eno kotno stopinjo, kolikokrat moraš ponoviti zanko, da narišeš krog? 180? 360? 500?
+      2-3 Artist 11: 'Obrobi Stop znak, tako da narišeš osmerokotnik, torej lik z 8 stranicami, katera vsaka je dolga 100 pixlov. Koliko kotnih stopinj se moraš obrniti po vsaki stranici? (Namig: Koliko je 360 deljeno 8?) '
+      2-3 Artist 12: Uredi bloke za ponavljanje, tako da s krogom narišeš oko. Če se po vsakem premiku obrneš za eno kotno stopinjo, kolikokrat moraš ponoviti zanko, da narišeš krog? 180? 360? 500?
       2-3 Artist 2 new: 'Ta hiša ima nedokončano steno. Vsaka dokončana stran je 100, na pol dokončana stena pa je le 50. Dokončaj steno. '
       2-3 Artist 2: 'Ta hiša ima nedokončano steno. Vsaka dokončana stran je 100, na pol dokončana stena pa je le 50. Dokončaj steno. '
       2-3 Artist 3.4: Bloki "skoči" premaknejo umetnika brez risanja. Nariši prekinjeno črto z uporabo blokov.
       2-3 Artist 3: Ta klobuk je visok 100 pik. Nariši klobuk, ki ima 70 pik manj.
-      2-3 Artist 3new: "Višina rdečega klobuka je 100 pikslov. Dokončaj risbo črnega klobuka, ki je za 70 pikslov nižji.\\r (Opomba: Širina obeh klobukov je 50 pikslov.)"
+      2-3 Artist 3new: 'Višina rdečega klobuka je 100 pikslov. Dokončaj risbo črnega klobuka, ki je za 70 pikslov nižji.\\r (Opomba: Širina obeh klobukov je 50 pikslov.)'
       2-3 Artist 4: Pomagaj mi končati to mačjo hiško.
       2-3 Artist 5: To kodo zamenjaj s kocko "ponovi večkrat" in nariši isto hišo tako, da uporabiš le 3 kocke.
       2-3 Artist 6: 'Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.'
@@ -18,42 +18,37 @@ sl:
       2-3 Artist 9 NEW: Končaj zmaja
       2-3 Artist 9 REPLACEMENT: Do konca narišite te stopnice!
       2-3 Artist 9: Končaj zmaja
-      2-3 Artist Assessment 1: 'Nariši še drugi zob s širino in višino 25 pikslov.'
+      2-3 Artist Assessment 1: Nariši še drugi zob s širino in višino 25 pikslov.
       2-3 Artist Debugging 1: Znaš narisati ta klobuk, ki ima zgornji del širok 100 pixlov?
-      2-3 Artist Debugging 10: "Križni gumbek na kontrolerju za igrice je preozek in zamaknjen. Namig: Razširi ga za 10 pixlov."
-      2-3 Artist Debugging 11: |-
-        Pomagaj mi dokončati to čudoviti snežinko. Koliko ponovitev potrebujem za to?
+      2-3 Artist Debugging 10: 'Križni gumbek na kontrolerju za igrice je preozek in zamaknjen. Namig: Razširi ga za 10 pixlov.'
+      2-3 Artist Debugging 11: Pomagaj mi dokončati to čudoviti snežinko. Koliko ponovitev potrebujem za to?
       2-3 Artist Debugging 12: Temu prizoru moram dodati morski val. Mi lahko pomagaš?
-      2-3 Artist Debugging 2: "Koda za risanje brkov ni pravilno napisana. Namig: Vsak brk je dolg 75 pixlov. Ustrezno uredi kodo, da bodo brki taki, kot na sliki. "
-      2-3 Artist Debugging 3: "Koda za mojo ladjico ima napako.  Znaš popraviti kodo, tako da spremeniš kot med linijami? Namig: Zadnji kot je zamaknjen za 15 stopinj. "
+      2-3 Artist Debugging 2: 'Koda za risanje brkov ni pravilno napisana. Namig: Vsak brk je dolg 75 pixlov. Ustrezno uredi kodo, da bodo brki taki, kot na sliki. '
+      2-3 Artist Debugging 3: 'Koda za mojo ladjico ima napako.  Znaš popraviti kodo, tako da spremeniš kot med linijami? Namig: Zadnji kot je zamaknjen za 15 stopinj. '
       2-3 Artist Debugging 4: Kaj poskušamo narisati? Do konca poveži točke in pri tem uporabi ustrezne linije in kote.
-      2-3 Artist Debugging 5: "Koda za nogo in stopalo, kot vidiš je napačna. Namig: Stopalo je predolgo, mogoče je dovolj, da odstranimo eno vrstico."
-      2-3 Artist Debugging 6: |-
-        Videti je, kot da sedim na stolu brez zadnje noge. Uredi kodo, da dorišeš še eno nogo.
-      2-3 Artist Debugging 7: |-
-        Videti je, da koda izriše črko C narobe obrnjeno. Znaš črko pravilno obrniti?
-      2-3 Artist Debugging 8: |-
-        Moja vetrnica ni dokončana. Koliko ponovitev potrebujem, da jo narišem do konca?
-      2-3 Artist Debugging 9: |-
-        Koda za ta pecelj ni pravilna. Namig: Kot je zamaknjen za 60 stopinj. 
-      2-3 Artist Debugging Assessment 1: "Lik, kot je zamišljen v kodi, je premajhen. Povečaj ga. Namig: Mora biti večji za 75 pixlov na vsaki stranici."
+      2-3 Artist Debugging 5: 'Koda za nogo in stopalo, kot vidiš je napačna. Namig: Stopalo je predolgo, mogoče je dovolj, da odstranimo eno vrstico.'
+      2-3 Artist Debugging 6: Videti je, kot da sedim na stolu brez zadnje noge. Uredi kodo, da dorišeš še eno nogo.
+      2-3 Artist Debugging 7: Videti je, da koda izriše črko C narobe obrnjeno. Znaš črko pravilno obrniti?
+      2-3 Artist Debugging 8: Moja vetrnica ni dokončana. Koliko ponovitev potrebujem, da jo narišem do konca?
+      2-3 Artist Debugging 9: 'Koda za ta pecelj ni pravilna. Namig: Kot je zamaknjen za 60 stopinj. '
+      2-3 Artist Debugging Assessment 1: 'Lik, kot je zamišljen v kodi, je premajhen. Povečaj ga. Namig: Mora biti večji za 75 pixlov na vsaki stranici.'
       2-3 Artist Free Play: Prosta naloga! Nariši nekaj po lastni izbiri.
       2-3 Artist Functions 1 a: "\"Jaz zombi umetnik. Jaz rad risati!\"\nPomagaj mi narisati kvadratna očala. Namig: Prehod med očali je \n25 pikslov krajši od dolžine kvadrata."
       2-3 Artist Functions 1: "\"Jaz zombi umetnik. Jaz rad risati!\"\nPomagaj mi narisati kvadratna očala. Namig: Prehod med očali je \n25 pikslov krajši od dolžine kvadrata."
-      2-3 Artist Functions 10: 'Imamo dve funkciji, eno za risanje velikega zobnika, drugo pa za risanje malega zobnika. Uporabi funkciji za risanje notranjosti motorja!'
-      2-3 Artist Functions 11 a: "Funkcijo \"nariši kvadrat\" smo preimenovali v \"nariši šestkotnik\", vendar še vedno riše kvadrate! Ali lahko spremeniš funkcijo \"nariši šestkotnik\", da nariše šestkotnik s stranicami 50 pikslov in da narišeš lik z uporabo funkcije? Nariši sliko z uporabo nove funkcije!"
-      2-3 Artist Functions 11.5 a: "Tukaj je ista funkcija \"nariši šestkotnik\". Kaj se zgodi, če se pri vsaki ponovitvi obrneš za 60 stopinj?"
-      2-3 Artist Functions 11.5: "Tukaj je ista funkcija \"nariši šestkotnik\". Kaj se zgodi, če se pri vsaki ponovitvi obrneš za 60 stopinj?"
-      2-3 Artist Functions 11: "Funkcijo \"nariši kvadrat\" smo preimenovali v \"nariši šestkotnik\", vendar še vedno riše kvadrate! Ali lahko spremeniš funkcijo \"nariši šestkotnik\", da nariše šestkotnik s stranicami 50 pikslov in da narišeš lik z uporabo funkcije? Nariši sliko z uporabo nove funkcije!"
-      2-3 Artist Functions 12 Mike: "Funkcije so odlične za večkratno risanje kompleksnih stvari. Ali znaš uporabiti funkcijo \"nariši rožo\", da bi zapolnil korito do konca?(Namig: razdalja med rastlinami je 100 pik)  "
-      2-3 Artist Functions 12 a: "Funkcije so odlične za večkratno risanje kompleksnih stvari. Ali znaš uporabiti funkcijo \"nariši rožo\", da bi zapolnil korito do konca?(Namig: razdalja med rastlinami je 100 pik)  "
-      2-3 Artist Functions 12: "Funkcije so odlične za večkratno risanje kompleksnih stvari. Ali znaš uporabiti funkcijo \"nariši rožo\", da bi zapolnil korito do konca?(Namig: razdalja med rastlinami je 100 pik)  "
+      2-3 Artist Functions 10: Imamo dve funkciji, eno za risanje velikega zobnika, drugo pa za risanje malega zobnika. Uporabi funkciji za risanje notranjosti motorja!
+      2-3 Artist Functions 11 a: Funkcijo "nariši kvadrat" smo preimenovali v "nariši šestkotnik", vendar še vedno riše kvadrate! Ali lahko spremeniš funkcijo "nariši šestkotnik", da nariše šestkotnik s stranicami 50 pikslov in da narišeš lik z uporabo funkcije? Nariši sliko z uporabo nove funkcije!
+      2-3 Artist Functions 11.5 a: Tukaj je ista funkcija "nariši šestkotnik". Kaj se zgodi, če se pri vsaki ponovitvi obrneš za 60 stopinj?
+      2-3 Artist Functions 11.5: Tukaj je ista funkcija "nariši šestkotnik". Kaj se zgodi, če se pri vsaki ponovitvi obrneš za 60 stopinj?
+      2-3 Artist Functions 11: Funkcijo "nariši kvadrat" smo preimenovali v "nariši šestkotnik", vendar še vedno riše kvadrate! Ali lahko spremeniš funkcijo "nariši šestkotnik", da nariše šestkotnik s stranicami 50 pikslov in da narišeš lik z uporabo funkcije? Nariši sliko z uporabo nove funkcije!
+      2-3 Artist Functions 12 Mike: 'Funkcije so odlične za večkratno risanje kompleksnih stvari. Ali znaš uporabiti funkcijo "nariši rožo", da bi zapolnil korito do konca?(Namig: razdalja med rastlinami je 100 pik)  '
+      2-3 Artist Functions 12 a: 'Funkcije so odlične za večkratno risanje kompleksnih stvari. Ali znaš uporabiti funkcijo "nariši rožo", da bi zapolnil korito do konca?(Namig: razdalja med rastlinami je 100 pik)  '
+      2-3 Artist Functions 12: 'Funkcije so odlične za večkratno risanje kompleksnih stvari. Ali znaš uporabiti funkcijo "nariši rožo", da bi zapolnil korito do konca?(Namig: razdalja med rastlinami je 100 pik)  '
       2-3 Artist Functions 13: Pripravili smo vam štiri funkcije. Uporabi jih na poljuben način znotraj ene ali večih zank in ustvari sliko, ki jo lahko deliš s prijatelji. Pritisni zaženi in si oglej primer.
-      2-3 Artist Functions 2: "Funkcije ti pomagajo pri ustvarjanju novih blokov. Premaknili smo blok za risanje kvadrata v funkcijo, imenovano \"nariši kvadrat\". Znaš uporabiti funkcijo, \"nariši kvadrat\" za risanje očal? Očala so razmaknjena za 75 pikslov."
-      2-3 Artist Functions 3: "Uredi funkcijo za risanje kvadrata s stranico dolžine 115, da narišeš večja očala. Očala so tokrat razmaknjena za 45 pikslov."
+      2-3 Artist Functions 2: Funkcije ti pomagajo pri ustvarjanju novih blokov. Premaknili smo blok za risanje kvadrata v funkcijo, imenovano "nariši kvadrat". Znaš uporabiti funkcijo, "nariši kvadrat" za risanje očal? Očala so razmaknjena za 75 pikslov.
+      2-3 Artist Functions 3: Uredi funkcijo za risanje kvadrata s stranico dolžine 115, da narišeš večja očala. Očala so tokrat razmaknjena za 45 pikslov.
       2-3 Artist Functions 4: Uporabi "Ponovi" bloke za risanje teh treh kvadratov.
       2-3 Artist Functions 7: 'Uporabite funkcijo »pripravi hišo«  in narišite dve hiši z uporabo dveh različnih parametrov. (Namig: prva hiša je 100 pik).'
-      2-3 Artist Functions 9: 'Imamo funkcijo "Snežinka". Eksperimentiraj z njo, da narišeš zimsko sceno! Ta level je prost, torej ni določene rešitve za nalogo. Zabavaj se!'
+      2-3 Artist Functions 9: Imamo funkcijo "Snežinka". Eksperimentiraj z njo, da narišeš zimsko sceno! Ta level je prost, torej ni določene rešitve za nalogo. Zabavaj se!
       2-3 Artist Loops 1: Ali lahko narediš šesterokotnik s stranicami, dolgimi 100 pik in tako dokončaš celico? Ne pozabi, da se moraš obrniti le za 60 stopinj!
       2-3 Artist Loops 10: Kaj se zgodi z načrtom, ko se še zadnjič premaknemo naprej s polovičnim korakom?
       2-3 Artist Loops 11: Pa naredimo še 'eno' zanko okoli našega celotnega izdelka! Ne pozabi dodati kota na konec zunanje zanke.
@@ -63,41 +58,46 @@ sl:
       2-3 Artist Loops 6: Dodaj še en premik in obrat znotraj zanke in videl/a boš, kako se tvoja slika spremeni.
       2-3 Artist Loops 7: Zanke lahko uporabimo za izdelavo različnih poligonov. Ali lahko znotraj tega sedmerokotnika ustvariš romb?
       2-3 Artist Loops 8: Postavimo oba elementa znotraj zanke.
-      2-3 Artist Loops 9: |-
-        Zdaj bomo dali v zanko iste elemente, a bomo med njimi dodali nekaj razdalje. /r
-        Uporabi isto kodo kot prej, 
-        a na koncu zunanje zanke dodaj korak naprej.
+      2-3 Artist Loops 9: "Zdaj bomo dali v zanko iste elemente, a bomo med njimi dodali nekaj razdalje. /r\nUporabi isto kodo kot prej, \na na koncu zunanje zanke dodaj korak naprej."
       2-3 Artist Loops New 1: Narišimo glavo robota! Znaš narediti kvadrat s stranicami velikosti 100 pikslov?
       2-3 Artist Loops New 10: Zdaj pa združi vse V-je v predstavljen lik, tako, da uporabiš zanko.
-      2-3 Artist Loops New 11: Tokrat rišimo s 24 ponovitvami. Dodaj kodi obrat v levo za 30 stopinj in združi vse skupaj v blok za ponavljanje. 
+      2-3 Artist Loops New 11: Tokrat rišimo s 24 ponovitvami. Dodaj kodi obrat v levo za 30 stopinj in združi vse skupaj v blok za ponavljanje.
       2-3 Artist Loops New 12: 'Nariši diamant s stranicami 100 pikslov. '
-      2-3 Artist Loops New 13: "Tokrat nariši diamant s 3 kratno ponovitvijo zanke."
+      2-3 Artist Loops New 13: Tokrat nariši diamant s 3 kratno ponovitvijo zanke.
       2-3 Artist Loops New 14: Nariši diamant z 10 kratno ponovitvijo, a med vsakim rotiraj za 90 stopinj.
       2-3 Artist Loops New 15: Nariši nekaj zabavnega.
-      2-3 Artist Loops New 2: |-
-        Tukaj je del kode za risanje kvadrata. Kaj se zgodi, če za zagon programa uporabiš blok za ponavljanje s 4 ponovitvami?
-      2-3 Artist Loops New 9: Nariši preprosti V, da končaš puščico, pri čemer sta obe stranici dolgi 50 pikslov. 
+      2-3 Artist Loops New 2: Tukaj je del kode za risanje kvadrata. Kaj se zgodi, če za zagon programa uporabiš blok za ponavljanje s 4 ponovitvami?
+      2-3 Artist Loops New 9: Nariši preprosti V, da končaš puščico, pri čemer sta obe stranici dolgi 50 pikslov.
       2-3 Artist Match Hex Pic: 'Tekma: Pomagaj dokončati osmerokotnik.'
       2-3 Artist Match Rho Pic: 'Tekma: Dokončaj manjkajočo kodo.'
       2-3 Artist Match Sq Pic: 'Tekma: Dokončaj manjkajočo kodo'
       2-3 Artist Match Tri pic: 'Ujemanje: Vstavi manjkajočo kodo.'
-      2-3 Artist Nested Loops 1: "Zanke si že uporabljal/a za risanje oblik. Ali si vedel/a tudi to, da daš lahko eno zanko v drugo zanko? /r\nPostavi v zanko celo to kocko kode trikrat, da boš lahko narisal/a vzorec."
+      2-3 Artist Nested Loops 1: |-
+        Zanke si že uporabljal/a za risanje oblik. Ali si vedel/a tudi to, da daš lahko eno zanko v drugo zanko? /r
+        Postavi v zanko celo to kocko kode trikrat, da boš lahko narisal/a vzorec.
       2-3 Artist Nested Loops 10: 12 krat postavi to kodo v zanko, da boš dokončal/a vzorec.
       2-3 Artist Nested Loops 11: 4 krat postavi to kodo v zanko, da dokončaš vzorec, po vsakem krogu naredi obrat za 90 stopinj.
       2-3 Artist Nested Loops 12: Za to kodo uporabi zanko 12 krat, da dokončaš kodre.
-      2-3 Artist Nested Loops 2: "Trikotnik postavi v zanko 6 krat. Za vsakim trikotnikom moraš narediti obrat za 60 stopinj, preden narišeš naslednjega."
-      2-3 Artist Nested Loops 3: "Da bi narisal/a ta vzorec, moraš postaviti trikotnik v zanko 12 krat. Število stopinj v krogu (360) deli s številom oblik (12), ki jih rišeš. Tako boš ugotovil/a, kakšen obrat moraš narediti po vsaki obliki."
+      2-3 Artist Nested Loops 2: Trikotnik postavi v zanko 6 krat. Za vsakim trikotnikom moraš narediti obrat za 60 stopinj, preden narišeš naslednjega.
+      2-3 Artist Nested Loops 3: Da bi narisal/a ta vzorec, moraš postaviti trikotnik v zanko 12 krat. Število stopinj v krogu (360) deli s številom oblik (12), ki jih rišeš. Tako boš ugotovil/a, kakšen obrat moraš narediti po vsaki obliki.
       2-3 Artist Nested Loops 4: "Ta diamant postavi v zanko 12 krat in nariši \nrožo. Namig: 12 diamantov je prav takih kot 12 trikotnikov, ki si jih naredil/a - za koliko se moraš obrniti po vsaki obliki?"
       2-3 Artist Nested Loops 5: "Okna te stavbe zapolni z \nugnezdeno zanko. Okna so dolga 20 pik med njimi pa je razdalja, dolga 20 pik."
-      2-3 Artist Nested Loops 6: |-
-        Ta dinozaver ima po svojem repu razprostrtih 20 bodic. Vsaka bodica je dolga 30 pik. 8 krat postavi trikotnik v zanko, a ne pozabi se za vsakim premakniti naprej.
-      2-3 Artist Nested Loops 7: "Trikotnik postavi v zanko 10 krat\nin nariši sonce. Za vsakim trikotnikom se moraš premakniti in obrniti.\nZa koliko se moraš obrniti, lahko ugotoviš tako, da deliš število stopinj v krogu\ns številom oblik, ki ga sestavljajo."
+      2-3 Artist Nested Loops 6: Ta dinozaver ima po svojem repu razprostrtih 20 bodic. Vsaka bodica je dolga 30 pik. 8 krat postavi trikotnik v zanko, a ne pozabi se za vsakim premakniti naprej.
+      2-3 Artist Nested Loops 7: |-
+        Trikotnik postavi v zanko 10 krat
+        in nariši sonce. Za vsakim trikotnikom se moraš premakniti in obrniti.
+        Za koliko se moraš obrniti, lahko ugotoviš tako, da deliš število stopinj v krogu
+        s številom oblik, ki ga sestavljajo.
       2-3 Artist Nested Loops 8: "Sedaj naši sliki dodaj nekaj trave. \nRazdalja med šopi trave je 50 pik."
       2-3 Artist Nested Loops 9: "Sliko bomo dokočali tako, da bomo dodali rožo. \nDiamant postavi v zanko 12 krat in nariši rožo."
-      2-3 Artist Nested Loops Free Play: "Poigraj se in nariši nekaj kul\nz ugnezdenimi zankami."
-      2-3 Bee Conditionals 1: "Živijo, jaz sem čebela. Pomagaj mi nabrati nektar\niz rože."
-      2-3 Bee Conditionals 10: 'Vijolične rože imajo lahko 1 ali 0 nektarja. Pazi, da ne nabiraš nektarja z vijolične rože, ki ga nima./r'
-      2-3 Bee Conditionals 11: "Nabiraj nektar z rož, ki ga imajo."
+      2-3 Artist Nested Loops Free Play: |-
+        Poigraj se in nariši nekaj kul
+        z ugnezdenimi zankami.
+      2-3 Bee Conditionals 1: |-
+        Živijo, jaz sem čebela. Pomagaj mi nabrati nektar
+        iz rože.
+      2-3 Bee Conditionals 10: Vijolične rože imajo lahko 1 ali 0 nektarja. Pazi, da ne nabiraš nektarja z vijolične rože, ki ga nima./r
+      2-3 Bee Conditionals 11: Nabiraj nektar z rož, ki ga imajo.
       2-3 Bee Conditionals 12: "Uporabi zanko, da preveriš in nabereš nektar \nz vseh teh rož."
       2-3 Bee Conditionals 13: |-
         Naberi nektar in naredi med. Namig:
@@ -106,63 +106,73 @@ sl:
       2-3 Bee Conditionals 14: |-
         Naberi nektar in naredi med. Pazi, da ne nabiraš medu
         iz vijolične rože, ki ga nima.
-      2-3 Bee Conditionals 15: "Naberi nektar iz vseh štirih rož."
-      2-3 Bee Conditionals 2: "Živijo, jaz sem čebela. Pomagaj mi nabrati nektar\niz vseh rož. Uporabi zanko."
-      2-3 Bee Conditionals 3: "Pomagaj mi nabrati nektar iz rož in narediti med. Uporabi zanko."
-      2-3 Bee Conditionals 4: "Pomagaj mi nabrati nektar\nz vseh rož in naredi ves med."
-      2-3 Bee Conditionals 5: "Vijolične rože imajo lahko 1 ali 0 nektarja,\na ne veš, katere! Pazi, da ne\nnabiraš nektarja iz\nvijolične rože, če ga nima. Preveri, če ima\nnektar vrednost ena tako,\nda uporabiš če kocko."
-      2-3 Bee Conditionals 6: "S \"če\" kocko preveri,\nče je na voljo kaj nektarja."
-      2-3 Bee Conditionals 7: "Naberi nektar iz vseh rož,\nki ga imajo."
-      2-3 Bee Conditionals 8: "Na polju so rdeče in vijolične rože.\nRdeče rože imajo znano količino nektarja,\nne ve pa se, koliko ga imajo vijolične.\nNaberi ves nektar."
+      2-3 Bee Conditionals 15: Naberi nektar iz vseh štirih rož.
+      2-3 Bee Conditionals 2: |-
+        Živijo, jaz sem čebela. Pomagaj mi nabrati nektar
+        iz vseh rož. Uporabi zanko.
+      2-3 Bee Conditionals 3: Pomagaj mi nabrati nektar iz rož in narediti med. Uporabi zanko.
+      2-3 Bee Conditionals 4: |-
+        Pomagaj mi nabrati nektar
+        z vseh rož in naredi ves med.
+      2-3 Bee Conditionals 5: |-
+        Vijolične rože imajo lahko 1 ali 0 nektarja,
+        a ne veš, katere! Pazi, da ne
+        nabiraš nektarja iz
+        vijolične rože, če ga nima. Preveri, če ima
+        nektar vrednost ena tako,
+        da uporabiš če kocko.
+      2-3 Bee Conditionals 6: |-
+        S "če" kocko preveri,
+        če je na voljo kaj nektarja.
+      2-3 Bee Conditionals 7: |-
+        Naberi nektar iz vseh rož,
+        ki ga imajo.
+      2-3 Bee Conditionals 8: |-
+        Na polju so rdeče in vijolične rože.
+        Rdeče rože imajo znano količino nektarja,
+        ne ve pa se, koliko ga imajo vijolične.
+        Naberi ves nektar.
       2-3 Bee Conditionals 9: Zberi nektar iz vseh cvetov.
-      2-3 Bee Conditionals Assessment 1: 'Zberi ves nektar. Pazi, da ne zbereš nektarja vijoličnih cvetov, če le-tega nima.'
+      2-3 Bee Conditionals Assessment 1: Zberi ves nektar. Pazi, da ne zbereš nektarja vijoličnih cvetov, če le-tega nima.
       2-3 Bee Debugging 1: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
-      2-3 Bee Debugging 10: "Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med."
-      2-3 Bee Debugging 2: |-
-        Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
-      2-3 Bee Debugging 3: |-
-        Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
+      2-3 Bee Debugging 10: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
+      2-3 Bee Debugging 2: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
+      2-3 Bee Debugging 3: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
       2-3 Bee Debugging 4: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
-      2-3 Bee Debugging 5: "Ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med. Zdaj lahko uporabiš ukaza \"Zaženi\" ter \"Korak\"."
-      2-3 Bee Debugging 6: |-
-        Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
+      2-3 Bee Debugging 5: Ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med. Zdaj lahko uporabiš ukaza "Zaženi" ter "Korak".
+      2-3 Bee Debugging 6: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
       2-3 Bee Debugging 7: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
-      2-3 Bee Debugging 8: |-
-        Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
-      2-3 Bee Debugging 9: |-
-        Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
-      2-3 Bee Debugging Assessment 1: |-
-        Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
+      2-3 Bee Debugging 8: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
+      2-3 Bee Debugging 9: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
+      2-3 Bee Debugging Assessment 1: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
       2-3 Bee Functions 1: Funkcije so bloki kod, ki izvajajo opravila. Uporabite finkcijo "get 2 nectar", da zberete nektar iz vsakega cveta.
-      2-3 Bee Functions 10: "Vijolični cvetovi lahko imajo nektar, ali pa tudi ne. Ustvarite funkcijo, ki zbira nektar samo iz tistih vijoličnih cvetov, ki ga imajo."
-      2-3 Bee Functions 2: "Funkcije so bloki kod, ki izvajajo opravila. Uporabite funkcijo \"get 5\" da pridobite 5 nektarjev naenkrat. Poskrbite tudi, da uporabite ponavljajočo funkcijo, da boste dobili idealno število."
+      2-3 Bee Functions 10: Vijolični cvetovi lahko imajo nektar, ali pa tudi ne. Ustvarite funkcijo, ki zbira nektar samo iz tistih vijoličnih cvetov, ki ga imajo.
+      2-3 Bee Functions 2: Funkcije so bloki kod, ki izvajajo opravila. Uporabite funkcijo "get 5" da pridobite 5 nektarjev naenkrat. Poskrbite tudi, da uporabite ponavljajočo funkcijo, da boste dobili idealno število.
       2-3 Bee Functions 3: Zberi nektar iz vseh cvetov.
-      2-3 Bee Functions 4: "Funkcija \"premakni se in dobi nektar\" obrne čebelo, dobi nektar in vrne čebelo nazaj na začetek. Uporabi to funkcijo, da dobiš ves nektar."
+      2-3 Bee Functions 4: Funkcija "premakni se in dobi nektar" obrne čebelo, dobi nektar in vrne čebelo nazaj na začetek. Uporabi to funkcijo, da dobiš ves nektar.
       2-3 Bee Functions 5: Tu je več nektarja v cvetu. Popravi dano funkcijo tako, da dobi 4 nektarje in jo uporabi, da dobiš ves nektar iz cveta.
       2-3 Bee Functions 6: Zdaj pa uporabi isto funkcijo, da dobiš nektar iz treh cvetov.
       2-3 Bee Functions 7: Rože so sedaj bolj oddaljene. Uredi funkcijo in z njo zberi ves nektar iz cvetov.
       2-3 Bee Functions 8: Ustvari svojo funkcijo, ki dobi 7 nektarjev, se premakne naprej in naredi 7 medu. Uporabi to funkcijo, da dobiš med iz obeh cvetov in narediš med pri obeh satovjih.
       2-3 Bee Functions 9: Ustvari svojo funkcijo, ki gre po poti, dobi nektar, naredi med in vrne čebelico na vrh poti.
-      2-3 Bee Functions Assessment 1: 'Uporabi dano funkcijo, da dobiš med iz obeh cvetov.'
-      2-3 Bee Functions Assessment 2: 'Ustvari funkcijo, ki obrne čebelico, jo premakne naprej in naredi 3 medu, potem pa jo vrne nazaj na začetek in jo obrne nazaj kot na začetku.'
-      2-3 Bee Loops 1: |-
-        Vsaka rožica vsebuje eno enoto nektarja. Naberi nektar od vsake. 
+      2-3 Bee Functions Assessment 1: Uporabi dano funkcijo, da dobiš med iz obeh cvetov.
+      2-3 Bee Functions Assessment 2: Ustvari funkcijo, ki obrne čebelico, jo premakne naprej in naredi 3 medu, potem pa jo vrne nazaj na začetek in jo obrne nazaj kot na začetku.
+      2-3 Bee Loops 1: 'Vsaka rožica vsebuje eno enoto nektarja. Naberi nektar od vsake. '
       2-3 Bee Loops 10: Lahko uporabiš "dokler" zanko znotraj dveh drugih zank, da dobiš ves nektar?
       2-3 Bee Loops 13: 'Naloga: Poberi ves nektar tako, da uporabiš čim manj blokov.'
       2-3 Bee Loops 1A: 'Živio, jaz sem čebela. Mi pomagaš nabrati nektar od teh rožic? '
       2-3 Bee Loops 2: Uporabi zanko, da nabereš nektar in narediš med.
       2-3 Bee Loops 2A: Ali lahko to opraviš preprosteje z zanko?
-      2-3 Bee Loops 3: Naberi nektar od vsake rožice in naredi med v vsakem satovju. 
+      2-3 Bee Loops 3: Naberi nektar od vsake rožice in naredi med v vsakem satovju.
       2-3 Bee Loops 3A: Ali lahko uporabiš zanko, da nabereš ves nektar?
       2-3 Bee Loops 3B: Zdaj pa uporabi blok za ponavljanje, da nabereš ves nektar in narediš med.
-      2-3 Bee Loops 4: |-
-        Tako kot pri prejšnji nalogi uporabi zanko, vendar z obračanjem.
-      2-3 Bee Loops 4A: "Kaj se zgodi, če ukaze z zanko trikrat ponoviš? Ne pozabi na koncu narediti meda! "
-      2-3 Bee Loops 5: "Uporabi zanko za sestopanje po stopnicah in naberi nektar."
+      2-3 Bee Loops 4: Tako kot pri prejšnji nalogi uporabi zanko, vendar z obračanjem.
+      2-3 Bee Loops 4A: 'Kaj se zgodi, če ukaze z zanko trikrat ponoviš? Ne pozabi na koncu narediti meda! '
+      2-3 Bee Loops 5: Uporabi zanko za sestopanje po stopnicah in naberi nektar.
       2-3 Bee Loops 6: Uporabi zanko, da nabereš  nektar z vsake rožice in narediš med na vsakem satovju.
       2-3 Bee Loops 7: Vstavi te bloke v zanko, da nabereš nektar od vsake rožice.
-      2-3 Bee Loops 8: "Vijolične rožice imajo vsakič, ko zaženeš program, drugačno količino nektarja. Uporabi \"dokler nektar\" zanko, da dobiš ves nektar. Ta zanka se bo izvajala, dokler je pogoj izpolnjen, v tem primeru je to \"nektar > 0\"."
-      2-3 Bee Loops Assessment 1: 'Uporabi "dokler" zanko, da dobiš ves nektar iz teh cvetov.'
+      2-3 Bee Loops 8: Vijolične rožice imajo vsakič, ko zaženeš program, drugačno količino nektarja. Uporabi "dokler nektar" zanko, da dobiš ves nektar. Ta zanka se bo izvajala, dokler je pogoj izpolnjen, v tem primeru je to "nektar > 0".
+      2-3 Bee Loops Assessment 1: Uporabi "dokler" zanko, da dobiš ves nektar iz teh cvetov.
       2-3 Maze 1: 'Mi pomagaš ujeti prašička? Poskusi z večimi ukazi "Premakni se", da me premakneš v smeri prašička in klikni "Zaženi". '
       2-3 Maze 10: Pelji me k tej zeleni zlobi! (Pazi se TNTja)
       2-3 Maze 11: Spravi me k cvetu, lačen sem! Kolikokrat je treba blok ponoviti?
@@ -188,8 +198,12 @@ sl:
       2-3 Maze 9: Pelji me k tej zeleni zlobi! (Pazi se TNTja)
       2-3 Maze Loops 1: Me lahko pelješ do prašička z uporabo 5 blokov?
       2-3 Maze Loops 17: Uporabi, kar si se naučil, da bi me spravil k sončnici!
-      2-3 Maze Loops 18: "Spravi me k sončnici tako, a uporabiš čim manj blokov! \\r \\r\nPoskušaj uporabiti blok ponovi -krat znotraj še enega, da zmanjšaš število blokov."
-      2-3 Maze Loops 19: "Pojdimo na naslednjo stopnjo! \\r\nUporabi zanke tako, da me spraviš k sončnici, s čim manj uporabljenimi zankami."
+      2-3 Maze Loops 18: |-
+        Spravi me k sončnici tako, a uporabiš čim manj blokov! \\r \\r
+        Poskušaj uporabiti blok ponovi -krat znotraj še enega, da zmanjšaš število blokov.
+      2-3 Maze Loops 19: |-
+        Pojdimo na naslednjo stopnjo! \\r
+        Uporabi zanke tako, da me spraviš k sončnici, s čim manj uporabljenimi zankami.
       2-3 Maze Loops 20: Pripelji me do sončnice z uporabo čim manj blokov!
       2-3 Maze Loops 21: Spravi me k sončnici z uporabo čim manj blokov!
       2-3 Maze Loops Assessment 1: 'Pelji me do sončnice z uporabo 5 blokov! '
@@ -198,10 +212,13 @@ sl:
       2-3 Maze sq4: Zberi se in pomagaj mi najti prašička, sicer se bom zelo razjezil!
       2-3 Maze sq7: Pripelji me do zelenega vsiljivca z uporabo zgolj treh blokov.
       2-3 Maze sq8: Spravi me k pujsu! (Kje je sedaj tisti "ponovi -krat" blok, ko ga potrebuješ?)
-      2-3 maze sq13: "Dragi obiskovalec. Jaz Zombi. Moram... priti... do sončnice.\nNaredi zanko s \"ponavljaj do\" bloki."
+      2-3 maze sq13: |-
+        Dragi obiskovalec. Jaz Zombi. Moram... priti... do sončnice.
+        Naredi zanko s "ponavljaj do" bloki.
       2-3 maze sq14: Ali lahko prideš do sončnice, tako da uporabiš le 4 bloke?
       2-3 maze sq15: Ali lahko prideš do sončnice z uporabo le petih blokov?
       2-3 maze sq16: Dobro, to je podobno. Ali ti lahko uspe le s petimi bloki?
+      2-3: Vijolične rože imajo lahko 1 ali 0 nektarja. Pazi, da ne nabiraš nektarja z vijolične rože, ki ga nima./r
       2-3level1: Pomagaj ptici ujeti nagajivega pujsa tako, da jo premakneš naprej
       20hr_farmer_stage9_1: Pozdravljeni! Sem kmetica, ki zate prideluje hrano in potrebujem tvojo pomoč. Na kmetiji je potrebno zravnati polja in jih pripraviti za sajenje. Premakni me, prosim, h kupu zemlje in uporabi blok "odstrani", da ga ne bo več.
       20hr_farmer_stage9_11: 'Še vedno je mrak. Premikaj me po polju. Če naletim na kup, ga odstrani, in če naletim na luknjo, jo napolni. Namig: v bloku "če (if)" uporabi spustni seznam z možnostmi.'
@@ -221,7 +238,9 @@ sl:
       20hr_maze_stage2_16: Jaz... sončnico... hočem! (Pomagaj si z uporabo ukaza "če (if) blok" in uporabi čim manj ukazov).
       20hr_maze_stage2_17: Pa še to, za vajo. Ne bo zelo drugače kot v prejšnji vaji. Le pazi se, da te Žvečko ne dobi!
       20hr_maze_stage2_18: Bloki "če-sicer" preverijo pogoj in nato naredi eno stvar ali drugo. Uporabi ta nov blok in me pripelji do sončnice.
-      20hr_maze_stage2_19: "Še ena vaja za \"če drugo\" kocko. Ti lahko\nuspe že v prvem poskusu?"
+      20hr_maze_stage2_19: |-
+        Še ena vaja za "če drugo" kocko. Ti lahko
+        uspe že v prvem poskusu?
       20hr_maze_stage2_2: Ta prašiček mi kodra perje. Pomagaj mi ga najti!
       20hr_maze_stage2_20: Poskusi uporabiti še tri dodatne bloke in ta zapletenejši labirint ne bo več težava. Če jih prav sestaviš, lahko prehodim vse ovinke in vse razdalje.
       20hr_maze_stage2_3: Najdi pot do prašička in me popelji po njej. Izogni se TNTju, sicer bo perje frčalo!
@@ -231,7 +250,7 @@ sl:
       20hr_maze_stage2_7: Poizkusi me pripeljati do zelenega vsiljivca z uporabo zgolj treh blokov.
       20hr_maze_stage2_8: Uporabi čim manj ukazov, da me pripelješ do prašička. Pomagaj si tako, da uporabiš blok "Ponovi" in to večkrat.
       20hr_maze_stage2_9: 'Ko je blok siv, ga ne moreš izbrisati. Namig: uporabi število tri v bloku "Ponovi". Vnesi v sivi blok naslednje ukaze: premakni se, premakni se, obrni se.'
-      4-5 Artist 1: 'Pomagaj mi narisati kvadrat. (Vsaka stranica je dolga 300 pikslov)'
+      4-5 Artist 1: Pomagaj mi narisati kvadrat. (Vsaka stranica je dolga 300 pikslov)
       4-5 Artist 10: Klikni "Zaženi" da preizkusiš kodo. Nato jo ponovi tolikokrat, da dokončaš risbo. Barva bo vedno drugačna.
       4-5 Artist 11: Dokončaj zelene črte. Dolge so 300 pikslov, razmaknjene pa za 15 pikslov.
       4-5 Artist 2: Zankaj kodo z uporabo bloka "ponovi", da dokončaš pravokotnik.
@@ -241,59 +260,56 @@ sl:
       4-5 Artist 5: S čim lahko zamenjamo "???", da zombi sigurno dokonča sliko z zanko, ki je podana?
       4-5 Artist 6: Enakostranični trikotnik ima kote s 60, 60 in 60 stopinjami. Vsaka stranica je dolga 200 pikslov. Dokončaj sliko.
       4-5 Artist 7: Ta pravokotni trikotnik ima kote s 30, 60 in 90 stopinjami. Dolžina nagnjene stranice (dolžina hipotenuze) je 200 pikslov. Dokončaj sliko.
-      4-5 Artist 8: "Sredinska črta nogometnega igrišča je pravokotna na zunanje črte. Obseg tega pravokotnika meri 800 pikslov, dolg pa je 240 pikslov. Kako širok je? Nariši zunanje in sredinjsko črto."
+      4-5 Artist 8: Sredinska črta nogometnega igrišča je pravokotna na zunanje črte. Obseg tega pravokotnika meri 800 pikslov, dolg pa je 240 pikslov. Kako širok je? Nariši zunanje in sredinjsko črto.
       4-5 Artist 9: Nariši levo polovico te slike, da bo umetnina simetrična. Trikotniki so enakostranični s stranico dolžine 50 pikslov.
-      4-5 Artist Assessment 1: 'Uporabi zanko, da narišeš enakostranični trikotnik. Vsaka stranica je dolga 300 pikslov.'
+      4-5 Artist Assessment 1: Uporabi zanko, da narišeš enakostranični trikotnik. Vsaka stranica je dolga 300 pikslov.
       4-5 Artist For Loops 1: Vstavi števila med 1 in 10 v polje širina in zaženi kodo.
       4-5 Artist Free Draw 1: Prosto risanje! Nariši karkoli, za kar imaš navdih.
-      4-5 Artist Patterns 1: |-
-        Nariši kvadrat s pomočjo zanke. Dolžina stranice je 20 pikslov.
-      4-5 Artist Patterns 10: "Ta koda nariše dve vrstici šestkotnikov - zanko uporabi štirikrat, da narišeš celotno satovje. V zunanji zanki moraš skočiti nazaj za 120 pikslov, da umetnik ne riše izven zaslona."
+      4-5 Artist Patterns 1: Nariši kvadrat s pomočjo zanke. Dolžina stranice je 20 pikslov.
+      4-5 Artist Patterns 10: Ta koda nariše dve vrstici šestkotnikov - zanko uporabi štirikrat, da narišeš celotno satovje. V zunanji zanki moraš skočiti nazaj za 120 pikslov, da umetnik ne riše izven zaslona.
       4-5 Artist Patterns 11: 'Kolikokrat se mora koda ponoviti v zanki, da narišeš pol kroga? '
-      4-5 Artist Patterns 12: "Kaj se zgodi, če ustvariš še eno zanko kot je ta, le da se obrneš levo namesto desno? Lahko to ponavljaš, da narišeš val?"
-      4-5 Artist Patterns 13: "Zdaj pa naredimo to štirikrat, da ustvarimo okvir za sliko. Pazi na vogale - ne smeš se kar obrniti za 90 stopinj! Če 60 ponovitev zanke s 3 stopinjskim obratom naredi pol kroga, kateri od teh blokov bo naredil dodatno četrtino kroga za vogale okvirja? "
+      4-5 Artist Patterns 12: Kaj se zgodi, če ustvariš še eno zanko kot je ta, le da se obrneš levo namesto desno? Lahko to ponavljaš, da narišeš val?
+      4-5 Artist Patterns 13: 'Zdaj pa naredimo to štirikrat, da ustvarimo okvir za sliko. Pazi na vogale - ne smeš se kar obrniti za 90 stopinj! Če 60 ponovitev zanke s 3 stopinjskim obratom naredi pol kroga, kateri od teh blokov bo naredil dodatno četrtino kroga za vogale okvirja? '
       4-5 Artist Patterns 2: Če postaviš svojo zanko, ki naredi kvadrat, znotraj druge zanke, to imenujemo ugnezdena zanka. Kaj moraš dodati kot zunanjo zanko, da poskrbiš, da je vseh 15 kvadratov poravnanih drug poleg drugega?
       4-5 Artist Patterns 3: Pojdimo za en nivo globlje! Celoten blok kode smo ugnezdili v novo zanko, ti pa moraš poskrbeti, da se umetnik postavi nazaj na pravo mesto, da nariše naslednjo črto. Katerega od teh blokov lahko umestiš na konec zunanje zanke, da narišeš celotno mrežo?
       4-5 Artist Patterns 4: Ta romb ima stranice z dolžino 50 pikslov in kote s 120 in 60 stopinjami. Uporabi zanko, da ga narišeš.
       4-5 Artist Patterns 5.5: Kolikokrat moraš ponoviti ta blok, da narišeš celotno mrežo rombov?
-      4-5 Artist Patterns 5: "Ponavljaj kodo, da dobiš vrstico s 6 rombi. Opazi, da smo spremenili kodo našega romba tako, da se ponovi trikrat namesto dvakrat - zakaj misliš, da je tako?"
-      4-5 Artist Patterns 6: Kolikokrat moraš ponoviti ta blok, da narišeš celotno mrežo rombov?
+      4-5 Artist Patterns 5: Ponavljaj kodo, da dobiš vrstico s 6 rombi. Opazi, da smo spremenili kodo našega romba tako, da se ponovi trikrat namesto dvakrat - zakaj misliš, da je tako?
       4-5 Artist Patterns 7: Spremenili smo kodo iz zadnje naloge, da smo dobili kompleksnejši vzorec. Opazuj, kako se rombi prekrivajo in poskusi spremeniti prvi "skoči nazaj" iz 100 na 50 (polovico dolžine) - kako daleč naj gre umetnik v drugem "skoči nazaj"?
       4-5 Artist Patterns 8: Uporabi zanko, da narišeš šestkotnik s stranicami dolžine 40 pikslov in koti s 60 stopinjami.
       4-5 Artist Patterns 9.5: Naredi zanko, da narišeš dve vrstici šestkotnikov. Pazi, druga vrstica je zamaknjena v desno.
-      4-5 Artist Patterns 9: "Zdaj pa ponovi to kodo trikrat in nariši celo vrstico. Širina vsakega šestkotnika je 80 pikslov, gledano od skrajne leve do skrajne desne točke."
+      4-5 Artist Patterns 9: Zdaj pa ponovi to kodo trikrat in nariši celo vrstico. Širina vsakega šestkotnika je 80 pikslov, gledano od skrajne leve do skrajne desne točke.
       4-5 Artist Patterns Free Play: Prosta igra - poskusi svoje veščine pri kreiranju vzorca po svojem izboru!
       4-5 Bee Conditionals 1: Ta oblak mi zakriva pogled! Preveri, če je pod oblakom roža in v tem primeru dobi nektar. Pazi, lahko se spremeni!
-      4-5 Bee Conditionals 2: "Še več oblakov! Poglej pod oblak in preveri, ali se tam skriva roža, preden pobereš nektar. Zapomni si: ne skrivajo vsi oblaki iste stvari!"
+      4-5 Bee Conditionals 2: 'Še več oblakov! Poglej pod oblak in preveri, ali se tam skriva roža, preden pobereš nektar. Zapomni si: ne skrivajo vsi oblaki iste stvari!'
       4-5 Bee Conditionals 3: Zdaj si želim narediti med. Oblaka morda skrivata satovje. Preveri oba oblaka!
       4-5 Bee Conditionals 4: Včasih oblak prekriva rožo, včasih pa satovje! Uporabi "če/sicer" blok, da v primeru rože dobiš nektar, sicer pa narediš med (ker je pod oblakom satovje).
-      4-5 Bee Conditionals 5: |-
-        Pod vsakim od oblakov bo ali roža ali satovje! Uporabi blok "če/sicer", da dobiš nektar, če je roža. V nasprotnem primeru naredi med, saj je spodaj satovje.
-      4-5 Bee Conditionals 6: "Nisem prepričan, koliko nektarja ima ta roža, a vem, da je eno od števil 1, 2 in 3. Združi pogojne bloke (\"če\" in/ali \"če/sicer\"), da dobiš ravno toliko nektarja, kot ga roža ima. Zapomni si, da se količina nektarja lahko spremeni vsakič, ko poženeš program!"
-      4-5 Bee Conditionals 7: "Te rože imajo lahko 3, 2 ali 1 nektar. Dopolni funkcijo \"preveri vijolično rožo\" in jo uporabi, da dobiš ves nektar iz cvetov."
-      4-5 Bee Conditionals 8: "Napiši funkcijo za \"preveri rožo, naredi med\". Funkcija mora preveriti, ali ima vijolična roža 3, 2 ali 1 nektar in dobiti ves nektar. Nato se mora premakniti naprej in narediti med."
-      4-5 Bee Conditionals Assessment 1: "Ta oblak skriva bodisi en nektar ali satovje, ki potrebuje en med. Dokončaj funkcijo \"dobi nektar ali naredi med\", potem pa jo pokliči, da dobiš nektar ali narediš med."
-      4-5 Bee Debugging 1: "Ti bloki me res mučijo. Jih lahko popraviš?"
+      4-5 Bee Conditionals 5: Pod vsakim od oblakov bo ali roža ali satovje! Uporabi blok "če/sicer", da dobiš nektar, če je roža. V nasprotnem primeru naredi med, saj je spodaj satovje.
+      4-5 Bee Conditionals 6: Nisem prepričan, koliko nektarja ima ta roža, a vem, da je eno od števil 1, 2 in 3. Združi pogojne bloke ("če" in/ali "če/sicer"), da dobiš ravno toliko nektarja, kot ga roža ima. Zapomni si, da se količina nektarja lahko spremeni vsakič, ko poženeš program!
+      4-5 Bee Conditionals 7: Te rože imajo lahko 3, 2 ali 1 nektar. Dopolni funkcijo "preveri vijolično rožo" in jo uporabi, da dobiš ves nektar iz cvetov.
+      4-5 Bee Conditionals 8: Napiši funkcijo za "preveri rožo, naredi med". Funkcija mora preveriti, ali ima vijolična roža 3, 2 ali 1 nektar in dobiti ves nektar. Nato se mora premakniti naprej in narediti med.
+      4-5 Bee Conditionals Assessment 1: Ta oblak skriva bodisi en nektar ali satovje, ki potrebuje en med. Dokončaj funkcijo "dobi nektar ali naredi med", potem pa jo pokliči, da dobiš nektar ali narediš med.
+      4-5 Bee Debugging 1: Ti bloki me res mučijo. Jih lahko popraviš?
       4-5 Bee Debugging 10: Poišči napake in jih popravi.
       4-5 Bee Debugging 11: Ali to pravilno šteje?
       4-5 Bee Debugging 2: Pomagaj čebelici dobiti nektar in narediti med.
       4-5 Bee Debugging 3: Poišči napake in jih popravi.
       4-5 Bee Debugging 4: Ti bloki ne delujejo. Kakšen je vzorec?
       4-5 Bee Debugging 5: Tukaj nekaj ni v redu...
-      4-5 Bee Debugging 6: "Vijolična rožica ima vsakič, ko zaženeš program, drugačno količino nektarja. Popravi bloke tako, da vsakič dobiš ves nektar iz cveta."
+      4-5 Bee Debugging 6: Vijolična rožica ima vsakič, ko zaženeš program, drugačno količino nektarja. Popravi bloke tako, da vsakič dobiš ves nektar iz cveta.
       4-5 Bee Debugging 7: Funkciji nekaj manjka...
       4-5 Bee Debugging 8: Ta funkcija deluje, a ni pravilno uporabljena.
       4-5 Bee Debugging 9: Zakaj čebelica ne naredi dovolj medu?
-      4-5 Bee Debugging Assessment 1: 'Popravi kodo.'
+      4-5 Bee Debugging Assessment 1: Popravi kodo.
       4-5 Bee Nested Loops 1: Uporabi zanko, da dobiš ves nektar.
-      4-5 Bee Nested Loops 2: 'Pridobi ves nektar iz vsakega cveta. Uporabi ugnezdeno zanko.'
+      4-5 Bee Nested Loops 2: Pridobi ves nektar iz vsakega cveta. Uporabi ugnezdeno zanko.
       4-5 Bee Nested Loops 3: Dobi ves nektar, tako da vstaviš začetno kodo v drugo zanko.
-      4-5 Bee Nested Loops 4: "Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. "
+      4-5 Bee Nested Loops 4: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
       4-5 Bee Nested Loops 5: Pridobi ves nektar s kreiranjem ugnezdene zanke.
       4-5 Bee Nested Loops 6: Pridobi ves nektar.
       4-5 Bee Nested Loops 7: Ugnezdi to zanko znotraj druge zanke, da ustvariš ugnezdeno zanko in dobiš ves nektar iz cvetov.
       4-5 Bee Nested Loops 9: Dobi ves nektar iz cvetov s pomočjo ugnezdenja "dokler" zanke znotraj "ponovi" bloka.
-      4-5 Bee Nested Loops Assessment 1: "Dobi ves nektar in naredi ves med z uporabo zank."
+      4-5 Bee Nested Loops Assessment 1: Dobi ves nektar in naredi ves med z uporabo zank.
       4-5 Bee Nested Loops Rows: Dobi nektar iz vrstic cvetov! Uporabi ugnezdeno zanko.
       4-5 Maze 1 (copy 1): Draga oseba. Jaz zombi. Moram... priti... do sončnice.
       4-5 Maze 1: Draga oseba. Jaz zombi. Moram... priti... do sončnice.
@@ -312,42 +328,39 @@ sl:
       4-5 Maze 6 (copy 1): Ali lahko rešiš to uganko, tako da uporabiš čim manj možnih blokov?
       4-5 Maze 6: Pripelji me do sončnice z uporabo čim manj blokov!
       4-5 Maze 7: Hitro pripelji zombija k sončnici! Lahko rešiš to uganko z uporabo manj kot 11 blokov?
-      4-5 Maze 8: "Uporabi bloke za ponavljanje, da bo zombi prišel do sončnice. (izogibaj se mesojedih rož!)"
-      4-5 Maze 9: "Ustvari zanko z blokom \"Ponavljaj dokler\"."
+      4-5 Maze 8: Uporabi bloke za ponavljanje, da bo zombi prišel do sončnice. (izogibaj se mesojedih rož!)
+      4-5 Maze 9: Ustvari zanko z blokom "Ponavljaj dokler".
       4-5 Maze Assessment 1: 'Naloga: Pojdi do sončnice.'
       4-5 Maze Conditionals 1: Uporabi blok "ponavljaj dokler", da premakneš zombija do sončnice.
-      4-5 Maze Conditionals 10: "Lahko dodaš le 3 bloke in mi pomagaš rešiti bolj zapleten labirint? Če boš naredil prav, lahko hodim po poljubno zaviti poti, ne glede na dolžino!"
+      4-5 Maze Conditionals 10: Lahko dodaš le 3 bloke in mi pomagaš rešiti bolj zapleten labirint? Če boš naredil prav, lahko hodim po poljubno zaviti poti, ne glede na dolžino!
       4-5 Maze Conditionals 2: Uporabi blok "ponavljaj dokler", da premakneš zombija do sončnice.
-      4-5 Maze Conditionals 3: "Uporabi blok \"če\", da mi pomagaš pri odločitvi, kdaj se moram obrniti."
+      4-5 Maze Conditionals 3: Uporabi blok "če", da mi pomagaš pri odločitvi, kdaj se moram obrniti.
       4-5 Maze Conditionals 4: Ok, reši to tako kot zadnjo uganko, a se moraš spomniti, kako skupaj uporabiti bloka "če" in "ponavljaj dokler".
-      4-5 Maze Conditionals 5: "\"Jaz želeti sončnica!\" Uporabi \"če\" stavek, da pripelješ zombija do sončnice z najmanjšim mogočim številom blokov."
-      4-5 Maze Conditionals 6: |-
-        "Jesti sončnica!" Uporabi "če" stavek, da pripelješ zombija do sončnice z najmanjšim mogočim številom blokov.
+      4-5 Maze Conditionals 5: '"Jaz želeti sončnica!" Uporabi "če" stavek, da pripelješ zombija do sončnice z najmanjšim mogočim številom blokov.'
+      4-5 Maze Conditionals 6: '"Jesti sončnica!" Uporabi "če" stavek, da pripelješ zombija do sončnice z najmanjšim mogočim številom blokov.'
       4-5 Maze Conditionals 7: Rešitev te uganke ni dosti drugačna, a pazi na mesojedo rastlino!
-      4-5 Maze Conditionals 8: "Blok \"če/sicer\" preveri pogoj in nato narei eno ALI drugo. Uporabi ta nov blok, da me pripelješ do sončnice."
-      4-5 Maze Conditionals 9: |-
-        Še ena vaja za blok "če/sicer"! Sledi s prstom, da vidiš, če lahko rešiš s prvim poskusom.
-      4-5 Maze Conditionals Assessment 1: "Uporabi bloka \"ponavljaj dokler\" in \"če/sicer\", da me pripelješ do sončnice z najmanj mogočimi bloki."
+      4-5 Maze Conditionals 8: Blok "če/sicer" preveri pogoj in nato narei eno ALI drugo. Uporabi ta nov blok, da me pripelješ do sončnice.
+      4-5 Maze Conditionals 9: Še ena vaja za blok "če/sicer"! Sledi s prstom, da vidiš, če lahko rešiš s prvim poskusom.
+      4-5 Maze Conditionals Assessment 1: Uporabi bloka "ponavljaj dokler" in "če/sicer", da me pripelješ do sončnice z najmanj mogočimi bloki.
       4-5 Nested Loops 1: 'Dokončaj kodo tako, da izriše te trikotnike. Prvi je že narejen. Namig: trije trikotniki v 360 stopinjski rotaciji.'
       4-5 Nested Loops 11: Lahko narišeš 10 kvadratov, ki predstavljajo pločnik, z uporabo ugnezdene zanke? Vsak kvadrat ima stranico dolgo 30 pikslov.
       4-5 Nested Loops 12: Lahko narišeš 36 trikotnikov z uporabo ugnezdene zanke?
-      4-5 Nested Loops 2: 'Zdaj pa ugnezdi to zanko znotraj druge zanke, da narišeš 10 trikotniko. To imenujemo "ugnezdena" zanka.'
-      4-5 Nested Loops 3: |-
-        Ustvari sonce z ugnezdenjem začetne kode v drugo zanko. Da dobiš to zanimivo kreacijo, boš moral skočiti naprej za dolžino stranice trikotnika, preden se obrneš.
+      4-5 Nested Loops 2: Zdaj pa ugnezdi to zanko znotraj druge zanke, da narišeš 10 trikotniko. To imenujemo "ugnezdena" zanka.
+      4-5 Nested Loops 3: Ustvari sonce z ugnezdenjem začetne kode v drugo zanko. Da dobiš to zanimivo kreacijo, boš moral skočiti naprej za dolžino stranice trikotnika, preden se obrneš.
       4-5 Nested Loops 5: Zankaj podano kodo tako, da ustvariš mlin na veter.
       4-5 Nested Loops 6: Lahko narišeš šestkotnik s pomočjo zanke s kodo za trikotnik?
-      4-5 Nested Loops 7: "Desetkrat ponovi zanko za to obliko. Za koliko stopinj se moraš obniti pri vsaki ponovitvi?"
-      4-5 Nested Loops 8: "Šestkrat ponovi zanko za to obliko. Za koliko stopinj se moraš obniti pri vsaki ponovitvi?"
+      4-5 Nested Loops 7: Desetkrat ponovi zanko za to obliko. Za koliko stopinj se moraš obniti pri vsaki ponovitvi?
+      4-5 Nested Loops 8: Šestkrat ponovi zanko za to obliko. Za koliko stopinj se moraš obniti pri vsaki ponovitvi?
       4-5 Nested Loops 9: Nariši zobe v krokodilovih ustih!
-      4-5 Nested Loops Assessment 1: 'Uporabi ugnezdeno zanko, da dokončaš umetnino.'
+      4-5 Nested Loops Assessment 1: Uporabi ugnezdeno zanko, da dokončaš umetnino.
       4-5 While Loops 1: Premakni me k luknji in jo zapolni z dvema lopatama zemlje, pri tem pa uporabi blok "zapolni".
       4-5 While Loops 2: Premakni me do kupa zemlje in ga odstrani s petimi zajemi z lopato, pri čemer uporabi blok "odstrani 1".
-      4-5 While Loops 3: "Uporabi minimalno število blokov! Premakni me do kupa in odstrani zemjo, potem pa me premakni do luknje in jo do konca zapolni."
-      4-5 While Loops 4: "Vau, poglej to! Ne vem, koliko lopat zemlje potrebuje ta luknja. Lahko napišeš program, ki uporablja blok \"zapolni\" dokler niso tla ravna? "
+      4-5 While Loops 3: Uporabi minimalno število blokov! Premakni me do kupa in odstrani zemjo, potem pa me premakni do luknje in jo do konca zapolni.
+      4-5 While Loops 4: 'Vau, poglej to! Ne vem, koliko lopat zemlje potrebuje ta luknja. Lahko napišeš program, ki uporablja blok "zapolni" dokler niso tla ravna? '
       4-5 While Loops 5: Vau, zdaj sta tam kar dve globoki luknji! Lahko napišeš program, ki zapolni obe luknji, tako da so tla ravna?
       4-5 While Loops 6: Vau, to je pa velik kup zemlje! Lahko napišeš program, ki bo odstranil celoten kup in zravnal zemljo?
       4-5 While Loops 7: Vau, zdaj so kupi zemlje kar trije! Lahko napišeš program, ki odstrani vse tri, tako da so tla ravna?
-      4-5 While Loops 8: "Tukaj je res globoka luknja in visok kup zemlje. Kolikokrat je treba zamahniti z lopato, da zravnaš tla?"
+      4-5 While Loops 8: Tukaj je res globoka luknja in visok kup zemlje. Kolikokrat je treba zamahniti z lopato, da zravnaš tla?
       4-5 While Loops Assessment 1: Zdaj je lukenj in kupov zemlje več. Pomagaj mi zapolniti luknje in odstraniti zemljo, da bodo tla ravna.
       App Lab test: preizkus
       Artist - Nested Loops 1: 'Dokončaj kodo tako, da izriše te trikotnike. Prvi je že narejen. Namig: trije trikotniki v 360 stopinjski rotaciji.'
@@ -365,12 +378,10 @@ sl:
       C3-Farmer While Loops Assessment 1: Zdaj je lukenj in kupov zemlje več. Pomagaj mi zapolniti luknje in odstraniti zemljo, da bodo tla ravna.
       Course 2 Bee Loops 1: 'Živio, jaz sem čebela. Mi pomagaš nabrati nektar od teh rožic? '
       Course 2 Maze Loops 1: Me lahko pelješ do prašička z uporabo 5 blokov?
-      Course 4 Artist 1: 'Pomagaj mi narisati kvadrat. (Vsaka stranica je dolga 200 pikslov)'
-      Course 4 Artist 10: |-
-        Klikni tukaj, da še enkrat vidiš celotna navodila! Tukaj je koda za zanimivo obliko. Kaj se zgodi, ko jo večkrat ponoviš, vmes pa se med vsakim korakom obrneš? Obrati se seštejejo v 420 stopinj, kar pomeni, da bo umetnik, ko zaključi z risanjem, obrnjen v drugo smer kot na začetku. Nova smer je točno 60 stopinj v levo od začetne pozicije.
+      Course 4 Artist 1: Pomagaj mi narisati kvadrat. (Vsaka stranica je dolga 200 pikslov)
+      Course 4 Artist 10: Klikni tukaj, da še enkrat vidiš celotna navodila! Tukaj je koda za zanimivo obliko. Kaj se zgodi, ko jo večkrat ponoviš, vmes pa se med vsakim korakom obrneš? Obrati se seštejejo v 420 stopinj, kar pomeni, da bo umetnik, ko zaključi z risanjem, obrnjen v drugo smer kot na začetku. Nova smer je točno 60 stopinj v levo od začetne pozicije.
       Course 4 Artist 11: Sedaj pa za iziv! Kar korajžno poskusi pognati. Nihče ne pričakuje, da ti bo v prvem poskusu uspelo narediti celotno sliko.
-      Course 4 Artist 12: |-
-        Naredi nekaj po svojem okusu.
+      Course 4 Artist 12: Naredi nekaj po svojem okusu.
       Course 4 Artist 13: Bi se še igral?  Tukaj je prazno platno, kjer lahko ustvariš karkoli želiš!
       Course 4 Artist 2: Ali lahko uporabiš zanko tako, da narišeš siv kvadrat? (Vsaka stranica je 300 piksov dolga)
       Course 4 Artist 20: Bi se še igral?  Tukaj je prazno platno, kjer lahko ustvariš karkoli želiš!
@@ -381,39 +392,42 @@ sl:
       Course 4 Artist 7: 'Sedaj vgnezdi to zankov znotraj druge zanke tako, da narišeš 10 trikotnikov. To se imenuje vgnezdena zanka. Namig: Vseh 10 trikotnikov naredi 360 stopinjsko rotacijo.'
       Course 4 Artist 8: Nariši sonce z večkratnim ponavljanjem tega celotnega bloka kode.
       Course 4 Artist 8a: Se spomniš te oblike? Zdaj te bomo pustili, da jo narediš samostojno, brez začetnih blokov!
-      Course 4 Artist 9: "Ponovi ta vzorec 10 krat in ne pozabi se obrniti potem, ko je vsak vzorec narisan."
+      Course 4 Artist 9: Ponovi ta vzorec 10 krat in ne pozabi se obrniti potem, ko je vsak vzorec narisan.
       Course 4 Artist For Loops 1: Uporabi blok "ponavljaj", da narišeš trikotnik s stranico dolžine 50 pikslov.
-      Course 4 Artist For Loops 11: 'Se spomniš prejšnje stopnje, kjer smo uporabili spremenljivko, s katero smo spreminjali število stranic lika? Naredili bomo enako, a z uporabo "števec" spremenljivke. Ta vzorec se začne s trikotnikom in vedno doda eno stranico, dokler ne konča z desetkotnikom (10 stranic). Vsaka stranica je dolga 100 pikslov.'
+      Course 4 Artist For Loops 11: Se spomniš prejšnje stopnje, kjer smo uporabili spremenljivko, s katero smo spreminjali število stranic lika? Naredili bomo enako, a z uporabo "števec" spremenljivke. Ta vzorec se začne s trikotnikom in vedno doda eno stranico, dokler ne konča z desetkotnikom (10 stranic). Vsaka stranica je dolga 100 pikslov.
       Course 4 Artist For Loops 11a: |-
         Zdaj pa združimo znanje od prej! S poznavanjem zanke "za vsako število", in s poznavanjem spremenjlivke "counter" narišemo te večkotnike, kjer ima vsak večkotnik za dve stranici "sides" več kot prejšnja. Zagotovite, da je dolžina stranice v večkotniku 10 krat daljša od števila stranic.
         Le majhen delček kode smo ti pripravili.
       Course 4 Artist For Loops 14: Če se obrneš malo manj ali malo več, kot bi se pri risanju lika, lahko nastane zanimiv učinek. Poskusi uporabiti del kode iz prejšnje naloge z obračanjem za 89 stopinj, ki naredi tako zanimivo kvadratno spiralo.
       Course 4 Artist For Loops 2: "Koda za risanje trikotnika je v zanki, ki od 50 do 100 prišteva po 10. \nOPOZORILO: Preglej kodo, preden pritisneš \"Zaženi\"."
-      Course 4 Artist For Loops 3: "Uporabite prejšnjo rešitev kot predlogo za dokončanje te naloge. \nNajmanjši trikotnik ima stranice dolge 20 pikslov, največji pa 200 pikslov. Vsak naslednji trikotnik je za 20 pikslov večji.\n"
+      Course 4 Artist For Loops 3: "Uporabite prejšnjo rešitev kot predlogo za dokončanje te naloge. \nNajmanjši trikotnik ima stranice dolge 20 pikslov, največji pa 200 pikslov. Vsak naslednji trikotnik je za 20 pikslov večji."
       Course 4 Artist For Loops 4: 'Kaj bi spremenil pri tej nalogi, da bodo tokrat narisani kvadrati? Začetna dolžina stranice je 15 pikslov, najdaljša pa meri 300 pikslov. Vsaka naslednja je za 15 pikslov daljša. '
       Course 4 Artist For Loops 6a: Naredi tri majhne sprememb v kodi iz prejšnje naloge, da narišeš tole!
       Course 4 Artist For Loops 8: |-
-        Samo majhna sprememba kode iz prejšnje naloge lahko nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti? \r
-        \r
+        Samo majhna sprememba kode iz prejšnje naloge lahko nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti? \\r
+        \\r
         Namig: Nekaj je treba odstraniti!
-      Course 4 Artist For Loops Challenge: "**Izziv:**\nPoskusi z znanjem, ki si ga pridobil do sedaj narisati te večkotnike, ki imajo vsi dolžino stranice 40 pikslov?"
-      Course 4 Artist Inspire: |-
-        Naredi nekaj po svojem okusu.
-      Course 4 Artist Vars 1: "Dajmo narisati enakostranični trikotnik. Mora imeti vsako stranico točno 100 pikslov dolgo."
+      Course 4 Artist For Loops Challenge: |-
+        **Izziv:**
+        Poskusi z znanjem, ki si ga pridobil do sedaj narisati te večkotnike, ki imajo vsi dolžino stranice 40 pikslov?
+      Course 4 Artist Inspire: Naredi nekaj po svojem okusu.
+      Course 4 Artist Vars 1: Dajmo narisati enakostranični trikotnik. Mora imeti vsako stranico točno 100 pikslov dolgo.
       Course 4 Artist Vars 11: Tukaj je bolj zapletena koda z uporabo istih pojmov iz zadnje uganka - na kakšno vrednost moraš nastaviti spremenljivko `sides`, ki pomene `stranice`, da se izriše ta slika kvadratov?
       Course 4 Artist Vars 12: Nastavi spremenljivko `sides`, ki pomeni `stranice` na `5`. Več stranic kot nastavimo temu algoritmu, večji bo celoten vzorec! Če si pozoren/a, boš opazil/a da je še ena spremenljivka, ki se imenuje `length`, ki pomeni `dolžina`. Sedaj lahko uporabimo to spremeljivko vsakič, ko uporabimo `premik naprej` blok. Nastavi `length` spremeljivko na 75 za to obliko.
-      Course 4 Artist Vars 13: "Ko ima oblika veliko stranic, morajo stranice biti manjše, da celoten vzorec ne gre čez rob zaslona.\nPoustvari algoritem za ta čudovit vzorec, toda brez ročno nastavljene spremljivke`length`. Uporabi matematični blok s `sides` spremeljivko, tako da bo vsak vzorec vstrezal velikosti zaslona. Obsek vsakega poligona je 300 pikslov. Če potrebuješ namige, klikni na levi strani na lučko."
+      Course 4 Artist Vars 13: |-
+        Ko ima oblika veliko stranic, morajo stranice biti manjše, da celoten vzorec ne gre čez rob zaslona.
+        Poustvari algoritem za ta čudovit vzorec, toda brez ročno nastavljene spremljivke`length`. Uporabi matematični blok s `sides` spremeljivko, tako da bo vsak vzorec vstrezal velikosti zaslona. Obsek vsakega poligona je 300 pikslov. Če potrebuješ namige, klikni na levi strani na lučko.
       Course 4 Artist Vars 14: |-
         Prosto igranje: Poglej tole! Sedaj tvoj algoritem je vgnezden znotran še ene zanke. Eksperimentiraj s spreminjanjem vrednosti tvojih spremenjivk in nariši kul vzorce.
         Za še več efekta poskušaj se igrati z barvo! Nastavi `izberi barvo pisala` na `naključna barva` znotraj zank in opazuj kako se spremeni končna slika.
       Course 4 Artist Vars 2: Namesto uporabe "premakni se naprej za 150 pikslov", "premakni se" blok sedaj sklicuje na spremenljivko z imenom "length", kar pomeni dolžina. Ali lahko nastaviš "length" na 150, da narišeš ta novi trikotnik?
       Course 4 Artist Vars 4: Zdaj hočem narisati pravokotnik, pri katerem je višina dvakratnik širine. Imamo spremenljivko z imenom `width`, ki mora biti nastavljena na 100. Ali lahko uporabiš matematične bloke za dokončanje kode?
-      Course 4 Artist Vars 6: |-
-        Tukaj je nekaj kode, ki lahko nariše katerikoli pravilen poligon. Dodana je nova spremenljivka imenova `sides`, kar pomeni `stranice`, ki je nastavljena na 4. Ali lahko uporabiš `sides` spremenljivko (skupaj z matematičnim blokom), tako da se umetnik obrne pravilno ne glede na to koliko stranic ima poligon?
-      Course 4 Artist Vars 7: |-
-        Uporabi kar si se naučil/a v prejšnji uganki tako, da narediš šestkotnik z uporabo `sides` spremeljivke. Kako bi lahko spremenil/a le eno vrednost tako, da narišeš trikotnik, kvadrat, petkotni ali osemkotnik?
+      Course 4 Artist Vars 6: Tukaj je nekaj kode, ki lahko nariše katerikoli pravilen poligon. Dodana je nova spremenljivka imenova `sides`, kar pomeni `stranice`, ki je nastavljena na 4. Ali lahko uporabiš `sides` spremenljivko (skupaj z matematičnim blokom), tako da se umetnik obrne pravilno ne glede na to koliko stranic ima poligon?
+      Course 4 Artist Vars 7: Uporabi kar si se naučil/a v prejšnji uganki tako, da narediš šestkotnik z uporabo `sides` spremeljivke. Kako bi lahko spremenil/a le eno vrednost tako, da narišeš trikotnik, kvadrat, petkotni ali osemkotnik?
       Course 4 Artist Vars 8: 'Prosto igranje: Eksperimentiraj s številkom stranic te oblike. Ali lahko spremeniš algoritem tako, da celotna velikost oblike ostane ista, ne glede na to koliko stranic ima? Namig: Če razdeliš začetno dolžino s številom stranic, bo dolžina vsake stranice krajša, ko se bo število stranic povečevalo.'
-      Course 4 Bee 1: "Čebelica ne ve, kaj je pod oblakom!\nUporabi \"če\" blok, da preveriš, ali je pod oblakom rožica. Nektar dobi SAMO v primeru, da je tam rožica."
+      Course 4 Bee 1: |-
+        Čebelica ne ve, kaj je pod oblakom!
+        Uporabi "če" blok, da preveriš, ali je pod oblakom rožica. Nektar dobi SAMO v primeru, da je tam rožica.
       Course 4 Bee 2: Uporabi blok "če/sicer", da preveriš vsak objekt in ugotoviš, ali je roža ali satovje. Če je roža, dobi nektar, sicer pa naredi med!
       Course 4 Bee 3: Neznani objekt je rožica ali satje. Tokrat uporabi če/sicer blok, da dobiš en nektar v primeru, da je rožica, sicer pa naredi en med (ker je v tem primeru spodaj satje).
       Course 4 Bee For Loops 1: Uporabi zanko, da dobiš nektar iz vsakega cveta.
@@ -426,7 +440,7 @@ sl:
       Course 4 Bee Params 7: Poskusi uporabiti svojo novo funkcijo, da dobiš ves nektar.
       Course 4 Bee Params Ex: Poskusi uporabiti svojo novo funkcijo, da dobiš ves nektar.
       Course 4 Maze 2: Izogni se TNT!
-      Course 4 Maze 3: 'Napiši program, s katerim boš pripeljal/a jeznega ptiča do prašička.'
+      Course 4 Maze 3: Napiši program, s katerim boš pripeljal/a jeznega ptiča do prašička.
       Course 4 Maze 4: Poskusi z bloki za ponavljanje, tako, da uporabiš čim manj ponovitev...
       Course 4 Maze 5: Ali lahko rešiš to uganko, tako da uporabiš čim manj možnih blokov?
       Course 4 Maze 6: Ali lahko rešiš to uganko, tako da uporabiš čim manj možnih blokov?
@@ -443,10 +457,10 @@ sl:
       Course E MC Conditionals1: Najbolj dragocene vire boš našel/a pod zemljo, vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
       CourseE_HOC 2018 Level_1: Vzemi čoln iz zaboja.
       CourseE_HOC 2018 Level_10: Pridi do vhoda v ta morski spomenik.
-      CourseE_HOC 2018 Level_11: 'Izgradi strugo s pomočjo prismarina v sredini morskega spomenika.'
-      CourseE_HOC 2018 Level_3: 'Odveslaj na odprto morje proti ribi.'
+      CourseE_HOC 2018 Level_11: Izgradi strugo s pomočjo prismarina v sredini morskega spomenika.
+      CourseE_HOC 2018 Level_3: Odveslaj na odprto morje proti ribi.
       CourseE_HOC 2018 Level_6: Pojdi po ledu do lososa.
-      CourseE_HOC 2018 Level_9b: 'Korale uporabi kot navigacijski točki, da prideš do zaklada.'
+      CourseE_HOC 2018 Level_9b: Korale uporabi kot navigacijski točki, da prideš do zaklada.
       CourseF_PlayLab_vars2: Igra v prejšnji nalogi ni bila najbolj poštena. Spremeni vrednost spremenljivke hitrost psa 'dog speed' tako, da boš lahko pobral več zastavic, kot maček. Prvi, ki prvi zbere 10 točk, zmaga!
       CourseF_PlayLab_vars3: Uporabi puščici levo in desno za premikanje psa in puščico gor za skok. Ali lahko zbereš vse zastave?
       CourseF_PlayLab_vars6: |-
@@ -473,20 +487,35 @@ sl:
       Crack a Caesar Cipher_2019: Navodila
       HOC 2018 Level_1: Vzemi čoln iz zaboja.
       HOC 2018 Level_10: Pridi do vhoda v ta morski spomenik.
-      HOC 2018 Level_11: 'Izgradi strugo s pomočjo prismarina v sredini morskega spomenika.'
-      HOC 2018 Level_12: 'Izoblikuj si svoj podvodni svet, kakor želiš.'
-      HOC 2018 Level_3: 'Odveslaj na odprto morje proti ribi.'
+      HOC 2018 Level_11: Izgradi strugo s pomočjo prismarina v sredini morskega spomenika.
+      HOC 2018 Level_12: Izoblikuj si svoj podvodni svet, kakor želiš.
+      HOC 2018 Level_3: Odveslaj na odprto morje proti ribi.
       HOC 2018 Level_6: Pojdi po ledu do lososa.
-      HOC 2018 Level_9b: 'Korale uporabi kot navigacijski točki, da prideš do zaklada.'
-      Infinity_catch: "Ali lahko naredis tako, da bo Elsa (\"igralka 2\") dohitela\nAno, z uporabo tipk s puščicami?"
+      HOC 2018 Level_9b: Korale uporabi kot navigacijski točki, da prideš do zaklada.
+      Infinity_catch: |-
+        Ali lahko naredis tako, da bo Elsa ("igralka 2") dohitela
+        Ano, z uporabo tipk s puščicami?
       Infinity_finale: Ustvari karkoli želiš in deli!
-      Infinity_move_collide: "Hiro je \"igralec 1\". Premakni ga čisto do Baymaxa\nin dodaj zvok, ko se dotakneta."
-      Infinity_move_directions: "Baymax je \"igralec 2\". Dodaj Premakni kocko in nato\npremakni Baymaxa z uporabo puščic. Naredi tako,\nda se bo dotaknil drugih dveh likov."
-      Infinity_move_right: "Hiro je \"igralec 1\". Uporabi Premakni kocko\nin premakni Hiroa tako, da se bo dotaknil Baymaxa."
-      Infinity_repeat: "Uporabi kocko \"ponavljaj za vedno\", da se bo Ana\npremikala za 400 pik gor in dol."
+      Infinity_move_collide: |-
+        Hiro je "igralec 1". Premakni ga čisto do Baymaxa
+        in dodaj zvok, ko se dotakneta.
+      Infinity_move_directions: |-
+        Baymax je "igralec 2". Dodaj Premakni kocko in nato
+        premakni Baymaxa z uporabo puščic. Naredi tako,
+        da se bo dotaknil drugih dveh likov.
+      Infinity_move_right: |-
+        Hiro je "igralec 1". Uporabi Premakni kocko
+        in premakni Hiroa tako, da se bo dotaknil Baymaxa.
+      Infinity_repeat: |-
+        Uporabi kocko "ponavljaj za vedno", da se bo Ana
+        premikala za 400 pik gor in dol.
       Infinity_say: Uporabi "reci kocko", da bo Ana rekla "Živijo."
       Infinity_shoot: Baymax je "igralec 2". Naj Baymax vrže raketo Hiru.
-      Infinity_shoot_directions: "Hiro je \"igralec 3\". Naredi tako, da bo Hiro vrgel\nizstrelek vsem štirim likom. Med posamičnim\nmetom počakaj\neno sekundo."
+      Infinity_shoot_directions: |-
+        Hiro je "igralec 3". Naredi tako, da bo Hiro vrgel
+        izstrelek vsem štirim likom. Med posamičnim
+        metom počakaj
+        eno sekundo.
       Infinity_touch_faster: Dotakni se še večih snežink!
       Infinity_touch_four: Ano premakniti navzgor, navzdol levo in desno, da se bo dotaknila vseh štirih snežink.
       K-1 Artist 1 Assessment 1: Nariši kratko črto navzgor in dolgo črto desno!
@@ -518,7 +547,7 @@ sl:
       K-1 Artist2 4: Nariši pravokotnik za dokončanje mostu.
       K-1 Artist2 5: Nariši pravokotnik za dokončanje podpore mosta
       K-1 Artist2 6: Nariši dva kadrata, da narediš pravokotnik!
-      K-1 Artist2 Assessment1: 'Nariši kvadrat poleg drugega kvadrata.'
+      K-1 Artist2 Assessment1: Nariši kvadrat poleg drugega kvadrata.
       K-1 Artist2 Free Draw: Nariši karkoli!
       K-1 Artist2_7: Nariši pravokotnik, da predalniku dodaš zgornji predal!
       K-1 Bee 1: Premakniti me do rože, dobi nektar, nato me premakni do k satovju in naredi med
@@ -570,7 +599,7 @@ sl:
       K-1 Maze Assessment 2: Pelji me k prašičku!
       K-1 Maze Loops 1: Pelji me k prašičku!
       K-1 Maze Loops 10: Pelji me k prašičku! Z uporabo `ponovi` zanke bo veliko lažje.
-      K-1 Maze Loops 11: "Pelji me k prašičku! Z uporabo `ponovi` zanke bo veliko lažje."
+      K-1 Maze Loops 11: Pelji me k prašičku! Z uporabo `ponovi` zanke bo veliko lažje.
       K-1 Maze Loops 12: Pelji me k prašičku! Z uporabo `ponovi` zanke bo veliko lažje.
       K-1 Maze Loops 2: Uporabi `ponovi` blok, da me pripelješ do prašička!
       K-1 Maze Loops 3: Pelji me k prašičku! Ne pozabi na `ponovi` zanko.
@@ -584,16 +613,14 @@ sl:
       K-1 Maze Loops Assessment 2: Uporabi `ponovi` zanko, da me pripelješ do prašička!
       K-1 Maze Multi 14: Stopnja Ocenjevanja
       K-1 Maze Multi 15: Stopnja Ocenjevanja
-      K-1 Maze Sequence Assessment 1: |-
-        Poglejmo, kaj si se naučil! \r Premakni me v eno smer, nato v drugo, da pridem do prašička.
+      K-1 Maze Sequence Assessment 1: Poglejmo, kaj si se naučil! \\r Premakni me v eno smer, nato v drugo, da pridem do prašička.
       K-1 Maze Sequence Assessment 2: Premakni me v eno smer, nato v drugo, da pridem do prašička.
       K-1 Maze debug Assessment 1: To je preizkus! Razhrošči ta nivo s preurejanjem in dodajanjem blokov, da pridem do prašička!
       K-1 artist 1 level 10: Nariši črtkano črto z uporabo blokov skoči in riši
       K-1 artist 1 level 9: Nariši to s tremi črtami
       K-1 maze debug 1: Spremeni kodo tako, da pridem do prašička!
       K-1 maze debug 10: Razhrošči ta nivo s preurejanjem in spreminjanjem blokov, da pridem do prašička!
-      K-1 maze debug 11: |-
-        To je preizkus! Razhrošči ta nivo s preurejanjem in spreminjanjem blokov, da pridem do prašička.
+      K-1 maze debug 11: To je preizkus! Razhrošči ta nivo s preurejanjem in spreminjanjem blokov, da pridem do prašička.
       K-1 maze debug 2: Ugotovi, kaj manjka in dodaj bloke, da pridem do prašička!
       K-1 maze debug 3: Nekaj ni čisto prav. ODSTRANI bloke, da pridem do prašička!
       K-1 maze debug 4: Preglej bloke in jih popravi! Mislim, da grem mogoče v napačno smer.
@@ -612,7 +639,7 @@ sl:
       Kiki_StarWars_Test_5_Example: Besedilo
       MC HOC 2016 Level 10: Čas je, da narediš svoj lasten Minecraft! Dodaj bitja in ukaži jim, da naredijo karkoli želiš. Zabavaj se!
       MC HOC 2016 Level 2-2: Piščanec je nepremičen. Dodaj `premakni se naprej` in `obrni se` bloke v `ko je dodan` prostor, da se premakne.
-      MC HOC 2016 Level 3: 'Odlično, piščanes se je premaknil! Ampak se je nato ustavil. V igrah piščanci hodijo neskončno. Uporabi `neskončno izvrši` zanko tako, da se ti piščanci ne ustavijo premikati.'
+      MC HOC 2016 Level 3: Odlično, piščanes se je premaknil! Ampak se je nato ustavil. V igrah piščanci hodijo neskončno. Uporabi `neskončno izvrši` zanko tako, da se ti piščanci ne ustavijo premikati.
       MC HOC 2016 Level 4: Sedaj piščanci zgledajo čudno, saj se premikajo vsi enako. Igre uporabljajo nakjučne premike, da stvari izgledajo bolj resnične. Naj se piščanci obračajo nakjučno z ukazom `obrni se naključno`.
       MC HOC 2016 Level 5: Te krave so izgubile! Vodi jih proti travi z `naredi korak proti` blokom in `neskončno izvrši` zanko.
       MC HOC 2016 Level 6: Sedaj kreiraj zombije. Uporabi `kreiraj` blok, da narediš 3 zombije, ko pade noč naj se premikajo proti tebi. Preživi do jutra.
@@ -623,23 +650,21 @@ sl:
       MC HOC 2016 SCORE LEVEL: Nekatere igre hranijo rezultat. Igra se "Ulovi me" igro z Železnimi Golemi in uporabi `dodaj 1 rezultatu` blok, da si daš eno točko, ko jih uloviš. Doseži 5 točk, da zmagaš!
       MC HOC 2016 Village Test: Oh ne! Zombiji so te ujeli notri! Skodiraj Železnega Golema, da lovi in napada zombije!
       Mike Test Bee Conditionals 1: Ta oblak mi zakriva pogled! Preveri, če je pod oblakom roža in v tem primeru dobi nektar. Pazi, lahko se spremeni!
-      NEW Course 4 Artist Params 10: 'Ustvari funkcijo "nariši šestkotnik" s parametrom za dolžino. Ta šestkotnik ima stranice z dolžino 100 pikslov.'
-      NEW Course 4 Artist Params 13: "Uredimo funkcijo \"risanje mnogokotnika\", ki že ima parameter \"stranice\". Zdaj pa dodajmo parameter \"dolžina\". Obseg vsake oblike meri 200 pikslov. Se spomniš enačbe, ki vrne oblike enake velikosti, ko imaš različno število stranic?"
+      NEW Course 4 Artist Params 10: Ustvari funkcijo "nariši šestkotnik" s parametrom za dolžino. Ta šestkotnik ima stranice z dolžino 100 pikslov.
+      NEW Course 4 Artist Params 13: Uredimo funkcijo "risanje mnogokotnika", ki že ima parameter "stranice". Zdaj pa dodajmo parameter "dolžina". Obseg vsake oblike meri 200 pikslov. Se spomniš enačbe, ki vrne oblike enake velikosti, ko imaš različno število stranic?
       NEW Course 4 Artist Vars 12: Sedaj poustvari algoritem iz prejšnje stopnje in nariši petkotnik z stanicami dolžine 150 pikslov.
-      NEW Course 4 Artist Vars 2: 'Povleci številka blok(???) na oba `nastavi length na` blok in `ponovi _-krat` blok, tako da narišeš serijo 50 pikselov velikih trikotnikov.'
-      NEW Course 4 Artist Vars 4: "Poskusi ponovno! Ali lahko nastaviš spremenljivko `length` na 60, da narediš ta kul vzorec s šesterokotniki?"
-      NEW Course 4 Artist Vars 6: "Nariši ta vzorec petkotnikov s 100 pikslov stranicami, tako da nastaviš `length` na pravo vrednost in premakneš `length` spremenljivko na vsa pravilna mesta. Si opazil/a, da je bilo potrebno nastaviti `length` le enkrat in kako koda uporablja pravo vrednost povsod?"
+      NEW Course 4 Artist Vars 2: Povleci številka blok(???) na oba `nastavi length na` blok in `ponovi _-krat` blok, tako da narišeš serijo 50 pikselov velikih trikotnikov.
+      NEW Course 4 Artist Vars 4: Poskusi ponovno! Ali lahko nastaviš spremenljivko `length` na 60, da narediš ta kul vzorec s šesterokotniki?
+      NEW Course 4 Artist Vars 6: Nariši ta vzorec petkotnikov s 100 pikslov stranicami, tako da nastaviš `length` na pravo vrednost in premakneš `length` spremenljivko na vsa pravilna mesta. Si opazil/a, da je bilo potrebno nastaviti `length` le enkrat in kako koda uporablja pravo vrednost povsod?
       NEW Course 4 Bee For Loops 1: Uporabi zanko, da dobiš nektar iz vsakega cveta.
-      NEW Course 4 Bee For Loops 10a: 'Si pripravljen na izziv? Uporabi pridobljeno znanje o zankah in poskusi rešiti ta problem. Morda boš moral večkrat pognati program, preden ugotoviš vse potrebne korake.'
+      NEW Course 4 Bee For Loops 10a: Si pripravljen na izziv? Uporabi pridobljeno znanje o zankah in poskusi rešiti ta problem. Morda boš moral večkrat pognati program, preden ugotoviš vse potrebne korake.
       NEW Course 4 Bee For Loops 2: Dodaj potrebno kodo, da bo čebelica dobila ves nektar. Poglej, koliko kode potrebuješ za to uganko! (V naslednji uganki se bomo naučili lažjega načina.)
       NEW Course 4 Bee For Loops 3: '"For" (za) zanka to naredi precej bolj enostavno! Vsa potrebna koda je tu, poglej, kako je sestavljena skupaj, nato pritisni "Zaženi", da vidiš, kako deluje.'
       NEW Course 4 Bee For Loops 4 4: Zdaj se moramo premakniti naprej za "counter"-krat in nato dobiti nektar "counter"-krat. Lahko uporabiš dve "ponovi" zanki, da rešiš ta izziv?
-      NEW Course 4 Bee For Loops 4: 'Zamenjaj ??? v "za zanki" z največjim številom nektarja, ki ga mora čebelica dobiti.'
+      NEW Course 4 Bee For Loops 4: Zamenjaj ??? v "za zanki" z največjim številom nektarja, ki ga mora čebelica dobiti.
       NEW Course 4 Bee For Loops 5: '"Za zanko" lahko uporabiš tudi za odštevanje. Poskusi dobiti nektar z odštevanjem od 5 do 1 po 1.'
       NEW Course 4 Bee For Loops 6: Zadnja številka v za zanki se imenuje "prirastek". Vsakič, ko se zanka zažene, se števec poveča za vrednost prirastka. Poskusi dobiti nektar z uporabo prirastka 2.
-      NEW Course 4 Bee For Loops 7: |-
-        Zdaj pa združimo "števec" spremenljivko z matematičnim blokom! Kako lahko uporabiš "števec" spremenljivko, da se premikaš po tem vrtu z najmanj možnimi bloki? Kaj moraš narediti, da dobiš 3, 6, 9, 12, 15 nektarja? Skrivnost je v "števec" spremenljivki! 
-        Zapomni si: vsakič, ko se zanka izvede, se k števcu vsakič prišteje vrednost korakov.
+      NEW Course 4 Bee For Loops 7: "Zdaj pa združimo \"števec\" spremenljivko z matematičnim blokom! Kako lahko uporabiš \"števec\" spremenljivko, da se premikaš po tem vrtu z najmanj možnimi bloki? Kaj moraš narediti, da dobiš 3, 6, 9, 12, 15 nektarja? Skrivnost je v \"števec\" spremenljivki! \nZapomni si: vsakič, ko se zanka izvede, se k števcu vsakič prišteje vrednost korakov."
       NEW Course 4 Bee For Loops 8: Obvladaš! Kakšen bi moral biti tvoj prirastek, da bi čebelica dobila 3, 6, 9, 12, 15 nektarjev?
       NEW Course 4 Bee For Loops 9: Če tvoja zanka odšteva, se prirastek odšteje od tvojega števca vsakič, ko se zanka izvede. Kakšen bi moral biti tvoj prirastek, da bi čebelica dobila 15, nato 12, nato 9, 6, 3 nektarje?
       New Basketball Project: Ustvarite svojo igrico Košarka. Spremenite lahko videz in pravila. Ko končate, kliknite Končano, da lahko prijatelji preizkusijo igrico na svojih telefonih.
@@ -679,7 +704,13 @@ sl:
       Overworld Shear Sheep_2018: Čas je za striženje ovc! Uporabite ukaz 'ostriži' in zberite volno od obeh ovc.
       Overworld Shear Sheep_2019: Čas je za striženje ovc! Uporabite ukaz 'ostriži' in zberite volno od obeh ovc.
       PDK5 Functions 2: Funkcije ti pomagajo pri ustvarjanju novih blokov. Premaknili smo blok za risanje kvadrata v funkcijo, imenovano "nariši kvadrat". Znaš uporabiti funkcijo, "nariši kvadrat" za risanje očal? Očala so razmaknjena za 75 pikslov.
-      PS copy 2-3 Bee Conditionals 5: "Vijolične rože imajo lahko 1 ali 0 nektarja,\na ne veš, katere! Pazi, da ne\nnabiraš nektarja iz\nvijolične rože, če ga nima. Preveri, če ima\nnektar vrednost ena tako,\nda uporabiš če kocko."
+      PS copy 2-3 Bee Conditionals 5: |-
+        Vijolične rože imajo lahko 1 ali 0 nektarja,
+        a ne veš, katere! Pazi, da ne
+        nabiraš nektarja iz
+        vijolične rože, če ga nima. Preveri, če ima
+        nektar vrednost ena tako,
+        da uporabiš če kocko.
       SpecialFrozenLevel: Uradno si postal mojster umetnik! Ustvari zimsko čudežno deželo.
       Standalone_Artist_1: Dobrodošel pri Umetniku! Najprej poskusi narediti enostaven kvadrat z uporabo zavi desno in premakni se naprej blokov. Vsaka stran naj bo 100 pikslov dolga.
       Standalone_Artist_2: Nariši diamant s 120 in 60 stopinjskimi koti ter 150 pikslov dolgimi stranicami.
@@ -688,7 +719,7 @@ sl:
       Standalone_Artist_8: Tukaj je funkcija imenovana "Nariši obliko", ki smo jo sprogramirali, da nariše šesterokotnike. Zaženi kodo in poglej, kaj počne in potem eksperimentiraj s funkcijo in opazuj kaj se zgodi. Ali lahko narediš, da izriše vzorece kvadratov, trikotnikov ali osemkotnikov?
       Standalone_Artist_9: Sedaj nadaljuj in naredi kakršno koli sliko želiš! Imaš prazno funkcijo s katero lahko narediš karkoli želiš!
       Standalone_Artist_v2: Dobrodošel pri Umetniku! Najprej poskusi narediti enostaven kvadrat z uporabo zavi desno in premakni se naprej blokov. Vsaka stran naj bo 100 pikslov dolga.
-      Testing Quantum Farmer: "Vau, poglej to! Ne vem, koliko lopat zemlje potrebuje ta luknja. Lahko napišeš program, ki uporablja blok \"zapolni\" dokler niso tla ravna? "
+      Testing Quantum Farmer: 'Vau, poglej to! Ne vem, koliko lopat zemlje potrebuje ta luknja. Lahko napišeš program, ki uporablja blok "zapolni" dokler niso tla ravna? '
       The Vigenere Cipher Widget: Navodila
       The Vigenere Cipher Widget_2018: Navodila
       The Vigenere Cipher Widget_2019: Navodila
@@ -700,8 +731,8 @@ sl:
       Underground Mining Coal: Najbolj dragocene vire boš našel/a pod zemljo, vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
       Underground Mining Coal_2018: Najbolj dragocene vire boš našel/a pod zemljo, vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
       Underground Mining Coal_2019: Najbolj dragocene vire boš našel/a pod zemljo, vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
-      aE7: "Kaj se zgodi, če ustvariš še eno zanko kot je ta, le da se obrneš levo namesto desno? Lahko to ponavljaš, da narišeš val?"
-      aE8: "Zdaj pa naredimo to štirikrat, da ustvarimo okvir za sliko. Pazi na vogale - ne smeš se kar obrniti za 90 stopinj! Če 60 ponovitev zanke s 3 stopinjskim obratom naredi pol kroga, kateri od teh blokov bo naredil dodatno četrtino kroga za vogale okvirja? "
+      aE7: Kaj se zgodi, če ustvariš še eno zanko kot je ta, le da se obrneš levo namesto desno? Lahko to ponavljaš, da narišeš val?
+      aE8: 'Zdaj pa naredimo to štirikrat, da ustvarimo okvir za sliko. Pazi na vogale - ne smeš se kar obrniti za 90 stopinj! Če 60 ponovitev zanke s 3 stopinjskim obratom naredi pol kroga, kateri od teh blokov bo naredil dodatno četrtino kroga za vogale okvirja? '
       beeDebugVideo1: Ali lahko uporabiš zanko, da nabereš ves nektar?
       birdsDebugVideo1: Najdi pot do prašička in me popelji po njej. Izogni se TNTju, sicer bo perje frčalo!
       bounce_1: K bloku "ko je pritisnjena leva puščica" dodaj nov blok in pritisni "Zaženi". Z levo puščico nato premikaj lopar, da boš zadel tarčo.
@@ -747,12 +778,9 @@ sl:
       courseC_PlayLab_events3: Lahko narediš program, da bo pes šel do mačke?
       courseC_PlayLab_events3_2018: Lahko narediš program, da bo pes šel do mačke?
       courseC_PlayLab_events3_2019: Lahko narediš program, da bo pes šel do mačke?
-      courseC_artist_prog5: |-
-        Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.
-      courseC_artist_prog5_2018: |-
-        Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.
-      courseC_artist_prog5_2019: |-
-        Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.
+      courseC_artist_prog5: 'Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.'
+      courseC_artist_prog5_2018: 'Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.'
+      courseC_artist_prog5_2019: 'Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.'
       courseC_maze_debugging10: Razhrošči ta nivo s preurejanjem in spreminjanjem blokov, da pridem do prašička!
       courseD_bee_debugging3: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
       courseD_bee_nestedLoops3: Pridobi ves nektar iz vsakega cveta. Uporabi ugnezdeno zanko.
@@ -800,18 +828,34 @@ sl:
       flappy_4_2018: Flappy bo letel kar skozi ovire, če ne dodaš kode, da se zaleti. Dodaj nov blok k "ko zadane oviro" bloku. Tvoja koda mora "končaj igro", ko se Flappy zaleti v prvi set cevi.
       frozen circle function in circle: Sedaj ustvarimo 20 prekrivajočih se krogov, tako da se med vsakim krogom zasukamo za 18 stopinj.
       frozen circle function with parameter: "Tu je kocka \"Ustvari krog\",\ns katero lahko narediš kroge različnih velikosti. \nAli jo znaš uporabiti tako, da narediš krog, velik 5 in krog, velik 10?"
-      frozen circle function: "Uporabi novo kocko \"Ustvari krog\" in z njo naredi 10 prekrivajočih se krogov. Ne pozabi med\nposameznimi krogi skočiti naprej."
+      frozen circle function: |-
+        Uporabi novo kocko "Ustvari krog" in z njo naredi 10 prekrivajočih se krogov. Ne pozabi med
+        posameznimi krogi skočiti naprej.
       frozen circle: Krog je posebna oblika. Ali lahko ugotoviš, s katero številko moraš zamenjati vprašaje, da bi narisal krog?
       frozen cross rotate dense: 'Ponovimo 90-krat! Kolikokrat gre 90 v 360? Namig: To je res majhna številka.'
       frozen cross rotate: Zdaj poskusit ponoviti 10-krat. Za Koliko stopinj se moraš obrniti med vsako vrstico?
       frozen cross: Uporabi kocko "Ponovi" in ustvari znak za plus. Si opazil/a, da se Elsa lahko premika naprej in nazaj?
-      frozen diamond mini snowflake: "Ali ste vedeli, da ima vsaka snežinka drugačno obliko? Ustvarimo novo snežinko z uporabo\n \"Ponovi\" kocke,\ns katero ponovimo paralelogram 4-krat, pri tem pa naredimo obrat na desno za 90 stopinj med vsakim paralelogramom."
-      frozen diamond snowflake: "Zdaj pa ustvarimo novo snežinko\nz uporabo ponovi kocke, s katero 10-krat ponovimo\nparalelogram, med vsakim pa naredimo obrat\nza 36 stopinj na desno."
+      frozen diamond mini snowflake: |-
+        Ali ste vedeli, da ima vsaka snežinka drugačno obliko? Ustvarimo novo snežinko z uporabo
+         "Ponovi" kocke,
+        s katero ponovimo paralelogram 4-krat, pri tem pa naredimo obrat na desno za 90 stopinj med vsakim paralelogramom.
+      frozen diamond snowflake: |-
+        Zdaj pa ustvarimo novo snežinko
+        z uporabo ponovi kocke, s katero 10-krat ponovimo
+        paralelogram, med vsakim pa naredimo obrat
+        za 36 stopinj na desno.
       frozen diamond: Uporabite ponovitev okoli teh blokov tvoriti a paralelogram. To je tako kot pravokotnik vendar je različnih zornih kotov. Tole je 60 stopinj in 120 stopnje koti namesto vseh 90-stopinjski koti.
       frozen freeplay: Uradno si postal mojster umetnik! Ustvari zimsko čudežno deželo.
       frozen line: Živijo! Jaz sem Elsa Ardanelska. Pomagaj mi ustvariti eno črto.
-      frozen perpendicular: "Pa poglejmo, če lahko ustvarimo dve liniji,\nmed katerima je kot 90 stopinj. Uporabiti\nboš moral/a kocki \"Obrni\"\nin \"Premakni\"."
-      frozen snowflake branch: "Poskusi uporabiti kocko \"Ustvari snežinkin krak\"\nin ustvari tri krake, ki so počasi že videti kot\nsnežinka."
+      frozen perpendicular: |-
+        Pa poglejmo, če lahko ustvarimo dve liniji,
+        med katerima je kot 90 stopinj. Uporabiti
+        boš moral/a kocki "Obrni"
+        in "Premakni".
+      frozen snowflake branch: |-
+        Poskusi uporabiti kocko "Ustvari snežinkin krak"
+        in ustvari tri krake, ki so počasi že videti kot
+        snežinka.
       frozen snowflake full: Zdaj to ponovi 8 krat in naredi lepo snežinko!
       frozen snowflower: "Zapleteni snežni vzorci so lahko narejeni z zelo\npreprostimi oblikami. Ali znaš narediti vzorec tako,\nda ponavljaš 5 krogov velikosti 5 \nin 5 krogov velikosti 10?"
       frozen square iterative: Smo ze na pol poti, da naredimo kvadrat. Povežimo skupaj štiri črte in ustvarimo kvadrat.
@@ -824,83 +868,90 @@ sl:
       grade2_CaringForNewPet_10: Pelji me k prašičku!
       grade2_CaringForNewPet_5: Pelji me k prašičku!
       grade2_MakeDogTag_10: Nariši nekaj zabavnega.
-      grade2_MakeDogTag_3: |-
-        Pomagaj mi končati to mačjo hiško.
-      grade2_MakeDogTag_4: |-
-        Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.
-      grade2_MakeDogTag_6: 'Prosta naloga! Nariši nekaj po lastni izbiri.'
+      grade2_MakeDogTag_3: Pomagaj mi končati to mačjo hiško.
+      grade2_MakeDogTag_4: 'Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.'
+      grade2_MakeDogTag_6: Prosta naloga! Nariši nekaj po lastni izbiri.
       grade2_MakeDogTag_8: Zdaj pa združi vse V-je v predstavljen lik, tako, da uporabiš zanko.
-      grade2_MakeDogTag_9: Tokrat rišimo s 24 ponovitvami. Dodaj kodi obrat v levo za 30 stopinj in združi vse skupaj v blok za ponavljanje. 
+      grade2_MakeDogTag_9: Tokrat rišimo s 24 ponovitvami. Dodaj kodi obrat v levo za 30 stopinj in združi vse skupaj v blok za ponavljanje.
       grade2_PuppyLoops_1: Me lahko pelješ do prašička z uporabo 5 blokov?
-      grade2_PuppyLoops_10: |-
-        Moja vetrnica ni dokončana. Koliko ponovitev potrebujem, da jo narišem do konca?
+      grade2_PuppyLoops_10: Moja vetrnica ni dokončana. Koliko ponovitev potrebujem, da jo narišem do konca?
       grade2_PuppyLoops_2: "Ali lahko nadomestiš teh 5 blokov z dvemi? \n(Namig: Ustvari zanko z uporabo bloka za ponavljanje.)"
       grade2_PuppyLoops_4: Uporabi dve zanki, da prideš do prašička in da uporabiš čim manj blokov.
       grade2_PuppyLoops_5: Ali najdeš najhitrejši način, kako me spraviti k pujsu?
       grade2_PuppyLoops_7: Uporabi, kar si se naučil, da bi me spravil k sončnici!
-      grade2_PuppyLoops_8: "Koda za risanje brkov ni pravilno napisana. Namig: Vsak brk je dolg 75 pixlov. Ustrezno uredi kodo, da bodo brki taki, kot na sliki. "
-      grade2_PuppyLoops_9: |-
-        Videti je, da koda izriše črko C narobe obrnjeno. Znaš črko pravilno obrniti?
+      grade2_PuppyLoops_8: 'Koda za risanje brkov ni pravilno napisana. Namig: Vsak brk je dolg 75 pixlov. Ustrezno uredi kodo, da bodo brki taki, kot na sliki. '
+      grade2_PuppyLoops_9: Videti je, da koda izriše črko C narobe obrnjeno. Znaš črko pravilno obrniti?
       grade2_puppy_loops2: "Ali lahko nadomestiš teh 5 blokov z dvemi? \n(Namig: Ustvari zanko z uporabo bloka za ponavljanje.)"
       grade2_puppy_loops4: Uporabi dve zanki, da prideš do prašička in da uporabiš čim manj blokov.
       grade3_ConditionalsElse_1: Ta oblak mi zakriva pogled! Preveri, če je pod oblakom roža in v tem primeru dobi nektar. Pazi, lahko se spremeni!
-      grade3_ConditionalsElse_2: "Še več oblakov! Poglej pod oblak in preveri, ali se tam skriva roža, preden pobereš nektar. Zapomni si: ne skrivajo vsi oblaki iste stvari!"
+      grade3_ConditionalsElse_2: 'Še več oblakov! Poglej pod oblak in preveri, ali se tam skriva roža, preden pobereš nektar. Zapomni si: ne skrivajo vsi oblaki iste stvari!'
       grade3_ConditionalsElse_3: Zdaj si želim narediti med. Oblaka morda skrivata satovje. Preveri oba oblaka!
       grade3_ConditionalsElse_4: Včasih oblak prekriva rožo, včasih pa satovje! Uporabi "če/sicer" blok, da v primeru rože dobiš nektar, sicer pa narediš med (ker je pod oblakom satovje).
-      grade3_ConditionalsElse_5: |-
-        Pod vsakim od oblakov bo ali roža ali satovje! Uporabi blok "če/sicer", da dobiš nektar, če je roža. V nasprotnem primeru naredi med, saj je spodaj satovje.
-      grade3_ConditionalsElse_6: "Nisem prepričan, koliko nektarja ima ta roža, a vem, da je eno od števil 1, 2 in 3. Združi pogojne bloke (\"če\" in/ali \"če/sicer\"), da dobiš ravno toliko nektarja, kot ga roža ima. Zapomni si, da se količina nektarja lahko spremeni vsakič, ko poženeš program!"
-      grade3_ConditionalsElse_7: "Te rože imajo lahko 3, 2 ali 1 nektar. Dopolni funkcijo \"preveri vijolično rožo\" in jo uporabi, da dobiš ves nektar iz cvetov."
-      grade3_ConditionalsElse_8: "Napiši funkcijo za \"preveri rožo, naredi med\". Funkcija mora preveriti, ali ima vijolična roža 3, 2 ali 1 nektar in dobiti ves nektar. Nato se mora premakniti naprej in narediti med."
-      grade3_ConditionalsElse_9: "Ta oblak skriva bodisi en nektar ali satovje, ki potrebuje en med. Dokončaj funkcijo \"dobi nektar ali naredi med\", potem pa jo pokliči, da dobiš nektar ali narediš med."
-      grade3_ConditionalsElse_TeacherIDo: |-
-        Pod vsakim od oblakov bo ali roža ali satovje! Uporabi blok "če/sicer", da dobiš nektar, če je roža. V nasprotnem primeru naredi med, saj je spodaj satovje.
+      grade3_ConditionalsElse_5: Pod vsakim od oblakov bo ali roža ali satovje! Uporabi blok "če/sicer", da dobiš nektar, če je roža. V nasprotnem primeru naredi med, saj je spodaj satovje.
+      grade3_ConditionalsElse_6: Nisem prepričan, koliko nektarja ima ta roža, a vem, da je eno od števil 1, 2 in 3. Združi pogojne bloke ("če" in/ali "če/sicer"), da dobiš ravno toliko nektarja, kot ga roža ima. Zapomni si, da se količina nektarja lahko spremeni vsakič, ko poženeš program!
+      grade3_ConditionalsElse_7: Te rože imajo lahko 3, 2 ali 1 nektar. Dopolni funkcijo "preveri vijolično rožo" in jo uporabi, da dobiš ves nektar iz cvetov.
+      grade3_ConditionalsElse_8: Napiši funkcijo za "preveri rožo, naredi med". Funkcija mora preveriti, ali ima vijolična roža 3, 2 ali 1 nektar in dobiti ves nektar. Nato se mora premakniti naprej in narediti med.
+      grade3_ConditionalsElse_9: Ta oblak skriva bodisi en nektar ali satovje, ki potrebuje en med. Dokončaj funkcijo "dobi nektar ali naredi med", potem pa jo pokliči, da dobiš nektar ali narediš med.
+      grade3_ConditionalsElse_TeacherIDo: Pod vsakim od oblakov bo ali roža ali satovje! Uporabi blok "če/sicer", da dobiš nektar, če je roža. V nasprotnem primeru naredi med, saj je spodaj satovje.
       grade3_Conditionals_1 BAD: Uporabi zanko, da dobiš ves nektar.
-      grade3_Conditionals_1: "Živijo, jaz sem čebela. Pomagaj mi nabrati nektar\niz vseh rož. Uporabi zanko."
+      grade3_Conditionals_1: |-
+        Živijo, jaz sem čebela. Pomagaj mi nabrati nektar
+        iz vseh rož. Uporabi zanko.
       grade3_Conditionals_10 BAD: Dobi nektar iz vrstic cvetov! Uporabi ugnezdeno zanko.
       grade3_Conditionals_10: |-
         Naberi nektar in naredi med. Namig:
         kaj se zgodi, če uporabiš pogojnik "če je nektar" na rdeči roži?
         Ali lahko to dokončaš z zanko?
-      grade3_Conditionals_11 BAD: 'Uporabi "dokler" zanko, da dobiš ves nektar iz teh cvetov.'
+      grade3_Conditionals_11 BAD: Uporabi "dokler" zanko, da dobiš ves nektar iz teh cvetov.
       grade3_Conditionals_11: |-
         Naberi nektar in naredi med. Pazi, da ne nabiraš medu
         iz vijolične rože, ki ga nima.
-      grade3_Conditionals_12: "Naberi nektar iz vseh štirih rož."
-      grade3_Conditionals_13: 'Zberi ves nektar. Pazi, da ne zbereš nektarja vijoličnih cvetov, če le-tega nima.'
-      grade3_Conditionals_2: "Pomagaj mi nabrati nektar iz rož in narediti med. Uporabi zanko."
-      grade3_Conditionals_3: "Vijolične rože imajo lahko 1 ali 0 nektarja,\na ne veš, katere! Pazi, da ne\nnabiraš nektarja iz\nvijolične rože, če ga nima. Preveri, če ima\nnektar vrednost ena tako,\nda uporabiš če kocko."
-      grade3_Conditionals_4: "S \"če\" kocko preveri,\nče je na voljo kaj nektarja."
-      grade3_Conditionals_5: "Naberi nektar iz vseh rož,\nki ga imajo."
-      grade3_Conditionals_6: "Na polju so rdeče in vijolične rože.\nRdeče rože imajo znano količino nektarja,\nne ve pa se, koliko ga imajo vijolične.\nNaberi ves nektar."
+      grade3_Conditionals_12: Naberi nektar iz vseh štirih rož.
+      grade3_Conditionals_13: Zberi ves nektar. Pazi, da ne zbereš nektarja vijoličnih cvetov, če le-tega nima.
+      grade3_Conditionals_2: Pomagaj mi nabrati nektar iz rož in narediti med. Uporabi zanko.
+      grade3_Conditionals_3: |-
+        Vijolične rože imajo lahko 1 ali 0 nektarja,
+        a ne veš, katere! Pazi, da ne
+        nabiraš nektarja iz
+        vijolične rože, če ga nima. Preveri, če ima
+        nektar vrednost ena tako,
+        da uporabiš če kocko.
+      grade3_Conditionals_4: |-
+        S "če" kocko preveri,
+        če je na voljo kaj nektarja.
+      grade3_Conditionals_5: |-
+        Naberi nektar iz vseh rož,
+        ki ga imajo.
+      grade3_Conditionals_6: |-
+        Na polju so rdeče in vijolične rože.
+        Rdeče rože imajo znano količino nektarja,
+        ne ve pa se, koliko ga imajo vijolične.
+        Naberi ves nektar.
       grade3_Conditionals_7: Zberi nektar iz vseh cvetov.
-      grade3_Conditionals_8: "Nabiraj nektar z rož, ki ga imajo."
+      grade3_Conditionals_8: Nabiraj nektar z rož, ki ga imajo.
       grade3_Conditionals_9: "Uporabi zanko, da preveriš in nabereš nektar \nz vseh teh rož."
-      grade3_Conditionals_TeacherIDo: "S \"če\" kocko preveri,\nče je na voljo kaj nektarja."
+      grade3_Conditionals_TeacherIDo: |-
+        S "če" kocko preveri,
+        če je na voljo kaj nektarja.
       grade3_Debugging_1: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
-      grade3_Debugging_5: "Ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med. Zdaj lahko uporabiš ukaza \"Zaženi\" ter \"Korak\"."
-      grade3_Debugging_6: |-
-        Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
+      grade3_Debugging_5: Ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med. Zdaj lahko uporabiš ukaza "Zaženi" ter "Korak".
+      grade3_Debugging_6: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
       grade3_Debugging_7: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
-      grade3_Debugging_9: |-
-        Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
+      grade3_Debugging_9: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
       grade3_Debugging_TeacherIDo: Vsi ti bloki me resnično motijo. Uredi kodo tako, da boš nabral ves nektar in naredil med.
-      grade3_Loops_10: |-
-        Tako kot pri prejšnji nalogi uporabi zanko, vendar z obračanjem.
-      grade3_Loops_11: "Uporabi zanko za sestopanje po stopnicah in naberi nektar."
+      grade3_Loops_10: Tako kot pri prejšnji nalogi uporabi zanko, vendar z obračanjem.
+      grade3_Loops_11: Uporabi zanko za sestopanje po stopnicah in naberi nektar.
       grade3_Loops_12: Uporabi zanko, da nabereš  nektar z vsake rožice in narediš med na vsakem satovju.
       grade3_Loops_2: Ali lahko to opraviš preprosteje z zanko?
       grade3_Loops_3: Ali lahko uporabiš zanko, da nabereš ves nektar?
       grade3_Loops_4: Zdaj pa uporabi blok za ponavljanje, da nabereš ves nektar in narediš med.
       grade3_Loops_5: Vstavi te bloke v zanko, da nabereš nektar od vsake rožice.
-      grade3_Loops_6: "Kaj se zgodi, če ukaze z zanko trikrat ponoviš? Ne pozabi na koncu narediti meda! "
-      grade3_Loops_7: |-
-        Vsaka rožica vsebuje eno enoto nektarja. Naberi nektar od vsake. 
+      grade3_Loops_6: 'Kaj se zgodi, če ukaze z zanko trikrat ponoviš? Ne pozabi na koncu narediti meda! '
+      grade3_Loops_7: 'Vsaka rožica vsebuje eno enoto nektarja. Naberi nektar od vsake. '
       grade3_Loops_8: Uporabi zanko, da nabereš nektar in narediš med.
-      grade3_Loops_9: Naberi nektar od vsake rožice in naredi med v vsakem satovju. 
-      grade3_Loops_TeacherIDo: |-
-        Vsaka rožica vsebuje eno enoto nektarja. Naberi nektar od vsake. 
-      grade3_bee_conditionals_quantum2: "Še več oblakov! Poglej pod oblak in preveri, ali se tam skriva roža, preden pobereš nektar. Zapomni si: ne skrivajo vsi oblaki iste stvari!"
+      grade3_Loops_9: Naberi nektar od vsake rožice in naredi med v vsakem satovju.
+      grade3_Loops_TeacherIDo: 'Vsaka rožica vsebuje eno enoto nektarja. Naberi nektar od vsake. '
+      grade3_bee_conditionals_quantum2: 'Še več oblakov! Poglej pod oblak in preveri, ali se tam skriva roža, preden pobereš nektar. Zapomni si: ne skrivajo vsi oblaki iste stvari!'
       grade3_maze_Loop1: 'Pelji me do sončnice z uporabo 5 blokov! '
       grade3_maze_loops4: Pripelji me do sončnice z uporabo čim manj blokov!
       grade3_maze_loops5: Spravi me k sončnici z uporabo čim manj blokov!
@@ -911,37 +962,33 @@ sl:
       grade3_robotFarmer_ConditionalsIntro_11: 'Še vedno je mrak. Premikaj me po polju. Če naletim na kup, ga odstrani, in če naletim na luknjo, jo napolni. Namig: v bloku "če (if)" uporabi spustni seznam z možnostmi.'
       grade3_robotFarmer_ConditionalsIntro_6: 'Odstrani vse kupe zemlje z uporabo čim manj blokov. Pomoč: uporabi blok "dokler" in v spustnem seznamu izberi možnost, ki pove ali stojim na kupu ali na luknji.'
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Pomagaj mi zapolniti vse te luknje, v vsako luknjo stresi 5 lopat zemlje. Namig: uporabi blok "dokler" in vanj povleci blok "ponavljaj".'
-      grade4_arist_nested_loop_circles1: 'Uporabi ugnezdeno zanko, da dokončaš umetnino.'
+      grade4_arist_nested_loop_circles1: Uporabi ugnezdeno zanko, da dokončaš umetnino.
       grade4_arist_nested_loop_flags1: Zankaj podano kodo tako, da ustvariš mlin na veter.
-      grade4_arist_nested_loop_polygons1: "Desetkrat ponovi zanko za to obliko. Za koliko stopinj se moraš obniti pri vsaki ponovitvi?"
-      grade4_arist_nested_loop_polygons2: "Šestkrat ponovi zanko za to obliko. Za koliko stopinj se moraš obniti pri vsaki ponovitvi?"
+      grade4_arist_nested_loop_polygons1: Desetkrat ponovi zanko za to obliko. Za koliko stopinj se moraš obniti pri vsaki ponovitvi?
+      grade4_arist_nested_loop_polygons2: Šestkrat ponovi zanko za to obliko. Za koliko stopinj se moraš obniti pri vsaki ponovitvi?
       grade4_arist_nested_loop_squares1: Lahko narišeš 10 kvadratov, ki predstavljajo pločnik, z uporabo ugnezdene zanke? Vsak kvadrat ima stranico dolgo 30 pikslov.
-      grade4_arist_nested_loop_triangles2: 'Zdaj pa ugnezdi to zanko znotraj druge zanke, da narišeš 10 trikotniko. To imenujemo "ugnezdena" zanka.'
+      grade4_arist_nested_loop_triangles2: Zdaj pa ugnezdi to zanko znotraj druge zanke, da narišeš 10 trikotniko. To imenujemo "ugnezdena" zanka.
       grade4_arist_nested_loop_triangles3: Lahko narišeš šestkotnik s pomočjo zanke s kodo za trikotnik?
       grade4_arist_nested_loop_triangles4: Nariši zobe v krokodilovih ustih!
-      grade4_arist_nested_loop_triangles5: |-
-        Ustvari sonce z ugnezdenjem začetne kode v drugo zanko. Da dobiš to zanimivo kreacijo, boš moral skočiti naprej za dolžino stranice trikotnika, preden se obrneš.
+      grade4_arist_nested_loop_triangles5: Ustvari sonce z ugnezdenjem začetne kode v drugo zanko. Da dobiš to zanimivo kreacijo, boš moral skočiti naprej za dolžino stranice trikotnika, preden se obrneš.
       grade4_arist_nested_loop_triangles6: Lahko narišeš 36 trikotnikov z uporabo ugnezdene zanke?
       grade4_artist_functions1: "Živio! Jaz Zombi umetnik. Jaz rad risati!\nPomagaj mi narisati kvadratna očala. Namig: Prehod med očali je \n25 pixlov krajši od dolžine kvadrata."
-      grade4_artist_functions2: "Funkcije ti pomagajo pri ustvarjanju novih blokov. Premaknili smo blok za risanje kvadrata v funkcijo, imenovano \"nariši kvadrat\". Znaš uporabiti funkcijo, \"nariši kvadrat\" za risanje očal? Očala so razmaknjena za 75 pikslov."
+      grade4_artist_functions2: Funkcije ti pomagajo pri ustvarjanju novih blokov. Premaknili smo blok za risanje kvadrata v funkcijo, imenovano "nariši kvadrat". Znaš uporabiti funkcijo, "nariši kvadrat" za risanje očal? Očala so razmaknjena za 75 pikslov.
       grade4_artist_functions_challenge: Uporabi predlagane funkcije za izris štirih vrst šestkotnikov. Opaziš, kako so sode vrstice zamaknjene v desno?
       grade4_artist_functions_challenge2: Uporabi predlagane funkcije za izris štirih vrst šestkotnikov. Opaziš, kako so sode vrstice zamaknjene v desno?
-      grade4_artist_nestedLoops_challenge: |-
-        Klikni tukaj, da še enkrat vidiš celotna navodila! Tukaj je koda za zanimivo obliko. Kaj se zgodi, ko jo večkrat ponoviš, vmes pa se med vsakim korakom obrneš? Obrati se seštejejo v 420 stopinj, kar pomeni, da bo umetnik, ko zaključi z risanjem, obrnjen v drugo smer kot na začetku. Nova smer je točno 60 stopinj v levo od začetne pozicije.
+      grade4_artist_nestedLoops_challenge: Klikni tukaj, da še enkrat vidiš celotna navodila! Tukaj je koda za zanimivo obliko. Kaj se zgodi, ko jo večkrat ponoviš, vmes pa se med vsakim korakom obrneš? Obrati se seštejejo v 420 stopinj, kar pomeni, da bo umetnik, ko zaključi z risanjem, obrnjen v drugo smer kot na začetku. Nova smer je točno 60 stopinj v levo od začetne pozicije.
       grade4_artist_nestedLoops_challenge2: Sedaj pa za iziv! Kar korajžno poskusi pognati. Nihče ne pričakuje, da ti bo v prvem poskusu uspelo narediti celotno sliko.
-      grade4_artist_nested_loop_circles1: 'Uporabi ugnezdeno zanko, da dokončaš umetnino.'
+      grade4_artist_nested_loop_circles1: Uporabi ugnezdeno zanko, da dokončaš umetnino.
       grade4_artist_nested_loop_flags1: Zankaj podano kodo tako, da ustvariš mlin na veter.
-      grade4_artist_nested_loop_polygons1: "Desetkrat ponovi zanko za to obliko. Za koliko stopinj se moraš obniti pri vsaki ponovitvi?"
+      grade4_artist_nested_loop_polygons1: Desetkrat ponovi zanko za to obliko. Za koliko stopinj se moraš obniti pri vsaki ponovitvi?
       grade4_artist_nested_loop_squares1: Lahko narišeš 10 kvadratov, ki predstavljajo pločnik, z uporabo ugnezdene zanke? Vsak kvadrat ima stranico dolgo 30 pikslov.
       grade4_artist_nested_loop_triangles1: 'Dokončaj kodo tako, da izriše te trikotnike. Prvi je že narejen. Namig: trije trikotniki v 360 stopinjski rotaciji.'
-      grade4_artist_nested_loop_triangles5: |-
-        Ustvari sonce z ugnezdenjem začetne kode v drugo zanko. Da dobiš to zanimivo kreacijo, boš moral skočiti naprej za dolžino stranice trikotnika, preden se obrneš.
+      grade4_artist_nested_loop_triangles5: Ustvari sonce z ugnezdenjem začetne kode v drugo zanko. Da dobiš to zanimivo kreacijo, boš moral skočiti naprej za dolžino stranice trikotnika, preden se obrneš.
       grade4_artist_nested_loop_triangles6: Lahko narišeš 36 trikotnikov z uporabo ugnezdene zanke?
       grade4_bee_conditionals_quantum1: Ta oblak mi zakriva pogled! Preveri, če je pod oblakom roža in v tem primeru dobi nektar. Pazi, lahko se spremeni!
-      grade4_bee_conditionals_quantum2: "Še več oblakov! Poglej pod oblak in preveri, ali se tam skriva roža, preden pobereš nektar. Zapomni si: ne skrivajo vsi oblaki iste stvari!"
+      grade4_bee_conditionals_quantum2: 'Še več oblakov! Poglej pod oblak in preveri, ali se tam skriva roža, preden pobereš nektar. Zapomni si: ne skrivajo vsi oblaki iste stvari!'
       grade4_bee_conditionals_quantum4: Včasih oblak prekriva rožo, včasih pa satovje! Uporabi "če/sicer" blok, da v primeru rože dobiš nektar, sicer pa narediš med (ker je pod oblakom satovje).
-      grade4_bee_conditionals_quantum5: |-
-        Pod vsakim od oblakov bo ali roža ali satovje! Uporabi blok "če/sicer", da dobiš nektar, če je roža. V nasprotnem primeru naredi med, saj je spodaj satovje.
+      grade4_bee_conditionals_quantum5: Pod vsakim od oblakov bo ali roža ali satovje! Uporabi blok "če/sicer", da dobiš nektar, če je roža. V nasprotnem primeru naredi med, saj je spodaj satovje.
       grade4_bee_functions1: Zberi nektar iz vseh cvetov.
       grade4_bee_functions2: Funkcije so bloki kod, ki izvajajo opravila. Uporabite finkcijo "get 2 nectar", da zberete nektar iz vsakega cveta.
       grade4_bee_functions3: Funkcije so bloki kod, ki izvajajo opravila. Uporabite funkcijo "get 5" da pridobite 5 nektarjev naenkrat. Poskrbite tudi, da uporabite ponavljajočo funkcijo, da boste dobili idealno število.
@@ -951,12 +998,21 @@ sl:
       grade4_bee_nestedLoops4: 'Dobi ves nektar iz vsakega cveta in naredi med v satovju. Uporabi ugnezdeno zanko. '
       grade4_frozen_freeplay: Uradno si postal mojster umetnik! Ustvari zimsko čudežno deželo.
       grade4_frozen_functions0: Ali lahko ugotoviš s katerimi številkami namesto vprašajev bo program narisal krog?
-      grade4_frozen_functions1a: "Uporabi novo kocko \"Ustvari krog\" in z njo naredi 10 prekrivajočih se krogov. Ne pozabi med\nposameznimi krogi skočiti naprej."
+      grade4_frozen_functions1a: |-
+        Uporabi novo kocko "Ustvari krog" in z njo naredi 10 prekrivajočih se krogov. Ne pozabi med
+        posameznimi krogi skočiti naprej.
       grade4_frozen_functions2: Sedaj ustvarimo 20 prekrivajočih se krogov, tako da se med vsakim krogom zasukamo za 18 stopinj.
       grade4_frozen_functions3: "Tu je kocka \"Ustvari krog\",\ns katero lahko narediš kroge različnih velikosti. \nAli jo znaš uporabiti tako, da narediš krog, velik 5 in krog, velik 10?"
       grade4_frozen_functions4: "Zapleteni snežni vzorci so lahko narejeni z zelo\npreprostimi oblikami. Ali znaš narediti vzorec tako,\nda ponavljaš 5 krogov velikosti 5 \nin 5 krogov velikosti 10?"
-      grade4_frozen_nested_loop_diamonds2: "Ali ste vedeli, da ima vsaka snežinka drugačno obliko? Ustvarimo novo snežinko z uporabo\n \"Ponovi\" kocke,\ns katero ponovimo paralelogram 4-krat, pri tem pa naredimo obrat na desno za 90 stopinj med vsakim paralelogramom."
-      grade4_frozen_nested_loop_diamonds3: "Zdaj pa ustvarimo novo snežinko\nz uporabo ponovi kocke, s katero 10-krat ponovimo\nparalelogram, med vsakim pa naredimo obrat\nza 36 stopinj na desno."
+      grade4_frozen_nested_loop_diamonds2: |-
+        Ali ste vedeli, da ima vsaka snežinka drugačno obliko? Ustvarimo novo snežinko z uporabo
+         "Ponovi" kocke,
+        s katero ponovimo paralelogram 4-krat, pri tem pa naredimo obrat na desno za 90 stopinj med vsakim paralelogramom.
+      grade4_frozen_nested_loop_diamonds3: |-
+        Zdaj pa ustvarimo novo snežinko
+        z uporabo ponovi kocke, s katero 10-krat ponovimo
+        paralelogram, med vsakim pa naredimo obrat
+        za 36 stopinj na desno.
       grade4_frozen_square: Živijo, jaz sem Ana Arendelska! Ustvarimo kvadratek z blokom "Ponovi" in tako porabimo manj blokov. Kolikokrat (???) mora blok "Ponovi" ponoviti bloke znotraj, da naredi kvadrat?
       grade4_frozen_square_loop1: Živijo, jaz sem Ana Arendelska! Ustvarimo kvadratek z blokom "Ponovi" in tako porabimo manj blokov. Kolikokrat (???) mora blok "Ponovi" ponoviti bloke znotraj, da naredi kvadrat?
       grade4_frozen_square_loop2: Ustvarimo tri kvadrate, tako da se obrnemo po vsake kvadratu. Prepričaj se, da ste vklopili obrat za 120 stopinj pred vsakim novim kvadratom.
@@ -966,20 +1022,18 @@ sl:
         Kako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke "points" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo "ko igralec 2 se dotakne česarkoli" tudi za večanje vrednosti spremenljivke "points".
         Vrednost spremenljivke lahko večaš tako, da nastaviš "points = points + 1."
         Zberi 10 točk (vsako posebej...) da končaš to nalogo.
-      grade4_review_artist1: Živio, jaz sem umetnik. Lahko sestaviš kodo, s pomočjo katere bom narisal skoraj vse. Uporabi nekaj blokov, da bom risal preko sivih črt v sliki. (Vsaka črta je dolga 100 pixlov)
       grade4_review_artist2: 'Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse 3 strani so enako dolge.'
       grade4_review_artist3: Bloki "skoči" premaknejo umetnika brez risanja. Nariši prekinjeno črto z uporabo blokov.
       grade4_review_bee1: Zdaj pa uporabi blok za ponavljanje, da nabereš ves nektar in narediš med.
-      grade4_review_bee2: Naberi nektar od vsake rožice in naredi med v vsakem satovju. 
-      grade4_review_bee3: |-
-        Tako kot pri prejšnji nalogi uporabi zanko, vendar z obračanjem.
+      grade4_review_bee2: Naberi nektar od vsake rožice in naredi med v vsakem satovju.
+      grade4_review_bee3: Tako kot pri prejšnji nalogi uporabi zanko, vendar z obračanjem.
       grade5_artist_for_loops5: |-
-        Samo majhna sprememba kode iz prejšnje naloge lahko nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti? \r
-        \r
+        Samo majhna sprememba kode iz prejšnje naloge lahko nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti? \\r
+        \\r
         Namig: Nekaj je treba odstraniti!
       grade5_artist_for_loops6: Če se obrneš malo manj ali malo več, kot bi se pri risanju lika, lahko nastane zanimiv učinek. Poskusi uporabiti del kode iz prejšnje naloge z obračanjem za 89 stopinj, ki naredi tako zanimivo kvadratno spiralo.
       grade5_artist_for_loops7: Naredi tri majhne sprememb v kodi iz prejšnje naloge, da narišeš tole!
-      grade5_artist_for_loops8: 'Se spomniš prejšnje stopnje, kjer smo uporabili spremenljivko, s katero smo spreminjali število stranic lika? Naredili bomo enako, a z uporabo "števec" spremenljivke. Ta vzorec se začne s trikotnikom in vedno doda eno stranico, dokler ne konča z desetkotnikom (10 stranic). Vsaka stranica je dolga 100 pikslov.'
+      grade5_artist_for_loops8: Se spomniš prejšnje stopnje, kjer smo uporabili spremenljivko, s katero smo spreminjali število stranic lika? Naredili bomo enako, a z uporabo "števec" spremenljivke. Ta vzorec se začne s trikotnikom in vedno doda eno stranico, dokler ne konča z desetkotnikom (10 stranic). Vsaka stranica je dolga 100 pikslov.
       grade5_artist_for_loops9: |-
         Zdaj pa združimo znanje od prej! S poznavanjem zanke "za vsako število", in s poznavanjem spremenjlivke "counter" narišemo te večkotnike, kjer ima vsak večkotnik za dve stranici "sides" več kot prejšnja. Zagotovite, da je dolžina stranice v večkotniku 10 krat daljša od števila stranic.
         Le majhen delček kode smo ti pripravili.
@@ -987,22 +1041,21 @@ sl:
       grade5_artist_variables_freeplay14: |-
         Prosto igranje: Poglej tole! Sedaj tvoj algoritem je vgnezden znotran še ene zanke. Eksperimentiraj s spreminjanjem vrednosti tvojih spremenjivk in nariši kul vzorce.
         Za še več efekta poskušaj se igrati z barvo! Nastavi `izberi barvo pisala` na `naključna barva` znotraj zank in opazuj kako se spremeni končna slika.
-      grade5_artist_variables_freeplay15: |-
-        Naredi nekaj po svojem okusu.
+      grade5_artist_variables_freeplay15: Naredi nekaj po svojem okusu.
       grade5_artist_variables_freeplay16: Bi se še igral?  Tukaj je prazno platno, kjer lahko ustvariš karkoli želiš!
-      grade5_artist_variables_hexagons1: "Poskusi ponovno! Ali lahko nastaviš spremenljivko `length` na 60, da narediš ta kul vzorec s šesterokotniki?"
+      grade5_artist_variables_hexagons1: Poskusi ponovno! Ali lahko nastaviš spremenljivko `length` na 60, da narediš ta kul vzorec s šesterokotniki?
       grade5_artist_variables_letterT11: Tukaj je bolj zapletena koda z uporabo istih pojmov iz zadnje uganka - na kakšno vrednost moraš nastaviti spremenljivko `sides`, ki pomene `stranice`, da se izriše ta slika kvadratov?
-      grade5_artist_variables_octagons13: "Ko ima oblika veliko stranic, morajo stranice biti manjše, da celoten vzorec ne gre čez rob zaslona.\nPoustvari algoritem za ta čudovit vzorec, toda brez ročno nastavljene spremljivke`length`. Uporabi matematični blok s `sides` spremeljivko, tako da bo vsak vzorec vstrezal velikosti zaslona. Obsek vsakega poligona je 300 pikslov. Če potrebuješ namige, klikni na levi strani na lučko."
-      grade5_artist_variables_pentagon8: |-
-        Uporabi kar si se naučil/a v prejšnji uganki tako, da narediš šestkotnik z uporabo `sides` spremeljivke. Kako bi lahko spremenil/a le eno vrednost tako, da narišeš trikotnik, kvadrat, petkotni ali osemkotnik?
+      grade5_artist_variables_octagons13: |-
+        Ko ima oblika veliko stranic, morajo stranice biti manjše, da celoten vzorec ne gre čez rob zaslona.
+        Poustvari algoritem za ta čudovit vzorec, toda brez ročno nastavljene spremljivke`length`. Uporabi matematični blok s `sides` spremeljivko, tako da bo vsak vzorec vstrezal velikosti zaslona. Obsek vsakega poligona je 300 pikslov. Če potrebuješ namige, klikni na levi strani na lučko.
+      grade5_artist_variables_pentagon8: Uporabi kar si se naučil/a v prejšnji uganki tako, da narediš šestkotnik z uporabo `sides` spremeljivke. Kako bi lahko spremenil/a le eno vrednost tako, da narišeš trikotnik, kvadrat, petkotni ali osemkotnik?
       grade5_artist_variables_pentagon9: Sedaj poustvari algoritem iz prejšnje stopnje in nariši petkotnik z stanicami dolžine 150 pikslov.
-      grade5_artist_variables_pentagons1: "Nariši ta vzorec petkotnikov s 100 pikslov stranicami, tako da nastaviš `length` na pravo vrednost in premakneš `length` spremenljivko na vsa pravilna mesta. Si opazil/a, da je bilo potrebno nastaviti `length` le enkrat in kako koda uporablja pravo vrednost povsod?"
+      grade5_artist_variables_pentagons1: Nariši ta vzorec petkotnikov s 100 pikslov stranicami, tako da nastaviš `length` na pravo vrednost in premakneš `length` spremenljivko na vsa pravilna mesta. Si opazil/a, da je bilo potrebno nastaviti `length` le enkrat in kako koda uporablja pravo vrednost povsod?
       grade5_artist_variables_pentagons12: Nastavi spremenljivko `sides`, ki pomeni `stranice` na `5`. Več stranic kot nastavimo temu algoritmu, večji bo celoten vzorec! Če si pozoren/a, boš opazil/a da je še ena spremenljivka, ki se imenuje `length`, ki pomeni `dolžina`. Sedaj lahko uporabimo to spremeljivko vsakič, ko uporabimo `premik naprej` blok. Nastavi `length` spremeljivko na 75 za to obliko.
       grade5_artist_variables_rectangle6: Zdaj hočem narisati pravokotnik, pri katerem je višina dvakratnik širine. Imamo spremenljivko z imenom `width`, ki mora biti nastavljena na 100. Ali lahko uporabiš matematične bloke za dokončanje kode?
-      grade5_artist_variables_square7: |-
-        Tukaj je nekaj kode, ki lahko nariše katerikoli pravilen poligon. Dodana je nova spremenljivka imenova `sides`, kar pomeni `stranice`, ki je nastavljena na 4. Ali lahko uporabiš `sides` spremenljivko (skupaj z matematičnim blokom), tako da se umetnik obrne pravilno ne glede na to koliko stranic ima poligon?
+      grade5_artist_variables_square7: Tukaj je nekaj kode, ki lahko nariše katerikoli pravilen poligon. Dodana je nova spremenljivka imenova `sides`, kar pomeni `stranice`, ki je nastavljena na 4. Ali lahko uporabiš `sides` spremenljivko (skupaj z matematičnim blokom), tako da se umetnik obrne pravilno ne glede na to koliko stranic ima poligon?
       grade5_artist_variables_triangles2: Namesto uporabe "premakni se naprej za 150 pikslov", "premakni se" blok sedaj sklicuje na spremenljivko z imenom "length", kar pomeni dolžina. Ali lahko nastaviš "length" na 150, da narišeš ta novi trikotnik?
-      grade5_artist_variables_triangles3: 'Povleci številka blok(???) na oba `nastavi length na` blok in `ponovi _-krat` blok, tako da narišeš serijo 50 pikselov velikih trikotnikov.'
+      grade5_artist_variables_triangles3: Povleci številka blok(???) na oba `nastavi length na` blok in `ponovi _-krat` blok, tako da narišeš serijo 50 pikselov velikih trikotnikov.
       grade5_bee_for_loops1: Uporabi zanko, da dobiš nektar iz vsakega cveta.
       grade5_bee_for_loops2: Dodaj potrebno kodo, da bo čebelica dobila ves nektar. Poglej, koliko kode potrebuješ za to uganko! (V naslednji uganki se bomo naučili lažjega načina.)
       grade5_bee_for_loops6: '"Za zanko" lahko uporabiš tudi za odštevanje. Poskusi dobiti nektar z odštevanjem od 5 do 1 po 1.'
@@ -1017,25 +1070,31 @@ sl:
         Zberi 10 točk (vsako posebej...) da končaš to nalogo.
       grade5_playlab_variables7: Fino, zdaj pa igro naredimo bolj zapleteno. Vsakič, ko psa (igralec 1) zadane sendvič, ki ga je vrgel maček (igralec 2), igralec 1 točko izgubi. Začni z 10 točkami, da ne bo pretežko. Zmanjšaj tvoje število točk iz 10 na nič, da končaš to nalogo.
       k-1 maze 1: Ali me lahko premakneš proti zahodu, da pridem do prašička?
-      level 'grade3_Loops_10: |-
-        Tako kot pri prejšnji nalogi uporabi zanko, vendar z obračanjem.
-      level 'grade3_Loops_11: "Uporabi zanko za sestopanje po stopnicah in naberi nektar."
+      level 'grade3_Loops_10: Tako kot pri prejšnji nalogi uporabi zanko, vendar z obračanjem.
+      level 'grade3_Loops_11: Uporabi zanko za sestopanje po stopnicah in naberi nektar.
       level 'grade3_Loops_12: Uporabi zanko, da nabereš  nektar z vsake rožice in narediš med na vsakem satovju.
       level 'grade3_Loops_2: Ali lahko to opraviš preprosteje z zanko?
       level 'grade3_Loops_3: Ali lahko uporabiš zanko, da nabereš ves nektar?
       level 'grade3_Loops_4: Zdaj pa uporabi blok za ponavljanje, da nabereš ves nektar in narediš med.
       level 'grade3_Loops_5: Vstavi te bloke v zanko, da nabereš nektar od vsake rožice.
-      level 'grade3_Loops_6: "Kaj se zgodi, če ukaze z zanko trikrat ponoviš? Ne pozabi na koncu narediti meda! "
-      level 'grade3_Loops_7: |-
-        Vsaka rožica vsebuje eno enoto nektarja. Naberi nektar od vsake. 
+      level 'grade3_Loops_6: 'Kaj se zgodi, če ukaze z zanko trikrat ponoviš? Ne pozabi na koncu narediti meda! '
+      level 'grade3_Loops_7: 'Vsaka rožica vsebuje eno enoto nektarja. Naberi nektar od vsake. '
       level 'grade3_Loops_8: Uporabi zanko, da nabereš nektar in narediš med.
-      level 'grade3_Loops_9: Naberi nektar od vsake rožice in naredi med v vsakem satovju. 
+      level 'grade3_Loops_9: Naberi nektar od vsake rožice in naredi med v vsakem satovju.
       level grade3_Loops_2: Ali lahko to opraviš preprosteje z zanko?
       scrat 16 (copy 1): Želod! Želod! Želod! Uporabi "če" kocko, da me pripelješ tja čim manj kockami.
       scrat 16: Želod! Želod! Želod! Uporabi "če" kocko, da me pripelješ tja čim manj kockami.
       scrat 17: Pa poskusimo tole za vajo še enkrat - ni zelo drugače, a pazi na zid!
-      scrat 18 (copy 1): "Kocka \"če drugo\" preveri pogoj in nato naredi eno ALI drugo stvar. Da bi me pripeljal do želoda,\nposkusi uporabiti to novo kocko."
-      scrat 18: "Kocka \"če drugo\" preveri pogoj in nato naredi eno ALI drugo stvar. Da bi me pripeljal do želoda,\nposkusi uporabiti to novo kocko."
-      scrat 19 (copy 1): "Še ena vaja za \"če drugo\" kocko. Ti lahko\nuspe že v prvem poskusu?"
-      scrat 19: "Še ena vaja za \"če drugo\" kocko. Ti lahko\nuspe že v prvem poskusu?"
+      scrat 18 (copy 1): |-
+        Kocka "če drugo" preveri pogoj in nato naredi eno ALI drugo stvar. Da bi me pripeljal do želoda,
+        poskusi uporabiti to novo kocko.
+      scrat 18: |-
+        Kocka "če drugo" preveri pogoj in nato naredi eno ALI drugo stvar. Da bi me pripeljal do želoda,
+        poskusi uporabiti to novo kocko.
+      scrat 19 (copy 1): |-
+        Še ena vaja za "če drugo" kocko. Ti lahko
+        uspe že v prvem poskusu?
+      scrat 19: |-
+        Še ena vaja za "če drugo" kocko. Ti lahko
+        uspe že v prvem poskusu?
       scrat 20: "Ali lahko dodaš le tri kocke, da mi pomagaš rešiti bolj zapleten labirint?\nČe boš naredil/a pravilno, bom lahko hodila po katerikoli\novinkasti cesti, ne glede na to, \nkako dolga je.\nPohiti, led se topi!"
