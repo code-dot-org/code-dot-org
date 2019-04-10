@@ -3,7 +3,7 @@ import React from 'react';
 import {showDialog} from '@cdo/apps/code-studio/levels/dialogHelper';
 import {MatchAngiGifDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 
-import Match, {initMatch} from '@cdo/apps/code-studio/levels/match';
+import Match from '@cdo/apps/code-studio/levels/match';
 window.Match = Match;
 
 $(function() {
@@ -12,7 +12,4 @@ $(function() {
     // Note: This dialog depends on the presence of some haml, found in _dialog.html.haml
     window.setTimeout(() => showDialog(<MatchAngiGifDialog />), 1000);
   }
-
-  const container = $('#level-body').first();
-  initMatch(container, true);
 });
