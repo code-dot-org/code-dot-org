@@ -18,6 +18,7 @@ vi:
       messages:
         blank: là bắt buộc
         blank_plural: bắt buộc
+        invalid: không hợp lệ
         invalid_plural: không hợp lệ
     attributes:
       user:
@@ -35,6 +36,11 @@ vi:
         age: Tuổi
         gender: Giới tính
         edit_header: Chỉnh sửa thông tin tài khoản
+        finish_sign_up_header: Hoàn thành tạo tài khoản
+        finish_sign_up_subheader: Điền thông tin sau để hoàn thành tạo tài khoản Code.org
+          cho <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider: Điền thông tin sau để hoàn thành tạo tài
+          khoản Code.org với <strong>%{provider}</strong> cho <strong>%{email}</strong>.
         error:
           future: không thể trong tương lai
   hello: Xin chào thế giới
@@ -84,6 +90,7 @@ vi:
   prize: giải thưởng
   more_info: Thêm thông tin
   auth:
+    continue_with: Tiếp tục với %{provider}
     sign_in_with: Đăng nhập bằng %{provider}
     signed_in: Đăng nhập!
     signed_out: Bạn đã đăng xuất khỏi <a href="%{url}"> Code.org</a>.
@@ -99,6 +106,9 @@ vi:
     clever: Tài khoản Clever
     powerschool: Tài khoản Powerschool
     forgot_password: Quên mật khẩu?
+    migration_success: Thành công! Bạn đã cập nhật trải nghiệm tài khoản mới của chúng
+      tôi.
+    demigration_success: Trải nghiệm tài khoản mới của bạn đang bị vô hiệu.
     need_confirmation: Không nhận được hướng dẫn xác nhận?
     need_unlock: Chưa nhận hướng dẫn mở khóa?
     not_linked: Xin lỗi, tài khoản Code.org của bạn không được liên kết với nhà cung
@@ -107,7 +117,14 @@ vi:
     use_clever: Xin lỗi, tài khoản Code.org của bạn không được liên kết với nhà cung
       cấp %{provider} của bạn. Vui lòng đăng nhập thông qua tài khoản Clever để thay
       thế.
+    unable_to_connect_provider: Không thể kết nối tài khoản Code.org tới tài khoản
+      %{provider} của bạn. Vui lòng thử lại.
+    already_in_use: Tài khoản %{provider} của bạn đã kết nối tới một tài khoản Code.org
+      khác.
+    already_linked: Tài khoản %{provider} của bạn đã liên kết tới tài khoản Code.org
+      của bạn.
   signup_form:
+    email_signup: Đăng ký bằng email
     student_count: "%{count} sinh viên đã đăng ký."
     teacher_count: "%{count} giáo viên đã đăng ký."
     overview: Đăng ký một tài khoản để theo dõi quá trình học của bạn, hoặc để quản
@@ -138,6 +155,7 @@ vi:
     age: Tuổi
     user_type: Bạn là học viên hay Giáo viên?
     submit: Đăng ký
+    go_to_account: Chuyển tới tài khoản
     teacher: Bạn có phải là giáo viên?
     valid_username: Hợp lệ!
     invalid_username: Tên người dùng phải nhiều hơn 5 ký tự
@@ -149,6 +167,8 @@ vi:
       vụ</a> và <a href='http://code.org/privacy'>Chính sách Bảo mật</a>.
     under_13_consent: Nếu dưới 13 tuổi, tôi xác nhận rằng tôi đã được cha mẹ hoặc
       người giám hộ hợp pháp cho phép sử dụng các dịch vụ trên Code.org.
+    student_consent: Tôi xác nhận rằng tôi có bố mẹ hoặc người giám hộ hợp pháp cho
+      phép sử dụng dịch vụ Code.org.
     agree_us_website: Tôi đồng ý với việc sử dụng trang web đặt tại Hoa Kỳ.
     my_data_to_us: Dữ liệu từ việc tôi sử dụng trang web này có thể được gửi đến và
       lưu trữ hoặc xử lý tại Hoa Kỳ.
@@ -164,6 +184,7 @@ vi:
       riêng tư</a>.
     additional_information: Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng
       ký cho bạn.
+    user_type_button: Cập nhật tài khoản
     user_type_label: Loại tài khoản
     user_type_teacher: Giáo viên
     user_type_student: học sinh
@@ -176,6 +197,7 @@ vi:
     email_preference_privacy: "(Xem chính sách bảo mật của chúng tôi)"
     email_preference_yes: Đồng ý
     email_preference_no: Không
+    email_preference_required: Bạn phải có một tài khoản email tham chiếu.
   school_info:
     title: Thông tin trường học (không bắt buộc)
     school_country: Quốc gia
@@ -246,6 +268,7 @@ vi:
     student_associated_subject: Thông tin đăng nhập vào Code.org
   teacher_mailer:
     new_teacher_subject: Chào mừng tới Code.org!
+    delete_teacher_subject: 'Code.org thông báo: tài khoản của bạn đã bị xóa'
   section:
     your_section:
       one: 'Mục của bạn:'
@@ -253,6 +276,7 @@ vi:
     code_with_teacher: "%{section_code} với %{teacher_name}"
     confirm:
       remove: Bạn có chắc chắn muốn rời khỏi mục này không?
+    default_name: Phần chưa có tiêu đề
     remove: "(xóa mục)"
     type:
       picture: Mật khẩu bằng ảnh
@@ -361,6 +385,7 @@ vi:
       signin: Đăng nhập
       signup: Tạo tài khoản
       already_registered: Bạn đã đăng ký?
+      pair_programming: Lập trình theo cặp
       team: Nhóm
       driver: Người lái xe
       navigator: Định hướng

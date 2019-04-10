@@ -5,10 +5,10 @@
     .content
       .column
         %ul#questions
-          - data['questions'].each do |question|
-            %li{style: "height: #{height}px"}!= match_t(question['text'])
+          - level.questions.each do |question|
+            %li{style: "height: #{level.height}px"}!= match_t(question['text'], level)
       .column#answerdest
         %ul#answers
-          - data['answers'].each do |answer|
-            %li.answer.answerlist{style: "height: #{height}px"}!= match_t(answer['text'])
+          - level.answers.each do |answer|
+            %li.answer.answerlist{style: "height: #{level.height}px"}!= match_t(answer['text'], level)
       .clear

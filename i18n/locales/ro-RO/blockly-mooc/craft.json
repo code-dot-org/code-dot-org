@@ -292,7 +292,7 @@
   "timeShort": "scurt",
   "timeVeryLong": "foarte lung",
   "timeVeryShort": "foarte scurt",
-  "to": "să",
+  "to": "pentru a",
   "toSlotNumber": "în căsuța numărului",
   "tooManyBlocksFail": "Puzzle-ul {puzzleNumber} finalizat. Felicitări! De asemenea, este posibil să îl completezi cu {numBlocks, plural, one {1 bloc} other {# blocuri}}.",
   "turnRandom": "intoarecere la intamplare",

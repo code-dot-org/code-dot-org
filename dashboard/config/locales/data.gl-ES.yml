@@ -649,6 +649,7 @@ gl:
         iceage_events: Hora do Código coa Era do Xeo - Eventos
         iceage_repeat: Hora do Código coa Era do Xeo - Instrucións de repetición
         CSF_loops_AB: Bucles
+        csd_pair_programming: Programación por parellas
     callout:
       text:
         drag_blocks: Arrastre un bloque "avance" e encáixeo por debaixo do outro bloque

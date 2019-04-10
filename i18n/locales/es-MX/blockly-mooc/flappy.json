@@ -12,7 +12,7 @@
   "flapNormal": "aletear normalmente",
   "flapLarge": "aletear fuerte",
   "flapVeryLarge": "aletear muy fuerte",
-  "flapTooltip": "Hacer volar a Flappy hacia arriba.",
+  "flapTooltip": "Hacer volar a Flappy.",
   "flappySpecificFail": "Tú código se ve bien - aleteará con cada clic. Pero tienes que hacer clic varias veces para aletear hacia la meta.",
   "incrementPlayerScore": "anotar un punto",
   "incrementPlayerScoreTooltip": "Añade uno al marcador del jugador actual.",

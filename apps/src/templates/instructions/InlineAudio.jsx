@@ -105,21 +105,26 @@ class InlineAudio extends React.Component {
   };
 
   componentWillUpdate(nextProps) {
-    if (
+    const audioTargetWillChange =
       this.props.src !== nextProps.src ||
-      this.props.message !== nextProps.message
-    ) {
+      this.props.message !== nextProps.message;
+
+    if (audioTargetWillChange) {
       // unload current Audio object
       const audio = this.state.audio;
-
       if (audio) {
-        audio.src = undefined;
+        audio.pause();
+        audio.removeAttribute('src');
         audio.load();
       }
 
+      // remove reference to existing Audio object, so a new one will be
+      // created next time we try to play. Also clear the playing and error
+      // states, since we are essentially starting fresh.
       this.setState({
         audio: undefined,
-        playing: false
+        playing: false,
+        error: false
       });
     }
   }

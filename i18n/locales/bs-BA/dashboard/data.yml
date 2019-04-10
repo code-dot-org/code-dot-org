@@ -359,6 +359,7 @@ bs:
         CSF_loops_AB: Petlje
         hoc_dance_events: Plesna zabava - Događaji
         hoc_dance_properties: Plesna zabava - Osobenosti
+        csd_pair_programming: Programiranje u Paru
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod nekok drugog bloka

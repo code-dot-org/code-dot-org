@@ -4113,6 +4113,8 @@ is:
               name: Lykkjur í Ísöld
             Spelling Bee:
               name: Stafsetning
+            Programming in Harvester:
+              name: Forritun með Hirðinum
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
