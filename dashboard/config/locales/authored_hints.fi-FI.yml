@@ -25,7 +25,7 @@ fi:
         2-3_Artist_4_a: Talon viimeistelyssä meidän vain täytyy piirtää neliö!
       2-3 Artist 6_authored_hint:
         2-3_Artist_6_a: 'Jotta saadaan tehtyä nuo pienet kulmat, sinun täytyy kääntyä
-          * kauemmas * joka kerta kun teit neliön kanssa.   '
+          \* kauemmas \* joka kerta kun teit neliön kanssa.   '
         2-3_Artist_6_b: Koska olen jo oikealla, on helpointa aloittaa menemällä eteenpäin,
           sitten tee käännökset vasempaan luodaksesi kolmion.
         2-3_Artist_6_c: Kolmion jokainen sivu on saman pituinen kuin neliön jokainen
@@ -46,10 +46,10 @@ fi:
         2-3_Artist_9_b: |-
           Älä unohda kääntää taiteilijaa vasemmalle 45 astetta ennenkuin aloitat piirtämään neliötä!
 
-           [] (https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
+           \[] (<https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif>)
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: Muista, etä haluat ohjauspaneelin olevan 10 kuvapistettä
-          *laajempi*... joten **lisää** 10 siihen numeroon, jota olet muuttamassa.
+          _laajempi_... joten **lisää** 10 siihen numeroon, jota olet muuttamassa.
         2-3_Artist_Debugging_10_b: "**Kokeilu ja virhe ovat hienosti tässä** \nAloita
           muuttamalla yksi numero kerrallaan. \nMitkä numerot tekevät mitäkin? \nJos
           eksyt liikaa, niin klikkaa ”aloita alusta” ja koodisi palautetaan alkutilaan."
@@ -65,7 +65,7 @@ fi:
       2-3 Artist Debugging 8_authored_hint:
         2-3_Artist_Debugging_8_a: |-
           Kuinka monta kertaa minun muotoni toistui?
-          Kuinka monta kertaa *olisi* muotoa toistettava?
+          Kuinka monta kertaa _olisi_ muotoa toistettava?
           Missä voit muuttaa sitä ohjelmassa?
       2-3 Artist Debugging 9_authored_hint:
         2-3_Artist_Debugging_9_a: Taiteilijan on käännyttävä 60 astetta kauemmas vasemmalle
@@ -100,15 +100,15 @@ fi:
         2-3_Artist_Functions_12_a: Kokeile ensin koodin suoritusta, niin näet, mitä
           sinun on lisättävä.
       2-3 Artist Functions 2 a_authored_hint:
-        2-3_Artist_Functions_2_a: "Sinun ohjelma olisi: \n- Käytä funktiota \n- Siirrä
-          eteenpäin 100 + 75 kuvapistettä\n- Käytä funktiota"
+        2-3_Artist_Functions_2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota \n-
+          \  Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
       2-3 Artist Functions 2_authored_hint:
-        2-3_Artist_Functions_2_a: "Sinun ohjelma olisi: \n- Käytä funktiota \n- Siirrä
-          eteenpäin 100 + 75 kuvapistettä\n- Käytä funktiota"
+        2-3_Artist_Functions_2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota \n-
+          \  Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
       2-3 Artist Functions 3 a_authored_hint:
-        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+        2-3_Artist_Functions_3_a: "\\*\\* 115 + 45 = 160 \\*\\*"
       2-3 Artist Functions 3_authored_hint:
-        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+        2-3_Artist_Functions_3_a: "\\*\\* 115 + 45 = 160 \\*\\*"
       2-3 Artist Functions 4 a_authored_hint:
         2-3_Artist_Functions_4_a: Taiteilijan on käännyttävä 120 astetta jokaisen
           neliön välissä, jotta se voi suorittaa loppuun tämän mallin.
@@ -118,7 +118,7 @@ fi:
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: "Muista että koodi edellisessä tehtävässä oli:
           \n\n<xml> <block type=\"when_run\" deletable=\"false\" movable=\"false\">
-          \n<next> \n<block type=\"controls_repeat\"> \n<title name=\"TIMES\">8</title>
+          \n<next> \n<block type=\"controls_repeat\"> \n\n<title name=\"TIMES\">8</title>
           \n<statement name=\"DO\"> \n<block type=\"draw_colour\" inline=\"true\">
           \n<value name=\"COLOUR\"> \n<block type=\"colour_random\"/> \n</value> \n<next>
           \n<block type=\"draw_turn_by_constant_dropdown\"> \n<title name=\"DIR\">turnRight</title>
@@ -130,8 +130,8 @@ fi:
           \n<title name=\"VALUE\">50</title> \n</block> \n</next> \n</block> \n</next>
           \n</block> \n</next> \n</block> \n</next> \n</block> \n</statement> \n</block>
           \n</next> \n</block> \n</xml>"
-        2-3_Artist_Loops_New_11_b: Sinun uusi käännöksesi olisi mentävä koodin **
-          loppuun ** silmukan sisällä.
+        2-3_Artist_Loops_New_11_b: Sinun uusi käännöksesi olisi mentävä koodin \*\*
+          loppuun \*\* silmukan sisällä.
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_a: Ennen kuin aloitat timanttia, taiteilijan tarvitsee
           kääntyä vasemmalle 60 astetta päästäkseen oikealle tielle.
@@ -144,8 +144,8 @@ fi:
           suunnassa alkaakseen seuraavan. \n\nTämän vuoksi meidän ei tarvitse lisätä
           ylimääräistä `käänny vasemmalle` lohkoa, ennen kuin aloitamme uudelleen."
         2-3_Artist_Loops_New_13_b: "Saadakseen jokaisen timantin tehtyä taiteilijan
-          tarvitsee: \n- siirtyä \n- kääntyä oikealle 120 astetta \n- siirtyä \n-
-          kääntyä oikealle 60 astetta \n\nSitten tee kaikki uudelleen!"
+          tarvitsee: \n\n-   siirtyä \n-   kääntyä oikealle 120 astetta \n-   siirtyä
+          \n-   kääntyä oikealle 60 astetta \n\nSitten tee kaikki uudelleen!"
       2-3 Artist Loops New 9_authored_hint:
         2-3_Artist_Loops_New_9_a: Taiteilijan pitää kääntyä 45 astetta oikealle ennen
           kuin hän alkaa piirtämään.
@@ -156,14 +156,14 @@ fi:
           sisälle.
       2-3 Artist Nested Loops 3_authored_hint:
         2-3_Artist_Nested_Loops_3_a: |-
-          Tarvitsetko apua kulmien kanssa?`
-          ** 360 / 12 = 30 **
+          Tarvitsetko apua kulmien kanssa?\`
+          \*\* 360 / 12 = 30 \*\*
         2-3_Artist_Nested_Loops_3_b: Muista laittaa kaikki harmaat lohkot ja käänny
           lohko silmukan sisään.
       2-3 Artist Nested Loops 4_authored_hint:
         2-3_Artist_Nested_Loops_3_a: |-
-          Tarvitsetko apua kulmien kanssa?`
-          ** 360 / 12 = 30 **
+          Tarvitsetko apua kulmien kanssa?\`
+          \*\* 360 / 12 = 30 \*\*
       2-3 Artist Nested Loops 5_authored_hint:
         2-3_Artist_Nested_Loops_5_a: |-
           Käytä `hyppää eteenpäin` lohkoa siirtyäksesi neliön päältä paikkaan, josta aloitat seuraavan neliön.
@@ -175,34 +175,36 @@ fi:
       CourseD_Dance_Party_01_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          *Varmista, että tanssija näkyy ruudulla.
+          \*Varmista, että tanssija näkyy ruudulla.
 
-          *Tämä taso päättyy 4 tahdin jälkeen.*
+          _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoisia haasteita**
-          * Valitse muu kappale soitettavaksi.
-          * Valitse jokin muu, joka näyttää hirveltä!
-          * Nimeä tanssijasi
+
+          -   Valitse muu kappale soitettavaksi.
+          -   Valitse jokin muu, joka näyttää hirveltä!
+          -   Nimeä tanssijasi
       CourseD_Dance_Party_02_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          * Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          -   Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
+
+          _Tämä taso päättyy 8 tahdin jälkeen._
       CourseD_Dance_Party_03_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.
+          -   Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.
 
-          *Tämä taso päättyy 12 tahdin jälkeen.*
+          _Tämä taso päättyy 12 tahdin jälkeen._
       CourseD_Dance_Party_04_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
+          -   Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
 
-          *Tämä taso päättyy 10 tahdin jälkeen.*
+          _Tämä taso päättyy 10 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoinen haaste**
 
@@ -211,60 +213,60 @@ fi:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Sinulla täytyy olla vähintään kaksi tanssijaa.
+          -   Sinulla täytyy olla vähintään kaksi tanssijaa.
 
-          *Tämä taso päättyy 6 tahdin jälkeen.*
+          _Tämä taso päättyy 6 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoinen haaste**
 
-          * Lisää kolmas tanssija (tai niin monta kuin haluat!)
-          * Laita tanssijasi suorittamaan eri liikkeitä kappaleen eri aikoina.
+          -   Lisää kolmas tanssija (tai niin monta kuin haluat!)
+          -   Laita tanssijasi suorittamaan eri liikkeitä kappaleen eri aikoina.
       CourseD_Dance_Party_08_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Kahden tanssijan koon on oltava muu kuin 100.
+          -   Kahden tanssijan koon on oltava muu kuin 100.
 
-          *Tämä taso päättyy 6 tahdin jälkeen.*
+          _Tämä taso päättyy 6 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoinen haaste**
 
-          * Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)
+          -   Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)
       CourseD_Dance_Party_09_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Muuta vähintään yhden tanssijan sävyä.
+          -   Muuta vähintään yhden tanssijan sävyä.
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          _Tämä taso päättyy 8 tahdin jälkeen._
       CourseD_Dance_Party_10_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          *Kahden tai useamman tanssijan ominaisuudet on muutettava.
+          \*Kahden tai useamman tanssijan ominaisuudet on muutettava.
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          _Tämä taso päättyy 8 tahdin jälkeen._
       CourseD_Dance_Party_11_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Käytä luovuuttasi!
+          -   Käytä luovuuttasi!
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          _Tämä taso päättyy 8 tahdin jälkeen._
       CourseD_Dance_Party_11_5_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Käytä luovuuttasi!
+          -   Käytä luovuuttasi!
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          _Tämä taso päättyy 8 tahdin jälkeen._
       CourseD_Dance_Party_11b_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          *Käytä `kun vasenta nuolta painetaan` -blokkia saadaksesi Robotin tekemään tanssiliikkeen, kun painat sitä.
+          \*Käytä `kun vasenta nuolta painetaan` -blokkia saadaksesi Robotin tekemään tanssiliikkeen, kun painat sitä.
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          _Tämä taso päättyy 8 tahdin jälkeen._
       CourseE_HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: Katso **Merilyhdyt** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Kuinka käytät konditionaalia heidän kanssaan päästäksesi Ocean Monumentille?
@@ -275,9 +277,9 @@ fi:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
+          -   Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
 
-          *Tämä taso päättyy 10 tahdin jälkeen.*
+          _Tämä taso päättyy 10 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoinen haaste**
 
@@ -286,9 +288,9 @@ fi:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
+          -   Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
 
-          *Tämä taso päättyy 10 tahdin jälkeen.*
+          _Tämä taso päättyy 10 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoinen haaste**
 
@@ -296,45 +298,48 @@ fi:
       Dance_Party_01_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          *Varmista, että tanssija näkyy ruudulla.
+          \*Varmista, että tanssija näkyy ruudulla.
 
-          *Tämä taso päättyy 4 tahdin jälkeen.*
+          _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoisia haasteita**
-          * Valitse muu kappale soitettavaksi.
-          * Valitse jokin muu, joka näyttää hirveltä!
-          * Nimeä tanssijasi
+
+          -   Valitse muu kappale soitettavaksi.
+          -   Valitse jokin muu, joka näyttää hirveltä!
+          -   Nimeä tanssijasi
       Dance_Party_01_low_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          *Varmista, että tanssija näkyy ruudulla.
+          \*Varmista, että tanssija näkyy ruudulla.
 
-          *Tämä taso päättyy 4 tahdin jälkeen.*
+          _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoisia haasteita**
-          * Valitse muu kappale soitettavaksi.
-          * Valitse jokin muu, joka näyttää hirveltä!
-          * Nimeä tanssijasi
+
+          -   Valitse muu kappale soitettavaksi.
+          -   Valitse jokin muu, joka näyttää hirveltä!
+          -   Nimeä tanssijasi
       Dance_Party_02_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          * Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          -   Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
+
+          _Tämä taso päättyy 8 tahdin jälkeen._
       Dance_Party_03_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.
+          -   Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.
 
-          *Tämä taso päättyy 12 tahdin jälkeen.*
+          _Tämä taso päättyy 12 tahdin jälkeen._
       Dance_Party_04_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
+          -   Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
 
-          *Tämä taso päättyy 10 tahdin jälkeen.*
+          _Tämä taso päättyy 10 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoinen haaste**
 
@@ -343,98 +348,100 @@ fi:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Sinulla täytyy olla vähintään kaksi tanssijaa.
+          -   Sinulla täytyy olla vähintään kaksi tanssijaa.
 
-          *Tämä taso päättyy 6 tahdin jälkeen.*
+          _Tämä taso päättyy 6 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoinen haaste**
 
-          * Lisää kolmas tanssija (tai niin monta kuin haluat!)
-          * Laita tanssijasi suorittamaan eri liikkeitä kappaleen eri aikoina.
+          -   Lisää kolmas tanssija (tai niin monta kuin haluat!)
+          -   Laita tanssijasi suorittamaan eri liikkeitä kappaleen eri aikoina.
       Dance_Party_08_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Kahden tanssijan koon on oltava muu kuin 100.
+          -   Kahden tanssijan koon on oltava muu kuin 100.
 
-          *Tämä taso päättyy 6 tahdin jälkeen.*
+          _Tämä taso päättyy 6 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoinen haaste**
 
-          * Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)
+          -   Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)
       Dance_Party_09_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Muuta vähintään yhden tanssijan sävyä.
+          -   Muuta vähintään yhden tanssijan sävyä.
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          _Tämä taso päättyy 8 tahdin jälkeen._
       Dance_Party_1_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          *Varmista, että tanssija näkyy ruudulla.
+          \*Varmista, että tanssija näkyy ruudulla.
 
-          *Tämä taso päättyy 4 tahdin jälkeen.*
+          _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoisia haasteita**
-          * Valitse muu kappale soitettavaksi.
-          * Valitse jokin muu, joka näyttää hirveltä!
-          * Nimeä tanssijasi
+
+          -   Valitse muu kappale soitettavaksi.
+          -   Valitse jokin muu, joka näyttää hirveltä!
+          -   Nimeä tanssijasi
       Dance_Party_10_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          *Kahden tai useamman tanssijan ominaisuudet on muutettava.
+          \*Kahden tai useamman tanssijan ominaisuudet on muutettava.
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          _Tämä taso päättyy 8 tahdin jälkeen._
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Käytä luovuuttasi!
+          -   Käytä luovuuttasi!
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          _Tämä taso päättyy 8 tahdin jälkeen._
       Dance_Party_11_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Käytä luovuuttasi!
+          -   Käytä luovuuttasi!
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          _Tämä taso päättyy 8 tahdin jälkeen._
       Dance_Party_11_5_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Käytä luovuuttasi!
+          -   Käytä luovuuttasi!
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          _Tämä taso päättyy 8 tahdin jälkeen._
       Dance_Party_11b_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          *Käytä `kun vasenta nuolta painetaan` -blokkia saadaksesi Robotin tekemään tanssiliikkeen, kun painat sitä.
+          \*Käytä `kun vasenta nuolta painetaan` -blokkia saadaksesi Robotin tekemään tanssiliikkeen, kun painat sitä.
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          _Tämä taso päättyy 8 tahdin jälkeen._
       Dance_Party_2_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          * Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          -   Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
+
+          _Tämä taso päättyy 8 tahdin jälkeen._
       Dance_Party_3_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.
+          -   Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.
 
-          *Tämä taso päättyy 12 tahdin jälkeen.*
+          _Tämä taso päättyy 12 tahdin jälkeen._
       Dance_Party_4_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
+          -   Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
 
-          *Tämä taso päättyy 10 tahdin jälkeen.*
+          _Tämä taso päättyy 10 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoinen haaste**
 
@@ -443,33 +450,33 @@ fi:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Tanssissasi täytyy olla eri liikkeitä kappaleen ensimmäisen 12 tahdin aikana.
+          -   Tanssissasi täytyy olla eri liikkeitä kappaleen ensimmäisen 12 tahdin aikana.
 
-          *Tämä taso päättyy 12 tahdin jälkeen.*
+          _Tämä taso päättyy 12 tahdin jälkeen._
       Dance_Party_6_authored_hint:
         challenges: |-
           **Vapaaehtoinen haaste**
 
-          * Lisää kolmas tanssija (tai niin monta kuin haluat!)
-          * Laita tanssijasi suorittamaan eri liikkeitä kappaleen eri aikoina.
+          -   Lisää kolmas tanssija (tai niin monta kuin haluat!)
+          -   Laita tanssijasi suorittamaan eri liikkeitä kappaleen eri aikoina.
       Dance_Party_8_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Kahden tanssijan koon on oltava muu kuin 100.
+          -   Kahden tanssijan koon on oltava muu kuin 100.
 
-          *Tämä taso päättyy 6 tahdin jälkeen.*
+          _Tämä taso päättyy 6 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoinen haaste**
 
-          * Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)
+          -   Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)
       Dance_Party_9_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Muuta vähintään yhden tanssijan sävyä.
+          -   Muuta vähintään yhden tanssijan sävyä.
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          _Tämä taso päättyy 8 tahdin jälkeen._
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Voit kutsua toimintoa ohjelmassasi monta kertaa! Kokeile
           tehtävän selvittämistä kutsumalla sitä kaksi kertaa.
@@ -485,34 +492,36 @@ fi:
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          *Varmista, että tanssija näkyy ruudulla.
+          \*Varmista, että tanssija näkyy ruudulla.
 
-          *Tämä taso päättyy 4 tahdin jälkeen.*
+          _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoisia haasteita**
-          * Valitse muu kappale soitettavaksi.
-          * Valitse jokin muu, joka näyttää hirveltä!
-          * Nimeä tanssijasi
+
+          -   Valitse muu kappale soitettavaksi.
+          -   Valitse jokin muu, joka näyttää hirveltä!
+          -   Nimeä tanssijasi
       HOC Dance 1_draft_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          * Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          -   Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
+
+          _Tämä taso päättyy 8 tahdin jälkeen._
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.
+          -   Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.
 
-          *Tämä taso päättyy 12 tahdin jälkeen.*
+          _Tämä taso päättyy 12 tahdin jälkeen._
       HOC Dance 3_draft_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
+          -   Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.
 
-          *Tämä taso päättyy 10 tahdin jälkeen.*
+          _Tämä taso päättyy 10 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoinen haaste**
 
@@ -521,33 +530,33 @@ fi:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Tanssissasi täytyy olla eri liikkeitä kappaleen ensimmäisen 12 tahdin aikana.
+          -   Tanssissasi täytyy olla eri liikkeitä kappaleen ensimmäisen 12 tahdin aikana.
 
-          *Tämä taso päättyy 12 tahdin jälkeen.*
+          _Tämä taso päättyy 12 tahdin jälkeen._
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **Vapaaehtoinen haaste**
 
-          * Lisää kolmas tanssija (tai niin monta kuin haluat!)
-          * Laita tanssijasi suorittamaan eri liikkeitä kappaleen eri aikoina.
+          -   Lisää kolmas tanssija (tai niin monta kuin haluat!)
+          -   Laita tanssijasi suorittamaan eri liikkeitä kappaleen eri aikoina.
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Kahden tanssijan koon on oltava muu kuin 100.
+          -   Kahden tanssijan koon on oltava muu kuin 100.
 
-          *Tämä taso päättyy 6 tahdin jälkeen.*
+          _Tämä taso päättyy 6 tahdin jälkeen._
         challenges: |-
           **Vapaaehtoinen haaste**
 
-          * Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)
+          -   Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
 
-          * Muuta vähintään yhden tanssijan sävyä.
+          -   Muuta vähintään yhden tanssijan sävyä.
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          _Tämä taso päättyy 8 tahdin jälkeen._
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Kokeile laittaa Agent rakentamaan siltoja, jotta Alex
           tai Steve voi tehdä tutkimusmatkoja kartan reunojen ulkopuolelle.
@@ -643,10 +652,10 @@ fi:
           toisto-silmukassa tämän tehtävän suorittamiseksi.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Kuinka monta kertaa silmukka suoritetaan? Kuinka monta
-          kertaa se *pitäisi* suorittaa?
+          kertaa se _pitäisi_ suorittaa?
       MC_HOC_2017_06_Cole_2019_authored_hint:
         MC_HOC_2017_06_Cole_a: Kuinka monta kertaa silmukka suoritetaan? Kuinka monta
-          kertaa se *pitäisi* suorittaa?
+          kertaa se _pitäisi_ suorittaa?
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Kokeile usean ohjeen laittamista toisto-silmukkaan!
       MC_HOC_2017_07_Cole_authored_hint:
@@ -709,9 +718,10 @@ fi:
       Ryan_Demo_authored_hint:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          * Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
 
-          *Tämä taso päättyy 8 tahdin jälkeen.*
+          -   Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
+
+          _Tämä taso päättyy 8 tahdin jälkeen._
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -747,7 +757,7 @@ fi:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -766,7 +776,7 @@ fi:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -785,7 +795,7 @@ fi:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -804,7 +814,7 @@ fi:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -951,7 +961,7 @@ fi:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -970,7 +980,7 @@ fi:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -989,7 +999,7 @@ fi:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1008,7 +1018,7 @@ fi:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1103,8 +1113,8 @@ fi:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
       courseD_artist_functions2_authored_hint:
-        courseD_artist_functions2_a: "Sinun ohjelma olisi: \n- Käytä funktiota \n-
-          Siirrä eteenpäin 100 + 75 kuvapistettä\n- Käytä funktiota"
+        courseD_artist_functions2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota
+          \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: |-
           Käytä `hyppää eteenpäin` lohkoa siirtyäksesi neliön päältä paikkaan, josta aloitat seuraavan neliön.
@@ -1133,26 +1143,26 @@ fi:
         courseE_artist_functions1_b: On sallittua tehdä päällekkäisiä viivoja kun
           teet lasit.
       courseE_artist_functions2_authored_hint:
-        courseD_artist_functions2_a: "Sinun ohjelma olisi: \n- Käytä funktiota \n-
-          Siirrä eteenpäin 100 + 75 kuvapistettä\n- Käytä funktiota"
+        courseD_artist_functions2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota
+          \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
       courseE_artist_functions2_2018_authored_hint:
-        courseD_artist_functions2_a: "Sinun ohjelma olisi: \n- Käytä funktiota \n-
-          Siirrä eteenpäin 100 + 75 kuvapistettä\n- Käytä funktiota"
+        courseD_artist_functions2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota
+          \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
       courseE_artist_functions2_2019_authored_hint:
-        courseD_artist_functions2_a: "Sinun ohjelma olisi: \n- Käytä funktiota \n-
-          Siirrä eteenpäin 100 + 75 kuvapistettä\n- Käytä funktiota"
+        courseD_artist_functions2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota
+          \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: Jos käytät lohkoa ”siirrä eteenpäin 100 pikseliä”, niin
           minä piirrän viivan automaattisesti.
         2-3_Artist_1_new_b: Onko ongelmia kulman kääntymisessä? Käytä lohkoa "käänny
           oikealle 90 astetta".
       grade2_MakeDogTag_9_authored_hint:
-        2-3_Artist_Loops_New_11_b: Sinun uusi käännöksesi olisi mentävä koodin **
-          loppuun ** silmukan sisällä.
+        2-3_Artist_Loops_New_11_b: Sinun uusi käännöksesi olisi mentävä koodin \*\*
+          loppuun \*\* silmukan sisällä.
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
           Kuinka monta kertaa minun muotoni toistui?
-          Kuinka monta kertaa *olisi* muotoa toistettava?
+          Kuinka monta kertaa _olisi_ muotoa toistettava?
           Missä voit muuttaa sitä ohjelmassa?
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'Vihje: Jokainen viiksi on 75 kuvapistettä pitkä.'
@@ -1166,8 +1176,8 @@ fi:
         2-3_Artist_Functions_1_b: On sallittua tehdä päällekkäisiä viivoja kun teet
           lasit.
       grade4_artist_functions2_authored_hint:
-        2-3_Artist_Functions_2_a: "Sinun ohjelma olisi: \n- Käytä funktiota \n- Siirrä
-          eteenpäin 100 + 75 kuvapistettä\n- Käytä funktiota"
+        2-3_Artist_Functions_2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota \n-
+          \  Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
       grade4_review_artist1_authored_hint:
         2-3_Artist_1_new_a: Jos käytät lohkoa ”siirrä eteenpäin 100 pikseliä”, niin
           minä piirrän viivan automaattisesti.
@@ -1175,7 +1185,7 @@ fi:
           oikealle 90 astetta".
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_a: 'Jotta saadaan tehtyä nuo pienet kulmat, sinun täytyy kääntyä
-          * kauemmas * joka kerta kun teit neliön kanssa.   '
+          \* kauemmas \* joka kerta kun teit neliön kanssa.   '
         2-3_Artist_6_b: Koska olen jo oikealla, on helpointa aloittaa menemällä eteenpäin,
           sitten tee käännökset vasempaan luodaksesi kolmion.
         2-3_Artist_6_c: Kolmion jokainen sivu on saman pituinen kuin neliön jokainen
