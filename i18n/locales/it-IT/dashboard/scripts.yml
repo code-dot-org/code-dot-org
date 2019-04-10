@@ -286,7 +286,7 @@ it:
           description_short: Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity.
           stages:
             Infinity:
-              name: Infinito
+              name: Infiniti
         algebrademo:
           title: Demo per l'Algebra
           description: Un po' di esercizi per dimostrare l'ambiente ed il linguaggio di programmazione usati nel corso "Informatica in Algebra"
@@ -2161,7 +2161,7 @@ it:
             Nested Loops in Bee:
               name: Cicli Annidati con l'Ape
             Loops in Ice Age:
-              name: Cicli con l'Era Glaciale
+              name: Cicli con l'Era glaciale
           title: Corso D
         new-express:
           stages:
@@ -2753,7 +2753,7 @@ it:
             Artist Binary:
               name: 'Artista: Binario'
             Loops in Ice Age:
-              name: Cicli con l'Era Glaciale
+              name: Cicli con l'Era glaciale
             Nested Loops in Frozen:
               name: Cicli Annidati con Frozen
             Until Loops in Maze:
@@ -3258,7 +3258,7 @@ it:
             Events in Bounce:
               name: Eventi con Ping-Pong
             Loops in Ice Age:
-              name: Cicli con l'Era Glaciale
+              name: Cicli con l'Era glaciale
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops in Bee:
@@ -3371,6 +3371,10 @@ it:
               name: Progetto di Fine Corso
             Digital Sharing:
               name: Condivisione Digitale
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Istruzioni condizionali in Minecraft - Viaggio acquatico'
+            Songwriting:
+              name: Composizione di canzoni
         express-2019:
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
           stages:
@@ -3551,7 +3555,7 @@ it:
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
             Loops in Ice Age:
-              name: Cicli con l'Era Glaciale
+              name: Cicli con l'Era glaciale
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
             Sequencing with Scrat:
@@ -3576,7 +3580,7 @@ it:
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Ice Age:
-              name: Cicli con l'Era Glaciale
+              name: Cicli con l'Era glaciale
             Loops in Collector:
               name: Cicli con la collezionista
             Loops in Artist:
@@ -3611,7 +3615,7 @@ it:
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Ice Age:
-              name: Cicli con l'Era Glaciale
+              name: Cicli con l'Era glaciale
             Loops in Collector:
               name: Cicli con la collezionista
             Loops in Artist:
@@ -3626,6 +3630,10 @@ it:
               name: Impara come Trascinare i Blocchi
             Programming in Maze:
               name: Programmazione nel labirinto
+            Tell a Story in Play Lab:
+              name: Racconta una storia nel Laboratorio
+            Make a Game in Play Lab:
+              name: Crea un gioco nel Laboratorio
             Ocean Scene with Loops:
               name: Al mare con i cicli
         removed19:
@@ -3666,6 +3674,10 @@ it:
               name: Sondaggio studente (istruzioni condizionali)
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
         csp1-2019:
           stages:
             Personal Innovations:
@@ -3703,3 +3715,109 @@ it:
           stages:
             Mid-Year Survey:
               name: Sondaggio di metà anno
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Intelligenza Collettiva
+            Conditionals with Cards:
+              name: Istruzioni condizionali con le Carte da Gioco
+        csp1-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp2-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp3-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp4-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp5-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp6-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp7-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp8-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp9-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp10-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
