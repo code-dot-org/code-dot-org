@@ -7,6 +7,7 @@ import React from 'react';
 import {Button, Row, Col} from 'react-bootstrap';
 import moment from 'moment';
 import {DATE_FORMAT} from '../workshopConstants';
+import {Years} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {workshopShape} from '../types.js';
 import FreeResponseSection from './survey_results/free_response_section';
 
@@ -175,15 +176,6 @@ const freeResponseQuestions = [
   }
 ];
 
-const years = [
-  '2013-2014',
-  '2014-2015',
-  '2015-2016',
-  '2016-2017',
-  '2017-2018',
-  '2018-2019'
-];
-
 export default class SurveyResultsHeader extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired
@@ -228,7 +220,7 @@ export default class SurveyResultsHeader extends React.Component {
 
   filterWorkshops(
     course,
-    year = years[years.length - 1],
+    year = Years[Years.length - 1],
     preselectedWorkshop = undefined
   ) {
     let filteredWorkshops = _.filter(this.props.workshops, function(workshop) {
@@ -557,7 +549,7 @@ export default class SurveyResultsHeader extends React.Component {
       );
     }
 
-    const yearOptions = years.map((year, i) => {
+    const yearOptions = Years.map((year, i) => {
       return (
         <option key={i} value={year}>
           {year}
