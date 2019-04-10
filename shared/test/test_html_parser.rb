@@ -39,13 +39,13 @@ HTML
   end
 
   # Ensure html parsing is identical in http and https environments,
-  # but that HTTPS-upgrade only occurs in https environment.
+  # and that HTTP to protocol-relative rewrite occurs in both.
   def test_parse_http_and_https
     get '/'
-    # Note: this assertion should not imply that this particular behavior is desired,
-    # only that the behavior is identical over HTTP and HTTPS.
+    # Note: this assertion should not imply that `body` class-attribute removal
+    # is desired, it only ensures the bug reproduces identically over HTTP and HTTPS.
     assert_match(/\<body\>/, last_response.body)
-    assert_match(/src="http:\/\/google.com"/, last_response.body)
+    assert_match(/src="\/\/google.com"/, last_response.body)
 
     header 'X-Forwarded-Proto', 'https'
     get '/'
