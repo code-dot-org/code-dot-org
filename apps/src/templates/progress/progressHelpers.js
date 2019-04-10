@@ -113,6 +113,15 @@ export function isLevelAssessment(level) {
 }
 
 /**
+ * Checks if a whole stage is assessment levels
+ * @param {[]} levels An array of levels
+ * @returns {bool} If all the levels in a stage are assessment levels
+ */
+export function stageIsAllAssessment(levels) {
+  return levels.every(level => level.kind === LevelKind.assessment);
+}
+
+/**
  * Summarizes stage progress data.
  * @param {[]} levelsWithStatus An array of objects each representing
  * students progress in a level
