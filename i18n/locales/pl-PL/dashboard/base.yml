@@ -913,6 +913,8 @@ pl:
     csp_variables: 'Zmienne'
     csp_conditionals: 'Zdania z warunkami'
     csp_functions: 'Funkcje'
+    csp_lists: 'Listy'
+    csp_loops: 'Pętle'
     dlp: 'Wskazówki'
   external_links:
     disclaimer: Uwaga
