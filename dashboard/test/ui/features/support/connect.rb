@@ -49,17 +49,17 @@ def saucelabs_browser(test_run_name)
     begin
       http_client = Selenium::WebDriver::Remote::Http::Persistent.new
 
-      # Longer overall timeout, because iOS takes more time. This must be set before initializing Selenium::WebDriver.
-      if slow_browser?
-        http_client.read_timeout = 5.minutes
-        http_client.open_timeout = 5.minutes
-      end
+      # Temporarily increase read timeout to acquire a new browser session.
+      http_client.read_timeout = 5.minutes
 
       browser = Selenium::WebDriver.for(:remote,
         url: url,
         desired_capabilities: capabilities,
         http_client: http_client
       )
+
+      # Restore default 1 minute read timeout.
+      http_client.send(:http).read_timeout = 1.minute
 
       # Maximum time a single execute_script or execute_async_script command may take
       browser.manage.timeouts.script_timeout = 30.seconds
