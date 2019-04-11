@@ -1520,6 +1520,7 @@
   full_course_category_name: "Full Courses"
   user_header_label: "Hi %{username}"
   user_header_team: "Team"
+  user_header_my_projects: "My projects"
   user_header_settings: "Account settings"
   user_header_logout: "Sign out"
   user_header_signin: "Sign in"
