@@ -1,4 +1,5 @@
 module SurveyResultsHelper
+  include Pd::SharedWorkshopConstants
   DIVERSITY_SURVEY_ENABLED = false
   NPS_SURVEY_ENABLED = true
 
@@ -51,5 +52,29 @@ module SurveyResultsHelper
 
   def has_any_student_under_13?
     current_user.students.any?(&:under_13?)
+  end
+
+  JOTFORM = "jotform"
+  PEGASUS = "pegasus"
+
+  def survey_source(course, year)
+    return nil unless YEARS.include? year
+
+    if [COURSE_CSP, COURSE_CSD].include? course
+      year > "2017-2018" ? JOTFORM : PEGASUS
+    elsif course == COURSE_CSF
+      year > "2018-2019" ? JOTFORM : PEGASUS
+    elsif [
+      COURSE_ECS,
+      COURSE_CS_IN_A,
+      COURSE_CS_IN_S,
+      COURSE_COUNSELOR,
+      COURSE_ADMIN,
+      COURSE_FACILITATOR
+    ].include? course
+      PEGASUS
+    else
+      JOTFORM
+    end
   end
 end
