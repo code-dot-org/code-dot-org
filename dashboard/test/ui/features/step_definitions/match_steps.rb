@@ -15,3 +15,11 @@ And /^match level (\d+) contains (\d+) empty slots$/ do |index, expected_count|
   actual_count = @browser.execute_script("return $(#{selector.dump}).length;")
   expect(actual_count).to eq(expected_count.to_i)
 end
+
+And /^I drag match level (\d+) unplaced answer (\d+) to empty slot (\d+)$/ do |level, answer, slot|
+  level_selector = ".level-group-content .match:nth(#{level})"
+  answer_selector = "#{level_selector} .match_answers .answer:nth(#{answer})"
+  slot_selector = "#{level_selector} .match_slots .emptyslot:nth(#{slot})"
+  code = generate_selector_drag_code(answer_selector, slot_selector, 0, 0)
+  @browser.execute_script code
+end

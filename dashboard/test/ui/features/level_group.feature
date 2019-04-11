@@ -38,3 +38,12 @@ Scenario: Match levels within level group
   And match level 1 question contains text "Match the boolean expression to the English description."
   And match level 1 contains 5 unplaced answers
   And match level 1 contains 5 empty slots
+
+  When I drag match level 0 unplaced answer 0 to empty slot 0
+  And I drag match level 1 unplaced answer 0 to empty slot 0
+
+  Then match level 0 contains 3 unplaced answers
+  And match level 0 contains 3 empty slots
+  And match level 1 contains 4 unplaced answers
+  And match level 1 contains 4 empty slots
+  And element ".xmark" is not visible
