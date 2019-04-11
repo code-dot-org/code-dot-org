@@ -171,7 +171,7 @@ describe('FormController', () => {
           validateCurrentPageRequiredFields.returns(true);
           submitButton.simulate('submit');
           expect(form.state('submitting')).to.be.true;
-          expect(submitButton).to.be.disabled();
+          expect(submitButton.prop('disabled')).to.be.true;
         });
 
         it('Re-enables the submit button on error', () => {
@@ -206,7 +206,7 @@ describe('FormController', () => {
           server.respond();
 
           expect(form.state('submitting')).to.be.true;
-          expect(submitButton).to.be.disabled();
+          expect(submitButton.prop('disabled')).to.be.true;
           expect(onSuccessfulSubmit).to.be.calledOnce;
         });
       });
