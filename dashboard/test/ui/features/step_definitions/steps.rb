@@ -1,8 +1,23 @@
 require 'cdo/url_converter'
 
-DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
-SHORT_WAIT_TIMEOUT = 30 # 30 seconds
+DEFAULT_WAIT_TIMEOUT = 2.minutes
+SHORT_WAIT_TIMEOUT = 30.seconds
 MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
+
+def http_client
+  @browser.send(:bridge).http.send(:http)
+end
+
+# Set HTTP read timeout greater than the wait timeout during the block.
+def with_read_timeout(timeout)
+  http = http_client
+  if (read_timeout = http.read_timeout) < (timeout + 5.seconds)
+    http.read_timeout = timeout + 5.seconds
+  end
+  yield
+ensure
+  http.read_timeout = read_timeout
+end
 
 def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout).until do
@@ -58,7 +73,9 @@ Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
   url = replace_hostname(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
-    @browser.navigate.to url
+    with_read_timeout(DEFAULT_WAIT_TIMEOUT + 5.seconds) do
+      @browser.navigate.to url
+    end
     refute_bad_gateway_or_site_unreachable
   end
   install_js_error_recorder
