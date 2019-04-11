@@ -136,7 +136,10 @@ failed = false
 After do |scenario|
   # log to saucelabs
   all_passed &&= scenario.passed?
-  log_result all_passed unless slow_browser?
+  unless slow_browser?
+    log_result all_passed
+    all_passed = true
+  end
 
   unless @browser.nil?
     # clear session state (or get a new browser)
