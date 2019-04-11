@@ -247,7 +247,7 @@ export class SpecialAnnouncementActionBlock extends Component {
         imageUrl={pegasus(
           '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-deadline.jpg'
         )}
-        subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019Trophy()}
+        subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019Deadline()}
         subHeadingSmallFont={true}
         description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019Deadline()}
         imageExtra={false}
