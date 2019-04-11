@@ -152,8 +152,10 @@ export default class Match {
 
   makeItemDroppable(item) {
     const enableSounds = this.standalone;
+    const container = document.getElementById(this.id);
     item.droppable({
-      accept: '.answerslot',
+      accept: element =>
+        $(element).is('.answerslot') && $(container).find(element[0]).length,
       activeClass: 'active',
       drop: function(event, ui) {
         if (enableSounds) {
