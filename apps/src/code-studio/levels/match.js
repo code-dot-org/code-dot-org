@@ -138,7 +138,11 @@ export default class Match {
             // this new item can now be dropped onto by other answers in the central list
             this.makeItemDroppable(movingItem);
 
-            onAnswerChanged(this.levelId, true);
+            // Once all answers have been dropped into a slot, let anyone
+            // listening know that an answer has been selected.
+            if ($(container).find('.match_answers .answer').length === 0) {
+              onAnswerChanged(this.levelId, true);
+            }
           }
         }
       });
