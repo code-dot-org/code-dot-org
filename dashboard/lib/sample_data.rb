@@ -247,7 +247,7 @@ class SampleData
       sample(rng.rand(3..6)).
       map(&:strip).
       compact.
-      map {|s| s[0].upcase + s[1, s.length].downcase}.
+      map(&:capitalize).
       join('. ') + '.'
   end
 end
