@@ -79,6 +79,7 @@ Resources:
       PolicyDocument:
         Version: 2012-10-17
         Statement:
+<% if database -%>
           # Read-only access to current secrets.
           - Effect: Allow
             Action: 'secretsmanager:GetSecretValue'
@@ -87,6 +88,7 @@ Resources:
             Condition:
               StringEquals:
                 secretsmanager:VersionStage: AWSCURRENT
+<% end -%>
           # Read-only access to bootstrap scripts.
           - Effect: Allow
             Action: 's3:GetObject'
