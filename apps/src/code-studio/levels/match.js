@@ -103,7 +103,7 @@ export default class Match {
         accept: element =>
           $(element).is('.answerlist,.answerslot') &&
           $(container).find(element[0]).length,
-        drop: function(event, ui) {
+        drop: (event, ui) => {
           if (enableSounds) {
             CDOSounds.play('click');
           }
@@ -136,34 +136,39 @@ export default class Match {
             movingItem.addClass('answerslot');
 
             // this new item can now be dropped onto by other answers in the central list
-            movingItem.droppable({
-              accept: '.answerslot',
-              activeClass: 'active',
-              drop: function(event, ui) {
-                if (enableSounds) {
-                  CDOSounds.play('whoosh');
-                }
-
-                // remove offset coordinates from the dragged item
-                ui.draggable.css({top: '0px', left: '0px'});
-
-                // determine y difference between old location and new location of item that will be swapped out
-                var origY = $(event.target).offset().top;
-                var destY = $(ui.draggable).offset().top;
-                var diffY = destY - origY;
-
-                // swap this answer with the answer dropped onto it
-                ui.draggable.swap(event.target);
-
-                // move the target object back to its old location for a moment
-                $(event.target).css({top: -diffY + 'px'});
-
-                // and animate back to its new location
-                $(event.target).animate({top: '0px'});
-              }
-            });
+            this.makeItemDroppable(movingItem);
           }
         }
       });
+  }
+
+  makeItemDroppable(item) {
+    const enableSounds = this.standalone;
+    item.droppable({
+      accept: '.answerslot',
+      activeClass: 'active',
+      drop: function(event, ui) {
+        if (enableSounds) {
+          CDOSounds.play('whoosh');
+        }
+
+        // remove offset coordinates from the dragged item
+        ui.draggable.css({top: '0px', left: '0px'});
+
+        // determine y difference between old location and new location of item that will be swapped out
+        var origY = $(event.target).offset().top;
+        var destY = $(ui.draggable).offset().top;
+        var diffY = destY - origY;
+
+        // swap this answer with the answer dropped onto it
+        ui.draggable.swap(event.target);
+
+        // move the target object back to its old location for a moment
+        $(event.target).css({top: -diffY + 'px'});
+
+        // and animate back to its new location
+        $(event.target).animate({top: '0px'});
+      }
+    });
   }
 }
