@@ -1,6 +1,5 @@
 @no_mobile
 @dashboard_db_access
-@pegasus_db_access
 Feature: Using the assessments tab in the teacher dashboard to get feedback for script
 
   Background:
