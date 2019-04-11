@@ -64,9 +64,10 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
       }
       const subLevel = codeStudioLevels.getLevel(subLevelId);
       var subLevelResult = subLevel.getResult(true);
-      var response = encodeURIComponent(
-        replaceEmoji(subLevelResult.response.toString())
-      );
+      var response = subLevelResult.response;
+      if (subLevel.getAppName() !== 'match') {
+        response = encodeURIComponent(replaceEmoji(response.toString()));
+      }
       var result = subLevelResult.result;
       var testResult = subLevelResult.testResult
         ? subLevelResult.testResult
