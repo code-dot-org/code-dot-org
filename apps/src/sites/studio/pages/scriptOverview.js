@@ -17,6 +17,7 @@ function initPage() {
   const config = JSON.parse(script.dataset.scriptoverview);
 
   const {scriptData, plcBreadcrumb} = config;
+
   const store = getStore();
 
   if (plcBreadcrumb) {
