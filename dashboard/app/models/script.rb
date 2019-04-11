@@ -437,14 +437,18 @@ class Script < ActiveRecord::Base
   end
 
   # Given a script family name, return a dummy Script with redirect_to field
-  # pointing toward the latest stable script in that family, or to a specific
-  # version_year if one is specified.
+  # pointing toward the latest stable script assigned to the user in that family, or to a specific
+  # version_year and locale if specified.
   # @param family_name [String] The name of the script family to search in.
-  # @param version_year [String] Version year to return. Optional.
+  # @param version_year [String] Optional. Version year to return.
+  # @param user [User] Optional. If provided, will attempt to retrieve latest stable script
+  # that the user is assigned to or has progress in.
+  # @param locale [String] Optional. Locale of the request.
   # @return [Script|nil] A dummy script object, not persisted to the database,
   #   with only the redirect_to field set.
-  def self.get_script_family_redirect(family_name, version_year: nil)
-    script_name = Script.latest_stable_version(family_name, version_year: version_year).try(:name)
+  def self.get_script_family_redirect(family_name, version_year: nil, user: nil, locale: 'en-US')
+    script_name = Script.latest_assigned_version(family_name, user).try(:name)
+    script_name ||= Script.latest_stable_version(family_name, version_year: version_year, locale: locale, fallback: true).try(:name)
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
@@ -504,18 +508,20 @@ class Script < ActiveRecord::Base
   # @param family_name [String] The family name for a script family.
   # @param version_year [String] Version year to return. Optional.
   # @param locale [String] User or request locale. Optional.
+  # @param fallback [Boolean] If no latest stable version is found in provided locale,
+  # fallback to latest stable version in default locale. Optional.
   # @return [Script|nil] Returns the latest version in a script family.
-  def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
+  def self.latest_stable_version(family_name, version_year: nil, locale: 'en-US', fallback: false)
     return nil unless family_name.present?
 
     script_versions = Script.
       where(family_name: family_name).
       order("properties -> '$.version_year' DESC")
 
-    # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale).
+    # Find latest stable, supported script (ignore supported locales if locale is an English-speaking locale).
     # Match on version year if one is supplied.
     locale_str = locale&.to_s
-    supported_stable_scripts = script_versions.select do |script|
+    supported_stable_script = script_versions.find do |script|
       is_supported = script.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
       if version_year
         script.is_stable && is_supported && script.version_year == version_year
@@ -524,7 +530,15 @@ class Script < ActiveRecord::Base
       end
     end
 
-    supported_stable_scripts&.first
+    # If there are no supported stable scripts in the given locale (and fallback is true), fallback
+    # to latest stable script in the default locale.
+    if !supported_stable_script && fallback && locale_str&.present?
+      supported_stable_script = script_versions.find do |script|
+        version_year.present? ? (script.is_stable && script.version_year == version_year) : script.is_stable
+      end
+    end
+
+    supported_stable_script
   end
 
   # @param family_name [String] The family name for a script family.
