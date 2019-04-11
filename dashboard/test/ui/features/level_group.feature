@@ -30,3 +30,11 @@ Scenario: Submit three answers.
   And element ".level-group-content:nth(1) #checked_1" is visible
   And element ".level-group-content:nth(2) #checked_2" is visible
   And element ".level-group-content:nth(2) #checked_0" is visible
+
+Scenario: Match levels within level group
+  Given match level 0 question contains text "Match the code to the image that it will produce."
+  And match level 0 contains 4 unplaced answers
+  And match level 0 contains 4 empty slots
+  And match level 1 question contains text "Match the boolean expression to the English description."
+  And match level 1 contains 5 unplaced answers
+  And match level 1 contains 5 empty slots
