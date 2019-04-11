@@ -40,7 +40,8 @@ export default class Match {
   getResult() {
     let wrongAnswer = false;
 
-    const elements = $('.match_slots li');
+    const container = document.getElementById(this.id);
+    const elements = $(container).find('.match_slots li');
 
     const response = [];
 
