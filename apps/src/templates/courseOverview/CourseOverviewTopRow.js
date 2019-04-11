@@ -36,7 +36,7 @@ export default class CourseOverviewTopRow extends Component {
         {resources.map(({type, link}) => (
           <Button
             key={type}
-            style={{marginLeft: 10}}
+            style={{marginRight: 10}}
             text={stringForType[type]}
             href={link}
             target="blank"
