@@ -58,7 +58,9 @@ export default class Match {
         // wrong answer
         wrongAnswer = true;
 
-        xmark.show();
+        if (this.standalone) {
+          xmark.show();
+        }
       } else {
         // correct answer
         xmark.hide();
