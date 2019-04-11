@@ -388,6 +388,38 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
+  test 'get_script_family_redirect returns latest stable assigned version in family if user is provided' do
+    student = create :student
+    script1 = create :script, name: 's-1', family_name: 'courseg', version_year: '2017', is_stable: true
+    script2 = create :script, name: 's-2', family_name: 'courseg', version_year: '2018', is_stable: true
+
+    script_to_redirect_to = Script.get_script_family_redirect('courseg', user: student)&.redirect_to
+    assert_equal script2.name, script_to_redirect_to
+
+    section = create :section, script: script1
+    section.students << student
+    student.reload
+
+    script_to_redirect_to = Script.get_script_family_redirect('courseg', user: student)&.redirect_to
+    assert_equal script1.name, script_to_redirect_to
+  end
+
+  test 'get_script_family_redirect returns latest stable version in locale in family if available' do
+    create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', is_stable: true, supported_locales: []
+    latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', is_stable: true, supported_locales: ['it-it']
+
+    script_to_redirect_to = Script.get_script_family_redirect('courseg', locale: 'it-it')&.redirect_to
+    assert_equal latest_in_locale.name, script_to_redirect_to
+  end
+
+  test 'get_script_family_redirect returns latest stable version in default locale in family if no versions support locale' do
+    latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', is_stable: true, supported_locales: []
+    create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', is_stable: true, supported_locales: ['it-it']
+
+    script_to_redirect_to = Script.get_script_family_redirect('courseg', locale: 'es-mx')&.redirect_to
+    assert_equal latest_in_english.name, script_to_redirect_to
+  end
+
   test 'redirect_to_script_url returns nil unless user can view script version' do
     Script.any_instance.stubs(:can_view_version?).returns(false)
     student = create :student
@@ -499,6 +531,13 @@ class ScriptTest < ActiveSupport::TestCase
     create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true, supported_locales: ["it-it"]
 
     assert_nil Script.latest_stable_version('fake-family', locale: 'es-mx')
+  end
+
+  test 'self.latest_stable_version returns latest stable in default locale if no script versions in family are stable in locale and fallback is true' do
+    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', is_stable: true, supported_locales: []
+    script_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', is_stable: true, supported_locales: []
+
+    assert_equal script_2018, Script.latest_stable_version('fake-family', locale: 'es-mx', fallback: true)
   end
 
   test 'self.latest_stable_version returns latest stable version for user locale' do
