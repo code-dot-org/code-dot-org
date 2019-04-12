@@ -47,3 +47,18 @@ Scenario: Match levels within level group
   And match level 1 contains 4 unplaced answers
   And match level 1 contains 4 empty slots
   And element ".xmark" is not visible
+
+  # Make sure the answers are saved and loaded
+
+  Given I press ".submitButton:first" using jQuery
+  And I wait to see ".modal"
+  And I press ".modal #ok-button" using jQuery to load a new page
+
+  When I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1?noautoplay=true"
+  And I wait to see ".submitButton"
+
+  Then match level 0 contains 3 unplaced answers
+  And match level 0 contains 3 empty slots
+  And match level 1 contains 4 unplaced answers
+  And match level 1 contains 4 empty slots
+  And element ".xmark" is not visible
