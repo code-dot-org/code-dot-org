@@ -170,7 +170,8 @@ const validScripts = [
     script_name: 'course3',
     category: 'other',
     position: null,
-    category_priority: 3
+    category_priority: 3,
+    stage_extras_available: true
   },
   {
     id: 112,
@@ -210,6 +211,15 @@ const validScripts = [
     assignment_family_name: 'coursea',
     version_year: '2017',
     is_stable: true
+  },
+  {
+    id: 37,
+    name: 'Express Course',
+    script_name: 'express-2018',
+    category: 'other',
+    position: null,
+    category_priority: 3,
+    stage_extras_available: true
   }
 ];
 
@@ -627,7 +637,7 @@ describe('teacherSectionsRedux', () => {
       ).to.throw();
     });
 
-    it('switching to non-CSF course assignment turns off stage extras', () => {
+    it('switching script assignment updates stage extras value from script', () => {
       let state = reducer(
         editingNewSectionState,
         setValidAssignments(validCourses, validScripts)
@@ -636,6 +646,9 @@ describe('teacherSectionsRedux', () => {
       expect(state.sectionBeingEdited.stageExtras).to.equal(false);
 
       state = reducer(state, editSectionProperties({scriptId: 36}));
+      expect(state.sectionBeingEdited.stageExtras).to.equal(true);
+
+      state = reducer(state, editSectionProperties({scriptId: 37}));
       expect(state.sectionBeingEdited.stageExtras).to.equal(true);
     });
   });
