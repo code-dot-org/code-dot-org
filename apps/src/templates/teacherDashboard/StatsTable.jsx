@@ -27,7 +27,6 @@ class StatsTable extends Component {
     studentsCompletedLevelCount: PropTypes.object,
 
     // Provided by redux.
-    scriptId: PropTypes.number,
     scriptName: PropTypes.string
   };
 
@@ -42,13 +41,8 @@ class StatsTable extends Component {
   };
 
   nameFormatter = (name, {rowData}) => {
-    const {section, scriptId, scriptName} = this.props;
-    const studentUrl = scriptUrlForStudent(
-      section.id,
-      scriptId,
-      scriptName,
-      rowData.id
-    );
+    const {section, scriptName} = this.props;
+    const studentUrl = scriptUrlForStudent(section.id, scriptName, rowData.id);
 
     return (
       <a
@@ -181,6 +175,5 @@ class StatsTable extends Component {
 
 export const UnconnectedStatsTable = StatsTable;
 export default connect(state => ({
-  scriptId: state.scriptSelection.scriptId,
   scriptName: getSelectedScriptName(state)
 }))(StatsTable);

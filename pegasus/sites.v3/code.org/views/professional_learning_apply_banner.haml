@@ -12,15 +12,15 @@
 %div
   %a.linktag#pl-apply-banner{href: link}
     .bigbanner{style: "width: 100%; padding: 5px; background-color: #ebe8f1"}
-      .col-50{style: "background-color: #7665a0; height: 100px;"}
+      .col-50{style: "background-color: #7665a0; min-height: 100px;"}
         .arrowcontainer.desktop-feature{style: "float:left; width: 7%"}
           .arrow{style: "width: 0; height: 0; border-style: solid; border-width: 50px 0 50px 25px; border-color: transparent transparent transparent #ebe8f1"}
         .textcontainer{style: "float:left; width: 93%"}
-          .text{style: "color: white;  font-size: 18px; padding: 20px; text-align: center; line-height: 1.5"}
+          .text{style: "color: white;  font-size: 18px; padding: 20px 10px 20px 10px; text-align: center; line-height: 1.5"}
             - if params[:nominated]
               CONGRATULATIONS! You’ve been nominated for a scholarship!
             - else
-              SPOTS OPEN - 2019 Professional Learning for Middle and High School teachers
+              Professional learning deadlines fast approaching! Sign up now to reserve your seat
       .col-50{style: "background-color: #ebe8f1; color: white; height: 100px; font-size: 18px; text-align: center"}
         .desktop-feature{style: "float:left; width: 30%"}
           .arrowcontainer{style: "float:left"}

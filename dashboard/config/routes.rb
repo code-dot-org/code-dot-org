@@ -199,7 +199,6 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
         get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
       end
-      get '/angular', to: 'projects#angular'
     end
   end
 
@@ -590,6 +589,7 @@ Dashboard::Application.routes.draw do
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
+      get 'users/:user_id/school_name', to: 'users#get_school_name'
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 

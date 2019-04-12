@@ -109,7 +109,7 @@ export default class AssignmentVersionSelector extends Component {
           {versions.map(version => (
             <option key={version.year} value={version.year}>
               {version.isRecommended
-                ? `${version.title} (Recommended)`
+                ? `${version.title} (${i18n.recommended()})`
                 : version.title}
             </option>
           ))}
