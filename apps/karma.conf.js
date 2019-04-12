@@ -86,6 +86,8 @@ module.exports = function(config) {
       showDiff: true
     },
 
+    hostname: 'localhost-studio.code.org',
+
     // web server port
     port: PORT,
 
