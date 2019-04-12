@@ -96,7 +96,11 @@ export default class Match {
       .find('.mainblock .match_answers li')
       .draggable({revert: 'invalid', stack: '.answer', containment: container});
 
-    // set up the central list of empty slots.
+    this.makeInitialAnswersDroppable(container, enableSounds);
+  }
+
+  // set up the central list of empty slots.
+  makeInitialAnswersDroppable(container, enableSounds) {
     $(container)
       .find('.mainblock .match_slots li')
       .droppable({
