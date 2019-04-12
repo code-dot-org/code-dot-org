@@ -83,7 +83,7 @@ class DSLDefined < Level
 
   # Write the specified text to the dsl level definition file for this level.
   def rewrite_dsl_file(text)
-    File.write(file_path, (encrypted ? encrypted_dsl_text(text) : text))
+    File.write(file_path, (level_encrypted? ? encrypted_dsl_text(text) : text))
   end
 
   def self.rewrite_i18n_file(i18n)
@@ -134,7 +134,7 @@ class DSLDefined < Level
     raise "name not formatted correctly in dsl text for level: '#{name}'" if old_dsl && old_dsl == new_dsl
 
     level_params = {}
-    level_params[:encrypted] = encrypted if encrypted
+    level_params[:encrypted] = level_encrypted? if level_encrypted?
     self.class.create_from_level_builder({dsl_text: new_dsl}, level_params) if new_dsl
   end
 
@@ -150,7 +150,9 @@ class DSLDefined < Level
     end
   end
 
-  def encrypted
+  # The name of this method must not collide with 'encrypted?' or 'encrypted'
+  # which are automatically generated on the Level class via serialized_attrs
+  def level_encrypted?
     properties['encrypted'].present? && properties['encrypted'] != "false"
   end
 
