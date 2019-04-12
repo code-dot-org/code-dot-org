@@ -423,17 +423,25 @@ describe('TeacherFeedback', () => {
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
-      const confirmExceedsRatioButton = wrapper.find('RubricField').at(1);
-      expect(confirmExceedsRatioButton.props().disabledMode).to.equal(true);
-      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
+      const confirmExceedsRatioButton = wrapper.find('RubricField').at(0);
+      const confirmMeetsRatioButton = wrapper.find('RubricField').at(1);
+      expect(confirmMeetsRatioButton.props().disabledMode).to.equal(true);
+      expect(confirmMeetsRatioButton.props().showFeedbackInputAreas).to.equal(
         true
       );
+
+      // The rubric value that was given as feedback should be expanded
       expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(false);
-      expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('meets');
-      expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
+      expect(confirmMeetsRatioButton.props().expandByDefault).to.equal(true);
+
+      expect(confirmMeetsRatioButton.props().rubricLevel).to.equal('meets');
+      expect(confirmMeetsRatioButton.props().rubricValue).to.equal(
         'met expectations'
       );
-      expect(confirmExceedsRatioButton.props().currentlyChecked).to.equal(true);
+      expect(confirmMeetsRatioButton.props().currentlyChecked).to.equal(true);
+      expect(confirmExceedsRatioButton.props().currentlyChecked).to.equal(
+        false
+      );
 
       // Comment
       const confirmCommentArea = wrapper.find('CommentArea').first();
@@ -474,17 +482,25 @@ describe('TeacherFeedback', () => {
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
-      const confirmExceedsRatioButton = wrapper.find('RubricField').at(1);
-      expect(confirmExceedsRatioButton.props().disabledMode).to.equal(true);
-      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
+      const confirmExceedsRatioButton = wrapper.find('RubricField').at(0);
+      const confirmMeetsRatioButton = wrapper.find('RubricField').at(1);
+      expect(confirmMeetsRatioButton.props().disabledMode).to.equal(true);
+      expect(confirmMeetsRatioButton.props().showFeedbackInputAreas).to.equal(
         true
       );
+
+      // The rubric value that was given as feedback should be expanded
       expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(false);
-      expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('meets');
-      expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
+      expect(confirmMeetsRatioButton.props().expandByDefault).to.equal(true);
+
+      expect(confirmMeetsRatioButton.props().rubricLevel).to.equal('meets');
+      expect(confirmMeetsRatioButton.props().rubricValue).to.equal(
         'met expectations'
       );
-      expect(confirmExceedsRatioButton.props().currentlyChecked).to.equal(true);
+      expect(confirmMeetsRatioButton.props().currentlyChecked).to.equal(true);
+      expect(confirmExceedsRatioButton.props().currentlyChecked).to.equal(
+        false
+      );
 
       // Comment
       expect(wrapper.find('CommentArea')).to.have.lengthOf(0);

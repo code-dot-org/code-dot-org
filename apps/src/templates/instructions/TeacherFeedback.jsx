@@ -242,6 +242,12 @@ export class TeacherFeedback extends Component {
         ? styles.timeStudent
         : styles.timeTeacher;
 
+    // If a student has rubric feedback we want to expand that field
+    const expandPerformanceLevelForStudent =
+      this.props.viewAs === ViewType.Student &&
+      showFeedbackInputAreas &&
+      this.state.performance !== null;
+
     return (
       <div style={tabVisible}>
         {this.state.errorState === ErrorType.Load && (
@@ -263,7 +269,11 @@ export class TeacherFeedback extends Component {
                   <RubricField
                     key={level}
                     showFeedbackInputAreas={showFeedbackInputAreas}
-                    expandByDefault={this.props.displayKeyConcept}
+                    expandByDefault={
+                      this.props.displayKeyConcept ||
+                      (expandPerformanceLevelForStudent &&
+                        this.state.performance === level)
+                    }
                     rubricLevel={level}
                     rubricValue={this.props.rubric[level]}
                     disabledMode={this.props.disabledMode}
