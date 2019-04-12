@@ -1442,6 +1442,7 @@ class Script < ActiveRecord::Base
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
+    info[:stage_extras_available] = stage_extras_available
 
     info
   end
@@ -1471,23 +1472,38 @@ class Script < ActiveRecord::Base
 
   def get_feedback_for_section(section)
     feedback = {}
+
+    level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
+    student_ids = section.students.map(&:id)
+    all_feedback = TeacherFeedback.get_all_feedback_for_section(student_ids, level_ids, section.user_id)
+
+    feedback_hash = {}
+    all_feedback.each do |feedback_element|
+      feedback_hash[feedback_element.student_id] ||= {}
+      feedback_hash[feedback_element.student_id][feedback_element.level_id] = feedback_element
+    end
+
     script_levels.each do |script_level|
+      next unless script_level.oldest_active_level.can_have_feedback?
       section.students.each do |student|
-        temp_feedback = TeacherFeedback.get_student_level_feedback(student.id, script_level.level.id, section.user_id)
+        current_level = script_level.oldest_active_level
+        next unless feedback_hash[student.id]
+        temp_feedback = feedback_hash[student.id][current_level.id]
         next unless temp_feedback
         feedback[temp_feedback.id] = {
           studentName: student.name,
           stageNum: script_level.stage.relative_position.to_s,
           stageName: script_level.stage.localized_title,
           levelNum: script_level.position.to_s,
-          keyConcept: (script_level.level.rubric_key_concept || ''),
-          performanceLevelDetails: (script_level.level.properties["rubric_#{temp_feedback.performance}"] || ''),
+          keyConcept: (current_level.rubric_key_concept || ''),
+          performanceLevelDetails: (current_level.properties["rubric_#{temp_feedback.performance}"] || ''),
           performance: temp_feedback.performance,
           comment: temp_feedback.comment,
           timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r")
         }
       end
     end
+
     return feedback
   end
 
