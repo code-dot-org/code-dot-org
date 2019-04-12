@@ -49,17 +49,17 @@ def saucelabs_browser(test_run_name)
     begin
       http_client = Selenium::WebDriver::Remote::Http::Persistent.new
 
-      # Longer overall timeout, because iOS takes more time. This must be set before initializing Selenium::WebDriver.
-      if slow_browser?
-        http_client.read_timeout = 5.minutes
-        http_client.open_timeout = 5.minutes
-      end
+      # Temporarily increase read timeout to acquire a new browser session.
+      http_client.read_timeout = 5.minutes
 
       browser = Selenium::WebDriver.for(:remote,
         url: url,
         desired_capabilities: capabilities,
         http_client: http_client
       )
+
+      # Restore default 1 minute read timeout.
+      http_client.send(:http).read_timeout = 1.minute
 
       # Maximum time a single execute_script or execute_async_script command may take
       browser.manage.timeouts.script_timeout = 30.seconds
@@ -85,6 +85,9 @@ def saucelabs_browser(test_run_name)
     browser.manage.window.resize_to(max_width, max_height)
   end
 
+  visual_log_url = "https://saucelabs.com/tests/#{browser.session_id}"
+  puts "visual log on sauce labs: <a href='#{visual_log_url}'>#{visual_log_url}</a>"
+
   browser
 end
 
@@ -98,36 +101,28 @@ def get_browser(test_run_name)
   end
 end
 
-browser = nil
+$browser = nil
 
 Before do |scenario|
   very_verbose "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
 
   if slow_browser?
-    browser ||= get_browser ENV['TEST_RUN_NAME']
+    $browser ||= get_browser ENV['TEST_RUN_NAME']
     very_verbose 'slow browser, using existing'
-    @browser ||= browser
+    @browser ||= $browser
   else
     very_verbose 'fast browser, getting a new one'
-    @browser = get_browser "#{ENV['TEST_RUN_NAME']}_#{scenario.name}"
+    $browser = @browser = get_browser "#{ENV['TEST_RUN_NAME']}_#{scenario.name}"
   end
   @browser.manage.delete_all_cookies
 
   debug_cookies(@browser.manage.all_cookies) if @browser && ENV['VERY_VERBOSE']
-
-  unless ENV['TEST_LOCAL'] == 'true'
-    unless @sauce_session_id
-      @sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
-      visual_log_url = 'https://saucelabs.com/tests/' + @sauce_session_id
-      puts "visual log on sauce labs: <a href='#{visual_log_url}'>#{visual_log_url}</a>"
-    end
-  end
 end
 
 def log_result(result)
-  return if ENV['TEST_LOCAL'] == 'true' || @sauce_session_id.nil?
+  return if (session = $browser&.session_id).nil?
 
-  url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
+  url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{session}"
   HTTParty.put(
     url,
     body: {"passed" => result}.to_json,
@@ -136,14 +131,16 @@ def log_result(result)
 end
 
 all_passed = true
+failed = false
 
 After do |scenario|
   # log to saucelabs
   all_passed &&= scenario.passed?
-  log_result all_passed
-end
+  unless slow_browser?
+    log_result all_passed
+    all_passed = true
+  end
 
-After do |_s|
   unless @browser.nil?
     # clear session state (or get a new browser)
     if slow_browser?
@@ -153,13 +150,42 @@ After do |_s|
       @browser.execute_script 'sessionStorage.clear()'
       @browser.execute_script 'localStorage.clear()'
     else
-      @browser.quit unless @browser.nil?
+      @browser.quit
+      $browser = @browser = nil
     end
   end
 end
 
+def context(str)
+  unless ENV['TEST_LOCAL'] == 'true'
+    $browser&.execute_script("sauce:context=#{str}")
+  end
+end
+
+AfterConfiguration do |config|
+  config.on_event :test_case_started do |event|
+    context "Scenario: #{event.test_case.name}"
+  end
+  config.on_event :test_step_started do |event|
+    last = event.test_step.source.last
+    # Don't record context for (skipped) steps in scenario after failure.
+    next if failed && last.is_a?(Cucumber::Core::Ast::Step)
+    context last
+  end
+  config.on_event :test_step_finished do |event|
+    if event.result.failed?
+      failed = true
+      context "Failed: #{event.result.exception}"
+    end
+  end
+  config.on_event :test_case_finished do |_|
+    failed = false
+  end
+end
+
 at_exit do
-  browser.quit unless browser.nil?
+  log_result all_passed if slow_browser?
+  $browser&.quit
 end
 
 def very_verbose(msg)
