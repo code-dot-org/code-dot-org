@@ -220,6 +220,8 @@ export default class Match {
   }
 
   dragAnswerToSlot(answer, slot) {
-    console.log('dragAnswerToSlot', answer, slot);
+    var dx = $(slot).offset().left - $(answer).offset().left;
+    var dy = $(slot).offset().top - $(answer).offset().top;
+    $(answer).simulate('drag', {dx, dy});
   }
 }
