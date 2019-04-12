@@ -103,6 +103,8 @@ export default class Match {
       .draggable({revert: 'invalid', stack: '.answer', containment: container});
 
     this.makeInitialAnswersDroppable(container, enableSounds);
+
+    this.makeInitialMoves();
   }
 
   // set up the central list of empty slots.
@@ -190,5 +192,34 @@ export default class Match {
         $(event.target).animate({top: '0px'});
       }
     });
+  }
+
+  // Executes a series of moves from the answers column to the slots column
+  // according to the user's last submission as represented in this.lastAttempt.
+  makeInitialMoves() {
+    const container = document.getElementById(this.id);
+
+    // Obtain a list of html elements for answers and slots ahead of time, so
+    // that we don't misplace anything later when those indices change.
+
+    const slots = $(container)
+      .find('.match_slots .emptyslot')
+      .toArray();
+
+    const answers = $(container)
+      .find('.match_answers .answer')
+      .toArray();
+
+    for (let i = 0; i < this.lastAttempt.length; i++) {
+      const slot = slots[i];
+      const answer = answers[this.lastAttempt[i]];
+      if (answer) {
+        this.dragAnswerToSlot(answer, slot);
+      }
+    }
+  }
+
+  dragAnswerToSlot(answer, slot) {
+    console.log('dragAnswerToSlot', answer, slot);
   }
 }
