@@ -7,6 +7,7 @@ import SummaryProgressRow, {styles as rowStyles} from './SummaryProgressRow';
 import {connect} from 'react-redux';
 import {lessonIsVisible, lessonIsLockedForAllStudents} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   table: {
@@ -14,8 +15,8 @@ const styles = {
     borderStyle: 'solid',
     borderLeftColor: color.border_gray,
     borderTopColor: color.border_gray,
-    borderRightColor: color.border_light_gray,
-    borderBottomColor: color.border_light_gray
+    borderBottomColor: color.border_light_gray,
+    borderRightColor: color.border_light_gray
   },
   headerRow: {
     backgroundColor: color.table_header
@@ -35,6 +36,11 @@ class SummaryProgressTable extends React.Component {
 
   render() {
     const {lessons, levelsByLesson, viewAs} = this.props;
+
+    const inMiniRubricExperiment = experiments.isEnabled(
+      experiments.MINI_RUBRIC_2019
+    );
+
     if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
     }
@@ -68,6 +74,7 @@ class SummaryProgressTable extends React.Component {
                 )}
                 viewAs={viewAs}
                 lessonIsVisible={this.props.lessonIsVisible}
+                inMiniRubricExperiment={inMiniRubricExperiment}
               />
             ))}
         </tbody>
