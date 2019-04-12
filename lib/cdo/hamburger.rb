@@ -10,18 +10,22 @@ class Hamburger
   HIDE_ALWAYS = "hide-always".freeze
   SHOW_MOBILE = "show-mobile".freeze
 
+  def self.get_divider_visibility(visibility1, visibility2)
+    return HIDE_ALWAYS if visibility1 == HIDE_ALWAYS || visibility2 == HIDE_ALWAYS
+    return SHOW_MOBILE if visibility1 == SHOW_MOBILE || visibility2 == SHOW_MOBILE
+    return SHOW_ALWAYS
+  end
+
   def self.get_visibility(options)
     show_teacher_options = HIDE_ALWAYS
     show_student_options = HIDE_ALWAYS
     show_signed_out_options = HIDE_ALWAYS
     show_pegasus_options = HIDE_ALWAYS
-    show_help_options = HIDE_ALWAYS
     show_intl_about = SHOW_MOBILE
 
     if options[:level]
       # The header is taken over by level-related UI, so we need the hamburger
       # to show whatever would show up in the header at desktop (and mobile) widths.
-      show_help_options = SHOW_ALWAYS
 
       if options[:user_type] == "teacher"
         show_teacher_options = SHOW_ALWAYS
@@ -52,20 +56,13 @@ class Hamburger
       if options[:language] == "en"
         # We want to show the pegasus options.  They're in the hamburger for desktop
         # if they didn't fit on the header, or they're just in it for mobile if they did.
-        if options[:user_type] == "teacher" || options[:user_type] == "student"
-          show_pegasus_options = SHOW_ALWAYS
-          show_help_options = SHOW_ALWAYS
-        else
-          show_pegasus_options = SHOW_MOBILE
-          show_help_options = SHOW_MOBILE
-        end
-      else
-        show_help_options = SHOW_ALWAYS
+        show_pegasus_options =
+          (options[:user_type] == "teacher" || options[:user_type] == "student") ? SHOW_ALWAYS : SHOW_MOBILE
       end
     end
 
     # Do we show hamburger on all widths, only mobile, or not at all?
-    show_set = [show_teacher_options, show_student_options, show_signed_out_options, show_pegasus_options, show_help_options]
+    show_set = [show_teacher_options, show_student_options, show_signed_out_options, show_pegasus_options]
     hamburger_class =
       if show_set.include? SHOW_ALWAYS
         SHOW_ALWAYS
@@ -82,7 +79,6 @@ class Hamburger
       show_student_options: show_student_options,
       show_signed_out_options: show_signed_out_options,
       show_pegasus_options: show_pegasus_options,
-      show_help_options: show_help_options,
       show_intl_about: show_intl_about
     }
   end
@@ -181,13 +177,13 @@ class Hamburger
 
     if options[:user_type] == "teacher"
       entries = entries.concat teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]}
-      entries << {type: "divider", class: visibility[:show_teacher_options], id: "after-teacher"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_teacher_options], visibility[:show_pegasus_options]), id: "after-teacher"}
     elsif options[:user_type] == "student"
       entries = entries.concat student_entries.each {|e| e[:class] = visibility[:show_student_options]}
-      entries << {type: "divider", class: visibility[:show_student_options], id: "after-student"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_pegasus_options]), id: "after-student"}
     else
       entries = entries.concat signed_out_entries.each {|e| e[:class] = visibility[:show_signed_out_options]}
-      entries << {type: "divider", class: visibility[:show_signed_out_options], id: "after-signed-out"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_signed_out_options], visibility[:show_pegasus_options]), id: "after-signed-out"}
     end
 
     # Pegasus options.

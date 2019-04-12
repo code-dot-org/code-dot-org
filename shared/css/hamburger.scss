@@ -278,6 +278,8 @@
   z-index: 99;
   position: relative;
   font-size: 14px;
+  padding-left: 20px;
+  padding-top: 4px;
 
   #help-icon {
     cursor: pointer;
@@ -287,7 +289,15 @@
     vertical-align: middle;
     text-decoration: none;
     float: left;
-   
+    background-color: $teal;
+    color: $white;
+
+    .question-mark {
+      font-size: 30px;
+      float: right;
+      margin-top: -7px
+    }
+
     %extend_help {
       cursor: pointer;
       background: $white;
