@@ -11,27 +11,26 @@ Feature: Hamburger dropdown
     Given I create a student named "Sally Student"
     Then I wait until I am on "http://studio.code.org/home"
     Then I wait to see "#hamburger-icon"
+    Then I wait to see "#help-button"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
-    And I see "#report-bug"
-    And I see "#support"
-    And I see ".divider#before-pegasus"
     And I see "#learn"
     And I see "#stats"
     And I see "#help-us"
     And I see "#about_entries"
     And I see "#educate_entries"
+    Then I click selector "#help-button"
+    Then I wait to see "#help-contents"
+    And I see "#report-bug"
+    And I see "#support"
 
   Scenario: Teacher viewing hamburger dropdown (with expanded options) in English on desktop
     Given I create a teacher named "Tessa Teacher"
     Then I wait until I am on "http://studio.code.org/home"
     Then I wait to see "#hamburger-icon"
+    Then I wait to see "#help-button"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
-    And I see "#report-bug"
-    And I see "#support"
-    And I see "#teacher-community"
-    And I see ".divider#before-pegasus"
     And I see "#learn"
     And I see "#stats"
     And I see "#help-us"
@@ -41,22 +40,27 @@ Feature: Hamburger dropdown
     And I see "#educate_entries"
     And I click selector "#educate_entries"
     And I wait to see "#educate-overview"
+    Then I click selector "#help-button"
+    Then I wait to see "#help-contents"
+    And I see "#report-bug"
+    And I see "#support"
+    And I see "#teacher-community"
 
   Scenario: Applab-specific help links
     Given I create a teacher named "Tessa Teacher"
     And I am on "http://studio.code.org/projects/applab/new"
-    Then I wait to see "#hamburger-icon"
-    And I click selector "#hamburger-icon"
-    Then I wait to see "#hamburger-contents"
+    Then I wait to see "#help-button"
+    And I click selector "#help-button"
+    Then I wait to see "#help-contents"
     And I see "#applab-docs"
     And I see "#applab-tutorials"
 
   Scenario: Gamelab-specific help links
     Given I create a teacher named "Tessa Teacher"
     And I am on "http://studio.code.org/projects/gamelab/new"
-    Then I wait to see "#hamburger-icon"
-    And I click selector "#hamburger-icon"
-    Then I wait to see "#hamburger-contents"
+    Then I wait to see "#help-button"
+    And I click selector "#help-button"
+    Then I wait to see "#help-contents"
     And I see "#gamelab-docs"
 
   Scenario: Student viewing hamburger dropdown in English on desktop on level
@@ -64,53 +68,51 @@ Feature: Hamburger dropdown
     And I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
     Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
     Then I wait to see "#hamburger-icon"
+    Then I wait to see "#help-button"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
     And I see ".divider#after-student"
-    And I see "#report-bug"
-    And I see "#support"
-    And I see ".divider#before-pegasus"
     And I see "#about_entries"
     And I see "#educate_entries"
     And I see "#learn"
     And I see "#stats"
     And I see "#help-us"
+    Then I click selector "#help-button"
+    Then I wait to see "#help-contents"
+    And I see "#report-bug"
+    And I see "#support"
+  
 
   Scenario: Teacher viewing hamburger dropdown in English on desktop on level
     Given I create a teacher named "Tessa Teacher"
     And I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
     Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
     Then I wait to see "#hamburger-icon"
+    Then I wait to see "#help-button"
     And I click selector "#hamburger-icon"
     Then I wait to see "#hamburger-contents"
     And I see ".divider#after-teacher"
-    And I see "#report-bug"
-    And I see "#support"
-    And I see "#teacher-community"
-    And I see ".divider#before-pegasus"
     And I see "#about_entries"
     And I see "#educate_entries"
     And I see "#learn"
     And I see "#stats"
     And I see "#help-us"
-
+    Then I click selector "#help-button"
+    Then I wait to see "#help-contents"
+    And I see "#report-bug"
+    And I see "#support"
+    And I see "#teacher-community"
+ 
 Scenario: Signed out user viewing hamburger dropdown in Spanish on desktop
   Given I am on "http://code.org/lang/es"
   Then I wait until I am on "http://code.org/"
   And I dismiss the language selector
-  Then I wait to see "#hamburger-icon"
-  And I click selector "#hamburger-icon"
-  Then I wait to see "#hamburger-contents"
+  Then I wait to see "#help-button"
+  Then I click selector "#help-button"
+  Then I wait to see "#help-contents"
   And I see "#report-bug"
   And I see "#support"
   Then element "#teacher-community" is not visible
-  Then element "#learn" is not visible
-  Then element ".divider#before-pegasus" is not visible
-  Then element "#learn" is not visible
-  Then element "#educate_entries" is not visible
-  Then element "#about_entries" is not visible
-  Then element "#stats" is not visible
-  Then element "#help-us" is not visible
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -119,18 +121,13 @@ Scenario: Student viewing hamburger dropdown in Spanish on desktop
   Then I wait until I am on "http://studio.code.org/home"
   Given I am on "http://studio.code.org/home/lang/es"
   Then I wait until I am on "http://studio.code.org/home"
-  And I wait to see "#hamburger-icon"
-  And I click selector "#hamburger-icon"
-  Then I wait to see "#hamburger-contents"
+  And I wait to see "#help-contents"
+  Then I click selector "#help-button"
+  Then I wait to see "#help-contents"
   And I see "#report-bug"
   And I see "#support"
   Then element "#teacher-community" is not visible
-  Then element "#learn" is not visible
-  Then element ".divider#before-pegasus" is not visible
-  Then element "#educate_entries" is not visible
-  Then element "#about_entries" is not visible
-  Then element "#stats" is not visible
-  Then element "#help-us" is not visible
+
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -139,18 +136,12 @@ Scenario: Teacher viewing hamburger dropdown in Spanish on desktop
   Then I wait until I am on "http://studio.code.org/home"
   Given I am on "http://studio.code.org/home/lang/es"
   Then I wait until I am on "http://studio.code.org/home"
-  Then I wait to see "#hamburger-icon"
-  And I click selector "#hamburger-icon"
-  Then I wait to see "#hamburger-contents"
+  Then I wait to see "#help-button"
+  Then I click selector "#help-button"
+  Then I wait to see "#help-contents"
   And I see "#report-bug"
   And I see "#support"
   And I see "#teacher-community"
-  Then element "#learn" is not visible
-  Then element ".divider#before-pegasus" is not visible
-  Then element "#educate_entries" is not visible
-  Then element "#about_entries" is not visible
-  Then element "#stats" is not visible
-  Then element "#help-us" is not visible
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -158,17 +149,11 @@ Scenario: Student viewing hamburger dropdown in Spanish on desktop on level
   Given I create a student named "Eva Estudiante"
   Given I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1/lang/es"
   Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
-  Then I wait to see "#hamburger-icon"
-  And I click selector "#hamburger-icon"
-  Then I wait to see "#hamburger-contents"
-  And I see ".divider#after-student"
+  Then I wait to see "#help-button"
+  Then I click selector "#help-button"
+  Then I wait to see "#help-contents"
   And I see "#report-bug"
   And I see "#support"
-  Then element ".divider#before-pegasus" is not visible
-  Then element "#learn" is not visible
-  Then element "#educate_entries" is not visible
-  Then element "#stats" is not visible
-  Then element "#help-us" is not visible
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
@@ -176,17 +161,11 @@ Scenario: Teacher viewing hamburger dropdown in Spanish on desktop on level
   Given I create a teacher named "Pabla Profesora"
   Given I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1/lang/es"
   Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
-  Then I wait to see "#hamburger-icon"
-  And I click selector "#hamburger-icon"
-  Then I wait to see "#hamburger-contents"
-  And I see ".divider#after-teacher"
+  Then I wait to see "#help-button"
+  Then I click selector "#help-button"
+  Then I wait to see "#help-contents"
   And I see "#report-bug"
   And I see "#support"
   And I see "#teacher-community"
-  Then element ".divider#before-pegasus" is not visible
-  Then element "#learn" is not visible
-  Then element "#educate_entries" is not visible
-  Then element "#stats" is not visible
-  Then element "#help-us" is not visible
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
