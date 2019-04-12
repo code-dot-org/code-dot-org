@@ -90,16 +90,17 @@ export default class JoinSection extends React.Component {
 
   joinSection = () => {
     const sectionCode = this.state.sectionCode;
+    const normalizedSectionCode = sectionCode.trim().toUpperCase();
 
     this.setState(INITIAL_STATE);
 
     $.post({
-      url: `/api/v1/sections/${sectionCode}/join`,
+      url: `/api/v1/sections/${normalizedSectionCode}/join`,
       dataType: 'json'
     })
       .done(data => {
         const sectionName = data.sections.find(
-          s => s.code === sectionCode.toUpperCase()
+          s => s.code === normalizedSectionCode
         ).name;
         this.props.updateSections(data.sections);
         this.props.updateSectionsResult(
@@ -118,7 +119,7 @@ export default class JoinSection extends React.Component {
           'join',
           result,
           null,
-          sectionCode.toUpperCase()
+          normalizedSectionCode
         );
       });
   };
