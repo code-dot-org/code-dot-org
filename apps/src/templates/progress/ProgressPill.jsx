@@ -6,7 +6,6 @@ import color from '@cdo/apps/util/color';
 import {levelType} from './progressTypes';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {stringifyQueryParams} from '../../utils';
-import experiments from '@cdo/apps/util/experiments';
 import {isLevelAssessment} from './progressHelpers';
 
 const styles = {
@@ -68,7 +67,8 @@ class ProgressPill extends React.Component {
     fontSize: PropTypes.number,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   render() {
@@ -79,7 +79,8 @@ class ProgressPill extends React.Component {
       fontSize,
       tooltip,
       disabled,
-      selectedSectionId
+      selectedSectionId,
+      inMiniRubricExperiment
     } = this.props;
 
     const multiLevelStep = levels.length > 1;
@@ -127,21 +128,20 @@ class ProgressPill extends React.Component {
             </div>
           )}
           {tooltip}
-          {experiments.isEnabled(experiments.MINI_RUBRIC_2019) &&
-            levelIsAssessment && (
-              <span className="fa-stack" style={styles.assessmentIcon}>
-                <FontAwesome
-                  icon="circle"
-                  className="fa-stack-1x"
-                  style={styles.assessmentIconCircle}
-                />
-                <FontAwesome
-                  icon="check-circle"
-                  className="fa-stack-1x"
-                  style={styles.assessmentIconCheck}
-                />
-              </span>
-            )}
+          {inMiniRubricExperiment && levelIsAssessment && (
+            <span className="fa-stack" style={styles.assessmentIcon}>
+              <FontAwesome
+                icon="circle"
+                className="fa-stack-1x"
+                style={styles.assessmentIconCircle}
+              />
+              <FontAwesome
+                icon="check-circle"
+                className="fa-stack-1x"
+                style={styles.assessmentIconCheck}
+              />
+            </span>
+          )}
         </div>
       </a>
     );
