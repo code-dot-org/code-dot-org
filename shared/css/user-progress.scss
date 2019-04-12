@@ -37,7 +37,8 @@ a.level_link.not_tried:hover,
 a.level_link.attempted:hover,
 a.level_link.perfect:hover,
 a.level_link.passed:hover,
-a.level_link.submitted:hover
+a.level_link.submitted:hover,
+a.level_link.completed_assessment:hover
  {
     background-color: $level_current;
     color: white;
@@ -62,6 +63,11 @@ a.level_link.submitted:hover
 
 .level_link.submitted, .level_link.submitted:link, .level_link.submitted:visited {
   background-color: $level_submitted;
+  color: white !important;
+}
+
+.level_link.completed_assessment, .level_link.completed_assessment:link, .level_link.completed_assessment:visited {
+  background-color: $level_completed_assessment;
   color: white !important;
 }
 

@@ -16,6 +16,8 @@
             .level
               - status = activity_css_class(@user_level)
               - passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
+              - if @script_level&.assessment? && passed
+                - status = SharedConstants::LEVEL_STATUS.completed_assessment
               - if @script_level&.bonus
                 - flag_image = passed ? 'flag_active.png' : 'flag_inactive.png'
                 = image_tag flag_image, style: 'width: 60px;'
@@ -116,6 +118,8 @@
                     - user_level = student.last_attempt_for_any(@script_level.levels)
                   - status = activity_css_class(user_level)
                   - passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
+                  - if @script_level&.assessment? && passed
+                    - status = SharedConstants::LEVEL_STATUS.completed_assessment
                   - if @script_level.bonus
                     - flag_image = passed ? 'flag_active.png' : 'flag_inactive.png'
                     %td= image_tag flag_image

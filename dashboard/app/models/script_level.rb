@@ -260,6 +260,10 @@ class ScriptLevel < ActiveRecord::Base
     build_script_level_path(self)
   end
 
+  def assessment?
+    assessment
+  end
+
   def summarize(include_prev_next=true)
     kind =
       if level.unplugged?
