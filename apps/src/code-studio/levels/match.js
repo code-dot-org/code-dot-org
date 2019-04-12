@@ -16,7 +16,7 @@ jQuery.fn.swap = function(b) {
 };
 
 export default class Match {
-  constructor(levelId, id, standalone) {
+  constructor(levelId, id, standalone, lastAttempt) {
     // The dashboard levelId.
     this.levelId = levelId;
 
@@ -25,6 +25,12 @@ export default class Match {
 
     // Whether this is the only puzzle on a page, or part of a group of them.
     this.standalone = standalone;
+
+    // An array indicating which answer belongs in each slot according to the
+    // user's last submission, or null if no answer was selected. For example,
+    // [null, null, 0, null] indicates that slot index 2 should hold answer
+    // index 0.
+    this.lastAttempt = lastAttempt ? lastAttempt.split(',') : [];
 
     $(document).ready(() => this.ready());
   }
