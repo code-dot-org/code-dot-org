@@ -29,6 +29,10 @@ const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
 const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
+
+const inMiniRubricExperiment = experiments.isEnabled(
+  experiments.MINI_RUBRIC_2019
+);
 const PEER_REVIEW_ID = -1;
 
 const initialState = {
@@ -565,7 +569,7 @@ export function statusForLevel(level, levelProgress) {
   // If complete a level that is marked as assessment
   // then mark as completed assessment
   if (
-    experiments.isEnabled(experiments.MINI_RUBRIC_2019) &&
+    inMiniRubricExperiment &&
     (level.kind === LevelKind.assessment &&
       [
         LevelStatus.free_play_complete,

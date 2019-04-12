@@ -192,6 +192,7 @@ class ProgressBubble extends React.Component {
         icon={levelIcon}
         text={tooltipText}
         includeAssessmentIcon={levelIsAssessment}
+        inMiniRubricExperiment={inMiniRubricExperiment}
       />
     );
 
