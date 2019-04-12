@@ -174,10 +174,7 @@ class TopInstructionsCSP extends Component {
           contentType: 'application/json;charset=UTF-8'
         }).done(data => {
           // If student has feedback make their default tab the feedback tab instead of instructions
-          if (
-            data[0] &&
-            (data[0].comment !== '' || data[0].performance !== null)
-          ) {
+          if (data[0] && (data[0].comment || data[0].performance)) {
             this.setState({feedbacks: data, tabSelected: TabType.COMMENTS});
           }
         })
