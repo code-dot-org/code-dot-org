@@ -156,6 +156,9 @@ After do |scenario|
   end
 end
 
+embed = nil
+Before {embed = method(:embed)}
+
 def context(str)
   unless ENV['TEST_LOCAL'] == 'true'
     $browser&.execute_script("sauce:context=#{str}")
@@ -176,6 +179,9 @@ AfterConfiguration do |config|
     if event.result.failed?
       failed = true
       context "Failed: #{event.result.exception}"
+      if (encoded_img = $browser&.screenshot_as(:base64))
+        embed&.call(encoded_img.to_s, 'image/png;base64')
+      end
     end
   end
   config.on_event :test_case_finished do |_|
