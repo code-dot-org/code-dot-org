@@ -88,7 +88,7 @@ test:
   collation: utf8_unicode_ci
   username: <%= writer.user || 'root' %>
   password: <%= writer.password || '' %>
-  host: 'localhost'
+  host: <%= writer.host || 'localhost' %>
   pool: <%= ENV['CI'] ? 20 : 5 %>
   database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
   connect_timeout: 2

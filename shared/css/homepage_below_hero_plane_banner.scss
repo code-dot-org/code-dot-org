@@ -1,3 +1,5 @@
+$light_background_colour: #a69bc1;
+
 @keyframes slideInFromLeft {
   0% {
       transform: translateX(-50px);
@@ -12,7 +14,7 @@
 }
 
 .homepage-professional-learning-banner {
-  background-color: #59b9dc;
+  background-color: $light_background_colour;
   padding-top: 5px;
   padding-bottom: 5px;
 
@@ -23,7 +25,7 @@
 
   .nonphone {
     padding: 5px;
-    background-color: #59b9dc;
+    background-color: $light_background_colour;
     height: 97px;
     margin: 0 auto;
     float: none;
@@ -46,12 +48,12 @@
         .text {
           color: white;
           font-size: 18px;
-          padding: 15px;
+          padding: 15px 15px 15px 0px;
           text-align: center;
           line-height: 1.5;
           position: absolute;
           top: 0px;
-          left: 60px;
+          left: 37px;
           animation: fadein 5s;
         }
       }
