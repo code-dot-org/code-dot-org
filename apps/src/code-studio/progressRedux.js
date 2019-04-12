@@ -33,6 +33,12 @@ export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 const inMiniRubricExperiment = experiments.isEnabled(
   experiments.MINI_RUBRIC_2019
 );
+
+// for testing
+export function getInMiniRubricExperiment() {
+  return inMiniRubricExperiment;
+}
+
 const PEER_REVIEW_ID = -1;
 
 const initialState = {
@@ -569,7 +575,7 @@ export function statusForLevel(level, levelProgress) {
   // If complete a level that is marked as assessment
   // then mark as completed assessment
   if (
-    inMiniRubricExperiment &&
+    getInMiniRubricExperiment() &&
     (level.kind === LevelKind.assessment &&
       [
         LevelStatus.free_play_complete,
