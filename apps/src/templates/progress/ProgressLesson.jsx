@@ -16,6 +16,7 @@ import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 import FocusAreaIndicator from './FocusAreaIndicator';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   outer: {
@@ -122,6 +123,10 @@ class ProgressLesson extends React.Component {
       selectedSectionId
     } = this.props;
 
+    const inMiniRubricExperiment = experiments.isEnabled(
+      experiments.MINI_RUBRIC_2019
+    );
+
     if (!lessonIsVisible(lesson, viewAs)) {
       return null;
     }
@@ -202,6 +207,7 @@ class ProgressLesson extends React.Component {
               levels={levels}
               disabled={locked && viewAs !== ViewType.Teacher}
               selectedSectionId={selectedSectionId}
+              inMiniRubricExperiment={inMiniRubricExperiment}
             />
           )}
         </div>
