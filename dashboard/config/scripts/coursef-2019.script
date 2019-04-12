@@ -157,14 +157,14 @@ level 'behaviors 5', progression: 'Practice'
 level 'behaviors 6', progression: 'Challenge', challenge: true
 
 stage 'Virtual Pet', flex_category: 'csf_sprites'
-level 'Virtual Pet 1_2019', progression: 'Prediction'
+level 'Virtual Pet 1_2019', progression: 'Free Play'
 level 'Virtual Pet 2_2019', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 3_2019', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 4_2019', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 5_2019', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 6_2019', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 7_2019', progression: 'Mini-Project: Virtual Pet'
-level 'Virtual Pet Freeplay_2019', progression: 'Mini-Project: Virtual Pet'
+level 'Virtual Pet 8_2019', progression: 'Mini-Project: Virtual Pet'
 
 stage 'The Power of Words', flex_category: 'csf_digcit'
 level 'courseF_unplugged_powerOfWords_2019'

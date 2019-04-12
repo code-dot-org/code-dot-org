@@ -8,6 +8,7 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import experiments from '@cdo/apps/util/experiments';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -545,7 +546,8 @@ export function statusForLevel(level, levelProgress) {
     return level.status;
   }
 
-  // Assessment levels will have a uid for each page (and a test-result
+  // LevelGroup assessments (multi-page assessments)
+  // will have a uid for each page (and a test-result
   // for each uid). When locked, they will end up not having a per-uid
   // test result, but will have a LOCKED_RESULT for the LevelGroup (which
   // is tracked by ids)
@@ -559,6 +561,21 @@ export function statusForLevel(level, levelProgress) {
   ) {
     status = LevelStatus.locked;
   }
+
+  // If complete a level that is marked as assessment
+  // then mark as completed assessment
+  if (
+    experiments.isEnabled(experiments.MINI_RUBRIC_2019) &&
+    (level.kind === LevelKind.assessment &&
+      [
+        LevelStatus.free_play_complete,
+        LevelStatus.perfect,
+        LevelStatus.passed
+      ].includes(status))
+  ) {
+    return LevelStatus.completed_assessment;
+  }
+
   return status;
 }
 

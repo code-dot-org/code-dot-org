@@ -107,9 +107,12 @@ def restore(source, redacted, dest, *plugins)
   return unless File.exist?(source)
   return unless File.exist?(redacted)
 
-  plugins = plugins_to_arg(plugins)
   source_data = YAML.load_file(source)
   redacted_data = YAML.load_file(redacted)
+
+  return unless source_data&.values&.first&.length
+  return unless redacted_data&.values&.first&.length
+
   source_json = Tempfile.new(['source', '.json'])
   redacted_json = Tempfile.new(['redacted', '.json'])
 
@@ -121,6 +124,7 @@ def restore(source, redacted, dest, *plugins)
 
   args = ['bin/i18n/node_modules/.bin/restore',
           '-c bin/i18n/plugins/nonCommonmarkLinebreak.js']
+  plugins = plugins_to_arg(plugins)
   args.push('-p ' + plugins) unless plugins.empty?
 
   args.push("-s #{source_json.path}")

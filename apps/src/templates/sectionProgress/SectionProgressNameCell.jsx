@@ -10,20 +10,14 @@ class SectionProgressNameCell extends Component {
     name: PropTypes.string.isRequired,
     studentId: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
-    scriptId: PropTypes.number.isRequired,
 
     // Provided by redux.
     scriptName: PropTypes.string
   };
 
   render() {
-    const {name, studentId, sectionId, scriptId, scriptName} = this.props;
-    const studentUrl = scriptUrlForStudent(
-      sectionId,
-      scriptId,
-      scriptName,
-      studentId
-    );
+    const {name, studentId, sectionId, scriptName} = this.props;
+    const studentUrl = scriptUrlForStudent(sectionId, scriptName, studentId);
 
     return (
       <div style={progressStyles.nameCell}>
