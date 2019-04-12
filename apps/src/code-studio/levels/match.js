@@ -26,6 +26,9 @@ export default class Match {
     // Whether this is the only puzzle on a page, or part of a group of them.
     this.standalone = standalone;
 
+    // Don't enable sounds until after initial moves reflecting lastAttempt.
+    this.enableSounds = false;
+
     // An array indicating which answer belongs in each slot according to the
     // user's last submission, or null if no answer was selected. For example,
     // [null, null, 0, null] indicates that slot index 2 should hold answer
@@ -96,19 +99,20 @@ export default class Match {
   //   * answers cannot be dragged outside of the container.
   initMatch() {
     const container = document.getElementById(this.id);
-    const enableSounds = this.standalone;
 
     $(container)
       .find('.mainblock .match_answers li')
       .draggable({revert: 'invalid', stack: '.answer', containment: container});
 
-    this.makeInitialAnswersDroppable(container, enableSounds);
+    this.makeInitialAnswersDroppable(container);
 
     this.makeInitialMoves();
+
+    this.enableSounds = this.standalone;
   }
 
   // set up the central list of empty slots.
-  makeInitialAnswersDroppable(container, enableSounds) {
+  makeInitialAnswersDroppable(container) {
     $(container)
       .find('.mainblock .match_slots li')
       .droppable({
@@ -118,7 +122,7 @@ export default class Match {
           $(element).is('.answerlist,.answerslot') &&
           $(container).find(element[0]).length,
         drop: (event, ui) => {
-          if (enableSounds) {
+          if (this.enableSounds) {
             CDOSounds.play('click');
           }
           // once an answer is in the central list of slots, it will just swap with whatever it's dragged onto
@@ -163,14 +167,13 @@ export default class Match {
   }
 
   makeItemDroppable(item) {
-    const enableSounds = this.standalone;
     const container = document.getElementById(this.id);
     item.droppable({
       accept: element =>
         $(element).is('.answerslot') && $(container).find(element[0]).length,
       activeClass: 'active',
-      drop: function(event, ui) {
-        if (enableSounds) {
+      drop: (event, ui) => {
+        if (this.enableSounds) {
           CDOSounds.play('whoosh');
         }
 
