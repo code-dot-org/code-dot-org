@@ -88,7 +88,7 @@ describe('JoinSection', () => {
     });
 
     const wrapper = shallow(
-        <JoinSection {...DEFAULT_PROPS} updateSections={updateSections} />
+      <JoinSection {...DEFAULT_PROPS} updateSections={updateSections} />
     );
     wrapper.find('input').simulate('change', {target: {value: ' aBcDeF  '}});
     wrapper.find('Button').simulate('click');
