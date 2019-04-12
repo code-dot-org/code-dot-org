@@ -58,11 +58,11 @@ def saucelabs_browser(test_run_name)
         http_client: http_client
       )
 
-      # Restore default 1 minute read timeout.
-      http_client.send(:http).read_timeout = 1.minute
+      # Time to wait for any page loading to complete (default 5 minutes).
+      browser.manage.timeouts.page_load = 2.minutes
 
-      # Maximum time a single execute_script or execute_async_script command may take
-      browser.manage.timeouts.script_timeout = 30.seconds
+      # Time to wait for any command (default 1 minute).
+      http_client.send(:http).read_timeout = 2.minutes
 
       # Shorter idle_timeout to avoid "too many connection resets" error
       # and generally increases stability, reduces re-runs.
@@ -85,7 +85,8 @@ def saucelabs_browser(test_run_name)
     browser.manage.window.resize_to(max_width, max_height)
   end
 
-  visual_log_url = "https://saucelabs.com/tests/#{browser.session_id}"
+  $session_id = browser.session_id
+  visual_log_url = "https://saucelabs.com/tests/#{$session_id}"
   puts "visual log on sauce labs: <a href='#{visual_log_url}'>#{visual_log_url}</a>"
 
   browser
@@ -120,9 +121,9 @@ Before do |scenario|
 end
 
 def log_result(result)
-  return if (session = $browser&.session_id).nil?
+  return unless $session_id
 
-  url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{session}"
+  url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{$session_id}"
   HTTParty.put(
     url,
     body: {"passed" => result}.to_json,
@@ -130,29 +131,30 @@ def log_result(result)
   )
 end
 
-all_passed = true
-failed = false
+# Quit current browser session.
+def quit_browser
+  with_read_timeout(5.seconds) do
+    $browser&.quit
+  rescue => e
+    puts "Error quitting browser session: #{e}"
+  end
+  $browser = @browser = nil
+end
+
+$all_passed = true
 
 After do |scenario|
-  # log to saucelabs
-  all_passed &&= scenario.passed?
-  unless slow_browser?
-    log_result all_passed
-    all_passed = true
-  end
-
-  unless @browser.nil?
-    # clear session state (or get a new browser)
-    if slow_browser?
-      unless @browser.current_url.include?('studio')
-        steps 'Then I am on "http://studio.code.org/"'
-      end
-      @browser.execute_script 'sessionStorage.clear()'
-      @browser.execute_script 'localStorage.clear()'
-    else
-      @browser.quit
-      $browser = @browser = nil
+  if slow_browser?
+    $all_passed &&= scenario.passed?
+    # clear session state
+    unless @browser.current_url.include?('studio')
+      steps 'Then I am on "http://studio.code.org/"'
     end
+    @browser.execute_script 'sessionStorage.clear()'
+    @browser.execute_script 'localStorage.clear()'
+  else
+    log_result scenario.passed?
+    quit_browser
   end
 end
 
@@ -160,8 +162,11 @@ def context(str)
   unless ENV['TEST_LOCAL'] == 'true'
     $browser&.execute_script("sauce:context=#{str}")
   end
+rescue => e
+  puts "Context error: #{e}"
 end
 
+failed = false
 AfterConfiguration do |config|
   config.on_event :test_case_started do |event|
     context "Scenario: #{event.test_case.name}"
@@ -179,13 +184,14 @@ AfterConfiguration do |config|
     end
   end
   config.on_event :test_case_finished do |_|
+    context 'Passed' unless failed
     failed = false
   end
 end
 
 at_exit do
-  log_result all_passed if slow_browser?
-  $browser&.quit
+  log_result $all_passed if slow_browser?
+  quit_browser
 end
 
 def very_verbose(msg)
