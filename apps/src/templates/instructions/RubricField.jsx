@@ -27,9 +27,10 @@ const styles = {
     flexDirection: 'row',
     margin: '0px 8px',
     padding: 4,
+    borderRadius: 4,
+    border: `solid 1px ${color.white}`,
     ':hover': {
-      border: `solid 1px ${color.light_cyan}`,
-      borderRadius: 4
+      border: `solid 1px ${color.light_cyan}`
     }
   },
   performanceLevelHeaderSelected: {
@@ -40,9 +41,9 @@ const styles = {
     padding: 4,
     backgroundColor: color.lightest_cyan,
     borderRadius: 4,
+    border: `solid 1px ${color.white}`,
     ':hover': {
-      border: `solid 1px ${color.light_cyan}`,
-      borderRadius: 4
+      border: `solid 1px ${color.light_cyan}`
     }
   },
   tooltip: {
