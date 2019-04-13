@@ -11,9 +11,8 @@ end
 # Set HTTP read timeout greater than the wait timeout during the block.
 def with_read_timeout(timeout)
   http = http_client
-  if (read_timeout = http.read_timeout) < (timeout + 5.seconds)
-    http.read_timeout = timeout + 5.seconds
-  end
+  read_timeout = http.read_timeout
+  http.read_timeout = timeout
   yield
 ensure
   http.read_timeout = read_timeout

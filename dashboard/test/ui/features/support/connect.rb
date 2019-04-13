@@ -6,6 +6,7 @@ require_relative '../../../../../deployment'
 require 'active_support/core_ext/object/blank'
 require_relative '../../utils/selenium_browser'
 require 'retryable'
+require 'sauce_whisk'
 
 $browser_configs = JSON.load(open("browsers.json"))
 
@@ -16,13 +17,12 @@ def slow_browser?
 end
 
 def saucelabs_browser(test_run_name)
-  if CDO.saucelabs_username.blank?
-    raise "Please define CDO.saucelabs_username"
-  end
+  raise "Please define CDO.saucelabs_username" if CDO.saucelabs_username.blank?
+  raise "Please define CDO.saucelabs_authkey" if CDO.saucelabs_authkey.blank?
 
-  if CDO.saucelabs_authkey.blank?
-    raise "Please define CDO.saucelabs_authkey"
-  end
+  SauceWhisk.username = CDO.saucelabs_username
+  SauceWhisk.access_key = CDO.saucelabs_authkey
+  SauceWhisk.data_center = :us_vdc
 
   is_tunnel = ENV['CIRCLE_BUILD_NUM']
   url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
@@ -30,9 +30,7 @@ def saucelabs_browser(test_run_name)
   capabilities = Selenium::WebDriver::Remote::Capabilities.new
   browser_config = $browser_configs.detect {|b| b['name'] == ENV['BROWSER_CONFIG']}
 
-  browser_config.each do |key, value|
-    capabilities[key] = value
-  end
+  browser_config.each {|key, value| capabilities[key] = value}
 
   capabilities[:javascript_enabled] = 'true'
   capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
@@ -85,7 +83,8 @@ def saucelabs_browser(test_run_name)
     browser.manage.window.resize_to(max_width, max_height)
   end
 
-  visual_log_url = "https://saucelabs.com/tests/#{browser.session_id}"
+  $session_id = browser.session_id
+  visual_log_url = "https://saucelabs.com/tests/#{$session_id}"
   puts "visual log on sauce labs: <a href='#{visual_log_url}'>#{visual_log_url}</a>"
 
   browser
@@ -107,64 +106,62 @@ Before do |scenario|
   very_verbose "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
 
   if slow_browser?
-    $browser ||= get_browser ENV['TEST_RUN_NAME']
     very_verbose 'slow browser, using existing'
-    @browser ||= $browser
+    $browser ||= get_browser ENV['TEST_RUN_NAME']
+    @browser = $browser
   else
     very_verbose 'fast browser, getting a new one'
     $browser = @browser = get_browser "#{ENV['TEST_RUN_NAME']}_#{scenario.name}"
   end
   @browser.manage.delete_all_cookies
-
   debug_cookies(@browser.manage.all_cookies) if @browser && ENV['VERY_VERBOSE']
 end
 
 def log_result(result)
-  return if (session = $browser&.session_id).nil?
-
-  url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{session}"
-  HTTParty.put(
-    url,
-    body: {"passed" => result}.to_json,
-    headers: {'Content-Type' => 'application/json'}
-  )
+  SauceWhisk::Jobs.change_status($session_id, result) if $session_id
 end
 
-all_passed = true
-failed = false
+$all_passed = true
 
 After do |scenario|
-  # log to saucelabs
-  all_passed &&= scenario.passed?
-  unless slow_browser?
-    log_result all_passed
-    all_passed = true
-  end
-
-  unless @browser.nil?
-    # clear session state (or get a new browser)
-    if slow_browser?
-      unless @browser.current_url.include?('studio')
-        steps 'Then I am on "http://studio.code.org/"'
-      end
-      @browser.execute_script 'sessionStorage.clear()'
-      @browser.execute_script 'localStorage.clear()'
-    else
-      @browser.quit
-      $browser = @browser = nil
+  if slow_browser?
+    $all_passed &&= scenario.passed?
+    unless @browser.current_url.include?('studio')
+      steps 'Then I am on "http://studio.code.org/"'
     end
+    @browser.execute_script 'sessionStorage.clear()'
+    @browser.execute_script 'localStorage.clear()'
+  else
+    log_result scenario.passed?
+    embed(screenshot, 'image/png;base64') if scenario.failed?
+    @browser&.quit
+    $browser = @browser = nil
   end
 end
 
-embed = nil
-Before {embed = method(:embed)}
+def screenshot
+  with_read_timeout(5.seconds) do
+    @browser.screenshot_as(:base64)
+  end
+rescue => e
+  puts "Screenshot error: #{e}"
+  @browser.quit
+  $browser = @browser = nil
+  raise unless $session_id
+  puts "Getting final screenshot from Sauce Labs instead"
+  require 'base64'
+  Base64.encode64(SauceWhisk::Assets.fetch($session_id, 'final_screenshot.png').data.to_s)
+end
 
 def context(str)
   unless ENV['TEST_LOCAL'] == 'true'
     $browser&.execute_script("sauce:context=#{str}")
   end
+rescue => e
+  puts "Context error: #{e}"
 end
 
+failed = false
 AfterConfiguration do |config|
   config.on_event :test_case_started do |event|
     context "Scenario: #{event.test_case.name}"
@@ -179,21 +176,21 @@ AfterConfiguration do |config|
     if event.result.failed?
       failed = true
       context "Failed: #{event.result.exception}"
-      if (encoded_img = $browser&.screenshot_as(:base64))
-        embed&.call(encoded_img.to_s, 'image/png;base64')
-      end
     end
   end
   config.on_event :test_case_finished do |_|
+    context 'Passed' unless failed
     failed = false
   end
 end
 
 at_exit do
-  log_result all_passed if slow_browser?
-  $browser&.quit
+  if slow_browser?
+    log_result $all_passed
+    $browser&.quit
+  end
 end
 
 def very_verbose(msg)
-  puts msg if ENV['VERY_VERBOSE']
+  puts msg if ENV['VERY_VERBOSE'] || slow_browser?
 end

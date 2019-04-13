@@ -110,6 +110,7 @@ group :development, :test do
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
+  gem 'sauce_whisk'
   gem 'selenium-webdriver'
   gem 'spring'
   gem 'spring-commands-testunit'
