@@ -751,6 +751,8 @@ hy:
     csp_variables: փոփոխականների
     csp_conditionals: conditionals
     csp_functions: գործառույթները
+    csp_lists: ցուցակները
+    csp_loops: loops
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?

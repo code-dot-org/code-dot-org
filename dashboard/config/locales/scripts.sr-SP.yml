@@ -1351,3 +1351,9 @@ sr:
           stages:
             While Loops:
               name: Понављања са условима
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Услови са картама

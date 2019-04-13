@@ -889,6 +889,8 @@ bn:
               name: শর্তযুক্ত
             Internet:
               name: ইন্টারনেট
+            Songwriting:
+              name: গান লিখা
         express-2019:
           stages:
             Relay Programming:
@@ -934,3 +936,7 @@ bn:
           stages:
             While Loops:
               name: হোয়াইল লুপ
+        time4csdemo:
+          stages:
+            Conditionals with Cards:
+              name: কার্ড সঙ্গে শর্ত

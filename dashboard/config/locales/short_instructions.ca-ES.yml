@@ -117,7 +117,7 @@ ca:
         60 graus!
       2-3 Artist Loops 10: Què passa al disseny si reduïm a la meitat el darrer pas
         endavant?
-      2-3 Artist Loops 11: Ara posarem *un altre* bucle tot al voltant de la creació!
+      2-3 Artist Loops 11: Ara posarem _un altre_ bucle tot al voltant de la creació!
         No oblidis afegir un angle at final del bucle extern.
       2-3 Artist Loops 2: Ara usa un bloc de repetició per convertir la cèl.lula en
         una closca.
@@ -131,7 +131,7 @@ ca:
         crear un rombe dins d'aquest hexagon?
       2-3 Artist Loops 8: Posem els dos elements dins d'un bucle.
       2-3 Artist Loops 9: "Farem un bucle amb els mateixos elements, però ara afegirem
-        distància entre ells.\r Usa el mateix codi que abans, però afegeix un pas
+        distància entre ells.\\\r Usa el mateix codi que abans, però afegeix un pas
         endavant al final del bucle extern."
       2-3 Artist Loops New 1: Dibuixarem el cap d'aquest robot! Pots fer un quadrat
         amb costats de 100 píxels?
@@ -139,9 +139,7 @@ ca:
         amb un bucle.
       2-3 Artist Loops New 11: Aquesta vegada ho dibuixarem 24 vegades. Afegeix un
         gir a l'esquerra de 30 graus a aquest codi i posa-ho tot en un bloc de repetició.
-      2-3 Artist Loops New 12: 'Dibuixa un diamant amb costats de 100 píxels.
-
-'
+      2-3 Artist Loops New 12: Dibuixa un diamant amb costats de 100 píxels.
       2-3 Artist Loops New 13: Ara dibuixa el diamant tres cops amb un bucle.
       2-3 Artist Loops New 14: Ara dibuixa el diamant deu cops però gira 90 graus
         entre cada diamant.
@@ -156,7 +154,7 @@ ca:
       2-3 Artist Match Sq Pic: 'Relaciona: completa el codi que manca'
       2-3 Artist Match Tri pic: 'Relaciona: Insereix el codi que manca.'
       2-3 Artist Nested Loops 1: "Prèviament has usat bucles per dibuixar formes,
-        però sabies que pots posar un bucle dins d'un altre?\r Repeteix tres cops
+        però sabies que pots posar un bucle dins d'un altre?\\\r Repeteix tres cops
         tot aquest bloc de codi per dibuixar el patró."
       2-3 Artist Nested Loops 10: Repeteix aquest codi 12 cops per completar el patró.
       2-3 Artist Nested Loops 11: Repeteix el codi quatre cops per completar el patró,
@@ -190,7 +188,7 @@ ca:
       2-3 Bee Conditionals 1: Hola! Sóc una abella. Ajuda'm a obtenir el nèctar de
         la flor.
       2-3 Bee Conditionals 10: "Les flors liles poden tenir 0 o 1 nèctar. Tingues
-        cura de no recollir el nèctar d'una flor lila si no en té. \r\n"
+        cura de no recollir el nèctar d'una flor lila si no en té. \\\r"
       2-3 Bee Conditionals 11: Recull el nèctar de les flors que en tenen.
       2-3 Bee Conditionals 12: Usa un bucle per comprovar i recollir el nèctar de
         totes aquestes flors.
@@ -363,6 +361,8 @@ ca:
       2-3 maze sq15: Pots arribar al gira-sol usant només cinc blocs?
       2-3 maze sq16: Sí, aquest és semblant, però una mica diferent. Pots fer-ho amb
         només cinc blocs?
+      2-3: "Les flors liles poden tenir 0 o 1 nèctar. Tingues cura de no recollir
+        el nèctar d'una flor lila si no en té. \\\r"
       2-3level1: Ajuda a l'ocell perquè atrapi el porc entremaliat movent-lo cap endavant
       20hr_farmer_stage9_1: Hola, sóc una pagesa. Necessito la teva ajuda per aplanar
         el camp a la meva granja, així estarà llest per plantar. Mou-me a la pila
@@ -469,8 +469,6 @@ ca:
         i 120 graus. Utilitza un bucle per dibuixar-lo.
       4-5 Artist Patterns 5.5: Quantes vegades cal repetir aquest bloc per dibuixar
         la graella completa de diamants?
-      4-5 Artist Patterns 6: Quantes vegades cal repetir aquest bloc per dibuixar
-        la graella completa de diamants?
       4-5 Artist Patterns 8: Utilitza un bucle per dibuixar aquest hexàgon amb 40
         píxel per costats i angles de 60 graus.
       4-5 Bee Conditionals 3: Ala l'abella només vol fer mel. Assegura't de fer la
@@ -541,10 +539,8 @@ ca:
       Course 4 Artist 8: Dibuixa el sol repetint diverses vegades tot el bloc.
       Course 4 Artist 8a: Recordes aquesta forma? Ara et deixarem que la facis tu
         sense donar-te cap bloc per començar!
-      Course 4 Artist 9: 'Repeteix el disseny 10 vegades i assegura''t de girar després
+      Course 4 Artist 9: Repeteix el disseny 10 vegades i assegura't de girar després
         de cada figura que es dibuixa.
-
-'
       Course 4 Artist Binary 7: Acaba aquest dibuix.
       Course 4 Artist Vars 1: "Dibuixarem un triangle equilàter. \nCada costat ha
         de fer 100 pixels de llarg."
@@ -1266,9 +1262,6 @@ ca:
       grade4_frozen_square_loop3: Pots fer un floquet de neu emprant el bloc "Repetir"
         per fer un quadrat 10 vegades i un bloc "Girar" que giri 36 graus entre cada
         quadrat?
-      grade4_review_artist1: Hola, sóc un artista. Pots escriure codi per fer-me dibuixar
-        gairebé qualsevol cosa. Utilitza uns quants blocs per fer-me dibuixar sobre
-        les línies grises de la imatge. (Cada línia fa 100 píxels de llarg)
       grade4_review_artist2: 'Aquesta casa necessita una teulada! Dibuixa el triangle.
         Pista: Els tres costat tenen la mateixa longitud.'
       grade4_review_artist3: El bloc de salt mou l'artista sense que dibuixi. Dibuixa

@@ -330,3 +330,8 @@ zh-TW:
         desc: 教師向學生介紹，把關於自己的信息放在網路上會留下數位足跡（或痕跡），從而導致某些後果。
       courseE_unplugged_accessAbility_2019:
         title: 輔助功能
+      timeforcs_demo_crowdsourcing:
+        title: 群眾外包（Crowdsourcing）
+      timeforcs_demo_conditionals:
+        title: 條件判斷（Conditionals）
+        desc: 為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。

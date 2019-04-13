@@ -123,7 +123,7 @@ da:
         Kan du lave en rhombe indeni denne sekskant?
       2-3 Artist Loops 8: Lad os sætte begge bokse ind i en gentagelse.
       2-3 Artist Loops 9: "We vil lave en løkke over de samme elementer, men nu vil
-        vi tilføje noget afstand imellem dem.\r\nBrug den samme kode som før, men
+        vi tilføje noget afstand imellem dem.\\\r\nBrug den samme kode som før, men
         tilføj et skridt i bunden af den ydre løkke."
       2-3 Artist Loops New 1: |-
         Lad os tegne robottens hoved! Kan du
@@ -133,9 +133,7 @@ da:
       2-3 Artist Loops New 11: |-
         Lad os nu tegne det 24 gange. Tilføj et
         venstre drej på 30 grader og læg det ind i en gentage-blok.
-      2-3 Artist Loops New 12: 'Tegn en diamant hvor siderne er 100 pixels lange.
-
-'
+      2-3 Artist Loops New 12: Tegn en diamant hvor siderne er 100 pixels lange.
       2-3 Artist Loops New 13: Tegn nu diamanten 3 gange i en løkke.
       2-3 Artist Loops New 14: "Let os tegne diamanten 10 gange, men \ndrej 90 grader
         mellem hver diamant."
@@ -150,7 +148,7 @@ da:
       2-3 Artist Match Sq Pic: 'Match: Færdiggør den manglende kode'
       2-3 Artist Match Tri pic: 'Matchende: Indsæt den manglende kode.'
       2-3 Artist Nested Loops 1: "Du har brugt løkker til at tegne former før, men
-        vidste du, at du kan lave en løkke inden i en anden løkke?\r\nGentag hele
+        vidste du, at du kan lave en løkke inden i en anden løkke?\\\r\nGentag hele
         koden 3 gange med en løkke for at tegne mønsteret."
       2-3 Artist Nested Loops 10: Gentag denne kode 12 gange for at gøre mønsteret
         færdigt.
@@ -188,7 +186,7 @@ da:
         blomsten.
       2-3 Bee Conditionals 10: "Lilla blomster kan have enten 1 eller 0 portioner
         nektar. Pas på du ikke prøver at hente nektar fra en lilla blomst, hvis den
-        ikke har noget.\r\n"
+        ikke har noget.\\\r"
       2-3 Bee Conditionals 11: Hent nektar når blomsterne har noget.
       2-3 Bee Conditionals 12: Brug en løkke til at tjekke for og hente nektar fra
         alle blomsterne.
@@ -366,6 +364,8 @@ da:
       2-3 maze sq15: Kan du komme hen til solsikken med kun 5 blokke/klodser?
       2-3 maze sq16: Ok, dette ligner meget, men er lidt anderledes. Kan du gøre det
         med kun fem blokke?
+      2-3: "Lilla blomster kan have enten 1 eller 0 portioner nektar. Pas på du ikke
+        prøver at hente nektar fra en lilla blomst, hvis den ikke har noget.\\\r"
       2-3level1: Hjælp fuglen med at fange den frække gris ved at flytte den fremad
       20hr_farmer_stage9_1: Hej, jeg er en landmand. Jeg har brug for din hjælp til
         at tromle marken på min gård, så den er klar til at blive plantet. Flyt mig
@@ -564,8 +564,6 @@ da:
       4-5 Artist Patterns 5: Lad os gentage dette, for at lave en række af 6 diamanter.
         Bemærk, at vi ændret vores diamant kode til gentag 3 gange i stedet for 2
         - Hvorfor tror du at det er sådan?
-      4-5 Artist Patterns 6: Hvor mange gange har du brug at gentage denne blok for
-        at tegne det fulde net af diamanter?
       4-5 Artist Patterns 7: Lad os ændre koden fra den sidste puslespil for at lave
         dette mere komplekse mønster. Bemærk, hvordan diamanter nu overlapper, prøv
         at ændre, den første "hop baglæns" fra 100 til 50 (halvt så langt) - hvor
@@ -636,8 +634,8 @@ da:
         en løkke. Erstat inderste "Gentagne gange blok" med et "Hvis blok". '
       4-5 Bee Nested Loops 9: Du skal samle alt nektar fra disse blomster ved at indlejre
         et "Hvis løkke" inde i en gentagelse.
-      4-5 Bee Nested Loops Assessment 1: "** Vurdering: ** Saml al nektaren og lav
-        al honningen ved hjælp af løkker."
+      4-5 Bee Nested Loops Assessment 1: "\\*\\* Vurdering: \\*\\* Saml al nektaren
+        og lav al honningen ved hjælp af løkker."
       4-5 Bee Nested Loops Rows: Saml nektar fra rækkerne af blomster! Brug en indlejret
         løkke.
       4-5 Maze 1 (copy 1): Kære person. Mig zombie. Skal... hen.. til solsikke.
@@ -683,9 +681,9 @@ da:
       Course E MC Conditionals1: Du finder de mest værdifulde ressourcer under jorden,
         men der kan være mørkt. Placér mindst to fakler, og udvind mindst to stykker
         kul.
-      Course1MazeAssessment1: "En lille test!\r\nFlyt mig først i een retning, og
+      Course1MazeAssessment1: "En lille test!\\\r\nFlyt mig først i een retning, og
         så en anden, for at komme hen til grisen"
-      Course1MazeAssessment2: "En lille test!\r\nFlyt mig først i een retning, og
+      Course1MazeAssessment2: "En lille test!\\\r\nFlyt mig først i een retning, og
         så en anden, for at komme hen til grisen."
       CourseE_HOC 2018 Level_1: Indsaml en båd fra kisten.
       CourseE_HOC 2018 Level_10: Gå til indgangen af havmonumentet.
@@ -796,10 +794,10 @@ da:
       K-1 Maze Loops Assessment 1: Opgave -- Brug løkker (gentag-blokke) for at få
         mig hen til grisen!
       K-1 Maze Loops Assessment 2: Opgave -- Brug løkker for at få mig hen til grisen!
-      K-1 Maze Sequence Assessment 1: "En lille test!\r\nFlyt i en retning,\nså en
-        anden, for at komme hen til grisen"
-      K-1 Maze Sequence Assessment 2: "En lille test!\r\nFlyt i en retning,\nså en
-        anden, for at komme hen til grisen."
+      K-1 Maze Sequence Assessment 1: "En lille test!\\\r\nFlyt i en retning,\nså
+        en anden, for at komme hen til grisen"
+      K-1 Maze Sequence Assessment 2: "En lille test!\\\r\nFlyt i en retning,\nså
+        en anden, for at komme hen til grisen."
       K-1 Maze debug Assessment 1: Opgave -- Find fejlen i koden ved at flytte på
         og tilføje blokke, så jeg kommer hen til grisen!
       K-1 artist 1 level 10: Tegn den stiplede linje ved brug af både hoppe- og tegneblokke
@@ -1513,9 +1511,6 @@ da:
       grade4_frozen_square_loop3: Kan du lave et snefnug, ved at bruge "Gentagelse"
         blokken og lave en firkant 10 gange. Og ved at bruge "Dreje" blokken for at
         dreje 36 grader mellem hvert kvadrat?
-      grade4_review_artist1: Hej, er jeg en kunstner. Du kan få mig til at tegne næsten
-        hvad som helst, hvis bare du skriver koden . Brug et par blokke til, at tegne
-        over de grå linier i billedet. (Hver linje er 100 pixels lang)
       grade4_review_artist2: 'Dette hus har brug for et tag! Tegn trekanten. Tip:
         alle tre sider er den samme længde.'
       grade4_review_artist3: Hop blokken flytter kunstneren uden at tegne. Tegn de

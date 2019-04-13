@@ -862,6 +862,8 @@ ko:
     csp_variables: '변수'
     csp_conditionals: '조건'
     csp_functions: '함수'
+    csp_lists: '리스트'
+    csp_loops: '반복'
   external_links:
     disclaimer: 경고
     leaving_domain: 여러분은 이제 이 도메인을 떠나 Code.org가 운영하지 않는 다른 사이트로 이동합니다.

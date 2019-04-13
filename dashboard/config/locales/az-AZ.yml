@@ -539,6 +539,8 @@ az:
     csp_variables: dəyişənlər
     csp_conditionals: Şərti ifadələr
     csp_functions: funksiyalar
+    csp_lists: Siyahılar
+    csp_loops: dövrlər
   hoc_download:
     title: Kod saatı yükləmələr
     capsule_title: Internetiniz varmı?

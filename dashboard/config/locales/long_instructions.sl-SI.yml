@@ -117,8 +117,8 @@ sl:
         > 0".
       2-3 Maze 15: Uporabi dve zanki, da prideš do prašička in da uporabiš čim manj
         blokov.
-      2-3 Maze Loops 18: "Spravi me k sončnici tako, a uporabiš čim manj blokov! \r
-        \r\nPoskušaj uporabiti blok ponovi -krat znotraj še enega, da zmanjšaš število
+      2-3 Maze Loops 18: "Spravi me k sončnici tako, a uporabiš čim manj blokov! \\\r
+        \\\r\nPoskušaj uporabiti blok ponovi -krat znotraj še enega, da zmanjšaš število
         blokov."
       4-5 Artist 10: Klikni "Zaženi" da preizkusiš kodo. Nato jo ponovi tolikokrat,
         da dokončaš risbo. Barva bo vedno drugačna.
@@ -258,11 +258,11 @@ sl:
       Course 4 Artist For Loops 6a: Naredi tri majhne sprememb v kodi iz prejšnje
         naloge, da narišeš tole!
       Course 4 Artist For Loops 8: "Samo majhna sprememba kode iz prejšnje naloge
-        lahko nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti? \r\n\r\nNamig:
+        lahko nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti? \\\r\n\\\r\nNamig:
         Nekaj je treba odstraniti!  "
       Course 4 Artist For Loops Challenge: "**Izziv:**\nPoskusi z znanjem, ki si ga
         pridobil do sedaj narisati te večkotnike, ki imajo vsi dolžino stranice 40
-        pikslov? \r\n\r\nNe pozabi, če hočeš narisati to spiralo, ne moreš zaklučiti
+        pikslov? \\\r\n\\\r\nNe pozabi, če hočeš narisati to spiralo, ne moreš zaklučiti
         posamezen večkotnik. Kar pomeni, da ima vsask večkotnik po eno stanico manj,
         kot ponavadi."
       Course 4 Artist For Loops Challenge_a: |-
@@ -302,13 +302,12 @@ sl:
         Kako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke "points" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo "ko igralec 2 se dotakne česarkoli" tudi za večanje vrednosti spremenljivke "points".
         Vrednost spremenljivke lahko večaš tako, da nastaviš "points = points + 1."
         Zberi 10 točk (vsako posebej...) da končaš to nalogo.
-      CourseE_HOC 2018 Level_1: "Potrebuješ pripomočke za potovanje, ki te čaka. Poberi
+      CourseE_HOC 2018 Level_1: 'Potrebuješ pripomočke za potovanje, ki te čaka. Poberi
         **čoln** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
-        iz **zaboja** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
-        \n\n"
-      CourseE_HOC 2018 Level_10: 'Nekje v tem morskem svetu se skriva  **velika hobotnica**
+        iz **zaboja** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png). '
+      CourseE_HOC 2018 Level_10: Nekje v tem morskem svetu se skriva  **velika hobotnica**
         ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png).
-        Ali jo lahko najdeš? '
+        Ali jo lahko najdeš?
       CourseE_HOC 2018 Level_11: Zgradi zid iz **prizmarina** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         okoli črnega betona. Tako boš odprl  **strugo** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         in končal svojo nalogo!
@@ -353,13 +352,12 @@ sl:
         Kako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke "points" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo "ko igralec 2 se dotakne česarkoli" tudi za večanje vrednosti spremenljivke "points".
         Vrednost spremenljivke lahko večaš tako, da nastaviš "points = points + 1."
         Zberi 10 točk (vsako posebej...) da končaš to nalogo.
-      HOC 2018 Level_1: "Potrebuješ pripomočke za potovanje, ki te čaka. Poberi **čoln**
+      HOC 2018 Level_1: 'Potrebuješ pripomočke za potovanje, ki te čaka. Poberi **čoln**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
-        iz **zaboja** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
-        \n\n"
-      HOC 2018 Level_10: 'Nekje v tem morskem svetu se skriva  **velika hobotnica**
+        iz **zaboja** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png). '
+      HOC 2018 Level_10: Nekje v tem morskem svetu se skriva  **velika hobotnica**
         ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png).
-        Ali jo lahko najdeš? '
+        Ali jo lahko najdeš?
       HOC 2018 Level_11: Zgradi zid iz **prizmarina** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         okoli črnega betona. Tako boš odprl  **strugo** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         in končal svojo nalogo!
@@ -392,17 +390,17 @@ sl:
       K-1 Bee Loops 5: Uporabi "ponovi" zanke, da dobiš nektar in narediš med!
       K-1 Bee Loops 6: Uporabi "ponovi" zanko, da se premakneš, dobiš nektar in narediš
         med!
-      K-1 Maze Loops 10: "Pelji me k prašičku! \r\nZ uporabo `ponovi` zanke bo veliko
+      K-1 Maze Loops 10: "Pelji me k prašičku! \\\r\nZ uporabo `ponovi` zanke bo veliko
         lažje."
       K-1 Maze Loops 11: Pelji me k prašičku! Z uporabo `ponovi` zanke bo veliko lažje.
       K-1 Maze Loops 12: Pelji me k prašičku! Z uporabo `ponovi` zanke bo veliko lažje.
       K-1 Maze Loops 2: Uporabi `ponovi` blok, da me pripelješ do prašička!
-      K-1 Maze Loops 3: "Pelji me k prašičku! \r\nNe pozabi na `ponovi` zanko."
-      K-1 Maze Loops 5: "Pelji me k prašičku! \r\nNe pozabi na `ponovi` zanko."
-      K-1 Maze Loops 6: "Pelji me k prašičku! \r\nNe pozabi na `ponovi` zanko."
-      K-1 Maze Loops 7: "Pelji me k prašičku! \r\nNe pozabi na `ponovi` zanko."
+      K-1 Maze Loops 3: "Pelji me k prašičku! \\\r\nNe pozabi na `ponovi` zanko."
+      K-1 Maze Loops 5: "Pelji me k prašičku! \\\r\nNe pozabi na `ponovi` zanko."
+      K-1 Maze Loops 6: "Pelji me k prašičku! \\\r\nNe pozabi na `ponovi` zanko."
+      K-1 Maze Loops 7: "Pelji me k prašičku! \\\r\nNe pozabi na `ponovi` zanko."
       K-1 Maze Loops 8: Uporabi "ponovi" zanko, da me pripelješ do prašička.
-      K-1 Maze Loops Assessment 1: "Poglej kaj vse smo se naučili! \r\nUporabi `ponovi`
+      K-1 Maze Loops Assessment 1: "Poglej kaj vse smo se naučili! \\\r\nUporabi `ponovi`
         zanko, da me pripelješ do prašička!"
       NEW Course 4 Artist Vars 12: Sedaj poustvari algoritem iz prejšnje stopnje in
         nariši petkotnik z stanicami dolžine 150 pikslov.
@@ -668,7 +666,7 @@ sl:
         **Izziv:**
         Poskusi z znanjem, ki si ga pridobil do sedaj narisati te večkotnike, ki imajo vsi dolžino stranice 40 pikslov?
       grade5_artist_for_loops5: "Samo majhna sprememba kode iz prejšnje naloge lahko
-        nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti? \r\n\r\nNamig:
+        nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti? \\\r\n\\\r\nNamig:
         Nekaj je treba odstraniti!"
       grade5_artist_for_loops6: Če se obrneš malo manj ali malo več, kot bi se pri
         risanju lika, lahko nastane zanimiv učinek. Poskusi uporabiti del kode iz

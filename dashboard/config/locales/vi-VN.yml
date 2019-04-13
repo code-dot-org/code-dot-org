@@ -1180,6 +1180,8 @@ vi:
     csp_variables: Các biến
     csp_conditionals: Điều kiện
     csp_functions: Các hàm
+    csp_lists: Danh sách
+    csp_loops: Vòng lặp
   external_links:
     disclaimer: Miễn trừ trách nhiệm
   hoc_download:

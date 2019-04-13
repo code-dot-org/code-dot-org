@@ -510,6 +510,8 @@ th:
     csp_variables: ตัวแปร
     csp_conditionals: 'เงื่อนไข '
     csp_functions: ฟังก์ชัน
+    csp_lists: รายการ
+    csp_loops: ลูป
   hoc_download:
     minecraft_name: ชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
   view_teacher_guide: ดูคำแนะนำสำหรับครู
