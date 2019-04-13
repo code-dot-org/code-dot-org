@@ -25,7 +25,6 @@ import {
 } from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
-import experiments from '@cdo/apps/util/experiments';
 
 const ARROW_PADDING = 60;
 // Only show arrow next to lesson numbers if column is larger than a single small bubble and it's margin.
@@ -79,7 +78,8 @@ class VirtualizedDetailView extends Component {
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
     getLevels: PropTypes.func,
     onScroll: PropTypes.func,
-    stageExtrasEnabled: PropTypes.bool
+    stageExtrasEnabled: PropTypes.bool,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   state = {
@@ -126,9 +126,6 @@ class VirtualizedDetailView extends Component {
     }
 
     const stageData = columnIndex > 0 && scriptData.stages[columnIndex - 1];
-    const inMiniRubricExperiment = experiments.isEnabled(
-      experiments.MINI_RUBRIC_2019
-    );
 
     // Header rows
     return (
@@ -176,7 +173,9 @@ class VirtualizedDetailView extends Component {
           <span style={styles.bubbleSet}>
             {scriptData.stages[stageIdIndex].levels.map((level, i) => (
               <FontAwesome
-                icon={getIconForLevel(level, inMiniRubricExperiment)}
+                // NOTE: When we remove mini rubrics experiment we will still need to have optional
+                // param to tell getIconForLevel that we are in the detailed progress view
+                icon={getIconForLevel(level, this.props.inMiniRubricExperiment)}
                 style={
                   level.isUnplugged
                     ? progressStyles.unpluggedIcon
@@ -220,6 +219,7 @@ class VirtualizedDetailView extends Component {
             stageId={stageIdIndex}
             stageExtrasEnabled={stageExtrasEnabled}
             levelsWithStatus={getLevels(student.id, stageIdIndex)}
+            inMiniRubricExperiment={this.props.inMiniRubricExperiment}
           />
         )}
       </div>
