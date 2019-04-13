@@ -87,7 +87,8 @@ export default class SummaryProgressRow extends React.Component {
     levels: PropTypes.arrayOf(levelType).isRequired,
     lockedForSection: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
-    lessonIsVisible: PropTypes.func.isRequired
+    lessonIsVisible: PropTypes.func.isRequired,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   render() {
@@ -97,7 +98,8 @@ export default class SummaryProgressRow extends React.Component {
       levels,
       lockedForSection,
       lessonIsVisible,
-      viewAs
+      viewAs,
+      inMiniRubricExperiment
     } = this.props;
 
     // Is this lesson hidden for whomever we're currently viewing as
@@ -191,6 +193,7 @@ export default class SummaryProgressRow extends React.Component {
             levels={levels}
             disabled={locked && viewAs !== ViewType.Teacher}
             style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
+            inMiniRubricExperiment={inMiniRubricExperiment}
           />
           {lesson.isFocusArea && <FocusAreaIndicator />}
         </td>
