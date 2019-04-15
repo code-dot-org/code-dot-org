@@ -12611,22 +12611,24 @@ en:
         current events: current events
         selected response: selected response
       behaviors 1 predict:
+        Click the "edit" button to see how the `mystery behavior` works. Study the code inside, then make a prediction.: Click the "edit" button to see how the `mystery behavior` works. Study the code inside, then make a prediction.
         Correct!: Correct!
         Incorrect: Incorrect
         Incorrect.: Incorrect.
-        It will change colors.: It will change colors.
-        It will grow.: It will grow.
-        It will move.: It will move.
-        It will spin: It will spin
-        Make a prediction. Study the code.: Make a prediction. Study the code.
+        The sprite will change colors.: The sprite will change colors.
+        The sprite will move.: The sprite will move.
+        The sprite will shrink.: The sprite will shrink.
+        The sprite will spin: The sprite will spin
       behaviors 4 predict:
-        <img src="https://images.code.org/38a241f03f921c971ef13bc12baddd3b-image-1543873510276.png"> Left then down: <img src="https://images.code.org/38a241f03f921c971ef13bc12baddd3b-image-1543873510276.png"> Left then down
-        <img src="https://images.code.org/44275a324f8028f5b662b49c2b3b7847-image-1543873510276.png"> Zig zag: <img src="https://images.code.org/44275a324f8028f5b662b49c2b3b7847-image-1543873510276.png"> Zig zag
-        <img src="https://images.code.org/74265a7ee432500edc7607af9e392fbf-image-1543873510275.png"> Down, then left: <img src="https://images.code.org/74265a7ee432500edc7607af9e392fbf-image-1543873510275.png"> Down, then left
-        <img src="https://images.code.org/d9c0f8e71ab367264076ef538156000a-image-1543873510274.png"> Diagonally: <img src="https://images.code.org/d9c0f8e71ab367264076ef538156000a-image-1543873510274.png"> Diagonally
-        Correct! Watch this video!: Correct! Watch this video!
-        Incorrect. Watch this video!: Incorrect. Watch this video!
-        Make a prediction. Which way will the mouse move towards the cheese?: Make a prediction. Which way will the mouse move towards the cheese?
+        Correct!: Correct!
+        Diagonally: Diagonally
+        Down, then left: Down, then left
+        Incorrect: Incorrect
+        Incorrect.: Incorrect.
+        'Incorrect. ': 'Incorrect. '
+        Left then down: Left then down
+        Make a prediction. Which way will the satellite move towards the galaxy?: Make a prediction. Which way will the satellite move towards the galaxy?
+        Zig zag: Zig zag
       commute assess - comp 3 - block:
         Displays "Hello" continuously for 60 seconds: Displays "Hello" continuously for 60 seconds
         Displays "Hello" exactly 60 times: Displays "Hello" exactly 60 times
