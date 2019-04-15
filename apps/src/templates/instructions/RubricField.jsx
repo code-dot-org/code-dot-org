@@ -19,7 +19,10 @@ const styles = {
     fontSize: 12,
     marginLeft: 10,
     color: color.black,
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
+    // Don't show default summary tag outline and background on hover or focus
+    outline: 'none',
+    background: 'none'
   },
   performanceLevelHeader: {
     display: 'flex',

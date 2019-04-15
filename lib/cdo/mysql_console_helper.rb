@@ -1,17 +1,18 @@
 module MysqlConsoleHelper
+  def self.options(db)
+    opts = %W(
+      --user=#{db.user}
+      --host=#{db.host}
+    )
+    database = db.path[1..-1]
+    opts << "--database=#{database}" if database
+    opts << "--port=#{db.port}" if db.port
+    opts << "--password=#{db.password}" if db.password
+    opts.join(' ')
+  end
+
   def self.run(connection_uri, args)
     db = URI.parse connection_uri
-
-    command = [
-      'mysql',
-      "--user=#{db.user}",
-      "--host=#{db.host}",
-      "--database=#{db.path[1..-1]}",
-    ]
-    command << "--port=#{db.port}" if db.port
-    command << "--execute=\"#{args}\"" unless args.empty?
-    command << "--password=#{db.password}" unless db.password.nil?
-
     warning =
       "*****************************************************************\n"\
       "*** You are connecting to the master production database.     ***\n"\
@@ -20,6 +21,8 @@ module MysqlConsoleHelper
       "*****************************************************************"
     puts warning if db.host.start_with?('production')
 
-    system(command.join(' '))
+    mysql_command = "mysql #{options(db)}"
+    mysql_command += " --execute=\"#{args}\"" unless args.empty?
+    system(mysql_command)
   end
 end
