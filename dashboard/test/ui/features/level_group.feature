@@ -29,8 +29,9 @@ Scenario: Submit three answers.
   And element ".level-group-content:nth(2) #checked_2" is visible
   And element ".level-group-content:nth(2) #checked_0" is visible
 
-@as_student
+@dashboard_db_access
 Scenario: Match levels within level group
+  Given I create a teacher-associated student named "Lilian"
   Given I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1?noautoplay=true"
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
@@ -65,3 +66,21 @@ Scenario: Match levels within level group
   And match level 1 contains 4 unplaced answers
   And match level 1 contains 4 empty slots
   And element ".xmark" is not visible
+
+  And I sign out
+
+  # Teacher can view answers
+
+  When I sign in as "Teacher_Lilian"
+  And I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1"
+  And I click selector ".show-handle .fa-chevron-left"
+  And I click selector ".section-student .name a" to load a new page
+
+  Then match level 0 contains 3 unplaced answers
+  And match level 0 contains 3 empty slots
+  And match level 1 contains 4 unplaced answers
+  And match level 1 contains 4 empty slots
+  And element ".xmark" is not visible
+
+  # no answers are draggable
+  And element ".ui-draggable" is not visible
