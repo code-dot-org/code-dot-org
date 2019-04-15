@@ -4,8 +4,6 @@ import {shallow} from 'enzyme';
 import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import ReactTooltip from 'react-tooltip';
-import sinon from 'sinon';
-import experiments from '@cdo/apps/util/experiments';
 
 const unpluggedLevel = {
   kind: LevelKind.unplugged,
@@ -29,7 +27,8 @@ const DEFAULT_PROPS = {
   icon: 'desktop',
   text: '1',
   fontSize: 12,
-  disabled: false
+  disabled: false,
+  inMiniRubricExperiment: false
 };
 
 describe('ProgressPill', () => {
@@ -85,42 +84,43 @@ describe('ProgressPill', () => {
   });
 
   it('has an assessment icon when single level is assessment and in experiment', () => {
-    sinon.stub(experiments, 'isEnabled').returns(true);
     const wrapper = shallow(
-      <ProgressPill {...DEFAULT_PROPS} levels={[assessmentLevel]} />
+      <ProgressPill
+        {...DEFAULT_PROPS}
+        levels={[assessmentLevel]}
+        inMiniRubricExperiment={true}
+      />
     );
     const assessmentIcon = wrapper.find('FontAwesome').at(2);
     assert.equal(assessmentIcon.props().icon, 'check-circle');
-    experiments.isEnabled.restore();
   });
 
   it('does not have an assessment icon when single level is assessment and not in experiment', () => {
-    sinon.stub(experiments, 'isEnabled').returns(false);
     const wrapper = shallow(
       <ProgressPill {...DEFAULT_PROPS} levels={[assessmentLevel]} />
     );
     expect(wrapper.find('FontAwesome')).to.have.lengthOf(1);
-    experiments.isEnabled.restore();
   });
 
   it('does not have an assessment icon when single level is not assessment and in experiment', () => {
-    sinon.stub(experiments, 'isEnabled').returns(true);
     const wrapper = shallow(
-      <ProgressPill {...DEFAULT_PROPS} levels={[unpluggedLevel]} />
+      <ProgressPill
+        {...DEFAULT_PROPS}
+        levels={[unpluggedLevel]}
+        inMiniRubricExperiment={true}
+      />
     );
     expect(wrapper.find('FontAwesome')).to.have.lengthOf(1);
-    experiments.isEnabled.restore();
   });
 
   it('does not have an assessment icon when multiple assessment levels and in experiment', () => {
-    sinon.stub(experiments, 'isEnabled').returns(true);
     const wrapper = shallow(
       <ProgressPill
         {...DEFAULT_PROPS}
         levels={[assessmentLevel, assessmentLevel]}
+        inMiniRubricExperiment={true}
       />
     );
     expect(wrapper.find('FontAwesome')).to.have.lengthOf(1);
-    experiments.isEnabled.restore();
   });
 });
