@@ -454,8 +454,8 @@ class Script < ActiveRecord::Base
   def self.get_family_from_cache(family_name)
     return Script.get_family_without_cache(family_name) unless should_cache?
 
-    cache_key = "/family/#{family_name}"
-    script_cache.fetch(cache_key) do
+    cache_key = "/#{family_name}"
+    script_family_cache.fetch(cache_key) do
       # Populate cache on miss.
       script_cache[cache_key] = Script.get_family_without_cache(family_name)
     end
