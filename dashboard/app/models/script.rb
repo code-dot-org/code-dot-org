@@ -454,17 +454,16 @@ class Script < ActiveRecord::Base
   def self.get_family_from_cache(family_name)
     return Script.get_family_without_cache(family_name) unless should_cache?
 
-    cache_key = "/#{family_name}"
-    script_family_cache.fetch(cache_key) do
+    script_family_cache.fetch(family_name) do
       # Populate cache on miss.
-      script_cache[cache_key] = Script.get_family_without_cache(family_name)
+      script_cache[family_name] = Script.get_family_without_cache(family_name)
     end
   end
 
   def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
     return nil unless family_name
 
-    family_scripts = Script.get_family_from_cache(family_name)
+    family_scripts = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
     if user
       assigned_script_ids = user.section_scripts.pluck(:id)
