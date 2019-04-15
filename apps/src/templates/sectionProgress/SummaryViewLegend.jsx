@@ -78,7 +78,7 @@ export default class SummaryViewLegend extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr style={styles.tr}>
               <td style={styles.td}>
                 <ProgressBox
                   style={styles.boxStyle}
@@ -109,15 +109,17 @@ export default class SummaryViewLegend extends Component {
                     perfect={20}
                     stageIsAllAssessment={false}
                   />
-                  <ProgressBox
-                    style={styles.boxStyle}
-                    started={true}
-                    incomplete={0}
-                    imperfect={0}
-                    perfect={20}
-                    stageIsAllAssessment={true}
-                    inMiniRubricExperiment={inMiniRubricExperiment}
-                  />
+                  {inMiniRubricExperiment && (
+                    <ProgressBox
+                      style={styles.boxStyle}
+                      started={true}
+                      incomplete={0}
+                      imperfect={0}
+                      perfect={20}
+                      stageIsAllAssessment={true}
+                      inMiniRubricExperiment={inMiniRubricExperiment}
+                    />
+                  )}
                 </div>
               </td>
               {showCSFProgressBox && (
