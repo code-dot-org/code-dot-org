@@ -78,7 +78,7 @@ export default class SummaryViewLegend extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr style={styles.tr}>
+            <tr>
               <td style={styles.td}>
                 <ProgressBox
                   style={styles.boxStyle}
