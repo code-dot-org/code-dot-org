@@ -466,19 +466,19 @@ class Script < ActiveRecord::Base
     end
 
     locale_str = locale&.to_s
-    latest_stable_version = nil
-    latest_supported_version = nil
+    latest_version = nil
     family_scripts.each do |script|
       next unless script.is_stable
-      latest_stable_version ||= script
+      latest_version ||= script
 
       is_supported = script.supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
-      latest_supported_version = script if is_supported
-
-      break if latest_supported_version
+      if is_supported
+        latest_version = script if is_supported
+        break
+      end
     end
 
-    script_name = (latest_supported_version || latest_stable_version)&.name
+    script_name = latest_version&.name
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
