@@ -1,8 +1,9 @@
+---
 ca:
   data:
     short_instructions:
       2-3 Artist 1 new: Hola, sóc un artista. Pots escriure codi per fer-me dibuixar gairebé qualsevol cosa. Utilitza uns quants blocs per fer-me dibuixar sobre les línies grises de la imatge. (Cada línia fa 100 píxels de llarg)
-      2-3 Artist 11: "Fes una vora al senyal d'stop dibuixant un octàgon amb vuit costats, cadascun de 100 píxels de llarg. Quants graus hauries de girar? (Pista: quant és 360 dividit per 8?) "
+      2-3 Artist 11: 'Fes una vora al senyal d''stop dibuixant un octàgon amb vuit costats, cadascun de 100 píxels de llarg. Quants graus hauries de girar? (Pista: quant és 360 dividit per 8?) '
       2-3 Artist 12: |-
         Fes un cercle per acabar l'ull!
 
@@ -11,7 +12,7 @@ ca:
       2-3 Artist 2: 'Aquesta casa té una paret a mig acabar. Cada costat fa 100, però la que està a mig acabar en fa només 50. Acaba la paret. '
       2-3 Artist 3.4: El bloc de salt mou l'artista sense que dibuixi. Dibuixa la línia de ratlles usant tant els blocs de saltar com els de dibuixar.
       2-3 Artist 3: Aquest barret fa 100 píxels d'alt. Dibuixa un barret que faci 70 píxels menys.
-      2-3 Artist 3new: "El barret vermell fa 100 píxels d'alt. Acaba de dibuixar el barret negre que és 70 píxels més curt. L'amplada del barret negre és de 50 píxels."
+      2-3 Artist 3new: El barret vermell fa 100 píxels d'alt. Acaba de dibuixar el barret negre que és 70 píxels més curt. L'amplada del barret negre és de 50 píxels.
       2-3 Artist 4: Ajuda’m a construir la casa per a aquest gat.
       2-3 Artist 5: Reescriu aquest codi amb un bloc "repeteix" per dibuixar la mateixa casa usant només tres blocs.
       2-3 Artist 6: 'Aquesta casa necessita una teulada! Dibuixa el triangle. Pista: Els tres costat tenen la mateixa longitud.'
@@ -21,119 +22,103 @@ ca:
       2-3 Artist 9: Acaba aquest estel
       2-3 Artist Assessment 1: 'Avaluació: Acaba de dibuixar la darrera dent, 25 píxels d''amplada i 25 píxels d''alçada.'
       2-3 Artist Debugging 1: Pots fer aquest barret amb una alçada màxima de 100?
-      2-3 Artist Debugging 10: "Els botons de direcció del meu comandament són massa estrets. Pista: Fes-los 10 píxels més gruixuts"
-      2-3 Artist Debugging 11: |-
-        Ajuda'm a acabar el meu bonic floc de neu. Quantes vegades he de "repetir" per enllestir-lo?
+      2-3 Artist Debugging 10: 'Els botons de direcció del meu comandament són massa estrets. Pista: Fes-los 10 píxels més gruixuts'
+      2-3 Artist Debugging 11: Ajuda'm a acabar el meu bonic floc de neu. Quantes vegades he de "repetir" per enllestir-lo?
       2-3 Artist Debugging 12: S'espera que afegeixi una onada de l'oceà en aquesta escena. Pots ajudar-me?
-      2-3 Artist Debugging 2: "El codi dels tres bigotis que veus és incorrecte. Pista: cada bigoti fa 75 píxels de llarg. Arregla el codi per dibuixar els bigotis."
-      2-3 Artist Debugging 3: "El meu vaixell té un forat! Pots arreglar-lo canviant l'angle de la línia? Pista: el darrer angle està desviat 15 graus."
+      2-3 Artist Debugging 2: 'El codi dels tres bigotis que veus és incorrecte. Pista: cada bigoti fa 75 píxels de llarg. Arregla el codi per dibuixar els bigotis.'
+      2-3 Artist Debugging 3: 'El meu vaixell té un forat! Pots arreglar-lo canviant l''angle de la línia? Pista: el darrer angle està desviat 15 graus.'
       2-3 Artist Debugging 4: Quina imatge estem mirant de dibuixar? Acaba de connectar els punts usant les línies i angles adequats.
-      2-3 Artist Debugging 5: "El codi de la cama i del peu que veus està malament. Pista: El peu és massa llarg, potser necessitem eliminar un pas (joc de paraules intencionat)"
-      2-3 Artist Debugging 6: |-
-        Sembla que estic assegut en una cadira que li falta una pota. Edita els blocs per dibuixar la pota.
-      2-3 Artist Debugging 7: |-
-        Sembla que la C al codi està dibuixada al revés. Pots fer que sembli una C?
-      2-3 Artist Debugging 8: |-
-        El meu molinet de vent no està acabat. Quantes vegades he de repetir per acabar-lo?
-      2-3 Artist Debugging 9: |-
-        El codi d'aquesta tija és incorrecte. Pista: L'angle està desviat 60 graus
-      2-3 Artist Debugging Assessment 1: "Aquesta forma és massa petita. Pots fer-la més gran? Pista: ha de tenir 75 píxels més a cada costat."
+      2-3 Artist Debugging 5: 'El codi de la cama i del peu que veus està malament. Pista: El peu és massa llarg, potser necessitem eliminar un pas (joc de paraules intencionat)'
+      2-3 Artist Debugging 6: Sembla que estic assegut en una cadira que li falta una pota. Edita els blocs per dibuixar la pota.
+      2-3 Artist Debugging 7: Sembla que la C al codi està dibuixada al revés. Pots fer que sembli una C?
+      2-3 Artist Debugging 8: El meu molinet de vent no està acabat. Quantes vegades he de repetir per acabar-lo?
+      2-3 Artist Debugging 9: 'El codi d''aquesta tija és incorrecte. Pista: L''angle està desviat 60 graus'
+      2-3 Artist Debugging Assessment 1: 'Aquesta forma és massa petita. Pots fer-la més gran? Pista: ha de tenir 75 píxels més a cada costat.'
       2-3 Artist Free Play: Joc lliure! Dibuixa el que vulguis.
-      2-3 Artist Functions 1 a: "Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda'm a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels més curts que la llargada del quadrat."
-      2-3 Artist Functions 1: "Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda'm a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels més curts que la llargada del quadrat."
-      2-3 Artist Functions 10: 'Aquí hi ha dues funcions, una per dibuixar un engranatge gran i una altra per dibuixar-ne un de petit. Usa-les per dibuixar a dins de la màquina!'
-      2-3 Artist Functions 11 a: "Hem reanomenat la funció \"dibuixa un quadrat\" com a \"dibuixa un hexàgon\", però només dibuixa quadrats! Pots modificar la funció \"dibuixa un hexàgon\" per dibuixar un hexàgon de 50 píxels per costat i dibuixar la imatge usant la funció?"
-      2-3 Artist Functions 11.5 a: "Aquí hi ha la mateixa funció \"Dibuixa un hexàgon\". Què passa si només gires 60 graus a cada bucle?"
-      2-3 Artist Functions 11.5: "Aquí hi ha la mateixa funció \"Dibuixa un hexàgon\". Què passa si només gires 60 graus a cada bucle?"
-      2-3 Artist Functions 11: "Hem reanomenat la funció \"dibuixa un quadrat\" com a \"dibuixa un hexàgon\", però només dibuixa quadrats! Pots modificar la funció \"dibuixa un hexàgon\" per dibuixar un hexàgon de 50 píxels per costat i dibuixar la imatge usant la funció?"
-      2-3 Artist Functions 12 Mike: "Les funcions són fantàstiques per dibuixar coses complexes diverses vegades. Pots usar la funció \"dibuixa un flor\" per omplir la resta de la caixa de jardiner? (Pista: Les plantes estan totes separades per 100 píxels de distància)  "
-      2-3 Artist Functions 12 a: "Les funcions són fantàstiques per dibuixar coses complexes diverses vegades. Pots usar la funció \"dibuixa un flor\" per omplir la resta de la caixa de jardiner? (Pista: Les plantes estan totes separades per 100 píxels de distància)  "
-      2-3 Artist Functions 12: "Les funcions són fantàstiques per dibuixar coses complexes diverses vegades. Pots usar la funció \"dibuixa un flor\" per omplir la resta de la caixa de jardiner? (Pista: Les plantes estan totes separades per 100 píxels de distància)  "
+      2-3 Artist Functions 1 a: 'Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda''m a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels més curts que la llargada del quadrat.'
+      2-3 Artist Functions 1: 'Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda''m a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels més curts que la llargada del quadrat.'
+      2-3 Artist Functions 10: Aquí hi ha dues funcions, una per dibuixar un engranatge gran i una altra per dibuixar-ne un de petit. Usa-les per dibuixar a dins de la màquina!
+      2-3 Artist Functions 11 a: Hem reanomenat la funció "dibuixa un quadrat" com a "dibuixa un hexàgon", però només dibuixa quadrats! Pots modificar la funció "dibuixa un hexàgon" per dibuixar un hexàgon de 50 píxels per costat i dibuixar la imatge usant la funció?
+      2-3 Artist Functions 11.5 a: Aquí hi ha la mateixa funció "Dibuixa un hexàgon". Què passa si només gires 60 graus a cada bucle?
+      2-3 Artist Functions 11.5: Aquí hi ha la mateixa funció "Dibuixa un hexàgon". Què passa si només gires 60 graus a cada bucle?
+      2-3 Artist Functions 11: Hem reanomenat la funció "dibuixa un quadrat" com a "dibuixa un hexàgon", però només dibuixa quadrats! Pots modificar la funció "dibuixa un hexàgon" per dibuixar un hexàgon de 50 píxels per costat i dibuixar la imatge usant la funció?
+      2-3 Artist Functions 12 Mike: 'Les funcions són fantàstiques per dibuixar coses complexes diverses vegades. Pots usar la funció "dibuixa un flor" per omplir la resta de la caixa de jardiner? (Pista: Les plantes estan totes separades per 100 píxels de distància)  '
+      2-3 Artist Functions 12 a: 'Les funcions són fantàstiques per dibuixar coses complexes diverses vegades. Pots usar la funció "dibuixa un flor" per omplir la resta de la caixa de jardiner? (Pista: Les plantes estan totes separades per 100 píxels de distància)  '
+      2-3 Artist Functions 12: 'Les funcions són fantàstiques per dibuixar coses complexes diverses vegades. Pots usar la funció "dibuixa un flor" per omplir la resta de la caixa de jardiner? (Pista: Les plantes estan totes separades per 100 píxels de distància)  '
       2-3 Artist Functions 13: T'hem donat quatre funcions. Usa-les com vulguis dins d'un o més bucles per fer dibuixos que puguis compartir amb els teus amics. Prem "executa" per veure'n un exemple.
-      2-3 Artist Functions 2: "Les funcions et permeten definir nous blocs! Hem mogut els blocs per dibuixar un quadrat a una funció anomenada \"dibuixa un quadrat\". Pots usar la funció \"dibuixa un quadrat\" per crear les ulleres? Els quadrats estan separats 75 píxels."
-      2-3 Artist Functions 3: "Edita la funció per dibuixar un quadrat amb un costat de 115 i dibuixar unes ulleres més grans. Els quadrats estan separats ara 45 píxels."
+      2-3 Artist Functions 2: Les funcions et permeten definir nous blocs! Hem mogut els blocs per dibuixar un quadrat a una funció anomenada "dibuixa un quadrat". Pots usar la funció "dibuixa un quadrat" per crear les ulleres? Els quadrats estan separats 75 píxels.
+      2-3 Artist Functions 3: Edita la funció per dibuixar un quadrat amb un costat de 115 i dibuixar unes ulleres més grans. Els quadrats estan separats ara 45 píxels.
       2-3 Artist Functions 4: Usa el bloc "repeteix" per dibuixar aquests tres quadrats.
       2-3 Artist Functions 7: 'Usa la funció "dibuixa una casa" per dibuixar dues cases usant dos paràmetres diferents. (Pista: la primera casa fa 100 píxels).'
-      2-3 Artist Functions 9: 'Aquesta és la funció floc de neu. Experimenta amb ell per crear una escena d''hivern! Aquest és un nivell de joc lliure, aquí que no cal resoldre res. Gaudeix!'
+      2-3 Artist Functions 9: Aquesta és la funció floc de neu. Experimenta amb ell per crear una escena d'hivern! Aquest és un nivell de joc lliure, aquí que no cal resoldre res. Gaudeix!
       2-3 Artist Loops 1: Pots fer un hexagon amb costats que tinguin 100 píxels de llarg per acabar la cèl.lula? Recorda que això vol dir que només cal que giris 60 graus!
       2-3 Artist Loops 10: Què passa al disseny si reduïm a la meitat el darrer pas endavant?
-      2-3 Artist Loops 11: Ara posarem *un altre* bucle tot al voltant de la creació! No oblidis afegir un angle at final del bucle extern.
+      2-3 Artist Loops 11: Ara posarem _un altre_ bucle tot al voltant de la creació! No oblidis afegir un angle at final del bucle extern.
       2-3 Artist Loops 2: Ara usa un bloc de repetició per convertir la cèl.lula en una closca.
       2-3 Artist Loops 4: Vols veure què passa quan repetim la forma una i altra vegada usant un bucle?
       2-3 Artist Loops 5: Ara farem un petit canvi al bucle i veurem com canvia el nostre dibuix.
       2-3 Artist Loops 6: Afegeix un moure i un altre gir dins el bucle i mira com canvia el teu disseny.
       2-3 Artist Loops 7: Podem usar bucles per a fer tota mena de polígons. Pots crear un rombe dins d'aquest hexagon?
       2-3 Artist Loops 8: Posem els dos elements dins d'un bucle.
-      2-3 Artist Loops 9: |-
-        Farem un bucle amb els mateixos elements, però ara afegirem distància entre ells.\r Usa el mateix codi que abans, però afegeix un pas endavant al final del bucle extern.
+      2-3 Artist Loops 9: Farem un bucle amb els mateixos elements, però ara afegirem distància entre ells.\\r Usa el mateix codi que abans, però afegeix un pas endavant al final del bucle extern.
       2-3 Artist Loops New 1: Dibuixarem el cap d'aquest robot! Pots fer un quadrat amb costats de 100 píxels?
       2-3 Artist Loops New 10: Ara connectem un grapat de Vs totes juntes, dibuixant-les amb un bucle.
       2-3 Artist Loops New 11: Aquesta vegada ho dibuixarem 24 vegades. Afegeix un gir a l'esquerra de 30 graus a aquest codi i posa-ho tot en un bloc de repetició.
-      2-3 Artist Loops New 12: "Dibuixa un diamant amb costats de 100 píxels.\n"
-      2-3 Artist Loops New 13: "Ara dibuixa el diamant tres cops amb un bucle."
+      2-3 Artist Loops New 12: Dibuixa un diamant amb costats de 100 píxels.
+      2-3 Artist Loops New 13: Ara dibuixa el diamant tres cops amb un bucle.
       2-3 Artist Loops New 14: Ara dibuixa el diamant deu cops però gira 90 graus entre cada diamant.
       2-3 Artist Loops New 15: Dibuixa alguna cosa divertida.
-      2-3 Artist Loops New 2: |-
-        Aquest és part del codi que has usat per dibuixar el quadrat. Què passa si uses el bloc de repetició per executar aquest codi quatre cops?
+      2-3 Artist Loops New 2: Aquest és part del codi que has usat per dibuixar el quadrat. Què passa si uses el bloc de repetició per executar aquest codi quatre cops?
       2-3 Artist Loops New 9: Dibuixa una simple V on els dos costats fan 50 píxels per completar la fletxa.
       2-3 Artist Match Hex Pic: 'Unir: Ajuda a acabar l''hexagon.'
       2-3 Artist Match Rho Pic: 'Relaciona: Acaba el codi que manca.'
       2-3 Artist Match Sq Pic: 'Relaciona: completa el codi que manca'
       2-3 Artist Match Tri pic: 'Relaciona: Insereix el codi que manca.'
-      2-3 Artist Nested Loops 1: Prèviament has usat bucles per dibuixar formes, però sabies que pots posar un bucle dins d'un altre?\r Repeteix tres cops tot aquest bloc de codi per dibuixar el patró.
+      2-3 Artist Nested Loops 1: Prèviament has usat bucles per dibuixar formes, però sabies que pots posar un bucle dins d'un altre?\\r Repeteix tres cops tot aquest bloc de codi per dibuixar el patró.
       2-3 Artist Nested Loops 10: Repeteix aquest codi 12 cops per completar el patró.
       2-3 Artist Nested Loops 11: Repeteix el codi quatre cops per completar el patró, gira 90 graus després de cada cercle.
       2-3 Artist Nested Loops 12: Repeteix aquest codi 12 vegades per completar les corbes.
-      2-3 Artist Nested Loops 2: "Ara repeteix el triangle sis cops. Després de cada triangle necessitaràs girar 60 graus abans de fer el següent."
-      2-3 Artist Nested Loops 3: "Hauràs de repetir el triangle 12 vegades per dibuixar aquest patró. Divideix el nombre de graus d'un cercle (360) entre el nombre de figures que dibuixes (12) per esbrinar quant has de girar després de cada figura."
-      2-3 Artist Nested Loops 4: "Repeteix aquest diamant 12 cops per dibuixar una flor. Pista: 12 diamants és just el que has fet - quant has de girar després de cada figura?"
-      2-3 Artist Nested Loops 5: "Omple les finestres de l'edifici amb un bucle imbricat. Les finestres fa 20 píxels de llarg i estan separades 20 píxels."
-      2-3 Artist Nested Loops 6: |-
-        Aquest dinosaure té 8 punxes pujant per la seva cua; cada punxa fa 30 píxels de llarg. Repeteix el triangle 8 vegades però, després de cadascun, assegura't que et mous endavant.
-      2-3 Artist Nested Loops 7: "Repeteix aquest triangle deu vegades per dibuixar el sol. Et caldrà moure i girar després de cada triangle. Pots esbrinar quant has de girar dividint el nombre de graus d'un cercle entre el nombre de figures que el formen."
-      2-3 Artist Nested Loops 8: "Ara afegirem una mica d'herba al nostre dibuix. Les mates d'herba estan separades 50 píxels."
-      2-3 Artist Nested Loops 9: "Acabarem el dibuix afegint una flor. Repeteix el diamant dotze vegades per dibuixar la teva flor."
+      2-3 Artist Nested Loops 2: Ara repeteix el triangle sis cops. Després de cada triangle necessitaràs girar 60 graus abans de fer el següent.
+      2-3 Artist Nested Loops 3: Hauràs de repetir el triangle 12 vegades per dibuixar aquest patró. Divideix el nombre de graus d'un cercle (360) entre el nombre de figures que dibuixes (12) per esbrinar quant has de girar després de cada figura.
+      2-3 Artist Nested Loops 4: 'Repeteix aquest diamant 12 cops per dibuixar una flor. Pista: 12 diamants és just el que has fet - quant has de girar després de cada figura?'
+      2-3 Artist Nested Loops 5: Omple les finestres de l'edifici amb un bucle imbricat. Les finestres fa 20 píxels de llarg i estan separades 20 píxels.
+      2-3 Artist Nested Loops 6: Aquest dinosaure té 8 punxes pujant per la seva cua; cada punxa fa 30 píxels de llarg. Repeteix el triangle 8 vegades però, després de cadascun, assegura't que et mous endavant.
+      2-3 Artist Nested Loops 7: Repeteix aquest triangle deu vegades per dibuixar el sol. Et caldrà moure i girar després de cada triangle. Pots esbrinar quant has de girar dividint el nombre de graus d'un cercle entre el nombre de figures que el formen.
+      2-3 Artist Nested Loops 8: Ara afegirem una mica d'herba al nostre dibuix. Les mates d'herba estan separades 50 píxels.
+      2-3 Artist Nested Loops 9: Acabarem el dibuix afegint una flor. Repeteix el diamant dotze vegades per dibuixar la teva flor.
       2-3 Artist Nested Loops Free Play: Joc lliure, dibuixa alguna cosa xula usant bubles niuats.
       2-3 Bee Conditionals 1: Hola! Sóc una abella. Ajuda'm a obtenir el nèctar de la flor.
-      2-3 Bee Conditionals 10: "Les flors liles poden tenir 0 o 1 nèctar. Tingues cura de no recollir el nèctar d'una flor lila si no en té. \\r\n"
-      2-3 Bee Conditionals 11: "Recull el nèctar de les flors que en tenen."
+      2-3 Bee Conditionals 10: Les flors liles poden tenir 0 o 1 nèctar. Tingues cura de no recollir el nèctar d'una flor lila si no en té. \\r
+      2-3 Bee Conditionals 11: Recull el nèctar de les flors que en tenen.
       2-3 Bee Conditionals 12: Usa un bucle per comprovar i recollir el nèctar de totes aquestes flors.
-      2-3 Bee Conditionals 13: |-
-        Recull el nèctar i fes mel. Pista: què passa si utilitzes el condicional "si nèctar" en una flor vermella? Ho pots fer amb un bucle?
-      2-3 Bee Conditionals 14: |-
-        Recull nèctar i fes mel. Vés amb compte de no recollir nèctar d'una flor lila si no en té.
-      2-3 Bee Conditionals 15: "Recull el nèctar de les quatre flors."
-      2-3 Bee Conditionals 2: "Hola, sóc una abella! Ajuda'm a recollir tot el nèctar de les flors. Utilitza un bucle."
-      2-3 Bee Conditionals 3: "Ajuda'm a recollir tot el nèctar de les flors i fer mel. Usa un bucle."
+      2-3 Bee Conditionals 13: 'Recull el nèctar i fes mel. Pista: què passa si utilitzes el condicional "si nèctar" en una flor vermella? Ho pots fer amb un bucle?'
+      2-3 Bee Conditionals 14: Recull nèctar i fes mel. Vés amb compte de no recollir nèctar d'una flor lila si no en té.
+      2-3 Bee Conditionals 15: Recull el nèctar de les quatre flors.
+      2-3 Bee Conditionals 2: Hola, sóc una abella! Ajuda'm a recollir tot el nèctar de les flors. Utilitza un bucle.
+      2-3 Bee Conditionals 3: Ajuda'm a recollir tot el nèctar de les flors i fer mel. Usa un bucle.
       2-3 Bee Conditionals 4: Ajuda'm a recollir tot el nèctar de les flors i fer tota la mel.
-      2-3 Bee Conditionals 5: "Les flors liles poden tenir 0 o 1 nèctar, però no ho saps! Vés amb compte de no recollir nèctar d'una flor lila que no en tingui. Comprova que el nèctar és 1 usant el bloc \"si\"."
+      2-3 Bee Conditionals 5: Les flors liles poden tenir 0 o 1 nèctar, però no ho saps! Vés amb compte de no recollir nèctar d'una flor lila que no en tingui. Comprova que el nèctar és 1 usant el bloc "si".
       2-3 Bee Conditionals 6: Comprova aquesta flor amb un bloc "if" per veure si hi té nèctar.
       2-3 Bee Conditionals 7: Recull nèctar de cada flor si en té.
       2-3 Bee Conditionals 8: En aquest camp hi ha flors liles i vermelles. Les flors vermelles tenen una quantitat de nèctar coneguda, però no se sap quant en tenen les flors liles. Recull tot el nèctar.
       2-3 Bee Conditionals 9: Recull tot el nèctar de cada flor.
       2-3 Bee Conditionals Assessment 1: 'Avaluació: Recull tot el nèctar. Compte de no recollir nèctar d''una flor lila si no en té.'
       2-3 Bee Debugging 1: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
-      2-3 Bee Debugging 10: "Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel."
-      2-3 Bee Debugging 2: |-
-        Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
-      2-3 Bee Debugging 3: |-
-        Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
+      2-3 Bee Debugging 10: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
+      2-3 Bee Debugging 2: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
+      2-3 Bee Debugging 3: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
       2-3 Bee Debugging 4: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
-      2-3 Bee Debugging 5: "Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel. Ara pots usar \"executa\" o \"pas\"."
-      2-3 Bee Debugging 6: |-
-        Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel. 
+      2-3 Bee Debugging 5: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel. Ara pots usar "executa" o "pas".
+      2-3 Bee Debugging 6: 'Aquests blocs m''estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel. '
       2-3 Bee Debugging 7: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
-      2-3 Bee Debugging 8: |-
-        Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
-      2-3 Bee Debugging 9: |-
-        Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
-      2-3 Bee Debugging Assessment 1: |-
-        Avaluació: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
+      2-3 Bee Debugging 8: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
+      2-3 Bee Debugging 9: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
+      2-3 Bee Debugging Assessment 1: 'Avaluació: Aquests blocs m''estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.'
       2-3 Bee Functions 1: Les funcions són blocs de codi que realitzen una tasca. Usa la funció "recull 2 nèctars" per recollir el nèctar de cada flor.
-      2-3 Bee Functions 10: "Les flors liles poden tenir 1 o 0 nèctar. Crea una funció que reculli nèctar només de les flors liles que en tenen."
-      2-3 Bee Functions 2: "Les funcions són blocs de codi que realitzen una tasca. Usa la funció \"recull 5\" per recollir cinc nèctars de cop. Assegura't d'usar un bucle per reduir el nombre de blocs usats."
+      2-3 Bee Functions 10: Les flors liles poden tenir 1 o 0 nèctar. Crea una funció que reculli nèctar només de les flors liles que en tenen.
+      2-3 Bee Functions 2: Les funcions són blocs de codi que realitzen una tasca. Usa la funció "recull 5" per recollir cinc nèctars de cop. Assegura't d'usar un bucle per reduir el nombre de blocs usats.
       2-3 Bee Functions 3: Recull tot el nèctar de cada flor.
-      2-3 Bee Functions 4: "La funció \"moure i obtenir nèctar\" fa girar l'abella, recull nèctar i després retorna l'abella a on va començar. Utilitza la funció de recollir tot el nèctar."
+      2-3 Bee Functions 4: La funció "moure i obtenir nèctar" fa girar l'abella, recull nèctar i després retorna l'abella a on va començar. Utilitza la funció de recollir tot el nèctar.
       2-3 Bee Functions 5: Ara hi ha més nèctar a les flors. Edita la funció donada de manera que reculli quatre nèctars i usa-la per recollir tot el nèctar de les flors.
       2-3 Bee Functions 6: Ara usa la mateixa funció per recollir el nèctar de les tres flors.
       2-3 Bee Functions 7: Les flors estan ara més lluny. Edita la funció donada i usa-la per recollir tot el nèctar de les flors.
@@ -141,8 +126,7 @@ ca:
       2-3 Bee Functions 9: Crea la teva pròpia funció que baixa pel camí, recull nèctar, fa mel i després retorna l'abella a l'inici del camí.
       2-3 Bee Functions Assessment 1: 'Avaluació: Usa la funció donada per recollir el nèctar de cada flor.'
       2-3 Bee Functions Assessment 2: 'Avaluació: Crea una funció per fer tres mels cada vegada.'
-      2-3 Bee Loops 1: |-
-        Cada flor conté una unitat de nèctar. Recull el nèctar de cada flor. 
+      2-3 Bee Loops 1: 'Cada flor conté una unitat de nèctar. Recull el nèctar de cada flor. '
       2-3 Bee Loops 10: Pots usar un bloc "mentre" dins de dos altres bucles per recollir tot el nèctar?
       2-3 Bee Loops 11: Usa bucles "mentre" per recollir tot el nèctar de les flors en aquest camp.
       2-3 Bee Loops 12: Usa bucles "mentre" per recollir tot el nèctar de les flors en aquest camp.
@@ -153,15 +137,14 @@ ca:
       2-3 Bee Loops 3: Recull el nèctar de cada flor i fes mel a cada rusc.
       2-3 Bee Loops 3A: Pots usar un bucle per recollir tot el nèctar?
       2-3 Bee Loops 3B: Ara usa el nou bloc repeteix per recollir tot el nèctar i fer tota la mel.
-      2-3 Bee Loops 4: |-
-        Usa un bucle semblant al del darrer problema però posant-hi a dins un gir.
-      2-3 Bee Loops 4A: "Què passa si repeteixes la seqüència tres cops? No oblidis fer la mel a l'acabar!"
-      2-3 Bee Loops 5: "Usa un bucle per baixar les escales i recollir el nèctar."
+      2-3 Bee Loops 4: Usa un bucle semblant al del darrer problema però posant-hi a dins un gir.
+      2-3 Bee Loops 4A: Què passa si repeteixes la seqüència tres cops? No oblidis fer la mel a l'acabar!
+      2-3 Bee Loops 5: Usa un bucle per baixar les escales i recollir el nèctar.
       2-3 Bee Loops 6: Usa un bucle per recollir el nèctar de cada flor i fer la mel a cada rusc.
       2-3 Bee Loops 7: Posa tots aquests blocs en un bucle per recollir el nèctar de cada flor.
-      2-3 Bee Loops 8: "Aquestes flors liles tenen una quantitat indeterminada de nèctar. Usa el bucle \"mentre nèctar\" per recollir tot el nèctar. Aquest bucle s'executarà mentre la condició sigui certa, en aquest cas Nèctar > 0."
+      2-3 Bee Loops 8: Aquestes flors liles tenen una quantitat indeterminada de nèctar. Usa el bucle "mentre nèctar" per recollir tot el nèctar. Aquest bucle s'executarà mentre la condició sigui certa, en aquest cas Nèctar > 0.
       2-3 Bee Loops 9: El bucle "mentre" pot repetir la mateixa acció que la instrucció "si" en un buble. Afegeix un bucle "mentre" a aquest codi per realitzar la mateixa tasca.
-      2-3 Bee Loops Assessment 1: 'Avaluació - Usar un bucle mentre per recollir tot el nèctar d''aquesta flor.'
+      2-3 Bee Loops Assessment 1: Avaluació - Usar un bucle mentre per recollir tot el nèctar d'aquesta flor.
       2-3 Maze 1: 'Pots ajudar-me a atrapar el porc dolent? Apila un parell de blocs "avança" i prem "Executar". '
       2-3 Maze 10: Guia'm al dimoni verd! (Ves en compte amb el TNT)
       2-3 Maze 11: Porta'm fins a la flor, tinc gana! Quantes vegades has de repetir un bloc?
@@ -188,8 +171,8 @@ ca:
       2-3 Maze 9: Guia'm al dimoni verd! (Ves en compte amb el TNT)
       2-3 Maze Loops 1: Pots dur-me fins al porc usant 5 blocs del mateix tipus?
       2-3 Maze Loops 17: Porta'm fins al girasol!
-      2-3 Maze Loops 18: "Porta'm fins al girasol!"
-      2-3 Maze Loops 19: "Porta'm fins al girasol!"
+      2-3 Maze Loops 18: Porta'm fins al girasol!
+      2-3 Maze Loops 19: Porta'm fins al girasol!
       2-3 Maze Loops 20: Pots resoldre aquest trencaclosques usant el menor nombre de blocs possible?
       2-3 Maze Loops 21: Porta'm fins al girasol!
       2-3 Maze Loops Assessment 1: 'Avaluació: Porta''m fins al girasol usant només 5 blocs! '
@@ -209,6 +192,7 @@ ca:
       2-3 maze sq14: Pots arribar al gira-sol usant només quatre blocs?
       2-3 maze sq15: Pots arribar al gira-sol usant només cinc blocs?
       2-3 maze sq16: Sí, aquest és semblant, però una mica diferent. Pots fer-ho amb només cinc blocs?
+      2-3: Les flors liles poden tenir 0 o 1 nèctar. Tingues cura de no recollir el nèctar d'una flor lila si no en té. \\r
       2-3level1: Ajuda a l'ocell perquè atrapi el porc entremaliat movent-lo cap endavant
       20hr_farmer_stage9_1: Hola, sóc una pagesa. Necessito la teva ajuda per aplanar el camp a la meva granja, així estarà llest per plantar. Mou-me a la pila de terra i utilitza el bloc "eliminar" per treure-la.
       20hr_farmer_stage9_11: 'Encara és fosc fora. Mou-me pel camp. Si hi ha una pila, elimina-la, i si hi ha un forat, ompli''l. Pista: usa el bloc "si" del menú desplegable d''opcions.'
@@ -248,7 +232,7 @@ ca:
       4-5 Artist 5: Quin angle fas servir?
       4-5 Artist 6: Aquest triangle equilàter té angles de 60, 60 i 60 graus. Cada costat és de 200 píxels. Completa el dibuix.
       4-5 Artist 7: Aquest triangle rectangle té angles de 30, 60 i 90 graus. La longitud de la part inclinada és el doble de l'altura de 100 píxels. Completa el dibuix.
-      4-5 Artist 8: "La línia del mig d'un camp de futbol és perpendicular a les bandes. Aquest camp té un perímetre de 800 píxels i fa 200 píxels de llarg. Quant fa d'ample? Dibuixa les línies de les vores i del mig del camp."
+      4-5 Artist 8: La línia del mig d'un camp de futbol és perpendicular a les bandes. Aquest camp té un perímetre de 800 píxels i fa 200 píxels de llarg. Quant fa d'ample? Dibuixa les línies de les vores i del mig del camp.
       4-5 Artist 9: Dibuixa l'altra meitat de manera que el disseny sigui simètric. Els triangles són equilàters i fan 50 píxels de llarg.
       4-5 Artist Assessment 1: 'Avaluació: Usa un bucle per dibuixar el triangle equilàter. Cada costat és de 300 píxels.'
       4-5 Artist For Loops 1: Posa els números de l'1 al 10 en els blocs d'amplada i executa el codi.
@@ -259,13 +243,12 @@ ca:
       4-5 Artist Functions 7: Utilitza la funció "dibuixa una casa" per dibuixar cases que facin 100 píxels per 50 píxels. Les dues cases estan separades per 50 píxels.
       4-5 Artist Patterns 4: Aquest diamant té 50 píxel per costat i angles de 60 i 120 graus. Utilitza un bucle per dibuixar-lo.
       4-5 Artist Patterns 5.5: Quantes vegades cal repetir aquest bloc per dibuixar la graella completa de diamants?
-      4-5 Artist Patterns 6: Quantes vegades cal repetir aquest bloc per dibuixar la graella completa de diamants?
       4-5 Artist Patterns 8: Utilitza un bucle per dibuixar aquest hexàgon amb 40 píxel per costats i angles de 60 graus.
       4-5 Bee Conditionals 3: Ala l'abella només vol fer mel. Assegura't de fer la mel tan sols a les bresques.
       4-5 Bee Conditionals 5: |-
         Hi pot haver una flor o una bresca
         sota aquests núvols. Utilitza els blocs "if/else" per recollir nèctar "if" si hi ha una flor, o "else" fer mel (si hi ha una bresca).
-      4-5 Bee Conditionals 7: "Recorda que les flors liles poden tenir 1, 2 o 3 nèctars. Completa la funció \"comprovar la flor lila\" i utilitzar-la per recollir tots els nèctar de les flors."
+      4-5 Bee Conditionals 7: Recorda que les flors liles poden tenir 1, 2 o 3 nèctars. Completa la funció "comprovar la flor lila" i utilitzar-la per recollir tots els nèctar de les flors.
       4-5 Maze 1 (copy 1): Benvolguda persona. Jo zombie. Haver... arribar... al gira-sol.
       4-5 Maze 1: Benvolguda persona. Jo zombie. Haver... arribar... al gira-sol.
       4-5 Maze 10: Pots arribar al gira-sol usant només quatre blocs?
@@ -283,8 +266,8 @@ ca:
       4-5 Maze 6 (copy 1): Pots resoldre aquest trencaclosques usant el menor nombre de blocs possible?
       4-5 Maze 6: Pots resoldre aquest trencaclosques usant el menor nombre de blocs possible?
       4-5 Maze 7: Benvolguda persona. Jo zombie. Haver... arribar... al gira-sol.
-      4-5 Maze 8: "Usa el bloc \"repeteix\" per fer arribar el zombie al gira-sol. (Evita els dentetes!)"
-      4-5 Maze 9: "crea un bucle amb el bloc \"repeteix fins que\"."
+      4-5 Maze 8: Usa el bloc "repeteix" per fer arribar el zombie al gira-sol. (Evita els dentetes!)
+      4-5 Maze 9: crea un bucle amb el bloc "repeteix fins que".
       4-5 Maze Assessment 1: 'Avaluació: Arriba al gira-sol.'
       App Lab test: prova
       Artist Autorun Test: Usa el bloc "repeteix" per dibuixar aquests tres quadrats.
@@ -302,12 +285,12 @@ ca:
       Course 4 Artist 20: Tens encara ganes de jugar? Aquí hi ha un llenç en blanc perquè hi dissenyis el que prefereixis!
       Course 4 Artist 3: Mira d'esbrinar què passa si executes aquest program (o prem "executa" per veure-ho). Després, repeteix-ho prou vegades per acabar el dibuix.
       Course 4 Artist 4: Quants graus fa un cercle? Omple el bloc "repeteix" amb un nombre que creï un cercle de colors.
-      Course 4 Artist 5: 'Dibuixa l''altra meitat de manera que el disseny sigui simètric. Els triangles són equilàters i fan 50 píxels de llarg.'
+      Course 4 Artist 5: Dibuixa l'altra meitat de manera que el disseny sigui simètric. Els triangles són equilàters i fan 50 píxels de llarg.
       Course 4 Artist 6: Acaba el programa per dibuixar aquests tres triangles equilàters.
       Course 4 Artist 7: 'Ara posa aquest bucle dins d''un altre per dibuixar 10 triangles. D''això se''n diu un bucle enniuat. Pista: Els 10 triangles fan una volta de 360 graus.  '
       Course 4 Artist 8: Dibuixa el sol repetint diverses vegades tot el bloc.
       Course 4 Artist 8a: Recordes aquesta forma? Ara et deixarem que la facis tu sense donar-te cap bloc per començar!
-      Course 4 Artist 9: "Repeteix el disseny 10 vegades i assegura't de girar després de cada figura que es dibuixa.\n"
+      Course 4 Artist 9: Repeteix el disseny 10 vegades i assegura't de girar després de cada figura que es dibuixa.
       Course 4 Artist Binary 7: Acaba aquest dibuix.
       Course 4 Artist Vars 1: "Dibuixarem un triangle equilàter. \nCada costat ha de fer 100 pixels de llarg."
       Course 4 Artist Vars 2: En lloc de fer "avança 150", el bloc "mou" ara fa referencia a una variable anomenada "llargada". Pots posar 150 a "llargada" per dibuixar el nou triangle?
@@ -343,14 +326,14 @@ ca:
       CourseD_Dance_Party_12: Anima't i segueix el ritme! Crea una dansa pròpia per compartir amb els teus amics.
       CourseE_HOC 2018 Level_1: Recull una barca del cofre.
       CourseE_HOC 2018 Level_10: Arriba fins a l'entrada d'aquest Monument de l'Oceà.
-      CourseE_HOC 2018 Level_11: 'Construeix un conducte amb la Prismarina dins del Monument de l''Oceà.'
-      CourseE_HOC 2018 Level_2: 'Vés fins al final del moll.'
-      CourseE_HOC 2018 Level_3: 'Enfila mar endins fins al bacallà.'
+      CourseE_HOC 2018 Level_11: Construeix un conducte amb la Prismarina dins del Monument de l'Oceà.
+      CourseE_HOC 2018 Level_2: Vés fins al final del moll.
+      CourseE_HOC 2018 Level_3: Enfila mar endins fins al bacallà.
       CourseE_HOC 2018 Level_4: Utilitza una circumferència per arribar al dofí.
       CourseE_HOC 2018 Level_5: Explora el naufragi per arribar al cofre.
       CourseE_HOC 2018 Level_6: Passa a través del gel per arribar al salmó.
       CourseE_HOC 2018 Level_7a: Cerca les runes submarines per trobar un cofre.
-      CourseE_HOC 2018 Level_9b: 'Utilitza el corall com a punt de referència per trobar el tresor.'
+      CourseE_HOC 2018 Level_9b: Utilitza el corall com a punt de referència per trobar el tresor.
       Crack Random Substitution: Instruccions
       Crack Random Substitution_2018: Instruccions
       Crack Random Substitution_2019: Instruccions
@@ -374,15 +357,15 @@ ca:
       Dance_Party_12: Anima't i segueix el ritme! Crea una dansa pròpia per compartir amb els teus amics.
       HOC 2018 Level_1: Recull una barca del cofre.
       HOC 2018 Level_10: Arriba fins a l'entrada d'aquest Monument de l'Oceà.
-      HOC 2018 Level_11: 'Construeix un conducte amb la Prismarina dins del Monument de l''Oceà.'
-      HOC 2018 Level_12: 'Dissenya el teu propi entorn marí, depèn només de tu!'
-      HOC 2018 Level_2: 'Vés fins al final del moll.'
-      HOC 2018 Level_3: 'Enfila mar endins fins al bacallà.'
+      HOC 2018 Level_11: Construeix un conducte amb la Prismarina dins del Monument de l'Oceà.
+      HOC 2018 Level_12: Dissenya el teu propi entorn marí, depèn només de tu!
+      HOC 2018 Level_2: Vés fins al final del moll.
+      HOC 2018 Level_3: Enfila mar endins fins al bacallà.
       HOC 2018 Level_4: Utilitza una circumferència per arribar al dofí.
       HOC 2018 Level_5: Explora el naufragi per arribar al cofre.
       HOC 2018 Level_6: Passa a través del gel per arribar al salmó.
       HOC 2018 Level_7a: Cerca les runes submarines per trobar un cofre.
-      HOC 2018 Level_9b: 'Utilitza el corall com a punt de referència per trobar el tresor.'
+      HOC 2018 Level_9b: Utilitza el corall com a punt de referència per trobar el tresor.
       Infinity_catch: Pots fer que l'Elsa ("actor 2") atrapi l'Anna utilitzant les fletxes del teclat?
       Infinity_finale: Crea qualsevol cosa que t'agradi i comparteix-la!
       Infinity_move_collide: El Hiro és "actor 1".  Mou-lo cap al Baymax i reprodueix un so quan es toquin.
@@ -439,7 +422,7 @@ ca:
       Overworld Shear Sheep_2018: És hora d'esquilar les ovelles! Utilitza la comanda "tallar" per esquilar la llana de les ovelles.
       Overworld Shear Sheep_2019: És hora d'esquilar les ovelles! Utilitza la comanda "tallar" per esquilar la llana de les ovelles.
       PDK5 Functions 2: Les funcions et permeten definir nous blocs! Hem mogut els blocs per dibuixar un quadrat a una funció anomenada "dibuixa un quadrat". Pots usar la funció "dibuixa un quadrat" per crear les ulleres? Els quadrats estan separats 75 píxels.
-      PS copy 2-3 Bee Conditionals 5: "Les flors liles poden tenir 0 o 1 nèctar, però no ho saps! Vés amb compte de no recollir nèctar d'una flor lila que no en tingui. Comprova que el nèctar és 1 usant el bloc \"si\"."
+      PS copy 2-3 Bee Conditionals 5: Les flors liles poden tenir 0 o 1 nèctar, però no ho saps! Vés amb compte de no recollir nèctar d'una flor lila que no en tingui. Comprova que el nèctar és 1 usant el bloc "si".
       Ryan_Demo: Fés que l'ant comenci un nou moviment després de 4 mesures!
       SpecialFrozenLevel: T'has convertit oficialment en una artista fabulosa! Crea un meravellós món hivernal.
       The Vigenere Cipher Widget: Instruccions
@@ -500,12 +483,9 @@ ca:
       course3_playlab_stage17_6: Pots afegir blocs per canviar el fons i la velocitat del pingüí, i llavors moure'l amb les fletxes fins que puntuïs?
       course3_playlab_stage17_7: Crea la teva pròpia història. Quan hagis acabat, fes clic a Finalitza per fer que els teus amics provin la teva història als seus mòbils.
       course4_artist_fwp_challenge1: Intenta executar aquest programa, i fer canvis per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment diferent)
-      courseC_artist_prog5: |-
-        Aquesta casa necessita una teulada! Dibuixa el triangle. Pista: Els tres costat tenen la mateixa longitud.
-      courseC_artist_prog5_2018: |-
-        Aquesta casa necessita una teulada! Dibuixa el triangle. Pista: Els tres costat tenen la mateixa longitud.
-      courseC_artist_prog5_2019: |-
-        Aquesta casa necessita una teulada! Dibuixa el triangle. Pista: Els tres costat tenen la mateixa longitud.
+      courseC_artist_prog5: 'Aquesta casa necessita una teulada! Dibuixa el triangle. Pista: Els tres costat tenen la mateixa longitud.'
+      courseC_artist_prog5_2018: 'Aquesta casa necessita una teulada! Dibuixa el triangle. Pista: Els tres costat tenen la mateixa longitud.'
+      courseC_artist_prog5_2019: 'Aquesta casa necessita una teulada! Dibuixa el triangle. Pista: Els tres costat tenen la mateixa longitud.'
       courseD_bee_debugging3: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
       courseD_bee_nestedLoops6_2018: Porta'm fins al girasol!
       courseD_bounce_events10: Ara hi ha un objectiu a la part superior. Uneix els blocs "puntuació" i "puntuació oponent"  als blocs "quan bola arriba a la meta" i "quan bola passa de llarg" per fer un joc. Mira quants punts pots anotar abans que el seu oponent anoti dues vegades.
@@ -520,14 +500,14 @@ ca:
       courseD_bounce_events6: Ara l'objectiu final és a la part superior. Cal unir blocs a tots dos blocs "quan toca la bola " per resoldre aquest puzle.
       courseD_bounce_events7: Uneix blocs a cadascun dels blocs "quan". Bota la pilota fins que arribi a l'objectiu final.
       courseD_debugging_3: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
-      courseD_maze_nestedLoops4: 'Porta''m fins al girasol!'
-      courseD_maze_nestedLoops4_2018: 'Porta''m fins al girasol!'
-      courseD_maze_nestedLoops4_2019: 'Porta''m fins al girasol!'
+      courseD_maze_nestedLoops4: Porta'm fins al girasol!
+      courseD_maze_nestedLoops4_2018: Porta'm fins al girasol!
+      courseD_maze_nestedLoops4_2019: Porta'm fins al girasol!
       courseD_maze_nestedLoops6: Porta'm fins al girasol!
       courseD_maze_nestedLoops6_2018: Porta'm fins al girasol!
       courseD_maze_nestedLoops6_2019: Porta'm fins al girasol!
-      courseE_artist_functions1: "Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda'm a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels més curts que la llargada del quadrat."
-      courseE_artist_functions1_2018: "Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda'm a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels més curts que la llargada del quadrat."
+      courseE_artist_functions1: 'Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda''m a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels més curts que la llargada del quadrat.'
+      courseE_artist_functions1_2018: 'Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda''m a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels més curts que la llargada del quadrat.'
       courseE_bee_functions1: Recull tot el nèctar de cada flor.
       courseE_bee_functions1_2018: Recull tot el nèctar de cada flor.
       courseE_bee_functions3: Les funcions són blocs de codi que realitzen una tasca. Usa la funció "recull 5" per recollir cinc nèctars de cop. Assegura't d'usar un bucle per reduir el nombre de blocs usats.
@@ -579,75 +559,64 @@ ca:
       grade2_CaringForNewPet_10: Porta'm fins al porc!
       grade2_CaringForNewPet_5: Porta'm fins al porc!
       grade2_MakeDogTag_10: Dibuixa alguna cosa divertida.
-      grade2_MakeDogTag_3: |-
-        Ajuda’m a construir la casa per a aquest gat.
-      grade2_MakeDogTag_4: |-
-        Aquesta casa necessita una teulada! Dibuixa el triangle. Pista: Els tres costat tenen la mateixa longitud.
-      grade2_MakeDogTag_6: 'Joc lliure! Dibuixa el que vulguis.'
+      grade2_MakeDogTag_3: Ajuda’m a construir la casa per a aquest gat.
+      grade2_MakeDogTag_4: 'Aquesta casa necessita una teulada! Dibuixa el triangle. Pista: Els tres costat tenen la mateixa longitud.'
+      grade2_MakeDogTag_6: Joc lliure! Dibuixa el que vulguis.
       grade2_MakeDogTag_8: Ara connectem un grapat de Vs totes juntes, dibuixant-les amb un bucle.
       grade2_MakeDogTag_9: Aquesta vegada ho dibuixarem 24 vegades. Afegeix un gir a l'esquerra de 30 graus a aquest codi i posa-ho tot en un bloc de repetició.
       grade2_PuppyLoops_1: Pots dur-me fins al porc usant 5 blocs del mateix tipus?
-      grade2_PuppyLoops_10: |-
-        El meu molinet de vent no està acabat. Quantes vegades he de repetir per acabar-lo?
+      grade2_PuppyLoops_10: El meu molinet de vent no està acabat. Quantes vegades he de repetir per acabar-lo?
       grade2_PuppyLoops_2: 'Pots substituir aquests cinc blocs amb només dos blocs? (Pista: creaa un bucle utilitzant un bloc "repeteix".)'
       grade2_PuppyLoops_4: Utilitza dos bucles per arribar al porc utilitzant menys blocs.
       grade2_PuppyLoops_5: Porta'm fins al porc.
       grade2_PuppyLoops_7: Porta'm fins al girasol!
-      grade2_PuppyLoops_8: "El codi dels tres bigotis que veus és incorrecte. Pista: cada bigoti fa 75 píxels de llarg. Arregla el codi per dibuixar els bigotis."
-      grade2_PuppyLoops_9: |-
-        Sembla que la C al codi està dibuixada al revés. Pots fer que sembli una C?
+      grade2_PuppyLoops_8: 'El codi dels tres bigotis que veus és incorrecte. Pista: cada bigoti fa 75 píxels de llarg. Arregla el codi per dibuixar els bigotis.'
+      grade2_PuppyLoops_9: Sembla que la C al codi està dibuixada al revés. Pots fer que sembli una C?
       grade2_puppy_loops2: 'Pots substituir aquests cinc blocs amb només dos blocs? (Pista: creaa un bucle utilitzant un bloc "repeteix".)'
       grade2_puppy_loops4: Utilitza dos bucles per arribar al porc utilitzant menys blocs.
       grade3_ConditionalsElse_3: Ala l'abella només vol fer mel. Assegura't de fer la mel tan sols a les bresques.
       grade3_ConditionalsElse_5: |-
         Hi pot haver una flor o una bresca
         sota aquests núvols. Utilitza els blocs "if/else" per recollir nèctar "if" si hi ha una flor, o "else" fer mel (si hi ha una bresca).
-      grade3_ConditionalsElse_7: "Recorda que les flors liles poden tenir 1, 2 o 3 nèctars. Completa la funció \"comprovar la flor lila\" i utilitzar-la per recollir tots els nèctar de les flors."
+      grade3_ConditionalsElse_7: Recorda que les flors liles poden tenir 1, 2 o 3 nèctars. Completa la funció "comprovar la flor lila" i utilitzar-la per recollir tots els nèctar de les flors.
       grade3_ConditionalsElse_TeacherIDo: |-
         Hi pot haver una flor o una bresca
         sota aquests núvols. Utilitza els blocs "if/else" per recollir nèctar "if" si hi ha una flor, o "else" fer mel (si hi ha una bresca).
-      grade3_Conditionals_1: "Hola, sóc una abella! Ajuda'm a recollir tot el nèctar de les flors. Utilitza un bucle."
-      grade3_Conditionals_10: |-
-        Recull el nèctar i fes mel. Pista: què passa si utilitzes el condicional "si nèctar" en una flor vermella? Ho pots fer amb un bucle?
-      grade3_Conditionals_11 BAD: 'Avaluació - Usar un bucle mentre per recollir tot el nèctar d''aquesta flor.'
-      grade3_Conditionals_11: |-
-        Recull nèctar i fes mel. Vés amb compte de no recollir nèctar d'una flor lila si no en té.
-      grade3_Conditionals_12: "Recull el nèctar de les quatre flors."
+      grade3_Conditionals_1: Hola, sóc una abella! Ajuda'm a recollir tot el nèctar de les flors. Utilitza un bucle.
+      grade3_Conditionals_10: 'Recull el nèctar i fes mel. Pista: què passa si utilitzes el condicional "si nèctar" en una flor vermella? Ho pots fer amb un bucle?'
+      grade3_Conditionals_11 BAD: Avaluació - Usar un bucle mentre per recollir tot el nèctar d'aquesta flor.
+      grade3_Conditionals_11: Recull nèctar i fes mel. Vés amb compte de no recollir nèctar d'una flor lila si no en té.
+      grade3_Conditionals_12: Recull el nèctar de les quatre flors.
       grade3_Conditionals_13: 'Avaluació: Recull tot el nèctar. Compte de no recollir nèctar d''una flor lila si no en té.'
-      grade3_Conditionals_2: "Ajuda'm a recollir tot el nèctar de les flors i fer mel. Usa un bucle."
-      grade3_Conditionals_3: "Les flors liles poden tenir 0 o 1 nèctar, però no ho saps! Vés amb compte de no recollir nèctar d'una flor lila que no en tingui. Comprova que el nèctar és 1 usant el bloc \"si\"."
+      grade3_Conditionals_2: Ajuda'm a recollir tot el nèctar de les flors i fer mel. Usa un bucle.
+      grade3_Conditionals_3: Les flors liles poden tenir 0 o 1 nèctar, però no ho saps! Vés amb compte de no recollir nèctar d'una flor lila que no en tingui. Comprova que el nèctar és 1 usant el bloc "si".
       grade3_Conditionals_4: Comprova aquesta flor amb un bloc "if" per veure si hi té nèctar.
       grade3_Conditionals_5: Recull nèctar de cada flor si en té.
       grade3_Conditionals_6: En aquest camp hi ha flors liles i vermelles. Les flors vermelles tenen una quantitat de nèctar coneguda, però no se sap quant en tenen les flors liles. Recull tot el nèctar.
       grade3_Conditionals_7: Recull tot el nèctar de cada flor.
-      grade3_Conditionals_8: "Recull el nèctar de les flors que en tenen."
+      grade3_Conditionals_8: Recull el nèctar de les flors que en tenen.
       grade3_Conditionals_9: Usa un bucle per comprovar i recollir el nèctar de totes aquestes flors.
       grade3_Conditionals_TeacherIDo: Comprova aquesta flor amb un bloc "if" per veure si hi té nèctar.
       grade3_Debugging_1: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
-      grade3_Debugging_5: "Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel. Ara pots usar \"executa\" o \"pas\"."
-      grade3_Debugging_6: |-
-        Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel. 
+      grade3_Debugging_5: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel. Ara pots usar "executa" o "pas".
+      grade3_Debugging_6: 'Aquests blocs m''estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel. '
       grade3_Debugging_7: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
-      grade3_Debugging_9: |-
-        Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
+      grade3_Debugging_9: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
       grade3_Debugging_TeacherIDo: Aquests blocs m'estan empipant. Arregla errors per recollir tot el nèctar i fer tota la mel.
-      grade3_Loops_10: |-
-        Usa un bucle semblant al del darrer problema però posant-hi a dins un gir.
-      grade3_Loops_11: "Usa un bucle per baixar les escales i recollir el nèctar."
+      grade3_Loops_10: Usa un bucle semblant al del darrer problema però posant-hi a dins un gir.
+      grade3_Loops_11: Usa un bucle per baixar les escales i recollir el nèctar.
       grade3_Loops_12: Usa un bucle per recollir el nèctar de cada flor i fer la mel a cada rusc.
       grade3_Loops_2: Pots fer la mateixa tasca més fàcilment usant un bucle?
       grade3_Loops_3: Pots usar un bucle per recollir tot el nèctar?
       grade3_Loops_4: Ara usa el nou bloc repeteix per recollir tot el nèctar i fer tota la mel.
       grade3_Loops_5: Posa tots aquests blocs en un bucle per recollir el nèctar de cada flor.
-      grade3_Loops_6: "Què passa si repeteixes la seqüència tres cops? No oblidis fer la mel a l'acabar!"
-      grade3_Loops_7: |-
-        Cada flor conté una unitat de nèctar. Recull el nèctar de cada flor. 
+      grade3_Loops_6: Què passa si repeteixes la seqüència tres cops? No oblidis fer la mel a l'acabar!
+      grade3_Loops_7: 'Cada flor conté una unitat de nèctar. Recull el nèctar de cada flor. '
       grade3_Loops_8: Usa un bucle per recollir el nèctar i fer mel.
       grade3_Loops_9: Recull el nèctar de cada flor i fes mel a cada rusc.
-      grade3_Loops_TeacherIDo: |-
-        Cada flor conté una unitat de nèctar. Recull el nèctar de cada flor. 
+      grade3_Loops_TeacherIDo: 'Cada flor conté una unitat de nèctar. Recull el nèctar de cada flor. '
       grade3_maze_Loop1: 'Avaluació: Porta''m fins al girasol usant només 5 blocs! '
-      grade3_maze_loops2: 'Porta''m fins al girasol!'
+      grade3_maze_loops2: Porta'm fins al girasol!
       grade3_maze_loops3: Porta'm fins al girasol!
       grade3_maze_loops4: Porta'm fins al girasol!
       grade3_maze_loops5: Porta'm fins al girasol!
@@ -658,8 +627,8 @@ ca:
       grade3_robotFarmer_ConditionalsIntro_11: 'Encara és fosc fora. Mou-me pel camp. Si hi ha una pila, elimina-la, i si hi ha un forat, ompli''l. Pista: usa el bloc "si" del menú desplegable d''opcions.'
       grade3_robotFarmer_ConditionalsIntro_6: Lleva totes les piles de terra, utilitzant la menor quantitat de blocs possibles. Les noves opcions en el menú desplegable del bloc "mentre", em diuen si estic aturat en una pila o en un forat.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Ajuda''m a omplir tots aquests forats amb 5 palades de terra. Pista: pots posar un bloc "repetir" dins el bloc "mentre".'
-      grade4_artist_functions1: "Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda'm a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels més curts que la llargada del quadrat."
-      grade4_artist_functions2: "Les funcions et permeten definir nous blocs! Hem mogut els blocs per dibuixar un quadrat a una funció anomenada \"dibuixa un quadrat\". Pots usar la funció \"dibuixa un quadrat\" per crear les ulleres? Els quadrats estan separats 75 píxels."
+      grade4_artist_functions1: 'Hola. Jo artista zombie. Jo agrada dibuixar! Ajuda''m a dibuixar les ulleres quadrades. Pista: el pont entre les vidres és 25 píxels més curts que la llargada del quadrat.'
+      grade4_artist_functions2: Les funcions et permeten definir nous blocs! Hem mogut els blocs per dibuixar un quadrat a una funció anomenada "dibuixa un quadrat". Pots usar la funció "dibuixa un quadrat" per crear les ulleres? Els quadrats estan separats 75 píxels.
       grade4_artist_nestedLoops_challenge: |-
         Clica aquí per veure altre cop les instruccions completes!
 
@@ -684,27 +653,23 @@ ca:
       grade4_frozen_square_loop1: Hola, sóc Anna d'Arendelle! Anem a fer un quadrat amb el bloc "Repetir", que fa servir menys blocs. Quantes vegades (???) haurà de repetir-se el contingut del bloc "Repetir" per fer un quadrat?
       grade4_frozen_square_loop2: Anem a crear 3 quadrats, girant després de cada quadrat. Assegura't de girar 120 graus abans de cada nou quadrat.
       grade4_frozen_square_loop3: Pots fer un floquet de neu emprant el bloc "Repetir" per fer un quadrat 10 vegades i un bloc "Girar" que giri 36 graus entre cada quadrat?
-      grade4_review_artist1: Hola, sóc un artista. Pots escriure codi per fer-me dibuixar gairebé qualsevol cosa. Utilitza uns quants blocs per fer-me dibuixar sobre les línies grises de la imatge. (Cada línia fa 100 píxels de llarg)
       grade4_review_artist2: 'Aquesta casa necessita una teulada! Dibuixa el triangle. Pista: Els tres costat tenen la mateixa longitud.'
       grade4_review_artist3: El bloc de salt mou l'artista sense que dibuixi. Dibuixa la línia de ratlles usant tant els blocs de saltar com els de dibuixar.
       grade4_review_bee1: Ara usa el nou bloc repeteix per recollir tot el nèctar i fer tota la mel.
       grade4_review_bee2: Recull el nèctar de cada flor i fes mel a cada rusc.
-      grade4_review_bee3: |-
-        Usa un bucle semblant al del darrer problema però posant-hi a dins un gir.
+      grade4_review_bee3: Usa un bucle semblant al del darrer problema però posant-hi a dins un gir.
       grade5_artist_binary8: Acaba aquest dibuix.
       grade5_artist_variables_freeplay16: Tens encara ganes de jugar? Aquí hi ha un llenç en blanc perquè hi dissenyis el que prefereixis!
       grade5_artist_variables_triangles2: En lloc de fer "avança 150", el bloc "mou" ara fa referencia a una variable anomenada "llargada". Pots posar 150 a "llargada" per dibuixar el nou triangle?
-      level 'grade3_Loops_10: |-
-        Usa un bucle semblant al del darrer problema però posant-hi a dins un gir.
-      level 'grade3_Loops_11: "Usa un bucle per baixar les escales i recollir el nèctar."
+      level 'grade3_Loops_10: Usa un bucle semblant al del darrer problema però posant-hi a dins un gir.
+      level 'grade3_Loops_11: Usa un bucle per baixar les escales i recollir el nèctar.
       level 'grade3_Loops_12: Usa un bucle per recollir el nèctar de cada flor i fer la mel a cada rusc.
       level 'grade3_Loops_2: Pots fer la mateixa tasca més fàcilment usant un bucle?
       level 'grade3_Loops_3: Pots usar un bucle per recollir tot el nèctar?
       level 'grade3_Loops_4: Ara usa el nou bloc repeteix per recollir tot el nèctar i fer tota la mel.
       level 'grade3_Loops_5: Posa tots aquests blocs en un bucle per recollir el nèctar de cada flor.
-      level 'grade3_Loops_6: "Què passa si repeteixes la seqüència tres cops? No oblidis fer la mel a l'acabar!"
-      level 'grade3_Loops_7: |-
-        Cada flor conté una unitat de nèctar. Recull el nèctar de cada flor. 
+      level 'grade3_Loops_6: Què passa si repeteixes la seqüència tres cops? No oblidis fer la mel a l'acabar!
+      level 'grade3_Loops_7: 'Cada flor conté una unitat de nèctar. Recull el nèctar de cada flor. '
       level 'grade3_Loops_8: Usa un bucle per recollir el nèctar i fer mel.
       level 'grade3_Loops_9: Recull el nèctar de cada flor i fes mel a cada rusc.
       level grade3_Loops_2: Pots fer la mateixa tasca més fàcilment usant un bucle?

@@ -19,7 +19,7 @@ sl:
         črto z uporabo blokov.
       2-3 Artist 3: Ta klobuk je visok 100 pik. Nariši klobuk, ki ima 70 pik manj.
       2-3 Artist 3new: "Višina rdečega klobuka je 100 pikslov. Dokončaj risbo črnega
-        klobuka, ki je za 70 pikslov nižji.\r (Opomba: Širina obeh klobukov je 50
+        klobuka, ki je za 70 pikslov nižji.\\\r (Opomba: Širina obeh klobukov je 50
         pikslov.)"
       2-3 Artist 4: Pomagaj mi končati to mačjo hiško.
       2-3 Artist 5: To kodo zamenjaj s kocko "ponovi večkrat" in nariši isto hišo
@@ -329,11 +329,11 @@ sl:
       2-3 Maze 9: Pelji me k tej zeleni zlobi! (Pazi se TNTja)
       2-3 Maze Loops 1: Me lahko pelješ do prašička z uporabo 5 blokov?
       2-3 Maze Loops 17: Uporabi, kar si se naučil, da bi me spravil k sončnici!
-      2-3 Maze Loops 18: "Spravi me k sončnici tako, a uporabiš čim manj blokov! \r
-        \r\nPoskušaj uporabiti blok ponovi -krat znotraj še enega, da zmanjšaš število
+      2-3 Maze Loops 18: "Spravi me k sončnici tako, a uporabiš čim manj blokov! \\\r
+        \\\r\nPoskušaj uporabiti blok ponovi -krat znotraj še enega, da zmanjšaš število
         blokov."
-      2-3 Maze Loops 19: "Pojdimo na naslednjo stopnjo! \r\nUporabi zanke tako, da
-        me spraviš k sončnici, s čim manj uporabljenimi zankami."
+      2-3 Maze Loops 19: "Pojdimo na naslednjo stopnjo! \\\r\nUporabi zanke tako,
+        da me spraviš k sončnici, s čim manj uporabljenimi zankami."
       2-3 Maze Loops 20: Pripelji me do sončnice z uporabo čim manj blokov!
       2-3 Maze Loops 21: Spravi me k sončnici z uporabo čim manj blokov!
       2-3 Maze Loops Assessment 1: 'Pelji me do sončnice z uporabo 5 blokov! '
@@ -350,6 +350,8 @@ sl:
       2-3 maze sq14: Ali lahko prideš do sončnice, tako da uporabiš le 4 bloke?
       2-3 maze sq15: Ali lahko prideš do sončnice z uporabo le petih blokov?
       2-3 maze sq16: Dobro, to je podobno. Ali ti lahko uspe le s petimi bloki?
+      2-3: Vijolične rože imajo lahko 1 ali 0 nektarja. Pazi, da ne nabiraš nektarja
+        z vijolične rože, ki ga nima./r
       2-3level1: Pomagaj ptici ujeti nagajivega pujsa tako, da jo premakneš naprej
       20hr_farmer_stage9_1: Pozdravljeni! Sem kmetica, ki zate prideluje hrano in
         potrebujem tvojo pomoč. Na kmetiji je potrebno zravnati polja in jih pripraviti
@@ -468,8 +470,6 @@ sl:
       4-5 Artist Patterns 5: Ponavljaj kodo, da dobiš vrstico s 6 rombi. Opazi, da
         smo spremenili kodo našega romba tako, da se ponovi trikrat namesto dvakrat
         - zakaj misliš, da je tako?
-      4-5 Artist Patterns 6: Kolikokrat moraš ponoviti ta blok, da narišeš celotno
-        mrežo rombov?
       4-5 Artist Patterns 7: Spremenili smo kodo iz zadnje naloge, da smo dobili kompleksnejši
         vzorec. Opazuj, kako se rombi prekrivajo in poskusi spremeniti prvi "skoči
         nazaj" iz 100 na 50 (polovico dolžine) - kako daleč naj gre umetnik v drugem
@@ -701,14 +701,14 @@ sl:
         do 100 prišteva po 10. \nOPOZORILO: Preglej kodo, preden pritisneš \"Zaženi\"."
       Course 4 Artist For Loops 3: "Uporabite prejšnjo rešitev kot predlogo za dokončanje
         te naloge. \nNajmanjši trikotnik ima stranice dolge 20 pikslov, največji pa
-        200 pikslov. Vsak naslednji trikotnik je za 20 pikslov večji.\n"
+        200 pikslov. Vsak naslednji trikotnik je za 20 pikslov večji."
       Course 4 Artist For Loops 4: 'Kaj bi spremenil pri tej nalogi, da bodo tokrat
         narisani kvadrati? Začetna dolžina stranice je 15 pikslov, najdaljša pa meri
         300 pikslov. Vsaka naslednja je za 15 pikslov daljša. '
       Course 4 Artist For Loops 6a: Naredi tri majhne sprememb v kodi iz prejšnje
         naloge, da narišeš tole!
       Course 4 Artist For Loops 8: "Samo majhna sprememba kode iz prejšnje naloge
-        lahko nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti? \r\n\r\nNamig:
+        lahko nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti? \\\r\n\\\r\nNamig:
         Nekaj je treba odstraniti!"
       Course 4 Artist For Loops Challenge: |-
         **Izziv:**
@@ -987,7 +987,7 @@ sl:
       K-1 Maze Loops Assessment 2: Uporabi `ponovi` zanko, da me pripelješ do prašička!
       K-1 Maze Multi 14: Stopnja Ocenjevanja
       K-1 Maze Multi 15: Stopnja Ocenjevanja
-      K-1 Maze Sequence Assessment 1: "Poglejmo, kaj si se naučil! \r Premakni me
+      K-1 Maze Sequence Assessment 1: "Poglejmo, kaj si se naučil! \\\r Premakni me
         v eno smer, nato v drugo, da pridem do prašička."
       K-1 Maze Sequence Assessment 2: Premakni me v eno smer, nato v drugo, da pridem
         do prašička.
@@ -1763,9 +1763,6 @@ sl:
         Kako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke "points" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo "ko igralec 2 se dotakne česarkoli" tudi za večanje vrednosti spremenljivke "points".
         Vrednost spremenljivke lahko večaš tako, da nastaviš "points = points + 1."
         Zberi 10 točk (vsako posebej...) da končaš to nalogo.
-      grade4_review_artist1: Živio, jaz sem umetnik. Lahko sestaviš kodo, s pomočjo
-        katere bom narisal skoraj vse. Uporabi nekaj blokov, da bom risal preko sivih
-        črt v sliki. (Vsaka črta je dolga 100 pixlov)
       grade4_review_artist2: 'Ta hiša potrebuje streho! Nariši trikotnik. Namig: vse
         3 strani so enako dolge.'
       grade4_review_artist3: Bloki "skoči" premaknejo umetnika brez risanja. Nariši
@@ -1775,7 +1772,7 @@ sl:
       grade4_review_bee2: Naberi nektar od vsake rožice in naredi med v vsakem satovju.
       grade4_review_bee3: Tako kot pri prejšnji nalogi uporabi zanko, vendar z obračanjem.
       grade5_artist_for_loops5: "Samo majhna sprememba kode iz prejšnje naloge lahko
-        nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti? \r\n\r\nNamig:
+        nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti? \\\r\n\\\r\nNamig:
         Nekaj je treba odstraniti!"
       grade5_artist_for_loops6: Če se obrneš malo manj ali malo več, kot bi se pri
         risanju lika, lahko nastane zanimiv učinek. Poskusi uporabiti del kode iz

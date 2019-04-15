@@ -110,7 +110,7 @@ sv:
         60 grader!
       2-3 Artist Loops 10: Vad händer med designen när vi gör vårt sista steget framåt
         hälften så långt?
-      2-3 Artist Loops 11: Nu låt oss sätta *ytterligare* en slinga runt hela vår
+      2-3 Artist Loops 11: Nu låt oss sätta _ytterligare_ en slinga runt hela vår
         skapelse!  Glöm inte att lägga till en vinkel i slutet av den yttre loopen.
       2-3 Artist Loops 2: Nu ska du använda ett upprepa block för att göra cellen
         till ett snäckskal.
@@ -124,7 +124,7 @@ sv:
         du skapa en romb inuti denna hexagon?
       2-3 Artist Loops 8: Låt oss placera båda elementen i en slinga.
       2-3 Artist Loops 9: "Vi kommer att upprepa samma element, men nu ska vi lägga
-        till avstånd mellan dem. \r\nAnvänd samma kod som tidigare, men lägg till
+        till avstånd mellan dem. \\\r\nAnvänd samma kod som tidigare, men lägg till
         ett steg framåt i slutet av den yttre loopen."
       2-3 Artist Loops New 1: Låt oss rita detta robotshuvud! Kan du göra en kvadrat
         med en sida på 100 pixlar?
@@ -132,7 +132,7 @@ sv:
         dem i en slinga.
       2-3 Artist Loops New 11: Denna gång ska vi rita den 24 gånger. Lägg till en
         vänstersväng på 30 grader till denna kod och sätt allt i ett upprepa- block.
-      2-3 Artist Loops New 12: "Rita en diamant med sidor 100 pixlar.\n \n"
+      2-3 Artist Loops New 12: Rita en diamant med sidor 100 pixlar.
       2-3 Artist Loops New 13: Rita nu diamanten 3 gånger i en loop.
       2-3 Artist Loops New 14: Rita nu diamanten 10 gånger men rotera 90 grader mellan
         varje diamant.
@@ -146,7 +146,7 @@ sv:
       2-3 Artist Match Sq Pic: 'Match: Gör klart koden'
       2-3 Artist Match Tri pic: 'Matching: Fyll i koden som saknas.'
       2-3 Artist Nested Loops 1: "Du har använt loopar för att rita former innan,
-        men visste du att du kan sätta en loop inuti en annan loop? \r Loopa hela
+        men visste du att du kan sätta en loop inuti en annan loop? \\\r Loopa hela
         detta block med kod 3 gånger för att rita mönstret."
       2-3 Artist Nested Loops 10: Loopa den här koden 12 gånger för att slutföra mönstret.
       2-3 Artist Nested Loops 11: Loopa den här koden 4 gånger att slutföra mönstret,
@@ -180,7 +180,7 @@ sv:
       2-3 Bee Conditionals 1: Hej! Jag är ett bi. Hjälp mig få nektar från blomman.
       2-3 Bee Conditionals 10: "Lila blommor kan ha antingen 1 eller 0 nektar. Var
         försiktig med att samla nektar från en lila blomma om det inte har några.
-        \r\n"
+        \\\r"
       2-3 Bee Conditionals 11: Samla nektar där blommorna har nektar.
       2-3 Bee Conditionals 12: Använd en slinga för att kontrollera och samla nektar
         från alla dessa blommor.
@@ -356,6 +356,8 @@ sv:
       2-3 maze sq15: Kan du komma till Solrosen med bara fem block?
       2-3 maze sq16: OK, detta är liknande, men något annorlunda. Kan du göra det
         med endast fem block?
+      2-3: "Lila blommor kan ha antingen 1 eller 0 nektar. Var försiktig med att samla
+        nektar från en lila blomma om det inte har några. \\\r"
       2-3level1: Hjälp fågeln att fånga den stygga grisen genom att flytta den framåt
       20hr_farmer_stage9_1: Hej, är jag en bonde. Jag behöver din hjälp med att platta
         till åkern på min gård så den blir redo för plantering. Flytta mig till högen
@@ -552,8 +554,6 @@ sv:
       4-5 Artist Patterns 5: Låt oss upprepa det där för att göra en rad med 6 diamanter.
         Observera att vi ändrat vår diamantskod till att upprepa sig 3 gånger i stället
         för 2 - varför tror du vi gjort så?
-      4-5 Artist Patterns 6: Hur många gånger måste du upprepa det här blocket för
-        att rita hela rutnätet med diamanter?
       4-5 Artist Patterns 7: Låt oss modifiera koden från senaste pusslet för att
         göra detta mer komplexa mönster. Lägg märke till hur diamanterna nu överlappar
         varandra. Prova att ändra det första "bakåthoppet" från 100 till 50 (hälften
@@ -654,8 +654,8 @@ sv:
       4-5 Maze Conditionals 1: Använd blocket "upprepa tills" för att ta zombien till
         solrosen.
       4-5 Maze Conditionals 10: "Kan du lägga till bara 3 block för att hjälpa mig
-        att lösa en svårare labyrint? \r\rOm du gör det rätt, kommer jag kunna gå
-        vilken väg som helst oberoende av längden!"
+        att lösa en svårare labyrint? \\\r\\\rOm du gör det rätt, kommer jag kunna
+        gå vilken väg som helst oberoende av längden!"
       4-5 Maze Conditionals 2: Använd blocket "upprepa tills" för att ta zombien till
         solrosen.
       4-5 Maze Conditionals 3: 'Använd "om"-blocket för att låta mig välja när jag
@@ -688,7 +688,7 @@ sv:
         10 trianglar.  Detta kallas en nästlad slinga. Tips: Alla 10 trianglar slutför
         en 360 graders rotation.  '
       4-5 Nested Loops 3: "Skapa en sol genom att nästla in startkoden i en annan
-        slinga. Detta kallas en nästlad slinga. \r"
+        slinga. Detta kallas en nästlad slinga. \\\r"
       4-5 Nested Loops 5: Repetera den givna koden för att skapa en väderkvarn.
       4-5 Nested Loops 6: Kan du rita en hexagon genom att upprepa triangelkoden?
       4-5 Nested Loops 7: 'Upprepa denna design 10 gånger. Hur många grader måste
@@ -719,8 +719,6 @@ sv:
       4-5 While Loops Assessment 1: Det finns många hål och högar. Hjälp mig att fylla
         och ta bort dem för att göra marken slät.
       App Lab test: test
-      Artist - Nested Loops 1: 'Komplettera koden som ritar dessa trianglar.  Den
-        första är gjord åt dig.  Tips: 3 trianglar med 360 graders rotation.'
       Artist - Nested Loops 10: Rita den sista raden med stjärnor på flaggan genom
         att upprepa de givna blocken. Stjärnorna ligger med 50 pixlar mellanrum, men
         kom ihåg att stjärnorna själva är 30 pixlar breda.
@@ -735,8 +733,8 @@ sv:
       Artist Autorun Test: Använd blocket "Upprepa" för att rita dessa 3 kvadrater.
       Artist Inspiration: "Fritt spel - Inspiration: Du har nu lärt dig allt du behöver
         veta för att göra ett mönster som detta! Om denna bild inspirerar dig, försök
-        att göra något liknande. Annars skapa något alldeles eget. \r \r Vill du veta
-        hur våra inspirationsmönster gjordes? "
+        att göra något liknande. Annars skapa något alldeles eget. \\\r \\\r Vill
+        du veta hur våra inspirationsmönster gjordes? "
       Auto Open Function Editor: 'Du kan anropa funktioner från inuti andra funktioner!
         Med din "form" funktion som bas, skapa 3 hus former varav varje är 20 pixlar
         större än den förra. Den första ska vara 50 pixlar i längd. Att använda en
@@ -775,7 +773,7 @@ sv:
       Course 4 2: Biet vill bara ha nektar just nu. Kom ihåg att alla objekt inte
         är blommor så se till att du bara samlar nektar vid blommorna.
       Course 4 Artist 1: 'Hjälp mig att rita en ruta. (Varje linje är 200 pixlar lång) '
-      Course 4 Artist 10: "Tryck här för att se tipsen igen!\r\n\r\nHär\när koden
+      Course 4 Artist 10: "Tryck här för att se tipsen igen!\\\r\n\\\r\nHär\när koden
         för en intressant form. Vad händer när du upprepar den flera gånger och vrider
         den varje gång? Notera att svängarna i denna form adderas till 420 grader,
         vilket betyder att när din artist har ritat färdigt är den vänd i en annan
@@ -786,7 +784,7 @@ sv:
         Du förväntas inte få perfekt resultat första gången.  Vill du se fler tips?  Klicka
         här!
       Course 4 Artist 12: "Vill du få en andra titt på inspirationsdesignen eller
-        tips?  Klicka här! \r \r  Skapa annars en egen design!"
+        tips?  Klicka här! \\\r \\\r  Skapa annars en egen design!"
       Course 4 Artist 13: Spelar fortfarande?  Här är en tom duk där du kan designa
         vad du vill!
       Course 4 Artist 2: Kan du upprepa den här koden för att rita den grå kvadraten?
@@ -808,7 +806,7 @@ sv:
       Course 4 Artist 8: Rita denna sol genom att upprepa hela detta kodblock flera
         gånger.
       Course 4 Artist 8a: "Kommer du ihåg denna form? Nu kommer vi låta dig bygga
-        den utan att ge dig någon hjälp på traven!\r\nTips: Det finns 3 trianglar
+        den utan att ge dig någon hjälp på traven!\\\r\nTips: Det finns 3 trianglar
         inom 360 graders rotation...hur många gånger går 3 i 360?"
       Course 4 Artist 9: 'Upprepa denna design 10 gånger och se till att vrida mellan
         varje form som ritas. Här är en ledtråd hur mycket du ska måste vrida: Vad
@@ -816,13 +814,13 @@ sv:
       Course 4 Artist Binary 1: "Här är en funktion som tar en binär sträng med 1
         och 0 för att instruera artisten att följa dem från vänster till höger och
         uppifrån och ned. Artisten kommer att fylla i kvadraterna när den ser en 1:a
-        och ignorera kvadraten när den ser en 0:a.\r\n\r\nKör koden för att se hur
-        artisten använder binärkoden för att rita ett mönster."
+        och ignorera kvadraten när den ser en 0:a.\\\r\n\\\r\nKör koden för att se
+        hur artisten använder binärkoden för att rita ett mönster."
       Course 4 Artist Binary 1a: "Här är en funktion som tar en binär sträng med 1
         och 0 för att instruera artisten att följa dem från vänster till höger och
         uppifrån och ned. Artisten kommer att fylla i kvadraterna när den ser en 1:a
-        och ignorera kvadraten när den ser en 0:a.\r\n\r\nKör koden för att se hur
-        artisten använder binärkoden för att rita ett mönster."
+        och ignorera kvadraten när den ser en 0:a.\\\r\n\\\r\nKör koden för att se
+        hur artisten använder binärkoden för att rita ett mönster."
       Course 4 Artist Binary 2: Vilken av dessa binärsträngar kan du upprepa 8 gånger
         för att rita denna bild?
       Course 4 Artist Binary 3: Kan du rita detta mönster genom att upprepa en tresiffrig
@@ -837,22 +835,22 @@ sv:
       Course 4 Artist Binary Free Play 2: 'Fri lek: Här är en tom duk du kan rita
         på. Ha så roligt!'
       Course 4 Artist Binary Free Play 2a: "Här är en större duk du kan rita på 16
-        x 16 pixlar!\r\n\r\nSe vad som händer när vi börjar bli kreativa med bitar?"
+        x 16 pixlar!\\\r\n\\\r\nSe vad som händer när vi börjar bli kreativa med bitar?"
       Course 4 Artist Binary Free Play 2b: Klicka här för att se ledtrådar.
       Course 4 Artist Binary Free Play: 'Fri lek: Rita vad som helst med hjälp av
         binär kod!'
       Course 4 Artist Binary pre1: "Binärt är ett sätt att representera information
         med hjälp av endast två alternativ.  Här kommer vi att använda alternativen
-        \"av\" (företrädd av siffran 0) och \"på\" (företrädd av nummer 1).  \r \r
-        vi har försett dig med ett rutnät av \"pixlar\" som du kan gå igenom och göra
-        mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita
-        \"01010101\" i binärt i första raden?"
+        \"av\" (företrädd av siffran 0) och \"på\" (företrädd av nummer 1).  \\\r
+        \\\r vi har försett dig med ett rutnät av \"pixlar\" som du kan gå igenom
+        och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären
+        att rita \"01010101\" i binärt i första raden?"
       Course 4 Artist Binary ryan: "Binärt är ett sätt att representera information
         med hjälp av endast två alternativ.  Här kommer vi att använda alternativen
-        \"av\" (företrädd av siffran 0) och \"på\" (företrädd av nummer 1).  \r \r
-        vi har försett dig med ett rutnät av \"pixlar\" som du kan gå igenom och göra
-        mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita
-        \"01010101\" i binärt i första raden?"
+        \"av\" (företrädd av siffran 0) och \"på\" (företrädd av nummer 1).  \\\r
+        \\\r vi har försett dig med ett rutnät av \"pixlar\" som du kan gå igenom
+        och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären
+        att rita \"01010101\" i binärt i första raden?"
       Course 4 Artist For  Functions 10: Låt oss göra det lite svårare, kan du rita
         en stjärnform med funktionen "Rita en fyrkantslinje"? Lycka till!
       Course 4 Artist For  Functions 11: Låt oss göra det lite svårare, kan du rita
@@ -870,7 +868,7 @@ sv:
       Course 4 Artist For Loops 11a: "Låt oss sätta ihop allt!  Använd dina kunskaper
         om \"för loopar\" och \"räknare\", skapa denna ritning där varje form har
         två sidor mer än den förra.  Se till att varje sida är 10 gånger så lång som
-        antalet sidor i polygonen. \r \r mycket lite av koden har getts till dig."
+        antalet sidor i polygonen. \\\r \\\r mycket lite av koden har getts till dig."
       Course 4 Artist For Loops 12: 'Det såg riktigt bra ut, men nu vill jag rita
         varje form bredvid den sista. Denna gång är varje sida 20 pixlar. Använd ett
         hoppa - block för att hoppa framåt 40 pixlar efter varje form. '
@@ -888,11 +886,9 @@ sv:
       Course 4 Artist For Loops 2: 'Jag har lagt koden för att rita en triangel inuti
         en for-loop som räknar från 50 till 100 med 10 i taget.  Obs: Kontrollera  koden
         innan du trycker på "Kör".'
-      Course 4 Artist For Loops 3: 'Använda sista pusslet som referens för att slutföra
+      Course 4 Artist For Loops 3: Använda sista pusslet som referens för att slutföra
         det här.  Den minsta triangeln har 20 pixlar långa sidor, den största har
         200 pixlars sidor, och varje triangel är 20 pixlar större än förra.
-
-'
       Course 4 Artist For Loops 4: 'Hur skulle du ändra vad du har lärt dig att rita
         dessa rutor? De börjar med en som är 15 pixlar lång, den största är 300 pixlar
         lång och varje ruta är 15 pixlar större än förra. '
@@ -907,21 +903,21 @@ sv:
         denna spiral- triangel är varje sida 20 pixlar längre än förra.
       Course 4 Artist For Loops 8: "En enda liten förändring av koden från den sista
         bilden kan skapa det här mönstret. Kan du lista ut vilken förändringen är?
-        \r \r Ledtråd: du måste ta bort något!"
+        \\\r \\\r Ledtråd: du måste ta bort något!"
       Course 4 Artist For Loops 8a: Bara en enda liten förändring av koden från den
         sista bilden kan skapa denna bild. Kan du lista ut vilken förändringen är?
       Course 4 Artist For Loops 9: Kan du göra en spiral? Flytta framåt från 1 till
         75 pixels, öka med 1 pixel varje gång.
       Course 4 Artist For Loops Challenge: "Kan du lista ut hur du kan använda alla
-        de saker du har lärt dig för att skapa denna bild? \r \r Behöver du en ledtråd?
-        Klicka här."
+        de saker du har lärt dig för att skapa denna bild? \\\r \\\r Behöver du en
+        ledtråd? Klicka här."
       Course 4 Artist For Loops Challenge_a: "Kan du lista ut hur du kan använda alla
-        de saker du har lärt dig för att skapa denna bild? \r \r Behöver du en ledtråd?
-        Klicka här."
+        de saker du har lärt dig för att skapa denna bild? \\\r \\\r Behöver du en
+        ledtråd? Klicka här."
       Course 4 Artist For Loops inspire: "Fri lek - inspiration: Du har nu lärt dig
         allt du behöver veta för att göra ett mönster som detta! Om denna bild inspirerar
-        dig, försök att göra något liknande. Annars skapa något alldeles eget. \r
-        \r Behöver du en ledtråd? Klicka här."
+        dig, försök att göra något liknande. Annars skapa något alldeles eget. \\\r
+        \\\r Behöver du en ledtråd? Klicka här."
       Course 4 Artist Functions 1: Kan du rita en kvadrat, som är 100 bildpunkter
         i längd, med en slinga?
       Course 4 Artist Functions 10: Vilket block behöver du lägga till för att få
@@ -933,9 +929,9 @@ sv:
       Course 4 Artist Functions 12: Loopa en fyrkants-funktion för att rita en linje
       Course 4 Artist Functions 13.1: "Låt oss nu göra en funktion kallad \"hoppa
         till övre högra\" som flyttar konstnären till övre högra delen av oktagonen
-        som du just ritade så att vi kan avsluta detta mönster. \r \r tips: För att
-        komma till det övre högra hörnet, prova att hoppa i ett mönster som gör 3/8
-        av oktagonen."
+        som du just ritade så att vi kan avsluta detta mönster. \\\r \\\r tips: För
+        att komma till det övre högra hörnet, prova att hoppa i ett mönster som gör
+        3/8 av oktagonen."
       Course 4 Artist Functions 13: Kolla, vi har en ny funktion som kallas "Rita
         en linje av fyrkanter". Välkommen att ta en titt inuti funktions blocket för
         att se hur vi byggde den. Klicka på "Kör" när du är redo för nästa pussel.
@@ -951,7 +947,7 @@ sv:
       Course 4 Artist Functions 2: 'Kan du rita 3 rutor 20 pixlar från varandra? Tips:
         varje ruta är 100 bildpunkter i storlek'
       Course 4 Artist Functions 3: "Kan du rita denna bild genom att använda \"rita
-        en fyrkant\" -blocket? Tips: varje ruta är 120 pixlar isär. \r\n"
+        en fyrkant\" -blocket? Tips: varje ruta är 120 pixlar isär. \\\r"
       Course 4 Artist Functions 4: 'Är du redo att skapa ditt eget "funktions- block"?
         Klicka på "Funktioner" blocket i verktygslådan, ändra namnet till "Rita en
         triangel". Skapa sedan en triangel så som du har gjort förut med händelse-
@@ -960,7 +956,7 @@ sv:
       Course 4 Artist Functions 5 OLD: Låt oss försöka att använda våra två funktioner
         för att rita ett hus - vad behöver fixas i denna kod för att rita huset ordentligt?
       Course 4 Artist Functions 5: "Kan du rita denna bild genom att använda \"rita
-        en fyrkant\" -blocket? Tips: varje ruta är 120 pixlar isär. \r\n"
+        en fyrkant\" -blocket? Tips: varje ruta är 120 pixlar isär. \\\r"
       Course 4 Artist Functions 6: Vilket block behöver du lägga till för att få triangeln
         att sitta på toppen av rutan?
       Course 4 Artist Functions 7: Kan du rita en linje av rutor med en fyrkants-funktion?
@@ -977,7 +973,7 @@ sv:
       Course 4 Artist Functions inspire: Klicka här för att se inspirations-bilden
         igen.
       Course 4 Artist Inspire: "Vill du få en andra titt på inspirationsdesignen eller
-        tips?  Klicka här! \r \r  Skapa annars en egen design!"
+        tips?  Klicka här! \\\r \\\r  Skapa annars en egen design!"
       Course 4 Artist Params 1: Låt oss redigera en funktion som ritar en kvadrat
         med 50 pixlar långa sidor
       Course 4 Artist Params 10: 'Du kan anropa funktioner från inuti andra funktioner!
@@ -994,10 +990,8 @@ sv:
       Course 4 Artist Params 4: Kan du lägga till en ny funktion som kallas ruta?
         Den bör också ha en längdparameter, precis som triangeln. Denna gång ritar
         du 3 rutor 25, 50 och 75 bildpunkter i längd, 100 pixlar isär.
-      Course 4 Artist Params 5: 'Använd båda dina nya funktioner för att rita denna
+      Course 4 Artist Params 5: Använd båda dina nya funktioner för att rita denna
         bild. För att underlätta använder du en loop med en "räknare" parameter.
-
-'
       Course 4 Artist Params 6: "Låt oss redigera den här 'rita en form' funktionen.\nden
         har redan en längd-parameter. Kom ihåg att vinkeln för att vrida en given
         form är\n360 grader delat med antalet sidor den har. Tips: längden av triangeln
@@ -1005,9 +999,7 @@ sv:
       Course 4 Artist Params 7: 'Kan du rita dessa former genom att fylla i "???"
         Rutan och triangeln är 100 bildpunkter i storlek medan hexagonen är 75 bildpunkter. '
       Course 4 Artist Params 8: 'Kan du lista ut hur man ritar denna form? Här är
-        en ledtråd: skapa en ny funktion med 6 sidor som kallas hexagon.
-
-'
+        en ledtråd: skapa en ny funktion med 6 sidor som kallas hexagon.'
       Course 4 Artist Params 9: |-
         Minns du när vi använde 'räknare' loppen men tog bort en loop inuti? Nu ska vi ha lite roligt
         och använda en funktion med 'sida' och 'längd' parametrar. Kan du skapa dessa former? Rut-räknaren ska vara 5/100/5, triangel-räknaren ska vara 10/100/10 och hexagonen 2/100/2.
@@ -1029,15 +1021,16 @@ sv:
         där finns en annan variabel som heter 'längd'. Vi kan använda den varhelst
         vi måste gå 'framåt'. Sätt 'längd-variabeln' till 75 för den här formen.
       Course 4 Artist Vars 13: "När en form har massor av sidor, måste varje sida
-        vara kortare om du vill att hela mönstret att passa på skärmen. \r låt oss
+        vara kortare om du vill att hela mönstret att passa på skärmen. \\\r låt oss
         återskapa algoritmen för detta fantastiska mönster, men istället för att manuellt
         ställa in variabeln \"längd\", låt oss använda ett matematik block med variabeln
         \"sidor\" inuti för att se till att varje form passar korrekt. Omkretsen för
-        varje polygon är 300 pixlar. \r behöver några tips?  Klicka här."
+        varje polygon är 300 pixlar. \\\r behöver några tips?  Klicka här."
       Course 4 Artist Vars 14: "Fritt spel: prova detta! Nu är din algoritm inkapslad
         inuti ännu en loop. experimentera med att ändra värdena på dina två variabler
-        för att rita roliga mönster. \r\n\r\nLek med färger för att få ännu mer effekt!
-        Använd slumpmässiga färger inuti loopar för att se hur det förändrar din design."
+        för att rita roliga mönster. \\\r\n\\\r\nLek med färger för att få ännu mer
+        effekt! Använd slumpmässiga färger inuti loopar för att se hur det förändrar
+        din design."
       Course 4 Artist Vars 2: Istället för att använda "flytta fram med 150", refererar
         nu 'flytta fram' blocket till en variabel som kallas "längd". Kan du ställa
         in "längd" till 150 för att rita denna nya triangel?
@@ -1052,11 +1045,12 @@ sv:
       Course 4 Artist Vars 6: "Här är en bit som kan rita vilken regelbunden polygon
         som helst. Där finns en ny variabel som kallas 'sidor' och som är satt till
         4. Kan du använda variabeln sidor (tillsammans med matematik blocket) för
-        att vända rätt antal ggr oavsett hur många sidor det är i polygonen? \r \r
-        Klicka härför att gå tillbaka till tipset!"
+        att vända rätt antal ggr oavsett hur många sidor det är i polygonen? \\\r
+        \\\r Klicka härför att gå tillbaka till tipset!"
       Course 4 Artist Vars 7: "Använd vad du lärt dig i det sista pusslet för att
-        skapa denna hexagon med hjälp av \"sidor\" variabeln. \r \r Se hur du kan
-        ändra endast ett värde för att rita en triangel, kvadrat, pentagon eller oktagon?"
+        skapa denna hexagon med hjälp av \"sidor\" variabeln. \\\r \\\r Se hur du
+        kan ändra endast ett värde för att rita en triangel, kvadrat, pentagon eller
+        oktagon?"
       Course 4 Artist Vars 8: 'Fri lek: Experimentera med antalet sidor denna form
         har. Kan du kan ändra algoritmen så att storleken på formen förblir densamma,
         oavsett hur många sidor den har? Tips: Om du delar din startlängd med antalet
@@ -1186,15 +1180,21 @@ sv:
       Course 4 Binary 8: Du kan slutföra det mesta av denna bild genom att loopa ett
         5 bitars binärt nummer - då behöver du ett till 4 bitars nummer för att komma
         till nedre högra hörnet.
-      Course 4 EC 1a: "** Extrem Utmaning: ** inga regler. Inga ledtrådar. Bara utmaningen!"
-      Course 4 EC 1b: "** Extrem Utmaning: ** inga regler. Inga ledtrådar. Bara utmaningen!"
-      Course 4 EC 2a: "** Extrem Utmaning: ** inga regler. Inga ledtrådar. Bara utmaningen!"
-      Course 4 EC 2b: "** Extrem Utmaning: ** inga regler. Inga ledtrådar. Bara utmaningen!"
-      Course 4 EC 2c: "** Extrem Utmaning: ** inga regler. Inga ledtrådar. Bara utmaningen!"
-      Course 4 EC 2d: "** Extrem Utmaning: ** inga regler. Inga ledtrådar. Bara utmaningen!"
+      Course 4 EC 1a: "\\*\\* Extrem Utmaning: \\*\\* inga regler. Inga ledtrådar.
+        Bara utmaningen!"
+      Course 4 EC 1b: "\\*\\* Extrem Utmaning: \\*\\* inga regler. Inga ledtrådar.
+        Bara utmaningen!"
+      Course 4 EC 2a: "\\*\\* Extrem Utmaning: \\*\\* inga regler. Inga ledtrådar.
+        Bara utmaningen!"
+      Course 4 EC 2b: "\\*\\* Extrem Utmaning: \\*\\* inga regler. Inga ledtrådar.
+        Bara utmaningen!"
+      Course 4 EC 2c: "\\*\\* Extrem Utmaning: \\*\\* inga regler. Inga ledtrådar.
+        Bara utmaningen!"
+      Course 4 EC 2d: "\\*\\* Extrem Utmaning: \\*\\* inga regler. Inga ledtrådar.
+        Bara utmaningen!"
       Course 4 EC 3: 'Använd vad du lärt dig i tidigare nivåer för att rita en bild
         som denna. Obs: Koden blir enklare om du införlivar parametrar. '
-      Course 4 EC 3a: 'Extrem Utmaning: ** inga regler. Inga ledtrådar. Bara utmaningen!'
+      Course 4 EC 3a: 'Extrem Utmaning: \*\* inga regler. Inga ledtrådar. Bara utmaningen!'
       Course 4 Maze 1: Få arga fågeln till grisen!
       Course 4 Maze 2: Undvik TNT!
       Course 4 Maze 3: 'Programmera arga fågeln att gå till grisen. '
@@ -1207,18 +1207,18 @@ sv:
       Course 4 Play Lab Params 1: Här är en funktion som kallas "hoppa" och som gör
         att din huvudperson hoppar upp 100 pixlar. Använd funktionen hoppa för att
         samla alla flaggor.
-      Course 4 Play Lab Params 10: "Vi har lagt till en sista funktion åt dig. \r
-        \r Använd ett \"om-uttalande\" för att programmera ditt spel att anropa funktionen
-        \"level_up\" först när \"player_score\" blir större än ett visst antal. \r
-        \r T ex: \"player_score\" > 6\r \r Spela spelet, och spela förbi förbi nivå
-        4 för att komma till nästa pussel. "
+      Course 4 Play Lab Params 10: "Vi har lagt till en sista funktion åt dig. \\\r
+        \\\r Använd ett \"om-uttalande\" för att programmera ditt spel att anropa
+        funktionen \"level_up\" först när \"player_score\" blir större än ett visst
+        antal. \\\r \\\r T ex: \"player\\_score\" > 6\\\r \\\r Spela spelet, och spela
+        förbi förbi nivå 4 för att komma till nästa pussel. "
       Course 4 Play Lab Params 2: "Nu har vi flaggor som är för höga för våra nuvarande
         hopp! Låt oss använda både \"upp\" och \"ner\" pilarna så att vi kan ha flera
-        hopp höjder.  \r \r Vi måste lägga till en parameter i vår hoppa-funktion
+        hopp höjder.  \\\r \\\r Vi måste lägga till en parameter i vår hoppa-funktion
         kallad \"höjd\".  Uppåtpilen bör göra så att hunden hoppar 200 pixlar och
-        nedåtpilen bör göra så att den hoppar 100 pixlar. \r \r Tips: Du måste klicka
-        på \"Redigera\" på funktionen' hopp'a och uppdatera den så att den använder
-        parametern \"höjd\"."
+        nedåtpilen bör göra så att den hoppar 100 pixlar. \\\r \\\r Tips: Du måste
+        klicka på \"Redigera\" på funktionen' hopp'a och uppdatera den så att den
+        använder parametern \"höjd\"."
       Course 4 Play Lab Params 3: 'Vi har lagt en annan parameter till funktionen
         ''hoppa'' så att vi kan använda den med andra aktörer. Varje aktör representeras
         av ett nummer, med start från ett. Redigera funktionen "hoppa" så att den
@@ -1233,24 +1233,24 @@ sv:
         innan andra figurer får en genom att ange hastighet i den nya "hastighet"
         parametern.
       Course 4 Play Lab Params 7: "Låt oss ha lite kul! Titta på koden för att se
-        om du kan lista ut vad varje block gör.  \r \r När du är klar, använd piltangenterna
-        för att styra hunden och samla alla flaggor."
+        om du kan lista ut vad varje block gör.  \\\r \\\r När du är klar, använd
+        piltangenterna för att styra hunden och samla alla flaggor."
       Course 4 Play Lab Params 8: Använd en "när actor berör" block för att skicka
         hunden tillbaka till övre vänstra ENDAST om hunden rör vid någon av de andra
         actors.
       Course 4 Play Lab Params 9: "Här är vårt spel från ett tidigare skede, men det
-        mesta av koden är dold. Det finns en ny funktion \"ge poäng.\" \r \r Redigera
+        mesta av koden är dold. Det finns en ny funktion \"ge poäng.\" \\\r \\\r Redigera
         funktionen så att en \"poäng\" parameter läggs till variabeln \"spelar-poäng\".
-        \r \r Variabeln \"spelar-poäng\" bör öka varje gång Hund taggar Katt med hjärtan,
-        och minska varje gång Katt taggar Hund med hjärtan. \r \r Obs: När du är klar,
-        klicka på \"Kör\" för att spela.  När hunden har fått 6 poäng, kommer du gå
-        vidare till nästa pussel. "
+        \\\r \\\r Variabeln \"spelar-poäng\" bör öka varje gång Hund taggar Katt med
+        hjärtan, och minska varje gång Katt taggar Hund med hjärtan. \\\r \\\r Obs:
+        När du är klar, klicka på \"Kör\" för att spela.  När hunden har fått 6 poäng,
+        kommer du gå vidare till nästa pussel. "
       Course 4 Play Lab Vars 1: Denna gång du behöver inte skriva någon kod, tryck
         bara på "kör" för att spela spelet! I detta spel är du den hund som försöker
         samla in fler flaggor än katten. Använda nedåtpilen för att styra hunden.
         Tryck på "Avsluta" när du är klar.
       Course 4 Play Lab Vars 2: Loppet i det sista pusslet var inte särskilt rättvist!
-        Ändra variabeln "dog_speed" så att du kan samla fler flaggor än Katt. Först
+        Ändra variabeln "dog\_speed" så att du kan samla fler flaggor än Katt. Först
         att samla in 10 flaggor vinner!
       Course 4 Play Lab Vars 3: Här är en ny typ av spel! Använd vänster och höger
         pilarna för att flytta och uppåtpilen för att hoppa. Se om du kan samla in
@@ -1267,12 +1267,12 @@ sv:
         2 rör något" för att utlösa en uppdatering av din poäng när ditt eldklot träffade
         katten. Du kan öka poängen genom att ställa in poäng = poäng + 1. Få dina
         poäng upp till 10 (går en i taget!) för att klara nivån.
-      Course 4 Play Lab Vars 6: "Använd högerpilen för att skjuta hjärtan. \r \r hur
-        ska vi få poäng i vårt spel? Lägg till 1 i din \"poäng\" variabel varje gång
-        Hund träffar Katt med ett hjärta. Använd händelsen \"när actor 2 rör något\"
-        för att utlösa en uppdatering av dina poäng. Du kan öka din variabel genom
-        att ange \"poäng = poäng + 1.\" Få dina poäng upp till 10 (går en i taget!)
-        för att klara nivån."
+      Course 4 Play Lab Vars 6: "Använd högerpilen för att skjuta hjärtan. \\\r \\\r
+        hur ska vi få poäng i vårt spel? Lägg till 1 i din \"poäng\" variabel varje
+        gång Hund träffar Katt med ett hjärta. Använd händelsen \"när actor 2 rör
+        något\" för att utlösa en uppdatering av dina poäng. Du kan öka din variabel
+        genom att ange \"poäng = poäng + 1.\" Få dina poäng upp till 10 (går en i
+        taget!) för att klara nivån."
       Course 4 Play Lab Vars 7: Nice, låt oss nu bli säkra på att detta spel inte
         är alltför lätt att spela. Varje gång Hund (actor 1) blir träffad av gula
         hjärtan från Katt (actor 2), bör du förlora en poäng. Börja med 10 poäng så
@@ -1288,11 +1288,12 @@ sv:
         får spelaren (hunden) försvinna. Klicka på "Avsluta" när spelet fungerar som
         du vill att det ska.
       Course 4 Play Lab Vars 9: "Fri speltid! Här är alla variabler vi har lekt med
-        så här långt, samt några fler om du vill ha dem. \r \r Notera att det nu finns
-        så många block i vår verktygslåda att de måste organiseras!  Här har vi satt
-        varje bit i en lämplig kategori.  Ta dig tid att utforska allt som finns.
-        När du är klar, gör ett spel eller en berättelse med repetitioner, variabler
-        och händelser.  \r \r Tips: scrolla ner för att se alla kommandon på arbetsytan."
+        så här långt, samt några fler om du vill ha dem. \\\r \\\r Notera att det
+        nu finns så många block i vår verktygslåda att de måste organiseras!  Här
+        har vi satt varje bit i en lämplig kategori.  Ta dig tid att utforska allt
+        som finns. När du är klar, gör ett spel eller en berättelse med repetitioner,
+        variabler och händelser.  \\\r \\\r Tips: scrolla ner för att se alla kommandon
+        på arbetsytan."
       Course 4 Play Lab Vars: Okej, en sista sak för detta spel - låt oss göra så
         att spelaren kan vinna (eller förlora). Använd en' för alltid' slinga för
         att kontrollera värdet av poängen - om värdet är större än 20, får fienden
@@ -1310,49 +1311,49 @@ sv:
         händer om jag vill räkna exponentiellt? Utan att ändra inställningarna i denna
         'för'- loop, kan du räkna 1, 4, 9, 16, 25... (räknare fyrkant)?
       Course 4 Play Labs For Loops 4a: "Låt oss nu blanda variablerna från etapp 7
-        tillsammans med din \"räknare\" variabel att låta magi hända.   \r \r I detta
-        pussel, kommer Hund att räkna från 0 till 1000 med \"öka med\".  Ange variabeln
-        \"öka med\" till 10 i början av din kod för att se vad som händer."
+        tillsammans med din \"räknare\" variabel att låta magi hända.   \\\r \\\r
+        I detta pussel, kommer Hund att räkna från 0 till 1000 med \"öka med\".  Ange
+        variabeln \"öka med\" till 10 i början av din kod för att se vad som händer."
       Course 4 Play Labs For Loops 5: I förra steget beräknade vi kvadraten av varje
         nummer. Prova att byta "counter ^ 2" till "counter ^ 3" för att beräkna kuben
         av varje nummer (1, 8, 27, 64, 125, 216, 343...)
       Course 4 Play Labs For Loops 6: Du minns kanske att ett primtal är ett heltal
-        som är bara delbart med sig själv och 1. Använd funktionen "is_prime" för
+        som är bara delbart med sig själv och 1. Använd funktionen "is\_prime" för
         att säga primtalen från 1 till 100.
       Course 4 Play Labs For Loops 6a: "Hund kommer att fortfarande ta tid genom att
         räkna med vår \"för- loop\" genom att \"öka-med\", men den här gången, kommer
         vi att lägga till Trollkarlen i mixen.  Kan du ändra koden så att \"öka med\"
-        går upp med två varje gång Trollkarlen klickas? \r \r Se upp!  Trollkarlen
+        går upp med två varje gång Trollkarlen klickas? \\\r \\\r Se upp!  Trollkarlen
         är snabb!"
       Course 4 Play Labs For Loops 7: Kan du använda en for-loop som hjälper mig att
         säga sekvensen 1, 4, 7, 10, 13, 16, 19, 22, 25?
       Course 4 Play Labs For Loops 7a: "Nu kommer vi någonstans!  Vad händer om vi
         börjar räkna hur många gånger vi kan klicka på Trollkarlen innan Hund kommer
-        till 30?  \r \r Avsluta med att lägga till block till Trollkarlen så att varje
-        gång han blir klickad på, ökar variabeln 'klickad' med ett. Du kan ignorera
-        \"öka med\" nu. \r \r Hund kommer att börja räkna när du klickar på \"Kör\"."
+        till 30?  \\\r \\\r Avsluta med att lägga till block till Trollkarlen så att
+        varje gång han blir klickad på, ökar variabeln 'klickad' med ett. Du kan ignorera
+        \"öka med\" nu. \\\r \\\r Hund kommer att börja räkna när du klickar på \"Kör\"."
       Course 4 Play Labs For Loops 8: "Nu ska du hjälpa aktörerna att flytta när de
-        räknar.  \r \r Hund bör gå och räkna genom att lägga till 2 (räknare + 2)
-        varje gång.  Katt kommer att gå och räkna genom att multiplicera med 2 (räknare*
-        2) varje gång. Pingvin kommer att gå och räkna till roten av 2 (räknare ^
-        2) varje gång.  Vem kommer att nå sin flagga först?"
+        räknar.  \\\r \\\r Hund bör gå och räkna genom att lägga till 2 (räknare +
+        2) varje gång.  Katt kommer att gå och räkna genom att multiplicera med 2
+        (räknare\\* 2) varje gång. Pingvin kommer att gå och räkna till roten av 2
+        (räknare ^ 2) varje gång.  Vem kommer att nå sin flagga först?"
       Course 4 Play Labs For Loops 8a: "För att avsluta vårt spel, måste vi få tillbaka
-        variabeln \"öka med\"!    Låt oss binda det till nivån på spelet. \r \r nivå
-        1) Håll reda på antalet gånger Trollkarlen klickas. \r 2) Om Trollkarlen klickas
-        minst 10 gånger innan Hund har räknat till 30, Höj \"öka med\" med 1 och börja
-        om igen. \r 3) Om Trollkarlen inte  klickas på minst 10 gånger, är spelet
-        \ över."
-      Course 4 Playlab For Loop Freeplay: "Lek fritt: Använd allt du lärt dig hittills
-        för att skapa ett spel som innehåller en 'for' loop!\n\n"
+        variabeln \"öka med\"!    Låt oss binda det till nivån på spelet. \\\r \\\r
+        nivå 1) Håll reda på antalet gånger Trollkarlen klickas. \\\r 2) Om Trollkarlen
+        klickas minst 10 gånger innan Hund har räknat till 30, Höj \"öka med\" med
+        1 och börja om igen. \\\r 3) Om Trollkarlen inte  klickas på minst 10 gånger,
+        är spelet  över."
+      Course 4 Playlab For Loop Freeplay: 'Lek fritt: Använd allt du lärt dig hittills
+        för att skapa ett spel som innehåller en ''for'' loop!'
       Course 4 Playlab For Loops 4b: "Nu blir det kappkörning mellan dessa två bokstäver!\n
-        \r \r var och en av dem kommer för varje varv att flytta fram så många steg
-        som 'räknaren' i for loopen visar. \nVid starten har de olika värden och kommer
-        att stega fram olika fort.\n\r \r Kan du ändra ökningsvärdet i en av looparna
-        så att loppet för bokstäverna blir oavgjort?"
+        \\\r \\\r var och en av dem kommer för varje varv att flytta fram så många
+        steg som 'räknaren' i for loopen visar. \nVid starten har de olika värden
+        och kommer att stega fram olika fort.\n\\\r \\\r Kan du ändra ökningsvärdet
+        i en av looparna så att loppet för bokstäverna blir oavgjort?"
       Course 4 Playlab For Loops 5b: Justera intervallet på dessa 'for' loopar så
         att de två bokstäverna stannar på exakt samma ställe.
       Course 4 Playlab For Loops 6b: "Redigera den här 'for' loopen så att du kan
-        skapa ett spel som är kul för dig att spela! \r Tryck på \"Kör\" och klicka
+        skapa ett spel som är kul för dig att spela! \\\r Tryck på \"Kör\" och klicka
         på Fru Enhörning så många gånger som du kan.  Kan du slå vårt Highscore på
         24 poäng? "
       Course 4 SCF 1: Använd de föreslagna funktionerna för att rita fyra rader av
@@ -1384,9 +1385,9 @@ sv:
       Course 4 SCV 1: Klicka här för att se anvisningarna igen.
       Course 4 SCV 2: Klicka här för att se anvisningarna igen.
       Course 4 SCV 3: "Nu för en omgång tag!  Tagga Katt för att få 2 poäng. Tagga
-        Pingvin för att få 3 poäng.  Skaffa 10 poäng för att vinna! \r Men var försiktig,
-        när Katt och Pingvin taggar varandra, tar de bort poäng. \r \r Lägg till de
-        block som är nödvändiga för att få detta spel att fungera så som det  förklarats.
+        Pingvin för att få 3 poäng.  Skaffa 10 poäng för att vinna! \\\r Men var försiktig,
+        när Katt och Pingvin taggar varandra, tar de bort poäng. \\\r \\\r Lägg till
+        de block som är nödvändiga för att få detta spel att fungera så som det  förklarats.
         \ Hur ska du få Hund att röra sig i alla riktningar med hjälp av piltangenterna?
         \ Hur ska du ta bort poäng när Hund taggar Katt eller Pingvin?  Hur subtraherar
         du poäng när Katt och Pingvin rör varandra?"
@@ -1408,7 +1409,7 @@ sv:
       CourseD_Dance_Party_04: Lägg till en bakgrundseffekt i ditt program.
       CourseD_Dance_Party_05: Använda ett annat nytt block för att få dansaren att
         ändra rörelse efter 2 åtgärder.
-      CourseD_Dance_Party_06: Skapa en bakgrundsdansare som kallas ”backup_dancer1”
+      CourseD_Dance_Party_06: Skapa en bakgrundsdansare som kallas ”backup\_dancer1”
         för att dansa med katten.
       CourseD_Dance_Party_08: Kan du göra båda bakgrundsdansarna i samma storlek?
       CourseD_Dance_Party_09: Använd ”ange färgton”-blocket för att ändra en dansares
@@ -1436,13 +1437,14 @@ sv:
       CourseE_HOC 2018 Level_7a: Sök igenom dessa undervattensruiner efter en skattkista.
       CourseE_HOC 2018 Level_9b: Använd korallen som riktmärken för att nå skatten.
       CourseF_PlayLab_vars10: "Fri speltid! Här är alla variabler vi har lekt med
-        så här långt, samt några fler om du vill ha dem. \r \r Notera att det nu finns
-        så många block i vår verktygslåda att de måste organiseras!  Här har vi satt
-        varje bit i en lämplig kategori.  Ta dig tid att utforska allt som finns.
-        När du är klar, gör ett spel eller en berättelse med repetitioner, variabler
-        och händelser.  \r \r Tips: scrolla ner för att se alla kommandon på arbetsytan."
+        så här långt, samt några fler om du vill ha dem. \\\r \\\r Notera att det
+        nu finns så många block i vår verktygslåda att de måste organiseras!  Här
+        har vi satt varje bit i en lämplig kategori.  Ta dig tid att utforska allt
+        som finns. När du är klar, gör ett spel eller en berättelse med repetitioner,
+        variabler och händelser.  \\\r \\\r Tips: scrolla ner för att se alla kommandon
+        på arbetsytan."
       CourseF_PlayLab_vars2: Loppet i det sista pusslet var inte särskilt rättvist!
-        Ändra variabeln "dog_speed" så att du kan samla fler flaggor än Katt. Först
+        Ändra variabeln "dog\_speed" så att du kan samla fler flaggor än Katt. Först
         att samla in 10 flaggor vinner!
       CourseF_PlayLab_vars3: Här är en ny typ av spel! Använd vänster och höger pilarna
         för att flytta och uppåtpilen för att hoppa. Se om du kan samla in alla flaggor.
@@ -1452,24 +1454,24 @@ sv:
       CourseF_PlayLab_vars5: 'Låt oss bygga ett spel! Först behöver vi ett poäng.
         Återskapa den kod som du såg i den sista nivån för att ställa in poängen till
         10. '
-      CourseF_PlayLab_vars6: "Använd högerpilen för att skjuta hjärtan. \r \r hur
-        ska vi få poäng i vårt spel? Lägg till 1 i din \"poäng\" variabel varje gång
-        Hund träffar Katt med ett hjärta. Använd händelsen \"när actor 2 rör något\"
-        för att utlösa en uppdatering av dina poäng. Du kan öka din variabel genom
-        att ange \"poäng = poäng + 1.\" Få dina poäng upp till 10 (går en i taget!)
-        för att klara nivån."
-      CourseF_PlayLab_vars7: "Använd högerpilen för att skjuta hjärtan. \r \r hur
-        ska vi få poäng i vårt spel? Lägg till 1 i din \"poäng\" variabel varje gång
-        Hund träffar Katt med ett hjärta. Använd händelsen \"när actor 2 rör något\"
-        för att utlösa en uppdatering av dina poäng. Du kan öka din variabel genom
-        att ange \"poäng = poäng + 1.\" Få dina poäng upp till 10 (går en i taget!)
-        för att klara nivån."
-      CourseF_PlayLab_vars8: "Använd högerpilen för att skjuta hjärtan. \r \r hur
-        ska vi få poäng i vårt spel? Lägg till 1 i din \"poäng\" variabel varje gång
-        Hund träffar Katt med ett hjärta. Använd händelsen \"när actor 2 rör något\"
-        för att utlösa en uppdatering av dina poäng. Du kan öka din variabel genom
-        att ange \"poäng = poäng + 1.\" Få dina poäng upp till 10 (går en i taget!)
-        för att klara nivån."
+      CourseF_PlayLab_vars6: "Använd högerpilen för att skjuta hjärtan. \\\r \\\r
+        hur ska vi få poäng i vårt spel? Lägg till 1 i din \"poäng\" variabel varje
+        gång Hund träffar Katt med ett hjärta. Använd händelsen \"när actor 2 rör
+        något\" för att utlösa en uppdatering av dina poäng. Du kan öka din variabel
+        genom att ange \"poäng = poäng + 1.\" Få dina poäng upp till 10 (går en i
+        taget!) för att klara nivån."
+      CourseF_PlayLab_vars7: "Använd högerpilen för att skjuta hjärtan. \\\r \\\r
+        hur ska vi få poäng i vårt spel? Lägg till 1 i din \"poäng\" variabel varje
+        gång Hund träffar Katt med ett hjärta. Använd händelsen \"när actor 2 rör
+        något\" för att utlösa en uppdatering av dina poäng. Du kan öka din variabel
+        genom att ange \"poäng = poäng + 1.\" Få dina poäng upp till 10 (går en i
+        taget!) för att klara nivån."
+      CourseF_PlayLab_vars8: "Använd högerpilen för att skjuta hjärtan. \\\r \\\r
+        hur ska vi få poäng i vårt spel? Lägg till 1 i din \"poäng\" variabel varje
+        gång Hund träffar Katt med ett hjärta. Använd händelsen \"när actor 2 rör
+        något\" för att utlösa en uppdatering av dina poäng. Du kan öka din variabel
+        genom att ange \"poäng = poäng + 1.\" Få dina poäng upp till 10 (går en i
+        taget!) för att klara nivån."
       CourseF_PlayLab_vars9: Nice, låt oss nu bli säkra på att detta spel inte är
         alltför lätt att spela. Varje gång Hund (actor 1) blir träffad av gula hjärtan
         från Katt (actor 2), bör du förlora en poäng. Börja med 10 poäng så det inte
@@ -1489,7 +1491,7 @@ sv:
       Dance_Party_04: Lägg till en bakgrundseffekt i ditt program.
       Dance_Party_05: Använda ett annat nytt block för att få dansaren att ändra rörelse
         efter 2 åtgärder.
-      Dance_Party_06: Skapa en bakgrundsdansare som kallas ”backup_dancer1” för att
+      Dance_Party_06: Skapa en bakgrundsdansare som kallas ”backup\_dancer1” för att
         dansa med katten.
       Dance_Party_08: Kan du göra båda bakgrundsdansarna i samma storlek?
       Dance_Party_09: Använd ”ange färgton”-blocket för att ändra en dansares färg.
@@ -1507,11 +1509,11 @@ sv:
         så fort du kan!
       Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med
         dina vänner.
-      Food Fight!: "Vi har lagt till en sista funktion åt dig. \r \r Använd ett \"om-uttalande\"
-        för att programmera ditt spel att anropa funktionen \"level_up\" först när
-        \"player_score\" blir större än ett visst antal. \r \r T ex: \"player_score\"
-        > 6\r \r Spela spelet, och spela förbi förbi nivå 4 för att komma till nästa
-        pussel. "
+      Food Fight!: "Vi har lagt till en sista funktion åt dig. \\\r \\\r Använd ett
+        \"om-uttalande\" för att programmera ditt spel att anropa funktionen \"level_up\"
+        först när \"player_score\" blir större än ett visst antal. \\\r \\\r T ex:
+        \"player\\_score\" > 6\\\r \\\r Spela spelet, och spela förbi förbi nivå 4
+        för att komma till nästa pussel. "
       Function intro Ryan: Använd "bygg bro"-funktionen två gånger för att skapa en
         väg till facklan.
       Function intro Ryan_2019: Använd "bygg bro"-funktionen två gånger för att skapa
@@ -1553,8 +1555,8 @@ sv:
         Klicka sedan på "Kör" och styr henne att röra varje snöflinga en gång.
       Inspirational Artwork: "Fritt spel - Inspiration: Du har nu lärt dig allt du
         behöver veta för att göra ett mönster som detta! Om denna bild inspirerar
-        dig, försök att göra något liknande. Annars skapa något alldeles eget. \r
-        \r Vill du veta hur våra inspirationsmönster gjordes? "
+        dig, försök att göra något liknande. Annars skapa något alldeles eget. \\\r
+        \\\r Vill du veta hur våra inspirationsmönster gjordes? "
       K-1 Artist 1 Assessment 1: Rita en kort linje upp och en lång linje till höger!
       K-1 Artist Loops 1: Rita denna linje genom att flytta österut 4 gånger.
       K-1 Artist Loops 2: Kan du rita samma linje med hjälp av en slinga?
@@ -1671,9 +1673,9 @@ sv:
         till grisen!
       K-1 Maze Multi 14: Bedömnings-nivå
       K-1 Maze Multi 15: Bedömnings-nivå
-      K-1 Maze Sequence Assessment 1: "Detta är ett test! \r flytta i en riktning,
+      K-1 Maze Sequence Assessment 1: "Detta är ett test! \\\r flytta i en riktning,
         sedan en annan att få mig till grisen"
-      K-1 Maze Sequence Assessment 2: "Detta är ett test! \r flytta i en riktning,
+      K-1 Maze Sequence Assessment 2: "Detta är ett test! \\\r flytta i en riktning,
         sedan i en annan att få mig till grisen."
       K-1 Maze debug Assessment 1: Bedömning--felsök denna nivå genom att ordna om
         och lägga till block för att få mig till grisen!
@@ -1683,7 +1685,7 @@ sv:
       K-1 maze debug 1: Ändra koden för att få mig till grisen!
       K-1 maze debug 10: Felsök denna nivå genom att ordna om och lägga till block
         för att få mig till grisen!
-      K-1 maze debug 11: "Detta är ett test! \r Felsök denna nivå genom att ordna
+      K-1 maze debug 11: "Detta är ett test! \\\r Felsök denna nivå genom att ordna
         om och lägga till block för att få mig till grisen"
       K-1 maze debug 2: Räkna ut vad som saknas och lägg sedan till block för att
         få mig till grisen!
@@ -1721,7 +1723,7 @@ sv:
         `turn` block i blocket `when spawned`(när skapad) för att få dem att röra på sig.
       MC HOC 2016 Level 3: "Utmärkt, kycklingen är flyttad! Men sen fastnade den.\nI
         spel springer kycklingar hela tiden. Använd en `forever do` loop för att få
-        kycklingarna att röra på sig.\r\n"
+        kycklingarna att röra på sig.\\\r"
       MC HOC 2016 Level 4: Kycklingarna ser nu konstiga ut när alla flyttar sig på
         samma sätt. Spel använder slumpmässiga rörelser för att göra saker som ser
         ut som på riktigt. Gör så att kycklingarna vänder sig slumpmässigt ('turn
@@ -1827,7 +1829,7 @@ sv:
         \"Rita en linje av fyrkanter\" som ritar sex rutor i rad.  Kan du bygga denna
         funktion med hjälp av \"Rita en kvadrat 20\"-funktionen som vi redan har skapat?
         Obs: Se att vi har ändrat pennan till att vara mycket tunnare. Klicka på \"Redigera\"
-        på  \"Rita en kvadrat 20\" funktionen för att se hur! \r\n"
+        på  \"Rita en kvadrat 20\" funktionen för att se hur! \\\r"
       NEW Course 4 Artist Functions 12: Använd funktionen "Rita en linje av kvadrater"
         från sista pusslet för att rita detta mönster."
       NEW Course 4 Artist Functions 13: 'Kan du rita en stjärnform med funktionen
@@ -1850,7 +1852,7 @@ sv:
         fyrkant." När du är klar med att titta runt, klicka på "Spara och Stäng" och
         sedan "kör"
       NEW Course 4 Artist Functions 6: "Kan du rita denna bild genom att använda \"rita
-        en fyrkant\" -blocket? Tips: varje ruta är 120 pixlar isär. \r\n"
+        en fyrkant\" -blocket? Tips: varje ruta är 120 pixlar isär. \\\r"
       NEW Course 4 Artist Functions 7: 'Får du kläm på hur man använder funktionsblock?
         Låt oss ändra denna ruta så att den är 200 pixlar i storlek. Tips: Klicka
         på "Redigera" för att ändra storlek på "Rita en fyrkant" funktionen. Kom ihåg
@@ -1875,16 +1877,16 @@ sv:
         en "för loop" med din funktion för att skapa denna design?
       NEW Course 4 Artist Params 13: "Låt oss redigera \"rita en polygon\" funktionen.
         Det har redan en \"sidor\" parameter. Nu, låt oss lägga till en \"längd\"
-        parameter. \r ledtråd: omkretsen av varje form är 200 bildpunkter lång. Minns
-        du ekvationen för att göra figurer av samma storlek när de har olika antal
-        sidor?"
+        parameter. \\\r ledtråd: omkretsen av varje form är 200 bildpunkter lång.
+        Minns du ekvationen för att göra figurer av samma storlek när de har olika
+        antal sidor?"
       NEW Course 4 Artist Params 14: Redigera "rita en spiral kant" till att använda
         "längd" och "sidor" parametrar och sedan återskapa dessa former.
       NEW Course 4 Artist Params 15: 'Fritt spel: Här är de funktioner som du har
         skrivit, och några fler för dig att spela med. Rita något fantastiskt! Lek
         med pennbredden och se hur olika dina ritningar ser ut!'
       NEW Course 4 Artist Params 3: "Nu ska vi använda funktionen för att rita 5 trianglar
-        i rad. Tips: varje triangel är 30 bildpunkter isär. \r\n"
+        i rad. Tips: varje triangel är 30 bildpunkter isär. \\\r"
       NEW Course 4 Artist Params 4: Märker du något annorlunda med dessa funktionsblock?
         Klicka på "Kör" för att se vad som händer.
       NEW Course 4 Artist Params 5: 'Fyll i ??? i längd-parametern i blocket. Tips:
@@ -1905,7 +1907,7 @@ sv:
       NEW Course 4 Artist Params inspire: "Fritt spel - Inspiration: Du har nu lärt
         dig allt du behöver veta för att göra ett mönster som detta! Om denna bild
         inspirerar dig, försök att göra något liknande. Annars skapa något alldeles
-        eget. \r \r Vill du veta hur våra inspirationsmönster gjordes? "
+        eget. \\\r \\\r Vill du veta hur våra inspirationsmönster gjordes? "
       NEW Course 4 Artist Vars 1.5: 'Ta en titt på koden, kan du se hur den "ange
         längd" blocket och "längd" blocket verkar tillsammans? Klicka på "Kör" för
         att se det i aktion. '
@@ -1923,8 +1925,8 @@ sv:
         10.'
       NEW Course 4 Artist Vars 6: "Rita detta mönster genom att släppa variabeln längd
         på rätt ställen, och sedan ange det rätta värdet för längd. (Ledtråd: det
-        är en multipel av 10).  \r \r se hur du bara behöver ange värdet för längd
-        en gång, och koden använder det rätta värdet överallt? \r \r \r\n"
+        är en multipel av 10).  \\\r \\\r se hur du bara behöver ange värdet för längd
+        en gång, och koden använder det rätta värdet överallt? \\\r \\\r \\\r"
       NEW Course 4 Bee For Loops 1: Använd en loop (upprepa) för att samla nektar
         från varje blomma.
       NEW Course 4 Bee For Loops 10: Använd din för-loop "räknare" variabel för att
@@ -1956,10 +1958,10 @@ sv:
         ett matematik block! Hur kan du använda variabeln \"räknare\" för att navigerai
         denna trädgård med minsta möjliga antal block? Vad behöver du göra för att
         samla in 3, 6, 9, 12, 15 nektar denna gång? Hemligheten ligger i variabeln
-        \"räknare\"! \r \r Kom ihåg: om din slinga räknar upp, läggs 'ökningen' till
-        i 'räknar-\n variabeln varje gång."
+        \"räknare\"! \\\r \\\r Kom ihåg: om din slinga räknar upp, läggs 'ökningen'
+        till i 'räknar-\n variabeln varje gång."
       NEW Course 4 Bee For Loops 8: "Du kan detta! Vad bör din ökning vara för att
-        samla 3, 6, 9, 12, 15 nektar? \r Ledtråd: Vad behöver du lägga till varje
+        samla 3, 6, 9, 12, 15 nektar? \\\r Ledtråd: Vad behöver du lägga till varje
         nummer för att få numret efter det?"
       NEW Course 4 Bee For Loops 9: Om din slinga räknar ner, dras ökningen från din
         variabel i varje slinga. Vad bör din ökning vara för att samla 15, sen 12,
@@ -2229,8 +2231,8 @@ sv:
         Undvik TNT, annars flyger fjädrarna!
       course2_playlab_stage17_1: Kan du få hunden Jorge (actor 1) att säga "Hej"?
       course2_playlab_stage17_10: "Lägg till block i händelsen \"when run\" för att
-        ändra bakgrund och hastighet för pingvinen \"Waddles\". \r\n\r\nSpela spelet
-        och flytta \"Waddles\" med piltangenterna tills du får poäng."
+        ändra bakgrund och hastighet för pingvinen \"Waddles\". \\\r\n\\\r\nSpela
+        spelet och flytta \"Waddles\" med piltangenterna tills du får poäng."
       course2_playlab_stage17_11: Skapa din egen berättelse. När du är klar, klicka
         på Slutför/Finish om du vill låta kompisar prova din berättelse på sina telefoner.
       course2_playlab_stage17_2: Kan du få Jorge (actor 1) att säga något? Få sedan
@@ -2245,9 +2247,9 @@ sv:
         sig runt med hjälp av upp / ner / vänster/höger pil och träffar alla mål!
       course2_playlab_stage17_8: "Kan du få pingvinen \"Waddles\" (actor 2) att säga
         \"AJ!\" och spela en \"Träffad\" ljud spelas upp om han krockar med Chomp?
-        \r \r När du är klar, spela spelet och se vad som händer vid en krock."
+        \\\r \\\r När du är klar, spela spelet och se vad som händer vid en krock."
       course2_playlab_stage17_9: "Kan du lägga till ett block för att räkna poäng
-        när pingvinen krockar med Octavia (actor 3)? \r \nSpela spelet och flytta
+        när pingvinen krockar med Octavia (actor 3)? \\\r \nSpela spelet och flytta
         pingvinen med pilarna tills du får poäng!"
       course3_playlab_stage16_1: Kan du göra så att hunden säger "hello world"?
       course3_playlab_stage16_2: Kan du å hunden att hunden att säga något och sen
@@ -2271,7 +2273,7 @@ sv:
         "träffad" ljud om han kör in i dinosaurien, och så flytta honom med pilarna
         för att få det att hända?
       course3_playlab_stage17_5: "Kan du lägga till ett block för att räkna poäng
-        när pingvinen krockar med Octavia (actor 3)? \r \nSpela spelet och flytta
+        när pingvinen krockar med Octavia (actor 3)? \\\r \nSpela spelet och flytta
         pingvinen med pilarna tills du får poäng!"
       course3_playlab_stage17_6: "Kan du lägga till block för att ändra bakgrunden
         och hastigheten på pingvinen? \nFlytta honom med pilarna tills du får poäng!"
@@ -2310,22 +2312,22 @@ sv:
         ekollonet.
       courseD_artist_binary1: "Binärt är ett sätt att representera information med
         hjälp av endast två alternativ.  Här kommer vi att använda alternativen \"av\"
-        (företrädd av siffran 0) och \"på\" (företrädd av nummer 1).  \r \r vi har
-        försett dig med ett rutnät av \"pixlar\" som du kan gå igenom och göra mönster
-        genom att aktivera bara vissa rutor.  Kan du få konstnären att rita \"01010101\"
-        i binärt i första raden?"
+        (företrädd av siffran 0) och \"på\" (företrädd av nummer 1).  \\\r \\\r vi
+        har försett dig med ett rutnät av \"pixlar\" som du kan gå igenom och göra
+        mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita
+        \"01010101\" i binärt i första raden?"
       courseD_artist_binary1_2018: "Binärt är ett sätt att representera information
         med hjälp av endast två alternativ.  Här kommer vi att använda alternativen
-        \"av\" (företrädd av siffran 0) och \"på\" (företrädd av nummer 1).  \r \r
-        vi har försett dig med ett rutnät av \"pixlar\" som du kan gå igenom och göra
-        mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita
-        \"01010101\" i binärt i första raden?"
+        \"av\" (företrädd av siffran 0) och \"på\" (företrädd av nummer 1).  \\\r
+        \\\r vi har försett dig med ett rutnät av \"pixlar\" som du kan gå igenom
+        och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären
+        att rita \"01010101\" i binärt i första raden?"
       courseD_artist_binary1_2019: "Binärt är ett sätt att representera information
         med hjälp av endast två alternativ.  Här kommer vi att använda alternativen
-        \"av\" (företrädd av siffran 0) och \"på\" (företrädd av nummer 1).  \r \r
-        vi har försett dig med ett rutnät av \"pixlar\" som du kan gå igenom och göra
-        mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita
-        \"01010101\" i binärt i första raden?"
+        \"av\" (företrädd av siffran 0) och \"på\" (företrädd av nummer 1).  \\\r
+        \\\r vi har försett dig med ett rutnät av \"pixlar\" som du kan gå igenom
+        och göra mönster genom att aktivera bara vissa rutor.  Kan du få konstnären
+        att rita \"01010101\" i binärt i första raden?"
       courseD_artist_binary4: Kan du rita detta mönster genom att upprepa en tresiffrig
         binär sträng?
       courseD_artist_binary4_2018: Kan du rita detta mönster genom att upprepa en
@@ -2446,13 +2448,13 @@ sv:
       courseF_artist_for_challenge2_2019: Kan du lista ut hur du kan återskapa denna
         ritning med en enda slinga?
       courseF_bee_for8: "Du kan detta! Vad bör din ökning vara för att samla 3, 6,
-        9, 12, 15 nektar? \r Ledtråd: Vad behöver du lägga till varje nummer för att
-        få numret efter det?"
+        9, 12, 15 nektar? \\\r Ledtråd: Vad behöver du lägga till varje nummer för
+        att få numret efter det?"
       courseF_bee_for8_2018: "Du kan detta! Vad bör din ökning vara för att samla
-        3, 6, 9, 12, 15 nektar? \r Ledtråd: Vad behöver du lägga till varje nummer
+        3, 6, 9, 12, 15 nektar? \\\r Ledtråd: Vad behöver du lägga till varje nummer
         för att få numret efter det?"
       courseF_bee_for8_2019: "Du kan detta! Vad bör din ökning vara för att samla
-        3, 6, 9, 12, 15 nektar? \r Ledtråd: Vad behöver du lägga till varje nummer
+        3, 6, 9, 12, 15 nektar? \\\r Ledtråd: Vad behöver du lägga till varje nummer
         för att få numret efter det?"
       courseF_bee_for_challenge2: Lösa detta pussel med minsta möjliga antal block.
       courseF_bee_for_challenge2_2018: Lösa detta pussel med minsta möjliga antal
@@ -2597,13 +2599,13 @@ sv:
         sig runt med hjälp av upp / ner / vänster/höger pil och träffar alla mål!
       grade2_playlab_project_3: "Kan du få pingvinen \"Waddles\" (actor 2) att säga
         \"AJ!\" och spela en \"Träffad\" ljud spelas upp om han krockar med Chomp?
-        \r \r När du är klar, spela spelet och se vad som händer vid en krock."
+        \\\r \\\r När du är klar, spela spelet och se vad som händer vid en krock."
       grade2_playlab_project_4: "Kan du lägga till ett block för att räkna poäng när
-        pingvinen krockar med Octavia (actor 3)? \r \nSpela spelet och flytta pingvinen
+        pingvinen krockar med Octavia (actor 3)? \\\r \nSpela spelet och flytta pingvinen
         med pilarna tills du får poäng!"
       grade2_playlab_project_5: "Lägg till block i händelsen \"when run\" för att
-        ändra bakgrund och hastighet för pingvinen \"Waddles\". \r\n\r\nSpela spelet
-        och flytta \"Waddles\" med piltangenterna tills du får poäng."
+        ändra bakgrund och hastighet för pingvinen \"Waddles\". \\\r\n\\\r\nSpela
+        spelet och flytta \"Waddles\" med piltangenterna tills du får poäng."
       grade2_puppy_loops2: 'Kan du byta ut dessa fem block med endast två block? (Tips:
         skapa en loop med ett "Upprepa gånger" block.)'
       grade2_puppy_loops4: Använd två slingor för att komma till  grisen med färre
@@ -2742,7 +2744,7 @@ sv:
         triangelkoden?
       grade4_arist_nested_loop_triangles4: Rita tänderna i alligatorns mun!
       grade4_arist_nested_loop_triangles5: "Skapa en sol genom att nästla in startkoden
-        i en annan slinga. Detta kallas en nästlad slinga. \r"
+        i en annan slinga. Detta kallas en nästlad slinga. \\\r"
       grade4_arist_nested_loop_triangles6: Kan du rita dessa 36 trianglar med en nästlad
         slinga?
       grade4_artist_functions1: 'Hej. Jag zombie-konstnär. Mig älskar teckning! Hjälp
@@ -2758,7 +2760,7 @@ sv:
       grade4_artist_functions_challenge2: Använd de föreslagna funktionerna för att
         rita fyra rader av hexagoner. Lägg märke till hur våra jämnt numrerade rader
         skiftas till höger?
-      grade4_artist_nestedLoops_challenge: "Tryck här för att se tipsen igen!\r\n\r\nHär\när
+      grade4_artist_nestedLoops_challenge: "Tryck här för att se tipsen igen!\\\r\n\\\r\nHär\när
         koden för en intressant form. Vad händer när du upprepar den flera gånger
         och vrider den varje gång? Notera att svängarna i denna form adderas till
         420 grader, vilket betyder att när din artist har ritat färdigt är den vänd
@@ -2777,10 +2779,8 @@ sv:
         med 10?)'
       grade4_artist_nested_loop_squares1: Kan du rita dessa 10 kvadraterna på trottoaren
         med en nästlad slinga? Varje kvadrat är 30 pixlar.
-      grade4_artist_nested_loop_triangles1: 'Komplettera koden som ritar dessa trianglar.  Den
-        första är gjord åt dig.  Tips: 3 trianglar med 360 graders rotation.'
       grade4_artist_nested_loop_triangles5: "Skapa en sol genom att nästla in startkoden
-        i en annan slinga. Detta kallas en nästlad slinga. \r"
+        i en annan slinga. Detta kallas en nästlad slinga. \\\r"
       grade4_artist_nested_loop_triangles6: Kan du rita dessa 36 trianglar med en
         nästlad slinga?
       grade4_artist_parameters_squares1: 'Klicka på "Redigera" för att fylla i funktionsdefinitionen
@@ -2859,18 +2859,15 @@ sv:
         för att göra en fyrkant 10 gånger, och "Vända"-blocket för att vända 36 grader
         mellan varje fyrkant?
       grade4_playlab_freeplay: 'Det är fri speltid! Ha kul med alla block i din verktygslåda. '
-      grade4_playlab_test: "Använd högerpilen för att skjuta hjärtan. \r \r hur ska
-        vi få poäng i vårt spel? Lägg till 1 i din \"poäng\" variabel varje gång Hund
-        träffar Katt med ett hjärta. Använd händelsen \"när actor 2 rör något\" för
-        att utlösa en uppdatering av dina poäng. Du kan öka din variabel genom att
-        ange \"poäng = poäng + 1.\" Få dina poäng upp till 10 (går en i taget!) för
-        att klara nivån."
+      grade4_playlab_test: "Använd högerpilen för att skjuta hjärtan. \\\r \\\r hur
+        ska vi få poäng i vårt spel? Lägg till 1 i din \"poäng\" variabel varje gång
+        Hund träffar Katt med ett hjärta. Använd händelsen \"när actor 2 rör något\"
+        för att utlösa en uppdatering av dina poäng. Du kan öka din variabel genom
+        att ange \"poäng = poäng + 1.\" Få dina poäng upp till 10 (går en i taget!)
+        för att klara nivån."
       grade4_playlab_test2: Här är en funktion som kallas "hoppa" och som gör att
         din huvudperson hoppar upp 100 pixlar. Använd funktionen hoppa för att samla
         alla flaggor.
-      grade4_review_artist1: Hej, jag är en konstnär. Du kan skriva kod för att få
-        mig att rita nästan vad som helst. Använd några block för att få mig rita
-        över de grå linjerna i bilden. (Varje rad är 100 pixlar lång)
       grade4_review_artist2: 'Huset behöver ett tak! Rita en triangel. Tips: alla
         tre sidor är lika långa.'
       grade4_review_artist3: Hoppa-blocket flyttar konstnären utan att rita. Rita
@@ -2883,17 +2880,17 @@ sv:
         till en sväng i den.
       grade5_artist_binary1: "Binärt är ett sätt att representera information med
         hjälp av endast två alternativ.  Här kommer vi att använda alternativen \"av\"
-        (företrädd av siffran 0) och \"på\" (företrädd av nummer 1).  \r \r vi har
-        försett dig med ett rutnät av \"pixlar\" som du kan gå igenom och göra mönster
-        genom att aktivera bara vissa rutor.  Kan du få konstnären att rita \"01010101\"
-        i binärt i första raden?"
+        (företrädd av siffran 0) och \"på\" (företrädd av nummer 1).  \\\r \\\r vi
+        har försett dig med ett rutnät av \"pixlar\" som du kan gå igenom och göra
+        mönster genom att aktivera bara vissa rutor.  Kan du få konstnären att rita
+        \"01010101\" i binärt i första raden?"
       grade5_artist_binary10: Klicka här för att se ledtrådar.
       grade5_artist_binary11: 'Fri lek: Här är en tom duk du kan rita på. Ha så roligt!'
       grade5_artist_binary2: "Här är en funktion som tar en binär sträng med 1 och
         0 för att instruera artisten att följa dem från vänster till höger och uppifrån
         och ned. Artisten kommer att fylla i kvadraterna när den ser en 1:a och ignorera
-        kvadraten när den ser en 0:a.\r\n\r\nKör koden för att se hur artisten använder
-        binärkoden för att rita ett mönster."
+        kvadraten när den ser en 0:a.\\\r\n\\\r\nKör koden för att se hur artisten
+        använder binärkoden för att rita ett mönster."
       grade5_artist_binary3: Vilken av dessa binärsträngar kan du upprepa 8 gånger
         för att rita denna bild?
       grade5_artist_binary4: Kan du rita detta mönster genom att upprepa en tresiffrig
@@ -2905,16 +2902,16 @@ sv:
       grade5_artist_binary7: Vilken är den kortaste binära stäng som du kan upprepa
         för att rita denna bild?
       grade5_artist_binary8: Slutför denna bild.
-      grade5_artist_binary9: "Här är en större duk du kan rita på 16 x 16 pixlar!\r\n\r\nSe
+      grade5_artist_binary9: "Här är en större duk du kan rita på 16 x 16 pixlar!\\\r\n\\\r\nSe
         vad som händer när vi börjar bli kreativa med bitar?"
       grade5_artist_for_loops1: 'Rita denna triangel som är 50 pixlar bred. Tips:
         Använd ett upprepa block.'
       grade5_artist_for_loops10: "Kan du lista ut hur du kan använda alla de saker
-        du har lärt dig för att skapa denna bild? \r \r Behöver du en ledtråd? Klicka
-        här."
+        du har lärt dig för att skapa denna bild? \\\r \\\r Behöver du en ledtråd?
+        Klicka här."
       grade5_artist_for_loops5: "En enda liten förändring av koden från den sista
         bilden kan skapa det här mönstret. Kan du lista ut vilken förändringen är?
-        \r \r Ledtråd: du måste ta bort något!"
+        \\\r \\\r Ledtråd: du måste ta bort något!"
       grade5_artist_for_loops6: Om du vrider en liten bit mer eller mindre än du normalt
         skulle för en form, skapar det en snygg effekt. Prova att använda något av
         koden från den sista nivån, men vrid 89 grader för att skapa denna vridna
@@ -2930,15 +2927,15 @@ sv:
       grade5_artist_for_loops9: "Låt oss sätta ihop allt!  Använd dina kunskaper om
         \"för loopar\" och \"räknare\", skapa denna ritning där varje form har två
         sidor mer än den förra.  Se till att varje sida är 10 gånger så lång som antalet
-        sidor i polygonen. \r \r mycket lite av koden har getts till dig."
+        sidor i polygonen. \\\r \\\r mycket lite av koden har getts till dig."
       grade5_artist_for_loopsfreeplay11: "Fri lek - inspiration: Du har nu lärt dig
         allt du behöver veta för att göra ett mönster som detta! Om denna bild inspirerar
-        dig, försök att göra något liknande. Annars skapa något alldeles eget. \r
-        \r Behöver du en ledtråd? Klicka här."
+        dig, försök att göra något liknande. Annars skapa något alldeles eget. \\\r
+        \\\r Behöver du en ledtråd? Klicka här."
       grade5_artist_functionparameters10: "Fritt spel - Inspiration: Du har nu lärt
         dig allt du behöver veta för att göra ett mönster som detta! Om denna bild
         inspirerar dig, försök att göra något liknande. Annars skapa något alldeles
-        eget. \r \r Vill du veta hur våra inspirationsmönster gjordes? "
+        eget. \\\r \\\r Vill du veta hur våra inspirationsmönster gjordes? "
       grade5_artist_functionparameters11: 'Fritt spel: Här är de funktioner som du
         har skrivit, och några fler för dig att spela med. Rita något fantastiskt!
         Lek med pennbredden och se hur olika dina ritningar ser ut!'
@@ -2946,9 +2943,9 @@ sv:
         en "för loop" med din funktion för att skapa denna design?
       grade5_artist_functionparameters8: "Låt oss redigera \"rita en polygon\" funktionen.
         Det har redan en \"sidor\" parameter. Nu, låt oss lägga till en \"längd\"
-        parameter. \r ledtråd: omkretsen av varje form är 200 bildpunkter lång. Minns
-        du ekvationen för att göra figurer av samma storlek när de har olika antal
-        sidor?"
+        parameter. \\\r ledtråd: omkretsen av varje form är 200 bildpunkter lång.
+        Minns du ekvationen för att göra figurer av samma storlek när de har olika
+        antal sidor?"
       grade5_artist_functionparameters_6: Kan du slutföra denna ritning? Sidorna i
         alla former är 100 bildpunkter långa.
       grade5_artist_parameters_squares1: 'Klicka på "Redigera" för att fylla i funktionsdefinitionen
@@ -2967,11 +2964,11 @@ sv:
         sidor blir högre.'
       grade5_artist_variables_freeplay14: "Fritt spel: prova detta! Nu är din algoritm
         inkapslad inuti ännu en loop. experimentera med att ändra värdena på dina
-        två variabler för att rita roliga mönster. \r\n\r\nLek med färger för att
-        få ännu mer effekt! Använd slumpmässiga färger inuti loopar för att se hur
-        det förändrar din design."
+        två variabler för att rita roliga mönster. \\\r\n\\\r\nLek med färger för
+        att få ännu mer effekt! Använd slumpmässiga färger inuti loopar för att se
+        hur det förändrar din design."
       grade5_artist_variables_freeplay15: "Vill du få en andra titt på inspirationsdesignen
-        eller tips?  Klicka här! \r \r  Skapa annars en egen design!"
+        eller tips?  Klicka här! \\\r \\\r  Skapa annars en egen design!"
       grade5_artist_variables_freeplay16: Spelar fortfarande?  Här är en tom duk där
         du kan skapa vad du vill!
       grade5_artist_variables_hexagons1: 'Låt oss försöka igen. Kan du ange variabeln
@@ -2982,21 +2979,21 @@ sv:
         till för att rita denna bild gjord av rutor?
       grade5_artist_variables_octagons13: "När en form har massor av sidor, måste
         varje sida vara kortare om du vill att hela mönstret att passa på skärmen.
-        \r låt oss återskapa algoritmen för detta fantastiska mönster, men istället
+        \\\r låt oss återskapa algoritmen för detta fantastiska mönster, men istället
         för att manuellt ställa in variabeln \"längd\", låt oss använda ett matematik
         block med variabeln \"sidor\" inuti för att se till att varje form passar
-        korrekt. Omkretsen för varje polygon är 300 pixlar. \r behöver några tips?
+        korrekt. Omkretsen för varje polygon är 300 pixlar. \\\r behöver några tips?
         \ Klicka här."
       grade5_artist_variables_pentagon8: "Använd vad du lärt dig i det sista pusslet
-        för att skapa denna hexagon med hjälp av \"sidor\" variabeln. \r \r Se hur
-        du kan ändra endast ett värde för att rita en triangel, kvadrat, pentagon
+        för att skapa denna hexagon med hjälp av \"sidor\" variabeln. \\\r \\\r Se
+        hur du kan ändra endast ett värde för att rita en triangel, kvadrat, pentagon
         eller oktagon?"
       grade5_artist_variables_pentagon9: Nu ska du återskapa algoritmen från den förra
         nivån och skapa en pentagon med sidor av 150.
       grade5_artist_variables_pentagons1: "Rita detta mönster genom att släppa variabeln
         längd på rätt ställen, och sedan ange det rätta värdet för längd. (Ledtråd:
-        det är en multipel av 10).  \r \r se hur du bara behöver ange värdet för längd
-        en gång, och koden använder det rätta värdet överallt? \r \r \r\n"
+        det är en multipel av 10).  \\\r \\\r se hur du bara behöver ange värdet för
+        längd en gång, och koden använder det rätta värdet överallt? \\\r \\\r \\\r"
       grade5_artist_variables_pentagons12: Låt oss sätta sid-variabeln till 5. Ju
         fler sidor vi lägger till i denna algoritm, distos större blir hela mönstret.
         Notera att där finns en annan variabel som heter 'längd'. Vi kan använda den
@@ -3008,8 +3005,8 @@ sv:
       grade5_artist_variables_square7: "Här är en bit som kan rita vilken regelbunden
         polygon som helst. Där finns en ny variabel som kallas 'sidor' och som är
         satt till 4. Kan du använda variabeln sidor (tillsammans med matematik blocket)
-        för att vända rätt antal ggr oavsett hur många sidor det är i polygonen? \r
-        \r Klicka härför att gå tillbaka till tipset!"
+        för att vända rätt antal ggr oavsett hur många sidor det är i polygonen? \\\r
+        \\\r Klicka härför att gå tillbaka till tipset!"
       grade5_artist_variables_triangles2: Istället för att använda "flytta fram med
         150", refererar nu 'flytta fram' blocket till en variabel som kallas "längd".
         Kan du ställa in "längd" till 150 för att rita denna nya triangel?
@@ -3023,7 +3020,7 @@ sv:
       grade5_bee_for_loops6: Du kan också använda en "för loop" för att räkna ner.
         Försök samla denna nektar genom att räkna ner från 5 till 1, 1 i taget.
       grade5_bee_for_loops8: "Du kan detta! Vad bör din ökning vara för att samla
-        3, 6, 9, 12, 15 nektar? \r Ledtråd: Vad behöver du lägga till varje nummer
+        3, 6, 9, 12, 15 nektar? \\\r Ledtråd: Vad behöver du lägga till varje nummer
         för att få numret efter det?"
       grade5_playlab_freeplay: 'Det är fri speltid! Ha kul med alla block i din verktygslåda. '
       grade5_playlab_variables1: Denna gång du behöver inte skriva någon kod, tryck
@@ -3038,15 +3035,15 @@ sv:
         innan andra figurer får en genom att ange hastighet i den nya "hastighet"
         parametern.
       grade5_playlab_variables12: "Låt oss ha lite kul! Titta på koden för att se
-        om du kan lista ut vad varje block gör.  \r \r När du är klar, använd piltangenterna
-        för att styra hunden och samla alla flaggor."
+        om du kan lista ut vad varje block gör.  \\\r \\\r När du är klar, använd
+        piltangenterna för att styra hunden och samla alla flaggor."
       grade5_playlab_variables13: Använd en "när actor berör" block för att skicka
         hunden tillbaka till övre vänstra ENDAST om hunden rör vid någon av de andra
         actors.
       grade5_playlab_variables14: 'Det är fri speltid! Ha kul med alla block i din
         verktygslåda. '
       grade5_playlab_variables2: Loppet i det sista pusslet var inte särskilt rättvist!
-        Ändra variabeln "dog_speed" så att du kan samla fler flaggor än Katt. Först
+        Ändra variabeln "dog\_speed" så att du kan samla fler flaggor än Katt. Först
         att samla in 10 flaggor vinner!
       grade5_playlab_variables3: Här är en ny typ av spel! Använd vänster och höger
         pilarna för att flytta och uppåtpilen för att hoppa. Se om du kan samla in
@@ -3054,7 +3051,7 @@ sv:
       grade5_playlab_variables4: Nu använder vi en variabel som kallas "höjd" för
         att kontrollera hur högt hunden kan hoppa. Uppdatera variabeln "höjd" så att
         hunden kan hoppa tillräckligt högt för att nå alla flaggor.
-      grade5_playlab_variables6: "Använd högerpilen för att skjuta hjärtan. \r \r
+      grade5_playlab_variables6: "Använd högerpilen för att skjuta hjärtan. \\\r \\\r
         hur ska vi få poäng i vårt spel? Lägg till 1 i din \"poäng\" variabel varje
         gång Hund träffar Katt med ett hjärta. Använd händelsen \"när actor 2 rör
         något\" för att utlösa en uppdatering av dina poäng. Du kan öka din variabel
@@ -3065,25 +3062,25 @@ sv:
         hjärtan från Katt (actor 2), bör du förlora en poäng. Börja med 10 poäng så
         det inte är så svårt. Låt dina poäng gå från 10 till 0 för att klara nivån.
       grade5_playlab_variables71: "Här är vårt spel från ett tidigare skede, men det
-        mesta av koden är dold. Det finns en ny funktion \"ge poäng.\" \r \r Redigera
+        mesta av koden är dold. Det finns en ny funktion \"ge poäng.\" \\\r \\\r Redigera
         funktionen så att en \"poäng\" parameter läggs till variabeln \"spelar-poäng\".
-        \r \r Variabeln \"spelar-poäng\" bör öka varje gång Hund taggar Katt med hjärtan,
-        och minska varje gång Katt taggar Hund med hjärtan. \r \r Obs: När du är klar,
-        klicka på \"Kör\" för att spela.  När hunden har fått 6 poäng, kommer du gå
-        vidare till nästa pussel. "
-      grade5_playlab_variables81: "Vi har lagt till en sista funktion åt dig. \r \r
-        Använd ett \"om-uttalande\" för att programmera ditt spel att anropa funktionen
-        \"level_up\" först när \"player_score\" blir större än ett visst antal. \r
-        \r T ex: \"player_score\" > 6\r \r Spela spelet, och spela förbi förbi nivå
-        4 för att komma till nästa pussel. "
+        \\\r \\\r Variabeln \"spelar-poäng\" bör öka varje gång Hund taggar Katt med
+        hjärtan, och minska varje gång Katt taggar Hund med hjärtan. \\\r \\\r Obs:
+        När du är klar, klicka på \"Kör\" för att spela.  När hunden har fått 6 poäng,
+        kommer du gå vidare till nästa pussel. "
+      grade5_playlab_variables81: "Vi har lagt till en sista funktion åt dig. \\\r
+        \\\r Använd ett \"om-uttalande\" för att programmera ditt spel att anropa
+        funktionen \"level_up\" först när \"player_score\" blir större än ett visst
+        antal. \\\r \\\r T ex: \"player\\_score\" > 6\\\r \\\r Spela spelet, och spela
+        förbi förbi nivå 4 för att komma till nästa pussel. "
       grade5_playlab_variables9: Här är en funktion som kallas "patrol." Redigera
         den för att flytta Katt 400 pixlar upp och sedan ner 400 pixlar.
       grade5_playlab_variables_freeplay: "Fri speltid! Här är alla variabler vi har
-        lekt med så här långt, samt några fler om du vill ha dem. \r \r Notera att
-        det nu finns så många block i vår verktygslåda att de måste organiseras!  Här
-        har vi satt varje bit i en lämplig kategori.  Ta dig tid att utforska allt
-        som finns. När du är klar, gör ett spel eller en berättelse med repetitioner,
-        variabler och händelser.  \r \r Tips: scrolla ner för att se alla kommandon
+        lekt med så här långt, samt några fler om du vill ha dem. \\\r \\\r Notera
+        att det nu finns så många block i vår verktygslåda att de måste organiseras!
+        \ Här har vi satt varje bit i en lämplig kategori.  Ta dig tid att utforska
+        allt som finns. När du är klar, gör ett spel eller en berättelse med repetitioner,
+        variabler och händelser.  \\\r \\\r Tips: scrolla ner för att se alla kommandon
         på arbetsytan."
       k-1 maze 1: Kan du göra så att jag flyttar västerut till grisen?
       level 'grade3_Loops_10: Använda en liknande loop som i det sista pusslet, men

@@ -10,15 +10,15 @@ ro:
       messages:
         blank: "este necesar"
         blank_plural: "sunt necesare"
-        invalid: "nu este valid"
-        invalid_plural: "sunt nevalide"
+        invalid: "este invalid"
+        invalid_plural: "sunt invalide"
     attributes:
       user:
         name: 'Numele afișat'
         name_example: 'Afişează numele <br/> (de exemplu, Cool Coder sau Jane S.)'
         email: 'E-mail'
         parent_email: 'E-mail părinte/tutore'
-        personal_email: "Adresa de e-mail personal <a href=\"%{url}\"> (click aici dacă nu aveţi o adresă de e-mail)</a>"
+        personal_email: "Adresă de e-mail personală <a href=\"%{url}\"> (apasă aici dacă nu ai o adresă de e-mail)</a>"
         username: 'nume de utilizator'
         password: 'Parolă'
         password_confirmation: 'Confirmarea parolei'
@@ -27,9 +27,9 @@ ro:
         age: 'Vârsta'
         gender: 'Sex'
         edit_header: 'Editează detaliile contului'
-        finish_sign_up_header: 'Finalizați crearea contului dvs'
-        finish_sign_up_subheader: 'Completaţi următoarele informaţii pentru a finaliza crearea unui cont de Code.org pentru <strong>%{email}</strong>.'
-        finish_sign_up_subheader_provider: 'Completaţi următoarele informaţii pentru a finaliza crearea unui cont la Code.org cu <strong>%{provider}</strong> pentru<strong>%{email}</strong>.'
+        finish_sign_up_header: 'Finalizează crearea contului tău'
+        finish_sign_up_subheader: 'Completează următoarele informații pentru a finaliza crearea unui cont Code.org pentru <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Completează următoarele informații pentru a finaliza crearea unui cont Code.org cu <strong>%{provider}</strong> pentru<strong>%{email}</strong>.'
         error:
           future: nu poate fi în viitor
   hello: "Salutare lume"
@@ -50,20 +50,20 @@ ro:
       label: 'Adaugă un profesor:'
       placeholder: "Secțiune Cod (ABCDEF)"
       instructions: "Te rugăm să introduci codul atribuit ție de profesorul tău. Acesta este un cod din 6 litere ca \"ABCDEF\"."
-      instructions_short: "Introduceţi codul clasei dvs. din 6 litere"
+      instructions_short: "Introdu codul clasei tale din 6 litere"
     submit: 'Adaugă profesor'
   add_hint_form:
     placeholder: 'Te rugăm să introduci indiciul tău aici'
     submit: 'Adaugă sugestie'
   appname: "Code.org"
   stage: "Etapă"
-  stage_number: "Etapa %{number}"
+  stage_number: "Lecția %{number}"
   puzzle: "Puzzle"
   trophies: "trofee"
   courses: 'cursuri'
   courses_page:
     title_student: "Învață in Atelierul de programare"
-    title_teacher: "Predă cu Studio-ul Code"
+    title_teacher: "Predă Știința Calculatoarelor"
   unplugged_activity: 'Activitate fără Calculator'
   of: "de"
   more: "MAI MULT"
@@ -78,23 +78,23 @@ ro:
   prize: 'premiu'
   more_info: 'Mai multe informaţii'
   auth:
-    continue_with: 'Continuați cu %{provider}'
+    continue_with: 'Continuă cu %{provider}'
     sign_in_with: 'Loghează-te cu %{provider}'
     signed_in: 'Înregistrat!'
     signed_out: 'Te-ai delogat de pe <a href="%{url}">Code.org</a>.'
     sign_out_of: 'Ai folosit %{provider} pentru a te loga. <a href="%{url}">Fă clic aici</a> pentru ate deloga de pe %{provider}.'
     already_signedup: 'Te-ai înscris deja?'
     notyet_signedup: "Nu te-ai alăturat încă?"
-    google_oauth2: 'Cont Google'
+    google_oauth2: 'Google'
     twitter: 'Twitter'
     facebook: 'Facebook'
-    windowslive: 'Cont Microsoft'
-    microsoft_v2_auth: 'Cont Microsoft'
+    windowslive: 'Microsoft'
+    microsoft_v2_auth: 'Microsoft'
     clever: 'Cont inteligent'
-    powerschool: 'Cont de SuperȘcoală'
+    powerschool: 'Powerschool'
     forgot_password: 'Ai uitat parola?'
-    migration_success: 'Succes! V-ați actualizat experiența la noul nostru tip de cont.'
-    demigration_success: 'Experienţa la noul nostru tip de cont este dezactivată acum pentru dvs.'
+    migration_success: 'Succes! Ai trecut la experiența oferită de noul nostru cont.'
+    demigration_success: 'Experienţa noului nostru tip de cont este dezactivată acum pentru contul tău.'
     need_confirmation: "Nu ai primit instrucţiuni de confirmare?"
     need_unlock: "Nu ai primit instrucţiuni de deblocare?"
     not_linked: "Ne pare rău, contul Code.org nu este conectat la furnizorul dvs. %{provider}. Va trebui să vă conectați introducând parola mai jos."
@@ -158,9 +158,9 @@ ro:
     after_school: 'After-School'
     other: 'Alte'
     state: 'Județ'
-    district: 'Sector'
+    district: 'Cartier'
     other_district_not_listed: 'Alt cartier nelistat mai sus'
-    district_name: 'Nume sector'
+    district_name: 'Nume cartier'
     school: 'Școală'
     other_school_not_listed: 'Altă şcoală nelistată mai sus'
     school_name: 'Numele școlii'
@@ -342,7 +342,7 @@ ro:
       eval: 'Evaluează'
       flappy: 'Flappy'
       frozen: 'Frozen'
-      gamelab: 'Laborator de jocuri'
+      gamelab: 'Game Lab'
       gamelab_jr: 'Game Lab (beta)'
       gumball: 'Minunata lume a lui Gumball'
       iceage: 'Epoca de gheață'
@@ -630,7 +630,7 @@ ro:
       title: "Galerie"
       body: "Vizualizează o galerie de imagini pentru aplicații și artiști, create de utilizatorii noștri"
     gamelab:
-      title: "Laborator de jocuri"
+      title: "Game Lab"
       body: "Laboratorul de jocuri este un mediu de programare în care puteți crea animații simple și jocuri cu obiecte și personaje care interacționează unul cu celălalt."
       audience: "Vârste 13 +"
       cta: "Află cum"
@@ -929,6 +929,8 @@ ro:
     csp_variables: 'Variabile'
     csp_conditionals: 'Condiţionale'
     csp_functions: 'Funcţii'
+    csp_lists: 'Liste'
+    csp_loops: 'Bucle'
   external_links:
     disclaimer: Act de renuntare
     leaving_domain: Acum parasesti acest domeniu, la un site care nu este operat de Code.org.

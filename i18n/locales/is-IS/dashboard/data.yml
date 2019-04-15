@@ -518,6 +518,7 @@ is:
         conditionals_with_cards: Kennslustund án tölvu - Skilyrði með kortum
         what_is_an_event: Hvað er atvik?
         csd_pair_programming: Félagaforritun
+        csd_applab_parameters: Föll með stikum
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn

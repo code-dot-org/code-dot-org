@@ -37,9 +37,9 @@ hu:
         25 pixel széles és 25 pixel magas.'
       2-3 Artist Debugging 1: Meg tudod csinálni ezt a kalapot úgy, hogy a felső részének
         hossza 100 legyen?
-      2-3 Artist Debugging 10: "Az iránytópad a játékban túl szűk. \r \r Ki tudod
-        szélesíteni 10 képponttal? \r \r először próbál a kódot lefuttatni, hogy lásd
-        mi lehet rossz."
+      2-3 Artist Debugging 10: "Az iránytópad a játékban túl szűk. \\\r \\\r Ki tudod
+        szélesíteni 10 képponttal? \\\r \\\r először próbál a kódot lefuttatni, hogy
+        lásd mi lehet rossz."
       2-3 Artist Debugging 11: Segíts befejeznem a csodálatos hópelyhemet. Hányszor
         kell megismételnem a befejezéshez?
       2-3 Artist Debugging 12: Egy hullámot szeretnék hozzáadni a képhez. Tudsz segíteni
@@ -50,8 +50,8 @@ hu:
         által bezárt szögek javításával? Tipp: az utolsó szögnél 15° az eltérés.'
       2-3 Artist Debugging 4: Mit próbáltunk meg rajzolni? Kösd össze a pontokat vonalak
         és szögek használatával.
-      2-3 Artist Debugging 5: "A kódot, a lábhoz és a talphoz rossz. \r \r Ki tudod
-        javítani?"
+      2-3 Artist Debugging 5: "A kódot, a lábhoz és a talphoz rossz. \\\r \\\r Ki
+        tudod javítani?"
       2-3 Artist Debugging 6: Úgy néz ki, egy olyan székre ültem, aminek hiányzik
         az egyik lába. Szerkeszd össze a blokkokat egy székláb megrajzolásához.
       2-3 Artist Debugging 7: Úgy tűnik, a C-t visszafelé rajzolja meg a kód. Meg
@@ -116,7 +116,7 @@ hu:
         hatszöget? Ne feledd, ebben az esetben csak 60 fokot kell fordulnod!
       2-3 Artist Loops 10: Mi történik vajon a mintával, ha az utolsó lépés csak fele
         akkora?
-      2-3 Artist Loops 11: Most akkor csinálj egy *újabb* ciklust az eddigi kód köré.
+      2-3 Artist Loops 11: Most akkor csinálj egy _újabb_ ciklust az eddigi kód köré.
         Ne felejts el egy szöget adni a külső ciklus végéhez.
       2-3 Artist Loops 2: Most használj egy ismétlő elemet, hogy a cellából egy kagyló
         legyen.
@@ -130,7 +130,7 @@ hu:
         hozni. Tudsz készíteni egy rombuszt a hatszögben?
       2-3 Artist Loops 8: Legyen mindkét elem a ciklus belsejében.
       2-3 Artist Loops 9: "Ugyanazokat a formákat fogjuk újra ismételni, de távolságot
-        kell megadnod köztük.\r Használd az előzőleg alkalmazott kódot, de a külső
+        kell megadnod köztük.\\\r Használd az előzőleg alkalmazott kódot, de a külső
         ciklus után adj hozzá egy menj blokkot."
       2-3 Artist Loops New 1: Rajzoljuk meg a robot fejét! Tudnál rajzolni egy négyzetet,
         aminek az oldalai 100 pixel hosszúak?
@@ -153,7 +153,7 @@ hu:
       2-3 Artist Match Sq Pic: 'Párosítsd össze: Egészítsd ki a hiányzó kódot'
       2-3 Artist Match Tri pic: 'Párosítsd össze: Pótold a hiányzó kódot.'
       2-3 Artist Nested Loops 1: "Már használtál ciklusokat ezelőtt, de azt tudtad,
-        hogy egymásba is lehet rakni a ciklusokat? \r\nRakd ciklusba ezt az egész
+        hogy egymásba is lehet rakni a ciklusokat? \\\r\nRakd ciklusba ezt az egész
         kódot háromszor, hogy kirajzolódjon a minta."
       2-3 Artist Nested Loops 10: Ismételd a ciklust 12-szer, hogy elkészítsd a mintát.
       2-3 Artist Nested Loops 11: Ismételd 4-szer a kódot, hogy elkészítsd a mintát.
@@ -186,7 +186,7 @@ hu:
       2-3 Bee Conditionals 1: Szia! Én egy méh vagyok. Segíts nekem nektárt gyűjteni
         a virágról!
       2-3 Bee Conditionals 10: "A lila virágokban 1 vagy 0 nektár van. Vigyázz, ne
-        gyűjts nektárt olyan virágból, amelyben nincs nektár.\r\n"
+        gyűjts nektárt olyan virágból, amelyben nincs nektár.\\\r"
       2-3 Bee Conditionals 11: Gyűjts nektárt azokból a virágokból, amelyekben van
         nektár.
       2-3 Bee Conditionals 12: Használj ciklust, hogy ellenőrizd, és összegyűjtsd
@@ -590,8 +590,6 @@ hu:
       4-5 Artist Patterns 5: Ismételjük ezt meg 6 gyémánt kirajzolásához. Figyeld
         meg, hogy a gyémánt kódunkat úgy változtattuk meg, hogy 2 helyett 3-szor ismétlődjön
         - mit gondolsz miért?
-      4-5 Artist Patterns 6: Hányszor kell megismételned ezt a blokkot, hogy az összes
-        gyémántot kirajzold?
       4-5 Artist Patterns 7: "Módosítsuk az előző feladvány kódját, és készítsünk
         egy még bonyolultabb mintát.\nFigyeld meg, hogyan fedik most egymást a gyémántok.
         Próbáld meg módosítani az \nelső \"ugrás hátra\" blokkot 100-ról 50-re (fele
@@ -711,8 +709,8 @@ hu:
       4-5 Maze Conditionals 1: Használd az "ismételd amíg" blokkot, hogy elvezesd
         a zombit a napraforgóhoz.
       4-5 Maze Conditionals 10: "Tudsz segíteni kijutni ebből az összetett útvesztőből
-        mindössze 3 blokk hozzáadásával?\r\n\r\nHa jól csinálod, akkor bármilyen kacskaringós
-        utat\n be tud járni annak hosszától függetlenül!"
+        mindössze 3 blokk hozzáadásával?\\\r\n\\\r\nHa jól csinálod, akkor bármilyen
+        kacskaringós utat\n be tud járni annak hosszától függetlenül!"
       4-5 Maze Conditionals 2: Használd az "ismételd amíg" blokkot, hogy elvezesd
         a zombit a napraforgóhoz.
       4-5 Maze Conditionals 3: 'Használd a "ha" blokkot, annak eldöntésére, hogy merre
@@ -745,7 +743,7 @@ hu:
         hogy 10 db háromszöget rajzoljon. Az ilyet  egymásba ágyazott ciklusnak nevezik.
         Tipp: a 10 háromszög 360°-os körben van egyenlően elosztva.  '
       4-5 Nested Loops 3: "Készíts egy napocskát a kiindulási kód másik ciklusba ágyazásával.
-        Ezt hívják egymásba ágyazott ciklusnak.\r"
+        Ezt hívják egymásba ágyazott ciklusnak.\\\r"
       4-5 Nested Loops 5: Ismételd meg a megadott kódot annyiszor, hogy szélmalmot
         készíts.
       4-5 Nested Loops 6: Meg tudod rajzolni a hatszöget a háromszög rajzoló kód ciklusba
@@ -780,9 +778,6 @@ hu:
       Alien Defender: 'Projekt ötlet: Készíts egy védekező játékot a Játéklaborban!'
       Alien Defender_2018: 'Projekt ötlet: Készíts egy védekező játékot a Játéklaborban!'
       App Lab test: 'kifejezés:'
-      Artist - Nested Loops 1: 'Egészítsd ki a kódot úgy, hogy ezeket a háromszögeket
-        rajzolja meg.   Az első már készen is van. Tipp: a 3 db háromszög 360°-os
-        körben van elforgatva.'
       Artist - Nested Loops 11: Meg tudod rajzolni a járda 10 négyzetét egymásba ágyazott
         ciklusokkal? Minden négyzet 30 pixeles.
       Artist - Nested Loops 12: Meg tudod rajzolni ezt a 36 darab háromszöget egymásba
@@ -806,7 +801,7 @@ hu:
       Artist Autorun Test: Használd az "ismételd" blokkot a három négyzet megrajzolásához.
       Artist Inspiration: "Szabad játék ihlet: Mindent megtanultál ahhoz, hogy egy
         ilyen mintát rajzolj. Ha ez ihletet ad neked, akkor rajzolj egy hasonlót.
-        Vagy készíthetsz bármilyen más ábrát.\r\n\r\nSzeretnéd tudni, hogyan készült
+        Vagy készíthetsz bármilyen más ábrát.\\\r\n\\\r\nSzeretnéd tudni, hogyan készült
         az ihletül szolgáló minta? "
       Bee Recommended Blocks test: A lila virágokban 1 vagy 0 nektár lehet, de pontosan
         nem tudjuk. Vigyázz, ne gyűjts nektárt a lila virágból, ha nincs benne nektár!
@@ -939,7 +934,8 @@ hu:
       Course 4 Artist 11: És most egy kis kihívás! Ne félj próbálkozni. Nem kell elsőre
         tökéletes képet kapnod. Szeretnél további tippeket kapni? Kattints ide!
       Course 4 Artist 12: "Szeretnéd még egyszer megnézni az ihletet nyújtó ábrákat
-        vagy a tippeket? Kattints ide!\r\n\r\nHa nem, akkor rajzolj egy saját ábrát!"
+        vagy a tippeket? Kattints ide!\\\r\n\\\r\nHa nem, akkor rajzolj egy saját
+        ábrát!"
       Course 4 Artist 13: Még mindig játszol? Itt egy üres vászon, amire azt rajzolsz,
         amit csak akarsz!
       Course 4 Artist 2: Ciklusba tudnád rakni ezt a kód részletet, hogy a szürke
@@ -967,12 +963,12 @@ hu:
       Course 4 Artist Binary 1: "Ez egy olyan függvény, amely egy egyesekből és nullákból
         álló bináris számsorozatot kap, és a művésszel megrajzoltatja balról jobbra,
         felülről lefelé. A művész kitölti a négyzetet, amikor egyet lát, és kihagyja
-        a négyzetet, amikor nullát lát.\r\n\r\nFuttasd a kódot, és nézd meg, hogyan
+        a négyzetet, amikor nullát lát.\\\r\n\\\r\nFuttasd a kódot, és nézd meg, hogyan
         rajzolja meg a művész a mintát a bináris sorozatot használva."
       Course 4 Artist Binary 1a: "Ez egy olyan függvény, amely egy egyesekből és nullákból
         álló bináris számsorozatot kap, és a művésszel megrajzoltatja balról jobbra,
         felülről lefelé. A művész kitölti a négyzetet, amikor egyet lát, és kihagyja
-        a négyzetet, amikor nullát lát.\r\n\r\nFuttasd a kódot, és nézd meg, hogyan
+        a négyzetet, amikor nullát lát.\\\r\n\\\r\nFuttasd a kódot, és nézd meg, hogyan
         rajzolja meg a művész a mintát a bináris sorozatot használva."
       Course 4 Artist Binary 2: Melyik bináris sorozatot kell 8-szor ismételni ennek
         a képnek a megrajzolásához?
@@ -989,19 +985,19 @@ hu:
       Course 4 Artist Binary Free Play 2: 'Szabad játék: itt egy üres vászon amire
         azt rajzolsz, amit csak akarsz. Jó játékot!'
       Course 4 Artist Binary Free Play 2a: "Itt egy nagyobb felbontású vászon - 16
-        x 16 pixel!\r\n\r\nNézd mi történik, amikor elkezdünk játszani a bitekkel!"
+        x 16 pixel!\\\r\n\\\r\nNézd mi történik, amikor elkezdünk játszani a bitekkel!"
       Course 4 Artist Binary Free Play 2b: Segítségért kattints ide.
       Course 4 Artist Binary Free Play: 'Szabad játék: rajzolj bitekkel amit csak
         akarsz!'
       Course 4 Artist Binary pre1: "A bináris az információ ábrázolása mindössze 2
         állapot használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\"
-        (ezt az 1 számjegy jelöli) állapotokat használjuk.\r\n\r\nEgy \"képpontokból\"
+        (ezt az 1 számjegy jelöli) állapotokat használjuk.\\\r\n\\\r\nEgy \"képpontokból\"
         álló rácsot láthatsz most alul, amelyen végiglépkedhetsz és létrehozhatsz
         mintákat is, ha bizonyos négyzeteket bekapcsolsz. Meg tudod rajzoltatni a
         művésszel a \"01010101\" bináris sorozatot az első sorban?"
       Course 4 Artist Binary ryan: "A bináris az információ ábrázolása mindössze 2
         állapot használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\"
-        (ezt az 1 számjegy jelöli) állapotokat használjuk.\r\n\r\nEgy \"képpontokból\"
+        (ezt az 1 számjegy jelöli) állapotokat használjuk.\\\r\n\\\r\nEgy \"képpontokból\"
         álló rácsot láthatsz most alul, amelyen végiglépkedhetsz és létrehozhatsz
         mintákat is, ha bizonyos négyzeteket bekapcsolsz. Meg tudod rajzoltatni a
         művésszel a \"01010101\" bináris sorozatot az első sorban?"
@@ -1018,7 +1014,7 @@ hu:
         és a `counter` változóról szerzett tudásodat, és rajzold meg ezt az ábrát,
         ahol minden alakzatnak kettővel több oldala van, mint az előzőnek. Azt is
         add meg, hogy minden oldal 10-szer olyan hosszú legyen, mint az adott sokszög
-        oldalszáma.\r\n\r\nCsak nagyon kevés kódot adtunk meg számodra."
+        oldalszáma.\\\r\n\\\r\nCsak nagyon kevés kódot adtunk meg számodra."
       Course 4 Artist For Loops 14: Ha egy picivel többet vagy kevesebbet fordulsz,
         mint amennyit egy alakzat megrajzolásához fordulnál, nagyon szép hatást kapsz.
         Használd az előző pálya kódját, de most 89 fokot fordulj, hogy megkapd ezt
@@ -1040,18 +1036,18 @@ hu:
       Course 4 Artist For Loops 6a: Végezz el három kis módosítást az előző kódon,
         hogy ezt kapd!
       Course 4 Artist For Loops 8: "Egyetlen kis módosítás az előző kódon ezt az ábrát
-        eredményezi. Kitalálod, hogy mit kell módosítani?\r\n\r\nTipp: Valamit ki
-        kell törölnöd!"
+        eredményezi. Kitalálod, hogy mit kell módosítani?\\\r\n\\\r\nTipp: Valamit
+        ki kell törölnöd!"
       Course 4 Artist For Loops 8a: Egyetlen kis módosítás az előző kódon ezt a képet
         eredményezi. Kitalálod, hogy mit kell módosítani?
       Course 4 Artist For Loops Challenge: |-
         **Kihívás:** Kitalálod, hogy az eddig tanultak felhasználásával, hogyan hozhatod
         létre ezt a 40 képpont oldalhosszúságú sokszögekből álló képet?
       Course 4 Artist For Loops Challenge_a: "Vajon hogyan lehet megrajzolni az eddigi
-        tudásoddal ezt a képet?\r\n\r\nSzükséged van egy tippre? Kattints ide."
+        tudásoddal ezt a képet?\\\r\n\\\r\nSzükséged van egy tippre? Kattints ide."
       Course 4 Artist For Loops inspire: "Szabad játék ihlet: Mindent megtanultál
         ahhoz, hogy egy ilyen mintát rajzolj. Ha ez ihletet ad neked, akkor rajzolj
-        egy hasonlót. Vagy készíthetsz bármilyen más ábrát.\r\n\r\nKérsz egy tippet?
+        egy hasonlót. Vagy készíthetsz bármilyen más ábrát.\\\r\n\\\r\nKérsz egy tippet?
         Kattints ide."
       Course 4 Artist Functions 1: Tudsz rajzolni egy 100 képpont oldalhosszú négyzetet
         ciklus használatával?
@@ -1069,7 +1065,8 @@ hu:
       Course 4 Artist Functions challenge: Segítségért kattints ide.
       Course 4 Artist Functions inspire: Kattints ide az inspiráló kép megtekintéséhez.
       Course 4 Artist Inspire: "Szeretnéd még egyszer megnézni az ihletet nyújtó ábrákat
-        vagy a tippeket? Kattints ide!\r\n\r\nHa nem, akkor rajzolj egy saját ábrát!"
+        vagy a tippeket? Kattints ide!\\\r\n\\\r\nHa nem, akkor rajzolj egy saját
+        ábrát!"
       Course 4 Artist Params 13: |-
         Szabad játék: Itt vannak az általad írt függvények, és még néhány másik, amikkel játszhatsz.
         Rajzolj valami nagyszerűt!
@@ -1084,16 +1081,14 @@ hu:
         képpont, a hatszög 25 képpont, a négyszög 50 képpont. '
       Course 4 Artist Params 8: 'Tudod, hogyan lehetne megrajzolni ezt az alakzatot?
         Tipp: készíts egy új függvényt, ami egy hatoldalú sokszöget, vagyis hatszöget
-        rajzol.
-
-'
+        rajzol.'
       Course 4 Artist Params 9: Emlékszel, amikor a számlálós ciklust használtuk,
         de kitöröltünk belőle egy másik ciklust? Szórakozz kicsit a "rajzolj alakzatot"
         (draw a shape) függvénnyel, aminek két paramétere van, a "sides" (oldalak)
         és a "length" (hossz). Létre tudod hozni a következő alakzatokat? A négyzet
         esetén 5/100/5, a háromszög esetén 10/100/10 és a hatszög esetén 2/100/2 a
         beállítandó értékek.
-      Course 4 Artist Vars 1: "Rajzoljunk egyenlő oldalú háromszöget.\r\n\r\nMinden
+      Course 4 Artist Vars 1: "Rajzoljunk egyenlő oldalú háromszöget.\\\r\n\\\r\nMinden
         oldala legyen 100 képpont hosszú."
       Course 4 Artist Vars 11: Ez egy bonyolultabb kód, ami az előző feladvány gondolatait
         viszi tovább. Milyen értéket kell beállítanod a "sides" (oldalak) változóban,
@@ -1104,17 +1099,17 @@ hu:
         már ezt is használhatjuk a "lépj előre" blokkban. Állítsd be a "length" (hossz)
         változó értékét 75-re az alakzat megrajzolásához.'
       Course 4 Artist Vars 13: "Amikor egy alakzatnak sok oldala van, akkor minden
-        oldalnak rövidebbnek kell lennie, hogy elférjen a képernyőn.\n\r\nKészítsük
+        oldalnak rövidebbnek kell lennie, hogy elférjen a képernyőn.\n\\\r\nKészítsük
         el ennek a lenyűgöző mintának az algoritmusát, de ahelyett, hogy kézzel állítanánk
         be a `length` (hossz) változó értékét, használjunk most egy matematikai blokkot
         a `sides` (oldalak) változó értékét felhasználva, hogy minden alakzat megfelelően
-        elférjen. Minden sokszög kerülete legyen 300 képpont.\r\nSzükséged van tippekre?
+        elférjen. Minden sokszög kerülete legyen 300 képpont.\\\r\nSzükséged van tippekre?
         Kattints ide."
       Course 4 Artist Vars 14: "Szabad játék: Próbáld ki! Az algoritmusod most egy
         másik ciklusba van beágyazva. Kísérletezz a két változó értékének megváltoztatásával,
-        és rajzolj érdekes mintákat.\r\n\r\nTovább fejlesztheted a mintákat, ha játszol
-        a színekkel is. Használj véletlen színeket a cikluson belül, és nézd meg,
-        hogyan módosul a rajzod."
+        és rajzolj érdekes mintákat.\\\r\n\\\r\nTovább fejlesztheted a mintákat, ha
+        játszol a színekkel is. Használj véletlen színeket a cikluson belül, és nézd
+        meg, hogyan módosul a rajzod."
       Course 4 Artist Vars 2: A "lépj előre 150" használata helyett a "menj" blokk
         most egy "length" (hossz) nevű változót használ. Be tudod állítani a "length"
         változó értékét 150-re a következő háromszög megrajzolásához?
@@ -1128,9 +1123,9 @@ hu:
         lehet rajzolni.\nVan benne egy új változó, aminek sides (oldalak) a neve,
         és az értéke 4-re van beállítva.\nTudod használni a sides változót (matematikai
         blokkal együtt) arra, hogy mindig megfelelő\nmennyiségűt fordulj függetlenül
-        a sokszög oldalainak számától?\r\n\r\nKattints ide a tipphez való visszatéréshez!"
+        a sokszög oldalainak számától?\\\r\n\\\r\nKattints ide a tipphez való visszatéréshez!"
       Course 4 Artist Vars 7: "Használd az előző feladványban szerzett tudásod, és
-        hozd létre ezt a hatszöget a \"sides\" (oldalak) változó használatával.\r\n\r\nNézd
+        hozd létre ezt a hatszöget a \"sides\" (oldalak) változó használatával.\\\r\n\\\r\nNézd
         meg, hogy melyik egyetlen értéket kell megváltoztatnod ahhoz, hogy háromszöget,
         négyszöget, ötszöget vagy nyolcszöget rajzolj."
       Course 4 Artist Vars 8: 'Szabad játék: kísérletezz az alakzat oldalszámával.
@@ -1257,17 +1252,17 @@ hu:
       Course 4 Play Lab Params 1: Ezt a függvényt "ugrás"-nak hívják, és hatására
         a főszereplőd 100 pixelt átugrik. Használd az "ugrás" függvényt az összes
         zászló begyűjtéséhez.
-      Course 4 Play Lab Params 10: "Létrehoztunk számodra még egy utolsó függvényt.\r\n\r\nHasználd
+      Course 4 Play Lab Params 10: "Létrehoztunk számodra még egy utolsó függvényt.\\\r\n\\\r\nHasználd
         a \"Ha\" utasítást a \"szintlépés\" (level up) függvény meghívására, amikor
-        a játékos pontszáma (player_score) nagyobb lesz egy adott számnál.\r\n\r\nPéldául:
-        \"player_score\" > 6\r\n\r\nIndítsd el a játékot, és juss el a harmadik szintre
-        a következő feladványra ugráshoz. "
+        a játékos pontszáma (player_score) nagyobb lesz egy adott számnál.\\\r\n\\\r\nPéldául:
+        \"player_score\" > 6\\\r\n\\\r\nIndítsd el a játékot, és juss el a harmadik
+        szintre a következő feladványra ugráshoz. "
       Course 4 Play Lab Params 2: "Most már vannak olyan zászlók is, amik túl magasan
         vannak a jelenlegi ugrási képességünkhöz képest! Használjuk a \"fel\" és \"le\"
-        nyilakat, hogy többféle ugrási magasságot érhessünk el.\r\n\r\nHozzá kell
+        nyilakat, hogy többféle ugrási magasságot érhessünk el.\\\r\n\\\r\nHozzá kell
         adnunk egy paramétert a \"jump\" (ugrás) függvényünkhöz. Legyen a neve \"height\"
         (magasság). A fel nyíl lenyomására a kutya ugorjon 200 pixelt, míg a le nyíl
-        lenyomására csak 100 pixelt.\n"
+        lenyomására csak 100 pixelt."
       Course 4 Play Lab Params 3: 'Hozzáadtunk még egy paramétert a jump (ugrás) függvényhez,
         hogy több szereplő esetén is használni tudjuk. Minden szereplőt egy számmal
         jelölünk eggyel kezdődően. Szerkeszd a "jump" (ugrás) függvényt, hogy használja
@@ -1283,20 +1278,20 @@ hu:
         és segíts a Pingvinnek elérni mindkét zászlót, mielőtt a többi szereplő akárcsak
         egyet is elérne.
       Course 4 Play Lab Params 7: "Szórakozzunk kicsit! Nézd meg az általunk megírt
-        kódot, és próbáld meg kitalálni, hogy mit csinálnak a blokkok. \r\nAmikor
+        kódot, és próbáld meg kitalálni, hogy mit csinálnak a blokkok. \\\r\nAmikor
         végeztél, használd a nyílbillentyűket a Kutya irányítására, és gyűjtsd be
-        az összes zászlót.\r\nMegjegyzés: Nem kell semmit sem változtatnod a programban"
+        az összes zászlót.\\\r\nMegjegyzés: Nem kell semmit sem változtatnod a programban"
       Course 4 Play Lab Params 8: Használd az "amikor a szereplő megérinti" blokkot,
         és csak akkor küldd vissza a Kutyát a bal felső sarokba, amikor a Kutya megérint
         más szereplőket.
       Course 4 Play Lab Params 9: "Itt van egy játékunk egy korábbi pályáról, de most
-        a kód nagy része rejtett. Van egy új függvényünk: `score_points.`\r\n\r\nSzerkeszd
+        a kód nagy része rejtett. Van egy új függvényünk: `score_points.`\\\r\n\\\r\nSzerkeszd
         a függvényt, hogy egy új, `points` (pontok) nevű paramétert adhassunk a `player_score`
-        mellé.\n\r\n\r\nA `player_score` változó növekedjen minden alkalommal, amikor
-        a Kutya eltalálja a Macskát egy pitével, és csökkenjen, amikor a Macska eltalálja
-        a Kutyát egy szendviccsel.\r\n\r\nMegjegyzés: Amikor végeztél, kattints a
-        \"Futtatás\" gombra a játék indításához. Amikor a Kutya eléri a 6 pontot,
-        továbblépsz a következő feladványra. "
+        mellé.\n\\\r\n\\\r\nA `player_score` változó növekedjen minden alkalommal,
+        amikor a Kutya eltalálja a Macskát egy pitével, és csökkenjen, amikor a Macska
+        eltalálja a Kutyát egy szendviccsel.\\\r\n\\\r\nMegjegyzés: Amikor végeztél,
+        kattints a \"Futtatás\" gombra a játék indításához. Amikor a Kutya eléri a
+        6 pontot, továbblépsz a következő feladványra. "
       Course 4 Play Lab Vars 1: Most nem kell írnod semmilyen kódot, csak kattints
         a "Futtatás" gombra, és játssz a játékkal! Ebben a játékban te vagy a kutya,
         aki több zászlót próbál gyűjteni, mint a macska. Használd a le nyílbillentyűt
@@ -1313,7 +1308,7 @@ hu:
       Course 4 Play Lab Vars 5: 'Készítsünk egy játékot! Először is kell egy pontszám.
         Építsd újra úgy az előző feladványban szereplő kódot, hogy a pontszám értéke
         10 legyen. '
-      Course 4 Play Lab Vars 6: "Használd a jobb nyílbillentyűt pite dobásához.\r\n\r\nHogyan
+      Course 4 Play Lab Vars 6: "Használd a jobb nyílbillentyűt pite dobásához.\\\r\n\\\r\nHogyan
         pontozzunk a játékban? Adjunk 1-et a \"points\" (pontszám) változóhoz minden
         alkalommal, amikor a Kutya eltalálja a Macskát egy pitével. Használd az \"amikor
         a 2. szereplő bármit érint\" blokkot a pontszám változásának kiváltására.
@@ -1326,11 +1321,11 @@ hu:
         10-ről 0-ra csökkenjen.
       Course 4 Play Lab Vars 9: "Szabad játék! Itt van minden olyan változó, amellyel
         a pályákon eddig találkoztál, és még egy pár, ha esetleg szeretnéd használni
-        őket.\r\n\r\nFigyeld meg, hogy most már olyan sok blokk van az eszköztárunkban,
+        őket.\\\r\n\\\r\nFigyeld meg, hogy most már olyan sok blokk van az eszköztárunkban,
         hogy rendszerezésre volt szükség! Mindegyiket elhelyeztük egy megfelelő kategóriába.
         Szánj egy kis időt az összes felfedezésére. Miután végeztél a böngészéssel,
         készíts egy olyan játékot, amely felhasznál ismétléseket, változókat és eseményeket
-        is. \r\n\r\nTipp: görgess lefelé, hogy lásd a munkaterület minden parancsát."
+        is. \\\r\n\\\r\nTipp: görgess lefelé, hogy lásd a munkaterület minden parancsát."
       Course 4 Play Labs For Loops 1: Mondassuk ki a kutyával az összes számot 1-től
         100-ig. Használj egy `számold` (for) ciklust és a counter (számláló) blokkot,
         és mondasd ki a változó aktuális értékét minden cikluslépésben.
@@ -1345,14 +1340,14 @@ hu:
       Course 4 Playlab For Loop Freeplay: 'Szabad játék: Használj mindent, amit eddig
         tanultál, és készíts egy olyan játékot, amiben van `for` (számold) ciklus
         is!'
-      Course 4 Playlab For Loops 4b: "Most ez a két karakter versenyezni fog!\r\n\r\nMindegyik
+      Course 4 Playlab For Loops 4b: "Most ez a két karakter versenyezni fog!\\\r\n\\\r\nMindegyik
         karakter `counter` (számláló) lépést fog megtenni egyszerre, de a számlálóikban
-        különböző értékek lesznek a `for` (számold) ciklus miatt.\r\n\r\nTudod úgy
-        módosítani az egyik ciklus lépésközét, hogy a verseny döntetlen legyen?"
+        különböző értékek lesznek a `for` (számold) ciklus miatt.\\\r\n\\\r\nTudod
+        úgy módosítani az egyik ciklus lépésközét, hogy a verseny döntetlen legyen?"
       Course 4 Playlab For Loops 5b: Módosítsd a `számold` (for) ciklusok lépésközét
         úgy, hogy a két karakter ugyanazon a helyen álljon meg.
       Course 4 Playlab For Loops 6b: "Módosítsd ezt a `számold` ciklust, és készíts
-        egy érdekes játékot!\r\nKattints a \"Futtatás\" gombra, és kattints Madame
+        egy érdekes játékot!\\\r\nKattints a \"Futtatás\" gombra, és kattints Madame
         Unicornra ahányszor csak szeretnél.\nMeg tudod dönteni a 24-es pontrekordot? "
       Course 4 SCF 1: Használd a javasolt függvényeket négy sor hatszög rajzolásához.
         Észrevetted, hogy a páros sorok el vannak tolva eggyel jobbra?
@@ -1381,9 +1376,9 @@ hu:
       Course 4 SCV 1: Kattints ide az utasítások újbóli megtekintéséhez.
       Course 4 SCV 2: Kattints ide az utasítások újbóli megtekintéséhez.
       Course 4 SCV 3: "Fogócskázzunk! Kapd el a Macskát 2 pontért. Kapd el a Pingvint
-        3 pontért. Szerezz pontosan 10 pontot a nyeréshez!\r\nDe légy óvatos! Amikor
-        a Macska és a Pingvin elkapják egymást, pontokat vesztesz.\r\n\r\nAdd hozzá
-        a szükséges blokkokat a játék leírás szerinti működéséhez. Hogyan mozgathatod
+        3 pontért. Szerezz pontosan 10 pontot a nyeréshez!\\\r\nDe légy óvatos! Amikor
+        a Macska és a Pingvin elkapják egymást, pontokat vesztesz.\\\r\n\\\r\nAdd
+        hozzá a szükséges blokkokat a játék leírás szerinti működéséhez. Hogyan mozgathatod
         a Kutyát a nyílbillentyűkkel minden irányba? Hogyan kaphat pontot a Kutya,
         amikor elkapja a Macskát vagy a Pingvint? Hogyan vonhatsz le pontot, amikor
         a Macska és a Pingvin megérintik egymást?"
@@ -1402,7 +1397,7 @@ hu:
       CourseD_Dance_Party_04: Adj háttéreffektet a programodhoz.
       CourseD_Dance_Party_05: Egy másik új blokkal érd el, hogy a táncos 2 ütemenként
         változtasson a mozgásán.
-      CourseD_Dance_Party_06: Hozz létre egy „backup_dancer1“ nevű háttértáncost,
+      CourseD_Dance_Party_06: Hozz létre egy „backup\_dancer1“ nevű háttértáncost,
         hogy együtt táncoljon a macskával.
       CourseD_Dance_Party_08: Be tudod állítani mindkét háttértáncost ugyanolyan méretűre?
       CourseD_Dance_Party_09: Az „árnyalat beállítása“ blokkal módosítsd a táncos
@@ -1434,11 +1429,11 @@ hu:
       CourseE_HOC 2018 Level_9b: Kincskeresés közben használd a korallokat útjelzőként.
       CourseF_PlayLab_vars10: "Szabad játék! Itt van minden olyan változó, amellyel
         a pályákon eddig találkoztál, és még egy pár, ha esetleg szeretnéd használni
-        őket.\r\n\r\nFigyeld meg, hogy most már olyan sok blokk van az eszköztárunkban,
+        őket.\\\r\n\\\r\nFigyeld meg, hogy most már olyan sok blokk van az eszköztárunkban,
         hogy rendszerezésre volt szükség! Mindegyiket elhelyeztük egy megfelelő kategóriába.
         Szánj egy kis időt az összes felfedezésére. Miután végeztél a böngészéssel,
         készíts egy olyan játékot, amely felhasznál ismétléseket, változókat és eseményeket
-        is. \r\n\r\nTipp: görgess lefelé, hogy lásd a munkaterület minden parancsát."
+        is. \\\r\n\\\r\nTipp: görgess lefelé, hogy lásd a munkaterület minden parancsát."
       CourseF_PlayLab_vars2: Az előző feladvány versenye nem volt igazán fair. Változtasd
         meg a `dog_speed` változó értékét úgy, hogy biztosan több zászlót szerezz
         meg, mint a Macska. Az nyer, aki előbb összegyűjt 10 zászlót!
@@ -1451,19 +1446,19 @@ hu:
       CourseF_PlayLab_vars5: 'Készítsünk egy játékot! Először is kell egy pontszám.
         Építsd újra úgy az előző feladványban szereplő kódot, hogy a pontszám értéke
         10 legyen. '
-      CourseF_PlayLab_vars6: "Használd a jobb nyílbillentyűt pite dobásához.\r\n\r\nHogyan
+      CourseF_PlayLab_vars6: "Használd a jobb nyílbillentyűt pite dobásához.\\\r\n\\\r\nHogyan
         pontozzunk a játékban? Adjunk 1-et a \"points\" (pontszám) változóhoz minden
         alkalommal, amikor a Kutya eltalálja a Macskát egy pitével. Használd az \"amikor
         a 2. szereplő bármit érint\" blokkot a pontszám változásának kiváltására.
         Növeld a változó értékét a \"points = points + 1 \" értékadással. Érj el 10
         pontot (egyesével!) a szint megoldásához."
-      CourseF_PlayLab_vars7: "Használd a jobb nyílbillentyűt pite dobásához.\r\n\r\nHogyan
+      CourseF_PlayLab_vars7: "Használd a jobb nyílbillentyűt pite dobásához.\\\r\n\\\r\nHogyan
         pontozzunk a játékban? Adjunk 1-et a \"points\" (pontszám) változóhoz minden
         alkalommal, amikor a Kutya eltalálja a Macskát egy pitével. Használd az \"amikor
         a 2. szereplő bármit érint\" blokkot a pontszám változásának kiváltására.
         Növeld a változó értékét a \"points = points + 1 \" értékadással. Érj el 10
         pontot (egyesével!) a szint megoldásához."
-      CourseF_PlayLab_vars8: "Használd a jobb nyílbillentyűt pite dobásához.\r\n\r\nHogyan
+      CourseF_PlayLab_vars8: "Használd a jobb nyílbillentyűt pite dobásához.\\\r\n\\\r\nHogyan
         pontozzunk a játékban? Adjunk 1-et a \"points\" (pontszám) változóhoz minden
         alkalommal, amikor a Kutya eltalálja a Macskát egy pitével. Használd az \"amikor
         a 2. szereplő bármit érint\" blokkot a pontszám változásának kiváltására.
@@ -1489,7 +1484,7 @@ hu:
       Dance_Party_04: Adj háttéreffektet a programodhoz.
       Dance_Party_05: Egy másik új blokkal érd el, hogy a táncos 2 ütemenként változtasson
         a mozgásán.
-      Dance_Party_06: Hozz létre egy „backup_dancer1“ nevű háttértáncost, hogy együtt
+      Dance_Party_06: Hozz létre egy „backup\_dancer1“ nevű háttértáncost, hogy együtt
         táncoljon a macskával.
       Dance_Party_08: Be tudod állítani mindkét háttértáncost ugyanolyan méretűre?
       Dance_Party_09: Az „árnyalat beállítása“ blokkal módosítsd a táncos színét.
@@ -1519,11 +1514,11 @@ hu:
         példa!
       Find the Wizard_2018: Csinálj bármit, amit szeretnél. Egy egy számkitalálós
         játékra példa!
-      Food Fight!: "Létrehoztunk számodra még egy utolsó függvényt.\r\n\r\nHasználd
+      Food Fight!: "Létrehoztunk számodra még egy utolsó függvényt.\\\r\n\\\r\nHasználd
         a \"Ha\" utasítást a \"szintlépés\" (level up) függvény meghívására, amikor
-        a játékos pontszáma (player_score) nagyobb lesz egy adott számnál.\r\n\r\nPéldául:
-        \"player_score\" > 6\r\n\r\nIndítsd el a játékot, és juss el a harmadik szintre
-        a következő feladványra ugráshoz. "
+        a játékos pontszáma (player_score) nagyobb lesz egy adott számnál.\\\r\n\\\r\nPéldául:
+        \"player_score\" > 6\\\r\n\\\r\nIndítsd el a játékot, és juss el a harmadik
+        szintre a következő feladványra ugráshoz. "
       FoodFight: Ez egy példa játék, amit elkészíthetsz a játéklaborban.
       FoodFight_2018: Ez egy példa játék, amit elkészíthetsz a játéklaborban.
       Function intro Ryan: Hogy szabaddá váljon az út a fáklyához, használd kétszer
@@ -1573,7 +1568,7 @@ hu:
         hópehelyhez.
       Inspirational Artwork: "Szabad játék ihlet: Mindent megtanultál ahhoz, hogy
         egy ilyen mintát rajzolj. Ha ez ihletet ad neked, akkor rajzolj egy hasonlót.
-        Vagy készíthetsz bármilyen más ábrát.\r\n\r\nSzeretnéd tudni, hogyan készült
+        Vagy készíthetsz bármilyen más ábrát.\\\r\n\\\r\nSzeretnéd tudni, hogyan készült
         az ihletül szolgáló minta? "
       InspirationalArtwork: Ha ez a kép inspirál téged, akkor csinálhatsz egy hasonlót.
         Ha nem, akkor csinálj valamit te magad.
@@ -1714,8 +1709,8 @@ hu:
       K-1 maze debug 1: Változtasd meg a kódot, hogy elkapjam a malacot!
       K-1 maze debug 10: Keresd meg a hibát és javítsd ki ezen a szinten! Juttass
         el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
-      K-1 maze debug 11: "Ez egy teszt!\r\nKeresd meg a hibát és javítsd ki ezen a
-        szinten! Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat
+      K-1 maze debug 11: "Ez egy teszt!\\\r\nKeresd meg a hibát és javítsd ki ezen
+        a szinten! Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat
         adsz hozzá!"
       K-1 maze debug 2: Találd ki, mi hiányzik, egészítsd ki a kódot, és juttass el
         a malachoz!
@@ -1882,7 +1877,7 @@ hu:
         Mindegyik négyzet 100 képpont oldalhosszúságú.
       NEW Course 4 Artist Functions 3: "Itt van egy új blokktípus. Ezt úgy hívják,
         hogy `függvény` blokk. Kattints a \"szerkeszt\" gombra, és töltsd ki olyan
-        kóddal, ami egy 100 képpont oldalhosszúságú négyzetet rajzol.\r\n\r\nAmikor
+        kóddal, ami egy 100 képpont oldalhosszúságú négyzetet rajzol.\\\r\n\\\r\nAmikor
         végeztél a függvény szerkesztésével, kattints a \"Bezár\" gombra a programhoz
         való visszatéréshez."
       NEW Course 4 Artist Functions 4: Használd a `draw a square` (rajzolj egy négyzetet)
@@ -1911,7 +1906,7 @@ hu:
         a `számold` (for) ciklust a függvényeddel az ábra elkészítéséhez?
       NEW Course 4 Artist Params 13: "Szerkesszük ezt a \"draw a polygon\" (rajzolj
         egy sokszöget) függvényt. Már van egy \"sides\" (oldalak) paramétere. Most
-        adjunk hozzá egy \"length\" (hossz) paramétert.\r\nMinden alakzat kerülete
+        adjunk hozzá egy \"length\" (hossz) paramétert.\\\r\nMinden alakzat kerülete
         200 képpont. Emlékszel, hogyan kell ugyanolyan méretű alakzatokat készíteni,
         amelyeknek különböző az oldalszáma?"
       NEW Course 4 Artist Params 14: Szerkeszd a "draw a spiral edge" (rajzolj egy
@@ -1921,7 +1916,7 @@ hu:
         Szabad játék: Itt vannak az általad írt függvények, és még néhány másik, amikkel játszhatsz. Rajzolj valami nagyszerűt!
         Játssz a tollvastagsággal, és nézd meg, hogyan néznek ki a különböző rajzok!
       NEW Course 4 Artist Params 3: "Most használjuk a függvényt, és rajzoljunk 3
-        háromszöget egy sorba. A háromszögek egymástól 30 képpontra vannak.\r\n"
+        háromszöget egy sorba. A háromszögek egymástól 30 képpontra vannak.\\\r"
       NEW Course 4 Artist Params 4: Észreveszel valamilyen különbséget ezekben a függvényekben?
         Kattints a "Futtatás" gombra, és nézd meg, mi történik.
       NEW Course 4 Artist Params 5: 'Helyettesítsd a `???` jeleket a `length` (hossz)
@@ -1941,18 +1936,18 @@ hu:
         oldalhosszal, és egymástól 100 képpont távolságra.'
       NEW Course 4 Artist Params inspire: "Szabad játék ihlet: Mindent megtanultál
         ahhoz, hogy egy ilyen mintát rajzolj. Ha ez ihletet ad neked, akkor rajzolj
-        egy hasonlót. Vagy készíthetsz bármilyen más ábrát.\r\n\r\nSzeretnéd tudni,
+        egy hasonlót. Vagy készíthetsz bármilyen más ábrát.\\\r\n\\\r\nSzeretnéd tudni,
         hogyan készült az ihletül szolgáló minta? "
       NEW Course 4 Artist Vars 12: Most csináld meg újra az előző pálya fejtörőjét
         és rajzolj egy ötszöget 150 pixel széles oldalakkal.
       NEW Course 4 Artist Vars 2: 'Húzz egy "szám"-blokkot az "állítsd be" blokkhoz,
         hogy 50 pixel oldalú háromszögeket rajzolj! '
-      NEW Course 4 Artist Vars 4: "Próbáljuk meg újra!\r\n\r\nBe tudod állítani a
-        `hossz` változó értékét 60-ra, hogy elkészítsd ezt a hatszögekből álló klassz
+      NEW Course 4 Artist Vars 4: "Próbáljuk meg újra!\\\r\n\\\r\nBe tudod állítani
+        a `hossz` változó értékét 60-ra, hogy elkészítsd ezt a hatszögekből álló klassz
         mintát?"
       NEW Course 4 Artist Vars 6: "Rajzold meg ezt a 100 képpont oldalhosszúságú ötszögekből
         álló mintát úgy, hogy beállítod a `hossz` értékét, majd a megfelelő helyekre
-        elhelyezed a `hossz` változót.\r\n\r\nLátod, hogy csak egyszer kell beállítanod
+        elhelyezed a `hossz` változót.\\\r\n\\\r\nLátod, hogy csak egyszer kell beállítanod
         a `hossz` változó értékét, és mindenhol a helyes értéket használja a kód?"
       NEW Course 4 Bee For Loops 1: Használj ciklust, hogy minden virágról összegyűjtsd
         a nektárt.
@@ -1986,7 +1981,7 @@ hu:
         a \"counter\" változóhoz."
       NEW Course 4 Bee For Loops 8: "Ha a ciklus felfelé számol, akkor minden ciklusban
         hozzáadódik a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt
-        gyűjtsünk?\r\n"
+        gyűjtsünk?\\\r"
       NEW Course 4 Bee For Loops 9: A for ciklus lefelé számol, és a lépésköz minden
         ciklusban levonódik a számláló változóból. Mi a megfelelő lépésköz, ha 9,
         6, és 3 nektárt kell összegyűjteni?
@@ -2353,19 +2348,19 @@ hu:
         el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
       courseD_artist_binary1: "A bináris az információ ábrázolása mindössze 2 állapot
         használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\" (ezt az
-        1 számjegy jelöli) állapotokat használjuk.\r\n\r\nEgy \"képpontokból\" álló
-        rácsot láthatsz most alul, amelyen végiglépkedhetsz és létrehozhatsz mintákat
-        is, ha bizonyos négyzeteket bekapcsolsz. Meg tudod rajzoltatni a művésszel
-        a \"01010101\" bináris sorozatot az első sorban?"
+        1 számjegy jelöli) állapotokat használjuk.\\\r\n\\\r\nEgy \"képpontokból\"
+        álló rácsot láthatsz most alul, amelyen végiglépkedhetsz és létrehozhatsz
+        mintákat is, ha bizonyos négyzeteket bekapcsolsz. Meg tudod rajzoltatni a
+        művésszel a \"01010101\" bináris sorozatot az első sorban?"
       courseD_artist_binary1_2018: "A bináris az információ ábrázolása mindössze 2
         állapot használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\"
-        (ezt az 1 számjegy jelöli) állapotokat használjuk.\r\n\r\nEgy \"képpontokból\"
+        (ezt az 1 számjegy jelöli) állapotokat használjuk.\\\r\n\\\r\nEgy \"képpontokból\"
         álló rácsot láthatsz most alul, amelyen végiglépkedhetsz és létrehozhatsz
         mintákat is, ha bizonyos négyzeteket bekapcsolsz. Meg tudod rajzoltatni a
         művésszel a \"01010101\" bináris sorozatot az első sorban?"
       courseD_artist_binary1_2019: "A bináris az információ ábrázolása mindössze 2
         állapot használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\"
-        (ezt az 1 számjegy jelöli) állapotokat használjuk.\r\n\r\nEgy \"képpontokból\"
+        (ezt az 1 számjegy jelöli) állapotokat használjuk.\\\r\n\\\r\nEgy \"képpontokból\"
         álló rácsot láthatsz most alul, amelyen végiglépkedhetsz és létrehozhatsz
         mintákat is, ha bizonyos négyzeteket bekapcsolsz. Meg tudod rajzoltatni a
         művésszel a \"01010101\" bináris sorozatot az első sorban?"
@@ -2492,11 +2487,11 @@ hu:
       courseF_artist_for_challenge2_2019: Ki tudod találni hogyan lehet elkészíteni
         a rajzot egy ciklussal?
       courseF_bee_for8: "Ha a ciklus felfelé számol, akkor minden ciklusban hozzáadódik
-        a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\r\n"
+        a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\\\r"
       courseF_bee_for8_2018: "Ha a ciklus felfelé számol, akkor minden ciklusban hozzáadódik
-        a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\r\n"
+        a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\\\r"
       courseF_bee_for8_2019: "Ha a ciklus felfelé számol, akkor minden ciklusban hozzáadódik
-        a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\r\n"
+        a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\\\r"
       courseF_bee_for_challenge2: Oldd meg ezt a feladványt a lehető legkevesebb blokk
         felhasználásával.
       courseF_bee_for_challenge2_2018: Oldd meg ezt a feladványt a lehető legkevesebb
@@ -2793,7 +2788,7 @@ hu:
         rajzoló kód ciklusba ágyazásával?
       grade4_arist_nested_loop_triangles4: Rajzold meg az alligátor alsó fogsorát!
       grade4_arist_nested_loop_triangles5: "Készíts egy napocskát a kiindulási kód
-        másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r"
+        másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\\\r"
       grade4_arist_nested_loop_triangles6: Meg tudod rajzolni ezt a 36 darab háromszöget
         egymásba ágyazott ciklusok segítségével?
       grade4_artist_functions1: 'Helló! Zombi művész vagyok. Szeretek rajzolni. Segíts
@@ -2823,11 +2818,8 @@ hu:
         10-zel?)'
       grade4_artist_nested_loop_squares1: Meg tudod rajzolni a járda 10 négyzetét
         egymásba ágyazott ciklusokkal? Minden négyzet 30 pixeles.
-      grade4_artist_nested_loop_triangles1: 'Egészítsd ki a kódot úgy, hogy ezeket
-        a háromszögeket rajzolja meg.   Az első már készen is van. Tipp: a 3 db háromszög
-        360°-os körben van elforgatva.'
       grade4_artist_nested_loop_triangles5: "Készíts egy napocskát a kiindulási kód
-        másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\r"
+        másik ciklusba ágyazásával. Ezt hívják egymásba ágyazott ciklusnak.\\\r"
       grade4_artist_nested_loop_triangles6: Meg tudod rajzolni ezt a 36 darab háromszöget
         egymásba ágyazott ciklusok segítségével?
       grade4_artist_parameters_squares1: 'Kattints a "szerkeszt" gombra, majd adj
@@ -2915,7 +2907,7 @@ hu:
         36 fokos elfordulásokkal minden négyzet után.
       grade4_playlab_freeplay: 'Szabad játék! Csinálj bármit a rendelkezésre álló
         blokkokkal! '
-      grade4_playlab_test: "Használd a jobb nyílbillentyűt pite dobásához.\r\n\r\nHogyan
+      grade4_playlab_test: "Használd a jobb nyílbillentyűt pite dobásához.\\\r\n\\\r\nHogyan
         pontozzunk a játékban? Adjunk 1-et a \"points\" (pontszám) változóhoz minden
         alkalommal, amikor a Kutya eltalálja a Macskát egy pitével. Használd az \"amikor
         a 2. szereplő bármit érint\" blokkot a pontszám változásának kiváltására.
@@ -2943,17 +2935,17 @@ hu:
         Hozz létre a játékban két további szereplőt és gondoskodj róla, hogy mozogjanak. Szeretnél egy föl-le mozgó járőr szereplőt? Próbáld használni ezeket az új blokkokat, hogy kihasználd a játékod új lehetőségeit!
       grade5_artist_binary1: "A bináris az információ ábrázolása mindössze 2 állapot
         használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\" (ezt az
-        1 számjegy jelöli) állapotokat használjuk.\r\n\r\nEgy \"képpontokból\" álló
-        rácsot láthatsz most alul, amelyen végiglépkedhetsz és létrehozhatsz mintákat
-        is, ha bizonyos négyzeteket bekapcsolsz. Meg tudod rajzoltatni a művésszel
-        a \"01010101\" bináris sorozatot az első sorban?"
+        1 számjegy jelöli) állapotokat használjuk.\\\r\n\\\r\nEgy \"képpontokból\"
+        álló rácsot láthatsz most alul, amelyen végiglépkedhetsz és létrehozhatsz
+        mintákat is, ha bizonyos négyzeteket bekapcsolsz. Meg tudod rajzoltatni a
+        művésszel a \"01010101\" bináris sorozatot az első sorban?"
       grade5_artist_binary10: Segítségért kattints ide.
       grade5_artist_binary11: 'Szabad játék: itt egy üres vászon amire azt rajzolsz,
         amit csak akarsz. Jó játékot!'
       grade5_artist_binary2: "Ez egy olyan függvény, amely egy egyesekből és nullákból
         álló bináris számsorozatot kap, és a művésszel megrajzoltatja balról jobbra,
         felülről lefelé. A művész kitölti a négyzetet, amikor egyet lát, és kihagyja
-        a négyzetet, amikor nullát lát.\r\n\r\nFuttasd a kódot, és nézd meg, hogyan
+        a négyzetet, amikor nullát lát.\\\r\n\\\r\nFuttasd a kódot, és nézd meg, hogyan
         rajzolja meg a művész a mintát a bináris sorozatot használva."
       grade5_artist_binary3: Melyik bináris sorozatot kell 8-szor ismételni ennek
         a képnek a megrajzolásához?
@@ -2967,15 +2959,15 @@ hu:
       grade5_artist_binary7: Mi az a legrövidebb bináris karakterlánc, ami ha megismételed,
         kirajzolja ezt a képet?
       grade5_artist_binary8: Fejezd be a rajzot.
-      grade5_artist_binary9: "Itt egy nagyobb felbontású vászon - 16 x 16 pixel!\r\n\r\nNézd
+      grade5_artist_binary9: "Itt egy nagyobb felbontású vászon - 16 x 16 pixel!\\\r\n\\\r\nNézd
         mi történik, amikor elkezdünk játszani a bitekkel!"
       grade5_artist_for_loops1: 'Rajzold ki ezt a háromszöget, aminek az oldalai 50
         pixel hosszúak. Tipp: használd az "ismételd" blokkot!'
       grade5_artist_for_loops10: "Vajon hogyan lehet megrajzolni az eddigi tudásoddal
-        ezt a képet?\r\n\r\nSzükséged van egy tippre? Kattints ide."
+        ezt a képet?\\\r\n\\\r\nSzükséged van egy tippre? Kattints ide."
       grade5_artist_for_loops5: "Egyetlen kis módosítás az előző kódon ezt az ábrát
-        eredményezi. Kitalálod, hogy mit kell módosítani?\r\n\r\nTipp: Valamit ki
-        kell törölnöd!"
+        eredményezi. Kitalálod, hogy mit kell módosítani?\\\r\n\\\r\nTipp: Valamit
+        ki kell törölnöd!"
       grade5_artist_for_loops6: Ha egy picivel többet vagy kevesebbet fordulsz, mint
         amennyit egy alakzat megrajzolásához fordulnál, nagyon szép hatást kapsz.
         Használd az előző pálya kódját, de most 89 fokot fordulj, hogy megkapd ezt
@@ -2991,14 +2983,14 @@ hu:
         és a `counter` változóról szerzett tudásodat, és rajzold meg ezt az ábrát,
         ahol minden alakzatnak kettővel több oldala van, mint az előzőnek. Azt is
         add meg, hogy minden oldal 10-szer olyan hosszú legyen, mint az adott sokszög
-        oldalszáma.\r\n\r\nCsak nagyon kevés kódot adtunk meg számodra."
+        oldalszáma.\\\r\n\\\r\nCsak nagyon kevés kódot adtunk meg számodra."
       grade5_artist_for_loopsfreeplay11: "Szabad játék ihlet: Mindent megtanultál
         ahhoz, hogy egy ilyen mintát rajzolj. Ha ez ihletet ad neked, akkor rajzolj
-        egy hasonlót. Vagy készíthetsz bármilyen más ábrát.\r\n\r\nKérsz egy tippet?
+        egy hasonlót. Vagy készíthetsz bármilyen más ábrát.\\\r\n\\\r\nKérsz egy tippet?
         Kattints ide."
       grade5_artist_functionparameters10: "Szabad játék ihlet: Mindent megtanultál
         ahhoz, hogy egy ilyen mintát rajzolj. Ha ez ihletet ad neked, akkor rajzolj
-        egy hasonlót. Vagy készíthetsz bármilyen más ábrát.\r\n\r\nSzeretnéd tudni,
+        egy hasonlót. Vagy készíthetsz bármilyen más ábrát.\\\r\n\\\r\nSzeretnéd tudni,
         hogyan készült az ihletül szolgáló minta? "
       grade5_artist_functionparameters7: Ez a kép hasonlít az előzőre. Tudod együtt
         használni a `számold` (for) ciklust a függvényeddel az ábra elkészítéséhez?
@@ -3021,38 +3013,38 @@ hu:
         száma nő.'
       grade5_artist_variables_freeplay14: "Szabad játék: Próbáld ki! Az algoritmusod
         most egy másik ciklusba van beágyazva. Kísérletezz a két változó értékének
-        megváltoztatásával, és rajzolj érdekes mintákat.\r\n\r\nTovább fejlesztheted
+        megváltoztatásával, és rajzolj érdekes mintákat.\\\r\n\\\r\nTovább fejlesztheted
         a mintákat, ha játszol a színekkel is. Használj véletlen színeket a cikluson
         belül, és nézd meg, hogyan módosul a rajzod."
       grade5_artist_variables_freeplay15: "Szeretnéd még egyszer megnézni az ihletet
-        nyújtó ábrákat vagy a tippeket? Kattints ide!\r\n\r\nHa nem, akkor rajzolj
+        nyújtó ábrákat vagy a tippeket? Kattints ide!\\\r\n\\\r\nHa nem, akkor rajzolj
         egy saját ábrát!"
       grade5_artist_variables_freeplay16: Még mindig játszol? Itt egy üres vászon,
         amire azt készítesz, amit csak akarsz!
-      grade5_artist_variables_hexagons1: "Próbáljuk meg újra!\r\n\r\nBe tudod állítani
-        a `hossz` változó értékét 60-ra, hogy elkészítsd ezt a hatszögekből álló klassz
-        mintát?"
+      grade5_artist_variables_hexagons1: "Próbáljuk meg újra!\\\r\n\\\r\nBe tudod
+        állítani a `hossz` változó értékét 60-ra, hogy elkészítsd ezt a hatszögekből
+        álló klassz mintát?"
       grade5_artist_variables_letterT11: Ez egy bonyolultabb kód, ami az előző feladvány
         gondolatait viszi tovább. Milyen értéket kell beállítanod a "sides" (oldalak)
         változóban, hogy megrajzold a következő, négyzetekből álló képet?
       grade5_artist_variables_octagons13: "Amikor egy alakzatnak sok oldala van, akkor
-        minden oldalnak rövidebbnek kell lennie, hogy elférjen a képernyőn.\n\r\nKészítsük
+        minden oldalnak rövidebbnek kell lennie, hogy elférjen a képernyőn.\n\\\r\nKészítsük
         el ennek a lenyűgöző mintának az algoritmusát, de ahelyett, hogy kézzel állítanánk
         be a `length` (hossz) változó értékét, használjunk most egy matematikai blokkot
         a `sides` (oldalak) változó értékét felhasználva, hogy minden alakzat megfelelően
-        elférjen. Minden sokszög kerülete legyen 300 képpont.\r\nSzükséged van tippekre?
+        elférjen. Minden sokszög kerülete legyen 300 képpont.\\\r\nSzükséged van tippekre?
         Kattints ide."
       grade5_artist_variables_pentagon8: "Használd az előző feladványban szerzett
-        tudásod, és hozd létre ezt a hatszöget a \"sides\" (oldalak) változó használatával.\r\n\r\nNézd
+        tudásod, és hozd létre ezt a hatszöget a \"sides\" (oldalak) változó használatával.\\\r\n\\\r\nNézd
         meg, hogy melyik egyetlen értéket kell megváltoztatnod ahhoz, hogy háromszöget,
         négyszöget, ötszöget vagy nyolcszöget rajzolj."
       grade5_artist_variables_pentagon9: Most csináld meg újra az előző pálya fejtörőjét
         és rajzolj egy ötszöget 150 pixel széles oldalakkal.
       grade5_artist_variables_pentagons1: "Rajzold meg ezt a 100 képpont oldalhosszúságú
         ötszögekből álló mintát úgy, hogy beállítod a `hossz` értékét, majd a megfelelő
-        helyekre elhelyezed a `hossz` változót.\r\n\r\nLátod, hogy csak egyszer kell
-        beállítanod a `hossz` változó értékét, és mindenhol a helyes értéket használja
-        a kód?"
+        helyekre elhelyezed a `hossz` változót.\\\r\n\\\r\nLátod, hogy csak egyszer
+        kell beállítanod a `hossz` változó értékét, és mindenhol a helyes értéket
+        használja a kód?"
       grade5_artist_variables_pentagons12: 'Állítsuk be a "sides" (oldalak) változó
         értékét 5-re. Minél több oldalt állítunk be ebben az algoritmusban, annál
         nagyobb lesz az egész minta. Vedd észre, hogy van még egy változó: "length"
@@ -3066,7 +3058,7 @@ hu:
         meg lehet rajzolni.\nVan benne egy új változó, aminek sides (oldalak) a neve,
         és az értéke 4-re van beállítva.\nTudod használni a sides változót (matematikai
         blokkal együtt) arra, hogy mindig megfelelő\nmennyiségűt fordulj függetlenül
-        a sokszög oldalainak számától?\r\n\r\nKattints ide a tipphez való visszatéréshez!"
+        a sokszög oldalainak számától?\\\r\n\\\r\nKattints ide a tipphez való visszatéréshez!"
       grade5_artist_variables_triangles2: A "lépj előre 150" használata helyett a
         "menj" blokk most egy "length" (hossz) nevű változót használ. Be tudod állítani
         a "length" változó értékét 150-re a következő háromszög megrajzolásához?
@@ -3080,7 +3072,7 @@ hu:
       grade5_bee_for_loops6: A for ciklust lefelé számlálásra is használhatod. Próbáld
         összegyűjteni a nektárt 5-től 1-ig lefelé számlálva.
       grade5_bee_for_loops8: "Ha a ciklus felfelé számol, akkor minden ciklusban hozzáadódik
-        a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\r\n"
+        a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\\\r"
       grade5_playlab_freeplay: 'Szabad játék! Csinálj bármit a rendelkezésre álló
         blokkokkal! '
       grade5_playlab_variables1: Most nem kell írnod semmilyen kódot, csak kattints
@@ -3095,9 +3087,9 @@ hu:
         és segíts a Pingvinnek elérni mindkét zászlót, mielőtt a többi szereplő akárcsak
         egyet is elérne.
       grade5_playlab_variables12: "Szórakozzunk kicsit! Nézd meg az általunk megírt
-        kódot, és próbáld meg kitalálni, hogy mit csinálnak a blokkok. \r\nAmikor
+        kódot, és próbáld meg kitalálni, hogy mit csinálnak a blokkok. \\\r\nAmikor
         végeztél, használd a nyílbillentyűket a Kutya irányítására, és gyűjtsd be
-        az összes zászlót.\r\nMegjegyzés: Nem kell semmit sem változtatnod a programban"
+        az összes zászlót.\\\r\nMegjegyzés: Nem kell semmit sem változtatnod a programban"
       grade5_playlab_variables13: Használd az "amikor a szereplő megérinti" blokkot,
         és csak akkor küldd vissza a Kutyát a bal felső sarokba, amikor a Kutya megérint
         más szereplőket.
@@ -3112,7 +3104,7 @@ hu:
         ugrásának magasságát lehet beállítani. A változó neve: "height" (magasság).
         Módosítsd a "height" (magasság) változó értékét úgy, hogy a kutya elég magasra
         tudjon ugrani az összes zászló megszerzéséhez.'
-      grade5_playlab_variables6: "Használd a jobb nyílbillentyűt pite dobásához.\r\n\r\nHogyan
+      grade5_playlab_variables6: "Használd a jobb nyílbillentyűt pite dobásához.\\\r\n\\\r\nHogyan
         pontozzunk a játékban? Adjunk 1-et a \"points\" (pontszám) változóhoz minden
         alkalommal, amikor a Kutya eltalálja a Macskát egy pitével. Használd az \"amikor
         a 2. szereplő bármit érint\" blokkot a pontszám változásának kiváltására.
@@ -3124,28 +3116,29 @@ hu:
         túl nehéz a játék. A következő feladványra lépéshez érd el, hogy a pontszámod
         10-ről 0-ra csökkenjen.
       grade5_playlab_variables71: "Itt van egy játékunk egy korábbi pályáról, de most
-        a kód nagy része rejtett. Van egy új függvényünk: `score_points.`\r\n\r\nSzerkeszd
+        a kód nagy része rejtett. Van egy új függvényünk: `score_points.`\\\r\n\\\r\nSzerkeszd
         a függvényt, hogy egy új, `points` (pontok) nevű paramétert adhassunk a `player_score`
-        mellé.\n\r\n\r\nA `player_score` változó növekedjen minden alkalommal, amikor
-        a Kutya eltalálja a Macskát egy pitével, és csökkenjen, amikor a Macska eltalálja
-        a Kutyát egy szendviccsel.\r\n\r\nMegjegyzés: Amikor végeztél, kattints a
-        \"Futtatás\" gombra a játék indításához. Amikor a Kutya eléri a 6 pontot,
-        továbblépsz a következő feladványra. "
-      grade5_playlab_variables81: "Létrehoztunk számodra még egy utolsó függvényt.\r\n\r\nHasználd
+        mellé.\n\\\r\n\\\r\nA `player_score` változó növekedjen minden alkalommal,
+        amikor a Kutya eltalálja a Macskát egy pitével, és csökkenjen, amikor a Macska
+        eltalálja a Kutyát egy szendviccsel.\\\r\n\\\r\nMegjegyzés: Amikor végeztél,
+        kattints a \"Futtatás\" gombra a játék indításához. Amikor a Kutya eléri a
+        6 pontot, továbblépsz a következő feladványra. "
+      grade5_playlab_variables81: "Létrehoztunk számodra még egy utolsó függvényt.\\\r\n\\\r\nHasználd
         a \"Ha\" utasítást a \"szintlépés\" (level up) függvény meghívására, amikor
-        a játékos pontszáma (player_score) nagyobb lesz egy adott számnál.\r\n\r\nPéldául:
-        \"player_score\" > 6\r\n\r\nIndítsd el a játékot, és juss el a harmadik szintre
-        a következő feladványra ugráshoz. "
+        a játékos pontszáma (player_score) nagyobb lesz egy adott számnál.\\\r\n\\\r\nPéldául:
+        \"player_score\" > 6\\\r\n\\\r\nIndítsd el a játékot, és juss el a harmadik
+        szintre a következő feladványra ugráshoz. "
       grade5_playlab_variables9: "Itt van egy járőr nevű függvény. \n\nSzerkeszd a
         \"járőr\" függvényt úgy, hogy a macska 400 képpontot fel, majd 400 képpontot
         lefelé menjen."
       grade5_playlab_variables_freeplay: "Szabad játék! Itt van minden olyan változó,
         amellyel a pályákon eddig találkoztál, és még egy pár, ha esetleg szeretnéd
-        használni őket.\r\n\r\nFigyeld meg, hogy most már olyan sok blokk van az eszköztárunkban,
-        hogy rendszerezésre volt szükség! Mindegyiket elhelyeztük egy megfelelő kategóriába.
-        Szánj egy kis időt az összes felfedezésére. Miután végeztél a böngészéssel,
-        készíts egy olyan játékot, amely felhasznál ismétléseket, változókat és eseményeket
-        is. \r\n\r\nTipp: görgess lefelé, hogy lásd a munkaterület minden parancsát."
+        használni őket.\\\r\n\\\r\nFigyeld meg, hogy most már olyan sok blokk van
+        az eszköztárunkban, hogy rendszerezésre volt szükség! Mindegyiket elhelyeztük
+        egy megfelelő kategóriába. Szánj egy kis időt az összes felfedezésére. Miután
+        végeztél a böngészéssel, készíts egy olyan játékot, amely felhasznál ismétléseket,
+        változókat és eseményeket is. \\\r\n\\\r\nTipp: görgess lefelé, hogy lásd
+        a munkaterület minden parancsát."
       k-1 maze 1: El tudsz mozgatni Nyugatra, hogy elkapjam a malacot?
       level 'grade3_Loops_10: Használd ugyanazt a ciklust, mint az előző feladványban,
         de építs bele egy fordulatot.

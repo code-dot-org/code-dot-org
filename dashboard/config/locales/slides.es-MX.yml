@@ -3141,139 +3141,136 @@ es-MX:
           encontrarás la herramienta completa y muchas ideas para seguir avanzando.
       7:
         image: notes/applab_intro_share_7.png
-        text: Gracias por acompañarnos en el recorrido. Ahora construye y comparte
-          tu primera app. ¡Y no dejes de crear apps con App Lab!
+        text: Gracias por acompañarnos durante esta etapa. Ahora vamos a crear y compartir
+          tu primera aplicación. ¡Y no dejes de crear con el Laboratorio de aplicaciones!
     mc_2017_agent_intro:
       1:
         image: notes/mc_2017_agent_intro_1.png
-        text: 'Stacy: Stampy, Lizzy, Preston - Gracias por venir conmigo. Lo que quiero
-          enseñaros está justo en esta meseta de mesas. ¡Creo que os va a encantar!'
+        text: 'Stacy: Stampy, Lizzy, Preston, gracias por venir conmigo. Lo que quiero
+          mostrarles está justo sobre esta meseta. ¡Creo que les va a encantar!'
       2:
-        text: Espera un minuto. ¡Hay un agujero en la pista! (gritando)
+        text: Esperen un minuto. ¡Hay un hoyo en la pista! (gritando)
       3:
-        text: "¿Estáis bien todos? Stampy: Ah, ya veo el problema. ¡Mira! Hay un agujero
-          en la pista. Stacy: ¿De verdad, Stampy? Lizzy: Puede que tengamos que agrupar
-          bloques para arreglarlo. Preston: Hagamos una carrera. El primero que vuelva
-          a la cima gana. Stacy: Ok. Preparados, listos, ¡YA! Ok, voy a reunir algunos
-          de estos bloques de terracota. Esperad. Chicos, No puedo 'minar'. Preston:
-          Yo tampoco. Lizzy: Yo tampoco puedo. Stacy: Ok, esto es muy raro. Stampy,
-          ¿puedes minar? Stampy: No puedo. Stampy: Ok, todos tranquilos. Stampy: ¿Está
-          roto el juego? Stacy: Si es así, ¿cómo lo arreglamos? Lizzy: No sé. Stampy:
-          ¿Sabe alguien cómo escribir código Minecraft?"
+        text: "¿Están todos bien? Stampy: Ah, ya sé cuál es el problema. ¡Miren! Hay
+          un hoyo en la pista. Stacy: ¿De verdad, Stampy? Lizzy: Puede que tengamos
+          que recoger bloques para arreglarlo. Preston: Hagamos una carrera. El primero
+          que vuelve a la cima gana. Stacy: Bien. Preparados, listos, ¡YA! Voy a recoger
+          algunos de estos bloques de terracota. Esperen. Chicos, ¡no puedo minar!
+          Preston: Yo tampoco. Lizzy: Ni yo. Stacy: Esto es muy raro. Stampy, ¿puedes
+          minar? Stampy: ¡No puedo! Stampy: Bien, todos tranquilos. Stampy: ¿El juego
+          está roto? Stacy: Si es así, ¿cómo lo arreglamos? Lizzy: No lo sé. Stampy:
+          ¿Alguien sabe cómo escribir código en Minecraft?"
       4:
         text: "(ufff) Preston: ¿Qué es eso? Stampy: Nunca había visto uno de esos
-          antes. Lizzy: ¡Qué adorable! Stacy: ¿Es.. es domesticable? Preston: Vale,
-          ¿qué está pasando? Alguien tiene que volver al mundo real y arreglar esto.
-          Todos: ¡Yo no! Stacy: Yo n.. (suspira). Ok, yo iré."
+          antes. Lizzy: ¡Qué adorable! Stacy: ¿Es... es obediente? Preston: ¿Qué está
+          pasando? Alguien tiene que volver al mundo real y arreglar esto. Todos:
+          ¡Yo no! Stacy: Yo n... (suspira). Bien, iré."
       5:
-        text: Oh, bueno, bueno, ahora estoy en el mundo real. Voy a intentar encontrar
-          las oficinas de Minecraft.
+        text: Oh, bueno, ahora estoy en el mundo real. Voy a intentar encontrar las
+          oficinas de Minecraft.
       6:
-        text: Pero, voy a necesitar vuestra ayuda. ¡Empieza a hacer el tutorial, empieza
-          a aprender a programar, y me pondré al día con vosotros chicos después de
-          unos pocos niveles, está bien? ¡Deseadme suerte! Creo que es así. ¡Uau!
-          ¡Cactus! ¡Estoy bien!
+        text: Pero voy a necesitar su ayuda. ¡Empiecen a ver el tutorial, aprendan
+          a escribir código y me pondré al día con ustedes dentro de unos niveles,
+          ¿está bien? ¡Deséenme suerte! Creo que es por aquí. ¡Ay! ¡Cactus! ¡Estoy
+          bien!
       7:
-        text: Para completar el reto de la Hora de Código, necesitarás escribir código
-          para programar el agente. Trabajarás junto con el Agente para eliminar cualquier
-          obstáculo en tu ruta, para que puedas recoger los elementos que necesitas
-          para tu viaje. Sólo el Agente puede colocar y romper bloques, y tú sólo
-          puedes recoger objetos. Tu pantalla se divide en tres partes principales.
-          A la izquierda está Minecraft.
+        text: Para completar el desafío de la Hora del Código, necesitarás escribir
+          código para programar al agente. Trabajarás junto con el Agente para quitar
+          los obstáculos del camino y recoger los elementos que necesitas para tu
+          viaje. Solo el Agente puede colocar y romper bloques, y solo tú puedes recoger
+          objetos. Tu pantalla se divide en tres partes. A la izquierda está Minecraft.
       8:
-        text: En la zona media está la caja de herramientas con los comandos que el
-          Agente puede entender.
+        text: En el área que está en el medio verás la caja de herramientas con los
+          comandos que el Agente puede entender.
       9:
-        text: Y a la derecha, está el espacio de trabajo. Ahí es donde se apilan los
-          comandos para construir el programa para controlar el Agente.
+        text: A la derecha, está el espacio de trabajo. Allí agruparás los comandos
+          para crear el programa que controlará al Agente.
       10:
         text: El Agente puede caminar, girar y activar las placas de presión. También
-          puede destruir y colocar bloques. Cuando se coloca el bloque como estos
-          raíles de minecart, lo coloca debajo de sí mismo.
+          puede destruir y colocar bloques. Cuando coloca el bloque, como en el caso
+          de estos raíles de vagoneta, lo hace debajo de sí mismo.
       11:
         text: Si no recuerdas qué hay que hacer, las instrucciones de cada nivel aparecen
           arriba.
       12:
-        text: Si quieres intentarlo de nuevo, puedes pulsar el botón de reinicio azul
-          para reiniciar todo a donde comenzó. Y si necesitas eliminar un bloque de
-          código, arrastrarlo desde tu área de trabajo a la barra de herramientas.
-          Recuerda pulsar correr para que el agente se mueva. Vale, sigue adelante
-          y prueba los primeros niveles. ¡Buena suerte!
+        text: Si quieres volver a intentarlo, puedes pulsar el botón de reinicio azul
+          para reiniciar todo al punto en el que comenzó. Y si necesitas eliminar
+          un bloque de código, puedes arrastrarlo desde tu espacio de trabajo hacia
+          la barra de herramientas. Recuerda pulsar Ejecutar para que el Agente se
+          mueva. Ahora sigue adelante y prueba los primeros niveles. ¡Buena suerte!
     mc_2017_repeat:
       1:
-        text: 'Stampy: ¿Me pregunto qué Stacy está a la altura?'
+        text: 'Stampy: ¿Qué estará haciendo Stacy?'
       2:
         text: 'Stacy: Woah, creo que estoy en el lugar correcto. ¡Esto es increíble!'
       3:
-        text: "¡Me siento como estuviera de vuelta en Minecraft! Hola. ¿Cómo estás?
-          Hola?"
+        text: "¡Siento como si estuviera de vuelta en Minecraft! Hola, ¿cómo estás?
+          ¿Hola?"
       4:
         image: notes/mc_2017_repeat_4.png
-        text: 'Oh, hay una enredadera. No haces nada, ¿no? Katie: ¿Stacy? Stacy: Hola,
-          ¿Katie? Katie: Sí, ¡bienvenido a Minecraft!'
+        text: 'Oh, allí hay un creeper. No estás haciendo nada, ¿no? Katie: ¿Stacy?
+          Stacy: Hola, ¿Katie? Katie: Sí, ¡bienvenida a Minecraft!'
       5:
         image: notes/mc_2017_repeat_5.png
-        text: 'Stacy: Esto es increíble. ¿Así que aquí trabajas cada día como desarrolladora,
-          verdad? Katie: sí, es bastante impresionante. Soy desarrolladora en el equipo
-          de mercado de Minecraft. Stacy: ¿Cuántos idiomas de codificación conoces?
-          Katie: En mi carrera he trabajado probablemente con más de una docena. Stacy:
-          ¿Una docena? Katie: Sí. Stacy: Ahora, ¿no te gustaría saber nada acerca
-          de este pequeño golem que se hace llamar el agente? Katie: Utilizamos al
-          agente para hacer cosas que Steve o Alex no pueden, como ir a través de
-          la lava. Stacy: Bueno, yo quiero aprender cómo codificar y ellos quieren
-          aprender a codificar, así que ¿cuál es una de las primeras cosas que necesitas
-          saber cuando estás aprendiendo?'
+        text: 'Stacy: Esto es increíble. ¿Así que trabajas aquí como desarrolladora?
+          Katie: sí, es muy impresionante. Soy desarrolladora en el equipo de mercado
+          de Minecraft. Stacy: ¿Cuántos lenguajes de programación conoces? Katie:
+          Debo haber trabajado con más de una decena durante mi carrera. Stacy: ¿Una
+          decena? Katie: Sí. Stacy: ¿Sabes algo acerca de este pequeño golem que se
+          hace llamar el Agente? Katie: Utilizamos al Agente para hacer cosas que
+          Steve o Alex no pueden, como atravesar la lava. Stacy: Bueno, yo quiero
+          aprender a programar y ellos quieren aprender a programar. ¿Cuál sería una
+          de las primeras cosas que necesitamos saber al respecto?'
       6:
         image: notes/mc_2017_repeat_6.png
         text: 'Katie: Bueno, tienes que aprender a usar bucles. Los bucles son cosas
-          que los desarrolladores escriben para dar órdenes a un ordenador que se
-          puede ejecutar una y otra vez. Stacy: Lo entiendo, así que creo que hay
-          algunos de los que vienen en los siguientes niveles, así que sigue adelante
-          y dale a los bucles una oportunidad.'
+          que los desarrolladores escriben para dar órdenes a una computadora y que
+          se pueden ejecutar una y otra vez. Stacy: Entiendo. Creo que hay algunos
+          en los siguientes niveles, así que sigamos adelante y probemos los bucles.'
       7:
         image: notes/mc_2017_repeat_7.png
-        text: En el siguiente nivel, puedes usar un bucle para mover el Agente a lo
-          largo de la ruta. Arrastra el bloque de repetición en el área de trabajo
-          y coloca el bloque de movimiento hacia adelante dentro del bloque de repetición.
-          Esto indica que el ordenador hace lo mismo muchas veces en una fila sin
-          tener que arrastrar un montón de bloques en el área de trabajo. Puedes elegir
-          cuántas veces repetir poniendo un número en el bloque de repetición.
+        text: En el siguiente nivel, puedes usar un bucle para mover al Agente a lo
+          largo del camino. Arrastra el bloque 'repetir' al espacio de trabajo y coloca
+          el bloque 'avanzar' dentro del bloque 'repetir'. Esto le ordena a la computadora
+          que haga lo mismo muchas veces seguidas sin tener que arrastrar un montón
+          de bloques al espacio de trabajo. Puedes asignar un número al bloque 'repetir'
+          para que algo se repita determinadas veces.
       8:
         image: notes/mc_2017_repeat_8.png
-        text: También puedes poner turnos y múltiples comandos en el bloque de repetición,
-          pero por ahora intenta usar una repetición para mover al Agente adelante
-          unos pocos pasos. Recuerda, si te pones atrapado en un rompecabezas, siempre
-          puedes pulsar el botón de reinicio azul e inténtalo de nuevo.
+        text: También puedes poner giros y diversos comandos en el bloque 'repetir',
+          pero por ahora usaremos una repetición para que el Agente avance unos pocos
+          pasos. Recuerda que, si no puedes seguir avanzando en el desafío, siempre
+          puedes pulsar el botón de reinicio azul y volver a intentarlo.
       9:
         image: notes/mc_2017_repeat_9.png
-        text: 'Si usted estan pensando en tener un trabajo genial como el de Katie,
-          siga adelante y haga clic en el botón de mostrar código cuando usted finalice
-          cada nivel. Eso hará que se muestre el código Javascript que alguien como
-          Katie usa cuando ella esta realmente programando Minecraft. Katie: Si, ¡Buena
-          suerte a todos!'
+        text: 'Si estás pensando en tener un trabajo genial como el de Katie, sigue
+          adelante y haz clic en el botón de mostrar código cuando finalices cada
+          nivel. Así verás el código JavaScript que alguien como Katie usa cuando
+          está programando Minecraft. Katie: ¡Buena suerte a todos!'
     mc_2017_functions:
       1:
         image: notes/mc_2017_functions_1.png
-        text: 'Preston: no trato de presumir, pero soy bastante bueno en parkour.
-          Lizzy: Vamos a dormir ya que será de día cuando Stacy vuelva.'
+        text: 'Preston: No quiero ser presumido, pero soy bastante bueno en parkour.
+          Lizzy: Vamos a dormir que ya será de día cuando Stacy vuelva.'
       2:
         image: notes/mc_2017_functions_2.png
-        text: 'Stacy: Ok chicos, estoy de vuelta de las oficinas de Minecraft, y creo
-          que sé cómo resolver el problema que tengo en mi juego. Creo que puedo usar
-          una función. Permitidme abrir esto.'
+        text: 'Stacy: Bien chicos, ya volví de las oficinas de Minecraft. Creo que
+          sé cómo resolver el problema que tengo en mi juego. Puedo usar una función.
+          Vamos a abrir esto.'
       3:
         image: notes/mc_2017_functions_3.png
-        text: Así que una función es conjunto específico de instrucciones para llevar
-          a cabo una determinada tarea, como una receta. En los próximos niveles,
-          usted tendrá acceso a funciones que puede usar para resolver los rompecabezas.
+        text: Una función es un conjunto específico de instrucciones que permiten
+          llevar a cabo una determinada tarea; o sea que es como una receta. En los
+          próximos niveles tendrás acceso a funciones que puedes usar para resolver
+          los desafíos.
       4:
         image: notes/mc_2017_functions_4.png
-        text: Mira el código en la función cuanto está en el espacio de trabajo para
-          ver lo que hace.
+        text: Mira el código de la función cuando está en el espacio de trabajo para
+          ver qué es lo que hace.
       5:
         image: notes/mc_2017_functions_5.png
-        text: Luego, busque un bloque con ese nombre en la caja de herramientas y
-          arrástrelo desde la caja de herramientas hasta cuando se ejecuta el bloque.
+        text: Luego, busca un bloque con ese nombre en la caja de herramientas y arrástralo
+          desde allí hasta el bloque 'cuando se ejecuta'.
       6:
         image: notes/mc_2017_functions_6.png
         text: Recuerda, puedes usar la misma función cada vez que necesites ejecutar
@@ -3282,191 +3279,297 @@ es-MX:
     mc_2017_congratulations:
       1:
         image: notes/mc_2017_congratulations_1.png
-        text: 'Preston: ¡Felicidades!'
+        text: 'Preston: ¡Felicitaciones!'
       2:
         image: notes/mc_2017_congratulations_2.png
-        text: 'Lizzy: ¡Felicidades!'
+        text: 'Lizzy: ¡Felicitaciones!'
       3:
         image: notes/mc_2017_congratulations_3.png
-        text: 'Stampy: ¡Felicidades, lo has conseguido!'
+        text: 'Stampy: ¡Felicitaciones, lo has conseguido!'
       4:
         image: notes/mc_2017_congratulations_4.png
-        text: 'Stacy: ¡Enhorabuena chicos, habéis arrasado! Y ahora que habéis completado
-          la Hora de Código, podéis empezar a codificar en Minecraft. Habéis aprendido
-          sobre bucles, funciones y lo que hace un agente de software.'
+        text: 'Stacy: ¡Felicitaciones chicos, son geniales! Y ahora que han completado
+          la Hora del Código, pueden empezar a programar en Minecraft. Han aprendido
+          sobre bucles, funciones y qué hace un Agente de software.'
       5:
         image: notes/mc_2017_congratulations_5.png
-        text: Ahora, es hora para el nivel de juego libre, donde tú eres el desarrollador.
-          Usa cualquier tiempo restante para escribir tus propias funciones para explorar,
+        text: Ahora, vayamos al nivel de juego libre, donde eres el desarrollador.
+          Usa el tiempo que te resta para escribir funciones que te permitirán explorar,
           minar y construir.
       6:
         image: notes/mc_2017_congratulations_6.png
-        text: 'Puedes coger el código que escribas en este nivel en tu mundo de Minecraft
-          en Minecraft: Education Edition. Simplemente haz clic en ''Finalizar'' y
-          sigue las instrucciones para obtener el enlace a usar en tu mundo para continuar
-          codificando con el Agente. ¡Diviértete y buen trabajo!'
+        text: 'Puedes tomar el código que escribiste en este nivel de tu mundo de
+          Minecraft en Minecraft: Education Edition. Simplemente haz clic en ''Finalizar''
+          y sigue las instrucciones para obtener el enlace que puedes usar en tu mundo
+          para seguir programando con el Agente. ¡Que te diviertas y hagas un buen
+          trabajo!'
       7:
         image: notes/mc_2017_congratulations_7.png
-        text: 'Stacy: ¡Y estoy de regreso! Okey, chicos, ¡este es el agente! Les mostraré
-          qué puede hacer. Mire ¡está haciéndolo! Yo le dije a él para construir una
-          escalera fuera de estos bloques de terracota, ahora sólo podemos utilizar
-          esto para salir de acá. Y chicos, no son sólo escaleras. Puedo decirle al
-          agente que haga lo que yo quiera, y lo hará para mí.'
+        text: 'Stacy: ¡Estoy de regreso! Bueno, chicos, ¡este es el Agente! Les mostraré
+          qué puede hacer. Vean, ¡está haciéndolo! Le dije que construya una escalera
+          con estos bloques de terracota. Ahora podemos utilizarla para salir de aquí.
+          Y no pasa solo con escaleras. Puedo decirle al Agente que haga lo que yo
+          quiera, y lo hará.'
       8:
         image: notes/mc_2017_congratulations_8.png
-        text: 'Stampy: ¿Cómo lo hiciste? Stacy: Era fácil, en realidad. ¡Acabo de
-          usar código!'
+        text: 'Stampy: ¿Cómo lo hiciste? Stacy: Realmente es muy fácil. ¡Utilicé el
+          código!'
     csd_concept_how_computers_work:
       1:
         image: notes/csd_concept_how_computers_work_1.png
-        text: 'Mires donde mires, los ordenadores están cambiando el mundo. Ya estén
-          en nuestros escritorios, en nuestras casas, nuestros bolsillos o en cualquier
-          otro lugar, pero mientras la mayoría de nosotros usamos esta tecnología
-          revolucionaria diariamente, no nos preguntamos a menudo: "¿Cómo funcionan
-          los ordenadores?" En esta serie, vamos a aprender cómo funcionan realmente
-          los ordenadores, empezando por lo que hace que un ordenador sea un ordenador.
-          Entonces, estudiarás cómo la información está representada dentro del ordenador
-          usando pequeñas señales eléctricas que se encienden y apagan velocidades
-          alucinantes.'
+        text: 'Las computadoras están cambiando el mundo, ya sea que estén en nuestros
+          escritorios, en nuestras casas, en nuestros bolsillos o en cualquier otro
+          lugar. Aunque la mayoría de nosotros usamos esta revolucionaria tecnología
+          todos los días, no solemos preguntarnos: "¿Cómo funcionan?". En esta serie
+          aprenderemos cómo funcionan realmente las computadoras, empezando por aquello
+          que hace que una computadora sea una computadora. Estudiarás cómo la información
+          está representada dentro de la computadora mediante pequeñas señales eléctricas
+          que entran y salen a velocidades alucinantes.'
       2:
         image: notes/csd_concept_how_computers_work_2.png
-        text: Después de eso, aprenderás cómo los ordenadores utilizan circuitos para
-          hacer todo desde las matemáticas simples para simular mundos virtuales enteros.
-          A continuación, te acercarás y verás las diferentes partes de un ordenador
-          que realmente ingresa, salida y almacena toda esa información. Por último,
-          echarás un vistazo a qué código es realmente y cómo el software controla
-          el hardware. Así que si tienes curiosidad acerca de los dispositivos que
-          usas cada día o quieres diseñar las innovaciones del futuro, el primer paso
-          es aprender cómo funcionan los ordenadores.
+        text: Luego, aprenderás cómo las computadoras utilizan circuitos para hacer
+          de todo, desde cálculos simples hasta simular mundos virtuales enteros.
+          A continuación, verás las diferentes partes de una computadora que ingresa,
+          genera y almacena toda esa información. Por último, echarás un vistazo a
+          qué es el código y cómo el software controla el hardware. Si tienes curiosidad
+          acerca de los dispositivos que usas cada día o quieres diseñar las innovaciones
+          del futuro, el primer paso es aprender cómo funcionan las computadoras.
     csd_concept_computer:
       1:
         image: notes/csd_concept_computer_1.png
-        text: Mi nombre es Mayo-Li Khoe y soy diseñadora y una inventora. Así que
-          algunas de las cosas que he diseñado han sido en Apple, y ahora diseño productos
-          para niños para que puedan rendir más fácilmente en la escuela. Mis otros
-          trabajos incluyen pinchar discos y bailar.
+        text: Mi nombre es Mayo-Li Khoe. Soy diseñadora e inventora. He diseñado algunas
+          cosas mientras estuve en Apple, y ahora diseño productos que ayudan a los
+          niños a adaptarse más fácilmente en la escuela. Mis otros trabajos son pasar
+          música y bailar.
       2:
         image: notes/csd_concept_computer_2.png
-        text: "¡Los ordenadores están en todas partes! Están en los bolsillos de la
-          gente, están en los coches de la gente, la gente los tiene en sus muñecas.
-          Pueden estar en tu mochila ahora mismo. ¿Pero qué hace un ordenador? ¿Qué
-          hace que un ordenador sea un ordenador de todos modos? ¿E incluso cómo funciona?"
+        text: "¡Las computadoras están en todas partes! En los bolsillos de las personas,
+          en sus automóviles o incluso en sus muñecas. Pueden estar en tu mochila
+          ahora mismo. Pero, ¿qué hace que una computadora sea una computadora? ¿Cómo
+          funciona?"
       3:
         image: notes/csd_concept_computer_3.png
-        text: "¡Hola soy Nat! Yo fui uno de los diseñadores originales de la Xbox.
-          He estado trabajando con ordenadores desde que tenía tal vez siete años
-          y ahora trabajo en realidad virtual. Como humanos, siempre hemos construido
-          herramientas para ayudarnos a resolver problemas. Herramientas como una
-          silla de ruedas, un martillo o una imprenta, o un camión remolque."
+        text: "¡Hola, soy Nat! Fui una de las diseñadoras originales de la Xbox. He
+          estado trabajando con computadoras desde que tenía siete años y ahora trabajo
+          en realidad virtual. Como humanos, siempre construimos herramientas que
+          nos ayudan a resolver problemas. Herramientas como una carretilla, un martillo,
+          una imprenta o un remolque."
       4:
         image: notes/csd_concept_computer_4.png
+        text: Todos estos inventos nos ayudaron con el trabajo manual. Con el tiempo,
+          las personas comenzaron a preguntarse si era posible diseñar y construir
+          una máquina que ayudara con el trabajo intelectual, como resolver ecuaciones
+          o seguir las estrellas en el cielo. En lugar de mover o manipular cosas
+          físicas, como tierra o piedras, estas máquinas tendrían que poder manejar
+          información. A medida que los pioneros de la ciencia de la computación exploraron
+          cómo diseñar una máquina de pensar, se dieron cuenta de que tendría que
+          realizar cuatro tareas diferentes.
       5:
         image: notes/csd_concept_computer_5.png
+        text: Tiene que recibir información, almacenarla, procesarla y, luego, generar
+          los resultados. Esto puede sonar sencillo, pero estas cuatro cosas están
+          presentes en todas las computadoras. Eso es lo que hace que una computadora
+          sea una computadora.
       6:
         image: notes/csd_concept_computer_6.png
+        text: Las computadoras primero fueron calculadoras básicas, algo increíble
+          ya en aquel momento, y solo manipulaban números. Pero ahora podemos usarlas
+          para hablar con otras personas, jugar, controlar robots y hacer casi cualquier
+          cosa loca que se nos ocurra. Las computadoras modernas no se parecen en
+          nada a esas máquinas viejas y toscas, pero aún hacen las mismas cuatro cosas.
+      7:
+        text: Primero, hablemos de la información. Puedes decir a las computadoras
+          qué hacer con el teclado, el ratón, el micrófono o la cámara. A partir de
+          estas entradas diferentes, la computadora obtiene datos, que almacena en
+          la memoria.
+      8:
+        text: El procesador de la computadora toma la información de la memoria, y
+          la manipula o la cambia mediante un algoritmo, que es una serie de comandos.
+          Luego, vuelve a enviar la información procesada para ser almacenada en la
+          memoria. Esto continúa hasta que la información procesada está lista para
+          generar resultados.
+      9:
+        text: La forma en que una computadora genera información depende de aquello
+          para lo que está diseñada. Una pantalla de computadora puede mostrar texto,
+          fotos, videos, juegos interactivos, ¡o incluso realidad virtual! El resultado
+          generado por una computadora hasta puede incluir señales para controlar
+          un robot.
+      10:
+        text: "¿Y quién sabe cómo serán las computadoras del futuro? Mi deseo es que
+          puedas ayudar a decidirlo. Pero todas las computadoras, independientemente
+          de los diferentes tipos de tecnología que utilicen, hacen esas mismas cuatro
+          cosas. Toman una información, la almacenan como datos, los procesan y, luego,
+          generan resultados."
     csd_concept_binary_data:
+      1:
+        text: "¡Hola! Mi nombre es Limor Fried, y soy ingeniero en Adafruit Industries.
+          Allí es donde hago ingeniería y diseño, y diseño circuitos para moda, música
+          y tecnología."
+      2:
+        text: Mi nombre es Federico Gómez Suárez, y soy desarrollador de software
+          para Microsoft Hack for Good. Me interesa que la tecnología nos ayude a
+          resolver algunos de los grandes problemas sociales de nuestros tiempos.
+      3:
+        text: Puede que hayas oído que las computadoras funcionan con unos y ceros.
+          Pero, hoy en día, casi nadie trata directamente con ellos. Sin embargo,
+          desempeñan un papel importante en el funcionamiento interno de las computadoras.
+      4:
+        text: En una computadora hay cables y circuitos eléctricos que transmiten
+          toda la información. ¿Cómo se puede almacenar o representar información
+          mediante la electricidad?
+      5:
+        text: Bueno, si tienes un solo cable con electricidad, la señal podría estar
+          encendida o apagada. No hay muchas opciones, pero es un comienzo realmente
+          importante. Con un cable, podemos representar un sí o un no, verdadero o
+          falso, uno o cero, o cualquiera otra posibilidad que tenga solo dos opciones.
+          Este estado de encendido/apagado de un solo cable se llama bit, y es la
+          pieza más pequeña de información que puede almacenar una computadora.
+      6:
+        text: 'Si usas más cables, obtienes más bits: más unos y ceros. Más bits significa
+          que puedes representar información más compleja. Pero, para entenderlo,
+          necesitamos aprender sobre algo llamado el sistema de números binarios.'
+      7:
+        text: 'En el sistema de números decimales, tenemos diez dígitos de cero a
+          nueve, y así es como aprendemos a contar. En el sistema de números binarios,
+          solo tenemos dos dígitos: cero y uno, que nos permiten contar hasta cualquier
+          número.'
+      8:
+        text: Así es cómo funciona. En el sistema numérico decimal al que todos estamos
+          acostumbrados, cada posición en un número tiene un valor diferente. Está
+          la posición 1, la posición 10, la posición 100 y así sucesivamente. Por
+          ejemplo, un 9 en la posición 100 es 900. En el sistema binario, cada posición
+          también tiene un valor. Pero, en lugar de multiplicar por 10 cada vez, multiplicamos
+          por 2. Así, está la posición 1, la posición 2, la posición 4, la posición
+          8 y así sucesivamente. Por ejemplo, el número 9 en binario es 1001. Para
+          calcular el valor, sumamos 1 vez 8, más 0 veces 4, más 0 veces 2 más 1 vez
+          1. Casi nadie hace este cálculo porque las computadoras lo hacen por nosotros.
+          Lo importante es que se puede representar cualquier número con unos y ceros,
+          o con un manojo de cables que se enciendan y apaguen. Cuantos más cables
+          uses, más números puedes almacenar. Con 8 cables, puedes almacenar los números
+          del 0 al 255. Esos son 8 unos. Con solo 32 cables, puedes almacenar desde
+          0 hasta 4 mil millones. Con el sistema numérico binario, puedes representar
+          cualquier número que quieras.
+      9:
+        text: "¿Pero qué ocurre con otros tipos de información como texto, imágenes
+          o sonido? Resulta que todas estas cosas también pueden representarse con
+          números. Piensa en todas las letras del alfabeto. Podrías asignar un número
+          a cada letra. La A podría ser 1, la B podría ser 2, etcétera. Puedes representar
+          cualquier palabra o párrafo como una secuencia de números. Y, como vimos,
+          estos números se pueden almacenar como señales eléctricas encendidas o apagadas.
+          Cada palabra que ves en una página web o tu teléfono se representa mediante
+          un sistema como este."
+      10:
+        text: Ahora, veamos qué pasa con las fotos, los videos y todos los gráficos
+          que aparecen en una pantalla.
+      11:
+        text: Todas estas imágenes están hechas de puntos minúsculos llamados pixeles,
+          y cada pixel tiene un color. Cada uno de los colores se puede representar
+          con números. Si consideramos que una imagen típica tiene millones de estos
+          pixeles, y un video típico muestra 30 imágenes por segundo, estamos hablando
+          de muchos datos.
       12:
-        text: Cada sonido es básicamente una serie de vibraciones en el aire. Las
-          vibraciones pueden representarse gráficamente como una onda. Cualquier punto
-          en esta onda puede ser representado por un número. Y de esta manera, cualquier
-          sonido puede ser dividido en una serie de números. Si usted quiere una calidad
-          de sonido alta, seleccionaría un audio de 32-bit o uno de 8-bit. Mayor número
-          de bits significa mayor rango de números.
+        text: Cada sonido es, básicamente, una serie de vibraciones en el aire. Las
+          vibraciones se pueden representar gráficamente como una onda. Cualquier
+          punto en esa onda se puede representar con un número. De esta manera, se
+          puede dividir un sonido en una serie de números. Si quieres una mejor calidad
+          de sonido, seleccionarás el audio de 32 bits o uno de 8 bits. Más número
+          de bits significa un mayor rango de números.
       13:
         image: notes/csd_concept_binary_data_13.png
-        text: Cuando usted usa una computadora para escribir código o para hacer su
-          propia aplicación, usted no está trabajando directamente con estos ceros
-          y unos. Pero si está trabajando con imágenes o sonido o vídeos. Así que
-          si quiere entender cómo funcionan las computadoras por dentro, todo se reduce
-          a estos simples ceros y unos y las señales eléctricas en los circuitos detrás
-          de ellos.
+        text: Si usas una computadora para escribir código o crear tu propia aplicación,
+          no trabajas directamente con estos ceros y unos, pero sí con imágenes, sonido
+          o videos. Así, si quieres entender cómo funcionan las computadoras por dentro,
+          todo se reduce a estos simples ceros y unos, y a las señales eléctricas
+          en los circuitos que están detrás de ellos.
     csd_concept_circuits_logic:
       1:
         image: notes/csd_concept_circuits_logic_1.png
-        text: Una de las mejores cosa que he descubierto sobre circuitos es que la
-          circuitería puede ser una forma de arte si poseo una idea creativa, puedo
-          lograr esa idea creativa usando circuitos. Así que si usted tiene ideas,
-          puede usar la tecnología para hacer que esas ideas cobren vida.
+        text: Una de las cosas más geniales que he descubierto acerca de los circuitos
+          es que sus componentes pueden ser una forma de arte. Si tengo una idea creativa,
+          puedo hacerla realidad mediante los circuitos. Entonces, si tienen ideas,
+          pueden usar la tecnología para que cobren vida.
       2:
         image: notes/csd_concept_circuits_logic_2.png
-        text: Cada entrada o salida de la computadora es efectivamente un tipo de
-          información, que puede ser representado por señales de encendido o apagado
-          o ceros y unos.
+        text: Cada entrada o salida de la computadora es un tipo de información, que
+          se puede representar con señales eléctricas que se encienden o apagan, o
+          con ceros y unos.
       3:
         image: notes/csd_concept_circuits_logic_3.png
-        text: Para lograr procesar la información que ingresa como entrada y para
-          generar la información que sale, una computadora necesita modificar y combinar
-          las señales de entrada. Para hacer esto, una computadora usa millones de
-          componentes electrónicos teeny, que al juntarse todos forman los circuitos.
+        text: Para procesar la información que ingresa como entrada y para generar
+          la información que sale, una computadora necesita modificar y combinar las
+          señales de entrada. Para ello, usa millones de componentes electrónicos
+          diminutos que, juntos, forman los circuitos.
       4:
         image: notes/csd_concept_circuits_logic_4.png
-        text: Echemos un vistazo mas de cerca a cómo los circuitos pueden ser modificados
-          y procesar información que es representada con ceros y unos. Este es increíblemente
-          un circuito simple. Utiliza una señal eléctrica, encendida o apagada, y
-          la voltea. Así que si la señal que proporciona es un 1, el circuito proporciona
-          un cero, y si usted ingresa un 0 al circuito, el mismo retornará un 1. La
-          señal que entra no es la misma que sale, y así denominamos este circuito
-          como NOT.
+        text: Echemos un vistazo a cómo los circuitos pueden modificar y procesar
+          información que se representa con ceros y unos. Este es un circuito muy
+          simple. Utiliza una señal eléctrica, encendida o apagada, y la voltea. Si
+          la señal que le das es un 1, el circuito devuelve un cero; si ingresas un
+          0 al circuito, te devolverá un 1. La señal que entra no es igual a la que
+          sale, por eso a este circuito lo llamamos NO.
       5:
         image: notes/csd_concept_circuits_logic_5.png
-        text: Circuitos más complicados pueden realizar señales múltiples y combinarlas,
-          y dará un resultado diferente. Por ejemplo, un circuito con dos señales
-          eléctricas, donde cada uno debe ser un 1 o un 0. Si alguno de las señales
-          que entra es un 0, el resultado es también un cero. Este circuito sólo retornará
-          un 1, si la primera y la segunda señal son ambas un 1, este se denomina
-          circuito AND.
+        text: Los circuitos más complejos pueden tomar varias señales, combinarlas
+          y devolver un resultado diferente. En este ejemplo, un circuito tomará dos
+          señales eléctricas y dará un valor de 1 o 0 a cada una. Si alguna de las
+          señales entrantes es un 0, el resultado también será un 0. Este circuito
+          solo devolverá un 1 si la primera y la segunda señal tienen un valor de
+          1; por eso se lo denomina Y.
       6:
         image: notes/csd_concept_circuits_logic_6.png
-        text: Hay muchos pequeños circuitos como este que realiza cálculos sencillos
-          lógicos. Mediante la conexión de estos circuitos juntos, podemos hacer circuitos
-          más complejos que realizan cálculos más complejos.
+        text: Hay muchos circuitos pequeños como este que realizan cálculos lógicos
+          simples. Al conectarlos, podemos crear circuitos más complejos que realizan
+          cálculos más complejos.
       7:
         image: notes/csd_concept_circuits_logic_7.png
-        text: Por ejemplo, usted puede hacer un circuito que agregue 2 bits juntos
-          denominado sumador. Este circuito toma dos bits individuales, cada uno un
-          1 o un 0, y los coloca juntos para calcular la suma de ellos. La suma puede
-          ser 0 mas 0 igual a 0, 0 mas 1 igual a 1, o 1 mas 1 igual a 2. Usted necesita
-          dos cables de salida porque puede necesitarse hasta dos bits de salida para
-          representar la suma. Una vez que usted tiene un sumador simple para añadir
-          dos bits de información, usted puede colocar juntos varios de estos circuitos
-          sumadores lado a lado para agregar una mayor cantidad de números.
+        text: Por ejemplo, puedes crear un circuito, llamado sumador, que agregue
+          2 bits juntos. Este circuito toma 2 bits individuales, un 1 o un 0 cada
+          uno, y los junta para calcular la suma. La suma puede ser 0 mas 0 igual
+          a 0, 0 mas 1 igual a 1, o 1 mas 1 igual a 2. Necesitas dos cables de salida
+          porque puedes necesitar hasta dos bits de salida para representar la suma.
+          Una vez que tienes un sumador simple para añadir dos bits de información,
+          puedes colocar varios de estos circuitos sumadores uno al lado del otro,
+          para agregar una mayor cantidad de números.
       8:
         image: notes/csd_concept_circuits_logic_8.png
-        text: Por ejemplo, así es cómo un sumador de 8-bit suma el numero 25 y 50.
-          Cada número es presentado usando 8 bits, resultando en 16 señales eléctricas
-          diferentes que entran al circuito. El circuito para una sumador de 8-bit
-          posee muchos sumadores pequeños dentro de él, que todos juntos, calculan
+        text: Por ejemplo, así es cómo un sumador de 8 bits suma los números 25 y
+          50. Cada número se representa con 8 bits, lo que da como resultado 16 señales
+          eléctricas diferentes que entran al circuito. El circuito para una sumador
+          de 8 bits posee muchos sumadores pequeños dentro, y todos juntos calculan
           la suma.
       9:
         image: notes/csd_concept_circuits_logic_9.png
-        text: Diferentes circuitos eléctricos pueden realizar otros cálculos simples
-          como la resta o multiplicación. De hecho, toda esta información que está
-          procesando su computadora es cantidades enormes de pequeños operadores simples
-          colocados juntos. Cada operador individual realizado por una computadora
-          es tan, tan simple que puede ser hecho por un humano, pero estos circuitos
-          dentro de las computadoras son muy muy rápidos.
+        text: Diferentes circuitos eléctricos pueden realizar otros cálculos simples,
+          como restar o multiplicar. De hecho, toda esta información que procesa tu
+          computadora no es más que cantidades enormes de pequeñas operaciones simples
+          que trabajan juntas. Cada operación individual realizada por una computadora
+          es tan simple que puede ser hecha por un humano, pero estos circuitos dentro
+          de las computadoras son muy rápidos.
       10:
         image: notes/csd_concept_circuits_logic_10.png
-        text: Antiguamente, estos circuitos eran grandes e inadecuados, y un sumador
-          de 8-bit podía ser tan grande como un refrigerador y podía tomar minutos
-          para que se realizara un cáculo sencillo. Hoy en día, circuitos computacionales
-          son de tamaño microscópico, y muy muy rápidos. ¿Por qué las computadoras
-          pequeñas son también pequeñas? Bueno, porque mientras más pequeño sea el
-          circuito, menor es la distancia que la señal eléctrica debe recorrer. La
-          electricidad se mueve a la velocidad de la luz, lo cual explica por qué
-          circuitos modernos pueden realizar billones de cálculos por segundo.
+        text: Antiguamente, estos circuitos eran grandes y toscos, y un sumador de
+          8 bits podía ser tan grande como un refrigerador y tardar varios minutos
+          para realizar un cálculo simple. Hoy en día, los circuitos de las computadoras
+          son microscópicos y muy rápidos. ¿Por qué las computadoras pequeñas también
+          son más rápidas? Porque mientras más pequeño sea el circuito, menor es la
+          distancia que debe recorrer la señal eléctrica. La electricidad se mueve
+          a la velocidad de la luz, lo cual explica por qué los circuitos modernos
+          pueden realizar miles de millones de cálculos por segundo.
       11:
         image: notes/csd_concept_circuits_logic_11.png
-        text: Así que si usted está jugando un juego, grabando un vídeo, o viendo
-          los cosmos, cualquier cosa que usted puede hacer con tecnología requiere
-          cantidades enormes de información que será procesada rápidamente. Por debajo
-          de toda esta complejidad sólo están los pequeños circuitos que convierten
-          señales binarias en sitios web, vídeos, música y juegos. Estos circuitos
-          pueden incluso ayudarnos a decodificar el ADN para diagnosticar y curar
-          la enfermedad.¿Así que qué es lo que va a hacer con todos estos circuitos?
+        text: Ya se que juegues un juego, grabes un video o mires el cosmos, todo
+          lo que hagas con tecnología requiere cantidades enormes de información que
+          se procesará rápidamente. Debajo de toda esa complejidad están los diminutos
+          circuitos que convierten las señales binarias en sitios web, videos, música
+          y juegos. Estos circuitos también pueden ayudarnos a decodificar el ADN
+          para diagnosticar y curar enfermedades. Entonces, ¿qué es lo que te gustaría
+          hacer con todos estos circuitos?
     csd_concept_memory_cpu_input_output:
       1:
         image: notes/csd_concept_memory_cpu_input_output_1.png
+        text: Hola, mi nombre es Madison Maxey. Tengo una empresa llamada Loomia en
+          la cual fabricamos telas inteligentes para ropa y productos inteligentes.
+          Cuando se trata de textiles, el único límite es el cielo.
       2:
         image: notes/csd_concept_memory_cpu_input_output_2.png
         text: Mi nombre es Danielle Applestone y soy CEO de Othermachine Company.

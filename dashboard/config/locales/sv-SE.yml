@@ -907,6 +907,8 @@ sv:
     csp_variables: variabler
     csp_conditionals: Villkor
     csp_functions: funktioner
+    csp_lists: Listor
+    csp_loops: loopar
   hoc_download:
     capsule_title: Har du Internet?
     instructions_headline: Inget Internet?

@@ -177,9 +177,9 @@ ro:
         text: primeşte {RANGE}
         options:
           RANGE:
-            '"low"': mic
-            '"mid"': mediu
-            '"high"': mare
+            '"low"': sunet jos
+            '"mid"': sunet mediu
+            '"high"': sunet înalt
       Dancelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -362,7 +362,7 @@ ro:
           EFFECT:
             '"none"': Nici unul
             '"circles"': Cercuri
-            '"color_cycle"': Curcubeu
+            '"color_cycle"': Culori
             '"diamonds"': Diamante
             '"disco_ball"': Glob de discotecă
             '"fireworks"': Artificii
@@ -375,7 +375,7 @@ ro:
             '"text"': Nume cântec
             '"sparkles"': Scântei
             '"spiral"': Spirală
-            '"disco"': Discotecă
+            '"disco"': Pătrate
             '"stars"': Stele
           PALETTE:
             '"rave"': Negru şi alb
@@ -396,7 +396,7 @@ ro:
             '"none"': Nici unul
             '"rand"': Aleatoriu
             '"circles"': Cercuri
-            '"color_cycle"': Curcubeu
+            '"color_cycle"': Culori
             '"diamonds"': Diamante
             '"disco_ball"': Glob de discotecă
             '"fireworks"': Artificii
@@ -409,7 +409,7 @@ ro:
             '"text"': Nume cântec
             '"sparkles"': Scântei
             '"spiral"': Spirală
-            '"disco"': Discotecă
+            '"disco"': Pătrate
             '"stars"': Stele
           PALETTE:
             '"rave"': Negru şi alb
@@ -591,9 +591,9 @@ ro:
             '"y"': poziţie verticală
             '"tint"': tentă
           RANGE:
-            '"bass"': mic
-            '"mid"': mediu
-            '"treble"': mare
+            '"bass"': sunet jos
+            '"mid"': sunet mediu
+            '"treble"': sunet înalt
       Dancelab_stopMapping:
         text: "{SPRITE} opreşte {PROPERTY} la {RANGE}"
         options:
@@ -607,9 +607,9 @@ ro:
             '"direction"': direcţie de mişcare
             '"tint"': tentă
           RANGE:
-            '"bass"': mic
-            '"mid"': mediu
-            '"treble"': mare
+            '"bass"': sunet jos
+            '"mid"': sunet mediu
+            '"treble"': sunet înalt
       Dancelab_whenKey:
         text: când {KEY} apăsat(ă)
         options:
@@ -644,9 +644,9 @@ ro:
         text: când {RANGE} vârf(uri)
         options:
           RANGE:
-            '0': mic
-            '1': mediu
-            '2': mare
+            '0': sunet jos
+            '1': sunet mediu
+            '2': sunet înalt
       Dancelab_whenSetup:
         text: configurare
       gamelab_changeColor:
@@ -669,8 +669,8 @@ ro:
           PROPERTY:
             '"scale"': dimensiune
             '"rotation"': rotație
-            '"x"': poziţie x
-            '"y"': poziţie y
+            '"x"': poziţia x
+            '"y"': poziţia y
             '"direction"': direcţie de mişcare
       gamelab_checkTouching:
         options:
@@ -696,8 +696,8 @@ ro:
           PROPERTY:
             '"scale"': dimensiune
             '"rotation"': rotație
-            '"x"': poziţie x
-            '"y"': poziţie y
+            '"x"': poziţia x
+            '"y"': poziţia y
             '"direction"': direcţie de mişcare
             '"tint"': tentă
       gamelab_hideTitleScreen:
@@ -834,8 +834,8 @@ ro:
           PROPERTY:
             '"scale"': dimensiune
             '"rotation"': rotație
-            '"x"': poziţie x
-            '"y"': poziţie y
+            '"x"': poziţia x
+            '"y"': poziţia y
             '"direction"': direcţie de mişcare
             '"tint"': tentă
       gamelab_setSizes:
@@ -862,8 +862,8 @@ ro:
         options:
           PROPERTY:
             '"scale"': dimensiune
-            '"x"': poziţie x
-            '"y"': poziţie y
+            '"x"': poziţia x
+            '"y"': poziţia y
             '"costume"': costum
             '"direction"': direcţie de mişcare
             '"rotation"': rotire sau direcţie
@@ -872,8 +872,8 @@ ro:
         options:
           PROPERTY:
             '"scale"': dimensiune
-            '"x"': poziţie x
-            '"y"': poziţie y
+            '"x"': poziţia x
+            '"y"': poziţia y
             '"costume"': costum
             '"direction"': direcţie de mişcare
             '"rotation"': rotire sau direcţie
@@ -945,8 +945,8 @@ ro:
           PROPERTY:
             '"scale"': dimensiune
             '"rotation"': rotație
-            '"x"': poziţie x
-            '"y"': poziţie y
+            '"x"': poziţia x
+            '"y"': poziţia y
             '"direction"': direcţie de mişcare
       Mikelab_createNewSprite:
         options:
@@ -966,8 +966,8 @@ ro:
           PROPERTY:
             '"scale"': dimensiune
             '"rotation"': rotație
-            '"x"': poziţie x
-            '"y"': poziţie y
+            '"x"': poziţia x
+            '"y"': poziţia y
             '"direction"': direcţie de mişcare
       Mikelab_groupChangeAnim:
         options:
@@ -980,8 +980,8 @@ ro:
           PROPERTY:
             '"scale"': dimensiune
             '"rotation"': rotație
-            '"x"': poziţie x
-            '"y"': poziţie y
+            '"x"': poziţia x
+            '"y"': poziţia y
             '"direction"': direcţie de mişcare
       Mikelab_groupCreateNewSprite:
         options:
@@ -1005,8 +1005,8 @@ ro:
           PROPERTY:
             '"scale"': dimensiune
             '"rotation"': rotație
-            '"x"': poziţie x
-            '"y"': poziţie y
+            '"x"': poziţia x
+            '"y"': poziţia y
             '"direction"': direcţie de mişcare
       Mikelab_groupRemoveAllBehaviors:
         options:
@@ -1027,8 +1027,8 @@ ro:
           PROPERTY:
             '"scale"': dimensiune
             '"rotation"': rotație
-            '"x"': poziţie x
-            '"y"': poziţie y
+            '"x"': poziţia x
+            '"y"': poziţia y
             '"direction"': direcţie de mişcare
       Mikelab_groupSetTint:
         options:
@@ -1062,8 +1062,8 @@ ro:
           PROPERTY:
             '"scale"': dimensiune
             '"rotation"': rotație
-            '"x"': poziţie x
-            '"y"': poziţie y
+            '"x"': poziţia x
+            '"y"': poziţia y
             '"direction"': direcţie de mişcare
       Mikelab_showScoreboard:
         options:
@@ -1133,8 +1133,8 @@ ro:
           PROPERTY:
             '"scale"': dimensiune
             '"rotation"': rotație
-            '"x"': poziţie x
-            '"y"': poziţie y
+            '"x"': poziţia x
+            '"y"': poziţia y
             '"direction"': direcţie de mişcare
       aalab_checkTouching:
         options:
@@ -1180,8 +1180,8 @@ ro:
           PROPERTY:
             '"scale"': dimensiune
             '"rotation"': rotație
-            '"x"': poziţie x
-            '"y"': poziţie y
+            '"x"': poziţia x
+            '"y"': poziţia y
             '"direction"': direcţie de mişcare
             '"tint"': tentă
       aalab_showCustomText:

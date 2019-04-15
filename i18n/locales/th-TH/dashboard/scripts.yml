@@ -1736,3 +1736,7 @@ th:
           stages:
             The Internet:
               name: อินเทอร์เน็ต
+        time4csdemo:
+          stages:
+            Conditionals with Cards:
+              name: เงื่อนไข
