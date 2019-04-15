@@ -42,7 +42,7 @@ class TeacherSections extends Component {
             details={
               <UnsafeRenderedMarkdown
                 markdown={
-                  'The Mini Rubric and Assessment Re-design experiment is enabled for your account. To disable this experiment go [here](https://studio.code.org/home?disableExperiments=2019-mini-rubric).'
+                  'The Mini Rubric and Assessment Re-design experiment is enabled for your account. To disable this experiment go [here](/home?disableExperiments=2019-mini-rubric).'
                 }
               />
             }
