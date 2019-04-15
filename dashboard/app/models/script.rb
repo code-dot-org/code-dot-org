@@ -436,6 +436,52 @@ class Script < ActiveRecord::Base
     end
   end
 
+  def self.get_family_without_cache(family_name)
+    Script.where(family_name: family_name).order("properties -> '$.version_year' DESC")
+  end
+
+  # Returns all scripts within a family from the Rails cache.
+  # Populates the cache with scripts in that family upon cache miss.
+  # @param family_name [String] Family name for the desired scripts.
+  # @return [Array<Script>] Scripts within the specified family.
+  def self.get_family_from_cache(family_name)
+    return Script.get_family_without_cache(family_name) unless should_cache?
+
+    cache_key = "/family/#{family_name}"
+    script_cache.fetch(cache_key) do
+      # Populate cache on miss.
+      script_cache[cache_key] = Script.get_family_without_cache(family_name)
+    end
+  end
+
+  def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
+    return nil unless family_name
+
+    family_scripts = Script.get_family_from_cache(family_name)
+
+    if user
+      assigned_script_ids = user.section_scripts.pluck(:id)
+      script_name = family_scripts.where(id: assigned_script_ids)&.first&.name
+      return Script.new(redirect_to: script_name) if script_name
+    end
+
+    locale_str = locale&.to_s
+    latest_stable_version = nil
+    latest_supported_version = nil
+    family_scripts.each do |script|
+      next unless script.is_stable
+      latest_stable_version ||= script
+
+      is_supported = script.supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
+      latest_supported_version = script if is_supported
+
+      break if latest_supported_version
+    end
+
+    script_name = (latest_supported_version || latest_stable_version)&.name
+    script_name ? Script.new(redirect_to: script_name) : nil
+  end
+
   # Given a script family name, return a dummy Script with redirect_to field
   # pointing toward the latest stable script assigned to the user in that family, or to a specific
   # version_year and locale if specified.
