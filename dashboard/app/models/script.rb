@@ -348,10 +348,12 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # Returns a cached map from family_name to scripts, or nil if caching is disabled.
   def self.script_family_cache
     return nil unless should_cache?
     @@script_family_cache ||= {}.tap do |cache|
-      cache.merge!(script_cache.values.index_by(&:family_name))
+      # don't store nil as cache key?
+      cache.merge!(script_cache.values.group_by(&:family_name))
     end
   end
 
