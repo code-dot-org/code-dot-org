@@ -13,6 +13,10 @@ Dashboard::Application.routes.draw do
 
   patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
+  patch '/api/v1/user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
+
+  patch '/api/v1/user_school_infos/:id/update_end_date_last_seen_school_info_interstitial', to: 'user_school_infos#update_end_date_last_seen_school_info_interstitial'
+
   get '/download/:product', to: 'hoc_download#index'
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
