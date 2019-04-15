@@ -248,6 +248,13 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # Teachers should only be allowed to assign scripts from their valid
+  # script list. We use this information to hide/show the "Assign unit"
+  # button on the script overview page.
+  def assignable?(user, script_id)
+    Script.valid_script_id?(user, script_id)
+  end
+
   # @param [User] user
   # @param script_id [String] id of the script we're checking the validity of
   # @return [Boolean] Whether this is a valid script ID
@@ -1262,6 +1269,7 @@ class Script < ActiveRecord::Base
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: pilot_experiment,
+      show_assign_button: assignable?(user, id)
     }
 
     summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages

@@ -59,7 +59,7 @@ export default class ScriptOverviewTopRow extends React.Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
-    hideAssignButton: PropTypes.bool
+    showAssignButton: PropTypes.bool
   };
 
   render() {
@@ -74,7 +74,7 @@ export default class ScriptOverviewTopRow extends React.Component {
       viewAs,
       isRtl,
       resources,
-      hideAssignButton
+      showAssignButton
     } = this.props;
 
     return (
@@ -97,7 +97,7 @@ export default class ScriptOverviewTopRow extends React.Component {
         )}
         {!professionalLearningCourse &&
           viewAs === ViewType.Teacher &&
-          !hideAssignButton && (
+          showAssignButton && (
             <AssignToSection
               sectionsInfo={sectionsInfo}
               courseId={currentCourseId}
