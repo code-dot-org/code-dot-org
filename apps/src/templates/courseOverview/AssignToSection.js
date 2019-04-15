@@ -37,8 +37,7 @@ class AssignToSection extends Component {
       })
     ).isRequired,
     hiddenStageState: PropTypes.object,
-    updateHiddenScript: PropTypes.func.isRequired,
-    hidden: PropTypes.bool
+    updateHiddenScript: PropTypes.func.isRequired
   };
 
   state = {
@@ -94,8 +93,7 @@ class AssignToSection extends Component {
       scriptId,
       assignmentName,
       sectionsInfo,
-      hiddenStageState,
-      hidden
+      hiddenStageState
     } = this.props;
     const {sectionIndexToAssign, errorString} = this.state;
     const section = sectionsInfo[sectionIndexToAssign];
@@ -107,34 +105,32 @@ class AssignToSection extends Component {
 
     return (
       <div style={styles.main}>
-        {!hidden && (
-          <div style={{marginRight: 10}}>
-            <DropdownButton
-              text={
-                courseId && scriptId ? i18n.assignUnit() : i18n.assignCourse()
-              }
-              color={Button.ButtonColor.orange}
-            >
-              {[]
-                .concat(
-                  <a key={-1} href={`/home?${queryParams}`}>
-                    {i18n.newSectionEllipsis()}
+        <div style={{marginRight: 10}}>
+          <DropdownButton
+            text={
+              courseId && scriptId ? i18n.assignUnit() : i18n.assignCourse()
+            }
+            color={Button.ButtonColor.orange}
+          >
+            {[]
+              .concat(
+                <a key={-1} href={`/home?${queryParams}`}>
+                  {i18n.newSectionEllipsis()}
+                </a>
+              )
+              .concat(
+                sectionsInfo.map((section, index) => (
+                  <a
+                    key={index}
+                    data-section-index={index}
+                    onClick={this.onClickCourse}
+                  >
+                    {section.name}
                   </a>
-                )
-                .concat(
-                  sectionsInfo.map((section, index) => (
-                    <a
-                      key={index}
-                      data-section-index={index}
-                      onClick={this.onClickCourse}
-                    >
-                      {section.name}
-                    </a>
-                  ))
-                )}
-            </DropdownButton>
-          </div>
-        )}
+                ))
+              )}
+          </DropdownButton>
+        </div>
         {sectionIndexToAssign !== null && (
           <ConfirmAssignment
             sectionName={section.name}
