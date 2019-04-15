@@ -352,8 +352,11 @@ class Script < ActiveRecord::Base
   def self.script_family_cache
     return nil unless should_cache?
     @@script_family_cache ||= {}.tap do |cache|
-      # don't store nil as cache key?
-      cache.merge!(script_cache.values.group_by(&:family_name))
+      family_scripts = script_cache.values.group_by(&:family_name)
+      # Not all scripts have a family_name, and thus will be grouped as family_scripts[nil].
+      # We do not want to store this key-value pair in the cache.
+      family_scripts.delete(nil)
+      cache.merge!(family_scripts)
     end
   end
 
