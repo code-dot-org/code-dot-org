@@ -1177,7 +1177,7 @@
   "schoolCity": "School City",
   "schoolCityTown": "City / Town",
   "schoolCountry": "School Country",
-  "schoolInfoDialogDescription": "Welcome back!  Are you still teaching at",
+  "schoolInfoDialogDescription": "Welcome back!  Are you still teaching at {schoolName}?",
   "schoolInfoDialogUpdate": "No, update my info",
   "schoolInfoInterstitialDescription": "Please enter your school information below.",
   "schoolInfoInterstitialTitle": "We want to bring Computer Science to every student - help us track our progress!",
