@@ -165,6 +165,11 @@ module ScriptConstants
 
   DEFAULT_VERSION_YEAR = '2017'
 
+  # TODO: add all family names
+  FAMILY_NAMES = [
+    COURSEA = 'coursea'.freeze
+  ].freeze
+
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script
   end
