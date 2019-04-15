@@ -469,7 +469,7 @@ class Script < ActiveRecord::Base
 
     if user
       assigned_script_ids = user.section_scripts.pluck(:id)
-      script_name = family_scripts.where(id: assigned_script_ids)&.first&.name
+      script_name = family_scripts.select {|s| assigned_script_ids.include?(s.id)}&.first&.name
       return Script.new(redirect_to: script_name) if script_name
     end
 
