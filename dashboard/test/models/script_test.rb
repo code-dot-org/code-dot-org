@@ -17,6 +17,9 @@ class ScriptTest < ActiveSupport::TestCase
     @script_in_course = create(:script, hidden: true)
     create(:course_script, position: 1, course: @course, script: @script_in_course)
 
+    @script_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
+    @script_2018 = create :script, name: 'script-2018', family_name: 'family-cache-test', version_year: '2018'
+
     # ensure that we have freshly generated caches with this course/script
     Course.clear_cache
     Script.clear_cache
@@ -312,16 +315,13 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'get_family_from_cache uses script_family_cache' do
-    script_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
-    script_2018 = create :script, name: 'script-2018', family_name: 'family-cache-test', version_year: '2018'
     family_scripts = Script.where(family_name: 'family-cache-test')
-
-    assert_equal [script_2017.name, script_2018.name], family_scripts.map(&:name)
+    assert_equal [@script_2017.name, @script_2018.name], family_scripts.map(&:name)
 
     populate_cache_and_disconnect_db
 
     cached_family_scripts = Script.get_family_from_cache('family-cache-test')
-    assert_equal [script_2017.name, script_2018.name], cached_family_scripts.map(&:name).uniq
+    assert_equal [@script_2017.name, @script_2018.name], cached_family_scripts.map(&:name).uniq
   end
 
   test 'cache_find_script_level uses cache' do
