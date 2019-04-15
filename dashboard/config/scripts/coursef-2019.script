@@ -154,7 +154,9 @@ level 'behaviors 2', progression: 'Practice'
 level 'behaviors 3', progression: 'Practice'
 level 'behaviors 4', progression: 'Practice'
 level 'behaviors 5', progression: 'Practice'
-bonus 'behaviors 6', progression: 'Challenge', challenge: true
+level 'behaviors free play', progression: 'Free Play'
+bonus 'behaviors 6'
+bonus 'behaviors 7'
 
 stage 'Virtual Pet', flex_category: 'csf_sprites'
 level 'Virtual Pet 1_2019', progression: 'Free Play'
