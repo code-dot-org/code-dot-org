@@ -75,6 +75,8 @@ my:
     csf_loops: Loops
     csf_variables: Variables
     csp_variables: Variables
+    csp_lists: စာရင်းများ
+    csp_loops: Loops
   pd:
     form_labels:
       email: email လိပ္စာ

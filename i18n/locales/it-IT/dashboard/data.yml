@@ -486,8 +486,8 @@ it:
         CSF_bb8_loops_C-F: Cicli con BB-8
         CSF_harvester_skinOverview_K-1: La contadina
         CSF_harvester_loops_K1: Cicli con la contadina
-        CSF_scrat_loops_K1: Cicli con l'Era Glaciale
-        CSF_scrat_loops_CF: Cicli con l'Era Glaciale
+        CSF_scrat_loops_K1: Cicli con l'Era glaciale
+        CSF_scrat_loops_CF: Cicli con l'Era glaciale
         CSF_if_allskins: Il Blocco Se
         CSF_ifelse_allskins: Uso dei Blocchi Se/Altrimenti
         CSF_ifelseifelse_allskins: Uso dei Blocchi Se/AltrimentiSe/Altrimenti
@@ -510,11 +510,13 @@ it:
         hoc_dance_congrats: Ballando col codice - Parte la festa!
         c_and_c_great_to_create: È fantastico creare e comportarsi lealmente
         c_and_c_digital_sharing: Condivisione Digitale
+        teaching_csf_how_it_works: 'Introduzione ai corsi di fondamenti di informatica'
         what_is_cs: Cos'é l'informatica?
         repeat_block: Uso del blocco Ripeti
         writing_first_program: Scrivi il tuo primo programma per computer
         what_is_an_event: Cos'è un evento?
         csd_pair_programming: Programmazione in coppia
+        csd_applab_parameters: Funzioni con parametri
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

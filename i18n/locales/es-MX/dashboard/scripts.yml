@@ -144,7 +144,7 @@ es-MX:
             'Maze: Conditionals':
               name: 'Laberinto: Condicionales'
             Songwriting:
-              name: Composición musical
+              name: Composición de canciones
             'Studio: Create a Game':
               name: 'Laboratorio de juegos: Crear un juego'
             'Studio: Create a Story':
@@ -406,7 +406,7 @@ es-MX:
           description_audience: Edades de 10 a 18 años
           stages:
             Abstraction:
-              name: Liberación abstracta
+              name: Abstracción
             Algorithms:
               name: Algoritmos
             Computational Thinking:
@@ -422,27 +422,27 @@ es-MX:
             Relay Programming:
               name: Programación de relevos
             Song Writing:
-              name: Escribir canciones
+              name: Composición de canciones
             The Artist:
-              name: El artista
+              name: El Artista
             The Artist 2:
               name: El artista 2
             The Artist 3:
-              name: El artista 3
+              name: El Artista 3
             The Artist 4:
-              name: El artista 4
+              name: El Artista 4
             The Artist 5:
-              name: El artista 5
+              name: El Artista 5
             The Farmer:
-              name: El granjero
+              name: La Granjera
             The Farmer 2:
-              name: El granjero 2
+              name: La granjera 2
             The Farmer 3:
-              name: El granjero 3
+              name: "La Granjera 3\n"
             The Internet:
               name: Internet
             The Maze:
-              name: El laberinto
+              name: El Laberinto
             Wrap-up:
               name: Cierre
         edit-code:
@@ -457,9 +457,9 @@ es-MX:
             Play Lab:
               name: Laboratorio de juegos
             The Artist:
-              name: El artista
+              name: El Artista
             The Maze:
-              name: El laberinto
+              name: El Laberinto
         events:
           title: Eventos
           description: Eventos
@@ -698,7 +698,7 @@ es-MX:
             Controlling Memory with Variables:
               name: Manejando la memoria con las variables
             Creating Functions:
-              name: Creando funciones
+              name: Crear funciones
             Creating functions with Parameters:
               name: Originando funciones con los parámetros
             Digital Assistant Project:
@@ -742,7 +742,7 @@ es-MX:
             Using Variables in Apps:
               name: Uso de variables en Aplicaciones
             While Loops:
-              name: Bucles While
+              name: Bucles `mientras`
         algebraPD3:
           stages:
             Computer Science Pedagogy:
@@ -1071,7 +1071,7 @@ es-MX:
         cspfacilitator:
           stages:
             App Lab:
-              name: Laboratorio de App
+              name: Laboratorio de aplicaciones
             Broadcast Lesson:
               name: Clase de transmisión
             Internet Simulator:
@@ -1257,7 +1257,7 @@ es-MX:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la vida real: plantar una semilla'
             Songwriting:
-              name: Composición musical
+              name: Composición de canciones
             The Big Event:
               name: El gran evento
         algebraPD3a:
@@ -1417,7 +1417,7 @@ es-MX:
             Processing Arrays:
               name: Procesando Arrays
             While Loops:
-              name: Bucles While
+              name: Bucles `mientras`
         gumball:
           title: Laboratorio de juegos de Gumball
           description: '¡Crea una historia o haz un juego con el laboratorio de juegos de Gumball!'
@@ -1613,7 +1613,7 @@ es-MX:
             APIs and Function Parameters:
               name: Las API y los parámetros de las funciones
             Creating Functions:
-              name: Creando funciones
+              name: Crear funciones
             Functions and Top-Down Design:
               name: Funciones y el Diseño Top-Down
             Looping and Random Numbers:
@@ -1687,7 +1687,7 @@ es-MX:
             Using Variables in Apps:
               name: Uso de variables en Aplicaciones
             While Loops:
-              name: Bucles While
+              name: Bucles `mientras`
             Buttons and Events:
               name: Botones y eventos
             Participate in a longitudinal study!:
@@ -1841,7 +1841,7 @@ es-MX:
             More Programming with Scratch:
               name: Más programación con Scratch
             Songwriting:
-              name: Composición musical
+              name: Composición de canciones
         grade1:
           stages:
             Debugging:
@@ -2056,7 +2056,7 @@ es-MX:
             Variables:
               name: Variables
             While Loops:
-              name: Bucles While
+              name: Bucles `mientras`
         algebrapdnext:
           description: Enseñar álgebra a través de programación funcional
           stages:
@@ -2491,7 +2491,7 @@ es-MX:
             Conditionals:
               name: Condicionales
             'Real Life Algorithms: Dice Race':
-              name: 'Algoritmos de la vida real: Carrera de dados'
+              name: 'Algoritmos de la vida real: carrera de dados'
         csd6-2017:
           stages:
             Lists:
@@ -3173,7 +3173,7 @@ es-MX:
             Using Simple Commands:
               name: Uso de comandos simples
             Creating Functions:
-              name: Creando funciones
+              name: Crear funciones
             Functions and Top-Down Design:
               name: Funciones y el Diseño Top-Down
             APIs and Function Parameters:
@@ -3490,7 +3490,7 @@ es-MX:
             Using Simple Commands:
               name: Uso de comandos simples
             Creating Functions:
-              name: Creando funciones
+              name: Crear funciones
             Functions and Top-Down Design:
               name: Funciones y el Diseño Top-Down
             APIs and Function Parameters:
@@ -3885,7 +3885,7 @@ es-MX:
             Conditionals & Loops in Harvester:
               name: Cosechar con condicionales
             'Functions: Songwriting':
-              name: Composición musical
+              name: Composición de canciones
             Functions in Minecraft:
               name: Funciones con Minecraft
             Functions in Harvester:
@@ -3970,7 +3970,7 @@ es-MX:
             Sequencing with Scrat:
               name: Secuencias con Scrat
             Move It, Move It:
-              name: Muévelo, Muévelo
+              name: Muévelo, muévelo
             Copyright and Creativity:
               name: Crear y jugar limpio es lo mejor
         coursed-2018:
@@ -4124,7 +4124,7 @@ es-MX:
               description_student: Siente la fuerza mientras construyes tu propio juego de la Guerra de las Galaxias en esta lección.
               description_teacher: En esta lección, los estudiantes pondrán en práctica eventos para crear un juego que pueden compartir en línea. Con R2-D2 y otros personajes de la Guerra de las Galaxias, los estudiantes serán guiados a través de eventos, y luego podrán crear su propio juego.
             'Functions: Songwriting':
-              name: Composición musical
+              name: Composición de canciones
               description_student: Incluso las estrellas de rock necesitan conocimientos de programación. Esta lección te enseñará sobre funciones mediante el uso de letras de canciones.
               description_teacher: Una de las estructuras más magníficas en el mundo de las ciencias de la computación es la función. Las funciones (a veces llamadas procedimientos) son pequeños programas que puedes utilizar una y otra vez dentro de tu programa más grande. Esta clase ayudará a los estudiantes a entender intuitivamente por qué la combinación de partes de código en funciones es una práctica tan útil.
             Functions in Artist:
@@ -4377,7 +4377,7 @@ es-MX:
             Using Simple Commands:
               name: Uso de comandos simples
             Creating Functions:
-              name: Creando funciones
+              name: Crear funciones
             Functions and Top-Down Design:
               name: Funciones y el Diseño Top-Down
             APIs and Function Parameters:
@@ -4411,7 +4411,7 @@ es-MX:
             User Input and Strings:
               name: Entradas de usuario y cadenas
             While Loops:
-              name: Bucles While
+              name: Bucles `mientras`
             Loops and Simulations:
               name: Bucles y Simulaciones
             Introduction to Arrays:
@@ -4463,7 +4463,7 @@ es-MX:
             Spelling Bee:
               name: Concurso de ortografía
             Move It, Move It:
-              name: Muévelo, Muévelo
+              name: Muévelo, muévelo
             Sequencing with Scrat:
               name: Secuencias con Scrat
             Your Digital Footprint:
@@ -4498,6 +4498,7 @@ es-MX:
             Artist:
               name: Artista
         aquatic:
+          title: 'Minecraft: Travesía Aquática'
           description_short: '¡Usa tu creatividad y habilidades para resolver problemas para explorar y construir mundos bajo el agua con códigos!'
         dance--draft:
           stages:
@@ -4593,7 +4594,7 @@ es-MX:
               description_student: '¡Es hora de mostrar tu trabajo! Aquí presentarás tu increíble proyecto a tus compañeros.'
               description_teacher: Durante cinco lecciones, los alumnos crearán un proyecto diseñado por ellos mismos con Laboratorio de juegos o Artista como su entorno de programación. Finalmente, los alumnos podrán presentar el trabajo terminado a sus compañeros o compartirlo con sus seres queridos a través de un enlace especial. Al inicio del proceso, podrán encontrar la guía de lecciones que cubre las cinco etapas, [here](https://curriculum.code.org/csf/coursef/15/).
             The Artist:
-              name: El artista
+              name: El Artista
             Nested Loops in the Maze:
               name: Bucles anidados en Laberinto
             Sequencing in the Maze:
@@ -4785,6 +4786,8 @@ es-MX:
               name: Colaboración digital
             Simon Says:
               name: Simón dice
+            Songwriting:
+              name: Composición de canciones
         express-2019:
           description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           stages:
@@ -4948,9 +4951,11 @@ es-MX:
             'Loops: My Loopy Robotic Friends':
               name: 'Bucles: Mis amigos robóticos y repetitivos'
             Graphing Data:
-              name: Datos de gráfico
+              name: Gráficos de datos
             Powerful Passwords:
               name: Contraseñas seguras
+            Picturing Data:
+              name: Gráficos de datos
         gamelab:
           title: Laboratorio de juegos
         coursea-2019:
@@ -5016,7 +5021,7 @@ es-MX:
           description_audience: 'De 5 a 8 años'
           stages:
             Move It, Move It:
-              name: Muévelo, Muévelo
+              name: Muévelo, muévelo
             Sequencing with Scrat:
               name: Secuencias con Scrat
             Your Digital Footprint:
@@ -5062,7 +5067,7 @@ es-MX:
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Perseverancia y frustración: Stevie y el gran proyecto'
             Move It, Move It:
-              name: Muévelo, Muévelo
+              name: Muévelo, muévelo
             Sequencing with Scrat:
               name: Secuencias con Scrat
             Your Digital Footprint:
@@ -5219,7 +5224,7 @@ es-MX:
             Using Simple Commands:
               name: Uso de comandos simples
             Creating Functions:
-              name: Creando funciones
+              name: Crear funciones
             Functions and Top-Down Design:
               name: Funciones y el Diseño Top-Down
             APIs and Function Parameters:
@@ -5249,7 +5254,7 @@ es-MX:
             User Input and Strings:
               name: Entradas de usuario y cadenas
             While Loops:
-              name: Bucles While
+              name: Bucles `mientras`
             Loops and Simulations:
               name: Bucles y Simulaciones
             Introduction to Arrays:
@@ -5266,3 +5271,9 @@ es-MX:
               name: Importación y exportación de datos
             Sample Apps:
               name: Aplicaciones de ejemplo
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Colaboración abierta
+            Conditionals with Cards:
+              name: Condicionales con tarjetas

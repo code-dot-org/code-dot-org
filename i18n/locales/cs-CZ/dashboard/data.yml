@@ -413,6 +413,7 @@ cs:
         mc_2017_puzzle_12: Hodina kódu s Minecraftem - Volná hra
         CSF_loops_AB: Smyčky
         csd_pair_programming: Párové programování
+        csd_applab_parameters: Funkce s Parametry
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

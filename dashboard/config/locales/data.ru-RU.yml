@@ -746,6 +746,7 @@ ru:
         CSF_StarWars_ProjectIntro: Введение в проект Звездные войны
         hoc_dance_warmup: Танцевальная вечеринка - разминка
         csd_pair_programming: Программирование в парах
+        csd_applab_parameters: Процедуры с параметрами
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

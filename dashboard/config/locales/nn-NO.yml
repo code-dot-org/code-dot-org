@@ -1166,6 +1166,8 @@ nn:
     csp_variables: Variablar
     csp_conditionals: Betingelser
     csp_functions: Funksjonar
+    csp_lists: Lister
+    csp_loops: Løkker
     dlp: Spørsmål til refleksjon
   external_links:
     disclaimer: Fråskrive seg ansvar

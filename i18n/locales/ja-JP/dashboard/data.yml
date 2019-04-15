@@ -420,6 +420,7 @@ ja:
         CSF_SpriteLabIntro_CDEF: スプライトラボ
         CSF_Spritelab_MakeSprite_CDEF: スプライトラボでスプライトを作成する方法
         csd_pair_programming: ペアプログラミング
+        csd_applab_parameters: パラメーター付き関数
     callout:
       text:
         drag_blocks: '「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。'

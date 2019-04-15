@@ -17,7 +17,7 @@ sk:
         text: Program je súbor pokynov, ktoré tvoj počítač vykonáva.
       6:
         text: Cieľom tvojho prvého programu je dostať nahnevaného vtáka cez bludisko
-          k zelenému prasaťu.
+          k zelenému prasiatku.
       7:
         text: Na ľavej strane je bludisko, kde program prebieha. Pokyny pre každý
           príkaz sú pod bludiskom.
@@ -40,7 +40,7 @@ sk:
         text: 'Ak spustíš program a chceš ho upraviť a spustiť znovu, klikni na tlačítko
           "Reset". '
       13:
-        text: Poďme na tie prasce!
+        text: Poďme na tie prasiatka!
     artist_intro:
       1:
         text: Ahoj, ja som JR ! Každý automobilový závodný tím potrebuje počítačového
@@ -118,7 +118,7 @@ sk:
           rozkážeš počítaču, aby opakoval znova a znova akékoľvek množstvo pokynov,
           tisíce, alebo dokonca aj miliardy krát.
       2:
-        text: V týchto puzzle chceme vtáka posunúť vpred o 5 políčok, aby dostal prasa.
+        text: V týchto puzzle chceme vtáka posunúť vpred o 5 políčok, aby dostal prasiatko.
       3:
         text: Môžeme použiť nový "opakovací" blok, ktorý nám uľahčí prácu.
       4:
@@ -133,14 +133,15 @@ sk:
     loop_until:
       1:
         text: Ahoj, ja som Chris. Pred nástupom do Miami Heat som šiel študovať informatiku
-          na Georgia Tech. Poďme si vyskúšať nový "opakuj dovtedy" blok.
+          na Georgia Tech. Poďme si vyskúšať nový blok "opakuj pokiaľ neplatí".
       2:
-        text: Čo keby sme nevedeli, ako ďaleko sa musel vták pohnúť, aby dostal prasa?
+        text: Čo keby sme nevedeli, ako ďaleko sa musel vták pohnúť, aby dostal prasiatko?
       3:
-        text: Ak vložíme "pohni sa vpred" blok do "opakuj dovtedy" bloku, vták sa
-          bude posúvať vpred, pokým nedosiahne prasa (alebo nenarazí do steny).
+        text: Ak vložíme blok "pohni sa dopredu" do bloku "opakuj "pokiaľ neplatí",
+          vták sa bude posúvať vpred, pokým nedosiahne prasiatko (alebo nenarazí do
+          steny).
       4:
-        text: 'Toto je dôležité: rovnako ako predtým, aj do bloku "opakuj dovtedy"
+        text: 'Toto je dôležité: rovnako ako predtým, aj do bloku "opakuj pokiaľ neplatí"
           môžeme vložiť viacero blokov, ktoré sa budú všetky opakovať.'
     if:
       1:

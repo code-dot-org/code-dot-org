@@ -945,6 +945,8 @@ is:
     csp_variables: 'Breytur'
     csp_conditionals: 'Skilyrði'
     csp_functions: 'Föll'
+    csp_lists: 'Listar'
+    csp_loops: 'Lykkjur'
     dlp: 'Kvaðningar um íhugun'
   external_links:
     disclaimer: Afsal ábyrgðar

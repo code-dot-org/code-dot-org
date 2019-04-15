@@ -492,6 +492,7 @@ zh-CN:
         writing_first_program: 编写你的第一个计算机程序
         what_is_an_event: 什么是事件？
         csd_pair_programming: 结对编程
+        csd_applab_parameters: 有参数的函数
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

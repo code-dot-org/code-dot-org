@@ -24,7 +24,7 @@ eu:
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Etxea amaitzeko, egin behar dugun guztia da karratu bat marraztea!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'Angelu txiki horiek egiteko, aldi bakoitzean *hurrunago*
+        2-3_Artist_6_a: 'Angelu txiki horiek egiteko, aldi bakoitzean _hurrunago_
           joan beharko duzu karratuarekin egin zenuen bezala.   '
         2-3_Artist_6_b: Dagoeneko eskuin aldera begira ari naizenez, errazena da aurrera
           hastea, eta gero ezker aldera bira egitea triangelua sortzeko.
@@ -74,7 +74,7 @@ eu:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -93,7 +93,7 @@ eu:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -112,7 +112,7 @@ eu:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -131,7 +131,7 @@ eu:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -278,7 +278,7 @@ eu:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -297,7 +297,7 @@ eu:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -316,7 +316,7 @@ eu:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -335,7 +335,7 @@ eu:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -455,7 +455,7 @@ eu:
         2-3_Artist_1_new_b: Arazoak bihurgunea hartzean? Erabili `eskuinera biratu
           90 gradu` blokea.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'Angelu txiki horiek egiteko, aldi bakoitzean *hurrunago*
+        2-3_Artist_6_a: 'Angelu txiki horiek egiteko, aldi bakoitzean _hurrunago_
           joan beharko duzu karratuarekin egin zenuen bezala.   '
         2-3_Artist_6_b: Dagoeneko eskuin aldera begira ari naizenez, errazena da aurrera
           hastea, eta gero ezker aldera bira egitea triangelua sortzeko.

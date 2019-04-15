@@ -454,6 +454,8 @@ sr:
     csp_variables: Променљиве
     csp_conditionals: Кондиционали
     csp_functions: Функције
+    csp_lists: Листе
+    csp_loops: Петље
   pd:
     form_labels:
       email: Електронска пошта

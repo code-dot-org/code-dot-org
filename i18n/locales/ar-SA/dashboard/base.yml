@@ -830,6 +830,8 @@ ar:
     csp_variables: 'المتغيرات'
     csp_conditionals: 'الجمل الشرطية'
     csp_functions: 'دوال'
+    csp_lists: 'القوائم'
+    csp_loops: 'الحلقات'
   hoc_download:
     title: 'ساعة تحميل التعليمات البرمجية'
     capsule_title: 'هل لديك إنترنت؟'

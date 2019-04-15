@@ -377,6 +377,7 @@ hr:
         mc_congrats_no_share: Minecraft - Čestitamo
         CSF_loops_AB: Petlje
         csd_pair_programming: Programiranje u paru
+        csd_applab_parameters: Funkcije s parametrima
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod drugog bloka
