@@ -80,7 +80,8 @@ export default class CourseOverview extends Component {
     ).isRequired,
     showVersionWarning: PropTypes.bool,
     showRedirectWarning: PropTypes.bool,
-    redirectToCourseUrl: PropTypes.string
+    redirectToCourseUrl: PropTypes.string,
+    showAssignButton: PropTypes.bool
   };
 
   constructor(props) {
@@ -144,7 +145,8 @@ export default class CourseOverview extends Component {
       versions,
       showVersionWarning,
       showRedirectWarning,
-      redirectToCourseUrl
+      redirectToCourseUrl,
+      showAssignButton
     } = this.props;
 
     // We currently set .container.main to have a width of 940 at a pretty high
@@ -233,6 +235,7 @@ export default class CourseOverview extends Component {
               id={id}
               title={title}
               resources={teacherResources}
+              showAssignButton={showAssignButton}
             />
           </div>
         )}

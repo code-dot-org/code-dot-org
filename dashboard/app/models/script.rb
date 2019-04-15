@@ -248,11 +248,14 @@ class Script < ActiveRecord::Base
     end
   end
 
-  # Teachers should only be allowed to assign scripts from their valid
-  # script list. We use this information to hide/show the "Assign unit"
-  # button on the script overview page.
+  # @param user [User]
+  # @param script_id [String] id of the script we're checking
+  # @returns [Boolean] Whether the user can assign this script.
+  # Users should only be able to assign one of their valid scripts.
   def assignable?(user, script_id)
-    Script.valid_script_id?(user, script_id)
+    if user
+      Script.valid_script_id?(user, script_id)
+    end
   end
 
   # @param [User] user

@@ -21,18 +21,22 @@ export default class CourseOverviewTopRow extends Component {
     ).isRequired,
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    showAssignButton: PropTypes.bool
   };
 
   render() {
-    const {sectionsInfo, id, title, resources} = this.props;
+    const {sectionsInfo, id, title, resources, showAssignButton} = this.props;
+
     return (
       <div style={styles.main}>
-        <AssignToSection
-          sectionsInfo={sectionsInfo}
-          courseId={id}
-          assignmentName={title}
-        />
+        {showAssignButton && (
+          <AssignToSection
+            sectionsInfo={sectionsInfo}
+            courseId={id}
+            assignmentName={title}
+          />
+        )}
         {resources.map(({type, link}) => (
           <Button
             key={type}
