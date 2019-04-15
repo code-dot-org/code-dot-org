@@ -35,6 +35,8 @@ export default class Match {
     // index 0.
     this.lastAttempt = lastAttempt ? lastAttempt.split(',') : [];
 
+    this.readonly = !!window.appOptions.readonlyWorkspace;
+
     $(document).ready(() => this.ready());
   }
 
@@ -84,8 +86,13 @@ export default class Match {
   getAppName() {
     return 'match';
   }
+  // Disable drag on all answers, including those which have been moved to the
+  // .match_answersdest column.
   lockAnswers() {
-    throw 'lockAnswers not implemented';
+    const container = document.getElementById(this.id);
+    $(container)
+      .find('.mainblock li.answer')
+      .draggable('destroy');
   }
   getCurrentAnswerFeedback() {
     throw 'getCurrentAnswerFeedback not implemented';
@@ -101,12 +108,16 @@ export default class Match {
     const container = document.getElementById(this.id);
 
     $(container)
-      .find('.mainblock .match_answers li')
+      .find('.mainblock .match_answers li.answer')
       .draggable({revert: 'invalid', stack: '.answer', containment: container});
 
     this.makeInitialAnswersDroppable(container);
 
     this.makeInitialMoves();
+
+    if (this.readonly) {
+      this.lockAnswers();
+    }
 
     this.enableSounds = this.standalone;
   }
