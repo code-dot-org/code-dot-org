@@ -388,6 +388,46 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
+  test 'get_script_family_redirect_for_user returns latest user assigned script in family if user' do
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
+    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
+    section = create :section, script: csp1_2017
+    student = create :student
+    section.students << student
+
+    redirect_script = Script.get_script_family_redirect_for_user('csp', user: student)
+    assert_equal csp1_2017.name, redirect_script.redirect_to
+  end
+
+  test 'get_script_family_redirect_for_user returns nil if no scripts in family are stable' do
+    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: false)
+    assert_nil Script.get_script_family_redirect_for_user('csp')
+  end
+
+  test 'get_script_family_redirect_for_user returns latest version supported in locale if available' do
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true, supported_locales: ['es-MX'])
+    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+
+    redirect_script = Script.get_script_family_redirect_for_user('csp', locale: 'es-MX')
+    assert_equal csp1_2017.name, redirect_script.redirect_to
+  end
+
+  test 'get_script_family_redirect_for_user returns latest stable version if no user or locale' do
+    create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+
+    redirect_script = Script.get_script_family_redirect_for_user('csp')
+    assert_equal csp1_2018.name, redirect_script.redirect_to
+  end
+
+  test 'get_script_family_redirect_for_user returns latest stable version if no versions supported in locale' do
+    create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true, supported_locales: ['es-MX'])
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+
+    redirect_script = Script.get_script_family_redirect_for_user('csp', locale: 'it-IT')
+    assert_equal csp1_2018.name, redirect_script.redirect_to
+  end
+
   test 'redirect_to_script_url returns nil unless user can view script version' do
     Script.any_instance.stubs(:can_view_version?).returns(false)
     student = create :student
