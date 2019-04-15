@@ -30,9 +30,11 @@ ro:
       Bunny Game: Joc cu iepuraș
       everythingelse: toate celelalte
       World: Lume
+      Sprites: Spiriduși
       Location: Locatie
       numbers: numere
       Numbers: Numere
+      Input: Intrare
       Dancers: Dansatori
       Groups: Grupuri
       Advanced: Avansat
@@ -52,6 +54,7 @@ ro:
       test2: test2
       Use These Blocks: Utilizează aceste blocuri
       Do Not Use: Nu utilizaţi
+      Foo: Foo
       Name: Nume
       NEW BLOCKS: BLOCURI NOI
       'Functions ': 'Funcţii '

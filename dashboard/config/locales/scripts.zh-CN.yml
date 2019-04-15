@@ -9038,6 +9038,8 @@ zh-CN:
               name: "《我的世界》中的条件"
             Digital Sharing:
               name: 数字共享
+            Songwriting:
+              name: 写歌
         express-2019:
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。
@@ -9872,6 +9874,8 @@ zh-CN:
           stages:
             Surveys:
               name: 调查
+            Unit 4 Assessment:
+              name: 第4单元评估
         csp1-2019:
           title: 计算机科学原理单元 1 ：互联网 ('18-'19)
           description: 本单元探讨了在计算机上表示数字信息和在人与计算设备之间传输数据所产生的技术挑战和问题。然后，探讨了互联网的结构和设计以及这些设计决定的影响。
@@ -10103,3 +10107,51 @@ zh-CN:
           stages:
             new stage:
               name: 新的阶段
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: 众包
+            Conditionals with Cards:
+              name: 用 扑克牌 的 条件子句
+        csp1-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: 第4单元评估
+        csp2-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: 第4单元评估
+        csp3-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: 第4单元评估
+        csp4-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: 第4单元评估
+        csp5-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: 第4单元评估
+        csp6-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: 第4单元评估
+        csp7-pilot-staging:
+          stages:
+            new stage:
+              name: 新的阶段
+            Unit 4 Assessment:
+              name: 第4单元评估
+        csp8-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: 第4单元评估
+        csp9-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: 第4单元评估
+        csp10-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: 第4单元评估

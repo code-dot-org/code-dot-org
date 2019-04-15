@@ -947,6 +947,8 @@ zh-CN:
     csp_variables: '变量'
     csp_conditionals: '条件语句'
     csp_functions: '函数'
+    csp_lists: '列表'
+    csp_loops: '循环'
     dlp: '反思提示'
   external_links:
     disclaimer: 免责声明

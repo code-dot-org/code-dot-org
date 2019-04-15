@@ -650,6 +650,7 @@ gl:
         iceage_repeat: Hora do Código coa Era do Xeo - Instrucións de repetición
         CSF_loops_AB: Bucles
         csd_pair_programming: Programación por parellas
+        csd_applab_parameters: Funcións con parámetros
     callout:
       text:
         drag_blocks: Arrastre un bloque "avance" e encáixeo por debaixo do outro bloque

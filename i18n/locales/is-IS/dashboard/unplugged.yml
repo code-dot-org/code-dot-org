@@ -317,3 +317,8 @@ is:
       DigitalFootprint_2019:
         title: Stafræna fótsporið þitt
         desc: Kennarinn kynnir fyrir nemendum þá hugmynd að með því að setja upplýsingar um sig á netið búi þeir til stafrænt fótspor eða slóð sem getur haft afleiðingar.
+      timeforcs_demo_crowdsourcing:
+        title: Hópvistun
+      timeforcs_demo_conditionals:
+        title: Skilyrði
+        desc: Nemendur læra um skilyrtar setningar með því að spila á spil og búa til reglur eins og "ef ég dreg rautt spil, fæ ég stig" og "ef ég dreg svart spil, færð þú stig."

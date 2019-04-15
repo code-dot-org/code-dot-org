@@ -568,6 +568,8 @@ lv:
     csp_variables: Mainīgie
     csp_conditionals: Sazarojumi
     csp_functions: Funkcijas
+    csp_lists: Saraksti
+    csp_loops: Cikli
   hoc_download:
     capsule_title: Vai Tev ir internets?
     instructions_headline: Nav interneta?

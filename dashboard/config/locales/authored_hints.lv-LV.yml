@@ -53,15 +53,17 @@ lv:
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Tavai programmai nepieciešams:
-           - izmantot funkciju
-           - pārvietoties uz priekšu 100+75 punktus
-           - izmantot funkciju
+
+          -   izmantot funkciju
+          -   pārvietoties uz priekšu 100+75 punktus
+          -   izmantot funkciju
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Tavai programmai nepieciešams:
-           - izmantot funkciju
-           - pārvietoties uz priekšu 100+75 punktus
-           - izmantot funkciju
+
+          -   izmantot funkciju
+          -   pārvietoties uz priekšu 100+75 punktus
+          -   izmantot funkciju
       2-3 Artist Functions 3 a_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 3_authored_hint:
@@ -127,10 +129,8 @@ lv:
           2 īsākās malas kopā ir:\n\n**800 - 240 - 240 = 320**\n\nCik ir **320/2**
           ? "
       4-5 Artist 9_authored_hint:
-        4-5_Artist_9_a: 'Ja trīsstūris ir vienādmalu, tad tā visas malas un visi leņķi
+        4-5_Artist_9_a: Ja trīsstūris ir vienādmalu, tad tā visas malas un visi leņķi
           ir vienādi.
-
-'
       4-5 Nested Loops 12_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       Artist Autorun Test_authored_hint:
@@ -190,7 +190,7 @@ lv:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -209,7 +209,7 @@ lv:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -228,7 +228,7 @@ lv:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -247,7 +247,7 @@ lv:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -394,7 +394,7 @@ lv:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -413,7 +413,7 @@ lv:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -432,7 +432,7 @@ lv:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -451,7 +451,7 @@ lv:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -548,9 +548,10 @@ lv:
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Tavai programmai nepieciešams:
-           - izmantot funkciju
-           - pārvietoties uz priekšu 100+75 punktus
-           - izmantot funkciju
+
+          -   izmantot funkciju
+          -   pārvietoties uz priekšu 100+75 punktus
+          -   izmantot funkciju
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: |-
           Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.
@@ -577,9 +578,10 @@ lv:
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Tavai programmai nepieciešams:
-           - izmantot funkciju
-           - pārvietoties uz priekšu 100+75 punktus
-           - izmantot funkciju
+
+          -   izmantot funkciju
+          -   pārvietoties uz priekšu 100+75 punktus
+          -   izmantot funkciju
       grade1_adventurer_loops3_authored_hint:
         grade1_adventurer_loops3_a: Vai kaut kas nav labi? Mēģini izmantot soļu pogu,
           lai izdomātu, kur ir problēma.
@@ -617,9 +619,10 @@ lv:
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Tavai programmai nepieciešams:
-           - izmantot funkciju
-           - pārvietoties uz priekšu 100+75 punktus
-           - izmantot funkciju
+
+          -   izmantot funkciju
+          -   pārvietoties uz priekšu 100+75 punktus
+          -   izmantot funkciju
       grade4_artist_functions_challenge_authored_hint:
         Course_4_SCF_1_a: Katram sešstūrim mala ir 40 punktus gara.
       grade4_artist_functions_challenge2_authored_hint:

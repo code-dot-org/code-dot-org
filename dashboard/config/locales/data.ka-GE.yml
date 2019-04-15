@@ -725,6 +725,7 @@ ka:
         CSF_StarWars_ProjectIntro: შესავალი ვარსკვლავური ომების პროექტში
         c_and_c_digital_sharing: ციფრული გაზიარება
         csd_pair_programming: პროგრამირება წყვილებში
+        csd_applab_parameters: ფუნქციები პარამეტრებით
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ

@@ -5293,6 +5293,8 @@ ka:
               name: პირობითი წინადადებები Minecraft-ში
             Digital Sharing:
               name: ციფრული გაზიარება
+            Songwriting:
+              name: სიმღერის დაწერა
         express-2019:
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
@@ -5840,6 +5842,16 @@ ka:
             new stage:
               name: ახალი დონე
         csd-videos:
+          stages:
+            new stage:
+              name: ახალი დონე
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: ქრაუდსორსინგი
+            Conditionals with Cards:
+              name: პირობები ბარათებით
+        csp7-pilot-staging:
           stages:
             new stage:
               name: ახალი დონე

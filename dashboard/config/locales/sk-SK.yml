@@ -1235,6 +1235,8 @@ sk:
     csp_variables: Premenné
     csp_conditionals: Podmienky
     csp_functions: Funkcie
+    csp_lists: Zoznamy
+    csp_loops: Cykly
     dlp: Výzvy na zhodnotenie
   external_links:
     disclaimer: Upozornenie

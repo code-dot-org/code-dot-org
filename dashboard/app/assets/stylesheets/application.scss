@@ -925,6 +925,9 @@ $default-modal-width: 640px;
   .header_text, .header_button {
     float: left;
   }
+  .project_name_wrapper {
+    min-width: 160px;
+  }
   .project_name_wrapper .header_text {
     float: left;
     clear: left;

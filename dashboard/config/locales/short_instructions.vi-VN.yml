@@ -36,30 +36,30 @@ vi:
       2-3 Artist Assessment 1: 'Đánh giá: Hoàn thành bản vẽ chiếc răng cuối, rộng
         25 pixels và cao 25 pixels.'
       2-3 Artist Debugging 1: Bạn có thể làm mũ này với chiều dài 100?
-      2-3 Artist Debugging 10: "Phím mũi tên điều khiển của tôi quá hẹp. \r\n\r Bạn
-        có thể làm nó rộng hơn 10 pixel không? \r\n\r\nThử chạy mã lệnh trước để thấy
-        lỗi sai."
+      2-3 Artist Debugging 10: "Phím mũi tên điều khiển của tôi quá hẹp. \\\r\n\\\r
+        Bạn có thể làm nó rộng hơn 10 pixel không? \\\r\n\\\r\nThử chạy mã lệnh trước
+        để thấy lỗi sai."
       2-3 Artist Debugging 11: Giúp tôi hoàn thành bông tuyết xinh đẹp này. Tôi cần
         "lặp lại" bao nhiêu lần để hoàn thành nó?
       2-3 Artist Debugging 12: Tôi phải thêm một làn sóng ở cảnh này.  Bạn có thể
         giúp tôi không?
-      2-3 Artist Debugging 2: "Dòng lệnh vẽ ria cho mèo bị sai. \r\n\r Hãy sửa lại
-        để mỗi chiếc ria dài bằng nhau."
-      2-3 Artist Debugging 3: "Thuyền của tôi có một cái lỗ! \r\n\r\nPhải sửa như
-        thế nào để khắc phục việc này?"
+      2-3 Artist Debugging 2: "Dòng lệnh vẽ ria cho mèo bị sai. \\\r\n\\\r Hãy sửa
+        lại để mỗi chiếc ria dài bằng nhau."
+      2-3 Artist Debugging 3: "Thuyền của tôi có một cái lỗ! \\\r\n\\\r\nPhải sửa
+        như thế nào để khắc phục việc này?"
       2-3 Artist Debugging 4: Hình ảnh mà chúng tôi đang cố gắng để vẽ là gì? Nối
         các dấu chấm còn lại, sử dụng dòng và góc thích hợp.
-      2-3 Artist Debugging 5: "Các lệnh để vẽ chân và bàn chân bị sai. \r\n\r\nBạn
+      2-3 Artist Debugging 5: "Các lệnh để vẽ chân và bàn chân bị sai. \\\r\n\\\r\nBạn
         có sửa được không?"
       2-3 Artist Debugging 6: "Có vẻ như tôi đang ngồi trên một cái ghế thiếu một
-        chân! \r\n\r\nSửa lại mã lệnh để vẽ nốt chân còn lại."
-      2-3 Artist Debugging 7: "Có vẻ như chữ C trong từ \"code\" bị viết ngược \r\n\r\nBạn
+        chân! \\\r\n\\\r\nSửa lại mã lệnh để vẽ nốt chân còn lại."
+      2-3 Artist Debugging 7: "Có vẻ như chữ C trong từ \"code\" bị viết ngược \\\r\n\\\r\nBạn
         có thể sửa lại nó không?"
       2-3 Artist Debugging 8: "Giáo viên của tôi nói tôi phải hoàn tất những gì mình
-        bắt đầu! \r\n\r\nHãy giúp tôi hoàn tất cái chong chóng. Bạn có thấy nó bị
-        sai chỗ nào không?"
-      2-3 Artist Debugging 9: "Một cái gì đó đã bị tắt!\r\rMã lập trình cho thân cây
-        này đã bị sai rồi. Bạn có thể tìm hiểu làm cách nào để người nghệ sỹ theo
+        bắt đầu! \\\r\n\\\r\nHãy giúp tôi hoàn tất cái chong chóng. Bạn có thấy nó
+        bị sai chỗ nào không?"
+      2-3 Artist Debugging 9: "Một cái gì đó đã bị tắt!\\\r\\\rMã lập trình cho thân
+        cây này đã bị sai rồi. Bạn có thể tìm hiểu làm cách nào để người nghệ sỹ theo
         dõi thân cây đúng cách được không?"
       2-3 Artist Debugging Assessment 1: 'Hình dạng này quá nhỏ. Bạn có thể làm cho
         nó lớn hơn? Gợi ý: nó nên dài thêm 75 pixels mỗi bên.'
@@ -76,31 +76,32 @@ vi:
         hình lục giác", nhưng nó vẫn vẽ hình vuông. Bạn có thể sửa hàm "vẽ hình lục
         giác sao cho nó vẽ ra lục giác với cạnh là 50 pixel không? Hãy vẽ bằng hàm
         này!
-      2-3 Artist Functions 11.5 a: "Đây là hàm vẽ hình lục giác. \r\n\r\nChuyện ì
-        sẽ xảy ra nếu bạn lặp hàm này 6 lần, xoay góc 60 độ sau mỗi vòng lặp?"
-      2-3 Artist Functions 11.5: "Đây là hàm vẽ hình lục giác. \r\n\r\nChuyện ì sẽ
-        xảy ra nếu bạn lặp hàm này 6 lần, xoay góc 60 độ sau mỗi vòng lặp?"
+      2-3 Artist Functions 11.5 a: "Đây là hàm vẽ hình lục giác. \\\r\n\\\r\nChuyện
+        ì sẽ xảy ra nếu bạn lặp hàm này 6 lần, xoay góc 60 độ sau mỗi vòng lặp?"
+      2-3 Artist Functions 11.5: "Đây là hàm vẽ hình lục giác. \\\r\n\\\r\nChuyện
+        ì sẽ xảy ra nếu bạn lặp hàm này 6 lần, xoay góc 60 độ sau mỗi vòng lặp?"
       2-3 Artist Functions 11: Chúng ta đã đổi tên hàm "vẽ hình vuông" thành "vẽ hình
         lục giác", nhưng nó vẫn vẽ hình vuông. Bạn có thể sửa hàm "vẽ hình lục giác
         sao cho nó vẽ ra lục giác với cạnh là 50 pixel không? Hãy vẽ bằng hàm này!
       2-3 Artist Functions 12 Mike: "Hàm có thể vẽ những vật phức tạp nhiều lần một
-        cách tiện lợi. \r\n\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những
-        cây còn lại trong chậu không? \r\nCác bông hoa cách nhau 100 pixel."
+        cách tiện lợi. \\\r\n\\\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những
+        cây còn lại trong chậu không? \\\r\nCác bông hoa cách nhau 100 pixel."
       2-3 Artist Functions 12 a: "Hàm có thể vẽ những vật phức tạp nhiều lần một cách
-        tiện lợi. \r\n\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những cây
-        còn lại trong chậu không? \r\nCác bông hoa cách nhau 100 pixel."
+        tiện lợi. \\\r\n\\\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những
+        cây còn lại trong chậu không? \\\r\nCác bông hoa cách nhau 100 pixel."
       2-3 Artist Functions 12: "Hàm có thể vẽ những vật phức tạp nhiều lần một cách
-        tiện lợi. \r\n\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những cây
-        còn lại trong chậu không? \r\nCác bông hoa cách nhau 100 pixel."
+        tiện lợi. \\\r\n\\\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những
+        cây còn lại trong chậu không? \\\r\nCác bông hoa cách nhau 100 pixel."
       2-3 Artist Functions 13: |-
         Chúng tôi cung cấp cho bạn bốn hàm.
         Hãy dùng chúng theo cách bạn thích trong một hoặc nhiều vòng lặp để tạo ra bức tranh bạn có thể chia sẻ với bạn bè. Nhấn chạy để xem ví dụ.
-      2-3 Artist Functions 2: "Hàm giúp bạn tạo ra khối lệnh mới! \r\n\r\nChúng ta
-        đã đưa các khối lệnh dùng để vẽ hình vuông vào hàm mang tên \"vẽ hình vuông\".
-        Hãy dùng hàm, này để vẽ một khung cửa kính. \r\n\r\nCác hình vuông cách nhau
-        75 pixel."
+      2-3 Artist Functions 2: "Hàm giúp bạn tạo ra khối lệnh mới! \\\r\n\\\r\nChúng
+        ta đã đưa các khối lệnh dùng để vẽ hình vuông vào hàm mang tên \"vẽ hình vuông\".
+        Hãy dùng hàm, này để vẽ một khung cửa kính. \\\r\n\\\r\nCác hình vuông cách
+        nhau 75 pixel."
       2-3 Artist Functions 3: "Chỉnh sửa hàm để vẽ một hình vuông với chiều dài cạnh
-        115 để vẽ khung kính lớn hơn. \r \r các ô vuông có bây giờ cách nhau 45 pixel."
+        115 để vẽ khung kính lớn hơn. \\\r \\\r các ô vuông có bây giờ cách nhau 45
+        pixel."
       2-3 Artist Functions 4: Bây giờ, đặt hàm vào trong một vòng lặp để vẽ ba hình
         vuông.
       2-3 Artist Functions 7: 'Dùng hàm "vẽ ngôi nhà" để vẽ hai ngôi nhà dùng hai
@@ -113,7 +114,7 @@ vi:
         60 độ!
       2-3 Artist Loops 10: điều gì xảy ra với thiết kế khi chúng tôi đặt bước cuối
         sớm hơn nửa như đã biết?
-      2-3 Artist Loops 11: Giờ chúng ta hãy đặt vòng lặp *khác* xung quanh toàn bộ
+      2-3 Artist Loops 11: Giờ chúng ta hãy đặt vòng lặp _khác_ xung quanh toàn bộ
         sản phẩm của chúng ta!  Đừng quên đặt thêm một góc ở phía cuối vòng lặp.
       2-3 Artist Loops 2: Bây giờ sử dụng một khối lặp lại để tạo cho các tế bào một
         lớp vỏ.
@@ -127,16 +128,14 @@ vi:
         hình đa giác. Bạn có thể tạo một hình thoi bên trong hình lục giác này không?
       2-3 Artist Loops 8: Hãy để cả hai yếu tố vào trong một vòng lặp.
       2-3 Artist Loops 9: "Chúng ta sẽ để lặp lại tương tự, nhưng bây giờ chúng ta
-        sẽ thêm một số khoảng cách giữa chúng. \r sử dụng cùng một mã như trước, nhưng
-        thêm một bước về phía trước ở phần cuối của vòng ngoài."
+        sẽ thêm một số khoảng cách giữa chúng. \\\r sử dụng cùng một mã như trước,
+        nhưng thêm một bước về phía trước ở phần cuối của vòng ngoài."
       2-3 Artist Loops New 1: Hãy vẽ đầu của chú robot này nhé. Bạn có thể vẽ 1 hình
         vuông với các cạnh có 100 điểm ảnh không?
       2-3 Artist Loops New 10: Giờ hãy nối các chữ V lại với nhau trong một vòng lặp.
       2-3 Artist Loops New 11: Bây h bạn hãy vẽ lại nó 24 lần. rồi quay trái góc 30
         độ tại điểm Code và đặt tất cả chúng vào trong một khối lặp lại.
-      2-3 Artist Loops New 12: 'Vẽ một viên kim cương với các mặt có 100 điểm ảnh.
-
-'
+      2-3 Artist Loops New 12: Vẽ một viên kim cương với các mặt có 100 điểm ảnh.
       2-3 Artist Loops New 13: bây giờ bạn hãy vẽ viên kim cương 3 lần trong vòng
         lặp.
       2-3 Artist Loops New 14: Tiếp theo hãy vẽ viên kim cương 10 lần, nhưng hãy xoay
@@ -151,7 +150,7 @@ vi:
       2-3 Artist Match Sq Pic: 'Nối: Hoàn thành mã còn thiếu.'
       2-3 Artist Match Tri pic: 'Nố: điền các mã còn thiếu.'
       2-3 Artist Nested Loops 1: "Bạn đã sử dụng vòng để vẽ hình dạng trước đó, nhưng
-        bạn có biết bạn có thể đặt một vòng lặp bên trong một vòng lặp? \r vẽ vòng
+        bạn có biết bạn có thể đặt một vòng lặp bên trong một vòng lặp? \\\r vẽ vòng
         lặp toàn khối  3 lần để vẽ các mô hình."
       2-3 Artist Nested Loops 10: Lặp mã này 12 lần để hoàn thành các mô hình.
       2-3 Artist Nested Loops 11: Lặp mã này 4 lần để hoàn thành các mô hình,   quay
@@ -181,7 +180,7 @@ vi:
         với các vòng lặp lồng vào nhau.
       2-3 Bee Conditionals 1: Chào! tớ là ong. giúp tớ lấy phấn hoa từ hoa.
       2-3 Bee Conditionals 10: "Bông hoa tím có thể chỉ chứa 1 hoặc 0 phấn hoa. Cẩn
-        thận không lấy phấn hoa từ hoa tím vì nó có thể không có phấn.\r\n"
+        thận không lấy phấn hoa từ hoa tím vì nó có thể không có phấn.\\\r"
       2-3 Bee Conditionals 11: Thu thập phấn hoa từ những bông có phấn.
       2-3 Bee Conditionals 12: |-
         Sử dụng một vòng lặp để kiểm tra và thu thập mật hoa
@@ -216,33 +215,34 @@ vi:
         thập tất cả các phấn hoa và tạo ra mật ong.
       2-3 Bee Debugging 2: Bạn có thể tìm ra lỗi ở đây không? Hãy sửa lỗi để thu thập
         tất cả phấn hoa.
-      2-3 Bee Debugging 3: "Có nhiều hoa đẹp quá!\r\n\r\nSửa lỗi để lấy được hết phấn
-        hoa."
+      2-3 Bee Debugging 3: "Có nhiều hoa đẹp quá!\\\r\n\\\r\nSửa lỗi để lấy được hết
+        phấn hoa."
       2-3 Bee Debugging 4: Các khối lệnh cần phải được sửa lỗi. Hãy sửa (các) lỗi
         để thu thập tất cả phấn hoa.
-      2-3 Bee Debugging 5: "Hoa trông ngon quá! \r \r sửa chữa lỗi đã để thu thập
+      2-3 Bee Debugging 5: "Hoa trông ngon quá! \\\r \\\r sửa chữa lỗi đã để thu thập
         tất cả phấn hoa.  Bây giờ, bạn có thể sử dụng cả chạy và bước."
-      2-3 Bee Debugging 6: "Thật là một thách thức ngọt ngào!\r\n\r\nSửa lỗi để lấy
-        được hết phấn hoa."
+      2-3 Bee Debugging 6: "Thật là một thách thức ngọt ngào!\\\r\n\\\r\nSửa lỗi để
+        lấy được hết phấn hoa."
       2-3 Bee Debugging 7: Sửa tất cả các lỗi để con ong lấy được phấn hoa và tạo
         mật.
-      2-3 Bee Debugging 8: "Có nhiều hoa đẹp quá!\r\n\r\nSửa lỗi để lấy được hết phấn
-        hoa."
-      2-3 Bee Debugging 9: "Hãy cẩn thận!\r\n\r\nHãy sửa lỗi chương trình sau để con
-        ong lấy được hết phấn hoa và tạo mật."
+      2-3 Bee Debugging 8: "Có nhiều hoa đẹp quá!\\\r\n\\\r\nSửa lỗi để lấy được hết
+        phấn hoa."
+      2-3 Bee Debugging 9: "Hãy cẩn thận!\\\r\n\\\r\nHãy sửa lỗi chương trình sau
+        để con ong lấy được hết phấn hoa và tạo mật."
       2-3 Bee Debugging Assessment 1: "Bài tập: Bây giờ là lúc thể hiện những gì bạn
-        biết! \r \r sửa lỗi để thu thập tất cả phấn hoa hoa và làm tất cả mật ong."
+        biết! \\\r \\\r sửa lỗi để thu thập tất cả phấn hoa hoa và làm tất cả mật
+        ong."
       2-3 Bee Functions 1: Hàm là khối mã thực hiện một nhiệm vụ. Sử dụng Hàm "lấy
         2 mật hoa" để thu thập mật hoa từ mỗi hoa.
       2-3 Bee Functions 10: "Hoa màu tím thay đổi lượng phấn hoa từ 1 thành 0 hoặc
-        từ 0 thành 1 mỗi khi bạn chạy trò chơi.   \r \r tạo ra một hàm thu thập phấn
-        hoa chỉ tf các bông hoa màu tím mà có phấn."
-      2-3 Bee Functions 2: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \r \r sử dụng
-        hàm 'lấy 5' để lấy  5 phấn hoa một lần."
+        từ 0 thành 1 mỗi khi bạn chạy trò chơi.   \\\r \\\r tạo ra một hàm thu thập
+        phấn hoa chỉ tf các bông hoa màu tím mà có phấn."
+      2-3 Bee Functions 2: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \\\r \\\r sử
+        dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."
       2-3 Bee Functions 3: Thu thập tất cả phấn hoa từ từng bông.
       2-3 Bee Functions 4: "Chức năng 'di chuyển và lấy mật hoa' xoay chuyển con ong,
-        thu thập mật hoa và sau đó trả con ong để nơi nó bắt đầu.  \r \r sử dụng các
-        chức năng để thu thập tất cả mật hoa."
+        thu thập mật hoa và sau đó trả con ong để nơi nó bắt đầu.  \\\r \\\r sử dụng
+        các chức năng để thu thập tất cả mật hoa."
       2-3 Bee Functions 5: Bây giờ hoa có nhiều phấn hơn. Chỉnh sửa hàm đã cho để
         nó có thể thu thập 4 phấn hoa và sử dụng nó để thu thập tất cả phấn hoa từ
         các bông hoa.
@@ -261,8 +261,8 @@ vi:
       2-3 Bee Functions Assessment 2: Tạo ra một nhóm lệnh chức năng để con ong xoay,
         di chuyển về phía trước và tạo ra 3 mật ong, sau đó về vị trí ban đầu và quay
         trở lại.
-      2-3 Bee Loops 1: "Những bông hoa trông thật hấp dẫn! \r \r Hãy thu thập mật
-        hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
+      2-3 Bee Loops 1: "Những bông hoa trông thật hấp dẫn! \\\r \\\r Hãy thu thập
+        mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
       2-3 Bee Loops 10: Bạn có thể dùng một vòng lặp while trong 2 vòng lặp khác để
         thu thập tất cả phấn hoa chứ?
       2-3 Bee Loops 11: Dùng vòng lặp while để thu thập tất cả phấn hoatừ các bông
@@ -281,12 +281,12 @@ vi:
       2-3 Bee Loops 3A: Dùng một vòng lặp `repeat`để thu thập tất cả phấn hoa.
       2-3 Bee Loops 3B: Bây giờ dùng khối `repeat` để thu thập tất cả phấn hoa và
         biến tất cả thành mật ong.
-      2-3 Bee Loops 4: "Quả là một chú ong bận rộn!\r\n\r\nHãy giúp chú ong thu thập
-        toàn bộ phấn hoa và biến chúng thành mật ong với ít khối nhất có thể."
+      2-3 Bee Loops 4: "Quả là một chú ong bận rộn!\\\r\n\\\r\nHãy giúp chú ong thu
+        thập toàn bộ phấn hoa và biến chúng thành mật ong với ít khối nhất có thể."
       2-3 Bee Loops 4A: "Vòng lặp có thể giúp bạn bao nhiêu lần trong trò chơi này?
-        \r\n\r\nCác vòng lặp là bạn của bạn! Dùng một vài trong số các vòng lặp để
-        hoàn thành trò chơi với số khối ít nhất có thể."
-      2-3 Bee Loops 5: "Hình dạng của con đường này khác với những con đường khác.\r\n\r\nBạn
+        \\\r\n\\\r\nCác vòng lặp là bạn của bạn! Dùng một vài trong số các vòng lặp
+        để hoàn thành trò chơi với số khối ít nhất có thể."
+      2-3 Bee Loops 5: "Hình dạng của con đường này khác với những con đường khác.\\\r\n\\\r\nBạn
         có thể thu thập tất cả phấn hoa sử dụng ít khối nhất có thể chứ?"
       2-3 Bee Loops 6: Bạn có thể tìm cách nhanh nhất để chú ong có thể thu thập tất
         cả phấn hoa và biến chúng thành mật ong không?
@@ -294,9 +294,9 @@ vi:
         từng bông hoa 1. Bạn có thể hoàn thành nhiệm vụ này trong vòng ít hơn 7 lệnh
         được chứ?
       2-3 Bee Loops 8: "Các bông hoa màu tím này co số lượng mật hoa khác nhau mỗi
-        khi bạn chạy câu đố.\r\n\r\nSử dụng vòng lặp 'mật hoa trắng' để thu thập tất
-        cả mật hoa.\r\n\r\nVòng lặp này sẽ tiếp tục chạy miễn là điều kiện được thỏa
-        mãn, trong trường hợp này 'mật hoa > 0'."
+        khi bạn chạy câu đố.\\\r\n\\\r\nSử dụng vòng lặp 'mật hoa trắng' để thu thập
+        tất cả mật hoa.\\\r\n\\\r\nVòng lặp này sẽ tiếp tục chạy miễn là điều kiện
+        được thỏa mãn, trong trường hợp này 'mật hoa > 0'."
       2-3 Bee Loops Assessment 1: Sử dụng vòng lặp "while" (khi) để thu thập mật ong
         từ tất cả những bông hoa.
       2-3 Maze 1: 'Bạn có thể giúp tôi bắt chú heo nghịch ngợm không? Sử dụng một
@@ -316,6 +316,8 @@ vi:
         thuốc nổ)
       2-3 maze sq16: Ok, nó cũng tương tự nhưng chỉ hơi khác một chút. Liệu bạn có
         thể thực hiện chỉ với 5 khối lệnh không?
+      2-3: "Bông hoa tím có thể chỉ chứa 1 hoặc 0 phấn hoa. Cẩn thận không lấy phấn
+        hoa từ hoa tím vì nó có thể không có phấn.\\\r"
       2-3level1: Giúp con chim bắt được con lợn nghịch ngợm bằng cách di chuyển về
         phía trước
       20hr_farmer_stage9_1: Chào. Tôi là nông dân. Tôi cần bạn xới phẳng ruộng để
@@ -408,9 +410,9 @@ vi:
         pixel. Hoàn tất bản vẽ.
       4-5 Artist 7: Tam giác bên phải này có các góc là 30, 60, và 90 độ. Chiều dài
         mặt nghiêng (chiều dài của cạnh huyền) là 200 pixel. Hoàn tất bản vẽ.
-      4-5 Artist 8: "Nửa đường kẻ trong lĩnh vực bóng đá là vuông góc với lề.   \r
+      4-5 Artist 8: "Nửa đường kẻ trong lĩnh vực bóng đá là vuông góc với lề.   \\\r
         Hình chữ nhật này có chu vi tổng cộng là 800 pixel, và nó dài 240 pixel. Nó
-        cao bao nhiêu?   \r \r Vẽ các đường bao và nửa dòng kẻ."
+        cao bao nhiêu?   \\\r \\\r Vẽ các đường bao và nửa dòng kẻ."
       4-5 Artist 9: Vẽ nửa bên phải của hình ảnh này để thiết kế trở nên đối xứng.
         Các hình tam giác đều là tam giác đều và các cạnh dài 50 pixel.
       4-5 Artist Assessment 1: 'Đánh giá: Sử dụng một vòng lặp để vẽ hình tam giác
@@ -440,12 +442,12 @@ vi:
       Course 4 Artist 12: "Trò chơi cảm hứng miễn phí: Bạn bây giờ đã học được tất
         cả mọi thứ bạn cần biết để làm cho một mẫu như thế này! Nếu hình ảnh này truyền
         cảm hứng cho bạn, cố gắng làm một cái gì đó tương tự. Nếu không, hãy tạo ra
-        thứ của riêng của bạn. \r \r muốn biết mô hình cảm hứng được tạo ra thế nào?
-        \ Ghé thăm https://studio.code.org/c/105765376/edit cho các giải pháp."
+        thứ của riêng của bạn. \\\r \\\r muốn biết mô hình cảm hứng được tạo ra thế
+        nào?  Ghé thăm <https://studio.code.org/c/105765376/edit> cho các giải pháp."
       Course 4 Artist Functions 2: 'Bạn có thể vẽ 3 hình vuông 20 điểm ảnh khác nhau?
         Gợi ý: mỗi ô vuông chứa 100 điểm ảnh'
       Course 4 Artist Functions 3: "Sử dụng các khối chức năng \"vẽ một hình vuông\",
-        bạn có thể vẽ hình ảnh này? Gợi ý: mỗi ô vuông tạo bởi 120 điểm ảnh. \r\n"
+        bạn có thể vẽ hình ảnh này? Gợi ý: mỗi ô vuông tạo bởi 120 điểm ảnh. \\\r"
       Course 4 Artist Functions 4: 'Bạn đã sẵn sàng để tạo "khối chức năng "của riêng
         bạn? Nhấp chuột vào các khối "Chức năng" trong hộp công cụ, tên của nó "vẽ
         một hình tam giác", sau đó tạo ra một tam giác như bạn đã thực hiện trước
@@ -454,7 +456,7 @@ vi:
       Course 4 Artist Functions 5 OLD: Hãy cố gắng sử dụng hai chức năng của chúng
         tôi để vẽ một ngôi nhà - những quy tắc nào cần có để vẽ nhà đúng cách?
       Course 4 Artist Functions 5: "Sử dụng các khối chức năng \"vẽ một hình vuông\",
-        bạn có thể vẽ hình ảnh này? Gợi ý: mỗi ô vuông tạo bởi 120 điểm ảnh. \r\n"
+        bạn có thể vẽ hình ảnh này? Gợi ý: mỗi ô vuông tạo bởi 120 điểm ảnh. \\\r"
       Course 4 Artist Functions 7: Bạn có thể vẽ một cạnh của hình vuông bằng cách
         sử dụng hàm vuông? Mỗi ô vuông là các cạnh dài bằng 40 điểm ảnh.
       Course 4 Artist Functions 8: 'Bạn đang tìm hiểu cách để sử dụng chức năng khối?
@@ -468,8 +470,9 @@ vi:
       Course 4 Artist Inspire: "Trò chơi cảm hứng miễn phí: Bạn bây giờ đã học được
         tất cả mọi thứ bạn cần biết để làm cho một mẫu như thế này! Nếu hình ảnh này
         truyền cảm hứng cho bạn, cố gắng làm một cái gì đó tương tự. Nếu không, hãy
-        tạo ra thứ của riêng của bạn. \r \r muốn biết mô hình cảm hứng được tạo ra
-        thế nào?  Ghé thăm https://studio.code.org/c/105765376/edit cho các giải pháp."
+        tạo ra thứ của riêng của bạn. \\\r \\\r muốn biết mô hình cảm hứng được tạo
+        ra thế nào?  Ghé thăm <https://studio.code.org/c/105765376/edit> cho các giải
+        pháp."
       Course 4 Artist Params 1: Hãy chỉnh sửa chức năng vẽ một hình vuông bằng 50
         điểm ảnh
       Course 4 Artist Params 10: 'Bạn có thể sử dụng chức năng từ bên trong các chức
@@ -508,16 +511,17 @@ vi:
         chia sẻ với bạn bè.
       CourseE_HOC 2018 Level_1: Lấy chiếc thuyền ở trong chiếc rương.
       CourseE_HOC 2018 Level_10: Đến lối vào của Tòa nhà Đại dương này.
-      CourseE_HOC 2018 Level_11: 'Xây một ống dẫn với prismarine bên trong Tòa nhà
-        Đại dương.  '
-      CourseE_HOC 2018 Level_2: 'Đi đến cuối bến tàu.  '
-      CourseE_HOC 2018 Level_3: 'Đi qua vùng biển khơi để tới chỗ cá tuyết.  '
+      CourseE_HOC 2018 Level_11: Xây dựng một đường dẫn bằng Prismarine bên trong
+        Tượng đài Đại Dương.
+      CourseE_HOC 2018 Level_2: Đi đến cuối bến thuyền.
+      CourseE_HOC 2018 Level_3: Đi băng qua biển khơi đến chỗ cá tuyết.
       CourseE_HOC 2018 Level_4: Sử dụng vòng lặp để đến chỗ cá heo.
       CourseE_HOC 2018 Level_5: Khám phá con tàu đắm để đến chỗ chiếc rương.
       CourseE_HOC 2018 Level_6: Điều hướng thông qua tảng đá để tới chỗ cá hồi.
       CourseE_HOC 2018 Level_7a: Tìm kiếm những tàn tích dưới nước để thấy một chiếc
         rương.
-      CourseE_HOC 2018 Level_9b: 'Sử dụng san hô như điểm chỉ đường để tới kho báu.  '
+      CourseE_HOC 2018 Level_9b: Sử dụng san hô làm các điểm trung gian đường đi để
+        đến được kho báu.
       Crack Random Substitution: lời chỉ đẫn
       Crack Random Substitution_2018: lời chỉ đẫn
       Crack Random Substitution_2019: lời chỉ đẫn
@@ -557,16 +561,17 @@ vi:
         ra con đường đi tới với ngọn đuốc.
       HOC 2018 Level_1: Lấy chiếc thuyền ở trong chiếc rương.
       HOC 2018 Level_10: Đến lối vào của Tòa nhà Đại dương này.
-      HOC 2018 Level_11: 'Xây một ống dẫn với prismarine bên trong Tòa nhà Đại dương.  '
-      HOC 2018 Level_12: 'Thiết kế môi trường dưới nước của riêng bạn, nó chỉ dành
-        cho bạn!  '
-      HOC 2018 Level_2: 'Đi đến cuối bến tàu.  '
-      HOC 2018 Level_3: 'Đi qua vùng biển khơi để tới chỗ cá tuyết.  '
+      HOC 2018 Level_11: Xây dựng một đường dẫn bằng Prismarine bên trong Tượng đài
+        Đại Dương.
+      HOC 2018 Level_12: Thiết kế môi trường dưới nước của riêng bạn, tùy bạn chọn!
+      HOC 2018 Level_2: Đi đến cuối bến thuyền.
+      HOC 2018 Level_3: Đi băng qua biển khơi đến chỗ cá tuyết.
       HOC 2018 Level_4: Sử dụng vòng lặp để đến chỗ cá heo.
       HOC 2018 Level_5: Khám phá con tàu đắm để đến chỗ chiếc rương.
       HOC 2018 Level_6: Điều hướng thông qua tảng đá để tới chỗ cá hồi.
       HOC 2018 Level_7a: Tìm kiếm những tàn tích dưới nước để thấy một chiếc rương.
-      HOC 2018 Level_9b: 'Sử dụng san hô như điểm chỉ đường để tới kho báu.  '
+      HOC 2018 Level_9b: Sử dụng san hô làm các điểm trung gian đường đi để đến được
+        kho báu.
       Infinity_catch: Bạn có thể làm cho Elsa ("diễn viên 2") đuổi Anna bằng cách
         sử dụng các phím mũi tên?
       Infinity_finale: Tạo ra bất cứ điều gì bạn thích và chia sẻ nó!
@@ -683,7 +688,7 @@ vi:
         "rẽ" và trong ô "khi đẻ ra" để làm chúng di chuyển.
       MC HOC 2016 Level 3: "Tuyệt vời, chú gà đã di chuyển! Nhưng sau đó nó dừng lại.
         Trong trò chơi, chú gà sẽ đi mãi. Sử dụng vòng lặp 'làm mãi mãi' để giữ những
-        con gà tiếp tục di chuyển. \r\n"
+        con gà tiếp tục di chuyển. \\\r"
       MC HOC 2016 Level 4: Bây giờ trông những con gà di chuyển kỳ dị theo cùng một
         cách. Trò chơi sử dụng lệnh di chuyển ngẫu nhiên để nhìn cho giống thật hơn.
         Đặt các con gà 'rẽ một cách ngẫu nhiên'.
@@ -1108,10 +1113,10 @@ vi:
         hơn so với độ dài cạnh vuông.'
       courseE_bee_functions1: Thu thập tất cả phấn hoa từ từng bông.
       courseE_bee_functions1_2018: Thu thập tất cả phấn hoa từ từng bông.
-      courseE_bee_functions3: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \r \r sử
-        dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."
-      courseE_bee_functions3_2018: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \r \r
+      courseE_bee_functions3: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \\\r \\\r
         sử dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."
+      courseE_bee_functions3_2018: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \\\r
+        \\\r sử dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."
       flappy_1: Đính kèm khối "khi nhấp vào" sau đó bấm "chạy". Nhấp hoặc chạm vào
         màn hình để di chuyển Flappy đến mục tiêu.
       flappy_11: Tạo trò chơi Flappy của riêng bạn. Bạn có thể thay đổi hình ảnh,
@@ -1171,10 +1176,8 @@ vi:
         thế dấu hỏi chấm để vẽ một vòng tròn?
       frozen cross rotate dense: 'Hãy lặp lại 90 lần! Bao nhiêu lần 90 thì thành 360?
         Gợi ý: Nó là một số rất nhỏ.'
-      frozen cross rotate: 'Bây giờ hãy thử lặp lại 10 lần. Bạn cần xoay bao nhiêu
+      frozen cross rotate: Bây giờ hãy thử lặp lại 10 lần. Bạn cần xoay bao nhiêu
         độ giữa mỗi đường?
-
-'
       frozen cross: Sử dụng khối "Lặp lại" để tạo ta một dấu cộng. Bạn có nhận thấy
         rằng Elsa có thể di chuyển lên và xuống?
       frozen diamond mini snowflake: Bạn có biết mỗi bông tuyết là một hình khác nhau?
@@ -1216,11 +1219,11 @@ vi:
       grade2_MakeDogTag_9: Bây h bạn hãy vẽ lại nó 24 lần. rồi quay trái góc 30 độ
         tại điểm Code và đặt tất cả chúng vào trong một khối lặp lại.
       grade2_PuppyLoops_10: "Giáo viên của tôi nói tôi phải hoàn tất những gì mình
-        bắt đầu! \r\n\r\nHãy giúp tôi hoàn tất cái chong chóng. Bạn có thấy nó bị
-        sai chỗ nào không?"
-      grade2_PuppyLoops_8: "Dòng lệnh vẽ ria cho mèo bị sai. \r\n\r Hãy sửa lại để
-        mỗi chiếc ria dài bằng nhau."
-      grade2_PuppyLoops_9: "Có vẻ như chữ C trong từ \"code\" bị viết ngược \r\n\r\nBạn
+        bắt đầu! \\\r\n\\\r\nHãy giúp tôi hoàn tất cái chong chóng. Bạn có thấy nó
+        bị sai chỗ nào không?"
+      grade2_PuppyLoops_8: "Dòng lệnh vẽ ria cho mèo bị sai. \\\r\n\\\r Hãy sửa lại
+        để mỗi chiếc ria dài bằng nhau."
+      grade2_PuppyLoops_9: "Có vẻ như chữ C trong từ \"code\" bị viết ngược \\\r\n\\\r\nBạn
         có thể sửa lại nó không?"
       grade3_Conditionals_1: Xin chào, tôi là Ong! Hãy giúp tôi thu thập mật hoa từ
         những bông hoa. Sử dụng hàm Loop.
@@ -1254,18 +1257,18 @@ vi:
         để xem nếu có phấn hoa không.
       grade3_Debugging_1: Các khối lệnh cần phải được sửa lỗi. Hãy sửa (các) lỗi để
         thu thập tất cả phấn hoa.
-      grade3_Debugging_5: "Hoa trông ngon quá! \r \r sửa chữa lỗi đã để thu thập tất
-        cả phấn hoa.  Bây giờ, bạn có thể sử dụng cả chạy và bước."
-      grade3_Debugging_6: "Thật là một thách thức ngọt ngào!\r\n\r\nSửa lỗi để lấy
-        được hết phấn hoa."
+      grade3_Debugging_5: "Hoa trông ngon quá! \\\r \\\r sửa chữa lỗi đã để thu thập
+        tất cả phấn hoa.  Bây giờ, bạn có thể sử dụng cả chạy và bước."
+      grade3_Debugging_6: "Thật là một thách thức ngọt ngào!\\\r\n\\\r\nSửa lỗi để
+        lấy được hết phấn hoa."
       grade3_Debugging_7: Sửa tất cả các lỗi để con ong lấy được phấn hoa và tạo mật.
-      grade3_Debugging_9: "Hãy cẩn thận!\r\n\r\nHãy sửa lỗi chương trình sau để con
-        ong lấy được hết phấn hoa và tạo mật."
+      grade3_Debugging_9: "Hãy cẩn thận!\\\r\n\\\r\nHãy sửa lỗi chương trình sau để
+        con ong lấy được hết phấn hoa và tạo mật."
       grade3_Debugging_TeacherIDo: Các khối lệnh cần phải được sửa lỗi. Hãy sửa (các)
         lỗi để thu thập tất cả phấn hoa.
-      grade3_Loops_10: "Quả là một chú ong bận rộn!\r\n\r\nHãy giúp chú ong thu thập
-        toàn bộ phấn hoa và biến chúng thành mật ong với ít khối nhất có thể."
-      grade3_Loops_11: "Hình dạng của con đường này khác với những con đường khác.\r\n\r\nBạn
+      grade3_Loops_10: "Quả là một chú ong bận rộn!\\\r\n\\\r\nHãy giúp chú ong thu
+        thập toàn bộ phấn hoa và biến chúng thành mật ong với ít khối nhất có thể."
+      grade3_Loops_11: "Hình dạng của con đường này khác với những con đường khác.\\\r\n\\\r\nBạn
         có thể thu thập tất cả phấn hoa sử dụng ít khối nhất có thể chứ?"
       grade3_Loops_12: Bạn có thể tìm cách nhanh nhất để chú ong có thể thu thập tất
         cả phấn hoa và biến chúng thành mật ong không?
@@ -1277,16 +1280,16 @@ vi:
         từng bông hoa 1. Bạn có thể hoàn thành nhiệm vụ này trong vòng ít hơn 7 lệnh
         được chứ?
       grade3_Loops_6: "Vòng lặp có thể giúp bạn bao nhiêu lần trong trò chơi này?
-        \r\n\r\nCác vòng lặp là bạn của bạn! Dùng một vài trong số các vòng lặp để
-        hoàn thành trò chơi với số khối ít nhất có thể."
-      grade3_Loops_7: "Những bông hoa trông thật hấp dẫn! \r \r Hãy thu thập mật hoa
-        từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
+        \\\r\n\\\r\nCác vòng lặp là bạn của bạn! Dùng một vài trong số các vòng lặp
+        để hoàn thành trò chơi với số khối ít nhất có thể."
+      grade3_Loops_7: "Những bông hoa trông thật hấp dẫn! \\\r \\\r Hãy thu thập mật
+        hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
       grade3_Loops_8: Thu thập tất cả mật hoa và làm tất cả trở thành mật ong bằng
         cách sử dụng ít nhất các lệnh có thể.
       grade3_Loops_9: Thu thập mật hoa từ mỗi bông hoa và làm mật ong tại mỗi tổ ong
         và hãy sử dụng ít nhất các lệnh có thể.
-      grade3_Loops_TeacherIDo: "Những bông hoa trông thật hấp dẫn! \r \r Hãy thu thập
-        mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
+      grade3_Loops_TeacherIDo: "Những bông hoa trông thật hấp dẫn! \\\r \\\r Hãy thu
+        thập mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
       grade3_robotFarmer_ConditionalsIntro_11: |-
         Bên ngoài vẫn tối. Di chuyển tôi dọc cánh đồng. Nếu ở đó có một ụ đất, hãy san phẳng nó. Nếu có hố hãy lấp phẳng nó.
         Gợi ý: click vào ô trong khối lệnh nếu để sử dụng linh hoạt nó.
@@ -1299,10 +1302,10 @@ vi:
       grade4_artist_functions1: 'Xin chào. Tôi-nghệ sĩ zombie. Tôi thích vẽ! Giúp
         tôi vẽ kính vuông.  Gợi ý: các cầu nối giữa các kính là 25 pixels ngắn hơn
         so với độ dài cạnh vuông.'
-      grade4_artist_functions2: "Hàm giúp bạn tạo ra khối lệnh mới! \r\n\r\nChúng
+      grade4_artist_functions2: "Hàm giúp bạn tạo ra khối lệnh mới! \\\r\n\\\r\nChúng
         ta đã đưa các khối lệnh dùng để vẽ hình vuông vào hàm mang tên \"vẽ hình vuông\".
-        Hãy dùng hàm, này để vẽ một khung cửa kính. \r\n\r\nCác hình vuông cách nhau
-        75 pixel."
+        Hãy dùng hàm, này để vẽ một khung cửa kính. \\\r\n\\\r\nCác hình vuông cách
+        nhau 75 pixel."
       grade4_artist_parameters_triangles2b: 'Bạn có thể hoàn thành bản vẽ này? Gợi
         ý: Mỗi tam giác có độ phân lớn hơn so với tam giác trước là 25.  Tam giác
         đầu tiên có độ phân giải là 25.'
@@ -1315,8 +1318,8 @@ vi:
       grade4_bee_functions1: Thu thập tất cả phấn hoa từ từng bông.
       grade4_bee_functions2: Hàm là khối mã thực hiện một nhiệm vụ. Sử dụng Hàm "lấy
         2 mật hoa" để thu thập mật hoa từ mỗi hoa.
-      grade4_bee_functions3: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \r \r sử dụng
-        hàm 'lấy 5' để lấy  5 phấn hoa một lần."
+      grade4_bee_functions3: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \\\r \\\r
+        sử dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."
       grade4_frozen_freeplay: Bạn đã chính thức trở thành một nghệ sĩ bậc thầy! Tạo
         một Xứ sở thần tiên vào mùa đông.
       grade4_frozen_functions0: Bạn hãy tìm ra số để thay thế các ký hiệu chấm hỏi
@@ -1347,9 +1350,9 @@ vi:
         chắc chắn xoay 120 độ trước mỗi hình vuông mới.
       grade4_frozen_square_loop3: Bạn có thể tạo một bông tuyết sử dụng khối "Lặp
         lại" để làm một hình vuông 10 lần, và khối "Xoay" để xoay 36 độ giữa mỗi hình?
-      grade4_review_artist1: Xin chào, tôi là một nghệ sĩ. Bạn có thể viết mã để tôi
-        vẽ gần như bất cứ thứ gì. Hãy sử dụng một vài khối để tôi vẽ theo đường màu
-        ghi trong hình. (Mỗi đường dài 100 pixels)
+      grade4_review_artist1: "Chào, tôi là một họa sĩ. Tôi có thể vẽ hầu như mọi thứ
+        theo những dòng lệnh bạn viết. Hãy sử dụng các khối lệnh để giúp tôi vẽ các
+        đường thẳng màu xám. (Mỗi đường dài 100 pixel)\\\r \n\\\r"
       grade4_review_artist2: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi
         ý: Cả 3 cạnh đều dài như nhau.'
       grade4_review_artist3: Khối nhảy di chuyển người nghệ sĩ mà không vẽ. Lập nét
@@ -1358,20 +1361,21 @@ vi:
         biến tất cả thành mật ong.
       grade4_review_bee2: Thu thập mật hoa từ mỗi bông hoa và làm mật ong tại mỗi
         tổ ong và hãy sử dụng ít nhất các lệnh có thể.
-      grade4_review_bee3: "Quả là một chú ong bận rộn!\r\n\r\nHãy giúp chú ong thu
-        thập toàn bộ phấn hoa và biến chúng thành mật ong với ít khối nhất có thể."
+      grade4_review_bee3: "Quả là một chú ong bận rộn!\\\r\n\\\r\nHãy giúp chú ong
+        thu thập toàn bộ phấn hoa và biến chúng thành mật ong với ít khối nhất có
+        thể."
       grade5_artist_variables_freeplay15: "Trò chơi cảm hứng miễn phí: Bạn bây giờ
         đã học được tất cả mọi thứ bạn cần biết để làm cho một mẫu như thế này! Nếu
         hình ảnh này truyền cảm hứng cho bạn, cố gắng làm một cái gì đó tương tự.
-        Nếu không, hãy tạo ra thứ của riêng của bạn. \r \r muốn biết mô hình cảm hứng
-        được tạo ra thế nào?  Ghé thăm https://studio.code.org/c/105765376/edit cho
-        các giải pháp."
-      level 'grade3_Loops_10: "Quả là một chú ong bận rộn!\r\n\r\nHãy giúp chú ong
-        thu thập toàn bộ phấn hoa và biến chúng thành mật ong với ít khối nhất có
-        thể."
+        Nếu không, hãy tạo ra thứ của riêng của bạn. \\\r \\\r muốn biết mô hình cảm
+        hứng được tạo ra thế nào?  Ghé thăm <https://studio.code.org/c/105765376/edit>
+        cho các giải pháp."
+      level 'grade3_Loops_10: "Quả là một chú ong bận rộn!\\\r\n\\\r\nHãy giúp chú
+        ong thu thập toàn bộ phấn hoa và biến chúng thành mật ong với ít khối nhất
+        có thể."
       level 'grade3_Loops_11: "Hình dạng của con đường này khác với những con đường
-        khác.\r\n\r\nBạn có thể thu thập tất cả phấn hoa sử dụng ít khối nhất có thể
-        chứ?"
+        khác.\\\r\n\\\r\nBạn có thể thu thập tất cả phấn hoa sử dụng ít khối nhất
+        có thể chứ?"
       level 'grade3_Loops_12: Bạn có thể tìm cách nhanh nhất để chú ong có thể thu
         thập tất cả phấn hoa và biến chúng thành mật ong không?
       level 'grade3_Loops_2: Lần này, dùng một vòng lặp để thu tập tất cả phấn hoa.
@@ -1382,10 +1386,10 @@ vi:
         tới thăm từng bông hoa 1. Bạn có thể hoàn thành nhiệm vụ này trong vòng ít
         hơn 7 lệnh được chứ?
       level 'grade3_Loops_6: "Vòng lặp có thể giúp bạn bao nhiêu lần trong trò chơi
-        này? \r\n\r\nCác vòng lặp là bạn của bạn! Dùng một vài trong số các vòng lặp
-        để hoàn thành trò chơi với số khối ít nhất có thể."
-      level 'grade3_Loops_7: "Những bông hoa trông thật hấp dẫn! \r \r Hãy thu thập
-        mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
+        này? \\\r\n\\\r\nCác vòng lặp là bạn của bạn! Dùng một vài trong số các vòng
+        lặp để hoàn thành trò chơi với số khối ít nhất có thể."
+      level 'grade3_Loops_7: "Những bông hoa trông thật hấp dẫn! \\\r \\\r Hãy thu
+        thập mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
       level 'grade3_Loops_8: Thu thập tất cả mật hoa và làm tất cả trở thành mật ong
         bằng cách sử dụng ít nhất các lệnh có thể.
       level 'grade3_Loops_9: Thu thập mật hoa từ mỗi bông hoa và làm mật ong tại mỗi

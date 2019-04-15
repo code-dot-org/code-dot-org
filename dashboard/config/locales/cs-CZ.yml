@@ -1110,6 +1110,8 @@ cs:
     csp_variables: Proměnné
     csp_conditionals: Podmínky
     csp_functions: Funkce
+    csp_lists: Seznamy
+    csp_loops: Smyčky
   external_links:
     disclaimer: Zřeknutí se
     leaving_domain: Opouštíte tuto doménu na stránku, která není provázaná se společností
