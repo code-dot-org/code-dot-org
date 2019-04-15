@@ -27,6 +27,7 @@ class ScriptTest < ActiveSupport::TestCase
     # Only need to populate cache once per test-suite run
     @@script_cached ||= Script.script_cache_to_cache
     Script.script_cache
+    Script.script_family_cache
 
     # Also populate course_cache, as it's used by course_link
     Course.stubs(:should_cache?).returns true
@@ -308,6 +309,19 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal flappy, Script.get_from_cache(flappy_id)
     assert_equal frozen, Script.get_from_cache('frozen')
     assert_equal frozen, Script.get_from_cache(frozen_id)
+  end
+
+  test 'get_family_from_cache uses script_family_cache' do
+    script_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
+    script_2018 = create :script, name: 'script-2018', family_name: 'family-cache-test', version_year: '2018'
+    family_scripts = Script.where(family_name: 'family-cache-test')
+
+    assert_equal [script_2017.name, script_2018.name], family_scripts.map(&:name)
+
+    populate_cache_and_disconnect_db
+
+    cached_family_scripts = Script.get_family_from_cache('family-cache-test')
+    assert_equal [script_2017.name, script_2018.name], cached_family_scripts.map(&:name).uniq
   end
 
   test 'cache_find_script_level uses cache' do
