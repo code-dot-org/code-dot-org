@@ -204,6 +204,13 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     });
   }
 
+  reset() {
+    const {led, buzzer, colorLeds} = this.prewiredComponents_;
+    led.off();
+    colorLeds.forEach(led => led.off());
+    buzzer.off();
+  }
+
   /**
    * Play a song and animate some LEDs to demonstrate successful connection
    * to the board.
