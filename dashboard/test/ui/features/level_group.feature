@@ -1,14 +1,12 @@
 @no_mobile
-@as_student
 Feature: Level Group
 
-Background:
+@as_student
+Scenario: Submit three answers.
   Given I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1?noautoplay=true"
-  Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
 
-Scenario: Submit three answers.
   When element ".level-group-content:nth(1) .multi-question" contains text "The standard QWERTY keyboard has"
 
   # First, submit answers to all three multis.
@@ -31,7 +29,12 @@ Scenario: Submit three answers.
   And element ".level-group-content:nth(2) #checked_2" is visible
   And element ".level-group-content:nth(2) #checked_0" is visible
 
+@as_student
 Scenario: Match levels within level group
+  Given I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1?noautoplay=true"
+  And I wait to see ".submitButton"
+  And element ".submitButton" is visible
+
   Given match level 0 question contains text "Match the code to the image that it will produce."
   And match level 0 contains 4 unplaced answers
   And match level 0 contains 4 empty slots
