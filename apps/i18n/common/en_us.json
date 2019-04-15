@@ -747,6 +747,7 @@
   "lessonStatus": "Lesson Status",
   "level": "Level,",
   "levelDetails": "Level Details",
+  "levelHeader": "Level",
   "levelIncompleteError": "Keep coding! Something's not quite right yet.",
   "levelN": "LEVEL {levelNumber}",
   "levelStatus": "Level Status",
