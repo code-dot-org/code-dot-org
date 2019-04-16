@@ -482,6 +482,8 @@ class Script < ActiveRecord::Base
       next unless script.is_stable
       latest_version ||= script
 
+      # All English-speaking locales are supported, so we check that the locale starts with 'en' rather
+      # than matching en-US specifically.
       is_supported = script.supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
       if is_supported
         latest_version = script
