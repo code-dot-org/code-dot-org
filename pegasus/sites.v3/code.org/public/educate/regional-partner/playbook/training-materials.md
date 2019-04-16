@@ -1,8 +1,8 @@
 ---
 title: training materials
 nav: regional_partner_playbook_nav
+noindex: true
 ---
-<meta name="robots" content="noindex">
 <a id="top"></a>
 
 # Training Materials
@@ -74,7 +74,7 @@ January 2018
     <summary>**2017 Virtual Trainings**</summary>
     <p>
 
-December 2017  
+December 2017
 
   - Dec 12 TEALS & the CS Principles Classroom ([Video](https://code.zoom.us/recording/play/7YH4DmJAL5OutCqgRsE5-YORNg0RUP5Uu-c_KtcX0P-LS-ohu9wUfXJS-K_URZz6))
 
@@ -108,7 +108,7 @@ March 2017:
   - Guest Speaker Series: NCWIT [Video](http://videos.code.org/plp/NCWIT_March17.mp4), [Slides](https://docs.google.com/presentation/d/1nxC--kbLdFF41laOZqKFmKjMZmfsFUMAwf2VZkF59q4/edit)
   - CS Principles Webinar for Teachers [Video](http://videos.code.org/plp/3-28-2017_CSPrinciples_Webinar.mp4)
 
-January 2017:                                            
+January 2017:
 
   - How to Review Teacher Applications [Video](https://videos.code.org/teacher/Teacher+Application+Review+Process.mp4), [Slides](https://docs.google.com/presentation/d/11bDnl_ekOspmJ4cVhShvoRQ3k0GVq0DeSWpRPx56CJg/edit?usp=sharing)
   - CSP Teacher Application Process for Local Workshops [Video](http://videos.code.org/cs-principles/CSP-teacher-application-process-for-local-workshops.mp4), [Slides](https://docs.google.com/presentation/d/1SHF7pfrJmFt53Cp6GRpvw6VIo93x4euT-InYWYfe8Q4/edit?usp=sharing)
