@@ -467,6 +467,8 @@ sk:
         behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
       behaviors 4_callout:
         behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
+      behaviors 4a_callout:
+        behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
       behaviors 5_callout:
         behaviors_edit: Pridaj kód k tomuto správaniu.
       course2_bee_conditionals_challenge2_callout:
@@ -577,9 +579,9 @@ sk:
       courseA_playLab_events6_2019_callout:
         courseA_playLab_events6_1: Toto vám umožní vybrať "náhodný" zvuk, čo znamená, že nebudete vedieť, čo sa bude hrať až kým to nespustíte!
       courseB_Scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseB_Scrat_ramp1_2019_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Iba jeden z týchto blokov je v paneli s nástrojmi. Ako ho použijete?
       courseB_artist_loops3_2018_callout:
@@ -655,7 +657,7 @@ sk:
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Šedé bloky nemôžu byť vymazané!
       courseC_maze_debugging5_2018_callout:
-        courseC_maze_debugging5_1: Tieto bloky sú zamknuté a nie je možné ich odstrániť!
+        courseC_maze_debugging5_1: Tieto šedé bloky sú zamknuté a nie je možné ich odstrániť!
       courseC_maze_debugging5_2019_callout:
         courseC_maze_debugging5_1: Tieto bloky sú zamknuté a nie je možné ich odstrániť!
       courseC_maze_debugging9_2019_callout:
@@ -663,11 +665,11 @@ sk:
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: V tejto hre máte iba jeden takýto blok k dispozícií.
       courseC_maze_programming1_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseC_maze_programming1_2018_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseC_maze_programming1_2019_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       courseC_maze_programming2_2018_callout:
@@ -752,11 +754,11 @@ sk:
       courseD_maze_intro4_2019_callout:
         courseC_maze_programming4_1: Toto je váš počet blokov. Podľa toho viete, koľko takýchto blokov ešte môžete použiť.
       courseD_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseD_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseD_maze_ramp1_2019_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       courseD_maze_ramp2_2018_callout:
@@ -793,9 +795,9 @@ sk:
       courseD_playLab_condForVideo_callout:
         courseD_playLab_condFP_1: sme zoradili bloky do kategórií, aby ste mali viac kódu na hranie sa! Kliknite sem a pozrite sa, kam sme všetko dali.
       courseD_scrat_ramp1_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseD_scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseD_scrat_ramp2_callout:
         courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       courseD_scrat_ramp2_2018_callout:
@@ -820,8 +822,6 @@ sk:
         courseD_maze_ramp7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú náročné a možno ich vyriešite až na niekoľkatý pokus.
       courseD_scrat_ramp8_2018_callout:
         courseD_maze_ramp7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú náročné a možno ich vyriešite až na niekoľkatý pokus.
-      courseE_aboutme_5_callout:
-        courseE_aboutme_4_callout_1: Klikni sem!
       courseE_artist_functions1_callout:
         courseD_artist_functions1_1: Začnime použitím tohto bloku pre vytvorenie prvého štvorca.
       courseE_artist_functions1_2018_callout:
@@ -899,9 +899,9 @@ sk:
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: Táto zelenina je vybraná náhodne. Pri každom spustení programu sa zobrazí iný jej druh.
       courseE_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseE_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseE_maze_ramp2_callout:
         courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       courseE_maze_ramp2_2018_callout:
@@ -1047,11 +1047,11 @@ sk:
       courseF_bee_variables_1_2019_callout:
         courseF_bee_functions_1_2018_1: Premenné môžete nájsť tu!
       courseF_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseF_maze_ramp15_callout:
         courseF_maze_ramp7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú náročné a možno ich vyriešite až na niekoľkatý pokus.
       courseF_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseF_maze_ramp2_callout:
         courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       courseF_maze_ramp2_2018_callout:
@@ -1185,7 +1185,7 @@ sk:
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: Tieto šedé bloky sú z kamena! To znamená, že nemôžu byť zahodené.
       grade2_CaringForNewPet_0_callout:
-        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov, stlačte "Spustiť" pre spustenie vášho programu.
+        grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       grade2_CaringForNewPet_1_callout:
         grade2_CaringForNewPet_1_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       grade2_CaringForNewPet_2_callout:

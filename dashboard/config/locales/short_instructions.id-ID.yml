@@ -47,7 +47,7 @@ id:
         Dapatkah Anda membuat topi ini dengan panjang atas
         100?
       2-3 Artist Debugging 10: "Arahkan pad pada permainan saya\nPengontrol ini terlalu
-        sempit. \r\n\r\nAnda dapat membuatnya lebih luas dengan 10 piksel?\r\n\r\nMencoba\nmenjalankan
+        sempit. \\\r\n\\\r\nAnda dapat membuatnya lebih luas dengan 10 piksel?\\\r\n\\\r\nMencoba\nmenjalankan
         kode pertama untuk melihat apa yang salah."
       2-3 Artist Debugging 11: |-
         Bantu saya menyelesaikan kepingan saljuku yang indah.
@@ -55,24 +55,24 @@ id:
       2-3 Artist Debugging 12: |-
         Aku harus menambahkan gelombang laut untuk
         adegan ini. Bisakah kamu membantuku?
-      2-3 Artist Debugging 2: "Kode ini untuk kumis kucing\nsalah. \r\n\r\nperbaiki
+      2-3 Artist Debugging 2: "Kode ini untuk kumis kucing\nsalah. \\\r\n\\\r\nperbaiki
         kode ini agar gambar kumisnya sama panjang."
-      2-3 Artist Debugging 3: "Perahu saya memiliki satu lubang! \r\n\r\nApa\nAnda
+      2-3 Artist Debugging 3: "Perahu saya memiliki satu lubang! \\\r\n\\\r\nApa\nAnda
         kerjakan perlu memperbaiki untuk membuat ujung bertemu?"
       2-3 Artist Debugging 4: |-
         Apakah gambar yang kita coba untuk
         gambarkan? Selesaikan menghubungkan titik-titik dengan menggunakan jalur dan sudut yang tepat.
       2-3 Artist Debugging 5: "Kode yang kami miliki untuk\nkaki dan kakinya salah.
-        \r\n\r\nbisakah kamu memperbaikinya?"
+        \\\r\n\\\r\nbisakah kamu memperbaikinya?"
       2-3 Artist Debugging 6: "Sepertinya saya duduk disebuah\nkursi yang kakinya
-        hilang satu!\r\n\r\nedit kodenya untuk menggambar kaki terakhir."
-      2-3 Artist Debugging 7: "Terlihar seperti C pada kode dalam gambar\nterbalik!\r\n\r\nBisakah
+        hilang satu!\\\r\n\\\r\nedit kodenya untuk menggambar kaki terakhir."
+      2-3 Artist Debugging 7: "Terlihar seperti C pada kode dalam gambar\nterbalik!\\\r\n\\\r\nBisakah
         anda membuatnya terlihat seperti C lagi?"
       2-3 Artist Debugging 8: "Guru saya berkata saya harus menyelesaikan\napa yang
-        sudah saya mulai!\r\n\r\nbantu saya untuk menyelesaikan pinwheel saya. bisakah
-        kamu mencari tahu \napa yang salah?"
-      2-3 Artist Debugging 9: "Sesuatu yang tidak aktif!\r\n\r\nkode batang ini salah.
-        Anda bisa mencari tahu bagaimana cara mendapatkan artis untuk melacak\nbatang
+        sudah saya mulai!\\\r\n\\\r\nbantu saya untuk menyelesaikan pinwheel saya.
+        bisakah kamu mencari tahu \napa yang salah?"
+      2-3 Artist Debugging 9: "Sesuatu yang tidak aktif!\\\r\n\\\r\nkode batang ini
+        salah. Anda bisa mencari tahu bagaimana cara mendapatkan artis untuk melacak\nbatang
         yang tepat?"
       2-3 Artist Debugging Assessment 1: |-
         Bentuk ini terlalu kecil. bisa
@@ -94,35 +94,35 @@ id:
         Anda memodifikasi/mengubah fungsi "menggambar segienam" untuk menggambar segi
         enam dengan sisi 50 piksel, dan digambar dengan menggunakan fungsi?
       2-3 Artist Functions 11.5 a: "Ini sama saja dengan fungsi ' menggambar sebuah
-        segienam'. \r\n\r\napa yang terjadi jika anda mengulang program sebanyak 6
-        kali,\nmengubang 60 derajat setiap anda mengulang?"
+        segienam'. \\\r\n\\\r\napa yang terjadi jika anda mengulang program sebanyak
+        6 kali,\nmengubang 60 derajat setiap anda mengulang?"
       2-3 Artist Functions 11.5: "Ini sama saja dengan fungsi ' menggambar sebuah
-        segienam'. \r\n\r\napa yang terjadi jika anda mengulang program sebanyak 6
-        kali,\nmengubang 60 derajat setiap anda mengulang?"
+        segienam'. \\\r\n\\\r\napa yang terjadi jika anda mengulang program sebanyak
+        6 kali,\nmengubang 60 derajat setiap anda mengulang?"
       2-3 Artist Functions 11: Kita telah mengganti nama fungsi "menggambar persegi"
         menjadi "menggambar segienam", tetapi ia masih hanya menggambar persegi! Dapat
         Anda memodifikasi/mengubah fungsi "menggambar segienam" untuk menggambar segi
         enam dengan sisi 50 piksel, dan digambar dengan menggunakan fungsi?
       2-3 Artist Functions 12 Mike: "Fungsi yang benar-benar bagus untuk\ngambar beberapa
-        hal yang rumit. \r\n\r\nAnda bisa menggunakan `gambar sebuah bunga`\nfungsi
-        untuk sisa fill planter box?\r\nTanaman semua 100 piksel terpisah."
+        hal yang rumit. \\\r\n\\\r\nAnda bisa menggunakan `gambar sebuah bunga`\nfungsi
+        untuk sisa fill planter box?\\\r\nTanaman semua 100 piksel terpisah."
       2-3 Artist Functions 12 a: "Fungsi yang benar-benar bagus untuk\ngambar beberapa
-        hal yang rumit. \r\n\r\nAnda bisa menggunakan `gambar sebuah bunga`\nfungsi
-        untuk sisa fill planter box?\r\nTanaman semua 100 piksel terpisah."
+        hal yang rumit. \\\r\n\\\r\nAnda bisa menggunakan `gambar sebuah bunga`\nfungsi
+        untuk sisa fill planter box?\\\r\nTanaman semua 100 piksel terpisah."
       2-3 Artist Functions 12: "Fungsi yang benar-benar bagus untuk\ngambar beberapa
-        hal yang rumit. \r\n\r\nAnda bisa menggunakan `gambar sebuah bunga`\nfungsi
-        untuk sisa fill planter box?\r\nTanaman semua 100 piksel terpisah."
+        hal yang rumit. \\\r\n\\\r\nAnda bisa menggunakan `gambar sebuah bunga`\nfungsi
+        untuk sisa fill planter box?\\\r\nTanaman semua 100 piksel terpisah."
       2-3 Artist Functions 13: Kami menyediakan Anda empat fungsi. Gunakan dengan
         cara apapun yang Anda suka dalam satu atau lebih pengulangan untuk membuat
         gambar yang dapat Anda bagikan dengan teman-teman Anda. Tekan Jalankan untuk
         melihat contoh.
-      2-3 Artist Functions 2: "Fungsi membiarkan anda mendefinisikan blok baru! \r\n\r\nKami
+      2-3 Artist Functions 2: "Fungsi membiarkan anda mendefinisikan blok baru! \\\r\n\\\r\nKami
         sudah memindahkan blok yang diperlukan untuk menggambar persegi menjadi\nfungsi
         yang disebut `menggambar persegi`. Kali ini, gunakan fungsi `menggambar persegi`\nuntuk
-        membuat kacamata. \r\n\r\nPersegi itu berjauhan 75 piksel."
+        membuat kacamata. \\\r\n\\\r\nPersegi itu berjauhan 75 piksel."
       2-3 Artist Functions 3: "Mengubah fungsi menggambar sebuah persegi empat\ndengan
-        panjang sisi 115 untuk gambar gelas besar. \r\n\r\nKotak\nyang sekarang 45
-        piksel yang terpisah."
+        panjang sisi 115 untuk gambar gelas besar. \\\r\n\\\r\nKotak\nyang sekarang
+        45 piksel yang terpisah."
       2-3 Artist Functions 4: |-
         Sekarang, letakkan fungsinya ke dalam
         sebuah lingkaran untuk menggambar tiga kotak yang ini.
@@ -138,7 +138,7 @@ id:
       2-3 Artist Loops 10: |-
         Apa yang terjadi pada rancangannya ketika kita membuat langkah terakhir ke depan kita
         setengah lebih panjang?
-      2-3 Artist Loops 11: Sekarang mari kita letakan *satu lagi* pengulangan di sekitar
+      2-3 Artist Loops 11: Sekarang mari kita letakan _satu lagi_ pengulangan di sekitar
         seluruh gambar kita! Jangan lupa untuk menambahkan sudut pada akhir bagian
         pengulangan luar.
       2-3 Artist Loops 2: Sekarang menggunakan sebuah blok Ulangi untuk membuat sebuah
@@ -156,7 +156,7 @@ id:
         poligon. Dapatkah Anda membuat belah ketupat dalam segienam ini?
       2-3 Artist Loops 8: Mari kita menempatkan kedua elemen ke dalam pengulangan.
       2-3 Artist Loops 9: "Kita akan melakukan perulangan elemen yang sama, tetapi\nsekarang
-        kita akan menambah beberapa jarak di antaranya.\r\nGunakan kode yang sama
+        kita akan menambah beberapa jarak di antaranya.\\\r\nGunakan kode yang sama
         seperti\nsebelumnya, namun tambahkan satu langkah ke depan setelah perulangan
         tersebut."
       2-3 Artist Loops New 1: |-
@@ -171,7 +171,7 @@ id:
       2-3 Artist Loops New 12: 'Gambar sebuah belah ketupat dengan setiap sisinya
         berukuran 100 piksel. '
       2-3 Artist Loops New 13: "Kami akan memulai dengan anda\nbeberapa kode (berwarna
-        abu-abu) untuk membuat satu berlian. \r\n\r\nLoop kode abu-abu untuk buat
+        abu-abu) untuk membuat satu berlian. \\\r\n\\\r\nLoop kode abu-abu untuk buat
         sebuah\npola yang menyenangkan!"
       2-3 Artist Loops New 14: |-
         Sekarang mari kita gambarkan 10 belah ketupat
@@ -188,8 +188,8 @@ id:
       2-3 Artist Match Tri pic: 'Pencocokan: Isi kode yang hilang.'
       2-3 Artist Nested Loops 1: "Kamu telah berhasil menggunakan perulangan untuk
         menggambar bentuk pada latihan sebelumnya, tapi apakah kamu tahu kamu dapat
-        mengisi perulangan di dalam perulangan?\r\nCoba ulangi potongan kode ini sebanyak
-        3 kali untuk menggambar pola."
+        mengisi perulangan di dalam perulangan?\\\r\nCoba ulangi potongan kode ini
+        sebanyak 3 kali untuk menggambar pola."
       2-3 Artist Nested Loops 10: Ulangi kode ini sebanyak 12 kali untuk menyelesaikan
         pola ini.
       2-3 Artist Nested Loops 11: Ulangi kode ini sebanyak 4 kali untuk menyelesaikan
@@ -197,35 +197,36 @@ id:
       2-3 Artist Nested Loops 12: |-
         Loop kode ini sebanyak 12 kali untu
         Melengkapi ikal.
-      2-3 Artist Nested Loops 2: "Sekarang lingkari segitiga 6 kali.\n\\ r \n\\ r
-        \nSetelah setiap segitiga, Anda harus mengubah 60 derajat sebelum menggambar
+      2-3 Artist Nested Loops 2: "Sekarang lingkari segitiga 6 kali.\n\\\\ r \n\\\\
+        r \nSetelah setiap segitiga, Anda harus mengubah 60 derajat sebelum menggambar
         \nberikutnya."
       2-3 Artist Nested Loops 3: Kamu perlu mengulangi pembuatan segitiga sebanyak
         12 kali untuk menggambar pola ini. Bagilah jumlah derajat yang terdapat pada
         lingkaran (360) dengan jumlah sisi yang ingin kamu buat(12) untuk mendapatkan
         jumlah derajat putaran pada akhir pengulangan.
       2-3 Artist Nested Loops 4: "Lingkaran berlian ini 12 kali untuk menarik  sebuah
-        bunga! \\ r \n\\ r \nCatatan: Kami akan menggunakan sudut yang sama untuk
-        lingkaran 12 berlian seperti yang kita lakukan selama 12 segitiga.  \\ r \nBerapa
-        banyak yang Anda butuhkan untuk mengubah setelah setiap bentuk?"
+        bunga! \\\\ r \n\\\\ r \nCatatan: Kami akan menggunakan sudut yang sama untuk
+        lingkaran 12 berlian seperti yang kita lakukan selama 12 segitiga.  \\\\ r
+        \nBerapa banyak yang Anda butuhkan untuk mengubah setelah setiap bentuk?"
       2-3 Artist Nested Loops 5: "Isi jendela bangunan ini menggunakan sebuah bersarang
-        lingkaran. \\ r \n\\ r \nJendela 20 piksel panjang dan 20 pixel \nterpisah."
+        lingkaran. \\\\ r \n\\\\ r \nJendela 20 piksel panjang dan 20 pixel \nterpisah."
       2-3 Artist Nested Loops 6: Dinosaurus ini memiliki 8 duri/punuk dari ujung ekornya,
         setiap duri/punuk memiliki ukuran 30 pixel. Ulangi dengan membuat segitiga
         8 kali, pastikan tambahkan gerak kedepan (maju) setelahnya.
       2-3 Artist Nested Loops 7: "Putar segitiga ini 10 kali\nuntuk menggambar matahari.
-        \r\n\r\nAnda akan perlu untuk menggeser dan mengubah setiap segitiga.\n\r\n\r\nAnda
+        \\\r\n\\\r\nAnda akan perlu untuk menggeser dan mengubah setiap segitiga.\n\\\r\n\\\r\nAnda
         bisa mengetahui berapa banyak yang harus dibalik dengan membagi jumlah derajat\ndalam
         lingkaran dengan jumlah segitiga yang membentuknya."
       2-3 Artist Nested Loops 8: "Sekarang ayo kita tambahkan beberapa rumput\nke
-        gambar kita. \r\n\r\nsetiap jumbai rumput dipisahkan dengan jarak 50 piksel."
+        gambar kita. \\\r\n\\\r\nsetiap jumbai rumput dipisahkan dengan jarak 50 piksel."
       2-3 Artist Nested Loops 9: "Kita akan menyelesaikan gambar ini\ndengan menambahkan
-        bunga kita. \r\n\r\nulangi bentuk belah ketupat 12 kali untuk menggambar bunga."
+        bunga kita. \\\r\n\\\r\nulangi bentuk belah ketupat 12 kali untuk menggambar
+        bunga."
       2-3 Artist Nested Loops Free Play: Bermain bebas, menggambar sesuatu yang keren
         dengan loop bersarang.
       2-3 Bee Conditionals 1: Hai! Aku lebah. Bantu saya mendapatkan nektar dari bunga.
       2-3 Bee Conditionals 10: "Bunga-bunga ungu memiliki 1 atau 0 nektar. Berhati-hatilah
-        untuk tidak mengumpulkan nektar dari bunga ungu jika ia tidak mempunyainya.\r\n"
+        untuk tidak mengumpulkan nektar dari bunga ungu jika ia tidak mempunyainya.\\\r"
       2-3 Bee Conditionals 11: Kumpulkan nektar di bunga yang memilikinya.
       2-3 Bee Conditionals 12: Gunakan pengulangan untuk memeriksa dan mengumpulkan
         nektar dari semua bunga-bunga ini.
@@ -235,8 +236,8 @@ id:
       2-3 Bee Conditionals 14: Kumpulkan nektar dan buatlah madu. Berhati-hatilah
         untk tidak mengumpulkan nektar dari bunga ungu jika ia tidak memilikinya.
       2-3 Bee Conditionals 15: "Pola langkah tangga ini seharusnya terlihat familier.
-        \ \\ r \nr \\ \nDapatkah Anda mengumpulkan nektar hanya dari bunga-bunga yang
-        memiliki beberapa , menggunakan sebagai beberapa blok mungkin?"
+        \ \\\\ r \nr \\\\ \nDapatkah Anda mengumpulkan nektar hanya dari bunga-bunga
+        yang memiliki beberapa , menggunakan sebagai beberapa blok mungkin?"
       2-3 Bee Conditionals 2: Hai! Aku seekor lebah. Bantulah saya mendapatkan nektar
         dari bunga. Gunakan pengulangan.
       2-3 Bee Conditionals 3: Bantu saya kumpulkan nektar dari bunga-bunga ini dan
@@ -262,14 +263,14 @@ id:
         untuk mengumpulkan semua nektar dan membuat madu.
       2-3 Bee Debugging 2: Blok ini benar-benar menggangguku. Perbaiki yang salah
         untuk mengumpulkan semua nektar dan membuat madu.
-      2-3 Bee Debugging 3: "Aduh, yang satu ini menyengat!\r\n\r\nperbaiki\nkesalahannya(s)
+      2-3 Bee Debugging 3: "Aduh, yang satu ini menyengat!\\\r\n\\\r\nperbaiki\nkesalahannya(s)
         untuk mengumpulkan semua madu bunganya."
       2-3 Bee Debugging 4: Blok ini benar-benar menggangguku. Perbaiki yang salah
         untuk mengumpulkan semua nektar dan membuat madu.
       2-3 Bee Debugging 5: Blok ini benar-benar menggangguku. Perbaiki yang salah
         untuk mengumpulkan semua nektar dan membuat madu. Sekarang Anda bisa menggunakan
         "jalankan" dan "langkah".
-      2-3 Bee Debugging 6: "Apa yang tantangan yang manis! \\ r \n\\ r \nPerbaiki
+      2-3 Bee Debugging 6: "Apa yang tantangan yang manis! \\\\ r \n\\\\ r \nPerbaiki
         \nkesalahan (s) untuk mengumpulkan semua nektar.\n "
       2-3 Bee Debugging 7: Blok ini benar-benar menggangguku. Perbaiki yang salah
         untuk mengumpulkan semua nektar dan membuat madu.
@@ -282,15 +283,15 @@ id:
       2-3 Bee Functions 1: Fungsi adalah blok kode yang melakukan suatu tugas. Gunakan
         fungsi "dapatkan 2 nektar" untuk mengumpulkan nektar dari setiap bunga.
       2-3 Bee Functions 10: "Bunga ungu berubah antara 1 atau 0 nektar setiap kali
-        Anda menjalankan teka - teki .   \\ r \n\\ r \nBuat  sebuah  fungsi yang mengumpulkan
-        nektar hanya dari bunga ungu yang memiliki nektar.\n \n"
-      2-3 Bee Functions 2: "Fungsi adalah blok kode yang melakukan suatu tugas.  \\
-        r \n\\ r \nGunakan `mendapatkan 5` fungsi untuk mendapatkan 5 saripati pada
+        Anda menjalankan teka - teki .   \\\\ r \n\\\\ r \nBuat  sebuah  fungsi yang
+        mengumpulkan nektar hanya dari bunga ungu yang memiliki nektar."
+      2-3 Bee Functions 2: "Fungsi adalah blok kode yang melakukan suatu tugas.  \\\\
+        r \n\\\\ r \nGunakan `mendapatkan 5` fungsi untuk mendapatkan 5 saripati pada
         suatu waktu."
       2-3 Bee Functions 3: Kumpulkan semua madu bunga dari setiap bunga.
-      2-3 Bee Functions 4: "The ` bergerak dan mendapatkan nectar` fungsi \nternyata
+      2-3 Bee Functions 4: "The `bergerak dan mendapatkan nectar` fungsi \nternyata
         lebah, mengumpulkan nektar, dan kemudian kembali lebah ke tempat itu dimulai.
-        \ \\ r \n\\ r \nGunakan fungsi untuk mengumpulkan semua nektar.\n \n"
+        \ \\\\ r \n\\\\ r \nGunakan fungsi untuk mengumpulkan semua nektar."
       2-3 Bee Functions 5: Sekarang ada lebih banyak nektar di bunga-bunganya. Sunting
         fungsi yang diberikan sehingga ia mengumpulkan 4 nektar dan gunakan untuk
         mengumpulkan semua nektar dari bunga.
@@ -329,17 +330,17 @@ id:
       2-3 Bee Loops 4: Gunakan perulangan serupa sebagai teka-teki terakhir, tetapi
         gunakan sebuah belokan di dalamnya.
       2-3 Bee Loops 4A: "Berapa kali loop bisa membantu Anda dalam teka-teki ini ?
-        \ \\ r \n\\ r \nLoops adalah teman Anda! Gunakan sebuah beberapa dari mereka
-        untuk menyelesaikan ini teka-teki dengan paling sedikit blok mungkin.\n \n"
+        \ \\\\ r \n\\\\ r \nLoops adalah teman Anda! Gunakan sebuah beberapa dari
+        mereka untuk menyelesaikan ini teka-teki dengan paling sedikit blok mungkin."
       2-3 Bee Loops 5: Gunakan perulangan untuk menuruni tangga dan mengumpulkan nektar.
       2-3 Bee Loops 6: Gunakan perulangan untuk mengumpulkan nektar dari bunga masing-masing
         dan membuat madu pada setiap sarang lebah.
       2-3 Bee Loops 7: Tempatkan blok-blok ini menjadi sebuah perulangan untuk mengumpulkan
         nektar dari setiap bunga.
       2-3 Bee Loops 8: "Bunga ungu ini memiliki jumlah nektar yang berbeda setiap
-        kali Anda menjalankan teka-teki. \\ r \n\\ r \nGunakan `sementara loop nectar`
-        untuk mengumpulkan semua nektar. \\ r \n\\ r \nlingkaran ini akan berjalan
-        selama kondisi benar, dalam hal ini `nektar> 0`."
+        kali Anda menjalankan teka-teki. \\\\ r \n\\\\ r \nGunakan `sementara loop
+        nectar` untuk mengumpulkan semua nektar. \\\\ r \n\\\\ r \nlingkaran ini akan
+        berjalan selama kondisi benar, dalam hal ini `nektar> 0`."
       2-3 Bee Loops 9: Perulangan selagi dapat melakukan tindakan yang sama seperti
         pernyataan "jika maka" dalam sebuah perulangan. Tambahkan sebuah perulangan
         selagi ke kode ini untuk melakukan tugas yang sama.
@@ -386,7 +387,7 @@ id:
         menggunakan 5 balok yang berjenis sama?
       2-3 Maze Loops 17: Bawa aku ke bunga matahari!
       2-3 Maze Loops 18: "Bawa aku ke bunga matahari dengan menggunakan blok sesedikit
-        mungkin!  \\ r \n\\ r \nCobalah menggunakan salah satu `repeat` lingkaran
+        mungkin!  \\\\ r \n\\\\ r \nCobalah menggunakan salah satu `repeat` lingkaran
         dalam lain untuk mengurangi jumlah kode yang Anda butuhkan."
       2-3 Maze Loops 19: Bawa aku ke bunga matahari!
       2-3 Maze Loops 20: Antarkan aku ke Bunga Matahari dengan menggunakan blok seminimal
@@ -421,6 +422,8 @@ id:
         lima blok?
       2-3 maze sq16: Ok, yang satu ini serupa tapi sedikit berbeda. Bisakah kamu lakukan
         hanya dengan 5 blok?
+      2-3: "Bunga-bunga ungu memiliki 1 atau 0 nektar. Berhati-hatilah untuk tidak
+        mengumpulkan nektar dari bunga ungu jika ia tidak mempunyainya.\\\r"
       2-3level1: Bantulah si burung menangkap si babi nakal dengan menggerakannya
         ke depan
       20hr_farmer_stage9_1: Hi, saya seorang petani. Saya butuh bantuan Anda untuk
@@ -496,7 +499,7 @@ id:
       4-5 Artist 11: Lengkapi garis-garis hijau ini. Garis-garis ini panjangnya 300
         piksel dan terpisah sejauh 15 piksel.
       4-5 Artist 2: "Loop kode ini menggunakan blok `repeat` \nuntuk menyelesaikan
-        kuadrat.\n \n"
+        kuadrat."
       4-5 Artist 3.5: Baik, coba pikirkan apa yang akan terjadi jika anda menjalankan
         kode ini (atau tekan "Jalankan" untuk mencobanya). Lalu, lakukan berulang
         kali hingga cukup untuk menyelesaikan gambarnya. Warnanya (mungkin) akan berbeda-beda
@@ -623,13 +626,13 @@ id:
         kali putaran yang kamu butuhkan agar putaran dapat menggambar sebuah lingkaran
         penuh?'
       4-5 Artist Patterns 12: "Jika Anda membuat lingkaran lain seperti ini, tapi
-        belok kiri bukan kanan, apa yang terjadi? \\ r \n\\ r \nDapatkah Anda mengulangi
-        semua itu untuk menarik gelombang ini?"
+        belok kiri bukan kanan, apa yang terjadi? \\\\ r \n\\\\ r \nDapatkah Anda
+        mengulangi semua itu untuk menarik gelombang ini?"
       4-5 Artist Patterns 13: "Sekarang mari kita lingkaran yang semuanya empat kali
         untuk membuat bingkai foto ini. Hati-hati untuk sudut - Anda tidak bisa hanya
-        mengubah 90 derajat! \\ r \n\\ r \nJika  perulangan  suatu 3 derajat 60 kali
-        membuat  sebuah \nsetengah lingkaran, yang ini blok kode akan membuat  sebuah
-        lingkaran kuartal tambahan untuk sudut?\n \n"
+        mengubah 90 derajat! \\\\ r \n\\\\ r \nJika  perulangan  suatu 3 derajat 60
+        kali membuat  sebuah \nsetengah lingkaran, yang ini blok kode akan membuat
+        \ sebuah lingkaran kuartal tambahan untuk sudut?"
       4-5 Artist Patterns 2: Jika kamu meletakkan putaran kotakmu di dalam putaran
         lainnya, maka putaran tersebut dipanggil putaran bersarang. Apa yang kamu
         butuhkan untuk menambah putaran terluarmu untuk memastikan semua 15 kotak
@@ -646,19 +649,19 @@ id:
       4-5 Artist Patterns 5: Mari kita ulangi untuk membuat satu baris berisi 6 berlian.
         Perhatikan bahwa kami mengubah kode belah ketupat kami untuk mengulangi sebanyak
         3 kali bukan 2 - menurutmu mengapa bisa berlaku seperti itu?
-      4-5 Artist Patterns 6: Berapa kali kamu perlu mengulang blok ini menggambar
-        kisi-kisi berisi belah ketupat secara penuh?
+      4-5 Artist Patterns 6: "Berapa kali kamu perlu untuk\nmengulang blok ini untuk
+        menggambar kisi-kisi belah ketupat secara penuh?\\\r\n\\\r"
       4-5 Artist Patterns 7: Mari kita mengubah kode dari teka-teki terakhir untuk
         membuat pola ini lebih rumit. Perhatikan bagaimana belah ketupatnya bertumpuk
         sekarang, cobalah mengubah "melompat mundur" pertama dari 100 menjadi 50 (sejauh
         setengahnya) - sekarang sejauh manakah sang seniman harus melompat di "melompat
         mundur" kedua?
-      4-5 Artist Patterns 8: "Gunakan satu  lingkaran untuk menggambar segi enam ini
-        dengan 40 sisi pixel  dan sudut 60 derajat.\n \n"
+      4-5 Artist Patterns 8: Gunakan satu  lingkaran untuk menggambar segi enam ini
+        dengan 40 sisi pixel  dan sudut 60 derajat.
       4-5 Artist Patterns 9.5: Mari kita ulangi kode ini untuk menggambar dua baris
         segienam. Perhatikan bagaimana baris keduanya bergeser ke kanan.
       4-5 Artist Patterns 9: "Sekarang ulangi kode ini 3 kali dan\ngambar leruh baris.
-        \r\n\r\nsetiap segienam ukurannya 80 piksel dari yang terjauh\ntitik kiri
+        \\\r\n\\\r\nsetiap segienam ukurannya 80 piksel dari yang terjauh\ntitik kiri
         ke kanan."
       4-5 Artist Patterns Free Play: |-
         Bermain bebas - cobalah membuat
@@ -681,17 +684,17 @@ id:
         Gunakan blok jika/jika tidak untuk mengumpulkan nektar jika ada bunga, lain
         untuk membuat madu (karena ada sarang lebah).
       4-5 Bee Conditionals 6: "Saya tidak yakin memiliki beberapa banyak nektar\nbunga
-        ini, tapi aku tahu itu baik 1, 2, atau 3 menit jalan kaki. \r\n\r\nMenggabungkan
+        ini, tapi aku tahu itu baik 1, 2, atau 3 menit jalan kaki. \\\r\n\\\r\nMenggabungkan
         blok bersyarat (`jika` dan/atau `jika/jika tidak`) hanya untuk mendapatkan
-        nektar sebanyak banyaknya seperti bunga itu. \r\n\r\nIngat, jumlah nektar
+        nektar sebanyak banyaknya seperti bunga itu. \\\r\n\\\r\nIngat, jumlah nektar
         yang dapat mengubah masing-masing\nsaat anda menjalankan teka-teki!"
-      4-5 Bee Conditionals 7: "Bunga ini bisa memiliki 3, 2,\natau 1 madu bunga. \r\n\r\nlengkapi
+      4-5 Bee Conditionals 7: "Bunga ini bisa memiliki 3, 2,\natau 1 madu bunga. \\\r\n\\\r\nlengkapi
         fungsi ' periksa bunga ungu ' dan gunakan itu\nuntuk mengumpulkan semua madu
         bunga pada bunga."
-      4-5 Bee Conditionals 8: "Tuliskan fungsi untuk `check flower make honey`. \\
-        r \n\\ r \nAnda fungsi harus memeriksa apakah bunga ungu memiliki 3, 2, atau
-        1 nektar dan mendapatkan semua nektar. \\ r \nKemudian, bergerak maju dan\n
-        membuat madu."
+      4-5 Bee Conditionals 8: "Tuliskan fungsi untuk `check flower make honey`. \\\\
+        r \n\\\\ r \nAnda fungsi harus memeriksa apakah bunga ungu memiliki 3, 2,
+        atau 1 nektar dan mendapatkan semua nektar. \\\\ r \nKemudian, bergerak maju
+        dan\n membuat madu."
       4-5 Bee Conditionals Assessment 1: 'Penilaian: Kode ini salah. Selesaikan fungsi
         "mendapatkan nektar atau membuat madu", lalu panggilkan untuk mengumpulkan
         semua nektar dan madu. Ingat bahwa bunga-bunga ungu dapat memiliki 3, 2 atau
@@ -763,45 +766,45 @@ id:
         Cepat bawa si zombie ke bunga matahari! Bisakah
         kamu memecahkan teka-teki di bawah 11 balok?
       4-5 Maze 8: "Antarkan zombie ke bunga matahari dengan menggunakan blok seminimal
-        yang anda bisa. \r\n(Hindari chompers!)"
-      4-5 Maze 9: "Sekarang kita mempunyai balok yang disebut 'ulangi hingga' \r\nBalok
+        yang anda bisa. \\\r\n(Hindari chompers!)"
+      4-5 Maze 9: "Sekarang kita mempunyai balok yang disebut 'ulangi hingga' \\\r\nBalok
         itu akan membantu kita untuk mengiterasi perintah hingga si zombie mendapatkan
-        bunga matahari \r\n\r\nGunakan balok baru ini untuk memecahkan teka-teki dengan
-        perintah seminimal mungkin."
+        bunga matahari \\\r\n\\\r\nGunakan balok baru ini untuk memecahkan teka-teki
+        dengan perintah seminimal mungkin."
       4-5 Maze Assessment 1: 'Penilaian: Dapatkan bunga matahari mungkin dengan menggunakan
         beberapa blok.'
       4-5 Maze Conditionals 1: |-
         Gunakan blok `repeat until`
         untuk mendapatkan zombie untuk bunga matahari.
       4-5 Maze Conditionals 10: "Anda dapat menambahkan hanya 3 blok untuk\nmembantu
-        zombie memecahkan sebuah masalah labirin yang lebih lengkap? \r\n\r\nJika
+        zombie memecahkan sebuah masalah labirin yang lebih lengkap? \\\r\n\\\r\nJika
         anda melakukannya dengan benar, dia\ndapat berjalan melengkung yang tidak
         peduli masalah panjang!"
       4-5 Maze Conditionals 2: |-
         Gunakan blok `repeat until`
         untuk mendapatkan zombie untuk bunga matahari.
       4-5 Maze Conditionals 3: "Gunakan `jika` block untuk membantu saya\nmemutuskan
-        kapan untuk berbalik. \r\n"
+        kapan untuk berbalik. \\\r"
       4-5 Maze Conditionals 4: |-
         Oke, selesaikan yang ini seperti
         teka-teki terakhir, tapi Anda harus mengingat bagaimana menggunakan blok 'jika' dan 'ulangi sampai'
         bersama-sama.
-      4-5 Maze Conditionals 5: "\"Saya ingin sunflower!\"  \r \r menggunakan pernyataan
+      4-5 Maze Conditionals 5: "\"Saya ingin sunflower!\"  \\\r \\\r menggunakan pernyataan
         'jika' untuk mendapatkan zombie sunflower dengan paling sedikit jumlah blok."
-      4-5 Maze Conditionals 6: "\"Makan sunflower!\" \r \r menggunakan pernyataan
+      4-5 Maze Conditionals 6: "\"Makan sunflower!\" \\\r \\\r menggunakan pernyataan
         'jika' untuk mendapatkan zombie sunflower dengan paling sedikit jumlah blok."
       4-5 Maze Conditionals 7: |-
         Solusi untuk teka-teki ini
         Tidak terlalu berbeda, tapi hati-hati dengan bunga pemakan daging!
       4-5 Maze Conditionals 8: "Blok ' jika/lain' memeriksa kondisi, dan kemudian
-        melakukan satu hal atau lain. \r \r menggunakan blok baru ini untuk mendapatkan
+        melakukan satu hal atau lain. \\\r \\\r menggunakan blok baru ini untuk mendapatkan
         saya ke sunflower."
-      4-5 Maze Conditionals 9: "Satu lagi teka-teki praktek dengan\n`if/else` blok!\r\n\r\nDengan
+      4-5 Maze Conditionals 9: "Satu lagi teka-teki praktek dengan\n`if/else` blok!\\\r\n\\\r\nDengan
         Jejak jari anda untuk melihat jika anda dapat mencari\npada percobaan pertama
         anda."
-      4-5 Maze Conditionals Assessment 1: "** Penilaian: ** menggunakan 'ulangi sampai'
-        dan blok ' jika/lain' untuk mendapatkan saya ke sunflower dalam blok sesedikit
-        mungkin."
+      4-5 Maze Conditionals Assessment 1: "\\*\\* Penilaian: \\*\\* menggunakan 'ulangi
+        sampai' dan blok ' jika/lain' untuk mendapatkan saya ke sunflower dalam blok
+        sesedikit mungkin."
       4-5 Nested Loops 1: 'Selesaikan kode untuk menggambar segitiga ini. Yang pertama
         sudah dikerjakan untuk Anda. Petunjuk: 3 segitiga dalam rotasi 360 derajat.'
       4-5 Nested Loops 11: Bisakah Anda menarik10 kotak trotoar ini menggunakan sebuah
@@ -811,15 +814,15 @@ id:
       4-5 Nested Loops 2: 'Sekarang sarang putaran ini di dalam putaran lain untuk
         menggambar 10 segitiga. Ini disebut putaran "bersarang".  '
       4-5 Nested Loops 3: "Buat sebuah matahari dengan sarang kode permulaan di putaran
-        lain.\r\n\r\nUntuk mendapatkan desain keren ini dengan pusat berlubang, Anda
-        harus melompat maju dengan panjang segitiga sebelum berputar."
+        lain.\\\r\n\\\r\nUntuk mendapatkan desain keren ini dengan pusat berlubang,
+        Anda harus melompat maju dengan panjang segitiga sebelum berputar."
       4-5 Nested Loops 5: Lingkaran yang diberikan kode untuk membuat sebuah kincir
         angin.
       4-5 Nested Loops 6: Bisakah Anda menggambar sebuah segi enam dengan loop kode
         segitiga?
-      4-5 Nested Loops 7: "Loop desain ini 10 kali. \\ r \n\\ r \nBerapa banyak\n
+      4-5 Nested Loops 7: "Loop desain ini 10 kali. \\\\ r \n\\\\ r \nBerapa banyak\n
         yang Anda harus mengubah setiap kali lingkaran anda?"
-      4-5 Nested Loops 8: "Loop bentuk ini sebanyak 6 kali. \r\n\r\nBerapa banyak\nAnda
+      4-5 Nested Loops 8: "Loop bentuk ini sebanyak 6 kali. \\\r\n\\\r\nBerapa banyak\nAnda
         harus memutar tiap kali melakukan loop? "
       4-5 Nested Loops 9: Gambarkan gigi di mulut buaya!
       4-5 Nested Loops Assessment 1: |-
@@ -829,13 +832,13 @@ id:
         Memindahkan saya ke lubang dan mengisinya dengan
         dua sekop tanah, menggunakan `isi` blok.
       4-5 While Loops 2: Pindahkan saya ke tumpukan sampah dan menghapus itu dengan
-        mengaut sendok 5, menggunakan `hapus ` blok.
+        mengaut sendok 5, menggunakan `hapus` blok.
       4-5 While Loops 3: "Gunakan beberapa blok untuk menyelesaikan\nteka-teki ini!
-        \r\n\r\nMemindahkan saya ke tumpukan dan menghapus semua tanah, kemudian pindahkan
-        ke lubang dan isi sepenuhnya."
-      4-5 While Loops 4: "Wow, lihat itu! \r\n\r\nSaya tidak tahu berapa banyak \nsekop
-        tanah yang dibutuhkan lubang ini. \r \nDapatkah Anda menulis sebuah program
-        yang \nterus menggunakan `isi` blok sampai tanah merata?  "
+        \\\r\n\\\r\nMemindahkan saya ke tumpukan dan menghapus semua tanah, kemudian
+        pindahkan ke lubang dan isi sepenuhnya."
+      4-5 While Loops 4: "Wow, lihat itu! \\\r\n\\\r\nSaya tidak tahu berapa banyak
+        \nsekop tanah yang dibutuhkan lubang ini. \\\r \nDapatkah Anda menulis sebuah
+        program yang \nterus menggunakan `isi` blok sampai tanah merata?  "
       4-5 While Loops 5: Wow, sekarang ada dua dalam lubang! Bisakah anda menulis
         sebuah program yang mengisi itu sampai tanahnya sama?
       4-5 While Loops 6: Wow, sekarang ada tumpukan besar di sampah! Bisakah anda
@@ -852,7 +855,8 @@ id:
         Buat
         huruf 'A' ukuran 3x5. Widget diatur dengan dimensi yang salah. Tugas
         pertama Anda adalah mengatur bita kedua menjadi kode biner 8-bit untuk 5: 0000
-        0101. Kemudian mulai masukkan data piksel.
+
+        101.    Kemudian mulai masukkan data piksel.
       'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4': "Kami \nmemulai dengan
         gambar 4x4 yang dibuat Maddie dalam video. Tugas Anda adalah mengisi kisi
         4x4 dengan warna menggunakan 12-bit per pixel. Berikut adalah persyaratannya:
@@ -863,9 +867,9 @@ id:
         terakhir. Selesaikan gambar dengan mencari\ndua warna yang hilang dan menulis
         kode mereka."
       App Lab test: test
-      Artist - Nested Loops 1: 'Selesaikan kode untuk menggambar segitiga ini. Yang
-        pertama sudah dikerjakan untuk Anda. Petunjuk: 3 segitiga dalam rotasi 360
-        derajat.'
+      Artist - Nested Loops 1: "Lengkapi kode untuk menggambar segitiga ini. Yang\npertama
+        adalah selesaikan satu untuk anda. Tips: 3 sebuah segitiga dalam rotasi 360
+        derajat.\\\r\n\\\r"
       Artist - Nested Loops 11: Bisakah Anda menarik10 kotak trotoar ini menggunakan
         sebuah lingkaran bersarang? Setiap kotak ada 30 piksel.
       Artist - Nested Loops 12: Anda dapat menarik 36 segitiga ini menggunakan sebuah
@@ -983,44 +987,46 @@ id:
       CSD U5 black white images pixelation_2019: |-
         Selesaikan bentuk X dengan
         cara mengetik 0s dan 1s
-      CSD U6 params modify clouds: "#Awan\r\n\r\nProgram ini membuat awan bergerak
-        ketika anda meniup pada elemen pengubah sinyal suara, tapi belum selesai.\r\n\r\n#\nLakukan
-        ini\r\n*Buat fungsi baru 'moveCloud(nama)\" yang akan menggerakkan awan.\r\n
-        \ *\n(Petunjuk: anda akan menggunakan hampir semua kode yang sama sebagai
-        fungsi 'moveCloud0')\r\n*\nPanggil fungsi` moveCloud (nama) `Anda yang baru
-        di dalam blok, satu kali untuk \nsetiap nama awan.\r \n * (Petunjuk: ini mirip
-        dengan bagaimana fungsi\n `loopCloud (nama)` dipanggil beberap kali."
-      CSD U6 params modify clouds_2018: "#Awan\r\n\r\nProgram ini membuat awan bergerak
-        ketika anda meniup pada elemen pengubah sinyal suara, tapi belum selesai.\r\n\r\n#\nLakukan
-        ini\r\n*Buat fungsi baru 'moveCloud(nama)\" yang akan menggerakkan awan.\r\n
-        \ *\n(Petunjuk: anda akan menggunakan hampir semua kode yang sama sebagai
-        fungsi 'moveCloud0')\r\n*\nPanggil fungsi` moveCloud (nama) `Anda yang baru
-        di dalam blok, satu kali untuk \nsetiap nama awan.\r \n * (Petunjuk: ini mirip
-        dengan bagaimana fungsi\n `loopCloud (nama)` dipanggil beberap kali."
-      CSD U6 params modify planes: "# Multi-pesawat Controller\r \r program ini bergerak
-        tiga pesawat menggunakan accelerometer papan dan layar kotak centang.  Sekarang,
-        hanya pesawat merah bekerja. \r \r # This\r melakukan * membuat baru 'movePlane(name)'
-        fungsi yang dapat memindahkan apapun pesawat. \r * memanggil fungsi 'movePlane(name)'
-        dalam blok acara, sehingga hanya bergerak ketika dengan kotak centang dicentang.
-        \r \r _Challenge: Sekarang pesawat bergerak terlalu cepat.  Dapatkah Anda
-        mengetahui bagaimana untuk mengubah kode sehingga mereka bergerak lebih lambat?
-        _zxsxXXsx"
-      CSD U6 params modify planes_2018: "# Multi-pesawat Controller\r \r program ini
+      CSD U6 params modify clouds: "# Awan\\\r\n\n\\\r\nProgram ini membuat awan bergerak
+        ketika anda meniup pada elemen pengubah sinyal suara, tapi belum selesai.\\\r\n\\\r\n\n#
+        \n\nLakukan ini\\\r\n\\*Buat fungsi baru 'moveCloud(nama)\" yang akan menggerakkan
+        awan.\\\r\n  \\*\n(Petunjuk: anda akan menggunakan hampir semua kode yang
+        sama sebagai fungsi 'moveCloud0')\\\r\n\\*\nPanggil fungsi`moveCloud (nama)`Anda
+        yang baru di dalam blok, satu kali untuk \nsetiap nama awan.\\\r \n\n-   (Petunjuk:
+        ini mirip dengan bagaimana fungsi\n    `loopCloud (nama)` dipanggil beberap
+        kali."
+      CSD U6 params modify clouds_2018: "# Awan\\\r\n\n\\\r\nProgram ini membuat awan
+        bergerak ketika anda meniup pada elemen pengubah sinyal suara, tapi belum
+        selesai.\\\r\n\\\r\n\n# \n\nLakukan ini\\\r\n\\*Buat fungsi baru 'moveCloud(nama)\"
+        yang akan menggerakkan awan.\\\r\n  \\*\n(Petunjuk: anda akan menggunakan
+        hampir semua kode yang sama sebagai fungsi 'moveCloud0')\\\r\n\\*\nPanggil
+        fungsi`moveCloud (nama)`Anda yang baru di dalam blok, satu kali untuk \nsetiap
+        nama awan.\\\r \n\n-   (Petunjuk: ini mirip dengan bagaimana fungsi\n    `loopCloud
+        (nama)` dipanggil beberap kali."
+      CSD U6 params modify planes: "# Multi-pesawat Controller\\\r \\\r program ini
         bergerak tiga pesawat menggunakan accelerometer papan dan layar kotak centang.
-        \ Sekarang, hanya pesawat merah bekerja. \r \r # This\r melakukan * membuat
-        baru 'movePlane(name)' fungsi yang dapat memindahkan apapun pesawat. \r *
-        memanggil fungsi 'movePlane(name)' dalam blok acara, sehingga hanya bergerak
-        ketika dengan kotak centang dicentang. \r \r _Challenge: Sekarang pesawat
-        bergerak terlalu cepat.  Dapatkah Anda mengetahui bagaimana untuk mengubah
-        kode sehingga mereka bergerak lebih lambat? _zxsxXXsx"
-      CSD U6 params modify planes_2019: "# Multi-pesawat Controller\r \r program ini
-        bergerak tiga pesawat menggunakan accelerometer papan dan layar kotak centang.
-        \ Sekarang, hanya pesawat merah bekerja. \r \r # This\r melakukan * membuat
-        baru 'movePlane(name)' fungsi yang dapat memindahkan apapun pesawat. \r *
-        memanggil fungsi 'movePlane(name)' dalam blok acara, sehingga hanya bergerak
-        ketika dengan kotak centang dicentang. \r \r _Challenge: Sekarang pesawat
-        bergerak terlalu cepat.  Dapatkah Anda mengetahui bagaimana untuk mengubah
-        kode sehingga mereka bergerak lebih lambat? _zxsxXXsx"
+        \ Sekarang, hanya pesawat merah bekerja. \\\r \\\r # This\\\r melakukan \\*
+        membuat baru 'movePlane(name)' fungsi yang dapat memindahkan apapun pesawat.
+        \\\r \\* memanggil fungsi 'movePlane(name)' dalam blok acara, sehingga hanya
+        bergerak ketika dengan kotak centang dicentang. \\\r \\\r \\_Challenge: Sekarang
+        pesawat bergerak terlalu cepat.  Dapatkah Anda mengetahui bagaimana untuk
+        mengubah kode sehingga mereka bergerak lebih lambat? \\_zxsxXXsx"
+      CSD U6 params modify planes_2018: "# Multi-pesawat Controller\\\r \\\r program
+        ini bergerak tiga pesawat menggunakan accelerometer papan dan layar kotak
+        centang.  Sekarang, hanya pesawat merah bekerja. \\\r \\\r # This\\\r melakukan
+        \\* membuat baru 'movePlane(name)' fungsi yang dapat memindahkan apapun pesawat.
+        \\\r \\* memanggil fungsi 'movePlane(name)' dalam blok acara, sehingga hanya
+        bergerak ketika dengan kotak centang dicentang. \\\r \\\r \\_Challenge: Sekarang
+        pesawat bergerak terlalu cepat.  Dapatkah Anda mengetahui bagaimana untuk
+        mengubah kode sehingga mereka bergerak lebih lambat? \\_zxsxXXsx"
+      CSD U6 params modify planes_2019: "# Multi-pesawat Controller\\\r \\\r program
+        ini bergerak tiga pesawat menggunakan accelerometer papan dan layar kotak
+        centang.  Sekarang, hanya pesawat merah bekerja. \\\r \\\r # This\\\r melakukan
+        \\* membuat baru 'movePlane(name)' fungsi yang dapat memindahkan apapun pesawat.
+        \\\r \\* memanggil fungsi 'movePlane(name)' dalam blok acara, sehingga hanya
+        bergerak ketika dengan kotak centang dicentang. \\\r \\\r \\_Challenge: Sekarang
+        pesawat bergerak terlalu cepat.  Dapatkah Anda mengetahui bagaimana untuk
+        mengubah kode sehingga mereka bergerak lebih lambat? \\_zxsxXXsx"
       CSDU4 - AppLab - 1: |-
         Baca dokumentasi untuk
         penColor() dan penWidth() sebelum menggunakannya untuk menggambar bujur sangkar biru.
@@ -1093,7 +1099,7 @@ id:
       Course 2 Maze Loops 1: Anda bisa mendapatkan saya untuk babi menggunakan 5 blok?
       Course 4 Artist 1: 'Bantu saya menggambar sebuah kotak. (Tiap garis panjangnya
         200 piksel) '
-      Course 4 Artist 10: "Klik di sini untuk melihat petunjuk lengkap lagi!\r\n\r\nInilah
+      Course 4 Artist 10: "Klik di sini untuk melihat petunjuk lengkap lagi!\\\r\n\\\r\nInilah
         kode untuk bentuk yang menarik. Apa yang terjadi saat Anda mengulanginya berkali-kali,
         berputar di antara setiap pengulangan?\nPerhatikan bahwa berputar dalam bentuk
         ini bertambah hingga 420 derajat, yang berarti bahwa saat seniman Anda menggambar,
@@ -1103,7 +1109,7 @@ id:
         coba dan salah. Anda tidak diharapkan untuk mendapatkan gambar sempurna untuk
         pertama kalinya. Ingin melihat lebih banyak petunjuk? Klik disini!
       Course 4 Artist 12: "Ingin melihat untuk kedua kalinya desain inspirasi\natau
-        petunjuknya? Klik di sini!\r\n\r\nJika tidak, buat sendiri desainnya!"
+        petunjuknya? Klik di sini!\\\r\n\\\r\nJika tidak, buat sendiri desainnya!"
       Course 4 Artist 13: |-
         Masih bermain? Ini ada kanvas kosong di mana
         Anda dapat mendesain apa saja yang Anda inginkan!
@@ -1133,17 +1139,17 @@ id:
         Ingat bentuk ini? Sekarang kami akan
         membiarkan Anda membuatnya tanpa memberikan satu blok pun untuk memulai!
       Course 4 Artist 9: "Putar rancangan ini 10 kali dan pastikan untuk memutar di
-        antara setiap bentuk yang digambar. \r\n"
+        antara setiap bentuk yang digambar. \\\r"
       Course 4 Artist Binary 1: "Berikut adalah fungsi yang mengambil  deretan biner
         dari 1 dan 0 dan menginstruksikan artis untuk mengikuti mereka dari kiri ke
         kanan, dari atas ke bawah. Seniman akan mengisi-dalam kotak ketika melihat
-        1 dan mengabaikan alun-alun saat melihat 0. \r\n\r \nJalankan kode ini untuk
-        melihat bagaimana seniman menggunakan biner untuk menggambar pola ini."
+        1 dan mengabaikan alun-alun saat melihat 0. \\\r\n\\\r \nJalankan kode ini
+        untuk melihat bagaimana seniman menggunakan biner untuk menggambar pola ini."
       Course 4 Artist Binary 1a: "Berikut adalah fungsi yang mengambil  deretan biner
         dari 1 dan 0 dan menginstruksikan artis untuk mengikuti mereka dari kiri ke
         kanan, dari atas ke bawah. Seniman akan mengisi-dalam kotak ketika melihat
-        1 dan mengabaikan alun-alun saat melihat 0. \r\n\r \nJalankan kode ini untuk
-        melihat bagaimana seniman menggunakan biner untuk menggambar pola ini."
+        1 dan mengabaikan alun-alun saat melihat 0. \\\r\n\\\r \nJalankan kode ini
+        untuk melihat bagaimana seniman menggunakan biner untuk menggambar pola ini."
       Course 4 Artist Binary 2: Manakah dari deretan biner ini yang bisa Anda putar
         8 kali untuk menggambar gambar ini?
       Course 4 Artist Binary 3: |-
@@ -1161,7 +1167,7 @@ id:
       Course 4 Artist Binary Free Play 2: 'Bebas Bermain: Inilah kanvas kosong yang
         bisa Anda pakai.  Selamat bersenang-senang!'
       Course 4 Artist Binary Free Play 2a: "Berikut adalah kanvas dengan resolusi
-        yang lebih tinggi\nuntuk menggambar - 16 piksel kali 16 piksel!\r \n\r\nLihat
+        yang lebih tinggi\nuntuk menggambar - 16 piksel kali 16 piksel!\\\r \n\\\r\nLihat
         apa yang terjadi jika kita\nberkreasi dengan bit?"
       Course 4 Artist Binary Free Play 2b: Klik di sini untuk melihat petunjuk.
       Course 4 Artist Binary Free Play: |-
@@ -1173,7 +1179,7 @@ id:
       Course 4 Artist Binary ryan: "Biner adalah cara untuk mewakili informasi dengan
         yang hanya menggunakan dua pilihan. Di sini, kita akan menggunakan pilihan
         \"off\" \n(ditunjukkan dengan angka 0) dan \"on\" (ditunjukkan oleh angka
-        1).  \r\n\r\nKami telah memberi anda kisi \"piksel\" yang dapat Anda lalui
+        1).  \\\r\n\\\r\nKami telah memberi anda kisi \"piksel\" yang dapat Anda lalui
         dan buat rancangan dengan hanya memutar kotak tertentu. Dapatkah Anda membuat
         seniman menggambar \"01010101\" dalam biner \ndi baris pertama?"
       Course 4 Artist For Loops 1: |-
@@ -1187,7 +1193,7 @@ id:
       Course 4 Artist For Loops 11a: "Mari kita gabungkan semuanya! Dengan menggunakan\npengetahuan
         Anda tentang loop 'untuk' dan variabel 'pencacah', buat gambar ini\ndi mana
         tiap bentuk memiliki dua sisi lebih dari yang terakhir. Pastikan tiap sisi\npanjangnya
-        10 kali jumlah sisi dalam poligon.\r\n\r\nSangat sedikit\nkode yang disediakan
+        10 kali jumlah sisi dalam poligon.\\\r\n\\\r\nSangat sedikit\nkode yang disediakan
         untuk Anda."
       Course 4 Artist For Loops 14: "Jika Anda putar sedikit lebih atau kurang dari
         biasanya untuk bentuk, itu akan menciptakan efek yang anggun. Coba gunakan
@@ -1200,7 +1206,7 @@ id:
         Saya sudah masukkan kode untuk menggambar sebuah
         segitiga di dalam sebuah loop untuk dihitung dari 50 sampai 100 kali 10. CATATAN: Pastikan
         Anda melihat kode sebelum Anda menekan "Run".
-      Course 4 Artist For Loops 3: |
+      Course 4 Artist For Loops 3: |-
         Gunakan teka-teki terakhir sebagai rujukan
         untuk menyelesaikan yang satu ini. Segitiga terkecil memiliki sisi 20 piksel, yang terbesar sisinya 200 piksel, dan tiap segitiga berukuran 20 piksel lebih besar dari segitiga terakhir.
       Course 4 Artist For Loops 4: "Bagaimana Anda akan memodifikasi apa yang telah
@@ -1214,7 +1220,7 @@ id:
         kode dari level terakhir untuk mendapatkan ini!
       Course 4 Artist For Loops 8: "Hanya satu perubahan kecil pada kode\ndari gambar
         terakhir dapat menghasilkan gambar ini. Anda bisa mencari tahu\nperubahan
-        apa itu?\r\n\r\nPetunjuk: Anda perlu menghapus sesuatu!"
+        apa itu?\\\r\n\\\r\nPetunjuk: Anda perlu menghapus sesuatu!"
       Course 4 Artist For Loops 8a: Hanya sedikit perubahan pada kode dari gambar
         terakhir yang bisa membuat gambar ini. Bisakah kamu mencari tahu apa perubahan
         itu?
@@ -1223,12 +1229,12 @@ id:
         tahu cara menggunakan semua yang telah Anda pelajari untuk membuat gambar poligon ini,
         semua sisi berukuran 40 piksel?
       Course 4 Artist For Loops Challenge_a: "Dapatkah Anda mencari tahu cara\nmenggunakan
-        semua yang Anda pelajari untuk membuat gambar ini?\r\n\r\nButuh\npetunjuk?
+        semua yang Anda pelajari untuk membuat gambar ini?\\\r\n\\\r\nButuh\npetunjuk?
         Klik di sini."
       Course 4 Artist For Loops inspire: "Inspirasi Bermain Bebas: Sekarang Anda telah\nbelajar
         semua yang perlu diketahui untuk membuat pola seperti ini! Jika \ngambar ini
         menginspirasi Anda, buatlah sesuatu yang mirip. Jika tidak, buatlah\nsesuatu
-        sendiri.\r\n\r\nButuh petunjuk? Klik di sini."
+        sendiri.\\\r\n\\\r\nButuh petunjuk? Klik di sini."
       Course 4 Artist Functions 1: |-
         Dapatkah Anda menggambar sebuah bujur sangkar berukuran 100
         piksel panjangnya, menggunakan sebuah loop?
@@ -1249,7 +1255,7 @@ id:
         Klik di sini untuk melihat petunjuknya
         lagi.
       Course 4 Artist Inspire: "Ingin melihat untuk kedua kalinya desain inspirasi\natau
-        petunjuknya? Klik di sini!\r\n\r\nJika tidak, buat sendiri desainnya!"
+        petunjuknya? Klik di sini!\\\r\n\\\r\nJika tidak, buat sendiri desainnya!"
       Course 4 Artist Params 13: |-
         Bermain bebas: Berikut adalah fungsi-fungsi yang telah Anda
         tulis, dan beberapa lagi untuk Anda mainkan. Gambarlah sesuatu yang keren!
@@ -1264,34 +1270,35 @@ id:
         50 piksel. "
       Course 4 Artist Params 8: "Dapatkah Anda mencari tahu cara menggambar\nbentuk
         ini? Berikut adalah petunjuk untuk membuat fungsi baru dengan 6 sisi yang
-        disebut heksagon. \n"
+        disebut heksagon. "
       Course 4 Artist Params 9: "Apakah Anda ingat saat kita menggunakan loop \npencacah
         tapi menghapus loop di dalamnya? Mari bersenang-senang dan gunakan fungsi
         \"menggambar\nbentuk\" dengan parameter \"sisi\" dan \"panjang\". Dapatkah
         Anda membuat ulang\nbentuk ini? Pencacah bujur sangkar harus 5/100/5, pencacah
         segitiga \nharus 10/100/10 dan pencacah heksagon adalah 2/100/2."
-      Course 4 Artist Vars 1: "Mari kita menggambar segitiga sama sisi. \r\n\r\nSegitiga
+      Course 4 Artist Vars 1: "Mari kita menggambar segitiga sama sisi. \\\r\n\\\r\nSegitiga
         ini\npanjang tiap sisinya harus persis 100 piksel."
       Course 4 Artist Vars 11: "Berikut adalah kode yang lebih rumit yang menggunakan\nkonsep
         yang sama dari teka-teki terakhir - harus diatur seperti apakah variabel \"sisi\"
         \nuntuk membuat gambar yang terbuat dari bujur sangkar ini?"
       Course 4 Artist Vars 12: |-
         Mari kita atur variabel "sisi" ke
-        5. Semakin banyak sisi yang kita tambahkan pada algoritma ini, semakin besar pula yang seluruh pola ini
-        dapatkan! Perhatikan bahwa ada variabel lain yang disebut "panjang". Sekarang kita bisa
-        gunakan itu di manapun ada "bergerak maju." Atur variabel "panjang"
-        menjadi 75 untuk bentuk ini.
+
+        5.  Semakin banyak sisi yang kita tambahkan pada algoritma ini, semakin besar pula yang seluruh pola ini
+            dapatkan! Perhatikan bahwa ada variabel lain yang disebut "panjang". Sekarang kita bisa
+            gunakan itu di manapun ada "bergerak maju." Atur variabel "panjang"
+            menjadi 75 untuk bentuk ini.
       Course 4 Artist Vars 13: "Bila suatu bentuk memiliki banyak sisi, masing-masing\nsisi
-        harus lebih pendek jika Anda ingin keseluruhan pola bisa pas di layar.\n\r\nMari
+        harus lebih pendek jika Anda ingin keseluruhan pola bisa pas di layar.\n\\\r\nMari
         buat ulang algoritme untuk pola yang menakjubkan ini, tapi alih-alih\nmengatur
         variabel 'panjang' secara manual, mari kita gunakan blok matematika dengan
         variabel 'sisi'\ndi dalamnya untuk memastikan bahwa setiap bentuk sesuai.
-        Perimeter\ntiap poligon adalah 300 piksel.\r\nButuh petunjuk? Klik di sini."
+        Perimeter\ntiap poligon adalah 300 piksel.\\\r\nButuh petunjuk? Klik di sini."
       Course 4 Artist Vars 14: "Free Play: Check it out! Sekarang algoritma bersarang
         dalam satu lagi loop. Bereksperimen dengan mengubah nilai variabel Anda dua
-        menggambar pola. \r \r keren untuk lebih efek, mencoba bermain dengan warna!
-        \ Menggunakan acak warna dalam loop untuk melihat bagaimana perubahan desain
-        Anda."
+        menggambar pola. \\\r \\\r keren untuk lebih efek, mencoba bermain dengan
+        warna!  Menggunakan acak warna dalam loop untuk melihat bagaimana perubahan
+        desain Anda."
       Course 4 Artist Vars 2: Daripada menggunakan "bergerak maju oleh 150", blok
         "bergerak" sekarang adalah referensi sebuah variabel yang disebut "panjang."
         Anda dapat mengatur "panjang" sampai 150 menggambar segitiga baru ini?
@@ -1305,10 +1312,10 @@ id:
       Course 4 Artist Vars 6: "Berikut adalah beberapa kode yang dapat menggambar\npoligon
         biasa. Ada variabel baru yang disebut sisi yang diatur ke 4. Dapatkah Anda
         menggunakan\nvariabel sisi (bersama dengan blok matematika) untuk mengubah
-        jumlah yang tepat tidak peduli\nberapa banyak sisi yang ada di dalam poligon?\r\n\r\nKlik
+        jumlah yang tepat tidak peduli\nberapa banyak sisi yang ada di dalam poligon?\\\r\n\\\r\nKlik
         di sini untuk kembali pada\npetunjuk!"
       Course 4 Artist Vars 7: "Gunakan apa yang Anda pelajari dalam teka-teki terakhir\nuntuk
-        membuat heksagon ini menggunakan variabel \"sisi\".\r\n\r\nLihat bagaimana
+        membuat heksagon ini menggunakan variabel \"sisi\".\\\r\n\\\r\nLihat bagaimana
         Anda bisa\nmengubah hanya satu nilai untuk menggambar segitiga, bujur sangkar,
         pentagon, atau oktagon?"
       Course 4 Artist Vars 8: |-
@@ -1317,8 +1324,8 @@ id:
         tetap sama, tidak peduli berapa banyak sisi yang dimilikinya? Petunjuk: Jika
         Anda membagi panjang awal Anda dengan jumlah sisi, panjang tiap
         sisi akan semakin pendek seiring jumlah sisi yang semakin tinggi.
-      Course 4 Bee 1: "Lebah tidak tahu apa itu di bawah awan! \r \r menggunakan blok
-        'Kalau' untuk memeriksa apakah ada bunga di bawah awan. \r \r mendapatkan
+      Course 4 Bee 1: "Lebah tidak tahu apa itu di bawah awan! \\\r \\\r menggunakan
+        blok 'Kalau' untuk memeriksa apakah ada bunga di bawah awan. \\\r \\\r mendapatkan
         nektar satu waktu, hanya jika ada bunga."
       Course 4 Bee 2: |-
         Gunakan blok "jika/jika tidak" untuk memeriksa setiap obyek
@@ -1402,8 +1409,8 @@ id:
       Course 4 Binary 1: "Berikut adalah fungsi yang mengambil deretan biner dari
         1 dan 0 dan menginstruksikan artis untuk mengikuti mereka dari kiri ke kanan,
         dari atas ke bawah. Seniman akan mengisi-dalam kotak ketika melihat 1 dan
-        mengabaikan alun-alun saat melihat 0. \r\n\r \nJalankan kode ini untuk melihat
-        bagaimana seniman menggunakan biner untuk menggambar pola ini. sxsdxsdsd."
+        mengabaikan alun-alun saat melihat 0. \\\r\n\\\r \nJalankan kode ini untuk
+        melihat bagaimana seniman menggunakan biner untuk menggambar pola ini. sxsdxsdsd."
       Course 4 Binary 3: Anda dapat menggambar pola ini dengan perulangan string biner
         tunggal?
       Course 4 Binary 5 (copy 1): String biner 6 digit yang manakah, yang diulangi
@@ -1446,23 +1453,23 @@ id:
         membuat karakter utama Anda melompat 100 piksel. Jalankan program dan gunakan
         fungsi melompat untuk mengumpulkan semua bendera dengan menggerakkan anjing dengan tombol
         panah.
-      Course 4 Play Lab Params 10: "Kami telah menambahkan satu fungsi terakhir untuk\nAnda.\r\n\r\nGunakan
+      Course 4 Play Lab Params 10: "Kami telah menambahkan satu fungsi terakhir untuk\nAnda.\\\r\n\\\r\nGunakan
         pernyataan \"jika\" untuk memprogram permainan Anda untuk memanggil fungsi
-        \"level_up\"\nhanya bila \"player_score\" menjadi lebih besar dari angka tertentu.\r\n\r\nSebagai\ncontoh:
-        \"player_score\"> 6\r\n\r\nMainkan sampai ke level 3\nuntuk pindah ke teka-teki
-        berikutnya. "
+        \"level_up\"\nhanya bila \"player_score\" menjadi lebih besar dari angka tertentu.\\\r\n\\\r\nSebagai\ncontoh:
+        \"player\\_score\"> 6\\\r\n\\\r\nMainkan sampai ke level 3\nuntuk pindah ke
+        teka-teki berikutnya. "
       Course 4 Play Lab Params 2: "Sekarang kita punya bendera yang \nterlalu tinggi
         untuk lompatan kita saat ini! Mari gunakan panah \"naik\" dan \"turun\"\nsehingga
-        kita dapat punya banyak ketinggian melompat. \r\n\r\nKita perlu menambahkan
+        kita dapat punya banyak ketinggian melompat. \\\r\n\\\r\nKita perlu menambahkan
         sebuah parameter\nuntuk fungsi melompat yang disebut \"ketinggian\". Panah
         atas harus  bisa membuat anjing itu\nmelompat 200 piksel dan panah bawah harus
-        membuatnya melompat hanya 100 piksel.\n"
+        membuatnya melompat hanya 100 piksel."
       Course 4 Play Lab Params 3: "Kami telah menambahkan parameter lain ke\nfungsi
         melompat sehingga kita bisa menggunakannya dengan aktor lain. Setiap aktor
         diwakili\ndengan angka, dimulai dari satu. Suntinglah fungsi \"lompat\" sehingga
         fungsi ini memakai\nparameter \"aktor\" untuk membuat karakter yang benar
         melompat. "
-      Course 4 Play Lab Params 4: "Di sini adalah fungsi disebut 'patroli'. \r \r
+      Course 4 Play Lab Params 4: "Di sini adalah fungsi disebut 'patroli'. \\\r \\\r
         mengedit 'patroli' untuk memindahkan kucing 400 piksel dan kemudian turun
         400 piksel."
       Course 4 Play Lab Params 5: Mengedit "patroli" berfungsi untuk menambahkan parameter
@@ -1474,18 +1481,18 @@ id:
         bahkan mendapatkan satu.
       Course 4 Play Lab Params 7: "Mari bersenang-senang! Lihatlah\nkode yang diberikan
         untuk melihat apakah Anda dapat mengetahui apa yang dilakukan setiap blok.
-        \r\nKetika\nAnda sudah selesai, gunakan tombol panah untuk mengendalikan Anjing
-        dan mengumpulkan semua bendera.\r\nCATATAN:\nAnda tidak perlu membuat perubahan
-        pada program"
+        \\\r\nKetika\nAnda sudah selesai, gunakan tombol panah untuk mengendalikan
+        Anjing dan mengumpulkan semua bendera.\\\r\nCATATAN:\nAnda tidak perlu membuat
+        perubahan pada program"
       Course 4 Play Lab Params 8: Menggunakan blok 'Kapan aktor menyentuh' untuk mengirim
         anjing kembali ke atas-kiri hanya jika anjing menyentuh salah satu aktor lain.
       Course 4 Play Lab Params 9: "Berikut adalah permainan kami dari tahap awal,
-        tetapi sebagian besar kode tersembunyi. Ada fungsi baru 'score_points.' \r
-        \r mengedit fungsi sehingga parameter baru yang disebut 'titik' dapat ditambahkan
-        ke 'player_score'. \r \r 'player_score' variabel harus meningkatkan setiap
-        kali kucing anjing tag dengan pie, dan mengurangi setiap kali bahwa kucing
-        Tag anjing dengan sandwich. \r \r Catatan: ketika Anda sudah selesai, klik
-        \"Run\" untuk bermain.  Ketika anjing nilai 6 poin, Anda akan melanjutkan
+        tetapi sebagian besar kode tersembunyi. Ada fungsi baru 'score_points.' \\\r
+        \\\r mengedit fungsi sehingga parameter baru yang disebut 'titik' dapat ditambahkan
+        ke 'player_score'. \\\r \\\r 'player\\_score' variabel harus meningkatkan
+        setiap kali kucing anjing tag dengan pie, dan mengurangi setiap kali bahwa
+        kucing Tag anjing dengan sandwich. \\\r \\\r Catatan: ketika Anda sudah selesai,
+        klik \"Run\" untuk bermain.  Ketika anjing nilai 6 poin, Anda akan melanjutkan
         untuk teka-teki berikutnya. "
       Course 4 Play Lab Vars 1: Saat ini Anda tidak perlu menulis kode apapun, hanya
         memukul "Run" untuk memainkan permainan! Dalam permainan ini, Anda anjing
@@ -1506,26 +1513,26 @@ id:
       Course 4 Play Lab Vars 5: "Mari kita buat permainan! Pertama kita memerlukan\nskor.
         Buat kembali kode yang Anda lihat di level terakhir untuk menetapkan skor\nsampai
         10. "
-      Course 4 Play Lab Vars 6: "Gunakan panah sebelah kanan untuk melempar pai.\r\n\r\nDalam
+      Course 4 Play Lab Vars 6: "Gunakan panah sebelah kanan untuk melempar pai.\\\r\n\\\r\nDalam
         permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel
         \"poin\" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat
         \"ketika aktor 2 menyentuh sesuatu\" untuk memicu penambahan nilai mu. Kamu
         bisa menaikkan variabel mu dengan mengatur \"poin = poin + 1\". Kumpulkan
         nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut."
       Course 4 Play Lab Vars 7: "Bagus, sekarang mari kita pastikan permainan ini
-        tidak terlalu mudah untuk bermain! \r\n\r\nSetiap kali Anjing ( pemeran1)
+        tidak terlalu mudah untuk bermain! \\\r\n\\\r\nSetiap kali Anjing ( pemeran1)
         tertabrak sebua sandwich dari Kucing (pemeran 2), anda harus kehilangan poin.
-        \r\n\r\nMulai dengan\n10 poin jadi itu tidak terlalu susah. Biarkan skor anda
-        turun dari 10 menjadi 0 untuk lulus tingkat."
+        \\\r\n\\\r\nMulai dengan\n10 poin jadi itu tidak terlalu susah. Biarkan skor
+        anda turun dari 10 menjadi 0 untuk lulus tingkat."
       Course 4 Play Lab Vars 9: "Waktu nya permainan bebas! Ini merupakan semua variabel
         yang sudah kita mainkan pada tahap ini, juga beberapa variabel lain jika kamu
-        membutuhkannya!\r\n\r \nPerhatikan sekarang ada sangat banyak blok didalam
+        membutuhkannya!\\\r\n\\\r \nPerhatikan sekarang ada sangat banyak blok didalam
         toolbox kita yang perlu disusun! Sekarang, kita sudah meletakkan setiap potongan
         kedalam sebuah kategori yang sesuai. Ambil waktu sejenak untuk menjelajahi
         semua kemungkinan yang ada. Saat kamu sudah selesai melihat-lihat, buatlah
         sebuah permainan atau cerita menggunakan pengulangan, variabel-variabel, dan
-        kejadian-kejadian. \r\n\r\nPetunjuk:\nskrol kebawah untuk meilhat semua perintah
-        di dalam tempat kerja."
+        kejadian-kejadian. \\\r\n\\\r\nPetunjuk:\nskrol kebawah untuk meilhat semua
+        perintah di dalam tempat kerja."
       Course 4 Play Labs For Loops 1: Mari kita membuat anjing berbicara setiap nomor
         dari 1 hingga 100. Menggunakan loop 'untuk' dan blok counter untuk berbicara
         variabel counter setiap kali loop dijalankan.
@@ -1546,7 +1553,7 @@ id:
       Course 4 Playlab For Loops 5b: Sesuaikan rentang waktu pada loop `for` tersebut
         supaya dua karakter berakhir di tempat yang sama persis.
       Course 4 Playlab For Loops 6b: "Edit loop `for` ini untu membuat sebuah permainan
-        yang akan menyenangkan untuk kamu mainkan!\r\nTekan \"Run\" dan klik Madame
+        yang akan menyenangkan untuk kamu mainkan!\\\r\nTekan \"Run\" dan klik Madame
         Unicorn sebanyak yang kamu bisa. Bisakah kamu mengalahkan nilai 24 kami? "
       Course 4 SCF 1: Gunakan fungsi yang disarankan untuk menggambar empat baris
         segi empat. Apakah kamu memperhatikan bagaimana baris bernomor genap kami
@@ -1587,8 +1594,8 @@ id:
       Course 4 SCV 2: Klik disini untuk melihat petunjuk lagi.
       Course 4 SCV 3: "Sekarang untuk permainan memberi tanda! Tandailah Kucing untuk
         mendapatkan 2 poin. Tandai Pinguin untuk mendapatkan poin 3. Kumpulkan poin
-        10 untuk menang!\r\nTetapi berhati-hatilah, ketika Kucing dan Pinguin saling
-        menandai, itu akan mengurangi poin.\r\n\r\nTambahkan blok yang dibutuhkan
+        10 untuk menang!\\\r\nTetapi berhati-hatilah, ketika Kucing dan Pinguin saling
+        menandai, itu akan mengurangi poin.\\\r\n\\\r\nTambahkan blok yang dibutuhkan
         untuk membuat permainan ini berjalan sesuai dengan yang telah dijelaskan.
         Bagaimana kamu membuat Anjing berpindah kesegala arah menggunakan tanda panah?
         Bagaimana kamu menambahkan poin ketika Anjing menandai Kucing atau Pinguin?
@@ -1608,13 +1615,13 @@ id:
         apapun, cukup tekan "Run"! '
       CourseF_PlayLab_vars10: "Waktu nya permainan bebas! Ini merupakan semua variabel
         yang sudah kita mainkan pada tahap ini, juga beberapa variabel lain jika kamu
-        membutuhkannya!\r\n\r \nPerhatikan sekarang ada sangat banyak blok didalam
+        membutuhkannya!\\\r\n\\\r \nPerhatikan sekarang ada sangat banyak blok didalam
         toolbox kita yang perlu disusun! Sekarang, kita sudah meletakkan setiap potongan
         kedalam sebuah kategori yang sesuai. Ambil waktu sejenak untuk menjelajahi
         semua kemungkinan yang ada. Saat kamu sudah selesai melihat-lihat, buatlah
         sebuah permainan atau cerita menggunakan pengulangan, variabel-variabel, dan
-        kejadian-kejadian. \r\n\r\nPetunjuk:\nskrol kebawah untuk meilhat semua perintah
-        di dalam tempat kerja."
+        kejadian-kejadian. \\\r\n\\\r\nPetunjuk:\nskrol kebawah untuk meilhat semua
+        perintah di dalam tempat kerja."
       CourseF_PlayLab_vars2: |-
         Perlombaan dalam teka-teki terakhir itu sangat tidak
         adil! Ubah variabel `dog_speed` untuk memastikan Anda dapat mengumpulkan lebih banyak
@@ -1629,27 +1636,27 @@ id:
       CourseF_PlayLab_vars5: "Mari kita buat permainan! Pertama kita memerlukan\nskor.
         Buat kembali kode yang Anda lihat di level terakhir untuk menetapkan skor\nsampai
         10. "
-      CourseF_PlayLab_vars6: "Gunakan panah sebelah kanan untuk melempar pai.\r\n\r\nDalam
+      CourseF_PlayLab_vars6: "Gunakan panah sebelah kanan untuk melempar pai.\\\r\n\\\r\nDalam
         permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel
         \"poin\" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat
         \"ketika aktor 2 menyentuh sesuatu\" untuk memicu penambahan nilai mu. Kamu
         bisa menaikkan variabel mu dengan mengatur \"poin = poin + 1\". Kumpulkan
         nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut."
-      CourseF_PlayLab_vars7: "Gunakan panah sebelah kanan untuk melempar pai.\r\n\r\nDalam
+      CourseF_PlayLab_vars7: "Gunakan panah sebelah kanan untuk melempar pai.\\\r\n\\\r\nDalam
         permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel
         \"poin\" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat
         \"ketika aktor 2 menyentuh sesuatu\" untuk memicu penambahan nilai mu. Kamu
         bisa menaikkan variabel mu dengan mengatur \"poin = poin + 1\". Kumpulkan
         nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut."
-      CourseF_PlayLab_vars8: "Gunakan panah sebelah kanan untuk melempar pai.\r\n\r\nDalam
+      CourseF_PlayLab_vars8: "Gunakan panah sebelah kanan untuk melempar pai.\\\r\n\\\r\nDalam
         permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel
         \"poin\" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat
         \"ketika aktor 2 menyentuh sesuatu\" untuk memicu penambahan nilai mu. Kamu
         bisa menaikkan variabel mu dengan mengatur \"poin = poin + 1\". Kumpulkan
         nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut."
       CourseF_PlayLab_vars9: "Bagus, sekarang mari kita pastikan permainan ini tidak
-        terlalu mudah untuk bermain! \r\n\r\nSetiap kali Anjing ( pemeran1) tertabrak
-        sebua sandwich dari Kucing (pemeran 2), anda harus kehilangan poin. \r\n\r\nMulai
+        terlalu mudah untuk bermain! \\\r\n\\\r\nSetiap kali Anjing ( pemeran1) tertabrak
+        sebua sandwich dari Kucing (pemeran 2), anda harus kehilangan poin. \\\r\n\\\r\nMulai
         dengan\n10 poin jadi itu tidak terlalu susah. Biarkan skor anda turun dari
         10 menjadi 0 untuk lulus tingkat."
       Crack Random Substitution: instruksi
@@ -1658,11 +1665,11 @@ id:
       Crack a Caesar Cipher: instruksi
       Crack a Caesar Cipher_2018: instruksi
       Crack a Caesar Cipher_2019: instruksi
-      Food Fight!: "Kami telah menambahkan satu fungsi terakhir untuk\nAnda.\r\n\r\nGunakan
+      Food Fight!: "Kami telah menambahkan satu fungsi terakhir untuk\nAnda.\\\r\n\\\r\nGunakan
         pernyataan \"jika\" untuk memprogram permainan Anda untuk memanggil fungsi
-        \"level_up\"\nhanya bila \"player_score\" menjadi lebih besar dari angka tertentu.\r\n\r\nSebagai\ncontoh:
-        \"player_score\"> 6\r\n\r\nMainkan sampai ke level 3\nuntuk pindah ke teka-teki
-        berikutnya. "
+        \"level_up\"\nhanya bila \"player_score\" menjadi lebih besar dari angka tertentu.\\\r\n\\\r\nSebagai\ncontoh:
+        \"player\\_score\"> 6\\\r\n\\\r\nMainkan sampai ke level 3\nuntuk pindah ke
+        teka-teki berikutnya. "
       FoodFight: Ini adalah contoh sebuah permainan yang dapat Anda buat di play lab.
       FoodFight_2018: Ini adalah contoh sebuah permainan yang dapat Anda buat di play
         lab.
@@ -1767,7 +1774,7 @@ id:
       K-1 Maze Multi 14: Tingkat penilaian
       K-1 Maze Multi 15: Tingkat penilaian
       K-1 Maze Sequence Assessment 1: "Mari kita lihat apa yang telah Anda Pelajari!
-        \r bergerak satu cara, maka lain untuk mendapatkan saya ke babi."
+        \\\r bergerak satu cara, maka lain untuk mendapatkan saya ke babi."
       K-1 artist 1 level 10: |-
         Gambarlah garis putus-putus dengan menggunakan baik blok melompat maupun
         menggambar
@@ -1874,9 +1881,7 @@ id:
         Anda.
       NEW Course 4 Artist Functions 6: 'Dengan menggunakan blok fungsi "meggambar
         persegi", dapat Anda menggambar gambar ini? Petunjuk: setiap persegi terpisah
-        sejauh 20 piksel
-
-'
+        sejauh 20 piksel'
       NEW Course 4 Artist Functions 9: Bisakah Anda menyelesaikan ini dengan menambahkan
         hanya satu blok?
       NEW Course 4 Artist Params 10: 'Buatlah blok fungsi "menggambar segienam" dengan
@@ -2004,17 +2009,20 @@ id:
         Buat
         huruf 'A' ukuran 3x5. Widget diatur dengan dimensi yang salah. Tugas
         pertama Anda adalah mengatur bita kedua menjadi kode biner 8-bit untuk 5: 0000
-        0101. Kemudian mulai masukkan data piksel.
+
+        101.    Kemudian mulai masukkan data piksel.
       Pixelation - Lesson 14 - Make the Letter A_2018: |-
         Buat
         huruf 'A' ukuran 3x5. Widget diatur dengan dimensi yang salah. Tugas
         pertama Anda adalah mengatur bita kedua menjadi kode biner 8-bit untuk 5: 0000
-        0101. Kemudian mulai masukkan data piksel.
+
+        101.    Kemudian mulai masukkan data piksel.
       Pixelation - Lesson 14 - Make the Letter A_2019: |-
         Buat
         huruf 'A' ukuran 3x5. Widget diatur dengan dimensi yang salah. Tugas
         pertama Anda adalah mengatur bita kedua menjadi kode biner 8-bit untuk 5: 0000
-        0101. Kemudian mulai masukkan data piksel.
+
+        101.    Kemudian mulai masukkan data piksel.
       Pixelation - Lesson 15 - Color Shades 4x4: "Kami \nmemulai dengan gambar 4x4
         yang dibuat Maddie dalam video. Tugas Anda adalah mengisi kisi 4x4 dengan
         warna menggunakan 12-bit per pixel. Berikut adalah persyaratannya: \nBaris
@@ -2094,9 +2102,9 @@ id:
         segitiga atau segidelapan?
       Standalone_Artist_9: Sekarang buatlah gambar apapun yang kamu suka! Kamu bahkan
         punya fungsi kosong yang dapat kamu isi untuk membuat apapun yang kamu suka!
-      Testing Quantum Farmer: "Wow, lihat itu! \r\n\r\nSaya tidak tahu berapa banyak
-        \nsekop tanah yang dibutuhkan lubang ini. \r \nDapatkah Anda menulis sebuah
-        program yang \nterus menggunakan `isi` blok sampai tanah merata?  "
+      Testing Quantum Farmer: "Wow, lihat itu! \\\r\n\\\r\nSaya tidak tahu berapa
+        banyak \nsekop tanah yang dibutuhkan lubang ini. \\\r \nDapatkah Anda menulis
+        sebuah program yang \nterus menggunakan `isi` blok sampai tanah merata?  "
       The Vigenere Cipher Widget: instruksi
       The Vigenere Cipher Widget_2018: instruksi
       The Vigenere Cipher Widget_2019: instruksi
@@ -2199,13 +2207,13 @@ id:
         di bawah tanah, tapi di sana bisa jadi gelap. Tempatkan setidaknya 2 obor
         dan tambang setidaknya 2 batu bara.
       aE7: "Jika Anda membuat lingkaran lain seperti ini, tapi belok kiri bukan kanan,
-        apa yang terjadi? \\ r \n\\ r \nDapatkah Anda mengulangi semua itu untuk menarik
-        gelombang ini?"
+        apa yang terjadi? \\\\ r \n\\\\ r \nDapatkah Anda mengulangi semua itu untuk
+        menarik gelombang ini?"
       aE8: "Sekarang mari kita lingkaran yang semuanya empat kali untuk membuat bingkai
         foto ini. Hati-hati untuk sudut - Anda tidak bisa hanya mengubah 90 derajat!
-        \\ r \n\\ r \nJika  perulangan  suatu 3 derajat 60 kali membuat  sebuah \nsetengah
-        lingkaran, yang ini blok kode akan membuat  sebuah lingkaran kuartal tambahan
-        untuk sudut?\n \n"
+        \\\\ r \n\\\\ r \nJika  perulangan  suatu 3 derajat 60 kali membuat  sebuah
+        \nsetengah lingkaran, yang ini blok kode akan membuat  sebuah lingkaran kuartal
+        tambahan untuk sudut?"
       allHallows2017: |-
         Jebaklah karyawan Code.org dalam kotak krayon
         dengan menggambar sebuah bujur sangkar dengan sisi 320 pixel!
@@ -2647,17 +2655,17 @@ id:
         Bisakah kamu membawaku ke babinya dengan
         menggunakan 5 balok yang berjenis sama?
       grade2_PuppyLoops_10: "Guru saya berkata saya harus menyelesaikan\napa yang
-        sudah saya mulai!\r\n\r\nbantu saya untuk menyelesaikan pinwheel saya. bisakah
-        kamu mencari tahu \napa yang salah?"
+        sudah saya mulai!\\\r\n\\\r\nbantu saya untuk menyelesaikan pinwheel saya.
+        bisakah kamu mencari tahu \napa yang salah?"
       grade2_PuppyLoops_2: 'Bisakah kamu mengganti blok lima ini dengan hanya dua
         blok? (Petunjuk: buat perulangan menggunakan blok "Ulangi kali".)'
       grade2_PuppyLoops_4: Gunakan dua perulangan untuk menuju ke si babi dengan menggunakan
         blok lebih sedikit.
       grade2_PuppyLoops_5: Bawa aku ke si babi.
       grade2_PuppyLoops_7: Bawa aku ke bunga matahari!
-      grade2_PuppyLoops_8: "Kode ini untuk kumis kucing\nsalah. \r\n\r\nperbaiki kode
-        ini agar gambar kumisnya sama panjang."
-      grade2_PuppyLoops_9: "Terlihar seperti C pada kode dalam gambar\nterbalik!\r\n\r\nBisakah
+      grade2_PuppyLoops_8: "Kode ini untuk kumis kucing\nsalah. \\\r\n\\\r\nperbaiki
+        kode ini agar gambar kumisnya sama panjang."
+      grade2_PuppyLoops_9: "Terlihar seperti C pada kode dalam gambar\nterbalik!\\\r\n\\\r\nBisakah
         anda membuatnya terlihat seperti C lagi?"
       grade2_puppy_loops2: 'Bisakah kamu mengganti blok lima ini dengan hanya dua
         blok? (Petunjuk: buat perulangan menggunakan blok "Ulangi kali".)'
@@ -2677,17 +2685,17 @@ id:
         itu. Gunakan blok jika/jika tidak untuk mengumpulkan nektar jika ada bunga,
         lain untuk membuat madu (karena ada sarang lebah).
       grade3_ConditionalsElse_6: "Saya tidak yakin memiliki beberapa banyak nektar\nbunga
-        ini, tapi aku tahu itu baik 1, 2, atau 3 menit jalan kaki. \r\n\r\nMenggabungkan
+        ini, tapi aku tahu itu baik 1, 2, atau 3 menit jalan kaki. \\\r\n\\\r\nMenggabungkan
         blok bersyarat (`jika` dan/atau `jika/jika tidak`) hanya untuk mendapatkan
-        nektar sebanyak banyaknya seperti bunga itu. \r\n\r\nIngat, jumlah nektar
+        nektar sebanyak banyaknya seperti bunga itu. \\\r\n\\\r\nIngat, jumlah nektar
         yang dapat mengubah masing-masing\nsaat anda menjalankan teka-teki!"
       grade3_ConditionalsElse_7: "Bunga ini bisa memiliki 3, 2,\natau 1 madu bunga.
-        \r\n\r\nlengkapi fungsi ' periksa bunga ungu ' dan gunakan itu\nuntuk mengumpulkan
-        semua madu bunga pada bunga."
+        \\\r\n\\\r\nlengkapi fungsi ' periksa bunga ungu ' dan gunakan itu\nuntuk
+        mengumpulkan semua madu bunga pada bunga."
       grade3_ConditionalsElse_8: "Tuliskan fungsi untuk `check flower make honey`.
-        \\ r \n\\ r \nAnda fungsi harus memeriksa apakah bunga ungu memiliki 3, 2,
-        atau 1 nektar dan mendapatkan semua nektar. \\ r \nKemudian, bergerak maju
-        dan\n membuat madu."
+        \\\\ r \n\\\\ r \nAnda fungsi harus memeriksa apakah bunga ungu memiliki 3,
+        2, atau 1 nektar dan mendapatkan semua nektar. \\\\ r \nKemudian, bergerak
+        maju dan\n membuat madu."
       grade3_ConditionalsElse_9: 'Penilaian: Kode ini salah. Selesaikan fungsi "mendapatkan
         nektar atau membuat madu", lalu panggilkan untuk mengumpulkan semua nektar
         dan madu. Ingat bahwa bunga-bunga ungu dapat memiliki 3, 2 atau 1 nektar.'
@@ -2708,8 +2716,8 @@ id:
       grade3_Conditionals_11: Kumpulkan nektar dan buatlah madu. Berhati-hatilah untk
         tidak mengumpulkan nektar dari bunga ungu jika ia tidak memilikinya.
       grade3_Conditionals_12: "Pola langkah tangga ini seharusnya terlihat familier.
-        \ \\ r \nr \\ \nDapatkah Anda mengumpulkan nektar hanya dari bunga-bunga yang
-        memiliki beberapa , menggunakan sebagai beberapa blok mungkin?"
+        \ \\\\ r \nr \\\\ \nDapatkah Anda mengumpulkan nektar hanya dari bunga-bunga
+        yang memiliki beberapa , menggunakan sebagai beberapa blok mungkin?"
       grade3_Conditionals_13: 'Penilaian: Kumpulkan semua nektar. Berhati-hatilah
         untuk tidak mengumpulkan nektar dari bunga ungu jika ia tidak mempunyainya.'
       grade3_Conditionals_2: Bantu saya kumpulkan nektar dari bunga-bunga ini dan
@@ -2735,8 +2743,8 @@ id:
       grade3_Debugging_5: Blok ini benar-benar menggangguku. Perbaiki yang salah untuk
         mengumpulkan semua nektar dan membuat madu. Sekarang Anda bisa menggunakan
         "jalankan" dan "langkah".
-      grade3_Debugging_6: "Apa yang tantangan yang manis! \\ r \n\\ r \nPerbaiki \nkesalahan
-        (s) untuk mengumpulkan semua nektar.\n "
+      grade3_Debugging_6: "Apa yang tantangan yang manis! \\\\ r \n\\\\ r \nPerbaiki
+        \nkesalahan (s) untuk mengumpulkan semua nektar.\n "
       grade3_Debugging_7: Blok ini benar-benar menggangguku. Perbaiki yang salah untuk
         mengumpulkan semua nektar dan membuat madu.
       grade3_Debugging_9: Blok ini benar-benar menggangguku. Perbaiki yang salah untuk
@@ -2754,9 +2762,9 @@ id:
         dan buatlah semua madu.
       grade3_Loops_5: Tempatkan blok-blok ini menjadi sebuah perulangan untuk mengumpulkan
         nektar dari setiap bunga.
-      grade3_Loops_6: "Berapa kali loop bisa membantu Anda dalam teka-teki ini ?  \\
-        r \n\\ r \nLoops adalah teman Anda! Gunakan sebuah beberapa dari mereka untuk
-        menyelesaikan ini teka-teki dengan paling sedikit blok mungkin.\n \n"
+      grade3_Loops_6: "Berapa kali loop bisa membantu Anda dalam teka-teki ini ?  \\\\
+        r \n\\\\ r \nLoops adalah teman Anda! Gunakan sebuah beberapa dari mereka
+        untuk menyelesaikan ini teka-teki dengan paling sedikit blok mungkin."
       grade3_Loops_7: 'Setiap bunga berisi satu unit nektar. Kumpulkan nektar dari
         masing-masing bunga. '
       grade3_Loops_8: Gunakan perulangan untuk mengumpulkan nektar dan membuat madu.
@@ -2794,9 +2802,9 @@ id:
         menyelesaikan desainnya.
       grade4_arist_nested_loop_flags1: Lingkaran yang diberikan kode untuk membuat
         sebuah kincir angin.
-      grade4_arist_nested_loop_polygons1: "Loop desain ini 10 kali. \\ r \n\\ r \nBerapa
-        banyak\n yang Anda harus mengubah setiap kali lingkaran anda?"
-      grade4_arist_nested_loop_polygons2: "Loop bentuk ini sebanyak 6 kali. \r\n\r\nBerapa
+      grade4_arist_nested_loop_polygons1: "Loop desain ini 10 kali. \\\\ r \n\\\\
+        r \nBerapa banyak\n yang Anda harus mengubah setiap kali lingkaran anda?"
+      grade4_arist_nested_loop_polygons2: "Loop bentuk ini sebanyak 6 kali. \\\r\n\\\r\nBerapa
         banyak\nAnda harus memutar tiap kali melakukan loop? "
       grade4_arist_nested_loop_squares1: Bisakah Anda menarik10 kotak trotoar ini
         menggunakan sebuah lingkaran bersarang? Setiap kotak ada 30 piksel.
@@ -2806,7 +2814,7 @@ id:
         dengan loop kode segitiga?
       grade4_arist_nested_loop_triangles4: Gambarkan gigi di mulut buaya!
       grade4_arist_nested_loop_triangles5: "Buat sebuah matahari dengan sarang kode
-        permulaan di putaran lain.\r\n\r\nUntuk mendapatkan desain keren ini dengan
+        permulaan di putaran lain.\\\r\n\\\r\nUntuk mendapatkan desain keren ini dengan
         pusat berlubang, Anda harus melompat maju dengan panjang segitiga sebelum
         berputar."
       grade4_arist_nested_loop_triangles6: Anda dapat menarik 36 segitiga ini menggunakan
@@ -2816,9 +2824,9 @@ id:
         Bantu saya menggambar kacamata persegi. Petunjuk: jembatan antara gelas adalah
         25 piksel lebih pendek dari panjang persegi.
       grade4_artist_functions2: "Fungsi membiarkan anda mendefinisikan blok baru!
-        \r\n\r\nKami sudah memindahkan blok yang diperlukan untuk menggambar persegi
+        \\\r\n\\\r\nKami sudah memindahkan blok yang diperlukan untuk menggambar persegi
         menjadi\nfungsi yang disebut `menggambar persegi`. Kali ini, gunakan fungsi
-        `menggambar persegi`\nuntuk membuat kacamata. \r\n\r\nPersegi itu berjauhan
+        `menggambar persegi`\nuntuk membuat kacamata. \\\r\n\\\r\nPersegi itu berjauhan
         75 piksel."
       grade4_artist_functions_challenge: Gunakan fungsi yang disarankan untuk menggambar
         empat baris segi empat. Apakah kamu memperhatikan bagaimana baris bernomor
@@ -2827,7 +2835,7 @@ id:
         empat baris segi empat. Apakah kamu memperhatikan bagaimana baris bernomor
         genap kami bergeser ke kanan?
       grade4_artist_nestedLoops_challenge: "Klik di sini untuk melihat petunjuk lengkap
-        lagi!\r\n\r\nInilah kode untuk bentuk yang menarik. Apa yang terjadi saat
+        lagi!\\\r\n\\\r\nInilah kode untuk bentuk yang menarik. Apa yang terjadi saat
         Anda mengulanginya berkali-kali, berputar di antara setiap pengulangan?\nPerhatikan
         bahwa berputar dalam bentuk ini bertambah hingga 420 derajat, yang berarti
         bahwa saat seniman Anda menggambar, itu akan menghadap ke arah yang berbeda
@@ -2842,15 +2850,15 @@ id:
         menyelesaikan desainnya.
       grade4_artist_nested_loop_flags1: Lingkaran yang diberikan kode untuk membuat
         sebuah kincir angin.
-      grade4_artist_nested_loop_polygons1: "Loop desain ini 10 kali. \\ r \n\\ r \nBerapa
-        banyak\n yang Anda harus mengubah setiap kali lingkaran anda?"
+      grade4_artist_nested_loop_polygons1: "Loop desain ini 10 kali. \\\\ r \n\\\\
+        r \nBerapa banyak\n yang Anda harus mengubah setiap kali lingkaran anda?"
       grade4_artist_nested_loop_squares1: Bisakah Anda menarik10 kotak trotoar ini
         menggunakan sebuah lingkaran bersarang? Setiap kotak ada 30 piksel.
-      grade4_artist_nested_loop_triangles1: 'Selesaikan kode untuk menggambar segitiga
-        ini. Yang pertama sudah dikerjakan untuk Anda. Petunjuk: 3 segitiga dalam
-        rotasi 360 derajat.'
+      grade4_artist_nested_loop_triangles1: "Lengkapi kode untuk menggambar segitiga
+        ini. Yang\npertama adalah selesaikan satu untuk anda. Tips: 3 sebuah segitiga
+        dalam rotasi 360 derajat.\\\r\n\\\r"
       grade4_artist_nested_loop_triangles5: "Buat sebuah matahari dengan sarang kode
-        permulaan di putaran lain.\r\n\r\nUntuk mendapatkan desain keren ini dengan
+        permulaan di putaran lain.\\\r\n\\\r\nUntuk mendapatkan desain keren ini dengan
         pusat berlubang, Anda harus melompat maju dengan panjang segitiga sebelum
         berputar."
       grade4_artist_nested_loop_triangles6: Anda dapat menarik 36 segitiga ini menggunakan
@@ -2919,7 +2927,7 @@ id:
       grade4_frozen_square_loop3: Dapatkah kamu membuat sebuah kepingan salju dengan
         menggunakan blok "Ulangi" untuk membuat sebuah persegi sebanyak 10 kali, dan
         blok "Belok" untuk berbelok 36 derajat antara setiap persegi?
-      grade4_playlab_test: "Gunakan panah sebelah kanan untuk melempar pai.\r\n\r\nDalam
+      grade4_playlab_test: "Gunakan panah sebelah kanan untuk melempar pai.\\\r\n\\\r\nDalam
         permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel
         \"poin\" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat
         \"ketika aktor 2 menyentuh sesuatu\" untuk memicu penambahan nilai mu. Kamu
@@ -2930,10 +2938,10 @@ id:
         membuat karakter utama Anda melompat 100 piksel. Jalankan program dan gunakan
         fungsi melompat untuk mengumpulkan semua bendera dengan menggerakkan anjing dengan tombol
         panah.
-      grade4_review_artist1: Hi, saya seorang seniman. Anda dapat menuliskan kode
-        agar membuat saya dapat menggambar apa saja. Gunakan beberapa blok agar membuat
-        saya menggambar diatas garis abu-abu pada foto (setiap baris panjangnya adalah
-        100 piksel)
+      grade4_review_artist1: "Hai, saya seorang seniman. Anda bisa menulis kode\nuntuk
+        membuat saya menggambar hampir semua hal. Gunakan beberapa blok untuk membuat
+        saya menggambar di atas garis abu-abu pada gambar (Panjang setiap garis adalah
+        100 piksel)\\\r\n\\\r"
       grade4_review_artist2: |-
         Rumah ini membutuhkan atap! Gambarkan segitiga. Petunjuk:
         semua tiga sisi panjangnya sama.
@@ -2948,7 +2956,7 @@ id:
         gunakan sebuah belokan di dalamnya.
       grade5_artist_binary1: "Biner adalah cara untuk mewakili informasi dengan yang
         hanya menggunakan dua pilihan. Di sini, kita akan menggunakan pilihan \"off\"
-        \n(ditunjukkan dengan angka 0) dan \"on\" (ditunjukkan oleh angka 1).  \r\n\r\nKami
+        \n(ditunjukkan dengan angka 0) dan \"on\" (ditunjukkan oleh angka 1).  \\\r\n\\\r\nKami
         telah memberi anda kisi \"piksel\" yang dapat Anda lalui dan buat rancangan
         dengan hanya memutar kotak tertentu. Dapatkah Anda membuat seniman menggambar
         \"01010101\" dalam biner \ndi baris pertama?"
@@ -2958,8 +2966,8 @@ id:
       grade5_artist_binary2: "Berikut adalah fungsi yang mengambil  deretan biner
         dari 1 dan 0 dan menginstruksikan artis untuk mengikuti mereka dari kiri ke
         kanan, dari atas ke bawah. Seniman akan mengisi-dalam kotak ketika melihat
-        1 dan mengabaikan alun-alun saat melihat 0. \r\n\r \nJalankan kode ini untuk
-        melihat bagaimana seniman menggunakan biner untuk menggambar pola ini."
+        1 dan mengabaikan alun-alun saat melihat 0. \\\r\n\\\r \nJalankan kode ini
+        untuk melihat bagaimana seniman menggunakan biner untuk menggambar pola ini."
       grade5_artist_binary3: Manakah dari deretan biner ini yang bisa Anda putar 8
         kali untuk menggambar gambar ini?
       grade5_artist_binary4: |-
@@ -2975,14 +2983,14 @@ id:
         untuk membuat gambar ini?
       grade5_artist_binary8: Selesaikan gambar ini.
       grade5_artist_binary9: "Berikut adalah kanvas dengan resolusi yang lebih tinggi\nuntuk
-        menggambar - 16 piksel kali 16 piksel!\r \n\r\nLihat apa yang terjadi jika
-        kita\nberkreasi dengan bit?"
+        menggambar - 16 piksel kali 16 piksel!\\\r \n\\\r\nLihat apa yang terjadi
+        jika kita\nberkreasi dengan bit?"
       grade5_artist_for_loops10: "Dapatkah Anda mencari tahu cara\nmenggunakan semua
-        yang Anda pelajari untuk membuat gambar ini?\r\n\r\nButuh\npetunjuk? Klik
+        yang Anda pelajari untuk membuat gambar ini?\\\r\n\\\r\nButuh\npetunjuk? Klik
         di sini."
       grade5_artist_for_loops5: "Hanya satu perubahan kecil pada kode\ndari gambar
         terakhir dapat menghasilkan gambar ini. Anda bisa mencari tahu\nperubahan
-        apa itu?\r\n\r\nPetunjuk: Anda perlu menghapus sesuatu!"
+        apa itu?\\\r\n\\\r\nPetunjuk: Anda perlu menghapus sesuatu!"
       grade5_artist_for_loops6: "Jika Anda putar sedikit lebih atau kurang dari biasanya
         untuk bentuk, itu akan menciptakan efek yang anggun. Coba gunakan beberapa
         kode dari tingkat terakhir, tapi dengan memutar 89 derajat untuk membuat \nspiral
@@ -2998,12 +3006,12 @@ id:
       grade5_artist_for_loops9: "Mari kita gabungkan semuanya! Dengan menggunakan\npengetahuan
         Anda tentang loop 'untuk' dan variabel 'pencacah', buat gambar ini\ndi mana
         tiap bentuk memiliki dua sisi lebih dari yang terakhir. Pastikan tiap sisi\npanjangnya
-        10 kali jumlah sisi dalam poligon.\r\n\r\nSangat sedikit\nkode yang disediakan
+        10 kali jumlah sisi dalam poligon.\\\r\n\\\r\nSangat sedikit\nkode yang disediakan
         untuk Anda."
       grade5_artist_for_loopsfreeplay11: "Inspirasi Bermain Bebas: Sekarang Anda telah\nbelajar
         semua yang perlu diketahui untuk membuat pola seperti ini! Jika \ngambar ini
         menginspirasi Anda, buatlah sesuatu yang mirip. Jika tidak, buatlah\nsesuatu
-        sendiri.\r\n\r\nButuh petunjuk? Klik di sini."
+        sendiri.\\\r\n\\\r\nButuh petunjuk? Klik di sini."
       grade5_artist_functionparameters_6: Bisakah Anda menyelesaikan gambar ini? Sisi
         dari semua bentuk ini panjangnya 100 piksel.
       grade5_artist_variables_freeplay10: |-
@@ -3014,11 +3022,11 @@ id:
         sisi akan semakin pendek seiring jumlah sisi yang semakin tinggi.
       grade5_artist_variables_freeplay14: "Free Play: Check it out! Sekarang algoritma
         bersarang dalam satu lagi loop. Bereksperimen dengan mengubah nilai variabel
-        Anda dua menggambar pola. \r \r keren untuk lebih efek, mencoba bermain dengan
-        warna!  Menggunakan acak warna dalam loop untuk melihat bagaimana perubahan
+        Anda dua menggambar pola. \\\r \\\r keren untuk lebih efek, mencoba bermain
+        dengan warna!  Menggunakan acak warna dalam loop untuk melihat bagaimana perubahan
         desain Anda."
       grade5_artist_variables_freeplay15: "Ingin melihat untuk kedua kalinya desain
-        inspirasi\natau petunjuknya? Klik di sini!\r\n\r\nJika tidak, buat sendiri
+        inspirasi\natau petunjuknya? Klik di sini!\\\r\n\\\r\nJika tidak, buat sendiri
         desainnya!"
       grade5_artist_variables_freeplay16: |-
         Masih bermain? Ini ada kanvas kosong di mana
@@ -3029,13 +3037,13 @@ id:
         ini?"
       grade5_artist_variables_octagons13: "Bila suatu bentuk memiliki banyak sisi,
         masing-masing\nsisi harus lebih pendek jika Anda ingin keseluruhan pola bisa
-        pas di layar.\n\r\nMari buat ulang algoritme untuk pola yang menakjubkan ini,
-        tapi alih-alih\nmengatur variabel 'panjang' secara manual, mari kita gunakan
-        blok matematika dengan variabel 'sisi'\ndi dalamnya untuk memastikan bahwa
-        setiap bentuk sesuai. Perimeter\ntiap poligon adalah 300 piksel.\r\nButuh
+        pas di layar.\n\\\r\nMari buat ulang algoritme untuk pola yang menakjubkan
+        ini, tapi alih-alih\nmengatur variabel 'panjang' secara manual, mari kita
+        gunakan blok matematika dengan variabel 'sisi'\ndi dalamnya untuk memastikan
+        bahwa setiap bentuk sesuai. Perimeter\ntiap poligon adalah 300 piksel.\\\r\nButuh
         petunjuk? Klik di sini."
       grade5_artist_variables_pentagon8: "Gunakan apa yang Anda pelajari dalam teka-teki
-        terakhir\nuntuk membuat heksagon ini menggunakan variabel \"sisi\".\r\n\r\nLihat
+        terakhir\nuntuk membuat heksagon ini menggunakan variabel \"sisi\".\\\r\n\\\r\nLihat
         bagaimana Anda bisa\nmengubah hanya satu nilai untuk menggambar segitiga,
         bujur sangkar, pentagon, atau oktagon?"
       grade5_artist_variables_pentagon9: |-
@@ -3043,10 +3051,11 @@ id:
         level terakhir dan buat pentagon dengan sisi panjang 150.
       grade5_artist_variables_pentagons12: |-
         Mari kita atur variabel "sisi" ke
-        5. Semakin banyak sisi yang kita tambahkan pada algoritma ini, semakin besar pula yang seluruh pola ini
-        dapatkan! Perhatikan bahwa ada variabel lain yang disebut "panjang". Sekarang kita bisa
-        gunakan itu di manapun ada "bergerak maju." Atur variabel "panjang"
-        menjadi 75 untuk bentuk ini.
+
+        5.  Semakin banyak sisi yang kita tambahkan pada algoritma ini, semakin besar pula yang seluruh pola ini
+            dapatkan! Perhatikan bahwa ada variabel lain yang disebut "panjang". Sekarang kita bisa
+            gunakan itu di manapun ada "bergerak maju." Atur variabel "panjang"
+            menjadi 75 untuk bentuk ini.
       grade5_artist_variables_rectangle6: |-
         Sekarang saya ingin membuat persegi panjang yang
         berukuran dua kali lebarnya. Kita punya sebuah variabel yang disebut "lebar" yang perlu
@@ -3054,7 +3063,7 @@ id:
       grade5_artist_variables_square7: "Berikut adalah beberapa kode yang dapat menggambar\npoligon
         biasa. Ada variabel baru yang disebut sisi yang diatur ke 4. Dapatkah Anda
         menggunakan\nvariabel sisi (bersama dengan blok matematika) untuk mengubah
-        jumlah yang tepat tidak peduli\nberapa banyak sisi yang ada di dalam poligon?\r\n\r\nKlik
+        jumlah yang tepat tidak peduli\nberapa banyak sisi yang ada di dalam poligon?\\\r\n\\\r\nKlik
         di sini untuk kembali pada\npetunjuk!"
       grade5_artist_variables_triangles2: Daripada menggunakan "bergerak maju oleh
         150", blok "bergerak" sekarang adalah referensi sebuah variabel yang disebut
@@ -3080,9 +3089,9 @@ id:
         bahkan mendapatkan satu.
       grade5_playlab_variables12: "Mari bersenang-senang! Lihatlah\nkode yang diberikan
         untuk melihat apakah Anda dapat mengetahui apa yang dilakukan setiap blok.
-        \r\nKetika\nAnda sudah selesai, gunakan tombol panah untuk mengendalikan Anjing
-        dan mengumpulkan semua bendera.\r\nCATATAN:\nAnda tidak perlu membuat perubahan
-        pada program"
+        \\\r\nKetika\nAnda sudah selesai, gunakan tombol panah untuk mengendalikan
+        Anjing dan mengumpulkan semua bendera.\\\r\nCATATAN:\nAnda tidak perlu membuat
+        perubahan pada program"
       grade5_playlab_variables13: Menggunakan blok 'Kapan aktor menyentuh' untuk mengirim
         anjing kembali ke atas-kiri hanya jika anjing menyentuh salah satu aktor lain.
       grade5_playlab_variables2: |-
@@ -3096,41 +3105,42 @@ id:
         Sekarang kita menggunakan variabel yang disebut "ketinggian"
         untuk mengontrol seberapa tinggi anjing bisa melompat. Perbarui variabel "ketinggian" sehingga
         Anjing bisa melompat cukup tinggi untuk meraih semua bendera.
-      grade5_playlab_variables6: "Gunakan panah sebelah kanan untuk melempar pai.\r\n\r\nDalam
+      grade5_playlab_variables6: "Gunakan panah sebelah kanan untuk melempar pai.\\\r\n\\\r\nDalam
         permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel
         \"poin\" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat
         \"ketika aktor 2 menyentuh sesuatu\" untuk memicu penambahan nilai mu. Kamu
         bisa menaikkan variabel mu dengan mengatur \"poin = poin + 1\". Kumpulkan
         nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut."
       grade5_playlab_variables7: "Bagus, sekarang mari kita pastikan permainan ini
-        tidak terlalu mudah untuk bermain! \r\n\r\nSetiap kali Anjing ( pemeran1)
+        tidak terlalu mudah untuk bermain! \\\r\n\\\r\nSetiap kali Anjing ( pemeran1)
         tertabrak sebua sandwich dari Kucing (pemeran 2), anda harus kehilangan poin.
-        \r\n\r\nMulai dengan\n10 poin jadi itu tidak terlalu susah. Biarkan skor anda
-        turun dari 10 menjadi 0 untuk lulus tingkat."
+        \\\r\n\\\r\nMulai dengan\n10 poin jadi itu tidak terlalu susah. Biarkan skor
+        anda turun dari 10 menjadi 0 untuk lulus tingkat."
       grade5_playlab_variables71: "Berikut adalah permainan kami dari tahap awal,
-        tetapi sebagian besar kode tersembunyi. Ada fungsi baru 'score_points.' \r
-        \r mengedit fungsi sehingga parameter baru yang disebut 'titik' dapat ditambahkan
-        ke 'player_score'. \r \r 'player_score' variabel harus meningkatkan setiap
-        kali kucing anjing tag dengan pie, dan mengurangi setiap kali bahwa kucing
-        Tag anjing dengan sandwich. \r \r Catatan: ketika Anda sudah selesai, klik
-        \"Run\" untuk bermain.  Ketika anjing nilai 6 poin, Anda akan melanjutkan
+        tetapi sebagian besar kode tersembunyi. Ada fungsi baru 'score_points.' \\\r
+        \\\r mengedit fungsi sehingga parameter baru yang disebut 'titik' dapat ditambahkan
+        ke 'player_score'. \\\r \\\r 'player\\_score' variabel harus meningkatkan
+        setiap kali kucing anjing tag dengan pie, dan mengurangi setiap kali bahwa
+        kucing Tag anjing dengan sandwich. \\\r \\\r Catatan: ketika Anda sudah selesai,
+        klik \"Run\" untuk bermain.  Ketika anjing nilai 6 poin, Anda akan melanjutkan
         untuk teka-teki berikutnya. "
-      grade5_playlab_variables81: "Kami telah menambahkan satu fungsi terakhir untuk\nAnda.\r\n\r\nGunakan
+      grade5_playlab_variables81: "Kami telah menambahkan satu fungsi terakhir untuk\nAnda.\\\r\n\\\r\nGunakan
         pernyataan \"jika\" untuk memprogram permainan Anda untuk memanggil fungsi
-        \"level_up\"\nhanya bila \"player_score\" menjadi lebih besar dari angka tertentu.\r\n\r\nSebagai\ncontoh:
-        \"player_score\"> 6\r\n\r\nMainkan sampai ke level 3\nuntuk pindah ke teka-teki
-        berikutnya. "
-      grade5_playlab_variables9: "Di sini adalah fungsi disebut 'patroli'. \r \r mengedit
-        'patroli' untuk memindahkan kucing 400 piksel dan kemudian turun 400 piksel."
+        \"level_up\"\nhanya bila \"player_score\" menjadi lebih besar dari angka tertentu.\\\r\n\\\r\nSebagai\ncontoh:
+        \"player\\_score\"> 6\\\r\n\\\r\nMainkan sampai ke level 3\nuntuk pindah ke
+        teka-teki berikutnya. "
+      grade5_playlab_variables9: "Di sini adalah fungsi disebut 'patroli'. \\\r \\\r
+        mengedit 'patroli' untuk memindahkan kucing 400 piksel dan kemudian turun
+        400 piksel."
       grade5_playlab_variables_freeplay: "Waktu nya permainan bebas! Ini merupakan
         semua variabel yang sudah kita mainkan pada tahap ini, juga beberapa variabel
-        lain jika kamu membutuhkannya!\r\n\r \nPerhatikan sekarang ada sangat banyak
-        blok didalam toolbox kita yang perlu disusun! Sekarang, kita sudah meletakkan
-        setiap potongan kedalam sebuah kategori yang sesuai. Ambil waktu sejenak untuk
-        menjelajahi semua kemungkinan yang ada. Saat kamu sudah selesai melihat-lihat,
-        buatlah sebuah permainan atau cerita menggunakan pengulangan, variabel-variabel,
-        dan kejadian-kejadian. \r\n\r\nPetunjuk:\nskrol kebawah untuk meilhat semua
-        perintah di dalam tempat kerja."
+        lain jika kamu membutuhkannya!\\\r\n\\\r \nPerhatikan sekarang ada sangat
+        banyak blok didalam toolbox kita yang perlu disusun! Sekarang, kita sudah
+        meletakkan setiap potongan kedalam sebuah kategori yang sesuai. Ambil waktu
+        sejenak untuk menjelajahi semua kemungkinan yang ada. Saat kamu sudah selesai
+        melihat-lihat, buatlah sebuah permainan atau cerita menggunakan pengulangan,
+        variabel-variabel, dan kejadian-kejadian. \\\r\n\\\r\nPetunjuk:\nskrol kebawah
+        untuk meilhat semua perintah di dalam tempat kerja."
       k-1 maze 1: Dapatkah Anda membuat saya pindah ke Barat untuk mendapatkan babi?
       level 'grade3_Loops_10: Gunakan perulangan serupa sebagai teka-teki terakhir,
         tetapi gunakan sebuah belokan di dalamnya.
@@ -3147,9 +3157,8 @@ id:
       level 'grade3_Loops_5: Tempatkan blok-blok ini menjadi sebuah perulangan untuk
         mengumpulkan nektar dari setiap bunga.
       level 'grade3_Loops_6: "Berapa kali loop bisa membantu Anda dalam teka-teki
-        ini ?  \\ r \n\\ r \nLoops adalah teman Anda! Gunakan sebuah beberapa dari
-        mereka untuk menyelesaikan ini teka-teki dengan paling sedikit blok mungkin.\n
-        \n"
+        ini ?  \\\\ r \n\\\\ r \nLoops adalah teman Anda! Gunakan sebuah beberapa
+        dari mereka untuk menyelesaikan ini teka-teki dengan paling sedikit blok mungkin."
       level 'grade3_Loops_7: 'Setiap bunga berisi satu unit nektar. Kumpulkan nektar
         dari masing-masing bunga. '
       level 'grade3_Loops_8: Gunakan perulangan untuk mengumpulkan nektar dan membuat

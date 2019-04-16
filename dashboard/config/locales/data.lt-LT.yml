@@ -578,6 +578,8 @@ lt:
         mc_2016_congrats: Minecraft Programavimo valanda - Sveikiname
         mc_2017_congratulations: Minecraft Programavimo valanda - Sveikiname
         CSF_loops_AB: Kartojimas
+        csd_pair_programming: Programavimas poroje
+        csd_applab_parameters: Komandos su parametrais
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat

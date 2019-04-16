@@ -1198,6 +1198,8 @@ ga:
     csp_variables: Athróga
     csp_conditionals: Coinníollacha
     csp_functions: Feidhmeanna
+    csp_lists: Liostaí
+    csp_loops: Lúba
     dlp: Ábhar Machnaimh
   external_links:
     disclaimer: Séanadh

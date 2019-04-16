@@ -242,6 +242,10 @@ ta:
           stages:
             The Artist:
               name: கலைஞர்
+        coursee-2019:
+          stages:
+            Songwriting:
+              name: பாடல் எழுதுதல்
         andrea-test:
           stages:
             'null':

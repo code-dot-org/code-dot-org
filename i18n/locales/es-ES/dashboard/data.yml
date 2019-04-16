@@ -351,6 +351,7 @@ es:
         C4_unplugged_forloops: Bucles Para
         C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
+        CSF_a_b_artist_loops: Bucles en Artista
         CSF_artist_angles: Ángulos en Artist
         CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El coleccionista'
         CSF_collector_repeat_loops: Bucles de Repetición en Collector
@@ -518,6 +519,9 @@ es:
         what_is_an_event: '¿Qué es un evento?'
         teaching_cs_pair_programming: 'Enseñando Fundamentos CS: Programación de Pares'
         teaching_problem_solving: 'Enseñando Fundamentos CS: Enseñando resolución de problemas'
+        csd_applab_designmode: 'Descubrimientos de CS: Laboratorio de aplicación - modo de diseño'
+        csd_pair_programming: Programación de pares
+        csd_applab_parameters: Funciones con parámetros
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

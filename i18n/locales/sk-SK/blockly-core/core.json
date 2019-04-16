@@ -62,7 +62,7 @@
     "CONTROLS_REPEAT_TITLE_TIMES": "krát",
     "CONTROLS_REPEAT_TOOLTIP": "Opakuje zadané príkazy niekoľkokrát.",
     "CONTROLS_WHILEUNTIL_HELPURL": "",
-    "CONTROLS_WHILEUNTIL_OPERATOR_UNTIL": "opakuj dovtedy (kým)",
+    "CONTROLS_WHILEUNTIL_OPERATOR_UNTIL": "opakuj pokiaľ neplatí",
     "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "opakuj pokiaľ",
     "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Kým je hodnota podmienky nepravdivá, vykonajú sa zadané príkazy (t. j. vykonanie príkazu sa opakuje až do momentu, keď sa podmienka splní).",
     "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Kým je hodnota podmienky pravdivá, vykonajú sa zadané príkazy.",

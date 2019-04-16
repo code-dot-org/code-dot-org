@@ -411,6 +411,8 @@ bn:
     csp_variables: চলকগুলো
     csp_conditionals: শর্তযুক্ত
     csp_functions: ফাংশনগুলি
+    csp_lists: তালিকা
+    csp_loops: চক্র
   pd:
     form_labels:
       email: ই-মেইল
