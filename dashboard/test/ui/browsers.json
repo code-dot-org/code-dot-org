@@ -30,10 +30,9 @@
   {
     "name": "iPhone",
     "platformName": "iOS",
-    "platformVersion": "9.3",
+    "platformVersion": "11.3",
     "browserName": "safari",
     "deviceName": "iPhone Simulator",
-    "appiumVersion": "1.6.5",
     "mobile": true,
     "deviceOrientation": "landscape",
     "rotatable": true
@@ -41,10 +40,9 @@
   {
     "name": "iPad",
     "platformName": "iOS",
-    "platformVersion": "9.3",
+    "platformVersion": "11.3",
     "browserName": "safari",
     "deviceName": "iPad Simulator",
-    "appiumVersion": "1.6.5",
     "mobile": true,
     "deviceOrientation": "landscape",
     "rotatable": true
