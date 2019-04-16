@@ -461,7 +461,7 @@ class Script < ActiveRecord::Base
 
     script_family_cache.fetch(family_name) do
       # Populate cache on miss.
-      script_cache[family_name] = Script.get_family_without_cache(family_name)
+      script_family_cache[family_name] = Script.get_family_without_cache(family_name)
     end
   end
 
