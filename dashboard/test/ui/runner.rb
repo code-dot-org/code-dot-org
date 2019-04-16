@@ -251,7 +251,7 @@ end
 def select_browser_configs(options)
   if options.local
     return [{
-      'browser' => options.browser || 'local',
+      'browser' => options.browser || 'chrome',
       'name' => 'LocalBrowser',
       'browserName' => options.browser || 'chrome',
       'version' => options.browser_version || 'latest'
@@ -342,7 +342,7 @@ end
 # Example result:
 # [
 #   [
-#     { 'browser': 'local', 'name': 'ChromeDriver', 'browserName': 'chrome', 'version': 'latest' },
+#     { 'browser': 'chrome', 'name': 'ChromeDriver', 'browserName': 'chrome', 'version': 'latest' },
 #     'features/bee.feature'
 #   ],
 #   ...
