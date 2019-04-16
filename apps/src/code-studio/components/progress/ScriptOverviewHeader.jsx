@@ -185,9 +185,13 @@ class ScriptOverviewHeader extends Component {
 
     // Only display viewable versions in script version dropdown.
     const filteredVersions = versions.filter(version => version.canViewVersion);
+    const selectedVersion = versions.find(
+      v => v.name === this.props.scriptName
+    );
     const convertedVersions = setRecommendedAndSelectedVersions(
       filteredVersions,
-      this.props.locale
+      this.props.locale,
+      selectedVersion && selectedVersion.year
     );
 
     return (
