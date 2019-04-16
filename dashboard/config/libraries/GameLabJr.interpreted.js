@@ -176,8 +176,12 @@ function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
   touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
 }
 
+function whenSpriteClicked(sprite) {
+  return mouseWentDown("leftButton") && mouseIsOver(sprite);
+}
+
 function clickedOn(sprite, event) {
-  touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
+  touchEvents.push({type: whenSpriteClicked, event: event, sprite: sprite});
 }
 
 function spriteDestroyed(sprite, event) {
@@ -470,21 +474,6 @@ function moveInDirection(sprite,distance,direction) {
     }
 }
 
-function moveToward(sprite,distance,target) {
-  if (!sprite || distance === undefined || !target) {
-    return;
-  }
-  var dx = target.x - sprite.x;
-  var dy = target.y - sprite.y;
-  if (dx * dx + dy * dy > distance * distance) {
-    var angleOfMovement=Math.atan2(dy, dx);
-    dx = distance*Math.cos(angleOfMovement);
-    dy = distance*Math.sin(angleOfMovement);
-  }
-  sprite.x += dx;
-  sprite.y += dy;
-}
-
 function unitVectorTowards(from, to) {
   var angle = Math.atan2(to.y - from.y, to.x - from.x);
   return p5.Vector.fromAngle(angle);
@@ -532,13 +521,6 @@ function draw() {
       }
     }
 
-    var createCollisionHandler = function (collisionEvent) {
-      return function (sprite1, sprite2) {
-        if (!collisionEvent.touching || collisionEvent.keepFiring) {
-          collisionEvent.event(sprite1, sprite2);
-        }
-      };
-    };
     // Run collision events
     for (i = 0; i<collisionEvents.length; i++) {
       var collisionEvent = collisionEvents[i];
@@ -547,13 +529,18 @@ function draw() {
       if (!a || !b) {
         continue;
       }
-      if (a.overlap(b, createCollisionHandler(collisionEvent))) {
+      if (a.overlap(b)) {
+        if (collisionEvent.keepFiring || !collisionEvent.fired) {
+          collisionEvent.event(a, b);
+        }
         collisionEvent.touching = true;
+        collisionEvent.fired = true;
       } else {
         if (collisionEvent.touching && collisionEvent.eventEnd) {
           collisionEvent.eventEnd(a, b);
         }
         collisionEvent.touching = false;
+        collisionEvent.fired = false;
       }
     }
 
