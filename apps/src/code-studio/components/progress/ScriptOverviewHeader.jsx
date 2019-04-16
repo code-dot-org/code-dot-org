@@ -54,7 +54,8 @@ export const scriptVersionShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   version_year: PropTypes.string.isRequired,
   version_title: PropTypes.string.isRequired,
-  can_view_version: PropTypes.bool.isRequired
+  can_view_version: PropTypes.bool.isRequired,
+  supported_locales: PropTypes.arrayOf(PropTypes.string)
 });
 
 /**
@@ -86,7 +87,8 @@ class ScriptOverviewHeader extends Component {
     showRedirectWarning: PropTypes.bool,
     versions: PropTypes.arrayOf(scriptVersionShape).isRequired,
     showHiddenUnitWarning: PropTypes.bool,
-    courseName: PropTypes.string
+    courseName: PropTypes.string,
+    locale: PropTypes.string
   };
 
   componentDidMount() {
