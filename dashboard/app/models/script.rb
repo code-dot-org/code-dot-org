@@ -249,12 +249,11 @@ class Script < ActiveRecord::Base
   end
 
   # @param user [User]
-  # @param script_id [String] id of the script we're checking
   # @returns [Boolean] Whether the user can assign this script.
   # Users should only be able to assign one of their valid scripts.
-  def assignable?(user, script_id)
+  def assignable?(user)
     if user
-      Script.valid_script_id?(user, script_id)
+      Script.valid_script_id?(user, id)
     end
   end
 
@@ -1272,7 +1271,7 @@ class Script < ActiveRecord::Base
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: pilot_experiment,
-      show_assign_button: assignable?(user, id)
+      show_assign_button: assignable?(user)
     }
 
     summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
