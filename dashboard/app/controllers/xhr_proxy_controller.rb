@@ -35,6 +35,7 @@ class XhrProxyController < ApplicationController
     api.foursquare.com
     api.nasa.gov
     api.open-notify.org
+    api.openweathermap.org
     api.pegelalarm.at
     api.randomuser.me
     api.rebrandly.com
