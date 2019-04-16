@@ -252,7 +252,7 @@ class Script < ActiveRecord::Base
   # @returns [Boolean] Whether the user can assign this script.
   # Users should only be able to assign one of their valid scripts.
   def assignable?(user)
-    if user
+    if user&.teacher?
       Script.valid_script_id?(user, id)
     end
   end
