@@ -226,6 +226,7 @@ describe('DeleteAccount', () => {
         ]);
         confirmButton.simulate('click');
         server.respond();
+        wrapper.update();
         expect(wrapper.find('FieldError')).to.have.text('Incorrect password!');
       });
 
