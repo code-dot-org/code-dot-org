@@ -102,6 +102,15 @@ export class CohortViewTable extends React.Component {
 
     let columns = [
       {
+        property: 'id',
+        header: {
+          label: 'View Application'
+        },
+        cell: {
+          format: this.formatViewButton
+        }
+      },
+      {
         property: 'date_accepted',
         header: {
           label: 'Date Accepted',
@@ -243,16 +252,6 @@ export class CohortViewTable extends React.Component {
           ]
         }
       });
-    });
-
-    columns.push({
-      property: 'id',
-      header: {
-        label: 'View Application'
-      },
-      cell: {
-        format: this.formatViewButton
-      }
     });
 
     this.columns = columns;
