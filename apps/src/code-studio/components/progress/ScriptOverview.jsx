@@ -37,6 +37,7 @@ class ScriptOverview extends React.Component {
     showRedirectWarning: PropTypes.bool,
     versions: PropTypes.arrayOf(scriptVersionShape).isRequired,
     courseName: PropTypes.string,
+    locale: PropTypes.string,
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
@@ -100,7 +101,8 @@ class ScriptOverview extends React.Component {
       versions,
       hiddenStageState,
       selectedSectionId,
-      courseName
+      courseName,
+      locale
     } = this.props;
 
     const displayRedirectDialog =
@@ -138,6 +140,7 @@ class ScriptOverview extends React.Component {
               showHiddenUnitWarning={isHiddenUnit}
               versions={versions}
               courseName={courseName}
+              locale={locale}
             />
             {!professionalLearningCourse &&
               viewAs === ViewType.Teacher &&
