@@ -246,6 +246,7 @@ class RegionalPartnerSearch extends Component {
               We are unable to find this ZIP code. You can still apply directly:
             </div>
             <StartApplicationButton
+              buttonOnly={true}
               nominated={this.state.nominated}
               priorityDeadlineDate={appsPriorityDeadlineDate}
             />
