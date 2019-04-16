@@ -134,7 +134,7 @@ describe('ButtonList', () => {
 
     const helpBlock = buttonList.find(HelpBlock);
     expect(helpBlock).to.have.length(1);
-    expect(helpBlock.childAt(0)).to.have.text('You must choose!');
+    expect(helpBlock.childAt(0).text()).to.equal('You must choose!');
   });
 
   it('Adds an other option when includeOther is set', () => {
