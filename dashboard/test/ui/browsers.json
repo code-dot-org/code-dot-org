@@ -2,14 +2,7 @@
 
 [
   {
-    "name": "Chrome72Win7",
-    "browserName": "chrome",
-    "version": "72",
-    "platform": "Windows 7",
-    "screenResolution": "1280x1024"
-  },
-  {
-    "name": "ChromeLatestWin7",
+    "name": "Chrome",
     "browserName": "chrome",
     "version": "latest",
     "platform": "Windows 7",
@@ -17,42 +10,29 @@
     "extendedDebugging": true
   },
   {
-    "name": "Chrome44Win7",
-    "browserName": "chrome",
-    "version": "44.0",
-    "platform": "Windows 7"
-  },
-  {
-    "name": "SafariYosemite",
+    "name": "Safari",
     "browserName": "Safari",
-    "platform": "OS X 10.10",
-    "version": "8.0"
+    "platform": "OS X 10.11",
+    "version": "10.0"
   },
   {
-    "name": "IE11Win10",
+    "name": "IE11",
     "browserName": "Internet Explorer",
     "version": "11.0",
     "platform": "Windows 10"
   },
   {
-    "name": "FirefoxLatest-2Yosemite",
-    "browserName": "firefox",
-    "version": "latest-2",
-    "platform": "OS X 10.10"
-  },
-  {
-    "name": "Firefox45Win7",
+    "name": "Firefox",
     "browserName": "firefox",
     "version": "45.0",
-    "platform": "Windows 7"
+    "platform": "Windows 10"
   },
   {
     "name": "iPhone",
     "platformName": "iOS",
-    "platformVersion": "9.3",
+    "platformVersion": "11.3",
     "browserName": "safari",
     "deviceName": "iPhone Simulator",
-    "appiumVersion": "1.6.5",
     "mobile": true,
     "deviceOrientation": "landscape",
     "rotatable": true
@@ -60,10 +40,9 @@
   {
     "name": "iPad",
     "platformName": "iOS",
-    "platformVersion": "9.3",
+    "platformVersion": "11.3",
     "browserName": "safari",
     "deviceName": "iPad Simulator",
-    "appiumVersion": "1.6.5",
     "mobile": true,
     "deviceOrientation": "landscape",
     "rotatable": true
