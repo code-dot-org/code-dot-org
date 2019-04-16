@@ -787,6 +787,27 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'foo-2017', versions[2][:name]
   end
 
+  test 'summarize includes show assign button' do
+    script = create(:script, name: 'script')
+
+    # No user, show_assign_button set to nil
+    assert_nil script.summarize[:show_assign_button]
+
+    # Teacher should be able to assign a visible script.
+    assert_equal false, script.summarize[:hidden]
+    assert_equal true, script.summarize(true, create(:teacher))[:show_assign_button]
+
+    # Teacher should not be able to assign a hidden script.
+    hidden_script = create(:script, name: 'unassignable-hidden', hidden: true)
+    assert_equal true, hidden_script.summarize[:hidden]
+    assert_equal false, hidden_script.summarize(true, create(:teacher))[:show_assign_button]
+
+    # Student should not be able to assign a script,
+    # regardless of visibility.
+    assert_equal false, script.summarize[:hidden]
+    assert_nil script.summarize(true, create(:student))[:show_assign_button]
+  end
+
   test 'summarize includes bonus levels for stages if include_bonus_levels and include_stages are true' do
     script = create :script
     stage = create :stage, script: script
