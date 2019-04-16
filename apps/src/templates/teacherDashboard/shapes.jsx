@@ -99,7 +99,7 @@ export const convertAssignmentVersionShapeFromServer = serverShape => {
     year: serverShape.version_year,
     title: serverShape.version_title,
     isStable: serverShape.is_stable,
-    locales: serverShape.supported_locales,
+    locales: serverShape.supported_locales || [],
     canViewVersion: serverShape.can_view_version
   };
 };
