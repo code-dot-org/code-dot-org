@@ -9,6 +9,7 @@ has_verified_resources true
 has_lesson_plan true
 project_widget_visible true
 project_widget_types ["applab", "gamelab", "weblab"]
+script_announcements [{"notice"=>"Issues with Circuit Playground Connectivity on Chromebooks", "details"=>"We are aware of issues regarding Circuit Playground connectivity on Chromebook devices and are working to resolve them as soon as possible. Click \"Learn More\" to for the latest updates, and suggested workarounds.", "link"=>"https://support.code.org/hc/en-us/articles/360026972671-Issues-with-Circuit-Playground-Connectivity-on-Chromebooks", "type"=>"failure", "visibility"=>"Teacher and student"}]
 family_name 'csd6'
 version_year '2018'
 is_stable true
