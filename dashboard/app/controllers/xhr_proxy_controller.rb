@@ -80,6 +80,7 @@ class XhrProxyController < ApplicationController
     translate.yandex.net
     vpic.nhtsa.dot.gov
     wikipedia.org
+    words.bighugelabs.com
   ).freeze
 
   # How long the content is allowed to be cached
