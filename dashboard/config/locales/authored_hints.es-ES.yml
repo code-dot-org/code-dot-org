@@ -4888,18 +4888,12 @@ es:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Deberían haber 3 bloques dentro del bucle para resolver este
           rompecabezas.
-      behaviors 1_authored_hint:
-        behavior hint: "Trata de editar los comportamientos! \n\n-   A que direccion
-          necesita el pjaro moverse?"
       behaviors 2_authored_hint:
         behavior hint: "Trata de editar los comportamientos! \n\n-   A que direccion
           necesita el pjaro moverse?"
       behaviors 3_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando
           la velocidad de cada sprite?"
-      behaviors 4_authored_hint:
-        behavior hint: "Trata de editar los comportamientos! \n\n-   A que direccion
-          necesita el pjaro moverse?"
       behaviors 5_authored_hint:
         target hint: Puedes elegir cualquiera de los cuatro juguetes. ¿Cuál quiere
           la mascota?
