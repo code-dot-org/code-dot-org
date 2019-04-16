@@ -16,7 +16,7 @@
     "version": "10.0"
   },
   {
-    "name": "IE11Win10",
+    "name": "IE11",
     "browserName": "Internet Explorer",
     "version": "11.0",
     "platform": "Windows 10"

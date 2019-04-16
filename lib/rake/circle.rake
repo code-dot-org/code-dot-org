@@ -34,7 +34,7 @@ SKIP_CHROME_TAG = 'skip chrome'.freeze
 # Run UI tests against Firefox
 TEST_FIREFOX_TAG = 'test firefox'.freeze
 
-# Run UI tests against IE11Win10
+# Run UI tests against IE11
 TEST_IE_TAG = 'test ie'.freeze
 TEST_IE_VERBOSE_TAG = 'test internet explorer'.freeze
 
@@ -116,7 +116,7 @@ namespace :circle do
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --eyes" \
             " --feature #{container_eyes_features.join(',')}" \
-            " --config Chrome,iPhone,IE11Win10" \
+            " --config Chrome,iPhone,IE11" \
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost-studio.code.org:3000" \
             " --circle" \
@@ -182,7 +182,7 @@ def browsers_to_run
   browsers = []
   browsers << 'Chrome' unless CircleUtils.tagged?(SKIP_CHROME_TAG)
   browsers << 'Firefox' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
-  browsers << 'IE11Win10' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
+  browsers << 'IE11' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
   browsers << 'Safari' if CircleUtils.tagged?(TEST_SAFARI_TAG)
   browsers << 'iPad' if CircleUtils.tagged?(TEST_IPAD_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
   browsers << 'iPhone' if CircleUtils.tagged?(TEST_IPHONE_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
