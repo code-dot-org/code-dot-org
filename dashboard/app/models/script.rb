@@ -484,7 +484,7 @@ class Script < ActiveRecord::Base
 
       is_supported = script.supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
       if is_supported
-        latest_version = script if is_supported
+        latest_version = script
         break
       end
     end
