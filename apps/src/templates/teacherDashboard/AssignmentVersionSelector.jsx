@@ -30,6 +30,37 @@ const styles = {
   }
 };
 
+// TODO: add description
+export const setRecommendedAndSelectedVersions = (
+  versions,
+  locale,
+  selectedVersionYear = null
+) => {
+  // We recommend the user use the latest stable version that is supported in their
+  // locale. If no versions support their locale, we recommend the latest stable version.
+  // Versions are sorted from most to least recent, so the first stable version will be the latest.
+  let recommendedVersion = versions.find(v => {
+    const localeSupported =
+      (v.locales || []).includes(locale) ||
+      locale.toLowerCase().startsWith('en');
+
+    return v.isStable && localeSupported;
+  });
+  recommendedVersion = recommendedVersion || versions.find(v => v.isStable);
+  if (recommendedVersion) {
+    recommendedVersion.isRecommended = true;
+  }
+
+  const selectedVersion =
+    versions.find(v => v.year === selectedVersionYear) ||
+    recommendedVersion ||
+    versions[0];
+  if (selectedVersion) {
+    selectedVersion.isSelected = true;
+  }
+  return versions;
+};
+
 export default class AssignmentVersionSelector extends Component {
   static propTypes = {
     dropdownStyle: PropTypes.object,
