@@ -243,12 +243,11 @@ class Course < ApplicationRecord
   end
 
   # @param user [User]
-  # @param course_id [String] id of the course we're checking
   # @returns [Boolean] Whether the user can assign this course.
   # Users should only be able to assign one of their valid courses.
-  def assignable?(user, course_id)
+  def assignable?(user)
     if user
-      Course.valid_course_id?(course_id)
+      Course.valid_course_id?(id)
     end
   end
 
@@ -268,7 +267,7 @@ class Course < ApplicationRecord
       teacher_resources: teacher_resources,
       has_verified_resources: has_verified_resources?,
       versions: summarize_versions(user),
-      show_assign_button: assignable?(user, id)
+      show_assign_button: assignable?(user)
     }
   end
 
