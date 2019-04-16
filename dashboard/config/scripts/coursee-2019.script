@@ -116,7 +116,7 @@ level 'courseD_artist_nestedLoops7_2019', progression: 'Practice'
 level 'courseD_artist_nestedLoops8_2019', progression: 'Practice'
 level 'courseD_artist_nestedLoops9_2019', progression: 'Challenge', challenge: true
 level 'courseD_artist_nestedLoops10_2019', progression: 'Practice'
-assessment 'courseD_artist_nestedLoops9_predict1_2019', progression: 'Prediction'
+level 'courseD_artist_nestedLoops9_predict1_2019', progression: 'Prediction'
 level 'courseD_artist_nestedLoopsFP_2019', progression: 'Free Play'
 bonus 'courseD_artist_nestedLoops_challenge1_2019'
 bonus 'courseD_artist_nestedLoops_challenge2_2019'
@@ -148,7 +148,7 @@ level 'courseD_maze_nestedLoops6_2019', progression: 'Practice'
 level 'courseD_bee_nestedLoops7_2019', progression: 'Challenge', challenge: true
 level 'courseD_bee_nestedLoops8_2019', progression: 'Practice'
 level 'courseD_bee_nestedLoops9_2019', progression: 'Practice'
-assessment 'courseD_bee_nestedLoops9_predict2_2019', progression: 'Prediction'
+level 'courseD_bee_nestedLoops9_predict2_2019', progression: 'Prediction'
 bonus 'courseD_harvester_nested_loops_challenge1_2019'
 bonus 'courseD_collector_nested_loops_challenge2_2019'
 
