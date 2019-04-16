@@ -22,16 +22,10 @@
     "platform": "Windows 10"
   },
   {
-    "name": "FirefoxLatest-2Yosemite",
-    "browserName": "firefox",
-    "version": "latest-2",
-    "platform": "OS X 10.10"
-  },
-  {
-    "name": "Firefox45Win7",
+    "name": "Firefox",
     "browserName": "firefox",
     "version": "45.0",
-    "platform": "Windows 7"
+    "platform": "Windows 10"
   },
   {
     "name": "iPhone",
