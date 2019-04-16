@@ -42,8 +42,7 @@ class SchoolInfoConfirmationDialog extends Component {
 
   componentDidMount() {
     const {schoolName} = this.state;
-    if (!schoolName && schoolName.length > 0) {
-      fetch('/dashboardapi/v1/users/me/school_name')
+      fetch('/api/v1/users/me/school_name')
         .then(response => response.json())
         .then(data => {
           this.setState({
@@ -51,7 +50,6 @@ class SchoolInfoConfirmationDialog extends Component {
           });
         })
         .catch(error => this.setState({error}));
-    }
   }
 
   handleClickYes = () => {
@@ -76,9 +74,15 @@ class SchoolInfoConfirmationDialog extends Component {
       .catch(() => {});
   };
 
-  handleClickSave = () => {};
+  handleClickSave = () => {
+    fetch('/api/v1/users/me/update_school_info-id',
+    {
+      method: 'PATCH'
+    })
+    .then(() => this.props.onClose);
+  };
 
-  renderInitialContent() {
+  renderInitialContent = () => {
     const {schoolName} = this.state;
     return (
       <Body>
@@ -98,7 +102,7 @@ class SchoolInfoConfirmationDialog extends Component {
         />
       </Body>
     );
-  }
+  };
 
   renderSchoolInformationForm() {
     return (
