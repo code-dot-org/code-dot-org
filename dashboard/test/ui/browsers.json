@@ -2,7 +2,7 @@
 
 [
   {
-    "name": "ChromeLatestWin7",
+    "name": "Chrome",
     "browserName": "chrome",
     "version": "latest",
     "platform": "Windows 7",
