@@ -6,6 +6,7 @@ import color from '@cdo/apps/util/color';
 import {levelType} from './progressTypes';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {stringifyQueryParams} from '../../utils';
+import {isLevelAssessment} from './progressHelpers';
 
 const styles = {
   levelPill: {
@@ -26,7 +27,8 @@ const styles = {
     minWidth: 70,
     lineHeight: '18px',
     marginTop: 3,
-    marginBottom: 3
+    marginBottom: 3,
+    position: 'relative'
   },
   text: {
     display: 'inline-block',
@@ -36,6 +38,19 @@ const styles = {
   },
   iconMargin: {
     marginLeft: 10
+  },
+  assessmentIcon: {
+    position: 'absolute',
+    top: -12,
+    right: -12
+  },
+  assessmentIconCheck: {
+    color: color.purple,
+    fontSize: 16
+  },
+  assessmentIconCircle: {
+    color: color.white,
+    fontSize: 18
   }
 };
 
@@ -52,7 +67,8 @@ class ProgressPill extends React.Component {
     fontSize: PropTypes.number,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   render() {
@@ -63,7 +79,8 @@ class ProgressPill extends React.Component {
       fontSize,
       tooltip,
       disabled,
-      selectedSectionId
+      selectedSectionId,
+      inMiniRubricExperiment
     } = this.props;
 
     const multiLevelStep = levels.length > 1;
@@ -87,6 +104,10 @@ class ProgressPill extends React.Component {
       tooltipProps['aria-describedby'] = id;
     }
 
+    // Only put the assessment icon on if its a single assessment level (not set)
+    const levelIsAssessment =
+      isLevelAssessment(levels[0]) && levels.length === 1;
+
     return (
       <a
         href={url}
@@ -107,6 +128,20 @@ class ProgressPill extends React.Component {
             </div>
           )}
           {tooltip}
+          {inMiniRubricExperiment && levelIsAssessment && (
+            <span className="fa-stack" style={styles.assessmentIcon}>
+              <FontAwesome
+                icon="circle"
+                className="fa-stack-1x"
+                style={styles.assessmentIconCircle}
+              />
+              <FontAwesome
+                icon="check-circle"
+                className="fa-stack-1x"
+                style={styles.assessmentIconCheck}
+              />
+            </span>
+          )}
         </div>
       </a>
     );

@@ -35,7 +35,11 @@ export default class CraftVisualizationColumn extends React.Component {
 
           {this.props.showFinishButton && (
             <div id="right-button-cell">
-              <button id="rightButton" className="share mc-share-button">
+              <button
+                type="button"
+                id="rightButton"
+                className="share mc-share-button"
+              >
                 <div>{msg.finish()}</div>
               </button>
             </div>

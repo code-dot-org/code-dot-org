@@ -46,6 +46,7 @@ export default class StageExtras extends React.Component {
         <h2 style={styles.h2}>{msg.continue()}</h2>
         <a href={nextLevelPath}>
           <button
+            type="button"
             className="btn btn-large btn-primary"
             style={{marginBottom: 20}}
           >

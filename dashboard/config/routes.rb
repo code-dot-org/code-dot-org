@@ -199,7 +199,6 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
         get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
       end
-      get '/angular', to: 'projects#angular'
     end
   end
 
@@ -479,6 +478,8 @@ Dashboard::Application.routes.draw do
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
     post 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator'
+    get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
+    get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
 
     get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
@@ -588,6 +589,7 @@ Dashboard::Application.routes.draw do
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
+      get 'users/:user_id/school_name', to: 'users#get_school_name'
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
