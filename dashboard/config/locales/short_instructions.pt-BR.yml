@@ -6014,6 +6014,20 @@ pt-BR:
       PDAlg 8-12 ex dr 1: A definição nesta Receita de Design não corresponde a ambos
         exemplos. Teste cada exemplo para ver qual está falhando e, em seguida, corrija
         a definição para corresponder.
+      PDAlg 8-12 ex dr 2: Este estudante criou dois exemplos para a função "maçãs",
+        mas algo não está certo. Como você direcionaria esse estudante para corrigir
+        o erro dele?
+      PDAlg Big Game History: Agora que você jogou em um nível do Jogão, você deverá
+        ver uma nova entrada no seu histórico. Clique no botão Histórico de Versões
+        e você deverá ver pelo menos uma versão. Cada vez que você voltar a um nível
+        do Jogão, você obterá um novo registro no seu histórico de versões para o
+        qual poderá voltar.
+      PDAlg Big Game Remix: |-
+        Aqui está o seu Jogão como você deixou por último. Tente clicar no botão Remix para criar um novo remix do seu projeto.
+
+        Quaisquer alterações feitas após você clicar em Remix serão salvas em seu novo remix e não em seu Jogão principal.
+      PDAlg Design Recipe Delete: Clique no botão excluir para se livrar dessa função,
+        então tente criar e excluir algumas de suas próprias funções.
       PDAlg Design Recipe Examples: A definição nesta Receita de Design não corresponde
         a ambos exemplos. Teste cada exemplo para ver qual está falhando e, em seguida,
         corrija a definição para corresponder.
