@@ -250,6 +250,7 @@ class ScriptOverviewHeader extends Component {
                 <AssignmentVersionSelector
                   onChangeVersion={this.onChangeVersion}
                   versions={filteredVersions}
+                  rightJustifiedPopupMenu={true}
                 />
               )}
             </div>
