@@ -19,7 +19,6 @@ class UserSchoolInfosController < ApplicationController
     puts params
     user_school_info = UserSchoolInfo.find(params[:id])
     if user_school_info.update!(end_date: DateTime.now)
-
       user_school_info.user.update!(properties: {last_seen_school_info_interstitial: DateTime.now})
     end
 
