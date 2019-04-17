@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-14T01:29:27.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -75,11 +75,11 @@
     "top_level_procedure_autopopulate": "false",
     "encrypted": "false",
     "rubric_key_concept": "Use a coordinate system to place elements on a screen, accounting for object size and overlay.",
-    "rubric_exceeds": "The programmatic drawing is identical to the example and in contained within the seven lines of code.",
-    "rubric_meets": "The programmatic drawing is mostly the same as the drawing, but there may be some slight positioning errors, and there may be extra lines of code.",
-    "rubric_approaches": "The square has been moved, is purple, and appears in front of the circles.",
-    "rubric_no_evidence": "The picture is either the same, or any changes appear to be unrelated to the assignment.",
     "mini_rubric": "true",
+    "rubric_performance_level_1": "The programmatic drawing is identical to the example and in contained within the seven lines of code.",
+    "rubric_performance_level_2": "The programmatic drawing is mostly the same as the drawing, but there may be some slight positioning errors, and there may be extra lines of code.",
+    "rubric_performance_level_3": "The square has been moved, is purple, and appears in front of the circles.",
+    "rubric_performance_level_4": "The picture is either the same, or any changes appear to be unrelated to the assignment.",
     "preload_asset_list": null
   },
   "published": true,

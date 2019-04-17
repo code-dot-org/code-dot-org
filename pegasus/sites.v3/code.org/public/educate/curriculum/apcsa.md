@@ -30,7 +30,7 @@ pedagogical techniques and content-specific strategies that you can use in your 
 | [A+ Computer Science](https://www.apluscompsci.com/material.htm) | $535 in year 1, $325 for renewal | Half-day, full-day, and multi-day Computer Science workshops available upon request | 
 | [CodeHS](https://codehs.com/info/curriculum/apjava) | FREE. Pro plans for schools start at $2500 | 30-40 hour online course, $1500/teacher |
 | [CompuScholar](https://www.compuscholar.com/schools/courses/ap-java/) | 6+ courses including AP CS A.  Multiple licensing options for all size schools or classes. | Pre-approved AP CS A syllabus, FREE onboarding, FREE monthly webinars, FREE dedicated CSR for 1:1 support, FREE personal skill-building opportunities. |
-| [Edhesive](https://edhesive.com/courses/apcs_java) | FREE | Online PD, community and content/technical/program support available, $2,200 per school |
+| [Edhesive](https://edhesive.com) | AP Computer Science A - Java: This blended curriculum teaches object-oriented programming using the Java language and is meant to be the equivalent of a first semester, college-level course in computer science. AP CSA emphasizes problem solving and algorithm development and uses hands-on experiences and examples so students can apply programming tools and solve complex problems.  $2500/site or $150/student | 40-hour, self-paced online course; in-person PD available - please inquire. $1000 for full online PD course. |
 | [IMACS](https://www.eimacs.com/educ_apcsoverview.htm) | $19.95/student, 10-student minimum; $50/class annual setup fee | Teacher support via IMACS Message Center, email, and telephone.|
 
 ## Full Curriculum + Professional Development Partnerships
