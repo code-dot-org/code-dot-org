@@ -242,6 +242,15 @@ class Course < ApplicationRecord
     valid_courses.any? {|course| course[:id] == course_id.to_i}
   end
 
+  # @param user [User]
+  # @returns [Boolean] Whether the user can assign this course.
+  # Users should only be able to assign one of their valid courses.
+  def assignable?(user)
+    if user&.teacher?
+      Course.valid_course_id?(id)
+    end
+  end
+
   def summarize(user = nil)
     {
       name: name,
@@ -257,7 +266,8 @@ class Course < ApplicationRecord
       end,
       teacher_resources: teacher_resources,
       has_verified_resources: has_verified_resources?,
-      versions: summarize_versions(user)
+      versions: summarize_versions(user),
+      show_assign_button: assignable?(user)
     }
   end
 

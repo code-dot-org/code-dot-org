@@ -79,6 +79,7 @@ function showCourseOverview() {
         }
         showRedirectWarning={scriptData.show_redirect_warning}
         redirectToCourseUrl={scriptData.redirect_to_course_url}
+        showAssignButton={courseSummary.show_assign_button}
       />
     </Provider>,
     document.getElementById('course_overview')
