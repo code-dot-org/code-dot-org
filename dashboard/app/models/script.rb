@@ -1349,7 +1349,7 @@ class Script < ActiveRecord::Base
           version_title: s.version_year,
           can_view_version: s.can_view_version?(user),
           is_stable: s.is_stable,
-          supported_locales: s.supported_locales
+          locales: s.supported_locale_names
         }
       end
 

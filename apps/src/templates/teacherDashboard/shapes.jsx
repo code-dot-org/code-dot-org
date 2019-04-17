@@ -97,11 +97,11 @@ export const assignmentVersionShape = PropTypes.shape({
 export const convertAssignmentVersionShapeFromServer = serverVersions => {
   return serverVersions.map(v => {
     return {
-      ...v,
+      name: v.name,
       year: v.version_year,
       title: v.version_title,
       isStable: v.is_stable,
-      locales: v.supported_locales || [],
+      locales: v.locales || [],
       canViewVersion: v.can_view_version
     };
   });
