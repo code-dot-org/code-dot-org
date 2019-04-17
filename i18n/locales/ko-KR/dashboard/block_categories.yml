@@ -17,12 +17,12 @@ ko:
       Prebuilt: 예시
       Text: 문장
       Comment: 댓글
+      World: 세계
+      Behaviors: 행동
       'Variables ': '변수 '
       Default: 기본값
-      Behaviors: 행동
       Locations: 위치
       everythingelse: 기준에 어긋나는 모든 것
-      World: 세계
       Location: 위치
       numbers: 숫자
       Numbers: 숫자

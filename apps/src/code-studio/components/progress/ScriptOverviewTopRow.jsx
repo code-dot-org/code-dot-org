@@ -38,8 +38,7 @@ const styles = {
     top: 0
   },
   dropdown: {
-    display: 'inline-block',
-    marginLeft: 10
+    display: 'inline-block'
   }
 };
 
@@ -59,7 +58,8 @@ export default class ScriptOverviewTopRow extends React.Component {
     scriptTitle: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    showAssignButton: PropTypes.bool
   };
 
   render() {
@@ -73,7 +73,8 @@ export default class ScriptOverviewTopRow extends React.Component {
       scriptTitle,
       viewAs,
       isRtl,
-      resources
+      resources,
+      showAssignButton
     } = this.props;
 
     return (
@@ -94,14 +95,16 @@ export default class ScriptOverviewTopRow extends React.Component {
             />
           </div>
         )}
-        {!professionalLearningCourse && viewAs === ViewType.Teacher && (
-          <AssignToSection
-            sectionsInfo={sectionsInfo}
-            courseId={currentCourseId}
-            scriptId={scriptId}
-            assignmentName={scriptTitle}
-          />
-        )}
+        {!professionalLearningCourse &&
+          viewAs === ViewType.Teacher &&
+          showAssignButton && (
+            <AssignToSection
+              sectionsInfo={sectionsInfo}
+              courseId={currentCourseId}
+              scriptId={scriptId}
+              assignmentName={scriptTitle}
+            />
+          )}
         {!professionalLearningCourse &&
           viewAs === ViewType.Teacher &&
           resources.length > 0 && (
