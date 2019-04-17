@@ -16,7 +16,7 @@ Scenario: Examples should be hidden when specified in contract editor
   And the "Examples" contract editor header is visible
   And the "Definition" contract editor header is visible
 
-  And I press "modalEditorClose"
+  And I press the first "#modalEditorClose text" element
   And I press the last button with text "Ignore"
   And I configure the contract editor to disable examples
 
@@ -38,7 +38,7 @@ Scenario: Expanding / collapsing sections should persist across function opening
   When I press the contract editor header "Contract and Purpose Statement"
   Then element ".contractEditor" is hidden
 
-  And I press "modalEditorClose"
+  And I press the first "#modalEditorClose text" element
 
   And I open the blockly category with ID "7"
   And I press the SVG text "Create a Function"
@@ -52,7 +52,7 @@ Scenario: Collapsing all sections, re-opening editor and expanding examples shou
   And I press the contract editor header "Definition"
   And the function editor definition block is not visible
 
-  And I press "modalEditorClose"
+  And I press the first "#modalEditorClose text" element
 
   And I open the blockly category with ID "7"
   And I press the SVG text "Create a Function"
@@ -67,7 +67,7 @@ Scenario: Collapsing all sections, re-opening editor and expanding examples shou
   And only one functional definition block is visible
 
 Scenario: Opening a variable then a function should show proper headers
-  And I press "modalEditorClose"
+  And I press the first "#modalEditorClose text" element
   And I press the last button with text "Ignore"
 
   And I open the blockly category with ID "6"
@@ -75,7 +75,7 @@ Scenario: Opening a variable then a function should show proper headers
   And the "Definition" contract editor header is invisible
   And the "Contract and Purpose Statement" contract editor header is invisible
   And I wait to see "#modalEditorClose"
-  And I press "modalEditorClose"
+  And I press the first "#modalEditorClose text" element
 
   And I open the blockly category with ID "7"
   And I press the SVG text "Create a Function"
