@@ -74,10 +74,4 @@ ruby
   def icon
     'fa fa-list-ul'
   end
-
-  def localized_answer_text(answer)
-    # TODO: update this to use I18n.t with the smart option, instead of
-    # manually assembling the dotpath like this
-    data_t(type.underscore + '.' + name, answer, answer)
-  end
 end
