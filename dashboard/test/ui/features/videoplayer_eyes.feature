@@ -32,7 +32,7 @@ Scenario: Fallback player for embedded
   And I close my eyes
 
 # Starting in Chrome 62, sites can no longer automatically run plugins.
-@chrome_before_62
+@no_chrome
 Scenario: Flash fallback player gets injected in Chrome (assuming Flash is available)
   Given I am on "http://studio.code.org/flappy/1?force_youtube_fallback"
   When I rotate to landscape
