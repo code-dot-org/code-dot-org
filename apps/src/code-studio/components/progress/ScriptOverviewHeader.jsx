@@ -185,10 +185,10 @@ class ScriptOverviewHeader extends Component {
 
     // Only display viewable versions in script version dropdown.
     const filteredVersions = versions.filter(version => version.canViewVersion);
-    const selectedVersion = versions.find(
+    const selectedVersion = filteredVersions.find(
       v => v.name === this.props.scriptName
     );
-    const convertedVersions = setRecommendedAndSelectedVersions(
+    setRecommendedAndSelectedVersions(
       filteredVersions,
       this.props.locale,
       selectedVersion && selectedVersion.year
@@ -246,10 +246,10 @@ class ScriptOverviewHeader extends Component {
                 {scriptTitle}{' '}
                 {betaTitle && <span className="betatext">{betaTitle}</span>}
               </h1>
-              {convertedVersions.length > 1 && (
+              {filteredVersions.length > 1 && (
                 <AssignmentVersionSelector
                   onChangeVersion={this.onChangeVersion}
-                  versions={convertedVersions}
+                  versions={filteredVersions}
                 />
               )}
             </div>
