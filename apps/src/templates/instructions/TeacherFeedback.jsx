@@ -88,10 +88,10 @@ export class TeacherFeedback extends Component {
     disabledMode: PropTypes.bool.isRequired,
     rubric: PropTypes.shape({
       keyConcept: PropTypes.string,
-      exceeds: PropTypes.string,
-      meets: PropTypes.string,
-      approaches: PropTypes.string,
-      noEvidence: PropTypes.string
+      performanceLevel1: PropTypes.string,
+      performanceLevel2: PropTypes.string,
+      performanceLevel3: PropTypes.string,
+      performanceLevel4: PropTypes.string
     }),
     visible: PropTypes.bool.isRequired,
     //Provided by Redux
@@ -229,7 +229,12 @@ export class TeacherFeedback extends Component {
       !this.props.displayKeyConcept &&
       !(!this.state.performance && this.props.viewAs === ViewType.Student);
 
-    const rubricLevels = ['exceeds', 'meets', 'approaches', 'noEvidence'];
+    const rubricLevels = [
+      'performanceLevel1',
+      'performanceLevel2',
+      'performanceLevel3',
+      'performanceLevel4'
+    ];
 
     // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs
