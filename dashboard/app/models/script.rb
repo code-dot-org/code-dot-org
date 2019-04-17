@@ -1471,6 +1471,20 @@ class Script < ActiveRecord::Base
   end
 
   def get_feedback_for_section(section)
+    rubric_performance_headers = {
+      "performanceLevel1": "Extensive Evidence",
+      "performanceLevel2": "Convincing Evidence",
+      "performanceLevel3": "Limited Evidence",
+      "performanceLevel4": "No Evidence"
+    }
+
+    rubric_performance_json_to_ruby = {
+      "performanceLevel1": "rubric_performance_level_1",
+      "performanceLevel2": "rubric_performance_level_2",
+      "performanceLevel3": "rubric_performance_level_3",
+      "performanceLevel4": "rubric_performance_level_4"
+    }
+
     feedback = {}
 
     level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
@@ -1496,8 +1510,8 @@ class Script < ActiveRecord::Base
           stageName: script_level.stage.localized_title,
           levelNum: script_level.position.to_s,
           keyConcept: (current_level.rubric_key_concept || ''),
-          performanceLevelDetails: (current_level.properties["rubric_#{temp_feedback.performance}"] || ''),
-          performance: temp_feedback.performance,
+          performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance.to_sym]] || ''),
+          performance: rubric_performance_headers[temp_feedback.performance.to_sym],
           comment: temp_feedback.comment,
           timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r")
         }
