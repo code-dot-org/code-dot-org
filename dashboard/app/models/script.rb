@@ -1472,17 +1472,17 @@ class Script < ActiveRecord::Base
 
   def get_feedback_for_section(section)
     rubric_performance_headers = {
-      "performanceLevel1": "Extensive Evidence",
-      "performanceLevel2": "Convincing Evidence",
-      "performanceLevel3": "Limited Evidence",
-      "performanceLevel4": "No Evidence"
+      performanceLevel1: "Extensive Evidence",
+      performanceLevel2: "Convincing Evidence",
+      performanceLevel3: "Limited Evidence",
+      performanceLevel4: "No Evidence"
     }
 
     rubric_performance_json_to_ruby = {
-      "performanceLevel1": "rubric_performance_level_1",
-      "performanceLevel2": "rubric_performance_level_2",
-      "performanceLevel3": "rubric_performance_level_3",
-      "performanceLevel4": "rubric_performance_level_4"
+      performanceLevel1: "rubric_performance_level_1",
+      performanceLevel2: "rubric_performance_level_2",
+      performanceLevel3: "rubric_performance_level_3",
+      performanceLevel4: "rubric_performance_level_4"
     }
 
     feedback = {}
