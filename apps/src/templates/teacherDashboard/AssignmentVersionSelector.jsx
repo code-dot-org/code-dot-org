@@ -39,12 +39,14 @@ const styles = {
  */
 export const setRecommendedAndSelectedVersions = (
   versions,
-  locale,
+  locale = null,
   selectedVersionYear = null
 ) => {
-  // We recommend the user use the latest stable version that is supported in their
-  // locale. If no versions support their locale, we recommend the latest stable version.
-  // Versions are sorted from most to least recent, so the first stable version will be the latest.
+  /**
+   * We recommend the user use the latest stable version that is supported in their
+   * locale. If no versions support their locale, we recommend the latest stable version.
+   * Versions are sorted from most to least recent, so the first stable version will be the latest.
+   */
   let recommendedVersion;
   if (locale) {
     recommendedVersion = versions.find(v => {
