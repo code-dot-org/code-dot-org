@@ -13,7 +13,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   test "end date and last seen school info interstitial is updated" do
     user_school_info = create :user_school_info
     sign_in user_school_info.user
-    patch "/api/v1/user_school_infos/#{user_school_info.user.id}/update_end_date_last_seen_school_info_interstitial", params: {
+    patch "/api/v1/user_school_infos/#{user_school_info.user.id}/update_end_date", params: {
       end_date: DateTime.now
     }
     assert_response :success
