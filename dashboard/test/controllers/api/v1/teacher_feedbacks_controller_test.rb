@@ -5,9 +5,9 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   COMMENT1 = 'Comment Alpha'
   COMMENT2 = 'Comment Beta'
   COMMENT3 = 'Comment Gamma'
-  PERFORMANCE1 = 'exceeds'
-  PERFORMANCE2 = 'approaches'
-  PERFORMANCE3 = 'noEvidence'
+  PERFORMANCE1 = 'performanceLevel1'
+  PERFORMANCE2 = 'performanceLevel3'
+  PERFORMANCE3 = 'performanceLevel4'
 
   self.use_transactional_test_case = true
   setup_all do

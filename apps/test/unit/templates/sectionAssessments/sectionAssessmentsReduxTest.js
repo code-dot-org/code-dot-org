@@ -127,7 +127,7 @@ describe('sectionAssessmentsRedux', () => {
             comment: '2 functions so great!',
             keyConcept: 'A different level with a key concept!',
             levelNum: '5',
-            performance: 'approaches',
+            performance: 'performanceLevel3',
             performanceLevelDetails: '3',
             stageName: 'Lesson 5: Creating Functions',
             stageNum: '5',
@@ -139,7 +139,7 @@ describe('sectionAssessmentsRedux', () => {
               "I like how you didn't include the last couple turn lefts!",
             keyConcept: 'My key concept',
             levelNum: '4',
-            performance: 'meets',
+            performance: 'performanceLevel2',
             performanceLevelDetails: 'My meets value',
             stageName: 'Lesson 4: Using Simple Commands',
             stageNum: '4',
@@ -1279,7 +1279,7 @@ describe('sectionAssessmentsRedux', () => {
                   levelNum: '7',
                   keyConcept: 'You should be learning about loops',
                   performanceLevelDetails: 'A loop is in the code',
-                  performance: 'exceeds',
+                  performance: 'performanceLevel1',
                   comment: 'Nice job using loops!',
                   timestamp: '03/21/19 at 12:17:17 PM'
                 },
@@ -1302,7 +1302,7 @@ describe('sectionAssessmentsRedux', () => {
                   keyConcept: 'Use variables to help and make coding better.',
                   performanceLevelDetails:
                     'You have some variables but are still missing out on their amazingness',
-                  performance: 'approaches',
+                  performance: 'performanceLevel3',
                   comment:
                     'There are at least 3 more variables you could be using.',
                   timestamp: '03/21/19 at 12:17:17 PM'
@@ -1314,7 +1314,7 @@ describe('sectionAssessmentsRedux', () => {
                   levelNum: '3',
                   keyConcept: 'Use variables to help and make coding better.',
                   performanceLevelDetails: 'You uses no variables',
-                  performance: 'no evidence',
+                  performance: 'performanceLevel4',
                   comment: "Why didn't you use variables?",
                   timestamp: '03/21/19 at 12:21:17 PM'
                 }
@@ -1332,7 +1332,7 @@ describe('sectionAssessmentsRedux', () => {
             levelNum: '7',
             keyConcept: 'You should be learning about loops',
             performanceLevelDetails: 'A loop is in the code',
-            performance: 'exceeds',
+            performance: 'performanceLevel1',
             comment: 'Nice job using loops!',
             timestamp: '03/21/19 at 12:17:17 PM'
           },
@@ -1355,7 +1355,7 @@ describe('sectionAssessmentsRedux', () => {
             keyConcept: 'Use variables to help and make coding better.',
             performanceLevelDetails:
               'You have some variables but are still missing out on their amazingness',
-            performance: 'approaches',
+            performance: 'performanceLevel3',
             comment: 'There are at least 3 more variables you could be using.',
             timestamp: '03/21/19 at 12:17:17 PM'
           },
@@ -1366,7 +1366,7 @@ describe('sectionAssessmentsRedux', () => {
             levelNum: '3',
             keyConcept: 'Use variables to help and make coding better.',
             performanceLevelDetails: 'You uses no variables',
-            performance: 'no evidence',
+            performance: 'performanceLevel4',
             comment: "Why didn't you use variables?",
             timestamp: '03/21/19 at 12:21:17 PM'
           }
