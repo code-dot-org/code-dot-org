@@ -37,7 +37,8 @@ class DSLDefined < Level
   def localized_text(text)
     I18n.t(
       text,
-      scope: [:data, type.underscore, name],
+      scope: ['data', type.underscore, name],
+      separator: I18n::Backend::Flatten::SEPARATOR_ESCAPE_CHAR,
       default: text,
       smart: true
     )

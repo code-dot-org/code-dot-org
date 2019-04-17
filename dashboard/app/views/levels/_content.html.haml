@@ -8,11 +8,11 @@
 %div.content-level{class: (content_class unless content_class.blank?)}
   - unless app == 'external'
     - unless data['content1'].blank?
-      %p.content.content1!= render_multi_or_match_answer(data['content1'], source_level)
+      %p.content.content1!= render_multi_or_match_content(data['content1'], source_level)
     - unless data['content2'].blank?
-      %p.content.content2!= render_multi_or_match_answer(data['content2'], source_level)
+      %p.content.content2!= render_multi_or_match_content(data['content2'], source_level)
     - unless data['content3'].blank?
-      %p.content.content3!= render_multi_or_match_answer(data['content3'], source_level)
+      %p.content.content3!= render_multi_or_match_content(data['content3'], source_level)
   / Markdown support using the 'markdown' property.
   - if data['markdown'].present?
     #markdown
