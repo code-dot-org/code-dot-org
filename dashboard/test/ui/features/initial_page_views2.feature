@@ -13,6 +13,8 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
     And I am on "<url>"
     When I rotate to landscape
     And I close the instructions overlay if it exists
+    # hack to deflake "free response" scenario below
+    And element ".uitest-attachment" is not visible
     Then I see no difference for "initial load"
     And I close my eyes
     And I sign out
