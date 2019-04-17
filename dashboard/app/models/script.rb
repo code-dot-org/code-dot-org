@@ -357,6 +357,18 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # Returns a cached map from family_name to scripts, or nil if caching is disabled.
+  def self.script_family_cache
+    return nil unless should_cache?
+    @@script_family_cache ||= {}.tap do |cache|
+      family_scripts = script_cache.values.group_by(&:family_name)
+      # Not all scripts have a family_name, and thus will be grouped as family_scripts[nil].
+      # We do not want to store this key-value pair in the cache.
+      family_scripts.delete(nil)
+      cache.merge!(family_scripts)
+    end
+  end
+
   # Find the script level with the given id from the cache, unless the level build mode
   # is enabled in which case it is always fetched from the database. If we need to fetch
   # the script and we're not in level mode (for example because the script was created after
@@ -443,6 +455,53 @@ class Script < ActiveRecord::Base
       # Populate cache on miss.
       script_cache[cache_key] = get_without_cache(id_or_name, version_year: version_year)
     end
+  end
+
+  def self.get_family_without_cache(family_name)
+    Script.where(family_name: family_name).order("properties -> '$.version_year' DESC")
+  end
+
+  # Returns all scripts within a family from the Rails cache.
+  # Populates the cache with scripts in that family upon cache miss.
+  # @param family_name [String] Family name for the desired scripts.
+  # @return [Array<Script>] Scripts within the specified family.
+  def self.get_family_from_cache(family_name)
+    return Script.get_family_without_cache(family_name) unless should_cache?
+
+    script_family_cache.fetch(family_name) do
+      # Populate cache on miss.
+      script_family_cache[family_name] = Script.get_family_without_cache(family_name)
+    end
+  end
+
+  def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
+    return nil unless family_name
+
+    family_scripts = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
+
+    if user
+      assigned_script_ids = user.section_scripts.pluck(:id)
+      script_name = family_scripts.select {|s| assigned_script_ids.include?(s.id)}&.first&.name
+      return Script.new(redirect_to: script_name) if script_name
+    end
+
+    locale_str = locale&.to_s
+    latest_version = nil
+    family_scripts.each do |script|
+      next unless script.is_stable
+      latest_version ||= script
+
+      # All English-speaking locales are supported, so we check that the locale starts with 'en' rather
+      # than matching en-US specifically.
+      is_supported = script.supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
+      if is_supported
+        latest_version = script
+        break
+      end
+    end
+
+    script_name = latest_version&.name
+    script_name ? Script.new(redirect_to: script_name) : nil
   end
 
   # Given a script family name, return a dummy Script with redirect_to field
