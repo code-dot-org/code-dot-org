@@ -3612,14 +3612,14 @@ en:
       Virtual Pet 2 - Validated (Ram): Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2 - Validated: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
-      Virtual Pet 2_2019: Create your own virtual pet! Place a new sprite on the screen. Then click the **Costumes** tab to create or select a new costume for your virtual pet. Last, make your pet begin a **wandering** behavior when you click **Run**.
+      Virtual Pet 2_2019: Create your own virtual pet! Click the **Costumes** tab to create or select a new costume for your virtual pet. In the code below, change the pet sprite's costume to your own.
       Virtual Pet 2_simple: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 2_simple_clone: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 3: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 3_2019: Add a new sprite to the screen, then give it a costume that looks like food your pet enjoys eating.
       Virtual Pet 3_simple: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
-      Virtual Pet 4_2019: Add an event that makes the food jump to a random location when your pet touches it.
+      Virtual Pet 4_2019: Let's make it so your pet can "eat" its food. Add an event that makes the food jump to a random location when your pet touches it.
       Virtual Pet 4_simple: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
       Virtual Pet 5 - Validated: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
@@ -3628,7 +3628,25 @@ en:
       Virtual Pet 6: Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet 6_2019: Set the variable `happiness` to 0 when the program starts. When your pet eats food it likes, change `happiness` by 1. When your pet eats food it doesn't like, change `happiness` by -1.
       Virtual Pet 6_simple: Add an apple that returns the giraffe back to regular size when they touch.
-      Virtual Pet 7_2019: Create an event that prints your pet's happiness level when your pet is clicked.
+      Virtual Pet 7_2019: |-
+        Print your pet's happiness level each time it eats food. Use this block, found in the "World" toolbox category:
+        <xml>
+        <block type="gamelab_printText" block-text="print text block">
+                <value name="TEXT">
+                  <block type="text_join_simple" inputcount="2">
+                    <value name="ADD0">
+                      <block type="text">
+                        <title name="TEXT">My happiness level: </title>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="variables_get">
+                        <title name="VAR">happiness</title>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block></xml>
       Virtual Pet 8_2019: "**Free Play:** What more can you make your pet do? Try anything you like!"
       Virtual Pet Freeplay: 'Freeplay: What more can you make your giraffe do? '
       Virtual Pet Freeplay_2019: "**Free Play:** What more can you make your pet do? Try anything you like!"
@@ -3685,11 +3703,11 @@ en:
       beeDebugVideo1: Use a `repeat` loop to collect all of the nectar.
       behavior bash mary: Clone this level and make your own blocks!
       behaviors 1: Make a prediction!
-      behaviors 2: Help the baby bird fly!
-      behaviors 3: Help the tortoise beat the hare!
+      behaviors 2: Fly the rocket to the stars!
+      behaviors 3: Help the rover outrun the robot!
       behaviors 4: Make a prediction!
       behaviors 4a: Give the dog a behavior to help her find her bone.
-      behaviors 5: Move the pet diagonally.
+      behaviors 5: Move the astronaut diagonally.
       behaviors 5a: Make the ball roll.
       behaviors 6: Make the ball roll.
       behaviors clone me 2: Clone this level and make your own blocks!
