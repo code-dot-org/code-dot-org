@@ -29,6 +29,7 @@ Scenario: Submit three answers.
   And element ".level-group-content:nth(2) #checked_2" is visible
   And element ".level-group-content:nth(2) #checked_0" is visible
 
+@no_ie
 @dashboard_db_access
 Scenario: Match levels within level group
   Given I create a teacher-associated student named "Lilian"

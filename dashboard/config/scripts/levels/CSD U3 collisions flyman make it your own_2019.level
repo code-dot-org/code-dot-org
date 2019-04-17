@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-14T01:29:52.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -92,10 +92,10 @@
     "mini_rubric": "true",
     "encrypted": "false",
     "rubric_key_concept": "Model complex movement on a coordinate plane.",
-    "rubric_exceeds": "The player character is unable to move through the obstacle, the coin never appears behind the obstacle, and the collider size and shape triggers the collisions at reasonable times.  There is at least one new sprite interaction of the student's choosing.",
-    "rubric_meets": "The player character is unable to move through the obstacle, and the coin never appears behind the obstacle.",
-    "rubric_approaches": "The player character interacts with the obstacle in some way, but there may be problems, such as the player may move the obstacle, or the coin may sometimes appear behind the obstacle.",
-    "rubric_no_evidence": "There are no interactions between the player character and the obstacle.",
+    "rubric_performance_level_1": "The player character is unable to move through the obstacle, the coin never appears behind the obstacle, and the collider size and shape triggers the collisions at reasonable times.  There is at least one new sprite interaction of the student's choosing.",
+    "rubric_performance_level_2": "The player character is unable to move through the obstacle, and the coin never appears behind the obstacle.",
+    "rubric_performance_level_3": "The player character interacts with the obstacle in some way, but there may be problems, such as the player may move the obstacle, or the coin may sometimes appear behind the obstacle.",
+    "rubric_performance_level_4": "There are no interactions between the player character and the obstacle.",
     "preload_asset_list": null
   },
   "published": true,

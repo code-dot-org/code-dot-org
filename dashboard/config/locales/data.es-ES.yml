@@ -809,6 +809,7 @@ es:
         csd_applab_designmode: 'Descubrimientos de CS: Laboratorio de aplicación -
           modo de diseño'
         csd_pair_programming: Programación de pares
+        csd_gamelab_functions: Llamar y definir funciones
         csd_applab_parameters: Funciones con parámetros
     callout:
       text:

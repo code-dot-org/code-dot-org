@@ -4353,6 +4353,8 @@ is:
               name: Hópvistun
             Conditionals with Cards:
               name: Skilyrði með kortum
+            Building a Foundation:
+              name: Að byggja grunn
         csp7-pilot-staging:
           stages:
             new stage:
