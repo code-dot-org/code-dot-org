@@ -38,14 +38,14 @@ Feature: Feedback Tab Visibility
     And I wait for the page to fully load
     Then I see no difference for "teacher giving feedback tab load"
 
-    And I wait to see "#rubric-input-exceeds"
-    And I press "#rubric-input-exceeds" using jQuery
+    And I wait to see "#rubric-input-performanceLevel1"
+    And I press "#rubric-input-performanceLevel1" using jQuery
     And I wait to see "#ui-test-feedback-input"
     And I press the first "#ui-test-feedback-input" element
     And I press keys "Nice!" for element "#ui-test-feedback-input"
     And I press "#ui-test-submit-feedback" using jQuery
     And element ".editor-column" contains text "Nice!"
-    And element "#rubric-input-exceeds" is checked
+    And element "#rubric-input-performanceLevel1" is checked
     And I wait until "#ui-test-feedback-time" contains text "Last updated"
     And element "#ui-test-submit-feedback" contains text "Update"
 
