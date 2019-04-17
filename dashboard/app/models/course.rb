@@ -288,11 +288,21 @@ class Course < ApplicationRecord
   # sharing the family_name of this course, including this one.
   def summarize_versions(user = nil)
     return [] unless family_name
-    Course.
+    versions = Course.
       where("properties -> '$.family_name' = ?", family_name).
-      map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title, can_view_version: c.can_view_version?(user)}}.
-      sort_by {|info| info[:version_year]}.
-      reverse
+      map do |c|
+        {
+          name: c.name,
+          version_year: c.version_year,
+          version_title: c.localized_version_title,
+          can_view_version: c.can_view_version?(user),
+          # TODO: (madelynkasula) Update is_stable to no longer be hard-coded once
+          # properties[:is_stable] is implemented for courses.
+          is_stable: true
+        }
+      end
+
+    versions.sort_by {|info| info[:version_year]}.reverse
   end
 
   # If a user has no experiments enabled, return the default set of scripts.
