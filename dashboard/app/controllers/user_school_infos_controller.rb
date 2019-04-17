@@ -1,6 +1,10 @@
 class UserSchoolInfosController < ApplicationController
+  #before_action :authenticate_user!
+
   # PATCH /api/v1/users_school_infos/<id>/update_last_confirmation_date
   def update_last_confirmation_date
+    puts params
+    #binding.pry
     user_school_info = UserSchoolInfo.find(params[:id])
     result = user_school_info.update(last_confirmation_date: DateTime.now)
     if result
@@ -12,42 +16,45 @@ class UserSchoolInfosController < ApplicationController
 
   # PATCH /api/v1/users_school_infos/<id>/update_end_date
   def update_end_date
+    puts params
     user_school_info = UserSchoolInfo.find(params[:id])
+    if user_school_info.update!(end_date: DateTime.now)
 
-    user_school_info.update!(end_date: DateTime.now)
+      user_school_info.user.update!(properties: {last_seen_school_info_interstitial: DateTime.now})
+    end
 
     head :no_content
   end
 
   # PATCH /api/v1/users_school_infos/<id>/update_school_info_id
-  def update_school_info_history
+  def update_school_info_id
     ActiveRecord::Base.transaction do
-      if params[:add_new_school] == 1
+      user_school_info = UserSchoolInfo.find(params[:id])
+      school = user_school_info.school_info.school
+      unless school
         school = School.create(new_school_params)
-        school.school_infos.create(school_info_params)
-      else
-        school = School.find(params[:school_id])
+        school.school_info.create(school_info_params)
       end
 
-      school_info = school.school_infos.order(created_at: :desc).first
+      school_info = school.school_info.order(created_at: :desc).first
 
-      # Always create a new user_school_info row
-      current_user.user_school_infos.create(user_school_info_params)
+      user = user_school_info.user
 
-      # Update the user(current_user) with the school_info_id
-      current_user.update school_info_id: school_info.id
+      user.user_school_infos.create({school_info_id: school_info.id, last_confirmation_date: DateTime.now, start_date: user.created_at})
+
+      user.update({school_info_id: school_info.id})
+
+      head :no_content
     end
   end
 
   private
 
   def new_school_params
-    params.require(:school).permit(:name, :city, :state, :zip)
+    params.require(:school).permit(:name, :city, :state)
   end
 
   def school_info_params
-  end
-
-  def user_school_info_params
+    params.require(:school_info).permit(:school_type, :state, :school_name, :country)
   end
 end
