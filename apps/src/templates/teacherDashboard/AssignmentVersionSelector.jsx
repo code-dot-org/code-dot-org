@@ -73,7 +73,8 @@ export default class AssignmentVersionSelector extends Component {
     dropdownStyle: PropTypes.object,
     onChangeVersion: PropTypes.func.isRequired,
     versions: PropTypes.arrayOf(assignmentVersionShape),
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    rightJustifiedPopupMenu: PropTypes.bool
   };
 
   state = {
@@ -129,6 +130,11 @@ export default class AssignmentVersionSelector extends Component {
     const {dropdownStyle, versions, disabled} = this.props;
     const selectedVersionYear = versions.find(v => v.isSelected).year;
 
+    const popupMenuXOffset = this.props.rightJustifiedPopupMenu
+      ? -menuWidth / 2
+      : 0;
+    const menuOffset = {x: popupMenuXOffset, y: 0};
+
     return (
       <span style={styles.version}>
         <div style={styles.dropdownLabel}>
@@ -155,7 +161,7 @@ export default class AssignmentVersionSelector extends Component {
         <PopUpMenu
           isOpen={this.state.isMenuOpen}
           targetPoint={this.state.targetPoint}
-          offset={{x: 0, y: 0}}
+          offset={menuOffset}
           style={styles.popUpMenuStyle}
           beforeClose={this.beforeClose}
         >
