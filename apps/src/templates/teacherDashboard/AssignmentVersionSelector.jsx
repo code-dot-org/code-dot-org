@@ -139,7 +139,7 @@ export default class AssignmentVersionSelector extends Component {
     const menuOffset = {x: popupMenuXOffset, y: 0};
 
     return (
-      <span style={styles.version}>
+      <span style={styles.version} id="uitest-version-selector">
         <div style={styles.dropdownLabel}>
           {i18n.assignmentSelectorVersion()}
         </div>
