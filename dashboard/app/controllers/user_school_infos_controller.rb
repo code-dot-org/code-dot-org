@@ -35,15 +35,15 @@ class UserSchoolInfosController < ApplicationController
       user_school_info = UserSchoolInfo.find(params[:id])
       school = user_school_info.school_info.school
       unless school
-        school = School.create(new_school_params)
-        school.school_info.create(school_info_params)
+        school = School.create!(new_school_params)
+        school.school_info.create!(school_info_params)
       end
 
       school_info = school.school_info.order(created_at: :desc).first
 
       user = user_school_info.user
 
-      user.user_school_infos.create({school_info_id: school_info.id, last_confirmation_date: DateTime.now, start_date: user.created_at})
+      user.user_school_infos.create!({school_info_id: school_info.id, last_confirmation_date: DateTime.now, start_date: user.created_at})
 
       user.update({school_info_id: school_info.id})
 
