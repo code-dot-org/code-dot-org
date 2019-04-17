@@ -4494,6 +4494,17 @@ pt-BR:
         Copiando seus hiperlinks para todas as suas páginas permitiu que você chegasse à maioria das páginas em seu site de qualquer outra página. Um hiperlink está faltando - o único para levá-lo à sua página inicial (index.html).
 
         **Adicione um hiperlink à sua página inicial a partir de todas as páginas, até mesmo da sua página inicial.** Adicionando isto à sua página inicial manterá seu cabeçalho de navegação consistente em todas as páginas.
+      CSD U2 add style_2019: |-
+        # Experimente!
+
+        Agora que você viu algumas maneiras para adicionar estilos, é hora de você experimentar. Aqui está uma página web que você nunca viu antes, mas ela precisa de algum estilo!
+
+        # Faça Isto
+
+        -   Adicione uma cor de fundo à página web.
+        -   Agregue algum espaço a mais ao redor das imagens.
+        -   Faça com que o texto seja exibido em uma cor diferente.
+        -   Acrescente quaisquer estilos adicionais que você queira.
       CSD U2 challenge: |-
         # Desafio
 
@@ -6764,6 +6775,244 @@ pt-BR:
         -   Use HTML para completar sua nova página. Ela deverá incluir:
         -   uma lista
         -   um cabeçalho
+      CSD U2 lists intro: "# Listas\n\n<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Quais
+        são os dois tipos de listas?</strong>\n</summary>\nHá dois tipos de listas
+        em HTML, listas ordenadas e não ordenadas.\n</details>\n\n<details>\n<summary><strong>O
+        que é uma lista não ordenada?</strong>\n</summary>\n\nUma lista não ordenada
+        é somente um conjunto de itens com marcadores.\n\nUma lista não ordenada possui
+        os tags `<ul> </ul>`. Isto é uma abreviação para <strong>U</strong>nordered
+        <strong>L</strong>ist. Cada item da lista é indicado por um elemento de item
+        de lista `<li> </li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem.
+        O item de lista é um elemento filho, o que significa que ele é colocado no
+        interior de seu elemento pai, que é a lista não ordenada.\n\n</details>\n\n<details>\n<summary><strong>Como
+        eu crio uma lista não ordenada?</strong>\n</summary>\n\nCriar uma lista não
+        ordenada requer dois passos: criar a lista, e adicionar os itens da lista.
+        Para criar a lista não ordenada, digite as tags `<ul> </ul>`. Em seguida,
+        adicione seus itens de lista **dentro** dos tags da lista não ordenada. Para
+        criar cada item, utilize os tags de itens de lista `<li> </li>` e digite os
+        items da lista entre os tags.\n\nA indentação dos tags `<li> </li>` pode ajudar,
+        para deixar claro que estão contidos no interior das tags `<ul> </ul>`.\n\n</details>\n\n<details>\n<summary><strong>O
+        que é uma lista ordenada?</strong>\n</summary>\n\nUma lista ordenada é um
+        conjunto de itens com marcação que são numerados.\n\nUm elemento de lista
+        ordenada possui os tags `<ol> </ol>`. Isto é uma abreviação para <strong>O</strong>rdered
+        <strong>L</strong>ist. Cada item da lista é marcado por um elemento de item
+        de lista `<li> </li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem.
+        O elemento de item de lista é um elemento filho, o que significa que deve
+        ser colocado no interior de seu elemento pai, que é a lista ordenada.\n\n</details>\n\n<details>\n<summary><strong>Como
+        eu crio uma lista ordenada?</strong>\n</summary>\n\nA criação de uma lista
+        ordenada requer dois passos: criar a lista, e adicionar os elementos da lista.
+        Para criar a lista ordenada, digite os tags `<ol> </ol>`. Em seguida, adicione
+        seus items de lista **dentro** dos tags da lista ordenada. Para criar cada
+        item da lista, utilize os tags `<li> </li>` e digite o item da lista entre
+        os tags. \n\nA indentação dos tags `<li> </li>` pode ajudar, para deixar claro
+        que estão contidos no interior das tags `<ol> </ol>`.\n\n</details>\n</div>\n\nVocê
+        também pode usar HTML para criar tipos diferentes de listas na sua página
+        web. Esta receita inclui dois tipos diferentes de listas, uma ordenada (com
+        números) e outra não ordenada (com marcadores).\n\n# Faça Isto\n\n-   Use
+        a ferramenta de inspeção para observar o código que cria os dois diferentes
+        tipos de lista\n-   Tenha certeza que você e seu parceiro estejam de acordo
+        sobre o que fazem as diferentes tags.\n-   Ajuste o código para que o segundo
+        item de cada lista seja exibido corretamente"
+      CSD U2 lists intro_2018: "# Listas\n\n<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Quais
+        são os dois tipos de listas?</strong>\n</summary>\nHá dois tipos de listas
+        em HTML, listas ordenadas e não ordenadas.\n</details>\n\n<details>\n<summary>\n<strong>O
+        que é uma lista não ordenada?</strong>\n</summary>\n\nUma lista não ordenada
+        é somente um conjunto de itens com marcadores.\n\nUma lista não ordenada possui
+        os tags `<ul></ul>`. Isto é uma abreviação para <strong>U</strong>nordered
+        <strong>L</strong>ist. Cada item da lista é indicado por um elemento de item
+        de lista `<li></li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem.
+        O item de lista é um elemento filho, o que significa que ele é colocado no
+        interior de seu elemento pai, que é a lista não ordenada.\n\n</details>\n\n<details>\n<summary>\n<strong>Como
+        eu crio uma lista não ordenada?</strong>\n</summary>\n\nCriar uma lista não
+        ordenada requer dois passos: criar a lista, e adicionar os itens da lista.
+        Para criar a lista não ordenada, digite as tags `<ul> </ul>`. Em seguida,
+        adicione seus itens de lista **dentro** dos tags da lista não ordenada. Para
+        criar cada item, utilize os tags de itens de lista `<li> </li>` e digite o
+        item da lista entre os tags.\n<br /><br />\nA indentação dos tags `<li> </li>`
+        pode ajudar, para deixar claro que estão contidos no interior das tags `<ul>
+        </ul>`.\n\n</details>\n\n<details>\n<summary>\n<strong>O que é uma lista ordenada?</strong>\n</summary>\n\nUma
+        lista ordenada é um conjunto de itens com marcação que são numerados.\n\nUm
+        elemento de lista ordenada possui os tags `<ol> </ol>`. Isto é uma abreviação
+        para <strong>O</strong>rdered <strong>L</strong>ist. Cada item da lista é
+        marcado por um elemento de item de lista `<li> </li>`. Isto é uma abreviação
+        para <strong>L</strong>ist <strong>I</strong>tem. O elemento de item de lista
+        é um elemento filho, o que significa que deve ser colocado no interior de
+        seu elemento pai, que é a lista ordenada.\n\n</details>\n<details>\n<summary>\n<strong>Como
+        eu crio uma lista ordenada?</strong>\n</summary>\n\nA criação de uma lista
+        ordenada requer dois passos: criar a lista, e adicionar os elementos da lista.
+        Para criar a lista ordenada, digite os tags `<ol> </ol>`. Em seguida, adicione
+        seus items de lista **dentro** dos tags da lista ordenada. Para criar cada
+        item da lista, utilize os tags `<li> </li>` e digite o item da lista entre
+        os tags. \n<br /><br />\nA indentação dos tags `<li> </li>` pode ajudar, para
+        deixar claro que estão contidos no interior das tags `<ol> </ol>`.\n\n</details>\n</div>\n\nVocê
+        também pode usar HTML para criar tipos diferentes de listas na sua página
+        web. Esta receita inclui dois tipos diferentes de listas, uma ordenada (com
+        números) e outra não ordenada (com marcadores).\n\n# Faça Isto\n\n-   Use
+        a ferramenta de inspeção para observar o código que cria os dois diferentes
+        tipos de lista\n-   Tenha certeza que você e seu parceiro estejam de acordo
+        sobre o que fazem as diferentes tags.\n-   Ajuste o código para que o segundo
+        item de cada lista seja exibido corretamente"
+      CSD U2 lists intro_2019: "# Listas\n\n<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Quais
+        são os dois tipos de listas?</strong>\n</summary>\nHá dois tipos de listas
+        em HTML, listas ordenadas e não ordenadas.\n</details>\n\n<details>\n<summary>\n<strong>O
+        que é uma lista não ordenada?</strong>\n</summary>\n\nUma lista não ordenada
+        é somente um conjunto de itens com marcadores.\n\nUma lista não ordenada possui
+        os tags `<ul></ul>`. Isto é uma abreviação para <strong>U</strong>nordered
+        <strong>L</strong>ist. Cada item da lista é indicado por um elemento de item
+        de lista `<li></li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem.
+        O item de lista é um elemento filho, o que significa que ele é colocado no
+        interior de seu elemento pai, que é a lista não ordenada.\n\n</details>\n\n<details>\n<summary>\n<strong>Como
+        eu crio uma lista não ordenada?</strong>\n</summary>\n\nCriar uma lista não
+        ordenada requer dois passos: criar a lista, e adicionar os itens da lista.
+        Para criar a lista não ordenada, digite as tags `<ul> </ul>`. Em seguida,
+        adicione seus itens de lista **dentro** dos tags da lista não ordenada. Para
+        criar cada item, utilize os tags de itens de lista `<li> </li>` e digite o
+        item da lista entre os tags.\n<br /><br />\nA indentação dos tags `<li> </li>`
+        pode ajudar, para deixar claro que estão contidos no interior das tags `<ul>
+        </ul>`.\n\n</details>\n\n<details>\n<summary>\n<strong>O que é uma lista ordenada?</strong>\n</summary>\n\nUma
+        lista ordenada é um conjunto de itens com marcação que são numerados.\n\nUm
+        elemento de lista ordenada possui os tags `<ol> </ol>`. Isto é uma abreviação
+        para <strong>O</strong>rdered <strong>L</strong>ist. Cada item da lista é
+        marcado por um elemento de item de lista `<li> </li>`. Isto é uma abreviação
+        para <strong>L</strong>ist <strong>I</strong>tem. O elemento de item de lista
+        é um elemento filho, o que significa que deve ser colocado no interior de
+        seu elemento pai, que é a lista ordenada.\n\n</details>\n<details>\n<summary>\n<strong>Como
+        eu crio uma lista ordenada?</strong>\n</summary>\n\nA criação de uma lista
+        ordenada requer dois passos: criar a lista, e adicionar os elementos da lista.
+        Para criar a lista ordenada, digite os tags `<ol> </ol>`. Em seguida, adicione
+        seus items de lista **dentro** dos tags da lista ordenada. Para criar cada
+        item da lista, utilize os tags `<li> </li>` e digite o item da lista entre
+        os tags. \n<br /><br />\nA indentação dos tags `<li> </li>` pode ajudar, para
+        deixar claro que estão contidos no interior das tags `<ol> </ol>`.\n\n</details>\n</div>\n\nVocê
+        também pode usar HTML para criar tipos diferentes de listas na sua página
+        web. Esta receita inclui dois tipos diferentes de listas, uma ordenada (com
+        números) e outra não ordenada (com marcadores).\n\n# Faça Isto\n\n-   Use
+        a ferramenta de inspeção para observar o código que cria os dois diferentes
+        tipos de lista\n-   Tenha certeza que você e seu parceiro estejam de acordo
+        sobre o que fazem as diferentes tags.\n-   Ajuste o código para que o segundo
+        item de cada lista seja exibido corretamente"
+      CSD U2 navigation: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>O que são hyperlinks?</strong>
+        </summary>
+
+        Hyperlinks conectam-se a outras páginas locais ou a páginas externas. Para adicionar navegação ao seu website você vai precisar adicionar hyperlinks que se conectam a suas páginas web individuais. Você pode **adicionar hyperlinks à sua página web usando o elemento `<a>`**. O texto que você quiser mostrar como hyperlink deve ser inserido entre os links de abertura e fechamento do hyperlink. O elemento `<a>` possui um atributo `href` que é a localidade onde se quer conectar. A localidade de uma página local é simplesmente o caminho para o arquivo da página. <br> <br>
+
+        Por exemplo, para conectar à página de casas exclusivas você adicionaria o seguinte código dentro do elemento \`<body>. <br><br>
+
+        <pre>
+        &lt;a href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;
+        </pre>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu adiciono um hyperlink?</strong>
+        </summary>
+
+        Você pode **adicionar hyperlinks à sua página web usando o elemento `<a>`**. O texto que você quiser mostrar como hyperlink vai entre os tags de abertura e fechamento do hyperlink. O elemento `<a>` possui um atributo `href` que a localidade à qual você quer conectar. A localidade de uma página local é simplesmente o caminho para o arquivo da página. <br><br>
+
+        Por exemplo para conectar à página de casas exclusivas você poderia adicionar o seguinte código dentro do elemento `<body>`. <br><br>
+
+        <pre>
+        &lt;a href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;
+        </pre>
+
+        </details>
+        </div>
+
+        # Crie uma Barra de Navegação
+
+        Aqui está seu projeto de antes. Você irá conectar as duas páginas através da criação de uma **barra de navegação** no topo da página. Sites web tipicamente têm a mesma barra de navegação em todas as suas páginas para que você possa navegar à vontade entre as páginas do site. Você pode ver um exemplo de uma barra de navegação <a href="https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/" target="_new">nesta página</a>
+
+        # Faça Isto
+
+        -   Na sua página inicial (index.html), adicione dois hyperlinks no topo da página, um para sua página de listas, e outro para sua página inicial.
+        -   Ainda que possa parecer estranho ligar uma página a ela mesma, fica menos confuso se a barra de navegação for exatamente a mesma em todas as páginas.
+        -   Copie o código da barra de navegação, e depois adicione no topo de sua página de listas.
+        -   Teste seus links na área de visualização, clicando sobre eles.
+      CSD U2 navigation_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>O que são hyperlinks?</strong>
+        </summary>
+
+        Hyperlinks conectam-se a outras páginas locais ou a páginas externas. Para adicionar navegação ao seu website você vai precisar adicionar hyperlinks que se conectam a suas páginas web individuais. Você pode **adicionar hyperlinks à sua página web usando o elemento `<a>`**. O texto que você quiser mostrar como hyperlink deve ser inserido entre os links de abertura e fechamento do hyperlink. O elemento `<a>` possui um atributo `href` que é a localidade onde se quer conectar. A localidade de uma página local é simplesmente o caminho para o arquivo da página.
+        <br/><br/>
+        Por exemplo, para conectar à página de casas exclusivas você adicionaria o seguinte código dentro do elemento `<body>`
+
+        <pre>
+        &lt;a href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;
+        </pre>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu adiciono um hyperlink?</strong>
+        </summary>
+
+        Você pode **adicionar hyperlinks à sua página web usando o elemento `<a>`**. O texto que você quiser mostrar como hyperlink vai entre os tags de abertura e fechamento do hyperlink. O elemento `<a>` possui um atributo `href` que a localidade à qual você quer conectar. A localidade de uma página local é simplesmente o caminho para o arquivo da página.
+        <br/><br/>
+        Por exemplo para conectar à página de casas exclusivas você poderia adicionar o seguinte código dentro do elemento `<body>`
+
+        <pre>
+        &lt;a href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;
+        </pre>
+
+        </details>
+        </div>
+
+        # Crie uma Barra de Navegação
+
+        Aqui está seu projeto de antes. Você irá conectar as duas páginas através da criação de uma **barra de navegação** no topo da página. Sites web tipicamente têm a mesma barra de navegação em todas as suas páginas para que você possa navegar à vontade entre as páginas do site. Você pode ver um exemplo de uma barra de navegação <a href="https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/" target="_new">nesta página</a>
+
+        # Faça Isto
+
+        -   Na sua página inicial (index.html), adicione dois hyperlinks no topo da página, um para sua página de listas, e outro para sua página inicial.
+        -   Ainda que possa parecer estranho ligar uma página a ela mesma, fica menos confuso se a barra de navegação for exatamente a mesma em todas as páginas.
+        -   Copie o código da barra de navegação, e depois adicione no topo de sua página de listas.
+        -   Teste seus links na área de visualização, clicando sobre eles.
+      CSD U2 navigation_2019: "<div style=\"float: right; height: 250px; width: 40%;
+        overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>O
+        que são hyperlinks?</strong>\n</summary>\n\nHyperlinks conectam-se a outras
+        páginas locais ou a páginas externas. Para adicionar navegação ao seu website
+        você vai precisar adicionar hyperlinks que se conectam a suas páginas web
+        individuais. Você pode **adicionar hyperlinks à sua página web usando o elemento
+        `&lt;a&gt;`**. O texto que você quiser mostrar como hyperlink deve ser inserido
+        entre os links de abertura e fechamento do hyperlink. O elemento `&lt;a&gt;`
+        possui um atributo `href` que é a localidade onde se quer conectar. A localidade
+        de uma página local é simplesmente o caminho para o arquivo da página.\n<br/><br/>\nPor
+        exemplo, para conectar à página de casas exclusivas você adicionaria o seguinte
+        código dentro do elemento `<body>`.\n\n<pre>\n&lt;a href=”houses.html”&gt;
+        Casas Exclusivas &lt;/a&gt;\n</pre>\n\n</details>\n<details>\n<summary>\n<strong>Como
+        eu adiciono um hyperlink?</strong>\n</summary>\n\nVocê pode **adicionar hyperlinks
+        à sua página web usando o elemento `&lt;a&gt;`**. O texto que você quiser
+        mostrar como hyperlink vai entre os tags de abertura e fechamento do hyperlink.
+        O elemento `&lt;a&gt;` possui um atributo `href` que a localidade à qual você
+        quer conectar. A localidade de uma página local é simplesmente o caminho para
+        o arquivo da página. \n<br/><br/>\nPor exemplo para conectar à página de casas
+        exclusivas você poderia adicionar o seguinte código dentro do elemento `<body>`.\n\n<pre>\n&lt;a
+        href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;\n</pre>\n\n</details>\n</div>\n\n#
+        Crie uma Barra de Navegação\n\nAqui está seu projeto de antes. Você irá conectar
+        as duas páginas através da criação de uma **barra de navegação** no topo da
+        página. Sites web tipicamente têm a mesma barra de navegação em todas as suas
+        páginas para que você possa navegar à vontade entre as páginas do site. Você
+        pode ver um exemplo de uma barra de navegação <a href=\"https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/\"
+        target=\"_new\">nesta página</a>\n\n# Faça Isto\n\n-   Na sua página inicial
+        (index.html), adicione dois hyperlinks no topo da página, um para sua página
+        de listas, e outro para sua página inicial.\n-   Ainda que possa parecer estranho
+        ligar uma página a ela mesma, fica menos confuso se a barra de navegação for
+        exatamente a mesma em todas as páginas.\n-   Copie o código da barra de navegação,
+        e depois adicione no topo de sua página de listas.\n-   Teste seus links na
+        área de visualização, clicando sobre eles."
       CSD U2 new page: |-
         # Crie uma nova página para o seu site.
 
@@ -6800,6 +7049,183 @@ pt-BR:
         -   Use HTML para preencher sua nova página. Deve incluir:
         -   uma lista
         -   um cabeçalho
+      CSD U2 ordered list: |-
+        # Listas Ordenadas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Há dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+        </details>
+        <details>
+        <summary><strong>O que é uma lista ordenada?</strong>
+        </summary>
+
+        Uma lista ordenada é um conjunto de itens com marcadores que são numerados.
+
+        Um elemento de lista ordenada possui o tag `<ol>`. Isto é uma abreviação para <strong>O</strong>rdered <strong>L</strong>ist. Cada item na lista é indicado por um elemento de item de lista `<li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem. O elemento de item de lista é um elemento filho, o que significa que estará dentro de seu elemento pai, a lista ordenada (`<ol>`).
+
+        </details>
+
+        <details>
+        <summary><strong>Como eu crio uma lista ordenada?</strong>
+        </summary>
+
+        A criação de uma lista ordenada tem dois passos: criar a lista, e acrescentar os itens da lista. Para criar uma lista ordenada, digite os tags da lista ordenada `<ol></ol>`. Em seguida, adicione os items **dentro** dos tags da lista ordenada. Para criar cada item de lista, utilize s tags de item de lista `<li></li>` e digite o item no interior dos tags.
+
+        A indentação dos tags `<li>` pode ajudar para deixar claro que eles estão contidos dentro do tag `<ol>`.
+
+        </details>
+
+        <details>
+        <summary><strong>Mostre-me o código que funciona</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ol&gt; <br>   &lt;li&gt;Passo 1 &lt;/li&gt; <br>   &lt;li&gt;Passo 2 &lt;/li&gt; <br>   &lt;li&gt;Passo 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>
+        <td><img src="https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria incluir uma lista ordenada, mas as tags da lista estão faltando.
+
+        # Faça Isto
+
+        -   Use as tags `<ol>` e `<li>` para estruturar este conteúdo em uma lista ordenada semelhante à lista mostrada abaixo.
+
+        _Dica: Seu código NÃO DEVERÁ CONTER NÚMEROS._
+
+        ![](<https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03 PM.png>)
+      CSD U2 ordered list_2018: |-
+        # Listas Ordenadas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Há dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma lista ordenada?</strong>
+        </summary>
+
+        Uma lista ordenada é um conjunto de itens com marcadores que são numerados.
+        <br /><br />
+        Um elemento de lista ordenada possui o tag `<ol>`. Isto é uma abreviação para <strong>O</strong>rdered <strong>L</strong>ist. Cada item na lista é indicado por um elemento de item de lista `<li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem. O elemento de item de lista é um elemento filho, o que significa que estará dentro de seu elemento pai, a lista ordenada (`<ol>`).
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Como eu crio uma lista ordenada?</strong>
+        </summary>
+
+        A criação de uma lista ordenada tem dois passos: criar a lista, e acrescentar os itens da lista. Para criar uma lista ordenada, digite os tags da lista ordenada `<ol></ol>`. Em seguida, adicione os items **dentro** dos tags da lista ordenada. Para criar cada item de lista, utilize s tags de item de lista `<li></li>` e digite o item no interior dos tags.
+        <br /><br />
+        A indentação dos tags `<li>` pode ajudar para deixar claro que eles estão contidos dentro do tag `<ol>`.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Mostre-me o código que funciona</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ol&gt; <br>   &lt;li&gt;Passo 1 &lt;/li&gt; <br>   &lt;li&gt;Passo 2 &lt;/li&gt; <br>   &lt;li&gt;Passo 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>
+        <td><img src="https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria incluir uma lista ordenada, mas as tags da lista estão faltando.
+
+        # Faça Isto
+
+        -   Use as tags `<ol>` e `<li>` para estruturar este conteúdo em uma lista ordenada semelhante à lista mostrada abaixo.
+
+        _Dica: Seu código NÃO DEVERÁ CONTER NÚMEROS._
+
+        ![](<https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03 PM.png>)
+      CSD U2 ordered list_2019: |-
+        # Listas Ordenadas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Há dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma lista ordenada?</strong>
+        </summary>
+
+        Uma lista ordenada é um conjunto de itens com marcadores que são numerados.
+        <br /><br />
+        Um elemento de lista ordenada possui o tag `<ol>`. Isto é uma abreviação para <strong>O</strong>rdered <strong>L</strong>ist. Cada item na lista é indicado por um elemento de item de lista `<li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem. O elemento de item de lista é um elemento filho, o que significa que estará dentro de seu elemento pai, a lista ordenada (`<ol>`).
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Como eu crio uma lista ordenada?</strong>
+        </summary>
+
+        A criação de uma lista ordenada tem dois passos: criar a lista, e acrescentar os itens da lista. Para criar uma lista ordenada, digite os tags da lista ordenada `<ol></ol>`. Em seguida, adicione os items **dentro** dos tags da lista ordenada. Para criar cada item de lista, utilize s tags de item de lista `<li></li>` e digite o item no interior dos tags.
+        <br /><br />
+        A indentação dos tags `<li>` pode ajudar para deixar claro que eles estão contidos dentro do tag `<ol>`.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Mostre-me o código que funciona</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ol&gt; <br>   &lt;li&gt;Passo 1 &lt;/li&gt; <br>   &lt;li&gt;Passo 2 &lt;/li&gt; <br>   &lt;li&gt;Passo 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>
+        <td><img src="https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria incluir uma lista ordenada, mas as tags da lista estão faltando.
+
+        # Faça Isto
+
+        -   Use as tags `<ol>` e `<li>` para estruturar este conteúdo em uma lista ordenada semelhante à lista mostrada abaixo.
+
+        _Dica: Seu código NÃO DEVERÁ CONTER NÚMEROS._
+
+        ![](<https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03 PM.png>)
       CSD U2 project review: |-
         # Revise seu projeto
 
@@ -6863,6 +7289,11 @@ pt-BR:
 
         -   Clique no botão ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27 AM.png>) no topo da página.
         -   Copie a URL dada a você, e mande por email para as pessoas que você quer que veja sua página.
+      CSD U2 publish video: |-
+        ## Perguntas a Considerar
+
+        -   Quais você acha que são suas responsabilidades como editor de um site web?
+        -   Por que você poderia querer ver o código ou reaproveitar código de alguma outra pessoa?
       CSD U2 text style freeplay - OLD: |-
         # Adicionando Estilos
 

@@ -630,6 +630,10 @@ es:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores a diferentes partes del espacio del juego.
       courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores a diferentes partes del espacio del juego.
+      courseC_artist_loops1a_2019_callout:
+        jumpto_callout: Este bloque es muy importante para este proyecto. ¡Asegúrate de usarlo!
+      courseC_artist_loops1b_2019_callout:
+        sticker2: Añade esto en el medio de tu programa.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Comience usando este bloque para llevar al artista al centro de la pantalla.
       courseC_artist_loopsPrePre1a_2018_callout:
