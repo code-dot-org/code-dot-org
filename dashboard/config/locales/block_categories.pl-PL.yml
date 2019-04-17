@@ -23,12 +23,12 @@ pl:
       Text: Tekst
       Picker: Selektor
       Comment: Komentarz
+      World: Świat
+      Behaviors: Zachowanie
       'Variables ': 'Zmienne '
       Default: Domyślne
-      Behaviors: Zachowanie
       Locations: Położenie
       everythingelse: pozostałe
-      World: Świat
       Location: Miejsce
       numbers: liczby
       Numbers: Liczby

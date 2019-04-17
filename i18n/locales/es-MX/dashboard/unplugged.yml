@@ -405,6 +405,7 @@ es-MX:
         desc: Explora por qué las personas utilizan contraseñas, aprende los beneficios de usarlas y descubre estrategias que te ayudarán a crear y conservar contraseñas fuertes y seguras.
       timeforcs_demo_crowdsourcing:
         title: Colaboración abierta
+        desc: '_Nota de Josh: a diferencia de la primera lección, el formato de esta es como el de una lección típica sin conexión._'
       timeforcs_demo_conditionals:
         title: Condicionales
         desc: Para aprender acerca de las instrucciones condicionales, los estudiantes juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo un punto" y "si tomo una carta negra, tú obtienes un punto."

@@ -4441,6 +4441,12 @@ pt-BR:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Condicionais com cartas
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
+            Building a Foundation:
+              name: Criando uma base
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
         csp1-pilot-staging:
           stages:
             Unit 4 Assessment:

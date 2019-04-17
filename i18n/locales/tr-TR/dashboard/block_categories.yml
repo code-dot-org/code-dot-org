@@ -22,13 +22,13 @@ tr:
       Text: yazı
       Picker: Seçici
       Comment: Yorum
-      'Variables ': 'Değişkenler'
-      Default: Varsayılan
-      Behaviors: Davranışlar
-      Locations: Konumlar
-      everythingelse: diğerherşey
       World: Dünya
       Sprites: Hareketli Nesneler
+      Behaviors: Davranışlar
+      'Variables ': 'Değişkenler'
+      Default: Varsayılan
+      Locations: Konumlar
+      everythingelse: diğerherşey
       Location: Konum
       numbers: sayılar
       Numbers: Sayılar

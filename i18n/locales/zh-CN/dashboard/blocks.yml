@@ -657,6 +657,8 @@ zh-CN:
         text: 精灵 {SPRITE} 开始 {BEHAVIOR}
       gamelab_addBehaviorUntil:
         text: 精灵{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       gamelab_beginBehavior:
         text: 开始 {BEHAVIOR}
       gamelab_bounceOff:
@@ -687,6 +689,7 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} 碰到 {SPRITE2}"
         options:
           CONDITION:
             '"when"': 当
@@ -697,6 +700,8 @@ zh-CN:
         text: '注释: {COMMENT}'
       gamelab_console.log:
         text: 日志消息 {MESSAGE}
+      gamelab_countByCostume:
+        text: "{COSTUME} 的数值"
       gamelab_createNewSprite:
         text: "制作一个新的精灵 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
       gamelab_debugSprite:
@@ -745,8 +750,10 @@ zh-CN:
             '"direction"': 移动方向
             '"tint"': 色调
       gamelab_getThisSprite:
+        text: "{CHOICE} 精灵"
         options:
           CHOICE:
+            '"this"': 这
             '"other"': 其他
       gamelab_groupLength:
         text: "{THIS} 中的精灵数量"
@@ -769,6 +776,7 @@ zh-CN:
       gamelab_keyDown:
         text: 键被按下 {KEY}
       gamelab_keyPressed:
+        text: "{CONDITION} {KEY} 被按下"
         options:
           CONDITION:
             '"when"': 当
@@ -800,6 +808,7 @@ zh-CN:
             '"y"': 'y'
             '"z"': z
       gamelab_layoutSprites:
+        text: "{FORMAT} 是 {COSTUME} 的布局"
         options:
           FORMAT:
             '"border"': 边框
@@ -856,6 +865,8 @@ zh-CN:
         text: 设置 {VAR} 的位置到 {VAL}
       gamelab_makeNewGroup:
         text: 创建新组
+      gamelab_makeNewSpriteAnon:
+        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵
       gamelab_mirrorSprite:
         text: "{SPRITE} 面向 {DIRECTION}"
         options:
@@ -902,6 +913,8 @@ zh-CN:
             '"West"': 西
       gamelab_pointToward:
         text: 将 {SPRITE} 朝向 {LOCATION}
+      gamelab_printText:
+        text: 打印 {TEXT}
       gamelab_randColor:
         text: 随机颜色
       gamelab_randomColor:
@@ -914,6 +927,8 @@ zh-CN:
         text: 精灵 {SPRITE} 停止 {BEHAVIOR}
       gamelab_removeTint:
         text: 从 {THIS} 删除颜色
+      gamelab_say:
+        text: "{THIS} 表示 {TEXT}"
       gamelab_secondTouched:
         text: 第二次碰到精灵
       gamelab_setAnimation:
@@ -921,9 +936,11 @@ zh-CN:
       gamelab_setBackground:
         text: 设置背景颜色为 {COLOR}
       gamelab_setBackgroundImage:
+        text: 设置背景为 {IMG}
         options:
           IMG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
+            undefined: 没有
       gamelab_setDirection:
         text: 设置 {SPRITE} 移动方向为 {DIRECTION}
       gamelab_setFrameDelay:
@@ -966,6 +983,7 @@ zh-CN:
       gamelab_showTitleScreen:
         text: 显示标题屏幕 {BREAK} 标题 {TITLE} 文本 {SUBTITLE}
       gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} 被点击"
         options:
           CONDITION:
             '"when"': 当
@@ -1091,6 +1109,8 @@ zh-CN:
         text: 当 {SPRITE1} 碰到 {SPRITE2}
       gamelab_whileUpArrow:
         text: 当上方向键按下时
+      gamelab_worldSeconds:
+        text: 过几秒的时间
       gamelab_xLocationOf:
         text: "{SPRITE} 的x轴坐标"
       gamelab_yLocationOf:
@@ -1132,13 +1152,17 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_groupChangeAnim:
+        text: 将 {SELECT} {COSTUME} 改为 {COSTUME2}
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
       Mikelab_groupChangePropBy:
+        text: 更改 {SELECT}{COSTUME} 的 {PROPERTY} 为{VAL}
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
           PROPERTY:
             '"scale"': 大小
             '"rotation"': 旋转
@@ -1146,6 +1170,7 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_groupCreateNewSprite:
+        text: 在 {LOCATION} 创建一个新的 {COSTUME}
         options:
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -1159,11 +1184,21 @@ zh-CN:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Mikelab_groupDestroy:
+        text: 删除 {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
+      Mikelab_groupDisplace:
+        text: 所有 {COSTUME} 屏蔽 {COSTUME2} 移动
+      Mikelab_groupEdgesDisplace:
+        text: 边缘模块阻止了 {COSTUME} 移动
       Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME} 的 {PROPERTY}"
         options:
+          SELECT:
+            '"average"': 平均
+            '"this"': 这
           PROPERTY:
             '"scale"': 大小
             '"rotation"': 旋转
@@ -1171,21 +1206,29 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_groupRemoveAllBehaviors:
+        text: 停止 {SELECT} {COSTUME} 行为
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
       Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME} 停止 {BEHAVIOR}"
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
       Mikelab_groupRemoveTint:
+        text: 从 {SELECT} {COSTUME} 去掉颜色
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
       Mikelab_groupSetProp:
+        text: 更改 {SELECT}{COSTUME} 的 {PROPERTY} 为{VAL}
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
           PROPERTY:
             '"scale"': 大小
             '"rotation"': 旋转
@@ -1193,9 +1236,21 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_groupSetTint:
+        text: 更改 {SELECT} {COSTUME} 的颜色为 {COLOR}
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
+      Mikelab_groupWhenClickedOn:
+        text: 当点击 {COSTUME} 时
+      Mikelab_groupWhenXTouchesY:
+        text: 当{COSTUME} 碰到 {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: 点击 {COSTUME} 时
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          {COSTUME} 碰触到 {COSTUME2}
+          {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} 当前在 {BEHAVIOR}"
       Mikelab_ifDanceIs:
@@ -1244,6 +1299,7 @@ zh-CN:
             '"right"': 向右
             '"left"': 向左
       Mikelab_sprite:
+        text: 在 {LOCATION} 创建一个新 {COSTUME} 精灵
         options:
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -1335,6 +1391,8 @@ zh-CN:
         text: 精灵{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
       aalab_addToSpriteGroup:
         text: 向组 {GROUP} 添加精灵 {SPRITE}
+      aalab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       aalab_changePropByFlexible:
         text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
         options:
@@ -1345,28 +1403,43 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       aalab_checkTouching:
+        text: "{CONDITION} {SPRITE1} 碰到 {SPRITE2}"
         options:
           CONDITION:
             '"when"': 当
             '"while"': 当
       aalab_clickedOn:
+        text: "{CONDITION} {SPRITE} 被点击"
         options:
           CONDITION:
             '"when"': 当
             '"while"': 当
+      aalab_createNewSprite:
+        text: "aalab 制作一个新的精灵 \n 取名 {NAME} \n 服装设置为 {COSTUME} \n 位于 {LOCATION}"
+      aalab_createNewSpriteAdvanced:
+        text: "制作一个新的精灵命名为 {NAME} \n 服装设置为 {COSTUME} \n 位于 {LOCATION}"
+      aalab_createNewSpriteAnon:
+        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵
+      aalab_createNewSpriteAnonReturn:
+        text: aalab 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵
       aalab_createPropertyGroup:
         text: |-
           创建一个叫做 {VAR} 的精灵组
           包括所有的 {COSTUME} 精灵
       aalab_createSpriteGroup:
         text: 创造一个叫做 {VAR} 的新精灵组
+      aalab_getSpritesByName:
+        text: 任何名为 {NAME} 的精灵
       aalab_getThisSprite:
+        text: "{CHOICE} 精灵"
         options:
           CHOICE:
+            '"this"': 这
             '"other"': 其他
       aalab_jumpTo:
         text: "{SPRITE} 跳到 {LOCATION}"
       aalab_keyPressed:
+        text: "{CONDITION} {KEY} 被按下"
         options:
           CONDITION:
             '"when"': 当
