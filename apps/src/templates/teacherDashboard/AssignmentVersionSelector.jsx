@@ -30,7 +30,13 @@ const styles = {
   }
 };
 
-// TODO: add description
+/**
+ * Given an array of versions, return that array with the same versions, plus
+ * isRecommended and isSelected properties set on the recommented and selected version(s).
+ * @param {Array<AssignmentVersionShape>} versions
+ * @param {String} locale. User's current locale.
+ * @param {String} selectedVersionYear. Currently selected version year. Optional.
+ */
 export const setRecommendedAndSelectedVersions = (
   versions,
   locale,
@@ -58,6 +64,7 @@ export const setRecommendedAndSelectedVersions = (
   if (selectedVersion) {
     selectedVersion.isSelected = true;
   }
+
   return versions;
 };
 
