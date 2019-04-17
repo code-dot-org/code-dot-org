@@ -28,18 +28,18 @@ class LevelsControllerTest < ActionController::TestCase
     level = create(:level,
       mini_rubric: 'true',
       rubric_key_concept: 'This is the key concept',
-      rubric_exceeds: 'This is great',
-      rubric_meets: 'This is good',
-      rubric_approaches: 'This is okay',
-      rubric_no_evidence: 'This is bad'
+      rubric_performance_level_1: 'This is great',
+      rubric_performance_level_2: 'This is good',
+      rubric_performance_level_3: 'This is okay',
+      rubric_performance_level_4: 'This is bad'
     )
     get :get_rubric, params: {level_id: level.id}
     assert_equal JSON.parse(@response.body), {
       "keyConcept" => "This is the key concept",
-      "exceeds" => "This is great",
-      "meets" => "This is good",
-      "approaches" => "This is okay",
-      "noEvidence" => "This is bad"
+      "performanceLevel1" => "This is great",
+      "performanceLevel2" => "This is good",
+      "performanceLevel3" => "This is okay",
+      "performanceLevel4" => "This is bad"
     }
   end
 

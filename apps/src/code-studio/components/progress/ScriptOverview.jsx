@@ -39,6 +39,7 @@ class ScriptOverview extends React.Component {
     versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     courseName: PropTypes.string,
     locale: PropTypes.string,
+    showAssignButton: PropTypes.bool,
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
@@ -103,7 +104,8 @@ class ScriptOverview extends React.Component {
       hiddenStageState,
       selectedSectionId,
       courseName,
-      locale
+      locale,
+      showAssignButton
     } = this.props;
 
     const displayRedirectDialog =
@@ -159,6 +161,7 @@ class ScriptOverview extends React.Component {
               viewAs={viewAs}
               isRtl={isRtl}
               resources={teacherResources}
+              showAssignButton={showAssignButton}
             />
           </div>
         )}
