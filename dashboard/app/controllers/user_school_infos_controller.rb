@@ -3,8 +3,6 @@ class UserSchoolInfosController < ApplicationController
 
   # PATCH /api/v1/users_school_infos/<id>/update_last_confirmation_date
   def update_last_confirmation_date
-    puts params
-    #binding.pry
     user_school_info = UserSchoolInfo.find(params[:id])
     result = user_school_info.update(last_confirmation_date: DateTime.now)
     if result
@@ -16,7 +14,6 @@ class UserSchoolInfosController < ApplicationController
 
   # PATCH /api/v1/users_school_infos/<id>/update_end_date
   def update_end_date
-    puts params
     user_school_info = UserSchoolInfo.find(params[:id])
     if user_school_info.update!(end_date: DateTime.now)
       user_school_info.user.update!(properties: {last_seen_school_info_interstitial: DateTime.now})
@@ -24,6 +21,13 @@ class UserSchoolInfosController < ApplicationController
 
     head :no_content
   end
+
+  # solution 2
+  # def update_end_date
+  #   user_school_info = UserSchoolInfo.find(params[:id])
+
+  #   user_school_info.update!(end_date: DateTime.now)
+  # end
 
   # PATCH /api/v1/users_school_infos/<id>/update_school_info_id
   def update_school_info_id
