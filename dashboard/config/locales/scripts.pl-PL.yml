@@ -4732,6 +4732,12 @@ pl:
               name: Praca w grupie (Crowdsourcing)
             Conditionals with Cards:
               name: Warunkowe z kartami
+            Sequence in Maze:
+              name: Sekwencje w labiryncie
+            Building a Foundation:
+              name: Kładąc podwaliny (Building a Foundation)
+            Build a Flappy Game:
+              name: Budowanie gry Flappy Bird
         csp7-pilot-staging:
           stages:
             new stage:

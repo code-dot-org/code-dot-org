@@ -3047,25 +3047,25 @@ sk:
         na správne miesto. Ktorý z týchto blokov s kódom treba dať na koniec vonkajšej
         slučky, aby nakreslil celú mriežku?
       courseE_farmer_functions1: |-
-        _"Už sme sa stretli? Ja som záhradníčka!"_
+        _"Už sme sa niekedy stretli? Ja som záhradníčka!"_
 
         Pomôž záhradníčke dostať sa k tekvici a zobrať ju.
       courseE_farmer_functions1_2018: |-
-        _"Už sme sa stretli? Ja som záhradníčka!"_
+        _"Už sme sa niekedy stretli? Ja som záhradníčka!"_
 
         Pomôž záhradníčke dostať sa k tekvici a zobrať ju.
       courseE_farmer_functions1_2019: |-
-        _"Už sme sa stretli? Ja som záhradníčka!"_
+        _"Už sme sa niekedy stretli? Ja som záhradníčka!"_
 
         Pomôž záhradníčke dostať sa k tekvici a zobrať ju.
       courseE_farmer_functions1a: |-
-        _"Joj, všade samá zelenina!"_
+        \_"Joj, všade samá zelenina!"-
 
         Teraz pomôž záhradníčke zozbierať všetku kukuricu cestou k tekvici na konci.
 
         * * *
 
-        ##### Pozor: Každé políčko na ceste vedúcej k tekvici bude obsahovať buď _jednu_ kukuricu alebo žiadnu.  Použi `ak` blok na zistenie či tam je kukurica predtým ako ju skúsiš zobrať!
+        ##### Pozor: Každé políčko na ceste vedúcej k tekvici bude obsahovať buď _jednu_ kukuricu alebo žiadnu.  Použi `ak` blok na zistenie či tam je kukurica predtým, ako ju skúsiš zobrať!
       courseE_farmer_functions1a_2018: |-
         _"Joj, všade samá zelenina!"_
 
@@ -3073,7 +3073,7 @@ sk:
 
         * * *
 
-        ##### Pozor: Každé políčko na ceste vedúcej k tekvici bude obsahovať buď _1_ kukuricu alebo žiadnu.  Použi funkciu `kukurica` a uisti sa, že zozbieraš celú úrodu.
+        ##### Pozor: Každé políčko na ceste vedúcej k tekvici obsahuje buď **1** kukuricu alebo žiadnu.  Použi funkciu `kukurica` a uisti sa, že zozbieraš celú úrodu.
       courseE_farmer_functions1a_2019: |-
         _"Joj, všade samá zelenina!"_
 
@@ -3081,7 +3081,7 @@ sk:
 
         * * *
 
-        ##### Pozor: Každé políčko na ceste vedúcej k tekvici bude obsahovať buď _1_ kukuricu alebo žiadnu.  Použi funkciu `kukurica` a uisti sa, že zozbieraš celú úrodu.
+        ##### Pozor: Každé políčko na ceste vedúcej k tekvici obsahuje buď **1** kukuricu alebo žiadnu.  Použi funkciu `kukurica` a uisti sa, že zozbieraš celú úrodu.
       courseE_farmer_functions2a: |-
         _"Cítim sa tak funkčne!"_
 
@@ -3128,22 +3128,30 @@ sk:
         _"Joj, všade samá zelenina!"_
 
         Teraz pomôž farmárke pozbierať kukuricu, šalát **a** tekvice.
+      courseE_farmer_functions3c1_2018: |-
+        Ako sa ti páčilo to veľké množstvo opakujúceho sa kódu v predošlej úlohe? Môžeme ušetriť miesto tak, že tento kód nazveme `pozbieraj popri ceste` a z tejto novej funkcie budeme volať ostatné funkcie!
+
+        Použi `pozbieraj popri ceste` na vyriešenie tejto úlohy s čo najmenším počtom blokov.
+      courseE_farmer_functions3c1_2019: |-
+        Ako sa ti páčilo to veľké množstvo opakujúceho sa kódu v predošlej úlohe? Môžeme ušetriť miesto tak, že tento kód nazveme `pozbieraj popri ceste` a z tejto novej funkcie budeme volať ostatné funkcie!
+
+        Použi `pozbieraj popri ceste` na vyriešenie tejto úlohy s čo najmenším počtom blokov.
       courseE_farmer_functions3c_2018: Výborne!  Teraz vyskúšaj svoje funkcie na dlhšej
         cestičke.
       courseE_farmer_functions3c_2019: Výborne!  Teraz vyskúšaj svoje funkcie na dlhšej
         cestičke.
       courseE_farmer_ramp11a: "Ach jaj!  Táto hromada je taká veľká, že je ťažké  odhadnúť
         koľko je v nej hliny.  \n\n* * *\n\nPridali sme nový blok do panela nástrojov
-        - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstranenie hromady
-        a odoberaj z nej len kým je čo! "
+        - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstránenie hromady
+        a odoberaj z nej hlinu  len kým tam nejaká je! "
       courseE_farmer_ramp11a_2018: "Ach jaj!  Táto hromada je taká veľká, že je ťažké
         \ odhadnúť koľko je v nej hliny.  \n\n* * *\n\nPridali sme nový blok do panela
-        nástrojov - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstranenie
-        hromady a odoberaj z nej len kým je čo! "
+        nástrojov - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstránenie
+        hromady a odoberaj z nej hlinu  len kým tam nejaká je! "
       courseE_farmer_ramp11a_2019: "Ach jaj!  Táto hromada je taká veľká, že je ťažké
         \ odhadnúť koľko je v nej hliny.  \n\n* * *\n\nPridali sme nový blok do panela
-        nástrojov - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstranenie
-        hromady a odoberaj z nej len kým je čo! "
+        nástrojov - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstránenie
+        hromady a odoberaj z nej hlinu  len kým tam nejaká je! "
       courseE_farmer_ramp11b: A teraz to skús znova ale s viacerými hromadami!
       courseE_farmer_ramp11b_2018: A teraz to skús znova ale s viacerými hromadami!
       courseE_farmer_ramp11b_2019: A teraz to skús znova ale s viacerými hromadami!
@@ -3711,13 +3719,13 @@ sk:
 
         \*\* Skús spustiť kód, aby si videl ako Umelec použije binárny reťazec na namaľovanie obrazca. \*\*
       harvester_Kahoot: |-
-        _"Joj, všade samá zelenina!"_
+        \_"Joj, všade samá zelenina!"-
 
         Teraz pomôž farmárke zozbierať všetku kukuricu cestou k tekvici na konci.
 
         * * *
 
-        ##### Pozor: Každé políčko na ceste vedúcej k tekvici bude obsahovať buď _jednu_ kukuricu alebo žiadnu.  Použi `ak` blok na zistenie či tam je kukurica predtým ako ju skúsiš zobrať!
+        ##### Pozor: Každé políčko na ceste vedúcej k tekvici bude obsahovať buď _jednu_ kukuricu alebo žiadnu.  Použi `ak` blok na zistenie či tam je kukurica predtým, ako ju skúsiš zobrať!
       iceAgeLoopsforVideo: Dokážeš sa dostať k žaluďu s použitím len jedného bloku
         <xml><block type="maze_moveForward"/></xml>? Skús použiť cyklus!
       level 'grade3_Loops_3: Použi cyklus "opakuj" a pozbieraj všetok nektár.
