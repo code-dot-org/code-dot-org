@@ -230,6 +230,16 @@ Teachers shouldn’t have to teach computer science alone—professional learnin
 
 </div>
 
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="https://twitter.com/codeorg/status/1116737248899293185" target="_blank"><img src="/images/statistics/fit-250/classroom-diversity.png"></a>
+
+<br>
+
+Schools with diverse student bodies are less likely to offer computer science courses, but when they do, the students sign up! Black, Latino and other underrepresented minorities want to take computer science. <a href="https://code.org/educate/professional-learning">Let’s give them that opportunity.</a>
+
+</div>
+
 <div style="clear: both;"></div>
 
 <br>

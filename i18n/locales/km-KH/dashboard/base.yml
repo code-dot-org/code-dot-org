@@ -508,6 +508,8 @@ km:
     csp_variables: 'អ​ថេរ'
     csp_conditionals: 'លក្ខខណ្ឌ'
     csp_functions: 'អនុ​គមន៍'
+    csp_lists: 'បញ្ជី'
+    csp_loops: 'រង្វិល​ជុំ'
   pd:
     form_labels:
       email: 'អ៊ីមែល'

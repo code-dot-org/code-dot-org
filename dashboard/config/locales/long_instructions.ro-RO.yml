@@ -4,8 +4,8 @@ ro:
     long_instructions:
       2-3 Artist 1 new: "Bună, eu sunt un artist. Poţi să scrii un cod care mă poate
         face să desenez orice. Foloseşte câteva blocuri de instrucţiuni pentru a mă
-        face să desenez linii gri pe ecran. (Fiecare linie are 100 pixeli lungime)\r\n\r\n"
-      2-3 Artist 12: "Desenează un cerc pentru a termina cercul ochiului!\n\r\n\r\nDacă
+        face să desenez linii gri pe ecran. (Fiecare linie are 100 pixeli lungime)\\\r\n\\\r"
+      2-3 Artist 12: "Desenează un cerc pentru a termina cercul ochiului!\n\\\r\n\\\r\nDacă
         artistul se întoarce cu un grad la fiecare buclă, de câte repetări ale codului
         ai nevoie pentru a desena un cerc? "
       2-3 Artist 2 new: Această casă are un perete pe jumătate terminat. Fiecare latură
@@ -14,30 +14,32 @@ ro:
         folosind și blocul de salt şi cel de desen. Fiecare linie are 50 de pixeli
         lungime.
       2-3 Artist 3new: "Pălăria roşie are înălţimea de 100 pixeli. Terminaţi de desenat
-        o pălărie neagră cu 70 pixeli mai mică. \r\n\r\n*(Notă: Lăţimea fiecărei pălării
-        este de 50 pixeli.)*\n \nContext | Request Context"
+        o pălărie neagră cu 70 pixeli mai mică. \\\r\n\\\r\n_(Notă: Lăţimea fiecărei
+        pălării este de 50 pixeli.)_\n\nContext | Request Context"
       2-3 Artist 4: Ajută-mă să termin casa pentru această pisică.
       2-3 Artist 6: "Această casă are nevoie de un acoperiş! Desenaţi triunghiul.
-        \ \r\n\r\nSfat:\ntoate cele trei laturi au aceeaşi lungime.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>\n
-        \nContext | Request Context"
+        \ \\\r\n\\\r\nSfat:\ntoate cele trei laturi au aceeaşi lungime.\\\r\n\\\r\n<img
+        src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>\n\nContext
+        | Request Context"
       2-3 Artist 7: "Termină de desenat ultimul set de ferestre ale şcolii astfel
-        încât toţi elevii din clasă să poată vedea afară\r\n\r\nLaturile fiecărei
+        încât toţi elevii din clasă să poată vedea afară\\\r\n\\\r\nLaturile fiecărei
         ferestre rectangulare au lungimea de 25 pixeli. "
-      2-3 Artist 8: "Este timpul să construim un hambar!\r\n\r\nCreaţi spaţii pentru
-        fiecare animal divizând hambarul în 2 forme pătrate egale.\r\n\r\nSfat:\nDreptunghiul
-        are lăţimea de 200 pixeli şi înălţimea de 100 pixeli.\r\n\r\nExistă mai multe
-        feluri diferite de a rezolva acest puzzlel.\n \nContext | Request Context."
+      2-3 Artist 8: "Este timpul să construim un hambar!\\\r\n\\\r\nCreaţi spaţii
+        pentru fiecare animal divizând hambarul în 2 forme pătrate egale.\\\r\n\\\r\nSfat:\nDreptunghiul
+        are lăţimea de 200 pixeli şi înălţimea de 100 pixeli.\\\r\n\\\r\nExistă mai
+        multe feluri diferite de a rezolva acest puzzlel.\n\nContext | Request Context."
       2-3 Artist 9 NEW: Finalizează acest zmeu
       2-3 Artist 9 REPLACEMENT: Termină de desenat aceste scări!
       2-3 Artist 9: Finalizează acest zmeu
       2-3 Artist Assessment 1: "**Evaluare:** Termină de desenat ultimul dinte. Acesta
         are lăţimea şi înălţimea de 25 pixeli."
       2-3 Artist Debugging 1: "Această pălărie trebuie să aibă lăţimea doar de 50
-        pixeli\r\nPoţi tu să o repari?\r\n\r\n<br/>\r\n \nContext | Request Context\n"
+        pixeli\\\r\nPoţi tu să o repari?\\\r\n\\\r\n<br/>\\\r\n\nContext | Request
+        Context"
       2-3 Artist Debugging 10: 'Butonul de direcţie de pe comanda mea de joc este
         prea îngust. Sugestie: Faceți-l mai lat cu 10 pixeli.'
-      2-3 Artist Debugging 11: "Fulgul meu de nea se destrama!\r\n\r\nIti poti da
-        seama ce este in neregula?"
+      2-3 Artist Debugging 11: "Fulgul meu de nea se destrama!\\\r\n\\\r\nIti poti
+        da seama ce este in neregula?"
       2-3 Artist Debugging 2: 'Codul pentru cele trei mustăți pe care le vezi este
         greșit. Indiciu: fiecare mustață are o lungime egala. Repară acest cod pentru
         a desena mustățile.'
@@ -52,9 +54,9 @@ ro:
         să o faci să arate ca un C?
       2-3 Artist Debugging 8: Morișca mea nu e gata. De câte ori trebuie folosit blocul
         "repetă" pentru a fi gata?
-      2-3 Artist Debugging 9: "Ceva este oprit! \r \r codul pentru acest nivel este
-        greşit. Poţi să îţi dai seama cum să putem face ca artistul să traseze în
-        mod corect?"
+      2-3 Artist Debugging 9: "Ceva este oprit! \\\r \\\r codul pentru acest nivel
+        este greşit. Poţi să îţi dai seama cum să putem face ca artistul să traseze
+        în mod corect?"
       2-3 Artist Free Play: Joc liber! Desenează orice ți-ar plăcea.
       2-3 Artist Functions 11.5: Aici este aceeași funcție "Desenează un hexagon".
         Ce se întâmplă dacă întorci cu doar 60 de grade de fiecare dată când buclezi?
@@ -214,8 +216,8 @@ ro:
       4-5 Maze Conditionals 1: Utilizează blocul "repetă până când" pentru a-l duce
         pe zombie la floarea-soarelui.
       4-5 Maze Conditionals 10: "Poţi adăuga doar 3 blocuri pentru a ajuta zombiul
-        să rezolve un labirint mai complex? \r \n\r Dacă vei face asta corect, el
-        va putea merge pe orice cale, indiferent de distanță!"
+        să rezolve un labirint mai complex? \\\r \n\\\r Dacă vei face asta corect,
+        el va putea merge pe orice cale, indiferent de distanță!"
       4-5 Maze Conditionals 2: Utilizează blocul "repetă până când" pentru a-l duce
         pe zombie la floarea-soarelui.
       4-5 Maze Conditionals 3: 'Folosește blocul "dacă" pentru a mă lăsa pe mine să
@@ -239,7 +241,7 @@ ro:
         posibile.
       4-5 Nested Loops 12: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
       4-5 Nested Loops 3: "Creează un soare prin a cuibări codul de început în interiorul
-        altei bucle. Aceasta se numește o buclă imbricată.\r"
+        altei bucle. Aceasta se numește o buclă imbricată.\\\r"
       4-5 Nested Loops 5: Buclează codul dat pentru a crea o moară de vânt.
       4-5 Nested Loops 6: Poţi desena un hexagon folosind buclarea codului pentru
         desenarea unui triunghi?
@@ -259,6 +261,9 @@ ro:
         gaura până la nivelul solului? Indicaţie: Încearcă să foloseşti bucla "în
         timp ce" de data asta.'
       Artist Autorun Test: Utilizaţi blocul "repetă" pentru a desena aceste trei pătrate.
+      CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       Course 4 Artist 13: Joci? Aici este o pânză albă unde poţi schiţa orice doreşti!
       Course 4 Artist 6: |-
         Completează codul pentru a desena aceste triunghiuri.
@@ -270,7 +275,7 @@ ro:
       Course 4 Artist Binary 1a: "Aici avem o funcție care ia un şir binar format
         din 1 şi 0, care îndrumă artistul să le urmeze de la stânga la dreapta, de
         sus în jos. Artistul va umple spațiile când vede 1 şi le va ignora când vede
-        0. \r\n\r\nRulează codul pentru a vedea cum artistul folosește şirul binar
+        0. \\\r\n\\\r\nRulează codul pentru a vedea cum artistul folosește şirul binar
         pentru a desena acest model."
       Course 4 Artist For Loops 13: Hmmm, aceste forme devin din ce în ce mai mari
         de fiecare dată! Nu am rezolvat deja această problemă cu variabile? Cum putem
@@ -291,7 +296,7 @@ ro:
         10 pixeli mai lungă decât ultima. Poţi completa blocul de instrucțiuni lipsă
         pentru a finaliza această imagine minunată?
       Course 4 Artist For Loops Challenge_a: "Poți să îți dai seama cum să folosești
-        toate lucrurile pe care le-ai învățat ca sa creezi această imagine?\r\r\nAi
+        toate lucrurile pe care le-ai învățat ca sa creezi această imagine?\\\r\\\r\nAi
         nevoie de o sugestie?\nClick/apasa aici."
       Course 4 Artist Vars 3: 'Avem aici o buclă ce desenează un pătrat, dar ceva
         lipsește. Poți s-o repari astfel încât să folosească variabila "lungime" pentru
@@ -303,13 +308,13 @@ ro:
       Course 4 Bee Params 1: Utilizează funcţia "obține 3 nectaruri", care se întoarce,
         se mută pentru a colecta nectarul şi apoi revine la locaţia originală. Scrie
         o secvenţă pentru a colecta tot nectarul folosind "obţine 3 nectaruri."
-      Course 4 Play Lab Params 4: "Aici este o funcţie numită \"patrol.\"\n\r\n\r\nEditeaz-o
+      Course 4 Play Lab Params 4: "Aici este o funcţie numită \"patrol.\"\n\\\r\n\\\r\nEditeaz-o
         pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli."
       Course 4 Play Lab Params 8: Foloseşte blocul de instrucţiuni "cand personajul
         atinge" pentru a trimite câinele înapoi în colţul din stânga-sus DOAR dacă
         acesta atinge oricare unul din celelalte personaje.
       Course 4 Play Lab Vars 2: Cursa în acest ultim puzzle nu a fost foarte corectă!
-        Schimbă variabila "dog_speed" pentru a fi sigur că poţi aduna mai multe steaguri
+        Schimbă variabila "dog\_speed" pentru a fi sigur că poţi aduna mai multe steaguri
         decât pisica. Primul care adună 10 steaguri câştigă!
       Course 4 Play Labs For Loops 1: Hai să facem câinele să pronunțe fiecare număr
         de la 1 la 100. Foloseşte o buclă şi un o construcţie de instrucţiuni contor
@@ -323,33 +328,33 @@ ro:
         salturi cu x pixeli înapoi și înainte, precum și în sus și în jos cu y pixeli
         (folosind numere pozitive și negative).
       CourseD_Dance_Party_01: |-
-        *Hai să facem o petrecere cu dans!*
+        _Hai să facem o petrecere cu dans!_
 
         Trage blocul `crează un nou` în spaţiul de lucru, şi conectează-l în interiorul blocului `configurare` pentru a creea primul tău dansator.
 
-        * *Poţi apăsa de asemenea şi becul din partea stângă dacă vrei mai multe informaţii sau mai multe provocări.*
+        -   _Poţi apăsa de asemenea şi becul din partea stângă dacă vrei mai multe informaţii sau mai multe provocări._
       CourseD_Dance_Party_02: |-
         Hai să facem acest elan să danseze!
 
-        Trage blocul <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">dansator&#95;nou</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">flutură</title><title name="DIR">-1</title></block></xml> în spaţiul de lucru. Conectează-l sub blocul <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"măsuri"</title></block></xml>. Dansatorul tău ar trebui să facă o nouă mişcare după 4 măsuri.
+        Trage blocul <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">dansator\_nou</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">flutură</title><title name="DIR">-1</title></block></xml> în spaţiul de lucru. Conectează-l sub blocul <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"măsuri"</title></block></xml>. Dansatorul tău ar trebui să facă o nouă mişcare după 4 măsuri.
 
         **Măsurile** sunt utilizate pentru a măsura timpul în muzică. În acest tutorial, o măsură are lungimea a 4 bătăi.
       CourseD_Dance_Party_03: |-
-        *Acum vom avea ritm!*
+        _Acum vom avea ritm!_
 
         Adaugă un bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"măsuri"</title></block></xml> în spaţiul de lucru. Fă-l pe dansator să înceapă o nouă mişcare după 6 măsuri.
       CourseD_Dance_Party_04: |-
-        *Dansul ăsta are nevoie de nişte strălucire!*
+        _Dansul ăsta are nevoie de nişte strălucire!_
 
         Caută un nou bloc în cutia cu unelte care să adauge un efect pe fundal în spatele dansatorului tău. Urmăreşte schimbarea efectuată în acelaşi timp cu muzica!
       CourseD_Dance_Party_05: |-
         Utilizează un alt bloc pentru a face dansatorul să schimbe mişcările **la fiecare 2 măsuri**!
 
-        *Alegând `(Următorul)`, `(Precedent)` sau `(Aleator)` îi spui dansatorului să efectueze o mişcare diferită de fiecare dată când codul este executat.
+        \*Alegând `(Următorul)`, `(Precedent)` sau `(Aleator)` îi spui dansatorului să efectueze o mişcare diferită de fiecare dată când codul este executat.
       CourseD_Dance_Party_06: |-
-        *Avem nevoie de mai mulţi dansatori!*
+        _Avem nevoie de mai mulţi dansatori!_
 
-        Creaţi un dansator de rezervă numit 'dansator_rezervă1' care să danseze cu pisica.
+        Creaţi un dansator de rezervă numit 'dansator\_rezervă1' care să danseze cu pisica.
       CourseD_Dance_Party_08: |-
         Fiecare dansator are un set de _proprietăţi_ care controlează felul cum arată acesta.
 
@@ -357,11 +362,12 @@ ro:
       CourseD_Dance_Party_09: |-
         Dansatorii au o proprietate numită "nuanţă" care poate adăuga un strat de culoare. Încearcă să schimbi nuanţa unuia dintre dansatori.
 
-        * Nuanţa va amesteca culoarea aleasă de tine cu culoarea dansatorului.
+        -   Nuanţa va amesteca culoarea aleasă de tine cu culoarea dansatorului.
       CourseD_Dance_Party_10: |-
         Acum ştim cum să modificăm proprietăţile dansatorului. Putem să facem aceste proprietăţi să răspundă automat la ritmul muzicii utilizând acest bloc:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">unicorn_în_dreapta</title>
         <title name="PROPERTY">"gamă"</title>
         <title name="RANGE">"bas"</title>
@@ -392,42 +398,42 @@ ro:
 
         **Utilizează tastele pentru a face robotul să facă mişcările "cădere"-"bate din palme"-"cădere"-"bate din palme" cât de repede poţi!**
       CourseF_PlayLab_vars2: Cursa în acest ultim puzzle nu a fost foarte corectă!
-        Schimbă variabila "dog_speed" pentru a fi sigur că poţi aduna mai multe steaguri
+        Schimbă variabila "dog\_speed" pentru a fi sigur că poţi aduna mai multe steaguri
         decât pisica. Primul care adună 10 steaguri câştigă!
       Dance_Party_01: |-
-        *Hai să facem o petrecere cu dans!*
+        _Hai să facem o petrecere cu dans!_
 
         Trage blocul `crează un nou` în spaţiul de lucru, şi conectează-l în interiorul blocului `configurare` pentru a creea primul tău dansator.
 
-        * *Poţi apăsa de asemenea şi becul din partea stângă dacă vrei mai multe informaţii sau mai multe provocări.*
+        -   _Poţi apăsa de asemenea şi becul din partea stângă dacă vrei mai multe informaţii sau mai multe provocări._
       Dance_Party_01_low: |-
-        *Hai să facem o petrecere cu dans!*
+        _Hai să facem o petrecere cu dans!_
 
         Trage blocul `crează un nou` în spaţiul de lucru, şi conectează-l în interiorul blocului `configurare` pentru a creea primul tău dansator.
 
-        * *Poţi apăsa de asemenea şi becul din partea stângă dacă vrei mai multe informaţii sau mai multe provocări.*
+        -   _Poţi apăsa de asemenea şi becul din partea stângă dacă vrei mai multe informaţii sau mai multe provocări._
       Dance_Party_02: |-
         Hai să facem acest elan să danseze!
 
-        Trage blocul <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">dansator&#95;nou</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">flutură</title><title name="DIR">-1</title></block></xml> în spaţiul de lucru. Conectează-l sub blocul <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"măsuri"</title></block></xml>. Dansatorul tău ar trebui să facă o nouă mişcare după 4 măsuri.
+        Trage blocul <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">dansator\_nou</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">flutură</title><title name="DIR">-1</title></block></xml> în spaţiul de lucru. Conectează-l sub blocul <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"măsuri"</title></block></xml>. Dansatorul tău ar trebui să facă o nouă mişcare după 4 măsuri.
 
         **Măsurile** sunt utilizate pentru a măsura timpul în muzică. În acest tutorial, o măsură are lungimea a 4 bătăi.
       Dance_Party_03: |-
-        *Acum vom avea ritm!*
+        _Acum vom avea ritm!_
 
         Adaugă un bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"măsuri"</title></block></xml> în spaţiul de lucru. Fă-l pe dansator să înceapă o nouă mişcare după 6 măsuri.
       Dance_Party_04: |-
-        *Dansul ăsta are nevoie de nişte strălucire!*
+        _Dansul ăsta are nevoie de nişte strălucire!_
 
         Caută un nou bloc în cutia cu unelte care să adauge un efect pe fundal în spatele dansatorului tău. Urmăreşte schimbarea efectuată în acelaşi timp cu muzica!
       Dance_Party_05: |-
         Utilizează un alt bloc pentru a face dansatorul să schimbe mişcările **la fiecare 2 măsuri**!
 
-        *Alegând `(Următorul)`, `(Precedent)` sau `(Aleator)` îi spui dansatorului să efectueze o mişcare diferită de fiecare dată când codul este executat.
+        \*Alegând `(Următorul)`, `(Precedent)` sau `(Aleator)` îi spui dansatorului să efectueze o mişcare diferită de fiecare dată când codul este executat.
       Dance_Party_06: |-
-        *Avem nevoie de mai mulţi dansatori!*
+        _Avem nevoie de mai mulţi dansatori!_
 
-        Creaţi un dansator de rezervă numit 'dansator_rezervă1' care să danseze cu pisica.
+        Creaţi un dansator de rezervă numit 'dansator\_rezervă1' care să danseze cu pisica.
       Dance_Party_08: |-
         Fiecare dansator are un set de _proprietăţi_ care controlează felul cum arată acesta.
 
@@ -435,11 +441,12 @@ ro:
       Dance_Party_09: |-
         Dansatorii au o proprietate numită "nuanţă" care poate adăuga un strat de culoare. Încearcă să schimbi nuanţa unuia dintre dansatori.
 
-        * Nuanţa va amesteca culoarea aleasă de tine cu culoarea dansatorului.
+        -   Nuanţa va amesteca culoarea aleasă de tine cu culoarea dansatorului.
       Dance_Party_10: |-
         Acum ştim cum să modificăm proprietăţile dansatorului. Putem să facem aceste proprietăţi să răspundă automat la ritmul muzicii utilizând acest bloc:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">unicorn_în_dreapta</title>
         <title name="PROPERTY">"gamă"</title>
         <title name="RANGE">"bas"</title>
@@ -482,11 +489,11 @@ ro:
         Este timpul să dansăm! Pisica va face o mişcare "dab" când apeşi pe tasta săgeată în stânga. Fă robotul să facă o "cădere" când apeşi tasta săgeată în jos, şi să facă "bate din palme" atunci când este apăsată tasta săgeată în sus.
 
         **Utilizează tastele pentru a face robotul să facă mişcările "cădere"-"bate din palme"-"cădere"-"bate din palme" cât de repede poţi!**
-      Dance_Party_3: "*Acum vom avea ritm!* \n\nAdaugă un bloc <xml><block type=\"Dancelab_atTimestamp\"><title
+      Dance_Party_3: "_Acum vom avea ritm!_ \n\nAdaugă un bloc <xml><block type=\"Dancelab_atTimestamp\"><title
         name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"măsuri\"</title></block></xml>
         în spaţiul de lucru. Fă dansatorul să pornească o nouă mişcare după 6 măsuri."
       Dance_Party_4: |-
-        *Dansul ăsta are nevoie de nişte strălucire!*
+        _Dansul ăsta are nevoie de nişte strălucire!_
 
         Caută un nou bloc în cutia cu unelte şi foloseşte-l să adaugi un efect pe fundal în spatele dansatorului tău. Urmăreşte schimbarea efectuată în acelaşi timp cu muzica!
       Dance_Party_8: Fiecare dansator are un set de _proprietăţi_ care controlează
@@ -497,9 +504,9 @@ ro:
 
         Aici este un dans între 2 echipe. Tastele săgeţi controlează unul dintre dansatori iar tastele "w,a,s,d" controlează celălalt dansator. Fă un dans impreună cu un prieten şi încearcă să îmbunătăţeşti acest dans.
 
-        * Adaugă mai multe taste să controlezi dansatorii
-        * Fă ca dansatorul de rezervă să răspundă şi el atunci când tastele sunt apăsate
-        * Alternează dansatorul o dată la 4 măsuri configurând vizibilitatea lui
+        -   Adaugă mai multe taste să controlezi dansatorii
+        -   Fă ca dansatorul de rezervă să răspundă şi el atunci când tastele sunt apăsate
+        -   Alternează dansatorul o dată la 4 măsuri configurând vizibilitatea lui
       Dance_Party_extras_every_beat: |-
         # Sfert de note
 
@@ -507,17 +514,17 @@ ro:
 
         Acest dans foloseşte şi un bloc de tip _condiţional_ pentru a controla cînd blocul 'la fiecare 0.25 măsuri' schimbă dansul. Încearcă să schimbi numărul din blocul condiţional pentu a vedea cum modifică acesta dansul.
 
-        * Experimentează cu alte durate de timp pentru note (cum ar fi 0.5 pentru jumătate de notă sau 0.125 pentru o optime).
-        * Adaugă nişte evenimente de tip `după măsură`.
-        * Schimbă "măsuri" cu "secunde" şi încearcă să sincronizezi dansul astfel.
+        -   Experimentează cu alte durate de timp pentru note (cum ar fi 0.5 pentru jumătate de notă sau 0.125 pentru o optime).
+        -   Adaugă nişte evenimente de tip `după măsură`.
+        -   Schimbă "măsuri" cu "secunde" şi încearcă să sincronizezi dansul astfel.
       Dance_Party_extras_layout: |-
         # Hai să trecem în formaţie!
 
         Verifică acest dans care utilizează blocul `schemă` pentru a schimba formaţia dansatorului de rezervă în timpul dansului. Pentru a extinde dansul încearcă una din ideile:
 
-        * Creează un al doilea grup de dansatori într-o schemă diferită
-        * Schimbă formaţia când o tastă este apăsată
-        Schimbă o proprietate când dansatorul schimbă formaţia
+        -   Creează un al doilea grup de dansatori într-o schemă diferită
+        -   Schimbă formaţia când o tastă este apăsată
+            Schimbă o proprietate când dansatorul schimbă formaţia
       Dance_Party_extras_on_beat: |-
         # Sunete joase, medii şi înalte
 
@@ -531,21 +538,21 @@ ro:
 
         Acest dans arată şi ascunde două grupuri diferite de dansatori. Verifică şi apoi încearcă să adaugi după cum crezi tu.
 
-        * Adaugă un alt grup de dansatori
-        * Arată şi ascunde dansatori utilizând tastele săgeţi
-        * Ascunde toţi dansatorii şi schimbă fundalul pentru a creea un efect interesant
+        -   Adaugă un alt grup de dansatori
+        -   Arată şi ascunde dansatori utilizând tastele săgeţi
+        -   Ascunde toţi dansatorii şi schimbă fundalul pentru a creea un efect interesant
       HOC Dance 3_draft: |-
-        *Dansul ăsta are nevoie de nişte strălucire!*
+        _Dansul ăsta are nevoie de nişte strălucire!_
 
         Caută un nou bloc în cutia cu unelte şi foloseşte-l să adaugi un efect pe fundal în spatele dansatorului tău. Urmăreşte schimbarea efectuată în acelaşi timp cu muzica!
       HOC Dance 4_draft: |-
         Utilizează un alt bloc pentru a face dansatorul să schimbe mişcările **la fiecare 2 măsuri**!
 
-        *Alegând `(Următorul)`, `(Precedent)` sau `(Aleator)` îi spui dansatorului să efectueze o mişcare diferită de fiecare dată când codul este executat.
+        \*Alegând `(Următorul)`, `(Precedent)` sau `(Aleator)` îi spui dansatorului să efectueze o mişcare diferită de fiecare dată când codul este executat.
       HOC Dance 5_draft: |-
-        *Avem nevoie de mai mulţi dansatori!*
+        _Avem nevoie de mai mulţi dansatori!_
 
-        Creaţi un dansator de rezervă numit 'dansator_rezervă1' care să danseze cu pisica.
+        Creaţi un dansator de rezervă numit 'dansator\_rezervă1' care să danseze cu pisica.
       HOC Dance 6_draft: Fiecare dansator are un set de _proprietăţi_ care controlează
         felul cum arată acesta. Poţi să îl faci să arate ca un dansator aflat pe fundal
         făcând-ul mai mic. Poţi face ca ambii dansatori să aibă aceeaşi mărime?
@@ -592,8 +599,8 @@ ro:
         un multiplu de 10.'
       NEW Course 4 Artist Vars 6: "Deseneaza acest model prin mutarea variabilei lungime
         in locurile corecte si apoi setati valoarea corecta pentru lungime. (pont:
-        este un multiplu de 10). \r\r Vezi cum setezi valoarea pentru lungime doar
-        o data, iar codurile folosesc aceeasi valoare peste tot? \r\r\r\n"
+        este un multiplu de 10). \\\r\\\r Vezi cum setezi valoarea pentru lungime
+        doar o data, iar codurile folosesc aceeasi valoare peste tot? \\\r\\\r\\\r"
       Overworld Move to Sheep: Adauga din nou instructiunea "Mergi inainte" pentru
         a ajunge la oaie.
       Overworld Move to Sheep_2018: Adauga din nou instructiunea "Mergi inainte" pentru
@@ -603,13 +610,16 @@ ro:
       Ryan_Demo: |-
         Hai să facem acest elan să danseze!
 
-        Trage blocul <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">dansator&#95;nou</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">flutură</title><title name="DIR">-1</title></block></xml> în spaţiul de lucru. Conectează-l sub blocul <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"măsuri"</title></block></xml>. Dansatorul tău ar trebui să facă o nouă mişcare după 4 măsuri.
+        Trage blocul <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">dansator\_nou</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">flutură</title><title name="DIR">-1</title></block></xml> în spaţiul de lucru. Conectează-l sub blocul <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"măsuri"</title></block></xml>. Dansatorul tău ar trebui să facă o nouă mişcare după 4 măsuri.
 
         **Măsurile** sunt utilizate pentru a măsura timpul în muzică. În acest tutorial, o măsură are lungimea a 4 bătăi.
       Testing Quantum Farmer: 'Oau, am găsit o gaură foarte adâncă! Nu ştiu de câte
         lopeţi cu pământ am nevoie pentru a o umple. Poţi scrie un program care să
         umple gaura până la nivelul solului? Indicaţie: Încearcă să foloseşti bucla
         "în timp ce" de data asta.'
+      U4 - Objects - Template Contacts: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      U4 - Objects - Template Contacts_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      U4 - Objects - Template Contacts_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       course4_artist_fwp_challenge1: Încearcă să rulezi acest program, şi fă modificări
         pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau
         şterge-l şi înlocuiește-l cu ceva total diferit)
@@ -647,62 +657,63 @@ ro:
       csd1dlp-assessment: "<br><br>\n\n> **NOTĂ: înainte de a începe această reflecţie,
         asigurați-vă că ați revizuit lecțiile din Unitatea 2 și că ați înțeles rolul
         pe care îl are evaluarea în cadrul unității. Dacă nu ați revizuit materialele,
-        faceți acest lucru acum și reveniți la această reflecţie mai târziu.**\n\n\n#
+        faceți acest lucru acum și reveniți la această reflecţie mai târziu.**\n\n#
         Evaluarea din Unitatea 1\n\nPentru această reflecție, veți lua în considerare
         fiecare din sugestiile de mai jos și veți construi un răspuns care să demonstreze
         înțelegerea pe deplin a lecțiilor din Unitatea 1. Răspunsul vostru va trebui
-        să atingă fiecare din elementele de mai jos: \n\n1. Ce oportunități de evaluare
-        sumativă și formativă sunt cuprinse în unitate?\n\\t* Care este rolul proiectului(lor)
-        în unitate? \n\\t* Cum aplică proiectul(ele) conținutul și abilitățile dezvoltate
-        în timpul unității? \n\\t* Ce tipuri de considerații speciale apar în această
-        unitate odată cu proiectul ce se întinde pe întreaga unitate?\n2. Cu ce practici
-        ale elevilor (PPCCC) sunt îmbunătățite cel mai mult în această unitate pe
-        timpul activităților și proiectelor? \n3. Care sunt standardele de bază CSTA
-        2017 sau componentele cadrului de desfășurare a K-12 din această unitate?\n\n>##
-        Obținerea de credite pentru completarea acestei reflecții \n>?_ Odată cu transmiterea
-        reflecției, răspunsul la punctele de mai sus vor fi partajate în mod anonim
-        și revizuite de către ceilalți cunoscuți ai tăi și vei putea vedea munca realizată
-        de ceilalți susținători. Examinatorii vor urmări răspunsurile bine gândite
-        și complete care demonstrează că ați petrecut timp analizând întrebările de
-        reflecție afișate mai sus. Examinatorii vor avea oportunitatea să furnizeze
-        un punct de vedere la ceea ce ați transmis și veți putea să răspundeți la
-        acesta și să retransmiteți materialul.\n>_ Pentru a primi credit pentru această
-        reflecție, doi experți vor trebui să fie de acord că ați răspuns complet la
-        întrebări. Dacă examinatorii nu se simt confortabil cu stabilirea deciziei
-        cu privire la ceea ce ați transmis, ei pot să o escaladeze pentru analiză
-        unui instructor. Veți avea tot mereu șansa de a vă spune punctul de vedere
-        cu privire la recenzii și să vă retransmiteți reflecțiile! Punctele de vedere
-        ale experților vor apare în partea de jos a acestei pagini, odată ce acestea
-        devin disponibile. \n \n\n"
-      csd2dlp-assessment: "<br><br>\n\n> **NOTĂ: înainte de a începe această reflecţie,
-        asigurați-vă că ați revizuit lecțiile din Unitatea 2 și că ați înțeles rolul
-        pe care îl are evaluarea în cadrul unității. Dacă nu ați revizuit materialele,
-        faceți acest lucru acum și reveniți la această reflecţie mai târziu.**\n\n\n#
-        Evaluarea din Unitatea 2\n\nPentru această reflecție, veți lua în considerare
-        fiecare din sugestiile de mai jos și veți construi un răspuns care să demonstreze
-        înțelegerea pe deplin a lecțiilor din Unitatea 2. Răspunsul vostru va trebui
-        să atingă fiecare din elementele de mai jos: \n\n1. Ce oportunități de evaluare
-        sumativă și formativă sunt cuprinse în unitate?\n\\t* Care este rolul proiectului(lor)
-        în unitate? \n\\t* Cum aplică proiectul(ele) conținutul și abilitățile dezvoltate
-        în timpul unității? \n\\t* Ce tipuri de considerații speciale apar în această
-        unitate odată cu proiectul ce se întinde pe întreaga unitate?\n2. Cu ce aptitudini
-        și cunoștințe ar trebui elevii să părăsească această unitate?\n3. Care sunt
-        standardele de bază CSTA 2017 sau componentele cadrului de desfășurare a K-12
-        din această unitate?\n\n>## Obținerea de credite pentru completarea acestei
-        reflecții \n>?_ Odată cu transmiterea reflecției, răspunsul la punctele de
-        mai sus vor fi partajate în mod anonim și revizuite de către ceilalți cunoscuți
-        ai tăi și vei putea vedea munca realizată de ceilalți susținători. Examinatorii
-        vor urmări răspunsurile bine gândite și complete care demonstrează că ați
-        petrecut timp analizând întrebările de reflecție afișate mai sus. Examinatorii
+        să atingă fiecare din elementele de mai jos: \n\n1.  Ce oportunități de evaluare
+        sumativă și formativă sunt cuprinse în unitate?\n    \\\\t\\* Care este rolul
+        proiectului(lor) în unitate? \n    \\\\t\\* Cum aplică proiectul(ele) conținutul
+        și abilitățile dezvoltate în timpul unității? \n    \\\\t\\* Ce tipuri de
+        considerații speciale apar în această unitate odată cu proiectul ce se întinde
+        pe întreaga unitate?\n2.  Cu ce practici ale elevilor (PPCCC) sunt îmbunătățite
+        cel mai mult în această unitate pe timpul activităților și proiectelor? \n3.
+        \ Care sunt standardele de bază CSTA 2017 sau componentele cadrului de desfășurare
+        a K-12 din această unitate?\n\n> ## Obținerea de credite pentru completarea
+        acestei reflecții\n>\n> ?\\_ Odată cu transmiterea reflecției, răspunsul la
+        punctele de mai sus vor fi partajate în mod anonim și revizuite de către ceilalți
+        cunoscuți ai tăi și vei putea vedea munca realizată de ceilalți susținători.
+        Examinatorii vor urmări răspunsurile bine gândite și complete care demonstrează
+        că ați petrecut timp analizând întrebările de reflecție afișate mai sus. Examinatorii
         vor avea oportunitatea să furnizeze un punct de vedere la ceea ce ați transmis
-        și veți putea să răspundeți la acesta și să retransmiteți materialul.\n>_
+        și veți putea să răspundeți la acesta și să retransmiteți materialul.\n> \\_
         Pentru a primi credit pentru această reflecție, doi experți vor trebui să
         fie de acord că ați răspuns complet la întrebări. Dacă examinatorii nu se
         simt confortabil cu stabilirea deciziei cu privire la ceea ce ați transmis,
         ei pot să o escaladeze pentru analiză unui instructor. Veți avea tot mereu
         șansa de a vă spune punctul de vedere cu privire la recenzii și să vă retransmiteți
         reflecțiile! Punctele de vedere ale experților vor apare în partea de jos
-        a acestei pagini, odată ce acestea devin disponibile. \n \n\n"
+        a acestei pagini, odată ce acestea devin disponibile. "
+      csd2dlp-assessment: "<br><br>\n\n> **NOTĂ: înainte de a începe această reflecţie,
+        asigurați-vă că ați revizuit lecțiile din Unitatea 2 și că ați înțeles rolul
+        pe care îl are evaluarea în cadrul unității. Dacă nu ați revizuit materialele,
+        faceți acest lucru acum și reveniți la această reflecţie mai târziu.**\n\n#
+        Evaluarea din Unitatea 2\n\nPentru această reflecție, veți lua în considerare
+        fiecare din sugestiile de mai jos și veți construi un răspuns care să demonstreze
+        înțelegerea pe deplin a lecțiilor din Unitatea 2. Răspunsul vostru va trebui
+        să atingă fiecare din elementele de mai jos: \n\n1.  Ce oportunități de evaluare
+        sumativă și formativă sunt cuprinse în unitate?\n    \\\\t\\* Care este rolul
+        proiectului(lor) în unitate? \n    \\\\t\\* Cum aplică proiectul(ele) conținutul
+        și abilitățile dezvoltate în timpul unității? \n    \\\\t\\* Ce tipuri de
+        considerații speciale apar în această unitate odată cu proiectul ce se întinde
+        pe întreaga unitate?\n2.  Cu ce aptitudini și cunoștințe ar trebui elevii
+        să părăsească această unitate?\n3.  Care sunt standardele de bază CSTA 2017
+        sau componentele cadrului de desfășurare a K-12 din această unitate?\n\n>
+        ## Obținerea de credite pentru completarea acestei reflecții\n>\n> ?\\_ Odată
+        cu transmiterea reflecției, răspunsul la punctele de mai sus vor fi partajate
+        în mod anonim și revizuite de către ceilalți cunoscuți ai tăi și vei putea
+        vedea munca realizată de ceilalți susținători. Examinatorii vor urmări răspunsurile
+        bine gândite și complete care demonstrează că ați petrecut timp analizând
+        întrebările de reflecție afișate mai sus. Examinatorii vor avea oportunitatea
+        să furnizeze un punct de vedere la ceea ce ați transmis și veți putea să răspundeți
+        la acesta și să retransmiteți materialul.\n> \\_ Pentru a primi credit pentru
+        această reflecție, doi experți vor trebui să fie de acord că ați răspuns complet
+        la întrebări. Dacă examinatorii nu se simt confortabil cu stabilirea deciziei
+        cu privire la ceea ce ați transmis, ei pot să o escaladeze pentru analiză
+        unui instructor. Veți avea tot mereu șansa de a vă spune punctul de vedere
+        cu privire la recenzii și să vă retransmiteți reflecțiile! Punctele de vedere
+        ale experților vor apare în partea de jos a acestei pagini, odată ce acestea
+        devin disponibile. "
       frozen circle function in circle: Acum haideți să creăm 20 de cercuri suprapuse,
         rotind 18 grade după fiecare cerc.
       frozen circle function with parameter: Aici este un bloc "Creează cerc", care
@@ -828,7 +839,7 @@ ro:
         codului pentru desenarea unui triunghi?
       grade4_arist_nested_loop_triangles4: Desenează dinţii în gura aligatorului!
       grade4_arist_nested_loop_triangles5: "Creează un soare prin a cuibări codul
-        de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r"
+        de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\\\r"
       grade4_arist_nested_loop_triangles6: Poți desena aceste 36 triunghiuri folosind
         o buclă imbricată?
       grade4_artist_functions2: Funcțiile îțî permit să construiești blocuri noi!
@@ -841,7 +852,7 @@ ro:
         te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii
         lui 360 la 10?)'
       grade4_artist_nested_loop_triangles5: "Creează un soare prin a cuibări codul
-        de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r"
+        de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\\\r"
       grade4_artist_nested_loop_triangles6: Poți desena aceste 36 triunghiuri folosind
         o buclă imbricată?
       grade4_artist_parameters_triangles2: "Observi ceva diferit \nla aceste blocuri
@@ -894,8 +905,9 @@ ro:
         pentru a face un pătrat de 10 ori, precum și blocul "Întoarce" pentru a se
         roti cu 36 de grade între fiecare pătrat?
       grade4_review_artist2: "Această casă are nevoie de un acoperiş! Desenaţi triunghiul.
-        \ \r\n\r\nSfat:\ntoate cele trei laturi au aceeaşi lungime.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>\n
-        \nContext | Request Context"
+        \ \\\r\n\\\r\nSfat:\ntoate cele trei laturi au aceeaşi lungime.\\\r\n\\\r\n<img
+        src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>\n\nContext
+        | Request Context"
       grade4_review_artist3: Blocul de salt mută artistul fără a desena. Trasează
         linia punctată folosind și blocul de salt şi cel de desen. Fiecare linie are
         50 de pixeli lungime.
@@ -904,8 +916,8 @@ ro:
       grade5_artist_for_loops1: 'Desenează acest triunghi de 50 de pixeli mărime.
         Tip: folosește un bloc "repetă".'
       grade5_artist_for_loops10: "Poți să îți dai seama cum să folosești toate lucrurile
-        pe care le-ai învățat ca sa creezi această imagine?\r\r\nAi nevoie de o sugestie?\nClick/apasa
-        aici."
+        pe care le-ai învățat ca sa creezi această imagine?\\\r\\\r\nAi nevoie de
+        o sugestie?\nClick/apasa aici."
       grade5_artist_for_loops5: Latura cea mai mică a acestei spirale pătratică este
         de 10 pixeli, cea mai mare este de 200 pixeli şi fiecare linie este cu 10
         pixeli mai lungă decât ultima. Poţi completa blocul de instrucțiuni lipsă
@@ -919,15 +931,15 @@ ro:
         şi creează un pentagon cu laturile de 150.
       grade5_artist_variables_pentagons1: "Deseneaza acest model prin mutarea variabilei
         lungime in locurile corecte si apoi setati valoarea corecta pentru lungime.
-        (pont: este un multiplu de 10). \r\r Vezi cum setezi valoarea pentru lungime
-        doar o data, iar codurile folosesc aceeasi valoare peste tot? \r\r\r\n"
+        (pont: este un multiplu de 10). \\\r\\\r Vezi cum setezi valoarea pentru lungime
+        doar o data, iar codurile folosesc aceeasi valoare peste tot? \\\r\\\r\\\r"
       grade5_playlab_variables13: Foloseşte blocul de instrucţiuni "cand personajul
         atinge" pentru a trimite câinele înapoi în colţul din stânga-sus DOAR dacă
         acesta atinge oricare unul din celelalte personaje.
       grade5_playlab_variables2: Cursa în acest ultim puzzle nu a fost foarte corectă!
-        Schimbă variabila "dog_speed" pentru a fi sigur că poţi aduna mai multe steaguri
+        Schimbă variabila "dog\_speed" pentru a fi sigur că poţi aduna mai multe steaguri
         decât pisica. Primul care adună 10 steaguri câştigă!
-      grade5_playlab_variables9: "Aici este o funcţie numită \"patrol.\"\n\r\n\r\nEditeaz-o
+      grade5_playlab_variables9: "Aici este o funcţie numită \"patrol.\"\n\\\r\n\\\r\nEditeaz-o
         pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli."
       level 'grade3_Loops_3: Poti folosi o bucla pentru a colecta tot nectarul?
       level 'grade3_Loops_4: Acum foloseste noul bloc de repetitie pentru a colecta

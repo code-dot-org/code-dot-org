@@ -971,6 +971,8 @@ zh-TW:
     csp_variables: 變數
     csp_conditionals: 條件判斷（Conditionals）
     csp_functions: 函式
+    csp_lists: 清單
+    csp_loops: 迴圈
     dlp: 反思提問
   external_links:
     disclaimer: 免責聲明

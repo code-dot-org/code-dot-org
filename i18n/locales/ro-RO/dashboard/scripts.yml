@@ -1485,7 +1485,7 @@ ro:
         allthehiddenthings:
           stages:
             Game Lab:
-              name: Laborator de jocuri
+              name: Game Lab
         cspunit1-support-test:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -3789,6 +3789,8 @@ ro:
               name: Internet
             Crowdsourcing:
               name: Obţinând Informaţii/Critici
+            Songwriting:
+              name: Compunând Cântece
         express-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -4009,7 +4011,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
         gamelab:
-          title: Laborator de jocuri
+          title: Game Lab
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
         coursea-2019:
@@ -4595,3 +4597,51 @@ ro:
           description: '[șir gol]'
         csd-videos:
           description_audience: '[șir gol]'
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+        csp1-pilot-staging:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp2-pilot-staging:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp3-pilot-staging:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp4-pilot-staging:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp5-pilot-staging:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp6-pilot-staging:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp7-pilot-staging:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp8-pilot-staging:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp9-pilot-staging:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp10-pilot-staging:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'

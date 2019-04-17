@@ -181,6 +181,7 @@ progress.renderCourseProgress = function(scriptData) {
         versions={convertAssignmentVersionShapeFromServer(scriptData.versions)}
         courseName={scriptData.course_name}
         locale={scriptData.locale}
+        showAssignButton={scriptData.show_assign_button}
       />
     </Provider>,
     mountPoint

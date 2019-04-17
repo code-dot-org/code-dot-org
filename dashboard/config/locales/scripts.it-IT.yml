@@ -40,7 +40,7 @@ it:
             Building a Foundation:
               name: Costruire le Fondamenta
             Getting Loopy:
-              name: Diventare Ripetitivi
+              name: Diventare ripetitivi
             Going Places Safely:
               name: Cittadinanza digitale - Visitare luoghi in modo sicuro
             Happy Maps:
@@ -48,7 +48,7 @@ it:
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Impara come trascinare e rilasciare (drag and drop)'
             'Maze: Debugging':
-              name: 'Labirinto: Correzione di Errori'
+              name: 'Labirinto: correzione di errori'
             'Maze: Loops':
               name: 'Labirinto: Cicli'
             'Maze: Sequence':
@@ -62,7 +62,7 @@ it:
             'Studio: Create a Story':
               name: 'Laboratorio: crea una storia'
             The Big Event:
-              name: Gli Eventi
+              name: Gli eventi
         course2:
           title: Corso 2
           description: Il Corso 2 è rivolto a studenti delle scuole elementari che
@@ -89,13 +89,13 @@ it:
             'Bee: Loops':
               name: 'Ape: Cicli'
             Binary Bracelets:
-              name: Braccialetti Binari
+              name: Braccialetti binari
             Conditionals:
               name: Istruzioni condizionali
             Flappy:
               name: Flappy
             Getting Loopy:
-              name: Diventare Ripetitivi
+              name: Diventare ripetitivi
             Graph Paper Programming:
               name: Programmazione su carta a quadretti
             'Maze: Loops':
@@ -103,13 +103,13 @@ it:
             'Maze: Sequence':
               name: 'Labirinto: Sequenze'
             'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+              name: 'Algoritmi della vita reale: aeroplani di carta'
             Relay programming:
               name: Programmazione a Staffetta
             'Studio: Create a Story':
               name: 'Laboratorio: crea una storia'
             The Big Event:
-              name: Gli Eventi
+              name: Gli eventi
             Your Digital Footprint:
               name: La tua impronta digitale
         course3:
@@ -322,7 +322,7 @@ it:
             un gioco con i personaggi di Disney Infinity.
           stages:
             Infinity:
-              name: Infinito
+              name: Infiniti
         algebrademo:
           title: Demo per l'Algebra
           description: Un po' di esercizi per dimostrare l'ambiente ed il linguaggio
@@ -839,11 +839,11 @@ it:
         asUnplugged:
           stages:
             Binary Bracelets:
-              name: Braccialetti Binari
+              name: Braccialetti binari
             Building a Foundation:
               name: Costruire le Fondamenta
             Getting Loopy:
-              name: Diventare Ripetitivi
+              name: Diventare ripetitivi
             Graph Paper Programming:
               name: Programmazione su carta a quadretti
             Happy Maps:
@@ -855,7 +855,7 @@ it:
             Songwriting:
               name: Composizione di canzoni
             The Big Event:
-              name: Gli Eventi
+              name: Gli eventi
         sciencePD3_pre1:
           stages:
             Welcome Back!:
@@ -1212,11 +1212,11 @@ it:
             Flappy:
               name: Flappy
             Binary Bracelets:
-              name: Braccialetti Binari
+              name: Braccialetti binari
             'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+              name: 'Algoritmi della vita reale: aeroplani di carta'
             The Big Event:
-              name: Gli Eventi
+              name: Gli eventi
         k5concepts:
           stages:
             Binary:
@@ -1262,7 +1262,7 @@ it:
           title: Binario
           stages:
             Binary Bracelets:
-              name: Braccialetti Binari
+              name: Braccialetti binari
             Binary Images:
               name: Immagini binarie
             Play Lab:
@@ -1351,19 +1351,19 @@ it:
             Programming in Maze:
               name: Programmazione nel labirinto
             'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+              name: 'Algoritmi della vita reale: aeroplani di carta'
             Programming in Collector:
-              name: Programmare la Collezionista
+              name: Programmare la collezionista
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: Getting Loopy':
-              name: 'Cicli: Diventare Ripetitivi'
+              name: 'Cicli: diventare ripetitivi'
             'Events: The Big Event':
               name: Eventi
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
             Binary Bracelets:
-              name: Braccialetti Binari
+              name: Braccialetti binari
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             Your Digital Footprint:
@@ -1373,7 +1373,7 @@ it:
             Screen Out the Mean:
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Debugging in Maze:
-              name: 'Labirinto: Correzione di Errori'
+              name: 'Labirinto: correzione di errori'
             Loops in Harvester:
               name: Cicli con la contadina
         coursed-draft:
@@ -1788,7 +1788,7 @@ it:
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             More Programming in Maze:
-              name: Ancora programmazione nel Labirinto
+              name: Ancora programmazione nel labirinto
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
           title: Corso B
@@ -1807,15 +1807,15 @@ it:
             Programming in Maze:
               name: Programmazione nel labirinto
             Debugging in Maze:
-              name: 'Labirinto: Correzione di Errori'
+              name: 'Labirinto: correzione di errori'
             'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+              name: 'Algoritmi della vita reale: aeroplani di carta'
             Programming in Collector:
-              name: Programmare la Collezionista
+              name: Programmare la collezionista
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: Getting Loopy':
-              name: 'Cicli: Diventare Ripetitivi'
+              name: 'Cicli: diventare ripetitivi'
             Loops in Harvester:
               name: Cicli con la contadina
             'Events: The Big Event':
@@ -2178,7 +2178,7 @@ it:
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
@@ -2326,7 +2326,7 @@ it:
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
@@ -2503,7 +2503,7 @@ it:
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
@@ -2585,7 +2585,7 @@ it:
             Nested Loops in Bee:
               name: Cicli Annidati con l'Ape
             Loops in Ice Age:
-              name: Cicli con l'Era Glaciale
+              name: Cicli con l'Era glaciale
           title: Corso D
         new-express:
           stages:
@@ -2648,7 +2648,7 @@ it:
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
@@ -2698,7 +2698,7 @@ it:
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
@@ -2785,7 +2785,7 @@ it:
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
@@ -2839,7 +2839,7 @@ it:
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
@@ -2969,7 +2969,7 @@ it:
                 Questa attività aiuterà gli studenti ad acquisire esperienza leggendo
                 e scrivendo del codice costituito da semplici simboli.
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
               description_teacher: In questa serie di esercizi online, gli studenti
                 svilupperanno la comprensione degli algoritmi, la correzione degli
                 errori (debugging) e i primi principi generali dell'informatica. Utilizzando
@@ -3052,7 +3052,7 @@ it:
             'Common Sense Education: Screen Out the Mean':
               name: 'Cittadinanza digitale: Caccia via le cattiverie dallo schermo'
             'Events: The Big Event':
-              name: Gli Eventi
+              name: Gli eventi
             Events in Bounce:
               name: Eventi con Ping-Pong
             While Loops in Farmer:
@@ -3086,21 +3086,21 @@ it:
             Until Loops in Maze:
               name: Cicli "Fino a Che" con il Labirinto
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
             Debugging in Maze:
               name: Debugging con Scrat
             Programming in Collector:
-              name: Programmare la Collezionista
+              name: Programmare la collezionista
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: Getting Loopy':
-              name: Diventare Ripetitivi
+              name: Diventare ripetitivi
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
             Copyright and Creativity:
               name: Diritti d'Autore e Creatività
             'Concept Practice with Minecraft ':
-              name: Uno Sguardo Avanti con Minecraft
+              name: Uno sguardo avanti con Minecraft
             Nested Loops in Bee:
               name: Cicli Annidati con l'Ape
             Nested Loops in Frozen:
@@ -3142,7 +3142,7 @@ it:
             Pet Giraffe with Sprite Lab:
               name: Giraffa Domestica
             Binary Bracelets:
-              name: Braccialetti Binari
+              name: Braccialetti binari
             'Unplugged: Binary':
               name: Immagini binarie
             Artist Binary:
@@ -3245,7 +3245,7 @@ it:
             Artist Binary:
               name: 'Artista: Binario'
             Loops in Ice Age:
-              name: Cicli con l'Era Glaciale
+              name: Cicli con l'Era glaciale
             Nested Loops in Frozen:
               name: Cicli Annidati con Frozen
             Until Loops in Maze:
@@ -3281,17 +3281,17 @@ it:
             Building a Foundation:
               name: Costruire le Fondamenta
             Programming in Maze:
-              name: Programmazione nel Labirinto
+              name: Programmazione nel labirinto
             Debugging in Maze:
               name: 'Labirinto: Correzione di Errori'
             'Real-life Algorithms: Paper Planes':
-              name: Aeroplani di Carta
+              name: Aeroplani di carta
             Programming in Collector:
-              name: Programmare la Collezionista
+              name: Programmare la collezionista
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: Getting Loopy':
-              name: Diventare Ripetitivi
+              name: Diventare ripetitivi
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
             Loops in Artist:
@@ -3299,7 +3299,7 @@ it:
             Loops in Harvester:
               name: Cicli con la contadina
             'Events: The Big Event':
-              name: Gli Eventi
+              name: Gli eventi
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
             Events in Play Lab:
@@ -3307,9 +3307,9 @@ it:
             Screen Out the Mean:
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Binary Bracelets:
-              name: Braccialetti Binari
+              name: Braccialetti binari
             Looking Ahead:
-              name: Uno Sguardo Avanti con Minecraft
+              name: Uno sguardo avanti con Minecraft
         csd6-2018:
           stages:
             Functions with Parameters:
@@ -3332,7 +3332,7 @@ it:
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
@@ -3483,7 +3483,7 @@ it:
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
@@ -3803,7 +3803,7 @@ it:
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
@@ -3971,7 +3971,7 @@ it:
             Events in Bounce:
               name: Eventi con Ping-Pong
             Loops in Ice Age:
-              name: Cicli con l'Era Glaciale
+              name: Cicli con l'Era glaciale
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops in Bee:
@@ -4018,7 +4018,7 @@ it:
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Artist:
@@ -4146,6 +4146,10 @@ it:
               name: Progetto di Fine Corso
             Digital Sharing:
               name: Condivisione Digitale
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: Istruzioni condizionali in Minecraft - Viaggio acquatico
+            Songwriting:
+              name: Composizione di canzoni
         express-2019:
           description: Impara le basi dell'informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
@@ -4158,13 +4162,13 @@ it:
             Relay Programming:
               name: Programmazione a Staffetta
             Debugging in Maze:
-              name: 'Labirinto: Correzione di Errori'
+              name: 'Labirinto: correzione di errori'
             Programming in Collector:
-              name: Programmare la Collezionista
+              name: Programmare la collezionista
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: Getting Loopy':
-              name: 'Cicli: Diventare Ripetitivi'
+              name: 'Cicli: diventare ripetitivi'
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
             Loops in Artist:
@@ -4220,7 +4224,7 @@ it:
             Present Your Project:
               name: Presenta il Tuo Progetto
             Binary Bracelets:
-              name: Braccialetti Binari
+              name: Braccialetti binari
             'Unplugged: Binary':
               name: Binario
             Artist Binary:
@@ -4255,15 +4259,15 @@ it:
             Programming in Maze:
               name: Programmazione nel labirinto
             Debugging in Maze:
-              name: 'Labirinto: Correzione di Errori'
+              name: 'Labirinto: correzione di errori'
             'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+              name: 'Algoritmi della vita reale: aeroplani di carta'
             Programming in Collector:
-              name: Programmare la Collezionista
+              name: Programmare la collezionista
             Programming in Artist:
-              name: Programmare l'Artista
+              name: Programmare l'artista
             'Loops: Getting Loopy':
-              name: 'Cicli: Diventare Ripetitivi'
+              name: 'Cicli: diventare ripetitivi'
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
             Loops in Artist:
@@ -4281,7 +4285,7 @@ it:
             Looking Ahead:
               name: Uno Sguardo Avanti
             Binary Bracelets:
-              name: Braccialetti Binari
+              name: Braccialetti binari
             'End of Course Project: Play Lab':
               name: 'Progetto di fine corso: Laboratorio'
             'Programming: My Robotic Friends':
@@ -4377,7 +4381,7 @@ it:
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
             Loops in Ice Age:
-              name: Cicli con l'Era Glaciale
+              name: Cicli con l'Era glaciale
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
             Sequencing with Scrat:
@@ -4405,7 +4409,7 @@ it:
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Ice Age:
-              name: Cicli con l'Era Glaciale
+              name: Cicli con l'Era glaciale
             Loops in Collector:
               name: Cicli con la collezionista
             Loops in Artist:
@@ -4415,7 +4419,7 @@ it:
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             'Loops: Getting Loopy':
-              name: 'Cicli: Diventare Ripetitivi'
+              name: 'Cicli: diventare ripetitivi'
             Loops in Harvester:
               name: Cicli con la contadina
             Programming in Maze:
@@ -4442,7 +4446,7 @@ it:
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Ice Age:
-              name: Cicli con l'Era Glaciale
+              name: Cicli con l'Era glaciale
             Loops in Collector:
               name: Cicli con la collezionista
             Loops in Artist:
@@ -4457,6 +4461,10 @@ it:
               name: Impara come Trascinare i Blocchi
             Programming in Maze:
               name: Programmazione nel labirinto
+            Tell a Story in Play Lab:
+              name: Racconta una storia nel Laboratorio
+            Make a Game in Play Lab:
+              name: Crea un gioco nel Laboratorio
             Ocean Scene with Loops:
               name: Al mare con i cicli
         removed19:
@@ -4499,6 +4507,10 @@ it:
               name: Sondaggio studente (istruzioni condizionali)
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
         csp1-2019:
           stages:
             Personal Innovations:
@@ -4536,3 +4548,145 @@ it:
           stages:
             Mid-Year Survey:
               name: Sondaggio di metà anno
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Intelligenza Collettiva
+            Conditionals with Cards:
+              name: Istruzioni condizionali con le Carte da Gioco
+            'Programming: My Robotic Friends':
+              name: I miei amici robotici
+            Sequence in Maze:
+              name: Sequenze di Istruzioni con il Labirinto
+            Building a Foundation:
+              name: Costruire le Fondamenta
+            Debugging with Scrat:
+              name: Debugging con Scrat
+            Programming in Artist:
+              name: Programmare l'artista
+            'Loops: My Loopy Robotic Friends':
+              name: 'Cicli: I miei ciclici amici robotici'
+            Loops in Artist:
+              name: Cicli con l'artista
+            Nested Loops in Bee/Zombie:
+              name: Cicli Annidati con l'Ape e lo Zombie
+            Nested Loops with Frozen:
+              name: Cicli Annidati con Frozen
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni con il Laboratorio dei personaggi
+            Build a Flappy Game:
+              name: Realizzare un gioco Flappy
+            Build a Star Wars Game:
+              name: Realizza un gioco con Star Wars
+            'Events: The Big Event':
+              name: Eventi
+            'Functions: Songwriting':
+              name: 'Funzioni: Composizione di Canzoni'
+            Functions in Minecraft:
+              name: Funzioni con Minecraft
+            Functions in Harvester:
+              name: Funzioni con la Contadina
+            Functions in Artist:
+              name: Funzioni con l'Artista
+            Determine the Concept:
+              name: Fissare i Concetti
+        csp1-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp2-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp3-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp4-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp5-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp6-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp7-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp8-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp9-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)
+        csp10-pilot-staging:
+          stages:
+            Student Survey (Variables):
+              name: Sondaggio studente (variabili)
+            Teacher Surveys (Variables):
+              name: Sondaggio insegnante (variabili)
+            Student Survey (Conditionals):
+              name: Sondaggio studente (istruzioni condizionali)
+            Teacher Surveys (Conditionals):
+              name: Sondaggio insegnante (istruzioni condizionali)

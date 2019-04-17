@@ -1,8 +1,8 @@
 ---
 title: Facilitators
 nav: regional_partner_playbook_nav
+noindex: true
 ---
-<meta name="robots" content="noindex">
 
 <a id="top"></a>
 
@@ -30,11 +30,11 @@ ________________
 ________________
 
 <a id="interviews"></a>
-### Interviewing Facilitators 
+### Interviewing Facilitators
 
 Keep these three important things on your radar as you prepare for upcoming facilitator interviews. Watch this [very quick recording](https://code.zoom.us/recording/play/_kbC3EU3s8sHFBPeessecWvewQcZLofgK0dFZXzOFL2BU8SYM-gorH_WBj6vuXQ-?startTime=1548267193000) for more details, and read below for the highlights.
 
-1.  **Interview Scheduling:** 
+1.  **Interview Scheduling:**
 All Group 1 - 3 Regional Partners are responsible for scheduling interviews with their candidates during the interview period of Feb. 11 - March 1. Interviews should be booked for 30 minutes, and should include a video chat (e.g., Google hangout, Zoom, etc.) if they’re not hosted in-person. However, we recommend you block an hour on your calendar for prepare and review. Remember that many candidates are teachers who have limited availability during the school day, so please be prepared to host interviews in the late-afternoon or early evening.
 2.  **Interview Support:** All Group 1 - 3 Regional Partners are responsible for hosting interviews on their own, without the support of a Code.org-contracted co-interviewer. This means that Regional Partners will need to plan ahead to make sure they are able to conduct the interview while taking notes in the application dashboard.
 3.  **Interview Questions and Process:** We will cover the interview process and required interview questions in detail during the February Regional Partner Summit.
@@ -60,10 +60,10 @@ ________________
 ### Example contract
 [This is an example](/files/example-facilitation-agreement.pdf) of an agreement that facilitators sign when facilitating for Code.org. You should develop your own agreement for use with facilitators that meets your organization's particular needs, and which ensures that the terms of the Regional Partner agreement you have signed with Code.org, particularly Section 3 (Indemnification), Section 6.1 (Description of Duties) and Section 7 (Confidential Information), are met.
 
-We have created these example Scope of Work documents that you can use as a planning resource when establishing a relationship with a K-5 or 6-12 facilitators. These document lives in our shared Google Drive folder. 
+We have created these example Scope of Work documents that you can use as a planning resource when establishing a relationship with a K-5 or 6-12 facilitators. These document lives in our shared Google Drive folder.
 
 - <a href="https://docs.google.com/document/d/1sdGbB5BSBTjjjjC6abIjAO4XzznXVvgwQe95CRL_c6E/edit?usp=sharing" target=_blank>K-5 example Scope of Work</a>
--  <a href="https://docs.google.com/document/d/1JM9UmPcwLUv_lCDAdFtX3jBst4B34ll-zQukaGl34Kc/edit" target=_blank>6-12 example Scope of Work</a> 
+-  <a href="https://docs.google.com/document/d/1JM9UmPcwLUv_lCDAdFtX3jBst4B34ll-zQukaGl34Kc/edit" target=_blank>6-12 example Scope of Work</a>
 
 
 *DISCLAIMER: By providing these resources and example documents, Code.org is not offering you legal advice. You should consult a lawyer if you need advice about contracts, the language therein, or any other legal matter. These resources are meant to serve as general guides for you to customize and make adjustments that are right for your organization, while still staying within the bounds of the program guidelines Code.org has outlined.*

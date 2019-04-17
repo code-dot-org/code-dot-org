@@ -709,6 +709,8 @@ si:
     csp_variables: 'විචල්‍යන්'
     csp_conditionals: 'කන්ඩිෂනලස්'
     csp_functions: 'ශ්‍රිතයන්'
+    csp_lists: 'ලැයිස්තු'
+    csp_loops: 'ලූපයන්'
   external_links:
     disclaimer: වියාචනය
     leaving_domain: දැන් ඔබට Code.org විසින් ක්‍රියාත්මක නොවන බව අඩවියකට, යොමුකරයි.

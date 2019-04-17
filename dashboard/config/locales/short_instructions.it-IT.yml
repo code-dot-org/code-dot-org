@@ -5,9 +5,9 @@ it:
       2-3 Artist 1 new: Ciao, io sono un artista. Puoi scrivere del codice per farmi
         disegnare quasi qualunque cosa. Usa i blocchi per farmi disegnare lungo le
         linee grigie dell'immagine. (Ciascuna riga è lunga 100 pixel)
-      2-3 Artist 11: |-
-        Disegna il bordo del segnale di stop creando un ottagono con lati lunghi 100 pixel. <br><br>
-        Di quanti gradi devi girare ogni volta per completare il bordo del segnale di stop?
+      2-3 Artist 11: 'Disegna il bordo del segnale di stop creando un ottagono di
+        8 lati, ciascun lungo 100 pixel. Di quanti gradi devi girare adesso per completare
+        il bordo del segnale di stop? (Suggerimento: quanto fa 360 diviso 8?) '
       2-3 Artist 12: |-
         Disegna il "cerchio" che rappresenta il bulbo oculare.<br><br>
         Se ad ogni movimento giri a destra di un grado, quante volte devi ripetere il movimento, usando il blocco `ripeti ... volte`, per completare esattamente il cerchio? 180? 360? 500?
@@ -133,7 +133,7 @@ it:
         I quadrati sono distanti 75 pixel.
       2-3 Artist Functions 3 a: "Modifica la funzione `draw a square` (<i>disegna
         un quadrato</i>) in modo da disegnare un quadrato con i lati lunghi 115 pixel
-        e creare occhiali più grandi.\r\n\r\nI quadrati sono ora distanti 45 pixel."
+        e creare occhiali più grandi.\\\r\n\\\r\nI quadrati sono ora distanti 45 pixel."
       2-3 Artist Functions 3: |-
         Modifica la funzione in modo da disegnare un quadrato con i lati lunghi 115 pixel e creare occhiali più grandi.<br>
         <br>
@@ -168,8 +168,8 @@ it:
         Puoi creare un rombo all'interno dell'esagono?
       2-3 Artist Loops 8: Mettiamo entrambi gli elementi all'interno di un ciclo.
       2-3 Artist Loops 9: "Stiamo per inserire in un ciclo gli stessi elementi, ma
-        ora aggiungeremo un po' di distanza tra loro.\r Usa lo stesso codice di prima,
-        ma aggiungi un passo avanti alla fine del ciclo esterno."
+        ora aggiungeremo un po' di distanza tra loro.\\\r Usa lo stesso codice di
+        prima, ma aggiungi un passo avanti alla fine del ciclo esterno."
       2-3 Artist Loops New 1: Completiamo la testa di questo robot! Riesci a disegnare
         un quadrato i cui lati siano tutti lunghi 100 pixel?
       2-3 Artist Loops New 10: Cerca adesso di disegnare una serie di V collegate,
@@ -245,8 +245,9 @@ it:
         Qui ci sono diverse cose da fare!<br>
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
         <b>Suggerimenti</b><br>
-        - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
-        - Puoi risolvere questo esercizio usando il <i>ciclo</i> `ripeti ... volte`?
+
+        -   Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
+        -   Puoi risolvere questo esercizio usando il <i>ciclo</i> `ripeti ... volte`?
       2-3 Bee Conditionals 14: |-
         Metti insieme tutto ciò che hai imparato!<br>
         Raccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi. Non dimenticarti di fare il miele alla fine.
@@ -478,6 +479,8 @@ it:
       2-3 maze sq15: Puoi arrivare al girasole usando solo cinque blocchi?
       2-3 maze sq16: Questo esercizio è simile al precedente, ma leggermente diverso.
         Puoi risolverlo usando solo cinque blocchi?
+      2-3: I fiori viola possono avere 0 oppure 1 dose di nettare. Fai attenzione
+        a non raccogliere il nettare da un fiore viola SE non ne ha.
       2-3level1: Aiuta l'uccellino a catturare il maialino cattivo muovendosi in avanti
       20hr_farmer_stage9_1: Ciao, io sono una contadina. Ho bisogno del tuo aiuto
         per livellare il terreno nella mia fattoria, in modo che sia pronto per la
@@ -698,8 +701,8 @@ it:
       4-5 Artist Patterns 5: Ripetiamo il disegno 6 volte per ottenere una fila di
         rombi. Fai attenzione! Il codice per disegnare il rombo viene ora ripetuto
         3 volte invece di 2 - secondo te qual è il motivo?
-      4-5 Artist Patterns 6: Quante volte devi ripetere questo codice per disegnare
-        l'intera griglia di rombi?
+      4-5 Artist Patterns 6: Quante volte devi ripetere questo blocco per disegnare
+        l'intera griglia di diamanti?
       4-5 Artist Patterns 7: Modifichiamo il codice dell'esercizio precedente per
         disegnare una figura più complessa. Osserva il modo in cui si sovrappongono
         i rombi in questa figura e prova a dimezzare il primo `salta all'indietro`
@@ -896,10 +899,8 @@ it:
         per disegnare un triangolo?
       4-5 Nested Loops 7: Ripeti 10 volte la figura disegnata dal codice che trovi
         già pronto. Di quanti gradi devi ruotare ad ogni ripetizione?
-      4-5 Nested Loops 8: 'Ripeti 6 volte la figura disegnata dal codice che trovi
+      4-5 Nested Loops 8: Ripeti 6 volte la figura disegnata dal codice che trovi
         già pronto. Di quanti gradi devi ruotare ad ogni ripetizione?
-
-'
       4-5 Nested Loops 9: Finisci di disegnare i denti del coccodrillo!
       4-5 Nested Loops Assessment 1: Questo è un esercizio di riepilogo -- Usa un
         ciclo annidato per completare il disegno.
@@ -1150,12 +1151,10 @@ it:
         In questo esercizio il codice per disegnare un triangolo è stato inserito in un ciclo con contatore che conta da 50 a 100 con <i>passo</i> di 10.<br>
         <b>Attenzione</b>: assicurati di aver guardato bene il codice prima di cliccare su "Esegui".<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO" target="_blank">Video doppiato in italiano</a>
-      Course 4 Artist For Loops 3: 'Per disegnare questa figura usa come riferimento
+      Course 4 Artist For Loops 3: Per disegnare questa figura usa come riferimento
         il codice del precedente esercizio. Il triangolo più piccolo ha i lati di
         20 pixel, il triangolo più grande ha i lati di 200 pixel ed ogni triangolo,
         rispetto al precedente, ha il lato di 20 pixel più grande.
-
-'
       Course 4 Artist For Loops 4: Come puoi modificare quello che hai imparato sui
         triangoli per disegnare questi quadrati? Il quadrato più piccolo ha i lati
         di 15 pixel, il quadrato più grande ha i lati di 300 pixel ed ogni quadrato,
@@ -1177,7 +1176,7 @@ it:
         quale cambiamento si tratta?
       Course 4 Artist For Loops 9: Riesci a disegnare una spirale? Sposa in avanti
         da 1 a 75 pixels incrementando di 1 pixel ogni volta.
-      Course 4 Artist For Loops Challenge: |
+      Course 4 Artist For Loops Challenge: |-
         <b>Sfida:</b> Riesci a capire come utilizzare tutte le cose che hai imparato finora per disegnare questa immagine composta di poligoni, tutti con lato di 40 pixel?<br>
         <br>
         Ricorda che per creare una spirale non devi chiudere il poligono. Questo significa che ogni forma deve avere un lato in meno del solito.
@@ -1197,7 +1196,7 @@ it:
         linea
       Course 4 Artist Functions 13.1: "Ora, creiamo una funzione denominata \"salto
         in alto a destra\" che sposta l'artista in alto a destra dell'ottagono che
-        hai appena disegnato così possiamo finire questo modello. \r \r Suggerimento:
+        hai appena disegnato così possiamo finire questo modello. \\\r \\\r Suggerimento:
         per raggiungere l'angolo superiore destro, prova ad utilizzare un modello
         che fa solo i 3/8 dell'ottagono."
       Course 4 Artist Functions 13: Come puoi vedere, abbiamo una nuova funzione chiamata
@@ -1215,7 +1214,7 @@ it:
       Course 4 Artist Functions 2: Sai disegnare tre quadrati a distanza di 20 pixel
         l'uno dall'altro? Ogni quadrato ha il lato di 100 pixel.
       Course 4 Artist Functions 3: "Riesci a disegnare questa immagine usando la funzione
-        \"Disegna un Quadrato\"? Suggerimento: ogni quadrato è spostato di 120 pixels.\r"
+        \"Disegna un Quadrato\"? Suggerimento: ogni quadrato è spostato di 120 pixels.\\\r"
       Course 4 Artist Functions 4: 'Sei pronto per creare la tua FUNZIONE? Clicca
         sul blocco FUNZIONI nella casetta degli attrezzi, dalle il nome "Disegna un
         Triangolo", quindi disegna un triangolo come hai fatto precedentemente con
@@ -1226,7 +1225,7 @@ it:
         disegnare una casa - Cosa deve essere modificato nel codice per disegnare
         correttamente la casa?
       Course 4 Artist Functions 5: "Riesci a disegnare questa immagine usando la funzione
-        \"Disegna un Quadrato\"? Suggerimento: ogni quadrato è spostato di 120 pixels.\r"
+        \"Disegna un Quadrato\"? Suggerimento: ogni quadrato è spostato di 120 pixels.\\\r"
       Course 4 Artist Functions 6: Quale blocco è necessario aggiungere per far si
         che il triangolo sia posizionato sopra il quadrato?
       Course 4 Artist Functions 7: Riesci a disegnare una serie di quadrati usando
@@ -1248,19 +1247,19 @@ it:
         width="250px"/><br>
         Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       Course 4 Artist Functions inspire: "Tempo di giocare: guarda la figura che trovi
-        al link https://studio.code.org/c/110671172. Ora hai imparato tutto quello
+        al link <https://studio.code.org/c/110671172>. Ora hai imparato tutto quello
         che devi sapere per realizzare un disegno come questo! Se questa immagine
         ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea
-        qualcosa di tuo. \r\n\nVuoi realizzare la figura che ti abbiamo suggerito?
+        qualcosa di tuo. \\\r\n\nVuoi realizzare la figura che ti abbiamo suggerito?
         Ecco alcuni aiuti:\n\nSuggerimento 1: usa un ciclo con contatore, quindi usa
         la sua variabile contatore all'interno di un ciclo annidato.\n\nSuggerimento
         2: ad ogni iterazione, dovresti disegnare un quadrato e fare un salto in avanti.
         \n\nSuggerimento 3: dovresti girare a sinistra di 90 gradi all'esterno del
-        ciclo annidato, ma ancora all'interno del ciclo con contatore.\n\n\r\nVuoi
+        ciclo annidato, ma ancora all'interno del ciclo con contatore.\n\n\\\r\nVuoi
         sapere come è stato realizzata la figura che ti abbiamo suggerito? Visita
-        il link https://studio.code.org/c/110671172/edit per scoprirlo.\n\nCosa succede
-        se disegni i quadrati un po' più piccoli o un po' più grandi? E cosa succede
-        se invece di girare a sinistra giri a destra?"
+        il link <https://studio.code.org/c/110671172/edit> per scoprirlo.\n\nCosa
+        succede se disegni i quadrati un po' più piccoli o un po' più grandi? E cosa
+        succede se invece di girare a sinistra giri a destra?"
       Course 4 Artist Inspire: |-
         <img src="https://images.code.org/b5e28b084cb331ee030ea3853ed921bd-image-1440060815818.51.21.png"
         width="250px"/><br>
@@ -1282,11 +1281,9 @@ it:
         La funzione dovrebbe anche prendere un parametro di lunghezza, proprio come
         per il triangolo. Questa volta disegnate 3 quadrati con lunghezza di 25, 50
         e 75 pixel e che distano 100 pixel uno dall'altro.
-      Course 4 Artist Params 5: 'Usa ambedue le nuove funzioni per disegnare questa
+      Course 4 Artist Params 5: Usa ambedue le nuove funzioni per disegnare questa
         immagine. Per semplificare questa operazione usate un ciclo con un parametro
         "contatore".
-
-'
       Course 4 Artist Params 6: "Modifichiamo questa funzione: \"disegna una forma\".\nQuesta
         ha già un parametro \"lunghezza\". Ora modifichiamo la funzione per aggiungere
         anche un parametro \"lati\". Ricorda che l'angolo per una data forma è 360
@@ -1295,7 +1292,7 @@ it:
       Course 4 Artist Params 7: 'Riesci a disegnare queste forme completando i "???".
         Il quadrato e il triangolo sono 100 pixel di dimensioni mentre l''esagono
         è di 75 pixel. '
-      Course 4 Artist Params 8: |
+      Course 4 Artist Params 8: |-
         Riesci a capire come disegnare questa
          forma? Ecco un suggerimento per creare una nuova forma con 6 lati chiamati un esagono.
       Course 4 Artist Params 9: Ti ricordi quando abbiamo usato il ciclo contatore
@@ -1480,24 +1477,12 @@ it:
       Course 4 Binary 8: Puoi completare la maggior parte di questa immagine impostando
         un ciclo con un numero binario a 5 bit - poi avrai bisogno di un altro numero
         a 4 bit per ottenere l'angolo in basso a destra.
-      Course 4 EC 1a: 'Nessuna istruzione. Nessun suggerimento. Solo la sfida!
-
-'
-      Course 4 EC 1b: 'Nessuna istruzione. Nessun suggerimento. Solo la sfida!
-
-'
-      Course 4 EC 2a: 'Nessuna istruzione. Nessun suggerimento. Solo la sfida!
-
-'
-      Course 4 EC 2b: 'Nessuna istruzione. Nessun suggerimento. Solo la sfida!
-
-'
-      Course 4 EC 2c: 'Nessuna istruzione. Nessun suggerimento. Solo la sfida!
-
-'
-      Course 4 EC 2d: 'Nessuna istruzione. Nessun suggerimento. Solo la sfida!
-
-'
+      Course 4 EC 1a: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
+      Course 4 EC 1b: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
+      Course 4 EC 2a: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
+      Course 4 EC 2b: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
+      Course 4 EC 2c: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
+      Course 4 EC 2d: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
       Course 4 EC 3: |-
         <b>Super Sfida sulle funzioni:</b> Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come questa.<br>
         <br><i>Nota: Il codice diventa più semplice se usi le funzioni con parametri.</i><br>
@@ -1522,7 +1507,7 @@ it:
         Clicca su "Esegui" ed utilizza questa nuova funzione per raccogliere tutte le bandierine muovendo il cane con i tasti freccia.
       Course 4 Play Lab Params 10: |-
         Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>
-        Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>
+        Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player\_score</i> > 6).<br><br>
         Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
       Course 4 Play Lab Params 2: 'Ora le bandierine sono troppo in alto per poterle
         raggiungere con la funzione `jump` (<i>salta</i>)! Dovresti associare alle
@@ -1639,35 +1624,35 @@ it:
         Senza cambiare le impostazioni del ciclo con contatore, riesci a contare 1,
         4, 9, 16, 25... (il contatore al quadrato)?
       Course 4 Play Labs For Loops 4a: "Ora, uniamo le variabili da Stage 7 insieme
-        con la variabile \"counter\" per far accadere qualche magia.   \r \r In questo
-        puzzle, Cane varierà da 0 a 1000, \"incrementandosi\".  Impostare la variabile
-        di \"incremento\" a 10 all'inizio del codice per vedere cosa succede."
+        con la variabile \"counter\" per far accadere qualche magia.   \\\r \\\r In
+        questo puzzle, Cane varierà da 0 a 1000, \"incrementandosi\".  Impostare la
+        variabile di \"incremento\" a 10 all'inizio del codice per vedere cosa succede."
       Course 4 Play Labs For Loops 5: Nell'ultima fase abbiamo contato il quadrato
         di ogni numero. Prova a cambiare "contatore ^ 2" in "contatore ^ 3" per contare
         il cubo di ogni numero (1, 8, 27, 64, 125, 216, 343….)
       Course 4 Play Labs For Loops 6: Ricorda che un numero è primo solo se è divisbile
-        per 1 e per se stesso. Utilizzare la funzione "is_prime" per ottenre solo
+        per 1 e per se stesso. Utilizzare la funzione "is\_prime" per ottenre solo
         i numeri primi da 1 a 100.
       Course 4 Play Labs For Loops 6a: "Cane continuerà a contare nel nostro \"ciclo
         for\" mediante un \"incremento\", ma questa volta, aggiungeremo la magia nel
         mix.  È possibile modificare il codice affinché \"incremento\" aumenta di
-        due ogni volta che viene selezionato Il Mago? \r \r Attenzione!  Il Mago si
-        muove velocemente!"
+        due ogni volta che viene selezionato Il Mago? \\\r \\\r Attenzione!  Il Mago
+        si muove velocemente!"
       Course 4 Play Labs For Loops 7: Potresti usare un ciclo "per" per aiutarmi a
         dire la sequenza 1, 4, 7, 10, 13, 16, 19, 22, 25?
       Course 4 Play Labs For Loops 7a: "Ora stiamo ottenendo qualcosa!  Cosa succede
         se iniziamo a contare quante volte possiamo cliccare il Mago prima che Cane
-        arrivi a 30?  \r \r Concludete aggiungendo blocchi alla procedura guidata
+        arrivi a 30?  \\\r \\\r Concludete aggiungendo blocchi alla procedura guidata
         in modo che ogni volta che viene fatto clic sulla variabile \"cliccato\" aumenta
-        di uno. È possibile ignorare \"incremento\" per ora. \r \r Cane inizia il
-        conteggio quando si fa clic su \"Esegui\"."
+        di uno. È possibile ignorare \"incremento\" per ora. \\\r \\\r Cane inizia
+        il conteggio quando si fa clic su \"Esegui\"."
       Course 4 Play Labs For Loops 8: Quale ciclo con contatore mi farebbe pronunciare
         la sequenza 19, 27, 35, 43, 51?
       Course 4 Play Labs For Loops 8a: "Per finire la nostra partita, abbiamo bisogno
         di portare indietro la variabile di \"incremento\"!    Colleghiamola al livello
-        di gioco. \r \r 1) Tenere traccia del numero di volte che Il Mago è cliccato.
-        \r 2) Se Il Mago viene selezionato almeno 10 volte prima che Cane raggiunga
-        30, aumentare \"incremento\" di 1 e incominciare da capo. \r 3) Se Il Mago
+        di gioco. \\\r \\\r 1) Tenere traccia del numero di volte che Il Mago è cliccato.
+        \\\r 2) Se Il Mago viene selezionato almeno 10 volte prima che Cane raggiunga
+        30, aumentare \"incremento\" di 1 e incominciare da capo. \\\r 3) Se Il Mago
         non viene cliccato almeno 10 volte, il gioco è finito."
       Course 4 Playlab For Loop Freeplay: 'Tempo di giocare: usa tutto quello che
         hai imparato finora per creare un gioco che includa un <i>ciclo con contatore</i>!'
@@ -1728,6 +1713,7 @@ it:
         <b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?
       Course 4 SCV 3: |-
         <b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per risolvere un esercizio difficile come questo! Il gioco che ti proponiamo di realizzare è complicato. Ce la fai a perseverare fino a trovare la soluzione?<br>
+
         <hr>
         Questo è un gioco di inseguimenti!  Muovendo il cane, tocca il gatto per ottenere 2 punti e il pinguino per ottenere 3 punti.  Arriva <u>esattamente</u> a 10 punti per vincere! Ma fai attenzione, quando il gatto e il pinguino si toccano, perdi 1 punto.<br>
         <b>
@@ -1781,8 +1767,8 @@ it:
       CourseE_HOC 2018 Level_10: Raggiungi l'entrata di questo Monumento oceanico.
       CourseE_HOC 2018 Level_11: Costruisci un condotto di prismarino all'interno
         del Monumento oceanico.
-      CourseE_HOC 2018 Level_2: 'Dirigiti alla fine del molo.  '
-      CourseE_HOC 2018 Level_3: 'Naviga in mare aperto verso il merluzzo.  '
+      CourseE_HOC 2018 Level_2: Dirigiti alla fine del molo.
+      CourseE_HOC 2018 Level_3: Vai fino al merluzzo in mare.
       CourseE_HOC 2018 Level_4: Usa il ciclo (blocco rosa) per raggiungere il delfino.
       CourseE_HOC 2018 Level_5: Esplora il relitto per raggiungere la cassa.
       CourseE_HOC 2018 Level_6: Naviga tra i ghiacci per raggiungere il salmone.
@@ -1850,14 +1836,15 @@ it:
       D_Frozen_nested8: Fai ruotare questa figura 5 o 6 volte fino a formare un cerchio.
       D_Frozen_nested9: |-
         Fai qualche prova con ciò che hai creato. Disegna quello che vuoi!
-        - Cosa succede se usi due angoli diversi nello schema a scalinata?
-        - Cosa succede se rendi lo schema a rombo più lungo o più corto?
-        - Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
-      Dance Party 2: Cambia il comportamento nel blocco `___begins___` (*inizia*)
+
+        -   Cosa succede se usi due angoli diversi nello schema a scalinata?
+        -   Cosa succede se rendi lo schema a rombo più lungo o più corto?
+        -   Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
+      Dance Party 2: Cambia il comportamento nel blocco `___begins___` (_inizia_)
         per fare in modo che all'inizio l'alieno gironzoli qua e là.
-      Dance Party 2_2019: Cambia il comportamento nel blocco `___begins___` (*inizia*)
+      Dance Party 2_2019: Cambia il comportamento nel blocco `___begins___` (_inizia_)
         per fare in modo che all'inizio l'alieno gironzoli qua e là.
-      Dance Party 2_simple: Cambia il comportamento nel blocco `___begins___` (*inizia*)
+      Dance Party 2_simple: Cambia il comportamento nel blocco `___begins___` (_inizia_)
         per fare in modo che all'inizio l'alieno gironzoli qua e là.
       Dance Party 3 - Validated: Crea un nuovo personaggio chiamato `alien2`.  Fagli
         fare un passo di danza diverso ogni volta che ci clicchi sopra.
@@ -1883,24 +1870,24 @@ it:
         quando si clicca su di esso.
       Dance Party 5_simple: Aggiungi del codice per cambiare il colore di ogni alieno
         quando si clicca su di esso.
-      Dance Party 6 - Validated: Usa il blocco `stops everything` (*ferma tutto*)
+      Dance Party 6 - Validated: Usa il blocco `stops everything` (_ferma tutto_)
         per fermare ogni alieno quando viene cliccato.
-      Dance Party 6: Usa il blocco `stops everything` (*ferma tutto*) per fermare
+      Dance Party 6: Usa il blocco `stops everything` (_ferma tutto_) per fermare
         ogni alieno quando viene cliccato.
-      Dance Party 6_2019: Usa il blocco `stops everything` (*ferma tutto*) per fermare
+      Dance Party 6_2019: Usa il blocco `stops everything` (_ferma tutto_) per fermare
         ogni alieno quando viene cliccato.
-      Dance Party 6_simple: Usa il blocco `stops everything` (*ferma tutto*) per fermare
+      Dance Party 6_simple: Usa il blocco `stops everything` (_ferma tutto_) per fermare
         ogni alieno quando viene cliccato.
-      Dance Party 7 - Validated: Aggiungi un nuovo personaggio chiamato 'myBell' (*la
-        mia campanella*) che fa fare a tutti gli alieni la sua stessa danza quando
+      Dance Party 7 - Validated: Aggiungi un nuovo personaggio chiamato 'myBell' (_la
+        mia campanella_) che fa fare a tutti gli alieni la sua stessa danza quando
         viene cliccata.
-      Dance Party 7: Aggiungi un nuovo personaggio chiamato 'myBell' (*la mia campanella*)
+      Dance Party 7: Aggiungi un nuovo personaggio chiamato 'myBell' (_la mia campanella_)
         che fa fare a tutti gli alieni la sua stessa danza quando viene cliccata.
-      Dance Party 7_2019: Aggiungi un nuovo personaggio chiamato 'myBell' (*la mia
-        campanella*) che fa fare a tutti gli alieni la sua stessa danza quando viene
+      Dance Party 7_2019: Aggiungi un nuovo personaggio chiamato 'myBell' (_la mia
+        campanella_) che fa fare a tutti gli alieni la sua stessa danza quando viene
         cliccata.
-      Dance Party 7_simple: Aggiungi un nuovo personaggio chiamato 'myBell' (*la mia
-        campanella*) che fa fare a tutti gli alieni la sua stessa danza quando viene
+      Dance Party 7_simple: Aggiungi un nuovo personaggio chiamato 'myBell' (_la mia
+        campanella_) che fa fare a tutti gli alieni la sua stessa danza quando viene
         cliccata.
       Dance Party Freeplay: Ora crea la tua discoteca aliena!
       Dance Party Freeplay_2019: Ora crea la tua discoteca aliena!
@@ -1972,12 +1959,12 @@ it:
       Fish Tank 3-validated_simple: Modifica il comportamento del pesce in modo che
         nuoti da una parta all'altra dell'acquario (cerca il blocco giusto tra i tanti
         presenti nella cassetta degli attrezzi).
-      Fish Tank 4-validated: Usa il blocco `set background color` (*imposta colore
-        sfondo*) per impostare lo sfondo blu.
-      Fish Tank 4-validated_2019: Usa il blocco `set background color` (*imposta colore
-        sfondo*) per impostare lo sfondo blu.
-      Fish Tank 4-validated_simple: Usa il blocco `set background color` (*imposta
-        colore sfondo*) per impostare lo sfondo blu.
+      Fish Tank 4-validated: Usa il blocco `set background color` (_imposta colore
+        sfondo_) per impostare lo sfondo blu.
+      Fish Tank 4-validated_2019: Usa il blocco `set background color` (_imposta colore
+        sfondo_) per impostare lo sfondo blu.
+      Fish Tank 4-validated_simple: Usa il blocco `set background color` (_imposta
+        colore sfondo_) per impostare lo sfondo blu.
       Fish Tank 5-validated: Il nostro pesce si sente un po' solo. Aggiungi un altro
         personaggio nell'acquario.
       Fish Tank 5-validated_2019: Il nostro pesce si sente un po' solo. Aggiungi un
@@ -1995,11 +1982,11 @@ it:
         attrezzi per rendere speciale il tuo acquario!
       Food Fight!: |-
         Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>
-        Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>
+        Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player\_score</i> > 6).<br><br>
         Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
       Food Fight: |-
         Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>
-        Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>
+        Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player\_score</i> > 6).<br><br>
         Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
       Function intro Ryan: Usa due volte la funzione `costruisci un ponte` per creare
         un sentiero fino alla torcia di pietrarossa.
@@ -2031,8 +2018,8 @@ it:
         oceanico.
       HOC 2018 Level_12: Progetta il tuo ambiente sottomarino personalizzato, decidi
         tutto tu!
-      HOC 2018 Level_2: 'Dirigiti alla fine del molo.  '
-      HOC 2018 Level_3: 'Naviga in mare aperto verso il merluzzo.  '
+      HOC 2018 Level_2: Dirigiti alla fine del molo.
+      HOC 2018 Level_3: Vai fino al merluzzo in mare.
       HOC 2018 Level_4: Usa il ciclo (blocco rosa) per raggiungere il delfino.
       HOC 2018 Level_5: Esplora il relitto per raggiungere la cassa.
       HOC 2018 Level_6: Naviga tra i ghiacci per raggiungere il salmone.
@@ -2228,7 +2215,7 @@ it:
         in una direzione e poi in un'altra per farmi prendere il maialino!
       K-1 Maze Sequence Assessment 2: Questo è un esercizio di riepilogo -- Spostami
         in una direzione e poi in un'altra per farmi prendere il maialino!
-      K-1 Maze debug Assessment 1: "Questo è un esercizio di riepilogo --\r Correggi
+      K-1 Maze debug Assessment 1: "Questo è un esercizio di riepilogo --\\\r Correggi
         questo programma riordinando, aggiungendo o cancellando blocchi, per farmi
         arrivare al maialino!"
       K-1 artist 1 level 10: Questo è un esercizio di riepilogo -- Disegna la linea
@@ -2443,7 +2430,7 @@ it:
         un quadrato". Quando hai finito, fai clic su "Salva e Chiudi" e poi su "Esegui".
       NEW Course 4 Artist Functions 6: "Utilizzando il blocco funzione \"disegna un
         quadrato\", potete disegnare questa immagine? Suggerimento: ogni quadrato
-        è separato di 20 pixel.\r\n"
+        è separato di 20 pixel.\\\r"
       NEW Course 4 Artist Functions 7: "Stai imparando ad usare i blocchi funzione?
         Prova a modificare la funzione `disegna un quadrato` in modo che disegni un
         quadrato con i lati di 200 pixel.<br>\n<br>\n<b>Suggerimento</b>: clicca su
@@ -2456,19 +2443,19 @@ it:
       NEW Course 4 Artist Functions 9: Riesci a risolvere questo esercizio aggiungendo
         un solo blocco?
       NEW Course 4 Artist Functions inspire: "Tempo di giocare: guarda la figura che
-        trovi al link https://studio.code.org/c/110671172. Ora hai imparato tutto
+        trovi al link <https://studio.code.org/c/110671172>. Ora hai imparato tutto
         quello che devi sapere per realizzare un disegno come questo! Se questa immagine
         ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea
-        qualcosa di tuo. \r\n\nVuoi realizzare la figura che ti abbiamo suggerito?
+        qualcosa di tuo. \\\r\n\nVuoi realizzare la figura che ti abbiamo suggerito?
         Ecco alcuni aiuti:\n\nSuggerimento 1: usa un ciclo con contatore, quindi usa
         la sua variabile contatore all'interno di un ciclo annidato.\n\nSuggerimento
         2: ad ogni iterazione, dovresti disegnare un quadrato e fare un salto in avanti.
         \n\nSuggerimento 3: dovresti girare a sinistra di 90 gradi all'esterno del
-        ciclo annidato, ma ancora all'interno del ciclo con contatore.\n\n\r\nVuoi
+        ciclo annidato, ma ancora all'interno del ciclo con contatore.\n\n\\\r\nVuoi
         sapere come è stato realizzata la figura che ti abbiamo suggerito? Visita
-        il link https://studio.code.org/c/110671172/edit per scoprirlo.\n\nCosa succede
-        se disegni i quadrati un po' più piccoli o un po' più grandi? E cosa succede
-        se invece di girare a sinistra giri a destra?"
+        il link <https://studio.code.org/c/110671172/edit> per scoprirlo.\n\nCosa
+        succede se disegni i quadrati un po' più piccoli o un po' più grandi? E cosa
+        succede se invece di girare a sinistra giri a destra?"
       NEW Course 4 Artist Params 1: |-
         Riesci a definire il codice per la funzione `disegna un quadrato` in modo che disegni un quadrato con i lati di 50 pixel?<br>
         <br>
@@ -2495,10 +2482,11 @@ it:
       NEW Course 4 Artist Params 14: |-
         Modifica la funzione `draw a spiral edge` (<i>disegna una spirale</i>) per aggiungere i parametri `length` (<i>lunghezza</i>) e `sides` (<i>lati</i>) di cui hai bisogno per ricreare queste figure. Tieni presente che:<br>
         <br>
-        - il lato più corto della spirale quadrata è lungo 5 pixel,<br>
-        - il lato più corto della spirale triangolare è lungo 10 pixel,<br>
-        - il lato più corto della spirale esagonale è lungo 2 pixel,<br>
-        - il lato più lungo per tutte le spirali è 100 pixel.
+
+        -   il lato più corto della spirale quadrata è lungo 5 pixel,<br>
+        -   il lato più corto della spirale triangolare è lungo 10 pixel,<br>
+        -   il lato più corto della spirale esagonale è lungo 2 pixel,<br>
+        -   il lato più lungo per tutte le spirali è 100 pixel.
       NEW Course 4 Artist Params 15: "Tempo di giocare: qui ci sono tutte le funzioni
         che hai scritto e anche qualcuna in più con cui puoi giocare: `draw a pinwheel`
         (<i>disegna una girandola</i>), `draw a shape` (<i>disegna un poligono</i>).
@@ -2507,7 +2495,7 @@ it:
       NEW Course 4 Artist Params 2: |-
         Crea da zero la funzione `draw triangle` (<i>disegna un triangolo</i>) che disegna un triangolo con lati di 50 pixel.<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-14#VIDEO" target="_blank">Video doppiato in italiano</a>
-      NEW Course 4 Artist Params 3: |
+      NEW Course 4 Artist Params 3: |-
         Ora usa la funzione che hai creato nel precedente esercizio (`draw a triangle`, <i>disegna un triangolo</i>) per disegnare 5 triangoli di seguito.<br>
         <br>
         Ogni triangolo dista 30 pixel dal precedente.
@@ -2907,6 +2895,7 @@ it:
         originale quando si toccano.
       Virtual Pet 6_simple: Aggiungi una mela che riporti la giraffa alla sua dimensione
         originale quando si toccano.
+      Virtual Pet 8_2019: 'Tempo di giocare: Cos''altro puoi far fare alla tua giraffa? '
       Virtual Pet Freeplay: 'Tempo di giocare: Cos''altro puoi far fare alla tua giraffa? '
       Virtual Pet Freeplay_2019: 'Tempo di giocare: Cos''altro puoi far fare alla
         tua giraffa? '
@@ -2954,12 +2943,12 @@ it:
         Ora in alto c'è la meta! Per costruire il gioco, oltre ai blocchi usati negli esercizi precedenti, attacca il blocco `aggiungi un punto` al blocco verde `quando la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco verde `quando la palla manca il giocatore`.<br>
         Osserva quanti punti riesci a raggiungere prima che il tuo avversario ne faccia due!
       bounce_11: Adesso puoi predisporre il gioco come vuoi attaccando dei blocchi
-        `imposta ...` al blocco `quando si clicca su "Esegui" `. Devi poi attaccare
+        `imposta ...` al blocco `quando si clicca su "Esegui"`. Devi poi attaccare
         a quest'ultimo il blocco `lancia una nuova palla`, che devi attaccare anche
         ad altri blocchi verdi `quando ...`. Quanti punti riesci a raggiungere prima
         che il tuo avversario ne faccia due?
       bounce_11_2018: Adesso puoi predisporre il gioco come vuoi attaccando dei blocchi
-        `imposta ...` al blocco `quando si clicca su "Esegui" `. Devi poi attaccare
+        `imposta ...` al blocco `quando si clicca su "Esegui"`. Devi poi attaccare
         a quest'ultimo il blocco `lancia una nuova palla`, che devi attaccare anche
         ad altri blocchi verdi `quando ...`. Quanti punti riesci a raggiungere prima
         che il tuo avversario ne faccia due?
@@ -3058,8 +3047,8 @@ it:
         gli uccelli?"'
       course1_artist_loops_challenge4: '"È il momento di lanciare i dadi! Mi aiuti
         a disegnarli?"'
-      course1_collector_loops_challenge1: '*"Mi aiuti a trovare alcuni errori? So
-        da che parte voglio andare, ma non sono sicura di quanti passi debba fare."*'
+      course1_collector_loops_challenge1: '"Mi aiuti a trovare alcuni errori? So da
+        che parte voglio andare, ma non sono sicura di quanti passi debba fare."'
       course1_maze_debugging_challenge2: Correggi questo esercizio. Ci sono già tutti
         i blocchi giusti, ma sono nell'ordine sbagliato!
       course1_maze_seq_challenge1: '"Fammi fare il percorso per arrivare a quello
@@ -3077,8 +3066,8 @@ it:
         alberi e i campi!
       course2_maze_loops_challenge1: 'Ora Scrat vuole provare a usare i cicli per
         cercare la sua ghianda! '
-      course2_maze_programming_challenge1: '*"Il maialino si sta nascondendo! Puoi
-        aiutarmi a trovare un modo per raggiungerlo?"*'
+      course2_maze_programming_challenge1: _"Il maialino si sta nascondendo! Puoi
+        aiutarmi a trovare un modo per raggiungerlo?"_
       course2_maze_programming_challenge2: Alcune volte ci sono diversi modi per risolvere
         lo stesso problema. In questo caso, per esempio, potrebbe essere più veloce
         andare all'indietro, piuttosto che muoversi in avanti!
@@ -3247,14 +3236,14 @@ it:
         proprio come piace a te!
       courseA_artist_loops_challenge2: '"Puoi aiutarmi a costruire due casette per
         gli uccelli?"'
-      courseA_artist_loops_challenge2a: '*"Aiutami a montare queste tre tende!"*'
-      courseA_artist_loops_challenge2a_2018: '*"Aiutami a montare queste tre tende!"*'
-      courseA_artist_loops_challenge2a_2019: '*"Aiutami a montare queste tre tende!"*'
-      courseA_bee_seq1: Gioca con questi blocchi e aiuta l'ape a raccogliere *un*
+      courseA_artist_loops_challenge2a: _"Aiutami a montare queste tre tende!"_
+      courseA_artist_loops_challenge2a_2018: _"Aiutami a montare queste tre tende!"_
+      courseA_artist_loops_challenge2a_2019: _"Aiutami a montare queste tre tende!"_
+      courseA_bee_seq1: Gioca con questi blocchi e aiuta l'ape a raccogliere _un_
         nettare.
       courseA_bee_seq10: Prova tu! Raccogli tutto il nettare.
       courseA_bee_seq11: Raccogli tutto il nettare.
-      courseA_bee_seq12: Gioca con questi blocchi e aiuta l'ape a raccogliere *un*
+      courseA_bee_seq12: Gioca con questi blocchi e aiuta l'ape a raccogliere _un_
         nettare.
       courseA_bee_seq13: Usa tre blocchi `Vai verso Ovest` e un blocco `Prendi Nettare`.
       courseA_bee_seq14: Usa tre blocchi `Vai verso Nord` e un blocco `Prendi Nettare`.
@@ -3281,9 +3270,9 @@ it:
         questa grotta.
       courseA_collector_loops11_2019: Aiuta Laura a raccogliere tutti i diamanti da
         questa grotta.
-      courseA_collector_loops12: '*"Evviva! Raccogli più diamanti che puoi!"*'
-      courseA_collector_loops12_2018: '*"Evviva! Raccogli più diamanti che puoi!"*'
-      courseA_collector_loops12_2019: '*"Evviva! Raccogli più diamanti che puoi!"*'
+      courseA_collector_loops12: _"Evviva! Raccogli più tesori che puoi!"_
+      courseA_collector_loops12_2018: _"Evviva! Raccogli più tesori che puoi!"_
+      courseA_collector_loops12_2019: _"Evviva! Raccogli più tesori che puoi!"_
       courseA_collector_loops1_2018: |-
         Muovi Laura raccogliendo più diamanti che puoi! <br>
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
@@ -3328,9 +3317,12 @@ it:
         il codice per aiutare Laura a raccoglierli tutti."
       courseA_collector_loops9_2019: "**Sfida:** I diamanti salgono le scale! Scrivi
         il codice per aiutare Laura a raccoglierli tutti."
-      courseA_collector_loops_challenge1: '*"Mi aiuti a trovare alcuni errori?"*'
-      courseA_collector_loops_challenge1_2018: '*"Mi aiuti a trovare alcuni errori?"*'
-      courseA_collector_loops_challenge1_2019: '*"Mi aiuti a trovare alcuni errori?"*'
+      courseA_collector_loops_challenge1: _"Mi aiuti a trovare alcuni errori? So da
+        che parte voglio andare, ma non sono sicuro di quanti passi devo fare."_
+      courseA_collector_loops_challenge1_2018: _"Mi aiuti a trovare alcuni errori?
+        So da che parte voglio andare, ma non sono sicuro di quanti passi devo fare."_
+      courseA_collector_loops_challenge1_2019: _"Mi aiuti a trovare alcuni errori?
+        So da che parte voglio andare, ma non sono sicuro di quanti passi devo fare."_
       courseA_collector_loops_challenge2: 'Raccogli tutti i diamanti! '
       courseA_collector_loops_challenge2kp: Raccogli almeno **3** diamanti per completare
         questo esercizio.
@@ -3527,9 +3519,9 @@ it:
         di lavoro e prova a vedere cosa succede!
       courseA_playLab_events1_2019: Questo è il Laboratorio. Metti dei blocchi nell'area
         di lavoro e prova a vedere cosa succede!
-      courseA_playLab_events2: Il cane, vuole dire "Ciao!" Riesci ad aiutarlo?
-      courseA_playLab_events2_2018: Il cane, vuole dire "Ciao!" Riesci ad aiutarlo?
-      courseA_playLab_events2_2019: Il cane, vuole dire "Ciao!" Riesci ad aiutarlo?
+      courseA_playLab_events2: Il cane vuole dire "Ciao!" Riesci ad aiutarlo?
+      courseA_playLab_events2_2018: Il cane vuole dire "Ciao!" Riesci ad aiutarlo?
+      courseA_playLab_events2_2019: Il cane vuole dire "Ciao!" Riesci ad aiutarlo?
       courseA_playLab_events3: Aggancia il blocco `sposta il cane a sinistra` al blocco
         verde dell'evento `quando si preme la freccia sinistra` che si trova già nell'area
         di lavoro.
@@ -3560,10 +3552,10 @@ it:
       courseA_playLab_events7: Aggiungi ciò che vuoi a questo gioco. Riesci a fare
         in modo che il dinosauro scompaia quando il cane sbatte contro di lui? (Quando
         sei soddisfatto, premi "Termina" per completare il corso.)
-      courseA_playLab_events7_2018: "*Tempo di giocare:* aggiungi ciò che vuoi a questo
-        gioco."
-      courseA_playLab_events7_2019: "*Tempo di giocare:* aggiungi ciò che vuoi a questo
-        gioco."
+      courseA_playLab_events7_2018: _Tempo di giocare:_ aggiungi ciò che vuoi a questo
+        gioco.
+      courseA_playLab_events7_2019: _Tempo di giocare:_ aggiungi ciò che vuoi a questo
+        gioco.
       courseA_playlab_events_challenge1: Riesci a scrivere un programma per mostrare
         gli altri miei amici? I suggerimenti ti aiuteranno a realizzare questo progetto
         passo dopo passo.
@@ -3658,11 +3650,11 @@ it:
         riesci a sistemare questa scala per far scendere l'artista?
       courseB_artist_loops8_2019: È tempo di tornare a casa. Aggiungendo un solo blocco,
         riesci a sistemare questa scala per far scendere l'artista?
-      courseB_artist_loops9: Scegli la strada più breve per tornare a casa, attraversando
+      courseB_artist_loops9: Scegli la strada più breve per tornare a casa attraversando
         l'acqua. Puoi aiutare l'artista a stare sulle pietre?
-      courseB_artist_loops9_2018: Scegli la strada più breve per tornare a casa, attraversando
+      courseB_artist_loops9_2018: Scegli la strada più breve per tornare a casa attraversando
         l'acqua. Puoi aiutare l'artista a stare sulle pietre?
-      courseB_artist_loops9_2019: Scegli la strada più breve per tornare a casa, attraversando
+      courseB_artist_loops9_2019: Scegli la strada più breve per tornare a casa attraversando
         l'acqua. Puoi aiutare l'artista a stare sulle pietre?
       courseB_artist_loops_challenge1: '"È il momento di lanciare i dadi! Mi aiuti
         a disegnarli?"'
@@ -3738,12 +3730,12 @@ it:
         per le scale! Scrivi il codice per aiutare Laura a recuperarli."
       courseB_collector_loops8_2019: "**Sfida:** I diamanti si sono sparpagliati giù
         per le scale! Scrivi il codice per aiutare Laura a recuperarli."
-      courseB_collector_loops9: '*"Aiutami a raccogliere i diamanti in questa ripida
-        discesa."*'
-      courseB_collector_loops9_2018: '*"Aiutami a raccogliere i diamanti in questa
-        ripida discesa."*'
-      courseB_collector_loops9_2019: '*"Aiutami a raccogliere i diamanti in questa
-        ripida discesa."*'
+      courseB_collector_loops9: _"Aiutami a raccogliere i diamanti in questa ripida
+        discesa."_
+      courseB_collector_loops9_2018: _"Aiutami a raccogliere i diamanti in questa
+        ripida discesa."_
+      courseB_collector_loops9_2019: _"Aiutami a raccogliere i diamanti in questa
+        ripida discesa."_
       courseB_collector_loops_challenge1: Questa volta hai i blocchi contati. Raccogli
         tutti i diamanti!
       courseB_collector_loops_challenge1_2018: Questa volta hai i blocchi contati.
@@ -3791,7 +3783,7 @@ it:
         arrivarci usando i cicli?
       courseB_iceage_loops9_2019: La ghianda è così lontana! Riesci ad aiutare Scrat
         ad arrivarci usando i cicli?
-      courseB_maze_seq1: "Gioca con questi blocchi per vedere cosa fanno fare all'uccellino!\r\n\r\nPorta
+      courseB_maze_seq1: "Gioca con questi blocchi per vedere cosa fanno fare all'uccellino!\\\r\n\\\r\nPorta
         l'uccellino fino al maialino per completare l'esercizio."
       courseB_maze_seq10: Correggi gli errori per far arrivare l'uccellino fino al
         maialino.
@@ -3893,11 +3885,11 @@ it:
         quando si scontra con il drago mentre cerca di raggiungere le bandierine!
         Riproduci anche un suono quando lo colpisce, così sembra più reale.
       courseB_playlab_events7_2018: |-
-        1) Fai svanire il cavaliere quando si scontra con il drago.
-        2) Riproduci anche un suono quando si colpiscono, così sembra più reale.
+        1.  Fai svanire il cavaliere quando si scontra con il drago.
+        2.  Riproduci anche un suono quando si colpiscono, così sembra più reale.
       courseB_playlab_events7_2019: |-
-        1) Fai svanire il cavaliere quando si scontra con il drago.
-        2) Riproduci anche un suono quando si colpiscono, così sembra più reale.
+        1.  Fai svanire il cavaliere quando si scontra con il drago.
+        2.  Riproduci anche un suono quando si colpiscono, così sembra più reale.
       courseB_playlab_events8: Usa la tua immaginazione. Come puoi rendere questo
         gioco ancora più divertente?
       courseB_playlab_eventsFP: Usa la tua immaginazione. Come puoi rendere questo
@@ -4194,12 +4186,12 @@ it:
       courseC_artist_prog_challenge1: Disegna una stanza per ogni animale.
       courseC_artist_prog_challenge1_2018: Disegna una stanza per ogni animale.
       courseC_artist_prog_challenge1_2019: Disegna una stanza per ogni animale.
-      courseC_artist_prog_challenge2a: '*"Aiutami a disegnare la linea gialla di questa
-        strada!"*'
-      courseC_artist_prog_challenge2a_2018: '*"Aiutami a disegnare la linea gialla
-        di questa strada!"*'
-      courseC_artist_prog_challenge2a_2019: '*"Aiutami a disegnare la linea gialla
-        di questa strada!"*'
+      courseC_artist_prog_challenge2a: _"Aiutami a disegnare la linea gialla di questa
+        strada!"_
+      courseC_artist_prog_challenge2a_2018: _"Aiutami a disegnare la linea gialla
+        di questa strada!"_
+      courseC_artist_prog_challenge2a_2019: _"Aiutami a disegnare la linea gialla
+        di questa strada!"_
       courseC_collector_loops_challenge2: Raccogli almeno **5** diamanti!
       courseC_collector_loops_challenge2_2018: Raccogli almeno **5** diamanti!
       courseC_collector_loops_challenge2_2019: Raccogli almeno **5** diamanti!
@@ -4242,16 +4234,16 @@ it:
         degli attrezzi per farle raccogliere tutti i diamanti.
       courseC_collector_prog7_2019: Riordina i blocchi e aggiungine altri dalla cassetta
         degli attrezzi per farle raccogliere tutti i diamanti.
-      courseC_collector_prog8: '*"Continua alla grande! Aiutami a collezionare tutti
-        i diamanti."*'
-      courseC_collector_prog8_2018: '*"Continua alla grande! Aiutami a collezionare
-        tutti i diamanti."*'
-      courseC_collector_prog8_2019: '*"Continua alla grande! Aiutami a collezionare
-        tutti i diamanti."*'
-      courseC_collector_prog9: '*"Prendiamoli tutti ''sti diamanti!"*'
-      courseC_collector_prog9_2018: '*"Prendiamoli tutti ''sti diamanti!"*'
-      courseC_collector_prog9_2019: '*"Prendiamoli tutti ''sti diamanti!"*'
-      courseC_collector_progA: Aiuto Laura a raccogliere tutti i diamanti.
+      courseC_collector_prog8: _"Continua alla grande! Aiutami a collezionare tutti
+        i diamanti."_
+      courseC_collector_prog8_2018: _"Continua alla grande! Aiutami a collezionare
+        tutti i diamanti."_
+      courseC_collector_prog8_2019: _"Continua alla grande! Aiutami a collezionare
+        tutti i diamanti."_
+      courseC_collector_prog9: _"Prendiamoli tutti 'sti diamanti!"_
+      courseC_collector_prog9_2018: _"Prendiamoli tutti 'sti diamanti!"_
+      courseC_collector_prog9_2019: _"Prendiamoli tutti 'sti diamanti!"_
+      courseC_collector_progA: Aiuta Laura a raccogliere tutti i diamanti.
       courseC_collector_prog_challenge1: Guarda bene! Riesci a raccogliere tutti e
         **10** i diamanti?
       courseC_collector_prog_challenge1_2018: Guarda bene! Riesci a raccogliere tutti
@@ -4440,11 +4432,11 @@ it:
       courseC_maze_debugging_challenge1_2019: Aiuta Scrat a decidere che percorso
         seguire per raggiungere la ghianda.
       courseC_maze_debugging_challenge2: Aiuta Scrat a raggiungere la ghianda usando
-        solo quattro istruzioni `gira a ...`
+        al massimo quattro istruzioni `gira a ...`.
       courseC_maze_debugging_challenge2_2018: Aiuta Scrat a raggiungere la ghianda
-        usando solo quattro istruzioni `gira a ...`
+        usando al massimo quattro istruzioni `gira a ...`.
       courseC_maze_debugging_challenge2_2019: Aiuta Scrat a raggiungere la ghianda
-        usando solo quattro istruzioni `gira a ...`
+        usando al massimo quattro istruzioni `gira a ...`.
       courseC_maze_loops10: Stai andando alla grande! Continua così!
       courseC_maze_loops11: Ci sei quasi! Questa volta scegli il percorso che preferisci!
       courseC_maze_loops6: I cicli funzionano anche con più di un blocco al loro interno!  Puoi
@@ -4499,24 +4491,24 @@ it:
         Dovrai eliminare dei blocchi ed aggiungerne altri."
       courseC_maze_programming7_2019: "**Sfida:** Questo programma ha molti errori.
         Dovrai eliminare dei blocchi ed aggiungerne altri."
-      courseC_maze_programming8: '*"Mantieni la calma e aiutami a trovare il maialino
-        cattivo."*'
-      courseC_maze_programming8_2018: '*"Mantieni la calma e aiutami a trovare il
-        maialino cattivo."*'
-      courseC_maze_programming8_2019: '*"Mantieni la calma e aiutami a trovare il
-        maialino cattivo."*'
-      courseC_maze_programming8_predict1: '*"Mantieni la calma e aiutami a trovare
-        il maialino cattivo."*'
-      courseC_maze_programming8_predict1_2018: '*"Mantieni la calma e aiutami a trovare
-        il maialino cattivo."*'
-      courseC_maze_programming8_predict1_2019: '*"Mantieni la calma e aiutami a trovare
-        il maialino cattivo."*'
-      courseC_maze_programming9: '*"Ora aiutami a sorprendere il maialino nel modo
-        che preferisci!"*'
-      courseC_maze_programming9_2018: '*"Ora aiutami a sorprendere il maialino nel
-        modo che preferisci!"*'
-      courseC_maze_programming9_2019: '*"Ora aiutami a sorprendere il maialino nel
-        modo che preferisci!"*'
+      courseC_maze_programming8: _"Mantieni la calma e aiutami a trovare il maialino
+        cattivo."_
+      courseC_maze_programming8_2018: _"Mantieni la calma e aiutami a trovare il maialino
+        cattivo."_
+      courseC_maze_programming8_2019: _"Mantieni la calma e aiutami a trovare il maialino
+        cattivo."_
+      courseC_maze_programming8_predict1: _"Mantieni la calma e aiutami a trovare
+        il maialino cattivo."_
+      courseC_maze_programming8_predict1_2018: _"Mantieni la calma e aiutami a trovare
+        il maialino cattivo."_
+      courseC_maze_programming8_predict1_2019: _"Mantieni la calma e aiutami a trovare
+        il maialino cattivo."_
+      courseC_maze_programming9: _"Ora aiutami a sorprendere il maialino nel modo
+        che preferisci!"_
+      courseC_maze_programming9_2018: _"Ora aiutami a sorprendere il maialino nel
+        modo che preferisci!"_
+      courseC_maze_programming9_2019: _"Ora aiutami a sorprendere il maialino nel
+        modo che preferisci!"_
       courseC_maze_programming_challenge1: Il maialino si sta nascondendo e l'obiettivo
         è trovarlo.
       courseC_maze_programming_challenge1_2018: Il maialino si sta nascondendo e l'obiettivo
@@ -4625,21 +4617,16 @@ it:
         un cerchio.
       courseD_Frozen_nested9: |-
         Fai qualche prova con ciò che hai creato. Disegna quello che vuoi!
-        - Cosa succede se usi due angoli diversi nello schema a scalinata?
-        - Cosa succede se rendi lo schema a rombo più lungo o più corto?
-        - Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
-      courseD_artist_1_2018: 'Disegna un esagono con lati lunghi **50** pixel.
 
-'
-      courseD_artist_1_2018_2019: 'Disegna un esagono con lati lunghi **50** pixel.
-
-'
-      courseD_artist_2_2018: 'Adesso, gira a destra di **60** gradi, quindi disegna
-        una linea retta lunga **150** pixel e salta indietro al centro dell''area
-        gioco.  '
-      courseD_artist_2_2018_2019: 'Adesso, gira a destra di **60** gradi, quindi disegna
-        una linea retta lunga **150** pixel e salta indietro al centro dell''area
-        gioco.  '
+        -   Cosa succede se usi due angoli diversi nello schema a scalinata?
+        -   Cosa succede se rendi lo schema a rombo più lungo o più corto?
+        -   Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
+      courseD_artist_1_2018: Disegna un esagono con lati lunghi **50** pixel.
+      courseD_artist_1_2018_2019: Disegna un esagono con lati lunghi **50** pixel.
+      courseD_artist_2_2018: Adesso, gira a destra di **60** gradi, quindi disegna
+        una linea retta lunga **150** pixel e salta indietro al centro dell'area gioco.
+      courseD_artist_2_2018_2019: Adesso, gira a destra di **60** gradi, quindi disegna
+        una linea retta lunga **150** pixel e salta indietro al centro dell'area gioco.
       courseD_artist_3_2018: 'Annida tutto il codice all''interno di un altro ciclo
         `ripeti ... volte` ed eseguilo per un totale di **6** volte. '
       courseD_artist_3_2018_2019: 'Annida tutto il codice all''interno di un altro
@@ -4648,19 +4635,20 @@ it:
       courseD_artist_4_2018_2019: Aggiungi una piccola forma alla fine della tua linea!
       courseD_artist_5_2018: Gioca con i fiocchi di neve!
       courseD_artist_5_2018_2019: Gioca con i fiocchi di neve!
-      courseD_artist_6_2018: 'Prova a modificare la linea lunga 150 pixel in 6 linee
-        più corte, ognuna di **25** pixel, con delle piccole curve alla fine.  '
-      courseD_artist_6_2018_2019: 'Prova a modificare la linea lunga 150 pixel in
-        6 linee più corte, ognuna di **25** pixel, con delle piccole curve alla fine.  '
+      courseD_artist_6_2018: Prova a modificare la linea lunga 150 pixel in 6 linee
+        più corte, ognuna di **25** pixel, con delle piccole curve alla fine.
+      courseD_artist_6_2018_2019: Prova a modificare la linea lunga 150 pixel in 6
+        linee più corte, ognuna di **25** pixel, con delle piccole curve alla fine.
       courseD_artist_7_2018: Ora, gira di 180 gradi e disegna nuovamente lo schema
         a scalinata!
       courseD_artist_8_2018: Fai ruotare questa figura 5 o 6 volte fino a formare
         un cerchio.
       courseD_artist_9_2018: |-
         Fai qualche prova con ciò che hai creato. Disegna quello che vuoi!
-        - Cosa succede se usi due angoli diversi nello schema a scalinata?
-        - Cosa succede se rendi lo schema a rombo più lungo o più corto?
-        - Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
+
+        -   Cosa succede se usi due angoli diversi nello schema a scalinata?
+        -   Cosa succede se rendi lo schema a rombo più lungo o più corto?
+        -   Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
       courseD_artist_binary1: Usa i blocchi qui sotto per far produrre all'artista
         nella prima riga il disegno la cui codifica binaria è "01010101".
       courseD_artist_binary1_2018: Usa i blocchi qui sotto per far produrre all'artista
@@ -4748,10 +4736,8 @@ it:
         questo logo?
       courseD_artist_functions10: Questa volta, usa file di 8 esagoni con lati da
         25 pixel.
-      courseD_artist_functions2: 'Questa volta, usa la funzione `disegna un quadrato`
+      courseD_artist_functions2: Questa volta, usa la funzione `disegna un quadrato`
         per creare gli occhiali.
-
-'
       courseD_artist_functions3: Puoi realizzare questo disegno aggiungendo un blocco
         `ripeti ... volte`.
       courseD_artist_functions4: Ora che sai disegnare una stella, prova a disegnarne
@@ -4882,19 +4868,22 @@ it:
       courseD_artist_project4_2019: È ora di sovrapporre queste forme!
       courseD_artist_project4a: |-
         Fai qualche prova con ciò che hai creato. Disegna quello che vuoi!
-        - Cosa succede se usi due angoli diversi nello schema a scalinata?
-        - Cosa succede se rendi lo schema a rombo più lungo o più corto?
-        - Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
+
+        -   Cosa succede se usi due angoli diversi nello schema a scalinata?
+        -   Cosa succede se rendi lo schema a rombo più lungo o più corto?
+        -   Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
       courseD_artist_project4a_2018: |-
         Fai qualche prova con ciò che hai creato. Disegna quello che vuoi!
-        - Cosa succede se usi due angoli diversi nello schema a scalinata?
-        - Cosa succede se rendi lo schema a rombo più lungo o più corto?
-        - Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
+
+        -   Cosa succede se usi due angoli diversi nello schema a scalinata?
+        -   Cosa succede se rendi lo schema a rombo più lungo o più corto?
+        -   Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
       courseD_artist_project4a_2019: |-
         Fai qualche prova con ciò che hai creato. Disegna quello che vuoi!
-        - Cosa succede se usi due angoli diversi nello schema a scalinata?
-        - Cosa succede se rendi lo schema a rombo più lungo o più corto?
-        - Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
+
+        -   Cosa succede se usi due angoli diversi nello schema a scalinata?
+        -   Cosa succede se rendi lo schema a rombo più lungo o più corto?
+        -   Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
       courseD_artist_project5: Gioca con i fiocchi di neve!
       courseD_artist_project5_2018: Gioca con i fiocchi di neve!
       courseD_artist_project5_2019: Gioca con i fiocchi di neve!
@@ -5064,10 +5053,10 @@ it:
         un punto` all''evento `quando la palla va in rete` e il blocco `aggiungi un
         punto all''avversario` all''evento `quando la palla manca la mano`. '
       courseD_bounce_events11: Adesso puoi predisporre il gioco come vuoi attaccando
-        dei blocchi `imposta ...` al blocco `quando si clicca su "Esegui" `. Devi
-        poi attaccare a quest'ultimo il blocco `lancia una nuova palla`, che devi
-        attaccare anche ad altri blocchi verdi `quando ...`. Quanti punti riesci a
-        raggiungere prima che il tuo avversario ne faccia due?
+        dei blocchi `imposta ...` al blocco `quando si clicca su "Esegui"`. Devi poi
+        attaccare a quest'ultimo il blocco `lancia una nuova palla`, che devi attaccare
+        anche ad altri blocchi verdi `quando ...`. Quanti punti riesci a raggiungere
+        prima che il tuo avversario ne faccia due?
       courseD_bounce_events11s: 'Attacca il blocco `lancia una nuova palla` in tutti
         i punti del programma in cui serve per far funzionare bene il gioco. '
       courseD_bounce_events11s_2018: 'Attacca il blocco `lancia una nuova palla` in
@@ -5218,9 +5207,9 @@ it:
       courseD_collector_nested_loops_challenge2_2019: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
         È possibile raccoglierli tutti e 4.
-      courseD_collector_ramp10: Aiuto Laura a raccogliere tutti i diamanti.
-      courseD_collector_ramp8: Aiuto Laura a raccogliere tutti i diamanti.
-      courseD_collector_ramp9: Aiuto Laura a raccogliere tutti i diamanti.
+      courseD_collector_ramp10: Aiuta Laura a raccogliere tutti i diamanti.
+      courseD_collector_ramp8: Aiuta Laura a raccogliere tutti i diamanti.
+      courseD_collector_ramp9: Aiuta Laura a raccogliere tutti i diamanti.
       courseD_debugging_3: |-
         Questi blocchi sbagliati mi fanno perdere tempo. Correggi gli errori per raccogliere tutto il nettare e produrre tutto il miele.<br><br>
         Ricorda che cliccando su "Fai un passo" puoi eseguire il programma un blocco alla volta.
@@ -5239,12 +5228,12 @@ it:
         pannocchie da questo campo.
       courseD_farmer_condLoops2_2019: Aiuta la contadina a raccogliere lattughe e
         pannocchie da questo campo.
-      courseD_farmer_condLoops3: '*"Pannocchie, lattughe e zucche! Aiutami a raccogliere
-        tutto."*'
-      courseD_farmer_condLoops3_2018: '*"Pannocchie, lattughe e zucche! Aiutami a
-        raccogliere tutto."*'
-      courseD_farmer_condLoops3_2019: '*"Pannocchie, lattughe e zucche! Aiutami a
-        raccogliere tutto."*'
+      courseD_farmer_condLoops3: _"Pannocchie, lattughe e zucche! Aiutami a raccogliere
+        tutto."_
+      courseD_farmer_condLoops3_2018: _"Pannocchie, lattughe e zucche! Aiutami a raccogliere
+        tutto."_
+      courseD_farmer_condLoops3_2019: _"Pannocchie, lattughe e zucche! Aiutami a raccogliere
+        tutto."_
       courseD_farmer_condLoops4: Aiuta la contadina a raccogliere tutte le lattughe
         presenti in ogni casella, prima di passare alla successiva.
       courseD_farmer_condLoops4_2018: Aiuta la contadina a raccogliere tutte le lattughe
@@ -5600,14 +5589,14 @@ it:
         in continuazione il punteggio: se è maggiore di 5, allora termina il gioco
         con una vittoria.'
       courseD_playLab_cond6: |-
-        1) Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.
-        2) Se il pirata è più in basso di 225 pixel, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata.
+        1.  Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.
+        2.  Se il pirata è più in basso di 225 pixel, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata.
       courseD_playLab_cond6_2018: |-
-        1) Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.
-        2) Se il pirata è più in basso di 225 pixel, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata.
+        1.  Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.
+        2.  Se il pirata è più in basso di 225 pixel, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata.
       courseD_playLab_cond6_2019: |-
-        1) Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.
-        2) Se il pirata è più in basso di 225 pixel, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata.
+        1.  Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.
+        2.  Se il pirata è più in basso di 225 pixel, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata.
       courseD_playLab_cond6a: Se il pirata (personaggio 1) è nella "zona di sicurezza",
         aspetta un secondo, poi togli un punto ogni secondo che il pirata trascorre
         al di sotto della linea dei polpi.
@@ -5813,14 +5802,14 @@ it:
         tutto il nettare da ogni fiore.
       courseE_bee_functions2_2018: Usa la funzione `prendi 2 dosi di nettare` per
         raccogliere tutto il nettare da ogni fiore.
-      courseE_bee_functions3: Definisci la funzione `get 5` (*prendi 5 dosi di nettare*)
+      courseE_bee_functions3: Definisci la funzione `get 5` (_prendi 5 dosi di nettare_)
         da usare in questo esercizio.
-      courseE_bee_functions3_2018: Definisci la funzione `get 5` (*prendi 5 dosi di
-        nettare*) da usare in questo esercizio.
-      courseE_bee_functions4: Usa la funzione `move and get nectar` (*vai a prendere
-        il nettare*) per raccogliere tutto il nettare.
-      courseE_bee_functions4_2018: Usa la funzione `move and get nectar` (*vai a prendere
-        il nettare*) per raccogliere tutto il nettare.
+      courseE_bee_functions3_2018: Definisci la funzione `get 5` (_prendi 5 dosi di
+        nettare_) da usare in questo esercizio.
+      courseE_bee_functions4: Usa la funzione `move and get nectar` (_vai a prendere
+        il nettare_) per raccogliere tutto il nettare.
+      courseE_bee_functions4_2018: Usa la funzione `move and get nectar` (_vai a prendere
+        il nettare_) per raccogliere tutto il nettare.
       courseE_bee_functions5: Adesso scrivi la funzione per raccogliere il nettare
         dai tre fiori.
       courseE_bee_functions5_2018: Adesso scrivi la funzione per raccogliere il nettare
@@ -5853,9 +5842,9 @@ it:
         Forza!
       courseE_bee_functions_challenge2_2018: Dovrai cavartela da solo in questa sfida.
         Forza!
-      courseE_collector_ramp10: Aiuto Laura a raccogliere tutti i diamanti.
-      courseE_collector_ramp8: Aiuto Laura a raccogliere tutti i diamanti.
-      courseE_collector_ramp9: Aiuto Laura a raccogliere tutti i diamanti.
+      courseE_collector_ramp10: Aiuta Laura a raccogliere tutti i diamanti.
+      courseE_collector_ramp8: Aiuta Laura a raccogliere tutti i diamanti.
+      courseE_collector_ramp9: Aiuta Laura a raccogliere tutti i diamanti.
       courseE_farmer_concept1: Riesci a scrivere un programma che riempia queste buche
         fino a quando il terreno è livellato?
       courseE_farmer_concept1_2018: Riesci a scrivere un programma che riempia queste
@@ -6088,13 +6077,13 @@ it:
       courseF_artist_for1: Fai esperimenti con il ciclo `ripeti con counter` e gioca
         con la variabile 'counter'.
       courseF_artist_for10: 'Tempo di giocare: Prova ad usare la variabile `counter`
-        (*contatore*) con altri elementi grafici per creare immagini magiche come
+        (_contatore_) con altri elementi grafici per creare immagini magiche come
         questa.'
       courseF_artist_for10_2018: 'Tempo di giocare: Prova ad usare la variabile `counter`
-        (*contatore*) con altri elementi grafici per creare immagini magiche come
+        (_contatore_) con altri elementi grafici per creare immagini magiche come
         questa.'
       courseF_artist_for10_2019: 'Tempo di giocare: Prova ad usare la variabile `counter`
-        (*contatore*) con altri elementi grafici per creare immagini magiche come
+        (_contatore_) con altri elementi grafici per creare immagini magiche come
         questa.'
       courseF_artist_for1_2018: Fai esperimenti con il ciclo `ripeti con counter`
         e gioca con la variabile 'counter'.
@@ -6148,13 +6137,13 @@ it:
         pentagonale.
       courseF_artist_for8_2019: Riduci l'angolo a 72 gradi per ottenere questa spirale
         pentagonale.
-      courseF_artist_for9: "**Ispirazione:** Usa la variabile `counter` (*contatore*)
+      courseF_artist_for9: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
         all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
         al centro del disegno."
-      courseF_artist_for9_2018: "**Ispirazione:** Usa la variabile `counter` (*contatore*)
+      courseF_artist_for9_2018: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
         all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
         al centro del disegno."
-      courseF_artist_for9_2019: "**Ispirazione:** Usa la variabile `counter` (*contatore*)
+      courseF_artist_for9_2019: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
         all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
         al centro del disegno."
       courseF_artist_for_challenge1: Riesci a ricreare questo disegno?
@@ -6171,11 +6160,11 @@ it:
       courseF_artist_ramp9: Usa ciò che hai imparato per disegnare questo triangolo.
       courseF_artist_ramp9_2018: Usa ciò che hai imparato per disegnare questo triangolo.
       courseF_artist_variables10: 'Ecco il codice dell''esercizio precedente. Prova
-        a modificare la variabile `length` (*lunghezza*) in altri modi.  '
+        a modificare la variabile `length` (_lunghezza_) in altri modi.  '
       courseF_artist_variables10_2018: 'Ecco il codice dell''esercizio precedente.
-        Prova a modificare la variabile `length` (*lunghezza*) in altri modi.  '
+        Prova a modificare la variabile `length` (_lunghezza_) in altri modi.  '
       courseF_artist_variables10_2019: 'Ecco il codice dell''esercizio precedente.
-        Prova a modificare la variabile `length` (*lunghezza*) in altri modi.  '
+        Prova a modificare la variabile `length` (_lunghezza_) in altri modi.  '
       courseF_artist_variables2: 'Ora disegna tre di quei triangoli uno accanto all''altro.   '
       courseF_artist_variables2_2018: 'Ora disegna tre di quei triangoli uno accanto
         all''altro.   '
@@ -6187,13 +6176,13 @@ it:
         (`length`), in modo da poterla poi usare nei prossimi esercizi.
       courseF_artist_variables3_2019: Sposta la lunghezza di 50 pixel in una variabile
         (`length`), in modo da poterla poi usare nei prossimi esercizi.
-      courseF_artist_variables4: Ora, usa la variabile `length` (*lunghezza*) per
+      courseF_artist_variables4: Ora, usa la variabile `length` (_lunghezza_) per
         fare in modo che l'artista disegni i vari triangoli spostati ognuno in avanti
         di `length` pixel e verso il basso di `length` pixel.
-      courseF_artist_variables4_2018: Ora, usa la variabile `length` (*lunghezza*)
+      courseF_artist_variables4_2018: Ora, usa la variabile `length` (_lunghezza_)
         per fare in modo che l'artista disegni i vari triangoli spostati ognuno in
         avanti di `length` pixel e verso il basso di `length` pixel.
-      courseF_artist_variables4_2019: Ora, usa la variabile `length` (*lunghezza*)
+      courseF_artist_variables4_2019: Ora, usa la variabile `length` (_lunghezza_)
         per fare in modo che l'artista disegni i vari triangoli spostati ognuno in
         avanti di `length` pixel e verso il basso di `length` pixel.
       courseF_artist_variables5: Aggiungi un'altra serie di cicli alla fine del programma
@@ -6222,15 +6211,15 @@ it:
       courseF_artist_variables7_2019: 'Disegna un triangolo con lati di 150 pixel. '
       courseF_artist_variables8: Ricostruisci il codice del triangolo dall'esercizio
         precedente, ma questa volta usa il blocco `imposta length a` per reimpostare
-        il valore della variabile `length` (*lunghezza*)  a `length+10` alla fine
+        il valore della variabile `length` (_lunghezza_)  a `length+10` alla fine
         di ogni interazione del ciclo.
       courseF_artist_variables8_2018: Ricostruisci il codice del triangolo dall'esercizio
         precedente, ma questa volta usa il blocco `imposta length a` per reimpostare
-        il valore della variabile `length` (*lunghezza*)  a `length+10` alla fine
+        il valore della variabile `length` (_lunghezza_)  a `length+10` alla fine
         di ogni interazione del ciclo.
       courseF_artist_variables8_2019: Ricostruisci il codice del triangolo dall'esercizio
         precedente, ma questa volta usa il blocco `imposta length a` per reimpostare
-        il valore della variabile `length` (*lunghezza*)  a `length+10` alla fine
+        il valore della variabile `length` (_lunghezza_)  a `length+10` alla fine
         di ogni interazione del ciclo.
       courseF_artist_variables9: Guarda cosa succede quando ripeti il codice dell'esercizio
         precedente 30 volte invece di 3! Per aggiungere un tocco di fantasia, sentiti
@@ -6248,7 +6237,7 @@ it:
       courseF_artist_variablesFP_2019: "**Tempo di giocare:** Usa ciò che hai imparato
         e crea il tuo disegno. "
       courseF_artist_variables_10: 'Ecco il codice dell''esercizio precedente. Prova
-        a modificare la variabile `length` (*lunghezza*) in altri modi.  '
+        a modificare la variabile `length` (_lunghezza_) in altri modi.  '
       courseF_artist_variables_5: Aggiungi un'altra serie di cicli alla fine del programma
         per aggiungere tre triangoli. Questa volta, vai avanti e verso l'alto!
       courseF_artist_variables_6a: Realizza questo progetto in cui i quadrati hanno
@@ -6261,12 +6250,12 @@ it:
       courseF_artist_variables_FP: "**Tempo di giocare:** Usa ciò che hai imparato
         e crea il tuo disegno. \n\nCome puoi usare le variabili con quadrati, pentagoni
         o esagoni?"
-      courseF_artist_variables_challenge1: Puoi creare una variabile `length` (*lunghezza*)  e
+      courseF_artist_variables_challenge1: Puoi creare una variabile `length` (_lunghezza_)  e
         usarla per creare questo schema?
       courseF_artist_variables_challenge1_2018: Puoi creare una variabile `length`
-        (*lunghezza*)  e usarla per creare questo schema?
+        (_lunghezza_)  e usarla per creare questo schema?
       courseF_artist_variables_challenge1_2019: Puoi creare una variabile `length`
-        (*lunghezza*)  e usarla per creare questo schema?
+        (_lunghezza_)  e usarla per creare questo schema?
       courseF_artist_variables_challenge2: Ora hai imparato tutto quello che ti serve
         per realizzare un disegno come questo!
       courseF_artist_variables_challenge2_2018: Ora hai imparato tutto quello che
@@ -6317,11 +6306,11 @@ it:
       courseF_bee_for4: Aiuta l'ape a raccogliere tutto il nettare.
       courseF_bee_for4_2018: Aiuta l'ape a raccogliere tutto il nettare.
       courseF_bee_for4_2019: Aiuta l'ape a raccogliere tutto il nettare.
-      courseF_bee_for5: Usa due volte la variabile `countrer` (*contatore*) per risolvere
+      courseF_bee_for5: Usa due volte la variabile `countrer` (_contatore_) per risolvere
         questo esercizio.
-      courseF_bee_for5_2018: Usa due volte la variabile `countrer` (*contatore*) per
+      courseF_bee_for5_2018: Usa due volte la variabile `countrer` (_contatore_) per
         risolvere questo esercizio.
-      courseF_bee_for5_2019: Usa due volte la variabile `countrer` (*contatore*) per
+      courseF_bee_for5_2019: Usa due volte la variabile `countrer` (_contatore_) per
         risolvere questo esercizio.
       courseF_bee_for6: Prova a raccogliere il nettare contando alla rovescia da 5
         a 1 con passo 1.
@@ -6341,11 +6330,11 @@ it:
         in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
       courseF_bee_for8_2019: Questo codice è da completare! Quale deve essere il <i>passo</i>
         in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
-      courseF_bee_for9: Usa la variabile `counter` (*contatore*) per muoverti in questo
+      courseF_bee_for9: Usa la variabile `counter` (_contatore_) per muoverti in questo
         giardino usando il minor numero possibile di blocchi.
-      courseF_bee_for9_2018: Usa la variabile `counter` (*contatore*) per muoverti
+      courseF_bee_for9_2018: Usa la variabile `counter` (_contatore_) per muoverti
         in questo giardino usando il minor numero possibile di blocchi.
-      courseF_bee_for9_2019: Usa la variabile `counter` (*contatore*) per muoverti
+      courseF_bee_for9_2019: Usa la variabile `counter` (_contatore_) per muoverti
         in questo giardino usando il minor numero possibile di blocchi.
       courseF_bee_for_challenge1: 'Usa questo ciclo `ripeti con counter` per raccogliere
         tutto il nettare. '
@@ -6374,8 +6363,8 @@ it:
       courseF_bee_functions_2_2018: Basta modificare il programma in un punto per
         far sì che l'ape possa raccogliere tutto il nettare e produrre tutto il miele.
       courseF_bee_functions_3_2018: Per poter usare la stessa funzione per risolvere
-        questo esercizio, sottrai 1 dalla variabile `gather` (*che rappresenta la
-        quantità di nettare e di miele da gestire*) ogni volta che si esegue il ciclo.
+        questo esercizio, sottrai 1 dalla variabile `gather` (_che rappresenta la
+        quantità di nettare e di miele da gestire_) ogni volta che si esegue il ciclo.
       courseF_bee_fwp9: Usa la tua nuova funzione per risolvere questo esercizio.
       courseF_bee_fwp9_predict1: Usa la tua nuova funzione per risolvere questo esercizio.
       courseF_bee_fwp9_predict1_2018: Usa la tua nuova funzione per risolvere questo
@@ -6389,11 +6378,11 @@ it:
       courseF_bee_variables_2_2019: Basta modificare il programma in un punto per
         far sì che l'ape possa raccogliere tutto il nettare e produrre tutto il miele.
       courseF_bee_variables_3_2018: Per poter usare la stessa funzione per risolvere
-        questo esercizio, sottrai 1 dalla variabile `gather` (*che rappresenta la
-        quantità di nettare e di miele da gestire*) ogni volta che si esegue il ciclo.
+        questo esercizio, sottrai 1 dalla variabile `gather` (_che rappresenta la
+        quantità di nettare e di miele da gestire_) ogni volta che si esegue il ciclo.
       courseF_bee_variables_3_2019: Per poter usare la stessa funzione per risolvere
-        questo esercizio, sottrai 1 dalla variabile `gather` (*che rappresenta la
-        quantità di nettare e di miele da gestire*) ogni volta che si esegue il ciclo.
+        questo esercizio, sottrai 1 dalla variabile `gather` (_che rappresenta la
+        quantità di nettare e di miele da gestire_) ogni volta che si esegue il ciclo.
       courseF_bee_variables_4_2018: Modifica il codice in modo che funzioni per questo
         esercizio.
       courseF_bee_variables_4_2019: Modifica il codice in modo che funzioni per questo
@@ -6537,9 +6526,9 @@ it:
       grade1_artist_loops3: Ora dobbiamo preparare il terreno per la coltivazione.
         Trova gli errori nel codice e aiuta l'artista a sistemare il campo.
       grade1_artist_loops5: Dietro i cespugli c'è una bellissima pianta rampicante
-        fiorita. Riesci ad salire e capire dove va a finire?
+        fiorita. Riesci a salire e capire dove va a finire?
       grade1_artist_loops6: "**Sfida:** C'è un giardino segreto! Facci un giro intorno."
-      grade1_artist_loops8: Scegli la strada più breve per tornare a casa, attraversando
+      grade1_artist_loops8: Scegli la strada più breve per tornare a casa attraversando
         l'acqua. Puoi aiutare l'artista a stare sulle pietre?
       grade1_artist_loopsFP: Usa tutto quello che hai imparato per disegnare ciò che
         pensi che l'artista vedrà quando arriverà a casa.
@@ -6620,9 +6609,9 @@ it:
         il puzzle.
       grade2_collector_5: Questi blocchi sono nell'ordine sbagliato. Riesci a riordinarli?
       grade2_collector_6: Riordina i blocchi per raccogliere tutti i diamanti.
-      grade2_collector_A: Aiuto Laura a raccogliere tutti i diamanti.
-      grade2_collector_A_2018: Aiuto Laura a raccogliere tutti i diamanti.
-      grade2_collector_A_2019: Aiuto Laura a raccogliere tutti i diamanti.
+      grade2_collector_A: Aiuta Laura a raccogliere tutti i diamanti.
+      grade2_collector_A_2018: Aiuta Laura a raccogliere tutti i diamanti.
+      grade2_collector_A_2019: Aiuta Laura a raccogliere tutti i diamanti.
       grade2_playlab_project_1: Riesci a scrivere un programma che fa muovere il ​pinguino
         quando si usano le frecce su / giù / destra / sinistra per colpire tutti i
         bersagli?
@@ -6693,8 +6682,9 @@ it:
         Qui ci sono diverse cose da fare!<br>
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
         <b>Suggerimenti</b><br>
-        - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
-        - Puoi risolvere questo esercizio usando il <i>ciclo</i> `ripeti ... volte`?
+
+        -   Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
+        -   Puoi risolvere questo esercizio usando il <i>ciclo</i> `ripeti ... volte`?
       grade3_Conditionals_11 BAD: Questo è un esercizio di riepilogo -- Usa un ciclo
         `mentre` per raccogliere tutto il nettare da questi fiori.
       grade3_Conditionals_11: |-
@@ -6779,8 +6769,8 @@ it:
         la zucca finale.
       grade3_RunningFarm_11a: Raccogli tutte le pannocchie e le lattughe, poi conquista
         la zucca finale.
-      grade3_RunningFarm_3: '*"Pannocchie, lattughe e zucche! Aiutami a raccogliere
-        tutto."*'
+      grade3_RunningFarm_3: _"Pannocchie, lattughe e zucche! Aiutami a raccogliere
+        tutto."_
       grade3_RunningFarm_6: Riesci a scoprire come conquistare la zucca? Assicurati
         di raccogliere anche tutte le pannocchie lungo la strada!
       grade3_RunningFarm_7: "**Sfida:** Raccogli tutte le pannocchie e le lattughe,
@@ -6828,7 +6818,7 @@ it:
       grade3_robotFarmer_ConditionalsIntro4: Aiuta la contadina a rimuovere tutto
         questo mucchio usando un ciclo `mentre`.
       grade3_robotFarmer_ConditionalsIntro_1: |-
-        *"Ciao, sono una contadina. Ho bisogno del tuo aiuto per livellare il terreno nella mia fattoria, in modo che sia pronto per la semina."*
+        _"Ciao, sono una contadina. Ho bisogno del tuo aiuto per livellare il terreno nella mia fattoria, in modo che sia pronto per la semina."_
 
         Spostami verso i mucchi di terra e usa il blocco `rimuovi 1` per rimuoverli.
       grade3_robotFarmer_ConditionalsIntro_10a: Abbatti tutti questi mucchi usando
@@ -6839,7 +6829,7 @@ it:
       grade3_robotFarmer_ConditionalsIntro_11a: Abbatti tutti questi mucchi usando
         il minor numero possibile di blocchi.
       grade3_robotFarmer_ConditionalsIntro_4: |-
-        *"Non so quanta terra c'è in questo mucchio!"*
+        _"Non so quanta terra c'è in questo mucchio!"_
 
         Aiuta la contadina a rimuovere tutto questo mucchio usando un ciclo `mentre`.
       grade3_robotFarmer_ConditionalsIntro_5: Aiutami a rimuovere tutta questa terra.
@@ -6863,10 +6853,8 @@ it:
         pronto, così da disegnare un mulino a vento.
       grade4_arist_nested_loop_polygons1: Ripeti 10 volte la figura disegnata dal
         codice che trovi già pronto. Di quanti gradi devi ruotare ad ogni ripetizione?
-      grade4_arist_nested_loop_polygons2: 'Ripeti 6 volte la figura disegnata dal
-        codice che trovi già pronto. Di quanti gradi devi ruotare ad ogni ripetizione?
-
-'
+      grade4_arist_nested_loop_polygons2: Ripeti 6 volte la figura disegnata dal codice
+        che trovi già pronto. Di quanti gradi devi ruotare ad ogni ripetizione?
       grade4_arist_nested_loop_squares1: Riesci a disegnare i 10 quadrati di questo
         marciapiede utilizzando un ciclo annidato? Ogni quadrato ha il lato di 30
         pixel.
@@ -7010,10 +6998,10 @@ it:
       grade4_bee_functions2: |-
         Una funzione è una sequenza di blocchi di codice che esegue un compito. Usa la funzione `get 2 nectar` (<i>prendi 2 dosi di nettare</i>) per raccogliere il nettare da ogni fiore.
         <br><a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-6#VIDEO" target="_blank">Video doppiato in italiano</a> (solo la seconda parte)
-      grade4_bee_functions3: Definisci la funzione `get 5` (*prendi 5 dosi di nettare*)
+      grade4_bee_functions3: Definisci la funzione `get 5` (_prendi 5 dosi di nettare_)
         da usare in questo esercizio.
-      grade4_bee_functions4: Usa la funzione `move and get nectar` (*vai a prendere
-        il nettare*) per raccogliere tutto il nettare.
+      grade4_bee_functions4: Usa la funzione `move and get nectar` (_vai a prendere
+        il nettare_) per raccogliere tutto il nettare.
       grade4_bee_functions6: Adesso scrivi la funzione per raccogliere il nettare
         dai tre fiori.
       grade4_bee_functions7: Crea una funzione e richiamala dal programma principale
@@ -7169,7 +7157,7 @@ it:
         width="250px"/><br>
         Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       grade5_artist_for_loopsfreeplay12: 'Tempo di giocare: Prova ad usare la variabile
-        `counter` (*contatore*) con altri elementi grafici per creare immagini magiche
+        `counter` (_contatore_) con altri elementi grafici per creare immagini magiche
         come questa.'
       grade5_artist_functionparameters10: |-
         <a href="https://studio.code.org/c/" target="_blank">Clicca qui</a> (LINK DA AGGIORNARE) e poi su "Esegui". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
@@ -7276,7 +7264,7 @@ it:
         un passo di 2.
       grade5_bee_for_loops8: Questo codice è da completare! Quale deve essere il <i>passo</i>
         in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
-      grade5_bee_for_loops9: Usa la variabile `counter` (*contatore*) per muoverti
+      grade5_bee_for_loops9: Usa la variabile `counter` (_contatore_) per muoverti
         in questo giardino usando il minor numero possibile di blocchi.
       grade5_playlab_freeplay: 'Tempo di giocare: divertiti a creare il gioco che
         preferisci. Ecco <a href="http://programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-15"
@@ -7335,7 +7323,7 @@ it:
         il punteggio arriva a 6 si passa all''esercizio successivo. '
       grade5_playlab_variables81: |-
         Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>
-        Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>
+        Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player\_score</i> > 6).<br><br>
         Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
       grade5_playlab_variables9: In questo esercizio c'è una funzione chiamata `patrol`
         (<i>pattuglia</i>) in cui devi inserire il codice che serve per far muovere
@@ -7374,7 +7362,7 @@ it:
       gradek_artist_loopsPre: Questo è un nuovo tipo di esercizio chiamato "Artista".
         Prova a disegnare qualcosa di divertente. Quando sei soddisfatto, premi "Termina"
         per passare all'esercizio successivo.
-      gradek_playlab_events1c: Il cane, vuole dire "Ciao!" Riesci ad aiutarlo?
+      gradek_playlab_events1c: Il cane vuole dire "Ciao!" Riesci ad aiutarlo?
       gradek_playlab_events4c: Aggiungi gli eventi per far muovere il cane su e giù
         quando si premono le frecce in su e in giù.
       gradek_playlab_events5c: Rendi questa scena più interessante, cambiando lo sfondo
@@ -7487,7 +7475,7 @@ it:
         il suo raccolto!
       loops_forvideo_iceage_ab: Usa i cicli per far arrivare Scrat alla ghianda!
       loops_forvideo_iceage_cf: Usa i cicli per far arrivare Scrat alla ghianda!
-      playLabDebugVideo1: Il cane, vuole dire "Ciao!" Riesci ad aiutarlo?
+      playLabDebugVideo1: Il cane vuole dire "Ciao!" Riesci ad aiutarlo?
       ramp_artist_loops1: Vai avanti di 60 pixel per completare l'esercizio.
       ramp_artist_loops1_2018: Vai avanti di 60 pixel per completare l'esercizio.
       ramp_artist_loops1_2019: Vai avanti di 60 pixel per completare l'esercizio.
@@ -7546,4 +7534,18 @@ it:
       scrat 20: Riesci ad aggiungere solo 3 blocchi per farmi uscire da un labirinto
         più complesso? Se lo fai correttamente, riuscirò a camminare lungo un percorso
         tortuoso di qualsiasi lunghezza. Fai in fretta! Il ghiaccio si sta sciogliendo!
+      timeforcs_demo_sl_2: Cambia il comportamento nel blocco `___begins___` (_inizia_)
+        per fare in modo che all'inizio l'alieno gironzoli qua e là.
+      timeforcs_demo_sl_4: Crea un nuovo personaggio chiamato `alien2`.  Fagli fare
+        un passo di danza diverso ogni volta che ci clicchi sopra.
+      timeforcs_demo_sl_5: Crea un terzo personaggio chiamato `alien3` e posiziona
+        tutti gli alieni lungo una linea retta.
+      timeforcs_demo_sl_6: Aggiungi del codice per cambiare il colore di ogni alieno
+        quando si clicca su di esso.
+      timeforcs_demo_sl_7: Usa il blocco `stops everything` (_ferma tutto_) per fermare
+        ogni alieno quando viene cliccato.
+      timeforcs_demo_sl_8: Aggiungi un nuovo personaggio chiamato 'myBell' (_la mia
+        campanella_) che fa fare a tutti gli alieni la sua stessa danza quando viene
+        cliccata.
+      timeforcs_demo_sl_9: Ora crea la tua discoteca aliena!
       valentine_artist_03: Ora prova qualcosa per conto tuo!

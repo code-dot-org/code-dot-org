@@ -1,6 +1,9 @@
 @no_mobile
 Feature: CSP Instructions
 
+Background:
+  Given I create a student named "Lillian"
+
 Scenario: 'Help & Tips' and 'Instruction' tabs are visible if level has videos
   Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1"
   When I click selector ".uitest-helpTab" once I see it

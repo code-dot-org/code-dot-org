@@ -46,7 +46,7 @@ sl:
           to nalogo, je treba spremenljivko 'counter' uporabiti, kot dolžino stranice.
       Course 4 Artist For Loops 4_authored_hint:
         Course_4_Artist_For_Loops_4_a: |-
-          **Kakšno je najmanjše število, ki ga potrebukeš?
+          \*\*Kakšno je najmanjše število, ki ga potrebukeš?
           Kakšno pa je največje?
           Kako velik je korak po?
 
@@ -111,7 +111,7 @@ sl:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -130,7 +130,7 @@ sl:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -149,7 +149,7 @@ sl:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -168,7 +168,7 @@ sl:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -315,7 +315,7 @@ sl:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -334,7 +334,7 @@ sl:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -353,7 +353,7 @@ sl:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -372,7 +372,7 @@ sl:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -483,21 +483,21 @@ sl:
           obrne desno za **120 stopinj**.
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: |-
-          **Kakšno je najmanjše število, ki ga potrebukeš?
+          \*\*Kakšno je najmanjše število, ki ga potrebukeš?
           Kakšno pa je največje?
           Kako velik je korak po?
 
           To so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'.
       courseF_artist_for4_2018_authored_hint:
         courseF_artist_for4_a: |-
-          **Kakšno je najmanjše število, ki ga potrebukeš?
+          \*\*Kakšno je najmanjše število, ki ga potrebukeš?
           Kakšno pa je največje?
           Kako velik je korak po?
 
           To so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'.
       courseF_artist_for4_2019_authored_hint:
         courseF_artist_for4_a: |-
-          **Kakšno je najmanjše število, ki ga potrebukeš?
+          \*\*Kakšno je najmanjše število, ki ga potrebukeš?
           Kakšno pa je največje?
           Kako velik je korak po?
 
@@ -519,7 +519,7 @@ sl:
           za 90 stopinj'.
       grade5_artist_for_loops4_authored_hint:
         Course_4_Artist_For_Loops_4_a: |-
-          **Kakšno je najmanjše število, ki ga potrebukeš?
+          \*\*Kakšno je najmanjše število, ki ga potrebukeš?
           Kakšno pa je največje?
           Kako velik je korak po?
 

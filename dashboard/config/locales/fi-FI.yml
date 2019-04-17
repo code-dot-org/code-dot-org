@@ -887,6 +887,8 @@ fi:
     csp_variables: Muuttujat
     csp_conditionals: Ehtolausekkeet
     csp_functions: Funktiot
+    csp_lists: Listat
+    csp_loops: Silmukat
   external_links:
     disclaimer: Vastuuvapauslauseke
   hoc_download:

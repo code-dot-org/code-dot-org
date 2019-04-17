@@ -430,7 +430,7 @@ sk:
             Graph Paper Programming:
               name: Programovanie na štvorčekový papier
             Introduction to Computer Science:
-              name: Úvod do vedy o počítačoch (informatiky)
+              name: Úvod do informatiky
             Relay Programming:
               name: Štafetové programovanie
             Song Writing:
@@ -1598,7 +1598,7 @@ sk:
             Programming in Collector:
               name: Programovanie so zberateľkou
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             Loops in Maze:
@@ -1618,7 +1618,7 @@ sk:
             Debugging in Maze:
               name: Odstraňovanie chýb v bludisku
             Loops in Harvester:
-              name: Cykly s Pestovateľkou
+              name: Cykly so Záhradníčkou
         coursed-draft:
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
             príbehy a hry.
@@ -1640,11 +1640,11 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             Conditionals with Bee:
-              name: Podmienky so Včelou
+              name: Podmienky s včelou
             Conditionals & Loops in Maze:
-              name: Podmienky & Cykly v Bludisku
+              name: Podmienky & cykly v bludisku
             Conditionals & Loops in Farmer:
-              name: Podmienky a cykly s Poľnohosporárkou
+              name: Podmienky a cykly so Záhradníčkou
             Impacts of Computing:
               name: Vplyv Informatiky
             Build a Play Lab Game:
@@ -1968,8 +1968,8 @@ sk:
               description_teacher: V tejto sérii online úloh si študenti precvičia
                 pochopenie algoritmov, hľadanie a odstraňovanie chýb a všeobecnú počítačovú
                 gramotnosť. Spolu s postavičkami z Angry Birds študenti vybudujú sekvenčné
-                algoritmy s cieľom presunúť vtáka ku prasaťu vyhýbajúc sa stenám a
-                TNT. V lekcii sa tiež nachádzajú úlohy na hľadanie a odstraňovanie
+                algoritmy s cieľom presunúť vtáka ku prasiatku vyhýbajúc sa stenám
+                a TNT. V lekcii sa tiež nachádzajú úlohy na hľadanie a odstraňovanie
                 chýb, ktoré pomáhajú rozvíjať schopnosť riešiť problémy a kritické
                 myslenie.
             Going Places Safely:
@@ -2051,13 +2051,13 @@ sk:
             Programming in Collector:
               name: Programovanie so zberateľkou
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             Loops in Maze:
               name: Cykly v bludisku
             Loops in Harvester:
-              name: Cykly s Pestovateľkou
+              name: Cykly so Záhradníčkou
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             Build a Flappy Game:
@@ -2086,9 +2086,8 @@ sk:
                 Code.org. Videá vám vysvetlia ako funguje pracovné prostredie, vrátane
                 tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu ako presúvať
                 bloky a ako ich vymazať či spájať. Následne si študenti precvičia
-                svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Po tom
-                študenti uvidia nové typy úloh ako napríklad Zberateľka, Umelec a
-                Pestovateľka.
+                svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Potom študenti
+                uvidia nové typy úloh ako napríklad Zberateľka, Umelec a Záhradníčka.
             'Algorithms: Graph Paper Programming':
               name: 'Programovanie: Programovanie na štvorčekový papier'
               description_student: V tejto lekcii naprogramuješ kamaráta na kreslenie
@@ -2130,9 +2129,9 @@ sk:
             Conditionals in Bee:
               name: Podmienky s včelou
             Conditionals & Loops in Maze:
-              name: Podmienky & Cykly v Bludisku
+              name: Podmienky & cykly v bludisku
             Conditionals & Loops in Farmer:
-              name: Podmienky a cykly s Poľnohosporárkou
+              name: Podmienky a cykly so Záhradníčkou
             Digital Citizenship:
               name: 'Digitálne občianstvo: Praktizovanie digitálneho občianstva'
               description_student: Niektoré informácie nie je vhodné zdieľať online.
@@ -2329,7 +2328,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
@@ -2478,7 +2477,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
@@ -2529,7 +2528,7 @@ sk:
             While Loops in Farmer:
               name: Cykly "pokiaľ" s Farmárkou
             Conditionals & Loops in Maze:
-              name: Podmienky & Cykly v Bludisku
+              name: Podmienky & cykly v bludisku
             Envelope Variables:
               name: Premenné v obálkach
             Variables in Artist:
@@ -2567,7 +2566,7 @@ sk:
             'Conditionals: Conditionals with Cards':
               name: 'Podmienky: Podmienky s kartami'
             Conditional Loops in Maze:
-              name: Podmienky & Cykly v Bludisku
+              name: Podmienky & cykly v bludisku
             'Variables: Envelope Variables':
               name: 'Premenné: Premenné v obálkach'
             'For Loops: For Loop Fun':
@@ -2579,7 +2578,7 @@ sk:
             Nested Loops:
               name: Vnorené cykly
             Conditionals & Loops in Harvester:
-              name: Podmienky a cykly s Poľnohosporárkou
+              name: Podmienky a cykly so Záhradníčkou
             Until Loops in Maze:
               name: Cykly "dovtedy kým" v bludisku
           title: Zrýchlený kurz
@@ -2640,7 +2639,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops:
@@ -2706,7 +2705,7 @@ sk:
             Conditionals in Bee:
               name: Podmienky s včelou
             Conditionals & Loops in Maze:
-              name: Podmienky & Cykly v Bludisku
+              name: Podmienky & cykly v bludisku
             Digital Citizenship:
               name: Digitálne občianstvo
             Build a Play Lab Game:
@@ -2793,7 +2792,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
@@ -2839,7 +2838,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
@@ -2938,7 +2937,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops:
@@ -2987,7 +2986,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
@@ -3095,8 +3094,8 @@ sk:
               description_teacher: V tejto sérii online úloh si študenti precvičia
                 pochopenie algoritmov, hľadanie a odstraňovanie chýb a všeobecnú počítačovú
                 gramotnosť. Spolu s postavičkami z Angry Birds študenti vybudujú sekvenčné
-                algoritmy s cieľom presunúť vtáka ku prasaťu vyhýbajúc sa stenám a
-                TNT. V lekcii sa tiež nachádzajú úlohy na hľadanie a odstraňovanie
+                algoritmy s cieľom presunúť vtáka ku prasiatku vyhýbajúc sa stenám
+                a TNT. V lekcii sa tiež nachádzajú úlohy na hľadanie a odstraňovanie
                 chýb, ktoré pomáhajú rozvíjať schopnosť riešiť problémy a kritické
                 myslenie.
             Going Places Safely:
@@ -3136,9 +3135,9 @@ sk:
             Programming in Bee:
               name: Programovanie s včelou
             Programming in Harvester:
-              name: Programovanie s Pestovateľkou
+              name: Programovanie so Záhradníčkou
             Loops in Harvester:
-              name: Cykly s Pestovateľkou
+              name: Cykly so Záhradníčkou
             Sequencing in Maze:
               name: Postupnosť krokov s Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
@@ -3240,7 +3239,7 @@ sk:
             Functions in Minecraft:
               name: Funkcie v Minecrafte
             Functions in Harvester:
-              name: Funkcie s Pestovateľkou
+              name: Funkcie so Záhradníčkou
             Functions in Artist:
               name: Funkcie s Umelcom
             Screen Out the Mean:
@@ -3272,7 +3271,7 @@ sk:
             'Unplugged: Binary':
               name: Binárne obrázky
             Artist Binary:
-              name: Binárne obrázky s Umelecom
+              name: Binárne obrázky s Umelcom
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3354,7 +3353,7 @@ sk:
             Conditionals in Bee:
               name: Podmienky "ak/inak" s včelou
             Conditionals & Loops in Maze:
-              name: Podmienky & Cykly v Bludisku
+              name: Podmienky & cykly v bludisku
             Digital Citizenship:
               name: Digitálne občianstvo
             Build a Play Lab Game:
@@ -3362,7 +3361,7 @@ sk:
             'Unplugged: Binary':
               name: Binárne obrázky
             Artist Binary:
-              name: Binárne obrázky s Umelecom
+              name: Binárne obrázky s Umelcom
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
             Nested Loops in Frozen:
@@ -3508,7 +3507,7 @@ sk:
                 študentom intuitívne pochopiť, prečo je kombinovanie kúskov kódu do
                 funkcií tak užitočné.
             Functions in Artist:
-              name: Funkcie s Umelecom
+              name: Funkcie s Umelcom
               description_student: Vytvor zložitejšie kresby s funkciami!
               description_teacher: Študenti sa oboznámia s používaním funkcií na stránke
                 Code.org. S Umelcom vytvoríme a upravíme veľkolepé obrázky. Študenti
@@ -3959,7 +3958,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
@@ -4100,7 +4099,7 @@ sk:
             Conditionals in Bee:
               name: Podmienky s včelou
             Conditionals & Loops in Harvester:
-              name: Podmienky a cykly s Poľnohosporárkou
+              name: Podmienky a cykly so Záhradníčkou
             Digital Citizenship:
               name: Digitálne občianstvo
             Build a Play Lab Game:
@@ -4129,7 +4128,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops:
@@ -4260,6 +4259,8 @@ sk:
               name: Záverečný projekt
             Digital Sharing:
               name: Digitálne zdieľanie
+            Songwriting:
+              name: Písanie pesničiek
         express-2019:
           title: Zrýchlený kurz (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
@@ -4278,7 +4279,7 @@ sk:
             Programming in Collector:
               name: Programovanie so zberateľkou
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             Loops with Rey and BB-8:
@@ -4298,7 +4299,7 @@ sk:
             Conditionals in Bee:
               name: Podmienky s včelou
             Conditionals & Loops in Harvester:
-              name: Podmienky a cykly s Poľnohosporárkou
+              name: Podmienky a cykly so Záhradníčkou
             'Functions: Songwriting':
               name: 'Funkcie: Písanie pesničiek'
             Functions in Minecraft:
@@ -4404,13 +4405,13 @@ sk:
             Programming in Collector:
               name: Programovanie so zberateľkou
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
             Loops in Harvester:
-              name: Cykly s Pestovateľkou
+              name: Cykly so Záhradníčkou
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             Build a Flappy Game:
@@ -4433,6 +4434,8 @@ sk:
               name: Zobrazenie dát v grafoch
             Sticker Art with Loops:
               name: Pečiatkovanie v cykloch
+            Picturing Data:
+              name: Zobrazenie dát v grafoch
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
@@ -4470,8 +4473,8 @@ sk:
               description_teacher: V tejto sérii online úloh si študenti precvičia
                 pochopenie algoritmov, hľadanie a odstraňovanie chýb a všeobecnú počítačovú
                 gramotnosť. Spolu s postavičkami z Angry Birds študenti vybudujú sekvenčné
-                algoritmy s cieľom presunúť vtáka ku prasaťu vyhýbajúc sa stenám a
-                TNT. V lekcii sa tiež nachádzajú úlohy na hľadanie a odstraňovanie
+                algoritmy s cieľom presunúť vtáka ku prasiatku vyhýbajúc sa stenám
+                a TNT. V lekcii sa tiež nachádzajú úlohy na hľadanie a odstraňovanie
                 chýb, ktoré pomáhajú rozvíjať schopnosť riešiť problémy a kritické
                 myslenie.
             Going Places Safely:
@@ -4487,7 +4490,7 @@ sk:
                 silným nástrojom. Na pochopenie toho, ako nám môžu byť užitočné budú
                 žiaci hľadať jednoduchšiu cestu na riešenie každodenných problémov.
             Loops in Harvester:
-              name: Cykly s Pestovateľkou
+              name: Cykly so Záhradníčkou
             Loops in Artist:
               description_teacher: Vrátením sa k slučkám, študenti sa učia kresliť
                 použitím jednoduchých postupností pokynov. V predchádzajúcej lekcii
@@ -4549,7 +4552,7 @@ sk:
             The Right App:
               name: Správna aplikácia
             Loops in Harvester:
-              name: Cykly s Pestovateľkou
+              name: Cykly so Záhradníčkou
             Programming in Maze:
               name: Programovanie v bludisku
         pre-express-2019:
@@ -4678,3 +4681,39 @@ sk:
               name: Vymazanie záznamov
             Final Project:
               name: Finálny projekt
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Podmienky s kartami
+            'Programming: My Robotic Friends':
+              name: 'Programovanie: Moji robotickí kamaráti'
+            Building a Foundation:
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
+            Programming in Artist:
+              name: Programovanie s Umelcom
+            'Loops: My Loopy Robotic Friends':
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Nested Loops with Frozen:
+              name: Vnorené cykly s Frozen
+            Alien Dance Party with Sprite Lab:
+              name: Mimozemská tanečná párty so Sprite Labom
+            Pet Giraffe with Sprite Lab:
+              name: Moja malá žirafa so Sprite Labom
+            Build a Flappy Game:
+              name: Vytvor si vlastnú hru Flappy
+            Build a Star Wars Game:
+              name: Vytvor hru Star Wars
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
+            'Functions: Songwriting':
+              name: 'Funkcie: Písanie pesničiek'
+            Functions in Minecraft:
+              name: Funkcie v Minecrafte
+            Functions in Artist:
+              name: Funkcie s Umelcom
+            Determine the Concept:
+              name: Urči správny koncept

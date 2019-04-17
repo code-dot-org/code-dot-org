@@ -925,6 +925,9 @@ $default-modal-width: 640px;
   .header_text, .header_button {
     float: left;
   }
+  .project_name_wrapper {
+    min-width: 160px;
+  }
   .project_name_wrapper .header_text {
     float: left;
     clear: left;
@@ -2072,7 +2075,7 @@ a.download-video {
     border-color: transparent;
     border-width: 6px;
   }
-  #questions {
+  .match_questions {
     list-style-type: none;
     margin-left: 0;
     li {
@@ -2083,7 +2086,7 @@ a.download-video {
   li {
     text-align: center;
   }
-  #slots {
+  .match_slots {
     list-style-type: none;
     margin-left: 0;
     .emptyslot {
@@ -2119,7 +2122,7 @@ a.download-video {
     border-color: $light_green;
     cursor: move;
   }
-  #answerdest {
+  .match_answerdest {
     width: 240px;
   }
   .answerlist {
@@ -2129,7 +2132,7 @@ a.download-video {
       @include yTranslation(-50%);
     }
   }
-  #answers {
+  .match_answers {
     list-style-type: none;
     margin-left: 0;
   }
@@ -2140,11 +2143,11 @@ a.download-video {
       @include yTranslation(-50%);
     }
   }
-  #correctmarkscolumn {
+  .match_correctmarkscolumn {
     width: 20px;
     padding-right: 20px;
   }
-  #correctmarks {
+  .match_correctmarks {
     margin-left: 0;
   }
   .correctmark {

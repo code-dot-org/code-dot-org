@@ -623,6 +623,7 @@ es:
         C4_unplugged_forloops: Bucles Para
         C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
+        CSF_a_b_artist_loops: Bucles en Artista
         CSF_artist_angles: Ángulos en Artist
         CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El
           coleccionista'
@@ -789,6 +790,7 @@ es:
         hoc_dance_congrats: Fiesta de Baile - ¡Que siga la fiesta!
         c_and_c_great_to_create: Es estupendo crear y jugar limpio
         c_and_c_digital_sharing: Compartir digital
+        teaching_csf_how_it_works: 'Enseñando Fundamentos CS: Cómo funciona el curso'
         elem_pd_2: Informática de la Escuela Primaria - vídeo PD 2/2
         what_is_cs: "¿Qué son las Ciencias de la computación?"
         repeat_block: Usando el bloque de repetición
@@ -807,6 +809,8 @@ es:
         csd_applab_designmode: 'Descubrimientos de CS: Laboratorio de aplicación -
           modo de diseño'
         csd_pair_programming: Programación de pares
+        csd_gamelab_functions: Llamar y definir funciones
+        csd_applab_parameters: Funciones con parámetros
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

@@ -1530,6 +1530,8 @@ ja:
               name: インターネット
             Crowdsourcing:
               name: クラウドソーシング
+            Songwriting:
+              name: 作詞作曲
         express-2019:
           stages:
             Programming in Maze:
@@ -1691,3 +1693,15 @@ ja:
           stages:
             While Loops:
               name: Whileループ
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: クラウドソーシング
+            Conditionals with Cards:
+              name: カードと条件
+            Building a Foundation:
+              name: ピラミッドをたてよう
+            Loops in Artist:
+              name: アーティストくりかえし
+            'Events: The Big Event':
+              name: 'イベント: おおきなイベント'
