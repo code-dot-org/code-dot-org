@@ -377,10 +377,10 @@ bonus 'courseD_artist_binary_challenge1_2019'
 bonus 'courseD_artist_binary_challenge2_2019'
 
 stage 'Explore Project Ideas'
-named_level 'courseF_video_csMatters_2019'
-named_level 'InspirationalArtwork_2019'
-named_level 'courseF_project_1_2019'
+level 'courseF_video_csMatters_2019', named: true
+level 'InspirationalArtwork_2019', named: true
+level 'courseF_project_1_2019', named: true
 
 stage 'Build Your Project'
-named_level 'Course F: Artist Project_2019'
-named_level 'CourseF_Project_SpriteLab_2019'
+level 'Course F: Artist Project_2019', named: true
+level 'CourseF_Project_SpriteLab_2019', named: true
