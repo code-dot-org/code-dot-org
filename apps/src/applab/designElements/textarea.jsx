@@ -198,26 +198,48 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
+      default: color.applab_default_text_input_background_color,
       classic: color.white,
-      dark: color.applab_dark_background
+      orange: color.applab_orange_text_background_color,
+      citrus: color.applab_citrus_text_input_background_color
     },
     borderRadius: {
+      default: 2,
       classic: 0,
-      dark: 10
+      orange: 2,
+      citrus: 4
     },
     borderWidth: {
+      default: 1,
       classic: 1,
-      dark: 1
+      orange: 0,
+      citrus: 0
     },
     borderColor: {
       type: 'color',
+      default: color.applab_default_text_area_border_color,
       classic: color.text_input_default_border_color,
-      dark: color.applab_dark_border
+      orange: color.applab_orange_text_input_border_color,
+      citrus: color.applab_citrus_text_input_border_color
     },
     textColor: {
       type: 'color',
+      default: color.applab_default_text_color,
       classic: color.black,
-      dark: color.white
+      orange: color.applab_orange_text_color,
+      citrus: color.applab_citrus_text_color
+    },
+    fontFamily: {
+      default: 'Arial',
+      classic: 'Arial',
+      orange: 'Arial',
+      citrus: 'Palatino'
+    },
+    fontSize: {
+      default: 15,
+      classic: 14,
+      orange: 15,
+      citrus: 15
     }
   },
 
@@ -226,12 +248,12 @@ export default {
     element.setAttribute('contenteditable', true);
     element.style.width = '200px';
     element.style.height = '100px';
-    element.style.fontFamily = fontFamilyStyles[0];
-    element.style.fontSize = defaultFontSizeStyle;
     if (experiments.isEnabled('applabThemes')) {
       element.style.borderStyle = 'solid';
       elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
     } else {
+      element.style.fontFamily = fontFamilyStyles[0];
+      element.style.fontSize = defaultFontSizeStyle;
       element.style.color = '#000000';
       element.style.backgroundColor = '#ffffff';
       elementUtils.setDefaultBorderStyles(element, {
