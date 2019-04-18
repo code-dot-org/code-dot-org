@@ -151,6 +151,7 @@ class ScriptDSL < BaseDSL
     target = properties.delete(:target)
     challenge = properties.delete(:challenge)
     experiments = properties.delete(:experiments)
+    named = properties.delete(:named)
 
     level = {
       name: name,
@@ -192,15 +193,19 @@ class ScriptDSL < BaseDSL
       if challenge
         @current_scriptlevel[:properties][:challenge] = challenge
       end
+      if named
+        @current_scriptlevel[:properties][:named] = named
+      end
     else
       script_level = {
         stage: @stage,
         levels: [level]
       }
 
-      if progression || target || challenge
+      if progression || target || challenge || named
         script_level[:properties] = {}
         script_level[:properties][:progression] = progression if progression
+        script_level[:properties][:named] = true if named
         script_level[:properties][:target] = true if target
         script_level[:properties][:challenge] = true if challenge
       end
@@ -303,6 +308,7 @@ class ScriptDSL < BaseDSL
                 type,
                 sl.active?(level),
                 sl.progression,
+                sl.named,
                 sl.target,
                 sl.challenge,
                 sl.experiments(level)
@@ -311,7 +317,7 @@ class ScriptDSL < BaseDSL
           end
           s << 'endvariants'
         else
-          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.target, sl.challenge))
+          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.target, sl.challenge, sl.named))
         end
       end
       s << 'no_extras' if stage.stage_extras_disabled
@@ -325,6 +331,7 @@ class ScriptDSL < BaseDSL
     type,
     active = nil,
     progression = nil,
+    named = nil,
     target = nil,
     challenge = nil,
     experiments = []
@@ -345,6 +352,7 @@ class ScriptDSL < BaseDSL
     l += ', active: true' if experiments.any? && (active == true || active.nil?)
     l += ", experiments: #{experiments.to_json}" if experiments.any?
     l += ", progression: '#{progression}'" if progression
+    l += ', named: true' if named
     l += ', target: true' if target
     l += ', challenge: true' if challenge
     s << l

@@ -51,6 +51,7 @@ class ScriptLevel < ActiveRecord::Base
     progression
     target
     challenge
+    named
   )
 
   def script
@@ -286,12 +287,13 @@ class ScriptLevel < ActiveRecord::Base
       title: level_display_text,
       url: build_script_level_url(self),
       freePlay: level.try(:free_play) == "true",
-      bonus: bonus
+      bonus: bonus,
+      named: named
     }
 
     summary[:progression] = progression if progression
 
-    if named_level
+    if named_level || named
       summary[:name] = level.display_name || level.name
     end
 
