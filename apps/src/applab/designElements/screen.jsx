@@ -156,8 +156,10 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
+      default: color.white,
       classic: color.white,
-      dark: color.black
+      orange: color.applab_orange_background_color,
+      citrus: color.applab_citrus_background_color
     }
   },
 
@@ -179,7 +181,10 @@ export default {
     element.style.position = 'absolute';
     element.style.zIndex = 0;
     if (experiments.isEnabled('applabThemes')) {
-      element.setAttribute('data-theme', applabConstants.themeOptions[0]);
+      element.setAttribute(
+        'data-theme',
+        applabConstants.themeOptions[applabConstants.DEFAULT_THEME_INDEX]
+      );
       elementLibrary.applyCurrentTheme(element, element);
     }
 
@@ -197,12 +202,15 @@ export default {
 
     if (experiments.isEnabled('applabThemes')) {
       if (!element.getAttribute('data-theme')) {
-        element.setAttribute('data-theme', applabConstants.themeOptions[0]);
+        element.setAttribute(
+          'data-theme',
+          applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
+        );
       }
 
       if (element.style.backgroundColor === '') {
         element.style.backgroundColor = this.themeValues.backgroundColor[
-          applabConstants.themeOptions[0]
+          applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
         ];
       }
     }
@@ -225,7 +233,7 @@ export default {
         case 'theme': {
           const prevValue =
             element.getAttribute('data-theme') ||
-            applabConstants.themeOptions[0];
+            applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX];
           element.setAttribute('data-theme', value);
           designMode.changeThemeForCurrentScreen(prevValue, value);
           return true;

@@ -31,6 +31,7 @@ Scenario: Submit three answers.
   And element ".level-group-content:nth(2) #checked_2" is visible
   And element ".level-group-content:nth(2) #checked_0" is visible
 
+@no_ie
 Scenario: Match levels within level group
   Given match level 0 question contains text "Match the code to the image that it will produce."
   And match level 0 contains 4 unplaced answers
