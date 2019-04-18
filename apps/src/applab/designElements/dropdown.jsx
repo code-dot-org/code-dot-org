@@ -194,26 +194,48 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
+      default: color.applab_default_dropdown_background_color,
       classic: color.applab_button_teal,
-      dark: color.yellow
+      orange: color.applab_orange_dropdown_background_color,
+      citrus: color.applab_citrus_dropdown_background_color
     },
     borderRadius: {
+      default: 4,
       classic: 0,
-      dark: 10
+      orange: 0,
+      citrus: 2
     },
     borderWidth: {
+      default: 1,
       classic: 0,
-      dark: 0
+      orange: 2,
+      citrus: 2
     },
     borderColor: {
       type: 'color',
+      default: color.applab_default_dropdown_border_color,
       classic: color.black,
-      dark: color.white
+      orange: color.applab_orange_dropdown_border_color,
+      citrus: color.applab_citrus_dropdown_border_color
     },
     textColor: {
       type: 'color',
+      default: color.applab_default_text_color,
       classic: color.white,
-      dark: color.black
+      orange: color.applab_orange_dropdown_text_color,
+      citrus: color.applab_citrus_dropdown_text_color
+    },
+    fontFamily: {
+      default: 'Arial',
+      classic: 'Arial',
+      orange: 'Verdana',
+      citrus: 'Georgia'
+    },
+    fontSize: {
+      default: 15,
+      classic: 14,
+      orange: 15,
+      citrus: 15
     }
   },
 
@@ -221,13 +243,13 @@ export default {
     const element = document.createElement('select');
     element.style.width = '200px';
     element.style.height = '30px';
-    element.style.fontFamily = fontFamilyStyles[0];
-    element.style.fontSize = defaultFontSizeStyle;
     element.style.margin = '0';
     if (experiments.isEnabled('applabThemes')) {
       element.style.borderStyle = 'solid';
       elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
     } else {
+      element.style.fontFamily = fontFamilyStyles[0];
+      element.style.fontSize = defaultFontSizeStyle;
       element.style.color = color.white;
       element.style.backgroundImage = svgArrowUrl(
         new RGBColor(element.style.color).toHex()
