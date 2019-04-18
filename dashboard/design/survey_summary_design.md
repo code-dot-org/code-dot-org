@@ -34,8 +34,8 @@ The reason is the current data model, controller action and view are very specif
 
 ### Build a new generic survey pipeline
 - What
-  - High level
-  - [a relative link](survey_summary_diagram.png)
+  - High level explanation\
+    ![Diagram](survey_summary_diagram.png)
 - Pros: Minimize work in the future. Enable new scenario. Open for extensions.
 - Cons: Costly
 
