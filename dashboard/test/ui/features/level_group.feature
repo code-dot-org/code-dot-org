@@ -62,6 +62,9 @@ Scenario: Match levels within level group
   When I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1?noautoplay=true"
   And I wait to see ".submitButton"
 
+  # Wait for moves reflecting lastAttempt to be made
+  And I wait until element ".match:nth(1) .match_slots .answer" is visible
+
   Then match level 0 contains 3 unplaced answers
   And match level 0 contains 3 empty slots
   And match level 1 contains 4 unplaced answers

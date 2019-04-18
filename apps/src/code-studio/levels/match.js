@@ -32,7 +32,8 @@ export default class Match {
     // An array indicating which answer belongs in each slot according to the
     // user's last submission, or null if no answer was selected. For example,
     // [null, null, 0, null] indicates that slot index 2 should hold answer
-    // index 0.
+    // with originalIndex 0. originalIndex indicates each answer's position
+    // when all answers are placed in the correct order.
     this.lastAttempt = lastAttempt ? lastAttempt.split(',') : [];
 
     this.readonly = !!window.appOptions.readonlyWorkspace;
@@ -213,21 +214,20 @@ export default class Match {
   makeInitialMoves() {
     const container = document.getElementById(this.id);
 
-    // Obtain a list of html elements for answers and slots ahead of time, so
+    // Obtain a list of html elements for slots ahead of time, so
     // that we don't misplace anything later when those indices change.
 
     const slots = $(container)
       .find('.match_slots .emptyslot')
       .toArray();
 
-    const answers = $(container)
-      .find('.match_answers .answer')
-      .toArray();
-
     for (let i = 0; i < this.lastAttempt.length; i++) {
       const slot = slots[i];
-      const answer = answers[this.lastAttempt[i]];
-      if (answer) {
+      const originalIndex = parseInt(this.lastAttempt[i], 10);
+      if (!isNaN(originalIndex)) {
+        const answer = $(container).find(
+          `.answer[originalIndex=${originalIndex}]`
+        );
         this.dragAnswerToSlot(answer, slot);
       }
     }
