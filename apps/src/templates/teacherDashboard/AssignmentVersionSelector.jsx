@@ -33,6 +33,7 @@ const styles = {
 /**
  * Given an array of versions, return that array with the same versions, plus
  * isRecommended and isSelected properties set on the recommented and selected version(s).
+ * Note: This method will change the content of the versions array that is passed to it.
  * @param {Array<AssignmentVersionShape>} versions
  * @param {String} locale. User's current locale.
  * @param {String} selectedVersionYear. Currently selected version year. Optional.
@@ -42,6 +43,11 @@ export const setRecommendedAndSelectedVersions = (
   locale = null,
   selectedVersionYear = null
 ) => {
+  // Sort versions by year descending.
+  versions = versions
+    .sort((a, b) => parseInt(a.year) - parseInt(b.year))
+    .reverse();
+
   /**
    * We recommend the user use the latest stable version that is supported in their
    * locale. If no versions support their locale, we recommend the latest stable version.
