@@ -47,6 +47,7 @@ export default function initPage(scriptEditorData) {
         announcements={announcements}
         supportedLocales={scriptData.supported_locales}
         locales={locales}
+        projectSharing={scriptData.project_sharing}
       />
     </Provider>,
     document.querySelector('.edit_container')
