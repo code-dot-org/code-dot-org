@@ -1,11 +1,11 @@
 login_required true
 
 stage 'Digital Design'
-named_level 'Building a UI with Design Mode'
+level 'Building a UI with Design Mode', named: true
 level 'CSDU4 Design Mode Video'
 level 'CSDU4 - Design Mode - 15'
 level 'CSDU4 - Design Mode - 4'
-named_level 'Choosing Good IDs'
+level 'Choosing Good IDs', named: true
 level 'CSD U4 - Design Mode Text'
 level 'CSD U4 - Design Mode Input Widgets'
 level 'CSDU4 - Design Mode - 21'
@@ -13,11 +13,11 @@ level 'CSDU4 - Design Mode Icons'
 level 'CSDU4 - Design Mode - 18'
 
 stage 'Event Driven Programming'
-named_level 'Responding to User Input'
+level 'Responding to User Input', named: true
 level 'CSDU4 - Design Mode - 16'
 level 'CSDU4 - Design Mode - 3'
 level 'CSDU4 - Design Mode - 17'
-named_level 'Multi-Screen Apps'
+level 'Multi-Screen Apps', named: true
 level 'CSDU4 - Design Mode - 19'
 level 'CSDU4 - Design Mode - 20'
 level 'CSDU4 Connecting Screens'
@@ -27,7 +27,7 @@ stage 'Basic App Functionality'
 level 'CSDU4 Functionality visible'
 
 stage 'Getters and Setters'
-named_level 'CSD - Getters and Setters'
+level 'CSD - Getters and Setters', named: true
 level 'CSDU6 - UI and Inputs - setScreen', progression: 'Using Getters and Setters'
 level 'CSDU6 - UI and Inputs - setText', progression: 'Using Getters and Setters'
 level 'CSDU6 - UI and Inputs - hide show', progression: 'Using Getters and Setters'
@@ -35,9 +35,9 @@ level 'CSDU6 - UI and Inputs - getText', progression: 'Using Getters and Setters
 level 'CSDU6 - UI and Inputs - dropdown setText', progression: 'Using Getters and Setters'
 level 'CSDU6 - UI and Inputs - get set with text input', progression: 'Using Getters and Setters'
 level 'CSDU6 - UI and Inputs - getNumber practice', progression: 'Using Getters and Setters'
-named_level 'CSD: getText vs getNumber'
-named_level 'CSDU6 - UI and Inputs - getNumber'
-named_level 'CSD: setProperty'
+level 'CSD: getText vs getNumber', named: true
+level 'CSDU6 - UI and Inputs - getNumber', named: true
+level 'CSD: setProperty', named: true
 level 'CSDU6 - UI and Inputs - setProperty first level', progression: 'UI Element Properties'
 level 'CSDU6 - UI and Inputs - setProperty Image', progression: 'UI Element Properties'
 level 'CSDU6 - UI and Inputs - setProperty', progression: 'UI Element Properties'
