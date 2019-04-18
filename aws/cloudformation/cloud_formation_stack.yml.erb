@@ -703,7 +703,7 @@ Resources:
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
       DBClusterParameterGroupName: default.aurora-mysql5.7
       Engine: aurora-mysql
-      EngineVersion: 5.7.mysql_aurora.2.04.1
+      EngineVersion: 5.7.mysql_aurora.2.04.1.2
       MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:username}}"
       MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:password}}"
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
@@ -717,7 +717,7 @@ Resources:
       DBInstanceClass: db.r4.large
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
-      EngineVersion: 5.7.mysql_aurora.2.04.1
+      EngineVersion: 5.7.mysql_aurora.2.04.1.2
 
   DatabaseSecret:
     Type: AWS::SecretsManager::Secret
