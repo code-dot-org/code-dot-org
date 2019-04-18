@@ -1,109 +1,106 @@
 @startuml
+
 left header
   <size:14>Last updated: 4/16/19
   <size:14>Work in progress
 end header
+
 title
   <color:#blue><size:18>**JotForm Survey Summary Assembly Line**
 end title
+
 start
 
-#lightgrey:Jotform submissions
-(in Jotform server)]
-:0a. Fetcher;
-note right
-  Sync data from Jotform as-is.
-  Only insert to this table, no update.
-  Independent from survey-summary request.
-end note
-#lightgrey:Jotform submissions
-(CDO db)]
-note right #lightgrey: Format {joform_id, submission_id, submission content }
+partition Ingest {
+  #lightgrey:Jotform submissions
+  (in Jotform server)]
+  :0a. Fetcher;
+  note right
+    Sync data from Jotform as-is.
+    Only insert to this table, no update.
+    Independent from survey-summary request.
+  end note
+  #lightgrey:Jotform submissions
+  (CDO db)]
+  note right #lightgrey: Format {joform_id, submission_id, submission content }
+}
 
-:0b. Parser;
-note right
-  Parse submission JSON into tables: submissions, questions, answers.
-  Make sure information in these tables are exactly equal to the original submission table.
-  Tables have generic format {id, key, value}.
-  Only insert to these tables, no update.
-  Independent from survey-summary request.
-end note
-#lightgrey:Submission-derived tables]
-note right #lightgrey
-  submissions: {submission_id, form_id, submission metadata}
-  'Parsing 1st level hash
-  questions: {form_id, submission_id, question_id, question_key, question_value}
-  'Parsing 2nd level hash
-  answers: {form_id, submission_id, question_id, answer_key, answer_value}
-end note
+partition Query {
+  :0b. Parser;
+  note right
+    Parse submission JSON into tables: submissions, questions, answers.
+    Make sure information in these tables are exactly equal to the original submission table.
+    Tables have generic format {id, key, value}.
+    Only insert to these tables, no update.
+    Independent from survey-summary request.
+  end note
+  #lightgrey:Submission-derived tables]
+  note right #lightgrey
+    submissions: {submission_id, form_id, submission metadata}
+    'Parsing 1st level hash
+    questions: {form_id, submission_id, question_id, question_key, question_value}
+    'Parsing 2nd level hash
+    answers: {form_id, submission_id, question_id, answer_key, answer_value}
+  end note
 
-:0c. Indexer;
-note right: Index submission using common lookup keys
-#lightgrey:Submission-derived tables
-(+ lookup table)]
-note right #lightgrey
-  Previous tables +
-  submission_lookup: {form_id, submisison_id, workshop_id, environment, user_id,...}
-end note
+  :0c. Indexer;
+  note right: Index submission using common lookup keys
+  #lightgrey:Submission-derived tables
+  (+ lookup table)]
+  note right #lightgrey
+    Previous tables +
+    submission_lookup: {form_id, submisison_id, workshop_id, environment, user_id,...}
+  end note
 
-:1. Filter;
-note right
-  Select submissions based on lookup conditions (e.g. CSF 201 in 2019)
-  and validation rules (e.g. ignore duplicate or invalid submissions).
-  Use submission_lookup table to find submissions faster.
-end note
-#lightgrey:Submission-derived tables
-(filtered)]
+  :1. Filter;
+  note right
+    Select submissions based on lookup conditions (e.g. CSF 201 in 2019)
+    and validation rules (e.g. ignore duplicate or invalid submissions).
+    Use submission_lookup table to find submissions faster.
+  end note
+  #lightgrey:Submission-derived tables
+  (filtered)]
+}
 
-:2. Transformer;
-note right
-  Transform data in questions and answers tables before aggregating answers.
-  E.g. update question unique name to link questions together;
-  convert value range to make values consistent.
-end note
-#lightgrey:Submission-derived tables
-(transformed)]
-'note right #lightgrey: Format {workshop, survey, question, answer}
+partition Summarize {
+  :2. Transformer;
+  note right
+    Transform data in questions and answers tables before aggregating answers.
+    E.g. update question unique name to link questions together;
+    convert value range to make values consistent.
+  end note
+  #lightgrey:Submission-derived tables
+  (transformed)]
+  'note right #lightgrey: Format {workshop, survey, question, answer}
 
-:3. Aggregator;
-note right
-  Aggregate answers for each question based on {workshop, survey, question unique name
-  , question type}.
-  Can have multiple aggregators e.g. calculating average, max, min, distribution etc.
-end note
-#lightgrey:Question result summaries]
-note right #lightgrey: Format {workshop, survey, question, respond count, aggregator, result}
+  :3. Aggregator;
+  note right
+    Aggregate answers for each question based on {workshop, survey, question unique name
+    , question type}.
+    Can have multiple aggregators e.g. calculating average, max, min, distribution etc.
+  end note
+  #lightgrey:Question aggregation results]
+  note right #lightgrey: Format {form_id, workshop_id, qname, agg_name, agg_result}
+}
 
-:4. Decorator;
-note right
-  Add order for workshops, surveys, groups, questions.
-  Add groups/categories for questions.
-  Add info for workshops (course, subject, location) and survey (name).
-end note
-#lightgrey:Question result summaries
-(grouped, ordered, annotated)]
+partition Present {
+  :4. Decorator;
+  note right
+    Add order for workshops, surveys, groups, questions.
+    Add groups/categories for questions.
+    Add info for workshops (course, subject, location) and survey (name).
+  end note
+  #lightgrey:Question result summaries
+  (grouped, ordered, annotated)]
 
-:5. Presenter;
-note right
-  Display summaries for each {workshop, survey}
-end note
-#white:Survey summary view]
+  :5. Presenter;
+  note right
+    Display summaries for each {workshop, survey}
+  end note
+  #white:Survey summary view]
+}
 
 stop
-
-left footer
-  <color:#black><size:14>__**Example**__
-  <color:#black><size:14>**Request:**
-  <color:#black><size:14>Display summaries of all surveys for CSF 201 workshop id 10240.
-  <color:#black><size:14>(Each survey is a Jotform form.)
-
-  <color:#black><size:14>**Assembly line:**
-  <color:#black><size:14>1. FilterWorkshop, FilterInvalidSubmission, FilterDuplicateSubmission
-  <color:#black><size:14>2. TransformInconsitentMaxValue
-  <color:#black><size:14>3. AggregateAverageValue, AggregateLatestQuestionText
-  <color:#black><size:14>4. DecorateCategorizeAndSortQuestion, DecorateWorkshopInfo
-  <color:#black><size:14>5. PresentSingleWorkshopView
-end footer
 
 legend center
   | Color | Type |
@@ -111,4 +108,19 @@ legend center
   |<#Yellow>| Action |
   |<#white>| View |
 end legend
+
+'left footer
+'  <color:#black><size:14>__**Example (Outdated)**__
+'  <color:#black><size:14>**Request:**
+'  <color:#black><size:14>Display summaries of all surveys for CSF 201 workshop id 10240.
+'  <color:#black><size:14>(Each survey is a Jotform form.)
+'
+'  <color:#black><size:14>**Assembly line:**
+'  <color:#black><size:14>1. FilterWorkshop, FilterInvalidSubmission, FilterDuplicateSubmission
+'  <color:#black><size:14>2. TransformInconsitentMaxValue
+'  <color:#black><size:14>3. AggregateAverageValue, AggregateLatestQuestionText
+'  <color:#black><size:14>4. DecorateCategorizeAndSortQuestion, DecorateWorkshopInfo
+'  <color:#black><size:14>5. PresentSingleWorkshopView
+'end footer
+
 @enduml
