@@ -324,6 +324,13 @@ export function open(url) {
   return Applab.executeCmd(null, 'openUrl', {url: url});
 }
 
+export function getList(tableName, columnName) {
+  return Applab.executeCmd(null, 'getList', {
+    tableName: tableName,
+    columnName: columnName
+  });
+}
+
 export function startWebRequest(url, func) {
   return Applab.executeCmd(null, 'startWebRequest', {url: url, func: func});
 }

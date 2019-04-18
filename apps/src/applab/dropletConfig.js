@@ -521,6 +521,12 @@ export var blocks = [
   },
 
   {
+    func: 'getList',
+    parent: api,
+    category: 'Data',
+    params: ['tableName', 'columnName']
+  },
+  {
     func: 'startWebRequest',
     parent: api,
     category: 'Data',
