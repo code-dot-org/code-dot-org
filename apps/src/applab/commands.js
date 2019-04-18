@@ -1671,6 +1671,10 @@ function logWebRequest(url) {
   });
 }
 
+applabCommands.getList = function(tableName, columnName) {
+  console.log('getList!');
+};
+
 applabCommands.startWebRequest = function(opts) {
   apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
