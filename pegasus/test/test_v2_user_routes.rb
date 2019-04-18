@@ -71,5 +71,12 @@ class V2UserRoutesTest < SequelTestCase
         )
       end
     end
+
+    # Stubs the user ID for the duration of the test to match the ID of the
+    # user hash given. The result should be pulled in through the mock database.
+    # @param [Hash] role
+    def with_role(role)
+      Documents.any_instance.stubs(:dashboard_user_id).returns(role.nil? ? nil : role[:id])
+    end
   end
 end
