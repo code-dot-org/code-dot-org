@@ -98,7 +98,8 @@ class ScriptOverviewHeader extends Component {
       script.name.length > 0 &&
       script.name !== this.props.scriptName
     ) {
-      window.location.href = `/s/${script.name}`;
+      const queryParams = window.location.search || '';
+      window.location.href = `/s/${script.name}${queryParams}`;
     }
   };
 
