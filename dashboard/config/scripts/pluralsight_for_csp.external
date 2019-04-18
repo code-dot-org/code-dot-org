@@ -5,13 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Go further with _Pluralsight One_ computer science courses!
 
-Having fun learning computer science? Now you can get access to _Pluralsight One_ courses for one year, and learn even more about networking, help desk, databases, programming, game dev and more!
+Having fun learning computer science? Now you can get access to _Pluralsight One_ courses for one year, and learn even more about networking, help desk, databases, programming, game dev and more! With _Pluralsight One_, you can try courses like **"Example 1"**; **"Example 2"**; and **"Example 3"**, pick up new skills, and test out what you've learned through Code.org.
 
 
-Try courses like **"Example 1"**; **"Example 2"**; and **"Example 3"** so you can test out what you've learned through Code.org and pick up skills in new areas.
-
-
-To get access to the specially-curated catalog of _Pluralsight One_ courses for a year, click the button below.
+To get access to the specially-curated catalog of _Pluralsight One_ courses for a year, click the "Get started" button below. You'll be asked to sign up for Pluralsight One and will receive a redemption code to your email that you can use to access the courses.
 
 
 <a class=“btn btn-large btn-primary” href="https://www.pluralsight.com/redeem"> Get started </a>
@@ -26,6 +23,10 @@ MARKDOWN
 
 teacher_markdown <<MARKDOWN
 To access this offer, have your students do the following:
-1. Click the "Get started" link above to get access to a unique redemption code
-2. Go to pluralsight.com/redeem and sign up using the redemption code
+1. Click the “Get started” button above to sign up for the Pluralsight One offer
+2. After signing up, the student will receive an email with a link to activate the offer
+3. Once they've activated the offer via the link, the student will have 12 months free access to Pluralsight One
+
+[Learn more about how to use this offer in your classroom](https://www.pluralsight.com)
+
 MARKDOWN
