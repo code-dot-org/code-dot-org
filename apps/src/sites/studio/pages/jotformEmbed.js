@@ -34,6 +34,10 @@ window.handleIFrameMessage = function(e) {
       break;
     case 'setHeight':
       iframe.style.height = args[1] + 'px';
+      // The setHeight message seems to be sent every time we load the form, so use this
+      // to fire the hook we are monitoring to indicate the iframe content has loaded.
+      // eslint-disable-next-line
+      JotFormFrameLoaded();
       break;
     case 'collapseErrorPage':
       if (iframe.clientHeight > window.innerHeight) {
