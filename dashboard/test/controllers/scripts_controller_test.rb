@@ -317,6 +317,30 @@ class ScriptsControllerTest < ActionController::TestCase
     refute Script.find_by_name(script.name).hidden
   end
 
+  test 'updates project_sharing' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+
+    assert_nil Script.find_by_name(script.name).project_sharing
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      project_sharing: "on"
+    }
+    assert Script.find_by_name(script.name).project_sharing
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: ''
+    }
+    refute Script.find_by_name(script.name).project_sharing
+  end
+
   no_access_msg = "You don&#39;t have access to this unit."
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
