@@ -21,6 +21,7 @@ import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import elementLibrary from './library';
 import experiments from '../../util/experiments';
+import {growToGridSize} from '../gridUtils';
 
 class ButtonProperties extends React.Component {
   static propTypes = {
@@ -208,26 +209,48 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
+      default: color.applab_default_button_background_color,
       classic: color.applab_button_teal,
-      dark: color.yellow
+      orange: color.applab_orange_button_background_color,
+      citrus: color.applab_citrus_button_background_color
     },
     borderRadius: {
+      default: 4,
       classic: 0,
-      dark: 10
+      orange: 0,
+      citrus: 2
     },
     borderWidth: {
+      default: 1,
       classic: 0,
-      dark: 0
+      orange: 2,
+      citrus: 2
     },
     borderColor: {
       type: 'color',
+      default: color.applab_default_button_border_color,
       classic: color.black,
-      dark: color.white
+      orange: color.applab_orange_button_border_color,
+      citrus: color.applab_citrus_button_border_color
     },
     textColor: {
       type: 'color',
+      default: color.applab_default_button_text_color,
       classic: color.white,
-      dark: color.black
+      orange: color.applab_orange_text_color,
+      citrus: color.applab_citrus_text_color
+    },
+    fontFamily: {
+      default: 'Arial Black',
+      classic: 'Arial',
+      orange: 'Verdana',
+      citrus: 'Georgia'
+    },
+    fontSize: {
+      default: 18,
+      classic: 14,
+      orange: 18,
+      citrus: 18
     }
   },
   create: function() {
@@ -235,14 +258,21 @@ export default {
     element.appendChild(document.createTextNode('Button'));
     element.style.padding = '0px';
     element.style.margin = '0px';
-    element.style.height = '30px';
-    element.style.width = '80px';
-    element.style.fontFamily = fontFamilyStyles[0];
-    element.style.fontSize = defaultFontSizeStyle;
     if (experiments.isEnabled('applabThemes')) {
       element.style.borderStyle = 'solid';
+      // Roughly scale default size based on the current theme's font size:
+      const currentTheme = elementLibrary.getCurrentTheme(
+        designMode.activeScreen()
+      );
+      const fontSize = this.themeValues.fontSize[currentTheme];
+      element.style.height = `${growToGridSize(fontSize * 2)}px`;
+      element.style.width = `${10 + growToGridSize(fontSize * 5)}px`;
       elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
     } else {
+      element.style.height = '30px';
+      element.style.width = '80px';
+      element.style.fontFamily = fontFamilyStyles[0];
+      element.style.fontSize = defaultFontSizeStyle;
       elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
       element.style.color = color.white;
       element.style.backgroundColor = color.applab_button_teal;
