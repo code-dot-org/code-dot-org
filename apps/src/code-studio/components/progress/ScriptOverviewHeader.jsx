@@ -18,6 +18,10 @@ import {
   dismissedRedirectWarning,
   onDismissRedirectWarning
 } from '@cdo/apps/util/dismissVersionRedirect';
+import AssignmentVersionSelector, {
+  setRecommendedAndSelectedVersions
+} from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
+import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -50,13 +54,6 @@ const styles = {
   }
 };
 
-export const scriptVersionShape = PropTypes.shape({
-  name: PropTypes.string.isRequired,
-  version_year: PropTypes.string.isRequired,
-  version_title: PropTypes.string.isRequired,
-  can_view_version: PropTypes.bool.isRequired
-});
-
 /**
  * This component takes some of the HAML generated content on the script overview
  * page, and moves it under our React root. This is done so that we can have React
@@ -84,19 +81,25 @@ class ScriptOverviewHeader extends Component {
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
     showRedirectWarning: PropTypes.bool,
-    versions: PropTypes.arrayOf(scriptVersionShape).isRequired,
+    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     showHiddenUnitWarning: PropTypes.bool,
-    courseName: PropTypes.string
+    courseName: PropTypes.string,
+    locale: PropTypes.string
   };
 
   componentDidMount() {
     $('#lesson-heading-extras').appendTo(ReactDOM.findDOMNode(this.protected));
   }
 
-  onChangeVersion = event => {
-    const scriptName = event.target.value;
-    if (scriptName !== this.props.scriptName) {
-      window.location.href = `/s/${scriptName}`;
+  onChangeVersion = versionYear => {
+    const script = this.props.versions.find(v => v.year === versionYear);
+    if (
+      script &&
+      script.name.length > 0 &&
+      script.name !== this.props.scriptName
+    ) {
+      const queryParams = window.location.search || '';
+      window.location.href = `/s/${script.name}${queryParams}`;
     }
   };
 
@@ -182,8 +185,14 @@ class ScriptOverviewHeader extends Component {
     }
 
     // Only display viewable versions in script version dropdown.
-    const filteredVersions = versions.filter(
-      version => version.can_view_version
+    const filteredVersions = versions.filter(version => version.canViewVersion);
+    const selectedVersion = filteredVersions.find(
+      v => v.name === this.props.scriptName
+    );
+    setRecommendedAndSelectedVersions(
+      filteredVersions,
+      this.props.locale,
+      selectedVersion && selectedVersion.year
     );
 
     return (
@@ -239,24 +248,11 @@ class ScriptOverviewHeader extends Component {
                 {betaTitle && <span className="betatext">{betaTitle}</span>}
               </h1>
               {filteredVersions.length > 1 && (
-                <span style={styles.versionWrapper}>
-                  <span style={styles.versionLabel}>
-                    {i18n.courseOverviewVersionLabel()}
-                  </span>
-                  &nbsp;
-                  <select
-                    onChange={this.onChangeVersion}
-                    value={scriptName}
-                    style={styles.versionDropdown}
-                    id="version-selector"
-                  >
-                    {filteredVersions.map(version => (
-                      <option key={version.name} value={version.name}>
-                        {version.version_year}
-                      </option>
-                    ))}
-                  </select>
-                </span>
+                <AssignmentVersionSelector
+                  onChangeVersion={this.onChangeVersion}
+                  versions={filteredVersions}
+                  rightJustifiedPopupMenu={true}
+                />
               )}
             </div>
             <p style={styles.description}>{scriptDescription}</p>
