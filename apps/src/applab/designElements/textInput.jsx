@@ -18,7 +18,6 @@ import {
   themeOptions,
   CLASSIC_THEME_INDEX
 } from '../constants';
-import color from '../../util/color';
 import themeColor from '../themeColor';
 import elementLibrary from './library';
 import experiments from '../../util/experiments';
@@ -213,10 +212,10 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: themeColor.default_text_input_background,
-      classic: color.white,
-      orange: themeColor.orange_text_input_background,
-      citrus: themeColor.citrus_text_input_background
+      default: themeColor.default.text_input_background,
+      classic: themeColor.classic.text_input_background,
+      orange: themeColor.orange.text_input_background,
+      citrus: themeColor.citrus.text_input_background
     },
     borderRadius: {
       default: 4,
@@ -232,17 +231,17 @@ export default {
     },
     borderColor: {
       type: 'color',
-      default: themeColor.default_text_input_border,
-      classic: themeColor.classic_text_input_border,
-      orange: themeColor.orange_text_input_border,
-      citrus: themeColor.citrus_text_input_border
+      default: themeColor.default.text_input_border,
+      classic: themeColor.classic.text_input_border,
+      orange: themeColor.orange.text_input_border,
+      citrus: themeColor.citrus.text_input_border
     },
     textColor: {
       type: 'color',
-      default: themeColor.default_text,
-      classic: color.black,
-      orange: themeColor.orange_text,
-      citrus: themeColor.citrus_text
+      default: themeColor.default.text,
+      classic: themeColor.classic.text,
+      orange: themeColor.orange.text,
+      citrus: themeColor.citrus.text
     },
     fontFamily: {
       default: 'Arial',
@@ -269,7 +268,7 @@ export default {
     } else {
       element.style.fontFamily = fontFamilyStyles[0];
       element.style.fontSize = defaultFontSizeStyle;
-      element.style.color = '#000000';
+      element.style.color = themeColor.classic.text;
       element.style.backgroundColor = '';
       elementUtils.setDefaultBorderStyles(element, {
         forceDefaults: true,

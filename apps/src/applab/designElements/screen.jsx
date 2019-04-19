@@ -11,7 +11,6 @@ import designMode from '../designMode';
 import elementLibrary from './library';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
-import color from '../../util/color';
 import themeColor from '../themeColor';
 import experiments from '../../util/experiments';
 
@@ -157,10 +156,10 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: themeColor.default_background,
-      classic: color.white,
-      orange: themeColor.orange_background,
-      citrus: themeColor.citrus_background
+      default: themeColor.default.background,
+      classic: themeColor.classic.background,
+      orange: themeColor.orange.background,
+      citrus: themeColor.citrus.background
     }
   },
 

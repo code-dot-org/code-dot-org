@@ -8,7 +8,6 @@ import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import color from '../../util/color';
 import themeColor from '../themeColor';
 import EnumPropertyRow from './EnumPropertyRow';
 import BorderProperties from './BorderProperties';
@@ -195,10 +194,10 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: themeColor.default_dropdown_background,
-      classic: color.applab_button_teal,
-      orange: themeColor.orange_dropdown_background,
-      citrus: themeColor.citrus_dropdown_background
+      default: themeColor.default.dropdown_background,
+      classic: themeColor.classic.dropdown_background,
+      orange: themeColor.orange.dropdown_background,
+      citrus: themeColor.citrus.dropdown_background
     },
     borderRadius: {
       default: 4,
@@ -214,17 +213,17 @@ export default {
     },
     borderColor: {
       type: 'color',
-      default: themeColor.default_dropdown_border,
-      classic: color.black,
-      orange: themeColor.orange_dropdown_border,
-      citrus: themeColor.citrus_dropdown_border
+      default: themeColor.default.dropdown_border,
+      classic: themeColor.classic.dropdown_border,
+      orange: themeColor.orange.dropdown_border,
+      citrus: themeColor.citrus.dropdown_border
     },
     textColor: {
       type: 'color',
-      default: themeColor.default_text,
-      classic: color.white,
-      orange: themeColor.orange_dropdown_text,
-      citrus: themeColor.citrus_dropdown_text
+      default: themeColor.default.dropdown_text,
+      classic: themeColor.classic.dropdown_text,
+      orange: themeColor.orange.dropdown_text,
+      citrus: themeColor.citrus.dropdown_text
     },
     fontFamily: {
       default: 'Arial',
@@ -251,11 +250,11 @@ export default {
     } else {
       element.style.fontFamily = fontFamilyStyles[0];
       element.style.fontSize = defaultFontSizeStyle;
-      element.style.color = color.white;
+      element.style.color = themeColor.classic.dropdown_text;
       element.style.backgroundImage = svgArrowUrl(
         new RGBColor(element.style.color).toHex()
       );
-      element.style.backgroundColor = color.applab_button_teal;
+      element.style.backgroundColor = themeColor.classic.dropdown_background;
       elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     }
 

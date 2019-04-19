@@ -10,7 +10,6 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
 import themeColor from './themeColor';
-import color from '../util/color';
 import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
@@ -206,8 +205,8 @@ applabCommands.button = function(opts) {
   } else {
     newButton.style.fontSize = defaultFontSizeStyle;
     newButton.style.fontFamily = fontFamilyStyles[0];
-    newButton.style.color = color.white;
-    newButton.style.backgroundColor = color.applab_button_teal;
+    newButton.style.color = themeColor.classic.button_text;
+    newButton.style.backgroundColor = themeColor.classic.button_background;
     elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
   }
 
@@ -945,7 +944,7 @@ applabCommands.textLabel = function(opts) {
   } else {
     newLabel.style.fontSize = defaultFontSizeStyle;
     newLabel.style.fontFamily = fontFamilyStyles[0];
-    newLabel.style.backgroundColor = themeColor.classic_label_background;
+    newLabel.style.backgroundColor = themeColor.classic.label_background;
     elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
   }
   var forElement = document.getElementById(opts.forId);
@@ -1016,13 +1015,13 @@ applabCommands.dropdown = function(opts) {
   } else {
     newSelect.style.fontSize = defaultFontSizeStyle;
     newSelect.style.fontFamily = fontFamilyStyles[0];
-    newSelect.style.color = color.white;
+    newSelect.style.color = themeColor.classic.dropdown_text;
     elementLibrary.typeSpecificPropertyChange(
       newSelect,
       'textColor',
       newSelect.style.color
     );
-    newSelect.style.backgroundColor = color.applab_button_teal;
+    newSelect.style.backgroundColor = themeColor.classic.dropdown_background;
     elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});
   }
 
