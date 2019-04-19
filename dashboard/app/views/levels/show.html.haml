@@ -28,7 +28,10 @@
   -# Render the hidden stage partial, but make it hidden so that client can unhide if needed
   = render partial: 'levels/hidden_stage', locals: {hidden: true}
 
-  - if @game.unplugged?
+  -# anonymous users shouldn't ever see lockable stages, but give them the locked_stage message if they do
+  - if @script_level && @script_level.stage.lockable? && (!current_user || @script_level.locked?(current_user))
+    = render 'levels/locked_stage'
+  - elsif @game.unplugged?
     :javascript
       var appOptions = #{app_options.to_json};
     = render partial: 'levels/unplug', locals: {app: @game.app}

@@ -43,9 +43,9 @@ class StageLockTest < ActionDispatch::IntegrationTest
 
     get build_script_level_path(@lockable_external_sl)
     assert_response :success
-    # assert the current but incorrect behavior
-    assert_includes response.body, 'lorem ipsum'
-    assert_select "#locked-stage", 0
+    refute_includes response.body, 'lorem ipsum'
+    assert_select "#locked-stage", 1
+    assert_select "#locked-stage[data-hidden]", 0
 
     get build_script_level_path(@lockable_level_group_sl)
     assert_response :redirect
