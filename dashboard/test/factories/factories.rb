@@ -90,6 +90,12 @@ FactoryGirl.define do
           project_validator.save
         end
       end
+      factory :authorized_teacher do
+        after(:create) do |authorized_teacher|
+          authorized_teacher.permission = UserPermission::AUTHORIZED_TEACHER
+          authorized_teacher.save
+        end
+      end
       factory :facilitator do
         transient do
           course nil
@@ -565,6 +571,10 @@ FactoryGirl.define do
   end
 
   factory :external, parent: :level, class: External do
+    after(:create) do |level|
+      level.properties['markdown'] = 'lorem ipsum'
+      level.save!
+    end
   end
 
   factory :external_link, parent: :level, class: ExternalLink do
@@ -776,8 +786,15 @@ FactoryGirl.define do
         title: title,
         anonymous: false,
         submittable: submittable,
-        pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]
+        pages: [{levels: ['sublevel1', 'sublevel2']}, {levels: ['sublevel3']}]
       }
+    end
+    after(:create) do |lg|
+      lg.properties['pages'].each do |page|
+        page['levels'].each do |level_name|
+          create :level, name: level_name
+        end
+      end
     end
   end
 
