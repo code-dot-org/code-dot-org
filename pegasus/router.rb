@@ -348,7 +348,11 @@ class Documents < Sinatra::Base
     end
 
     def preprocess_markdown(markdown_content)
-      markdown_content.gsub(/```/, "```\n")
+      markdown_content.
+        gsub(/```/, "```\n").
+        gsub(/{{([^}]*)}}/) do
+          view($1.strip)
+        end
     end
 
     def resolve_static(subdir, uri)
@@ -480,8 +484,7 @@ class Documents < Sinatra::Base
         cache :static
         send_file(cache_file)
       when '.md', '.txt'
-        preprocessed = erb body, options
-        preprocessed = preprocess_markdown preprocessed
+        preprocessed = preprocess_markdown body
         markdown preprocessed, options
       when '.redirect', '.moved', '.301'
         redirect erb(body, options), 301
