@@ -170,6 +170,8 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     return {} unless object.try(:school_id)
 
     school = School.find_by_id(object.school_id)
+    return {} unless school
+
     stats = school.school_stats_by_year.order(school_year: :desc).first
     return {} unless stats
 
