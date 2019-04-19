@@ -32,13 +32,6 @@ class ContactRollups
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
-  # Connection to write to Pegasus reporting database.
-  PEGASUS_REPORTING_DB_WRITER = sequel_connect(
-    CDO.pegasus_reporting_db_writer,
-    CDO.pegasus_reporting_db_writer,
-    query_timeout: MAX_EXECUTION_TIME_SEC
-  )
-
   # Connection to read from Dashboard reporting database.
   DASHBOARD_REPORTING_DB_READER = sequel_connect(
     CDO.dashboard_reporting_db_reader,
@@ -137,7 +130,7 @@ class ContactRollups
   def self.build_contact_rollups
     start = Time.now
 
-    PEGASUS_REPORTING_DB_WRITER.run "SET SQL_SAFE_UPDATES = 0"
+    PEGASUS_DB_WRITER.run "SET SQL_SAFE_UPDATES = 0"
     # set READ UNCOMMITTED transaction isolation level on both read connections to avoid taking locks
     # on tables we are reading from during what can be multi-minute operations
     DASHBOARD_REPORTING_DB_READER.run "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
@@ -279,8 +272,8 @@ class ContactRollups
     # Ensure destination table exists and is empty. Since this code runs on the reporting replica and the destination
     # table should exist only there, we can't use a migration to create it. Create the destination table explicitly in code.
     # Create it based on master contact_rollups table. Create it every time to keep up with schema changes in contact_rollups.
-    PEGASUS_REPORTING_DB_WRITER.run "DROP TABLE IF EXISTS #{DEST_TABLE_NAME}"
-    PEGASUS_REPORTING_DB_WRITER.run "CREATE TABLE #{DEST_TABLE_NAME} LIKE #{TEMPLATE_TABLE_NAME}"
+    PEGASUS_DB_WRITER.run "DROP TABLE IF EXISTS #{DEST_TABLE_NAME}"
+    PEGASUS_DB_WRITER.run "CREATE TABLE #{DEST_TABLE_NAME} LIKE #{TEMPLATE_TABLE_NAME}"
     log_completion(start)
   end
 
@@ -296,7 +289,7 @@ class ContactRollups
   def self.insert_from_dashboard_contacts
     start = Time.now
     log "Inserting teacher contacts and IP geo data from dashboard.users"
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, dashboard_user_id, roles, city, state, postal_code, country)
     -- Use CONCAT+COALESCE to append 'Teacher' to any existing roles
     SELECT users.email COLLATE utf8_general_ci, users.name, users.id, CONCAT(COALESCE(CONCAT(src.roles, ','), ''), '#{ROLE_TEACHER}'),
@@ -312,7 +305,7 @@ class ContactRollups
   def self.insert_from_dashboard_pd_enrollments
     start = Time.now
     log "Inserting contacts from dashboard.pd_enrollments"
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles)
     SELECT email, name, '#{ROLE_TEACHER}'
     FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
@@ -331,7 +324,7 @@ class ContactRollups
   def self.insert_from_dashboard_census_submissions
     start = Time.now
     log "Inserting contacts from dashboard.census_submissions"
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted, form_roles)
     SELECT submitter_email_address, submitter_name, '#{ROLE_FORM_SUBMITTER}', '#{CENSUS_FORM_NAME}', lower(submitter_role)
     FROM #{DASHBOARD_DB_NAME}.census_submissions AS census_submissions
@@ -380,7 +373,7 @@ class ContactRollups
       zip = user_and_geo[:zip]
       email = user_and_geo[:email]
       # update the user's city/state/zip
-      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: email).
+      PEGASUS_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: email).
         update(city: city, state: state,
         postal_code: zip, country: 'United States'
         )
@@ -392,7 +385,7 @@ class ContactRollups
   def self.update_teachers_from_forms
     start = Time.now
     log "Updating teacher roles based on submitted forms"
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{PEGASUS_DB_NAME}.forms on forms.email = #{DEST_TABLE_NAME}.email
     SET roles =
@@ -410,7 +403,7 @@ class ContactRollups
   def self.update_teachers_from_census_submissions
     start = Time.now
     log "Updating teacher roles based on census submissions"
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{DASHBOARD_DB_NAME}.census_submissions on census_submissions.submitter_email_address = #{DEST_TABLE_NAME}.email
     SET roles =
@@ -427,7 +420,7 @@ class ContactRollups
   def self.update_unsubscribe_info
     start = Time.now
     log "Inserting contacts from pegasus.contacts"
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{PEGASUS_DB_NAME}.contacts on contacts.email = #{DEST_TABLE_NAME}.email
     SET opted_out = true
@@ -438,7 +431,7 @@ class ContactRollups
   def self.update_email_preferences
     start = Time.now
     log "Updating from dashboard.email_preferences"
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{DASHBOARD_DB_NAME}.email_preferences on email_preferences.email = #{DEST_TABLE_NAME}.email
     SET #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.opt_in = #{DASHBOARD_DB_NAME}.email_preferences.opt_in"
@@ -448,7 +441,7 @@ class ContactRollups
   def self.insert_from_pegasus_forms
     start = Time.now
     log "Inserting contacts and IP geo data from pegasus.forms"
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted, city, state, postal_code, country)
     SELECT email, name, '#{ROLE_FORM_SUBMITTER}', kind, city, state, postal_code, country FROM #{PEGASUS_DB_NAME}.forms
     LEFT OUTER JOIN #{PEGASUS_DB_NAME}.form_geos on form_geos.form_id = forms.id
@@ -490,7 +483,7 @@ class ContactRollups
   end
 
   def self.append_to_role_list_from_permission(permission_name, dest_value)
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
     INNER JOIN #{DASHBOARD_DB_NAME}.user_permissions AS user_permissions ON user_permissions.user_id = users.id
@@ -503,7 +496,7 @@ class ContactRollups
     start = Time.now
     log "Appending '#{dest_field}' field with #{dest_value} from forms of kind #{form_kinds}"
 
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{PEGASUS_DB_NAME}.forms ON forms.email = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.email
     SET #{dest_field} = CONCAT(COALESCE(CONCAT(#{dest_field}, ','), ''), #{dest_value})
@@ -512,7 +505,7 @@ class ContactRollups
   end
 
   def self.add_role_from_course_sections_taught(role_name, course_name)
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN (
       select distinct id from (
@@ -534,7 +527,7 @@ class ContactRollups
   end
 
   def self.add_role_from_script_sections_taught(role_name, script_list)
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN (
         select distinct sections.user_id from #{DASHBOARD_DB_NAME}.sections AS sections
@@ -546,7 +539,7 @@ class ContactRollups
   end
 
   def self.append_regional_partner_to_role_list
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
     INNER JOIN #{DASHBOARD_DB_NAME}.regional_partners AS regional_partners ON regional_partners.contact_id = users.id
@@ -557,7 +550,7 @@ class ContactRollups
   def self.update_courses_facilitated
     start = Time.now
     log "Updating courses_facilitated"
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
     (SELECT facilitator_id, GROUP_CONCAT(course) AS courses FROM
       (SELECT DISTINCT facilitator_id, course FROM #{DASHBOARD_DB_NAME}.pd_course_facilitators
@@ -587,7 +580,7 @@ class ContactRollups
   # Updates user id-based professional learning enrollment for specified course
   # @param course [String] name of course to update for
   def self.update_professional_learning_enrollment_for_course_from_userid(course)
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
       (SELECT user_id FROM
         (SELECT DISTINCT pd_enrollments.user_id FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
@@ -607,7 +600,7 @@ class ContactRollups
   # Updates email-based professional learning enrollment for specified course
   # @param course [String] name of course to update for
   def self.update_professional_learning_enrollment_for_course_from_email(course)
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
       (SELECT email FROM
         (SELECT DISTINCT pd_enrollments.email FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
@@ -636,7 +629,7 @@ class ContactRollups
   # Updates professional learning attendance based on pd_attendances table
   # @param course [String] name of course to update for
   def self.update_professional_learning_attendance_for_course_from_pd_attendances(course)
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
       UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
         (SELECT DISTINCT users.email
           FROM #{DASHBOARD_DB_NAME}.pd_attendances AS pd_attendances
@@ -657,7 +650,7 @@ class ContactRollups
   # Updates professional learning attendance based on sections table
   # @param course [String] name of course to update for
   def self.update_professional_learning_attendance_for_course_from_sections(course)
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
       (SELECT DISTINCT users_view.email
       FROM #{DASHBOARD_DB_NAME}.sections
@@ -682,7 +675,7 @@ class ContactRollups
 
   def self.mysql_multi_connection
     # return a connection with the MULTI_STATEMENTS flag set that allows multiple statements in one DB call
-    Sequel.connect(CDO.pegasus_reporting_db_writer.sub('mysql:', 'mysql2:'), flags: ::Mysql2::Client::MULTI_STATEMENTS)
+    Sequel.connect(CDO.PEGASUS_DB_WRITER.sub('mysql:', 'mysql2:'), flags: ::Mysql2::Client::MULTI_STATEMENTS)
   end
 
   # Extracts and formats address data from form data
@@ -828,7 +821,7 @@ class ContactRollups
   def self.update_grades_taught
     start = Time.now
     log "Updating grades taught from dashboard.users"
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
     (SELECT dashboard_user_id, GROUP_CONCAT(grade) as grades FROM
       (SELECT DISTINCT #{DEST_TABLE_NAME}.dashboard_user_id, sections.grade FROM #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
@@ -855,7 +848,7 @@ class ContactRollups
     # for age = 4, include 4 and below
     max_birthday_clause = "students.birthday <= DATE_ADD(NOW(), INTERVAL -#{age} YEAR) AND" unless age <= 4
 
-    PEGASUS_REPORTING_DB_WRITER.run "
+    PEGASUS_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}, (
     SELECT DISTINCT sections.user_id AS teacher_user_id
     FROM #{DASHBOARD_DB_NAME}.users_view AS students
@@ -907,7 +900,7 @@ class ContactRollups
     user = grab_next(users_iterator)
     until user.nil?
       unless user[:ops_school].nil?
-        PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user[:email]).
+        PEGASUS_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user[:email]).
             update(school_name: user[:ops_school])
       end
       user = grab_next(users_iterator)
@@ -921,7 +914,7 @@ class ContactRollups
         select_append(:school_districts__name___district_name).select_append(:school_districts__updated_at___district_updated_at).
         inner_join(:school_infos, id: :school_info_id).
         inner_join(:school_districts, id: :school_district_id).order_by(:district_updated_at).each do |pd_enrollment|
-      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(
+      PEGASUS_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(
         district_name: pd_enrollment[:district_name],
         district_city: pd_enrollment[:city],
         district_state: pd_enrollment[:state],
@@ -935,7 +928,7 @@ class ContactRollups
     start = Time.now
     log "Updating school information from dashboard.pd_enrollments"
     DASHBOARD_REPORTING_DB_READER[:pd_enrollments].exclude(email: nil).where('length(school) > 0').find do |pd_enrollment|
-      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(school_name: pd_enrollment[:school])
+      PEGASUS_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(school_name: pd_enrollment[:school])
     end
     log_completion(start)
   end
