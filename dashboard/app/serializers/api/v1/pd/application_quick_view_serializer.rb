@@ -18,7 +18,7 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     :meets_criteria,
     :meets_scholarship_criteria,
     :friendly_scholarship_status,
-    :allow_resending_principal_email
+    :allow_sending_principal_email
   )
 
   def locked
@@ -41,7 +41,7 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     object.try(:friendly_scholarship_status)
   end
 
-  def allow_resending_principal_email
-    object.try(:allow_resending_principal_email)
+  def allow_sending_principal_email
+    object.try(:allow_sending_principal_email)
   end
 end
