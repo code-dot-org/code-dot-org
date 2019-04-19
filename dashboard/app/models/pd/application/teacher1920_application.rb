@@ -335,7 +335,7 @@ module Pd::Application
       principal_approval_email = emails.where(email_type: 'principal_approval').last
       last_principal_approval_email_sent_at = principal_approval_email&.sent_at
 
-      # Do we allow resending the principal email?
+      # Do we allow sending the principal email?
 
       # Only if this teacher application is currently unreviewed or pending.
       return false unless unreviewed? || pending?
