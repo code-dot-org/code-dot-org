@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 import * as utils from '@cdo/apps/utils';
