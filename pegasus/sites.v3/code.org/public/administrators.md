@@ -4,7 +4,7 @@ theme: responsive
 video_player: true
 ---
 <link href='/shared/css/course-explorer.css', rel='stylesheet'></link>
-<script src="<%= minifiable_asset_path('js/code.org/public/educate/curriculum/courses.js') %>"></script>
+{{ administrators/script }}
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
 <script src="https://cdn.optimizely.com/js/12977480133.js"></script>
 
@@ -12,7 +12,7 @@ video_player: true
 
 <div class="col-40" style="padding-right: 20px">
 
-<%= view :display_video_thumbnail, id: 'cs_district', video_code: 'POiMh0qISpI', play_button: 'center', letterbox: 'false' %>
+{{ administrators/video_thumbnail }}
 
 </div>
 
@@ -41,7 +41,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 ## Get started with curriculum and professional learning
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-12', description: "Code.org's professional development workshops support teachers with no background in computer science. We offer a high quality K-12 curriculum that can be used for a semester or full year. It includes daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings, all free to use. In the U.S., Code.org's network of Regional Partners prepare teachers to successfully lead computer science classrooms." %>
+{{ administrators/course_wide_block }}
 <div style="clear:both"></div>
 
 ## Start Planning Now
@@ -74,7 +74,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 <h3 style="font-family: 'Gotham 5r', sans-serif">Identify a computer science course pathway for your existing teachers</h3>
 
 - The [Code.org curriculum](https://studio.code.org/courses?view=teacher) is the most popular in K-12 computer science, with courses for every grade band. It's free of charge, and is also the highest-rated by teachers. Your students will love it!
-- Teachers from other subject areas should attend a professional learning workshop before they begin teaching. For Code.org courses in grades K-12, [contact a regional partner](<%= CDO.studio_url('/pd/regional_partner_contact/new') %>).
+- Teachers from other subject areas should attend a professional learning workshop before they begin teaching. For Code.org courses in grades K-12, [contact a regional partner]({{ administrators/partner_contact_url }}).
 - If you want to consider alternatives to the Code.org courses, see our recommendations of [3rd party computer science curriculum](/educate/curriculum/3rd-party), and particularly our recommendations for [AP Computer Science A](/educate/curriculum/apcsa).
 - You can also supplement the Code.org curriculum by offering computer science integrated [into math](/educate/algebra) and [into science](/curriculum/science).
 - Once you've decided on your course offerings, make sure to set up district-level course codes for your new computer science courses. Work with your principals to recruit teachers to attend workshops and to implement changes in master schedules.
@@ -158,10 +158,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 <hr>
 
-<%= view :three_circles, circles: [
-{img: '/images/fit-150/pair_students.jpg', text: 'Over 50k students in 3 years', subtext: 'Read Broward County\'s case study on how it increased computer science participation across the district.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.rf0l0zfkbqe4', link_text: 'Learn more'},
-{img: '/images/fit-150/sotm34.jpg', text: '51% female students in intro course', subtext: 'See how graduation requirements affected diversity in Charles County\'s introductory computer science course.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.8xs8zt2iloy0', link_text: 'Learn more'},
-{img: '/images/fit-150/pd1.jpg', text: 'Professional learning for all', subtext: 'Read how Eufala City Schools, AL increased access to computer science to all students in their rural district.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.9ub4frvyuqiy', link_text: 'Learn more'}] %>
+{{ administrators/three_circles }}
 
 <hr>
 
@@ -172,7 +169,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 ### Code.org Programs
 The Code.org curriculum is the most popular in K-12 computer science, with courses for every grade band. All the curriculum is offered at no cost to your school.
 
-<%= view :course_explorer_table, responsive: true %>
+{{ course_explorer_table }}
 
 [<button>View all Code.org programs</button>](https://studio.code.org/courses?view=teacher)
 
