@@ -48,6 +48,7 @@ export default connect(
               ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
             }
             <button
+              type="button"
               id="pauseButton"
               className="debugger_button"
               onClick={this.props.togglePause}
@@ -61,6 +62,7 @@ export default connect(
               ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
             }
             <button
+              type="button"
               id="continueButton"
               className="debugger_button"
               onClick={this.props.togglePause}
@@ -76,6 +78,7 @@ export default connect(
               ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
             }
             <button
+              type="button"
               id="stepOverButton"
               className="debugger_button"
               onClick={this.props.stepOver}
@@ -89,6 +92,7 @@ export default connect(
             </button>
 
             <button
+              type="button"
               id="stepOutButton"
               className="debugger_button"
               onClick={this.props.stepOut}
@@ -104,6 +108,7 @@ export default connect(
               ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
             }
             <button
+              type="button"
               id="stepInButton"
               className="debugger_button"
               onClick={this.props.stepIn}

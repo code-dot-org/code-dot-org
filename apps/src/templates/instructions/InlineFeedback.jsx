@@ -1,10 +1,10 @@
-/* eslint-disable react/no-danger */
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ChatBubble from './ChatBubble';
 import {convertXmlToBlockly} from './utils';
+import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
 
 class InlineFeedback extends Component {
   static propTypes = {
@@ -26,10 +26,9 @@ class InlineFeedback extends Component {
     // styling.
     return (
       <ChatBubble borderColor={borderColor} ttsMessage={message}>
-        <p
-          className="uitest-topInstructions-inline-feedback"
-          dangerouslySetInnerHTML={{__html: message}}
-        />
+        <div className="uitest-topInstructions-inline-feedback">
+          <UnsafeRenderedMarkdown markdown={message} />
+        </div>
         {extra && <p style={styles.message}>{extra}</p>}
       </ChatBubble>
     );

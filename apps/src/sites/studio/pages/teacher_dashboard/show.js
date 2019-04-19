@@ -30,7 +30,6 @@ import scriptSelection, {
   loadValidScripts
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
-import experiments from '@cdo/apps/util/experiments';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -39,9 +38,6 @@ const visibleSections = scriptData.visibleSections;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function() {
-  // Always make sure teacher-dashboard-react experiment is enabled.
-  experiments.setEnabled(experiments.TEACHER_DASHBOARD_REACT, true);
-
   registerReducers({
     teacherSections,
     sectionData,

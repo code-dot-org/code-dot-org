@@ -138,12 +138,18 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
     );
     const loadQuestions = loadAssessmentQuestionsFromServer(scriptId);
     const loadSurveys = loadSurveysFromServer(sectionId, scriptId);
-    const loadFeedback = loadFeedbackFromServer(sectionId, scriptId);
+    let loadFeedback = null;
+    if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
+      loadFeedback = loadFeedbackFromServer(sectionId, scriptId);
+    }
+
     Promise.all([loadResponses, loadQuestions, loadSurveys, loadFeedback])
       .then(arrayOfValues => {
         dispatch(setAssessmentResponses(scriptId, arrayOfValues[0]));
         dispatch(setAssessmentQuestions(scriptId, arrayOfValues[1]));
-        dispatch(setFeedback(scriptId, arrayOfValues[3]));
+        if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
+          dispatch(setFeedback(scriptId, arrayOfValues[3]));
+        }
         dispatch(setSurveys(scriptId, arrayOfValues[2]));
         dispatch(setInitialAssessmentId(scriptId));
         dispatch(finishLoadingAssessments());
@@ -492,11 +498,13 @@ export const getAssessmentsFreeResponseResults = state => {
     responsesArray
       .filter(result => result.type === QuestionType.FREE_RESPONSE)
       .forEach((response, index) => {
-        questionsAndResults[index].responses.push({
-          id: studentId,
-          name: studentObject.student_name,
-          response: response.student_result
-        });
+        if (questionsAndResults[index]) {
+          questionsAndResults[index].responses.push({
+            id: studentId,
+            name: studentObject.student_name,
+            response: response.student_result
+          });
+        }
       });
   });
   return questionsAndResults;
