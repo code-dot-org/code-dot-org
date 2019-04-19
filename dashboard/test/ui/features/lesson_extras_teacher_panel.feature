@@ -1,4 +1,5 @@
 @dashboard_db_access
+@no_mobile
 Feature: Lesson extras teacher panel
 
   Scenario: View student lesson extras progress
