@@ -328,7 +328,18 @@ export class QuickViewTable extends React.Component {
 
   formatPrincipalApprovalCell = (principal_approval_state, props) => {
     if (principal_approval_state) {
-      return <span>{principal_approval_state}</span>;
+      return (
+        <div>
+          <span>{principal_approval_state}</span>
+          <PrincipalApprovalButtons
+            applicationId={props.rowData.id}
+            showResendEmailButton={
+              props.rowData.allow_resending_principal_email
+            }
+            onChange={this.handlePrincipalApprovalButtonsChange}
+          />
+        </div>
+      );
     }
 
     return (
