@@ -33,6 +33,26 @@ class StageLockTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select '.level-group', 1
     assert_select "#locked-stage", 1
+    # data-hidden indicates that the client will decide whether the teacher
+    # will see the locked-stage message via the ViewAsToggle.
     assert_select "#locked-stage[data-hidden]", 1
+  end
+
+  test 'student viewing lockable stage contents' do
+    sign_in @student
+
+    get build_script_level_path(@lockable_external_sl)
+    assert_response :success
+    # assert the current but incorrect behavior
+    assert_includes response.body, 'lorem ipsum'
+    assert_select "#locked-stage", 0
+
+    get build_script_level_path(@lockable_level_group_sl)
+    assert_response :redirect
+    get URI.parse(@response.redirect_url).path
+    assert_response :success
+    assert_select '.level-group', 0
+    assert_select "#locked-stage", 1
+    assert_select "#locked-stage[data-hidden]", 0
   end
 end
