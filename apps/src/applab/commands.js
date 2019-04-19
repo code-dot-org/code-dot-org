@@ -205,8 +205,8 @@ applabCommands.button = function(opts) {
   } else {
     newButton.style.fontSize = defaultFontSizeStyle;
     newButton.style.fontFamily = fontFamilyStyles[0];
-    newButton.style.color = themeColor.classic.button_text;
-    newButton.style.backgroundColor = themeColor.classic.button_background;
+    newButton.style.color = themeColor.buttonText.classic;
+    newButton.style.backgroundColor = themeColor.buttonBackground.classic;
     elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
   }
 
@@ -944,7 +944,7 @@ applabCommands.textLabel = function(opts) {
   } else {
     newLabel.style.fontSize = defaultFontSizeStyle;
     newLabel.style.fontFamily = fontFamilyStyles[0];
-    newLabel.style.backgroundColor = themeColor.classic.label_background;
+    newLabel.style.backgroundColor = themeColor.labelBackground.classic;
     elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
   }
   var forElement = document.getElementById(opts.forId);
@@ -1015,13 +1015,13 @@ applabCommands.dropdown = function(opts) {
   } else {
     newSelect.style.fontSize = defaultFontSizeStyle;
     newSelect.style.fontFamily = fontFamilyStyles[0];
-    newSelect.style.color = themeColor.classic.dropdown_text;
+    newSelect.style.color = themeColor.dropdownText.classic;
     elementLibrary.typeSpecificPropertyChange(
       newSelect,
       'textColor',
       newSelect.style.color
     );
-    newSelect.style.backgroundColor = themeColor.classic.dropdown_background;
+    newSelect.style.backgroundColor = themeColor.dropdownBackground.classic;
     elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});
   }
 

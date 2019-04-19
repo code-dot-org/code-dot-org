@@ -209,10 +209,7 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: themeColor.default.button_background,
-      classic: themeColor.classic.button_background,
-      orange: themeColor.orange.button_background,
-      citrus: themeColor.citrus.button_background
+      ...themeColor.buttonBackground
     },
     borderRadius: {
       default: 4,
@@ -228,17 +225,11 @@ export default {
     },
     borderColor: {
       type: 'color',
-      default: themeColor.default.button_border,
-      classic: themeColor.classic.button_border,
-      orange: themeColor.orange.button_border,
-      citrus: themeColor.citrus.button_border
+      ...themeColor.buttonBorder
     },
     textColor: {
       type: 'color',
-      default: themeColor.default.button_text,
-      classic: themeColor.classic.button_text,
-      orange: themeColor.orange.button_text,
-      citrus: themeColor.citrus.button_text
+      ...themeColor.buttonText
     },
     fontFamily: {
       default: 'Arial Black',
@@ -274,8 +265,8 @@ export default {
       element.style.fontFamily = fontFamilyStyles[0];
       element.style.fontSize = defaultFontSizeStyle;
       elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-      element.style.color = themeColor.classic.button_text;
-      element.style.backgroundColor = themeColor.classic.button_background;
+      element.style.color = themeColor.buttonText.classic;
+      element.style.backgroundColor = themeColor.buttonBackground.classic;
     }
 
     return element;

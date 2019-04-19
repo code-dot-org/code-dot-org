@@ -197,10 +197,7 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: themeColor.default.label_background,
-      classic: themeColor.classic.label_background,
-      orange: themeColor.orange.label_background,
-      citrus: themeColor.citrus.label_background
+      ...themeColor.labelBackground
     },
     borderRadius: {
       default: 0,
@@ -216,17 +213,11 @@ export default {
     },
     borderColor: {
       type: 'color',
-      default: themeColor.default.text_input_border,
-      classic: themeColor.classic.text_input_border,
-      orange: themeColor.orange.text_input_border,
-      citrus: themeColor.citrus.text_input_border
+      ...themeColor.textInputBorder
     },
     textColor: {
       type: 'color',
-      default: themeColor.default.label_text,
-      classic: themeColor.classic.label_text,
-      orange: themeColor.orange.label_text,
-      citrus: themeColor.citrus.label_text
+      ...themeColor.labelText
     },
     fontFamily: {
       default: 'Arial Black',
@@ -255,10 +246,10 @@ export default {
       element.style.borderStyle = 'solid';
       elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
     } else {
-      element.style.backgroundColor = themeColor.classic.label_background;
+      element.style.backgroundColor = themeColor.labelBackground.classic;
       element.style.fontFamily = applabConstants.fontFamilyStyles[0];
       element.style.fontSize = applabConstants.defaultFontSizeStyle;
-      element.style.color = themeColor.classic.label_text;
+      element.style.color = themeColor.labelText.classic;
       elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     }
 
@@ -269,7 +260,7 @@ export default {
   onDeserialize: function(element) {
     // Set background color style for older projects that didn't set them on create:
     if (!element.style.backgroundColor) {
-      element.style.backgroundColor = themeColor.classic.label_background;
+      element.style.backgroundColor = themeColor.labelBackground.classic;
     }
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);

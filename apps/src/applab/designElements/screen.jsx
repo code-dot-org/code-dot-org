@@ -156,10 +156,7 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: themeColor.default.background,
-      classic: themeColor.classic.background,
-      orange: themeColor.orange.background,
-      citrus: themeColor.citrus.background
+      ...themeColor.background
     }
   },
 

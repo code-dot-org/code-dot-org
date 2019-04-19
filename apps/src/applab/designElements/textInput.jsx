@@ -212,10 +212,7 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: themeColor.default.text_input_background,
-      classic: themeColor.classic.text_input_background,
-      orange: themeColor.orange.text_input_background,
-      citrus: themeColor.citrus.text_input_background
+      ...themeColor.textInputBackground
     },
     borderRadius: {
       default: 4,
@@ -231,17 +228,11 @@ export default {
     },
     borderColor: {
       type: 'color',
-      default: themeColor.default.text_input_border,
-      classic: themeColor.classic.text_input_border,
-      orange: themeColor.orange.text_input_border,
-      citrus: themeColor.citrus.text_input_border
+      ...themeColor.textInputBorder
     },
     textColor: {
       type: 'color',
-      default: themeColor.default.text,
-      classic: themeColor.classic.text,
-      orange: themeColor.orange.text,
-      citrus: themeColor.citrus.text
+      ...themeColor.text
     },
     fontFamily: {
       default: 'Arial',
@@ -268,7 +259,7 @@ export default {
     } else {
       element.style.fontFamily = fontFamilyStyles[0];
       element.style.fontSize = defaultFontSizeStyle;
-      element.style.color = themeColor.classic.text;
+      element.style.color = themeColor.text.classic;
       element.style.backgroundColor = '';
       elementUtils.setDefaultBorderStyles(element, {
         forceDefaults: true,
