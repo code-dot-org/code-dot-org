@@ -44,9 +44,11 @@ This option is based on `local_workshop_daily_survey_report` pipeline. We reuse 
 - Modify this logic to make it more generic with the risk of introducing regression (the code is complex).
 - Create a new path separate from the existing one, which means adding substantial duplicated code.
 
-**Pros:** Risk is small. Amount of new code could is not small but manageable. We do just enough to support 3 new surveys in 2019.
+**Pros:** Risk is small (if creating a new path). Amount of new code could is not small but manageable. We do just enough to support 3 new surveys in 2019.
 
 **Cons:** Not scalable when we have more surveys. Could become thrown-away work if we decide to move to generic pipeline later.
+
+**Cost Estimate:** 5 ± 1 days.
 
 
 ## 2. Create survey report in JotForm
@@ -56,15 +58,18 @@ JotForm support creating [Visual Report](https://www.jotform.com/help/187-How-to
 
 **Cons:** Can only do basic calculation and visualization (not the same level as Tableau or PowerBI). User can not interact with the report. Cannot pass parameter to personalize the report.
 
+**Cost Estimate:** 3 ± 1 days.
 
 ## 3. Build generic survey pipeline
 ### Overview
-Creating a generic pipeline that starts from ingesting survey data, making data searchable, summarizing data, to presenting result in our site. Key features of the new pipeline are modular design, decoupling survey data from the...
+Creating a generic pipeline that starts from ingesting survey data, making data searchable, summarizing data, to presenting result in our site.\
+Key features of the new pipeline is the decoupling of code from specific survey or workshop context, and modular design that allows more flexibility to adapt to future requirements.
 
 **Pros:** Minimize work to support new survey. Open for extensions, flexible to change such as adding/removing/updating components because of modular design. Enable new scenarios such as A/B testing in Survey.
 
 **Cons:** Expensive. (This could be mitigated by building the pipeline from the end first as discussed below.)
 
+**Cost Estimate:** 3-4 weeks for the complete pipeline. 7 ± 2 days to implement step 3 (Summarize) and the first component of step 4 (Present) first, enough to support CSF 2019 surveys.
 
 ### Detail design
 The pipeline has 4 main actions
@@ -75,11 +80,24 @@ The pipeline has 4 main actions
 
 ![Diagram](survey_summary_diagram.png)
 
+Some patterns that this design follow
+- _Open-Closed Principle_\
+  The pipeline is open for extension such as adding new components or adding different implementation of a component. However, it avoids, as best as it could, modifying existing code which could introduce regression. Following Single Responsibility principle will help with this.
+- _Single Responsibility Principle_\
+  Each method, class, module should have only 1 clear purpose. In a stronger statement, each should have only one reason to change.
+- _Dependency Inversion Principle_\
+  High-level modules (complex logic) should not depend on low-level modules (primary operations). Both should depend on abstractions. This allows high-level modules to easily switch to different low-level modules implementation.
+- _Template Method Pattern_\
+  Define the skeleton of an algorithm, deferring some steps. E.g. Query module (step 2) could use different implementations of Parser, Indexer and Filter depends on how data is stored in database. The specific implementations of those child components will be send to Query component as input parameters (dependency injection). Strategy pattern enable switching among implementations of the same component.
+- _Strategy Pattern_\
+  Define an interface common to a family of algorithms, e.g. survey result reducers, and make them interchangeable. This lets the algorithm vary independently from clients that use it.
+
 
 ### Building from the end
-We don't have to start from step 1 (Ingest), we can start from step 3 (Summarize) and create adapters to connect it to the current pipeline. Specifically for CSF survey work, we will create input adapter to retrieve survey data from the current data model, and output adapter to convert summary result to format that the current UI view understands.
+We don't have to start from step 1 (Ingest), we can start from step 3 (Summarize) and create adapters to connect it to the current pipeline.
 
-This approach allows us to take advantage of existing work and still gradually modernize the pipeline. After creating components in step 3, we can move upstream (creating new UI views) or downstream (updating how we ingest and query data).
+Specifically for CSF survey work, we will create an input adapter to retrieve survey data from the current data model, and an output adapter to convert summary result to format that the current UI view understands. Looking at it from a different angle, these adapters are just concrete implementations of Retriever and Decorator.
+
 
 # Recommendation
-Option 3. Build a new generic survey pipeline, starting from _Summarize_ module first and create adapters to plug it in the current pipeline. Gradually build out the rest of the pipeline later.
+Option 3. Build a new generic survey pipeline, starting from step 3(Summarize module) first and create adapters to plug it in the current pipeline. This approach allows us to take advantage of existing work and support 2019 CSF survey first. Then, gradually build out the rest of the pipeline later.
