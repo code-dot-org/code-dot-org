@@ -1,3 +1,4 @@
+---
 vi:
   data:
     authored_hints:
@@ -16,7 +17,7 @@ vi:
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Để hoàn thành ngôi nhà, tất cả chúng ta cần làm là vẽ một hình vuông!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'Để tạo những góc nhỏ này, bạn cần xoay *xa hơn* mỗi lần so với lúc bạn xoay hình vuông.   '
+        2-3_Artist_6_a: 'Để tạo những góc nhỏ này, bạn cần xoay _xa hơn_ mỗi lần so với lúc bạn xoay hình vuông.   '
         2-3_Artist_6_b: Vì tôi đã hướng về bên phải, sẽ dễ hơn khi bắt đầu di chuyển về phía trước, sau đó quẹo trái để tạo thành hình tam giác.
         2-3_Artist_6_c: Mỗi cạnh của hình tam giác có chiều dài tương tự như mỗi cạnh của hình vuông...100 pixels!
       2-3 Artist 7_authored_hint:
@@ -29,10 +30,9 @@ vi:
         step_size: Mỗi bước là 100 pixels rộng và 100 pixels cao.
       2-3 Artist 9_authored_hint:
         2-3_Artist_9_a: Kim cương này thật ra chỉ là một hình vuông nằm ở góc 45 độ.
-        2-3_Artist_9_b: |-
-          Đừng quên xoay người hoạ sĩ về bên trái 45 độ trước khi bạn bắt đầu vẽ hình vuông! ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
+        2-3_Artist_9_b: Đừng quên xoay người hoạ sĩ về bên trái 45 độ trước khi bạn bắt đầu vẽ hình vuông! ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
-        2-3_Artist_Debugging_10_a: Hãy nhớ rằng, bạn muốn bảng điều khiển *rộng hơn* 10 pixels...vậy nên hãy chắc chắn **thêm** 10 vào con số mà bạn thay đổi.
+        2-3_Artist_Debugging_10_a: Hãy nhớ rằng, bạn muốn bảng điều khiển _rộng hơn_ 10 pixels...vậy nên hãy chắc chắn **thêm** 10 vào con số mà bạn thay đổi.
         2-3_Artist_Debugging_10_b: "**Thử và phạm lỗi là hoàn toàn bình thường ở đây!** \n\nHãy bắt đầu bằng việc thay đổi một con số mỗi lần.\n\nNhững con số nào làm điều đó?\n\nNếu bạn không thể, chỉ cần click \"Bắt đầu lại\" và code của bạn sẽ được reset."
       2-3 Artist Debugging 2_authored_hint:
         2-3_Artist_Debugging_2_a: 'Gợi ý: Cứ mỗi ria mèo là 75 độ dài pixel.'
@@ -45,7 +45,7 @@ vi:
         2-3_Artist_Debugging_8_a: |-
           Hình của tôi đã lặp lại bao nhiêu lần?
 
-          Hình đó *cần* lặp lại bao nhiêu lần?
+          Hình đó _cần_ lặp lại bao nhiêu lần?
 
           Bạn có thể thay đổi điều đó ở đâu trong chương trình?
       2-3 Artist Debugging 9_authored_hint:
@@ -68,19 +68,21 @@ vi:
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Chương trình của bạn cần:
-          - Dùng hàm\
-          - Tiến về phía trước 100 + 75 điểm ảnh
-          - Dùng hàm
+
+          -   Dùng hàm\\
+          -   Tiến về phía trước 100 + 75 điểm ảnh
+          -   Dùng hàm
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Chương trình của bạn cần:
-          - Dùng hàm\
-          - Tiến về phía trước 100 + 75 điểm ảnh
-          - Dùng hàm
+
+          -   Dùng hàm\\
+          -   Tiến về phía trước 100 + 75 điểm ảnh
+          -   Dùng hàm
       2-3 Artist Functions 3 a_authored_hint:
-        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+        2-3_Artist_Functions_3_a: "\\*\\* 115 + 45 = 160 \\*\\*"
       2-3 Artist Functions 3_authored_hint:
-        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+        2-3_Artist_Functions_3_a: "\\*\\* 115 + 45 = 160 \\*\\*"
       2-3 Artist Functions 4 a_authored_hint:
         2-3_Artist_Functions_4_a: Nhà họa sĩ cần quay 120 độ giữa những hình vuông để hoàn thành thiết kế này.
       2-3 Artist Functions 4_authored_hint:
@@ -88,7 +90,6 @@ vi:
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           Hãy nhớ, đây là mã nguồn của câu đố lúc nãy:
-
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -137,7 +138,7 @@ vi:
         2-3_Artist Loops_New_12_c: Nhà họa sĩ sẽ chỉ cần rẽ phải 60 độ để tạo ra góc rộng.
       2-3 Artist Loops New 13_authored_hint:
         2-3_Artist_Loops_New_13_a: "Ở cuối mỗi hình thoi, nhà họa sĩ đã ở đúng góc để bắt đầu hình tiếp theo. \n\n Do đó, chúng ta không cần thêm một khối `rẽ trái bởi` trước khi bắt đầu lại."
-        2-3_Artist_Loops_New_13_b: "Để làm mỗi hình thoi, nhà họa sĩ cần: \n- đi\n- rẽ phải 120 độ\n- đi\n- rẽ phải 60 độ \n\nXong rồi làm lại tất cả từ đầu!"
+        2-3_Artist_Loops_New_13_b: "Để làm mỗi hình thoi, nhà họa sĩ cần: \n\n-   đi\n-   rẽ phải 120 độ\n-   đi\n-   rẽ phải 60 độ \n\nXong rồi làm lại tất cả từ đầu!"
       2-3 Artist Loops New 9_authored_hint:
         2-3_Artist_Loops_New_9_a: Nhà họa sĩ cần rẽ phải 45 độ trước khi bắt đầu vẽ.
         2-3_Artist_Loops_New_9_b: Chữ V này thật ra chỉ là một nửa hình vuông.  Cái gì sẽ là đoạn mã để vẽ một nửa hình vuông?
@@ -153,25 +154,11 @@ vi:
       2-3 Artist Nested Loops 7_authored_hint:
         2-3_Artist_Nested_Loops_7_a: "Bạn cần quay bao xa trong mỗi vong lặp? \n\n360/10 ra bao nhiêu?"
       2-3 Artist Nested Loops 9_authored_hint:
-        2-3_Artist_Nested_Loops_9_a: |-
-          Cần trợ giúp tìm góc chính xác? ** 360 / 12 = 30 **
+        2-3_Artist_Nested_Loops_9_a: Cần trợ giúp tìm góc chính xác? \*\* 360 / 12 = 30 \*\*
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Gặp khó khăn trong việc tìm cách đặt các khối?  Thử coi bông hoa đỏ giống hệt bông hoa tím xem!
         2-3_Bee_Conditionals_14_b: Nếu bông hoa đỏ có màu tím, bạn có thể tìm ra cách dùng thêm một vòng lặp để giảm số khối trong mã không?
-        2-3_Bee_Conditionals_14_c: |-
-          Thử chia việc này thành hai việc riêng biệt: 
-
-
-          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
-
-          1) Thu hoạch mật hoa 3 lần
-           - Đi thẳng 5 lần
-           - Kiểm tra xem có mật hoa không, nếu có: thu hoạch nó
-           - Rẽ trái
-           
-          2) Làm mật ong
-           - Đi thẳng 1 lần
-           - Làm mật ong 2 lần
+        2-3_Bee_Conditionals_14_c: "Thử chia việc này thành hai việc riêng biệt: \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.  Thu hoạch mật hoa 3 lần\n\n2.  Đi thẳng 5 lần\n\n3.  Kiểm tra xem có mật hoa không, nếu có: thu hoạch nó\n\n4.  Rẽ trái\n\n5.  Làm mật ong\n\n6.  Đi thẳng 1 lần\n\n7.  Làm mật ong 2 lần"
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Nhớ rằng: Những bông hoa tím có 0 hoặc 1 mật hoa và nó có thể thay đổi mỗi làn bạn chạy chương trình.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -215,7 +202,7 @@ vi:
         2-3_Bee_Loops_6_b: Phải có 6 khối bên trong vòng lặp 'lặp lại' của bạn khi bạn kết thúc.
       2-3 Bee Loops 7_authored_hint:
         2-3_Bee_Loops_7_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
-        2-3_Bee_Loops_7_b: 'vòng lặp'
+        2-3_Bee_Loops_7_b: vòng lặp
       2-3 Maze 6_authored_hint:
         2-3_Maze_6_a: Có hai cách để giải câu đố này!
       Artist Autorun Test_authored_hint:
@@ -224,40 +211,43 @@ vi:
         solution: |-
           **Lời giải**
           ![Hình ảnh của Lời Giải]
-          (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+          (<https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png>)
       CoureE_HOC 2018 Level_7a_authored_hint:
         aquatic7: Bạn có thể sử dụng khối lệnh nếu để giúp bạn thực hiện những ngã rẽ đúng.
       CourseD_Dance_Party_01_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
-          * Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
 
-          *Cấp độ này kết thúc sau 4 nhịp.*
+          -   Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
+
+          _Cấp độ này kết thúc sau 4 nhịp._
         challenges: |-
           **Thử thách tùy chọn**
-          * Chọn một bài hát khác để phát.
-          * Chọn một đối tượng khác trông giống nai sừng tấm!
-          * Đổi tên vũ công.
+
+          -   Chọn một bài hát khác để phát.
+          -   Chọn một đối tượng khác trông giống nai sừng tấm!
+          -   Đổi tên vũ công.
       CourseD_Dance_Party_02_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
-          * Vũ công cần chuyển sang động tác mới sau 4 nhịp.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          -   Vũ công cần chuyển sang động tác mới sau 4 nhịp.
+
+          _Cấp độ này kết thúc sau 8 nhịp._
       CourseD_Dance_Party_03_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
+          -   Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
 
-          *Cấp độ này kết thúc sau 12 nhịp.*
+          _Cấp độ này kết thúc sau 12 nhịp._
       CourseD_Dance_Party_04_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
+          -   Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
 
-          *Cấp độ này kết thúc sau 10 nhịp.*
+          _Cấp độ này kết thúc sau 10 nhịp._
         challenges: |-
           **Thách thức phụ**
 
@@ -266,62 +256,62 @@ vi:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Bạn cần có ít nhất hai vũ công.
+          -   Bạn cần có ít nhất hai vũ công.
 
-          *Cấp độ này kết thúc sau 6 nhịp.*
+          _Cấp độ này kết thúc sau 6 nhịp._
         challenges: |-
           **Thách thức phụ**
 
-          * Thêm vũ công thứ ba (hoặc một số lượng vũ công tùy ý!)
-          * Làm cho tất cả các vũ công của bạn thực hiện các động tác khác nhau tại các thời điểm khác nhau trong bài hát.
+          -   Thêm vũ công thứ ba (hoặc một số lượng vũ công tùy ý!)
+          -   Làm cho tất cả các vũ công của bạn thực hiện các động tác khác nhau tại các thời điểm khác nhau trong bài hát.
       CourseD_Dance_Party_08_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Hai vũ công cần phải có một kích cỡ khác ngoài 100.
+          -   Hai vũ công cần phải có một kích cỡ khác ngoài 100.
 
-          *Cấp độ này kết thúc sau 6 nhịp.*
+          _Cấp độ này kết thúc sau 6 nhịp._
         challenges: |-
           **Thách thức phụ**
 
-          * Thử nghiệm bằng cách thay đổi các thuộc tính khác (chiều rộng, chiều cao, xoay, v.v.)
+          -   Thử nghiệm bằng cách thay đổi các thuộc tính khác (chiều rộng, chiều cao, xoay, v.v.)
       CourseD_Dance_Party_09_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thay đổi sắc thái của ít nhất một vũ công.
+          -   Thay đổi sắc thái của ít nhất một vũ công.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       CourseD_Dance_Party_10_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thuộc tính cho hai vũ công trở lên phải thay đổi.
+          -   Thuộc tính cho hai vũ công trở lên phải thay đổi.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       CourseD_Dance_Party_11_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thoải mái sáng tạo!
+          -   Thoải mái sáng tạo!
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       CourseD_Dance_Party_11_5_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thoải mái sáng tạo!
+          -   Thoải mái sáng tạo!
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       CourseD_Dance_Party_11b_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Sử dụng khối `when left arrow pressed` để làm Robot thực hiện một động tác nhảy khi bạn nhấn mũi tên trái.
+          -   Sử dụng khối `when left arrow pressed` để làm Robot thực hiện một động tác nhảy khi bạn nhấn mũi tên trái.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       CourseE_HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "Xem các ** ngọn đèn biển **![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Làm thế nào bạn có thể sử dụng một điều kiện với chúng để vượt qua một Tòa nhà đại dương?\n\n"
+        voyage_aquatic_10a: Hãy xem những **Lồng đèn Biển** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Làm sao để sử dụng chúng với một câu lệnh có điều kiện để vượt qua Đài tưởng niệm Đại Dương?
       CourseE_HOC 2018 Level_7a_authored_hint:
         aquatic7: Bạn có thể sử dụng khối lệnh nếu để giúp bạn thực hiện những ngã rẽ đúng.
       CourseE_HOC 2018 Level_9b_authored_hint:
@@ -330,9 +320,9 @@ vi:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
+          -   Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
 
-          *Cấp độ này kết thúc sau 10 nhịp.*
+          _Cấp độ này kết thúc sau 10 nhịp._
         challenges: |-
           **Thách thức phụ**
 
@@ -341,9 +331,9 @@ vi:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
+          -   Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
 
-          *Cấp độ này kết thúc sau 10 nhịp.*
+          _Cấp độ này kết thúc sau 10 nhịp._
         challenges: |-
           **Thách thức phụ**
 
@@ -351,45 +341,50 @@ vi:
       Dance_Party_01_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
-          * Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
 
-          *Cấp độ này kết thúc sau 4 nhịp.*
+          -   Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
+
+          _Cấp độ này kết thúc sau 4 nhịp._
         challenges: |-
           **Thử thách tùy chọn**
-          * Chọn một bài hát khác để phát.
-          * Chọn một đối tượng khác trông giống nai sừng tấm!
-          * Đổi tên vũ công.
+
+          -   Chọn một bài hát khác để phát.
+          -   Chọn một đối tượng khác trông giống nai sừng tấm!
+          -   Đổi tên vũ công.
       Dance_Party_01_low_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
-          * Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
 
-          *Cấp độ này kết thúc sau 4 nhịp.*
+          -   Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
+
+          _Cấp độ này kết thúc sau 4 nhịp._
         challenges: |-
           **Thử thách tùy chọn**
-          * Chọn một bài hát khác để phát.
-          * Chọn một đối tượng khác trông giống nai sừng tấm!
-          * Đổi tên vũ công.
+
+          -   Chọn một bài hát khác để phát.
+          -   Chọn một đối tượng khác trông giống nai sừng tấm!
+          -   Đổi tên vũ công.
       Dance_Party_02_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
-          * Vũ công cần chuyển sang động tác mới sau 4 nhịp.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          -   Vũ công cần chuyển sang động tác mới sau 4 nhịp.
+
+          _Cấp độ này kết thúc sau 8 nhịp._
       Dance_Party_03_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
+          -   Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
 
-          *Cấp độ này kết thúc sau 12 nhịp.*
+          _Cấp độ này kết thúc sau 12 nhịp._
       Dance_Party_04_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
+          -   Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
 
-          *Cấp độ này kết thúc sau 10 nhịp.*
+          _Cấp độ này kết thúc sau 10 nhịp._
         challenges: |-
           **Thách thức phụ**
 
@@ -398,98 +393,101 @@ vi:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Bạn cần có ít nhất hai vũ công.
+          -   Bạn cần có ít nhất hai vũ công.
 
-          *Cấp độ này kết thúc sau 6 nhịp.*
+          _Cấp độ này kết thúc sau 6 nhịp._
         challenges: |-
           **Thách thức phụ**
 
-          * Thêm vũ công thứ ba (hoặc một số lượng vũ công tùy ý!)
-          * Làm cho tất cả các vũ công của bạn thực hiện các động tác khác nhau tại các thời điểm khác nhau trong bài hát.
+          -   Thêm vũ công thứ ba (hoặc một số lượng vũ công tùy ý!)
+          -   Làm cho tất cả các vũ công của bạn thực hiện các động tác khác nhau tại các thời điểm khác nhau trong bài hát.
       Dance_Party_08_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Hai vũ công cần phải có một kích cỡ khác ngoài 100.
+          -   Hai vũ công cần phải có một kích cỡ khác ngoài 100.
 
-          *Cấp độ này kết thúc sau 6 nhịp.*
+          _Cấp độ này kết thúc sau 6 nhịp._
         challenges: |-
           **Thách thức phụ**
 
-          * Thử nghiệm bằng cách thay đổi các thuộc tính khác (chiều rộng, chiều cao, xoay, v.v.)
+          -   Thử nghiệm bằng cách thay đổi các thuộc tính khác (chiều rộng, chiều cao, xoay, v.v.)
       Dance_Party_09_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thay đổi sắc thái của ít nhất một vũ công.
+          -   Thay đổi sắc thái của ít nhất một vũ công.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       Dance_Party_1_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
-          * Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
 
-          *Cấp độ này kết thúc sau 4 nhịp.*
+          -   Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
+
+          _Cấp độ này kết thúc sau 4 nhịp._
         challenges: |-
           **Thử thách tùy chọn**
-          * Chọn một bài hát khác để phát.
-          * Chọn một đối tượng khác trông giống nai sừng tấm!
-          * Đổi tên vũ công.
+
+          -   Chọn một bài hát khác để phát.
+          -   Chọn một đối tượng khác trông giống nai sừng tấm!
+          -   Đổi tên vũ công.
       Dance_Party_10_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thuộc tính cho hai vũ công trở lên phải thay đổi.
+          -   Thuộc tính cho hai vũ công trở lên phải thay đổi.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thoải mái sáng tạo!
+          -   Thoải mái sáng tạo!
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       Dance_Party_11_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thoải mái sáng tạo!
+          -   Thoải mái sáng tạo!
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       Dance_Party_11_5_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thoải mái sáng tạo!
+          -   Thoải mái sáng tạo!
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       Dance_Party_11b_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Sử dụng khối `when left arrow pressed` để làm Robot thực hiện một động tác nhảy khi bạn nhấn mũi tên trái.
+          -   Sử dụng khối `when left arrow pressed` để làm Robot thực hiện một động tác nhảy khi bạn nhấn mũi tên trái.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       Dance_Party_2_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
-          * Vũ công cần chuyển sang động tác mới sau 4 nhịp.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          -   Vũ công cần chuyển sang động tác mới sau 4 nhịp.
+
+          _Cấp độ này kết thúc sau 8 nhịp._
       Dance_Party_3_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
+          -   Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
 
-          *Cấp độ này kết thúc sau 12 nhịp.*
+          _Cấp độ này kết thúc sau 12 nhịp._
       Dance_Party_4_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
+          -   Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
 
-          *Cấp độ này kết thúc sau 10 nhịp.*
+          _Cấp độ này kết thúc sau 10 nhịp._
         challenges: |-
           **Thách thức phụ**
 
@@ -498,43 +496,40 @@ vi:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Bài nhảy của bạn phải có những động tác khác nhau trong 12 nhịp đầu tiên của bài hát.
+          -   Bài nhảy của bạn phải có những động tác khác nhau trong 12 nhịp đầu tiên của bài hát.
 
-          *Cấp độ này kết thúc sau 12 nhịp.*
+          _Cấp độ này kết thúc sau 12 nhịp._
       Dance_Party_6_authored_hint:
         challenges: |-
           **Thách thức phụ**
 
-          * Thêm vũ công thứ ba (hoặc một số lượng vũ công tùy ý!)
-          * Làm cho tất cả các vũ công của bạn thực hiện các động tác khác nhau tại các thời điểm khác nhau trong bài hát.
+          -   Thêm vũ công thứ ba (hoặc một số lượng vũ công tùy ý!)
+          -   Làm cho tất cả các vũ công của bạn thực hiện các động tác khác nhau tại các thời điểm khác nhau trong bài hát.
       Dance_Party_8_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Hai vũ công cần phải có một kích cỡ khác ngoài 100.
+          -   Hai vũ công cần phải có một kích cỡ khác ngoài 100.
 
-          *Cấp độ này kết thúc sau 6 nhịp.*
+          _Cấp độ này kết thúc sau 6 nhịp._
         challenges: |-
           **Thách thức phụ**
 
-          * Thử nghiệm bằng cách thay đổi các thuộc tính khác (chiều rộng, chiều cao, xoay, v.v.)
+          -   Thử nghiệm bằng cách thay đổi các thuộc tính khác (chiều rộng, chiều cao, xoay, v.v.)
       Dance_Party_9_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thay đổi sắc thái của ít nhất một vũ công.
+          -   Thay đổi sắc thái của ít nhất một vũ công.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       Farmer for Authored Hint testing_authored_hint:
-        first_hint: |-
-          Đây là gợi ý đầu tiên. Có *một số * ** cơ bản ** 'đánh dấu'
-        second_hint: Đây là gợi ý thứ hai. Nó là một hình ảnh. ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
+        first_hint: Đây là gợi ý đầu tiên. Có \*một số \* \*\* cơ bản \*\* 'đánh dấu'
+        second_hint: Đây là gợi ý thứ hai. Nó là một hình ảnh. ! \[] (<https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png>)
         last_hint: Đây là gợi ý thứ ba và cuối cùng. Nó không có bất cứ điều gì đặc biệt.
       Farmer for TTS testing_authored_hint:
-        first_hint: |-
-          Đây là gợi ý đầu tiên. Có *một số * ** cơ bản ** 'đánh dấu'
-        second_hint: |-
-          Đây là gợi ý thứ hai. Nó là một hình ảnh. ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
+        first_hint: Đây là gợi ý đầu tiên. Có \*một số \* \*\* cơ bản \*\* 'đánh dấu'
+        second_hint: Đây là gợi ý thứ hai. Nó là một hình ảnh. ! \[] (<https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png>)
         last_hint: Đây là gợi ý thứ ba và cuối cùng. Nó không có bất cứ điều gì đặc biệt.
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: Nếu bạn sử dụng chính xác các chức năng, sẽ có một con đường bạn có thể di chuyển...
@@ -543,7 +538,7 @@ vi:
         Function_intro_Ryan_b: Nếu bạn sử dụng chính xác các chức năng, sẽ có một con đường bạn có thể di chuyển...
         Function_intro_Ryan_a: Bạn có thể sử dụng một chức năng nhiều lần trong chương trình của bạn!  Hãy thử dùng nó hai lần để giải quyết câu đố này.
       HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "Xem các ** ngọn đèn biển **![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Làm thế nào bạn có thể sử dụng một điều kiện với chúng để vượt qua một Tòa nhà đại dương?\n\n"
+        voyage_aquatic_10a: Hãy xem những **Lồng đèn Biển** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Làm sao để sử dụng chúng với một câu lệnh có điều kiện để vượt qua Đài tưởng niệm Đại Dương?
       HOC 2018 Level_7a_authored_hint:
         aquatic7: Bạn có thể sử dụng khối lệnh nếu để giúp bạn thực hiện những ngã rẽ đúng.
       HOC 2018 Level_9b_authored_hint:
@@ -551,34 +546,37 @@ vi:
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
-          * Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
 
-          *Cấp độ này kết thúc sau 4 nhịp.*
+          -   Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
+
+          _Cấp độ này kết thúc sau 4 nhịp._
         challenges: |-
           **Thử thách tùy chọn**
-          * Chọn một bài hát khác để phát.
-          * Chọn một đối tượng khác trông giống nai sừng tấm!
-          * Đổi tên vũ công.
+
+          -   Chọn một bài hát khác để phát.
+          -   Chọn một đối tượng khác trông giống nai sừng tấm!
+          -   Đổi tên vũ công.
       HOC Dance 1_draft_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
-          * Vũ công cần chuyển sang động tác mới sau 4 nhịp.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          -   Vũ công cần chuyển sang động tác mới sau 4 nhịp.
+
+          _Cấp độ này kết thúc sau 8 nhịp._
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
+          -   Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
 
-          *Cấp độ này kết thúc sau 12 nhịp.*
+          _Cấp độ này kết thúc sau 12 nhịp._
       HOC Dance 3_draft_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
+          -   Bạn cần để làm hiệu ứng nền thay đổi ở thời điểm nhịp thứ bảy của bài hát.
 
-          *Cấp độ này kết thúc sau 10 nhịp.*
+          _Cấp độ này kết thúc sau 10 nhịp._
         challenges: |-
           **Thách thức phụ**
 
@@ -587,61 +585,61 @@ vi:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Bài nhảy của bạn phải có những động tác khác nhau trong 12 nhịp đầu tiên của bài hát.
+          -   Bài nhảy của bạn phải có những động tác khác nhau trong 12 nhịp đầu tiên của bài hát.
 
-          *Cấp độ này kết thúc sau 12 nhịp.*
+          _Cấp độ này kết thúc sau 12 nhịp._
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **Thách thức phụ**
 
-          * Thêm vũ công thứ ba (hoặc một số lượng vũ công tùy ý!)
-          * Làm cho tất cả các vũ công của bạn thực hiện các động tác khác nhau tại các thời điểm khác nhau trong bài hát.
+          -   Thêm vũ công thứ ba (hoặc một số lượng vũ công tùy ý!)
+          -   Làm cho tất cả các vũ công của bạn thực hiện các động tác khác nhau tại các thời điểm khác nhau trong bài hát.
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Hai vũ công cần phải có một kích cỡ khác ngoài 100.
+          -   Hai vũ công cần phải có một kích cỡ khác ngoài 100.
 
-          *Cấp độ này kết thúc sau 6 nhịp.*
+          _Cấp độ này kết thúc sau 6 nhịp._
         challenges: |-
           **Thách thức phụ**
 
-          * Thử nghiệm bằng cách thay đổi các thuộc tính khác (chiều rộng, chiều cao, xoay, v.v.)
+          -   Thử nghiệm bằng cách thay đổi các thuộc tính khác (chiều rộng, chiều cao, xoay, v.v.)
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thay đổi sắc thái của ít nhất một vũ công.
+          -   Thay đổi sắc thái của ít nhất một vũ công.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       HOC Dance 8_draft_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thuộc tính cho hai vũ công trở lên phải thay đổi.
+          -   Thuộc tính cho hai vũ công trở lên phải thay đổi.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       HOC Dance 9_draft_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thoải mái sáng tạo!
+          -   Thoải mái sáng tạo!
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       HOC Dance make group_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
-          * Thoải mái sáng tạo!
+          -   Thoải mái sáng tạo!
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          _Cấp độ này kết thúc sau 8 nhịp._
       Harvesting_authored_hint:
         pointer_harvester_test: Tôi có thể sử dụng loại khối lệnh nào để kiểm tra một cái gì đó và quyết định?
       Inspirational Artwork_authored_hint:
         solution: |-
           **Lời giải**
           ![Hình ảnh của Lời Giải]
-          (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+          (<https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png>)
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Hãy thử để Đặc vụ xây dựng vài đường ray cho xe chở quặng để bạn có thể khám phá thế giới!
       MC_HOC_2017_01_Cole_authored_hint:
@@ -709,18 +707,18 @@ vi:
           Bạn có thể chạy dòng mã lệnh ngay cả khi nó chưa đúng. Bạn có thể chạy và khởi động lại mã lệnh hết lần này đến lần khác cho đến khi bạn phát hiện ra sai ở đâu.
         MC_HOC_2017_04_Cole_b: Khi Đặc vụ đi đến tấm áp lực, nó sẽ giúp mở cửa cho người chơi.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Bạn có biết rằng bạn có thể sử dụng nhiều hơn một mã lệnh bên trong một vòng lặp?  Hãy sử dụng các mã lệnh để di chuyển về phía trước ** và ** đặt một tấm ván bên trong vòng lặp 'lặp lại' để hoàn thành câu đố này.
+        MC_HOC_2017_05_Cole_a: Bạn có biết rằng bạn có thể sử dụng nhiều hơn một mã lệnh bên trong một vòng lặp?  Hãy sử dụng các mã lệnh để di chuyển về phía trước \*\* và \*\* đặt một tấm ván bên trong vòng lặp 'lặp lại' để hoàn thành câu đố này.
         MC_HOC_2017_05_Cole_b: Đưa đặc vụ qua bên kia sông, vừa đi vừa xây một cây cầu.
       MC_HOC_2017_05_Cole_2019_authored_hint:
-        MC_HOC_2017_05_Cole_a: Bạn có biết rằng bạn có thể sử dụng nhiều hơn một mã lệnh bên trong một vòng lặp?  Hãy sử dụng các mã lệnh để di chuyển về phía trước ** và ** đặt một tấm ván bên trong vòng lặp 'lặp lại' để hoàn thành câu đố này.
+        MC_HOC_2017_05_Cole_a: Bạn có biết rằng bạn có thể sử dụng nhiều hơn một mã lệnh bên trong một vòng lặp?  Hãy sử dụng các mã lệnh để di chuyển về phía trước \*\* và \*\* đặt một tấm ván bên trong vòng lặp 'lặp lại' để hoàn thành câu đố này.
         MC_HOC_2017_05_Cole_b: Đưa đặc vụ qua bên kia sông, vừa đi vừa xây một cây cầu.
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Bạn có biết rằng bạn có thể sử dụng nhiều hơn một mã lệnh bên trong một vòng lặp?  Hãy sử dụng các mã lệnh để đặt một tấm ván **và** di chuyển về phía trước vào trong vòng lặp 'lặp lại' để hoàn thành câu đố này.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: Vòng lặp này đã chạy bao nhiêu lần?  Vòng lặp này *nên* chạy bao nhiêu lần?
+        MC_HOC_2017_06_Cole_a: Vòng lặp này đã chạy bao nhiêu lần?  Vòng lặp này _nên_ chạy bao nhiêu lần?
         MC_HOC_2017_06_Cole_b: 'Giúp đỡ Đặc vụ xây dựng một cây cầu để vượt qua dòng nước! '
       MC_HOC_2017_06_Cole_2019_authored_hint:
-        MC_HOC_2017_06_Cole_a: Vòng lặp này đã chạy bao nhiêu lần?  Vòng lặp này *nên* chạy bao nhiêu lần?
+        MC_HOC_2017_06_Cole_a: Vòng lặp này đã chạy bao nhiêu lần?  Vòng lặp này _nên_ chạy bao nhiêu lần?
         MC_HOC_2017_06_Cole_b: 'Giúp đỡ Đặc vụ xây dựng một cây cầu để vượt qua dòng nước! '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Cố gắng đưa nhiều hơn một mã lệnh vào trong vòng lặp "lặp lại"!
@@ -782,9 +780,10 @@ vi:
       Ryan_Demo_authored_hint:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
-          * Vũ công cần chuyển sang động tác mới sau 4 nhịp.
 
-          *Cấp độ này kết thúc sau 8 nhịp.*
+          -   Vũ công cần chuyển sang động tác mới sau 4 nhịp.
+
+          _Cấp độ này kết thúc sau 8 nhịp._
       course3_bee_functions_challenge1_authored_hint:
         courseE_bee_functions_challenge1_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi thử lại.  Sẽ có lúc bạn hoàn thành nó!"
       course3_bee_functions_challenge2_authored_hint:
@@ -824,7 +823,7 @@ vi:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -843,7 +842,7 @@ vi:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -862,7 +861,7 @@ vi:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -881,7 +880,7 @@ vi:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1024,7 +1023,7 @@ vi:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1043,7 +1042,7 @@ vi:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1062,7 +1061,7 @@ vi:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1081,7 +1080,7 @@ vi:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1186,9 +1185,10 @@ vi:
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Chương trình của bạn cần:
-          - Dùng hàm\
-          - Tiến về phía trước 100 + 75 điểm ảnh
-          - Dùng hàm
+
+          -   Dùng hàm\\
+          -   Tiến về phía trước 100 + 75 điểm ảnh
+          -   Dùng hàm
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: "Thử dùng khối `nhảy về phía trước` để đi từ hình vuông này đến điểm bạn bắt đầu hình vuông tiếp theo. \n\nNếu các hình vuông cao 20 điểm ảnh và chúng cách nhau 20 điểm ảnh, bạn sẽ cần nhảy bao xa?"
       courseD_artist_nestedLoops3_2018_authored_hint:
@@ -1210,9 +1210,10 @@ vi:
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Chương trình của bạn cần:
-          - Dùng hàm\
-          - Tiến về phía trước 100 + 75 điểm ảnh
-          - Dùng hàm
+
+          -   Dùng hàm\\
+          -   Tiến về phía trước 100 + 75 điểm ảnh
+          -   Dùng hàm
       courseE_bee_functions6_authored_hint:
         courseE_bee_functions6_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi thử lại.  Sẽ có lúc bạn hoàn thành nó!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       courseE_bee_functions6_2018_authored_hint:
@@ -1274,7 +1275,7 @@ vi:
         2-3_Artist_Debugging_8_a: |-
           Hình của tôi đã lặp lại bao nhiêu lần?
 
-          Hình đó *cần* lặp lại bao nhiêu lần?
+          Hình đó _cần_ lặp lại bao nhiêu lần?
 
           Bạn có thể thay đổi điều đó ở đâu trong chương trình?
       grade2_PuppyLoops_8_authored_hint:
@@ -1307,7 +1308,7 @@ vi:
         2-3_Bee_Loops_3B_a: Bạn sẽ cần hai vòng lặp khác nhau, một cái sau cái còn lại.
       grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
-        2-3_Bee_Loops_7_b: 'vòng lặp'
+        2-3_Bee_Loops_7_b: vòng lặp
       grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
         2-3_Bee_Loops_4A_b: Phần cuối của chương trình có thể được kết thúc bằng cách viết mã ở phần cuối chương trình, bên ngoài vòng lặp của bạn.
@@ -1322,9 +1323,10 @@ vi:
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Chương trình của bạn cần:
-          - Dùng hàm\
-          - Tiến về phía trước 100 + 75 điểm ảnh
-          - Dùng hàm
+
+          -   Dùng hàm\\
+          -   Tiến về phía trước 100 + 75 điểm ảnh
+          -   Dùng hàm
       grade4_bee_functions7_authored_hint:
         2-3_Bee_Functions_8_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi thử lại.  Sẽ có lúc bạn hoàn thành nó!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       grade4_bee_functions8_authored_hint:
@@ -1337,7 +1339,7 @@ vi:
         2-3_Artist_1_new_a: Nếu bạn sử dụng khối lệnh để tôi `di chuyển về phía trước 100 pixel`, tôi sẽ tự động vẽ một đường thẳng.
         2-3_Artist_1_new_b: Gặp khó khăn khi rẽ ở góc? Hãy dùng block `rẽ phải 90 độ`.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'Để tạo những góc nhỏ này, bạn cần xoay *xa hơn* mỗi lần so với lúc bạn xoay hình vuông.   '
+        2-3_Artist_6_a: 'Để tạo những góc nhỏ này, bạn cần xoay _xa hơn_ mỗi lần so với lúc bạn xoay hình vuông.   '
         2-3_Artist_6_b: Vì tôi đã hướng về bên phải, sẽ dễ hơn khi bắt đầu di chuyển về phía trước, sau đó quẹo trái để tạo thành hình tam giác.
         2-3_Artist_6_c: Mỗi cạnh của hình tam giác có chiều dài tương tự như mỗi cạnh của hình vuông...100 pixels!
       grade4_review_bee1_authored_hint:
@@ -1357,7 +1359,7 @@ vi:
         2-3_Bee_Loops_3B_a: Bạn sẽ cần hai vòng lặp khác nhau, một cái sau cái còn lại.
       level 'grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
-        2-3_Bee_Loops_7_b: 'vòng lặp'
+        2-3_Bee_Loops_7_b: vòng lặp
       level 'grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
         2-3_Bee_Loops_4A_b: Phần cuối của chương trình có thể được kết thúc bằng cách viết mã ở phần cuối chương trình, bên ngoài vòng lặp của bạn.

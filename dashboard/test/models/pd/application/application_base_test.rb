@@ -337,5 +337,41 @@ module Pd::Application
       partner.contact_email = 'we_teach_code@ex.net'
       assert_equal "\"We Teach Code\" <we_teach_code@ex.net>", application.formatted_partner_contact_email
     end
+
+    test 'formatted_applicant_email uses user account email' do
+      application = create :pd_teacher1920_application
+
+      assert application.user.email.present?
+
+      formatted_email = "\"#{application.applicant_full_name}\" <#{application.user.email}>"
+      assert_equal formatted_email, application.formatted_applicant_email
+    end
+
+    test 'formatted_applicant_email uses alternate email if no user account email' do
+      teacher_without_email = create :teacher, :with_school_info, :demigrated
+      teacher_without_email.update_attribute(:email, '')
+      teacher_without_email.update_attribute(:hashed_email, '')
+
+      application = create :pd_teacher1920_application, user: teacher_without_email
+
+      assert teacher_without_email.email.blank?
+
+      formatted_alternate_email = "\"#{application.applicant_full_name}\" <#{application.sanitize_form_data_hash[:alternate_email]}>"
+      assert_equal formatted_alternate_email, application.formatted_applicant_email
+    end
+
+    test 'formatted_applicant_email raises error if no user email or alternate email' do
+      teacher_without_email = create :teacher, :with_school_info, :demigrated
+      teacher_without_email.update_attribute(:email, '')
+      teacher_without_email.update_attribute(:hashed_email, '')
+      application_hash_without_email = build :pd_teacher1920_application_hash, alternate_email: ''
+      application_without_email = create :pd_teacher1920_application, user: teacher_without_email, form_data: application_hash_without_email.to_json
+
+      assert teacher_without_email.email.blank?
+      assert application_without_email.sanitize_form_data_hash[:alternate_email].blank?
+      assert_raises_matching("invalid email address for application #{application_without_email.id}") do
+        application_without_email.formatted_applicant_email
+      end
+    end
   end
 end

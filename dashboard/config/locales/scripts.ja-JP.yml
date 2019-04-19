@@ -1530,6 +1530,8 @@ ja:
               name: インターネット
             Crowdsourcing:
               name: クラウドソーシング
+            Songwriting:
+              name: 作詞作曲
         express-2019:
           stages:
             Programming in Maze:
@@ -1575,6 +1577,8 @@ ja:
               name: プレイ ラボのイベント
             Binary Bracelets:
               name: バイナリブレスレット
+            Sticker Art with Loops:
+              name: アーティストくりかえし
         gamelab:
           title: ゲーム ラボ
         coursea-2019:
@@ -1639,6 +1643,12 @@ ja:
               name: プレイ ラボのイベント
             Spelling Bee:
               name: つづりみつばち
+            Learn to Drag and Drop:
+              name: ドラッグ＆ドロップ
+            Programming in Maze:
+              name: めいろ のプログラミング
+            Ocean Scene with Loops:
+              name: アーティストくりかえし
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1683,3 +1693,15 @@ ja:
           stages:
             While Loops:
               name: Whileループ
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: クラウドソーシング
+            Conditionals with Cards:
+              name: カードと条件
+            Building a Foundation:
+              name: ピラミッドをたてよう
+            Loops in Artist:
+              name: アーティストくりかえし
+            'Events: The Big Event':
+              name: 'イベント: おおきなイベント'

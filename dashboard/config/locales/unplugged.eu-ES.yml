@@ -501,3 +501,10 @@ eu:
         title: Zure aztarna digitala
         desc: Irakasleek norberaren informazioaren aztarnat interneten uzteak izan
           ditzakeen ondorioak zeintzuk izan daitezkeen azalduko die ikasleei.
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+      timeforcs_demo_conditionals:
+        title: Baldintzak
+        desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute
+          eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut,
+          puntu bat lortzen duzu."'

@@ -322,3 +322,8 @@ vi:
       DigitalFootprint_2019:
         title: Dấu chân kỹ thuật số 
         desc: Giáo viên giới thiệu cho sinh viên việc đưa thông tin cá  nhân lên mạng sẽ tạo ra dấu chân hoặc "vệt dài" có hậu quả.
+      timeforcs_demo_crowdsourcing:
+        title: Đa nguồn
+      timeforcs_demo_conditionals:
+        title: Điều kiện
+        desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu Tôi rút được một thẻ đen, bạn sẽ được một điểm."

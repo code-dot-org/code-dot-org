@@ -32,7 +32,8 @@ class VirtualizedSummaryView extends Component {
     lessonOfInterest: PropTypes.number.isRequired,
     getLevels: PropTypes.func,
     onScroll: PropTypes.func,
-    jumpToLessonDetails: PropTypes.func.isRequired
+    jumpToLessonDetails: PropTypes.func.isRequired,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   state = {
@@ -65,7 +66,8 @@ class VirtualizedSummaryView extends Component {
         stageIdIndex,
         key,
         cellStyle,
-        stageData.position
+        stageData.position,
+        this.props.inMiniRubricExperiment
       );
     }
 
@@ -97,9 +99,10 @@ class VirtualizedSummaryView extends Component {
     stageIdIndex,
     key,
     style,
-    position
+    position,
+    inMiniRubricExperiment
   ) => {
-    const {section, scriptData, getLevels} = this.props;
+    const {section, getLevels} = this.props;
 
     // Alternate background colour of each row
     if (studentStartIndex % 2 === 1) {
@@ -118,7 +121,6 @@ class VirtualizedSummaryView extends Component {
             name={student.name}
             studentId={student.id}
             sectionId={section.id}
-            scriptId={scriptData.id}
           />
         )}
         {stageIdIndex >= 0 && (
@@ -127,6 +129,7 @@ class VirtualizedSummaryView extends Component {
             levelsWithStatus={getLevels(student.id, stageIdIndex)}
             style={progressStyles.summaryCell}
             onSelectDetailView={() => this.props.jumpToLessonDetails(position)}
+            inMiniRubricExperiment={inMiniRubricExperiment}
           />
         )}
       </div>

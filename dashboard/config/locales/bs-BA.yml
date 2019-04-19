@@ -721,6 +721,8 @@ bs:
     csp_variables: Varijable
     csp_conditionals: Uvjeti
     csp_functions: Funkcije
+    csp_lists: Liste
+    csp_loops: Petlje
   external_links:
     leaving_domain: Sada napuštate ovu domenu, na stranicu koja nije rukovođena od
       strane Code.org-a.

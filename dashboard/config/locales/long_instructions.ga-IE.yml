@@ -61,9 +61,7 @@ ga:
       2-3 Artist Functions 4: Anois, cuir an fheidhm isteach i lúb chun na trí chearnóg
         seo a tharraingt.
       2-3 Artist Loops New 10: Anois, ceanglaímis go leor V-anna le chéile i lúb.
-      2-3 Artist Loops New 12: 'Tarraing muileata le gach taobh 100 picteilín ar fad.
-
-'
+      2-3 Artist Loops New 12: Tarraing muileata le gach taobh 100 picteilín ar fad.
       2-3 Artist Loops New 13: Tabharfaimid roinnt cóid duit (liath) a dhéanann muileata
         amháin. Cuir an cód liath isteach i lúb chun patrún álainn a dhéanamh!
       2-3 Artist Loops New 2: Seo é an dúshlán atá tú tar éis críochnú arís, ach anois,
@@ -101,9 +99,9 @@ ga:
         na bláthanna ina bhfuil sé. '
       2-3 Bee Conditionals 13: Tá mórán ar siúl anseo! Úsáid na rudaí atá foghlamtha
         agat go dtí seo chun an neachtar go léir a bhailiú, ansin mil a dhéanamh.
-      2-3 Bee Conditionals 14: "Cuirimis gach uile rud le chéile!\r\n\r\nÚsáid na
-        rudaí atá foghlamtha agat go dtí seo chun cabhrú liom neachtar a bhailiú ó
-        na bláthanna a bhfuil neachtar iontu, leis an líon is lú blocanna. \r\n\r\nNá
+      2-3 Bee Conditionals 14: "Cuirimis gach uile rud le chéile!\\\r\n\\\r\nÚsáid
+        na rudaí atá foghlamtha agat go dtí seo chun cabhrú liom neachtar a bhailiú
+        ó na bláthanna a bhfuil neachtar iontu, leis an líon is lú blocanna. \\\r\n\\\r\nNá
         déan dearmad mil a dhéanamh ag an deireadh."
       2-3 Bee Conditionals 15: An cuimhin leat patrún cosúil le staighre mar seo?
         An féidir leat neachtar a bhailiú ó na bláthanna a bhfuil neachtar iontu,
@@ -189,9 +187,7 @@ ga:
       4-5 Bee Conditionals Assessment 1: '**Measúnú:** Is éard atá i bhfolach faoin
         scamall seo ná bláth ina bhfuil neachtar amháin nó cíor mheala ina bhfuil
         mil amháin. Críochnaigh an fheidhm "get nectar or make honey", ansin bain
-        úsáid aisti chun an neachtar nó an mhil go léir a bhailiú.
-
-'
+        úsáid aisti chun an neachtar nó an mhil go léir a bhailiú.'
       4-5 Bee Debugging 1: Tá na blocanna seo do mo chrá! An féidir leat iad a dheisiú?
       4-5 Bee Debugging 6: Athraíonn an méid neachtair sa mbláth corcra gach uair
         a dhéanann tú an dúshlán. Deisigh na blocanna chun an neachtar go léir a bhailiú
@@ -290,16 +286,16 @@ ga:
         chun an madra a chur ar ais ar bharr an scáileán ar chlé MÁ theagmhaíonn sé
         le haon aisteoir eile.
       Course 4 Play Lab Vars 2: Ní raibh an rás sa dúshlán roimhe seo féaráilte! Athraigh
-        an athróg "dog_speed" le deimhniú go mbeidh tú ábalta níos mó bratacha a bhailiú
-        ná an cat. Ag an chéad duine a bhailíonn 10 mbratach an bua!
+        an athróg "dog\_speed" le deimhniú go mbeidh tú ábalta níos mó bratacha a
+        bhailiú ná an cat. Ag an chéad duine a bhailíonn 10 mbratach an bua!
       Course 4 Play Labs For Loops 1: Tugaimis ar an madra bocht seo gach uimhir ó
         1 go 100 a rá. Úsáid lúb "do gach" agus an bloc "counter" chun an athróg a
         léamh gach uair a ritear an lúb.
       Course 4 Playlab For Loops 5b: Athraigh an incrimint sna lúba "do gach" seo,
         sa chaoi go gcríochnóidh an dá charachtar seo san áit chéanna.
       CourseF_PlayLab_vars2: Ní raibh an rás sa dúshlán roimhe seo féaráilte! Athraigh
-        an athróg "dog_speed" le deimhniú go mbeidh tú ábalta níos mó bratacha a bhailiú
-        ná an cat. Ag an chéad duine a bhailíonn 10 mbratach an bua!
+        an athróg "dog\_speed" le deimhniú go mbeidh tú ábalta níos mó bratacha a
+        bhailiú ná an cat. Ag an chéad duine a bhailíonn 10 mbratach an bua!
       K-1 Bee Loops 2: Úsáid bloc "athdhéan" le dul agus an neachtar a bhailiú, ansin
         déan mil!
       K-1 Bee Loops 3: Úsáid trí bhloc "athdhéan" chun an neachtar a bhailiú agus
@@ -315,10 +311,8 @@ ga:
         mbloc "athdhéan".
       K-1 Maze Loops 2: Úsáid an bloc "athdhéan" agus treoraigh go dtí an mhuc mé!
       K-1 Maze Loops 8: Úsáid blocanna "athdhéan" agus treoraigh go dtí an mhuc mé.
-      KIKI GLJ Test Response: 'Caith súil ghéar ar an gcód thíos. Cad a cheapann tú
+      KIKI GLJ Test Response: Caith súil ghéar ar an gcód thíos. Cad a cheapann tú
         a tharlóidh nuair a chliceálfaidh tú "Rith"?
-
-'
       NEW Course 4 Artist Functions 12: Úsáid an fheidhm "draw a line of squares"
         ón dúshlán roimhe seo chun an patrún seo a tharraingt.
       NEW Course 4 Artist Functions 3: Seo é cineál nua bloic a thugtar "feidhm" air.
@@ -352,8 +346,8 @@ ga:
         ansin bain an puimcín.
       course1_maze_debugging_challenge2: Dífhabhtaigh an leibhéal seo. Tá na blocanna
         cearta agat, ach tá siad san ord mícheart!
-      course2_artist_prog_challenge2: "*Cabhraigh liom na línte buí a phéinteáil ar
-        an mbóthar seo!*"
+      course2_artist_prog_challenge2: _Cabhraigh liom na línte buí a phéinteáil ar
+        an mbóthar seo!_
       course2_collector_prog_challenge1: Caith súil ghéar air! An féidir leat na **10**
         seoid atá ann a bhailiú?
       course2_harvester_loops_challenge1: Bailigh an t-arbhar go léir.
@@ -430,22 +424,22 @@ ga:
         a úsáid chun cabhrú le Scrat é a fháil?
       courseB_iceage_loops9_2019: Tá an dearcán i bhfad bhfad ar siúl! An féidir leat
         lúba a úsáid chun cabhrú le Scrat é a fháil?
-      courseB_maze_seq3: '*"Deisigh an cód agus treoraigh go dtí an mhuc mé!"*'
-      courseB_maze_seq9_challenge1: "*Cá bhfuil an mhuc sin ina folach anois?*"
+      courseB_maze_seq3: _"Deisigh an cód agus treoraigh go dtí an mhuc mé!"_
+      courseB_maze_seq9_challenge1: _Cá bhfuil an mhuc sin ina folach anois?_
       courseC_PlayLab_events6_2019: Anois scríobh ríomhchlár a aistríonn Waddles an
         Phiongain timpeall an scáileáin leis na saighde suas/síos/ar chlé/ar dheis,
         chun na spriocanna go léir a bhaint amach!
-      courseC_artist_prog_challenge2: "*Cabhraigh liom na línte buí a phéinteáil ar
-        an mbóthar seo!*"
-      courseC_collector_prog8: '*"Nár lagaí Dia thú! Cabhraigh liom na seoda go léir
-        a bhailiú."*'
-      courseC_collector_prog8_2018: '*"Nár lagaí Dia thú! Cabhraigh liom na seoda
-        go léir a bhailiú."*'
-      courseC_collector_prog8_2019: '*"Nár lagaí Dia thú! Cabhraigh liom na seoda
-        go léir a bhailiú."*'
-      courseC_collector_prog9: '*"Bailímis na seoda go léir!"*'
-      courseC_collector_prog9_2018: '*"Bailímis na seoda go léir!"*'
-      courseC_collector_prog9_2019: '*"Bailímis na seoda go léir!"*'
+      courseC_artist_prog_challenge2: _Cabhraigh liom na línte buí a phéinteáil ar
+        an mbóthar seo!_
+      courseC_collector_prog8: _"Nár lagaí Dia thú! Cabhraigh liom na seoda go léir
+        a bhailiú."_
+      courseC_collector_prog8_2018: _"Nár lagaí Dia thú! Cabhraigh liom na seoda go
+        léir a bhailiú."_
+      courseC_collector_prog8_2019: _"Nár lagaí Dia thú! Cabhraigh liom na seoda go
+        léir a bhailiú."_
+      courseC_collector_prog9: _"Bailímis na seoda go léir!"_
+      courseC_collector_prog9_2018: _"Bailímis na seoda go léir!"_
+      courseC_collector_prog9_2019: _"Bailímis na seoda go léir!"_
       courseC_collector_progA: Cabhraigh le Laurel na seoda go léir a bhailiú.
       courseC_harvester_loops10: Bailigh an t-arbhar agus na puimcíní go léir.
       courseC_harvester_loops10_2018: Bailigh an t-arbhar agus na puimcíní go léir.
@@ -491,24 +485,24 @@ ga:
         le chéile agus cliceáil "Rith" lena chur ar siúl!
       courseC_maze_programming1_2019: Sa dúshlán seo, tarraing na blocanna go léir
         le chéile agus cliceáil "Rith" lena chur ar siúl!
-      courseC_maze_programming8: '*"Tóg go bog é agus cabhraigh liom an mhuc dhána
-        a aimsiú."*'
-      courseC_maze_programming8_2018: '*"Tóg go bog é agus cabhraigh liom an mhuc
-        dhána a aimsiú."*'
-      courseC_maze_programming8_2019: '*"Tóg go bog é agus cabhraigh liom an mhuc
-        dhána a aimsiú."*'
-      courseC_maze_programming8_predict1: '*"Tóg go bog é agus cabhraigh liom an mhuc
-        dhána a aimsiú."*'
-      courseC_maze_programming8_predict1_2018: '*"Tóg go bog é agus cabhraigh liom
-        an mhuc dhána a aimsiú."*'
-      courseC_maze_programming8_predict1_2019: '*"Tóg go bog é agus cabhraigh liom
-        an mhuc dhána a aimsiú."*'
-      courseC_maze_programming9: '*"Anois, cabhraigh liom teacht aniar aduaidh ar
-        an muc ar do rogha bealach!"*'
-      courseC_maze_programming9_2018: '*"Anois, cabhraigh liom teacht aniar aduaidh
-        ar an muc ar do rogha bealach!"*'
-      courseC_maze_programming9_2019: '*"Anois, cabhraigh liom teacht aniar aduaidh
-        ar an muc ar do rogha bealach!"*'
+      courseC_maze_programming8: _"Tóg go bog é agus cabhraigh liom an mhuc dhána
+        a aimsiú."_
+      courseC_maze_programming8_2018: _"Tóg go bog é agus cabhraigh liom an mhuc dhána
+        a aimsiú."_
+      courseC_maze_programming8_2019: _"Tóg go bog é agus cabhraigh liom an mhuc dhána
+        a aimsiú."_
+      courseC_maze_programming8_predict1: _"Tóg go bog é agus cabhraigh liom an mhuc
+        dhána a aimsiú."_
+      courseC_maze_programming8_predict1_2018: _"Tóg go bog é agus cabhraigh liom
+        an mhuc dhána a aimsiú."_
+      courseC_maze_programming8_predict1_2019: _"Tóg go bog é agus cabhraigh liom
+        an mhuc dhána a aimsiú."_
+      courseC_maze_programming9: _"Anois, cabhraigh liom teacht aniar aduaidh ar an
+        muc ar do rogha bealach!"_
+      courseC_maze_programming9_2018: _"Anois, cabhraigh liom teacht aniar aduaidh
+        ar an muc ar do rogha bealach!"_
+      courseC_maze_programming9_2019: _"Anois, cabhraigh liom teacht aniar aduaidh
+        ar an muc ar do rogha bealach!"_
       courseD_bee_nestedLoops2: An uair seo, cabhraigh leis an mbeach an neachtar
         go léir a bhailiú leis an líon is lú blocanna agus is féidir.
       courseD_bee_nestedLoops2_2018: An uair seo, cabhraigh leis an mbeach an neachtar
@@ -727,8 +721,8 @@ ga:
         agus cliceáil "Rith" lena chur ar siúl!
       grade2_CaringForNewPet_1: Tarraing bloc "téigh ar aghaidh" breise as an mbosca
         uirlisí chun an cód a chur i gcrích.
-      grade2_CaringForNewPet_11: '*"Tóg go bog é agus cabhraigh liom an mhuc dhána
-        a aimsiú."*'
+      grade2_CaringForNewPet_11: _"Tóg go bog é agus cabhraigh liom an mhuc dhána
+        a aimsiú."_
       grade2_MakeDogTag_8: Anois, ceanglaímis go leor V-anna le chéile i lúb.
       grade2_PuppyLoops_10: Deir mo mhúinteoir gur chóir dom na rudaí a thosaím a
         chur i gcrích! Cabhraigh liom mo roth pionnaí a chríochnú. An bhfeiceann tú
@@ -740,13 +734,13 @@ ga:
         an cód sa chaoi go mbeidh na guairí ar comhfhad.
       grade2_PuppyLoops_9: De réir cosúlachta, tá an litir "C" san fhocal Béarla "CODE"
         droim ar ais! An féidir leat é a cheartú?
-      grade2_collector_9: '*"Bailímis na boinn go léir!"*'
+      grade2_collector_9: _"Bailímis na boinn go léir!"_
       grade2_collector_9a: "**Dúshlán:** Bailigh na boinn go léir."
       grade2_collector_A: Cabhraigh le Laurel na seoda go léir a bhailiú.
       grade2_collector_A_2018: Cabhraigh le Laurel na seoda go léir a bhailiú.
       grade2_collector_A_2019: Cabhraigh le Laurel na seoda go léir a bhailiú.
-      grade2_maze_debuggingFP: '*"Anois, cabhraigh liom teacht aniar aduaidh ar an
-        muc ar do rogha bealach!"*'
+      grade2_maze_debuggingFP: _"Anois, cabhraigh liom teacht aniar aduaidh ar an
+        muc ar do rogha bealach!"_
       grade2_puppy_loops4: Sa dúshlán seo, is féidir leat dhá bhloc "athdhéan" a úsáid
         chun cabhrú leat an mhuc a shroicheadh leis an líon is lú blocanna agus is
         féidir!
@@ -770,19 +764,17 @@ ga:
       grade3_ConditionalsElse_9: '**Measúnú:** Is éard atá i bhfolach faoin scamall
         seo ná bláth ina bhfuil neachtar amháin nó cíor mheala ina bhfuil mil amháin.
         Críochnaigh an fheidhm "get nectar or make honey", ansin bain úsáid aisti
-        chun an neachtar nó an mhil go léir a bhailiú.
-
-'
+        chun an neachtar nó an mhil go léir a bhailiú.'
       grade3_ConditionalsElse_TeacherIDo: Is éard atá i bhfolach faoi na scamaill
         ná bláth nó cíor mheala! Úsáid an bloc "má... i ngach cás eile" chun neachtar
         a bhailiú má tá bláth ann, agus mil a dhéanamh mura bhfuil (toisc gur cíor
         mheala é).
       grade3_Conditionals_10: Tá mórán ar siúl anseo! Úsáid na rudaí atá foghlamtha
         agat go dtí seo chun an neachtar go léir a bhailiú, ansin mil a dhéanamh.
-      grade3_Conditionals_11: "Cuirimis gach uile rud le chéile!\r\n\r\nÚsáid na rudaí
-        atá foghlamtha agat go dtí seo chun cabhrú liom neachtar a bhailiú ó na bláthanna
-        a bhfuil neachtar iontu, leis an líon is lú blocanna. \r\n\r\nNá déan dearmad
-        mil a dhéanamh ag an deireadh."
+      grade3_Conditionals_11: "Cuirimis gach uile rud le chéile!\\\r\n\\\r\nÚsáid
+        na rudaí atá foghlamtha agat go dtí seo chun cabhrú liom neachtar a bhailiú
+        ó na bláthanna a bhfuil neachtar iontu, leis an líon is lú blocanna. \\\r\n\\\r\nNá
+        déan dearmad mil a dhéanamh ag an deireadh."
       grade3_Conditionals_12: An cuimhin leat patrún cosúil le staighre mar seo? An
         féidir leat neachtar a bhailiú ó na bláthanna a bhfuil neachtar iontu, leis
         an líon is lú blocanna agus is féidir?
@@ -925,7 +917,7 @@ ga:
         chun an madra a chur ar ais ar bharr an scáileán ar chlé MÁ theagmhaíonn sé
         le haon aisteoir eile.
       grade5_playlab_variables2: Ní raibh an rás sa dúshlán roimhe seo féaráilte!
-        Athraigh an athróg "dog_speed" le deimhniú go mbeidh tú ábalta níos mó bratacha
+        Athraigh an athróg "dog\_speed" le deimhniú go mbeidh tú ábalta níos mó bratacha
         a bhailiú ná an cat. Ag an chéad duine a bhailíonn 10 mbratach an bua!
       grade5_playlab_variables9: Seo é feidhm darb ainm "patrol". Cuir in eagar í
         chun an cat a aistriú suas 400 picteilín ansin síos 400 picteilín.

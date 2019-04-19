@@ -922,6 +922,8 @@
     csp_variables: 'Variabler'
     csp_conditionals: 'Betingelser'
     csp_functions: 'Funksjoner'
+    csp_lists: 'Lister'
+    csp_loops: 'Løkker'
     dlp: 'Spørsmål til refleksjon'
   external_links:
     disclaimer: Ansvarsfraskrivelse

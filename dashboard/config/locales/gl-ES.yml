@@ -839,6 +839,8 @@ gl:
     csp_variables: Variables
     csp_conditionals: Condicionais
     csp_functions: Funcións
+    csp_lists: Listas
+    csp_loops: Bucles
   pd:
     form_labels:
       email: E-mail

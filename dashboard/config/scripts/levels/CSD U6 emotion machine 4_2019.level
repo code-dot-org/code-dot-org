@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2019-02-14T01:36:37.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -224,7 +224,6 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 12320,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/app-lab/design-mode/",
       "/docs/concepts/app-lab/design-mode/design-mode-elements/",
@@ -235,10 +234,11 @@
     "mini_rubric": "true",
     "text_mode_at_start": "false",
     "rubric_key_concept": "Test rubric for App Lab",
-    "rubric_exceeds": "Student is amazing!",
-    "rubric_meets": "Student did what they should",
-    "rubric_approaches": "Almost there.",
-    "rubric_no_evidence": "No evidence...."
+    "rubric_performance_level_1": "Student is amazing!",
+    "rubric_performance_level_2": "Student did what they should",
+    "rubric_performance_level_3": "Almost there.",
+    "rubric_performance_level_4": "No evidence....",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

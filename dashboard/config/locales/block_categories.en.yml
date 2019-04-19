@@ -23,14 +23,14 @@ en:
       Text: Text
       Picker: Picker
       Comment: Comment
+      World: World
+      Sprites: Sprites
+      Behaviors: Behaviors
       'Variables ': 'Variables '
       Default: Default
-      Behaviors: Behaviors
       Locations: Locations
       Bunny Game: Bunny Game
       everythingelse: everythingelse
-      World: World
-      Sprites: Sprites
       Location: Location
       numbers: numbers
       Numbers: Numbers
@@ -49,6 +49,7 @@ en:
       Functional: Functional
       While Events: While Events
       Sprite Properties: Sprite Properties
+      Merge with Behaviors: Merge with Behaviors
       Predefined: Predefined
       test: test
       test2: test2

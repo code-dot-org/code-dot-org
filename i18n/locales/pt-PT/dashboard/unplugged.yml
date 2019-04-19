@@ -299,3 +299,8 @@ pt:
       DigitalFootprint_2019:
         title: Seu rastro digital
         desc: Os professores informam aos alunos que colocar informações pessoais online cria um rastro digital, ou uma "trilha" que tem consequências.
+      timeforcs_demo_crowdsourcing:
+        title: Aberto ao público
+      timeforcs_demo_conditionals:
+        title: Condicionais
+        desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um ponto", e "se eu comprar uma carta preta, você ganha um ponto".

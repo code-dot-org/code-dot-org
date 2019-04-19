@@ -2,7 +2,10 @@ class ScriptsController < ApplicationController
   before_action :require_levelbuilder_mode, except: :show
   before_action :authenticate_user!, except: :show
   check_authorization
-  before_action :set_script, only: [:show, :edit, :update, :destroy]
+  before_action :set_script, only: [:edit, :update, :destroy]
+  # params[:id] in :show action may be a family name rather than a script,
+  # so differentiate how we set the script for this action.
+  before_action :set_script_for_show, only: [:show]
   authorize_resource
   before_action :set_script_file, only: [:edit, :update]
 
@@ -119,6 +122,12 @@ class ScriptsController < ApplicationController
     if current_user && @script&.pilot? && !@script.has_pilot_access?(current_user)
       render :no_access
     end
+  end
+
+  def set_script_for_show
+    is_family_name = ScriptConstants::FAMILY_NAMES.include?(params[:id])
+    return set_script unless is_family_name
+    @script = Script.get_script_family_redirect_for_user(params[:id], user: current_user, locale: request.locale)
   end
 
   def script_params

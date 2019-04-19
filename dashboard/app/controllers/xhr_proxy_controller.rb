@@ -62,6 +62,7 @@ class XhrProxyController < ApplicationController
     qrng.anu.edu.au
     quandl.com
     query.yahooapis.com
+    quizlet.com
     rejseplanen.dk
     noaa.gov
     nuevaschool.ngrok.io
@@ -79,6 +80,7 @@ class XhrProxyController < ApplicationController
     translate.yandex.net
     vpic.nhtsa.dot.gov
     wikipedia.org
+    words.bighugelabs.com
   ).freeze
 
   # How long the content is allowed to be cached

@@ -1425,6 +1425,8 @@ ar:
               name: الإنترنت
             Crowdsourcing:
               name: حشد المصادر
+            Songwriting:
+              name: تأليف الأغاني
         express-2019:
           stages:
             Relay Programming:
@@ -1518,3 +1520,11 @@ ar:
           stages:
             While Loops:
               name: حلقات بينما
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: حشد المصادر
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            Building a Foundation:
+              name: بناء قاعدة

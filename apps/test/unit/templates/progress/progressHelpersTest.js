@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/reconfiguredChai';
 import Immutable from 'immutable';
 import {
   fakeLesson,
@@ -10,7 +10,9 @@ import {
   lessonIsLockedForAllStudents,
   getIconForLevel,
   stageLocked,
-  summarizeProgressInStage
+  summarizeProgressInStage,
+  isLevelAssessment,
+  stageIsAllAssessment
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
@@ -186,6 +188,22 @@ describe('progressHelpers', () => {
     });
   });
 
+  describe('isLevelAssessment', () => {
+    it('returns true if level kind is assessment', () => {
+      const level = {
+        kind: LevelKind.assessment
+      };
+      assert.equal(isLevelAssessment(level), true);
+    });
+
+    it('returns false if level kind is something other than assessment', () => {
+      const level = {
+        kind: LevelKind.puzzle
+      };
+      assert.equal(isLevelAssessment(level), false);
+    });
+  });
+
   describe('getIconForLevel', () => {
     it('strips fa- from level.icon if one is provided', () => {
       const level = {
@@ -219,7 +237,24 @@ describe('progressHelpers', () => {
     });
   });
 
-  describe('summarizeProgressInState', () => {
+  describe('stageIsAllAssessment', () => {
+    it('returns true if all the levels are of kind assessment', () => {
+      const levels = fakeLevels(3);
+      levels[0].kind = LevelKind.assessment;
+      levels[1].kind = LevelKind.assessment;
+      levels[2].kind = LevelKind.assessment;
+      assert.equal(stageIsAllAssessment(levels), true);
+    });
+    it('returns false if not all the levels are of kind assessment', () => {
+      const levels = fakeLevels(3);
+      levels[0].kind = LevelKind.unplugged;
+      levels[1].kind = LevelKind.puzzle;
+      levels[2].kind = LevelKind.assessment;
+      assert.equal(stageIsAllAssessment(levels), false);
+    });
+  });
+
+  describe('summarizeProgressInStage', () => {
     it('summarizes all untried levels', () => {
       const levels = fakeLevels(3);
       const summarizedStage = summarizeProgressInStage(levels);

@@ -56,9 +56,7 @@ eu:
       2-3 Artist Loops 2: Orain erabil ezazu errepikatu bloke bat zelula oskol bihurtzeko.
       2-3 Artist Loops New 10: Orain konekta ditzagun V mordo bat elkarrekin, begizta
         batean denak marraztuta.
-      2-3 Artist Loops New 12: 'Marraztu 100 pixeleko aldeak dituen diamante bat.
-
-'
+      2-3 Artist Loops New 12: Marraztu 100 pixeleko aldeak dituen diamante bat.
       2-3 Artist Loops New 13: Orain marraztu diamantea 3 aldiz begizta batean.
       2-3 Artist Loops New 2: Hona hemen karratua marrazteko erabili duzun kodearen
         zati bat. Zer gertatzen da errepikatu blokea erabiltzen baduzu kode hau 4
@@ -199,7 +197,7 @@ eu:
       4-5 Nested Loops 12: Marraztu ditzakezu 36 triangelu hauek begizta kabiatu bat
         erabiliz?
       4-5 Nested Loops 3: "Sortu eguzki bat emandako kodea beste begizta batean sartuz.
-        Honi begizta kabiatua deitzen zaio.\r"
+        Honi begizta kabiatua deitzen zaio.\\\r"
       4-5 Nested Loops 5: Errepikatu emandako kodea haize-errota bat sortzeko.
       4-5 Nested Loops 6: Marraztu dezakezu hexagono bat triangeluaren kodea errepikatuz?
       4-5 Nested Loops 7: 'Errepikatu diseinu hau 10 aldiz. Zenbat biratu behar duzu
@@ -225,12 +223,12 @@ eu:
       Course 4 Artist 8: Eguzki hau marraz ezazu kode bloke honen gainean hainbat
         aldiz begizta burutuz.
       Course 4 Artist 8a: "Irudi hau gogoratzen? Oraingoan hori eraikitzen utziko
-        dizugu baina hasteko inolako blokerik eman gabe!\r\nIradokizuna: 360 graduko
+        dizugu baina hasteko inolako blokerik eman gabe!\\\r\nIradokizuna: 360 graduko
         biraketan 3 triangelu daude... zenbat aldiz dago 3 zenbakia 360-an?"
       Course 4 Artist Binary 1a: "Hona hemen funtzio bat, 1-z eta 0-z osatutako kate
         bitarra hartzen duena eta zenbaki horiek ezkerretik eskuinera eta goitik behera
         jarraitzeko agindua ematen diona artistari. Artistak, 1 ikusten duenean, laukiak
-        beteko ditu, eta 0 ikusten duenean, laukia ez ikusiarena egingo du.\r\n\r\nKode
+        beteko ditu, eta 0 ikusten duenean, laukia ez ikusiarena egingo du.\\\r\n\\\r\nKode
         hau abiarazi patroi hau marrazteko artistak bitarra nola erabiltzen duen ikusteko."
       Course 4 Artist For Loops 13: Hmmm, forma horiek gero eta handiagoak dira! Ez
         al dugu jadanik ebatzi arazo hau aldagaiak erabiliz? Nola erabili genezake
@@ -247,7 +245,8 @@ eu:
       Course 4 Artist For Loops 8a: Azken irudiko kodeari aldaketa txiki bat eginez
         marrazki hau sor dezakezu. Asma dezakezu zein den aldaketa?
       Course 4 Artist For Loops Challenge_a: "Asma dezakezu nola erabili ikasi duzun
-        guztia irudi hau sortzeko?\r\n\r\nPista txiki bat behar duzu? egin klik hemen."
+        guztia irudi hau sortzeko?\\\r\n\\\r\nPista txiki bat behar duzu? egin klik
+        hemen."
       Course 4 Artist Vars 3: 'Hemen duzu karratu bat marrazten duen begizta, baina
         zerbait falta du. Zuzendu dezakezu eta "luzera" aldagaia erabili alde bakoitzaren
         luzera zein izan behar den admatzeko? '
@@ -264,7 +263,7 @@ eu:
         goi-ezker eskinera atzera bueltatzeko BAKARRIK txakurrak beste aktoreetako
         bat ikutzen badu.
       Course 4 Play Lab Vars 2: Azkeneko puzleko lasterketa ez da oso justua izan!
-        Aldatu "zakurraren_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago
+        Aldatu "zakurraren\_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago
         bil ditzakezula. 10 bandera biltzen dituen lehenengoak irabazten du!
       Course 4 Play Labs For Loops 1: Eragin dezagun txakurrak 1etik 100erako zenbaki
         guztiak esatea. Erabili for begizta bat eta kontagailu blokea begizta abiarazten
@@ -276,7 +275,7 @@ eu:
         atzera x pixel salto egin ditzan, eta baita gora eta behera y pixel (zenbaki
         positiboak eta negatiboak erabiiz).
       CourseF_PlayLab_vars2: Azkeneko puzleko lasterketa ez da oso justua izan! Aldatu
-        "zakurraren_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago bil
+        "zakurraren\_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago bil
         ditzakezula. 10 bandera biltzen dituen lehenengoak irabazten du!
       K-1 Bee Loops 2: Erabili begizta bat mugitzeko eta ondoren jaso nektarra eta
         egin eztia!
@@ -304,9 +303,9 @@ eu:
       NEW Course 4 Artist Vars 4: 'Saia gaitezen berriro. Luzera aldagaia alda al
         dezakezu diseinu eder hau hexagonoekin egiteko? Pista: 10en multiploa da.'
       NEW Course 4 Artist Vars 6: "Marraz ezazu patroia \"luzera\" aldagaia leku egokian
-        jarriz eta, ondoren, balio egokia ezarriz. (Pista: 10-en multiplo bat da).\r\n\r\nIkusten
+        jarriz eta, ondoren, balio egokia ezarriz. (Pista: 10-en multiplo bat da).\\\r\n\\\r\nIkusten
         al duzu luzera behin bakarrik definitu duzula eta kodeak beti balio egokia
-        erabiltzen duela?\r\n\r\n\r\n"
+        erabiltzen duela?\\\r\n\\\r\n\\\r"
       Overworld Move to Sheep: Gehitu bigarren "mugitu aurrera" agindua ardiarengana
         iristeko.
       Overworld Move to Sheep_2018: Gehitu bigarren "mugitu aurrera" agindua ardiarengana
@@ -461,7 +460,7 @@ eu:
         kodea errepikatuz?
       grade4_arist_nested_loop_triangles4: Marraztu krokodiloaren ahoko hortzak!
       grade4_arist_nested_loop_triangles5: "Sortu eguzki bat emandako kodea beste
-        begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r"
+        begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\\\r"
       grade4_arist_nested_loop_triangles6: Marraztu ditzakezu 36 triangelu hauek begizta
         kabiatu bat erabiliz?
       grade4_artist_functions2: Funtzioak ahalbidetzen zaitu bloke berriak definitzen.
@@ -473,7 +472,7 @@ eu:
       grade4_artist_nested_loop_polygons1: 'Errepikatu diseinu hau 10 aldiz. Zenbat
         biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 10?)'
       grade4_artist_nested_loop_triangles5: "Sortu eguzki bat emandako kodea beste
-        begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r"
+        begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\\\r"
       grade4_artist_nested_loop_triangles6: Marraztu ditzakezu 36 triangelu hauek
         begizta kabiatu bat erabiliz?
       grade4_artist_parameters_triangles2: Ezer berezirik antzeman al duzu funtzio-bloke
@@ -531,10 +530,10 @@ eu:
       grade5_artist_for_loops1: 'Marraztu 50 pixeleko zabalera duen triangelu hau.
         Pista: erabili errepikatu bloke bat.'
       grade5_artist_for_loops10: "Asma dezakezu nola erabili ikasi duzun guztia irudi
-        hau sortzeko?\r\n\r\nPista txiki bat behar duzu? egin klik hemen."
+        hau sortzeko?\\\r\n\\\r\nPista txiki bat behar duzu? egin klik hemen."
       grade5_artist_for_loops5: "Azken irudiko kodeari aldaketa txiki bat eginez  marrazki
-        hau sor dezakezu. Asma dezakezu zein den aldaketa?\r\n\r\nPista: zerbait ezabatu
-        behar duzu!"
+        hau sor dezakezu. Asma dezakezu zein den aldaketa?\\\r\n\\\r\nPista: zerbait
+        ezabatu behar duzu!"
       grade5_artist_parameters_triangles2a: Ezer berezirik antzeman al duzu funtzio-bloke
         hauetan? Sakatu "Abiatu" zer gertatzen den ikusteko.
       grade5_artist_variables_hexagons1: 'Saia gaitezen berriro. Luzera aldagaia alda
@@ -543,13 +542,13 @@ eu:
         aldeak dituen pentagono bat sor dezazu.
       grade5_artist_variables_pentagons1: "Marraz ezazu patroia \"luzera\" aldagaia
         leku egokian jarriz eta, ondoren, balio egokia ezarriz. (Pista: 10-en multiplo
-        bat da).\r\n\r\nIkusten al duzu luzera behin bakarrik definitu duzula eta
-        kodeak beti balio egokia erabiltzen duela?\r\n\r\n\r\n"
+        bat da).\\\r\n\\\r\nIkusten al duzu luzera behin bakarrik definitu duzula
+        eta kodeak beti balio egokia erabiltzen duela?\\\r\n\\\r\n\\\r"
       grade5_playlab_variables13: Erabili "aktoreak ikutzen duenean" blokea txakurra
         goi-ezker eskinera atzera bueltatzeko BAKARRIK txakurrak beste aktoreetako
         bat ikutzen badu.
       grade5_playlab_variables2: Azkeneko puzleko lasterketa ez da oso justua izan!
-        Aldatu "zakurraren_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago
+        Aldatu "zakurraren\_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago
         bil ditzakezula. 10 bandera biltzen dituen lehenengoak irabazten du!
       grade5_playlab_variables9: "Hemen \"patruila\" izeneko funtzioa dago. \nAldatu
         katua 400 pixel gora mugitzeko eta gero 400 pixel behera."

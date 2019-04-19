@@ -30,3 +30,20 @@ Scenario: Submit three answers.
   And element ".level-group-content:nth(1) #checked_1" is visible
   And element ".level-group-content:nth(2) #checked_2" is visible
   And element ".level-group-content:nth(2) #checked_0" is visible
+
+Scenario: Match levels within level group
+  Given match level 0 question contains text "Match the code to the image that it will produce."
+  And match level 0 contains 4 unplaced answers
+  And match level 0 contains 4 empty slots
+  And match level 1 question contains text "Match the boolean expression to the English description."
+  And match level 1 contains 5 unplaced answers
+  And match level 1 contains 5 empty slots
+
+  When I drag match level 0 unplaced answer 0 to empty slot 0
+  And I drag match level 1 unplaced answer 0 to empty slot 0
+
+  Then match level 0 contains 3 unplaced answers
+  And match level 0 contains 3 empty slots
+  And match level 1 contains 4 unplaced answers
+  And match level 1 contains 4 empty slots
+  And element ".xmark" is not visible

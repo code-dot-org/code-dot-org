@@ -129,7 +129,7 @@ lt:
         Pasismagink!
       2-3 Artist Loops 10: Kas atsitiks su dizainas, kai mes darome mūsų galutinis
         žingsnis į priekį pusę tol, kol?
-      2-3 Artist Loops 11: Dabar galime įdėti * kitą * kilpą aplink mūsų visas kūrinys!  Nepamirškite
+      2-3 Artist Loops 11: Dabar galime įdėti \* kitą \* kilpą aplink mūsų visas kūrinys!  Nepamirškite
         pridėti kampu išorinės linijos pabaigoje.
       2-3 Artist Loops 4: Norite pamatyti, kas atsitinka, kai mes pakartoti tą figūrą,
         vėl ir vėl naudojant kilpą?
@@ -168,8 +168,8 @@ lt:
       2-3 Artist Nested Loops Free Play: Nupiešk ką nors įdomaus, naudodamas kartojimą
         kartojime.
       2-3 Bee Conditionals 1: Labas! Aš esu bitė. Padėk man surinkti nektarą iš gėlės.
-      2-3 Bee Conditionals 10: 'Violetinės gėlės gali turėti 1 arba 0 nektarų. Būk
-        atsargus, nerink nektaro iš violetinės gėlės, jei ji jo neturi.  '
+      2-3 Bee Conditionals 10: Violetinės gėlės gali turėti 1 arba 0 nektarų. Būk
+        atsargus, nerink nektaro iš violetinės gėlės, jei ji jo neturi.
       2-3 Bee Conditionals 11: Rinkti nektarą, kur gėlės turi nektaro.
       2-3 Bee Conditionals 15: Surink nektarą iš visų keturių gėlių.
       2-3 Bee Conditionals 9: Surink visą nektarą iš kiekvienos gėlės.
@@ -205,6 +205,8 @@ lt:
       2-3 maze sq15: Ar gali nuvesti iki saulėgrąžos naudodamas tik 5 blokelius?
       2-3 maze sq16: Puiku, šis bus panašus, tačiau šiek tiek kitoks. Ar gali įveikti
         naudodamas tik 5 blokelius?
+      2-3: Violetinės gėlės gali turėti 1 arba 0 nektarų. Būk atsargus, nerink nektaro
+        iš violetinės gėlės, jei ji jo neturi.
       20hr_farmer_stage9_1: Labas, aš esu ūkininkė. Man reikia išlyginti žemę, kad
         ji būtų paruošta sodinimui. Pajudink mane iki tos purvo krūvos ir panaudok
         blokelį „pašalink 1“, kad jį pašalinti.
@@ -326,9 +328,6 @@ lt:
       4-5 While Loops Assessment 1: Lauke yra daug duobių ir žemių. Padėk man išlyginti
         lauką.
       App Lab test: sąlyga
-      Artist - Nested Loops 1: 'Užbaik kodą, kad gautum šiuos trikampius. Pirmasis
-        trikampis tau jau yra duotas. Patarimas: apskritimo ilgis yra 360 laipsnių.
-        Įsivaizduok, kad šie trikampiai yra apskritimo viduje.'
       Artist - Nested Loops 5: Įdėk duotą kodą į kartojimą, kad gautumei malūnėlį.
       Artist - Nested Loops 9: Nupiešk krokodilo dantis!
       Artist Autorun Test: Panaudok kartojimo blokelį ir nupiešk tris kvadratus.
@@ -460,9 +459,9 @@ lt:
         mane pas kiaulę!
       K-1 Maze Multi 14: Iššūkis
       K-1 Maze Multi 15: Iššūkis
-      K-1 Maze Sequence Assessment 1: "Metu tau iššūkį!\r\nPajudink mane į vieną,
+      K-1 Maze Sequence Assessment 1: "Metu tau iššūkį!\\\r\nPajudink mane į vieną,
         \no po to į kitą pusę, kad pasiekčiau kiaulę"
-      K-1 Maze Sequence Assessment 2: "Metu tau iššūkį!\r\nPajudink mane į vieną,
+      K-1 Maze Sequence Assessment 2: "Metu tau iššūkį!\\\r\nPajudink mane į vieną,
         \no po to į kitą pusę, kad pasiekčiau kiaulę."
       K-1 Maze debug Assessment 1: Įvertink situaciją – Surask ir ištaisyk klaidas,
         kad galėčiau pasiekti kiaulę!
@@ -471,7 +470,7 @@ lt:
       K-1 artist 1 level 9: Nupiešk šį piešinį panaudodamas tris linijas
       K-1 maze debug 1: Pakeisk blokelių seką, kad pasiekčiau kiaulę!
       K-1 maze debug 10: Surask ir ištaisyk klaidas, kad galėčiau pasiekti kiaulę!
-      K-1 maze debug 11: "Iššūkis tau!\r\nSurask ir ištaisyk klaidas, \nkad galėčiau
+      K-1 maze debug 11: "Iššūkis tau!\\\r\nSurask ir ištaisyk klaidas, \nkad galėčiau
         pasiekti kiaulę"
       K-1 maze debug 2: Išsiaiškink, kokių blokelių trūksta ir juos pridėk!
       K-1 maze debug 3: Išsiaiškink, kurie blokeliai NETINKA ir pašalink juos!
@@ -1006,9 +1005,6 @@ lt:
         malūnėlį.
       grade4_artist_nested_loop_polygons1: "Pakartok šį kodą 10 kartų. \n\nPo kiek
         laipsnių reikia pasisukti kiekviename kartojime?"
-      grade4_artist_nested_loop_triangles1: 'Užbaik kodą, kad gautum šiuos trikampius.
-        Pirmasis trikampis tau jau yra duotas. Patarimas: apskritimo ilgis yra 360
-        laipsnių. Įsivaizduok, kad šie trikampiai yra apskritimo viduje.'
       grade4_artist_nested_loop_triangles5: Nupiešk saulę, sukurdama(-s) kartojimą
         kartojime.
       grade4_bee_functions1: Surink visą nektarą iš kiekvienos gėlės.
@@ -1045,9 +1041,6 @@ lt:
         jų reikės pasisukti po 120 laipsnių.
       grade4_frozen_square_loop3: Pamėginkime sukurti snaigę. Reikės nupiešti 10 kvadratų,
         o pasisukti po 36 laipsnius nupiešus kiekvieną kvadratą.
-      grade4_review_artist1: Sveiki, aš esu menininkas. Tau parašius kodą, aš galiu
-        nupiešti beveik viską. Panaudok keletą blokų, kad aš pieščiau per pilkas linijas
-        paveikslėlyje. (Kiekviena linija yra 100 pikselių ilgio)
       grade4_review_artist2: 'Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris:
         visos trys kraštinės yra tokio pat ilgio.'
       grade4_review_artist3: Naudodamas naują peršokimo blokelį, gali padaryti taip,

@@ -15,35 +15,41 @@ de:
       Boolean: Boolean
       Conditionals: Bedingungen
       Events: Ereignisse
-      Games/Score: Spiel/Punktzahl
+      Games/Score: Spiele/Punktzahl
       Comments: Kommentare
       Category: Kategorie
       Prebuilt: Vorgefertigt
       Text: Text
       Picker: Sammler
       Comment: Kommentar
+      World: Welt
+      Behaviors: Verhaltensweisen
       'Variables ': 'Variablen '
       Default: Standard
-      Behaviors: Verhaltensweisen
+      Locations: Orte
+      Bunny Game: Hasenspiel
       everythingelse: allesandere
-      World: Welt
       Location: Standort
-      numbers: nummern
+      numbers: Nummern
       Numbers: Nummern
       Input: Eingabe
       Dancers: Tänzer
       Groups: Gruppen
       Advanced: Erweitert
       Start: Start
+      Dancing: Tanzen
       Sprite: Sprite
       Brush: Bürste
       Make Sprite: Sprite erstellen
       Movement: Bewegung
       Booleans: Boolesche Werte
       Functional: Funktional
+      Sprite Properties: Sprite Eigenschaften
       Predefined: Vordefiniert
       test: prüfe
       test2: test2
+      Use These Blocks: Benutze diese Bausteine
+      Do Not Use: Nicht benutzen
       Foo: Kram
       Name: Name
       NEW BLOCKS: NEUE BAUSTEINE
