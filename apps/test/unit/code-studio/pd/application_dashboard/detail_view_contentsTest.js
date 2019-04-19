@@ -7,7 +7,7 @@ import {
 import React from 'react';
 import _ from 'lodash';
 import sinon from 'sinon';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 
 describe('DetailViewContents', () => {
@@ -156,29 +156,38 @@ describe('DetailViewContents', () => {
         .simulate('change', {target: {value: 'accepted'}});
 
       // lock status
-      expect(detailView.find('#DetailViewHeader Button').first())
-        .text()
-        .to.equal('Lock');
+      expect(
+        detailView
+          .find('#DetailViewHeader Button')
+          .first()
+          .text()
+      ).to.equal('Lock');
       detailView
         .find('#DetailViewHeader Button')
         .first()
         .simulate('click');
-      expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be
+      expect(detailView.find('#DetailViewHeader select').prop('disabled')).to.be
         .true;
-      expect(detailView.find('#DetailViewHeader Button').first())
-        .text()
-        .to.equal('Unlock');
+      expect(
+        detailView
+          .find('#DetailViewHeader Button')
+          .first()
+          .text()
+      ).to.equal('Unlock');
 
       // unlock status
       detailView
         .find('#DetailViewHeader Button')
         .first()
         .simulate('click');
-      expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be
+      expect(detailView.find('#DetailViewHeader select').prop('disabled')).to.be
         .false;
-      expect(detailView.find('#DetailViewHeader Button').first())
-        .text()
-        .to.equal('Lock');
+      expect(
+        detailView
+          .find('#DetailViewHeader Button')
+          .first()
+          .text()
+      ).to.equal('Lock');
     });
   });
 
@@ -335,7 +344,11 @@ describe('DetailViewContents', () => {
           .filterWhere(row => row.text().includes('Scholarship Teacher?'));
 
       // Dropdown is disabled
-      expect(getLastRow().find('Select')).to.have.prop('disabled', true);
+      expect(
+        getLastRow()
+          .find('Select')
+          .prop('disabled')
+      ).to.equal(true);
 
       // Click "Edit"
       detailView
@@ -344,7 +357,11 @@ describe('DetailViewContents', () => {
         .simulate('click');
 
       // Dropdown is enabled
-      expect(getLastRow().find('Select')).to.have.prop('disabled', false);
+      expect(
+        getLastRow()
+          .find('Select')
+          .prop('disabled')
+      ).to.equal(false);
 
       // Click "Save"
       detailView
@@ -353,7 +370,11 @@ describe('DetailViewContents', () => {
         .simulate('click');
 
       // Dropdown is disabled
-      expect(getLastRow().find('Select')).to.have.prop('disabled', true);
+      expect(
+        getLastRow()
+          .find('Select')
+          .prop('disabled')
+      ).to.equal(true);
     });
   });
 
