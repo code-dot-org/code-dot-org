@@ -10,7 +10,8 @@ class DslTest < ActiveSupport::TestCase
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
   end
 
-  test 'remove property' do
+  test 'intentionally fail' do
+    raise 'foobaz'
     # mock file so we don't actually write a file, 2x for each "create_from_level_builder"
     input_dsl = "
   name 'my_multi'

@@ -31,7 +31,8 @@ class DslTest < ActiveSupport::TestCase
     pilot_experiment: nil,
   }
 
-  test 'test Script DSL' do
+  test 'Script DSL intentionally fail' do
+    raise 'foobar'
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       stage 'Stage1'
       level 'Level 1'
