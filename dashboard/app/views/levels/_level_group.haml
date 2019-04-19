@@ -25,9 +25,6 @@
   -# Is this a survey where we've already submitted
   - submitted_survey = @script_level.try(:anonymous?) && current_user && current_user.user_level_for(@script_level, @level).try(:submitted?)
 
-  -# If we're a teacher, render the locked_stage UI, which the client will conditionally hide based on Student/Teacher toggle
-  - if @script_level && @script_level.stage.lockable? && current_user.try(:teacher?)
-    = render 'levels/locked_stage', hidden: true
   .level-group
     - @pages.each do |page|
       - unless data["title"].blank?
