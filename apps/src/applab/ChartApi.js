@@ -54,7 +54,8 @@ ChartApi.ChartType = {
   BAR: 'bar',
   PIE: 'pie',
   LINE: 'line',
-  SCATTER: 'scatter'
+  SCATTER: 'scatter',
+  MAP: 'map'
 };
 
 /** @type {Object.<string, GoogleChart>} */
@@ -62,7 +63,8 @@ ChartApi.TypeNameToType = {
   bar: GoogleChart.MaterialBarChart,
   pie: GoogleChart.PieChart,
   line: GoogleChart.MaterialLineChart,
-  scatter: GoogleChart.MaterialScatterChart
+  scatter: GoogleChart.MaterialScatterChart,
+  map: GoogleChart.MapChart
 };
 
 /**

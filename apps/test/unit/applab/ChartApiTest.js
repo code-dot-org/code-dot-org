@@ -127,10 +127,18 @@ describe('ChartApi', function() {
     assert.isTrue(ChartApi.supportsType('scatter'));
   });
 
+  it('supports type MAP', function() {
+    assert.isTrue(ChartApi.supportsType(ChartApi.ChartType.MAP));
+    assert.isTrue(ChartApi.supportsType('MAP'));
+    assert.isTrue(ChartApi.supportsType('Map'));
+    assert.isTrue(ChartApi.supportsType('map'));
+  });
+
   it('quotes and alphabetizes types for dropdown', function() {
     assert.deepEqual(ChartApi.getChartTypeDropdown(), [
       '"bar"',
       '"line"',
+      '"map"',
       '"pie"',
       '"scatter"'
     ]);
@@ -420,6 +428,18 @@ describe('ChartApi', function() {
 
     it('scatter charts do not warn about three columns', function(testDone) {
       testMethod('fakeDiv', ChartType.SCATTER, 'fakeTable', [
+        'column1',
+        'column2',
+        'column3'
+      ]).then(
+        ensureDone(testDone, function() {
+          assertNotWarns(chartApi, /Too many columns/);
+        })
+      );
+    });
+
+    it('map charts do not warn about three columns', function(testDone) {
+      testMethod('fakeDiv', ChartType.MAP, 'fakeTable', [
         'column1',
         'column2',
         'column3'

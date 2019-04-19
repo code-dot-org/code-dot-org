@@ -376,3 +376,36 @@ class MaterialScatterChart extends GoogleChart {
   }
 }
 GoogleChart.MaterialScatterChart = MaterialScatterChart;
+
+/**
+ * Google Charts API Map Chart
+ *
+ * @see https://developers.google.com/chart/interactive/docs/gallery/map
+ *
+ * @param {Element} targetDiv
+ * @constructor
+ * @extends GoogleChart
+ */
+class MapChart extends GoogleChart {
+  /**
+   * @param {google.visualization.DataTable} dataTable
+   * @param {Object} options
+   * @returns {Promise}
+   * @private
+   * @override
+   */
+  render_(dataTable, options) {
+    const apiChart = new GoogleChart.lib.visualization.Map(this.targetDiv_);
+    apiChart.draw(dataTable, options);
+  }
+
+  /**
+   * Array of packages the chart needs to load to render.
+   * @returns {string[]}
+   * @override
+   */
+  getDependencies() {
+    return ['map'];
+  }
+}
+GoogleChart.MapChart = MapChart;
