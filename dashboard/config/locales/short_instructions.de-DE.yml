@@ -6,7 +6,7 @@ de:
         kann ich fast alles zeichnen. Verwende ein paar Bausteine, und lasse mich
         über die grauen Linien im Bild zeichnen. (Jede Linie ist 100 Pixel lang.)
       2-3 Artist 11: 'Gib dem Stoppschild einen Rahmen, indem du ein Oktagon mit 8
-        Seiten, jede 100 Pixel lang, zeichnest. Um wie viel Grad muss gedreht werden?
+        Seiten, jede 100 Pixel lang, zeichnest. Um wieviel Grad solltest du drehen?
         (Hinweis: Was ist 360 geteilt durch 8?) '
       2-3 Artist 12: Stelle den „Wiederholen“-Baustein so ein, dass es einen „Kreis“
         malt, um den Augapfel abzuschließen. Wenn jede Bewegung ein Grad rechts dreht,
@@ -44,8 +44,8 @@ de:
       2-3 Artist Debugging 1: Dieser Hut sollte nur 50 Pixel breit sein. Kannst du
         das Programm an der richtigen Stelle korrigieren?
       2-3 Artist Debugging 10: "Das Steuerkreuz auf meinem Game-Controller ist zu
-        klein. \r\n\r\nKannst Du es 10 Pixel breiter machen?.\r\n\r\nStarte das Programm
-        zuerst einmal, um zusehen, was du ändern musst."
+        klein. \\\r\n\\\r\nKannst Du es 10 Pixel breiter machen?.\\\r\n\\\r\nStarte
+        das Programm zuerst einmal, um zusehen, was du ändern musst."
       2-3 Artist Debugging 11: Hilf mir, meine schöne Schneeflocke zu beenden. Wie
         oft muss ich es „wiederholen“, um es zu beenden?
       2-3 Artist Debugging 12: Ich soll zu dieser Szene eine Ozeanwelle hinzufügen.  Kannst
@@ -62,7 +62,7 @@ de:
         falsch. Hinweis:  Der Fuß ist zu lang, wir müssen möglicherweise einen Schritt
         (Wortspiel beabsichtigt) löschen.'
       2-3 Artist Debugging 6: "Ich scheine auf einen Stuhl, dem ein Bein fehlt, zu
-        sitzen.\r\n\r\nÄndere den Code, um das letzte Bein zu zeichnen."
+        sitzen.\\\r\n\\\r\nÄndere den Code, um das letzte Bein zu zeichnen."
       2-3 Artist Debugging 7: Es sieht aus als ob C in Code spiegelverkehrt ist. Kannst
         du es wie ein C aussehen lassen?
       2-3 Artist Debugging 8: Mein Windrad ist noch nicht fertig. Wie oft muss ich
@@ -70,16 +70,16 @@ de:
       2-3 Artist Debugging 9: 'Der Code für diesen Stiel ist falsch. Hinweis:  Der
         Winkel weicht um 60 Grad ab.'
       2-3 Artist Debugging Assessment 1: "Weshalb ist dieses Quadrat um 75 Pixel zu
-        klein geraten?\r\n\r\nWo ist der Fehler? Kannst du es größer machen?"
+        klein geraten?\\\r\n\\\r\nWo ist der Fehler? Kannst du es größer machen?"
       2-3 Artist Free Play: Freies Spiel! Zeichne was du willst.
-      2-3 Artist Functions 1 a: "Hallo. Ich Zombie-Künstler. Ich zeichnen liebe! \r\n\r\nHilf
-        mir, die quadratischen Gläser zu zeichnen.  \r\n\r\nHinweis: Das Quadrat hat
-        eine Seitenlänge von 100 Pixeln. Die Brücke zwischen den Gläsern ist 25 Pixel
-        kürzer, als die Seitenlänge vom Quadrat."
-      2-3 Artist Functions 1: "Hallo. Ich Zombie-Künstler. Ich zeichnen liebe! \r\n\r\nHilf
-        mir, die quadratischen Gläser zu zeichnen.  \r\n\r\nHinweis: Das Quadrat hat
-        eine Seitenlänge von 100 Pixeln. Die Brücke zwischen den Gläsern ist 25 Pixel
-        kürzer, als die Seitenlänge vom Quadrat."
+      2-3 Artist Functions 1 a: "Hallo. Ich Zombie-Künstler. Ich zeichnen liebe! \\\r\n\\\r\nHilf
+        mir, die quadratischen Gläser zu zeichnen.  \\\r\n\\\r\nHinweis: Das Quadrat
+        hat eine Seitenlänge von 100 Pixeln. Die Brücke zwischen den Gläsern ist 25
+        Pixel kürzer, als die Seitenlänge vom Quadrat."
+      2-3 Artist Functions 1: "Hallo. Ich Zombie-Künstler. Ich zeichnen liebe! \\\r\n\\\r\nHilf
+        mir, die quadratischen Gläser zu zeichnen.  \\\r\n\\\r\nHinweis: Das Quadrat
+        hat eine Seitenlänge von 100 Pixeln. Die Brücke zwischen den Gläsern ist 25
+        Pixel kürzer, als die Seitenlänge vom Quadrat."
       2-3 Artist Functions 10: Hier sind zwei Funktionen, um ein großes und ein kleines
         Zahnrad zu zeichnen. Verwende sie, um das Innere einer Maschine zu zeichnen!
       2-3 Artist Functions 11 a: Wir haben die Funktion „zeichne ein Quadrat“ in „zeichne
@@ -132,7 +132,7 @@ de:
         zeichnen, um die Zelle zu beenden? Bedenke, das du nur 60 Grad drehen musst!
       2-3 Artist Loops 10: Was passiert mit dem Design, wenn wir unseren letzten Schritt
         vorwärts halb so lang machen?
-      2-3 Artist Loops 11: Jetzt lass uns *noch eine* Schleife um unsere ganze Schöpfung
+      2-3 Artist Loops 11: Jetzt lass uns _noch eine_ Schleife um unsere ganze Schöpfung
         legen!  Vergiss nicht, einen Winkel am Ende der äußeren Schleife hinzuzufügen.
       2-3 Artist Loops 2: Jetzt verwende einen Wiederholen-Block, um die Zelle zur
         Muschel zu machen.
@@ -279,7 +279,7 @@ de:
       2-3 Bee Functions 6: Jetzt benutze dieselbe Funktion, um Nektar von den drei
         Blüten zu sammeln.
       2-3 Bee Functions 7: Die Blüten sind jetzt weiter weg. Bearbeite die gegebene
-        Funktion und benutze sie, um den ganzen Nektar aus den Blüten zu sammeln.\t
+        Funktion und benutze sie, um den ganzen Nektar aus den Blüten zu sammeln.\\t
       2-3 Bee Functions 8: Erzeuge deine eigene Funktion, die 7 Portionen Nektar holt,
         vorwärts bewegt und 7 mal Honig macht. Benutze die Funktion, um bei jeder
         Blüte Nektar zu sammeln und bei jeder Wabe Honig zu erzeugen.
@@ -409,6 +409,8 @@ de:
         benutzen?
       2-3 maze sq16: Okay, das ist ähnlich, aber etwas anders. Kannst du es mit nur
         fünf Bausteinen?
+      2-3: Lila Blüten haben entweder 1 oder 0 Nektar. Achte darauf, nicht von einer
+        lila Blume Nektar zu sammeln, wenn sie keinen hat.
       2-3level1: Hilf dem Vogel, das freche Schwein zu fangen, in dem du es vorwärts
         bewegst.
       20hr_farmer_stage9_1: Hallo, ich bin ein Bauer. Ich muss das Feld auf meiner
@@ -597,7 +599,7 @@ de:
         Außerdem liegen die Blumen 100 Pixel auseinander.
       4-5 Artist Patterns 1: Kannst du dieses Quadrat mit Hilfe einer Schleife zeichnen?
         Jede Seite hat eine Länge von 20 Pixeln.
-      4-5 Artist Patterns 10: |
+      4-5 Artist Patterns 10: |-
         Dieser Code zeichnet zwei Spalten Sechsecke - wiederhole das ganze 4 Mal per Schleife und zeichne das ganze Wabenwerk.
         Hinweis: Du musst in deiner äußeren Schleife 120 Pixel zurückspringen um sicherzustellen, dass der Künstler nicht außerhalb des Bildschirms zeichnet
       4-5 Artist Patterns 11: 'Wie oft muss die Schleife durchlaufen werden, damit
@@ -628,8 +630,6 @@ de:
       4-5 Artist Patterns 5: Wir wollen das wiederholen und so eine Reihe von 6 Diamanten
         machen. Beachte, dass wir unseren Diamantencode so verändert haben, dass 3
         statt 2 Wiederholungen stattfinden - was glaubst du, warum?
-      4-5 Artist Patterns 6: Wie oft musst du diesen Baustein wiederholen, damit das
-        ganze Diamantenraster gezeichnet wird?
       4-5 Artist Patterns 7: Wir wollen den Code der letzten Aufgabe etwas verändern
         und so ein komplizierteres Muster erzeugen. Achte darauf, wie die Diamanten
         sich jetzt überdecken. Versuche es mit einer Änderung des ersten „springe
@@ -829,8 +829,6 @@ de:
       Alien Defender: 'Projekt Idee: Macht ein Verteidigungsspiel in Play Lab!'
       Alien Defender_2018: 'Projekt Idee: Macht ein Verteidigungsspiel in Play Lab!'
       App Lab test: prüfe
-      Artist - Nested Loops 1: 'Vervollständige den Code, um diese Dreiecke zu zeichnen.  Das
-        erste ist für dich erledigt.  Hinweis:  3 Dreiecke in einer 360- Grad- Drehung.'
       Artist - Nested Loops 10: Zeichne die letzte Sternenreihe dieser Flagge, indem
         du die verfügbaren Bausteine in Schleifen einschließt. Die Sterne sind 50
         Pixel auseinander, aber vergiss nicht, dass die Sterne selbst 30 Pixel breit
@@ -1076,8 +1074,8 @@ de:
 
         Brauchst du ein Hinweis? Klicke hier!
       Course 4 Artist For Loops Challenge_a: "Mit allem, was du bisher gelernt hast:
-        Findest du heraus, wie du dieses Bild machen kannst?\r\n\r\nBrauchst du einen
-        Tipp? Klick hier."
+        Findest du heraus, wie du dieses Bild machen kannst?\\\r\n\\\r\nBrauchst du
+        einen Tipp? Klick hier."
       Course 4 Artist For Loops inspire: |-
         Freies Spiel Inspiration: Du hast jetzt alles gelernt, um so ein Muster zu machen! Wenn dich das Bild inspiriert, versuche etwas Ähnliches zu machen. Wenn nicht, mach etwas ganz alleine.
 
@@ -1135,7 +1133,7 @@ de:
         („save and close“) zu klicken, um wieder aus dem Editor heraus zu kommen. '
       Course 4 Artist Functions 9: Wir haben dir den meisten Code gegeben, um eine
         Funktion zu bauen. Jedoch sieht es so aus als ob etwas fehlt. Kannst du den
-        Funktionsbaustein vervollständigen?\t
+        Funktionsbaustein vervollständigen?\\t
       Course 4 Artist Functions Inspiration: Klicke hier, um die Hinweise noch mal
         zu sehen!
       Course 4 Artist Functions challenge: Klicke hier, um die Hinweise noch mal zu
@@ -1397,9 +1395,9 @@ de:
       Course 4 Play Lab Params 10: |-
         Wir haben für dich eine letzte Funktion ergänzt.
 
-        Benutze eine „Wenn“-Aussage, um dein Spiel zu programmieren, um die „Level-hoch“-Funktion nur dann aufzurufen, wenn „Spieler_Punkte“ größer als eine bestimmte Zahl wird.
+        Benutze eine „Wenn“-Aussage, um dein Spiel zu programmieren, um die „Level-hoch“-Funktion nur dann aufzurufen, wenn „Spieler\_Punkte“ größer als eine bestimmte Zahl wird.
 
-        Zum Beispiel: „Spieler_Punkte“ > 6
+        Zum Beispiel: „Spieler\_Punkte“ > 6
 
         Spiele das Spiel und lasse es Level 4 passieren, um zum nächsten Puzzle zu gelangen.
       Course 4 Play Lab Params 2: |-
@@ -1429,11 +1427,11 @@ de:
         Hund nach links-oben zurückzuschicken; aber NUR wenn der Hund eine andere
         Figur berührt.
       Course 4 Play Lab Params 9: |-
-        Hier ist unser Spiel aus einer früheren Phase, doch der größte Teil des Codes ist versteckt. Es gibt eine neue Funktion „Erziele_Punkte“.
+        Hier ist unser Spiel aus einer früheren Phase, doch der größte Teil des Codes ist versteckt. Es gibt eine neue Funktion „Erziele\_Punkte“.
 
-        Bearbeite die Funktion so, dass der Variablen „Spieler_Punkte“ ein Parameter „Punkte“ hinzugefügt wird.
+        Bearbeite die Funktion so, dass der Variablen „Spieler\_Punkte“ ein Parameter „Punkte“ hinzugefügt wird.
 
-        Die Variable „Spieler_Punkte“ soll immer dann erhöht werden, wenn der Hund die Katze mit seinen Herzen trifft, wird der Hund von der Katze mit Herzen getroffen, soll die Punktezahl verringert werden.
+        Die Variable „Spieler\_Punkte“ soll immer dann erhöht werden, wenn der Hund die Katze mit seinen Herzen trifft, wird der Hund von der Katze mit Herzen getroffen, soll die Punktezahl verringert werden.
 
         Hinweis: Wenn du fertig bist, klicke zum Spielen auf „Ausführen“.  Wenn der Hund 6 Punkte erreicht hat geht es zur nächsten Aufgabe weiter.
       Course 4 Play Lab Vars 1: Diesmal brauchst Du keinen Code zu schreiben! Einfach
@@ -1442,7 +1440,7 @@ de:
         Hund zu kontrollieren. Klicke „Fertigstellen“, wenn du mit Spielen fertig
         bist.
       Course 4 Play Lab Vars 2: Das Rennen im letzten Rätsel war nicht sehr fair!
-        Ändere die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln
+        Ändere die Variable „Hunde\_Geschwindigkeit“ so, dass du mehr Fahnen sammeln
         kannst als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
       Course 4 Play Lab Vars 3: Jetzt was anderes! Verwende die Pfeiltasten nach links
         und rechts sowie nach oben zum Springen. Schau mal, ob du alle Fahnen einsammeln
@@ -1513,7 +1511,7 @@ de:
         Zahl gezählt. Versuche, „Zähler ^ 2“ in „Zähler ^ 3“ zu ändern, um die Kubikzahl
         jeder Zahl (1, 8, 27, 64, 125, 216, 343 …) zu zählen.
       Course 4 Play Labs For Loops 6: Denke daran, dass eine Primzahl eine ganze Zahl
-        ist, die nur durch sich selbst und durch 1 teilbar ist. Nutze die „ist_Prim“-Funktion,
+        ist, die nur durch sich selbst und durch 1 teilbar ist. Nutze die „ist\_Prim“-Funktion,
         um nur die Primzahlen von 1 bis 100 auszusprechen.
       Course 4 Play Labs For Loops 6a: |-
         Der Hund wird noch immer die Zeit angeben, indem er mit unserer „Zähl mit“-Schleife mit „Schrittweite“ zählt, aber dieses Mal werden wir den Zauberer hinzufügen.  Kannst du den Code so ändern, dass die „Schrittweite“ um jeweils 2 erhöht wird, wenn auf den Zauberer geklickt wird?
@@ -1530,24 +1528,24 @@ de:
       Course 4 Play Labs For Loops 8: |-
         Bringe die Figuren jetzt in Bewegung, während sie zählen.
 
-        Der Hund soll bei jeder Bewegung 2 hinzuzählen (Zähler + 2).  Die Katze wird bei jeder Bewegung den Zähler mit 2 multiplizieren (Zähler * 2). Der Pinguin soll die Zählvariable mit 2 potenzieren (Zähler ^ 2).  Wer ist als erster bei der Fahne?
+        Der Hund soll bei jeder Bewegung 2 hinzuzählen (Zähler + 2).  Die Katze wird bei jeder Bewegung den Zähler mit 2 multiplizieren (Zähler \* 2). Der Pinguin soll die Zählvariable mit 2 potenzieren (Zähler ^ 2).  Wer ist als erster bei der Fahne?
       Course 4 Play Labs For Loops 8a: |-
         Um das Spiel fertigzustellen benötigen wir wieder die Variable „Schrittweite“!    Verbinde sie mit der Spielstufe.
 
-        1) Beobachte wie oft der Zauberer angeklickt wird.
-        2) Sobald der Zauberer 10 Mal geklickt wurde, bevor der Hund bis 30 gezählt hat, erhöhe „Schrittweite“ um 1 und fang von vorne an.
-        3) Schaffst du es nicht, den Zauberer mindestens 10 Mal anzuklicken, ist das Spiel zu Ende.
+        1.  Beobachte wie oft der Zauberer angeklickt wird.
+        2.  Sobald der Zauberer 10 Mal geklickt wurde, bevor der Hund bis 30 gezählt hat, erhöhe „Schrittweite“ um 1 und fang von vorne an.
+        3.  Schaffst du es nicht, den Zauberer mindestens 10 Mal anzuklicken, ist das Spiel zu Ende.
       Course 4 Playlab For Loop Freeplay: 'Freeplay: Verwenden Sie alles, was Sie
         bisher gelernt haben, um ein Spiel zu machen, die eine "for" Schleife enthält!'
-      Course 4 Playlab For Loops 4b: "Jetzt machen die beiden Figuren ein Rennen!\r\r\n\nJede
+      Course 4 Playlab For Loops 4b: "Jetzt machen die beiden Figuren ein Rennen!\\\r\\\r\n\nJede
         Figur bewegt sich um die Anzahl Schritte vorwärts, die in 'Counter' steht.
         Jedoch haben die 'Counter' der beiden Figuren je einen anderen Wert in der
-        Für-Schleife,\r\r\n\nKannst Du die Schrittweite in einer der beiden Schleifen
+        Für-Schleife,\\\r\\\r\n\nKannst Du die Schrittweite in einer der beiden Schleifen
         so einstellen, so dass beide Figuren gleichzeitig ins Ziel kommen?"
       Course 4 Playlab For Loops 5b: Passe die Schrittweite in der For-Schleife an,
         so dass beide Figuren am Schluss an derselben Stelle zu stehen kommen.
       Course 4 Playlab For Loops 6b: "Passe diese 'Für'-Schleife an, um ein lustiges
-        Spiel zu bauen.\r\nStarte das Spiel mit \"Ausführen\" und klicke anschliessend
+        Spiel zu bauen.\\\r\nStarte das Spiel mit \"Ausführen\" und klicke anschliessend
         Frau Einhorn sooft Du kannst.\nSchaffst Du einen Punktestand über 24?"
       Course 4 SCF 1: Zeichne mit dem vorgegebenen Funktionen vier Zeilen mit Sechsecken.
         Beachte, dass die geradzahligen Zeilen nach rechts verschoben sind.
@@ -1602,7 +1600,7 @@ de:
       CourseD_Dance_Party_04: Fügen Sie Ihrem Programm einen Hintergrundeffekt hinzu.
       CourseD_Dance_Party_05: Verwenden Sie einen weiteren neuen Block, damit der
         Tänzer alle 2 Takte den Tanzschritt wechselt.
-      CourseD_Dance_Party_06: Erstellen Sie einen Backup-Tänzer namens "backup_dancer1",
+      CourseD_Dance_Party_06: Erstellen Sie einen Backup-Tänzer namens "backup\_dancer1",
         der mit der Katze tanzt.
       CourseD_Dance_Party_08: Können Sie beide Backup-Tänzer gleich groß machen?
       CourseD_Dance_Party_09: Verwenden Sie den Block "Farbton einstellen", um den
@@ -1638,7 +1636,7 @@ de:
 
         Hinweis: Du musst vielleicht runterscrollen, um alle Befehle im Arbeitsraum zu finden.
       CourseF_PlayLab_vars2: Das Rennen im letzten Rätsel war nicht sehr fair! Ändere
-        die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst
+        die Variable „Hunde\_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst
         als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
       CourseF_PlayLab_vars3: Jetzt was anderes! Verwende die Pfeiltasten nach links
         und rechts sowie nach oben zum Springen. Schau mal, ob du alle Fahnen einsammeln
@@ -1682,8 +1680,8 @@ de:
       Dance_Party_04: Fügen Sie Ihrem Programm einen Hintergrundeffekt hinzu.
       Dance_Party_05: Verwenden Sie einen weiteren neuen Block, damit der Tänzer alle
         2 Takte den Tanzschritt wechselt.
-      Dance_Party_06: Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der
-        mit der Katze tanzt.
+      Dance_Party_06: Erstellen Sie einen Backup-Tänzer namens "backup\_dancer1",
+        der mit der Katze tanzt.
       Dance_Party_08: Können Sie beide Backup-Tänzer gleich groß machen?
       Dance_Party_09: Verwenden Sie den Block "Farbton einstellen", um den Farbton
         eines Tänzers zu verändern.
@@ -1704,9 +1702,9 @@ de:
       Food Fight!: |-
         Wir haben für dich eine letzte Funktion ergänzt.
 
-        Benutze eine „Wenn“-Aussage, um dein Spiel zu programmieren, um die „Level-hoch“-Funktion nur dann aufzurufen, wenn „Spieler_Punkte“ größer als eine bestimmte Zahl wird.
+        Benutze eine „Wenn“-Aussage, um dein Spiel zu programmieren, um die „Level-hoch“-Funktion nur dann aufzurufen, wenn „Spieler\_Punkte“ größer als eine bestimmte Zahl wird.
 
-        Zum Beispiel: „Spieler_Punkte“ > 6
+        Zum Beispiel: „Spieler\_Punkte“ > 6
 
         Spiele das Spiel und lasse es Level 4 passieren, um zum nächsten Puzzle zu gelangen.
       FoodFight: Das ist ein Beispiel für ein Spiels, das du in Play Lab machen kannst.
@@ -2243,7 +2241,7 @@ de:
       New Minecraft Hero Project: "**Freies Spiel:**  Jetzt kannst du auf eigene Faust
         losziehen!"
       New Sports Project: "Jetzt bist Du an der Reihe: Erstelle dein eigenes Spiel.
-        Du kannst alle Regeln verändern und unterschiedliche Sportarten mischen.\r\n\r
+        Du kannst alle Regeln verändern und unterschiedliche Sportarten mischen.\\\r\n\\\r
         \nWenn Du fertig bist, klicke auf \"Fertig\" und lass' Deine Freunde das Spiel
         auf ihren Smartphones ausprobieren."
       Overworld Avoid Monsters: In einen Creeper hinein zu laufen, ist eine schlechte
@@ -2474,14 +2472,14 @@ de:
         du erreichen kannst, bevor dein Gegner zwei Punkte erhält.
       bounce_10_basketball: "Jetzt ist das Tor oben. Programmiere das ein Spiel so:
         Hänge die Bausteine „Punkt erzielen“ und „Punkt für den Gegner“ an die Bausteine
-        „Wenn Ball im Tor“ und „Wenn Ball die Hand verfehlt“.\r\n\r\nStarte das Spiel
-        und versuche möglichst viele Punkte zu machen, bevor dein Gegner zwei Punkte
-        erzielt."
+        „Wenn Ball im Tor“ und „Wenn Ball die Hand verfehlt“.\\\r\n\\\r\nStarte das
+        Spiel und versuche möglichst viele Punkte zu machen, bevor dein Gegner zwei
+        Punkte erzielt."
       bounce_10_sports: "Jetzt ist das Tor oben. Programmiere das ein Spiel so: Hänge
         die Bausteine „Punkt erzielen“ und „Punkt für den Gegner“ an die Bausteine
-        „Wenn Ball im Tor“ und „Wenn Ball die Hand verfehlt“.\r\n\r\nStarte das Spiel
-        und versuche möglichst viele Punkte zu machen, bevor dein Gegner zwei Punkte
-        erzielt."
+        „Wenn Ball im Tor“ und „Wenn Ball die Hand verfehlt“.\\\r\n\\\r\nStarte das
+        Spiel und versuche möglichst viele Punkte zu machen, bevor dein Gegner zwei
+        Punkte erzielt."
       bounce_11: Jetzt kannst du Bausteine an den „wenn Ausführen“-Baustein anhängen.
         Du musst den neuen Baustein „neuen Ball werfen“ an mehr als einer Stelle einsetzen.
         Versuche, die Geschwindigkeit des Schlägers und des Balls zu verändern und
@@ -2493,12 +2491,12 @@ de:
       bounce_11_basketball: "Jetzt kannst du Bausteine an den „wenn Ausführen“-Baustein
         anhängen. Den neuen Baustein „neuen Ball werfen“ musst Du an mehr als einer
         Stelle einsetzen. Versuche auch die Geschwindigkeit der Hand und des Balls
-        zu verändern .\r\n\r\nStarte das Spiel und versuche möglichst viele Punkte
+        zu verändern .\\\r\n\\\r\nStarte das Spiel und versuche möglichst viele Punkte
         zu machen, bevor dein Gegner zwei Punkte erzielt."
       bounce_11_sports: "Jetzt kannst du Bausteine an den „wenn Ausführen“-Baustein
         anhängen. Den neuen Baustein „neuen Ball werfen“ musst Du an mehr als einer
         Stelle einsetzen. Versuche auch die Geschwindigkeit der Hand und des Balls
-        zu verändern .\r\n\r\nStarte das Spiel und versuche möglichst viele Punkte
+        zu verändern .\\\r\n\\\r\nStarte das Spiel und versuche möglichst viele Punkte
         zu machen, bevor dein Gegner zwei Punkte erzielt."
       bounce_12: Erstelle dein eigenes Bounce-Spiel. Du kannst die Bilder und Regeln
         ändern. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das
@@ -2510,18 +2508,18 @@ de:
         Regeln ändern. Wenn Du fertig bist, klicke auf fertigstellen, um Deine Freunde
         das Spiel auf ihrem Handys ausprobieren zu lassen.
       bounce_12_sports: "Jetzt bist Du an der Reihe: Erstelle dein eigenes Spiel.
-        Du kannst alle Regeln verändern und unterschiedliche Sportarten mischen.\r\n\r
+        Du kannst alle Regeln verändern und unterschiedliche Sportarten mischen.\\\r\n\\\r
         \nWenn Du fertig bist, klicke auf \"Fertig\" und lass' Deine Freunde das Spiel
         auf ihren Smartphones ausprobieren."
       bounce_1_2018: Hänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein
         und drücke „Ausführen“. Bewege den Schläger mit dem Linkspfeil, um das Ziel
         zu erreichen.
-      bounce_1_basketball: "Berühre die Fahne. \r\nHänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein
-        und starte das Programm mit „Ausführen“ \r\n\r\nKlicke mit der Maus auf den
-        Linkspfeil, um die Hand zur Fahne zu bewegen."
-      bounce_1_sports: "Berühre die Fahne. \r\nHänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein
-        und starte das Programm mit „Ausführen“ \r\n\r\nKlicke mit der Maus auf den
-        Linkspfeil, um den Spieler zur Fahne zu bewegen."
+      bounce_1_basketball: "Berühre die Fahne. \\\r\nHänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein
+        und starte das Programm mit „Ausführen“ \\\r\n\\\r\nKlicke mit der Maus auf
+        den Linkspfeil, um die Hand zur Fahne zu bewegen."
+      bounce_1_sports: "Berühre die Fahne. \\\r\nHänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein
+        und starte das Programm mit „Ausführen“ \\\r\n\\\r\nKlicke mit der Maus auf
+        den Linkspfeil, um den Spieler zur Fahne zu bewegen."
       bounce_2: Hänge einen Baustein an die „wenn-Pfeil-nach-rechts“- und „wenn-Pfeil-nach-links“-Bausteine.
         Bewege den Schläger, um beide Ziele zu erreichen.
       bounce_2_2018: Hänge einen Baustein an die „wenn-Pfeil-nach-rechts“- und „wenn-Pfeil-nach-links“-Bausteine.
@@ -2547,10 +2545,10 @@ de:
         Hänge einen Baustein an den "wenn Ball den Schläger trifft"-Baustein, um sicherzustellen,
         dass der Ball das Ziel erreicht.
       bounce_5_basketball: "Wir lassen nun einen Ball nach unten in Richtung der Hand
-        fliegen.\r\n\r\nHänge einen Baustein an den \"wenn Ball die Hand trifft\"-Baustein,
+        fliegen.\\\r\n\\\r\nHänge einen Baustein an den \"wenn Ball die Hand trifft\"-Baustein,
         damit der Ball das Ziel erreicht."
       bounce_5_sports: "Wir lassen nun einen Hockey-Puck nach unten in Richtung vom
-        Spieler fliegen.\r\n\r\nHänge einen Baustein an den \"wenn Ball den Spieler
+        Spieler fliegen.\\\r\n\\\r\nHänge einen Baustein an den \"wenn Ball den Spieler
         trifft\"-Baustein, damit der Ball das Ziel erreicht."
       bounce_6: Jetzt ist das Ziel oben. Du musst Bausteine an beide "Wenn Ball auftrifft"-Bausteine
         anhängen, um diese Aufgabe zu lösen.
@@ -2580,8 +2578,8 @@ de:
         Hund (Figur 1) "Hallo" sagt?
       course2_playlab_stage17_10: "Füge unterhalb des Ereignis-Blocks \"wenn Ausführen\"
         weitere Programm-Blöcke hinzu, um den Hintergrund zu ändern und die Geschwindigkeit
-        des Pinguins 'Watschel' zu ändern. \n\r\r\nWenn du fertig bist, starte das
-        Spiel und steuere den Pinguin mit den Pfeilen, bis du punktest."
+        des Pinguins 'Watschel' zu ändern. \n\\\r\\\r\nWenn du fertig bist, starte
+        das Spiel und steuere den Pinguin mit den Pfeilen, bis du punktest."
       course2_playlab_stage17_11: Mache deine eigene Geschichte. Wenn du fertig bist,
         klicke auf "Abschließen" um deine Geschichte deinen Freunden an ihren Smartphones
         zu zeigen.
@@ -2589,8 +2587,8 @@ de:
         der Hund (Figur 1) und anschliessend Olivia, die Katze (Figur 2) etwas sagen?
       course2_playlab_stage17_3: Kannst Du ein Programm schreiben, so dass Jorge,
         der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
-      course2_playlab_stage17_4: "Kannst Du ein Programm schreiben, so dass sich \r\r\nzuerst
-        Jorge, der Hund (Figur 1) zu Olivia der Katze hinbewegt \r\nund anschliessend
+      course2_playlab_stage17_4: "Kannst Du ein Programm schreiben, so dass sich \\\r\\\r\nzuerst
+        Jorge, der Hund (Figur 1) zu Olivia der Katze hinbewegt \\\r\nund anschliessend
         -- sobald Jorge die Katze erreicht hat -- Olivia \"Hallo\" sagt?"
       course2_playlab_stage17_5: Kannst du ein Programm schreiben, bei welchem der
         Octavia, der Tintenfisch "Hallo" sagt, wenn sie angeklickt wird?
@@ -2599,10 +2597,10 @@ de:
         und versuche anschliessend alle Ziele zu treffen.
       course2_playlab_stage17_8: "Kannst Du ein Programm schreiben, so dass der Pinguin
         (Figur 1) \"Autsch!\" sagt und gleichzeitig ein \"Treffer\"-Geräusch ertönt,
-        sobald er in den Dinosaurier läuft?\r\n\r\nWenn du fertig bist, spiele Dein
-        Spiel und versuche aus, ob es so funktioniert."
+        sobald er in den Dinosaurier läuft?\\\r\n\\\r\nWenn du fertig bist, spiele
+        Dein Spiel und versuche aus, ob es so funktioniert."
       course2_playlab_stage17_9: "Kannst du einen Programm-Block hinzufügen, so dass
-        du ein Punkt erhältst, sobald der Pinguin den Tintenfisch (Figur 3) erreicht?\r\n\r\nWenn
+        du ein Punkt erhältst, sobald der Pinguin den Tintenfisch (Figur 3) erreicht?\\\r\n\\\r\nWenn
         du fertig bist, starte das Spiel und steuere den Pinguin mit den Pfeilen,
         bis du punktest."
       course3_playlab_stage16_1: Kannst du diesen Hund "Hallo Welt" sagen lassen?
@@ -2793,19 +2791,17 @@ de:
         herunter! Schreibe den Code um Laurel zu helfen, alles zu bekommen."
       courseB_collector_loops8_2019: "**Aufgabe:** Das Gold führt die gesamte Treppe
         herunter! Schreibe den Code um Laurel zu helfen, alles zu bekommen."
-      courseB_collector_loops9: '*"Hilf mir all das Gold aus diesen tiefen Tal zu
-        bekommen."*'
-      courseB_collector_loops9_2018: '*"Hilf mir all das Gold aus diesen tiefen Tal
-        zu bekommen."*'
-      courseB_collector_loops9_2019: '*"Hilf mir all das Gold aus diesen tiefen Tal
-        zu bekommen."*'
+      courseB_collector_loops9: _"Hilf mir all das Gold aus diesen tiefen Tal zu bekommen."_
+      courseB_collector_loops9_2018: _"Hilf mir all das Gold aus diesen tiefen Tal
+        zu bekommen."_
+      courseB_collector_loops9_2019: _"Hilf mir all das Gold aus diesen tiefen Tal
+        zu bekommen."_
       courseB_collector_prog1: Dies ist Laurel, der Abenteurer. Kannst Du sie herumführen
         und Gold einsammeln?
       courseB_maze_seq12: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq12_2018: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq12_2019: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
-      courseB_maze_seq2: '*"Ein Fehler! Repariere den Code, damit ich das Schwein
-        bekomme."*'
+      courseB_maze_seq2: _"Ein Fehler! Repariere den Code, damit ich das Schwein bekomme."_
       courseB_maze_seq6: Gehe einen Weg und dann einen anderen, um den Vogel zum Schwein
         zu bringen!
       courseB_maze_seq7: Finde heraus, was fehlt, und füge dann Blöcke hinzu, um den
@@ -3226,16 +3222,16 @@ de:
         und versuche anschliessend alle Ziele zu treffen.
       grade2_playlab_project_3: "Kannst Du ein Programm schreiben, so dass der Pinguin
         (Figur 1) \"Autsch!\" sagt und gleichzeitig ein \"Treffer\"-Geräusch ertönt,
-        sobald er in den Dinosaurier läuft?\r\n\r\nWenn du fertig bist, spiele Dein
-        Spiel und versuche aus, ob es so funktioniert."
+        sobald er in den Dinosaurier läuft?\\\r\n\\\r\nWenn du fertig bist, spiele
+        Dein Spiel und versuche aus, ob es so funktioniert."
       grade2_playlab_project_4: "Kannst du einen Programm-Block hinzufügen, so dass
-        du ein Punkt erhältst, sobald der Pinguin den Tintenfisch (Figur 3) erreicht?\r\n\r\nWenn
+        du ein Punkt erhältst, sobald der Pinguin den Tintenfisch (Figur 3) erreicht?\\\r\n\\\r\nWenn
         du fertig bist, starte das Spiel und steuere den Pinguin mit den Pfeilen,
         bis du punktest."
       grade2_playlab_project_5: "Füge unterhalb des Ereignis-Blocks \"wenn Ausführen\"
         weitere Programm-Blöcke hinzu, um den Hintergrund zu ändern und die Geschwindigkeit
-        des Pinguins 'Watschel' zu ändern. \n\r\r\nWenn du fertig bist, starte das
-        Spiel und steuere den Pinguin mit den Pfeilen, bis du punktest."
+        des Pinguins 'Watschel' zu ändern. \n\\\r\\\r\nWenn du fertig bist, starte
+        das Spiel und steuere den Pinguin mit den Pfeilen, bis du punktest."
       grade2_puppy_loops2: 'Kannst du diese fünf Bausteine durch nur zwei Bausteine
         ersetzen? (Hinweis: Du musst eine Schleife mit einem „Wiederholen“-Baustein
         erstellen, um dieses Level zu bestehen.) '
@@ -3428,9 +3424,6 @@ de:
       grade4_artist_nested_loop_squares1: Kannst du diese 10 Quadrate dieses Gehsteigs
         mit einer verschachtelten Schleife zeichnen? Jedes Quadrat hat eine Seitenlänge
         von 30 Pixeln.
-      grade4_artist_nested_loop_triangles1: 'Vervollständige den Code, um diese Dreiecke
-        zu zeichnen.  Das erste ist für dich erledigt.  Hinweis:  3 Dreiecke in einer
-        360- Grad- Drehung.'
       grade4_artist_nested_loop_triangles5: Male eine Sonne indem Du den Startbefehl
         in einer anderen Schleife benutzt. Dies nennt man eine verschachtelte Schleife.
       grade4_artist_nested_loop_triangles6: Kannst du diese 36 Dreiecke mit einer
@@ -3529,10 +3522,9 @@ de:
         Wie sollen wir in unserem Spiel Punkte erzielen? Addiere 1 zu deiner Variablen „Punkte“, wenn der Hund die Katze mit einem Herz trifft. Verwende das Ereignis „Wenn die Figur 2 irgendwas berührt“, um den Punktestand zu aktualisieren. Du kannst deine Variable erhöhen, indem du „Punktezahl = Punktezahl + 1“ einstellst. Du hast das Level erreicht, wenn du 10 Punkte (auf einmal!) erreichst.
       grade4_playlab_test2: Die Funktion „Springen" lässt deine Hauptfigur 100 Pixel
         hoch springen. Benutze die „Springen“-Funktion, um alle Flaggen einzusammeln.
-      grade4_review_artist1: Hallo, ich bin ein Künstler. Wenn du den richtigen Code
-        programmierst, kann ich fast alles zeichnen. Verwende ein paar Bausteine,
-        und lasse mich über die grauen Linien im Bild zeichnen. (Jede Linie ist 100
-        Pixel lang.)
+      grade4_review_artist1: "Hallo, ich bin ein Künstler. Du kannst mich mit Code
+        fast alles zeichnen lassen. Benutze ein paar Blöcke um mich dazu zu bringen
+        über die grauen Linien im Bild zu zeichnen. (Jede Linie ist 100 Pixel lang)\\\r\n\\\r"
       grade4_review_artist2: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
         alle drei Seiten sind gleich lang.'
       grade4_review_artist3: "Der \"springe\"-Block bewegt den Künstler, ohne eine
@@ -3574,8 +3566,8 @@ de:
       grade5_artist_for_loops1: 'Zeichne dieses Dreieck, das 50 Pixel groß ist. Hinweis:
         Benutze einen Wiederholen-Baustein.'
       grade5_artist_for_loops10: "Mit allem, was du bisher gelernt hast: Findest du
-        heraus, wie du dieses Bild machen kannst?\r\n\r\nBrauchst du einen Tipp? Klick
-        hier."
+        heraus, wie du dieses Bild machen kannst?\\\r\n\\\r\nBrauchst du einen Tipp?
+        Klick hier."
       grade5_artist_for_loops5: |-
         Eine kleine Änderung am Code des letzten Bildes kann dieses Bild erzeugen. Kannst du herausfinden, was für eine Änderung es ist?
 
@@ -3724,7 +3716,7 @@ de:
       grade5_playlab_variables14: 'Zeit für freies Spiel! Viel Spaß mit all den Bausteinen
         in deinem Werkzeugkasten. '
       grade5_playlab_variables2: Das Rennen im letzten Rätsel war nicht sehr fair!
-        Ändere die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln
+        Ändere die Variable „Hunde\_Geschwindigkeit“ so, dass du mehr Fahnen sammeln
         kannst als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
       grade5_playlab_variables3: Jetzt was anderes! Verwende die Pfeiltasten nach
         links und rechts sowie nach oben zum Springen. Schau mal, ob du alle Fahnen
@@ -3742,19 +3734,19 @@ de:
         Beginne mit 10 Punkten, damit es nicht zu schwierig wird. Das Level ist erreicht,
         wenn deine Punktzahl von 10 auf 0 gesunken ist.
       grade5_playlab_variables71: |-
-        Hier ist unser Spiel aus einer früheren Phase, doch der größte Teil des Codes ist versteckt. Es gibt eine neue Funktion „Erziele_Punkte“.
+        Hier ist unser Spiel aus einer früheren Phase, doch der größte Teil des Codes ist versteckt. Es gibt eine neue Funktion „Erziele\_Punkte“.
 
-        Bearbeite die Funktion so, dass der Variablen „Spieler_Punkte“ ein Parameter „Punkte“ hinzugefügt wird.
+        Bearbeite die Funktion so, dass der Variablen „Spieler\_Punkte“ ein Parameter „Punkte“ hinzugefügt wird.
 
-        Die Variable „Spieler_Punkte“ soll immer dann erhöht werden, wenn der Hund die Katze mit seinen Herzen trifft, wird der Hund von der Katze mit Herzen getroffen, soll die Punktezahl verringert werden.
+        Die Variable „Spieler\_Punkte“ soll immer dann erhöht werden, wenn der Hund die Katze mit seinen Herzen trifft, wird der Hund von der Katze mit Herzen getroffen, soll die Punktezahl verringert werden.
 
         Hinweis: Wenn du fertig bist, klicke zum Spielen auf „Ausführen“.  Wenn der Hund 6 Punkte erreicht hat geht es zur nächsten Aufgabe weiter.
       grade5_playlab_variables81: |-
         Wir haben für dich eine letzte Funktion ergänzt.
 
-        Benutze eine „Wenn“-Aussage, um dein Spiel zu programmieren, um die „Level-hoch“-Funktion nur dann aufzurufen, wenn „Spieler_Punkte“ größer als eine bestimmte Zahl wird.
+        Benutze eine „Wenn“-Aussage, um dein Spiel zu programmieren, um die „Level-hoch“-Funktion nur dann aufzurufen, wenn „Spieler\_Punkte“ größer als eine bestimmte Zahl wird.
 
-        Zum Beispiel: „Spieler_Punkte“ > 6
+        Zum Beispiel: „Spieler\_Punkte“ > 6
 
         Spiele das Spiel und lasse es Level 4 passieren, um zum nächsten Puzzle zu gelangen.
       grade5_playlab_variables9: Hier ist eine Funktion namens „Patrouille“. Ändere

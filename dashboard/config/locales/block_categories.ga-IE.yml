@@ -23,13 +23,13 @@ ga:
       Text: Téacs
       Picker: Roghnóir
       Comment: Nóta
-      'Variables ': 'Athróga '
-      Default: Réamhshocrú
-      Behaviors: Iompar
-      Locations: Áiteanna
-      everythingelse: gachrudeile
       World: Domhan
       Sprites: Sprideanna
+      Behaviors: Iompar
+      'Variables ': 'Athróga '
+      Default: Réamhshocrú
+      Locations: Áiteanna
+      everythingelse: gachrudeile
       Location: Áit
       numbers: uimhreacha
       Numbers: Uimhreacha

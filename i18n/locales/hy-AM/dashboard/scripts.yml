@@ -1464,6 +1464,8 @@ hy:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: songwriting
         express-2019:
           stages:
             Relay Programming:
@@ -1554,3 +1556,11 @@ hy:
           stages:
             While Loops:
               name: Մինչ Loops
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Building a Foundation:
+              name: Building a Foundation

@@ -1264,6 +1264,8 @@ id:
     csp_variables: variabel
     csp_conditionals: Kondisi
     csp_functions: fungsi
+    csp_lists: List
+    csp_loops: Loop
     dlp: Anjuran Refleksi
   external_links:
     disclaimer: Disclaimer

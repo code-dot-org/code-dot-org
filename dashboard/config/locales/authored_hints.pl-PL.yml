@@ -24,7 +24,7 @@ pl:
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Aby dokończyć dom wystarczy tylko narysować kwadrat!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'Aby zrobić te ostre kąty musisz za każdym razem skręcić *bardziej*
+        2-3_Artist_6_a: 'Aby zrobić te ostre kąty musisz za każdym razem skręcić _bardziej_
           niż w przypadku kwadratu.   '
         2-3_Artist_6_b: Skoro już patrzę w prawo, będzie łatwiej pójść najpierw do
           przodu a potem, skręcając w lewo, stworzyć trójkąt.
@@ -49,7 +49,7 @@ pl:
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: Pamiętaj, że chcesz aby podkładka kierunkowa była
-          o 10 pikseli *szersza*... upewnij się, że **dodajesz** 10 do liczby, którą
+          o 10 pikseli _szersza_... upewnij się, że **dodajesz** 10 do liczby, którą
           zmieniasz.
         2-3_Artist_Debugging_10_b: |-
           **Metoda prób i błędów sprawdza się tu doskonale!**
@@ -67,7 +67,7 @@ pl:
         2-3_Artist_Debugging_7_a: Co się stanie, jeśli masz tryb Artysta i ruszają
           lub skaczą przez pierwszy wiersz?
       2-3 Artist Debugging 8_authored_hint:
-        2-3_Artist_Debugging_8_a: Ile razy powtórzył się mój kształt? Ile razy *powinien*
+        2-3_Artist_Debugging_8_a: Ile razy powtórzył się mój kształt? Ile razy _powinien_
           powtórzyć się kształt? Gdzie możesz to zmienić w programie?
       2-3 Artist Debugging 9_authored_hint:
         2-3_Artist_Debugging_9_a: Artysta musi obrócić się jeszcze w lewo o 60 stopni
@@ -95,11 +95,11 @@ pl:
         2-3_Artist_Functions_12_a: Spróbuj najpierw uruchomić program i sprawdzić,
           co trzeba dodać.
       2-3 Artist Functions 2 a_authored_hint:
-        2-3_Artist_Functions_2_a: "Twój program powinien:\n- uzyć funkcji, \n- przesunąć
-          się do przodu o 100 + 75 pikseli\n- ponownie użyć funkcji"
+        2-3_Artist_Functions_2_a: "Twój program powinien:\n\n-   uzyć funkcji, \n-
+          \  przesunąć się do przodu o 100 + 75 pikseli\n-   ponownie użyć funkcji"
       2-3 Artist Functions 2_authored_hint:
-        2-3_Artist_Functions_2_a: "Twój program powinien:\n- uzyć funkcji, \n- przesunąć
-          się do przodu o 100 + 75 pikseli\n- ponownie użyć funkcji"
+        2-3_Artist_Functions_2_a: "Twój program powinien:\n\n-   uzyć funkcji, \n-
+          \  przesunąć się do przodu o 100 + 75 pikseli\n-   ponownie użyć funkcji"
       2-3 Artist Functions 3 a_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 3_authored_hint:
@@ -121,8 +121,8 @@ pl:
           type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">turnLeft</title>\n<title
           name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title
           name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>"
-        2-3_Artist_Loops_New_11_b: Twój następny ruch powinien zacząć się na ** koniec
-          ** kodu poprzedniej pętli.
+        2-3_Artist_Loops_New_11_b: Twój następny ruch powinien zacząć się na \*\*
+          koniec \*\* kodu poprzedniej pętli.
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_a: Przed rozpoczęciem rysunku, artysta musi skręcić
           w lewo pod kątem 60 stopni aby ustawić się na właściwej pozycji.
@@ -136,8 +136,9 @@ pl:
           trzeba dodać dodatkowej komendy 'skręcić w lewo przez', zanim zaczniemy
           ponownie rysować.
         2-3_Artist_Loops_New_13_b: "Aby narysować każdy diament, artysta musi wykonać
-          komendy: \n- idź do przodu \n- skręć w prawo o 120 stopni\n- idź do przodu
-          \n- skręć w prawo o 60 stopni\n\nTeraz zrób to wszystko jeszcze raz!"
+          komendy: \n\n-   idź do przodu \n-   skręć w prawo o 120 stopni\n-   idź
+          do przodu \n-   skręć w prawo o 60 stopni\n\nTeraz zrób to wszystko jeszcze
+          raz!"
       2-3 Artist Loops New 9_authored_hint:
         2-3_Artist_Loops_New_9_a: Artysta musi skręcić o 45 stopni w prawo, zanim
           zacznie rysować.
@@ -147,13 +148,13 @@ pl:
         2-3_Artist_Nested_Loops_1_a: Pamiętaj, aby umieścić wszystkie szare bloki
           kodu wewnątrz swojej pętli.
       2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Potrzebujesz pomocy z obliczania kątów?  \n**
-          360/12 = 30 **"
+        2-3_Artist_Nested_Loops_3_a: "Potrzebujesz pomocy z obliczania kątów?  \n\\*\\*
+          360/12 = 30 \\*\\*"
         2-3_Artist_Nested_Loops_3_b: Pamiętaj, aby umieścić wszystkie szare bloki
           kodu i twój ruch wewnątrz pętli.
       2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Potrzebujesz pomocy z obliczania kątów?  \n**
-          360/12 = 30 **"
+        2-3_Artist_Nested_Loops_3_a: "Potrzebujesz pomocy z obliczania kątów?  \n\\*\\*
+          360/12 = 30 \\*\\*"
       2-3 Artist Nested Loops 5_authored_hint:
         2-3_Artist_Nested_Loops_5_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść
           o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.
@@ -166,16 +167,16 @@ pl:
         2-3_Artist_Nested_Loops_9_a: |-
           Potrzebujesz pomocy w znalezieniu odpowiedniego kąta?
 
-           ** 360 / 12 = 30 **
+           \*\* 360 / 12 = 30 \*\*
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Przez dłuższy czas zastanawiasz się jak ułożyć
           kolejne bloki? Potraktuj czerwony kwiat dokładnie tak samo, jak fioletowy!
         2-3_Bee_Conditionals_14_b: Gdyby czerwony kwiat był fioletowy, czy możesz
           sobie wyobrazić, jak używać dodatkowych powtórzeń pętli skrócenia kodu?
-        2-3_Bee_Conditionals_14_c: "Spróbuj zrobić to w 2 oddzielnych krokach:  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
-          Pobierz nektar 3 razy\n  - Przejdź o 5 pól\n  - Sprawdź, czy jest nektar,
-          jeśli tak, weź go\n  - Skręć w lewo\n  \n2) Zrób miód \n  - Przesuń się
-          na nastepne pole\n  - Zrób miód 2 razy"
+        2-3_Bee_Conditionals_14_c: "Spróbuj zrobić to w 2 oddzielnych krokach:  \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.
+          \ Pobierz nektar 3 razy\n\n2.  Przejdź o 5 pól\n\n3.  Sprawdź, czy jest
+          nektar, jeśli tak, weź go\n\n4.  Skręć w lewo\n\n5.  Zrób miód \n\n6.  Przesuń
+          się na nastepne pole\n\n7.  Zrób miód 2 razy"
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Pamiętaj: Fioletowe kwiaty mogą mieć nektar lub
           nie (0 lub 1) i mogą zmienić ten stan za każdym uruchomieniem programu.'
@@ -280,8 +281,8 @@ pl:
       4-5 Artist 3_authored_hint:
         4-5_Artist_3_a: "Jeśli pole kwiatowe ma wymiary 600 pikseli obwodu i dwa jego
           boki mają długość 200 pikseli, oto jak dowiedzieć się, co dodać do krótszych
-          bokach: \n\n** 600-200 - 200 = 200 ** \n\noznacza to, że oba krótsze boki
-          mają 200 pikseli. \n\n** Ile to 200 / 2? **"
+          bokach: \n\n\\*\\* 600-200 - 200 = 200 \\*\\* \n\noznacza to, że oba krótsze
+          boki mają 200 pikseli. \n\n\\*\\* Ile to 200 / 2? \\*\\*"
         4-5_Artist_3_b: Jeśli jeszcze trudno Ci dostrzec wzorzec, spróbuj kodowania
           "krok po kroku", i dopiero wtedy zastąp elementy powtarzające się pętlą.
       4-5 Artist 4_authored_hint:
@@ -289,23 +290,23 @@ pl:
           kod (ruch o 1 stopień) aby narysować pełne koło?"
       4-5 Artist 5_authored_hint:
         4-5_Artist_5_a: "Metoda prób i błędów to świetny sposób, ale można również
-          rozwiązać ten problem dzieląc kąt 90 stopni na trzy równe części. \n\n**
-          90 / 3 = _____ **"
+          rozwiązać ten problem dzieląc kąt 90 stopni na trzy równe części. \n\n\\*\\*
+          90 / 3 = **\\_** \\*\\*"
       4-5 Artist 7_authored_hint:
         4-5_Artist_7_a: 'Jaki kąt jest najmniejszy?  Pod jakim kątem stoi artysta? '
       4-5 Artist 8_authored_hint:
         4-5_Artist_8_a: "Dłuższe boki mają po 240 pikseli.  Oznacza to, że 2 krótsze
-          boki mają razem: \n\n** 800-240 - 240 = 320 **\n\nIle to ** 320/2 **? "
+          boki mają razem: \n\n\\*\\* 800-240 - 240 = 320 \\*\\*\n\nIle to \\*\\*
+          320/2 \\*\\*? "
         4-5_Artist_8_b: |-
           Te linie można narysować na 2 sposoby!
-          - Najpierw narysuj dwa prostokąty o wymiarach ** 120 ** długości i ** 160 ** szerokości, ze wspólną ścianą boczną
 
-          - Po prostu narysuj jeden prostokąt, o wymiarach ** 120 ** długości i ** 160 ** szerokości, a następnie dodaj linię w środku.
+          -   Najpierw narysuj dwa prostokąty o wymiarach \*\* 120 \*\* długości i \*\* 160 \*\* szerokości, ze wspólną ścianą boczną
+
+          -   Po prostu narysuj jeden prostokąt, o wymiarach \*\* 120 \*\* długości i \*\* 160 \*\* szerokości, a następnie dodaj linię w środku.
       4-5 Artist 9_authored_hint:
-        4-5_Artist_9_a: 'W trójkącie równobocznym, wszystkie boki oraz wszystkie kąty
+        4-5_Artist_9_a: W trójkącie równobocznym, wszystkie boki oraz wszystkie kąty
           są takie same.
-
-'
         4-5_Artist_9_b: Trzeba będzie narysować trzy trójkąty tej samej wielkości.
           Nie zapomnij, aby skoczyć na nową pozycję, po narysowaniu każdego z nich.
       4-5 Artist Assessment 1_authored_hint:
@@ -330,14 +331,14 @@ pl:
           O ile stopni musi się obrócić, aby stać prosto?
       4-5 Bee Conditionals 4_authored_hint:
         remember_quantum: |-
-          ** Pamiętaj: **
+          \*\* Pamiętaj: \*\*
 
           Ta plansza jest inna za każdym uruchomieniem.
 
           Będziesz potrzebował użyć bloku warunkowego ('if' lub ' if/else') do rozwiązania problemu.
       4-5 Bee Conditionals 5_authored_hint:
         remember_quantum: |-
-          ** Pamiętaj: **
+          \*\* Pamiętaj: \*\*
 
           Ta plansza jest inna za każdym uruchomieniem.
 
@@ -345,8 +346,8 @@ pl:
       4-5 Bee Conditionals 6_authored_hint:
         4-5 Bee Conditionals 6_a: Można rozwiązać tę zagadkę, przy użyciu bloków już
           położonych na obszarze roboczym.  W jakiej kolejności powinny zostać wykorzystane?
-        4-5 Bee Conditionals 6_b: Sprawdź, czy kwiat ma więcej nektaru niż ** 0 **
-          przynajmniej ** 3 ** razy, aby rozwiązać tę zagadkę.
+        4-5 Bee Conditionals 6_b: Sprawdź, czy kwiat ma więcej nektaru niż \*\* 0
+          \*\* przynajmniej \*\* 3 \*\* razy, aby rozwiązać tę zagadkę.
       4-5 Bee Debugging 1_authored_hint:
         4-5_Bee_Debugging_1_a: Jeśli zastanawiasz się, co nie działa, spróbuj uruchomić
           program, aby zobaczyć, gdzie jest problem.
@@ -366,23 +367,23 @@ pl:
           przodu ' więcej niż dwa kroki.
         4-5_Maze_5_b: Można użyć więcej niż jednej pętli 'powtórz' w tym labiryncie.
       4-5 Maze 6_authored_hint:
-        4-5_Maze_6_a: "Jeśli masz kłopot, wskaż sobie palcem drogę.   \nCzy jest to
+        4-5_Maze_6_a: "Jeśli masz kłopot, wskaż sobie palcem drogę.  \nCzy jest to
           najkrótsza droga, którą można znaleźć?"
       4-5 Maze 7_authored_hint:
-        4-5_Maze_7_a: "** Chcesz otrzymać kod tak mały, jak może być? **\n\nSzukaj
+        4-5_Maze_7_a: "\\*\\* Chcesz otrzymać kod tak mały, jak może być? \\*\\*\n\nSzukaj
           powtarzających się elementów w bloków. Czy widzisz co się powtarza?  \nZamiast
           powtarzać, zrób pętlę!"
       4-5 Nested Loops 12_authored_hint:
-        4-5_Nested_Loops_12_a: "** 360 / 36 =? **"
+        4-5_Nested_Loops_12_a: "\\*\\* 360 / 36 =? \\*\\*"
       4-5 Nested Loops 6_authored_hint:
         4-5_Nested_Loops_6_a: "Nie zapomnij skręcić na koniec wewnętrznej pętli. \n\nMożesz
-          użyć 6 pętli do narysowania 6 trójkątów. \n\n** 360 / 6 =? **"
+          użyć 6 pętli do narysowania 6 trójkątów. \n\n\\*\\* 360 / 6 =? \\*\\*"
       4-5 Nested Loops 7_authored_hint:
         4-5_Nested_Loops_7_a: "Ten rysunek potrzebuje 10 pętli dając Ci ponad 360
-          stopni. \n\n** 360 / 10 =? **"
+          stopni. \n\n\\*\\* 360 / 10 =? \\*\\*"
       4-5 Nested Loops 8_authored_hint:
         4-5_Nested_Loops_8_a: "Musisz użyć pętli tego kształtu 6 razy aby obrócić
-          się o 360 stopni. \n\n** 360 / 6 =? **"
+          się o 360 stopni. \n\n\\*\\* 360 / 6 =? \\*\\*"
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Każdy element musi zawierać własną pętlę 'dopóki'.
       Artist Autorun Test_authored_hint:
@@ -397,8 +398,7 @@ pl:
         solution: |-
           **Rozwiązanie**
 
-
-          ![Obraz bloków rozwiązanie] (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+          ![Obraz bloków rozwiązanie] \(<https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png>)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: Aby użyć bloku 'Idź do przodu', przeciągnij go do obszaru roboczego
           i ułóż poniżej bloku 'po uruchomieniu'.
@@ -414,10 +414,10 @@ pl:
           i **2/3 trójkąta**. '
         Course_4_Artist_12_b: 'Ten kształt jest prawie taki sam jak w poprzednim przykładzie,
           za wyjątkiem połowy sześciokąta, który jest nieco większy. '
-        Course_4_Artist_12_c: "1) Pierwsze trzy linie mają długość 60 pikseli i trzeba
-          wykonać obrót o 60 stopni. \n2) Kolejne dwie mają długość 80 pikseli i trzeba
-          wykonać obrót o 120 stopni "
-        Course_4_Artist_12_d: "** Rozwiązanie: ** \n\n<xml>\n<block type=\"when_run\"
+        Course_4_Artist_12_c: "1.  Pierwsze trzy linie mają długość 60 pikseli i trzeba
+          wykonać obrót o 60 stopni. \n2.  Kolejne dwie mają długość 80 pikseli i
+          trzeba wykonać obrót o 120 stopni "
+        Course_4_Artist_12_d: "\\*\\* Rozwiązanie: \\*\\* \n\n<xml>\n<block type=\"when_run\"
           deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_colour\"
           inline=\"true\" id=\"draw-color\">\n<value name=\"COLOUR\"> <block type=\"colour_picker\">\n<title
           name=\"COLOUR\"> #843179</title> \n</block>\n</value>\n<next>\n<block type=\"controls_repeat\">\n<title
@@ -503,7 +503,7 @@ pl:
           zmiany ilości boków, użyj bloku matematycznego aby podzielić długość w pikselach
           przez liczbę boków.
       Course 4 Artist Vars 6_authored_hint:
-        Course_4_Artist_Vars_6_a: Aby narysować zwykły wielokąt, obróć się o ***360/sides**
+        Course_4_Artist_Vars_6_a: Aby narysować zwykły wielokąt, obróć się o **\*360/sides**
           za każdym razem.
       Course 4 Artist Vars 8_authored_hint:
         Course_4_Artist_Vars_8_a: Jeśli podzielisz swoją startową długość przez liczbę
@@ -715,18 +715,20 @@ pl:
           </block>
           </xml>
       Course 4 SCFL 1_authored_hint:
-        Course_4_SCFL_1_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
+        Course_4_SCFL_1_a: Spójrz na tę opcję dla ruchu:! \[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla wznoszenia
           się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
         Course_4_SCFL_1_c: Zauważ, że jedna pętla "dla" potrzebuje wewnątrz wielu
           zwykłych pętli, które powtarzaj się 'licznik' razy, aby utworzyć wzór wznoszących
           się schodów. Inna pętla "dla" potrzebuje tylko jednej zwykłej pętli, aby
           zrobić 'licznik' miodu.
+      Course 4 SCFL 1a_authored_hint:
+        Course_4_SCFL_1a_b: Spójrz na tę opcję dla ruchu:! \[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
       Course 4 SCFL 1b_authored_hint:
         Course_4_SCFL_1b_a: Spróbuj użyć pętli "dla".
-        Course_4_SCFL_1b_b: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
+        Course_4_SCFL_1b_b: Spójrz na tę opcję dla ruchu:! \[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
       Course 4 SCFL 2_authored_hint:
-        Course_4_SCFL_2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
+        Course_4_SCFL_2_a: Spójrz na tę opcję dla ruchu:! \[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_2_b: Zauważ, że istnieją trzy czynności podczas każdego kroku
           pętli `for`, która przechodzisz, aby wykonać jakąś akcję dla konkretnego
           obiektu.
@@ -899,6 +901,7 @@ pl:
         Course_4_SCV_4_b: 'Bardzo pomocne będzie użycie trzech pętli wewnątrz pętli
           głównej. Jedna dla poruszania się do przodu, jedna do zbierania ilości nektaru
           oraz jedna do robienia miodu. '
+        Course_4_SCV_4_c: Spójrz na tę opcję dla ruchu:! \[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
       Course 4 SCV 5_authored_hint:
         Course_4_SCV_5_b: Za każdym krokiem pętli, nektar w kwiatach spada o 2, oraz
           pszczoły muszą robić o jeden więcej miód.
@@ -914,33 +917,36 @@ pl:
       CourseD_Dance_Party_01_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
-          * Postaraj się, aby na ekranie pojawił się tancerz.
 
-          * Ten poziom kończy się po 4 taktach.
+          -   Postaraj się, aby na ekranie pojawił się tancerz.
+
+          -   Ten poziom kończy się po 4 taktach.
         challenges: |-
           **Dodatkowe wyzwania**
-          * Wybierz inny utwór do odtwarzania.
-          * Zmień imię swojego tancerza.
+
+          -   Wybierz inny utwór do odtwarzania.
+          -   Zmień imię swojego tancerza.
       CourseD_Dance_Party_02_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
-          * Ten tancerz musi zmienić ruch po 4 taktach.
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten tancerz musi zmienić ruch po 4 taktach.
+
+          -   Ten poziom kończy się po 7 taktach.
       CourseD_Dance_Party_03_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
+          -   Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
 
-          * Ten poziom kończy się po 11 taktach.
+          -   Ten poziom kończy się po 11 taktach.
       CourseD_Dance_Party_04_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+          -   Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
 
-          * Ten poziom kończy się po 9 taktach.
+          -   Ten poziom kończy się po 9 taktach.
         challenges: |-
           **Dodatkowe wyzwanie**
 
@@ -949,67 +955,67 @@ pl:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Musisz mieć co najmniej dwóch tancerzy.
+          -   Musisz mieć co najmniej dwóch tancerzy.
 
-          * Ten poziom kończy się po 5 taktach.
+          -   Ten poziom kończy się po 5 taktach.
         challenges: |-
           **Dodatkowe wyzwanie**
 
-          * Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
-          * Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
+          -   Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
+          -   Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
       CourseD_Dance_Party_08_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Dwóch tancerzy musi mieć wielkość inną niż 100.
+          -   Dwóch tancerzy musi mieć wielkość inną niż 100.
 
-          * Ten poziom kończy się po 5 taktach.
+          -   Ten poziom kończy się po 5 taktach.
         challenges: |-
           **Dodatkowe wyzwanie**
 
-          * Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
+          -   Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
       CourseD_Dance_Party_09_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Zmień odcień przynajmniej jednego tancerza.
+          -   Zmień odcień przynajmniej jednego tancerza.
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten poziom kończy się po 7 taktach.
       CourseD_Dance_Party_10_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Należy zmienić właściwości dwóch lub więcej tancerzy.
+          -   Należy zmienić właściwości dwóch lub więcej tancerzy.
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten poziom kończy się po 7 taktach.
       CourseD_Dance_Party_11_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Wystarczy być kreatywnym!
+          -   Wystarczy być kreatywnym!
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten poziom kończy się po 7 taktach.
       CourseD_Dance_Party_11_5_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Wystarczy być kreatywnym!
+          -   Wystarczy być kreatywnym!
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten poziom kończy się po 7 taktach.
       CourseD_Dance_Party_11b_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Użyj bloku „kiedy strzałka w lewo”, aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
+          -   Użyj bloku „kiedy strzałka w lewo”, aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten poziom kończy się po 7 taktach.
       CourseE_HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "Widzisz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
-          Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?\n\n"
+        voyage_aquatic_10a: Widzisz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?
       CourseE_HOC 2018 Level_7a_authored_hint:
         aquatic7: Możesz użyć bloku "jeśli jest ścieżka", aby wykonać właściwy skręt.
       CourseE_HOC 2018 Level_9b_authored_hint:
-        voyage_aquatic_9a: Cóż za przepiękna rafa koralowa! Niebieski koral jest **
+        voyage_aquatic_9a: Cóż za przepiękna rafa koralowa! Niebieski koral jest \*\*
           właściwą drogą, i uważaj, aby czerwony koral nie był po **lewej** stronie!
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Upewnij się, aby ustawić wartość `prędkość_psa`
@@ -1018,9 +1024,9 @@ pl:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+          -   Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
 
-          * Ten poziom kończy się po 10 taktach.
+          -   Ten poziom kończy się po 10 taktach.
         challenges: |-
           **Dodatkowe wyzwanie**
 
@@ -1029,9 +1035,9 @@ pl:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+          -   Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
 
-          * Ten poziom kończy się po 10 taktach.
+          -   Ten poziom kończy się po 10 taktach.
         challenges: |-
           **Dodatkowe wyzwanie**
 
@@ -1039,44 +1045,49 @@ pl:
       Dance_Party_01_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
-          * Postaraj się, aby na ekranie pojawił się tancerz.
 
-          * Ten poziom kończy się po 4 taktach.
+          -   Postaraj się, aby na ekranie pojawił się tancerz.
+
+          -   Ten poziom kończy się po 4 taktach.
         challenges: |-
           **Dodatkowe wyzwania**
-          * Wybierz inny utwór do odtwarzania.
-          * Zmień imię swojego tancerza.
+
+          -   Wybierz inny utwór do odtwarzania.
+          -   Zmień imię swojego tancerza.
       Dance_Party_01_low_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
-          * Postaraj się, aby na ekranie pojawił się tancerz.
 
-          * Ten poziom kończy się po 4 taktach.
+          -   Postaraj się, aby na ekranie pojawił się tancerz.
+
+          -   Ten poziom kończy się po 4 taktach.
         challenges: |-
           **Dodatkowe wyzwania**
-          * Wybierz inny utwór do odtwarzania.
-          * Wybierz innego tancerza, który wygląda jak łoś!
-          * Zmień imię swojego tancerza.
+
+          -   Wybierz inny utwór do odtwarzania.
+          -   Wybierz innego tancerza, który wygląda jak łoś!
+          -   Zmień imię swojego tancerza.
       Dance_Party_02_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
-          * Ten tancerz musi zmienić ruch po 4 taktach.
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten tancerz musi zmienić ruch po 4 taktach.
+
+          -   Ten poziom kończy się po 7 taktach.
       Dance_Party_03_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
+          -   Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
 
-          * Ten poziom kończy się po 11 taktach.
+          -   Ten poziom kończy się po 11 taktach.
       Dance_Party_04_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+          -   Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
 
-          * Ten poziom kończy się po 9 taktach.
+          -   Ten poziom kończy się po 9 taktach.
         challenges: |-
           **Dodatkowe wyzwanie**
 
@@ -1085,150 +1096,153 @@ pl:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Musisz mieć co najmniej dwóch tancerzy.
+          -   Musisz mieć co najmniej dwóch tancerzy.
 
-          * Ten poziom kończy się po 5 taktach.
+          -   Ten poziom kończy się po 5 taktach.
         challenges: |-
           **Dodatkowe wyzwanie**
 
-          * Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
-          * Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
+          -   Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
+          -   Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
       Dance_Party_08_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Dwóch tancerzy musi mieć wielkość inną niż 100.
+          -   Dwóch tancerzy musi mieć wielkość inną niż 100.
 
-          * Ten poziom kończy się po 5 taktach.
+          -   Ten poziom kończy się po 5 taktach.
         challenges: |-
           **Dodatkowe wyzwanie**
 
-          * Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
+          -   Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
       Dance_Party_09_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Zmień odcień przynajmniej jednego tancerza.
+          -   Zmień odcień przynajmniej jednego tancerza.
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten poziom kończy się po 7 taktach.
       Dance_Party_1_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
-          * Postaraj się, aby na ekranie pojawił się tancerz.
 
-          * Ten poziom kończy się po 4 taktach.
+          -   Postaraj się, aby na ekranie pojawił się tancerz.
+
+          -   Ten poziom kończy się po 4 taktach.
         challenges: |-
           **Dodatkowe wyzwania**
-          * Wybierz inny utwór do odtwarzania.
-          * Wybierz innego tancerza, który wygląda jak łoś!
-          * Zmień imię swojego tancerza.
+
+          -   Wybierz inny utwór do odtwarzania.
+          -   Wybierz innego tancerza, który wygląda jak łoś!
+          -   Zmień imię swojego tancerza.
       Dance_Party_10_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Należy zmienić właściwości dwóch lub więcej tancerzy.
+          -   Należy zmienić właściwości dwóch lub więcej tancerzy.
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten poziom kończy się po 7 taktach.
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Wystarczy być kreatywnym!
+          -   Wystarczy być kreatywnym!
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten poziom kończy się po 7 taktach.
       Dance_Party_11_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Wystarczy być kreatywnym!
+          -   Wystarczy być kreatywnym!
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten poziom kończy się po 7 taktach.
       Dance_Party_11_5_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Wystarczy być kreatywnym!
+          -   Wystarczy być kreatywnym!
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten poziom kończy się po 7 taktach.
       Dance_Party_11b_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Użyj bloku „kiedy strzałka w lewo”, aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
+          -   Użyj bloku „kiedy strzałka w lewo”, aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten poziom kończy się po 7 taktach.
       Dance_Party_2_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
-          * Ten tancerz musi zmienić ruch po 4 taktach.
 
-          * Ten poziom kończy się po 8 taktach.
+          -   Ten tancerz musi zmienić ruch po 4 taktach.
+
+          -   Ten poziom kończy się po 8 taktach.
       Dance_Party_3_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
+          -   Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
 
-          * Ten poziom kończy się po 12 taktach.
+          -   Ten poziom kończy się po 12 taktach.
       Dance_Party_4_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+          -   Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
 
-          * Ten poziom kończy się po 10 taktach.
+          -   Ten poziom kończy się po 10 taktach.
         challenges: |-
-          ** Dodatkowe wyzwanie **
+          \*\* Dodatkowe wyzwanie \*\*
 
           Zmieniaj efekt tła w różnych momentach piosenki, dodając nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
       Dance_Party_5_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * W twoim tańcu tancerz musi w ciągu pierwszych 12 taktów piosenki wykonywać różne ruchy.
+          -   W twoim tańcu tancerz musi w ciągu pierwszych 12 taktów piosenki wykonywać różne ruchy.
 
-          * Ten poziom kończy się po 12 taktach.
+          -   Ten poziom kończy się po 12 taktach.
       Dance_Party_6_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Musisz mieć co najmniej dwóch tancerzy.
+          -   Musisz mieć co najmniej dwóch tancerzy.
 
-          * Ten poziom kończy się po 6 taktach.
+          -   Ten poziom kończy się po 6 taktach.
         challenges: |-
           **Dodatkowe wyzwanie**
 
-          * Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
-          * Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
+          -   Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
+          -   Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
       Dance_Party_8_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Dwóch tancerzy musi mieć wielkość inną niż 100.
+          -   Dwóch tancerzy musi mieć wielkość inną niż 100.
 
-          * Ten poziom kończy się po 6 taktach.
+          -   Ten poziom kończy się po 6 taktach.
         challenges: |-
           **Dodatkowe wyzwanie**
 
-          * Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
+          -   Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
       Dance_Party_9_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Zmień odcień przynajmniej jednego tancerza.
+          -   Zmień odcień przynajmniej jednego tancerza.
 
-          * Ten poziom kończy się po 8 taktach.
+          -   Ten poziom kończy się po 8 taktach.
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           Pierwsza podpowiedź.
 
-          Ma *kilka* **podstawowy** `znacznik`
+          Ma _kilka_ **podstawowy** `znacznik`
         last_hint: To trzecia i ostatnia podpowiedź. Nie ma nic specjalnego.
       Farmer for TTS testing_authored_hint:
         first_hint: |-
           Pierwsza podpowiedź.
 
-          Ma *kilka* **podstawowy** `znacznik`
+          Ma _kilka_ **podstawowy** `znacznik`
         last_hint: To trzecia i ostatnia podpowiedź. Nie ma nic specjalnego.
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: Jeśli wywołasz funkcję poprawnie, to jest ścieżką którą
@@ -1241,44 +1255,47 @@ pl:
         Function_intro_Ryan_a: W swoim programie możesz wywołać jedną funkcję wielokrotnie!  Spróbuj
           wywołać ją dwukrotnie, aby rozwiązać tę łamigłówkę.
       HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "Widzisz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
-          Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?\n\n"
+        voyage_aquatic_10a: Widzisz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?
       HOC 2018 Level_7a_authored_hint:
         aquatic7: Możesz użyć bloku "jeśli jest ścieżka", aby wykonać właściwy skręt.
       HOC 2018 Level_9b_authored_hint:
-        voyage_aquatic_9a: Cóż za przepiękna rafa koralowa! Niebieski koral jest **
+        voyage_aquatic_9a: Cóż za przepiękna rafa koralowa! Niebieski koral jest \*\*
           właściwą drogą, i uważaj, aby czerwony koral nie był po **lewej** stronie!
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
-          * Postaraj się, aby na ekranie pojawił się tancerz.
 
-          * Ten poziom kończy się po 4 taktach.
+          -   Postaraj się, aby na ekranie pojawił się tancerz.
+
+          -   Ten poziom kończy się po 4 taktach.
         challenges: |-
           **Dodatkowe wyzwania**
-          * Wybierz inny utwór do odtwarzania.
-          * Wybierz innego tancerza, który wygląda jak łoś!
-          * Zmień imię swojego tancerza.
+
+          -   Wybierz inny utwór do odtwarzania.
+          -   Wybierz innego tancerza, który wygląda jak łoś!
+          -   Zmień imię swojego tancerza.
       HOC Dance 1_draft_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
-          * Ten tancerz musi zmienić ruch po 4 taktach.
 
-          * Ten poziom kończy się po 8 taktach.
+          -   Ten tancerz musi zmienić ruch po 4 taktach.
+
+          -   Ten poziom kończy się po 8 taktach.
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
+          -   Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
 
-          * Ten poziom kończy się po 12 taktach.
+          -   Ten poziom kończy się po 12 taktach.
       HOC Dance 3_draft_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+          -   Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
 
-          * Ten poziom kończy się po 10 taktach.
+          -   Ten poziom kończy się po 10 taktach.
         challenges: |-
           **Dodatkowe wyzwanie**
 
@@ -1287,60 +1304,60 @@ pl:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * W twoim tańcu tancerz musi w ciągu pierwszych 12 taktów piosenki wykonywać różne ruchy.
+          -   W twoim tańcu tancerz musi w ciągu pierwszych 12 taktów piosenki wykonywać różne ruchy.
 
-          * Ten poziom kończy się po 12 taktach.
+          -   Ten poziom kończy się po 12 taktach.
       HOC Dance 5_draft_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Musisz mieć co najmniej dwóch tancerzy.
+          -   Musisz mieć co najmniej dwóch tancerzy.
 
-          * Ten poziom kończy się po 6 taktach.
+          -   Ten poziom kończy się po 6 taktach.
         challenges: |-
           **Dodatkowe wyzwanie**
 
-          * Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
-          * Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
+          -   Dodaj trzeciego tancerza (lub tylu, ile chcesz!)
+          -   Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Dwóch tancerzy musi mieć wielkość inną niż 100.
+          -   Dwóch tancerzy musi mieć wielkość inną niż 100.
 
-          * Ten poziom kończy się po 6 taktach.
+          -   Ten poziom kończy się po 6 taktach.
         challenges: |-
           **Dodatkowe wyzwanie**
 
-          * Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
+          -   Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Zmień odcień przynajmniej jednego tancerza.
+          -   Zmień odcień przynajmniej jednego tancerza.
 
-          * Ten poziom kończy się po 8 taktach.
+          -   Ten poziom kończy się po 8 taktach.
       HOC Dance 8_draft_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Należy zmienić właściwości dwóch lub więcej tancerzy.
+          -   Należy zmienić właściwości dwóch lub więcej tancerzy.
 
-          * Ten poziom kończy się po 8 taktach.*
+          -   Ten poziom kończy się po 8 taktach.\*
       HOC Dance 9_draft_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Wystarczy być kreatywnym!
+          -   Wystarczy być kreatywnym!
 
-          * Ten poziom kończy się po 8 taktach.*
+          -   Ten poziom kończy się po 8 taktach.\*
       HOC Dance make group_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
 
-          * Wystarczy być kreatywnym!
+          -   Wystarczy być kreatywnym!
 
-          * Ten poziom kończy się po 8 taktach.*
+          -   Ten poziom kończy się po 8 taktach.\*
       Harvesting_authored_hint:
         pointer_harvester_test: Jaki rodzaj bloku mogę użyć, aby coś sprawdzić i podjąć
           decyzję?
@@ -1353,8 +1370,7 @@ pl:
         solution: |-
           **Rozwiązanie**
 
-
-          ![Obraz bloków rozwiązanie] (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+          ![Obraz bloków rozwiązanie] \(<https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png>)
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Spróbuj tak pokierować Agentem tak, aby zbudował kilka
           dróg dla minicart, dzięki temu będziesz mógł wyruszyć w świat!
@@ -1546,7 +1562,7 @@ pl:
         NEW_Course_4_Artist_Params_11_a: Istnieje więcej niż jedna liczba, którą należałoby
           wymienić na zmienną wewnątrz funkcji.
       NEW Course 4 Artist Params 13_authored_hint:
-        NEW_Course_4_Artist_Params_13_a: 'Musisz podzielić *obwód* przez liczbę boków
+        NEW_Course_4_Artist_Params_13_a: 'Musisz podzielić _obwód_ przez liczbę boków
           aby zachować kształty w takiej samej proporcji. '
       NEW Course 4 Artist Params inspire_authored_hint:
         brush_width: Ustawiamy szerokość pędzla do 1, a następnie kolor na niebieski,
@@ -1653,9 +1669,10 @@ pl:
       Ryan_Demo_authored_hint:
         validation: |-
           **Jak przejdę ten poziom?**
-          * Ten tancerz musi zmienić ruch po 4 taktach.
 
-          * Ten poziom kończy się po 7 taktach.
+          -   Ten tancerz musi zmienić ruch po 4 taktach.
+
+          -   Ten poziom kończy się po 7 taktach.
       Underground Avoiding Lava_authored_hint:
         mc_11_b: Czy twoja komenda `move forward` powinna się znajdować wewnątrz instrukcji
           `if` czy po niej?
@@ -1759,6 +1776,10 @@ pl:
         artistLoopsKA_a: Aby pójść dalej i nie rysować linii użyj bloku skoku.
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: W pętli powinny znajdować się 3 bloki aby rozwiązać tą łamigłówkę.
+      course1_artist_loops_challenge1_authored_hint:
+        courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       course1_artist_loops_challenge2_authored_hint:
         harvey_tictactoe: Możesz użyć bloków 'Skocz' aby przenieść się w inne miejsce.
       course1_artist_loops_challenge3_authored_hint:
@@ -1793,11 +1814,12 @@ pl:
           zagnieżdżonej pętli. Dla trójkąta użyj 120 stopniowych obrotów.
         courseD_artist_nestedLoops_challenge1_c: |-
           Użyj zagnieżdżonej pętli:
-          - Powtórz 8 razy
-          - narysuj ośmiokąt
-          - narysuj trójkąt
-          - przejdź dalej o 50 pikseli
-          - obróć się w prawo o 90 stopni
+
+          -   Powtórz 8 razy
+          -   narysuj ośmiokąt
+          -   narysuj trójkąt
+          -   przejdź dalej o 50 pikseli
+          -   obróć się w prawo o 90 stopni
       course2_artist_prog_challenge1_authored_hint:
         courseC_artist_prog_challenge1_a: 'Prostokąt ma 200 pikseli szerokości i 100
           pikseli wysokości. '
@@ -1849,7 +1871,7 @@ pl:
         courseC_maze_debugging_challenge2_c: |-
           Są dwie różne ścieżki, które możesz śledzić używając `move forward`, i tylko 4 zakręty. Jeśli znajdziesz sposób, aby wykorzystać blok `repeat`, może być nawet więcej!
 
-          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       course4_artist_variables_challenge2_authored_hint:
         courseF_artist_variables_challenge2_a: 'Zmienne są pomocne, ponieważ można
           do nich dodawać w każdym kroku pętli. '
@@ -1870,6 +1892,7 @@ pl:
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
+
           <title name="NUM">1</title>
           </block>
           </value>
@@ -2081,7 +2104,7 @@ pl:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2100,7 +2123,7 @@ pl:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2119,7 +2142,7 @@ pl:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2138,7 +2161,7 @@ pl:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2337,7 +2360,7 @@ pl:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2356,7 +2379,7 @@ pl:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2375,7 +2398,7 @@ pl:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2394,7 +2417,7 @@ pl:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2829,6 +2852,12 @@ pl:
       courseC_collector_prog_challenge2_2019_authored_hint:
         courseC_collector_prog_challenge1_b: Zgubiłeś się? Spróbuj tej ścieżki aby
           rozwiązać zagadkę!
+      courseC_flappy_events1_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2018_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2019_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events2_authored_hint:
         courseC_flappy_events2_a: 'Blok, który musisz dodać nazywa się `set speed`. '
         courseC_flappy_events2_b: Połącz blok `set speed` z blokiem `when run`, aby
@@ -3058,8 +3087,8 @@ pl:
         courseD_artist_binary3_a: Jeden z czterech binarnych wzorów w przyborniku
           rozwiąże tą zagadkę!
       courseD_artist_functions2_authored_hint:
-        courseD_artist_functions2_a: "Twój program powinien:\n- uzyć funkcji, \n-
-          przesunąć się do przodu o 100 + 75 pikseli\n- ponownie użyć funkcji"
+        courseD_artist_functions2_a: "Twój program powinien:\n\n-   uzyć funkcji,
+          \n-   przesunąć się do przodu o 100 + 75 pikseli\n-   ponownie użyć funkcji"
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść
           o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.
@@ -3198,7 +3227,7 @@ pl:
         courseD_bee_conditionals8_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
           film!
         courseD_bee_conditionals8_a: |-
-          ** Pamiętaj: **
+          \*\* Pamiętaj: \*\*
 
           Ta plansza jest inna za każdym uruchomieniem.
 
@@ -3209,7 +3238,7 @@ pl:
         courseD_bee_conditionals8_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
           film!
         courseD_bee_conditionals8_a: |-
-          ** Pamiętaj: **
+          \*\* Pamiętaj: \*\*
 
           Ta plansza jest inna za każdym uruchomieniem.
 
@@ -3218,7 +3247,7 @@ pl:
           w rozwiązaniu tej zagadki.
       courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_a: |-
-          ** Pamiętaj: **
+          \*\* Pamiętaj: \*\*
 
           Ta plansza jest inna za każdym uruchomieniem.
 
@@ -3253,14 +3282,20 @@ pl:
           musisz przesunąć się do przodu o 175 pikseli zanim narysujesz drugi kwadrat.
         courseE_artist_functions1_b: To dobrze rysować nakładające się linie do okularów.
       courseE_artist_functions2_authored_hint:
-        courseD_artist_functions2_a: "Twój program powinien:\n- uzyć funkcji, \n-
-          przesunąć się do przodu o 100 + 75 pikseli\n- ponownie użyć funkcji"
+        courseD_artist_functions2_a: "Twój program powinien:\n\n-   uzyć funkcji,
+          \n-   przesunąć się do przodu o 100 + 75 pikseli\n-   ponownie użyć funkcji"
       courseE_artist_functions2_2018_authored_hint:
-        courseD_artist_functions2_a: "Twój program powinien:\n- uzyć funkcji, \n-
-          przesunąć się do przodu o 100 + 75 pikseli\n- ponownie użyć funkcji"
+        courseD_artist_functions2_a: "Twój program powinien:\n\n-   uzyć funkcji,
+          \n-   przesunąć się do przodu o 100 + 75 pikseli\n-   ponownie użyć funkcji"
       courseE_artist_functions2_2019_authored_hint:
-        courseD_artist_functions2_a: "Twój program powinien:\n- uzyć funkcji, \n-
-          przesunąć się do przodu o 100 + 75 pikseli\n- ponownie użyć funkcji"
+        courseD_artist_functions2_a: "Twój program powinien:\n\n-   uzyć funkcji,
+          \n-   przesunąć się do przodu o 100 + 75 pikseli\n-   ponownie użyć funkcji"
+      courseE_artist_functions8_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2018_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2019_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_ramp12_authored_hint:
         courseD_artist_ramp12_a: Możesz najpierw narysować kwadrat, a potem trójkąt,
           albo odwrotnie!
@@ -3373,17 +3408,25 @@ pl:
           `ustaw kolor z kolorem czerwonym, zielonym, niebieskim`. Czerwony ma stałą
           wartość 255, zielony jest zawsze wartością `licznik`, a niebieski to `255-licznik`.
       courseF_artist_fwp_challenge2_authored_hint:
-        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_d: 'Nie zapomnij obrócić się o 22.5 stopni pod
           koniec każdej iteracji. '
         courseF_artist_fwp_challenge1_e: Zarówno kolor każdego ośmiokąta jak i szerokość
           pióra są sterowane przez zmienną 'licznik'.
       courseF_artist_fwp_challenge2_2018_authored_hint:
-        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_d: 'Nie zapomnij obrócić się o 22.5 stopni pod
           koniec każdej iteracji. '
         courseF_artist_fwp_challenge1_e: Zarówno kolor każdego ośmiokąta jak i szerokość
           pióra są sterowane przez zmienną 'licznik'.
+      courseF_artist_variables4_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2018_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2019_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables_4_authored_hint:
+        courseF_artist_variables_4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_challenge1a_authored_hint:
         courseF_artist_variables_challenge1_a: 'Zmienne są pomocne, ponieważ można
           do nich dodawać w każdym kroku pętli. '
@@ -3427,7 +3470,7 @@ pl:
           czy jest tam kwiat? Co zrobisz jak kwiat tam będzie?
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: |-
-          ** Pamiętaj: **
+          \*\* Pamiętaj: \*\*
 
           Ta plansza jest inna za każdym uruchomieniem.
 
@@ -3436,7 +3479,7 @@ pl:
           i weźmiesz pierwszy kwiat jako ostatni?
       courseF_bee_conditionals8_2018_authored_hint:
         courseF_bee_conditionals8_a: |-
-          ** Pamiętaj: **
+          \*\* Pamiętaj: \*\*
 
           Ta plansza jest inna za każdym uruchomieniem.
 
@@ -3449,7 +3492,7 @@ pl:
 
           Zauważ, że na obrazku jest **7** czerwonych kwadratów, **5** pomarańczowych kwadratów, **3** zielone kwadraty i **1** niebieski blok.
 
-          ![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)
+          ![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)
 
           Jak te liczby są ze sobą powiązane?
       courseF_bee_for10_2018_authored_hint:
@@ -3458,7 +3501,7 @@ pl:
 
           Zauważ, że na obrazku jest **7** czerwonych kwadratów, **5** pomarańczowych kwadratów, **3** zielone kwadraty i **1** niebieski blok.
 
-          ![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)
+          ![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)
 
           Jak te liczby są ze sobą powiązane?
       courseF_bee_for10_2019_authored_hint:
@@ -3467,11 +3510,11 @@ pl:
 
           Zauważ, że na obrazku jest **7** czerwonych kwadratów, **5** pomarańczowych kwadratów, **3** zielone kwadraty i **1** niebieski blok.
 
-          ![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)
+          ![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)
 
           Jak te liczby są ze sobą powiązane?
       courseF_bee_for_challenge2_authored_hint:
-        courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
+        courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! \[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla
           wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
         courseF_bee_for_challenge2_c: Zauważ, że jedna pętla "dla" potrzebuje wewnątrz
@@ -3479,7 +3522,7 @@ pl:
           wznoszących się schodów. Inna pętla "dla" potrzebuje tylko jednej zwykłej
           pętli, aby zrobić 'licznik' miodu.
       courseF_bee_for_challenge2_2018_authored_hint:
-        courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
+        courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! \[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla
           wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
         courseF_bee_for_challenge2_c: Zauważ, że jedna pętla "dla" potrzebuje wewnątrz
@@ -3487,7 +3530,7 @@ pl:
           wznoszących się schodów. Inna pętla "dla" potrzebuje tylko jednej zwykłej
           pętli, aby zrobić 'licznik' miodu.
       courseF_bee_for_challenge2_2019_authored_hint:
-        courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
+        courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! \[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla
           wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
         courseF_bee_for_challenge2_c: Zauważ, że jedna pętla "dla" potrzebuje wewnątrz
@@ -3495,7 +3538,7 @@ pl:
           wznoszących się schodów. Inna pętla "dla" potrzebuje tylko jednej zwykłej
           pętli, aby zrobić 'licznik' miodu.
       courseF_bee_for_challenge3_authored_hint:
-        courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
+        courseF_bee_for_challenge2_a: Spójrz na tę opcję dla ruchu:! \[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla
           wznoszenia się by zebrać nektar, a drugiej dla schodzenia i robienia miodu.'
         courseF_bee_for_challenge2_c: Zauważ, że jedna pętla "dla" potrzebuje wewnątrz
@@ -3576,6 +3619,7 @@ pl:
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
+
           <title name="NUM">1</title>
           </block>
           </value>
@@ -3596,6 +3640,7 @@ pl:
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
+
           <title name="NUM">1</title>
           </block>
           </value>
@@ -3615,6 +3660,7 @@ pl:
           **Rozwiązanie:**
           <xml>
           <block type="studio_whenArrow">
+
           <title name="VALUE">up</title>
           <next>
           <block type="studio_moveDistanceParams" inline="true">
@@ -3739,6 +3785,7 @@ pl:
           **Rozwiązanie:**
           <xml>
           <block type="studio_whenArrow">
+
           <title name="VALUE">up</title>
           <next>
           <block type="studio_moveDistanceParams" inline="true">
@@ -3911,10 +3958,10 @@ pl:
         2-3_Artist_1_new_b: Masz problem z zakrętem? Użyj bloku "skręć w prawo o 90
           stopni".
       grade2_MakeDogTag_9_authored_hint:
-        2-3_Artist_Loops_New_11_b: Twój następny ruch powinien zacząć się na ** koniec
-          ** kodu poprzedniej pętli.
+        2-3_Artist_Loops_New_11_b: Twój następny ruch powinien zacząć się na \*\*
+          koniec \*\* kodu poprzedniej pętli.
       grade2_PuppyLoops_10_authored_hint:
-        2-3_Artist_Debugging_8_a: Ile razy powtórzył się mój kształt? Ile razy *powinien*
+        2-3_Artist_Debugging_8_a: Ile razy powtórzył się mój kształt? Ile razy _powinien_
           powtórzyć się kształt? Gdzie możesz to zmienić w programie?
       grade2_PuppyLoops_6_authored_hint:
         2-3_Maze_16_a: Jeśli trudno Ci dostrzec wzorzec, spróbuj kodowania "krok po
@@ -3943,21 +3990,21 @@ pl:
           po kroku", i dopiero wtedy zastąp elementy powtarzające się pętlą.
       grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: |-
-          ** Pamiętaj: **
+          \*\* Pamiętaj: \*\*
 
           Ta plansza jest inna za każdym uruchomieniem.
 
           Będziesz potrzebował użyć bloku warunkowego ('if' lub ' if/else') do rozwiązania problemu.
       grade3_ConditionalsElse_5_authored_hint:
         remember_quantum: |-
-          ** Pamiętaj: **
+          \*\* Pamiętaj: \*\*
 
           Ta plansza jest inna za każdym uruchomieniem.
 
           Będziesz potrzebował użyć bloku warunkowego ('if' lub ' if/else') do rozwiązania problemu.
       grade3_ConditionalsElse_TeacherIDo_authored_hint:
         remember_quantum: |-
-          ** Pamiętaj: **
+          \*\* Pamiętaj: \*\*
 
           Ta plansza jest inna za każdym uruchomieniem.
 
@@ -4020,7 +4067,7 @@ pl:
         2-3_Bee_Loops_3_a: Powinieneś mieć 6 bloków wewnątrz pętli.
       grade3_bee_conditionals_quantum5_authored_hint:
         remember_quantum: |-
-          ** Pamiętaj: **
+          \*\* Pamiętaj: \*\*
 
           Ta plansza jest inna za każdym uruchomieniem.
 
@@ -4033,22 +4080,22 @@ pl:
           napisać kod linia po linii.
       grade4_arist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: "Ten rysunek potrzebuje 10 pętli dając Ci ponad 360
-          stopni. \n\n** 360 / 10 =? **"
+          stopni. \n\n\\*\\* 360 / 10 =? \\*\\*"
       grade4_arist_nested_loop_polygons2_authored_hint:
         4-5_Nested_Loops_8_a: "Musisz użyć pętli tego kształtu 6 razy aby obrócić
-          się o 360 stopni. \n\n** 360 / 6 =? **"
+          się o 360 stopni. \n\n\\*\\* 360 / 6 =? \\*\\*"
       grade4_arist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: "Nie zapomnij skręcić na koniec wewnętrznej pętli. \n\nMożesz
-          użyć 6 pętli do narysowania 6 trójkątów. \n\n** 360 / 6 =? **"
+          użyć 6 pętli do narysowania 6 trójkątów. \n\n\\*\\* 360 / 6 =? \\*\\*"
       grade4_arist_nested_loop_triangles6_authored_hint:
-        4-5_Nested_Loops_12_a: "** 360 / 36 =? **"
+        4-5_Nested_Loops_12_a: "\\*\\* 360 / 36 =? \\*\\*"
       grade4_artist_functions1_authored_hint:
         2-3_Artist_Functions_1_a: Kwadraty mają boki o długości 100 pikseli, czyli
           musisz przesunąć się do przodu o 175 pikseli zanim narysujesz drugi kwadrat.
         2-3_Artist_Functions_1_b: To dobrze rysować nakładające się linie do okularów.
       grade4_artist_functions2_authored_hint:
-        2-3_Artist_Functions_2_a: "Twój program powinien:\n- uzyć funkcji, \n- przesunąć
-          się do przodu o 100 + 75 pikseli\n- ponownie użyć funkcji"
+        2-3_Artist_Functions_2_a: "Twój program powinien:\n\n-   uzyć funkcji, \n-
+          \  przesunąć się do przodu o 100 + 75 pikseli\n-   ponownie użyć funkcji"
       grade4_artist_functions_challenge_authored_hint:
         Course_4_SCF_1_a: Każdy sześciokąt ma boki długości 40 pikseli.
         Course_4_SCF_1_b: Pomiędzy każdymi sześciokątami jest 120 pikseli odległości
@@ -4080,22 +4127,22 @@ pl:
           w prawo o **120 stopni**. '
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: "Ten rysunek potrzebuje 10 pętli dając Ci ponad 360
-          stopni. \n\n** 360 / 10 =? **"
+          stopni. \n\n\\*\\* 360 / 10 =? \\*\\*"
       grade4_artist_nested_loop_polygons2_authored_hint:
         4-5_Nested_Loops_8_a: "Musisz użyć pętli tego kształtu 6 razy aby obrócić
-          się o 360 stopni. \n\n** 360 / 6 =? **"
+          się o 360 stopni. \n\n\\*\\* 360 / 6 =? \\*\\*"
       grade4_artist_nested_loop_triangles6_authored_hint:
-        4-5_Nested_Loops_12_a: "** 360 / 36 =? **"
+        4-5_Nested_Loops_12_a: "\\*\\* 360 / 36 =? \\*\\*"
       grade4_bee_conditionals_quantum4_authored_hint:
         remember_quantum: |-
-          ** Pamiętaj: **
+          \*\* Pamiętaj: \*\*
 
           Ta plansza jest inna za każdym uruchomieniem.
 
           Będziesz potrzebował użyć bloku warunkowego ('if' lub ' if/else') do rozwiązania problemu.
       grade4_bee_conditionals_quantum5_authored_hint:
         remember_quantum: |-
-          ** Pamiętaj: **
+          \*\* Pamiętaj: \*\*
 
           Ta plansza jest inna za każdym uruchomieniem.
 
@@ -4118,7 +4165,7 @@ pl:
         2-3_Artist_1_new_b: Masz problem z zakrętem? Użyj bloku "skręć w prawo o 90
           stopni".
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'Aby zrobić te ostre kąty musisz za każdym razem skręcić *bardziej*
+        2-3_Artist_6_a: 'Aby zrobić te ostre kąty musisz za każdym razem skręcić _bardziej_
           niż w przypadku kwadratu.   '
         2-3_Artist_6_b: Skoro już patrzę w prawo, będzie łatwiej pójść najpierw do
           przodu a potem, skręcając w lewo, stworzyć trójkąt.
@@ -4181,7 +4228,7 @@ pl:
           zmiany ilości boków, użyj bloku matematycznego aby podzielić długość w pikselach
           przez liczbę boków.
       grade5_artist_variables_square7_authored_hint:
-        Course_4_Artist_Vars_6_a: Aby narysować zwykły wielokąt, obróć się o ***360/sides**
+        Course_4_Artist_Vars_6_a: Aby narysować zwykły wielokąt, obróć się o **\*360/sides**
           za każdym razem.
       grade5_artist_variables_triangles1_authored_hint:
         grade5_artist_variables_triangles1_a: Musisz pamiętać, że aby utworzyć wewnętrzny

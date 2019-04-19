@@ -2255,6 +2255,8 @@ nn:
               name: Crowdsourcing
             Conditionals in Minecraft:
               name: Betingelser i Minecraft
+            Songwriting:
+              name: Låtskriving
         express-2019:
           stages:
             Relay Programming:
@@ -2384,3 +2386,13 @@ nn:
           stages:
             While Loops:
               name: Medan-løkker
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Vilkår med kort
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops in Bee/Zombie:
+              name: Løkker i løkker i Bie/Zombie

@@ -8,9 +8,9 @@ lv:
       2-3 Artist 11: 'Uztaisi robežu stop zīmei no astoņstūra, kuram katra mala ir
         100 pikseļu gara. Cik platus leņķus tev vajadzīgs izmantot? (Pavediens: Cik
         ir 360 dalīts ar 8?) '
-      2-3 Artist 12: "Izveido apli, lai pabeigtu acs zīmējumu!\r\n\r\nCik reizes jāatkārto
-        kods, lai uzzīmētu apli, ja aktieris katru reizi pagriežas par 1 grādu? 180?
-        360? 500?"
+      2-3 Artist 12: "Izveido apli, lai pabeigtu acs zīmējumu!\\\r\n\\\r\nCik reizes
+        jāatkārto kods, lai uzzīmētu apli, ja aktieris katru reizi pagriežas par 1
+        grādu? 180? 360? 500?"
       2-3 Artist 2 new: 'Šai mājai ir pa pusei pabeigta siena. Katrai pusei ir 100,
         bet pa pusei pabeigtai sienai - 100. Pabeidziet sienu. '
       2-3 Artist 2: 'Šai mājai ir pa pusei pabeigta siena. Katrai pusei ir 100, bet
@@ -21,7 +21,7 @@ lv:
       2-3 Artist 3: Šī cepure ir 100 pikseļus augsta. Zīmējiet cepuri, kura ir par
         70 pikseļiem mazāka.
       2-3 Artist 3new: "Sarkanā cepure ir 70 pikseļus augsta. Pabeidz zīmēt melno
-        cepuri, kura ir 70 pikseļus mazāka. \r \n(Katras cepures platums ir 50 pikseļi.)"
+        cepuri, kura ir 70 pikseļus mazāka. \\\r \n(Katras cepures platums ir 50 pikseļi.)"
       2-3 Artist 4: Palīdzi man pabeigt māju šim kaķim.
       2-3 Artist 5: Nomaini šo kodu ar "atkārtot reizes" bloku, lai uzzīmētu šo pašu
         māju tikai ar 3 blokiem.
@@ -40,58 +40,58 @@ lv:
         Uzdevums: Pabeidz zīmēt pēdējo zobu.
         Tas ir 25 pikseļus plats un 25 pikseļus augsts.
       2-3 Artist Debugging 1: Šai  cepurei jābūt 50 pikseļus platai. Vai vari to salabot?
-      2-3 Artist Debugging 10: "Spēļu kontroliera kursorsvira ir pārāk šaura. \r\n\r\nVai
+      2-3 Artist Debugging 10: "Spēļu kontroliera kursorsvira ir pārāk šaura. \\\r\n\\\r\nVai
         vari to izveidot 10 pikseļus platāku?"
       2-3 Artist Debugging 12: Man jāizveido okeāna vilnis šajā zīmējumā. Vai vari
         man palīdzēt?
-      2-3 Artist Debugging 2: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\r\n\r\nIzlabo
+      2-3 Artist Debugging 2: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\\\r\n\\\r\nIzlabo
         kodu, lai visām ūsām būtu vienāds garums."
-      2-3 Artist Debugging 3: "Manā laivā ir caurums! \r\n\r\nVai vari izlabot zīmējumu,
-        lai cauruma nebūtu?"
+      2-3 Artist Debugging 3: "Manā laivā ir caurums! \\\r\n\\\r\nVai vari izlabot
+        zīmējumu, lai cauruma nebūtu?"
       2-3 Artist Debugging 4: Kas ir zīmējumā, ko mēs mēģinām uzzīmēt? Pabeidz savienot
         punktus, izmantojot pareizās līnijas un leņķus.
       2-3 Artist Debugging 5: "Kods kājai un pēdai ir kļūdains. \n\nVai vari to izlabot?"
-      2-3 Artist Debugging 6: "Izskatās, ka sēžu uz krēsla, kam trūkst vienas kājas!\r\n\r\nIzmaini
+      2-3 Artist Debugging 6: "Izskatās, ka sēžu uz krēsla, kam trūkst vienas kājas!\\\r\n\\\r\nIzmaini
         kodu, lai uzzīmētu pēdējo kāju."
-      2-3 Artist Debugging 7: "Izskatās, ka kodā C burts ir uzzīmēts otrādi.\r\n\r\nVai
+      2-3 Artist Debugging 7: "Izskatās, ka kodā C burts ir uzzīmēts otrādi.\\\r\n\\\r\nVai
         vari to uzzīmēt pareizi?"
-      2-3 Artist Debugging 8: "Skolotājs saka, ka man ir jāpabeidz iesāktais!\r\n\r\nPalīdzi
+      2-3 Artist Debugging 8: "Skolotājs saka, ka man ir jāpabeidz iesāktais!\\\r\n\\\r\nPalīdzi
         man pabeigt vējdzirnaviņas. Vai vari pateikt, kas ir nepareizi?"
       2-3 Artist Debugging 9: Stiebra kods ir nepareizs. Vai vari noskaidrot, kā uzzīmēt
         stiebru pareizajā virzienā?
       2-3 Artist Debugging Assessment 1: "Uzdevums: Kāpēc šī kvadrāta malas ir par
-        75 pikseļiem īsākas nekā vajadzētu būt? \r\n\r\nKurā vietā ir jālabo kods?"
+        75 pikseļiem īsākas nekā vajadzētu būt? \\\r\n\\\r\nKurā vietā ir jālabo kods?"
       2-3 Artist Free Play: Brīvā spēle! Zīmē visu, ko vēlies.
-      2-3 Artist Functions 1 a: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \r\n\r\nPalīdzi
-        zombijam uzzīmēt kvadrātiskas brilles. \r\n\r\nSavienojums starp lēcām ir
-        par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
-      2-3 Artist Functions 1: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \r\n\r\nPalīdzi
-        zombijam uzzīmēt kvadrātiskas brilles. \r\n\r\nSavienojums starp lēcām ir
-        par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
+      2-3 Artist Functions 1 a: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \\\r\n\\\r\nPalīdzi
+        zombijam uzzīmēt kvadrātiskas brilles. \\\r\n\\\r\nSavienojums starp lēcām
+        ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
+      2-3 Artist Functions 1: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \\\r\n\\\r\nPalīdzi
+        zombijam uzzīmēt kvadrātiskas brilles. \\\r\n\\\r\nSavienojums starp lēcām
+        ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
       2-3 Artist Functions 10: 'Brīvā spēle: Šeit ir divas funkcijas, kas zīmē lielāku
         un mazāku zobratus. Izmantojot šīs funkcijas, uzzīmējiet zīmējumu mašīnas
         iekšienē!'
       2-3 Artist Functions 11 a: "Mēs pārsaucām funkciju `zīmēt kvadrātu` par `zīmēt
         sešstūri`, bet tas joprojām zīmē kvadrātu! Vai vari izmainīt `zīmēt sešstūri`
-        funkciju tā, lai tā zīmētu sešstūri ar 50 pikseļus garām malām? \r\n\r\nUzzīmē
+        funkciju tā, lai tā zīmētu sešstūri ar 50 pikseļus garām malām? \\\r\n\\\r\nUzzīmē
         zīmējumu ar jauno funkciju!"
-      2-3 Artist Functions 11.5 a: "Šeit ir šī pati funkcija `uzzīmēt sešstūri`. \r\n\r\nKas
+      2-3 Artist Functions 11.5 a: "Šeit ir šī pati funkcija `uzzīmēt sešstūri`. \\\r\n\\\r\nKas
         notiks, ja programmas ciklā katru reizi notiks pagrieziens par 60 grādiem?"
-      2-3 Artist Functions 11.5: "Šeit ir šī pati funkcija `uzzīmēt sešstūri`. \r\n\r\nKas
+      2-3 Artist Functions 11.5: "Šeit ir šī pati funkcija `uzzīmēt sešstūri`. \\\r\n\\\r\nKas
         notiks, ja programmas ciklā katru reizi notiks pagrieziens par 60 grādiem?"
       2-3 Artist Functions 11: "Mēs pārsaucām funkciju `zīmēt kvadrātu` par `zīmēt
         sešstūri`, bet tas joprojām zīmē kvadrātu! Vai vari izmainīt `zīmēt sešstūri`
-        funkciju tā, lai tā zīmētu sešstūri ar 50 pikseļus garām malām? \r\n\r\nUzzīmē
+        funkciju tā, lai tā zīmētu sešstūri ar 50 pikseļus garām malām? \\\r\n\\\r\nUzzīmē
         zīmējumu ar jauno funkciju!"
       2-3 Artist Functions 12 Mike: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas
-        darbības vairākas reizes. \r\n\r \nVai, izmantojot funkciju `zīmēt ziedu`,
-        vari aizpildīt visu puķu kasti?\r\nZiedi atrodas 100 pikseļu attālumā."
+        darbības vairākas reizes. \\\r\n\\\r \nVai, izmantojot funkciju `zīmēt ziedu`,
+        vari aizpildīt visu puķu kasti?\\\r\nZiedi atrodas 100 pikseļu attālumā."
       2-3 Artist Functions 12 a: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas
-        darbības vairākas reizes. \r\n\r \nVai, izmantojot funkciju `zīmēt ziedu`,
-        vari aizpildīt visu puķu kasti?\r\nZiedi atrodas 100 pikseļu attālumā."
+        darbības vairākas reizes. \\\r\n\\\r \nVai, izmantojot funkciju `zīmēt ziedu`,
+        vari aizpildīt visu puķu kasti?\\\r\nZiedi atrodas 100 pikseļu attālumā."
       2-3 Artist Functions 12: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas darbības
-        vairākas reizes. \r\n\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari aizpildīt
-        visu puķu kasti?\r\nZiedi atrodas 100 pikseļu attālumā."
+        vairākas reizes. \\\r\n\\\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari
+        aizpildīt visu puķu kasti?\\\r\nZiedi atrodas 100 pikseļu attālumā."
       2-3 Artist Loops New 12: 'Uzzīmē rombu, kura malas ir 100 pikseļus garas. '
       2-3 Artist Loops New 13: Iesākumā dosim Tev kodu (pelēkā krāsā), lai uzzīmētu
         vienu rombu!
@@ -291,6 +291,8 @@ lv:
         Atrisini puzli, izmantojot "atkārtot" bloku, kas atkārtojas 3 reizes. Mēģini
         izvietot šos 3 blokus iekšā pelēkajiem "atkārtot" blokiem: pārvietoties, pārvietoties,
         pagriesties.'
+      4-5 Artist 1: Palīdzi man pabeigt uzzīmēt kasti. (Katra līnija ir 300 pikseļus
+        gara)
       4-5 Artist 5: Ar ko aizstāt "???", lai zombijs pabeigtu zīmējumu, izmantojot
         doto ciklu?
       4-5 Bee Conditionals 1: "Mākonis aizsedz man skatu! \nPaņem nektāru tikai tad,
@@ -664,8 +666,8 @@ lv:
       courseB_maze_seq12: Tagad notver to cūku, kā vien māki!
       courseB_maze_seq12_2018: Tagad notver to cūku, kā vien māki!
       courseB_maze_seq12_2019: Tagad notver to cūku, kā vien māki!
-      courseB_maze_seq2: '*"Kļūda! Izlabo kļūdu kodā, lai palīdzētu putnam tikt līdz
-        cūkai."*'
+      courseB_maze_seq2: _"Kļūda! Izlabo kļūdu kodā, lai palīdzētu putnam tikt līdz
+        cūkai."_
       courseB_maze_seq6: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam
         nokļūt līdz cūkai!
       courseB_maze_seq7: Izdomā, kas šeit pietrūkst un tad pievieno blokus, lai palīdzētu
@@ -710,11 +712,11 @@ lv:
         abiem "kad bumba trāpa" blokiem, lai atrisinātu šo puzli.
       courseD_bounce_events7: Pievieno blokus pie katra "kad" bloka. Ļauj bumbai lidot,
         kamēr tā sasniedz mērķi.
-      courseE_artist_functions1: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \r\n\r\nPalīdzi
-        zombijam uzzīmēt kvadrātiskas brilles. \r\n\r\nSavienojums starp lēcām ir
-        par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
+      courseE_artist_functions1: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \\\r\n\\\r\nPalīdzi
+        zombijam uzzīmēt kvadrātiskas brilles. \\\r\n\\\r\nSavienojums starp lēcām
+        ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
       courseE_artist_functions1_2018: "\"Es zombij mākslinieks. Es patīk zīmēt!\"
-        \r\n\r\nPalīdzi zombijam uzzīmēt kvadrātiskas brilles. \r\n\r\nSavienojums
+        \\\r\n\\\r\nPalīdzi zombijam uzzīmēt kvadrātiskas brilles. \\\r\n\\\r\nSavienojums
         starp lēcām ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
       courseE_bee_functions1: Iegūsti visu nektāru no katra zieda.
       courseE_bee_functions1_2018: Iegūsti visu nektāru no katra zieda.
@@ -776,7 +778,7 @@ lv:
       grade2_MakeDogTag_6: Brīvā spēle! Zīmē visu, ko vēlies.
       grade2_PuppyLoops_1: Vai tu vari man palīdzēt tikt līdz cūkai izmantojot 5 vienāda
         veida blokus?
-      grade2_PuppyLoops_10: "Skolotājs saka, ka man ir jāpabeidz iesāktais!\r\n\r\nPalīdzi
+      grade2_PuppyLoops_10: "Skolotājs saka, ka man ir jāpabeidz iesāktais!\\\r\n\\\r\nPalīdzi
         man pabeigt vējdzirnaviņas. Vai vari pateikt, kas ir nepareizi?"
       grade2_PuppyLoops_2: Vai tu vari tikt līdz cūkai, izveidojot ciklu, izmantojot
         tikai vienu "pārvietot uz priekšu" bloku iekš bloka "atkārtot"?
@@ -784,9 +786,9 @@ lv:
         līdz cūkai ar mazāko skaitu bloku!
       grade2_PuppyLoops_5: Vai vari izdomāt ātrāko veidu kā palīdzēt man tikt līdz
         cūkai?
-      grade2_PuppyLoops_8: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\r\n\r\nIzlabo
+      grade2_PuppyLoops_8: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\\\r\n\\\r\nIzlabo
         kodu, lai visām ūsām būtu vienāds garums."
-      grade2_PuppyLoops_9: "Izskatās, ka kodā C burts ir uzzīmēts otrādi.\r\n\r\nVai
+      grade2_PuppyLoops_9: "Izskatās, ka kodā C burts ir uzzīmēts otrādi.\\\r\n\\\r\nVai
         vari to uzzīmēt pareizi?"
       grade2_puppy_loops2: Vai tu vari tikt līdz cūkai, izveidojot ciklu, izmantojot
         tikai vienu "pārvietot uz priekšu" bloku iekš bloka "atkārtot"?
@@ -881,9 +883,9 @@ lv:
         blokā.'
       grade4_arist_nested_loop_flags1: Ieliec ciklā doto kodu, lai izveidotu vējdzirnavas.
       grade4_arist_nested_loop_triangles4: Uzzīmē zobus krokodila mutē!
-      grade4_artist_functions1: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \r\n\r\nPalīdzi
-        zombijam uzzīmēt kvadrātiskas brilles. \r\n\r\nSavienojums starp lēcām ir
-        par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
+      grade4_artist_functions1: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \\\r\n\\\r\nPalīdzi
+        zombijam uzzīmēt kvadrātiskas brilles. \\\r\n\\\r\nSavienojums starp lēcām
+        ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
       grade4_artist_nested_loop_flags1: Ieliec ciklā doto kodu, lai izveidotu vējdzirnavas.
       grade4_bee_conditionals_quantum1: "Mākonis aizsedz man skatu! \nPaņem nektāru
         tikai tad, ja zem mākoņa ir paslēpts zieds.\nUzmanies, jo tas var mainīties!"
@@ -898,9 +900,6 @@ lv:
       grade4_bee_functions1: Iegūsti visu nektāru no katra zieda.
       grade4_frozen_functions0: Vai vari izdomāt, ar kuru numuru aizstāt jautājumzīmes,
         lai uzzīmētu apli?
-      grade4_review_artist1: Sveiki, esmu mākslinieks. Tu vari rakstīt kodu, lai liktu
-        man uzzīmēt gandrīz jebko. Izmanto pāris blokus, lai liktu man zīmēt attēlā
-        redzamo pelēko līniju vietā. (Katra līnija ir 100 pikseļu gara)
       grade4_review_artist2: |-
         Šai mājai vajag jumtu! Uzzīmē trīsstūri. Padoms:
         visas trīs malas ir vienāda garuma.

@@ -340,6 +340,8 @@ zh-TW:
               name: '程式設計概念：函式（Functions）'
             'Programming Concept: Loops':
               name: '程式設計概念：迴圈（Loops）'
+            Reflection:
+              name: 反思
             Teacher Dashboard:
               name: 教師控制台
             Unplugged lessons:
@@ -1909,6 +1911,7 @@ zh-TW:
             'Unplugged: Songwriting with Parameters':
               name: '不插電活動 - 用參數寫歌'
         ecs-unit1:
+          title: ECS 單元 1
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: 單元 1：第 10 日 - 用數據說故事
@@ -1933,6 +1936,7 @@ zh-TW:
             Wrap-up:
               name: 總結
         ecs-unit2:
+          title: ECS 單元 2
           description: '單元 2：問題解決'
           description_short: '單元 2：問題解決'
           stages:
@@ -1949,6 +1953,7 @@ zh-TW:
             Unit 2 Challenge:
               name: 單元 2 挑戰
         ecs-unit3:
+          title: ECS 單元 3
           stages:
             Close & Next Steps:
               name: 關閉 & 下一步
@@ -1961,6 +1966,7 @@ zh-TW:
             Unit 3 Challenge:
               name: 單元 3 挑戰
         ecs-unit4:
+          title: ECS 單元 4
           stages:
             Close & Next Steps:
               name: 關閉 & 下一步
@@ -1973,6 +1979,7 @@ zh-TW:
             Unit 4 Challenge:
               name: 單元 4 挑戰
         ecs-unit5:
+          title: ECS 單元 5
           stages:
             Complete the Challenge:
               name: 完成這個挑戰
@@ -1989,6 +1996,7 @@ zh-TW:
             Close & Next Steps:
               name: 關閉 & 下一步
         ecs-unit6:
+          title: ECS 單元 6
           stages:
             Getting Started:
               name: 新手上路
@@ -3895,6 +3903,8 @@ zh-TW:
               name: 信封變數
             For Loop Fun:
               name: 有趣的計數迴圈
+            Alien Dance Party with Sprite Lab:
+              name: 外星人舞蹈派對
             Binary Bracelets:
               name: 二進制手環
             'Unplugged: Binary':
@@ -3975,6 +3985,8 @@ zh-TW:
               name: 行為的用法
             Virtual Pet - Behaviors:
               name: 虛擬寵物 - 行為
+            Alien Dance Party - Input:
+              name: 外星人舞蹈派對 - 輸入（Input）
         coursec-2018:
           title: 課程 C（2018）
           assignment_family_title: 課程 C
@@ -4040,6 +4052,8 @@ zh-TW:
               name: 一小時玩 Minecraft
             Functions in Minecraft:
               name: Minecraft 中的函式
+            Alien Dance Party with Sprite Lab:
+              name: 外星人舞蹈派對
         coursef-2018:
           title: 課程 F（2018）
           assignment_family_title: 課程 F
@@ -4076,6 +4090,8 @@ zh-TW:
               name: 說明你的專案
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
+            Alien Dance Party with Sprite Lab:
+              name: 外星人舞蹈派對
             Functions in Minecraft:
               name: 在 Minecraft 裡寫函式
         csp1-2018:
@@ -4271,6 +4287,10 @@ zh-TW:
               name: 數據的清理
             Unit 2 Chapter 2 Assessment:
               name: 單元 2 第 2 節 評量
+        spritelab:
+          stages:
+            Alien Dance Party - Input:
+              name: 外星人舞蹈派對 - 輸入（Input）
         csd1-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4372,6 +4392,8 @@ zh-TW:
           description_audience: CS Principles 輔導員培訓 2018-2019
         csd-novice-18:
           stages:
+            Novice Reflections Overview:
+              name: 新手反思概覽
             Welcome:
               name: 歡迎
             Tuesday:
@@ -4380,6 +4402,8 @@ zh-TW:
               name: 總結
             Friday:
               name: 週五
+            Novice Reflection Overview:
+              name: 新手反思概覽
             Monday:
               name: 週一
             Day 1:
@@ -4393,10 +4417,14 @@ zh-TW:
           description_audience: CS Discoveries 輔導員培訓 2018-2019
         csd-apprentice-18:
           stages:
+            Novice Reflection Overview:
+              name: 新手反思概覽
             Tuesday:
               name: 週二
             Wrap Up:
               name: 總結
+            Apprentice Reflection Overview:
+              name: 學徒反思
             Day 1:
               name: 第 1 天
             Day 2:
@@ -4408,6 +4436,8 @@ zh-TW:
           description_audience: CS Discoveries 輔導員培訓 2018-2019
         csp-novice-18:
           stages:
+            Novice Reflection Overview:
+              name: 新手反思概覽
             Tuesday:
               name: 週二
             Wrap Up:
@@ -4425,10 +4455,14 @@ zh-TW:
           description_audience: CS Principles 輔導員培訓 2018-2019
         csp-apprentice-18:
           stages:
+            Novice Reflection Overview:
+              name: 新手反思概覽
             Tuesday:
               name: 週二
             Wrap Up:
               name: 總結
+            Apprentice Reflection Overview:
+              name: 學徒反思
             Day 1:
               name: 第 1 天
             Day 2:
@@ -4467,10 +4501,22 @@ zh-TW:
               name: 和 BB-8 與 Rey 一起寫程式
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie 和 Big Project
+        spritelab-validated:
+          stages:
+            Alien Dance Party - Input:
+              name: 外星人舞蹈派對 - 輸入（Input）
         fit-test:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
+        spritelab-simple:
+          stages:
+            Alien Dance Party - Input:
+              name: 外星人舞蹈派對 - 輸入（Input）
+        spritelab-ee:
+          stages:
+            Alien Dance Party - Input:
+              name: 外星人舞蹈派對 - 輸入（Input）
         frozen-2018:
           stages:
             Artist:
@@ -4487,7 +4533,7 @@ zh-TW:
               name: 舞蹈派對
           title: 舞蹈派對
           description_short: 精選 Katy Perry、Madonna、J. Balvin, Sia、Keith Urban、Ciara 和其他 25 位名人！
-          description: 使用代碼自創一支舞蹈，并與朋友分享！
+          description: 寫個你自己的舞蹈程式，並分享給朋友們！
         frozen-2018-test-b:
           stages:
             Artist:
@@ -4520,6 +4566,9 @@ zh-TW:
               name: 函式的建立
           title: CSP 遊樂場
         dance-extras:
+          stages:
+            Dance Party - Go Further:
+              name: 舞蹈派對 - 深入學習
           title: 繼續跳舞
           description: 在一小時之後嘗試更多奇思妙想。
         coursef-2019:
@@ -4540,6 +4589,8 @@ zh-TW:
               name: 有趣的計數迴圈
             For Loops in Artist:
               name: 藝術家中的計數迴圈（For Loops）
+            Alien Dance Party with Sprite Lab:
+              name: 用 Sprite Lab 創作外星人舞蹈派對
             Explore Project Ideas:
               name: 找些專案靈感
             Build Your Project:
@@ -4562,6 +4613,7 @@ zh-TW:
           stages:
             Dance Party:
               name: 舞蹈派對
+          title: 舞蹈派對（低網路頻寬）
         coursed-2019:
           title: 課程 D（2019）
           description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
@@ -4603,6 +4655,8 @@ zh-TW:
               name: 條件判斷（Conditionals）
             Functions in Minecraft:
               name: Minecraft 中的函式
+            Alien Dance Party with Sprite Lab:
+              name: 用 Sprite Lab 創作外星人舞蹈派對
             Explore Project Ideas:
               name: 找些專案靈感
             Build Your Project:
@@ -4625,6 +4679,8 @@ zh-TW:
               name: Minecraft 水上巡航的條件式
             Access Ability:
               name: 輔助功能
+            Songwriting:
+              name: 歌曲創作
         express-2019:
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
           stages:
@@ -4652,6 +4708,8 @@ zh-TW:
               name: 有趣的計數迴圈
             For Loops in Artist:
               name: 藝術家中的計數迴圈（For Loops）
+            Alien Dance Party with Sprite Lab:
+              name: 用 Sprite Lab 創作外星人舞蹈派對
             Explore Project Ideas:
               name: 找些專案靈感
             Build Your Project:
@@ -4690,6 +4748,9 @@ zh-TW:
             Deeper Learning Overview:
               name: 深度學習概覽
         dance-extras-gallery:
+          stages:
+            Dance Party - Go Further:
+              name: 舞蹈派對 - 深入學習
           title: 繼續跳舞
           description: 在一小時之後嘗試更多奇思妙想。
         coursec-2019:
@@ -4952,6 +5013,8 @@ zh-TW:
               name: 學生問卷
             Teacher Surveys:
               name: 老師問卷
+            Functions Make:
+              name: 函式的建立
         csp1-2019:
           stages:
             CS Principles Pre-survey:
@@ -5079,3 +5142,79 @@ zh-TW:
               name: 新的階段
             Web Development:
               name: Web 開發
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: 群眾外包（Crowdsourcing）
+            Conditionals with Cards:
+              name: 用撲克牌學習條件判斷（Conditionals）
+            Building a Foundation:
+              name: 打好基礎
+            Loops in Artist:
+              name: 藝術家中的迴圈（Loops）
+            Alien Dance Party with Sprite Lab:
+              name: 用 Sprite Lab 創作外星人舞蹈派對
+            Functions in Minecraft:
+              name: Minecraft 中的函式
+        csp1-pilot-staging:
+          stages:
+            Variables Make:
+              name: 變數的建立
+            Functions Make:
+              name: 函式的建立
+        csp2-pilot-staging:
+          stages:
+            Variables Make:
+              name: 變數的建立
+            Functions Make:
+              name: 函式的建立
+        csp3-pilot-staging:
+          stages:
+            Variables Make:
+              name: 變數的建立
+            Functions Make:
+              name: 函式的建立
+        csp4-pilot-staging:
+          stages:
+            Variables Make:
+              name: 變數的建立
+            Functions Make:
+              name: 函式的建立
+        csp5-pilot-staging:
+          stages:
+            Variables Make:
+              name: 變數的建立
+            Functions Make:
+              name: 函式的建立
+        csp6-pilot-staging:
+          stages:
+            Variables Make:
+              name: 變數的建立
+            Functions Make:
+              name: 函式的建立
+        csp7-pilot-staging:
+          stages:
+            new stage:
+              name: 新的階段
+            Variables Make:
+              name: 變數的建立
+            Functions Make:
+              name: 函式的建立
+        csp8-pilot-staging:
+          stages:
+            Variables Make:
+              name: 變數的建立
+            Functions Make:
+              name: 函式的建立
+        csp9-pilot-staging:
+          stages:
+            Variables Make:
+              name: 變數的建立
+            Functions Make:
+              name: 函式的建立
+        csp10-pilot-staging:
+          stages:
+            Variables Make:
+              name: 變數的建立
+            Functions Make:
+              name: 函式的建立

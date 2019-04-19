@@ -1275,6 +1275,8 @@ pt-BR:
     csp_variables: variáveis
     csp_conditionals: Condições
     csp_functions: funções
+    csp_lists: Listas
+    csp_loops: laços
     dlp: Prompts de reflexão
   external_links:
     disclaimer: Aviso

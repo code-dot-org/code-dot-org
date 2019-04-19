@@ -432,6 +432,7 @@ id:
         csd_applab_arrays: Pengenalan untuk array
         CSF_loops_AB: Loop
         csd_pair_programming: Pemrograman berpasangan
+        csd_applab_parameters: Fungsi dengan parameter
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   headerContainer: {
@@ -61,6 +62,10 @@ class StageProgress extends Component {
     const {stageExtrasUrl, onStageExtras, stageTrophyEnabled} = this.props;
     let levels = this.props.levels;
 
+    const inMiniRubricExperiment = experiments.isEnabled(
+      experiments.MINI_RUBRIC_2019
+    );
+
     // Only puzzle levels (non-concept levels) should count towards mastery.
     if (stageTrophyEnabled) {
       levels = levels.filter(level => !level.isConceptLevel);
@@ -92,6 +97,7 @@ class StageProgress extends Component {
               disabled={false}
               smallBubble={!level.isCurrentLevel}
               stageTrophyEnabled={stageTrophyEnabled}
+              inMiniRubricExperiment={inMiniRubricExperiment}
             />
           </div>
         ))}

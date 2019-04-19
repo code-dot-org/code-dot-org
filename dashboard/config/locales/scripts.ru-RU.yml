@@ -4,10 +4,12 @@ ru:
     script:
       category:
         csf_category_name: Основы информатики
+        csf_2018_category_name: Основы CS (2018)
         csf2_draft_category_name: 'В разработке: Курсы A - F'
         csp_category_name: "«15 - 16» Основы информатики"
         cspexams_category_name: Практический тест по основам информатики
         csp17_category_name: "«16 - 17» Основы информатики"
+        full_course_category_name: Курсы полностью
         hoc_category_name: Час Кода
         math_category_name: Математика
       name:
@@ -1216,6 +1218,8 @@ ru:
               name: Что такое Большие Данные?
             Post-Course Survey:
               name: Опрос после окончания курса
+            Student Post-Course Survey:
+              name: Опрос учащихся после обучения
         csp5-2017:
           stages:
             Compound Conditional Logic:
@@ -1991,6 +1995,8 @@ ru:
               name: Создание основы
             Nested Loops:
               name: Вложенные циклы
+          title: Экспресс-курс
+          assignment_family_title: Экспресс-курс
           description_audience: 'Возраст: 9-18'
         pre-express-2017:
           stages:
@@ -2261,6 +2267,7 @@ ru:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стиви и Большой Проект
         express-2018:
+          assignment_family_title: Экспресс-курс
           description_audience: 'Возраст: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
@@ -2669,6 +2676,8 @@ ru:
               name: Вложенные циклы в Пчеле
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
+            Songwriting:
+              name: Написание песен
         express-2019:
           description_audience: 'Возраст: 9-18'
           stages:
@@ -2882,3 +2891,13 @@ ru:
               name: Визуализация данных
             Final Project:
               name: Финальный проект
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Краудсорсинг
+            Conditionals with Cards:
+              name: Условные выражения с картами
+            Building a Foundation:
+              name: Создание основы
+            Loops in Artist:
+              name: Циклы в исполнителе Художник

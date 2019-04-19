@@ -4,6 +4,7 @@ da:
       not_saved: 'Ret venligst følgende fejl:'
       too_young: 'Der er aldersbegrænsning på dette indhold, og det er ikke tilgængeligt for yngre elever.'
       teacher_must_accept_terms: 'Der er aldersbegrænsning på dette indhold, og det er ikke tilgængeligt for yngre elever. Bed din lærer om, at godkende de opdaterede Betingelser for brug, for at give dig adgang til indholdet. Dette kan din lærer gøre, ved at logge på Code Studio og klikke på knappen "Gennemse opdaterede betingelser" øverst på Code Studio hjemmesiden.'
+      pair_programmer: 'Du er i øjeblikket ved at par-programmere med en studerende, der ikke har adgang til dette indhold. For at få adgang til dette indhold, stop par-programmering og prøv igen senere.'
   activerecord:
     errors:
       messages:
@@ -17,6 +18,7 @@ da:
         name_example: 'Vis navn<br/>(f.eks. Cool Coder eller Jane S.)'
         email: 'E-mail'
         parent_email: 'Forældres/værges e-mail adresse'
+        personal_email: "Personlig e-mail adresse <a href=\"%{url}\"> (Klik her hvis du ikke har en e-mail-adresse)</a>"
         username: 'brugernavn'
         password: 'Adgangskode'
         password_confirmation: 'Bekræft adgangskode'
@@ -88,13 +90,24 @@ da:
     facebook: 'Facebook'
     windowslive: 'Microsoft-konto'
     microsoft_v2_auth: 'Microsoft-konto'
+    powerschool: 'PowerSchool'
     forgot_password: 'Glemt din adgangskode?'
+    migration_success: 'Succes! Du har opdateret til vores nye konto.'
+    demigration_success: 'Den nye konto er nu deaktiveret på din konto.'
     need_confirmation: "Har du ikke modtaget bekræftelsesinstruktioner?"
     need_unlock: "Ikke modtaget lås op instruktioner?"
+    not_linked: "Desværre, er din Code.org konto ikke knyttet til %{provider}. Du bliver nødt til at logge på ved at skrive din adgangskode nedenfor."
+    use_clever: "Desværre, er din Code.org konto ikke knyttet til %{provider}. Venligst log på via Clever Portal i stedet."
+    unable_to_connect_provider: "Ude af stand til at forbinde din Code.org konto til kontoen %{provider}. Prøv venligst igen."
+    already_in_use: "Kontoen %{provider} er allerede forbundet til en anden Code.org konto."
+    already_linked: "Kontoen %{provider} er allerede forbundet til en anden Code.org konto."
   signup_form:
+    email_signup: 'Tilmeld dig med din e-mail'
     student_count: '%{count} elever har allerede tilmeldt sig.'
     teacher_count: '%{count} lærere har allerede tilmeldt sig.'
+    overview: 'Tilmeld dig med en konto for at kunne følge dine fremskridt eller administrere dit klasseværelse. <a href="/">du kan gennemse de forskellige faser og gåder</a> uden en konto, men du bliver nødt til at tilmelde dig til at gemme dine fremskridt og projekter.'
     hoc_already_signed_up_heading: 'Begynd uden at logge ind'
+    hoc_already_signed_up_content: 'Du er tilmeldt at undervise en time kode! Du og dine elever behøver ikke at logge på Code Studio til at deltage i denne aktivitet. For at komme i gang, <a href="%{learn_url}">vælge en tutorial</a> til dit klasseværelse og del linket med dem.<br/><br/>hvis du nød Code Studio og ønsker at gå videre, kan du oprette en adgangskode og oprette en kode til Code Studio nedenfor for at tilmelde dine elever i nogen af vores <a href="%{educate_url}">længere kurser</a>.'
     teacher_educator_guide: 'Se lærerens guide'
     title: "Tilmeld dig Code.org"
     school_name: 'Skolens navn (valgfrit)'
@@ -114,6 +127,7 @@ da:
     invalid_password: "Adgangskoden skal være på mindst 6 tegn"
     mismatch_password: "De to adgangskoder du har indtastet stemmer ikke overens"
     under_13_consent: "Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres eller værges tilladelse til at benytte tjenesterne fra Code.org."
+    student_consent: "Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres eller værges tilladelse til at benytte tjenesterne fra Code.org."
     agree_us_website: "Jeg accepterer at bruge en hjemmeside baseret i USA."
     my_data_to_us: "Data fra min brug af dette websted kan sendes til og gemmes eller behandles i USA."
     additional_information: "Vi har brug for nogle ekstra oplysninger til at fortsætte med at logge dig."
@@ -128,6 +142,7 @@ da:
     email_preference_privacy: "(Se vores fortrolighedspolitik)"
     email_preference_yes: "Ja"
     email_preference_no: "Nej"
+    email_preference_required: "Du skal angive en e-mail adresse."
   school_info:
     title: 'Skoleoplysninger (valgfri)'
     school_country: 'Skolens land'
@@ -198,7 +213,12 @@ da:
   section:
     your_section:
       one: 'Din afdeling:'
+    confirm:
+      remove: 'Er du sikker på du vil forlade denne sektion?'
+    default_name: 'Sektion uden titel'
+    remove: 'Fjern sektion'
     type:
+      picture: 'Billed password'
       word: 'Hemmeligt ord'
       email: 'E-mail'
   follower:
@@ -241,8 +261,13 @@ da:
         playlab: 'Lav en App'
         artist: 'Tegn noget'
         applab: 'Lav en App'
+        gamelab: 'Skab et GameLab projekt'
+        weblab: 'Skab et WebLab (beta) projekt'
+      course_catalog: "Kursuskatalog"
       project_gallery: "Projekter"
+      sections: "Sektioner"
       report_bug: "Rapporter fejl"
+      teacher_community: "Lærer-fælleskab"
       educate_overview: "Oversigt for undervisere"
       educate_elementary: "Grundskole"
       educate_middle: "Grundskole (mellemtrin/udskoling)"
@@ -275,8 +300,11 @@ da:
       settings: 'Min konto'
       logout: 'Log ud'
       signin: 'Log ind'
+      signup: 'Skab en konto'
       already_registered: 'Allerede registreret?'
+      pair_programming: 'Par-programmering'
       team: 'Hold'
+      driver: 'Logget ind'
       navigator: 'Partner'
       create: 'Opret'
       algebra_game: 'Algebra'
@@ -292,8 +320,10 @@ da:
       gumball: 'Gumball'
       iceage: 'Is-tid'
       infinity: 'Uendelig'
+      makerlab: 'Skaber-toolkit'
       minecraft_designer: 'Minecraft'
       playlab: 'Play Lab'
+      spritelab: 'SpriteLab'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Blocks)'
       starwarsblocks_hour: 'Star Wars (Blocks)'
@@ -333,11 +363,13 @@ da:
       last_updated: 'Senest opdateret:'
       unsubmit: 'Fortryd indsendelse'
       worked_with: 'Samarbejdede med'
+      clear_response: 'Klar feedback'
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
     email_confirm_wrong_email: '(Forkert e-mail?)'
     email_resend_confirm: 'Gensend bekræftelsesmail'
+    new_email_hint: '(vær sikker på, du kan modtaget mails på denne adresse)'
     new_password_hint: "(Efterlad blank hvis du ikke ønsker at ændre det)"
     current_password_hint: '(vi har brug for din nuværende adgangskode til at bekræfte dine ændringer)'
     delete: 'Slet din konto'
@@ -690,6 +722,7 @@ da:
     csf_events: 'Hændelser'
     csf_binary: 'Binære'
     csf_conditionals: 'Betingelser'
+    csf_spritelab: 'SpriteLab'
     csf_nested_loops: 'Indlejret Løkker'
     csf_functions: 'Funktioner'
     csf_variables: 'Variabler'
@@ -698,23 +731,53 @@ da:
     csp_variables: 'Variabler'
     csp_conditionals: 'Betingelser'
     csp_functions: 'Funktioner'
+    csp_lists: 'Lister'
+    csp_loops: 'Løkker'
+  hoc_download:
+    download_in_Swedish: 'Download på svensk:'
+    download_in_Turkish: 'Download på tyrkisk:'
+    download_in_Ukrainian: 'Download på ukrainsk:'
+    download_in_Vietnamese: 'Download på vietnamesisk:'
+    windows: 'Windows (64-bit)'
+    mac: 'Mac OS X'
+  return_unit_overview: 'Gå til overblik'
+  return_course_overview: 'Gå til overblik over kursus'
+  view_all_units: 'Se alle enheder'
   view_teacher_guide: 'Vis lærervejledning'
   pd:
     form_labels:
+      first_name: 'Fornavn'
+      first_name_preferred: 'Foretrukkent fornavn'
+      last_name: 'Efternavn'
       email: 'E-mail'
+      email_alternate: 'Anden e-mail'
+      gender: 'Køn'
       school_name: 'Skolens navn'
       school_country: 'Skolens land'
+      ages: 'Hvilket alderstrin underviser du på?'
+      subjects: 'Hvilke emner underviser du i?'
+      workshop_course: 'Workshop kursus'
+      email_opt_in: 'Kan vi emaile dig om Code.org''s internationale program, opdateringer til vores kurser, eller andre computer videnskabs nyheder?'
+      legal_opt_in: 'Ved at indsende denne formular, accepterer du at tillade Code.org at dele information om hvordan du bruger Code.org og de professionelle undervisningsressourcer med Code.org International Partner i dit land, skoledistrikt og facilitatorer. Vi vil dele dine kontaktoplysninger, hvilke kurser/enheder du bruger og aggregere data om dine klasser med disse partnere. Dette omfatter antallet af studerende i dine klasser, den demografiske fordeling i klasselokalet, og navnet på din skole og distrikt. Vi vil ikke dele nogen information om individuelle studerende med vores partnere: alle studerende oplysninger vil de identificeret og aggregeres. Vores internationale partnere og facilitatorer er kontraktligt forpligtet til at behandle disse oplysninger med den samme grad af fortrolighed som Code.org.'
     form_entries:
       gender:
         male: 'Mand'
         female: 'Kvinde'
         none: 'Foretrækker ikke at svare'
+      school_country:
+        canada: 'Canada'
+        chile: 'Chile'
+        israel: 'Israel'
+        malaysia: 'Malaysia'
+        mexico: 'Mexico'
+        thailand: 'Thailand'
       subjects:
         cs: 'Datalogi'
         math: 'Matematik'
         science: 'Videnskab'
         la: 'Sprog kunst'
       resources:
+        bootstrap: 'Bootstrap'
         kodable: 'Kodable'
       robotics:
         kodable: 'Kodable'
@@ -725,4 +788,7 @@ da:
     accept: 'Jeg er enig'
   gdpr_dialog:
     message: 'Data fra din brug af dette websted kan sendes til og gemmes eller behandles i USA.'
+    link_intro: 'For nærmere oplysninger se vores'
+    privacy_policy: 'Privatlivspolitik'
+    logout: 'Log af'
     yes: 'Ja'

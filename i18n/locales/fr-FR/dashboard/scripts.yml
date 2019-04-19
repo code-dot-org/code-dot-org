@@ -2726,6 +2726,8 @@ fr:
               name: Financement participatif
             Digital Sharing:
               name: Partage numérique
+            Songwriting:
+              name: Écriture de chansons
         express-2019:
           stages:
             Relay Programming:
@@ -2928,3 +2930,11 @@ fr:
               name: Boucles et simulations
             Introduction to Arrays:
               name: Introduction sur les Arrays
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Financement participatif
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Building a Foundation:
+              name: Construire une fondation

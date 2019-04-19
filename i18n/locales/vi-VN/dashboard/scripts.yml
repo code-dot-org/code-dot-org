@@ -4767,6 +4767,8 @@ vi:
               name: Kết nối mạng
             Crowdsourcing:
               name: Đa nguồn
+            Songwriting:
+              name: Sáng tác với tham số
         express-2019:
           stages:
             Relay Programming:
@@ -5121,6 +5123,22 @@ vi:
             new stage:
               name: giai đoạn mới
         csd-videos:
+          stages:
+            new stage:
+              name: giai đoạn mới
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Đa nguồn
+            Building a Foundation:
+              name: Xây dựng nền tảng
+            Debugging with Scrat:
+              name: Gỡ lỗi với Scrat
+            Nested Loops in Bee/Zombie:
+              name: Vòng lặp lồng nhau trong Con ong/Thây ma
+            Nested Loops with Frozen:
+              name: Vòng lặp lồng với Frozen
+        csp7-pilot-staging:
           stages:
             new stage:
               name: giai đoạn mới

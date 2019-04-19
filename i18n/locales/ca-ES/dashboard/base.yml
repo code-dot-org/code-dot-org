@@ -628,6 +628,8 @@ ca:
     csp_variables: 'Variables'
     csp_conditionals: 'Condicionals'
     csp_functions: 'Funcions'
+    csp_lists: 'Llistes'
+    csp_loops: 'Bucles'
   view_teacher_guide: 'Veure la guia docent'
   pd:
     form_labels:

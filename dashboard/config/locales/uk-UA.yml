@@ -952,6 +952,8 @@ uk:
     csp_variables: змінні
     csp_conditionals: Умови
     csp_functions: функції
+    csp_lists: Списки
+    csp_loops: Цикли
   external_links:
     disclaimer: Відмова від відповідальності
     leaving_domain: Ви покидаєте цей домен на сайт, який не керується Code.org.
