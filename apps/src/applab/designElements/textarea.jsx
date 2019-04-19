@@ -15,6 +15,7 @@ import EnumPropertyRow from './EnumPropertyRow';
 import designMode from '../designMode';
 import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
 import color from '../../util/color';
+import themeColor from '../themeColor';
 import elementLibrary from './library';
 import experiments from '../../util/experiments';
 
@@ -198,10 +199,10 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: color.applab_default_text_input_background_color,
+      default: themeColor.default_text_input_background,
       classic: color.white,
-      orange: color.applab_orange_text_background_color,
-      citrus: color.applab_citrus_text_input_background_color
+      orange: themeColor.orange_text_background,
+      citrus: themeColor.citrus_text_input_background
     },
     borderRadius: {
       default: 2,
@@ -217,17 +218,17 @@ export default {
     },
     borderColor: {
       type: 'color',
-      default: color.applab_default_text_area_border_color,
-      classic: color.text_input_default_border_color,
-      orange: color.applab_orange_text_input_border_color,
-      citrus: color.applab_citrus_text_input_border_color
+      default: themeColor.default_text_area_border,
+      classic: themeColor.classic_text_input_border,
+      orange: themeColor.orange_text_input_border,
+      citrus: themeColor.citrus_text_input_border
     },
     textColor: {
       type: 'color',
-      default: color.applab_default_text_color,
+      default: themeColor.default_text,
       classic: color.black,
-      orange: color.applab_orange_text_color,
-      citrus: color.applab_citrus_text_color
+      orange: themeColor.orange_text,
+      citrus: themeColor.citrus_text
     },
     fontFamily: {
       default: 'Arial',

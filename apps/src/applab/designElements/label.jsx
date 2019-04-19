@@ -15,6 +15,7 @@ import * as elementUtils from './elementUtils';
 import * as gridUtils from '../gridUtils';
 import designMode from '../designMode';
 import color from '../../util/color';
+import themeColor from '../themeColor';
 import elementLibrary from './library';
 import experiments from '../../util/experiments';
 
@@ -197,10 +198,10 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: color.applab_default_label_background_color,
-      classic: color.applab_classic_label_background_color,
-      orange: color.applab_orange_text_background_color,
-      citrus: color.applab_citrus_text_background_color
+      default: themeColor.default_label_background,
+      classic: themeColor.classic_label_background,
+      orange: themeColor.orange_text_background,
+      citrus: themeColor.citrus_text_background
     },
     borderRadius: {
       default: 0,
@@ -216,17 +217,17 @@ export default {
     },
     borderColor: {
       type: 'color',
-      default: color.text_input_default_border_color,
-      classic: color.text_input_default_border_color,
-      orange: color.applab_orange_text_input_border_color,
-      citrus: color.applab_citrus_text_input_border_color
+      default: themeColor.default_text_input_border,
+      classic: themeColor.classic_text_input_border,
+      orange: themeColor.orange_text_input_border,
+      citrus: themeColor.citrus_text_input_border
     },
     textColor: {
       type: 'color',
-      default: color.applab_default_text_color,
+      default: themeColor.default_text,
       classic: color.default_text,
-      orange: color.applab_orange_text_color,
-      citrus: color.applab_citrus_label_text_color
+      orange: themeColor.orange_text,
+      citrus: themeColor.citrus_label_text
     },
     fontFamily: {
       default: 'Arial Black',
@@ -255,8 +256,7 @@ export default {
       element.style.borderStyle = 'solid';
       elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
     } else {
-      element.style.backgroundColor =
-        color.applab_classic_label_background_color;
+      element.style.backgroundColor = themeColor.classic_label_background;
       element.style.fontFamily = applabConstants.fontFamilyStyles[0];
       element.style.fontSize = applabConstants.defaultFontSizeStyle;
       element.style.color = '#333333';
@@ -270,8 +270,7 @@ export default {
   onDeserialize: function(element) {
     // Set background color style for older projects that didn't set them on create:
     if (!element.style.backgroundColor) {
-      element.style.backgroundColor =
-        color.applab_classic_label_background_color;
+      element.style.backgroundColor = themeColor.classic_label_background;
     }
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);

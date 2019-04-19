@@ -12,6 +12,7 @@ import EnumPropertyRow from './EnumPropertyRow';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import BorderProperties from './BorderProperties';
 import color from '../../util/color';
+import themeColor from '../themeColor';
 import {
   ICON_PREFIX_REGEX,
   defaultFontSizeStyle,
@@ -209,10 +210,10 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: color.applab_default_button_background_color,
+      default: themeColor.default_button_background,
       classic: color.applab_button_teal,
-      orange: color.applab_orange_button_background_color,
-      citrus: color.applab_citrus_button_background_color
+      orange: themeColor.orange_button_background,
+      citrus: themeColor.citrus_button_background
     },
     borderRadius: {
       default: 4,
@@ -228,17 +229,17 @@ export default {
     },
     borderColor: {
       type: 'color',
-      default: color.applab_default_button_border_color,
+      default: themeColor.default_button_border,
       classic: color.black,
-      orange: color.applab_orange_button_border_color,
-      citrus: color.applab_citrus_button_border_color
+      orange: themeColor.orange_button_border,
+      citrus: themeColor.citrus_button_border
     },
     textColor: {
       type: 'color',
-      default: color.applab_default_button_text_color,
+      default: themeColor.default_button_text,
       classic: color.white,
-      orange: color.applab_orange_text_color,
-      citrus: color.applab_citrus_text_color
+      orange: themeColor.orange_text,
+      citrus: themeColor.citrus_text
     },
     fontFamily: {
       default: 'Arial Black',

@@ -9,6 +9,7 @@ import * as setPropertyDropdown from './setPropertyDropdown';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
+import themeColor from './themeColor';
 import color from '../util/color';
 import logToCloud from '../logToCloud';
 import {
@@ -944,8 +945,7 @@ applabCommands.textLabel = function(opts) {
   } else {
     newLabel.style.fontSize = defaultFontSizeStyle;
     newLabel.style.fontFamily = fontFamilyStyles[0];
-    newLabel.style.backgroundColor =
-      color.applab_classic_label_background_color;
+    newLabel.style.backgroundColor = themeColor.classic_label_background;
     elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
   }
   var forElement = document.getElementById(opts.forId);
