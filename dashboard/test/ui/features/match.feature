@@ -12,7 +12,6 @@ Scenario: Loading the level
 # drag simulation does not work in IE/iOS, so we exclude them for now
 @no_ie
 @no_mobile
-@skip
 Scenario: Solving puzzle
   And I drag ".answer[originalindex=0]" to ".emptyslot:first"
   And I drag ".answer[originalindex=1]" to ".emptyslot:first"
