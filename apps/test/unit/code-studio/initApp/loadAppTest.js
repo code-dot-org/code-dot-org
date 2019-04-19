@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import clientState from '@cdo/apps/code-studio/clientState';
 import sinon from 'sinon';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import loadAppOptions, {
   setupApp,
   setAppOptions
