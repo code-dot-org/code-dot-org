@@ -162,10 +162,12 @@ Feature: Using the teacher homepage sections feature
     Then the url contains the section id
     And check that the URL contains "/courses/csp-2018"
 
-    When I select the "'17-'18" option in dropdown "version-selector" to load a new page
+    And element "#uitest-version-selector" is visible
+    And I click selector "#assignment-version-year" once I see it
+    And I wait until element ".assignment-version-title" is visible
+    When I click selector ".assignment-version-title:contains('17-'18)" to load a new page
     And I wait to see ".uitest-CourseScript"
     Then the url contains the section id
-    And check that the URL contains "/courses/csp-2017"
 
     And the href of selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" contains the section id
 
