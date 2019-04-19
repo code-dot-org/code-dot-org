@@ -9,6 +9,7 @@ import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import color from '../../util/color';
+import themeColor from '../themeColor';
 import EnumPropertyRow from './EnumPropertyRow';
 import BorderProperties from './BorderProperties';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
@@ -194,10 +195,10 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: color.applab_default_dropdown_background_color,
+      default: themeColor.default_dropdown_background,
       classic: color.applab_button_teal,
-      orange: color.applab_orange_dropdown_background_color,
-      citrus: color.applab_citrus_dropdown_background_color
+      orange: themeColor.orange_dropdown_background,
+      citrus: themeColor.citrus_dropdown_background
     },
     borderRadius: {
       default: 4,
@@ -213,17 +214,17 @@ export default {
     },
     borderColor: {
       type: 'color',
-      default: color.applab_default_dropdown_border_color,
+      default: themeColor.default_dropdown_border,
       classic: color.black,
-      orange: color.applab_orange_dropdown_border_color,
-      citrus: color.applab_citrus_dropdown_border_color
+      orange: themeColor.orange_dropdown_border,
+      citrus: themeColor.citrus_dropdown_border
     },
     textColor: {
       type: 'color',
-      default: color.applab_default_text_color,
+      default: themeColor.default_text,
       classic: color.white,
-      orange: color.applab_orange_dropdown_text_color,
-      citrus: color.applab_citrus_dropdown_text_color
+      orange: themeColor.orange_dropdown_text,
+      citrus: themeColor.citrus_dropdown_text
     },
     fontFamily: {
       default: 'Arial',

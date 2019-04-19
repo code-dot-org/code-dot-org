@@ -2,6 +2,7 @@ import $ from 'jquery';
 import * as constants from '../constants';
 import * as utils from '../../utils';
 import color from '../../util/color';
+import themeColor from '../themeColor';
 
 // Taken from http://stackoverflow.com/a/3627747/2506748
 export function rgb2hex(rgb) {
@@ -220,7 +221,7 @@ export function setDefaultBorderStyles(element, options = {}) {
   }
   if (forceDefaults || element.style.borderColor === '') {
     element.style.borderColor = textInput
-      ? color.text_input_default_border_color
+      ? themeColor.classic_text_input_border
       : color.black;
   }
   if (forceDefaults || element.style.borderRadius === '') {
