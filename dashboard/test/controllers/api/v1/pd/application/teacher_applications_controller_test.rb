@@ -125,7 +125,7 @@ module Api::V1::Pd::Application
       assert_equal 'principal_approval', email.email_type
     end
 
-    test 'send_principal_approval does send an email even if one has already been sent' do
+    test 'send_principal_approval does nothing if an email has already been sent' do
       Pd::Application::Email.create!(
         application: @application,
         application_status: @application.status,
@@ -136,7 +136,7 @@ module Api::V1::Pd::Application
       )
 
       sign_in @program_manager
-      assert_creates Pd::Application::Email do
+      assert_does_not_create Pd::Application::Email do
         post :send_principal_approval, params: {id: @application.id}
         assert_response :success
       end
