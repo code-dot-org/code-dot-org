@@ -5150,6 +5150,14 @@ zh-TW:
               name: 群眾外包（Crowdsourcing）
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
+            Building a Foundation:
+              name: 打好基礎
+            Loops in Artist:
+              name: 藝術家中的迴圈（Loops）
+            Alien Dance Party with Sprite Lab:
+              name: 用 Sprite Lab 創作外星人舞蹈派對
+            Functions in Minecraft:
+              name: Minecraft 中的函式
         csp1-pilot-staging:
           stages:
             Variables Make:

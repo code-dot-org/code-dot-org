@@ -1102,7 +1102,7 @@ en:
           SPRITE:
             abc: this sprite
       gamelab_turn:
-        text: "[SPRITE][0] turn [DIRECTION][1] [N][2] degrees"
+        text: turn [SPRITE][0] [DIRECTION][1] [N][2] degrees
         options:
           DIRECTION:
             '"right"': right

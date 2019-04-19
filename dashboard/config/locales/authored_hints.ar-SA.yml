@@ -3714,11 +3714,7 @@ ar:
       aE4_authored_hint:
         aE4_d: إذا أصبح برنامجك مربكاً جداً، يمكنك دائماً النقر فوق "البدء من جديد"
           والمحاولة مرة أخرى!
-      behaviors 1_authored_hint:
-        behavior hint: "حاول تعديل السلوك! \n\n-   في أي اتجاه يحتاج الطائر أن يتحرك؟"
       behaviors 2_authored_hint:
-        behavior hint: "حاول تعديل السلوك! \n\n-   في أي اتجاه يحتاج الطائر أن يتحرك؟"
-      behaviors 4_authored_hint:
         behavior hint: "حاول تعديل السلوك! \n\n-   في أي اتجاه يحتاج الطائر أن يتحرك؟"
       behaviors 5_authored_hint:
         target hint: يمكنك اختيار أي من الألعاب الأربعة. أي منها يريده الحيوان الأليف؟

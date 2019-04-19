@@ -515,6 +515,8 @@ da:
               name: Multi
             Studio:
               name: Studio
+            Sprite Lab:
+              name: SpriteLab
         algebraPD2b:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
@@ -1650,3 +1652,5 @@ da:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Betingelser med kortspil
+            Building a Foundation:
+              name: Opbygge et fundament

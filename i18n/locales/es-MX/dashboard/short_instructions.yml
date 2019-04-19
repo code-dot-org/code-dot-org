@@ -2237,18 +2237,43 @@ es-MX:
       PS predictive Applab level test: 'Aquí hay algunas instrucciones. '
       Pattern Bee 1: "¡Qué campo extraño de golosinas! Me pregunto si hay un patrón aquí..."
       Pixelation - AllTheThings 4: Este nivel de pixelación demuestra el uso de la opción `ocultar_controles_codificación`. Ten en cuenta que el nivel muestra los datos de imagen en hexadecimal y no te permite volver a convertirlo en binario.
-      Pixelation - AllTheThings 5: Este nivel de pixelación demuestra el uso de la opción "Ocultar controles deslizantes". Tenga en cuenta que los controles deslizantes de ancho y alto no están disponibles, y los campos de ancho y alto no son editables.
+      Pixelation - AllTheThings 5: Este nivel de pixelación demuestra el uso de la opción "Ocultar controles deslizantes". Ten en cuenta que los controles deslizantes de ancho y alto no están disponibles, y los campos de ancho y alto no son editables.
+      Pixelation - Lesson 14 - Fix bit offset: Un solo bit adicional se inserta en el flujo de bits que componen el logotipo C del Code.org. Ese bit adicional rompe todos los demás bits en la línea, lo que hace que el logotipo se vea desordenado. Rastrea el bit adicional y quítalo para arreglar el logotipo Code.org.
+      Pixelation - Lesson 14 - Fix bit offset_2018: Un solo bit adicional se inserta en el flujo de bits que componen el logotipo C del Code.org. Ese bit adicional rompe todos los demás bits en la línea, lo que hace que el logotipo se vea desordenado. Rastrea el bit adicional y quítalo para arreglar el logotipo Code.org.
+      Pixelation - Lesson 14 - Fix bit offset_2019: Un solo bit adicional se inserta en el flujo de bits que componen el logotipo C del Code.org. Ese bit adicional rompe todos los demás bits en la línea, lo que hace que el logotipo se vea desordenado. Rastrea el bit adicional y quítalo para arreglar el logotipo Code.org.
       Pixelation - Lesson 14 - Make the Letter A: "Haga \nuna letra 'A' de 3x5. El widget está configurado con las dimensiones incorrectas. Su primera tarea es establecer el segundo byte en el código binario de 8 bits para 5: 0000 0101. Luego comience a ingresar datos de píxeles."
       Pixelation - Lesson 14 - Make the Letter A_2018: "Haga \nuna letra 'A' de 3x5. El widget está configurado con las dimensiones incorrectas. Su primera tarea es establecer el segundo byte en el código binario de 8 bits para 5: 0000 0101. Luego comience a ingresar datos de píxeles."
       Pixelation - Lesson 14 - Make the Letter A_2019: "Haga \nuna letra 'A' de 3x5. El widget está configurado con las dimensiones incorrectas. Su primera tarea es establecer el segundo byte en el código binario de 8 bits para 5: 0000 0101. Luego comience a ingresar datos de píxeles."
+      Pixelation - Lesson 14 - Make your own B and W Image: "¡Ahora haz tu propia imagen! Hemos empezado con un lienzo de 10 x 10, pero puedes hacerlo del tamaño que quieras. ¡Que te diviertas pixelando!"
+      Pixelation - Lesson 14 - Make your own B&W Image: "¡Ahora haz tu propia imagen! Hemos empezado con un lienzo de 10 x 10, pero puedes hacerlo del tamaño que quieras. ¡Que te diviertas pixelando!"
+      Pixelation - Lesson 15 - Color Free Play: 'Requisitos: El icono debe ser de 16 x 16 pixeles. Debes utilizar el Widget Pixelation para codificar los bits de información de color. La imagen debe codificarse con al menos 12 bits por pixel.'
       Pixelation - Lesson 15 - Color Shades 4x4: 'Comenzamos con la imagen 4x4 que Maddie creó en el video. Su tarea es llenar una cuadrícula de 4x4 con colores utilizando 12 bits por píxel. Estos son los requisitos: Fila 1: llenar con tonos de rojo. Fila 2: tonos de verde. Fila 3 - tonos de azul. Fila 4 - tonos de gris.'
       Pixelation - Lesson 15 - Color Shades 4x4_2018: 'Comenzamos con la imagen 4x4 que Maddie creó en el video. Su tarea es llenar una cuadrícula de 4x4 con colores utilizando 12 bits por píxel. Estos son los requisitos: Fila 1: llenar con tonos de rojo. Fila 2: tonos de verde. Fila 3 - tonos de azul. Fila 4 - tonos de gris.'
       Pixelation - Lesson 15 - Color Shades 4x4_2019: 'Comenzamos con la imagen 4x4 que Maddie creó en el video. Su tarea es llenar una cuadrícula de 4x4 con colores utilizando 12 bits por píxel. Estos son los requisitos: Fila 1: llenar con tonos de rojo. Fila 2: tonos de verde. Fila 3 - tonos de azul. Fila 4 - tonos de gris.'
+      Pixelation - Lesson 15 - Color Shades: Te iniciamos con la fila de sombras de rojo que Maddie creó en el video. Experimenta con color de 6 bits rellenando la fila inferior de la imagen con sombras de un color diferente. Aquí tienes un ejemplo con algunas sombras de azul. ¡Prueba tu propio color!
+      Pixelation - Lesson 15 - Color Shades_2018: Te iniciamos con la fila de sombras de rojo que Maddie creó en el video. Experimenta con color de 6 bits rellenando la fila inferior de la imagen con sombras de un color diferente. Aquí tienes un ejemplo con algunas sombras de azul. ¡Prueba tu propio color!
+      Pixelation - Lesson 15 - Color Shades_2019: Te iniciamos con la fila de sombras de rojo que Maddie creó en el video. Experimenta con color de 6 bits rellenando la fila inferior de la imagen con sombras de un color diferente. Aquí tienes un ejemplo con algunas sombras de azul. ¡Prueba tu propio color!
       Pixelation - Lesson 15 - Complete 3-bit color: Comenzamos con la imagen de 4x2 que Maddie estaba creando, pero hemos omitido los dos últimos cuadrados. Termine la imagen descubriendo los dos colores que faltan y codifíquelos.
       Pixelation - Lesson 15 - Complete 3-bit color_2018: Comenzamos con la imagen de 4x2 que Maddie estaba creando, pero hemos omitido los dos últimos cuadrados. Termine la imagen descubriendo los dos colores que faltan y codifíquelos.
       Pixelation - Lesson 15 - Complete 3-bit color_2019: Comenzamos con la imagen de 4x2 que Maddie estaba creando, pero hemos omitido los dos últimos cuadrados. Termine la imagen descubriendo los dos colores que faltan y codifíquelos.
+      Pixelation Bee: 'Esta imagen más grande de una abeja codifica el color con 12 bits por pixel, pero ver en hex hace más fácil ver el color de cada píxel. Si cambias al modo binario (sujétate a tu sombrero), es un montón de bits. Aquí hay otra cosa sorprendente para probar: desliza los bits por pixel hasta 24 bits por pixel. ¿Qué sucede? ¿Puedes explicar este comportamiento?'
+      Pixelation Bee_2018: 'Esta imagen más grande de una abeja codifica el color con 12 bits por pixel, pero ver en hex hace más fácil ver el color de cada píxel. Si cambias al modo binario (sujétate a tu sombrero), es un montón de bits. Aquí hay otra cosa sorprendente para probar: desliza los bits por pixel hasta 24 bits por pixel. ¿Qué sucede? ¿Puedes explicar este comportamiento?'
+      Pixelation Bee_2019: 'Esta imagen más grande de una abeja codifica el color con 12 bits por pixel, pero ver en hex hace más fácil ver el color de cada píxel. Si cambias al modo binario (sujétate a tu sombrero), es un montón de bits. Aquí hay otra cosa sorprendente para probar: desliza los bits por pixel hasta 24 bits por pixel. ¿Qué sucede? ¿Puedes explicar este comportamiento?'
+      Pixelation Flappy: Esta es una imagen más grande a 9 bits por pixel. Con 9 bits por pixel puedes expresar 512 colores diferentes. Haz clic para ver la siguiente imagen que es aún más sofisticada, pero más fácil de entender.
+      Pixelation Flappy_2018: Esta es una imagen más grande a 9 bits por pixel. Con 9 bits por pixel puedes expresar 512 colores diferentes. Haz clic para ver la siguiente imagen que es aún más sofisticada, pero más fácil de entender.
+      Pixelation Flappy_2019: Esta es una imagen más grande a 9 bits por pixel. Con 9 bits por pixel puedes expresar 512 colores diferentes. Haz clic para ver la siguiente imagen que es aún más sofisticada, pero más fácil de entender.
+      Pizza on a Plate: 'Idea del proyecto: Crear una imagen de algo conocido del mundo real. ¡Esto requiere persistencia y planificación!'
       Planning Farmer: "¡Qué campo extraño de golosinas! Me pregunto si hay un patrón aquí..."
+      Planter Test: "¡Ayúdame a plantar mis campos!"
+      Play Lab Rocket 1: Un cohete se despega y viaja a 15 metros por segundo... presione "Ejecutar" para ver cómo este problema de palabras se ve como una animación.
+      Play Lab Rocket 2: Hemos iniciado la Receta de Diseño para la altura de cohetes mediante el contrato y ejemplos que acabas de escribir. Completa la definición de función para la altura de cohetes y ejecuta tu animación.
+      Play Lab Rocket 2B: Un cohete despega y viaja a 15 metros por segundo. Usando la Receta de Diseño, escribe una función llamada altura-cohete que lleva el número de segundos transcurridos desde que despegó el cohete, y que produce la altura del cohete en aquel momento.
+      Play Lab Rocket 4 (copy 1): Los cohetes reales comienzan lentamente y ganan velocidad con el tiempo. ¡Vamos a hacer que los nuestros hagan lo mismo! Escribe una función exponencial que describa un cohete que viaja a "segundos" metros cuadrados por segundo.
+      Play Lab Rocket 4: Los cohetes reales comienzan lentamente y ganan velocidad con el tiempo, ¡así que añadamos una aceleración simple a la nuestra! ¿Puedes escribir una función que describe un cohete que está a 10 metros en 1 segundo, 40 metros en 2 segundos, 90 metros en 3 segundos, 160 metros en 4 segundos y así sucesivamente?
+      Play Lab Rocket 5: Mucho mejor, pero escribamos una función más con aceleración simple. Esta vez, el cohete debe ser de 15 metros en 1 segundo, 45 metros en 2 segundos, 95 metros en 3 segundos y 165 metros en 4 segundos.
+      Play Lab Rocket Free Play: 'Juego libre: Experimenta con tu función altura-cohete para hacer que el cohete vuele de diferentes maneras. Haz clic en "Finalizar" cuando hayas terminado.'
       Poorva copy U3L2 Using Simple Commands: Dibuja un cuadrado de 1x1 arriba y a la izquierda de la posición inicial de la tortuga. Haga clic para ver las instrucciones completas.
+      Poorva-test: Estas son instrucciones normales para un nivel. En esta parte, no hay nada extraordinario.
       Practice Create Performance Task: Diseña e implementa tu práctica Crear tarea de rendimiento. (Haz clic para ver las instrucciones completas)
       Practice Create Performance Task_2018: Diseña e implementa tu práctica Crear tarea de rendimiento. (Haz clic para ver las instrucciones completas)
       Practice Create Performance Task_2019: Diseña e implementa tu práctica Crear tarea de rendimiento. (Haz clic para ver las instrucciones completas)
@@ -2263,6 +2288,11 @@ es-MX:
       Prompt Test: Construye lo que quieras. ¡Este es un ejemplo de un juego de adivinación de números!
       Quantum Bee - Ryan: Estas nubes me están molestando! Algunas de las nubes tienen flores dentro, y otras no. Debo comprobar cada nube y obtener el néctar sólo de las flores.
       Quantum Bee: "¡Las flores moradas pueden tener un tipo de néctar de 1 ó 0, pero tu no sabes cuál! Ten cuidado de no recolectar el néctar de una flor morada sin néctar. Revisa si el valor del néctar es igual a 1 usando el bloque “if”."
+      Robot Doodle: 'Idea del proyecto: Crear una imagen de algo conocido del mundo real. ¡Esto requiere persistencia y planificación!'
+      Robot Doodle_2018: 'Idea del proyecto: Crear una imagen de algo conocido del mundo real. ¡Esto requiere persistencia y planificación!'
+      Robot Doodle_2019: 'Idea del proyecto: Crear una imagen de algo conocido del mundo real. ¡Esto requiere persistencia y planificación!'
+      Robot Drawing: 'Idea del proyecto: Crear una imagen de algo conocido del mundo real. ¡Esto requiere persistencia y planificación!'
+      Robot: 'Idea del proyecto: Crear una imagen de algo conocido del mundo real. ¡Esto requiere persistencia y planificación!'
       Ryan - 4-5 Bee Conditionals 2: La abeja sólo quiere néctar ahora. No todos los objetos son flores, así que mira debajo de TODAS LAS NUBES para verlo si está escondiendo una flor. Si es así, puedes recolectar néctar.
       Ryan - Bee Conditionals: La abeja sólo quiere néctar ahora. No todos los objetos son flores, así que mira debajo de TODAS LAS NUBES para verlo si está escondiendo una flor. Si es así, puedes recolectar néctar.
       Ryan Test Locked Blocks: Aquí hay una función denominada "patrulla". Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400 píxeles.
@@ -2280,6 +2310,15 @@ es-MX:
       SG U3L2_TurtleSquare_right: |-
         Dibuja un cuadrado al frente y
          a la derecha de la ubicación de inicio. (Haga clic para mostrar las instrucciones completas)
+      Sam the Butterfly 1 (copy 1): Esta mariposa se llama Sam, y el área de juego es el patio de Sam. El patio de Sam es de 400 pixeles de ancho por 400 pixeles de altura. Como puedes ver, Sam puede caminar alrededor del patio, y las coordenadas en la parte superior de la actualización de pantalla te indica su ubicación. Usa las teclas de flecha para mover a Sam alrededor de su patio. Ayuda a Sam a recoger todas las banderas para avanzar.
+      Sam the Butterfly 1: Este murciélago se llama Sam, y el área de juego es el patio de Sam. El patio de Sam tiene 400 pixeles de ancho por 400 pixeles de altura. Como puedes ver, Sam puede caminar alrededor del patio, y las coordenadas en la parte superior de la actualización de pantalla te indica su ubicación. Haz clic en "Ejecutar", luego utiliza las teclas de flecha para mover a Sam alrededor de su patio y toma nota de las coordenadas de Sam en diferentes ubicaciones. Haz clic en "Finalizar" cuando estés listo para avanzar.
+      Sam the Butterfly 2: La mamá de Sam quiere asegurarse de que siempre pueda ver al menos un poco de él, así que escribamos algunas funciones que la ayuden a asegurarse de que él no vaya demasiado lejos del patio. Esta es una función llamada segura-izquierda?; debe tomar un Número para su dominio que representa las coordenadas x de Sam y volver verdad si es completamente visible en la pantalla. Si su función no falla, Sam no debería ser capaz de dejar el patio desde el lado izquierdo.
+      Sam the Butterfly 3: En el último desafío, hemos impedido que Sam saliera por la izquierda; ahora vamos a hacer lo mismo con la derecha. ¿Completa la función seguro-derecha? para asegurarse de que Sam no puede salir del lado derecho de la pantalla.
+      Sam the Butterfly 4: Uy, podemos impedir que Sam salga por la izquierda, o podemos impedir que salga por la derecha, ¿pero cómo podemos mantenerlo seguro de salir de ambas direcciones? Intenta usar el y bloquea para programar la función en-pantalla? para comprobar si Sam está seguro-izquierda? y seguro-derecha?
+      Sam the Butterfly 5: 'Juego libre: Increíble, ¡hemos mantenido a Sam a salvo a la izquierda y a la derecha! Usa esta etapa de juego libre para experimentar con tus funciones y mejorar aún más enpantalla?'
+      Sam the Butterfly 6: Hemos añadido un nuevo parámetro "y" a la función "enpantalla?". Actualiza la función para que compruebe que "seguro-izquierda?" Y "seguro-derecha?" Y "seguro-arriba?" sean todos verdaderos. Cuando hayas arreglado la función, intenta salir del patio desde la izquierda, desde la derecha y desde los lados superiores.
+      Sam the Butterfly 7: ¡Sólo una última indicación para preocuparse! Crea una función "seguro-abajo?" y actualiza la función "enpantalla?" para que compruebe arriba, abajo, izquierda y derecha.
+      Sam the Butterfly Complete: ¡Sólo una última indicación para preocuparse! Crea una función "seguro-abajo?" y actualiza la función "enpantalla?" para que compruebe arriba, abajo, izquierda y derecha.
       SpecialFrozenLevel: "¡Te has convertido oficialmente en un artista maestro! Crea un paraíso invernal."
       Standalone_Artist_1: "¡Bienvenido a Artista! En primer lugar, vamos a intentar hacer un simple cuadrado usando el bloque vuelta derecha y el bloque mover hacia adelante. Cada lado debe tener 100 píxeles de largo."
       Standalone_Artist_2: Dibuja este diamante con 120 y 60 grados de ángulo y lados largos de 150 píxeles.
@@ -2292,6 +2331,19 @@ es-MX:
       Standalone_Artist_8: Aquí hay una función llamada "Dibuja una figura" que hemos programado para dibujar hexágonos. Ejecuta el código para ver lo que hace y luego experimenta con la función para ver qué pasa. ¿Puedes hacer que dibuje un patrón de cuadrados, triángulos u octágonos?
       Standalone_Artist_9: "¡Ahora sigue adelante y haz la imagen que tú quieras! ¡Incluso tienes una función vacía con la que puedes hacer lo que quieras!"
       Standalone_Artist_v2: "¡Bienvenido a Artista! En primer lugar, vamos a intentar hacer un simple cuadrado usando el bloque vuelta derecha y el bloque mover hacia adelante. Cada lado debe tener 100 píxeles de largo."
+      StepIntro: Así se usa el botón "Paso".
+      Test Play Lab: Este es un nivel de laboratorio de juego de prueba.
+      Test embedded Blockly in instructions: |-
+        Como elemento de bloque, deberíamos poder incluir XML que represente un bloque o bloques Blockly válidos.
+
+        <xml>
+        <block type="draw_move_by_constant">
+        <title name="DIR">avanzar</title>
+        <title name="VALUE">100</title>
+        </block>
+        </xml>
+
+        También brindamos compatibilidad con XML de Blockly como un elemento en línea como: <xml><block type="draw_move_by_constant"><title name="DIR">avanzar</title><title name="VALUE">100</title></block></xml>. La diferencia en el formato de entrada es que este está insertado dentro de un párrafo, mientras que el anterior es un bloque de texto independiente. La diferencia en el valor es comparable.
       Test embedded K1 Blockly in instructions: Usa tres bloques "mover oeste" y un bloque "recoger maíz" para resolver este desafío.
       Testing Quantum Farmer: "¡Wow, encontré un agujero realmente profundo! no sé cuántas paleadas de tierra necesita. ¿Puedes escribir un programa que llene hasta que el suelo esté parejo? Sugerencia: trata usando el bucle mientras."
       The Vigenere Cipher Widget: Instrucciones
@@ -2635,6 +2687,12 @@ es-MX:
       Vigenere: Prueba
       Virtual Pet 1 Predict: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
       Virtual Pet 1 Predict_simple: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
+      'Widget: Black and White Pixelation': "¡Ahora haz tu propia imagen! Hemos empezado con un lienzo de 10 x 10, pero puedes hacerlo del tamaño que quieras. ¡Que te diviertas pixelando!"
+      'Widget: Black and White Pixelation_2018': "¡Ahora haz tu propia imagen! Hemos empezado con un lienzo de 10 x 10, pero puedes hacerlo del tamaño que quieras. ¡Que te diviertas pixelando!"
+      'Widget: Black and White Pixelation_2019': "¡Ahora haz tu propia imagen! Hemos empezado con un lienzo de 10 x 10, pero puedes hacerlo del tamaño que quieras. ¡Que te diviertas pixelando!"
+      'Widget: Color Pixelation': 'Requisitos: El icono debe ser de 16 x 16 pixeles. Debes utilizar el Widget Pixelation para codificar los bits de información de color. La imagen debe codificarse con al menos 12 bits por pixel.'
+      'Widget: Color Pixelation_2018': 'Requisitos: El icono debe ser de 16 x 16 pixeles. Debes utilizar el Widget Pixelation para codificar los bits de información de color. La imagen debe codificarse con al menos 12 bits por pixel.'
+      'Widget: Color Pixelation_2019': 'Requisitos: El icono debe ser de 16 x 16 pixeles. Debes utilizar el Widget Pixelation para codificar los bits de información de color. La imagen debe codificarse con al menos 12 bits por pixel.'
       XML Scratchpad: Usar este nivel de prueba para obtener el xml para pruebas de unidades
       aE7: Si copia ese bucle y gira a la izquierda en lugar de la derecha, ¿qué pasa? ¿Puedes repetir eso para dibujar esta ola?
       aE8: Ahora repitamos todo eso cuatro veces para crear este cuadro. Cuidado con las esquinas - ¡simplemente no puedes girar 90 grados! Si se repite 60 veces un giro de 3 grados hace un semicírculo, ¿cuál de estos bloques de código hará un cuarto de círculo para las esquinas?
@@ -3338,7 +3396,7 @@ es-MX:
       courseC_artist_loops1: "_\"Zombie. ¡Dibuja!\"_\n\nEl zombie quiere dibujar una línea desde donde está hasta el jardín de girasoles. ¿Puedes ayudarlo?  \n_(El jardín está a 250 pixeles de distancia)_  "
       courseC_artist_loops1a: 'Lleva al artista al centro del área de juego, y luego dibuja un pájaro con un sticker. '
       courseC_artist_loops1a_2018: 'Lleva al artista al centro del área de juego, y luego dibuja un pájaro con un sticker. '
-      courseC_artist_loops1a_2019: 'Lleva al artista al centro del área de juego, y luego dibuja un pájaro con un sticker. '
+      courseC_artist_loops1a_2019: 'Lleva al artista al centro del área de juego, y luego dibuja un sticker. '
       courseC_artist_loops1b_2019: 'Agrega un comando `girar` a tu código para cambiar la orientación de tu sticker. '
       courseC_artist_loops2: Ahora que el zombie sabe por dónde ir, ¡ayúdalo a cavar agujeros a lo largo del camino para plantar más flores!
       courseC_artist_loops2a: Ahora usa un bucle para que tu pájaro dé vueltas 12 veces con un giro de 30 grados.
@@ -3347,11 +3405,11 @@ es-MX:
       courseC_artist_loops3: "¡Excelente! Ahora que las flores han brotado, ayuda al zombie a colocar a un amigo cada 50 pixeles para que las proteja hasta que crezcan."
       courseC_artist_loops3a: "¡Ahora agrega un murciélago!"
       courseC_artist_loops3a_2018: "¡Ahora agrega un murciélago!"
-      courseC_artist_loops3a_2019: "¡Ahora agrega un murciélago!"
+      courseC_artist_loops3a_2019: "¡Ahora agrega un segundo sticker!"
       courseC_artist_loops4: "¡El zombie ha encontrado una granja vacía! ¿Puedes ayudarlo a estampar stickers de animales cada 100 pixeles alrededor del borde para darle vida?"
       courseC_artist_loops4a: Intenta saltar 75 pixeles hacia adelante.
       courseC_artist_loops4a_2018: Intenta saltar 75 pixeles hacia adelante.
-      courseC_artist_loops4a_2019: Intenta saltar 75 pixeles hacia adelante.
+      courseC_artist_loops4a_2019: Edita tu código para saltar entre los dibujos de los dos stickers.
       courseC_artist_loops5: "¡Genial! Llegó el momento de hacer una cerca adentro para mantener a los animales afuera.   "
       courseC_artist_loops5a: "¡Prueba nuevos stickers!"
       courseC_artist_loops5a_2018: "¡Prueba nuevos stickers!"
@@ -5183,6 +5241,7 @@ es-MX:
       grade4_playlab_freeplay: "¡Es hora de jugar! Diviértete con todos los bloques en tu caja de herramientas. "
       grade4_playlab_test: Usa la flecha de la derecha para disparar corazones. En nuestro juego, ¿cómo deberíamos anotar puntos? Añada 1 a su variable "puntos" cada vez que el Perro golpea al Gato con un corazón. Use el evento "cuando el actor 2 toca cualquier cosa" para iniciar una actualización a tu puntuación. Puedes incrementar tu variable estableciendo "puntos = puntos + 1". Obtén tu puntaje mas de 10 (¡yendo uno a la vez!) para pasar de nivel.
       grade4_playlab_test2: Aquí está la función denominada "salto" que permite que tu personaje principal salte hasta 100 píxeles. Use la función salto para recoger todas las banderas.
+      grade4_prompt_test: Este es un nivel de laboratorio de juego de prueba.
       grade4_review_artist1: Hola, soy un artista. Puedes escribir código para hacerme dibujar cualquier cosa. Usa algunos bloques para hacerme dibujar sobre las líneas grises en la imagen. (Cada línea tiene 100 píxeles de largo)
       grade4_review_artist2: "¡Esta casa necesita un techo! Dibuja el triángulo. Pista: Los 3 lados tienen la misma longitud."
       grade4_review_artist3: El bloque Salta mueve el artista sin dibujar. Dibuja la línea punteada utilizando los bloques Salta y Dibuja.

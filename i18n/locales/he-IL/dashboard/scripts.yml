@@ -1682,3 +1682,7 @@ he:
           stages:
             Conditionals with Cards:
               name: התניות עם כרטיסים
+            Sequence in Maze:
+              name: רצף במבוך
+            Debugging with Scrat:
+              name: ניפוי שגיאות עם סקראט
