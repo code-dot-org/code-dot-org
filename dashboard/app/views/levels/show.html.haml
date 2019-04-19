@@ -32,6 +32,10 @@
   - if @script_level && @script_level.stage.lockable? && (!current_user || @script_level.locked?(current_user))
     = render 'levels/locked_stage'
   - else
+    -# If we're a teacher, render the locked_stage UI, which the client will conditionally hide based on Student/Teacher toggle
+    - if @script_level && @script_level.stage.lockable? && current_user.try(:teacher?)
+      = render 'levels/locked_stage', hidden: true
+
     - if @game.unplugged?
       :javascript
         var appOptions = #{app_options.to_json};
