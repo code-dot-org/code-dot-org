@@ -1,75 +1,88 @@
 // Applab theme color values.
 
 module.exports = {
-  // Default
-  default: {
-    background: '#FFFFFF',
-    label_text: '#4D575F',
-    label_background: 'rgba(0, 0, 0, 0)',
-    text: '#4D575F',
-    text_input_background: '#F2F2F2',
-    text_input_border: '#4D575F',
-    dropdown_background: '#FFFFFF',
-    dropdown_text: '#4D575F',
-    dropdown_border: '#000000',
-    button_background: '#FFA400',
-    button_text: '#FFFFFF',
-    button_border: '#4D575F',
-    text_area_background: '#F2F2F2',
-    text_area_border: '#FFFFFF'
+  background: {
+    default: '#FFFFFF',
+    orange: '#FFA400',
+    citrus: '#96C257',
+    classic: '#FFFFFF'
   },
-
-  // Orange
-  orange: {
-    background: '#FFA400',
-    label_text: '#FFFFFF',
-    label_background: '#4D3100',
-    text: '#FFFFFF',
-    text_input_background: '#B37300',
-    text_input_border: '#FFFFFF',
-    dropdown_background: '#FFFFFF',
-    dropdown_text: '#000000',
-    dropdown_border: '#000000',
-    button_background: '#00ADBC',
-    button_text: '#FFFFFF',
-    button_border: '#FFFFFF',
-    text_area_background: '#4D3100',
-    text_area_border: '#FFFFFF'
+  labelText: {
+    default: '#4D575F',
+    orange: '#FFFFFF',
+    citrus: '#F7EC60',
+    classic: '#333333'
   },
-
-  // Citrus
-  citrus: {
-    background: '#96C257',
-    label_text: '#F7EC60',
-    label_background: '#69883D',
-    text: '#000000',
-    text_input_background: '#FFFFFF',
-    text_input_border: '#69883D',
-    dropdown_background: '#F7EC60',
-    dropdown_text: '#000000',
-    dropdown_border: '#69883D',
-    button_background: '#F7EC60',
-    button_text: '#000000',
-    button_border: '#69883D',
-    text_area_background: '#FFFFFF',
-    text_area_border: '#69883D'
+  labelBackground: {
+    default: 'rgba(0, 0, 0, 0)',
+    orange: '#4D3100',
+    citrus: '#69883D',
+    classic: 'rgba(0, 0, 0, 0)'
   },
-
-  // Classic (colors used before applab themes)
-  classic: {
-    background: '#FFFFFF',
-    label_text: '#333333',
-    label_background: 'rgba(0, 0, 0, 0)',
-    text: '#000000',
-    text_input_background: '#FFFFFF',
-    text_input_border: 'rgb(153, 153, 153)',
-    dropdown_background: '#1ABC9C',
-    dropdown_text: '#FFFFFF',
-    dropdown_border: '#000000',
-    button_background: '#1ABC9C',
-    button_text: '#FFFFFF',
-    button_border: '#000000',
-    text_area_background: '#FFFFFF',
-    text_area_border: 'rgb(153, 153, 153)'
+  text: {
+    default: '#4D575F',
+    orange: '#FFFFFF',
+    citrus: '#000000',
+    classic: '#000000'
+  },
+  textInputBackground: {
+    default: '#F2F2F2',
+    orange: '#B37300',
+    citrus: '#FFFFFF',
+    classic: '#FFFFFF'
+  },
+  textInputBorder: {
+    default: '#4D575F',
+    orange: '#FFFFFF',
+    citrus: '#69883D',
+    classic: 'rgb(153, 153, 153)'
+  },
+  dropdownBackground: {
+    default: '#FFFFFF',
+    orange: '#FFFFFF',
+    citrus: '#F7EC60',
+    classic: '#1ABC9C'
+  },
+  dropdownText: {
+    default: '#4D575F',
+    orange: '#000000',
+    citrus: '#000000',
+    classic: '#FFFFFF'
+  },
+  dropdownBorder: {
+    default: '#000000',
+    orange: '#000000',
+    citrus: '#69883D',
+    classic: '#000000'
+  },
+  buttonBackground: {
+    default: '#FFA400',
+    orange: '#00ADBC',
+    citrus: '#F7EC60',
+    classic: '#1ABC9C'
+  },
+  buttonText: {
+    default: '#FFFFFF',
+    orange: '#FFFFFF',
+    citrus: '#000000',
+    classic: '#FFFFFF'
+  },
+  buttonBorder: {
+    default: '#4D575F',
+    orange: '#FFFFFF',
+    citrus: '#69883D',
+    classic: '#000000'
+  },
+  textAreaBackground: {
+    default: '#F2F2F2',
+    orange: '#4D3100',
+    citrus: '#FFFFFF',
+    classic: '#FFFFFF'
+  },
+  textAreaBorder: {
+    default: '#FFFFFF',
+    orange: '#FFFFFF',
+    citrus: '#69883D',
+    classic: 'rgb(153, 153, 153)'
   }
 };

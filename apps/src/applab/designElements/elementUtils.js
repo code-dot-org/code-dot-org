@@ -220,8 +220,8 @@ export function setDefaultBorderStyles(element, options = {}) {
   }
   if (forceDefaults || element.style.borderColor === '') {
     element.style.borderColor = textInput
-      ? themeColor.classic.text_input_border
-      : themeColor.classic.dropdown_border;
+      ? themeColor.textInputBorder.classic
+      : themeColor.dropdownBorder.classic;
   }
   if (forceDefaults || element.style.borderRadius === '') {
     element.style.borderRadius = '0px';

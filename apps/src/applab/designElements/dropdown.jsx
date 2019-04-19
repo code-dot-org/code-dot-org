@@ -194,10 +194,7 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: themeColor.default.dropdown_background,
-      classic: themeColor.classic.dropdown_background,
-      orange: themeColor.orange.dropdown_background,
-      citrus: themeColor.citrus.dropdown_background
+      ...themeColor.dropdownBackground
     },
     borderRadius: {
       default: 4,
@@ -213,17 +210,11 @@ export default {
     },
     borderColor: {
       type: 'color',
-      default: themeColor.default.dropdown_border,
-      classic: themeColor.classic.dropdown_border,
-      orange: themeColor.orange.dropdown_border,
-      citrus: themeColor.citrus.dropdown_border
+      ...themeColor.dropdownBorder
     },
     textColor: {
       type: 'color',
-      default: themeColor.default.dropdown_text,
-      classic: themeColor.classic.dropdown_text,
-      orange: themeColor.orange.dropdown_text,
-      citrus: themeColor.citrus.dropdown_text
+      ...themeColor.dropdownText
     },
     fontFamily: {
       default: 'Arial',
@@ -250,11 +241,11 @@ export default {
     } else {
       element.style.fontFamily = fontFamilyStyles[0];
       element.style.fontSize = defaultFontSizeStyle;
-      element.style.color = themeColor.classic.dropdown_text;
+      element.style.color = themeColor.dropdownText.classic;
       element.style.backgroundImage = svgArrowUrl(
         new RGBColor(element.style.color).toHex()
       );
-      element.style.backgroundColor = themeColor.classic.dropdown_background;
+      element.style.backgroundColor = themeColor.dropdownBackground.classic;
       elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     }
 
