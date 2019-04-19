@@ -899,7 +899,7 @@ module Pd
         submission_id: FAKE_SUBMISSION_ID
       )
 
-      WorkshopDailySurveyController.view_context_class.any_instance.expects(:embed_jotform).never
+      WorkshopDailySurveyController.view_context_class.any_instance.expects(:jotform_iframe).never
 
       sign_in teacher
       get '/pd/workshop_survey/csf/post201'
