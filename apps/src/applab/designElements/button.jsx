@@ -11,7 +11,6 @@ import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import BorderProperties from './BorderProperties';
-import color from '../../util/color';
 import themeColor from '../themeColor';
 import {
   ICON_PREFIX_REGEX,
@@ -210,10 +209,10 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: themeColor.default_button_background,
-      classic: color.applab_button_teal,
-      orange: themeColor.orange_button_background,
-      citrus: themeColor.citrus_button_background
+      default: themeColor.default.button_background,
+      classic: themeColor.classic.button_background,
+      orange: themeColor.orange.button_background,
+      citrus: themeColor.citrus.button_background
     },
     borderRadius: {
       default: 4,
@@ -229,17 +228,17 @@ export default {
     },
     borderColor: {
       type: 'color',
-      default: themeColor.default_button_border,
-      classic: color.black,
-      orange: themeColor.orange_button_border,
-      citrus: themeColor.citrus_button_border
+      default: themeColor.default.button_border,
+      classic: themeColor.classic.button_border,
+      orange: themeColor.orange.button_border,
+      citrus: themeColor.citrus.button_border
     },
     textColor: {
       type: 'color',
-      default: themeColor.default_button_text,
-      classic: color.white,
-      orange: themeColor.orange_text,
-      citrus: themeColor.citrus_text
+      default: themeColor.default.button_text,
+      classic: themeColor.classic.button_text,
+      orange: themeColor.orange.button_text,
+      citrus: themeColor.citrus.button_text
     },
     fontFamily: {
       default: 'Arial Black',
@@ -275,8 +274,8 @@ export default {
       element.style.fontFamily = fontFamilyStyles[0];
       element.style.fontSize = defaultFontSizeStyle;
       elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-      element.style.color = color.white;
-      element.style.backgroundColor = color.applab_button_teal;
+      element.style.color = themeColor.classic.button_text;
+      element.style.backgroundColor = themeColor.classic.button_background;
     }
 
     return element;

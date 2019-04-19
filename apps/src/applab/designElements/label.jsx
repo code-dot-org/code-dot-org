@@ -14,7 +14,6 @@ import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 import * as gridUtils from '../gridUtils';
 import designMode from '../designMode';
-import color from '../../util/color';
 import themeColor from '../themeColor';
 import elementLibrary from './library';
 import experiments from '../../util/experiments';
@@ -198,10 +197,10 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: themeColor.default_label_background,
-      classic: themeColor.classic_label_background,
-      orange: themeColor.orange_text_background,
-      citrus: themeColor.citrus_text_background
+      default: themeColor.default.label_background,
+      classic: themeColor.classic.label_background,
+      orange: themeColor.orange.label_background,
+      citrus: themeColor.citrus.label_background
     },
     borderRadius: {
       default: 0,
@@ -217,17 +216,17 @@ export default {
     },
     borderColor: {
       type: 'color',
-      default: themeColor.default_text_input_border,
-      classic: themeColor.classic_text_input_border,
-      orange: themeColor.orange_text_input_border,
-      citrus: themeColor.citrus_text_input_border
+      default: themeColor.default.text_input_border,
+      classic: themeColor.classic.text_input_border,
+      orange: themeColor.orange.text_input_border,
+      citrus: themeColor.citrus.text_input_border
     },
     textColor: {
       type: 'color',
-      default: themeColor.default_text,
-      classic: color.default_text,
-      orange: themeColor.orange_text,
-      citrus: themeColor.citrus_label_text
+      default: themeColor.default.label_text,
+      classic: themeColor.classic.label_text,
+      orange: themeColor.orange.label_text,
+      citrus: themeColor.citrus.label_text
     },
     fontFamily: {
       default: 'Arial Black',
@@ -256,10 +255,10 @@ export default {
       element.style.borderStyle = 'solid';
       elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
     } else {
-      element.style.backgroundColor = themeColor.classic_label_background;
+      element.style.backgroundColor = themeColor.classic.label_background;
       element.style.fontFamily = applabConstants.fontFamilyStyles[0];
       element.style.fontSize = applabConstants.defaultFontSizeStyle;
-      element.style.color = '#333333';
+      element.style.color = themeColor.classic.label_text;
       elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     }
 
@@ -270,7 +269,7 @@ export default {
   onDeserialize: function(element) {
     // Set background color style for older projects that didn't set them on create:
     if (!element.style.backgroundColor) {
-      element.style.backgroundColor = themeColor.classic_label_background;
+      element.style.backgroundColor = themeColor.classic.label_background;
     }
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
