@@ -12,7 +12,9 @@ module Api::V1::Pd::Application
     end
 
     def send_principal_approval
-      @application.queue_email :principal_approval, deliver_now: true
+      if @application.allow_resending_principal_email
+        @application.queue_email :principal_approval, deliver_now: true
+      end
       render json: {principal_approval: @application.principal_approval_state}
     end
 
