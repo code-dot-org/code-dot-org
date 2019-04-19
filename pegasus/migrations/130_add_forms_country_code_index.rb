@@ -2,12 +2,11 @@
 Sequel.migration do
   up do
     # Generated column feature required for this migration.
-    unless database_type == :mysql &&
-      supports_generated_columns? &&
-      server_version >= 50713
+    # JSON ->> operator also required: https://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#operator_json-inline-path
+    unless database_type == :mysql && supports_generated_columns?
       raise "MySQL JSON functions and generated column features required.
 You are currently using #{database_type} version #{server_version}.
-Upgrade your MySQL server to >= 5.7.13 and retry the migration."
+Upgrade your MySQL server to a version which supports these features and retry the migration."
     end
 
     alter_table(:forms) do

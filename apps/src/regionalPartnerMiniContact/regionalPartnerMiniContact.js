@@ -50,13 +50,18 @@ window.showRegionalPartnerMiniContactPopupLink = function() {
     'options-notes'
   );
   const linkText = regionalPartnerMiniContactPopupLinkElement.data('link-text');
+  const isButton = regionalPartnerMiniContactPopupLinkElement.data(
+    'link-button'
+  );
 
   ReactDOM.render(
     <RegionalPartnerMiniContactPopupLink
       notes={notes}
       sourcePageId={sourcePageId}
-      children={linkText}
-    />,
+    >
+      {isButton && <button type="button">{linkText}</button>}
+      {!isButton && linkText}
+    </RegionalPartnerMiniContactPopupLink>,
     regionalPartnerMiniContactPopupLinkElement[0]
   );
 };

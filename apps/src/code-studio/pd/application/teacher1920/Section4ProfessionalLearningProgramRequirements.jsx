@@ -206,6 +206,18 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
   }
 
   renderContents() {
+    let showPayFeeNote = false;
+    if (
+      this.props.data.planToTeach &&
+      !this.props.data.planToTeach.includes(
+        'Yes, I plan to teach this course this year (2019-20)'
+      ) &&
+      this.props.data.payFee &&
+      this.props.data.payFee.includes('No, ')
+    ) {
+      showPayFeeNote = true;
+    }
+
     if (this.props.data.program === undefined) {
       return (
         <div style={styles.error}>
@@ -299,6 +311,20 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
                 you need to be considered for a scholarship.
               </label>
               {this.radioButtonsFor('payFee')}
+              {showPayFeeNote && (
+                <p style={{color: 'red'}}>
+                  Note: To be eligible for scholarship support, you must plan to
+                  teach this course in the upcoming school year (2019-20). We
+                  suggest checking with your administrators to ensure that the
+                  course will be offered in 2019-20 before updating your answer
+                  to "
+                  <strong>
+                    Do you plan to personally teach this course in the 2019-20
+                    school year?
+                  </strong>
+                  " on page 3 and submitting your application.
+                </p>
+              )}
               {this.props.data.payFee === TextFields.noPayFee1920 &&
                 this.largeInputFor('scholarshipReasons')}
             </div>

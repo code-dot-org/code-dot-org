@@ -73,7 +73,8 @@ module BrowserHelpers
   end
 
   def install_js_error_recorder
-    @browser.execute_script(<<-JS
+    with_read_timeout(10.seconds) do
+      @browser.execute_script(<<-JS
       // Wrap existing window onerror handler with a script error recorder.
       var windowOnError = window.onerror;
       window.onerror = function (msg) {
@@ -83,17 +84,22 @@ module BrowserHelpers
           return windowOnError.apply(this, arguments);
         }
       };
-    JS
-    )
+      JS
+      )
+    end
+  rescue => err
+    puts "DEBUG: Unable to install js error recorder; #{err}"
   end
 
   def check_window_for_js_errors(check_reason_description)
     unless @browser.nil?
-      js_errors = @browser.execute_script('return window.detectedJSErrors;')
-      if js_errors
-        puts "DEBUG: [#{check_reason_description}] JS errors: #{CGI.escapeHTML js_errors.join(' | ')}"
-      else
-        puts "DEBUG: [#{check_reason_description}] No JS errors found on current page." if ENV['VERY_VERBOSE']
+      with_read_timeout(10.seconds) do
+        js_errors = @browser.execute_script('return window.detectedJSErrors;')
+        if js_errors
+          puts "DEBUG: [#{check_reason_description}] JS errors: #{CGI.escapeHTML js_errors.join(' | ')}"
+        else
+          puts "DEBUG: [#{check_reason_description}] No JS errors found on current page." if ENV['VERY_VERBOSE']
+        end
       end
     end
   rescue => err

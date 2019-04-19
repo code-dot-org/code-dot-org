@@ -317,13 +317,6 @@ class SectionTest < ActiveSupport::TestCase
     verify(['Thor', 'Thor Odinson'], ['Thor', 'Thor O'])
   end
 
-  test 'teacher_dashboard_url' do
-    section = build :section
-
-    expected_url = "https://#{CDO.pegasus_hostname}/teacher-dashboard#/sections/#{section.id}/manage"
-    assert_equal expected_url, section.teacher_dashboard_url
-  end
-
   test 'default_script: no script or course assigned' do
     section = create :section, script: nil, course: nil
     assert_nil section.default_script
