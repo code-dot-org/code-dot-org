@@ -21,7 +21,12 @@ const styles = {
 const Question = props => {
   const suffix =
     '?:.'.indexOf(props.text[props.text.length - 1]) >= 0 ? '' : ':';
-  return <UnsafeRenderedMarkdown markdown={`${props.text}${suffix}`} />;
+  return (
+    <UnsafeRenderedMarkdown
+      openExternalLinksInNewTab
+      markdown={`${props.text}${suffix}`}
+    />
+  );
 };
 Question.propTypes = {
   text: PropTypes.string.isRequired,

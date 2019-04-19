@@ -1076,6 +1076,7 @@ export class DetailViewContents extends React.Component {
                         <tr key={j}>
                           <td style={styles.questionColumn}>
                             <UnsafeRenderedMarkdown
+                              openExternalLinksInNewTab
                               markdown={
                                 this.labelOverrides[key] ||
                                 this.pageLabels[header][key]
