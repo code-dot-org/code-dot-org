@@ -99,12 +99,16 @@ class TeacherContentToggle extends React.Component {
 
     const showLockedStageMessage = isLockedStage && !isHiddenStage;
     const showHiddenStageMessage = isHiddenStage;
+    const showContent = !isLockedStage && !isHiddenStage;
 
     // Note: This component depends on the fact that the only thing we change about
     // our children as we rerender is their style.
     return (
       <div style={styles.container}>
-        <div style={contentStyle} ref="content" />
+        <div
+          style={[contentStyle, !showContent && styles.hidden]}
+          ref="content"
+        />
         <div
           style={[frameStyle, !showLockedStageMessage && styles.hidden]}
           ref="lockMessage"
