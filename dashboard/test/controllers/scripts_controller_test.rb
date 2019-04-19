@@ -230,7 +230,8 @@ class ScriptsControllerTest < ActionController::TestCase
       visible_to_teachers: true,
       login_required: true,
       hideable_stages: true,
-      wrapup_video: 'hoc_wrapup'
+      wrapup_video: 'hoc_wrapup',
+      project_sharing: 'on'
     }
     assert_redirected_to script_path id: 'test-script-create'
 
@@ -239,6 +240,7 @@ class ScriptsControllerTest < ActionController::TestCase
     refute script.hidden
     assert script.login_required
     assert script.hideable_stages
+    assert script.project_sharing
 
     File.unstub(:write)
   end
