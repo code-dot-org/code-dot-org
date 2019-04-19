@@ -11,89 +11,106 @@ end title
 
 start
 
-partition Ingest {
+partition 1.Ingest {
   #lightgrey:Jotform submissions
   (in Jotform server)]
-  :0a. Fetcher;
+  :Fetcher;
   note right
-    Sync data from Jotform as-is.
+    Sync data from Jotform to CDO db as-is.
+  end note
+  #lightgrey:submissions_table
+  (in CDO db)]
+  note right #lightgrey
+    Schema: (submission_json_str)
+    Only access sequentially.
     Only insert to this table, no update.
-    Independent from survey-summary request.
   end note
-  #lightgrey:Jotform submissions
-  (CDO db)]
-  note right #lightgrey: Format {joform_id, submission_id, submission content }
 }
 
-partition Query {
-  :0b. Parser;
+partition 2.Query {
+  :Parser;
   note right
-    Parse submission JSON into tables: submissions, questions, answers.
-    Make sure information in these tables are exactly equal to the original submission table.
-    Tables have generic format {id, key, value}.
-    Only insert to these tables, no update.
-    Independent from survey-summary request.
+    Parse submission JSON string, expose key information to enable direct access
+    to submission content using submission id.
   end note
-  #lightgrey:Submission-derived tables]
+  #lightgrey:submissions_parsed_table]
   note right #lightgrey
-    submissions: {submission_id, form_id, submission metadata}
-    'Parsing 1st level hash
-    questions: {form_id, submission_id, question_id, question_key, question_value}
-    'Parsing 2nd level hash
-    answers: {form_id, submission_id, question_id, answer_key, answer_value}
+    Schema: (submission_id, form_id, created_at, status, submission_json_str)
+    Only insert to this table, no update.
   end note
 
-  :0c. Indexer;
-  note right: Index submission using common lookup keys
-  #lightgrey:Submission-derived tables
-  (+ lookup table)]
+  :Indexer;
+  note right: Index submission using common lookup keys such as workshop_id
+  #lightgrey:submissions_lookup_table]
   note right #lightgrey
-    Previous tables +
-    submission_lookup: {form_id, submisison_id, workshop_id, environment, user_id,...}
+    Schema: (submission_id, form_id, environment, workshop_id, user_id, facilitator_id)
+    Can be destroyed and rebuilt if schema changes.
   end note
 
-  :1. Filter;
+  :Filter;
   note right
-    Select submissions based on lookup conditions (e.g. CSF 201 in 2019)
-    and validation rules (e.g. ignore duplicate or invalid submissions).
-    Use submission_lookup table to find submissions faster.
+    Filter submissions based on lookup conditions (e.g. CSF 201 in 2019)
+    and validation rules (e.g. ignore invalid submissions)
   end note
-  #lightgrey:Submission-derived tables
-  (filtered)]
+  #lightgrey:submission_id_array]
 }
 
-partition Summarize {
-  :2. Transformer;
-  note right
-    Transform data in questions and answers tables before aggregating answers.
-    E.g. update question unique name to link questions together;
-    convert value range to make values consistent.
+partition 3.Summarize {
+  :Retriever;
+  note right: Retrieve submission content from database to in-memory data structure.
+  #lightgrey:submission_content_array]
+  note right #lightgrey
+    [{submission_id, form_id, answers}] (array of hash)
+    answers = {question_id : question_and_answer}
   end note
-  #lightgrey:Submission-derived tables
-  (transformed)]
-  'note right #lightgrey: Format {workshop, survey, question, answer}
 
-  :3. Aggregator;
+  :Modifier;
   note right
-    Aggregate answers for each question based on {workshop, survey, question unique name
-    , question type}.
-    Can have multiple aggregators e.g. calculating average, max, min, distribution etc.
+    Modify question and answer data to make them aggregatable.
+    E.g. update question unique name or convert value range to make values consistent.
   end note
-  #lightgrey:Question aggregation results]
-  note right #lightgrey: Format {form_id, workshop_id, qname, agg_name, agg_result}
+  #lightgrey:submission_content_array
+  (modified)]
+
+  :Transformer;
+  note right: Transform data from submission-centric to question-centric
+  #lightgrey:question_content_array]
+  note right
+    [{question_name, question_type, question_content_compiled}] (array of hash)
+    question_content_compiled = [{form_id, submission_id, question_answer}]
+  end note
+
+  :Mapper;
+  note right: Map question data to Reducer based on question name and type
+  #lightgrey:question_content_array
+  (subset)]
+
+  :Reducer;
+  note right
+    Aggregate answers into 1 single result (e.g. max, min, count, histogram, distribution)
+    Different reducer for different question type.
+  end note
+  #lightgrey:question_summary]
+  note right #lightgrey: {form_id, workshop_id, question_name, question_type, reducer_name, result} (hash)
 }
 
-partition Present {
-  :4. Decorator;
+partition 4.Present {
+  :Decorator;
   note right
-    Add order for workshops, surveys, groups, questions.
-    Add groups/categories for questions.
-    Add info for workshops (course, subject, location) and survey (name).
+    Add supporting info to describe summary results. Send all to client as JSON.
+    E.g. add categories and order for questions;
+    add info for workshops (course, subject, location), organizer and survey (e.g. name).
   end note
-  #lightgrey:Question result summaries
-  (grouped, ordered, annotated)]
+  #lightgrey:question_summary_array
+  + supporting info
+  (JSON)]
+  note right #lightgrey
+    question_summary_array: array of question_summary
+    survey_info: {form_id, name}
+    workshop_info: {workshop_id, course, subject, location, organizer_id}
+  end note
 
-  :5. Presenter;
+  :Presenter;
   note right
     Display summaries for each {workshop, survey}
   end note

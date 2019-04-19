@@ -1,55 +1,85 @@
-# Survey Summary Technical Design Proposal
+**Technical Design Proposal: Survey Summary Pipeline**
 
-- [Survey Summary Technical Design Proposal](#survey-summary-technical-design-proposal)
-  - [What/What not](#whatwhat-not)
-  - [Why/Motivation](#whymotivation)
-  - [Options](#options)
-    - [Create JotForm report and embed into our site](#create-jotform-report-and-embed-into-our-site)
-    - [Adapt current pipeline to just support new surveys in 2019](#adapt-current-pipeline-to-just-support-new-surveys-in-2019)
-    - [Build a new generic survey pipeline](#build-a-new-generic-survey-pipeline)
-  - [Recommendation](#recommendation)
+April 18, 2019
 
+- [Problem](#problem)
+- [Motivation](#motivation)
+- [Options](#options)
+  - [1. Update current pipeline to support 2019 surveys](#1-update-current-pipeline-to-support-2019-surveys)
+  - [2. Create survey report in JotForm](#2-create-survey-report-in-jotform)
+  - [3. Build generic survey pipeline](#3-build-generic-survey-pipeline)
+    - [Overview](#overview)
+    - [Detail design](#detail-design)
+    - [Building from the end](#building-from-the-end)
+- [Recommendation](#recommendation)
 
-## What/What not
-A pipeline to ingest survey results from JotForm, summarize them, and display summaries in workshop dashboard.
-This doc is to gather feedbacks on the options we can take to improve this pipeline.
+This technical design doc explores options we have to create and present summaries of JotForm surveys in workshop dashboard. Its purpose is to gather feedbacks from the team to decide what is the best option to invest in right now.
 
-This design is not about embedding JotForm survey in our site nor prepare data to do analysis in Tableau
+This design is not about embedding JotForm survey in our site or preparing survey data for analysis in Tableau.
 
-## Why/Motivation
-Currently it is not a trivial task to support displaying summary for a new survey in our workshop dashboard.
-The reason is the current data model, controller action and view are very specific to certain type of workshop surveys such as local summer workshop and post-course surveys.
+# Problem
+Currently it takes quite a lot of work to create and present summary for a new survey in our workshop dashboard.
 
-- Want to reduce the cost of processing new survey. We will have more surveys in the future, 3 in 2019: CSF 201 pre/post workshop, CSF 101. What if we have 100 type of surveys and updated versions of them year over year.
+The reason is that components in the processing pipeline are tightly coupled together. The current data models, controller actions, helpers and views are built for a few specific type of workshop surveys such as local-summer-workshop and post-course surveys. Adding support for a new survey means creating new model, controller, view, and a lot of tests.
 
-## Options
-### Create JotForm report and embed into our site
-- Can create [Visual Report](https://www.jotform.com/help/187-How-to-Create-a-Visual-Report-with-Your-Form-Submissions) in JotForm. [Example](https://www.jotform.com/report/91067837377065)
-- Pros: Survey owners can create report themselves. Can embed iframe into our site. Data is automatically updated, don't need to download data locally and upload to Tableau. Authentication and authorization before showing report will be handled in controller.
-- Cons: Can only do basic calculation and visualization (not level of Tableau or PowerBI). Can not interact with the report after it is created (e.g. filtering)
-
-### Adapt current pipeline to just support new surveys in 2019
-- Pros: Cheapest to support 3 new surveys in 2019
-- Cons: Throw away work
-
-### Build a new generic survey pipeline
-- What
-  - High level explanation\
-    ![Diagram](survey_summary_diagram.png)
-- Pros: Minimize work in the future. Enable new scenario. Open for extensions.
-- Cons: Costly
-
-- Want to enable new scenario.
-  - What if we can shorten the round trip from creating a survey, publishing it, and immediately have results updated in our view daily. What scenario it will enable. Will we use survey more to make business decision?
-  - A/B testing questions in a survey? A/B testing survey (2 surveys with the same purpose but substantially different)?
-  - Use JotForm outside of workshop context?
-
-- Want to resilient against big change. How much we have to rebuild if we switch from JotForm to a different provider in the future (e.g. SurveyMonkey, Qualtrics)? Lowering this cost enable us to switch to better tool.
+In the case of new CSF Deep Dive surveys (pre and post-workshop), we try to reuse data model and UI view from local summer workshop, which already has pre-workshop, daily and post-workshop surveys. However, we cannot directly reuse the logic to create survey summary because of its tight coupling to context of summer workshop. We have 2 approaches to solve this which are discussed in Option 1 below. Both approaches are not cheap and not sustainable if we want to support more JotForm surveys in the future.
 
 
-**TODO**:
-Example scenarios. What is required to enable new survey for workshop x? want to combine overall feedback across all survey? Do organizer survey view.
-Create UI mockup for view (plant uml)
+# Motivation
+- How to reduce the engineering cost to support 100+ JotForm workshop surveys? (Right now I think we have about 5 to 10.)
+- Can we build a generic pipeline to ingest survey submissions, summarize them, and present the result in workshop dashboard for any survey?
+- How much of the current pipeline will still be relevant if we decide to switch to a different survey platform (Qualtrics, SurveyMonkey etc.) in the future?
 
-## Recommendation
-Build a new generic survey pipeline, but build module at the end of the pipeline first and adapter to plug it in the current pipeline.
+
+# Options
+We have 3 following options to create and present JotForm survey summaries in workshop dashboard.\
+Specifically, we need to support at least 3 new surveys in 2019, CSF Deep Dive pre & post workshop surveys and CSF Intro survey.
+
+## 1. Update current pipeline to support 2019 surveys
+We will reuse the current pipeline as much as possible to support 3 new CSF surveys in 2019.
+
+This option is based on `local_workshop_daily_survey_report` pipeline. We reuse its data model `WorkshopDailySurvey` and UI view `local_summer_workshop_daily_survey/results.jsx`. We will modify its logic in to retrieve and summarize survey results, which is currently tightly coupled to summer workshop context. This logic lives in `WorkshopSurveyReportController` and `WorkshopSurveyResultsHelper`.
+
+2 approaches:
+- Modify this logic to make it more generic with the risk of introducing regression (the code is complex).
+- Create a new path separate from the existing one, which means adding substantial duplicated code.
+
+**Pros:** Risk is small. Amount of new code could is not small but manageable. We do just enough to support 3 new surveys in 2019.
+
+**Cons:** Not scalable when we have more surveys. Could become thrown-away work if we decide to move to generic pipeline later.
+
+
+## 2. Create survey report in JotForm
+JotForm support creating [Visual Report](https://www.jotform.com/help/187-How-to-Create-a-Visual-Report-with-Your-Form-Submissions) ([example](https://www.jotform.com/report/91067837377065)). We can then embed this report as an iframe into workshop dashboard. Authentication and authorization before showing report will be handled by our side.
+
+**Pros:** The cheapest option in term of engineering cost to enable. Survey owners can create report themselves. Report is automatically updated (don't need to download data locally and upload to Tableau).
+
+**Cons:** Can only do basic calculation and visualization (not the same level as Tableau or PowerBI). User can not interact with the report. Cannot pass parameter to personalize the report.
+
+
+## 3. Build generic survey pipeline
+### Overview
+Creating a generic pipeline that starts from ingesting survey data, making data searchable, summarizing data, to presenting result in our site. Key features of the new pipeline are modular design, decoupling survey data from the...
+
+**Pros:** Minimize work to support new survey. Open for extensions, flexible to change such as adding/removing/updating components because of modular design. Enable new scenarios such as A/B testing in Survey.
+
+**Cons:** Expensive. (This could be mitigated by building the pipeline from the end first as discussed below.)
+
+
+### Detail design
+The pipeline has 4 main actions
+1. Ingest: Download data from JotForm server to CDO database.
+2. Query: Find survey data that matches lookup conditions.
+3. Summarize: Aggregate survey data.
+4. Present: Display survey summaries in dashboard.
+
+![Diagram](survey_summary_diagram.png)
+
+
+### Building from the end
+We don't have to start from step 1 (Ingest), we can start from step 3 (Summarize) and create adapters to connect it to the current pipeline. Specifically for CSF survey work, we will create input adapter to retrieve survey data from the current data model, and output adapter to convert summary result to format that the current UI view understands.
+
+This approach allows us to take advantage of existing work and still gradually modernize the pipeline. After creating components in step 3, we can move upstream (creating new UI views) or downstream (updating how we ingest and query data).
+
+# Recommendation
+Option 3. Build a new generic survey pipeline, starting from _Summarize_ module first and create adapters to plug it in the current pipeline. Gradually build out the rest of the pipeline later.
