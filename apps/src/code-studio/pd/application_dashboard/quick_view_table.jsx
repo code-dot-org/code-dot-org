@@ -333,9 +333,7 @@ export class QuickViewTable extends React.Component {
           <span>{principal_approval_state}</span>
           <PrincipalApprovalButtons
             applicationId={props.rowData.id}
-            showResendEmailButton={
-              props.rowData.allow_resending_principal_email
-            }
+            showResendEmailButton={props.rowData.allow_sending_principal_email}
             onChange={this.handlePrincipalApprovalButtonsChange}
           />
         </div>
