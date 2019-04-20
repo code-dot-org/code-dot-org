@@ -1,6 +1,7 @@
 module Pd::Application
   class Teacher1920ApplicationMailer < ActionMailer::Base
     default from: 'Code.org <noreply@code.org>'
+    default bcc: MailerConstants::PLC_EMAIL_LOG
 
     def confirmation(teacher_application)
       @application = teacher_application
