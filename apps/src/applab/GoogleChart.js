@@ -396,6 +396,13 @@ class MapChart extends GoogleChart {
    */
   render_(dataTable, options) {
     const apiChart = new GoogleChart.lib.visualization.Map(this.targetDiv_);
+    GoogleChart.lib.visualization.events.addListener(
+      apiChart,
+      'error',
+      function() {
+        console.error(...arguments);
+      }
+    );
     apiChart.draw(dataTable, options);
   }
 
