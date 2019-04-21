@@ -147,35 +147,40 @@ export default class Match {
           } else {
             // when an answer is in the rightmost list of answers, it can be dragged in to replace an empty slot
             // in the central list of slots.
-
-            var movingItem = ui.draggable.detach();
-
-            // replace target with this new item
-            $(event.target).replaceWith(movingItem);
-
-            // the new item is now droppable
-            movingItem.droppable();
-
-            // remove offset coordinates from the dragged item
-            movingItem.css({top: 'auto', left: 'auto'});
-
-            // this class is no longer in the answer list
-            movingItem.removeClass('answerlist');
-
-            // this class can now be both dragged and a drop target for fellow answers in slots
-            movingItem.addClass('answerslot');
-
-            // this new item can now be dropped onto by other answers in the central list
-            this.makeItemDroppable(movingItem);
-
-            // Once all answers have been dropped into a slot, let anyone
-            // listening know that an answer has been selected.
-            if ($(container).find('.match_answers .answer').length === 0) {
-              onAnswerChanged(this.levelId, true);
-            }
+            var answer = ui.draggable.detach();
+            var slot = $(event.target);
+            this.moveAnswerToSlot(slot, answer);
           }
         }
       });
+  }
+
+  moveAnswerToSlot(slot, answer) {
+    const container = document.getElementById(this.id);
+
+    // replace target with this new item
+    slot.replaceWith(answer);
+
+    // the new item is now droppable
+    answer.droppable();
+
+    // remove offset coordinates from the dragged item
+    answer.css({top: 'auto', left: 'auto'});
+
+    // this class is no longer in the answer list
+    answer.removeClass('answerlist');
+
+    // this class can now be both dragged and a drop target for fellow answers in slots
+    answer.addClass('answerslot');
+
+    // this new item can now be dropped onto by other answers in the central list
+    this.makeItemDroppable(answer);
+
+    // Once all answers have been dropped into a slot, let anyone
+    // listening know that an answer has been selected.
+    if ($(container).find('.match_answers .answer').length === 0) {
+      onAnswerChanged(this.levelId, true);
+    }
   }
 
   makeItemDroppable(item) {
@@ -222,20 +227,14 @@ export default class Match {
       .toArray();
 
     for (let i = 0; i < this.lastAttempt.length; i++) {
-      const slot = slots[i];
+      const slot = $(slots[i]);
       const originalIndex = parseInt(this.lastAttempt[i], 10);
       if (!isNaN(originalIndex)) {
         const answer = $(container).find(
           `.answer[originalIndex=${originalIndex}]`
         );
-        this.dragAnswerToSlot(answer, slot);
+        this.moveAnswerToSlot(slot, answer);
       }
     }
-  }
-
-  dragAnswerToSlot(answer, slot) {
-    var dx = $(slot).offset().left - $(answer).offset().left;
-    var dy = $(slot).offset().top - $(answer).offset().top;
-    $(answer).simulate('drag', {dx, dy});
   }
 }
