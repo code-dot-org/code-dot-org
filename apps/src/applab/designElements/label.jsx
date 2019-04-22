@@ -201,15 +201,35 @@ export default {
     },
     borderRadius: {
       default: 0,
-      classic: 0,
       orange: 0,
-      citrus: 2
+      citrus: 2,
+      ketchupAndMustard: 200,
+      lemonade: 0,
+      forest: 2,
+      watermelon: 0,
+      area51: 20,
+      polar: 2,
+      glowInTheDark: 0,
+      bubblegum: 100,
+      millennial: 4,
+      robot: 0,
+      classic: 0
     },
     borderWidth: {
       default: 0,
-      classic: 0,
       orange: 0,
-      citrus: 0
+      citrus: 0,
+      ketchupAndMustard: 0,
+      lemonade: 0,
+      forest: 0,
+      watermelon: 0,
+      area51: 0,
+      polar: 0,
+      glowInTheDark: 0,
+      bubblegum: 0,
+      millennial: 0,
+      robot: 0,
+      classic: 0
     },
     borderColor: {
       type: 'color',
@@ -221,15 +241,35 @@ export default {
     },
     fontFamily: {
       default: 'Arial Black',
-      classic: 'Arial',
       orange: 'Arial',
-      citrus: 'Georgia'
+      citrus: 'Georgia',
+      ketchupAndMustard: 'Georgia',
+      lemonade: 'Arial Black',
+      forest: 'Verdana',
+      watermelon: 'Georgia',
+      area51: 'Trebuchet',
+      polar: 'Verdana',
+      glowInTheDark: 'Tahoma',
+      bubblegum: 'Georgia',
+      millennial: 'Arial',
+      robot: 'Tahoma',
+      classic: 'Arial'
     },
     fontSize: {
       default: 15,
-      classic: 14,
       orange: 15,
-      citrus: 15
+      citrus: 15,
+      ketchupAndMustard: 15,
+      lemonade: 15,
+      forest: 15,
+      watermelon: 15,
+      area51: 15,
+      polar: 15,
+      glowInTheDark: 15,
+      bubblegum: 15,
+      millennial: 15,
+      robot: 15,
+      classic: 14
     }
   },
 

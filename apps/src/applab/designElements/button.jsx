@@ -213,15 +213,35 @@ export default {
     },
     borderRadius: {
       default: 4,
-      classic: 0,
       orange: 0,
-      citrus: 2
+      citrus: 2,
+      ketchupAndMustard: 5,
+      lemonade: 6,
+      forest: 6,
+      watermelon: 10,
+      area51: 10,
+      polar: 100,
+      glowInTheDark: 10,
+      bubblegum: 100,
+      millennial: 100,
+      robot: 0,
+      classic: 0
     },
     borderWidth: {
       default: 1,
-      classic: 0,
       orange: 2,
-      citrus: 2
+      citrus: 2,
+      ketchupAndMustard: 0,
+      lemonade: 0,
+      forest: 2,
+      watermelon: 4,
+      area51: 2,
+      polar: 2,
+      glowInTheDark: 2,
+      bubblegum: 2,
+      millennial: 0,
+      robot: 2,
+      classic: 0
     },
     borderColor: {
       type: 'color',
@@ -233,15 +253,35 @@ export default {
     },
     fontFamily: {
       default: 'Arial Black',
-      classic: 'Arial',
       orange: 'Verdana',
-      citrus: 'Georgia'
+      citrus: 'Georgia',
+      ketchupAndMustard: 'Georgia',
+      lemonade: 'Arial',
+      forest: 'Verdana',
+      watermelon: 'Georgia',
+      area51: 'Arial Black',
+      polar: 'Verdana',
+      glowInTheDark: 'Tahoma',
+      bubblegum: 'Georgia',
+      millennial: 'Verdana',
+      robot: 'Arial Black',
+      classic: 'Arial'
     },
     fontSize: {
       default: 18,
-      classic: 14,
       orange: 18,
-      citrus: 18
+      citrus: 18,
+      ketchupAndMustard: 18,
+      lemonade: 18,
+      forest: 18,
+      watermelon: 18,
+      area51: 18,
+      polar: 18,
+      glowInTheDark: 18,
+      bubblegum: 18,
+      millennial: 18,
+      robot: 18,
+      classic: 14
     }
   },
   create: function() {

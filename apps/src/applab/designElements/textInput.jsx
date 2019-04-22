@@ -216,15 +216,35 @@ export default {
     },
     borderRadius: {
       default: 4,
-      classic: 0,
       orange: 0,
-      citrus: 4
+      citrus: 4,
+      ketchupAndMustard: 5,
+      lemonade: 4,
+      forest: 4,
+      watermelon: 0,
+      area51: 10,
+      polar: 4,
+      glowInTheDark: 0,
+      bubblegum: 4,
+      millennial: 4,
+      robot: 0,
+      classic: 0
     },
     borderWidth: {
       default: 1,
-      classic: 1,
       orange: 1,
-      citrus: 1
+      citrus: 1,
+      ketchupAndMustard: 1,
+      lemonade: 1,
+      forest: 1,
+      watermelon: 2,
+      area51: 1,
+      polar: 1,
+      glowInTheDark: 1,
+      bubblegum: 1,
+      millennial: 2,
+      robot: 1,
+      classic: 1
     },
     borderColor: {
       type: 'color',
@@ -232,19 +252,39 @@ export default {
     },
     textColor: {
       type: 'color',
-      ...themeColor.text
+      ...themeColor.textInput
     },
     fontFamily: {
       default: 'Arial',
-      classic: 'Arial',
       orange: 'Arial',
-      citrus: 'Palatino'
+      citrus: 'Palatino',
+      ketchupAndMustard: 'Tahoma',
+      lemonade: 'Arial',
+      forest: 'Arial',
+      watermelon: 'Georgia',
+      area51: 'Trebuchet',
+      polar: 'Verdana',
+      glowInTheDark: 'Tahoma',
+      bubblegum: 'Trebuchet',
+      millennial: 'Arial',
+      robot: 'Tahoma',
+      classic: 'Arial'
     },
     fontSize: {
       default: 15,
-      classic: 14,
       orange: 15,
-      citrus: 15
+      citrus: 15,
+      ketchupAndMustard: 15,
+      lemonade: 15,
+      forest: 15,
+      watermelon: 15,
+      area51: 15,
+      polar: 15,
+      glowInTheDark: 15,
+      bubblegum: 15,
+      millennial: 15,
+      robot: 15,
+      classic: 14
     }
   },
 
@@ -259,7 +299,7 @@ export default {
     } else {
       element.style.fontFamily = fontFamilyStyles[0];
       element.style.fontSize = defaultFontSizeStyle;
-      element.style.color = themeColor.text.classic;
+      element.style.color = themeColor.textInput.classic;
       element.style.backgroundColor = '';
       elementUtils.setDefaultBorderStyles(element, {
         forceDefaults: true,
