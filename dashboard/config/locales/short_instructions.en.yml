@@ -1820,7 +1820,7 @@ en:
       Dance Party 1-validated_2019: 'What do you think will happen when you click on the alien?  '
       Dance Party 1-validated_simple: 'What do you think will happen when you click on the alien?  '
       Dance Party 2: Change the behavior inside the `___ begins ___` block to make the alien start spinning around.
-      Dance Party 2_2019: Change the behavior inside the `sprite begins` block to make the alien start spinning around.
+      Dance Party 2_2019: Replace the behavior block in the `sprite begins` block to a different one that will make the alien start spinning around!
       Dance Party 2_simple: Change the behavior inside the `___ begins ___` block to make the alien start spinning around.
       Dance Party 3 - Validated: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
       Dance Party 3 Ram: Make the sprite do something different when you press the up arrow.
@@ -3705,17 +3705,20 @@ en:
       behaviors 1: Make a prediction!
       behaviors 2: Fly the rocket to the stars!
       behaviors 3: Help the rover outrun the robot!
+      behaviors 3a: 'Debug: Make all of the stars spin the same way!'
       behaviors 4: Make a prediction!
       behaviors 4a: Give the dog a behavior to help her find her bone.
       behaviors 5: Move the astronaut diagonally.
       behaviors 5a: Make the ball roll.
       behaviors 6: Make the ball roll.
+      behaviors 7: Drive off into the sunset!
       behaviors clone me 2: Clone this level and make your own blocks!
       behaviors clone me Ram: Clone this level and make your own blocks!
       behaviors clone me joshl: Clone this level and make your own blocks!
       behaviors clone me nk: Clone this level and make your own blocks!
       behaviors clone me tanya: Clone this level and make your own blocks!
       behaviors clone me: Clone this level and make your own blocks!
+      behaviors free play: 'Free play: Create your own outer space scene!'
       behaviors pet test 123 copy: When Daisy gets a carrot, she gets excited. Use the **"when touches"** event and the "add behavior" block to make Daisy do something fun when she gets the carrot.
       behaviors pet test 123: When Daisy gets a carrot, she gets excited. Use the **"when touches"** event and the "add behavior" block to make Daisy do something fun when she gets the carrot.
       behaviors pet test 2: When Daisy gets a carrot, she gets excited. Use the **"when touches"** event and the "add behavior" block to make Daisy do something fun when she gets the carrot.
