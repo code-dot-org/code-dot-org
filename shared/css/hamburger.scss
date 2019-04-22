@@ -264,7 +264,7 @@
   &.show-always {
     display: block;
   }
-    
+
   .hide-always {
     display: none;
   }
@@ -288,15 +288,7 @@
     font-size: 25px;
     vertical-align: middle;
     text-decoration: none;
-    float: left;
-    background-color: $teal;
     color: $white;
-
-    .question-mark {
-      font-size: 30px;
-      float: right;
-      margin-top: -7px
-    }
 
     %extend_help {
       cursor: pointer;
@@ -397,9 +389,20 @@
         color: $white;
         text-decoration: none;
       }
+      @media(max-width: 400px) {
+        .item {
+          max-width: 240px;
+        }
+      }
     }
     &.hide-responsive-menu {
       display: none;
+    }
+  }
+
+  @media(max-width: 970px) {
+    #help-contents {
+      font-size: 18px;
     }
   }
 }
