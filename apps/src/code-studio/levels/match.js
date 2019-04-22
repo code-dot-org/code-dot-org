@@ -20,8 +20,8 @@ export default class Match {
     // The dashboard levelId.
     this.levelId = levelId;
 
-    // The DOM id.
-    this.id = id;
+    // A DOM element containing this match level and no others.
+    this.container = document.getElementById(id);
 
     // Whether this is the only puzzle on a page, or part of a group of them.
     this.standalone = standalone;
@@ -52,8 +52,7 @@ export default class Match {
   getResult() {
     let wrongAnswer = false;
 
-    const container = document.getElementById(this.id);
-    const elements = $(container).find('.match_slots li');
+    const elements = $(this.container).find('.match_slots li');
 
     const response = [];
 
@@ -90,8 +89,7 @@ export default class Match {
   // Disable drag on all answers, including those which have been moved to the
   // .match_answersdest column.
   lockAnswers() {
-    const container = document.getElementById(this.id);
-    $(container)
+    $(this.container)
       .find('.mainblock li.answer')
       .draggable('destroy');
   }
@@ -106,13 +104,15 @@ export default class Match {
   //   * answers are only droppable on slots within the same container
   //   * answers cannot be dragged outside of the container.
   initMatch() {
-    const container = document.getElementById(this.id);
-
-    $(container)
+    $(this.container)
       .find('.mainblock .match_answers li.answer')
-      .draggable({revert: 'invalid', stack: '.answer', containment: container});
+      .draggable({
+        revert: 'invalid',
+        stack: '.answer',
+        containment: this.container
+      });
 
-    this.makeInitialAnswersDroppable(container);
+    this.makeInitialAnswersDroppable(this.container);
 
     this.makeInitialMoves();
 
@@ -124,15 +124,15 @@ export default class Match {
   }
 
   // set up the central list of empty slots.
-  makeInitialAnswersDroppable(container) {
-    $(container)
+  makeInitialAnswersDroppable() {
+    $(this.container)
       .find('.mainblock .match_slots li')
       .droppable({
         activeClass: 'active',
         hoverClass: 'hover',
         accept: element =>
           $(element).is('.answerlist,.answerslot') &&
-          $(container).find(element[0]).length,
+          $(this.container).find(element[0]).length,
         drop: (event, ui) => {
           if (this.enableSounds) {
             CDOSounds.play('click');
@@ -147,42 +147,45 @@ export default class Match {
           } else {
             // when an answer is in the rightmost list of answers, it can be dragged in to replace an empty slot
             // in the central list of slots.
-
-            var movingItem = ui.draggable.detach();
-
-            // replace target with this new item
-            $(event.target).replaceWith(movingItem);
-
-            // the new item is now droppable
-            movingItem.droppable();
-
-            // remove offset coordinates from the dragged item
-            movingItem.css({top: 'auto', left: 'auto'});
-
-            // this class is no longer in the answer list
-            movingItem.removeClass('answerlist');
-
-            // this class can now be both dragged and a drop target for fellow answers in slots
-            movingItem.addClass('answerslot');
-
-            // this new item can now be dropped onto by other answers in the central list
-            this.makeItemDroppable(movingItem);
-
-            // Once all answers have been dropped into a slot, let anyone
-            // listening know that an answer has been selected.
-            if ($(container).find('.match_answers .answer').length === 0) {
-              onAnswerChanged(this.levelId, true);
-            }
+            var answer = ui.draggable.detach();
+            var slot = $(event.target);
+            this.moveAnswerToSlot(slot, answer);
           }
         }
       });
   }
 
+  moveAnswerToSlot(slot, answer) {
+    // replace target with this new item
+    slot.replaceWith(answer);
+
+    // the new item is now droppable
+    answer.droppable();
+
+    // remove offset coordinates from the dragged item
+    answer.css({top: 'auto', left: 'auto'});
+
+    // this class is no longer in the answer list
+    answer.removeClass('answerlist');
+
+    // this class can now be both dragged and a drop target for fellow answers in slots
+    answer.addClass('answerslot');
+
+    // this new item can now be dropped onto by other answers in the central list
+    this.makeItemDroppable(answer);
+
+    // Once all answers have been dropped into a slot, let anyone
+    // listening know that an answer has been selected.
+    if ($(this.container).find('.match_answers .answer').length === 0) {
+      onAnswerChanged(this.levelId, true);
+    }
+  }
+
   makeItemDroppable(item) {
-    const container = document.getElementById(this.id);
     item.droppable({
       accept: element =>
-        $(element).is('.answerslot') && $(container).find(element[0]).length,
+        $(element).is('.answerslot') &&
+        $(this.container).find(element[0]).length,
       activeClass: 'active',
       drop: (event, ui) => {
         if (this.enableSounds) {
@@ -212,30 +215,22 @@ export default class Match {
   // Executes a series of moves from the answers column to the slots column
   // according to the user's last submission as represented in this.lastAttempt.
   makeInitialMoves() {
-    const container = document.getElementById(this.id);
-
     // Obtain a list of html elements for slots ahead of time, so
     // that we don't misplace anything later when those indices change.
 
-    const slots = $(container)
+    const slots = $(this.container)
       .find('.match_slots .emptyslot')
       .toArray();
 
     for (let i = 0; i < this.lastAttempt.length; i++) {
-      const slot = slots[i];
+      const slot = $(slots[i]);
       const originalIndex = parseInt(this.lastAttempt[i], 10);
       if (!isNaN(originalIndex)) {
-        const answer = $(container).find(
+        const answer = $(this.container).find(
           `.answer[originalIndex=${originalIndex}]`
         );
-        this.dragAnswerToSlot(answer, slot);
+        this.moveAnswerToSlot(slot, answer);
       }
     }
-  }
-
-  dragAnswerToSlot(answer, slot) {
-    var dx = $(slot).offset().left - $(answer).offset().left;
-    var dy = $(slot).offset().top - $(answer).offset().top;
-    $(answer).simulate('drag', {dx, dy});
   }
 }
