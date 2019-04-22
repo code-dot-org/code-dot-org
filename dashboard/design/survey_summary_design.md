@@ -119,20 +119,22 @@ Option 3. Build a new generic survey pipeline, starting from step 3 (Summarize m
 
 ## 5 components to build for 2019 surveys
 
+Total estimate: 4.5d
+
 1. Retriever
   - Retrieve survey data from existing tables (`SurveyQuestion, WorkshopDailySurvey`) and convert data to `submission_content_array` format.
-  - Estimate: TBA
+  - Estimate: 2d
 2. Transformer
   - Convert survey data from submission centric to question centric. At high level: {submission_id, submission_data} --> {question_name, question_and_answer_data}.
-  - Estimate: TBA
+  - Estimate: 0.5d
 3. Mapper
   - Go through question data, send it to suited Reducer based on question name and type. E.g. text -> text collector, number -> histogram/count/avg reducers.
-  - Estimate: TBA
+  - Estimate: 0.5d
 4. Reducer(s)
   - Produce a summary result from list of input question data. E.g. text collector, histogram, avg, count, distribution reducers.
-  - Estimate: TBA
+  - Estimate: 0.5d
 5. Decorator
   - Compile minimum information needed for the current UI view (`local_summer_workshop_daily_survey/results.jsx`) to display summary results.
-  - Estimate: TBA
+  - Estimate: 1d
 
 Note, we skip Modifier component because it's an optional feature.
