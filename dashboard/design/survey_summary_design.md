@@ -1,6 +1,8 @@
 **Technical Design Proposal: Survey Summary Pipeline**
 
-April 18, 2019
+Created: April 18, 2019\
+Last updated: April 22, 2019
+
 
 - [Summary](#summary)
 - [Problem](#problem)
@@ -11,10 +13,11 @@ April 18, 2019
   - [3. Build generic survey pipeline](#3-build-generic-survey-pipeline)
     - [Overview](#overview)
     - [Detail design](#detail-design)
-    - [Building from the end](#building-from-the-end)
+    - [Build from the end](#build-from-the-end)
 - [Recommendation](#recommendation)
   - [Rollout plan](#rollout-plan)
   - [5 components to build for 2019 surveys](#5-components-to-build-for-2019-surveys)
+- [Appendix](#appendix)
 
 
 # Summary
@@ -54,7 +57,7 @@ This option is based on `local_workshop_daily_survey_report` pipeline. We reuse 
 
 **Cons:** Not scalable when we have more surveys. Could become thrown-away work if we decide to move to generic pipeline later.
 
-**Cost Estimate:** 5 ± 1 days.
+**Estimated Cost:** 5 ± 1 days.
 
 ## 2. Create survey report in JotForm
 JotForm support creating [Visual Report](https://www.jotform.com/help/187-How-to-Create-a-Visual-Report-with-Your-Form-Submissions) ([example](https://www.jotform.com/report/91067837377065)). We can then embed this report as an iframe into workshop dashboard. Authentication and authorization before showing report will be handled by our side.
@@ -63,7 +66,7 @@ JotForm support creating [Visual Report](https://www.jotform.com/help/187-How-to
 
 **Cons:** Can only do basic calculation and visualization (not the same level as Tableau or PowerBI). User can not interact with the report. Cannot pass parameter to personalize the report.
 
-**Cost Estimate:** 3 ± 1 days.
+**Estimated Cost:** 3 ± 1 days.
 
 ## 3. Build generic survey pipeline
 ### Overview
@@ -74,7 +77,7 @@ Key features of the new pipeline is the decoupling of code from specific survey 
 
 **Cons:** Expensive. (This could be mitigated by building the pipeline from the end first as discussed below.)
 
-**Cost Estimate:** 3-4 weeks for the complete pipeline. 7 ± 2 days to implement step 3 (Summarize) and the first component of step 4 (Present) first, enough to support CSF 2019 surveys.
+**Estimated Cost:** 3-4 weeks for the complete pipeline. 7 ± 2 days to implement step 3 (Summarize) and the first component of step 4 (Present) first, enough to support CSF 2019 surveys.
 
 ### Detail design
 The pipeline has 4 main actions
@@ -97,7 +100,7 @@ Some patterns this design follows
 - _Strategy Pattern_\
   Define an interface common to a family of algorithms, e.g. survey result reducers, and make them interchangeable. This lets the algorithm vary independently from clients that use it.
 
-### Building from the end
+### Build from the end
 We don't have to start from step 1 (Ingest), we can start from step 3 (Summarize) and create adapters to connect it to the current pipeline.
 
 Specifically for CSF survey work, we will create an input adapter to retrieve survey data from the current data model, and an output adapter to convert summary result to format that the current UI view understands. Looking at it from a different angle, these adapters are just concrete implementations of Retriever and Decorator.
@@ -118,8 +121,8 @@ Option 3. Build a new generic survey pipeline, starting from step 3 (Summarize m
 9. Migrate surveys using older pipeline to newer one when we think it's worth to do so.
 
 ## 5 components to build for 2019 surveys
-
-Total estimate: 4.5d
+Estimated Cost: 4.5 ± 1 days.\
+This estimation is for features with basic unit and integration tests. Thorough testing will take longer.
 
 1. Retriever
   - Retrieve survey data from existing tables (`SurveyQuestion, WorkshopDailySurvey`) and convert data to `submission_content_array` format.
@@ -138,3 +141,21 @@ Total estimate: 4.5d
   - Estimate: 1d
 
 Note, we skip Modifier component because it's an optional feature.
+
+# Appendix
+
+**Modifier component**
+- Responsibility: Modifying question and answer data to make them uniform and aggregatable. It is **optional**, used only when needed. The pipeline should still run successfully without it.
+
+- Examples
+  - We have 2 questions with different unique names (maybe from a different version of the same survey, or from different surveys) and we want to consider them as one question for summarization purpose. The modifier will change 1 question name.
+  - We have a multiple choice question with text answers, e.g. Disagree/Agree/Strongly Agree, but we want to convert them to numbers to calculate average. The modifier will map text answers to numbers.
+
+- How it works (early design)
+  - A General Modifier component is actually a collection of many very survey-specific modifier sub-components that perform the actual job.
+  - General Modifier receive a list of specific modifiers to run from a parent component, which is the controller that receives and processes summary requests from clients. The controller understands context of a query and applies special rules when processing it.
+  - Specific Modifier only processes input data that matches its precondition, e.g. data is from a specific JotForm id, and rejects everything else. Example for JotForm id 1024, changes unique name from "OverallFeeling" to "OverallHappiness".
+
+- How a specific modifier is written
+  - Survey owners understand the nuances in a specific survey and tell engineers what specific changes they want in the final result of survey summarization.
+  - Engineers create a specific modifier for that survey. Then create a configuration in survey report controller to apply the modifier when right context occurs.
