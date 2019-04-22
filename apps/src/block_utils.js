@@ -986,6 +986,13 @@ exports.createJsWrapperBlockCreator = function(
           this.setPreviousStatement(true);
         }
 
+        // For mini-toolbox prototype
+        // 'Clicked sprite' boxes that are children of the 'gamelab_spriteClickedSet'
+        // should be set to duplicate when dragged
+        if (blockText === 'clicked sprite') {
+          this.setParentForCopyOnDrag('gamelab_spriteClickedSet');
+        }
+
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
         this.setInputsInline(inline);
       }
