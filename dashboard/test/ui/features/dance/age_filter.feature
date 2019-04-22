@@ -1,5 +1,5 @@
 # Brad 2018-11-15 Known crash on SafariYosemite
-@no_older_chrome @no_safari_yosemite
+@no_safari
 Feature: Dance Lab Age Filter
   Scenario: Song selector is visible and doesn't display pg13 songs for age < 13
     Given I create a young student named "Harry"

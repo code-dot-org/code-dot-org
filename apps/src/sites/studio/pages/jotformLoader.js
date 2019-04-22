@@ -21,7 +21,7 @@ function main(context) {
     // form.jotform.com
   ]).then(([jotFormFrameLoadedMs, cdnjotformsMs, wwwjotformcomMs]) => {
     if (jotFormFrameLoadedMs === false) {
-      // Load failed if we specifcially got 'false'
+      // Load failed if we specifically got 'false'
       logToCloud.addPageAction(logToCloud.PageAction.JotFormLoadFailed, {
         route: `GET ${context.location.pathname}`,
         reachedCdnjotforms: false !== cdnjotformsMs,

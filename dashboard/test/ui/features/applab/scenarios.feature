@@ -91,7 +91,7 @@ Feature: App Lab Scenarios
     And I blur selector "#text_area1"
     Then element "#debug-output" has text "text_area1: abc"
 
-  @no_safari_yosemite
+  @no_safari
   @no_mobile
   Scenario: Upload Image Asset
     When I press "designModeButton"

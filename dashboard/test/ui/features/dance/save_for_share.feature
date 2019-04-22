@@ -1,7 +1,7 @@
 # Testing that various paths out of a project-backed level to a sharing link trigger
 # a save at the appropriate time so the student's latest changes are saved.
 
-@no_mobile @no_ie @no_safari_yosemite
+@no_mobile @no_ie @no_safari
 Feature: Saving project before sharing
   Background:
     # Block numbers are based on default code of free-play level

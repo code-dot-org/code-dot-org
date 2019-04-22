@@ -87,7 +87,8 @@ class FreeResponsesAssessmentsTable extends Component {
               ...tableLayoutStyles.headerCell,
               ...styles.studentNameColumnHeader
             }
-          }
+          },
+          transforms: [sortable]
         },
         cell: {
           props: {
