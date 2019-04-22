@@ -17,7 +17,7 @@
     .column
       %ul.match_questions
         - level.questions.each do |question|
-          %li{style: "height: #{level.height}px"}!= match_t(question['text'], level)
+          %li{style: "height: #{level.height}px"}!= render_multi_or_match_content(question['text'], level)
     .column.match_answerdest
       %ul.match_slots.draggablecolumn
         - level.answers.each do |_|
@@ -37,7 +37,7 @@
     .column
       %ul.match_answers.draggablecolumn
         - level.shuffled_indexed_answers.each do |answer|
-          %li.answer.answerlist{style: "height: #{level.height}px", originalIndex: answer['index']}!= match_t(answer['text'], level)
+          %li.answer.answerlist{style: "height: #{level.height}px", originalIndex: answer['index']}!= render_multi_or_match_content(answer['text'], level)
 
     .clear
   - if standalone
@@ -49,5 +49,6 @@
     window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new Match(
       #{level.id},
       "level_#{level.id}",
-      #{standalone}
+      #{standalone},
+      "#{last_attempt}"
     ));
